@@ -126,6 +126,17 @@ export class WorldAgent {
       ws.onmessage = async (ev) => {
         const msg = JSON.parse(String(ev.data));
         switch (msg.type) {
+          case "error":
+            // A pre-join refusal (reserved name, bad token) is final —
+            // retrying the identical join every 1.5s can only produce the
+            // same refusal. Surface the sequencer's reason instead of the
+            // silent join-timeout loop this used to be.
+            if (!this.joined) {
+              this.closed = true;
+              clearTimeout(timeout);
+              reject(new Error(String(msg.error ?? "join refused")));
+            }
+            break;
           case "snapshot":
             this.entities.clear(); this.people.clear();
             // wake where you fell asleep — fresh body only; a body that has

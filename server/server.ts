@@ -989,8 +989,18 @@ const server = Bun.serve({
           // actually know; humans stay self-asserted until archipelago-home.
           {
             const at = agentTokens();
-            const tokId = at.byToken.get(String(msg.agentToken ?? ""));
+            const tokStr = String(msg.agentToken ?? "");
+            let tokId = at.byToken.get(tokStr);
+            // The archipelago door forwards the agent's aid1 credential. An
+            // identity the home node vouches for satisfies the reservation
+            // exactly like a tokens.json bearer — same slug derivation as the
+            // MCPL door, so the two doors agree on who "fable" is.
+            if (!tokId && HN_ISSUER_KEY && tokStr.startsWith("aid1.")) {
+              const v = verifyToken(tokStr, { issuerId: HN_ISSUER_KEY, iss: HN_ISS, aud: HN_AUD, requireScopes: ["worlds:join"] });
+              if (v.ok) tokId = v.payload.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || v.payload.sub;
+            }
             if (at.names.has(c.id.toLowerCase()) && tokId?.toLowerCase() !== c.id.toLowerCase()) {
+              console.log(`[perm] join refused: "${c.id}" is a reserved agent name (token ${tokStr ? "unrecognized" : "missing"})`);
               ws.send(JSON.stringify({ type: "error", error: `"${c.id}" is a reserved agent name` }));
               c.ws.close?.(4004, "reserved name");
               return;
