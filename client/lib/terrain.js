@@ -24,3 +24,31 @@ export function setTerrain(t) {
     grid.visible = true;
   }
 }
+
+// ---- grass -----------------------------------------------------------------
+// makeGrass adds its own mesh to the scene AND pushes its wind `update` into
+// globalThis._autoParticleSystems. So replacing or clearing grass has to undo
+// BOTH — otherwise a new field stacks on the old, and the old field's update
+// keeps ticking against a mesh that's been disposed. setGrass owns that.
+let currentGrass = null;
+
+export function setGrass(field) {
+  if (currentGrass) {
+    if (currentGrass.mesh) {
+      scene.remove(currentGrass.mesh);
+      currentGrass.mesh.geometry?.dispose?.();
+      const m = currentGrass.mesh.material;
+      if (Array.isArray(m)) m.forEach((x) => x?.dispose?.()); else m?.dispose?.();
+    }
+    const autos = globalThis._autoParticleSystems;
+    // a groomed field owns SEVERAL per-frame hooks (wind + sheen); remove all
+    // of them, falling back to the bare update for an ungroomed field
+    const hooks = currentGrass.autoHooks ?? (currentGrass.update ? [currentGrass.update] : []);
+    if (Array.isArray(autos)) {
+      for (const h of hooks) { const i = autos.indexOf(h); if (i >= 0) autos.splice(i, 1); }
+    }
+  }
+  currentGrass = field ?? null;
+}
+export const clearGrass = () => setGrass(null);
+export const hasGrass = () => currentGrass !== null;

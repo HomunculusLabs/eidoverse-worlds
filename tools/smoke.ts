@@ -372,6 +372,32 @@ try {
     human.close(); bot.close(); arrival.close();
   }
 
+  // --- ground: terrain & grass fold into state; grass can be mowed
+  {
+    const gw = `${WORLD}-ground`;
+    const mk = (id: string) => new Promise<Client>((res, rej) => {
+      const c = new Client(id); const ws = new WebSocket(URL_); c.ws = ws;
+      const t = setTimeout(() => rej(new Error("join timeout")), 8000);
+      ws.onopen = () => ws.send(JSON.stringify({ type: "join", world: gw, id, avatar: "a.vrm", token: TOKEN }));
+      ws.onmessage = (ev) => { const m = JSON.parse(String(ev.data)); c.msgs.push(m);
+        if (m.type === "snapshot") { c.snapshot = m; clearTimeout(t); res(c); } };
+    });
+    const owner = await mk("groundskeeper");
+    owner.verb("terrain", { seed: 7, size: 160, amplitude: 2.6, flatRadius: 16, layers: [{ color: "#4a5d33", repeat: 16 }] });
+    owner.verb("grass", { width: 90, depth: 80, spacing: 0.26, perCell: 4, color: 0x3a5a2c });
+    await sleep(400);
+    const a = (await mk("g-after")).snapshot.state;
+    check("terrain folds into world state", a?.terrain?.amplitude === 2.6, JSON.stringify(a?.terrain));
+    check("grass folds into world state", a?.grass?.perCell === 4, JSON.stringify(a?.grass));
+
+    owner.verb("grass", { clear: true });
+    await sleep(300);
+    const b = (await mk("g-mowed")).snapshot.state;
+    check("mowing grass clears it from state (no field to replay)", !b?.grass, JSON.stringify(b?.grass));
+    check("mowing leaves the terrain standing", b?.terrain?.amplitude === 2.6);
+    owner.close();
+  }
+
   // --- lights are authored entities: logged, folded, movable, removable
   {
     const lw = `${WORLD}-light`;

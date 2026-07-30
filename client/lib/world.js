@@ -8,7 +8,7 @@
 import { THREE, scene, report, bus } from './core.js';
 import { loadGLB, loadEidoModule, noiseTexture, loadTrack, loadDone, libLabels } from './assets.js';
 import { fitCollider, removeCollider, reindexCollider } from './colliders.js';
-import { setTerrain, heightAt } from './terrain.js';
+import { setTerrain, setGrass, clearGrass, heightAt } from './terrain.js';
 import { groomGrass } from './grass_groom.js';
 import { applySky, attachLocalLights } from './sky.js';
 import { makeLight, disposeLight } from './lights.js';
@@ -166,13 +166,14 @@ export async function applyEntry(entry, live, ctx = {}) {
         const key = JSON.stringify(args);
         if (lastGrassArgs === key) return;
         lastGrassArgs = key;
+        if (args.clear) { clearGrass(); break; }   // an empty field: mow it
         enqueueWorldBuild('grass', async () => {
           // yields the main thread to arrival; resolves instantly once booted
           await whenBooted();
           await loadEidoModule('grass.js');
-          // groom: client-side polish (ground normals, patch variation, gust
-          // sheen) at zero added frame cost — see grass_groom.js
-          groomGrass(globalThis.makeGrass({ ...args, scene, heightFn: heightAt }), args);
+          // setGrass removes any previous field first — changing grass must
+          // replace it, not stack a second one on top
+          setGrass(groomGrass(globalThis.makeGrass({ ...args, scene, heightFn: heightAt }), args));
         });
         break;
       }

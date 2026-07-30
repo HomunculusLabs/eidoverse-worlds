@@ -134,9 +134,13 @@ export function groomGrass(field, args = {}) {
 
     // dayness is sky.js's live 0(night)→1(noon); ride the same per-frame
     // hook the wind uses.
-    (globalThis._autoParticleSystems ||= []).push(() => {
-      dayU.value = 0.1 + 0.9 * dayness;
-    });
+    const sheenUpdate = () => { dayU.value = 0.1 + 0.9 * dayness; };
+    (globalThis._autoParticleSystems ||= []).push(sheenUpdate);
+    // Record EVERY per-frame hook this field owns — makeGrass's wind update and
+    // this sheen one — so replacing/mowing the field can remove them all.
+    // Without this the sheen closure outlives the field and ticks a disposed
+    // material forever (one leak per re-grow).
+    field.autoHooks = [field.update, sheenUpdate].filter(Boolean);
 
     console.log(`[grass] groomed ${((count / 5) | 0)} blades — ground normals, patches, gust sheen`);
   } catch (e) {

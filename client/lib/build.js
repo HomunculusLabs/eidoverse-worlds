@@ -449,8 +449,87 @@ export function initPalette() {
   buildSec = makeSection('🧱 build', async (body) => { if (!body.dataset.init) await paintBuild(body); },
     { id: 'build' });
   makeSection('🧍 avatar', paintAvatars, { id: 'avatar' });
+  makeSection('🌿 ground', paintGround, { id: 'ground' });
   makeSection('☀ sky', paintSky, { id: 'sky' });
   return { buildSec };
+}
+
+// ---- terrain & grass -------------------------------------------------------
+// Ground was agent-only (terrain/grass verbs); an empty world had no way for a
+// person to grow either. These are AUTHORED (they persist and fold), so —
+// unlike the sky tuner's live sliders — each is a deliberate commit on a
+// click, which is also why they don't spam the log.
+
+const GROUND_TINTS = {
+  meadow: { layer: '#4a5d33', grass: 0x3a5a2c, tip: 0xaec96a },
+  arid:   { layer: '#7a6b48', grass: 0x8a7d4e, tip: 0xcabf7a },
+  tundra: { layer: '#5a6b6b', grass: 0x6e7f74, tip: 0xb0c0b0 },
+};
+const TERRAIN_SHAPES = { flat: 0.2, hills: 2.6, rugged: 6.0 };
+const GRASS_DENSITY = {
+  sparse: { spacing: 0.42, perCell: 2 },
+  normal: { spacing: 0.26, perCell: 4 },
+  lush:   { spacing: 0.2, perCell: 5 },   // kept modest — blades are fill-rate
+};
+
+function paintGround(body) {
+  if (body.dataset.init) return;
+  body.dataset.init = '1';
+  body.innerHTML = '';
+  const st = { tint: 'meadow', shape: 'hills', seed: 7, density: 'normal', grass: false };
+
+  const row = (label, node) => {
+    const r = document.createElement('div');
+    r.className = 'row';
+    const nm = document.createElement('span'); nm.className = 'nm'; nm.textContent = label;
+    r.append(nm, node); body.appendChild(r); return r;
+  };
+  const btnRow = (...btns) => {
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'display:flex; flex-wrap:wrap; gap:3px;';
+    btns.forEach((b) => { b.style.flex = '1 0 auto'; wrap.appendChild(b); });
+    return wrap;
+  };
+  const mkBtn = (text, on) => { const b = document.createElement('button'); b.textContent = text; b.onclick = on; return b; };
+
+  const growTerrain = () => sendVerb('terrain', {
+    seed: st.seed, size: 160, segments: 200, amplitude: TERRAIN_SHAPES[st.shape], flatRadius: 16,
+    layers: [{ color: GROUND_TINTS[st.tint].layer, repeat: 16 }],
+  });
+  const growGrass = () => {
+    st.grass = true;
+    const d = GRASS_DENSITY[st.density];
+    sendVerb('grass', {
+      width: 90, depth: 80, center: [0, 0], bladeHeight: 0.42, wind: 0.24,
+      spacing: d.spacing, perCell: d.perCell,
+      color: GROUND_TINTS[st.tint].grass, colorTip: GROUND_TINTS[st.tint].tip,
+    });
+  };
+
+  // terrain shape
+  body.appendChild(btnRow(...Object.keys(TERRAIN_SHAPES).map((k) =>
+    mkBtn(k, () => { st.shape = k; growTerrain(); flashHint(`terrain: ${k}`); }))));
+  body.appendChild(btnRow(mkBtn('↻ reshuffle', () => { st.seed = Math.floor(Math.random() * 9999); growTerrain(); })));
+
+  // grass
+  const dens = document.createElement('select');
+  dens.style.cssText = 'font:11px var(--font); background:rgba(4,14,20,.9); color:var(--fg); border:1px solid var(--edge); border-radius:5px; padding:5px;';
+  for (const k of Object.keys(GRASS_DENSITY)) dens.appendChild(new Option(k, k));
+  dens.value = st.density;
+  dens.onchange = () => { st.density = dens.value; if (st.grass) growGrass(); };
+  row('grass', dens);
+  body.appendChild(btnRow(
+    mkBtn('🌱 grow grass', () => { growGrass(); flashHint('grass growing'); }),
+    mkBtn('mow', () => { st.grass = false; sendVerb('grass', { clear: true }); flashHint('grass cleared'); }),
+  ));
+
+  // tint drives both terrain layer and grass colour
+  const tint = document.createElement('select');
+  tint.style.cssText = dens.style.cssText;
+  for (const k of Object.keys(GROUND_TINTS)) tint.appendChild(new Option(k, k));
+  tint.value = st.tint;
+  tint.onchange = () => { st.tint = tint.value; growTerrain(); if (st.grass) growGrass(); };
+  row('tint', tint);
 }
 
 export function toggleBuildMenu() { buildSec?.toggle(); }

@@ -208,7 +208,7 @@ function foldEntry(st: WorldState, e: LogEntry): void {
     }
     case "remove": delete st.entities[a?.id]; return;
     case "terrain": st.terrain = a; return;
-    case "grass": st.grass = a; return;
+    case "grass": st.grass = a?.clear ? null : a; return;   // clear = mow, no field to replay
     case "sky": st.sky = { ...a, ts: e.ts }; return;
     case "weather": st.sky = { ...(st.sky ?? {}), ...a, ts: e.ts }; return;
     case "asset":
