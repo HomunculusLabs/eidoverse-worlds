@@ -367,8 +367,10 @@ export class WorldAgent {
       pose: {
         p: [this.pos.x, this.pos.y, this.pos.z], yaw: this.yaw, speed: this.speed, clip: this.clip,
         ...(this.heldPose ? { pose: this.heldPose } : {}),
+        ...(this.pendingEmote ? { emote: this.pendingEmote } : {}),
       },
     }));
+    this.pendingEmote = null; // one-shot: rides exactly one packet
   }
 
   walkTo(x: number, z: number, run = false, timeoutMs = 90_000): Promise<boolean> {
@@ -393,6 +395,12 @@ export class WorldAgent {
 
   /** Hold a custom pose (yourself). Sparse bone -> [x,y,z,w] quaternion. */
   setPose(bones: Record<string, number[]> | null) { this.heldPose = bones; }
+
+  /** Fire a named emote — a one-shot rider on the next presence packet, the
+   *  same channel the browser's emote bar uses. Receivers resolve the name
+   *  to a library clip; nothing is logged. */
+  emote(name: string) { this.pendingEmote = name; }
+  private pendingEmote: string | null = null;
 
   /** Change body mid-session: the same move the browser makes — re-announce
    *  with the new path and every client rebuilds this remote. Position, held

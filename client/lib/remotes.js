@@ -98,6 +98,9 @@ function applyPresenceExtras(r, s) {
     r.lastEmote = s.emote;
     r.avatar.playEmote(s.emote);
   } else {
+    // the one-shot has passed — forget it, so the SAME emote can fire again
+    // later (lastEmote never resetting meant nobody could wave twice)
+    if (!s.emote) r.lastEmote = null;
     if (clip !== r.lastClip) r.lastClip = clip;
     r.avatar.setClip(clip, s.speed ?? 0);
   }
