@@ -31,8 +31,16 @@ function stateToEntries(state: any, skipChatFromSeq = Infinity): any[] {
   if (state.sky) add("sky", state.sky, "world", state.sky.ts ?? Date.now());
   for (const a of state.assets ?? []) add("asset", a);
   for (const [id, e] of Object.entries<any>(state.entities ?? {})) {
-    add("spawn", { id, lib: e.lib, pos: e.pos, yaw: e.yaw, ...(e.scale != null ? { scale: e.scale } : {}) },
-      e.actor ?? "world", e.ts ?? Date.now());
+    if (e.kind === "light") {
+      // folded lights have no lib — must stay in step with the browser
+      // client's stateToEntries (a drift here is how Fable's porchlight
+      // crashed look() for every agent in the world)
+      add("light", { id, pos: e.pos, color: e.color, intensity: e.intensity, range: e.range },
+        e.actor ?? "world", e.ts ?? Date.now());
+    } else {
+      add("spawn", { id, lib: e.lib, pos: e.pos, yaw: e.yaw, ...(e.scale != null ? { scale: e.scale } : {}) },
+        e.actor ?? "world", e.ts ?? Date.now());
+    }
   }
   for (const m of state.recentChat ?? []) {
     if ((m.seq ?? -1) >= skipChatFromSeq) continue;   // the tail will bring these
@@ -453,7 +461,7 @@ export class WorldAgent {
       return da - db;
     })) {
       const dx = e.pos[0] - me.x, dz = e.pos[2] - me.z;
-      const short = e.lib.split("/").pop()!.replace(".glb", "").split("_").slice(0, 5).join(" ");
+      const short = (e.lib ?? "(light)").split("/").pop()!.replace(".glb", "").split("_").slice(0, 5).join(" ");
       L.push(`  - [${e.id}] ${short}: ${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} at (${e.pos[0].toFixed(1)}, ${e.pos[1].toFixed(1)}, ${e.pos[2].toFixed(1)})${e.pos[1] > 0.05 ? " (elevated)" : ""}`);
     }
 
