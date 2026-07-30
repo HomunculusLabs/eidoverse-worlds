@@ -182,6 +182,9 @@ wireNet({
     if (r.clip === 'sit' || r.clip === 'sitchair' || r.clip === 'lie') {
       setPosture(r.clip === 'lie' ? 'lie' : 'sit');
     }
+    // an enacted pose is authored content — wake holding it, like the spot
+    // you stood on. It rides the next presence packet, so everyone sees it.
+    if (r.pose) myState.pose = r.pose;
   },
   onSnapshotDone: () => {},
 });

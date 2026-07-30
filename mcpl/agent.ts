@@ -15,7 +15,7 @@ type Vec2 = { x: number; z: number };
 type Pose = { p: number[]; yaw: number; speed: number; clip: string };
 type Entity = { id: string; lib: string; pos: number[]; yaw: number; actor: string };
 type Person = { id: string; avatar: string; pose: Pose | null };
-type InboxItem = { ts: number; kind: "say" | "arrive" | "leave"; who: string; text?: string; seq?: number | null };
+type InboxItem = { ts: number; kind: "say" | "arrive" | "leave" | "act"; who: string; text?: string; seq?: number | null };
 
 /** Folded world state back into the verbs that produced it. Must stay in step
  *  with the browser client's stateToEntries — two renderers disagreeing about
@@ -82,7 +82,7 @@ export class WorldAgent {
   pings: { ts: number; kind: "mention" | "approach" | "whisper"; who: string; text?: string }[] = [];
   onPing: ((p: { ts: number; kind: string; who: string; text?: string }) => void) | null = null;
   /** live world events (say/arrive/leave) — the channel fan-out hook */
-  onEvent: ((ev: { ts: number; kind: "say" | "arrive" | "leave" | "whisper"; who: string; text?: string; mention?: boolean }) => void) | null = null;
+  onEvent: ((ev: { ts: number; kind: "say" | "arrive" | "leave" | "whisper" | "act"; who: string; text?: string; mention?: boolean }) => void) | null = null;
   private lastNear = new Map<string, number>(); // participant -> last approach-ping ts
   private terrain: { heightAt(x: number, z: number): number } | null = null;
   private terrainSrc: string | null = null;
@@ -157,6 +157,9 @@ export class WorldAgent {
             if (msg.restore && !this.restoredPose && !this.target && this.pos.x === 0 && this.pos.z === 0) {
               this.pos.x = msg.restore.p[0]; this.pos.z = msg.restore.p[2];
               this.yaw = msg.restore.yaw ?? 0;
+              // an enacted pose is authored, not ephemeral — wake holding it
+              if (msg.restore.clip) this.clip = msg.restore.clip;
+              if (msg.restore.pose) this.heldPose = msg.restore.pose;
             }
             this.restoredPose = true;
             for (const p of msg.present) this.people.set(p.id, { id: p.id, avatar: p.avatar, pose: p.pose });
@@ -246,6 +249,32 @@ export class WorldAgent {
     if (dist < 2.5 && prevDist >= 2.5 && cooled) {
       this.lastNear.set(id, Date.now());
       this.ping({ ts: Date.now(), kind: "approach", who: id });
+    }
+    if (id !== this.name) this.noteActs(id, prev, pose);
+  }
+
+  /** Embodied acts as events. The presence stream is 15Hz noise; what an
+   *  agent should hear about is TRANSITIONS — an emote fired, a pose struck
+   *  or released, someone sitting down or getting up. Edge-triggered, so a
+   *  held pose (or a ragdoll, which streams through the same field) speaks
+   *  once when it starts and once when it ends, never per-frame. */
+  private noteActs(id: string, prev: Pose | null, pose: Pose & { emote?: string; pose?: Record<string, unknown> | null }) {
+    const acts: string[] = [];
+    if (pose.emote) acts.push(`emotes: ${pose.emote}`);
+    const prevHeld = Boolean((prev as { pose?: unknown } | null)?.pose);
+    const nowHeld = Boolean(pose.pose);
+    if (nowHeld && !prevHeld) acts.push(`strikes a pose (${Object.keys(pose.pose!).length} bones held)`);
+    if (!nowHeld && prevHeld) acts.push("releases their pose");
+    const LOCO = new Set(["idle", "walk", "run"]);
+    const pc = prev?.clip ?? "idle", nc = pose.clip ?? "idle";
+    if (nc !== pc) {
+      if (!LOCO.has(nc)) acts.push(nc.startsWith("sit") ? "sits down" : nc === "lie" ? "lies down" : `starts "${nc}"`);
+      else if (!LOCO.has(pc)) acts.push("gets up");
+    }
+    for (const text of acts) {
+      const ts = Date.now();
+      this.inbox.push({ ts, kind: "act", who: id, text });
+      this.onEvent?.({ ts, kind: "act", who: id, text });
     }
   }
 
@@ -450,8 +479,10 @@ export class WorldAgent {
       if (!p.pose) { L.push(`  - ${p.id} (just arrived, position unknown)`); continue; }
       const [x, , z] = p.pose.p;
       const dx = x - me.x, dz = z - me.z;
-      const doing = { idle: "standing", walk: "walking", run: "running" }[p.pose.clip] ?? p.pose.clip;
-      L.push(`  - ${p.id}: ${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} at (${x.toFixed(1)}, ${z.toFixed(1)}), ${doing}`);
+      const doing = { idle: "standing", walk: "walking", run: "running", sit: "sitting", sitchair: "sitting on a chair", lie: "lying down" }[p.pose.clip] ?? p.pose.clip;
+      const held = (p.pose as { pose?: Record<string, unknown> | null }).pose;
+      const posed = held ? `, holding a pose (${Object.keys(held).length} bones)` : "";
+      L.push(`  - ${p.id}: ${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} at (${x.toFixed(1)}, ${z.toFixed(1)}), ${doing}${posed}`);
     }
 
     const ents = [...this.entities.values()];
@@ -470,7 +501,9 @@ export class WorldAgent {
     if (unread.length) {
       L.push(`\nSince you last looked:`);
       for (const m of unread.slice(-25)) {
-        L.push(m.kind === "say" ? `  ${m.who}: ${m.text}` : `  * ${m.who} ${m.kind === "arrive" ? "arrived" : "left"}`);
+        L.push(m.kind === "say" ? `  ${m.who}: ${m.text}`
+          : m.kind === "act" ? `  * ${m.who} ${m.text}`
+          : `  * ${m.who} ${m.kind === "arrive" ? "arrived" : "left"}`);
       }
     }
     return L.join("\n");

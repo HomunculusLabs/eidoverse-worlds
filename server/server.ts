@@ -454,7 +454,10 @@ class World {
 
   rememberPose(id: string, pose: unknown) {
     if (!pose) return;
-    this.poses[id] = pose;
+    // one-shot emotes are moments, not places — remembering one would replay
+    // it at every wake. Held bones (pose.pose) stay: enacted poses persist.
+    const { emote: _emote, ...still } = pose as Record<string, unknown>;
+    this.poses[id] = still;
     writeFileSync(this.posesPath + ".tmp", JSON.stringify(this.poses));
     renameSync(this.posesPath + ".tmp", this.posesPath);
   }

@@ -174,6 +174,10 @@ class Session {
         // other, in front of everyone.
         this.deliver(`(whispers to you) ${ev.text}`, { id: ev.who, name: ev.who },
           { tags: ["mention", "whisper"], mentioned: true });
+      } else if (ev.kind === "act") {
+        // embodied transitions — an emote, a pose struck or released, someone
+        // sitting down. Ambient by nature: a closed door mutes them.
+        if (this.channelOpen) this.deliver(`* ${ev.who} ${ev.text}`, { id: "world", name: this.agent.world });
       } else if (this.channelOpen) {
         this.deliver(`* ${ev.who} ${ev.kind === "arrive" ? "arrived in the world" : "left the world"}`, { id: "world", name: this.agent.world });
       }
