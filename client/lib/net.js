@@ -157,11 +157,30 @@ async function fetchIdentity() {
   if (identity) {
     CONFIG.authed = true;
     CONFIG.sub = identity.sub;
+    // Remember that this browser entered verified — when the session later
+    // expires (or a deploy predating session persistence dropped it), the
+    // right move is back through the login, not the key door.
+    localStorage.setItem('ew-authed', '1');
     if (identity.name && identity.name !== CONFIG.name) {
       CONFIG.name = identity.name;
       localStorage.setItem('ew-name', identity.name);
     }
   }
+}
+
+/** A logged-out returning Discord user goes back through the login — it
+ *  round-trips without interaction while Discord still knows them. Key-link
+ *  visitors (CONFIG.token) are never bounced, and one bounce per minute is
+ *  the cap: if the identity node is down we fall through to the door (which
+ *  offers the same link) instead of redirect-looping. */
+export function bounceToLogin() {
+  if (identity || !authCfg?.login || CONFIG.token) return false;
+  if (localStorage.getItem('ew-authed') !== '1') return false;
+  const last = Number(sessionStorage.getItem('ew-login-bounce') ?? 0);
+  if (Date.now() - last < 60_000) return false;
+  sessionStorage.setItem('ew-login-bounce', String(Date.now()));
+  location.href = authCfg.login;
+  return true;
 }
 
 /** Resolve the verified identity BEFORE any UI reads CONFIG.name — main.js
@@ -186,6 +205,10 @@ export async function connect() {
     location.href = authCfg.login;
     return;
   }
+  // Not required, but this browser used to be logged in and isn't anymore —
+  // re-login is silent while Discord still authorizes, so don't make them
+  // rediscover the door.
+  if (bounceToLogin()) return;
   net.status = 'connecting';
   bus.emit('net', net);
   net.ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`);
@@ -209,6 +232,15 @@ export async function connect() {
     if (ev.code === 4003) {
       net.status = 'rejected';
       bus.emit('net', net);
+      // If we entered verified, this refusal means the session died
+      // server-side (TTL lapsed mid-visit). The cached identity is stale —
+      // drop it and go back through the login rather than asking for a key
+      // this person never had.
+      if (CONFIG.authed) {
+        identity = null;
+        CONFIG.authed = false;
+        if (bounceToLogin()) return;
+      }
       bus.emit('bad-key');
       return;
     }
