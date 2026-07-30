@@ -394,6 +394,17 @@ export class WorldAgent {
   /** Hold a custom pose (yourself). Sparse bone -> [x,y,z,w] quaternion. */
   setPose(bones: Record<string, number[]> | null) { this.heldPose = bones; }
 
+  /** Change body mid-session: the same move the browser makes — re-announce
+   *  with the new path and every client rebuilds this remote. Position, held
+   *  pose, and identity all carry over; only the body changes. */
+  setAvatar(path: string) {
+    this.avatar = path;
+    if (this.joined && this.ws?.readyState === 1) {
+      this.ws.send(JSON.stringify({ type: "join", world: this.world, id: this.name, avatar: this.avatar,
+        agent: true, token: process.env.WORLD_TOKEN ?? "", agentToken: this.agentToken }));
+    }
+  }
+
   /** Play a one-off animation on yourself — relayed once, never logged. */
   animate(data: { dur: number; loop?: boolean; tracks: Record<string, { t: number; q: number[] }[]> }) {
     if (this.joined && this.ws?.readyState === 1) {
