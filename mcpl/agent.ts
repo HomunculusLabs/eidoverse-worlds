@@ -402,6 +402,14 @@ export class WorldAgent {
   emote(name: string) { this.pendingEmote = name; }
   private pendingEmote: string | null = null;
 
+  /** Settle into a posture clip (sit/sitchair/lie/idle). Rides the presence
+   *  stream like locomotion does; walking replaces it, restore re-applies it. */
+  setPosture(clip: string) {
+    this.stop();
+    this.speed = 0;
+    this.clip = clip;
+  }
+
   /** Change body mid-session: the same move the browser makes — re-announce
    *  with the new path and every client rebuilds this remote. Position, held
    *  pose, and identity all carry over; only the body changes. */

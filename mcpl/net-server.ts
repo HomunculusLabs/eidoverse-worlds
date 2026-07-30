@@ -56,15 +56,25 @@ function readTokens(): Record<string, Auth> {
   return { "dev-token": { id: "claude", name: "Claude", world: "commons" } };
 }
 
-// per-agent lastSeen (for missed-mention replay on reconnect), tmp+rename
+// per-agent durable state (missed-mention cursors, chosen bodies), tmp+rename.
+// Plain ids map to lastSeen timestamps; __-prefixed keys are sections.
 const STATE_PATH = new URL("./state.json", import.meta.url).pathname;
-/** Per-agent world-log position. See the catch-up note in serve(). */
-const lastSeenSeq: Record<string, number> = {};
-const lastSeen: Record<string, number> = existsSync(STATE_PATH)
-  ? JSON.parse(readFileSync(STATE_PATH, "utf8"))
-  : {};
+const _state: Record<string, unknown> = (() => {
+  try { if (existsSync(STATE_PATH)) return JSON.parse(readFileSync(STATE_PATH, "utf8")); } catch { /* fresh */ }
+  return {};
+})();
+/** Per-agent world-log position. See the catch-up note in serve().
+ *  RESTORED at boot — it was persisted but never read back, so every door
+ *  restart forgot where each agent had read to. */
+const lastSeenSeq: Record<string, number> = (_state.__seq as Record<string, number>) ?? {};
+/** An agent's chosen body outlives its sessions — set_avatar is a decision,
+ *  not a costume for one connection. Wins over the credential's default. */
+const chosenAvatar: Record<string, string> = (_state.__avatar as Record<string, string>) ?? {};
+const lastSeen: Record<string, number> = Object.fromEntries(
+  Object.entries(_state).filter(([k, v]) => !k.startsWith("__") && typeof v === "number"),
+) as Record<string, number>;
 function persistState() {
-  writeFileSync(STATE_PATH + ".tmp", JSON.stringify({ ...lastSeen, __seq: lastSeenSeq }));
+  writeFileSync(STATE_PATH + ".tmp", JSON.stringify({ ...lastSeen, __seq: lastSeenSeq, __avatar: chosenAvatar }));
   renameSync(STATE_PATH + ".tmp", STATE_PATH);
 }
 
@@ -82,6 +92,7 @@ const TOOLS = [
   { name: "pose", description: "Hold a custom body pose — a one-off, for when you are doing something specific. `bones` is a sparse map of VRM humanoid bone name to a [x,y,z,w] quaternion (only the bones you care about; the rest keep animating). Example bones: leftUpperArm, leftLowerArm, rightUpperArm, rightLowerArm, spine, chest, neck, head. Held until you `clear_pose` or move. Presence only — never written to the world log, so it costs nothing and vanishes when you leave. Pass `target` to pose SOMEONE ELSE (they decide whether to allow it).", inputSchema: { type: "object", properties: { bones: { type: "object" }, target: { type: "string" } }, required: ["bones"] } },
   { name: "clear_pose", description: "Release a held pose, easing back to normal animation. Pass `target` to release a pose you asked someone else to hold.", inputSchema: { type: "object", properties: { target: { type: "string" } } } },
   { name: "emote", description: "Fire a named gesture — the same one-shots humans have on their emote bar. Plays once over your locomotion; presence only, never logged. For a gesture that isn't listed, invent one with `animate`.", inputSchema: { type: "object", properties: { name: { type: "string", enum: ["wave", "cheer", "dance", "point", "salute", "clap", "talk", "flail"] } }, required: ["name"] } },
+  { name: "posture", description: "Settle into a posture: sit (on the ground), sitchair (chair height), lie, or stand. Held until you stand or walk; survives leaving and rejoining, like a held pose.", inputSchema: { type: "object", properties: { kind: { type: "string", enum: ["sit", "sitchair", "lie", "stand"] } }, required: ["kind"] } },
   { name: "ragdoll", description: "Ask another body to go limp and collapse — a physics ragdoll. `target` is who falls; THEY simulate it on their own body (you never simulate someone else), and it settles into a held pose everyone sees. Being knocked over is opt-in for humans and default for agent performers.", inputSchema: { type: "object", properties: { target: { type: "string" } }, required: ["target"] } },
   { name: "animate", description: "Play a one-off animation — for a specific gesture you are inventing on the spot. `tracks` maps a VRM humanoid bone name to a list of keyframes [{ t: seconds, q: [x,y,z,w] }]; `dur` is the length in seconds. Only list the bones that move. It plays once (or set loop:true), over your locomotion, and is relayed to everyone but never logged. Keep it small and sparse — a few bones, a few keyframes. Pass `target` to play it on someone else (they decide).", inputSchema: { type: "object", properties: { dur: { type: "number" }, loop: { type: "boolean" }, tracks: { type: "object" }, target: { type: "string" } }, required: ["dur", "tracks"] } },
   { name: "set_avatar", description: "Change your body. Pass `avatar` as a roster name (see it with no arguments) or a full vrm path. Takes effect immediately — everyone sees you change; your position and held pose carry over.", inputSchema: { type: "object", properties: { avatar: { type: "string" } } } },
@@ -157,7 +168,7 @@ class Session {
     this.agent = new WorldAgent({
       name: auth.id,
       world: auth.world ?? "commons",
-      avatar: auth.avatar,
+      avatar: chosenAvatar[auth.id] ?? auth.avatar,
       url: process.env.WORLD_URL ?? "ws://127.0.0.1:8940/ws",
       // the same bearer that opened THIS door — the sequencer verifies the
       // name against it (agent names are reserved there)
@@ -429,7 +440,16 @@ class Session {
         const path = want.includes("/") ? want : roster.find((r) => r.name === want)?.path;
         if (!path) return text(`no body named "${want}" — roster: ${roster.map((r) => r.name).join(", ")}`);
         ag.setAvatar(path);
+        chosenAvatar[this.auth.id] = path; // the choice outlives this session
+        persistState();
         return text(`you are now wearing ${want.includes("/") ? path.split("/").pop() : want}`);
+      }
+      case "posture": {
+        const kind = String(a.kind ?? "");
+        const clip = { sit: "sit", sitchair: "sitchair", lie: "lie", stand: "idle" }[kind];
+        if (!clip) return text("posture kinds: sit (on the ground), sitchair (chair height), lie, stand");
+        ag.setPosture(clip);
+        return text(kind === "stand" ? "you stand up" : `you ${kind === "lie" ? "lie down" : "sit down"} — walking stands you back up`);
       }
       case "library_sheet": {
         const kind = a.kind === "models" ? "models" : "avatars";
