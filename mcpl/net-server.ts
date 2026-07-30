@@ -184,7 +184,14 @@ class Session {
       }
     };
 
-    await this.registerChannels();
+    // Deliberately NOT awaited: channels/register is a server→client REQUEST,
+    // and a plain-MCP host that silently drops unknown requests (most
+    // frameworks; spec-correct ones answer -32601) would otherwise deadlock
+    // the session right here — tools/list never got an answer and the agent
+    // reported an empty server. The response, if one ever comes, resolves
+    // through the connection's pending-request routing while the main loop
+    // below pumps messages.
+    this.registerChannels();
 
     // Missed-mention replay: anything that addressed you while you slept
     // greets you as tagged channel traffic — a wake-worthy summary, not
