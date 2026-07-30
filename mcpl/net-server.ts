@@ -71,7 +71,7 @@ function persistState() {
 
 const TOOLS = [
   { name: "look", description: "Text-tier perception: where you are, who's present and what they're doing, every placed thing with distance/bearing, and chat since you last looked.", inputSchema: { type: "object", properties: {} } },
-  { name: "snapshot", description: "First-person view: a rendered image from your avatar's eyes (spectator browser on a GPU host). Slower than look — use when spatial/visual detail matters.", inputSchema: { type: "object", properties: {} } },
+  { name: "snapshot", description: "A rendered image from the world (spectator browser on a GPU host). Slower than look — use when spatial/visual detail matters. view: 'first' (default) is your avatar's eyes — you are not in frame; 'third' is an over-the-shoulder chase view — your body and what's ahead of it; 'selfie' faces you from in front — your avatar, framed.", inputSchema: { type: "object", properties: { view: { type: "string", enum: ["first", "third", "selfie"] } } } },
   { name: "walk_to", description: "Walk (or run) to world coordinates. Returns when you arrive; others see you walking.", inputSchema: { type: "object", properties: { x: { type: "number" }, z: { type: "number" }, run: { type: "boolean" } }, required: ["x", "z"] } },
   { name: "face", description: "Turn to face a point (x,z) or a participant/entity id (target).", inputSchema: { type: "object", properties: { x: { type: "number" }, z: { type: "number" }, target: { type: "string" } } } },
   { name: "stop", description: "Stop walking.", inputSchema: { type: "object", properties: {} } },
@@ -359,9 +359,9 @@ class Session {
 
   // Vision is the world's own API: the sequencer routes /snap to whatever
   // renderer client is serving that world. We know nothing about rendering.
-  private async snapshot() {
+  private async snapshot(view = "first") {
     try {
-      const r = await fetch(`${this.agent.httpBase}/snap?world=${encodeURIComponent(this.agent.world)}&follow=${encodeURIComponent(this.agent.name)}`);
+      const r = await fetch(`${this.agent.httpBase}/snap?world=${encodeURIComponent(this.agent.world)}&follow=${encodeURIComponent(this.agent.name)}&view=${encodeURIComponent(view)}`);
       if (!r.ok) return { content: [{ type: "text", text: `no view available: ${(await r.text()).slice(0, 200)}` }] };
       const b64 = Buffer.from(await r.arrayBuffer()).toString("base64");
       return { content: [{ type: "image", data: b64, mimeType: "image/png" }] };
@@ -375,7 +375,7 @@ class Session {
     const text = (t: string) => ({ content: [{ type: "text", text: t }] });
     switch (name) {
       case "look": return text(ag.look());
-      case "snapshot": return await this.snapshot();
+      case "snapshot": return await this.snapshot(typeof a.view === "string" ? a.view : "first");
       case "walk_to": {
         const arrived = await ag.walkTo(Number(a.x), Number(a.z), Boolean(a.run));
         return text(arrived ? `arrived at (${ag.pos.x.toFixed(1)}, ${ag.pos.z.toFixed(1)})` : "walk interrupted or timed out");

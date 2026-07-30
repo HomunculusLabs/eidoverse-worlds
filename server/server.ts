@@ -522,15 +522,16 @@ type PendingSnap = { resolve: (r: { ok: true; png: Uint8Array } | { ok: false; e
 const pendingSnaps = new Map<string, PendingSnap>();
 let nextSnapId = 1;
 
-function requestSnap(world: World, follow: string): Promise<{ ok: true; png: Uint8Array } | { ok: false; err: string; status: number }> {
+function requestSnap(world: World, follow: string, view = "first"): Promise<{ ok: true; png: Uint8Array } | { ok: false; err: string; status: number }> {
   const renderer = [...world.clients].find((c) => c.renderer);
   if (!renderer) return Promise.resolve({ ok: false, err: `no renderer is currently serving world "${world.name}"`, status: 503 });
   const target = [...world.clients].find((c) => c.id === follow && !c.spectator);
   if (!target) return Promise.resolve({ ok: false, err: `"${follow}" is not present in "${world.name}"`, status: 404 });
+  if (!["first", "third", "selfie"].includes(view)) view = "first";
   const id = `snap-${nextSnapId++}`;
   return new Promise((resolve) => {
     pendingSnaps.set(id, { resolve });
-    renderer.ws.send(JSON.stringify({ type: "snap", id, follow }));
+    renderer.ws.send(JSON.stringify({ type: "snap", id, follow, view }));
     setTimeout(() => {
       if (pendingSnaps.delete(id)) resolve({ ok: false, err: "renderer timed out", status: 504 });
     }, 12_000);
@@ -757,7 +758,7 @@ const server = Bun.serve({
       const w = worlds.get(url.searchParams.get("world") ?? "commons");
       const follow = url.searchParams.get("follow") ?? "";
       if (!w) return new Response("unknown world", { status: 404 });
-      const r = await requestSnap(w, follow);
+      const r = await requestSnap(w, follow, url.searchParams.get("view") ?? "first");
       if (!r.ok) return new Response(r.err, { status: r.status });
       return new Response(r.png, { headers: { "content-type": "image/png", "cache-control": "no-store" } });
     }
