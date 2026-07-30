@@ -279,7 +279,7 @@ export function toggleHelp() {
 
 // ---- the front door --------------------------------------------------------
 
-export function openDoor({ roster = [], needsKey = false, onEnter }) {
+export function openDoor({ roster = [], needsKey = false, login = null, onEnter }) {
   const s = sheet(el.door);
   s.innerHTML = `
     <h1>step in</h1>
@@ -291,6 +291,9 @@ export function openDoor({ roster = [], needsKey = false, onEnter }) {
     ${needsKey ? `<label><span class="lbl">door key</span>
       <input id="d-key" type="text" spellcheck="false" value="${escapeHtml(CONFIG.token)}"
         placeholder="the key from your invite"></label>` : ''}
+    ${needsKey && login && !CONFIG.authed ? `<p class="sub" style="margin:4px 0 0">
+      no key? <a href="${escapeHtml(login)}">sign in with Discord</a> instead —
+      it comes back here with the door open</p>` : ''}
     <h2>body</h2>
     <div class="grid dense" id="d-roster"></div>
     <button class="go" id="d-go">enter the world</button>
@@ -318,8 +321,9 @@ export function openDoor({ roster = [], needsKey = false, onEnter }) {
   const go = () => {
     // A verified identity owns the name — the server would ignore an edit
     // anyway (home-node.md §7), so don't offer one.
+    let name = CONFIG.name;
     if (!CONFIG.authed) {
-      const name = s.querySelector('#d-name').value.trim().slice(0, 48);
+      name = s.querySelector('#d-name').value.trim().slice(0, 48);
       if (!name) { s.querySelector('#d-name').focus(); return; }
       setName(name);
     }
@@ -331,12 +335,13 @@ export function openDoor({ roster = [], needsKey = false, onEnter }) {
     onEnter({ name, avatar: pick?.path, avatarName: pick?.name });
   };
   s.querySelector('#d-go').onclick = go;
-  s.querySelector('#d-name').addEventListener('keydown', (e) => {
+  // #d-name doesn't exist for a verified arrival — the name isn't editable.
+  s.querySelector('#d-name')?.addEventListener('keydown', (e) => {
     e.stopPropagation();
     if (e.key === 'Enter') go();
   });
   s.querySelector('#d-key')?.addEventListener('keydown', (e) => e.stopPropagation());
 
   openOverlay(el.door);
-  setTimeout(() => s.querySelector('#d-name').focus(), 30);
+  setTimeout(() => (s.querySelector('#d-name') ?? s.querySelector('#d-go'))?.focus(), 30);
 }

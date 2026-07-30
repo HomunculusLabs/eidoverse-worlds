@@ -172,6 +172,12 @@ export async function initIdentity() {
   return identity;
 }
 
+/** The deployment's login URL, if identity is wired up — the door offers it as
+ *  the keyless way in. Only meaningful after initIdentity()/connect(). */
+export function loginUrl() {
+  return authCfg?.login ?? null;
+}
+
 export async function connect() {
   await fetchIdentity();
   // Login-required deployment and we have neither a session nor a door key:

@@ -20,7 +20,7 @@ import {
 import {
   remotes, updateRemotes, updateGaze, noteSpeaking, setLodBias,
 } from './lib/remotes.js';
-import { net, connect, initIdentity, wireNet, sendVerb, sendPose, sendWhisper, sendTyping } from './lib/net.js';
+import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendWhisper, sendTyping } from './lib/net.js';
 import {
   initPalette, updateBuild, wireAvatarSwitch, setMyAvatarPath, toggleBuildMenu,
   hasGhost, hasSelection, toggleEditMode, isEditing,
@@ -129,6 +129,7 @@ if (isViewer) {
     openDoor({
       roster,
       needsKey: CONFIG.params.has('needkey'),
+      login: loginUrl(),
       onEnter: ({ avatar, avatarName }) => {
         if (avatar) { myAvatarPath = avatar; myAvatarName = avatarName; setMyAvatarPath(avatar); }
         start();
@@ -142,7 +143,7 @@ if (isViewer) {
 bus.on('bad-key', () => {
   toast('that door key was refused', 'err', 20000);
   openDoor({
-    roster, needsKey: true,
+    roster, needsKey: true, login: loginUrl(),
     onEnter: ({ avatar, avatarName }) => {
       if (avatar) { myAvatarPath = avatar; myAvatarName = avatarName; setMyAvatarPath(avatar); }
       connect();
