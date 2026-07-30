@@ -60,6 +60,29 @@ const OPT_DIR = join(ROOT, "assets", "opt");
 
 mkdirSync(WORLDS_DIR, { recursive: true });
 
+// ---- session persistence ----------------------------------------------------
+// Sessions used to be memory-only, so every deploy logged the whole show out
+// and sent verified humans back to the door mid-event. They survive restarts
+// now. The file holds bearer-equivalent session ids — 0600 and gitignored,
+// same posture as mcpl/tokens.json.
+const SESSIONS_FILE = join(ROOT, ".sessions.json");
+function saveSessions() {
+  try {
+    const live = [...hnSessions].filter(([, s]) => s.exp > Date.now());
+    writeFileSync(`${SESSIONS_FILE}.tmp`, JSON.stringify(Object.fromEntries(live)), { mode: 0o600 });
+    renameSync(`${SESSIONS_FILE}.tmp`, SESSIONS_FILE); // atomic — a crash mid-write never truncates the live file
+  } catch (e) { console.log(`[auth] session save failed: ${e}`); }
+}
+try {
+  if (existsSync(SESSIONS_FILE)) {
+    const raw = JSON.parse(readFileSync(SESSIONS_FILE, "utf8")) as Record<string, HnSession>;
+    for (const [sid, s] of Object.entries(raw)) {
+      if (/^[a-f0-9]{64}$/.test(sid) && s.exp > Date.now()) hnSessions.set(sid, s);
+    }
+    if (hnSessions.size) console.log(`[auth] restored ${hnSessions.size} live session(s)`);
+  }
+} catch (e) { console.log(`[auth] session restore failed (starting empty): ${e}`); }
+
 // ---------------------------------------------------------------- world logs
 
 type LogEntry = {
@@ -655,6 +678,7 @@ const server = Bun.serve({
       // opportunistic sweep — one entry per login, the map stays small
       for (const [k, s] of hnSessions) if (s.exp < Date.now()) hnSessions.delete(k);
       hnSessions.set(sid, { sub: p.sub, name: p.name, scopes: p.scopes, claims: p.claims, exp: Date.now() + SESSION_TTL_MS });
+      saveSessions();
       const secure = (req.headers.get("x-forwarded-proto") ?? url.protocol.replace(":", "")) === "https" ? "; Secure" : "";
       console.log(`[auth] session for ${p.sub} ("${p.name}") [${p.scopes.join(" ")}]`);
       return new Response(JSON.stringify({ ok: true, name: p.name, sub: p.sub }), {
@@ -666,7 +690,7 @@ const server = Bun.serve({
     }
     if (url.pathname === "/logout") {
       const m = /(?:^|;\s*)ew_sess=([a-f0-9]{64})/.exec(req.headers.get("cookie") ?? "");
-      if (m) hnSessions.delete(m[1]!);
+      if (m && hnSessions.delete(m[1]!)) saveSessions();
       return new Response(JSON.stringify({ ok: true }), {
         headers: { "content-type": "application/json", "set-cookie": "ew_sess=; Path=/; HttpOnly; Max-Age=0" },
       });

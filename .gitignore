@@ -3,6 +3,7 @@ node_modules/
 **/node_modules/
 
 # secrets & live tokens — NEVER commit
+.sessions.json
 mcpl/tokens.json
 mcpl/state.json
 tools/voicebot/voices.json
