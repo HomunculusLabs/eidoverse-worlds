@@ -33,6 +33,7 @@ import {
 } from "@animalabs/mcpl-core";
 import { WorldAgent } from "./agent.ts";
 import { verifyToken } from "../server/aid1.ts";
+import sharp from "sharp";
 
 const PORT = Number(process.env.MCPL_PORT ?? 8941);
 // archipelago-home door (home-node.md §7): a `?token=aid1.…` credential is an
@@ -83,6 +84,8 @@ const TOOLS = [
   { name: "ragdoll", description: "Ask another body to go limp and collapse — a physics ragdoll. `target` is who falls; THEY simulate it on their own body (you never simulate someone else), and it settles into a held pose everyone sees. Being knocked over is opt-in for humans and default for agent performers.", inputSchema: { type: "object", properties: { target: { type: "string" } }, required: ["target"] } },
   { name: "animate", description: "Play a one-off animation — for a specific gesture you are inventing on the spot. `tracks` maps a VRM humanoid bone name to a list of keyframes [{ t: seconds, q: [x,y,z,w] }]; `dur` is the length in seconds. Only list the bones that move. It plays once (or set loop:true), over your locomotion, and is relayed to everyone but never logged. Keep it small and sparse — a few bones, a few keyframes. Pass `target` to play it on someone else (they decide).", inputSchema: { type: "object", properties: { dur: { type: "number" }, loop: { type: "boolean" }, tracks: { type: "object" }, target: { type: "string" } }, required: ["dur", "tracks"] } },
   { name: "set_avatar", description: "Change your body. Pass `avatar` as a roster name (see it with no arguments) or a full vrm path. Takes effect immediately — everyone sees you change; your position and held pose carry over.", inputSchema: { type: "object", properties: { avatar: { type: "string" } } } },
+  { name: "library_sheet", description: "A contact sheet — one grid image with names under each tile. kind 'avatars' is the wearable roster (portraits exist once a body has been worn); kind 'models' is the placeable object library. 12 per page. Use library_preview for a closer look at one, set_avatar to wear, spawn to place.", inputSchema: { type: "object", properties: { kind: { type: "string", enum: ["avatars", "models"] }, page: { type: "number" } }, required: ["kind"] } },
+  { name: "library_preview", description: "One item at full size: an avatar's portrait (roster name) or a model's preview render (library filename or path).", inputSchema: { type: "object", properties: { name: { type: "string" } }, required: ["name"] } },
   { name: "list_library", description: "Search the model library by keywords. Returns library paths for spawn.", inputSchema: { type: "object", properties: { query: { type: "string" } }, required: ["query"] } },
   { name: "spawn", description: "Spawn a library model. lib (exact) or query (best match); position defaults to 2m in front of you.", inputSchema: { type: "object", properties: { lib: { type: "string" }, query: { type: "string" }, x: { type: "number" }, z: { type: "number" }, y: { type: "number" }, yaw: { type: "number" }, id: { type: "string" } } } },
   { name: "place", description: "Move an entity (id from look) to x,z (y defaults to terrain; pass y to seat on furniture).", inputSchema: { type: "object", properties: { id: { type: "string" }, x: { type: "number" }, z: { type: "number" }, y: { type: "number" }, yaw: { type: "number" } }, required: ["id", "x", "z"] } },
@@ -104,6 +107,31 @@ function searchLibrary(query: string): string[] {
     .sort((a, b) => b.score - a.score)
     .slice(0, 12)
     .map((r) => `eidoverse/assets/models/${r.f}`);
+}
+
+// ---- contact sheets ---------------------------------------------------------
+// The library's previews and the roster's portraits, composed into ONE grid
+// image per page — an agent flipping through a catalog, not drowning in a
+// dozen separate image blocks. Layout is SVG (labels for free), sharp
+// rasterizes it.
+
+const SHEET = { tile: 200, label: 26, cols: 4, perPage: 12 };
+
+async function contactSheet(tiles: { name: string; data: ArrayBuffer | null; mime: string }[]): Promise<Buffer> {
+  const { tile, label, cols } = SHEET;
+  const rows = Math.ceil(tiles.length / cols);
+  const W = cols * tile, H = rows * (tile + label);
+  const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const cells = tiles.map((t, i) => {
+    const x = (i % cols) * tile, y = Math.floor(i / cols) * (tile + label);
+    const img = t.data
+      ? `<image x="${x + 4}" y="${y + 4}" width="${tile - 8}" height="${tile - 8}" preserveAspectRatio="xMidYMid meet" xlink:href="data:${t.mime};base64,${Buffer.from(t.data).toString("base64")}"/>`
+      : `<text x="${x + tile / 2}" y="${y + tile / 2}" text-anchor="middle" fill="#667" font-size="15" font-family="sans-serif">no preview yet</text>`;
+    const name = t.name.length > 26 ? `${t.name.slice(0, 25)}…` : t.name;
+    return `${img}<text x="${x + tile / 2}" y="${y + tile + 17}" text-anchor="middle" fill="#cfd3dc" font-size="12" font-family="monospace">${esc(name)}</text>`;
+  }).join("");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${W}" height="${H}"><rect width="100%" height="100%" fill="#1c1e24"/>${cells}</svg>`;
+  return sharp(Buffer.from(svg)).png().toBuffer();
 }
 
 // ---- session ---------------------------------------------------------------
@@ -393,6 +421,49 @@ class Session {
         if (!path) return text(`no body named "${want}" — roster: ${roster.map((r) => r.name).join(", ")}`);
         ag.setAvatar(path);
         return text(`you are now wearing ${want.includes("/") ? path.split("/").pop() : want}`);
+      }
+      case "library_sheet": {
+        const kind = a.kind === "models" ? "models" : "avatars";
+        const page = Math.max(1, Math.floor(Number(a.page) || 1));
+        let items: { name: string; url: string | null }[];
+        if (kind === "avatars") {
+          const roster = (await (await fetch(`${ag.httpBase}/avatars`)).json()) as { name: string }[];
+          items = roster.map((r) => ({ name: r.name, url: `${ag.httpBase}/thumb/${encodeURIComponent(r.name)}.png` }));
+        } else {
+          const hits = (await (await fetch(`${ag.httpBase}/library-models`)).json()) as { path: string; name: string; preview: string | null }[];
+          items = hits.map((h) => ({ name: h.path.split("/").pop()!.replace(/\.glb$/i, ""), url: h.preview ? `${ag.httpBase}/library/${h.preview}` : null }));
+        }
+        const pages = Math.max(1, Math.ceil(items.length / SHEET.perPage));
+        const slice = items.slice((page - 1) * SHEET.perPage, page * SHEET.perPage);
+        if (!slice.length) return text(`no page ${page} — ${items.length} ${kind}, ${pages} page${pages === 1 ? "" : "s"}`);
+        const tiles = await Promise.all(slice.map(async (it) => {
+          if (!it.url) return { name: it.name, data: null, mime: "" };
+          try {
+            const r = await fetch(it.url);
+            if (!r.ok) return { name: it.name, data: null, mime: "" };
+            return { name: it.name, data: await r.arrayBuffer(), mime: r.headers.get("content-type")?.split(";")[0] ?? "image/png" };
+          } catch { return { name: it.name, data: null, mime: "" }; }
+        }));
+        const png = await contactSheet(tiles);
+        return { content: [
+          { type: "text", text: `${kind} — page ${page}/${pages}: ${slice.map((t) => t.name).join(", ")}${page < pages ? `. More: library_sheet {kind:"${kind}", page:${page + 1}}` : ""}` },
+          { type: "image", data: png.toString("base64"), mimeType: "image/png" },
+        ] };
+      }
+      case "library_preview": {
+        const want = String(a.name ?? "").trim();
+        if (!want) return text("pass `name`: a roster avatar name or a model filename/path");
+        const tries: string[] = [];
+        if (!want.includes("/") && !/\.(glb|jpg)$/i.test(want)) tries.push(`${ag.httpBase}/thumb/${encodeURIComponent(want)}.png`);
+        const stem = (want.includes("/") ? want : `eidoverse/assets/models/${want}`).replace(/(_preview\.jpg|\.jpg|\.glb)$/i, "");
+        tries.push(`${ag.httpBase}/library/${stem}_preview.jpg`);
+        for (const url of tries) {
+          try {
+            const r = await fetch(url);
+            if (r.ok) return { content: [{ type: "image", data: Buffer.from(await r.arrayBuffer()).toString("base64"), mimeType: r.headers.get("content-type")?.split(";")[0] ?? "image/jpeg" }] };
+          } catch { /* next */ }
+        }
+        return text(`no preview for "${want}" — avatar portraits appear once a body has been worn; library models ship _preview.jpg files`);
       }
       case "walk_to": {
         const arrived = await ag.walkTo(Number(a.x), Number(a.z), Boolean(a.run));

@@ -30,8 +30,11 @@ export async function ensureRemote(id, avatarPath, meta = {}) {
   const existing = remotes.get(id);
   if (existing) {
     if (meta.agent !== undefined) existing.agent = meta.agent;
-    // same person, new body: rebuild (live avatar switching re-announces via join)
-    if (avatarPath && !existing.loading && existing.avatarPath !== avatarPath) {
+    // same person, new body: rebuild (live avatar switching re-announces via
+    // join). A switch that lands while the OLD body is still loading must not
+    // be dropped — delete the map entry and let the stale load's own guard
+    // dispose it when it completes.
+    if (avatarPath && existing.avatarPath !== avatarPath) {
       remotes.delete(id);
       existing.avatar?.dispose();
     } else return existing;
@@ -46,7 +49,11 @@ export async function ensureRemote(id, avatarPath, meta = {}) {
   remotes.set(id, r);
   try {
     r.avatar = await makeAvatar(id, avatarPath || DEFAULT_AVATAR);
-    if (!remotes.has(id)) { r.avatar.dispose(); return r; } // left while loading
+    // Stale-load guard: they left OR switched bodies while this one loaded.
+    // Compare against OUR record, not mere key presence — a replacement body
+    // re-occupies the key, and checking has(id) let the old avatar finish
+    // loading into the scene as an undisposable ghost.
+    if (remotes.get(id) !== r) { r.avatar.dispose(); return r; }
     if (r.buf.length) applyImmediate(r);
   } catch (e) { report(`avatar ${id}`, e); }
   r.loading = false;
