@@ -126,9 +126,9 @@ async function contactSheet(tiles: { name: string; data: ArrayBuffer | null; mim
     const x = (i % cols) * tile, y = Math.floor(i / cols) * (tile + label);
     const img = t.data
       ? `<image x="${x + 4}" y="${y + 4}" width="${tile - 8}" height="${tile - 8}" preserveAspectRatio="xMidYMid meet" xlink:href="data:${t.mime};base64,${Buffer.from(t.data).toString("base64")}"/>`
-      : `<text x="${x + tile / 2}" y="${y + tile / 2}" text-anchor="middle" fill="#667" font-size="15" font-family="sans-serif">no preview yet</text>`;
+      : `<text x="${x + tile / 2}" y="${y + tile / 2}" text-anchor="middle" fill="#667" font-size="15" font-family="DejaVu Sans, sans-serif">no preview yet</text>`;
     const name = t.name.length > 26 ? `${t.name.slice(0, 25)}…` : t.name;
-    return `${img}<text x="${x + tile / 2}" y="${y + tile + 17}" text-anchor="middle" fill="#cfd3dc" font-size="12" font-family="monospace">${esc(name)}</text>`;
+    return `${img}<text x="${x + tile / 2}" y="${y + tile + 17}" text-anchor="middle" fill="#cfd3dc" font-size="12" font-family="DejaVu Sans Mono, monospace">${esc(name)}</text>`;
   }).join("");
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${W}" height="${H}"><rect width="100%" height="100%" fill="#1c1e24"/>${cells}</svg>`;
   return sharp(Buffer.from(svg)).png().toBuffer();
