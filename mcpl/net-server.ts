@@ -110,7 +110,14 @@ import { readdirSync } from "node:fs";
 const MODELS_DIR = process.env.EIDOVERSE_DIR
   ? `${process.env.EIDOVERSE_DIR}/eidoverse/assets/models`
   : "/Users/antra/connectome-local/eidoverse-video/eidoverse/assets/models";
-function searchLibrary(query: string): string[] {
+/** Search the catalog through the sequencer (one source of truth — includes
+ *  the content-addressed store, so conjured/orrery-delivered objects are
+ *  findable), falling back to a local dir scan if the route is unreachable. */
+async function searchLibrary(httpBase: string, query: string): Promise<{ path: string; name?: string }[]> {
+  try {
+    const r = await fetch(`${httpBase}/library-models?q=${encodeURIComponent(query)}`);
+    if (r.ok) return ((await r.json()) as { path: string; name?: string }[]).slice(0, 24);
+  } catch { /* sequencer route unreachable — scan what we can see */ }
   const toks = query.toLowerCase().split(/\s+/).filter(Boolean);
   return readdirSync(MODELS_DIR)
     .filter((f) => f.endsWith(".glb"))
@@ -118,7 +125,7 @@ function searchLibrary(query: string): string[] {
     .filter((r) => r.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, 12)
-    .map((r) => `eidoverse/assets/models/${r.f}`);
+    .map((r) => ({ path: `eidoverse/assets/models/${r.f}` }));
 }
 
 // ---- contact sheets ---------------------------------------------------------
@@ -460,7 +467,12 @@ class Session {
           items = roster.map((r) => ({ name: r.name, url: `${ag.httpBase}/thumb/${encodeURIComponent(r.name)}.png`, h: r.height ?? null }));
         } else {
           const hits = (await (await fetch(`${ag.httpBase}/library-models`)).json()) as { path: string; name: string; preview: string | null }[];
-          items = hits.map((h) => ({ name: h.path.split("/").pop()!.replace(/\.glb$/i, ""), url: h.preview ? `${ag.httpBase}/library/${h.preview}` : null }));
+          items = hits.map((h) => ({
+            // library files: the filename IS the spawnable identity; store
+            // items: the hash filename means nothing — show the given name
+            name: h.path.startsWith("store/") ? h.name : h.path.split("/").pop()!.replace(/\.glb$/i, ""),
+            url: h.preview ? `${ag.httpBase}/library/${h.preview}` : null,
+          }));
         }
         const pages = Math.max(1, Math.ceil(items.length / SHEET.perPage));
         const slice = items.slice((page - 1) * SHEET.perPage, page * SHEET.perPage);
@@ -553,11 +565,13 @@ class Session {
         return text(`${said.length} message(s) since seq ${from} (now at ${ag.lastSeq}):\n${lines.join("\n")}`);
       }
       case "list_library": {
-        const hits = searchLibrary(String(a.query));
-        return text(hits.length ? hits.join("\n") : "no matches");
+        const hits = await searchLibrary(ag.httpBase, String(a.query));
+        return text(hits.length
+          ? hits.map((h) => h.name && !h.path.includes(h.name) ? `${h.path}  — ${h.name}` : h.path).join("\n")
+          : "no matches");
       }
       case "spawn": {
-        const lib = a.lib ?? (a.query ? searchLibrary(String(a.query))[0] : undefined);
+        const lib = a.lib ?? (a.query ? (await searchLibrary(ag.httpBase, String(a.query)))[0]?.path : undefined);
         if (!lib) return text("no model — pass lib or query");
         const x = a.x ?? ag.pos.x + Math.sin(ag.yaw) * 2;
         const z = a.z ?? ag.pos.z + Math.cos(ag.yaw) * 2;

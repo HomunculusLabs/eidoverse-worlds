@@ -758,7 +758,19 @@ const server = Bun.serve({
       mkdirSync(dir, { recursive: true });
       const rel = `store/${hash}.glb`;
       if (!existsSync(join(OPT_DIR, rel))) writeFileSync(join(OPT_DIR, rel), body);
-      console.log(`[upload] model ${rel} (${(body.length / 1e6).toFixed(1)}MB) by ${upBy}`);
+      // The store is content-addressed, so the human name arrives ONLY here —
+      // record it, or the catalog can never list this object as anything but
+      // a hash (an orrery send used to vanish into exactly that black hole).
+      const upName = (url.searchParams.get("name") ?? "").replace(/\.glb$/i, "").replace(/[^a-zA-Z0-9 _-]/g, "").slice(0, 64).trim();
+      {
+        const mp = join(dir, "manifest.json");
+        let man: Record<string, { name?: string; by: string; ts: number }> = {};
+        try { if (existsSync(mp)) man = JSON.parse(readFileSync(mp, "utf8")); } catch { /* fresh */ }
+        man[hash] = { ...(upName ? { name: upName } : {}), by: upBy, ts: Date.now() };
+        writeFileSync(`${mp}.tmp`, JSON.stringify(man));
+        renameSync(`${mp}.tmp`, mp);
+      }
+      console.log(`[upload] model ${rel}${upName ? ` ("${upName}")` : ""} (${(body.length / 1e6).toFixed(1)}MB) by ${upBy}`);
       return new Response(JSON.stringify({ path: rel }), { headers: { "content-type": "application/json" } });
     }
     if (url.pathname === "/snap") {
@@ -901,6 +913,32 @@ const server = Bun.serve({
             preview: hasPrev ? `eidoverse/assets/models/${prev}` : null,
           };
         });
+      // Conjured/delivered objects (the content-addressed store) are catalog
+      // too — an orrery send should land somewhere findable, not in a black
+      // hole only its hash can name. Newest first, names from the manifest.
+      const storeDir = join(OPT_DIR, "store");
+      if (existsSync(storeDir)) {
+        let man: Record<string, { name?: string; by?: string; ts?: number }> = {};
+        try { man = JSON.parse(readFileSync(join(storeDir, "manifest.json"), "utf8")); } catch { /* unnamed */ }
+        const store = readdirSync(storeDir)
+          .filter((f) => f.endsWith(".glb"))
+          .map((f) => {
+            const hash = f.replace(/\.glb$/i, "");
+            const m = man[hash];
+            return {
+              path: `store/${f}`,
+              name: (m?.name ?? `conjured ${hash.slice(0, 8)}`).slice(0, 48),
+              preview: null as string | null,
+              ts: m?.ts ?? 0,
+              score: q.length ? q.filter((t) => (m?.name ?? "").toLowerCase().includes(t)).length : 1,
+            };
+          })
+          .filter((s) => s.score > 0)
+          .sort((a, b) => b.ts - a.ts)
+          .slice(0, 30)
+          .map(({ path, name, preview }) => ({ path, name, preview }));
+        hits.push(...store);
+      }
       return new Response(JSON.stringify(hits), {
         headers: { "content-type": "application/json", "cache-control": "no-store" },
       });
