@@ -1274,6 +1274,13 @@ for (const sig of ["SIGINT", "SIGTERM"] as const) {
     if (shuttingDown) process.exit(0);
     shuttingDown = true;
     for (const w of worlds.values()) {
+      // ws close handlers never run on exit — everyone connected right now
+      // sleeps where they stand, same as a normal leave. Without this, a
+      // client that also vanished during the restart window woke at its
+      // PREVIOUS remembered spot instead of where it stood.
+      for (const c of w.clients) {
+        if (!c.spectator && !c.superseded && c.lastPose) w.rememberPose(c.id, c.lastPose);
+      }
       if (w.entries.length) w.fold("shutdown");
     }
     process.exit(0);
