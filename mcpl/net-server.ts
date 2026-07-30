@@ -202,6 +202,10 @@ class Session {
     // happens to still be in memory". A seq is asked of the world directly and
     // reaches back as far as the log goes.
     const sinceSeq = lastSeenSeq[this.auth.id];
+    // "Since you last looked" starts where the persisted cursor says this
+    // agent last was — not at the dawn of the replayed tail. Mentions from
+    // the gap are delivered explicitly below; scrollback stays on catch_up.
+    if (sinceSeq != null) this.agent.skipInboxThrough(sinceSeq);
     if (sinceSeq != null) {
       const rxSeq = new RegExp(`(@${this.auth.id}\\b|\\b${this.auth.id}\\b)`, "i");
       const said = await this.agent.missedSince(sinceSeq);

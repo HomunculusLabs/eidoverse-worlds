@@ -15,7 +15,7 @@ type Vec2 = { x: number; z: number };
 type Pose = { p: number[]; yaw: number; speed: number; clip: string };
 type Entity = { id: string; lib: string; pos: number[]; yaw: number; actor: string };
 type Person = { id: string; avatar: string; pose: Pose | null };
-type InboxItem = { ts: number; kind: "say" | "arrive" | "leave"; who: string; text?: string };
+type InboxItem = { ts: number; kind: "say" | "arrive" | "leave"; who: string; text?: string; seq?: number | null };
 
 /** Folded world state back into the verbs that produced it. Must stay in step
  *  with the browser client's stateToEntries — two renderers disagreeing about
@@ -66,6 +66,11 @@ export class WorldAgent {
   people = new Map<string, Person>();
   inbox: InboxItem[] = [];
   private inboxCursor = 0;
+  /** Highest world-log seq whose `say` already sits in the inbox. A mid-life
+   *  reconnect replays the same snapshot tail — without this guard every
+   *  server restart re-appended history and the next look() dumped chat the
+   *  agent had already seen. */
+  private inboxSeen = -Infinity;
   pings: { ts: number; kind: "mention" | "approach" | "whisper"; who: string; text?: string }[] = [];
   onPing: ((p: { ts: number; kind: string; who: string; text?: string }) => void) | null = null;
   /** live world events (say/arrive/leave) — the channel fan-out hook */
@@ -250,8 +255,14 @@ export class WorldAgent {
     } else if (verb === "remove") {
       this.entities.delete(args.id);
     } else if (verb === "say") {
-      // history lands in the inbox too (once), so a freshly-joined agent has context
-      this.inbox.push({ ts, kind: "say", who: actor, text: args.text });
+      // history lands in the inbox ONCE, so a freshly-joined agent has
+      // context — and a reconnect's replayed tail is deduped by seq instead
+      // of piling the same chat in again.
+      const seq = typeof (entry as { seq?: unknown }).seq === "number" ? (entry as { seq: number }).seq : null;
+      // only real log seqs (>= 0) dedupe — synthetic pre-history seqs descend
+      if (seq != null && seq >= 0 && seq <= this.inboxSeen) return;
+      if (seq != null && seq >= 0) this.inboxSeen = seq;
+      this.inbox.push({ ts, kind: "say", who: actor, text: args.text, seq });
       // mention ping — @name or bare whole-word name, live messages only
       if (live && actor !== this.name) {
         const rx = new RegExp(`(@${this.name}\\b|\\b${this.name}\\b)`, "i");
@@ -387,6 +398,20 @@ export class WorldAgent {
   }
 
   /** Everything said since a given point, oldest first. */
+  /** Advance the unread cursor past replayed history at or before `seq` —
+   *  chat a previous session already presented. The persisted per-agent
+   *  cursor (state.json) survives process restarts; without this, every
+   *  fresh session's first look() re-dumped the tail as "since you last
+   *  looked". Entries without a real seq are never presumed seen. */
+  skipInboxThrough(seq: number) {
+    let i = 0;
+    for (; i < this.inbox.length; i++) {
+      const s = this.inbox[i].seq;
+      if (typeof s !== "number" || s < 0 || s > seq) break;
+    }
+    this.inboxCursor = Math.max(this.inboxCursor, i);
+  }
+
   async missedSince(seq: number, limit = 120) {
     const { entries } = await this.history({ after: seq, limit, verbs: ["say"] });
     return entries.map((e) => ({ ts: e.ts, who: e.actor, text: e.args?.text ?? "", seq: e.seq }));
