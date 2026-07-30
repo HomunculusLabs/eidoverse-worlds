@@ -23,3 +23,6 @@ assets/
 # generated
 assets/opt/thumbs/
 *.zip
+
+# local claude/mcp config
+.mcp.json
