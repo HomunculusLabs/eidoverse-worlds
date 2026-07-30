@@ -117,18 +117,26 @@ function searchLibrary(query: string): string[] {
 
 const SHEET = { tile: 200, label: 26, cols: 4, perPage: 12 };
 
-async function contactSheet(tiles: { name: string; data: ArrayBuffer | null; mime: string }[]): Promise<Buffer> {
+async function contactSheet(tiles: { name: string; data: ArrayBuffer | null; mime: string; h?: number | null }[]): Promise<Buffer> {
   const { tile, label, cols } = SHEET;
   const rows = Math.ceil(tiles.length / cols);
   const W = cols * tile, H = rows * (tile + label);
   const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  // When statures are known, draw to a common scale on a shared ground line —
+  // a lineup, not a stamp collection. The tallest body on the page fills its
+  // tile; everyone else is proportionally shorter (floored so nobody vanishes).
+  const maxH = Math.max(...tiles.map((t) => t.h ?? 0), 0);
   const cells = tiles.map((t, i) => {
     const x = (i % cols) * tile, y = Math.floor(i / cols) * (tile + label);
+    const frac = maxH > 0 && t.h ? Math.max(0.22, t.h / maxH) : 1;
+    const side = (tile - 8) * frac;
     const img = t.data
-      ? `<image x="${x + 4}" y="${y + 4}" width="${tile - 8}" height="${tile - 8}" preserveAspectRatio="xMidYMid meet" xlink:href="data:${t.mime};base64,${Buffer.from(t.data).toString("base64")}"/>`
+      ? `<image x="${x + (tile - side) / 2}" y="${y + 4 + (tile - 8 - side)}" width="${side}" height="${side}" preserveAspectRatio="xMidYMax meet" xlink:href="data:${t.mime};base64,${Buffer.from(t.data).toString("base64")}"/>`
       : `<text x="${x + tile / 2}" y="${y + tile / 2}" text-anchor="middle" fill="#667" font-size="15" font-family="DejaVu Sans, sans-serif">no preview yet</text>`;
-    const name = t.name.length > 26 ? `${t.name.slice(0, 25)}…` : t.name;
-    return `${img}<text x="${x + tile / 2}" y="${y + tile + 17}" text-anchor="middle" fill="#cfd3dc" font-size="12" font-family="DejaVu Sans Mono, monospace">${esc(name)}</text>`;
+    const tag = t.h ? ` ${t.h.toFixed(1)}m` : "";
+    const room = 26 - tag.length;
+    const name = t.name.length > room ? `${t.name.slice(0, room - 1)}…` : t.name;
+    return `${img}<text x="${x + tile / 2}" y="${y + tile + 17}" text-anchor="middle" fill="#cfd3dc" font-size="12" font-family="DejaVu Sans Mono, monospace">${esc(name)}${tag ? `<tspan fill="#8a90a0">${tag}</tspan>` : ""}</text>`;
   }).join("");
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${W}" height="${H}"><rect width="100%" height="100%" fill="#1c1e24"/>${cells}</svg>`;
   return sharp(Buffer.from(svg)).png().toBuffer();
@@ -425,10 +433,10 @@ class Session {
       case "library_sheet": {
         const kind = a.kind === "models" ? "models" : "avatars";
         const page = Math.max(1, Math.floor(Number(a.page) || 1));
-        let items: { name: string; url: string | null }[];
+        let items: { name: string; url: string | null; h?: number | null }[];
         if (kind === "avatars") {
-          const roster = (await (await fetch(`${ag.httpBase}/avatars`)).json()) as { name: string }[];
-          items = roster.map((r) => ({ name: r.name, url: `${ag.httpBase}/thumb/${encodeURIComponent(r.name)}.png` }));
+          const roster = (await (await fetch(`${ag.httpBase}/avatars`)).json()) as { name: string; height?: number | null }[];
+          items = roster.map((r) => ({ name: r.name, url: `${ag.httpBase}/thumb/${encodeURIComponent(r.name)}.png`, h: r.height ?? null }));
         } else {
           const hits = (await (await fetch(`${ag.httpBase}/library-models`)).json()) as { path: string; name: string; preview: string | null }[];
           items = hits.map((h) => ({ name: h.path.split("/").pop()!.replace(/\.glb$/i, ""), url: h.preview ? `${ag.httpBase}/library/${h.preview}` : null }));
@@ -437,12 +445,12 @@ class Session {
         const slice = items.slice((page - 1) * SHEET.perPage, page * SHEET.perPage);
         if (!slice.length) return text(`no page ${page} — ${items.length} ${kind}, ${pages} page${pages === 1 ? "" : "s"}`);
         const tiles = await Promise.all(slice.map(async (it) => {
-          if (!it.url) return { name: it.name, data: null, mime: "" };
+          if (!it.url) return { name: it.name, data: null, mime: "", h: it.h };
           try {
             const r = await fetch(it.url);
-            if (!r.ok) return { name: it.name, data: null, mime: "" };
-            return { name: it.name, data: await r.arrayBuffer(), mime: r.headers.get("content-type")?.split(";")[0] ?? "image/png" };
-          } catch { return { name: it.name, data: null, mime: "" }; }
+            if (!r.ok) return { name: it.name, data: null, mime: "", h: it.h };
+            return { name: it.name, data: await r.arrayBuffer(), mime: r.headers.get("content-type")?.split(";")[0] ?? "image/png", h: it.h };
+          } catch { return { name: it.name, data: null, mime: "", h: it.h }; }
         }));
         const png = await contactSheet(tiles);
         return { content: [

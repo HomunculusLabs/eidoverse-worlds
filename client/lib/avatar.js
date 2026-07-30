@@ -541,23 +541,34 @@ export async function contributeThumbnail(name, vrm, token = '', { force = false
     // someone choosing a body is actually looking at.
     const bbox = new THREE.Box3().setFromObject(vrm.scene);
     const dims = new THREE.Vector3();     // NOT `size` — that is the pixel size
-    const centre = new THREE.Vector3();
     bbox.getSize(dims);
-    bbox.getCenter(centre);
+    // True stature comes from the SKELETON, not the bounding box — hair,
+    // capes, and particle shells inflate bounds (one body rendered half-size
+    // inside its own card), and the height is also REPORTED with the portrait
+    // so catalogs can draw the roster to a common scale.
+    let height = dims.y;
+    try {
+      const rootY = vrm.scene.getWorldPosition(new THREE.Vector3()).y;
+      const headY = vrm.humanoid.getNormalizedBoneNode('head').getWorldPosition(new THREE.Vector3()).y;
+      const stature = headY - rootY + 0.13; // crown ≈ head joint + a forehead
+      if (stature > 0.2) height = stature;
+    } catch { /* bbox fallback */ }
     const fov = 30;
     // fit the taller of (height, width) into a square frame, with headroom
-    const extent = Math.max(dims.y, dims.x, 0.4) * 0.55;
+    const extent = Math.max(height, dims.x, 0.4) * 0.55;
     const dist = (extent / Math.tan((fov * Math.PI / 180) / 2)) * 1.0;
     cam.fov = fov;
     cam.updateProjectionMatrix();
-    cam.position.set(dist * 0.16, centre.y + dims.y * 0.06, dist);
-    cam.lookAt(0, centre.y, 0);
+    cam.position.set(dist * 0.16, height * 0.56, dist);
+    cam.lookAt(0, height * 0.5, 0);
 
     const prevTarget = renderer.getRenderTarget();
     try {
       sub.add(vrm.scene);
       vrm.scene.position.set(0, 0, 0);
-      vrm.scene.rotation.set(0, 0, 0);
+      // Keep the loader's VRM0 normalization (rotateVRM0 sets rotation.y=π on
+      // the scene root) — zeroing it photographed every VRM0 body from behind.
+      vrm.scene.rotation.set(0, vrm.meta?.metaVersion === '0' ? Math.PI : 0, 0);
       renderer.setRenderTarget(rt);
       renderer.render(sub, cam);
     } finally {
@@ -590,7 +601,8 @@ export async function contributeThumbnail(name, vrm, token = '', { force = false
 
     const blob = await new Promise((res) => c.toBlob(res, 'image/png'));
     if (!blob) return;
-    const q = new URLSearchParams({ name });
+    const q = new URLSearchParams({ name, height: height.toFixed(2) });
+    if (force) q.set('force', '1'); // a re-mint pass really does replace
     if (token) q.set('token', token);
     await fetch(`/thumb?${q}`, { method: 'POST', body: blob });
     localStorage.setItem(`ew-thumb-${name}`, '1');

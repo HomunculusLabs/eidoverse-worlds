@@ -778,8 +778,14 @@ const server = Bun.serve({
           if (f.endsWith(".vrm")) seen.set(f.replace(".vrm", ""), `eidoverse/assets/vrms/${f}?v=${Math.round(Bun.file(join(dir, f)).lastModified)}`);
         }
       }
+      // stature metadata, contributed alongside portraits (see POST /thumb)
+      let hmeta: Record<string, { h: number }> = {};
+      try {
+        const mp = join(OPT_DIR, "thumbs", "meta.json");
+        if (existsSync(mp)) hmeta = JSON.parse(readFileSync(mp, "utf8"));
+      } catch { /* roster works without heights */ }
       return new Response(
-        JSON.stringify([...seen].map(([name, path]) => ({ name, path }))),
+        JSON.stringify([...seen].map(([name, path]) => ({ name, path, height: hmeta[name.replace(/[^a-zA-Z0-9_-]/g, "_")]?.h ?? null }))),
         { headers: { "content-type": "application/json", "cache-control": "no-store" } },
       );
     }
@@ -805,15 +811,28 @@ const server = Bun.serve({
       const dir = join(OPT_DIR, "thumbs");
       mkdirSync(dir, { recursive: true });
       const dest = join(dir, `${safe}.png`);
-      // First contributor wins — re-posting on every join would be pointless
-      // write traffic, and any correct render is as good as any other.
-      if (existsSync(dest)) return new Response(JSON.stringify({ ok: true, existed: true }),
+      // The portrait carries the body's measured stature (skeleton-derived,
+      // client-side) — kept beside the images so /avatars can hand catalogs a
+      // roster drawn to a common scale.
+      const height = Number(url.searchParams.get("height"));
+      if (Number.isFinite(height) && height > 0.2 && height < 20) {
+        const metaPath = join(dir, "meta.json");
+        let meta: Record<string, { h: number }> = {};
+        try { if (existsSync(metaPath)) meta = JSON.parse(readFileSync(metaPath, "utf8")); } catch { /* fresh */ }
+        meta[safe] = { h: Math.round(height * 100) / 100 };
+        writeFileSync(`${metaPath}.tmp`, JSON.stringify(meta));
+        renameSync(`${metaPath}.tmp`, metaPath);
+      }
+      // First contributor wins (re-posting on every join would be pointless
+      // write traffic) — unless a re-mint pass explicitly forces the refresh.
+      const force = url.searchParams.get("force") === "1";
+      if (existsSync(dest) && !force) return new Response(JSON.stringify({ ok: true, existed: true }),
         { headers: { "content-type": "application/json" } });
       const body = new Uint8Array(await req.arrayBuffer());
       if (body.length > 400_000) return new Response("thumb too large", { status: 413 });
       if (body.length < 8 || body[0] !== 0x89 || body[1] !== 0x50) return new Response("not a PNG", { status: 415 });
       writeFileSync(dest, body);
-      console.log(`[thumb] ${safe} (${(body.length / 1000).toFixed(0)}KB)`);
+      console.log(`[thumb] ${safe} (${(body.length / 1000).toFixed(0)}KB${force ? ", forced" : ""})`);
       return new Response(JSON.stringify({ ok: true }), { headers: { "content-type": "application/json" } });
     }
     if (url.pathname === "/library-list") {
