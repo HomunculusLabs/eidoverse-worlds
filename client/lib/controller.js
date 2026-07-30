@@ -244,7 +244,13 @@ export function updateMe(dt, me) {
     }
   }
   airborneFor = grounded || mantle ? 0 : airborneFor + dt;
-  if (myState.speed >= 0.05) { posture = null; myState.seat = null; } // standing up is just walking away
+  if (myState.speed >= 0.05) {
+    posture = null; myState.seat = null; // standing up is just walking away
+    // ...and so is escaping a held pose (puppet, restored, or ragdoll-settled).
+    // Without this, a pose applied from OUTSIDE this session had no exit —
+    // the get-up path only exists in the session that fell.
+    if (myState.pose) myState.pose = null;
+  }
 
   const seatedClip = myState.seat?.chair ? 'sitchair' : 'sit';
   myState.clip = mantle ? 'climb'

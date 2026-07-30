@@ -457,6 +457,10 @@ class World {
     // one-shot emotes are moments, not places — remembering one would replay
     // it at every wake. Held bones (pose.pose) stay: enacted poses persist.
     const { emote: _emote, ...still } = pose as Record<string, unknown>;
+    // A mid-ragdoll frame is physics in flight, not an enacted pose — waking
+    // INTO it left a body hung in the air in tumble bones, with no way out
+    // (the get-up path only exists in the session that fell). Sleep standing.
+    if (still.clip === "ragdoll") { still.clip = "idle"; delete still.pose; }
     this.poses[id] = still;
     writeFileSync(this.posesPath + ".tmp", JSON.stringify(this.poses));
     renameSync(this.posesPath + ".tmp", this.posesPath);

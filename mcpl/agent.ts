@@ -157,9 +157,11 @@ export class WorldAgent {
             if (msg.restore && !this.restoredPose && !this.target && this.pos.x === 0 && this.pos.z === 0) {
               this.pos.x = msg.restore.p[0]; this.pos.z = msg.restore.p[2];
               this.yaw = msg.restore.yaw ?? 0;
-              // an enacted pose is authored, not ephemeral — wake holding it
-              if (msg.restore.clip) this.clip = msg.restore.clip;
-              if (msg.restore.pose) this.heldPose = msg.restore.pose;
+              // an enacted pose is authored, not ephemeral — wake holding it.
+              // A remembered ragdoll frame is not (pre-sanitizer entries) —
+              // wake standing rather than hung mid-tumble.
+              if (msg.restore.clip && msg.restore.clip !== "ragdoll") this.clip = msg.restore.clip;
+              if (msg.restore.pose && msg.restore.clip !== "ragdoll") this.heldPose = msg.restore.pose;
             }
             this.restoredPose = true;
             for (const p of msg.present) this.people.set(p.id, { id: p.id, avatar: p.avatar, pose: p.pose });
