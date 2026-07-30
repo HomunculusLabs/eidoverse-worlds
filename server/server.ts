@@ -1,0 +1,1247 @@
+// eidoverse-worlds sequencer.
+// The server is a sequencer and archivist, NOT a simulator:
+//  - orders + persists per-world event logs (the authored plane)
+//  - relays presence (the embodied plane, never persisted)
+//  - serves the browser client and the eidoverse-video asset library
+// No world manifest: everything about a world arrives through its log.
+
+import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, renameSync, readdirSync } from "node:fs";
+import { join, resolve, normalize } from "node:path";
+import { randomBytes } from "node:crypto";
+import { verifyToken, JtiCache } from "./aid1.ts";
+
+const PORT = Number(process.env.PORT ?? 8940);
+// Show-night door policy. Empty = open (dev on a tailnet). On a public box you
+// MUST set this — the boot log shouts if you forgot. Checked at join and upload.
+const JOIN_TOKEN = process.env.JOIN_TOKEN ?? "";
+const UPLOAD_CAP = Number(process.env.UPLOAD_CAP_MB ?? 20) * 1_000_000;
+// ---- archipelago-home identity (docs/home-node.md §7) ----------------------
+// The second door, alongside JOIN_TOKEN: humans log in with Discord at the
+// home node, arrive at /auth with an aid1 token in the URL fragment, swap it
+// for a session cookie here, and join with a VERIFIED identity. Verification
+// is offline (issuer pubkey below); the home node down = existing sessions
+// and the JOIN_TOKEN door keep working.
+//   HN_ISSUER_KEY   pinned issuer pubkey `ed25519:…` — unset disables the door
+//   HN_ISS          issuer domain            (default id.animalabs.ai)
+//   HN_LOGIN_URL    where "Login with Discord" sends people
+//   HN_REQUIRE_LOGIN=1  browser clients without a session are sent to login
+//                       (JOIN_TOKEN joins still pass — invite links keep working)
+const HN_ISSUER_KEY = process.env.HN_ISSUER_KEY ?? "";
+const HN_ISS = process.env.HN_ISS ?? "id.animalabs.ai";
+const HN_AUD = "eidoverse";
+const HN_LOGIN_URL = process.env.HN_LOGIN_URL ?? `https://${HN_ISS}/login?audience=${HN_AUD}`;
+const HN_REQUIRE_LOGIN = process.env.HN_REQUIRE_LOGIN === "1";
+const SESSION_TTL_MS = 12 * 60 * 60_000; // event-length; re-login is two clicks
+
+type HnSession = { sub: string; name: string; scopes: string[]; claims?: Record<string, unknown>; exp: number };
+const hnSessions = new Map<string, HnSession>();
+const hnJti = new JtiCache();
+function sessionFromCookie(cookie: string | null): HnSession | null {
+  const m = /(?:^|;\s*)ew_sess=([a-f0-9]{64})/.exec(cookie ?? "");
+  if (!m) return null;
+  const s = hnSessions.get(m[1]!);
+  if (!s) return null;
+  if (s.exp < Date.now()) { hnSessions.delete(m[1]!); return null; }
+  return s;
+}
+// RECORD_FRAMES=1 appends every broadcast stage frame (plus roster deltas) to
+// worlds/<name>/frames-<bootTs>.jsonl. World log + frames file + asset store =
+// enough to re-render the whole performance offline, at production quality,
+// forever. Clients are told at join — recording is never invisible.
+const RECORD = process.env.RECORD_FRAMES === "1";
+const ROOT = resolve(import.meta.dir, "..");
+// Dev instances point this elsewhere so a scratch sequencer can't append to the
+// live worlds' logs (they are append-only and forever — a stray dev spawn is
+// permanent). Default keeps the production path unchanged.
+const WORLDS_DIR = resolve(process.env.WORLDS_DIR ?? join(ROOT, "worlds"));
+// The eidoverse-video checkout = the asset library (models, VRMs, animations).
+const LIBRARY_DIR = resolve(process.env.EIDOVERSE_DIR ?? join(ROOT, "..", "eidoverse-video"));
+const OPT_DIR = join(ROOT, "assets", "opt");
+
+mkdirSync(WORLDS_DIR, { recursive: true });
+
+// ---------------------------------------------------------------- world logs
+
+type LogEntry = {
+  seq: number;
+  ts: number;
+  actor: string;
+  verb: string;
+  args: Record<string, unknown>;
+};
+
+/** The world as it IS, rather than everything that ever happened to it.
+ *
+ *  A log is history and grows forever — that is the point of it, and it is why
+ *  a world is forkable and re-filmable. But replaying all of history to show
+ *  someone a room is the wrong cost: joining should scale with how much is in
+ *  the world now, not with how long the world has existed.
+ *
+ *  So this is a DERIVED CACHE, never a source of truth. Delete every snapshot
+ *  file and the worlds are identical after the next boot, just slower to load.
+ *  Nothing here is allowed to be information the log does not contain. */
+type WorldState = {
+  entities: Record<string, {
+    kind?: "light"; pos: number[]; actor: string; ts: number;
+    lib?: string; yaw?: number; scale?: number;                 // things
+    color?: number; intensity?: number; range?: number;         // lights
+  }>;
+  terrain: Record<string, unknown> | null;
+  grass: Record<string, unknown> | null;
+  sky: (Record<string, unknown> & { ts?: number }) | null;
+  assets: { name: string; path: string }[];
+  /** A little conversational context for arrivals. NOT the chat archive —
+   *  the log holds that. */
+  /** seq is carried so a joiner can tell which of these the TAIL will also
+   *  deliver — state and tail overlap whenever a world has not folded recently,
+   *  and without it every such message renders twice. */
+  recentChat: { actor: string; text: string; ts: number; seq: number }[];
+  /** Everything ever said here, so a joiner can be told that what it is
+   *  looking at is a window and not the whole conversation. */
+  chatTotal: number;
+  /** Per-world permissions, fed by owner-authored `grant` verbs in the log —
+   *  event-sourced like everything else, so roles replay, fold, and audit.
+   *  A world with NO owner in this map is OPEN (everyone builds — the
+   *  pre-permissions behaviour, and what a scratch world should be).
+   *  The moment an owner exists, unlisted ids are visitors.
+   *  `gen` is the spend capability: bringing NEW assets into the world's
+   *  vocabulary (the `asset` verb — where Orrery generations land). */
+  roles: Record<string, { role: "owner" | "builder" | "visitor"; gen?: boolean }>;
+};
+const RECENT_CHAT = 40;
+/** How many entries may accumulate past a snapshot before folding again.
+ *  Small enough that a joiner's tail stays trivial, large enough that a busy
+ *  world is not writing a snapshot per action. */
+const FOLD_EVERY = Number(process.env.FOLD_EVERY ?? 150);
+/** Authored verbs allowed per client per 4s. A griefer gets silence; a person
+ *  arranging furniture must not. Configurable because a build session and a
+ *  show night want different answers. */
+const VERB_RATE = Number(process.env.VERB_RATE ?? 12);
+/** All messages per client per second — 15Hz of pose plus verbs plus slack. */
+const MSG_RATE = Number(process.env.MSG_RATE ?? 60);
+
+const emptyState = (): WorldState => ({
+  entities: {}, terrain: null, grass: null, sky: null, assets: [], recentChat: [], chatTotal: 0,
+  roles: {},
+});
+
+/** Make room in the recent-chat window WITHOUT letting one loud speaker erase
+ *  everyone else.
+ *
+ *  A plain "keep the last N" is a lie about what a room sounded like: measured,
+ *  a bot emitting 300 telemetry lines reduced the window to 40 messages
+ *  spanning ZERO seconds, all its own, and the two people actually holding a
+ *  conversation vanished from it completely. An arrival would have seen a
+ *  machine talking to itself.
+ *
+ *  So the loudest voice loses its oldest line first, and nobody's LAST line is
+ *  ever dropped while someone else still has several. Recency still wins
+ *  within a speaker; fairness decides between them. */
+function trimRecentChat(rc: WorldState["recentChat"]): void {
+  while (rc.length > RECENT_CHAT) {
+    const counts = new Map<string, number>();
+    for (const m of rc) counts.set(m.actor, (counts.get(m.actor) ?? 0) + 1);
+    let victim = -1;
+    let worst = 1;
+    for (let i = 0; i < rc.length; i++) {
+      const n = counts.get(rc[i].actor)!;
+      if (n > worst) { worst = n; victim = i; }      // oldest line of the loudest
+    }
+    rc.splice(victim >= 0 ? victim : 0, 1);          // everyone tied at 1: oldest goes
+  }
+}
+
+/** Fold one entry into the running state. This is the ONLY place that knows how
+ *  a verb changes the world's shape, and it must stay a pure function of the
+ *  log — if it ever disagrees with the client's applyEntry, joiners see a world
+ *  that never existed. */
+function foldEntry(st: WorldState, e: LogEntry): void {
+  const a = e.args as any;
+  switch (e.verb) {
+    case "spawn":
+      if (!a?.id || !a?.lib) return;
+      st.entities[a.id] = {
+        lib: a.lib, pos: a.pos ?? [0, 0, 0], yaw: a.yaw ?? 0,
+        ...(a.scale != null ? { scale: a.scale } : {}),
+        actor: e.actor, ts: e.ts,
+      };
+      return;
+    case "place": {
+      const ent = st.entities[a?.id];
+      if (!ent) return;
+      if (a.pos) ent.pos = a.pos;
+      if (a.yaw != null) ent.yaw = a.yaw;
+      if (a.scale != null) ent.scale = a.scale;
+      return;
+    }
+    case "light": {
+      if (!a?.id) return;
+      st.entities[a.id] = {
+        kind: "light", pos: a.pos ?? [0, 1, 0],
+        color: a.color ?? 0xffd9a0, intensity: a.intensity ?? 16, range: a.range ?? 10,
+        actor: e.actor, ts: e.ts,
+      };
+      return;
+    }
+    case "remove": delete st.entities[a?.id]; return;
+    case "terrain": st.terrain = a; return;
+    case "grass": st.grass = a; return;
+    case "sky": st.sky = { ...a, ts: e.ts }; return;
+    case "weather": st.sky = { ...(st.sky ?? {}), ...a, ts: e.ts }; return;
+    case "asset":
+      if (a?.path && !st.assets.some((x) => x.path === a.path)) {
+        st.assets.push({ name: a.name ?? "upload", path: a.path });
+      }
+      return;
+    case "say":
+      st.recentChat.push({ actor: e.actor, text: String(a?.text ?? ""), ts: e.ts, seq: e.seq });
+      st.chatTotal = (st.chatTotal ?? 0) + 1;
+      trimRecentChat(st.recentChat);
+      return;
+    case "grant": {
+      // {id, role?, gen?} — role change and/or gen-capability change. Roles
+      // are log entries so permission history is auditable and replays like
+      // everything else. (Snapshots from before this verb lack the map.)
+      if (!a?.id) return;
+      st.roles ??= {};
+      // default matches the owned-world default (builder), so `/grant bob
+      // +gen` on an unlisted id doesn't silently demote him to visitor
+      const cur = st.roles[a.id] ?? { role: "builder" as const };
+      const role = ROLE_RANK[a.role as string] != null ? a.role : cur.role;
+      const gen = a.gen != null ? Boolean(a.gen) : cur.gen;
+      st.roles[a.id] = { role, ...(gen ? { gen: true } : {}) };
+      return;
+    }
+    default: return;   // unknown verbs shape nothing; the log still keeps them
+  }
+}
+
+// ---------------------------------------------------------------- permissions
+//
+// Per-world roles, aligned with connectome/docs/home-node.md: the id in the
+// roles map is the principal — today a self-asserted name (humans) or a
+// token-verified agent name; when archipelago-home lands, aid1 `sub`s slot in
+// here without the model changing. Rights ladder:
+//   visitor  present, talk, emote           (say)
+//   builder  + spawn / place / remove / drag         (build)
+//   owner    + terrain / grass / sky / weather / grant  (shape the world)
+//   gen      orthogonal capability: introduce NEW assets (`asset` verb) —
+//            the landing point of Orrery generations, i.e. "spend".
+// A world with no owner is OPEN: everyone is builder+gen (pre-permissions
+// behaviour; scratch worlds stay frictionless). First embodied joiner of a
+// brand-new world is auto-granted owner.
+const ROLE_RANK: Record<string, number> = { visitor: 0, builder: 1, owner: 2 };
+// Operators (comma-separated ids) who are owner+gen EVERYWHERE — the
+// bootstrap for pre-permissions worlds and the lockout recovery.
+const ADMIN_IDS = new Set((process.env.WORLD_ADMIN ?? "").split(",").map((s) => s.trim()).filter(Boolean));
+
+function worldHasOwner(st: WorldState): boolean {
+  for (const [id, r] of Object.entries(st.roles ?? {})) {
+    if (id !== "*" && r.role === "owner") return true;
+  }
+  return false;
+}
+function rightsOf(w: World, id: string, sub?: string): { role: string; gen: boolean } {
+  // Grants are honored under either handle: the display id (what owners see
+  // and type) or the durable principal sub (what survives a rename —
+  // home-node.md §5: key state by sub). WORLD_ADMIN accepts both too.
+  if (ADMIN_IDS.has(id) || (sub && ADMIN_IDS.has(sub))) return { role: "owner", gen: true };
+  if (!worldHasOwner(w.state)) return { role: "builder", gen: true };   // open world
+  // In an OWNED world, unlisted ids take the wildcard default: builder
+  // WITHOUT gen unless the owner says otherwise. Editing stays frictionless
+  // for drop-in company; introducing new assets (spend) is what's restricted
+  // by default. `/grant * visitor` closes the world; `/grant * +gen` opens
+  // generation to everyone.
+  const r = (sub ? w.state.roles?.[sub] : undefined) ?? w.state.roles?.[id] ?? w.state.roles?.["*"] ?? { role: "builder" as const };
+  return { role: r.role, gen: r.role === "owner" || Boolean(r.gen) };
+}
+/** What each verb demands. `asset` is the spend gate; `grant` is owner-only. */
+const VERB_NEEDS: Record<string, { rank: number; gen?: boolean }> = {
+  say: { rank: 0 },
+  spawn: { rank: 1 }, place: { rank: 1 }, remove: { rank: 1 }, light: { rank: 1 },
+  asset: { rank: 1, gen: true },
+  terrain: { rank: 2 }, grass: { rank: 2 }, sky: { rank: 2 }, weather: { rank: 2 },
+  grant: { rank: 2 },
+};
+
+// Agent identity: the MCPL door (mcpl/tokens.json) already holds per-agent
+// bearer tokens. The sequencer reads the same file so (a) an agent's name is
+// RESERVED — a plain browser join cannot claim it — and (b) a join carrying
+// the right token is a verified agent. Hot-reloaded by mtime, like the MCPL
+// server does.
+const AGENT_TOKENS_PATH = join(ROOT, "mcpl", "tokens.json");
+let agentTokCache: { mtime: number; byToken: Map<string, string>; names: Set<string> } | null = null;
+function agentTokens() {
+  try {
+    const mtime = existsSync(AGENT_TOKENS_PATH) ? Math.round(Bun.file(AGENT_TOKENS_PATH).lastModified) : 0;
+    if (!agentTokCache || agentTokCache.mtime !== mtime) {
+      const byToken = new Map<string, string>();
+      const names = new Set<string>();
+      if (mtime) {
+        const raw = JSON.parse(readFileSync(AGENT_TOKENS_PATH, "utf8")) as Record<string, { id?: string }>;
+        for (const [tok, v] of Object.entries(raw)) {
+          if (!v?.id) continue;
+          byToken.set(tok, v.id);
+          names.add(v.id.toLowerCase());
+        }
+      }
+      agentTokCache = { mtime, byToken, names };
+    }
+  } catch (e) {
+    console.error("[perm] mcpl/tokens.json unreadable:", (e as Error).message);
+    agentTokCache ??= { mtime: 0, byToken: new Map(), names: new Set() };
+  }
+  return agentTokCache;
+}
+
+class World {
+  name: string;
+  entries: LogEntry[] = [];
+  clients = new Set<Client>();
+  /** Poses received since the last stage-frame tick — latest value wins.
+   *  The embodied plane is batched: N performers × M spectators must not be
+   *  N×M×15Hz individual sends (24×200 would be 72k msgs/s); it's one frame
+   *  per world per tick, fanned out once. */
+  dirty = new Map<string, unknown>();
+  frameSeq = 0;
+  recPath: string | null = null; // frames archive, created lazily on first recorded frame
+  lastRoster = "";               // last written roster line — deltas only
+  /** The folded world. Kept live: every append updates it, so writing a
+   *  snapshot is O(1) rather than a replay. */
+  state: WorldState = emptyState();
+  /** How much of the log the snapshot already accounts for. Entries after this
+   *  are the tail a joiner still has to be told about. */
+  snapSeq = -1;
+  private snapBytes = 0;      // byte offset in log.jsonl just past snapSeq
+  private logBytes = 0;
+  private dirtySinceFold = 0;
+  private logPath: string;
+  private posesPath: string;
+  private snapPath: string;
+  /** Where each identity last stood — the world remembers your resting place
+   *  across disconnects, restarts, and hosts. Presence is ephemeral; the
+   *  place you fell asleep is yours. */
+  poses: Record<string, unknown> = {};
+
+  constructor(name: string) {
+    this.name = name;
+    const dir = join(WORLDS_DIR, name);
+    mkdirSync(dir, { recursive: true });
+    this.logPath = join(dir, "log.jsonl");
+    this.posesPath = join(dir, "poses.json");
+    this.snapPath = join(dir, "snapshot.json");
+
+    // Boot = snapshot + the bytes after it. The offset is what keeps startup
+    // proportional to the TAIL rather than to the whole history: without it we
+    // would still parse every line ever written just to find where to resume.
+    if (existsSync(this.snapPath)) {
+      try {
+        const snap = JSON.parse(readFileSync(this.snapPath, "utf8"));
+        if (snap?.state && typeof snap.seq === "number") {
+          this.state = snap.state;
+          this.snapSeq = snap.seq;
+          this.snapBytes = snap.bytes ?? 0;
+        }
+      } catch { /* a corrupt cache is not a corrupt world — rebuild below */ }
+    }
+    if (existsSync(this.logPath)) {
+      const buf = readFileSync(this.logPath);
+      this.logBytes = buf.length;
+      // If the offset is not credible (log truncated, forked, or snapshot from
+      // another timeline) fall back to reading everything. The log is truth.
+      const usable = this.snapSeq >= 0 && this.snapBytes > 0 && this.snapBytes <= buf.length;
+      if (!usable) { this.state = emptyState(); this.snapSeq = -1; this.snapBytes = 0; }
+      const text = buf.toString("utf8", usable ? this.snapBytes : 0);
+      for (const line of text.split("\n")) {
+        if (!line.trim()) continue;
+        const e = JSON.parse(line) as LogEntry;
+        this.entries.push(e);
+        foldEntry(this.state, e);
+      }
+      this.dirtySinceFold = this.entries.length;
+    }
+    if (existsSync(this.posesPath)) {
+      try { this.poses = JSON.parse(readFileSync(this.posesPath, "utf8")); } catch { /* corrupt = fresh */ }
+    }
+    const total = this.snapSeq + 1 + this.entries.length;
+    console.log(`[world:${name}] loaded — ${Object.keys(this.state.entities).length} things, `
+      + `${this.entries.length} tail entr${this.entries.length === 1 ? "y" : "ies"}`
+      + (this.snapSeq >= 0 ? ` (snapshot through seq ${this.snapSeq}, ${total} total)` : "")
+      + `, ${Object.keys(this.poses).length} remembered poses`);
+  }
+
+  /** Write the folded state beside the log. Atomic, and recording the byte
+   *  offset so the next boot can seek instead of scan. */
+  fold(reason = "threshold") {
+    const bytes = this.logBytes;
+    const seq = this.snapSeq + this.entries.length;
+    if (seq < 0) return;
+    const payload = JSON.stringify({ v: 1, seq, bytes, ts: Date.now(), state: this.state });
+    try {
+      writeFileSync(this.snapPath + ".tmp", payload);
+      renameSync(this.snapPath + ".tmp", this.snapPath);
+      this.snapSeq = seq;
+      this.snapBytes = bytes;
+      this.entries = [];          // history lives in the file; memory holds the tail
+      this.dirtySinceFold = 0;
+      console.log(`[world:${this.name}] folded through seq ${seq} (${reason})`);
+    } catch (err) {
+      console.error(`[world:${this.name}] fold failed`, err);
+    }
+  }
+
+  /** A page of history, newest-first paging via `before`.
+   *
+   *  Folding bounds what a JOIN costs; it does not delete anything, so this is
+   *  how anyone gets at what came before: a human scrolling chat upward, or an
+   *  agent asking what happened while it was not thinking. The tail is served
+   *  from memory; older pages read the log, which is O(file) per request and
+   *  the obvious place a real index goes when that starts to hurt. */
+  readHistory({ before = Infinity, after = -Infinity, limit = 50, verbs = null as Set<string> | null }) {
+    const out: LogEntry[] = [];
+    const seen = new Set<number>();
+    const want = (e: LogEntry) => e.seq < before && e.seq > after && (!verbs || verbs.has(e.verb));
+
+    for (let i = this.entries.length - 1; i >= 0 && out.length < limit; i--) {
+      const e = this.entries[i];
+      if (want(e)) { out.push(e); seen.add(e.seq); }
+    }
+    // older than what is in memory — go to the file
+    const oldestInMemory = this.entries.length ? this.entries[0].seq : Infinity;
+    if (out.length < limit && before > 0 && oldestInMemory > 0 && existsSync(this.logPath)) {
+      const lines = readFileSync(this.logPath, "utf8").split("\n");
+      for (let i = lines.length - 1; i >= 0 && out.length < limit; i--) {
+        const line = lines[i];
+        if (!line.trim()) continue;
+        let e: LogEntry;
+        try { e = JSON.parse(line); } catch { continue; }
+        if (seen.has(e.seq) || !want(e)) continue;
+        out.push(e); seen.add(e.seq);
+      }
+    }
+    out.reverse();                                   // hand back in world order
+    const oldest = out.length ? out[0].seq : null;
+    return { entries: out, oldestSeq: oldest, hasMore: oldest !== null && oldest > 0 };
+  }
+
+  /** What a joiner needs: the world as it is, plus anything since. */
+  joinPayload() {
+    return { state: this.state, tail: this.entries, throughSeq: this.snapSeq };
+  }
+
+  rememberPose(id: string, pose: unknown) {
+    if (!pose) return;
+    this.poses[id] = pose;
+    writeFileSync(this.posesPath + ".tmp", JSON.stringify(this.poses));
+    renameSync(this.posesPath + ".tmp", this.posesPath);
+  }
+
+  append(actor: string, verb: string, args: Record<string, unknown>): LogEntry {
+    // seq is global across the world's whole history, not an index into what
+    // happens to be in memory — folding must not renumber the past.
+    const seq = this.snapSeq + this.entries.length + 1;
+    const entry: LogEntry = { seq, ts: Date.now(), actor, verb, args };
+    this.entries.push(entry);
+    const line = JSON.stringify(entry) + "\n";
+    appendFileSync(this.logPath, line);
+    this.logBytes += Buffer.byteLength(line);
+    foldEntry(this.state, entry);
+    if (++this.dirtySinceFold >= FOLD_EVERY) this.fold();
+    return entry;
+  }
+
+  broadcast(msg: unknown, except?: Client) {
+    const data = JSON.stringify(msg);
+    for (const c of this.clients) if (c !== except) c.ws.send(data);
+  }
+}
+
+// Operator-log census: people are people, eyes are eyes.
+function describe(w: World): string {
+  const real = [...w.clients].filter((c) => !c.spectator).length;
+  const eyes = w.clients.size - real;
+  return `${real} present${eyes ? `, ${eyes} watching` : ""}`;
+}
+
+const worlds = new Map<string, World>();
+function getWorld(name: string): World {
+  if (!/^[a-z0-9_-]{1,64}$/i.test(name)) throw new Error(`bad world name: ${name}`);
+  let w = worlds.get(name);
+  if (!w) { w = new World(name); worlds.set(name, w); }
+  return w;
+}
+
+// ------------------------------------------------------------------- clients
+
+type Client = {
+  id: string;          // participant id (v1: self-declared; later: key-derived)
+  ws: { send(data: string): void; close?(code?: number, reason?: string): void; getBufferedAmount?(): number };
+  world: World | null;
+  avatar: string;      // VRM library path chosen at join
+  lastPose: unknown;   // latest pose, forwarded to late joiners so they see everyone immediately
+  spectator: boolean;  // retina/observer connections: receive everything, appear as nothing
+  agent?: boolean;     // self-declared: an MCPL body, not a person at a keyboard
+  auth?: HnSession;    // archipelago-home session bound at WS upgrade (verified human)
+  sub?: string;        // durable principal id when authenticated (`human:discord:…`)
+  superseded?: boolean; // kicked by identity takeover — don't let its stale pose overwrite the successor's
+  renderer?: boolean;  // donates rendering: can answer snap requests for its world
+  // rate windows: a griefer or a stuck client gets silence, not fanout
+  msgWin: number; msgCount: number;   // all messages, per second
+  verbWin: number; verbCount: number; // authored verbs, per 4s
+};
+
+// ---- snapshots: the world serves views of itself ---------------------------
+// GET /snap?world=W&follow=ID → the sequencer asks a renderer client (an
+// invisible hub-spectator on some GPU box, dialed OUT to us like any client)
+// to jump its camera to ID's head and return one frame. Clients never know
+// rendering exists as a separate thing — it's just the world's API.
+type PendingSnap = { resolve: (r: { ok: true; png: Uint8Array } | { ok: false; err: string; status: number }) => void };
+const pendingSnaps = new Map<string, PendingSnap>();
+let nextSnapId = 1;
+
+function requestSnap(world: World, follow: string): Promise<{ ok: true; png: Uint8Array } | { ok: false; err: string; status: number }> {
+  const renderer = [...world.clients].find((c) => c.renderer);
+  if (!renderer) return Promise.resolve({ ok: false, err: `no renderer is currently serving world "${world.name}"`, status: 503 });
+  const target = [...world.clients].find((c) => c.id === follow && !c.spectator);
+  if (!target) return Promise.resolve({ ok: false, err: `"${follow}" is not present in "${world.name}"`, status: 404 });
+  const id = `snap-${nextSnapId++}`;
+  return new Promise((resolve) => {
+    pendingSnaps.set(id, { resolve });
+    renderer.ws.send(JSON.stringify({ type: "snap", id, follow }));
+    setTimeout(() => {
+      if (pendingSnaps.delete(id)) resolve({ ok: false, err: "renderer timed out", status: 504 });
+    }, 12_000);
+  });
+}
+
+/** Whispers waiting for someone who wasn't here. Memory only, deliberately:
+ *  see the `whisper` message case.
+ *
+ *  The key is built in ONE place because it is written on one code path and
+ *  read on another — they drifted once already (a stray separator character
+ *  made every held whisper unreachable, silently), and the failure mode is a
+ *  private message that simply never arrives. */
+const pendingWhispers = new Map<string, unknown[]>();
+const whisperKey = (world: string, recipient: string) => `${world}\u0000${recipient}`;
+
+let nextClientNum = 1;
+const clients = new Map<unknown, Client>();
+const uploadWin = new Map<string, { t: number; n: number }>(); // per-IP upload rate windows
+
+// -------------------------------------------------------------- http + ws
+
+function contentType(path: string): string {
+  if (path.endsWith(".html")) return "text/html";
+  if (path.endsWith(".js") || path.endsWith(".mjs")) return "text/javascript";
+  if (path.endsWith(".json")) return "application/json";
+  if (path.endsWith(".css")) return "text/css";
+  if (path.endsWith(".png")) return "image/png";
+  if (path.endsWith(".jpg") || path.endsWith(".jpeg")) return "image/jpeg";
+  if (path.endsWith(".hdr")) return "application/octet-stream";
+  return "application/octet-stream";
+}
+
+const gzCache = new Map<string, { mtime: number; gz: Uint8Array }>();
+
+function serveFrom(base: string, rel: string, cache = false, req?: Request, immutable = false): Response {
+  const path = normalize(join(base, rel));
+  if (!path.startsWith(base)) return new Response("forbidden", { status: 403 });
+  const f = Bun.file(path);
+  const headers: Record<string, string> = { "content-type": contentType(path) };
+  // ETag from size+mtime: makes no-cache revalidation a 304, not a re-download
+  // (an 11MB avatar re-pulled per reload is invisible on localhost and rude
+  // over tailnet).
+  if (f.size > 0) {
+    const etag = `"${f.size}-${f.lastModified}"`;
+    headers["etag"] = etag;
+    if (req?.headers.get("if-none-match") === etag) {
+      // cache-control must ride along on the 304 (it refreshes the stored response's lifetime)
+      headers["cache-control"] = immutable ? "public, max-age=31536000, immutable"
+        : cache && !path.endsWith(".vrm") ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
+      return new Response(null, { status: 304, headers });
+    }
+  }
+  // client code must never be heuristically cached (stale main.js = ghost bugs);
+  // library assets cache hard — EXCEPT avatars: .vrm files get iterated on
+  // (rig fixes, re-exports) and a 24h-stale avatar is a debugging nightmare
+  // (2026-07-22: "sydney's arms are swapped" was three of us looking at three
+  // different cached rigs). no-cache = revalidate each load, still cheap.
+  const hard = cache && !path.endsWith(".vrm");
+  headers["cache-control"] = immutable ? "public, max-age=31536000, immutable"
+    : hard ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
+  // gzip the JS modules: three.webgpu.js is 2.1MB raw / ~500KB gzipped, and
+  // over a DERP-relayed tailnet link that difference is seconds.
+  //
+  // .vrma and .vrm are here too, and the old comment claiming "binary assets
+  // are already compressed" was only half right. Measured 2026-07-26: GLB
+  // models compress to 0.99 (already Draco/webp packed inside — genuinely
+  // pointless), but VRM bodies hit 0.50 and the VRMA animation clips 0.44,
+  // because their float animation tracks and mesh data are stored raw. Seven
+  // clips at ~1.9MB each was the second-largest slice of a cold boot; half of
+  // it was air.
+  if (/\.(m?js|json|css|html|vrma|vrm)$/.test(path) && req?.headers.get("accept-encoding")?.includes("gzip") && f.size > 10_000) {
+    let entry = gzCache.get(path);
+    if (!entry || entry.mtime !== f.lastModified) {
+      entry = { mtime: f.lastModified, gz: Bun.gzipSync(new Uint8Array(require("node:fs").readFileSync(path))) };
+      gzCache.set(path, entry);
+    }
+    headers["content-encoding"] = "gzip";
+    headers["vary"] = "accept-encoding";
+    return new Response(entry.gz, { headers });
+  }
+  return new Response(f, { headers });
+}
+
+const server = Bun.serve({
+  port: PORT,
+  hostname: "0.0.0.0",
+  async fetch(req, srv) {
+    const url = new URL(req.url);
+    if (url.pathname === "/ws") {
+      // Session rides the upgrade: browsers attach cookies to WS upgrades, so
+      // the join below can carry a VERIFIED identity without the client ever
+      // seeing a token. (fkm web-ui precedent: "the WS is the authentication
+      // event" — here inverted, the cookie is, and the WS rides it.)
+      const session = sessionFromCookie(req.headers.get("cookie"));
+      if (srv.upgrade(req, { data: { session } })) return undefined as unknown as Response;
+      return new Response("expected websocket", { status: 400 });
+    }
+    // ---- archipelago-home doors (docs/home-node.md §7) ----
+    if (url.pathname === "/authcfg") {
+      return new Response(
+        JSON.stringify({ login: HN_ISSUER_KEY ? HN_LOGIN_URL : null, required: HN_REQUIRE_LOGIN && Boolean(HN_ISSUER_KEY) }),
+        { headers: { "content-type": "application/json", "cache-control": "no-store" } },
+      );
+    }
+    if (url.pathname === "/whoami") {
+      const s = sessionFromCookie(req.headers.get("cookie"));
+      if (!s) return new Response(JSON.stringify({ error: "no session" }), { status: 401, headers: { "content-type": "application/json" } });
+      return new Response(JSON.stringify({ sub: s.sub, name: s.name, scopes: s.scopes, claims: s.claims ?? {} }),
+        { headers: { "content-type": "application/json", "cache-control": "no-store" } });
+    }
+    if (url.pathname === "/auth" && req.method === "GET") {
+      // The landing spot for the home node's redirect. The token is in the URL
+      // FRAGMENT (never reaches this server's logs); this page posts it back.
+      return new Response(`<!doctype html><meta charset="utf-8"><title>entering…</title>
+<style>body{font:16px/1.5 system-ui;max-width:36rem;margin:15vh auto;padding:0 1rem;color:#ddd;background:#111}</style>
+<p id=m>entering…</p><script>
+(async () => {
+  const m = document.getElementById('m');
+  const tok = new URLSearchParams(location.hash.slice(1)).get('token');
+  if (!tok) { m.textContent = 'no token — start again from the login page'; return; }
+  history.replaceState(null, '', '/auth');
+  const r = await fetch('/auth', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ token: tok }) });
+  const j = await r.json().catch(() => ({}));
+  if (r.ok) { m.textContent = 'welcome, ' + j.name; location.replace('/'); }
+  else m.textContent = 'login failed: ' + (j.error ?? r.status) + ' — start again from the login page';
+})();
+</script>`, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
+    }
+    if (url.pathname === "/auth" && req.method === "POST") {
+      if (!HN_ISSUER_KEY) return new Response(JSON.stringify({ error: "identity door not configured" }), { status: 503, headers: { "content-type": "application/json" } });
+      let tok = "";
+      try { tok = String(((await req.json()) as { token?: string }).token ?? ""); } catch { /* fall through */ }
+      const v = verifyToken(tok, { issuerId: HN_ISSUER_KEY, iss: HN_ISS, aud: HN_AUD });
+      if (!v.ok) {
+        console.log(`[auth] login token rejected: ${v.reason}`);
+        return new Response(JSON.stringify({ error: v.reason }), { status: 403, headers: { "content-type": "application/json" } });
+      }
+      const p = v.payload;
+      if (p.jti && !hnJti.claim(p.jti, p.exp)) {
+        console.log(`[auth] login token replayed: ${p.sub}`);
+        return new Response(JSON.stringify({ error: "token already used" }), { status: 403, headers: { "content-type": "application/json" } });
+      }
+      const sid = randomBytes(32).toString("hex");
+      // opportunistic sweep — one entry per login, the map stays small
+      for (const [k, s] of hnSessions) if (s.exp < Date.now()) hnSessions.delete(k);
+      hnSessions.set(sid, { sub: p.sub, name: p.name, scopes: p.scopes, claims: p.claims, exp: Date.now() + SESSION_TTL_MS });
+      const secure = (req.headers.get("x-forwarded-proto") ?? url.protocol.replace(":", "")) === "https" ? "; Secure" : "";
+      console.log(`[auth] session for ${p.sub} ("${p.name}") [${p.scopes.join(" ")}]`);
+      return new Response(JSON.stringify({ ok: true, name: p.name, sub: p.sub }), {
+        headers: {
+          "content-type": "application/json",
+          "set-cookie": `ew_sess=${sid}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${Math.floor(SESSION_TTL_MS / 1000)}${secure}`,
+        },
+      });
+    }
+    if (url.pathname === "/logout") {
+      const m = /(?:^|;\s*)ew_sess=([a-f0-9]{64})/.exec(req.headers.get("cookie") ?? "");
+      if (m) hnSessions.delete(m[1]!);
+      return new Response(JSON.stringify({ ok: true }), {
+        headers: { "content-type": "application/json", "set-cookie": "ew_sess=; Path=/; HttpOnly; Max-Age=0" },
+      });
+    }
+    if (url.pathname === "/upload" && req.method === "POST") {
+      // Live asset ingestion. Two destinations:
+      //  - models (default): content-addressed into assets/opt/store/<hash>.glb —
+      //    immutable by construction, so spawn verbs can reference the path
+      //    forever and clients cache it forever. DESIGN.md's "content-addressed
+      //    assets" plane, made real.
+      //  - ?as=avatar&name=foo: named into the overlay vrms dir, because the
+      //    roster is name-keyed and people re-export their bodies (mtime
+      //    versioning handles the cache).
+      // Trust model: the door token OR any per-agent bearer from
+      // mcpl/tokens.json (so Orrery and agents can push generated GLBs here
+      // directly — the store is content-addressed and inert; what enters a
+      // WORLD is still the `asset`/`spawn` verbs, which per-world roles gate),
+      // plus per-IP rate limiting — live generation is the feature, an upload
+      // flood is not. `?by=` is attribution for the console trail.
+      const upTok = url.searchParams.get("token") ?? "";
+      const upAgent = agentTokens().byToken.get(upTok);
+      if (JOIN_TOKEN && upTok !== JOIN_TOKEN && !upAgent)
+        return new Response("token required", { status: 401 });
+      const upBy = (url.searchParams.get("by") ?? upAgent ?? "?").slice(0, 64);
+      // Behind the show's nginx front every socket is 127.0.0.1 — the real
+      // client address rides X-Real-IP. (Spoofable only when directly exposed,
+      // which is the tailnet dev case where rate limits hardly matter.)
+      const ip = req.headers.get("x-real-ip") ?? srv.requestIP(req)?.address ?? "?";
+      const u = uploadWin.get(ip) ?? { t: 0, n: 0 };
+      if (Date.now() - u.t > 60_000) { u.t = Date.now(); u.n = 0; }
+      u.n++; uploadWin.set(ip, u);
+      if (u.n > 4) return new Response("upload rate limit (4/min)", { status: 429 });
+      const body = new Uint8Array(await req.arrayBuffer());
+      if (body.length > UPLOAD_CAP) return new Response(`too large (${UPLOAD_CAP / 1e6}MB cap)`, { status: 413 });
+      if (body.length < 12 || new DataView(body.buffer).getUint32(0, true) !== 0x46546c67)
+        return new Response("not a GLB container (glb/vrm)", { status: 415 });
+      if (url.searchParams.get("as") === "avatar") {
+        const raw = url.searchParams.get("name") ?? "unnamed";
+        const name = raw.replace(/\.vrm$/i, "").replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 48) || "unnamed";
+        const dir = join(OPT_DIR, "eidoverse/assets/vrms");
+        mkdirSync(dir, { recursive: true });
+        writeFileSync(join(dir, `${name}.vrm`), body);
+        console.log(`[upload] avatar "${name}" (${(body.length / 1e6).toFixed(1)}MB) by ${upBy}`);
+        // Live cache invalidation: avatars are name-keyed and mutable (people
+        // iterate on their bodies), so every connected client — all worlds —
+        // learns the file changed; wearers hot-swap with the fresh version.
+        const rel = `eidoverse/assets/vrms/${name}.vrm`;
+        const update = JSON.stringify({ type: "avatar-updated", name, path: rel, v: Date.now() });
+        let notified = 0;
+        for (const w of worlds.values()) for (const c of w.clients) { c.ws.send(update); notified++; }
+        if (notified) console.log(`[upload] avatar-updated "${name}" → ${notified} client(s)`);
+        return new Response(JSON.stringify({ name, path: rel }),
+          { headers: { "content-type": "application/json" } });
+      }
+      const hash = new Bun.CryptoHasher("sha256").update(body).digest("hex").slice(0, 16);
+      const dir = join(OPT_DIR, "store");
+      mkdirSync(dir, { recursive: true });
+      const rel = `store/${hash}.glb`;
+      if (!existsSync(join(OPT_DIR, rel))) writeFileSync(join(OPT_DIR, rel), body);
+      console.log(`[upload] model ${rel} (${(body.length / 1e6).toFixed(1)}MB) by ${upBy}`);
+      return new Response(JSON.stringify({ path: rel }), { headers: { "content-type": "application/json" } });
+    }
+    if (url.pathname === "/snap") {
+      const w = worlds.get(url.searchParams.get("world") ?? "commons");
+      const follow = url.searchParams.get("follow") ?? "";
+      if (!w) return new Response("unknown world", { status: 404 });
+      const r = await requestSnap(w, follow);
+      if (!r.ok) return new Response(r.err, { status: r.status });
+      return new Response(r.png, { headers: { "content-type": "image/png", "cache-control": "no-store" } });
+    }
+    if (url.pathname === "/avatars") {
+      // Roster = Skye's library vrms + our overlay (assets/opt/...) — drop a
+      // .vrm into either and it's an avatar, live, no restart, no manifest.
+      const seen = new Map<string, string>();
+      for (const base of [LIBRARY_DIR, OPT_DIR]) {
+        const dir = join(base, "eidoverse/assets/vrms");
+        if (!existsSync(dir)) continue;
+        for (const f of readdirSync(dir)) {
+          // ?v=mtime makes the URL content-versioned: clients cache it forever,
+          // and any re-export mints a new URL. Invalidation by construction.
+          if (f.endsWith(".vrm")) seen.set(f.replace(".vrm", ""), `eidoverse/assets/vrms/${f}?v=${Math.round(Bun.file(join(dir, f)).lastModified)}`);
+        }
+      }
+      return new Response(
+        JSON.stringify([...seen].map(([name, path]) => ({ name, path }))),
+        { headers: { "content-type": "application/json", "cache-control": "no-store" } },
+      );
+    }
+    if (url.pathname.startsWith("/thumb/")) {
+      // Avatar thumbnails. VRMs have no shipped previews, and a name-only
+      // roster where each choice costs a multi-megabyte download is a blind
+      // pick. So thumbnails are CONTRIBUTED: whoever wears a body renders one
+      // off its own loaded VRM and posts it back. The roster fills in as people
+      // use it — no build step, no manifest, no bulk render job.
+      const name = decodeURIComponent(url.pathname.slice("/thumb/".length)).replace(/\.png$/, "");
+      const safe = name.replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 48);
+      const f = Bun.file(join(OPT_DIR, "thumbs", `${safe}.png`));
+      if (!(await f.exists())) return new Response("no thumb", { status: 404 });
+      return new Response(f, {
+        headers: { "content-type": "image/png", "cache-control": "public, max-age=3600" },
+      });
+    }
+    if (url.pathname === "/thumb" && req.method === "POST") {
+      if (JOIN_TOKEN && url.searchParams.get("token") !== JOIN_TOKEN)
+        return new Response("token required", { status: 401 });
+      const safe = (url.searchParams.get("name") ?? "").replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 48);
+      if (!safe) return new Response("name required", { status: 400 });
+      const dir = join(OPT_DIR, "thumbs");
+      mkdirSync(dir, { recursive: true });
+      const dest = join(dir, `${safe}.png`);
+      // First contributor wins — re-posting on every join would be pointless
+      // write traffic, and any correct render is as good as any other.
+      if (existsSync(dest)) return new Response(JSON.stringify({ ok: true, existed: true }),
+        { headers: { "content-type": "application/json" } });
+      const body = new Uint8Array(await req.arrayBuffer());
+      if (body.length > 400_000) return new Response("thumb too large", { status: 413 });
+      if (body.length < 8 || body[0] !== 0x89 || body[1] !== 0x50) return new Response("not a PNG", { status: 415 });
+      writeFileSync(dest, body);
+      console.log(`[thumb] ${safe} (${(body.length / 1000).toFixed(0)}KB)`);
+      return new Response(JSON.stringify({ ok: true }), { headers: { "content-type": "application/json" } });
+    }
+    if (url.pathname === "/library-list") {
+      // Directory listing over the library. The browser host primes Skye's
+      // toolkit modules into a virtual filesystem before eval-loading them
+      // (they read assets synchronously, Deno-style), and it should DISCOVER
+      // what to prime rather than carry a hardcoded manifest — the no-manifest
+      // rule applies to the client too.
+      const rel = url.searchParams.get("dir") ?? "";
+      const out: { path: string; size: number }[] = [];
+      const walk = (base: string, sub: string, depth: number) => {
+        if (depth > 4) return;
+        const abs = normalize(join(base, sub));
+        if (!abs.startsWith(base) || !existsSync(abs)) return;
+        for (const e of readdirSync(abs, { withFileTypes: true })) {
+          const childRel = sub ? `${sub}/${e.name}` : e.name;
+          if (e.isDirectory()) walk(base, childRel, depth + 1);
+          else out.push({ path: childRel, size: Bun.file(join(abs, e.name)).size });
+        }
+      };
+      for (const base of [LIBRARY_DIR, OPT_DIR]) walk(base, rel, 0);
+      // opt mirror shadows the library at the same path — dedupe, first wins
+      const seen = new Set<string>();
+      const uniq = out.filter((f) => !seen.has(f.path) && seen.add(f.path));
+      return new Response(JSON.stringify(uniq), {
+        headers: { "content-type": "application/json", "cache-control": "no-store" },
+      });
+    }
+    if (url.pathname === "/library-models") {
+      // The catalog agents already had (mcpl `list_library`), served to humans.
+      // Filename token scoring — crude, but it is what ranks the agent-side
+      // search today and parity matters more than cleverness here.
+      const q = (url.searchParams.get("q") ?? "").toLowerCase().split(/\s+/).filter(Boolean);
+      const dirs = [join(LIBRARY_DIR, "eidoverse/assets/models"), join(OPT_DIR, "eidoverse/assets/models")];
+      const files = new Map<string, number>();
+      for (const d of dirs) {
+        if (!existsSync(d)) continue;
+        for (const f of readdirSync(d)) {
+          if (!f.endsWith(".glb")) continue;
+          const low = f.toLowerCase();
+          const score = q.length ? q.filter((t) => low.includes(t)).length : 1;
+          if (score > 0) files.set(f, Math.max(files.get(f) ?? 0, score));
+        }
+      }
+      const hits = [...files]
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+        .slice(0, 60)
+        .map(([f]) => {
+          // Skye ships a _preview.jpg beside every model. Picking from a list of
+          // `stylized_yucca_joshua_tree_desert_cactus_plant.glb` is not picking;
+          // with the previews it becomes an actual catalog.
+          const prev = f.replace(/\.glb$/i, "_preview.jpg");
+          const hasPrev = dirs.some((d) => existsSync(join(d, prev)));
+          return {
+            path: `eidoverse/assets/models/${f}`,
+            // strip the SEO-soup filenames into something a person can read
+            name: f.replace(/\.glb$/i, "").replace(/_/g, " ").slice(0, 48),
+            preview: hasPrev ? `eidoverse/assets/models/${prev}` : null,
+          };
+        });
+      return new Response(JSON.stringify(hits), {
+        headers: { "content-type": "application/json", "cache-control": "no-store" },
+      });
+    }
+    if (url.pathname.startsWith("/library/")) {
+      const rel = url.pathname.slice("/library/".length);
+      // optimized mirror first (draco+webp): same path, ~30x smaller
+      const versioned = url.searchParams.has("v") || rel.startsWith("store/"); // content-addressed = immutable
+      const opt = normalize(join(OPT_DIR, rel));
+      if (opt.startsWith(OPT_DIR) && existsSync(opt)) return serveFrom(OPT_DIR, rel, true, req, versioned);
+      return serveFrom(LIBRARY_DIR, rel, true, req, versioned);
+    }
+    if (url.pathname.startsWith("/node_modules/"))
+      return serveFrom(join(ROOT, "client"), url.pathname.slice(1), true, req);
+    if (url.pathname === "/favicon.ico") {
+      // Browsers ask for this unprompted; the static handler threw ENOENT and
+      // answered 500, so every page load logged a server error for a file
+      // nobody asked us to have.
+      return new Response(
+        `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+           <rect width="32" height="32" rx="7" fill="#0c1720"/>
+           <circle cx="16" cy="16" r="6" fill="#8fe8c8"/>
+           <circle cx="16" cy="16" r="10.5" fill="none" stroke="#8fe8c8" stroke-opacity=".45" stroke-width="1.5"/>
+         </svg>`,
+        { headers: { "content-type": "image/svg+xml", "cache-control": "public, max-age=86400" } },
+      );
+    }
+    if (url.pathname === "/" || url.pathname === "/index.html")
+      return serveFrom(join(ROOT, "client"), "index.html");
+    return serveFrom(join(ROOT, "client"), url.pathname.slice(1));
+  },
+  websocket: {
+    open(ws) {
+      const c: Client = { id: `anon-${nextClientNum++}`, ws, world: null, avatar: "", lastPose: null, spectator: false,
+        msgWin: 0, msgCount: 0, verbWin: 0, verbCount: 0 };
+      const sess = (ws as unknown as { data?: { session?: HnSession | null } }).data?.session;
+      if (sess && sess.exp > Date.now()) { c.auth = sess; c.sub = sess.sub; }
+      clients.set(ws, c);
+    },
+    close(ws) {
+      const c = clients.get(ws);
+      if (!c) return;
+      clients.delete(ws);
+      if (c.world) {
+        c.world.clients.delete(c);
+        if (!c.spectator) {
+          if (!c.superseded) c.world.rememberPose(c.id, c.lastPose); // sleep where you stood
+          c.world.broadcast({ type: "leave", id: c.id });
+        }
+        console.log(`[world:${c.world.name}] ${describe(c.world)} — ${c.id} ${c.spectator ? "stopped watching" : "left"}`);
+      }
+    },
+    message(ws, raw) {
+      const c = clients.get(ws);
+      if (!c) return;
+      let msg: any;
+      try { msg = JSON.parse(String(raw)); } catch { return; }
+
+      // message-rate cap: 15Hz poses + verbs + slack. Excess is dropped
+      // silently — closing would just trigger the client's auto-reconnect.
+      const now = Date.now();
+      if (now - c.msgWin > 1000) { c.msgWin = now; c.msgCount = 0; }
+      if (++c.msgCount > MSG_RATE) return;
+
+      switch (msg.type) {
+        case "join": {
+          // Two doors (home-node.md §7): a verified session (cookie at
+          // upgrade) passes without the door key; everyone else needs
+          // JOIN_TOKEN as before. Both may be live at once — invite links for
+          // the show, Discord login for everyone with the role.
+          const auth = c.auth && c.auth.exp > Date.now() ? c.auth : null;
+          if (!auth && JOIN_TOKEN && String(msg.token ?? "") !== JOIN_TOKEN) {
+            ws.send(JSON.stringify({ type: "error", error: "bad or missing join token" }));
+            c.ws.close?.(4003, "bad token");
+            return;
+          }
+          if (auth) {
+            const need = msg.spectate ? ["worlds:spectate", "worlds:join"] : ["worlds:join"];
+            if (!need.some((s) => auth.scopes.includes(s))) {
+              ws.send(JSON.stringify({ type: "error", error: msg.spectate ? "your login lacks spectate access" : "your login lacks embodied access — try ?spectate" }));
+              c.ws.close?.(4003, "insufficient scope");
+              return;
+            }
+          }
+          // leave previous world (travel is: leave A, join B)
+          if (c.world) {
+            c.world.clients.delete(c);
+            if (!c.spectator) c.world.broadcast({ type: "leave", id: c.id });
+          }
+          const w = getWorld(String(msg.world ?? "commons"));
+          // Identity: a verified session OWNS the id — the client's msg.id is
+          // ignored (the name came from Discord via the home node, and the
+          // sub underneath it survives renames).
+          c.id = (auth ? auth.name : String(msg.id ?? c.id)).slice(0, 64);
+          c.avatar = String(msg.avatar ?? "eidoverse/assets/vrms/claude.vrm");
+          c.spectator = Boolean(msg.spectate);
+          c.agent = Boolean(msg.agent);
+          c.renderer = Boolean(msg.renderer);
+          if (c.renderer) c.spectator = true; // renderers are invisible by definition
+          // Same display name, different PERSON (two guild members can share a
+          // nick): suffix the newcomer rather than letting takeover fight.
+          if (auth && !c.spectator) {
+            for (const other of w.clients) {
+              if (other !== c && !other.spectator && other.id === c.id && other.sub && other.sub !== c.sub) {
+                c.id = `${c.id}-${c.sub!.replace(/\D/g, "").slice(-4) || "2"}`.slice(0, 64);
+                break;
+              }
+            }
+          }
+          // Agent names are RESERVED: an id that appears in mcpl/tokens.json
+          // is claimable only with that agent's own bearer token (the MCPL
+          // door forwards it). Closes the "fable spoofable" hole for names we
+          // actually know; humans stay self-asserted until archipelago-home.
+          {
+            const at = agentTokens();
+            const tokId = at.byToken.get(String(msg.agentToken ?? ""));
+            if (at.names.has(c.id.toLowerCase()) && tokId?.toLowerCase() !== c.id.toLowerCase()) {
+              ws.send(JSON.stringify({ type: "error", error: `"${c.id}" is a reserved agent name` }));
+              c.ws.close?.(4004, "reserved name");
+              return;
+            }
+          }
+          c.world = w;
+          // identity takeover: ONE body per id per world — a stale session
+          // (half-open socket, zombie reconnect) is kicked when its identity
+          // reconnects, instead of the two rubberbanding over one avatar.
+          // No leave broadcast: the identity isn't leaving, it's re-arriving.
+          if (!c.spectator) {
+            for (const other of [...w.clients]) {
+              if (other !== c && other.id === c.id && !other.spectator) {
+                other.superseded = true;
+                w.clients.delete(other);
+                clients.delete(other.ws);
+                other.ws.close?.(4002, "session takeover");
+                console.log(`[world:${w.name}] ${c.id} takeover — stale session kicked`);
+              }
+            }
+          }
+          w.clients.add(c);
+          // A brand-new world belongs to whoever first walks into it embodied:
+          // the grant goes through the log like any other fact, actor "world".
+          // (Pre-existing ownerless worlds stay OPEN — granting their first
+          // owner is a deliberate act by a WORLD_ADMIN, not a land-rush.)
+          if (!c.spectator && w.snapSeq < 0 && w.entries.length === 0) {
+            const entry = w.append("world", "grant", { id: c.id, role: "owner", gen: true });
+            w.broadcast({ type: "log", entry });
+            console.log(`[world:${w.name}] new world — ${c.id} is its owner`);
+          }
+          // snapshot = full log replay (folding comes later) + who's present now
+          const jp = w.joinPayload();
+          ws.send(JSON.stringify({
+            type: "snapshot",
+            world: w.name,
+            you: c.id,
+            recording: RECORD,
+            // The world as it is, then only what has happened since. A joiner's
+            // cost is now the size of the WORLD, not the length of its history.
+            state: jp.state,
+            throughSeq: jp.throughSeq,
+            entries: jp.tail,
+            // what YOU may do here, as of now (live grants update it client-side).
+            // `open` = no owner exists, so rights are the everyone-builds default.
+            yourRights: { ...rightsOf(w, c.id, c.sub), open: !worldHasOwner(w.state) },
+            // wake where you fell asleep — the world's memory of your body
+            restore: c.spectator ? null : (w.poses[c.id] ?? null),
+            present: [...w.clients].filter(o => o !== c && !o.spectator).map(o => ({
+              id: o.id, avatar: o.avatar, pose: o.lastPose, agent: o.agent,
+            })),
+          }));
+          if (!c.spectator) w.broadcast({ type: "arrive", id: c.id, avatar: c.avatar, agent: c.agent }, c);
+          // Whispers that arrived while this identity was away. Held in memory
+          // only — see the `whisper` case for why they must never reach the log.
+          if (!c.spectator) {
+            const held = pendingWhispers.get(whisperKey(w.name, c.id));
+            if (held?.length) {
+              for (const m of held) ws.send(JSON.stringify(m));
+              pendingWhispers.delete(whisperKey(w.name, c.id));
+              console.log(`[world:${w.name}] delivered ${held.length} held whisper(s) to ${c.id}`);
+            }
+          }
+          console.log(`[world:${w.name}] ${describe(w)}${c.spectator ? ` — ${c.id} watching` : ` — ${c.id} joined`}`);
+          break;
+        }
+        case "verb": {
+          if (!c.world) return;
+          // spectators watch; authoring needs a body. (This is the entire
+          // show-night moderation model: the audience cannot touch the stage.)
+          if (c.spectator) {
+            ws.send(JSON.stringify({ type: "error", error: "spectators can't author — join embodied to build" }));
+            return;
+          }
+          if (now - c.verbWin > 4000) { c.verbWin = now; c.verbCount = 0; }
+          if (++c.verbCount > VERB_RATE) {
+            ws.send(JSON.stringify({ type: "error", error: "slow down — verb rate limit" }));
+            return;
+          }
+          // verb allow-list + per-world rights (see the permissions block).
+          const needs = VERB_NEEDS[msg.verb as string];
+          if (!needs) {
+            ws.send(JSON.stringify({ type: "error", error: `verb not allowed: ${msg.verb}` }));
+            return;
+          }
+          const rights = rightsOf(c.world, c.id, c.sub);
+          if (ROLE_RANK[rights.role] < needs.rank || (needs.gen && !rights.gen)) {
+            const why = needs.gen && ROLE_RANK[rights.role] >= needs.rank
+              ? "bringing new assets into this world needs the gen capability — ask its owner"
+              : `"${msg.verb}" needs ${needs.rank >= 2 ? "the world's owner" : "builder rights"} here — you are a ${rights.role}`;
+            ws.send(JSON.stringify({ type: "error", error: why }));
+            return;
+          }
+          let args = (msg.args ?? {}) as Record<string, unknown>;
+          if (msg.verb === "grant") {
+            // shape-check before it becomes history: {id, role?, gen?}
+            const id = String(args.id ?? "").slice(0, 64);
+            const role = args.role != null ? String(args.role) : undefined;
+            const gen = args.gen != null ? Boolean(args.gen) : undefined;
+            if (!id || (role == null && gen == null) || (role != null && ROLE_RANK[role] == null)) {
+              ws.send(JSON.stringify({ type: "error", error: "grant wants {id, role: owner|builder|visitor} and/or {gen: true|false}" }));
+              return;
+            }
+            if (id === "*" && role === "owner") {
+              ws.send(JSON.stringify({ type: "error", error: "everyone cannot own a world" }));
+              return;
+            }
+            args = { id, ...(role != null ? { role } : {}), ...(gen != null ? { gen } : {}) };
+          }
+          const entry = c.world.append(c.id, msg.verb, args);
+          c.world.broadcast({ type: "log", entry }); // everyone, including author (authoritative echo)
+          break;
+        }
+        case "history": {
+          // Deliberately available to spectators too: watching a show and
+          // reading back what was said before you arrived is the same act.
+          if (!c.world) return;
+          const r = c.world.readHistory({
+            before: typeof msg.before === "number" ? msg.before : Infinity,
+            after: typeof msg.after === "number" ? msg.after : -Infinity,
+            limit: Math.min(300, Math.max(1, Number(msg.limit ?? 50))),
+            verbs: Array.isArray(msg.verbs) && msg.verbs.length ? new Set(msg.verbs.map(String)) : null,
+          });
+          ws.send(JSON.stringify({ type: "history", reqId: msg.reqId ?? null, ...r }));
+          break;
+        }
+        case "whisper": {
+          // A private message between two bodies.
+          //
+          // It must NEVER reach the world log. The log is append-only, public,
+          // replayed in full to every future joiner, and forkable — a whisper
+          // written there would be permanently readable by everyone who ever
+          // enters this world, including people who weren't born yet when it
+          // was sent. So whispers route point-to-point and are never appended.
+          //
+          // The cost of that choice is durability: there is no log to replay
+          // from. So an undelivered whisper is held in MEMORY for a while and
+          // handed over when its recipient next joins. Lost on restart, which
+          // is the honest trade — a private message should be more willing to
+          // vanish than to become permanent public record.
+          if (!c.world || c.spectator) return;
+          const to = String(msg.to ?? "").slice(0, 64);
+          const text = String(msg.text ?? "").slice(0, 4000);
+          if (!to || !text) return;
+          const packet = { type: "whisper", from: c.id, to, text, ts: Date.now() };
+          const targets = [...c.world.clients].filter((o) => o.id === to && !o.spectator);
+          for (const t of targets) t.ws.send(JSON.stringify(packet));
+          ws.send(JSON.stringify({ ...packet, echo: true })); // your own sent copy
+          if (!targets.length) {
+            const key = whisperKey(c.world.name, to);
+            const q = pendingWhispers.get(key) ?? [];
+            q.push(packet);
+            while (q.length > 20) q.shift();
+            pendingWhispers.set(key, q);
+            ws.send(JSON.stringify({ type: "error", error: `${to} isn't here — they'll get it when they arrive` }));
+          }
+          break;
+        }
+        case "anim": {
+          // A one-off animation: relayed once to everyone, never logged. It is
+          // a moment, not a fact about the world — presence, like a pose. Small
+          // enough (a few KB of quaternions) that it needs no store; big enough
+          // that it must not ride the 15Hz pose stream, so it is its own
+          // message sent once.
+          if (!c.world || c.spectator) return;
+          if (typeof msg.dur !== "number" || typeof msg.tracks !== "object") return;
+          // one guard against a pathological payload — poses are tiny, so
+          // anything approaching a real asset is a mistake or an attack
+          if (JSON.stringify(msg.tracks).length > 64_000) {
+            ws.send(JSON.stringify({ type: "error", error: "animation too large — keep custom clips small and sparse" }));
+            return;
+          }
+          c.world.broadcast({ type: "anim", id: c.id, dur: msg.dur, tracks: msg.tracks, loop: !!msg.loop }, c);
+          break;
+        }
+        case "puppet": {
+          // Ask another body to hold a pose or play an animation. Deliberately
+          // ROUTED to the target rather than broadcast: DESIGN.md's invariant
+          // is that each client owns its own avatar, so a puppet is a REQUEST
+          // its target applies to itself (and then broadcasts through its own
+          // presence, like any other input) — not a pose asserted onto it from
+          // outside. The target decides whether to honour it.
+          if (!c.world || c.spectator) return;
+          const to = String(msg.target ?? "").slice(0, 64);
+          const tc = [...c.world.clients].find((o) => o.id === to && !o.spectator);
+          if (!tc) { ws.send(JSON.stringify({ type: "error", error: `${to || "target"} isn't here to pose` })); return; }
+          tc.ws.send(JSON.stringify({ type: "puppet", by: c.id, pose: msg.pose ?? null, anim: msg.anim ?? null, ragdoll: msg.ragdoll ?? null }));
+          break;
+        }
+        case "typing": {
+          // Pure presence: who is composing, right now. Never logged, never
+          // queued, and irrelevant a second later.
+          if (!c.world || c.spectator) return;
+          c.world.broadcast({ type: "typing", id: c.id, to: msg.to ?? null }, c);
+          break;
+        }
+        case "drag": {
+          // Transient build feedback. DESIGN.md is explicit that dragging is
+          // presence traffic and only the RELEASE commits a log entry — so this
+          // is relayed and never persisted, exactly like a pose. Without it,
+          // everyone else sees objects teleport on release instead of move.
+          if (!c.world || c.spectator) return;
+          // the RELEASE is a `place` verb the gate above checks; the live drag
+          // must agree with it or visitors can slide props they can't commit
+          if (ROLE_RANK[rightsOf(c.world, c.id, c.sub).role] < 1) return;
+          c.world.broadcast({ type: "drag", id: msg.id, pos: msg.pos, yaw: msg.yaw, by: c.id }, c);
+          break;
+        }
+        case "pose": {
+          if (!c.world || c.spectator) return;
+          c.lastPose = msg.pose;
+          // presence: batched into stage frames by the tick loop, never persisted
+          c.world.dirty.set(c.id, msg.pose);
+          break;
+        }
+        case "snap-result": {
+          const pending = pendingSnaps.get(msg.id);
+          if (!pending || !c.renderer) return;
+          pendingSnaps.delete(msg.id);
+          if (typeof msg.dataUrl === "string" && msg.dataUrl.startsWith("data:image/png;base64,")) {
+            pending.resolve({ ok: true, png: Buffer.from(msg.dataUrl.slice("data:image/png;base64,".length), "base64") });
+          } else {
+            pending.resolve({ ok: false, err: String(msg.error ?? "renderer returned no image"), status: 502 });
+          }
+          break;
+        }
+      }
+    },
+  },
+});
+
+// ---- stage-frame tick: the embodied plane's heartbeat ----------------------
+// One frame per world per tick carrying every pose that changed since the last
+// tick. Frames are disposable (latest-value-wins): a client whose socket is
+// backed up skips ticks instead of queueing history it will only fast-forward
+// through. Idle worlds cost one Map.size check.
+const FRAME_MS = 66;                 // ~15Hz, matches the client's send throttle
+// Bytes of unsent backlog before we drop frames to a client. Keep TIGHT: with
+// nginx fronting, its buffers + the kernel's absorb a lot before Bun's
+// bufferedAmount rises at all (measured 2026-07-26: 33s of latency built up
+// without ever tripping a 256KB threshold). 32KB ≈ half a second of frames —
+// a slow client skips to current instead of drifting behind the show.
+const FRAME_SKIP_BUFFERED = 32_000;
+setInterval(() => {
+  for (const w of worlds.values()) {
+    if (w.dirty.size === 0) continue;
+    const data = JSON.stringify({ type: "frame", seq: w.frameSeq++, t: Date.now(), poses: Object.fromEntries(w.dirty) });
+    w.dirty.clear();
+    if (RECORD) {
+      if (!w.recPath) {
+        w.recPath = join(WORLDS_DIR, w.name, `frames-${Date.now()}.jsonl`);
+        console.log(`[world:${w.name}] ⏺ recording stage frames → ${w.recPath}`);
+      }
+      const roster = JSON.stringify([...w.clients].filter((c) => !c.spectator).map((c) => ({ id: c.id, avatar: c.avatar })));
+      if (roster !== w.lastRoster) { w.lastRoster = roster; appendFileSync(w.recPath, `{"type":"roster","t":${Date.now()},"roster":${roster}}\n`); }
+      appendFileSync(w.recPath, data + "\n");
+    }
+    for (const c of w.clients) {
+      if ((c.ws.getBufferedAmount?.() ?? 0) > FRAME_SKIP_BUFFERED) continue; // stale frames die here, not in the kernel
+      c.ws.send(data);
+    }
+  }
+}, FRAME_MS);
+
+// Fold on the way out so a restart resumes from the snapshot rather than
+// re-reading a tail that was already folded in memory.
+let shuttingDown = false;
+for (const sig of ["SIGINT", "SIGTERM"] as const) {
+  process.on(sig, () => {
+    if (shuttingDown) process.exit(0);
+    shuttingDown = true;
+    for (const w of worlds.values()) {
+      if (w.entries.length) w.fold("shutdown");
+    }
+    process.exit(0);
+  });
+}
+
+console.log(`eidoverse-worlds sequencer on http://0.0.0.0:${PORT}`);
+console.log(`  library: ${LIBRARY_DIR}`);
+console.log(`  worlds:  ${WORLDS_DIR}`);
+if (!JOIN_TOKEN) console.log("  ⚠ NO JOIN_TOKEN — the door is OPEN. Fine on a tailnet, wrong on a public box.");

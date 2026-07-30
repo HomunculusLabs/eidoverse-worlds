@@ -1,0 +1,104 @@
+<!doctype html>
+<!-- Live captions for the show: a dependency-free Portal client that renders
+     streaming voice transcripts. Partials replace in place per utterance;
+     finals settle into history. Speaks the Portal WS protocol (v4) directly —
+     ~60 lines of vanilla JS instead of a bundler.
+
+     Usage:
+       captions.html?url=wss://portal.animalabs.ai&persona=captions&token=TOKEN&channel=CHANNEL_ID
+     Optional:
+       &join=1      ask the relay to start transcribing (needs VOICE_LISTEN)
+       &overlay=1   transparent background + bigger type, for OBS / iframe embeds
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>captions</title>
+<style>
+  :root { --fg: #e8ecf2; --dim: #8b95a5; --accent: #7fd4a8; }
+  html, body { margin: 0; height: 100%; background: #0d1117; font: 17px/1.45 ui-monospace, monospace; color: var(--fg); }
+  body.overlay { background: transparent; font-size: 26px; text-shadow: 0 1px 3px #000a; }
+  #log { position: absolute; inset: 0; padding: 14px; overflow-y: auto; display: flex; flex-direction: column; justify-content: flex-end; }
+  .u { margin: 3px 0; }
+  .u .who { color: var(--accent); margin-right: .5em; }
+  .u.partial { color: var(--dim); }
+  .u.partial::after { content: '▌'; animation: blink 1s step-end infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  #status { position: fixed; top: 8px; right: 12px; color: var(--dim); font-size: 12px; }
+  body.overlay #status { display: none; }
+</style>
+</head>
+<body>
+<div id="log"></div>
+<div id="status">connecting…</div>
+<script>
+const q = new URLSearchParams(location.search);
+if (q.has('overlay')) document.body.classList.add('overlay');
+const URL_ = q.get('url') || 'wss://portal.animalabs.ai';
+const PERSONA = q.get('persona') || 'captions';
+const TOKEN = q.get('token') || '';
+const CHANNEL = q.get('channel') || '';
+const JOIN = q.has('join');
+const MAX_LINES = 40;
+
+const log = document.getElementById('log');
+const status = document.getElementById('status');
+const lines = new Map(); // utteranceId → element
+
+function lineFor(id) {
+  let el = lines.get(id);
+  if (!el) {
+    el = document.createElement('div');
+    el.className = 'u';
+    log.appendChild(el);
+    lines.set(id, el);
+    while (log.children.length > MAX_LINES) {
+      const dead = log.firstChild;
+      for (const [k, v] of lines) if (v === dead) lines.delete(k);
+      log.removeChild(dead);
+    }
+  }
+  return el;
+}
+
+function render(t) {
+  const el = lineFor(t.utteranceId);
+  el.classList.toggle('partial', t.partial);
+  el.innerHTML = '';
+  const who = document.createElement('span');
+  who.className = 'who';
+  who.textContent = t.speaker?.kind === 'user' ? t.speaker.displayName : (t.speaker?.displayName ?? '?');
+  el.appendChild(who);
+  el.appendChild(document.createTextNode(t.text));
+  log.scrollTop = log.scrollHeight;
+}
+
+let seq = 0, rpcN = 0, hb = null;
+function connect() {
+  const ws = new WebSocket(URL_);
+  ws.onmessage = (ev) => {
+    const f = JSON.parse(ev.data);
+    if (f.op === 'hello') {
+      ws.send(JSON.stringify({ op: 'identify', d: { protocolVersion: 4, token: TOKEN, personaId: PERSONA, subscriptions: CHANNEL ? [CHANNEL] : [] } }));
+      clearInterval(hb);
+      hb = setInterval(() => ws.readyState === 1 && ws.send(JSON.stringify({ op: 'heartbeat', d: { seq } })), f.d.heartbeatIntervalMs ?? 15000);
+    } else if (f.op === 'ready') {
+      status.textContent = `listening ${CHANNEL || '(no channel)'}`;
+      if (JOIN && CHANNEL) ws.send(JSON.stringify({ op: 'rpc', d: { id: 'r' + (++rpcN), method: 'voice_join', params: { channelId: CHANNEL } } }));
+    } else if (f.op === 'dispatch' || f.op === 'dispatch_ephemeral') {
+      if (f.op === 'dispatch') seq = f.seq;
+      if (f.d.type === 'voice_transcript' && (!CHANNEL || f.d.channelId === CHANNEL)) render(f.d);
+      if (f.d.type === 'voice_status') status.textContent = f.d.joined ? 'transcribing' : 'transcription stopped';
+    } else if (f.op === 'rpc_result' && !f.d.ok) {
+      status.textContent = `error: ${f.d.error?.message ?? 'rpc failed'}`;
+    } else if (f.op === 'invalid_session') {
+      status.textContent = 'auth failed';
+    }
+  };
+  ws.onclose = () => { status.textContent = 'reconnecting…'; clearInterval(hb); setTimeout(connect, 2000); };
+}
+if (!TOKEN) status.textContent = 'missing ?token=';
+else connect();
+</script>
+</body>
+</html>

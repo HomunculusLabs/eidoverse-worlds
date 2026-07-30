@@ -1,0 +1,679 @@
+// sky — time of day, weather, and the lighting that follows from them.
+//
+// Two implementations behind one verb:
+//
+//   1. Skye's world packages (`makeSky({world})` from sky_worlds.js) — a real
+//      raymarched atmosphere, volumetric clouds, weather states with rain and
+//      lightning, baked environment reflections, and whole alternate worlds
+//      (ringworld, red-giant shieldworld). This is the good one.
+//   2. three's SkyMesh — the fallback, kept because the toolkit branch is not
+//      merged upstream yet and a client that hard-fails when the library moves
+//      is a client nobody can run.
+//
+// The VERB is stable across both: {hours, rate, weather, clouds, …}. Which
+// renderer answers it is an implementation detail the world log never sees.
+
+import { THREE, scene, sun, hemi, renderer, camera, report, bus } from './core.js';
+import { loadEidoModule, primeFiles, listLibrary, fetchBytes } from './assets.js';
+import { markPhase, whenBooted } from './boot.js';
+import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake } from './sky_baked.js';
+
+// ---------------------------------------------------------------- state
+
+let impl = null;           // 'eidoverse' | 'skymesh' | null
+let skyApi = null;         // Skye's sky object when impl === 'eidoverse'
+let skyMesh = null;
+let fillLight = null;
+const lampLights = new Set();
+/** Point lights the emissive-lamp system currently casts — shared so the
+ *  explicit-light budget counts the WHOLE scene, not just its own. */
+export const lampCount = () => lampLights.size;
+/** Total point lights the world may hang off emissive materials. See
+ *  attachLocalLights for why this is a hard ceiling rather than a soft one. */
+const MAX_LAMPS = 2;
+let clock = null;          // { args, t0 } — the server-stamped epoch
+let currentWorld = null;
+
+export const skyArgs = () => clock?.args ?? {};
+export const skyImpl = () => impl;
+/** 0 at night → 1 at noon. Lamps and other night-aware things read this. */
+export let dayness = 1;
+
+// ---------------------------------------------------------------- quality
+//
+// The volumetric cloud march is the single most expensive thing this client
+// draws — measured on this hardware at roughly 120fps without it and 30 with.
+// Its cost is dominated by `cloudPasses`, which sky_system defaults to 8;
+// Skye's TIER=balanced drops that to 3, and even 3 is too much for a live
+// frame budget on some machines.
+//
+// So every tier below 'high' now shows a BAKED sky instead of marching live
+// (see sky_baked.js): the same march rendered once into the env-bake equirect
+// and displayed on a static dome, re-baked only when the sky actually changes.
+// The tier's cost moves from per-frame to per-bake, which is why 'medium'
+// can afford the FULL 8-pass march — it looks better than the old live
+// 3-pass tier and costs a texture lookup per pixel at runtime. The trade is
+// stillness: clouds hold their shapes between re-bakes. 'high' keeps the
+// real thing.
+//
+// This is a CLIENT preference, not world state. It is deliberately never a
+// verb: how many cloud passes your GPU can afford has nothing to do with what
+// the world looks like, and one person's laptop must not dictate everyone
+// else's sky. Stored locally, applied at build.
+export const CLOUD_QUALITY = ['off', 'low', 'medium', 'high'];
+const QUALITY_OPTS = {
+  off: { cloudPasses: 1 },                     // plus setClouds('clear') below
+  low: { cloudPasses: 1, stormSamples: 6 },
+  medium: { cloudPasses: 3 },
+  high: {},                                    // sky_system's own defaults (8)
+};
+// Baked-tier bake parameters. Anything listed here shows the baked dome;
+// 'high' is deliberately absent — it is the live march. One resolution/pass
+// choice PER SESSION per tier: bakeEnv keys its cached node graph on
+// (W, H, passes), so every bake call must repeat the same values or each
+// re-bake would rebuild and recompile the whole march pipeline.
+// intervalMs is the crossfade cadence — sky_baked re-bakes on that clock and
+// dissolves between bakes, which is what keeps the clouds' slow evolution
+// smooth instead of stepping. The bake itself is banded (~2ms/frame), so a
+// bigger equirect costs bake LATENCY, not frame rate — which is why 'medium'
+// can afford 4096x2048 (the 2048 bake was ~4x undersampled against the
+// screen and read as mush).
+const BAKED_TIERS = {
+  off: { width: 1024, height: 512, cloudPasses: 1, intervalMs: 12000 },   // clear sky anyway
+  low: { width: 2048, height: 1024, cloudPasses: 3, intervalMs: 12000 },
+  medium: { width: 4096, height: 2048, cloudPasses: 8, intervalMs: 9000 },
+};
+const bakeOpts = () => {
+  const { width, height, cloudPasses } = BAKED_TIERS[cloudQuality] ?? {};
+  return width ? { width, height, cloudPasses } : {};
+};
+let cloudQuality = localStorage.getItem('ew-cloud-quality') ?? 'medium';
+export const getCloudQuality = () => cloudQuality;
+
+/** Change the local cloud budget. Rebuilds the sky, since passes are baked in
+ *  at construction. */
+export async function setCloudQuality(level) {
+  if (!CLOUD_QUALITY.includes(level) || level === cloudQuality) return;
+  cloudQuality = level;
+  localStorage.setItem('ew-cloud-quality', level);
+  currentWorld = null;          // force a rebuild at the new budget
+  skyBuilds = 0;
+  if (clock) await render();
+}
+
+// sky_system.js ASSIGNS globalThis.makeSkySystem when sky_worlds evals it, and
+// sky_worlds calls it in the same breath — so there is no moment in between to
+// wrap it. Intercepting the assignment itself is the only seam, and it keeps
+// Skye's files untouched.
+let _realMakeSkySystem = null;
+Object.defineProperty(globalThis, 'makeSkySystem', {
+  configurable: true,
+  get() {
+    if (!_realMakeSkySystem) return undefined;
+    return (args = {}) => _realMakeSkySystem({
+      ...args,
+      opts: { ...(args.opts ?? {}), ...QUALITY_OPTS[cloudQuality] },
+    });
+  },
+  set(fn) { _realMakeSkySystem = fn; },
+});
+
+export const WEATHERS = ['clear', 'fair', 'sunshower', 'overcast', 'rain', 'storm', 'cyclone', 'darkstorm'];
+export const CLOUDS = ['clear', 'cumulus', 'stratus', 'cirrus'];
+// Only `earth` is offered.
+//
+// ringworld and shieldworld each drag ~20MB of celestial geometry and add a
+// second raymarched layer on top of the cloud dome; on this hardware they
+// crawl and then take the tab down. They are not deleted from the toolkit —
+// a log that asks for one is coerced below rather than refused — but nothing
+// in the UI will hand someone a world that hangs their browser.
+export const SKY_WORLDS = ['earth'];
+const KNOWN_HEAVY = ['ringworld', 'shieldworld'];
+
+// ---------------------------------------------------------------- entry point
+
+/** Called by the world log's `sky` verb. `ts` is the server stamp — it is what
+ *  makes every client's sun agree without the server simulating anything. */
+export async function applySky(args = {}, ts) {
+  clock = { args: { ...args }, t0: ts ?? Date.now() };
+  await render();
+}
+
+/** Local preview (the tuner) — same path, no new epoch. */
+export async function previewSky(args) {
+  clock = { args: { ...args }, t0: clock?.t0 ?? Date.now() };
+  await render();
+}
+
+function nowHours() {
+  if (!clock) return 12;
+  const a = clock.args;
+  return ((a.hours ?? 12) + (a.rate ?? 0) * (Date.now() - clock.t0) / 3600e3 + 24000) % 24;
+}
+
+// How far the sky has been degraded to keep it working on this GPU.
+//   0 = everything on
+//   1 = GPU caches off — sky_system's light cache writes through
+//       T3.textureStore, and three's WebGPU backend answers some uniform
+//       layouts with `Uniform "storageTexture" not implemented`. Skye already
+//       exposes LCACHE/DCACHE for this exact bisect, so the first fallback is
+//       her supported knob, not our sledgehammer.
+//   2 = give up, use three's SkyMesh
+let degrade = 0;
+// Rebuilding the sky is expensive and stacks (each makeSky evals its own
+// sky_system + weather_system). A per-frame fault fires 60 times a second, so
+// without a hard budget the "recovery" path builds six atmospheres and is far
+// worse than the fault it was recovering from. Ask me how I know.
+let skyBuilds = 0;
+const MAX_SKY_BUILDS = 2;
+
+// Every sky verb in a log calls render(), and replay no longer awaits them —
+// so without this they run CONCURRENTLY, each entering the retry ladder with
+// its own idea of how degraded things are, and each building its own sky.
+let renderChain = Promise.resolve();
+function render() {
+  renderChain = renderChain.then(renderOnce, renderOnce);
+  return renderChain;
+}
+
+async function renderOnce() {
+  const a = clock?.args;
+  if (!a) return;
+  if (a.system === 'skymesh' || degrade >= 2) {
+    if (skyApi || skyOwned.length) { teardownSky(); skyApi = null; currentWorld = null; }
+    impl = 'skymesh';
+    await renderSkyMesh(a);
+    return markPhase('sky', 1);
+  }
+
+  while (degrade < 2 && skyBuilds < MAX_SKY_BUILDS) {
+    try {
+      await renderEidoverse(a);
+      return;
+    } catch (e) {
+      const why = e?.message ?? String(e);
+      // An unsupported server is a fact, not a transient fault — stop dead.
+      if (e?.skyUnsupported) {
+        degrade = 2;
+        console.warn('[sky]', why);
+        bus.emit('sky-degraded', { msg: why });
+        break;
+      }
+      const storage = /storageTexture|textureStore|storage texture/i.test(why);
+      if (degrade === 0 && storage) {
+        console.warn('[sky] GPU cache unsupported here — retrying without it:', why);
+        bus.emit('sky-degraded', { msg: 'this GPU cannot do the sky\'s cached lighting — running the simpler path' });
+      } else {
+        report('eidoverse sky (falling back)', e);
+      }
+      degrade++;
+      skyApi = null;
+      currentWorld = null;
+    }
+  }
+  impl = 'skymesh';
+  await renderSkyMesh(a);
+  markPhase('sky', 1);
+}
+
+// ============================================================ Skye's sky
+
+// Which extra bytes a world package needs. Discovered from the server's
+// directory listing rather than hardcoded — but split by world so `earth`
+// doesn't drag 20MB of ringworld geometry through the door.
+async function primeFor(world, wantAudio) {
+  const MODULES = [
+    'eidoverse/sky_system.js', 'eidoverse/weather_system.js', 'eidoverse/cloud_spatial.js',
+    'eidoverse/ringworld.js', 'eidoverse/redgiant.js', 'eidoverse/asteroid_moon.js',
+    'eidoverse/weather_audio.js',
+  ];
+  const [skyFiles, particles] = await Promise.all([
+    listLibrary('eidoverse/assets/sky'),
+    // the weather system's rain streaks and splash sprites live here
+    listLibrary('eidoverse/assets/particle_textures'),
+  ]);
+  if (!skyFiles || !particles) {
+    // The toolkit sky reads its own assets synchronously, so the client has to
+    // know what they ARE before handing control over — which it learns from
+    // /library-list. A sequencer without that endpoint is older than this
+    // client, and no amount of retrying will conjure it.
+    const e = new Error('this world\'s sequencer is older than this client (no /library-list) — detailed sky unavailable');
+    e.skyUnsupported = true;
+    throw e;
+  }
+  const wanted = skyFiles.map((f) => f.path).filter((p) => {
+    if (p.includes('/audio/')) return wantAudio;
+    // ~20MB of ring geometry and asteroid fields — only for the worlds that
+    // actually have them in the sky
+    if (p.includes('/celestial/')) return world !== 'earth';
+    return true;
+  });
+  await primeFiles([...MODULES, ...wanted, ...particles.map((f) => f.path)]);
+}
+
+// Single-flight. Replaying a log no longer AWAITS each sky verb (waiting for
+// the atmosphere was most of a cold boot), which means several sky entries in
+// one log fire concurrently — and every one of them saw `skyApi === null`,
+// because none had finished yet, and built its own atmosphere. Six sky verbs
+// produced six stacked sky systems and six weather systems. The guard has to
+// be the in-flight PROMISE, not the finished result.
+let building = null;
+// What the last sky build put into the scene.
+//
+// makeSky returns an api with no dispose — so `skyApi?.dispose?.()` was a
+// no-op and every rebuild stacked another dome, weather system, particle hook
+// and set of wrapped materials on top of the last. That is the accumulation:
+// each world switch made the scene permanently heavier until it fell over.
+// Since upstream cannot tell us what it added, we diff the scene around the
+// build and own the difference.
+let skyOwned = [];
+let autoSystemsMark = 0;
+
+function snapshotSceneOwnership() {
+  return {
+    before: new Set(scene.children),
+    autos: (globalThis._autoParticleSystems ?? []).length,
+  };
+}
+function claimSkyAdditions(snap) {
+  skyOwned = scene.children.filter((c) => !snap.before.has(c)
+    // never claim anything the world itself owns — entities and bodies can be
+    // added by other code while an async sky build is in flight
+    && !c.userData?.entityId && !c.userData?.isBody);
+  autoSystemsMark = snap.autos;
+}
+function teardownSky() {
+  // Put the parked live domes back first: the diff below claimed them at
+  // build time, so restoring them lets the disposal pass find and free them.
+  detachBakedDome();
+  for (const o of skyOwned) {
+    scene.remove(o);
+    o.traverse?.((n) => {
+      n.geometry?.dispose?.();
+      const m = n.material;
+      if (Array.isArray(m)) m.forEach((x) => x?.dispose?.());
+      else m?.dispose?.();
+    });
+  }
+  skyOwned = [];
+  // the per-frame hooks the sky registered would otherwise keep running
+  // against a dome that is no longer in the scene
+  const autos = globalThis._autoParticleSystems;
+  if (Array.isArray(autos) && autos.length > autoSystemsMark) autos.length = autoSystemsMark;
+}
+
+async function renderEidoverse(a) {
+  if (a.world && KNOWN_HEAVY.includes(a.world)) {
+    console.warn(`[sky] "${a.world}" is disabled here (too heavy for a live client) — using earth`);
+  }
+  const world = SKY_WORLDS.includes(a.world) ? a.world : 'earth';
+  const wantAudio = Boolean(a.audio);
+
+  if (building) {
+    await building.catch(() => {});   // whoever is already building wins
+  }
+  if (!skyApi || currentWorld !== world) {
+    building = buildSky(a, world, wantAudio);
+    try { await building; } finally { building = null; }
+  }
+  applyLive(a);
+  await ensureSkyBake();
+}
+
+async function buildSky(a, world, wantAudio) {
+  {
+    // tear down a previous world's sky before building another
+    try { skyApi?.dispose?.(); } catch { /* upstream has none; the diff below is the real teardown */ }
+    teardownSky();
+    skyApi = null;
+    const ownership = snapshotSceneOwnership();
+    // Quality tier. The volumetric cloud march is the single most expensive
+    // thing in the client — it was authored for offline batch renders, where a
+    // slow frame costs nothing. A live world needs a frame budget, so we ask
+    // for the tier Skye already provides for this (3 cloud passes instead of
+    // the full march) unless a world explicitly asks for the good one.
+    const envKnobs = (globalThis.__ewEnv ??= {});
+    envKnobs.TIER = a.quality === 'high' ? undefined : 'balanced';
+    // GPU caches OFF by default.
+    //
+    // sky_system's light cache writes through T3.textureStore, and three's
+    // WebGPU backend answers that with `Uniform "storageTexture" not
+    // implemented` — as an UNHANDLED REJECTION from inside the pipeline, once
+    // per frame, which no try/catch of ours can catch and which Chrome logs
+    // itself no matter what we do. It reproduces on a real desktop Chrome while
+    // passing in headless here, so it is not something to feature-detect
+    // optimistically. Skye ships CACHE/LCACHE/DCACHE for exactly this bisect
+    // and notes the density cache has a measured backend fault of its own.
+    // Correctness first: opt IN with quality:'high', don't opt out after it
+    // has already flooded someone's console.
+    // Surgical: LCACHE only. CACHE=0 kills the density cache too and the sky
+    // renders BLACK without it — the offending textureStore is in the LIGHT
+    // cache alone (sky_system.js:1060), so that is the only thing to give up.
+    envKnobs.CACHE = undefined;
+    envKnobs.DCACHE = undefined;
+    envKnobs.LCACHE = a.quality === 'high' ? undefined : '0';
+
+    // Let the person get into the world first. On a throttled link the sky's
+    // assets and the body's were racing each other through the same pipe, and
+    // the body is the one arrival actually waits for.
+    await whenBooted();
+    await primeFor(world, wantAudio);
+    await loadEidoModule('sky_worlds.js');
+    if (typeof globalThis.makeSky !== 'function') throw new Error('sky_worlds.js exposed no makeSky');
+    if (skyMesh) { scene.remove(skyMesh); skyMesh = null; }
+    skyBuilds++;
+    skyApi = await globalThis.makeSky({
+      scene, camera, renderer, world,
+      hours: nowHours(),
+      clouds: cloudQuality === 'off' ? 'clear' : (CLOUDS.includes(a.clouds) ? a.clouds : 'cumulus'),
+      weather: WEATHERS.includes(a.weather) ? a.weather : 'clear',
+      sun, hemi,
+      audio: wantAudio,
+    });
+    claimSkyAdditions(ownership);
+    currentWorld = world;
+    impl = 'eidoverse';
+    scene.background = null;
+
+    // The first bake + baked-dome attach happen AFTER applyLive (see
+    // ensureSkyBake) — the verb's clouds/weather must be asserted first.
+    // makeSky's own weather default is 'clear', which OVERRIDES the cloud
+    // preset (sky_worlds documents the trap), and bakeEnv caches its node
+    // graph keyed on whether clouds exist at bake time: baking here pinned
+    // a graph with NO cloud branch and the baked sky came out empty.
+    bakePending = true;
+    markPhase('sky', 1);
+    bus.emit('sky-ready', { impl, world });
+  }
+
+}
+
+// Once per build, after the log's sky verb has been applied: bake the
+// environment and (on baked tiers) swap the live domes for the baked one.
+let bakePending = false;
+async function ensureSkyBake() {
+  if (!bakePending || !skyApi) return;
+  bakePending = false;
+  // Environment reflections. `scene.environment` was never set, so every PBR
+  // material in the world was lit by a hemisphere and a directional only —
+  // metals and glossy surfaces read as dead plastic. The sky can bake itself.
+  // (sky_worlds' bakeEnv takes ONE options bag — the old `(renderer, {})`
+  // call was spreading the renderer into the options and working by luck.)
+  // On baked tiers this same bake IS the visible sky, so it renders at the
+  // tier's display resolution and full march quality.
+  try {
+    await skyApi.bakeEnv?.(bakeOpts());
+    lastBakeHours = nowHours();
+    lastBakeAt = performance.now();
+    skyApi.enableReflections?.({});
+  } catch (e) { console.warn('sky reflections unavailable', e); }
+  if (BAKED_TIERS[cloudQuality]) {
+    const { cloudPasses, intervalMs } = BAKED_TIERS[cloudQuality];
+    if (!attachBakedDome(skyApi, { cloudPasses, intervalMs })) {
+      // engine internals moved (or the bake failed) — the live march is
+      // still in the scene, so the sky stays correct, just expensive
+      console.warn('[sky] baked dome could not attach — staying on the live cloud march');
+    }
+  }
+}
+
+// Re-baking the environment map.
+//
+// bakeEnv runs once at construction, and `scene.environment` then dominates
+// every PBR surface in the world — so the ground stayed lit at whatever hour
+// the sky happened to be built at. Midnight rendered a correct starfield over
+// grass at full noon brightness, which is the "lighting doesn't change" that
+// was reported: the SKY was changing the whole time, the IBL lighting
+// everything under it was not.
+//
+// The bake is 512x256 and costs a render, so it is debounced and rate-limited
+// rather than run per frame or per slider tick.
+let lastBakeHours = null;
+let lastBakeAt = 0;
+let bakeTimer = null;
+const BAKE_MIN_GAP_MS = 900;
+const BAKE_HOUR_DELTA = 0.25;
+
+function scheduleEnvBake({ force = false } = {}) {
+  const h = nowHours();
+  if (!force && lastBakeHours !== null && Math.abs(h - lastBakeHours) < BAKE_HOUR_DELTA
+      && Math.abs(h - lastBakeHours) < 12) return;    // (wrap-safe enough for a debounce)
+  clearTimeout(bakeTimer);
+  const wait = Math.max(0, BAKE_MIN_GAP_MS - (performance.now() - lastBakeAt));
+  bakeTimer = setTimeout(runEnvBake, wait + 60);
+}
+
+async function runEnvBake() {
+  if (!skyApi?.bakeEnv) return;
+  // On baked tiers the crossfade loop owns the re-bake clock — a stray
+  // timer must not blocking-render a full-quad bake on top of it.
+  if (bakedActive()) return requestBake();
+  lastBakeAt = performance.now();
+  lastBakeHours = nowHours();
+  try {
+    // Same opts every time — bakeEnv caches its node graph keyed on them.
+    await skyApi.bakeEnv(bakeOpts());
+  } catch (e) {
+    console.warn('[sky] env re-bake failed', e?.message ?? e);
+  }
+}
+
+/** Settings that apply to an already-built sky — cheap, idempotent, and safe
+ *  to run for every sky verb in a log. */
+function applyLive(a) {
+  if (!skyApi) return;
+  skyApi.setTime?.(nowHours());
+  // Baked tiers re-bake on their own cadence (which covers TOD drift too);
+  // the debounced TOD bake only serves the live 'high' tier's env-IBL.
+  if (!bakedActive()) scheduleEnvBake();
+  if (cloudQuality === 'off') skyApi.setClouds?.('clear');
+  else if (a.clouds && CLOUDS.includes(a.clouds)) skyApi.setClouds?.(a.clouds);
+  if (a.weather && WEATHERS.includes(a.weather)) {
+    if (a.weatherSeconds) skyApi.transitionTo?.(a.weather, a.weatherK ?? 1, a.weatherSeconds);
+    else skyApi.setWeather?.(a.weather, a.weatherK ?? 1);
+  }
+  if (a.colors) skyApi.setColors?.(a.colors);
+  // The baked dome only changes when a bake lands — a verb that touched the
+  // sky's look asks for one now (the crossfade eases it in, and the rolling
+  // cadence carries any longer weather transition by itself).
+  if (bakedActive() && (a.clouds || a.weather || a.colors || cloudQuality === 'off')) {
+    requestBake();
+  }
+
+  // NOTE the ownership boundary: makeSky was handed `sun` and `hemi` and it
+  // drives them itself (colour, intensity, and the fog/haze that follow the
+  // weathered sky). Re-deriving those here would fight it — a sunset would get
+  // our noon-ish curve stamped back over Skye's. So on this path the tuner
+  // only applies the knobs the world genuinely owns: exposure, and the lamp
+  // response to time of day.
+  applyTuning(a, Math.max(0, Math.sin(((nowHours() - 6) / 12) * Math.PI)), undefined, null, true);
+}
+
+// ============================================================ SkyMesh fallback
+
+async function renderSkyMesh(a) {
+  const hours = nowHours();
+  const { SkyMesh } = await import('three/addons/objects/SkyMesh.js');
+  if (!skyMesh) {
+    skyMesh = new SkyMesh();
+    skyMesh.scale.setScalar(280);
+    // FogExp2(0.018) over a 280-unit dome = e^-5 — the atmosphere would render
+    // as pure fog colour. The sky is not IN the weather; exempt it.
+    skyMesh.material.fog = false;
+    skyMesh.userData.noCamCollide = true;
+    scene.add(skyMesh);
+  }
+  impl = 'skymesh';
+
+  const day = Math.max(0, Math.sin(((hours - 6) / 12) * Math.PI)); // 0 night → 1 noon
+  const elev = -8 + 68 * day;
+  const phi = THREE.MathUtils.degToRad(90 - elev);
+  const theta = THREE.MathUtils.degToRad(a.azimuth ?? 180);
+  const sunPos = new THREE.Vector3().setFromSphericalCoords(1, phi, theta);
+  skyMesh.sunPosition.value.copy(sunPos);
+  // Haze thickens as the sun drops — that's what actually paints a sunset dome;
+  // a clear noon atmosphere at 13° elevation just looks grey.
+  const warmth = Math.pow(1 - day, 1.5);
+  skyMesh.turbidity.value = 6 + 7 * warmth;
+  skyMesh.rayleigh.value = 1.6 + 1.6 * warmth;
+  skyMesh.mieCoefficient.value = 0.004 + 0.012 * warmth;
+  skyMesh.mieDirectionalG.value = 0.8;
+
+  sun.position.copy(sunPos).multiplyScalar(60);
+  // Light temperature follows the sun: white and hard at noon, warm and soft
+  // near the horizon (a low sun that stays noon-white reads as overcast).
+  sun.color.lerpColors(new THREE.Color(0xfff2e0), new THREE.Color(0xffab5e), warmth);
+  hemi.color.lerpColors(new THREE.Color(0xbfd4ff), new THREE.Color(0xe0b98f), warmth * 0.85);
+  hemi.groundColor.lerpColors(new THREE.Color(0x283024), new THREE.Color(0x5a4630), warmth);
+  scene.background = null;
+
+  applyTuning(a, day, warmth, sunPos);
+}
+
+// ============================================================ shared tuning
+// The exposure/fill/fog knobs apply to whichever sky is underneath, so the
+// tuner sliders behave identically on both.
+
+function applyTuning(a, day, warmth = Math.pow(1 - day, 1.5), sunPos = null, skyOwnsLights = false) {
+  if (!skyOwnsLights) {
+    sun.intensity = (0.4 + 2.2 * day) * (a.sun ?? 1);
+    // Low sun ≠ dark subjects: golden hour is FULL of scattered warm light.
+    hemi.intensity = (0.6 + 0.4 * day) * (a.ambient ?? 1);
+
+    if (!fillLight) {
+      fillLight = new THREE.DirectionalLight(0xffffff, 0);
+      scene.add(fillLight);
+    }
+    fillLight.color.copy(hemi.color);
+    if (sunPos) {
+      fillLight.position.set(-sunPos.x, Math.max(0.35, sunPos.y), -sunPos.z).multiplyScalar(60);
+    } else {
+      fillLight.position.copy(sun.position).multiplyScalar(-1);
+      fillLight.position.y = Math.abs(fillLight.position.y);
+    }
+    fillLight.intensity = 0.95 * warmth * (a.fill ?? 1);
+
+    if (scene.fog) {
+      const cool = new THREE.Color().setHSL(0.6, 0.2, 0.05 + 0.5 * day);
+      const warm = new THREE.Color().setHSL(0.07, 0.32, 0.04 + 0.45 * day);
+      scene.fog.color.lerpColors(cool, warm, warmth);
+      scene.fog.density = 0.018 * (a.fog ?? 1);
+    }
+  } else if (fillLight) {
+    fillLight.intensity = 0; // the real sky supplies its own bounce
+  }
+
+  // Exposure is the world's, not the sky's — it's the tuner's one global knob
+  // and it must work identically on both implementations.
+  renderer.toneMappingExposure = (skyOwnsLights ? 1 : (1.0 - 0.22 * warmth)) * (a.exposure ?? 1);
+
+  dayness = day;
+  const lampGlow = Math.pow(1 - day, 2);
+  for (const l of lampLights) {
+    let root = l; while (root.parent) root = root.parent;
+    if (root !== scene) { lampLights.delete(l); continue; } // its object left
+    l.intensity = l.userData.base * lampGlow;
+  }
+}
+
+// ---------------------------------------------------------------- lamps
+// Models that glow should also SHED light. Any spawned object with emissive
+// surfaces gets a point light at each emissive mesh's centre; the sky clock
+// dims them at noon and lights them at dusk. No per-model configuration —
+// the material IS the declaration.
+
+export async function attachLocalLights(obj) {
+  // Deferred until after arrival, deliberately. Adding point lights
+  // invalidates every material variant in the scene, and with a grass field up
+  // that recompile is enormous — measured 2026-07-26: a world with grass took
+  // 1.3s to boot, and 10.6s once two emissive streetlights were in it. Neither
+  // alone is expensive; the product is. Lamps are also near-invisible in
+  // daylight, so nothing is lost by hanging them a moment later.
+  await whenBooted();
+  const emissive = [];
+  obj.traverse((o) => {
+    if (!o.isMesh) return;
+    const m = o.material;
+    const glow = (m?.emissiveIntensity ?? 1) *
+      Math.max(m?.emissive?.r ?? 0, m?.emissive?.g ?? 0, m?.emissive?.b ?? 0);
+    if (glow > 0.5 || (m?.emissiveMap && (m?.emissiveIntensity ?? 1) > 1)) {
+      emissive.push({ mesh: o, glow: Math.max(glow, m?.emissiveIntensity ?? 1) });
+    }
+  });
+  // Hard global cap. Each additional point light forces another material
+  // variant to compile across the WHOLE scene, and with an instanced grass
+  // field that recompile is brutal. Measured 2026-07-26 on the same world:
+  // grass + 2 lights booted in 429ms at 61fps and stayed responsive; grass +
+  // 4 lights never finished compiling and hung the tab outright. The cost is
+  // superlinear in light COUNT, so the count is what has to be bounded — not
+  // the number of lamps a world may contain. Two is what is MEASURED to be
+  // safe here; raising it needs a re-measure, not an assumption.
+  const budget = Math.max(0, MAX_LAMPS - lampLights.size);
+  if (budget === 0) {
+    if (!attachLocalLights._warned) {
+      attachLocalLights._warned = true;
+      console.warn(`[lights] lamp budget (${MAX_LAMPS}) reached — further emissive objects glow but do not cast`);
+    }
+    return;
+  }
+  for (const { mesh, glow } of emissive.slice(0, Math.min(2, budget))) { // and per object
+    mesh.geometry.computeBoundingSphere();
+    // saturated emissive keeps its colour; whitish emissive reads as a warm bulb
+    const ec = mesh.material.emissive;
+    const sat = Math.max(ec.r, ec.g, ec.b) - Math.min(ec.r, ec.g, ec.b);
+    const color = sat > 0.25 ? ec.clone() : new THREE.Color(0xffd9a0);
+    const light = new THREE.PointLight(color, 0, 12, 1.7); // tight radius: grass fragments cost
+    light.position.copy(mesh.geometry.boundingSphere.center);
+    light.userData.base = Math.min(40, 6 + 2.6 * glow);
+    light.intensity = light.userData.base * Math.pow(1 - dayness, 2);
+    mesh.add(light);
+    lampLights.add(light);
+  }
+}
+
+// ---------------------------------------------------------------- per-frame
+
+let lastClockTick = 0;
+let updateFailures = 0;
+export function updateSky(nowMs, t) {
+  // A toolkit sky that throws from its PER-FRAME update is invisible to the
+  // try/catch around construction: the object exists, renders nothing, and
+  // rejects once per frame forever — a black sky and a console filling at
+  // 60Hz. Count failures and fall back for good.
+  if (impl === 'eidoverse' && skyApi?.update) {
+    try {
+      const r = skyApi.update(t);
+      if (r && typeof r.catch === 'function') r.catch(noteSkyFailure);
+      else updateFailures = 0;
+    } catch (e) { noteSkyFailure(e); }
+    updateBakedDome(nowMs);   // camera-follow + the band-bake/crossfade cycle
+  }
+  // A rated sky advances everyone's sun in lockstep. ~1Hz is plenty — even at
+  // rate 24 the sun moves 0.1°/s.
+  if ((clock?.args.rate ?? 0) !== 0 && nowMs - lastClockTick > 1000) {
+    lastClockTick = nowMs;
+    render().catch((e) => report('sky clock', e));
+  }
+}
+
+function noteSkyFailure(e) {
+  if (impl !== 'eidoverse') return;
+  if (++updateFailures < 8) return;          // tolerate a transient hiccup
+  updateFailures = 0;
+  const why = e?.message ?? String(e);
+  console.error('[sky] per-frame failure:', why);
+  // Deliberately NOT rebuilding. A fault that fires every frame would rebuild
+  // every few frames, and each rebuild stacks another atmosphere and weather
+  // system on the scene. Report it once and leave the sky alone; a wrong sky
+  // you can still walk under beats six right ones fighting each other.
+  if (!skyFaultReported) {
+    skyFaultReported = true;
+    bus.emit('sky-degraded', { msg: `the sky hit a GPU fault (${why.slice(0, 70)}) — reload to retry it` });
+  }
+}
+let skyFaultReported = false;
+
+/** Skye's modules register per-frame hooks here (grass wind, particles). */
+export function updateAutoSystems(t) {
+  for (const fn of globalThis._autoParticleSystems ?? []) fn(t);
+}

@@ -1,0 +1,377 @@
+// controller — input to embodiment. Owns my body's state, my camera, and the
+// keyboard/mouse/touch surface that drives both.
+//
+// The camera is the thing most people judge a 3D client by in the first ten
+// seconds, so it gets: collision (no more seeing through hillsides), a
+// shoulder offset (your own body stops occluding what you're aiming at), and
+// a continuous zoom that passes through into first person.
+
+import { THREE, camera, canvas, CONFIG, angleDelta, bus } from './core.js';
+import { heightAt } from './terrain.js';
+import { resolveColliders, lastBlockedTop, findSeat } from './colliders.js';
+import { chat } from './chat.js';
+import { isOverlayOpen, flashHint } from './ui.js';
+
+export const myState = {
+  pos: new THREE.Vector3(0, 0, 0),
+  yaw: 0,
+  pitch: 0,          // head pitch, mirrored from the camera
+  speed: 0,
+  clip: 'idle',
+  emote: null,       // one-shot, cleared after it's been sent once
+  pose: undefined,   // held custom bone override (null clears); presence only
+  seat: null,        // { id, chair } while seated on something
+};
+
+export const keys = new Set();
+let posture = null;              // 'sit' | 'lie' | null
+let vy = 0, grounded = true, mantle = null, airborneFor = 0;
+
+// camera
+export let camYaw = 0, camPitch = 0.32, camDist = 4.2;
+let dragging = false, dragBtn = 0;
+export const mouse = new THREE.Vector2();
+export let firstPerson = false;
+export let photoMode = false;
+
+const MOVE_KEYS = {
+  fwd: ['KeyW', 'ArrowUp'], back: ['KeyS', 'ArrowDown'],
+  left: ['KeyA', 'ArrowLeft'], right: ['KeyD', 'ArrowRight'],
+};
+const held = (list) => list.some((k) => keys.has(k));
+
+// A hook the build module sets while a ghost or a drag owns the pointer, so
+// the controller doesn't also spin the camera.
+let pointerClaimed = () => false;
+export function setPointerClaim(fn) { pointerClaimed = fn; }
+
+// ---------------------------------------------------------------- keyboard
+
+const typing = () => document.activeElement?.tagName === 'INPUT'
+  || document.activeElement?.tagName === 'TEXTAREA';
+
+addEventListener('keydown', (e) => {
+  if (typing() || isOverlayOpen()) return;
+  if (e.key === 'Enter') { chat.open(); e.preventDefault(); return; }
+  if (e.code === 'Space') e.preventDefault();      // space scrolls the page otherwise
+  keys.add(e.code);
+  bus.emit('key', e);
+});
+addEventListener('keyup', (e) => keys.delete(e.code));
+// A held key with the window unfocused stays "down" forever — clear on blur.
+addEventListener('blur', () => keys.clear());
+
+bus.on('key', (e) => {
+  if (e.code === 'KeyX') toggleSit();
+  if (e.code === 'KeyZ') { posture = posture === 'lie' ? null : 'lie'; myState.seat = null; }
+});
+
+function toggleSit() {
+  if (posture === 'sit') { posture = null; myState.seat = null; return; }
+  // Layer-0: if there's a real seat pan within reach, sit ON it. The geometry
+  // is the affordance — a scanned stool is sittable the moment it arrives.
+  const seat = findSeat(myState.pos);
+  if (seat) {
+    myState.pos.set(seat.x, seat.y, seat.z);
+    myState.yaw = seat.yaw;
+    myState.seat = { id: seat.id, chair: true };
+    grounded = true; vy = 0;
+    flashHint('seated — <kbd>X</kbd> to stand');
+  } else {
+    myState.seat = null;
+  }
+  posture = 'sit';
+}
+
+// ---------------------------------------------------------------- mouse
+// Everything here is gated on the event actually being on the canvas. It used
+// to be bound to the window with no target check, so dragging a sky slider
+// spun the camera and scrolling the palette dollied it.
+
+canvas.addEventListener('mousedown', (e) => {
+  if (pointerClaimed()) return;
+  // In edit mode a left-drag belongs to the object under it; look with the
+  // right button (or leave edit mode). Outside it, either button looks.
+  if (e.button === 2 || (e.button === 0 && !editingNow())) { dragging = true; dragBtn = e.button; }
+});
+// set by build.js so the controller doesn't have to import it (build imports us)
+let editingNow = () => false;
+export function setEditingProbe(fn) { editingNow = fn; }
+addEventListener('mouseup', () => { dragging = false; });
+addEventListener('mousemove', (e) => {
+  if (dragging) {
+    camYaw -= e.movementX * 0.005;
+    camPitch = THREE.MathUtils.clamp(camPitch + e.movementY * 0.004, -0.9, 1.2);
+  }
+  mouse.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
+});
+canvas.addEventListener('contextmenu', (e) => e.preventDefault()); // right-drag orbit
+canvas.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  camDist = THREE.MathUtils.clamp(camDist + e.deltaY * 0.004, 0.0, 16);
+  const wasFP = firstPerson;
+  firstPerson = camDist < 0.6;
+  if (firstPerson !== wasFP) flashHint(firstPerson ? 'first person' : 'third person');
+}, { passive: false });
+
+// ---------------------------------------------------------------- touch
+// No touch support at all meant a spectator on a phone got nothing. A left
+// thumbstick plus look-drag on the rest of the screen is the minimum that
+// makes a body usable.
+
+const touchState = { moveX: 0, moveZ: 0, lookId: null, lastX: 0, lastY: 0 };
+export function enableTouch() {
+  document.body.classList.add('touch');
+  const stick = document.getElementById('stick');
+  const nub = stick.querySelector('.nub');
+  let stickId = null, cx = 0, cy = 0;
+  const R = 46;
+  stick.addEventListener('pointerdown', (e) => {
+    stickId = e.pointerId;
+    const r = stick.getBoundingClientRect();
+    cx = r.left + r.width / 2; cy = r.top + r.height / 2;
+    stick.setPointerCapture(e.pointerId);
+  });
+  stick.addEventListener('pointermove', (e) => {
+    if (e.pointerId !== stickId) return;
+    let dx = e.clientX - cx, dy = e.clientY - cy;
+    const d = Math.hypot(dx, dy);
+    if (d > R) { dx *= R / d; dy *= R / d; }
+    nub.style.transform = `translate(${dx}px, ${dy}px)`;
+    touchState.moveX = dx / R; touchState.moveZ = dy / R;
+  });
+  const end = (e) => {
+    if (e.pointerId !== stickId) return;
+    stickId = null; touchState.moveX = touchState.moveZ = 0;
+    nub.style.transform = '';
+  };
+  stick.addEventListener('pointerup', end);
+  stick.addEventListener('pointercancel', end);
+
+  canvas.addEventListener('pointerdown', (e) => {
+    if (e.pointerType !== 'touch' || touchState.lookId !== null) return;
+    touchState.lookId = e.pointerId;
+    touchState.lastX = e.clientX; touchState.lastY = e.clientY;
+  });
+  canvas.addEventListener('pointermove', (e) => {
+    if (e.pointerId !== touchState.lookId) return;
+    camYaw -= (e.clientX - touchState.lastX) * 0.006;
+    camPitch = THREE.MathUtils.clamp(camPitch + (e.clientY - touchState.lastY) * 0.005, -0.9, 1.2);
+    touchState.lastX = e.clientX; touchState.lastY = e.clientY;
+  });
+  const lookEnd = (e) => { if (e.pointerId === touchState.lookId) touchState.lookId = null; };
+  canvas.addEventListener('pointerup', lookEnd);
+  canvas.addEventListener('pointercancel', lookEnd);
+
+  const btns = document.getElementById('touchbtns');
+  for (const [label, code] of [['⤒', 'Space'], ['💬', 'chat']]) {
+    const b = document.createElement('button');
+    b.className = 'panel';
+    b.textContent = label;
+    if (code === 'chat') b.onclick = () => chat.open();
+    else {
+      b.addEventListener('pointerdown', () => keys.add(code));
+      b.addEventListener('pointerup', () => keys.delete(code));
+    }
+    btns.appendChild(b);
+  }
+}
+if (matchMedia('(pointer: coarse)').matches) enableTouch();
+
+// ---------------------------------------------------------------- movement
+
+const _dir = new THREE.Vector3();
+const _eye = new THREE.Vector3();
+const _facing = new THREE.Vector3();
+const _ray = new THREE.Raycaster();
+const UP = new THREE.Vector3(0, 1, 0);
+
+export function updateMe(dt, me) {
+  if (!me) return;
+  if (photoMode) { updatePhotoCamera(dt); return; }
+
+  let fwd = Number(held(MOVE_KEYS.fwd)) - Number(held(MOVE_KEYS.back));
+  let strafe = Number(held(MOVE_KEYS.right)) - Number(held(MOVE_KEYS.left));
+  if (touchState.moveX || touchState.moveZ) { strafe = touchState.moveX; fwd = -touchState.moveZ; }
+
+  const moving = Math.abs(fwd) > 0.08 || Math.abs(strafe) > 0.08;
+  const running = keys.has('ShiftLeft') || keys.has('ShiftRight');
+  // A slow walk for precise positioning — placing a chair exactly where you
+  // want it at 1.55 m/s is a fight.
+  const creeping = keys.has('AltLeft') || keys.has('AltRight');
+  const mag = Math.min(1, Math.hypot(fwd, strafe));
+  const target = moving ? (creeping ? 0.55 : running ? 4.0 : 1.55) * mag : 0;
+  myState.speed = THREE.MathUtils.lerp(myState.speed, target, 1 - Math.exp(-10 * dt));
+  if (myState.speed < 0.02) myState.speed = 0;
+
+  if (moving) {
+    _dir.set(strafe, 0, -fwd).normalize().applyAxisAngle(UP, camYaw);
+    const targetYaw = Math.atan2(_dir.x, _dir.z);
+    myState.yaw += angleDelta(myState.yaw, targetYaw) * Math.min(1, 12 * dt);
+    myState.pos.addScaledVector(_dir, myState.speed * dt);
+    const R = 78; // stay on the island
+    const r = Math.hypot(myState.pos.x, myState.pos.z);
+    if (r > R) { myState.pos.x *= R / r; myState.pos.z *= R / r; }
+  }
+
+  // ---- vertical
+  const ground = resolveColliders(myState.pos, heightAt);
+  const blockedTop = lastBlockedTop();
+  if (mantle) {
+    mantle.t += dt / 0.55;
+    const k = Math.min(1, mantle.t), e = k * k * (3 - 2 * k);
+    myState.pos.lerpVectors(mantle.from, mantle.to, e);
+    if (k >= 1) { mantle = null; grounded = true; vy = 0; }
+  } else {
+    if (grounded && keys.has('Space')) {
+      posture = null; myState.seat = null;
+      const reach = blockedTop !== null ? blockedTop - myState.pos.y : 0;
+      if (blockedTop !== null && reach > 0.3 && reach <= 1.7) {
+        _facing.set(Math.sin(myState.yaw), 0, Math.cos(myState.yaw));
+        const to = myState.pos.clone().addScaledVector(_facing, 0.6);
+        to.y = blockedTop;
+        mantle = { from: myState.pos.clone(), to, t: 0 };
+        grounded = false;
+      } else { vy = 5.6; grounded = false; }
+    }
+    if (!mantle) {
+      if (!grounded || myState.pos.y > ground + 0.02) {
+        grounded = false;
+        vy -= 16 * dt;
+        myState.pos.y += vy * dt;
+        if (myState.pos.y <= ground) { myState.pos.y = ground; vy = 0; grounded = true; }
+      } else { myState.pos.y = ground; vy = 0; grounded = true; }
+    }
+  }
+  airborneFor = grounded || mantle ? 0 : airborneFor + dt;
+  if (myState.speed >= 0.05) { posture = null; myState.seat = null; } // standing up is just walking away
+
+  const seatedClip = myState.seat?.chair ? 'sitchair' : 'sit';
+  myState.clip = mantle ? 'climb'
+    : airborneFor > 0.09 ? 'jump'
+      : myState.speed >= 0.05 ? (myState.speed < 2.6 ? 'walk' : 'run')
+        : posture === 'sit' ? seatedClip
+          : posture === 'lie' ? 'lie'
+            : 'idle';
+
+  me.setClip(myState.clip, myState.speed);
+  me.root.position.copy(myState.pos);
+  me.root.rotation.y = myState.yaw;
+  // your head follows your camera — you could always look up, your body never
+  // showed it
+  myState.pitch = THREE.MathUtils.clamp(camPitch - 0.32, -0.45, 0.55);
+  me.pitch = firstPerson ? 0 : myState.pitch;
+
+  updateFollowCamera(dt, me);
+}
+
+// ---------------------------------------------------------------- camera
+
+export function updateFollowCamera(dt, me) {
+  const headY = 1.45;
+  const focus = _eye.set(myState.pos.x, myState.pos.y + headY, myState.pos.z);
+
+  if (firstPerson) {
+    // Eye slightly forward of the head joint so the face doesn't clip the near
+    // plane, aimed along the orbit angles (which are now the LOOK angles).
+    _facing.set(Math.sin(camYaw), 0, Math.cos(camYaw));
+    camera.position.copy(focus).addScaledVector(_facing, 0.16);
+    _dir.set(
+      -Math.sin(camYaw) * Math.cos(camPitch - 0.32),
+      -Math.sin(camPitch - 0.32),
+      -Math.cos(camYaw) * Math.cos(camPitch - 0.32),
+    ).normalize();
+    camera.lookAt(
+      camera.position.x + _dir.x, camera.position.y + _dir.y, camera.position.z + _dir.z);
+    if (me) me.vrm.scene.visible = false;         // don't render the inside of your own head
+    return;
+  }
+  if (me) me.vrm.scene.visible = true;
+
+  // desired eye, with a shoulder offset so the body doesn't sit dead-centre
+  // over whatever you're aiming at
+  const dirX = Math.sin(camYaw) * Math.cos(camPitch);
+  const dirY = Math.sin(camPitch);
+  const dirZ = Math.cos(camYaw) * Math.cos(camPitch);
+  const shoulder = new THREE.Vector3(Math.cos(camYaw), 0, -Math.sin(camYaw))
+    .multiplyScalar(THREE.MathUtils.clamp(camDist * 0.16, 0, 0.62));
+  const want = new THREE.Vector3(dirX, dirY, dirZ).multiplyScalar(camDist).add(focus).add(shoulder);
+
+  // ---- collision: raycast from the head to the wanted eye and pull in.
+  // Orbiting into a wall or a hillside used to put the camera inside the world.
+  _ray.set(focus, want.clone().sub(focus).normalize());
+  _ray.far = focus.distanceTo(want);
+  const hits = _ray.intersectObjects(collisionTargets(), true);
+  let allowed = _ray.far;
+  for (const h of hits) {
+    if (h.object.userData?.noCamCollide) continue;
+    allowed = Math.min(allowed, h.distance - 0.22);
+    break;
+  }
+  if (allowed < _ray.far) {
+    want.copy(focus).addScaledVector(_ray.ray.direction, Math.max(0.35, allowed));
+  }
+  // never let the eye go under the floor
+  want.y = Math.max(want.y, heightAt(want.x, want.z) + 0.35);
+
+  camera.position.lerp(want, 1 - Math.exp(-(allowed < _ray.far ? 26 : 14) * dt));
+  camera.lookAt(focus.x + shoulder.x * 0.5, focus.y - 0.1, focus.z + shoulder.z * 0.5);
+}
+
+// The set of things the camera should not pass through. Supplied by world.js
+// (it owns the entity registry); default empty so this module stays standalone.
+let collisionTargets = () => [];
+export function setCameraCollisionTargets(fn) { collisionTargets = fn; }
+
+// ---- photo mode -------------------------------------------------------------
+// The pitch is "the video toolkit becomes the camera crew" and there was no
+// screenshot key, no UI hide, no free camera. This is the human-facing version
+// of the retina path that already exists for agents.
+
+const photo = { pos: new THREE.Vector3(), yaw: 0, pitch: 0, fov: 55, speed: 6 };
+export function togglePhotoMode() {
+  photoMode = !photoMode;
+  if (photoMode) {
+    photo.pos.copy(camera.position);
+    photo.yaw = camYaw; photo.pitch = camPitch;
+    photo.fov = camera.fov;
+    flashHint('photo mode — <kbd>WASD</kbd>+<kbd>QE</kbd> fly · <kbd>[</kbd><kbd>]</kbd> lens · <kbd>F1</kbd> hide UI · <kbd>F2</kbd> save · <kbd>P</kbd> exit', 6000);
+  } else {
+    camera.fov = 55; camera.updateProjectionMatrix();
+    document.body.classList.remove('photo');
+  }
+  return photoMode;
+}
+function updatePhotoCamera(dt) {
+  if (dragging) { /* handled by the shared mousemove */ }
+  photo.yaw = camYaw; photo.pitch = camPitch;
+  const f = new THREE.Vector3(
+    -Math.sin(camYaw) * Math.cos(camPitch), -Math.sin(camPitch), -Math.cos(camYaw) * Math.cos(camPitch));
+  const right = new THREE.Vector3().crossVectors(f, UP).normalize();
+  const boost = (keys.has('ShiftLeft') ? 3.5 : 1) * (keys.has('AltLeft') ? 0.25 : 1);
+  const v = photo.speed * boost * dt;
+  if (held(MOVE_KEYS.fwd)) photo.pos.addScaledVector(f, v);
+  if (held(MOVE_KEYS.back)) photo.pos.addScaledVector(f, -v);
+  if (held(MOVE_KEYS.right)) photo.pos.addScaledVector(right, v);
+  if (held(MOVE_KEYS.left)) photo.pos.addScaledVector(right, -v);
+  if (keys.has('KeyE')) photo.pos.y += v;
+  if (keys.has('KeyQ')) photo.pos.y -= v;
+  if (keys.has('BracketLeft')) { camera.fov = Math.max(12, camera.fov - 30 * dt); camera.updateProjectionMatrix(); }
+  if (keys.has('BracketRight')) { camera.fov = Math.min(95, camera.fov + 30 * dt); camera.updateProjectionMatrix(); }
+  camera.position.copy(photo.pos);
+  camera.lookAt(photo.pos.clone().add(f));
+}
+
+/** Spectator/retina camera: first person from a followed body's head. */
+export function updateSpectator(dt, remote) {
+  if (!remote?.avatar) return;
+  const root = remote.avatar.root;
+  _facing.set(Math.sin(root.rotation.y), 0, Math.cos(root.rotation.y));
+  const eye = root.position.clone().add(new THREE.Vector3(0, 1.52, 0)).addScaledVector(_facing, 0.32);
+  camera.position.lerp(eye, 1 - Math.exp(-20 * dt));
+  camera.lookAt(eye.clone().addScaledVector(_facing, 8).add(new THREE.Vector3(0, -0.6, 0)));
+}
+
+export function setCamYaw(v) { camYaw = v; }
+export function setPosture(p) { posture = p; }
+export const getPosture = () => posture;

@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+**/node_modules/
+
+# secrets & live tokens — NEVER commit
+mcpl/tokens.json
+mcpl/state.json
+tools/voicebot/voices.json
+.env
+.env.*
+deploy/IDENTITY.md
+
+# runtime world data (logs are chat history; poses/snapshots are live state)
+worlds/
+worlds-dev/
+
+# the asset library is fetched at runtime (EIDOVERSE_DIR), not vendored
+assets/
+*.glb
+*.vrm
+*.hdr
+
+# generated
+assets/opt/thumbs/
+*.zip
