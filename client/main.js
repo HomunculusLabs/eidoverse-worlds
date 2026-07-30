@@ -35,6 +35,7 @@ import { makeFrame } from './lib/frames.js';
 import { Ragdoll } from './lib/ragdoll.js';
 import { shedALight, litCount } from './lib/lights.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
+import { startPrefetch } from './lib/prefetch.js';
 
 // ---------------------------------------------------------------- identity
 
@@ -563,6 +564,11 @@ function paintHud() {
 }
 
 requestAnimationFrame(frame);
+
+// Idle bandwidth streams the rest of the library into the HTTP cache — fire
+// and forget; it waits out the boot and yields to every real load on its own
+// (stats live at __ewPrefetch, opt out with ?prefetch=0).
+startPrefetch().catch((e) => report('prefetch', e));
 
 // ---------------------------------------------------------------- debug
 

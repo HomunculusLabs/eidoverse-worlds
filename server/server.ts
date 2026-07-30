@@ -806,7 +806,11 @@ const server = Bun.serve({
           else out.push({ path: childRel, size: Bun.file(join(abs, e.name)).size });
         }
       };
-      for (const base of [LIBRARY_DIR, OPT_DIR]) walk(base, rel, 0);
+      // opt first: /library/ serving prefers the optimized mirror, so the
+      // listed size must describe the file a client will actually receive —
+      // the prefetcher sorts and budgets by these numbers, and the raw-library
+      // size of a draco+webp'd model is off by ~30x.
+      for (const base of [OPT_DIR, LIBRARY_DIR]) walk(base, rel, 0);
       // opt mirror shadows the library at the same path — dedupe, first wins
       const seen = new Set<string>();
       const uniq = out.filter((f) => !seen.has(f.path) && seen.add(f.path));

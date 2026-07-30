@@ -39,6 +39,19 @@ export function loadProgress(key, done, total) {
 }
 export function loadDone(key) { loads.delete(key); announce(); }
 
+// ---- demand activity ----------------------------------------------------------
+// The background prefetcher (prefetch.js) streams the library into the HTTP
+// cache during idle time, and it must never cost a real load a millisecond.
+// Every demand fetch marks itself here: the 'demand' event aborts prefetch's
+// in-flight stream immediately, and demandState() keeps it parked until the
+// network has been quiet for a while.
+
+let demandActive = 0;
+let lastDemandAt = 0;
+export const demandState = () => ({ active: demandActive, last: lastDemandAt });
+function demandStart() { demandActive++; lastDemandAt = performance.now(); bus.emit('demand'); }
+function demandEnd() { demandActive = Math.max(0, demandActive - 1); lastDemandAt = performance.now(); }
+
 // ---- raw bytes --------------------------------------------------------------
 
 const byteCache = new Map();
@@ -50,6 +63,7 @@ export async function fetchBytes(path) {
   if (!byteCache.has(path)) {
     byteCache.set(path, (async () => {
       loadTrack(path, path.split('/').pop().split('?')[0]);
+      demandStart();
       try {
         const r = await fetch(path);
         if (!r.ok) { byteCache.delete(path); throw new Error(`fetch ${path}: ${r.status}`); }
@@ -63,6 +77,7 @@ export async function fetchBytes(path) {
             if (done) break;
             chunks.push(value);
             got += value.length;
+            lastDemandAt = performance.now(); // long downloads keep prefetch parked
             loadProgress(path, got, total);
           }
           const buf = new Uint8Array(got);
@@ -71,7 +86,7 @@ export async function fetchBytes(path) {
           return buf.buffer;
         }
         return await r.arrayBuffer();
-      } finally { loadDone(path); }
+      } finally { loadDone(path); demandEnd(); }
     })());
   }
   return byteCache.get(path);
