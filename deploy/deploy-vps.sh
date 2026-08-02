@@ -17,11 +17,13 @@ git reset --hard origin/main
 after=$(git rev-parse --short HEAD)
 echo "code: $before -> $after"
 
-# deps only when the lockfiles moved
-if ! git diff --quiet "$before" "$after" -- client/package-lock.json 2>/dev/null; then
+# deps only when the manifests/lockfiles moved (bun migrated package-lock.json
+# to bun.lock — watching only the old name once shipped a client that imported
+# a module the VPS had never installed, and boot hung at "waking the engine")
+if ! git diff --quiet "$before" "$after" -- client/package.json client/bun.lock client/package-lock.json 2>/dev/null; then
   (cd client && "$BUN" install)
 fi
-if ! git diff --quiet "$before" "$after" -- mcpl/package.json mcpl/package-lock.json 2>/dev/null; then
+if ! git diff --quiet "$before" "$after" -- mcpl/package.json mcpl/bun.lock mcpl/package-lock.json 2>/dev/null; then
   (cd mcpl && "$BUN" install)
 fi
 
