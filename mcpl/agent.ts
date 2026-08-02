@@ -15,7 +15,10 @@ const WALK = 1.55, RUN = 4.0, TICK_MS = 100, ARRIVE = 0.4;
 
 type Vec2 = { x: number; z: number };
 type Pose = { p: number[]; yaw: number; speed: number; clip: string };
-type Entity = { id: string; lib: string; pos: number[]; yaw: number; actor: string };
+type Entity = { id: string; lib: string; pos: number[]; yaw: number; actor: string;
+  /** component bag (sockets, reactions, motion, …) — what a thing can DO;
+   *  this is how affordances reach text-tier perception */
+  comp?: Record<string, any> };
 type Person = { id: string; avatar: string; pose: Pose | null };
 type InboxItem = { ts: number; kind: "say" | "arrive" | "leave" | "act"; who: string; text?: string; seq?: number | null };
 
@@ -73,6 +76,8 @@ export class WorldAgent {
   heldPose: Record<string, number[]> | null = null;
   private walkDone: ((arrived: boolean) => void) | null = null;
   entities = new Map<string, Entity>();
+  /** who/what rides what: mount verbs, keyed by the rider (body or thing) */
+  mounts = new Map<string, { to: string; slot?: string }>();
   people = new Map<string, Person>();
   inbox: InboxItem[] = [];
   private inboxCursor = 0;
@@ -432,6 +437,25 @@ export class WorldAgent {
     } else if (verb === "remove") {
       if (live) this.noteBuild(actor, this.entities.get(args.id)?.pos);
       this.entities.delete(args.id);
+      for (const [rid, m] of this.mounts) if (m.to === args.id) this.mounts.delete(rid);
+    } else if (verb === "comp") {
+      // affordances are components — track them or look() can't tell anyone
+      const e = this.entities.get(args.id);
+      if (e && typeof args.type === "string") {
+        e.comp ??= {};
+        if (args.data == null) delete e.comp[args.type]; else e.comp[args.type] = args.data;
+      }
+    } else if (verb === "motion") {
+      const e = this.entities.get(args.id);
+      if (e) {
+        e.comp ??= {};
+        const { id: _id, ...m } = args;
+        if (m.type == null) delete e.comp.motion; else e.comp.motion = m;
+      }
+    } else if (verb === "mount") {
+      this.mounts.set(args.id, { to: args.to, slot: args.slot });
+    } else if (verb === "dismount") {
+      this.mounts.delete(args.id);
     } else if (verb === "say") {
       // history lands in the inbox ONCE, so a freshly-joined agent has
       // context — and a reconnect's replayed tail is deduped by seq instead
@@ -736,7 +760,9 @@ export class WorldAgent {
       const doing = { idle: "standing", walk: "walking", run: "running", sit: "sitting", sitchair: "sitting on a chair", lie: "lying down" }[p.pose.clip] ?? p.pose.clip;
       const held = (p.pose as { pose?: Record<string, unknown> | null }).pose;
       const posed = held ? `, holding a pose (${Object.keys(held).length} bones)` : "";
-      L.push(`  - ${p.id}: ${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} at (${x.toFixed(1)}, ${z.toFixed(1)}), ${doing}${posed}`);
+      const ride = this.mounts.get(p.id);
+      const riding = ride ? ` — on ${ride.to}${ride.slot ? ` (${ride.slot})` : ""}` : "";
+      L.push(`  - ${p.id}: ${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} at (${x.toFixed(1)}, ${z.toFixed(1)}), ${doing}${posed}${riding}`);
     }
 
     const ents = [...this.entities.values()];
@@ -747,7 +773,25 @@ export class WorldAgent {
     })) {
       const dx = e.pos[0] - me.x, dz = e.pos[2] - me.z;
       const short = (e.lib ?? "(light)").split("/").pop()!.replace(".glb", "").split("_").slice(0, 5).join(" ");
-      L.push(`  - [${e.id}] ${short}: ${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} at (${e.pos[0].toFixed(1)}, ${e.pos[1].toFixed(1)}, ${e.pos[2].toFixed(1)})${e.pos[1] > 0.05 ? " (elevated)" : ""}`);
+      // Affordances read out loud: a thing that can be sat on, used, or is
+      // moving SAYS SO in text-tier perception — this is how the capability
+      // a builder declared (sockets/reactions components) reaches everyone
+      // who perceives by reading.
+      const c = e.comp ?? {};
+      const aff: string[] = [];
+      if (c.sockets) aff.push(`sit/mount: ${Object.keys(c.sockets).join(", ")}`);
+      if (c.reactions) aff.push(`reacts to: ${Object.keys(c.reactions).join(", ")}`);
+      if (c.motion?.type) aff.push(`in motion (${c.motion.type})`);
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion"].includes(k));
+      if (extra.length) aff.push(`components: ${extra.join(", ")}`);
+      const ride = this.mounts.get(e.id);
+      if (ride) aff.push(`mounted on ${ride.to}`);
+      const riders = [...this.mounts.entries()].filter(([, m]) => m.to === e.id).map(([rid, m]) => `${rid}${m.slot ? ` (${m.slot})` : ""}`);
+      if (riders.length) aff.push(`carrying: ${riders.join(", ")}`);
+      L.push(`  - [${e.id}] ${short}: ${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} at (${e.pos[0].toFixed(1)}, ${e.pos[1].toFixed(1)}, ${e.pos[2].toFixed(1)})${e.pos[1] > 0.05 ? " (elevated)" : ""}${aff.length ? ` — ${aff.join(" · ")}` : ""}`);
+    }
+    if (ents.some((e) => e.comp?.sockets || e.comp?.reactions)) {
+      L.push(`  (interact via world_verb: use {id, action} · sit/ride via mount {id: "${this.name}", to, slot} — both open to everyone; dismount {id: "${this.name}"} to get off)`);
     }
 
     const unread = this.inbox.slice(this.inboxCursor);
