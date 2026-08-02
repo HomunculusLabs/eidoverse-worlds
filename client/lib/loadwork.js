@@ -153,6 +153,28 @@ export function serialize(fn, { urgent = false, lane = 'cpu', priority } = {}) {
   return enqueue(fn, { lane, priority: priority ?? (urgent ? 2 : 0) });
 }
 
+// ---- frame holds ------------------------------------------------------------
+// Some scene changes invalidate EVERY compiled pipeline at once (the sky
+// setting scene.environment, weather wrapping materials). The next render()
+// then rebuilds them synchronously — the post-splash "long freezes". There is
+// no way to render the old state while the new one compiles, so the honest
+// option is chosen deliberately: hold presentation for one bounded moment,
+// run compileAsync over the whole scene (its slices yield, input stays live),
+// and resume with everything warm. One held beat instead of ten stuttered
+// seconds. The frame LOOP keeps running — simulation, poses, chat all tick;
+// only renderer.render is skipped while held.
+
+let holding = 0;
+let holdDeadline = 0;
+export const framesHeld = () => holding > 0 && performance.now() < holdDeadline;
+export async function holdFrames(promise, maxMs = 4000) {
+  holding++;
+  holdDeadline = Math.max(holdDeadline, performance.now() + maxMs);
+  try {
+    await Promise.race([promise, new Promise((r) => setTimeout(r, maxMs))]);
+  } finally { holding--; }
+}
+
 // ---- long-task attribution --------------------------------------------------
 // The browser already measures every main-thread stall over 50ms; all that was
 // missing is knowing WHOSE stall it was. Anything unattributed logs as such —

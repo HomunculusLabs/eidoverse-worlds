@@ -17,6 +17,7 @@ import { THREE, scene, sun, hemi, renderer, camera, report, bus } from './core.j
 import { loadEidoModule, primeFiles, listLibrary, fetchBytes } from './assets.js';
 import { markPhase, whenBooted } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake } from './sky_baked.js';
+import { holdFrames } from './loadwork.js';
 
 // ---------------------------------------------------------------- state
 
@@ -188,7 +189,20 @@ async function renderOnce() {
 
   while (degrade < 2 && skyBuilds < MAX_SKY_BUILDS) {
     try {
+      const buildsBefore = skyBuilds;
       await renderEidoverse(a);
+      // A FRESH sky build is the single most disruptive moment a running
+      // client has: weather wraps rewrite materials and the env bake flips
+      // scene.environment from null, which together invalidate every compiled
+      // pipeline in the scene — the next render() then rebuilds them all
+      // SYNCHRONOUSLY (the post-splash "unresponsive for ten seconds with
+      // long freezes", 08-02). Nothing can render the old state while the new
+      // one compiles, so: hold presentation for one bounded beat, settle the
+      // whole scene through compileAsync (slices yield, input stays live),
+      // resume warm. Rebakes and slider previews don't build → don't hold.
+      if (skyBuilds !== buildsBefore) {
+        await holdFrames(renderer.compileAsync(scene, camera).catch(() => {}), 4000);
+      }
       return;
     } catch (e) {
       const why = e?.message ?? String(e);

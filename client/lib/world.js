@@ -5,7 +5,7 @@
 // exactly the same path, which is what makes late joiners see what everyone
 // else sees.
 
-import { THREE, scene, report, bus } from './core.js';
+import { THREE, scene, camera, renderer, report, bus } from './core.js';
 import { loadGLB, loadEidoModule, noiseTexture, loadTrack, loadDone, libLabels } from './assets.js';
 import { fitCollider, removeCollider, reindexCollider, refitCollider } from './colliders.js';
 import { setTerrain, setGrass, clearGrass, heightAt } from './terrain.js';
@@ -186,7 +186,12 @@ export async function applyEntry(entry, live, ctx = {}) {
           const layers = (args.layers ?? []).map((l) => ({
             map: noiseTexture(l.color ?? '#4a5d33'), repeat: l.repeat ?? 16,
           }));
-          setTerrain(globalThis.makeTerrain({ ...args, layers }));
+          const t = globalThis.makeTerrain({ ...args, layers });
+          // compile the ground's pipelines BEFORE it enters the scene — an
+          // unprecompiled terrain material otherwise codegens synchronously
+          // inside the first render() that sees it
+          if (t?.mesh) await renderer.compileAsync(t.mesh, camera, scene).catch(() => {});
+          setTerrain(t);
           // re-seat only ground-level entities — anything with a meaningful y
           // (seated on furniture, elevated) keeps its logged height
           for (const [id, obj] of entities) {
@@ -210,7 +215,17 @@ export async function applyEntry(entry, live, ctx = {}) {
           await loadEidoModule('grass.js');
           // setGrass removes any previous field first — changing grass must
           // replace it, not stack a second one on top
-          setGrass(groomGrass(globalThis.makeGrass({ ...args, scene, heightFn: heightAt }), args));
+          const field = groomGrass(globalThis.makeGrass({ ...args, scene, heightFn: heightAt }), args);
+          // makeGrass self-adds its mesh; borrow it back out for a precompile
+          // (compileAsync skips invisible objects, so hiding wouldn't work —
+          // detach, compile against the scene's lighting, re-add warm)
+          if (field?.mesh) {
+            const parent = field.mesh.parent;
+            parent?.remove(field.mesh);
+            await renderer.compileAsync(field.mesh, camera, scene).catch(() => {});
+            (parent ?? scene).add(field.mesh);
+          }
+          setGrass(field);
         });
         break;
       }

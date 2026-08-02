@@ -36,6 +36,7 @@ import { makeFrame } from './lib/frames.js';
 import { Ragdoll } from './lib/ragdoll.js';
 import { shedALight, litCount } from './lib/lights.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
+import { framesHeld } from './lib/loadwork.js';
 import { startPrefetch } from './lib/prefetch.js';
 
 // ---------------------------------------------------------------- identity
@@ -546,7 +547,10 @@ function frame(now) {
   updateBuild();
   sendPose(now);
 
-  renderer.render(scene, camera);
+  // A held frame = a whole-scene pipeline settle is in progress (sky arrival
+  // invalidates everything at once). Presentation pauses for one bounded
+  // beat; everything above still ticked, so the world snaps current on resume.
+  if (!framesHeld()) renderer.render(scene, camera);
 
   frames++;
   if (now - fpsAt > 1000) {
