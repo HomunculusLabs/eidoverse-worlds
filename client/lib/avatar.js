@@ -93,6 +93,37 @@ function makeBubble(text) {
   }, 704, Math.max(64, h), 2.4);
 }
 
+// ---- typing indicator ------------------------------------------------------
+// A small pill of pulsing dots above the head — the universal "composing"
+// signal. Drawn on its own canvas so it can animate; redrawn only while
+// actually typing and at a throttled rate, so a stage full of thinkers costs
+// almost nothing. Gives way to the speech bubble the moment they speak.
+function makeTypingSprite() {
+  const c = document.createElement('canvas');
+  c.width = 128; c.height = 56;
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, transparent: true, depthTest: false }));
+  s.scale.set(0.5, 0.5 * 56 / 128, 1);
+  s.renderOrder = 99;
+  s.userData.ctx = c.getContext('2d');
+  return s;
+}
+function drawTypingDots(sprite, t) {
+  const ctx = sprite.userData.ctx;
+  ctx.clearRect(0, 0, 128, 56);
+  ctx.fillStyle = 'rgba(8,20,28,0.82)';
+  ctx.strokeStyle = 'rgba(143,232,200,0.28)';
+  ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.roundRect(28, 12, 72, 32, 16); ctx.fill(); ctx.stroke();
+  for (let i = 0; i < 3; i++) {
+    const b = 0.32 + 0.68 * Math.max(0, Math.sin(t * 5 - i * 0.85));
+    ctx.fillStyle = `rgba(180,240,216,${b})`;
+    ctx.beginPath(); ctx.arc(48 + i * 16, 28, 5, 0, Math.PI * 2); ctx.fill();
+  }
+  sprite.material.map.needsUpdate = true;
+}
+
 // ---------------------------------------------------------------- Avatar
 
 const _v = new THREE.Vector3();      // scratch — hot paths must not allocate
@@ -121,6 +152,9 @@ export class Avatar {
     this.bubble = null;
     this.bubbleUntil = 0;
     this.speakUntil = 0;           // drives the fake viseme envelope
+    this.typing = null;            // lazily-built dots sprite
+    this._typingUntil = 0;         // typing signals repeat ~2.5s and expire ~4s
+    this._typingDrawAt = 0;
     this.label = makeLabel(id);
     this.label.position.y = 1.95;
     this.root.add(this.label);
@@ -340,7 +374,12 @@ export class Avatar {
   }
 
   // ---- speech
+  /** They're composing. Repeated calls extend it; it expires on its own so a
+   *  dropped "stopped typing" never leaves the dots stuck up forever. */
+  setTyping() { this._typingUntil = performance.now() + 4000; }
+
   say(text) {
+    this._typingUntil = 0;         // speaking ends composing; the bubble takes over
     if (this.bubble) { this.root.remove(this.bubble); disposeSprite(this.bubble); }
     this.bubble = makeBubble(text);
     this.bubble.position.y = 2.3;
@@ -427,12 +466,24 @@ export class Avatar {
         this.bubble.material.opacity = THREE.MathUtils.clamp(1 - (d - 26) / 12, 0, 1);
       }
     }
+
+    // ---- typing dots: shown only while composing and not already speaking
+    const typingNow = now < this._typingUntil && !this.bubble;
+    if (typingNow && !this.typing) { this.typing = makeTypingSprite(); this.typing.position.y = 2.12; this.root.add(this.typing); }
+    if (this.typing) {
+      this.typing.visible = typingNow;
+      if (typingNow) {
+        if (now - this._typingDrawAt > 110) { this._typingDrawAt = now; drawTypingDots(this.typing, now / 1000); }
+        this.typing.material.opacity = THREE.MathUtils.clamp(1 - (d - 26) / 12, 0, 1);
+      }
+    }
   }
 
   dispose() {
     scene.remove(this.root);
     scene.remove(this.gaze);
     if (this.bubble) disposeSprite(this.bubble);
+    if (this.typing) disposeSprite(this.typing);
     disposeSprite(this.label);
     this.mixer.stopAllAction();
     VRMUtils.deepDispose?.(this.vrm.scene);

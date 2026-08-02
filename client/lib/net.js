@@ -337,7 +337,10 @@ async function handle(msg) {
       break;
 
     case 'typing':
-      if (msg.id !== net.myId) noteTyping(msg.id);
+      if (msg.id !== net.myId) {
+        noteTyping(msg.id);                       // chat window "X is typing…"
+        remotes.get(msg.id)?.avatar?.setTyping(); // and the dots above their head
+      }
       break;
 
     case 'anim': {

@@ -99,7 +99,7 @@ buildHelp();
 initChat({
   send: (text) => sendVerb('say', { text }),
   whisper: sendWhisper,
-  typing: sendTyping,
+  typing: (to) => { sendTyping(to); me?.setTyping(); },
   people,
 });
 initRoster(people);

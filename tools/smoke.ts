@@ -484,6 +484,15 @@ try {
     check("an oversized animation is refused",
       poser.of("error").some((m) => /too large/.test(String(m.error))));
 
+    // a typing signal relays to others (the "composing" indicator), never to
+    // the sender, and never touches history
+    poser.send({ type: "typing", to: null });
+    await sleep(250);
+    check("a typing signal reaches other clients",
+      watcher.of("typing").some((m) => m.id === "poser"));
+    check("a typing signal is not echoed to the sender",
+      poser.of("typing").every((m) => m.id !== "poser"));
+
     // none of it is history
     const pl = (() => { const fp = join(worldsDir, pw, "log.jsonl");
       return existsSync(fp) ? readFileSync(fp, "utf8").split("\n").filter(Boolean) : []; })();
