@@ -7,6 +7,7 @@ import {
   loadVRM, clipFor, vrmaBytes, loadTrack, loadDone,
   CLIP_SLOTS, CLIP_SPEED, VRMUtils,
 } from './assets.js';
+import { beginWork, serialize, idleYield } from './loadwork.js';
 
 // The clip library is ~1.9MB PER SLOT. Waiting for all seven before a body
 // could exist put 13MB between a person and their own legs — the single
@@ -202,24 +203,25 @@ export class Avatar {
     this.currentSlot = slot;
   }
 
-  /** Fill in the clips that weren't needed to stand up. Safe to call twice. */
+  /** Fill in the clips that weren't needed to stand up. Safe to call twice.
+   *  One at a time, in idle moments — hydration used to fire seven VRMA
+   *  parses in a Promise.all burst right behind the avatar landing, which put
+   *  a second stall directly after the first. (The parses are also now cached
+   *  globally, so only the first body ever pays them at all.) */
   async hydrateClips() {
     if (this._hydrating) return this._hydrating;
     this._hydrating = (async () => {
-      await Promise.all(LATER_CLIPS.map(async (slot) => {
+      for (const [slot, name] of [...LATER_CLIPS.map((s) => [s, s]), ['sitchair', SEAT_CLIPS.chair]]) {
+        await idleYield();
         try {
-          const clip = await clipFor(this.vrm, slot);
+          const clip = await clipFor(this.vrm, name);
           const a = this.mixer.clipAction(clip);
           a.enabled = true; a.setEffectiveWeight(0); a.play();
           this.actions[slot] = a;
-        } catch (e) { console.warn(`clip ${slot} unavailable`, e); }
-      }));
-      try {
-        const chair = await clipFor(this.vrm, SEAT_CLIPS.chair);
-        const a = this.mixer.clipAction(chair);
-        a.enabled = true; a.setEffectiveWeight(0); a.play();
-        this.actions.sitchair = a;
-      } catch { /* optional */ }
+        } catch (e) {
+          if (slot !== 'sitchair') console.warn(`clip ${slot} unavailable`, e);
+        }
+      }
     })();
     return this._hydrating;
   }
@@ -518,23 +520,31 @@ function makeBlobShadow() {
 
 // ---------------------------------------------------------------- factory
 
-export async function makeAvatar(id, libPath, { full = false } = {}) {
+export async function makeAvatar(id, libPath, { full = false, urgent = false } = {}) {
   loadTrack(`avatar:${id}`, `${id} materializing`);
+  const work = beginWork(`avatar ${id}`);
   try {
     const slots = full ? CLIP_SLOTS : CORE_CLIPS;
-    // VRM + the clip bytes we actually need download in PARALLEL.
-    const [vrm] = await Promise.all([loadVRM(libPath), ...slots.map(vrmaBytes)]);
+    work.phase('body');
+    // VRM + the clip bytes we actually need download in PARALLEL. `urgent` is
+    // for YOUR body: it jumps the load queue instead of waiting behind every
+    // world object that happened to be materializing when you arrived.
+    const [vrm] = await Promise.all([loadVRM(libPath, { urgent }), ...slots.map(vrmaBytes)]);
+    work.phase('clips');
     const clips = {};
-    await Promise.all(slots.map(async (slot) => {
-      try { clips[slot] = await clipFor(vrm, slot); } catch (e) { report(`clip ${slot}`, e); }
-    }));
-    await renderer.compileAsync(vrm.scene, camera, scene).catch(() => {}); // no first-frame stall
+    for (const slot of slots) { // sequential: each may be a VRMA parse (once ever, cached)
+      try { clips[slot] = await clipFor(vrm, slot, { urgent }); } catch (e) { report(`clip ${slot}`, e); }
+    }
+    work.phase('compile');
+    // Serialized like every heavy leaf: no first-frame stall, and no stacking
+    // with another body's parse either.
+    await serialize(() => renderer.compileAsync(vrm.scene, camera, scene).catch(() => {}), { urgent });
     const av = new Avatar(id, vrm, clips);
     // The rest arrives behind you. Remote bodies hydrate too — someone else
     // breaking into a run should not be stuck walking on your screen.
     if (!full) av.hydrateClips();
     return av;
-  } finally { loadDone(`avatar:${id}`); }
+  } finally { loadDone(`avatar:${id}`); work.end(); }
 }
 
 // ---------------------------------------------------------------- thumbnails
@@ -560,6 +570,32 @@ export async function contributeThumbnail(name, vrm, token = '', { force = false
     const key = new THREE.DirectionalLight(0xffffff, 2.6);
     key.position.set(1.4, 2.2, 2.4);
     sub.add(key);
+
+    // Precompile the portrait's pipelines BEFORE borrowing the body. This
+    // render target + these lights are a brand-new pipeline context (different
+    // lightsNode, different color format and sample count than the canvas), so
+    // the synchronous render below used to codegen+compile every MToon
+    // material variant INSIDE render() — a seconds-long main-thread stall on
+    // heavy bodies, timed exactly when an avatar had just finished loading.
+    // compileAsync captures its render context synchronously before its first
+    // internal yield, so the target can be restored immediately and the main
+    // loop keeps rendering the world while the variants build. The body stays
+    // in the main scene throughout — compileAsync takes the object tree and
+    // pulls lights from the target scene, no reparenting needed.
+    {
+      const work = beginWork(`thumb ${name}`);
+      try {
+        work.phase('queued');
+        await serialize(() => {
+          work.phase('compile');
+          const prev = renderer.getRenderTarget();
+          renderer.setRenderTarget(rt);
+          const compiled = renderer.compileAsync(vrm.scene, cam, sub);
+          renderer.setRenderTarget(prev);
+          return compiled.catch(() => {});
+        });
+      } finally { work.end(); }
+    }
 
     // Deep-cloning a VRM is not safe — the MToon node materials and the
     // spring-bone/lookAt proxies carry references that don't survive

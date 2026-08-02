@@ -159,7 +159,7 @@ function start() {
   setHint('<kbd>WASD</kbd> move · <kbd>Enter</kbd> chat · <kbd>B</kbd> build · <kbd>?</kbd> help');
 
   if (!isViewer) {
-    makeAvatar(CONFIG.name, myAvatarPath)
+    makeAvatar(CONFIG.name, myAvatarPath, { urgent: true }) // your body skips the load queue
       .then((av) => {
         me = av;
         markPhase('body', 1);
@@ -199,7 +199,7 @@ wireAvatarSwitch(async (path, name) => {
   if (path === myAvatarPath) return;
   toast(`changing into ${name}…`, 'info', 3000);
   try {
-    const next = await makeAvatar(CONFIG.name, path); // build before shedding the old
+    const next = await makeAvatar(CONFIG.name, path, { urgent: true }); // build before shedding the old
     me?.dispose();
     me = next;
     myAvatarPath = path;
@@ -221,7 +221,7 @@ bus.on('avatar-updated', ({ path, name, fresh }) => {
   if (myAvatarPath.split('?')[0] === path) {
     toast(`your body "${name}" was updated — refreshing`, 'info');
     myAvatarPath = fresh;
-    makeAvatar(CONFIG.name, fresh).then((av) => { me?.dispose(); me = av; }).catch((e) => report('reload avatar', e));
+    makeAvatar(CONFIG.name, fresh, { urgent: true }).then((av) => { me?.dispose(); me = av; }).catch((e) => report('reload avatar', e));
   }
 });
 

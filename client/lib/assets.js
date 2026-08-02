@@ -14,6 +14,7 @@ import { MToonMaterialLoaderPlugin } from '@pixiv/three-vrm-materials-mtoon';
 import { MToonNodeMaterial } from '@pixiv/three-vrm-materials-mtoon/nodes';
 import { VRMAnimationLoaderPlugin, createVRMAnimationClip } from '@pixiv/three-vrm-animation';
 import { clone as skeletonClone } from 'three/addons/utils/SkeletonUtils.js';
+import { beginWork, serialize } from './loadwork.js';
 
 // ---- loading tray -----------------------------------------------------------
 // Every in-flight asset (downloads with byte progress, builds as spinners) is
@@ -106,13 +107,53 @@ function makeLoader(vrm = false) {
   return l;
 }
 
-export async function loadVRM(libPath) {
-  const buf = await fetchBytes(`/library/${libPath}`);
-  const gltf = await new Promise((res, rej) => makeLoader(true).parse(buf, '', res, rej));
-  const vrm = gltf.userData.vrm;
-  VRMUtils.combineSkeletons?.(vrm.scene) ?? VRMUtils.removeUnnecessaryJoints?.(vrm.scene);
-  VRMUtils.rotateVRM0(vrm); // VRM0 → faces +Z
-  return vrm;
+// ---- texture priming --------------------------------------------------------
+// GPU texture creation + upload otherwise happens inside the first compile or
+// render that binds each texture — batched into one frame. Walking the object
+// and uploading a budget-slice per frame moves that cost off the stall.
+function collectTextures(obj) {
+  const seen = new Set();
+  const out = [];
+  obj.traverse((o) => {
+    const mats = Array.isArray(o.material) ? o.material : o.material ? [o.material] : [];
+    for (const m of mats) {
+      for (const v of Object.values(m)) {
+        if (v?.isTexture && !seen.has(v)) { seen.add(v); out.push(v); }
+      }
+    }
+  });
+  return out;
+}
+async function primeTextures(obj, work) {
+  for (const t of collectTextures(obj)) {
+    try { renderer.initTexture(t); } catch { /* first bind will get it */ }
+    await work.tick();
+  }
+}
+
+export async function loadVRM(libPath, { urgent = false } = {}) {
+  const work = beginWork(`vrm ${libPath.split('/').pop()}`);
+  try {
+    work.phase('download');
+    const buf = await fetchBytes(`/library/${libPath}`);
+    work.phase('queued');
+    // The parse and skeleton passes are the irreducibly-synchronous chunk of a
+    // body: serialize so two arrivals can't stack theirs into the same frames,
+    // and yield between passes so each stall is one pass long, not their sum.
+    return await serialize(async () => {
+      work.phase('parse');
+      const gltf = await new Promise((res, rej) => makeLoader(true).parse(buf, '', res, rej));
+      const vrm = gltf.userData.vrm;
+      await work.yield();
+      work.phase('skeleton');
+      VRMUtils.combineSkeletons?.(vrm.scene) ?? VRMUtils.removeUnnecessaryJoints?.(vrm.scene);
+      VRMUtils.rotateVRM0(vrm); // VRM0 → faces +Z
+      await work.yield();
+      work.phase('textures');
+      await primeTextures(vrm.scene, work);
+      return vrm;
+    }, { urgent });
+  } finally { work.end(); }
 }
 
 // Friendly names for library paths — store hashes are unreadable, and the
@@ -121,23 +162,42 @@ export const libLabels = new Map();
 
 const glbCache = new Map();
 export async function loadGLB(libPath) {
+  const short = (libLabels.get(libPath) ?? libPath.split('/').pop()).slice(0, 28);
   if (!glbCache.has(libPath)) {
-    const short = (libLabels.get(libPath) ?? libPath.split('/').pop()).slice(0, 28);
     const key = `glb:${short}`;
     loadTrack(key, short);
     glbCache.set(libPath, (async () => {
+      const work = beginWork(`glb ${short}`);
       try {
+        work.phase('download');
         const buf = await fetchBytes(`/library/${libPath}`);
-        const gltf = await new Promise((res, rej) => makeLoader(false).parse(buf, '', res, rej));
-        return gltf.scene;
-      } finally { loadDone(key); }
+        work.phase('queued');
+        return await serialize(async () => {
+          work.phase('parse');
+          const gltf = await new Promise((res, rej) => makeLoader(false).parse(buf, '', res, rej));
+          await work.yield();
+          work.phase('textures');
+          await primeTextures(gltf.scene, work);
+          return gltf.scene;
+        });
+      } finally { loadDone(key); work.end(); }
     })());
   }
   const proto = await glbCache.get(libPath);
   const obj = skeletonClone(proto); // safe for rigged + static alike
   // Precompile pipelines OFF the render path — otherwise the first frame that
   // sees a new material stalls the main thread (the ~1.5s spawn freeze).
-  await renderer.compileAsync(obj, camera, scene).catch(() => {});
+  // Serialized: the first use of a model pays real codegen, and two spawns
+  // resolving together must not pay it in the same frames. Repeat uses are
+  // pipeline-cache hits and clear the queue in microseconds.
+  const work = beginWork(`compile ${short}`);
+  try {
+    work.phase('queued');
+    await serialize(() => {
+      work.phase('compile');
+      return renderer.compileAsync(obj, camera, scene).catch(() => {});
+    });
+  } finally { work.end(); }
   return obj;
 }
 
@@ -157,14 +217,38 @@ export function vrmaBytes(slot) {
   }
   return vrmaCache.get(slot);
 }
-export async function clipFor(vrm, slot) {
-  const buf = await vrmaBytes(slot);
-  const l = new GLTFLoader();
-  l.register((p) => new VRMAnimationLoaderPlugin(p));
-  const gltf = await new Promise((res, rej) => l.parse(buf.slice(0), '', res, rej));
-  const anim = gltf.userData.vrmAnimations?.[0];
-  if (!anim) throw new Error(`no animation in ${slot}.vrma`);
-  return createVRMAnimationClip(anim, vrm);
+
+// The parsed VRMAnimation is avatar-independent — only createVRMAnimationClip
+// (a cheap retarget against the humanoid rig) needs the vrm. This used to
+// re-parse the whole ~1.9MB VRMA per slot PER AVATAR, so every body arriving
+// re-paid nine GLTF parses the first one had already done.
+const vrmaAnimCache = new Map(); // slot -> Promise<VRMAnimation>
+function vrmaAnimation(slot, urgent = false) {
+  if (!vrmaAnimCache.has(slot)) {
+    const p = (async () => {
+      const buf = await vrmaBytes(slot);
+      const work = beginWork(`vrma ${slot}`);
+      try {
+        work.phase('queued');
+        return await serialize(async () => {
+          work.phase('parse');
+          const l = new GLTFLoader();
+          l.register((pl) => new VRMAnimationLoaderPlugin(pl));
+          const gltf = await new Promise((res, rej) => l.parse(buf.slice(0), '', res, rej));
+          const anim = gltf.userData.vrmAnimations?.[0];
+          if (!anim) throw new Error(`no animation in ${slot}.vrma`);
+          return anim;
+        }, { urgent });
+      } finally { work.end(); }
+    })();
+    p.catch(() => vrmaAnimCache.delete(slot)); // a transient failure must not stick
+    vrmaAnimCache.set(slot, p);
+  }
+  return vrmaAnimCache.get(slot);
+}
+
+export async function clipFor(vrm, slot, { urgent = false } = {}) {
+  return createVRMAnimationClip(await vrmaAnimation(slot, urgent), vrm);
 }
 
 // ---- procedural textures ----------------------------------------------------
