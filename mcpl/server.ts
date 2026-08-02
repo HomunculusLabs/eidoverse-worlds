@@ -117,11 +117,25 @@ server.tool(
 
 // ---- world editing --------------------------------------------------------
 
-const MODELS_DIR = "/Users/antra/connectome-local/eidoverse-video/eidoverse/assets/models";
-function searchLibrary(query: string): string[] {
+// Library search: local EIDOVERSE_DIR when this process sits next to the
+// checkout; otherwise the world's own /library-list endpoint — a remote
+// client (reported by digi/FC: hardcoded Mac path threw for everyone else)
+// shouldn't need a local filesystem mirror of a remote world's assets.
+const MODELS_DIR = process.env.EIDOVERSE_DIR
+  ? `${process.env.EIDOVERSE_DIR}/eidoverse/assets/models`
+  : null;
+async function searchLibrary(query: string): Promise<string[]> {
   const toks = query.toLowerCase().split(/\s+/).filter(Boolean);
-  return readdirSync(MODELS_DIR)
-    .filter((f) => f.endsWith(".glb"))
+  let files: string[];
+  if (MODELS_DIR) {
+    files = readdirSync(MODELS_DIR).filter((f) => f.endsWith(".glb"));
+  } else {
+    const res = await fetch(`${agent.httpBase}/library-list?dir=eidoverse/assets/models`);
+    if (!res.ok) throw new Error(`library-list failed: ${res.status}`);
+    const listed = (await res.json()) as { path: string; size: number }[];
+    files = listed.map((e) => e.path.split("/").pop()!).filter((f) => f.endsWith(".glb"));
+  }
+  return files
     .map((f) => ({ f, score: toks.filter((t) => f.toLowerCase().includes(t)).length }))
     .filter((r) => r.score > 0)
     .sort((a, b) => b.score - a.score)
@@ -134,7 +148,7 @@ server.tool(
   "Search the model library by keywords (e.g. 'crate', 'tree', 'server rack'). Returns library paths for spawn.",
   { query: z.string() },
   async ({ query }) => {
-    const hits = searchLibrary(query);
+    const hits = await searchLibrary(query);
     return { content: [{ type: "text", text: hits.length ? hits.join("\n") : "no matches" }] };
   },
 );
@@ -148,7 +162,7 @@ server.tool(
     yaw: z.number().optional(), id: z.string().optional(),
   },
   async (a) => {
-    const lib = a.lib ?? (a.query ? searchLibrary(a.query)[0] : undefined);
+    const lib = a.lib ?? (a.query ? (await searchLibrary(a.query))[0] : undefined);
     if (!lib) return { content: [{ type: "text", text: "no model — pass lib or query (try list_library)" }] };
     const x = a.x ?? agent.pos.x + Math.sin(agent.yaw) * 2;
     const zz = a.z ?? agent.pos.z + Math.cos(agent.yaw) * 2;

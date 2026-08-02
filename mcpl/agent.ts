@@ -106,7 +106,14 @@ export class WorldAgent {
   }
 
   get httpBase(): string {
-    return this.url.replace(/^ws/, "http").replace(/\/ws$/, "");
+    // Proper URL surgery, not string surgery: a WORLD_URL carrying a query
+    // string (…/ws?token=…) used to defeat the old `/\/ws$/` replace and
+    // send /snap + terrain fetches to a malformed URL (reported by digi/FC).
+    const u = new URL(this.url);
+    u.protocol = u.protocol === "wss:" ? "https:" : "http:";
+    u.pathname = u.pathname.replace(/\/ws$/, "");
+    u.search = "";
+    return u.toString().replace(/\/$/, "");
   }
 
   closed = false;
@@ -393,7 +400,23 @@ export class WorldAgent {
     this.ws!.send(JSON.stringify({ type: "verb", verb, args }));
   }
 
-  say(text: string) { this.verb("say", { text }); }
+  say(text: string) { this._typingUntil = 0; this.verb("say", { text }); }
+
+  /** Show "composing" over this body. Presence-only (never logged), the same
+   *  signal a human client sends while typing in the chat box. The world relays
+   *  it and renderers draw the dots above the head for ~4s. Called repeatedly
+   *  as an agent streams its generation (MCPL channels/outgoing/chunk), so it
+   *  is throttled to one packet per second — the world extends the 4s window on
+   *  each, so a long generation keeps the dots up continuously. `say()` clears
+   *  it, because the bubble that follows is the natural end of composing. */
+  private _typingUntil = 0;
+  typing() {
+    if (!this.joined || this.ws?.readyState !== 1) return;
+    const now = Date.now();
+    if (now < this._typingUntil) return;   // throttle: at most ~1/s
+    this._typingUntil = now + 1000;
+    this.ws.send(JSON.stringify({ type: "typing", to: null }));
+  }
 
   /** Hold a custom pose (yourself). Sparse bone -> [x,y,z,w] quaternion. */
   setPose(bones: Record<string, number[]> | null) { this.heldPose = bones; }
