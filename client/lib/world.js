@@ -417,6 +417,30 @@ function retryMounts() {
   for (const args of [...pendingMounts.values()]) applyMount(args);
 }
 
+// A seated body's world transform, live: parent entity's CURRENT transform
+// (mid-pendulum, mid-path — motion.js has already ticked it this frame)
+// composed with the socket. This is what makes a sitter actually RIDE the
+// swing: their body is derived, not streamed.
+const _mtQ = new THREE.Quaternion();
+const _mtF = new THREE.Vector3();
+const _mtO = new THREE.Vector3();
+/** Fill outPos with rider's world seat position; returns {yaw, pose, to} or
+ *  null when not mounted (or the parent isn't live yet). */
+export function mountTransform(riderId, outPos) {
+  const m = avatarMounts.get(riderId);
+  if (!m) return null;
+  const parent = entities.get(m.to);
+  if (!parent) return null;
+  const sock = (comps.get(m.to)?.sockets ?? {})[m.slot] ?? {};
+  parent.getWorldQuaternion(_mtQ);
+  parent.getWorldPosition(_mtO);
+  _mtF.set(...(m.offset ?? sock.pos ?? [0, 0.5, 0])).applyQuaternion(_mtQ);
+  outPos.copy(_mtO).add(_mtF);
+  _mtF.set(0, 0, 1).applyQuaternion(_mtQ);
+  const parentYaw = Math.atan2(_mtF.x, _mtF.z);
+  return { yaw: parentYaw + (m.yaw ?? sock.yaw ?? 0), pose: sock.pose ?? 'sitchair', to: m.to };
+}
+
 /** Motion ended: rest at the logged base pose. Anything that rests AWAY from
  *  base (a ferry stopping mid-route) gets a `place` alongside its stop —
  *  that is the plane-transition stamp, and it rewrites base above. */

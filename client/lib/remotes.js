@@ -8,6 +8,7 @@
 
 import { THREE, camera, scene, report, angleDelta } from './core.js';
 import { makeAvatar } from './avatar.js';
+import { avatarMounts, mountTransform } from './world.js';
 
 export const remotes = new Map(); // id -> RemoteBody
 
@@ -180,6 +181,28 @@ export function updateRemotes(dt, now = performance.now()) {
   for (const r of remotes.values()) {
     if (!r.avatar) continue;
     const buf = r.buf;
+
+    // A mounted body is DERIVED, not streamed: its transform comes from the
+    // parent entity's live transform (already ticked by motion.js this frame)
+    // composed with the socket. This is what makes a sitter visibly ride the
+    // swing mid-pendulum — presence samples are ignored while mounted, so a
+    // stale stream can't fight the seat.
+    if (avatarMounts.has(r.id)) {
+      const sw = mountTransform(r.id, _a);
+      if (sw) {
+        r.avatar.root.position.copy(_a);
+        r.avatar.root.rotation.y = sw.yaw;
+        r.avatar.setLimp(false);
+        if (r.lastClip !== sw.pose) { r.lastClip = sw.pose; r.avatar.setClip(sw.pose, 0); }
+        const d = r.avatar.root.position.distanceTo(camera.position);
+        const every = Math.round((d < LOD_NEAR ? 1 : d < LOD_MID ? 2 : 4) * lodBias);
+        r.lodAcc += dt;
+        r.lodTick = (r.lodTick + 1) % Math.max(1, every);
+        if (r.lodTick === 0) { r.avatar.update(r.lodAcc, now); r.lodAcc = 0; }
+        continue;
+      }
+      // parent still downloading — fall through to normal presence meanwhile
+    }
 
     if (buf.length >= 2) {
       // find the pair bracketing renderAt

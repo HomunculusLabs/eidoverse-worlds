@@ -403,7 +403,8 @@ function runCommand(raw) {
       bus.emit('command', { cmd: 'emote', arg });
       return true;
     case 'sit':
-      bus.emit('command', { cmd: 'sit' });
+      // /sit [thing] — a nearby declared seat wins over sitting on the ground
+      bus.emit('command', { cmd: 'sit', arg });
       return true;
     case 'goto':
       bus.emit('command', { cmd: 'goto', arg });

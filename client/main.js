@@ -12,7 +12,7 @@ import {
 import { contributeThumbnail, makeAvatar, EMOTE_ORDER, EMOTES } from './lib/avatar.js';
 import { updateSky, updateAutoSystems, skyArgs, skyImpl,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './lib/sky.js';
-import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner } from './lib/world.js';
+import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform } from './lib/world.js';
 import { hasGrass, setGrassDensity } from './lib/terrain.js';
 import { tickMotion } from './lib/motion.js';
 import {
@@ -241,7 +241,18 @@ bus.on('avatar-updated', ({ path, name, fresh }) => {
 let ragdoll = null;
 let downed = false;
 
-function goLimp(impulse = null) {
+// Which way you go over. A limp body does not drop straight down — its support
+// fails and the mass above the feet keeps going — and one that DOES drop
+// straight down has nowhere to put its leg length, so it folds its knees into
+// their stops under its own weight and then kicks them back out. You fall the
+// way you were facing, harder the faster you were moving.
+const _fall = new THREE.Vector3();
+function toppleVelocity() {
+  return _fall.set(Math.sin(myState.yaw), 0, Math.cos(myState.yaw))
+    .multiplyScalar(0.9 + Math.min(1.2, (myState.speed ?? 0) * 0.35));
+}
+
+function goLimp(lean = null) {
   if (!me || downed) return;
   downed = true;
   // Park the undriven bones and stop the clip BEFORE constructing the sim.
@@ -249,7 +260,7 @@ function goLimp(impulse = null) {
   // it measures its limits against, and the live pose the tumble starts from —
   // and neither may still have the walk cycle in it.
   me.setLimp(true);
-  ragdoll = new Ragdoll(me, impulse, me.restBonePositions());
+  ragdoll = new Ragdoll(me, lean ?? toppleVelocity(), me.restBonePositions());
   myState.clip = 'ragdoll';
   flashHint('limp — move to get up');
 }
@@ -263,6 +274,55 @@ function getUp() {
   myState.pos.copy(me.root.position);
   myState.pos.y = 0;
 }
+// ---------------------------------------------------------------- mounted
+// While seated/riding, my body is DERIVED from the parent entity's live
+// transform + socket (same math remotes use for me) — so I visibly swing on
+// the swing I'm sitting on. Movement input means "I want off": it emits a
+// dismount with my landing spot stamped (the plane-transition invariant),
+// and control returns to the normal ground controller.
+const _seatP = new THREE.Vector3();
+function updateMountedMe() {
+  const sw = mountTransform(CONFIG.name, _seatP);
+  if (!sw) return;                       // parent still downloading
+  myState.pos.copy(_seatP);
+  myState.yaw = sw.yaw;
+  myState.speed = 0;
+  myState.clip = sw.pose;
+  if (me) {
+    me.root.position.copy(_seatP);
+    me.root.rotation.y = sw.yaw;
+    me.setClip(sw.pose, 0);
+  }
+  if (['KeyW', 'KeyA', 'KeyS', 'KeyD'].some((k) => keys.has(k))) {
+    const off = _seatP.clone();
+    off.x += Math.sin(sw.yaw) * 0.7;
+    off.z += Math.cos(sw.yaw) * 0.7;
+    sendVerb('dismount', { id: CONFIG.name, pos: [off.x, 0, off.z], yaw: sw.yaw });
+    avatarMounts.delete(CONFIG.name);    // locally immediate; the echo confirms
+    myState.pos.set(off.x, 0, off.z);
+    setPosture('stand');
+  }
+}
+
+/** Sit ON something: nearest socketed entity within reach (or a named one).
+ *  Falls back to the plain sit-where-you-stand posture when nothing has a
+ *  seat to offer — declaring a socket is what upgrades /sit near a thing. */
+function trySitOn(arg) {
+  let best = null, bestD = 3;
+  for (const [id, bag] of comps) {
+    if (!bag.sockets) continue;
+    if (arg && id !== arg) continue;
+    const obj = entities.get(id);
+    if (!obj) continue;
+    const d = Math.hypot(obj.position.x - myState.pos.x, obj.position.z - myState.pos.z);
+    if (d < bestD || arg) { bestD = d; best = { id, slot: Object.keys(bag.sockets)[0] }; if (arg) break; }
+  }
+  if (!best) return false;
+  sendVerb('mount', { id: CONFIG.name, to: best.id, slot: best.slot });
+  logChat('*', `you sit on ${best.id} (${best.slot}) — move to get off`);
+  return true;
+}
+
 function stepRagdoll(dt) {
   if (ragdoll) {
     const pose = ragdoll.step(dt);
@@ -435,7 +495,11 @@ bus.on('command', ({ cmd, arg }) => {
     sendVerb('use', { id, action: action || 'use' });
     return;
   }
-  if (cmd === 'sit') { setPosture('sit'); return; }
+  if (cmd === 'sit') {
+    // /sit [thing] — a declared seat nearby wins; otherwise sit on the ground
+    if (!trySitOn((arg || '').trim() || null)) setPosture('sit');
+    return;
+  }
   if (cmd === 'emote') {
     const name = (arg || '').trim().toLowerCase();
     if (!EMOTE_ORDER.includes(name) && !Object.keys(EMOTES).includes(name)) {
@@ -557,6 +621,7 @@ function frame(now) {
   if (CONFIG.renderer) { /* camera is driven per snap request */ }
   else if (CONFIG.spectate) updateSpectator(dt, CONFIG.follow ? remotes.get(CONFIG.follow) : null);
   else if (downed) stepRagdoll(dt);     // the controller yields while limp
+  else if (avatarMounts.has(CONFIG.name)) updateMountedMe();  // seated: derived, not driven
   else updateMe(dt, me);
 
   // my own held pose: apply on change so I see what everyone else sees of me.

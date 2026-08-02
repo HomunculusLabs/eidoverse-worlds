@@ -10,6 +10,7 @@ import { join, resolve, normalize, basename } from "node:path";
 import { randomBytes } from "node:crypto";
 import { verifyToken, JtiCache } from "./aid1.ts";
 import { BehaviorHost, wireBehaviorGate, wireBehaviorStore, behaviorLimits, type BehaviorRec } from "./behaviors.ts";
+import { summarizeGlb } from "./geometry.ts";
 
 const PORT = Number(process.env.PORT ?? 8940);
 // Show-night door policy. Empty = open (dev on a tailnet). On a public box you
@@ -1182,6 +1183,62 @@ const server = Bun.serve({
       return new Response(JSON.stringify({ ok: true }), {
         headers: { "content-type": "application/json", "set-cookie": "ew_sess=; Path=/; HttpOnly; Max-Age=0" },
       });
+    }
+    if (url.pathname === "/geom") {
+      // Geometry as DATA, for beings who perceive by reading. Three tiers:
+      //   /geom?lib=<path>           one asset: bbox, flat zones, named parts
+      //   /geom?world=W&id=<entity>  that asset + the entity's world transform
+      //   /geom?world=W              the whole scene: every entity + transform
+      //                              (+local bbox; &boxes=0 to skip the parses)
+      // Raw bytes stay at GET /library/<lib> for local processing; this is
+      // the parsed tier. Same trust level as the world log: public reads.
+      const j = (o: unknown, status = 200) =>
+        new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json" } });
+      const resolveLib = (lib: string): string | null => {
+        const rel = normalize(lib).replace(/^\/+/, "");
+        if (rel.includes("..") || !/\.(glb|vrm)$/i.test(rel)) return null;
+        for (const base of [OPT_DIR, LIBRARY_DIR]) {
+          const p = normalize(join(base, rel));
+          if (p.startsWith(base) && existsSync(p)) return p;
+        }
+        return null;
+      };
+      const wname = url.searchParams.get("world");
+      if (!wname) {
+        const lib = url.searchParams.get("lib") ?? "";
+        const file = resolveLib(lib);
+        if (!file) return j({ error: `no such asset: ${lib}` }, 404);
+        const sum = await summarizeGlb(file);
+        return sum ? j({ lib, ...sum }) : j({ error: "geometry parsing unavailable" }, 503);
+      }
+      // read-only: answer for LOADED or on-disk worlds, never create one
+      if (!/^[a-z0-9_-]{1,64}$/i.test(wname)
+        || (!worlds.has(wname) && !existsSync(join(WORLDS_DIR, wname, "log.jsonl")))) {
+        return j({ error: "no such world" }, 404);
+      }
+      const w = getWorld(wname);
+      const id = url.searchParams.get("id");
+      if (id) {
+        const e = w.state.entities[id];
+        if (!e) return j({ error: `no entity "${id}" in ${wname}` }, 404);
+        const file = e.lib ? resolveLib(e.lib) : null;
+        const sum = file ? await summarizeGlb(file) : null;
+        return j({ id, lib: e.lib ?? null, pos: e.pos, yaw: e.yaw ?? 0, scale: e.scale ?? 1,
+          parent: e.parent ?? null, comp: e.comp ?? {},
+          geometry: sum,   // local frame — compose with pos/yaw/scale for world space
+          note: "geometry coords are the MODEL's local frame; sockets use the same frame, so a topSurface center is a socket pos verbatim" });
+      }
+      const withBoxes = url.searchParams.get("boxes") !== "0";
+      const out = [];
+      for (const [eid, e] of Object.entries(w.state.entities)) {
+        const file = withBoxes && e.lib ? resolveLib(e.lib) : null;
+        const sum = file ? await summarizeGlb(file) : null;
+        out.push({ id: eid, lib: e.lib ?? null, kind: e.kind ?? "thing",
+          pos: e.pos, yaw: e.yaw ?? 0, scale: e.scale ?? 1,
+          parent: e.parent ?? null, comp: e.comp ?? {},
+          ...(sum ? { bbox: sum.bbox, tris: sum.tris } : {}) });
+      }
+      return j({ world: wname, entities: out, mounts: w.state.mounts ?? {} });
     }
     if (url.pathname === "/upload" && req.method === "POST") {
       // Live asset ingestion. Two destinations:

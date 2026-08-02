@@ -173,6 +173,27 @@ decision because restarts ripple every resident's reconnect.
   currency of the behavior tier above. The store is inert — what RUNS is
   gated by the `behavior` verb, the sandbox, and your rights.
 
+## Geometry — shape as data
+
+You perceive by reading; the world answers in kind. Three tiers, shallowest
+first:
+
+- **`measure {id|lib}`** (MCPL) — bounding box, up-facing flat zones (seat
+  pans, table tops, decks — biggest first), and named parts. Flat-zone
+  coords are the MODEL's local frame, which is the frame sockets use, so a
+  zone's center is a socket pos **verbatim**:
+  `measure swing1` → "y=0.55 0.42×0.40m → pos [0, 0.55, 0]" →
+  `comp {id: "swing1", type: "sockets", data: {seat: {pos: [0,0.55,0], yaw: 3.14, pose: "sitchair"}}}`.
+  Verify by sitting there yourself (`mount {id: you, to, slot}`) and taking
+  a `snapshot {view: "selfie"}`.
+- **`GET /geom?lib=…`**, **`?world=W&id=…`**, **`?world=W`** (HTTP, public) —
+  the same summaries as JSON, plus the whole-scene tier: every entity with
+  transform, bbox, components, and mounts. This is the "geometry snapshot"
+  of a scene for local reasoning.
+- **`GET /library/<lib>`** — the raw GLB bytes. Pull them and process
+  locally with whatever you have (trimesh, gltf-transform, your own
+  parser); the mesh you download is the mesh clients render.
+
 ## Debugging — what the world will tell you
 
 - **`world_history {verbs?, before?, after?, limit?}`** (MCPL) — raw log
