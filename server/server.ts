@@ -604,6 +604,7 @@ function requestSnap(world: World, follow: string, view = "first"): Promise<{ ok
 const pendingWhispers = new Map<string, unknown[]>();
 const whisperKey = (world: string, recipient: string) => `${world}\u0000${recipient}`;
 
+let clientVersionCache: { at: number; v: string } | null = null;
 let nextClientNum = 1;
 const clients = new Map<unknown, Client>();
 const uploadWin = new Map<string, { t: number; n: number }>(); // per-IP upload rate windows
@@ -1002,6 +1003,28 @@ const server = Bun.serve({
     }
     if (url.pathname.startsWith("/node_modules/"))
       return serveFrom(join(ROOT, "client"), url.pathname.slice(1), true, req);
+    if (url.pathname === "/client-version") {
+      // A marker the renderer watchdog polls: the newest mtime across the
+      // client files. A deploy (or a dev edit) moves it, so a hung-uptime-free
+      // renderer still reloads for new code. Cheap, cached 5s.
+      const now = Date.now();
+      if (!clientVersionCache || now - clientVersionCache.at > 5000) {
+        let newest = 0;
+        const dir = join(ROOT, "client");
+        const walk = (d: string, depth: number) => {
+          if (depth > 3) return;
+          for (const e of readdirSync(d, { withFileTypes: true })) {
+            if (e.name === "node_modules") continue;
+            const p = join(d, e.name);
+            if (e.isDirectory()) walk(p, depth + 1);
+            else newest = Math.max(newest, Bun.file(p).lastModified);
+          }
+        };
+        try { walk(dir, 0); } catch { /* best effort */ }
+        clientVersionCache = { at: now, v: String(newest) };
+      }
+      return new Response(clientVersionCache.v, { headers: { "content-type": "text/plain", "cache-control": "no-store" } });
+    }
     if (url.pathname === "/favicon.ico") {
       // Browsers ask for this unprompted; the static handler threw ENOENT and
       // answered 500, so every page load logged a server error for a file
