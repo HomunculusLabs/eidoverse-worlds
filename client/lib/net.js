@@ -242,6 +242,14 @@ export async function connect() {
       toast(`"${CONFIG.name}" is connected in another tab. This one has yielded — reload to take over.`, 'warn', 60000);
       return;
     }
+    // 4005 = the world name itself is malformed (a mangled link). No retry —
+    // the name can never exist, so reconnecting is just hammering the door.
+    if (ev.code === 4005) {
+      net.status = 'rejected';
+      bus.emit('net', net);
+      toast(`"${CONFIG.world}" is not a valid world name — check the link that brought you here`, 'warn', 60000);
+      return;
+    }
     // 4003 = bad or missing door key. This used to fall through to the generic
     // retry, so a wrong key hammered the door forever while the client said
     // "disconnected — retrying…" and never explained why.
@@ -369,8 +377,11 @@ async function handle(msg) {
     }
 
     case 'world-forked': {
+      // The link stands alone at the end of the line, never inside brackets —
+      // naive linkifiers (ours included, once) swallow closing punctuation
+      // into the URL, and ?world=name) points at a world that cannot exist.
       const link = `${location.origin}/?world=${encodeURIComponent(msg.to)}`;
-      logChat('*', `world copied — "${msg.from}" → "${msg.to}" (${link})`);
+      logChat('*', `world copied — "${msg.from}" → "${msg.to}" — visit: ${link}`);
       toast(`copied to "${msg.to}" — open ?world=${msg.to} to visit`, 'info', 12000);
       break;
     }

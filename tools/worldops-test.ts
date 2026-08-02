@@ -170,5 +170,23 @@ console.log("1. fork: owner copies the world, history and roles included");
   s.close();
 }
 
+console.log("6. a malformed world name refuses the JOIN — it must never kill the server");
+{
+  // regression: getWorld throws on bad names, and an uncaught throw in the ws
+  // message callback exits the process — a reconnecting client then crash-loops
+  // prod (2026-08-02, world "fable)" from a chat-linkified URL, 16 restarts).
+  const bad = await open({ world: "garden)", id: "clicker" });
+  await bad.settle(600);
+  check("bad world name is refused, not fatal",
+    bad.closedWith === 4005 && bad.errors.some((e) => e.includes("not a world name")),
+    `closedWith=${bad.closedWith}, errors=${bad.errors.join("; ")}`);
+  bad.close();
+
+  const alive = await open({ world: W, id: "survivor" });
+  const snap = await alive.next("snapshot").catch(() => null);
+  check("server is still alive afterwards", snap?.you === "survivor");
+  alive.close();
+}
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

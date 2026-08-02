@@ -1052,6 +1052,13 @@ const server = Bun.serve({
       if (now - c.msgWin > 1000) { c.msgWin = now; c.msgCount = 0; }
       if (++c.msgCount > MSG_RATE) return;
 
+      // No message may ever kill the process. An uncaught throw in Bun's ws
+      // callback EXITS THE SERVER, and a client in a reconnect loop turns one
+      // bad request into a crash loop for everyone (measured 2026-08-02: a
+      // world name carrying a stray ")" from a chat-linkified URL took prod
+      // down 16 restarts in a row). Refusals are messages, failures are logs —
+      // neither is an exit.
+      try {
       switch (msg.type) {
         case "join": {
           // Two doors (home-node.md §7): a verified session (cookie at
@@ -1077,7 +1084,16 @@ const server = Bun.serve({
             c.world.clients.delete(c);
             if (!c.spectator) c.world.broadcast({ type: "leave", id: c.id });
           }
-          const w = getWorld(String(msg.world ?? "commons"));
+          // A malformed world name is a bad LINK, not a bad actor — refuse it
+          // with an explanation and a close code the client knows not to retry
+          // (retrying a name that can never exist is just a polite DoS).
+          const wname = String(msg.world ?? "commons");
+          if (!/^[a-z0-9_-]{1,64}$/i.test(wname)) {
+            ws.send(JSON.stringify({ type: "error", error: `"${wname}" is not a world name — check the link that brought you here` }));
+            c.ws.close?.(4005, "bad world name");
+            return;
+          }
+          const w = getWorld(wname);
           // Identity: a verified session OWNS the id — the client's msg.id is
           // ignored (the name came from Discord via the home node, and the
           // sub underneath it survives renames).
@@ -1403,6 +1419,10 @@ const server = Bun.serve({
           w.broadcast({ type: "world-reset", world: w.name, by: c.id });
           break;
         }
+      }
+      } catch (err) {
+        console.error(`[ws] "${String(msg?.type)}" from ${c.id} failed server-side:`, err);
+        try { ws.send(JSON.stringify({ type: "error", error: "that request failed server-side — it has been logged" })); } catch { /* socket already gone */ }
       }
     },
   },

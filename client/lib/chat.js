@@ -56,11 +56,18 @@ function renderBody(text, names) {
   for (const m of String(text).matchAll(pattern)) {
     if (m.index > i) frag.append(document.createTextNode(text.slice(i, m.index)));
     if (m[1]) {
+      // Trailing punctuation is prose, not address: "…?world=garden)" from a
+      // parenthesized link once sent a clicker to a world named "garden)" —
+      // which the server refuses, and refusing is all it should ever do.
+      let url = m[1];
+      const trail = /[)\]}>.,;:!?'"»]+$/.exec(url)?.[0] ?? '';
+      if (trail) url = url.slice(0, -trail.length);
       const a = document.createElement('a');
-      a.href = m[1]; a.target = '_blank'; a.rel = 'noopener noreferrer';
-      a.textContent = m[1];
+      a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.textContent = url;
       a.className = 'lnk';
       frag.append(a);
+      if (trail) frag.append(document.createTextNode(trail));
     } else {
       const s = document.createElement('span');
       const bare = m[2].replace(/^@/, '');
