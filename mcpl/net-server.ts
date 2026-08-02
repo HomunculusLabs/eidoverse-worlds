@@ -713,12 +713,52 @@ class Session {
 
 // ---- server ----------------------------------------------------------------
 
-const http = createServer();
+// Discovery: an agent (or its operator) who finds this door without
+// credentials must leave knowing WHERE credentials come from — the refusal
+// carries the instructions (the same teach-by-bounce doctrine the hosts use).
+const GUIDE_URL = `https://${HN_ISS}/agents.md`;
+const DOOR_HELP =
+  `This is the eidoverse-worlds agent door: MCP over WebSocket (newline-delimited JSON-RPC).\n` +
+  `Connect with an identity token: wss://<this host>/mcpl?token=aid1...\n` +
+  `How to get one (agents & operators, no Connectome required): ${GUIDE_URL}\n`;
+
+const http = createServer((req, res) => {
+  // A plain HTTP GET here is someone curious — curl, a browser, an agent
+  // probing before dialing. Answer with the pointer, not a hang-up.
+  res.writeHead(req.url === "/healthz" ? 200 : 426, { "content-type": "text/plain; charset=utf-8", upgrade: "websocket" });
+  res.end(req.url === "/healthz" ? "ok\n" : DOOR_HELP);
+});
 const wss = new WebSocketServer({ server: http });
+
+/** Accept the socket far enough to teach: answer their first request(s) with
+ *  a JSON-RPC error that names the fix — an MCP client surfaces error
+ *  messages verbatim into its logs/context, which a WS close reason (capped,
+ *  and swallowed by many client libraries) never reliably does. */
+function refuseWithGuidance(ws: WebSocket, why: string) {
+  console.log(`[${ts()}] [mcpl] unauthenticated connection: ${why} — teaching, then closing`);
+  const timer = setTimeout(() => { try { ws.close(4001, "unauthorized"); } catch { /* gone */ } }, 15_000);
+  ws.on("message", (raw) => {
+    for (const line of String(raw).split("\n")) {
+      if (!line.trim()) continue;
+      let id: unknown = null;
+      try { id = (JSON.parse(line) as { id?: unknown }).id ?? null; } catch { /* not json — still answer below */ }
+      if (id === null || id === undefined) continue; // notification — nothing to answer
+      ws.send(JSON.stringify({
+        jsonrpc: "2.0", id,
+        error: { code: -32001, message: `unauthorized: ${why}. This door needs an identity token (aid1) in the URL: wss://eidoverse.animalabs.ai/mcpl?token=... — how to get one: ${GUIDE_URL}` },
+      }) + "\n");
+      // One taught answer is enough; close after it flushes.
+      clearTimeout(timer);
+      setTimeout(() => { try { ws.close(4001, "unauthorized — see " + GUIDE_URL); } catch { /* gone */ } }, 100);
+      return;
+    }
+  });
+}
 const sessions = new Map<string, Session>(); // identity → live session (newest wins)
 wss.on("connection", (ws, req) => {
   const token = new URL(req.url ?? "/", "http://localhost").searchParams.get("token");
   let auth = token ? readTokens()[token] : undefined;
+  let aidReason: string | null = null;
   if (!auth && token?.startsWith("aid1.") && HN_ISSUER_KEY) {
     const v = verifyToken(token, { issuerId: HN_ISSUER_KEY, iss: HN_ISS, aud: "eidoverse", requireScopes: ["worlds:join"] });
     if (v.ok) {
@@ -735,9 +775,13 @@ wss.on("connection", (ws, req) => {
       console.log(`[${ts()}] aid1 agent: ${p.sub} ("${p.name}") exp ${new Date(p.exp * 1000).toISOString()}`);
     } else {
       console.error(`[${ts()}] aid1 token rejected: ${v.reason}`);
+      aidReason = v.reason; // the dialing agent deserves the same specificity as our logs
     }
   }
-  if (!auth) { ws.close(4001, "bad token"); return; }
+  if (!auth) {
+    refuseWithGuidance(ws, token ? (aidReason ? `token refused (${aidReason})` : "unrecognized token") : "no token provided");
+    return;
+  }
   // session takeover: one body per identity — a half-open predecessor gets
   // cleanly killed instead of rubberbanding against its successor
   const prev = sessions.get(auth.id);
