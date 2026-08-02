@@ -55,10 +55,11 @@ const cellKey = (x, z) => `${Math.floor(x / CELL)},${Math.floor(z / CELL)}`;
 function bucketAdd(id, entry) {
   // an OBB can straddle cells — register in every cell its footprint touches
   const { obj, box } = entry;
+  const s = obj.scale?.x || 1; // imports land wrong-sized and get resized in-world
   const r = Math.max(
     Math.abs(box.min.x), Math.abs(box.max.x),
     Math.abs(box.min.z), Math.abs(box.max.z),
-  );
+  ) * s;
   entry.cells = [];
   const x0 = Math.floor((obj.position.x - r) / CELL), x1 = Math.floor((obj.position.x + r) / CELL);
   const z0 = Math.floor((obj.position.z - r) / CELL), z1 = Math.floor((obj.position.z + r) / CELL);
@@ -78,20 +79,34 @@ function bucketRemove(id, entry) {
   }
 }
 
-export function fitCollider(id, obj, { collide } = {}) {
+function decide(entry, s) {
+  const { box, pref } = entry;
+  const roomScale = (box.max.x - box.min.x) * (box.max.z - box.min.z) * s * s >= 16
+    && (box.max.y - box.min.y) * s >= 2.2;
+  const exact = pref === 'exact' || (pref !== 'box' && roomScale);
+  // once exact, stay exact — a room scaled back down is still concave
+  if (exact && !entry.exact) entry.exact = buildExact(entry.obj);
+  entry.pillar = !entry.exact && (box.max.y - box.min.y) * s > 2.4;
+}
+
+export function fitCollider(id, obj, { collide, scale = 1 } = {}) {
   const box = new THREE.Box3().setFromObject(obj); // obj still at identity here
   if (box.isEmpty()) return;
-  const roomScale = (box.max.x - box.min.x) * (box.max.z - box.min.z) >= 16
-    && (box.max.y - box.min.y) >= 2.2;
-  const exact = collide === 'exact' || (collide !== 'box' && roomScale);
-  const entry = {
-    obj, box,
-    pillar: !exact && box.max.y - box.min.y > 2.4,
-    exact: exact ? buildExact(obj) : null,
-    cells: [],
-  };
+  const entry = { obj, box, pref: collide, pillar: false, exact: null, cells: [] };
+  decide(entry, scale);
   colliders.set(id, entry);
   bucketAdd(id, entry);
+}
+
+/** Call after an in-world rescale: re-decides exact-vs-box against the NEW
+ *  size (a dollhouse import scaled to a building becomes walkable-inside)
+ *  and re-buckets with the scaled footprint. */
+export function refitCollider(id) {
+  const e = colliders.get(id);
+  if (!e) return;
+  bucketRemove(id, e);
+  decide(e, e.obj.scale?.x || 1);
+  bucketAdd(id, e);
 }
 export function removeCollider(id) {
   const e = colliders.get(id);
@@ -171,15 +186,17 @@ export function resolveColliders(pos, terrainAt, r = 0.32) {
       }
       continue; // never box-test an exact entity — that would seal interiors
     }
+    const bs = obj.scale?.x || 1;
     _local.set(pos.x - obj.position.x, 0, pos.z - obj.position.z)
-      .applyAxisAngle(UP, -obj.rotation.y);
+      .applyAxisAngle(UP, -obj.rotation.y).divideScalar(bs);
+    const br = r / bs;
     let minX = box.min.x, maxX = box.max.x, minZ = box.min.z, maxZ = box.max.z;
     if (pillar) {
       const cx = (minX + maxX) / 2, cz = (minZ + maxZ) / 2;
       minX = cx - 0.25; maxX = cx + 0.25; minZ = cz - 0.25; maxZ = cz + 0.25;
     }
-    if (_local.x < minX - r || _local.x > maxX + r || _local.z < minZ - r || _local.z > maxZ + r) continue;
-    const topY = obj.position.y + box.max.y;
+    if (_local.x < minX - br || _local.x > maxX + br || _local.z < minZ - br || _local.z > maxZ + br) continue;
+    const topY = obj.position.y + box.max.y * bs;
     if (pos.y >= topY - 0.08) {
       // at/above the top: the box is floor, not wall
       if (_local.x > minX && _local.x < maxX && _local.z > minZ && _local.z < maxZ) {
@@ -189,13 +206,13 @@ export function resolveColliders(pos, terrainAt, r = 0.32) {
     }
     // inside the (radius-expanded) footprint below the top: push out the
     // nearest face
-    _exits[0].d = (maxX + r) - _local.x;
-    _exits[1].d = _local.x - (minX - r);
-    _exits[2].d = (maxZ + r) - _local.z;
-    _exits[3].d = _local.z - (minZ - r);
+    _exits[0].d = (maxX + br) - _local.x;
+    _exits[1].d = _local.x - (minX - br);
+    _exits[2].d = (maxZ + br) - _local.z;
+    _exits[3].d = _local.z - (minZ - br);
     let best = _exits[0];
     for (let i = 1; i < 4; i++) if (_exits[i].d < best.d) best = _exits[i];
-    _push.set(best.x, 0, best.z).applyAxisAngle(UP, obj.rotation.y).multiplyScalar(best.d);
+    _push.set(best.x, 0, best.z).applyAxisAngle(UP, obj.rotation.y).multiplyScalar(best.d * bs);
     pos.x += _push.x; pos.z += _push.z;
     if (!pillar) blockedTop = topY; // pillars aren't mantleable
   }
@@ -211,11 +228,12 @@ export function findSeat(pos, range = 1.2) {
   let best = null;
   for (const [id, { obj, box, pillar, exact }] of colliders) {
     if (pillar || exact) continue; // interiors aren't chairs; furniture inside them is
-    const topY = obj.position.y + box.max.y;
+    const sc = obj.scale?.x || 1;
+    const topY = obj.position.y + box.max.y * sc;
     const rise = topY - pos.y;
     if (rise < 0.25 || rise > 0.85) continue;            // not seat height
     // centre of the top face, in world space
-    _local.set((box.min.x + box.max.x) / 2, 0, (box.min.z + box.max.z) / 2)
+    _local.set((box.min.x + box.max.x) / 2 * sc, 0, (box.min.z + box.max.z) / 2 * sc)
       .applyAxisAngle(UP, obj.rotation.y);
     const cx = obj.position.x + _local.x, cz = obj.position.z + _local.z;
     const d = Math.hypot(cx - pos.x, cz - pos.z);
@@ -248,9 +266,10 @@ export function surfaceUnder(x, z, terrainAt, maxY = Infinity, skipId = null) {
       }
       continue;
     }
-    _local.set(x - obj.position.x, 0, z - obj.position.z).applyAxisAngle(UP, -obj.rotation.y);
+    const sc2 = obj.scale?.x || 1;
+    _local.set(x - obj.position.x, 0, z - obj.position.z).applyAxisAngle(UP, -obj.rotation.y).divideScalar(sc2);
     if (_local.x < box.min.x || _local.x > box.max.x || _local.z < box.min.z || _local.z > box.max.z) continue;
-    const topY = obj.position.y + box.max.y;
+    const topY = obj.position.y + box.max.y * sc2;
     if (topY > y && topY <= maxY) { y = topY; onto = id; }
   }
   return { y, onto };

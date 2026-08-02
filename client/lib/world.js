@@ -7,7 +7,7 @@
 
 import { THREE, scene, report, bus } from './core.js';
 import { loadGLB, loadEidoModule, noiseTexture, loadTrack, loadDone, libLabels } from './assets.js';
-import { fitCollider, removeCollider, reindexCollider } from './colliders.js';
+import { fitCollider, removeCollider, reindexCollider, refitCollider } from './colliders.js';
 import { setTerrain, setGrass, clearGrass, heightAt } from './terrain.js';
 import { groomGrass } from './grass_groom.js';
 import { applySky, attachLocalLights } from './sky.js';
@@ -85,10 +85,12 @@ export async function applyEntry(entry, live, ctx = {}) {
         obj.userData.entityId = args.id;
         obj.castShadow = true;
         obj.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
-        fitCollider(args.id, obj, { collide: args.collide }); // local space, before the transform; room-scale spawns auto-collide exact
+        const sc = queued?.scale ?? args.scale;
+        // decision sees the SPAWN scale: wrong-sized imports that arrive with a
+        // corrective scale still classify by their real-world size
+        fitCollider(args.id, obj, { collide: args.collide, scale: sc || 1 });
         obj.position.set(...(queued?.pos ?? args.pos ?? [0, 0, 0]));
         obj.rotation.y = queued?.yaw ?? args.yaw ?? 0;
-        const sc = queued?.scale ?? args.scale;
         if (sc) obj.scale.setScalar(sc);
         reindexCollider(args.id);
         attachLocalLights(obj);   // async, deliberately not awaited
@@ -124,7 +126,8 @@ export async function applyEntry(entry, live, ctx = {}) {
         if (args.pos) obj.position.set(...args.pos);
         if (args.yaw != null) obj.rotation.y = args.yaw;
         if (args.scale != null) obj.scale.setScalar(args.scale);
-        reindexCollider(args.id);
+        // rescale can cross the room-scale threshold: re-decide, not just re-bucket
+        refitCollider(args.id);
         bus.emit('entity', { id: args.id, kind: 'place' });
         break;
       }
