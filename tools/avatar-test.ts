@@ -47,7 +47,7 @@ const UNDRIVEN = BONES.filter((b) => !DRIVEN_BONES.includes(b));
 /** A skeleton, a mixer, and a clip that animates EVERY bone — set up exactly
  *  the way Avatar's constructor does it: play() once, weight 0, cross-fade
  *  after. Plus the minimum `this` the lifecycle methods reach for. */
-function stand() {
+function stand({ constant = false } = {}) {
   const root = new THREE.Object3D();
   const nodes: Record<string, any> = {};
   for (const b of BONES) {
@@ -61,9 +61,13 @@ function stand() {
     const q = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), a);
     return [q.x, q.y, q.z, q.w];
   };
+  // `constant` is the case three.js writes exactly ONCE: a single-key finger,
+  // a head that does not move in idle. Everything composed after the mixer has
+  // to behave identically either way, and none of it used to.
   const tracks = BONES.map((b) => new THREE.QuaternionKeyframeTrack(
     `${b}.quaternion`, [0, 0.5, 1],
-    [...key(0.3), ...key(0.9), ...key(0.3)]));
+    constant ? [...key(0.3), ...key(0.3), ...key(0.3)]
+             : [...key(0.3), ...key(0.9), ...key(0.3)]));
   const clip = new THREE.AnimationClip('idle', 1, tracks);
   const mixer = new THREE.AnimationMixer(root);
   const action = mixer.clipAction(clip);
@@ -82,15 +86,22 @@ function stand() {
     },
     cancelEmote() { this.emote = null; },
   };
-  for (const m of ['setLimp', '_park', '_resolveBones', '_humanoidBones', 'setPose', '_applyOverride']) {
+  self._composed = new Map();
+  for (const m of ['setLimp', '_park', '_resolveBones', '_humanoidBones', 'setPose',
+                   'clearPose', '_applyOverride', '_composeBegin', '_composeEnd']) {
     self[m] = (Avatar.prototype as any)[m];
   }
   // the slice of update() that matters here, in its real order
   self.tick = function (dt = 1 / 60) {
     this.mixer.update(dt);
     if (this._limp) this._park();
-    if (this.head && this.pitch && !this._limp) {
-      this.head.rotation.x += THREE.MathUtils.clamp(this.pitch, -0.5, 0.6);
+    if (this.head && !this._limp) {
+      const r = this._composeBegin(this.head);
+      if (this.pitch) {
+        this.head.quaternion.premultiply(new THREE.Quaternion()
+          .setFromAxisAngle(new THREE.Vector3(1, 0, 0), THREE.MathUtils.clamp(this.pitch, -0.5, 0.6)));
+      }
+      this._composeEnd(this.head, r);
     }
     if (this._override) this._applyOverride(dt, 0);
   };
@@ -163,6 +174,43 @@ console.log('\ngetting up:');
     `${seen.size} distinct values, last ${nodes.head.rotation.x.toFixed(2)} rad`);
   check('...and stays inside its clamp', Math.abs(nodes.head.rotation.x) < 1.6,
     `${nodes.head.rotation.x.toFixed(2)} rad`);
+}
+
+console.log('\ncomposing on a clip that holds still:');
+for (const constant of [false, true]) {
+  const tag = constant ? 'still track' : 'animated track';
+
+  // three.js only writes a bone when the clip's computed value CHANGES, so on
+  // a still track nothing puts back what we composed on top. Head pitch used
+  // to integrate one pitch per frame — 54 radians in three seconds.
+  {
+    const { self, nodes } = stand({ constant });
+    self.pitch = 0.3;
+    for (let i = 0; i < 180; i++) self.tick();
+    const base = stand({ constant });
+    for (let i = 0; i < 180; i++) base.self.tick();
+    const applied = nodes.head.quaternion.angleTo(base.nodes.head.quaternion);
+    check(`${tag}: head pitch holds at its value instead of integrating`,
+      Math.abs(applied - 0.3) < 0.02, `${applied.toFixed(2)} rad of pitch after 3s`);
+  }
+
+  // ...and clearPose used to be a one-way door: the bone never walked back to
+  // the clip, so a body could stand up still holding the pose it landed in.
+  {
+    const { self, nodes } = stand({ constant });
+    for (let i = 0; i < 30; i++) self.tick();
+    const clipPose = nodes.hips.quaternion.clone();
+    const t = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), 1.2);
+    self.setPose({ hips: [t.x, t.y, t.z, t.w] });
+    for (let i = 0; i < 60; i++) self.tick();
+    check(`${tag}: a held pose reaches its target`,
+      nodes.hips.quaternion.angleTo(t) < 1e-3);
+    self.clearPose();
+    for (let i = 0; i < 60; i++) self.tick();
+    check(`${tag}: ...and releasing it returns the bone to the clip`,
+      nodes.hips.quaternion.angleTo(clipPose) < 1e-3,
+      `${nodes.hips.quaternion.angleTo(clipPose).toFixed(3)} rad off`);
+  }
 }
 
 console.log(`\n${pass} passed, ${fail} failed`);

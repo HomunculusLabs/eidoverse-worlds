@@ -128,7 +128,9 @@ function drawTypingDots(sprite, t) {
 
 // ---------------------------------------------------------------- Avatar
 
-const _v = new THREE.Vector3();      // scratch — hot paths must not allocate
+const _v = new THREE.Vector3();
+const _pq = new THREE.Quaternion();
+const _X = new THREE.Vector3(1, 0, 0);      // scratch — hot paths must not allocate
 const _v2 = new THREE.Vector3();
 
 export class Avatar {
@@ -175,6 +177,7 @@ export class Avatar {
     this.head = vrm.humanoid?.getNormalizedBoneNode?.('head') ?? null;
     this.pitch = 0;                // radians, applied post-update
     this._limp = false;            // see setLimp: the mixer yields to the sim
+    this._composed = new Map();    // node -> clip base + what we last wrote
     this.shadow = makeBlobShadow();
     this.root.add(this.shadow);
 
@@ -392,6 +395,37 @@ export class Avatar {
 
   _park() { for (const [node] of this._parked ?? []) node.quaternion.identity(); }
 
+  // ---- composing on top of the clip, without trusting it to come back
+  //
+  // Everything written to a bone between mixer.update and vrm.update composes
+  // on the clip pose, and every such writer has silently assumed the mixer
+  // rewrites that bone every frame. It does not. three.js only calls
+  // binding.setValue when the value it computes CHANGES, so a bone whose track
+  // holds still — a single-key finger, a head that does not move in idle — is
+  // written once and never again, and whatever we put on top is never undone.
+  //
+  // Measured on a constant track: head pitch integrates one pitch per frame
+  // into 54 radians in three seconds, and clearPose becomes a ONE-WAY DOOR —
+  // the bone never returns to the clip, so a body that went limp could stand
+  // up still holding the pose it landed in.
+  //
+  // So remember the clip's value and what we left. If the bone still holds
+  // exactly what we left, the mixer did not rewrite it: put the clip's value
+  // back before composing again. Exact float compare is the right test — both
+  // sides are plain copies of the same numbers — and a false match is
+  // harmless, since recomposing the same base yields the same result.
+  _composeBegin(node) {
+    let r = this._composed.get(node);
+    if (!r) {
+      r = { base: new THREE.Quaternion(), out: new THREE.Quaternion(), live: false };
+      this._composed.set(node, r);
+    }
+    if (r.live && node.quaternion.equals(r.out)) node.quaternion.copy(r.base);
+    r.base.copy(node.quaternion);
+    return r;
+  }
+  _composeEnd(node, r) { r.out.copy(node.quaternion); r.live = true; }
+
   _humanoidBones() { return Object.keys(this.vrm.humanoid?.humanBones ?? {}); }
 
   /** World positions of the humanoid bones in the NEUTRAL rest pose — every
@@ -441,12 +475,29 @@ export class Avatar {
     if (!o) return;
     // ramp toward the wanted weight (ease ~120ms)
     o.weight += (o.wantWeight - o.weight) * Math.min(1, 12 * dt);
-    if (o.wantWeight === 0 && o.weight < 0.02) { this._override = null; return; }
+    if (o.wantWeight === 0 && o.weight < 0.02) {
+      // Hand the bones back on the way out. The ramp is cut at 2%, and on a
+      // track that holds still nothing would ever clear that last 2% of the
+      // pose — the body would stand up fractionally wrong, forever.
+      for (const [, node] of o.nodes) {
+        const r = this._composed.get(node);
+        if (r?.live && node.quaternion.equals(r.out)) { node.quaternion.copy(r.base); r.live = false; }
+      }
+      this._override = null;
+      return;
+    }
 
     if (o.kind === 'pose') {
       for (const [name, node] of o.nodes) {
         const target = o.targets.get(name);
-        if (target) node.quaternion.slerp(target, o.weight);
+        if (!target) continue;
+        // Composed, so the fade-OUT actually returns to the clip: slerping
+        // from wherever the bone happens to sit only converges toward the
+        // target, it never walks back. With a still track that made clearPose
+        // a one-way door.
+        const r = this._composeBegin(node);
+        node.quaternion.slerp(target, o.weight);
+        this._composeEnd(node, r);
       }
     }
     if (o.kind === 'anim') {
@@ -519,8 +570,19 @@ export class Avatar {
     // here, we compose on the fresh clip pose and vrm.update carries it through.
     // ...but not while limp: a corpse does not keep looking where you last
     // aimed the camera, and the pitch is never reset when you fall.
-    if (this.head && this.pitch && !this._limp) {
-      this.head.rotation.x += THREE.MathUtils.clamp(this.pitch, -0.5, 0.6);
+    //
+    // Composed through _composeBegin so it cannot integrate (see there), and
+    // as a quaternion premultiply rather than `rotation.x +=`. Those agree for
+    // an XYZ Euler — adding to x is a pre-rotation in the parent frame — but
+    // the quaternion form says so outright instead of leaning on the decompose
+    // order of whatever the clip left in the bone.
+    if (this.head && !this._limp) {
+      const r = this._composeBegin(this.head);
+      if (this.pitch) {
+        this.head.quaternion.premultiply(
+          _pq.setFromAxisAngle(_X, THREE.MathUtils.clamp(this.pitch, -0.5, 0.6)));
+      }
+      this._composeEnd(this.head, r);
     }
     if (this._override) this._applyOverride(dt, now);
 
@@ -594,6 +656,7 @@ export class Avatar {
     if (this.typing) disposeSprite(this.typing);
     disposeSprite(this.label);
     this.mixer.stopAllAction();
+    this._composed.clear();
     VRMUtils.deepDispose?.(this.vrm.scene);
   }
 }
