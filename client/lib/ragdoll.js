@@ -29,6 +29,11 @@ import { resolveColliders } from './colliders.js';
 // A reduced set: enough to read as a body, few enough to stay stable and to
 // keep the streamed pose small.
 const CHAINS = [
+  // hips first: driving the PELVIS is what lets a body actually lie down —
+  // without it the pelvis keeps its standing orientation forever and every
+  // limb folds ~90° around an upright anchor, which reads as a crumple.
+  // Order matters: parents before children, the drive walks this list.
+  ['hips', 'spine'],
   ['spine', 'chest'], ['chest', 'neck'], ['neck', 'head'],
   ['leftUpperArm', 'leftLowerArm'], ['leftLowerArm', 'leftHand'],
   ['rightUpperArm', 'rightLowerArm'], ['rightLowerArm', 'rightHand'],
@@ -38,8 +43,9 @@ const CHAINS = [
 // Every joint we track as a particle (bones + their leaf children).
 const JOINTS = [...new Set(CHAINS.flat().concat('hips'))];
 // Distance constraints = the skeleton's bones, at their rest lengths.
+// (hips-spine rides in via CHAINS now that the pelvis is driven.)
 const LINKS = [
-  ['hips', 'spine'], ...CHAINS,
+  ...CHAINS,
   ['hips', 'leftUpperLeg'], ['hips', 'rightUpperLeg'],
   ['chest', 'leftUpperArm'], ['chest', 'rightUpperArm'],
 ];
@@ -217,6 +223,14 @@ export class Ragdoll {
     }
 
     this.rootStartY = avatar.root.position.y;
+    // How far the model origin sits below the hips — MEASURED, never assumed:
+    // avatars range from ~0.55 (youngopus) to ~0.91 (aporia). The old
+    // hardcoded 0.82 was claude_suit's adult hip height; on a short avatar it
+    // rendered the pelvis ~25cm underground at settle and the whole body
+    // folded around a buried anchor.
+    this.hipsOffset = this.p.hips
+      ? this.p.hips.y - avatar.root.position.y
+      : 0.82;
   }
 
   /** Advance the sim and push the result into the avatar as a held pose.
@@ -340,7 +354,7 @@ export class Ragdoll {
     if (hips) {
       this.avatar.root.position.x = hips.x;
       this.avatar.root.position.z = hips.z;
-      this.avatar.root.position.y = Math.min(this.rootStartY, hips.y - 0.82);
+      this.avatar.root.position.y = Math.min(this.rootStartY, hips.y - this.hipsOffset);
     }
 
     // ---- map particles back to bone rotations (world-reference method)
