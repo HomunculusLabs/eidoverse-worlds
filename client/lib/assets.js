@@ -195,21 +195,33 @@ export async function loadGLB(libPath) {
     await renderer.compileAsync(obj, camera, scene).catch(() => {});
     return obj;
   }
-  const work = beginWork(`compile ${short}`);
-  try {
-    work.phase('queued');
-    await enqueue(() => {
+  // Two spawns of the same model racing used to BOTH queue a full compile —
+  // and with two gpu slots they ran CONCURRENTLY, each paying the whole
+  // codegen+pipeline cost (Safari: ~6s each, twice, for one model). Clones
+  // share material references, so one compile warms them all: the first
+  // caller compiles, everyone else awaits it and then cache-hits.
+  if (!libCompiles.has(libPath)) {
+    const work = beginWork(`compile ${short}`);
+    work.phase('queued'); // before enqueue — an empty lane starts the job synchronously
+    const p = enqueue(() => {
       work.phase('compile');
       return renderer.compileAsync(obj, camera, scene).catch(() => {});
-    }, { lane: 'gpu', priority: 0 });
-    compiledLibs.add(libPath);
-  } finally { work.end(); }
+    }, { lane: 'gpu', priority: 0 })
+      .then(() => compiledLibs.add(libPath))
+      .finally(() => { libCompiles.delete(libPath); work.end(); });
+    libCompiles.set(libPath, p);
+    await p;
+    return obj;
+  }
+  await libCompiles.get(libPath).catch(() => {});
+  await renderer.compileAsync(obj, camera, scene).catch(() => {}); // warm now
   return obj;
 }
 // Libs whose pipelines have been compiled once this session — repeat spawns
 // skip the queue. (A sky/weather wrap or a new light can invalidate pipeline
 // caches; the direct compileAsync above still handles that, just unqueued.)
 const compiledLibs = new Set();
+const libCompiles = new Map(); // libPath -> in-flight first compile
 
 // ---- VRMA clips -------------------------------------------------------------
 

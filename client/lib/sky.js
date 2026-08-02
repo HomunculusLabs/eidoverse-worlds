@@ -17,7 +17,7 @@ import { THREE, scene, sun, hemi, renderer, camera, report, bus } from './core.j
 import { loadEidoModule, primeFiles, listLibrary, fetchBytes } from './assets.js';
 import { markPhase, whenBooted } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake } from './sky_baked.js';
-import { holdFrames } from './loadwork.js';
+import { holdFrames, holdObjectCompiles } from './loadwork.js';
 
 // ---------------------------------------------------------------- state
 
@@ -187,7 +187,17 @@ async function renderOnce() {
     return markPhase('sky', 1);
   }
 
-  while (degrade < 2 && skyBuilds < MAX_SKY_BUILDS) {
+  // A sky is coming: pause OBJECT pipeline compiles until its wraps + env
+  // bake exist, so every material compiles once, with its final graph —
+  // instead of once now and once again when the weather rewrites it. (On a
+  // slow-loading Safari the sky lost this race and the wraps hit 44 already-
+  // compiled materials; at ~6s per graph compile there, that ordering WAS the
+  // twenty painful seconds.) Released in the finally below on every path —
+  // settle, skymesh fallback, or failure — with a 25s cap behind it.
+  let releaseObjects = null;
+  if (!skyApi) holdObjectCompiles(new Promise((r) => { releaseObjects = r; }));
+  try {
+    while (degrade < 2 && skyBuilds < MAX_SKY_BUILDS) {
     try {
       const buildsBefore = skyBuilds;
       await renderEidoverse(a);
@@ -224,10 +234,11 @@ async function renderOnce() {
       skyApi = null;
       currentWorld = null;
     }
-  }
-  impl = 'skymesh';
-  await renderSkyMesh(a);
-  markPhase('sky', 1);
+    }
+    impl = 'skymesh';
+    await renderSkyMesh(a);
+    markPhase('sky', 1);
+  } finally { releaseObjects?.(); }
 }
 
 // ============================================================ Skye's sky

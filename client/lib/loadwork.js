@@ -138,9 +138,29 @@ export function enqueue(fn, { lane = 'cpu', priority = 0 } = {}) {
     pumpLane(l);
   });
 }
+// While a sky is building, object (priority-0) compiles in the gpu lane wait:
+// the sky's weather wraps and env bake rewrite material graphs, so an object
+// compiled before the sky pays its full compile TWICE. On Safari a single
+// model's WGSL->Metal compile measures ~6 SECONDS — compile-once ordering is
+// the difference between painful and fine there. Bodies (priority >= 1) are
+// never held: a person appearing beats a person appearing correctly lit.
+let objectsHeld = false;
+export function holdObjectCompiles(until, maxMs = 25000) {
+  if (objectsHeld) return;
+  objectsHeld = true;
+  Promise.race([until, new Promise((r) => setTimeout(r, maxMs))])
+    .catch(() => {})
+    .then(() => { objectsHeld = false; pumpLane(lanes.gpu); });
+}
+function takeJob(l) {
+  if (l !== lanes.gpu || !objectsHeld) return l.jobs.shift();
+  const i = l.jobs.findIndex((j) => j.priority >= 1);
+  return i === -1 ? undefined : l.jobs.splice(i, 1)[0];
+}
 function pumpLane(l) {
   while (l.running < l.max && l.jobs.length) {
-    const job = l.jobs.shift();
+    const job = takeJob(l);
+    if (!job) break;
     l.running++;
     (async () => {
       try { job.resolve(await job.fn()); } catch (e) { job.reject(e); }
