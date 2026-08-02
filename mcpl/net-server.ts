@@ -299,6 +299,20 @@ class Session {
     try {
       while (!this.conn.isClosed) {
         const msg = await this.conn.nextMessage();
+        if (msg.type === "notification") {
+          // The host streams an agent's generation as it produces it
+          // (channels/outgoing/chunk). Each delta means the body is composing —
+          // exactly the discord-mcpl "typing indicator all the time" signal.
+          // Relay it into the world so renderers draw the dots above the head.
+          // Scoped to this world's channel (or an unaddressed stream); the
+          // agent.typing() call is throttled and the world extends a 4s window
+          // on each, so a long generation keeps the dots up continuously.
+          if (msg.notification.method === method.CHANNELS_OUTGOING_CHUNK) {
+            const cid = (msg.notification.params as { channelId?: string } | undefined)?.channelId;
+            if (!cid || cid === this.channelId) this.agent.typing();
+          }
+          continue;
+        }
         if (msg.type !== "request") continue;
         const req = msg.request;
         const params = (req.params ?? {}) as Record<string, unknown>;
@@ -632,21 +646,38 @@ wss.on("connection", (ws, req) => {
   if (prev) { console.log(`[${ts()}] [mcpl] ${auth.id} reconnected — taking over previous session`); prev.close(); }
   const session = new Session(auth, ws, token ?? "");
   sessions.set(auth.id, session);
-  // Half-open detection: ping every 20s; no pong within the window means the
-  // peer is gone — terminate so the session (and its body) dies instead of
-  // haunting the world as a zombie we silently deliver into.
-  let alive = true;
-  ws.on("pong", () => { alive = true; });
+  // Half-open detection — tolerant of a THINKING agent.
+  //
+  // This used to ping every 20s and terminate on a SINGLE missed pong. That is
+  // a correct liveness check for a chat client and a wrong one for an agent
+  // host: an agent blocked in a long generation (or a big context assembly, or
+  // a GC pause) cannot service its socket for far longer than 20s, and got
+  // killed as "half-open" while it was very much alive — mid-sentence, mid-
+  // scene. Fable was cut off five times in one evening this way; each silent
+  // reconnect hid it until an expired credential made the reconnect fail too.
+  //
+  // So: a miss is not a death. We require several CONSECUTIVE missed pongs
+  // (~2 minutes by default) before declaring the peer gone, and any inbound
+  // traffic counts as proof of life — a host that is answering requests is
+  // obviously there, whether or not a pong happened to land in the window.
+  // A truly dead socket is still reaped, just not on a hair trigger.
+  const PING_MS = Number(process.env.MCPL_PING_SEC ?? 20) * 1000;
+  const MAX_MISSES = Number(process.env.MCPL_PING_MISSES ?? 6);
+  let misses = 0;
+  const seen = () => { misses = 0; };
+  ws.on("pong", seen);
+  ws.on("message", seen);   // it is talking to us: it is alive
   const pinger = setInterval(() => {
-    if (!alive) {
-      console.log(`[${ts()}] [mcpl] ${auth.id} failed keepalive — terminating half-open session`);
+    if (misses >= MAX_MISSES) {
+      const quiet = Math.round((MAX_MISSES * PING_MS) / 1000);
+      console.log(`[${ts()}] [mcpl] ${auth.id} silent for ~${quiet}s (${misses} missed pongs) — terminating half-open session`);
       clearInterval(pinger);
       ws.terminate();
       return;
     }
-    alive = false;
+    misses++;
     try { ws.ping(); } catch { /* socket already dying; close event will fire */ }
-  }, 20_000);
+  }, PING_MS);
   session.serve()
     .catch((e) => { console.error(`[${ts()}] [session:${auth.id}]`, e.message); })
     .finally(() => {
