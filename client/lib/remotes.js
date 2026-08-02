@@ -192,8 +192,22 @@ export function updateRemotes(dt, now = performance.now()) {
       if (sw) {
         r.avatar.root.position.copy(_a);
         r.avatar.root.rotation.y = sw.yaw;
+        // The seat owns WHERE the body is and its base clip — never its
+        // expressiveness. The newest presence sample still delivers emotes
+        // (one-shots layer over the sit; setClip is emote-aware and won't
+        // cut a wave short) and held bone poses (gesturing from the seat).
+        // `animate` streams arrive on their own channel and never pass here.
+        const s = buf[buf.length - 1];
+        if (s) {
+          applyPose(r, s, s, 1);
+          if (s.emote && s.emote !== r.lastEmote) {
+            r.lastEmote = s.emote;
+            r.avatar.playEmote(s.emote);
+          } else if (!s.emote) r.lastEmote = null;
+        }
         r.avatar.setLimp(false);
-        if (r.lastClip !== sw.pose) { r.lastClip = sw.pose; r.avatar.setClip(sw.pose, 0); }
+        if (r.lastClip !== sw.pose) { r.lastClip = sw.pose; }
+        r.avatar.setClip(sw.pose, 0);   // emote-aware: no-ops while a gesture owns the body
         const d = r.avatar.root.position.distanceTo(camera.position);
         const every = Math.round((d < LOD_NEAR ? 1 : d < LOD_MID ? 2 : 4) * lodBias);
         r.lodAcc += dt;
