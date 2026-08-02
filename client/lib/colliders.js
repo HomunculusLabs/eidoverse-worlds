@@ -79,13 +79,37 @@ function bucketRemove(id, entry) {
   }
 }
 
+const _probe = new THREE.Vector3();
+// Can an avatar STAND at the footprint centre? Interiors: yes — walls are metres
+// away. Solids with mass at the centre (a tree's trunk, a statue) : no. This is
+// what separates a walkable room from a big leafy thing whose bounding box
+// merely LOOKS room-scale. Local space in, world-metre threshold out.
+function isHollow(bvh, box, s) {
+  // probe the box's mid-height: floor and ceiling are both far there, so the
+  // nearest surface is a WALL (rooms: metres away) or the mass at the centre
+  // (a tree's trunk: right here). Measuring at floor+1m would wrongly count the
+  // floor you stand on as "near" and read every room as solid.
+  _probe.set((box.min.x + box.max.x) / 2, (box.min.y + box.max.y) / 2, (box.min.z + box.max.z) / 2);
+  const res = bvh.closestPointToPoint(_probe, {});
+  return res ? res.distance * s > 0.9 : false;
+}
+
 function decide(entry, s) {
   const { box, pref } = entry;
   const roomScale = (box.max.x - box.min.x) * (box.max.z - box.min.z) * s * s >= 16
     && (box.max.y - box.min.y) * s >= 2.2;
-  const exact = pref === 'exact' || (pref !== 'box' && roomScale);
-  // once exact, stay exact — a room scaled back down is still concave
+  let exact;
+  if (pref === 'exact') exact = true;
+  else if (pref === 'box') exact = false;
+  else if (roomScale) {
+    // room-SIZED isn't enough — a tree's canopy is too. Only the HOLLOW ones
+    // (you can stand inside) become exact; trees fall through to pillar so you
+    // still walk under the branches (and no grass clearing paints under them).
+    if (!entry.exact) entry.exact = buildExact(entry.obj);
+    exact = entry.exact ? isHollow(entry.exact.bvh, box, s) : false;
+  } else exact = false;
   if (exact && !entry.exact) entry.exact = buildExact(entry.obj);
+  if (!exact) entry.exact = null;         // tree/solid: use pillar/box, no trimesh, no clearing
   entry.pillar = !entry.exact && (box.max.y - box.min.y) * s > 2.4;
 }
 
