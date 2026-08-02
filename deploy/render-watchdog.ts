@@ -107,7 +107,15 @@ for (;;) {
   await launch();
   const started = Date.now();
   await sleep(BOOT_GRACE_SEC * 1000);
-  const bornVersion = await clientVersion();
+  // The version marker may be unreadable at boot — the sequencer could be
+  // mid-restart, or (as happened here) running a build that predates the
+  // /client-version route and answers 500. That used to pin bornVersion at
+  // null for the renderer's whole life, and the deploy check below requires
+  // it, so a renderer launched during that window NEVER picked up a deploy
+  // again: exactly the "prod is serving stale client" failure this watchdog
+  // exists to prevent, reintroduced by its own baseline. So the baseline
+  // binds LATE — the first reading we can actually get becomes it.
+  let bornVersion = await clientVersion();
   let strikes = 0, reason = "";
 
   while (!reason) {
@@ -122,7 +130,14 @@ for (;;) {
     if (upMin > MAX_UPTIME_MIN) { reason = `uptime ${upMin.toFixed(0)}m`; break; }
 
     const nowVersion = await clientVersion();
-    if (bornVersion && nowVersion && nowVersion !== bornVersion) { reason = "client updated"; break; }
+    if (bornVersion === null && nowVersion !== null) {
+      // Late baseline (see above). A deploy we could not observe is not a
+      // deploy we can act on — adopt what we can now read and watch from here.
+      bornVersion = nowVersion;
+      log(`client version readable again — baseline adopted`);
+    } else if (bornVersion && nowVersion && nowVersion !== bornVersion) {
+      reason = "client updated"; break;
+    }
 
     if (!h.healthy) {
       if (++strikes >= STRIKES) { reason = `unhealthy (${h.reason})`; break; }
