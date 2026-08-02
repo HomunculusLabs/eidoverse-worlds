@@ -11,9 +11,38 @@
 // is, by the same data, sittable and placeable-on. Nobody authors that.
 
 import { THREE } from './core.js';
+import { MeshBVH } from 'three-mesh-bvh';
+import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 
 const UP = new THREE.Vector3(0, 1, 0);
-export const colliders = new Map(); // entity id -> { obj, box, pillar, cell }
+export const colliders = new Map(); // entity id -> { obj, box, pillar, exact?, cell }
+
+// ---- exact (trimesh) colliders ----------------------------------------------
+// Boxes read the OUTSIDE of things. Generated interiors are the opposite: the
+// avatar is INSIDE the concave shape — one box seals the room shut, and the
+// floor must be real geometry (stairs, thresholds, uneven ground). Room-scale
+// spawns therefore collide against their actual triangles via a BVH:
+//   floor = downward raycast (step-up capped), walls = closest-point at hip
+//   height. Auto-applied when footprint ≥ 16 m² AND height ≥ 2.2 m; the spawn
+//   verb can force either way with collide: "exact" | "box".
+const STEP = 0.55;   // max mantle-less step-up, metres — one comfortable stair
+const HIP = 0.95;    // wall-probe height: floors stay > r away, walls don't
+
+function buildExact(obj) {
+  obj.updateMatrixWorld(true);
+  const inv = new THREE.Matrix4().copy(obj.matrixWorld).invert();
+  const geoms = [];
+  obj.traverse((o) => {
+    if (!o.isMesh || !o.geometry?.attributes?.position) return;
+    const g = (o.geometry.index ? o.geometry.toNonIndexed() : o.geometry.clone());
+    g.applyMatrix4(new THREE.Matrix4().multiplyMatrices(inv, o.matrixWorld));
+    const clean = new THREE.BufferGeometry(); // position-only: BVH wants no skinning/uv baggage
+    clean.setAttribute('position', g.getAttribute('position'));
+    geoms.push(clean);
+  });
+  if (!geoms.length) return null;
+  return { bvh: new MeshBVH(mergeGeometries(geoms, false)) };
+}
 
 // ---- spatial hash -----------------------------------------------------------
 // resolveColliders used to walk EVERY entity every frame, allocating as it
@@ -49,10 +78,18 @@ function bucketRemove(id, entry) {
   }
 }
 
-export function fitCollider(id, obj) {
+export function fitCollider(id, obj, { collide } = {}) {
   const box = new THREE.Box3().setFromObject(obj); // obj still at identity here
   if (box.isEmpty()) return;
-  const entry = { obj, box, pillar: box.max.y - box.min.y > 2.4, cells: [] };
+  const roomScale = (box.max.x - box.min.x) * (box.max.z - box.min.z) >= 16
+    && (box.max.y - box.min.y) >= 2.2;
+  const exact = collide === 'exact' || (collide !== 'box' && roomScale);
+  const entry = {
+    obj, box,
+    pillar: !exact && box.max.y - box.min.y > 2.4,
+    exact: exact ? buildExact(obj) : null,
+    cells: [],
+  };
   colliders.set(id, entry);
   bucketAdd(id, entry);
 }
@@ -97,10 +134,43 @@ const _exits = [
 
 /** Push `pos` out of anything solid and return the ground height under it.
  *  Mutates pos.x/pos.z. `terrainAt` supplies the base ground. */
+const _ray = new THREE.Ray();
+const _hip = new THREE.Vector3();
+const _cp = {};
+
 export function resolveColliders(pos, terrainAt, r = 0.32) {
   blockedTop = null;
   let ground = terrainAt(pos.x, pos.z);
-  for (const { obj, box, pillar } of near(pos.x, pos.z)) {
+  for (const { obj, box, pillar, exact } of near(pos.x, pos.z)) {
+    if (exact) {
+      // work in entity-local space (yaw-only rotation, uniform scale)
+      const s = obj.scale.x || 1;
+      _local.set(pos.x - obj.position.x, 0, pos.z - obj.position.z)
+        .applyAxisAngle(UP, -obj.rotation.y).divideScalar(s);
+      const localY = (pos.y - obj.position.y) / s;
+      // floor: nearest surface below the feet (+step allowance) IS the ground
+      _ray.origin.set(_local.x, localY + STEP / s, _local.z);
+      _ray.direction.set(0, -1, 0);
+      const hit = exact.bvh.raycastFirst(_ray, THREE.DoubleSide);
+      if (hit) {
+        const gy = obj.position.y + hit.point.y * s;
+        if (gy <= pos.y + STEP && gy > ground) ground = gy;
+      }
+      // walls: closest triangle to a hip-height probe pushes the capsule out
+      _hip.set(_local.x, localY + HIP / s, _local.z);
+      const res = exact.bvh.closestPointToPoint(_hip, _cp);
+      if (res) {
+        const dx = (_hip.x - res.point.x) * s, dz = (_hip.z - res.point.z) * s;
+        const dy = Math.abs(_hip.y - res.point.y) * s;
+        const dh = Math.hypot(dx, dz);
+        if (dh < r && dy < 0.5 && dh > 1e-6) {
+          _push.set(dx / dh, 0, dz / dh).applyAxisAngle(UP, obj.rotation.y)
+            .multiplyScalar(r - dh);
+          pos.x += _push.x; pos.z += _push.z;
+        }
+      }
+      continue; // never box-test an exact entity — that would seal interiors
+    }
     _local.set(pos.x - obj.position.x, 0, pos.z - obj.position.z)
       .applyAxisAngle(UP, -obj.rotation.y);
     let minX = box.min.x, maxX = box.max.x, minZ = box.min.z, maxZ = box.max.z;
@@ -139,8 +209,8 @@ export function resolveColliders(pos, terrainAt, r = 0.32) {
  *  the geometry IS the affordance. Returns {y, x, z, yaw, id} or null. */
 export function findSeat(pos, range = 1.2) {
   let best = null;
-  for (const [id, { obj, box, pillar }] of colliders) {
-    if (pillar) continue;
+  for (const [id, { obj, box, pillar, exact }] of colliders) {
+    if (pillar || exact) continue; // interiors aren't chairs; furniture inside them is
     const topY = obj.position.y + box.max.y;
     const rise = topY - pos.y;
     if (rise < 0.25 || rise > 0.85) continue;            // not seat height
@@ -161,8 +231,23 @@ export function findSeat(pos, range = 1.2) {
 export function surfaceUnder(x, z, terrainAt, maxY = Infinity, skipId = null) {
   let y = terrainAt(x, z);
   let onto = null;
-  for (const [id, { obj, box, pillar }] of colliders) {
+  for (const [id, { obj, box, pillar, exact }] of colliders) {
     if (pillar || id === skipId) continue;
+    if (exact) {
+      // dropped things land on the actual surface (stair tread, mezzanine)
+      const s = obj.scale.x || 1;
+      _local.set(x - obj.position.x, 0, z - obj.position.z)
+        .applyAxisAngle(UP, -obj.rotation.y).divideScalar(s);
+      const fromY = (Math.min(maxY, obj.position.y + box.max.y * s) - obj.position.y) / s;
+      _ray.origin.set(_local.x, fromY + 0.01, _local.z);
+      _ray.direction.set(0, -1, 0);
+      const hit = exact.bvh.raycastFirst(_ray, THREE.DoubleSide);
+      if (hit) {
+        const topY = obj.position.y + hit.point.y * s;
+        if (topY > y && topY <= maxY) { y = topY; onto = id; }
+      }
+      continue;
+    }
     _local.set(x - obj.position.x, 0, z - obj.position.z).applyAxisAngle(UP, -obj.rotation.y);
     if (_local.x < box.min.x || _local.x > box.max.x || _local.z < box.min.z || _local.z > box.max.z) continue;
     const topY = obj.position.y + box.max.y;

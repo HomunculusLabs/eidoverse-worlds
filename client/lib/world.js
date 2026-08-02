@@ -85,7 +85,7 @@ export async function applyEntry(entry, live, ctx = {}) {
         obj.userData.entityId = args.id;
         obj.castShadow = true;
         obj.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
-        fitCollider(args.id, obj);            // fit in local space, before the transform
+        fitCollider(args.id, obj, { collide: args.collide }); // local space, before the transform; room-scale spawns auto-collide exact
         obj.position.set(...(queued?.pos ?? args.pos ?? [0, 0, 0]));
         obj.rotation.y = queued?.yaw ?? args.yaw ?? 0;
         const sc = queued?.scale ?? args.scale;
