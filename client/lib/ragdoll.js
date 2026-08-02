@@ -163,13 +163,39 @@ export const TUNING = {
 // the fleet because it measured against the sideways hip-to-thigh offset.
 // ---------------------------------------------------------------------------
 
-// FLEX — symmetric cones between two adjacent links. Correct for the spine and
-// neck, which genuinely do bend both ways, so one max is the whole story.
+// FLEX — symmetric cones between two adjacent links, for the spine and neck.
+//
+// Symmetric is anatomically WRONG and deliberately kept: a trunk curls far
+// forward and arches barely at all, and the fleet duly reaches ~30° of
+// backbend where a body has about 15°. The signed version is written and does
+// not work. Choosing the limit by which way the joint leans needs the sign of
+// the distal link's lean, and near straight that vector is nearly zero and its
+// sign is noise — so the limit flickers between the two values, which is the
+// same flip-a-constraint-every-frame failure the hinge axis had, and it threw
+// a foot at 24 m/s. Guarding the sign with a deadband trades the flicker for a
+// dead zone the joint simply sits in. Doing this properly wants a real bone
+// frame with a stable up-vector, which is a rigid-body solver, which this
+// deliberately is not. Backbend is the price.
 const FLEX = [
   // a         b        c         max° from the rig's own rest angle
   ['hips',   'spine', 'chest',    25],   // lower spine: stiff
   ['spine',  'chest', 'neck',     25],
   ['chest',  'neck',  'head',     45],   // neck: floppier
+];
+
+// BEHIND — how far a limb may point behind the body's frontal plane.
+//
+// The CONE is circular, so it cannot express the one shape a hip actually has:
+// a long way forward, barely anything backward, and a moderate amount out to
+// the side. Tilting the cone forward far enough to bound the back also walls
+// off abduction, because it moves the whole envelope. A separate one-sided
+// plane says exactly the intended thing and nothing else. Without it the fleet
+// put its thighs 46° behind the body — the pose you would need a chair to hold.
+const BEHIND = [
+  ['leftUpperLeg', 'leftLowerLeg', 30],
+  ['rightUpperLeg', 'rightLowerLeg', 30],
+  ['leftUpperArm', 'leftLowerArm', 65],       // a shoulder does reach back
+  ['rightUpperArm', 'rightLowerArm', 65],
 ];
 
 // CONE — the limb's direction relative to the BODY, not to its parent link.
@@ -180,22 +206,27 @@ const FLEX = [
 // thigh swings far forward and barely backward.
 const CONE = [
   // bone           child            half°  tilt° (toward body forward)
-  ['leftUpperArm',  'leftLowerArm',   95,    0],
-  ['rightUpperArm', 'rightLowerArm',  95,    0],
-  ['leftUpperLeg',  'leftLowerLeg',   85,   25],
-  ['rightUpperLeg', 'rightLowerLeg',  85,   25],
+  ['leftUpperArm',  'leftLowerArm',   85,    0],
+  ['rightUpperArm', 'rightLowerArm',  85,    0],
+  ['leftUpperLeg',  'leftLowerLeg',   55,   25],
+  ['rightUpperLeg', 'rightLowerLeg',  55,   25],
 ];
 
 // HINGE — a knee bends backward and an elbow bends forward, and neither bends
 // sideways. That is a SIGNED constraint, so it needs a handedness the particles
 // alone don't carry; _frame derives one from the rig. `dir` is which way the
 // joint is allowed to fold, along the body's forward axis.
+// `sideways` is slop, not a range — a hinge has no sideways travel at all, and
+// every degree given here shows up on screen as a knee bending out of its own
+// plane. It cannot go to zero: this model has no hip or shoulder ROTATION, so
+// a limb that has twisted has nowhere to put it but here. These are the
+// smallest values the fleet stays stable at.
 const HINGE = [
   // a               b                 c            dir  maxFlex°  sideways°
-  ['leftUpperArm',  'leftLowerArm',  'leftHand',    +1,   150,      25],
-  ['rightUpperArm', 'rightLowerArm', 'rightHand',   +1,   150,      25],
-  ['leftUpperLeg',  'leftLowerLeg',  'leftFoot',    -1,   150,      20],
-  ['rightUpperLeg', 'rightLowerLeg', 'rightFoot',   -1,   150,      20],
+  ['leftUpperArm',  'leftLowerArm',  'leftHand',    +1,   145,      12],
+  ['rightUpperArm', 'rightLowerArm', 'rightHand',   +1,   145,      12],
+  ['leftUpperLeg',  'leftLowerLeg',  'leftFoot',    -1,   150,       6],
+  ['rightUpperLeg', 'rightLowerLeg', 'rightFoot',   -1,   150,       6],
 ];
 
 // Self-collision radii, as fractions of the torso radius. The torso radius
@@ -345,6 +376,12 @@ export class Ragdoll {
       _b.copy(this.rest[c]).sub(this.rest[b]).normalize();
       const at = Math.acos(THREE.MathUtils.clamp(_a.dot(_b), -1, 1));
       this.flex.push({ a, b, c, max: Math.min(Math.PI, at + max * D2R) });
+    }
+
+    // ---- BEHIND: the frontal-plane stop, as a minimum forward component
+    this.behind = [];
+    for (const [b, c, deg] of BEHIND) {
+      if (this.p[b] && this.p[c]) this.behind.push({ b, c, minFwd: -Math.sin(deg * D2R) });
     }
 
     // ---- CONE: limb direction vs the torso, stored in body-frame coordinates
@@ -739,6 +776,25 @@ export class Ragdoll {
       if (_v.lengthSq() < 1e-10) continue;      // exactly antipodal: no unique plane
       _v.normalize();
       _qd.setFromAxisAngle(_v, -(ang - lim) * TUNING.YIELD);
+      this._swing(b, c, _b.applyQuaternion(_qd), lb);
+    }
+
+    // ---- BEHIND: a one-sided frontal-plane stop on the limb's direction
+    for (const { b, c, minFwd } of this.behind) {
+      const pb = this.p[b], pc = this.p[c];
+      _b.copy(pc).sub(pb); const lb = _b.length();
+      if (lb < 1e-5) continue;
+      _b.divideScalar(lb);
+      const fwd = _b.dot(this.frame.f);
+      if (fwd >= minFwd) continue;
+      // rotating about (limb x forward) swings the limb toward forward, which
+      // is the only direction that reduces the violation
+      _v.crossVectors(_b, this.frame.f);
+      if (_v.lengthSq() < 1e-10) continue;      // limb already along forward
+      _v.normalize();
+      const need = Math.asin(THREE.MathUtils.clamp(minFwd, -1, 1))
+        - Math.asin(THREE.MathUtils.clamp(fwd, -1, 1));
+      _qd.setFromAxisAngle(_v, need * TUNING.YIELD);
       this._swing(b, c, _b.applyQuaternion(_qd), lb);
     }
 
