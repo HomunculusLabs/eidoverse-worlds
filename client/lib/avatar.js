@@ -299,7 +299,12 @@ export class Avatar {
     if (!targets.size) return;
     this._override = {
       kind: 'pose', nodes: this._resolveBones([...targets.keys()]),
-      targets, weight: this._override?.weight ?? 0, wantWeight: 1,
+      // A tumble starts at FULL weight. The ramp is right for a held pose
+      // arriving over the wire, but the ragdoll's first frame is by
+      // construction the pose the body is already in — easing into it from
+      // whatever the clip says just blends the walk cycle back in for the
+      // first 200ms, which is the window the impact happens in.
+      targets, weight: this._override?.weight ?? (this._limp ? 1 : 0), wantWeight: 1,
     };
   }
 
@@ -339,27 +344,53 @@ export class Avatar {
    *  that was most of why one fall looked fine on one avatar and broken on the
    *  next.
    *
-   *  So: stop the mixer, and park every bone the sim does NOT drive at its
-   *  rest rotation. Parking rather than freezing mid-stride is deliberate — a
-   *  body going limp SHOULD unclench its hands and drop its shoulders, so the
-   *  snap reads as relaxing. It also makes the chest->upperArm span rigid,
-   *  which is what the sim's distance constraint always assumed it was. */
+   *  So: park every bone the sim does NOT drive at its rest rotation, every
+   *  frame, right after the mixer has written it. Parking rather than freezing
+   *  mid-stride is deliberate — a body going limp SHOULD unclench its hands
+   *  and drop its shoulders, so the snap reads as relaxing. It also makes the
+   *  chest->upperArm span rigid, which is what the sim's distance constraint
+   *  always assumed it was.
+   *
+   *  What this must NOT do is stop the mixer. mixer.stopAllAction() looks like
+   *  the obvious move and breaks three things at once, because the actions are
+   *  play()ed exactly once when they are loaded and cross-faded by WEIGHT ever
+   *  after — _setAction never calls play(). Stopping them therefore:
+   *    - deactivates every action permanently, so nothing animates again after
+   *      you get up;
+   *    - leaves head.rotation with nothing to reset it, and the head pitch
+   *      composes with `+=` on the assumption that the mixer rewrote the bone
+   *      first, so the head integrates one pitch per frame into a flywheel;
+   *    - calls restoreOriginalState() on every binding, snapping the whole
+   *      skeleton to its bind pose — a visible T-pose flash, and the Ragdoll
+   *      constructor then measures THAT instead of the pose you fell in.
+   *  Leaving the mixer running costs one clip evaluation whose driven bones we
+   *  overwrite anyway, and none of the above happens. */
   setLimp(on) {
     on = !!on;
     if (on === this._limp) return;
     this._limp = on;
-    if (!on) { this.setClip('idle'); return; }
-    if (this.emote) this.cancelEmote();
-    this.mixer.stopAllAction();
-    this.current = null;
-    this.currentSlot = null;
-    const driven = new Set(DRIVEN_BONES);
-    for (const name of this._humanoidBones()) {
-      if (driven.has(name)) continue;
-      this.vrm.humanoid.getNormalizedBoneNode(name)?.quaternion.identity();
+    if (!on) {
+      // Hand the bones back as we found them. three.js only writes a bone when
+      // the clip's computed value CHANGES, so a track that holds still — a
+      // single-key finger curl, a shoulder that does not move in idle — would
+      // never overwrite the parked rest rotation, and the body would stand up
+      // with its hands left open.
+      for (const [node, q] of this._parked ?? []) node.quaternion.copy(q);
+      this._parked = null;
+      return;
     }
+    if (this.emote) this.cancelEmote();
+    const driven = new Set(DRIVEN_BONES);
+    this._parked = this._resolveBones(
+      this._humanoidBones().filter((n) => !driven.has(n)))
+      .map(([, node]) => [node, node.quaternion.clone()]);
+    // once here as well as per-frame, so the Ragdoll about to be built reads a
+    // skeleton that already agrees with what it will be driving
+    this._park();
     this.root.updateMatrixWorld(true);
   }
+
+  _park() { for (const [node] of this._parked ?? []) node.quaternion.identity(); }
 
   _humanoidBones() { return Object.keys(this.vrm.humanoid?.humanBones ?? {}); }
 
@@ -470,6 +501,12 @@ export class Avatar {
     if (this.emote && now > this.emote.until) this.cancelEmote();
 
     this.mixer.update(dt);
+
+    // While limp the clip keeps running (see setLimp for why stopping it is a
+    // trap) — so the bones the sim does not drive have to be re-parked after
+    // every mixer write, or the locomotion clip goes on animating the
+    // shoulders, hands and fingers of a corpse.
+    if (this._limp) this._park();
 
     // ---- bone edits must land BETWEEN the mixer and vrm.update.
     //
