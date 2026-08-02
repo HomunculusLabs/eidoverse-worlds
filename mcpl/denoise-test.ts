@@ -172,5 +172,27 @@ console.log("\n━━ agent: activity pulse — regular wakes only while life is
   agent.close();
 }
 
+console.log("\n━━ agent: activity dial — the sense is the agent's own to tune ━━");
+{
+  const agent = new WorldAgent({ name: "claude" });
+  const pulses: string[] = [];
+  agent.onEvent = (ev) => { if (ev.kind === "activity") pulses.push(ev.text!); };
+  let cur = agent.setActivity({ radiusM: 5 });
+  check("radius setter returns the applied value", cur.radiusM === 5, JSON.stringify(cur));
+  // digi walks and talks at 10m — outside the shrunk 5m sense
+  (agent as any).notePose("digi", { p: [10, 0, 0], yaw: 0, speed: 1.5, clip: "walk" });
+  await (agent as any).applyEntry({ verb: "say", args: { text: "outside" }, actor: "digi", ts: Date.now(), seq: 20 }, true);
+  await sleep(200);
+  check("activity beyond the tuned radius → no pulse", pulses.length === 0, JSON.stringify(pulses));
+  cur = agent.setActivity({ pulseSec: 0, radiusM: 50 });
+  check("pulse_sec 0 turns the sense off", cur.pulseSec === 0 && cur.radiusM === 50, JSON.stringify(cur));
+  (agent as any).notePose("digi", { p: [10, 0, 0], yaw: 0, speed: 1.5, clip: "walk" });
+  await sleep(200);
+  check("off means off — activity nearby, no pulse", pulses.length === 0, String(pulses.length));
+  cur = agent.setActivity({ pulseSec: 3 });
+  check("re-enabling clamps to the 10s floor", cur.pulseSec === 10, String(cur.pulseSec));
+  agent.close();
+}
+
 console.log(failures ? `\n\x1b[31m${failures} failure(s)\x1b[0m` : "\n\x1b[32mall checks passed\x1b[0m");
 process.exit(failures ? 1 : 0);

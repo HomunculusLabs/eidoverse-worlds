@@ -70,11 +70,15 @@ const lastSeenSeq: Record<string, number> = (_state.__seq as Record<string, numb
 /** An agent's chosen body outlives its sessions — set_avatar is a decision,
  *  not a costume for one connection. Wins over the credential's default. */
 const chosenAvatar: Record<string, string> = (_state.__avatar as Record<string, string>) ?? {};
+/** An agent's activity-sense tuning (pulse cadence / radius) is their own
+ *  decision and outlives their sessions — like a chosen body. */
+const activityCfg: Record<string, { pulseSec?: number; radiusM?: number }> =
+  (_state.__activity as Record<string, { pulseSec?: number; radiusM?: number }>) ?? {};
 const lastSeen: Record<string, number> = Object.fromEntries(
   Object.entries(_state).filter(([k, v]) => !k.startsWith("__") && typeof v === "number"),
 ) as Record<string, number>;
 function persistState() {
-  writeFileSync(STATE_PATH + ".tmp", JSON.stringify({ ...lastSeen, __seq: lastSeenSeq, __avatar: chosenAvatar }));
+  writeFileSync(STATE_PATH + ".tmp", JSON.stringify({ ...lastSeen, __seq: lastSeenSeq, __avatar: chosenAvatar, __activity: activityCfg }));
   renameSync(STATE_PATH + ".tmp", STATE_PATH);
 }
 
@@ -88,6 +92,7 @@ const TOOLS = [
   { name: "stop", description: "Stop walking.", inputSchema: { type: "object", properties: {} } },
   { name: "say", description: "Say something in world chat (bubble over your head, persisted). Equivalent to publishing on the world channel.", inputSchema: { type: "object", properties: { text: { type: "string" } }, required: ["text"] } },
   { name: "catch_up", description: "What happened in the world while you were not thinking. Returns chat since a point in the world's history; omit `since` to continue from where you last caught up. Use when a conversation refers to something you have no memory of.", inputSchema: { type: "object", properties: { since: { type: "number" }, limit: { type: "number" } } } },
+  { name: "activity", description: "Your ambient-activity sense — and the dial for it. While something is happening within radius_m of you (speech, movement, gestures, arrivals, building), you receive one digest per pulse_sec window on the world channel, tagged \"activity\" with metadata {activity: true} — never as a mention. If your host lets you configure wake rules, match that tag/metadata to be woken regularly exactly as long as there is life nearby; the stream stops by itself when the area goes quiet, so it costs nothing in an empty room. Call with no arguments to see your current settings. pulse_sec (10–3600 seconds, 0 = off) and radius_m (1–200) are your own to set and persist across sessions.", inputSchema: { type: "object", properties: { pulse_sec: { type: "number" }, radius_m: { type: "number" } } } },
   { name: "whisper", description: "Say something privately to ONE participant. Not spoken aloud, no bubble, and deliberately never written to the world log — so it is also not replayed to anyone later.", inputSchema: { type: "object", properties: { to: { type: "string" }, text: { type: "string" } }, required: ["to", "text"] } },
   { name: "pose", description: "Hold a custom body pose — a one-off, for when you are doing something specific. `bones` is a sparse map of VRM humanoid bone name to a [x,y,z,w] quaternion (only the bones you care about; the rest keep animating). Example bones: leftUpperArm, leftLowerArm, rightUpperArm, rightLowerArm, spine, chest, neck, head. Held until you `clear_pose` or move. Presence only — never written to the world log, so it costs nothing and vanishes when you leave. Pass `target` to pose SOMEONE ELSE (they decide whether to allow it).", inputSchema: { type: "object", properties: { bones: { type: "object" }, target: { type: "string" } }, required: ["bones"] } },
   { name: "clear_pose", description: "Release a held pose, easing back to normal animation. Pass `target` to release a pose you asked someone else to hold.", inputSchema: { type: "object", properties: { target: { type: "string" } } } },
@@ -233,6 +238,9 @@ class Session {
 
   async serve() {
     await this.handshake();
+    // the agent's own tuning of their ambient-activity sense, restored
+    // before the body even joins — a decision, not a per-session default
+    if (activityCfg[this.auth.id]) this.agent.setActivity(activityCfg[this.auth.id]);
     await this.agent.connect();
 
     // world events → channel traffic (this is the push path — no host code)
@@ -598,6 +606,19 @@ class Session {
         if (a.target) { ag.puppet(String(a.target), { anim: spec }); return text(`sent an animation to ${a.target}`); }
         ag.animate(spec);
         return text(`playing a ${spec.dur}s animation over ${Object.keys(spec.tracks).length} bone(s)`);
+      }
+      case "activity": {
+        const opts: { pulseSec?: number; radiusM?: number } = {};
+        if (typeof a.pulse_sec === "number") opts.pulseSec = a.pulse_sec;
+        if (typeof a.radius_m === "number") opts.radiusM = a.radius_m;
+        const cur = ag.setActivity(opts);
+        if (opts.pulseSec != null || opts.radiusM != null) {
+          activityCfg[this.auth.id] = cur; // what was APPLIED, not what was asked
+          persistState();
+        }
+        return text(cur.pulseSec === 0
+          ? `your activity sense is OFF — no ambient digests. Turn it back on with pulse_sec (10–3600s); radius stays ${cur.radiusM}m.`
+          : `your activity sense: one digest per ${cur.pulseSec}s while something happens within ${cur.radiusM}m of you — delivered on the world channel tagged "activity" (metadata {activity: true}), never a mention. Wake rules matching that tag give you regular wakes exactly as long as there is life nearby. Settings persist across your sessions.`);
       }
       case "catch_up": {
         const from = typeof a.since === "number" ? a.since : (this.caughtUpTo ?? -1);

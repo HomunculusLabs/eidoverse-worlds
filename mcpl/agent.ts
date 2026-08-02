@@ -107,9 +107,30 @@ export class WorldAgent {
     this.inbox.push({ ts: ev.ts, kind: ev.kind, who: ev.who, ...(ev.text != null ? { text: ev.text } : {}) });
     this.onEvent?.(ev);
   });
+  /** The activity sense is the agent's own to tune (persisted per-agent by
+   *  the door; see net-server's `activity` tool). Instance values start at
+   *  the world defaults. */
+  activityRadiusM = ACTIVITY_RADIUS_M;
+  private activityPulseMs = ACTIVITY_PULSE_MS;
   /** The pulse ticks from birth; it only ever SPEAKS when the accumulator has
    *  something in it, so an empty room costs nothing. */
-  private activityTimer = setInterval(() => this.activityPulse(), ACTIVITY_PULSE_MS);
+  private activityTimer: ReturnType<typeof setInterval> | null =
+    setInterval(() => this.activityPulse(), ACTIVITY_PULSE_MS);
+
+  /** Tune the ambient-activity sense. pulseSec clamps to [10, 3600] — 0 turns
+   *  the sense off entirely; radiusM clamps to [1, 200]. Returns what was
+   *  actually applied. */
+  setActivity(opts: { pulseSec?: number; radiusM?: number }): { pulseSec: number; radiusM: number } {
+    if (opts.radiusM != null && Number.isFinite(opts.radiusM))
+      this.activityRadiusM = Math.min(200, Math.max(1, opts.radiusM));
+    if (opts.pulseSec != null && Number.isFinite(opts.pulseSec)) {
+      const sec = opts.pulseSec <= 0 ? 0 : Math.min(3600, Math.max(10, opts.pulseSec));
+      this.activityPulseMs = sec * 1000;
+      if (this.activityTimer) { clearInterval(this.activityTimer); this.activityTimer = null; }
+      if (sec > 0) this.activityTimer = setInterval(() => this.activityPulse(), this.activityPulseMs);
+    }
+    return { pulseSec: this.activityPulseMs / 1000, radiusM: this.activityRadiusM };
+  }
   private terrain: { heightAt(x: number, z: number): number } | null = null;
   private terrainSrc: string | null = null;
   worldInfo: Record<string, unknown> = {};
@@ -150,7 +171,7 @@ export class WorldAgent {
   close() {
     this.closed = true;
     if (this.ticker) { clearInterval(this.ticker); this.ticker = null; }
-    clearInterval(this.activityTimer);
+    if (this.activityTimer) { clearInterval(this.activityTimer); this.activityTimer = null; }
     this.gate.dispose(); // held narration dies with the session
     this.ws?.close();
   }
@@ -166,7 +187,7 @@ export class WorldAgent {
     this.act30 = { says: new Map(), movers: new Set(), acts: 0, arrivals: 0, departures: 0, builds: 0 };
     const nearby = [...this.people.values()]
       .filter((p) => p.id !== this.name && p.pose &&
-        Math.hypot(p.pose.p[0] - this.pos.x, p.pose.p[2] - this.pos.z) <= ACTIVITY_RADIUS_M)
+        Math.hypot(p.pose.p[0] - this.pos.x, p.pose.p[2] - this.pos.z) <= this.activityRadiusM)
       .map((p) => p.id);
     const n = (c: number, w: string) => `${c} ${w}${c === 1 ? "" : "s"}`;
     const bits: string[] = [];
@@ -183,7 +204,7 @@ export class WorldAgent {
   /** A build act (spawn/place/light/remove) near this body counts as activity. */
   private noteBuild(actor: string | undefined, pos: number[] | undefined | null) {
     if (!actor || actor === this.name || actor === "world") return;
-    if (pos && Math.hypot(pos[0] - this.pos.x, pos[2] - this.pos.z) > ACTIVITY_RADIUS_M) return;
+    if (pos && Math.hypot(pos[0] - this.pos.x, pos[2] - this.pos.z) > this.activityRadiusM) return;
     this.act30.builds++;
   }
 
@@ -346,7 +367,7 @@ export class WorldAgent {
     if (id !== this.name) {
       // raw movement inside the radius feeds the activity pulse — locomotion
       // is liveliness even though it is never narrated per-frame
-      if (dist <= ACTIVITY_RADIUS_M && (pose.speed > 0.05 || pose.clip === "walk" || pose.clip === "run"))
+      if (dist <= this.activityRadiusM && (pose.speed > 0.05 || pose.clip === "walk" || pose.clip === "run"))
         this.act30.movers.add(id);
       this.noteActs(id, prev, pose, dist);
     }
@@ -384,7 +405,7 @@ export class WorldAgent {
     }
     // RAW act count feeds the pulse — a denoised (repeat) jump still means
     // someone is alive and doing things next to you
-    if (acts.length && dist <= ACTIVITY_RADIUS_M) this.act30.acts += acts.length;
+    if (acts.length && dist <= this.activityRadiusM) this.act30.acts += acts.length;
     for (const a of acts) this.gate.act(id, a.key, a.text);
   }
 
@@ -424,7 +445,7 @@ export class WorldAgent {
         // speech near this body feeds the activity pulse (a speaker whose
         // position is unknown — just arrived — counts as near)
         const pp = this.people.get(actor)?.pose;
-        if (!pp || Math.hypot(pp.p[0] - this.pos.x, pp.p[2] - this.pos.z) <= ACTIVITY_RADIUS_M)
+        if (!pp || Math.hypot(pp.p[0] - this.pos.x, pp.p[2] - this.pos.z) <= this.activityRadiusM)
           this.act30.says.set(actor, (this.act30.says.get(actor) ?? 0) + 1);
         const rx = new RegExp(`(@${this.name}\\b|\\b${this.name}\\b)`, "i");
         const mention = rx.test(String(args.text));

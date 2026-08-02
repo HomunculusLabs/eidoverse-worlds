@@ -87,6 +87,13 @@ await hears(feed, "walked up to you", 5000);
 const approach = feed.find((f) => f.text.includes("walked up to you"));
 check("walk-up delivered with metadata.mentioned", approach?.mentioned === true, JSON.stringify(approach));
 
+console.log("\n━━ activity tool — the agent tunes their own ambient sense ━━");
+const actGet = await conn.sendToolsCall("activity", {});
+const actGetText = JSON.stringify(actGet);
+check("activity reports the sense + wake-gate contract", actGetText.includes('tagged \\"activity\\"') && actGetText.includes("wake"), actGetText.slice(0, 120));
+const actSet = await conn.sendToolsCall("activity", { pulse_sec: 45, radius_m: 60 });
+check("activity applies agent-chosen cadence/radius", JSON.stringify(actSet).includes("per 45s") && JSON.stringify(actSet).includes("60m"), JSON.stringify(actSet).slice(0, 160));
+
 console.log("\n━━ channels/publish = speaking in-world ━━");
 const pub = await conn.sendChannelsPublish({
   conversationId: "playtest",

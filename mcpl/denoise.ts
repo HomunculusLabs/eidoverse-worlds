@@ -66,9 +66,13 @@ export const REARM_RADIUS = 6;
  *  once per window and ONLY when something actually happened. It exists for
  *  wake gates: a host rule matching the "activity" tag wakes its agent
  *  regularly while there is life nearby, and the stream simply stops when the
- *  area goes quiet — local awareness without per-event noise. */
+ *  area goes quiet — local awareness without per-event noise.
+ *
+ *  These are the DEFAULTS — the sense is the agent's own to tune (the
+ *  `activity` tool sets cadence/radius per agent, persisted across sessions;
+ *  see WorldAgent.setActivity for the clamps). */
 export const ACTIVITY_RADIUS_M = env("EW_ACTIVITY_RADIUS_M", 30);
-export const ACTIVITY_PULSE_MS = env("EW_ACTIVITY_PULSE_SEC", 300) * 1000;
+export const ACTIVITY_PULSE_MS = env("EW_ACTIVITY_PULSE_SEC", 30) * 1000;
 
 type IdState = {
   pending: { kind: "arrive" | "leave"; ts: number; timer: ReturnType<typeof setTimeout> } | null;
