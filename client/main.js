@@ -22,7 +22,7 @@ import {
 import {
   remotes, updateRemotes, updateGaze, noteSpeaking, setLodBias,
 } from './lib/remotes.js';
-import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendWhisper, sendTyping, sendWorldFork, sendWorldReset, sendMod, requestDebug } from './lib/net.js';
+import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendPuppet, sendWhisper, sendTyping, sendWorldFork, sendWorldReset, sendMod, requestDebug } from './lib/net.js';
 import {
   initPalette, updateBuild, wireAvatarSwitch, setMyAvatarPath, toggleBuildMenu,
   hasGhost, hasSelection, toggleEditMode, isEditing,
@@ -40,6 +40,22 @@ import { shedALight, litCount } from './lib/lights.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { framesHeld } from './lib/loadwork.js';
 import { startPrefetch } from './lib/prefetch.js';
+
+// ---- crash breadcrumbs (?bc=1): streamed over a BroadcastChannel so a
+// SECOND same-origin tab can hold them in its own memory — the only place
+// that reliably outlives a renderer crash (localStorage writes from a dying
+// renderer turn out to be discardable). Dev-only diagnostics.
+let _bcN = 0;
+const BC = new URLSearchParams(location.search).has('bc')
+  ? (tag) => {
+    // over the live world socket: the server rings the last 40 per client and
+    // prints them when the socket dies — the only observer a renderer crash
+    // cannot take down with it (same-origin tabs share the renderer process,
+    // and localStorage writes from a dying renderer are discardable).
+    try { net.ws?.readyState === 1 && net.ws.send(JSON.stringify({ type: 'bc', tag: `${++_bcN} ${tag}` })); } catch { /* dying */ }
+  }
+  : () => {};
+globalThis.__ewBC = BC;
 
 // ---------------------------------------------------------------- identity
 
@@ -345,16 +361,83 @@ function stepRagdoll(dt) {
 // directed is the point of a performer.
 let posable = localStorage.getItem('ew-posable') === '1';
 function setPosable(v) { posable = v; localStorage.setItem('ew-posable', v ? '1' : '0'); }
+
+// Being SHOVED is a separate consent from being POSED. Posing is directorial —
+// someone else deciding what your body expresses — and stays opt-in. A shove
+// is the world's rough-and-tumble: it moves you without speaking for you, so
+// it defaults ON (the first one tells you how to refuse). Both are still only
+// requests: my client applies them to my body, or doesn't.
+let pushable = localStorage.getItem('ew-pushable') !== '0';
+function setPushable(v) { pushable = v; localStorage.setItem('ew-pushable', v ? '1' : '0'); }
+
+// The hard ceiling on any shove that arrives over the wire, in m/s. The sim
+// has its own stability cap; this one is about the WORLD — nobody gets to
+// launch a body across the map no matter what numbers they put in a message.
+const MAX_PUSH = 6;
+const _shove = new THREE.Vector3();
+
+/** Every external force on my body lands here — a directed push, a blast,
+ *  an undirected knock-over. I own the body, so I simulate: standing → the
+ *  sim starts with this lean; mid-tumble → the running sim takes it as an
+ *  impulse; settled-but-down → a fresh sim starts from the lying pose (a
+ *  corpse can be kicked, and tumbles again). */
+function applyShove(lean, by) {
+  if (!me) return;
+  if (avatarMounts.has(CONFIG.name)) return;      // braced on a seat — v1 punts on knock-offs
+  if (lean && lean.lengthSq() > MAX_PUSH * MAX_PUSH) lean.setLength(MAX_PUSH);
+  if (downed) {
+    if (ragdoll) ragdoll.impulse(lean ?? toppleVelocity());
+    else {
+      // still limp from the last fall (getUp is what clears it) — the new sim
+      // reads the lying pose as its start and the neutral rest as its limits
+      ragdoll = new Ragdoll(me, lean ?? toppleVelocity(), me.restBonePositions());
+      myState.clip = 'ragdoll';
+    }
+  } else {
+    goLimp(lean);
+  }
+  if (by) flashHint(`${by} knocked you over`);
+}
+
 bus.on('puppet', ({ by, pose, anim, ragdoll: rag }) => {
+  // A ragdoll request runs the sim on MY body — I own it, so I simulate and
+  // stream. That is the sync guarantee: the requester never simulates me.
+  if (rag) {
+    if (!pushable) {
+      toast(`${by} tried to knock you over — /pushable on to allow`, 'warn', 6000);
+      return;
+    }
+    // rag is true (undirected — old wire, old clients) or {lean:[x,y,z]} m/s
+    const l = Array.isArray(rag?.lean) && rag.lean.length === 3 && rag.lean.every(Number.isFinite)
+      ? _shove.set(rag.lean[0], rag.lean[1], rag.lean[2]) : null;
+    applyShove(l, by);
+    return;
+  }
   if (!posable) {
     toast(`${by} tried to pose you — enable it in settings to allow`, 'warn', 6000);
     return;
   }
-  // A ragdoll request runs the sim on MY body — I own it, so I simulate and
-  // stream. That is the sync guarantee: the requester never simulates me.
-  if (rag) { goLimp(); flashHint(`${by} knocked you over`); return; }
   if (pose) { myState.pose = pose; flashHint(`${by} posed you`); }
   if (anim) { me?.playAnimation(anim); sendAnim(anim); }
+});
+
+// A force verb reaching us live: an instantaneous radial CAUSE (blast, gust).
+// It folded to nothing — replays and late joiners never re-detonate — and its
+// only effect on my body happens here, gated by the same consent as a push.
+// Linear falloff to the rim; at ground zero direction is meaningless, so you
+// topple the way you were already leaning.
+bus.on('force', ({ actor, at, radius = 4, power = 3 }) => {
+  if (!me || !pushable) return;
+  if (!Array.isArray(at) || at.length !== 3) return;
+  const dx = myState.pos.x - at[0], dz = myState.pos.z - at[2];
+  const d = Math.hypot(dx, dz);
+  if (d > radius) return;
+  const mag = Math.min(MAX_PUSH, power * (1 - d / Math.max(radius, 0.001)));
+  if (mag < 0.3 && !ragdoll) return;             // a breeze, not a blow
+  const lean = d > 0.05
+    ? _shove.set((dx / d) * mag, 0, (dz / d) * mag)
+    : toppleVelocity().setLength(Math.max(mag, 0.5));
+  applyShove(lean, actor);
 });
 
 bus.on('speech', ({ actor, text }) => {
@@ -453,6 +536,60 @@ bus.on('command', ({ cmd, arg }) => {
     return;
   }
   if (cmd === 'gbans') return sendMod('global-bans');
+  if (cmd === 'push') {
+    // /push [name] [power] — a REQUEST to the target's client, which owns the
+    // body and decides (pushable). Range-gated here out of honesty, not
+    // security: a shove is an arm's reach, and the receiver caps magnitude
+    // anyway. No name = the nearest person within reach.
+    const REACH = 2.5;
+    const parts = (arg || '').trim().split(/\s+/).filter(Boolean);
+    const named = parts.find((p) => !/^[\d.]+$/.test(p));
+    // one word, two acts: /push swing1 is the swing's use-reaction (the old
+    // alias, kept working), /push bob is a shove. Things win the name lookup
+    // because they were here first; /shove is always the person verb.
+    if (named && entities.has(named)) { sendVerb('use', { id: named, action: 'push' }); return; }
+    const pow = Math.min(4, Math.max(0.5, parseFloat(parts.find((p) => /^[\d.]+$/.test(p))) || 2.2));
+    let target = named ?? null;
+    if (!target) {
+      let bestD = REACH;
+      for (const [id, r] of remotes) {
+        if (!r.avatar) continue;
+        const d = Math.hypot(r.avatar.root.position.x - myState.pos.x, r.avatar.root.position.z - myState.pos.z);
+        if (d < bestD) { bestD = d; target = id; }
+      }
+      if (!target) return logChat('*', 'nobody within reach to push');
+    }
+    const r = remotes.get(target);
+    if (!r?.avatar) return logChat('*', `${target} isn't here to push`);
+    const tp = r.avatar.root.position;
+    const d = Math.hypot(tp.x - myState.pos.x, tp.z - myState.pos.z);
+    if (d > REACH) return logChat('*', `${target} is too far away to push (${d.toFixed(1)}m)`);
+    // straight through the target from where I stand; face-to-face at zero
+    // distance falls back to the way I'm facing
+    const nx = d > 0.05 ? (tp.x - myState.pos.x) / d : Math.sin(myState.yaw);
+    const nz = d > 0.05 ? (tp.z - myState.pos.z) / d : Math.cos(myState.yaw);
+    sendPuppet(target, { ragdoll: { lean: [nx * pow, 0, nz * pow] } });
+    logChat('*', `you push ${target}`);
+    return;
+  }
+  if (cmd === 'pushable') {
+    const v = (arg || '').trim().toLowerCase();
+    if (v === 'on' || v === 'off') setPushable(v === 'on');
+    return logChat('*', `shoves and blasts ${pushable ? 'CAN' : 'can NOT'} knock you over${v ? '' : ' — /pushable on|off to change'}`);
+  }
+  if (cmd === 'boom') {
+    // /boom [power] [radius] — an instantaneous force verb at my feet. The
+    // server gates it at builder rank and bounds the numbers; every pushable
+    // body in radius (mine included — standing at your own blast is on you)
+    // applies its own shove.
+    const nums = (arg || '').trim().split(/\s+/).map(parseFloat).filter(Number.isFinite);
+    sendVerb('force', {
+      at: [myState.pos.x, myState.pos.y, myState.pos.z],
+      ...(nums[0] ? { power: nums[0] } : {}),
+      ...(nums[1] ? { radius: nums[1] } : {}),
+    });
+    return;
+  }
   if (cmd === 'fork') {
     // /fork <new-name> — copy this world, all history included (owner-only,
     // the server enforces). The reply arrives as a world-forked message.
@@ -614,10 +751,14 @@ function frame(now) {
   const t = now / 1000;
   globalThis._sceneTime = t;
 
+  BC('frame');
   updateAutoSystems(t);          // grass wind, particles
+  BC('motion');
   tickMotion();                  // the world's moving parts (log-authored)
+  BC('sky');
   updateSky(now, t);
 
+  BC('me-drive');
   if (CONFIG.renderer) { /* camera is driven per snap request */ }
   else if (CONFIG.spectate) updateSpectator(dt, CONFIG.follow ? remotes.get(CONFIG.follow) : null);
   else if (downed) stepRagdoll(dt);     // the controller yields while limp
@@ -626,21 +767,30 @@ function frame(now) {
 
   // my own held pose: apply on change so I see what everyone else sees of me.
   // While downed the ragdoll owns setPose directly, so skip this path.
+  BC('held-pose');
   if (!downed && me && myState.pose !== me._poseSig) {
     me._poseSig = myState.pose;
     if (myState.pose) me.setPose(myState.pose); else me.clearPose();
   }
+  BC('me-update');
   me?.update(dt, now);
+  BC('remotes');
   updateRemotes(dt, now);
+  BC('gaze');
   updateGaze(myState.pos, me, CONFIG.name, now);
+  BC('build');
   updateBuild();
+  BC('debug');
   updateDebug(now);              // collider/ragdoll wireframes, when F3 is up
+  BC('send-pose');
   sendPose(now);
 
   // A held frame = a whole-scene pipeline settle is in progress (sky arrival
   // invalidates everything at once). Presentation pauses for one bounded
   // beat; everything above still ticked, so the world snaps current on resume.
+  BC('render');
   if (!framesHeld()) renderer.render(scene, camera);
+  BC('post-render');
 
   frames++;
   if (now - fpsAt > 1000) {
@@ -742,8 +892,9 @@ startPrefetch().catch((e) => report('prefetch', e));
 // ---------------------------------------------------------------- debug
 
 globalThis.EW = {
-  me: () => me, remotes, entities, myState, THREE, net, scene, camera, renderer,
+  me: () => me, remotes, entities, myState, THREE, net, scene, camera, renderer, bus,
   skyArgs, sendVerb, setPosable, get posable() { return posable; },
+  setPushable, get pushable() { return pushable; },
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)

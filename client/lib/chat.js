@@ -287,6 +287,9 @@ const COMMANDS = [
   ['/me', 'describe an action — "/me waves"'],
   ['/emote', '/emote dance · wave cheer dance point salute clap'],
   ['/sit', 'sit down, on a seat if one is near'],
+  ['/push', '/push [name] [power] — shove someone within reach (their client decides); /push <thing> works the thing'],
+  ['/pushable', '/pushable on|off — whether shoves and blasts can knock you over (on by default)'],
+  ['/boom', '/boom [power] [radius] — a blast where you stand, you included (builder)'],
   ['/who', 'list everyone present'],
   ['/role', 'what you may do here (or /role <name>)'],
   ['/grant', '/grant <name> owner|builder|visitor [+gen|-gen] — owner only'],
@@ -413,9 +416,12 @@ function runCommand(raw) {
       // /debug [n] — the world's flight recorder: why things bounced
       bus.emit('command', { cmd: 'debug', arg });
       return true;
-    case 'use': case 'push': case 'pull': case 'ring': case 'open':
+    case 'use': case 'pull': case 'ring': case 'open':
       // /use <thing> [action] — the universal interact. The aliases are the
-      // same verb with the action already in hand: /push swing1.
+      // same verb with the action already in hand: /pull lever1.
+      // (/push is NOT in this row: it goes through the push command, which
+      // sorts people from things — pushing a swing and shoving a person are
+      // different acts that share a word.)
       bus.emit('command', {
         cmd: 'use',
         arg: cmd.toLowerCase() === 'use' ? arg : `${arg} ${cmd.toLowerCase()}`.trim(),
@@ -430,6 +436,15 @@ function runCommand(raw) {
     case 'kick': case 'ban': case 'unban': case 'bans':
     case 'gban': case 'gunban': case 'gbans':
       bus.emit('command', { cmd: cmd.toLowerCase(), arg });
+      return true;
+    case 'push': case 'shove':
+      bus.emit('command', { cmd: 'push', arg });
+      return true;
+    case 'pushable':
+      bus.emit('command', { cmd: 'pushable', arg });
+      return true;
+    case 'boom': case 'blast':
+      bus.emit('command', { cmd: 'boom', arg });
       return true;
     case 'fork': case 'copy':
       bus.emit('command', { cmd: 'fork', arg });

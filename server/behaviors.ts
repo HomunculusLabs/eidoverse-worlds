@@ -71,7 +71,11 @@ export const behaviorLimits = { MAX_BEHAVIORS_PER_WORLD };
 // Default capability mask: enough to make things talk and move, nothing that
 // reshapes the world. Authors can only NARROW this list, never widen past
 // their own rights (emits are also checked against the author's live role).
-const DEFAULT_CAPS = ["say", "motion", "comp", "place", "use", "light"];
+// `force` is in the defaults deliberately: a trap that springs, a geyser, a
+// gust machine — physical events are what behaviors are FOR, the verb is
+// hard-bounded server-side, and every body's own pushable consent still
+// gates whether anyone actually falls over.
+const DEFAULT_CAPS = ["say", "motion", "comp", "place", "use", "light", "force"];
 
 // ---------------------------------------------------------------- quickjs
 let QJS: any = null;

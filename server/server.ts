@@ -246,6 +246,10 @@ function trimRecentChat(rc: WorldState["recentChat"]): void {
 function foldEntry(st: WorldState, e: LogEntry): void {
   const a = e.args as any;
   switch (e.verb) {
+    case "force":
+      // an instantaneous cause: no state to fold. Live clients react to the
+      // broadcast entry; a replay or a late join must never re-detonate.
+      return;
     case "spawn":
       if (!a?.id || !a?.lib) return;
       st.entities[a.id] = {
@@ -579,6 +583,10 @@ const VERB_NEEDS: Record<string, { rank: number; gen?: boolean }> = {
   // (`bstate` is deliberately absent: only the server writes script state.)
   behavior: { rank: 1 },
   spawn: { rank: 1 }, place: { rank: 1 }, remove: { rank: 1 }, light: { rank: 1 },
+  // An instantaneous radial push (blast, gust). Authoring a physical event is
+  // building; whether any BODY moves stays each body's own consent (pushable,
+  // client-side) — this rank only stops visitors from spamming detonations.
+  force: { rank: 1 },
   asset: { rank: 1, gen: true },
   terrain: { rank: 2 }, grass: { rank: 2 }, sky: { rank: 2 }, weather: { rank: 2 },
   grant: { rank: 2 },
@@ -1587,6 +1595,11 @@ const server = Bun.serve({
       const c = clients.get(ws);
       if (!c) return;
       clients.delete(ws);
+      // dev crash forensics (?bc=1 clients): the last thing a dying renderer
+      // was doing, printed at the only moment we learn it died
+      if ((c as any).bcRing?.length) {
+        console.log(`[bc] ${c.id} last breadcrumbs: ${(c as any).bcRing.join(" | ")}`);
+      }
       if (c.world) {
         c.world.clients.delete(c);
         if (!c.spectator) {
@@ -1823,6 +1836,21 @@ const server = Bun.serve({
             }
             args = { id, ...(role != null ? { role } : {}), ...(gen != null ? { gen } : {}) };
           }
+          if (msg.verb === "force") {
+            // shape-check before it becomes history: {at:[x,y,z], radius?,
+            // power?}. Bounded HARD — the receiver caps what it applies to
+            // itself, but the log should never carry a number that reads as a
+            // weapon, and a replayed entry must be as harmless as a live one
+            // is consensual.
+            const at = Array.isArray(args.at) ? (args.at as unknown[]).map(Number) : null;
+            if (!at || at.length !== 3 || at.some((n) => !Number.isFinite(n))) {
+              ws.send(JSON.stringify({ type: "error", error: "force wants {at: [x,y,z], radius?, power?}" }));
+              return;
+            }
+            const radius = Math.min(30, Math.max(0.5, Number(args.radius ?? 4)));
+            const power = Math.min(12, Math.max(0.2, Number(args.power ?? 3)));
+            args = { at, radius, power };
+          }
           if (msg.verb === "comp") {
             // shape-check before it becomes history: {id, type, data|null}.
             // data is opaque but BOUNDED — components are parameters, not
@@ -2049,8 +2077,25 @@ const server = Bun.serve({
           const to = String(msg.target ?? "").slice(0, 64);
           const tc = [...c.world.clients].find((o) => o.id === to && !o.spectator);
           if (!tc) { ws.send(JSON.stringify({ type: "error", error: `${to || "target"} isn't here to pose` })); return; }
-          tc.ws.send(JSON.stringify({ type: "puppet", by: c.id, pose: msg.pose ?? null, anim: msg.anim ?? null, ragdoll: msg.ragdoll ?? null }));
+          // ragdoll rides as `true` (undirected knock-over, the old wire) or
+          // {lean:[x,y,z]} m/s — which way the shove sends them. Sanitize to
+          // exactly those two shapes; the receiver caps magnitude for itself.
+          let rag: true | { lean: number[] } | null = null;
+          if (msg.ragdoll === true) rag = true;
+          else if (msg.ragdoll && Array.isArray((msg.ragdoll as { lean?: unknown }).lean)) {
+            const lean = ((msg.ragdoll as { lean: unknown[] }).lean).map(Number);
+            if (lean.length === 3 && lean.every(Number.isFinite)) rag = { lean };
+          }
+          tc.ws.send(JSON.stringify({ type: "puppet", by: c.id, pose: msg.pose ?? null, anim: msg.anim ?? null, ragdoll: rag }));
           break;
+        }
+        case "bc": {
+          // dev crash forensics: keep the client's last N breadcrumbs in
+          // memory, printed on disconnect (see close). Never persisted.
+          const ring = ((c as any).bcRing ??= []);
+          ring.push(String(msg.tag ?? "").slice(0, 64));
+          if (ring.length > 40) ring.shift();
+          return;
         }
         case "typing": {
           // Pure presence: who is composing, right now. Never logged, never

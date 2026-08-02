@@ -548,15 +548,18 @@ export class Avatar {
   }
 
   update(dt, now = performance.now()) {
+    const BC = globalThis.__ewBC ?? (() => {});
     // emote expiry
     if (this.emote && now > this.emote.until) this.cancelEmote();
 
+    BC('av:mixer');
     this.mixer.update(dt);
 
     // While limp the clip keeps running (see setLimp for why stopping it is a
     // trap) — so the bones the sim does not drive have to be re-parked after
     // every mixer write, or the locomotion clip goes on animating the
     // shoulders, hands and fingers of a corpse.
+    BC('av:park');
     if (this._limp) this._park();
 
     // ---- bone edits must land BETWEEN the mixer and vrm.update.
@@ -576,6 +579,7 @@ export class Avatar {
     // an XYZ Euler — adding to x is a pre-rotation in the parent frame — but
     // the quaternion form says so outright instead of leaning on the decompose
     // order of whatever the clip left in the bone.
+    BC('av:head');
     if (this.head && !this._limp) {
       const r = this._composeBegin(this.head);
       if (this.pitch) {
@@ -584,6 +588,7 @@ export class Avatar {
       }
       this._composeEnd(this.head, r);
     }
+    BC('av:override');
     if (this._override) this._applyOverride(dt, now);
 
     // ---- gaze: ease the target so eyes track instead of snapping
@@ -616,7 +621,9 @@ export class Avatar {
       } else em.setValue('aa', 0);
     }
 
+    BC('av:gaze-expr');
     this.vrm.update(dt);
+    BC('av:plates');
 
     // ---- nameplate: fade with distance and stop screaming across the stage.
     // depthTest is off (labels must not be eaten by your own shoulder), so

@@ -124,6 +124,19 @@ console.log("1. fresh world: first embodied joiner becomes owner");
   await a.settle();
   check("wildcard cannot be owner", a.errors.some((e) => e.includes("cannot own")));
 
+  console.log("4b. force: builders detonate, visitors don't");
+  const cErrs = c.errors.length;
+  c.verb("force", { at: [0, 0, 0], power: 3 });
+  await c.settle();
+  check("visitor cannot emit a force", c.errors.length > cErrs, "force went through");
+  const bErrs = b.errors.length;
+  b.verb("force", { at: [1, 0, 1], power: 3, radius: 5 });
+  await b.settle();
+  check("builder can emit a force", b.errors.length === bErrs, b.errors.slice(bErrs).join("; "));
+  b.verb("force", { at: "everywhere" });
+  await b.settle();
+  check("malformed force is refused, not history", b.errors.some((e) => e.includes("force wants")));
+
   a.close(); b.close(); c.close();
 }
 

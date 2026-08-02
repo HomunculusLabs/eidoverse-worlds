@@ -659,8 +659,10 @@ export class WorldAgent {
     }
   }
 
-  /** Ask another body to hold a pose or play an animation. It decides. */
-  puppet(target: string, spec: { pose?: Record<string, number[]>; anim?: unknown; ragdoll?: boolean }) {
+  /** Ask another body to hold a pose or play an animation. It decides.
+   *  `ragdoll: true` asks it to go limp; `{lean:[x,y,z]}` (m/s) says which
+   *  way the shove sends it — the receiver simulates and caps for itself. */
+  puppet(target: string, spec: { pose?: Record<string, number[]>; anim?: unknown; ragdoll?: boolean | { lean: number[] } }) {
     if (this.joined && this.ws?.readyState === 1) {
       this.ws.send(JSON.stringify({ type: "puppet", target,
         pose: spec.pose ?? null, anim: spec.anim ?? null, ragdoll: spec.ragdoll ?? null }));

@@ -372,6 +372,14 @@ export async function applyEntry(entry, live, ctx = {}) {
         // their own log entries. Surfaced for UI/behaviors that care.
         if (live) bus.emit('use', { actor, ...args });
         break;
+      case 'force':
+        // an instantaneous radial cause (blast, gust): no state to fold, so a
+        // replay never re-detonates — the log keeps the historical fact, and
+        // only bodies present at the moment feel it (main.js applies it to
+        // MY body under my own consent; everyone else's tumble arrives as
+        // their streamed poses, like any motion of theirs).
+        if (live) bus.emit('force', { actor, ...args });
+        break;
       default:
         // Unknown verbs are not errors — a newer client may author verbs this
         // one doesn't render yet, and the log must stay forward-compatible.

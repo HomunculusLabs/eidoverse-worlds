@@ -338,18 +338,7 @@ export class Ragdoll {
     // flop. Toppling spends the same energy on rotation instead: measured
     // across the fleet, worst foot speed after landing 4.1 -> 1.6 m/s, and it
     // settles sooner rather than later.
-    if (lean) {
-      let lo = Infinity, hi = -Infinity;
-      for (const j of JOINTS) {
-        const p = this.p[j]; if (!p) continue;
-        if (p.y < lo) lo = p.y;
-        if (p.y > hi) hi = p.y;
-      }
-      const span = (hi - lo) || 1;
-      for (const j of JOINTS) {
-        if (this.prev[j]) this.prev[j].addScaledVector(lean, -(this.p[j].y - lo) / span * FIXED_DT);
-      }
-    }
+    if (lean) this._topple(lean);
 
     // inverse mass. A missing entry gets the lightest plausible weight rather
     // than infinite mass — an unpinned particle that never moves is worse.
@@ -849,6 +838,43 @@ export class Ragdoll {
       }
       if (changed) this._swing(H.b, H.c, _b, lb);
     }
+  }
+
+  /** Apply a velocity height-weighted about the lowest joint: none at the
+   *  bottom, all of it at the top. On a standing body that is a topple about
+   *  the feet (see the constructor note); on a lying one the span is shallow,
+   *  so the same rule rolls it away from the push instead. */
+  _topple(lean) {
+    let lo = Infinity, hi = -Infinity;
+    for (const j of JOINTS) {
+      const p = this.p[j]; if (!p) continue;
+      if (p.y < lo) lo = p.y;
+      if (p.y > hi) hi = p.y;
+    }
+    const span = (hi - lo) || 1;
+    for (const j of JOINTS) {
+      if (this.prev[j]) this.prev[j].addScaledVector(lean, -(this.p[j].y - lo) / span * FIXED_DT);
+    }
+  }
+
+  /** Shove a body whose sim is still running — a second push landing on
+   *  someone already going down, or a blast reaching a body mid-tumble.
+   *  Same application as the constructor's lean. Wire-borne shoves are capped
+   *  at the trust boundary (main.js), and once more here: the sim protects
+   *  its own stability rather than assuming every caller was polite.
+   *  @param v THREE.Vector3, m/s. */
+  impulse(v) {
+    if (this.done) return;
+    _v.copy(v);
+    const cap = 8;
+    if (_v.lengthSq() > cap * cap) _v.setLength(cap);
+    this._topple(_v);
+    // The body is moving again: settle starts over, and so does the deadline —
+    // a shove at 7.9s of an 8s window must not capture a body still in the
+    // air. Restarting elapsed grants the new motion the same full window the
+    // original fall had.
+    this.settledFor = 0;
+    this.elapsed = 0;
   }
 
   /** Advance the sim and push the result into the avatar as a held pose.

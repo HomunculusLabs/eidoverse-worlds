@@ -354,5 +354,87 @@ console.log('\nbodies and furniture:');
   COL.clearColliders();
 }
 
+// ---------------------------------------------------------------------------
+// impulse: shoves that land on a body already in flight, or already down.
+// This is the wire path — puppet {lean} and the force verb both end here.
+// ---------------------------------------------------------------------------
+console.log('\nimpulse (the wire-borne shove):');
+{
+  // Mid-tumble: a sideways shove half a second into every rig's fall. The
+  // invariants must hold THROUGH the interruption — everything still comes to
+  // rest, keeps its bone lengths, stays above ground, captures finite — and
+  // the shove must actually MOVE the body the way it points.
+  const bad: Record<string, string[]> = { rest: [], stretch: [], under: [], finite: [], moved: [] };
+  for (const rig of FLEET) {
+    const av = makeAvatar(rig.P);
+    const rd: any = new Ragdoll(av, toppleLean(), av.restBonePositions());
+    const x0 = rd.p.hips.x;
+    let steps = 0;
+    while (!rd.done && steps < 1400) {
+      if (steps === 30) rd.impulse(new THREE.Vector3(2.5, 0, 0));
+      rd.step(1 / 60); steps++;
+    }
+    if (!rd.done) { bad.rest.push(`${rig.name}(never captured)`); continue; }
+    if (rd.maxV > 0.1) bad.rest.push(`${rig.name}(flailing at capture, v=${rd.maxV.toFixed(3)})`);
+    if (stretchOf(rd) > 0.10) bad.stretch.push(`${rig.name}(${(stretchOf(rd) * 100).toFixed(0)}%)`);
+    if (Object.keys(rd.p).some((j: string) => rd.p[j].y < -0.01)) bad.under.push(rig.name);
+    const q = Object.values(rd.finalPose ?? {});
+    if (!q.length || !q.every((a: any) => a.length === 4 && a.every(Number.isFinite))) bad.finite.push(rig.name);
+    if (rd.p.hips.x - x0 < 0.05) bad.moved.push(`${rig.name}(Δx=${(rd.p.hips.x - x0).toFixed(2)})`);
+  }
+  const none = (k: string) => bad[k].length === 0;
+  check('a mid-tumble shove still comes to rest', none('rest'), bad.rest.join(' '));
+  check('...bone lengths survive it (≤10%)', none('stretch'), bad.stretch.join(' '));
+  check('...nothing driven underground', none('under'), bad.under.join(' '));
+  check('...capture stays finite', none('finite'), bad.finite.join(' '));
+  check('...and the body goes the way it was shoved', none('moved'), bad.moved.join(' '));
+
+  // The deadline restarts with the motion: a shove at 7.9s of an 8s window
+  // must not capture a body still in the air. impulse() grants the new motion
+  // the same full window the original fall had.
+  {
+    const rd: any = new Ragdoll(synth(), toppleLean(), null);
+    // shove while the tumble is still LIVE — a captured sim ignores impulses
+    // by design (main.js starts a fresh one instead: the corpse-kick below)
+    for (let i = 0; i < 45 && !rd.done; i++) rd.step(1 / 60);
+    const before = rd.elapsed;
+    rd.impulse(new THREE.Vector3(1, 0, 0));
+    check('impulse restarts the settle clock and the deadline',
+      !rd.done && rd.elapsed === 0 && rd.settledFor === 0 && before > 0.5,
+      `done=${rd.done} elapsed ${before.toFixed(2)} -> ${rd.elapsed}`);
+  }
+
+  // The sim caps what it will accept: a hostile magnitude must not shatter
+  // the body, whatever the trust boundary upstream let through.
+  {
+    const av = synth();
+    const rd: any = new Ragdoll(av, null, av.restBonePositions());
+    for (let i = 0; i < 30; i++) rd.step(1 / 60);
+    rd.impulse(new THREE.Vector3(1000, 0, 0));
+    let steps = 0;
+    while (!rd.done && steps < 1400) { rd.step(1 / 60); steps++; }
+    check('a hostile 1000 m/s shove is capped, not obeyed',
+      rd.done && stretchOf(rd) < 0.10 && Object.values(rd.p).every((p: any) => Number.isFinite(p.x)),
+      `done=${rd.done} stretch=${(stretchOf(rd) * 100).toFixed(0)}%`);
+  }
+
+  // Kicking the corpse: a settled body shoved again starts a FRESH sim from
+  // its lying pose (main.js re-limp path — downed, ragdoll already handed
+  // off). It must tumble again, move, and come back to rest.
+  {
+    const av = synth();
+    const first = run(av, toppleLean());
+    check('corpse-kick precondition: the first fall captured', first.rd.done);
+    av.root.updateMatrixWorld(true);
+    const rd2: any = new Ragdoll(av, new THREE.Vector3(3, 0, 0), av.restBonePositions());
+    const x0 = rd2.p.hips.x;
+    let steps = 0;
+    while (!rd2.done && steps < 1400) { rd2.step(1 / 60); steps++; }
+    check('a settled body can be kicked into a fresh tumble',
+      rd2.done && rd2.p.hips.x - x0 > 0.1 && stretchOf(rd2) < 0.10,
+      `done=${rd2.done} Δx=${(rd2.p.hips.x - x0).toFixed(2)} stretch=${(stretchOf(rd2) * 100).toFixed(0)}%`);
+  }
+}
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

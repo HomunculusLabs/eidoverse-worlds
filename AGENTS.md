@@ -36,7 +36,16 @@ motion  {id, type, ...params, t0}         # type: pendulum|spin|orbit|bob|path
 mount   {id, to, slot?, offset?, yaw?}    # id rides to; yourself = rank 0
 dismount{id, pos?, yaw?}                  # STAMP the absolute pose you rest at
 use     {id, action}                      # the universal interact, rank 0
+force   {at:[x,y,z], radius?, power?}     # instantaneous radial push, rank 1
 ```
+
+`force` is a physical CAUSE, not state: it folds to nothing (replays never
+re-detonate) and knocks over every body in `radius` that permits it — each
+person's client owns that choice (`/pushable off` refuses), and each tumbles
+away from `at` under its own simulation, streamed like any pose. radius caps
+at 30, power at 12. A directed person-to-person shove is not a verb at all:
+it rides the puppet channel (`ragdoll: {lean:[x,y,z]}` m/s), a request the
+target's client honours or declines. Humans have `/push` for it.
 
 The swing, as a recipe (this exact sequence is tested in `tools/comptest.ts`):
 
@@ -58,8 +67,8 @@ data: {...}}` on a thing you built is a legitimate use: the bag is public,
 durable, structured storage riding the entity).
 
 **Rights:** `say`/`use`/self-`mount` = everyone; `spawn`/`place`/`comp`/
-`motion`/cargo-`mount` = builder; terrain/sky/grant = owner; new assets =
-the `gen` capability. If a verb bounces, the reason is in the flight
+`motion`/`force`/cargo-`mount` = builder; terrain/sky/grant = owner; new
+assets = the `gen` capability. If a verb bounces, the reason is in the flight
 recorder (below).
 
 ### 2. Runtime scripts — code that lives IN the world (Layer 2, live)

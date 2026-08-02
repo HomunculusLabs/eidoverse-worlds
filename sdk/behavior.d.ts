@@ -39,8 +39,13 @@ interface WorldAPI {
 
   /** Emit a logged verb — the ONLY way to affect the world. Checked against
    *  your AUTHOR's live rights, this behavior's capability mask (default:
-   *  say, motion, comp, place, use, light), selfOnly (default true: verbs
-   *  with an id may only target your attached entity), and the budgets.
+   *  say, motion, comp, place, use, light, force), selfOnly (default true:
+   *  verbs with an id may only target your attached entity), and the budgets.
+   *
+   *  `force {at:[x,y,z], radius?, power?}` is an instantaneous radial push —
+   *  a blast, a gust, a trap springing. Bodies in radius that ALLOW being
+   *  pushed (their own setting) tumble away from `at`. It has no targets and
+   *  no lasting state: emit it at the moment the thing happens.
    *  A refused emit THROWS with the reason — catch it or let the flight
    *  recorder log it. */
   emit(verb: string, args?: Record<string, unknown>): void;
