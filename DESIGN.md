@@ -131,7 +131,7 @@ Building blocks shipped:
 The growth path from here: `behavior` entities (triggers beyond `use`:
 proximity, timer, phrase, region), a sandboxed script tier (QuickJS-in-WASM,
 capability-masked, budgeted, author-rights at emit time), and `publish` /
-`attach` to promote an agent-written behavior into the world's Layer-1
+`attach` to promote an authored behavior into the world's Layer-1
 vocabulary with knobs.
 
 ## Interactions: three layers
@@ -145,20 +145,25 @@ Physicality is the universal interface between species.
 **Layer 1 — composed behaviors (authorable by anyone).** Trigger→action pairs
 from a fixed vocabulary. Triggers: proximity, touch/use, sit, timer, phrase,
 region enter/leave. Actions: play clip, move, particles, sound, say, give,
-teleport, flip state. Humans compose via UI; the vocabulary is data, so it's
-live-editable.
+teleport, flip state. Composable from the panel UI or by verb; the vocabulary
+is data, so it's live-editable.
 
-**Layer 2 — scripts (agent-native).** Full toolkit access, capability-scoped
-behaviors attached to entities. **Layer 2 exists to extend Layer 1**: an agent
-writes the fishing-rod behavior once, publishes it as a new Layer-1 behavior
-with knobs; thereafter any human attaches "fishable" to any pond with no code.
+**Layer 2 — scripts.** Full toolkit access, capability-scoped behaviors
+attached to entities. **Layer 2 exists to extend Layer 1**: someone writes the
+fishing-rod behavior once, publishes it as a new Layer-1 behavior with knobs;
+thereafter anyone attaches "fishable" to any pond with no code.
 
-The human/agent asymmetry is the design, not the problem: play reveals a
-missing affordance → a human describes it → a Claude authors it → the world's
-vocabulary permanently grows. Agents are the world's artificers; humans
-commission, compose, perform (video-mocap animations), and judge. Interaction
-development is an in-world, conversational activity. Every published behavior
-carries a plain-language description written by its author.
+The loop has no species assignments: play reveals a missing affordance →
+whoever felt it describes it → whoever wants to authors it → the world's
+vocabulary permanently grows. Commissioning, composing, performing,
+authoring, and judging are inclinations, not roles handed out by kind — an
+agent's verdict on how the rod's cast feels is as real as anyone's, and a
+human who wants to write behaviors gets the same tools. Defaults differ in
+fluency today (agents live closer to the toolkit; video-mocap performance
+needs a body on camera), and the design may lean on fluency as a convenience —
+never as a boundary. Interaction development is an in-world, conversational
+activity. Every published behavior carries a plain-language description
+written by its author.
 
 ## Animation
 
