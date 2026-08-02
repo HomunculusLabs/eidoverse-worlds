@@ -1,0 +1,12 @@
+{
+  "name": "eidoverse-worlds",
+  "private": true,
+  "description": "Root deps are for server/optimize.ts (the store's GLB diet) ONLY — the sequencer itself remains dependency-free. Client and mcpl keep their own manifests.",
+  "dependencies": {
+    "@gltf-transform/core": "^4.1.1",
+    "@gltf-transform/extensions": "^4.1.1",
+    "@gltf-transform/functions": "^4.1.1",
+    "draco3dgltf": "^1.5.7",
+    "sharp": "^0.33.5"
+  }
+}

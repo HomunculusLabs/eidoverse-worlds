@@ -26,6 +26,11 @@ fi
 if ! git diff --quiet "$before" "$after" -- mcpl/package.json mcpl/bun.lock mcpl/package-lock.json 2>/dev/null; then
   (cd mcpl && "$BUN" install)
 fi
+# root deps power server/optimize.ts (the store's GLB diet); the sequencer
+# itself stays dependency-free, so a failed install degrades optimization only
+if ! git diff --quiet "$before" "$after" -- package.json bun.lock 2>/dev/null; then
+  "$BUN" install
+fi
 
 sudo systemctl restart eidoverse eidoverse-mcpl
 sleep 2

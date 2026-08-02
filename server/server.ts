@@ -6,7 +6,7 @@
 // No world manifest: everything about a world arrives through its log.
 
 import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, renameSync, readdirSync, copyFileSync } from "node:fs";
-import { join, resolve, normalize } from "node:path";
+import { join, resolve, normalize, basename } from "node:path";
 import { randomBytes } from "node:crypto";
 import { verifyToken, JtiCache } from "./aid1.ts";
 
@@ -57,6 +57,11 @@ const WORLDS_DIR = resolve(process.env.WORLDS_DIR ?? join(ROOT, "worlds"));
 // The eidoverse-video checkout = the asset library (models, VRMs, animations).
 const LIBRARY_DIR = resolve(process.env.EIDOVERSE_DIR ?? join(ROOT, "..", "eidoverse-video"));
 const OPT_DIR = join(ROOT, "assets", "opt");
+// Optimized shadows of store uploads (draco+webp@1024, see server/optimize.ts).
+// Originals in store/ are never touched; /library serving prefers a store-min
+// sibling when one exists. `.failed` markers stop hopeless files from being
+// retried every boot.
+const STORE_MIN = join(OPT_DIR, "store-min");
 
 mkdirSync(WORLDS_DIR, { recursive: true });
 
@@ -772,6 +777,63 @@ let nextClientNum = 1;
 const clients = new Map<unknown, Client>();
 const uploadWin = new Map<string, { t: number; n: number }>(); // per-IP upload rate windows
 
+// ---- store optimization -----------------------------------------------------
+// Every uploaded GLB (drag-drop, Orrery conjures) gets a draco+webp shadow in
+// store-min/, built by a SUBPROCESS — draco encoding is CPU-seconds of
+// synchronous wasm, and inside this process it would freeze pose relay for
+// every world. One file at a time; the sequencer never waits on it.
+const optQueue: string[] = [];
+let optRunning = false;
+function queueOptimize(absPath: string) {
+  if (!optQueue.includes(absPath)) { optQueue.push(absPath); pumpOptimize(); }
+}
+async function pumpOptimize() {
+  if (optRunning) return;
+  optRunning = true;
+  try {
+    while (optQueue.length) {
+      const src = optQueue.shift()!;
+      const base = basename(src);                      // <hash>.glb
+      const dest = join(STORE_MIN, base);
+      const failed = join(STORE_MIN, `${base}.failed`);
+      if (!existsSync(src) || existsSync(dest) || existsSync(failed)) continue;
+      mkdirSync(STORE_MIN, { recursive: true });
+      // process.execPath = the running bun binary — PATH under systemd has no bun
+      const proc = Bun.spawn([process.execPath, "run", join(ROOT, "server", "optimize.ts"), src, dest],
+        { stdout: "pipe", stderr: "pipe" });
+      const code = await proc.exited;
+      const err = (await new Response(proc.stderr).text()).trim();
+      if (code === 0) {
+        const ratio = (Bun.file(src).size / Math.max(1, Bun.file(dest).size)).toFixed(1);
+        console.log(`[store] optimized ${base} (${ratio}x)`);
+      } else if (code === 2) {
+        // already lean — mark so the boot sweep stops re-measuring it
+        writeFileSync(failed, "not-smaller");
+        console.log(`[store] ${base} already lean — serving original`);
+      } else {
+        // Environmental failures (deps not installed yet) must NOT mark the
+        // file — that would permanently skip every upload made before the
+        // first successful `bun install`. Only content failures stick.
+        const envFail = /cannot find module|cannot resolve|error: script not found/i.test(err);
+        if (!envFail) writeFileSync(failed, err.slice(0, 2000) || `exit ${code}`);
+        console.error(`[store] optimize ${envFail ? "unavailable (deps?)" : `FAILED ${base}`}: ${err.split("\n")[0] || `exit ${code}`}`);
+        if (envFail) { optQueue.length = 0; break; } // no point grinding the rest
+      }
+    }
+  } finally { optRunning = false; }
+}
+// Boot sweep: whatever accumulated before this shipped (or failed mid-queue
+// last run) gets its shadow now. Deferred so boot stays about serving worlds.
+setTimeout(() => {
+  const dir = join(OPT_DIR, "store");
+  if (!existsSync(dir)) return;
+  const pending = readdirSync(dir).filter((f) => f.endsWith(".glb")
+    && !existsSync(join(STORE_MIN, f)) && !existsSync(join(STORE_MIN, `${f}.failed`)));
+  if (!pending.length) return;
+  console.log(`[store] boot sweep: ${pending.length} unoptimized upload(s) queued`);
+  for (const f of pending) queueOptimize(join(dir, f));
+}, 5000);
+
 // -------------------------------------------------------------- http + ws
 
 function contentType(path: string): string {
@@ -971,6 +1033,7 @@ const server = Bun.serve({
       mkdirSync(dir, { recursive: true });
       const rel = `store/${hash}.glb`;
       if (!existsSync(join(OPT_DIR, rel))) writeFileSync(join(OPT_DIR, rel), body);
+      queueOptimize(join(OPT_DIR, rel)); // draco+webp shadow, built off the request path
       // The store is content-addressed, so the human name arrives ONLY here —
       // record it, or the catalog can never list this object as anything but
       // a hash (an orrery send used to vanish into exactly that black hole).
@@ -1160,6 +1223,14 @@ const server = Bun.serve({
       const rel = url.pathname.slice("/library/".length);
       // optimized mirror first (draco+webp): same path, ~30x smaller
       const versioned = url.searchParams.has("v") || rel.startsWith("store/"); // content-addressed = immutable
+      // store uploads: prefer the store-min shadow — same address, the
+      // original stays as provenance and as the fallback while (or if) the
+      // optimize pass hasn't landed for this hash
+      if (rel.startsWith("store/")) {
+        const minRel = `store-min/${rel.slice("store/".length)}`;
+        const min = normalize(join(OPT_DIR, minRel));
+        if (min.startsWith(OPT_DIR) && existsSync(min)) return serveFrom(OPT_DIR, minRel, true, req, true);
+      }
       const opt = normalize(join(OPT_DIR, rel));
       if (opt.startsWith(OPT_DIR) && existsSync(opt)) return serveFrom(OPT_DIR, rel, true, req, versioned);
       return serveFrom(LIBRARY_DIR, rel, true, req, versioned);

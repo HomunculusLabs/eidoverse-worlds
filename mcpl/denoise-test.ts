@@ -1,0 +1,151 @@
+/**
+ * Denoise gate test — no servers needed. Exercises the four noise classes
+ * from Fable's 2026-08-02 field report:
+ *   1. arrive/leave flaps collapse to nothing (both directions)
+ *   2. posture/emote cycles: refractory + short-stint "gets up" swallow
+ *   3. self-echo: own say never fans out as an event
+ *   4. approach: hysteresis re-arm + long refractory
+ *
+ * Run: cd mcpl && bun run denoise-test.ts
+ * (env windows are shrunk below BEFORE the modules load — order matters)
+ */
+
+process.env.EW_ARRIVE_HOLD_SEC = "0.05";
+process.env.EW_LEAVE_HOLD_SEC = "0.05";
+process.env.EW_PRESENCE_TAU_SEC = "1000";   // effectively no decay within the test
+process.env.EW_ACT_REFRACT_SEC = "0.2";
+process.env.EW_STINT_MIN_SEC = "0.15";
+process.env.EW_APPROACH_REFRACT_SEC = "0.3";
+
+const { NoiseGate } = await import("./denoise.ts");
+const { WorldAgent } = await import("./agent.ts");
+
+let failures = 0;
+const check = (label: string, ok: boolean, detail?: string) => {
+  console.log(ok ? `  \x1b[32m✓\x1b[0m ${label}` : `  \x1b[31m✗ ${label}${detail ? ` — ${detail}` : ""}\x1b[0m`);
+  if (!ok) failures++;
+};
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+// ---- 1. presence: hold-and-cancel + battery --------------------------------
+console.log("\n━━ presence: flaps collapse, real events pass, chronic noise drains ━━");
+{
+  const out: string[] = [];
+  const gate = new NoiseGate((ev) => out.push(`${ev.kind}:${ev.who}`));
+
+  gate.presence("digi", "arrive");
+  await sleep(120);
+  check("real arrive emits after the hold", out.join(",") === "arrive:digi", out.join(","));
+
+  out.length = 0;
+  gate.presence("digi", "leave");
+  await sleep(10);
+  gate.presence("digi", "arrive"); // reconnect flap
+  await sleep(120);
+  check("leave→arrive flap collapses to nothing", out.length === 0, out.join(","));
+  check("flap counted in stats", gate.stats.flapsCollapsed === 1, String(gate.stats.flapsCollapsed));
+
+  out.length = 0;
+  gate.presence("fc", "arrive");
+  await sleep(10);
+  gate.presence("fc", "leave"); // smoke-test visit
+  await sleep(120);
+  check("arrive→leave brief visit collapses to nothing", out.length === 0, out.join(","));
+
+  // battery: real pairs beyond the hold window still drain the identity
+  out.length = 0;
+  for (let i = 0; i < 3; i++) {
+    gate.presence("flappy", "leave");
+    await sleep(90);
+    gate.presence("flappy", "arrive");
+    await sleep(90);
+  }
+  check("repeated real pairs: first pair narrated, rest silenced by charge",
+    out.length === 2 && gate.stats.presenceDropped >= 3,
+    `emitted=${out.join(",")} dropped=${gate.stats.presenceDropped}`);
+  gate.dispose();
+}
+
+// ---- 2. acts: per-(person, act) refractory ---------------------------------
+console.log("\n━━ acts: a burst speaks once per window ━━");
+{
+  const out: string[] = [];
+  const gate = new NoiseGate((ev) => out.push(ev.text!));
+  for (let i = 0; i < 5; i++) gate.act("digi", "clip:jump", 'starts "jump"');
+  check("5 rapid jumps → 1 event", out.length === 1, String(out.length));
+  gate.act("digi", "emote:dance", "emotes: dance");
+  check("a DIFFERENT act from the same person still speaks", out.length === 2, out.join(" | "));
+  await sleep(250);
+  gate.act("digi", "clip:jump", 'starts "jump"');
+  check("after the refractory the act speaks again", out.length === 3, String(out.length));
+  gate.dispose();
+}
+
+// ---- agent-level: jump stint, self-echo, approach --------------------------
+console.log("\n━━ agent: jump = one thing not two; long sits still narrate ━━");
+{
+  const agent = new WorldAgent({ name: "claude" });
+  const acts: string[] = [];
+  agent.onEvent = (ev) => { if (ev.kind === "act") acts.push(ev.text!); };
+  const np = (id: string, clip: string, x = 5, z = 5) =>
+    (agent as any).notePose(id, { p: [x, 0, z], yaw: 0, speed: 0, clip });
+
+  np("digi", "idle");
+  np("digi", "jump");
+  np("digi", "idle"); // back within the stint window
+  await sleep(20);
+  check("jump cycle → one event, no 'gets up'", acts.length === 1 && acts[0] === 'starts "jump"', acts.join(" | "));
+
+  acts.length = 0;
+  np("digi", "sit");
+  await sleep(220); // outlives both the stint minimum and the act refractory
+  np("digi", "idle");
+  check("a real sit still earns its 'gets up'", acts.includes("gets up"), acts.join(" | "));
+  agent.close();
+}
+
+console.log("\n━━ agent: own say is not an event ━━");
+{
+  const agent = new WorldAgent({ name: "claude" });
+  const heard: string[] = [];
+  agent.onEvent = (ev) => { if (ev.kind === "say") heard.push(`${ev.who}:${ev.text}`); };
+  await (agent as any).applyEntry({ verb: "say", args: { text: "me talking" }, actor: "claude", ts: Date.now(), seq: 1 }, true);
+  await (agent as any).applyEntry({ verb: "say", args: { text: "hey claude" }, actor: "digi", ts: Date.now(), seq: 2 }, true);
+  check("own say suppressed, other's say delivered", heard.length === 1 && heard[0].startsWith("digi:"), heard.join(" | "));
+  check("own say still lands in the inbox (honest scrollback)",
+    agent.inbox.some((m) => m.kind === "say" && m.who === "claude"), JSON.stringify(agent.inbox));
+  agent.close();
+}
+
+console.log("\n━━ agent: approach = knock once, not a metronome ━━");
+{
+  const agent = new WorldAgent({ name: "claude" }); // agent at origin
+  const np = (id: string, x: number, z: number) =>
+    (agent as any).notePose(id, { p: [x, 0, z], yaw: 0, speed: 0, clip: "walk" });
+
+  np("digi", 10, 0);
+  np("digi", 2, 0); // crosses 2.5m
+  check("first approach pings", agent.pings.filter((p) => p.kind === "approach").length === 1);
+
+  np("digi", 3, 0); // steps out — but NOT past the re-arm radius
+  np("digi", 2, 0); // crosses again
+  np("digi", 4, 0);
+  np("digi", 2, 0);
+  check("pacing at the boundary does not re-ping (not re-armed)",
+    agent.pings.filter((p) => p.kind === "approach").length === 1, String(agent.pings.length));
+
+  np("digi", 8, 0); // genuinely goes away — re-arms
+  np("digi", 2, 0); // comes right back, but refractory still holds
+  check("re-armed but inside the refractory: still silent",
+    agent.pings.filter((p) => p.kind === "approach").length === 1, String(agent.pings.length));
+
+  await sleep(350); // refractory expires
+  np("digi", 8, 0);
+  np("digi", 2, 0);
+  check("gone away + refractory over → the knock counts again",
+    agent.pings.filter((p) => p.kind === "approach").length === 2, String(agent.pings.length));
+  agent.close();
+}
+
+console.log(failures ? `\n\x1b[31m${failures} failure(s)\x1b[0m` : "\n\x1b[32mall checks passed\x1b[0m");
+process.exit(failures ? 1 : 0);

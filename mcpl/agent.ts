@@ -6,6 +6,7 @@
 
 import * as THREE_W from "three/webgpu";
 import * as TSL from "three/tsl";
+import { NoiseGate, SHORT_STINT_MS, APPROACH_REFRACT_MS, APPROACH_RADIUS, REARM_RADIUS } from "./denoise.ts";
 
 (globalThis as any).THREE = Object.assign({}, THREE_W, TSL);
 
@@ -84,6 +85,19 @@ export class WorldAgent {
   /** live world events (say/arrive/leave) — the channel fan-out hook */
   onEvent: ((ev: { ts: number; kind: "say" | "arrive" | "leave" | "whisper" | "act"; who: string; text?: string; mention?: boolean }) => void) | null = null;
   private lastNear = new Map<string, number>(); // participant -> last approach-ping ts
+  /** approach re-arm: after a walk-up ping, the SAME person must actually go
+   *  away (> REARM_RADIUS) before another boundary crossing can ever count —
+   *  someone pacing at 2–3m otherwise re-triggers on every crossing. */
+  private nearArmed = new Map<string, boolean>();
+  /** participant -> when their current non-locomotion stint began (jump, sit…) */
+  private nonLocoSince = new Map<string, number>();
+  /** Stateful denoiser for ambient narration (arrive/leave/acts). Says,
+   *  mentions, and whispers never pass through it — a knock is not chatter.
+   *  See denoise.ts for the doctrine. */
+  private gate = new NoiseGate((ev) => {
+    this.inbox.push({ ts: ev.ts, kind: ev.kind, who: ev.who, ...(ev.text != null ? { text: ev.text } : {}) });
+    this.onEvent?.(ev);
+  });
   private terrain: { heightAt(x: number, z: number): number } | null = null;
   private terrainSrc: string | null = null;
   worldInfo: Record<string, unknown> = {};
@@ -124,6 +138,7 @@ export class WorldAgent {
   close() {
     this.closed = true;
     if (this.ticker) { clearInterval(this.ticker); this.ticker = null; }
+    this.gate.dispose(); // held narration dies with the session
     this.ws?.close();
   }
 
@@ -222,14 +237,14 @@ export class WorldAgent {
             break;
           }
           case "arrive":
+            // the people map is truth and updates NOW; the narration goes
+            // through the gate, where a reconnect flap collapses to nothing
             this.people.set(msg.id, { id: msg.id, avatar: msg.avatar, pose: null });
-            this.inbox.push({ ts: Date.now(), kind: "arrive", who: msg.id });
-            this.onEvent?.({ ts: Date.now(), kind: "arrive", who: msg.id });
+            this.gate.presence(msg.id, "arrive");
             break;
           case "leave":
             this.people.delete(msg.id);
-            this.inbox.push({ ts: Date.now(), kind: "leave", who: msg.id });
-            this.onEvent?.({ ts: Date.now(), kind: "leave", who: msg.id });
+            this.gate.presence(msg.id, "leave");
             break;
           case "pose":
             this.notePose(msg.id, msg.pose);
@@ -246,7 +261,12 @@ export class WorldAgent {
   }
 
   /** Track someone's latest pose + fire the approach ping when they cross
-   *  into conversational range (edge-triggered, per-person cooldown). */
+   *  into conversational range. An approach is precious as a knock — and
+   *  worthless as a metronome (Fable: Digi "walked up" six times in a row,
+   *  just strolling nearby). Three gates: edge-triggered at the radius,
+   *  RE-ARMED only after the person actually goes away (> REARM_RADIUS),
+   *  and a long per-person refractory on top. First approach wakes;
+   *  repeats within the window are background. */
   private notePose(id: string, pose: Pose) {
     const p = this.people.get(id) ?? { id, avatar: "", pose: null };
     const prev = p.pose;
@@ -254,9 +274,12 @@ export class WorldAgent {
     const [x, , z] = pose.p;
     const dist = Math.hypot(x - this.pos.x, z - this.pos.z);
     const prevDist = prev ? Math.hypot(prev.p[0] - this.pos.x, prev.p[2] - this.pos.z) : Infinity;
-    const cooled = Date.now() - (this.lastNear.get(id) ?? 0) > 60_000;
-    if (dist < 2.5 && prevDist >= 2.5 && cooled) {
+    if (dist > REARM_RADIUS) this.nearArmed.set(id, true);
+    const armed = this.nearArmed.get(id) ?? true;
+    const cooled = Date.now() - (this.lastNear.get(id) ?? 0) > APPROACH_REFRACT_MS;
+    if (dist < APPROACH_RADIUS && prevDist >= APPROACH_RADIUS && armed && cooled) {
       this.lastNear.set(id, Date.now());
+      this.nearArmed.set(id, false);
       this.ping({ ts: Date.now(), kind: "approach", who: id });
     }
     if (id !== this.name) this.noteActs(id, prev, pose);
@@ -266,25 +289,33 @@ export class WorldAgent {
    *  agent should hear about is TRANSITIONS — an emote fired, a pose struck
    *  or released, someone sitting down or getting up. Edge-triggered, so a
    *  held pose (or a ragdoll, which streams through the same field) speaks
-   *  once when it starts and once when it ends, never per-frame. */
+   *  once when it starts and once when it ends, never per-frame.
+   *
+   *  Two denoising layers on top (Fable: 40+ jump pairs in one evening):
+   *  the gate's per-(person, act) refractory makes a burst of the same act
+   *  speak once per window instead of per repetition; and a non-locomotion
+   *  stint shorter than SHORT_STINT_MS earns no "gets up" — the start
+   *  already told the story, a jump is one thing, not two. */
   private noteActs(id: string, prev: Pose | null, pose: Pose & { emote?: string; pose?: Record<string, unknown> | null }) {
-    const acts: string[] = [];
-    if (pose.emote) acts.push(`emotes: ${pose.emote}`);
+    const acts: { key: string; text: string }[] = [];
+    if (pose.emote) acts.push({ key: `emote:${pose.emote}`, text: `emotes: ${pose.emote}` });
     const prevHeld = Boolean((prev as { pose?: unknown } | null)?.pose);
     const nowHeld = Boolean(pose.pose);
-    if (nowHeld && !prevHeld) acts.push(`strikes a pose (${Object.keys(pose.pose!).length} bones held)`);
-    if (!nowHeld && prevHeld) acts.push("releases their pose");
+    if (nowHeld && !prevHeld) acts.push({ key: "pose", text: `strikes a pose (${Object.keys(pose.pose!).length} bones held)` });
+    if (!nowHeld && prevHeld) acts.push({ key: "pose-release", text: "releases their pose" });
     const LOCO = new Set(["idle", "walk", "run"]);
     const pc = prev?.clip ?? "idle", nc = pose.clip ?? "idle";
     if (nc !== pc) {
-      if (!LOCO.has(nc)) acts.push(nc.startsWith("sit") ? "sits down" : nc === "lie" ? "lies down" : `starts "${nc}"`);
-      else if (!LOCO.has(pc)) acts.push("gets up");
+      if (!LOCO.has(nc)) {
+        if (LOCO.has(pc)) this.nonLocoSince.set(id, Date.now());
+        acts.push({ key: `clip:${nc}`, text: nc.startsWith("sit") ? "sits down" : nc === "lie" ? "lies down" : `starts "${nc}"` });
+      } else if (!LOCO.has(pc)) {
+        const stint = Date.now() - (this.nonLocoSince.get(id) ?? 0);
+        this.nonLocoSince.delete(id);
+        if (stint >= SHORT_STINT_MS) acts.push({ key: "gets-up", text: "gets up" });
+      }
     }
-    for (const text of acts) {
-      const ts = Date.now();
-      this.inbox.push({ ts, kind: "act", who: id, text });
-      this.onEvent?.({ ts, kind: "act", who: id, text });
-    }
+    for (const a of acts) this.gate.act(id, a.key, a.text);
   }
 
   private async applyEntry(entry: any, live: boolean) {
@@ -309,14 +340,17 @@ export class WorldAgent {
       if (seq != null && seq >= 0 && seq <= this.inboxSeen) return;
       if (seq != null && seq >= 0) this.inboxSeen = seq;
       this.inbox.push({ ts, kind: "say", who: actor, text: args.text, seq });
-      // mention ping — @name or bare whole-word name, live messages only
+      // mention ping — @name or bare whole-word name, live messages only.
+      // The agent's OWN say is deliberately never fanned out: the world log
+      // echoes it back here, and delivering that echo as an incoming message
+      // made every resident hear themselves (Fable: "моё собственное эхо").
+      // It stays in the inbox — the scrollback record is honest — but it is
+      // not an event.
       if (live && actor !== this.name) {
         const rx = new RegExp(`(@${this.name}\\b|\\b${this.name}\\b)`, "i");
         const mention = rx.test(String(args.text));
         if (mention) this.ping({ ts, kind: "mention", who: actor, text: args.text });
         this.onEvent?.({ ts, kind: "say", who: actor, text: args.text, mention });
-      } else if (live) {
-        this.onEvent?.({ ts, kind: "say", who: actor, text: args.text });
       }
     } else if (verb === "terrain") {
       await this.buildTerrain(args);

@@ -1,0 +1,153 @@
+// Event-stream denoiser for a WorldAgent's ambient narration.
+//
+// Born from Fable's field report (2026-08-02), which ranked the noise from
+// live logs: client arrive/leave flaps (tens of pairs in minutes), posture/
+// emote cycles (40+ jump pairs in an evening), self-echo, and "walked up to
+// you" firing six times for someone strolling nearby. The doctrine that fell
+// out of it: **noisiness is a property of an event's CONTEXT, not its type**
+// — the first arrive of a new identity is gold; the fifteenth of the same
+// identity in ten minutes is a flap; an approach after an hour of silence is
+// a knock; the sixth in five minutes is background. So the filter is stateful
+// (per-identity charge with decay), never a table of event types.
+//
+// Two mechanisms:
+//
+//  1. HOLD-AND-CANCEL for presence pairs. An arrive/leave is not narrated
+//     immediately — it is held briefly, and the opposite event for the same
+//     identity inside the window cancels both ("схлопнуть в ничто"). A
+//     reconnect flap (leave→arrive) and a smoke-test visit (arrive→leave)
+//     both collapse to nothing. The people map stays truthful in real time —
+//     only the NARRATION is held; look() never lies about who is present.
+//
+//  2. DECAYING CHARGE + REFRACTORY for everything ambient. Each narrated
+//     presence event charges that identity; the charge decays exponentially;
+//     above the limit, further arrive/leave narration from that identity is
+//     dropped until it cools. Acts (emotes, posture starts) repeat silently
+//     within a per-(identity, act) refractory window.
+//
+// Mentions, whispers, and says are never gated here — being addressed is
+// always a knock. (The self-echo fix lives in agent.ts's applyEntry.)
+
+export type GateEvent = { kind: "arrive" | "leave" | "act"; who: string; text?: string; ts: number };
+
+const env = (k: string, d: number) => {
+  const v = Number(process.env[k]);
+  return Number.isFinite(v) ? v : d;
+};
+
+export const GATE_DEFAULTS = {
+  /** an arrive is held this long — a leave inside the window collapses both (brief visit / smoke test) */
+  arriveHoldMs: env("EW_ARRIVE_HOLD_SEC", 12) * 1000,
+  /** a leave is held this long — an arrive inside the window collapses both (reconnect flap) */
+  leaveHoldMs: env("EW_LEAVE_HOLD_SEC", 45) * 1000,
+  /** per-identity presence charge decays with this time constant */
+  presenceTauMs: env("EW_PRESENCE_TAU_SEC", 600) * 1000,
+  /** decayed charge at/above this → further arrive/leave narration from that identity drops */
+  presenceLimit: 1.5,
+  /** the same act by the same identity repeats silently within this window */
+  actRefractoryMs: env("EW_ACT_REFRACT_SEC", 180) * 1000,
+};
+
+/** A non-locomotion stint shorter than this (a jump, a stumble) does not earn
+ *  a "gets up" — the start already told the story. Read by agent.ts. */
+export const SHORT_STINT_MS = env("EW_STINT_MIN_SEC", 5) * 1000;
+
+/** Approach ("walked up to you") refractory per identity — the first approach
+ *  wakes; repeats inside this window are background. Read by agent.ts, which
+ *  additionally requires re-arming: the person must actually go away
+ *  (> REARM_RADIUS) before another crossing can ever count. */
+export const APPROACH_REFRACT_MS = env("EW_APPROACH_REFRACT_SEC", 600) * 1000;
+export const APPROACH_RADIUS = 2.5;
+export const REARM_RADIUS = 6;
+
+type IdState = {
+  pending: { kind: "arrive" | "leave"; ts: number; timer: ReturnType<typeof setTimeout> } | null;
+  charge: number;
+  chargedAt: number;
+  lastAct: Map<string, number>;
+};
+
+export class NoiseGate {
+  private ids = new Map<string, IdState>();
+  private opts: typeof GATE_DEFAULTS;
+  /** what was collapsed/dropped, for debugging — silence should be auditable */
+  stats = { flapsCollapsed: 0, presenceDropped: 0, actsDropped: 0 };
+
+  constructor(
+    private emit: (ev: GateEvent) => void,
+    opts: Partial<typeof GATE_DEFAULTS> = {},
+  ) {
+    this.opts = { ...GATE_DEFAULTS, ...opts };
+  }
+
+  private state(id: string): IdState {
+    let s = this.ids.get(id);
+    if (!s) { s = { pending: null, charge: 0, chargedAt: 0, lastAct: new Map() }; this.ids.set(id, s); }
+    return s;
+  }
+
+  /** Decayed charge as of now; touches the bookkeeping. */
+  private decayed(s: IdState, now: number): number {
+    if (s.charge > 0 && s.chargedAt > 0) {
+      s.charge *= Math.exp(-(now - s.chargedAt) / this.opts.presenceTauMs);
+    }
+    s.chargedAt = now;
+    return s.charge;
+  }
+
+  /** An arrive or leave for an identity. Held; the opposite event inside the
+   *  hold window annihilates the pair. */
+  presence(id: string, kind: "arrive" | "leave", ts = Date.now()) {
+    const s = this.state(id);
+    if (s.pending) {
+      if (s.pending.kind !== kind) {
+        // flap: leave→arrive (reconnect) or arrive→leave (brief visit)
+        clearTimeout(s.pending.timer);
+        s.pending = null;
+        this.stats.flapsCollapsed++;
+        // chronic flappers keep themselves warm even while fully collapsed
+        this.decayed(s, ts);
+        s.charge += 0.1;
+        return;
+      }
+      // duplicate same-direction event (shouldn't happen) — keep the first
+      return;
+    }
+    const hold = kind === "arrive" ? this.opts.arriveHoldMs : this.opts.leaveHoldMs;
+    const timer = setTimeout(() => {
+      s.pending = null;
+      const charge = this.decayed(s, Date.now());
+      if (charge >= this.opts.presenceLimit) {
+        this.stats.presenceDropped++;
+        s.charge += 0.4; // being noisy while silenced extends the silence
+        return;
+      }
+      s.charge += 1;
+      this.emit({ kind, who: id, ts });
+    }, hold);
+    s.pending = { kind, ts, timer };
+  }
+
+  /** An embodied act (emote, posture start, pose strike…). `key` names the
+   *  act class for the refractory — same key from the same identity repeats
+   *  silently within the window. */
+  act(id: string, key: string, text: string, ts = Date.now()) {
+    const s = this.state(id);
+    const last = s.lastAct.get(key) ?? 0;
+    if (ts - last < this.opts.actRefractoryMs) {
+      this.stats.actsDropped++;
+      // NOT refreshed on drop: a continuous burst still speaks once per
+      // window rather than being silenced forever by its own persistence.
+      return;
+    }
+    s.lastAct.set(key, ts);
+    this.emit({ kind: "act", who: id, text, ts });
+  }
+
+  /** Cancel all held narration (session ending). */
+  dispose() {
+    for (const s of this.ids.values()) {
+      if (s.pending) { clearTimeout(s.pending.timer); s.pending = null; }
+    }
+  }
+}
