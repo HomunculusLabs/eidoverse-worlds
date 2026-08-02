@@ -401,6 +401,14 @@ function runCommand(raw) {
     case 'goto':
       bus.emit('command', { cmd: 'goto', arg });
       return true;
+    case 'use': case 'push': case 'pull': case 'ring': case 'open':
+      // /use <thing> [action] — the universal interact. The aliases are the
+      // same verb with the action already in hand: /push swing1.
+      bus.emit('command', {
+        cmd: 'use',
+        arg: cmd.toLowerCase() === 'use' ? arg : `${arg} ${cmd.toLowerCase()}`.trim(),
+      });
+      return true;
     case 'role':
       bus.emit('command', { cmd: 'role', arg });
       return true;

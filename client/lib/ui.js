@@ -258,6 +258,12 @@ export function buildHelp() {
     <p class="sub">Open <b>build</b> to search the model library, or drag a
       <b>.glb</b> into the window to upload one. Drag a <b>.vrm</b> to add a body
       to the roster. Anything you place you can select and move again — or undo.</p>
+    <h2>Using things</h2>
+    <p class="sub">Some things react: <b>/push swing1</b> (or <b>/use</b>
+      <i>thing action</i>) works for everyone, even visitors — using the world
+      is not building it. Builders can give things motion (a swing, a windmill,
+      a ferry on a route) and reactions; what a push does was decided by
+      whoever built the thing.</p>
     <h2>If it runs slowly</h2>
     <p class="sub">Cloud quality below <b>high</b> shows a baked sky — the
       full volumetric clouds rendered once to a texture, refreshed when the

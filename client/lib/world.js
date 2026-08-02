@@ -20,6 +20,18 @@ import { whenBooted } from './boot.js';
 export const entities = new Map();
 /** id -> { actor, lib, ts } — provenance, for the build inspector. */
 export const entityMeta = new Map();
+/** id -> component bag, fed by `comp` verbs (and `motion`, which is sugar for
+ *  the motion component). Mirrors the server's blind fold: data is opaque
+ *  here too — meaning lives in whichever evaluator consumes a type (motion.js
+ *  reads `motion`; mounting reads `sockets`; the server reads `reactions`).
+ *  Unknown types just sit in the bag, forward-compatible. */
+export const comps = new Map();
+/** Avatar attachments (a sitter, a passenger) — bodies aren't entities, so
+ *  their mounts live here for remotes/controller to consume. */
+export const avatarMounts = new Map();
+// A mount whose parent or child is still downloading waits here and is
+// retried whenever a spawn completes — same reasoning as pendingOps.
+const pendingMounts = new Map(); // id -> mount args
 
 // A spawn reserves its id synchronously but its GLB arrives later. Anything
 // that addresses the entity in that window (a `place` right behind it in the
@@ -92,12 +104,15 @@ export async function applyEntry(entry, live, ctx = {}) {
         obj.position.set(...(queued?.pos ?? args.pos ?? [0, 0, 0]));
         obj.rotation.y = queued?.yaw ?? args.yaw ?? 0;
         if (sc) obj.scale.setScalar(sc);
+        // the logged rest pose — what motion composes on and rest returns to
+        obj.userData.base = { pos: obj.position.toArray(), yaw: obj.rotation.y };
         reindexCollider(args.id);
         attachLocalLights(obj);   // async, deliberately not awaited
         entities.set(args.id, obj);
         entityMeta.set(args.id, { actor, lib: args.lib, ts });
         scene.add(obj);
         bus.emit('entity', { id: args.id, kind: 'spawn' });
+        retryMounts();            // a waiting mount may have just become possible
         break;
       }
       case 'light': {
@@ -126,6 +141,9 @@ export async function applyEntry(entry, live, ctx = {}) {
         if (args.pos) obj.position.set(...args.pos);
         if (args.yaw != null) obj.rotation.y = args.yaw;
         if (args.scale != null) obj.scale.setScalar(args.scale);
+        if (!obj.userData.mountedTo) {
+          obj.userData.base = { pos: obj.position.toArray(), yaw: obj.rotation.y };
+        }
         // rescale can cross the room-scale threshold: re-decide, not just re-bucket
         refitCollider(args.id);
         bus.emit('entity', { id: args.id, kind: 'place' });
@@ -137,9 +155,24 @@ export async function applyEntry(entry, live, ctx = {}) {
           pendingOps.set(args.id, { ...(pendingOps.get(args.id) ?? {}), removed: true });
           return;
         }
-        if (obj) { if (obj.userData?.isLight) disposeLight(obj); scene.remove(obj); }
+        if (obj) {
+          if (obj.userData?.isLight) disposeLight(obj);
+          // anything mounted ON it steps off first, keeping its world pose —
+          // removal must not vaporize the cargo along with the truck
+          for (const [cid, cobj] of entities) {
+            if (cobj?.userData?.mountedTo === args.id) {
+              scene.attach(cobj);
+              delete cobj.userData.mountedTo;
+              cobj.userData.base = { pos: cobj.position.toArray(), yaw: cobj.rotation.y };
+              fitCollider(cid, cobj, { scale: cobj.scale?.x || 1 });
+            }
+          }
+          (obj.parent ?? scene).remove(obj);
+        }
         entities.delete(args.id);
         entityMeta.delete(args.id);
+        comps.delete(args.id);
+        pendingMounts.delete(args.id);
         removeCollider(args.id);
         bus.emit('entity', { id: args.id, kind: 'remove' });
         break;
@@ -159,6 +192,7 @@ export async function applyEntry(entry, live, ctx = {}) {
           for (const [id, obj] of entities) {
             if (obj && Math.abs(obj.position.y) < 0.02) {
               obj.position.y = heightAt(obj.position.x, obj.position.z);
+              if (obj.userData.base) obj.userData.base.pos[1] = obj.position.y;
               reindexCollider(id);
             }
           }
@@ -216,12 +250,110 @@ export async function applyEntry(entry, live, ctx = {}) {
         bus.emit('roles', { id: args.id, ...worldRoles.get(args.id) });
         break;
       }
+      case 'comp': {
+        // The generic component fold — mirror of the server's blind one.
+        if (!args.id || typeof args.type !== 'string') return;
+        const bag = comps.get(args.id) ?? {};
+        if (args.data == null) delete bag[args.type]; else bag[args.type] = args.data;
+        if (Object.keys(bag).length) comps.set(args.id, bag); else comps.delete(args.id);
+        if (args.type === 'motion' && args.data == null) restAtBase(args.id);
+        bus.emit('comp', { id: args.id, type: args.type, data: args.data ?? null });
+        break;
+      }
+      case 'motion': {
+        // sugar for the motion component; {type: null} = come to rest
+        const { id, ...m } = args;
+        const bag = comps.get(id) ?? {};
+        if (m.type == null) { delete bag.motion; restAtBase(id); }
+        else bag.motion = m;
+        if (Object.keys(bag).length) comps.set(id, bag); else comps.delete(id);
+        bus.emit('comp', { id, type: 'motion', data: bag.motion ?? null });
+        break;
+      }
+      case 'mount': {
+        if (!args.id || !args.to) return;
+        applyMount(args);
+        break;
+      }
+      case 'dismount': {
+        const obj = entities.get(args.id);
+        if (obj && obj.userData.mountedTo) {
+          scene.attach(obj);                     // keeps the world transform it had
+          delete obj.userData.mountedTo;
+          // plane-transition stamp wins over wherever the ride left it
+          if (args.pos) obj.position.set(...args.pos);
+          if (args.yaw != null) obj.rotation.set(0, args.yaw, 0);
+          obj.userData.base = { pos: obj.position.toArray(), yaw: obj.rotation.y };
+          // its collider was parked while mounted — stand it back up
+          // (size-derived collide decision; an explicit spawn override is lost
+          // across a mount cycle, acceptable until colliders learn to ride)
+          fitCollider(args.id, obj, { scale: obj.scale?.x || 1 });
+        }
+        avatarMounts.delete(args.id);
+        pendingMounts.delete(args.id);
+        bus.emit('mount', { id: args.id, to: null });
+        break;
+      }
+      case 'use':
+        // a cause, not an effect: nothing to render — reactions arrive as
+        // their own log entries. Surfaced for UI/behaviors that care.
+        if (live) bus.emit('use', { actor, ...args });
+        break;
       default:
         // Unknown verbs are not errors — a newer client may author verbs this
         // one doesn't render yet, and the log must stay forward-compatible.
         console.debug('unhandled verb', verb, args);
     }
   } catch (e) { report(`entry ${verb}`, e); }
+}
+
+// ---- mounting ---------------------------------------------------------------
+
+/** A named attachment point, from the entity's `sockets` component:
+ *  comp {id, type: 'sockets', data: {seat: {pos:[...], yaw}, helm: {...}}} */
+const socketOf = (id, slot) => (slot ? comps.get(id)?.sockets?.[slot] : null);
+
+function applyMount(args) {
+  if (!entities.has(args.id)) {
+    // a body, not a thing — remotes/controller consume this (sitter on a
+    // swing seat rides the parent frame; wiring lands with avatar mounting)
+    avatarMounts.set(args.id, { to: args.to, slot: args.slot, offset: args.offset, yaw: args.yaw });
+    bus.emit('mount', { id: args.id, to: args.to, slot: args.slot });
+    return;
+  }
+  const child = entities.get(args.id);
+  const parent = entities.get(args.to);
+  if (!child || !parent) {                 // either end still downloading
+    pendingMounts.set(args.id, args);
+    return;
+  }
+  pendingMounts.delete(args.id);
+  const sock = socketOf(args.to, args.slot);
+  const off = args.offset ?? sock?.pos ?? [0, 0, 0];
+  parent.add(child);                       // transform becomes parent-relative
+  child.position.set(...off);
+  child.rotation.set(0, args.yaw ?? sock?.yaw ?? 0, 0);
+  child.userData.mountedTo = args.to;
+  // its collider would go stale the moment the parent moves; the parent's own
+  // collider is what the pair collides as while attached
+  removeCollider(args.id);
+  bus.emit('mount', { id: args.id, to: args.to, slot: args.slot });
+}
+
+function retryMounts() {
+  for (const args of [...pendingMounts.values()]) applyMount(args);
+}
+
+/** Motion ended: rest at the logged base pose. Anything that rests AWAY from
+ *  base (a ferry stopping mid-route) gets a `place` alongside its stop —
+ *  that is the plane-transition stamp, and it rewrites base above. */
+function restAtBase(id) {
+  const obj = entities.get(id);
+  const base = obj?.userData?.base;
+  if (!obj || !base) return;
+  obj.position.set(...base.pos);
+  obj.rotation.set(0, base.yaw ?? 0, 0);
+  reindexCollider(id);
 }
 
 // sky.js owns the current args; world.js only needs them to merge a weather
@@ -264,6 +396,13 @@ export function stateToEntries(state, { skipChatFromSeq = Infinity } = {}) {
       }, e.actor ?? 'world', e.ts ?? Date.now());
     }
   }
+  // components and attachments, after every spawn exists (a mount whose GLB
+  // is still in flight waits in pendingMounts, same as a trailing `place`)
+  for (const [id, e] of Object.entries(state.entities ?? {})) {
+    for (const [type, data] of Object.entries(e.comp ?? {})) add('comp', { id, type, data });
+    if (e.parent) add('mount', { id, ...e.parent });
+  }
+  for (const [id, rel] of Object.entries(state.mounts ?? {})) add('mount', { id, ...rel });
   // Anything the tail will replay must not also be rendered from the snapshot.
   // Chat keeps its REAL seq, unlike the world-shaping entries above: it is the
   // only part of a snapshot that is a position in history rather than a
@@ -280,9 +419,12 @@ export function stateToEntries(state, { skipChatFromSeq = Infinity } = {}) {
 
 export function resetWorld() {
   worldRoles.clear();
-  for (const [id, obj] of entities) { if (obj) scene.remove(obj); removeCollider(id); }
+  for (const [id, obj] of entities) { if (obj) (obj.parent ?? scene).remove(obj); removeCollider(id); }
   entities.clear();
   entityMeta.clear();
+  comps.clear();
+  avatarMounts.clear();
+  pendingMounts.clear();
   lastTerrainArgs = lastGrassArgs = null;
   pendingOps.clear();
 }

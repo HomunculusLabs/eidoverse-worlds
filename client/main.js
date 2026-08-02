@@ -13,6 +13,7 @@ import { contributeThumbnail, makeAvatar, EMOTE_ORDER, EMOTES } from './lib/avat
 import { updateSky, updateAutoSystems, skyArgs, skyImpl,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './lib/sky.js';
 import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner } from './lib/world.js';
+import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateFollowCamera, updateSpectator, setCamYaw, setPosture,
   togglePhotoMode, setCameraCollisionTargets, keys,
@@ -377,6 +378,15 @@ bus.on('command', ({ cmd, arg }) => {
     sendWorldReset();
     return;
   }
+  if (cmd === 'use') {
+    // /use <entity> [action] — rank 0: using the world is for everyone.
+    // Reactions (the swing's push, a door's open) come back as log entries.
+    const [id, action] = (arg || '').trim().split(/\s+/);
+    if (!id) return logChat('*', 'usage: /use <thing> [action] — e.g. /push swing1');
+    if (!entities.has(id)) return logChat('*', `nothing here called "${id}"`);
+    sendVerb('use', { id, action: action || 'use' });
+    return;
+  }
   if (cmd === 'sit') { setPosture('sit'); return; }
   if (cmd === 'emote') {
     const name = (arg || '').trim().toLowerCase();
@@ -493,6 +503,7 @@ function frame(now) {
   globalThis._sceneTime = t;
 
   updateAutoSystems(t);          // grass wind, particles
+  tickMotion();                  // the world's moving parts (log-authored)
   updateSky(now, t);
 
   if (CONFIG.renderer) { /* camera is driven per snap request */ }

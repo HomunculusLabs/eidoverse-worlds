@@ -86,6 +86,54 @@ systems, not bone poses.
 Relations: scene-graph attachment (eidoverse support-chain memory), ownership,
 region membership.
 
+## Components (2026-08-02 — shipped: comp/mount/motion/use)
+
+Entities carry a **generic component bag**: `comp {id, type, data|null}` folds
+`data` under `type`, blindly, on both server and client. The server never
+learns what a `swing` means; meaning lives in whichever evaluator consumes a
+type — `motion` in the client's evaluator library, `sockets` in mounting,
+`reactions` in the server's reaction hook. Unknown types sit in the bag,
+forward-compatible: a new component kind is client code plus emitted verbs,
+zero sequencer changes. This is the Unity entity/component *data* model with
+an event-sourcing discipline Unity doesn't have — and without its logic model:
+**components carry parameters, never code, and nothing writes a component
+per-frame.** Components change only via logged verbs.
+
+Building blocks shipped:
+
+- **`motion`** — the log stores *functions of time*, never frames:
+  `pendulum` (swings), `spin` (windmills), `orbit`, `bob`, `path` (ferries,
+  patrol routes). Every client — live, late-joining, replaying a fork —
+  evaluates the same closed form at its own `now`: no integration, no drift,
+  no ongoing traffic. Sequencer-not-simulator, applied to dynamics. New motion
+  types are pure `f(params, t) → transform` added client-side.
+- **`mount` / `dismount`** — scene-graph attachment in the log. Things get
+  `parent`; bodies (avatars) go in `state.mounts`. Passengers and cargo ride
+  the parent frame with zero per-rider traffic. Sockets are a component
+  (`sockets: {seat: {...}, helm: {...}}`), merged with Layer-0 affordances.
+  **Invariant: any transition back to rest stamps absolute pose into the verb**
+  (`dismount {pos, yaw}`; a stopping ferry's `motion {type:null}` + `place`) —
+  the log stays self-sufficient, never dependent on reconstructing a ride.
+- **`use`** — the universal interact, rank 0 and fold-less: a *cause*, kept in
+  the log as history, whose *effects* are separately logged entries. Mounting
+  yourself is likewise rank 0: sitting on the swing is using the world, not
+  editing it.
+- **`reactions`** — the first slice of the Layer-2 behavior runtime: an
+  entity's component maps use-actions to effects (so far: pendulum `impulse`,
+  closed-form velocity-matched — pushing against the swing does little,
+  pushing with it builds). Reactions run server-side with world authority
+  under the author's standing decision, emit ordinary verbs with
+  `{cause, by}` provenance, and are wrapped so no reaction can ever take the
+  sequencer down. Crucially, **replay never re-executes behaviors** — it folds
+  the verbs they emitted. Scripts therefore get randomness and wall-clock for
+  free; only the fold must stay deterministic.
+
+The growth path from here: `behavior` entities (triggers beyond `use`:
+proximity, timer, phrase, region), a sandboxed script tier (QuickJS-in-WASM,
+capability-masked, budgeted, author-rights at emit time), and `publish` /
+`attach` to promote an agent-written behavior into the world's Layer-1
+vocabulary with knobs.
+
 ## Interactions: three layers
 
 **Layer 0 — intrinsic affordances (authored by nobody).** The controller

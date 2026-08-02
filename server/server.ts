@@ -108,7 +108,18 @@ type WorldState = {
     kind?: "light"; pos: number[]; actor: string; ts: number;
     lib?: string; yaw?: number; scale?: number;                 // things
     color?: number; intensity?: number; range?: number;         // lights
+    /** Generic component bag, written by `comp` verbs. The server folds these
+     *  BLINDLY — it never learns what a component means. Meaning lives in
+     *  client-side evaluators (motion, sockets, reactions, …), so a new
+     *  component type is client code + emitted verbs, zero server changes. */
+    comp?: Record<string, unknown>;
+    /** Scene-graph attachment: this entity rides another (cargo on a truck,
+     *  a lantern on a swing). Transform becomes parent-relative. */
+    parent?: { to: string; slot?: string; offset?: number[]; yaw?: number };
   }>;
+  /** Attachments of non-entity bodies (avatars) — a sitter on a swing seat, a
+   *  passenger on a deck. Same shape as entity.parent, keyed by principal. */
+  mounts?: Record<string, { to: string; slot?: string; offset?: number[]; yaw?: number }>;
   terrain: Record<string, unknown> | null;
   grass: Record<string, unknown> | null;
   sky: (Record<string, unknown> & { ts?: number }) | null;
@@ -206,7 +217,32 @@ function foldEntry(st: WorldState, e: LogEntry): void {
       };
       return;
     }
-    case "remove": delete st.entities[a?.id]; return;
+    case "remove": {
+      // Anything riding the removed thing steps off with its absolute pose
+      // stamped — remove the truck, the cargo lands where the truck stood.
+      const gone = st.entities[a?.id];
+      if (gone) {
+        for (const child of Object.values(st.entities)) {
+          if (child.parent?.to !== a.id) continue;
+          const off = child.parent.offset ?? [0, 0, 0];
+          const yaw = gone.yaw ?? 0;
+          const [ox, oy, oz] = off;
+          child.pos = [
+            gone.pos[0] + ox * Math.cos(yaw) + oz * Math.sin(yaw),
+            gone.pos[1] + oy,
+            gone.pos[2] - ox * Math.sin(yaw) + oz * Math.cos(yaw),
+          ];
+          child.yaw = yaw + (child.parent.yaw ?? 0);
+          delete child.parent;
+        }
+        if (st.mounts) {
+          for (const [id, rel] of Object.entries(st.mounts)) if (rel.to === a.id) delete st.mounts[id];
+          if (!Object.keys(st.mounts).length) delete st.mounts;
+        }
+      }
+      delete st.entities[a?.id];
+      return;
+    }
     case "terrain": st.terrain = a; return;
     case "grass": st.grass = a?.clear ? null : a; return;   // clear = mow, no field to replay
     case "sky": st.sky = { ...a, ts: e.ts }; return;
@@ -235,8 +271,128 @@ function foldEntry(st: WorldState, e: LogEntry): void {
       st.roles[a.id] = { role, ...(gen ? { gen: true } : {}) };
       return;
     }
+    case "comp": {
+      // Generic component fold. Blind by design: `data` is opaque here, and
+      // stays whatever shape its author gave it. `data: null` removes.
+      const ent = st.entities[a?.id];
+      if (!ent || typeof a?.type !== "string") return;
+      ent.comp ??= {};
+      if (a.data == null) delete ent.comp[a.type]; else ent.comp[a.type] = a.data;
+      if (!Object.keys(ent.comp).length) delete ent.comp;
+      return;
+    }
+    case "motion": {
+      // Sugar: motion is just the `motion` component, common enough to be a
+      // verb. The log stores FUNCTIONS OF TIME (pendulum params, a path, a
+      // spin rate), never frames — clients evaluate f(now - t0). One entry
+      // buys minutes of consistent, replayable movement. {type: null} = rest.
+      const ent = st.entities[a?.id];
+      if (!ent) return;
+      const { id: _id, ...m } = a;
+      ent.comp ??= {};
+      if (m.type == null) delete ent.comp.motion; else ent.comp.motion = m;
+      if (!Object.keys(ent.comp).length) delete ent.comp;
+      return;
+    }
+    case "mount": {
+      if (!a?.id || !a?.to || a.id === a.to) return;
+      const rel = {
+        to: String(a.to),
+        ...(a.slot ? { slot: String(a.slot) } : {}),
+        ...(Array.isArray(a.offset) ? { offset: a.offset } : {}),
+        ...(a.yaw != null ? { yaw: a.yaw } : {}),
+      };
+      const ent = st.entities[a.id];
+      if (ent) ent.parent = rel;
+      else { st.mounts ??= {}; st.mounts[a.id] = rel; }   // a body, not a thing
+      return;
+    }
+    case "dismount": {
+      if (!a?.id) return;
+      const ent = st.entities[a.id];
+      if (ent) {
+        delete ent.parent;
+        // Plane-transition invariant: the verb STAMPS absolute pose. The log
+        // must never depend on reconstructing where the parent was.
+        if (Array.isArray(a.pos)) ent.pos = a.pos;
+        if (a.yaw != null) ent.yaw = a.yaw;
+      }
+      if (st.mounts) {
+        delete st.mounts[a.id];
+        if (!Object.keys(st.mounts).length) delete st.mounts;
+      }
+      return;
+    }
+    // `use` deliberately has no case: it is a CAUSE, not an effect — it folds
+    // nothing, but the log keeps it (who pushed the swing is history). Effects
+    // are the reaction's own logged entries.
     default: return;   // unknown verbs shape nothing; the log still keeps them
   }
+}
+
+// ---------------------------------------------------------------- reactions
+//
+// The first slice of the behavior runtime: an entity's `reactions` component
+// maps a use-action to an effect. The shape is the general one — triggers in,
+// ordinary logged verbs out, cause carried in the entry — even though only one
+// effect kind exists so far (a pendulum impulse: the swing). Reactions run
+// with WORLD authority precisely because the trigger is rank 0: a visitor may
+// push the swing, and the push moving the swing is the AUTHOR's standing
+// decision (they attached the component), not the visitor's rights.
+//
+// Wrapped whole in try/catch: no reaction may ever take the server down
+// (lesson of the 4f82250 crash loop — a ws handler must never leak a throw).
+
+function reactToUse(w: World, cause: LogEntry): void {
+  try {
+    const a = cause.args as Record<string, unknown>;
+    const ent = w.state.entities[String(a?.id ?? "")];
+    const rx = (ent?.comp?.reactions as Record<string, any> | undefined)
+      ?.[String(a?.action ?? "use")];
+    if (!rx) return;
+    if (rx.impulse != null) {
+      const m = (ent!.comp?.motion as Record<string, unknown>) ?? {};
+      if (m.type != null && m.type !== "pendulum") return;   // impulses push pendulums (so far)
+      const next = pendulumImpulse(m, Number(rx.impulse), cause.ts);
+      const entry = w.append("world", "motion",
+        { id: a.id, ...next, cause: cause.seq, by: cause.actor });
+      w.broadcast({ type: "log", entry });
+    }
+  } catch (err) {
+    console.error(`[world:${w.name}] reaction failed (never fatal)`, err);
+  }
+}
+
+/** Closed-form pendulum push: evaluate angle and angular velocity at the push
+ *  instant, add the impulse to velocity, re-express as fresh (amp, phase, t0).
+ *  Pushing against the motion does little; pushing with it builds — a real
+ *  swing's feel, in one logged entry. Damping is applied to amplitude between
+ *  pushes and ignored in the instantaneous velocity term (small for the damp
+ *  values that look right).
+ *  ⚠ MIRRORED in client/lib/motion.js (evalPendulum) — keep the math in sync,
+ *  or joiners see a swing that disagrees with the one being pushed. */
+function pendulumImpulse(m: Record<string, unknown>, impulse: number, ts: number) {
+  const period = Number(m.period ?? 3.5);
+  const w0 = (2 * Math.PI) / period;
+  const damp = Number(m.damp ?? 0.06);
+  const t = m.t0 != null ? Math.max(0, (ts - Number(m.t0)) / 1000) : 0;
+  const amp = Number(m.amp ?? 0) * Math.exp(-damp * t);
+  const ph = w0 * t + Number(m.phase ?? 0);
+  const theta = amp * Math.cos(ph);
+  const vel = -amp * w0 * Math.sin(ph) + (Number.isFinite(impulse) ? impulse : 0);
+  const maxAmp = Number(m.maxAmp ?? 1.1);
+  const namp = Math.min(maxAmp, Math.hypot(theta, vel / w0));
+  const nphase = Math.atan2(-(vel / w0), theta);
+  return {
+    type: "pendulum",
+    axis: (m.axis as number[]) ?? [1, 0, 0],
+    pivot: (m.pivot as number[]) ?? [0, 2, 0],
+    period, damp,
+    ...(m.maxAmp != null ? { maxAmp } : {}),
+    amp: Math.round(namp * 1000) / 1000,
+    phase: Math.round(nphase * 1000) / 1000,
+    t0: ts,
+  };
 }
 
 // ---------------------------------------------------------------- permissions
@@ -281,6 +437,13 @@ function rightsOf(w: World, id: string, sub?: string): { role: string; gen: bool
 /** What each verb demands. `asset` is the spend gate; `grant` is owner-only. */
 const VERB_NEEDS: Record<string, { rank: number; gen?: boolean }> = {
   say: { rank: 0 },
+  // Using the world is for everyone; only authoring it is gated.
+  use: { rank: 0 },
+  // mount/dismount are rank 1 for THINGS (loading cargo is building) but the
+  // gate drops them to rank 0 when you mount YOURSELF — sitting on a swing is
+  // using the world, not editing it. See the verb handler.
+  mount: { rank: 1 }, dismount: { rank: 1 },
+  comp: { rank: 1 }, motion: { rank: 1 },
   spawn: { rank: 1 }, place: { rank: 1 }, remove: { rank: 1 }, light: { rank: 1 },
   asset: { rank: 1, gen: true },
   terrain: { rank: 2 }, grass: { rank: 2 }, sky: { rank: 2 }, weather: { rank: 2 },
@@ -1239,8 +1402,14 @@ const server = Bun.serve({
             ws.send(JSON.stringify({ type: "error", error: `verb not allowed: ${msg.verb}` }));
             return;
           }
+          // Mounting or dismounting YOURSELF (sit on the swing, step off the
+          // ferry) is a visitor act — using the world, not editing it. Moving
+          // OTHER things (cargo onto a truck) stays building.
+          const selfMount = (msg.verb === "mount" || msg.verb === "dismount")
+            && String((msg.args as Record<string, unknown> | undefined)?.id ?? "") === c.id;
+          const needRank = selfMount ? 0 : needs.rank;
           const rights = rightsOf(c.world, c.id, c.sub);
-          if (ROLE_RANK[rights.role] < needs.rank || (needs.gen && !rights.gen)) {
+          if (ROLE_RANK[rights.role] < needRank || (needs.gen && !rights.gen)) {
             const why = needs.gen && ROLE_RANK[rights.role] >= needs.rank
               ? "bringing new assets into this world needs the gen capability — ask its owner"
               : `"${msg.verb}" needs ${needs.rank >= 2 ? "the world's owner" : "builder rights"} here — you are a ${rights.role}`;
@@ -1263,8 +1432,35 @@ const server = Bun.serve({
             }
             args = { id, ...(role != null ? { role } : {}), ...(gen != null ? { gen } : {}) };
           }
+          if (msg.verb === "comp") {
+            // shape-check before it becomes history: {id, type, data|null}.
+            // data is opaque but BOUNDED — components are parameters, not
+            // payloads; anything bigger belongs in /upload + a path here.
+            const id = String(args.id ?? "").slice(0, 64);
+            const type = String(args.type ?? "").slice(0, 32);
+            if (!id || !type) {
+              ws.send(JSON.stringify({ type: "error", error: "comp wants {id, type, data|null}" }));
+              return;
+            }
+            if (args.data !== undefined && args.data !== null
+              && JSON.stringify(args.data).length > 8192) {
+              ws.send(JSON.stringify({ type: "error", error: "component data too large (8KB max) — put big things in /upload and reference the path" }));
+              return;
+            }
+            args = { id, type, data: args.data ?? null };
+          }
+          if (msg.verb === "mount") {
+            const id = String(args.id ?? "").slice(0, 64);
+            const to = String(args.to ?? "").slice(0, 64);
+            if (!id || !to || id === to || !c.world.state.entities[to]) {
+              ws.send(JSON.stringify({ type: "error", error: "mount wants {id, to: <existing entity>, slot?, offset?, yaw?}" }));
+              return;
+            }
+          }
           const entry = c.world.append(c.id, msg.verb, args);
           c.world.broadcast({ type: "log", entry }); // everyone, including author (authoritative echo)
+          // A `use` is a cause; reactions turn it into logged effects.
+          if (msg.verb === "use") reactToUse(c.world, entry);
           break;
         }
         case "history": {
