@@ -6,7 +6,8 @@
 
 import * as THREE_W from "three/webgpu";
 import * as TSL from "three/tsl";
-import { NoiseGate, SHORT_STINT_MS, APPROACH_REFRACT_MS, APPROACH_RADIUS, REARM_RADIUS } from "./denoise.ts";
+import { NoiseGate, SHORT_STINT_MS, APPROACH_REFRACT_MS, APPROACH_RADIUS, REARM_RADIUS,
+  ACTIVITY_RADIUS_M, ACTIVITY_PULSE_MS } from "./denoise.ts";
 
 (globalThis as any).THREE = Object.assign({}, THREE_W, TSL);
 
@@ -82,8 +83,8 @@ export class WorldAgent {
   private inboxSeen = -Infinity;
   pings: { ts: number; kind: "mention" | "approach" | "whisper"; who: string; text?: string }[] = [];
   onPing: ((p: { ts: number; kind: string; who: string; text?: string }) => void) | null = null;
-  /** live world events (say/arrive/leave) — the channel fan-out hook */
-  onEvent: ((ev: { ts: number; kind: "say" | "arrive" | "leave" | "whisper" | "act"; who: string; text?: string; mention?: boolean }) => void) | null = null;
+  /** live world events (say/arrive/leave/activity) — the channel fan-out hook */
+  onEvent: ((ev: { ts: number; kind: "say" | "arrive" | "leave" | "whisper" | "act" | "activity"; who: string; text?: string; mention?: boolean }) => void) | null = null;
   private lastNear = new Map<string, number>(); // participant -> last approach-ping ts
   /** approach re-arm: after a walk-up ping, the SAME person must actually go
    *  away (> REARM_RADIUS) before another boundary crossing can ever count —
@@ -91,13 +92,24 @@ export class WorldAgent {
   private nearArmed = new Map<string, boolean>();
   /** participant -> when their current non-locomotion stint began (jump, sit…) */
   private nonLocoSince = new Map<string, number>();
+  /** Local-awareness accumulator, reset every pulse. Records what happened
+   *  within ACTIVITY_RADIUS_M since the last pulse — RAW where rawness is
+   *  truth (movement, says: jump spam is genuine liveliness even when its
+   *  narration is denoised) but DENOISED for arrivals/departures (a reconnect
+   *  flap is not activity, it is weather). */
+  private act30 = { says: new Map<string, number>(), movers: new Set<string>(), acts: 0, arrivals: 0, departures: 0, builds: 0 };
   /** Stateful denoiser for ambient narration (arrive/leave/acts). Says,
    *  mentions, and whispers never pass through it — a knock is not chatter.
    *  See denoise.ts for the doctrine. */
   private gate = new NoiseGate((ev) => {
+    if (ev.kind === "arrive") this.act30.arrivals++;
+    else if (ev.kind === "leave") this.act30.departures++;
     this.inbox.push({ ts: ev.ts, kind: ev.kind, who: ev.who, ...(ev.text != null ? { text: ev.text } : {}) });
     this.onEvent?.(ev);
   });
+  /** The pulse ticks from birth; it only ever SPEAKS when the accumulator has
+   *  something in it, so an empty room costs nothing. */
+  private activityTimer = setInterval(() => this.activityPulse(), ACTIVITY_PULSE_MS);
   private terrain: { heightAt(x: number, z: number): number } | null = null;
   private terrainSrc: string | null = null;
   worldInfo: Record<string, unknown> = {};
@@ -138,8 +150,41 @@ export class WorldAgent {
   close() {
     this.closed = true;
     if (this.ticker) { clearInterval(this.ticker); this.ticker = null; }
+    clearInterval(this.activityTimer);
     this.gate.dispose(); // held narration dies with the session
     this.ws?.close();
+  }
+
+  /** The activity pulse: local awareness as ONE event per window, and only
+   *  while something is happening. See denoise.ts (ACTIVITY_*) for the why.
+   *  Deliberately not pushed to the inbox — look() already shows presence
+   *  live and chat verbatim; the pulse is a wake signal, not scrollback. */
+  private activityPulse() {
+    const a = this.act30;
+    const msgs = [...a.says.values()].reduce((s, n) => s + n, 0);
+    if (!(msgs || a.movers.size || a.acts || a.arrivals || a.departures || a.builds)) return;
+    this.act30 = { says: new Map(), movers: new Set(), acts: 0, arrivals: 0, departures: 0, builds: 0 };
+    const nearby = [...this.people.values()]
+      .filter((p) => p.id !== this.name && p.pose &&
+        Math.hypot(p.pose.p[0] - this.pos.x, p.pose.p[2] - this.pos.z) <= ACTIVITY_RADIUS_M)
+      .map((p) => p.id);
+    const n = (c: number, w: string) => `${c} ${w}${c === 1 ? "" : "s"}`;
+    const bits: string[] = [];
+    if (msgs) bits.push(`${n(msgs, "message")} (${[...a.says.keys()].join(", ")})`);
+    if (a.movers.size) bits.push(`${[...a.movers].join(", ")} moving about`);
+    if (a.acts) bits.push(n(a.acts, "embodied act"));
+    if (a.arrivals) bits.push(n(a.arrivals, "arrival"));
+    if (a.departures) bits.push(n(a.departures, "departure"));
+    if (a.builds) bits.push(`${n(a.builds, "thing")} changed`);
+    const who = nearby.length ? `${nearby.join(", ")} nearby — ` : "";
+    this.onEvent?.({ ts: Date.now(), kind: "activity", who: "world", text: `${who}${bits.join("; ")}` });
+  }
+
+  /** A build act (spawn/place/light/remove) near this body counts as activity. */
+  private noteBuild(actor: string | undefined, pos: number[] | undefined | null) {
+    if (!actor || actor === this.name || actor === "world") return;
+    if (pos && Math.hypot(pos[0] - this.pos.x, pos[2] - this.pos.z) > ACTIVITY_RADIUS_M) return;
+    this.act30.builds++;
   }
 
   connect(): Promise<void> {
@@ -298,7 +343,13 @@ export class WorldAgent {
       this.nearArmed.set(id, false);
       this.ping({ ts: Date.now(), kind: "approach", who: id });
     }
-    if (id !== this.name) this.noteActs(id, prev, pose);
+    if (id !== this.name) {
+      // raw movement inside the radius feeds the activity pulse — locomotion
+      // is liveliness even though it is never narrated per-frame
+      if (dist <= ACTIVITY_RADIUS_M && (pose.speed > 0.05 || pose.clip === "walk" || pose.clip === "run"))
+        this.act30.movers.add(id);
+      this.noteActs(id, prev, pose, dist);
+    }
   }
 
   /** Embodied acts as events. The presence stream is 15Hz noise; what an
@@ -312,7 +363,7 @@ export class WorldAgent {
    *  speak once per window instead of per repetition; and a non-locomotion
    *  stint shorter than SHORT_STINT_MS earns no "gets up" — the start
    *  already told the story, a jump is one thing, not two. */
-  private noteActs(id: string, prev: Pose | null, pose: Pose & { emote?: string; pose?: Record<string, unknown> | null }) {
+  private noteActs(id: string, prev: Pose | null, pose: Pose & { emote?: string; pose?: Record<string, unknown> | null }, dist = Infinity) {
     const acts: { key: string; text: string }[] = [];
     if (pose.emote) acts.push({ key: `emote:${pose.emote}`, text: `emotes: ${pose.emote}` });
     const prevHeld = Boolean((prev as { pose?: unknown } | null)?.pose);
@@ -331,6 +382,9 @@ export class WorldAgent {
         if (stint >= SHORT_STINT_MS) acts.push({ key: "gets-up", text: "gets up" });
       }
     }
+    // RAW act count feeds the pulse — a denoised (repeat) jump still means
+    // someone is alive and doing things next to you
+    if (acts.length && dist <= ACTIVITY_RADIUS_M) this.act30.acts += acts.length;
     for (const a of acts) this.gate.act(id, a.key, a.text);
   }
 
@@ -338,14 +392,18 @@ export class WorldAgent {
     const { verb, args, actor, ts } = entry;
     if (verb === "spawn") {
       this.entities.set(args.id, { id: args.id, lib: args.lib, pos: args.pos ?? [0, 0, 0], yaw: args.yaw ?? 0, actor });
+      if (live) this.noteBuild(actor, args.pos);
     } else if (verb === "light") {
       // a light is an entity too, so text-tier perception can see it and it can
       // be moved/removed by id like anything else
       this.entities.set(args.id, { id: args.id, lib: "(light)", pos: args.pos ?? [0, 1, 0], yaw: 0, actor });
+      if (live) this.noteBuild(actor, args.pos);
     } else if (verb === "place") {
       const e = this.entities.get(args.id);
       if (e) { e.pos = args.pos; if (args.yaw != null) e.yaw = args.yaw; }
+      if (live) this.noteBuild(actor, args.pos);
     } else if (verb === "remove") {
+      if (live) this.noteBuild(actor, this.entities.get(args.id)?.pos);
       this.entities.delete(args.id);
     } else if (verb === "say") {
       // history lands in the inbox ONCE, so a freshly-joined agent has
@@ -363,6 +421,11 @@ export class WorldAgent {
       // It stays in the inbox — the scrollback record is honest — but it is
       // not an event.
       if (live && actor !== this.name) {
+        // speech near this body feeds the activity pulse (a speaker whose
+        // position is unknown — just arrived — counts as near)
+        const pp = this.people.get(actor)?.pose;
+        if (!pp || Math.hypot(pp.p[0] - this.pos.x, pp.p[2] - this.pos.z) <= ACTIVITY_RADIUS_M)
+          this.act30.says.set(actor, (this.act30.says.get(actor) ?? 0) + 1);
         const rx = new RegExp(`(@${this.name}\\b|\\b${this.name}\\b)`, "i");
         const mention = rx.test(String(args.text));
         if (mention) this.ping({ ts, kind: "mention", who: actor, text: args.text });

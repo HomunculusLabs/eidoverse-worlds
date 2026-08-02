@@ -16,6 +16,7 @@ process.env.EW_PRESENCE_TAU_SEC = "1000";   // effectively no decay within the t
 process.env.EW_ACT_REFRACT_SEC = "0.2";
 process.env.EW_STINT_MIN_SEC = "0.15";
 process.env.EW_APPROACH_REFRACT_SEC = "0.3";
+process.env.EW_ACTIVITY_PULSE_SEC = "0.12";
 
 const { NoiseGate } = await import("./denoise.ts");
 const { WorldAgent } = await import("./agent.ts");
@@ -144,6 +145,30 @@ console.log("\n━━ agent: approach = knock once, not a metronome ━━");
   np("digi", 2, 0);
   check("gone away + refractory over → the knock counts again",
     agent.pings.filter((p) => p.kind === "approach").length === 2, String(agent.pings.length));
+  agent.close();
+}
+
+console.log("\n━━ agent: activity pulse — regular wakes only while life is near ━━");
+{
+  const agent = new WorldAgent({ name: "claude" }); // at origin
+  const pulses: string[] = [];
+  agent.onEvent = (ev) => { if (ev.kind === "activity") pulses.push(ev.text!); };
+  // digi 10m away: walking and talking — inside the 30m radius
+  (agent as any).notePose("digi", { p: [10, 0, 0], yaw: 0, speed: 1.5, clip: "walk" });
+  await (agent as any).applyEntry({ verb: "say", args: { text: "движуха" }, actor: "digi", ts: Date.now(), seq: 10 }, true);
+  // ghost 100m away: also walking and talking — must not count
+  (agent as any).notePose("ghost", { p: [100, 0, 0], yaw: 0, speed: 1.5, clip: "walk" });
+  await (agent as any).applyEntry({ verb: "say", args: { text: "far away" }, actor: "ghost", ts: Date.now(), seq: 11 }, true);
+  await sleep(200);
+  check("one pulse while activity is near", pulses.length === 1, JSON.stringify(pulses));
+  check("digest names digi, ignores the far ghost",
+    (pulses[0] ?? "").includes("digi") && !(pulses[0] ?? "").includes("ghost"), pulses[0]);
+  await sleep(250);
+  check("quiet nearby → the stream stops by itself", pulses.length === 1, String(pulses.length));
+  // a build near the body revives it
+  await (agent as any).applyEntry({ verb: "spawn", args: { id: "t1", lib: "x.glb", pos: [3, 0, 3] }, actor: "digi", ts: Date.now() }, true);
+  await sleep(200);
+  check("a nearby build revives the pulse", pulses.length === 2 && pulses[1].includes("1 thing changed"), JSON.stringify(pulses.slice(1)));
   agent.close();
 }
 

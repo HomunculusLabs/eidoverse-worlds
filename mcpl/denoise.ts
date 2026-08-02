@@ -60,6 +60,16 @@ export const APPROACH_REFRACT_MS = env("EW_APPROACH_REFRACT_SEC", 600) * 1000;
 export const APPROACH_RADIUS = 2.5;
 export const REARM_RADIUS = 6;
 
+/** The denoiser's complement: the ACTIVITY PULSE. Where the gate above takes
+ *  individual events away, the pulse gives one back — a digest of everything
+ *  that happened within ACTIVITY_RADIUS_M in the last window, emitted at most
+ *  once per window and ONLY when something actually happened. It exists for
+ *  wake gates: a host rule matching the "activity" tag wakes its agent
+ *  regularly while there is life nearby, and the stream simply stops when the
+ *  area goes quiet — local awareness without per-event noise. */
+export const ACTIVITY_RADIUS_M = env("EW_ACTIVITY_RADIUS_M", 30);
+export const ACTIVITY_PULSE_MS = env("EW_ACTIVITY_PULSE_SEC", 300) * 1000;
+
 type IdState = {
   pending: { kind: "arrive" | "leave"; ts: number; timer: ReturnType<typeof setTimeout> } | null;
   charge: number;

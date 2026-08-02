@@ -201,7 +201,7 @@ class Session {
     this.conn.close();
   }
 
-  private deliver(text: string, author: { id: string; name: string }, opts?: { tags?: string[]; mentioned?: boolean }) {
+  private deliver(text: string, author: { id: string; name: string }, opts?: { tags?: string[]; mentioned?: boolean; metadata?: Record<string, unknown> }) {
     // Belt to serve()'s braces: a plain-MCP host must never receive an MCPL
     // frame, whatever future code path tries to send one.
     if (!this.mcplClient) return;
@@ -221,7 +221,9 @@ class Session {
         // layers read different keys: ConversationRouter reads `mentioned`;
         // recipe wake-policies (per discord-mcpl's adapter convention) match
         // `isExplicitMention`. Ask us how we know.
-        ...(opts?.mentioned ? { metadata: { mentioned: true, isExplicitMention: true } } : {}),
+        ...((opts?.mentioned || opts?.metadata)
+          ? { metadata: { ...(opts?.metadata ?? {}), ...(opts?.mentioned ? { mentioned: true, isExplicitMention: true } : {}) } }
+          : {}),
       }],
     };
     this.conn.sendRequest(method.CHANNELS_INCOMING, params).catch((e) => {
@@ -249,6 +251,15 @@ class Session {
         // embodied transitions — an emote, a pose struck or released, someone
         // sitting down. Ambient by nature: a closed door mutes them.
         if (this.channelOpen) this.deliver(`* ${ev.who} ${ev.text}`, { id: "world", name: this.agent.world });
+      } else if (ev.kind === "activity") {
+        // The ambient-activity pulse: at most one per window, and ONLY while
+        // something is happening within ACTIVITY_RADIUS_M of this body. NOT a
+        // mention — hosts opt IN by matching the "activity" tag / metadata in
+        // their wake gates, which yields regular wakes exactly as long as
+        // there is life nearby (the stream stops when the area goes quiet).
+        // A closed door mutes it like any ambient signal.
+        if (this.channelOpen) this.deliver(`* ${ev.text}`, { id: "world", name: this.agent.world },
+          { tags: ["activity"], metadata: { activity: true } });
       } else if (this.channelOpen) {
         this.deliver(`* ${ev.who} ${ev.kind === "arrive" ? "arrived in the world" : "left the world"}`, { id: "world", name: this.agent.world });
       }
