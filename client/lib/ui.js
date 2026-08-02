@@ -229,6 +229,7 @@ export const KEYMAP = [
   ['Undo',        '<kbd>Ctrl</kbd>+<kbd>Z</kbd> — your own edits, newest first'],
   ['Panels',      '<kbd>Tab</kbd> who\'s here · drag titles to move, corners to resize'],
   ['Photo mode',  '<kbd>P</kbd> — free camera · <kbd>F1</kbd> hides the UI · <kbd>F2</kbd> saves a shot'],
+  ['Debug view',  '<kbd>F3</kbd> — collider volumes and the ragdoll skeleton, as the solver reads them'],
   ['This help',   '<kbd>?</kbd> or <kbd>H</kbd>'],
 ];
 

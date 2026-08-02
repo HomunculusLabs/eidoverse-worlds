@@ -433,6 +433,13 @@ body.touch #touch { display: block; }
 }
 #touchbtns { position: absolute; right: 18px; bottom: 18px; display: flex; gap: 8px; pointer-events: auto; }
 #touchbtns button { padding: 13px 15px; font-size: var(--fs); border-radius: 50%; }
+.dbg-row { cursor: pointer; user-select: none; }
+.dbg-row input { accent-color: var(--accent); margin: 0; }
+.dbg-stats {
+  margin: 2px 0 0; padding: 6px 7px; font: 11px/1.45 ui-monospace, monospace;
+  color: var(--dim); background: rgba(0,0,0,0.25); border-radius: 5px;
+  white-space: pre; overflow-x: auto;
+}
 </style>
 <script type="importmap">
 {

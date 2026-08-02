@@ -32,6 +32,7 @@ import {
   toast, setHud, setHint, flashHint, buildHelp, toggleHelp,
   openDoor, toggleRoster, initRoster, initDock, paintRoster, panelFrame, el,
 } from './lib/ui.js';
+import { initDebug, updateDebug, toggleDebug } from './lib/debug.js';
 import { initChat, logChat, chat, openConvo } from './lib/chat.js';
 import { makeFrame } from './lib/frames.js';
 import { Ragdoll } from './lib/ragdoll.js';
@@ -112,7 +113,9 @@ initDock([
   { id: 'world', label: '🧱' },
   { id: 'who', label: '👥' },
   { id: 'emotes', label: '👋' },
+  { id: 'debug', label: '🐞' },
 ]);
+initDebug({ ragdoll: () => ragdoll, fps: () => fps });
 
 // Verified identity resolves BEFORE anything reads CONFIG.name — otherwise the
 // door panel and the local nameplate greet a stale localStorage name while the
@@ -310,6 +313,7 @@ bus.on('key', (e) => {
   if (e.code === 'KeyP') { togglePhotoMode(); return; }
   if (e.code === 'F1') { e.preventDefault(); document.body.classList.toggle('photo'); return; }
   if (e.code === 'F2') { e.preventDefault(); saveScreenshot(); return; }
+  if (e.code === 'F3') { e.preventDefault(); toggleDebug(); return; }
   if (e.code === 'KeyR' && !isEditing()) { downed ? getUp() : goLimp(); return; }
   // any movement stands you back up
   if (downed && ['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space'].includes(e.code)) getUp();
@@ -565,6 +569,7 @@ function frame(now) {
   updateRemotes(dt, now);
   updateGaze(myState.pos, me, CONFIG.name, now);
   updateBuild();
+  updateDebug(now);              // collider/ragdoll wireframes, when F3 is up
   sendPose(now);
 
   // A held frame = a whole-scene pipeline settle is in progress (sky arrival
