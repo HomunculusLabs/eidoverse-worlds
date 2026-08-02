@@ -253,7 +253,10 @@ export function buildHelp() {
       Bringing <i>new</i> models into a world's vocabulary needs the <b>gen</b>
       capability (<b>/grant name +gen</b>). <b>/role</b> tells you what you are
       here. Owners can also <b>/fork</b> a world into a copy, or <b>/reset</b>
-      it back to zero (its history is archived, never destroyed).</p>
+      it back to zero (its history is archived, never destroyed).
+      Owners moderate their world: <b>/kick name</b> removes someone (they may
+      return), <b>/ban name reason</b> keeps them out until <b>/unban</b>;
+      <b>/bans</b> lists who is barred here.</p>
     <h2>Building</h2>
     <p class="sub">Open <b>build</b> to search the model library, or drag a
       <b>.glb</b> into the window to upload one. Drag a <b>.vrm</b> to add a body

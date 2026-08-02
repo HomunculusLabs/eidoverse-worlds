@@ -104,6 +104,10 @@ const TOOLS = [
   { name: "light", description: "Place a light source in the world. Persists like any placed thing. color is a hex integer (e.g. 0xffd9a0 warm, 0x88bbff cool, 0xff5533 red), intensity and range are optional. Position defaults to just in front of you. A small glowing sphere marks it; move or remove it by id like any entity.", inputSchema: { type: "object", properties: { color: { type: "number" }, intensity: { type: "number" }, range: { type: "number" }, x: { type: "number" }, y: { type: "number" }, z: { type: "number" }, id: { type: "string" } } } },
   { name: "remove", description: "Remove a placed entity.", inputSchema: { type: "object", properties: { id: { type: "string" } }, required: ["id"] } },
   { name: "world_verb", description: "Escape hatch: raw world-log verb (terrain, grass, sky, …). Trusted v1.", inputSchema: { type: "object", properties: { verb: { type: "string" }, args: { type: "object" } }, required: ["verb", "args"] } },
+  { name: "kick", description: "MODERATION: remove a participant from this world right now. They may rejoin — a kick interrupts, a ban excludes. Needs owner rights here (same gate as grant); operators and fellow owners cannot be kicked.", inputSchema: { type: "object", properties: { id: { type: "string" }, reason: { type: "string" } }, required: ["id"] } },
+  { name: "ban", description: "MODERATION: ban a participant — disconnects them now and refuses their joins (including spectating) until unban. Default is THIS world only (needs owner rights here). global:true bans them from every world on this server (needs WORLD_ADMIN). Give a reason — it is shown to them and kept in the record.", inputSchema: { type: "object", properties: { id: { type: "string" }, reason: { type: "string" }, global: { type: "boolean" } }, required: ["id"] } },
+  { name: "unban", description: "MODERATION: lift a ban — this world's by default, the server-wide list with global:true.", inputSchema: { type: "object", properties: { id: { type: "string" }, global: { type: "boolean" } }, required: ["id"] } },
+  { name: "list_bans", description: "Who is banned from this world (anyone may ask), or from the whole server with global:true (operator only).", inputSchema: { type: "object", properties: { global: { type: "boolean" } } } },
 ];
 
 import { readdirSync } from "node:fs";
@@ -622,6 +626,24 @@ class Session {
       }
       case "remove": ag.verb("remove", { id: a.id }); return text(`removed ${a.id}`);
       case "world_verb": ag.verb(String(a.verb), a.args ?? {}); return text(`sent ${a.verb}`);
+      case "kick": case "ban": case "unban": {
+        // Moderation deserves a real answer, not fire-and-forget: wait for
+        // the world's echo (success) or refusal and hand THAT back.
+        const id = String(a.id ?? "").trim();
+        if (!id) return text(`${name} needs an id — who, exactly?`);
+        const reason = a.reason != null ? String(a.reason) : undefined;
+        const t0 = Date.now();
+        if (a.global && name !== "kick") ag.sendMod(name === "ban" ? "global-ban" : "global-unban", { id, ...(reason ? { reason } : {}) });
+        else ag.verb(name, { id, ...(reason ? { reason } : {}) });
+        const answer = await ag.modOutcome(t0);
+        return text(answer ?? `sent ${name} ${id}${a.global ? " (global)" : ""} — no echo from the world yet; check look()`);
+      }
+      case "list_bans": {
+        const t0 = Date.now();
+        ag.sendMod(a.global ? "global-bans" : "world-bans");
+        const answer = await ag.modOutcome(t0);
+        return text(answer ?? "no reply from the world (timeout)");
+      }
       default: return { content: [{ type: "text", text: `Unknown tool: ${name}` }], isError: true };
     }
   }

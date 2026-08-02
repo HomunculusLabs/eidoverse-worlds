@@ -190,6 +190,61 @@ server.tool(
   async ({ id }) => { agent.verb("remove", { id }); return { content: [{ type: "text", text: `removed ${id}` }] }; },
 );
 
+// ---- moderation ------------------------------------------------------------
+// Per-world kick/ban/unban are ordinary owner-rank verbs — an agent that OWNS
+// a world moderates it through the same gate a human owner does. Each waits
+// for the world's echo or refusal (agent.modOutcome) instead of fire-and-forget.
+
+server.tool(
+  "kick",
+  "MODERATION: remove a participant from this world right now. They may rejoin — a kick interrupts, a ban excludes. Needs owner rights here (same gate as grant); operators and fellow owners cannot be kicked.",
+  { id: z.string(), reason: z.string().optional() },
+  async ({ id, reason }) => {
+    const t0 = Date.now();
+    agent.verb("kick", { id, ...(reason ? { reason } : {}) });
+    const answer = await agent.modOutcome(t0);
+    return { content: [{ type: "text", text: answer ?? `sent kick ${id} — no echo from the world yet; check look()` }] };
+  },
+);
+
+server.tool(
+  "ban",
+  "MODERATION: ban a participant — disconnects them now and refuses their joins (including spectating) until unban. Default is THIS world only (needs owner rights here). global:true bans them from every world on this server (needs WORLD_ADMIN). Give a reason — it is shown to them and kept in the record.",
+  { id: z.string(), reason: z.string().optional(), global: z.boolean().optional() },
+  async ({ id, reason, global: g }) => {
+    const t0 = Date.now();
+    if (g) agent.sendMod("global-ban", { id, ...(reason ? { reason } : {}) });
+    else agent.verb("ban", { id, ...(reason ? { reason } : {}) });
+    const answer = await agent.modOutcome(t0);
+    return { content: [{ type: "text", text: answer ?? `sent ban ${id}${g ? " (global)" : ""} — no echo from the world yet; check look()` }] };
+  },
+);
+
+server.tool(
+  "unban",
+  "MODERATION: lift a ban — this world's by default, the server-wide list with global:true.",
+  { id: z.string(), global: z.boolean().optional() },
+  async ({ id, global: g }) => {
+    const t0 = Date.now();
+    if (g) agent.sendMod("global-unban", { id });
+    else agent.verb("unban", { id });
+    const answer = await agent.modOutcome(t0);
+    return { content: [{ type: "text", text: answer ?? `sent unban ${id}${g ? " (global)" : ""} — no echo from the world yet; check look()` }] };
+  },
+);
+
+server.tool(
+  "list_bans",
+  "Who is banned from this world (anyone may ask), or from the whole server with global:true (operator only).",
+  { global: z.boolean().optional() },
+  async ({ global: g }) => {
+    const t0 = Date.now();
+    agent.sendMod(g ? "global-bans" : "world-bans");
+    const answer = await agent.modOutcome(t0);
+    return { content: [{ type: "text", text: answer ?? "no reply from the world (timeout)" }] };
+  },
+);
+
 server.tool(
   "world_verb",
   "Escape hatch: send any raw verb to the world log (terrain, grass, sky, …). Trusted-participant v1 — use judiciously.",

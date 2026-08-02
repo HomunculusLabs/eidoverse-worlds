@@ -250,6 +250,16 @@ export async function applyEntry(entry, live, ctx = {}) {
         bus.emit('roles', { id: args.id, ...worldRoles.get(args.id) });
         break;
       }
+      case 'ban': case 'unban': case 'kick': {
+        // Moderation is log history like everything else; enforcement is the
+        // server's (fold + expel). Here it only narrates, and only LIVE —
+        // replaying an old ban as if it just happened would be a lie.
+        if (live) {
+          const what = verb === 'ban' ? 'banned' : verb === 'unban' ? 'lifted the ban on' : 'removed';
+          logChat('*', `${actor} ${what} ${args.id}${verb !== 'unban' && args.reason ? ` — ${args.reason}` : ''}`);
+        }
+        break;
+      }
       case 'comp': {
         // The generic component fold — mirror of the server's blind one.
         if (!args.id || typeof args.type !== 'string') return;

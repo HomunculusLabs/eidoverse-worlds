@@ -21,7 +21,7 @@ import {
 import {
   remotes, updateRemotes, updateGaze, noteSpeaking, setLodBias,
 } from './lib/remotes.js';
-import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendWhisper, sendTyping, sendWorldFork, sendWorldReset } from './lib/net.js';
+import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendWhisper, sendTyping, sendWorldFork, sendWorldReset, sendMod } from './lib/net.js';
 import {
   initPalette, updateBuild, wireAvatarSwitch, setMyAvatarPath, toggleBuildMenu,
   hasGhost, hasSelection, toggleEditMode, isEditing,
@@ -358,6 +358,29 @@ bus.on('command', ({ cmd, arg }) => {
     sendVerb('grant', { id, ...(role ? { role } : {}), ...(genFlag ? { gen: genFlag === '+gen' } : {}) });
     return;
   }
+  if (cmd === 'kick' || cmd === 'ban') {
+    // /kick /ban <name> [reason…] — owner-only, the server enforces (and
+    // narrates the act into chat via the log entry it broadcasts back).
+    const [id, ...rest] = (arg || '').trim().split(/\s+/).filter(Boolean);
+    if (!id) return logChat('*', `usage: /${cmd} <name> [reason] — ${cmd === 'kick' ? 'they can rejoin; /ban keeps them out' : 'a kick that sticks — /unban lifts it'}`);
+    sendVerb(cmd, { id, ...(rest.length ? { reason: rest.join(' ') } : {}) });
+    return;
+  }
+  if (cmd === 'unban') {
+    const id = (arg || '').trim();
+    if (!id) return logChat('*', 'usage: /unban <name>');
+    sendVerb('unban', { id });
+    return;
+  }
+  if (cmd === 'bans') return sendMod('world-bans');
+  if (cmd === 'gban' || cmd === 'gunban') {
+    // global moderation — WORLD_ADMIN only, the server enforces
+    const [id, ...rest] = (arg || '').trim().split(/\s+/).filter(Boolean);
+    if (!id) return logChat('*', `usage: /${cmd} <name>${cmd === 'gban' ? ' [reason] — bans from every world on this server' : ''}`);
+    sendMod(cmd === 'gban' ? 'global-ban' : 'global-unban', { id, ...(rest.length ? { reason: rest.join(' ') } : {}) });
+    return;
+  }
+  if (cmd === 'gbans') return sendMod('global-bans');
   if (cmd === 'fork') {
     // /fork <new-name> — copy this world, all history included (owner-only,
     // the server enforces). The reply arrives as a world-forked message.

@@ -298,6 +298,34 @@ the agent's own bearer (the MCPL door forwards it as `agentToken` at join;
 (connectome/docs/home-node.md), aid1 `sub`s replace names as the principal
 ids in the roles map without the model changing.
 
+## Moderation (2026-08-02)
+
+Two scopes, following the two kinds of state this codebase has:
+
+**Per-world** — `kick` / `ban` / `unban` are ordinary owner-rank verbs
+(`{id, reason?}`), gated by the same `VERB_NEEDS` ladder as `grant`. Bans
+fold into `WorldState.bans` (event-sourced: they replay, audit, and ride a
+fork); a kick is an act like `use` — logged, folded to nothing. Both land
+immediately on every matching connected body (`expel`: error, close `4006`,
+leave broadcast) and a ban additionally refuses joins — spectating included —
+at the door. Agents moderate through the identical gate: an agent that owns a
+world gets `kick`/`ban`/`unban`/`list_bans` MCP tools with no extra capability
+machinery. Guardrails: no self-moderation, no `*`, operators are untouchable,
+and owners cannot ban each other (a `WORLD_ADMIN` can).
+
+**Global** — there is no global log, so instance-wide bans are messages
+(`global-ban` / `global-unban` / `global-bans`), `WORLD_ADMIN`-only, persisted
+in `WORLDS_DIR/.bans.json` (inside WORLDS_DIR deliberately: a scratch
+sequencer gets a scratch ban list, same doctrine as the logs). A global ban
+expels from every world at once and closes every door.
+
+Bans key on the durable `sub` when the target was present to be identified
+(captured into the ban record at ban time), falling back to the display id —
+a verified human cannot shed a ban by renaming. Unverified name-only bans
+remain evadable by `/name` until archipelago-home identity is universal;
+close code `4006` is in both the browser client's and WorldAgent's no-retry
+lists, so a removed client never hammers the door.
+
 ## Orrery (3D prompting) seam
 
 Orrery is a separate service; agents and humans drive its multistage flow

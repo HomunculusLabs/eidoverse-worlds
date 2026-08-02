@@ -290,6 +290,13 @@ const COMMANDS = [
   ['/who', 'list everyone present'],
   ['/role', 'what you may do here (or /role <name>)'],
   ['/grant', '/grant <name> owner|builder|visitor [+gen|-gen] — owner only'],
+  ['/kick', '/kick <name> [reason] — remove someone from this world (owner)'],
+  ['/ban', '/ban <name> [reason] — ban someone from this world (owner)'],
+  ['/unban', '/unban <name> — lift a ban here (owner)'],
+  ['/bans', 'who is banned from this world'],
+  ['/gban', '/gban <name> [reason] — ban from ALL worlds (operator)'],
+  ['/gunban', '/gunban <name> — lift a global ban (operator)'],
+  ['/gbans', 'list global bans (operator)'],
   ['/fork', '/fork <new-name> — copy this world, history and all (owner)'],
   ['/reset', 'erase this world back to zero, archived not destroyed (owner)'],
   ['/goto', '/goto <name> — walk to someone'],
@@ -414,6 +421,10 @@ function runCommand(raw) {
       return true;
     case 'grant':
       bus.emit('command', { cmd: 'grant', arg });
+      return true;
+    case 'kick': case 'ban': case 'unban': case 'bans':
+    case 'gban': case 'gunban': case 'gbans':
+      bus.emit('command', { cmd: cmd.toLowerCase(), arg });
       return true;
     case 'fork': case 'copy':
       bus.emit('command', { cmd: 'fork', arg });

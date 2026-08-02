@@ -154,8 +154,12 @@ export class WorldAgent {
       // matters here in a way it doesn't in a chat app.
       ws.onopen = () => ws.send(JSON.stringify({ type: "join", world: this.world, id: this.name, avatar: this.avatar,
         agent: true, token: process.env.WORLD_TOKEN ?? "", agentToken: this.agentToken }));
-      ws.onclose = () => {
+      ws.onclose = (ev) => {
         this.joined = false;
+        // 4006 = removed by moderation (kicked or banned). Reconnecting would
+        // either hammer a banned door or instantly undo a kick — the body
+        // stays down; its host reconnecting later is the deliberate return.
+        if ((ev as { code?: number } | undefined)?.code === 4006) { this.closed = true; return; }
         if (!this.closed) setTimeout(() => this.connect().catch(() => {}), 1500);
       };
       ws.onmessage = async (ev) => {
@@ -170,7 +174,19 @@ export class WorldAgent {
               this.closed = true;
               clearTimeout(timeout);
               reject(new Error(String(msg.error ?? "join refused")));
+            } else {
+              // A mid-life refusal (insufficient rank, a bad moderation
+              // target, being kicked…). Verbs are fire-and-forget, so this is
+              // the only place the answer lands: remember it so a tool call
+              // can report it (modOutcome), and put it in the inbox so a
+              // later look() shows what the world said no to.
+              this.lastRefusal = { ts: Date.now(), text: String(msg.error ?? "refused") };
+              this.inbox.push({ ts: Date.now(), kind: "act", who: "world", text: `refused: ${msg.error}` });
             }
+            break;
+          case "mod":
+            // Moderation replies (ban lists, global-ban confirmations).
+            this.lastMod = { ts: Date.now(), text: String(msg.text ?? "") };
             break;
           case "snapshot":
             this.entities.clear(); this.people.clear();
@@ -352,6 +368,17 @@ export class WorldAgent {
         if (mention) this.ping({ ts, kind: "mention", who: actor, text: args.text });
         this.onEvent?.({ ts, kind: "say", who: actor, text: args.text, mention });
       }
+    } else if (verb === "ban" || verb === "unban" || verb === "kick") {
+      // Moderation acts, narrated like any embodied transition — and, when
+      // this body is the ACTOR, the confirmation its fire-and-forget verb
+      // never gets: the authoritative echo doubles as the tool's answer.
+      const what = verb === "ban" ? "banned" : verb === "unban" ? "lifted the ban on" : "removed";
+      const line = `${what} ${args?.id}${verb !== "unban" && args?.reason ? ` — ${args.reason}` : ""}`;
+      if (live) {
+        this.inbox.push({ ts, kind: "act", who: actor, text: line });
+        if (actor === this.name) this.lastMod = { ts: Date.now(), text: `you ${line}` };
+        else this.onEvent?.({ ts, kind: "act", who: actor, text: line });
+      }
     } else if (verb === "terrain") {
       await this.buildTerrain(args);
       this.worldInfo.terrain = { seed: args.seed, size: args.size, amplitude: args.amplitude, flatRadius: args.flatRadius };
@@ -432,6 +459,37 @@ export class WorldAgent {
   verb(verb: string, args: Record<string, unknown>) {
     if (!this.joined) throw new Error("not joined");
     this.ws!.send(JSON.stringify({ type: "verb", verb, args }));
+  }
+
+  // ---- moderation ----
+  // Per-world kick/ban/unban are ordinary verbs (owner-rank, same gate as
+  // grant) sent via verb(). These two are the extra plumbing: non-verb
+  // moderation messages, and a way to hear the world's answer.
+
+  /** The world's most recent mid-life refusal / moderation reply. */
+  lastRefusal: { ts: number; text: string } | null = null;
+  lastMod: { ts: number; text: string } | null = null;
+
+  /** Moderation messages that are not world verbs: 'world-bans' (list this
+   *  world's bans — anyone present), 'global-ban' / 'global-unban' /
+   *  'global-bans' (server: WORLD_ADMIN only). Answers arrive as `mod`. */
+  sendMod(type: "world-bans" | "global-ban" | "global-unban" | "global-bans", extra: Record<string, unknown> = {}) {
+    if (!this.joined || this.ws?.readyState !== 1) throw new Error("not joined");
+    this.ws.send(JSON.stringify({ type, ...extra }));
+  }
+
+  /** Wait briefly for the world's answer to a moderation act issued at t0: a
+   *  `mod` confirmation (or the authoritative log echo of our own ban/kick),
+   *  or an `error` refusal. Verbs are fire-and-forget by doctrine; moderation
+   *  is the act where "did that actually happen" deserves a real answer. */
+  async modOutcome(t0: number, ms = 1500): Promise<string | null> {
+    const deadline = Date.now() + ms;
+    while (Date.now() < deadline) {
+      if (this.lastRefusal && this.lastRefusal.ts >= t0) return `refused: ${this.lastRefusal.text}`;
+      if (this.lastMod && this.lastMod.ts >= t0) return this.lastMod.text;
+      await new Promise((r) => setTimeout(r, 50));
+    }
+    return null;
   }
 
   say(text: string) { this._typingUntil = 0; this.verb("say", { text }); }

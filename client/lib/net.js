@@ -92,6 +92,15 @@ export function sendWorldReset() {
   } else logChat('*', 'not connected — try again in a moment');
 }
 
+/** Moderation messages that are not world verbs: 'world-bans' (list this
+ *  world's bans — anyone), 'global-ban' / 'global-unban' / 'global-bans'
+ *  (operator only; the server enforces). Replies arrive as `mod` messages. */
+export function sendMod(type, extra = {}) {
+  if (net.joined && net.ws?.readyState === 1) {
+    net.ws.send(JSON.stringify({ type, ...extra }));
+  } else logChat('*', 'not connected — try again in a moment');
+}
+
 /** Private, point-to-point. Deliberately not a verb: verbs go in the world
  *  log, and the log is public forever. */
 export function sendWhisper(to, text) {
@@ -240,6 +249,16 @@ export async function connect() {
       net.status = 'rejected';
       bus.emit('net', net);
       toast(`"${CONFIG.name}" is connected in another tab. This one has yielded — reload to take over.`, 'warn', 60000);
+      return;
+    }
+    // 4006 = removed by moderation (kicked or banned). The server already
+    // explained itself in an error toast just before closing. No retry: a
+    // banned door will not open, and auto-rejoining after a kick would make
+    // the kick meaningless — coming back is a deliberate reload.
+    if (ev.code === 4006) {
+      net.status = 'rejected';
+      bus.emit('net', net);
+      toast('you were removed from this world — reload if you believe you may return', 'warn', 60000);
       return;
     }
     // 4005 = the world name itself is malformed (a mangled link). No retry —
@@ -399,6 +418,12 @@ async function handle(msg) {
       setTimeout(() => location.reload(), 1800);
       break;
     }
+
+    case 'mod':
+      // Moderation replies (ban lists, global-ban confirmations) — chat is
+      // where the person is looking when they issue the command.
+      for (const line of String(msg.text ?? '').split('\n')) logChat('*', line);
+      break;
 
     case 'error':
       // Server-side refusals are the user's problem to see, not the console's.
