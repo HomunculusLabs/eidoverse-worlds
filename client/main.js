@@ -21,7 +21,7 @@ import {
 import {
   remotes, updateRemotes, updateGaze, noteSpeaking, setLodBias,
 } from './lib/remotes.js';
-import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendWhisper, sendTyping, sendWorldFork, sendWorldReset, sendMod } from './lib/net.js';
+import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendWhisper, sendTyping, sendWorldFork, sendWorldReset, sendMod, requestDebug } from './lib/net.js';
 import {
   initPalette, updateBuild, wireAvatarSwitch, setMyAvatarPath, toggleBuildMenu,
   hasGhost, hasSelection, toggleEditMode, isEditing,
@@ -400,6 +400,19 @@ bus.on('command', ({ cmd, arg }) => {
         + `if you mean it: /reset ${CONFIG.world}`);
     }
     sendWorldReset();
+    return;
+  }
+  if (cmd === 'debug') {
+    // /debug [n] — why things bounced: denials, rejections, rate limits,
+    // reaction outcomes. The log says what happened; this says why it didn't.
+    const n = Math.min(50, Math.max(1, parseInt(arg, 10) || 12));
+    requestDebug({ limit: n }).then(({ events }) => {
+      if (!events?.length) return logChat('*', 'flight recorder is empty — nothing has bounced recently');
+      for (const { ts, kind, ...rest } of events) {
+        const t = new Date(ts).toTimeString().slice(0, 8);
+        logChat('*', `${t} [${kind}] ${Object.entries(rest).map(([k, v]) => `${k}=${typeof v === 'string' ? v : JSON.stringify(v)}`).join(' ')}`);
+      }
+    });
     return;
   }
   if (cmd === 'use') {

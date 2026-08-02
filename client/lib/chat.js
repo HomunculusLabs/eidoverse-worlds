@@ -408,6 +408,10 @@ function runCommand(raw) {
     case 'goto':
       bus.emit('command', { cmd: 'goto', arg });
       return true;
+    case 'debug':
+      // /debug [n] — the world's flight recorder: why things bounced
+      bus.emit('command', { cmd: 'debug', arg });
+      return true;
     case 'use': case 'push': case 'pull': case 'ring': case 'open':
       // /use <thing> [action] — the universal interact. The aliases are the
       // same verb with the action already in hand: /push swing1.

@@ -140,6 +140,7 @@ export class WorldAgent {
    *  and it is directly comparable with what the world hands out. */
   lastSeq = -1;
   private pendingHistory = new Map<string, (m: any) => void>();
+  private pendingDebug = new Map<string, (m: any) => void>();
   private histId = 0;
 
   constructor(opts: { url?: string; name?: string; world?: string; avatar?: string; agentToken?: string } = {}) {
@@ -305,6 +306,11 @@ export class WorldAgent {
           case "history": {
             const p = this.pendingHistory.get(msg.reqId);
             if (p) { this.pendingHistory.delete(msg.reqId); p(msg); }
+            break;
+          }
+          case "debug": {
+            const p = this.pendingDebug.get(msg.reqId);
+            if (p) { this.pendingDebug.delete(msg.reqId); p(msg); }
             break;
           }
           case "whisper": {
@@ -659,6 +665,25 @@ export class WorldAgent {
         resolve({ entries: m.entries ?? [], oldestSeq: m.oldestSeq ?? null, hasMore: !!m.hasMore });
       });
       this.ws!.send(JSON.stringify({ type: "history", reqId, ...opts }));
+    });
+  }
+
+  /** The world's flight recorder: why things bounced — denied verbs, rejected
+   *  shapes, rate limits, and reaction outcomes (fired / skipped / failed).
+   *  The log answers "what happened"; this answers "why didn't it". */
+  worldDebug(opts: { limit?: number; kinds?: string[] } = {}): Promise<{ events: any[] }> {
+    if (!this.joined || this.ws?.readyState !== 1) return Promise.resolve({ events: [] });
+    const reqId = `d${++this.histId}`;
+    return new Promise((resolve) => {
+      const t = setTimeout(() => {
+        this.pendingDebug.delete(reqId);
+        resolve({ events: [] });
+      }, 8000);
+      this.pendingDebug.set(reqId, (m) => {
+        clearTimeout(t);
+        resolve({ events: m.events ?? [] });
+      });
+      this.ws!.send(JSON.stringify({ type: "debug", reqId, ...opts }));
     });
   }
 

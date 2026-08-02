@@ -108,7 +108,9 @@ const TOOLS = [
   { name: "place", description: "Move an entity (id from look) to x,z (y defaults to terrain; pass y to seat on furniture).", inputSchema: { type: "object", properties: { id: { type: "string" }, x: { type: "number" }, z: { type: "number" }, y: { type: "number" }, yaw: { type: "number" } }, required: ["id", "x", "z"] } },
   { name: "light", description: "Place a light source in the world. Persists like any placed thing. color is a hex integer (e.g. 0xffd9a0 warm, 0x88bbff cool, 0xff5533 red), intensity and range are optional. Position defaults to just in front of you. A small glowing sphere marks it; move or remove it by id like any entity.", inputSchema: { type: "object", properties: { color: { type: "number" }, intensity: { type: "number" }, range: { type: "number" }, x: { type: "number" }, y: { type: "number" }, z: { type: "number" }, id: { type: "string" } } } },
   { name: "remove", description: "Remove a placed entity.", inputSchema: { type: "object", properties: { id: { type: "string" } }, required: ["id"] } },
-  { name: "world_verb", description: "Escape hatch: raw world-log verb (terrain, grass, sky, …). Trusted v1.", inputSchema: { type: "object", properties: { verb: { type: "string" }, args: { type: "object" } }, required: ["verb", "args"] } },
+  { name: "world_verb", description: "Escape hatch: raw world-log verb (terrain, grass, sky, comp, motion, mount, use, …). Trusted v1. This is also the authoring surface for components: comp {id, type, data|null} attaches data to an entity (sockets, reactions, or anything you invent); motion {id, type: pendulum|spin|orbit|bob|path, …} sets it moving; see AGENTS.md in the eidoverse-worlds repo for the full vocabulary.", inputSchema: { type: "object", properties: { verb: { type: "string" }, args: { type: "object" } }, required: ["verb", "args"] } },
+  { name: "world_history", description: "Pull raw entries from the world log — the append-only record every world IS. Filter by verbs (e.g. ['use','motion'] to trace an interaction, ['comp'] to see how something was built), page backwards with before. Every entry has {seq, ts, actor, verb, args}; reaction-authored entries carry {cause, by}. This is the debugging primitive: the log is the world, so reading it is reading the world's source.", inputSchema: { type: "object", properties: { verbs: { type: "array", items: { type: "string" } }, before: { type: "number" }, after: { type: "number" }, limit: { type: "number" } } } },
+  { name: "world_debug", description: "The world's flight recorder: why things BOUNCED. The log answers 'what happened'; this answers 'why didn't it' — denied verbs (rights), rejected shapes (malformed/oversized comp, bad mount), rate limits, and reaction outcomes: 'reaction' (fired, with cause→effect seqs), 'reaction-skip' (with the reason: no reactions component, no handler for that action, wrong motion type), 'reaction-error'. In-memory, recent events only. Check here first when a component or use doesn't do what you expected.", inputSchema: { type: "object", properties: { limit: { type: "number" }, kinds: { type: "array", items: { type: "string" } } } } },
   { name: "kick", description: "MODERATION: remove a participant from this world right now. They may rejoin — a kick interrupts, a ban excludes. Needs owner rights here (same gate as grant); operators and fellow owners cannot be kicked.", inputSchema: { type: "object", properties: { id: { type: "string" }, reason: { type: "string" } }, required: ["id"] } },
   { name: "ban", description: "MODERATION: ban a participant — disconnects them now and refuses their joins (including spectating) until unban. Default is THIS world only (needs owner rights here). global:true bans them from every world on this server (needs WORLD_ADMIN). Give a reason — it is shown to them and kept in the record.", inputSchema: { type: "object", properties: { id: { type: "string" }, reason: { type: "string" }, global: { type: "boolean" } }, required: ["id"] } },
   { name: "unban", description: "MODERATION: lift a ban — this world's by default, the server-wide list with global:true.", inputSchema: { type: "object", properties: { id: { type: "string" }, global: { type: "boolean" } }, required: ["id"] } },
@@ -658,6 +660,30 @@ class Session {
       }
       case "remove": ag.verb("remove", { id: a.id }); return text(`removed ${a.id}`);
       case "world_verb": ag.verb(String(a.verb), a.args ?? {}); return text(`sent ${a.verb}`);
+      case "world_history": {
+        const r = await ag.history({
+          verbs: Array.isArray(a.verbs) && a.verbs.length ? a.verbs.map(String) : undefined,
+          before: typeof a.before === "number" ? a.before : undefined,
+          after: typeof a.after === "number" ? a.after : undefined,
+          limit: Math.min(200, Math.max(1, Number(a.limit ?? 50))),
+        });
+        if (!r.entries.length) return text("no matching entries");
+        const lines = r.entries.map((e: any) =>
+          `#${e.seq} ${new Date(e.ts).toISOString()} ${e.actor}: ${e.verb} ${JSON.stringify(e.args)}`);
+        return text(`${lines.join("\n")}${r.hasMore ? `\n… more before seq ${r.oldestSeq} (page with before)` : ""}`);
+      }
+      case "world_debug": {
+        const r = await ag.worldDebug({
+          limit: Math.min(300, Math.max(1, Number(a.limit ?? 30))),
+          kinds: Array.isArray(a.kinds) && a.kinds.length ? a.kinds.map(String) : undefined,
+        });
+        if (!r.events.length) return text("flight recorder is empty — nothing has bounced recently");
+        const lines = r.events.map((e: any) => {
+          const { ts, kind, ...rest } = e;
+          return `${new Date(ts).toISOString()} [${kind}] ${JSON.stringify(rest)}`;
+        });
+        return text(lines.join("\n"));
+      }
       case "kick": case "ban": case "unban": {
         // Moderation deserves a real answer, not fire-and-forget: wait for
         // the world's echo (success) or refusal and hand THAT back.

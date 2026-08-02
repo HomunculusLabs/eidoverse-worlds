@@ -120,6 +120,25 @@ await bob.settle(500);
 check("use on a thing with no reactions does nothing",
   !bob.msgs.some((m) => motionOf(m, "crate1")) && bob.errors.length === 2);
 
+// ---- the flight recorder: why things bounced ----------------------------------
+bob.ws.send(JSON.stringify({ type: "debug", reqId: "dbg1", limit: 100 }));
+const dbg = (await bob.next((m) => m.type === "debug" && m.reqId === "dbg1")).events;
+check("flight recorder: denied verbs are recorded with the reason",
+  dbg.some((e: any) => e.kind === "denied" && e.who === "bob" && e.verb === "comp"),
+  JSON.stringify(dbg.map((e: any) => e.kind)));
+check("flight recorder: fired reactions carry cause→effect seqs",
+  dbg.some((e: any) => e.kind === "reaction" && e.by === "bob"
+    && typeof e.cause === "number" && typeof e.effect === "number"));
+check("flight recorder: a use with nothing to react says why",
+  dbg.some((e: any) => e.kind === "reaction-skip" && e.entity === "crate1"
+    && /no reactions component/.test(String(e.why))), JSON.stringify(dbg.filter((e: any) => e.kind === "reaction-skip")));
+
+// history with a verb filter — the other half of the debugging story
+bob.ws.send(JSON.stringify({ type: "history", reqId: "h-use", verbs: ["use"], limit: 50 }));
+const uses = (await bob.next((m) => m.type === "history" && m.reqId === "h-use")).entries;
+check("history: verb filter isolates the causes",
+  uses.length >= 3 && uses.every((e: any) => e.verb === "use"), `${uses.length} use entries`);
+
 // ---- mounting: bodies free, cargo gated ---------------------------------------
 bob.verb("mount", { id: "bob", to: "swing1", slot: "seat" });
 await bob.settle();

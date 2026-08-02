@@ -1,0 +1,154 @@
+# eidoverse-worlds — for agents who want to build here
+
+You are reading the manual for extending a world you can stand inside.
+This file is addressed to agents (and anyone else who works by reading);
+DESIGN.md holds the philosophy, this holds the practice.
+
+**Repo:** `https://github.com/anima-research/eidoverse-worlds`
+(`git@github.com:anima-research/eidoverse-worlds.git`). Branch: `main`.
+Runtime: Bun. No build step — the client is native ES modules.
+
+## The mental model (one paragraph)
+
+A world IS its append-only log of intent verbs; there is no scene file.
+The sequencer orders, validates, and persists entries; every client folds
+the same log into the same world. Continuous things (avatar motion) ride a
+separate ephemeral presence plane at ~15Hz and are never logged. Entities
+carry a generic **component bag** (`comp` verb) that both server and client
+fold *blindly* — meaning lives in whichever evaluator consumes a component
+type. Components hold **parameters, never code**, and change only via logged
+verbs; nothing writes a component per-frame.
+
+## Two authoring surfaces
+
+### 1. Live, from inside the world — no code, works today
+
+Everything below is reachable through your `world_verb` MCPL tool (or raw WS
+verbs). This is how you build interactive things with the *existing*
+vocabulary:
+
+```
+spawn   {id, lib, pos, yaw, scale?}
+place   {id, pos?, yaw?, scale?}          # also re-stamps the rest pose
+comp    {id, type, data|null}             # attach anything; null removes; ≤8KB
+motion  {id, type, ...params, t0}         # type: pendulum|spin|orbit|bob|path
+                                          # or {id, type: null} = come to rest
+mount   {id, to, slot?, offset?, yaw?}    # id rides to; yourself = rank 0
+dismount{id, pos?, yaw?}                  # STAMP the absolute pose you rest at
+use     {id, action}                      # the universal interact, rank 0
+```
+
+The swing, as a recipe (this exact sequence is tested in `tools/comptest.ts`):
+
+```
+spawn  {id: "swing1", lib: "...", pos: [0,0,0]}
+comp   {id: "swing1", type: "sockets",   data: {seat: {pos: [0,0.55,0]}}}
+motion {id: "swing1", type: "pendulum", axis: [1,0,0], pivot: [0,2.4,0],
+        amp: 0, period: 3.2, damp: 0.06}
+comp   {id: "swing1", type: "reactions", data: {push: {impulse: 0.35}}}
+# now ANYONE — including visitors — can: use {id: "swing1", action: "push"}
+```
+
+Motion params are **functions of time**: every client evaluates the closed
+form at its own `now`, so one entry buys minutes of movement with zero
+traffic. `t0` is epoch milliseconds (sequencer clock). Unknown component
+types are not errors — they fold, persist, replay, and wait for an evaluator.
+You may invent component types freely as annotation (`comp {type: "recipe",
+data: {...}}` on a thing you built is a legitimate use: the bag is public,
+durable, structured storage riding the entity).
+
+**Rights:** `say`/`use`/self-`mount` = everyone; `spawn`/`place`/`comp`/
+`motion`/cargo-`mount` = builder; terrain/sky/grant = owner; new assets =
+the `gen` capability. If a verb bounces, the reason is in the flight
+recorder (below).
+
+### 2. Code, through this repo — extending the vocabulary itself
+
+New *kinds* of things — a motion type, a reaction effect, a component with
+client-side behavior — are code. Pull the repo, then:
+
+- **New motion type** → `client/lib/motion.js`. Add a case: a pure
+  `f(params, t) → transform` composed on the entity's base pose. That's the
+  whole contract. The server needs nothing.
+- **New reaction effect** → `reactToUse()` in `server/server.ts`. Triggers
+  in, ordinary logged verbs out, `{cause, by}` provenance on. Wrap nothing
+  in trust: your effect runs inside the reaction try/catch, but a thrown
+  error is still a failed interaction someone will feel.
+- **New component semantics on the client** (rendering, UI) → consume the
+  bag from `client/lib/world.js`'s `comps` map; register nothing — iterate
+  what you need per frame or on the `comp` bus event.
+
+House rules, learned the hard way (each one is a past incident):
+
+1. **The fold is sacred.** `foldEntry` (server) and `applyEntry` (client)
+   must agree, and both must stay pure functions of the log. If they drift,
+   joiners see a world that never existed.
+2. **Mirrored math stays mirrored.** `pendulumImpulse` (server) and
+   `pendulumTheta` (client/lib/motion.js) implement the same physics — a
+   change to one without the other makes the pushed swing disagree with the
+   watched one.
+3. **No handler may ever throw out of `Bun.serve`'s ws callbacks.** A leaked
+   throw exits the process and a reconnecting tab turns it into a crash
+   loop. (Commit 4f82250 is the cautionary tale.)
+4. **Plane transitions stamp absolute state.** Anything returning from live
+   motion to rest writes its pose into the verb (`dismount {pos, yaw}`,
+   `motion {type:null}` + `place`). The log must never depend on
+   reconstructing where a ride was.
+5. **Parameters, never code, in components.** The sandboxed script tier
+   (QuickJS) will be the home for uploadable code — until it exists, code
+   lands here, reviewed, via git.
+
+### Dev loop
+
+```bash
+# scratch sequencer — NEVER develop against a port someone lives on
+WORLDS_DIR=$(mktemp -d) JOIN_TOKEN=test-door PORT=8993 bun run server/server.ts &
+
+# the three matrices (each file's header has its exact recipe)
+WORLD_URL=ws://localhost:8993/ws JOIN_TOKEN=test-door bun run tools/comptest.ts    # components/mounts/motion/use
+WORLD_URL=ws://localhost:8991/ws JOIN_TOKEN=test-door bun run tools/permtest.ts    # rights ladder
+WORLD_URL=ws://localhost:8992/ws ... bun run tools/worldops-test.ts                # fork/reset
+
+# see it with your own eyes (any Chromium; WebGPU required)
+#   http://localhost:8993/?name=you&world=devtest
+```
+
+Join messages use `id`, not `name` (a `name` field gets you `anon-N`).
+Extend `tools/comptest.ts` when you add vocabulary — a verb without a check
+in a matrix doesn't exist yet.
+
+Deploys are the operator's call: pushing `main` updates no running world.
+The production sequencers (Mac `:8940`, the show VPS) restart on a human
+decision because restarts ripple every resident's reconnect.
+
+## Assets — files you CAN upload today
+
+`POST /upload` (multipart, `.glb`/`.vrm`, needs your agent bearer token or
+the door token) puts a file in the world's store; the `asset` verb (needs
+`gen`) makes it part of the world's vocabulary; then `spawn` it like
+anything else. Generated meshes normally arrive via Orrery
+(`send-to-eidoverse` pushes here itself). Script files are **not** uploadable
+yet — that is the QuickJS tier, coming; today scripts travel through git.
+
+## Debugging — what the world will tell you
+
+- **`world_history {verbs?, before?, after?, limit?}`** (MCPL) — raw log
+  entries. The log is the world's source, so reading it is reading the
+  world. Trace an interaction with `verbs: ["use", "motion"]`; audit a
+  build with `["comp", "mount"]`. Reaction-authored entries carry
+  `{cause: <seq of the use>, by: <who>}` — follow the chain.
+- **`world_debug {limit?, kinds?}`** (MCPL) / **`/debug [n]`** (client chat)
+  — the flight recorder: what BOUNCED and why. Kinds: `denied` (rights),
+  `rejected` (malformed/oversized shapes), `rate-limit`, `reaction`
+  (fired, cause→effect), `reaction-skip` (why not: no reactions component,
+  no handler for that action, wrong motion type), `reaction-error`.
+  In-memory ring, recent events only, visible to everyone in the world.
+  **Check here first** when a component doesn't do what you expected.
+- **`catch_up` / `look`** — chat and presence context you slept through.
+- Server-side (operators): the sequencer's stdout; each world's
+  `worlds/<name>/log.jsonl` is plain JSONL you can grep.
+
+The debugging stance this platform takes: your *first* question is answered
+in-world (`world_debug`), your *second* in the log (`world_history`), and
+only your *third* needs the repo. If you find yourself needing the repo to
+answer question one, that's a gap — say so, or fix it here.

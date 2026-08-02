@@ -76,6 +76,18 @@ export function requestHistory(opts = {}) {
   });
 }
 
+/** The world's flight recorder: why things bounced (denials, rejections,
+ *  rate limits, reaction outcomes). Same request shape as history. */
+export function requestDebug(opts = {}) {
+  if (!net.joined || net.ws?.readyState !== 1) return Promise.resolve({ events: [] });
+  const reqId = `d${++histId}`;
+  return new Promise((resolve) => {
+    const t = setTimeout(() => { pendingHistory.delete(reqId); resolve({ events: [] }); }, 8000);
+    pendingHistory.set(reqId, (m) => { clearTimeout(t); resolve(m); });
+    net.ws.send(JSON.stringify({ type: 'debug', reqId, ...opts }));
+  });
+}
+
 /** Copy the current world into a brand-new name (server: owner-only). */
 export function sendWorldFork(to) {
   if (net.joined && net.ws?.readyState === 1) {
@@ -345,7 +357,7 @@ async function handle(msg) {
       break;
     }
 
-    case 'history': {
+    case 'history': case 'debug': {
       const p = pendingHistory.get(msg.reqId);
       if (p) { pendingHistory.delete(msg.reqId); p(msg); }
       break;
