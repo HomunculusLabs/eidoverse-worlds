@@ -16,8 +16,18 @@
 import { THREE, scene, sun, hemi, renderer, camera, report, bus } from './core.js';
 import { loadEidoModule, primeFiles, listLibrary, fetchBytes } from './assets.js';
 import { markPhase, whenBooted } from './boot.js';
-import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake } from './sky_baked.js';
+import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake,
+  envTexture, adoptEnvironment } from './sky_baked.js';
 import { holdFrames, holdObjectCompiles, beginWork } from './loadwork.js';
+
+// The environment exists from the first frame — BLACK, contributing nothing —
+// so every material's lighting graph is born with its env branch in place.
+// scene.environment flipping null→texture later regrew the lighting branch of
+// EVERY PBR material at once (a whole-scene recompile, the biggest single
+// invalidation behind the post-splash freezes). Now the sky's bakes change
+// this texture's CONTENT; the object never changes; nothing ever recompiles
+// for the environment again.
+scene.environment = envTexture();
 
 // ---------------------------------------------------------------- state
 
@@ -436,6 +446,9 @@ async function ensureSkyBake() {
     lastBakeHours = nowHours();
     lastBakeAt = performance.now();
     skyApi.enableReflections?.({});
+    // the engine just pointed scene.environment at ITS target — copy the
+    // content into the persistent texture and put it back (see module top)
+    adoptEnvironment();
   } catch (e) { console.warn('sky reflections unavailable', e); }
   if (BAKED_TIERS[cloudQuality]) {
     const { cloudPasses, intervalMs } = BAKED_TIERS[cloudQuality];
@@ -483,6 +496,10 @@ async function runEnvBake() {
   try {
     // Same opts every time — bakeEnv caches its node graph keyed on them.
     await skyApi.bakeEnv(bakeOpts());
+    // live tier: the engine rebaked into its own target — re-point (engine
+    // reassigns) then re-adopt, so the persistent env picks up the new light
+    skyApi.enableReflections?.({});
+    adoptEnvironment();
   } catch (e) {
     console.warn('[sky] env re-bake failed', e?.message ?? e);
   }

@@ -51,11 +51,69 @@ let pinnedCloudsOn = null;   // whether the pinned bake graph HAS a cloud branch
 // scene.environment stays a dedicated small target (what IBL was sized for
 // all along) — PMREM from the full 4096 display bake was a ~150ms stall
 // every cycle. Each fresh bake is blitted down into this instead.
+//
+// PERSISTENT, module-lifetime, never disposed, never replaced: assigning a
+// DIFFERENT texture object to scene.environment regrows the lighting branch
+// of every PBR material in the world — the whole-scene recompile behind the
+// post-splash freezes (measured 08-02). The world boots with this target
+// already assigned (black — contributes nothing) and every bake, engine
+// takeover, and tier switch BLITS INTO it. Content changes; the object never
+// does; no material ever recompiles for the environment again.
 let envRT = null;
 let blitScene = null;
 let blitTexNode = null;
 let blitGeo = null;
 let blitMat = null;
+let blitCam = null;    // own ortho cam — identical to the engine's bake cam,
+                       // so the rig works before any sky exists
+
+function ensureEnvRig() {
+  if (envRT) return;
+  envRT = new THREE.RenderTarget(512, 256, {
+    type: THREE.HalfFloatType, format: THREE.RGBAFormat,
+    depthBuffer: false, stencilBuffer: false,
+  });
+  envRT.texture.mapping = THREE.EquirectangularReflectionMapping;
+  envRT.texture.minFilter = THREE.LinearFilter;
+  envRT.texture.magFilter = THREE.LinearFilter;
+  envRT.texture.colorSpace = THREE.LinearSRGBColorSpace;
+  envRT.texture.name = 'sky_baked_env';
+  envRT.texture.userData._pmremPreInit = true;
+  blitCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+  blitCam.position.z = 0.5;
+  blitScene = new THREE.Scene();
+  blitGeo = new THREE.PlaneGeometry(2, 2);
+  blitMat = new THREE.MeshBasicNodeMaterial();
+  blitMat.toneMapped = false;              // environment must stay linear HDR
+  blitTexNode = TSL.texture(envRT.texture); // real source set per blit
+  blitMat.colorNode = blitTexNode;
+  blitScene.add(new THREE.Mesh(blitGeo, blitMat));
+}
+
+/** The persistent environment texture — assign this to scene.environment at
+ *  boot (black until a sky bakes) and never assign anything else. */
+export function envTexture() {
+  ensureEnvRig();
+  return envRT.texture;
+}
+
+/** If anything (the engine's enableReflections, an old code path) assigned a
+ *  different texture to scene.environment, copy its content into the
+ *  persistent target and put the persistent texture back — the graphs never
+ *  see the object change. Idempotent; cheap (one 512x256 quad). */
+export function adoptEnvironment() {
+  ensureEnvRig();
+  const cur = scene.environment;
+  if (!cur) { scene.environment = envRT.texture; return; }
+  if (cur === envRT.texture) return;
+  blitTexNode.value = cur;
+  const prev = renderer.getRenderTarget();
+  renderer.setRenderTarget(envRT);
+  renderer.render(blitScene, blitCam);
+  renderer.setRenderTarget(prev ?? null);
+  envRT.texture.needsPMREMUpdate = true;
+  scene.environment = envRT.texture;
+}
 
 // cycle state machine: idle → baking (a band per frame) → fading → idle
 // ('refreshing' while a preset flip rebuilds the engine's bake graph)
@@ -182,24 +240,8 @@ export function attachBakedDome(skyApi, opts = {}) {
   // clear↔cloudy preset flip can rebuild it (see maybeRefreshGraph).
   pinnedCloudsOn = /\|c1$/.test(bake.key ?? '');
 
-  // Small env target + the blit that fills it from each fresh bake.
-  envRT = new THREE.RenderTarget(512, 256, {
-    type: THREE.HalfFloatType, format: THREE.RGBAFormat,
-    depthBuffer: false, stencilBuffer: false,
-  });
-  envRT.texture.mapping = THREE.EquirectangularReflectionMapping;
-  envRT.texture.minFilter = THREE.LinearFilter;
-  envRT.texture.magFilter = THREE.LinearFilter;
-  envRT.texture.colorSpace = THREE.LinearSRGBColorSpace;
-  envRT.texture.name = 'sky_baked_env';
-  envRT.texture.userData._pmremPreInit = true;
-  blitScene = new THREE.Scene();
-  blitGeo = new THREE.PlaneGeometry(2, 2);
-  blitMat = new THREE.MeshBasicNodeMaterial();
-  blitMat.toneMapped = false;              // environment must stay linear HDR
-  blitTexNode = TSL.texture(A.texture);
-  blitMat.colorNode = blitTexNode;
-  blitScene.add(new THREE.Mesh(blitGeo, blitMat));
+  // The persistent env rig (module-lifetime — see its comment above).
+  ensureEnvRig();
   blitEnvFrom(A);                          // boot bake → env, before its 4096 PMREM ever runs
 
   // One dome where two were: the bake already composites clouds over the
@@ -326,7 +368,7 @@ function blitEnvFrom(target) {
   blitTexNode.value = target.texture;
   const prev = renderer.getRenderTarget();
   renderer.setRenderTarget(envRT);
-  renderer.render(blitScene, bakeCam);
+  renderer.render(blitScene, blitCam);   // rig cam — identical to the engine's bake cam
   renderer.setRenderTarget(prev ?? null);
   envRT.texture.needsPMREMUpdate = true;
   if (sys._envFbNode) sys._envFbNode.value = envRT.texture;
@@ -389,19 +431,21 @@ export function detachBakedDome() {
     bandScene = null;
   }
   if (envRT) {
-    // hand the environment back to the engine's own target before dropping ours
-    if (scene.environment === envRT.texture && targets) {
-      scene.environment = targets[0].texture;
+    // The persistent env target SURVIVES teardown — handing scene.environment
+    // a different texture object would recompile every PBR material (the
+    // exact storm this rig exists to prevent). Refill it from the engine's
+    // own target instead so a live-tier sky keeps correct reflections; the
+    // engine's fallback node goes back to its own texture as before.
+    if (targets) {
+      blitTexNode.value = targets[0].texture;
+      const prev = renderer.getRenderTarget();
+      renderer.setRenderTarget(envRT);
+      renderer.render(blitScene, blitCam);
+      renderer.setRenderTarget(prev ?? null);
+      envRT.texture.needsPMREMUpdate = true;
       if (sys?._envFbNode) sys._envFbNode.value = targets[0].texture;
     }
-    envRT.dispose();
-    blitGeo.dispose();
-    blitMat.dispose();
-    envRT = null;
-    blitScene = null;
-    blitTexNode = null;
-    blitGeo = null;
-    blitMat = null;
+    // rig stays alive — it is the world's environment now and forever
   }
   if (targets) {
     targets[1].dispose();                    // A is the engine's _envTarget — leave it
