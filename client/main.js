@@ -241,7 +241,12 @@ let downed = false;
 function goLimp(impulse = null) {
   if (!me || downed) return;
   downed = true;
-  ragdoll = new Ragdoll(me, impulse);
+  // Park the undriven bones and stop the clip BEFORE constructing the sim.
+  // Both of the sim's reference skeletons are read in here — the neutral rest
+  // it measures its limits against, and the live pose the tumble starts from —
+  // and neither may still have the walk cycle in it.
+  me.setLimp(true);
+  ragdoll = new Ragdoll(me, impulse, me.restBonePositions());
   myState.clip = 'ragdoll';
   flashHint('limp — move to get up');
 }
@@ -249,6 +254,7 @@ function getUp() {
   if (!downed) return;
   downed = false; ragdoll = null;
   myState.pose = null; me?.clearPose();
+  me?.setLimp(false);
   myState.clip = 'idle';
   // resume from where the body ended up
   myState.pos.copy(me.root.position);

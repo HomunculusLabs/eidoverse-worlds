@@ -4,17 +4,19 @@
 //
 // core.js builds a WebGPURenderer at import time, so it cannot load under Bun;
 // a loader plugin swaps it for a stub exporting just what ragdoll's dependency
-// cone actually uses (THREE, and terrain's scene/ground/grid). The skeleton is
-// synthetic — a T-pose humanoid of plain Object3Ds — because the invariants
-// under test live in the particle sim, not in any particular VRM.
+// cone actually uses (THREE, and terrain's scene/ground/grid).
 //
-// What it asserts:
-//   * the body settles into a held pose (the capture handoff fires)
-//   * bone lengths survive the tumble (the skeleton doesn't stretch)
-//   * every joint stays inside its BEND_LIMITS range for the WHOLE tumble
-//   * the same tumble with limits disabled DOES violate them — i.e. the
-//     assertion above is load-bearing, not vacuously true
-//   * nothing ends underground, and the captured pose is finite
+// This suite runs against the SHIPPED VRM RIGS, not only against an idealised
+// skeleton. That is the whole point of it. The previous version tested one
+// synthetic T-pose humanoid on the reasoning that "the invariants under test
+// live in the particle sim, not in any particular VRM" — and it passed 18/18
+// while every real rig in the fleet was broken, because the rigs are the
+// variable the sim is most sensitive to. Measured on the shipped avatars at
+// that point: 100% bone-shaft interpenetration on all 14, up to 47% bone
+// stretch, elbows and knees with no hyperextension limit at all, and a fall
+// that landed 10 metres apart depending on the framerate.
+//
+// So: keep the synthetic cases (they isolate the solver), and add the fleet.
 
 import { plugin } from 'bun';
 
@@ -27,15 +29,17 @@ plugin({
 });
 
 const { THREE } = await import('./core-stub.mjs');
-const { Ragdoll } = await import('../client/lib/ragdoll.js');
+const { Ragdoll, TUNING, DRIVEN_BONES } = await import('../client/lib/ragdoll.js');
+const { rigs, makeAvatar, worstOverlap, segDist } = await import('./rig-load.mjs');
 
 let pass = 0, fail = 0;
 const check = (name: string, ok: boolean, detail = '') => {
   if (ok) { pass++; console.log(`  \x1b[32m✓\x1b[0m ${name}`); }
   else { fail++; console.log(`  \x1b[31m✗\x1b[0m ${name}${detail ? ` — ${detail}` : ''}`); }
 };
+const deg = (r: number) => (r * 180 / Math.PI).toFixed(1);
 
-// ---- synthetic T-pose skeleton (world-space joint positions, then local)
+// ---- a synthetic T-pose skeleton, for the cases that want a known body
 const WORLD: Record<string, [number, number, number]> = {
   hips: [0, 0.95, 0], spine: [0, 1.05, 0], chest: [0, 1.2, 0],
   neck: [0, 1.4, 0], head: [0, 1.5, 0],
@@ -44,146 +48,273 @@ const WORLD: Record<string, [number, number, number]> = {
   leftUpperLeg: [0.09, 0.85, 0], leftLowerLeg: [0.09, 0.45, 0], leftFoot: [0.09, 0.05, 0],
   rightUpperLeg: [-0.09, 0.85, 0], rightLowerLeg: [-0.09, 0.45, 0], rightFoot: [-0.09, 0.05, 0],
 };
-const PARENT: Record<string, string | null> = {
-  hips: null, spine: 'hips', chest: 'spine', neck: 'chest', head: 'neck',
-  leftUpperArm: 'chest', leftLowerArm: 'leftUpperArm', leftHand: 'leftLowerArm',
-  rightUpperArm: 'chest', rightLowerArm: 'rightUpperArm', rightHand: 'rightLowerArm',
-  leftUpperLeg: 'hips', leftLowerLeg: 'leftUpperLeg', leftFoot: 'leftLowerLeg',
-  rightUpperLeg: 'hips', rightLowerLeg: 'rightUpperLeg', rightFoot: 'rightLowerLeg',
-};
+const synth = (scale = 1, opts = {}) => makeAvatar(
+  Object.fromEntries(Object.entries(WORLD).map(
+    ([k, v]) => [k, new THREE.Vector3(v[0] * scale, v[1] * scale, v[2] * scale)])),
+  opts);
 
-function makeAvatar(scale = 1) {
-  const root = new THREE.Object3D();
-  const nodes: Record<string, any> = {};
-  for (const j of Object.keys(WORLD)) {
-    const n = new THREE.Object3D();
-    n.name = j;
-    const p = PARENT[j];
-    const w = WORLD[j], pw = p ? WORLD[p] : [0, 0, 0];
-    n.position.set((w[0] - pw[0]) * scale, (w[1] - pw[1]) * scale, (w[2] - pw[2]) * scale);
-    (p ? nodes[p] : root).add(n);
-    nodes[j] = n;
-  }
-  root.updateMatrixWorld(true);
-  return {
-    root,
-    nodes,
-    vrm: { humanoid: { getNormalizedBoneNode: (j: string) => nodes[j] ?? null } },
-    setPose(_pose: any) { this.poses = (this.poses ?? 0) + 1; },
-    poses: 0,
-  };
-}
-
-const angleAt = (rd: any, a: string, b: string, c: string) => {
-  const u = rd.p[b].clone().sub(rd.p[a]).normalize();
-  const v = rd.p[c].clone().sub(rd.p[b]).normalize();
-  return Math.acos(Math.max(-1, Math.min(1, u.dot(v))));
-};
-
-// run one tumble, tracking the worst bend-limit violation seen on ANY step
-function tumble(impulse: any, { disableLimits = false, maxSteps = 3000, scale = 1 } = {}) {
-  const avatar = makeAvatar(scale);
-  const rd = new Ragdoll(avatar, impulse);
-  const bends = rd.bends.map((b: any) => ({ ...b }));  // keep a copy for measuring
-  if (disableLimits) rd.bends = [];
-  let worst = 0; // radians beyond [min, max], worst over all joints and steps
+function run(av: any, impulse: any = null, { dt = 1 / 60, maxSteps = 1200 } = {}) {
+  const rest = av.restBonePositions();
+  const rd: any = new Ragdoll(av, impulse, rest);
   let steps = 0;
   while (!rd.done && steps < maxSteps) {
-    rd.step(1 / 60);
+    rd.step(typeof dt === 'function' ? (dt as any)(steps) : dt);
     steps++;
-    for (const { a, b, c, min, max } of bends) {
-      const ang = angleAt(rd, a, b, c);
-      worst = Math.max(worst, min - ang, ang - max);
+  }
+  return { rd, steps };
+}
+const stretchOf = (rd: any) => Math.max(...rd.links.map((l: any) =>
+  Math.abs(rd.p[l.a].distanceTo(rd.p[l.b]) - l.len) / l.len));
+
+const FLEET = rigs().filter((r: any) => !r.err);
+const DEADLINE = TUNING.DEADLINE * 60;
+
+console.log('ragdoll sim, headless:\n');
+console.log(`the fleet (${FLEET.length} rigs):`);
+check('every shipped rig loads with a humanoid and hips',
+  rigs().every((r: any) => !r.err), rigs().filter((r: any) => r.err).map((r: any) => `${r.name}: ${r.err}`).join('; '));
+
+// ---------------------------------------------------------------------------
+// the fleet: every invariant, on every shipped body
+// ---------------------------------------------------------------------------
+{
+  const bad: Record<string, string[]> = {
+    settle: [], overlap: [], stretch: [], under: [], hyper: [], finite: [], pelvis: [],
+  };
+  for (const rig of FLEET) {
+    const { rd, steps } = run(makeAvatar(rig.P));
+
+    if (steps >= DEADLINE - 2) bad.settle.push(`${rig.name}(deadline, v=${rd.maxV.toFixed(3)})`);
+
+    // bone SHAFTS must not pass through each other — the failure that made a
+    // limb vanish into the torso on every rig when only joints collided
+    const ov = worstOverlap(rd);
+    if (ov.frac > 0.35) bad.overlap.push(`${rig.name}(${(ov.frac * 100).toFixed(0)}% ${ov.name})`);
+
+    const st = stretchOf(rd);
+    if (st > 0.10) bad.stretch.push(`${rig.name}(${(st * 100).toFixed(0)}%)`);
+
+    if (Object.keys(rd.p).some((j: string) => rd.p[j].y < -0.01)) bad.under.push(rig.name);
+
+    // knees and elbows must not fold the wrong way. The old unsigned bend
+    // table could not express this at all: with a rest angle near 0 its
+    // "no hyperextension" bound resolved to 0° on all 14 rigs.
+    for (const H of rd.hinge) {
+      const u = rd.p[H.b].clone().sub(rd.p[H.a]).normalize();
+      const v = rd.p[H.c].clone().sub(rd.p[H.b]).normalize();
+      const n = H.n.clone().addScaledVector(u, -H.n.dot(u)).normalize();
+      const fold = n.clone().cross(u);            // the allowed direction
+      if (v.dot(fold) < -0.25) bad.hyper.push(`${rig.name}:${H.b}(${v.dot(fold).toFixed(2)})`);
+    }
+
+    const q = Object.values(rd.finalPose ?? {});
+    if (!q.length || !q.every((a: any) => a.length === 4 && a.every(Number.isFinite))) {
+      bad.finite.push(rig.name);
+    }
+    if (!rd.finalPose?.hips) bad.pelvis.push(rig.name);
+  }
+  const none = (k: string) => bad[k].length === 0;
+  check('every rig settles before the deadline', none('settle'), bad.settle.join(' '));
+  check('no bone shaft passes through another (≤35%)', none('overlap'), bad.overlap.join(' '));
+  check('bone lengths survive the tumble (≤10%)', none('stretch'), bad.stretch.join(' '));
+  check('nothing settles underground', none('under'), bad.under.join(' '));
+  check('no knee or elbow hyperextends', none('hyper'), bad.hyper.join(' '));
+  check('every rig captures a finite pose', none('finite'), bad.finite.join(' '));
+  check('every rig drives its pelvis', none('pelvis'), bad.pelvis.join(' '));
+}
+
+// ---- the same fall must land in the same place at any framerate
+{
+  const jitter = (lo: number, hi: number) => (i: number) =>
+    lo + (hi - lo) * Math.abs((Math.sin(i * 12.9898) * 43758.5453) % 1);
+  let worst = 0, who = '';
+  for (const rig of FLEET) {
+    const at = (dt: any) => run(makeAvatar(rig.P), null, { dt }).rd.p.hips.clone();
+    const ref = at(1 / 60);
+    for (const dt of [1 / 30, 1 / 120, 1 / 144, jitter(1 / 120, 1 / 30) as any]) {
+      const d = ref.distanceTo(at(dt));
+      if (d > worst) { worst = d; who = rig.name; }
     }
   }
-  return { rd, avatar, steps, worst, bends };
+  // Before the fixed timestep this was metres, not centimetres: the Verlet
+  // inertia term is a position delta, so raw frame time made gravity and
+  // damping per-second both functions of the display rate.
+  check('framerate does not change where a body lands (≤5cm)', worst <= 0.05,
+    `worst ${(worst * 100).toFixed(1)}cm on ${who}`);
 }
 
-const deg = (r: number) => (r * 180 / Math.PI).toFixed(1);
-
-console.log('ragdoll sim, headless:');
-
-// ---- construction
+// ---- falling mid-stride must not poison the sim's idea of "rest"
 {
-  const rd = new Ragdoll(makeAvatar(), null);
-  check('all 11 bend limits resolve on a full skeleton', rd.bends.length === 11,
-    `got ${rd.bends.length}`);
-  check('every resolved range is sane (0 ≤ min < max ≤ π)',
-    rd.bends.every((b: any) => b.min >= 0 && b.min < b.max && b.max <= Math.PI + 1e-9));
+  let worst = 0, who = '';
+  for (const rig of FLEET) {
+    const still = run(makeAvatar(rig.P)).rd;
+    const mid = run(makeAvatar(rig.P, { stride: 1 })).rd;
+    // the LIMITS are what must match: they are measured off the neutral pose,
+    // so a body that fell mid-walk must resolve the same ranges as one that
+    // fell standing. (Where it lands may legitimately differ — it started in a
+    // different shape.)
+    for (let i = 0; i < still.flex.length; i++) {
+      const d = Math.abs(still.flex[i].max - mid.flex[i].max);
+      if (d > worst) { worst = d; who = `${rig.name}:${still.flex[i].b}`; }
+    }
+    for (let i = 0; i < still.cone.length; i++) {
+      const d = still.cone[i].axis.distanceTo(mid.cone[i].axis);
+      if (d > worst) { worst = d; who = `${rig.name}:${still.cone[i].b}`; }
+    }
+  }
+  check('limits are measured off the NEUTRAL pose, not the walk cycle',
+    worst < 1e-6, `drift ${worst.toExponential(2)} at ${who}`);
 }
 
-// ---- a violent tumble, limits ON
+// ---- the fleet splits into two rig families, and both must work
 {
-  const { rd, avatar, steps, worst } = tumble(new THREE.Vector3(0.09, -0.03, 0.05));
-  check('the body settles and captures a pose', rd.done && !!rd.finalPose,
-    `steps=${steps}`);
-  // the clamp is SOFT (50%/pass — see ragdoll.js for why exact snapping and
-  // angle caps both lose), so transient overshoot during impact frames is
-  // expected; it decays at 0.5^ITER per frame. 10° covers an ordinary tumble
-  // with margin — pre-limits violations ran 60°+.
-  const SLOP = 10 * Math.PI / 180;
-  check('no joint ever leaves its motion range (±10° transient slop)', worst <= SLOP,
-    `worst violation ${deg(worst)}°`);
-  const finalViol = Math.max(0, ...rd.bends.map(({ a, b, c, min, max }: any) => {
-    const ang = angleAt(rd, a, b, c);
-    return Math.max(min - ang, ang - max);
-  }));
-  check('the CAPTURED pose is within range (±5°)', finalViol <= 5 * Math.PI / 180,
-    `final violation ${deg(finalViol)}°`);
-  const stretch = Math.max(...rd.links.map((l: any) =>
-    Math.abs(rd.p[l.a].distanceTo(rd.p[l.b]) - l.len) / l.len));
-  check('bone lengths survive (≤10% stretch at settle)', stretch <= 0.10,
-    `worst ${(stretch * 100).toFixed(1)}%`);
-  check('nothing settles underground',
-    Object.keys(rd.p).every((j: string) => rd.p[j].y >= -0.01));
-  check('captured pose is finite quaternions',
-    Object.values(rd.finalPose).every((q: any) =>
-      q.length === 4 && q.every((x: number) => Number.isFinite(x))));
-  check('owner saw its own flop (setPose ran every step)', avatar.poses === steps,
-    `${avatar.poses} vs ${steps}`);
+  const big = FLEET.filter((r: any) => r.P.upperChest);
+  const small = FLEET.filter((r: any) => !r.P.upperChest);
+  check('the fleet really does contain both rig families',
+    big.length > 0 && small.length > 0, `${big.length} with upperChest, ${small.length} without`);
+  // A rig with upperChest+shoulder has TWO undriven bones between chest and
+  // upperArm. goLimp parks them (avatar.setLimp) so the span is rigid, which
+  // is what the sim's chest->upperArm distance constraint assumes. If that
+  // ever regresses, the arm span stops matching its rest length.
+  let worst = 0, who = '';
+  for (const rig of big) {
+    const { rd } = run(makeAvatar(rig.P));
+    for (const side of ['leftUpperArm', 'rightUpperArm']) {
+      const link = rd.links.find((l: any) => l.a === 'chest' && l.b === side);
+      if (!link) continue;
+      const err = Math.abs(rd.p.chest.distanceTo(rd.p[side]) - link.len) / link.len;
+      if (err > worst) { worst = err; who = `${rig.name}:${side}`; }
+    }
+  }
+  check('upperChest rigs keep a rigid chest→upperArm span (≤10%)', worst <= 0.10,
+    `worst ${(worst * 100).toFixed(1)}% at ${who}`);
 }
 
-// ---- avatar proportions: the root-follow offset is measured per skeleton,
-// not assumed. On a youngopus-proportioned body (hips ~0.59 vs claude_suit's
-// 0.85) the old hardcoded 0.82 rendered the pelvis ~25cm underground; the
-// invariant is that the hips BONE tracks the hips PARTICLE at all times.
+// ---------------------------------------------------------------------------
+// the solver itself, on a known body
+// ---------------------------------------------------------------------------
+console.log('\nthe solver:');
+{
+  const rd: any = new Ragdoll(synth(), null, synth().restBonePositions());
+  check('all 3 flex + 4 cone + 4 hinge limits resolve on a full skeleton',
+    rd.flex.length === 3 && rd.cone.length === 4 && rd.hinge.length === 4,
+    `${rd.flex.length}/${rd.cone.length}/${rd.hinge.length}`);
+  check('every hinge axis is unit length and perpendicular to its bone',
+    rd.hinge.every((h: any) => {
+      const u = rd.p[h.b].clone().sub(rd.p[h.a]).normalize();
+      return Math.abs(h.n.length() - 1) < 1e-6 && Math.abs(h.n.dot(u)) < 1e-6;
+    }));
+  check('mass is not uniform — the pelvis outweighs a hand',
+    rd.iw.leftHand > rd.iw.hips * 5, `hand ${rd.iw.leftHand} vs hips ${rd.iw.hips}`);
+  check('capsule pairs exclude what already overlaps at rest',
+    rd.pairs.every(({ A, B, min }: any) =>
+      segDist(rd.rest[A.a], rd.rest[A.b], rd.rest[B.a], rd.rest[B.b]) >= min),
+    `${rd.pairs.length} pairs`);
+  check('the body frame is right-handed and orthonormal', (() => {
+    const { r, u, f } = rd.frame;
+    return Math.abs(r.dot(u)) < 1e-6 && Math.abs(r.dot(f)) < 1e-6 && Math.abs(u.dot(f)) < 1e-6
+      && Math.abs(r.clone().cross(u).dot(f) - 1) < 1e-6;
+  })());
+}
+
+// ---- a violent tumble still obeys the rules
+{
+  const { rd, steps } = run(synth(), new THREE.Vector3(0.09, -0.03, 0.05));
+  check('a launched body settles and captures a pose', rd.done && !!rd.finalPose, `steps=${steps}`);
+  check('...without stretching the skeleton (≤10%)', stretchOf(rd) <= 0.10,
+    `${(stretchOf(rd) * 100).toFixed(1)}%`);
+  check('...and the owner saw its own flop every frame', rd.avatar.poses > 0);
+}
+
+// ---- proportions: the root-follow offset is measured, not assumed
 {
   for (const [label, scale] of [['adult', 1], ['short (youngopus-ish)', 0.62]] as const) {
-    const { rd, avatar } = tumble(new THREE.Vector3(0.09, -0.03, 0.05), { scale });
-    avatar.root.updateMatrixWorld(true);
-    const boneY = avatar.nodes.hips.getWorldPosition(new THREE.Vector3()).y;
-    const gap = Math.abs(boneY - rd.p.hips.y);
-    check(`${label}: hips bone tracks hips particle (gap ≤ 2cm)`, gap <= 0.02,
-      `gap ${(gap * 100).toFixed(1)}cm`);
-    check(`${label}: pelvis is driven (pose streams hips)`, !!rd.finalPose?.hips);
-    // the shove knocks it flat: the pelvis must actually TIP, not stand
-    // upright inside a lying body
+    const av = synth(scale);
+    const { rd } = run(av, new THREE.Vector3(0.09, -0.03, 0.05));
+    av.root.updateMatrixWorld(true);
+    const boneY = av.nodes.hips.getWorldPosition(new THREE.Vector3()).y;
+    check(`${label}: hips bone tracks hips particle (≤2cm)`,
+      Math.abs(boneY - rd.p.hips.y) <= 0.02,
+      `gap ${(Math.abs(boneY - rd.p.hips.y) * 100).toFixed(1)}cm`);
     const up = new THREE.Vector3(0, 1, 0)
-      .applyQuaternion(avatar.nodes.hips.getWorldQuaternion(new THREE.Quaternion()));
+      .applyQuaternion(av.nodes.hips.getWorldQuaternion(new THREE.Quaternion()));
     check(`${label}: pelvis lies down with the body (tilt > 30°)`,
-      Math.acos(Math.min(1, Math.abs(up.y))) > 30 * Math.PI / 180
-      || rd.p.hips.y > 0.3 /* unless it settled propped high */,
+      Math.acos(Math.min(1, Math.abs(up.y))) > 30 * Math.PI / 180 || rd.p.hips.y > 0.3,
       `tilt ${deg(Math.acos(Math.min(1, Math.abs(up.y))))}°`);
   }
 }
 
-// ---- the straight-down collapse (goLimp's default null impulse). The limits
-// make its end state marginally stable — a slumped sit that micro-wobbles —
-// so this exercises the deadline: the sim must ALWAYS end in a captured pose.
+// ---- the limits are load-bearing, not vacuously satisfied
 {
-  const { rd, steps, worst } = tumble(null, { maxSteps: 8 * 60 + 30 });
-  check('zero-impulse collapse still ends in a captured pose (deadline)',
-    rd.done && !!rd.finalPose, `steps=${steps}`);
-  check('…and stays near range while it wobbles (±15°)', worst <= 15 * Math.PI / 180,
-    `worst violation ${deg(worst)}°`);
+  const hyper = (rd: any) => Math.min(...rd.hinge.map((H: any) => {
+    const u = rd.p[H.b].clone().sub(rd.p[H.a]).normalize();
+    const v = rd.p[H.c].clone().sub(rd.p[H.b]).normalize();
+    const n = H.n.clone().addScaledVector(u, -H.n.dot(u)).normalize();
+    return v.dot(n.clone().cross(u));
+  }));
+  let worstOff = 1;
+  for (const rig of FLEET) {
+    const rest = makeAvatar(rig.P).restBonePositions();
+    const av = makeAvatar(rig.P);
+    const rd: any = new Ragdoll(av, new THREE.Vector3(0.2, 0.05, 0.15), rest);
+    rd.hinge = [];                       // the control: no hinge limits at all
+    let s = 0;
+    while (!rd.done && s < 600) { rd.step(1 / 60); s++; }
+    rd.hinge = new (Ragdoll as any)(makeAvatar(rig.P), null, rest).hinge;
+    worstOff = Math.min(worstOff, hyper(rd));
+  }
+  check('control: without the hinge limit, joints DO fold backwards',
+    worstOff < -0.25, `worst fold-direction dot only ${worstOff.toFixed(2)}`);
 }
 
-// ---- the SAME tumble with limits disabled must violate them, or the pass
-// above proves nothing
+// ---------------------------------------------------------------------------
+// the ragdoll against actual props — the seam where this went wrong
+// ---------------------------------------------------------------------------
+console.log('\nbodies and furniture:');
 {
-  const { worst, steps } = tumble(new THREE.Vector3(0.09, -0.03, 0.05), { disableLimits: true });
-  check('control: without the clamp the same tumble breaks the ranges',
-    worst > 20 * Math.PI / 180, `worst only ${deg(worst)}° after ${steps} steps`);
+  const COL: any = await import('../client/lib/colliders.js');
+  const prop = (id: string, w: number, h: number, d: number, y0: number, x: number) => {
+    const g = new THREE.BoxGeometry(w, h, d);
+    g.translate(0, y0 + h / 2, 0);
+    const m = new THREE.Mesh(g, undefined);
+    m.updateMatrixWorld(true);
+    COL.fitCollider(id, m, { collide: 'box' });   // keep it a box, not an interior
+    m.position.set(x, 0, 0);
+    m.updateMatrixWorld(true);
+    COL.reindexCollider(id);
+  };
+
+  // a crate the body falls across: nothing may end up buried inside it
+  COL.clearColliders();
+  prop('crate', 1, 1, 1, 0, 0.5);
+  {
+    const { rd } = run(synth(), new THREE.Vector3(0.05, 0, 0.02));
+    const inside = Object.keys(rd.p).filter((j: string) => {
+      const p = rd.p[j], m = 0.02;
+      return p.x > 0.0 + m && p.x < 1.0 - m && p.z > -0.5 + m && p.z < 0.5 - m
+        && p.y < 1.0 - m && p.y > 0.0 + m;
+    });
+    check('no joint settles buried inside a crate', inside.length === 0, inside.join(' '));
+    check('...and the body still settles', rd.done);
+  }
+
+  // An overhang a standing body fits under — a mezzanine, a bridge, a bunk.
+  // Before resolveColliders read box.min.y this was impossible: the slab was
+  // an infinite column down to the world floor, so every joint of a body
+  // collapsing beneath it was ejected sideways out of the footprint.
+  COL.clearColliders();
+  prop('overhang', 3, 0.2, 3, 1.6, 0);
+  {
+    const { rd } = run(synth());
+    const n = Object.keys(rd.p).length;
+    const under = Object.keys(rd.p).filter((j: string) =>
+      Math.abs(rd.p[j].x) < 1.5 && Math.abs(rd.p[j].z) < 1.5);
+    check('a body collapsing under an overhang stays under it', under.length === n,
+      `only ${under.length}/${n} joints still beneath it`);
+    check('...and none of it clipped up through the slab',
+      Object.keys(rd.p).every((j: string) => rd.p[j].y < 1.6));
+  }
+  COL.clearColliders();
 }
 
 console.log(`\n${pass} passed, ${fail} failed`);

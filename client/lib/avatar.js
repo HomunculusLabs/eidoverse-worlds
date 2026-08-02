@@ -8,6 +8,7 @@ import {
   CLIP_SLOTS, CLIP_SPEED, VRMUtils,
 } from './assets.js';
 import { beginWork, enqueue, idleYield } from './loadwork.js';
+import { DRIVEN_BONES } from './ragdoll.js';
 
 // The clip library is ~1.9MB PER SLOT. Waiting for all seven before a body
 // could exist put 13MB between a person and their own legs — the single
@@ -173,6 +174,7 @@ export class Avatar {
     this.blinkT = -1;
     this.head = vrm.humanoid?.getNormalizedBoneNode?.('head') ?? null;
     this.pitch = 0;                // radians, applied post-update
+    this._limp = false;            // see setLimp: the mixer yields to the sim
     this.shadow = makeBlobShadow();
     this.root.add(this.shadow);
 
@@ -323,6 +325,71 @@ export class Avatar {
 
   clearPose() { if (this._override) this._override.wantWeight = 0; }
 
+  /** Go limp, or stand back up.
+   *
+   *  A ragdoll writes twelve bones. The locomotion mixer writes every bone the
+   *  clip has a track for, every frame, forever — and `setClip('ragdoll')`
+   *  never stopped it: there is no ragdoll clip and no CLIP_FALLBACK entry, so
+   *  _setAction was handed undefined and returned at its first line. Whatever
+   *  was playing when you fell (idle, or walk if you fell mid-stride) went on
+   *  running underneath the tumble, and _applyOverride only slerps the twelve
+   *  DRIVEN bones back — so the shoulders, upperChest, head, hands, feet, toes
+   *  and every finger stayed animated on a corpse. Which bones those were
+   *  differs per rig (the fleet splits into 19-bone and 54-bone rigs), and
+   *  that was most of why one fall looked fine on one avatar and broken on the
+   *  next.
+   *
+   *  So: stop the mixer, and park every bone the sim does NOT drive at its
+   *  rest rotation. Parking rather than freezing mid-stride is deliberate — a
+   *  body going limp SHOULD unclench its hands and drop its shoulders, so the
+   *  snap reads as relaxing. It also makes the chest->upperArm span rigid,
+   *  which is what the sim's distance constraint always assumed it was. */
+  setLimp(on) {
+    on = !!on;
+    if (on === this._limp) return;
+    this._limp = on;
+    if (!on) { this.setClip('idle'); return; }
+    if (this.emote) this.cancelEmote();
+    this.mixer.stopAllAction();
+    this.current = null;
+    this.currentSlot = null;
+    const driven = new Set(DRIVEN_BONES);
+    for (const name of this._humanoidBones()) {
+      if (driven.has(name)) continue;
+      this.vrm.humanoid.getNormalizedBoneNode(name)?.quaternion.identity();
+    }
+    this.root.updateMatrixWorld(true);
+  }
+
+  _humanoidBones() { return Object.keys(this.vrm.humanoid?.humanBones ?? {}); }
+
+  /** World positions of the humanoid bones in the NEUTRAL rest pose — every
+   *  humanoid rotation identity — without disturbing the pose on screen.
+   *
+   *  The ragdoll measures every joint limit, every brace length and its own hip
+   *  offset against this. Measuring against the LIVE skeleton meant a body that
+   *  went limp mid-stride took the stride's angles as its definition of rest,
+   *  so the same avatar got different knees depending on which frame of the
+   *  walk cycle it happened to fall on. */
+  restBonePositions(names = null) {
+    const h = this.vrm.humanoid;
+    if (!h) return null;
+    const saved = [];
+    for (const name of this._humanoidBones()) {
+      const node = h.getNormalizedBoneNode(name);
+      if (node) { saved.push([node, node.quaternion.clone()]); node.quaternion.identity(); }
+    }
+    this.root.updateMatrixWorld(true);
+    const out = {};
+    for (const name of names ?? this._humanoidBones()) {
+      const node = h.getNormalizedBoneNode(name);
+      if (node) out[name] = node.getWorldPosition(new THREE.Vector3());
+    }
+    for (const [node, q] of saved) node.quaternion.copy(q);
+    this.root.updateMatrixWorld(true);
+    return out;
+  }
+
   /** Sample one bone's target quaternion for an animation at time t (seconds). */
   _sampleTrack(keys, t, out) {
     if (t <= keys[0].t) return out.copy(keys[0].q);
@@ -413,7 +480,9 @@ export class Avatar {
     // overwrites it first — so it is invisible. (Head pitch lived here too and
     // was silently doing nothing; it only ever passed a numeric check.) Applied
     // here, we compose on the fresh clip pose and vrm.update carries it through.
-    if (this.head && this.pitch) {
+    // ...but not while limp: a corpse does not keep looking where you last
+    // aimed the camera, and the pitch is never reset when you fall.
+    if (this.head && this.pitch && !this._limp) {
       this.head.rotation.x += THREE.MathUtils.clamp(this.pitch, -0.5, 0.6);
     }
     if (this._override) this._applyOverride(dt, now);

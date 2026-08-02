@@ -84,15 +84,64 @@ function applyImmediate(r) {
   r.avatar.root.rotation.y = s.yaw ?? 0;
 }
 
-/** Presence extras that aren't position: the held pose (bones), emotes, and
- *  the locomotion clip. Applied from whichever sample is current, in BOTH the
+// Bone blending scratch. This runs per bone, per remote, per frame — nothing
+// on that path may allocate.
+const _qa = new THREE.Quaternion(), _qb = new THREE.Quaternion(), _qk = new THREE.Quaternion();
+/** Marks "the bones are mid-blend": non-null so a later release still clears,
+ *  and never `===` a sample's pose so a held pose always re-applies. */
+const POSE_BLEND = {};
+
+/** The held pose (bones), blended a→b by the SAME k as the root. Handed `b`
+ *  alone, the bones ran up to INTERP_MS ahead of the body they hang off and
+ *  stepped at the 66ms send rate — during a ragdoll tumble the limbs visibly
+ *  led the fall. Change detection is pose-object identity, not a stringified
+ *  signature: every sample carries a freshly decoded pose so `===` is exactly
+ *  as strong, and on the blended path the value differs every frame anyway,
+ *  which made the JSON.stringify pure per-frame waste. */
+function applyPose(r, a, b, k) {
+  const pa = a.pose, pb = b.pose;
+  if (!pb) {                            // nobody is posed, or just released
+    if (r.lastPose != null) { r.lastPose = null; r.avatar.clearPose(); }
+    return;
+  }
+  if (!pa || pa === pb) {               // fading in, or the single-sample hold
+    if (r.lastPose !== pb) { r.lastPose = pb; r.avatar.setPose(pb); }
+    return;
+  }
+  // Re-plan per bracketing pair (~15Hz), not per frame: the merged bone list
+  // and its output arrays outlive every frame of the span.
+  if (r.poseA !== pa || r.poseB !== pb) planPoseBlend(r, pa, pb);
+  for (const s of r.poseSlots) {
+    _qa.fromArray(s.a); _qb.fromArray(s.b);
+    _qk.slerpQuaternions(_qa, _qb, k).toArray(s.out);
+  }
+  r.lastPose = POSE_BLEND;
+  r.avatar.setPose(r.poseOut);
+}
+
+const isQuat = (q) => Array.isArray(q) && q.length === 4;
+
+/** Merged bone list for one pair, with the output arrays setPose will read.
+ *  A bone named on only one side holds that side's rotation instead of
+ *  blending toward rest — senders drop bones they aren't driving, and reading
+ *  the gap as identity would fling the limb. */
+function planPoseBlend(r, pa, pb) {
+  r.poseA = pa; r.poseB = pb;
+  r.poseSlots = []; r.poseOut = {};
+  for (const n of new Set([...Object.keys(pa), ...Object.keys(pb)])) {
+    const qa = isQuat(pa[n]) ? pa[n] : pb[n], qb = isQuat(pb[n]) ? pb[n] : pa[n];
+    if (!isQuat(qa) || !isQuat(qb)) continue;
+    const out = [0, 0, 0, 1];
+    r.poseSlots.push({ a: qa, b: qb, out });
+    r.poseOut[n] = out;
+  }
+}
+
+/** Presence extras that aren't position or bones: emotes and the locomotion
+ *  clip. Driven by the NEWER sample of the pair and never blended — these are
+ *  discrete events, and half a wave is not a wave. Applied in BOTH the
  *  interpolated and single-sample paths so a late joiner isn't missing them. */
 function applyPresenceExtras(r, s) {
-  const poseSig = s.pose ? JSON.stringify(s.pose) : '';
-  if (poseSig !== r.lastPoseSig) {
-    r.lastPoseSig = poseSig;
-    if (s.pose) r.avatar.setPose(s.pose); else r.avatar.clearPose();
-  }
   const clip = s.clip ?? 'idle';
   if (s.emote && s.emote !== r.lastEmote) {
     r.lastEmote = s.emote;
@@ -102,7 +151,13 @@ function applyPresenceExtras(r, s) {
     // later (lastEmote never resetting meant nobody could wave twice)
     if (!s.emote) r.lastEmote = null;
     if (clip !== r.lastClip) r.lastClip = clip;
-    r.avatar.setClip(clip, s.speed ?? 0);
+    // 'ragdoll' is not a clip and never was: setClip walks CLIP_FALLBACK,
+    // finds no entry for it, and hands _setAction undefined — which returns at
+    // its first line. So the locomotion clip went on playing underneath every
+    // remote tumble, animating the shoulders, hands and head of a body that
+    // was supposed to be limp. The streamed pose owns the bones while down.
+    if (clip === 'ragdoll') r.avatar.setLimp(true);
+    else { r.avatar.setLimp(false); r.avatar.setClip(clip, s.speed ?? 0); }
   }
 }
 
@@ -140,6 +195,7 @@ export function updateRemotes(dt, now = performance.now()) {
       r.avatar.pitch = (a.pitch ?? 0) + ((b.pitch ?? 0) - (a.pitch ?? 0)) * k;
       // drop samples we've moved past, but always keep one behind renderAt
       while (buf.length > 2 && buf[1].t < renderAt - 400) buf.shift();
+      applyPose(r, a, b, k);
       applyPresenceExtras(r, b);
     } else if (buf.length === 1) {
       applyImmediate(r);
@@ -147,6 +203,7 @@ export function updateRemotes(dt, now = performance.now()) {
       // its held bones — otherwise a body that fell before you arrived shows
       // as a STANDING figure sunk into the ground (the root lowers, the pose
       // never folds). This ran only in the interpolation branch before.
+      applyPose(r, buf[0], buf[0], 1);
       applyPresenceExtras(r, buf[0]);
     }
 

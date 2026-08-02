@@ -1,0 +1,197 @@
+// Load the SHIPPED VRM rigs headless, for anything that needs to test or
+// measure against real skeletons rather than an idealised one.
+//
+// This exists because for a long time nothing did. ragdoll-test.ts and
+// rag-param-study.mjs both drove a synthetic T-pose humanoid — "the invariants
+// under test live in the particle sim, not in any particular VRM" — and the
+// suite was green while every real rig in the fleet was broken. The rigs are
+// the variable: heights run 0.63m to 1.53m, rests run T-pose to A-pose, and
+// the fleet splits into 19-21 bone rigs and 50-54 bone ones that carry an
+// upperChest and shoulders between the chest and the arm.
+//
+// No renderer and no textures are involved: the GLB's JSON chunk carries the
+// node tree and the humanoid map, and world rest positions are all a skeleton
+// test needs. VRM's normalized bone nodes share those positions by definition.
+
+import { readdirSync, readFileSync } from 'node:fs';
+import { THREE } from './core-stub.mjs';
+
+export const VRM_DIR = new URL('../assets/opt/eidoverse/assets/vrms/', import.meta.url).pathname;
+
+/** The JSON chunk of a .glb / .vrm. */
+export function glbJson(buf) {
+  const dv = new DataView(buf.buffer, buf.byteOffset, buf.byteLength);
+  if (dv.getUint32(0, true) !== 0x46546c67) throw new Error('not a GLB');
+  let off = 12;
+  while (off < dv.byteLength) {
+    const len = dv.getUint32(off, true), type = dv.getUint32(off + 4, true);
+    if (type === 0x4e4f534a) {
+      return JSON.parse(new TextDecoder().decode(buf.subarray(off + 8, off + 8 + len)));
+    }
+    off += 8 + len + ((4 - (len % 4)) % 4);
+  }
+  throw new Error('no JSON chunk');
+}
+
+/** humanoid bone name -> node index, for VRM 0.x and 1.0 alike. */
+export function humanBones(g) {
+  const v1 = g.extensions?.VRMC_vrm?.humanoid?.humanBones;
+  if (v1) return Object.fromEntries(Object.entries(v1).map(([b, v]) => [b, v.node]));
+  const v0 = g.extensions?.VRM?.humanoid?.humanBones;
+  if (v0) return Object.fromEntries(v0.map((h) => [h.bone, h.node]));
+  return null;
+}
+
+/** World rest position of any node, by walking the TRS tree. */
+export function worldPositions(g) {
+  const parent = new Map();
+  g.nodes.forEach((n, i) => (n.children ?? []).forEach((c) => parent.set(c, i)));
+  const memo = new Map();
+  const world = (i) => {
+    if (memo.has(i)) return memo.get(i);
+    const n = g.nodes[i];
+    const t = n.matrix ? new THREE.Vector3(n.matrix[12], n.matrix[13], n.matrix[14])
+      : new THREE.Vector3(...(n.translation ?? [0, 0, 0]));
+    const q = new THREE.Quaternion(...(n.rotation ?? [0, 0, 0, 1]));
+    const p = parent.get(i);
+    const out = p === undefined ? { p: t, q }
+      : (() => { const pw = world(p);
+          return { p: t.clone().applyQuaternion(pw.q).add(pw.p), q: pw.q.clone().multiply(q) }; })();
+    memo.set(i, out);
+    return out;
+  };
+  return (i) => world(i).p.clone();
+}
+
+/** Every shipped rig, as { name, P } where P maps humanoid bone -> world rest
+ *  position. Rigs without a humanoid extension or without hips are skipped
+ *  loudly rather than silently. */
+export function rigs() {
+  const out = [];
+  for (const f of readdirSync(VRM_DIR).filter((n) => n.endsWith('.vrm')).sort()) {
+    const name = f.replace('.vrm', '');
+    let g, bones, wp;
+    try { g = glbJson(readFileSync(VRM_DIR + f)); bones = humanBones(g); wp = worldPositions(g); }
+    catch (e) { out.push({ name, err: e.message }); continue; }
+    if (!bones) { out.push({ name, err: 'no humanoid extension' }); continue; }
+    const P = {};
+    for (const [b, n] of Object.entries(bones)) if (g.nodes[n]) P[b] = wp(n);
+    if (!P.hips) { out.push({ name, err: 'no hips bone' }); continue; }
+    out.push({ name, P, boneCount: Object.keys(P).length });
+  }
+  return out;
+}
+
+// The humanoid parent chain the ragdoll's particle model assumes. Rigs that
+// carry upperChest/shoulder collapse onto this: goLimp parks those bones at
+// rest before the sim starts, which is what makes the span rigid.
+export const PARENT = {
+  hips: null, spine: 'hips', chest: 'spine', neck: 'chest', head: 'neck',
+  leftUpperArm: 'chest', leftLowerArm: 'leftUpperArm', leftHand: 'leftLowerArm',
+  rightUpperArm: 'chest', rightLowerArm: 'rightUpperArm', rightHand: 'rightLowerArm',
+  leftUpperLeg: 'hips', leftLowerLeg: 'leftUpperLeg', leftFoot: 'leftLowerLeg',
+  rightUpperLeg: 'hips', rightLowerLeg: 'rightUpperLeg', rightFoot: 'rightLowerLeg',
+};
+
+/** A stand-in Avatar over a rig's rest positions: normalized bone nodes with
+ *  identity rotations and local offsets equal to the world rest deltas, which
+ *  is exactly what getNormalizedBoneNode hands back on a real VRM.
+ *
+ *  `stride` fakes having fallen mid-walk by rotating a few bones before the
+ *  sim ever sees the skeleton — the case that used to poison the sim's idea of
+ *  "rest". restBonePositions() still reports the NEUTRAL pose, as the real
+ *  Avatar does, so a test can prove the two are decoupled. */
+export function makeAvatar(P, { stride = 0 } = {}) {
+  const root = new THREE.Object3D();
+  const nodes = {};
+  for (const j of Object.keys(PARENT)) {
+    if (!P[j]) continue;
+    const n = new THREE.Object3D();
+    n.name = j;
+    const p = PARENT[j];
+    const base = p && P[p] ? P[p] : new THREE.Vector3(0, 0, 0);
+    n.position.copy(P[j]).sub(base);
+    ((p && nodes[p]) ? nodes[p] : root).add(n);
+    nodes[j] = n;
+  }
+  root.updateMatrixWorld(true);
+
+  const av = {
+    root, nodes, poses: 0, limp: false,
+    vrm: { humanoid: {
+      humanBones: Object.fromEntries(Object.keys(nodes).map((k) => [k, {}])),
+      getNormalizedBoneNode: (j) => nodes[j] ?? null,
+    } },
+    setPose() { this.poses++; },
+    clearPose() {},
+    setLimp(on) { this.limp = !!on; },
+    restBonePositions() {
+      const saved = Object.values(nodes).map((n) => [n, n.quaternion.clone()]);
+      for (const [n] of saved) n.quaternion.identity();
+      root.updateMatrixWorld(true);
+      const out = {};
+      for (const [k, n] of Object.entries(nodes)) out[k] = n.getWorldPosition(new THREE.Vector3());
+      for (const [n, q] of saved) n.quaternion.copy(q);
+      root.updateMatrixWorld(true);
+      return out;
+    },
+  };
+
+  if (stride) {
+    // a plausible mid-walk frame: thighs split, one knee up, arms counterswung
+    const rot = (j, ax, deg) => nodes[j]?.quaternion.setFromAxisAngle(ax, deg * stride * Math.PI / 180);
+    const X = new THREE.Vector3(1, 0, 0), Z = new THREE.Vector3(0, 0, 1);
+    rot('leftUpperLeg', X, -35); rot('rightUpperLeg', X, 30); rot('leftLowerLeg', X, 45);
+    rot('leftUpperArm', Z, -25); rot('rightUpperArm', Z, 25); rot('spine', X, 8);
+    root.updateMatrixWorld(true);
+  }
+  return av;
+}
+
+// ---- geometry helpers shared by the measuring tools -----------------------
+
+/** Closest distance between two segments. */
+export function segDist(p1, q1, p2, q2) {
+  const d1 = q1.clone().sub(p1), d2 = q2.clone().sub(p2), r = p1.clone().sub(p2);
+  const a = d1.dot(d1), e = d2.dot(d2), f = d2.dot(r);
+  let s, t;
+  if (a < 1e-9 && e < 1e-9) return r.length();
+  if (a < 1e-9) { s = 0; t = Math.min(1, Math.max(0, f / e)); }
+  else {
+    const c = d1.dot(r);
+    if (e < 1e-9) { t = 0; s = Math.min(1, Math.max(0, -c / a)); }
+    else {
+      const b = d1.dot(d2), den = a * e - b * b;
+      s = den > 1e-9 ? Math.min(1, Math.max(0, (b * f - c * e) / den)) : 0;
+      t = (b * s + f) / e;
+      if (t < 0) { t = 0; s = Math.min(1, Math.max(0, -c / a)); }
+      else if (t > 1) { t = 1; s = Math.min(1, Math.max(0, (b - c) / a)); }
+    }
+  }
+  return p1.clone().addScaledVector(d1, s).sub(p2.clone().addScaledVector(d2, t)).length();
+}
+
+/** Worst shaft-vs-shaft interpenetration among a ragdoll's own bone capsules,
+ *  as a fraction of the separation those capsules should have kept. This is
+ *  what colliding joint SPHERES could never see. Pairs that already overlap in
+ *  the rest pose are excluded, exactly as the solver excludes them — a chest
+ *  capsule genuinely does overlap a neck capsule on every real body. */
+export function worstOverlap(rd) {
+  let worst = 0, name = '';
+  for (const { A, B, min } of rd.pairs) {
+    const d = segDist(rd.p[A.a], rd.p[A.b], rd.p[B.a], rd.p[B.b]);
+    const pen = (min - d) / min;
+    if (pen > worst) { worst = pen; name = `${A.b}~${B.b}`; }
+  }
+  return { frac: worst, name };
+}
+
+/** Run a tumble to completion (or a step cap) and hand back the sim. `Ragdoll`
+ *  is passed in rather than imported: importing it needs the core.js stub
+ *  plugin registered first, which only the entry script can do. */
+export function tumble(Ragdoll, av, rest, impulse, { dt = 1 / 60, maxSteps = 3000 } = {}) {
+  const rd = new Ragdoll(av, impulse, rest);
+  let steps = 0;
+  while (!rd.done && steps < maxSteps) { rd.step(typeof dt === 'function' ? dt(steps) : dt); steps++; }
+  return { rd, steps };
+}
