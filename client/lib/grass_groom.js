@@ -24,8 +24,60 @@
 // uniforms.wind}) plus its aH/aPh attributes and 5-verts-per-blade layout.
 // Anything missing → the field is returned untouched.
 
-import { THREE, TSL } from './core.js';
+import { THREE, TSL, bus } from './core.js';
 import { dayness } from './sky.js';
+import { colliders } from './colliders.js';
+
+// ---- interior clearings ------------------------------------------------------
+// Grass grows wherever the meadow is — including through the floor of a spawned
+// interior. The fix is a clearing MASK: exact-collider entities (the interiors)
+// paint their scaled, yawed footprints black into a small canvas; the vertex
+// stage samples it at each blade's field-space XZ and sinks masked blades
+// underground. Repainting the canvas is the whole update path — spawns, moves
+// and rescales never touch geometry or rebuild nodes.
+const MASK = 256;
+let _clr = null; // { canvas, ctx, tex, W, D }
+
+export function paintClearings() {
+  if (!_clr) return;
+  const { ctx, tex, W, D } = _clr;
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, MASK, MASK);
+  ctx.fillStyle = '#000';
+  for (const [, e] of colliders) {
+    if (!e.exact) continue;                       // interiors only
+    const { obj, box } = e;
+    const s = obj.scale?.x || 1;
+    const hw = ((box.max.x - box.min.x) / 2) * s + 0.15; // small apron past the wall
+    const hd = ((box.max.z - box.min.z) / 2) * s + 0.15;
+    // box centre, local -> world (yaw about Y)
+    const bx = ((box.max.x + box.min.x) / 2) * s, bz = ((box.max.z + box.min.z) / 2) * s;
+    const c = Math.cos(obj.rotation.y), n = Math.sin(obj.rotation.y);
+    const wx = obj.position.x + bx * c + bz * n;
+    const wz = obj.position.z - bx * n + bz * c;
+    ctx.save();
+    ctx.translate(((wx + W / 2) / W) * MASK, ((wz + D / 2) / D) * MASK);
+    ctx.rotate(-obj.rotation.y);
+    ctx.fillRect((-hw / W) * MASK, (-hd / D) * MASK, (2 * hw / W) * MASK, (2 * hd / D) * MASK);
+    ctx.restore();
+  }
+  tex.needsUpdate = true;
+}
+
+function wireClearings(mat, W, D) {
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = MASK;
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.flipY = false;
+  _clr = { canvas, ctx: canvas.getContext('2d'), tex, W, D };
+  const { texture, positionLocal, vec2, vec3, float } = TSL;
+  const uv = positionLocal.xz.add(vec2(W / 2, D / 2)).div(vec2(W, D));
+  const mask = texture(tex, uv).r;                 // 1 = meadow, 0 = interior
+  const sink = float(1).sub(mask).mul(3);          // sunken blades are invisible blades
+  mat.positionNode = (mat.positionNode ?? positionLocal).sub(vec3(0, sink, 0));
+  paintClearings();
+  bus.on('entity', paintClearings);                // spawns/moves/rescales repaint
+}
 
 // Bit-identical rebuild of grass.js's private gust field (same hash, same
 // octaves) so the sheen samples the SAME wind the sway moves to.
@@ -146,5 +198,12 @@ export function groomGrass(field, args = {}) {
   } catch (e) {
     console.warn('[grass] groom skipped', e?.message ?? e);
   }
+  // clearings: interiors suppress the meadow under their footprint
+  try {
+    if (field?.material) {
+      wireClearings(field.material, args.width ?? args.size ?? 30, args.depth ?? args.size ?? 30);
+    }
+  } catch (e) { console.warn('[grass] clearings unavailable:', e?.message ?? e); }
+
   return field;
 }
