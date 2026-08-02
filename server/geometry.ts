@@ -49,9 +49,14 @@ export type GeomSummary = {
   /** up-facing flat zones, biggest first — seat pans, table tops, decks.
    *  A socket candidate is {pos: [cx, y, cz]} straight off one of these. */
   topSurfaces: Surface[];
-  /** named mesh parts with their local centers — models with a "seat" node
-   *  name their own affordances */
-  nodes: { name: string; center: number[]; size: number[] }[];
+  /** Named mesh parts (Orrery's segmented exports name theirs: tripo_part_N).
+   *  `center`/`size` are the MODEL frame (same as bbox/topSurfaces);
+   *  `origin` is where the part's own node sits in that frame; `local` is the
+   *  part's OWN coordinate frame — the frame a `motion:<name>` component's
+   *  pivot/axis use, so `local.center` is a pivot candidate verbatim and
+   *  [0,0,0] is the node origin (where a hinge usually lives). */
+  nodes: { name: string; center: number[]; size: number[]; origin: number[];
+           local: { center: number[]; size: number[] }; tris: number }[];
   /** true when the mesh was too big to walk exhaustively */
   sampled: boolean;
 };
@@ -105,16 +110,24 @@ export async function summarizeGlb(absPath: string): Promise<GeomSummary | null>
     if (!mesh) continue;
     const m = node.getWorldMatrix();
     const nMin = [Infinity, Infinity, Infinity], nMax = [-Infinity, -Infinity, -Infinity];
+    // the part's own frame — raw vertex coords, before any node transform
+    const lMin = [Infinity, Infinity, Infinity], lMax = [-Infinity, -Infinity, -Infinity];
+    let nTris = 0;
     for (const prim of mesh.listPrimitives()) {
       const posAcc = prim.getAttribute("POSITION");
       if (!posAcc) continue;
       const idxAcc = prim.getIndices();
       const count = idxAcc ? idxAcc.getCount() : posAcc.getCount();
+      nTris += Math.floor(count / 3);
       const p = [0, 0, 0];
       for (let t = 0; t + 2 < count; t += 3 * stride) {
         for (let k = 0; k < 3; k++) {
           const vi = idxAcc ? idxAcc.getScalar(t + k) : t + k;
           posAcc.getElement(vi, p);
+          for (let a = 0; a < 3; a++) {
+            if (p[a] < lMin[a]) lMin[a] = p[a];
+            if (p[a] > lMax[a]) lMax[a] = p[a];
+          }
           const out = k === 0 ? va : k === 1 ? vb : vc;
           xf(m, p, out);
           for (let a = 0; a < 3; a++) {
@@ -152,6 +165,12 @@ export async function summarizeGlb(absPath: string): Promise<GeomSummary | null>
         name,
         center: nMin.map((v, i) => +((v + nMax[i]) / 2).toFixed(3)),
         size: nMin.map((v, i) => +(nMax[i] - v).toFixed(3)),
+        origin: [+m[12].toFixed(3), +m[13].toFixed(3), +m[14].toFixed(3)],
+        local: {
+          center: lMin.map((v, i) => +((v + lMax[i]) / 2).toFixed(3)),
+          size: lMin.map((v, i) => +(lMax[i] - v).toFixed(3)),
+        },
+        tris: nTris,
       });
     }
   }
