@@ -27,6 +27,7 @@ export const colliders = new Map(); // entity id -> { obj, box, pillar, exact?, 
 //   verb can force either way with collide: "exact" | "box".
 const STEP = 0.55;   // max mantle-less step-up, metres — one comfortable stair
 const HIP = 0.95;    // wall-probe height: floors stay > r away, walls don't
+const TALL = 1.9;    // default body height above `pos` — an avatar on its feet
 
 function buildExact(obj) {
   obj.updateMatrixWorld(true);
@@ -172,14 +173,29 @@ const _exits = [
 ];
 
 /** Push `pos` out of anything solid and return the ground height under it.
- *  Mutates pos.x/pos.z. `terrainAt` supplies the base ground. */
+ *  Mutates pos.x/pos.z — never pos.y; placing the body vertically is the
+ *  caller's job, and `r` is a HORIZONTAL radius (a vertical cylinder, not a
+ *  sphere). `terrainAt` supplies the base ground. `tall` is how far the body
+ *  extends ABOVE pos.y: 1.9 for an avatar standing on its feet, a couple of
+ *  centimetres for a single ragdoll joint. It decides what you can pass
+ *  underneath, and it scales the step-up and wall-probe heights, which were
+ *  constants tuned for a standing human and wildly wrong for a wrist. */
 const _ray = new THREE.Ray();
 const _hip = new THREE.Vector3();
 const _cp = {};
 
-export function resolveColliders(pos, terrainAt, r = 0.32) {
+export function resolveColliders(pos, terrainAt, r = 0.32, tall = TALL) {
   blockedTop = null;
   let ground = terrainAt(pos.x, pos.z);
+  // Everything below is written for a body of SOME height standing at `pos`.
+  // The avatar is a 1.9m capsule on its feet; a ragdoll joint is a 3cm bead.
+  // Sharing one routine between them means the vertical numbers cannot be
+  // constants — a 55cm step-up allowance applied to a hand teleports it onto
+  // the nearest crate, and a hip-height wall probe applied to a wrist lying on
+  // the floor measures the wall a metre above the wrist.
+  const step = Math.min(STEP, tall * 0.3);   // a ragdoll does not climb stairs
+  const probeY = Math.min(HIP, tall * 0.5);  // mid-body, not "hip"
+  const spanY = Math.max(r, tall * 0.26);    // how far up/down a wall hit counts
   for (const { obj, box, pillar, exact } of near(pos.x, pos.z)) {
     if (exact) {
       // work in entity-local space (yaw-only rotation, uniform scale)
@@ -188,21 +204,21 @@ export function resolveColliders(pos, terrainAt, r = 0.32) {
         .applyAxisAngle(UP, -obj.rotation.y).divideScalar(s);
       const localY = (pos.y - obj.position.y) / s;
       // floor: nearest surface below the feet (+step allowance) IS the ground
-      _ray.origin.set(_local.x, localY + STEP / s, _local.z);
+      _ray.origin.set(_local.x, localY + step / s, _local.z);
       _ray.direction.set(0, -1, 0);
       const hit = exact.bvh.raycastFirst(_ray, THREE.DoubleSide);
       if (hit) {
         const gy = obj.position.y + hit.point.y * s;
-        if (gy <= pos.y + STEP && gy > ground) ground = gy;
+        if (gy <= pos.y + step && gy > ground) ground = gy;
       }
-      // walls: closest triangle to a hip-height probe pushes the capsule out
-      _hip.set(_local.x, localY + HIP / s, _local.z);
+      // walls: closest triangle to a mid-body probe pushes the capsule out
+      _hip.set(_local.x, localY + probeY / s, _local.z);
       const res = exact.bvh.closestPointToPoint(_hip, _cp);
       if (res) {
         const dx = (_hip.x - res.point.x) * s, dz = (_hip.z - res.point.z) * s;
         const dy = Math.abs(_hip.y - res.point.y) * s;
         const dh = Math.hypot(dx, dz);
-        if (dh < r && dy < 0.5 && dh > 1e-6) {
+        if (dh < r && dy < spanY && dh > 1e-6) {
           _push.set(dx / dh, 0, dz / dh).applyAxisAngle(UP, obj.rotation.y)
             .multiplyScalar(r - dh);
           pos.x += _push.x; pos.z += _push.z;
@@ -221,6 +237,14 @@ export function resolveColliders(pos, terrainAt, r = 0.32) {
     }
     if (_local.x < minX - br || _local.x > maxX + br || _local.z < minZ - br || _local.z > maxZ + br) continue;
     const topY = obj.position.y + box.max.y * bs;
+    // Are we UNDER it? Nothing here ever read box.min.y, so every box was an
+    // infinite column reaching down to the world floor: a mezzanine slab
+    // modelled at y 2.4-2.7 shoved a walking avatar 2.3m sideways at ground
+    // level, and a tabletop ejected anything that tried to lie beneath it.
+    // The `pillar` heuristic was the only way anything was ever passable
+    // underneath, which is why trees worked and archways did not.
+    const bottomY = obj.position.y + box.min.y * bs;
+    if (pos.y + tall <= bottomY) continue;
     if (pos.y >= topY - 0.08) {
       // at/above the top: the box is floor, not wall
       if (_local.x > minX && _local.x < maxX && _local.z > minZ && _local.z < maxZ) {
@@ -236,9 +260,31 @@ export function resolveColliders(pos, terrainAt, r = 0.32) {
     _exits[3].d = _local.z - (minZ - br);
     let best = _exits[0];
     for (let i = 1; i < 4; i++) if (_exits[i].d < best.d) best = _exits[i];
+    // Grazing the UNDERSIDE of an overhang is not walking into its side, and
+    // exiting through the nearest vertical face regardless is how a head
+    // brushing a mezzanine by 1.3cm got flung 1.6m sideways, clear of a 3m
+    // slab's whole footprint — on a room-sized one it is tens of metres.
+    //
+    // Two things must hold before we decline the push. There must BE a down:
+    // a crate sitting on the floor has its underside at ground level, so no
+    // amount of "you could go under it" is true and it must still push you
+    // sideways. And the overlap must be a GRAZE rather than "I do not fit" —
+    // a waist-high counter overlaps a standing body by most of a metre, and
+    // waving that through would let the avatar phase through it at chest
+    // height. Note that "the shortest way out is down" is NOT the test: for
+    // any large slab the sideways exit is metres away, so down always wins and
+    // everything becomes passable.
+    if (bottomY > ground + 0.05
+        && (pos.y + tall) - bottomY <= Math.max(0.05, tall * 0.08)) continue;
     _push.set(best.x, 0, best.z).applyAxisAngle(UP, obj.rotation.y).multiplyScalar(best.d * bs);
     pos.x += _push.x; pos.z += _push.z;
-    if (!pillar) blockedTop = topY; // pillars aren't mantleable
+    // pillars aren't mantleable — and neither is anything, to a body that
+    // cannot climb. The ragdoll runs this routine once per JOINT per frame;
+    // without the height test it would leave the controller's mantle probe
+    // holding whichever wrist last brushed a crate. That is harmless only
+    // because updateMe does not run while you are down, which is not a
+    // guarantee worth resting on.
+    if (!pillar && tall >= TALL) blockedTop = topY;
   }
   return ground;
 }
