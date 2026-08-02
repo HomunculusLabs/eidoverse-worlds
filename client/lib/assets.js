@@ -203,12 +203,16 @@ export async function loadGLB(libPath) {
   if (!libCompiles.has(libPath)) {
     const work = beginWork(`compile ${short}`);
     work.phase('queued'); // before enqueue — an empty lane starts the job synchronously
+    // In the loading tray too: on Safari a single material graph compiles for
+    // SECONDS — a spinner named after the model turns that from mystery jank
+    // into visible progress.
+    loadTrack(`compile:${libPath}`, `⚙ ${short}`);
     const p = enqueue(() => {
       work.phase('compile');
       return renderer.compileAsync(obj, camera, scene).catch(() => {});
     }, { lane: 'gpu', priority: 0 })
       .then(() => compiledLibs.add(libPath))
-      .finally(() => { libCompiles.delete(libPath); work.end(); });
+      .finally(() => { libCompiles.delete(libPath); work.end(); loadDone(`compile:${libPath}`); });
     libCompiles.set(libPath, p);
     await p;
     return obj;

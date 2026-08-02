@@ -125,8 +125,12 @@ export function beginWork(label) {
  *
  *  Priority: 2 = your own body, 1 = anyone's body, 0 = objects. People
  *  materialize before furniture, always. Reorders WAITING work only. */
+// cpu at 2: a parse's WALL time is dominated by draco workers and image
+// decode — awaits, not main-thread work (one conjured model held the serial
+// lane 18s on Safari while its webp decoded). Two in flight overlap the
+// waits; the genuinely-synchronous chunks still interleave through frames.
 const lanes = {
-  cpu: { jobs: [], running: 0, max: 1 },
+  cpu: { jobs: [], running: 0, max: 2 },
   gpu: { jobs: [], running: 0, max: 2 },
 };
 export function enqueue(fn, { lane = 'cpu', priority = 0 } = {}) {

@@ -189,8 +189,16 @@ export async function applyEntry(entry, live, ctx = {}) {
           const t = globalThis.makeTerrain({ ...args, layers });
           // compile the ground's pipelines BEFORE it enters the scene — an
           // unprecompiled terrain material otherwise codegens synchronously
-          // inside the first render() that sees it
-          if (t?.mesh) await renderer.compileAsync(t.mesh, camera, scene).catch(() => {});
+          // inside the first render() that sees it. BOUNDED: this build GATES
+          // arrival, and on Safari one compile can cost seconds (measured
+          // 08-02: boot went 10.7s) — past the cap the ground arrives anyway
+          // and the still-running compile finishes warming it moments later.
+          if (t?.mesh) {
+            await Promise.race([
+              renderer.compileAsync(t.mesh, camera, scene).catch(() => {}),
+              new Promise((r) => setTimeout(r, 1200)),
+            ]);
+          }
           setTerrain(t);
           // re-seat only ground-level entities — anything with a meaningful y
           // (seated on furniture, elevated) keeps its logged height
