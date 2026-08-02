@@ -128,11 +128,15 @@ Building blocks shipped:
   the verbs they emitted. Scripts therefore get randomness and wall-clock for
   free; only the fold must stay deterministic.
 
-The growth path from here: `behavior` entities (triggers beyond `use`:
-proximity, timer, phrase, region), a sandboxed script tier (QuickJS-in-WASM,
-capability-masked, budgeted, author-rights at emit time), and `publish` /
-`attach` to promote an authored behavior into the world's Layer-1
-vocabulary with knobs.
+**The script tier shipped 2026-08-02** (`server/behaviors.ts`, `sdk/`,
+AGENTS.md surface 2): uploaded script files (`/upload?as=script`,
+content-addressed) bound by `behavior` entries, each running server-side in
+its own QuickJS-in-WASM sandbox — gas/memory/emit-budgeted, capability-
+masked, author-rights checked at every emit, per-behavior log rings, paused
+loudly after repeated errors. Triggers: `use`, `say`, `enter`, `leave`,
+timers. Replay never re-executes scripts — it folds the verbs they emitted.
+Still ahead: proximity/phrase/region triggers, and `publish`/`attach` to
+promote an authored behavior into the world's Layer-1 vocabulary with knobs.
 
 ## Interactions: three layers
 

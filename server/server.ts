@@ -9,6 +9,7 @@ import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, ren
 import { join, resolve, normalize, basename } from "node:path";
 import { randomBytes } from "node:crypto";
 import { verifyToken, JtiCache } from "./aid1.ts";
+import { BehaviorHost, wireBehaviorGate, wireBehaviorStore, behaviorLimits, type BehaviorRec } from "./behaviors.ts";
 
 const PORT = Number(process.env.PORT ?? 8940);
 // Show-night door policy. Empty = open (dev on a tailnet). On a public box you
@@ -188,6 +189,11 @@ type WorldState = {
    *  to be identified at ban time) makes the ban survive a rename. Optional
    *  because snapshots from before this verb lack the map. */
   bans?: Record<string, { by: string; ts: number; reason?: string; sub?: string }>;
+  /** Runtime scripts bound into this world by `behavior` entries. The script
+   *  BYTES live in the content-addressed store; this holds the binding
+   *  (src, attach, caps, knobs, author) plus each script's persisted kv
+   *  (`state`, folded from bstate entries). See server/behaviors.ts. */
+  behaviors?: Record<string, BehaviorRec>;
 };
 const RECENT_CHAT = 40;
 /** How many entries may accumulate past a snapshot before folding again.
@@ -396,6 +402,37 @@ function foldEntry(st: WorldState, e: LogEntry): void {
       }
       return;
     }
+    case "behavior": {
+      // Bind (or unbind) a runtime script. The entry is the BINDING; the
+      // code is content-addressed in the store, so this replays exactly.
+      if (!a?.id) return;
+      st.behaviors ??= {};
+      if (a.remove) {
+        delete st.behaviors[a.id];
+        if (!Object.keys(st.behaviors).length) delete st.behaviors;
+        return;
+      }
+      if (typeof a.src !== "string") return;
+      st.behaviors[a.id] = {
+        src: a.src,
+        ...(a.attach ? { attach: String(a.attach) } : {}),
+        ...(a.caps ? { caps: a.caps } : {}),
+        ...(a.knobs ? { knobs: a.knobs } : {}),
+        author: String(a.by ?? e.actor),   // by = the human/agent behind a bhv:-authored rebind
+        ts: e.ts,
+        // a rebind keeps nothing: fresh code starts with fresh state unless
+        // the same id folds a later bstate
+      };
+      return;
+    }
+    case "bstate": {
+      // A script's persisted kv — server-authored (actor bhv:<id>), coalesced
+      // one-per-activation. Folding it here is what makes script state
+      // survive restarts, replays, and forks like everything else does.
+      const rec = st.behaviors?.[a?.id];
+      if (rec && a.data && typeof a.data === "object") rec.state = a.data;
+      return;
+    }
     // `use` deliberately has no case: it is a CAUSE, not an effect — it folds
     // nothing, but the log keeps it (who pushed the swing is history). Effects
     // are the reaction's own logged entries.
@@ -536,6 +573,10 @@ const VERB_NEEDS: Record<string, { rank: number; gen?: boolean }> = {
   // using the world, not editing it. See the verb handler.
   mount: { rank: 1 }, dismount: { rank: 1 },
   comp: { rank: 1 }, motion: { rank: 1 },
+  // Binding a runtime script is building — the sandbox, capability mask,
+  // author-rights-at-emit, and budgets are what make builder-rank safe.
+  // (`bstate` is deliberately absent: only the server writes script state.)
+  behavior: { rank: 1 },
   spawn: { rank: 1 }, place: { rank: 1 }, remove: { rank: 1 }, light: { rank: 1 },
   asset: { rank: 1, gen: true },
   terrain: { rank: 2 }, grass: { rank: 2 }, sky: { rank: 2 }, weather: { rank: 2 },
@@ -550,6 +591,20 @@ const VERB_NEEDS: Record<string, { rank: number; gen?: boolean }> = {
 function isAdminId(id: string, sub?: string): boolean {
   return ADMIN_IDS.has(id) || (sub != null && ADMIN_IDS.has(sub));
 }
+
+// Behavior sandbox wiring: a script's emit is gated by its AUTHOR's live
+// rights (revoke the grant, the behavior loses its teeth) through the same
+// table as everyone else. The store path is where `?as=script` uploads land.
+wireBehaviorStore(join(ROOT, "assets", "opt"));
+wireBehaviorGate((w, author, verb) => {
+  const needs = VERB_NEEDS[verb];
+  if (!needs) return `verb not allowed: ${verb}`;
+  const rights = rightsOf(w as unknown as World, author);
+  if (ROLE_RANK[rights.role] < needs.rank || (needs.gen && !rights.gen)) {
+    return `"${verb}" needs more than ${author}'s "${rights.role}" role here`;
+  }
+  return null;
+});
 
 // Agent identity: the MCPL door (mcpl/tokens.json) already holds per-agent
 // bearer tokens. The sequencer reads the same file so (a) an agent's name is
@@ -609,6 +664,8 @@ class World {
   /** The folded world. Kept live: every append updates it, so writing a
    *  snapshot is O(1) rather than a replay. */
   state: WorldState = emptyState();
+  /** Runtime-script host — sandboxes, budgets, per-behavior log rings. */
+  bhv!: BehaviorHost;
   /** How much of the log the snapshot already accounts for. Entries after this
    *  are the tail a joiner still has to be told about. */
   snapSeq = -1;
@@ -663,6 +720,10 @@ class World {
     if (existsSync(this.posesPath)) {
       try { this.poses = JSON.parse(readFileSync(this.posesPath, "utf8")); } catch { /* corrupt = fresh */ }
     }
+    // Runtime scripts wake with the world — a behavior keeps behaving with
+    // nobody connected (timers), which is the point of running server-side.
+    this.bhv = new BehaviorHost(this);
+    this.bhv.sync();
     const total = this.snapSeq + 1 + this.entries.length;
     console.log(`[world:${name}] loaded — ${Object.keys(this.state.entities).length} things, `
       + `${this.entries.length} tail entr${this.entries.length === 1 ? "y" : "ies"}`
@@ -715,6 +776,8 @@ class World {
     this.logBytes = 0;
     this.dirtySinceFold = 0;
     this.poses = {};
+    this.bhv.disposeAll();
+    this.bhv.sync();
     return arch;
   }
 
@@ -806,7 +869,7 @@ function expel(w: World, target: Client, why: string) {
   clients.delete(target.ws);
   target.world = null;
   target.ws.close?.(4006, "removed by moderation");
-  if (wasEmbodied) w.broadcast({ type: "leave", id: target.id });
+  if (wasEmbodied) { w.broadcast({ type: "leave", id: target.id }); w.bhv.onPresence("leave", target.id); }
 }
 
 // Operator-log census: people are people, eyes are eyes.
@@ -817,6 +880,17 @@ function describe(w: World): string {
 }
 
 const worlds = new Map<string, World>();
+
+// One clock drives every world's script timers. This is what makes a
+// behavior keep behaving with NOBODY connected — the ferry runs, the
+// lighthouse blinks, the greeter is ready — which is the point of scripts
+// living server-side rather than in any client.
+setInterval(() => {
+  const now = Date.now();
+  for (const w of worlds.values()) {
+    try { w.bhv.tick(now); } catch (err) { console.error(`[world:${w.name}] behavior tick`, err); }
+  }
+}, 1000);
 function getWorld(name: string): World {
   if (!/^[a-z0-9_-]{1,64}$/i.test(name)) throw new Error(`bad world name: ${name}`);
   let w = worlds.get(name);
@@ -1139,6 +1213,25 @@ const server = Bun.serve({
       if (u.n > 4) return new Response("upload rate limit (4/min)", { status: 429 });
       const body = new Uint8Array(await req.arrayBuffer());
       if (body.length > UPLOAD_CAP) return new Response(`too large (${UPLOAD_CAP / 1e6}MB cap)`, { status: 413 });
+      if (url.searchParams.get("as") === "script") {
+        // Runtime-script ingestion: plain UTF-8 JS, content-addressed like
+        // models, so a `behavior` entry pins exact bytes forever. The store
+        // is inert — what RUNS is still gated by the behavior verb + sandbox.
+        if (body.length > 64 * 1024) return new Response("script too large (64KB cap)", { status: 413 });
+        let text: string;
+        try { text = new TextDecoder("utf-8", { fatal: true }).decode(body); } catch {
+          return new Response("script must be UTF-8 text", { status: 415 });
+        }
+        if (!text.trim()) return new Response("empty script", { status: 415 });
+        const shash = new Bun.CryptoHasher("sha256").update(body).digest("hex").slice(0, 16);
+        const sdir = join(OPT_DIR, "store", "scripts");
+        mkdirSync(sdir, { recursive: true });
+        const srel = `store/scripts/${shash}.js`;
+        if (!existsSync(join(OPT_DIR, srel))) writeFileSync(join(OPT_DIR, srel), body);
+        console.log(`[upload] script ${srel} (${body.length}B) by ${upBy}`);
+        return new Response(JSON.stringify({ path: srel }),
+          { headers: { "content-type": "application/json" } });
+      }
       if (body.length < 12 || new DataView(body.buffer).getUint32(0, true) !== 0x46546c67)
         return new Response("not a GLB container (glb/vrm)", { status: 415 });
       if (url.searchParams.get("as") === "avatar") {
@@ -1442,6 +1535,7 @@ const server = Bun.serve({
         if (!c.spectator) {
           if (!c.superseded) c.world.rememberPose(c.id, c.lastPose); // sleep where you stood
           c.world.broadcast({ type: "leave", id: c.id });
+          c.world.bhv.onPresence("leave", c.id);
         }
         console.log(`[world:${c.world.name}] ${describe(c.world)} — ${c.id} ${c.spectator ? "stopped watching" : "left"}`);
       }
@@ -1488,7 +1582,7 @@ const server = Bun.serve({
           // leave previous world (travel is: leave A, join B)
           if (c.world) {
             c.world.clients.delete(c);
-            if (!c.spectator) c.world.broadcast({ type: "leave", id: c.id });
+            if (!c.spectator) { c.world.broadcast({ type: "leave", id: c.id }); c.world.bhv.onPresence("leave", c.id); }
           }
           // A malformed world name is a bad LINK, not a bad actor — refuse it
           // with an explanation and a close code the client knows not to retry
@@ -1606,6 +1700,7 @@ const server = Bun.serve({
             })),
           }));
           if (!c.spectator) w.broadcast({ type: "arrive", id: c.id, avatar: c.avatar, agent: c.agent }, c);
+          if (!c.spectator) w.bhv.onPresence("enter", c.id);
           // Whispers that arrived while this identity was away. Held in memory
           // only — see the `whisper` case for why they must never reach the log.
           if (!c.spectator) {
@@ -1733,10 +1828,51 @@ const server = Bun.serve({
             const reason = args.reason != null ? String(args.reason).slice(0, 200) : undefined;
             args = { id, ...(reason ? { reason } : {}), ...(msg.verb === "ban" && targetSub ? { sub: targetSub } : {}) };
           }
+          if (msg.verb === "behavior") {
+            // Bind a runtime script: {id, src, attach?, caps?, knobs?} or
+            // {id, remove: true}. src must be a content-addressed script
+            // upload — the binding pins exact bytes, so replay is exact.
+            const id = String(args.id ?? "").replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 48);
+            if (!id) { ws.send(JSON.stringify({ type: "error", error: "behavior wants {id, src|remove}" })); return; }
+            if (args.remove) { args = { id, remove: true }; }
+            else {
+              const src = String(args.src ?? "");
+              if (!/^store\/scripts\/[a-f0-9]{16}\.js$/.test(src) || !existsSync(join(ROOT, "assets", "opt", src))) {
+                c.world.debug("rejected", { who: c.id, verb: "behavior", why: `no such script: ${src} — upload with POST /upload?as=script first` });
+                ws.send(JSON.stringify({ type: "error", error: "src must be an uploaded script path (POST /upload?as=script → store/scripts/<hash>.js)" }));
+                return;
+              }
+              const nBehaviors = Object.keys(c.world.state.behaviors ?? {}).length;
+              if (!c.world.state.behaviors?.[id] && nBehaviors >= behaviorLimits.MAX_BEHAVIORS_PER_WORLD) {
+                ws.send(JSON.stringify({ type: "error", error: `this world already runs ${nBehaviors} behaviors (cap ${behaviorLimits.MAX_BEHAVIORS_PER_WORLD})` }));
+                return;
+              }
+              const attach = args.attach != null ? String(args.attach).slice(0, 64) : undefined;
+              if (attach && !c.world.state.entities[attach]) {
+                ws.send(JSON.stringify({ type: "error", error: `nothing here called "${attach}" to attach to` }));
+                return;
+              }
+              if (args.knobs != null && JSON.stringify(args.knobs).length > 4096) {
+                ws.send(JSON.stringify({ type: "error", error: "knobs too large (4KB)" }));
+                return;
+              }
+              const capsIn = (args.caps ?? {}) as Record<string, unknown>;
+              const caps = {
+                ...(Array.isArray(capsIn.verbs) ? { verbs: capsIn.verbs.map(String).slice(0, 16) } : {}),
+                ...(capsIn.selfOnly != null ? { selfOnly: Boolean(capsIn.selfOnly) } : {}),
+              };
+              args = { id, src, ...(attach ? { attach } : {}),
+                ...(Object.keys(caps).length ? { caps } : {}),
+                ...(args.knobs != null ? { knobs: args.knobs } : {}) };   // author = entry.actor, never client-supplied
+            }
+          }
           const entry = c.world.append(c.id, msg.verb, args);
           c.world.broadcast({ type: "log", entry }); // everyone, including author (authoritative echo)
           // A `use` is a cause; reactions turn it into logged effects.
           if (msg.verb === "use") reactToUse(c.world, entry);
+          // Runtime scripts hear causes too — and a (re)bind reconciles sandboxes.
+          if (msg.verb === "behavior") c.world.bhv.sync();
+          c.world.bhv.onEntry(entry);
           // A ban or kick lands NOW on every matching body, not at some future
           // join — the fold recorded the fact; this is the fact taking effect.
           if (msg.verb === "ban" || msg.verb === "kick") {
@@ -1775,6 +1911,20 @@ const server = Bun.serve({
           // so the reasons things failed to reach it are public too.
           if (!c.world) return;
           const limit = Math.min(300, Math.max(1, Number(msg.limit ?? 50)));
+          if (msg.behavior != null) {
+            // one script's own log ring + status — the author's console
+            const b = c.world.bhv.inspect(String(msg.behavior));
+            ws.send(JSON.stringify({ type: "debug", reqId: msg.reqId ?? null,
+              behavior: String(msg.behavior),
+              status: b?.status ?? "no such behavior",
+              events: (b?.ring ?? []).slice(-limit).map((r) => ({ ts: r.ts, kind: "script-log", line: r.line })) }));
+            break;
+          }
+          if (msg.behaviors) {   // the roster: what runs here, and is it alive
+            ws.send(JSON.stringify({ type: "debug", reqId: msg.reqId ?? null,
+              events: c.world.bhv.list().map((b) => ({ ts: 0, kind: "behavior", ...b })) }));
+            break;
+          }
           const kinds = Array.isArray(msg.kinds) && msg.kinds.length ? new Set(msg.kinds.map(String)) : null;
           const events = c.world.debugLog
             .filter((e) => !kinds || kinds.has(String(e.kind)))

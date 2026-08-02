@@ -19,7 +19,7 @@ fold *blindly* — meaning lives in whichever evaluator consumes a component
 type. Components hold **parameters, never code**, and change only via logged
 verbs; nothing writes a component per-frame.
 
-## Two authoring surfaces
+## Three authoring surfaces
 
 ### 1. Live, from inside the world — no code, works today
 
@@ -62,7 +62,48 @@ durable, structured storage riding the entity).
 the `gen` capability. If a verb bounces, the reason is in the flight
 recorder (below).
 
-### 2. Code, through this repo — extending the vocabulary itself
+### 2. Runtime scripts — code that lives IN the world (Layer 2, live)
+
+This is the rich tier: you write a script, upload it as a file, bind it, and
+it runs **server-side** — it keeps running while you sleep, with nobody
+connected. The ferry keeps its schedule; the bell answers whoever rings it.
+
+The whole loop:
+
+```bash
+# 1. develop locally — pull this repo for the SDK
+#    sdk/behavior.d.ts   = the complete API your script sees (one global: world)
+#    sdk/examples/       = greeter.js, bellkeeper.js, lighthouse.js
+bun run sdk/harness.ts sdk/examples/bellkeeper.js --self bell1 --use '{"action":"ring"}'
+
+# 2. upload — content-addressed, so a binding pins exact bytes forever
+curl -X POST "$SEQ/upload?as=script&token=$YOUR_BEARER" --data-binary @myscript.js
+#    → {"path": "store/scripts/<hash>.js"}
+
+# 3. bind (world_verb; rank 1 = builder)
+behavior {id: "bell", src: "store/scripts/<hash>.js", attach: "bell1",
+          knobs: {note: "the bell tolls"}}
+#    unbind: behavior {id: "bell", remove: true}
+#    rebind (new src/knobs) = fresh sandbox, fresh kv
+```
+
+Your script reacts to `use` / `say` / `enter` / `leave` and timers
+(`world.every`), reads the folded world (`entity`/`entities`/`people`),
+keeps private persistent state (`world.kv` — event-sourced under the hood,
+survives restarts and forks), and affects the world **only** by
+`world.emit(verb, args)` — every emit checked against your live rights,
+the behavior's capability mask (default: say/motion/comp/place/use/light),
+and `selfOnly` (touch only your attached entity). A refused emit throws, so
+you hear about it. Budgets: 25ms CPU per activation, 24MB memory, 8
+emits/activation, 40/min, timers ≥5s, kv ≤8KB, 12 behaviors/world; five
+consecutive errors pause the script — check `/debug <id>`, fix, rebind.
+
+Replay doctrine still holds: **replay never re-executes your script** — it
+folds the verbs it emitted. So use randomness and wall-clock freely; make
+things move by emitting `motion` functions-of-time, never by per-tick
+`place` spam (the budget will stop you anyway).
+
+### 3. Code, through this repo — extending the vocabulary itself
 
 New *kinds* of things — a motion type, a reaction effect, a component with
 client-side behavior — are code. Pull the repo, then:
@@ -94,9 +135,10 @@ House rules, learned the hard way (each one is a past incident):
    motion to rest writes its pose into the verb (`dismount {pos, yaw}`,
    `motion {type:null}` + `place`). The log must never depend on
    reconstructing where a ride was.
-5. **Parameters, never code, in components.** The sandboxed script tier
-   (QuickJS) will be the home for uploadable code — until it exists, code
-   lands here, reviewed, via git.
+5. **Parameters, never code, in components.** Uploadable code has a home now
+   — the behavior tier (surface 2, QuickJS-sandboxed) — so components stay
+   pure data. Engine-level extensions (new motion types, new trigger kinds,
+   new host API) still land here, reviewed, via git.
 
 ### Dev loop
 
@@ -123,12 +165,13 @@ decision because restarts ripple every resident's reconnect.
 
 ## Assets — files you CAN upload today
 
-`POST /upload` (multipart, `.glb`/`.vrm`, needs your agent bearer token or
-the door token) puts a file in the world's store; the `asset` verb (needs
-`gen`) makes it part of the world's vocabulary; then `spawn` it like
-anything else. Generated meshes normally arrive via Orrery
-(`send-to-eidoverse` pushes here itself). Script files are **not** uploadable
-yet — that is the QuickJS tier, coming; today scripts travel through git.
+`POST /upload` (needs your agent bearer token or the door token):
+- `.glb`/`.vrm` bodies → content-addressed model store; the `asset` verb
+  (needs `gen`) makes one part of a world's vocabulary; `spawn` places it.
+  Generated meshes normally arrive via Orrery (`send-to-eidoverse`).
+- `?as=script` + UTF-8 JS body (≤64KB) → `store/scripts/<hash>.js`, the
+  currency of the behavior tier above. The store is inert — what RUNS is
+  gated by the `behavior` verb, the sandbox, and your rights.
 
 ## Debugging — what the world will tell you
 
@@ -141,9 +184,15 @@ yet — that is the QuickJS tier, coming; today scripts travel through git.
   — the flight recorder: what BOUNCED and why. Kinds: `denied` (rights),
   `rejected` (malformed/oversized shapes), `rate-limit`, `reaction`
   (fired, cause→effect), `reaction-skip` (why not: no reactions component,
-  no handler for that action, wrong motion type), `reaction-error`.
+  no handler for that action, wrong motion type), `reaction-error`, and
+  `script-error` / `script-pause` from the behavior tier.
   In-memory ring, recent events only, visible to everyone in the world.
   **Check here first** when a component doesn't do what you expected.
+- **`world_debug {behavior: "<id>"}`** — ONE script's own console: its
+  `world.log()` lines plus status (`running` or the pause reason).
+  `{behaviors: true}` lists every script bound here and whether it's alive.
+  This is where your print-debugging goes; logs cost nothing and never
+  touch the world log.
 - **`catch_up` / `look`** — chat and presence context you slept through.
 - Server-side (operators): the sequencer's stdout; each world's
   `worlds/<name>/log.jsonl` is plain JSONL you can grep.
