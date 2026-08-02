@@ -24,7 +24,7 @@ const STUB = new URL('./core-stub.mjs', import.meta.url).pathname;
 plugin({ name: 'core-stub', setup(b) { b.onResolve({ filter: /^\.\/core\.js$/ }, () => ({ path: STUB })); } });
 const { THREE } = await import('./core-stub.mjs');
 const { Ragdoll, TUNING } = await import('../client/lib/ragdoll.js');
-const { rigs, makeAvatar, worstOverlap } = await import('./rig-load.mjs');
+const { rigs, makeAvatar, worstOverlap, toppleLean } = await import('./rig-load.mjs');
 
 const FLEET = rigs().filter((r) => !r.err);
 const BASE = { ...TUNING };
@@ -32,7 +32,7 @@ const BASE = { ...TUNING };
 function run(rig, { dt = 1 / 60, stride = 0, maxSteps = 1200 } = {}) {
   const av = makeAvatar(rig.P, { stride });
   const rest = av.restBonePositions();
-  const rd = new Ragdoll(av, null, rest);
+  const rd = new Ragdoll(av, toppleLean(), rest);
   let steps = 0;
   while (!rd.done && steps < maxSteps) {
     rd.step(typeof dt === 'function' ? dt(steps) : dt);

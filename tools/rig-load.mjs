@@ -150,6 +150,32 @@ export function makeAvatar(P, { stride = 0 } = {}) {
 
 // ---- geometry helpers shared by the measuring tools -----------------------
 
+/** The lean goLimp actually passes: you fall the way you are facing, harder
+ *  the faster you were moving. Tests must use this, or they measure a path
+ *  production never takes — which is exactly how the old parameter study came
+ *  to be tuned against launch impulses nothing ever sent. */
+export function toppleLean(yaw = 0, speed = 0) {
+  return new THREE.Vector3(Math.sin(yaw), 0, Math.cos(yaw))
+    .multiplyScalar(0.9 + Math.min(1.2, speed * 0.35));
+}
+
+/** Worst speed any foot reaches AFTER the body has come down — the "legs kick
+ *  out from under it" measurement. Excludes the fall itself. */
+export function footKick(Ragdoll, av, rest, lean, { maxSteps = 900 } = {}) {
+  const rd = new Ragdoll(av, lean, rest);
+  let steps = 0, landed = 0, peak = 0;
+  while (!rd.done && steps < maxSteps) {
+    rd.step(1 / 60); steps++;
+    if (!landed && rd.p.hips.y < 0.12) landed = steps;
+    if (landed && steps > landed + 6) {
+      peak = Math.max(peak,
+        rd.p.leftFoot.distanceTo(rd.pre.leftFoot) * 60,
+        rd.p.rightFoot.distanceTo(rd.pre.rightFoot) * 60);
+    }
+  }
+  return { rd, steps, peak };
+}
+
 /** Closest distance between two segments. */
 export function segDist(p1, q1, p2, q2) {
   const d1 = q1.clone().sub(p1), d2 = q2.clone().sub(p2), r = p1.clone().sub(p2);

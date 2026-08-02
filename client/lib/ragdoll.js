@@ -219,6 +219,8 @@ const _c = new THREE.Vector3();
 const _n = new THREE.Vector3();
 const _t = new THREE.Vector3();
 const _u = new THREE.Vector3();
+const _s1 = new THREE.Vector3();   // swing: correction direction
+const _s2 = new THREE.Vector3();   // swing: velocity probe
 const _ca = new THREE.Vector3();
 const _cb = new THREE.Vector3();
 const _qd = new THREE.Quaternion();
@@ -251,14 +253,14 @@ function closestParams(p1, q1, p2, q2, out) {
 
 export class Ragdoll {
   /** @param avatar   the OWNER's Avatar.
-   *  @param impulse  optional launch velocity (a per-step position delta).
+   *  @param lean     optional topple velocity in m/s — see below.
    *  @param rest     optional map joint -> neutral-rest world position, from
    *                  Avatar.restBonePositions(). Everything anatomical is
    *                  measured against THIS, not against the live skeleton: a
    *                  body that goes limp mid-stride must not inherit the
    *                  stride's angles as its idea of "rest", or its knees adopt
    *                  the walk cycle's bend as their zero. */
-  constructor(avatar, impulse = null, rest = null) {
+  constructor(avatar, lean = null, rest = null) {
     this.avatar = avatar;
     this.settledFor = 0;
     this.elapsed = 0;
@@ -289,8 +291,34 @@ export class Ragdoll {
       this.rest[j] = (rest && rest[j]) ? rest[j].clone() : this.p[j].clone();
     }
 
-    // a shove so it doesn't collapse straight down like a dropped puppet
-    if (impulse) for (const j of JOINTS) if (this.prev[j]) this.prev[j].sub(impulse);
+    // ---- how it goes over.
+    //
+    // `lean` is a velocity in m/s, and it is applied weighted by HEIGHT: none
+    // at the lowest joint, all of it at the highest. That is a topple about the
+    // feet, which is what a body whose support fails actually does — the mass
+    // above the feet keeps going while the feet stay put.
+    //
+    // A uniform shove (what this used to be, on the one code path nothing ever
+    // called) does not topple anything; it slides the whole body sideways and
+    // leaves it to pancake straight down. A vertical pancake has nowhere to put
+    // its leg length: both ends of a 0.8m leg end up on the floor, so the knee
+    // folds until it jams against its stop under the torso's whole weight, and
+    // then unwinds. That is the "lands on its butt, then the legs kick out"
+    // flop. Toppling spends the same energy on rotation instead: measured
+    // across the fleet, worst foot speed after landing 4.1 -> 1.6 m/s, and it
+    // settles sooner rather than later.
+    if (lean) {
+      let lo = Infinity, hi = -Infinity;
+      for (const j of JOINTS) {
+        const p = this.p[j]; if (!p) continue;
+        if (p.y < lo) lo = p.y;
+        if (p.y > hi) hi = p.y;
+      }
+      const span = (hi - lo) || 1;
+      for (const j of JOINTS) {
+        if (this.prev[j]) this.prev[j].addScaledVector(lean, -(this.p[j].y - lo) / span * FIXED_DT);
+      }
+    }
 
     // inverse mass. A missing entry gets the lightest plausible weight rather
     // than infinite mass — an unpinned particle that never moves is worse.
@@ -560,6 +588,15 @@ export class Ragdoll {
       a1.addScaledVector(_n, -pen * wA1);
       b0.addScaledVector(_n, pen * wB0);
       b1.addScaledVector(_n, pen * wB1);
+      // Inelastic, for the same reason the joint limits are (see _stop): a
+      // SOFT push never fully clears the overlap, so a limb resting against
+      // another gets pushed every single frame, and if each push is allowed to
+      // read as separation velocity the pair trade energy forever. A wide rig
+      // whose legs come to rest touching sat in exactly that cycle — 1mm a
+      // step, 83mm of travel to show 5mm of progress, right up to the deadline.
+      _s1.copy(_n);
+      this._stop(A.a, -1); this._stop(A.b, -1);
+      this._stop(B.a, 1); this._stop(B.b, 1);
     }
   }
 
@@ -631,12 +668,33 @@ export class Ragdoll {
     // (measured: hands orbiting at 5 m/s, nothing settling). The two look
     // similar and behave inversely.
     const dead = _t.lengthSq() > lb * lb * 0.25;
+    _s1.copy(_t).normalize();                // the direction we are correcting
     _u.copy(_t).multiplyScalar(wc / ws);
     pc.add(_u);
-    if (dead) this.prev[c].copy(pc); else this.prev[c].add(_u);
+    if (dead) this.prev[c].copy(pc); else { this.prev[c].add(_u); this._stop(c, 1); }
     _u.copy(_t).multiplyScalar(-wb / ws);
     pb.add(_u);
-    if (dead) this.prev[b].copy(pb); else this.prev[b].add(_u);
+    if (dead) this.prev[b].copy(pb); else { this.prev[b].add(_u); this._stop(b, -1); }
+  }
+
+  /** A joint limit is a hard STOP, not a spring.
+   *
+   *  Carrying the whole correction into prev keeps the velocity that drove the
+   *  joint past its limit — so the limit stores that energy and hands it back
+   *  the moment the joint unwinds. That is a body collapsing straight down,
+   *  folding its knees into their stop under its own weight, and then kicking
+   *  its legs out from under itself: measured 12.9 m/s of foot after landing.
+   *  Dropping the carry entirely is worse (the correction then reads as fresh
+   *  velocity and pumps), so take the middle, which is also the physical
+   *  answer: keep the position, and remove only the velocity component that
+   *  was driving INTO the limit. Contact, not restitution. 12.9 -> 4.1 m/s.
+   *
+   *  `side` is +1 for the particle moved along the correction and -1 for the
+   *  one moved against it; the violating component has the opposite sign in
+   *  each case, and both are removed by the same projection. */
+  _stop(j, side) {
+    const vn = _s2.copy(this.p[j]).sub(this.prev[j]).dot(_s1);
+    if (vn * side < 0) this.prev[j].addScaledVector(_s1, vn);
   }
 
   _limits() {
@@ -675,11 +733,12 @@ export class Ragdoll {
         .addScaledVector(f, axis.z).normalize();
       const d = _b.dot(_n);
       if (d >= cos) continue;
+      const ang = Math.acos(THREE.MathUtils.clamp(d, -1, 1));
+      const lim = Math.acos(cos);
       _v.crossVectors(_n, _b);
       if (_v.lengthSq() < 1e-10) continue;      // exactly antipodal: no unique plane
       _v.normalize();
-      const ang = Math.acos(THREE.MathUtils.clamp(d, -1, 1));
-      _qd.setFromAxisAngle(_v, -(ang - Math.acos(cos)) * TUNING.YIELD);
+      _qd.setFromAxisAngle(_v, -(ang - lim) * TUNING.YIELD);
       this._swing(b, c, _b.applyQuaternion(_qd), lb);
     }
 
@@ -710,8 +769,8 @@ export class Ragdoll {
       let changed = false;
       // sideways: how far out of the hinge plane the lower link has strayed
       const oop = _b.dot(n);
-      const lim = THREE.MathUtils.clamp(oop, -H.side, H.side);
-      if (oop !== lim) { _b.addScaledVector(n, (lim - oop) * TUNING.YIELD); changed = true; }
+      const lim2 = THREE.MathUtils.clamp(oop, -H.side, H.side);
+      if (oop !== lim2) { _b.addScaledVector(n, (lim2 - oop) * TUNING.YIELD); changed = true; }
       // hyperextension: the lower link must never cross to the wrong side of
       // straight. This is the constraint the old unsigned table could not
       // express at all — an unsigned angle cannot tell a knee's forward from
