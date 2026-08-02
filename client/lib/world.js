@@ -75,6 +75,33 @@ export const anyBuildsPending = () => buildDepth;
 let lastTerrainArgs = null;
 let lastGrassArgs = null;
 
+// ---- deferred shadow-in -----------------------------------------------------
+// Spawned objects come in without castShadow (see the spawn case). Once every
+// queued load has finished — or after a hard 30s fallback, so a world where
+// something never drains still gets its light right — shadows switch on one
+// object per beat, spreading the per-caster depth-pipeline compiles that
+// would otherwise stack into the load window.
+const shadowless = new Set();
+let drainingShadows = false;
+async function drainShadows() {
+  if (drainingShadows) return;
+  drainingShadows = true;
+  try {
+    while (shadowless.size) {
+      const id = shadowless.values().next().value;
+      shadowless.delete(id);
+      const obj = entities.get(id);
+      if (obj) {
+        obj.castShadow = true;
+        obj.traverse((o) => { if (o.isMesh) o.castShadow = true; });
+        await new Promise((r) => setTimeout(r, 250)); // one depth compile per beat
+      }
+    }
+  } finally { drainingShadows = false; }
+}
+bus.on('lanes-idle', drainShadows);
+setTimeout(drainShadows, 30000);
+
 // Per-world roles as replayed from grant entries. A mirror for UI honesty —
 // the sequencer enforces; this only lets the client SAY what you are.
 const worldRoles = new Map();
@@ -95,8 +122,13 @@ export async function applyEntry(entry, live, ctx = {}) {
         if (queued?.removed) { entities.delete(args.id); return; }
         obj.userData.lib = args.lib;
         obj.userData.entityId = args.id;
-        obj.castShadow = true;
-        obj.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } });
+        // receiveShadow now, castShadow LATER: a caster's depth-pass pipeline
+        // compiles synchronously at its first shadow render, and during a
+        // load that is one more freeze per object in the window that hurts.
+        // Shadows are the last thing a world needs — they arrive one object
+        // per beat once every queued load has drained (see drainShadows).
+        obj.traverse((o) => { if (o.isMesh) o.receiveShadow = true; });
+        shadowless.add(args.id);
         const sc = queued?.scale ?? args.scale;
         // decision sees the SPAWN scale: wrong-sized imports that arrive with a
         // corrective scale still classify by their real-world size
@@ -173,6 +205,7 @@ export async function applyEntry(entry, live, ctx = {}) {
         entityMeta.delete(args.id);
         comps.delete(args.id);
         pendingMounts.delete(args.id);
+        shadowless.delete(args.id);
         removeCollider(args.id);
         bus.emit('entity', { id: args.id, kind: 'remove' });
         break;
@@ -452,6 +485,7 @@ export function stateToEntries(state, { skipChatFromSeq = Infinity } = {}) {
 
 export function resetWorld() {
   worldRoles.clear();
+  shadowless.clear();
   for (const [id, obj] of entities) { if (obj) (obj.parent ?? scene).remove(obj); removeCollider(id); }
   entities.clear();
   entityMeta.clear();

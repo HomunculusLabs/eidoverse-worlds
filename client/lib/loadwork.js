@@ -168,8 +168,16 @@ function pumpLane(l) {
     l.running++;
     (async () => {
       try { job.resolve(await job.fn()); } catch (e) { job.reject(e); }
-      finally { l.running--; pumpLane(l); }
+      finally { l.running--; pumpLane(l); checkIdle(); }
     })();
+  }
+}
+// 'lanes-idle' fires when every queued load has finished — the signal for
+// work that should wait for ALL of it (deferred shadow-in, see world.js).
+function checkIdle() {
+  if (!lanes.cpu.jobs.length && !lanes.gpu.jobs.length
+    && !lanes.cpu.running && !lanes.gpu.running && !objectsHeld) {
+    bus.emit('lanes-idle');
   }
 }
 /** Back-compat shape used by early call sites. */
@@ -204,14 +212,27 @@ export async function holdFrames(promise, maxMs = 4000) {
 // missing is knowing WHOSE stall it was. Anything unattributed logs as such —
 // an honest "the freeze came from somewhere we are not measuring yet".
 
+const activeLabels = () => [...active]
+  .map((w) => w.phaseName ? `${w.label}[${w.phaseName}]` : w.label)
+  .join(' + ');
+
 try {
   new PerformanceObserver((list) => {
     for (const e of list.getEntries()) {
       if (e.duration < 90) continue;
-      const during = [...active]
-        .map((w) => w.phaseName ? `${w.label}[${w.phaseName}]` : w.label)
-        .join(' + ');
-      console.warn(`[longtask] ${Math.round(e.duration)}ms during: ${during || '(unattributed)'}`);
+      console.warn(`[longtask] ${Math.round(e.duration)}ms during: ${activeLabels() || '(unattributed)'}`);
     }
   }).observe({ type: 'longtask', buffered: true });
-} catch { /* not supported — measurement is best-effort */ }
+} catch { /* not supported — the frame-gap watchdog below still measures */ }
+
+// Frame-gap watchdog — Safari has no longtask observer, so frame gaps are the
+// portable truth about felt freezes. Anything that holds a frame >150ms logs
+// with the same attribution. (framesHeld beats are deliberate and skipped.)
+let lastFrameAt = 0;
+requestAnimationFrame(function gapWatch(t) {
+  if (lastFrameAt && t - lastFrameAt > 150 && !document.hidden && !framesHeld()) {
+    console.warn(`[jank] ${Math.round(t - lastFrameAt)}ms frame gap during: ${activeLabels() || '(unattributed)'}`);
+  }
+  lastFrameAt = t;
+  requestAnimationFrame(gapWatch);
+});
