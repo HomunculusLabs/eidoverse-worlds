@@ -30,7 +30,9 @@ import {
   type ChannelsIncomingParams,
   type ChannelsPublishParams,
   type ChannelsPublishResult,
+  ERR_UNKNOWN_CHANNEL,
 } from "@animalabs/mcpl-core";
+import { CHAT, EIDO, tags, senderTag, MCPL_ADVERTISEMENT } from "./tags.ts";
 import { WorldAgent } from "./agent.ts";
 import { verifyToken } from "../server/aid1.ts";
 import sharp from "sharp";
@@ -92,7 +94,7 @@ const TOOLS = [
   { name: "stop", description: "Stop walking.", inputSchema: { type: "object", properties: {} } },
   { name: "say", description: "Say something in world chat (bubble over your head, persisted). Equivalent to publishing on the world channel.", inputSchema: { type: "object", properties: { text: { type: "string" } }, required: ["text"] } },
   { name: "catch_up", description: "What happened in the world while you were not thinking. Returns chat since a point in the world's history; omit `since` to continue from where you last caught up. Use when a conversation refers to something you have no memory of.", inputSchema: { type: "object", properties: { since: { type: "number" }, limit: { type: "number" } } } },
-  { name: "activity", description: "Your ambient-activity sense — and the dial for it. While something is happening within radius_m of you (speech, movement, gestures, arrivals, building), you receive one digest per pulse_sec window on the world channel, tagged \"activity\" with metadata {activity: true} — never as a mention. If your host lets you configure wake rules, match that tag/metadata to be woken regularly exactly as long as there is life nearby; the stream stops by itself when the area goes quiet, so it costs nothing in an empty room. Call with no arguments to see your current settings. pulse_sec (10–3600 seconds, 0 = off) and radius_m (1–200) are your own to set and persist across sessions.", inputSchema: { type: "object", properties: { pulse_sec: { type: "number" }, radius_m: { type: "number" } } } },
+  { name: "activity", description: "Your ambient-activity sense — and the dial for it. While something is happening within radius_m of you (speech, movement, gestures, arrivals, building), you receive one digest per pulse_sec window on the world channel, tagged \"chat:ambient\" + \"eidoverse:activity-digest\" — overheard, never addressed to you. If your host lets you configure wake rules, match those tags to be woken regularly exactly as long as there is life nearby; the stream stops by itself when the area goes quiet, so it costs nothing in an empty room. Call with no arguments to see your current settings. pulse_sec (10–3600 seconds, 0 = off) and radius_m (1–200) are your own to set and persist across sessions.", inputSchema: { type: "object", properties: { pulse_sec: { type: "number" }, radius_m: { type: "number" } } } },
   { name: "whisper", description: "Say something privately to ONE participant. Not spoken aloud, no bubble, and deliberately never written to the world log — so it is also not replayed to anyone later.", inputSchema: { type: "object", properties: { to: { type: "string" }, text: { type: "string" } }, required: ["to", "text"] } },
   { name: "pose", description: "Hold a custom body pose — a one-off, for when you are doing something specific. `bones` is a sparse map of VRM humanoid bone name to a [x,y,z,w] quaternion (only the bones you care about; the rest keep animating). Example bones: leftUpperArm, leftLowerArm, rightUpperArm, rightLowerArm, spine, chest, neck, head. Held until you `clear_pose` or move. Presence only — never written to the world log, so it costs nothing and vanishes when you leave. Pass `target` to pose SOMEONE ELSE (they decide whether to allow it).", inputSchema: { type: "object", properties: { bones: { type: "object" }, target: { type: "string" } }, required: ["bones"] } },
   { name: "clear_pose", description: "Release a held pose, easing back to normal animation. Pass `target` to release a pose you asked someone else to hold.", inputSchema: { type: "object", properties: { target: { type: "string" } } } },
@@ -224,11 +226,18 @@ class Session {
         author,
         timestamp: new Date().toISOString(),
         content: [{ type: "text", text: rendered }],
-        ...(opts?.tags ? { tags: opts.tags } : {}),
+        ...(opts?.tags?.length ? { tags: opts.tags } : {}),
         // Mention metadata — BOTH ecosystem dialects, because different host
         // layers read different keys: ConversationRouter reads `mentioned`;
         // recipe wake-policies (per discord-mcpl's adapter convention) match
         // `isExplicitMention`. Ask us how we know.
+        //
+        // TRANSITIONAL, and knowingly so. §16 exists to remove exactly this:
+        // per-producer boolean metadata that only one host knows how to read.
+        // The `tags` above are now the real classification; these two keys stay
+        // only until the hosts on this door route on tags, and are dropped the
+        // moment they do (issue #1 §3). They are dialect, never authority — a
+        // host is free to disbelieve both (§16.6).
         ...((opts?.mentioned || opts?.metadata)
           ? { metadata: { ...(opts?.metadata ?? {}), ...(opts?.mentioned ? { mentioned: true, isExplicitMention: true } : {}) } }
           : {}),
@@ -239,6 +248,27 @@ class Session {
     });
   }
 
+  /** Is this speaker an agent, a human, or unknown to the world? Feeds the
+   *  `chat:from-*` facet; see senderTag() for why unknown stays unlabelled. */
+  private speakerIsAgent(who: string): boolean | undefined {
+    return this.agent.people.get(who)?.agent;
+  }
+
+  /**
+   * Tags for one REPLAYED message (§16, issue #1 §1).
+   *
+   * These are the messages the replay filter already selected because they
+   * named this body, so their original addressing genuinely is `chat:mention`
+   * — that part was never wrong. What was missing is that they are history:
+   * `eidoverse:catchup` says so, and without it a reconnect delivering ten of
+   * them looks to a wake gate exactly like ten people addressing you at once.
+   * The producer tag lets a host debounce replay while leaving live mentions
+   * immediate; it never suppresses anything by itself (§16.6).
+   */
+  private catchupTags(who: string): string[] {
+    return tags(EIDO.catchup, CHAT.mention, CHAT.addressed, CHAT.group, senderTag(this.speakerIsAgent(who)));
+  }
+
   async serve() {
     await this.handshake();
     // the agent's own tuning of their ambient-activity sense, restored
@@ -247,37 +277,65 @@ class Session {
     await this.agent.connect();
 
     // world events → channel traffic (this is the push path — no host code)
+    //
+    // Every `tags:` below is DESCRIPTION (§16.6). Note that nothing here reads
+    // one: the door's own decisions — whether a closed channel mutes an event,
+    // whether a whisper gets through — are taken from the world event itself
+    // (`ev.kind`, `ev.mention`), never from the label attached afterwards. A
+    // tag must not gate anything, on either side of the wire.
     this.agent.onEvent = (ev) => {
+      // The sender facet, when the world knows which kind of body spoke.
+      const from = senderTag(this.speakerIsAgent(ev.who));
       if (ev.kind === "say") {
         if (!this.channelOpen && !ev.mention) return; // door closed: chatter stops, knocks get through
-        this.deliver(ev.text!, { id: ev.who, name: ev.who }, ev.mention ? { tags: ["mention"], mentioned: true } : undefined);
+        // Speech in a world is a room, so `chat:group` either way; the split is
+        // addressing. `"mention"` used to cover the addressed case and the
+        // other three cases below as well — one flat, un-namespaced flag doing
+        // the work of a vocabulary (§16.1 forbids the flag; issue #1 §1).
+        this.deliver(ev.text!, { id: ev.who, name: ev.who }, ev.mention
+          ? { tags: tags(CHAT.mention, CHAT.addressed, CHAT.group, from), mentioned: true }
+          : { tags: tags(CHAT.ambient, CHAT.group, from) });
       } else if (ev.kind === "whisper") {
         // A closed door does not stop a whisper — being addressed privately IS
         // the knock. Rendered with its privacy stated, because an agent that
         // can't tell a whisper from a shout will answer one as if it were the
         // other, in front of everyone.
+        //
+        // It is a DM, not a mention: nobody said this body's name, they simply
+        // spoke to it alone. §16.3's closure would reach `chat:addressed` and
+        // `chat:private` from `chat:dm` on its own; we emit them directly, as
+        // §16.3 recommends, so no host has to run it.
         this.deliver(`(whispers to you) ${ev.text}`, { id: ev.who, name: ev.who },
-          { tags: ["mention", "whisper"], mentioned: true });
+          { tags: tags(CHAT.dm, CHAT.private, CHAT.addressed, EIDO.whisper, from), mentioned: true });
       } else if (ev.kind === "act") {
         // embodied transitions — an emote, a pose struck or released, someone
-        // sitting down. Ambient by nature: a closed door mutes them.
-        if (this.channelOpen) this.deliver(`* ${ev.who} ${ev.text}`, { id: "world", name: this.agent.world });
+        // sitting down. Ambient by nature: a closed door mutes them. Narrated
+        // BY the world about someone, so no sender facet: the author is the
+        // world, and `chat:from-*` describes authorship.
+        if (this.channelOpen) this.deliver(`* ${ev.who} ${ev.text}`, { id: "world", name: this.agent.world },
+          { tags: tags(CHAT.ambient, EIDO.act) });
       } else if (ev.kind === "activity") {
         // The ambient-activity pulse: at most one per window, and ONLY while
-        // something is happening within ACTIVITY_RADIUS_M of this body. NOT a
-        // mention — hosts opt IN by matching the "activity" tag / metadata in
-        // their wake gates, which yields regular wakes exactly as long as
-        // there is life nearby (the stream stops when the area goes quiet).
-        // A closed door mutes it like any ambient signal.
+        // something is happening within this body's chosen radius. Overheard,
+        // never addressed — `chat:ambient` plus the producer tag that says
+        // which kind of ambient it is, so a host can throttle digests
+        // separately from overheard speech. A closed door mutes it like any
+        // ambient signal.
         if (this.channelOpen) this.deliver(`* ${ev.text}`, { id: "world", name: this.agent.world },
-          { tags: ["activity"], metadata: { activity: true } });
+          { tags: tags(CHAT.ambient, EIDO.activityDigest), metadata: { activity: true } });
       } else if (this.channelOpen) {
-        this.deliver(`* ${ev.who} ${ev.kind === "arrive" ? "arrived in the world" : "left the world"}`, { id: "world", name: this.agent.world });
+        this.deliver(`* ${ev.who} ${ev.kind === "arrive" ? "arrived in the world" : "left the world"}`, { id: "world", name: this.agent.world },
+          { tags: tags(CHAT.ambient, EIDO.presence) });
       }
     };
     this.agent.onPing = (p) => {
       if (p.kind === "approach") {
-        this.deliver(`* ${p.who} walked up to you`, { id: "world", name: this.agent.world }, { tags: ["mention"], mentioned: true });
+        // Someone walking up to you IS directed at you — but it is not chat,
+        // and it is certainly not a mention: nobody has said anything yet.
+        // `chat:addressed` + the producer tag carries that exactly, where
+        // `["mention"]` claimed words that were never spoken.
+        this.deliver(`* ${p.who} walked up to you`, { id: "world", name: this.agent.world },
+          { tags: tags(CHAT.addressed, EIDO.approach), mentioned: true });
       }
     };
 
@@ -311,10 +369,9 @@ class Session {
       const missedSeq = said.filter((m) => m.who !== this.auth.id && rxSeq.test(m.text));
       if (missedSeq.length) {
         this.deliver(`While you were away, ${missedSeq.length} message${missedSeq.length === 1 ? "" : "s"} mentioned you:`,
-          { id: "world", name: this.agent.world });
-        for (const m of missedSeq.slice(-10)) {
-          this.deliver(`${m.who}: ${m.text}`, { id: m.who, name: m.who }, { tags: ["mention"], mentioned: true });
-        }
+          { id: "world", name: this.agent.world }, { tags: tags(EIDO.catchup) });
+        for (const m of missedSeq.slice(-10)) this.deliver(`${m.who}: ${m.text}`, { id: m.who, name: m.who },
+          { tags: this.catchupTags(m.who), mentioned: true });
       }
     }
     const since = sinceSeq != null ? null : lastSeen[this.auth.id];
@@ -322,8 +379,10 @@ class Session {
       const rx = new RegExp(`(@${this.auth.id}\\b|\\b${this.auth.id}\\b)`, "i");
       const missed = this.agent.inbox.filter((m) => m.kind === "say" && m.ts > since && m.who !== this.auth.id && rx.test(m.text ?? ""));
       if (missed.length) {
-        this.deliver(`While you were away, ${missed.length} message${missed.length === 1 ? "" : "s"} mentioned you:`, { id: "world", name: this.agent.world });
-        for (const m of missed.slice(-10)) this.deliver(`${m.who}: ${m.text}`, { id: m.who, name: m.who }, { tags: ["mention"], mentioned: true });
+        this.deliver(`While you were away, ${missed.length} message${missed.length === 1 ? "" : "s"} mentioned you:`,
+          { id: "world", name: this.agent.world }, { tags: tags(EIDO.catchup) });
+        for (const m of missed.slice(-10)) this.deliver(`${m.who}: ${m.text}`, { id: m.who, name: m.who },
+          { tags: this.catchupTags(m.who), mentioned: true });
       }
     }
     lastSeen[this.auth.id] = Date.now();
@@ -349,6 +408,16 @@ class Session {
           if (msg.notification.method === method.CHANNELS_OUTGOING_CHUNK) {
             const cid = (msg.notification.params as { channelId?: string } | undefined)?.channelId;
             if (!cid || cid === this.channelId) this.agent.typing();
+          } else if (msg.notification.method === method.CHANNELS_PUBLISH) {
+            // §14.3 permits `channels/publish` as a Notification as well as a
+            // Request — the optional-ACK idiom. This loop used to test only for
+            // the streaming chunk and then `continue`, so a host that published
+            // without asking for an ack had the agent's speech silently dropped
+            // on the floor: nothing said in-world, and no error either
+            // (issue #1 §5). A Notification carries no id, so there is nothing
+            // to answer — do the work and stay quiet. The `delivered` flag the
+            // Request form returns simply has nowhere to go.
+            this.handlePublish(msg.notification.params as unknown as ChannelsPublishParams);
           }
           continue;
         }
@@ -375,7 +444,9 @@ class Session {
               const p = params as { channelId?: string; type?: string; address?: { world?: string }; history?: { limit: number } };
               const matches = p.channelId === this.channelId ||
                 (p.type === "world" && p.address?.world === this.agent.world);
-              if (!matches) { this.conn.sendError(req.id, -32004, `unknown channel: ${p.channelId ?? JSON.stringify(p.address)}`); break; }
+              // §14.6 / Appendix A: unknown channel is -32023. -32004 is not a
+              // code this protocol defines at all (issue #1 §4).
+              if (!matches) { this.conn.sendError(req.id, ERR_UNKNOWN_CHANNEL, `unknown channel: ${p.channelId ?? JSON.stringify(p.address)}`); break; }
               this.channelOpen = true;
               const limit = Math.min(Math.max(p.history?.limit ?? 0, 0), 100);
               const says = this.agent.inbox.filter((m) => m.kind === "say").slice(-limit);
@@ -396,7 +467,7 @@ class Session {
             }
             case method.CHANNELS_CLOSE: {
               const p = params as { channelId?: string };
-              if (p.channelId !== this.channelId) { this.conn.sendError(req.id, -32004, `unknown channel: ${p.channelId}`); break; }
+              if (p.channelId !== this.channelId) { this.conn.sendError(req.id, ERR_UNKNOWN_CHANNEL, `unknown channel: ${p.channelId}`); break; }
               // The agent shuts their door: ambient chatter stops; mentions
               // and walk-ups still get through (a knock is not chatter).
               this.channelOpen = false;
@@ -430,7 +501,16 @@ class Session {
     const initParams = msg.request.params as unknown as McplInitializeParams | undefined;
     const mcplRequested = initParams?.capabilities?.experimental?.mcpl !== undefined;
     this.mcplClient = mcplRequested;
-    const serverCaps: McplCapabilities = { version: "0.4", pushEvents: false, channels: true, rollback: false };
+    // §5.1 — the advertisement (this server's manifest) names capability LEAVES
+    // and declares its feature sets, including the tag ontology (§16.4).
+    //
+    // The cast is a dependency lag, not a shortcut: the pinned
+    // @animalabs/mcpl-core predates 0.5 and still types `channels` as a boolean
+    // and `featureSets` as an array of {name, …}. The shape emitted here is the
+    // spec's (§5.1, §6.1, Appendix B.2), and it is what the shipped host reads
+    // — agent-framework's FeatureSetManager accepts either representation
+    // (src/mcpl/feature-set-manager.ts:154-161).
+    const serverCaps = MCPL_ADVERTISEMENT as unknown as McplCapabilities;
     const capabilities: InitializeCapabilities = { tools: {}, ...(mcplRequested ? { experimental: { mcpl: serverCaps } } : {}) };
     const result: McplInitializeResult = {
       protocolVersion: "2024-11-05",
@@ -621,7 +701,7 @@ class Session {
         }
         return text(cur.pulseSec === 0
           ? `your activity sense is OFF — no ambient digests. Turn it back on with pulse_sec (10–3600s); radius stays ${cur.radiusM}m.`
-          : `your activity sense: one digest per ${cur.pulseSec}s while something happens within ${cur.radiusM}m of you — delivered on the world channel tagged "activity" (metadata {activity: true}), never a mention. Wake rules matching that tag give you regular wakes exactly as long as there is life nearby. Settings persist across your sessions.`);
+          : `your activity sense: one digest per ${cur.pulseSec}s while something happens within ${cur.radiusM}m of you — delivered on the world channel tagged "chat:ambient" + "eidoverse:activity-digest", overheard rather than addressed to you. Wake rules matching those tags give you regular wakes exactly as long as there is life nearby. Settings persist across your sessions.`);
       }
       case "catch_up": {
         const from = typeof a.since === "number" ? a.since : (this.caughtUpTo ?? -1);

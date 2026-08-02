@@ -19,7 +19,13 @@ type Entity = { id: string; lib: string; pos: number[]; yaw: number; actor: stri
   /** component bag (sockets, reactions, motion, …) — what a thing can DO;
    *  this is how affordances reach text-tier perception */
   comp?: Record<string, any> };
-type Person = { id: string; avatar: string; pose: Pose | null };
+/** `agent` is what the world says about this body: the sequencer forwards the
+ *  joiner's own `agent` flag on `arrive` and in the join snapshot's `present`
+ *  list (server/server.ts:1755-1759). It is self-asserted, so it is testimony,
+ *  and it feeds only the `chat:from-human` / `chat:from-agent` tag facet, which
+ *  authorizes nothing (MCPL SPEC §16.6). Absent ⇒ unknown, and unknown stays
+ *  unlabelled rather than guessed. */
+type Person = { id: string; avatar: string; pose: Pose | null; agent?: boolean };
 type InboxItem = { ts: number; kind: "say" | "arrive" | "leave" | "act"; who: string; text?: string; seq?: number | null };
 
 /** Folded world state back into the verbs that produced it. Must stay in step
@@ -274,7 +280,7 @@ export class WorldAgent {
               if (msg.restore.pose && msg.restore.clip !== "ragdoll") this.heldPose = msg.restore.pose;
             }
             this.restoredPose = true;
-            for (const p of msg.present) this.people.set(p.id, { id: p.id, avatar: p.avatar, pose: p.pose });
+            for (const p of msg.present) this.people.set(p.id, { id: p.id, avatar: p.avatar, pose: p.pose, ...(typeof p.agent === "boolean" ? { agent: p.agent } : {}) });
             // A join is now the folded world plus a tail, not the whole log.
             // An agent that only read `entries` would arrive in an empty room.
             const oldestTail = msg.entries.length
@@ -332,7 +338,7 @@ export class WorldAgent {
           case "arrive":
             // the people map is truth and updates NOW; the narration goes
             // through the gate, where a reconnect flap collapses to nothing
-            this.people.set(msg.id, { id: msg.id, avatar: msg.avatar, pose: null });
+            this.people.set(msg.id, { id: msg.id, avatar: msg.avatar, pose: null, ...(typeof msg.agent === "boolean" ? { agent: msg.agent } : {}) });
             this.gate.presence(msg.id, "arrive");
             break;
           case "leave":
