@@ -49,6 +49,41 @@ const GROUND_R = 0.06;      // keep joints just above the ground
 const ITER = 6;            // constraint relaxation passes per step
 const SETTLE_V = 0.06;     // speed below which we call it settled
 const SETTLE_FRAMES = 24;
+// Force the capture after this long even if the velocity test never fires.
+// The bend limits make some end states marginally stable — a body collapsed
+// straight down props into a slumped sit and micro-wobbles there — and the
+// contract is that a tumble always ENDS as a held pose; it must never stream
+// presence forever. Typical tumbles settle in 1-3s, so 8s only catches those.
+const SETTLE_DEADLINE_S = 8;
+
+// Joint motion limits — how far each joint may BEND, as the unsigned angle
+// between its two adjacent links, allowed to deviate from THIS avatar's rest
+// pose by [lo, hi] degrees (lo = toward straighter, hi = toward more folded).
+// Anchoring to the measured rest angle (not absolute angles) makes the table
+// skeleton-agnostic, the same trick RADIUS_FRAC uses for collision radii.
+//
+// Unsigned on purpose: a particle sim carries no bone frames, so it cannot
+// tell a knee's forward from its backward — a signed hinge would need the
+// rigid-body solver this deliberately isn't. Clamping the unsigned bend still
+// kills every grotesque fold: necks spun flat, elbows folded through the
+// torso, legs wrapped over the head. Tune here.
+const BEND_LIMITS = [
+  // a               b               c              lo    hi   (° from rest)
+  ['hips',           'spine',         'chest',       20,   25],  // lower spine: stiff
+  ['spine',          'chest',         'neck',        20,   25],
+  ['chest',          'neck',          'head',        35,   45],  // neck: floppier
+  // shoulder hi must clear ~90° — that is just an arm HANGING from a T-pose
+  // rest; a boundary there leaves gravity and the clamp contesting the arm
+  // every frame, and the fight never settles
+  ['chest',          'leftUpperArm',  'leftLowerArm', 80, 120],  // shoulder: mobile
+  ['chest',          'rightUpperArm', 'rightLowerArm',80, 120],
+  ['leftUpperArm',   'leftLowerArm',  'leftHand',    10,  140],  // elbow: no hyperextension
+  ['rightUpperArm',  'rightLowerArm', 'rightHand',   10,  140],
+  ['hips',           'leftUpperLeg',  'leftLowerLeg', 40,  70],  // hip
+  ['hips',           'rightUpperLeg', 'rightLowerLeg',40,  70],
+  ['leftUpperLeg',   'leftLowerLeg',  'leftFoot',    10,  140],  // knee
+  ['rightUpperLeg',  'rightLowerLeg', 'rightFoot',   10,  140],
+];
 
 // Self-collision radii, as fractions of the torso radius. The torso radius
 // itself is MEASURED from the body (shoulder/hip span) so this scales to any
@@ -120,6 +155,7 @@ export class Ragdoll {
   constructor(avatar, impulse = null) {
     this.avatar = avatar;
     this.settledFor = 0;
+    this.elapsed = 0;
     this.done = false;
     const h = avatar.vrm.humanoid;
 
@@ -142,6 +178,20 @@ export class Ragdoll {
     // rest length of each link
     this.links = LINKS.filter(([a, b]) => this.p[a] && this.p[b])
       .map(([a, b]) => ({ a, b, len: this.p[a].distanceTo(this.p[b]) }));
+
+    // joint motion limits, resolved against THIS skeleton's rest angles
+    this.bends = [];
+    for (const [a, b, c, lo, hi] of BEND_LIMITS) {
+      if (!this.p[a] || !this.p[b] || !this.p[c]) continue;
+      _a.copy(this.p[b]).sub(this.p[a]).normalize();
+      _b.copy(this.p[c]).sub(this.p[b]).normalize();
+      const rest = Math.acos(THREE.MathUtils.clamp(_a.dot(_b), -1, 1));
+      this.bends.push({
+        a, b, c,
+        min: Math.max(0, rest - lo * Math.PI / 180),
+        max: Math.min(Math.PI, rest + hi * Math.PI / 180),
+      });
+    }
 
     // self-collision: bone-sized joint spheres that keep the body from folding
     // through itself. Radii measured from THIS skeleton.
@@ -233,6 +283,56 @@ export class Ragdoll {
           this.prev[j].z += (p.z - this.prev[j].z) * 0.3;
         }
       }
+      // ---- joint motion limits: clamp each joint's bend to its anatomical
+      // range (BEND_LIMITS, resolved to angles at construction). When a joint
+      // exceeds its range, swing the DISTAL link back toward range in the
+      // plane the two links span — distal only, because BEND_LIMITS is
+      // ordered proximal→distal, so no clamp ever moves a particle an earlier
+      // triple measured: the sweep is feed-forward. (Splitting the correction
+      // across both ends reads gentler but lets the shoulder/hip clamps yank
+      // the chest/hips back out of the spine's range — measured 16–22° torso
+      // overshoot on a hard pancake.) Runs LAST in each pass so angles get
+      // the final word over ground impact, which is what jackknifes the
+      // torso; a clamp can re-sink a joint slightly, but GROUND_R's cushion
+      // absorbs it.
+      for (const { a, b, c, min, max } of this.bends) {
+        const pa = this.p[a], pb = this.p[b], pc = this.p[c];
+        _a.copy(pb).sub(pa); const la = _a.length();
+        _b.copy(pc).sub(pb); const lb = _b.length();
+        if (la < 1e-4 || lb < 1e-4) continue;
+        _a.divideScalar(la); _b.divideScalar(lb);
+        const ang = Math.acos(THREE.MathUtils.clamp(_a.dot(_b), -1, 1));
+        const target = ang < min ? min : ang > max ? max : ang;
+        if (target === ang) continue;
+        // rotation axis: the bend plane's normal. Rotating dir2 by +δ about it
+        // opens the angle. Parallel links span no plane — pick any ⟂ axis.
+        _v.crossVectors(_a, _b);
+        if (_v.lengthSq() < 1e-8) {
+          _v.set(0, 1, 0).cross(_a);
+          if (_v.lengthSq() < 1e-8) _v.set(1, 0, 0).cross(_a);
+        }
+        _v.normalize();
+        // SOFT correction — 50% of the excess per pass, measured best across
+        // an impulse sweep (tools/rag-param-study.mjs): most tumbles settle
+        // naturally, the CAPTURED pose lands within ~4° of range, nothing
+        // diverges. The two rejected shapes, so nobody re-tries them: an
+        // EXACT snap teleports a hard-overshot limb across the body in one
+        // pass and the length constraints convert that into velocity (two
+        // launch impulses diverged to astronomic stretch); a fixed per-pass
+        // ANGLE CAP starves the correction whenever another constraint
+        // contests the joint, and violations grow past 70° while it crawls.
+        // Multiplicative yield does neither: big violations correct fast
+        // (0.5^ITER per frame), contested joints just lean on the limit.
+        _qd.setFromAxisAngle(_v, (target - ang) * 0.5);
+        _b.applyQuaternion(_qd);
+        _a.copy(pc);                               // old position
+        pc.copy(pb).addScaledVector(_b, lb);
+        // carry the correction into prev too — same rule as the prop push
+        // above: a positional snap must not read as velocity, or the clamp
+        // pumps energy every frame and the body twitches forever instead of
+        // settling (measured: settle never fires, 0.7 m/s limit cycle).
+        this.prev[c].add(_a.sub(pc).negate());
+      }
     }
 
     // ---- root follows the hips so the body lies where it fell
@@ -263,8 +363,9 @@ export class Ragdoll {
     this.avatar.setPose(pose);
 
     // ---- settle detection: hand off to a captured held pose and stop
+    this.elapsed += dt;
     this.settledFor = maxV < SETTLE_V ? this.settledFor + 1 : 0;
-    if (this.settledFor >= SETTLE_FRAMES) {
+    if (this.settledFor >= SETTLE_FRAMES || this.elapsed >= SETTLE_DEADLINE_S) {
       this.done = true;
       this.finalPose = pose;
     }
