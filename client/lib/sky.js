@@ -17,7 +17,7 @@ import { THREE, scene, sun, hemi, renderer, camera, report, bus } from './core.j
 import { loadEidoModule, primeFiles, listLibrary, fetchBytes } from './assets.js';
 import { markPhase, whenBooted } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake } from './sky_baked.js';
-import { holdFrames, holdObjectCompiles } from './loadwork.js';
+import { holdFrames, holdObjectCompiles, beginWork } from './loadwork.js';
 
 // ---------------------------------------------------------------- state
 
@@ -211,7 +211,10 @@ async function renderOnce() {
       // whole scene through compileAsync (slices yield, input stays live),
       // resume warm. Rebakes and slider previews don't build → don't hold.
       if (skyBuilds !== buildsBefore) {
-        await holdFrames(renderer.compileAsync(scene, camera).catch(() => {}), 4000);
+        const settle = beginWork('sky settle'); // the whole-scene recompile behind the held beat
+        try {
+          await holdFrames(renderer.compileAsync(scene, camera).catch(() => {}), 4000);
+        } finally { settle.end(); }
       }
       return;
     } catch (e) {
@@ -338,11 +341,13 @@ async function renderEidoverse(a) {
     await building.catch(() => {});   // whoever is already building wins
   }
   if (!skyApi || currentWorld !== world) {
-    building = buildSky(a, world, wantAudio);
+    const work = beginWork('sky build'); // names the module-eval + system-construction frame gaps
+    building = buildSky(a, world, wantAudio).finally(() => work.end());
     try { await building; } finally { building = null; }
   }
   applyLive(a);
-  await ensureSkyBake();
+  const bake = beginWork('sky bake');    // names the env-bake + reflections gaps
+  try { await ensureSkyBake(); } finally { bake.end(); }
 }
 
 async function buildSky(a, world, wantAudio) {

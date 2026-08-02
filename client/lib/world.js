@@ -7,6 +7,7 @@
 
 import { THREE, scene, camera, renderer, report, bus } from './core.js';
 import { loadGLB, loadEidoModule, noiseTexture, loadTrack, loadDone, libLabels } from './assets.js';
+import { beginWork } from './loadwork.js';
 import { fitCollider, removeCollider, reindexCollider, refitCollider } from './colliders.js';
 import { setTerrain, setGrass, clearGrass, heightAt } from './terrain.js';
 import { groomGrass } from './grass_groom.js';
@@ -58,7 +59,13 @@ function enqueueWorldBuild(what, fn) {
   if (GATING.has(what)) gatingDepth++;
   bus.emit('build-queue', { depth: buildDepth, what });
   worldBuild = worldBuild
-    .then(() => { loadTrack(`build:${what}`, `growing ${what}`); return fn(); })
+    .then(() => {
+      loadTrack(`build:${what}`, `growing ${what}`);
+      // a work record too — terrain/grass builds were the biggest UNNAMED
+      // frame gaps in the first Safari beacon (2.4s "(unattributed)")
+      const work = beginWork(`build ${what}`);
+      return Promise.resolve(fn()).finally(() => work.end());
+    })
     .catch((e) => report(`world build (${what})`, e))
     .finally(() => {
       loadDone(`build:${what}`);

@@ -417,22 +417,41 @@ function foldEntry(st: WorldState, e: LogEntry): void {
 // (lesson of the 4f82250 crash loop — a ws handler must never leak a throw).
 
 function reactToUse(w: World, cause: LogEntry): void {
+  const a = cause.args as Record<string, unknown>;
+  const id = String(a?.id ?? "");
+  const action = String(a?.action ?? "use");
   try {
-    const a = cause.args as Record<string, unknown>;
-    const ent = w.state.entities[String(a?.id ?? "")];
-    const rx = (ent?.comp?.reactions as Record<string, any> | undefined)
-      ?.[String(a?.action ?? "use")];
-    if (!rx) return;
+    const ent = w.state.entities[id];
+    if (!ent) {
+      w.debug("reaction-skip", { entity: id, action, by: cause.actor, why: "no such entity" });
+      return;
+    }
+    const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
+    if (!rx) {
+      w.debug("reaction-skip", { entity: id, action, by: cause.actor,
+        why: ent.comp?.reactions ? `no reaction for "${action}" (has: ${Object.keys(ent.comp.reactions as object).join(", ")})`
+          : "entity has no reactions component" });
+      return;
+    }
     if (rx.impulse != null) {
-      const m = (ent!.comp?.motion as Record<string, unknown>) ?? {};
-      if (m.type != null && m.type !== "pendulum") return;   // impulses push pendulums (so far)
+      const m = (ent.comp?.motion as Record<string, unknown>) ?? {};
+      if (m.type != null && m.type !== "pendulum") {   // impulses push pendulums (so far)
+        w.debug("reaction-skip", { entity: id, action, by: cause.actor,
+          why: `impulse needs a pendulum motion, found "${m.type}"` });
+        return;
+      }
       const next = pendulumImpulse(m, Number(rx.impulse), cause.ts);
       const entry = w.append("world", "motion",
         { id: a.id, ...next, cause: cause.seq, by: cause.actor });
       w.broadcast({ type: "log", entry });
+      w.debug("reaction", { entity: id, action, by: cause.actor, cause: cause.seq, effect: entry.seq });
+      return;
     }
+    w.debug("reaction-skip", { entity: id, action, by: cause.actor,
+      why: `reaction has no effect this server knows (${Object.keys(rx).join(", ")})` });
   } catch (err) {
     console.error(`[world:${w.name}] reaction failed (never fatal)`, err);
+    w.debug("reaction-error", { entity: id, action, by: cause.actor, error: String(err) });
   }
 }
 
@@ -571,6 +590,19 @@ class World {
    *  N×M×15Hz individual sends (24×200 would be 72k msgs/s); it's one frame
    *  per world per tick, fanned out once. */
   dirty = new Map<string, unknown>();
+  /** The runtime's flight recorder — the "why didn't it work" surface.
+   *
+   *  The world log holds what HAPPENED; this ring holds what DIDN'T and why:
+   *  denied verbs, rejected shapes, rate limits, reactions that fired /
+   *  skipped / failed. In-memory only, capped, never persisted — it is
+   *  diagnosis, not history. Readable by anyone in the world (ws `debug`,
+   *  `/debug` in the client, `world_debug` over MCPL): the log is public, so
+   *  the reasons things bounced off it are public too. */
+  debugLog: Record<string, unknown>[] = [];
+  debug(kind: string, detail: Record<string, unknown>): void {
+    this.debugLog.push({ ts: Date.now(), kind, ...detail });
+    if (this.debugLog.length > 300) this.debugLog.splice(0, this.debugLog.length - 300);
+  }
   frameSeq = 0;
   recPath: string | null = null; // frames archive, created lazily on first recorded frame
   lastRoster = "";               // last written roster line — deltas only
@@ -1194,6 +1226,24 @@ const server = Bun.serve({
         headers: { "content-type": "image/png", "cache-control": "public, max-age=3600" },
       });
     }
+    if (url.pathname === "/perflog" && req.method === "POST") {
+      // Load-performance beacon (client/lib/loadwork.js): jank + load lines
+      // from real visits, because Safari's console is unreachable and most
+      // visitors never open one. Append-only JSONL beside the worlds, capped —
+      // diagnosis data, not surveillance; it holds only timing lines and a UA.
+      try {
+        const body = await req.text();
+        if (body.length < 100_000) {
+          const dest = join(WORLDS_DIR, ".perflogs.jsonl");
+          const big = existsSync(dest) && Bun.file(dest).size > 5_000_000;
+          if (!big) {
+            const ip = req.headers.get("x-real-ip") ?? srv.requestIP(req)?.address ?? "?";
+            appendFileSync(dest, JSON.stringify({ ts: Date.now(), ip, ...JSON.parse(body) }) + "\n");
+          }
+        }
+      } catch { /* malformed beacon: drop */ }
+      return new Response("ok");
+    }
     if (url.pathname === "/thumb" && req.method === "POST") {
       if (JOIN_TOKEN && url.searchParams.get("token") !== JOIN_TOKEN)
         return new Response("token required", { status: 401 });
@@ -1579,12 +1629,14 @@ const server = Bun.serve({
           }
           if (now - c.verbWin > 4000) { c.verbWin = now; c.verbCount = 0; }
           if (++c.verbCount > VERB_RATE) {
+            if (c.verbCount === VERB_RATE + 1) c.world.debug("rate-limit", { who: c.id });
             ws.send(JSON.stringify({ type: "error", error: "slow down — verb rate limit" }));
             return;
           }
           // verb allow-list + per-world rights (see the permissions block).
           const needs = VERB_NEEDS[msg.verb as string];
           if (!needs) {
+            c.world.debug("denied", { who: c.id, verb: String(msg.verb), why: "verb not allowed" });
             ws.send(JSON.stringify({ type: "error", error: `verb not allowed: ${msg.verb}` }));
             return;
           }
@@ -1599,6 +1651,7 @@ const server = Bun.serve({
             const why = needs.gen && ROLE_RANK[rights.role] >= needs.rank
               ? "bringing new assets into this world needs the gen capability — ask its owner"
               : `"${msg.verb}" needs ${needs.rank >= 2 ? "the world's owner" : "builder rights"} here — you are a ${rights.role}`;
+            c.world.debug("denied", { who: c.id, verb: String(msg.verb), why });
             ws.send(JSON.stringify({ type: "error", error: why }));
             return;
           }
@@ -1625,11 +1678,13 @@ const server = Bun.serve({
             const id = String(args.id ?? "").slice(0, 64);
             const type = String(args.type ?? "").slice(0, 32);
             if (!id || !type) {
+              c.world.debug("rejected", { who: c.id, verb: "comp", why: "malformed — wants {id, type, data|null}" });
               ws.send(JSON.stringify({ type: "error", error: "comp wants {id, type, data|null}" }));
               return;
             }
             if (args.data !== undefined && args.data !== null
               && JSON.stringify(args.data).length > 8192) {
+              c.world.debug("rejected", { who: c.id, verb: "comp", why: `data too large (8KB max) on ${id}.${type}` });
               ws.send(JSON.stringify({ type: "error", error: "component data too large (8KB max) — put big things in /upload and reference the path" }));
               return;
             }
@@ -1639,6 +1694,8 @@ const server = Bun.serve({
             const id = String(args.id ?? "").slice(0, 64);
             const to = String(args.to ?? "").slice(0, 64);
             if (!id || !to || id === to || !c.world.state.entities[to]) {
+              c.world.debug("rejected", { who: c.id, verb: "mount",
+                why: !c.world.state.entities[to] ? `no entity "${to}" to mount onto` : "malformed mount" });
               ws.send(JSON.stringify({ type: "error", error: "mount wants {id, to: <existing entity>, slot?, offset?, yaw?}" }));
               return;
             }
@@ -1709,6 +1766,20 @@ const server = Bun.serve({
             verbs: Array.isArray(msg.verbs) && msg.verbs.length ? new Set(msg.verbs.map(String)) : null,
           });
           ws.send(JSON.stringify({ type: "history", reqId: msg.reqId ?? null, ...r }));
+          break;
+        }
+        case "debug": {
+          // The flight recorder (World.debugLog): why things bounced —
+          // denials, rejections, rate limits, reaction outcomes. Open to
+          // spectators for the same reason history is: the log is public,
+          // so the reasons things failed to reach it are public too.
+          if (!c.world) return;
+          const limit = Math.min(300, Math.max(1, Number(msg.limit ?? 50)));
+          const kinds = Array.isArray(msg.kinds) && msg.kinds.length ? new Set(msg.kinds.map(String)) : null;
+          const events = c.world.debugLog
+            .filter((e) => !kinds || kinds.has(String(e.kind)))
+            .slice(-limit);
+          ws.send(JSON.stringify({ type: "debug", reqId: msg.reqId ?? null, events }));
           break;
         }
         case "whisper": {

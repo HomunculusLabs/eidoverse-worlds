@@ -48,6 +48,10 @@ bus.on('booted', () => { budgetMs = 6; });
 
 const active = new Set(); // in-flight records, for long-task attribution
 const LOG_THRESHOLD_MS = 120;
+// Mirrors of the console lines, reachable from automation (Safari's console
+// can't be read over WebDriver) and from a quick `__loadJank` in any console.
+const loadLog = (globalThis.__loadLog = []);
+const jankLog = (globalThis.__loadJank = []);
 
 /** Start a labelled piece of load work. Returns a record:
  *    phase(name)  — enter a named phase (closes the previous one)
@@ -100,7 +104,9 @@ export function beginWork(label) {
         .filter(([, ms]) => ms >= 1)
         .map(([n, ms]) => `${n} ${Math.round(ms)}ms`)
         .join(' · ');
-      console.log(`[load] ${label}: ${parts} — ${Math.round(total)}ms over ${frames + 1} frame(s)`);
+      const line = `${label}: ${parts} — ${Math.round(total)}ms over ${frames + 1} frame(s)`;
+      console.log(`[load] ${line}`);
+      if (loadLog.length < 300) loadLog.push(line); // reachable without a console (webdriver, evals)
     },
   };
   active.add(rec);
@@ -228,10 +234,37 @@ try {
 // Frame-gap watchdog — Safari has no longtask observer, so frame gaps are the
 // portable truth about felt freezes. Anything that holds a frame >150ms logs
 // with the same attribution. (framesHeld beats are deliberate and skipped.)
+// ---- perf beacon ------------------------------------------------------------
+// Safari's console can't be read over WebDriver and most visitors never open
+// one — so the profile phones home instead: one small POST per session at
+// 40s (the load window) and one at 120s (the Safari compile tail), to the
+// sequencer's /perflog. That is how WebKit performance gets diagnosed from
+// real visits instead of asked-for console screenshots.
+function postPerf(mark) {
+  try {
+    fetch('/perflog', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        mark,
+        ua: navigator.userAgent.slice(0, 160),
+        boot: globalThis.__bootMarks ?? null,
+        jank: jankLog.slice(0, 100),
+        load: loadLog.slice(0, 200),
+      }),
+    }).catch(() => {});
+  } catch { /* never let telemetry hurt the world */ }
+}
+bus.on('booted', (m) => { globalThis.__bootMarks = m; });
+setTimeout(() => postPerf('40s'), 40_000);
+setTimeout(() => postPerf('120s'), 120_000);
+
 let lastFrameAt = 0;
 requestAnimationFrame(function gapWatch(t) {
   if (lastFrameAt && t - lastFrameAt > 150 && !document.hidden && !framesHeld()) {
-    console.warn(`[jank] ${Math.round(t - lastFrameAt)}ms frame gap during: ${activeLabels() || '(unattributed)'}`);
+    const line = `${Math.round(t - lastFrameAt)}ms frame gap during: ${activeLabels() || '(unattributed)'}`;
+    console.warn(`[jank] ${line}`);
+    if (jankLog.length < 200) jankLog.push(line);
   }
   lastFrameAt = t;
   requestAnimationFrame(gapWatch);
