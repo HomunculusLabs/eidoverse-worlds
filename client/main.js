@@ -115,7 +115,7 @@ initDock([
   { id: 'emotes', label: '👋' },
   { id: 'debug', label: '🐞' },
 ]);
-initDebug({ ragdoll: () => ragdoll, fps: () => fps });
+initDebug({ ragdoll: () => ragdoll, downed: () => downed, fps: () => fps });
 
 // Verified identity resolves BEFORE anything reads CONFIG.name — otherwise the
 // door panel and the local nameplate greet a stale localStorage name while the

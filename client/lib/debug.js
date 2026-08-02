@@ -16,6 +16,7 @@
 import { THREE, scene } from './core.js';
 import { MeshBVHHelper } from 'three-mesh-bvh';
 import { colliders } from './colliders.js';
+import { closestParams } from './ragdoll.js';
 import { makeFrame } from './frames.js';
 
 // box = an OBB, walkable on top, solid on the sides between min.y and max.y
@@ -24,30 +25,42 @@ import { makeFrame } from './frames.js';
 // exact  = collides against its actual triangles; a box would be a lie, so the
 //          BVH is drawn instead
 const KIND_COLOR = { box: 0x4fd8ff, pillar: 0xffb347, exact: 0x8fe8c8 };
-const RAG_COLOR = { joint: 0xff8fb0, bone: 0xffd166 };
+const RAG_COLOR = { joint: 0xff8fb0, bone: 0xffd166, hit: 0xff3b3b };
 
 const _c = new THREE.Vector3();
+const _ca = new THREE.Vector3();
+const _cb = new THREE.Vector3();
+const _dir = new THREE.Vector3();
 const _q = new THREE.Quaternion();
+const _m = new THREE.Matrix4();
+const _pr = { s: 0, t: 0 };
 const _up = new THREE.Vector3(0, 1, 0);
+const _Y = new THREE.Vector3(0, 1, 0);   // CapsuleGeometry's own axis
 
-let frame = null, providers = {}, statsEl = null, statsAt = 0, lastRun = null;
+let frame = null, providers = {}, statsEl = null, statsAt = 0, lastRun = null, lastRag = null;
 const on = { colliders: false, ragdoll: false };
 
 // ---- shared geometry/material, so N colliders cost N transforms ------------
 let unitBox = null, unitBall = null;
 const lineMats = new Map();
+// depthTest OFF: a debug overlay that the world can hide is not much of a
+// debug overlay. The capsules live INSIDE the avatar mesh — that is the entire
+// point of them — so depth-testing them against it drew the collision volume
+// only where it poked out through the skin, which is exactly where it does not
+// matter. Same for a collider box behind furniture.
 const lineMat = (color) => {
   if (!lineMats.has(color)) {
     lineMats.set(color, new THREE.LineBasicMaterial({
-      color, transparent: true, opacity: 0.85, depthWrite: false,
+      color, transparent: true, opacity: 0.9, depthWrite: false, depthTest: false,
     }));
   }
   return lineMats.get(color);
 };
+const onTop = (o) => { o.renderOrder = 999; o.frustumCulled = false; return o; };
 
 let collGroup = null, ragGroup = null;
 const collViews = new Map();   // entity id -> { kind, node }
-let ragJoints = null, ragBones = null;
+let ragJoints = null, ragCaps = null;
 
 function ensureGroups() {
   if (!unitBox) unitBox = new THREE.EdgesGeometry(new THREE.BoxGeometry(1, 1, 1));
@@ -98,9 +111,10 @@ function syncColliders() {
     let view = collViews.get(id);
     if (!view || view.kind !== kind) {
       if (view) collGroup.remove(view.node);
-      const node = kind === 'exact'
+      const node = onTop(kind === 'exact'
         ? exactView(e)
-        : new THREE.LineSegments(unitBox, lineMat(KIND_COLOR[kind]));
+        : new THREE.LineSegments(unitBox, lineMat(KIND_COLOR[kind])));
+      node.traverse?.((o) => { o.renderOrder = 999; });
       collGroup.add(node);
       view = { kind, node };
       collViews.set(id, view);
@@ -140,40 +154,75 @@ function syncColliders() {
 // not the model anyone believed it had (bones were beads, and limbs passed
 // clean through the torso on all 14 rigs).
 
+/** Real capsules, not centre lines. A bone's radius and its length never
+ *  change once a tumble starts — the solver holds the length with a distance
+ *  constraint and the radius is measured off the rig at construction — so each
+ *  capsule's geometry is built ONCE and thereafter only moved. Drawing the
+ *  axis instead was showing the one thing that was never in doubt and hiding
+ *  the thing that matters: the thickness is what stops a forearm from passing
+ *  through a torso, and you cannot see interpenetration in a line. */
+function buildCapsules(rd) {
+  disposeCapsules();
+  const items = [];
+  for (const c of rd.caps ?? []) {
+    const len = rd.p[c.a].distanceTo(rd.p[c.b]);
+    // CapsuleGeometry's `length` is the CYLINDER, with hemispheres added on
+    // top — so a cylinder of |ab| puts the cap centres exactly on the joints,
+    // which is the volume the solver tests.
+    const mesh = onTop(new THREE.LineSegments(
+      new THREE.WireframeGeometry(new THREE.CapsuleGeometry(c.r, len, 2, 8)),
+      lineMat(RAG_COLOR.bone)));
+    ragGroup.add(mesh);
+    items.push({ mesh, cap: c });
+  }
+  ragCaps = { rd, items, byCap: new Map(items.map((it) => [it.cap, it])) };
+}
+function disposeCapsules() {
+  for (const it of ragCaps?.items ?? []) { ragGroup?.remove(it.mesh); it.mesh.geometry.dispose(); }
+  ragCaps = null;
+}
+
 function syncRagdoll(rd) {
+  // ---- joint spheres, at the radius the GROUND and props are tested against
+  // (which is per-joint, and not the same number as a bone's radius)
   const joints = Object.keys(rd.p);
   if (!ragJoints || ragJoints.count !== joints.length) {
     if (ragJoints) ragGroup.remove(ragJoints.mesh);
-    const mesh = new THREE.InstancedMesh(
-      unitBall, lineMat(RAG_COLOR.joint), joints.length);
-    mesh.frustumCulled = false;
+    const mesh = onTop(new THREE.InstancedMesh(unitBall, lineMat(RAG_COLOR.joint), joints.length));
     ragGroup.add(mesh);
     ragJoints = { mesh, count: joints.length };
   }
-  const m = new THREE.Matrix4();
   joints.forEach((j, i) => {
     const r = rd.radius?.[j] ?? 0.04;
-    m.compose(rd.p[j], _q.identity(), _c.set(r, r, r));
-    ragJoints.mesh.setMatrixAt(i, m);
+    _m.compose(rd.p[j], _q.identity(), _c.set(r, r, r));
+    ragJoints.mesh.setMatrixAt(i, _m);
   });
   ragJoints.mesh.instanceMatrix.needsUpdate = true;
 
-  const caps = rd.caps ?? [];
-  if (!ragBones || ragBones.count !== caps.length) {
-    if (ragBones) ragGroup.remove(ragBones.line);
-    const g = new THREE.BufferGeometry();
-    g.setAttribute('position', new THREE.BufferAttribute(new Float32Array(caps.length * 6), 3));
-    const line = new THREE.LineSegments(g, lineMat(RAG_COLOR.bone));
-    line.frustumCulled = false;
-    ragGroup.add(line);
-    ragBones = { line, count: caps.length };
+  // ---- bone capsules
+  if (ragCaps?.rd !== rd) buildCapsules(rd);
+  for (const it of ragCaps.items) {
+    const pa = rd.p[it.cap.a], pb = rd.p[it.cap.b];
+    _dir.copy(pb).sub(pa);
+    const len = _dir.length() || 1e-6;
+    it.mesh.position.copy(pa).addScaledVector(_dir, 0.5);
+    it.mesh.quaternion.setFromUnitVectors(_Y, _dir.divideScalar(len));
+    it.hit = false;
   }
-  const pos = ragBones.line.geometry.getAttribute('position');
-  caps.forEach((c, i) => {
-    pos.setXYZ(i * 2, rd.p[c.a].x, rd.p[c.a].y, rd.p[c.a].z);
-    pos.setXYZ(i * 2 + 1, rd.p[c.b].x, rd.p[c.b].y, rd.p[c.b].z);
-  });
-  pos.needsUpdate = true;
+  // ---- and which of them are currently INSIDE each other, which is the whole
+  // question the capsule model exists to answer
+  for (const { A, B, min } of rd.pairs ?? []) {
+    closestParams(rd.p[A.a], rd.p[A.b], rd.p[B.a], rd.p[B.b], _pr);
+    _ca.copy(rd.p[A.a]).lerp(rd.p[A.b], _pr.s);
+    _cb.copy(rd.p[B.a]).lerp(rd.p[B.b], _pr.t);
+    if (_ca.distanceTo(_cb) >= min) continue;
+    const ia = ragCaps.byCap.get(A), ib = ragCaps.byCap.get(B);
+    if (ia) ia.hit = true;
+    if (ib) ib.hit = true;
+  }
+  for (const it of ragCaps.items) {
+    it.mesh.material = lineMat(it.hit ? RAG_COLOR.hit : RAG_COLOR.bone);
+  }
 }
 
 // ---- panel -----------------------------------------------------------------
@@ -191,8 +240,8 @@ function row(label, key, onChange) {
   return wrap;
 }
 
-/** @param p { ragdoll(), fps(), world() } — passed in rather than imported, so
- *  this module stays a leaf and never draws main.js into a cycle. */
+/** @param p { ragdoll(), downed(), fps() } — passed in rather than imported,
+ *  so this module stays a leaf and never draws main.js into a cycle. */
 export function initDebug(p = {}) {
   providers = p;
   frame = makeFrame('debug', {
@@ -220,7 +269,7 @@ function clearColliders() {
 }
 function clearRagdoll() {
   if (ragJoints) { ragGroup?.remove(ragJoints.mesh); ragJoints = null; }
-  if (ragBones) { ragGroup?.remove(ragBones.line); ragBones = null; }
+  disposeCapsules();
 }
 
 const fmt = (n, d = 2) => (Number.isFinite(n) ? n.toFixed(d) : '--');
@@ -237,7 +286,13 @@ export function updateDebug(now = performance.now()) {
 
   if (on.colliders) syncColliders();
 
-  const rd = providers.ragdoll?.();
+  // The settled pose is the one worth inspecting, and it is exactly the moment
+  // main.js drops its ragdoll reference — so hold the last skeleton for as long
+  // as the body is still down, and only clear it when they get up.
+  const live = providers.ragdoll?.();
+  if (live?.p) lastRag = live;
+  if (!providers.downed?.()) lastRag = null;
+  const rd = lastRag;
   if (on.ragdoll && rd?.p) syncRagdoll(rd); else if (!rd) clearRagdoll();
 
   if (now - statsAt < 200) return;      // the panel is for reading, not for fps

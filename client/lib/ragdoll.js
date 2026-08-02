@@ -231,7 +231,7 @@ const _pr = { s: 0, t: 0 };
 /** Closest points between two segments, as parameters along each. The classic
  *  clamped-parametric solve; degenerate (zero-length) segments fall back to an
  *  endpoint rather than dividing by zero. */
-function closestParams(p1, q1, p2, q2, out) {
+export function closestParams(p1, q1, p2, q2, out) {
   _a.copy(q1).sub(p1); _b.copy(q2).sub(p2); _c.copy(p1).sub(p2);
   const A = _a.dot(_a), E = _b.dot(_b), F = _b.dot(_c);
   let s, t;
