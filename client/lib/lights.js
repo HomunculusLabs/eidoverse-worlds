@@ -17,7 +17,7 @@
 
 import { THREE, scene, renderer, camera } from './core.js';
 import { lampCount } from './sky.js';
-import { serialize } from './loadwork.js';
+import { enqueue } from './loadwork.js';
 
 // Total point lights the scene may cast, across placed lights AND emissive
 // lamps. Conservative on purpose; a re-measure (not a guess) can raise it.
@@ -66,9 +66,8 @@ export function makeLight({ color = 0xffd9a0, intensity = 16, range = 10 } = {})
     group.userData.pointLight = pl;
     casters.add(group);
     // pre-warm the scene-wide recompile OFF the click, the way spawns do —
-    // and through the same one-at-a-time queue, so a new light's lightsNode
-    // rebuild can't stack its frames onto a body that is mid-parse
-    serialize(() => renderer.compileAsync(scene, camera).catch(() => {}));
+    // gpu lane, lowest priority: relighting never outranks a person arriving
+    enqueue(() => renderer.compileAsync(scene, camera).catch(() => {}), { lane: 'gpu', priority: 0 });
   } else {
     noBudget();
   }

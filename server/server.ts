@@ -88,6 +88,42 @@ try {
   }
 } catch (e) { console.log(`[auth] session restore failed (starting empty): ${e}`); }
 
+// ---- global bans ------------------------------------------------------------
+// Per-world bans live in each world's log (the `ban` verb — event-sourced,
+// auditable, fork-copied, like roles). There is no global log, so the
+// instance-wide list is a JSON file INSIDE WORLDS_DIR (not ROOT): bans are
+// world data, and a dev sequencer pointed at a scratch WORLDS_DIR must get a
+// scratch ban list too — same doctrine as the logs themselves. Keyed by
+// lowercased display id, carrying the durable principal `sub` when it was
+// known at ban time (a name is evadable by /name; a sub is not).
+type BanRec = { by: string; ts: number; reason?: string; sub?: string };
+const BANS_FILE = join(WORLDS_DIR, ".bans.json");
+const globalBans: Record<string, BanRec> = {};
+function saveGlobalBans() {
+  try {
+    writeFileSync(`${BANS_FILE}.tmp`, JSON.stringify(globalBans, null, 2), { mode: 0o600 });
+    renameSync(`${BANS_FILE}.tmp`, BANS_FILE);
+  } catch (e) { console.log(`[mod] global ban save failed: ${e}`); }
+}
+try {
+  if (existsSync(BANS_FILE)) {
+    const raw = JSON.parse(readFileSync(BANS_FILE, "utf8")) as Record<string, BanRec>;
+    for (const [id, b] of Object.entries(raw)) if (b && typeof b.by === "string") globalBans[id.toLowerCase()] = b;
+    if (Object.keys(globalBans).length) console.log(`[mod] ${Object.keys(globalBans).length} global ban(s) loaded`);
+  }
+} catch (e) { console.log(`[mod] global ban restore failed (starting empty): ${e}`); }
+
+/** Does this ban list hit this identity? Checked under both handles, same
+ *  doctrine as rightsOf: the display id (case-insensitive) and the durable
+ *  principal sub. Ban lists are small; the sub scan is nothing. */
+function findBan(map: Record<string, BanRec> | undefined, id: string, sub?: string): BanRec | null {
+  if (!map) return null;
+  const hit = map[id.toLowerCase()];
+  if (hit) return hit;
+  if (sub) for (const b of Object.values(map)) if (b.sub === sub) return b;
+  return null;
+}
+
 // ---------------------------------------------------------------- world logs
 
 type LogEntry = {
@@ -146,6 +182,12 @@ type WorldState = {
    *  `gen` is the spend capability: bringing NEW assets into the world's
    *  vocabulary (the `asset` verb — where Orrery generations land). */
   roles: Record<string, { role: "owner" | "builder" | "visitor"; gen?: boolean }>;
+  /** Per-world bans, fed by owner-authored `ban`/`unban` verbs in the log —
+   *  event-sourced like roles, so a ban replays, folds, audits, and rides a
+   *  fork. Keyed by lowercased display id; `sub` (when the target was present
+   *  to be identified at ban time) makes the ban survive a rename. Optional
+   *  because snapshots from before this verb lack the map. */
+  bans?: Record<string, { by: string; ts: number; reason?: string; sub?: string }>;
 };
 const RECENT_CHAT = 40;
 /** How many entries may accumulate past a snapshot before folding again.
@@ -161,7 +203,7 @@ const MSG_RATE = Number(process.env.MSG_RATE ?? 60);
 
 const emptyState = (): WorldState => ({
   entities: {}, terrain: null, grass: null, sky: null, assets: [], recentChat: [], chatTotal: 0,
-  roles: {},
+  roles: {}, bans: {},
 });
 
 /** Make room in the recent-chat window WITHOUT letting one loud speaker erase
@@ -276,6 +318,32 @@ function foldEntry(st: WorldState, e: LogEntry): void {
       st.roles[a.id] = { role, ...(gen ? { gen: true } : {}) };
       return;
     }
+    case "ban": {
+      // {id, reason?, sub?} — the world's door closes for this identity. The
+      // fold only records the fact; disconnecting whoever matches RIGHT NOW is
+      // the verb handler's side effect (folds must stay pure — a replay must
+      // never kick anyone).
+      if (!a?.id) return;
+      st.bans ??= {};
+      st.bans[String(a.id).toLowerCase()] = {
+        by: e.actor, ts: e.ts,
+        ...(a.reason ? { reason: String(a.reason) } : {}),
+        ...(a.sub ? { sub: String(a.sub) } : {}),
+      };
+      return;
+    }
+    case "unban": {
+      if (!a?.id || !st.bans) return;
+      const key = String(a.id).toLowerCase();
+      delete st.bans[key];
+      // an unban by display name also lifts a ban filed under that identity's
+      // sub — forgiveness should not depend on knowing which handle was keyed
+      for (const [k, b] of Object.entries(st.bans)) if (b.sub === a.id) delete st.bans[k];
+      return;
+    }
+    // `kick` deliberately has no case: like `use`, it is an ACT, not a state —
+    // it folds nothing, but the log keeps it (who removed whom is history).
+    // The removal itself is the verb handler's side effect.
     case "comp": {
       // Generic component fold. Blind by design: `data` is opaque here, and
       // stays whatever shape its author gave it. `data: null` removes.
@@ -453,7 +521,16 @@ const VERB_NEEDS: Record<string, { rank: number; gen?: boolean }> = {
   asset: { rank: 1, gen: true },
   terrain: { rank: 2 }, grass: { rank: 2 }, sky: { rank: 2 }, weather: { rank: 2 },
   grant: { rank: 2 },
+  // Moderation is owner power, exactly like grant — and agents get it through
+  // the same gate, so an agent OWNING a world can moderate it with no extra
+  // capability machinery. (Global bans are not verbs at all: see "global-ban".)
+  kick: { rank: 2 }, ban: { rank: 2 }, unban: { rank: 2 },
 };
+
+/** WORLD_ADMIN under either handle — the same doctrine as rightsOf. */
+function isAdminId(id: string, sub?: string): boolean {
+  return ADMIN_IDS.has(id) || (sub != null && ADMIN_IDS.has(sub));
+}
 
 // Agent identity: the MCPL door (mcpl/tokens.json) already holds per-agent
 // bearer tokens. The sequencer reads the same file so (a) an agent's name is
@@ -682,6 +759,24 @@ class World {
   }
 }
 
+/** Remove a client from its world NOW — the kick/ban primitive, same shape as
+ *  the identity-takeover block in `join`. All four bookkeeping steps or a ghost
+ *  is left behind: world roster, global client map, the socket, and the leave
+ *  broadcast (close(ws) will not fire it — the client is already unmapped).
+ *  4006 is the "removed by moderation" close code; the browser client and
+ *  WorldAgent both know not to auto-reconnect on it. */
+function expel(w: World, target: Client, why: string) {
+  try { target.ws.send(JSON.stringify({ type: "error", error: why })); } catch { /* going anyway */ }
+  const wasEmbodied = !target.spectator;
+  if (wasEmbodied && target.lastPose) w.rememberPose(target.id, target.lastPose); // they may be back
+  target.superseded = true;   // the close path must not double-handle this body
+  w.clients.delete(target);
+  clients.delete(target.ws);
+  target.world = null;
+  target.ws.close?.(4006, "removed by moderation");
+  if (wasEmbodied) w.broadcast({ type: "leave", id: target.id });
+}
+
 // Operator-log census: people are people, eyes are eyes.
 function describe(w: World): string {
   const real = [...w.clients].filter((c) => !c.spectator).length;
@@ -852,6 +947,10 @@ const gzCache = new Map<string, { mtime: number; gz: Uint8Array }>();
 function serveFrom(base: string, rel: string, cache = false, req?: Request, immutable = false): Response {
   const path = normalize(join(base, rel));
   if (!path.startsWith(base)) return new Response("forbidden", { status: 403 });
+  // A missing file must be a 404, not a Bun.file stream blowing up into a 500 —
+  // prod 08-02: an asset absent from the VPS library (rsync gap) turned every
+  // spawn of it into "Internal Server Error" instead of an honest not-found.
+  if (!existsSync(path)) return new Response("not found", { status: 404 });
   const f = Bun.file(path);
   const headers: Record<string, string> = { "content-type": contentType(path) };
   // ETag from size+mtime: makes no-cache revalidation a 304, not a re-download
@@ -1393,6 +1492,22 @@ const server = Bun.serve({
               return;
             }
           }
+          // Bans — checked once identity is SETTLED (id/sub/reserved names all
+          // resolved above), before the body enters. A global ban closes every
+          // door; a per-world ban closes this one. Spectating counts: a ban is
+          // exclusion, not just silencing. WORLD_ADMIN passes everywhere — an
+          // operator can never be locked out, which is also the unban path of
+          // last resort.
+          {
+            const gb = findBan(globalBans, c.id, c.sub);
+            const ban = gb ?? findBan(w.state.bans, c.id, c.sub);
+            if (ban && !isAdminId(c.id, c.sub)) {
+              console.log(`[world:${w.name}] join refused: ${c.id} is banned ${gb ? "globally" : "here"} (by ${ban.by})`);
+              ws.send(JSON.stringify({ type: "error", error: `you are banned from ${gb ? "these worlds" : `"${w.name}"`}${ban.reason ? ` — ${ban.reason}` : ""} (by ${ban.by})` }));
+              c.ws.close?.(4006, "banned");
+              return;
+            }
+          }
           c.world = w;
           // identity takeover: ONE body per id per world — a stale session
           // (half-open socket, zombie reconnect) is kicked when its identity
@@ -1528,10 +1643,59 @@ const server = Bun.serve({
               return;
             }
           }
+          if (msg.verb === "kick" || msg.verb === "ban" || msg.verb === "unban") {
+            // Moderation verbs: {id, reason?}. Owner-rank, checked above like
+            // grant. Shape-checked and TARGET-checked before they become
+            // history: no self-moderation, no wildcard, and the power ladder
+            // does not eat itself — operators are untouchable, and one owner
+            // cannot ban another (a WORLD_ADMIN can; that is what it is for).
+            const id = String(args.id ?? "").trim().slice(0, 64);
+            if (!id || id === "*") {
+              ws.send(JSON.stringify({ type: "error", error: `${msg.verb} wants {id, reason?} — a specific participant, not everyone` }));
+              return;
+            }
+            if (id.toLowerCase() === c.id.toLowerCase()) {
+              ws.send(JSON.stringify({ type: "error", error: "you cannot moderate yourself" }));
+              return;
+            }
+            // The durable principal, when the target is standing right here —
+            // a ban keyed only to a display name is evaded by /name; carrying
+            // the sub makes it stick to the person, not the label.
+            const targetC = [...c.world.clients].find((o) => o.id.toLowerCase() === id.toLowerCase());
+            const targetSub = targetC?.sub;
+            if (!isAdminId(c.id, c.sub)) {
+              if (isAdminId(id, targetSub)) {
+                ws.send(JSON.stringify({ type: "error", error: `${id} is a world operator — operators cannot be ${msg.verb === "kick" ? "kicked" : "banned"}` }));
+                return;
+              }
+              if (msg.verb !== "unban" && rightsOf(c.world, id, targetSub).role === "owner") {
+                ws.send(JSON.stringify({ type: "error", error: `${id} also owns this world — owners cannot ${msg.verb} each other (a WORLD_ADMIN can)` }));
+                return;
+              }
+            }
+            const reason = args.reason != null ? String(args.reason).slice(0, 200) : undefined;
+            args = { id, ...(reason ? { reason } : {}), ...(msg.verb === "ban" && targetSub ? { sub: targetSub } : {}) };
+          }
           const entry = c.world.append(c.id, msg.verb, args);
           c.world.broadcast({ type: "log", entry }); // everyone, including author (authoritative echo)
           // A `use` is a cause; reactions turn it into logged effects.
           if (msg.verb === "use") reactToUse(c.world, entry);
+          // A ban or kick lands NOW on every matching body, not at some future
+          // join — the fold recorded the fact; this is the fact taking effect.
+          if (msg.verb === "ban" || msg.verb === "kick") {
+            const tid = String((args as { id: string }).id).toLowerCase();
+            const tsub = (args as { sub?: string }).sub;
+            const treason = (args as { reason?: string }).reason;
+            const w = c.world;
+            for (const other of [...w.clients]) {
+              if (other === c) continue;
+              if (other.id.toLowerCase() !== tid && !(tsub && other.sub === tsub)) continue;
+              expel(w, other, msg.verb === "ban"
+                ? `you were banned from "${w.name}" by ${c.id}${treason ? ` — ${treason}` : ""}`
+                : `you were removed from "${w.name}" by ${c.id}${treason ? ` — ${treason}` : ""}`);
+              console.log(`[world:${w.name}] ${other.id} ${msg.verb === "ban" ? "banned" : "kicked"} by ${c.id}${treason ? ` (${treason})` : ""}`);
+            }
+          }
           break;
         }
         case "history": {
@@ -1708,6 +1872,81 @@ const server = Bun.serve({
           console.log(`[world:${w.name}] ERASED to zero by ${c.id} — history archived in ${arch}`);
           w.broadcast({ type: "world-reset", world: w.name, by: c.id });
           break;
+        }
+        case "world-bans": {
+          // Who is banned from the world you are standing in. Available to
+          // anyone present — bans are log entries and the log is public; a
+          // list nobody can read is not an audit trail.
+          if (!c.world) return;
+          const list = Object.entries(c.world.state.bans ?? {}).map(([id, b]) =>
+            `${id} — by ${b.by}, ${new Date(b.ts).toISOString().slice(0, 10)}${b.reason ? `: ${b.reason}` : ""}`);
+          ws.send(JSON.stringify({ type: "mod", text: list.length
+            ? `banned from "${c.world.name}" (${list.length}):\n${list.join("\n")}`
+            : `nobody is banned from "${c.world.name}"` }));
+          break;
+        }
+        case "global-ban":
+        case "global-unban":
+        case "global-bans": {
+          // Instance-wide moderation. Not world verbs — there is no global log
+          // — so these are messages, gated on WORLD_ADMIN and persisted in
+          // .bans.json (same posture as .sessions.json). Replies come back as
+          // `mod` messages; refusals as `error`, like everything else.
+          if (!isAdminId(c.id, c.sub)) {
+            ws.send(JSON.stringify({ type: "error", error: "global moderation needs WORLD_ADMIN — per-world /ban is the owner tool" }));
+            return;
+          }
+          if (msg.type === "global-bans") {
+            const list = Object.entries(globalBans).map(([id, b]) =>
+              `${id}${b.sub ? ` (${b.sub})` : ""} — by ${b.by}, ${new Date(b.ts).toISOString().slice(0, 10)}${b.reason ? `: ${b.reason}` : ""}`);
+            ws.send(JSON.stringify({ type: "mod", text: list.length ? `global bans (${list.length}):\n${list.join("\n")}` : "no global bans" }));
+            return;
+          }
+          const id = String(msg.id ?? "").trim().slice(0, 64);
+          if (!id || id === "*") {
+            ws.send(JSON.stringify({ type: "error", error: `${msg.type} wants {id, reason?} — a specific participant, not everyone` }));
+            return;
+          }
+          if (msg.type === "global-unban") {
+            const key = id.toLowerCase();
+            const had = key in globalBans || Object.values(globalBans).some((b) => b.sub === id);
+            delete globalBans[key];
+            for (const [k, b] of Object.entries(globalBans)) if (b.sub === id) delete globalBans[k];
+            saveGlobalBans();
+            console.log(`[mod] ${c.id} lifted global ban on ${id}${had ? "" : " (was not banned)"}`);
+            ws.send(JSON.stringify({ type: "mod", text: had ? `${id} is no longer banned globally` : `${id} was not globally banned` }));
+            return;
+          }
+          // global-ban
+          if (isAdminId(id)) {
+            ws.send(JSON.stringify({ type: "error", error: `${id} is a world operator — remove them from WORLD_ADMIN first` }));
+            return;
+          }
+          if (id.toLowerCase() === c.id.toLowerCase()) {
+            ws.send(JSON.stringify({ type: "error", error: "you cannot moderate yourself" }));
+            return;
+          }
+          const reason = msg.reason != null ? String(msg.reason).slice(0, 200) : undefined;
+          // catch the durable principal if the target is connected anywhere
+          let tsub: string | undefined;
+          for (const w2 of worlds.values()) {
+            const t = [...w2.clients].find((o) => o.id.toLowerCase() === id.toLowerCase());
+            if (t?.sub) { tsub = t.sub; break; }
+          }
+          globalBans[id.toLowerCase()] = { by: c.id, ts: Date.now(), ...(reason ? { reason } : {}), ...(tsub ? { sub: tsub } : {}) };
+          saveGlobalBans();
+          let expelled = 0;
+          for (const w2 of worlds.values()) {
+            for (const other of [...w2.clients]) {
+              if (other === c) continue;
+              if (other.id.toLowerCase() !== id.toLowerCase() && !(tsub && other.sub === tsub)) continue;
+              expel(w2, other, `you were banned from these worlds by ${c.id}${reason ? ` — ${reason}` : ""}`);
+              expelled++;
+            }
+          }
+          console.log(`[mod] ${c.id} banned ${id} globally${reason ? ` (${reason})` : ""}${expelled ? ` — ${expelled} session(s) disconnected` : ""}`);
+          ws.send(JSON.stringify({ type: "mod", text: `${id} is banned from all worlds${reason ? ` — ${reason}` : ""}${expelled ? ` (${expelled} live session${expelled === 1 ? "" : "s"} disconnected)` : ""}` }));
+          return;
         }
       }
       } catch (err) {

@@ -109,32 +109,48 @@ export function beginWork(label) {
 
 // ---- serialization ----------------------------------------------------------
 
-/** Run `fn` after every previously serialized fn has finished. Errors reach
- *  the caller; the queue itself never breaks. LEAF OPERATIONS ONLY — see the
- *  invariant at the top of this file.
+/** Queue heavy leaf work. LEAF OPERATIONS ONLY — see the invariant at the top
+ *  of this file. Errors reach the caller; the lanes themselves never break.
  *
- *  `urgent` jumps the queue: YOUR body must not wait behind eight world
- *  objects that would happily materialize behind your back — measured on a
- *  seeded world, exactly that queue-wait held arrival for 4 extra seconds.
- *  Urgency reorders WAITING work only; whatever is mid-flight finishes. */
-const jobs = [];
-let pumping = false;
-async function pump() {
-  if (pumping) return;
-  pumping = true;
-  try {
-    while (jobs.length) {
-      const job = jobs.shift();
-      try { job.resolve(await job.fn()); } catch (e) { job.reject(e); }
-    }
-  } finally { pumping = false; }
-}
-export function serialize(fn, { urgent = false } = {}) {
+ *  Two lanes, because two different resources are being protected:
+ *    cpu — parses and skeleton passes: genuinely synchronous main-thread work.
+ *          Strictly one at a time; two of these in the same frames is the
+ *          stall this module exists to prevent.
+ *    gpu — pipeline compiles: internally frame-yielding codegen followed by
+ *          seconds of WAITING on driver-side pipeline creation. Serializing
+ *          that wall time was a mistake this trace paid for: a body queued
+ *          19s behind crates whose "work" was mostly idle await. Two in
+ *          flight overlaps the waits; the codegen slices still interleave
+ *          through the frame loop.
+ *
+ *  Priority: 2 = your own body, 1 = anyone's body, 0 = objects. People
+ *  materialize before furniture, always. Reorders WAITING work only. */
+const lanes = {
+  cpu: { jobs: [], running: 0, max: 1 },
+  gpu: { jobs: [], running: 0, max: 2 },
+};
+export function enqueue(fn, { lane = 'cpu', priority = 0 } = {}) {
   return new Promise((resolve, reject) => {
-    const job = { fn, resolve, reject };
-    if (urgent) jobs.unshift(job); else jobs.push(job);
-    pump();
+    const l = lanes[lane] ?? lanes.cpu;
+    const job = { fn, priority, resolve, reject };
+    const i = l.jobs.findIndex((j) => j.priority < priority);
+    if (i === -1) l.jobs.push(job); else l.jobs.splice(i, 0, job);
+    pumpLane(l);
   });
+}
+function pumpLane(l) {
+  while (l.running < l.max && l.jobs.length) {
+    const job = l.jobs.shift();
+    l.running++;
+    (async () => {
+      try { job.resolve(await job.fn()); } catch (e) { job.reject(e); }
+      finally { l.running--; pumpLane(l); }
+    })();
+  }
+}
+/** Back-compat shape used by early call sites. */
+export function serialize(fn, { urgent = false, lane = 'cpu', priority } = {}) {
+  return enqueue(fn, { lane, priority: priority ?? (urgent ? 2 : 0) });
 }
 
 // ---- long-task attribution --------------------------------------------------

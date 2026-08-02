@@ -14,7 +14,7 @@ import { MToonMaterialLoaderPlugin } from '@pixiv/three-vrm-materials-mtoon';
 import { MToonNodeMaterial } from '@pixiv/three-vrm-materials-mtoon/nodes';
 import { VRMAnimationLoaderPlugin, createVRMAnimationClip } from '@pixiv/three-vrm-animation';
 import { clone as skeletonClone } from 'three/addons/utils/SkeletonUtils.js';
-import { beginWork, serialize } from './loadwork.js';
+import { beginWork, enqueue } from './loadwork.js';
 
 // ---- loading tray -----------------------------------------------------------
 // Every in-flight asset (downloads with byte progress, builds as spinners) is
@@ -131,7 +131,7 @@ async function primeTextures(obj, work) {
   }
 }
 
-export async function loadVRM(libPath, { urgent = false } = {}) {
+export async function loadVRM(libPath, { priority = 1 } = {}) {
   const work = beginWork(`vrm ${libPath.split('/').pop()}`);
   try {
     work.phase('download');
@@ -140,7 +140,8 @@ export async function loadVRM(libPath, { urgent = false } = {}) {
     // The parse and skeleton passes are the irreducibly-synchronous chunk of a
     // body: serialize so two arrivals can't stack theirs into the same frames,
     // and yield between passes so each stall is one pass long, not their sum.
-    return await serialize(async () => {
+    // Bodies default to priority 1 — people materialize before furniture.
+    return await enqueue(async () => {
       work.phase('parse');
       const gltf = await new Promise((res, rej) => makeLoader(true).parse(buf, '', res, rej));
       const vrm = gltf.userData.vrm;
@@ -152,7 +153,7 @@ export async function loadVRM(libPath, { urgent = false } = {}) {
       work.phase('textures');
       await primeTextures(vrm.scene, work);
       return vrm;
-    }, { urgent });
+    }, { lane: 'cpu', priority });
   } finally { work.end(); }
 }
 
@@ -172,14 +173,14 @@ export async function loadGLB(libPath) {
         work.phase('download');
         const buf = await fetchBytes(`/library/${libPath}`);
         work.phase('queued');
-        return await serialize(async () => {
+        return await enqueue(async () => {
           work.phase('parse');
           const gltf = await new Promise((res, rej) => makeLoader(false).parse(buf, '', res, rej));
           await work.yield();
           work.phase('textures');
           await primeTextures(gltf.scene, work);
           return gltf.scene;
-        });
+        }, { lane: 'cpu', priority: 0 });
       } finally { loadDone(key); work.end(); }
     })());
   }
@@ -187,19 +188,28 @@ export async function loadGLB(libPath) {
   const obj = skeletonClone(proto); // safe for rigged + static alike
   // Precompile pipelines OFF the render path — otherwise the first frame that
   // sees a new material stalls the main thread (the ~1.5s spawn freeze).
-  // Serialized: the first use of a model pays real codegen, and two spawns
-  // resolving together must not pay it in the same frames. Repeat uses are
-  // pipeline-cache hits and clear the queue in microseconds.
+  // Only the FIRST use of a model queues (it pays real codegen + pipeline
+  // creation); repeats are cache hits and would just sit in line to discover
+  // that — prod trace: "queued 19311ms · compile 5ms".
+  if (compiledLibs.has(libPath)) {
+    await renderer.compileAsync(obj, camera, scene).catch(() => {});
+    return obj;
+  }
   const work = beginWork(`compile ${short}`);
   try {
     work.phase('queued');
-    await serialize(() => {
+    await enqueue(() => {
       work.phase('compile');
       return renderer.compileAsync(obj, camera, scene).catch(() => {});
-    });
+    }, { lane: 'gpu', priority: 0 });
+    compiledLibs.add(libPath);
   } finally { work.end(); }
   return obj;
 }
+// Libs whose pipelines have been compiled once this session — repeat spawns
+// skip the queue. (A sky/weather wrap or a new light can invalidate pipeline
+// caches; the direct compileAsync above still handles that, just unqueued.)
+const compiledLibs = new Set();
 
 // ---- VRMA clips -------------------------------------------------------------
 
@@ -223,14 +233,14 @@ export function vrmaBytes(slot) {
 // re-parse the whole ~1.9MB VRMA per slot PER AVATAR, so every body arriving
 // re-paid nine GLTF parses the first one had already done.
 const vrmaAnimCache = new Map(); // slot -> Promise<VRMAnimation>
-function vrmaAnimation(slot, urgent = false) {
+function vrmaAnimation(slot, priority = 1) {
   if (!vrmaAnimCache.has(slot)) {
     const p = (async () => {
       const buf = await vrmaBytes(slot);
       const work = beginWork(`vrma ${slot}`);
       try {
         work.phase('queued');
-        return await serialize(async () => {
+        return await enqueue(async () => {
           work.phase('parse');
           const l = new GLTFLoader();
           l.register((pl) => new VRMAnimationLoaderPlugin(pl));
@@ -238,7 +248,7 @@ function vrmaAnimation(slot, urgent = false) {
           const anim = gltf.userData.vrmAnimations?.[0];
           if (!anim) throw new Error(`no animation in ${slot}.vrma`);
           return anim;
-        }, { urgent });
+        }, { lane: 'cpu', priority });
       } finally { work.end(); }
     })();
     p.catch(() => vrmaAnimCache.delete(slot)); // a transient failure must not stick
@@ -247,8 +257,8 @@ function vrmaAnimation(slot, urgent = false) {
   return vrmaAnimCache.get(slot);
 }
 
-export async function clipFor(vrm, slot, { urgent = false } = {}) {
-  return createVRMAnimationClip(await vrmaAnimation(slot, urgent), vrm);
+export async function clipFor(vrm, slot, { priority = 1 } = {}) {
+  return createVRMAnimationClip(await vrmaAnimation(slot, priority), vrm);
 }
 
 // ---- procedural textures ----------------------------------------------------

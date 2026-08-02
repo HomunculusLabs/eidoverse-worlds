@@ -7,7 +7,7 @@ import {
   loadVRM, clipFor, vrmaBytes, loadTrack, loadDone,
   CLIP_SLOTS, CLIP_SPEED, VRMUtils,
 } from './assets.js';
-import { beginWork, serialize, idleYield } from './loadwork.js';
+import { beginWork, enqueue, idleYield } from './loadwork.js';
 
 // The clip library is ~1.9MB PER SLOT. Waiting for all seven before a body
 // could exist put 13MB between a person and their own legs — the single
@@ -523,22 +523,24 @@ function makeBlobShadow() {
 export async function makeAvatar(id, libPath, { full = false, urgent = false } = {}) {
   loadTrack(`avatar:${id}`, `${id} materializing`);
   const work = beginWork(`avatar ${id}`);
+  // YOUR body outranks everything; ANY body outranks every object — fable's
+  // remote once queued 19s behind crate pipeline compiles (prod trace 08-02).
+  const priority = urgent ? 2 : 1;
   try {
     const slots = full ? CLIP_SLOTS : CORE_CLIPS;
     work.phase('body');
-    // VRM + the clip bytes we actually need download in PARALLEL. `urgent` is
-    // for YOUR body: it jumps the load queue instead of waiting behind every
-    // world object that happened to be materializing when you arrived.
-    const [vrm] = await Promise.all([loadVRM(libPath, { urgent }), ...slots.map(vrmaBytes)]);
+    // VRM + the clip bytes we actually need download in PARALLEL.
+    const [vrm] = await Promise.all([loadVRM(libPath, { priority }), ...slots.map(vrmaBytes)]);
     work.phase('clips');
     const clips = {};
     for (const slot of slots) { // sequential: each may be a VRMA parse (once ever, cached)
-      try { clips[slot] = await clipFor(vrm, slot, { urgent }); } catch (e) { report(`clip ${slot}`, e); }
+      try { clips[slot] = await clipFor(vrm, slot, { priority }); } catch (e) { report(`clip ${slot}`, e); }
     }
     work.phase('compile');
-    // Serialized like every heavy leaf: no first-frame stall, and no stacking
-    // with another body's parse either.
-    await serialize(() => renderer.compileAsync(vrm.scene, camera, scene).catch(() => {}), { urgent });
+    // gpu lane: codegen slices interleave with the frame loop; the long tail
+    // is driver-side pipeline creation, which overlaps other compiles fine.
+    await enqueue(() => renderer.compileAsync(vrm.scene, camera, scene).catch(() => {}),
+      { lane: 'gpu', priority });
     const av = new Avatar(id, vrm, clips);
     // The rest arrives behind you. Remote bodies hydrate too — someone else
     // breaking into a run should not be stuck walking on your screen.
@@ -586,14 +588,14 @@ export async function contributeThumbnail(name, vrm, token = '', { force = false
       const work = beginWork(`thumb ${name}`);
       try {
         work.phase('queued');
-        await serialize(() => {
+        await enqueue(() => {
           work.phase('compile');
           const prev = renderer.getRenderTarget();
           renderer.setRenderTarget(rt);
           const compiled = renderer.compileAsync(vrm.scene, cam, sub);
           renderer.setRenderTarget(prev);
           return compiled.catch(() => {});
-        });
+        }, { lane: 'gpu', priority: 0 }); // a portrait never outranks a person
       } finally { work.end(); }
     }
 

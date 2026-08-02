@@ -6,7 +6,9 @@ const [world = "commons", verbsPath] = process.argv.slice(2);
 const verbs = verbsPath ? await Bun.file(verbsPath).json() : [];
 
 const ws = new WebSocket(`ws://127.0.0.1:${process.env.PORT ?? 8940}/ws`);
-ws.onopen = () => ws.send(JSON.stringify({ type: "join", world, id: "claude" }));
+// JOIN_TOKEN env rides along — a tokened box (the VPS) refuses bare joins
+ws.onopen = () => ws.send(JSON.stringify({ type: "join", world, id: "claude",
+  ...(process.env.JOIN_TOKEN ? { token: process.env.JOIN_TOKEN } : {}) }));
 ws.onmessage = (ev) => {
   const msg = JSON.parse(String(ev.data));
   if (msg.type === "snapshot") {
