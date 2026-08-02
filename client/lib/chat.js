@@ -283,6 +283,8 @@ const COMMANDS = [
   ['/who', 'list everyone present'],
   ['/role', 'what you may do here (or /role <name>)'],
   ['/grant', '/grant <name> owner|builder|visitor [+gen|-gen] — owner only'],
+  ['/fork', '/fork <new-name> — copy this world, history and all (owner)'],
+  ['/reset', 'erase this world back to zero, archived not destroyed (owner)'],
   ['/goto', '/goto <name> — walk to someone'],
   ['/clear', 'clear your chat log'],
   ['/help', 'open the help sheet'],
@@ -397,6 +399,12 @@ function runCommand(raw) {
       return true;
     case 'grant':
       bus.emit('command', { cmd: 'grant', arg });
+      return true;
+    case 'fork': case 'copy':
+      bus.emit('command', { cmd: 'fork', arg });
+      return true;
+    case 'reset': case 'erase':
+      bus.emit('command', { cmd: 'reset', arg });
       return true;
     case 'who': {
       const list = getPeople().map((p) => p.id).join(', ');

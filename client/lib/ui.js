@@ -252,7 +252,8 @@ export function buildHelp() {
       still build unless the owner closes it (<b>/grant * visitor</b>).
       Bringing <i>new</i> models into a world's vocabulary needs the <b>gen</b>
       capability (<b>/grant name +gen</b>). <b>/role</b> tells you what you are
-      here.</p>
+      here. Owners can also <b>/fork</b> a world into a copy, or <b>/reset</b>
+      it back to zero (its history is archived, never destroyed).</p>
     <h2>Building</h2>
     <p class="sub">Open <b>build</b> to search the model library, or drag a
       <b>.glb</b> into the window to upload one. Drag a <b>.vrm</b> to add a body

@@ -76,6 +76,22 @@ export function requestHistory(opts = {}) {
   });
 }
 
+/** Copy the current world into a brand-new name (server: owner-only). */
+export function sendWorldFork(to) {
+  if (net.joined && net.ws?.readyState === 1) {
+    net.ws.send(JSON.stringify({ type: 'world-fork', to }));
+  } else logChat('*', 'not connected — try again in a moment');
+}
+
+/** Erase the current world back to zero (server: owner-only, archived not
+ *  destroyed). Carries the world's own name as the confirmation the server
+ *  demands — the caller is responsible for having made the user type it. */
+export function sendWorldReset() {
+  if (net.joined && net.ws?.readyState === 1) {
+    net.ws.send(JSON.stringify({ type: 'world-reset', name: CONFIG.world }));
+  } else logChat('*', 'not connected — try again in a moment');
+}
+
 /** Private, point-to-point. Deliberately not a verb: verbs go in the world
  *  log, and the log is public forever. */
 export function sendWhisper(to, text) {
@@ -349,6 +365,24 @@ async function handle(msg) {
         if (r.avatarPath && r.avatarPath.split('?')[0] === msg.path) ensureRemote(id, fresh);
       }
       logChat('*', `avatar "${msg.name}" updated (v${msg.v})`);
+      break;
+    }
+
+    case 'world-forked': {
+      const link = `${location.origin}/?world=${encodeURIComponent(msg.to)}`;
+      logChat('*', `world copied — "${msg.from}" → "${msg.to}" (${link})`);
+      toast(`copied to "${msg.to}" — open ?world=${msg.to} to visit`, 'info', 12000);
+      break;
+    }
+
+    case 'world-reset': {
+      // The world we are standing in just ceased to exist as we know it.
+      // Everything client-side — terrain, grass, sky, entities, chat — was
+      // built from a log that is now empty; a reload through the normal join
+      // path is the one rebuild that cannot disagree with the server.
+      toast(`${msg.by} reset "${msg.world}" to zero — reloading…`, 'warn', 4000);
+      logChat('*', `${msg.by} reset this world to zero`);
+      setTimeout(() => location.reload(), 1800);
       break;
     }
 

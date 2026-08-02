@@ -5,7 +5,7 @@
 //  - serves the browser client and the eidoverse-video asset library
 // No world manifest: everything about a world arrives through its log.
 
-import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, renameSync, readdirSync } from "node:fs";
+import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, renameSync, readdirSync, copyFileSync } from "node:fs";
 import { join, resolve, normalize } from "node:path";
 import { randomBytes } from "node:crypto";
 import { verifyToken, JtiCache } from "./aid1.ts";
@@ -413,6 +413,34 @@ class World {
     }
   }
 
+  /** Erase the world back to zero.
+   *
+   *  The log is append-only and forever — so a reset ARCHIVES, it never
+   *  destroys. Everything the world was (log, snapshot, remembered poses)
+   *  moves into worlds/<name>/erased-<ts>/, recoverable by hand, and the
+   *  live world starts over from an empty state. Frames recordings stay
+   *  where they are: they are performances, not world state.
+   *
+   *  Returns the archive directory. The caller decides who owns the fresh
+   *  world and how to tell everyone standing in it. */
+  reset(): string {
+    const dir = join(WORLDS_DIR, this.name);
+    const arch = join(dir, `erased-${new Date().toISOString().replace(/[:.]/g, "-")}`);
+    mkdirSync(arch, { recursive: true });
+    for (const f of ["log.jsonl", "snapshot.json", "poses.json"]) {
+      const p = join(dir, f);
+      if (existsSync(p)) renameSync(p, join(arch, f));
+    }
+    this.entries = [];
+    this.state = emptyState();
+    this.snapSeq = -1;
+    this.snapBytes = 0;
+    this.logBytes = 0;
+    this.dirtySinceFold = 0;
+    this.poses = {};
+    return arch;
+  }
+
   /** A page of history, newest-first paging via `before`.
    *
    *  Folding bounds what a JOIN costs; it does not delete anything, so this is
@@ -499,6 +527,27 @@ function getWorld(name: string): World {
   let w = worlds.get(name);
   if (!w) { w = new World(name); worlds.set(name, w); }
   return w;
+}
+
+/** Copy a world into a brand-new name. The log IS the world, so a fork is a
+ *  byte-copy of the log plus its derived snapshot (whose byte offset stays
+ *  valid because the copy is identical) and the remembered poses — a complete
+ *  copy, roles and ownership included, since grants live in the log like every
+ *  other fact. The whole copy is one synchronous block on a single-threaded
+ *  event loop: no append can interleave, so log and snapshot cannot drift. */
+function forkWorld(src: World, to: string): { ok: true; world: World } | { ok: false; err: string } {
+  if (!/^[a-z0-9_-]{1,64}$/i.test(to)) return { ok: false, err: `bad world name "${to}" — letters, digits, - and _ only` };
+  if (to === src.name) return { ok: false, err: "a world cannot be copied onto itself" };
+  const destDir = join(WORLDS_DIR, to);
+  if (worlds.has(to) || existsSync(destDir)) return { ok: false, err: `world "${to}" already exists` };
+  const srcDir = join(WORLDS_DIR, src.name);
+  if (!existsSync(join(srcDir, "log.jsonl"))) return { ok: false, err: `"${src.name}" has no history to copy yet` };
+  mkdirSync(destDir, { recursive: true });
+  for (const f of ["log.jsonl", "snapshot.json", "poses.json"]) {
+    const p = join(srcDir, f);
+    if (existsSync(p)) copyFileSync(p, join(destDir, f));
+  }
+  return { ok: true, world: getWorld(to) };   // load it now: a fork that cannot boot should fail loudly here
 }
 
 // ------------------------------------------------------------------- clients
@@ -1290,6 +1339,68 @@ const server = Bun.serve({
           } else {
             pending.resolve({ ok: false, err: String(msg.error ?? "renderer returned no image"), status: 502 });
           }
+          break;
+        }
+        case "world-fork": {
+          // Copy the world you are standing in to a new name. Owner-only
+          // (rank 2, like shaping terrain): the fork carries ALL history —
+          // every chat line ever said here — so duplicating it is the owner's
+          // call, not any visitor's. WORLD_ADMIN passes everywhere, which is
+          // also the only door for pre-permissions OPEN worlds.
+          if (!c.world) return;
+          if (c.spectator) {
+            ws.send(JSON.stringify({ type: "error", error: "spectators can't copy worlds — join embodied" }));
+            return;
+          }
+          const rights = rightsOf(c.world, c.id, c.sub);
+          if (ROLE_RANK[rights.role] < 2) {
+            ws.send(JSON.stringify({ type: "error", error: `copying a world needs its owner — you are a ${rights.role} here` }));
+            return;
+          }
+          const to = String(msg.to ?? "").slice(0, 64);
+          const r = forkWorld(c.world, to);
+          if (!r.ok) {
+            ws.send(JSON.stringify({ type: "error", error: r.err }));
+            return;
+          }
+          console.log(`[world:${c.world.name}] copied → "${to}" by ${c.id}`);
+          ws.send(JSON.stringify({ type: "world-forked", from: c.world.name, to }));
+          break;
+        }
+        case "world-reset": {
+          // Erase the world you are standing in back to zero. Owner-only, and
+          // the message must carry the world's own name — the client makes you
+          // type it, the server refuses anything else, so a stray click can
+          // never be the thing that empties a world. History is archived, not
+          // destroyed (see World.reset).
+          if (!c.world) return;
+          if (c.spectator) {
+            ws.send(JSON.stringify({ type: "error", error: "spectators can't erase worlds — join embodied" }));
+            return;
+          }
+          const rights = rightsOf(c.world, c.id, c.sub);
+          if (ROLE_RANK[rights.role] < 2) {
+            ws.send(JSON.stringify({ type: "error", error: `erasing a world needs its owner — you are a ${rights.role} here` }));
+            return;
+          }
+          if (String(msg.name ?? "") !== c.world.name) {
+            ws.send(JSON.stringify({ type: "error", error: `confirmation mismatch — reset must name "${c.world.name}"` }));
+            return;
+          }
+          const w = c.world;
+          // Who owned it, before the log goes: a reset world must not become a
+          // land-rush — the same owners hold the fresh one. (An ADMIN resetting
+          // an OPEN world leaves it open: no owners existed, none are minted.)
+          const owners = Object.entries(w.state.roles ?? {})
+            .filter(([id, r2]) => id !== "*" && r2.role === "owner")
+            .map(([id]) => id);
+          const arch = w.reset();
+          for (const id of owners) {
+            const entry = w.append("world", "grant", { id, role: "owner", gen: true });
+            w.broadcast({ type: "log", entry });
+          }
+          console.log(`[world:${w.name}] ERASED to zero by ${c.id} — history archived in ${arch}`);
+          w.broadcast({ type: "world-reset", world: w.name, by: c.id });
           break;
         }
       }

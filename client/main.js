@@ -20,7 +20,7 @@ import {
 import {
   remotes, updateRemotes, updateGaze, noteSpeaking, setLodBias,
 } from './lib/remotes.js';
-import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendWhisper, sendTyping } from './lib/net.js';
+import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendWhisper, sendTyping, sendWorldFork, sendWorldReset } from './lib/net.js';
 import {
   initPalette, updateBuild, wireAvatarSwitch, setMyAvatarPath, toggleBuildMenu,
   hasGhost, hasSelection, toggleEditMode, isEditing,
@@ -355,6 +355,26 @@ bus.on('command', ({ cmd, arg }) => {
       return logChat('*', 'usage: /grant <name> owner|builder|visitor [+gen|-gen]');
     }
     sendVerb('grant', { id, ...(role ? { role } : {}), ...(genFlag ? { gen: genFlag === '+gen' } : {}) });
+    return;
+  }
+  if (cmd === 'fork') {
+    // /fork <new-name> — copy this world, all history included (owner-only,
+    // the server enforces). The reply arrives as a world-forked message.
+    const to = (arg || '').trim();
+    if (!to) return logChat('*', 'usage: /fork <new-name> — copies this world into a new one');
+    if (!/^[a-z0-9_-]{1,64}$/i.test(to)) return logChat('*', `"${to}" won't do as a world name — letters, digits, - and _ only`);
+    sendWorldFork(to);
+    return;
+  }
+  if (cmd === 'reset') {
+    // /reset alone only tells you what it would do; erasing a world takes
+    // typing its own name back. The server checks the same confirmation.
+    const confirm = (arg || '').trim();
+    if (confirm !== CONFIG.world) {
+      return logChat('*', `this erases "${CONFIG.world}" back to zero — everything built and said here goes to the archive. `
+        + `if you mean it: /reset ${CONFIG.world}`);
+    }
+    sendWorldReset();
     return;
   }
   if (cmd === 'sit') { setPosture('sit'); return; }
