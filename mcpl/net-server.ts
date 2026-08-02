@@ -168,6 +168,14 @@ class Session {
   private agent: WorldAgent;
   private channelId: string;
   private channelOpen = true;
+  /** Did the client declare capabilities.experimental.mcpl at initialize?
+   *  Plain-MCP hosts (llmcord, Claude Code, …) get tools ONLY: no
+   *  channels/register, no channels/incoming pushes, no mention replay —
+   *  chat reaches them through look/catch_up, which is the polling model
+   *  they live in anyway. Pushing MCPL frames at a host that never opted in
+   *  made the SDK log validation errors and left the door awaiting a reply
+   *  (reported by digi/FC, external integrator find #4). */
+  private mcplClient = false;
   private caughtUpTo: number | null = null; // the world channel is home — open unless the agent closes it
 
   constructor(private auth: Auth, ws: WebSocket, agentToken = "") {
@@ -190,6 +198,9 @@ class Session {
   }
 
   private deliver(text: string, author: { id: string; name: string }, opts?: { tags?: string[]; mentioned?: boolean }) {
+    // Belt to serve()'s braces: a plain-MCP host must never receive an MCPL
+    // frame, whatever future code path tries to send one.
+    if (!this.mcplClient) return;
     // Platform-adapter convention (same as discord-mcpl): author is rendered
     // INTO the text — the host carries author metadata but does not label
     // the context message with it.
@@ -251,7 +262,9 @@ class Session {
     // reported an empty server. The response, if one ever comes, resolves
     // through the connection's pending-request routing while the main loop
     // below pumps messages.
-    this.registerChannels();
+    // And only to clients that DECLARED MCPL at initialize — a plain-MCP
+    // host gets no channel machinery at all (see mcplClient).
+    if (this.mcplClient) this.registerChannels();
 
     // Missed-mention replay: anything that addressed you while you slept
     // greets you as tagged channel traffic — a wake-worthy summary, not
@@ -390,6 +403,7 @@ class Session {
     }
     const initParams = msg.request.params as unknown as McplInitializeParams | undefined;
     const mcplRequested = initParams?.capabilities?.experimental?.mcpl !== undefined;
+    this.mcplClient = mcplRequested;
     const serverCaps: McplCapabilities = { version: "0.4", pushEvents: false, channels: true, rollback: false };
     const capabilities: InitializeCapabilities = { tools: {}, ...(mcplRequested ? { experimental: { mcpl: serverCaps } } : {}) };
     const result: McplInitializeResult = {
