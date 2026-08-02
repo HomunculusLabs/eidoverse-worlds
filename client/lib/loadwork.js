@@ -240,6 +240,21 @@ try {
 // 40s (the load window) and one at 120s (the Safari compile tail), to the
 // sequencer's /perflog. That is how WebKit performance gets diagnosed from
 // real visits instead of asked-for console screenshots.
+// Steady-state smoothness never shows in the jank lines — a constant 25fps
+// has no >150ms gaps (exactly how Safari's grass cost stayed invisible). The
+// watchdog's own rAF ticks double as an fps estimator; the beacon carries a
+// recent-median so per-browser render cost is visible from real visits.
+const fpsWindow = [];
+let fpsTick = 0;
+setInterval(() => {
+  fpsWindow.push(fpsTick); fpsTick = 0;
+  if (fpsWindow.length > 30) fpsWindow.shift();
+}, 1000);
+const fpsMedian = () => {
+  const s = [...fpsWindow].sort((a, b) => a - b);
+  return s.length ? s[(s.length / 2) | 0] : null;
+};
+
 function postPerf(mark) {
   try {
     fetch('/perflog', {
@@ -249,6 +264,7 @@ function postPerf(mark) {
         mark,
         ua: navigator.userAgent.slice(0, 160),
         boot: globalThis.__bootMarks ?? null,
+        fps: fpsMedian(),
         jank: jankLog.slice(0, 100),
         load: loadLog.slice(0, 200),
       }),
@@ -261,6 +277,7 @@ setTimeout(() => postPerf('120s'), 120_000);
 
 let lastFrameAt = 0;
 requestAnimationFrame(function gapWatch(t) {
+  fpsTick++;
   if (lastFrameAt && t - lastFrameAt > 150 && !document.hidden && !framesHeld()) {
     const line = `${Math.round(t - lastFrameAt)}ms frame gap during: ${activeLabels() || '(unattributed)'}`;
     console.warn(`[jank] ${line}`);

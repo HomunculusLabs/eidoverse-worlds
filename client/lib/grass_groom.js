@@ -205,5 +205,37 @@ export function groomGrass(field, args = {}) {
     }
   } catch (e) { console.warn('[grass] clearings unavailable:', e?.message ?? e); }
 
+  // ---- density dial ---------------------------------------------------------
+  // The field is one merged geometry with blades in CELL-SCAN order, so a raw
+  // drawRange cut would mow a strip off one edge. Shuffle the INDEX blade-wise
+  // (deterministic LCG — a field must stay the same field) and drawRange
+  // becomes a uniform-density dial: setDensity(0.5) thins evenly, instantly,
+  // reversibly, no rebuild. This is what the perf governor reaches for on
+  // browsers where 318k blades of fill are the frame budget (Safari).
+  try {
+    const idx = field?.mesh?.geometry?.index;
+    if (idx) {
+      const PER = 9; // indices per blade (3 triangles)
+      const blades = (idx.count / PER) | 0;
+      const order = Array.from({ length: blades }, (_, i) => i);
+      let seed = 0x6d2b79f5;
+      const rnd = () => ((seed = (seed * 1103515245 + 12345) & 0x7fffffff) / 0x80000000);
+      for (let i = blades - 1; i > 0; i--) {
+        const j = (rnd() * (i + 1)) | 0;
+        const t = order[i]; order[i] = order[j]; order[j] = t;
+      }
+      const src = idx.array.slice();
+      for (let b = 0; b < blades; b++) {
+        const s = order[b] * PER, d = b * PER;
+        for (let k = 0; k < PER; k++) idx.array[d + k] = src[s + k];
+      }
+      idx.needsUpdate = true;
+      field.setDensity = (f) => {
+        const keep = Math.max(1, Math.floor(blades * Math.min(1, Math.max(0.05, f))));
+        field.mesh.geometry.setDrawRange(0, keep * PER);
+      };
+    }
+  } catch (e) { console.warn('[grass] density dial unavailable:', e?.message ?? e); }
+
   return field;
 }

@@ -49,6 +49,17 @@ export function setGrass(field) {
     }
   }
   currentGrass = field ?? null;
+  // sticky density: a machine that had to thin its meadow keeps it thin
+  // across re-grows, instead of re-discovering the same slow frame rate
+  if (field?.setDensity && grassDensity < 1) field.setDensity(grassDensity);
 }
 export const clearGrass = () => setGrass(null);
 export const hasGrass = () => currentGrass !== null;
+
+// Perf governor's handle on the meadow.
+let grassDensity = 1;
+export function setGrassDensity(f) {
+  grassDensity = f;
+  currentGrass?.setDensity?.(f);
+}
+export const getGrassDensity = () => grassDensity;

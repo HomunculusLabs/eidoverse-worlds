@@ -13,6 +13,7 @@ import { contributeThumbnail, makeAvatar, EMOTE_ORDER, EMOTES } from './lib/avat
 import { updateSky, updateAutoSystems, skyArgs, skyImpl,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './lib/sky.js';
 import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner } from './lib/world.js';
+import { hasGrass, setGrassDensity } from './lib/terrain.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateFollowCamera, updateSpectator, setCamYaw, setPosture,
@@ -601,11 +602,25 @@ function shedClouds(now) {
   return true;
 }
 
+// Thin the meadow before dropping resolution: 318k blades of fill is the
+// frame budget on some browsers (Safari, measured 08-02 — "grass really
+// kills visual smoothness"), and a 60% field at full resolution reads far
+// better than a full field at 70% resolution. Sticky across re-grows.
+let grassShed = 1;
+function shedGrass() {
+  if (!hasGrass() || grassShed <= 0.35) return false;
+  grassShed = grassShed > 0.65 ? 0.6 : 0.35;
+  setGrassDensity(grassShed);
+  toast(`grass thinned to keep the frame rate`, 'warn', 8000);
+  return true;
+}
+
 function governPerformance(f) {
   if (f > 0 && f < 26) {
     slowFor++;
     if (slowFor > 2 && shedClouds(performance.now())) { /* clouds first */ }
     else if (slowFor > 2 && shedLight()) { /* then a light — point lights are costly */ }
+    else if (slowFor > 2 && shedGrass()) { /* then the meadow — fill rate */ }
     else if (slowFor > 2 && pixelRatio > 0.7) {
       pixelRatio = Math.max(0.7, pixelRatio - 0.25);
       renderer.setPixelRatio(pixelRatio);
