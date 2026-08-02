@@ -74,6 +74,15 @@ systems, not bone poses.
 
 ## Entities
 
+**These are conventions, not classes.** Since the component model landed
+(next section), the fold knows only `id + transform + component bag`; every
+row below is a *reading* of what an entity carries, not a type it is. An
+"Inscription" is anything with a `text` component; give it a `sockets`
+component and it is also seatable — no one decides which category owns the
+combination, and no world ever migrates when a new reading appears. The
+table stays because the words are useful, the way "mailing list" is a useful
+word for a pattern of email use without being a type in SMTP.
+
 | Entity | Notes |
 |---|---|
 | **Avatars** | Embodied participants, human- or agent-driven. VRM + controller + identity key. Presence plane only. |
