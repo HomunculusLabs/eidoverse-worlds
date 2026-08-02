@@ -672,12 +672,18 @@ function paintSky(body) {
   };
 
   const gather = () => {
-    const a = { ...skyArgs() };
+    // `local` carries the NON-slider knobs (clouds/weather/world/colors). The
+    // sliders own their own keys and must WIN over local — otherwise a preset
+    // that stashed a slider key (hours) into local would shadow the time slider
+    // for the rest of the session: moving it wrote a.hours, but the stale
+    // local.hours overrode it, so lighting stopped changing after you pressed
+    // dusk (or any preset). Apply local first, then let the sliders assert.
+    const a = { ...skyArgs(), ...local };
     for (const [key, , , , , dflt] of SLIDERS) {
       const v = Number(inputs[key].value);
       if (key === 'hours' || key === 'azimuth' || v !== dflt) a[key] = v;
     }
-    return { ...a, ...local };
+    return a;
   };
 
   const mkRow = (label, node) => {
