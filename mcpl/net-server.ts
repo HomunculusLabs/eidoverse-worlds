@@ -35,6 +35,7 @@ import {
   CHAT, EIDO, CAP, tags, capabilityMatches, MCPL_ADVERTISEMENT, FEATURE_SETS,
 } from "./declaration.ts";
 import { WorldAgent } from "./agent.ts";
+import { MANIFEST_WITH_REVISION, ManifestAnnouncer } from "./manifest.ts";
 import { verifyToken } from "../server/aid1.ts";
 import sharp from "sharp";
 
@@ -182,6 +183,9 @@ class Session {
   private conn: McplConnection;
   private agent: WorldAgent;
   private channelId: string;
+  /** §17 announcer, seeded at handshake; silent while the declared
+   *  surface stays static. */
+  private manifestAnnouncer: ManifestAnnouncer | null = null;
   private channelOpen = true;
   /** Did the client declare capabilities.experimental.mcpl at initialize?
    *  Plain-MCP hosts (llmcord, Claude Code, …) get tools ONLY: no
@@ -486,6 +490,12 @@ class Session {
             case "tools/call":
               this.conn.sendResponse(req.id, await this.handleTool(String(params.name), (params.arguments ?? {}) as Record<string, any>));
               break;
+            case "mcpl/manifest":
+              // §17.4: the complete current manifest, never a delta, same
+              // shape and same snapshot as initialize. Not gated on any
+              // capability path (§17.3-adjacent: fetch is host-initiated).
+              this.conn.sendResponse(req.id, MANIFEST_WITH_REVISION);
+              break;
             case method.CHANNELS_LIST:
               this.conn.sendResponse(req.id, { channels: this.channelDescriptors() });
               break;
@@ -555,10 +565,11 @@ class Session {
     const mcplRequested = hostMcpl !== undefined;
     this.mcplClient = mcplRequested;
     this.hostMcplVersion = typeof hostMcpl?.version === "string" ? hostMcpl.version : null;
-    // The manifest (§5.1). Cast because the pinned mcpl-core-ts types still
-    // describe 0.4's shape (channels as a boolean, featureSets as an array);
+    // The manifest (§5.1) WITH its §17.2 content-derived revision — the
+    // same object mcpl/manifest answers, from the same snapshot. Cast
+    // because the pinned mcpl-core-ts types still describe 0.4's shape;
     // the WIRE follows the 0.5 spec text, which is what a peer reads.
-    const serverCaps = MCPL_ADVERTISEMENT as unknown as McplCapabilities;
+    const serverCaps = MANIFEST_WITH_REVISION as unknown as McplCapabilities;
     const capabilities: InitializeCapabilities = { tools: {}, ...(mcplRequested ? { experimental: { mcpl: serverCaps } } : {}) };
     const result: McplInitializeResult = {
       protocolVersion: "2024-11-05",
@@ -566,6 +577,14 @@ class Session {
       serverInfo: { name: "eidoverse-worlds", version: "0.1.0" },
     };
     this.conn.sendResponse(msg.request.id, result);
+    // §17 impl note: seed last-announced from THIS handshake, so a fresh
+    // connection never redundantly announces the manifest initialize just
+    // carried. The declared surface is compile-time static today; any
+    // future mutating site calls announcer.announceIfChanged and the
+    // plumbing already works.
+    this.manifestAnnouncer = new ManifestAnnouncer((params) => {
+      try { this.conn.sendNotification("mcpl/manifestChanged", params as unknown as Record<string, unknown>); } catch { /* peer gone */ }
+    });
     const inited = await this.conn.nextMessage();
     if (!(inited.type === "notification" && inited.notification.method === "notifications/initialized")) {
       this.conn.close();
