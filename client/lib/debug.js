@@ -238,6 +238,7 @@ const SWITCHES = [
   ['ON_BEHIND', 'behind-body stop'], ['ON_HINGE', 'knee/elbow hinge'],
   ['ON_CAPSULE', 'self-collision'], ['ON_BRACE', 'torso bracing'],
   ['ON_TWIST', 'twist state'], ['ON_GROUND', 'ground + props'],
+  ['PIN_VEL', 'pins carry velocity'],
 ];
 const DIALS = [
   ['YIELD', 0, 1, 0.05], ['CAPSULE_SOFT', 0, 1, 0.05],
@@ -413,6 +414,7 @@ export function updateDebug(now = performance.now()) {
       `  age    ${fmt(rd.elapsed, 2).padStart(5)} s`,
       `  joints ${String(Object.keys(rd.p).length).padStart(5)}`,
       `  pairs  ${String(rd.pairs?.length ?? 0).padStart(5)}   capsule tests`,
+      `  pins   ${String(rd.pins?.size ?? 0).padStart(5)}${rd.pins?.size ? '   ' + [...rd.pins.keys()].join(' ') : ''}`,
     ];
   }
   if (lastRun) lines.push('', `ragdoll  ${rd?.p ? 'active' : 'settled (last)'}`, ...lastRun);

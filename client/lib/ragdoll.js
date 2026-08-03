@@ -117,7 +117,8 @@ const MASS = {
 };
 
 const FIXED_DT = 1 / 60;   // the sim's only clock — see the header
-const MAX_FRAMES = 4;      // frames simulated per call before we drop a backlog
+const MAX_FRAMES = 4;
+const PIN_JUMP = 0.12;     // metres/frame — past this a pin jumped, it did not move
 
 // Everything tunable, in one mutable object so a sweep can drive it without
 // editing the file — which is what the old parameter study had to do, and why
@@ -155,6 +156,19 @@ export const TUNING = {
   ON_FLEX: 1, ON_CONE: 1, ON_BEHIND: 1, ON_HINGE: 1,
   ON_CAPSULE: 1, ON_BRACE: 1, ON_TWIST: 1, ON_GROUND: 1,
   PAUSED: 0,
+  // A pin sets a joint's POSITION and, as shipped, nothing else — so in Verlet
+  // the joint's velocity becomes the whole distance the pin travelled, every
+  // substep. Dragging a body by one hand injects energy in proportion to cursor
+  // speed, and it comes out as torsion: measured against an unpinned fall, a
+  // moving pin takes peak joint speed 1.7 -> 5.6 m/s, stretch 3% -> 16% and
+  // twist 101° -> 180°.
+  //
+  // PIN_VEL gives the joint the PIN's velocity instead. It is off by default
+  // because the synthetic drag I can write headless does not agree that it
+  // helps, and a cursor in a real hand is the only instrument that has been
+  // right about this body all week. It is a switch in the debug panel so that
+  // instrument can settle it.
+  PIN_VEL: 0,
   SETTLE_V: 0.06,          // speed below which we call it settled...
   SETTLE_TIME: 0.4,        // ...for this long, in SECONDS (was 24 FRAMES, which
                            // meant 0.17s at 144Hz and 0.8s at 30Hz)
@@ -460,6 +474,7 @@ export class Ragdoll {
     // than infinite mass — an unpinned particle that never moves is worse.
     this.iw = {};
     for (const j of Object.keys(this.p)) this.iw[j] = 1 / (MASS[j] ?? 1);
+    this._pinFrom = new Map();        // each pin's target at frame start
 
     // rest length of each link, from the neutral pose (see BRACES)
     this.links = LINKS.filter(([a, b]) => this.p[a] && this.p[b])
@@ -720,9 +735,7 @@ export class Ragdoll {
       p.add(_v);
       p.y += TUNING.GRAVITY * dt * dt;
     }
-    // pinned joints go exactly where their pins say, every substep —
-    // after integration, before the constraints that hang the body from them
-    if (this.pins?.size) for (const [j, t] of this.pins) this.p[j].copy(t);
+    this._pin(dt);
     this._frame(this.p);
     for (let it = 0; it < TUNING.ITER; it++) {
       this._links();
@@ -730,6 +743,49 @@ export class Ragdoll {
       this._terrain();
       this._limits();
     }
+    // ...and again at the end: the constraints have had their say, and a nail
+    // is a nail. Position only — prev already carries the pin's velocity, so
+    // putting the joint back where the pin is does not invent any more of it.
+
+  }
+
+  /** Pinned joints go exactly where their pins say.
+   *
+   *  A pin used to set POSITION alone. In Verlet the velocity IS p - prev, so
+   *  writing p and leaving prev where it was hands the joint the whole distance
+   *  the pin travelled as speed — every substep, on top of whatever it already
+   *  had. Dragging a body by one hand therefore injected energy in proportion
+   *  to how fast the cursor moved, and it came out as torsion: measured against
+   *  an unpinned fall, a moving pin took peak joint speed 1.7 -> 5.6 m/s, bone
+   *  stretch 3% -> 16%, and twist 101° -> a full 180°.
+   *
+   *  prev now carries the PIN's own velocity — where the pin was at the start
+   *  of this frame versus where it is — scaled to the substep, so a pinned
+   *  joint moves at the speed the cursor is actually moving and no faster. It
+   *  is also what lets a swung body keep its momentum when you let go.
+   *
+   *  Left deliberately alone: making a pinned joint immovable (infinite mass)
+   *  and re-asserting the pin after the solve. Both are defensible and both
+   *  measured WORSE here — the body then cannot satisfy its own bone lengths
+   *  while hanging, and stretch went to several hundred percent. The pin stays
+   *  a normal particle that something else is moving. */
+  _pin(dt) {
+    if (!this.pins?.size) { this._pinFrom.clear(); return; }
+    const k = dt / FIXED_DT;               // this substep, as a fraction of a frame
+    for (const [j, t] of this.pins) {
+      if (!this.p[j]) continue;
+      const from = this._pinFrom.get(j);
+      this.p[j].copy(t);
+      if (!TUNING.PIN_VEL) continue;                       // position only
+      // A pin that has just been set, or dragged faster than any hand moves,
+      // is a TELEPORT — land it dead. Only continuous motion carries velocity.
+      // Converting a jump into speed is how the first frame of a grab threw
+      // the joint at 45 m/s, ten times worse than the bug it was fixing.
+      _v.copy(t).sub(from ?? t);
+      if (!from || _v.lengthSq() > PIN_JUMP * PIN_JUMP) this.prev[j].copy(t);
+      else this.prev[j].copy(t).sub(_v.multiplyScalar(k));
+    }
+    for (const j of [...this._pinFrom.keys()]) if (!this.pins.has(j)) this._pinFrom.delete(j);
   }
 
   _links() {
@@ -1078,6 +1134,16 @@ export class Ragdoll {
     let n = 0;
     while (this.acc >= FIXED_DT && n < MAX_FRAMES) { this._solve(); this.acc -= FIXED_DT; n++; }
     if (n === MAX_FRAMES) this.acc = 0;
+    // remember where each pin was THIS frame; next frame's velocity is measured
+    // against it. Per frame, because that is the rate the cursor moves it at —
+    // sampling per substep reads the same target twice and calls the second
+    // one motionless.
+    if (this.pins?.size) {
+      for (const [j, t] of this.pins) {
+        const f = this._pinFrom.get(j);
+        if (f) f.copy(t); else this._pinFrom.set(j, t.clone());
+      }
+    }
 
     this.elapsed += dt;
     // A held body neither settles nor deadlines: a pin is ongoing input,
