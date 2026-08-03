@@ -30,6 +30,9 @@ export const comps = new Map();
 /** Avatar attachments (a sitter, a passenger) — bodies aren't entities, so
  *  their mounts live here for remotes/controller to consume. */
 export const avatarMounts = new Map();
+/** id -> bound runtime scripts (server sandbox AND client-mod offers), from
+ *  `behavior` entries. mods.js consumes the runtime:"client" ones. */
+export const behaviors = new Map();
 // A mount whose parent or child is still downloading waits here and is
 // retried whenever a spawn completes — same reasoning as pendingOps.
 const pendingMounts = new Map(); // id -> mount args
@@ -374,6 +377,21 @@ export async function applyEntry(entry, live, ctx = {}) {
         // their own log entries. Surfaced for UI/behaviors that care.
         if (live) bus.emit('use', { actor, ...args });
         break;
+      case 'behavior':
+        // the client's mirror of the binding roster: the QuickJS tier runs
+        // server-side, but client-runtime MOD OFFERS (runtime: "client") are
+        // consumed here — mods.js watches this map and asks the person.
+        if (args.remove) behaviors.delete(args.id);
+        else if (args.id && args.src) {
+          behaviors.set(args.id, {
+            src: args.src,
+            ...(args.runtime ? { runtime: args.runtime } : {}),
+            ...(args.knobs ? { knobs: args.knobs } : {}),
+            author: args.by ?? actor,
+          });
+        }
+        bus.emit('behavior-roster', { live });
+        break;
       case 'punt':
         // a cause, like force: folds to nothing, and live clients with a
         // physics plugin VOLUNTEER to simulate it (physobj.js) — the lease
@@ -578,6 +596,10 @@ export function stateToEntries(state, { skipChatFromSeq = Infinity } = {}) {
     if (e.parent) add('mount', { id, ...e.parent });
   }
   for (const [id, rel] of Object.entries(state.mounts ?? {})) add('mount', { id, ...rel });
+  for (const [id, b] of Object.entries(state.behaviors ?? {})) {
+    add('behavior', { id, src: b.src, ...(b.runtime ? { runtime: b.runtime } : {}),
+      ...(b.knobs ? { knobs: b.knobs } : {}), by: b.author }, b.author ?? 'world', b.ts ?? Date.now());
+  }
   // Anything the tail will replay must not also be rendered from the snapshot.
   // Chat keeps its REAL seq, unlike the world-shaping entries above: it is the
   // only part of a snapshot that is a position in history rather than a
@@ -594,6 +616,7 @@ export function stateToEntries(state, { skipChatFromSeq = Infinity } = {}) {
 
 export function resetWorld() {
   worldRoles.clear();
+  behaviors.clear();
   shadowless.clear();
   for (const [id, obj] of entities) { if (obj) (obj.parent ?? scene).remove(obj); removeCollider(id); }
   entities.clear();

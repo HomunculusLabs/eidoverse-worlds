@@ -200,6 +200,30 @@ const eye2 = await open({ id: "eye2", world: WORLD, spectate: true });
 const st2 = eye2.msgs.find((m) => m.type === "snapshot").state;
 check("fold: unbound behaviors leave the state", !st2.behaviors);
 
+// ---- client-runtime mods: offers, not residents --------------------------------
+// runtime:"client" = code visitors may CHOOSE to run in their own browsers.
+// Owner-only to publish; the server stores and rosters it but NEVER executes.
+const nErr = mallory.errors.length;
+mallory.verb("behavior", { id: "modx", src: path, runtime: "client" });
+await mallory.settle(400);
+check("a non-owner cannot offer client mods", mallory.errors.length > nErr,
+  mallory.errors.join("; "));
+alice.verb("behavior", { id: "modx", src: path, runtime: "weird" });
+await alice.settle(400);
+check("unknown runtimes are refused", alice.errors.some((e) => e.includes("runtime")));
+alice.verb("behavior", { id: "modx", src: path, runtime: "client" });
+await alice.settle(600);
+const eye3 = await open({ id: "eye3", world: WORLD, spectate: true });
+const st3 = eye3.msgs.find((m) => m.type === "snapshot").state;
+check("fold: a client-mod offer is world state with its runtime",
+  st3.behaviors?.modx?.src === path && st3.behaviors?.modx?.runtime === "client",
+  JSON.stringify(st3.behaviors?.modx));
+const roster3 = await alice.req({ type: "debug", behaviors: true }, "dbg-mods");
+check("...and the server never runs it (rostered as client-mod, no sandbox)",
+  roster3.events.some((e: any) => e.id === "modx" && e.status === "client-mod" && e.timers === 0),
+  JSON.stringify(roster3.events?.filter((e: any) => e.id === "modx")));
+eye3.close();
+
 for (const s of [alice, mallory, eye, eye2]) s.close();
 console.log(`\n${passed} passed, ${failed} failed\n`);
 process.exit(failed ? 1 : 0);

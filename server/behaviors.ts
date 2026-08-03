@@ -359,13 +359,16 @@ export class BehaviorHost {
     for (const [id, inst] of this.instances) {
       const rec = want[id];
       const key = (r: BehaviorRec) => JSON.stringify([r.src, r.attach, r.knobs, r.caps]);
-      if (!rec || key(rec) !== key(inst.rec)) {
+      if (!rec || (rec as { runtime?: string }).runtime === "client" || key(rec) !== key(inst.rec)) {
         inst.disposeVm();
         this.instances.delete(id);
         this.loading.delete(id);
       }
     }
     for (const [id, rec] of Object.entries(want)) {
+      // client-runtime mods are OFFERS to visitors' browsers, not sandbox
+      // residents — the server stores and rosters them but never executes
+      if ((rec as { runtime?: string }).runtime === "client") continue;
       if (this.instances.has(id) || this.loading.has(id)) continue;
       const inst = new Instance(this.w, id, rec);
       this.instances.set(id, inst);
@@ -418,8 +421,11 @@ export class BehaviorHost {
   list(): { id: string; status: string; attach?: string; src: string; timers: number }[] {
     return Object.entries(this.w.state.behaviors ?? {}).map(([id, rec]) => {
       const inst = this.instances.get(id);
-      return { id, status: inst ? (inst.paused ?? "running") : "not loaded",
-        attach: rec.attach, src: rec.src, timers: inst?.timers.length ?? 0 };
+      // a client-runtime offer is honest about what it is: never "not
+      // loaded" (nothing here will ever load it) — visitors' browsers run it
+      const status = (rec as { runtime?: string }).runtime === "client" ? "client-mod"
+        : inst ? (inst.paused ?? "running") : "not loaded";
+      return { id, status, attach: rec.attach, src: rec.src, timers: inst?.timers.length ?? 0 };
     });
   }
 

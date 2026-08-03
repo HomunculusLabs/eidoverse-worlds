@@ -437,6 +437,7 @@ function foldEntry(st: WorldState, e: LogEntry): void {
       if (typeof a.src !== "string") return;
       st.behaviors[a.id] = {
         src: a.src,
+        ...(a.runtime === "client" ? { runtime: "client" } : {}),
         ...(a.attach ? { attach: String(a.attach) } : {}),
         ...(a.caps ? { caps: a.caps } : {}),
         ...(a.knobs ? { knobs: a.knobs } : {}),
@@ -2149,6 +2150,20 @@ const server = Bun.serve({
             if (!id) { ws.send(JSON.stringify({ type: "error", error: "behavior wants {id, src|remove}" })); return; }
             if (args.remove) { args = { id, remove: true }; }
             else {
+              // runtime "client" = a MOD OFFER (docs/leases.md §self-animation):
+              // code visitors may choose to run in their own clients, each by
+              // per-script consent. Publishing code for OTHERS' machines is an
+              // owner act — a stricter gate than binding a sandboxed behavior.
+              const runtime = args.runtime != null ? String(args.runtime) : undefined;
+              if (runtime !== undefined && runtime !== "client") {
+                ws.send(JSON.stringify({ type: "error", error: 'behavior runtime must be "client" (or absent for the server sandbox)' }));
+                return;
+              }
+              if (runtime === "client" && ROLE_RANK[rightsOf(c.world, c.id, c.sub).role] < 2 && !isAdminId(c.id, c.sub)) {
+                c.world.debug("denied", { who: c.id, verb: "behavior", why: "client-runtime mods are owner-only" });
+                ws.send(JSON.stringify({ type: "error", error: "offering mods to visitors' clients is for this world's owner" }));
+                return;
+              }
               const src = String(args.src ?? "");
               if (!/^store\/scripts\/[a-f0-9]{16}\.js$/.test(src) || !existsSync(join(ROOT, "assets", "opt", src))) {
                 c.world.debug("rejected", { who: c.id, verb: "behavior", why: `no such script: ${src} — upload with POST /upload?as=script first` });
@@ -2175,6 +2190,7 @@ const server = Bun.serve({
                 ...(capsIn.selfOnly != null ? { selfOnly: Boolean(capsIn.selfOnly) } : {}),
               };
               args = { id, src, ...(attach ? { attach } : {}),
+                ...(runtime === "client" ? { runtime: "client" } : {}),
                 ...(Object.keys(caps).length ? { caps } : {}),
                 ...(args.knobs != null ? { knobs: args.knobs } : {}) };   // author = entry.actor, never client-supplied
             }

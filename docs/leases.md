@@ -118,8 +118,12 @@ protocol:
 Your own body needs no lease at all — your client owns it; a runtime-loaded
 script that drives your bones and streams your presence is just *you,
 moving*. The `EW` debug surface exposes enough today (bone nodes via
-`me()`, `myState.pose`, `sendVerb`); a curated `EW.lease` facade covers
-entities. Trust note: an in-page script speaks AS you — loading one is a
+`me()`, `myState.pose`, `sendVerb`); `EW.lease` covers entities, and the
+🧩 mods panel (client/lib/mods.js) makes the whole tier a first-class UI:
+local scripts in IndexedDB run as trusted in-page modules with tick, UI
+(panels/frames), and dispose hooks; a world's OWNER may promote one to the
+server store, and every visitor chooses — per exact script hash, or by a
+per-world wildcard — whether it runs in THEIR page. Nothing auto-executes. Trust note: an in-page script speaks AS you — loading one is a
 mod-install decision. Untrusted code should instead join as **its own
 participant** (own identity, own rights, animating others only through
 leases it negotiates) — a spirit with its own body, not a hand in your

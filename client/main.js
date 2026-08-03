@@ -39,6 +39,7 @@ import { makeFrame } from './lib/frames.js';
 import { Ragdoll } from './lib/ragdoll.js';
 import { initBodyDrag, updateBodyDrag, beingDragged, revokeDragged, dragState } from './lib/bodydrag.js';
 import { initPhysObj, tickPhysObj, kick, leaseApi } from './lib/physobj.js';
+import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { shedALight, litCount } from './lib/lights.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { framesHeld } from './lib/loadwork.js';
@@ -491,6 +492,7 @@ function clearPins() {
 }
 
 initPhysObj({ myPos: () => myState.pos });
+initMods();   // 🧩 runtime client scripts: local trusted mods + world offers
 
 initBodyDrag({
   pushable: () => pushable,
@@ -959,6 +961,8 @@ function frame(now) {
                                  // land in the same frame's avatar.update
   BC('physobj');
   tickPhysObj(dt, now);          // entity leases I hold (kicked balls, etc.)
+  BC('mods');
+  tickMods(dt, now);             // runtime-loaded client scripts (🧩 mods)
   BC('remotes');
   updateRemotes(dt, now);
   BC('gaze');
@@ -1081,6 +1085,7 @@ globalThis.EW = {
   skyArgs, sendVerb, setPosable, get posable() { return posable; },
   setPushable, get pushable() { return pushable; }, dragState,
   lease: leaseApi,   // the entity-lease surface runtime plugins script against
+  mods: modsApi,     // load/run/offer runtime client scripts (🧩)
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)
