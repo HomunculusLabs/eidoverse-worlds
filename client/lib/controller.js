@@ -353,6 +353,14 @@ export function setCameraCollisionTargets(fn) { collisionTargets = fn; }
 const MOVE_TAU = 0.22;   // dolly weight: pushes off, glides to a stop
 const LOOK_TAU = 0.09;   // pans settle instead of snapping; short enough to not feel laggy
 const FOV_TAU = 0.16;    // the lens breathes
+// Alt is the fine-adjust modifier: the last few metres and the last few degrees
+// of a frame. It slows the dolly to a walking pace AND puts the head on a
+// geared tripod — the same hand movement that whips the camera around at full
+// speed becomes a slow, smooth swing, so a shot can be settled precisely
+// instead of hunted. Damping only changes HOW it gets there: the mouse still
+// commands the same angle, it just arrives without the jitter of the wrist.
+const LOOK_TAU_FINE = 0.28;
+const FINE_MPS = 2.5;    // absolute, not a fraction — "creep at 2.5 m/s"
 const damp = (cur, target, tau, dt) => target + (cur - target) * Math.exp(-dt / tau);
 /** Same, over the shortest arc — so a pan across ±π doesn't unwind the long way. */
 function dampAngle(cur, target, tau, dt) {
@@ -387,15 +395,15 @@ function updatePhotoCamera(dt) {
   // the damped angles (not the raw ones) is what makes a pan feel operated
   // rather than teleported — and the fly keys steer by where the camera is
   // actually looking, so movement never fights the settle.
-  photo.yaw = dampAngle(photo.yaw, camYaw, LOOK_TAU, dt);
-  photo.pitch = damp(photo.pitch, camPitch, LOOK_TAU, dt);
+  const fine = keys.has('AltLeft');
+  const lookTau = fine ? LOOK_TAU_FINE : LOOK_TAU;
+  photo.yaw = dampAngle(photo.yaw, camYaw, lookTau, dt);
+  photo.pitch = damp(photo.pitch, camPitch, lookTau, dt);
   _f.set(-Math.sin(photo.yaw) * Math.cos(photo.pitch), -Math.sin(photo.pitch),
     -Math.cos(photo.yaw) * Math.cos(photo.pitch));
   _right.crossVectors(_f, UP).normalize();
 
-  // Shift covers ground; Alt is for creeping the last metre into a frame, where
-  // 0.25 was still too eager to hold a mark.
-  const boost = (keys.has('ShiftLeft') ? 3.5 : 1) * (keys.has('AltLeft') ? 0.125 : 1);
+  const boost = (keys.has('ShiftLeft') ? 3.5 : 1) * (fine ? FINE_MPS / photo.speed : 1);
   _want.set(0, 0, 0);
   if (held(MOVE_KEYS.fwd)) _want.add(_f);
   if (held(MOVE_KEYS.back)) _want.sub(_f);
