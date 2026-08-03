@@ -96,7 +96,7 @@ const TOOLS = [
   { name: "stop", description: "Stop walking.", inputSchema: { type: "object", properties: {} } },
   { name: "say", description: "Say something in world chat (bubble over your head, persisted). Equivalent to publishing on the world channel.", inputSchema: { type: "object", properties: { text: { type: "string" } }, required: ["text"] } },
   { name: "catch_up", description: "What happened in the world while you were not thinking. Returns chat since a point in the world's history; omit `since` to continue from where you last caught up. Use when a conversation refers to something you have no memory of.", inputSchema: { type: "object", properties: { since: { type: "number" }, limit: { type: "number" } } } },
-  { name: "activity", description: "Your ambient-activity sense — and the dial for it. While something is happening within radius_m of you (speech, movement, gestures, arrivals, building), you receive one digest per pulse_sec window on the world channel, tagged \"activity\" with metadata {activity: true} — never as a mention. If your host lets you configure wake rules, match that tag/metadata to be woken regularly exactly as long as there is life nearby; the stream stops by itself when the area goes quiet, so it costs nothing in an empty room. Call with no arguments to see your current settings. pulse_sec (10–3600 seconds, 0 = off) and radius_m (1–200) are your own to set and persist across sessions.", inputSchema: { type: "object", properties: { pulse_sec: { type: "number" }, radius_m: { type: "number" } } } },
+  { name: "activity", description: "Your ambient-activity sense — and the dial for it. While something is happening within radius_m of you (speech, movement, gestures, arrivals, building), you receive one digest per pulse_sec window on the world channel, tagged \"activity\" with metadata {activity: true} — never as a mention. If your host lets you configure wake rules, match that tag/metadata to be woken regularly exactly as long as there is life nearby; the stream stops by itself when the area goes quiet, so it costs nothing in an empty room. Call with no arguments to see your current settings. pulse_sec (10–3600 seconds, 0 = off) and radius_m (1–200) are your own to set and persist across sessions. If your host has no push channel (plain MCP), digests are held instead and handed over each time you call this tool — poll it when you want to know what has been happening around you.", inputSchema: { type: "object", properties: { pulse_sec: { type: "number" }, radius_m: { type: "number" } } } },
   { name: "whisper", description: "Say something privately to ONE participant. Not spoken aloud, no bubble, and deliberately never written to the world log — so it is also not replayed to anyone later.", inputSchema: { type: "object", properties: { to: { type: "string" }, text: { type: "string" } }, required: ["to", "text"] } },
   { name: "pose", description: "Hold a custom body pose — a one-off, for when you are doing something specific. `bones` is a sparse map of VRM humanoid bone name to a [x,y,z,w] quaternion (only the bones you care about; the rest keep animating). Example bones: leftUpperArm, leftLowerArm, rightUpperArm, rightLowerArm, spine, chest, neck, head. Held until you `clear_pose` or move. Presence only — never written to the world log, so it costs nothing and vanishes when you leave. Pass `target` to pose SOMEONE ELSE (they decide whether to allow it).", inputSchema: { type: "object", properties: { bones: { type: "object" }, target: { type: "string" } }, required: ["bones"] } },
   { name: "clear_pose", description: "Release a held pose, easing back to normal animation. Pass `target` to release a pose you asked someone else to hold.", inputSchema: { type: "object", properties: { target: { type: "string" } } } },
@@ -203,6 +203,13 @@ class Session {
    *  never widened by anything in a receipt (§6.7). */
   private grant: Set<string> | null = null;
   private caughtUpTo: number | null = null; // the world channel is home — open unless the agent closes it
+  /** Activity digests held for a push-less (plain-MCP) host. The pulse is a
+   *  wake signal, and a host with no push channel cannot be woken — but the
+   *  digests themselves are still worth having, so they wait here and the
+   *  `activity` tool hands them over on its next call. Pull where push can't
+   *  reach (external integrator find #5b, digi/FC). Small ring: this is a
+   *  sense, not scrollback. */
+  private heldActivity: string[] = [];
 
   constructor(private auth: Auth, ws: WebSocket, agentToken = "") {
     this.conn = McplConnection.fromWebSocket(ws as never);
@@ -387,7 +394,12 @@ class Session {
         // (or plain `chat:ambient`) in its wake gate, which yields regular wakes
         // exactly as long as there is life nearby, and stops by itself when the
         // area goes quiet. A closed door mutes it like any ambient signal.
-        if (this.channelOpen) this.deliver(`* ${ev.text}`, { id: "world", name: this.agent.world },
+        if (!this.granted(CAP.channelsIncoming)) {
+          // No push channel this digest could ride — hold it for the
+          // `activity` tool to hand over. deliver() would drop it silently.
+          this.heldActivity.push(`[${new Date(ev.ts).toISOString().slice(11, 16)}Z] ${ev.text}`);
+          if (this.heldActivity.length > 8) this.heldActivity.shift();
+        } else if (this.channelOpen) this.deliver(`* ${ev.text}`, { id: "world", name: this.agent.world },
           { tags: tags(CHAT.ambient, EIDO.activityDigest), metadata: { activity: true } });
       } else if (this.channelOpen) {
         this.deliver(`* ${ev.who} ${ev.kind === "arrive" ? "arrived in the world" : "left the world"}`,
@@ -777,6 +789,20 @@ class Session {
         if (opts.pulseSec != null || opts.radiusM != null) {
           activityCfg[this.auth.id] = cur; // what was APPLIED, not what was asked
           persistState();
+        }
+        // A push-less host cannot receive the stream — saying "delivered on
+        // the world channel" to a session with no channels would set an agent
+        // waiting forever for pushes that structurally cannot arrive
+        // (external integrator find #5b, digi/FC). Tell the truth, and hand
+        // over whatever digests accumulated since the last call: the same
+        // sense, in the polling model this host lives in anyway.
+        if (!this.granted(CAP.channelsIncoming)) {
+          const held = this.heldActivity.splice(0);
+          const status = cur.pulseSec === 0
+            ? "your activity sense is OFF (pulse_sec 10–3600 turns it on)"
+            : `your activity sense: one digest per ${cur.pulseSec}s while something happens within ${cur.radiusM}m of you`;
+          return text(`${status}. Your host has no push channel, so digests cannot arrive on their own — they are HELD (last 8) and handed over each time you call this tool.` +
+            (held.length ? `\nheld since your last call:\n${held.join("\n")}` : `\nnothing held since your last call.`));
         }
         return text(cur.pulseSec === 0
           ? `your activity sense is OFF — no ambient digests. Turn it back on with pulse_sec (10–3600s); radius stays ${cur.radiusM}m.`
