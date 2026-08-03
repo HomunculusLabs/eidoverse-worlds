@@ -138,16 +138,6 @@ export const TUNING = {
   SLEEP_DAMP: 0.8,         // ...harder once nearly still, see _solve
   YIELD: 0.5,              // fraction of an angular violation fixed per pass
   CAPSULE_SOFT: 0.6,       // fraction of an overlap resolved per pass
-  TWIST_DAMP: 0.88,        // per frame, on the twist velocity
-  TWIST_STIFF: 26,         // rad/s per rad — passive pull back to neutral
-  // A driver for twist, off by default. A limp bone lagging its parent's roll
-  // is the one physically motivated source of twist in a model with no angular
-  // momentum about bone axes — and measured, it only ever ADDS twist: mean
-  // limb twist 8° at 0, 18° at 0.05, 34° at 0.2, with the worst case unmoved.
-  // There is no torque here for it to be answering, so the honest value is
-  // zero and the state below is what bounds it if anything ever drives it (a
-  // dragged or puppeted limb would).
-  TWIST_LAG: 0,
   SETTLE_V: 0.06,          // speed below which we call it settled...
   SETTLE_TIME: 0.4,        // ...for this long, in SECONDS (was 24 FRAMES, which
                            // meant 0.17s at 144Hz and 0.8s at 30Hz)
@@ -231,47 +221,6 @@ const CONE = [
 // plane. It cannot go to zero: this model has no hip or shoulder ROTATION, so
 // a limb that has twisted has nowhere to put it but here. These are the
 // smallest values the fleet stays stable at.
-// TWIST — a bone's roll about its own length, as REAL STATE.
-//
-// The particle sim gives directions, never roll, so roll has to come from
-// somewhere. Deriving it against the WORLD (a fixed rest direction, or a
-// carried reference) drifts: parallel transport has holonomy, so a limb swung
-// around a loop comes back rotated by the solid angle it enclosed, and a
-// tumbling arm encloses a lot of sphere. Measured that way, upper arms ended a
-// tumble 144° rolled and stayed there.
-//
-// Deriving it against the PARENT does not drift, because it is a function of
-// the current state and not of the path taken to reach it. The one place that
-// construction could fail is a bone swung a full 180° from its parent, and the
-// joint limits above already forbid that — the hinges stop at 150°, the cones
-// at 55-85°, the spine at 25°. The limits are what make this well posed.
-//
-// What is left over is genuine twist, and it is a state variable with inertia,
-// damping, a spring back to neutral and a hard stop, like every other joint
-// quantity here. With no driver it sits at zero, which is the right answer for
-// a limp limb in a model that carries no angular momentum about a bone's own
-// axis — and zero is exactly what the parent-relative frame makes reachable.
-// Measured, limb twist at settle: 97° mean and 172° worst before, 0° now, on
-// every driven bone but the pelvis (whose "twist" is the body's own roll and
-// belongs there). `max` is the stop, in degrees: shoulders and forearms turn a
-// lot, spines and shins hardly at all.
-const TWIST = {
-  spine: 25, chest: 25, neck: 45,
-  leftUpperArm: 75, rightUpperArm: 75,
-  leftLowerArm: 80, rightLowerArm: 80,     // pronation/supination
-  leftUpperLeg: 40, rightUpperLeg: 40,
-  leftLowerLeg: 25, rightLowerLeg: 25,
-};
-// Which bone each one twists AGAINST. The drive walks CHAINS parents-first, so
-// a parent's frame is always resolved before its children ask for it.
-const TWIST_PARENT = {
-  spine: 'hips', chest: 'spine', neck: 'chest',
-  leftUpperArm: 'chest', rightUpperArm: 'chest',
-  leftLowerArm: 'leftUpperArm', rightLowerArm: 'rightUpperArm',
-  leftUpperLeg: 'hips', rightUpperLeg: 'hips',
-  leftLowerLeg: 'leftUpperLeg', rightLowerLeg: 'rightUpperLeg',
-};
-
 const HINGE = [
   // a               b                 c            dir  maxFlex°  sideways°
   ['leftUpperArm',  'leftLowerArm',  'leftHand',    +1,   145,      12],
@@ -305,16 +254,6 @@ const _bz = new THREE.Vector3();
 const _by = new THREE.Vector3();
 const _mat = new THREE.Matrix4();
 const _qd2 = new THREE.Quaternion();
-const _qBody = new THREE.Quaternion();
-const _qs = new THREE.Quaternion();
-const _qsi = new THREE.Quaternion();
-const _qL = new THREE.Quaternion();
-const _qt = new THREE.Quaternion();
-const _qpi = new THREE.Quaternion();
-const _t2 = new THREE.Vector3();
-const _t3 = new THREE.Vector3();
-const _qtw = new THREE.Quaternion();
-const _X = new THREE.Vector3(1, 0, 0);
 const _s1 = new THREE.Vector3();   // swing: correction direction
 const _s2 = new THREE.Vector3();   // swing: velocity probe
 const _ca = new THREE.Vector3();
@@ -356,19 +295,6 @@ function rollRef(dir, up, frame) {
     if (basisOf(dir, ax, _qd2)) { up.copy(_bz); return true; }
   }
   return false;
-}
-
-/** The roll component of `q` about `axis` — the twist half of a swing-twist
- *  decomposition, signed, in radians. */
-function twistAbout(q, axis) {
-  _t3.set(q.x, q.y, q.z);
-  const along = _t3.dot(axis);
-  _qtw.set(axis.x * along, axis.y * along, axis.z * along, q.w);
-  if (_qtw.lengthSq() < 1e-12) return 0;
-  _qtw.normalize();
-  let a = 2 * Math.acos(THREE.MathUtils.clamp(_qtw.w, -1, 1));
-  if (a > Math.PI) a -= Math.PI * 2;
-  return along < 0 ? -a : a;
 }
 
 export function closestParams(p1, q1, p2, q2, out) {
@@ -520,20 +446,31 @@ export class Ragdoll {
     // ---- capsules: every BONE is a fat segment, and pairs of them push apart
     this._buildCapsules();
 
-    // per-driven-bone rest reference, expressed in its TWIST PARENT's frame.
+    // per-driven-bone rest reference: its world quaternion, the world direction
+    // to its child, and a FULL rest basis — all from the LIVE skeleton, so the
+    // tumble starts exactly where the body already is (the delta is identity at
+    // t=0).
     //
-    // restLocal is this bone's rest frame seen from the frame it hangs off. Each
-    // step the live direction is expressed in that same parent frame and the
-    // minimal arc from restLocal's own axis carries the frame across — a
-    // function of current state only, with no memory and therefore no drift.
-    // Roll is then nobody's accident: it is `tw`, integrated below.
+    // The basis is the point. Rotating restDir onto the live direction with a
+    // minimal arc gives the right SWING and a ROLL with no memory: roll comes
+    // out as a function of the current direction alone, and near the antipode
+    // of restDir it is barely a function of that either, since every axis
+    // perpendicular to restDir is an equally good arc axis there.
+    //
+    // So the roll ACCUMULATES. Not as a snap — measured, the two drives differ
+    // by at most 19° in any single frame — but as a drift that nothing carries
+    // back: 3175° of unrequested roll over a fleet tumble against 5° here. Ten
+    // frames of it is half a turn, and since nothing returns it the limb simply
+    // stays twisted, while its mirror took a different path and did not. That
+    // is the knee that twists 180° and never untwists.
+    //
+    // A basis has roll defined everywhere, and carrying it (see rollRef) rather
+    // than rebuilding it each frame is what removes the drift: the reference
+    // turns exactly as far as the bone does and no further, which is also what
+    // an untorqued limb does with its twist.
     this._frame(this.p);
-    _mat.makeBasis(this.frame.r, this.frame.u, this.frame.f);
-    const bodyRest = new THREE.Quaternion().setFromRotationMatrix(_mat);
     const axes = [this.frame.r, this.frame.u, this.frame.f];
-
     this.drive = [];
-    this.driveBy = new Map();
     for (const [bone, child] of CHAINS) {
       const bn = this.nodes[bone];
       if (!bn || !this.p[child]) continue;
@@ -541,38 +478,22 @@ export class Ragdoll {
       _v.copy(this.p[child]).sub(bwp);
       if (_v.lengthSq() < 1e-8) continue;
       const dir = _v.clone().normalize();
-      // any stable reference will do for the REST frame — it is only ever used
-      // as the fixed thing the live frame is measured against
       let ref = 0;
       for (let i = 1; i < 3; i++) {
         if (Math.abs(dir.dot(axes[i])) < Math.abs(dir.dot(axes[ref]))) ref = i;
       }
-      const restFrame = new THREE.Quaternion();
-      if (!basisOf(dir, axes[ref], restFrame)) continue;
-
-      const tp = TWIST_PARENT[bone] ?? null;
-      const parentRest = tp ? this.driveBy.get(tp)?.restFrame : bodyRest;
-      if (tp && !parentRest) continue;                 // parent bone absent on this rig
-      const restLocal = parentRest.clone().invert().multiply(restFrame);
-
-      const d = {
-        bone, child, twistParent: tp,
-        restFrame,
-        restFrameInv: restFrame.clone().invert(),
-        restLocal,
-        restLocalAxis: new THREE.Vector3(1, 0, 0).applyQuaternion(restLocal),
+      const up = new THREE.Vector3();
+      const restBasis = new THREE.Quaternion();
+      if (!basisOf(dir, axes[ref], restBasis)) continue;
+      up.copy(_bz);
+      this.drive.push({
+        bone, child, up,
+        restDir: dir,
+        restBasisInv: restBasis.invert(),
         restQuat: bn.getWorldQuaternion(new THREE.Quaternion()),
         parent: bn.parent,
-        // ---- twist, as state
-        tw: 0, twv: 0,
-        twMax: (TWIST[bone] ?? 180) * D2R,
-        frameW: restFrame.clone(),                     // resolved each step
-        swingW: restFrame.clone(),                     // ...before twist
-      };
-      this.drive.push(d);
-      this.driveBy.set(bone, d);
+      });
     }
-    this.bodyRest = bodyRest;
 
     this.rootStartY = avatar.root.position.y;
     // How far the model origin sits below the hips — MEASURED, never assumed:
@@ -1094,11 +1015,7 @@ export class Ragdoll {
       this.avatar.root.position.y = Math.min(this.rootStartY, y);
     }
 
-    // ---- map particles back to bone rotations (parent-relative + twist state)
-    _mat.makeBasis(this.frame.r, this.frame.u, this.frame.f);
-    _qBody.setFromRotationMatrix(_mat);
-    const dtF = Math.max(1e-4, n * FIXED_DT);
-
+    // ---- map particles back to bone rotations (world-reference method)
     const pose = {};
     for (const d of this.drive) {
       const bn = this.nodes[d.bone];
@@ -1106,39 +1023,15 @@ export class Ragdoll {
       _b.copy(this.p[d.child]).sub(bwp);
       if (_b.lengthSq() < 1e-6) continue;
       _b.normalize();
-
-      // the frame this bone hangs off, already resolved (parents come first)
-      const par = d.twistParent ? this.driveBy.get(d.twistParent) : null;
-      _qp.copy(par ? par.frameW : _qBody);
-
-      // live direction, in that parent frame
-      _t2.copy(_b).applyQuaternion(_qpi.copy(_qp).invert());
-      if (_t2.dot(d.restLocalAxis) < -0.999) continue;   // 180° from rest: the
-      // joint limits are supposed to make this unreachable; if it ever happens,
-      // hold the previous frame rather than invent a roll
-      _qs.setFromUnitVectors(d.restLocalAxis, _t2);
-      _qs.multiply(d.restLocal);                         // swing-free, in parent
-      _qL.copy(_qp).multiply(_qs);                       // ...and in the world
-
-      // ---- twist: a limp bone LAGS its parent's roll, then springs back
-      const rollRate = twistAbout(_qt.copy(_qL).multiply(_qsi.copy(d.swingW).invert()), _b);
-      d.swingW.copy(_qL);
-      d.twv -= rollRate * TUNING.TWIST_LAG / dtF;
-      d.twv *= TUNING.TWIST_DAMP;
-      d.twv -= d.tw * TUNING.TWIST_STIFF * dtF;
-      d.tw += d.twv * dtF;
-      if (d.tw > d.twMax) { d.tw = d.twMax; d.twv = 0; }
-      else if (d.tw < -d.twMax) { d.tw = -d.twMax; d.twv = 0; }
-
-      _qs.multiply(_qt.setFromAxisAngle(_X, d.tw));      // roll in the bone frame
-      d.frameW.copy(_qp).multiply(_qs);
-
-      _qd.copy(d.frameW).multiply(d.restFrameInv).multiply(d.restQuat);
+      if (!rollRef(_b, d.up, this.frame)) continue;
+      _qd.copy(_qd2);
+      _qd.multiply(d.restBasisInv);                    // rest basis -> live one
+      _qd.multiply(d.restQuat);                        // -> new world quaternion
       // world -> local (parent may itself have moved this frame)
-      d.parent.getWorldQuaternion(_qpi).invert();
-      _qpi.multiply(_qd);
-      bn.quaternion.copy(_qpi);
-      pose[d.bone] = [+_qpi.x.toFixed(4), +_qpi.y.toFixed(4), +_qpi.z.toFixed(4), +_qpi.w.toFixed(4)];
+      d.parent.getWorldQuaternion(_qp).invert();
+      _qp.multiply(_qd);
+      bn.quaternion.copy(_qp);
+      pose[d.bone] = [+_qp.x.toFixed(4), +_qp.y.toFixed(4), +_qp.z.toFixed(4), +_qp.w.toFixed(4)];
     }
     this.pose = pose;
     // apply locally too, held, so the owner sees its own flop this frame
