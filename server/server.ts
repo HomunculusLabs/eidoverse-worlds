@@ -449,6 +449,79 @@ function foldEntry(st: WorldState, e: LogEntry): void {
   }
 }
 
+// ---------------------------------------------------------------- motion lint
+//
+// The fold is blind and the evaluator is client-side — which means a motion
+// whose params the evaluator can't read fails as pure SILENCE: rights-legal,
+// shape-legal, folded, and perfectly still. Fable spent a night debugging
+// exactly that, reading a flight recorder that truthfully contained nothing,
+// because the server had no opinion and the one component type it DOES
+// understand (it stamps t0, computes impulses) never shared what it knew.
+//
+// This is the sharing. Advisory only — the entry has already folded and
+// nothing here can (or should) block it. Runs detached from the verb path;
+// findings land in the recorder within a second, kind "motion-lint".
+
+const MOTION_TYPES: Record<string, Set<string>> = {
+  pendulum: new Set(["type", "axis", "pivot", "amp", "amplitude", "period", "phase", "damp", "maxAmp", "t0", "part", "cause", "by"]),
+  spin: new Set(["type", "axis", "pivot", "degPerSec", "rpm", "phase", "t0", "part", "cause", "by"]),
+  orbit: new Set(["type", "center", "radius", "degPerSec", "phase", "face", "t0", "part", "cause", "by"]),
+  bob: new Set(["type", "axis", "amp", "amplitude", "period", "phase", "t0", "part", "cause", "by"]),
+  path: new Set(["type", "points", "speed", "duration", "loop", "face", "t0", "part", "cause", "by"]),
+};
+
+function resolveLibFile(lib: string): string | null {
+  const rel = normalize(lib).replace(/^\/+/, "");
+  if (rel.includes("..") || !/\.(glb|vrm)$/i.test(rel)) return null;
+  for (const base of [OPT_DIR, LIBRARY_DIR]) {
+    const p = normalize(join(base, rel));
+    if (p.startsWith(base) && existsSync(p)) return p;
+  }
+  return null;
+}
+
+function lintMotion(w: World, entry: LogEntry): void {
+  // detached on purpose: geometry parsing is async and the verb path is not
+  void (async () => {
+    try {
+      const a = entry.args as Record<string, unknown>;
+      const m: Record<string, unknown> = entry.verb === "motion" ? a
+        : (a?.data as Record<string, unknown>) ?? {};
+      const type = m.type;
+      if (type == null) return;                       // coming to rest — nothing to lint
+      const id = String(a.id ?? "");
+      const part = typeof m.part === "string" ? m.part
+        : entry.verb === "comp" && String(a.type ?? "").startsWith("motion:") ? String(a.type).slice(7) : null;
+      const known = MOTION_TYPES[String(type)];
+      if (!known) {
+        w.debug("motion-lint", { entity: id, by: entry.actor,
+          why: `motion type "${type}" is unknown to current clients (${Object.keys(MOTION_TYPES).join("/")}) — the thing will stand still until an evaluator learns it` });
+        return;
+      }
+      const ignored = Object.keys(m).filter((k) => k !== "id" && !known.has(k) && !k.startsWith("_"));
+      if (ignored.length) {
+        w.debug("motion-lint", { entity: id, by: entry.actor,
+          why: `params the evaluator will ignore on ${type}: ${ignored.join(", ")} (accepted: ${[...known].filter((k) => !["cause", "by", "part", "type"].includes(k)).join(", ")})` });
+      }
+      if (part) {
+        const ent = w.state.entities[id];
+        const file = ent?.lib ? resolveLibFile(ent.lib) : null;
+        const sum = file ? await summarizeGlb(file) : null;
+        if (sum) {
+          const names = sum.nodes.map((n) => n.name);
+          if (!names.includes(part)) {
+            const orphanNote = sum.orphans?.includes(part)
+              ? ` — "${part}" IS in the file but attached to no scene: an export leftover no client renders`
+              : "";
+            w.debug("motion-lint", { entity: id, by: entry.actor,
+              why: `part "${part}" is not among ${id}'s rendered parts [${names.join(", ")}]${orphanNote}` });
+          }
+        }
+      }
+    } catch { /* lint must never hurt anything */ }
+  })();
+}
+
 // ---------------------------------------------------------------- reactions
 //
 // The first slice of the behavior runtime: an entity's `reactions` component
@@ -1994,6 +2067,11 @@ const server = Bun.serve({
           // Runtime scripts hear causes too — and a (re)bind reconciles sandboxes.
           if (msg.verb === "behavior") c.world.bhv.sync();
           c.world.bhv.onEntry(entry);
+          // a folded motion that can't move is a silence someone will debug
+          // at 4am — lint it into the recorder while the fold is still warm
+          if (msg.verb === "motion" || (msg.verb === "comp" && /^motion(:|$)/.test(String((args as any).type ?? "")))) {
+            lintMotion(c.world, entry);
+          }
           // A ban or kick lands NOW on every matching body, not at some future
           // join — the fold recorded the fact; this is the fact taking effect.
           if (msg.verb === "ban" || msg.verb === "kick") {
