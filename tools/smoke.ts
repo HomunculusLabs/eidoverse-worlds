@@ -91,7 +91,7 @@ const logLines = () => {
 // The first embodied join to a fresh world auto-appends a `grant` making that
 // person its owner (per-world roles). It is real history; these tests care
 // about AUTHORED content, so they discount it.
-const content = (arr: any[]) => arr.filter((x) => (x.verb ?? x.entry?.verb) !== "grant");
+const content = (arr: any[]) => arr.filter((x) => !["grant", "genesis"].includes(x.verb ?? x.entry?.verb));
 const contentLog = () => content(logLines());
 
 // ---- the run ---------------------------------------------------------------
@@ -125,11 +125,12 @@ try {
   await alice.connect();
   check("join returns a snapshot", !!alice.snapshot);
   check("snapshot names you", alice.snapshot.you === "alice", alice.snapshot.you);
-  check("a fresh world's only entry is the ownership grant",
-    alice.snapshot.entries.length === 1 && alice.snapshot.entries[0].verb === "grant",
+  check("a fresh world opens with genesis, then the ownership grant",
+    alice.snapshot.entries.length === 2 && alice.snapshot.entries[0].verb === "genesis"
+      && alice.snapshot.entries[1].verb === "grant",
     JSON.stringify(alice.snapshot.entries.map((e: any) => e.verb)));
   check("the first embodied joiner is made owner",
-    alice.snapshot.entries[0]?.args?.id === "alice" && alice.snapshot.entries[0]?.args?.role === "owner");
+    alice.snapshot.entries[1]?.args?.id === "alice" && alice.snapshot.entries[1]?.args?.role === "owner");
 
   // --- verbs are ordered, echoed, and persisted
   alice.verb("spawn", { id: "box1", lib: "eidoverse/assets/models/crate_large_red.glb", pos: [1, 0, 2], yaw: 0 });
@@ -139,7 +140,7 @@ try {
   const logs = content(alice.of("log"));
   check("verbs echo back to their author", logs.length === 3, `${logs.length} echoes`);
   check("sequence numbers are dense and ordered",
-    logs.every((m, i) => m.entry.seq === i + 1), logs.map((m) => m.entry.seq).join(","));  // seq 0 is the grant
+    logs.every((m, i) => m.entry.seq === i + 2), logs.map((m) => m.entry.seq).join(","));  // seq 0 genesis, 1 the grant
   check("entries carry their actor", logs.every((m) => m.entry.actor === "alice"));
 
   check("the log is on disk", contentLog().length === 3, `${contentLog().length} content lines`);
@@ -262,7 +263,7 @@ try {
       return existsSync(fp) ? readFileSync(fp, "utf8").split("\n").filter(Boolean) : [];
     })();
     check("the full history stays on disk after folding",
-      foldLog.length === 211, `${foldLog.length} lines (210 authored + ownership grant)`);
+      foldLog.length === 212, `${foldLog.length} lines (210 authored + genesis + ownership grant)`);
     check("a snapshot file was written",
       existsSync(join(worldsDir, fw, "snapshot.json")));
 
@@ -497,7 +498,7 @@ try {
     const pl = (() => { const fp = join(worldsDir, pw, "log.jsonl");
       return existsSync(fp) ? readFileSync(fp, "utf8").split("\n").filter(Boolean) : []; })();
     check("no pose, animation or puppet is ever written to the log",
-      pl.every((l) => { const v = JSON.parse(l).verb; return v === "grant"; }),
+      pl.every((l) => { const v = JSON.parse(l).verb; return v === "grant" || v === "genesis"; }),
       `${pl.length} lines: ${pl.map((l) => JSON.parse(l).verb).join(",")}`);
 
     poser.close(); watcher.close();
