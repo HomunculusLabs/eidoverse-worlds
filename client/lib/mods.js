@@ -30,6 +30,7 @@ import { bus, CONFIG, report } from './core.js';
 import { behaviors } from './world.js';
 import { sendVerb } from './net.js';
 import { makeSection, toast, flashHint } from './ui.js';
+import { physicsEnabled, setPhysicsEnabled } from './physobj.js';
 import { makeFrame } from './frames.js';
 import { logChat } from './chat.js';
 
@@ -230,6 +231,10 @@ export function initMods() {
           <button data-osrc="${esc(id)}" title="read the code before trusting it">view</button></div>`;
       }).join('');
       body.innerHTML = `<div class="stack">
+        <div><b>built-in</b> — the house plugins, dogfooding the same tier</div>
+        <div>⚙ object physics <span style="color:var(--dim)">(balls, boxes, punts — the SIM half; you always SEE others' physics)</span>
+          <button data-corephys="1">${physicsEnabled() ? 'on ✓' : 'off'}</button></div>
+        <hr>
         <div style="color:var(--dim)">local mods run with FULL access, as you — load only code you trust</div>
         ${rows || '<div style="color:var(--dim)">no local mods yet</div>'}
         <div><button data-new="1">+ new mod</button></div>
@@ -252,6 +257,12 @@ export function initMods() {
         if (!b) return;
         const d = b.dataset;
         const mine2 = await listScripts();
+        if (d.corephys) {
+          setPhysicsEnabled(!physicsEnabled());
+          flashHint(physicsEnabled() ? 'object physics on — you simulate again'
+            : 'object physics off — held objects handed off; others simulate for you');
+          return render();
+        }
         if (d.new) { editing = ''; return render(); }
         if (d.cancel) { editing = null; return render(); }
         if (d.save) {

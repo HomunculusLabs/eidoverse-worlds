@@ -33,6 +33,32 @@ const MAX_KICK = 10;
 let hooks = null;              // { myPos: () => Vector3 }
 export function initPhysObj(h) { hooks = h; }
 
+// ---------------------------------------------------------------- the switch
+//
+// Base physics is a BUILT-IN MOD, and mods can be turned off. What the
+// switch governs is precisely the SENDER half of this file: simulating,
+// volunteering for punts, kicking. Off = this client never holds a lease;
+// other clients volunteer and you watch — which is also the low-end-device
+// story (let someone else's machine do the physics).
+//
+// The RECEIVER half — applying other holders' lease streams to entities —
+// is CORE and has no switch, deliberately: disable that and the world
+// forks (a ball frozen on your screen mid-air while everyone else watches
+// it fly). Plugins extend senders, never receivers.
+
+let enabled = localStorage.getItem('ew-phys') !== '0';
+export const physicsEnabled = () => enabled;
+export function setPhysicsEnabled(v) {
+  enabled = !!v;
+  localStorage.setItem('ew-phys', enabled ? '1' : '0');
+  if (!enabled) {
+    // hand everything off honestly: commit each held sim where it stands and
+    // release — the server (or the next volunteer) takes it from there
+    for (const id of [...sims.keys()]) stopSim(id, true);
+    pendingKicks.clear();
+  }
+}
+
 // ---------------------------------------------------------------- my sims
 
 // id -> live sim state. Several at once is fine (juggling is legal).
@@ -175,6 +201,7 @@ const lastClaimed = new Map();   // id -> ts of the last claim we heard — race
  *  kick verb; the sim follows through the volunteer path. */
 export function kick(arg) {
   if (!hooks) return;
+  if (!enabled) return logChat('*', 'your physics mod is off — flip it in 🧩 mods (someone else present can still simulate your punts)');
   const parts = (arg || '').trim().split(/\s+/).filter(Boolean);
   const named = parts.find((x) => !/^[\d.]+$/.test(x));
   const power = Math.min(MAX_KICK, Math.max(1, parseFloat(parts.find((x) => /^[\d.]+$/.test(x))) || 5));
@@ -213,6 +240,7 @@ export function kick(arg) {
  *  immediately, everyone else jitters and stands down if a claim is heard —
  *  the lease table settles any remaining race. */
 bus.on('punt', ({ actor, id, dir, power }) => {
+  if (!enabled) return;                       // volunteering is the mod's act
   const obj = entities.get(id);
   if (!obj || comps.get(id)?.motion) return;
   const p = Math.min(MAX_KICK, Math.max(0.5, Number(power) || 5));
@@ -267,7 +295,9 @@ bus.on('lease', (msg) => {
     return;
   }
   if (op === 'state' && !sims.has(id)) {
-    // another holder's sim, rendered verbatim — this is the whole receiver
+    // another holder's sim, rendered verbatim — this is the whole receiver,
+    // and it is CORE, not the mod: it runs whether or not physics is enabled
+    // (see the switch above — a receiver you can disable forks the world)
     const obj = entities.get(id);
     if (!obj || !Array.isArray(msg.p)) return;
     obj.position.set(msg.p[0], msg.p[1], msg.p[2]);
