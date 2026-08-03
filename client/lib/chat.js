@@ -427,6 +427,15 @@ function runCommand(raw) {
         arg: cmd.toLowerCase() === 'use' ? arg : `${arg} ${cmd.toLowerCase()}`.trim(),
       });
       return true;
+    case 'mount': case 'attach':
+      // /mount <thing> <onto> [slot] — parent one thing to another, keeping
+      // its current world pose (glue, don't teleport). The 🌳 scene panel is
+      // the visual way to do the same.
+      bus.emit('command', { cmd: 'mount', arg });
+      return true;
+    case 'dismount': case 'detach':
+      bus.emit('command', { cmd: 'dismount', arg });
+      return true;
     case 'role':
       bus.emit('command', { cmd: 'role', arg });
       return true;

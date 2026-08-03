@@ -28,6 +28,7 @@ import {
   hasGhost, hasSelection, toggleEditMode, isEditing,
 } from './lib/build.js';
 import { initConjure } from './lib/conjure.js';
+import { initSceneGraph, sceneAttach, sceneDetach } from './lib/scenegraph.js';
 import {
   toast, setHud, setHint, flashHint, buildHelp, toggleHelp,
   openDoor, toggleRoster, initRoster, initDock, paintRoster, panelFrame, el,
@@ -177,6 +178,7 @@ function start() {
   connect();
   initPalette();
   initConjure();   // the orrery panel — prompt → your pick of images → mesh → world
+  initSceneGraph();   // 🌳 the world as a tree + 📜 the scripts that animate it
   setHint('<kbd>WASD</kbd> move · <kbd>Enter</kbd> chat · <kbd>B</kbd> build · <kbd>?</kbd> help');
 
   if (!isViewer) {
@@ -621,6 +623,21 @@ bus.on('command', ({ cmd, arg }) => {
         logChat('*', `${t} [${kind}] ${Object.entries(rest).map(([k, v]) => `${k}=${typeof v === 'string' ? v : JSON.stringify(v)}`).join(' ')}`);
       }
     });
+    return;
+  }
+  if (cmd === 'mount') {
+    // /mount <thing> <onto> [slot] — glue where it stands, or seat in a socket
+    const [child, parent, slot] = (arg || '').trim().split(/\s+/);
+    if (!child || !parent) return logChat('*', 'usage: /mount <thing> <onto> [slot] — parents one thing to another, keeping its pose');
+    if (!entities.get(child) || !entities.get(parent)) return logChat('*', 'both things must exist (and be loaded) here');
+    sceneAttach(child, parent, slot);
+    return;
+  }
+  if (cmd === 'dismount') {
+    const id = (arg || '').trim();
+    if (!id) return logChat('*', 'usage: /dismount <thing>');
+    if (!entities.get(id)?.userData?.mountedTo) return logChat('*', `${id} isn't mounted on anything`);
+    sceneDetach(id);
     return;
   }
   if (cmd === 'use') {
