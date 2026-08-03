@@ -8,6 +8,7 @@ import * as THREE_W from "three/webgpu";
 import * as TSL from "three/tsl";
 import { NoiseGate, SHORT_STINT_MS, APPROACH_REFRACT_MS, APPROACH_RADIUS, REARM_RADIUS,
   ACTIVITY_RADIUS_M, ACTIVITY_PULSE_MS } from "./denoise.ts";
+import { HeadlessBody } from "./physics.ts";
 
 (globalThis as any).THREE = Object.assign({}, THREE_W, TSL);
 
@@ -78,6 +79,8 @@ export class WorldAgent {
   dragAt = 0;                        // last drag sample, for the silence timeout
   pins = new Map<string, number[]>(); // persistent bodydrag nails: joint -> [x,y,z]
   pushable = true;                   // rough-and-tumble consent — accepted by default, like being posed
+  body: HeadlessBody | null | undefined = undefined; // the REAL ragdoll (undefined = not tried yet)
+  private simTicker: ReturnType<typeof setInterval> | null = null;
   private walkDone: ((arrived: boolean) => void) | null = null;
   entities = new Map<string, Entity>();
   /** who/what rides what: mount verbs, keyed by the rider (body or thing) */
@@ -180,6 +183,7 @@ export class WorldAgent {
    *  the body as a zombie that fights its successor over the identity. */
   close() {
     this.closed = true;
+    this.stopSim();
     if (this.ticker) { clearInterval(this.ticker); this.ticker = null; }
     if (this.activityTimer) { clearInterval(this.activityTimer); this.activityTimer = null; }
     this.gate.dispose(); // held narration dies with the session
@@ -328,6 +332,7 @@ export class WorldAgent {
                 break;
               }
               this.draggedBy = msg.by; this.dragAt = Date.now();
+              this.body?.stop(); this.stopSim();   // the dragger's sim owns the tumble now
               this.clip = "ragdoll";
               this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by,
                 text: "(takes hold of your limp body and starts dragging you)" } as any);
@@ -335,23 +340,25 @@ export class WorldAgent {
             }
             if (msg.unpin != null) {
               // pulling one of this body's nails — agents accept, as they
-              // accept being posed: being directed is the point
-              this.pins.delete(String(msg.unpin.joint ?? ""));
+              // accept being posed: being directed is the point. The live sim
+              // lets go of that joint and the body sags from what remains.
+              const j = String(msg.unpin.joint ?? "");
+              if (this.pins.delete(j)) this.body?.setPin(j, null);
               break;
             }
             if (msg.end != null) {
               if (this.draggedBy === msg.by) {
                 this.draggedBy = null;
-                // a release may nail the held joint where the hand left it —
-                // this headless body cannot sim a hang, but it HOLDS: pose
-                // and position stay where the dragger put them, pin streamed
-                // so everyone sees the marker
+                // a release may nail the held joint where the hand left it
                 const pa = msg.pinAt;
                 if (pa?.joint && Array.isArray(pa.at) && pa.at.length === 3 && this.pins.size < 8) {
                   this.pins.set(String(pa.joint), pa.at.map(Number));
                 }
                 this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by,
                   text: pa ? "(nails part of you in place and steps back)" : "(lets go of you)" } as any);
+                // then MY OWN sim takes the body back: it falls from wherever
+                // the hand let go and settles — or hangs, if nails hold it
+                void this.settleFromDrag(msg.pose ?? null);
               }
               break;
             }
@@ -614,7 +621,10 @@ export class WorldAgent {
     // terrain clamp (a lifted body is off the ground on purpose). A silent
     // dragger loses the body; the last streamed pose just holds, lying
     // wherever it was dropped.
-    if (this.draggedBy && Date.now() - this.dragAt > 1200) this.draggedBy = null;
+    if (this.draggedBy && Date.now() - this.dragAt > 1200) {
+      this.draggedBy = null;                 // a silent dragger loses the body
+      void this.settleFromDrag(null);        // — and my own sim settles it
+    }
     if (!this.draggedBy && this.target) {
       const dx = this.target.x - this.pos.x, dz = this.target.z - this.pos.z;
       const dist = Math.hypot(dx, dz);
@@ -630,8 +640,11 @@ export class WorldAgent {
         this.pos.z += (dz / dist) * step;
       }
     }
-    // a nailed body hangs where it was left — no terrain clamp while pinned
-    if (!this.draggedBy && this.pins.size === 0) this.pos.y = this.heightAt(this.pos.x, this.pos.z);
+    // a tumbling, lying, dragged or nailed body owns its own y — the terrain
+    // clamp is for FEET, and none of those states is standing on them
+    if (!this.draggedBy && this.pins.size === 0 && this.clip !== "ragdoll") {
+      this.pos.y = this.heightAt(this.pos.x, this.pos.z);
+    }
     this.ws?.send(JSON.stringify({
       type: "pose",
       pose: {
@@ -644,27 +657,92 @@ export class WorldAgent {
     this.pendingEmote = null; // one-shot: rides exactly one packet
   }
 
-  /** Being pushed, for a body with no physics in-process. It cannot tumble,
-   *  but it CAN land where the shove was taking it: consent first, then
-   *  displacement (≈ half a second of the shove velocity, capped at the same
-   *  wire ceiling browser bodies use), then the slump — and an event, so
-   *  being knocked over is something that happened TO this body, not just to
-   *  its pixels. */
+  /** Being pushed. Consent first; then the REAL tumble — this body runs the
+   *  same Verlet the browsers run, on its own skeleton (parsed once from its
+   *  VRM), and streams the resulting pose like anyone else falling over. The
+   *  slump-with-displacement survives only as the fallback for a process or a
+   *  VRM the sim cannot serve. Either way the event lands: being knocked over
+   *  is something that happens TO this body, not just to its pixels. */
   knockDown(by: string, lean: number[] | null, notice: string) {
     if (!this.pushable || this.draggedBy) return;
-    if (Array.isArray(lean) && lean.length === 3 && lean.every(Number.isFinite)) {
-      const flat = Math.hypot(lean[0], lean[2]);
-      if (flat > 1e-4) {
-        const mag = Math.min(6, flat);
-        this.pos.x += (lean[0] / flat) * mag * 0.4;
-        this.pos.z += (lean[2] / flat) * mag * 0.4;
-      }
-    }
     if (this.target) { this.walkDone?.(false); this.walkDone = null; this.target = null; }
     this.speed = 0;
-    this.heldPose = DOWNED_POSE;
-    this.clip = "ragdoll";
     this.onEvent?.({ ts: Date.now(), kind: "say", who: by, text: notice } as any);
+    void this.tumble(lean);
+  }
+
+  private async ensureBody(): Promise<HeadlessBody | null> {
+    if (this.body !== undefined) return this.body;
+    this.body = await HeadlessBody.create(this.httpBase, this.avatar);
+    return this.body;
+  }
+
+  private async tumble(lean: number[] | null) {
+    const body = await this.ensureBody();
+    if (!body) {
+      // fallback: land where the shove was taking you, then the slump
+      if (Array.isArray(lean) && lean.length === 3 && lean.every(Number.isFinite)) {
+        const flat = Math.hypot(lean[0], lean[2]);
+        if (flat > 1e-4) {
+          const mag = Math.min(6, flat);
+          this.pos.x += (lean[0] / flat) * mag * 0.4;
+          this.pos.z += (lean[2] / flat) * mag * 0.4;
+        }
+      }
+      this.heldPose = DOWNED_POSE;
+      this.clip = "ragdoll";
+      return;
+    }
+    if (this.draggedBy) return;   // a hand arrived while the skeleton loaded
+    body.begin({
+      x: this.pos.x, z: this.pos.z,
+      groundY: this.heightAt(this.pos.x, this.pos.z),
+      yaw: this.yaw,
+      // no direction given = the browser default: you fall the way you face
+      lean: lean ?? [Math.sin(this.yaw) * 0.9, 0, Math.cos(this.yaw) * 0.9],
+      pins: [...this.pins].map(([j, at]) => ({ j, at })),
+    });
+    this.clip = "ragdoll";
+    this.startSim();
+  }
+
+  /** Resume MY OWN sim from wherever a drag left this body — the same
+   *  settle-under-owner-authority browsers do, pins enforced for real. */
+  private async settleFromDrag(pose: Record<string, number[]> | null) {
+    const body = await this.ensureBody();
+    if (!body) { this.heldPose = pose ?? this.heldPose ?? DOWNED_POSE; this.clip = "ragdoll"; return; }
+    if (this.draggedBy) return;
+    body.begin({
+      x: this.pos.x, z: this.pos.z,
+      groundY: this.heightAt(this.pos.x, this.pos.z),
+      yaw: this.yaw,
+      pose: pose ?? this.heldPose ?? null,
+      rootY: this.pos.y,
+      pins: [...this.pins].map(([j, at]) => ({ j, at })),
+    });
+    this.clip = "ragdoll";
+    this.startSim();
+  }
+
+  /** The tumble's own clock: browser-parity 15Hz stepping AND streaming, so a
+   *  falling agent looks exactly like a falling human to every renderer. The
+   *  10Hz main tick keeps running; while the sim owns pos/pose it just
+   *  re-streams the sim's latest truth. */
+  private startSim() {
+    if (this.simTicker) return;
+    this.simTicker = setInterval(() => {
+      const body = this.body;
+      if (!body?.active || this.draggedBy) { this.stopSim(); return; }
+      const out = body.step(1 / 15);
+      if (!out) return;
+      this.heldPose = out.pose;
+      this.pos.x = out.p[0]; this.pos.y = out.p[1]; this.pos.z = out.p[2];
+      this.tick();
+      if (out.done) this.stopSim();   // captured: the held pose IS the outcome
+    }, 66);
+  }
+  private stopSim() {
+    if (this.simTicker) { clearInterval(this.simTicker); this.simTicker = null; }
   }
 
   walkTo(x: number, z: number, run = false, timeoutMs = 90_000): Promise<boolean> {
@@ -675,9 +753,12 @@ export class WorldAgent {
       this.heldPose = null; this.clip = "idle";
     }
     this.pins.clear();      // and walking tears out every nail
+    this.body?.stop(); this.stopSim();   // a body that decides to walk is done tumbling
     // deciding to walk IS getting up — shed the slump, or the body zombie-
     // walks with a knocked-over pose held over the stride
     if (this.heldPose === DOWNED_POSE || this.clip === "ragdoll") { this.heldPose = null; this.clip = "walk"; }
+    // and stand on the ground you got up onto
+    this.pos.y = this.heightAt(this.pos.x, this.pos.z);
     this.target = { x, z, run };
     return new Promise((resolve) => {
       this.walkDone = resolve;
@@ -746,8 +827,13 @@ export class WorldAgent {
   /** Hold a custom pose (yourself). Sparse bone -> [x,y,z,w] quaternion. */
   setPose(bones: Record<string, number[]> | null) {
     this.heldPose = bones;
-    // clearing a slump IS standing up — don't leave the clip lying
-    if (bones == null && this.clip === "ragdoll") this.clip = "idle";
+    // clearing a slump IS standing up — don't leave the clip lying, don't
+    // leave a sim tumbling a body that has decided to stand
+    if (bones == null && this.clip === "ragdoll") {
+      this.body?.stop(); this.stopSim();
+      this.clip = "idle";
+      this.pos.y = this.heightAt(this.pos.x, this.pos.z);
+    }
   }
 
   /** Fire a named emote — a one-shot rider on the next presence packet, the

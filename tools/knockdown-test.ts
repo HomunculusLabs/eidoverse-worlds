@@ -50,23 +50,27 @@ await sleep(400);
 const h = await human("shover");
 await sleep(400);
 
-// 1. radial blast: in radius → displaced away + slumped + perceived
+// 1. radial blast: the REAL tumble — sim pose, displaced away, perceived
 const before = { x: ag.pos.x, z: ag.pos.z };
 h.verb("force", { at: [ag.pos.x - 2, 0, ag.pos.z], power: 4, radius: 6 });
-await sleep(600);
+await sleep(2500);
 check("a blast knocks the agent down", ag.clip === "ragdoll" && ag.heldPose != null, `clip=${ag.clip}`);
+check("...with a SIMULATED pose, not the canned slump",
+  ag.heldPose != null && Object.keys(ag.heldPose).length >= 10 && ag.heldPose !== (ag as any).DOWNED_POSE,
+  `bones=${ag.heldPose ? Object.keys(ag.heldPose).length : 0}`);
 check("...displaced AWAY from the blast", ag.pos.x > before.x + 0.2, `Δx=${(ag.pos.x - before.x).toFixed(2)}`);
+check("...lying, not standing (root followed the hips down)", ag.pos.y < -0.2, `y=${ag.pos.y.toFixed(2)}`);
 check("...and the agent PERCEIVED it", events.some((t) => t.includes("blast")), events.join(" | "));
 
 // 2. walking stands it up clean — no zombie-walk slump
 await ag.walkTo(ag.pos.x + 1, ag.pos.z, false, 10_000);
 check("walking sheds the slump", ag.clip !== "ragdoll" && ag.heldPose == null, `clip=${ag.clip}`);
 
-// 3. directed shove over the puppet wire: displaced along the lean
+// 3. directed shove over the puppet wire: the tumble travels along the lean
 const b2 = { x: ag.pos.x, z: ag.pos.z };
 h.send({ type: "puppet", target: "kd-bot", ragdoll: { lean: [0, 0, 3] } });
-await sleep(600);
-check("a directed shove floors it downwind", ag.clip === "ragdoll" && ag.pos.z > b2.z + 0.5,
+await sleep(2500);
+check("a directed shove floors it downwind", ag.clip === "ragdoll" && ag.pos.z > b2.z + 0.3,
   `clip=${ag.clip} Δz=${(ag.pos.z - b2.z).toFixed(2)}`);
 check("...and named the shover", events.some((t) => t.includes("shover") && t.includes("knocks you over")), events.join(" | "));
 
@@ -88,6 +92,31 @@ const ag2 = new WorldAgent({ url: URL, name: "kd-bot2", world: W });
 await ag2.connect();
 await sleep(600);
 check("a late joiner folding the force history stays on its feet", ag2.clip !== "ragdoll", `clip=${ag2.clip}`);
+
+// 6. drag release with a nail: the agent's OWN sim hangs the body for real —
+// not a held pose pretending, a live Verlet with the pin enforced
+const ag3 = new WorldAgent({ url: URL, name: "kd-bot3", world: W });
+await ag3.connect();
+await sleep(400);
+h.verb("force", { at: [ag3.pos.x - 1, 0, ag3.pos.z], power: 4, radius: 6 });
+await sleep(2000);
+h.send({ type: "bodydrag", target: "kd-bot3", grab: { joint: "head" } });
+await sleep(300);
+h.send({ type: "bodydrag", target: "kd-bot3", pose: {}, p: [ag3.pos.x, 1.2, ag3.pos.z], yaw: 0 });
+await sleep(300);
+h.send({ type: "bodydrag", target: "kd-bot3", end: true, pinAt: { joint: "head", at: [ag3.pos.x, 1.9, ag3.pos.z] } });
+await sleep(2500);
+check("released with a nail: the agent's sim HANGS the body",
+  ag3.pins.size === 1 && ag3.pos.y > -0.3, `pins=${ag3.pins.size} y=${ag3.pos.y.toFixed(2)}`);
+h.send({ type: "bodydrag", target: "kd-bot3", unpin: { joint: "head" } });
+await sleep(2500);
+// A body released dead-still from a vertical head-hang drops feet-first and
+// can LAND STANDING — the solver has no reason to invent a stumble. So the
+// assertion is "came down off the nail", not "ended lying": no longer
+// suspended anywhere near the pin height.
+check("nail pulled: it comes down off the nail",
+  ag3.pins.size === 0 && ag3.pos.y < 0.7, `y=${ag3.pos.y.toFixed(2)}`);
+ag3.close?.();
 
 h.close();
 ag2.close?.();
