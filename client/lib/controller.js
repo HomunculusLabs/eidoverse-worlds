@@ -359,7 +359,7 @@ const FOV_TAU = 0.16;    // the lens breathes
 // speed becomes a slow, smooth swing, so a shot can be settled precisely
 // instead of hunted. Damping only changes HOW it gets there: the mouse still
 // commands the same angle, it just arrives without the jitter of the wrist.
-const LOOK_TAU_FINE = 0.28;
+const LOOK_TAU_FINE = 0.5;
 const FINE_MPS = 2.5;    // absolute, not a fraction — "creep at 2.5 m/s"
 const damp = (cur, target, tau, dt) => target + (cur - target) * Math.exp(-dt / tau);
 /** Same, over the shortest arc — so a pan across ±π doesn't unwind the long way. */
