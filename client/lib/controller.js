@@ -393,7 +393,9 @@ function updatePhotoCamera(dt) {
     -Math.cos(photo.yaw) * Math.cos(photo.pitch));
   _right.crossVectors(_f, UP).normalize();
 
-  const boost = (keys.has('ShiftLeft') ? 3.5 : 1) * (keys.has('AltLeft') ? 0.25 : 1);
+  // Shift covers ground; Alt is for creeping the last metre into a frame, where
+  // 0.25 was still too eager to hold a mark.
+  const boost = (keys.has('ShiftLeft') ? 3.5 : 1) * (keys.has('AltLeft') ? 0.125 : 1);
   _want.set(0, 0, 0);
   if (held(MOVE_KEYS.fwd)) _want.add(_f);
   if (held(MOVE_KEYS.back)) _want.sub(_f);
