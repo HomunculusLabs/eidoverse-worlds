@@ -31,7 +31,7 @@
 // removed, the part eases back to its authored rest pose.
 
 import { THREE } from './core.js';
-import { entities, comps } from './world.js';
+import { entities, comps, findPart } from './world.js';
 import { reindexCollider } from './colliders.js';
 import { serverNow } from './remotes.js';
 
@@ -129,22 +129,8 @@ function evalPath(m, t, obj, base) {
 const lastIndexed = new Map();
 
 // ---- sub-object machinery ---------------------------------------------------
-
-/** root Object3D -> Map(partName -> {obj|null, at}). Misses retry once a
- *  second rather than caching forever: models load ASYNC, so the part a comp
- *  names may simply not exist yet — freezing out a legitimate name because
- *  the GLB was still downloading would be a load-order bug, not a contract. */
-const _partCache = new WeakMap();
-function findPart(root, name) {
-  let map = _partCache.get(root);
-  if (!map) { map = new Map(); _partCache.set(root, map); }
-  const hit = map.get(name);
-  if (hit && (hit.obj || Date.now() - hit.at < 1000)) return hit.obj;
-  let found = null;
-  root.traverse((c) => { if (!found && c !== root && c.name === name) found = c; });
-  map.set(name, { obj: found, at: Date.now() });
-  return found;
-}
+// findPart (name → node, async-load-safe) lives in world.js now — mounting
+// rides the same parts this module animates, so they share one lookup.
 
 const _qb = new THREE.Quaternion();
 

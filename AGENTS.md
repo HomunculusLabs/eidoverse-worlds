@@ -213,7 +213,13 @@ first:
   zone's center is a socket pos **verbatim**:
   `measure swing1` → "y=0.55 0.42×0.40m → pos [0, 0.55, 0]" →
   `comp {id: "swing1", type: "sockets", data: {seat: {pos: [0,0.55,0], yaw: 3.14, pose: "sitchair"}}}`.
-  Verify by sitting there yourself (`mount {id: you, to, slot}`) and taking
+  A socket may also name a **`part`** (a node that a `motion:<part>` comp
+  animates): coords stay model-frame, but the seat then RIDES that part's
+  motion — `{seat: {pos: [0,-0.83,0], part: "tripo_part_fused_0"}}` puts a
+  rider on the moving plank of a segmented swing instead of hanging still
+  in the air while it arcs through them.
+  Verify by sitting there yourself (`mount {id: you, to, slot}` — the
+  carrier is **`to`**, and `slot` is the socket's key) and taking
   a `snapshot {view: "selfie"}`.
 - **`GET /geom?lib=…`**, **`?world=W&id=…`**, **`?world=W`** (HTTP, public) —
   the same summaries as JSON, plus the whole-scene tier: every entity with

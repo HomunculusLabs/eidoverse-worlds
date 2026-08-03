@@ -390,10 +390,33 @@ export async function applyEntry(entry, live, ctx = {}) {
   } catch (e) { report(`entry ${verb}`, e); }
 }
 
+// ---- named parts ------------------------------------------------------------
+
+/** root Object3D -> Map(partName -> {obj|null, at}). Misses retry once a
+ *  second rather than caching forever: models load ASYNC, so the part a comp
+ *  names may simply not exist yet — freezing out a legitimate name because
+ *  the GLB was still downloading would be a load-order bug, not a contract.
+ *  Shared by motion.js (animating parts) and mounting (riding them). */
+const _partCache = new WeakMap();
+export function findPart(root, name) {
+  let map = _partCache.get(root);
+  if (!map) { map = new Map(); _partCache.set(root, map); }
+  const hit = map.get(name);
+  if (hit && (hit.obj || Date.now() - hit.at < 1000)) return hit.obj;
+  let found = null;
+  root.traverse((c) => { if (!found && c !== root && c.name === name) found = c; });
+  map.set(name, { obj: found, at: Date.now() });
+  return found;
+}
+
 // ---- mounting ---------------------------------------------------------------
 
 /** A named attachment point, from the entity's `sockets` component:
- *  comp {id, type: 'sockets', data: {seat: {pos:[...], yaw}, helm: {...}}} */
+ *  comp {id, type: 'sockets', data: {seat: {pos:[...], yaw, pose?, part?}}}
+ *  Coords are the MODEL's local frame — the frame `measure` reports, so a
+ *  flat-zone center is a socket pos verbatim. A socket that names a `part`
+ *  (a node motion.js animates, e.g. a swing's seat assembly) keeps the same
+ *  coords but RIDES that part's motion instead of standing on the rest pose. */
 const socketOf = (id, slot) => (slot ? comps.get(id)?.sockets?.[slot] : null);
 
 function applyMount(args) {
@@ -416,6 +439,11 @@ function applyMount(args) {
   parent.add(child);                       // transform becomes parent-relative
   child.position.set(...off);
   child.rotation.set(0, args.yaw ?? sock?.yaw ?? 0, 0);
+  // a part socket glues the cargo INTO the moving node, so it rides the
+  // part's motion. Same glue-don't-teleport rule as /mount: attach preserves
+  // the world transform, which bakes the part's current phase into the offset.
+  const partNode = sock?.part ? findPart(parent, String(sock.part)) : null;
+  if (partNode) partNode.attach(child);
   child.userData.mountedTo = args.to;
   // its collider would go stale the moment the parent moves; the parent's own
   // collider is what the pair collides as while attached
@@ -431,9 +459,22 @@ function retryMounts() {
 // (mid-pendulum, mid-path — motion.js has already ticked it this frame)
 // composed with the socket. This is what makes a sitter actually RIDE the
 // swing: their body is derived, not streamed.
+//
+// When the socket names a `part`, the seat point additionally rides that
+// part's motion: the model-frame point is carried through the part's current
+// DISPLACEMENT (live transform ∘ rest⁻¹, in world terms). At rest the
+// displacement is identity, so a part socket sits exactly where a plain one
+// does — declaring the part only adds the arc. This is the missing half of
+// motion:<part>: without it a rider sat still while the plank swung through
+// them (the fox's swing, commons, 2026-08-03).
+//
+// The socket offset goes through the parent's full matrixWorld (scale
+// included) rather than quaternion+position: socket coords are model-frame,
+// and a spawn-scaled model renders its seat scaled too.
 const _mtQ = new THREE.Quaternion();
 const _mtF = new THREE.Vector3();
-const _mtO = new THREE.Vector3();
+const _mtV = new THREE.Vector3();
+const _mtM = new THREE.Matrix4();
 /** Fill outPos with rider's world seat position; returns {yaw, pose, to} or
  *  null when not mounted (or the parent isn't live yet). */
 export function mountTransform(riderId, outPos) {
@@ -442,10 +483,20 @@ export function mountTransform(riderId, outPos) {
   const parent = entities.get(m.to);
   if (!parent) return null;
   const sock = (comps.get(m.to)?.sockets ?? {})[m.slot] ?? {};
+  parent.updateWorldMatrix(true, false);
+  _mtF.set(...(m.offset ?? sock.pos ?? [0, 0.5, 0])).applyMatrix4(parent.matrixWorld);
+  const part = sock.part ? findPart(parent, String(sock.part)) : null;
+  if (part && part.parent && part.userData.mbase) {
+    // mbase = the part's rest pose, captured by motion.js the first time it
+    // animates it. Absent mbase means the part has never moved: identity.
+    const b = part.userData.mbase;
+    part.updateWorldMatrix(true, false);
+    _mtM.compose(_mtV.set(...b.pos), _mtQ.fromArray(b.quat), part.scale)
+      .premultiply(part.parent.matrixWorld).invert();       // world → part-at-rest
+    _mtF.applyMatrix4(_mtM).applyMatrix4(part.matrixWorld); // …re-emerge from the live part
+  }
+  outPos.copy(_mtF);
   parent.getWorldQuaternion(_mtQ);
-  parent.getWorldPosition(_mtO);
-  _mtF.set(...(m.offset ?? sock.pos ?? [0, 0.5, 0])).applyQuaternion(_mtQ);
-  outPos.copy(_mtO).add(_mtF);
   _mtF.set(0, 0, 1).applyQuaternion(_mtQ);
   const parentYaw = Math.atan2(_mtF.x, _mtF.z);
   return { yaw: parentYaw + (m.yaw ?? sock.yaw ?? 0), pose: sock.pose ?? 'sitchair', to: m.to };
