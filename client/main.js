@@ -38,6 +38,7 @@ import { initChat, logChat, chat, openConvo } from './lib/chat.js';
 import { makeFrame } from './lib/frames.js';
 import { Ragdoll } from './lib/ragdoll.js';
 import { initBodyDrag, updateBodyDrag, beingDragged, revokeDragged, dragState } from './lib/bodydrag.js';
+import { initPhysObj, tickPhysObj, kick, leaseApi } from './lib/physobj.js';
 import { shedALight, litCount } from './lib/lights.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { framesHeld } from './lib/loadwork.js';
@@ -489,6 +490,8 @@ function clearPins() {
   syncPins();
 }
 
+initPhysObj({ myPos: () => myState.pos });
+
 initBodyDrag({
   pushable: () => pushable,
   isDowned: () => downed,
@@ -665,6 +668,15 @@ bus.on('command', ({ cmd, arg }) => {
     sendVerb('grant', { id, ...(role ? { role } : {}), ...(genFlag ? { gen: genFlag === '+gen' } : {}) });
     return;
   }
+  if (cmd === 'kick') {
+    // one word, two acts (the /push pattern): a THING within the world gets
+    // the physics kick; a PERSON gets moderation. Things win the lookup —
+    // and /punt is always the physics verb, /ban always the moderation one.
+    const first = (arg || '').trim().split(/\s+/)[0];
+    if (!first || entities.has(first) || !remotes.has(first)) { kick(arg); return; }
+    // falls through into moderation below (a person's name)
+  }
+  if (cmd === 'punt') { kick(arg); return; }
   if (cmd === 'kick' || cmd === 'ban') {
     // /kick /ban <name> [reason…] — owner-only, the server enforces (and
     // narrates the act into chat via the log entry it broadcasts back).
@@ -945,6 +957,8 @@ function frame(now) {
   BC('bodydrag');
   updateBodyDrag(dt, now);       // BEFORE remotes: the takeover sim's pose must
                                  // land in the same frame's avatar.update
+  BC('physobj');
+  tickPhysObj(dt, now);          // entity leases I hold (kicked balls, etc.)
   BC('remotes');
   updateRemotes(dt, now);
   BC('gaze');
@@ -1066,6 +1080,7 @@ globalThis.EW = {
   me: () => me, remotes, entities, myState, THREE, net, scene, camera, renderer, bus,
   skyArgs, sendVerb, setPosable, get posable() { return posable; },
   setPushable, get pushable() { return pushable; }, dragState,
+  lease: leaseApi,   // the entity-lease surface runtime plugins script against
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)

@@ -54,6 +54,17 @@ at 30, power at 12. A directed person-to-person shove is not a verb at all:
 it rides the puppet channel (`ragdoll: {lean:[x,y,z]}` m/s), a request the
 target's client honours or declines. Humans have `/push` for it.
 
+**Objects move too — physics is a PLUGIN tier** (docs/leases.md). Anyone
+may lease an entity: `{type:"lease", op:"claim"|"state"|"release", id, …}`
+over raw WS — claim it, stream transforms at ~15Hz, release; the server
+commits the resting `place` with your name in the provenance and forgets
+the lease. Rank 0, like `use`: physical play is using the world. A claim
+with `take:true` succeeds within reach of the object's LIVE position, so a
+rolling ball can be taken mid-roll. Humans have `/kick` (`/punt`). The
+built-in ball/box sim (client/lib/physobj.js) holds no privilege — your own
+script can claim the same objects and simulate them differently, from the
+ground up; the engine only ever sees who holds the lease and what streams.
+
 The swing, as a recipe (this exact sequence is tested in `tools/comptest.ts`):
 
 ```

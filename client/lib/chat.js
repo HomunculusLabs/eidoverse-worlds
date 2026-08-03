@@ -290,6 +290,8 @@ const COMMANDS = [
   ['/push', '/push [name] [power] — shove someone within reach (their client decides); /push <thing> works the thing'],
   ['/pushable', '/pushable on|off — whether shoves and blasts can knock you over (on by default)'],
   ['/boom', '/boom [power] [radius] — a blast where you stand, you included (builder)'],
+  ['/kick', '/kick [thing] [power] — send an object flying (a person\'s name = moderation)'],
+  ['/punt', '/punt [thing] [power] — the unambiguous physics kick'],
   ['/who', 'list everyone present'],
   ['/role', 'what you may do here (or /role <name>)'],
   ['/grant', '/grant <name> owner|builder|visitor [+gen|-gen] — owner only'],
@@ -442,7 +444,13 @@ function runCommand(raw) {
     case 'grant':
       bus.emit('command', { cmd: 'grant', arg });
       return true;
-    case 'kick': case 'ban': case 'unban': case 'bans':
+    case 'kick':
+      // one word, two acts (same split as /push): kicking a THING is
+      // physics, kicking a PERSON is moderation — main.js sorts by what the
+      // name denotes. /punt and /boot are unambiguous.
+      bus.emit('command', { cmd: 'kick', arg });
+      return true;
+    case 'ban': case 'unban': case 'bans':
     case 'gban': case 'gunban': case 'gbans':
       bus.emit('command', { cmd: cmd.toLowerCase(), arg });
       return true;
@@ -454,6 +462,9 @@ function runCommand(raw) {
       return true;
     case 'boom': case 'blast':
       bus.emit('command', { cmd: 'boom', arg });
+      return true;
+    case 'punt': case 'boot':
+      bus.emit('command', { cmd: 'punt', arg });
       return true;
     case 'fork': case 'copy':
       bus.emit('command', { cmd: 'fork', arg });

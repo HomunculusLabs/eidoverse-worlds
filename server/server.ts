@@ -748,6 +748,30 @@ class World {
    *  N×M×15Hz individual sends (24×200 would be 72k msgs/s); it's one frame
    *  per world per tick, fanned out once. */
   dirty = new Map<string, unknown>();
+  /** Entity animation leases (docs/leases.md): who may animate each object
+   *  right now, and the last transform they streamed — the server's memory,
+   *  so a crashed or preempted simulator never loses an object. Presence
+   *  plane: never persisted; outcomes commit as `place` verbs. */
+  leases = new Map<string, { holder: Client; lastState: { p: number[]; yaw?: number; q?: number[] } | null; lastAt: number }>();
+
+  /** Commit-and-forget one entity lease (docs/leases.md): the last streamed
+   *  transform becomes an ordinary `place` entry — server-authored like a
+   *  reaction effect, the cause in args — so nothing is ever lost to a
+   *  crashed, preempted, or stale simulator. */
+  settleLease(id: string, final?: { p?: number[] | null; yaw?: number | null }) {
+    const L = this.leases.get(id);
+    if (!L) return;
+    const p = final?.p ?? L.lastState?.p ?? null;
+    const yaw = final?.yaw ?? L.lastState?.yaw;
+    this.leases.delete(id);
+    if (p && this.state.entities[id]) {
+      const entry = this.append("world", "place", {
+        id, pos: p, ...(yaw != null ? { yaw } : {}), by: L.holder.id, via: "lease",
+      });
+      this.broadcast({ type: "log", entry });
+    }
+    this.broadcast({ type: "lease", op: "released", id });
+  }
   /** The runtime's flight recorder — the "why didn't it work" surface.
    *
    *  The world log holds what HAPPENED; this ring holds what DIDN'T and why:
@@ -1743,6 +1767,9 @@ const server = Bun.serve({
       if ((c as any).bcRing?.length) {
         console.log(`[bc] ${c.id} last breadcrumbs: ${(c as any).bcRing.join(" | ")}`);
       }
+      // a vanished simulator's objects land exactly where its last frame put
+      // them — the lease's whole promise (docs/leases.md)
+      if (c.world) for (const [lid, L] of [...c.world.leases]) if (L.holder === c) c.world.settleLease(lid);
       if (c.world) {
         c.world.clients.delete(c);
         if (!c.spectator) {
@@ -2269,6 +2296,77 @@ const server = Bun.serve({
           if (ring.length > 40) ring.shift();
           return;
         }
+        case "lease": {
+          // Entity animation leases — docs/leases.md. The server arbitrates
+          // (objects have no owning client), remembers the last streamed
+          // transform, and COMMITS it when the holder releases, vanishes, or
+          // goes stale. It never simulates: transforms in, transforms out,
+          // one `place` verb at rest. Presence semantics: never logged.
+          if (!c.world || c.spectator) return;
+          const w = c.world;
+          const id = String(msg.id ?? "").slice(0, 64);
+          const op = String(msg.op ?? "");
+          if (!id) return;
+
+          const sane = (a: unknown, n: number): number[] | null => {
+            if (!Array.isArray(a) || a.length !== n) return null;
+            const v = (a as unknown[]).map(Number);
+            return v.every(Number.isFinite) ? v : null;
+          };
+          if (op === "claim") {
+            if (!w.state.entities[id]) {
+              ws.send(JSON.stringify({ type: "lease", op: "denied", id, why: "no such entity" }));
+              return;
+            }
+            // physical play is USING the world (rank 0), like `use` — a
+            // per-world knob can gate this later without protocol changes
+            const cur = w.leases.get(id);
+            if (cur && cur.holder !== c) {
+              const stale = Date.now() - cur.lastAt > 5000;
+              // proximity take: you can take what you can reach — the ball
+              // being dribbled past you is kickable, the one across the
+              // field is not. Distance vs the OBJECT's live position.
+              const at = cur.lastState?.p ?? w.state.entities[id].pos;
+              const me = c.lastPose?.p;
+              const near = !!me && Math.hypot(me[0] - at[0], me[2] - at[2]) <= 3.5;
+              if (!stale && !(msg.take && near)) {
+                ws.send(JSON.stringify({ type: "lease", op: "denied", id, why: `${cur.holder.id} is animating it` }));
+                return;
+              }
+              cur.holder.ws.send(JSON.stringify({ type: "lease", op: "lost", id, to: c.id }));
+            }
+            // per-client cap: a runaway plugin must not lease a whole world
+            let held = 0;
+            for (const L of w.leases.values()) if (L.holder === c) held++;
+            if (held >= 8 && !w.leases.has(id)) {
+              ws.send(JSON.stringify({ type: "lease", op: "denied", id, why: "too many live leases — release something" }));
+              return;
+            }
+            w.leases.set(id, { holder: c, lastState: w.leases.get(id)?.lastState ?? null, lastAt: Date.now() });
+            ws.send(JSON.stringify({ type: "lease", op: "granted", id, ...(w.leases.get(id)!.lastState ? { from: w.leases.get(id)!.lastState } : {}) }));
+            w.broadcast({ type: "lease", op: "claimed", id, by: c.id }, c);
+            return;
+          }
+
+          const L = w.leases.get(id);
+          if (!L || L.holder !== c) return;      // a lost holder's tail, dropped
+
+          if (op === "state") {
+            const p = sane(msg.p, 3);
+            if (!p) return;
+            const yaw = Number.isFinite(Number(msg.yaw)) ? Number(msg.yaw) : undefined;
+            const q = sane(msg.q, 4) ?? undefined;
+            L.lastState = { p, ...(yaw != null ? { yaw } : {}), ...(q ? { q } : {}) };
+            L.lastAt = Date.now();
+            w.broadcast({ type: "lease", op: "state", id, by: c.id, p, ...(yaw != null ? { yaw } : {}), ...(q ? { q } : {}) }, c);
+            return;
+          }
+          if (op === "release") {
+            w.settleLease(id, { p: sane(msg.p, 3), yaw: Number.isFinite(Number(msg.yaw)) ? Number(msg.yaw) : null });
+            return;
+          }
+          return;
+        }
         case "bodydrag": {
           // Interactive ragdoll drag — the takeover stream. A dragger runs the
           // body's sim on ITS machine and streams the result to the body's
@@ -2515,6 +2613,21 @@ setInterval(() => {
     }
   }
 }, FRAME_MS);
+
+// Stale-lease sweep: a holder that stops streaming (hung tab, wedged plugin)
+// loses the object — committed at its last known transform, like a
+// disconnect. Nothing hovers forever; nothing stays possessed.
+setInterval(() => {
+  const now = Date.now();
+  for (const w of worlds.values()) {
+    for (const [id, L] of [...w.leases]) {
+      if (now - L.lastAt > 10_000) {
+        w.debug("lease-swept", { id, holder: L.holder.id });
+        w.settleLease(id);
+      }
+    }
+  }
+}, 5_000);
 
 // Fold on the way out so a restart resumes from the snapshot rather than
 // re-reading a tail that was already folded in memory.

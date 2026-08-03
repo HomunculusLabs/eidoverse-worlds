@@ -151,6 +151,14 @@ export function sendBodyDrag(target, payload) {
   }
 }
 
+/** Entity animation leases (docs/leases.md): claim / state / release. The
+ *  server arbitrates and answers on the same channel (bus 'lease'). */
+export function sendLease(op, id, payload = {}) {
+  if (net.joined && net.ws?.readyState === 1) {
+    net.ws.send(JSON.stringify({ type: 'lease', op, id, ...payload }));
+  }
+}
+
 export function sendPose(now) {
   const s = hooks.myState;
   if (!net.joined || !hooks.me() || !s || now - lastPoseSent < 66) return;
@@ -402,6 +410,12 @@ async function handle(msg) {
       // someone is (asking to be, or currently) dragging MY body — same
       // doctrine as puppet: an input my client applies to itself, or refuses
       bus.emit('bodydrag', msg);
+      break;
+
+    case 'lease':
+      // entity animation traffic: grants/denials for MY claims, and other
+      // holders' streamed transforms for everyone to render
+      bus.emit('lease', msg);
       break;
 
     case 'log':
