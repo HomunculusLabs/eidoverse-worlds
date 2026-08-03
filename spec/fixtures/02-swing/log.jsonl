@@ -1,0 +1,12 @@
+{"seq":0,"ts":1785728025925,"actor":"world","verb":"genesis","args":{"v":1,"dialect":"eidoverse-log"}}
+{"seq":1,"ts":1785728025926,"actor":"world","verb":"grant","args":{"id":"author","role":"owner","gen":true}}
+{"seq":2,"ts":1785728025945,"actor":"author","verb":"spawn","args":{"id":"swing1","lib":"store/cccc000000000000.glb","pos":[0,0,-4]}}
+{"seq":3,"ts":1785728025945,"actor":"author","verb":"comp","args":{"id":"swing1","type":"sockets","data":{"seat":{"pos":[0,0.55,0],"yaw":3.14,"pose":"sitchair"}}}}
+{"seq":4,"ts":1785728025946,"actor":"author","verb":"comp","args":{"id":"swing1","type":"reactions","data":{"push":{"impulse":0.35}}}}
+{"seq":5,"ts":1785728025946,"actor":"author","verb":"comp","args":{"id":"swing1","type":"somebody-elses-idea","data":{"keep":"me"}}}
+{"seq":6,"ts":1785728025946,"actor":"author","verb":"motion","args":{"id":"swing1","type":"pendulum","axis":"x","amplitude":0.25,"period":3.4}}
+{"seq":7,"ts":1785728025946,"actor":"author","verb":"mount","args":{"id":"author","to":"swing1","slot":"seat"}}
+{"seq":8,"ts":1785728026196,"actor":"author","verb":"use","args":{"id":"swing1","action":"push"}}
+{"seq":9,"ts":1785728026196,"actor":"world","verb":"motion","args":{"id":"swing1","type":"pendulum","axis":"x","pivot":[0,2,0],"period":3.4,"damp":0,"amp":0.237,"phase":-0.335,"t0":1785728026196,"cause":8,"by":"author"}}
+{"seq":10,"ts":1785728026596,"actor":"author","verb":"dismount","args":{"id":"author"}}
+{"seq": 11, "ts": 1785728026597, "actor": "foreign-dialect", "verb": "chrome-plating", "args": {"sparkle": 11}}

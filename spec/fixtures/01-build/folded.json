@@ -1,0 +1,34 @@
+{
+  "entities": {
+    "mug": {
+      "lib": "store/bbbb000000000000.glb",
+      "pos": [
+        3.999998898038469,
+        1,
+        2.700000000002024
+      ],
+      "yaw": 1.5708,
+      "actor": "author",
+      "ts": 1785728025224
+    },
+    "lamp": {
+      "kind": "light",
+      "pos": [
+        0,
+        2,
+        0
+      ],
+      "color": 16767392,
+      "intensity": 20,
+      "range": 8,
+      "actor": "author",
+      "ts": 1785728025224
+    }
+  },
+  "roles": {
+    "author": {
+      "role": "owner",
+      "gen": true
+    }
+  }
+}

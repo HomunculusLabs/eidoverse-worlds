@@ -1,0 +1,8 @@
+{"seq":0,"ts":1785728025203,"actor":"world","verb":"genesis","args":{"v":1,"dialect":"eidoverse-log"}}
+{"seq":1,"ts":1785728025204,"actor":"world","verb":"grant","args":{"id":"author","role":"owner","gen":true}}
+{"seq":2,"ts":1785728025220,"actor":"author","verb":"spawn","args":{"id":"table","lib":"store/aaaa000000000000.glb","pos":[2,0,3],"yaw":0.5}}
+{"seq":3,"ts":1785728025224,"actor":"author","verb":"spawn","args":{"id":"mug","lib":"store/bbbb000000000000.glb","pos":[2,1,3]}}
+{"seq":4,"ts":1785728025224,"actor":"author","verb":"light","args":{"id":"lamp","pos":[0,2,0],"color":16767392,"intensity":20,"range":8}}
+{"seq":5,"ts":1785728025224,"actor":"author","verb":"place","args":{"id":"table","pos":[4,0,3],"yaw":1.5708}}
+{"seq":6,"ts":1785728025224,"actor":"author","verb":"mount","args":{"id":"mug","to":"table","offset":[0.3,1,0]}}
+{"seq":7,"ts":1785728025422,"actor":"author","verb":"remove","args":{"id":"table"}}

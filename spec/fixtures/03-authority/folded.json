@@ -1,0 +1,16 @@
+{
+  "entities": {},
+  "roles": {
+    "author": {
+      "role": "owner",
+      "gen": true
+    },
+    "friend": {
+      "role": "builder",
+      "gen": true
+    },
+    "*": {
+      "role": "visitor"
+    }
+  }
+}

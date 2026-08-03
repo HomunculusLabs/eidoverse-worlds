@@ -1,0 +1,4 @@
+{"seq":0,"ts":1785728027101,"actor":"world","verb":"genesis","args":{"v":1,"dialect":"eidoverse-log"}}
+{"seq":1,"ts":1785728027101,"actor":"world","verb":"grant","args":{"id":"author","role":"owner","gen":true}}
+{"seq":2,"ts":1785728027121,"actor":"author","verb":"grant","args":{"id":"friend","role":"builder","gen":true}}
+{"seq":3,"ts":1785728027121,"actor":"author","verb":"grant","args":{"id":"*","role":"visitor"}}

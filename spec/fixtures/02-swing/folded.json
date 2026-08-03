@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "swing1": {
+      "lib": "store/cccc000000000000.glb",
+      "pos": [
+        0,
+        0,
+        -4
+      ],
+      "yaw": 0,
+      "actor": "author",
+      "ts": 1785728025945,
+      "comp": {
+        "sockets": {
+          "seat": {
+            "pos": [
+              0,
+              0.55,
+              0
+            ],
+            "yaw": 3.14,
+            "pose": "sitchair"
+          }
+        },
+        "reactions": {
+          "push": {
+            "impulse": 0.35
+          }
+        },
+        "somebody-elses-idea": {
+          "keep": "me"
+        },
+        "motion": {
+          "type": "pendulum",
+          "axis": "x",
+          "pivot": [
+            0,
+            2,
+            0
+          ],
+          "period": 3.4,
+          "damp": 0,
+          "amp": 0.237,
+          "phase": -0.335,
+          "t0": 1785728026196,
+          "cause": 8,
+          "by": "author"
+        }
+      }
+    }
+  },
+  "roles": {
+    "author": {
+      "role": "owner",
+      "gen": true
+    }
+  }
+}
