@@ -927,12 +927,23 @@ export class Ragdoll {
 
     if (n === 0 && this.pose) return this.pose;   // nothing moved; nothing to resend
 
-    // ---- root follows the hips so the body lies where it fell
+    // ---- root follows the hips so the body lies where it fell.
+    //
+    // FALLING, the root only ever descends: Math.min against where it started
+    // guards against a solve-overshoot frame popping the whole mesh above the
+    // ground. But a PINNED body is being CARRIED — the hand may lift it, so
+    // the root must follow the hips upward too, or the sim rises while the
+    // rendered body stays floor-bound (the pose curls into a dangle a few
+    // centimetres up and stops — exactly what that looked like). Once lifted,
+    // the ceiling moves up with the body: releasing from a height starts the
+    // NEXT sim's rootStartY there, and the fall brings it back down.
     const hips = this.p.hips;
     if (hips) {
       this.avatar.root.position.x = hips.x;
       this.avatar.root.position.z = hips.z;
-      this.avatar.root.position.y = Math.min(this.rootStartY, hips.y - this.hipsOffset);
+      const y = hips.y - this.hipsOffset;
+      if (this.pin && y > this.rootStartY) this.rootStartY = y;
+      this.avatar.root.position.y = Math.min(this.rootStartY, y);
     }
 
     // ---- map particles back to bone rotations (world-reference method)

@@ -446,7 +446,7 @@ console.log('\npin (the grabbed joint):');
   // nor deadline while held (a pin is ongoing input).
   const av = synth();
   const rd: any = new Ragdoll(av, null, av.restBonePositions());
-  const hold = new THREE.Vector3(0.3, 1.9, 0.2);
+  const hold = new THREE.Vector3(0.3, 3.0, 0.2);   // well above standing: the lift must RAISE the root
   rd.setPin('leftHand', hold);
   for (let i = 0; i < 900; i++) { rd.setPin('leftHand', hold); rd.step(1 / 60); }  // 15s >> 8s deadline
   check('the pinned joint is exactly where the hand says',
@@ -455,6 +455,12 @@ console.log('\npin (the grabbed joint):');
     rd.p.hips.y < rd.p.leftHand.y, `hips ${rd.p.hips.y.toFixed(2)} vs hand ${rd.p.leftHand.y.toFixed(2)}`);
   check('a held body never captures — no settle, no deadline',
     !rd.done && rd.elapsed < 1, `done=${rd.done} elapsed=${rd.elapsed.toFixed(1)}`);
+  // The RENDERED body must rise with the sim: the root's falling-only ceiling
+  // (Math.min against rootStartY) has to lift while pinned, or the particles
+  // go up and the mesh stays floor-bound — "it lifts a little, then something
+  // keeps them constrained to the ground" (antra, live, 2026-08-02).
+  check('...and the rendered root rises with the carried body',
+    av.root.position.y > 0.35, `root.y=${av.root.position.y.toFixed(2)}`);
   check('...and its bone lengths survive the hang (≤10%)',
     stretchOf(rd) < 0.10, `${(stretchOf(rd) * 100).toFixed(0)}%`);
 
