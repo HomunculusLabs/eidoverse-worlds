@@ -185,6 +185,9 @@ function endGrab() {
   sendBodyDrag(drag.id, {
     end: true,
     ...(drag.rd.pose ? { pose: drag.rd.pose } : {}),
+    // the handover: exactly where every joint is and how fast, so the owner
+    // CONTINUES this sim instead of rebuilding a guess of it from the bones
+    sim: drag.rd.snapshot(),
     ...(r?.avatar ? { p: r.avatar.root.position.toArray() } : {}),
   });
   draggedLocal.delete(drag.id);

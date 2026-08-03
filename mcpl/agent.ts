@@ -364,7 +364,7 @@ export class WorldAgent {
                   text: pa ? "(nails part of you in place and steps back)" : "(lets go of you)" } as any);
                 // then MY OWN sim takes the body back: it falls from wherever
                 // the hand let go and settles — or hangs, if nails hold it
-                void this.settleFromDrag(msg.pose ?? null);
+                void this.settleFromDrag(msg.pose ?? null, msg.sim ?? null);
               }
               break;
             }
@@ -724,7 +724,7 @@ export class WorldAgent {
 
   /** Resume MY OWN sim from wherever a drag left this body — the same
    *  settle-under-owner-authority browsers do, pins enforced for real. */
-  private async settleFromDrag(pose: Record<string, number[]> | null) {
+  private async settleFromDrag(pose: Record<string, number[]> | null, sim?: any) {
     const body = await this.ensureBody();
     if (!body) { this.heldPose = pose ?? this.heldPose ?? DOWNED_POSE; this.clip = "ragdoll"; return; }
     if (this.draggedBy) return;
@@ -735,6 +735,7 @@ export class WorldAgent {
       pose: pose ?? this.heldPose ?? null,
       rootY: this.pos.y,
       pins: [...this.pins].map(([j, at]) => ({ j, at })),
+      sim: sim ?? null,
     });
     this.clip = "ragdoll";
     this.startSim();

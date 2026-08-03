@@ -476,10 +476,25 @@ export class Ragdoll {
       // stop — so releasing a body swung at 3 m/s dropped it where it was and
       // settled it on the spot, and every re-creation (a nail pulled, a drag
       // let go) silently threw the momentum away.
-      const v = seedVel?.get?.(j) ?? seedVel?.[j];
+      const v = seedVel?.get?.(j) ?? (seedVel && !seedVel.j ? seedVel[j] : null);
       this.prev[j] = v ? wp.clone().addScaledVector(v, -FIXED_DT) : wp.clone();
       this.pre[j] = wp.clone();      // step-start position, for the settle test
     }
+    // A handover snapshot outranks the bones: it is where the particles
+    // actually were, at what speed, on the machine that was simulating. The
+    // bones only ever showed where they POINTED. Applied after the bone read
+    // above so a caller with no snapshot still works.
+    if (seedVel?.j) {
+      const { j: names, p: pos, v: vel, dy = 0 } = seedVel;
+      for (let i = 0; i < names.length; i++) {
+        const n = names[i], k = i * 3;
+        if (!this.p[n]) continue;
+        this.p[n].set(pos[k], pos[k + 1] + dy, pos[k + 2]);
+        this.prev[n].copy(this.p[n]).addScaledVector(
+          _v.set(vel[k], vel[k + 1], vel[k + 2]), -FIXED_DT);
+      }
+    }
+
     // the neutral skeleton every limit is measured against; falls back to the
     // live one joint-by-joint so a caller that has no rest map still works
     this.rest = {};
@@ -1151,6 +1166,32 @@ export class Ragdoll {
     // original fall had.
     this.settledFor = 0;
     this.elapsed = 0;
+  }
+
+  /** Everything this sim IS, as plain numbers: where every joint is and how
+   *  fast it is going, in world coordinates.
+   *
+   *  Handing a body from one machine to another has been lossy at every seam.
+   *  A streamed POSE is where the bones point — not where the particles are,
+   *  and not what they were doing — so a receiver rebuilding a sim from a pose
+   *  has to invent the velocity, and invents zero. That is why a body swung
+   *  across a room and let go of settled on the spot, and why a takeover began
+   *  by discarding whatever the body was already doing. A handover carries
+   *  this instead, and the receiver continues rather than restarts.
+   *
+   *  Rounded on purpose: this rides a presence message, and a millimetre and a
+   *  millimetre-per-second are far below what anyone can see. */
+  snapshot() {
+    const j = [], p = [], v = [];
+    for (const name of JOINTS) {
+      const q = this.p[name];
+      if (!q) continue;
+      j.push(name);
+      p.push(+q.x.toFixed(4), +q.y.toFixed(4), +q.z.toFixed(4));
+      _v.copy(q).sub(this.prev[name]).divideScalar(FIXED_DT);
+      v.push(+_v.x.toFixed(3), +_v.y.toFixed(3), +_v.z.toFixed(3));
+    }
+    return { j, p, v };
   }
 
   /** Advance the sim and push the result into the avatar as a held pose.

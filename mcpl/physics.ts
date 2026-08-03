@@ -135,6 +135,7 @@ export class HeadlessBody {
     pose?: Record<string, number[]> | null;
     rootY?: number;                          // world y of the root at start (a lifted drop)
     pins?: Array<{ j: string; at: number[] }>;
+    sim?: { j: string[]; p: number[]; v: number[] } | null;   // a handover
   }) {
     this.pose(opts.x, opts.z, opts.groundY, opts.yaw, opts.pose ?? null);
     if (opts.rootY != null) {
@@ -151,7 +152,13 @@ export class HeadlessBody {
     // else, and `rootY` is precisely that: a body let go of in mid-air. The
     // pelvis then renders a metre from where the sim has it. A plain
     // knock-over starts at y=0 and never noticed; a drag release always did.
-    this.rd = new this.m.Ragdoll(this.av, lean, this.av.restBonePositions());
+    // A handover carries the sim's own state — where each joint was and how
+    // fast — so this body CONTINUES what the other machine was running rather
+    // than restarting from the bones with the motion thrown away. Positions
+    // arrive in world y; this sim runs ground-at-zero, hence dy.
+    const seed = opts.sim && Array.isArray(opts.sim.j)
+      ? { ...opts.sim, dy: -opts.groundY } : null;
+    this.rd = new this.m.Ragdoll(this.av, lean, this.av.restBonePositions(), seed);
     for (const p of opts.pins ?? []) this.setPin(p.j, p.at);
   }
 

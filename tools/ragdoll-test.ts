@@ -181,6 +181,40 @@ check('every shipped rig loads with a humanoid and hips',
     worst < 1e-6, `drift ${worst.toExponential(2)} at ${who}`);
 }
 
+// ---- handing a body between machines must be lossless
+{
+  // A streamed POSE is where the bones point. It is not where the particles
+  // are, and it says nothing about what they were doing — so a receiver
+  // rebuilding a sim from a pose invents the velocity, and invents zero. Every
+  // seam in the drag protocol did this: grab, release, nail. snapshot() is the
+  // sim itself, and a body handed over with it CONTINUES.
+  const rig = FLEET[0];
+  const upto = (n: number, seed: any = undefined, av0?: any) => {
+    const av = av0 ?? makeAvatar(rig.P, { realParent: rig.realParent });
+    const rd: any = new Ragdoll(av, seed === undefined ? toppleLean() : null,
+      av.restBonePositions(), seed);
+    for (let i = 0; i < n; i++) rd.step(1 / 60);
+    return { rd, av };
+  };
+  const straight = upto(40);
+  const snap = straight.rd.snapshot();
+  for (let i = 0; i < 80; i++) straight.rd.step(1 / 60);
+
+  const handed = upto(40);
+  const cont = upto(80, snap, handed.av);
+  const naive = upto(40);
+  const rebuilt = upto(80, null, naive.av);
+
+  const far = (a: any, b: any) => Math.max(...Object.keys(a.p).map(
+    (j: string) => a.p[j].distanceTo(b.p[j])));
+  const withState = far(straight.rd, cont.rd);
+  const fromBones = far(straight.rd, rebuilt.rd);
+  check('a handover carrying sim state continues the same body (≤1cm)',
+    withState <= 0.01, `${(withState * 100).toFixed(1)}cm adrift`);
+  check('...where rebuilding from the bones alone does not', fromBones > 0.1,
+    `bones-only was only ${(fromBones * 100).toFixed(1)}cm adrift, so this proves nothing`);
+}
+
 // ---- the rest snapshot has to be taken where the root IS
 {
   // Everything read out of `rest` is a difference — bone lengths, cone axes —

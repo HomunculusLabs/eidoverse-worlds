@@ -2418,6 +2418,16 @@ const server = Bun.serve({
           return;
         }
         case "bodydrag": {
+          const okSim = (v: any) => {
+            if (!v || typeof v !== "object") return false;
+            const { j, p, q } = { j: v.j, p: v.p, q: v.v };
+            if (!Array.isArray(j) || j.length === 0 || j.length > 24) return false;
+            if (!Array.isArray(p) || !Array.isArray(q)) return false;
+            if (p.length !== j.length * 3 || q.length !== j.length * 3) return false;
+            return j.every((n: unknown) => typeof n === "string" && n.length <= 24)
+              && p.every((n: unknown) => Number.isFinite(n))
+              && q.every((n: unknown) => Number.isFinite(n));
+          };
           // Interactive ragdoll drag — the takeover stream. A dragger runs the
           // body's sim on ITS machine and streams the result to the body's
           // owner, who applies it to itself and rebroadcasts through normal
@@ -2442,6 +2452,11 @@ const server = Bun.serve({
             // persistent pins: nail-here (rides a release), pull-this-nail,
             // and the owner's current pin set (sent back on grab accept so
             // the dragger's takeover sim keeps enforcing the other nails)
+            // the handover: joint names, positions and velocities, so the
+            // receiver CONTINUES the sim instead of rebuilding a guess from
+            // the bones. Bounded like everything else on this path — 24 joints,
+            // three finite numbers each, or it does not travel.
+            ...(okSim(msg.sim) ? { sim: msg.sim } : {}),
             ...(msg.pinAt != null ? { pinAt: msg.pinAt } : {}),
             ...(msg.unpin != null ? { unpin: msg.unpin } : {}),
             ...(Array.isArray(msg.pins) ? { pins: (msg.pins as unknown[]).slice(0, 16) } : {}),

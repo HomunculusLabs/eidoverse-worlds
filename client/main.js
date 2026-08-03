@@ -469,7 +469,8 @@ function endDraggedMode(msg) {
   // only ever the moving part
   if (msg?.pose || msg?.p) applyDraggedSample(msg);
   me.root.updateMatrixWorld(true);
-  ragdoll = new Ragdoll(me, null, me.restBonePositions(), dragVel);
+  // the hand's own sim state outranks anything we sampled from its stream
+  ragdoll = new Ragdoll(me, null, me.restBonePositions(), msg?.sim ?? dragVel);
   dragSnap = null; dragVel = null;
   applyMyPins();
   myState.clip = 'ragdoll';
