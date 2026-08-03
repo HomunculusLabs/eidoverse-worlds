@@ -241,6 +241,7 @@ export const KEYMAP = [
   ['Look',        'drag the scene · <kbd>wheel</kbd> zooms (through to first person)'],
   ['Edit mode',   '<kbd>B</kbd> — off by default, so looking around never moves anything'],
   ['Select',      'in edit mode: click a thing, drag to move, <kbd>Q</kbd>/<kbd>E</kbd> turn, <kbd>Del</kbd> remove'],
+  ['Seat anchors', 'select a thing → <b>+ seat</b> → click the spot · gold gizmos: drag / <kbd>Q</kbd><kbd>E</kbd> face / <kbd>Del</kbd>'],
   ['Raise / lower', '<kbd>Shift</kbd>+drag, or <kbd>R</kbd>/<kbd>F</kbd> — move a selected thing up and down'],
   ['Undo',        '<kbd>Ctrl</kbd>+<kbd>Z</kbd> — your own edits, newest first'],
   ['Panels',      '<kbd>Tab</kbd> who\'s here · drag titles to move, corners to resize'],
