@@ -388,6 +388,18 @@ function rollRef(dir, up, frame) {
   return false;
 }
 
+/** World positions of the simulated joints — the shape a sim is in, so the
+ *  next one can be handed both it and the motion it had. */
+export function jointPositions(avatar, out = new Map()) {
+  const h = avatar?.vrm?.humanoid;
+  if (!h) return out;
+  for (const j of JOINTS) {
+    const n = h.getNormalizedBoneNode(j);
+    if (n) out.set(j, n.getWorldPosition(out.get(j) ?? new THREE.Vector3()));
+  }
+  return out;
+}
+
 /** The roll component of `q` about `axis` — the twist half of a swing-twist
  *  decomposition, signed, in radians. */
 function twistAbout(q, axis) {
@@ -430,12 +442,14 @@ export class Ragdoll {
    *                  body that goes limp mid-stride must not inherit the
    *                  stride's angles as its idea of "rest", or its knees adopt
    *                  the walk cycle's bend as their zero. */
-  constructor(avatar, lean = null, rest = null) {
+  constructor(avatar, lean = null, rest = null, seedVel = null) {
     this.avatar = avatar;
     this.settledFor = 0;
     this.elapsed = 0;
     this.acc = 0;
     this.maxV = Infinity;
+    this.steps = 0;                   // step() calls; see the debug panel
+    this.frames = 0;                  // ...and substeps actually simulated
     this.pose = null;
     this.done = false;
     const h = avatar.vrm.humanoid;
@@ -451,7 +465,13 @@ export class Ragdoll {
       this.nodes[j] = node;
       const wp = node.getWorldPosition(new THREE.Vector3());
       this.p[j] = wp.clone();
-      this.prev[j] = wp.clone();
+      // A sim built mid-motion must INHERIT that motion. Verlet keeps velocity
+      // in p - prev, and a fresh sim sets prev = p, which is a body at a dead
+      // stop — so releasing a body swung at 3 m/s dropped it where it was and
+      // settled it on the spot, and every re-creation (a nail pulled, a drag
+      // let go) silently threw the momentum away.
+      const v = seedVel?.get?.(j) ?? seedVel?.[j];
+      this.prev[j] = v ? wp.clone().addScaledVector(v, -FIXED_DT) : wp.clone();
       this.pre[j] = wp.clone();      // step-start position, for the settle test
     }
     // the neutral skeleton every limit is measured against; falls back to the
@@ -1155,6 +1175,8 @@ export class Ragdoll {
       }
     }
 
+    this.steps++;
+    this.frames += n;
     this.elapsed += dt;
     // A held body neither settles nor deadlines: a pin is ongoing input,
     // and capturing would freeze a hung body's constraint enforcement.

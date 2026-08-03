@@ -181,6 +181,39 @@ check('every shipped rig loads with a humanoid and hips',
     worst < 1e-6, `drift ${worst.toExponential(2)} at ${who}`);
 }
 
+// ---- a sim built mid-motion must inherit that motion
+{
+  // Verlet keeps velocity in p - prev, and a fresh sim sets prev = p — a body
+  // at a dead stop. Everything that RE-CREATES a sim (letting go of a dragged
+  // body, pulling a nail) therefore threw the momentum away: a body swung at
+  // 3 m/s was dropped where it stood and settled on the spot.
+  const rig = FLEET[0];
+  const fly = new THREE.Vector3(3, 1, 0);
+  const seed = new Map<string, any>();
+  {
+    const av = makeAvatar(rig.P, { realParent: rig.realParent });
+    const rd: any = new Ragdoll(av, null, av.restBonePositions());
+    for (const j of Object.keys(rd.p)) seed.set(j, fly);
+  }
+  const runWith = (v: any) => {
+    const av = makeAvatar(rig.P, { realParent: rig.realParent });
+    const rest = av.restBonePositions();
+    const rd: any = new Ragdoll(av, null, rest, v);
+    const from = rd.p.hips.clone();
+    let steps = 0;
+    while (!rd.done && steps < 240) { rd.step(1 / 60); steps++; }
+    return { steps, travelled: rd.p.hips.distanceTo(from) };
+  };
+  const dead = runWith(null);
+  const thrown = runWith(seed);
+  check('a body handed 3 m/s actually carries it', thrown.travelled > dead.travelled + 0.5,
+    `travelled ${thrown.travelled.toFixed(2)}m vs ${dead.travelled.toFixed(2)}m at rest`);
+  // not "takes longer to settle" — a body thrown sideways can land and stop
+  // sooner than one dropped in place. The thing that matters is that it MOVED.
+  check('...and carries it as real travel, not a dead drop',
+    thrown.travelled > 1.0, `only ${thrown.travelled.toFixed(2)}m`);
+}
+
 // ---- limbs must not TWIST
 {
   // The particle sim gives directions, never roll, so roll comes from however

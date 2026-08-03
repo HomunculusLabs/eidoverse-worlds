@@ -37,7 +37,7 @@ import { initDebug, updateDebug, toggleDebug } from './lib/debug.js';
 import { dragSim } from './lib/bodydrag.js';
 import { initChat, logChat, chat, openConvo } from './lib/chat.js';
 import { makeFrame } from './lib/frames.js';
-import { Ragdoll } from './lib/ragdoll.js';
+import { Ragdoll, jointPositions } from './lib/ragdoll.js';
 import { initBodyDrag, updateBodyDrag, beingDragged, revokeDragged, dragState } from './lib/bodydrag.js';
 import { initPhysObj, tickPhysObj, kick, leaseApi } from './lib/physobj.js';
 import { initMods, tickMods, modsApi } from './lib/mods.js';
@@ -436,8 +436,30 @@ function applyDraggedSample({ pose, p, yaw }) {
   }
   if (Number.isFinite(yaw)) { me.root.rotation.y = yaw; myState.yaw = yaw; }
   if (pose && typeof pose === 'object') { me.setPose(pose); myState.pose = pose; }
+  me.root.updateMatrixWorld(true);
+  noteDraggedMotion();
   myState.clip = 'ragdoll';
   myState.speed = 0;
+}
+
+// While a hand holds me, my body is a stream of poses with no sim behind it —
+// so its VELOCITY only exists as the difference between the frames arriving.
+// Sampled here so the moment the hand lets go the sim can start with the
+// motion the body already had, instead of at a dead stop.
+let dragSnap = null, dragVel = null;
+function noteDraggedMotion() {
+  if (!me) return;
+  const now = performance.now();
+  const pos = jointPositions(me);
+  if (dragSnap && now > dragSnap.t) {
+    const dt = Math.min(0.5, (now - dragSnap.t) / 1000);
+    dragVel ??= new Map();
+    for (const [j, p] of pos) {
+      const was = dragSnap.pos.get(j);
+      if (was) dragVel.set(j, (dragVel.get(j) ?? new THREE.Vector3()).copy(p).sub(was).divideScalar(dt));
+    }
+  }
+  dragSnap = { t: now, pos: new Map([...pos].map(([j, p]) => [j, p.clone()])) };
 }
 
 function endDraggedMode(msg) {
@@ -447,7 +469,8 @@ function endDraggedMode(msg) {
   // only ever the moving part
   if (msg?.pose || msg?.p) applyDraggedSample(msg);
   me.root.updateMatrixWorld(true);
-  ragdoll = new Ragdoll(me, null, me.restBonePositions());
+  ragdoll = new Ragdoll(me, null, me.restBonePositions(), dragVel);
+  dragSnap = null; dragVel = null;
   applyMyPins();
   myState.clip = 'ragdoll';
 }

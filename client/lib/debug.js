@@ -412,6 +412,10 @@ export function updateDebug(now = performance.now()) {
       `  speed  ${fmt(rd.maxV, 3).padStart(5)} m/s`,
       `  still  ${fmt(rd.settledFor, 2).padStart(5)} s`,
       `  age    ${fmt(rd.elapsed, 2).padStart(5)} s`,
+      // steps vs age separates "nobody is calling step()" from "step() is
+      // being called with dt 0" — two very different bugs that look identical
+      // from a frozen body.
+      `  steps  ${String(rd.steps ?? 0).padStart(5)} / ${rd.frames ?? 0} substeps`,
       `  joints ${String(Object.keys(rd.p).length).padStart(5)}`,
       `  pairs  ${String(rd.pairs?.length ?? 0).padStart(5)}   capsule tests`,
       `  pins   ${String(rd.pins?.size ?? 0).padStart(5)}${rd.pins?.size ? '   ' + [...rd.pins.keys()].join(' ') : ''}`,
