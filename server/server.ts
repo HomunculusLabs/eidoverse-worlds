@@ -585,7 +585,10 @@ function reactToUse(w: World, cause: LogEntry): void {
 function pendulumImpulse(m: Record<string, unknown>, impulse: number, ts: number) {
   const period = Number(m.period ?? 3.5);
   const w0 = (2 * Math.PI) / period;
-  const damp = Number(m.damp ?? 0.06);
+  // mirrored with pendulumTheta: missing damp = 0 = perpetual. Friction is
+  // opt-in; pushable-swing recipes set it explicitly because decay-between-
+  // pushes is part of that design.
+  const damp = Number(m.damp ?? 0);
   const t = m.t0 != null ? Math.max(0, (ts - Number(m.t0)) / 1000) : 0;
   // generous reader, mirrored with the client: `amplitude` is amp too
   const amp = Number(m.amp ?? (m as any).amplitude ?? 0) * Math.exp(-damp * t);

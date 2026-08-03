@@ -72,10 +72,14 @@ const ampOf = (m, def = 0) => {
 const since = (m, nowMs) => Math.max(0, (nowMs - (m.t0 ?? (m._t0 ??= nowMs))) / 1000);
 
 /** ⚠ MIRRORS pendulumImpulse math in server/server.ts — keep in sync, or a
- *  joiner's swing disagrees with the one being pushed. */
+ *  joiner's swing disagrees with the one being pushed.
+ *  Missing damp = 0 = swings FOREVER. Friction is opt-in: a declared
+ *  pendulum is ambient decoration, and a default 0.06 meant every
+ *  undamped swing quietly died within a minute or two of being cast —
+ *  working exactly long enough for its author to walk away happy. */
 function pendulumTheta(m, t) {
   const w0 = (2 * Math.PI) / (m.period ?? 3.5);
-  return ampOf(m) * Math.exp(-(m.damp ?? 0.06) * t) * Math.cos(w0 * t + (m.phase ?? 0));
+  return ampOf(m) * Math.exp(-(m.damp ?? 0) * t) * Math.cos(w0 * t + (m.phase ?? 0));
 }
 
 /** Rotate obj by `theta` about local `axis` at local point `pivot`, composed
