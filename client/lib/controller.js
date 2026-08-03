@@ -344,12 +344,35 @@ export function setCameraCollisionTargets(fn) { collisionTargets = fn; }
 // screenshot key, no UI hide, no free camera. This is the human-facing version
 // of the retina path that already exists for agents.
 
-const photo = { pos: new THREE.Vector3(), yaw: 0, pitch: 0, fov: 55, speed: 6 };
+// Damping. A camera that starts and stops on the exact frame a key goes down
+// reads as a debug flythrough, not a shot: the eye is a physical object and an
+// operator's hands have mass. Everything here eases with an exponential
+// half-life — frame-rate independent (no `dt` term in a lerp factor, which
+// silently changes feel between 60 and 144Hz), and it cannot overshoot after a
+// long frame the way a spring would.
+const MOVE_TAU = 0.22;   // dolly weight: pushes off, glides to a stop
+const LOOK_TAU = 0.09;   // pans settle instead of snapping; short enough to not feel laggy
+const FOV_TAU = 0.16;    // the lens breathes
+const damp = (cur, target, tau, dt) => target + (cur - target) * Math.exp(-dt / tau);
+/** Same, over the shortest arc — so a pan across ±π doesn't unwind the long way. */
+function dampAngle(cur, target, tau, dt) {
+  let d = (target - cur) % (Math.PI * 2);
+  if (d > Math.PI) d -= Math.PI * 2;
+  if (d < -Math.PI) d += Math.PI * 2;
+  return cur + d * (1 - Math.exp(-dt / tau));
+}
+
+const photo = {
+  pos: new THREE.Vector3(), vel: new THREE.Vector3(),
+  yaw: 0, pitch: 0, fov: 55, speed: 6,
+};
+const _f = new THREE.Vector3(), _right = new THREE.Vector3(), _want = new THREE.Vector3();
 export function togglePhotoMode() {
   photoMode = !photoMode;
   if (photoMode) {
     photo.pos.copy(camera.position);
     photo.yaw = camYaw; photo.pitch = camPitch;
+    photo.vel.set(0, 0, 0);          // enter at rest — no inherited drift
     photo.fov = camera.fov;
     flashHint('photo mode — <kbd>WASD</kbd>+<kbd>QE</kbd> fly · <kbd>[</kbd><kbd>]</kbd> lens · <kbd>F1</kbd> hide UI · <kbd>F2</kbd> save · <kbd>P</kbd> exit', 6000);
   } else {
@@ -360,22 +383,40 @@ export function togglePhotoMode() {
 }
 function updatePhotoCamera(dt) {
   if (dragging) { /* handled by the shared mousemove */ }
-  photo.yaw = camYaw; photo.pitch = camPitch;
-  const f = new THREE.Vector3(
-    -Math.sin(camYaw) * Math.cos(camPitch), -Math.sin(camPitch), -Math.cos(camYaw) * Math.cos(camPitch));
-  const right = new THREE.Vector3().crossVectors(f, UP).normalize();
+  // The mouse sets a TARGET orientation; the camera chases it. Framing against
+  // the damped angles (not the raw ones) is what makes a pan feel operated
+  // rather than teleported — and the fly keys steer by where the camera is
+  // actually looking, so movement never fights the settle.
+  photo.yaw = dampAngle(photo.yaw, camYaw, LOOK_TAU, dt);
+  photo.pitch = damp(photo.pitch, camPitch, LOOK_TAU, dt);
+  _f.set(-Math.sin(photo.yaw) * Math.cos(photo.pitch), -Math.sin(photo.pitch),
+    -Math.cos(photo.yaw) * Math.cos(photo.pitch));
+  _right.crossVectors(_f, UP).normalize();
+
   const boost = (keys.has('ShiftLeft') ? 3.5 : 1) * (keys.has('AltLeft') ? 0.25 : 1);
-  const v = photo.speed * boost * dt;
-  if (held(MOVE_KEYS.fwd)) photo.pos.addScaledVector(f, v);
-  if (held(MOVE_KEYS.back)) photo.pos.addScaledVector(f, -v);
-  if (held(MOVE_KEYS.right)) photo.pos.addScaledVector(right, v);
-  if (held(MOVE_KEYS.left)) photo.pos.addScaledVector(right, -v);
-  if (keys.has('KeyE')) photo.pos.y += v;
-  if (keys.has('KeyQ')) photo.pos.y -= v;
-  if (keys.has('BracketLeft')) { camera.fov = Math.max(12, camera.fov - 30 * dt); camera.updateProjectionMatrix(); }
-  if (keys.has('BracketRight')) { camera.fov = Math.min(95, camera.fov + 30 * dt); camera.updateProjectionMatrix(); }
+  _want.set(0, 0, 0);
+  if (held(MOVE_KEYS.fwd)) _want.add(_f);
+  if (held(MOVE_KEYS.back)) _want.sub(_f);
+  if (held(MOVE_KEYS.right)) _want.add(_right);
+  if (held(MOVE_KEYS.left)) _want.sub(_right);
+  if (keys.has('KeyE')) _want.y += 1;
+  if (keys.has('KeyQ')) _want.y -= 1;
+  // diagonals used to travel ~1.4× faster than the cardinals
+  if (_want.lengthSq() > 1) _want.normalize();
+  _want.multiplyScalar(photo.speed * boost);
+
+  // Velocity chases the intent, so a keypress accelerates and a release coasts.
+  const k = 1 - Math.exp(-dt / MOVE_TAU);
+  photo.vel.addScaledVector(_want.sub(photo.vel), k);
+  photo.pos.addScaledVector(photo.vel, dt);
+
+  if (keys.has('BracketLeft')) photo.fov = Math.max(12, photo.fov - 30 * dt);
+  if (keys.has('BracketRight')) photo.fov = Math.min(95, photo.fov + 30 * dt);
+  const fov = damp(camera.fov, photo.fov, FOV_TAU, dt);
+  if (Math.abs(fov - camera.fov) > 1e-4) { camera.fov = fov; camera.updateProjectionMatrix(); }
+
   camera.position.copy(photo.pos);
-  camera.lookAt(photo.pos.clone().add(f));
+  camera.lookAt(_f.add(photo.pos));   // _f is spent here — recomputed next frame
 }
 
 /** Spectator/retina camera: first person from a followed body's head. */
