@@ -16,7 +16,7 @@
 import { THREE, scene } from './core.js';
 import { MeshBVHHelper } from 'three-mesh-bvh';
 import { colliders } from './colliders.js';
-import { closestParams } from './ragdoll.js';
+import { closestParams, TUNING } from './ragdoll.js';
 import { makeFrame } from './frames.js';
 
 // box = an OBB, walkable on top, solid on the sides between min.y and max.y
@@ -225,6 +225,61 @@ function syncRagdoll(rd) {
   }
 }
 
+// ---- the knobs -------------------------------------------------------------
+//
+// Every headless metric in this repo has at some point said a ragdoll was fine
+// while it plainly was not on screen. So: put the solver's switches and dials
+// where someone can watch the body and turn them. Toggling a whole family off
+// mid-tumble is the fastest bisect there is — if the shape stops being wrong
+// when CONE goes off, it was the cone.
+
+const SWITCHES = [
+  ['ON_FLEX', 'spine/neck bend'], ['ON_CONE', 'shoulder/hip cone'],
+  ['ON_BEHIND', 'behind-body stop'], ['ON_HINGE', 'knee/elbow hinge'],
+  ['ON_CAPSULE', 'self-collision'], ['ON_BRACE', 'torso bracing'],
+  ['ON_TWIST', 'twist state'], ['ON_GROUND', 'ground + props'],
+];
+const DIALS = [
+  ['YIELD', 0, 1, 0.05], ['CAPSULE_SOFT', 0, 1, 0.05],
+  ['SUBSTEPS', 1, 8, 1], ['ITER', 1, 8, 1],
+  ['DAMP', 0.8, 1, 0.005], ['SLEEP_DAMP', 0.5, 1, 0.01],
+  ['TWIST_LAG', 0, 1, 0.05], ['TWIST_STIFF', 0, 80, 2], ['TWIST_DAMP', 0.5, 1, 0.01],
+  ['GRAVITY', -20, 0, 0.5], ['SETTLE_V', 0, 0.4, 0.01], ['DEADLINE', 1, 30, 1],
+];
+const DEFAULTS = {};
+
+function switchRow(key, label) {
+  const wrap = document.createElement('label');
+  wrap.className = 'row dbg-row';
+  const cb = document.createElement('input');
+  cb.type = 'checkbox';
+  cb.checked = !!TUNING[key];
+  cb.onchange = () => { TUNING[key] = cb.checked ? 1 : 0; };
+  const nm = document.createElement('span');
+  nm.textContent = label;
+  wrap.append(cb, nm);
+  return wrap;
+}
+
+function dialRow(key, lo, hi, step) {
+  const wrap = document.createElement('div');
+  wrap.className = 'row';
+  const nm = document.createElement('span');
+  nm.className = 'nm';
+  nm.style.width = '92px';
+  nm.textContent = key.toLowerCase().replace(/_/g, ' ');
+  const sl = document.createElement('input');
+  sl.type = 'range'; sl.min = lo; sl.max = hi; sl.step = step; sl.value = TUNING[key];
+  const val = document.createElement('span');
+  val.className = 'v';
+  val.style.width = '46px';
+  const paint = () => { val.textContent = String(TUNING[key]); };
+  sl.oninput = () => { TUNING[key] = Number(sl.value); paint(); };
+  paint();
+  wrap.append(nm, sl, val);
+  return { wrap, reset: () => { TUNING[key] = DEFAULTS[key]; sl.value = DEFAULTS[key]; paint(); } };
+}
+
 // ---- panel -----------------------------------------------------------------
 
 function row(label, key, onChange) {
@@ -245,7 +300,7 @@ function row(label, key, onChange) {
 export function initDebug(p = {}) {
   providers = p;
   frame = makeFrame('debug', {
-    title: 'debug', x: -10, y: 320, w: 236, h: 226, minW: 200, hidden: true,
+    title: 'debug', x: -10, y: 300, w: 250, h: 460, minW: 210, hidden: true,
   });
   const stack = document.createElement('div');
   stack.className = 'stack';
@@ -253,6 +308,45 @@ export function initDebug(p = {}) {
     row('collider volumes', 'colliders', (v) => { if (!v) clearColliders(); }),
     row('ragdoll skeleton', 'ragdoll', (v) => { if (!v) clearRagdoll(); }),
   );
+  for (const [k] of DIALS) DEFAULTS[k] = TUNING[k];
+  for (const [k] of SWITCHES) DEFAULTS[k] = TUNING[k];
+
+  const btns = document.createElement('div');
+  btns.className = 'row';
+  const mk = (label, fn) => {
+    const b = document.createElement('button');
+    b.textContent = label; b.onclick = fn;
+    b.style.cssText = 'flex:1;font-size:var(--fs-sm);padding:3px 0';
+    return b;
+  };
+  const pause = mk('pause', () => {
+    TUNING.PAUSED = TUNING.PAUSED ? 0 : 1;
+    pause.textContent = TUNING.PAUSED ? '▶ resume' : 'pause';
+  });
+  const resets = [];
+  btns.append(
+    mk('re-drop', () => providers.reLimp?.()),
+    pause,
+    mk('reset', () => { for (const r of resets) r(); for (const [k] of SWITCHES) TUNING[k] = DEFAULTS[k]; repaintSwitches(); }),
+  );
+  stack.appendChild(btns);
+
+  const swBox = document.createElement('div');
+  // NOT .stack — that is flex:1 with its own scroller, and nested inside the
+  // panel's stack it collapses to nothing and the switches vanish.
+  swBox.style.cssText = 'display:flex;flex-direction:column;gap:3px';
+  for (const [k, label] of SWITCHES) swBox.appendChild(switchRow(k, label));
+  const repaintSwitches = () => {
+    [...swBox.querySelectorAll('input')].forEach((cb, i) => { cb.checked = !!TUNING[SWITCHES[i][0]]; });
+  };
+  stack.appendChild(swBox);
+
+  for (const [k, lo, hi, st] of DIALS) {
+    const d = dialRow(k, lo, hi, st);
+    resets.push(d.reset);
+    stack.appendChild(d.wrap);
+  }
+
   statsEl = document.createElement('pre');
   statsEl.className = 'dbg-stats';
   stack.appendChild(statsEl);
@@ -322,5 +416,27 @@ export function updateDebug(now = performance.now()) {
     ];
   }
   if (lastRun) lines.push('', `ragdoll  ${rd?.p ? 'active' : 'settled (last)'}`, ...lastRun);
+
+  // Per-bone TWIST, live. This is the number I have got wrong more than once,
+  // so it is on screen next to the body it claims to describe: if a limb looks
+  // twisted and its row says 0°, the measurement is what is broken.
+  if (rd?.drive && rd.pose) {
+    lines.push('', 'twist about each bone (deg)');
+    for (const d of rd.drive) {
+      const q = rd.pose[d.bone];
+      const child = rd.nodes?.[d.child];
+      if (!q || !child) continue;
+      _c.copy(child.position);
+      if (_c.lengthSq() < 1e-9) continue;
+      _c.normalize();
+      const along = q[0] * _c.x + q[1] * _c.y + q[2] * _c.z;
+      _q.set(_c.x * along, _c.y * along, _c.z * along, q[3]);
+      if (_q.lengthSq() < 1e-12) continue;
+      _q.normalize();
+      let a = 2 * Math.acos(Math.min(1, Math.max(-1, _q.w))) * 180 / Math.PI;
+      if (a > 180) a -= 360;
+      lines.push(`  ${d.bone.padEnd(14)}${Math.abs(a).toFixed(0).padStart(4)}`);
+    }
+  }
   statsEl.textContent = lines.join('\n');
 }

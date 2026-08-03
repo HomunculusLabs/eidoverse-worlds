@@ -148,6 +148,13 @@ export const TUNING = {
   // zero and the state below is what bounds it if anything ever drives it (a
   // dragged or puppeted limb would).
   TWIST_LAG: 0,
+  // Live switches for the debug panel. Everything here can be turned off while
+  // a body is mid-tumble, which is the fastest way to find which rule is
+  // responsible for a shape that looks wrong — and eyes on the actual render
+  // have caught things every headless metric in this repo has missed.
+  ON_FLEX: 1, ON_CONE: 1, ON_BEHIND: 1, ON_HINGE: 1,
+  ON_CAPSULE: 1, ON_BRACE: 1, ON_TWIST: 1, ON_GROUND: 1,
+  PAUSED: 0,
   SETTLE_V: 0.06,          // speed below which we call it settled...
   SETTLE_TIME: 0.4,        // ...for this long, in SECONDS (was 24 FRAMES, which
                            // meant 0.17s at 144Hz and 0.8s at 30Hz)
@@ -456,7 +463,10 @@ export class Ragdoll {
 
     // rest length of each link, from the neutral pose (see BRACES)
     this.links = LINKS.filter(([a, b]) => this.p[a] && this.p[b])
-      .map(([a, b]) => ({ a, b, len: this.rest[a].distanceTo(this.rest[b]) }))
+      .map(([a, b]) => ({
+        a, b, len: this.rest[a].distanceTo(this.rest[b]),
+        brace: BRACES.some((x) => x[0] === a && x[1] === b),
+      }))
       .filter((l) => l.len > 1e-5);
 
     // the rig's own body frame, in which the CONE and HINGE limits are stated
@@ -723,7 +733,8 @@ export class Ragdoll {
   }
 
   _links() {
-    for (const { a, b, len } of this.links) {
+    for (const { a, b, len, brace } of this.links) {
+      if (brace && !TUNING.ON_BRACE) continue;
       const pa = this.p[a], pb = this.p[b];
       const wa = this.iw[a], wb = this.iw[b], ws = wa + wb;
       if (ws <= 0) continue;
@@ -740,6 +751,7 @@ export class Ragdoll {
    *  segment the contact fell and by inverse mass — so a wrist bounces off the
    *  chest rather than shoving it. */
   _capsules() {
+    if (!TUNING.ON_CAPSULE) return;
     for (const { A, B, min } of this.pairs) {
       const a0 = this.p[A.a], a1 = this.p[A.b], b0 = this.p[B.a], b1 = this.p[B.b];
       closestParams(a0, a1, b0, b1, _pr);
@@ -794,6 +806,7 @@ export class Ragdoll {
    *  else collides against. Lights carry no collider, so a ragdoll never snags
    *  on a bulb. */
   _world() {
+    if (!TUNING.ON_GROUND) return;
     for (const j of JOINTS) {
       const p = this.p[j]; if (!p) continue;
       const x0 = p.x, z0 = p.z;
@@ -870,7 +883,7 @@ export class Ragdoll {
 
   _limits() {
     // ---- FLEX: symmetric cone between adjacent links
-    for (const { a, b, c, max } of this.flex) {
+    if (TUNING.ON_FLEX) for (const { a, b, c, max } of this.flex) {
       const pa = this.p[a], pb = this.p[b], pc = this.p[c];
       _a.copy(pb).sub(pa); const la = _a.length();
       _b.copy(pc).sub(pb); const lb = _b.length();
@@ -893,7 +906,7 @@ export class Ragdoll {
 
     // ---- CONE: limb direction vs the torso
     const { r, u, f } = this.frame;
-    for (const { b, c, axis, cos } of this.cone) {
+    if (TUNING.ON_CONE) for (const { b, c, axis, cos } of this.cone) {
       const pb = this.p[b], pc = this.p[c];
       _b.copy(pc).sub(pb); const lb = _b.length();
       if (lb < 1e-5) continue;
@@ -914,7 +927,7 @@ export class Ragdoll {
     }
 
     // ---- BEHIND: a one-sided frontal-plane stop on the limb's direction
-    for (const { b, c, minFwd } of this.behind) {
+    if (TUNING.ON_BEHIND) for (const { b, c, minFwd } of this.behind) {
       const pb = this.p[b], pc = this.p[c];
       _b.copy(pc).sub(pb); const lb = _b.length();
       if (lb < 1e-5) continue;
@@ -933,7 +946,7 @@ export class Ragdoll {
     }
 
     // ---- HINGE: signed one-sided fold, plus a sideways tolerance
-    for (const H of this.hinge) {
+    if (TUNING.ON_HINGE) for (const H of this.hinge) {
       const pa = this.p[H.a], pb = this.p[H.b], pc = this.p[H.c];
       _a.copy(pb).sub(pa); const la = _a.length();
       _b.copy(pc).sub(pb); const lb = _b.length();
@@ -1060,6 +1073,7 @@ export class Ragdoll {
     // which used to change peak bone stretch by 3.5x and land the body metres
     // apart for the same fall. A long hitch drops its backlog rather than
     // simulating a second of physics in one frame and exploding.
+    if (TUNING.PAUSED) dt = 0;
     this.acc += dt;
     let n = 0;
     while (this.acc >= FIXED_DT && n < MAX_FRAMES) { this._solve(); this.acc -= FIXED_DT; n++; }
@@ -1127,6 +1141,7 @@ export class Ragdoll {
       d.twv *= TUNING.TWIST_DAMP;
       d.twv -= d.tw * TUNING.TWIST_STIFF * dtF;
       d.tw += d.twv * dtF;
+      if (!TUNING.ON_TWIST) { d.tw = 0; d.twv = 0; }
       if (d.tw > d.twMax) { d.tw = d.twMax; d.twv = 0; }
       else if (d.tw < -d.twMax) { d.tw = -d.twMax; d.twv = 0; }
 
