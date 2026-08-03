@@ -7,12 +7,13 @@
 //
 // Pure container surgery — images are swapped in the BIN chunk and bufferViews
 // repacked; meshes, skins, and every extension (VRMC_vrm included) pass
-// through untouched. Resizing uses macOS `sips`.
+// through untouched. Resizing uses sharp (a root dep already, for
+// optimize.ts) — the first cut used macOS `sips`, which made the tool
+// crash on every Linux box Orrery calls it from (Digi's finding).
 //
 // Usage: bun tools/slim-vrm.ts file.vrm [--max 2048] [--quality 82] [--out path]
 //        (default: rewrites the file in place)
 
-import { execSync } from "node:child_process";
 import { basename } from "node:path";
 
 const argv = Bun.argv.slice(2);
@@ -36,20 +37,22 @@ while (off < src.length) {
 }
 if (!bin) throw new Error("no BIN chunk");
 
-// resize each image via sips, remember replacement bytes per bufferView index
+// resize each image via sharp, remember replacement bytes per bufferView index
+// (JPEG output regardless of source format — same policy the sips version
+// had; VRM textures don't rely on alpha, and MToon transparency travels in
+// material properties, not the base color image)
+const sharp = (await import("sharp")).default;
 const replaced = new Map<number, Uint8Array>();
 for (const [i, img] of (json.images ?? []).entries()) {
   const bv = json.bufferViews[img.bufferView];
   const bytes = bin.subarray(bv.byteOffset ?? 0, (bv.byteOffset ?? 0) + bv.byteLength);
-  const ext = img.mimeType === "image/png" ? "png" : "jpg";
-  const tmpIn = `/tmp/slimvrm-${i}.${ext}`, tmpOut = `/tmp/slimvrm-${i}-out.jpg`;
-  await Bun.write(tmpIn, bytes);
-  const dims = execSync(`sips -g pixelWidth -g pixelHeight ${tmpIn}`).toString();
-  const w = Number(dims.match(/pixelWidth: (\d+)/)?.[1] ?? 0);
-  const h = Number(dims.match(/pixelHeight: (\d+)/)?.[1] ?? 0);
+  const meta = await sharp(bytes).metadata();
+  const w = meta.width ?? 0, h = meta.height ?? 0;
   if (Math.max(w, h) <= MAX) { console.log(`  image ${i}: ${w}×${h} already ≤ ${MAX}, kept`); continue; }
-  execSync(`sips -s format jpeg -s formatOptions ${QUALITY} -Z ${MAX} ${tmpIn} --out ${tmpOut}`, { stdio: "pipe" });
-  const slim = new Uint8Array(await Bun.file(tmpOut).arrayBuffer());
+  const slim = new Uint8Array(await sharp(bytes)
+    .resize(MAX, MAX, { fit: "inside", withoutEnlargement: true })
+    .jpeg({ quality: QUALITY })
+    .toBuffer());
   replaced.set(img.bufferView, slim);
   img.mimeType = "image/jpeg";
   console.log(`  image ${i}: ${w}×${h} ${(bytes.length / 1e6).toFixed(1)}MB → ${MAX}² ${(slim.length / 1e6).toFixed(1)}MB`);
