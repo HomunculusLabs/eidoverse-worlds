@@ -2,10 +2,11 @@
 //
 // Every spawned object gets a box fit from its own geometry: an OBB (local
 // AABB + the entity's yaw). Boxy things (desks, crates, barrels) block movement
-// and their tops are walkable ground. Tall things (trees, streetlights) would
-// wall you off with their canopy extents, so they collide as a slim centre
-// pillar instead — you can't walk through a trunk, but you can walk under the
-// branches.
+// and their tops are walkable ground. Tall SMALL-footprint things (streetlights,
+// signs) would wall you off with their canopy extents, so they collide as a slim
+// centre pillar instead — you can't walk through the post, but you can walk
+// under whatever it carries. Anything room-sized collides against its real
+// triangles, so you can walk into it.
 //
 // This is also where Layer-0 affordances come from: a surface that is walkable
 // is, by the same data, sittable and placeable-on. Nobody authors that.
@@ -15,7 +16,7 @@ import { MeshBVH } from 'three-mesh-bvh';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 
 const UP = new THREE.Vector3(0, 1, 0);
-export const colliders = new Map(); // entity id -> { obj, box, pillar, exact?, cell }
+export const colliders = new Map(); // entity id -> { obj, box, pillar, exact?, interior, cell }
 
 // ---- exact (trimesh) colliders ----------------------------------------------
 // Boxes read the OUTSIDE of things. Generated interiors are the opposite: the
@@ -80,38 +81,60 @@ function bucketRemove(id, entry) {
   }
 }
 
-const _probe = new THREE.Vector3();
-// Can an avatar STAND at the footprint centre? Interiors: yes — walls are metres
-// away. Solids with mass at the centre (a tree's trunk, a statue) : no. This is
-// what separates a walkable room from a big leafy thing whose bounding box
-// merely LOOKS room-scale. Local space in, world-metre threshold out.
-function isHollow(bvh, box, s) {
-  // probe the box's mid-height: floor and ceiling are both far there, so the
-  // nearest surface is a WALL (rooms: metres away) or the mass at the centre
-  // (a tree's trunk: right here). Measuring at floor+1m would wrongly count the
-  // floor you stand on as "near" and read every room as solid.
-  _probe.set((box.min.x + box.max.x) / 2, (box.min.y + box.max.y) / 2, (box.min.z + box.max.z) / 2);
-  const res = bvh.closestPointToPoint(_probe, {});
-  return res ? res.distance * s > 0.9 : false;
+const _fray = new THREE.Ray();
+// Does this thing contain its OWN floor — a surface you could stand on inside
+// it? Rays down from mid-height: a pavilion, a house, a tower all hit their own
+// deck; a tree hits nothing but air between its trunk and its canopy.
+//
+// This is NOT a walkability test (size decides that, see decide). It exists for
+// the grass clearing mask, whose question is narrower and answerable: "is there
+// a floor here that the meadow should not grow through?"
+function hasFloor(bvh, box, s) {
+  const midY = (box.min.y + box.max.y) / 2;
+  const w = box.max.x - box.min.x, d = box.max.z - box.min.z;
+  let hits = 0, n = 0;
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++) {
+      // inset to 20%..80% of the footprint: samples hugging the walls would
+      // count the walls themselves, and every hollow box would read as floored
+      _fray.origin.set(box.min.x + w * (0.2 + 0.2 * i), midY, box.min.z + d * (0.2 + 0.2 * j));
+      _fray.direction.set(0, -1, 0);
+      n++;
+      const hit = bvh.raycastFirst(_fray, THREE.DoubleSide);
+      if (!hit) continue;
+      // horizontal-ish surfaces only — a wall passing under the ray is not a
+      // floor (sign ignored: back-faces of a deck point down)
+      const ny = hit.face?.normal?.y;
+      if (ny == null || Math.abs(ny) > 0.5) hits++;
+    }
+  }
+  return hits / n >= 0.35;
 }
 
 function decide(entry, s) {
   const { box, pref } = entry;
+  // SIZE decides walkability, full stop.
+  //
+  // This used to also require the thing be "hollow" — nothing within 0.9m of
+  // its bounding-box centre — to keep a tree's canopy from becoming a walkable
+  // room. But that probe cannot tell a trunk from anything else standing in the
+  // middle of an open structure, so it failed every bell tower, pavilion,
+  // gazebo and colonnade we have: bell2 is a 214m² pavilion with its bell
+  // hanging 0.20m from the centre, and it read as solid rock. A rule that
+  // excludes real buildings to exclude trees is the wrong rule; trees are
+  // handled where they actually cause harm (the grass mask below), and a
+  // per-object `collide` override still wins over any of it.
   const roomScale = (box.max.x - box.min.x) * (box.max.z - box.min.z) * s * s >= 16
     && (box.max.y - box.min.y) * s >= 2.2;
-  let exact;
-  if (pref === 'exact') exact = true;
-  else if (pref === 'box') exact = false;
-  else if (roomScale) {
-    // room-SIZED isn't enough — a tree's canopy is too. Only the HOLLOW ones
-    // (you can stand inside) become exact; trees fall through to pillar so you
-    // still walk under the branches (and no grass clearing paints under them).
-    if (!entry.exact) entry.exact = buildExact(entry.obj);
-    exact = entry.exact ? isHollow(entry.exact.bvh, box, s) : false;
-  } else exact = false;
+  const exact = pref === 'exact' ? true : pref === 'box' ? false : roomScale;
   if (exact && !entry.exact) entry.exact = buildExact(entry.obj);
-  if (!exact) entry.exact = null;         // tree/solid: use pillar/box, no trimesh, no clearing
+  if (!exact) entry.exact = null;         // small/solid: use pillar/box, no trimesh
   entry.pillar = !entry.exact && (box.max.y - box.min.y) * s > 2.4;
+  // Clearing is a SEPARATE question from collision: a palm is now exact (you
+  // walk under the fronds and bump the trunk, which is right), but stamping its
+  // canopy footprint into the grass mask would leave a bald ring under every
+  // tree. Only things with a real floor suppress the meadow.
+  entry.interior = entry.exact ? hasFloor(entry.exact.bvh, box, s) : false;
 }
 
 export function fitCollider(id, obj, { collide, scale = 1 } = {}) {

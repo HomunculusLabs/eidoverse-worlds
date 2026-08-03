@@ -45,7 +45,7 @@ export function paintClearings() {
   ctx.fillRect(0, 0, MASK, MASK);
   ctx.fillStyle = '#000';
   for (const [, e] of colliders) {
-    if (!e.exact) continue;                       // interiors only
+    if (!e.interior) continue;                    // things with a real floor only
     const { obj, box } = e;
     const s = obj.scale?.x || 1;
     const hw = ((box.max.x - box.min.x) / 2) * s + 0.15; // small apron past the wall
