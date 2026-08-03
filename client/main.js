@@ -34,6 +34,7 @@ import {
   openDoor, toggleRoster, initRoster, initDock, paintRoster, panelFrame, el,
 } from './lib/ui.js';
 import { initDebug, updateDebug, toggleDebug } from './lib/debug.js';
+import { dragSim } from './lib/bodydrag.js';
 import { initChat, logChat, chat, openConvo } from './lib/chat.js';
 import { makeFrame } from './lib/frames.js';
 import { Ragdoll } from './lib/ragdoll.js';
@@ -136,7 +137,11 @@ initDock([
   { id: 'debug', label: '🐞' },
 ]);
 initDebug({
-  ragdoll: () => ragdoll, downed: () => downed, fps: () => fps,
+  // the body in your HAND wins over your own — that is the one being worked on
+  ragdoll: () => dragSim() ?? ragdoll,
+  downed: () => !!dragSim() || downed,
+  dragging: () => !!dragSim(),
+  fps: () => fps,
   // drop again from where you stand, so a shape can be reproduced back to back
   reLimp: () => { if (downed) getUp(); goLimp(); },
 });

@@ -288,6 +288,11 @@ bus.on('bodydrag', (msg) => {
 // ---------------------------------------------------------------- tick
 
 /** Dev introspection — what the drag module believes right now. */
+/** The takeover sim, while a body is in your hand. The debug panel wants it:
+ *  a dragged body is a DIFFERENT Ragdoll from your own, and a panel that only
+ *  ever reads main.js's shows nothing for the body you are actually holding. */
+export function dragSim() { return drag?.rd ?? null; }
+
 export function dragState() {
   return { dragging: drag ? { id: drag.id, joint: drag.joint, depth: +drag.depth.toFixed(2) } : null, draggedBy };
 }

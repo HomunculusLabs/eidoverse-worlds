@@ -135,6 +135,15 @@ export const TUNING = {
   // 14 rigs, the neighbours settle 6 to 11.
   SUBSTEPS: 2,
   ITER: 3,                 // relaxation passes per substep
+  // A body HANGING from a pin needs far more than a body falling. Gauss-Seidel
+  // propagates tension one link per pass, so a chain held at one end and loaded
+  // at the other stretches until the passes reach it — and a dragged body is
+  // exactly that chain, held by a hand with the pelvis swinging off the far
+  // end. Measured while dragging: 69% bone stretch at 3 passes, 23% at 8, 8% at
+  // 16. A body stretched half again its length reads as the limbs twisting,
+  // because the drive takes its directions from where the joints ended up.
+  // Only paid while something is actually pinned.
+  ITER_PINNED: 16,
   DAMP: 0.98,              // per FRAME, spread across the substeps
   SLEEP_DAMP: 0.8,         // ...harder once nearly still, see _solve
   YIELD: 0.5,              // fraction of an angular violation fixed per pass
@@ -699,7 +708,8 @@ export class Ragdoll {
     // where the frame started, for the settle test at the bottom
     for (const j of JOINTS) { const p = this.p[j]; if (p) this.pre[j].copy(p); }
 
-    for (let s = 0; s < n; s++) this._substep(sdt, sdamp);
+    const iters = this.pinned ? TUNING.ITER_PINNED : TUNING.ITER;
+    for (let s = 0; s < n; s++) this._substep(sdt, sdamp, iters);
 
     // Full world collision (props AND terrain) once per FRAME rather than once
     // per relaxation pass: resolveColliders is a spatial-hash query, and
@@ -726,7 +736,7 @@ export class Ragdoll {
     this.maxV = Math.sqrt(moved) / FIXED_DT;
   }
 
-  _substep(dt, damp) {
+  _substep(dt, damp, iters = TUNING.ITER) {
     for (const j of JOINTS) {
       const p = this.p[j]; if (!p) continue;
       const pr = this.prev[j];
@@ -737,7 +747,7 @@ export class Ragdoll {
     }
     this._pin(dt);
     this._frame(this.p);
-    for (let it = 0; it < TUNING.ITER; it++) {
+    for (let it = 0; it < iters; it++) {
       this._links();
       this._capsules();
       this._terrain();
