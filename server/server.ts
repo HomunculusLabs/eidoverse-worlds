@@ -1389,14 +1389,25 @@ const server = Bun.serve({
       //  - ?as=avatar&name=foo: named into the overlay vrms dir, because the
       //    roster is name-keyed and people re-export their bodies (mtime
       //    versioning handles the cache).
-      // Trust model: the door token OR any per-agent bearer from
-      // mcpl/tokens.json (so Orrery and agents can push generated GLBs here
-      // directly — the store is content-addressed and inert; what enters a
-      // WORLD is still the `asset`/`spawn` verbs, which per-world roles gate),
-      // plus per-IP rate limiting — live generation is the feature, an upload
-      // flood is not. `?by=` is attribution for the console trail.
+      // Trust model: the door token, any per-agent bearer from
+      // mcpl/tokens.json, OR an aid1 credential the home node vouches for
+      // (so Orrery and agents can push generated GLBs here directly — the
+      // store is content-addressed and inert; what enters a WORLD is still
+      // the `asset`/`spawn` verbs, which per-world roles gate), plus per-IP
+      // rate limiting — live generation is the feature, an upload flood is
+      // not. `?by=` is attribution for the console trail.
       const upTok = url.searchParams.get("token") ?? "";
-      const upAgent = agentTokens().byToken.get(upTok);
+      let upAgent = agentTokens().byToken.get(upTok);
+      // The aid1 leg the join door has: guests enrolled via archipelago-home
+      // carry no tokens.json entry, but the scripting tier's `behavior` verb
+      // is already reachable to them through world_verb — the bytes it binds
+      // must be landable by the same identity, or the tier is half-open.
+      // Same audience/scope/slug derivation as the two doors, no jti burn
+      // (an aid1 credential is reusable until expiry at every door).
+      if (!upAgent && HN_ISSUER_KEY && upTok.startsWith("aid1.")) {
+        const v = verifyToken(upTok, { issuerId: HN_ISSUER_KEY, iss: HN_ISS, aud: HN_AUD, requireScopes: ["worlds:join"] });
+        if (v.ok) upAgent = v.payload.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || v.payload.sub;
+      }
       if (JOIN_TOKEN && upTok !== JOIN_TOKEN && !upAgent)
         return new Response("token required", { status: 401 });
       const upBy = (url.searchParams.get("by") ?? upAgent ?? "?").slice(0, 64);

@@ -134,6 +134,19 @@ try {
   const s6 = await open({}, spoof.cookie);
   check("agent name via Discord nick → reserved, rejected", s6.closedWith === 4004, `code=${s6.closedWith}`);
 
+  // ---- /upload gate: aid1 reaches the script tier (Digi's finding #5) ----
+  const upTok = mint({ sub: "agent:ferro@guest", kind: "agent", name: "Ferro", scopes: ["worlds:join"], jti: undefined });
+  const up = (tok: string, body = "world.log('hi')") =>
+    fetch(`${HTTP}/upload?as=script&token=${encodeURIComponent(tok)}`, { method: "POST", body });
+  const u1 = await up(upTok);
+  const u1body = u1.status === 200 ? await u1.json() : null;
+  check("aid1 token uploads a script", u1.status === 200 && typeof u1body?.path === "string",
+    `status=${u1.status}`);
+  check("aid1 upload is repeatable (no jti burn)", (await up(upTok)).status === 200);
+  check("garbage aid1 at /upload → 401", (await up("aid1.not.real")).status === 401);
+  check("spectate-only scope at /upload → 401",
+    (await up(mint({ kind: "agent", scopes: ["worlds:spectate"], jti: undefined }))).status === 401);
+
   // ---- agent-door verifier (the same copy net-server.ts uses) ----
   const agentTok = mint({ sub: "agent:ferro@guest", kind: "agent", name: "Ferro", scopes: ["worlds:join"], jti: undefined });
   const v = verifyToken(agentTok, { issuerId: ISSUER_ID, iss: ISS, aud: "eidoverse", requireScopes: ["worlds:join"] });
