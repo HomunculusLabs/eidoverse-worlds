@@ -181,6 +181,33 @@ check('every shipped rig loads with a humanoid and hips',
     worst < 1e-6, `drift ${worst.toExponential(2)} at ${who}`);
 }
 
+// ---- the rest snapshot has to be taken where the root IS
+{
+  // Everything read out of `rest` is a difference — bone lengths, cone axes —
+  // except hipsOffset, which is the pelvis's height above the ROOT. So a
+  // snapshot captured at one root height and used at another is wrong by
+  // exactly that difference, and the rendered body sits that far from where
+  // the sim has it. The headless agent path did this: it cached the snapshot
+  // once with the root at y=0 and reused it for drag releases, which begin
+  // wherever the hand let go. A plain knock-over starts at zero and never
+  // noticed; a body dropped from a metre up was a metre out.
+  const rig = FLEET[0];
+  const lifted = (stale: boolean) => {
+    const av = makeAvatar(rig.P, { realParent: rig.realParent });
+    const atZero = av.restBonePositions();          // captured at root y = 0
+    av.root.position.y = 1.0;                        // ...then let go of, up here
+    av.root.updateMatrixWorld(true);
+    const rest = stale ? atZero : av.restBonePositions();
+    const rd: any = new Ragdoll(av, null, rest);
+    return rd.hipsOffset;
+  };
+  const good = lifted(false), bad = lifted(true);
+  check('hips offset is measured against the CURRENT root', Math.abs(good - bad - 1.0) < 0.01,
+    `fresh ${good.toFixed(2)} vs stale ${bad.toFixed(2)} — should differ by the 1m lift`);
+  check('...and the fresh one is the real pelvis height', good > 0.2 && good < 1.2,
+    `${good.toFixed(2)}m`);
+}
+
 // ---- a sim built mid-motion must inherit that motion
 {
   // Verlet keeps velocity in p - prev, and a fresh sim sets prev = p — a body

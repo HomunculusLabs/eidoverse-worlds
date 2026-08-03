@@ -92,14 +92,12 @@ async function skeletonFor(httpBase: string, avatarPath: string) {
 export class HeadlessBody {
   private m: NonNullable<typeof simMods>;
   private av: any;
-  private rest: any;
   rd: any = null;
   groundY = 0;
 
   private constructor(m: NonNullable<typeof simMods>, P: Record<string, any>) {
     this.m = m;
     this.av = m.rig.makeAvatar(P);
-    this.rest = this.av.restBonePositions();
   }
 
   /** null when physics is unavailable for this process or this VRM. */
@@ -145,7 +143,15 @@ export class HeadlessBody {
     }
     const lean = Array.isArray(opts.lean) && opts.lean.length === 3
       ? new this.m.THREE.Vector3(opts.lean[0], opts.lean[1], opts.lean[2]) : null;
-    this.rd = new this.m.Ragdoll(this.av, lean, this.rest);
+    // The rest snapshot must be taken with the root WHERE IT IS NOW. It is a
+    // set of WORLD positions, and Ragdoll reads the hips' height out of it
+    // against the live root to learn how far the model origin sits below the
+    // pelvis. Cached once at construction — with the root at y=0, as it was —
+    // it is wrong by exactly the lift for any tumble that begins somewhere
+    // else, and `rootY` is precisely that: a body let go of in mid-air. The
+    // pelvis then renders a metre from where the sim has it. A plain
+    // knock-over starts at y=0 and never noticed; a drag release always did.
+    this.rd = new this.m.Ragdoll(this.av, lean, this.av.restBonePositions());
     for (const p of opts.pins ?? []) this.setPin(p.j, p.at);
   }
 

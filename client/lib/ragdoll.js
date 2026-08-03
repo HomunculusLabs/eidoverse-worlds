@@ -436,8 +436,14 @@ export function closestParams(p1, q1, p2, q2, out) {
 export class Ragdoll {
   /** @param avatar   the OWNER's Avatar.
    *  @param lean     optional topple velocity in m/s — see below.
-   *  @param rest     optional map joint -> neutral-rest world position, from
-   *                  Avatar.restBonePositions(). Everything anatomical is
+   *  @param rest     optional map joint -> neutral-rest WORLD position, from
+   *                  Avatar.restBonePositions(). It must be captured with the
+   *                  root where it is NOW: everything else read out of it is a
+   *                  difference and so translation-free, but hipsOffset is the
+   *                  pelvis's height above the ROOT, and a snapshot taken at a
+   *                  different root height is wrong by exactly that difference.
+   *  @param seedVel  optional map joint -> velocity (m/s), to inherit motion
+   *                  from a sim being replaced mid-flight. Everything anatomical is
    *                  measured against THIS, not against the live skeleton: a
    *                  body that goes limp mid-stride must not inherit the
    *                  stride's angles as its idea of "rest", or its knees adopt
