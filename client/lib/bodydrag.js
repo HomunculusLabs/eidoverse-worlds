@@ -124,12 +124,18 @@ function pickMarker() {
 function pinCurrent() {
   if (!drag) return;
   const r = remotes.get(drag.id);
-  const t = drag.rd.pins?.get(drag.joint);
+  // where the joint IS, not where the cursor is. They agree — a pinned joint
+  // is held at its target — but the joint is the thing being nailed, and
+  // saying so keeps the nail on the limb if that ever stops being true.
+  const t = drag.rd.p?.[drag.joint] ?? drag.rd.pins?.get(drag.joint);
   if (!t) return;
   sendBodyDrag(drag.id, {
     end: true,
     pinAt: { joint: drag.joint, at: [t.x, t.y, t.z] },
     ...(drag.rd.pose ? { pose: drag.rd.pose } : {}),
+    // a nail is a handover too: the owner takes over enforcing it, and should
+    // continue this sim rather than rebuild a guess of it from the bones
+    sim: drag.rd.snapshot(),
     ...(r?.avatar ? { p: r.avatar.root.position.toArray() } : {}),
   });
   drag.rd.setPin(null);
@@ -169,7 +175,20 @@ function beginGrab(e) {
 
   hitR.avatar.root.updateMatrixWorld(true);
   const rd = new Ragdoll(hitR.avatar, null, hitR.avatar.restBonePositions());
-  drag = { id: hitR.id, rd, joint, depth: hit.along, sentAt: 0 };
+  // Keep the offset between the joint and the cursor RAY. pickBody finds the
+  // joint nearest the ray, which is up to PICK_R away from it — so pinning the
+  // joint straight onto the ray teleports the limb sideways the instant you
+  // grab, by as much as the pick radius. You grab a wrist and the wrist jumps
+  // to your cursor; nail it there and the nail lands somewhere you never
+  // pointed at. Held as a world offset, the limb keeps the relationship it had
+  // when you took hold of it.
+  const jn = hitR.avatar.vrm.humanoid?.getNormalizedBoneNode?.(joint);
+  const off = new THREE.Vector3();
+  if (jn) {
+    off.copy(_ray.ray.origin).addScaledVector(_ray.ray.direction, hit.along);
+    off.subVectors(jn.getWorldPosition(_tmp), off);
+  }
+  drag = { id: hitR.id, rd, joint, depth: hit.along, off, sentAt: 0 };
   draggedLocal.add(hitR.id);
   sendBodyDrag(hitR.id, { grab: { joint } });
   flashHint(`dragging ${hitR.id} by the ${joint} — release to drop · P to nail it here`);
@@ -318,7 +337,7 @@ export function updateBodyDrag(dt, now = performance.now()) {
       return;
     }
     _ray.setFromCamera(_ndc, camera);
-    _pt.copy(_ray.ray.direction).multiplyScalar(drag.depth).add(_ray.ray.origin);
+    _pt.copy(_ray.ray.direction).multiplyScalar(drag.depth).add(_ray.ray.origin).add(drag.off);
     drag.rd.setPin(drag.joint, _pt);
     drag.rd.step(dt);                            // drives the remote avatar directly
     if (now - drag.sentAt >= STREAM_MS && drag.rd.pose) {
