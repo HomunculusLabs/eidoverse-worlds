@@ -33,6 +33,7 @@
 import { THREE } from './core.js';
 import { entities, comps } from './world.js';
 import { reindexCollider } from './colliders.js';
+import { serverNow } from './remotes.js';
 
 const UP = new THREE.Vector3(0, 1, 0);
 const _q = new THREE.Quaternion();
@@ -208,7 +209,12 @@ const _seenParts = new Set();
  *  Epoch clock, NOT the rAF timestamp: t0s are sequencer Date.now() stamps,
  *  and agreeing with other clients matters more than agreeing with vsync. */
 export function tickMotion() {
-  const nowMs = Date.now();
+  // The SEQUENCER's clock, not the wall's: t0s are server stamps, and an
+  // NTP-skewed client rendering motion at wrong phase disagrees with every
+  // other window into the same world (Hesperus finding #4). serverNow() is
+  // smoothed from frame stamps and falls back to local time before the
+  // first frame arrives.
+  const nowMs = serverNow();
   _seenParts.clear();
   for (const [id, bag] of comps) {
     for (const key in bag) {

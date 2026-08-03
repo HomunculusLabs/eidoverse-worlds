@@ -183,7 +183,9 @@ type WorldState = {
    *  The moment an owner exists, unlisted ids are visitors.
    *  `gen` is the spend capability: bringing NEW assets into the world's
    *  vocabulary (the `asset` verb — where Orrery generations land). */
-  roles: Record<string, { role: "owner" | "builder" | "visitor"; gen?: boolean }>;
+  roles: Record<string, { role: "owner" | "builder" | "visitor"; gen?: boolean;
+    /** durable subject binding: when present, only this sub wears the grant */
+    sub?: string }>;
   /** Per-world bans, fed by owner-authored `ban`/`unban` verbs in the log —
    *  event-sourced like roles, so a ban replays, folds, audits, and rides a
    *  fork. Keyed by lowercased display id; `sub` (when the target was present
@@ -326,7 +328,14 @@ function foldEntry(st: WorldState, e: LogEntry): void {
       const cur = st.roles[a.id] ?? { role: "builder" as const };
       const role = ROLE_RANK[a.role as string] != null ? a.role : cur.role;
       const gen = a.gen != null ? Boolean(a.gen) : cur.gen;
-      st.roles[a.id] = { role, ...(gen ? { gen: true } : {}) };
+      // Durable ink (Hesperus finding #1): when the grant was written while
+      // its subject's durable sub was KNOWN, the grant carries it — and only
+      // that sub can wear it. A display name is a nameplate, not a deed;
+      // before this, anyone reusing an offline owner's nick inherited the
+      // world. Grants without a sub (unauthenticated ids, pre-fix history)
+      // keep their old name-keyed meaning.
+      st.roles[a.id] = { role, ...(gen ? { gen: true } : {}),
+        ...(a.sub ? { sub: String(a.sub) } : (cur as any).sub ? { sub: (cur as any).sub } : {}) };
       return;
     }
     case "ban": {
@@ -646,7 +655,11 @@ function rightsOf(w: World, id: string, sub?: string): { role: string; gen: bool
   // for drop-in company; introducing new assets (spend) is what's restricted
   // by default. `/grant * visitor` closes the world; `/grant * +gen` opens
   // generation to everyone.
-  const r = (sub ? w.state.roles?.[sub] : undefined) ?? w.state.roles?.[id] ?? w.state.roles?.["*"] ?? { role: "builder" as const };
+  let r = (sub ? w.state.roles?.[sub] : undefined) ?? w.state.roles?.[id] ?? w.state.roles?.["*"] ?? { role: "builder" as const };
+  // a name-keyed grant that KNOWS its subject's sub is worn only by that sub
+  if ((r as any).sub && (r as any).sub !== sub) {
+    r = w.state.roles?.["*"] ?? { role: "builder" as const };
+  }
   return { role: r.role, gen: r.role === "owner" || Boolean(r.gen) };
 }
 /** What each verb demands. `asset` is the spend gate; `grant` is owner-only. */
@@ -810,6 +823,12 @@ class World {
     if (existsSync(this.posesPath)) {
       try { this.poses = JSON.parse(readFileSync(this.posesPath, "utf8")); } catch { /* corrupt = fresh */ }
     }
+    // A brand-new world's first entry names the log dialect — the one fix
+    // with a deadline, because it only helps logs written after it exists
+    // (Hesperus finding #5). Old readers fold it as an unknown verb: nothing.
+    if (this.logBytes === 0 && this.snapSeq < 0) {
+      this.append("world", "genesis", { v: 1, dialect: "eidoverse-log" });
+    }
     // Runtime scripts wake with the world — a behavior keeps behaving with
     // nobody connected (timers), which is the point of running server-side.
     this.bhv = new BehaviorHost(this);
@@ -868,6 +887,7 @@ class World {
     this.poses = {};
     this.bhv.disposeAll();
     this.bhv.sync();
+    this.append("world", "genesis", { v: 1, dialect: "eidoverse-log" });
     return arch;
   }
 
@@ -1780,6 +1800,18 @@ const server = Bun.serve({
           // ignored (the name came from Discord via the home node, and the
           // sub underneath it survives renames).
           c.id = (auth ? auth.name : String(msg.id ?? c.id)).slice(0, 64);
+          // Actor names are the log's ink — refuse the ones that forge system
+          // or script authorship ("world" authors grants; "bhv:*" authors
+          // script effects; the behavior loop-guard trusts that prefix), and
+          // strip control characters that would corrupt every future reader.
+          // (Hesperus finding #3: an unauthenticated join as "world" produced
+          // entries indistinguishable from the sequencer's own.)
+          c.id = c.id.replace(/[\u0000-\u001f\u007f]/g, "").trim();
+          if (!c.id || /^(world|\*)$/i.test(c.id) || /^bhv:/i.test(c.id)) {
+            ws.send(JSON.stringify({ type: "error", error: `that name is reserved for the world itself` }));
+            ws.close(4004, "reserved name");
+            return;
+          }
           c.avatar = String(msg.avatar ?? "eidoverse/assets/vrms/claude.vrm");
           c.spectator = Boolean(msg.spectate);
           c.agent = Boolean(msg.agent);
@@ -1855,8 +1887,13 @@ const server = Bun.serve({
           // the grant goes through the log like any other fact, actor "world".
           // (Pre-existing ownerless worlds stay OPEN — granting their first
           // owner is a deliberate act by a WORLD_ADMIN, not a land-rush.)
-          if (!c.spectator && w.snapSeq < 0 && w.entries.length === 0) {
-            const entry = w.append("world", "grant", { id: c.id, role: "owner", gen: true });
+          // ("brand-new" tolerates the genesis dialect marker every fresh log
+          // now opens with — a world whose only history is its birth certificate
+          // still belongs to whoever steps in first)
+          if (!c.spectator && w.snapSeq < 0
+            && w.entries.every((e) => e.verb === "genesis")) {
+            const entry = w.append("world", "grant",
+              { id: c.id, role: "owner", gen: true, ...(c.sub ? { sub: c.sub } : {}) });
             w.broadcast({ type: "log", entry });
             console.log(`[world:${w.name}] new world — ${c.id} is its owner`);
           }
@@ -1914,7 +1951,10 @@ const server = Bun.serve({
           const needs = VERB_NEEDS[msg.verb as string];
           if (!needs) {
             c.world.debug("denied", { who: c.id, verb: String(msg.verb), why: "verb not allowed" });
-            ws.send(JSON.stringify({ type: "error", error: `verb not allowed: ${msg.verb}` }));
+            // the refusal teaches the lanes: the verb set is closed ON PURPOSE
+            // and each kind of extension has a designed door
+            ws.send(JSON.stringify({ type: "error",
+              error: `verb not allowed: ${msg.verb} — the verb set is closed by design; extend state with comp {id, type, data}, interactions with use {id, action}, semantics with behavior scripts (see AGENTS.md). New verbs are protocol amendments.` }));
             return;
           }
           // Mounting or dismounting YOURSELF (sit on the swing, step off the
@@ -1946,7 +1986,11 @@ const server = Bun.serve({
               ws.send(JSON.stringify({ type: "error", error: "everyone cannot own a world" }));
               return;
             }
-            args = { id, ...(role != null ? { role } : {}), ...(gen != null ? { gen } : {}) };
+            // resolve-at-grant: if the subject is PRESENT with a durable sub,
+            // bind the grant to it — authority follows the person, not the nick
+            const subject = [...c.world.clients].find((o) => o.id === id && o.sub);
+            args = { id, ...(role != null ? { role } : {}), ...(gen != null ? { gen } : {}),
+              ...(subject?.sub ? { sub: subject.sub } : {}) };
           }
           if (msg.verb === "force") {
             // shape-check before it becomes history: {at:[x,y,z], radius?,

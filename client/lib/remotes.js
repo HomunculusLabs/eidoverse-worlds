@@ -25,7 +25,7 @@ export function noteServerTime(t) {
   const sample = t - performance.timeOrigin - performance.now();
   clockOffset = clockOffset === null ? sample : clockOffset * 0.92 + sample * 0.08;
 }
-const serverNow = () => performance.timeOrigin + performance.now() + (clockOffset ?? 0);
+export const serverNow = () => performance.timeOrigin + performance.now() + (clockOffset ?? 0);
 
 export async function ensureRemote(id, avatarPath, meta = {}) {
   const existing = remotes.get(id);

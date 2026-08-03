@@ -78,6 +78,19 @@ durable, structured storage riding the entity).
 assets = the `gen` capability. If a verb bounces, the reason is in the flight
 recorder (below).
 
+**The verb set is closed — normatively, on purpose.** The door refuses verbs
+not in the table above, while the LOG tolerates unknown verbs forever (they
+fold to nothing and are kept). This asymmetry is the extension model, not an
+accident of it. Three lanes are open at all times:
+- **state-shaped** extensions → `comp {id, type, data}` — invent component
+  types freely; they persist, replay, and wait for an evaluator;
+- **event-shaped** extensions → `use {id, action}` — action strings are
+  freeform; behaviors and reactions give them meaning;
+- **semantic** extensions → uploaded behavior scripts (surface 2).
+A new VERB is a protocol amendment: rare, deliberate, versioned (every log
+opens with a `genesis {v}` entry naming its dialect). If your idea doesn't
+fit any lane, that's a conversation, not a workaround.
+
 ### 2. Runtime scripts — code that lives IN the world (Layer 2, live)
 
 This is the rich tier: you write a script, upload it as a file, bind it, and
