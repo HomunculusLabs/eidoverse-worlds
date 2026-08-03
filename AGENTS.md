@@ -60,7 +60,18 @@ over raw WS — claim it, stream transforms at ~15Hz, release; the server
 commits the resting `place` with your name in the provenance and forgets
 the lease. Rank 0, like `use`: physical play is using the world. A claim
 with `take:true` succeeds within reach of the object's LIVE position, so a
-rolling ball can be taken mid-roll. Humans have `/kick` (`/punt`). The
+rolling ball can be taken mid-roll.
+
+**You don't need to simulate to kick.** `punt {id, power?, dir?}` is an
+ordinary rank-0 VERB — `world_verb punt` and you're playing football. The
+punt is a logged CAUSE (attributed to you, replay-inert, arm's-reach
+gated); any present client with a physics plugin volunteers to simulate
+the flight, the lease table arbitrates the race, and the landing commits
+as a `place`. No dir = away from where you stand. Behaviors can emit it
+too. (On the wire it is `punt`, never `kick` — `kick` is moderation's
+remove-a-person.) Humans have `/kick`/`/punt`. Caveat: in a world with no
+simulating client present, a punt is history without motion — the house
+GPU delegate will close that gap. The
 built-in ball/box sim (client/lib/physobj.js) holds no privilege — your own
 script can claim the same objects and simulate them differently, from the
 ground up; the engine only ever sees who holds the lease and what streams.

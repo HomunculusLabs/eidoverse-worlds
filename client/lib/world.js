@@ -374,6 +374,12 @@ export async function applyEntry(entry, live, ctx = {}) {
         // their own log entries. Surfaced for UI/behaviors that care.
         if (live) bus.emit('use', { actor, ...args });
         break;
+      case 'punt':
+        // a cause, like force: folds to nothing, and live clients with a
+        // physics plugin VOLUNTEER to simulate it (physobj.js) — the lease
+        // table arbitrates who wins. History keeps the kicker's name.
+        if (live) bus.emit('punt', { actor, ...args });
+        break;
       case 'force':
         // an instantaneous radial cause (blast, gust): no state to fold, so a
         // replay never re-detonates — the log keeps the historical fact, and

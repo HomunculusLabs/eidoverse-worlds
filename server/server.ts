@@ -252,6 +252,10 @@ function foldEntry(st: WorldState, e: LogEntry): void {
       // an instantaneous cause: no state to fold. Live clients react to the
       // broadcast entry; a replay or a late join must never re-detonate.
       return;
+    case "punt":
+      // same doctrine: the punt is history, the flight is presence (a lease
+      // some volunteer holds), the landing is the `place` that lease commits
+      return;
     case "spawn":
       if (!a?.id || !a?.lib) return;
       st.entities[a.id] = {
@@ -681,6 +685,13 @@ const VERB_NEEDS: Record<string, { rank: number; gen?: boolean }> = {
   // building; whether any BODY moves stays each body's own consent (pushable,
   // client-side) — this rank only stops visitors from spamming detonations.
   force: { rank: 1 },
+  // Punting a thing is USING the world (docs/leases.md): the verb is the
+  // CAUSE — logged, attributed, replay-inert — and any present client with a
+  // physics plugin volunteers to simulate it (the lease table arbitrates the
+  // race). This is why agents need no special tool: world_verb punt. (It is
+  // `punt`, not `kick`, on the wire — `kick` is moderation's remove-a-person,
+  // and one log word meaning two acts by referent type is a landmine.)
+  punt: { rank: 0 },
   asset: { rank: 1, gen: true },
   terrain: { rank: 2 }, grass: { rank: 2 }, sky: { rank: 2 }, weather: { rank: 2 },
   grant: { rank: 2 },
@@ -851,7 +862,7 @@ class World {
     // with a deadline, because it only helps logs written after it exists
     // (Hesperus finding #5). Old readers fold it as an unknown verb: nothing.
     if (this.logBytes === 0 && this.snapSeq < 0) {
-      this.append("world", "genesis", { v: 1, dialect: "eidoverse-log" });
+      this.append("world", "genesis", { v: 2, dialect: "eidoverse-log" });
     }
     // Runtime scripts wake with the world — a behavior keeps behaving with
     // nobody connected (timers), which is the point of running server-side.
@@ -911,7 +922,7 @@ class World {
     this.poses = {};
     this.bhv.disposeAll();
     this.bhv.sync();
-    this.append("world", "genesis", { v: 1, dialect: "eidoverse-log" });
+    this.append("world", "genesis", { v: 2, dialect: "eidoverse-log" });
     return arch;
   }
 
@@ -2044,6 +2055,29 @@ const server = Bun.serve({
             const radius = Math.min(30, Math.max(0.5, Number(args.radius ?? 4)));
             const power = Math.min(12, Math.max(0.2, Number(args.power ?? 3)));
             args = { at, radius, power };
+          }
+          if (msg.verb === "punt") {
+            // shape-check before it becomes history: {id, dir?, power?}. The
+            // target must exist, the power is bounded, and the kicker must be
+            // NEAR the thing — an arm's-length act like /push, checked here
+            // because agents reach this verb with no client-side gate. The
+            // object's LIVE position counts (a leased ball is where its sim
+            // says, not where the log left it).
+            const id = String(args.id ?? "").slice(0, 64);
+            if (!id || !c.world.state.entities[id]) {
+              ws.send(JSON.stringify({ type: "error", error: `nothing here called "${id}" to kick` }));
+              return;
+            }
+            const at = c.world.leases.get(id)?.lastState?.p ?? c.world.state.entities[id].pos;
+            const me = c.lastPose?.p;
+            if (!me || Math.hypot(me[0] - at[0], me[2] - at[2]) > 4) {
+              c.world.debug("denied", { who: c.id, verb: "punt", why: `${id} is out of reach` });
+              ws.send(JSON.stringify({ type: "error", error: `${id} is too far away to kick` }));
+              return;
+            }
+            const power = Math.min(10, Math.max(0.5, Number(args.power ?? 5)));
+            const dir = Array.isArray(args.dir) ? (args.dir as unknown[]).slice(0, 3).map(Number) : null;
+            args = { id, power, ...(dir && dir.length === 3 && dir.every(Number.isFinite) ? { dir } : {}) };
           }
           if (msg.verb === "comp") {
             // shape-check before it becomes history: {id, type, data|null}.

@@ -136,6 +136,31 @@ const ballAt = snap?.state?.entities?.ball?.pos ?? snap?.entries?.filter((e: any
 check("late joiner sees the ball where it came to rest", ballAt?.[0] === 3, JSON.stringify(ballAt));
 d.close();
 
+// 9. the punt VERB: a rank-0 cause any client may emit — including agents
+// via world_verb, which is the whole point (no tool needed). Server gates
+// shape and reach; folds to nothing. (punt, not kick: kick is moderation.)
+a.pose([3.4, 0, 4.2]);           // stand next to the resting ball [3,0,4]
+await sleep(200);
+a.verb("punt", { id: "ball", power: 99, dir: [1, 0, 0] });
+const kentry = await c.next((m) => m.type === "log" && m.entry?.verb === "punt");
+check("punt verb reaches the log, attributed to the kicker", kentry.entry.actor === "kicker");
+check("...with the power clamped to sane", kentry.entry.args.power === 10, String(kentry.entry.args.power));
+a.verb("punt", { id: "ghost" });
+const kg = await a.next((m) => m.type === "error" && String(m.error).includes("ghost"));
+check("kicking a nonexistent thing is refused", !!kg);
+a.pose([40, 0, 40]);
+await sleep(200);
+a.verb("punt", { id: "ball" });
+const kf = await a.next((m) => m.type === "error" && String(m.error).includes("too far"));
+check("kicking from across the field is refused", !!kf);
+
+// 10. and a late joiner never re-simulates a kick — the entry is inert
+const e2 = await open("latecomer2");
+await sleep(300);
+const ball2 = e2.msgs.find((m) => m.type === "snapshot")?.state?.entities?.ball?.pos;
+check("punt folds to nothing — late joiner sees only where it rests", ball2?.[0] === 3, JSON.stringify(ball2));
+e2.close();
+
 a.close(); c.close();
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

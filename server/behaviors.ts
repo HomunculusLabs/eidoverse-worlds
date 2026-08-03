@@ -75,7 +75,10 @@ export const behaviorLimits = { MAX_BEHAVIORS_PER_WORLD };
 // gust machine — physical events are what behaviors are FOR, the verb is
 // hard-bounded server-side, and every body's own pushable consent still
 // gates whether anyone actually falls over.
-const DEFAULT_CAPS = ["say", "motion", "comp", "place", "use", "light", "force"];
+// `force` and `punt` are physical events — what behaviors are FOR; both are
+// hard-bounded at the receivers (consent for bodies, power clamps in the
+// volunteer sims for objects).
+const DEFAULT_CAPS = ["say", "motion", "comp", "place", "use", "light", "force", "punt"];
 
 // ---------------------------------------------------------------- quickjs
 let QJS: any = null;

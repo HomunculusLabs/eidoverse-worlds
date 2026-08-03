@@ -17,9 +17,10 @@
 
 import { THREE, bus, CONFIG } from './core.js';
 import { entities, comps } from './world.js';
+import { remotes } from './remotes.js';
 import { heightAt } from './terrain.js';
 import { colliders } from './colliders.js';
-import { sendLease } from './net.js';
+import { sendLease, sendVerb } from './net.js';
 import { flashHint } from './ui.js';
 import { logChat } from './chat.js';
 
@@ -161,12 +162,17 @@ export function tickPhysObj(dt, now = performance.now()) {
 }
 
 // ---------------------------------------------------------------- kicking
+//
+// A kick is a VERB — a cause in history, like force — and simulation is a
+// separate act any present plugin VOLUNTEERS for. /kick emits the verb;
+// the volunteer machinery below picks it up off the log echo exactly as it
+// picks up an agent's world_verb punt or a behavior's emit. One path.
 
-const pendingKicks = new Map();  // id -> launch vector, waiting on a grant
+const pendingKicks = new Map();  // id -> { launch, silent }, waiting on a grant
+const lastClaimed = new Map();   // id -> ts of the last claim we heard — race suppressor
 
-/** /kick [name] [power] — claim the object and send it flying from where I
- *  stand, through it. Kicking something already animated is a TAKE: the
- *  server allows it if I'm within reach of the object's live position. */
+/** /kick [name] [power] — kick the nearest (or named) object. Emits the
+ *  kick verb; the sim follows through the volunteer path. */
 export function kick(arg) {
   if (!hooks) return;
   const parts = (arg || '').trim().split(/\s+/).filter(Boolean);
@@ -193,28 +199,65 @@ export function kick(arg) {
   if (Math.hypot(at.x - me.x, at.z - me.z) > KICK_REACH + 0.8) {
     return logChat('*', `${id} is too far away to kick`);
   }
-  // through the object from where I stand, elevated — a kick, not a shove
+  // direction: through the object from where I stand — stamped into the verb
+  // so history says which way, whoever ends up simulating it
   const dx = at.x - me.x, dz = at.z - me.z;
   const d = Math.hypot(dx, dz) || 1;
-  const launch = new THREE.Vector3((dx / d) * power, power * 0.45, (dz / d) * power);
-  pendingKicks.set(id, launch);
-  sendLease('claim', id, { take: true });
+  sendVerb('punt', { id, power, dir: [dx / d, 0, dz / d] });
 }
+
+/** Every punt in the world lands here off the live log — mine, another
+ *  human's, an agent's world_verb, a behavior's emit. If I already hold the
+ *  object's lease, the kick is an impulse into my running sim (no handoff).
+ *  Otherwise I volunteer to simulate: the kicker's own client claims
+ *  immediately, everyone else jitters and stands down if a claim is heard —
+ *  the lease table settles any remaining race. */
+bus.on('punt', ({ actor, id, dir, power }) => {
+  const obj = entities.get(id);
+  if (!obj || comps.get(id)?.motion) return;
+  const p = Math.min(MAX_KICK, Math.max(0.5, Number(power) || 5));
+  let d3 = Array.isArray(dir) && dir.length === 3 ? new THREE.Vector3(dir[0], dir[1], dir[2]) : null;
+  if (!d3) {
+    // no direction stamped: from the kicker's body through the object
+    const from = actor === CONFIG.name ? hooks?.myPos()
+      : remotes.get(actor)?.avatar?.root.position;
+    d3 = from
+      ? new THREE.Vector3(obj.position.x - from.x, 0, obj.position.z - from.z)
+      : new THREE.Vector3(0, 0, 1);
+  }
+  const flat = Math.hypot(d3.x, d3.z) || 1;
+  const launch = new THREE.Vector3((d3.x / flat) * p, p * 0.45, (d3.z / flat) * p);
+
+  if (sims.has(id)) { sims.get(id).v.add(launch); return; }   // my sim, more boot
+
+  const mine = actor === CONFIG.name;
+  const delay = mine ? 0 : 120 + Math.random() * 200;
+  setTimeout(() => {
+    if (!mine && Date.now() - (lastClaimed.get(id) ?? 0) < 1200) return;  // someone's on it
+    if (sims.has(id) || pendingKicks.has(id)) return;
+    pendingKicks.set(id, { launch, silent: !mine });
+    sendLease('claim', id, mine ? { take: true } : {});
+  }, delay);
+});
 
 // ---------------------------------------------------------------- the wire
 
 bus.on('lease', (msg) => {
   const { op, id } = msg;
+  if (op === 'claimed') lastClaimed.set(id, Date.now());
   if (op === 'granted') {
-    const launch = pendingKicks.get(id);
+    const pk = pendingKicks.get(id);
     pendingKicks.delete(id);
-    if (launch) { startSim(id, launch, msg.from ?? null); flashHint(`you kick ${id}`); }
+    if (pk) { startSim(id, pk.launch, msg.from ?? null); if (!pk.silent) flashHint(`you kick ${id}`); }
     else sendLease('release', id);          // a grant nothing wanted anymore
     return;
   }
   if (op === 'denied') {
+    const pk = pendingKicks.get(id);
     pendingKicks.delete(id);
-    logChat('*', `can't kick ${id} — ${msg.why}`);
+    // a volunteer losing the race is the system working — only MY OWN kick
+    // failing outright is worth a line
+    if (pk && !pk.silent) logChat('*', `can't kick ${id} — ${msg.why}`);
     return;
   }
   if (op === 'lost') {
