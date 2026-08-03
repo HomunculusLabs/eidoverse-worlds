@@ -31,6 +31,9 @@ import {
   type ChannelsPublishParams,
   type ChannelsPublishResult,
 } from "@animalabs/mcpl-core";
+import {
+  CHAT, EIDO, CAP, tags, capabilityMatches, MCPL_ADVERTISEMENT, FEATURE_SETS,
+} from "./declaration.ts";
 import { WorldAgent } from "./agent.ts";
 import { verifyToken } from "../server/aid1.ts";
 import sharp from "sharp";
@@ -188,6 +191,13 @@ class Session {
    *  made the SDK log validation errors and left the door awaiting a reply
    *  (reported by digi/FC, external integrator find #4). */
   private mcplClient = false;
+  /** MCPL version the host advertised at initialize (§5.2), or null. */
+  private hostMcplVersion: string | null = null;
+  /** The effective capability grant (§5.4) — the ONLY authorization input on
+   *  this connection. `null` means no policy exchange has happened yet; see
+   *  granted(). Never derived from anything this server said about itself, and
+   *  never widened by anything in a receipt (§6.7). */
+  private grant: Set<string> | null = null;
   private caughtUpTo: number | null = null; // the world channel is home — open unless the agent closes it
 
   constructor(private auth: Auth, ws: WebSocket, agentToken = "") {
@@ -209,10 +219,91 @@ class Session {
     this.conn.close();
   }
 
+  /**
+   * Is `cap` (a §6.2 capability path) in this connection's effective grant?
+   *
+   * §5.4: `effectiveCapabilities` is the sole normative allowlist, every path
+   * not present is denied, and a denied capability behaves as if never
+   * advertised. `deniedCapabilities` is diagnostics and is never read here.
+   *
+   * The `grant === null` branch is the one judgement call in this file, so it is
+   * spelled out. §5.3 requires the HOST to send featureSets/update before the
+   * first privileged exchange, and requires a server to treat every
+   * capability-dependent behavior as unavailable until it arrives. A host that
+   * advertises MCPL 0.5+ is bound by that, so we hold it to it — silence until
+   * policy. A host advertising an earlier version made no such promise (and no
+   * shipped host sends the message today: agent-framework declares
+   * `featureSets: true` and has no caller for its own sendFeatureSetsUpdate),
+   * and enforcing 0.5's rule against a 0.4 peer would not fail closed, it would
+   * simply mute every resident. So pre-0.5 peers keep 0.4's semantics, which is
+   * the version they asked for. This is version negotiation, not a default-allow:
+   * the door is constraining ITSELF by what the peer declared about itself, and
+   * nothing a peer says can widen what the door is permitted to do.
+   */
+  /** MCP's own `tools` capability governs plain-MCP clients, and this door has
+   *  always answered them. An MCPL host that sends a grant MAY also deny
+   *  `tools`, and a denied capability behaves as if never advertised (§5.4) —
+   *  so once a grant exists it decides; absent one we defer to MCP, which
+   *  negotiated tools at initialize without any help from MCPL. */
+  private toolsAllowed(): boolean {
+    return this.grant ? this.granted(CAP.tools) : true;
+  }
+
+  private granted(cap: string): boolean {
+    if (!this.mcplClient) return false; // plain-MCP host: no MCPL frames, ever
+    if (this.grant) { for (const g of this.grant) if (capabilityMatches(g, cap)) return true; return false; }
+    const major = Number(this.hostMcplVersion?.split(".")[0] ?? 0);
+    const minor = Number(this.hostMcplVersion?.split(".")[1] ?? 0);
+    return !(major > 0 || minor >= 5);
+  }
+
+  /**
+   * Handle `featureSets/update` (§6.7). Returns the degradation receipt, or an
+   * error tuple when the policy message is malformed.
+   *
+   * The receipt is CONSEQUENCE TESTIMONY, never a claim of entitlement: it says
+   * what this door will stop doing, and never what it should be given. We never
+   * answer `accepted: false` — refusal as a lever ("grant me this or I will not
+   * start") is exactly the coercion §6.7 bars, and it would be a lie anyway:
+   * tools-only degradation is a mode this door has always had and can live in.
+   */
+  private applyPolicy(params: Record<string, unknown>): { error: string } | Record<string, unknown> {
+    const eff = Array.isArray(params.effectiveCapabilities) ? params.effectiveCapabilities.map(String) : null;
+    const denied = Array.isArray(params.deniedCapabilities) ? params.deniedCapabilities.map(String) : [];
+    if (eff) {
+      // §5.4: a path in both lists makes the message malformed, and the
+      // receiving side MUST fail closed and reject it. We keep the previous
+      // grant rather than adopting an ambiguous one.
+      const both = eff.filter((c) => denied.includes(c));
+      if (both.length) return { error: `capability in both effectiveCapabilities and deniedCapabilities: ${both.join(", ")}` };
+      this.grant = new Set(eff);
+    }
+    // `enabled`/`disabled` name FEATURE SETS, which carry no authority of their
+    // own (§6.4) — they are recorded for the log and for the receipt, and are
+    // never consulted to decide whether something is allowed.
+    const disabled = Array.isArray(params.disabled) ? params.disabled.map(String) : [];
+    const unavailable: { featureSet: string; missingCapabilities: string[]; effect: string }[] = [];
+    for (const [name, fs] of Object.entries(FEATURE_SETS)) {
+      const missing = this.grant ? fs.uses.filter((u) => !this.granted(u)) : [];
+      if (missing.length) unavailable.push({ featureSet: name, missingCapabilities: missing, effect: "disabled" });
+      else if (disabled.includes(name)) unavailable.push({ featureSet: name, missingCapabilities: [], effect: "disabled" });
+    }
+    console.log(`[${ts()}] [mcpl:${this.auth.id}] policy: grant=${this.grant ? [...this.grant].join(",") : "(none given)"}${unavailable.length ? ` degraded=${unavailable.map((u) => u.featureSet).join(",")}` : ""}`);
+    return {
+      accepted: true,
+      mode: unavailable.length ? "degraded" : "full",
+      ...(unavailable.length ? { unavailableFeatures: unavailable } : {}),
+      notes: [],
+    };
+  }
+
   private deliver(text: string, author: { id: string; name: string }, opts?: { tags?: string[]; mentioned?: boolean; metadata?: Record<string, unknown> }) {
     // Belt to serve()'s braces: a plain-MCP host must never receive an MCPL
-    // frame, whatever future code path tries to send one.
-    if (!this.mcplClient) return;
+    // frame, whatever future code path tries to send one. And channels/incoming
+    // is content injection plus wake authority (§14.1) — one of the most
+    // consequential writes a server has, so it is gated on the grant, not on
+    // what this server declared about itself, and never on a tag (§16.6).
+    if (!this.granted(CAP.channelsIncoming)) return;
     // Platform-adapter convention (same as discord-mcpl): author is rendered
     // INTO the text — the host carries author metadata but does not label
     // the context message with it.
@@ -225,10 +316,13 @@ class Session {
         timestamp: new Date().toISOString(),
         content: [{ type: "text", text: rendered }],
         ...(opts?.tags ? { tags: opts.tags } : {}),
-        // Mention metadata — BOTH ecosystem dialects, because different host
-        // layers read different keys: ConversationRouter reads `mentioned`;
-        // recipe wake-policies (per discord-mcpl's adapter convention) match
-        // `isExplicitMention`. Ask us how we know.
+        // TRANSITION SHIM (issue #1 item 3). `tags` above is the contract now
+        // (§16); these booleans are the pre-tag dialects two host layers still
+        // read — ConversationRouter matches `mentioned`, recipe wake-policies
+        // match `isExplicitMention`. SPEC §16 permits host-specific metadata to
+        // keep working, and dropping these before hosts route on tags would
+        // make every resident stop hearing their own name. Delete once the
+        // hosts read tags; nothing here is authority either way.
         ...((opts?.mentioned || opts?.metadata)
           ? { metadata: { ...(opts?.metadata ?? {}), ...(opts?.mentioned ? { mentioned: true, isExplicitMention: true } : {}) } }
           : {}),
@@ -246,38 +340,63 @@ class Session {
     if (activityCfg[this.auth.id]) this.agent.setActivity(activityCfg[this.auth.id]);
     await this.agent.connect();
 
-    // world events → channel traffic (this is the push path — no host code)
+    // world events → channel traffic (this is the push path — no host code).
+    //
+    // TAGS (§16). Four semantically different things used to be tagged
+    // `["mention"]` — speech, a whisper, a walk-up, and replayed history — which
+    // is a wake flag wearing a description's clothes. Each now says what it IS in
+    // the reserved `chat:*` core (§16.2) plus this world's own namespace, and the
+    // door decision below is still made from world state (`channelOpen`,
+    // `ev.mention`), never by reading a tag back: tags describe, they never
+    // authorize (§16.6).
     this.agent.onEvent = (ev) => {
+      // §16.2 sender facet. The world reports `agent: true` for bodies driven by
+      // a model, so `chat:from-agent` rests on something. There is no
+      // corresponding evidence for humanity — a browser client simply omits the
+      // flag — so `chat:from-human` is NOT emitted from an absence. Claiming it
+      // would put an unmarked bot in the band a resident reserves for people.
+      const from = this.agent.isAgent(ev.who) ? CHAT.fromAgent : null;
       if (ev.kind === "say") {
         if (!this.channelOpen && !ev.mention) return; // door closed: chatter stops, knocks get through
-        this.deliver(ev.text!, { id: ev.who, name: ev.who }, ev.mention ? { tags: ["mention"], mentioned: true } : undefined);
+        this.deliver(ev.text!, { id: ev.who, name: ev.who }, ev.mention
+          ? { tags: tags(CHAT.mention, CHAT.addressed, from), mentioned: true }
+          : { tags: tags(CHAT.ambient, from) });
       } else if (ev.kind === "whisper") {
         // A closed door does not stop a whisper — being addressed privately IS
         // the knock. Rendered with its privacy stated, because an agent that
         // can't tell a whisper from a shout will answer one as if it were the
         // other, in front of everyone.
+        // A whisper is a DM, not a mention: nobody said your name, they came to
+        // you. `chat:dm` ⇒ addressed + private under §16.3's closure, emitted
+        // directly here as §16.3 recommends.
         this.deliver(`(whispers to you) ${ev.text}`, { id: ev.who, name: ev.who },
-          { tags: ["mention", "whisper"], mentioned: true });
+          { tags: tags(CHAT.dm, CHAT.private, CHAT.addressed, EIDO.whisper, from), mentioned: true });
       } else if (ev.kind === "act") {
         // embodied transitions — an emote, a pose struck or released, someone
         // sitting down. Ambient by nature: a closed door mutes them.
-        if (this.channelOpen) this.deliver(`* ${ev.who} ${ev.text}`, { id: "world", name: this.agent.world });
+        if (this.channelOpen) this.deliver(`* ${ev.who} ${ev.text}`, { id: "world", name: this.agent.world },
+          { tags: tags(CHAT.ambient, EIDO.act, from) });
       } else if (ev.kind === "activity") {
         // The ambient-activity pulse: at most one per window, and ONLY while
-        // something is happening within ACTIVITY_RADIUS_M of this body. NOT a
-        // mention — hosts opt IN by matching the "activity" tag / metadata in
-        // their wake gates, which yields regular wakes exactly as long as
-        // there is life nearby (the stream stops when the area goes quiet).
-        // A closed door mutes it like any ambient signal.
+        // something is happening within this body's activity radius. Overheard,
+        // never addressed — a host opts in by matching `eidoverse:activity-digest`
+        // (or plain `chat:ambient`) in its wake gate, which yields regular wakes
+        // exactly as long as there is life nearby, and stops by itself when the
+        // area goes quiet. A closed door mutes it like any ambient signal.
         if (this.channelOpen) this.deliver(`* ${ev.text}`, { id: "world", name: this.agent.world },
-          { tags: ["activity"], metadata: { activity: true } });
+          { tags: tags(CHAT.ambient, EIDO.activityDigest), metadata: { activity: true } });
       } else if (this.channelOpen) {
-        this.deliver(`* ${ev.who} ${ev.kind === "arrive" ? "arrived in the world" : "left the world"}`, { id: "world", name: this.agent.world });
+        this.deliver(`* ${ev.who} ${ev.kind === "arrive" ? "arrived in the world" : "left the world"}`,
+          { id: "world", name: this.agent.world }, { tags: tags(CHAT.ambient, EIDO.presence, from) });
       }
     };
     this.agent.onPing = (p) => {
       if (p.kind === "approach") {
-        this.deliver(`* ${p.who} walked up to you`, { id: "world", name: this.agent.world }, { tags: ["mention"], mentioned: true });
+        // Directed at this body — but nothing was said, so it is not chat and
+        // not a mention. `chat:addressed` is the honest umbrella; the specific
+        // event lives in this world's namespace.
+        this.deliver(`* ${p.who} walked up to you`, { id: "world", name: this.agent.world },
+          { tags: tags(CHAT.addressed, EIDO.approach, this.agent.isAgent(p.who) ? CHAT.fromAgent : null), mentioned: true });
       }
     };
 
@@ -290,11 +409,15 @@ class Session {
     // below pumps messages.
     // And only to clients that DECLARED MCPL at initialize — a plain-MCP
     // host gets no channel machinery at all (see mcplClient).
-    if (this.mcplClient) this.registerChannels();
+    if (this.granted(CAP.channelsRegister)) this.registerChannels();
 
     // Missed-mention replay: anything that addressed you while you slept
     // greets you as tagged channel traffic — a wake-worthy summary, not
     // just scrollback. (Full history stays available via look.)
+    // Every message replayed below is REPLAY, and says so: `eidoverse:catchup`
+    // rides alongside each message's ORIGINAL addressing (§16, issue #1). Tagged
+    // as bare mentions, a reconnect looked identical to ten people addressing
+    // you at once; a host can now write one rule for "the ones I missed".
     // Prefer a seq cursor over a timestamp. A join now carries the FOLDED
     // world plus a tail, so the in-memory inbox no longer contains old history
     // to filter — and a clock comparison silently degrades to "whatever
@@ -428,9 +551,14 @@ class Session {
       throw new Error("expected initialize first");
     }
     const initParams = msg.request.params as unknown as McplInitializeParams | undefined;
-    const mcplRequested = initParams?.capabilities?.experimental?.mcpl !== undefined;
+    const hostMcpl = initParams?.capabilities?.experimental?.mcpl;
+    const mcplRequested = hostMcpl !== undefined;
     this.mcplClient = mcplRequested;
-    const serverCaps: McplCapabilities = { version: "0.4", pushEvents: false, channels: true, rollback: false };
+    this.hostMcplVersion = typeof hostMcpl?.version === "string" ? hostMcpl.version : null;
+    // The manifest (§5.1). Cast because the pinned mcpl-core-ts types still
+    // describe 0.4's shape (channels as a boolean, featureSets as an array);
+    // the WIRE follows the 0.5 spec text, which is what a peer reads.
+    const serverCaps = MCPL_ADVERTISEMENT as unknown as McplCapabilities;
     const capabilities: InitializeCapabilities = { tools: {}, ...(mcplRequested ? { experimental: { mcpl: serverCaps } } : {}) };
     const result: McplInitializeResult = {
       protocolVersion: "2024-11-05",
@@ -684,6 +812,7 @@ class Session {
           }
         } else L.push("no up-facing flat zones found (nothing seat-like)");
         if (g.nodes?.length) L.push(`named parts: ${g.nodes.slice(0, 12).map((n: any) => `${n.name} @[${n.center.join(",")}]`).join(" · ")}`);
+        if (g.orphans?.length) L.push(`⚠ orphan nodes in the FILE, rendered by NOBODY (broken export — do not target): ${g.orphans.join(", ")}`);
         if (a.id && Object.keys(d.comp ?? {}).length) L.push(`components already on it: ${Object.keys(d.comp).join(", ")}`);
         return text(L.join("\n"));
       }

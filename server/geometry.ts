@@ -59,6 +59,9 @@ export type GeomSummary = {
            local: { center: number[]; size: number[] }; tris: number }[];
   /** true when the mesh was too big to walk exhaustively */
   sampled: boolean;
+  /** mesh nodes present in the FILE but attached to no scene — broken
+   *  exports. No renderer draws them; never aim a motion at one. */
+  orphans?: string[];
 };
 
 const cache = new Map<string, { mtime: number; sum: GeomSummary }>();
@@ -79,10 +82,30 @@ export async function summarizeGlb(absPath: string): Promise<GeomSummary | null>
     return null;
   }
 
+  // ONLY scene-reachable nodes exist, as far as the WORLD is concerned:
+  // three.js renders the default scene, so an orphan node (present in the
+  // file, attached to nothing) never appears on any client — and naming one
+  // in a motion component aims at a ghost. Fable's swing seat was exactly
+  // this: Orrery's rescale wrapper left tripo_part_2/3 dangling outside the
+  // scene, measure reported them as real, and the motion pointed at a part
+  // no renderer would ever draw. Report the world's truth; list orphans
+  // separately as the file defect they are.
+  const inScene = new Set<any>();
+  for (const scene of doc.getRoot().listScenes()) {
+    scene.traverse((n: any) => inScene.add(n));
+  }
+  const orphans: string[] = [];
+  for (const node of doc.getRoot().listNodes()) {
+    if (!inScene.has(node) && node.getMesh() && node.getName() && orphans.length < 16) {
+      orphans.push(node.getName());
+    }
+  }
+
   const min = [Infinity, Infinity, Infinity], max = [-Infinity, -Infinity, -Infinity];
   let tris = 0;
   // first pass: count triangles so sampling is decided before the walk
   for (const node of doc.getRoot().listNodes()) {
+    if (!inScene.has(node)) continue;
     const mesh = node.getMesh();
     if (!mesh) continue;
     for (const prim of mesh.listPrimitives()) {
@@ -106,6 +129,7 @@ export async function summarizeGlb(absPath: string): Promise<GeomSummary | null>
   };
 
   for (const node of doc.getRoot().listNodes()) {
+    if (!inScene.has(node)) continue;   // orphans are not part of the world
     const mesh = node.getMesh();
     if (!mesh) continue;
     const m = node.getWorldMatrix();
@@ -197,6 +221,7 @@ export async function summarizeGlb(absPath: string): Promise<GeomSummary | null>
     topSurfaces,
     nodes,
     sampled: stride > 1,
+    ...(orphans.length ? { orphans } : {}),
   };
   cache.set(absPath, { mtime, sum });
   if (cache.size > CACHE_MAX) cache.delete(cache.keys().next().value!);
