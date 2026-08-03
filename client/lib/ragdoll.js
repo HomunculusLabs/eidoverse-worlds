@@ -250,6 +250,10 @@ const _c = new THREE.Vector3();
 const _n = new THREE.Vector3();
 const _t = new THREE.Vector3();
 const _u = new THREE.Vector3();
+const _bz = new THREE.Vector3();
+const _by = new THREE.Vector3();
+const _mat = new THREE.Matrix4();
+const _qd2 = new THREE.Quaternion();
 const _s1 = new THREE.Vector3();   // swing: correction direction
 const _s2 = new THREE.Vector3();   // swing: velocity probe
 const _ca = new THREE.Vector3();
@@ -262,6 +266,37 @@ const _pr = { s: 0, t: 0 };
 /** Closest points between two segments, as parameters along each. The classic
  *  clamped-parametric solve; degenerate (zero-length) segments fall back to an
  *  endpoint rather than dividing by zero. */
+/** An orthonormal basis with X down the bone and its roll pinned by `ref`.
+ *  Leaves the orthonormalized reference in `_bz` so the caller can carry it
+ *  forward. Returns false only when the bone lies along `ref`, where roll is
+ *  undefined and the caller must reseed. */
+function basisOf(dir, ref, out) {
+  _bz.copy(ref).addScaledVector(dir, -ref.dot(dir));
+  if (_bz.lengthSq() < 1e-4) return false;
+  _bz.normalize();
+  _by.crossVectors(_bz, dir);
+  _mat.makeBasis(dir, _by, _bz);
+  out.setFromRotationMatrix(_mat);
+  return true;
+}
+
+/** The roll reference for a bone, TRANSPORTED rather than rebuilt.
+ *
+ *  Choosing a body axis per bone and re-deriving from it each frame has a hole:
+ *  a limb that swings onto its own reference has no roll defined against it,
+ *  and falling through to a different axis moves the roll discontinuously. That
+ *  is not a corner case — measured, the arms sat at dir·ref = 0.99 and snapped
+ *  178° in one frame. Carrying the reference and only ever re-squaring it
+ *  against the bone cannot flip: it rotates exactly as much as the bone does,
+ *  and no more, which is also what an untorqued limb does with its twist. */
+function rollRef(dir, up, frame) {
+  if (basisOf(dir, up, _qd2)) { up.copy(_bz); return true; }
+  for (const ax of [frame.r, frame.u, frame.f]) {
+    if (basisOf(dir, ax, _qd2)) { up.copy(_bz); return true; }
+  }
+  return false;
+}
+
 export function closestParams(p1, q1, p2, q2, out) {
   _a.copy(q1).sub(p1); _b.copy(q2).sub(p2); _c.copy(p1).sub(p2);
   const A = _a.dot(_a), E = _b.dot(_b), F = _b.dot(_c);
@@ -411,12 +446,30 @@ export class Ragdoll {
     // ---- capsules: every BONE is a fat segment, and pairs of them push apart
     this._buildCapsules();
 
-    // per-driven-bone rest reference: its world quaternion, and the world
-    // direction to its child, both from the LIVE skeleton so that the tumble
-    // starts exactly where the body already is (the delta is identity at t=0).
-    // Rotating restDir -> the live particle direction and composing onto
-    // restQuat gives the bone's new world orientation, without needing to know
-    // the model's private down-the-bone axis.
+    // per-driven-bone rest reference: its world quaternion, the world direction
+    // to its child, and a FULL rest basis — all from the LIVE skeleton, so the
+    // tumble starts exactly where the body already is (the delta is identity at
+    // t=0).
+    //
+    // The basis is the point. Rotating restDir onto the live direction with a
+    // minimal arc gives the right SWING and a ROLL with no memory: roll comes
+    // out as a function of the current direction alone, and near the antipode
+    // of restDir it is barely a function of that either, since every axis
+    // perpendicular to restDir is an equally good arc axis there.
+    //
+    // So the roll ACCUMULATES. Not as a snap — measured, the two drives differ
+    // by at most 19° in any single frame — but as a drift that nothing carries
+    // back: 3175° of unrequested roll over a fleet tumble against 5° here. Ten
+    // frames of it is half a turn, and since nothing returns it the limb simply
+    // stays twisted, while its mirror took a different path and did not. That
+    // is the knee that twists 180° and never untwists.
+    //
+    // A basis has roll defined everywhere, and carrying it (see rollRef) rather
+    // than rebuilding it each frame is what removes the drift: the reference
+    // turns exactly as far as the bone does and no further, which is also what
+    // an untorqued limb does with its twist.
+    this._frame(this.p);
+    const axes = [this.frame.r, this.frame.u, this.frame.f];
     this.drive = [];
     for (const [bone, child] of CHAINS) {
       const bn = this.nodes[bone];
@@ -424,9 +477,19 @@ export class Ragdoll {
       const bwp = bn.getWorldPosition(new THREE.Vector3());
       _v.copy(this.p[child]).sub(bwp);
       if (_v.lengthSq() < 1e-8) continue;
+      const dir = _v.clone().normalize();
+      let ref = 0;
+      for (let i = 1; i < 3; i++) {
+        if (Math.abs(dir.dot(axes[i])) < Math.abs(dir.dot(axes[ref]))) ref = i;
+      }
+      const up = new THREE.Vector3();
+      const restBasis = new THREE.Quaternion();
+      if (!basisOf(dir, axes[ref], restBasis)) continue;
+      up.copy(_bz);
       this.drive.push({
-        bone, child,
-        restDir: _v.clone().normalize(),
+        bone, child, up,
+        restDir: dir,
+        restBasisInv: restBasis.invert(),
         restQuat: bn.getWorldQuaternion(new THREE.Quaternion()),
         parent: bn.parent,
       });
@@ -960,7 +1023,9 @@ export class Ragdoll {
       _b.copy(this.p[d.child]).sub(bwp);
       if (_b.lengthSq() < 1e-6) continue;
       _b.normalize();
-      _qd.setFromUnitVectors(d.restDir, _b);           // rest -> live direction
+      if (!rollRef(_b, d.up, this.frame)) continue;
+      _qd.copy(_qd2);
+      _qd.multiply(d.restBasisInv);                    // rest basis -> live one
       _qd.multiply(d.restQuat);                        // -> new world quaternion
       // world -> local (parent may itself have moved this frame)
       d.parent.getWorldQuaternion(_qp).invert();

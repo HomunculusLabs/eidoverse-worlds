@@ -181,6 +181,52 @@ check('every shipped rig loads with a humanoid and hips',
     worst < 1e-6, `drift ${worst.toExponential(2)} at ${who}`);
 }
 
+// ---- a bone's ORIENTATION must follow its direction, and nothing else
+{
+  // The particle sim carries no twist, so a bone's roll is whatever the drive
+  // step invents. A minimal arc off a fixed rest direction invents it with no
+  // memory: roll is a function of the current direction alone, and near the
+  // antipode of the rest direction it is barely a function of that. So it
+  // ACCUMULATES — measured at up to 19° a frame, which reaches half a turn in
+  // ten — and since nothing carries it back, the limb stays where it ended up,
+  // twisted, while its mirror that took a different path does not. That is the
+  // knee that twists 180° and will not untwist.
+  //
+  // The invariant that catches it: in WORLD space (so a parent's motion is not
+  // charged to the child), a bone may only turn as far as its direction turned.
+  // Any excess is roll nobody asked for. Per frame the two drives differ by
+  // little; it is the TOTAL that separates them, 3175° against 5°, which is
+  // also the honest description of the bug — a slow accumulation, not a snap.
+  let worst = 0, who = '', total = 0;
+  for (const rig of FLEET) {
+    const av = makeAvatar(rig.P);
+    const rd: any = new Ragdoll(av, toppleLean(), av.restBonePositions());
+    const pq = new Map<string, any>(), pd = new Map<string, any>();
+    let steps = 0;
+    while (!rd.done && steps < 900) {
+      rd.step(1 / 60); steps++;
+      for (const d of rd.drive) {
+        const q = rd.nodes[d.bone].getWorldQuaternion(new THREE.Quaternion());
+        const bwp = rd.nodes[d.bone].getWorldPosition(new THREE.Vector3());
+        const dir = rd.p[d.child].clone().sub(bwp);
+        if (dir.lengthSq() < 1e-9) continue;
+        dir.normalize();
+        const lq = pq.get(d.bone), ld = pd.get(d.bone);
+        if (lq && ld) {
+          const turned = lq.angleTo(q) * 180 / Math.PI;
+          const swung = Math.acos(Math.max(-1, Math.min(1, ld.dot(dir)))) * 180 / Math.PI;
+          const spurious = turned - swung;          // roll nobody asked for
+          if (spurious > worst) { worst = spurious; who = `${rig.name}:${d.bone}`; }
+          if (spurious > 0) total += spurious;
+        }
+        pq.set(d.bone, q); pd.set(d.bone, dir.clone());
+      }
+    }
+  }
+  check('bones do not accumulate roll nobody asked for (≤200° over the fleet)',
+    total <= 200, `${total.toFixed(0)}° total, worst ${worst.toFixed(0)}° at ${who}`);
+}
+
 // ---- the legs must not kick out from under the body
 {
   // A body that drops straight down has nowhere to put its leg length: both
