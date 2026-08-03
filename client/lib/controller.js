@@ -66,7 +66,17 @@ bus.on('key', (e) => {
   if (e.code === 'KeyZ') { posture = posture === 'lie' ? null : 'lie'; myState.seat = null; }
 });
 
+// Declared seats (the `sockets` component — mount verb, rides motion) live in
+// main.js with the rest of the world vocabulary; the controller only knows
+// postures. main.js registers a hook so X reaches BOTH systems: sockets get
+// first claim (a swing that carries you beats sitting frozen mid-air where
+// its collider used to be), and a mounted body's X means "get up". Returns
+// true when the hook consumed the press. Same probe pattern as build.js.
+let seatHook = () => false;
+export function setSeatHook(fn) { seatHook = fn; }
+
 function toggleSit() {
+  if (seatHook()) return;
   if (posture === 'sit') { posture = null; myState.seat = null; return; }
   // Layer-0: if there's a real seat pan within reach, sit ON it. The geometry
   // is the affordance — a scanned stool is sittable the moment it arrives.

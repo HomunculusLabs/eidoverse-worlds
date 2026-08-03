@@ -67,11 +67,27 @@ export function setHint(html, { sticky = false } = {}) {
   el.hint.classList.remove('gone');
   if (!sticky) setTimeout(() => el.hint.classList.add('gone'), 30000);
 }
+
+// The ambient hint is what the bar shows when nothing louder is happening —
+// a standing offer from the world ("X — sit"), set and cleared by proximity.
+// A flash (emote names, mode switches) borrows the bar and gives it back.
+let ambientHint = null;
+export function setAmbientHint(html) {
+  if (html === ambientHint) return;   // don't fight setHint's boot message over nothing
+  ambientHint = html;
+  if (el.hint._t) return;             // a flash owns the bar; it restores us when done
+  if (ambientHint) { el.hint.innerHTML = ambientHint; el.hint.classList.remove('gone'); }
+  else el.hint.classList.add('gone');
+}
 export function flashHint(html, ms = 2600) {
   el.hint.innerHTML = html;
   el.hint.classList.remove('gone');
   clearTimeout(el.hint._t);
-  el.hint._t = setTimeout(() => el.hint.classList.add('gone'), ms);
+  el.hint._t = setTimeout(() => {
+    el.hint._t = null;
+    if (ambientHint) el.hint.innerHTML = ambientHint;
+    else el.hint.classList.add('gone');
+  }, ms);
 }
 
 // ============================================================ panel frames

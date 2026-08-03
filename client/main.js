@@ -12,12 +12,12 @@ import {
 import { contributeThumbnail, makeAvatar, EMOTE_ORDER, EMOTES } from './lib/avatar.js';
 import { updateSky, updateAutoSystems, skyArgs, skyImpl,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './lib/sky.js';
-import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform } from './lib/world.js';
+import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
 import { hasGrass, setGrassDensity } from './lib/terrain.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateFollowCamera, updateSpectator, setCamYaw, setPosture,
-  togglePhotoMode, setCameraCollisionTargets, keys,
+  togglePhotoMode, setCameraCollisionTargets, keys, setSeatHook,
 } from './lib/controller.js';
 import {
   remotes, updateRemotes, updateGaze, noteSpeaking, setLodBias,
@@ -30,7 +30,7 @@ import {
 import { initConjure } from './lib/conjure.js';
 import { initSceneGraph, sceneAttach, sceneDetach } from './lib/scenegraph.js';
 import {
-  toast, setHud, setHint, flashHint, buildHelp, toggleHelp,
+  toast, setHud, setHint, setAmbientHint, flashHint, buildHelp, toggleHelp,
   openDoor, toggleRoster, initRoster, initDock, paintRoster, panelFrame, el,
 } from './lib/ui.js';
 import { initDebug, updateDebug, toggleDebug } from './lib/debug.js';
@@ -302,6 +302,17 @@ function getUp() {
 // dismount with my landing spot stamped (the plane-transition invariant),
 // and control returns to the normal ground controller.
 const _seatP = new THREE.Vector3();
+function dismountMe() {
+  const sw = mountTransform(CONFIG.name, _seatP);
+  const yaw = sw?.yaw ?? myState.yaw;
+  const off = sw ? _seatP.clone() : myState.pos.clone();
+  off.x += Math.sin(yaw) * 0.7;
+  off.z += Math.cos(yaw) * 0.7;
+  sendVerb('dismount', { id: CONFIG.name, pos: [off.x, 0, off.z], yaw });
+  avatarMounts.delete(CONFIG.name);      // locally immediate; the echo confirms
+  myState.pos.set(off.x, 0, off.z);
+  setPosture('stand');
+}
 function updateMountedMe() {
   const sw = mountTransform(CONFIG.name, _seatP);
   if (!sw) return;                       // parent still downloading
@@ -314,34 +325,69 @@ function updateMountedMe() {
     me.root.rotation.y = sw.yaw;
     me.setClip(sw.pose, 0);
   }
-  if (['KeyW', 'KeyA', 'KeyS', 'KeyD'].some((k) => keys.has(k))) {
-    const off = _seatP.clone();
-    off.x += Math.sin(sw.yaw) * 0.7;
-    off.z += Math.cos(sw.yaw) * 0.7;
-    sendVerb('dismount', { id: CONFIG.name, pos: [off.x, 0, off.z], yaw: sw.yaw });
-    avatarMounts.delete(CONFIG.name);    // locally immediate; the echo confirms
-    myState.pos.set(off.x, 0, off.z);
-    setPosture('stand');
-  }
+  if (['KeyW', 'KeyA', 'KeyS', 'KeyD'].some((k) => keys.has(k))) dismountMe();
 }
 
-/** Sit ON something: nearest socketed entity within reach (or a named one).
- *  Falls back to the plain sit-where-you-stand posture when nothing has a
- *  seat to offer — declaring a socket is what upgrades /sit near a thing. */
-function trySitOn(arg) {
-  let best = null, bestD = 3;
+/** Nearest declared seat: distance to the SOCKET's world point, not the
+ *  entity's origin — a swing's pivot frame is not where you sit, and on a
+ *  ferry the helm can be a deck-length from the hull's center. Every slot
+ *  competes, not just the first. `arg` narrows to one entity by id prefix
+ *  (case-insensitive), so `/sit 34` reaches 3485c78e without the full hash. */
+const _sitV = new THREE.Vector3();
+function nearestSeat(arg, reach) {
+  const want = arg ? String(arg).toLowerCase() : null;
+  let best = null, bestD = reach;
   for (const [id, bag] of comps) {
     if (!bag.sockets) continue;
-    if (arg && id !== arg) continue;
-    const obj = entities.get(id);
-    if (!obj) continue;
-    const d = Math.hypot(obj.position.x - myState.pos.x, obj.position.z - myState.pos.z);
-    if (d < bestD || arg) { bestD = d; best = { id, slot: Object.keys(bag.sockets)[0] }; if (arg) break; }
+    if (want && !id.toLowerCase().startsWith(want)) continue;
+    for (const slot of Object.keys(bag.sockets)) {
+      const p = socketWorldPos(id, slot, _sitV);
+      if (!p) continue;
+      const d = Math.hypot(p.x - myState.pos.x, p.z - myState.pos.z);
+      if (d < bestD) { bestD = d; best = { id, slot, d }; }
+    }
   }
-  if (!best) return false;
+  return best;
+}
+
+/** Sit ON something: nearest socket within arm's reach (or a named entity
+ *  from anywhere). When nothing is in reach but a seat exists further out,
+ *  SAY so — the silent ground-sit fallback read as "sitting is broken" to
+ *  anyone standing four meters from a swing they could name but not see. */
+function trySitOn(arg) {
+  const best = nearestSeat(arg, arg ? Infinity : 3.5);
+  if (!best) {
+    const far = arg ? null : nearestSeat(null, 30);
+    if (far) logChat('*', `nearest seat is ${far.id} (${far.slot}), ${far.d.toFixed(0)}m away — walk closer, or /sit ${far.id}`);
+    return false;
+  }
   sendVerb('mount', { id: CONFIG.name, to: best.id, slot: best.slot });
-  logChat('*', `you sit on ${best.id} (${best.slot}) — move to get off`);
+  logChat('*', `you sit on ${best.id} (${best.slot}) — X or move to get off`);
   return true;
+}
+
+// X reaches the socket system through the controller's hook: mounted → get
+// up; a declared seat in reach → mount it; anything else falls through to
+// the controller's own layers (geometry seat pans, then the ground sit).
+setSeatHook(() => {
+  if (avatarMounts.has(CONFIG.name)) { dismountMe(); return true; }
+  if (downed) return false;
+  return trySitOn(null);
+});
+
+// The world's standing offer, kept current at a walk: when a declared seat
+// is within reach the hint bar says so — an affordance nobody can discover
+// is indistinguishable from one that doesn't exist. Checked ~2×/s.
+let _hintAcc = 0;
+function updateSeatHint(dt) {
+  _hintAcc += dt;
+  if (_hintAcc < 0.45) return;
+  _hintAcc = 0;
+  if (CONFIG.renderer || CONFIG.spectate) return;
+  let hint = null;
+  if (avatarMounts.has(CONFIG.name)) hint = '<kbd>X</kbd> get up · <kbd>WASD</kbd> hop off';
+  else if (!downed && nearestSeat(null, 3.5)) hint = '<kbd>X</kbd> — sit';
+  setAmbientHint(hint);
 }
 
 function stepRagdoll(dt) {
@@ -881,6 +927,7 @@ function frame(now) {
   else if (downed) stepRagdoll(dt);     // the controller yields while limp
   else if (avatarMounts.has(CONFIG.name)) updateMountedMe();  // seated: derived, not driven
   else updateMe(dt, me);
+  updateSeatHint(dt);            // "X — sit" while a declared seat is in reach
 
   // my own held pose: apply on change so I see what everyone else sees of me.
   // While downed the ragdoll owns setPose directly, so skip this path.

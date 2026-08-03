@@ -419,6 +419,17 @@ export function findPart(root, name) {
  *  coords but RIDES that part's motion instead of standing on the rest pose. */
 const socketOf = (id, slot) => (slot ? comps.get(id)?.sockets?.[slot] : null);
 
+/** World-space position of a socket, for reach checks and hints. Ignores the
+ *  part's motion on purpose: "how far is the seat" should not oscillate with
+ *  the swing. Fills out; returns null when either half is missing. */
+export function socketWorldPos(id, slot, out) {
+  const parent = entities.get(id);
+  const sock = socketOf(id, slot);
+  if (!parent || !sock) return null;
+  parent.updateWorldMatrix(true, false);
+  return out.set(...(sock.pos ?? [0, 0.5, 0])).applyMatrix4(parent.matrixWorld);
+}
+
 function applyMount(args) {
   if (!entities.has(args.id)) {
     // a body, not a thing — remotes/controller consume this (sitter on a
