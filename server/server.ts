@@ -373,6 +373,10 @@ function foldEntry(st: WorldState, e: LogEntry): void {
       const ent = st.entities[a?.id];
       if (!ent) return;
       const { id: _id, ...m } = a;
+      // A motion with no epoch starts when it was SPOKEN — stamp the entry's
+      // own ts, which is a pure function of the log, so every fold agrees.
+      // (Fable's first pendulum had no t0 and stood frozen at phase zero.)
+      if (m.type != null && m.t0 == null) m.t0 = e.ts;
       ent.comp ??= {};
       if (m.type == null) delete ent.comp.motion; else ent.comp.motion = m;
       if (!Object.keys(ent.comp).length) delete ent.comp;
@@ -510,7 +514,8 @@ function pendulumImpulse(m: Record<string, unknown>, impulse: number, ts: number
   const w0 = (2 * Math.PI) / period;
   const damp = Number(m.damp ?? 0.06);
   const t = m.t0 != null ? Math.max(0, (ts - Number(m.t0)) / 1000) : 0;
-  const amp = Number(m.amp ?? 0) * Math.exp(-damp * t);
+  // generous reader, mirrored with the client: `amplitude` is amp too
+  const amp = Number(m.amp ?? (m as any).amplitude ?? 0) * Math.exp(-damp * t);
   const ph = w0 * t + Number(m.phase ?? 0);
   const theta = amp * Math.cos(ph);
   const vel = -amp * w0 * Math.sin(ph) + (Number.isFinite(impulse) ? impulse : 0);
@@ -2127,6 +2132,30 @@ const server = Bun.serve({
           ring.push(String(msg.tag ?? "").slice(0, 64));
           if (ring.length > 40) ring.shift();
           return;
+        }
+        case "bodydrag": {
+          // Interactive ragdoll drag — the takeover stream. A dragger runs the
+          // body's sim on ITS machine and streams the result to the body's
+          // owner, who applies it to itself and rebroadcasts through normal
+          // presence (one source of truth; everyone else needs no new code).
+          // Targeted like puppet, presence-plane semantics: never logged,
+          // never queued, relayed as-is. The OWNER decides whether to honour
+          // any of it — grab, stream and release are all just requests.
+          if (!c.world || c.spectator) return;
+          const raw = String(msg.pose ? JSON.stringify(msg.pose) : "");
+          if (raw.length > 24_000) return;      // a pose is tiny; anything else is an attack
+          const to = String(msg.target ?? "").slice(0, 64);
+          const tc = [...c.world.clients].find((o) => o.id === to && !o.spectator);
+          if (!tc) return;                       // dragging the departed: silently moot
+          tc.ws.send(JSON.stringify({
+            type: "bodydrag", by: c.id,
+            ...(msg.grab != null ? { grab: msg.grab } : {}),
+            ...(msg.end != null ? { end: true } : {}),
+            ...(msg.pose != null ? { pose: msg.pose } : {}),
+            ...(Array.isArray(msg.p) ? { p: (msg.p as unknown[]).slice(0, 3).map(Number) } : {}),
+            ...(msg.yaw != null ? { yaw: Number(msg.yaw) } : {}),
+          }));
+          break;
         }
         case "typing": {
           // Pure presence: who is composing, right now. Never logged, never

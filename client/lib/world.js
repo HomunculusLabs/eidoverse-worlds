@@ -336,6 +336,8 @@ export async function applyEntry(entry, live, ctx = {}) {
       case 'motion': {
         // sugar for the motion component; {type: null} = come to rest
         const { id, ...m } = args;
+        // mirror of the server fold: an epoch-less motion starts when spoken
+        if (m.type != null && m.t0 == null) m.t0 = ts;
         const bag = comps.get(id) ?? {};
         if (m.type == null) { delete bag.motion; restAtBase(id); }
         else bag.motion = m;
