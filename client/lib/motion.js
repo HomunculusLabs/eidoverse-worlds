@@ -192,7 +192,7 @@ function evalPart(m, t, obj, pbase) {
   }
 }
 
-/** "id part" -> part Object3D animated last frame. When a part's motion
+/** "id\u0000part" -> part Object3D animated last frame. When a part's motion
  *  component vanishes (removed, or {type:null}), the part returns to its
  *  authored rest pose — world.js does this for whole entities, but it has
  *  never heard of parts, so parts settle themselves here. */
@@ -223,7 +223,7 @@ export function tickMotion() {
         const pbase = part.userData.mbase
           ?? (part.userData.mbase = { pos: part.position.toArray(), quat: part.quaternion.toArray() });
         if (evalPart(m, t, part, pbase)) {
-          const k = `${id} ${partName}`;
+          const k = `${id}\u0000${partName}`;
           _seenParts.add(k);
           _liveParts.set(k, part);
         }
