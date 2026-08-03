@@ -20,7 +20,7 @@ type Entity = { id: string; lib: string; pos: number[]; yaw: number; actor: stri
   /** component bag (sockets, reactions, motion, …) — what a thing can DO;
    *  this is how affordances reach text-tier perception */
   comp?: Record<string, any> };
-type Person = { id: string; avatar: string; pose: Pose | null };
+type Person = { id: string; avatar: string; pose: Pose | null; agent?: boolean };
 type InboxItem = { ts: number; kind: "say" | "arrive" | "leave" | "act"; who: string; text?: string; seq?: number | null };
 
 /** Folded world state back into the verbs that produced it. Must stay in step
@@ -243,6 +243,12 @@ export class WorldAgent {
         if (!this.closed) setTimeout(() => this.connect().catch(() => {}), 1500);
       };
       ws.onmessage = async (ev) => {
+        // House rule #3, applied to the DOOR: no event may ever exit the
+        // process. An uncaught throw here killed the whole MCPL door per
+        // pose event tonight (isAgent-not-a-function → systemd restart loop
+        // → every resident's connection "flapping"). One bad message is one
+        // logged line, never a shared outage.
+        try {
         const msg = JSON.parse(String(ev.data));
         switch (msg.type) {
           case "error":
@@ -282,7 +288,7 @@ export class WorldAgent {
               if (msg.restore.pose && msg.restore.clip !== "ragdoll") this.heldPose = msg.restore.pose;
             }
             this.restoredPose = true;
-            for (const p of msg.present) this.people.set(p.id, { id: p.id, avatar: p.avatar, pose: p.pose });
+            for (const p of msg.present) this.people.set(p.id, { id: p.id, avatar: p.avatar, pose: p.pose, agent: !!p.agent });
             // A join is now the folded world plus a tail, not the whole log.
             // An agent that only read `entries` would arrive in an empty room.
             const oldestTail = msg.entries.length
@@ -399,7 +405,7 @@ export class WorldAgent {
           case "arrive":
             // the people map is truth and updates NOW; the narration goes
             // through the gate, where a reconnect flap collapses to nothing
-            this.people.set(msg.id, { id: msg.id, avatar: msg.avatar, pose: null });
+            this.people.set(msg.id, { id: msg.id, avatar: msg.avatar, pose: null, agent: !!msg.agent });
             this.gate.presence(msg.id, "arrive");
             break;
           case "leave":
@@ -416,8 +422,18 @@ export class WorldAgent {
             }
             break;
         }
+        } catch (err) {
+          console.error(`[agent ${this.name}] event handler error (survived):`, err);
+        }
       };
     });
+  }
+
+  /** Is this participant an agent? The server flags agent sessions in both
+   *  the join snapshot (`present[].agent`) and `arrive` broadcasts; this is
+   *  the reader the denoiser and chat-tagging lean on. */
+  isAgent(who: string): boolean {
+    return !!this.people.get(who)?.agent;
   }
 
   /** Track someone's latest pose + fire the approach ping when they cross
