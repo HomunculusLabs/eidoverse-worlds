@@ -101,7 +101,7 @@ const TOOLS = [
   { name: "clear_pose", description: "Release a held pose, easing back to normal animation. Pass `target` to release a pose you asked someone else to hold.", inputSchema: { type: "object", properties: { target: { type: "string" } } } },
   { name: "emote", description: "Fire a named gesture — the same one-shots humans have on their emote bar. Plays once over your locomotion; presence only, never logged. For a gesture that isn't listed, invent one with `animate`.", inputSchema: { type: "object", properties: { name: { type: "string", enum: ["wave", "cheer", "dance", "point", "salute", "clap", "talk", "flail"] } }, required: ["name"] } },
   { name: "posture", description: "Settle into a posture: sit (on the ground), sitchair (chair height), lie, or stand. Held until you stand or walk; survives leaving and rejoining, like a held pose.", inputSchema: { type: "object", properties: { kind: { type: "string", enum: ["sit", "sitchair", "lie", "stand"] } }, required: ["kind"] } },
-  { name: "ragdoll", description: "Ask another body to go limp and collapse — a physics ragdoll. `target` is who falls; THEY simulate it on their own body (you never simulate someone else), and it settles into a held pose everyone sees. Being knocked over is opt-in for humans and default for agent performers.", inputSchema: { type: "object", properties: { target: { type: "string" } }, required: ["target"] } },
+  { name: "ragdoll", description: "Shove another body over — a physics ragdoll. `target` is who falls; THEY simulate it on their own body (you never simulate someone else), and it settles into a held pose everyone sees. The shove is directed from where YOU stand through them (walk to the right side of someone before pushing); `strength` 0.5–4 m/s, default 2.2. Being knocked over is opt-in for humans and default for agent performers.", inputSchema: { type: "object", properties: { target: { type: "string" }, strength: { type: "number" } }, required: ["target"] } },
   { name: "animate", description: "Play a one-off animation — for a specific gesture you are inventing on the spot. `tracks` maps a VRM humanoid bone name to a list of keyframes [{ t: seconds, q: [x,y,z,w] }]; `dur` is the length in seconds. Only list the bones that move. It plays once (or set loop:true), over your locomotion, and is relayed to everyone but never logged. Keep it small and sparse — a few bones, a few keyframes. Pass `target` to play it on someone else (they decide).", inputSchema: { type: "object", properties: { dur: { type: "number" }, loop: { type: "boolean" }, tracks: { type: "object" }, target: { type: "string" } }, required: ["dur", "tracks"] } },
   { name: "set_avatar", description: "Change your body. Pass `avatar` as a roster name (see it with no arguments) or a full vrm path. Takes effect immediately — everyone sees you change; your position and held pose carry over.", inputSchema: { type: "object", properties: { avatar: { type: "string" } } } },
   { name: "library_sheet", description: "A contact sheet — one grid image with names under each tile. kind 'avatars' is the wearable roster (portraits exist once a body has been worn); kind 'models' is the placeable object library. 12 per page. Use library_preview for a closer look at one, set_avatar to wear, spawn to place.", inputSchema: { type: "object", properties: { kind: { type: "string", enum: ["avatars", "models"] }, page: { type: "number" } }, required: ["kind"] } },
@@ -728,8 +728,20 @@ class Session {
       }
       case "ragdoll": {
         if (!a.target) return text("ragdoll needs a `target` — the body that falls simulates it");
-        ag.puppet(String(a.target), { ragdoll: true });
-        return text(`asked ${a.target} to go limp`);
+        // the shove is directed: from where THIS body stands, through the
+        // target — the same line a browser /push uses. No known position for
+        // them = an undirected knock-over, the old wire.
+        const to = String(a.target);
+        const tp = ag.people.get(to)?.pose?.p;
+        const pow = Math.min(4, Math.max(0.5, Number(a.strength) || 2.2));
+        let lean: number[] | null = null;
+        if (Array.isArray(tp)) {
+          const dx = tp[0] - ag.pos.x, dz = tp[2] - ag.pos.z;
+          const d = Math.hypot(dx, dz);
+          if (d > 0.05) lean = [(dx / d) * pow, 0, (dz / d) * pow];
+        }
+        ag.puppet(to, { ragdoll: lean ? { lean } : true });
+        return text(`you shove ${to}${lean ? " — they go down the way you pushed" : " — asked them to go limp"}`);
       }
       case "animate": {
         const spec = { dur: Number(a.dur), loop: !!a.loop, tracks: a.tracks as any };

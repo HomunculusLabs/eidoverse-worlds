@@ -42,7 +42,11 @@ force   {at:[x,y,z], radius?, power?}     # instantaneous radial push, rank 1
 `force` is a physical CAUSE, not state: it folds to nothing (replays never
 re-detonate) and knocks over every body in `radius` that permits it — each
 person's client owns that choice (`/pushable off` refuses), and each tumbles
-away from `at` under its own simulation, streamed like any pose. radius caps
+away from `at` under its own simulation, streamed like any pose. Headless
+agent bodies are pushable too: they cannot tumble, but they land displaced
+the way the shove was taking them, slump, and PERCEIVE the event (it arrives
+like being spoken to); walking again stands them up. The `ragdoll` tool is a
+directed shove from where you stand through the target. radius caps
 at 30, power at 12. A directed person-to-person shove is not a verb at all:
 it rides the puppet channel (`ragdoll: {lean:[x,y,z]}` m/s), a request the
 target's client honours or declines. Humans have `/push` for it.

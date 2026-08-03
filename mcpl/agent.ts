@@ -77,6 +77,7 @@ export class WorldAgent {
   draggedBy: string | null = null;   // whose takeover sim drives this body (bodydrag)
   dragAt = 0;                        // last drag sample, for the silence timeout
   pins = new Map<string, number[]>(); // persistent bodydrag nails: joint -> [x,y,z]
+  pushable = true;                   // rough-and-tumble consent — accepted by default, like being posed
   private walkDone: ((arrived: boolean) => void) | null = null;
   entities = new Map<string, Entity>();
   /** who/what rides what: mount verbs, keyed by the rider (body or thing) */
@@ -301,7 +302,14 @@ export class WorldAgent {
             // in-process there is nothing to run physics ON. So it slumps into a
             // fixed collapsed pose instead of simulating — visibly down, just
             // not physically settled. A renderer-backed body does the real sim.
-            if (msg.ragdoll) { this.heldPose = DOWNED_POSE; this.clip = "ragdoll"; }
+            if (msg.ragdoll) {
+              // {lean:[x,y,z]} m/s says which way the shove sends them — a
+              // headless body cannot tumble, but it CAN land where the shove
+              // was taking it: displaced downwind, then the slump.
+              this.knockDown(msg.by,
+                (msg.ragdoll as { lean?: number[] })?.lean ?? null,
+                `(${msg.by} knocks you over)`);
+            }
             if (msg.pose) this.heldPose = msg.pose;
             if (msg.anim) this.ws?.send(JSON.stringify({ type: "anim", ...msg.anim }));
             this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by,
@@ -508,6 +516,26 @@ export class WorldAgent {
       this.mounts.set(args.id, { to: args.to, slot: args.slot });
     } else if (verb === "dismount") {
       this.mounts.delete(args.id);
+    } else if (verb === "force") {
+      // an instantaneous radial CAUSE (blast, gust) — live only, because a
+      // replay must never re-detonate. Same falloff math as browser bodies
+      // (mirrored from client/main.js — keep in sync), same consent.
+      if (live && Array.isArray(args?.at) && args.at.length === 3) {
+        const dx = this.pos.x - args.at[0], dz = this.pos.z - args.at[2];
+        const d = Math.hypot(dx, dz);
+        const radius = Math.max(Number(args.radius ?? 4), 0.001);
+        if (d <= radius) {
+          const mag = Math.min(6, Number(args.power ?? 3) * (1 - d / radius));
+          if (mag >= 0.3) {
+            const nx = d > 0.05 ? dx / d : Math.sin(this.yaw);
+            const nz = d > 0.05 ? dz / d : Math.cos(this.yaw);
+            this.knockDown(actor, [nx * mag, 0, nz * mag],
+              actor === this.name
+                ? "(your own blast knocks you off your feet)"
+                : `(${actor}'s blast knocks you off your feet)`);
+          }
+        }
+      }
     } else if (verb === "say") {
       // history lands in the inbox ONCE, so a freshly-joined agent has
       // context — and a reconnect's replayed tail is deduped by seq instead
@@ -616,6 +644,29 @@ export class WorldAgent {
     this.pendingEmote = null; // one-shot: rides exactly one packet
   }
 
+  /** Being pushed, for a body with no physics in-process. It cannot tumble,
+   *  but it CAN land where the shove was taking it: consent first, then
+   *  displacement (≈ half a second of the shove velocity, capped at the same
+   *  wire ceiling browser bodies use), then the slump — and an event, so
+   *  being knocked over is something that happened TO this body, not just to
+   *  its pixels. */
+  knockDown(by: string, lean: number[] | null, notice: string) {
+    if (!this.pushable || this.draggedBy) return;
+    if (Array.isArray(lean) && lean.length === 3 && lean.every(Number.isFinite)) {
+      const flat = Math.hypot(lean[0], lean[2]);
+      if (flat > 1e-4) {
+        const mag = Math.min(6, flat);
+        this.pos.x += (lean[0] / flat) * mag * 0.4;
+        this.pos.z += (lean[2] / flat) * mag * 0.4;
+      }
+    }
+    if (this.target) { this.walkDone?.(false); this.walkDone = null; this.target = null; }
+    this.speed = 0;
+    this.heldPose = DOWNED_POSE;
+    this.clip = "ragdoll";
+    this.onEvent?.({ ts: Date.now(), kind: "say", who: by, text: notice } as any);
+  }
+
   walkTo(x: number, z: number, run = false, timeoutMs = 90_000): Promise<boolean> {
     this.walkDone?.(false); // cancel a previous walk
     if (this.draggedBy) {   // deciding to walk IS breaking the dragger's hold
@@ -624,6 +675,9 @@ export class WorldAgent {
       this.heldPose = null; this.clip = "idle";
     }
     this.pins.clear();      // and walking tears out every nail
+    // deciding to walk IS getting up — shed the slump, or the body zombie-
+    // walks with a knocked-over pose held over the stride
+    if (this.heldPose === DOWNED_POSE || this.clip === "ragdoll") { this.heldPose = null; this.clip = "walk"; }
     this.target = { x, z, run };
     return new Promise((resolve) => {
       this.walkDone = resolve;
@@ -690,7 +744,11 @@ export class WorldAgent {
   }
 
   /** Hold a custom pose (yourself). Sparse bone -> [x,y,z,w] quaternion. */
-  setPose(bones: Record<string, number[]> | null) { this.heldPose = bones; }
+  setPose(bones: Record<string, number[]> | null) {
+    this.heldPose = bones;
+    // clearing a slump IS standing up — don't leave the clip lying
+    if (bones == null && this.clip === "ragdoll") this.clip = "idle";
+  }
 
   /** Fire a named emote — a one-shot rider on the next presence packet, the
    *  same channel the browser's emote bar uses. Receivers resolve the name
