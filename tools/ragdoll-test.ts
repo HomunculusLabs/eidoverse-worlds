@@ -181,50 +181,54 @@ check('every shipped rig loads with a humanoid and hips',
     worst < 1e-6, `drift ${worst.toExponential(2)} at ${who}`);
 }
 
-// ---- a bone's ORIENTATION must follow its direction, and nothing else
+// ---- limbs must not TWIST
 {
-  // The particle sim carries no twist, so a bone's roll is whatever the drive
-  // step invents. A minimal arc off a fixed rest direction invents it with no
-  // memory: roll is a function of the current direction alone, and near the
-  // antipode of the rest direction it is barely a function of that. So it
-  // ACCUMULATES — measured at up to 19° a frame, which reaches half a turn in
-  // ten — and since nothing carries it back, the limb stays where it ended up,
-  // twisted, while its mirror that took a different path does not. That is the
-  // knee that twists 180° and will not untwist.
+  // The particle sim gives directions, never roll, so roll comes from however
+  // the drive derives a frame. Deriving it against the WORLD drifts — parallel
+  // transport has holonomy, so a limb swung around a loop returns rotated by
+  // the solid angle it enclosed — and a tumbling arm encloses a lot of sphere.
+  // Deriving it against the PARENT cannot drift: it is a function of current
+  // state, not of the path. Measured at settle, mean limb twist went 97° -> 0°.
   //
-  // The invariant that catches it: in WORLD space (so a parent's motion is not
-  // charged to the child), a bone may only turn as far as its direction turned.
-  // Any excess is roll nobody asked for. Per frame the two drives differ by
-  // little; it is the TOTAL that separates them, 3175° against 5°, which is
-  // also the honest description of the bug — a slow accumulation, not a snap.
-  let worst = 0, who = '', total = 0;
+  // The measurement has to be the bone's LOCAL rotation — its rotation inside
+  // its parent's frame, which is exactly what the streamed pose stores —
+  // decomposed about the bone's own rest axis. Measuring against the bone's
+  // rest WORLD orientation instead charges the body's whole tumble as twist,
+  // which reads as 180° on a body that has merely lain down, and sent me
+  // chasing a number that was mostly the floor.
+  const twistOf = (q: any, axis: any) => {
+    const along = new THREE.Vector3(q.x, q.y, q.z).dot(axis);
+    const t = new THREE.Quaternion(axis.x * along, axis.y * along, axis.z * along, q.w);
+    if (t.lengthSq() < 1e-12) return 0;
+    t.normalize();
+    let a = 2 * Math.acos(Math.max(-1, Math.min(1, t.w))) * 180 / Math.PI;
+    if (a > 180) a -= 360;
+    return Math.abs(a);
+  };
+  let worst = 0, who = '', sum = 0, n = 0;
   for (const rig of FLEET) {
     const av = makeAvatar(rig.P);
     const rd: any = new Ragdoll(av, toppleLean(), av.restBonePositions());
-    const pq = new Map<string, any>(), pd = new Map<string, any>();
-    let steps = 0;
-    while (!rd.done && steps < 900) {
-      rd.step(1 / 60); steps++;
-      for (const d of rd.drive) {
-        const q = rd.nodes[d.bone].getWorldQuaternion(new THREE.Quaternion());
-        const bwp = rd.nodes[d.bone].getWorldPosition(new THREE.Vector3());
-        const dir = rd.p[d.child].clone().sub(bwp);
-        if (dir.lengthSq() < 1e-9) continue;
-        dir.normalize();
-        const lq = pq.get(d.bone), ld = pd.get(d.bone);
-        if (lq && ld) {
-          const turned = lq.angleTo(q) * 180 / Math.PI;
-          const swung = Math.acos(Math.max(-1, Math.min(1, ld.dot(dir)))) * 180 / Math.PI;
-          const spurious = turned - swung;          // roll nobody asked for
-          if (spurious > worst) { worst = spurious; who = `${rig.name}:${d.bone}`; }
-          if (spurious > 0) total += spurious;
-        }
-        pq.set(d.bone, q); pd.set(d.bone, dir.clone());
-      }
+    let steps = 0, pose: any = null;
+    while (!rd.done && steps < 900) { const q = rd.step(1 / 60); if (q) pose = q; steps++; }
+    for (const d of rd.drive) {
+      // the pelvis is excluded on purpose: it has no parent BONE, so its local
+      // rotation is the body's own orientation and "twist" there is the tumble.
+      // Keyed on the NAME, not on a field the new drive happens to add — keyed
+      // on the field, this test skipped every bone under the old drive and
+      // passed vacuously, which is exactly the failure it exists to catch.
+      if (d.bone === 'hips') continue;
+      const q = pose?.[d.bone]; if (!q) continue;
+      const axis = rd.nodes[d.child].position.clone();
+      if (axis.lengthSq() < 1e-9) continue;
+      const t = twistOf(new THREE.Quaternion(q[0], q[1], q[2], q[3]), axis.normalize());
+      if (t > worst) { worst = t; who = `${rig.name}:${d.bone}`; }
+      sum += t; n++;
     }
   }
-  check('bones do not accumulate roll nobody asked for (≤200° over the fleet)',
-    total <= 200, `${total.toFixed(0)}° total, worst ${worst.toFixed(0)}° at ${who}`);
+  const mean = n ? sum / n : 0;
+  check('limbs do not twist about their own length (mean ≤5°, worst ≤25°)',
+    mean <= 5 && worst <= 25, `mean ${mean.toFixed(0)}°, worst ${worst.toFixed(0)}° at ${who}`);
 }
 
 // ---- the legs must not kick out from under the body
