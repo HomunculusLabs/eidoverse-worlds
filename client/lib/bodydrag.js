@@ -24,7 +24,7 @@
 // under takeover the dragger sims and the agent only has to accept-and-
 // rebroadcast — the same thing it already does for puppet poses.
 
-import { THREE, camera, canvas, bus } from './core.js';
+import { THREE, camera, canvas, bus, scene } from './core.js';
 import { remotes, draggedLocal } from './remotes.js';
 import { Ragdoll, JOINTS } from './ragdoll.js';
 import { sendBodyDrag } from './net.js';
@@ -82,9 +82,81 @@ function pickBody(ndc) {
   return best;
 }
 
+// ---------------------------------------------------------------- pins
+// A nail you can see is a nail you can pull. P while dragging nails the held
+// joint where it is — the release message carries the pin, and from then on
+// the body's OWNER enforces it (their sim, their consent, their movement key
+// tears every nail out at once). One small marker per pin, rendered from the
+// pins each body streams in its presence; clicking a marker asks its owner
+// to pull that nail. Grabbing a nailed joint takes it back into your hand.
+
+const markers = new Map();          // "bodyId:joint" -> mesh
+let _markerGeo = null, _markerMat = null;
+function syncMarkers(wanted) {
+  if (!_markerGeo) {
+    _markerGeo = new THREE.SphereGeometry(0.055, 12, 10);
+    _markerMat = new THREE.MeshBasicMaterial({ color: 0xffd166 });
+  }
+  for (const [key, at] of wanted) {
+    let m = markers.get(key);
+    if (!m) {
+      m = new THREE.Mesh(_markerGeo, _markerMat);
+      m.renderOrder = 2;
+      m.userData.isBody = true;      // the sky's scene-diff must not claim a nail
+      markers.set(key, m);
+      scene.add(m);
+    }
+    m.position.set(at[0], at[1], at[2]);
+  }
+  for (const [key, m] of markers) if (!wanted.has(key)) { scene.remove(m); markers.delete(key); }
+}
+
+/** The pin marker under the cursor ray, if any. */
+function pickMarker() {
+  let best = null;
+  for (const [key, m] of markers) {
+    const d = _ray.ray.distanceToPoint(m.position);
+    if (d < 0.13 && (!best || d < best.d)) best = { key, d };
+  }
+  return best;
+}
+
+function pinCurrent() {
+  if (!drag) return;
+  const r = remotes.get(drag.id);
+  const t = drag.rd.pins?.get(drag.joint);
+  if (!t) return;
+  sendBodyDrag(drag.id, {
+    end: true,
+    pinAt: { joint: drag.joint, at: [t.x, t.y, t.z] },
+    ...(drag.rd.pose ? { pose: drag.rd.pose } : {}),
+    ...(r?.avatar ? { p: r.avatar.root.position.toArray() } : {}),
+  });
+  drag.rd.setPin(null);
+  draggedLocal.delete(drag.id);
+  flashHint(`${drag.joint} nailed in place — click the pin to pull it`);
+  drag = null;
+}
+
+addEventListener('keydown', (e) => {
+  // photo mode owns P everywhere else; while a body is in your hand, the nail wins
+  if (e.code === 'KeyP' && drag) { e.stopImmediatePropagation(); pinCurrent(); }
+}, true);
+
 function beginGrab(e) {
   if (e.button !== 0 || isEditing() || drag || !hooks) return;
   _ndc.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
+  _ray.setFromCamera(_ndc, camera);
+  // a pin marker outranks the body behind it: clicking a nail pulls it
+  const mk = pickMarker();
+  if (mk) {
+    const [id, joint] = mk.key.split(':');
+    if (id === 'me') hooks.removePin(joint);
+    else sendBodyDrag(id, { unpin: { joint } });
+    e.stopImmediatePropagation();
+    e.preventDefault();
+    return;
+  }
   const hit = pickBody(_ndc);
   if (!hit) return;
   const { r: hitR, joint } = hit;
@@ -100,7 +172,7 @@ function beginGrab(e) {
   drag = { id: hitR.id, rd, joint, depth: hit.along, sentAt: 0 };
   draggedLocal.add(hitR.id);
   sendBodyDrag(hitR.id, { grab: { joint } });
-  flashHint(`dragging ${hitR.id} by the ${joint} — release to drop`);
+  flashHint(`dragging ${hitR.id} by the ${joint} — release to drop · P to nail it here`);
   // the grab owns this press: neither the camera orbit nor build may see it
   e.stopImmediatePropagation();
   e.preventDefault();
@@ -161,11 +233,43 @@ bus.on('bodydrag', (msg) => {
     draggedBy = by;
     lastSampleAt = performance.now();
     hooks.beginDragged(by);
+    // grabbing a nailed joint takes it back into the hand; the OTHER nails
+    // stay mine, and the dragger's takeover sim needs to know about them
+    if (msg.grab.joint) hooks.removePin?.(String(msg.grab.joint));
+    const pins = hooks.getPins?.() ?? [];
+    if (pins.length) sendBodyDrag(by, { pins });
+    return;
+  }
+  if (msg.unpin != null) {
+    // someone asks to pull one of my nails — same consent as being moved
+    if (!hooks.pushable()) {
+      toast(`${by} tried to unpin you — /pushable on to allow`, 'warn', 6000);
+      return;
+    }
+    hooks.removePin?.(String(msg.unpin.joint ?? ''));
+    return;
+  }
+  if (Array.isArray(msg.pins)) {
+    // the owner's other nails, sent back on grab accept — my takeover sim
+    // must keep enforcing them while I hold the body by something else
+    if (drag && drag.id === by) {
+      for (const p of msg.pins) {
+        if (p?.j && Array.isArray(p.at) && p.at.length === 3) {
+          drag.rd.setPin(String(p.j), _tmp.set(p.at[0], p.at[1], p.at[2]));
+        }
+      }
+    }
     return;
   }
   if (msg.end != null) {
-    // my dragger let go (or a refused grabber acknowledging) — resume myself
-    if (draggedBy === by) { draggedBy = null; hooks.endDragged(msg); }
+    // my dragger let go (or a refused grabber acknowledging) — resume myself.
+    // A release may carry a nail: the dragger pinned the held joint where it
+    // was, and from here MY sim enforces it.
+    if (draggedBy === by) {
+      draggedBy = null;
+      if (msg.pinAt?.joint && Array.isArray(msg.pinAt.at)) hooks.addPin?.(String(msg.pinAt.joint), msg.pinAt.at);
+      hooks.endDragged(msg);
+    }
     else if (drag && drag.id === by) {
       // I was the dragger and the OWNER revoked (broke free, or refused)
       drag.rd.setPin(null);
@@ -223,4 +327,18 @@ export function updateBodyDrag(dt, now = performance.now()) {
     draggedBy = null;
     hooks?.endDragged({});
   }
+
+  // nails, drawn where the world says they are: every body streams its pins
+  // in presence, mine come from my own state
+  const wanted = new Map();
+  for (const r of remotes.values()) {
+    const pins = r.buf?.[r.buf.length - 1]?.pins;
+    if (Array.isArray(pins)) {
+      for (const p of pins) {
+        if (p?.j && Array.isArray(p.at) && p.at.length === 3) wanted.set(`${r.id}:${p.j}`, p.at);
+      }
+    }
+  }
+  for (const p of hooks?.getPins?.() ?? []) wanted.set(`me:${p.j}`, p.at);
+  syncMarkers(wanted);
 }

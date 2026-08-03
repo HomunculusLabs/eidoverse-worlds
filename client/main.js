@@ -286,6 +286,7 @@ function goLimp(lean = null) {
 function getUp() {
   if (!downed) return;
   revokeDragged();                 // if someone is dragging me, I take myself back
+  clearPins();                     // standing up tears every nail out
   downed = false; ragdoll = null;
   myState.pose = null; me?.clearPose();
   me?.setLimp(false);
@@ -390,7 +391,52 @@ function endDraggedMode(msg) {
   if (msg?.pose || msg?.p) applyDraggedSample(msg);
   me.root.updateMatrixWorld(true);
   ragdoll = new Ragdoll(me, null, me.restBonePositions());
+  applyMyPins();
   myState.clip = 'ragdoll';
+}
+
+// ---------------------------------------------------------------- pins
+// Nails through my body (bodydrag's persistent pins): MY state, MY sim
+// enforcing them, streamed in MY presence so everyone sees the markers. A
+// dragger may place one (the release message carries it) or ask to pull one;
+// my movement key tears them all out — the body is always its own final
+// authority. Session-scoped on purpose: pins are presence, not history.
+const myPins = new Map();            // joint -> [x, y, z]
+const _pinV = new THREE.Vector3();
+const MAX_PINS = 8;
+
+function syncPins() {
+  myState.pins = myPins.size ? [...myPins].map(([j, at]) => ({ j, at })) : null;
+}
+function applyMyPins() {
+  if (!ragdoll) return;
+  for (const [j, at] of myPins) ragdoll.setPin(j, _pinV.set(at[0], at[1], at[2]));
+}
+function addPin(j, at) {
+  if (!Array.isArray(at) || at.length !== 3 || !at.every(Number.isFinite)) return;
+  if (myPins.size >= MAX_PINS && !myPins.has(j)) return;
+  myPins.set(j, at.map(Number));
+  applyMyPins();
+  syncPins();
+}
+function removePin(j) {
+  if (!myPins.delete(j)) return;
+  ragdoll?.setPin(j, null);
+  syncPins();
+  // freed of a nail while lying with no live sim (and nobody's hand on me):
+  // wake my own sim so the body sags from what remains and settles honestly
+  if (downed && !ragdoll && me && !beingDragged()) {
+    me.root.updateMatrixWorld(true);
+    ragdoll = new Ragdoll(me, null, me.restBonePositions());
+    applyMyPins();
+    myState.clip = 'ragdoll';
+  }
+}
+function clearPins() {
+  if (!myPins.size) return;
+  myPins.clear();
+  ragdoll?.setPin(null);
+  syncPins();
 }
 
 initBodyDrag({
@@ -400,6 +446,9 @@ initBodyDrag({
   beginDragged: beginDraggedMode,
   applyDragged: applyDraggedSample,
   endDragged: endDraggedMode,
+  getPins: () => [...myPins].map(([j, at]) => ({ j, at })),
+  addPin,
+  removePin,
 });
 
 // Being posed by someone else.
@@ -443,6 +492,7 @@ function applyShove(lean, by) {
       // still limp from the last fall (getUp is what clears it) — the new sim
       // reads the lying pose as its start and the neutral rest as its limits
       ragdoll = new Ragdoll(me, lean ?? toppleVelocity(), me.restBonePositions());
+      applyMyPins();               // a nailed body shoved is a nailed body swinging
       myState.clip = 'ragdoll';
     }
   } else {

@@ -76,6 +76,7 @@ export class WorldAgent {
   heldPose: Record<string, number[]> | null = null;
   draggedBy: string | null = null;   // whose takeover sim drives this body (bodydrag)
   dragAt = 0;                        // last drag sample, for the silence timeout
+  pins = new Map<string, number[]>(); // persistent bodydrag nails: joint -> [x,y,z]
   private walkDone: ((arrived: boolean) => void) | null = null;
   entities = new Map<string, Entity>();
   /** who/what rides what: mount verbs, keyed by the rider (body or thing) */
@@ -324,11 +325,25 @@ export class WorldAgent {
                 text: "(takes hold of your limp body and starts dragging you)" } as any);
               break;
             }
+            if (msg.unpin != null) {
+              // pulling one of this body's nails — agents accept, as they
+              // accept being posed: being directed is the point
+              this.pins.delete(String(msg.unpin.joint ?? ""));
+              break;
+            }
             if (msg.end != null) {
               if (this.draggedBy === msg.by) {
                 this.draggedBy = null;
+                // a release may nail the held joint where the hand left it —
+                // this headless body cannot sim a hang, but it HOLDS: pose
+                // and position stay where the dragger put them, pin streamed
+                // so everyone sees the marker
+                const pa = msg.pinAt;
+                if (pa?.joint && Array.isArray(pa.at) && pa.at.length === 3 && this.pins.size < 8) {
+                  this.pins.set(String(pa.joint), pa.at.map(Number));
+                }
                 this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by,
-                  text: "(lets go of you)" } as any);
+                  text: pa ? "(nails part of you in place and steps back)" : "(lets go of you)" } as any);
               }
               break;
             }
@@ -587,12 +602,14 @@ export class WorldAgent {
         this.pos.z += (dz / dist) * step;
       }
     }
-    if (!this.draggedBy) this.pos.y = this.heightAt(this.pos.x, this.pos.z);
+    // a nailed body hangs where it was left — no terrain clamp while pinned
+    if (!this.draggedBy && this.pins.size === 0) this.pos.y = this.heightAt(this.pos.x, this.pos.z);
     this.ws?.send(JSON.stringify({
       type: "pose",
       pose: {
         p: [this.pos.x, this.pos.y, this.pos.z], yaw: this.yaw, speed: this.speed, clip: this.clip,
         ...(this.heldPose ? { pose: this.heldPose } : {}),
+        ...(this.pins.size ? { pins: [...this.pins].map(([j, at]) => ({ j, at })) } : {}),
         ...(this.pendingEmote ? { emote: this.pendingEmote } : {}),
       },
     }));
@@ -606,6 +623,7 @@ export class WorldAgent {
       this.draggedBy = null;
       this.heldPose = null; this.clip = "idle";
     }
+    this.pins.clear();      // and walking tears out every nail
     this.target = { x, z, run };
     return new Promise((resolve) => {
       this.walkDone = resolve;

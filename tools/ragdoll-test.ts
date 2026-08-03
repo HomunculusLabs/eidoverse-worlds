@@ -485,5 +485,33 @@ console.log('\npin (the grabbed joint):');
     stretchOf(rd) < 0.10, `${(stretchOf(rd) * 100).toFixed(0)}%`);
 }
 
+// multi-pin: hung by both wrists, then one nail pulled, then the other
+{
+  const av = synth();
+  const rd: any = new Ragdoll(av, null, av.restBonePositions());
+  const L = new THREE.Vector3(0.5, 2.2, 0), R = new THREE.Vector3(-0.5, 2.2, 0);
+  rd.setPin('leftHand', L);
+  rd.setPin('rightHand', R);
+  for (let i = 0; i < 600; i++) rd.step(1 / 60);
+  check('hung by both wrists: both nails hold exactly',
+    rd.p.leftHand.distanceTo(L) < 0.02 && rd.p.rightHand.distanceTo(R) < 0.02,
+    `L ${rd.p.leftHand.distanceTo(L).toFixed(3)} R ${rd.p.rightHand.distanceTo(R).toFixed(3)}`);
+  check('...body hangs between them', rd.p.hips.y < 2.2 && rd.p.hips.y > 0.3,
+    `hips.y=${rd.p.hips.y.toFixed(2)}`);
+  check('...and never captures while nailed', !rd.done);
+
+  rd.setPin('leftHand', null);                    // pull ONE nail
+  for (let i = 0; i < 600; i++) rd.step(1 / 60);
+  check('one nail pulled: the freed hand drops, the other holds',
+    rd.p.leftHand.y < 1.6 && rd.p.rightHand.distanceTo(R) < 0.02,
+    `left.y=${rd.p.leftHand.y.toFixed(2)} R off ${rd.p.rightHand.distanceTo(R).toFixed(3)}`);
+
+  rd.setPin(null);                                // pull everything
+  let steps = 0;
+  while (!rd.done && steps < 1400) { rd.step(1 / 60); steps++; }
+  check('all nails pulled: the body falls and rests',
+    rd.done && stretchOf(rd) < 0.10, `done=${rd.done} stretch=${(stretchOf(rd) * 100).toFixed(0)}%`);
+}
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

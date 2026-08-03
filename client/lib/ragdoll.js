@@ -568,9 +568,9 @@ export class Ragdoll {
       p.add(_v);
       p.y += TUNING.GRAVITY * dt * dt;
     }
-    // the pinned joint goes exactly where the hand says, every substep —
-    // after integration, before the constraints that hang the body from it
-    if (this.pin) this.p[this.pin.j].copy(this.pin.t);
+    // pinned joints go exactly where their pins say, every substep —
+    // after integration, before the constraints that hang the body from them
+    if (this.pins?.size) for (const [j, t] of this.pins) this.p[j].copy(t);
     this._frame(this.p);
     for (let it = 0; it < TUNING.ITER; it++) {
       this._links();
@@ -860,25 +860,31 @@ export class Ragdoll {
     }
   }
 
-  /** Pin one joint to a world-space target — the grabbed joint of a dragged
-   *  body. While set, the joint has infinite mass (constraints move the REST
-   *  of the body toward the hand, never the hand toward the body) and is
-   *  snapped to the target each substep. `prev` is deliberately left alone:
-   *  the gap between the snap and where the joint was IS the drag velocity,
-   *  so releasing mid-swing throws the body the way it was moving.
-   *  setPin(null) releases. */
+  /** Pin a joint to a world-space target — a grabbed joint in a hand, or a
+   *  joint NAILED somewhere (the persistent pins bodydrag places). A body may
+   *  carry several at once: hung by both wrists, dragged by an ankle while a
+   *  hand stays nailed. While set, the joint has infinite mass (constraints
+   *  move the REST of the body toward the pin, never the pin toward the body)
+   *  and is snapped to the target each substep. `prev` is deliberately left
+   *  alone: the gap between the snap and where the joint was IS the drag
+   *  velocity, so releasing mid-swing throws the body the way it was moving.
+   *  setPin(joint, null) releases that joint alone; setPin(null) releases
+   *  everything. */
   setPin(joint, target) {
-    const unpin = (j) => { this.iw[j] = 1 / (MASS[j] ?? 1); };
-    if (!joint || !this.p[joint] || !target) {
-      if (this.pin) unpin(this.pin.j);
-      this.pin = null;
-      return;
-    }
-    if (this.pin && this.pin.j !== joint) unpin(this.pin.j);
-    this.pin = { j: joint, t: (this.pin?.t ?? new THREE.Vector3()).copy(target) };
-    if (!Number.isFinite(this.pin.t.x + this.pin.t.y + this.pin.t.z)) { this.pin = null; return; }
+    this.pins ??= new Map();
+    const unpin = (j) => { this.iw[j] = 1 / (MASS[j] ?? 1); this.pins.delete(j); };
+    if (!joint) { for (const j of [...this.pins.keys()]) unpin(j); return; }
+    if (!this.p[joint]) return;
+    if (!target) { unpin(joint); return; }
+    const t = this.pins.get(joint) ?? new THREE.Vector3();
+    t.copy(target);
+    if (!Number.isFinite(t.x + t.y + t.z)) { unpin(joint); return; }
+    this.pins.set(joint, t);
     this.iw[joint] = 0;
   }
+
+  /** True while any pin holds this body. */
+  get pinned() { return (this.pins?.size ?? 0) > 0; }
 
   /** Shove a body whose sim is still running — a second push landing on
    *  someone already going down, or a blast reaching a body mid-tumble.
@@ -918,9 +924,9 @@ export class Ragdoll {
     if (n === MAX_FRAMES) this.acc = 0;
 
     this.elapsed += dt;
-    // A held body neither settles nor deadlines: the pin is ongoing input,
-    // and capturing mid-drag would freeze a body in someone's hand.
-    if (this.pin) { this.settledFor = 0; this.elapsed = 0; }
+    // A held body neither settles nor deadlines: a pin is ongoing input,
+    // and capturing would freeze a hung body's constraint enforcement.
+    if (this.pinned) { this.settledFor = 0; this.elapsed = 0; }
     // settle is measured in SECONDS, not frames, for the same reason
     if (this.maxV < TUNING.SETTLE_V) this.settledFor += dt;
     else if (this.maxV > TUNING.SETTLE_V * TUNING.SETTLE_RESET) this.settledFor = 0;
@@ -942,7 +948,7 @@ export class Ragdoll {
       this.avatar.root.position.x = hips.x;
       this.avatar.root.position.z = hips.z;
       const y = hips.y - this.hipsOffset;
-      if (this.pin && y > this.rootStartY) this.rootStartY = y;
+      if (this.pinned && y > this.rootStartY) this.rootStartY = y;
       this.avatar.root.position.y = Math.min(this.rootStartY, y);
     }
 

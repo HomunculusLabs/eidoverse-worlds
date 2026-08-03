@@ -164,6 +164,9 @@ export function sendPose(now) {
   // A held custom pose rides the presence packet (and therefore lastPose, so
   // late joiners see it) — but never the log. `null` explicitly clears it.
   if (s.pose !== undefined) pose.pose = s.pose;
+  // Persistent body pins (bodydrag nails) ride presence the same way: state
+  // of a BODY, visible to everyone, never the log. Null clears.
+  if (s.pins !== undefined) pose.pins = s.pins;
   net.ws.send(JSON.stringify({ type: 'pose', pose }));
 }
 

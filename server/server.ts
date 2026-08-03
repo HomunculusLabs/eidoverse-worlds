@@ -2233,6 +2233,12 @@ const server = Bun.serve({
             ...(msg.pose != null ? { pose: msg.pose } : {}),
             ...(Array.isArray(msg.p) ? { p: (msg.p as unknown[]).slice(0, 3).map(Number) } : {}),
             ...(msg.yaw != null ? { yaw: Number(msg.yaw) } : {}),
+            // persistent pins: nail-here (rides a release), pull-this-nail,
+            // and the owner's current pin set (sent back on grab accept so
+            // the dragger's takeover sim keeps enforcing the other nails)
+            ...(msg.pinAt != null ? { pinAt: msg.pinAt } : {}),
+            ...(msg.unpin != null ? { unpin: msg.unpin } : {}),
+            ...(Array.isArray(msg.pins) ? { pins: (msg.pins as unknown[]).slice(0, 16) } : {}),
           }));
           break;
         }
