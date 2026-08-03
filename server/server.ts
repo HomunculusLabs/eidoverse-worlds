@@ -900,6 +900,37 @@ setInterval(() => {
     try { w.bhv.tick(now); } catch (err) { console.error(`[world:${w.name}] behavior tick`, err); }
   }
 }, 1000);
+
+// Boot sweep: worlds load lazily on first touch, but a world with scripts
+// must wake WITH the server, not with its first visitor — otherwise a
+// restart leaves every lighthouse dark until someone happens to sail past.
+// Cheap peek before paying for a real load: the snapshot names its
+// behaviors; a world with no snapshot yet gets a byte-scan of its log for
+// the verb. (A world whose behaviors were all since removed may load once
+// for nothing — harmless, and it folds a fresh snapshot on shutdown.)
+try {
+  let woken = 0;
+  for (const name of readdirSync(WORLDS_DIR)) {
+    try {
+      if (!/^[a-z0-9_-]{1,64}$/i.test(name)) continue;
+      const dir = join(WORLDS_DIR, name);
+      if (!existsSync(join(dir, "log.jsonl"))) continue;
+      let hasScripts = false;
+      const snapPath = join(dir, "snapshot.json");
+      if (existsSync(snapPath)) {
+        try {
+          const snap = JSON.parse(readFileSync(snapPath, "utf8"));
+          hasScripts = Object.keys(snap?.state?.behaviors ?? {}).length > 0;
+        } catch { /* corrupt snapshot: fall through to the log scan */ }
+      }
+      if (!hasScripts && readFileSync(join(dir, "log.jsonl"), "utf8").includes('"verb":"behavior"')) {
+        hasScripts = true;
+      }
+      if (hasScripts) { getWorld(name); woken++; }
+    } catch (err) { console.error(`[boot] world ${name} peek failed`, err); }
+  }
+  if (woken) console.log(`[boot] ${woken} scripted world(s) woken — their behaviors run without visitors`);
+} catch (err) { console.error("[boot] world sweep failed", err); }
 function getWorld(name: string): World {
   if (!/^[a-z0-9_-]{1,64}$/i.test(name)) throw new Error(`bad world name: ${name}`);
   let w = worlds.get(name);
