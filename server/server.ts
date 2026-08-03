@@ -2146,6 +2146,7 @@ const server = Bun.serve({
           if (raw.length > 24_000) return;      // a pose is tiny; anything else is an attack
           const to = String(msg.target ?? "").slice(0, 64);
           const tc = [...c.world.clients].find((o) => o.id === to && !o.spectator);
+          if (process.env.BD_DEBUG) console.log(`[bd] ${c.id} -> ${to} (${msg.grab ? "grab" : msg.end ? "end" : "sample"}) ${tc ? "relayed" : `NO TARGET among [${[...c.world.clients].map((o) => o.id).join(",")}]`}`);
           if (!tc) return;                       // dragging the departed: silently moot
           tc.ws.send(JSON.stringify({
             type: "bodydrag", by: c.id,

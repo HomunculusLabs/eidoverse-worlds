@@ -37,6 +37,7 @@ import { initDebug, updateDebug, toggleDebug } from './lib/debug.js';
 import { initChat, logChat, chat, openConvo } from './lib/chat.js';
 import { makeFrame } from './lib/frames.js';
 import { Ragdoll } from './lib/ragdoll.js';
+import { initBodyDrag, updateBodyDrag, beingDragged, revokeDragged, dragState } from './lib/bodydrag.js';
 import { shedALight, litCount } from './lib/lights.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { framesHeld } from './lib/loadwork.js';
@@ -284,6 +285,7 @@ function goLimp(lean = null) {
 }
 function getUp() {
   if (!downed) return;
+  revokeDragged();                 // if someone is dragging me, I take myself back
   downed = false; ragdoll = null;
   myState.pose = null; me?.clearPose();
   me?.setLimp(false);
@@ -353,6 +355,53 @@ function stepRagdoll(dt) {
   if (me) updateFollowCamera(dt, me);
 }
 
+// ---------------------------------------------------------------- dragged
+// Someone else's sim is driving my limp body (bodydrag takeover — the drag
+// module holds the protocol; these are the hands it moves). My client stays
+// the authority: it APPLIES the stream to itself and rebroadcasts through
+// normal presence, so everyone else sees the drag as ordinary motion of mine.
+
+function beginDraggedMode(by) {
+  if (!me) return;
+  ragdoll = null;                  // the dragger's sim owns the tumble now
+  downed = true;
+  me.setLimp(true);
+  myState.clip = 'ragdoll';
+  flashHint(`${by} grabs you — move to break free`);
+}
+
+function applyDraggedSample({ pose, p, yaw }) {
+  if (!me) return;
+  if (Array.isArray(p) && p.length === 3 && p.every(Number.isFinite)) {
+    me.root.position.set(p[0], p[1], p[2]);
+    myState.pos.set(p[0], p[1], p[2]);
+  }
+  if (Number.isFinite(yaw)) { me.root.rotation.y = yaw; myState.yaw = yaw; }
+  if (pose && typeof pose === 'object') { me.setPose(pose); myState.pose = pose; }
+  myState.clip = 'ragdoll';
+  myState.speed = 0;
+}
+
+function endDraggedMode(msg) {
+  if (!me || !downed) return;
+  // land on their final frame, then settle under MY OWN sim from wherever the
+  // hand let go — dropped from a height, the body falls; the takeover was
+  // only ever the moving part
+  if (msg?.pose || msg?.p) applyDraggedSample(msg);
+  me.root.updateMatrixWorld(true);
+  ragdoll = new Ragdoll(me, null, me.restBonePositions());
+  myState.clip = 'ragdoll';
+}
+
+initBodyDrag({
+  pushable: () => pushable,
+  isDowned: () => downed,
+  myPos: () => myState.pos,
+  beginDragged: beginDraggedMode,
+  applyDragged: applyDraggedSample,
+  endDragged: endDraggedMode,
+});
+
 // Being posed by someone else.
 //
 // A puppet is an input to MY body, applied by MY client — never a pose forced
@@ -386,6 +435,7 @@ const _shove = new THREE.Vector3();
 function applyShove(lean, by) {
   if (!me) return;
   if (avatarMounts.has(CONFIG.name)) return;      // braced on a seat — v1 punts on knock-offs
+  if (beingDragged()) return;                     // a held body answers to the hand, not the blast
   if (lean && lean.lengthSq() > MAX_PUSH * MAX_PUSH) lean.setLength(MAX_PUSH);
   if (downed) {
     if (ragdoll) ragdoll.impulse(lean ?? toppleVelocity());
@@ -791,6 +841,9 @@ function frame(now) {
   }
   BC('me-update');
   me?.update(dt, now);
+  BC('bodydrag');
+  updateBodyDrag(dt, now);       // BEFORE remotes: the takeover sim's pose must
+                                 // land in the same frame's avatar.update
   BC('remotes');
   updateRemotes(dt, now);
   BC('gaze');
@@ -911,7 +964,7 @@ startPrefetch().catch((e) => report('prefetch', e));
 globalThis.EW = {
   me: () => me, remotes, entities, myState, THREE, net, scene, camera, renderer, bus,
   skyArgs, sendVerb, setPosable, get posable() { return posable; },
-  setPushable, get pushable() { return pushable; },
+  setPushable, get pushable() { return pushable; }, dragState,
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)

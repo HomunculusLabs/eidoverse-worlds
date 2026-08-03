@@ -143,6 +143,14 @@ export function sendJoin() {
 }
 
 let lastPoseSent = 0;
+/** Targeted ragdoll-drag traffic (grab / sim stream / release). Presence
+ *  semantics: fire-and-forget, never logged. The target's client decides. */
+export function sendBodyDrag(target, payload) {
+  if (net.joined && net.ws?.readyState === 1) {
+    net.ws.send(JSON.stringify({ type: 'bodydrag', target, ...payload }));
+  }
+}
+
 export function sendPose(now) {
   const s = hooks.myState;
   if (!net.joined || !hooks.me() || !s || now - lastPoseSent < 66) return;
@@ -385,6 +393,12 @@ async function handle(msg) {
       // pose asserted onto it — main.js decides whether to honour it and then
       // drives our avatar through the normal presence path.
       bus.emit('puppet', msg);
+      break;
+
+    case 'bodydrag':
+      // someone is (asking to be, or currently) dragging MY body — same
+      // doctrine as puppet: an input my client applies to itself, or refuses
+      bus.emit('bodydrag', msg);
       break;
 
     case 'log':

@@ -1,0 +1,226 @@
+// bodydrag — grabbing a limp body and dragging it, interactively.
+//
+// The sync model is a TAKEOVER, and it has a precedent: the seat. While you
+// are seated, something else owns your body's place and your client renders
+// the derived result; movement input means "I want out". Dragging is that,
+// with a sim attached:
+//
+//   * The DRAGGER runs the Verlet on its own remote copy of the target's rig
+//     (same Avatar class — the sim does not care whose body it is), with the
+//     grabbed joint pinned to the cursor ray. Zero latency where the hand is.
+//   * The dragger streams the resulting pose + root to the body's OWNER
+//     (targeted `bodydrag` relay, presence semantics, never logged). The
+//     owner applies it to itself and REBROADCASTS through its normal
+//     presence — one source of truth, and everyone else needs no new code.
+//   * Consent is the owner's, always: the grab is a request (pushable gates
+//     it), a movement key revokes mid-drag, and 1.2s of dragger silence
+//     auto-resumes — a crashed dragger never leaves a body possessed.
+//   * On release the owner runs its OWN settle sim from wherever it was left
+//     (the corpse-kick path), so the body lands and rests under the authority
+//     that owns it. The takeover is only ever the moving part.
+//
+// This is also why dragging works on AGENT bodies: a headless client cannot
+// run a Verlet on itself (which is why agents slump instead of tumbling), but
+// under takeover the dragger sims and the agent only has to accept-and-
+// rebroadcast — the same thing it already does for puppet poses.
+
+import { THREE, camera, canvas, bus } from './core.js';
+import { remotes, draggedLocal } from './remotes.js';
+import { Ragdoll, JOINTS } from './ragdoll.js';
+import { sendBodyDrag } from './net.js';
+import { flashHint, toast } from './ui.js';
+import { isEditing } from './build.js';
+
+const GRAB_RANGE = 5;        // how far a body may be from ME to grab (m)
+const STREAM_MS = 66;        // sim → owner cadence, matches presence
+const SILENCE_MS = 1200;     // owner resumes itself after this much quiet
+
+let hooks = null;            // main.js: my own body's state and effects
+export function initBodyDrag(h) { hooks = h; }
+
+// ---------------------------------------------------------------- dragger
+
+let drag = null;             // { id, rd, joint, depth, sentAt }
+const _ray = new THREE.Raycaster();
+const _ndc = new THREE.Vector2();
+const _pt = new THREE.Vector3();
+const _tmp = new THREE.Vector3();
+
+function grabbables() {
+  const out = [];
+  for (const r of remotes.values()) {
+    if (r.avatar && r.lastClip === 'ragdoll') out.push(r);
+  }
+  return out;
+}
+
+// Picking is done against the JOINT positions, not the skinned mesh: a
+// SkinnedMesh raycast tests the bind pose — a standing silhouette — while a
+// grabbable body is by definition lying in some other shape entirely. The
+// normalized bone nodes ARE where the body visually is, on any rig.
+const PICK_R = 0.3;           // how close the ray must pass to a joint (m)
+
+function pickBody(ndc) {
+  _ray.setFromCamera(ndc, camera);
+  let best = null;            // frontmost body along the ray
+  for (const r of grabbables()) {
+    const h = r.avatar.vrm.humanoid;
+    for (const j of JOINTS) {
+      const node = h?.getNormalizedBoneNode?.(j);
+      if (!node) continue;
+      node.getWorldPosition(_tmp);
+      const offRay = _ray.ray.distanceToPoint(_tmp);
+      if (offRay > PICK_R) continue;
+      const along = _tmp.sub(_ray.ray.origin).dot(_ray.ray.direction);
+      if (along <= 0) continue;
+      // frontmost body wins; within a body, the joint the cursor is ON wins
+      if (!best || along < best.along - 0.4 || (r === best.r && offRay < best.offRay)) {
+        best = { r, joint: j, along, offRay };
+      }
+    }
+  }
+  return best;
+}
+
+function beginGrab(e) {
+  if (e.button !== 0 || isEditing() || drag || !hooks) return;
+  _ndc.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
+  const hit = pickBody(_ndc);
+  if (!hit) return;
+  const { r: hitR, joint } = hit;
+  // an arm's-length act: the BODY must be near me, however far the camera sits
+  const me = hooks.myPos();
+  if (me && hitR.avatar.root.position.distanceTo(me) > GRAB_RANGE) {
+    flashHint(`${hitR.id} is too far away to grab`);
+    return;
+  }
+
+  hitR.avatar.root.updateMatrixWorld(true);
+  const rd = new Ragdoll(hitR.avatar, null, hitR.avatar.restBonePositions());
+  drag = { id: hitR.id, rd, joint, depth: hit.along, sentAt: 0 };
+  draggedLocal.add(hitR.id);
+  sendBodyDrag(hitR.id, { grab: { joint } });
+  flashHint(`dragging ${hitR.id} by the ${joint} — release to drop`);
+  // the grab owns this press: neither the camera orbit nor build may see it
+  e.stopImmediatePropagation();
+  e.preventDefault();
+}
+
+function endGrab() {
+  if (!drag) return;
+  const r = remotes.get(drag.id);
+  drag.rd.setPin(null);
+  sendBodyDrag(drag.id, {
+    end: true,
+    ...(drag.rd.pose ? { pose: drag.rd.pose } : {}),
+    ...(r?.avatar ? { p: r.avatar.root.position.toArray() } : {}),
+  });
+  draggedLocal.delete(drag.id);
+  drag = null;
+}
+
+// capture phase: this listener decides FIRST whether the press is a grab
+canvas.addEventListener('mousedown', beginGrab, true);
+addEventListener('mouseup', endGrab);
+addEventListener('mousemove', (e) => {
+  if (drag) _ndc.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
+});
+// depth on the wheel: reel the body toward you or push it away
+canvas.addEventListener('wheel', (e) => {
+  if (drag) { drag.depth = THREE.MathUtils.clamp(drag.depth - e.deltaY * 0.01, 1, 30); e.stopImmediatePropagation(); }
+}, true);
+
+// ---------------------------------------------------------------- dragged
+
+let draggedBy = null;        // who currently drives MY body
+let lastSampleAt = 0;
+
+/** True while someone else's sim owns this body — main.js consults it. */
+export function beingDragged() { return draggedBy != null; }
+
+/** Break free (movement key, getUp): tell the dragger and take myself back. */
+export function revokeDragged() {
+  if (!draggedBy) return;
+  sendBodyDrag(draggedBy, { end: true });
+  draggedBy = null;
+}
+
+bus.on('bodydrag', (msg) => {
+  if (!hooks) return;
+  const { by } = msg;
+  if (msg.grab != null) {
+    console.debug('[bodydrag] grab from', by,
+      { pushable: hooks.pushable(), downed: hooks.isDowned(), draggedBy });
+    if (!hooks.pushable()) {
+      toast(`${by} tried to drag you — /pushable on to allow`, 'warn', 6000);
+      sendBodyDrag(by, { end: true });
+      return;
+    }
+    if (!hooks.isDowned()) { sendBodyDrag(by, { end: true }); return; }     // only limp bodies drag
+    if (draggedBy && draggedBy !== by) { sendBodyDrag(by, { end: true }); return; }  // first grab wins
+    draggedBy = by;
+    lastSampleAt = performance.now();
+    hooks.beginDragged(by);
+    return;
+  }
+  if (msg.end != null) {
+    // my dragger let go (or a refused grabber acknowledging) — resume myself
+    if (draggedBy === by) { draggedBy = null; hooks.endDragged(msg); }
+    else if (drag && drag.id === by) {
+      // I was the dragger and the OWNER revoked (broke free, or refused)
+      drag.rd.setPin(null);
+      draggedLocal.delete(drag.id);
+      drag = null;
+      flashHint(`${by} broke free`);
+    }
+    return;
+  }
+  if (draggedBy === by && msg.pose) {
+    lastSampleAt = performance.now();
+    hooks.applyDragged(msg);
+  }
+});
+
+// ---------------------------------------------------------------- tick
+
+/** Dev introspection — what the drag module believes right now. */
+export function dragState() {
+  return { dragging: drag ? { id: drag.id, joint: drag.joint, depth: +drag.depth.toFixed(2) } : null, draggedBy };
+}
+
+export function updateBodyDrag(dt, now = performance.now()) {
+  // dragger: advance the takeover sim, pin to the cursor ray, stream
+  if (drag) {
+    const r = remotes.get(drag.id);
+    if (!r?.avatar) { endGrab(); return; }       // they left mid-drag
+    // Self-heal on the owner's own word: presence samples keep arriving while
+    // we suppress their APPLICATION, and the owner streaming any non-ragdoll
+    // clip means they took themselves back — whether or not the revoke
+    // message survived the trip. Their stream outranks our sim, always.
+    const newest = r.buf[r.buf.length - 1];
+    if (newest?.clip && newest.clip !== 'ragdoll') {
+      drag.rd.setPin(null);
+      draggedLocal.delete(drag.id);
+      flashHint(`${drag.id} broke free`);
+      drag = null;
+      return;
+    }
+    _ray.setFromCamera(_ndc, camera);
+    _pt.copy(_ray.ray.direction).multiplyScalar(drag.depth).add(_ray.ray.origin);
+    drag.rd.setPin(drag.joint, _pt);
+    drag.rd.step(dt);                            // drives the remote avatar directly
+    if (now - drag.sentAt >= STREAM_MS && drag.rd.pose) {
+      drag.sentAt = now;
+      sendBodyDrag(drag.id, {
+        pose: drag.rd.pose,
+        p: r.avatar.root.position.toArray(),
+        yaw: r.avatar.root.rotation.y,
+      });
+    }
+  }
+  // dragged: a silent dragger loses the body — nobody stays possessed
+  if (draggedBy && now - lastSampleAt > SILENCE_MS) {
+    draggedBy = null;
+    hooks?.endDragged({});
+  }
+}

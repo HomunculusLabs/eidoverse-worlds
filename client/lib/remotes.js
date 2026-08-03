@@ -175,11 +175,18 @@ const LOD_NEAR = 8, LOD_MID = 20;
 export let lodBias = 1;                 // raised by the perf governor under load
 export function setLodBias(v) { lodBias = v; }
 
+// Bodies whose sim runs on THIS machine right now (bodydrag takeover). Their
+// inbound presence is our own stream echoed back through the owner — applying
+// it would make the body fight its own past by one round trip. The local sim
+// owns root and bones; springs/expressions still tick.
+export const draggedLocal = new Set();
+
 export function updateRemotes(dt, now = performance.now()) {
   const renderAt = serverNow() - INTERP_MS;
 
   for (const r of remotes.values()) {
     if (!r.avatar) continue;
+    if (draggedLocal.has(r.id)) { r.avatar.update(dt, now); continue; }
     const buf = r.buf;
 
     // A mounted body is DERIVED, not streamed: its transform comes from the

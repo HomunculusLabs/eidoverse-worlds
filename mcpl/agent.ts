@@ -74,6 +74,8 @@ export class WorldAgent {
    *  it rides the pose packet and is never a log verb, because it is a moment,
    *  not a change to the world. `null` clears. */
   heldPose: Record<string, number[]> | null = null;
+  draggedBy: string | null = null;   // whose takeover sim drives this body (bodydrag)
+  dragAt = 0;                        // last drag sample, for the silence timeout
   private walkDone: ((arrived: boolean) => void) | null = null;
   entities = new Map<string, Entity>();
   /** who/what rides what: mount verbs, keyed by the rider (body or thing) */
@@ -298,11 +300,46 @@ export class WorldAgent {
             // in-process there is nothing to run physics ON. So it slumps into a
             // fixed collapsed pose instead of simulating — visibly down, just
             // not physically settled. A renderer-backed body does the real sim.
-            if (msg.ragdoll) this.heldPose = DOWNED_POSE;
+            if (msg.ragdoll) { this.heldPose = DOWNED_POSE; this.clip = "ragdoll"; }
             if (msg.pose) this.heldPose = msg.pose;
             if (msg.anim) this.ws?.send(JSON.stringify({ type: "anim", ...msg.anim }));
             this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by,
               text: `(posed you${msg.anim ? " with an animation" : ""})` } as any);
+            break;
+          case "bodydrag":
+            // A renderer-backed dragger runs the physics this headless body
+            // cannot (see the ragdoll note above) — accepting its stream is
+            // the same act as accepting a puppet pose, continuously. Only a
+            // limp body drags; walking breaks the hold; 1.2s of dragger
+            // silence returns the body to itself (see tick).
+            if (msg.grab != null) {
+              const limp = this.clip === "ragdoll" || this.heldPose === DOWNED_POSE;
+              if (!limp || this.target || (this.draggedBy && this.draggedBy !== msg.by)) {
+                this.ws?.send(JSON.stringify({ type: "bodydrag", target: msg.by, end: true }));
+                break;
+              }
+              this.draggedBy = msg.by; this.dragAt = Date.now();
+              this.clip = "ragdoll";
+              this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by,
+                text: "(takes hold of your limp body and starts dragging you)" } as any);
+              break;
+            }
+            if (msg.end != null) {
+              if (this.draggedBy === msg.by) {
+                this.draggedBy = null;
+                this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by,
+                  text: "(lets go of you)" } as any);
+              }
+              break;
+            }
+            if (this.draggedBy === msg.by && msg.pose) {
+              this.dragAt = Date.now();
+              this.heldPose = msg.pose;
+              if (Array.isArray(msg.p) && msg.p.length === 3 && msg.p.every(Number.isFinite)) {
+                this.pos.x = msg.p[0]; this.pos.y = msg.p[1]; this.pos.z = msg.p[2];
+              }
+              if (Number.isFinite(msg.yaw)) this.yaw = msg.yaw;
+            }
             break;
           case "log":
             this.lastSeq = Math.max(this.lastSeq, msg.entry?.seq ?? -1);
@@ -530,7 +567,12 @@ export class WorldAgent {
   private tick() {
     if (!this.joined) return;
     const dt = TICK_MS / 1000;
-    if (this.target) {
+    // Being dragged: the dragger's stream owns pos/pose/yaw — no walking, no
+    // terrain clamp (a lifted body is off the ground on purpose). A silent
+    // dragger loses the body; the last streamed pose just holds, lying
+    // wherever it was dropped.
+    if (this.draggedBy && Date.now() - this.dragAt > 1200) this.draggedBy = null;
+    if (!this.draggedBy && this.target) {
       const dx = this.target.x - this.pos.x, dz = this.target.z - this.pos.z;
       const dist = Math.hypot(dx, dz);
       if (dist < ARRIVE) {
@@ -545,7 +587,7 @@ export class WorldAgent {
         this.pos.z += (dz / dist) * step;
       }
     }
-    this.pos.y = this.heightAt(this.pos.x, this.pos.z);
+    if (!this.draggedBy) this.pos.y = this.heightAt(this.pos.x, this.pos.z);
     this.ws?.send(JSON.stringify({
       type: "pose",
       pose: {
@@ -559,6 +601,11 @@ export class WorldAgent {
 
   walkTo(x: number, z: number, run = false, timeoutMs = 90_000): Promise<boolean> {
     this.walkDone?.(false); // cancel a previous walk
+    if (this.draggedBy) {   // deciding to walk IS breaking the dragger's hold
+      this.ws?.send(JSON.stringify({ type: "bodydrag", target: this.draggedBy, end: true }));
+      this.draggedBy = null;
+      this.heldPose = null; this.clip = "idle";
+    }
     this.target = { x, z, run };
     return new Promise((resolve) => {
       this.walkDone = resolve;

@@ -436,5 +436,48 @@ console.log('\nimpulse (the wire-borne shove):');
   }
 }
 
+// ---------------------------------------------------------------------------
+// the pin: a grabbed joint owned by a hand (bodydrag's takeover sim)
+// ---------------------------------------------------------------------------
+console.log('\npin (the grabbed joint):');
+{
+  // hang: pin a hand above standing height — the body must dangle from it,
+  // the pinned joint must BE at the target, and the sim must neither settle
+  // nor deadline while held (a pin is ongoing input).
+  const av = synth();
+  const rd: any = new Ragdoll(av, null, av.restBonePositions());
+  const hold = new THREE.Vector3(0.3, 1.9, 0.2);
+  rd.setPin('leftHand', hold);
+  for (let i = 0; i < 900; i++) { rd.setPin('leftHand', hold); rd.step(1 / 60); }  // 15s >> 8s deadline
+  check('the pinned joint is exactly where the hand says',
+    rd.p.leftHand.distanceTo(hold) < 0.02, `${rd.p.leftHand.distanceTo(hold).toFixed(3)}m off`);
+  check('the body hangs from it, not through it',
+    rd.p.hips.y < rd.p.leftHand.y, `hips ${rd.p.hips.y.toFixed(2)} vs hand ${rd.p.leftHand.y.toFixed(2)}`);
+  check('a held body never captures — no settle, no deadline',
+    !rd.done && rd.elapsed < 1, `done=${rd.done} elapsed=${rd.elapsed.toFixed(1)}`);
+  check('...and its bone lengths survive the hang (≤10%)',
+    stretchOf(rd) < 0.10, `${(stretchOf(rd) * 100).toFixed(0)}%`);
+
+  // drag: walk the pin sideways 2m — the body must come along
+  const x0 = rd.p.hips.x;
+  for (let i = 0; i < 300; i++) {
+    hold.x = 0.3 + (i / 300) * 2;
+    rd.setPin('leftHand', hold);
+    rd.step(1 / 60);
+  }
+  check('dragging the pin drags the body', rd.p.hips.x - x0 > 1.2,
+    `Δx=${(rd.p.hips.x - x0).toFixed(2)}`);
+
+  // release: let go mid-air — the body falls and comes to rest on its own
+  rd.setPin(null);
+  let steps = 0;
+  while (!rd.done && steps < 1400) { rd.step(1 / 60); steps++; }
+  check('released, it falls and comes to rest',
+    rd.done && Object.keys(rd.p).every((j: string) => rd.p[j].y < 1.2 && rd.p[j].y > -0.01),
+    `done=${rd.done}`);
+  check('...still holding its skeleton together (≤10%)',
+    stretchOf(rd) < 0.10, `${(stretchOf(rd) * 100).toFixed(0)}%`);
+}
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

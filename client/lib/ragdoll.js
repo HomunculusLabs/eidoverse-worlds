@@ -66,7 +66,7 @@ const CHAINS = [
   ['rightUpperLeg', 'rightLowerLeg'], ['rightLowerLeg', 'rightFoot'],
 ];
 // Every joint we track as a particle (bones + their leaf children).
-const JOINTS = [...new Set(CHAINS.flat())];
+export const JOINTS = [...new Set(CHAINS.flat())];
 // The bones the sim actually writes a rotation for. Everything else in the
 // humanoid — upperChest, the shoulders, hands, feet, toes, every finger — is
 // the locomotion mixer's, and must be parked before a tumble starts or the
@@ -568,6 +568,9 @@ export class Ragdoll {
       p.add(_v);
       p.y += TUNING.GRAVITY * dt * dt;
     }
+    // the pinned joint goes exactly where the hand says, every substep —
+    // after integration, before the constraints that hang the body from it
+    if (this.pin) this.p[this.pin.j].copy(this.pin.t);
     this._frame(this.p);
     for (let it = 0; it < TUNING.ITER; it++) {
       this._links();
@@ -857,6 +860,26 @@ export class Ragdoll {
     }
   }
 
+  /** Pin one joint to a world-space target — the grabbed joint of a dragged
+   *  body. While set, the joint has infinite mass (constraints move the REST
+   *  of the body toward the hand, never the hand toward the body) and is
+   *  snapped to the target each substep. `prev` is deliberately left alone:
+   *  the gap between the snap and where the joint was IS the drag velocity,
+   *  so releasing mid-swing throws the body the way it was moving.
+   *  setPin(null) releases. */
+  setPin(joint, target) {
+    const unpin = (j) => { this.iw[j] = 1 / (MASS[j] ?? 1); };
+    if (!joint || !this.p[joint] || !target) {
+      if (this.pin) unpin(this.pin.j);
+      this.pin = null;
+      return;
+    }
+    if (this.pin && this.pin.j !== joint) unpin(this.pin.j);
+    this.pin = { j: joint, t: (this.pin?.t ?? new THREE.Vector3()).copy(target) };
+    if (!Number.isFinite(this.pin.t.x + this.pin.t.y + this.pin.t.z)) { this.pin = null; return; }
+    this.iw[joint] = 0;
+  }
+
   /** Shove a body whose sim is still running — a second push landing on
    *  someone already going down, or a blast reaching a body mid-tumble.
    *  Same application as the constructor's lean. Wire-borne shoves are capped
@@ -895,6 +918,9 @@ export class Ragdoll {
     if (n === MAX_FRAMES) this.acc = 0;
 
     this.elapsed += dt;
+    // A held body neither settles nor deadlines: the pin is ongoing input,
+    // and capturing mid-drag would freeze a body in someone's hand.
+    if (this.pin) { this.settledFor = 0; this.elapsed = 0; }
     // settle is measured in SECONDS, not frames, for the same reason
     if (this.maxV < TUNING.SETTLE_V) this.settledFor += dt;
     else if (this.maxV > TUNING.SETTLE_V * TUNING.SETTLE_RESET) this.settledFor = 0;
