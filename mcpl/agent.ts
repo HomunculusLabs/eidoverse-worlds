@@ -7,7 +7,7 @@
 import * as THREE_W from "three/webgpu";
 import * as TSL from "three/tsl";
 import { NoiseGate, SHORT_STINT_MS, APPROACH_REFRACT_MS, APPROACH_RADIUS, REARM_RADIUS,
-  ACTIVITY_RADIUS_M, ACTIVITY_PULSE_MS } from "./denoise.ts";
+  ACTIVITY_RADIUS_M, ACTIVITY_PULSE_MS, ACTIVITY_REFRESH_MS, MOVER_MIN_M } from "./denoise.ts";
 import { HeadlessBody } from "./physics.ts";
 
 (globalThis as any).THREE = Object.assign({}, THREE_W, TSL);
@@ -109,7 +109,11 @@ export class WorldAgent {
    *  truth (movement, says: jump spam is genuine liveliness even when its
    *  narration is denoised) but DENOISED for arrivals/departures (a reconnect
    *  flap is not activity, it is weather). */
-  private act30 = { says: new Map<string, number>(), movers: new Set<string>(), acts: 0, arrivals: 0, departures: 0, builds: 0 };
+  private act30 = { says: new Map<string, number>(), moved: new Map<string, number>(), acts: 0, arrivals: 0, departures: 0, builds: 0 };
+  /** The last EMITTED pulse — novelty gate state. `sig` fingerprints the
+   *  ambient scenery (roster + movers + acts); `roster` lets an unchanged
+   *  cast be compacted to a count instead of ten names, every time. */
+  private lastPulse = { sig: "", roster: "", at: 0 };
   /** Stateful denoiser for ambient narration (arrive/leave/acts). Says,
    *  mentions, and whispers never pass through it — a knock is not chatter.
    *  See denoise.ts for the doctrine. */
@@ -193,26 +197,44 @@ export class WorldAgent {
   /** The activity pulse: local awareness as ONE event per window, and only
    *  while something is happening. See denoise.ts (ACTIVITY_*) for the why.
    *  Deliberately not pushed to the inbox — look() already shows presence
-   *  live and chat verbatim; the pulse is a wake signal, not scrollback. */
+   *  live and chat verbatim; the pulse is a wake signal, not scrollback.
+   *
+   *  NOVELTY-GATED (field report: "antra moving about" every 30s buried a
+   *  context in near-identical lines). Discrete events — speech, arrivals,
+   *  departures, builds — always pulse: each one HAPPENED since the last
+   *  window. Ambient continuation — the same cast, still milling about,
+   *  still fidgeting — is scenery: it pulses when the scenery CHANGES
+   *  (someone new moves, someone stops, the roster shifts) and otherwise
+   *  repeats no more often than ACTIVITY_REFRESH. Recurrence is not novelty. */
   private activityPulse() {
     const a = this.act30;
     const msgs = [...a.says.values()].reduce((s, n) => s + n, 0);
-    if (!(msgs || a.movers.size || a.acts || a.arrivals || a.departures || a.builds)) return;
-    this.act30 = { says: new Map(), movers: new Set(), acts: 0, arrivals: 0, departures: 0, builds: 0 };
+    const movers = [...a.moved.entries()].filter(([, d]) => d >= MOVER_MIN_M).map(([id]) => id).sort();
+    this.act30 = { says: new Map(), moved: new Map(), acts: 0, arrivals: 0, departures: 0, builds: 0 };
+    const discrete = msgs || a.arrivals || a.departures || a.builds;
+    if (!(discrete || movers.length || a.acts)) return;
     const nearby = [...this.people.values()]
       .filter((p) => p.id !== this.name && p.pose &&
         Math.hypot(p.pose.p[0] - this.pos.x, p.pose.p[2] - this.pos.z) <= this.activityRadiusM)
-      .map((p) => p.id);
+      .map((p) => p.id).sort();
+    const now = Date.now();
+    const sig = `${nearby.join(",")}|${movers.join(",")}|${a.acts > 0}`;
+    if (!discrete && sig === this.lastPulse.sig && now - this.lastPulse.at < ACTIVITY_REFRESH_MS) return;
     const n = (c: number, w: string) => `${c} ${w}${c === 1 ? "" : "s"}`;
     const bits: string[] = [];
     if (msgs) bits.push(`${n(msgs, "message")} (${[...a.says.keys()].join(", ")})`);
-    if (a.movers.size) bits.push(`${[...a.movers].join(", ")} moving about`);
+    if (movers.length) bits.push(`${movers.join(", ")} moving about`);
     if (a.acts) bits.push(n(a.acts, "embodied act"));
     if (a.arrivals) bits.push(n(a.arrivals, "arrival"));
     if (a.departures) bits.push(n(a.departures, "departure"));
     if (a.builds) bits.push(`${n(a.builds, "thing")} changed`);
-    const who = nearby.length ? `${nearby.join(", ")} nearby — ` : "";
-    this.onEvent?.({ ts: Date.now(), kind: "activity", who: "world", text: `${who}${bits.join("; ")}` });
+    const roster = nearby.join(", ");
+    // an unchanged cast is a count, not a re-introduction — ten names once,
+    // "10 nearby" thereafter
+    const who = nearby.length
+      ? `${roster === this.lastPulse.roster ? `${nearby.length} nearby` : `${roster} nearby`} — ` : "";
+    this.lastPulse = { sig, roster, at: now };
+    this.onEvent?.({ ts: now, kind: "activity", who: "world", text: `${who}${bits.join("; ")}` });
   }
 
   /** A build act (spawn/place/light/remove) near this body counts as activity. */
@@ -459,10 +481,15 @@ export class WorldAgent {
       this.ping({ ts: Date.now(), kind: "approach", who: id });
     }
     if (id !== this.name) {
-      // raw movement inside the radius feeds the activity pulse — locomotion
-      // is liveliness even though it is never narrated per-frame
-      if (dist <= this.activityRadiusM && (pose.speed > 0.05 || pose.clip === "walk" || pose.clip === "run"))
-        this.act30.movers.add(id);
+      // Movement feeds the activity pulse as accumulated DISPLACEMENT, not a
+      // speed flag — idle jitter and a body parked mid-walk-cycle never
+      // qualify; actually going somewhere does. Steps over 8m in one packet
+      // are teleports/takeovers, not travel.
+      if (dist <= this.activityRadiusM && prev) {
+        const step = Math.hypot(pose.p[0] - prev.p[0], pose.p[2] - prev.p[2]);
+        if (step > 0.001 && step < 8)
+          this.act30.moved.set(id, (this.act30.moved.get(id) ?? 0) + step);
+      }
       this.noteActs(id, prev, pose, dist);
     }
   }

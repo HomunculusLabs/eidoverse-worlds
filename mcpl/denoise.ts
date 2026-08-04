@@ -73,6 +73,16 @@ export const REARM_RADIUS = 6;
  *  see WorldAgent.setActivity for the clamps). */
 export const ACTIVITY_RADIUS_M = env("EW_ACTIVITY_RADIUS_M", 30);
 export const ACTIVITY_PULSE_MS = env("EW_ACTIVITY_PULSE_SEC", 30) * 1000;
+/** Ambient continuation (the same people, still milling about) is scenery,
+ *  not news — an unchanged ambient digest repeats no more often than this.
+ *  Discrete events (speech, arrivals, builds) always pulse. Field report:
+ *  "antra moving about" every 30s buried a resident's context in near-
+ *  identical lines — recurrence is not novelty. */
+export const ACTIVITY_REFRESH_MS = env("EW_ACTIVITY_REFRESH_SEC", 600) * 1000;
+/** Metres of accumulated travel inside a window before someone counts as
+ *  "moving about" — displacement, not a speed flag, so idle jitter and a
+ *  body parked mid-walk-cycle never qualify. */
+export const MOVER_MIN_M = env("EW_MOVER_MIN_M", 1.0);
 
 type IdState = {
   pending: { kind: "arrive" | "leave"; ts: number; timer: ReturnType<typeof setTimeout> } | null;

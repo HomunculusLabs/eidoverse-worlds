@@ -17,6 +17,7 @@ process.env.EW_ACT_REFRACT_SEC = "0.2";
 process.env.EW_STINT_MIN_SEC = "0.15";
 process.env.EW_APPROACH_REFRACT_SEC = "0.3";
 process.env.EW_ACTIVITY_PULSE_SEC = "0.12";
+process.env.EW_ACTIVITY_REFRESH_SEC = "0.35";
 
 const { NoiseGate } = await import("./denoise.ts");
 const { WorldAgent } = await import("./agent.ts");
@@ -169,6 +170,52 @@ console.log("\n━━ agent: activity pulse — regular wakes only while life is
   await (agent as any).applyEntry({ verb: "spawn", args: { id: "t1", lib: "x.glb", pos: [3, 0, 3] }, actor: "digi", ts: Date.now() }, true);
   await sleep(200);
   check("a nearby build revives the pulse", pulses.length === 2 && pulses[1].includes("1 thing changed"), JSON.stringify(pulses.slice(1)));
+  agent.close();
+}
+
+console.log("\n━━ agent: recurrence is not novelty — ambient scenery dedupes ━━");
+{
+  const agent = new WorldAgent({ name: "claude" }); // at origin
+  const pulses: string[] = [];
+  agent.onEvent = (ev) => { if (ev.kind === "activity") pulses.push(ev.text!); };
+  const np = (x: number) => (agent as any).notePose("digi", { p: [x, 0, 0], yaw: 0, speed: 1.5, clip: "walk" });
+  // real travel: 1.5m inside the window
+  np(10); np(11.5);
+  await sleep(200);
+  check("travel makes an ambient pulse", pulses.length === 1 && pulses[0].includes("digi moving about"),
+    JSON.stringify(pulses));
+  // same scenery next window: digi still pacing — NOT news
+  np(10);
+  await sleep(130);
+  check("same movers again → suppressed (scenery, not news)", pulses.length === 1, String(pulses.length));
+  // keep pacing past the refresh horizon — the heartbeat re-confirms (once
+  // per refresh window, however long the pacing goes on), compacted
+  for (let i = 0; i < 5; i++) { np(i % 2 ? 11.5 : 10); await sleep(130); }
+  const afterPacing = pulses.length;
+  check("after the refresh the heartbeat re-confirms — at refresh rate, not window rate",
+    afterPacing >= 2 && afterPacing <= 3, String(afterPacing));
+  check("unchanged cast is a count, not a re-introduction", (pulses[1] ?? "").startsWith("1 nearby"),
+    pulses[1]);
+  // a discrete event always speaks, even with identical scenery
+  np(11.5);
+  await (agent as any).applyEntry({ verb: "say", args: { text: "о!" }, actor: "digi", ts: Date.now(), seq: 30 }, true);
+  await sleep(200);
+  check("speech cuts through the dedupe",
+    pulses.length === afterPacing + 1 && pulses[pulses.length - 1].includes("1 message"),
+    JSON.stringify(pulses.slice(afterPacing)));
+  agent.close();
+}
+
+console.log("\n━━ agent: idle jitter is not movement ━━");
+{
+  const agent = new WorldAgent({ name: "claude" });
+  const pulses: string[] = [];
+  agent.onEvent = (ev) => { if (ev.kind === "activity") pulses.push(ev.text!); };
+  // fidgeting: many pose packets, centimetres of travel
+  for (let i = 0; i < 10; i++)
+    (agent as any).notePose("digi", { p: [10 + (i % 2) * 0.03, 0, 0], yaw: 0, speed: 1.5, clip: "walk" });
+  await sleep(200);
+  check("jitter under the travel floor → no pulse at all", pulses.length === 0, JSON.stringify(pulses));
   agent.close();
 }
 
