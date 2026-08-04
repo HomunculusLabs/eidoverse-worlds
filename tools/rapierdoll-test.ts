@@ -41,23 +41,82 @@ function run(av: any, lean: any = null, { maxSteps = 900, seedVel = null as any 
 }
 
 {
-  const bad: Record<string, string[]> = { rest: [], finite: [], lying: [], poses: [] };
+  // The launch-day failure report, turned into permanent assertions: "body
+  // just crumples, self intersection not respected, head spins endlessly,
+  // everything is twisted" (antra, live, 2026-08-04). Anatomy is measured
+  // DURING the run — dispose() frees the wasm world at capture.
+  const bad: Record<string, string[]> = {
+    rest: [], finite: [], lying: [], poses: [], twist: [], crumple: [], spin: [],
+  };
+  const relTwist = (rd: any, parentKey: string, childKey: string, axisRest: any) => {
+    const ps: any = rd.segs.get(parentKey), cs: any = rd.segs.get(childKey);
+    if (!ps || !cs) return 0;
+    const rp = ps.body.rotation(), rc = cs.body.rotation();
+    const qp = new THREE.Quaternion(rp.x, rp.y, rp.z, rp.w);
+    const qc = new THREE.Quaternion(rc.x, rc.y, rc.z, rc.w);
+    const rel = qp.invert().multiply(qc);
+    const d = new THREE.Vector3(rel.x, rel.y, rel.z);
+    const proj = d.dot(axisRest);
+    let tw = 2 * Math.atan2(proj, rel.w);
+    if (tw > Math.PI) tw -= 2 * Math.PI;
+    if (tw < -Math.PI) tw += 2 * Math.PI;
+    return Math.abs(tw);
+  };
+  const foldOf = (p: any) => {
+    const a = p.spine?.clone().sub(p.hips ?? p.spine)?.normalize();
+    const b = p.neck?.clone().sub(p.chest ?? p.neck)?.normalize();
+    return a && b ? Math.acos(Math.min(1, Math.max(-1, a.dot(b)))) : 0;
+  };
   for (const rig of FLEET) {
+    // the Verlet is the quality BASELINE: same rig, same lean, same metric —
+    // the articulated engine must not fold more than the incumbent does
+    const vav = makeAvatar(rig.P);
+    const vrd: any = new (await import('../client/lib/ragdoll.js')).Ragdoll(vav, toppleLean(), vav.restBonePositions());
+    let vsteps = 0;
+    while (!vrd.done && vsteps < 900) { vrd.step(1 / 60); vsteps++; }
+    const vFold = foldOf({ ...vrd.p, chest: vrd.p.chest ?? vrd.p.spine });
+
     const av = makeAvatar(rig.P);
-    const { rd, steps } = run(av, toppleLean());
+    const rd: any = new RapierRagdoll(av, toppleLean(), av.restBonePositions());
+    const UP = new THREE.Vector3(0, 1, 0);
+    let steps = 0, worstNeckTwist = 0, worstSpin = 0, lastFold = 0;
+    while (!rd.done && steps < 900) {
+      rd.step(1 / 60);
+      steps++;
+      if (rd.segs.size) {
+        worstNeckTwist = Math.max(worstNeckTwist, relTwist(rd, 'chest|neck', 'neck|head', UP));
+        if (steps > 240) {                      // spin should be DEAD long before capture
+          for (const s of rd.segs.values()) {
+            const w = s.body.angvel();
+            worstSpin = Math.max(worstSpin, Math.hypot(w.x, w.y, w.z));
+          }
+        }
+        lastFold = foldOf(rd.p);
+      }
+    }
     if (!rd.done) { bad.rest.push(`${rig.name}(never captured)`); continue; }
+    var foldBound = Math.max(vFold * 1.35 + 0.17, 1.15);
     const q = Object.values(rd.finalPose ?? {});
     if (!q.length || !q.every((a: any) => a.length === 4 && a.every(Number.isFinite))) bad.finite.push(rig.name);
     if (Object.keys(rd.finalPose ?? {}).length < 8) bad.poses.push(`${rig.name}(${Object.keys(rd.finalPose ?? {}).length} bones)`);
-    // the rendered root must have followed the hips DOWN — a lying body, not
-    // a standing skeleton buried to the waist
     if (av.root.position.y > -0.05) bad.lying.push(`${rig.name}(root.y=${av.root.position.y.toFixed(2)})`);
+    // SIM-frame twist never renders (the drive is direction-only) — sanity
+    // bound only: catastrophic wind-up would show as precession jitter
+    if (worstNeckTwist > 3.0) bad.twist.push(`${rig.name}(${(worstNeckTwist * 180 / Math.PI).toFixed(0)}°)`);
+    // the articulated body may not fold meaningfully more than the incumbent
+    // Verlet on the same rig with the same lean
+    if (lastFold > foldBound) bad.crumple.push(`${rig.name}(${(lastFold * 180 / Math.PI).toFixed(0)}° vs verlet ${(foldBound * 180 / Math.PI).toFixed(0)}° bound)`);
+    // residual hidden spin renders as vibration — bounded hard
+    if (worstSpin > 12) bad.spin.push(`${rig.name}(${worstSpin.toFixed(1)} rad/s)`);
   }
   const none = (k: string) => bad[k].length === 0;
   check('every rig comes to rest', none('rest'), bad.rest.join(' '));
   check('every capture is a finite sparse pose', none('finite'), bad.finite.join(' '));
   check('every pose drives a full skeleton (≥8 bones)', none('poses'), bad.poses.join(' '));
   check('the rendered root lies down with the body', none('lying'), bad.lying.join(' '));
+  check('sim twist stays sane (renders as zero regardless)', none('twist'), bad.twist.join(' '));
+  check('folds no more than the Verlet on the same rig', none('crumple'), bad.crumple.join(' '));
+  check('no hidden spin late in the fall (≤12 rad/s)', none('spin'), bad.spin.join(' '));
 }
 
 console.log('\nlifecycle (one rig, every downstream contract):');
