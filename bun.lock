@@ -5,6 +5,7 @@
     "": {
       "name": "eidoverse-worlds",
       "dependencies": {
+        "@dimforge/rapier3d-compat": "^0.19.3",
         "@gltf-transform/core": "^4.1.1",
         "@gltf-transform/extensions": "^4.1.1",
         "@gltf-transform/functions": "^4.1.1",
@@ -15,6 +16,8 @@
     },
   },
   "packages": {
+    "@dimforge/rapier3d-compat": ["@dimforge/rapier3d-compat@0.19.3", "", {}, "sha512-mMVdSj1PRTT108s9Swbu2GQOmHbn8kbJANRV5xfczL3s0T4vkgZAuoMRgvBzQcHanpKusbC0ZJj6z3mC3aj3vg=="],
+
     "@emnapi/runtime": ["@emnapi/runtime@1.11.3", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA=="],
 
     "@gltf-transform/core": ["@gltf-transform/core@4.4.2", "", { "dependencies": { "property-graph": "^4.1.0" } }, "sha512-qsWKwNSwK+2s834Mt4xbYcyHqCrgNFP7hIv5s487JxebngRfDgelpghNF+kSswGb2/NuapasfK3UViFoSJJoMg=="],
