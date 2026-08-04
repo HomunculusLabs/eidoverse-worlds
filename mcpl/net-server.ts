@@ -202,6 +202,13 @@ class Session {
    *  granted(). Never derived from anything this server said about itself, and
    *  never widened by anything in a receipt (§6.7). */
   private grant: Set<string> | null = null;
+  /** Opens when the host's first §5.3 `featureSets/update` Request has been
+   *  answered — the earliest moment `granted()` can say yes on a 0.5 host.
+   *  The grant-dependent prelude in serve() waits on this, CONCURRENTLY with
+   *  the read loop, because only the read loop can process the policy frame
+   *  (waiting inline would deadlock — the discord-mcpl 90f869f lesson). */
+  private policyAnswered!: () => void;
+  private policyGate: Promise<void> = new Promise((resolve) => { this.policyAnswered = resolve; });
   private caughtUpTo: number | null = null; // the world channel is home — open unless the agent closes it
   /** Activity digests held for a push-less (plain-MCP) host. The pulse is a
    *  wake signal, and a host with no push channel cannot be woken — but the
@@ -416,6 +423,23 @@ class Session {
       }
     };
 
+    // §5.3 ORDERING (the discord-mcpl canary's rule: NOTHING runs between
+    // initialize and the read loop). A 0.5 host's first frame after initialize
+    // is the featureSets/update policy Request, and only the read loop below
+    // can answer it — so everything grant-dependent (channel registration,
+    // missed-mention replay, the seen cursor) runs CONCURRENTLY behind the
+    // policy gate. Waiting inline would deadlock: the gate can only open once
+    // the loop is pumping. Pre-0.5 and plain-MCP peers never send policy and
+    // proceed immediately under the semantics they asked for; the 20s race is
+    // a safety bound so a 0.5 host that never sends policy can't strand the
+    // prelude forever (granted() stays false there, so it degrades to a no-op).
+    const hostMajor = Number(this.hostMcplVersion?.split(".")[0] ?? 0);
+    const hostMinor = Number(this.hostMcplVersion?.split(".")[1] ?? 0);
+    const awaitsPolicy = this.mcplClient && (hostMajor > 0 || hostMinor >= 5);
+    let seenTimer: ReturnType<typeof setInterval> | undefined;
+    const prelude = async () => {
+    if (awaitsPolicy) await Promise.race([this.policyGate, new Promise((r) => setTimeout(r, 20_000))]);
+    if (this.conn.isClosed) return;
     // Deliberately NOT awaited: channels/register is a server→client REQUEST,
     // and a plain-MCP host that silently drops unknown requests (most
     // frameworks; spec-correct ones answer -32601) would otherwise deadlock
@@ -468,11 +492,13 @@ class Session {
     lastSeen[this.auth.id] = Date.now();
     lastSeenSeq[this.auth.id] = this.agent.lastSeq;
     persistState();
-    const seenTimer = setInterval(() => {
+    seenTimer = setInterval(() => {
       lastSeen[this.auth.id] = Date.now();
       lastSeenSeq[this.auth.id] = this.agent.lastSeq;
       persistState();
     }, 60_000);
+    };
+    prelude().catch((e) => console.error(`[${ts()}] [mcpl:${this.auth.id}] prelude failed: ${(e as Error).message?.slice(0, 160)}`));
 
     try {
       while (!this.conn.isClosed) {
@@ -508,6 +534,22 @@ class Session {
               // capability path (§17.3-adjacent: fetch is host-initiated).
               this.conn.sendResponse(req.id, MANIFEST_WITH_REVISION);
               break;
+            case method.FEATURE_SETS_UPDATE: {
+              // §5.3/§6.7: the host's policy. Until the first one is answered,
+              // a 0.5 host holds this whole surface deny-until-policy — this
+              // case IS the door coming alive. applyPolicy adopts the grant
+              // and returns the degradation receipt (consequence testimony,
+              // never entitlement); a malformed policy fails closed and keeps
+              // the previous grant.
+              const receipt = this.applyPolicy(params);
+              if ("error" in receipt && typeof receipt.error === "string") {
+                this.conn.sendError(req.id, -32602, receipt.error);
+                break;
+              }
+              this.conn.sendResponse(req.id, receipt);
+              this.policyAnswered();
+              break;
+            }
             case method.CHANNELS_LIST:
               this.conn.sendResponse(req.id, { channels: this.channelDescriptors() });
               break;
