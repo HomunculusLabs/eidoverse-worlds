@@ -37,7 +37,8 @@ import { initDebug, updateDebug, toggleDebug } from './lib/debug.js';
 import { dragSim } from './lib/bodydrag.js';
 import { initChat, logChat, chat, openConvo } from './lib/chat.js';
 import { makeFrame } from './lib/frames.js';
-import { Ragdoll, jointPositions } from './lib/ragdoll.js';
+import { jointPositions } from './lib/ragdoll.js';
+import { makeRagdoll, bodyEngine, setBodyEngine } from './lib/bodysim.js';
 import { initBodyDrag, updateBodyDrag, beingDragged, revokeDragged, dragState } from './lib/bodydrag.js';
 import { initPhysObj, tickPhysObj, kick, leaseApi } from './lib/physobj.js';
 import { initMods, tickMods, modsApi } from './lib/mods.js';
@@ -290,7 +291,7 @@ function goLimp(lean = null) {
   // it measures its limits against, and the live pose the tumble starts from —
   // and neither may still have the walk cycle in it.
   me.setLimp(true);
-  ragdoll = new Ragdoll(me, lean ?? toppleVelocity(), me.restBonePositions());
+  ragdoll = makeRagdoll(me, lean ?? toppleVelocity(), me.restBonePositions());
   myState.clip = 'ragdoll';
   flashHint('limp — move to get up');
 }
@@ -298,7 +299,7 @@ function getUp() {
   if (!downed) return;
   revokeDragged();                 // if someone is dragging me, I take myself back
   clearPins();                     // standing up tears every nail out
-  downed = false; ragdoll = null;
+  downed = false; ragdoll?.dispose?.(); ragdoll = null;
   myState.pose = null; me?.clearPose();
   me?.setLimp(false);
   myState.clip = 'idle';
@@ -421,7 +422,7 @@ function stepRagdoll(dt) {
 
 function beginDraggedMode(by) {
   if (!me) return;
-  ragdoll = null;                  // the dragger's sim owns the tumble now
+  ragdoll?.dispose?.(); ragdoll = null;   // the dragger's sim owns the tumble now
   downed = true;
   me.setLimp(true);
   myState.clip = 'ragdoll';
@@ -470,7 +471,7 @@ function endDraggedMode(msg) {
   if (msg?.pose || msg?.p) applyDraggedSample(msg);
   me.root.updateMatrixWorld(true);
   // the hand's own sim state outranks anything we sampled from its stream
-  ragdoll = new Ragdoll(me, null, me.restBonePositions(), msg?.sim ?? dragVel);
+  ragdoll = makeRagdoll(me, null, me.restBonePositions(), msg?.sim ?? dragVel);
   dragSnap = null; dragVel = null;
   applyMyPins();
   myState.clip = 'ragdoll';
@@ -508,7 +509,7 @@ function removePin(j) {
   // wake my own sim so the body sags from what remains and settles honestly
   if (downed && !ragdoll && me && !beingDragged()) {
     me.root.updateMatrixWorld(true);
-    ragdoll = new Ragdoll(me, null, me.restBonePositions());
+    ragdoll = makeRagdoll(me, null, me.restBonePositions());
     applyMyPins();
     myState.clip = 'ragdoll';
   }
@@ -575,7 +576,7 @@ function applyShove(lean, by) {
     else {
       // still limp from the last fall (getUp is what clears it) — the new sim
       // reads the lying pose as its start and the neutral rest as its limits
-      ragdoll = new Ragdoll(me, lean ?? toppleVelocity(), me.restBonePositions());
+      ragdoll = makeRagdoll(me, lean ?? toppleVelocity(), me.restBonePositions());
       applyMyPins();               // a nailed body shoved is a nailed body swinging
       myState.clip = 'ragdoll';
     }
@@ -1115,6 +1116,7 @@ globalThis.EW = {
   setPushable, get pushable() { return pushable; }, dragState,
   lease: leaseApi,   // the entity-lease surface runtime plugins script against
   mods: modsApi,     // load/run/offer runtime client scripts (🧩)
+  bodysim: { engine: bodyEngine, setEngine: setBodyEngine },  // swappable body physics
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)

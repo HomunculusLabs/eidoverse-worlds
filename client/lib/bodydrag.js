@@ -26,7 +26,8 @@
 
 import { THREE, camera, canvas, bus, scene } from './core.js';
 import { remotes, draggedLocal } from './remotes.js';
-import { Ragdoll, JOINTS } from './ragdoll.js';
+import { JOINTS } from './ragdoll.js';
+import { makeRagdoll } from './bodysim.js';
 import { sendBodyDrag } from './net.js';
 import { flashHint, toast } from './ui.js';
 import { isEditing } from './build.js';
@@ -139,6 +140,7 @@ function pinCurrent() {
     ...(r?.avatar ? { p: r.avatar.root.position.toArray() } : {}),
   });
   drag.rd.setPin(null);
+  drag.rd.dispose?.();
   draggedLocal.delete(drag.id);
   flashHint(`${drag.joint} nailed in place — click the pin to pull it`);
   drag = null;
@@ -174,7 +176,7 @@ function beginGrab(e) {
   }
 
   hitR.avatar.root.updateMatrixWorld(true);
-  const rd = new Ragdoll(hitR.avatar, null, hitR.avatar.restBonePositions());
+  const rd = makeRagdoll(hitR.avatar, null, hitR.avatar.restBonePositions());
   // Keep the offset between the joint and the cursor RAY. pickBody finds the
   // joint nearest the ray, which is up to PICK_R away from it — so pinning the
   // joint straight onto the ray teleports the limb sideways the instant you
@@ -209,6 +211,7 @@ function endGrab() {
     sim: drag.rd.snapshot(),
     ...(r?.avatar ? { p: r.avatar.root.position.toArray() } : {}),
   });
+  drag.rd.dispose?.();
   draggedLocal.delete(drag.id);
   drag = null;
 }
@@ -295,6 +298,7 @@ bus.on('bodydrag', (msg) => {
     else if (drag && drag.id === by) {
       // I was the dragger and the OWNER revoked (broke free, or refused)
       drag.rd.setPin(null);
+      drag.rd.dispose?.();
       draggedLocal.delete(drag.id);
       drag = null;
       flashHint(`${by} broke free`);
@@ -331,6 +335,7 @@ export function updateBodyDrag(dt, now = performance.now()) {
     const newest = r.buf[r.buf.length - 1];
     if (newest?.clip && newest.clip !== 'ragdoll') {
       drag.rd.setPin(null);
+      drag.rd.dispose?.();
       draggedLocal.delete(drag.id);
       flashHint(`${drag.id} broke free`);
       drag = null;

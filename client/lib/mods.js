@@ -31,6 +31,7 @@ import { behaviors } from './world.js';
 import { sendVerb } from './net.js';
 import { makeSection, toast, flashHint } from './ui.js';
 import { physicsEnabled, setPhysicsEnabled } from './physobj.js';
+import { bodyEngine, setBodyEngine } from './bodysim.js';
 import { makeFrame } from './frames.js';
 import { logChat } from './chat.js';
 
@@ -234,6 +235,8 @@ export function initMods() {
         <div><b>built-in</b> — the house plugins, dogfooding the same tier</div>
         <div>⚙ object physics <span style="color:var(--dim)">(balls, boxes, punts — the SIM half; you always SEE others' physics)</span>
           <button data-corephys="1">${physicsEnabled() ? 'on ✓' : 'off'}</button></div>
+        <div>⚙ body engine <span style="color:var(--dim)">(how YOUR falls simulate — rapier: rigid bones, muscle tone)</span>
+          <button data-bodyeng="1">${bodyEngine()}</button></div>
         <hr>
         <div style="color:var(--dim)">local mods run with FULL access, as you — load only code you trust</div>
         ${rows || '<div style="color:var(--dim)">no local mods yet</div>'}
@@ -257,6 +260,11 @@ export function initMods() {
         if (!b) return;
         const d = b.dataset;
         const mine2 = await listScripts();
+        if (d.bodyeng) {
+          setBodyEngine(bodyEngine().startsWith('rapier') ? 'verlet' : 'rapier');
+          flashHint(`body engine: ${bodyEngine()} — takes effect on your next fall`);
+          return render();
+        }
         if (d.corephys) {
           setPhysicsEnabled(!physicsEnabled());
           flashHint(physicsEnabled() ? 'object physics on — you simulate again'

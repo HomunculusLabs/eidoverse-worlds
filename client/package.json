@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.19.3",
     "@pixiv/three-vrm": "^3.5.2",
     "@pixiv/three-vrm-animation": "^3.5.2",
     "@pixiv/three-vrm-materials-mtoon": "^3.5.2",
