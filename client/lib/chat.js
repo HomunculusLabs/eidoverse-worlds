@@ -10,7 +10,7 @@
 // a person sees highlighted must be exactly what pings the agent, or the two
 // species are reading different rooms.
 
-import { CONFIG, bus } from './core.js';
+import { CONFIG, bus, colorFor, assignColors } from './core.js';
 import { makeFrame } from './frames.js';
 import { requestHistory } from './net.js';
 
@@ -71,7 +71,12 @@ function renderBody(text, names) {
     } else {
       const s = document.createElement('span');
       const bare = m[2].replace(/^@/, '');
-      s.className = bare.toLowerCase() === CONFIG.name.toLowerCase() ? 'mention me' : 'mention';
+      const isMe = bare.toLowerCase() === CONFIG.name.toLowerCase();
+      s.className = isMe ? 'mention me' : 'mention';
+      // a mention wears the colour of the person mentioned, so "@fable" in the
+      // text and fable's own lines are visibly the same person. Mentions of YOU
+      // keep the amber ping styling — being addressed outranks being named.
+      if (!isMe) s.style.color = colorFor(bare);
       s.textContent = m[2];
       frag.append(s);
     }
@@ -216,6 +221,11 @@ function buildLine(who, text, { kind = '', ts = Date.now(), historical = false }
   const w = document.createElement('span');
   w.className = 'who';
   w.textContent = who;
+  // Everyone gets their colour, INCLUDING you: the point is that a name looks
+  // the same to every reader, so people can refer to each other by it. Whisper
+  // lines keep their purple — there the colour states the channel (private),
+  // which matters more than which of the two of you is speaking.
+  if (!sys && kind !== 'whisper') w.style.color = colorFor(who);
   // click a name to start a mention of them
   if (!sys && !mine) {
     w.onclick = () => { open(); insertAtCursor(`@${who} `); };
@@ -229,6 +239,28 @@ function buildLine(who, text, { kind = '', ts = Date.now(), historical = false }
   line.append(t, w, b);
   applyFilter(line);
   return line;
+}
+
+// A join or a leave changes who has to be told apart, so colours are
+// re-negotiated and the scrollback is repainted to match. Without the repaint,
+// a name that shifted would read as two different people up the log.
+bus.on('roster', () => {
+  const names = getPeople().map((p) => p.id);
+  names.push(CONFIG.name);
+  assignColors(names);
+  repaintNames();
+});
+
+function repaintNames() {
+  if (!logEl) return;
+  for (const w of logEl.querySelectorAll('.line .who')) {
+    const line = w.closest('.line');
+    if (line.classList.contains('sys') || line.classList.contains('whisper')) continue;
+    w.style.color = colorFor(w.textContent);
+  }
+  for (const m of logEl.querySelectorAll('.body .mention:not(.me)')) {
+    m.style.color = colorFor(m.textContent.replace(/^@/, ''));
+  }
 }
 
 function namesForHighlight() {

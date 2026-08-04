@@ -209,7 +209,10 @@ select {
 .chat-log .line .who { color: var(--accent); font-weight: 600; }
 .chat-log .line .who::after { content: ':'; color: var(--dim); font-weight: 400; }
 .chat-log .line .body { margin-left: 5px; }
-.chat-log .line.me .who { color: #b8f0dc; }
+/* Your own name now takes its participant colour like everyone else's (it must
+   look the same to you as it does to them), so "this one is mine" is carried by
+   a faint wash instead. .ping's background is declared later and still wins. */
+.chat-log .line.me { background: rgba(255,255,255,.04); border-radius: 3px; }
 .chat-log .line.agent .who::before { content: '◈ '; color: var(--warn); font-size: 10px; }
 .chat-log .line.sys { color: var(--dim); font-style: italic; }
 .chat-log .line.hist-note {

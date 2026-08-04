@@ -199,3 +199,68 @@ export async function parallelMap(items, fn, limit = 6) {
     while (q.length) await fn(q.shift());
   }));
 }
+
+// ---- per-participant colour --------------------------------------------------
+// A wall of chat all in one colour makes you read every name to follow a
+// conversation. Each participant gets a stable colour instead, derived from
+// their name alone — so it is the SAME colour in every client, and "the blue
+// one" means the same person to everyone in the world. No assignment, no
+// server state, nothing to keep in sync.
+//
+// A curated palette rather than hue = hash % 360: hand-picked entries are all
+// legible on the dark panel and reliably distinct from each other, which a
+// continuous hue wheel is not (it wanders through muddy olives and near-blacks
+// at fixed lightness). Amber and mint are deliberately absent — those are the
+// UI's own words for "you were mentioned" and "link/accent", and a person
+// wearing them would be reading as punctuation.
+const NAME_COLORS = [
+  '#7cc4ff', '#ff9fc4', '#b8e06a', '#ffab6b',
+  '#c4a6ff', '#6ee0d0', '#ff9a8f', '#9fb8ff',
+  '#e9a6ff', '#7fe0a0', '#d8c470', '#62d3f0',
+];
+/** FNV-1a: cheap, and spreads short similar names (bot1/bot2) far apart. */
+export function preferredColor(name) {
+  let h = 0x811c9dc5;
+  const s = String(name ?? '').toLowerCase();
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return NAME_COLORS[h % NAME_COLORS.length];
+}
+
+// Hashing alone is not enough. With twelve colours and six people in a room
+// there is a ~78% chance two of them collide — and two speakers wearing one
+// colour is exactly the confusion this was meant to remove. (Measured, not
+// theorised: the first build put lyra and antra both on #ffab6b.)
+//
+// So the hash is a PREFERENCE, and the people actually present negotiate. Every
+// client runs the same assignment over the same roster in the same order, so
+// the answer is identical everywhere without a byte crossing the wire: sort the
+// names, let each take its preferred colour, and linear-probe when it is taken.
+// Whoever sorts first keeps their preference, so a colour only ever moves for
+// the loser of a collision. People who have left keep the colour they had —
+// their lines are still on the screen.
+const claimed = new Map();   // name -> colour, sticky once assigned
+
+/** The colour to draw `name` in, anywhere in the UI. */
+export function colorFor(name) {
+  const k = String(name ?? '').toLowerCase();
+  return claimed.get(k) ?? preferredColor(name);
+}
+
+/** Re-negotiate colours for the people present. Call on roster changes. */
+export function assignColors(names) {
+  const present = [...new Set(names.map((n) => String(n ?? '').toLowerCase()))].filter(Boolean).sort();
+  const used = new Set();
+  for (const n of present) {
+    const start = NAME_COLORS.indexOf(preferredColor(n));
+    let c = NAME_COLORS[start];
+    for (let k = 1; used.has(c) && k <= NAME_COLORS.length; k++) {
+      c = NAME_COLORS[(start + k) % NAME_COLORS.length];
+    }
+    used.add(c);
+    claimed.set(n, c);
+  }
+  return claimed;
+}
