@@ -14,11 +14,18 @@ import { McplServerConnection, type McplHostCapabilities } from "@animalabs/agen
 import { WorldAgent } from "./agent.ts";
 
 const HOST_CAPS: McplHostCapabilities = {
-  version: "0.4",
+  version: "0.5",
   pushEvents: true,
   contextHooks: { beforeInference: true, afterInference: { blocking: true } },
   featureSets: true,
 };
+
+/** What this harness-host grants the door (§5.4 allowlist). The framework
+ *  computes this from the masked advertisement in registerMcplServerFeatures;
+ *  a raw-connection harness must do it by hand — a 0.5 host that never sends
+ *  the §5.3 initial policy Request gets every channels/incoming refused at
+ *  ITS OWN admission gate, and a 0.5 door holds fan-out until policy lands. */
+const GRANT = ["tools", "channels.register", "channels.lifecycle", "channels.publish", "channels.incoming"];
 
 let failures = 0;
 const check = (label: string, ok: boolean, detail?: string) => {
@@ -45,6 +52,10 @@ async function connectHost(url: string, token: string) {
     r.respond({ results: params.messages.map((m) => ({ messageId: m.messageId, accepted: true })) });
   });
   conn.ready();
+  // §5.3: the initial policy Request, then activate the grant host-side.
+  // (Test harness: a duck-typed grant is enough — admission only calls .has.)
+  conn.establishGrant({ has: (p: string) => GRANT.includes(p) } as never);
+  await conn.sendFeatureSetsUpdateRequest({ effectiveCapabilities: GRANT } as never);
   return { conn, feed, registered };
 }
 
