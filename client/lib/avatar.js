@@ -9,6 +9,7 @@ import {
 } from './assets.js';
 import { beginWork, enqueue, idleYield } from './loadwork.js';
 import { DRIVEN_BONES } from './ragdoll.js';
+import { stroke as strokeIcon } from './icons.js';
 
 // The clip library is ~1.9MB PER SLOT. Waiting for all seven before a body
 // could exist put 13MB between a person and their own legs — the single
@@ -82,11 +83,15 @@ function makeBubble(text) {
   if (clipped) lines.push('▾ more in chat');
   const h = 30 + lines.length * 34;
   return textSprite((ctx) => {
+    ctx.font = '27px ui-monospace, monospace';
+    // conform to the actual text (R, in-world 13:27): box hugs the widest
+    // wrapped line; the old fixed 700 stays as the ceiling
+    const wMax = Math.max(...lines.map((l) => ctx.measureText(l).width));
+    const w = Math.min(700, Math.ceil(wMax) + 44);
     ctx.fillStyle = 'rgba(8,20,28,0.86)';
     ctx.strokeStyle = 'rgba(143,232,200,0.25)';
     ctx.lineWidth = 2;
-    ctx.beginPath(); ctx.roundRect(2, 2, 700, h - 4, 16); ctx.fill(); ctx.stroke();
-    ctx.font = '27px ui-monospace, monospace';
+    ctx.beginPath(); ctx.roundRect((704 - w) / 2, 2, w, h - 4, 16); ctx.fill(); ctx.stroke();
     ctx.textAlign = 'center';
     lines.forEach((l, i) => {
       ctx.fillStyle = clipped && i === lines.length - 1 ? '#8ba39c' : '#e8f4ef';
@@ -111,17 +116,47 @@ function makeTypingSprite() {
   s.userData.ctx = c.getContext('2d');
   return s;
 }
-function drawTypingDots(sprite, t) {
+// Social affordance glyphs (R's ask, in-world 13:36): what is this agent's
+// attention doing right now? ear = your speech will reach it; think = a reply
+// is being composed; tool = mid-task, hands busy — wait or ping, your call.
+// mic = this body's voice is LIVE in the room right now (R, 23:30) — the
+// megaphone is presence, not a message: it says listen, sound is coming from
+// here, independent of whether any words have been transcribed yet.
+// Attention icons come from the shared Lucide registry (icons.js) — never
+// from emoji: canvas fillText paints nothing when a glyph is missing, silently.
+const ICON_FOR = { ear: 'ear', think: 'think', tool: 'wrench' };
+
+function drawTypingDots(sprite, t, state) {
   const ctx = sprite.userData.ctx;
   ctx.clearRect(0, 0, 128, 56);
   ctx.fillStyle = 'rgba(8,20,28,0.82)';
   ctx.strokeStyle = 'rgba(143,232,200,0.28)';
   ctx.lineWidth = 2;
   ctx.beginPath(); ctx.roundRect(28, 12, 72, 32, 16); ctx.fill(); ctx.stroke();
-  for (let i = 0; i < 3; i++) {
-    const b = 0.32 + 0.68 * Math.max(0, Math.sin(t * 5 - i * 0.85));
-    ctx.fillStyle = `rgba(180,240,216,${b})`;
-    ctx.beginPath(); ctx.arc(48 + i * 16, 28, 5, 0, Math.PI * 2); ctx.fill();
+  if (ICON_FOR[state]) {
+    const b = 0.75 + 0.25 * Math.sin(t * 3);      // gentle breathing, not a strobe
+    ctx.save();
+    ctx.translate(64, 28);
+    ctx.globalAlpha = b;
+    ctx.strokeStyle = 'rgba(180,240,216,1)';
+    strokeIcon(ctx, ICON_FOR[state], 26);
+    // mic gets sound arcs on top: the icon says "a voice", the arcs say "NOW"
+    if (state === 'mic') {
+      for (let i = 0; i < 2; i++) {
+        const amp = 0.3 + 0.7 * Math.max(0, Math.sin(t * 5 - i * 0.7));
+        ctx.globalAlpha = b * amp;
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(2, 0, 15 + i * 5, -0.7, 0.7); ctx.stroke();
+      }
+    }
+    ctx.restore();
+    ctx.globalAlpha = 1;
+  } else {
+    for (let i = 0; i < 3; i++) {
+      const b = 0.32 + 0.68 * Math.max(0, Math.sin(t * 5 - i * 0.85));
+      ctx.fillStyle = `rgba(180,240,216,${b})`;
+      ctx.beginPath(); ctx.arc(48 + i * 16, 28, 5, 0, Math.PI * 2); ctx.fill();
+    }
   }
   sprite.material.map.needsUpdate = true;
 }
@@ -527,10 +562,20 @@ export class Avatar {
   // ---- speech
   /** They're composing. Repeated calls extend it; it expires on its own so a
    *  dropped "stopped typing" never leaves the dots stuck up forever. */
-  setTyping() { this._typingUntil = performance.now() + 4000; }
+  setTyping(state) {
+    // state === null means STOP (mic went cold, composing ended) — it must
+    // clear the pill, not schedule 4s of an empty one. Found live: R's
+    // megaphone rendered as a blank bubble (2026-08-04 23:35).
+    if (state === null) { this._typingUntil = 0; this._typingState = null; return; }
+    this._typingUntil = performance.now() + 4000;
+    this._typingState = state || null;
+  }
 
   say(text) {
-    this._typingUntil = 0;         // speaking ends composing; the bubble takes over
+    // Speaking ends COMPOSING — but not a live mic. The 🎙 is presence: the
+    // voice is still coming out of this body while its transcript scrolls
+    // past. Only the composing states yield to the bubble.
+    if (this._typingState !== 'mic') this._typingUntil = 0;
     if (this.bubble) { this.root.remove(this.bubble); disposeSprite(this.bubble); }
     this.bubble = makeBubble(text);
     this.bubble.position.y = 2.3;
@@ -645,12 +690,21 @@ export class Avatar {
     }
 
     // ---- typing dots: shown only while composing and not already speaking
-    const typingNow = now < this._typingUntil && !this.bubble;
-    if (typingNow && !this.typing) { this.typing = makeTypingSprite(); this.typing.position.y = 2.12; this.root.add(this.typing); }
+    // A composing pill hides behind a bubble (you've stopped composing, you
+    // said it). A LIVE MIC does not: the voice keeps coming while its
+    // transcript floats. Stack it above the bubble instead of suppressing it.
+    const micLive = this._typingState === 'mic';
+    const typingNow = now < this._typingUntil && (micLive || !this.bubble);
+    if (typingNow && !this.typing) { this.typing = makeTypingSprite(); this.root.add(this.typing); }
+    if (this.typing) this.typing.position.y = (micLive && this.bubble) ? 2.72 : 2.12;
     if (this.typing) {
       this.typing.visible = typingNow;
       if (typingNow) {
-        if (now - this._typingDrawAt > 110) { this._typingDrawAt = now; drawTypingDots(this.typing, now / 1000); }
+        if (now - this._typingDrawAt > 110) {
+          this._typingDrawAt = now;
+          drawTypingDots(this.typing, now / 1000, this._typingState);
+          if (globalThis.__pillDebug) globalThis.__pillLast = { id: this.id, state: this._typingState, t: now };
+        }
         this.typing.material.opacity = THREE.MathUtils.clamp(1 - (d - 26) / 12, 0, 1);
       }
     }
