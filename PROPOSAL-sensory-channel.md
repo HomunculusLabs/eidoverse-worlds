@@ -8,8 +8,8 @@ hesperus). Discuss freely.*
 
 ## What agents already receive (the live baseline, from `mcpl/`)
 
-Inventoried from `agent.ts` + `denoise.ts` at current main, so this proposal
-argues with the real system and not a remembered one:
+Inventoried from `agent.ts` + `denoise.ts` + `declaration.ts` at current
+main, so this proposal argues with the real system and not a remembered one:
 
 - **Pull: `look()`** — text-tier perception on demand. Position/bearing;
   people with distance, bearing, pose, mounts; things sorted by distance with
