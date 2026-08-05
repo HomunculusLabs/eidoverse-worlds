@@ -259,7 +259,12 @@ export function initMods() {
         const b = e.target.closest('button');
         if (!b) return;
         const d = b.dataset;
-        const mine2 = await listScripts();
+        // The built-in toggles answer BEFORE any await. listScripts() touches
+        // storage and the network, and this is an async handler with no catch:
+        // one rejection there killed every button in the panel silently,
+        // including the two that need nothing from it. The body-engine toggle
+        // then read as permanently stuck — the engine never changed because
+        // the click never arrived, not because the switch was wrong.
         if (d.bodyeng) {
           setBodyEngine(bodyEngine().startsWith('rapier') ? 'verlet' : 'rapier');
           flashHint(`body engine: ${bodyEngine()} — takes effect on your next fall`);
@@ -271,6 +276,9 @@ export function initMods() {
             : 'object physics off — held objects handed off; others simulate for you');
           return render();
         }
+        let mine2 = [];
+        try { mine2 = await listScripts(); }
+        catch (err) { report('mods: listScripts', err); }
         if (d.new) { editing = ''; return render(); }
         if (d.cancel) { editing = null; return render(); }
         if (d.save) {

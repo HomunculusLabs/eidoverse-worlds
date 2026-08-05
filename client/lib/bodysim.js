@@ -14,17 +14,26 @@ const KEY = 'ew-bodysim';
 let engine = localStorage.getItem(KEY) === 'rapier' ? 'rapier' : 'verlet';
 let RapierRagdoll = null;          // set once the wasm door opens
 
+let rapierFailed = false;
 async function loadRapier() {
+  rapierFailed = false;
   try {
     const mod = await import('./rapierdoll.js');
     if (await mod.ensureRapier()) { RapierRagdoll = mod.RapierRagdoll; return true; }
   } catch (e) { report('rapier load', e); }
+  // A door that never opens must SAY so. Reporting "loading" forever is
+  // indistinguishable from a toggle that does not work, and that ambiguity
+  // cost a full round of debugging the wrong engine.
+  rapierFailed = true;
   return false;
 }
 if (engine === 'rapier') loadRapier();   // warm the wasm before the first fall
 
-export const bodyEngine = () =>
-  engine === 'rapier' ? (RapierRagdoll ? 'rapier' : 'rapier (loading — verlet meanwhile)') : 'verlet';
+export const bodyEngine = () => {
+  if (engine !== 'rapier') return 'verlet';
+  if (RapierRagdoll) return 'rapier';
+  return rapierFailed ? 'rapier FAILED TO LOAD — running verlet' : 'rapier (loading — verlet meanwhile)';
+};
 
 export function setBodyEngine(name) {
   engine = name === 'rapier' ? 'rapier' : 'verlet';
