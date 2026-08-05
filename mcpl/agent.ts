@@ -629,7 +629,7 @@ export class WorldAgent {
     } else if (verb === "sky") {
       this.worldInfo.sky = args;
     } else if (verb === "grass") {
-      this.worldInfo.grass = { area: `${args.width ?? args.size}×${args.depth ?? args.size}m around ${JSON.stringify(args.center ?? [0, 0])}` };
+      this.worldInfo.grass = { area: `${args.species ?? "grass"}, ${args.width ?? args.size}×${args.depth ?? args.size}m around ${JSON.stringify(args.center ?? [0, 0])}` };
     }
   }
 

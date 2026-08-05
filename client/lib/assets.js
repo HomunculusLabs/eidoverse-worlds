@@ -393,7 +393,16 @@ globalThis.loadImageTexture = async (bytes, opts = {}) => {
   const u8 = bytes instanceof Uint8Array ? bytes
     : bytes instanceof ArrayBuffer ? new Uint8Array(bytes)
       : new Uint8Array(bytes);
-  const bitmap = await createImageBitmap(new Blob([u8]), { colorSpaceConversion: 'none' });
+  // Engine contract (render_scene.mjs loadImageTexture): the vertical flip is
+  // BAKED into the pixels (browser flipY convention) and tex.flipY stays
+  // false, so it composes with repeat tiling; { flipY: false } skips the bake
+  // for glTF-convention images. This shim must match or every texture sampled
+  // through authored UVs (the vegetation trim sheets were the first) arrives
+  // vertically mirrored.
+  const bitmap = await createImageBitmap(new Blob([u8]), {
+    colorSpaceConversion: 'none',
+    imageOrientation: opts.flipY !== false ? 'flipY' : 'none',
+  });
   const tex = new THREE.Texture(bitmap);
   tex.colorSpace = opts.srgb ? THREE.SRGBColorSpace : THREE.NoColorSpace;
   tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
