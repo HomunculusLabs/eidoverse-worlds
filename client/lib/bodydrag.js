@@ -137,7 +137,10 @@ function pinCurrent() {
     // a nail is a handover too: the owner takes over enforcing it, and should
     // continue this sim rather than rebuild a guess of it from the bones
     sim: drag.rd.snapshot(),
-    ...(r?.avatar ? { p: r.avatar.root.position.toArray() } : {}),
+    ...(r?.avatar ? {
+      p: r.avatar.root.position.toArray(),
+      yaw: r.avatar.root.rotation.y,
+    } : {}),
   });
   drag.rd.setPin(null);
   drag.rd.dispose?.();
@@ -209,7 +212,10 @@ function endGrab() {
     // the handover: exactly where every joint is and how fast, so the owner
     // CONTINUES this sim instead of rebuilding a guess of it from the bones
     sim: drag.rd.snapshot(),
-    ...(r?.avatar ? { p: r.avatar.root.position.toArray() } : {}),
+    ...(r?.avatar ? {
+      p: r.avatar.root.position.toArray(),
+      yaw: r.avatar.root.rotation.y,
+    } : {}),
   });
   drag.rd.dispose?.();
   draggedLocal.delete(drag.id);

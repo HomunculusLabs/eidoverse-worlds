@@ -376,6 +376,17 @@ export class WorldAgent {
             }
             if (msg.end != null) {
               if (this.draggedBy === msg.by) {
+                // Explicit release carries one final authoritative sample. The
+                // browser target applies it before rebuilding its own sim; a
+                // headless target must do the same, or a release between 15Hz
+                // samples starts from a stale root under fresh joint state.
+                const releasePose = msg.pose && typeof msg.pose === "object" && Object.keys(msg.pose).length > 0
+                  ? msg.pose : null;
+                if (releasePose) this.heldPose = releasePose;
+                if (Array.isArray(msg.p) && msg.p.length === 3 && msg.p.every(Number.isFinite)) {
+                  this.pos.x = msg.p[0]; this.pos.y = msg.p[1]; this.pos.z = msg.p[2];
+                }
+                if (Number.isFinite(msg.yaw)) this.yaw = msg.yaw;
                 this.draggedBy = null;
                 // a release may nail the held joint where the hand left it
                 const pa = msg.pinAt;
@@ -386,7 +397,7 @@ export class WorldAgent {
                   text: pa ? "(nails part of you in place and steps back)" : "(lets go of you)" } as any);
                 // then MY OWN sim takes the body back: it falls from wherever
                 // the hand let go and settles — or hangs, if nails hold it
-                void this.settleFromDrag(msg.pose ?? null, msg.sim ?? null);
+                void this.settleFromDrag(releasePose, msg.sim ?? null);
               }
               break;
             }
