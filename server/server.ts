@@ -261,6 +261,14 @@ function foldEntry(st: WorldState, e: LogEntry): void {
       st.entities[a.id] = {
         lib: a.lib, pos: a.pos ?? [0, 0, 0], yaw: a.yaw ?? 0,
         ...(a.scale != null ? { scale: a.scale } : {}),
+        // `collide` ("exact" | "box") is the spawner's override of the
+        // size-derived collider choice, and the fold used to drop it: the
+        // clients present at the spawn honoured it, and everyone who joined
+        // afterwards folded a snapshot that had never heard of it. The same
+        // object was walkable or solid depending on when you arrived — which
+        // is precisely the drift house rule 1 forbids. The LOG always kept it,
+        // so no world lost anything; it just never reached the snapshot.
+        ...(a.collide != null ? { collide: a.collide } : {}),
         actor: e.actor, ts: e.ts,
       };
       return;
