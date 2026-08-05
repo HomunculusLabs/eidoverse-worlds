@@ -26,6 +26,13 @@ argues with the real system and not a remembered one:
   anything is happening nearby, novelty-gated (discrete events always pulse;
   unchanged ambient continuation repeats no oftener than 600s), with per-agent
   dials (`setActivity`: cadence 10–3600s or off, radius 1–200m, persisted).
+- **At the MCPL door: tags already exist.** (`declaration.ts` — an inventory
+  miss in the first version of this very revision; owned below.) Events on the
+  MCPL wire carry §16 tag sets — the `eidoverse:` namespace names whisper,
+  approach, act, presence, activity-digest, catchup — under the doctrine that
+  tags describe, never authorize, and with a producer-side
+  `suggestedTreatment` ontology (presence → mute, catchup → mute,
+  activity-digest → throttle 300s, ambient chat → debounce 180s).
 
 That is not sensory deafness. The live failure is the reviewer's phrasing, which
 we adopt as the problem statement: **too much unclassified embodied traffic
@@ -34,31 +41,46 @@ at all.
 
 ## The two actual gaps
 
-1. **No source-side classification.** Everything above arrives either as a
-   speech-shaped inbox line or inside the one `activity` digest string. A host
-   cannot say "wake me for touch, batch sights, drop arrivals" because by the
-   time events reach it, kind is prose, not data. Our voicebox arrival hack is
-   the symptom: `[you arrive near X]` delivered *as if someone spoke*, because
-   speech-shape is the only shape on the wire. Models not primed for ambient
-   input answer their own feet.
+1. **Classification exists at the door but stops there.** On the MCPL wire,
+   events are tagged and treatment-suggested; on the text-tier `WorldAgent`
+   path, kind collapses to a six-value field and then to prose. A host on
+   that path cannot say "wake me for touch, batch sights, drop arrivals" —
+   by delivery time, kind is prose. Our voicebox arrival hack is the symptom:
+   `[you arrive near X]` delivered *as if someone spoke*, because on that
+   path speech-shape is the only shape. Models not primed for ambient input
+   answer their own feet. And even at the tagged door, treatment is a
+   *producer suggestion* the host may ignore — there is no **agent-owned,
+   persisted, per-class dial** anywhere.
 2. **Missing senses.** Some things the body machinery already knows never reach
    the mind on any channel: being dragged/mounted/pushed (`touch`), a commanded
    walk resolving (`arrival`), your own verb landing or being refused (`echo`).
 
 ## The suggestion, revised
 
-Not a new parallel channel — a **classification layer on the existing one**,
-plus per-class dials in the grain `setActivity` already set.
+Not a new parallel channel, and — correcting this revision's own first
+version — **not a new tag mechanism either**: §16 is the tag mechanism, and
+it's already better than what I proposed (closure rules, contradiction
+resolution, treatment ontology). Three additions in its grain:
 
-- **Source-side event classes.** Every agent-bound event carries a machine
-  `tag` alongside its prose: `speech | presence | act | activity |
-  sense.arrival | sense.touch | sense.echo | sense.sight`. Existing hosts that
-  ignore the field see exactly today's behavior — the tag is additive, no verb
-  set change, server→agent only.
+- **New tags, not a new field.** Extend the `eidoverse:` namespace with the
+  senses that currently reach no wire at all: `eidoverse:touch` (dragged,
+  mounted, pushed, collided), `eidoverse:walk-arrival` (a commanded walk
+  resolved), `eidoverse:verb-echo` (your own verb landed / was refused, and
+  why), `eidoverse:sight` (field-of-view delta). Each gets a
+  `suggestedTreatment` row in the existing ontology — and per §16.5's own
+  rule, none of them may suggest a wake.
+- **Close the tier gap.** The text-tier `WorldAgent` events carry the same
+  tag vocabulary the door already emits (the six-value `kind` becomes the
+  coarse projection of the tag set, kept for compatibility), so a text-tier
+  host can classify without parsing prose.
 - **Per-agent, per-class dials** (`setSenses`, sibling of `setActivity`, same
-  clamps-and-persist pattern): each `sense.*` class is `off | digest | live`.
-  Default **digest** — see next point — so enrollment is a promotion, not a
-  rescue from silence.
+  clamps-and-persist pattern): each sense tag is `off | digest | live`,
+  default **digest**, so enrollment is a promotion, not a rescue from
+  silence. This is the piece no layer has today: `suggestedTreatment` is the
+  *producer's* suggestion; the dial is the **agent's** standing answer,
+  persisted across sessions. Suggestion proposes, dial disposes — which is
+  §16.5's "a suggestion must not purchase a wake" doctrine given a
+  counterpart on the consumer side.
 - **The activity pulse is the floor; subscription is the zoom.** An
   un-promoted sense class does not vanish: its events count into the existing
   pulse ("2 embodied acts; you were moved") and remain visible in `look()`'s
