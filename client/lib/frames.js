@@ -13,6 +13,90 @@ import { bus } from './core.js';
 
 const LS = (id) => `ew-frame-${id}`;
 const frames = new Map();
+
+// ---- edge-resize: one document-level hit-tester for all frames -------------
+// Grab band: 3px inside the border + 7px of free air outside it. Inside
+// pixels belong to content — scrollbars and buttons always win (we test the
+// real element under the pointer, not geometry alone).
+const _resizables = [];
+const _BAND = 2, _REACH = 6;   // R-tuned, 17:23
+const _CURSORS = { n: 'ns-resize', s: 'ns-resize', e: 'ew-resize', w: 'ew-resize',
+  ne: 'nesw-resize', sw: 'nesw-resize', nw: 'nwse-resize', se: 'nwse-resize' };
+function _zoneFor(f, e) {
+  const r = f.root.getBoundingClientRect();
+  const nx = e.clientX - r.left, ny = e.clientY - r.top;
+  if (nx < -_REACH || ny < -_REACH || nx > r.width + _REACH || ny > r.height + _REACH) return '';
+  let z = '';
+  if (ny < _BAND) z += 'n'; else if (ny > r.height - _BAND) z += 's';
+  if (nx < _BAND) z += 'w'; else if (nx > r.width - _BAND) z += 'e';
+  return z;
+}
+function _contentClaims(e) {
+  // whatever really sits under the pointer: a scrollbar strip, a button, an
+  // input — interactive content beats the grab; bare frame chrome does not
+  for (let t = document.elementFromPoint(e.clientX, e.clientY); t instanceof HTMLElement; t = t.parentElement) {
+    if (['BUTTON', 'INPUT', 'TEXTAREA', 'SELECT', 'A'].includes(t.tagName)) return true;
+    if (t.scrollHeight > t.clientHeight + 1) {
+      const sbw = t.offsetWidth - t.clientWidth;
+      if (sbw > 0 && e.clientX >= t.getBoundingClientRect().right - sbw - 2) return true;
+    }
+    if (t.scrollWidth > t.clientWidth + 1) {
+      const sbh = t.offsetHeight - t.clientHeight;
+      if (sbh > 0 && e.clientY >= t.getBoundingClientRect().bottom - sbh - 2) return true;
+    }
+    if (t.classList?.contains('frame')) break;
+  }
+  return false;
+}
+function _hit(e) {
+  const cands = _resizables.filter((f) => f.active());
+  cands.sort((a, b) => (+b.root.style.zIndex || 0) - (+a.root.style.zIndex || 0));
+  for (const f of cands) {
+    const z = _zoneFor(f, e);
+    if (z) return { f, z };
+  }
+  return null;
+}
+let _resizing = false;
+document.addEventListener('pointermove', (e) => {
+  if (_resizing) return;
+  const h = _hit(e);
+  document.body.style.cursor = (h && !_contentClaims(e)) ? _CURSORS[h.z] : '';
+}, true);
+document.addEventListener('pointerdown', (e) => {
+  if (e.button !== 0) return;
+  const h = _hit(e);
+  if (!h || _contentClaims(e)) return;
+  const { f, z } = h;
+  e.preventDefault(); e.stopPropagation();
+  f.raise();
+  _resizing = true;
+  const sx = e.clientX, sy = e.clientY;
+  const s0 = { x: f.state.x, y: f.state.y, w: f.state.w, h: f.state.h };
+  const move = (ev) => {
+    const dx = ev.clientX - sx, dy = ev.clientY - sy;
+    if (z.includes('e')) f.state.w = clamp(s0.w + dx, f.minW, innerWidth - 20);
+    if (z.includes('s')) f.state.h = clamp(s0.h + dy, f.minH, innerHeight - 60);
+    if (z.includes('w')) {
+      f.state.w = clamp(s0.w - dx, f.minW, innerWidth - 20);
+      f.state.x = s0.x + (s0.w - f.state.w);       // east side stays planted
+    }
+    if (z.includes('n')) {
+      f.state.h = clamp(s0.h - dy, f.minH, innerHeight - 60);
+      f.state.y = s0.y + (s0.h - f.state.h);       // south side stays planted
+    }
+    f.paint();
+  };
+  const up = () => {
+    document.removeEventListener('pointermove', move, true);
+    document.removeEventListener('pointerup', up, true);
+    document.body.style.cursor = '';
+    _resizing = false;
+    f.save();
+  };
+  document.addEventListener('pointermove', move, true);
+  document.addEventListener('pointerup', up, true);
+}, true);
 let zTop = 30;
 let locked = localStorage.getItem('ew-ui-locked') === '1';
 
@@ -58,11 +142,7 @@ export function makeFrame(id, opts = {}) {
   const body = document.createElement('div');
   body.className = 'fr-body';
 
-  const grip = document.createElement('div');
-  grip.className = 'fr-grip';
-
   root.append(head, body);
-  if (resizable) root.appendChild(grip);
   document.body.appendChild(root);
 
   // ---- state
@@ -178,27 +258,12 @@ export function makeFrame(id, opts = {}) {
     head.dispatchEvent(new PointerEvent('pointerdown', e));
   }, true);
 
-  // ---- resizing
-  grip.addEventListener('pointerdown', (e) => {
-    if (locked) return;
-    e.preventDefault(); e.stopPropagation();
-    raise();
-    const sx = e.clientX, sy = e.clientY, sw = state.w, sh = state.h;
-    try { grip.setPointerCapture(e.pointerId); } catch { /* no capture */ }
-    const move = (ev) => {
-      state.w = clamp(sw + (ev.clientX - sx), minW, innerWidth - 20);
-      state.h = clamp(sh + (ev.clientY - sy), minH, innerHeight - 60);
-      state.collapsed = false;
-      paint();
-    };
-    const up = () => {
-      grip.removeEventListener('pointermove', move);
-      grip.removeEventListener('pointerup', up);
-      save();
-    };
-    grip.addEventListener('pointermove', move);
-    grip.addEventListener('pointerup', up);
-  });
+  // ---- resizing: registered with the module-level edge hit-tester (below) —
+  // one document listener serves every frame, which is the only way to grab
+  // OUTSIDE a frame's border without an overlay stealing its content's events
+  // (the ::before halo painted over scrollbars and buttons — R, 17:20).
+  if (resizable) _resizables.push({ root, state, minW, minH, paint, save, raise,
+    active: () => !locked && !state.collapsed && !state.hidden });
 
   root.addEventListener('pointerdown', raise);
   head.addEventListener('dblclick', () => api.collapse());
