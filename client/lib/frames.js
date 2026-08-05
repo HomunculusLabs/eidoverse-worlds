@@ -19,13 +19,29 @@ const frames = new Map();
 // pixels belong to content — scrollbars and buttons always win (we test the
 // real element under the pointer, not geometry alone).
 const _resizables = [];
-const _BAND = 2, _REACH = 6;   // R-tuned, 17:23
+const _BAND = 4, _REACH = 6;   // band R-tuned 17:23 at 2, widened to 4 after
+                               // antra's live receipt (edge target was ~8px
+                               // total and half of that hung in the air)
+const _CORNER = 15;            // the corner is the hardest 2D target on the
+                               // frame and USED to be the intersection of two
+                               // 2px bands — invisible in practice. It gets
+                               // its own square, sized like the old SE grip.
 const _CURSORS = { n: 'ns-resize', s: 'ns-resize', e: 'ew-resize', w: 'ew-resize',
   ne: 'nesw-resize', sw: 'nesw-resize', nw: 'nwse-resize', se: 'nwse-resize' };
 function _zoneFor(f, e) {
   const r = f.root.getBoundingClientRect();
   const nx = e.clientX - r.left, ny = e.clientY - r.top;
   if (nx < -_REACH || ny < -_REACH || nx > r.width + _REACH || ny > r.height + _REACH) return '';
+  // corners FIRST, independently of the edge bands: within 15px of a corner
+  // point (in or out, the early return above already bounds the outside) the
+  // grab is diagonal. _contentClaims still outranks everything at the call
+  // sites, so a button or scrollbar living in that square keeps winning.
+  const nearW = nx <= _CORNER, nearE = nx >= r.width - _CORNER;
+  const nearN = ny <= _CORNER, nearS = ny >= r.height - _CORNER;
+  if (nearN && nearW) return 'nw';
+  if (nearN && nearE) return 'ne';
+  if (nearS && nearW) return 'sw';
+  if (nearS && nearE) return 'se';
   let z = '';
   if (ny < _BAND) z += 'n'; else if (ny > r.height - _BAND) z += 's';
   if (nx < _BAND) z += 'w'; else if (nx > r.width - _BAND) z += 'e';
