@@ -201,6 +201,26 @@ try {
   check("typing relays to others", bob.of("typing").some((m) => m.id === "alice"));
   check("typing is never logged", contentLog().length === 3);
 
+  // --- typing STATE: a whitelisted social glyph rides presence; anything
+  // else is stripped so presence stays presence (media PR)
+  alice.send({ type: "typing", to: null, state: "mic" });
+  await sleep(220);
+  check("whitelisted typing state relays", bob.of("typing").some((m) => m.state === "mic"));
+  alice.send({ type: "typing", to: null, state: "<script>alert(1)</script>" });
+  await sleep(220);
+  check("unlisted typing state is stripped, message still relays",
+    bob.of("typing").filter((m) => m.id === "alice").length >= 3 &&
+    !bob.of("typing").some((m) => typeof m.state === "string" && m.state.includes("<")));
+
+  // --- rtc: point-to-point signaling, never logged, absent recipient dropped
+  alice.send({ type: "rtc", to: "bob", payload: { sdp: "offer-ish" } });
+  await sleep(220);
+  check("rtc reaches its recipient", bob.of("rtc").some((m) => m.from === "alice" && m.payload?.sdp === "offer-ish"));
+  check("rtc is never logged", contentLog().length === 3);
+  alice.send({ type: "rtc", to: "nobody-here", payload: { sdp: "x" } });
+  await sleep(220);
+  check("rtc to an absent peer is silently dropped (no error)", !alice.of("error").length);
+
   // --- refusals
   alice.verb("obliterate", { everything: true });
   await sleep(200);
