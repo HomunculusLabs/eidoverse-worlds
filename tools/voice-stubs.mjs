@@ -1,0 +1,17 @@
+// Substitutes for the modules voice.js/stt.js/voiceconsent.js touch, so the
+// consent lifecycle can be executed without a GPU, a socket, or a DOM canvas.
+// Same doctrine as chat-core-stub.mjs: only what the code under test uses.
+const handlers = new Map();
+export const bus = {
+  on(t, f) { if (!handlers.has(t)) handlers.set(t, []); handlers.get(t).push(f); },
+  emit(t, p) { for (const f of [...(handlers.get(t) ?? [])]) f(p); },
+};
+export const CONFIG = { name: 'tester' };
+export const report = (...a) => { lastReport = a; };
+export let lastReport = null;
+export const flashHint = () => {};
+export const sent = [];
+export const sendRtc = (to, payload) => sent.push({ to, payload });
+export const sendVerb = (verb, args) => sent.push({ verb, args });
+export const myState = { pos: { distanceTo: () => 1 } };
+export const remotes = new Map();

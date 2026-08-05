@@ -19,6 +19,7 @@ import { sendRtc } from './net.js';
 import { remotes } from './remotes.js';
 import { myState } from './controller.js';
 import { flashHint } from './ui.js';
+import { receivingVoice, volumeFor } from './voiceconsent.js';
 
 const RTC_CFG = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] };
 const FULL_M = 3, SILENT_M = 20;   // full volume inside 3m, gone by 20m
@@ -66,6 +67,18 @@ function dropPeer(id) {
   p.audio.srcObject = null;
 }
 
+/** Re-offer on an EXISTING peer after our track set changed (mic on/off while
+ *  a consented inbound leg is live). Silent no-op if we are mid-negotiation. */
+async function renegotiate(id) {
+  const p = peers.get(id);
+  if (!p || p.pc.signalingState !== 'stable') return;
+  try {
+    const offer = await p.pc.createOffer();
+    await p.pc.setLocalDescription(offer);
+    sendRtc(id, { sdp: p.pc.localDescription });
+  } catch (e) { report('voice renegotiate', e); }
+}
+
 async function offerTo(id) {
   const p = peerFor(id);
   try {
@@ -77,6 +90,12 @@ async function offerTo(id) {
 
 async function onRtc(msg) {
   const { from, payload } = msg;
+  // CONSENT GATE: with receive-voice off we never negotiate an inbound path.
+  // Not "answer then mute" — no audio path exists at all. The one exception
+  // is an ANSWER to an offer we ourselves made (we are talking, they are
+  // replying to our own outbound leg), which cannot deliver audio we did not
+  // ask for.
+  if (!receivingVoice() && payload?.sdp?.type !== 'answer') return;
   const p = peerFor(from);
   try {
     if (payload.sdp?.type === 'offer') {
@@ -101,12 +120,23 @@ async function onRtc(msg) {
 export async function toggleMic(name) {
   myId = name ?? myId;
   if (micStream) {
-    // full off: stop tracks, tear down our outbound legs (peers who still
-    // send to us will re-offer if they care; simplest correct teardown)
+    // SEND state only. Going quiet must not deafen you: listening is a
+    // separate permission (review catch — the old teardown dropped every
+    // peer, including inbound legs, which then had no trigger to re-offer
+    // until the next roster event, so muting yourself silently deafened you
+    // for an unbounded time). We remove OUR track from each peer and keep
+    // the connection alive; if we are not listening either, THEN the peer
+    // has no purpose and comes down.
     for (const t of micStream.getTracks()) t.stop();
     micStream = null;
     muted = false;
-    for (const id of [...peers.keys()]) dropPeer(id);
+    for (const [id, p] of [...peers]) {
+      try {
+        for (const sender of p.pc.getSenders()) if (sender.track) p.pc.removeTrack(sender);
+      } catch (e) { report('voice untrack', e); }
+      if (!receivingVoice()) dropPeer(id);
+      else renegotiate(id);          // tell them our track is gone; keep theirs
+    }
     flashHint('🎙 off');
     bus.emit('voice', { on: false });
     return false;
@@ -159,6 +189,14 @@ export function toggleMute() {
 export function initVoice(name) {
   myId = name;
   bus.on('rtc', onRtc);
+  // revoking consent is retroactive: existing inbound legs come down at once.
+  // If our mic is live we re-offer, so our outbound (which they consented to)
+  // survives — revoking "I hear you" must not silently revoke "you hear me".
+  bus.on('audio:receive', (on) => {
+    if (on) { if (micStream) for (const id of humanIds()) if (!peers.has(id)) offerTo(id); return; }
+    for (const id of [...peers.keys()]) dropPeer(id);
+    if (micStream) for (const id of humanIds()) offerTo(id);
+  });
   bus.on('roster', () => {
     // arrivals get an offer while we're live; departures get torn down
     if (micStream) for (const id of humanIds()) if (!peers.has(id)) offerTo(id);
@@ -169,7 +207,8 @@ export function initVoice(name) {
       const r = remotes.get(id);
       if (!r?.avatar?.root || !p.audio.srcObject) continue;
       const d = r.avatar.root.position.distanceTo(myState.pos);
-      p.audio.volume = Math.min(1, Math.max(0, 1 - (d - FULL_M) / (SILENT_M - FULL_M)));
+      const roll = Math.min(1, Math.max(0, 1 - (d - FULL_M) / (SILENT_M - FULL_M)));
+      p.audio.volume = roll * volumeFor('voices');   // distance × the voices slider
     }
   }, 300);
 }

@@ -1,0 +1,86 @@
+// voiceconsent — the two things a person must be able to say NO to before any
+// audio moves: "don't send my voice anywhere" and "don't play other people's
+// voices at me". Both default to OFF. Voice is opt-in in BOTH directions.
+//
+// Why receive-off is not just muted playback: an inbound peer connection is a
+// negotiated stream, not a volume slider. If you have not opted in, we do not
+// answer the offer at all — "off" means no audio path exists, not "an audio
+// path exists and we discard it". Cheaper, and it is the honest reading of
+// the word.
+//
+// Category doctrine (convention, checked against Discord/VRChat/Rec Room):
+// the 🎧 toggle is a VOICE control. World ambience is taste, set once, and
+// lives on a settings slider — not on a HUD button you press situationally.
+// Agent voice (TTS/captions) counts as a VOICE: a resident is a resident, and
+// it would be strange for a synthetic speaker to be unmutable when a human
+// one is not.
+
+import { bus } from './core.js';
+
+const KEY = 'eido.audio.prefs';
+const DEFAULTS = { recvVoice: false, volVoices: 1, volWorld: 0.6, volTts: 1, sttConsent: false };
+
+let prefs = { ...DEFAULTS };
+try {
+  const raw = localStorage.getItem(KEY);
+  if (raw) prefs = { ...DEFAULTS, ...JSON.parse(raw) };
+} catch { /* corrupt prefs must never keep anyone out of the world */ }
+
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(prefs)); } catch { /* private mode */ } };
+
+export const audioPrefs = () => ({ ...prefs });
+export const receivingVoice = () => prefs.recvVoice;
+export const volumeFor = (cat) => (
+  cat === 'world' ? prefs.volWorld : cat === 'tts' ? prefs.volTts : prefs.volVoices);
+
+export function setReceiveVoice(on) {
+  const next = !!on;
+  if (next === prefs.recvVoice) return prefs.recvVoice;
+  prefs.recvVoice = next; save();
+  // voice.js tears inbound peers down / permits them on this event; nothing
+  // else may open an inbound stream without consulting receivingVoice().
+  bus.emit('audio:receive', next);
+  return next;
+}
+
+export function setVolume(cat, v) {
+  const n = Math.max(0, Math.min(1, Number(v) || 0));
+  if (cat === 'world') prefs.volWorld = n;
+  else if (cat === 'tts') prefs.volTts = n;
+  else prefs.volVoices = n;
+  save();
+  bus.emit('audio:volume', { cat, value: n });
+  return n;
+}
+
+// ---- STT consent -----------------------------------------------------------
+// The browser's SpeechRecognition ships audio to a VENDOR endpoint off this
+// machine. Someone toggling a microphone in a world does not expect their
+// room to be transcribed by a third party. So STT is gated behind an explicit,
+// revocable, plainly-worded consent — asked once, remembered, never assumed
+// from the mic toggle.
+export const sttConsented = () => prefs.sttConsent;
+export function setSttConsent(on) {
+  prefs.sttConsent = !!on; save();
+  bus.emit('audio:stt-consent', prefs.sttConsent);
+  return prefs.sttConsent;
+}
+
+/** Ask once, in words that name the actual consequence. Returns a promise of
+ *  the answer; a refusal is remembered as a refusal (we do not re-nag). */
+export async function ensureSttConsent(ask = defaultAsk) {
+  if (prefs.sttConsent) return true;
+  const yes = await ask();
+  setSttConsent(yes);
+  return prefs.sttConsent;
+}
+
+function defaultAsk() {
+  return Promise.resolve(confirm(
+    'Turn on speech-to-text?\n\n' +
+    'Your microphone audio will be sent to your browser vendor\'s speech ' +
+    'service (a third party outside this world) to be transcribed. The text ' +
+    'is then posted as your chat message and stored in the world log.\n\n' +
+    'Voice chat itself does NOT require this — you can talk without it.',
+  ));
+}

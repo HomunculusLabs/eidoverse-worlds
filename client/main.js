@@ -28,6 +28,9 @@ import {
   hasGhost, hasSelection, toggleEditMode, isEditing,
 } from './lib/build.js';
 import { initConjure } from './lib/conjure.js';
+import { initVoice, micOn, isMuted, micAnalyserLevel, peerLevels } from './lib/voice.js';
+import './lib/mictoggle.js'; // mic + headphone toggles beside the HUD, both off by default
+import { initAudioPanel } from './lib/audiopanel.js';
 import { initSceneGraph, sceneAttach, sceneDetach } from './lib/scenegraph.js';
 import {
   toast, setHud, setHint, setAmbientHint, flashHint, buildHelp, toggleHelp,
@@ -191,6 +194,8 @@ function start() {
   connect();
   initPalette();
   initConjure();   // the orrery panel — prompt → your pick of images → mesh → world
+  initVoice(CONFIG.name);
+  initAudioPanel();   // 🔊 categories: voices / world / TTS + consent rows
   initSceneGraph();   // 🌳 the world as a tree + 📜 the scripts that animate it
   setHint('<kbd>WASD</kbd> move · <kbd>Enter</kbd> chat · <kbd>B</kbd> build · <kbd>?</kbd> help');
 
