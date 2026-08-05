@@ -246,9 +246,22 @@ function presetStrokes(args) {
       { species: 'yucca', width: W, depth: D, center: [cx, cz], seed: seed + 18, density: 0.7 },
     ];
   }
-  if (args.species === 'corn' && !args.rows) {
-    // a corn field without explicit rows gets honest agriculture
-    return [{ rows: { spacing: 0.9, plant: 0.26 }, corn: { peelChance: 0.25 }, ...args }];
+  if (args.species === 'corn' && !args.rows?.stride) {
+    // Honest agriculture, and VARIETY: one stroke = one plant variant cloned
+    // field-wide (a single rng roll decides every stalk's ears). The engine's
+    // field-approved recipe interleaves seeds by row stride — four husked
+    // variants plus every 5th row rolled heavily open.
+    const rows = { spacing: 0.9, plant: 0.26, ...(args.rows ?? {}) };
+    const corn = args.corn ?? {};
+    return [
+      ...[0, 1, 3, 4].map((phase, i) => ({
+        ...args, seed: seed + 31 + i * 17,
+        rows: { ...rows, stride: 5, phase },
+        corn: { peelChance: 0.12, ...corn },
+      })),
+      { ...args, seed: seed + 91, rows: { ...rows, stride: 5, phase: 2 },
+        corn: { ...corn, peel: true, peelChance: 0.6 } },
+    ];
   }
   return [args];
 }

@@ -718,6 +718,8 @@ const GROUND_TINTS = {
   tundra: { layer: '#5a6b6b', grass: 'gray-green' },
 };
 const TERRAIN_SHAPES = { flat: 0.2, hills: 2.6, rugged: 6.0 };
+// blade length drives the wind response too (lawns are stiff, tallgrass sways)
+const GRASS_HEIGHT = { lawn: 0.15, meadow: 0.42, tall: 0.7 };
 const GRASS_DENSITY = {
   sparse: 0.5,
   normal: 1,
@@ -728,7 +730,7 @@ function paintGround(body) {
   if (body.dataset.init) return;
   body.dataset.init = '1';
   body.innerHTML = '';
-  const st = { tint: 'meadow', shape: 'hills', seed: 7, density: 'normal', grass: false, plant: 'meadow' };
+  const st = { tint: 'meadow', shape: 'hills', seed: 7, density: 'normal', grass: false, plant: 'meadow', height: 'meadow' };
 
   const row = (label, node) => {
     const r = document.createElement('div');
@@ -751,7 +753,8 @@ function paintGround(body) {
   // what "grow" plants — every option is one bag on the singleton grass verb
   const PLANTINGS = {
     meadow: () => {
-      const args = { species: 'grass', width: 90, depth: 80, center: [0, 0], height: 0.42 };
+      const args = { species: 'grass', width: 90, depth: 80, center: [0, 0],
+        height: GRASS_HEIGHT[st.height] };
       if (GROUND_TINTS[st.tint].grass) args.color = GROUND_TINTS[st.tint].grass;
       return args;
     },
@@ -777,6 +780,14 @@ function paintGround(body) {
   plantSel.value = st.plant;
   plantSel.onchange = () => { st.plant = plantSel.value; if (st.grass) growGrass(); };
   row('plant', plantSel);
+
+  // blade length (meadow grass only — structural species keep their size)
+  const hSel = document.createElement('select');
+  hSel.style.cssText = 'font:11px var(--font); background:rgba(4,14,20,.9); color:var(--fg); border:1px solid var(--edge); border-radius:5px; padding:5px;';
+  for (const k of Object.keys(GRASS_HEIGHT)) hSel.appendChild(new Option(k, k));
+  hSel.value = st.height;
+  hSel.onchange = () => { st.height = hSel.value; if (st.grass && st.plant === 'meadow') growGrass(); };
+  row('height', hSel);
 
   // grass
   const dens = document.createElement('select');
