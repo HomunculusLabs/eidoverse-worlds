@@ -111,9 +111,57 @@ function hasFloor(bvh, box, s) {
   return hits / n >= 0.35;
 }
 
+// ---- the uneven-top probe ---------------------------------------------------
+// A box collider's top face is the only ground it can ever report, so a box is
+// exactly as honest as the top of the thing is flat. For most props that is
+// honest enough — a crate lies by 5cm. For a blanket with cushions on it the
+// bbox top sits at the tallest cushion, and the whole footprint reads as
+// ground at that height: a body walking the bare cloth stands 27cm up in the
+// air. Issue #11's three observables — the shove at the rim, the phantom
+// mantle offer, the invisible full-footprint ceiling — are all this one lie.
+//
+// The probe: bucket every vertex into a 24×24 grid over the footprint, keep
+// the highest y per cell, and call the LIE the gap between the bbox top and
+// the median cell top. One linear pass, no BVH — the BVH is the thing
+// decide() is pricing, so the probe must not need one to answer. Surveyed
+// against a raycast ground truth across the 58-model library plus 8 conjured
+// store meshes (tools/collider-survey.ts): inside the floor-shaped population
+// the gate below admits, the vertex version tracks raycast to 1.8cm worst
+// case and never disagrees about the threshold. (Library-wide it drifts up to
+// 2.5m on tall structured things — a watchtower, a perimeter wall — which is
+// exactly why the shape gate runs before the probe is consulted.)
+const LIE_GRID = 24;
+function topLie(obj, box) {
+  const w = box.max.x - box.min.x, d = box.max.z - box.min.z;
+  if (!(w > 0) || !(d > 0)) return 0;
+  obj.updateMatrixWorld(true);
+  const inv = new THREE.Matrix4().copy(obj.matrixWorld).invert();
+  const rel = new THREE.Matrix4();
+  const v = new THREE.Vector3();
+  const cells = new Float64Array(LIE_GRID * LIE_GRID).fill(-Infinity);
+  obj.traverse((o) => {
+    if (!o.isMesh || !o.geometry?.attributes?.position) return;
+    const pos = o.geometry.attributes.position;
+    rel.multiplyMatrices(inv, o.matrixWorld);
+    for (let i = 0; i < pos.count; i++) {
+      v.fromBufferAttribute(pos, i).applyMatrix4(rel);
+      const cx = Math.min(LIE_GRID - 1, Math.max(0, Math.floor(((v.x - box.min.x) / w) * LIE_GRID)));
+      const cz = Math.min(LIE_GRID - 1, Math.max(0, Math.floor(((v.z - box.min.z) / d) * LIE_GRID)));
+      const k = cz * LIE_GRID + cx;
+      if (v.y > cells[k]) cells[k] = v.y;
+    }
+  });
+  const tops = [];
+  for (let i = 0; i < cells.length; i++) if (cells[i] !== -Infinity) tops.push(cells[i]);
+  if (tops.length < 8) return 0;   // a 4-corner quad covers 4 cells: too sparse to accuse
+  tops.sort((a, b) => a - b);
+  const h = tops.length >> 1;
+  return box.max.y - (tops.length % 2 ? tops[h] : (tops[h - 1] + tops[h]) / 2);
+}
+
 function decide(entry, s) {
   const { box, pref } = entry;
-  // SIZE decides walkability, full stop.
+  // SIZE decides walkability — with one exception below.
   //
   // This used to also require the thing be "hollow" — nothing within 0.9m of
   // its bounding-box centre — to keep a tree's canopy from becoming a walkable
@@ -124,9 +172,25 @@ function decide(entry, s) {
   // excludes real buildings to exclude trees is the wrong rule; trees are
   // handled where they actually cause harm (the grass mask below), and a
   // per-object `collide` override still wins over any of it.
-  const roomScale = (box.max.x - box.min.x) * (box.max.z - box.min.z) * s * s >= 16
-    && (box.max.y - box.min.y) * s >= 2.2;
-  const exact = pref === 'exact' ? true : pref === 'box' ? false : roomScale;
+  const w = (box.max.x - box.min.x) * s, d = (box.max.z - box.min.z) * s;
+  const h = (box.max.y - box.min.y) * s;
+  const roomScale = w * d >= 16 && h >= 2.2;
+  // The exception: FLOOR-SHAPED things whose box top is a lie. Wide enough to
+  // stand on, low enough that standing on it is the only thing a body would
+  // ever do with it — a blanket, a rug, a pillow pile — and with a real gap
+  // between the box top and where the surface actually is. Those collide
+  // exact, because the box's one flat top is the bug (issue #11).
+  //
+  // The numbers come from the survey, not taste. Footprint ≥ 2m²: smaller and
+  // nobody walks on it. Lie > 0.10m: below that the box is honest enough (a
+  // crate reads 0.05). Height ≤ 1.0m: every gate from 0.6 to 1.0 reclassifies
+  // exactly ONE object across 66 surveyed (the blanket); 1.2 pulls in nine
+  // more — both rubble piles (which float you 0.73m and 0.44m, worse than the
+  // blanket), five hovercars, a shark. If those should firm up too, this is
+  // the one line to move.
+  const floorShaped = !roomScale && w * d >= 2 && h <= 1.0;
+  const uneven = floorShaped && (entry.lie ??= topLie(entry.obj, box)) * s > 0.10;
+  const exact = pref === 'exact' ? true : pref === 'box' ? false : (roomScale || uneven);
   if (exact && !entry.exact) entry.exact = buildExact(entry.obj);
   if (!exact) entry.exact = null;         // small/solid: use pillar/box, no trimesh
   entry.pillar = !entry.exact && (box.max.y - box.min.y) * s > 2.4;
