@@ -118,8 +118,11 @@ export function sendMod(type, extra = {}) {
 export function sendWhisper(to, text) {
   if (net.joined && net.ws?.readyState === 1) net.ws.send(JSON.stringify({ type: 'whisper', to, text }));
 }
-export function sendTyping(to) {
-  if (net.joined && net.ws?.readyState === 1) net.ws.send(JSON.stringify({ type: 'typing', to }));
+export function sendRtc(to, payload) {
+  if (net.joined && net.ws?.readyState === 1) net.ws.send(JSON.stringify({ type: 'rtc', to, payload }));
+}
+export function sendTyping(to, state) {
+  if (net.joined && net.ws?.readyState === 1) net.ws.send(JSON.stringify({ type: 'typing', to, ...(state ? { state } : {}) }));
 }
 
 /** Transient, never-logged relay — used while a build drag is in flight so
@@ -382,6 +385,10 @@ async function handle(msg) {
       break;
     }
 
+    case 'rtc':
+      bus.emit('rtc', msg);
+      break;
+
     case 'whisper':
       logWhisper(msg);
       break;
@@ -394,8 +401,8 @@ async function handle(msg) {
 
     case 'typing':
       if (msg.id !== net.myId) {
-        noteTyping(msg.id);                       // chat window "X is typing…"
-        remotes.get(msg.id)?.avatar?.setTyping(); // and the dots above their head
+        noteTyping(msg.id);                                // chat window "X is typing…"
+        remotes.get(msg.id)?.avatar?.setTyping(msg.state); // dots — or a state glyph
       }
       break;
 

@@ -1,0 +1,82 @@
+// voice-wiring — the check that a bundler will not do for you.
+//
+//   bun tools/voice-wiring-test.ts
+//
+// Why this exists: a client module can emit an event nobody listens to, or
+// call a function nobody imported, and the bundle still builds clean — the
+// failure only appears in a browser, at runtime, to a user. That is exactly
+// how a `caption` emit shipped with no consumer, and how this PR's own
+// main.js briefly called updateVoiceMouths() while its imports were missing.
+// Server smoke cannot see any of it; it is all client wiring.
+//
+// So: every emit has a listener, every consent gate is actually consulted,
+// and the entry point imports what it calls. Source-level, no browser.
+
+import { readFileSync } from "node:fs";
+
+let pass = 0, fail = 0;
+const check = (name: string, ok: boolean, detail = "") => {
+  if (ok) { pass++; console.log(`  \x1b[32m✓\x1b[0m ${name}`); }
+  else { fail++; console.log(`  \x1b[31m✗\x1b[0m ${name}${detail ? ` — ${detail}` : ""}`); }
+};
+const read = (p: string) => readFileSync(new URL(`../${p}`, import.meta.url), "utf8");
+
+const main = read("client/main.js");
+const voice = read("client/lib/voice.js");
+const consent = read("client/lib/voiceconsent.js");
+const mictoggle = read("client/lib/mictoggle.js");
+const net = read("client/lib/net.js");
+const server = read("server/server.ts");
+
+// --- entry point imports everything it calls (the bug this file was born from)
+for (const fn of ["initVoice", "updateVoiceMouths", "micOn", "isMuted", "micAnalyserLevel", "peerLevels"]) {
+  const called = new RegExp(`\\b${fn}\\s*\\(`).test(main);
+  const bound = new RegExp(`\\b${fn}\\b[^\\n]*from|function ${fn}|import[^\\n]*\\b${fn}\\b`).test(main);
+  check(`main.js binds ${fn} before calling it`, !called || bound);
+}
+check("main.js actually starts the voice subsystem", /initVoice\s*\(/.test(main));
+check("main.js loads the mic/headphone toggles", /mictoggle\.js/.test(main));
+
+// --- every client-side emit this feature adds has a listener somewhere
+const clientSrc = main + voice + consent + mictoggle + net + read("client/lib/audiopanel.js");
+for (const ev of ["audio:receive", "rtc", "caption"]) {
+  const emitted = new RegExp(`emit\\(\\s*['"]${ev}['"]`).test(clientSrc);
+  const heard = new RegExp(`on\\(\\s*['"]${ev}['"]`).test(clientSrc);
+  check(`'${ev}' is emitted AND consumed`, !emitted || heard,
+    emitted && !heard ? "emitted into the void" : "");
+}
+
+// --- consent is load-bearing, not decorative
+check("inbound RTC is gated on receivingVoice()", /receivingVoice\(\)/.test(voice));
+check("receive-voice defaults OFF", /recvVoice:\s*false/.test(consent));
+check("STT is gated on its own consent, not on the mic", /ensureSttConsent|sttConsented/.test(mictoggle));
+check("STT consent names the third party in plain words",
+  /vendor|third party/i.test(consent) && /transcrib/i.test(consent));
+check("revoking receive tears existing peers down",
+  /on\(\s*['"]audio:receive['"][\s\S]{0,1200}dropPeer/.test(voice));
+
+// --- consent is STRUCTURAL: the direction, not a gate to remember
+check("consent is expressed as a transceiver direction", /sendonly|recvonly|sendrecv/.test(voice));
+// strip comments before this one: the word legitimately appears in the
+// rationale explaining why we no longer USE it, and a test that cannot tell
+// prose from code would forbid documenting the bug we fixed
+const voiceCode = voice.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+check("no blanket offerToReceiveAudio in code", !/offerToReceiveAudio/.test(voiceCode));
+check("every offer path states the direction first",
+  (voice.match(/createOffer\(/g) ?? []).length <= (voice.match(/applyDirection\(/g) ?? []).length);
+check("ontrack fails closed on revoked consent",
+  /ontrack[\s\S]{0,300}receivingVoice\(\)/.test(voice));
+
+// --- categories stay separate: the headphone must not touch world sound
+check("voice volume runs through the 'voices' category", /volumeFor\(['"]voices['"]\)/.test(voice));
+check("headphone toggle never references world volume",
+  !/volWorld|volumeFor\(['"]world['"]\)/.test(mictoggle));
+
+// --- server side of the protocol exists for what the client sends
+check("server relays rtc", /case "rtc"/.test(server));
+check("server whitelists typing state", /\["ear", "think", "tool", "mic"\]/.test(server));
+check("rtc payloads are size-capped", /length\s*>\s*\d{4}/.test(server));
+check("client can send rtc", /export function sendRtc/.test(net));
+
+console.log(`\n${pass} passed, ${fail} failed\n`);
+process.exit(fail ? 1 : 0);
