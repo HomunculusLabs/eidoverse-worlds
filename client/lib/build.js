@@ -728,7 +728,7 @@ function paintGround(body) {
   if (body.dataset.init) return;
   body.dataset.init = '1';
   body.innerHTML = '';
-  const st = { tint: 'meadow', shape: 'hills', seed: 7, density: 'normal', grass: false };
+  const st = { tint: 'meadow', shape: 'hills', seed: 7, density: 'normal', grass: false, plant: 'meadow' };
 
   const row = (label, node) => {
     const r = document.createElement('div');
@@ -748,20 +748,35 @@ function paintGround(body) {
     seed: st.seed, size: 160, segments: 200, amplitude: TERRAIN_SHAPES[st.shape], flatRadius: 16,
     layers: [{ color: GROUND_TINTS[st.tint].layer, repeat: 16 }],
   });
+  // what "grow" plants — every option is one bag on the singleton grass verb
+  const PLANTINGS = {
+    meadow: () => {
+      const args = { species: 'grass', width: 90, depth: 80, center: [0, 0], height: 0.42 };
+      if (GROUND_TINTS[st.tint].grass) args.color = GROUND_TINTS[st.tint].grass;
+      return args;
+    },
+    galleta: () => ({ species: 'galleta_dry', width: 80, depth: 70, center: [0, 0] }),
+    'mojave desert': () => ({ preset: 'mojave', width: 90, depth: 80, center: [0, 0] }),
+    'corn field': () => ({ species: 'corn', width: 40, depth: 30, center: [0, 0],
+      rows: { spacing: 0.9, plant: 0.26 }, corn: { peelChance: 0.25 } }),
+  };
   const growGrass = () => {
     st.grass = true;
-    const args = {
-      species: 'grass', width: 90, depth: 80, center: [0, 0],
-      height: 0.42, density: GRASS_DENSITY[st.density],
-    };
-    if (GROUND_TINTS[st.tint].grass) args.color = GROUND_TINTS[st.tint].grass;
-    sendVerb('grass', args);
+    sendVerb('grass', { ...PLANTINGS[st.plant](), density: GRASS_DENSITY[st.density] });
   };
 
   // terrain shape
   body.appendChild(btnRow(...Object.keys(TERRAIN_SHAPES).map((k) =>
     mkBtn(k, () => { st.shape = k; growTerrain(); flashHint(`terrain: ${k}`); }))));
   body.appendChild(btnRow(mkBtn('↻ reshuffle', () => { st.seed = Math.floor(Math.random() * 9999); growTerrain(); })));
+
+  // what to plant
+  const plantSel = document.createElement('select');
+  plantSel.style.cssText = 'font:11px var(--font); background:rgba(4,14,20,.9); color:var(--fg); border:1px solid var(--edge); border-radius:5px; padding:5px;';
+  for (const k of Object.keys(PLANTINGS)) plantSel.appendChild(new Option(k, k));
+  plantSel.value = st.plant;
+  plantSel.onchange = () => { st.plant = plantSel.value; if (st.grass) growGrass(); };
+  row('plant', plantSel);
 
   // grass
   const dens = document.createElement('select');
@@ -771,8 +786,8 @@ function paintGround(body) {
   dens.onchange = () => { st.density = dens.value; if (st.grass) growGrass(); };
   row('grass', dens);
   body.appendChild(btnRow(
-    mkBtn('🌱 grow grass', () => { growGrass(); flashHint('grass growing'); }),
-    mkBtn('mow', () => { st.grass = false; sendVerb('grass', { clear: true }); flashHint('grass cleared'); }),
+    mkBtn('🌱 grow', () => { growGrass(); flashHint(`${st.plant} growing`); }),
+    mkBtn('mow', () => { st.grass = false; sendVerb('grass', { clear: true }); flashHint('field cleared'); }),
   ));
 
   // tint drives both terrain layer and grass colour

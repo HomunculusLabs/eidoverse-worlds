@@ -226,22 +226,64 @@ function wirePushers(field) {
 
 // ---- the field -------------------------------------------------------------
 
+// The `grass` verb is a world singleton, but a real biome is several strokes
+// (the engine's field-approved Mojave recipe is galleta + three shrubs at
+// de-centred organic stands + yucca). `preset` bags compose those strokes
+// client-side under ONE field object, so the verb model stays untouched.
+function presetStrokes(args) {
+  const W = args.width ?? args.size ?? 80, D = args.depth ?? args.size ?? 70;
+  const [cx, cz] = args.center ?? [0, 0];
+  const seed = args.seed ?? 7;
+  const sc = (f) => Math.round(f * Math.min(W, D));
+  if (args.preset === 'mojave') {
+    return [
+      { species: 'galleta_dry', width: W, depth: D, center: [cx, cz], seed, density: 1.3 },
+      { species: 'blackbrush', width: W - 2, depth: D - 2, center: [cx + sc(0.08), cz - sc(0.05)], seed: seed + 2, density: 0.85, footprint: 'organic' },
+      { species: 'blackbrush', width: W - 2, depth: D - 2, center: [cx - sc(0.09), cz + sc(0.08)], seed: seed + 52, variant: 1, density: 0.85, footprint: 'organic' },
+      { species: 'creosote', width: W, depth: D, center: [cx - sc(0.06), cz - sc(0.08)], seed: seed + 5, density: 0.85, footprint: 'organic' },
+      { species: 'creosote', width: W, depth: D, center: [cx + sc(0.1), cz + sc(0.06)], seed: seed + 85, variant: 1, density: 0.85, footprint: 'organic' },
+      { species: 'sagebrush', width: W - 2, depth: D - 2, center: [cx + sc(0.05), cz + sc(0.1)], seed: seed + 9, density: 0.85, footprint: 'organic' },
+      { species: 'yucca', width: W, depth: D, center: [cx, cz], seed: seed + 18, density: 0.7 },
+    ];
+  }
+  if (args.species === 'corn' && !args.rows) {
+    // a corn field without explicit rows gets honest agriculture
+    return [{ rows: { spacing: 0.9, plant: 0.26 }, corn: { peelChance: 0.25 }, ...args }];
+  }
+  return [args];
+}
+
 /** Build a flora field from a `grass` verb bag. Returns a field shaped to
  *  terrain.js's setGrass contract: { mesh, material, update, autoHooks,
  *  setDensity }. The mesh is NOT auto-added — the caller owns the scene. */
 export async function buildFloraField(rawArgs, { scene, heightFn }) {
   const mod = await loadFloraModule();
   const args = mapGrassArgs(rawArgs);
-  await ensureFloraAssets(mod, args.species ?? 'grass');
+  const strokes = presetStrokes(args);
+  const species = [...new Set(strokes.map((st) => st.species ?? 'grass'))];
+  for (const sp of species) await ensureFloraAssets(mod, sp);
   // the grass verb is a world singleton: each build starts a fresh occupancy
   // registry, or a replaced field's plants would still claim their ground
   mod.resetFloraOccupancy();
-  const field = await mod.createFlora({ ...args, heightFn });
-  wireDensityDial(field);
-  wireClearings(field.material, args.width ?? args.size ?? 30, args.depth ?? args.size ?? 30);
+  const group = new THREE.Group();
+  const fields = [];
+  for (const st of strokes) {
+    const f = await mod.createFlora({ ...st, heightFn });
+    wireDensityDial(f);
+    wireClearings(f.material, st.width ?? st.size ?? 30, st.depth ?? st.size ?? 30);
+    group.add(f.mesh);
+    fields.push(f);
+  }
+  const field = {
+    mesh: group,
+    material: fields[0]?.material,
+    update: fields[0]?.update,
+    setPushers: (list) => { for (const f of fields) f.setPushers(list); },
+    setDensity: (k) => { for (const f of fields) f.setDensity?.(k); },
+  };
   const pusherHook = wirePushers(field);
-  // setGrass removes every hook this field owns (wind update + pushers)
-  field.autoHooks = [field.update, pusherHook];
-  scene.add(field.mesh);
+  // setGrass removes every hook this field owns (each stroke's wind + pushers)
+  field.autoHooks = [...fields.map((f) => f.update), pusherHook];
+  scene.add(group);
   return field;
 }
