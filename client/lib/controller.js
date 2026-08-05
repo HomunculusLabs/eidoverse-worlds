@@ -108,19 +108,84 @@ canvas.addEventListener('mousedown', (e) => {
 let editingNow = () => false;
 export function setEditingProbe(fn) { editingNow = fn; }
 addEventListener('mouseup', () => { dragging = false; });
+// ---- mouselook --------------------------------------------------------------
+// The desktop-game standard (VRChat, WoW): the canvas captures the pointer,
+// looking is free, Esc hands the cursor back. Drag-orbit stays untouched as
+// the fallback and the edit-mode behavior — a mode this module already has,
+// because looking-vs-editing was settled the same way in build.js.
+// While locked the cursor is parked, so `mouse` pins to (0,0): hover and
+// picking read the screen centre — crosshair semantics — instead of wherever
+// the pointer happened to die.
+let locked = false, lockHinted = false;
+export const isMouselook = () => locked;
+
+// MOUSELOOK: M toggles, Esc frees. Two keys, one behaviour each.
+//
+//   M     toggle: locked <-> free, both directions. Bare M only — modified
+//         presses belong to the browser and the OS (Ctrl+M etc).
+//   Esc   always frees the cursor. One-way by browser law: every engine
+//         hardcodes Esc to RELEASE a pointer lock and refuses to let a page
+//         grant one from it, because that is exactly how a hostile page would
+//         trap a cursor. So Esc can never be the way back IN — hence M.
+//
+// M rather than C: M is the name of the mode and matches Second Life's
+// binding, while Ctrl+C is the most-pressed shortcut on any machine and a
+// guard regression there would bite someone mid-copy.
+//
+// Clicking the world does NOT enter mouselook. It used to, and that made
+// cursor mode nearly unusable — every click on anything dropped you back into
+// capture, so you could never interact freely.
+//
+// While locked the cursor is parked, so `mouse` pins to (0,0): hover and
+// picking read the screen centre — crosshair semantics — instead of wherever
+// the pointer happened to die.
+
+document.addEventListener('pointerlockchange', () => {
+  locked = document.pointerLockElement === canvas;
+  if (locked) {
+    mouse.set(0, 0);
+    if (!lockHinted) { flashHint('mouselook — <kbd>M</kbd> toggles · <kbd>Esc</kbd> frees the cursor'); lockHinted = true; }
+  }
+});
+bus.on('edit-mode', (on) => { if (on && locked) document.exitPointerLock(); });
+
+addEventListener('keydown', (e) => {
+  if (e.code !== 'KeyM' || e.repeat) return;
+  // bare M only: modified presses belong to the browser and the OS
+  if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
+  if (editingNow() || isOverlayOpen() || chat.isOpen) return;
+  if (locked) document.exitPointerLock();
+  else relock();
+});
+
+// An Esc-initiated unlock leaves the canvas unfocused, and Chrome wants
+// requestPointerLock from a focused target — a bare window keydown listener
+// was not enough to get back IN (R, 00:33). Focus first, then ask; and if the
+// browser refuses anyway, say so instead of failing silently, which is how
+// this hid in the first place.
+function relock() {
+  if (document.pointerLockElement === canvas) return;
+  try { canvas.focus?.({ preventScroll: true }); } catch { /* not focusable, fine */ }
+  const p = canvas.requestPointerLock();
+  p?.catch?.(() => flashHint('press <kbd>M</kbd> again to look'));
+}
+
 addEventListener('mousemove', (e) => {
-  if (dragging) {
+  if (locked || dragging) {
     camYaw -= e.movementX * 0.005;
     camPitch = THREE.MathUtils.clamp(camPitch + e.movementY * 0.004, -0.9, 1.2);
   }
-  mouse.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
+  if (!locked) mouse.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
 });
 canvas.addEventListener('contextmenu', (e) => e.preventDefault()); // right-drag orbit
 canvas.addEventListener('wheel', (e) => {
   e.preventDefault();
   camDist = THREE.MathUtils.clamp(camDist + e.deltaY * 0.004, 0.0, 16);
   const wasFP = firstPerson;
-  firstPerson = camDist < 0.6;
+  // Hysteresis: enter FP under 0.4m, don't leave until past 0.7m. A single
+  // threshold flickers 1P/3P at the boundary — nauseating, and loudest for
+  // exactly the motion-sensitive people a hangout world shelters.
+  firstPerson = wasFP ? camDist < 0.7 : camDist < 0.4;
   if (firstPerson !== wasFP) flashHint(firstPerson ? 'first person' : 'third person');
 }, { passive: false });
 

@@ -239,6 +239,7 @@ export const KEYMAP = [
   ['Emotes',      '<kbd>1</kbd>–<kbd>6</kbd> — wave, cheer, dance, point, salute, clap'],
   ['Chat',        '<kbd>Enter</kbd> to open · <kbd>@</kbd> mentions · <kbd>/</kbd> commands · <kbd>↑</kbd> recalls'],
   ['Look',        'drag the scene · <kbd>wheel</kbd> zooms (through to first person)'],
+  ['Mouselook',   '<kbd>M</kbd> toggles · <kbd>Esc</kbd> frees the cursor (browsers only let Esc release it)'],
   ['Edit mode',   '<kbd>B</kbd> — off by default, so looking around never moves anything'],
   ['Select',      'in edit mode: click a thing, drag to move, <kbd>Q</kbd>/<kbd>E</kbd> turn, <kbd>Del</kbd> remove'],
   ['Seat anchors', 'select a thing → <b>+ seat</b> → click the spot · gold gizmos: drag / <kbd>Q</kbd><kbd>E</kbd> face / <kbd>Del</kbd>'],
