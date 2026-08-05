@@ -57,15 +57,19 @@ export function presetStrokes(args) {
   const [cx, cz] = args.center ?? [0, 0];
   const seed = args.seed ?? 7;
   const sc = (f) => Math.round(f * Math.min(W, D));
+  // the caller's density is a FACTOR over each stroke's authored fullness —
+  // a preset that ignored it left the sparse/lush dial doing nothing at all
+  // on the composed biomes, since every stroke carried a hardcoded density
+  const k = args.density ?? 1;
   if (args.preset === 'mojave') {
     return [
-      { species: 'galleta_dry', width: W, depth: D, center: [cx, cz], seed, density: 1.3 },
-      { species: 'blackbrush', width: W - 2, depth: D - 2, center: [cx + sc(0.08), cz - sc(0.05)], seed: seed + 2, density: 0.85, footprint: 'organic' },
-      { species: 'blackbrush', width: W - 2, depth: D - 2, center: [cx - sc(0.09), cz + sc(0.08)], seed: seed + 52, variant: 1, density: 0.85, footprint: 'organic' },
-      { species: 'creosote', width: W, depth: D, center: [cx - sc(0.06), cz - sc(0.08)], seed: seed + 5, density: 0.85, footprint: 'organic' },
-      { species: 'creosote', width: W, depth: D, center: [cx + sc(0.1), cz + sc(0.06)], seed: seed + 85, variant: 1, density: 0.85, footprint: 'organic' },
-      { species: 'sagebrush', width: W - 2, depth: D - 2, center: [cx + sc(0.05), cz + sc(0.1)], seed: seed + 9, density: 0.85, footprint: 'organic' },
-      { species: 'yucca', width: W, depth: D, center: [cx, cz], seed: seed + 18, density: 0.7 },
+      { species: 'galleta_dry', width: W, depth: D, center: [cx, cz], seed, density: 1.3 * k },
+      { species: 'blackbrush', width: W - 2, depth: D - 2, center: [cx + sc(0.08), cz - sc(0.05)], seed: seed + 2, density: 0.85 * k, footprint: 'organic' },
+      { species: 'blackbrush', width: W - 2, depth: D - 2, center: [cx - sc(0.09), cz + sc(0.08)], seed: seed + 52, variant: 1, density: 0.85 * k, footprint: 'organic' },
+      { species: 'creosote', width: W, depth: D, center: [cx - sc(0.06), cz - sc(0.08)], seed: seed + 5, density: 0.85 * k, footprint: 'organic' },
+      { species: 'creosote', width: W, depth: D, center: [cx + sc(0.1), cz + sc(0.06)], seed: seed + 85, variant: 1, density: 0.85 * k, footprint: 'organic' },
+      { species: 'sagebrush', width: W - 2, depth: D - 2, center: [cx + sc(0.05), cz + sc(0.1)], seed: seed + 9, density: 0.85 * k, footprint: 'organic' },
+      { species: 'yucca', width: W, depth: D, center: [cx, cz], seed: seed + 18, density: 0.7 * k },
     ];
   }
   if (args.species === 'corn' && !args.rows?.stride) {

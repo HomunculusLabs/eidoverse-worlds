@@ -90,6 +90,22 @@ console.log("\npreset + variety strokes (one verb, several strokes)");
   // an explicit stride means the caller is driving: don't second-guess them
   const explicit = presetStrokes({ species: "corn", rows: { spacing: 1, plant: 0.3, stride: 2, phase: 0 } });
   check("an explicit stride is left alone", explicit.length === 1);
+
+  // the sparse/normal/lush dial has to REACH the composed biomes: every
+  // preset stroke carries an authored density, and a preset that dropped the
+  // caller's factor left the dial doing nothing at all on mojave
+  const base = presetStrokes({ preset: "mojave", width: 90, depth: 80 });
+  const thin = presetStrokes({ preset: "mojave", width: 90, depth: 80, density: 0.5 });
+  const lush = presetStrokes({ preset: "mojave", width: 90, depth: 80, density: 1.4 });
+  check("density thins every mojave stroke",
+    thin.every((s: any, i: number) => near(s.density, base[i].density * 0.5)));
+  check("density enriches every mojave stroke",
+    lush.every((s: any, i: number) => near(s.density, base[i].density * 1.4)));
+  check("the strokes keep their RELATIVE fullness (it is a factor, not a set)",
+    near(thin[0].density / thin[1].density, base[0].density / base[1].density));
+  const cornDense = presetStrokes({ species: "corn", density: 1.4 });
+  check("corn strokes carry density through too",
+    cornDense.every((s: any) => near(s.density, 1.4)));
 }
 
 console.log("\nfield lifecycle (grow → replace → mow)");

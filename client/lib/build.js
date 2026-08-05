@@ -711,11 +711,16 @@ export function initPalette() {
 // unlike the sky tuner's live sliders — each is a deliberate commit on a
 // click, which is also why they don't spam the log.
 
+// A tint is a ground palette: the terrain layer colour, plus the createFlora
+// seasonal colour each blade species takes (GRASS_COLORS name). The two grass
+// keys differ because the sheets are authored in different hues — the meadow
+// sheet is already green so it keeps its own art (null), while bunch grass
+// ships a straw recolor and can only be brought back to green by the `green`
+// recolor (a multiplier cannot survive a species' own recolor).
 const GROUND_TINTS = {
-  // grass: a createFlora seasonal color (GRASS_COLORS name; null = authored green)
-  meadow: { layer: '#4a5d33', grass: null },
-  arid:   { layer: '#7a6b48', grass: 'straw' },
-  tundra: { layer: '#5a6b6b', grass: 'gray-green' },
+  meadow: { layer: '#4a5d33', grass: null,          tufts: 'green' },
+  arid:   { layer: '#7a6b48', grass: 'straw',       tufts: 'straw' },
+  tundra: { layer: '#5a6b6b', grass: 'gray-green',  tufts: 'gray-green' },
 };
 const TERRAIN_SHAPES = { flat: 0.2, hills: 2.6, rugged: 6.0 };
 // blade length drives the wind response too (lawns are stiff, tallgrass sways)
@@ -760,10 +765,10 @@ function paintGround(body) {
     },
     tufts: () => {
       // bunch grass — a blade grass like the meadow, so it takes the same
-      // length and seasonal-colour dials (its own authored colour is straw)
+      // length and seasonal-colour dials
       const args = { species: 'galleta_dry', width: 80, depth: 70, center: [0, 0],
         height: GRASS_HEIGHT[st.height] };
-      if (GROUND_TINTS[st.tint].grass) args.color = GROUND_TINTS[st.tint].grass;
+      if (GROUND_TINTS[st.tint].tufts) args.color = GROUND_TINTS[st.tint].tufts;
       return args;
     },
     'mojave desert': () => ({ preset: 'mojave', width: 90, depth: 80, center: [0, 0] }),
