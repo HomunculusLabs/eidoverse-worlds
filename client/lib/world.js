@@ -586,6 +586,12 @@ export function stateToEntries(state, { skipChatFromSeq = Infinity } = {}) {
       add('spawn', {
         id, lib: e.lib, pos: e.pos, yaw: e.yaw,
         ...(e.scale != null ? { scale: e.scale } : {}),
+        // carried through the snapshot for the same reason as scale: the
+        // spawn verb's `collide` override decides exact-vs-box, and rebuilding
+        // the entry without it makes a snapshot-joiner's world disagree with a
+        // log-joiner's. applyEntry reads args.collide; give it the same value
+        // the original spawn carried.
+        ...(e.collide != null ? { collide: e.collide } : {}),
       }, e.actor ?? 'world', e.ts ?? Date.now());
     }
   }
