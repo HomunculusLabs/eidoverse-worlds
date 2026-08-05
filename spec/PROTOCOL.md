@@ -76,7 +76,7 @@ measured on the fields above (see `fixtures/README.md`).
 | `grant` | `{id, role?, gen?, sub?}` | update `roles[id]`; missing role/gen inherit current; `sub`, when present, binds the grant to that durable identity (§7) |
 | `behavior` | `{id, src, attach?, caps?, knobs?}` or `{id, remove: true}` | bind/unbind a runtime script (§8); author = entry actor |
 | `bstate` | `{id, data}` | `behaviors[id].state = data` (script kv persistence) |
-| `terrain` / `grass` / `sky` / `weather` | opaque bags | world-scope singletons (grass `{clear: true}` deletes; weather merges into sky) |
+| `terrain` / `grass` / `sky` / `weather` | opaque bags | world-scope singletons (grass `{clear: true}` deletes; weather merges into sky). Grass bags speak eidoverse-video's `createFlora` (species/height/density/color/rows); legacy makeGrass bags in old logs are mapped client-side, never rewritten |
 | `asset` | `{name, path}` | append to the world's asset palette (dedup by path) |
 | anything else | — | **nothing, and the log keeps it** |
 

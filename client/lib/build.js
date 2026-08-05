@@ -712,15 +712,16 @@ export function initPalette() {
 // click, which is also why they don't spam the log.
 
 const GROUND_TINTS = {
-  meadow: { layer: '#4a5d33', grass: 0x3a5a2c, tip: 0xaec96a },
-  arid:   { layer: '#7a6b48', grass: 0x8a7d4e, tip: 0xcabf7a },
-  tundra: { layer: '#5a6b6b', grass: 0x6e7f74, tip: 0xb0c0b0 },
+  // grass: a createFlora seasonal color (GRASS_COLORS name; null = authored green)
+  meadow: { layer: '#4a5d33', grass: null },
+  arid:   { layer: '#7a6b48', grass: 'straw' },
+  tundra: { layer: '#5a6b6b', grass: 'gray-green' },
 };
 const TERRAIN_SHAPES = { flat: 0.2, hills: 2.6, rugged: 6.0 };
 const GRASS_DENSITY = {
-  sparse: { spacing: 0.42, perCell: 2 },
-  normal: { spacing: 0.26, perCell: 4 },
-  lush:   { spacing: 0.2, perCell: 5 },   // kept modest — blades are fill-rate
+  sparse: 0.5,
+  normal: 1,
+  lush:   1.4,   // kept modest — blades are fill-rate
 };
 
 function paintGround(body) {
@@ -749,12 +750,12 @@ function paintGround(body) {
   });
   const growGrass = () => {
     st.grass = true;
-    const d = GRASS_DENSITY[st.density];
-    sendVerb('grass', {
-      width: 90, depth: 80, center: [0, 0], bladeHeight: 0.42, wind: 0.24,
-      spacing: d.spacing, perCell: d.perCell,
-      color: GROUND_TINTS[st.tint].grass, colorTip: GROUND_TINTS[st.tint].tip,
-    });
+    const args = {
+      species: 'grass', width: 90, depth: 80, center: [0, 0],
+      height: 0.42, density: GRASS_DENSITY[st.density],
+    };
+    if (GROUND_TINTS[st.tint].grass) args.color = GROUND_TINTS[st.tint].grass;
+    sendVerb('grass', args);
   };
 
   // terrain shape
