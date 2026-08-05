@@ -3,17 +3,53 @@
 // rotational inertia, fleet-measured joint limits, real contacts, and joint
 // MOTORS — muscle tone, a body going limp rather than a power cut.
 //
-// Interface parity is the whole contract: constructor(avatar, lean, rest),
-// step(dt) → sparse local-quat pose (and it drives the avatar directly),
-// impulse(v), setPin(joint, target)/setPin(null), .pins/.pinned/.done/
-// .finalPose/.p/.maxV, dispose(). Everything downstream — drag, nails,
-// corpse-kicks, the presence stream, headless agents — cannot tell which
-// engine produced the pose. That is the lease thesis applied to our own
-// house physics: engines are interchangeable behind the wire.
+// Interface parity is the whole contract: constructor(avatar, lean, rest,
+// seedVel), step(dt) → sparse local-quat pose (and it drives the avatar
+// directly), impulse(v), setPin(joint, target)/setPin(null), .pins/.pinned/
+// .done/.finalPose/.p/.maxV, snapshot(), dispose(). Everything downstream —
+// drag, nails, corpse-kicks, the presence stream, headless agents — cannot
+// tell which engine produced the pose.
 //
-// The spike (tools/rapier-spike.ts) validated the numbers: perf is a wash
-// with the Verlet at fleet scale, settle is FASTER with tone, and bones
-// cannot stretch by construction.
+// ---------------------------------------------------------------------------
+// THE REST FRAME IS THE JOINT FRAME. Read this before changing anything here.
+//
+// The first build of this engine was written against the belief that "rapier's
+// JS spherical joints have neither motors nor limits (probed)". That is true
+// of the TYPED WRAPPER only — SphericalImpulseJoint and GenericImpulseJoint
+// extend ImpulseJoint, not UnitImpulseJoint, so they carry no setLimits or
+// configureMotor. The engine underneath has both, per axis, and the raw handle
+// is public: `world.impulseJoints.raw.jointSetLimits(h, axis, min, max)` and
+// `...jointConfigureMotorPosition(h, axis, target, stiffness, damping)`.
+// Measured on 0.19.3: a generic joint given a 0.3 rad limit holds its swing at
+// exactly 0.3 rad where the unlimited control reaches 0.375.
+//
+// So every joint bound is now IN THE SOLVER. The previous build enforced cones
+// and twist with torque impulses applied after world.step(), which is a spring
+// outside the integrator — unconditionally able to pump. It was held down with
+// angular damping of 6 (the validated spike used 0.7), and the result was a
+// body that could not swing, could not roll, folded 172° through a 40° cone,
+// and twisted 165° through a 45° one. All of that machinery is gone.
+//
+// The one structural rule that makes it work: `JointData.generic(a1, a2, axis,
+// mask)` takes ONE axis vector and uses it as the local axis of BOTH bodies.
+// That is only meaningful if the two bodies' local frames agree. So every
+// rigid body here is built REST-ALIGNED: its orientation is the rotation that
+// carries its own rest configuration to its live one, which is IDENTITY at
+// rest. Consequences, all of them load-bearing:
+//
+//   • at rest every body's frame coincides, so one `axis` vector means the
+//     same thing to parent and child — the 90°/180° shoulder and hip frame
+//     misalignment that produced "everything is twisted" cannot be expressed;
+//   • the joint's zero is the REST pose, so limits are anatomy and motors can
+//     target 0 with no restRel bookkeeping at all;
+//   • a joint axis is a vector in rest coordinates, which come from the rig
+//     (restBonePositions carries the avatar's yaw) — so axes turn with the
+//     body for free. The old hinge axes were literal world constants and went
+//     degenerate at east/west facing on 9 of the 14 shipped rigs.
+//
+// The capsule geometry is carried by the COLLIDER's local rotation (= the
+// bone's rest frame), not the body's, which is what buys the free frame.
+// ---------------------------------------------------------------------------
 
 import { THREE } from './core.js';
 import { heightAt } from './terrain.js';
@@ -36,11 +72,11 @@ export async function ensureRapier() {
 }
 export const rapierReady = () => !!RAPIER;
 
-// The body cut mirrors the Verlet's CHAINS exactly — including CHEST, which
-// the first build skipped: on real rigs the arms hang from chest/upperChest,
-// and a drive table that never drives chest leaves skin twisting against the
-// sim. Rigs without a chest bone get one synthesized at the spine-neck
-// midpoint (VRM makes chest optional; the fleet all carry it).
+// Raw per-axis joint API (see header). These indices are RawJointAxis, which
+// the compat build does not re-export by name.
+const AX_ANG_X = 3, AX_ANG_Y = 4, AX_ANG_Z = 5;
+
+// The body cut mirrors the Verlet's CHAINS.
 const SEGMENTS = [
   ['hips', 'spine'], ['spine', 'chest'], ['chest', 'neck'], ['neck', 'head'],
   ['leftUpperArm', 'leftLowerArm'], ['leftLowerArm', 'leftHand'],
@@ -48,24 +84,45 @@ const SEGMENTS = [
   ['leftUpperLeg', 'leftLowerLeg'], ['leftLowerLeg', 'leftFoot'],
   ['rightUpperLeg', 'rightLowerLeg'], ['rightLowerLeg', 'rightFoot'],
 ];
-// Ball joints carry the anatomy the solver does NOT provide: rapier's JS
-// spherical joints have neither motors nor limits (probed — the calls the
-// spike made on them threw silently), so swing cones, twist bounds, and
-// muscle tone are OURS, applied per substep in _angularPass. Numbers are the
-// Verlet's fleet-measured stance.
+
+// The torso's SOLID, beyond the spine line. Without these the trunk is a pole:
+// measured on mythos, shoulders attach 0.138 m off a 0.041 m-wide spine
+// capsule and hips 0.053 m off, so arms and legs swung through empty space
+// where a chest and a pelvis should be. That is "self intersection not
+// respected" — it was never a collision-group bug, there was simply nothing
+// there to hit. Two bars, left attachment to right attachment, which is also
+// what the Verlet braces. Colliders on the torso body, not new segments: they
+// add volume and mass without adding a joint.
+const TORSO_BARS = [
+  { a: 'leftUpperArm', b: 'rightUpperArm', frac: 0.80 },
+  { a: 'leftUpperLeg', b: 'rightUpperLeg', frac: 0.85 },
+];
+
+// `cone` is the PER-AXIS swing bound on each of the two non-twist axes; the
+// square's diagonal reaches √2·cone (see the ball branch for why that is the
+// right trade). `twist` bounds rotation about the bone.
 const JOINTS_DEF = [
-  { at: 'spine', parent: 'hips', child: 'spine', kind: 'spherical', cone: 0.44, twist: 0.26 },
-  { at: 'chest', parent: 'spine', child: 'chest', kind: 'spherical', cone: 0.35, twist: 0.26 },
-  { at: 'neck', parent: 'chest', child: 'neck', kind: 'spherical', cone: 0.70, twist: 0.70 },
-  { at: 'leftUpperArm', parent: 'chest', child: 'leftUpperArm', kind: 'spherical', cone: 1.48, twist: 0.79 },
-  { at: 'rightUpperArm', parent: 'chest', child: 'rightUpperArm', kind: 'spherical', cone: 1.48, twist: 0.79 },
+  { at: 'spine', parent: 'hips', child: 'spine', kind: 'ball', cone: 0.44, twist: 0.26 },
+  { at: 'chest', parent: 'spine', child: 'chest', kind: 'ball', cone: 0.35, twist: 0.26 },
+  { at: 'neck', parent: 'chest', child: 'neck', kind: 'ball', cone: 0.70, twist: 0.70 },
+  // 1.20, not the Verlet's 1.48: rapier's per-axis angular limits are an
+  // Euler-like decomposition, and a limit set AT 85° sits on the 90°
+  // degeneracy, where it stops holding — measured 143° of shoulder swing
+  // against a 120° bound across the fleet. 69° per axis is well conditioned
+  // and the square's diagonal still reaches 97°. Range lost to conditioning is
+  // bought back by BUILD_WIDEN below, which is what actually has to hold.
+  { at: 'leftUpperArm', parent: 'chest', child: 'leftUpperArm', kind: 'ball', cone: 1.20, twist: 0.79 },
+  { at: 'rightUpperArm', parent: 'chest', child: 'rightUpperArm', kind: 'ball', cone: 1.20, twist: 0.79 },
   { at: 'leftLowerArm', parent: 'leftUpperArm', child: 'leftLowerArm', kind: 'elbow' },
   { at: 'rightLowerArm', parent: 'rightUpperArm', child: 'rightLowerArm', kind: 'elbow' },
-  { at: 'leftUpperLeg', parent: 'hips', child: 'leftUpperLeg', kind: 'spherical', cone: 0.96, twist: 0.52 },
-  { at: 'rightUpperLeg', parent: 'hips', child: 'rightUpperLeg', kind: 'spherical', cone: 0.96, twist: 0.52 },
+  { at: 'leftUpperLeg', parent: 'hips', child: 'leftUpperLeg', kind: 'ball', cone: 0.96, twist: 0.52 },
+  { at: 'rightUpperLeg', parent: 'hips', child: 'rightUpperLeg', kind: 'ball', cone: 0.96, twist: 0.52 },
   { at: 'leftLowerLeg', parent: 'leftUpperLeg', child: 'leftLowerLeg', kind: 'knee' },
   { at: 'rightLowerLeg', parent: 'rightUpperLeg', child: 'rightLowerLeg', kind: 'knee' },
 ];
+const BUILD_WIDEN = 0.12;        // slack over the born pose when it exceeds anatomy
+const HINGE_FLEX = 2.6;          // how far a knee or elbow folds
+const HINGE_SLACK = 0.09;        // and how far it may go the wrong way
 const RADIUS_FRAC = {
   'hips|spine': 1.0, 'spine|chest': 0.95, 'chest|neck': 1.0, 'neck|head': 0.6,
   'leftUpperArm|leftLowerArm': 0.5, 'leftLowerArm|leftHand': 0.35,
@@ -76,13 +133,27 @@ const RADIUS_FRAC = {
 
 const FIXED_DT = 1 / 60;
 const MAX_FRAMES = 8;            // a hitch drops its backlog, never simulates a second at once
+const SOLVER_ITERS = 16;         // stock is 4; a 14-body articulated chain wants more
 const SETTLE_V = 0.07;
+const SETTLE_W = 0.6;            // rad/s — a body still turning is not settled
 const SETTLE_TIME = 0.45;
 const DEADLINE = 8;
-const TONE0 = 28;                // starting muscle tone (motor stiffness)
-const TONE_DECAY = 0.82;         // per 0.1s — limp in ~1.5s
+const TONE0 = 14;                // motor stiffness, N·m/rad, at the moment of going limp
+const TONE_DAMP = 1.2;
+const TONE_DECAY = 0.80;         // per 0.1 s — tone is under 1% of TONE0 by ~2 s
+const TONE_FLOOR = 0.05;
+// Angular damping is now just damping, not a stability budget: the limits it
+// used to be compensating for are inside the solver. The spike validated 0.7.
+const ANG_DAMP = 0.7;
+const ANG_DAMP_TORSO = 1.0;
+const LIN_DAMP = 0.15;
+const ANG_CEIL = 20;             // rad/s, a backstop and nothing more
 
-const _up = new THREE.Vector3(0, 1, 0);
+const _q = new THREE.Quaternion();
+const _qp = new THREE.Quaternion();
+const _v = new THREE.Vector3();
+const _a = new THREE.Vector3();
+const _b = new THREE.Vector3();
 
 /** A DETERMINISTIC frame for a bone direction — never setFromUnitVectors.
  *  That helper is singular for antiparallel inputs (legs point DOWN, the
@@ -98,11 +169,40 @@ function frameQuat(dir, out = new THREE.Quaternion()) {
   const z = new THREE.Vector3().crossVectors(x, y);
   return out.setFromRotationMatrix(new THREE.Matrix4().makeBasis(x, y, z));
 }
-const _q = new THREE.Quaternion();
-const _qp = new THREE.Quaternion();
-const _v = new THREE.Vector3();
-const _a = new THREE.Vector3();
-const _b = new THREE.Vector3();
+
+/** Shortest-arc rotation from one unit vector to another, with the
+ *  antiparallel case answered rather than guessed. THREE's setFromUnitVectors
+ *  picks an arbitrary perpendicular when the inputs oppose — fine for a one-off
+ *  render, poison for a rest frame that has to mean the same thing twice. */
+// dedicated temps: callers pass the shared _a/_b in, so this must not use them
+const _sa1 = new THREE.Vector3();
+const _sa2 = new THREE.Vector3();
+const _sa3 = new THREE.Vector3();
+function shortestArc(from, to, out = new THREE.Quaternion()) {
+  const f = _sa1.copy(from).normalize();
+  const t = _sa2.copy(to).normalize();
+  const d = f.dot(t);
+  if (d > 0.999999) return out.set(0, 0, 0, 1);
+  if (d < -0.999999) {
+    // 180°: any perpendicular axis is correct, so pick one DETERMINISTICALLY
+    _sa3.set(Math.abs(f.x) < 0.9 ? 1 : 0, Math.abs(f.x) < 0.9 ? 0 : 1, 0);
+    _sa3.crossVectors(f, _sa3).normalize();
+    return out.setFromAxisAngle(_sa3, Math.PI);
+  }
+  _sa3.crossVectors(f, t);
+  out.set(_sa3.x, _sa3.y, _sa3.z, 1 + d);
+  return out.normalize();
+}
+
+/** Total swing angle between two bodies' frames. Rest-aligned bodies make this
+ *  the deviation from rest directly, with no reference rotation to cancel. */
+function relSwing(pb, cb) {
+  const rp = pb.rotation(), rc = cb.rotation();
+  const qP = new THREE.Quaternion(rp.x, rp.y, rp.z, rp.w);
+  const qC = new THREE.Quaternion(rc.x, rc.y, rc.z, rc.w);
+  const rel = qP.invert().multiply(qC);
+  return 2 * Math.acos(Math.min(1, Math.abs(rel.w)));
+}
 
 export class RapierRagdoll {
   constructor(avatar, lean = null, rest = null, seedVel = null) {
@@ -111,11 +211,12 @@ export class RapierRagdoll {
     this.pose = null;
     this.finalPose = null;
     this.pins = new Map();          // joint -> THREE.Vector3 (world) — bodydrag reads this
-    this._pinBodies = new Map();    // joint -> { marker, joint }
+    this._pinBodies = new Map();    // joint -> { marker, joint, at }
     this.settledFor = 0;
     this.elapsed = 0;
     this.acc = 0;
     this.maxV = Infinity;
+    this.maxW = Infinity;
     this.p = {};                    // joint -> world pos (debug + parity surface)
 
     const h = avatar.vrm.humanoid;
@@ -127,7 +228,6 @@ export class RapierRagdoll {
       const n = h?.getNormalizedBoneNode?.(j);
       if (n) live[j] = n.getWorldPosition(new THREE.Vector3());
     }
-    // VRM makes chest optional; the chain requires it — synthesize mid-torso
     if (!live.chest && live.spine && live.neck) {
       live.chest = live.spine.clone().add(live.neck).multiplyScalar(0.5);
     }
@@ -150,13 +250,31 @@ export class RapierRagdoll {
     }
     const restP = {};
     const restSrc = rest ?? avatar.restBonePositions?.() ?? live;
-    for (const [j, v] of Object.entries(restSrc)) restP[j] = v.clone ? v.clone() : new THREE.Vector3(v.x, v.y, v.z);
+    for (const [j, v] of Object.entries(restSrc)) {
+      restP[j] = v.clone ? v.clone() : new THREE.Vector3(v.x, v.y, v.z);
+    }
     if (!restP.chest && restP.spine && restP.neck) {
       restP.chest = restP.spine.clone().add(restP.neck).multiplyScalar(0.5);
     }
+    this.restP = restP;
 
-    // the drive table, exactly the Verlet's world-reference method: bones are
-    // rotated so rest direction meets live direction — proven on 14 rigs
+    // ---- the RIG FRAME: up / lateral / forward, from the rest skeleton ------
+    // Every joint axis below is expressed in these terms and never in world
+    // constants. restBonePositions() carries the avatar's yaw, so this frame
+    // turns with the body and the axes turn with it.
+    const rigUp = (restP.neck ?? restP.chest ?? restP.spine).clone().sub(restP.hips).normalize();
+    let rigLat = restP.leftUpperArm && restP.rightUpperArm
+      ? restP.leftUpperArm.clone().sub(restP.rightUpperArm)
+      : (restP.leftUpperLeg && restP.rightUpperLeg
+        ? restP.leftUpperLeg.clone().sub(restP.rightUpperLeg)
+        : new THREE.Vector3(1, 0, 0));
+    rigLat.addScaledVector(rigUp, -rigLat.dot(rigUp));           // orthogonalise
+    if (rigLat.lengthSq() < 1e-9) rigLat.set(1, 0, 0);
+    rigLat.normalize();
+    const rigFwd = new THREE.Vector3().crossVectors(rigLat, rigUp).normalize();
+    this.rig = { up: rigUp, lateral: rigLat, forward: rigFwd };
+
+    // the drive table, exactly the Verlet's world-reference method
     this.drive = [];
     for (const [bone, child] of SEGMENTS) {
       const bn = h?.getNormalizedBoneNode?.(bone);
@@ -174,24 +292,36 @@ export class RapierRagdoll {
     // ---- the physics world: local flat ground + nearby furniture ----------
     this.world = new RAPIER.World({ x: 0, y: -9.81, z: 0 });
     this.world.timestep = FIXED_DT;
+    this.world.numSolverIterations = SOLVER_ITERS;
     const hips = live.hips ?? avatar.root.position;
     this.groundY = heightAt(hips.x, hips.z);
     this.world.createCollider(
-      RAPIER.ColliderDesc.cuboid(60, 0.5, 60).setTranslation(hips.x, this.groundY - 0.5, hips.z).setFriction(0.85),
+      RAPIER.ColliderDesc.cuboid(60, 0.5, 60)
+        .setTranslation(hips.x, this.groundY - 0.5, hips.z).setFriction(0.85),
     );
     for (const [, c] of colliders) {
       const obj = c.obj;
       if (!obj || c.interior || !c.box) continue;
       if (Math.hypot(obj.position.x - hips.x, obj.position.z - hips.z) > 8) continue;
-      const size = c.box.getSize(new THREE.Vector3()).multiplyScalar(obj.scale?.x || 1);
-      const center = c.box.getCenter(new THREE.Vector3()).add(obj.position);
-      this.world.createCollider(
-        RAPIER.ColliderDesc.cuboid(Math.max(size.x / 2, 0.02), Math.max(size.y / 2, 0.02), Math.max(size.z / 2, 0.02))
-          .setTranslation(center.x, center.y, center.z).setFriction(0.8),
-      );
+      // scale applies to the CENTRE OFFSET as well as the size, and the
+      // object's rotation is part of where its box is — dropping either put
+      // bodies through furniture they could see. Matches colliders.js's own
+      // world-placement law (localCentre * scale, rotated, + position).
+      const sc = obj.scale ?? { x: 1, y: 1, z: 1 };
+      const size = c.box.getSize(new THREE.Vector3()).multiply(_v.set(sc.x, sc.y, sc.z));
+      const centre = c.box.getCenter(new THREE.Vector3())
+        .multiply(_v.set(sc.x, sc.y, sc.z))
+        .applyQuaternion(obj.quaternion ?? new THREE.Quaternion())
+        .add(obj.position);
+      const cd = RAPIER.ColliderDesc.cuboid(
+        Math.max(size.x / 2, 0.02), Math.max(size.y / 2, 0.02), Math.max(size.z / 2, 0.02),
+      ).setTranslation(centre.x, centre.y, centre.z).setFriction(0.8);
+      const oq = obj.quaternion;
+      if (oq) cd.setRotation({ x: oq.x, y: oq.y, z: oq.z, w: oq.w });
+      this.world.createCollider(cd);
     }
 
-    // ---- segments as capsules, at the LIVE pose ---------------------------
+    // ---- segments as capsules, REST-ALIGNED (see header) -------------------
     const span = live.leftUpperArm && live.rightUpperArm
       ? live.leftUpperArm.distanceTo(live.rightUpperArm) : 0.3;
     const torsoR = Math.max(0.05, span * 0.22);
@@ -199,77 +329,144 @@ export class RapierRagdoll {
     const bodyOf = new Map();
     const segList = [];
 
-    // ---- the TORSO is ONE rigid body -------------------------------------
-    // The spine and chest joints could not be defended: a fold forms at
-    // impact faster than capped springs respond, then ground friction pins
-    // it — measured 142° of swing against a 25° cone, unrecoverable by any
-    // force this side of teleportation. Real ragdolls solve this the same
-    // way: torsos are (nearly) rigid. Three capsules, one body; the head
-    // and limbs keep their joints, which is where the looseness READS.
+    // The TORSO IS ONE RIGID BODY. The spine and chest joints could not be
+    // defended: a fold forms at impact faster than any limit responds, then
+    // ground friction pins it — measured 142° of swing against a 25° cone.
+    // Real ragdolls are built this way for this reason; the looseness READS in
+    // the head and limbs, which keep their joints.
     const TORSO = new Set(['hips|spine', 'spine|chest', 'chest|neck']);
-    const torsoDir = (live.chest ?? live.neck).clone().sub(live.hips);
-    const torsoQ = frameQuat(torsoDir);
-    const torsoMid = live.hips.clone().add(live.neck ?? live.chest).multiplyScalar(0.5);
+    const restTorsoDir = (restP.chest ?? restP.neck).clone().sub(restP.hips);
+    const liveTorsoDir = (live.chest ?? live.neck).clone().sub(live.hips);
+    const torsoQ = shortestArc(restTorsoDir, liveTorsoDir, new THREE.Quaternion());
+    const restTorsoMid = restP.hips.clone().add(restP.neck ?? restP.chest).multiplyScalar(0.5);
+    const liveTorsoMid = live.hips.clone().add(live.neck ?? live.chest).multiplyScalar(0.5);
     const torsoBody = this.world.createRigidBody(
       RAPIER.RigidBodyDesc.dynamic()
-        .setTranslation(torsoMid.x, torsoMid.y, torsoMid.z)
+        .setTranslation(liveTorsoMid.x, liveTorsoMid.y, liveTorsoMid.z)
         .setRotation({ x: torsoQ.x, y: torsoQ.y, z: torsoQ.z, w: torsoQ.w })
-        .setLinearDamping(0.15).setAngularDamping(6),
+        .setLinearDamping(LIN_DAMP).setAngularDamping(ANG_DAMP_TORSO),
     );
-    const torsoQInv = torsoQ.clone().invert();
-    const toTorso = (w2) => w2.clone().sub(torsoMid).applyQuaternion(torsoQInv);
+    this.torsoBody = torsoBody;
+
+    /** Attach a capsule to `body` so that AT REST it spans ra→rb. Local
+     *  rotation is the bone's rest frame; local translation is the rest
+     *  midpoint relative to the body's rest origin. Body orientation stays
+     *  free to be the rest→live rotation, which is what makes joint frames
+     *  agree. */
+    const addCapsule = (body, bodyRestOrigin, ra, rb, radius) => {
+      const dir = rb.clone().sub(ra);
+      const len = Math.max(dir.length(), 0.04);
+      const mid = ra.clone().add(rb).multiplyScalar(0.5);
+      const localQ = frameQuat(dir);
+      const localT = mid.clone().sub(bodyRestOrigin);
+      const desc = RAPIER.ColliderDesc
+        .capsule(Math.max(0.01, len / 2 - radius * 0.5), radius)
+        .setTranslation(localT.x, localT.y, localT.z)
+        .setRotation({ x: localQ.x, y: localQ.y, z: localQ.z, w: localQ.w })
+        .setFriction(0.8).setRestitution(0.03).setDensity(1000);
+      return this.world.createCollider(desc, body);
+    };
+
+    // ---- body orientations, DOWN THE CHAIN, not one at a time ---------------
+    // A shortest arc is twist-free about its own axis, so composing two of them
+    // independently leaves a spurious roll BETWEEN them: measured up to 45° of
+    // rotation on a hinge's LOCKED axes at build (shoulder 45° down + elbow
+    // flexed 90°), which the solver then annihilates in one step. Roll is not
+    // observable from bone positions — the Verlet has the same blind spot and
+    // never drives twist either — so the consistent choice is to give the chain
+    // ZERO relative roll by construction: each child's orientation is its
+    // parent's, times the shortest arc taken IN THE PARENT'S FRAME.
+    //
+    //   qChild · restDir = qParent · shortestArc(restDir, qParent⁻¹·liveDir)
+    //                                 · restDir  =  liveDir           ✓
+    //
+    // so the direction is still exact, and the relative rotation a joint sees
+    // is a pure swing about an axis perpendicular to the bone — which is what
+    // its locked axes and its twist bound both assume.
+    const parentSegKey = new Map();
+    for (const J of JOINTS_DEF) {
+      const cKey = SEGMENTS.find((s) => s[0] === J.child);
+      const pKey = SEGMENTS.find((s) => s[0] === J.parent);
+      if (cKey && pKey) parentSegKey.set(cKey.join('|'), pKey.join('|'));
+    }
+    const bodyQuat = new Map();
+    const quatOf = (key, seen = new Set()) => {
+      if (bodyQuat.has(key)) return bodyQuat.get(key);
+      if (TORSO.has(key)) { bodyQuat.set(key, torsoQ); return torsoQ; }
+      if (seen.has(key)) return torsoQ;                 // cycle guard
+      seen.add(key);
+      const [a, b] = key.split('|');
+      if (!live[a] || !live[b] || !restP[a] || !restP[b]) return torsoQ;
+      const pk = parentSegKey.get(key);
+      const qParent = pk ? quatOf(pk, seen) : torsoQ;
+      const liveLocal = live[b].clone().sub(live[a]).applyQuaternion(qParent.clone().invert());
+      const q = qParent.clone().multiply(
+        shortestArc(restP[b].clone().sub(restP[a]), liveLocal, new THREE.Quaternion()));
+      bodyQuat.set(key, q);
+      return q;
+    };
 
     for (const [a, b] of SEGMENTS) {
-      if (!live[a] || !live[b]) continue;
-      const pa = live[a], pb2 = live[b];
-      const mid = pa.clone().add(pb2).multiplyScalar(0.5);
-      const dir = pb2.clone().sub(pa);
-      const len = Math.max(dir.length(), 0.04);
-      const r = Math.min(torsoR * (RADIUS_FRAC[`${a}|${b}`] ?? 0.5), len * 0.45) * 0.9;
+      if (!live[a] || !live[b] || !restP[a] || !restP[b]) continue;
       const key = `${a}|${b}`;
+      const ra = restP[a], rb = restP[b];
+      const restLen = Math.max(ra.distanceTo(rb), 0.04);
+      const isTorso = TORSO.has(key);
+      // The len*0.45 clamp let the SHORTEST trunk bone set the trunk's width:
+      // hips|spine is 0.047 m on fox_adventurer, so the pelvis capsule came
+      // out 0.019 m thick against a 0.050 m target. Trunk pieces are volume,
+      // not sticks — they keep their anatomical radius.
+      const frac = RADIUS_FRAC[key] ?? 0.5;
+      const r = isTorso ? torsoR * frac * 0.9
+        : Math.min(torsoR * frac, restLen * 0.45) * 0.9;
+
       let body, collider, localA, localB;
-      if (TORSO.has(key)) {
+      if (isTorso) {
         body = torsoBody;
-        const segQ = frameQuat(dir);
-        const localQ = torsoQInv.clone().multiply(segQ);
-        const localMid = toTorso(mid);
-        collider = this.world.createCollider(
-          RAPIER.ColliderDesc.capsule(Math.max(0.01, len / 2 - r * 0.5), r)
-            .setTranslation(localMid.x, localMid.y, localMid.z)
-            .setRotation({ x: localQ.x, y: localQ.y, z: localQ.z, w: localQ.w })
-            .setFriction(0.8).setRestitution(0.03).setDensity(1000),
-          body,
-        );
-        localA = toTorso(pa); localB = toTorso(pb2);
+        collider = addCapsule(body, restTorsoMid, ra, rb, r);
+        localA = ra.clone().sub(restTorsoMid);
+        localB = rb.clone().sub(restTorsoMid);
       } else {
-        frameQuat(dir, _q);
-        // Angular damping is the stability budget: applied INSIDE the
-        // solver, unconditionally stable — no corrective torque of ours can
-        // pump against it. Limbs keep enough freedom to swing.
+        const restMid = ra.clone().add(rb).multiplyScalar(0.5);
+        const liveMid = live[a].clone().add(live[b]).multiplyScalar(0.5);
+        const qB = quatOf(key);
         body = this.world.createRigidBody(
           RAPIER.RigidBodyDesc.dynamic()
-            .setTranslation(mid.x, mid.y, mid.z)
-            .setRotation({ x: _q.x, y: _q.y, z: _q.z, w: _q.w })
-            .setLinearDamping(0.15).setAngularDamping(a === 'neck' ? 5 : 3.5),
+            .setTranslation(liveMid.x, liveMid.y, liveMid.z)
+            .setRotation({ x: qB.x, y: qB.y, z: qB.z, w: qB.w })
+            .setLinearDamping(LIN_DAMP).setAngularDamping(ANG_DAMP),
         );
-        collider = this.world.createCollider(
-          RAPIER.ColliderDesc.capsule(Math.max(0.01, len / 2 - r * 0.5), r)
-            .setFriction(0.8).setRestitution(0.03).setDensity(1000),
-          body,
-        );
-        localA = new THREE.Vector3(0, -len / 2, 0); localB = new THREE.Vector3(0, len / 2, 0);
+        collider = addCapsule(body, restMid, ra, rb, r);
+        localA = ra.clone().sub(restMid);
+        localB = rb.clone().sub(restMid);
       }
-      const seg = { body, collider, localA, localB, r, a, b, idx: segList.length, torso: TORSO.has(key) };
+      const seg = { body, collider, localA, localB, r, a, b, idx: segList.length, torso: isTorso };
       this.segs.set(key, seg);
       segList.push(seg);
       bodyOf.set(a, body);
     }
 
+    // ---- the torso's solid: shoulder bar and pelvis bar --------------------
+    for (const bar of TORSO_BARS) {
+      const ra = restP[bar.a], rb = restP[bar.b];
+      if (!ra || !rb || ra.distanceTo(rb) < 1e-4) continue;
+      const r = torsoR * bar.frac * 0.9;
+      const collider = addCapsule(torsoBody, restTorsoMid, ra, rb, r);
+      const seg = {
+        body: torsoBody, collider, r, a: bar.a, b: bar.b,
+        localA: ra.clone().sub(restTorsoMid), localB: rb.clone().sub(restTorsoMid),
+        idx: segList.length, torso: true, bar: true,
+      };
+      segList.push(seg);          // gets a collision-group bit; NOT in this.segs
+    }
+
     // ---- self-collision, the Verlet's law ported to collision groups ------
-    // Rest-overlapping pairs never collide; same-body pairs are moot; the
-    // rest may touch. 16-bit masks fit the fleet; bit 15 keeps statics.
+    // Rest-overlapping pairs never collide; same-body pairs are moot; the rest
+    // may touch. Membership in the high half, filter in the low half, bit 15
+    // reserved so statics (groups 0xFFFFFFFF) stay hittable — which caps us at
+    // 15 colliders. 12 segments + 2 bars = 14. Adding a third bar needs a
+    // different encoding, not a bigger shift.
     {
-      const restAt = (name) => restP[name] ?? live[name];
       const segd = (p1, q1, p2, q2) => {
         const d1 = q1.clone().sub(p1), d2 = q2.clone().sub(p2), rr = p1.clone().sub(p2);
         const A = d1.dot(d1), E = d2.dot(d2), F = d2.dot(rr);
@@ -297,203 +494,307 @@ export class RapierRagdoll {
         for (let j = i + 1; j < segList.length; j++) {
           const A2 = segList[i], B2 = segList[j];
           if (adjacent(A2, B2)) continue;
-          const pa1 = restAt(A2.a), pb1 = restAt(A2.b), pa2 = restAt(B2.a), pb2b = restAt(B2.b);
+          const pa1 = restP[A2.a], pb1 = restP[A2.b], pa2 = restP[B2.a], pb2b = restP[B2.b];
           if (!pa1 || !pb1 || !pa2 || !pb2b) continue;
           if (segd(pa1, pb1, pa2, pb2b) < (A2.r + B2.r) * 1.05) continue;
           filters[i] |= (1 << B2.idx);
           filters[j] |= (1 << A2.idx);
         }
       }
+      if (segList.length > 15) console.warn('[rapierdoll] >15 colliders — group encoding overflows');
       for (const seg of segList) {
         seg.collider.setCollisionGroups(((1 << seg.idx) << 16) | filters[seg.idx] | 0x8000);
       }
     }
 
-    // ---- joints with the fleet-measured stance ----------------------------
-    const local = (body, worldPos) => {
+    // ---- joints: every bound IN THE SOLVER --------------------------------
+    // Anchors are body-LOCAL. At rest a body's frame is the world frame and
+    // its origin is its rest midpoint, so a rest world point maps in by simple
+    // subtraction — no quaternion, and nothing to get backwards.
+    // ONE world point, mapped into each body through that body's ACTUAL
+    // build-time transform. This is zero initial constraint error by
+    // construction, whatever the frames are — which matters because the torso
+    // is rest-SHAPED (a rigid trunk cannot reproduce a bent live spine), so its
+    // idea of where the shoulder is and the arm's idea are not the same point.
+    // Deriving each anchor from its own body's rest geometry instead put up to
+    // 115 mm between them on a twisted trunk, and the solver answered that
+    // error with an impulse: peak angular velocity pinned at the 20 rad/s
+    // ceiling within six frames. Anchors are POSITION; the rest-aligned frames
+    // above are ORIENTATION. They are independent, and only the second one
+    // needs the rest pose.
+    const localAnchor = (body, worldPos) => {
       const t = body.translation(), rq = body.rotation();
       return worldPos.clone().sub(new THREE.Vector3(t.x, t.y, t.z))
         .applyQuaternion(new THREE.Quaternion(rq.x, rq.y, rq.z, rq.w).invert());
     };
-    this.motors = [];       // revolute joints — the only kind rapier motorizes
-    this.balls = [];        // spherical joints — cones/twist/tone are OURS
     const segByParentBone = new Map();
     for (const s of this.segs.values()) segByParentBone.set(s.a, s);
-    const torsoRestQ = frameQuat((restP.chest ?? restP.neck).clone().sub(restP.hips));
-    const restQuatOfSeg = (s) => {
-      if (s.torso) return torsoRestQ.clone();     // one frame for one body
-      const ra = restP[s.a], rb = restP[s.b];
-      if (!ra || !rb) return new THREE.Quaternion();
-      return frameQuat(rb.clone().sub(ra));       // same frame law as the bodies
-    };
+
+    this.balls = [];
+    this.hinges = [];
+    this.jointHandles = [];        // every joint that carries a motor
+    const raw = this.world.impulseJoints.raw;
+    const M = RAPIER.JointAxesMask;
+
     for (const J of JOINTS_DEF) {
       const pb = bodyOf.get(J.parent), cb = bodyOf.get(J.child);
-      if (!pb || !cb || !live[J.at]) continue;
+      if (!pb || !cb || !restP[J.at] || !live[J.at]) continue;
       if (pb === cb) continue;                    // torso-internal: rigid now
-      const at = live[J.at];
-      let jd;
-      if (J.kind === 'spherical') {
-        // NOT a free ball: linear locked AND the twist axis locked — a 2-DOF
-        // swing joint, natively. This is exactly the Verlet's DOF set (its
-        // direction-only drive never expressed twist), it makes head-spin
-        // structurally impossible, and it leaves the angular pass a clean
-        // 2-DOF swing to bound. Axis = the child bone at build, parent-local.
-        const cs0 = segByParentBone.get(J.child);
-        const boneW = cs0 && live[cs0.b] && live[cs0.a]
-          ? live[cs0.b].clone().sub(live[cs0.a]).normalize() : _up.clone();
-        const rq0 = pb.rotation();
-        const axisPL = boneW.applyQuaternion(new THREE.Quaternion(rq0.x, rq0.y, rq0.z, rq0.w).invert());
-        const M = RAPIER.JointAxesMask;
-        jd = RAPIER.JointData.generic(local(pb, at), local(cb, at),
-          axisPL, M.LinX | M.LinY | M.LinZ | M.AngX);
+      const ps = segByParentBone.get(J.parent), cs = segByParentBone.get(J.child);
+      if (!ps || !cs) continue;
+      const a1 = localAnchor(pb, live[J.at]);
+      const a2 = localAnchor(cb, live[J.at]);
+      const childDir = restP[cs.b].clone().sub(restP[cs.a]).normalize();
+
+      if (J.kind === 'ball') {
+        // Twist about the bone, swing on the other two.
+        //
+        // The cone is the PER-AXIS bound, not the bound on the total. Two
+        // independent per-axis limits describe a SQUARE in (y,z) angle space,
+        // not a disc: setting each to cone/√2 makes the corner reach `cone` but
+        // caps a pure single-axis swing — which is what "arm hangs at the
+        // side" actually is — at 0.707·cone. Measured: the shoulder's 84.8°
+        // became an effective 60.0°, and an avatar going limp from any ordinary
+        // A-pose (arms 65-80° down from a T-pose rest) was therefore built
+        // OUTSIDE its own shoulder limit. The solver annihilated that in one
+        // step: 15 m/s of linear velocity and angular velocity pinned at the
+        // ANG_CEIL clamp, on frame one. The square's diagonal reaching √2·cone
+        // is the honest cost of the axis-aligned limits rapier gives us, and a
+        // shoulder is mobile enough to spend it; a limit too TIGHT to hold the
+        // rest pose is not.
+        const jd = RAPIER.JointData.generic(a1, a2, childDir, M.LinX | M.LinY | M.LinZ);
+        const joint = this.world.createImpulseJoint(jd, pb, cb, true);
+        joint.setContactsEnabled(false);
+        // A JOINT MUST CONTAIN THE POSE IT WAS BORN IN. Anatomy is a floor,
+        // not a ceiling: a rig whose bind pose is a T-pose, going limp from an
+        // arms-down idle, presents ~85° of shoulder swing at build. Declaring
+        // a tighter cone than that does not make the arm anatomical, it makes
+        // the solver annihilate the difference on frame one (measured: 15 m/s
+        // and the angular ceiling, instantly). So widen to admit the build
+        // pose, and let tone pull it back toward rest instead.
+        const born = relSwing(pb, cb);
+        const cone = Math.max(J.cone, born + BUILD_WIDEN);
+        const twist = Math.max(J.twist, born + BUILD_WIDEN);
+        raw.jointSetLimits(joint.handle, AX_ANG_X, -twist, twist);
+        raw.jointSetLimits(joint.handle, AX_ANG_Y, -cone, cone);
+        raw.jointSetLimits(joint.handle, AX_ANG_Z, -cone, cone);
+        this.jointHandles.push({ handle: joint.handle, axes: [AX_ANG_X, AX_ANG_Y, AX_ANG_Z] });
+        this.balls.push({
+          name: J.at, pb, cb, cone, twist, axisL: childDir.clone(),
+          declaredCone: J.cone, declaredTwist: J.twist, born,
+        });
       } else {
-        const boneDir = restP[J.child] && restP[J.parent]
-          ? restP[J.child].clone().sub(restP[J.parent]).normalize() : _up.clone();
-        const axisWorld = J.kind === 'knee'
-          ? new THREE.Vector3(1, 0, 0)
-          : new THREE.Vector3().crossVectors(new THREE.Vector3(0, 0, 1), boneDir).normalize();
-        if (axisWorld.lengthSq() < 1e-6) axisWorld.set(1, 0, 0);
-        const rq = pb.rotation();
-        const axisLocal = axisWorld.applyQuaternion(new THREE.Quaternion(rq.x, rq.y, rq.z, rq.w).invert());
-        jd = RAPIER.JointData.revolute(local(pb, at), local(cb, at), axisLocal);
-        jd.limitsEnabled = true;
-        jd.limits = J.kind === 'knee' ? [-2.6, 0.09] : [-0.09, 2.6];
-      }
-      const joint = this.world.createImpulseJoint(jd, pb, cb, true);
-      joint.setContactsEnabled(false);
-      if (J.kind === 'spherical') {
-        // anatomy in REST terms: relative rest rotation + the twist axis
-        // (the child bone's rest direction, in the parent segment's frame)
-        const ps = segByParentBone.get(J.parent), cs = segByParentBone.get(J.child);
-        if (ps && cs && restP[cs.a] && restP[cs.b]) {
-          const qP0 = restQuatOfSeg(ps), qC0 = restQuatOfSeg(cs);
-          const restRel = qP0.clone().invert().multiply(qC0);
-          const axisL = restP[cs.b].clone().sub(restP[cs.a]).normalize()
-            .applyQuaternion(qP0.clone().invert());
-          // ANGULAR inertia, not mass: a solid capsule about its transverse
-          // axis. Scaling torque by mass over-drove small segments by orders
-          // of magnitude (a hand's I is ~1000× smaller than its m suggests) —
-          // measured: 2,000,000 rad/s of hidden spin under settled positions.
-          const m = cb.mass?.() ?? 1;
-          const len = cs.localA.distanceTo(cs.localB);
-          // per-axis: a slender capsule has ~50× less inertia about its LONG
-          // axis — isotropic scaling over-drives twist and pumps
-          const It = Math.max(1e-6, m * (len * len / 12 + cs.r * cs.r / 4));
-          const Il = Math.max(1e-7, m * cs.r * cs.r / 2);
-          this.balls.push({ pb, cb, cone: J.cone, twist: J.twist, restRel, axisL, It, Il });
-        }
-      } else {
-        this.motors.push(joint);
+        // A hinge axis is a RIG quantity. cross(bone, forward) is the flexion
+        // axis for a T-pose arm (vertical) and an A-pose arm or a leg
+        // (lateral) alike, because it is defined against the body's own
+        // facing rather than against north.
+        const boneDir = restP[J.child].clone().sub(restP[J.parent]).normalize();
+        let axis = new THREE.Vector3().crossVectors(boneDir, rigFwd);
+        if (axis.lengthSq() < 1e-6) axis.copy(rigLat);            // bone ∥ forward
+        axis.normalize();
+        // Which way does it FOLD? A knee takes the foot backward, an elbow
+        // takes the hand forward. Rotating the distal segment by +θ about the
+        // axis moves its tip along (axis × dir), so the sign of that against
+        // the wanted direction picks the range. Derived, never assumed — the
+        // two sides of the body mirror and a hard-coded sign is wrong on one.
+        const want = J.kind === 'knee' ? rigFwd.clone().negate() : rigFwd.clone();
+        const move = new THREE.Vector3().crossVectors(axis, childDir);
+        const positiveFolds = move.dot(want) > 0;
+        const lo = positiveFolds ? -HINGE_SLACK : -HINGE_FLEX;
+        const hi = positiveFolds ? HINGE_FLEX : HINGE_SLACK;
+        const jd = RAPIER.JointData.generic(
+          a1, a2, axis, M.LinX | M.LinY | M.LinZ | M.AngY | M.AngZ);
+        const joint = this.world.createImpulseJoint(jd, pb, cb, true);
+        joint.setContactsEnabled(false);
+        raw.jointSetLimits(joint.handle, AX_ANG_X, lo, hi);
+        this.jointHandles.push({ handle: joint.handle, axes: [AX_ANG_X] });
+        this.hinges.push({
+          name: J.at, kind: J.kind, axisWorld: axis.clone(), boneDir: boneDir.clone(),
+          limits: [lo, hi], pb, cb,
+        });
       }
     }
-    this.tone = TONE0;
-    this._setTone(this.tone);
-    this._toneAcc = 0;
 
-    // inherited velocities: each segment takes its endpoints' average
-    for (const s of this.segs.values()) {
-      const va = seedV[s.a], vb = seedV[s.b];
-      if (!va && !vb) continue;
-      _v.copy(va ?? vb).add(vb ?? va).multiplyScalar(0.5);
-      s.body.setLinvel({ x: _v.x, y: _v.y, z: _v.z }, true);
+    this.tone = TONE0;
+    this._toneAcc = 0;
+    this._setTone(this.tone);
+
+    // ---- inherited velocities: recover the SPIN, not just the drift --------
+    // snapshot() encodes each endpoint as v + ω × r precisely so a tumbling
+    // body can hand over its tumble. Averaging endpoint velocities throws the
+    // differential away and keeps only the translation, so a body swung and
+    // released stopped rotating the instant it was let go. And the torso owns
+    // three segments, so a per-segment setLinvel overwrote the trunk twice —
+    // it ended up with whatever `chest|neck` happened to compute, not a blend.
+    // Group samples by BODY, then invert the encoding:
+    //     ω = (d × Δv) / |d|²   from the most separated endpoint pair
+    //     v_com = v₁ − ω × (p₁ − com)
+    {
+      const samples = new Map();          // body -> [{ p, v }]
+      for (const s of this.segs.values()) {
+        for (const name of [s.a, s.b]) {
+          if (!seedV[name] || !live[name]) continue;
+          if (!samples.has(s.body)) samples.set(s.body, []);
+          const list = samples.get(s.body);
+          if (list.some((x) => x.name === name)) continue;
+          list.push({ name, p: live[name].clone(), v: seedV[name].clone() });
+        }
+      }
+      for (const [body, list] of samples) {
+        if (!list.length) continue;
+        const com = body.worldCom();
+        const comV = new THREE.Vector3(com.x, com.y, com.z);
+        let w = new THREE.Vector3();
+        if (list.length >= 2) {
+          let best = null, bestD = 0;
+          for (let i = 0; i < list.length; i++) {
+            for (let j = i + 1; j < list.length; j++) {
+              const d = list[i].p.distanceToSquared(list[j].p);
+              if (d > bestD) { bestD = d; best = [list[i], list[j]]; }
+            }
+          }
+          if (best && bestD > 1e-8) {
+            const d = best[1].p.clone().sub(best[0].p);
+            const dv = best[1].v.clone().sub(best[0].v);
+            w = new THREE.Vector3().crossVectors(d, dv).divideScalar(bestD);
+            const m = w.length();
+            if (m > ANG_CEIL) w.multiplyScalar(ANG_CEIL / m);      // hostile input
+          }
+        }
+        const s0 = list[0];
+        const vc = s0.v.clone().sub(
+          new THREE.Vector3().crossVectors(w, s0.p.clone().sub(comV)));
+        if (Number.isFinite(vc.x) && Number.isFinite(vc.y) && Number.isFinite(vc.z)) {
+          body.setLinvel({ x: vc.x, y: vc.y, z: vc.z }, true);
+        }
+        if (Number.isFinite(w.x) && Number.isFinite(w.y) && Number.isFinite(w.z)) {
+          body.setAngvel({ x: w.x, y: w.y, z: w.z }, true);
+        }
+      }
     }
 
     // root follow, exactly the Verlet's law
     this.rootStartY = avatar.root.position.y;
-    this.hipsOffset = (live.hips?.y ?? 0) - avatar.root.position.y;
+    this._rootBaseY = avatar.root.position.y;
 
     if (lean) this._topple(lean);
     this._syncP();
+    // measured against the sim's OWN hips, not the skeleton's. The torso is
+    // rest-shaped, so a bent live spine reconstructs p.hips a few mm away from
+    // live.hips — and step() drives the root from p.hips, so taking the offset
+    // from live.hips made the root jump by exactly that difference on frame one.
+    this.hipsOffset = (this.p.hips?.y ?? live.hips?.y ?? 0) - avatar.root.position.y;
   }
 
+  /** Muscle tone: every free axis of every joint gets a position motor toward
+   *  0 — which IS the rest pose, because the bodies are rest-aligned. In the
+   *  solver, so it cannot pump; decaying to a floor, so limp is a process. */
   _setTone(s) {
-    // revolute joints take a real motor; ball joints get their tone in
-    // _angularPass (rapier's JS sphericals have no motors — probed)
-    for (const j of this.motors) {
-      try { j.configureMotorPosition(0, s, 3); } catch { /* not motorable */ }
+    const raw = this.world.impulseJoints.raw;
+    for (const j of this.jointHandles) {
+      for (const ax of j.axes) {
+        raw.jointConfigureMotorPosition(j.handle, ax, 0, s, TONE_DAMP);
+      }
     }
   }
 
-  /** The anatomy rapier does not provide, applied every substep: swing cones,
-   *  twist bounds, and muscle tone on every ball joint. Limits are SURGICAL
-   *  (the Verlet's law): orientation snapped back to the limit surface, the
-   *  offending relative spin removed inelastically — a limit stops, it does
-   *  not store. Tone is a weak spring toward rest that decays to a floor:
-   *  a settled body keeps residual tone, which is also what stops the
-   *  endless-free-spin failure mode. */
-  _angularPass() {
-    const qP = _q, qC = _qp;
+  /** INSTRUMENT (not used by the sim): live swing/twist per ball joint against
+   *  the anatomy that is supposed to bound them, plus the hinge axes as built.
+   *  The parity suite asserts on this. It exists because the suite was 19/19
+   *  green while the body visibly folded in half: metrics that only ever ask
+   *  "is it finite / did it settle" cannot see an anatomy failure.
+   *
+   *  Rest-aligned bodies make this cheap — the relative rotation IS the
+   *  deviation from rest, with no restRel to cancel out. */
+  jointAngles() {
+    const out = [];
     for (const B of this.balls) {
       const rp = B.pb.rotation(), rc = B.cb.rotation();
-      qP.set(rp.x, rp.y, rp.z, rp.w);
-      qC.set(rc.x, rc.y, rc.z, rc.w);
-      // rotation from rest, in the parent's frame — canonical sign (q ≡ −q)
+      const qP = new THREE.Quaternion(rp.x, rp.y, rp.z, rp.w);
+      const qC = new THREE.Quaternion(rc.x, rc.y, rc.z, rc.w);
       const rel = qP.clone().invert().multiply(qC);
-      const delta = rel.clone().multiply(B.restRel.clone().invert());
-      if (delta.w < 0) { delta.x *= -1; delta.y *= -1; delta.z *= -1; delta.w *= -1; }
-      const d = new THREE.Vector3(delta.x, delta.y, delta.z);
-      const proj = d.dot(B.axisL);
-      const twistQ = new THREE.Quaternion(B.axisL.x * proj, B.axisL.y * proj, B.axisL.z * proj, delta.w).normalize();
-      const swingQ = delta.clone().multiply(twistQ.clone().invert());
-      if (swingQ.w < 0) { swingQ.x *= -1; swingQ.y *= -1; swingQ.z *= -1; swingQ.w *= -1; }
-      let twist = 2 * Math.atan2(proj, delta.w);
+      if (rel.w < 0) { rel.x *= -1; rel.y *= -1; rel.z *= -1; rel.w *= -1; }
+      const proj = new THREE.Vector3(rel.x, rel.y, rel.z).dot(B.axisL);
+      const twistQ = new THREE.Quaternion(
+        B.axisL.x * proj, B.axisL.y * proj, B.axisL.z * proj, rel.w).normalize();
+      const swingQ = rel.clone().multiply(twistQ.clone().invert());
+      let twist = 2 * Math.atan2(proj, rel.w);
       if (twist > Math.PI) twist -= 2 * Math.PI;
       if (twist < -Math.PI) twist += 2 * Math.PI;
-      const swing = 2 * Math.acos(Math.min(1, swingQ.w));
-
-      // Everything is a TORQUE — tone inside the envelope, stiff one-sided
-      // springs beyond it. No position surgery: snapping orientation about
-      // the COM violates the joint anchor, and the solver answers the error
-      // with a velocity impulse — a feedback pump (measured: 75M rad/s).
-      const avp = B.pb.angvel(), avc = B.cb.angvel();
-      const relAv = _b.set(avc.x - avp.x, avc.y - avp.y, avc.z - avp.z);
-      const axisW = _a.copy(B.axisL).applyQuaternion(qP);            // bone axis, world
-
-      // desired angular acceleration (rad/s²), assembled in world space
-      const acc = _v.set(0, 0, 0);
-      const ang = 2 * Math.acos(Math.min(1, delta.w));
-      if (ang > 1e-3) {
-        acc.addScaledVector(
-          d.clone().normalize().applyQuaternion(qP), -this.tone * ang);   // tone toward rest
-      }
-      acc.addScaledVector(relAv, -4);                                     // relative-spin damping
-      const twistOver = Math.abs(twist) - B.twist;
-      if (twistOver > 0) {
-        acc.addScaledVector(axisW, -Math.sign(twist) * (60 * twistOver));
-        acc.addScaledVector(axisW, -12 * relAv.dot(axisW));
-      }
-      const swingOver = swing - B.cone;
-      if (swingOver > 0 && swing > 1e-4) {
-        const sax = new THREE.Vector3(swingQ.x, swingQ.y, swingQ.z).normalize().applyQuaternion(qP);
-        acc.addScaledVector(sax, -60 * swingOver);
-        acc.addScaledVector(sax, -8 * relAv.dot(sax));
-      }
-
-      // torque impulse through the CORRECT inertia per axis: longitudinal
-      // (twist) vs transverse (swing), capped in Δω terms per substep
-      const accL = axisW.clone().multiplyScalar(acc.dot(axisW));
-      const accT = acc.clone().sub(accL);
-      const dwCap = (twistOver > 0 || swingOver > 0) ? 1.0 : 0.5;
-      const clampAcc = (v, cap) => {
-        const dw = v.length() * FIXED_DT;
-        if (dw > cap) v.multiplyScalar(cap / dw);
-        return v;
-      };
-      clampAcc(accL, dwCap); clampAcc(accT, dwCap);
-      const tq = accT.multiplyScalar(B.It * FIXED_DT).addScaledVector(accL, B.Il * FIXED_DT);
-      B.cb.applyTorqueImpulse({ x: tq.x, y: tq.y, z: tq.z }, true);
-      B.pb.applyTorqueImpulse({ x: -tq.x, y: -tq.y, z: -tq.z }, true);
+      out.push({
+        name: B.name,
+        swing: 2 * Math.acos(Math.min(1, Math.abs(swingQ.w))),
+        twist: Math.abs(twist),
+        cone: B.cone,
+        twistLimit: B.twist,
+      });
     }
+    return out;
+  }
+
+  /** The hinge axes as BUILT, in world space (= rest coordinates). An elbow
+   *  whose axis does not turn with the body is not an elbow. */
+  hingeAxes() {
+    return this.hinges.map((h) => ({
+      name: h.name, kind: h.kind, limits: h.limits,
+      axisWorld: h.axisWorld.clone(), boneDir: h.boneDir.clone(),
+    }));
+  }
+
+  /** Live hinge angles against their signed ranges. A knee born outside its
+   *  own range is annihilated by the solver on frame one — which is what a
+   *  mid-stride fall does to a rig whose flexion sign was derived wrong. */
+  hingeAngles() {
+    const out = [];
+    for (const H of this.hinges) {
+      const rp = H.pb.rotation(), rc = H.cb.rotation();
+      const qP = new THREE.Quaternion(rp.x, rp.y, rp.z, rp.w);
+      const qC = new THREE.Quaternion(rc.x, rc.y, rc.z, rc.w);
+      const rel = qP.clone().invert().multiply(qC);
+      if (rel.w < 0) { rel.x *= -1; rel.y *= -1; rel.z *= -1; rel.w *= -1; }
+      const v = new THREE.Vector3(rel.x, rel.y, rel.z);
+      const proj = v.dot(H.axisWorld);
+      let ang = 2 * Math.atan2(proj, rel.w);
+      if (ang > Math.PI) ang -= 2 * Math.PI;
+      if (ang < -Math.PI) ang += 2 * Math.PI;
+      const offAxis = v.clone().addScaledVector(H.axisWorld, -proj).length();
+      out.push({
+        name: H.name, kind: H.kind, angle: ang, lo: H.limits[0], hi: H.limits[1],
+        offAxis: 2 * Math.asin(Math.min(1, offAxis)),   // rotation on the LOCKED axes
+        over: Math.max(H.limits[0] - ang, ang - H.limits[1], 0),
+      });
+    }
+    return out;
+  }
+
+  /** Mass split, for the suite: a trunk lighter than the legs gets thrown
+   *  around by its own limbs. */
+  massSplit() {
+    let torso = 0, total = 0;
+    const seen = new Set();
+    for (const s of this.segs.values()) {
+      if (seen.has(s.body)) continue;
+      seen.add(s.body);
+      const m = s.body.mass();
+      total += m;
+      if (s.torso) torso += m;
+    }
+    return { torso, total, frac: total > 0 ? torso / total : 0 };
   }
 
   _topple(lean) {
     let lo = Infinity, hi = -Infinity;
-    for (const s of this.segs.values()) { const y = s.body.translation().y; lo = Math.min(lo, y); hi = Math.max(hi, y); }
+    for (const s of this.segs.values()) {
+      const y = s.body.translation().y; lo = Math.min(lo, y); hi = Math.max(hi, y);
+    }
     const span = (hi - lo) || 1;
     _v.copy(lean);
     const cap = 8;
     if (_v.lengthSq() > cap * cap) _v.setLength(cap);
+    const seen = new Set();
     for (const s of this.segs.values()) {
+      if (seen.has(s.body)) continue;
+      seen.add(s.body);
       const w = (s.body.translation().y - lo) / span;
       const cur = s.body.linvel();
       s.body.setLinvel({ x: cur.x + _v.x * w, y: cur.y, z: cur.z + _v.z * w }, true);
@@ -508,6 +809,7 @@ export class RapierRagdoll {
   }
 
   setPin(joint, target) {
+    if (this.done) return;
     if (!joint) {
       for (const j of [...this._pinBodies.keys()]) this.setPin(j, null);
       return;
@@ -522,21 +824,26 @@ export class RapierRagdoll {
         this._pinBodies.delete(joint);
         this.pins.delete(joint);
       }
+      // the lift ceiling is a LEASE, not a ratchet: it was raised so a hoisted
+      // body could rise, and it comes back down when nothing is holding it.
+      if (this._pinBodies.size === 0) this.rootStartY = this._rootBaseY;
       return;
     }
     let pin = this._pinBodies.get(joint);
     if (!pin) {
       // the marker is born AT the joint — zero constraint error at creation —
-      // and CHASES the target at capped speed (see step). Teleporting it
+      // and CHASES the target at capped speed (see _chasePins). Teleporting it
       // resolves the position error as one giant solver impulse: measured
-      // 955km of body displacement in a frame. The chase is also the feel:
-      // a hand pulling a body, not a body snapping to a hand.
+      // 955 km of body displacement in a frame. The chase is also the feel: a
+      // hand pulling a body, not a body snapping to a hand.
       const t = seg.body.translation(), rq = seg.body.rotation();
       const anchor = seg.a === joint ? seg.localA : seg.localB;
       _a.copy(anchor).applyQuaternion(_qp.set(rq.x, rq.y, rq.z, rq.w));
       const marker = this.world.createRigidBody(
-        RAPIER.RigidBodyDesc.kinematicPositionBased().setTranslation(t.x + _a.x, t.y + _a.y, t.z + _a.z));
-      const jd = RAPIER.JointData.spherical({ x: 0, y: 0, z: 0 }, { x: anchor.x, y: anchor.y, z: anchor.z });
+        RAPIER.RigidBodyDesc.kinematicPositionBased()
+          .setTranslation(t.x + _a.x, t.y + _a.y, t.z + _a.z));
+      const jd = RAPIER.JointData.spherical(
+        { x: 0, y: 0, z: 0 }, { x: anchor.x, y: anchor.y, z: anchor.z });
       const j = this.world.createImpulseJoint(jd, marker, seg.body, true);
       pin = { marker, joint: j, at: new THREE.Vector3(t.x + _a.x, t.y + _a.y, t.z + _a.z) };
       this._pinBodies.set(joint, pin);
@@ -564,20 +871,26 @@ export class RapierRagdoll {
 
   /** The drag-release handover, same packed format as the Verlet's: joint
    *  names + positions + velocities. Endpoint velocity is the rigid-body
-   *  truth: v + ω × r — a swung body hands over its swing. */
+   *  truth: v + ω × r — a swung body hands over its swing. r is measured from
+   *  the CENTRE OF MASS, which for the compound torso is not the body origin. */
   snapshot() {
+    // A disposed sim has no segments, so this would return {j:[],p:[],v:[]} —
+    // and `seedVel?.j` is TRUTHY for an empty array, so the receiver would take
+    // the hollow handover as authoritative and reset the body. Say nothing
+    // instead; every caller already falls back.
+    if (this._freed) return null;
     this._syncP();
     const j = [], p = [], v = [];
     const seen = new Set();
     for (const s of this.segs.values()) {
-      const t = s.body.translation(), lv = s.body.linvel(), av = s.body.angvel();
-      for (const [name, sign] of [[s.a, -1], [s.b, 1]]) {
+      const com = s.body.worldCom(), lv = s.body.linvel(), av = s.body.angvel();
+      for (const [name] of [[s.a], [s.b]]) {
         if (seen.has(name) || !this.p[name]) continue;
         seen.add(name);
         const q = this.p[name];
         j.push(name);
         p.push(+q.x.toFixed(4), +q.y.toFixed(4), +q.z.toFixed(4));
-        _a.set(q.x - t.x, q.y - t.y, q.z - t.z);          // r from center
+        _a.set(q.x - com.x, q.y - com.y, q.z - com.z);
         _b.set(av.x, av.y, av.z).cross(_a).add(_v.set(lv.x, lv.y, lv.z));
         v.push(+_b.x.toFixed(3), +_b.y.toFixed(3), +_b.z.toFixed(3));
       }
@@ -601,25 +914,23 @@ export class RapierRagdoll {
     dt = Math.min(0.25, Math.max(0, dt || 0));
     this.acc += dt;
     let n = 0;
-    let maxSpeed = 0;
     while (this.acc >= FIXED_DT && n < MAX_FRAMES) {
       // muscle tone decays — limp is a process, not a switch
       this._toneAcc += FIXED_DT;
-      if (this._toneAcc >= 0.1 && this.tone > 0.2) {
+      if (this._toneAcc >= 0.1 && this.tone > TONE_FLOOR) {
         this._toneAcc = 0;
-        this.tone *= TONE_DECAY;
+        this.tone = Math.max(TONE_FLOOR, this.tone * TONE_DECAY);
         this._setTone(this.tone);
       }
       this._chasePins();
       this.world.step();
-      this._angularPass();
       // absolute ceiling on angular velocity: nothing anatomical rotates at
       // 20 rad/s, and any residual solver energy hides there first
       for (const s2 of this.segs.values()) {
         const w = s2.body.angvel();
         const m = Math.hypot(w.x, w.y, w.z);
-        if (m > 20) {
-          const k = 20 / m;
+        if (m > ANG_CEIL) {
+          const k = ANG_CEIL / m;
           s2.body.setAngvel({ x: w.x * k, y: w.y * k, z: w.z * k }, false);
         }
       }
@@ -627,15 +938,23 @@ export class RapierRagdoll {
       n++;
     }
     if (n === MAX_FRAMES) this.acc = 0;
+
+    // Settle is LINEAR AND ANGULAR. Linear-only froze bodies mid-rotation —
+    // measured 1.0-1.35 rad/s (58-77°/s) of residual turn at the instant of
+    // capture, which reads on screen as the corpse popping as it locks.
+    let maxSpeed = 0, maxSpin = 0;
     for (const s of this.segs.values()) {
-      const v = s.body.linvel();
+      const v = s.body.linvel(), w = s.body.angvel();
       maxSpeed = Math.max(maxSpeed, Math.hypot(v.x, v.y, v.z));
+      maxSpin = Math.max(maxSpin, Math.hypot(w.x, w.y, w.z));
     }
     this.maxV = maxSpeed;
+    this.maxW = maxSpin;
 
     this.elapsed += dt;
     if (this.pinned) { this.settledFor = 0; this.elapsed = 0; }
-    if (this.maxV < SETTLE_V) this.settledFor += dt; else this.settledFor = 0;
+    if (this.maxV < SETTLE_V && this.maxW < SETTLE_W) this.settledFor += dt;
+    else this.settledFor = 0;
 
     if (n === 0 && this.pose) return this.pose;
     this._syncP();
@@ -658,7 +977,7 @@ export class RapierRagdoll {
       _b.copy(cp).sub(bp);
       if (_b.lengthSq() < 1e-6) continue;
       _b.normalize();
-      _q.setFromUnitVectors(d.restDir, _b).multiply(d.restQuat);
+      shortestArc(d.restDir, _b, _q).multiply(d.restQuat);
       d.parent.getWorldQuaternion(_qp).invert();
       _qp.multiply(_q);
       d.node.quaternion.copy(_qp);
@@ -681,8 +1000,12 @@ export class RapierRagdoll {
   dispose() {
     if (this._freed) return;
     this._freed = true;
+    this.done = true;           // a freed world must never be stepped again
     try { this.world.free(); } catch { /* already gone */ }
     this.segs.clear();
     this._pinBodies.clear();
+    this.pins.clear();          // a disposed sim is not still holding anything
+    this.balls.length = 0;
+    this.jointHandles.length = 0;
   }
 }

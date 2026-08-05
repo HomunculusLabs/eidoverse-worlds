@@ -158,11 +158,27 @@ export function makeAvatar(P, { stride = 0, realParent = null } = {}) {
   };
 
   if (stride) {
-    // a plausible mid-walk frame: thighs split, one knee up, arms counterswung
+    // A plausible mid-walk frame: thighs split, one knee up, arms counterswung.
+    //
+    // About the RIG'S OWN axes, not the world's. 6 of the 14 shipped rigs
+    // (meebit, orion, shino, victoria, vroid_fem, vroid_masc) carry
+    // leftUpperArm on -X — they face -Z, the VRM 0.x convention, which the
+    // raw GLB read here does not normalise away. Rotating those about world X
+    // bent the knee FORWARD: not a mid-walk pose but a hyperextension no leg
+    // can reach, so a solver with real limits was correct to fight it and a
+    // fixture that produced it was testing an impossible body. Derived per
+    // rig, the pose is the same walk on every skeleton.
+    const up = (P.neck ?? P.chest ?? P.spine).clone().sub(P.hips).normalize();
+    const lat = (P.leftUpperArm && P.rightUpperArm)
+      ? P.leftUpperArm.clone().sub(P.rightUpperArm)
+      : new THREE.Vector3(1, 0, 0);
+    lat.addScaledVector(up, -lat.dot(up));
+    if (lat.lengthSq() < 1e-9) lat.set(1, 0, 0);
+    lat.normalize();
+    const fwd = new THREE.Vector3().crossVectors(lat, up).normalize();
     const rot = (j, ax, deg) => nodes[j]?.quaternion.setFromAxisAngle(ax, deg * stride * Math.PI / 180);
-    const X = new THREE.Vector3(1, 0, 0), Z = new THREE.Vector3(0, 0, 1);
-    rot('leftUpperLeg', X, -35); rot('rightUpperLeg', X, 30); rot('leftLowerLeg', X, 45);
-    rot('leftUpperArm', Z, -25); rot('rightUpperArm', Z, 25); rot('spine', X, 8);
+    rot('leftUpperLeg', lat, -35); rot('rightUpperLeg', lat, 30); rot('leftLowerLeg', lat, 45);
+    rot('leftUpperArm', fwd, -25); rot('rightUpperArm', fwd, 25); rot('spine', lat, 8);
     root.updateMatrixWorld(true);
   }
   return av;

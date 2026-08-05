@@ -32,11 +32,20 @@ export function setBodyEngine(name) {
   if (engine === 'rapier' && !RapierRagdoll) loadRapier();
 }
 
-/** The one door every fall goes through. Same signature as `new Ragdoll`. */
-export function makeRagdoll(avatar, lean = null, rest = null) {
+/** The one door every fall goes through. Same signature as `new Ragdoll`.
+ *
+ *  seedVel is LOAD-BEARING and was silently dropped here until 2026-08-04:
+ *  main.js hands the drag-release handover through this door as the 4th
+ *  argument (`msg?.sim ?? dragVel`), and a 3-parameter signature ate it. Both
+ *  engines' snapshot()/seed paths were therefore unreachable in the shipped
+ *  client — every release reset the body to zero velocity and re-baked the
+ *  rendered bone positions as the new sim's shape, which is what "really bad
+ *  with drags" was. A dropped optional argument is invisible in JS; the
+ *  parity suites never saw it because they construct the engines directly. */
+export function makeRagdoll(avatar, lean = null, rest = null, seedVel = null) {
   if (engine === 'rapier' && RapierRagdoll) {
-    try { return new RapierRagdoll(avatar, lean, rest); }
+    try { return new RapierRagdoll(avatar, lean, rest, seedVel); }
     catch (e) { report('rapierdoll construct — verlet fallback', e); }
   }
-  return new Ragdoll(avatar, lean, rest);
+  return new Ragdoll(avatar, lean, rest, seedVel);
 }
