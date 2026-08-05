@@ -172,13 +172,9 @@ select {
 .fr-body { display: flex; flex-direction: column; overflow: hidden; min-height: 0; }
 .frame.collapsed .fr-body { display: none; }
 .frame.collapsed { height: auto !important; }
-.fr-grip {
-  position: absolute; right: 0; bottom: 0; width: 15px; height: 15px;
-  cursor: nwse-resize;
-  background: linear-gradient(135deg, transparent 50%, var(--edge) 50%, var(--edge) 62%,
-              transparent 62%, transparent 76%, var(--edge) 76%, var(--edge) 88%, transparent 88%);
-}
-.ui-locked .fr-grip { display: none; }
+/* scrollbars sit a couple px in from the frame edge so the scroll thumb and
+   the edge-resize band don't fight over the same column */
+.frame .fr-body { padding-right: 3px; }
 .frame.flash { animation: flash 1.4s ease-out; }
 @keyframes flash {
   0%, 100% { border-color: var(--edge); }
