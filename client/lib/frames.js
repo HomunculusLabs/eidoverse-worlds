@@ -87,15 +87,35 @@ document.addEventListener('pointerdown', (e) => {
     }
     f.paint();
   };
-  const up = () => {
+  // ONE idempotent finish, shared by every way a drag can end. `pointerup`
+  // alone is not enough: release the button outside the browser and `up` never
+  // arrives, so `_resizing` stays true and the move/up listeners stay
+  // installed — hover detection and all future resizes are dead until reload.
+  // (The title-bar drag path has always taken pointer capture; this one was
+  // written without it. Found in review.)
+  let done = false;
+  const finish = () => {
+    if (done) return;                    // idempotent: several paths may fire
+    done = true;
     document.removeEventListener('pointermove', move, true);
-    document.removeEventListener('pointerup', up, true);
+    document.removeEventListener('pointerup', finish, true);
+    document.removeEventListener('pointercancel', finish, true);
+    removeEventListener('blur', finish);
+    try { document.releasePointerCapture?.(e.pointerId); } catch { /* never captured */ }
     document.body.style.cursor = '';
     _resizing = false;
     f.save();
   };
+  // capture keeps the stream coming while the pointer is outside the window;
+  // lostpointercapture is then one more road to the same finish
+  try {
+    document.documentElement.setPointerCapture(e.pointerId);
+    document.documentElement.addEventListener('lostpointercapture', finish, { once: true });
+  } catch { /* no capture available — the listeners below still cover it */ }
   document.addEventListener('pointermove', move, true);
-  document.addEventListener('pointerup', up, true);
+  document.addEventListener('pointerup', finish, true);
+  document.addEventListener('pointercancel', finish, true);
+  addEventListener('blur', finish);
 }, true);
 let zTop = 30;
 let locked = localStorage.getItem('ew-ui-locked') === '1';
