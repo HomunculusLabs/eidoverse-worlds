@@ -232,6 +232,38 @@ check("revoking with mic live re-offers SENDONLY, not sendrecv",
 await voice.toggleMic("me");             // leave the mic off for the rest
 stubs.remotes.delete("peer1");
 
+// ---- a refusal is an ANSWER, not an invitation to ask again --------------
+// (review catch: sttConsent was a boolean, so a stored `false` was
+// indistinguishable from "never asked" and every mic-on re-prompted — a no
+// turned into a recurring negotiation.)
+{
+  // simulate a fresh person: nothing ever asked
+  localStorage.removeItem("eido.audio.prefs");
+  const fresh = await import(`../client/lib/voiceconsent.js?fresh=${Date.now()}`);
+  // sttAsked may not exist on an older build — absence IS the bug (a boolean
+  // cannot express "not asked"), so probe rather than crash
+  const hasTriState = typeof fresh.sttAsked === "function";
+  check("unset state is distinguishable from a refusal",
+    hasTriState && fresh.sttAsked() === false && fresh.sttConsented() === false,
+    hasTriState ? "" : "no sttAsked(): consent is a boolean, refusal == never-asked");
+
+  let prompts = 0;
+  const askNo = async () => { prompts++; return false; };
+  const first = await fresh.ensureSttConsent(askNo);
+  check("first mic-on asks, and a refusal is stored",
+    prompts === 1 && first === false && (!hasTriState || fresh.sttAsked() === true));
+
+  const second = await fresh.ensureSttConsent(askNo);
+  check("a second mic-on does NOT ask again", prompts === 1 && second === false,
+    `${prompts} prompt(s)`);
+
+  // ...and the person can still change their mind deliberately, in the panel
+  fresh.setSttConsent(true);
+  check("enabling STT later works and needs no prompt", fresh.sttConsented() === true);
+  const third = await fresh.ensureSttConsent(askNo);
+  check("a remembered YES is returned without asking", prompts === 1 && third === true);
+}
+
 // ---- categories stay independent ------------------------------------------
 consent.setVolume("world", 0.5);
 consent.setReceiveVoice(false);

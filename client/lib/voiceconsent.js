@@ -18,7 +18,11 @@
 import { bus } from './core.js';
 
 const KEY = 'eido.audio.prefs';
-const DEFAULTS = { recvVoice: false, volVoices: 1, volWorld: 0.6, volTts: 1, sttConsent: false };
+// sttConsent is TRI-STATE and must stay so: null = never asked, true =
+// accepted, false = refused. A boolean cannot tell "not asked" from "said no",
+// so a refusal would be re-prompted on the next mic-on — turning a no into a
+// recurring negotiation, which is the opposite of asking once (review catch).
+const DEFAULTS = { recvVoice: false, volVoices: 1, volWorld: 0.6, volTts: 1, sttConsent: null };
 
 let prefs = { ...DEFAULTS };
 try {
@@ -59,9 +63,11 @@ export function setVolume(cat, v) {
 // room to be transcribed by a third party. So STT is gated behind an explicit,
 // revocable, plainly-worded consent — asked once, remembered, never assumed
 // from the mic toggle.
-export const sttConsented = () => prefs.sttConsent;
+export const sttConsented = () => prefs.sttConsent === true;
+/** Has this ever been put to the person? Distinct from what they answered. */
+export const sttAsked = () => prefs.sttConsent !== null && prefs.sttConsent !== undefined;
 export function setSttConsent(on) {
-  prefs.sttConsent = !!on; save();
+  prefs.sttConsent = !!on; save();      // a deliberate choice is always recordable
   bus.emit('audio:stt-consent', prefs.sttConsent);
   return prefs.sttConsent;
 }
@@ -69,10 +75,14 @@ export function setSttConsent(on) {
 /** Ask once, in words that name the actual consequence. Returns a promise of
  *  the answer; a refusal is remembered as a refusal (we do not re-nag). */
 export async function ensureSttConsent(ask = defaultAsk) {
-  if (prefs.sttConsent) return true;
+  // Only the UNSET state prompts. A remembered answer — yes or no — is
+  // returned without asking again: "no" is an answer, not an invitation to
+  // ask differently next time. Changing it later is a deliberate act in the
+  // audio panel, where the person goes looking rather than being interrupted.
+  if (sttAsked()) return prefs.sttConsent === true;
   const yes = await ask();
   setSttConsent(yes);
-  return prefs.sttConsent;
+  return prefs.sttConsent === true;
 }
 
 function defaultAsk() {
