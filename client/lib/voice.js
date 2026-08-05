@@ -35,6 +35,33 @@ function humanIds() {
   return [...remotes.entries()].filter(([, r]) => !r.agent).map(([id]) => id);
 }
 
+/** The two consent bits, as a transceiver direction. This is the whole
+ *  consent model expressed structurally: not a check that code paths must
+ *  remember to consult, but the shape of the connection itself, so there is
+ *  no path — offer, answer, or renegotiation — that can negotiate media a
+ *  direction did not permit. (Review catch: offerToReceiveAudio:true asked
+ *  for inbound audio even with receive off, and an answer could then deliver
+ *  it. The old comment claimed the offer "cannot deliver audio we did not ask
+ *  for" — but the offer DID ask.) */
+function wantDirection() {
+  const send = !!micStream, recv = receivingVoice();
+  return send && recv ? 'sendrecv' : send ? 'sendonly' : recv ? 'recvonly' : 'inactive';
+}
+
+/** Force every audio transceiver on this peer to the currently-consented
+ *  direction. Called before any offer/answer, and again when consent moves. */
+function applyDirection(p) {
+  const dir = wantDirection();
+  try {
+    for (const t of p.pc.getTransceivers?.() ?? []) {
+      if (t.receiver?.track?.kind === 'audio' || t.sender?.track?.kind === 'audio' || !t.receiver) {
+        if (t.direction !== dir) t.direction = dir;
+      }
+    }
+  } catch (e) { report('voice direction', e); }
+  return dir;
+}
+
 function peerFor(id) {
   let p = peers.get(id);
   if (p) return p;
@@ -46,6 +73,10 @@ function peerFor(id) {
   peers.set(id, p);
   if (micStream) for (const t of micStream.getTracks()) pc.addTrack(t, micStream);
   pc.ontrack = (e) => {
+    // FAIL CLOSED: consent can be revoked mid-negotiation, and a track that
+    // was in flight when it happened must not land. Nothing is attached and
+    // nothing plays unless receive is on at the moment audio actually arrives.
+    if (!receivingVoice()) { try { for (const t of e.streams[0]?.getTracks() ?? []) t.stop(); } catch { /* best effort */ } return; }
     audio.srcObject = e.streams[0];
     p.stream = e.streams[0];        // kept so their mouth can move with their voice
     // autoplay policy: if the browser balks (receiver never clicked anything),
@@ -73,6 +104,7 @@ async function renegotiate(id) {
   const p = peers.get(id);
   if (!p || p.pc.signalingState !== 'stable') return;
   try {
+    applyDirection(p);
     const offer = await p.pc.createOffer();
     await p.pc.setLocalDescription(offer);
     sendRtc(id, { sdp: p.pc.localDescription });
@@ -82,7 +114,10 @@ async function renegotiate(id) {
 async function offerTo(id) {
   const p = peerFor(id);
   try {
-    const offer = await p.pc.createOffer({ offerToReceiveAudio: true });
+    // direction FIRST: the offer must describe what we consented to, not ask
+    // for everything and filter later
+    applyDirection(p);
+    const offer = await p.pc.createOffer();
     await p.pc.setLocalDescription(offer);
     sendRtc(id, { sdp: p.pc.localDescription });
   } catch (e) { report('voice offer', e); }
@@ -91,10 +126,10 @@ async function offerTo(id) {
 async function onRtc(msg) {
   const { from, payload } = msg;
   // CONSENT GATE: with receive-voice off we never negotiate an inbound path.
-  // Not "answer then mute" — no audio path exists at all. The one exception
-  // is an ANSWER to an offer we ourselves made (we are talking, they are
-  // replying to our own outbound leg), which cannot deliver audio we did not
-  // ask for.
+  // Not "answer then mute" — no audio path exists at all. An ANSWER to our
+  // own offer is still processed, but it is safe now for a structural reason
+  // rather than an assumed one: that offer was created sendonly, so there is
+  // no recv direction for an answer to fill. ontrack also fails closed.
   if (!receivingVoice() && payload?.sdp?.type !== 'answer') return;
   const p = peerFor(from);
   try {
@@ -106,6 +141,7 @@ async function onRtc(msg) {
         await p.pc.setLocalDescription({ type: 'rollback' });
       }
       await p.pc.setRemoteDescription(payload.sdp);
+      applyDirection(p);            // our answer states OUR consent, not theirs
       const answer = await p.pc.createAnswer();
       await p.pc.setLocalDescription(answer);
       sendRtc(from, { sdp: p.pc.localDescription });
@@ -193,7 +229,16 @@ export function initVoice(name) {
   // If our mic is live we re-offer, so our outbound (which they consented to)
   // survives — revoking "I hear you" must not silently revoke "you hear me".
   bus.on('audio:receive', (on) => {
-    if (on) { if (micStream) for (const id of humanIds()) if (!peers.has(id)) offerTo(id); return; }
+    if (on) {
+      // permit inbound on peers we already hold, then reach the rest
+      for (const p of peers.values()) applyDirection(p);
+      for (const id of [...peers.keys()]) renegotiate(id);
+      if (micStream) for (const id of humanIds()) if (!peers.has(id)) offerTo(id);
+      return;
+    }
+    // revoked: inbound legs come down. If our mic is live the outbound they
+    // consented to is re-established — SENDONLY, so the re-offer cannot
+    // smuggle back the inbound we just refused (review catch).
     for (const id of [...peers.keys()]) dropPeer(id);
     if (micStream) for (const id of humanIds()) offerTo(id);
   });

@@ -21,13 +21,25 @@ const created: FakePC[] = [];
 class FakeTrack { stopped = false; kind = "audio"; stop() { this.stopped = true; } }
 class FakeStream {
   tracks = [new FakeTrack()];
+  attached = false;
   getTracks() { return this.tracks; }
   getAudioTracks() { return this.tracks; }
 }
+// happy-dom's HTMLAudioElement takes srcObject silently; we observe the
+// assignment so "was this track actually attached and played?" is a fact
+// about the code's behaviour rather than a flag the test sets for itself.
+Object.defineProperty(globalThis.HTMLMediaElement.prototype, "srcObject", {
+  configurable: true,
+  get() { return this._srcObject ?? null; },
+  set(v) { this._srcObject = v; if (v && typeof v === "object") (v as { attached?: boolean }).attached = true; },
+});
+(globalThis.HTMLMediaElement.prototype as { play?: () => Promise<void> }).play = () => Promise.resolve();
 class FakePC {
   signalingState = "stable";
   connectionState = "new";
   closed = false;
+  transceivers: { direction: string; sender: { track: FakeTrack | null }; receiver: { track: { kind: string } } }[] = [];
+  lastOfferOpts: unknown = null;
   senders: { track: FakeTrack | null }[] = [];
   localDescription: unknown = null;
   remote: unknown = null;
@@ -35,17 +47,36 @@ class FakePC {
   onicecandidate: unknown = null;
   onconnectionstatechange: unknown = null;
   constructor() { created.push(this); }
-  addTrack(t: FakeTrack) { this.senders.push({ track: t }); return this.senders.at(-1); }
+  addTrack(t: FakeTrack) {
+    const sender = { track: t };
+    this.senders.push(sender);
+    // a real addTrack creates (or reuses) a sendrecv transceiver — modelled
+    // faithfully, because that default is exactly what the bug rode in on
+    this.transceivers.push({ direction: "sendrecv", sender, receiver: { track: { kind: "audio" } } });
+    return sender;
+  }
   removeTrack(s: { track: FakeTrack | null }) { s.track = null; }
   getSenders() { return this.senders; }
-  async createOffer() { return { type: "offer", sdp: "fake" }; }
+  getTransceivers() { return this.transceivers; }
+  /** the direction actually offered to the far end */
+  offeredDirection() { return this.transceivers[0]?.direction ?? "none"; }
+  async createOffer(opts?: unknown) { this.lastOfferOpts = opts ?? null; return { type: "offer", sdp: "fake" }; }
   async createAnswer() { return { type: "answer", sdp: "fake" }; }
   async setLocalDescription(d: unknown) { this.localDescription = d; this.signalingState = "have-local-offer"; }
   async setRemoteDescription(d: unknown) { this.remote = d; this.signalingState = "stable"; }
   async addIceCandidate() {}
   close() { this.closed = true; this.connectionState = "closed"; }
-  /** simulate the far end delivering audio */
-  deliverAudio() { this.ontrack?.({ streams: [new FakeStream()] }); }
+  playedAudio = false;
+  /** Simulate the far end delivering audio. Acceptance is observed the way
+   *  the code expresses it: an accepted track gets attached to an <audio>
+   *  element (srcObject set); a refused one is stopped and dropped. We read
+   *  the stream itself rather than trusting a flag we set ourselves. */
+  deliverAudio() {
+    const stream = new FakeStream();
+    stream.attached = false;
+    this.ontrack?.({ streams: [stream] });
+    if (stream.attached) this.playedAudio = true;
+  }
 }
 (globalThis as Record<string, unknown>).RTCPeerConnection = FakePC;
 
@@ -160,6 +191,46 @@ check("consent copy says the text becomes a durable log entry",
   /world log|stored/i.test(consentSrc));
 check("consent copy says voice works without it",
   /does NOT require|without it/i.test(consentSrc));
+
+// ---- receive-off must survive our OWN mic being live (review catch) -------
+// The other initiation direction: we offer. An offer that asks to receive
+// audio can have that request answered, and ontrack then autoplays it — so
+// consent has to live in the transceiver direction, not in a gate that only
+// guards inbound offers.
+consent.setReceiveVoice(false);
+created.length = 0;
+stubs.remotes.set("peer1", { agent: false });
+denyMic = false;
+await voice.toggleMic("me");            // mic ON, receive OFF
+await settle();
+const outbound = created.at(-1)!;
+check("mic-ON + receive-OFF: an outbound peer exists", created.length >= 1);
+check("mic-ON + receive-OFF: the offer is sendonly (no recv direction)",
+  outbound.offeredDirection() === "sendonly", outbound.offeredDirection());
+check("mic-ON + receive-OFF: no blanket offerToReceiveAudio",
+  !JSON.stringify(outbound.lastOfferOpts ?? {}).includes("offerToReceiveAudio"));
+outbound.deliverAudio();                 // far end tries to send anyway
+await settle();
+check("mic-ON + receive-OFF: an inbound track is refused, not played",
+  !outbound.playedAudio, "audio was attached/played");
+
+// now consent to hear: direction opens and tracks are accepted
+consent.setReceiveVoice(true);
+await settle();
+check("enabling receive flips the live peer to sendrecv",
+  outbound.offeredDirection() === "sendrecv", outbound.offeredDirection());
+outbound.deliverAudio();
+await settle();
+check("enabling receive accepts an inbound track", outbound.playedAudio === true);
+
+// and revoking with the mic still live must not re-open inbound
+consent.setReceiveVoice(false);
+await settle();
+const after = created.at(-1)!;
+check("revoking with mic live re-offers SENDONLY, not sendrecv",
+  after.offeredDirection() === "sendonly", after.offeredDirection());
+await voice.toggleMic("me");             // leave the mic off for the rest
+stubs.remotes.delete("peer1");
 
 // ---- categories stay independent ------------------------------------------
 consent.setVolume("world", 0.5);

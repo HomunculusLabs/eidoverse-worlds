@@ -53,7 +53,19 @@ check("STT is gated on its own consent, not on the mic", /ensureSttConsent|sttCo
 check("STT consent names the third party in plain words",
   /vendor|third party/i.test(consent) && /transcrib/i.test(consent));
 check("revoking receive tears existing peers down",
-  /on\(\s*['"]audio:receive['"][\s\S]{0,400}dropPeer/.test(voice));
+  /on\(\s*['"]audio:receive['"][\s\S]{0,1200}dropPeer/.test(voice));
+
+// --- consent is STRUCTURAL: the direction, not a gate to remember
+check("consent is expressed as a transceiver direction", /sendonly|recvonly|sendrecv/.test(voice));
+// strip comments before this one: the word legitimately appears in the
+// rationale explaining why we no longer USE it, and a test that cannot tell
+// prose from code would forbid documenting the bug we fixed
+const voiceCode = voice.replace(/\/\*[\s\S]*?\*\//g, "").replace(/^\s*\/\/.*$/gm, "");
+check("no blanket offerToReceiveAudio in code", !/offerToReceiveAudio/.test(voiceCode));
+check("every offer path states the direction first",
+  (voice.match(/createOffer\(/g) ?? []).length <= (voice.match(/applyDirection\(/g) ?? []).length);
+check("ontrack fails closed on revoked consent",
+  /ontrack[\s\S]{0,300}receivingVoice\(\)/.test(voice));
 
 // --- categories stay separate: the headphone must not touch world sound
 check("voice volume runs through the 'voices' category", /volumeFor\(['"]voices['"]\)/.test(voice));
