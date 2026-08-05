@@ -93,6 +93,7 @@ document.addEventListener('pointerdown', (e) => {
   // installed — hover detection and all future resizes are dead until reload.
   // (The title-bar drag path has always taken pointer capture; this one was
   // written without it. Found in review.)
+  let captureEl = null;          // whoever ACQUIRED the capture releases it
   let done = false;
   const finish = () => {
     if (done) return;                    // idempotent: several paths may fire
@@ -101,16 +102,25 @@ document.addEventListener('pointerdown', (e) => {
     document.removeEventListener('pointerup', finish, true);
     document.removeEventListener('pointercancel', finish, true);
     removeEventListener('blur', finish);
-    try { document.releasePointerCapture?.(e.pointerId); } catch { /* never captured */ }
+    // release on the element that ACQUIRED it. document.releasePointerCapture
+    // was a no-op — Document does not own the capture, documentElement does —
+    // so a blur/cancel could leave the capture live. (Review catch.)
+    try {
+      if (captureEl?.hasPointerCapture?.(e.pointerId)) captureEl.releasePointerCapture(e.pointerId);
+    } catch { /* never captured, or gone */ }
+    captureEl?.removeEventListener('lostpointercapture', finish);
     document.body.style.cursor = '';
     _resizing = false;
     f.save();
   };
   // capture keeps the stream coming while the pointer is outside the window;
   // lostpointercapture is then one more road to the same finish
+  // one element owns the capture and the same one releases it; retained so
+  // finish() cannot guess wrong
   try {
     document.documentElement.setPointerCapture(e.pointerId);
-    document.documentElement.addEventListener('lostpointercapture', finish, { once: true });
+    captureEl = document.documentElement;
+    captureEl.addEventListener('lostpointercapture', finish);
   } catch { /* no capture available — the listeners below still cover it */ }
   document.addEventListener('pointermove', move, true);
   document.addEventListener('pointerup', finish, true);

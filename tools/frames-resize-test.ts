@@ -24,11 +24,16 @@ plugin({
 import { GlobalRegistrator } from "@happy-dom/global-registrator";
 GlobalRegistrator.register();
 
-// happy-dom has no pointer capture; make the calls no-op rather than throw so
-// the module's try/catch fallbacks are the thing under test
-(Element.prototype as any).setPointerCapture ??= () => {};
-(Element.prototype as any).releasePointerCapture ??= () => {};
-(document as any).releasePointerCapture ??= () => {};
+// happy-dom has no pointer capture. Model it on ELEMENTS only — deliberately
+// NOT on `document`, because stubbing document.releasePointerCapture is what
+// masked the original bug: capture was taken on documentElement and released
+// on document, which owns nothing, so the release was a silent no-op and the
+// test still passed. The stub now tracks who holds what, so the assertions
+// below can check that the acquirer is the releaser.
+const _captured = new Set<number>();
+(Element.prototype as any).setPointerCapture = function (id: number) { _captured.add(id); (this as any).__cap = id; };
+(Element.prototype as any).releasePointerCapture = function (id: number) { _captured.delete(id); (this as any).__cap = undefined; };
+(Element.prototype as any).hasPointerCapture = function (id: number) { return (this as any).__cap === id; };
 
 const { makeFrame } = await import("../client/lib/frames.js");
 
@@ -107,6 +112,22 @@ try {
 } catch { threw = true; }
 check("overlapping finish paths do not throw", !threw);
 check("...and the frame still resizes afterward", dragEast(25, "up") !== 0);
+
+// --- capture is released by the element that took it (review catch: releasing
+// on `document` was a no-op, so a blur could leave the capture live forever)
+_captured.clear();
+document.dispatchEvent(pd(edgeX(), edgeY()));
+document.dispatchEvent(pm(edgeX() + 20, edgeY()));
+check("a drag acquires pointer capture", _captured.size === 1, `${_captured.size} held`);
+window.dispatchEvent(new Event("blur"));
+check("...and blur releases it on the acquiring element", _captured.size === 0,
+  `${_captured.size} still held — capture leaked`);
+check("...leaving documentElement holding nothing",
+  !(document.documentElement as any).hasPointerCapture(1));
+
+_captured.clear();
+dragEast(20, "cancel");
+check("pointercancel also releases the capture", _captured.size === 0, `${_captured.size} held`);
 
 // --- minimums still hold (the clamp survived the refactor)
 const tiny = dragEast(-9999, "up");
