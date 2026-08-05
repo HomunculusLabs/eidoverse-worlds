@@ -14,7 +14,8 @@
 
 import { makeSection } from './ui.js';
 import { audioPrefs, setVolume, receivingVoice, setReceiveVoice,
-  sttConsented, setSttConsent } from './voiceconsent.js';
+  sttConsented, setSttConsent, isHushed, setHush } from './voiceconsent.js';
+import { bus } from './core.js';
 
 const ROWS = [
   ['voices', 'voices', 'other people speaking, and agent speech'],
@@ -43,24 +44,55 @@ function checkRow(label, hint, checked, onChange) {
   row.className = 'sp-row';
   row.innerHTML =
     `<span class="sp-label" title="${hint}">${label}</span>` +
-    `<input type="checkbox" ${checked ? 'checked' : ''}>` +
-    `<span class="sp-info" style="color:var(--dim)">${hint}</span>`;
+    `<input type="checkbox" ${checked ? 'checked' : ''} title="${hint}">`;
   row.querySelector('input').onchange = (e) => onChange(e.target.checked);
   return row;
 }
 
+let _body = null;
+function paint(body) {
+  _body = body ?? _body;
+  if (!_body) return;
+  const body_ = _body;
+  body_.innerHTML = '';
+  const p = audioPrefs();
+  // 'hear voices' is what you HEAR — the same bit the 🎧 glyph toggles, so
+  // the two controls can never disagree about the world you are in. (Field
+  // report 12:43: toggling the headphone left this row stale, which is two
+  // controls showing two different states while looking like one.) Ticking
+  // it from a fully-revoked state grants consent as well, exactly like the
+  // glyph, so the box is never a dead end.
+  body_.append(checkRow('hear voices',
+    'peers and agent speech — the 🎧 glyph is this same switch',
+    receivingVoice() && !isHushed(), (on) => {
+      if (on) { if (!receivingVoice()) setReceiveVoice(true); setHush(false); }
+      else setHush(true);
+    }));
+  for (const [cat, label, hint] of ROWS) {
+    body_.append(slider(cat, label, hint,
+      cat === 'world' ? p.volWorld : cat === 'tts' ? p.volTts : p.volVoices));
+  }
+  body_.append(checkRow('speech-to-text',
+    'sends your mic audio to your browser vendor’s cloud to transcribe',
+    sttConsented(), (on) => setSttConsent(on)));
+  // The structural act, deliberately last: hush is a gain, this is the
+  // connection. Unticking negotiates no inbound media at all — the only row
+  // here that is a guarantee rather than a preference. The wording leads with
+  // what you GET (no connection, no cost) rather than with the mechanism,
+  // because "refuse inbound audio" reads as a second mute to anyone who has
+  // not thought about the wire. (Field note: a reader asked what it affords
+  // over muting — if the label has to be explained, the label is wrong.)
+  body_.append(checkRow('connect to other people’s audio',
+    'on: your machine holds a live connection to each speaker nearby. ' +
+    'Off: nothing is sent to you at all — no bandwidth, no decoding, and ' +
+    'strangers cannot see your IP address. Muting only turns the volume down; ' +
+    'this unplugs the wire.',
+    receivingVoice(), (on) => { setReceiveVoice(on); if (on) setHush(false); }));
+}
+
 export function initAudioPanel() {
-  makeSection('🔊 Audio', (body) => {
-    body.innerHTML = '';
-    const p = audioPrefs();
-    body.append(checkRow('hear voices', 'receive other people’s speech (off by default)',
-      receivingVoice(), (on) => setReceiveVoice(on)));
-    for (const [cat, label, hint] of ROWS) {
-      body.append(slider(cat, label, hint,
-        cat === 'world' ? p.volWorld : cat === 'tts' ? p.volTts : p.volVoices));
-    }
-    body.append(checkRow('speech-to-text',
-      'sends your mic audio to your browser vendor’s cloud to transcribe',
-      sttConsented(), (on) => setSttConsent(on)));
-  }, { id: 'audio' });
+  makeSection('🔊 Audio', (body) => paint(body), { id: 'audio' });
+  // either control moving repaints the other's row — one truth, two surfaces
+  bus.on('audio:hush', () => paint());
+  bus.on('audio:receive', () => paint());
 }
