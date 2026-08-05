@@ -14,11 +14,22 @@ import { setSTT, sttAvailable } from './stt.js';
 import { CONFIG } from './core.js';
 import { receivingVoice, setReceiveVoice, ensureSttConsent, sttConsented,
   isHushed, setHush } from './voiceconsent.js';
+import { bus } from './core.js';
 
 // three states (R, 17:09): off = grey + slash · live = clean bright white ·
 // hot (picking up your voice for STT) = warm yellow glow. No rings.
+// ONE palette for both glyphs. They sit side by side and are read as a pair,
+// so any divergence reads as a state difference that is not there (field
+// report 12:43: the off-states looked noticeably unalike). The apparent
+// weight difference was never the hex — it was INK COVERAGE: the headphone
+// carries two filled earcups and a long band, the mic is thin strokes with
+// air between them, so identical stroke colour lands heavier on the ear.
+// Equalising by giving the heavier glyph a slightly thinner stroke, which
+// matches perceived weight rather than nominal colour.
+const INK = { off: '#7d8f8a', on: '#f2f7f5', hot: '#ffd66b', slash: '#c0574f' };
+
 const MIC_SVG = (on, hot) => {
-  const c = hot ? '#ffd66b' : on ? '#f2f7f5' : '#7d8f8a';
+  const c = hot ? INK.hot : on ? INK.on : INK.off;
   return `
 <svg viewBox="0 0 32 32" width="26" height="26" style="${hot ? 'filter:drop-shadow(0 0 5px rgba(255,214,107,.9))' : ''}">
   <g fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round">
@@ -26,7 +37,7 @@ const MIC_SVG = (on, hot) => {
     <path d="M8 15 a8 8 0 0 0 16 0"/>
     <line x1="16" y1="23" x2="16" y2="27"/>
     <line x1="11" y1="27" x2="21" y2="27"/>
-    ${on ? '' : '<line x1="7" y1="4" x2="25" y2="28" stroke="#c0574f"/>'}
+    ${on ? '' : `<line x1="7" y1="4" x2="25" y2="28" stroke="${INK.slash}"/>`}
   </g>
 </svg>`;
 };
@@ -39,14 +50,14 @@ const MIC_SVG = (on, hot) => {
 // convention everywhere it matters (Discord's deafen, VRChat's voice
 // controls) and it is the one people already have hands for.
 const EAR_SVG = (on) => {
-  const c = on ? '#f2f7f5' : '#7d8f8a';
+  const c = on ? INK.on : INK.off;
   return `
 <svg viewBox="0 0 32 32" width="26" height="26">
-  <g fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round">
+  <g fill="none" stroke="${c}" stroke-width="1.8" stroke-linecap="round">
     <path d="M6 19 v-3 a10 10 0 0 1 20 0 v3"/>
     <rect x="4" y="18" width="6" height="9" rx="3"/>
     <rect x="22" y="18" width="6" height="9" rx="3"/>
-    ${on ? '' : '<line x1="7" y1="4" x2="25" y2="28" stroke="#c0574f"/>'}
+    ${on ? '' : `<line x1="7" y1="4" x2="25" y2="28" stroke="${INK.slash}"/>`}
   </g>
 </svg>`;
 };
@@ -66,9 +77,12 @@ function paint() {
     const consented = receivingVoice();
     const on = consented && !isHushed();
     earBtn.innerHTML = EAR_SVG(on);
-    // hushed-but-consented is dimmed rather than slashed: the stream is still
-    // there, you are simply not attending to it
-    earBtn.style.opacity = consented ? (isHushed() ? '0.5' : '1') : '1';
+    // hushed reads as OFF (grey, slashed) like any other off-state — it used
+    // to also carry opacity:0.5, which made this glyph literally translucent
+    // beside a fully-opaque mic and was most of the 'they look different'
+    // report. The distinction between hushed and revoked lives in the
+    // tooltip and the panel, not in a second visual language.
+    earBtn.style.opacity = '1';
     earBtn.title = !consented
       ? 'not receiving voices at all — click to allow (world sound unaffected)'
       : isHushed()
@@ -161,6 +175,11 @@ function placeMic() {
 }
 addEventListener('resize', placeMic);
 setInterval(placeMic, 2000);          // safety net only; the observer does the work
+// the glyph REFLECTS state, it does not own it: any surface that changes
+// hush/consent repaints it, so a panel tick and a HUD click can never
+// disagree about what you are hearing
+bus.on('audio:hush', paint);
+bus.on('audio:receive', paint);
 setInterval(ensure, 1000);
 ensure();
 

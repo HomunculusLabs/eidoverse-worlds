@@ -252,10 +252,7 @@ export function initVoice(name) {
   // gesture quantized to 300ms steps feels like a fade drawn with a ruler.
   // So the target is recomputed slowly and the approach runs fast (R, testing
   // live at 12:32: "I really like the audio fade — I'd halve the time").
-  // MEASURED, not eyeballed: old was 300ms × 0.5 = 1500ms to inaudible
-  // (-26dB); new is 60ms × 0.22 = 780ms, i.e. 0.52× — the half that was
-  // asked for. My first attempt at "half" (60ms × 0.35) was 0.28×, which is
-  // why the curve gets computed rather than guessed.
+  // 700ms edge-to-edge, linear — and it genuinely reaches zero.
   setInterval(() => {
     for (const [id, p] of peers) {
       const r = remotes.get(id);
@@ -270,13 +267,25 @@ export function initVoice(name) {
       p.wantVolume = isHushed() ? 0 : roll * volumeFor('voices');
     }
   }, 300);
+  // LINEAR, not exponential. An exponential approach spends most of its life
+  // crawling through the quiet end — exactly where an ear is most alert to
+  // "is that still on?" — so a mute built from decaying multiplications
+  // leaves a faint voice hanging for seconds. Measured: the old curve was
+  // still nonzero at 2280ms and only crossed -40dB at 1140ms (field report,
+  // 12:35: "I can hear a really faint version of your voice for a number of
+  // seconds"). My -40dB snap threshold was itself far too quiet to be
+  // inaudible. A mute should travel at a constant rate and ARRIVE.
+  // Exponential still suits DISTANCE — a physical fact rather than an
+  // intention — and that stays on the 300ms pass above.
+  const FADE_MS = 700;                       // full-scale travel time
+  const STEP = 60 / FADE_MS;                 // per-tick delta at 60ms
   setInterval(() => {
     for (const p of peers.values()) {
       if (!p.audio.srcObject || p.wantVolume == null) continue;
       const d = p.wantVolume - p.audio.volume;
-      // snap the last sliver: an exponential approach never quite lands, and
-      // a residual 0.004 of someone's voice is not silence
-      p.audio.volume = Math.abs(d) < 0.01 ? p.wantVolume : p.audio.volume + d * 0.22;
+      p.audio.volume = Math.abs(d) <= STEP
+        ? p.wantVolume                       // lands exactly, no residue
+        : p.audio.volume + Math.sign(d) * STEP;
     }
   }, 60);
 }
