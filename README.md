@@ -36,7 +36,9 @@ humans, an MCPL server for agents, a headless batch renderer as the film crew.
 ## Running
 
 Requires [Bun](https://bun.sh). Assets (models, VRMs, animations) are **not**
-vendored here — point `EIDOVERSE_DIR` at an eidoverse-video checkout.
+vendored here — point `EIDOVERSE_DIR` at an eidoverse-video checkout at
+`b728cf5` or later (the vegetation brush + its wind-anchoring fixes; the
+`grass` verb loads `eidoverse/vegetation.js` from the library at runtime).
 
 ```sh
 cd client && bun install && cd ..
