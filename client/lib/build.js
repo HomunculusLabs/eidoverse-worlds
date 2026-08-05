@@ -758,7 +758,14 @@ function paintGround(body) {
       if (GROUND_TINTS[st.tint].grass) args.color = GROUND_TINTS[st.tint].grass;
       return args;
     },
-    galleta: () => ({ species: 'galleta_dry', width: 80, depth: 70, center: [0, 0] }),
+    tufts: () => {
+      // bunch grass — a blade grass like the meadow, so it takes the same
+      // length and seasonal-colour dials (its own authored colour is straw)
+      const args = { species: 'galleta_dry', width: 80, depth: 70, center: [0, 0],
+        height: GRASS_HEIGHT[st.height] };
+      if (GROUND_TINTS[st.tint].grass) args.color = GROUND_TINTS[st.tint].grass;
+      return args;
+    },
     'mojave desert': () => ({ preset: 'mojave', width: 90, depth: 80, center: [0, 0] }),
     'corn field': () => ({ species: 'corn', width: 40, depth: 30, center: [0, 0],
       rows: { spacing: 0.9, plant: 0.26 }, corn: { peelChance: 0.25 } }),
@@ -778,16 +785,28 @@ function paintGround(body) {
   plantSel.style.cssText = 'font:11px var(--font); background:rgba(4,14,20,.9); color:var(--fg); border:1px solid var(--edge); border-radius:5px; padding:5px;';
   for (const k of Object.keys(PLANTINGS)) plantSel.appendChild(new Option(k, k));
   plantSel.value = st.plant;
-  plantSel.onchange = () => { st.plant = plantSel.value; if (st.grass) growGrass(); };
+  plantSel.onchange = () => {
+    st.plant = plantSel.value;
+    syncPlantControls();
+    if (st.grass) growGrass();
+  };
   row('plant', plantSel);
 
-  // blade length (meadow grass only — structural species keep their size)
+  // blade length — a BLADE-grass control. Structural species (shrubs, yucca,
+  // corn) carry their own size, and the engine ignores `height` for them, so
+  // the row hides rather than sitting there as a dial that does nothing.
+  const BLADE_PLANTINGS = new Set(['meadow', 'tufts']);
   const hSel = document.createElement('select');
   hSel.style.cssText = 'font:11px var(--font); background:rgba(4,14,20,.9); color:var(--fg); border:1px solid var(--edge); border-radius:5px; padding:5px;';
   for (const k of Object.keys(GRASS_HEIGHT)) hSel.appendChild(new Option(k, k));
   hSel.value = st.height;
-  hSel.onchange = () => { st.height = hSel.value; if (st.grass && st.plant === 'meadow') growGrass(); };
-  row('height', hSel);
+  hSel.onchange = () => { st.height = hSel.value; if (st.grass && BLADE_PLANTINGS.has(st.plant)) growGrass(); };
+  const hRow = row('height', hSel);
+  syncPlantControls();
+
+  function syncPlantControls() {
+    hRow.style.display = BLADE_PLANTINGS.has(st.plant) ? '' : 'none';
+  }
 
   // grass
   const dens = document.createElement('select');
