@@ -312,6 +312,73 @@ console.log('\nanatomy under yaw (cones, twist, hinge axes — swept N/E/S/W):')
   check('...and that twist gate is not vacuous', twistSamples > 10000, `${twistSamples} in-regime samples`);
 }
 
+// ---------------------------------------------------------------------------
+// GOING LIMP MUST NOT TELEPORT — asserted on the RENDERED pose.
+//
+// Everything above measures the sim. Nothing measured what the skeleton
+// actually ends up looking like, and that is a separate mapping which can be
+// wrong on its own: the drive's reference direction and reference orientation
+// have to describe the SAME pose, or frame one renders the bone at twice its
+// offset from the bind pose. Live report: "head and neck rotate anti-nod-wise
+// around the axis of shoulders, a complete revolution; arms also try to get to
+// the other side of the body immediately."
+//
+// This is invisible unless the rig is POSED — bind == live is exactly the case
+// where a mismatched pairing and a correct one agree — and unless setPose is
+// actually applied, which the stub avatar does not do. So: pose it like a real
+// idle, apply the returned pose, and compare world quaternions.
+console.log('\ngoing limp does not teleport the skeleton (rendered pose):');
+{
+  const bad: string[] = [];
+  const DRIVEN = ['hips', 'spine', 'chest', 'neck',
+    'leftUpperArm', 'leftLowerArm', 'rightUpperArm', 'rightLowerArm',
+    'leftUpperLeg', 'leftLowerLeg', 'rightUpperLeg', 'rightLowerLeg'];
+  for (const rig of FLEET) {
+    const av = makeAvatar(rig.P, { realParent: rig.realParent });
+    const P: any = rig.P;
+    // a real idle is nowhere near the bind pose: arms well down, head turned
+    const up = (P.neck ?? P.chest).clone().sub(P.hips).normalize();
+    const lat = P.leftUpperArm.clone().sub(P.rightUpperArm);
+    lat.addScaledVector(up, -lat.dot(up)).normalize();
+    const fwd = new THREE.Vector3().crossVectors(lat, up).normalize();
+    av.nodes.leftUpperArm?.quaternion.setFromAxisAngle(fwd, (-70 * Math.PI) / 180);
+    av.nodes.rightUpperArm?.quaternion.setFromAxisAngle(fwd, (70 * Math.PI) / 180);
+    av.nodes.neck?.quaternion.setFromAxisAngle(lat, (18 * Math.PI) / 180);
+    av.root.updateMatrixWorld(true);
+
+    const before: Record<string, any> = {};
+    for (const n of DRIVEN) {
+      const node = av.vrm.humanoid.getNormalizedBoneNode(n);
+      if (node) before[n] = node.getWorldQuaternion(new THREE.Quaternion());
+    }
+    const rd: any = new RapierRagdoll(av, null, av.restBonePositions());
+    const pose = rd.step(1 / 60);          // one frame: the sim has barely moved
+    if (pose) {
+      for (const [n, q] of Object.entries(pose)) {
+        const node = av.vrm.humanoid.getNormalizedBoneNode(n);
+        if (node) node.quaternion.set((q as any)[0], (q as any)[1], (q as any)[2], (q as any)[3]);
+      }
+      av.root.updateMatrixWorld(true);
+    }
+    let worst = 0, worstAt = '';
+    for (const n of DRIVEN) {
+      if (!before[n]) continue;
+      const node = av.vrm.humanoid.getNormalizedBoneNode(n);
+      const now = node.getWorldQuaternion(new THREE.Quaternion());
+      // angle between the two orientations
+      const d = Math.min(1, Math.abs(before[n].dot(now)));
+      const ang = 2 * Math.acos(d);
+      if (ang > worst) { worst = ang; worstAt = n; }
+    }
+    if (worst > 0.25) {                    // ~14°, generous for one frame of fall
+      bad.push(`${rig.name}:${worstAt}(${((worst * 180) / Math.PI).toFixed(0)}°)`);
+    }
+    rd.dispose();
+  }
+  check('a posed body renders where it stood, not at twice the offset',
+    bad.length === 0, bad.slice(0, 5).join(' ') + (bad.length > 5 ? ` +${bad.length - 5}` : ''));
+}
+
 console.log('\nlifecycle (one rig, every downstream contract):');
 {
   const rig: any = FLEET[0];

@@ -274,17 +274,38 @@ export class RapierRagdoll {
     const rigFwd = new THREE.Vector3().crossVectors(rigLat, rigUp).normalize();
     this.rig = { up: rigUp, lateral: rigLat, forward: rigFwd };
 
-    // the drive table, exactly the Verlet's world-reference method
+    // ---- the drive table: REFERENCE DIRECTION AND REFERENCE ORIENTATION MUST
+    // ---- BE THE SAME POSE. This pairing was the "arms go to the other side".
+    //
+    // The rendered world quaternion is  swing(refDir → simDir) · refQuat.  For
+    // that to be the identity map at t=0 — a body that goes limp must not
+    // teleport — refDir has to be the direction the bone points in the pose
+    // refQuat describes. It was taking refDir from the BIND pose (restP) and
+    // refQuat from the LIVE skeleton, so at t=0 the multiplier was not identity
+    // but the entire bind→live animation rotation, applied on top of a refQuat
+    // that already contained it. Every driven bone rendered at twice its offset
+    // from the bind pose the instant R was pressed: arms held 70° down from a
+    // T-pose bind snapped to 140°, and an idle's head tilt doubled likewise.
+    //
+    // setLimp() parks only the NON-driven bones (avatar.js:386) — the driven
+    // ones keep their animated rotation — so the live pose is exactly where
+    // this bites, and the headless suite could never see it: makeAvatar gives
+    // every bone identity, making bind == live, the one pose where the wrong
+    // pairing and the right one agree. The Verlet does the same job correctly
+    // by dividing the rest frame back out (`restFrameInv`, ragdoll.js), which
+    // is why it "sort of works" where this did not.
+    //
+    // Both references are now taken from the live skeleton at build.
     this.drive = [];
     for (const [bone, child] of SEGMENTS) {
       const bn = h?.getNormalizedBoneNode?.(bone);
       const cn = h?.getNormalizedBoneNode?.(child);
-      if (!bn || !cn || !restP[bone] || !restP[child]) continue;
-      const restDir = restP[child].clone().sub(restP[bone]);
-      if (restDir.lengthSq() < 1e-8) continue;
+      if (!bn || !cn || !live[bone] || !live[child]) continue;
+      const refDir = live[child].clone().sub(live[bone]);
+      if (refDir.lengthSq() < 1e-8) continue;
       this.drive.push({
         bone, child, node: bn, parent: bn.parent,
-        restDir: restDir.normalize(),
+        restDir: refDir.normalize(),
         restQuat: bn.getWorldQuaternion(new THREE.Quaternion()),
       });
     }
@@ -335,11 +356,21 @@ export class RapierRagdoll {
     // Real ragdolls are built this way for this reason; the looseness READS in
     // the head and limbs, which keep their joints.
     const TORSO = new Set(['hips|spine', 'spine|chest', 'chest|neck']);
-    const restTorsoDir = (restP.chest ?? restP.neck).clone().sub(restP.hips);
-    const liveTorsoDir = (live.chest ?? live.neck).clone().sub(live.hips);
+    // chest is synthesized from spine+neck, so a rig missing BOTH leaves it
+    // unsynthesizable — and dereferencing it threw, which bodysim.js would
+    // have swallowed into a silent verlet fallback. Walk up whatever the rig
+    // does have instead.
+    const upperOf = (m) => m.chest ?? m.neck ?? m.spine ?? m.head;
+    const restUpper = upperOf(restP), liveUpper = upperOf(live);
+    if (!restUpper || !liveUpper || !restP.hips || !live.hips) {
+      throw new Error('rapierdoll: rig has no usable torso chain');
+    }
+    const restTorsoDir = restUpper.clone().sub(restP.hips);
+    const liveTorsoDir = liveUpper.clone().sub(live.hips);
     const torsoQ = shortestArc(restTorsoDir, liveTorsoDir, new THREE.Quaternion());
-    const restTorsoMid = restP.hips.clone().add(restP.neck ?? restP.chest).multiplyScalar(0.5);
-    const liveTorsoMid = live.hips.clone().add(live.neck ?? live.chest).multiplyScalar(0.5);
+    const topOf = (m) => m.neck ?? m.chest ?? m.spine ?? m.head;
+    const restTorsoMid = restP.hips.clone().add(topOf(restP)).multiplyScalar(0.5);
+    const liveTorsoMid = live.hips.clone().add(topOf(live)).multiplyScalar(0.5);
     const torsoBody = this.world.createRigidBody(
       RAPIER.RigidBodyDesc.dynamic()
         .setTranslation(liveTorsoMid.x, liveTorsoMid.y, liveTorsoMid.z)
@@ -446,6 +477,17 @@ export class RapierRagdoll {
       bodyOf.set(a, body);
     }
 
+    // A TORSO BONE ALWAYS MEANS THE TORSO BODY. bodyOf is populated from each
+    // segment's START bone, so 'chest' only got mapped if the chest|neck
+    // segment survived — and VRM makes `neck` optional. On a rig without one,
+    // chest|neck and neck|head both drop out, 'chest' goes unmapped, and every
+    // joint hanging off it (BOTH shoulders, and the head) is silently skipped:
+    // the arms and head become free rigid bodies that tumble away on the first
+    // impulse. Detaching a limb is never the right answer to a missing bone.
+    for (const name of ['hips', 'spine', 'chest']) {
+      if (live[name] && !bodyOf.has(name)) bodyOf.set(name, torsoBody);
+    }
+
     // ---- the torso's solid: shoulder bar and pelvis bar --------------------
     for (const bar of TORSO_BARS) {
       const ra = restP[bar.a], rb = restP[bar.b];
@@ -537,8 +579,20 @@ export class RapierRagdoll {
     const M = RAPIER.JointAxesMask;
 
     for (const J of JOINTS_DEF) {
-      const pb = bodyOf.get(J.parent), cb = bodyOf.get(J.child);
-      if (!pb || !cb || !restP[J.at] || !live[J.at]) continue;
+      // any trunk bone means the trunk, even one the rig never defined
+      const TRUNK_BONES = new Set(['hips', 'spine', 'chest']);
+      const resolve = (n) => bodyOf.get(n) ?? (TRUNK_BONES.has(n) ? torsoBody : undefined);
+      const pb = resolve(J.parent), cb = resolve(J.child);
+      // A skipped joint is a DETACHED body part, which is the loudest possible
+      // physics failure and used to happen in total silence.
+      if (!pb || !cb || !restP[J.at] || !live[J.at]) {
+        if (pb !== cb) {
+          this.skipped = (this.skipped ?? []);
+          this.skipped.push(J.at);
+          console.warn(`[rapierdoll] no joint at ${J.at} — ${J.child} is unattached`);
+        }
+        continue;
+      }
       if (pb === cb) continue;                    // torso-internal: rigid now
       const ps = segByParentBone.get(J.parent), cs = segByParentBone.get(J.child);
       if (!ps || !cs) continue;
