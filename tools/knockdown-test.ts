@@ -118,6 +118,36 @@ check("nail pulled: it comes down off the nail",
   ag3.pins.size === 0 && ag3.pos.y < 0.7, `y=${ag3.pos.y.toFixed(2)}`);
 ag3.close?.();
 
+// 7. explicit release carries a FINAL root sample. The dragger streams at
+// ~15Hz, so the hand can move between the last ordinary sample and release.
+// Browser targets apply end.p before rebuilding their sim; agents must not
+// combine a stale root with the release's fresh pose/sim state.
+const ag4 = new WorldAgent({ url: URL, name: "kd-bot4", world: W });
+await ag4.connect();
+await sleep(400);
+h.verb("force", { at: [ag4.pos.x - 1, 0, ag4.pos.z], power: 4, radius: 6 });
+await sleep(1800);
+h.send({ type: "bodydrag", target: "kd-bot4", grab: { joint: "head" } });
+await sleep(200);
+const held = { head: [0, 0, 0, 1] };
+const first = [ag4.pos.x, -0.31, ag4.pos.z];
+h.send({ type: "bodydrag", target: "kd-bot4", pose: held, p: first, yaw: 0 });
+await sleep(150);
+let releaseStart: number[] | null = null;
+(ag4 as any).settleFromDrag = async () => { releaseStart = [ag4.pos.x, ag4.pos.y, ag4.pos.z]; };
+// A downed avatar root is legitimately below terrain by its hips offset; the
+// release must preserve that world-space root rather than clamp or reinterpret it.
+const final = [first[0] + 3.0, -0.48, first[2] - 2.0];
+h.send({ type: "bodydrag", target: "kd-bot4", end: true, pose: {}, p: final, yaw: 0.7 });
+await sleep(150);
+check("explicit release applies the final authoritative root before settlement",
+  !!releaseStart && releaseStart.every((v, i) => Math.abs(v - final[i]) < 1e-6),
+  `started=${JSON.stringify(releaseStart)} final=${JSON.stringify(final)}`);
+check("...and applies the release yaw", Math.abs(ag4.yaw - 0.7) < 1e-6, `yaw=${ag4.yaw}`);
+check("...and an empty release pose does not wipe the last real pose",
+  JSON.stringify(ag4.heldPose) === JSON.stringify(held), `pose=${JSON.stringify(ag4.heldPose)}`);
+ag4.close?.();
+
 h.close();
 ag2.close?.();
 console.log(`\n${passed} passed, ${failed} failed`);
