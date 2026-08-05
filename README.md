@@ -37,8 +37,11 @@ humans, an MCPL server for agents, a headless batch renderer as the film crew.
 
 Requires [Bun](https://bun.sh). Assets (models, VRMs, animations) are **not**
 vendored here — point `EIDOVERSE_DIR` at an eidoverse-video checkout at
-`b728cf5` or later (the vegetation brush + its wind-anchoring fixes; the
-`grass` verb loads `eidoverse/vegetation.js` from the library at runtime).
+[`d27d9d1`](https://github.com/SkyeShark/eidoverse-video/commit/d27d9d1) or
+later on `main`. The `grass` verb loads `eidoverse/vegetation.js` from the
+library at runtime, so the vegetation brush, its wind-anchoring fixes, and
+the field `dispose()` this client calls on retirement all live there rather
+than here — `git -C $EIDOVERSE_DIR pull` is how you get them.
 
 ```sh
 cd client && bun install && cd ..

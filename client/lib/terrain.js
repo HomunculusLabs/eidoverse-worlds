@@ -5,6 +5,7 @@
 // controller's position to place things. Both depend on this instead.
 
 import { scene, ground, grid } from './core.js';
+import { retireField } from './flora_field.js';
 
 let current = null;
 
@@ -26,28 +27,21 @@ export function setTerrain(t) {
 }
 
 // ---- grass -----------------------------------------------------------------
-// makeGrass adds its own mesh to the scene AND pushes its wind `update` into
-// globalThis._autoParticleSystems. So replacing or clearing grass has to undo
-// BOTH — otherwise a new field stacks on the old, and the old field's update
-// keeps ticking against a mesh that's been disposed. setGrass owns that.
+// A flora field adds its mesh to the scene AND pushes per-frame hooks (wind
+// per stroke, plus the avatar pushers) into globalThis._autoParticleSystems.
+// Replacing or clearing has to undo BOTH — otherwise a new field stacks on
+// the old, and the old field's hooks keep ticking against disposed GPU
+// resources. setGrass owns that; retireField does the work.
+//
+// ⚠️ A field's mesh is a GROUP (one child InstancedMesh per stroke, plus
+// shrub-wood stem meshes), and its textures are the species' map sets. Only
+// the field itself knows all of that, so retirement prefers the field's own
+// dispose() — walking `mesh.geometry`/`mesh.material` on a Group frees
+// NOTHING and silently leaked a whole meadow's VRAM per re-grow.
 let currentGrass = null;
 
 export function setGrass(field) {
-  if (currentGrass) {
-    if (currentGrass.mesh) {
-      scene.remove(currentGrass.mesh);
-      currentGrass.mesh.geometry?.dispose?.();
-      const m = currentGrass.mesh.material;
-      if (Array.isArray(m)) m.forEach((x) => x?.dispose?.()); else m?.dispose?.();
-    }
-    const autos = globalThis._autoParticleSystems;
-    // a groomed field owns SEVERAL per-frame hooks (wind + sheen); remove all
-    // of them, falling back to the bare update for an ungroomed field
-    const hooks = currentGrass.autoHooks ?? (currentGrass.update ? [currentGrass.update] : []);
-    if (Array.isArray(autos)) {
-      for (const h of hooks) { const i = autos.indexOf(h); if (i >= 0) autos.splice(i, 1); }
-    }
-  }
+  retireField(currentGrass, globalThis._autoParticleSystems, scene);
   currentGrass = field ?? null;
   // sticky density: a machine that had to thin its meadow keeps it thin
   // across re-grows, instead of re-discovering the same slow frame rate
