@@ -97,6 +97,14 @@ function exactView(entry) {
     helper.opacity = 0.5;
     helper.depth = 8;
     helper.update?.();
+    // The helper's updateMatrixWorld copies the SOURCE mesh's matrix and
+    // decomposes it over its own transform — positioning the helper itself is
+    // silently undone every frame. Sync must therefore move this mesh, not
+    // the helper node; kept here because only exactView knows it exists.
+    // (Symptom fixed: every exact wireframe drew at world origin in the
+    // entity's model frame, which went unnoticed for as long as the only
+    // exact entities were room-scale spawns sitting AT the origin.)
+    helper.userData.source = mesh;
     return helper;
   } catch {
     return new THREE.LineSegments(unitBox, lineMat(KIND_COLOR.exact));
@@ -123,8 +131,18 @@ function syncColliders() {
     const s = obj.scale?.x || 1;
     view.node.quaternion.setFromAxisAngle(_up, obj.rotation.y);
     if (kind === 'exact') {
-      view.node.position.copy(obj.position);
-      view.node.scale.setScalar(s);
+      const src = view.node.userData?.source;
+      if (src) {
+        // drive the source mesh — the helper mirrors it (see exactView)
+        src.position.copy(obj.position);
+        src.quaternion.setFromAxisAngle(_up, obj.rotation.y);
+        src.scale.setScalar(s);
+        src.updateMatrixWorld(true);
+      } else {
+        // LineSegments fallback: an ordinary node, positioned directly
+        view.node.position.copy(obj.position);
+        view.node.scale.setScalar(s);
+      }
       continue;
     }
     // A pillar keeps its full height but only a slim centre footprint — the
