@@ -164,5 +164,76 @@ console.log('\nregression guards — the walking avatar must not have changed:')
     at(0.4, 0, 0, 0.32, 0.05).push > 0.1);
 }
 
+console.log('\nfloor-shaped things with lying tops (the blanket rule, issue #11):');
+{
+  // The smallest mesh that reproduces the bug: a 3×3m blanket, 4cm thick,
+  // three 0.5m cushions on it. NO collide override anywhere in this block —
+  // the auto rule is the thing under test.
+  //
+  // The cloth is TESSELLATED (12×12) on purpose. The lie probe buckets
+  // vertices, so it can only see surface a vertex lands on — a corner-only
+  // BoxGeometry cloth is invisible between its corners and the probe reads
+  // the cushion corners as the whole story. Real triggers for this rule are
+  // generated meshes at 10k–150k tris, which cover every cell many times
+  // over; the sparse case is pinned separately below as the fail-safe it is.
+  const blanket = (id: string, seg = 12) => {
+    const cloth = new THREE.BoxGeometry(3, 0.04, 3, seg, 1, seg); cloth.translate(0, 0.02, 0);
+    const parts = [cloth];
+    for (const [px, pz] of [[-0.9, -0.9], [0.9, -0.6], [0.2, 1.0]]) {
+      const p = new THREE.BoxGeometry(0.7, 0.5, 0.7); p.translate(px, 0.29, pz);
+      parts.push(p);
+    }
+    const m = new THREE.Mesh(mergeGeometries(parts, false), undefined);
+    m.updateMatrixWorld(true);
+    C.fitCollider(id, m, {});
+    return m;
+  };
+  C.clearColliders(); blanket('blanket');
+  check('a blanket with cushions auto-classifies exact', !!C.colliders.get('blanket').exact);
+  // issue #11's three acceptance observables, in order:
+  const rim = at(1.6, 0, 0);
+  check('1: no shove at the rim — you step onto the cloth', rim.push < 0.05,
+    `pushed ${rim.push.toFixed(2)}m`);
+  check('2: no phantom mantle target at cushion height', rim.blocked === null);
+  check('3a: ground on bare cloth is the cloth', Math.abs(at(-1.2, 0.04, 0.9).ground - 0.04) < 0.02,
+    `ground ${at(-1.2, 0.04, 0.9).ground.toFixed(2)}`);
+  check('3b: ground on a cushion is the cushion', Math.abs(at(0.2, 0.54, 1.0).ground - 0.54) < 0.02,
+    `ground ${at(0.2, 0.54, 1.0).ground.toFixed(2)}`);
+  check('...and a cushion is a step up from the cloth, not a wall',
+    Math.abs(at(0.2, 0.04, 1.0).ground - 0.54) < 0.02);
+
+  // the gates hold — each of these is one clause away from being a blanket
+  const auto = (id: string, w: number, h: number, d: number, bumpH = 0) => {
+    const base = new THREE.BoxGeometry(w, h, d); base.translate(0, h / 2, 0);
+    const parts = [base];
+    if (bumpH) { const b = new THREE.BoxGeometry(w * 0.5, bumpH, d * 0.5); b.translate(0, h + bumpH / 2, 0); parts.push(b); }
+    const m = new THREE.Mesh(mergeGeometries(parts, false), undefined);
+    m.updateMatrixWorld(true);
+    C.fitCollider(id, m, {});
+    return C.colliders.get(id);
+  };
+  C.clearColliders();
+  check('a 1m crate stays a box (footprint gate)', !auto('crate2', 1, 1, 1).exact);
+  C.clearColliders();
+  check('an honest flat slab stays a box (lie gate)', !auto('slab', 3, 0.3, 3).exact);
+  C.clearColliders();
+  check('a car-height hump stays a box (height gate)', !auto('car', 3, 0.9, 2.5, 0.36).exact);
+  C.clearColliders();
+  // The probe's known blind spot, pinned as DELIBERATE: a corner-only
+  // low-poly mesh gives the probe nothing to see between its corners, so it
+  // under- or mis-reads the lie and the object keeps today's box. Wrong in
+  // the safe direction — sparse authored props stay exactly as they are;
+  // only dense (generated) meshes can earn the flip.
+  blanket('sparse', 1);
+  check('a corner-only low-poly blanket keeps the status quo (box)',
+    !C.colliders.get('sparse').exact);
+  C.clearColliders();
+  // the override still outranks the rule, both ways
+  const m = blanket('forced');
+  C.removeCollider('forced');
+  C.fitCollider('forced', m, { collide: 'box' });
+  check('collide:"box" still wins over the blanket rule', !C.colliders.get('forced').exact);
+}
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
