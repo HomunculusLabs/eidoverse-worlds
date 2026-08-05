@@ -70,10 +70,10 @@ function paint() {
     // there, you are simply not attending to it
     earBtn.style.opacity = consented ? (isHushed() ? '0.5' : '1') : '1';
     earBtn.title = !consented
-      ? 'not receiving voices at all — Shift+V to allow (world sound unaffected)'
+      ? 'not receiving voices at all — click to allow (world sound unaffected)'
       : isHushed()
         ? 'hushed — voices still arriving, click to listen again mid-sentence'
-        : 'hearing voices — click to hush (Shift+V revokes entirely)';
+        : 'hearing voices — click to hush (Audio panel revokes entirely)';
   }
 }
 // hot = your voice is actually registering: a tiny analyser on the mic track,
@@ -113,7 +113,6 @@ function flipEar() {
   else setHush(!isHushed());
   paint();
 }
-function flipConsent() { setReceiveVoice(!receivingVoice()); paint(); }
 
 function ensure() {
   const hud = document.querySelector('#hud');
@@ -167,11 +166,11 @@ ensure();
 
 window.addEventListener('keydown', (e) => {
   if (e.repeat || ['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
-  if (e.code !== 'KeyV') return;
-  // V speaks, Shift+V listens — both voice permissions on one key, and
-  // DELIBERATELY not coupled: deafening must never cut your mic mid-sentence
-  // while you are talking to someone standing next to you. The confusing
-  // state (live mic, deaf ears) is made VISIBLE instead of impossible — see
-  // the mic glyph's deaf tell in paint().
-  if (e.shiftKey) flipConsent(); else flipMic();
+  if (e.code !== 'KeyV' || e.shiftKey) return;
+  // V speaks. Hushing is a CLICK on the 🎧, and revoking consent entirely
+  // lives only in the Audio panel — deliberately not on a key next to the
+  // hush, because two near-identical gestures with different guarantees is
+  // how someone ends up believing they are private when they are not. The
+  // frequent act gets the fast path; the structural one you go looking for.
+  flipMic();
 });

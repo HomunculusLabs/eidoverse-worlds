@@ -247,6 +247,15 @@ export function initVoice(name) {
     if (micStream) for (const id of humanIds()) if (!peers.has(id)) offerTo(id);
     for (const id of [...peers.keys()]) if (!remotes.has(id)) dropPeer(id);
   });
+  // Two clocks on purpose. Distance is a slow fact — 300ms is plenty and
+  // keeps the per-frame cost near zero. The hush FADE is a gesture, and a
+  // gesture quantized to 300ms steps feels like a fade drawn with a ruler.
+  // So the target is recomputed slowly and the approach runs fast (R, testing
+  // live at 12:32: "I really like the audio fade — I'd halve the time").
+  // MEASURED, not eyeballed: old was 300ms × 0.5 = 1500ms to inaudible
+  // (-26dB); new is 60ms × 0.22 = 780ms, i.e. 0.52× — the half that was
+  // asked for. My first attempt at "half" (60ms × 0.35) was 0.28×, which is
+  // why the curve gets computed rather than guessed.
   setInterval(() => {
     for (const [id, p] of peers) {
       const r = remotes.get(id);
@@ -258,10 +267,18 @@ export function initVoice(name) {
       // in progress instead of starting the next one — the way you rejoin a
       // human voice you had stopped attending to. (Field report from a live
       // desk test: a teardown-on-toggle cut the utterance mid-word.)
-      const want = isHushed() ? 0 : roll * volumeFor('voices');
-      p.audio.volume += (want - p.audio.volume) * 0.5;   // short ramp, no click
+      p.wantVolume = isHushed() ? 0 : roll * volumeFor('voices');
     }
   }, 300);
+  setInterval(() => {
+    for (const p of peers.values()) {
+      if (!p.audio.srcObject || p.wantVolume == null) continue;
+      const d = p.wantVolume - p.audio.volume;
+      // snap the last sliver: an exponential approach never quite lands, and
+      // a residual 0.004 of someone's voice is not silence
+      p.audio.volume = Math.abs(d) < 0.01 ? p.wantVolume : p.audio.volume + d * 0.22;
+    }
+  }, 60);
 }
 
 // test/debug probe — connection states by peer id (the world_debug spirit)
