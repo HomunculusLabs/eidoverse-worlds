@@ -82,6 +82,11 @@ if (params.has('wgsldebug') && globalThis.GPUDevice) {
 
 // ------------------------------------------------------------ renderer
 export const canvas = document.createElement('canvas');
+// focusable so pointer-lock re-entry works after an Esc unlock: Chrome wants
+// the request to come from a focused target, and a canvas is not focusable by
+// default.
+canvas.tabIndex = -1;
+canvas.style.outline = 'none';
 document.body.prepend(canvas);
 
 export const renderer = new THREE.WebGPURenderer({ canvas, antialias: true });

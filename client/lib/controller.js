@@ -108,19 +108,108 @@ canvas.addEventListener('mousedown', (e) => {
 let editingNow = () => false;
 export function setEditingProbe(fn) { editingNow = fn; }
 addEventListener('mouseup', () => { dragging = false; });
+// ---- mouselook --------------------------------------------------------------
+// The desktop-game standard (VRChat, WoW): the canvas captures the pointer,
+// looking is free, Esc hands the cursor back. Drag-orbit stays untouched as
+// the fallback and the edit-mode behavior — a mode this module already has,
+// because looking-vs-editing was settled the same way in build.js.
+// While locked the cursor is parked, so `mouse` pins to (0,0): hover and
+// picking read the screen centre — crosshair semantics — instead of wherever
+// the pointer happened to die.
+let mouselook = localStorage.getItem('ew-mouselook') !== 'off';
+let locked = false, lockHinted = false;
+export const isMouselook = () => locked;
+export function setMouselook(on) {
+  mouselook = on;
+  localStorage.setItem('ew-mouselook', on ? 'on' : 'off');
+  if (!on && locked) document.exitPointerLock();
+}
+// MODE SWITCHING IS DELIBERATE (R, 00:27). Three ways in and out, all of them
+// chosen — a stray click in the viewport must never capture your cursor:
+//
+//   C (hold)  momentary cursor while mouselooking — reach for a frame or a
+//             die, release and you are looking again. Your finger IS the mode,
+//             so there is nothing to forget. (GMod context-menu lineage.)
+//   C (tap)   toggles mouselook when the cursor is free — the way IN, since
+//             Esc is hardcoded by the browser to only ever release a lock.
+//   Esc       always frees the cursor. Browser-guaranteed, unbreakable.
+//
+// Click-to-enter used to exist and was removed: once C is the momentary reach,
+// a click that also locks means you can end up captured without ever choosing
+// it, which is exactly the hole the momentary model is supposed to close.
+document.addEventListener('pointerlockchange', () => {
+  locked = document.pointerLockElement === canvas;
+  if (locked) {
+    mouse.set(0, 0);
+    if (!lockHinted) { flashHint('mouselook — <kbd>M</kbd> toggles · <kbd>Esc</kbd> frees the cursor'); lockHinted = true; }
+  }
+});
+bus.on('edit-mode', (on) => { if (on && locked) document.exitPointerLock(); });
+
+// Momentary cursor (R, 21:23): HOLD C to reach for the cursor mid-mouselook —
+// touch a UI frame, drop a die — release and you're looking again. A hold
+// instead of a toggle because toggles breed mode-amnesia; your finger IS the
+// mode. (GMod context-menu lineage. Esc remains the deliberate switch.)
+// keydown counts as a user gesture, so re-locking on keyup is allowed.
+// M TOGGLES mouselook, full stop (R, 00:35-00:40 — the reasoning that settled
+// it: "I thought esc was a *toggle* and c was a *temp swap*. Esc can't be a
+// toggle, so c has to be. The toggle is more useful." Then: "M alone. I like
+// toggles :3").
+//
+// M, not C: M is the NAME of the mode (mouselook) and carries Second Life's
+// precedent for exactly this binding, while Ctrl+C is the most-pressed
+// shortcut on any machine — a modifier guard handles it, but that is the one
+// key where a guard failure is guaranteed to bite someone mid-copy. No reason
+// to sit on a landmine when a clearer spot is free. (R spotted the Ctrl+C
+// hazard at 00:36.)
+//
+// The original design gave C a momentary hold — press to reach for the cursor,
+// release to keep looking — on the assumption that Esc handled the deliberate
+// switch in both directions. It cannot: browsers hardcode Esc to only ever
+// RELEASE a pointer lock and refuse to grant one from it, because that is how
+// a hostile page would trap a cursor. With Esc out-only, the toggle has to
+// live on C, and one key cannot be both a toggle and a hold without the
+// ambiguity that cost us a live debugging session tonight.
+//
+//   M     toggle: locked <-> free, both directions
+//   Esc   always frees the cursor (browser-enforced, out-only)
+addEventListener('keydown', (e) => {
+  if (e.code !== 'KeyM' || e.repeat) return;
+  // bare M only: modified presses belong to the browser and the OS
+  if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
+  if (editingNow() || isOverlayOpen() || chat.isOpen || !mouselook) return;
+  if (locked) document.exitPointerLock();
+  else relock();
+});
+
+// An Esc-initiated unlock leaves the canvas unfocused, and Chrome wants
+// requestPointerLock from a focused target — a bare window keydown listener
+// was not enough to get back IN (R, 00:33). Focus first, then ask; and if the
+// browser refuses anyway, say so instead of failing silently, which is how
+// this hid in the first place.
+function relock() {
+  if (document.pointerLockElement === canvas) return;
+  try { canvas.focus?.({ preventScroll: true }); } catch { /* not focusable, fine */ }
+  const p = canvas.requestPointerLock();
+  p?.catch?.(() => flashHint('press <kbd>M</kbd> again to look'));
+}
+
 addEventListener('mousemove', (e) => {
-  if (dragging) {
+  if (locked || dragging) {
     camYaw -= e.movementX * 0.005;
     camPitch = THREE.MathUtils.clamp(camPitch + e.movementY * 0.004, -0.9, 1.2);
   }
-  mouse.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
+  if (!locked) mouse.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1);
 });
 canvas.addEventListener('contextmenu', (e) => e.preventDefault()); // right-drag orbit
 canvas.addEventListener('wheel', (e) => {
   e.preventDefault();
   camDist = THREE.MathUtils.clamp(camDist + e.deltaY * 0.004, 0.0, 16);
   const wasFP = firstPerson;
-  firstPerson = camDist < 0.6;
+  // Hysteresis: enter FP under 0.4m, don't leave until past 0.7m. A single
+  // threshold flickers 1P/3P at the boundary — nauseating, and loudest for
+  // exactly the motion-sensitive people a hangout world shelters.
+  firstPerson = wasFP ? camDist < 0.7 : camDist < 0.4;
   if (firstPerson !== wasFP) flashHint(firstPerson ? 'first person' : 'third person');
 }, { passive: false });
 
