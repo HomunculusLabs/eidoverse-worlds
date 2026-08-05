@@ -116,27 +116,30 @@ addEventListener('mouseup', () => { dragging = false; });
 // While locked the cursor is parked, so `mouse` pins to (0,0): hover and
 // picking read the screen centre — crosshair semantics — instead of wherever
 // the pointer happened to die.
-let mouselook = localStorage.getItem('ew-mouselook') !== 'off';
 let locked = false, lockHinted = false;
 export const isMouselook = () => locked;
-export function setMouselook(on) {
-  mouselook = on;
-  localStorage.setItem('ew-mouselook', on ? 'on' : 'off');
-  if (!on && locked) document.exitPointerLock();
-}
-// MODE SWITCHING IS DELIBERATE (R, 00:27). Three ways in and out, all of them
-// chosen — a stray click in the viewport must never capture your cursor:
+
+// MOUSELOOK: M toggles, Esc frees. Two keys, one behaviour each.
 //
-//   C (hold)  momentary cursor while mouselooking — reach for a frame or a
-//             die, release and you are looking again. Your finger IS the mode,
-//             so there is nothing to forget. (GMod context-menu lineage.)
-//   C (tap)   toggles mouselook when the cursor is free — the way IN, since
-//             Esc is hardcoded by the browser to only ever release a lock.
-//   Esc       always frees the cursor. Browser-guaranteed, unbreakable.
+//   M     toggle: locked <-> free, both directions. Bare M only — modified
+//         presses belong to the browser and the OS (Ctrl+M etc).
+//   Esc   always frees the cursor. One-way by browser law: every engine
+//         hardcodes Esc to RELEASE a pointer lock and refuses to let a page
+//         grant one from it, because that is exactly how a hostile page would
+//         trap a cursor. So Esc can never be the way back IN — hence M.
 //
-// Click-to-enter used to exist and was removed: once C is the momentary reach,
-// a click that also locks means you can end up captured without ever choosing
-// it, which is exactly the hole the momentary model is supposed to close.
+// M rather than C: M is the name of the mode and matches Second Life's
+// binding, while Ctrl+C is the most-pressed shortcut on any machine and a
+// guard regression there would bite someone mid-copy.
+//
+// Clicking the world does NOT enter mouselook. It used to, and that made
+// cursor mode nearly unusable — every click on anything dropped you back into
+// capture, so you could never interact freely.
+//
+// While locked the cursor is parked, so `mouse` pins to (0,0): hover and
+// picking read the screen centre — crosshair semantics — instead of wherever
+// the pointer happened to die.
+
 document.addEventListener('pointerlockchange', () => {
   locked = document.pointerLockElement === canvas;
   if (locked) {
@@ -146,38 +149,11 @@ document.addEventListener('pointerlockchange', () => {
 });
 bus.on('edit-mode', (on) => { if (on && locked) document.exitPointerLock(); });
 
-// Momentary cursor (R, 21:23): HOLD C to reach for the cursor mid-mouselook —
-// touch a UI frame, drop a die — release and you're looking again. A hold
-// instead of a toggle because toggles breed mode-amnesia; your finger IS the
-// mode. (GMod context-menu lineage. Esc remains the deliberate switch.)
-// keydown counts as a user gesture, so re-locking on keyup is allowed.
-// M TOGGLES mouselook, full stop (R, 00:35-00:40 — the reasoning that settled
-// it: "I thought esc was a *toggle* and c was a *temp swap*. Esc can't be a
-// toggle, so c has to be. The toggle is more useful." Then: "M alone. I like
-// toggles :3").
-//
-// M, not C: M is the NAME of the mode (mouselook) and carries Second Life's
-// precedent for exactly this binding, while Ctrl+C is the most-pressed
-// shortcut on any machine — a modifier guard handles it, but that is the one
-// key where a guard failure is guaranteed to bite someone mid-copy. No reason
-// to sit on a landmine when a clearer spot is free. (R spotted the Ctrl+C
-// hazard at 00:36.)
-//
-// The original design gave C a momentary hold — press to reach for the cursor,
-// release to keep looking — on the assumption that Esc handled the deliberate
-// switch in both directions. It cannot: browsers hardcode Esc to only ever
-// RELEASE a pointer lock and refuse to grant one from it, because that is how
-// a hostile page would trap a cursor. With Esc out-only, the toggle has to
-// live on C, and one key cannot be both a toggle and a hold without the
-// ambiguity that cost us a live debugging session tonight.
-//
-//   M     toggle: locked <-> free, both directions
-//   Esc   always frees the cursor (browser-enforced, out-only)
 addEventListener('keydown', (e) => {
   if (e.code !== 'KeyM' || e.repeat) return;
   // bare M only: modified presses belong to the browser and the OS
   if (e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
-  if (editingNow() || isOverlayOpen() || chat.isOpen || !mouselook) return;
+  if (editingNow() || isOverlayOpen() || chat.isOpen) return;
   if (locked) document.exitPointerLock();
   else relock();
 });
