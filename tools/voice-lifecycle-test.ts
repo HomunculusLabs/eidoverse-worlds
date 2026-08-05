@@ -232,6 +232,34 @@ check("revoking with mic live re-offers SENDONLY, not sendrecv",
 await voice.toggleMic("me");             // leave the mic off for the rest
 stubs.remotes.delete("peer1");
 
+// ---- hush vs revoke: silence and consent are different acts ---------------
+// The review asked for "tear down/mute … legibly" — both were offered. Mute
+// is what people press often, and a teardown there kills the in-flight
+// utterance (found live at a desk: the sentence cut mid-word and the NEXT one
+// started). So the frequent act is a gain change that keeps the stream, and
+// the deliberate act still tears down for anyone wanting the hard guarantee.
+{
+  consent.setReceiveVoice(true);
+  consent.setHush(false);
+  created.length = 0;
+  offerFrom("talker");
+  await settle();
+  const live = created.at(-1)!;
+  check("hush: the peer survives (the utterance is not cut)",
+    (consent.setHush(true), !live.closed));
+  check("hush: state is remembered and legible", consent.isHushed() === true);
+  check("hush does NOT revoke consent — audio is still arriving",
+    consent.receivingVoice() === true);
+  consent.setHush(false);
+  check("unhush: still the same peer, so you rejoin mid-sentence", !live.closed);
+
+  // ...whereas the deliberate revoke is still a real teardown
+  consent.setReceiveVoice(false);
+  await settle();
+  check("revoke (Shift+V) still tears the peer down — the hard guarantee", live.closed);
+  consent.setHush(false);
+}
+
 // ---- a refusal is an ANSWER, not an invitation to ask again --------------
 // (review catch: sttConsent was a boolean, so a stored `false` was
 // indistinguishable from "never asked" and every mic-on re-prompted — a no

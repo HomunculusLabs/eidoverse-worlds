@@ -12,7 +12,8 @@
 import { toggleMic, micOn } from './voice.js';
 import { setSTT, sttAvailable } from './stt.js';
 import { CONFIG } from './core.js';
-import { receivingVoice, setReceiveVoice, ensureSttConsent, sttConsented } from './voiceconsent.js';
+import { receivingVoice, setReceiveVoice, ensureSttConsent, sttConsented,
+  isHushed, setHush } from './voiceconsent.js';
 
 // three states (R, 17:09): off = grey + slash · live = clean bright white ·
 // hot (picking up your voice for STT) = warm yellow glow. No rings.
@@ -55,14 +56,24 @@ let micBtn = null, earBtn = null;
 let micHot = false;
 function paint() {
   if (!micBtn) return;
+  const deaf = micOn() && !receivingVoice();
   micBtn.innerHTML = MIC_SVG(micOn(), micOn() && micHot);
-  micBtn.title = micOn() ? 'mic LIVE — the world hears you (V)' : 'mic off (V to talk)';
+  micBtn.style.opacity = deaf ? '0.55' : '1';
+  micBtn.title = !micOn() ? 'mic off (V to talk)'
+    : deaf ? 'mic LIVE — but you are not hearing the room (Shift+V to listen)'
+    : 'mic LIVE — the world hears you (V)';
   if (earBtn) {
-    const on = receivingVoice();
+    const consented = receivingVoice();
+    const on = consented && !isHushed();
     earBtn.innerHTML = EAR_SVG(on);
-    earBtn.title = on
-      ? 'hearing voices — click to stop receiving (world sound unaffected)'
-      : 'not receiving voices — click to hear people (world sound unaffected)';
+    // hushed-but-consented is dimmed rather than slashed: the stream is still
+    // there, you are simply not attending to it
+    earBtn.style.opacity = consented ? (isHushed() ? '0.5' : '1') : '1';
+    earBtn.title = !consented
+      ? 'not receiving voices at all — Shift+V to allow (world sound unaffected)'
+      : isHushed()
+        ? 'hushed — voices still arriving, click to listen again mid-sentence'
+        : 'hearing voices — click to hush (Shift+V revokes entirely)';
   }
 }
 // hot = your voice is actually registering: a tiny analyser on the mic track,
@@ -87,7 +98,22 @@ async function flipMic() {
   paint();
 }
 
-function flipEar() { setReceiveVoice(!receivingVoice()); paint(); }
+// Two acts, deliberately separated (R, in world 12:11 — deafening cut the
+// utterance and jumped to the next one, because consent-off tears the peer
+// down and the in-flight audio dies with it):
+//   CLICK    = hush — a gain change. The stream keeps arriving and advancing,
+//              so unhushing rejoins the line already in progress, same as a
+//              human voice you stopped attending to.
+//   SHIFT+V  = consent — the privacy act. Tears the inbound path down so no
+//              media is negotiated at all (the review's requirement).
+// Clicking while unconsented grants consent first, so the button is never a
+// dead end for someone who just wants to hear people.
+function flipEar() {
+  if (!receivingVoice()) { setReceiveVoice(true); setHush(false); }
+  else setHush(!isHushed());
+  paint();
+}
+function flipConsent() { setReceiveVoice(!receivingVoice()); paint(); }
 
 function ensure() {
   const hud = document.querySelector('#hud');
@@ -140,6 +166,12 @@ setInterval(ensure, 1000);
 ensure();
 
 window.addEventListener('keydown', (e) => {
-  if (e.code === 'KeyV' && !e.repeat
-      && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) flipMic();
+  if (e.repeat || ['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+  if (e.code !== 'KeyV') return;
+  // V speaks, Shift+V listens — both voice permissions on one key, and
+  // DELIBERATELY not coupled: deafening must never cut your mic mid-sentence
+  // while you are talking to someone standing next to you. The confusing
+  // state (live mic, deaf ears) is made VISIBLE instead of impossible — see
+  // the mic glyph's deaf tell in paint().
+  if (e.shiftKey) flipConsent(); else flipMic();
 });

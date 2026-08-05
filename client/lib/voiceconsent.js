@@ -47,6 +47,24 @@ export function setReceiveVoice(on) {
   return next;
 }
 
+/** Momentary silence WITHOUT revoking consent: the stream keeps arriving and
+ *  keeps advancing, so unmuting drops you back into a sentence already in
+ *  progress — the way you rejoin a human voice you had stopped attending to.
+ *  Distinct from setReceiveVoice(false), which is the privacy act: that one
+ *  tears the inbound path down so no media is negotiated at all. Silence and
+ *  consent are different questions and this is the one people press often.
+ *  (R, in world 12:11: the deafen was killing the utterance and starting the
+ *  next one — a cut, not a mute.) */
+let hushed = false;
+export const isHushed = () => hushed;
+export function setHush(on) {
+  const next = !!on;
+  if (next === hushed) return hushed;
+  hushed = next;
+  bus.emit('audio:hush', hushed);   // voice.js ramps element volume; no teardown
+  return hushed;
+}
+
 export function setVolume(cat, v) {
   const n = Math.max(0, Math.min(1, Number(v) || 0));
   if (cat === 'world') prefs.volWorld = n;

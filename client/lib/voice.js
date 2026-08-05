@@ -19,7 +19,7 @@ import { sendRtc } from './net.js';
 import { remotes } from './remotes.js';
 import { myState } from './controller.js';
 import { flashHint } from './ui.js';
-import { receivingVoice, volumeFor } from './voiceconsent.js';
+import { receivingVoice, volumeFor, isHushed } from './voiceconsent.js';
 
 const RTC_CFG = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] };
 const FULL_M = 3, SILENT_M = 20;   // full volume inside 3m, gone by 20m
@@ -253,7 +253,13 @@ export function initVoice(name) {
       if (!r?.avatar?.root || !p.audio.srcObject) continue;
       const d = r.avatar.root.position.distanceTo(myState.pos);
       const roll = Math.min(1, Math.max(0, 1 - (d - FULL_M) / (SILENT_M - FULL_M)));
-      p.audio.volume = roll * volumeFor('voices');   // distance × the voices slider
+      // distance × slider × hush. HUSH IS A GAIN, never a teardown: the stream
+      // keeps arriving and advancing, so unhushing rejoins the sentence already
+      // in progress instead of starting the next one — the way you rejoin a
+      // human voice you had stopped attending to. (Field report from a live
+      // desk test: a teardown-on-toggle cut the utterance mid-word.)
+      const want = isHushed() ? 0 : roll * volumeFor('voices');
+      p.audio.volume += (want - p.audio.volume) * 0.5;   // short ramp, no click
     }
   }, 300);
 }
