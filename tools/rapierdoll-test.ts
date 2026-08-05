@@ -405,8 +405,12 @@ console.log('\nlifecycle (one rig, every downstream contract):');
   // and 0.49 m on another (the Verlet spreads 0.18-0.44 on the same rigs), so
   // any fixed threshold on a single rig is testing the rig, not the shove.
   // Run the same fall twice, shove one, and ask which ended further downwind.
-  const shoved = (push: boolean) => {
-    const a = makeAvatar(rig.P);
+  // ...and AVERAGED over several rigs, because one falling body is chaotic
+  // enough that a single pair can land 0.18 vs 0.14 while the shove is
+  // working perfectly well. Averaging is what makes the comparison about the
+  // shove instead of about which way one particular rig happened to topple.
+  const shoved = (push: boolean, r0: any) => {
+    const a = makeAvatar(r0.P, { realParent: r0.realParent });
     const r: any = new RapierRagdoll(a, toppleLean(), a.restBonePositions());
     for (let i = 0; i < 30; i++) r.step(1 / 60);
     const x0 = r.p.hips.x;
@@ -416,11 +420,21 @@ console.log('\nlifecycle (one rig, every downstream contract):');
     while (!r.done && s < 900) { r.step(1 / 60); s++; }
     return { dx: r.p.hips.x - x0, done: r.done, clocks };
   };
-  const pushed = shoved(true), still = shoved(false);
+  const panel = FLEET.slice(0, 6);
+  let pushSum = 0, stillSum = 0, allDone = true;
+  let pushed: any = null;
+  for (const r0 of panel) {
+    const a = shoved(true, r0), b = shoved(false, r0);
+    pushed ??= a;
+    pushSum += a.dx; stillSum += b.dx;
+    allDone &&= a.done && b.done;
+  }
+  const pushedMean = pushSum / panel.length, stillMean = stillSum / panel.length;
+  const still = { dx: stillMean, done: allDone };
   check('impulse restarts the clocks', pushed.clocks.elapsed === 0 && pushed.clocks.settledFor === 0);
   check('a mid-tumble shove still comes to rest, downwind of an unshoved twin',
-    pushed.done && still.done && pushed.dx > still.dx + 0.05,
-    `shoved Δx=${pushed.dx.toFixed(2)} vs unshoved ${still.dx.toFixed(2)}`);
+    allDone && pushedMean > stillMean + 0.05,
+    `mean over ${panel.length} rigs: shoved Δx=${pushedMean.toFixed(2)} vs unshoved ${stillMean.toFixed(2)}`);
 
   // snapshot/seed round-trip: the drag handover format
   const av3 = makeAvatar(rig.P);

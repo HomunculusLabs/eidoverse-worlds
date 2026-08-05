@@ -120,6 +120,7 @@ const JOINTS_DEF = [
   { at: 'leftLowerLeg', parent: 'leftUpperLeg', child: 'leftLowerLeg', kind: 'knee' },
   { at: 'rightLowerLeg', parent: 'rightUpperLeg', child: 'rightLowerLeg', kind: 'knee' },
 ];
+const BAR_INSET = 0.18;          // pull each torso bar in from its attachment points
 const BUILD_WIDEN = 0.12;        // slack over the born pose when it exceeds anatomy
 const HINGE_FLEX = 2.6;          // how far a knee or elbow folds
 const HINGE_SLACK = 0.09;        // and how far it may go the wrong way
@@ -194,14 +195,32 @@ function shortestArc(from, to, out = new THREE.Quaternion()) {
   return out.normalize();
 }
 
-/** Total swing angle between two bodies' frames. Rest-aligned bodies make this
- *  the deviation from rest directly, with no reference rotation to cancel. */
-function relSwing(pb, cb) {
+/** Deviation from rest between two bodies' frames, SPLIT into swing and twist
+ *  about the joint's own axis. Rest-aligned bodies make the relative rotation
+ *  the deviation directly, with no reference rotation to cancel.
+ *
+ *  The split matters: swing and twist are independent axes with independent
+ *  limits, so widening one by the other's excursion loosens a bound nothing
+ *  asked for. Widening TWIST by the total gave an arm born 70° down from its
+ *  bind pose — pure swing, no twist at all — an 82° twist limit in place of
+ *  the anatomical 45°, on every joint of every rig that goes limp off-bind. */
+function relSwingTwist(pb, cb, axis) {
   const rp = pb.rotation(), rc = cb.rotation();
   const qP = new THREE.Quaternion(rp.x, rp.y, rp.z, rp.w);
   const qC = new THREE.Quaternion(rc.x, rc.y, rc.z, rc.w);
   const rel = qP.invert().multiply(qC);
-  return 2 * Math.acos(Math.min(1, Math.abs(rel.w)));
+  if (rel.w < 0) { rel.x *= -1; rel.y *= -1; rel.z *= -1; rel.w *= -1; }
+  const proj = new THREE.Vector3(rel.x, rel.y, rel.z).dot(axis);
+  const twistQ = new THREE.Quaternion(
+    axis.x * proj, axis.y * proj, axis.z * proj, rel.w).normalize();
+  const swingQ = rel.clone().multiply(twistQ.clone().invert());
+  let twist = 2 * Math.atan2(proj, rel.w);
+  if (twist > Math.PI) twist -= 2 * Math.PI;
+  if (twist < -Math.PI) twist += 2 * Math.PI;
+  return {
+    swing: 2 * Math.acos(Math.min(1, Math.abs(swingQ.w))),
+    twist: Math.abs(twist),
+  };
 }
 
 export class RapierRagdoll {
@@ -471,7 +490,11 @@ export class RapierRagdoll {
         localA = ra.clone().sub(restMid);
         localB = rb.clone().sub(restMid);
       }
-      const seg = { body, collider, localA, localB, r, a, b, idx: segList.length, torso: isTorso };
+      const seg = {
+        body, collider, localA, localB, r, a, b,
+        restA: ra.clone(), restB: rb.clone(),
+        idx: segList.length, torso: isTorso,
+      };
       this.segs.set(key, seg);
       segList.push(seg);
       bodyOf.set(a, body);
@@ -489,14 +512,33 @@ export class RapierRagdoll {
     }
 
     // ---- the torso's solid: shoulder bar and pelvis bar --------------------
+    // The bars must be able to HIT the limbs they hold apart. Two things stop
+    // that if you build them naively, and both were happening:
+    //
+    //  • adjacent() excludes pairs by BONE NAME, and a bar spanning
+    //    leftUpperArm→rightUpperArm shares a name with each upper arm — so the
+    //    shoulder bar was excluded from both arms and the pelvis bar from both
+    //    legs, i.e. from exactly the four pairs the bars exist for. They only
+    //    ever blocked the far limbs. Synthetic endpoint names fix that: let
+    //    GEOMETRY decide, not nomenclature.
+    //  • the limb capsules START at the bar's endpoints, so at rest they
+    //    overlap it and the rest-overlap test would exclude them anyway (and
+    //    rightly — a permanently-overlapping pair injects contact energy every
+    //    frame). So the bar is INSET at both ends: it stops short of the
+    //    attachment points, leaving real clearance for the limb to be outside
+    //    it at rest and be stopped by it when it swings inward.
     for (const bar of TORSO_BARS) {
-      const ra = restP[bar.a], rb = restP[bar.b];
-      if (!ra || !rb || ra.distanceTo(rb) < 1e-4) continue;
+      const ra0 = restP[bar.a], rb0 = restP[bar.b];
+      if (!ra0 || !rb0 || ra0.distanceTo(rb0) < 1e-4) continue;
       const r = torsoR * bar.frac * 0.9;
+      const inset = Math.min(BAR_INSET, 0.35);
+      const ra = ra0.clone().lerp(rb0, inset);
+      const rb = rb0.clone().lerp(ra0, inset);
       const collider = addCapsule(torsoBody, restTorsoMid, ra, rb, r);
       const seg = {
-        body: torsoBody, collider, r, a: bar.a, b: bar.b,
+        body: torsoBody, collider, r, a: `bar:${bar.a}`, b: `bar:${bar.b}`,
         localA: ra.clone().sub(restTorsoMid), localB: rb.clone().sub(restTorsoMid),
+        restA: ra.clone(), restB: rb.clone(),
         idx: segList.length, torso: true, bar: true,
       };
       segList.push(seg);          // gets a collision-group bit; NOT in this.segs
@@ -536,9 +578,23 @@ export class RapierRagdoll {
         for (let j = i + 1; j < segList.length; j++) {
           const A2 = segList[i], B2 = segList[j];
           if (adjacent(A2, B2)) continue;
-          const pa1 = restP[A2.a], pb1 = restP[A2.b], pa2 = restP[B2.a], pb2b = restP[B2.b];
+          // rest endpoints travel ON the segment: the bars carry synthetic
+          // bone names so adjacency cannot blanket-exclude them, and a
+          // name-keyed lookup would simply miss and silently skip the pair
+          const pa1 = A2.restA, pb1 = A2.restB, pa2 = B2.restA, pb2b = B2.restB;
           if (!pa1 || !pb1 || !pa2 || !pb2b) continue;
-          if (segd(pa1, pb1, pa2, pb2b) < (A2.r + B2.r) * 1.05) continue;
+          // Exclude only pairs that are DEEPLY inside each other at rest, not
+          // every pair that merely touches. The bars are trunk VOLUME and the
+          // limbs attach at their ends, so at rest they always graze — a
+          // touch-level test therefore excluded the bar from precisely the
+          // limbs it exists to stop, and the trunk went back to being a pole.
+          // A grazing pair resting in contact is fine; a pair buried in each
+          // other pumps contact energy every frame, and that is what this is
+          // for. Deep is measured against the shallower capsule.
+          const sum = A2.r + B2.r;
+          const bar = A2.bar || B2.bar;
+          const deep = bar ? Math.min(A2.r, B2.r) * 0.9 : sum * 1.05;
+          if (segd(pa1, pb1, pa2, pb2b) < deep) continue;
           filters[i] |= (1 << B2.idx);
           filters[j] |= (1 << A2.idx);
         }
@@ -626,16 +682,18 @@ export class RapierRagdoll {
         // the solver annihilate the difference on frame one (measured: 15 m/s
         // and the angular ceiling, instantly). So widen to admit the build
         // pose, and let tone pull it back toward rest instead.
-        const born = relSwing(pb, cb);
-        const cone = Math.max(J.cone, born + BUILD_WIDEN);
-        const twist = Math.max(J.twist, born + BUILD_WIDEN);
+        // ...each axis widened by ITS OWN excursion, never by the other's.
+        const born = relSwingTwist(pb, cb, childDir);
+        const cone = Math.max(J.cone, born.swing + BUILD_WIDEN);
+        const twist = Math.max(J.twist, born.twist + BUILD_WIDEN);
         raw.jointSetLimits(joint.handle, AX_ANG_X, -twist, twist);
         raw.jointSetLimits(joint.handle, AX_ANG_Y, -cone, cone);
         raw.jointSetLimits(joint.handle, AX_ANG_Z, -cone, cone);
         this.jointHandles.push({ handle: joint.handle, axes: [AX_ANG_X, AX_ANG_Y, AX_ANG_Z] });
         this.balls.push({
           name: J.at, pb, cb, cone, twist, axisL: childDir.clone(),
-          declaredCone: J.cone, declaredTwist: J.twist, born,
+          declaredCone: J.cone, declaredTwist: J.twist,
+          bornSwing: born.swing, bornTwist: born.twist,
         });
       } else {
         // A hinge axis is a RIG quantity. cross(bone, forward) is the flexion
