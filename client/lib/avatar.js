@@ -119,9 +119,6 @@ function makeTypingSprite() {
 // Social affordance glyphs (R's ask, in-world 13:36): what is this agent's
 // attention doing right now? ear = your speech will reach it; think = a reply
 // is being composed; tool = mid-task, hands busy — wait or ping, your call.
-// mic = this body's voice is LIVE in the room right now (R, 23:30) — the
-// megaphone is presence, not a message: it says listen, sound is coming from
-// here, independent of whether any words have been transcribed yet.
 // Attention icons come from the shared Lucide registry (icons.js) — never
 // from emoji: canvas fillText paints nothing when a glyph is missing, silently.
 const ICON_FOR = { ear: 'ear', think: 'think', tool: 'wrench' };
@@ -140,15 +137,6 @@ function drawTypingDots(sprite, t, state) {
     ctx.globalAlpha = b;
     ctx.strokeStyle = 'rgba(180,240,216,1)';
     strokeIcon(ctx, ICON_FOR[state], 26);
-    // mic gets sound arcs on top: the icon says "a voice", the arcs say "NOW"
-    if (state === 'mic') {
-      for (let i = 0; i < 2; i++) {
-        const amp = 0.3 + 0.7 * Math.max(0, Math.sin(t * 5 - i * 0.7));
-        ctx.globalAlpha = b * amp;
-        ctx.lineWidth = 2;
-        ctx.beginPath(); ctx.arc(2, 0, 15 + i * 5, -0.7, 0.7); ctx.stroke();
-      }
-    }
     ctx.restore();
     ctx.globalAlpha = 1;
   } else {
@@ -563,19 +551,16 @@ export class Avatar {
   /** They're composing. Repeated calls extend it; it expires on its own so a
    *  dropped "stopped typing" never leaves the dots stuck up forever. */
   setTyping(state) {
-    // state === null means STOP (mic went cold, composing ended) — it must
-    // clear the pill, not schedule 4s of an empty one. Found live: R's
-    // megaphone rendered as a blank bubble (2026-08-04 23:35).
+    // state === null means STOP — it must clear the pill, not schedule 4s of
+    // an empty one. Found live: a cleared state rendered as a blank bubble
+    // (2026-08-04 23:35).
     if (state === null) { this._typingUntil = 0; this._typingState = null; return; }
     this._typingUntil = performance.now() + 4000;
     this._typingState = state || null;
   }
 
   say(text) {
-    // Speaking ends COMPOSING — but not a live mic. The 🎙 is presence: the
-    // voice is still coming out of this body while its transcript scrolls
-    // past. Only the composing states yield to the bubble.
-    if (this._typingState !== 'mic') this._typingUntil = 0;
+    this._typingUntil = 0;   // speaking ends composing
     if (this.bubble) { this.root.remove(this.bubble); disposeSprite(this.bubble); }
     this.bubble = makeBubble(text);
     this.bubble.position.y = 2.3;
@@ -690,13 +675,11 @@ export class Avatar {
     }
 
     // ---- typing dots: shown only while composing and not already speaking
-    // A composing pill hides behind a bubble (you've stopped composing, you
-    // said it). A LIVE MIC does not: the voice keeps coming while its
-    // transcript floats. Stack it above the bubble instead of suppressing it.
-    const micLive = this._typingState === 'mic';
-    const typingNow = now < this._typingUntil && (micLive || !this.bubble);
+    // (a composing pill hides behind a bubble — you've stopped composing,
+    // you said it)
+    const typingNow = now < this._typingUntil && !this.bubble;
     if (typingNow && !this.typing) { this.typing = makeTypingSprite(); this.root.add(this.typing); }
-    if (this.typing) this.typing.position.y = (micLive && this.bubble) ? 2.72 : 2.12;
+    if (this.typing) this.typing.position.y = 2.12;
     if (this.typing) {
       this.typing.visible = typingNow;
       if (typingNow) {
