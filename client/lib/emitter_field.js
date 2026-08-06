@@ -14,6 +14,8 @@
 // that finishes AFTER its own entity was replaced or removed retires itself on
 // arrival rather than leaking into the scene.
 
+import { releaseHook } from './autohooks.js';
+
 /**
  * Retire one built emitter completely: unhook its per-frame update, release
  * its GPU resources, detach its mesh. Safe to call twice.
@@ -26,15 +28,53 @@ export function retireEmitter(handle, autos) {
   if (!handle || handle.retired) return;
   handle.retired = true;
   const hooks = handle.hooks ?? (handle.update ? [handle.update] : []);
-  if (Array.isArray(autos)) {
-    for (const h of hooks) {
-      const i = autos.indexOf(h);
-      if (i >= 0) autos.splice(i, 1);
-    }
-  }
+  for (const h of hooks) releaseHook(h, autos);
   try {
     handle.dispose?.();
   } catch { /* a failed teardown must not strand the registry entry */ }
+}
+
+/**
+ * Give back a RAW upstream system — one that `makeParticles()` has already
+ * allocated but that no handle owns yet.
+ *
+ * This is the window the adapter promised to close and initially did not: the
+ * moment the builder returns, its mesh is in the scene and its update is in
+ * the global hook array. If any host step after that point throws (parenting,
+ * marking, tier), `build()` rejects before a handle exists and the registry's
+ * catch has nothing to retire. Every one of those steps therefore runs inside
+ * `adoptSystem`, and this is what it unwinds to.
+ *
+ * Disposes what the SYSTEM owns — geometry and material — and never the
+ * texture, which is cached and shared (see emitters.js).
+ */
+export function retireRawSystem(sys, autos) {
+  if (!sys || sys.__retired) return;
+  sys.__retired = true;
+  releaseHook(sys.update, autos);
+  const mesh = sys.mesh;
+  if (!mesh) return;
+  try {
+    mesh.parent?.remove?.(mesh);
+    mesh.geometry?.dispose?.();
+    const m = mesh.material;
+    if (Array.isArray(m)) m.forEach((x) => x?.dispose?.()); else m?.dispose?.();
+  } catch { /* a failed teardown must not mask the error that caused it */ }
+}
+
+/**
+ * Run the host's own attach steps over a freshly-built upstream system, and
+ * unwind the raw allocation if any of them throws. The handle it returns is
+ * the first moment anything else can retire this system, so everything before
+ * it belongs here.
+ */
+export function adoptSystem(sys, autos, attach) {
+  try {
+    return attach(sys);
+  } catch (e) {
+    retireRawSystem(sys, autos);
+    throw e;
+  }
 }
 
 /**

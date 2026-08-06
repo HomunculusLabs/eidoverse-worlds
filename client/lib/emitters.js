@@ -31,11 +31,8 @@ import { THREE, scene, bus } from './core.js';
 import { loadEidoModule, primeFiles } from './assets.js';
 import { entities } from './world.js';
 import { normalizeParticles, resolvedCount, withSeededRandom, QUALITY_TIERS } from './particles.js';
-import { makeEmitterRegistry, retireEmitter } from './emitter_field.js';
-
-/** The engine's per-frame hook array — grass wind, sky, and now emitters.
- *  Read through a getter, never captured: the toolkit creates it lazily. */
-const autos = () => (globalThis._autoParticleSystems ||= []);
+import { makeEmitterRegistry, retireEmitter, adoptSystem } from './emitter_field.js';
+import { autoHooks as autos, ownHook } from './autohooks.js';
 
 // ---- textures --------------------------------------------------------------
 // Sprite textures are SHARED, immutable, and small; one flame_05 serves every
@@ -94,7 +91,10 @@ async function build(emitter, { id }) {
   if (!parent) throw new Error(`entity ${id} is not in the scene`);
   await loadEidoModule('particles.js');
   const map = await spriteTexture(emitter.texture);
-  const count = Math.min(emitter.count, resolvedCount(emitter, tier));
+  // The AUTHORED cap decides how many instances exist at all — allocating 600
+  // sprites for an emitter its author capped at a quarter wastes the memory on
+  // every machine. The local tier then draws fewer still, without a rebuild.
+  const builtCount = resolvedCount(emitter, 'auto');
 
   // The scoped-determinism seam. `makeParticles` is fully synchronous, so
   // nothing else in this tab can observe the swapped Math.random.
@@ -102,7 +102,7 @@ async function build(emitter, { id }) {
     scene,                       // the builder adds the mesh here…
     preset: emitter.preset,
     map,
-    count: emitter.count,        // built at the AUTHORED count; the tier only draws fewer
+    count: builtCount,
     origin: [0, 0, 0],           // …and we re-parent it, so the origin is the entity's
     ...(emitter.size != null ? { size: emitter.size } : {}),
     ...(emitter.opacity != null ? { opacity: emitter.opacity } : {}),
@@ -112,42 +112,48 @@ async function build(emitter, { id }) {
     name: `particles_${id}_${emitter.preset}`,
   }));
   if (!sys?.mesh) throw new Error('makeParticles returned no mesh');
+  // From here the mesh is in the scene and the update is in the global hook
+  // array — allocated, and owned by nobody until a handle exists. Everything
+  // below therefore runs inside adoptSystem, which unwinds the raw system if
+  // any of it throws.
+  ownHook(sys.update);           // ours, so no diffing subsystem may claim it
 
-  // Entity-relative, not world-origin: the emitter is a CHILD of the thing
-  // that owns it, so it rides every place/mount/motion that thing does. The
-  // authored origin is a local offset in the entity's own frame.
-  sys.mesh.position.set(emitter.origin[0], emitter.origin[1], emitter.origin[2]);
-  parent.add(sys.mesh);
-  sys.mesh.userData.emitterOf = id;
-  // The world owns this, not the sky: an async sky build that happens to
-  // snapshot scene.children mid-flight must never claim (and then dispose)
-  // somebody's hearth. Same marker entities and bodies carry.
-  sys.mesh.userData.entityId = id;
+  return adoptSystem(sys, autos(), () => {
+    // Entity-relative, not world-origin: the emitter is a CHILD of the thing
+    // that owns it, so it rides every place/mount/motion that thing does. The
+    // authored origin is a local offset in the entity's own frame.
+    sys.mesh.position.set(emitter.origin[0], emitter.origin[1], emitter.origin[2]);
+    parent.add(sys.mesh);
+    sys.mesh.userData.emitterOf = id;
+    // The world owns this, not the sky: an async sky build that happens to
+    // snapshot scene.children mid-flight must never claim (and then dispose)
+    // somebody's hearth. Same marker entities and bodies carry.
+    sys.mesh.userData.entityId = id;
 
-  const handle = {
-    id,
-    update: sys.update,
-    mesh: sys.mesh,
-    builtCount: emitter.count,
-    setTier(next) {
-      // InstancedMesh draws `count` of its instances — thinning is a number,
-      // not a rebuild, so the governor can act without a hitch (same lever
-      // flora's density dial pulls).
-      sys.mesh.count = Math.max(1, Math.min(emitter.count, resolvedCount(emitter, next)));
-    },
-    dispose() {
-      handles.delete(handle);
-      (sys.mesh.parent ?? scene).remove(sys.mesh);
-      sys.mesh.geometry?.dispose?.();
-      const m = sys.mesh.material;
-      if (Array.isArray(m)) m.forEach((x) => x?.dispose?.()); else m?.dispose?.();
-      // NOT the texture: see textureCache above.
-    },
-  };
-  handle.setTier(tier);
-  if (count !== emitter.count) sys.mesh.count = count;
-  handles.add(handle);
-  return handle;
+    const handle = {
+      id,
+      update: sys.update,
+      mesh: sys.mesh,
+      builtCount,
+      setTier(next) {
+        // InstancedMesh draws `count` of its instances — thinning is a number,
+        // not a rebuild, so the governor can act without a hitch (same lever
+        // flora's density dial pulls).
+        sys.mesh.count = Math.max(1, Math.min(builtCount, resolvedCount(emitter, next)));
+      },
+      dispose() {
+        handles.delete(handle);
+        (sys.mesh.parent ?? scene).remove(sys.mesh);
+        sys.mesh.geometry?.dispose?.();
+        const m = sys.mesh.material;
+        if (Array.isArray(m)) m.forEach((x) => x?.dispose?.()); else m?.dispose?.();
+        // NOT the texture: see textureCache above.
+      },
+    };
+    handle.setTier(tier);
+    handles.add(handle);         // last: nothing after this can throw and strand it
+    return handle;
+  });
 }
 
 const registry = makeEmitterRegistry({

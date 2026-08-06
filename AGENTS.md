@@ -214,10 +214,13 @@ fire. Bounded overrides: `count` (≤600), `size`, `opacity`, `speed`,
 `lifetime`, `area`. Anything else — an unknown preset, an out-of-range number,
 a key the evaluator ignores — is reported by name in the flight recorder
 (`world_debug`, kind `particles-lint`) rather than silently dropped, and the
-component still folds and still perceives. **Visual quality may reduce the
-sprite count on a slow machine; preset, state, seed and provenance may not
-differ.** Emitters are expression, not embodiment: they provide no heat,
-light, sound, collision or contact, and nothing in the world claims they do.
+component still folds and still perceives. `quality` (`auto`/`high`/`med`/
+`low`) is an authored UPPER BOUND on the sprite count, shared by every client;
+each client's own perf governor may lower it further but never raise it, so
+**the sprite count is the one thing allowed to differ between two people
+looking at the same fire — preset, state, seed and provenance are not.**
+Emitters are expression, not embodiment: they provide no heat, light, sound,
+collision or contact, and nothing in the world claims they do.
 
 Text-tier perception treats an emitter as the semantic thing it is, on the
 entity that owns it — `[hearth] … — emitting fire (particles; local origin

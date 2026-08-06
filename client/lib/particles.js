@@ -42,8 +42,19 @@ export const PARTICLE_MAX_COUNT = 600;
 
 /** Quality tiers scale sprite count and NOTHING else. Preset, state, seed and
  *  provenance are shared facts across clients (#25's "visual quality may
- *  reduce count, but preset/state/provenance are shared facts"). */
+ *  reduce count, but preset/state/provenance are shared facts").
+ *
+ *  Two tiers compose, and they compose as a MINIMUM. The authored `quality` on
+ *  the component is a shared upper bound — the author saying "this emitter is
+ *  never worth more than a quarter of its count anywhere" — and the client's
+ *  own tier is a local budget the perf governor lowers. Neither may raise the
+ *  other: an authored `low` stays low on the strongest GPU in the world, and a
+ *  governor that has dropped to `low` is not overruled by an authored `high`.
+ *  (`auto` is the identity on both sides: no opinion.) */
 export const QUALITY_TIERS = Object.freeze({ auto: 1, high: 1, med: 0.5, low: 0.25 });
+
+/** The scale a tier name asks for; an unknown name asks for nothing. */
+const tierScale = (name) => (Object.hasOwn(QUALITY_TIERS, name) ? QUALITY_TIERS[name] : 1);
 
 /** Where an authored texture may point. The library route serves the whole
  *  eidoverse-video checkout; a component is authored by anyone with builder
@@ -207,10 +218,11 @@ export function normalizeParticles(data, { entityId = '' } = {}) {
   return { ok: true, emitter, notes };
 }
 
-/** Sprites this machine will actually draw. The only number allowed to differ
- *  between two clients looking at the same fire. */
+/** Sprites this machine will actually draw: the authored cap and the local
+ *  tier, whichever asks for less. The only number allowed to differ between
+ *  two clients looking at the same fire. */
 export function resolvedCount(emitter, tier = 'auto') {
-  const k = QUALITY_TIERS[tier] ?? 1;
+  const k = Math.min(tierScale(emitter?.quality ?? 'auto'), tierScale(tier));
   return Math.max(1, Math.round((emitter?.count ?? 0) * k));
 }
 

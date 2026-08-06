@@ -20,7 +20,12 @@ import {
   describeParticles, emitterTransition, transitionLine, emitterSeed,
   mulberry32, withSeededRandom,
 } from "../client/lib/particles.js";
-import { makeEmitterRegistry, retireEmitter } from "../client/lib/emitter_field.js";
+import {
+  makeEmitterRegistry, retireEmitter, retireRawSystem, adoptSystem,
+} from "../client/lib/emitter_field.js";
+import {
+  autoHooks, ownHook, pushHostHook, releaseHook, isHostOwned, claimUnowned,
+} from "../client/lib/autohooks.js";
 
 let passed = 0, failed = 0;
 function check(name: string, ok: unknown, detail = "") {
@@ -101,6 +106,21 @@ const emitter = normalizeParticles({ preset: "fire", count: 200 }, { entityId: "
 check("a low tier draws fewer sprites", resolvedCount(emitter, "low") === 50);
 check("...while the declared count is unchanged (a shared fact)", emitter.count === 200);
 check("an unknown tier draws everything", resolvedCount(emitter, "ludicrous") === 200);
+
+// The two tiers COMPOSE, and neither may raise the other: the authored
+// `quality` is a shared upper bound, the client tier a local budget.
+const authoredLow = normalizeParticles({ preset: "fire", count: 200, quality: "low" }, { entityId: "h" }).emitter;
+check("authored quality is carried", authoredLow.quality === "low");
+check("authored low + client high stays low (an author's cap is not local)",
+  resolvedCount(authoredLow, "high") === 50);
+check("authored low + client auto stays low", resolvedCount(authoredLow, "auto") === 50);
+const authoredHigh = normalizeParticles({ preset: "fire", count: 200, quality: "high" }, { entityId: "h" }).emitter;
+check("authored high + client low obeys the LOCAL budget (the governor is not overruled)",
+  resolvedCount(authoredHigh, "low") === 50);
+check("authored med + client med does not compound", resolvedCount(
+  normalizeParticles({ preset: "fire", count: 200, quality: "med" }, { entityId: "h" }).emitter, "med") === 100);
+check("authored auto is an opinion-free identity",
+  resolvedCount(emitter, "med") === 100 && resolvedCount(emitter, "auto") === 200);
 
 // ---- 2. lifecycle ----------------------------------------------------------
 console.log("\nlifecycle — attach, replace, remove, late join, no hook growth\n");
@@ -207,6 +227,93 @@ function makeUpstreamStub(autos: (() => void)[]) {
   check("retirement removes its own hook by identity", autos.length === 1 && autos[0] === skyHook);
   retireEmitter(handle as any, autos);
   check("retiring twice is a no-op", autos.length === 1 && autos[0] === skyHook);
+}
+
+// ---- 2b. a throw AFTER upstream allocation --------------------------------
+console.log("\npost-allocation faults — the window between makeParticles() and a handle\n");
+
+{
+  // The exact shape of the leak: makeParticles has already added its mesh to
+  // the scene and pushed its update; a host step after that throws, so no
+  // handle is ever returned and the registry's catch has nothing to retire.
+  const autos: (() => void)[] = [];
+  const parent = { children: [] as unknown[], remove(o: unknown) { this.children = this.children.filter((c) => c !== o); } };
+  let geoDisposed = 0, matDisposed = 0, texDisposed = 0;
+  const texture = { dispose() { texDisposed++; } };            // BORROWED, cached, shared
+  const makeRaw = () => {
+    const update = () => {};
+    const mesh: any = {
+      parent, geometry: { dispose() { geoDisposed++; } },
+      material: { dispose() { matDisposed++; }, map: texture },
+      userData: {}, position: { set() {} },
+    };
+    parent.children.push(mesh);
+    autos.push(update);                                        // upstream registers itself
+    return { mesh, update };
+  };
+
+  for (const [name, failing] of [
+    ["parenting", (s: any) => { throw new Error("parent.add failed"); }],
+    ["the tier dial", (s: any) => { s.mesh.count = 1; throw new Error("setTier failed"); }],
+    ["handle construction", (_s: any) => { throw new Error("handle failed"); }],
+  ] as const) {
+    const sys = makeRaw();
+    const before = { autos: autos.length, kids: parent.children.length };
+    let threw = false;
+    try { adoptSystem(sys, autos, failing); } catch { threw = true; }
+    check(`a throw in ${name} propagates`, threw);
+    check(`...unhooks the raw system (${name})`, autos.length === before.autos - 1);
+    check(`...detaches its mesh (${name})`, parent.children.length === before.kids - 1);
+  }
+  check("...and disposes the geometry and material it owns", geoDisposed === 3 && matDisposed === 3);
+  check("...but NEVER the borrowed texture", texDisposed === 0);
+
+  // and the happy path is untouched
+  const good = makeRaw();
+  const handle = adoptSystem(good, autos, (s: any) => ({ update: s.update, dispose() {} }));
+  check("a build that succeeds keeps its hook and its mesh",
+    autos.length === 1 && parent.children.length === 1 && handle.update === good.update);
+  retireRawSystem(good, autos);
+  check("retireRawSystem is idempotent", (retireRawSystem(good, autos), autos.length === 0));
+}
+
+// ---- 2c. hook OWNERSHIP across an async build ------------------------------
+console.log("\nhook ownership — a subsystem that claims by diff must not adopt someone else's\n");
+
+{
+  // The interleaving Mica named: the sky snapshots, THEN an emitter registers
+  // while the build is still awaiting, THEN the sky's own hook lands. An
+  // identity diff alone calls both of them the sky's.
+  const autos = autoHooks();
+  autos.length = 0;
+  const skyHookOld = () => {};
+  autos.push(skyHookOld);                                   // a previous sky's hook
+
+  const before = new Set(autos);                            // snapshotSceneOwnership()
+  const emitterHook = pushHostHook(() => {});               // …registers DURING the build
+  const skyHook = () => {}; autos.push(skyHook);            // …and the build finishes
+
+  const claimed = claimUnowned(before, autos);
+  check("the sky claims its own new hook", claimed.includes(skyHook));
+  check("...and NOT the emitter's, which arrived during the build", !claimed.includes(emitterHook));
+  check("...and not the one it already had", !claimed.includes(skyHookOld));
+
+  for (const h of claimed) releaseHook(h, autos);            // teardownSky()
+  check("teardown removes only the sky's hook",
+    autos.length === 2 && autos.includes(skyHookOld) && autos.includes(emitterHook));
+  check("the emitter is still registered and still ticking", autos.includes(emitterHook));
+  check("...and still marked as its own", isHostOwned(emitterHook));
+
+  releaseHook(emitterHook, autos);
+  check("releasing drops the mark too", !isHostOwned(emitterHook) && !autos.includes(emitterHook));
+  check("releasing twice is a no-op", releaseHook(emitterHook, autos) === false);
+
+  // ownHook marks a hook upstream registered on our behalf (makeParticles)
+  const upstreamRegistered = () => {}; autos.push(upstreamRegistered);
+  ownHook(upstreamRegistered);
+  check("a hook upstream pushed for us can still be claimed as ours",
+    !claimUnowned(new Set([skyHookOld]), autos).includes(upstreamRegistered));
+  autos.length = 0;
 }
 
 // ---- 3. perception ---------------------------------------------------------
