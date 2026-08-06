@@ -630,7 +630,15 @@ export function initChat({ send, whisper, typing, people }) {
 
   frame.body.querySelector('#chat-jump').onclick = scrollToEnd;
   logEl.addEventListener('scroll', () => {
-    if (logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 48) scrollToEnd();
+    // Reaching the bottom clears the unread counters — but never touch
+    // scrollTop from inside the scroll handler: snapping back to the end
+    // while the reader is inside the near-bottom band traps them there
+    // (scrolling up needed a >48px jump in a single wheel event to escape).
+    // Stick-to-bottom on NEW content is handled at append time (account()).
+    if (logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 48 &&
+        (unread || unreadMentions)) {
+      unread = 0; unreadMentions = 0; paintUnread();
+    }
     if (logEl.scrollTop < 60) loadOlder();
   });
 
