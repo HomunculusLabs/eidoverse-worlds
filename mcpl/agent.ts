@@ -9,6 +9,10 @@ import * as TSL from "three/tsl";
 import { NoiseGate, SHORT_STINT_MS, APPROACH_REFRACT_MS, APPROACH_RADIUS, REARM_RADIUS,
   ACTIVITY_RADIUS_M, ACTIVITY_PULSE_MS, ACTIVITY_REFRESH_MS, MOVER_MIN_M } from "./denoise.ts";
 import { HeadlessBody } from "./physics.ts";
+// The same pure sky fold + weather derivation the browser client and the
+// sequencer run — text-tier perception must land on the SAME hour and
+// weather every renderer shows (issue #29's shared-fact boundary).
+import { foldSkyEntry, describeSky, effectiveSky, dayPhase, hoursAt } from "../client/lib/forecast.js";
 
 (globalThis as any).THREE = Object.assign({}, THREE_W, TSL);
 
@@ -109,7 +113,7 @@ export class WorldAgent {
   pings: { ts: number; kind: "mention" | "approach" | "whisper"; who: string; text?: string }[] = [];
   onPing: ((p: { ts: number; kind: string; who: string; text?: string }) => void) | null = null;
   /** live world events (say/arrive/leave/activity) — the channel fan-out hook */
-  onEvent: ((ev: { ts: number; kind: "say" | "arrive" | "leave" | "whisper" | "act" | "activity"; who: string; text?: string; mention?: boolean }) => void) | null = null;
+  onEvent: ((ev: { ts: number; kind: "say" | "arrive" | "leave" | "whisper" | "act" | "activity" | "weather"; who: string; text?: string; mention?: boolean }) => void) | null = null;
   private lastNear = new Map<string, number>(); // participant -> last approach-ping ts
   /** approach re-arm: after a walk-up ping, the SAME person must actually go
    *  away (> REARM_RADIUS) before another boundary crossing can ever count —
@@ -162,6 +166,18 @@ export class WorldAgent {
   }
   private terrain: { heightAt(x: number, z: number): number } | null = null;
   private terrainSrc: string | null = null;
+  /** The folded sky (same fold as the sequencer's) — worldInfo.sky is
+   *  DERIVED from this at look() time, so the described hour/weather is the
+   *  one the forecast implies NOW, not the one at the last log entry. */
+  private skyState: any = null;
+  // The sky WATCH: pull is look(), this is the push half — one ambient
+  // percept per meaningful boundary (forecast segment change, manual
+  // override landing/expiring, coarse day-phase crossing). Deduped by
+  // signature, never a synthetic log verb, never a continuous clock.
+  private skyCursor: any = null;
+  private lastSkyKey: string | null = null;
+  private lastDayPhase: string | null = null;
+  private lastSkyCheck = 0;
   worldInfo: Record<string, unknown> = {};
   private ticker: ReturnType<typeof setInterval> | null = null;
   /** Highest world-log seq this body has seen. This — not a wall-clock time —
@@ -653,10 +669,46 @@ export class WorldAgent {
     } else if (verb === "terrain") {
       await this.buildTerrain(args);
       this.worldInfo.terrain = { seed: args.seed, size: args.size, amplitude: args.amplitude, flatRadius: args.flatRadius };
-    } else if (verb === "sky") {
-      this.worldInfo.sky = args;
+    } else if (verb === "sky" || verb === "weather") {
+      // fold, don't overwrite: weather merges onto the standing sky (with the
+      // hours-rebase and override provenance), exactly as the server folds it
+      this.skyState = foldSkyEntry(verb === "sky" ? null : this.skyState,
+        { verb, args, ts, seq: entry.seq, actor });
     } else if (verb === "grass") {
       this.worldInfo.grass = { area: `${args.species ?? "grass"}, ${args.width ?? args.size}×${args.depth ?? args.size}m around ${JSON.stringify(args.center ?? [0, 0])}` };
+    }
+  }
+
+  /** The push half of sky perception (the pull half is look()). Runs at 1Hz
+   *  off tick(); the forecast cursor keeps each check O(1). First observation
+   *  after a join initializes SILENTLY — arrival narration is look()'s job;
+   *  this only speaks when something CHANGES while the body is present.
+   *  `nowMs` is injectable for tests. */
+  checkSky(nowMs = Date.now()) {
+    if (!this.skyState) return;
+    const eff = effectiveSky(this.skyState, nowMs, this.skyCursor);
+    this.skyCursor = eff.cursor;
+    const key = `${eff.source}:${eff.seg?.idx ?? "-"}:${eff.weather ?? "-"}`;
+    const phase = (this.skyState.rate ?? 0) !== 0 ? dayPhase(hoursAt(this.skyState, nowMs)) : null;
+    if (this.lastSkyKey === null) {
+      this.lastSkyKey = key;
+      this.lastDayPhase = phase;
+      return;
+    }
+    if (key !== this.lastSkyKey) {
+      this.lastSkyKey = key;
+      if (eff.weather) {
+        const why = eff.source === "forecast"
+          ? ` (forecast — policy sky seq ${eff.seq ?? "?"} by ${eff.by ?? "?"})`
+          : eff.source === "manual" ? ` (${eff.by ?? "someone"} overrode the forecast — holds until the next scheduled change)` : "";
+        this.onEvent?.({ ts: nowMs, kind: "weather", who: "world", text: `world weather: ${eff.weather}${why}` });
+      }
+    }
+    if (phase !== null && phase !== this.lastDayPhase) {
+      this.lastDayPhase = phase;
+      const line = { dawn: "dawn breaks", day: "full daylight", dusk: "dusk settles", night: "night falls" }[phase];
+      this.onEvent?.({ ts: nowMs, kind: "weather", who: "world",
+        text: `${line} (hour ${hoursAt(this.skyState, nowMs).toFixed(1)})` });
     }
   }
 
@@ -687,6 +739,12 @@ export class WorldAgent {
   private tick() {
     if (!this.joined) return;
     const dt = TICK_MS / 1000;
+    // ambient sky perception rides the body tick at 1Hz — cheap (cursor keeps
+    // it O(1)) and quiet (emits only on segment/override/day-phase boundaries)
+    if (Date.now() - this.lastSkyCheck >= 1000) {
+      this.lastSkyCheck = Date.now();
+      this.checkSky();
+    }
     // Being dragged: the dragger's stream owns pos/pose/yaw — no walking, no
     // terrain clamp (a lifted body is off the ground on purpose). A silent
     // dragger loses the body; the last streamed pose just holds, lying
@@ -1031,6 +1089,7 @@ export class WorldAgent {
     const L: string[] = [];
     const me = this.pos;
     L.push(`You are "${this.name}" in world "${this.world}" at (${me.x.toFixed(1)}, ${me.z.toFixed(1)}), ground height ${me.y.toFixed(2)}m, facing ${this.bearing(Math.sin(this.yaw), Math.cos(this.yaw))}.`);
+    if (this.skyState) this.worldInfo.sky = describeSky(this.skyState, Date.now());
     if (Object.keys(this.worldInfo).length) L.push(`World: ${JSON.stringify(this.worldInfo)}`);
 
     const others = [...this.people.values()];
