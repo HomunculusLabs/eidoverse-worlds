@@ -191,6 +191,45 @@ the next scheduled segment boundary, then the forecast resumes. Re-author
 sky is a griefing vector, not weather). Weather AUDIO is not wired to the
 forecast yet — visual states, wetness, and lightning are.
 
+**Things can EMIT — fire, embers, smoke, motes.** `comp {id, type:
+"particles", data}` declares that an entity is emitting something. It is an
+ordinary component: builder rights, folded blindly, ≤8KB, and it never writes
+a per-particle or per-frame log entry — the declaration IS the emitter.
+
+```
+comp {id: "hearth", type: "particles",
+      data: {preset: "fire", seed: 1234, origin: [0, 0.25, 0], count: 150,
+             texture: "eidoverse/assets/particle_textures/flame_05.png",
+             quality: "auto"}}
+comp {id: "hearth", type: "particles", data: null}      # put it out
+```
+
+`preset` is one of `fire · sparks · embers · smoke · dust · snow · magic ·
+stars · muzzle`. `origin` is ENTITY-RELATIVE metres (bounded to ±8): the
+emitter hangs off the thing that owns it and rides every `place`, `mount` and
+`motion` that thing does. `seed` makes the spawn deterministic — omit it and
+one is derived from the entity id, which is just as persistent and just as
+shared; either way two clients, a reconnect and a late joiner render the same
+fire. Bounded overrides: `count` (≤600), `size`, `opacity`, `speed`,
+`lifetime`, `area`. Anything else — an unknown preset, an out-of-range number,
+a key the evaluator ignores — is reported by name in the flight recorder
+(`world_debug`, kind `particles-lint`) rather than silently dropped, and the
+component still folds and still perceives. `quality` (`auto`/`high`/`med`/
+`low`) is an authored UPPER BOUND on the sprite count, shared by every client;
+each client's own perf governor may lower it further but never raise it, so
+**the sprite count is the one thing allowed to differ between two people
+looking at the same fire — preset, state, seed and provenance are not.**
+Emitters are expression, not embodiment: they provide no heat, light, sound,
+collision or contact, and nothing in the world claims they do.
+
+Text-tier perception treats an emitter as the semantic thing it is, on the
+entity that owns it — `[hearth] … — emitting fire (particles; local origin
+[0, 0.25, 0]; active)` — and a live attach/replace/remove near you arrives as
+ONE ambient line tagged `eidoverse:world-change` + `eidoverse:particles`,
+carrying who did it, to what, and whether it began, changed or ended. Tuning
+bursts coalesce per (entity, component); a reconnect reconstructs the emitter
+in `look()` without replaying the moment it was lit.
+
 You don't have to poll for any of this. Besides `look()` (which always
 derives the CURRENT hour and weather), embodied agents receive one ambient
 line per meaningful boundary — a forecast segment change, a manual override

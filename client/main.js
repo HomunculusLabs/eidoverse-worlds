@@ -14,6 +14,9 @@ import { updateSky, updateAutoSystems, skyArgs, skyImpl,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './lib/sky.js';
 import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
 import { hasGrass, setGrassDensity } from './lib/terrain.js';
+// side-effecting: the `particles` component's host wires itself to the comp
+// and entity buses on import (it has no boot step of its own)
+import { emitterCount, emitterQuality, setEmitterQuality } from './lib/emitters.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateFollowCamera, updateSpectator, setCamYaw, setPosture,
@@ -1115,11 +1118,27 @@ function shedGrass() {
   return true;
 }
 
+// Emitters are alpha-blended fill like grass is, and a long shared session
+// accumulates them (#25 requirement 5). Thinning is a per-emitter instance
+// count — no rebuild, no hitch — and it changes only how many sprites THIS
+// machine draws: preset, state, seed and provenance stay shared facts, so two
+// people on different tiers are still looking at the same fire.
+const EMITTER_TIERS = ['auto', 'med', 'low'];
+function shedEmitters() {
+  if (!emitterCount()) return false;
+  const i = EMITTER_TIERS.indexOf(emitterQuality());
+  if (i < 0 || i >= EMITTER_TIERS.length - 1) return false;
+  if (!setEmitterQuality(EMITTER_TIERS[i + 1])) return false;
+  toast('particle effects thinned to keep the frame rate', 'warn', 8000);
+  return true;
+}
+
 function governPerformance(f) {
   if (f > 0 && f < 26) {
     slowFor++;
     if (slowFor > 2 && shedClouds(performance.now())) { /* clouds first */ }
     else if (slowFor > 2 && shedLight()) { /* then a light — point lights are costly */ }
+    else if (slowFor > 2 && shedEmitters()) { /* then sprite fill — cheapest to give back */ }
     else if (slowFor > 2 && shedGrass()) { /* then the meadow — fill rate */ }
     else if (slowFor > 2 && pixelRatio > 0.7) {
       pixelRatio = Math.max(0.7, pixelRatio - 0.25);

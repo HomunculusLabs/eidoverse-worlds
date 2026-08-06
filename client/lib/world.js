@@ -650,4 +650,8 @@ export function resetWorld() {
   pendingMounts.clear();
   lastTerrainArgs = lastGrassArgs = null;
   pendingOps.clear();
+  // Anything hanging off entities that owns GPU resources and per-frame hooks
+  // (emitters, today) retires here. Announced rather than imported so the
+  // owning module stays a leaf — world.js is imported BY it.
+  bus.emit('world-reset', {});
 }

@@ -16,6 +16,7 @@ import { myState } from './controller.js';
 import { remotes } from './remotes.js';
 import { mapGrassArgs, presetStrokes } from './flora_args.js';
 import { composeField } from './flora_field.js';
+import { pushHostHook } from './autohooks.js';
 
 export { mapGrassArgs, presetStrokes } from './flora_args.js';
 export { retireField } from './flora_field.js';
@@ -182,7 +183,7 @@ function wirePushers(field) {
     }
     field.setPushers(list);
   };
-  (globalThis._autoParticleSystems ||= []).push(hook);
+  pushHostHook(hook);
   return hook;
 }
 

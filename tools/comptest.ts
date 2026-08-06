@@ -158,6 +158,22 @@ alice.verb("comp", { id: "swing1", type: "blob", data: { big: "x".repeat(9000) }
 await alice.settle();
 check("component data is bounded (8KB)", alice.errors.length === 2, alice.errors.join("; "));
 
+// ---- emitters: an ordinary component with a client-side evaluator --------------
+// The full matrix (perception, lifecycle, the lint) lives in
+// tools/particles-test.ts + tools/particles-probe.ts; these are the door's own
+// obligations — rights, fold, and that nothing per-particle reaches the log.
+const beforeParticles = alice.msgs.filter((m) => m.type === "log").length;
+alice.verb("comp", { id: "swing1", type: "particles",
+  data: { preset: "fire", seed: 1234, origin: [0, 0.25, 0] } });
+await alice.settle();
+check("owner can author an emitter", alice.errors.length === 2, alice.errors.join("; "));
+check("an emitter is ONE log entry, never one per particle",
+  alice.msgs.filter((m) => m.type === "log").length === beforeParticles + 1);
+bob.verb("comp", { id: "swing1", type: "particles", data: { preset: "smoke" } });
+await bob.settle();
+check("a visitor cannot light a fire on someone's swing",
+  bob.errors.length === 4 && /builder rights/.test(bob.errors.at(-1) ?? ""), bob.errors.join("; "));
+
 // ---- a fresh join folds all of it back ----------------------------------------
 const eye = await open({ id: "eye1", world: WORLD, spectate: true });
 const snap = eye.msgs.find((m) => m.type === "snapshot");

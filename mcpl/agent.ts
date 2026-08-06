@@ -13,10 +13,19 @@ import { HeadlessBody } from "./physics.ts";
 // sequencer run — text-tier perception must land on the SAME hour and
 // weather every renderer shows (issue #29's shared-fact boundary).
 import { foldSkyEntry, describeSky, effectiveSky, dayPhase, hoursAt } from "../client/lib/forecast.js";
+// The `particles` component's meaning, shared verbatim with the browser host:
+// a renderer client and a resident who perceives by reading must agree about
+// what is burning (#25's shared-facts boundary).
+import { describeParticles, emitterTransition, transitionLine } from "../client/lib/particles.js";
 
 (globalThis as any).THREE = Object.assign({}, THREE_W, TSL);
 
 const WALK = 1.55, RUN = 4.0, TICK_MS = 100, ARRIVE = 0.4;
+/** Quiet window for world-change narration, per (entity, component). Tuning a
+ *  live emitter is a burst of `comp` entries; this is how long they fold into
+ *  one line. Long enough to swallow a slider drag, short enough that "puts the
+ *  fire out" still arrives while you are looking at it. */
+const EMITTER_COALESCE_MS = Number(process.env.EW_EMITTER_COALESCE_SEC ?? 4) * 1000;
 
 type Vec2 = { x: number; z: number };
 type Pose = { p: number[]; yaw: number; speed: number; clip: string };
@@ -113,7 +122,10 @@ export class WorldAgent {
   pings: { ts: number; kind: "mention" | "approach" | "whisper"; who: string; text?: string }[] = [];
   onPing: ((p: { ts: number; kind: string; who: string; text?: string }) => void) | null = null;
   /** live world events (say/arrive/leave/activity) — the channel fan-out hook */
-  onEvent: ((ev: { ts: number; kind: "say" | "arrive" | "leave" | "whisper" | "act" | "activity" | "weather"; who: string; text?: string; mention?: boolean }) => void) | null = null;
+  onEvent: ((ev: { ts: number; kind: "say" | "arrive" | "leave" | "whisper" | "act" | "activity" | "weather" | "world-change"; who: string; text?: string; mention?: boolean }) => void) | null = null;
+  /** Open coalescing windows for world-change narration, keyed by entity id.
+   *  See noteEmitter. */
+  private emitterNarration = new Map<string, { announced: unknown; latest: unknown; actor: string; timer: ReturnType<typeof setTimeout> }>();
   private lastNear = new Map<string, number>(); // participant -> last approach-ping ts
   /** approach re-arm: after a walk-up ping, the SAME person must actually go
    *  away (> REARM_RADIUS) before another boundary crossing can ever count —
@@ -220,6 +232,8 @@ export class WorldAgent {
     if (this.ticker) { clearInterval(this.ticker); this.ticker = null; }
     if (this.activityTimer) { clearInterval(this.activityTimer); this.activityTimer = null; }
     this.gate.dispose(); // held narration dies with the session
+    for (const s of this.emitterNarration.values()) clearTimeout(s.timer);
+    this.emitterNarration.clear();
     this.ws?.close();
   }
 
@@ -606,8 +620,16 @@ export class WorldAgent {
       // affordances are components — track them or look() can't tell anyone
       const e = this.entities.get(args.id);
       if (e && typeof args.type === "string") {
+        const before = e.comp?.[args.type] ?? null;
         e.comp ??= {};
         if (args.data == null) delete e.comp[args.type]; else e.comp[args.type] = args.data;
+        // An emitter beginning, changing or ending is something you SEE happen
+        // in the world — the one component type with a live sensory event.
+        // Replay reconstructs the state above and stops there: a fire that was
+        // lit last week is in look(), not in your ears (#25).
+        if (args.type === "particles" && live) {
+          this.noteEmitter(actor, String(args.id), before, args.data ?? null, e.pos, ts);
+        }
       }
     } else if (verb === "motion") {
       const e = this.entities.get(args.id);
@@ -688,6 +710,62 @@ export class WorldAgent {
     } else if (verb === "grass") {
       this.worldInfo.grass = { area: `${args.species ?? "grass"}, ${args.width ?? args.size}×${args.depth ?? args.size}m around ${JSON.stringify(args.center ?? [0, 0])}` };
     }
+  }
+
+  /**
+   * A live `particles` attach / replace / remove near this body — ONE ambient
+   * world-change percept, never per particle and never per frame (#25).
+   *
+   * Coalesced by (entity, component): the first change in a quiet period
+   * speaks at once (someone lighting a fire beside you is news the moment it
+   * happens), and everything inside the following window is folded into at
+   * most one further line describing the NET result. So dragging a parameter
+   * slider — twenty `comp` entries in ten seconds — is one "retunes", not
+   * twenty, while a genuine fire→smoke→out sequence still ends up truthful.
+   *
+   * Radius-gated like every other ambient sense, and silent for this body's
+   * own authoring: the world log echoes your own verbs back to you, and
+   * delivering that echo as an event is the self-echo bug (see `say`).
+   * `nowMs`/`setTimer` are injectable for tests.
+   */
+  private noteEmitter(actor: string | undefined, id: string, before: unknown, after: unknown,
+                      pos: number[] | undefined, ts: number) {
+    if (!actor || actor === this.name || actor === "world") return;
+    if (pos && Math.hypot(pos[0] - this.pos.x, pos[2] - this.pos.z) > this.activityRadiusM) return;
+    const slot = this.emitterNarration.get(id);
+    if (slot) {                       // inside the quiet window — fold, don't speak
+      slot.latest = after;
+      slot.actor = actor;
+      return;
+    }
+    const line = transitionLine(actor, id, emitterTransition(before, after));
+    if (line) {
+      this.act30.builds++;            // it feeds the activity digest like any build
+      this.onEvent?.({ ts, kind: "world-change", who: actor, text: line });
+    }
+    this.openEmitterWindow(id, actor, after);
+  }
+
+  private openEmitterWindow(id: string, actor: string, announced: unknown) {
+    const close = () => {
+      const slot = this.emitterNarration.get(id);
+      if (!slot) return;
+      this.emitterNarration.delete(id);
+      const t = emitterTransition(slot.announced, slot.latest);
+      if (!t) return;                 // the burst netted out to what we already said
+      const line = transitionLine(slot.actor, id, t);
+      if (line) {
+        this.act30.builds++;
+        this.onEvent?.({ ts: Date.now(), kind: "world-change", who: slot.actor, text: line });
+      }
+      // A continuous burst speaks once per window rather than being silenced
+      // forever by its own persistence — same rule the act refractory uses.
+      this.openEmitterWindow(id, slot.actor, slot.latest);
+    };
+    const timer = setTimeout(close, EMITTER_COALESCE_MS);
+    // never hold the process open for a decoration
+    (timer as unknown as { unref?: () => void }).unref?.();
+    this.emitterNarration.set(id, { announced, latest: announced, actor, timer });
   }
 
   /** The push half of sky perception (the pull half is look()). Runs at 1Hz
@@ -1149,7 +1227,13 @@ export class WorldAgent {
       if (c.sockets) aff.push(`sit/mount: ${Object.keys(c.sockets).join(", ")}`);
       if (c.reactions) aff.push(`reacts to: ${Object.keys(c.reactions).join(", ")}`);
       if (c.motion?.type) aff.push(`in motion (${c.motion.type})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion"].includes(k));
+      // The emitter is named as the SEMANTIC thing it is on the entity that
+      // owns it — "emitting fire", not a sprite inventory and not a bare
+      // `components: particles`. Nothing is claimed about heat, light, sound
+      // or contact: separate authored components would provide those, and a
+      // resident who reads "warm" acts on it.
+      if (c.particles) aff.push(describeParticles(c.particles));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}`);

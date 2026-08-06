@@ -2,6 +2,8 @@
 // spec/flora_field.test.ts). A "field" is the setGrass-shaped object the
 // grass verb owns: possibly several engine strokes composed under one group.
 
+import { ownHook, releaseHook } from './autohooks.js';
+
 /** Compose stroke fields (createFlora results) + a clearing mask handle into
  *  ONE setGrass-shaped field. The caller supplies the parent group (THREE
  *  lives with the caller) and appends any host hooks (pushers) to autoHooks. */
@@ -12,7 +14,11 @@ export function composeField({ group, fields, mask }) {
     update: fields[0]?.update,
     setPushers: (list) => { for (const f of fields) f.setPushers?.(list); },
     setDensity: (k) => { for (const f of fields) f.setDensity?.(k); },
-    autoHooks: fields.map((f) => f.update).filter(Boolean),
+    // The engine registered these itself; marking them says the meadow retires
+    // them, so no subsystem that claims per-frame hooks by diffing the global
+    // array may adopt one that appeared while ITS own async build was in
+    // flight (see autohooks.js).
+    autoHooks: fields.map((f) => ownHook(f.update)).filter(Boolean),
     dispose: () => {
       for (const f of fields) f.dispose?.();
       mask?.dispose?.();
@@ -27,9 +33,7 @@ export function composeField({ group, fields, mask }) {
 export function retireField(field, autos, scene) {
   if (!field) return;
   const hooks = field.autoHooks ?? (field.update ? [field.update] : []);
-  if (Array.isArray(autos)) {
-    for (const h of hooks) { const i = autos.indexOf(h); if (i >= 0) autos.splice(i, 1); }
-  }
+  for (const h of hooks) releaseHook(h, autos);
   if (field.dispose) {
     field.dispose();
   } else if (field.mesh) {

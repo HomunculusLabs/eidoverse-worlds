@@ -53,6 +53,8 @@ export const EIDO = {
   activityDigest: "eidoverse:activity-digest",
   weather: "eidoverse:weather",
   catchup: "eidoverse:catchup",
+  worldChange: "eidoverse:world-change",
+  particles: "eidoverse:particles",
 } as const;
 
 /** §16.3 core closure, as the producer's own obligation. Hosts MUST expand these
@@ -189,6 +191,14 @@ const TAG_ONTOLOGY = {
     },
     [EIDO.weather]: {
       desc: "The world's weather or light changed on its own: a forecast segment boundary, a manual override landing or expiring, or the day crossing dawn/day/dusk/night. Derived deterministically from the authored sky policy (never a log entry); the text carries its provenance. At most one line per boundary — dwell is floored at 60s, so typically minutes-to-hours apart.",
+      facet: "lifecycle",
+    },
+    [EIDO.worldChange]: {
+      desc: "Someone changed how the world LOOKS near you — a visible authored change to a thing that is here, carrying who did it, to which entity, and whether it began, changed, or ended. Ambient and radius-gated, at most one line per (entity, component) per quiet window, and never replayed: a reconnect reconstructs the resulting state in look() without re-performing the event.",
+      facet: "lifecycle",
+    },
+    [EIDO.particles]: {
+      desc: "The world-change was an EMITTER: an entity started, retuned, or stopped emitting something visible (fire on a hearth, embers, smoke). Arrives alongside eidoverse:world-change — match the general tag to hear every visual change, this one to hear only emitters.",
       facet: "lifecycle",
     },
     [EIDO.catchup]: {

@@ -20,6 +20,10 @@ import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, request
   envTexture, adoptEnvironment } from './sky_baked.js';
 import { holdFrames, holdObjectCompiles, beginWork } from './loadwork.js';
 import { WEATHERS, effectiveSky, hoursAt } from './forecast.js';
+// Who owns which per-frame hook. The sky claims by diffing a GLOBAL array
+// around its own async build; anything another subsystem marks as its own is
+// off limits, whenever it appeared.
+import { claimUnowned, releaseHook } from './autohooks.js';
 
 // The environment exists from the first frame — BLACK, contributing nothing —
 // so every material's lighting graph is born with its env branch in place.
@@ -311,12 +315,12 @@ let building = null;
 // Since upstream cannot tell us what it added, we diff the scene around the
 // build and own the difference.
 let skyOwned = [];
-let autoSystemsMark = 0;
+let autoSystemsOwned = [];
 
 function snapshotSceneOwnership() {
   return {
     before: new Set(scene.children),
-    autos: (globalThis._autoParticleSystems ?? []).length,
+    autos: new Set(globalThis._autoParticleSystems ?? []),
   };
 }
 function claimSkyAdditions(snap) {
@@ -324,7 +328,15 @@ function claimSkyAdditions(snap) {
     // never claim anything the world itself owns — entities and bodies can be
     // added by other code while an async sky build is in flight
     && !c.userData?.entityId && !c.userData?.isBody);
-  autoSystemsMark = snap.autos;
+  // Hooks are claimed the same way the scene children above are: by identity,
+  // and never something another owner marked as theirs. It used to be a LENGTH
+  // mark, which meant anything that registered a per-frame hook after the sky
+  // built — a `particles` emitter on an entity — was silently truncated away
+  // by the next sky rebuild and stopped billboarding, still in the scene,
+  // facing wherever the camera happened to be. Identity alone is not enough:
+  // this build is ASYNC, so a hook that appeared while it was in flight is new
+  // but is not therefore ours — hence the host-owned marker.
+  autoSystemsOwned = claimUnowned(snap.autos);
 }
 function teardownSky() {
   // Put the parked live domes back first: the diff below claimed them at
@@ -341,9 +353,10 @@ function teardownSky() {
   }
   skyOwned = [];
   // the per-frame hooks the sky registered would otherwise keep running
-  // against a dome that is no longer in the scene
-  const autos = globalThis._autoParticleSystems;
-  if (Array.isArray(autos) && autos.length > autoSystemsMark) autos.length = autoSystemsMark;
+  // against a dome that is no longer in the scene — and only those: everyone
+  // else's hooks stay where they are (see claimSkyAdditions)
+  for (const h of autoSystemsOwned) releaseHook(h, globalThis._autoParticleSystems);
+  autoSystemsOwned = [];
 }
 
 async function renderEidoverse(a) {
