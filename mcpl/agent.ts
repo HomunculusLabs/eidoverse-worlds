@@ -21,6 +21,19 @@ type Entity = { id: string; lib: string; pos: number[]; yaw: number; actor: stri
    *  this is how affordances reach text-tier perception */
   comp?: Record<string, any> };
 type Person = { id: string; avatar: string; pose: Pose | null; agent?: boolean };
+
+/** Presence is a live, lossy plane: a just-joining browser can briefly send a
+ * pose shell whose coordinates are null/non-finite before its controller has
+ * a real transform. Treat that as "position unknown", never as a reason for
+ * the entire text-tier sense to throw. */
+function posePosition(pose: Pose | null | undefined): [number, number, number] | null {
+  const p = pose?.p;
+  if (!Array.isArray(p) || p.length < 3) return null;
+  const [x, y, z] = p;
+  return typeof x === "number" && Number.isFinite(x)
+    && typeof y === "number" && Number.isFinite(y)
+    && typeof z === "number" && Number.isFinite(z) ? [x, y, z] : null;
+}
 type InboxItem = { ts: number; kind: "say" | "arrive" | "leave" | "act"; who: string; text?: string; seq?: number | null };
 
 /** Folded world state back into the verbs that produced it. Must stay in step
@@ -480,9 +493,12 @@ export class WorldAgent {
     const p = this.people.get(id) ?? { id, avatar: "", pose: null };
     const prev = p.pose;
     p.pose = pose; this.people.set(id, p);
-    const [x, , z] = pose.p;
+    const xyz = posePosition(pose);
+    if (!xyz) return; // keep the shell for identity/roster; no spatial inference yet
+    const [x, , z] = xyz;
+    const prevXYZ = posePosition(prev);
     const dist = Math.hypot(x - this.pos.x, z - this.pos.z);
-    const prevDist = prev ? Math.hypot(prev.p[0] - this.pos.x, prev.p[2] - this.pos.z) : Infinity;
+    const prevDist = prevXYZ ? Math.hypot(prevXYZ[0] - this.pos.x, prevXYZ[2] - this.pos.z) : Infinity;
     if (dist > REARM_RADIUS) this.nearArmed.set(id, true);
     const armed = this.nearArmed.get(id) ?? true;
     const cooled = Date.now() - (this.lastNear.get(id) ?? 0) > APPROACH_REFRACT_MS;
@@ -1020,8 +1036,9 @@ export class WorldAgent {
     const others = [...this.people.values()];
     L.push(others.length ? `\nPeople (${others.length}):` : "\nNobody else is here right now.");
     for (const p of others) {
-      if (!p.pose) { L.push(`  - ${p.id} (just arrived, position unknown)`); continue; }
-      const [x, , z] = p.pose.p;
+      const xyz = posePosition(p.pose);
+      if (!p.pose || !xyz) { L.push(`  - ${p.id} (just arrived, position unknown)`); continue; }
+      const [x, , z] = xyz;
       const dx = x - me.x, dz = z - me.z;
       const doing = { idle: "standing", walk: "walking", run: "running", sit: "sitting", sitchair: "sitting on a chair", lie: "lying down" }[p.pose.clip] ?? p.pose.clip;
       const held = (p.pose as { pose?: Record<string, unknown> | null }).pose;
