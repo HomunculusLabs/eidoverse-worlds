@@ -122,9 +122,9 @@ function paint(body) {
   // over muting — if the label has to be explained, the label is wrong.)
   body_.append(checkRow('connect to other people’s audio',
     'on: your machine holds a live connection to each speaker nearby. ' +
-    'Off: nothing is sent to you at all — no bandwidth, no decoding, and ' +
-    'strangers cannot see your IP address. Muting only turns the volume down; ' +
-    'this unplugs the wire.',
+    'Off: nothing is sent to you at all — saves bandwidth and CPU in busy ' +
+    'rooms, and strangers cannot see your IP address. Muting only turns the ' +
+    'volume down; this unplugs the wire.',
     receivingVoice(), (on) => { setReceiveVoice(on); if (on) setHush(false); }));
 }
 
