@@ -6,7 +6,7 @@ nginx in front, Discord voice channel for audio.
 ## Sequencer
 
 ```sh
-JOIN_TOKEN=<door-key> RECORD_FRAMES=1 UPLOAD_CAP_MB=20 PORT=8940 \
+JOIN_TOKEN=<door-key> RECORD_FRAMES=1 UPLOAD_CAP_MB=30 PORT=8940 \
   bun server/server.ts
 ```
 
@@ -14,7 +14,7 @@ JOIN_TOKEN=<door-key> RECORD_FRAMES=1 UPLOAD_CAP_MB=20 PORT=8940 \
 |---|---|---|
 | `JOIN_TOKEN` | Door key, checked at join + upload. **Empty = OPEN** (boot log shouts). | set it |
 | `RECORD_FRAMES` | `1` = append stage frames + roster deltas to `worlds/<w>/frames-<ts>.jsonl`. Clients see a ⏺ notice at join. | `1` |
-| `UPLOAD_CAP_MB` | Per-upload size cap (default 20). | 20 |
+| `UPLOAD_CAP_MB` | Per-upload size cap (default 20). Orrery's `EIDOVERSE_MAX_MB` and nginx `client_max_body_size` must move with it. | 30 |
 | `EIDOVERSE_DIR` | eidoverse-video checkout (asset library). | box path |
 
 ## URLs
