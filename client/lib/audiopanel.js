@@ -14,7 +14,9 @@
 
 import { makeSection } from './ui.js';
 import { audioPrefs, setVolume, receivingVoice, setReceiveVoice,
-  sttConsented, setSttConsent, isHushed, setHush } from './voiceconsent.js';
+  sttConsented, setSttConsent, isHushed, setHush,
+  micFloor, setMicFloor } from './voiceconsent.js';
+import { micAnalyserLevel } from './voice.js';
 import { bus } from './core.js';
 
 const ROWS = [
@@ -43,9 +45,44 @@ function checkRow(label, hint, checked, onChange) {
   const row = document.createElement('div');
   row.className = 'sp-row';
   row.innerHTML =
-    `<span class="sp-label" title="${hint}">${label}</span>` +
-    `<input type="checkbox" ${checked ? 'checked' : ''} title="${hint}">`;
+    `<input type="checkbox" ${checked ? 'checked' : ''} title="${hint}">` +
+    `<span class="sp-label" title="${hint}">${label}</span>`;
   row.querySelector('input').onchange = (e) => onChange(e.target.checked);
+  return row;
+}
+
+// mic sensitivity: a slider over a LIVE level bar, so you can see where your
+// voice lands versus your keyboard before choosing the floor (R, 17:19 —
+// typing sounds were pinging agents' ears). The bar animates only while the
+// section is open and stops the moment its row leaves the DOM.
+function micFloorRow() {
+  const row = document.createElement('div');
+  row.className = 'sp-row';
+  const hint = 'mic level below the marker is treated as room noise, not speech — ' +
+    'raise it if typing pings nearby agents; the bar shows your live mic level';
+  row.innerHTML =
+    `<span class="sp-label" title="${hint}">mic sensitivity</span>` +
+    `<span style="flex:1;position:relative;display:flex;align-items:center">` +
+    `<span data-lvl style="position:absolute;left:0;top:calc(50% - 2px);height:4px;width:0;` +
+    `background:var(--dim);pointer-events:none;opacity:.7"></span>` +
+    `<input type="range" min="0" max="0.2" step="0.005" value="${micFloor()}" ` +
+    `style="flex:1;position:relative"></span>` +
+    `<span data-out style="min-width:34px;text-align:right">${Math.round(micFloor() * 500)}%</span>`;
+  const input = row.querySelector('input');
+  const out = row.querySelector('[data-out]');
+  const lvl = row.querySelector('[data-lvl]');
+  input.oninput = () => {
+    const v = setMicFloor(input.value);
+    out.textContent = `${Math.round(v * 500)}%`;
+  };
+  const beat = () => {
+    if (!row.isConnected) return;
+    const level = micAnalyserLevel();
+    lvl.style.width = `${Math.min(100, (level / 0.2) * 100)}%`;
+    lvl.style.background = level >= micFloor() ? 'var(--accent, #6fd)' : 'var(--dim)';
+    requestAnimationFrame(beat);
+  };
+  requestAnimationFrame(beat);
   return row;
 }
 
@@ -72,6 +109,7 @@ function paint(body) {
     body_.append(slider(cat, label, hint,
       cat === 'world' ? p.volWorld : cat === 'tts' ? p.volTts : p.volVoices));
   }
+  body_.append(micFloorRow());
   body_.append(checkRow('speech-to-text',
     'sends your mic audio to your browser vendor’s cloud to transcribe',
     sttConsented(), (on) => setSttConsent(on)));
@@ -91,7 +129,7 @@ function paint(body) {
 }
 
 export function initAudioPanel() {
-  makeSection('🔊 Audio', (body) => paint(body), { id: 'audio' });
+  makeSection('🔊 audio', (body) => paint(body), { id: 'audio' });
   // either control moving repaints the other's row — one truth, two surfaces
   bus.on('audio:hush', () => paint());
   bus.on('audio:receive', () => paint());

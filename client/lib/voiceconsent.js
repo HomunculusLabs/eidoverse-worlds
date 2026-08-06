@@ -22,7 +22,8 @@ const KEY = 'eido.audio.prefs';
 // accepted, false = refused. A boolean cannot tell "not asked" from "said no",
 // so a refusal would be re-prompted on the next mic-on — turning a no into a
 // recurring negotiation, which is the opposite of asking once (review catch).
-const DEFAULTS = { recvVoice: false, volVoices: 1, volWorld: 0.6, volTts: 1, sttConsent: null };
+const DEFAULTS = { recvVoice: false, volVoices: 1, volWorld: 0.6, volTts: 1, sttConsent: null,
+  micFloor: 0.04 };  // speech-onset gate: mic level below this is keyboard, not voice
 
 let prefs = { ...DEFAULTS };
 try {
@@ -73,6 +74,16 @@ export function setVolume(cat, v) {
   save();
   bus.emit('audio:volume', { cat, value: n });
   return n;
+}
+
+// mic sensitivity (R, 17:19: typing sounds pinged the ear) — the floor below
+// which mic activity is treated as room noise, not speech onset
+export const micFloor = () => prefs.micFloor;
+export function setMicFloor(v) {
+  prefs.micFloor = Math.max(0, Math.min(0.2, Number(v) || 0));
+  save();
+  bus.emit('audio:micfloor', prefs.micFloor);
+  return prefs.micFloor;
 }
 
 // ---- STT consent -----------------------------------------------------------

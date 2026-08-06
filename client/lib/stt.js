@@ -12,7 +12,9 @@
 // Local whisper is the planned upgrade; the say-pipe stays identical.
 
 import { report } from './core.js';
-import { sendVerb } from './net.js';
+import { sendVerb, sendTyping } from './net.js';
+import { micAnalyserLevel } from './voice.js';
+import { micFloor } from './voiceconsent.js';
 import { flashHint } from './ui.js';
 
 let rec = null;
@@ -30,6 +32,17 @@ export function setSTT(on) {
   rec.continuous = true;
   rec.interimResults = false;
   rec.lang = navigator.language || 'en-US';
+  // Presence at speech ONSET: with interimResults off, the transcript only
+  // exists on-finish — anything watching for "someone started talking to me"
+  // (an agent's ear glyph) sees nothing until the whole utterance lands.
+  // speechstart fires when recognition detects speech regardless of interim
+  // mode, so announce it on the whitelisted typing-presence channel ('mic').
+  // Gated on actual mic level: Chrome's speech detector fires on keyboard
+  // clatter too, and a floor the user can SEE (audio panel bar) beats a
+  // detector nobody can tune (R, 17:19).
+  rec.onspeechstart = () => {
+    if (micAnalyserLevel() >= micFloor()) sendTyping(null, 'mic');
+  };
   rec.onresult = (e) => {
     for (let i = e.resultIndex; i < e.results.length; i++) {
       if (!e.results[i].isFinal) continue;
