@@ -1227,6 +1227,7 @@ function contentType(path: string): string {
   if (path.endsWith(".js") || path.endsWith(".mjs")) return "text/javascript";
   if (path.endsWith(".json")) return "application/json";
   if (path.endsWith(".css")) return "text/css";
+  if (path.endsWith(".md")) return "text/markdown; charset=utf-8";
   if (path.endsWith(".png")) return "image/png";
   if (path.endsWith(".jpg") || path.endsWith(".jpeg")) return "image/jpeg";
   if (path.endsWith(".hdr")) return "application/octet-stream";
@@ -1765,6 +1766,13 @@ const server = Bun.serve({
          </svg>`,
         { headers: { "content-type": "image/svg+xml", "cache-control": "public, max-age=86400" } },
       );
+    }
+    if (url.pathname.toLowerCase() === "/agents.md") {
+      // The closed-verb-set error says "see AGENTS.md" — so the file has to be
+      // reachable from the world itself, not just the repo. Any casing works
+      // (/AGENTS.md, /agents.md): agents type both, and a 404 on the spelling
+      // the error message taught you is a locked door with a sign on it.
+      return serveFrom(ROOT, "AGENTS.md", false, req);
     }
     if (url.pathname === "/" || url.pathname === "/index.html")
       return serveFrom(join(ROOT, "client"), "index.html");
