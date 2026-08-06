@@ -157,6 +157,7 @@ type WorldState = {
     kind?: "light"; pos: number[]; actor: string; ts: number;
     lib?: string; yaw?: number; scale?: number;                 // things
     color?: number; intensity?: number; range?: number;         // lights
+    keep?: boolean;   // lights: exempt from the client perf governor's shedding
     /** Generic component bag, written by `comp` verbs. The server folds these
      *  BLINDLY — it never learns what a component means. Meaning lives in
      *  client-side evaluators (motion, sockets, reactions, …), so a new
@@ -288,9 +289,21 @@ function foldEntry(st: WorldState, e: LogEntry): void {
     }
     case "light": {
       if (!a?.id) return;
+      // Re-issuing `light` on an id that already folds as a light is a partial
+      // UPDATE: absent fields keep their prior value, so `{id, intensity: 40}`
+      // brightens without resetting color/range/pos. `keep: true` marks the
+      // light exempt from the client perf governor's shedding (keep: false
+      // clears it). A non-light already holding the id is replaced wholesale,
+      // same as before — the id namespace is flat.
+      const prev = st.entities[a.id];
+      const base = prev?.kind === "light" ? prev : null;
+      const keep = a.keep ?? base?.keep;
       st.entities[a.id] = {
-        kind: "light", pos: a.pos ?? [0, 1, 0],
-        color: a.color ?? 0xffd9a0, intensity: a.intensity ?? 16, range: a.range ?? 10,
+        kind: "light", pos: a.pos ?? base?.pos ?? [0, 1, 0],
+        color: a.color ?? base?.color ?? 0xffd9a0,
+        intensity: a.intensity ?? base?.intensity ?? 16,
+        range: a.range ?? base?.range ?? 10,
+        ...(keep ? { keep: true } : {}),
         actor: e.actor, ts: e.ts,
       };
       return;

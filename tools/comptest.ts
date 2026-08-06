@@ -206,7 +206,31 @@ check("removing the parent lands the cargo where the parent stood",
 check("removing the parent unseats the sitter too", !st2.mounts?.bob, JSON.stringify(st2.mounts));
 check("the swing is gone", !st2.entities?.swing1);
 
-for (const s of [alice, bob, eye, eye2]) s.close();
+// ---- placed lights: partial update + keep ------------------------------------
+const bobErrs = bob.errors.length;
+alice.verb("light", { id: "porch1", pos: [2, 2, 2], color: 0xff5533, intensity: 20, range: 12 });
+await alice.settle();
+alice.verb("light", { id: "porch1", intensity: 40, keep: true });   // brighten + pin, nothing else
+await alice.settle();
+bob.verb("light", { id: "bulb-bob", pos: [0, 1, 0] });
+await bob.settle();
+check("visitor cannot author lights", bob.errors.length === bobErrs + 1, bob.errors.join("; "));
+
+const eye3 = await open({ id: "eye3", world: WORLD, spectate: true });
+const porch = eye3.msgs.find((m) => m.type === "snapshot").state.entities?.porch1;
+check("fold: light re-issue merges — intensity changed", porch?.intensity === 40, JSON.stringify(porch));
+check("fold: light re-issue merges — color/range/pos untouched",
+  porch?.color === 0xff5533 && porch?.range === 12 && porch?.pos?.[0] === 2, JSON.stringify(porch));
+check("fold: keep flag survives the fold", porch?.keep === true, JSON.stringify(porch));
+
+alice.verb("light", { id: "porch1", keep: false });
+await alice.settle();
+const eye4 = await open({ id: "eye4", world: WORLD, spectate: true });
+const porch2 = eye4.msgs.find((m) => m.type === "snapshot").state.entities?.porch1;
+check("keep: false clears the exemption without touching the rest",
+  !!porch2 && porch2.keep === undefined && porch2.intensity === 40, JSON.stringify(porch2));
+
+for (const s of [alice, bob, eye, eye2, eye3, eye4]) s.close();
 
 console.log(`\n${passed} passed, ${failed} failed\n`);
 process.exit(failed ? 1 : 0);

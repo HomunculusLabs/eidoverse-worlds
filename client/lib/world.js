@@ -13,7 +13,7 @@ import { setTerrain, setGrass, clearGrass, heightAt } from './terrain.js';
 import { buildFloraField } from './flora.js';
 import { applySky, attachLocalLights } from './sky.js';
 import { foldSkyEntry } from './forecast.js';
-import { makeLight, disposeLight } from './lights.js';
+import { makeLight, updateLight, disposeLight } from './lights.js';
 import { logChat } from './chat.js';
 import { whenBooted } from './boot.js';
 
@@ -159,8 +159,20 @@ export async function applyEntry(entry, live, ctx = {}) {
         break;
       }
       case 'light': {
-        if (entities.has(args.id)) return;
-        const g = makeLight({ color: args.color, intensity: args.intensity, range: args.range });
+        if (entities.has(args.id)) {
+          // re-issuing `light` on an existing id is a partial UPDATE
+          // (brightness, color, range, keep, position) — the server fold
+          // merges the same way; a live client mirrors it here instead of
+          // ignoring the entry. A non-light holding the id (or a spawn still
+          // downloading) refuses, same as before.
+          const existing = entities.get(args.id);
+          if (!existing?.userData?.isLight) return;
+          updateLight(existing, args);
+          if (args.pos) existing.position.set(...args.pos);
+          bus.emit('entity', { id: args.id, kind: 'light' });
+          return;
+        }
+        const g = makeLight({ color: args.color, intensity: args.intensity, range: args.range, keep: args.keep });
         g.userData.entityId = args.id;
         g.position.set(...(args.pos ?? [0, 1, 0]));
         entities.set(args.id, g);
@@ -598,7 +610,8 @@ export function stateToEntries(state, { skipChatFromSeq = Infinity } = {}) {
   for (const a of state.assets ?? []) add('asset', a);
   for (const [id, e] of Object.entries(state.entities ?? {})) {
     if (e.kind === 'light') {
-      add('light', { id, pos: e.pos, color: e.color, intensity: e.intensity, range: e.range },
+      add('light', { id, pos: e.pos, color: e.color, intensity: e.intensity, range: e.range,
+        ...(e.keep ? { keep: true } : {}) },
         e.actor ?? 'world', e.ts ?? Date.now());
     } else {
       add('spawn', {

@@ -67,7 +67,8 @@ function stateToEntries(state: any, skipChatFromSeq = Infinity): any[] {
       // folded lights have no lib — must stay in step with the browser
       // client's stateToEntries (a drift here is how Fable's porchlight
       // crashed look() for every agent in the world)
-      add("light", { id, pos: e.pos, color: e.color, intensity: e.intensity, range: e.range },
+      add("light", { id, pos: e.pos, color: e.color, intensity: e.intensity, range: e.range,
+        ...(e.keep ? { keep: true } : {}) },
         e.actor ?? "world", e.ts ?? Date.now());
     } else {
       add("spawn", { id, lib: e.lib, pos: e.pos, yaw: e.yaw, ...(e.scale != null ? { scale: e.scale } : {}) },
@@ -605,8 +606,11 @@ export class WorldAgent {
       if (live) this.noteBuild(actor, args.pos);
     } else if (verb === "light") {
       // a light is an entity too, so text-tier perception can see it and it can
-      // be moved/removed by id like anything else
-      this.entities.set(args.id, { id: args.id, lib: "(light)", pos: args.pos ?? [0, 1, 0], yaw: 0, actor });
+      // be moved/removed by id like anything else. Re-issued on an existing id
+      // it is a partial update — an entry without pos must not teleport the
+      // text-tier's idea of the light to the default spot.
+      const prevLight = this.entities.get(args.id);
+      this.entities.set(args.id, { id: args.id, lib: "(light)", pos: args.pos ?? prevLight?.pos ?? [0, 1, 0], yaw: 0, actor });
       if (live) this.noteBuild(actor, args.pos);
     } else if (verb === "place") {
       const e = this.entities.get(args.id);
