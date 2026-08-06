@@ -48,16 +48,29 @@ for (const [i, img] of (json.images ?? []).entries()) {
   const bytes = bin.subarray(bv.byteOffset ?? 0, (bv.byteOffset ?? 0) + bv.byteLength);
   const meta = await sharp(bytes).metadata();
   const w = meta.width ?? 0, h = meta.height ?? 0;
-  if (Math.max(w, h) <= MAX) { console.log(`  image ${i}: ${w}×${h} already ≤ ${MAX}, kept`); continue; }
+  // Dimensions are only half the story: a 2048² PNG can be 5-10MB where the
+  // JPEG is well under 1MB. Skip only when the image is BOTH within MAX and
+  // already JPEG; otherwise re-encode (resizing when over MAX).
+  if (Math.max(w, h) <= MAX && meta.format === "jpeg") {
+    console.log(`  image ${i}: ${w}×${h} jpeg already ≤ ${MAX}, kept`);
+    continue;
+  }
   const slim = new Uint8Array(await sharp(bytes)
     .resize(MAX, MAX, { fit: "inside", withoutEnlargement: true })
     .jpeg({ quality: QUALITY })
     .toBuffer());
+  if (slim.length >= bytes.length) { console.log(`  image ${i}: ${w}×${h} ${meta.format} re-encode not smaller, kept`); continue; }
   replaced.set(img.bufferView, slim);
   img.mimeType = "image/jpeg";
-  console.log(`  image ${i}: ${w}×${h} ${(bytes.length / 1e6).toFixed(1)}MB → ${MAX}² ${(slim.length / 1e6).toFixed(1)}MB`);
+  console.log(`  image ${i}: ${w}×${h} ${meta.format} ${(bytes.length / 1e6).toFixed(1)}MB → jpeg ${(slim.length / 1e6).toFixed(1)}MB`);
 }
-if (replaced.size === 0) { console.log("nothing to slim"); process.exit(0); }
+if (replaced.size === 0) {
+  console.log("nothing to slim");
+  // Honor --out even as a no-op: callers (Orrery's slim_vrm_if_needed) treat
+  // "exit 0 but no output file" as failure — the bug behind the 502s.
+  if (out !== input) await Bun.write(out, src);
+  process.exit(0);
+}
 
 // repack: every bufferView copied (or substituted) into a fresh BIN, 4-aligned
 const parts: Uint8Array[] = [];
