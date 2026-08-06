@@ -60,26 +60,35 @@ function micFloorRow() {
   row.className = 'sp-row';
   const hint = 'mic level below the marker is treated as room noise, not speech — ' +
     'raise it if typing pings nearby agents; the bar shows your live mic level';
+  const FS = 0.2;  // full-scale mic level = right edge of the meter
   row.innerHTML =
     `<span class="sp-label" title="${hint}">mic sensitivity</span>` +
-    `<span style="flex:1;position:relative;display:flex;align-items:center">` +
-    `<span data-lvl style="position:absolute;left:0;top:calc(50% - 2px);height:4px;width:0;` +
-    `background:var(--dim);pointer-events:none;opacity:.7"></span>` +
-    `<input type="range" min="0" max="0.2" step="0.005" value="${micFloor()}" ` +
-    `style="flex:1;position:relative"></span>` +
+    `<span data-meter title="${hint}" style="flex:1;min-width:60px;position:relative;height:14px;` +
+    `background:#000;border-radius:2px;overflow:hidden;cursor:ew-resize">` +
+    `<span data-lvl style="position:absolute;left:0;top:0;height:100%;width:0;background:#3c5"></span>` +
+    `<span data-thr style="position:absolute;top:0;height:100%;width:2px;background:#9f9;opacity:.9"></span>` +
+    `</span>` +
     `<span data-out style="min-width:34px;text-align:right">${Math.round(micFloor() * 500)}%</span>`;
-  const input = row.querySelector('input');
+  const meter = row.querySelector('[data-meter]');
   const out = row.querySelector('[data-out]');
   const lvl = row.querySelector('[data-lvl]');
-  input.oninput = () => {
-    const v = setMicFloor(input.value);
-    out.textContent = `${Math.round(v * 500)}%`;
+  const thr = row.querySelector('[data-thr]');
+  const paintThr = () => {
+    thr.style.left = `calc(${Math.min(100, (micFloor() / FS) * 100)}% - 1px)`;
+    out.textContent = `${Math.round(micFloor() * 500)}%`;
   };
+  paintThr();
+  const setFromX = (ev) => {
+    const r = meter.getBoundingClientRect();
+    setMicFloor(((ev.clientX - r.left) / r.width) * FS);
+    paintThr();
+  };
+  meter.onpointerdown = (ev) => { meter.setPointerCapture(ev.pointerId); setFromX(ev); };
+  meter.onpointermove = (ev) => { if (meter.hasPointerCapture?.(ev.pointerId)) setFromX(ev); };
   const beat = () => {
     if (!row.isConnected) return;
     const level = micAnalyserLevel();
-    lvl.style.width = `${Math.min(100, (level / 0.2) * 100)}%`;
-    lvl.style.background = level >= micFloor() ? 'var(--accent, #6fd)' : 'var(--dim)';
+    lvl.style.width = `${Math.min(100, (level / FS) * 100)}%`;
     requestAnimationFrame(beat);
   };
   requestAnimationFrame(beat);
