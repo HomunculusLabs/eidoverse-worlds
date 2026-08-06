@@ -311,12 +311,12 @@ let building = null;
 // Since upstream cannot tell us what it added, we diff the scene around the
 // build and own the difference.
 let skyOwned = [];
-let autoSystemsMark = 0;
+let autoSystemsOwned = [];
 
 function snapshotSceneOwnership() {
   return {
     before: new Set(scene.children),
-    autos: (globalThis._autoParticleSystems ?? []).length,
+    autos: new Set(globalThis._autoParticleSystems ?? []),
   };
 }
 function claimSkyAdditions(snap) {
@@ -324,7 +324,13 @@ function claimSkyAdditions(snap) {
     // never claim anything the world itself owns — entities and bodies can be
     // added by other code while an async sky build is in flight
     && !c.userData?.entityId && !c.userData?.isBody);
-  autoSystemsMark = snap.autos;
+  // Hooks are claimed by IDENTITY, for the same reason the scene children
+  // above are: the array is global and shared. It used to be a LENGTH mark,
+  // which meant anything that registered a per-frame hook after the sky built
+  // — a `particles` emitter on an entity — was silently truncated away by the
+  // next sky rebuild and stopped billboarding, still in the scene, facing
+  // wherever the camera happened to be.
+  autoSystemsOwned = (globalThis._autoParticleSystems ?? []).filter((h) => !snap.autos.has(h));
 }
 function teardownSky() {
   // Put the parked live domes back first: the diff below claimed them at
@@ -341,9 +347,16 @@ function teardownSky() {
   }
   skyOwned = [];
   // the per-frame hooks the sky registered would otherwise keep running
-  // against a dome that is no longer in the scene
+  // against a dome that is no longer in the scene — and only those: everyone
+  // else's hooks stay where they are (see claimSkyAdditions)
   const autos = globalThis._autoParticleSystems;
-  if (Array.isArray(autos) && autos.length > autoSystemsMark) autos.length = autoSystemsMark;
+  if (Array.isArray(autos)) {
+    for (const h of autoSystemsOwned) {
+      const i = autos.indexOf(h);
+      if (i >= 0) autos.splice(i, 1);
+    }
+  }
+  autoSystemsOwned = [];
 }
 
 async function renderEidoverse(a) {

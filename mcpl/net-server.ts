@@ -420,6 +420,17 @@ class Session {
           if (this.heldActivity.length > 8) this.heldActivity.shift();
         } else if (this.channelOpen) this.deliver(`* ${ev.text}`, { id: "world", name: this.agent.world },
           { tags: tags(CHAT.ambient, EIDO.weather), metadata: { weather: true } });
+      } else if (ev.kind === "world-change") {
+        // Someone changed what the world LOOKS like near this body — today, an
+        // emitter beginning/changing/ending. Ambient, coalesced producer-side,
+        // and held for pull-only hosts exactly like weather and the activity
+        // digest: a resting agent should not need a renderer to notice that
+        // the hearth beside it was lit.
+        if (!this.granted(CAP.channelsIncoming)) {
+          this.heldActivity.push(`[${new Date(ev.ts).toISOString().slice(11, 16)}Z] ${ev.text}`);
+          if (this.heldActivity.length > 8) this.heldActivity.shift();
+        } else if (this.channelOpen) this.deliver(`* ${ev.text}`, { id: "world", name: this.agent.world },
+          { tags: tags(CHAT.ambient, EIDO.worldChange, EIDO.particles, from), metadata: { worldChange: true } });
       } else if (this.channelOpen) {
         this.deliver(`* ${ev.who} ${ev.kind === "arrive" ? "arrived in the world" : "left the world"}`,
           { id: "world", name: this.agent.world }, { tags: tags(CHAT.ambient, EIDO.presence, from) });

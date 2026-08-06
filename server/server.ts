@@ -14,6 +14,9 @@ import { summarizeGlb } from "./geometry.ts";
 // Pure and dependency-free — the same fold the browser client and the mcpl
 // agent run, which is what keeps all three planes' skies in agreement.
 import { foldSkyEntry } from "../client/lib/forecast.js";
+// Likewise for the `particles` component: one validator, so the flight
+// recorder's opinion about an emitter is the renderer's own opinion.
+import { normalizeParticles } from "../client/lib/particles.js";
 
 const PORT = Number(process.env.PORT ?? 8940);
 // Show-night door policy. Empty = open (dev on a tailnet). On a public box you
@@ -548,6 +551,27 @@ function lintMotion(w: World, entry: LogEntry): void {
       }
     } catch { /* lint must never hurt anything */ }
   })();
+}
+
+/** The same courtesy for `particles`, from the same shared module the browser
+ *  host and the mcpl agent validate with — so what the recorder says is
+ *  exactly what a renderer will do, not a second opinion about it. Advisory:
+ *  the component has already folded, and an unrenderable emitter still
+ *  persists and still reads as an emitter in text-tier perception. */
+function lintParticles(w: World, entry: LogEntry): void {
+  try {
+    const a = entry.args as Record<string, unknown>;
+    const id = String(a.id ?? "");
+    if (a.data == null) return;                      // put out — nothing to lint
+    const r = normalizeParticles(a.data, { entityId: id });
+    if (!r.ok) {
+      w.debug("particles-lint", { entity: id, by: entry.actor, why: r.why });
+      return;
+    }
+    if (r.notes.length) {
+      w.debug("particles-lint", { entity: id, by: entry.actor, why: r.notes.join(" · ") });
+    }
+  } catch { /* lint must never hurt anything */ }
 }
 
 // ---------------------------------------------------------------- reactions
@@ -2249,6 +2273,12 @@ const server = Bun.serve({
           // at 4am — lint it into the recorder while the fold is still warm
           if (msg.verb === "motion" || (msg.verb === "comp" && /^motion(:|$)/.test(String((args as any).type ?? "")))) {
             lintMotion(c.world, entry);
+          }
+          // Same courtesy for an emitter that won't emit: an unknown preset or
+          // a clamped parameter is a silence the author would otherwise have
+          // to discover by asking someone with a GPU what they can see.
+          if (msg.verb === "comp" && String((args as any).type ?? "") === "particles") {
+            lintParticles(c.world, entry);
           }
           // A ban or kick lands NOW on every matching body, not at some future
           // join — the fold recorded the fact; this is the fact taking effect.
