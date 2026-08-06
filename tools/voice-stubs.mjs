@@ -15,3 +15,5 @@ export const sendRtc = (to, payload) => sent.push({ to, payload });
 export const sendVerb = (verb, args) => sent.push({ verb, args });
 export const myState = { pos: { distanceTo: () => 1 } };
 export const remotes = new Map();
+export const typed = [];
+export const sendTyping = (to, state) => typed.push({ to, state });
