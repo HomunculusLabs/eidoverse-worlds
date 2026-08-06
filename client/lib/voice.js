@@ -15,8 +15,9 @@
 // Volume rolls off by avatar distance — voice is proximity-scoped like chat.
 
 import { bus, report } from './core.js';
-import { sendRtc } from './net.js';
+import { sendRtc, sendTyping } from './net.js';
 import { remotes } from './remotes.js';
+import { micFloor } from './voiceconsent.js';
 import { myState } from './controller.js';
 import { flashHint } from './ui.js';
 import { receivingVoice, volumeFor, isHushed } from './voiceconsent.js';
@@ -165,6 +166,7 @@ export async function toggleMic(name) {
     // has no purpose and comes down.
     for (const t of micStream.getTracks()) t.stop();
     micStream = null;
+    stopOnsetWatch();
     muted = false;
     for (const [id, p] of [...peers]) {
       try {
@@ -189,7 +191,33 @@ export async function toggleMic(name) {
   for (const id of humanIds()) offerTo(id);
   flashHint('🎙 live — speak, neighbors hear · <b>mute</b> in the dock');
   bus.emit('voice', { on: true });
+  startOnsetWatch();
   return true;
+}
+
+// Presence at speech ONSET, from the LOCAL analyser — deliberately not from
+// SpeechRecognition (#26 review): declining vendor transcription must not
+// mute your presence. Level crossing the visible panel floor emits one
+// 'mic' typing-presence event; hysteresis (fall to 60% of floor) plus a
+// 1.5s refractory keep sustained speech from machine-gunning the channel.
+let _onsetTimer = null, _above = false, _lastOnset = 0;
+function onsetTick() {
+  const floor = micFloor();
+  const level = micAnalyserLevel();
+  if (!_above && level >= floor) {
+    _above = true;
+    const now = Date.now();
+    if (now - _lastOnset > 1500) { _lastOnset = now; sendTyping(null, 'mic'); }
+  } else if (_above && level < floor * 0.6) _above = false;
+}
+function startOnsetWatch() {
+  if (_onsetTimer) return;
+  _above = false;
+  _onsetTimer = setInterval(onsetTick, 120);
+}
+function stopOnsetWatch() {
+  if (_onsetTimer) { clearInterval(_onsetTimer); _onsetTimer = null; }
+  _above = false;
 }
 
 // live mic level 0..1 for UI (the mic glyph's hot-glow) — analyser built
@@ -290,7 +318,9 @@ export function initVoice(name) {
   }, 60);
 }
 
-// test/debug probe — connection states by peer id (the world_debug spirit)
+// test/debug probes (the world_debug spirit)
+export const peerVolume = (id) => peers.get(id)?.audio.volume ?? null;
+// test/debug probe — connection states by peer id
 export const voiceDebug = () => Object.fromEntries([...peers].map(([id, p]) => [id, p.pc.connectionState]));
 
 // ---- per-speaker levels (R, 23:30: mouths move in sync with the sound)
