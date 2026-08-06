@@ -14,7 +14,10 @@
 
 import { makeSection } from './ui.js';
 import { audioPrefs, setVolume, receivingVoice, setReceiveVoice,
-  sttConsented, setSttConsent } from './voiceconsent.js';
+  sttConsented, setSttConsent, isHushed, setHush,
+  micFloor, setMicFloor } from './voiceconsent.js';
+import { micAnalyserLevel } from './voice.js';
+import { bus } from './core.js';
 
 const ROWS = [
   ['voices', 'voices', 'other people speaking, and agent speech'],
@@ -42,25 +45,101 @@ function checkRow(label, hint, checked, onChange) {
   const row = document.createElement('div');
   row.className = 'sp-row';
   row.innerHTML =
-    `<span class="sp-label" title="${hint}">${label}</span>` +
-    `<input type="checkbox" ${checked ? 'checked' : ''}>` +
-    `<span class="sp-info" style="color:var(--dim)">${hint}</span>`;
+    `<input type="checkbox" ${checked ? 'checked' : ''} title="${hint}">` +
+    `<span class="sp-label" title="${hint}">${label}</span>`;
   row.querySelector('input').onchange = (e) => onChange(e.target.checked);
   return row;
 }
 
+// mic sensitivity: a slider over a LIVE level bar, so you can see where your
+// voice lands versus your keyboard before choosing the floor (R, 17:19 —
+// typing sounds were pinging agents' ears). The bar animates only while the
+// section is open and stops the moment its row leaves the DOM.
+function micFloorRow() {
+  const row = document.createElement('div');
+  row.className = 'sp-row';
+  const hint = 'mic level below the marker is treated as room noise, not speech — ' +
+    'raise it if typing pings nearby agents; the bar shows your live mic level';
+  const FS = 0.2;  // full-scale mic level = right edge of the meter
+  row.innerHTML =
+    `<span class="sp-label" title="${hint}">mic sensitivity</span>` +
+    `<span data-meter title="${hint}" style="flex:1;min-width:60px;position:relative;height:14px;` +
+    `background:#000;border-radius:2px;overflow:hidden;cursor:ew-resize">` +
+    `<span data-lvl style="position:absolute;left:0;top:0;height:100%;width:0;background:#3c5"></span>` +
+    `<span data-thr style="position:absolute;top:0;height:100%;width:2px;background:#9f9;opacity:.9"></span>` +
+    `</span>` +
+    `<span data-out style="min-width:34px;text-align:right">${Math.round(micFloor() * 500)}%</span>`;
+  const meter = row.querySelector('[data-meter]');
+  const out = row.querySelector('[data-out]');
+  const lvl = row.querySelector('[data-lvl]');
+  const thr = row.querySelector('[data-thr]');
+  const paintThr = () => {
+    thr.style.left = `calc(${Math.min(100, (micFloor() / FS) * 100)}% - 1px)`;
+    out.textContent = `${Math.round(micFloor() * 500)}%`;
+  };
+  paintThr();
+  const setFromX = (ev) => {
+    const r = meter.getBoundingClientRect();
+    setMicFloor(((ev.clientX - r.left) / r.width) * FS);
+    paintThr();
+  };
+  meter.onpointerdown = (ev) => { meter.setPointerCapture(ev.pointerId); setFromX(ev); };
+  meter.onpointermove = (ev) => { if (meter.hasPointerCapture?.(ev.pointerId)) setFromX(ev); };
+  const beat = () => {
+    if (!row.isConnected) return;
+    const level = micAnalyserLevel();
+    lvl.style.width = `${Math.min(100, (level / FS) * 100)}%`;
+    requestAnimationFrame(beat);
+  };
+  requestAnimationFrame(beat);
+  return row;
+}
+
+let _body = null;
+function paint(body) {
+  _body = body ?? _body;
+  if (!_body) return;
+  const body_ = _body;
+  body_.innerHTML = '';
+  const p = audioPrefs();
+  // 'hear voices' is what you HEAR — the same bit the 🎧 glyph toggles, so
+  // the two controls can never disagree about the world you are in. (Field
+  // report 12:43: toggling the headphone left this row stale, which is two
+  // controls showing two different states while looking like one.) Ticking
+  // it from a fully-revoked state grants consent as well, exactly like the
+  // glyph, so the box is never a dead end.
+  body_.append(checkRow('hear voices',
+    'peers and agent speech — the 🎧 glyph is this same switch',
+    receivingVoice() && !isHushed(), (on) => {
+      if (on) { if (!receivingVoice()) setReceiveVoice(true); setHush(false); }
+      else setHush(true);
+    }));
+  for (const [cat, label, hint] of ROWS) {
+    body_.append(slider(cat, label, hint,
+      cat === 'world' ? p.volWorld : cat === 'tts' ? p.volTts : p.volVoices));
+  }
+  body_.append(micFloorRow());
+  body_.append(checkRow('speech-to-text',
+    'sends your mic audio to your browser vendor’s cloud to transcribe',
+    sttConsented(), (on) => setSttConsent(on)));
+  // The structural act, deliberately last: hush is a gain, this is the
+  // connection. Unticking negotiates no inbound media at all — the only row
+  // here that is a guarantee rather than a preference. The wording leads with
+  // what you GET (no connection, no cost) rather than with the mechanism,
+  // because "refuse inbound audio" reads as a second mute to anyone who has
+  // not thought about the wire. (Field note: a reader asked what it affords
+  // over muting — if the label has to be explained, the label is wrong.)
+  body_.append(checkRow('connect to other people’s audio',
+    'on: your machine holds a live connection to each speaker nearby. ' +
+    'Off: nothing is sent to you at all — saves bandwidth and CPU in busy ' +
+    'rooms, and strangers cannot see your IP address. Muting only turns the ' +
+    'volume down; this unplugs the wire.',
+    receivingVoice(), (on) => { setReceiveVoice(on); if (on) setHush(false); }));
+}
+
 export function initAudioPanel() {
-  makeSection('🔊 Audio', (body) => {
-    body.innerHTML = '';
-    const p = audioPrefs();
-    body.append(checkRow('hear voices', 'receive other people’s speech (off by default)',
-      receivingVoice(), (on) => setReceiveVoice(on)));
-    for (const [cat, label, hint] of ROWS) {
-      body.append(slider(cat, label, hint,
-        cat === 'world' ? p.volWorld : cat === 'tts' ? p.volTts : p.volVoices));
-    }
-    body.append(checkRow('speech-to-text',
-      'sends your mic audio to your browser vendor’s cloud to transcribe',
-      sttConsented(), (on) => setSttConsent(on)));
-  }, { id: 'audio' });
+  makeSection('🔊 audio', (body) => paint(body), { id: 'audio' });
+  // either control moving repaints the other's row — one truth, two surfaces
+  bus.on('audio:hush', () => paint());
+  bus.on('audio:receive', () => paint());
 }
