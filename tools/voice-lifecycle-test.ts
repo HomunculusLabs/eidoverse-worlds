@@ -112,7 +112,11 @@ class FakeAudioCtx {
   currentTime = 0; state = "running";
   createGain() { return { gain: { value: 0, setTargetAtTime() {} }, connect: () => ({ connect() {} }), disconnect() {} }; }
   createMediaStreamSource() { return { connect: () => ({ connect() {} }), disconnect() {} }; }
-  createAnalyser() { return { fftSize: 0, frequencyBinCount: 8, getByteTimeDomainData() {}, connect() {}, disconnect() {} }; }
+  static level = 0;   // amplitude the fake mic "hears" — RMS of a filled buffer equals it
+  createAnalyser() { return { fftSize: 512, frequencyBinCount: 8,
+    getByteTimeDomainData() {},
+    getFloatTimeDomainData(buf: Float32Array) { buf.fill(FakeAudioCtx.level); },
+    connect() {}, disconnect() {} }; }
   async resume() {}
 }
 (globalThis as Record<string, unknown>).AudioContext = FakeAudioCtx;
@@ -362,6 +366,90 @@ await settle();
 check("duplicate recvReady on a healthy peer never tears it down",
   midflight.closed === false && created.at(-1) === midflight,
   `closed=${midflight.closed}, pcs=${created.length}`);
+// ---- #26 review: the new behavior, pinned where it travels ----------------
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+const { typed } = stubs as { typed: { to: unknown; state: string }[] };
+
+// -- mic floor clamps and persists ------------------------------------------
+check("mic floor clamps its ceiling", consent.setMicFloor(9) === 0.2);
+check("mic floor clamps its floor", consent.setMicFloor(-3) === 0);
+consent.setMicFloor(0.04);
+{
+  const fresh = await import(`../client/lib/voiceconsent.js?fresh-floor=${performance.now()}`);
+  check("mic floor persists across a fresh module load", fresh.micFloor() === 0.04,
+    `${fresh.micFloor()}`);
+}
+
+// -- speech onset: local analyser, no vendor STT anywhere in the loop -------
+if (!voice.micOn()) await voice.toggleMic("me");
+const sttStartsBefore = sttStarts;
+typed.length = 0;
+FakeAudioCtx.level = 0;
+await sleep(300);
+check("below the floor: no onset ever", typed.length === 0, `${typed.length}`);
+FakeAudioCtx.level = 0.1;
+await sleep(300);
+check("crossing the floor emits exactly one 'mic' presence",
+  typed.length === 1 && typed[0].state === "mic", JSON.stringify(typed));
+await sleep(300);
+check("sustained speech does not re-emit", typed.length === 1, `${typed.length}`);
+FakeAudioCtx.level = 0.01;   // below hysteresis (0.6 × floor)
+await sleep(300);
+FakeAudioCtx.level = 0.1;    // re-cross inside the 1.5s refractory
+await sleep(300);
+check("a re-cross inside the refractory window stays quiet", typed.length === 1,
+  `${typed.length}`);
+check("no SpeechRecognition was consulted for any of it (STT-off contract)",
+  sttStarts === sttStartsBefore, `${sttStarts - sttStartsBefore} start(s)`);
+FakeAudioCtx.level = 0;
+
+// -- hush is a gain that ARRIVES, and never a teardown ----------------------
+consent.setReceiveVoice(true);
+consent.setHush(false);
+created.length = 0;
+stubs.remotes.set("neighbor", { agent: false, avatar: { root: { position: { distanceTo: () => 0 } } } });
+offerFrom("neighbor");
+await settle();
+const hushPc = created.at(-1) as FakePC;
+hushPc.deliverAudio();
+await sleep(1300);
+const preHush = voice.peerVolume?.("neighbor");
+check("audible before hush", (preHush ?? 0) > 0.9, `${preHush}`);
+consent.setHush(true);
+await sleep(1300);   // 300ms want-pass + 700ms linear fade + margin
+check("hush reaches EXACT zero (no lingering whisper)",
+  voice.peerVolume?.("neighbor") === 0, `${voice.peerVolume?.("neighbor")}`);
+check("…and the peer connection survives the silence (gain, not teardown)",
+  hushPc.closed === false && hushPc.playedAudio === true);
+consent.setHush(false);
+await sleep(1300);
+check("unhush rejoins the SAME peer at full volume",
+  (voice.peerVolume?.("neighbor") ?? 0) > 0.9 && created.at(-1) === hushPc,
+  `vol=${voice.peerVolume?.("neighbor")}, pcs=${created.length}`);
+
+// -- panel and HUD repaint from one truth -----------------------------------
+{
+  const hud = document.createElement("div"); hud.id = "hud";
+  document.body.appendChild(hud);
+  await import("../client/lib/mictoggle.js");
+  const ear = document.getElementById("eartoggle")!;
+  check("HUD ear glyph exists once a hud does", !!ear);
+  const panel = await import("../client/lib/audiopanel.js");
+  panel.initAudioPanel();
+  const section = document.getElementById("section-audio")!;
+  const hearBox = () => [...section.querySelectorAll(".sp-row")].find((r) =>
+    r.textContent?.includes("hear voices"))?.querySelector("input") as HTMLInputElement;
+  check("panel renders the hear-voices row", !!hearBox());
+  consent.setHush(true);
+  check("hush flips the HUD ear to its off-state (one truth, no second visual language)",
+    ear.title.includes("hushed"), ear.title);
+  check("…and the panel checkbox repaints from the same truth", hearBox().checked === false);
+  hearBox().checked = true;
+  hearBox().dispatchEvent(new Event("change"));   // tick the PANEL row…
+  await settle();
+  check("…ticking the panel row unhushes the HUD glyph too",
+    ear.title.includes("hearing") && consent.isHushed() === false, ear.title);
+}
 
 console.log(`\n${pass} passed, ${fail} failed\n`);
 process.exit(fail ? 1 : 0);

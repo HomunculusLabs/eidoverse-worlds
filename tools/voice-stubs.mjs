@@ -15,3 +15,14 @@ export const sendRtc = (to, payload) => sent.push({ to, payload });
 export const sendVerb = (verb, args) => sent.push({ verb, args });
 export const myState = { pos: { distanceTo: () => 1 } };
 export const remotes = new Map();
+export const typed = [];
+export const sendTyping = (to, state) => typed.push({ to, state });
+
+// audiopanel mounts through this; give it a real element so panel DOM is testable
+export const makeSection = (title, build, opts = {}) => {
+  const el = document.createElement('div');
+  el.id = `section-${opts.id ?? title}`;
+  document.body.appendChild(el);
+  build(el);
+  return el;
+};

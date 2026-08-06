@@ -24,10 +24,17 @@
 const P = {
   ear: ['M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0',
         'M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4'],
-  // message-circle-more: Lucide has no literal thought-cloud, and `brain` is
-  // mush at pill size. A bubble with an ellipsis IS the composing idiom.
-  think: ['M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719',
-          'M8 12h.01', 'M12 12h.01', 'M16 12h.01'],
+  // lucide `brain` (R, 08-05, third pass: bubble-with-dots read as silence,
+  // pencil read as "edit"). Denser than the other glyphs at pill size — if it
+  // reads as mush in-world, the next stop is bare `ellipsis`.
+  think: ['M12 18V5',
+          'M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4',
+          'M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5',
+          'M17.997 5.125a4 4 0 0 1 2.526 5.77',
+          'M18 18a4 4 0 0 0 2-7.464',
+          'M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517',
+          'M6 18a4 4 0 0 1-2-7.464',
+          'M6.003 5.125a4 4 0 0 0-2.526 5.77'],
   wrench: ['M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z'],
   mic: ['M12 19v3', 'M19 10v2a7 7 0 0 1-14 0v-2'],
   messageSquare: ['M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z'],

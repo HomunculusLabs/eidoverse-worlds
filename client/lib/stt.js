@@ -30,6 +30,10 @@ export function setSTT(on) {
   rec.continuous = true;
   rec.interimResults = false;
   rec.lang = navigator.language || 'en-US';
+  // Speech-onset presence intentionally does NOT live here (#26 review):
+  // it rides the local analyser loop in voice.js, so a person who declines
+  // vendor transcription still has an audible presence. STT is transcript
+  // duty only.
   rec.onresult = (e) => {
     for (let i = e.resultIndex; i < e.results.length; i++) {
       if (!e.results[i].isFinal) continue;

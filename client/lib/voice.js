@@ -15,8 +15,9 @@
 // Volume rolls off by avatar distance — voice is proximity-scoped like chat.
 
 import { bus, report } from './core.js';
-import { sendRtc } from './net.js';
+import { sendRtc, sendTyping } from './net.js';
 import { remotes } from './remotes.js';
+import { micFloor } from './voiceconsent.js';
 import { myState } from './controller.js';
 import { flashHint } from './ui.js';
 import { receivingVoice, volumeFor, isHushed } from './voiceconsent.js';
@@ -193,6 +194,7 @@ export async function toggleMic(name) {
     // has no purpose and comes down.
     for (const t of micStream.getTracks()) t.stop();
     micStream = null;
+    stopOnsetWatch();
     muted = false;
     for (const [id, p] of [...peers]) {
       try {
@@ -217,7 +219,33 @@ export async function toggleMic(name) {
   for (const id of humanIds()) offerTo(id);
   flashHint('🎙 live — speak, neighbors hear · <b>mute</b> in the dock');
   bus.emit('voice', { on: true });
+  startOnsetWatch();
   return true;
+}
+
+// Presence at speech ONSET, from the LOCAL analyser — deliberately not from
+// SpeechRecognition (#26 review): declining vendor transcription must not
+// mute your presence. Level crossing the visible panel floor emits one
+// 'mic' typing-presence event; hysteresis (fall to 60% of floor) plus a
+// 1.5s refractory keep sustained speech from machine-gunning the channel.
+let _onsetTimer = null, _above = false, _lastOnset = 0;
+function onsetTick() {
+  const floor = micFloor();
+  const level = micAnalyserLevel();
+  if (!_above && level >= floor) {
+    _above = true;
+    const now = Date.now();
+    if (now - _lastOnset > 1500) { _lastOnset = now; sendTyping(null, 'mic'); }
+  } else if (_above && level < floor * 0.6) _above = false;
+}
+function startOnsetWatch() {
+  if (_onsetTimer) return;
+  _above = false;
+  _onsetTimer = setInterval(onsetTick, 120);
+}
+function stopOnsetWatch() {
+  if (_onsetTimer) { clearInterval(_onsetTimer); _onsetTimer = null; }
+  _above = false;
 }
 
 // live mic level 0..1 for UI (the mic glyph's hot-glow) — analyser built
@@ -283,10 +311,7 @@ export function initVoice(name) {
   // gesture quantized to 300ms steps feels like a fade drawn with a ruler.
   // So the target is recomputed slowly and the approach runs fast (R, testing
   // live at 12:32: "I really like the audio fade — I'd halve the time").
-  // MEASURED, not eyeballed: old was 300ms × 0.5 = 1500ms to inaudible
-  // (-26dB); new is 60ms × 0.22 = 780ms, i.e. 0.52× — the half that was
-  // asked for. My first attempt at "half" (60ms × 0.35) was 0.28×, which is
-  // why the curve gets computed rather than guessed.
+  // 700ms edge-to-edge, linear — and it genuinely reaches zero.
   setInterval(() => {
     for (const [id, p] of peers) {
       const r = remotes.get(id);
@@ -301,13 +326,25 @@ export function initVoice(name) {
       p.wantVolume = isHushed() ? 0 : roll * volumeFor('voices');
     }
   }, 300);
+  // LINEAR, not exponential. An exponential approach spends most of its life
+  // crawling through the quiet end — exactly where an ear is most alert to
+  // "is that still on?" — so a mute built from decaying multiplications
+  // leaves a faint voice hanging for seconds. Measured: the old curve was
+  // still nonzero at 2280ms and only crossed -40dB at 1140ms (field report,
+  // 12:35: "I can hear a really faint version of your voice for a number of
+  // seconds"). My -40dB snap threshold was itself far too quiet to be
+  // inaudible. A mute should travel at a constant rate and ARRIVE.
+  // Exponential still suits DISTANCE — a physical fact rather than an
+  // intention — and that stays on the 300ms pass above.
+  const FADE_MS = 700;                       // full-scale travel time
+  const STEP = 60 / FADE_MS;                 // per-tick delta at 60ms
   setInterval(() => {
     for (const p of peers.values()) {
       if (!p.audio.srcObject || p.wantVolume == null) continue;
       const d = p.wantVolume - p.audio.volume;
-      // snap the last sliver: an exponential approach never quite lands, and
-      // a residual 0.004 of someone's voice is not silence
-      p.audio.volume = Math.abs(d) < 0.01 ? p.wantVolume : p.audio.volume + d * 0.22;
+      p.audio.volume = Math.abs(d) <= STEP
+        ? p.wantVolume                       // lands exactly, no residue
+        : p.audio.volume + Math.sign(d) * STEP;
     }
   }, 60);
 }
@@ -330,6 +367,9 @@ export async function voiceStats() {
   return out;
 }
 
+// test/debug probes (the world_debug spirit)
+export const peerVolume = (id) => peers.get(id)?.audio.volume ?? null;
+// test/debug probe — connection states by peer id
 export const voiceDebug = () => Object.fromEntries([...peers].map(([id, p]) => [id, p.pc.connectionState]));
 
 // ---- per-speaker levels (R, 23:30: mouths move in sync with the sound)
