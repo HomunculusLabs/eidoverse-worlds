@@ -10,15 +10,45 @@
 // Run: bun run tools/parts-test.ts   (no servers, no GPU)
 
 import { plugin } from 'bun';
+import { fileURLToPath } from 'node:url';
 
-const CORE = new URL('./core-stub.mjs', import.meta.url).pathname;
-const PARTS = new URL('./parts-stub.mjs', import.meta.url).pathname;
+// Bun 1.3.x caches transpiled module graphs globally by content. A failed
+// plugin-resolved path can therefore survive into a later checkout and bypass
+// onResolve entirely. Tests need deterministic resolver behavior; production
+// runtime keeps Bun's normal cache. Re-exec once because this setting is read
+// at process startup.
+if (process.env.__EIDO_TEST_CACHE_OFF !== '1') {
+  const child = Bun.spawnSync({
+    cmd: [process.execPath, import.meta.path, ...process.argv.slice(2)],
+    env: {
+      ...process.env,
+      BUN_RUNTIME_TRANSPILER_CACHE_PATH: '0',
+      __EIDO_TEST_CACHE_OFF: '1',
+    },
+    stdout: 'inherit',
+    stderr: 'inherit',
+  });
+  process.exit(child.exitCode ?? 1);
+}
+
+const CORE = fileURLToPath(new URL('./core-stub.mjs', import.meta.url));
+const PARTS = fileURLToPath(new URL('./parts-stub.mjs', import.meta.url));
+const COLLIDERS = fileURLToPath(new URL('./colliders-stub.mjs', import.meta.url));
+const LOADWORK = fileURLToPath(new URL('./loadwork-stub.mjs', import.meta.url));
 plugin({
   name: 'parts-stub',
   setup(build) {
+    // one specifier, one file — './colliders.js' goes through a re-export
+    // shim over parts-stub rather than to parts-stub itself. Two specifiers
+    // resolving to one plugin-returned path is the configuration that breaks
+    // on macOS Bun 1.3.14 (see colliders-stub.mjs for the evidence).
     build.onResolve({ filter: /^\.\/core\.js$/ }, () => ({ path: CORE }));
     build.onResolve({ filter: /^\.\/world\.js$/ }, () => ({ path: PARTS }));
-    build.onResolve({ filter: /^\.\/colliders\.js$/ }, () => ({ path: PARTS }));
+    build.onResolve({ filter: /^\.\/colliders\.js$/ }, () => ({ path: COLLIDERS }));
+    // motion.js's cone reaches remotes.js → loadwork.js, which schedules on
+    // requestAnimationFrame at module scope and dies headless. avatar-test
+    // already carries a stub for exactly this; share it.
+    build.onResolve({ filter: /^\.\/loadwork\.js$/ }, () => ({ path: LOADWORK }));
   },
 });
 
