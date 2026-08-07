@@ -85,6 +85,8 @@ function peerFor(id) {
     audio.play().catch(() => addEventListener('click', () => audio.play().catch(() => {}), { once: true }));
   };
   pc.onicecandidate = (e) => { if (e.candidate) sendRtc(id, { ice: e.candidate }); };
+  pc.addEventListener?.('connectionstatechange', () => (window.__iceLog ??= []).push(`conn[${id}]=${pc.connectionState}`));
+  pc.addEventListener?.('iceconnectionstatechange', () => (window.__iceLog ??= []).push(`icestate[${id}]=${pc.iceConnectionState}`));
   pc.onconnectionstatechange = () => {
     if (['failed', 'closed', 'disconnected'].includes(pc.connectionState)) dropPeer(id);
   };
@@ -159,8 +161,32 @@ async function onRtc(msg) {
   // own offer is still processed, but it is safe now for a structural reason
   // rather than an assumed one: that offer was created sendonly, so there is
   // no recv direction for an answer to fill. ontrack also fails closed.
-  if (!receivingVoice() && payload?.sdp?.type !== 'answer') return;
-  const p = peerFor(from);
+  // ICE candidates pass the gate for the same structural reason answers do:
+  // our offer was sendonly, so the remote's candidates can only complete that
+  // sendonly path — no inbound audio route exists for them to open. Dropping
+  // them here (pre-2026-08-07 behavior) silently broke every mic-only sender
+  // whose peer couldn't reach us directly: connections survived ONLY via
+  // peer-reflexive discovery (host/srflx checks arriving unsolicited), which
+  // works on localhost/LAN and fails through TURN or across real NATs —
+  // "works in the lab, dead in production", wedged in checking forever.
+  if (!receivingVoice() && payload?.sdp?.type !== 'answer' && !payload?.ice) return;
+  // ICE never creates a peer: candidates only make sense for a negotiation
+  // we already own. A stray candidate (early trickle before an offer we
+  // dropped, or residue from a peer generation dropPeer() discarded) must
+  // not conjure a fresh pc — flushing old-generation candidates into a
+  // replacement pc poisons its checks (Mica's contamination rule, 08-07).
+  const p = payload.ice ? peers.get(from) : peerFor(from);
+  if (!p) return;
+  // Per-peer signal serialization: two concurrent onRtc invocations for the
+  // same peer interleave across their awaits (offer A setRemote -> offer B
+  // setRemote -> A answers -> B's createAnswer fires in 'stable'). Chain
+  // errors handled per-link so one failed signal doesn't wedge the queue.
+  // recvReady stays outside the chain above — it may rebuild the peer.
+  p.sigQ = (p.sigQ ?? Promise.resolve()).then(() => processSignal(p, from, payload));
+  await p.sigQ.catch(() => {});
+}
+
+async function processSignal(p, from, payload) {
   try {
     if (payload.sdp?.type === 'offer') {
       // glare: both sides offered at once — the LOWER id's offer stands, the
@@ -170,16 +196,32 @@ async function onRtc(msg) {
         await p.pc.setLocalDescription({ type: 'rollback' });
       }
       await p.pc.setRemoteDescription(payload.sdp);
+      for (const c of p.pendingIce ?? []) {
+        await p.pc.addIceCandidate(c).catch((err) => (window.__iceLog ??= []).push(`flushIce-FAIL ${err.name}`));
+      }
+      p.pendingIce = [];
       applyDirection(p);            // our answer states OUR consent, not theirs
       const answer = await p.pc.createAnswer();
       await p.pc.setLocalDescription(answer);
       sendRtc(from, { sdp: p.pc.localDescription });
     } else if (payload.sdp?.type === 'answer') {
-      if (p.pc.signalingState === 'have-local-offer') await p.pc.setRemoteDescription(payload.sdp);
+      if (p.pc.signalingState === 'have-local-offer') {
+        await p.pc.setRemoteDescription(payload.sdp);
+      for (const c of p.pendingIce ?? []) {
+        await p.pc.addIceCandidate(c).catch((err) => (window.__iceLog ??= []).push(`flushIce-FAIL ${err.name}`));
+      }
+      p.pendingIce = [];
+      }
     } else if (payload.ice) {
-      await p.pc.addIceCandidate(payload.ice).catch(() => {}); // late ICE for a rolled-back pc: harmless
+      if (p.pc.remoteDescription) {
+        await p.pc.addIceCandidate(payload.ice).catch((err) => {
+          (window.__iceLog ??= []).push(`addIce-FAIL ${err.name}: ${err.message} [state=${p.pc.signalingState}]`);
+        });
+      } else {
+        (p.pendingIce ??= []).push(payload.ice);   // queue until a remote description exists
+      }
     }
-  } catch (e) { report('voice signal', e); }
+  } catch (e) { (window.__iceLog ??= []).push(`signal-FAIL ${e?.name}: ${e?.message}`); report('voice signal', e); }
 }
 
 export async function toggleMic(name) {
@@ -371,6 +413,7 @@ export async function voiceStats() {
 export const peerVolume = (id) => peers.get(id)?.audio.volume ?? null;
 // test/debug probe — connection states by peer id
 export const voiceDebug = () => Object.fromEntries([...peers].map(([id, p]) => [id, p.pc.connectionState]));
+export const voicePcs = () => [...peers.values()].map((p) => p.pc); // experiment branch: raw pcs for stats probes
 
 // ---- per-speaker levels (R, 23:30: mouths move in sync with the sound)
 // One analyser per inbound stream, built lazily. Same RMS math as the local
