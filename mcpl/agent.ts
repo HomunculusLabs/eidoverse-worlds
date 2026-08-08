@@ -102,6 +102,15 @@ export class WorldAgent {
    *  it rides the pose packet and is never a log verb, because it is a moment,
    *  not a change to the world. `null` clears. */
   heldPose: Record<string, number[]> | null = null;
+  /** Where heldPose came from. An AUTHORED pose (set deliberately — the pose
+   *  tool, a puppet, the server's settled memory) is a place: it survives
+   *  walking, posture changes and sleep. A PHYSICS pose (ragdoll sim frame,
+   *  drag stream, knockdown slump) is a moment: it may only ever leave this
+   *  process under the "ragdoll" clip, and any decision to move sheds it.
+   *  Without this line the two were indistinguishable — one settled tumble
+   *  frame got relabelled "idle", slipped every clip-keyed sanitizer, and
+   *  haunted princess across sessions and joiners for weeks (#61). */
+  heldPoseAuthored = false;
   draggedBy: string | null = null;   // whose takeover sim drives this body (bodydrag)
   dragAt = 0;                        // last drag sample, for the silence timeout
   pins = new Map<string, number[]>(); // persistent bodydrag nails: joint -> [x,y,z]
@@ -351,7 +360,9 @@ export class WorldAgent {
               // A remembered ragdoll frame is not (pre-sanitizer entries) —
               // wake standing rather than hung mid-tumble.
               if (msg.restore.clip && msg.restore.clip !== "ragdoll") this.clip = msg.restore.clip;
-              if (msg.restore.pose && msg.restore.clip !== "ragdoll") this.heldPose = msg.restore.pose;
+              // what survives the server's settled memory is an enacted pose —
+              // authored by definition (settledPose strips physics frames)
+              if (msg.restore.pose && msg.restore.clip !== "ragdoll") { this.heldPose = msg.restore.pose; this.heldPoseAuthored = true; }
             }
             this.restoredPose = true;
             for (const p of msg.present) this.people.set(p.id, { id: p.id, avatar: p.avatar, pose: p.pose, agent: !!p.agent });
@@ -386,7 +397,7 @@ export class WorldAgent {
                 (msg.ragdoll as { lean?: number[] })?.lean ?? null,
                 `(${msg.by} knocks you over)`);
             }
-            if (msg.pose) this.heldPose = msg.pose;
+            if (msg.pose) { this.heldPose = msg.pose; this.heldPoseAuthored = true; } // posed BY someone = authored
             if (msg.anim) this.ws?.send(JSON.stringify({ type: "anim", ...msg.anim }));
             this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by,
               text: `(posed you${msg.anim ? " with an animation" : ""})` } as any);
@@ -426,7 +437,7 @@ export class WorldAgent {
                 // samples starts from a stale root under fresh joint state.
                 const releasePose = msg.pose && typeof msg.pose === "object" && Object.keys(msg.pose).length > 0
                   ? msg.pose : null;
-                if (releasePose) this.heldPose = releasePose;
+                if (releasePose) { this.heldPose = releasePose; this.heldPoseAuthored = false; } // a drag's last sample is physics
                 if (Array.isArray(msg.p) && msg.p.length === 3 && msg.p.every(Number.isFinite)) {
                   this.pos.x = msg.p[0]; this.pos.y = msg.p[1]; this.pos.z = msg.p[2];
                 }
@@ -447,7 +458,7 @@ export class WorldAgent {
             }
             if (this.draggedBy === msg.by && msg.pose) {
               this.dragAt = Date.now();
-              this.heldPose = msg.pose;
+              this.heldPose = msg.pose; this.heldPoseAuthored = false;
               if (Array.isArray(msg.p) && msg.p.length === 3 && msg.p.every(Number.isFinite)) {
                 this.pos.x = msg.p[0]; this.pos.y = msg.p[1]; this.pos.z = msg.p[2];
               }
@@ -871,7 +882,11 @@ export class WorldAgent {
       type: "pose",
       pose: {
         p: [this.pos.x, this.pos.y, this.pos.z], yaw: this.yaw, speed: this.speed, clip: this.clip,
-        ...(this.heldPose ? { pose: this.heldPose } : {}),
+        // a physics bag only ever leaves this process labelled as what it is —
+        // "ragdoll" — so every clip-keyed sanitizer downstream can see it.
+        // Shipping one under "idle" is how princess's tumble frame became
+        // immortal (#61): rememberPose kept it, restore re-armed it, forever.
+        ...(this.heldPose && (this.heldPoseAuthored || this.clip === "ragdoll") ? { pose: this.heldPose } : {}),
         ...(this.pins.size ? { pins: [...this.pins].map(([j, at]) => ({ j, at })) } : {}),
         ...(this.pendingEmote ? { emote: this.pendingEmote } : {}),
       },
@@ -911,7 +926,7 @@ export class WorldAgent {
           this.pos.z += (lean[2] / flat) * mag * 0.4;
         }
       }
-      this.heldPose = DOWNED_POSE;
+      this.heldPose = DOWNED_POSE; this.heldPoseAuthored = false;
       this.clip = "ragdoll";
       return;
     }
@@ -932,7 +947,7 @@ export class WorldAgent {
    *  settle-under-owner-authority browsers do, pins enforced for real. */
   private async settleFromDrag(pose: Record<string, number[]> | null, sim?: any) {
     const body = await this.ensureBody();
-    if (!body) { this.heldPose = pose ?? this.heldPose ?? DOWNED_POSE; this.clip = "ragdoll"; return; }
+    if (!body) { this.heldPose = pose ?? this.heldPose ?? DOWNED_POSE; this.heldPoseAuthored = false; this.clip = "ragdoll"; return; }
     if (this.draggedBy) return;
     body.begin({
       x: this.pos.x, z: this.pos.z,
@@ -958,7 +973,7 @@ export class WorldAgent {
       if (!body?.active || this.draggedBy) { this.stopSim(); return; }
       const out = body.step(1 / 15);
       if (!out) return;
-      this.heldPose = out.pose;
+      this.heldPose = out.pose; this.heldPoseAuthored = false; // a sim frame is physics even once settled
       this.pos.x = out.p[0]; this.pos.y = out.p[1]; this.pos.z = out.p[2];
       this.tick();
       if (out.done) this.stopSim();   // captured: the held pose IS the outcome
@@ -973,13 +988,22 @@ export class WorldAgent {
     if (this.draggedBy) {   // deciding to walk IS breaking the dragger's hold
       this.ws?.send(JSON.stringify({ type: "bodydrag", target: this.draggedBy, end: true }));
       this.draggedBy = null;
-      this.heldPose = null; this.clip = "idle";
+      this.heldPose = null; this.heldPoseAuthored = false; this.clip = "idle";
     }
     this.pins.clear();      // and walking tears out every nail
     this.body?.stop(); this.stopSim();   // a body that decides to walk is done tumbling
-    // deciding to walk IS getting up — shed the slump, or the body zombie-
-    // walks with a knocked-over pose held over the stride
-    if (this.heldPose === DOWNED_POSE || this.clip === "ragdoll") { this.heldPose = null; this.clip = "walk"; }
+    // deciding to walk IS getting up — shed the held pose, or the body zombie-
+    // walks with it frozen over the stride. ALL of it goes, authored or not:
+    // the pose tool's contract is "held until you clear_pose or move", and an
+    // unconditional shed is also what lets a store poisoned with a relabelled
+    // tumble frame (#61) self-heal on the resident's first walk.
+    if (this.heldPose || this.clip === "ragdoll") {
+      this.heldPose = null; this.heldPoseAuthored = false;
+      if (this.clip === "ragdoll") this.clip = "walk";
+    }
+    // and deciding to walk IS getting off the seat — a folded mount otherwise
+    // glues this body to its socket on every renderer, wherever the feet go
+    if (this.joined && this.mounts.has(this.name)) this.verb("dismount", { id: this.name });
     // and stand on the ground you got up onto
     this.pos.y = this.heightAt(this.pos.x, this.pos.z);
     this.target = { x, z, run };
@@ -1050,6 +1074,7 @@ export class WorldAgent {
   /** Hold a custom pose (yourself). Sparse bone -> [x,y,z,w] quaternion. */
   setPose(bones: Record<string, number[]> | null) {
     this.heldPose = bones;
+    this.heldPoseAuthored = bones != null;
     // clearing a slump IS standing up — don't leave the clip lying, don't
     // leave a sim tumbling a body that has decided to stand
     if (bones == null && this.clip === "ragdoll") {
@@ -1070,6 +1095,17 @@ export class WorldAgent {
   setPosture(clip: string) {
     this.stop();
     this.speed = 0;
+    // choosing a posture ends a tumble the same way walking does — a physics
+    // frame must not survive under the new label. (This exact gap is how
+    // "posture stand" failed to stand princess up: it relabelled the clip
+    // and left the ragdoll bones riding every subsequent packet.)
+    if (this.clip === "ragdoll" || (this.heldPose && !this.heldPoseAuthored)) {
+      this.body?.stop(); this.stopSim();
+      this.heldPose = null; this.heldPoseAuthored = false;
+      this.pos.y = this.heightAt(this.pos.x, this.pos.z);
+    }
+    // and standing up IS getting off the seat
+    if (clip === "idle" && this.joined && this.mounts.has(this.name)) this.verb("dismount", { id: this.name });
     this.clip = clip;
   }
 
