@@ -62,9 +62,28 @@ function grantCast(group) {
   enqueue(() => renderer.compileAsync(scene, camera).catch(() => {}), { lane: 'gpu', priority: 0 });
 }
 
+/** A kept light outranks any sheddable caster: reclaim the newest non-kept
+ *  cast and hand it over. The doused one keeps glowing — the same honest
+ *  degradation as the budget, just pointed at the light nobody pinned.
+ *  Without this, `keep` protects only a cast the light ALREADY holds, which
+ *  makes the checkbox a visible no-op exactly when someone reaches for it:
+ *  on a light the budget or governor has doused. */
+function stealCastFor(group) {
+  const victim = [...casters].filter((g) => !g.userData.lightParams?.keep).pop();
+  if (!victim) return false;
+  const pl = victim.userData.pointLight;
+  if (pl) { victim.remove(pl); pl.dispose?.(); victim.userData.pointLight = null; }
+  casters.delete(victim);
+  grantCast(group);
+  return true;
+}
+
 /** Build a placed-light entity: gizmo + (budget permitting) a PointLight.
- *  `keep: true` exempts it from the perf governor's shedALight — dear lights
- *  (a resident's porchlight) survive while sheddable ones go first. */
+ *  `keep: true` = cast PRIORITY: exempt from the perf governor's shedALight
+ *  (sheddable lights go first), and when the budget is spent a kept light
+ *  takes its cast from a non-kept one — at creation, join replay, or the
+ *  moment keep is switched on. Glow-only remains possible only when kept
+ *  lights alone exhaust the budget. */
 export function makeLight({ color = 0xffd9a0, intensity = 16, range = 10, keep = false } = {}) {
   const group = new THREE.Group();
   const gizmo = makeLightGizmo(color);
@@ -75,6 +94,7 @@ export function makeLight({ color = 0xffd9a0, intensity = 16, range = 10, keep =
   group.userData.noCamCollide = true;
 
   if (budgetLeft() > 0) grantCast(group);
+  else if (keep && stealCastFor(group)) { /* kept light took priority */ }
   else noBudget();
   return group;
 }
@@ -103,6 +123,9 @@ export function updateLight(group, { color, intensity, range, keep } = {}) {
     if (range != null) pl.distance = range;
   } else if (budgetLeft() > 0) {
     grantCast(group);
+  } else if (p.keep && stealCastFor(group)) {
+    // checking "keep lit" on a doused light re-lights it at a sheddable
+    // light's expense — the checkbox must DO something you can see
   }
 }
 
