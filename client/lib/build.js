@@ -15,7 +15,8 @@ import { loadGLB, libLabels, listLibrary } from './assets.js';
 import { makeLightGizmo } from './lights.js';
 import { entities, entityMeta, comps, findPart } from './world.js';
 import { surfaceUnder, reindexCollider } from './colliders.js';
-import { heightAt } from './terrain.js';
+import { heightAt, GRASS_QUALITY, getGrassQuality, setGrassQuality,
+  getGrassDensity, getGrassShed } from './terrain.js';
 import { sendVerb, sendDrag } from './net.js';
 import { myState, mouse, setPointerClaim, setEditingProbe } from './controller.js';
 import { makeSection, toast, flashHint, collapseAll, panelFrame } from './ui.js';
@@ -1086,6 +1087,51 @@ function paintSky(body) {
   cqRow.title = 'local performance setting — not shared with the world';
   body.appendChild(cqRow);
 
+  // The meadow budget is likewise YOURS (#60) — a persisted cap on how much
+  // of the field this machine draws. Species/seed/extent stay world state;
+  // the auto governor may thin below the cap under load, never above it.
+  const gq = document.createElement('select');
+  gq.style.cssText = wx.style.cssText;
+  gq.setAttribute('aria-label', 'grass quality — local only, never shared with the world');
+  for (const q of GRASS_QUALITY) gq.appendChild(new Option(q, q));
+  const gqRow = mkRow('grass⚙', gq);
+  // Live dial state as visible text, not a tooltip — the governor's shed is
+  // state a keyboard or screen-reader user must be able to learn too. The
+  // two dials stay attributed to their owners: the select is the RESIDENT's
+  // cap, ⚙× is the GOVERNOR's own session dial, ×draws is what min() yields.
+  const gqState = document.createElement('span');
+  // NOT `.v` — that's the sliders' fixed 34px readout column; this text
+  // would wrap inside it, reflowing the whole row. The visible half is
+  // compact enough to fit the default 232px panel on one line (measured:
+  // ≤62px available beside the select); the aria-live announcement reads a
+  // whole sentence instead, via a visually-hidden twin.
+  gqState.style.cssText = 'margin-left:auto; white-space:nowrap; color:var(--accent); font-size:10px;';
+  gqState.setAttribute('aria-live', 'polite');
+  const gqStateEye = document.createElement('span');
+  gqStateEye.setAttribute('aria-hidden', 'true');
+  const gqStateEar = document.createElement('span');
+  gqStateEar.style.cssText = 'position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);';
+  gqState.append(gqStateEye, gqStateEar);
+  gqRow.appendChild(gqState);
+  const syncGrassRow = () => {
+    gq.value = getGrassQuality();
+    const shed = getGrassShed(), eff = getGrassDensity();
+    const active = shed < 1 && gq.value !== 'off';
+    gqStateEye.textContent = active ? `⚙${shed}→${eff}` : '';
+    gqStateEar.textContent = active ? `auto governor dial ${shed}, drawing ${eff}` : '';
+    gqRow.title = active
+      ? `your cap: ${gq.value} — the auto governor's session dial is ×${shed}; the field draws the lower of the two`
+      : 'local performance setting — not shared with the world';
+  };
+  gq.onchange = () => {
+    setGrassQuality(gq.value);
+    syncGrassRow();
+    flashHint(`grass: ${gq.value} (yours only)`);
+  };
+  syncGrassRow();
+  bus.on('grass-budget', syncGrassRow);   // governor sheds repaint immediately
+  body.appendChild(gqRow);
+
   for (const [key, label, min, max, step, dflt] of SLIDERS) {
     const input = document.createElement('input');
     input.type = 'range';
@@ -1147,6 +1193,7 @@ function paintSky(body) {
     if (a.world) wl.value = a.world;
     ck.value = a.clock === 'real' ? 'real' : '';
     syncClockUi();
+    syncGrassRow();
   };
   body._sync();
 }
