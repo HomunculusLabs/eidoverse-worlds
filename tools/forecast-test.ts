@@ -15,8 +15,14 @@
 //
 // Run: bun tools/forecast-test.ts
 
-import { WEATHERS, normalizePolicy, segmentAt, effectiveSky, foldSkyEntry, hoursAt, describeSky }
-  from "../client/lib/forecast.js";
+// Namespace import ON PURPOSE (#65 N2): a named import of an export main
+// doesn't have dies at LINK time, so not one assertion runs there and the
+// suite can't serve as a negative control. This way the shared checks and the
+// both-tree behavioral controls run on any tree; only the canonical-clock
+// checks gate on the export existing (labeled as novelty when absent).
+import * as F from "../client/lib/forecast.js";
+const { WEATHERS, normalizePolicy, segmentAt, effectiveSky, foldSkyEntry, hoursAt, describeSky } = F as any;
+const effectiveClock = (F as any).effectiveClock;
 
 let pass = 0, fail = 0;
 function check(name: string, ok: boolean, detail = "") {
@@ -306,6 +312,160 @@ const policyArgs = {
     JSON.stringify({ clock: wet.clock, tz: wet.tz }));
   check("describeSky names the real clock", (describeSky(sky, jan) ?? "").includes("real time, America/Los_Angeles"),
     describeSky(sky, jan) ?? "null");
+}
+
+
+// ---------------------------------------------------------------- clock contract (#65)
+// One clock governs, and the folded state says which. Accelerated → real →
+// accelerated is the acceptance path from the issue; the review's B1 path —
+// normalized real → unresolvable tz — is the regression guard: the parked
+// clock must survive the re-issue and genuinely govern (a typo dims nothing).
+//
+// The CONTROL checks below use only surfaces that exist on BOTH trees
+// (foldSkyEntry + hoursAt), so on main they fail with the actual stale
+// numbers — behavioral evidence, never a link-time missing-export.
+
+{
+  const synth = (bag: any) => foldSkyEntry(null, { verb: "sky", args: bag, ts: T0 + 9 * HOUR, seq: -1, actor: "world" });
+
+  // 1 — author accelerated policy (the commons shape: seq 2561)
+  const rated = foldSkyEntry(null,
+    { verb: "sky", args: { hours: 6.8, rate: 24, clouds: "cumulus", forecast: policyArgs }, ts: T0, seq: 2561, actor: "mica" });
+  check("#65 rated: hours/rate are top-level active state", rated.hours === 6.8 && rated.rate === 24);
+  check("#65 rated: late join re-fold is identical",
+    JSON.stringify(synth(rated)) === JSON.stringify(rated));
+
+  // 2 — flip to real time, re-issuing the FULL standing bag (the tuner's
+  // gather() spreads skyArgs(), so the stale hours/rate ride along — the
+  // exact authoring shape that produced the issue's receipt at seq 4777)
+  const T1 = T0 + 2 * HOUR;
+  const real = foldSkyEntry(null,
+    { verb: "sky", args: { ...rated, clock: "real", tz: "America/Los_Angeles" }, ts: T1, seq: 4777, actor: "antra" });
+  check("#65 CONTROL (both-tree): no effective field still says ×24 after the flip",
+    real.rate === undefined && real.hours === undefined,
+    `stale hours=${real.hours} rate=${real.rate}`);
+  check("#65 real: prior rated clock parked as dormantRated {hours, rate, ts}",
+    real.dormantRated?.hours === 6.8 && real.dormantRated?.rate === 24 && real.dormantRated?.ts === T1,
+    JSON.stringify(real.dormantRated));
+  check("#65 real: clock/tz + forecast survive the flip", real.clock === "real" && !!real.forecast);
+  check("#65 real: fold stamps bag provenance", real.seq === 4777 && real.by === "antra");
+  check("#65 real: late join re-fold is identical",
+    JSON.stringify(synth(real)) === JSON.stringify(real));
+
+  // 3 — B1: re-issue the NORMALIZED standing bag with an unresolvable tz.
+  // The parked clock must survive and govern — rev-1 of this contract
+  // destroyed it here and froze the world at the `?? 12` default noon.
+  const T2 = T0 + 3 * HOUR;
+  const typo = foldSkyEntry(null,
+    { verb: "sky", args: { ...real, tz: "America/Nowhere" }, ts: T2, seq: 4800, actor: "antra" });
+  check("#65 B1: parked clock survives a bad-tz re-issue of a normalized bag",
+    typo.dormantRated?.hours === 6.8 && typo.dormantRated?.rate === 24 && typo.dormantRated?.ts === T1,
+    JSON.stringify(typo.dormantRated));
+  const h1 = hoursAt(typo, T1 + 30 * MIN), h2 = hoursAt(typo, T1 + 45 * MIN);
+  check("#65 CONTROL B1 (both-tree): the sun still MOVES under a typo'd tz",
+    Math.abs(h1 - 18.8) < 1e-9 && Math.abs(h2 - 0.8) < 1e-9,
+    `hour(+30m)=${h1} hour(+45m)=${h2} (frozen would be 12/12)`);
+  check("#65 B1: fallback anchors on the PARKING moment, not the re-issue ts",
+    Math.abs(hoursAt(typo, T1) - 6.8) < 1e-9, String(hoursAt(typo, T1)));
+  check("#65 B1: late join re-fold of the typo bag is identical",
+    JSON.stringify(synth(typo)) === JSON.stringify(typo));
+
+  // 4 — weather lands during the bad-tz fallback: merge restamps sky.ts but
+  // the parked clock's own ts anchor keeps the fallback day continuous
+  const T3 = T0 + 4 * HOUR;
+  const wetTypo = foldSkyEntry(typo, { verb: "weather", args: { weather: "rain" }, ts: T3, seq: 4900, actor: "digi" });
+  check("#65 B1: weather merge does not snap the fallback day",
+    Math.abs(hoursAt(wetTypo, T3 + MIN) - hoursAt(typo, T3 + MIN)) < 1e-9
+      && wetTypo.dormantRated?.ts === T1 && wetTypo.ts === T3,
+    `wet=${hoursAt(wetTypo, T3 + MIN)} dry=${hoursAt(typo, T3 + MIN)}`);
+  check("#65 weather merge resurrects no rated fields",
+    wetTypo.rate === undefined && wetTypo.hours === undefined);
+  check("#65 weather verb cannot claim bag authorship", wetTypo.seq === 4800 && wetTypo.by === "antra",
+    JSON.stringify({ seq: wetTypo.seq, by: wetTypo.by }));
+
+  // 5 — bad tz → back to accelerated: full bag re-issue with the clock
+  // cleared restores the rated fields as active state, dormant drops
+  const back = foldSkyEntry(null,
+    { verb: "sky", args: { ...wetTypo, clock: undefined, tz: undefined, hours: 6.8, rate: 24 }, ts: T0 + 5 * HOUR, seq: 5100, actor: "antra" });
+  check("#65 back to rated: hours/rate active again, dormant dropped",
+    back.hours === 6.8 && back.rate === 24 && back.dormantRated === undefined,
+    JSON.stringify({ hours: back.hours, rate: back.rate, dormant: back.dormantRated }));
+  check("#65 back to rated: new provenance", back.seq === 5100 && back.by === "antra");
+  check("#65 back to rated: late join re-fold is identical",
+    JSON.stringify(synth(back)) === JSON.stringify(back));
+
+  // 6 — dormantRated guards: weather verbs are locked out entirely; sky-verb
+  // values are authored config (same rank as authoring rate itself) but
+  // shape-sanitized — junk keys and non-finite values can never land
+  const wSpoof = foldSkyEntry(real,
+    { verb: "weather", args: { weather: "rain", dormantRated: { rate: 666 } } as any, ts: T3, seq: 5200, actor: "digi" });
+  check("#65 guard: weather verb cannot author the parked clock",
+    wSpoof.dormantRated?.rate === 24 && wSpoof.dormantRated?.hours === 6.8, JSON.stringify(wSpoof.dormantRated));
+  // the indirect route (review N1'): top-level hours/rate on a weather verb
+  // while the standing clock is real must not reach the park either
+  const wIndirect = foldSkyEntry(real,
+    { verb: "weather", args: { weather: "rain", hours: 1, rate: 666 }, ts: T3, seq: 5250, actor: "digi" });
+  check("#65 guard: weather-verb hours/rate cannot reach the park under a real clock",
+    wIndirect.dormantRated?.hours === 6.8 && wIndirect.dormantRated?.rate === 24 && wIndirect.dormantRated?.ts === T1
+      && wIndirect.hours === undefined && wIndirect.rate === undefined,
+    JSON.stringify({ park: wIndirect.dormantRated, hours: wIndirect.hours, rate: wIndirect.rate }));
+  const junk = foldSkyEntry(null,
+    { verb: "sky", args: { clock: "real", tz: "America/Los_Angeles", dormantRated: { rate: 999, hours: "noon", junk: 7, ts: "yes" } } as any, ts: T0, seq: 5300, actor: "antra" });
+  check("#65 guard: sky-verb dormantRated is shape-sanitized (finite numbers only)",
+    junk.dormantRated?.rate === 999 && junk.dormantRated?.hours === undefined
+      && (junk.dormantRated as any)?.junk === undefined && junk.dormantRated?.ts === undefined,
+    JSON.stringify(junk.dormantRated));
+  const spoof = foldSkyEntry(null,
+    { verb: "sky", args: { hours: 3, rate: 1, seq: 1, by: "evil", dormantRated: { rate: 999 } } as any, ts: T0, seq: 6000, actor: "antra" });
+  check("#65 guard: rated mode drops dormantRated and fold owns seq/by",
+    spoof.seq === 6000 && spoof.by === "antra" && spoof.dormantRated === undefined, JSON.stringify(spoof));
+
+  // 7 — a legacy bag (folded before the contract: stale top-level fields
+  // beside clock:'real' — the live commons shape) heals on synthetic replay,
+  // provenance untouched
+  const legacy = { hours: 6.8, rate: 24, clouds: "cumulus", clock: "real", tz: "America/Los_Angeles",
+    forecast: { ...policyArgs, epoch: T0, seq: 4777, by: "antra" }, ts: T1 };
+  const healed = synth(legacy);
+  check("#65 legacy bag heals on late-join replay",
+    healed.hours === undefined && healed.rate === undefined
+      && healed.dormantRated?.hours === 6.8 && healed.dormantRated?.rate === 24, JSON.stringify(healed));
+  check("#65 healing never restamps provenance",
+    healed.forecast.epoch === T0 && healed.forecast.seq === 4777 && healed.forecast.by === "antra"
+      && healed.ts === T1);
+
+  // ---- canonical clock (branch-only export; absence is NOVELTY, the
+  //      CONTROL failures above are the behavioral evidence on main)
+  if (!effectiveClock) {
+    console.log("  (novelty) effectiveClock export absent on this tree — canonical-clock checks skipped;"
+      + " the #65 CONTROL failures above are the behavioral evidence");
+  } else {
+    const ckRated = effectiveClock(rated, T0 + HOUR);
+    check("#65 effectiveClock: rated mode with provenance",
+      ckRated.mode === "rated" && ckRated.rate === 24 && ckRated.seq === 2561 && ckRated.by === "mica",
+      JSON.stringify(ckRated));
+    const ckReal = effectiveClock(real, Date.UTC(2026, 0, 15, 20, 30, 0));
+    check("#65 effectiveClock: real mode is canonical, no rate anywhere",
+      ckReal.mode === "real" && ckReal.tz === "America/Los_Angeles" && !("rate" in ckReal)
+        && ckReal.seq === 4777 && Math.abs(ckReal.hour - 12.5) < 1e-9,
+      JSON.stringify(ckReal));
+    const ckTypo = effectiveClock(typo, T1 + 30 * MIN);
+    check("#65 effectiveClock: bad-tz fallback reads the PARKED clock honestly",
+      ckTypo.mode === "rated" && ckTypo.rate === 24 && ckTypo.requestedTz === "America/Nowhere"
+        && Math.abs(ckTypo.hour - 18.8) < 1e-9 && ckTypo.seq === 4800,
+      JSON.stringify(ckTypo));
+    const realDesc = describeSky(real, Date.UTC(2026, 0, 15, 20, 30, 0)) ?? "";
+    check("#65 narration: real time named, never ×24",
+      realDesc.includes("real time, America/Los_Angeles") && !realDesc.includes("advancing"), realDesc);
+    const typoDesc = describeSky(typo, T1 + 30 * MIN) ?? "";
+    check("#65 narration: bad tz flags the typo AND shows the moving fallback",
+      typoDesc.includes('"America/Nowhere" is unknown') && typoDesc.includes("advancing ×24")
+        && typoDesc.includes("hour 18.8"), typoDesc);
+    check("#65 effectiveClock: null sky is fixed noon",
+      JSON.stringify(effectiveClock(null, T0)) === JSON.stringify({ mode: "fixed", hour: 12 }));
+    const still = foldSkyEntry(null, { verb: "sky", args: { hours: 9 }, ts: T0, seq: 8000, actor: "antra" });
+    check("#65 effectiveClock: rate-less sky is fixed at its hour",
+      effectiveClock(still, T0 + HOUR).mode === "fixed" && effectiveClock(still, T0 + HOUR).hour === 9);
+  }
 }
 
 console.log(`\n${pass} passed, ${fail} failed`);

@@ -53,6 +53,15 @@ export function hoursAt(sky, tMs) {
       const get = Object.fromEntries(f.formatToParts(new Date(tMs)).map((p) => [p.type, p.value]));
       return (Number(get.hour) % 24) + Number(get.minute) / 60 + Number(get.second) / 3600;
     }
+    // tz didn't resolve: the PARKED rated clock governs (#65). A normalized
+    // bag carries no top-level hours/rate — without this arm a typo'd tz on a
+    // normalized world would freeze the sun at the `?? 12` default forever.
+    // dormantRated anchors on its own ts (the parking moment), so later
+    // weather merges restamping sky.ts never snap the fallback day.
+    const d = sky.dormantRated;
+    if (d && typeof d === 'object') {
+      return ((((d.hours ?? 12) + (d.rate ?? 0) * (tMs - (d.ts ?? sky.ts ?? tMs)) / 3600e3) % 24) + 24) % 24;
+    }
   }
   return ((sky.hours ?? 12) + (sky.rate ?? 0) * (tMs - (sky.ts ?? tMs)) / 3600e3 + 24000) % 24;
 }
@@ -201,16 +210,65 @@ export function effectiveSky(sky, nowMs, cursor = null) {
 
 // ---------------------------------------------------------------- fold
 
+/** dormantRated is a CLOCK, not a grab-bag: {hours, rate, ts} — the rated
+ *  clock parked when real mode took over, anchored at its own parking-moment
+ *  ts. Shape-sanitize anything arriving from args or prior state: finite
+ *  numbers only, no junk keys. Null when nothing usable remains. */
+function sanitizeDormant(d) {
+  if (!d || typeof d !== 'object') return null;
+  const s = {};
+  if (Number.isFinite(d.hours)) s.hours = d.hours;
+  if (Number.isFinite(d.rate)) s.rate = d.rate;
+  if (Number.isFinite(d.ts)) s.ts = d.ts;
+  return (s.hours != null || s.rate != null) ? s : null;
+}
+
+/** One clock may govern (issue #65). Whenever `clock:'real'` is authored,
+ *  the rated fields `hours`/`rate` never remain as active-looking top-level
+ *  state: they park under `dormantRated` — an explicitly-inactive clock a
+ *  later return to rated mode restores from (the tuner prefills its sliders
+ *  with it), and the one fallback source hoursAt/effectiveClock consult when
+ *  the tz turns out not to resolve. Parking is UNCONDITIONAL on real mode —
+ *  the fold never asks ICU anything, so the folded STATE is a pure function
+ *  of the log on every runtime; only derived hours depend on the tz database
+ *  (exactly as on the pre-contract fold). Outside real mode `dormantRated`
+ *  is dropped: the top-level fields are the active clock again.
+ *
+ *  Newly-authored top-level fields win over the carried-forward park (and
+ *  re-anchor its ts); a standing-bag re-issue with neither inherits `prior`
+ *  untouched — that is how the wholesale sky fold carries the parked clock
+ *  across mode flips without the fold holding any state of its own.
+ *
+ *  Runs on EVERY fold, synthetic replay included — config normalization, not
+ *  provenance stamping: deterministic, idempotent, and it heals bags folded
+ *  before the contract existed the next time a late join replays them. */
+function normalizeClock(out, prior) {
+  delete out.dormantRated;
+  if (out.clock === 'real') {
+    const parked = {};
+    if (Number.isFinite(out.hours)) parked.hours = out.hours;
+    if (Number.isFinite(out.rate)) parked.rate = out.rate;
+    const d = (parked.hours != null || parked.rate != null)
+      ? { ...(prior ?? {}), ...parked, ts: out.ts }
+      : prior;
+    delete out.hours; delete out.rate;
+    if (d) out.dormantRated = d;
+  }
+  return out;
+}
+
 /** Fold a `sky` or `weather` log entry onto the standing sky state. The
  *  sequencer, the live browser client, and the embodied agent all fold
  *  through here — one code path, three planes, no drift.
  *
- *  Server-owned stamps: `forecast.{epoch,seq,by}` and the whole `override`
- *  bag come from the ENTRY, never from the authored args — a policy bag
- *  cannot spoof its own provenance. The one exception is synthetic
- *  pre-history replay (stateToEntries' negative seqs): those args ARE the
- *  already-stamped fold, so they pass through untouched — restamping them
- *  with the synthetic entry would re-epoch the forecast on every late join.
+ *  Server-owned stamps: `forecast.{epoch,seq,by}`, the whole `override` bag,
+ *  and the top-level `seq`/`by` (which sky entry authored this bag — the
+ *  effective clock's provenance, issue #65) come from the ENTRY, never from
+ *  the authored args — a policy bag cannot spoof its own provenance. The one
+ *  exception is synthetic pre-history replay (stateToEntries' negative seqs):
+ *  those args ARE the already-stamped fold, so stamps pass through untouched —
+ *  restamping them with the synthetic entry would re-epoch the forecast on
+ *  every late join.
  *
  *  A weather verb under a rated sky also REBASES `hours` to the hour the old
  *  epoch implies at the entry's ts. Without this the merge re-epochs t0 while
@@ -227,8 +285,13 @@ export function foldSkyEntry(prev, { verb, args = {}, ts, seq, actor }) {
       } else {
         delete out.forecast;      // absent or null: forecast off, authored-only
       }
+      out.seq = seq; out.by = actor;
     }
-    return out;
+    // args.dormantRated is the standing-bag re-issue carrier (the wholesale
+    // fold has no prev to inherit from) — authored CONFIG at the same trust
+    // level as authoring hours/rate directly (same verb, same rank), but
+    // shape-sanitized so junk can never land in the fold
+    return normalizeClock(out, sanitizeDormant(args.dormantRated));
   }
   // weather — merges onto the standing sky (DESIGN.md: a thing that HAPPENS,
   // not a property you set). `keepSky: false` discards the standing sky and
@@ -249,8 +312,49 @@ export function foldSkyEntry(prev, { verb, args = {}, ts, seq, actor }) {
       };
     } else if (base.override) out.override = base.override;
     else delete out.override;
+    // nor can it claim authorship of the bag — seq/by stay the sky entry's
+    if (base.seq != null) out.seq = base.seq; else delete out.seq;
+    if (base.by != null) out.by = base.by; else delete out.by;
   }
-  return out;
+  // a weather verb can never author the parked clock — base's only. That
+  // includes the indirect route: while the standing clock is real, stray
+  // authored hours/rate on a weather verb must not reach the park (base
+  // carries no top-level rated fields under real mode, so anything here came
+  // from args). Same rank as sky either way — verb semantics, not rights.
+  if (base.clock === 'real') { delete out.hours; delete out.rate; }
+  return normalizeClock(out, sanitizeDormant(base.dormantRated));
+}
+
+/** The canonical answer to "what clock governs this sky?" (issue #65) — no
+ *  precedence folklore. Mirrors hoursAt's ACTUAL behavior, including the
+ *  unknown-tz fallback: `mode` is what is effective right now, never what was
+ *  merely requested. Shapes:
+ *    { mode:'real',  tz, hour, seq?, by? }
+ *    { mode:'rated', rate, hour, seq?, by?, requestedTz? }
+ *    { mode:'fixed', hour, seq?, by?, requestedTz? }
+ *  `requestedTz` appears only when `clock:'real'` was authored with a tz Intl
+ *  cannot resolve — the fallback governs and says so. `seq`/`by` are the
+ *  fold-stamped provenance of the sky entry that authored this bag. */
+export function effectiveClock(sky, nowMs) {
+  if (!sky) return { mode: 'fixed', hour: 12 };
+  const hour = hoursAt(sky, nowMs);
+  const prov = {
+    ...(sky.seq != null ? { seq: sky.seq } : {}),
+    ...(sky.by != null ? { by: sky.by } : {}),
+  };
+  if (sky.clock === 'real') {
+    const tz = sky.tz ?? 'America/Los_Angeles';
+    if (tzFormatter(tz)) return { mode: 'real', tz, hour, ...prov };
+    // fallback mirrors hoursAt exactly: the parked clock on a normalized
+    // bag, the top-level fields on a bag that never folded (preview args)
+    const rate = (sky.dormantRated && typeof sky.dormantRated === 'object')
+      ? (sky.dormantRated.rate ?? 0) : (sky.rate ?? 0);
+    return rate !== 0
+      ? { mode: 'rated', rate, hour, requestedTz: tz, ...prov }
+      : { mode: 'fixed', hour, requestedTz: tz, ...prov };
+  }
+  const rate = sky.rate ?? 0;
+  return rate !== 0 ? { mode: 'rated', rate, hour, ...prov } : { mode: 'fixed', hour, ...prov };
 }
 
 /** Coarse day phase — the granularity ambient perception actually wants.
@@ -269,11 +373,11 @@ export function dayPhase(hours) {
 export function describeSky(sky, nowMs) {
   if (!sky) return null;
   const bits = [];
-  const rated = (sky.rate ?? 0) !== 0;
-  const real = sky.clock === 'real';
-  bits.push(`hour ${hoursAt(sky, nowMs).toFixed(1)}${real
-    ? ` (real time, ${sky.tz ?? 'America/Los_Angeles'})`
-    : rated ? ` (advancing ×${sky.rate})` : ''}`);
+  const ck = effectiveClock(sky, nowMs);
+  bits.push(`hour ${ck.hour.toFixed(1)}${ck.mode === 'real'
+    ? ` (real time, ${ck.tz})`
+    : ck.mode === 'rated' ? ` (advancing ×${ck.rate})` : ''}${ck.requestedTz
+    ? ` (requested real-time tz "${ck.requestedTz}" is unknown — fallback clock in effect)` : ''}`);
   const eff = effectiveSky(sky, nowMs);
   const mins = (t) => Math.max(0, Math.round((t - nowMs) / 60000));
   if (eff.source === 'forecast') {
