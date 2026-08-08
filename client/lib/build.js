@@ -1069,6 +1069,28 @@ function paintSky(body) {
     body.appendChild(row);
   }
 
+  // The sun can follow a REAL clock: `clock: real` makes the world's hour BE
+  // the named timezone's wall hour (DST included, hoursAt owns the formula)
+  // and the time slider yields. World policy like everything else here — it
+  // previews live and commits with ✓. Clearing stashes undefined so the JSON
+  // the verb carries simply drops the keys (a null would linger in the fold).
+  const ck = document.createElement('select');
+  ck.appendChild(new Option('authored (slider)', ''));
+  ck.appendChild(new Option('real time — Los Angeles', 'real'));
+  const syncClockUi = () => { inputs.hours.disabled = ck.value === 'real'; };
+  ck.value = skyArgs().clock === 'real' ? 'real' : '';
+  ck.onchange = () => {
+    if (ck.value === 'real') { local.clock = 'real'; local.tz = 'America/Los_Angeles'; }
+    else { local.clock = undefined; local.tz = undefined; }
+    syncClockUi();
+    previewSky(gather()).catch((e) => report('sky preview', e));
+    commit.classList.add('dirty');
+  };
+  syncClockUi();
+  const ckRow = mkRow('clock', ck);
+  ckRow.title = 'real time: the sun tracks the actual LA clock — noon is noon';
+  body.appendChild(ckRow);
+
   commit.textContent = '✓ log to world';
   commit.title = 'share this sky with everyone, permanently';
   commit.onclick = () => {
@@ -1088,6 +1110,8 @@ function paintSky(body) {
     if (a.weather) wx.value = a.weather;
     if (a.clouds) cl.value = a.clouds;
     if (a.world) wl.value = a.world;
+    ck.value = a.clock === 'real' ? 'real' : '';
+    syncClockUi();
   };
   body._sync();
 }
