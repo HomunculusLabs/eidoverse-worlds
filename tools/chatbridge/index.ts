@@ -56,7 +56,32 @@ const log = (m: string) => console.log(`[chatbridge ${new Date().toISOString().s
 type Out = { actor: string; text: string; at: number };
 const toDiscord: Out[] = [];
 let postChannel: { send: (o: unknown) => Promise<unknown> } | null = null;
+let postHook: { send: (o: unknown) => Promise<unknown> } | null = null;
 let posting = false;
+
+// Webhook usernames may not contain "discord" or "clyde" (API rule), and cap
+// at 80 chars. World actor names are already control-char-clean.
+const hookName = (actor: string) =>
+  (actor.replace(/discord/gi, "disc0rd").replace(/clyde/gi, "clyd3").trim() || "someone").slice(0, 80);
+
+async function postOnce(actor: string, chunk: string) {
+  // never ping: a world line containing @everyone must stay ink, not a bell
+  const quiet = { allowedMentions: { parse: [] } };
+  if (postHook) {
+    try {
+      // webhook = per-speaker username, so the channel reads as a conversation
+      await postHook.send({ content: chunk, username: hookName(actor), ...quiet });
+      return;
+    } catch (e) {
+      // a deleted/broken webhook must not silence the mirror — fall back to
+      // plain bot posts (with the name inline) until the next restart
+      log(`webhook send failed: ${(e as Error).message} — falling back to plain posts`);
+      postHook = null;
+      chunk = `**${actor}** — ${chunk}`;
+    }
+  }
+  await postChannel?.send({ content: chunk, ...quiet });
+}
 
 async function pumpDiscord() {
   if (posting) return;
@@ -67,17 +92,17 @@ async function pumpDiscord() {
       log(`⏭ discord backlog — dropped "${d.actor}: ${d.text.slice(0, 40)}…"`);
     }
     const line = toDiscord.shift()!;
-    const body = `**${line.actor}** — ${line.text}`;
+    // with a webhook the name rides the message header; without, it's inline ink
+    const body = postHook || DRY_RUN ? line.text : `**${line.actor}** — ${line.text}`;
     for (let i = 0; i < body.length; i += DISCORD_CHUNK) {
       const chunk = body.slice(i, i + DISCORD_CHUNK);
-      if (DRY_RUN) { log(`→ discord: ${chunk}`); continue; }
+      if (DRY_RUN) { log(`→ discord [${line.actor}]: ${chunk}`); continue; }
       try {
-        // never ping: a world line containing @everyone must stay ink, not a bell
-        await postChannel?.send({ content: chunk, allowedMentions: { parse: [] } });
+        await postOnce(line.actor, chunk);
       } catch (e) {
         log(`discord send failed: ${(e as Error).message} — retrying once in 3s`);
         await new Promise((r) => setTimeout(r, 3000));
-        await postChannel?.send({ content: chunk, allowedMentions: { parse: [] } }).catch((e2) =>
+        await postOnce(line.actor, chunk).catch((e2) =>
           log(`dropped after retry: ${(e2 as Error).message}`));
       }
     }
@@ -168,19 +193,32 @@ async function connectDiscord() {
   }
   const TOKEN = process.env.DISCORD_TOKEN ?? "";
   if (!TOKEN || !CHANNEL_ID) throw new Error("DISCORD_TOKEN and CHANNEL_ID required (or DRY_RUN=1)");
-  const { Client, GatewayIntentBits } = await import("discord.js");
+  const { Client, GatewayIntentBits, Events } = await import("discord.js");
   const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
   });
   await client.login(TOKEN);
-  await new Promise<void>((res) => client.once("ready", () => res()));
+  // Events.ClientReady tracks the v14→v15 "ready"→"clientReady" rename
+  await new Promise<void>((res) => client.once((Events?.ClientReady ?? "ready") as any, () => res()));
   const ch = await client.channels.fetch(CHANNEL_ID);
   if (!ch || !("send" in ch)) throw new Error(`channel ${CHANNEL_ID} is not a sendable text channel`);
   postChannel = ch as unknown as { send: (o: unknown) => Promise<unknown> };
   log(`discord: mirroring #${(ch as any).name ?? CHANNEL_ID} as ${client.user?.tag}`);
+  // Per-speaker names ride a webhook (execute takes a username per message).
+  // Reuse ours if a restart left one behind, else create; needs the Manage
+  // Webhooks permission — without it the mirror still works, names inline.
+  try {
+    const hooks = await (ch as any).fetchWebhooks();
+    postHook = hooks.find((h: any) => h.token && h.owner?.id === client.user?.id)
+      ?? await (ch as any).createWebhook({ name: "eidoverse" });
+    log("webhook: per-speaker names on");
+  } catch (e) {
+    log(`no webhook (${(e as Error).message}) — posting as the bot with inline names`);
+  }
 
   client.on("messageCreate", (m: any) => {
     if (m.channelId !== CHANNEL_ID) return;
+    if (m.webhookId && m.webhookId === (postHook as any)?.id) return; // our own mirror, always
     if ((m.author?.bot || m.webhookId) && !ALLOW_BOTS) return; // loop gate + bot hygiene
     let text = String(m.content ?? "").replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, "").trim();
     const files = [...(m.attachments?.values?.() ?? [])].map((a: any) => a.url).filter(Boolean);
