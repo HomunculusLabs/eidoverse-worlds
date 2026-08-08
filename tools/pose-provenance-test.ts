@@ -91,6 +91,8 @@ console.log("wire + call-site invariants (asserted against the source):");
   ok(dismounts.length >= 2, "walking AND standing both dismount a folded seat (found " + dismounts.length + " call sites)");
   ok(/msg\.restore\.pose && msg\.restore\.clip !== "ragdoll"\) \{ this\.heldPose = msg\.restore\.pose; this\.heldPoseAuthored = true/.test(src),
      "a restored pose (post-settledPose server memory) counts as authored");
+  ok(/state\.mounts \?\? \{\}/.test(src.slice(0, src.indexOf("class WorldAgent"))),
+     "stateToEntries replays folded mounts — a rejoined agent KNOWS it is seated, so standing can dismount");
 }
 
 console.log(`\n${pass} passed, ${fail} failed`);

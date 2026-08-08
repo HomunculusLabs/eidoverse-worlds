@@ -75,6 +75,14 @@ function stateToEntries(state: any, skipChatFromSeq = Infinity): any[] {
         e.actor ?? "world", e.ts ?? Date.now());
     }
   }
+  // folded mounts: without these a rejoined agent doesn't know it is sitting
+  // on anything — so "standing up" never dismounts, and the fold keeps the
+  // body glued to its socket on every renderer (the second half of #61:
+  // princess stood, her session had no idea she was mounted, antra kept
+  // seeing her seated on the crate)
+  for (const [rid, m] of Object.entries<any>(state.mounts ?? {})) {
+    add("mount", { id: rid, to: m.to, ...(m.slot ? { slot: m.slot } : {}) }, rid);
+  }
   for (const m of state.recentChat ?? []) {
     if ((m.seq ?? -1) >= skipChatFromSeq) continue;   // the tail will bring these
     out.push({ seq: typeof m.seq === "number" ? m.seq : seq--, ts: m.ts, actor: m.actor,
