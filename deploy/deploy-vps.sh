@@ -31,6 +31,12 @@ fi
 if ! git diff --quiet "$before" "$after" -- package.json bun.lock 2>/dev/null; then
   "$BUN" install
 fi
+# chat bridge (tools/chatbridge) — optional service; deps on manifest change,
+# restart only where the unit is actually installed
+if ! git diff --quiet "$before" "$after" -- tools/chatbridge/package.json tools/chatbridge/bun.lock 2>/dev/null; then
+  (cd tools/chatbridge && "$BUN" install)
+fi
+sudo systemctl try-restart eido-chatbridge 2>/dev/null || true
 
 sudo systemctl restart eidoverse eidoverse-mcpl
 sleep 2
