@@ -101,12 +101,24 @@ function showInspector(id) {
     document.body.appendChild(inspector);
   }
   const label = libLabels.get(meta.lib) ?? meta.lib?.split('/').pop()?.replace(/\.glb$/, '') ?? id;
+  const locked = isLocked(id);
   inspector.innerHTML =
     `<span><b>${label.slice(0, 34)}</b></span>` +
     `<span style="color:var(--dim)">by ${meta.actor ?? '?'}</span>` +
-    `<span style="color:var(--dim)">drag move · <kbd>Shift</kbd>+drag or <kbd>R</kbd><kbd>F</kbd> up/down · ` +
-    `<kbd>Q</kbd><kbd>E</kbd> turn · <kbd>,</kbd><kbd>.</kbd> size · <kbd>Del</kbd> remove · <kbd>Esc</kbd> done</span>` +
+    (locked
+      ? `<span style="color:var(--dim)">🔒 locked — nothing moves or removes it until unchecked</span>`
+      : `<span style="color:var(--dim)">drag move · <kbd>Shift</kbd>+drag or <kbd>R</kbd><kbd>F</kbd> up/down · ` +
+        `<kbd>Q</kbd><kbd>E</kbd> turn · <kbd>,</kbd><kbd>.</kbd> size · <kbd>Del</kbd> remove · <kbd>Esc</kbd> done</span>`) +
+    `<label title="nail it down: while locked, nobody's drags, verbs or scripts can move, replace or remove it (server-enforced) — sitting on it and content edits stay open" style="display:flex;gap:4px;align-items:center;cursor:pointer">` +
+    `<input type="checkbox" data-bact="lock"${locked ? ' checked' : ''}> 🔒 lock</label>` +
     `<button data-bact="seat" title="declare a sit anchor: click the spot where a sitter goes">+ seat</button>`;
+  inspector.querySelector('[data-bact="lock"]').onchange = (ev) => {
+    const on = ev.target.checked;
+    sendVerb('comp', { id, type: 'lock', data: on ? true : null });
+    flashHint(on ? `🔒 <b>${label.slice(0, 34)}</b> locked — nothing moves it until you uncheck` : `🔓 unlocked`);
+    // the echo folds the comp; repaint the hint line once it lands
+    setTimeout(() => { if (selected?.id === id) showInspector(id); }, 400);
+  };
   inspector.querySelector('[data-bact="seat"]').onclick = () => armSeatPlacement(selected?.id ?? id);
   inspector.style.display = 'flex';
 }
@@ -284,8 +296,27 @@ function commitSpawn() {
   cancelGhost();
 }
 
+// ---- lock: `comp {id, type: "lock", data: true}` nails a thing down. The
+// SERVER is the enforcement (it refuses place/remove/punt/mount/spawn/light
+// on a locked id for everyone, locker included); these guards keep the local
+// gesture honest — no preview that would have to snap back on refusal, and a
+// hint that teaches the unlock instead of a silent dead hand.
+function isLocked(id) { return !!comps.get(id)?.lock; }
+function lockedHint(id) {
+  if (!isLocked(id)) return false;
+  flashHint('🔒 <b>locked</b> — uncheck <b>lock</b> in the inspector to move or remove it');
+  return true;
+}
+
 function commitPlace(before) {
   if (!selected) return;
+  if (lockedHint(selected.id)) {
+    // the world never moved — put the local preview back where the log says
+    const o = selected.obj;
+    o.position.set(...before.pos); o.rotation.y = before.yaw; o.scale.setScalar(before.scale);
+    reindexCollider(selected.id); refreshOutline();
+    return;
+  }
   const o = selected.obj;
   sendVerb('place', {
     id: selected.id,
@@ -312,6 +343,7 @@ export function undo() {
 
 function removeSelected() {
   if (!selected) return;
+  if (lockedHint(selected.id)) return;   // an accidental Del is the worst accident
   const meta = entityMeta.get(selected.id) ?? {};
   const snap = snapshotOf(selected.obj);
   sendVerb('remove', { id: selected.id });
@@ -605,6 +637,9 @@ addEventListener('mousemove', (e) => {
   dragging.clientY = e.clientY;                 // vertical drag reads this each frame
   if (!dragging.armed
       && Math.hypot(e.clientX - dragging.startX, e.clientY - dragging.startY) > DRAG_SLOP) {
+    // the press selected it; travel is where a move would begin — a locked
+    // thing refuses here, before any preview exists to snap back
+    if (lockedHint(dragging.id)) { dragging = null; return; }
     dragging.armed = true;
   }
 });

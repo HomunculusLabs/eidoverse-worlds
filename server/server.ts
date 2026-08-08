@@ -758,18 +758,41 @@ function isAdminId(id: string, sub?: string): boolean {
   return ADMIN_IDS.has(id) || (sub != null && ADMIN_IDS.has(sub));
 }
 
+/** Is this verb trying to move or destroy a nailed-down thing?
+ *
+ *  `comp {id, type: "lock", data: true}` nails an entity in place: while the
+ *  lock is on, nothing may move it (place, punt, cargo-mount), replace it
+ *  (spawn/light onto the same id), or remove it. It is an ACCIDENT guard, not
+ *  a rights system — anyone builder+ can toggle it, and the deliberate
+ *  unlock (`data: null`) is exactly what converts an accident into an intent.
+ *  Everything that doesn't relocate the thing stays open: sitting ON it
+ *  (self-mount), use, motion, behaviors, other comps — content, not carpentry.
+ *  Applies to everyone including the locker: your own stray drag is the
+ *  original accident (a build-mode fallthrough once relocated Fable's swing). */
+const LOCK_GUARDED = new Set(["place", "remove", "punt", "mount", "spawn", "light"]);
+function lockRefusal(w: World, verb: string, args: Record<string, unknown> | undefined): string | null {
+  if (!LOCK_GUARDED.has(verb)) return null;
+  const id = String(args?.id ?? "");
+  const ent = id ? w.state.entities[id] : undefined;   // people aren't entities — self-mount passes here
+  if (!ent?.comp?.lock) return null;
+  const act = verb === "remove" ? "remove" : verb === "spawn" || verb === "light" ? "replace" : "move";
+  return `"${id}" is locked — unlock it first (comp {id: "${id}", type: "lock", data: null}) to ${act} it`;
+}
+
 // Behavior sandbox wiring: a script's emit is gated by its AUTHOR's live
 // rights (revoke the grant, the behavior loses its teeth) through the same
 // table as everyone else. The store path is where `?as=script` uploads land.
 wireBehaviorStore(join(ROOT, "assets", "opt"));
-wireBehaviorGate((w, author, verb) => {
+wireBehaviorGate((w, author, verb, args) => {
   const needs = VERB_NEEDS[verb];
   if (!needs) return `verb not allowed: ${verb}`;
   const rights = rightsOf(w as unknown as World, author);
   if (ROLE_RANK[rights.role] < needs.rank || (needs.gen && !rights.gen)) {
     return `"${verb}" needs more than ${author}'s "${rights.role}" role here`;
   }
-  return null;
+  // a locked thing refuses scripts by the same rule as hands (a behavior
+  // nudging a nailed-down bench is still an accident vector)
+  return lockRefusal(w as unknown as World, verb, args);
 });
 
 // Agent identity: the MCPL door (mcpl/tokens.json) already holds per-agent
@@ -2098,6 +2121,15 @@ const server = Bun.serve({
               : `"${msg.verb}" needs ${needs.rank >= 2 ? "the world's owner" : "builder rights"} here — you are a ${rights.role}`;
             c.world.debug("denied", { who: c.id, verb: String(msg.verb), why });
             ws.send(JSON.stringify({ type: "error", error: why }));
+            return;
+          }
+          // the lock gate sits AFTER rank (a visitor's refusal should teach
+          // rank, not locks) and BEFORE shape-checks/append: a locked thing
+          // refuses everyone identically, locker included
+          const lockedWhy = lockRefusal(c.world, msg.verb as string, msg.args as Record<string, unknown> | undefined);
+          if (lockedWhy) {
+            c.world.debug("denied", { who: c.id, verb: String(msg.verb), why: "locked" });
+            ws.send(JSON.stringify({ type: "error", error: lockedWhy }));
             return;
           }
           let args = (msg.args ?? {}) as Record<string, unknown>;

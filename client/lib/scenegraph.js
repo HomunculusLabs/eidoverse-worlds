@@ -134,9 +134,12 @@ function paintScene(force = false) {
     let transform = '';
     if (obj) {
       const n2 = (v) => Number(v.toFixed(2));
-      const cell = (f, v, step) => `<input type="number" data-tf="${f}" value="${v}" step="${step}" style="width:4.5em">`;
+      // a locked thing's pose is read-only — the server would refuse the
+      // `place` anyway; a disabled field says so before the round-trip
+      const locked = !!bag?.lock;
+      const cell = (f, v, step) => `<input type="number" data-tf="${f}" value="${v}" step="${step}" style="width:4.5em"${locked ? ' disabled title="locked — remove the lock comp to move"' : ''}>`;
       transform = `<div style="display:flex;gap:5px;align-items:center;flex-wrap:wrap;margin:4px 0">
-        <span style="color:var(--dim)">${obj.userData.mountedTo ? 'local ' : ''}pos</span>
+        <span style="color:var(--dim)">${locked ? '🔒 ' : ''}${obj.userData.mountedTo ? 'local ' : ''}pos</span>
         ${cell('x', n2(obj.position.x), 0.1)}${cell('y', n2(obj.position.y), 0.1)}${cell('z', n2(obj.position.z), 0.1)}
         ${isLight ? '' : `<span style="color:var(--dim)">yaw°</span>${cell('yaw', Math.round(obj.rotation.y * 180 / Math.PI), 5)}
         <span style="color:var(--dim)">scale</span>${cell('scale', n2(obj.scale?.x ?? 1), 0.05)}`}

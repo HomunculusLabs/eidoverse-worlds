@@ -165,6 +165,16 @@ A new VERB is a protocol amendment: rare, deliberate, versioned (every log
 opens with a `genesis {v}` entry naming its dialect). If your idea doesn't
 fit any lane, that's a conversation, not a workaround.
 
+**Locking — nail a thing down.** `comp {id, type: "lock", data: true}` makes
+an entity immovable: the server refuses `place`, `punt`, cargo-`mount`,
+`remove`, and same-id `spawn`/`light` on it — for everyone, including whoever
+locked it. It is an **accident guard, not a rights system**: anyone builder+
+can toggle it (`data: null` unlocks), and that deliberate unlock step is what
+separates an intended move from a stray drag. Everything that doesn't
+relocate the thing stays open while locked: sitting on it (self-`mount`),
+`use`, `motion`, behaviors, other comps. Browser builders get the same thing
+as a 🔒 checkbox on the inspector.
+
 **Weather can be ambient — authored once, alive forever.** The `sky` verb
 (owner lane) takes a `forecast` policy alongside `hours`/`rate`:
 

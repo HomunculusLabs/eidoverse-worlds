@@ -1282,7 +1282,10 @@ export class WorldAgent {
       // or contact: separate authored components would provide those, and a
       // resident who reads "warm" acts on it.
       if (c.particles) aff.push(describeParticles(c.particles));
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles"].includes(k));
+      // locked = nailed down: the server refuses every move/replace/remove on
+      // it. Saying so here saves an agent a refused verb round-trip.
+      if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}`);
