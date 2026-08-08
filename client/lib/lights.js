@@ -18,6 +18,7 @@
 import { THREE, scene, renderer, camera } from './core.js';
 import { lampCount } from './sky.js';
 import { enqueue } from './loadwork.js';
+import { registerEditor } from './inspect.js';
 
 // Total point lights the scene may cast, across placed lights AND emissive
 // lamps. Conservative on purpose; a re-measure (not a guess) can raise it.
@@ -136,3 +137,52 @@ export function shedALight() {
 }
 
 export const litCount = () => casters.size;
+
+// ---- the inspector's light editor -------------------------------------------
+// Registered here because the MEANING of these fields lives in this module:
+// what a sane brightness range is, and what `keep` honestly promises (never
+// auto-doused by the perf governor — but still glow-only on a machine whose
+// point-light budget was already spent). Dragging previews locally through
+// updateLight; releasing commits ONE partial `light` verb (just the touched
+// field — the fold merges), so a gesture is one log line, not a stream.
+registerEditor(({ id, obj, commit }) => {
+  if (!obj?.userData?.isLight) return null;
+  const p = obj.userData.lightParams ?? {};
+  const hex = '#' + (p.color ?? 0xffd9a0).toString(16).padStart(6, '0');
+  const inten = p.intensity ?? 16;
+  const range = p.range ?? 10;
+  return {
+    html: `<div style="display:flex;flex-direction:column;gap:4px;margin:4px 0">
+      <label style="display:flex;gap:6px;align-items:center">color
+        <input type="color" data-lp="color" value="${hex}"></label>
+      <label style="display:flex;gap:6px;align-items:center">brightness
+        <input type="range" data-lp="intensity" min="0" max="${Math.max(64, inten)}" step="1" value="${inten}" style="flex:1">
+        <span data-lp-out="intensity" style="min-width:2.5em;text-align:right">${inten}</span></label>
+      <label style="display:flex;gap:6px;align-items:center">range
+        <input type="range" data-lp="range" min="1" max="${Math.max(40, range)}" step="1" value="${range}" style="flex:1">
+        <span data-lp-out="range" style="min-width:2.5em;text-align:right">${range}</span></label>
+      <label style="display:flex;gap:6px;align-items:center;cursor:pointer">
+        <input type="checkbox" data-lp="keep" ${p.keep ? 'checked' : ''}>
+        keep lit — never auto-doused for framerate</label>
+      ${obj.userData.pointLight ? '' : '<div style="color:var(--dim);font-size:11px">glow-only on this machine (light budget) — it may still cast for others</div>'}
+    </div>`,
+    wire(root) {
+      for (const el of root.querySelectorAll('[data-lp]')) {
+        const field = el.dataset.lp;
+        const read = () =>
+          field === 'color' ? parseInt(el.value.slice(1), 16)
+            : field === 'keep' ? el.checked
+              : Number(el.value);
+        el.addEventListener('input', () => {
+          updateLight(obj, { [field]: read() });
+          const out = root.querySelector(`[data-lp-out="${field}"]`);
+          if (out) out.textContent = el.value;
+        });
+        el.addEventListener('change', () => {
+          commit('light', { id, [field]: read() });
+          el.blur();   // release focus so the panel's held repaints resume
+        });
+      }
+    },
+  };
+});

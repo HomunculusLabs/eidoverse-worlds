@@ -3,11 +3,20 @@
 // Two sections in the world panel:
 //
 //   🌳 scene    every entity as a row; mounted things indent under their
-//               parent, seated bodies show as riders. Click a row → inspector
-//               (live pos, provenance, the component bag verbatim) + actions:
-//               find, attach (pick a new parent by clicking it), detach,
-//               remove. Attach PRESERVES the current world transform — the
-//               thing glues where it stands, it never jumps.
+//               parent, seated bodies show as riders. Click a row → the
+//               INSPECTOR, which is layered the same way the fold is:
+//               · a generic transform editor (pos / yaw / scale → `place`);
+//               · SEMANTIC editors registered by evaluator modules via
+//                 inspect.js (lights register color/brightness/range/keep —
+//                 drag previews locally, release commits one partial verb);
+//               · a generic component editor — every comp type as a row,
+//                 editable as raw JSON, removable, addable. Meaning-free by
+//                 design: a comp type invented this morning is editable
+//                 today. A saved edit replaces that type's data WHOLESALE
+//                 (the comp verb's contract).
+//               · actions: find, attach (pick a new parent by clicking it),
+//                 detach, remove. Attach PRESERVES the current world
+//                 transform — the thing glues where it stands, never jumps.
 //
 //   📜 scripts  the behavior runtime made visible: every bound script with
 //               its status (running / paused-with-reason), what it's attached
@@ -21,6 +30,8 @@
 
 import { THREE, CONFIG, bus } from './core.js';
 import { entities, entityMeta, comps, avatarMounts } from './world.js';
+import { editorsFor } from './inspect.js';
+import './lights.js';   // for its registered light editor (world.js pulls it in anyway)
 import { sendVerb, requestDebug } from './net.js';
 import { makeSection, flashHint } from './ui.js';
 import { logChat } from './chat.js';
@@ -76,8 +87,20 @@ function treeData() {
   return { roots, kids, riders };
 }
 
-function paintScene() {
+let editingComp = null;    // comp type whose JSON is open, or true for a new one
+
+function paintScene(force = false) {
   if (!sceneBody) return;
+  // don't yank an editor out from under the user: an open JSON textarea, or
+  // any focused editor control (a light slider mid-drag, a half-typed pos
+  // field), holds repaints — the echo of a committed verb queues one, and it
+  // must not rebuild the DOM under the pointer. Interior state changes
+  // (opening/closing an editor) repaint with force.
+  if (!force) {
+    if (editingComp != null) return;
+    const ae = document.activeElement;
+    if (sceneBody.contains(ae) && /^(INPUT|TEXTAREA)$/.test(ae?.tagName ?? '')) return;
+  }
   const { roots, kids, riders } = treeData();
   const rows = [];
   const row = (id, depth) => {
@@ -97,16 +120,62 @@ function paintScene() {
   for (const id of roots.sort()) row(id, 0);
 
   let inspector = '';
+  let eds = [];
   if (selected && entities.has(selected)) {
     const obj = entities.get(selected);
     const meta = entityMeta.get(selected);
     const bag = comps.get(selected);
     const pos = obj ? obj.getWorldPosition(_wp) : null;
+    const isLight = !!obj?.userData?.isLight;
+
+    // generic transform editor — every entity has a pose; yaw/scale make no
+    // sense on a bulb. Values are the entity's LOCAL frame (labelled when
+    // mounted): exactly what a `place` verb takes.
+    let transform = '';
+    if (obj) {
+      const n2 = (v) => Number(v.toFixed(2));
+      const cell = (f, v, step) => `<input type="number" data-tf="${f}" value="${v}" step="${step}" style="width:4.5em">`;
+      transform = `<div style="display:flex;gap:5px;align-items:center;flex-wrap:wrap;margin:4px 0">
+        <span style="color:var(--dim)">${obj.userData.mountedTo ? 'local ' : ''}pos</span>
+        ${cell('x', n2(obj.position.x), 0.1)}${cell('y', n2(obj.position.y), 0.1)}${cell('z', n2(obj.position.z), 0.1)}
+        ${isLight ? '' : `<span style="color:var(--dim)">yaw°</span>${cell('yaw', Math.round(obj.rotation.y * 180 / Math.PI), 5)}
+        <span style="color:var(--dim)">scale</span>${cell('scale', n2(obj.scale?.x ?? 1), 0.05)}`}
+      </div>`;
+    }
+
+    // semantic editors — whatever evaluator modules registered for this thing
+    eds = editorsFor({ id: selected, obj, meta, bag, commit: sendVerb, esc });
+
+    // generic component editor — meaning-free by design, the UI twin of the
+    // blind fold: any comp type, known or invented this morning, shows as a
+    // row and edits as raw JSON. A saved edit replaces that type's data
+    // WHOLESALE (that is the comp verb's contract); ✕ removes (data: null).
+    const bagObj = bag ?? {};
+    const compRows = Object.entries(bagObj).map(([type, data]) => {
+      if (editingComp === type) {
+        return `<div style="margin:2px 0"><b>${esc(type)}</b>
+          <textarea data-ce="json" spellcheck="false" style="width:100%;height:90px;font-size:11px;font-family:inherit">${esc(JSON.stringify(data, null, 1))}</textarea>
+          <div style="display:flex;gap:6px"><button data-ce="apply">apply</button><button data-ce="cancel">cancel</button></div></div>`;
+      }
+      return `<div style="display:flex;gap:6px;align-items:center">
+        <span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap"><b>${esc(type)}</b> <span style="color:var(--dim);font-size:11px">${esc(JSON.stringify(data).slice(0, 60))}</span></span>
+        <button data-ce-edit="${esc(type)}" title="edit as JSON">✎</button>
+        <button data-ce-del="${esc(type)}" title="remove component">✕</button></div>`;
+    });
+    const newComp = editingComp === true
+      ? `<div style="margin:2px 0"><input data-ce="newtype" placeholder="type (e.g. sockets, recipe…)" style="width:14em">
+          <textarea data-ce="json" spellcheck="false" style="width:100%;height:90px;font-size:11px;font-family:inherit">{
+}</textarea>
+          <div style="display:flex;gap:6px"><button data-ce="apply">apply</button><button data-ce="cancel">cancel</button></div></div>`
+      : `<div><button data-ce-add title="attach a component — any type folds, evaluators give known ones behavior">+ component</button></div>`;
+
     inspector = `<div style="border-top:1px solid var(--edge);margin-top:6px;padding-top:6px">
       <div><b>${esc(selected)}</b> <span style="color:var(--dim)">${esc(meta?.lib ?? '')}</span></div>
       <div style="color:var(--dim)">placed by ${esc(meta?.actor ?? '?')} · ${pos ? `at (${pos.x.toFixed(1)}, ${pos.y.toFixed(1)}, ${pos.z.toFixed(1)})` : 'loading'}${obj?.userData?.mountedTo ? ` · mounted on ${esc(obj.userData.mountedTo)}` : ''}</div>
-      ${bag ? `<pre style="max-height:130px;overflow:auto;margin:4px 0;font-size:11px">${esc(JSON.stringify(bag, null, 1))}</pre>` : ''}
-      <div style="display:flex;gap:6px;flex-wrap:wrap">
+      ${transform}
+      ${eds.map((e) => e.html).join('')}
+      ${compRows.join('')}${newComp}
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
         <button data-act="find">find</button>
         <button data-act="attach">${arming === selected ? 'click new parent…' : 'attach to…'}</button>
         ${obj?.userData?.mountedTo ? '<button data-act="detach">detach</button>' : ''}
@@ -121,7 +190,8 @@ function paintScene() {
       if (arming && arming !== id) { doAttach(arming, id); arming = null; return; }
       selected = id === selected ? null : id;
       arming = null;
-      paintScene();
+      editingComp = null;
+      paintScene(true);
     };
   }
   sceneBody.querySelector('[data-act="find"]')?.addEventListener('click', () => {
@@ -135,6 +205,49 @@ function paintScene() {
     flashHint(arming ? 'now click the row of its new parent' : 'attach cancelled', 4000);
     paintScene();
   });
+  // semantic editors wire their own controls
+  for (const e of eds) { try { e.wire(sceneBody); } catch { /* an editor must not break the panel */ } }
+
+  // transform: commit on change — one `place` per gesture, carrying the full
+  // pose the fields show (pos triple always; yaw/scale when present). No
+  // local preview: place is cheap and the echo lands in a frame or two.
+  const tf = (f) => sceneBody.querySelector(`[data-tf="${f}"]`);
+  for (const el of sceneBody.querySelectorAll('[data-tf]')) {
+    el.addEventListener('change', () => {
+      const args = { id: selected, pos: [Number(tf('x').value), Number(tf('y').value), Number(tf('z').value)] };
+      if (tf('yaw')) args.yaw = Number(tf('yaw').value) * Math.PI / 180;
+      if (tf('scale')) args.scale = Number(tf('scale').value);
+      if (args.pos.some(Number.isNaN) || Number.isNaN(args.yaw ?? 0) || Number.isNaN(args.scale ?? 1)) return;
+      sendVerb('place', args);
+    });
+  }
+
+  // component editor: ✎ opens raw JSON, apply parses + commits, ✕ removes
+  for (const b of sceneBody.querySelectorAll('[data-ce-edit]')) {
+    b.onclick = () => { editingComp = b.dataset.ceEdit; paintScene(true); };
+  }
+  for (const b of sceneBody.querySelectorAll('[data-ce-del]')) {
+    b.onclick = () => { sendVerb('comp', { id: selected, type: b.dataset.ceDel, data: null }); };
+  }
+  sceneBody.querySelector('[data-ce-add]')?.addEventListener('click', () => {
+    editingComp = true; paintScene(true);
+  });
+  sceneBody.querySelector('[data-ce="apply"]')?.addEventListener('click', () => {
+    const type = editingComp === true
+      ? (sceneBody.querySelector('[data-ce="newtype"]')?.value ?? '').trim()
+      : editingComp;
+    if (!type) { flashHint('component needs a type name', 4000); return; }
+    let data;
+    try { data = JSON.parse(sceneBody.querySelector('[data-ce="json"]').value); }
+    catch (err) { flashHint(`not valid JSON: ${esc(err.message)}`, 5000); return; }
+    sendVerb('comp', { id: selected, type, data });
+    editingComp = null;
+    paintScene(true);
+  });
+  sceneBody.querySelector('[data-ce="cancel"]')?.addEventListener('click', () => {
+    editingComp = null; paintScene(true);
+  });
+
   sceneBody.querySelector('[data-act="detach"]')?.addEventListener('click', () => doDetach(selected));
   sceneBody.querySelector('[data-act="remove"]')?.addEventListener('click', () => {
     sendVerb('remove', { id: selected });
