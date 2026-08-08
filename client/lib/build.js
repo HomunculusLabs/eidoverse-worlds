@@ -19,6 +19,7 @@ import { heightAt } from './terrain.js';
 import { sendVerb, sendDrag } from './net.js';
 import { myState, mouse, setPointerClaim, setEditingProbe } from './controller.js';
 import { makeSection, toast, flashHint, collapseAll, panelFrame } from './ui.js';
+import { sceneSelect } from './scenegraph.js';
 import { previewSky, skyArgs, WEATHERS, CLOUDS, SKY_WORLDS,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './sky.js';
 
@@ -118,6 +119,9 @@ export function select(id) {
   outline.box.setFromObject(obj);
   outline.visible = true;
   showInspector(id);
+  // the scene panel follows the mouse: selecting a thing opens its row —
+  // transform fields, semantic editors, comp bag — scrolled into view
+  sceneSelect(id);
 }
 export function deselect() {
   selected = null;

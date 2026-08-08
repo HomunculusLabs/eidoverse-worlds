@@ -255,6 +255,30 @@ function paintScene(force = false) {
   });
 }
 
+/** World-click → panel: select the entity's row, open the scene section
+ *  (and the panel frame, if hidden), and scroll the row into view. Exported
+ *  for build.js — clicking a thing in edit mode and clicking its row are the
+ *  same act, so the inspector (transform, semantic editors, comp bag) arrives
+ *  with the selection instead of hiding behind a second gesture. */
+export function sceneSelect(id) {
+  if (!sceneApi || !entities.has(id)) return;
+  selected = id;
+  arming = null;
+  editingComp = null;
+  const reveal = () => {
+    paintScene(true);
+    sceneBody?.querySelector(`.sg-row[data-id="${CSS.escape(id)}"]`)
+      ?.scrollIntoView({ block: 'nearest' });
+  };
+  // toggle(true) surfaces the panel frame (even when the section is already
+  // open) and — on first open — assigns sceneBody synchronously BEFORE its
+  // async roster fetch. So paint now: selection must never be hostage to a
+  // network round-trip. Repaint when the roster lands (📜 badges refine).
+  const t = sceneApi.toggle(true);
+  reveal();
+  Promise.resolve(t).then(reveal).catch(() => {});
+}
+
 /** Attach preserving the CURRENT world transform: compute the child's pose in
  *  the parent's frame and send it as the mount offset — glue, don't teleport.
  *  Exported for /mount — command and panel are the same act. */
