@@ -802,6 +802,28 @@ function agentTokens() {
   return agentTokCache;
 }
 
+/** A pose as it should be handed to SOMEONE ELSE — the settled result rather
+ *  than whatever frame the body happened to be in.
+ *
+ *  Two callers, and they used to disagree, which was the bug (#61): the join
+ *  snapshot's `restore` (your own body) went through rememberPose and came back
+ *  normalized, while `present` (everyone else's bodies) shipped lastPose raw.
+ *  So a resident mid-ragdoll looked fine to herself and arrived collapsed for
+ *  every joiner — for weeks, with no way to tell from inside her own session.
+ *
+ *  - emote: a one-shot is a moment, not a place. Replaying it at every wake
+ *    would make a wave into a tic.
+ *  - ragdoll: physics in flight, not an enacted pose. The get-up path only
+ *    exists in the session that fell, so anyone receiving it is stuck with a
+ *    body hung in tumble bones. Sleep standing.
+ *  Held bones (pose.pose) survive both: an enacted pose is a place. */
+function settledPose(pose: unknown): Record<string, unknown> | null {
+  if (!pose) return null;
+  const { emote: _emote, ...still } = pose as Record<string, unknown>;
+  if (still.clip === "ragdoll") { still.clip = "idle"; delete still.pose; }
+  return still;
+}
+
 class World {
   name: string;
   entries: LogEntry[] = [];
@@ -1019,13 +1041,7 @@ class World {
 
   rememberPose(id: string, pose: unknown) {
     if (!pose) return;
-    // one-shot emotes are moments, not places — remembering one would replay
-    // it at every wake. Held bones (pose.pose) stay: enacted poses persist.
-    const { emote: _emote, ...still } = pose as Record<string, unknown>;
-    // A mid-ragdoll frame is physics in flight, not an enacted pose — waking
-    // INTO it left a body hung in the air in tumble bones, with no way out
-    // (the get-up path only exists in the session that fell). Sleep standing.
-    if (still.clip === "ragdoll") { still.clip = "idle"; delete still.pose; }
+    const still = settledPose(pose)!;
     this.poses[id] = still;
     writeFileSync(this.posesPath + ".tmp", JSON.stringify(this.poses));
     renameSync(this.posesPath + ".tmp", this.posesPath);
@@ -2024,7 +2040,10 @@ const server = Bun.serve({
             // wake where you fell asleep — the world's memory of your body
             restore: c.spectator ? null : (w.poses[c.id] ?? null),
             present: [...w.clients].filter(o => o !== c && !o.spectator).map(o => ({
-              id: o.id, avatar: o.avatar, pose: o.lastPose, agent: o.agent,
+              // settledPose, not lastPose: a joiner must not inherit someone
+              // else's mid-ragdoll frame (#61). Same normalization `restore`
+              // above already gets via rememberPose.
+              id: o.id, avatar: o.avatar, pose: settledPose(o.lastPose), agent: o.agent,
             })),
           }));
           if (!c.spectator) w.broadcast({ type: "arrive", id: c.id, avatar: c.avatar, agent: c.agent }, c);
