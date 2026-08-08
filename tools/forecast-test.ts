@@ -279,5 +279,34 @@ const policyArgs = {
   check("transitionSec is clamped to dwellMin", tight.transitionSec === 60, String(tight.transitionSec));
 }
 
+// ---------------------------------------------------------------- real clock
+{
+  // hoursAt in clock mode = the named timezone's wall hour at tMs, DST and
+  // all — fixed instants, no ambient clock, so every plane derives the same
+  const real = { clock: "real" };                       // tz defaults to LA
+  const jan = Date.UTC(2026, 0, 15, 20, 30, 0);        // LA = UTC-8 (PST)
+  const jul = Date.UTC(2026, 6, 15, 19, 0, 0);         // LA = UTC-7 (PDT)
+  check("real clock: winter 20:30Z is 12.5 LA", Math.abs(hoursAt(real, jan) - 12.5) < 1e-9,
+    String(hoursAt(real, jan)));
+  check("real clock: summer 19:00Z is 12.0 LA (DST)", Math.abs(hoursAt(real, jul) - 12) < 1e-9,
+    String(hoursAt(real, jul)));
+  check("real clock: named tz honored", Math.abs(hoursAt({ clock: "real", tz: "UTC" }, jan) - 20.5) < 1e-9,
+    String(hoursAt({ clock: "real", tz: "UTC" }, jan)));
+  check("real clock: authored hours/rate are ignored",
+    Math.abs(hoursAt({ clock: "real", hours: 3, rate: 24, ts: T0 }, jan) - 12.5) < 1e-9);
+  // a typo'd tz must not freeze the sun — the rated clock takes over
+  const typo = { clock: "real", tz: "America/Nowhere", hours: 6, rate: 1, ts: T0 };
+  check("real clock: unknown tz falls back to the rated formula",
+    Math.abs(hoursAt(typo, T0 + 2 * HOUR) - 8) < 1e-9, String(hoursAt(typo, T0 + 2 * HOUR)));
+  // the fold carries clock mode through a weather merge — a passing storm
+  // must not knock a world back onto the frozen authored clock
+  const sky = foldSkyEntry(null, { verb: "sky", args: { clock: "real", tz: "America/Los_Angeles" }, ts: T0, seq: 1, actor: "antra" });
+  const wet = foldSkyEntry(sky, { verb: "weather", args: { weather: "rain" }, ts: T0 + HOUR, seq: 2, actor: "world" });
+  check("fold: weather merge keeps clock+tz", wet.clock === "real" && wet.tz === "America/Los_Angeles",
+    JSON.stringify({ clock: wet.clock, tz: wet.tz }));
+  check("describeSky names the real clock", (describeSky(sky, jan) ?? "").includes("real time, America/Los_Angeles"),
+    describeSky(sky, jan) ?? "null");
+}
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

@@ -22,10 +22,16 @@ import { registerEditor } from './inspect.js';
 
 // Total point lights the scene may cast, across placed lights AND emissive
 // lamps. Conservative on purpose; a re-measure (not a guess) can raise it.
+// KEPT lights live OUTSIDE this budget entirely: `keep: true` is an author
+// saying "this light matters more than frame rate", so it always casts and
+// consumes no slot — the budget governs only the sheddable pool. The cost is
+// real (every cast is a scene-wide recompile + per-frame GPU), which is why
+// keep is a deliberate checkbox and not the default.
 let MAX_CAST = 4;
-const casters = new Set();     // the placed lights currently casting, newest last
+const casters = new Set();     // ALL casting placed lights, newest last
 
-const budgetLeft = () => Math.max(0, MAX_CAST - lampCount() - casters.size);
+const sheddable = () => [...casters].filter((g) => !g.userData.lightParams?.keep);
+const budgetLeft = () => MAX_CAST - lampCount() - sheddable().length;
 
 let warned = false;
 function noBudget() {
@@ -62,28 +68,9 @@ function grantCast(group) {
   enqueue(() => renderer.compileAsync(scene, camera).catch(() => {}), { lane: 'gpu', priority: 0 });
 }
 
-/** A kept light outranks any sheddable caster: reclaim the newest non-kept
- *  cast and hand it over. The doused one keeps glowing — the same honest
- *  degradation as the budget, just pointed at the light nobody pinned.
- *  Without this, `keep` protects only a cast the light ALREADY holds, which
- *  makes the checkbox a visible no-op exactly when someone reaches for it:
- *  on a light the budget or governor has doused. */
-function stealCastFor(group) {
-  const victim = [...casters].filter((g) => !g.userData.lightParams?.keep).pop();
-  if (!victim) return false;
-  const pl = victim.userData.pointLight;
-  if (pl) { victim.remove(pl); pl.dispose?.(); victim.userData.pointLight = null; }
-  casters.delete(victim);
-  grantCast(group);
-  return true;
-}
-
-/** Build a placed-light entity: gizmo + (budget permitting) a PointLight.
- *  `keep: true` = cast PRIORITY: exempt from the perf governor's shedALight
- *  (sheddable lights go first), and when the budget is spent a kept light
- *  takes its cast from a non-kept one — at creation, join replay, or the
- *  moment keep is switched on. Glow-only remains possible only when kept
- *  lights alone exhaust the budget. */
+/** Build a placed-light entity: gizmo + a PointLight when it may cast.
+ *  `keep: true` casts UNCONDITIONALLY (no budget slot, never governor-shed);
+ *  everything else casts only within the budget. */
 export function makeLight({ color = 0xffd9a0, intensity = 16, range = 10, keep = false } = {}) {
   const group = new THREE.Group();
   const gizmo = makeLightGizmo(color);
@@ -93,8 +80,7 @@ export function makeLight({ color = 0xffd9a0, intensity = 16, range = 10, keep =
   group.userData.lightParams = { color, intensity, range, keep: !!keep };
   group.userData.noCamCollide = true;
 
-  if (budgetLeft() > 0) grantCast(group);
-  else if (keep && stealCastFor(group)) { /* kept light took priority */ }
+  if (keep || budgetLeft() > 0) grantCast(group);
   else noBudget();
   return group;
 }
@@ -121,11 +107,17 @@ export function updateLight(group, { color, intensity, range, keep } = {}) {
     if (color != null) pl.color.set(new THREE.Color(color));
     if (intensity != null) pl.intensity = intensity;
     if (range != null) pl.distance = range;
-  } else if (budgetLeft() > 0) {
+    // un-keeping a casting light re-enters it into the budget; if that
+    // overcommits the pool, the privilege it was casting on is gone — drop
+    // its cast rather than silently running over budget
+    if (keep === false && budgetLeft() < 0) {
+      group.remove(pl); pl.dispose?.(); group.userData.pointLight = null;
+      casters.delete(group);
+    }
+  } else if (p.keep || budgetLeft() > 0) {
+    // checking "keep lit" on a doused light re-lights it ON THE SPOT — the
+    // checkbox must DO something you can see (kept casts need no budget)
     grantCast(group);
-  } else if (p.keep && stealCastFor(group)) {
-    // checking "keep lit" on a doused light re-lights it at a sheddable
-    // light's expense — the checkbox must DO something you can see
   }
 }
 
@@ -150,7 +142,7 @@ export function disposeLight(group) {
  *  kept lights remain this returns false and the governor moves to its next
  *  lever (clouds, grass, pixels). */
 export function shedALight() {
-  const last = [...casters].filter((g) => !g.userData.lightParams?.keep).pop();
+  const last = sheddable().pop();
   if (!last) return false;
   const pl = last.userData.pointLight;
   if (pl) { last.remove(pl); pl.dispose?.(); last.userData.pointLight = null; }

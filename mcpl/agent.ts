@@ -782,7 +782,8 @@ export class WorldAgent {
     const eff = effectiveSky(this.skyState, nowMs, this.skyCursor);
     this.skyCursor = eff.cursor;
     const key = `${eff.source}:${eff.seg?.idx ?? "-"}:${eff.weather ?? "-"}`;
-    const phase = (this.skyState.rate ?? 0) !== 0 ? dayPhase(hoursAt(this.skyState, nowMs)) : null;
+    const advancing = (this.skyState.rate ?? 0) !== 0 || this.skyState.clock === "real";
+    const phase = advancing ? dayPhase(hoursAt(this.skyState, nowMs)) : null;
     if (this.lastSkyKey === null) {
       this.lastSkyKey = key;
       this.lastDayPhase = phase;

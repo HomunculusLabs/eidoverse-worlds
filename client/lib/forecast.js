@@ -21,11 +21,39 @@ export const WEATHERS = ['clear', 'fair', 'sunshower', 'overcast', 'rain', 'stor
 
 // ---------------------------------------------------------------- day clock
 
+// Wall-clock mode: `sky {clock: "real", tz: "America/Los_Angeles"}` makes the
+// world's hour BE the named timezone's hour — noon in the world is noon on
+// that clock, DST included (Intl owns the tz database; ECMA-402, present in
+// every runtime that folds a sky). Formatters are cached per tz: hoursAt runs
+// per frame under the sun. An unknown tz caches null and the rated clock
+// takes over — a typo dims nothing.
+const _tzFmt = new Map();
+function tzFormatter(tz) {
+  if (_tzFmt.has(tz)) return _tzFmt.get(tz);
+  let f = null;
+  try {
+    f = new Intl.DateTimeFormat('en-US', {
+      timeZone: tz, hour12: false, hour: 'numeric', minute: 'numeric', second: 'numeric',
+    });
+  } catch { /* unknown tz — remembered as null */ }
+  _tzFmt.set(tz, f);
+  return f;
+}
+
 /** The hour of day a sky's authored epoch implies at time `tMs`. This is THE
  *  formula — sky.js's sun and the fold's rebase both call it, which is what
- *  keeps a weather verb from snapping the day (see foldSkyEntry). */
+ *  keeps a weather verb from snapping the day (see foldSkyEntry). No ambient
+ *  Date.now() even in clock mode: the wall hour is derived from the caller's
+ *  tMs, so tests can freeze time and every plane derives identically. */
 export function hoursAt(sky, tMs) {
   if (!sky) return 12;
+  if (sky.clock === 'real') {
+    const f = tzFormatter(sky.tz ?? 'America/Los_Angeles');
+    if (f) {
+      const get = Object.fromEntries(f.formatToParts(new Date(tMs)).map((p) => [p.type, p.value]));
+      return (Number(get.hour) % 24) + Number(get.minute) / 60 + Number(get.second) / 3600;
+    }
+  }
   return ((sky.hours ?? 12) + (sky.rate ?? 0) * (tMs - (sky.ts ?? tMs)) / 3600e3 + 24000) % 24;
 }
 
@@ -242,7 +270,10 @@ export function describeSky(sky, nowMs) {
   if (!sky) return null;
   const bits = [];
   const rated = (sky.rate ?? 0) !== 0;
-  bits.push(`hour ${hoursAt(sky, nowMs).toFixed(1)}${rated ? ` (advancing ×${sky.rate})` : ''}`);
+  const real = sky.clock === 'real';
+  bits.push(`hour ${hoursAt(sky, nowMs).toFixed(1)}${real
+    ? ` (real time, ${sky.tz ?? 'America/Los_Angeles'})`
+    : rated ? ` (advancing ×${sky.rate})` : ''}`);
   const eff = effectiveSky(sky, nowMs);
   const mins = (t) => Math.max(0, Math.round((t - nowMs) / 60000));
   if (eff.source === 'forecast') {

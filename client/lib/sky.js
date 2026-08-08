@@ -775,7 +775,7 @@ export function updateSky(nowMs, t) {
   // same heartbeat to notice its segment boundaries. ~1Hz is plenty — even at
   // rate 24 the sun moves 0.1°/s, and the forecast's cursor makes each check
   // O(1) (never a re-walk from the policy epoch).
-  if (((clock?.args.rate ?? 0) !== 0 || clock?.args.forecast) && nowMs - lastClockTick > 1000) {
+  if (((clock?.args.rate ?? 0) !== 0 || clock?.args.clock === 'real' || clock?.args.forecast) && nowMs - lastClockTick > 1000) {
     lastClockTick = nowMs;
     render().catch((e) => report('sky clock', e));
   }
