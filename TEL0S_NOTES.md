@@ -418,9 +418,21 @@ fixture/tool matrix.
   **Spec/impl contradiction flagged**: PROTOCOL.md §3 says spawn is "no-op
   if id exists"; the reference fold overwrites. Per the spec's own rule the
   implementation wins until filed — raise with Skye/upstream. Legacy cases
-  stay intact behind the seam; they die at 3c cleanup. In-browser
-  validation: paritybench (CDP harness over Edge, in progress) on both
-  `?realize=1` and `=0` paths.
+  stay intact behind the seam; they die at 3c cleanup.
+- **2026-08-10 — the 3b gate is green: paritybench PASS on both paths.**
+  `tools/paritybench.ts` (Opus-built, verified first-hand): scratch
+  sequencer + headless Edge (real WebGPU adapter, no GPU flags needed) +
+  driven compfold recipe + `EW.foldParity()` read mid-sequence AND
+  post-teardown (end-only reads are vacuous — the comp-rich entity is
+  gone), with a spectator socket printing the server fold as witness.
+  Both seam paths pass with 0 diffs in every bucket, no seq gaps, boot
+  ~320–1100ms headless. The `?realize=0` pass is the true house-rule-1
+  mirror; the realizer pass guards the new writer. Also fixed en route:
+  the Windows "bun on PATH is an npm .cmd shim" spawn-leak (paritybench
+  spawns `process.execPath`; same latent leak patched in
+  `fp-snap-probe.ts`). Next: 3c — port the remaining realizers
+  (terrain/sky/grass), then delete the legacy cases and their machinery
+  (§11.5 table).
 - **2026-08-09 — 3a landed: the skeleton's pure half + shadow mode.**
   `client/lib/state.js` (world-as-data over `shared/fold.js`; sync,
   seq-guarded, subscriber-guarded) and `client/lib/scheduler.js` (the one
