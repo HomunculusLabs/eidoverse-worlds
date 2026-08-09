@@ -86,6 +86,119 @@ export const anyBuildsPending = () => buildDepth;
 let lastTerrainArgs = null;
 let lastGrassArgs = null;
 
+// ---- world-scope state application ------------------------------------------
+// One implementation, two drivers: the legacy applyEntry switch and the
+// environment realizer (realize/environment.js) both land here, so the
+// migration window cannot let them drift. When the switch dies (3c cleanup),
+// these keep their names.
+
+/** Build (or rebuild) the terrain from its authored bag. Dedupes by args so
+ *  a re-join replaying the same world does not regenerate identical ground. */
+export function applyTerrainState(args) {
+  if (!args) return;
+  const key = JSON.stringify(args);
+  if (lastTerrainArgs === key) return;
+  lastTerrainArgs = key;
+  enqueueWorldBuild('terrain', async () => {
+    await loadEidoModule('terrain.js');
+    const layers = (args.layers ?? []).map((l) => ({
+      map: noiseTexture(l.color ?? '#4a5d33'), repeat: l.repeat ?? 16,
+    }));
+    const t = globalThis.makeTerrain({ ...args, layers });
+    // compile the ground's pipelines BEFORE it enters the scene — an
+    // unprecompiled terrain material otherwise codegens synchronously
+    // inside the first render() that sees it. BOUNDED: this build GATES
+    // arrival, and on Safari one compile can cost seconds (measured
+    // 08-02: boot went 10.7s) — past the cap the ground arrives anyway
+    // and the still-running compile finishes warming it moments later.
+    if (t?.mesh) {
+      await Promise.race([
+        renderer.compileAsync(t.mesh, camera, scene).catch(() => {}),
+        new Promise((r) => setTimeout(r, 1200)),
+      ]);
+    }
+    setTerrain(t);
+    // re-seat only ground-level entities — anything with a meaningful y
+    // (seated on furniture, elevated) keeps its logged height
+    for (const [id, obj] of entities) {
+      if (obj && Math.abs(obj.position.y) < 0.02) {
+        obj.position.y = heightAt(obj.position.x, obj.position.z);
+        if (obj.userData.base) obj.userData.base.pos[1] = obj.position.y;
+        reindexCollider(id);
+      }
+    }
+  });
+}
+
+/** Grow (or mow) the grass field. Same dedupe-by-args contract. */
+export function applyGrassState(args) {
+  if (!args) return;
+  const key = JSON.stringify(args);
+  if (lastGrassArgs === key) return;
+  lastGrassArgs = key;
+  if (args.clear) { clearGrass(); return; }   // an empty field: mow it
+  enqueueWorldBuild('grass', async () => {
+    // yields the main thread to arrival; resolves instantly once booted
+    await whenBooted();
+    // vegetation brush (createFlora) — makeGrass's replacement upstream.
+    // Legacy makeGrass bags persisted in old world logs are mapped
+    // inside buildFloraField; the log itself is never rewritten.
+    const field = await buildFloraField(args, { scene, heightFn: heightAt });
+    // borrow the mesh back out for a precompile
+    // (compileAsync skips invisible objects, so hiding wouldn't work —
+    // detach, compile against the scene's lighting, re-add warm)
+    if (field?.mesh) {
+      const parent = field.mesh.parent;
+      parent?.remove(field.mesh);
+      await renderer.compileAsync(field.mesh, camera, scene).catch(() => {});
+      (parent ?? scene).add(field.mesh);
+    }
+    setGrass(field);
+  });
+}
+
+/** Apply an already-FOLDED sky bag (state.st.sky or foldSkyEntry output).
+ *  `ts` anchors live transition timing; a snapshot passes the bag's own. */
+export function applySkyFolded(bag, ts) {
+  if (!bag) return Promise.resolve();
+  return Promise.resolve(applySky(bag, ts ?? bag.ts)).catch((e) => report('sky', e));
+}
+
+/** An upload became part of this world's vocabulary: the palette grows for
+ *  everyone, live (broadcast) and forever (replay/snapshot for joiners). */
+export function applyAssetState(args) {
+  if (!args?.path) return;
+  libLabels.set(args.path, args.name ?? 'upload');
+  bus.emit('asset', { name: args.name ?? 'upload', path: args.path });
+}
+
+/** Mirror one role record so the UI can say what you are here, live.
+ *  Enforcement is the server's; narration is the LIVE driver's business
+ *  (legacy case or causes.js), not this mirror's. */
+export function applyGrantState(id, rec) {
+  const cur = worldRoles.get(id) ?? { role: 'visitor' };
+  worldRoles.set(id, {
+    role: rec.role ?? cur.role,
+    gen: rec.gen != null ? Boolean(rec.gen) : cur.gen,
+  });
+  bus.emit('roles', { id, ...worldRoles.get(id) });
+}
+
+/** Mirror one behavior binding (or its removal) into the roster mods.js
+ *  watches. `live` rides the bus event exactly as legacy did. */
+export function applyBehaviorState(id, rec, live = false) {
+  if (!rec) behaviors.delete(id);
+  else if (id && rec.src) {
+    behaviors.set(id, {
+      src: rec.src,
+      ...(rec.runtime ? { runtime: rec.runtime } : {}),
+      ...(rec.knobs ? { knobs: rec.knobs } : {}),
+      author: rec.author ?? rec.by ?? 'world',
+    });
+  }
+  bus.emit('behavior-roster', { live });
+}
+
 // ---- deferred shadow-in -----------------------------------------------------
 // Spawned objects come in without castShadow (see the spawn case). Once every
 // queued load has finished — or after a hard 30s fallback, so a world where
@@ -237,66 +350,12 @@ export async function applyEntry(entry, live, ctx = {}) {
         bus.emit('entity', { id: args.id, kind: 'remove' });
         break;
       }
-      case 'terrain': {
-        const key = JSON.stringify(args);
-        if (lastTerrainArgs === key) return;
-        lastTerrainArgs = key;
-        enqueueWorldBuild('terrain', async () => {
-          await loadEidoModule('terrain.js');
-          const layers = (args.layers ?? []).map((l) => ({
-            map: noiseTexture(l.color ?? '#4a5d33'), repeat: l.repeat ?? 16,
-          }));
-          const t = globalThis.makeTerrain({ ...args, layers });
-          // compile the ground's pipelines BEFORE it enters the scene — an
-          // unprecompiled terrain material otherwise codegens synchronously
-          // inside the first render() that sees it. BOUNDED: this build GATES
-          // arrival, and on Safari one compile can cost seconds (measured
-          // 08-02: boot went 10.7s) — past the cap the ground arrives anyway
-          // and the still-running compile finishes warming it moments later.
-          if (t?.mesh) {
-            await Promise.race([
-              renderer.compileAsync(t.mesh, camera, scene).catch(() => {}),
-              new Promise((r) => setTimeout(r, 1200)),
-            ]);
-          }
-          setTerrain(t);
-          // re-seat only ground-level entities — anything with a meaningful y
-          // (seated on furniture, elevated) keeps its logged height
-          for (const [id, obj] of entities) {
-            if (obj && Math.abs(obj.position.y) < 0.02) {
-              obj.position.y = heightAt(obj.position.x, obj.position.z);
-              if (obj.userData.base) obj.userData.base.pos[1] = obj.position.y;
-              reindexCollider(id);
-            }
-          }
-        });
+      case 'terrain':
+        applyTerrainState(args);
         break;
-      }
-      case 'grass': {
-        const key = JSON.stringify(args);
-        if (lastGrassArgs === key) return;
-        lastGrassArgs = key;
-        if (args.clear) { clearGrass(); break; }   // an empty field: mow it
-        enqueueWorldBuild('grass', async () => {
-          // yields the main thread to arrival; resolves instantly once booted
-          await whenBooted();
-          // vegetation brush (createFlora) — makeGrass's replacement upstream.
-          // Legacy makeGrass bags persisted in old world logs are mapped
-          // inside buildFloraField; the log itself is never rewritten.
-          const field = await buildFloraField(args, { scene, heightFn: heightAt });
-          // borrow the mesh back out for a precompile
-          // (compileAsync skips invisible objects, so hiding wouldn't work —
-          // detach, compile against the scene's lighting, re-add warm)
-          if (field?.mesh) {
-            const parent = field.mesh.parent;
-            parent?.remove(field.mesh);
-            await renderer.compileAsync(field.mesh, camera, scene).catch(() => {});
-            (parent ?? scene).add(field.mesh);
-          }
-          setGrass(field);
-        });
+      case 'grass':
+        applyGrassState(args);
         break;
-      }
       case 'sky':
         // The shared fold stamps forecast provenance the same way the server
         // does (synthetic pre-history entries pass through already stamped) —
@@ -314,10 +373,7 @@ export async function applyEntry(entry, live, ctx = {}) {
           { verb: 'weather', args, ts, seq: entry.seq, actor }), ts);
         break;
       case 'asset':
-        // An upload became part of this world's vocabulary: the palette grows
-        // for everyone, live (broadcast) and forever (replay for late joiners).
-        libLabels.set(args.path, args.name ?? 'upload');
-        bus.emit('asset', { name: args.name ?? 'upload', path: args.path });
+        applyAssetState(args);
         break;
       case 'say': {
         const isAgent = ctx.agents?.has(actor);
@@ -338,16 +394,11 @@ export async function applyEntry(entry, live, ctx = {}) {
       case 'grant': {
         // permissions are log entries like everything else — mirror them so
         // the UI can say what you are here, live. Enforcement is the server's.
-        const cur = worldRoles.get(args.id) ?? { role: 'visitor' };
-        worldRoles.set(args.id, {
-          role: args.role ?? cur.role,
-          gen: args.gen != null ? Boolean(args.gen) : cur.gen,
-        });
+        applyGrantState(args.id, args);
         if (live) {
           const bits = [args.role, args.gen != null ? (args.gen ? '+gen' : '-gen') : null].filter(Boolean);
           logChat('*', `${actor === 'world' ? 'the world' : actor} made ${args.id} ${bits.join(' ')}`);
         }
-        bus.emit('roles', { id: args.id, ...worldRoles.get(args.id) });
         break;
       }
       case 'ban': case 'unban': case 'kick': {
@@ -415,16 +466,7 @@ export async function applyEntry(entry, live, ctx = {}) {
         // the client's mirror of the binding roster: the QuickJS tier runs
         // server-side, but client-runtime MOD OFFERS (runtime: "client") are
         // consumed here — mods.js watches this map and asks the person.
-        if (args.remove) behaviors.delete(args.id);
-        else if (args.id && args.src) {
-          behaviors.set(args.id, {
-            src: args.src,
-            ...(args.runtime ? { runtime: args.runtime } : {}),
-            ...(args.knobs ? { knobs: args.knobs } : {}),
-            author: args.by ?? actor,
-          });
-        }
-        bus.emit('behavior-roster', { live });
+        applyBehaviorState(args.id, args.remove ? null : { ...args, author: args.by ?? actor }, live);
         break;
       case 'punt':
         // a cause, like force: folds to nothing, and live clients with a

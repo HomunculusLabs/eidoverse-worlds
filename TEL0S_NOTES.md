@@ -400,6 +400,25 @@ fixture/tool matrix.
   a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
   protocol types, then `fold.ts` (step 2b — server-side extraction first,
   fixture-tested; client adoption rides the state/realize skeleton).
+- **2026-08-10 — 3c ports landed: environment + social realizers, causes
+  dispatcher.** Terrain/grass/sky/weather/asset realize from the folded
+  singletons (`realize/environment.js` — thin, because the application
+  logic was EXTRACTED into world.js functions shared with the legacy
+  switch: one implementation, two drivers, zero migration drift). Roles,
+  behavior roster, and the arrival chat window realize from state
+  (`realize/social.js` — the state/tail chat-overlap dance is simply gone:
+  window from state once, live says via causes). Fold-inert verbs
+  (use/punt/force, moderation narration, live say) dispatch through
+  `realize/causes.js` off a `live-entry` bus event — causes are events,
+  not state, and the fold deliberately shapes nothing for them. Under
+  REALIZE the entire ordered replay loop in onSnapshot is skipped;
+  `?realize=0` still restores the legacy path wholesale. paritybench's
+  recipe now drives the owner-rank verbs (driver joins FIRST and owns the
+  world — refusals had made the first green run partially vacuous, caught
+  by reading the refusal lines) — PASS on both paths with terrain/grass/
+  sky/rain/grant/say exercised in-browser. Deletion of the legacy path
+  (applyEntry switch, stateToEntries, pendingOps/pendingMounts, the seam)
+  is the next commit, gated on an Opus review of this diff.
 - **2026-08-10 — 3b landed: the models realizer.** The whole flat entity-id
   namespace (`spawn/place/remove/light/comp/motion/mount/dismount`) is now
   realized FROM state when active: `realize/models_field.js` (pure planner,

@@ -10,11 +10,13 @@ import { applyEntry, stateToEntries } from './world.js';
 // measures drift between it and the legacy applyEntry path for the whole
 // migration window. Realizers start reading it at 3b.
 import { hydrate as shadowHydrate, foldLive as shadowFold, reset as shadowReset } from './state.js';
-// The models realizer (TEL0S_NOTES §11.4) owns the entity verbs when active:
-// it realizes them FROM state (which the shadow folds feed), so this file
-// must keep legacy applyEntry off them — one writer per verb, always.
-// ?realize=0 flips every seam below back to the legacy path.
-import { REALIZE, PORTED } from './realize/seam.js';
+// The realizers (TEL0S_NOTES §11.4) own the scene when active: state verbs
+// realize FROM the fold, and fold-inert causes (use/punt/force, moderation
+// narration, live say) dispatch over the bus as 'live-entry' (causes.js
+// listens — emitted rather than imported so this file adds no lap around
+// the net → chat → net cycle). One writer per verb, always; ?realize=0
+// flips every seam below back to the legacy applyEntry path wholesale.
+import { REALIZE } from './realize/seam.js';
 import { remotes, ensureRemote, dropRemote, pushPose, noteServerTime, noteSpeaking } from './remotes.js';
 import { logChat, logWhisper, noteTyping, noteHistoryContext } from './chat.js';
 import { composeFirstPerson } from './fp_view.js';
@@ -446,13 +448,14 @@ async function handle(msg) {
     case 'log':
       // shadow fold first, synchronously — seq-guarded, so the backlog
       // flush after hydration can never double-fold what landed here. When
-      // the realizer is active this IS the delivery for ported verbs: the
-      // fold event drives realization, and legacy applyEntry never sees them.
+      // the realizers are active this IS the delivery: the fold event
+      // drives state realization, and 'live-entry' carries the causes.
       shadowFold(msg.entry);
       if (hydrating) pendingLive.push(msg.entry);
       else if ((msg.entry.seq ?? -1) > lastSeq) {
         lastSeq = msg.entry.seq;
-        if (!(REALIZE && PORTED.has(msg.entry.verb))) await applyEntry(msg.entry, true);
+        if (REALIZE) bus.emit('live-entry', msg.entry);
+        else await applyEntry(msg.entry, true);
         if (msg.entry.verb === 'say') noteSpeaking(msg.entry.actor);
       }
       break;
@@ -578,15 +581,17 @@ async function onSnapshot(msg) {
   // lastSeq would let the backlog re-apply what state already holds.
   for (const e of msg.entries) if ((e.seq ?? -1) > lastSeq) lastSeq = e.seq;
   // A joiner is told the world as it IS (folded state) plus only what has
-  // happened since. Both halves go through the same applyEntry — minus the
-  // verbs the models realizer owns (it reconciled them from state the moment
-  // the shadow hydrated, scheduling loads by live camera distance).
+  // happened since. Under the realizers the whole ordered replay below is
+  // GONE: the shadow hydrate already reconciled every realizer from state
+  // (terrain enqueued and gating, model loads scheduled by live camera
+  // distance, chat window rendered), and live causes ride 'live-entry'.
+  // The legacy branch keeps the pre-skeleton path verbatim for ?realize=0.
+  if (!REALIZE) {
   const oldestTailSeq = msg.entries.length
     ? Math.min(...msg.entries.map((e) => e.seq ?? Infinity))
     : Infinity;
   const folded = stateToEntries(msg.state, { skipChatFromSeq: oldestTailSeq });
-  const replay = [...folded, ...msg.entries]
-    .filter((e) => !(REALIZE && PORTED.has(e.verb)));
+  const replay = [...folded, ...msg.entries];
   const removed = new Set(replay.filter((e) => e.verb === 'remove').map((e) => e.args?.id));
   const libs = new Set(replay
     .filter((e) => e.verb === 'spawn' && e.args?.lib && !removed.has(e.args.id))
@@ -597,8 +602,6 @@ async function onSnapshot(msg) {
   // a 13s boot, spent staring at a splash while a crate downloaded. Objects
   // materialising around you over the next few seconds is what this world does
   // anyway; the log's ORDER is what has to be respected, not its bytes.
-  // (Under the realizer, spawns are not in `replay` and this pool is empty —
-  // the scheduler's net lane is the warm path, priority-ordered.)
   parallelMap([...libs], (lib) => fetchBytes(`/library/${lib}`).catch(() => {}), 6);
 
   // Replay stays strictly ordered, but these verbs do not BLOCK the entries
@@ -626,12 +629,17 @@ async function onSnapshot(msg) {
   }
   // Let the tray, not the splash, carry the tail of the asset stream.
   Promise.all(settling).then(() => bus.emit('entities-settled'));
-  // flush the events that raced us, in order, once
+  }   // end of the legacy (!REALIZE) replay branch
+  // flush the events that raced us, in order, once. Their folds already
+  // landed at arrival (seq-guarded); under the realizers this delivers
+  // their live causes, after the hydration window so a raced say lands
+  // below the arrival chat window, not above it.
   const backlog = pendingLive.filter((e) => (e.seq ?? -1) > lastSeq).sort((a, b) => a.seq - b.seq);
   pendingLive = []; hydrating = false;
   for (const e of backlog) {
     lastSeq = e.seq;
-    if (!(REALIZE && PORTED.has(e.verb))) await applyEntry(e, true);
+    if (REALIZE) bus.emit('live-entry', e);
+    else await applyEntry(e, true);
   }
 
   const rc = msg.state?.recentChat ?? [];

@@ -15,6 +15,9 @@ import { updateSky, updateAutoSystems, skyArgs, skyImpl,
 import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
 import { foldParity } from './lib/parity.js';
 import { initModelsRealizer, reconcileModels } from './lib/realize/models.js';
+import { initEnvironmentRealizer } from './lib/realize/environment.js';
+import { initSocialRealizer } from './lib/realize/social.js';
+import { initCauses } from './lib/realize/causes.js';
 import { hasGrass, setGrassDensity, getGrassDensity } from './lib/terrain.js';
 // side-effecting: the `particles` component's host wires itself to the comp
 // and entity buses on import (it has no boot step of its own)
@@ -125,10 +128,14 @@ sun.shadow.camera.updateProjectionMatrix();
 
 setSkyArgsSource(skyArgs);
 setCameraCollisionTargets(liveEntities);
-// The models realizer projects entity state into the scene when active
-// (?realize=0 restores legacy applyEntry). Wired before connect() so the
-// hydrated event of the very first snapshot finds it listening.
+// The realizers project folded state into the scene when active
+// (?realize=0 restores legacy applyEntry wholesale). Wired before connect()
+// so the hydrated event of the very first snapshot finds them listening;
+// causes.js takes the fold-inert live verbs off the 'live-entry' bus.
 initModelsRealizer();
+initEnvironmentRealizer();
+initSocialRealizer();
+initCauses();
 
 // ---------------------------------------------------------------- boot
 

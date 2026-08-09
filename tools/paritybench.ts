@@ -415,6 +415,17 @@ async function runPass(name: string, extraParams: string): Promise<boolean> {
   const gapsBefore = seqGaps.length;
   console.log(`\n${bold(`── pass: ${name}`)}  ${dim(`world ${world}`)}`);
 
+  // The driver joins FIRST and owns the world (first embodied joiner):
+  // the 3c recipe drives owner-rank verbs (terrain/grass/sky/weather/
+  // grant), which a second joiner's builder rank cannot. The browser joins
+  // after, as a pure observer — every entry under test still arrives over
+  // the wire, not from the tab's own hand.
+  const driver = await joinSocket(world, "paritydriver").catch(async (e) => {
+    await die(2, `\n✗ ${e}`, `  sequencer log: ${SEQ_LOG}`);
+    return null as never;
+  });
+  console.log(`  driver joined first — owns the world`);
+
   const url = `${BASE}/?name=paritybot&world=${world}`
     + (TOKEN ? `&key=${encodeURIComponent(TOKEN)}` : "") + extraParams;
   console.log(`  navigating ${url}`);
@@ -464,15 +475,7 @@ async function runPass(name: string, extraParams: string): Promise<boolean> {
   // scene side is not still mid-load when the driver starts talking.
   await sleep(1500);
 
-  // The browser joined first, so IT owns this world; an unlisted second joiner
-  // in an owned world is a builder (server.ts rightsOf) — exactly the rank the
-  // build verbs need, and a second author is the point: the entries under test
-  // arrive over the wire, not from the tab's own hand.
-  const driver = await joinSocket(world, "paritydriver").catch(async (e) => {
-    await die(2, `\n✗ ${e}`, `  sequencer log: ${SEQ_LOG}`);
-    return null as never;
-  });
-  console.log(`  driver joined as builder — authoring`);
+  console.log(`  driver authoring (owner rank)`);
 
   await driver.verb("spawn", { id: "bench1", lib: LIB, pos: [0, 0, 0], yaw: 0 });
   await driver.verb("comp", { id: "bench1", type: "sockets", data: { seat: { pos: [0, 0.55, 0], yaw: 0, pose: "sitchair" } } });
@@ -488,6 +491,17 @@ async function runPass(name: string, extraParams: string): Promise<boolean> {
   await driver.verb("place", { id: "bench1", pos: [1.5, 0, 0.5], yaw: 1.1, scale: 1.2 });
   await driver.verb("light", { id: "lamp1", pos: [2, 2, 2], color: "#ffd9a0", intensity: 18, range: 9 });
   await driver.verb("light", { id: "lamp1", intensity: 30 });                             // partial UPDATE, not a respawn
+  // 3c — the environment/social/causes paths. The driver is the world's
+  // first embodied joiner and therefore its owner: terrain/grass/sky/grant
+  // are in rank. Bags mirror what the build panel actually sends; a page
+  // error from any of these fails the run (the console watch is armed).
+  await driver.verb("terrain", { seed: 7, size: 160, segments: 200, amplitude: 2.5, flatRadius: 16,
+    layers: [{ color: "#4a5d33", repeat: 16 }] });
+  await driver.verb("grass", { species: "grass", width: 90, depth: 80, center: [0, 0], height: 0.5 });
+  await driver.verb("sky", { hours: 9, rate: 0, clouds: "cumulus" });
+  await driver.verb("weather", { weather: "rain" });                                      // merges onto the standing sky
+  await driver.verb("grant", { id: "parityfriend", role: "builder", gen: true });         // roles mirror + narration
+  await driver.verb("say", { text: "parity check — rain over the bench" });               // chat line + recentChat fold
   await driver.verb("mount", { id: "paritydriver", to: "bench1", slot: "seat" });          // a BODY mount (self-rank)
 
   const mid = await readParity(`${name}: mid-sequence (bench alive, bag full, body seated)`);
