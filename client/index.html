@@ -456,6 +456,49 @@ body.touch #touch { display: block; }
   }
 }
 </script>
+<script>
+// The early socket (TEL0S_NOTES §4): open the wire and send the join NOW —
+// inline, zero imports, before the module graph is even requested — so the
+// snapshot downloads while the 2.1MB engine parses and the GPU wakes.
+// net.js ADOPTS this socket at connect() only if the join it sent is
+// byte-for-byte the one net would send; any mismatch closes it unadopted.
+// Inline rather than a file: a separate script would cost a blocking fetch
+// on exactly the RTT this exists to save. Eligibility is the common
+// returning-resident path only — first-run visitors get the door first,
+// spectators/renderers take the normal path, ?earlysock=0 disables.
+(() => {
+  try {
+    const params = new URLSearchParams(location.search);
+    if (params.get('earlysock') === '0') return;
+    if (params.has('spectate') || params.has('renderer') || params.has('mintthumbs')) return;
+    const name = params.get('name')
+      || (localStorage.getItem('ew-name-set') === '1' ? localStorage.getItem('ew-name') : null);
+    if (!name) return;   // the first-run door decides identity — never preempt it
+    const world = params.get('world') || 'commons';
+    const token = params.get('key') || localStorage.getItem('ew-key') || '';
+    const want = params.get('avatar') || localStorage.getItem('ew-avatar-name') || 'claude';
+    let avatar = want;   // a bare name: the server resolves it against the roster
+    try {
+      const c = JSON.parse(localStorage.getItem('ew-avatar-path') ?? 'null');
+      if (c && c.name === want && typeof c.path === 'string') avatar = c.path;
+    } catch (e) { /* a bare name is fine */ }
+    const sent = { world, id: name, avatar, token };
+    const ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`);
+    const stash = { ws, sent, buffered: [], failed: false, closeInfo: null };
+    globalThis.__ewEarlySocket = stash;
+    ws.onopen = () => ws.send(JSON.stringify({ type: 'join', world, id: name, avatar, spectate: false, renderer: false, token }));
+    ws.onmessage = (ev) => {
+      stash.buffered.push(ev.data);
+      if (stash.buffered.length > 5000) {   // a runaway stream: bail to the normal path
+        stash.failed = true;
+        try { ws.close(); } catch (e) { /* dying */ }
+      }
+    };
+    ws.onerror = () => { stash.failed = true; };
+    ws.onclose = (ev) => { stash.failed = true; stash.closeInfo = { code: ev.code, reason: ev.reason }; };
+  } catch (e) { /* the normal connect path exists precisely for this */ }
+})();
+</script>
 <!-- The engine is 2.1MB discovered at waterfall depth 3 (HTML -> main.js ->
      three.webgpu.js) unless declared here: modulepreload starts the fetch
      +parse the moment the HTML lands, in parallel with main.js and the GPU

@@ -400,6 +400,26 @@ fixture/tool matrix.
   a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
   protocol types, then `fold.ts` (step 2b — server-side extraction first,
   fixture-tested; client adoption rides the state/realize skeleton).
+- **2026-08-11 — step 4 complete: the early socket. The wire opens before
+  the engine wakes.** An inline zero-import script in index.html (inline
+  because a file would cost a blocking fetch on exactly the RTT it saves)
+  opens the WS and sends the join the moment the HTML lands; net.js ADOPTS
+  the socket at connect() only when the join it sent is byte-for-byte the
+  one net would send — any mismatch (rename at the door, avatar switch,
+  login flow) closes it unadopted and connects fresh. The early socket is
+  an optimization, never an authority. Eligibility is the returning-
+  resident path only (first-run visitors get the door; spectators/
+  renderers normal path; ?earlysock=0 disables). Buffered messages drain
+  in order before live delivery takes over, with the rewire synchronous
+  against the final empty check so nothing slips between. **Measured
+  (25mbit/40ms): connect/world at ~91ms vs ~341ms — the folded world and
+  its placeholders stand 3.7× earlier**; total stays bandwidth-bound
+  (unchanged), which is the honest shape: time-to-world-visible is the
+  win. Verified: paritybench PASS on an open door AND a tokened door
+  (JOIN_TOKEN env), reconnect leg exercising the no-stash fallback; the
+  wrong-key path falls back by construction to the pre-existing 4003
+  handling. §8 step 4 is done — next: step 5, the material factory +
+  lighting rig (Disease A).
 - **2026-08-11 — step 4, first slice: the boot path sheds its prologue and
   gains a placeholder tier.**
   - `modulepreload` for the static heavy graph (rapier excluded — dynamic);

@@ -279,13 +279,49 @@ export async function connect() {
   // re-login is silent while Discord still authorizes, so don't make them
   // rediscover the door.
   if (bounceToLogin()) return;
+  // The early socket (inline boot script in index.html): the HTML may have
+  // already opened the WS and sent this exact join while the module graph
+  // was still parsing — the snapshot downloaded DURING parse instead of
+  // after it. Adopt it only when the join it sent is byte-for-byte the one
+  // we would send now; on ANY mismatch (rename at the door, avatar switch,
+  // a login flow) close it and connect fresh. The early socket is an
+  // optimization, never an authority.
+  const early = globalThis.__ewEarlySocket;
+  globalThis.__ewEarlySocket = null;
+  if (early) {
+    const wantJoin = JSON.stringify({ world: CONFIG.world, id: CONFIG.name,
+      avatar: hooks.myAvatarPath(), token: CONFIG.token });
+    if (!early.failed && early.ws.readyState <= 1 && JSON.stringify(early.sent) === wantJoin) {
+      net.status = 'connecting';
+      bus.emit('net', net);
+      net.ws = early.ws;
+      retryDelay = 1200;
+      // Drain what raced ahead of us IN ORDER while the boot script's own
+      // buffering handler still catches anything arriving mid-drain; the
+      // rewire below is synchronous with the final empty check, so no
+      // message can slip between the two.
+      while (early.buffered.length) {
+        const raw = early.buffered.shift();
+        let msg;
+        try { msg = JSON.parse(raw); } catch { continue; }
+        try { await handle(msg); } catch (e) { report(`net ${msg.type}`, e); }
+      }
+      wireSocket(net.ws);   // live delivery takes over (onopen stays the boot script's)
+      return;
+    }
+    try { early.ws.close(); } catch { /* already dead */ }
+  }
   net.status = 'connecting';
   bus.emit('net', net);
   net.ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`);
-
   net.ws.onopen = () => { retryDelay = 1200; sendJoin(); };
+  wireSocket(net.ws);
+}
 
-  net.ws.onclose = (ev) => {
+/** close/error/message wiring, shared by a fresh connect and an adopted
+ *  early socket (the inline boot script in index.html — see connect()). */
+function wireSocket(ws) {
+  ws.onclose = (ev) => {
     net.joined = false;
     if (intentionalClose) { intentionalClose = false; return; } // rejoin() drives its own reconnect
     // 4002 = session takeover: this identity re-arrived elsewhere. Retrying
@@ -338,9 +374,9 @@ export async function connect() {
     retryDelay = Math.min(15000, retryDelay * 1.6); // back off instead of hammering
   };
 
-  net.ws.onerror = () => { /* onclose always follows; nothing useful here */ };
+  ws.onerror = () => { /* onclose always follows; nothing useful here */ };
 
-  net.ws.onmessage = async (ev) => {
+  ws.onmessage = async (ev) => {
     let msg;
     try { msg = JSON.parse(ev.data); } catch { return; }
     try { await handle(msg); } catch (e) { report(`net ${msg.type}`, e); }
