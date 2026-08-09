@@ -400,6 +400,47 @@ fixture/tool matrix.
   a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
   protocol types, then `fold.ts` (step 2b — server-side extraction first,
   fixture-tested; client adoption rides the state/realize skeleton).
+- **2026-08-10 — 3c review round: deletion held, gate upgraded, blockers
+  fixed.** The adversarial Opus review returned 3 blockers + 9 should-fixes
+  (and a long checked-and-clean list confirming the core: the gen guard,
+  the pendingOps-retirement trick, boot gating, backlog ordering, comp
+  re-emission idempotence, `?realize=0` end-to-end). Landed in response:
+  - **Gate first**: parity gained `parentDiffs` + `mountPoseDiffs` buckets
+    and paritybench a **reconnect leg** (close the page socket, rejoin,
+    re-read parity over the live scene) plus refusals-fail-the-pass. Run
+    against the unfixed tree it CAUGHT B1 (1 mountPose diff after
+    reconnect) — the gate is proven, not assumed.
+  - **B1**: `refreshModel` no longer applies the fold's absolute pose to a
+    MOUNTED child (the mount owns the transform; the dismount stamp brings
+    the fold's word back). §11.4's reconcile∘reconcile=reconcile is true
+    again.
+  - **B2** (deliberate behavior change): under the realizers the arrival
+    window is exactly `state.recentChat` (≤40 fairness-trimmed lines);
+    tail says beyond it are not replayed — they are PAGEABLE, and `shown`
+    now counts what was actually rendered so the "showing N of M" hint
+    appears exactly when lines are elsewhere. Fits the rev-4 no-backscroll
+    direction; legacy path unchanged.
+  - **S2**: `logChat` dedupes by real seq — a reconnect re-render of the
+    window is a no-op (synthetic/negative-seq lines exempt).
+  - **S3**: deferred shadow-in re-arms off `scheduler.onIdle(P.FAR)` so the
+    one-caster-per-beat drain waits for the realizer's loads, not
+    loadwork's now-quiet lanes.
+  - **S4**: the realizer's `reset` retires every tracked id (scene teardown,
+    not just bookkeeping) — world switch without reload is safe.
+  - **S5**: a `sockets` comp arriving AFTER a mount re-seats the riders
+    (resolved socket is part of the linkage identity).
+  - **S6** (deliberate): `applyGrantState` defaults unlisted ids to
+    `builder`, matching the fold and the server — the HUD stops lying.
+  - Verified: paritybench full PASS both paths × 3 reads each (mid,
+    post-reconnect, post-teardown), all suites green.
+  **Deletion remains held on**: S8 (mcpl agent's `stateToEntries` mirror —
+  port the agent onto shared/fold + a shared stateToEntries, next slice),
+  S9 (the PROTOCOL.md §3 spawn no-op-vs-overwrite contradiction — needs
+  the upstream conversation before we delete the spec-conforming side),
+  and a real-session soak. Deferred smaller items: S1 (spoken-say metadata
+  in recentChat — needs a server fold change), S7 (tuner-preview + weather
+  test), world-phase progress from `scheduler.pending()`, per-comp clone
+  cost, reconnect event-storm nit.
 - **2026-08-10 — 3c ports landed: environment + social realizers, causes
   dispatcher.** Terrain/grass/sky/weather/asset realize from the folded
   singletons (`realize/environment.js` — thin, because the application

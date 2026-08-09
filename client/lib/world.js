@@ -176,7 +176,11 @@ export function applyAssetState(args) {
  *  Enforcement is the server's; narration is the LIVE driver's business
  *  (legacy case or causes.js), not this mirror's. */
 export function applyGrantState(id, rec) {
-  const cur = worldRoles.get(id) ?? { role: 'visitor' };
+  // default matches the FOLD's (shared/fold.js grant case): an unlisted id
+  // in an owned world is a builder, so `/grant bob +gen` doesn't silently
+  // demote bob to visitor. The old 'visitor' default here disagreed with
+  // what the server actually granted (review S6) — the HUD lied.
+  const cur = worldRoles.get(id) ?? { role: 'builder' };
   worldRoles.set(id, {
     role: rec.role ?? cur.role,
     gen: rec.gen != null ? Boolean(rec.gen) : cur.gen,

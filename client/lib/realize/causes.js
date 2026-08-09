@@ -17,7 +17,7 @@
 
 import { bus } from '../core.js';
 import { logChat } from '../chat.js';
-import { REALIZE } from './seam.js';
+import { REALIZE, STATE_VERBS } from './seam.js';
 
 export function handleLiveCause(entry) {
   const { verb, args = {}, actor } = entry;
@@ -57,6 +57,10 @@ export function handleLiveCause(entry) {
       logChat('*', `${actor} ${what} ${args.id}${verb !== 'unban' && args.reason ? ` — ${args.reason}` : ''}`);
       return;
     }
+    default:
+      // state verbs realized elsewhere are not "unhandled"; anything else
+      // keeps the forward-compat trace legacy's default case had
+      if (!STATE_VERBS.has(verb)) console.debug('unhandled verb', verb, args);
   }
 }
 

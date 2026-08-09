@@ -34,7 +34,7 @@ import { attachLocalLights } from '../sky.js';
 import { makeLight, updateLight, disposeLight } from '../lights.js';
 import { entities, entityMeta, comps, avatarMounts, findPart, markShadowless, unmarkShadowless } from '../world.js';
 import { state, onWorldChange } from '../state.js';
-import { schedule, cancelOwner } from '../scheduler.js';
+import { schedule, cancelOwner, onIdle, P } from '../scheduler.js';
 import { planReconcile, bandForDistance, mountsTouching } from './models_field.js';
 import { PORTED, REALIZE } from './seam.js';
 
@@ -105,6 +105,13 @@ function realizeModel(id, cur, obj) {
   emitCompBag(id);
   // mounts that were waiting on this id — as child or carrier
   for (const mid of mountsTouching(state.st.entities, id)) execMount(mid);
+  // deferred shadow-in must wait for the SCHEDULER's loads, not loadwork's
+  // lanes: under the realizer the byte fetches live here, and loadwork's
+  // lanes go quiet while five models are still arriving — which started the
+  // one-caster-per-beat drain mid-load, stacking exactly the depth-pipeline
+  // compiles it exists to spread (review S3). Re-armed per realize: onIdle
+  // is one-shot, and firing 'lanes-idle' re-uses the drain's own wiring.
+  onIdle(() => bus.emit('lanes-idle'), P.FAR);
 }
 
 function createLight(id, ent) {
@@ -124,12 +131,18 @@ function createLight(id, ent) {
 function refreshModel(id, ent) {
   const obj = entities.get(id);
   if (!obj || obj.userData?.isLight) return;   // loading: completion reads state
-  if (ent.pos) obj.position.set(...ent.pos);
-  if (ent.yaw != null) obj.rotation.y = ent.yaw;
-  if (ent.scale != null) obj.scale.setScalar(ent.scale);
+  // A MOUNTED child's transform is parent-relative; ent.pos is the fold's
+  // absolute pre-mount pose, and applying it here would seat the cargo 3m
+  // off in the carrier's frame on every reconnect reconcile (review B1 —
+  // the mount-pose parity bucket exists because this line got it wrong).
+  // While mounted, the mount owns the transform; the dismount stamp will
+  // bring the fold's word back when the ride ends.
   if (!obj.userData.mountedTo) {
+    if (ent.pos) obj.position.set(...ent.pos);
+    if (ent.yaw != null) obj.rotation.y = ent.yaw;
     obj.userData.base = { pos: obj.position.toArray(), yaw: obj.rotation.y };
   }
+  if (ent.scale != null) obj.scale.setScalar(ent.scale);
   refitCollider(id);   // rescale can cross the room-scale threshold
   bus.emit('entity', { id, kind: 'place' });
 }
@@ -193,6 +206,15 @@ function onComp(id, type) {
   syncComps(id);
   const data = comps.get(id)?.[type] ?? null;
   if (type === 'motion' && data == null) restAtBase(id);
+  // a sockets change re-seats everything riding this carrier — a mount that
+  // landed BEFORE its socket was authored glued to the origin, and the
+  // socket's arrival is what makes it right (review S5; the relKey includes
+  // the resolved socket for exactly this)
+  if (type === 'sockets') {
+    for (const [cid, ent] of Object.entries(state.st.entities)) {
+      if (ent.parent?.to === id) execMount(cid);
+    }
+  }
   bus.emit('comp', { id, type, data });
 }
 
@@ -226,9 +248,11 @@ function execMount(id) {
   const child = entities.get(id);
   const parent = entities.get(rel.to);
   if (!child || !parent) return;
-  const relKey = JSON.stringify(rel);
-  if (child.userData.mountRel === relKey) return;   // already exactly this
   const sock = rel.slot ? state.st.entities[rel.to]?.comp?.sockets?.[rel.slot] : null;
+  // the RESOLVED socket is part of the linkage's identity: a socket authored
+  // after the mount must re-seat the rider, not be ignored (review S5)
+  const relKey = JSON.stringify([rel, sock ?? null]);
+  if (child.userData.mountRel === relKey) return;   // already exactly this
   const off = rel.offset ?? sock?.pos ?? [0, 0, 0];
   parent.add(child);   // transform becomes parent-relative
   child.position.set(...off);
@@ -356,8 +380,10 @@ export function initModelsRealizer() {
   onWorldChange((ev) => {
     if (ev.type === 'hydrated') reconcileModels();
     else if (ev.type === 'reset') {
-      for (const id of tracked.keys()) cancelOwner(`entity:${id}`);
-      tracked.clear();
+      // a real teardown, not just bookkeeping: leaving the scene populated
+      // while tracked empties means the next hydrate re-creates every id ON
+      // TOP of its orphaned twin (review S4 — world switch without reload)
+      for (const id of [...tracked.keys()]) retire(id);
     } else if (ev.type === 'entry' && PORTED.has(ev.entry.verb)) onEntry(ev.entry);
   });
   return true;

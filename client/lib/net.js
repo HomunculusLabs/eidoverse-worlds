@@ -645,7 +645,14 @@ async function onSnapshot(msg) {
   const rc = msg.state?.recentChat ?? [];
   noteHistoryContext({
     total: msg.state?.chatTotal ?? null,
-    shown: rc.length + msg.entries.filter((e) => e.verb === 'say').length,
+    // what was ACTUALLY rendered: under the realizers the window is exactly
+    // state.recentChat (tail says beyond its 40-line cap are not re-played —
+    // they are fetchable by paging, and this count is what makes the
+    // "showing N of M" hint appear so a reader knows to page). Legacy also
+    // rendered the tail's says, so it counts both (review B2 — the old
+    // double-count suppressed the hint precisely when lines were missing).
+    shown: REALIZE ? rc.length
+      : rc.length + msg.entries.filter((e) => e.verb === 'say').length,
     spanMs: rc.length > 1 ? rc[rc.length - 1].ts - rc[0].ts : null,
   });
 

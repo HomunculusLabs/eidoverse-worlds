@@ -168,7 +168,18 @@ async function loadOlder() {
 
 const pad2 = (n) => String(n).padStart(2, '0');
 
+// Every seq this log has already rendered: a reconnect re-hydrates the world
+// and the social realizer re-renders the arrival window from state — the
+// SAME lines, same seqs. Idempotence lives here rather than in the realizer
+// because seq identity is chat's own concept (synthetic lines carry none and
+// are exempt — they were never positions in history).
+const renderedSeqs = new Set();
+
 export function logChat(who, text, kind = '', meta = {}) {
+  if (typeof meta.seq === 'number' && meta.seq >= 0) {
+    if (renderedSeqs.has(meta.seq)) return;
+    renderedSeqs.add(meta.seq);
+  }
   noteSeq(meta.seq);
   // Spoken-utterance merge: merges ONLY the continuation of one spoken
   // utterance — spoken:true + same author + same utt (Sol review, PR#7).

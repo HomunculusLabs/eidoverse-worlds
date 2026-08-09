@@ -14,3 +14,8 @@ export const PORTED = new Set(['spawn', 'place', 'remove', 'light', 'comp', 'mot
 
 /** ?realize=0 — the migration window's kill switch. */
 export const REALIZE = CONFIG.params.get('realize') !== '0';
+
+/** Everything realized from folded state (entity verbs plus the world-scope
+ *  and social singletons) — the set causes.js treats as "handled elsewhere"
+ *  when deciding what deserves an unhandled-verb trace. */
+export const STATE_VERBS = new Set([...PORTED, 'terrain', 'grass', 'sky', 'weather', 'asset', 'grant', 'behavior']);

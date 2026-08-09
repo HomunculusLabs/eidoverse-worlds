@@ -21,7 +21,7 @@ export function foldParity() {
   const shadow = state.st;
   const out = { hydrated: state.hydrated, lastSeq: state.lastSeq,
     checked: 0, onlyShadow: [], onlyLegacy: [], compDiffs: [], mountDiffs: [],
-    identityDiffs: [] };
+    identityDiffs: [], parentDiffs: [], mountPoseDiffs: [] };
 
   const legacyIds = new Set(entities.keys());
   const shadowIds = new Set(Object.keys(shadow.entities));
@@ -51,6 +51,30 @@ export function foldParity() {
     }
   }
 
+  // entity→entity mounts: the fold's parent record vs the scene's linkage —
+  // AND, when linked, the child's parent-local transform vs the mount's own
+  // offset. The link can be right while the pose is wrong (a reconcile that
+  // re-applies an absolute pos in the parent's frame — review finding B1),
+  // so both are buckets. Part-socket mounts skip the pose check: attach
+  // bakes the part's live phase into the offset, honestly.
+  for (const id of shadowIds) {
+    if (!legacyIds.has(id)) continue;
+    const rel = shadow.entities[id].parent ?? null;
+    const obj = entities.get(id);
+    if (!obj) continue;                      // still loading — linkage realizes with it
+    const got = obj.userData?.mountedTo ?? null;
+    const want = rel?.to ?? null;
+    if (want !== got) { out.parentDiffs.push({ id, legacy: got, shadow: want }); continue; }
+    if (rel && got) {
+      const sock = rel.slot ? shadow.entities[rel.to]?.comp?.sockets?.[rel.slot] : null;
+      if (!sock?.part) {
+        const off = rel.offset ?? sock?.pos ?? [0, 0, 0];
+        const d = Math.hypot(obj.position.x - off[0], obj.position.y - off[1], obj.position.z - off[2]);
+        if (d > 0.05) out.mountPoseDiffs.push({ id, expected: off, actual: obj.position.toArray(), d: +d.toFixed(3) });
+      }
+    }
+  }
+
   // body mounts: world.js's avatarMounts map vs the fold's mounts record
   const shadowMounts = shadow.mounts ?? {};
   const legacyMounts = avatarMounts instanceof Map ? Object.fromEntries(avatarMounts) : (avatarMounts ?? {});
@@ -61,11 +85,13 @@ export function foldParity() {
   }
 
   out.ok = !out.onlyShadow.length && !out.onlyLegacy.length
-    && !out.compDiffs.length && !out.mountDiffs.length && !out.identityDiffs.length;
+    && !out.compDiffs.length && !out.mountDiffs.length && !out.identityDiffs.length
+    && !out.parentDiffs.length && !out.mountPoseDiffs.length;
   console.log(`[parity] ${out.ok ? '✓ fold and scene agree' : '✗ DRIFT'} — ` +
     `${out.checked} entities checked, +${out.onlyShadow.length} shadow-only, ` +
     `+${out.onlyLegacy.length} legacy-only, ${out.compDiffs.length} comp diffs, ` +
-    `${out.mountDiffs.length} mount diffs, ${out.identityDiffs.length} identity diffs ` +
+    `${out.mountDiffs.length} mount diffs, ${out.identityDiffs.length} identity diffs, ` +
+    `${out.parentDiffs.length} parent diffs, ${out.mountPoseDiffs.length} mount-pose diffs ` +
     `(seq ${out.lastSeq})`);
   return out;
 }

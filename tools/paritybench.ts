@@ -506,6 +506,25 @@ async function runPass(name: string, extraParams: string): Promise<boolean> {
 
   const mid = await readParity(`${name}: mid-sequence (bench alive, bag full, body seated)`);
 
+  // Reconnect leg (review finding B3): re-hydration over a LIVE scene is the
+  // reconcile ∘ reconcile = reconcile contract (§11.4), and it is exactly
+  // where a non-idempotent realizer shows — the crate must still sit at its
+  // mount offset afterwards, not at its pre-mount absolute pose re-applied
+  // in the carrier's frame. Close the page's socket; the client's own retry
+  // rejoins and hydrates again.
+  await evalJson(`(EW.net.ws.close(), true)`);
+  let rejoined = false;
+  for (let i = 0; i < 60 && !rejoined; i++) {
+    await sleep(500);
+    rejoined = await evalJson(`!!(EW.net && EW.net.joined === true)`).catch(() => false);
+  }
+  if (!rejoined) {
+    await die(1, `\n✗ the client never rejoined after the forced reconnect (pass ${name})`,
+      `  sequencer log: ${SEQ_LOG}`);
+  }
+  await sleep(2000);   // let the second reconcile settle
+  const re = await readParity(`${name}: after reconnect (reconcile over a live scene)`);
+
   // Non-vacuity receipt, from the SERVER's own fold: a third socket joins and
   // its snapshot says what the browser was actually asked to agree about.
   // "3 entities checked, 0 diffs" only means something if one of those three
@@ -546,7 +565,10 @@ async function runPass(name: string, extraParams: string): Promise<boolean> {
   }
   eye?.close();
   driver.close();
-  return Boolean(mid.p.ok) && Boolean(post.p.ok) && !vacuous && !gaps.length;
+  // Driver refusals fail the pass outright: the vacuous-green incident (the
+  // owner-rank verbs silently bouncing) is exactly one unread refusal away.
+  return Boolean(mid.p.ok) && Boolean(re.p.ok) && Boolean(post.p.ok)
+    && !vacuous && !gaps.length && !driver.errors.length;
 }
 
 // ---- 7. both sides, then the verdict ---------------------------------------
