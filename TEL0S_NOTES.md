@@ -400,6 +400,19 @@ fixture/tool matrix.
   a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
   protocol types, then `fold.ts` (step 2b — server-side extraction first,
   fixture-tested; client adoption rides the state/realize skeleton).
+- **2026-08-09 — 3a landed: the skeleton's pure half + shadow mode.**
+  `client/lib/state.js` (world-as-data over `shared/fold.js`; sync,
+  seq-guarded, subscriber-guarded) and `client/lib/scheduler.js` (the one
+  loader: keys/owners/lanes with the measured caps, band priorities
+  re-read at dequeue, cancellation, `onIdle` — no timeouts), both DOM-free
+  and headless-tested (`tools/state-test.ts` 19/19,
+  `tools/scheduler-test.ts` 9/9). `net.js` now folds every snapshot and
+  live entry into the shadow alongside the legacy path — adopting today's
+  live-folded server state without double-folding the overlap tail — and
+  `EW.foldParity()` (`client/lib/parity.js`) prints drift between the
+  shared fold and legacy `applyEntry` on demand: ids, comp bags, mounts.
+  Nothing consumes the shadow yet; 3b (models realizer) is next. Full
+  suite re-verified: foldfix 12/12 · comptest 33/33.
 - **2026-08-09 — the fold moved to `shared/fold.js`** (sequence step 2,
   second slice): `foldEntry`, `emptyState`, `trimRecentChat`, `ROLE_RANK`,
   and the `LogEntry`/`WorldState` shapes (as JSDoc typedefs — no-build

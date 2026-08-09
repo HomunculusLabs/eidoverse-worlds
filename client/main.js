@@ -13,6 +13,7 @@ import { contributeThumbnail, makeAvatar, EMOTE_ORDER, EMOTES } from './lib/avat
 import { updateSky, updateAutoSystems, skyArgs, skyImpl,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './lib/sky.js';
 import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
+import { foldParity } from './lib/parity.js';
 import { hasGrass, setGrassDensity, getGrassDensity } from './lib/terrain.js';
 // side-effecting: the `particles` component's host wires itself to the comp
 // and entity buses on import (it has no boot step of its own)
@@ -1198,6 +1199,7 @@ globalThis.EW = {
   lease: leaseApi,   // the entity-lease surface runtime plugins script against
   mods: modsApi,     // load/run/offer runtime client scripts (🧩)
   bodysim: { engine: bodyEngine, setEngine: setBodyEngine },  // swappable body physics
+  foldParity,        // shadow-mode drift probe (TEL0S_NOTES §11.6)
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)

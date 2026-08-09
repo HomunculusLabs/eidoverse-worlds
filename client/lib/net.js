@@ -4,6 +4,12 @@
 import { THREE, CONFIG, camera, scene, renderer, report, bus, parallelMap } from './core.js';
 import { fetchBytes, forgetBytes } from './assets.js';
 import { applyEntry, stateToEntries } from './world.js';
+// Shadow state (TEL0S_NOTES §11.6): every snapshot and live entry also folds
+// into the pure world-as-data model — synchronously, through the same
+// shared/fold.js the sequencer runs. Nothing consumes it yet; EW.foldParity()
+// measures drift between it and the legacy applyEntry path for the whole
+// migration window. Realizers start reading it at 3b.
+import { hydrate as shadowHydrate, foldLive as shadowFold, reset as shadowReset } from './state.js';
 import { remotes, ensureRemote, dropRemote, pushPose, noteServerTime, noteSpeaking } from './remotes.js';
 import { logChat, logWhisper, noteTyping, noteHistoryContext } from './chat.js';
 import { composeFirstPerson } from './fp_view.js';
@@ -433,6 +439,9 @@ async function handle(msg) {
       break;
 
     case 'log':
+      // shadow fold first, synchronously — seq-guarded, so the backlog
+      // flush after hydration can never double-fold what landed here
+      shadowFold(msg.entry);
       if (hydrating) pendingLive.push(msg.entry);
       else if ((msg.entry.seq ?? -1) > lastSeq) {
         lastSeq = msg.entry.seq;
@@ -472,6 +481,7 @@ async function handle(msg) {
       // path is the one rebuild that cannot disagree with the server.
       toast(`${msg.by} reset "${msg.world}" to zero — reloading…`, 'warn', 4000);
       logChat('*', `${msg.by} reset this world to zero`);
+      shadowReset();
       setTimeout(() => location.reload(), 1800);
       break;
     }
@@ -542,6 +552,16 @@ async function onSnapshot(msg) {
       .then(() => { if (p.pose) pushPose(p.id, p.pose); })
       .catch((e) => report(`present ${p.id}`, e));
   }
+
+  // Shadow state adopts the snapshot FIRST, synchronously — before the
+  // legacy replay's first await can let a live entry interleave. Today's
+  // server sends live-folded state (it already contains the tail's effects;
+  // the tail rides along for the chat overlap), so the shadow folds nothing
+  // twice: it marks the highest covered seq and lets foldLive take over.
+  shadowHydrate(msg.state, [], Math.max(
+    typeof msg.throughSeq === 'number' ? msg.throughSeq : -1,
+    ...(msg.entries?.length ? msg.entries.map((e) => e.seq ?? -1) : [-1]),
+  ));
 
   // Warm the bytes for every still-live spawn in parallel BEFORE the ordered
   // replay — join time becomes the slowest asset, not the sum of all of them.
