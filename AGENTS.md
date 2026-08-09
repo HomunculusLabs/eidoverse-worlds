@@ -338,9 +338,12 @@ client-side behavior — are code. Pull the repo, then:
 
 House rules, learned the hard way (each one is a past incident):
 
-1. **The fold is sacred.** `foldEntry` (server) and `applyEntry` (client)
-   must agree, and both must stay pure functions of the log. If they drift,
-   joiners see a world that never existed.
+1. **The fold is sacred.** The reference `foldEntry` now lives in
+   `shared/fold.js` (one copy, imported by the sequencer; conformance:
+   `bun tools/foldfix-test.ts` against `spec/fixtures/`). The client's
+   `applyEntry` must agree with it until it, too, consumes the shared fold —
+   and both must stay pure functions of the log. If they drift, joiners see
+   a world that never existed.
 2. **Mirrored math stays mirrored.** `pendulumImpulse` (server) and
    `pendulumTheta` (client/lib/motion.js) implement the same physics — a
    change to one without the other makes the pushed swing disagree with the

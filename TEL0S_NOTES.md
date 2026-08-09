@@ -400,6 +400,20 @@ fixture/tool matrix.
   a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
   protocol types, then `fold.ts` (step 2b — server-side extraction first,
   fixture-tested; client adoption rides the state/realize skeleton).
+- **2026-08-09 — the fold moved to `shared/fold.js`** (sequence step 2,
+  second slice): `foldEntry`, `emptyState`, `trimRecentChat`, `ROLE_RANK`,
+  and the `LogEntry`/`WorldState` shapes (as JSDoc typedefs — no-build
+  doctrine) extracted verbatim from `server/server.ts`, comments included;
+  the server imports them back. The extraction is pinned by a new
+  conformance runner, `tools/foldfix-test.ts`, which folds
+  `spec/fixtures/*/log.jsonl` with the shared fold and applies the spec's
+  own comparison rule — the runner PROTOCOL.md §11 promised but nothing
+  implemented. Verified: foldfix 12/12 · comptest 33/33 · compfold 24/24 ·
+  permtest unchanged vs baseline. House rule 1 in AGENTS.md updated: the
+  server side of the mirror is retired; the client's `applyEntry` adopts
+  the shared fold with the state/realize skeleton (step 3).
+- **2026-08-09 — landmines 1 and 2 fixed** (`sendAnim` import; house rule 3
+  guards on `open`/`close` and the module-level intervals). Both pushed.
 - **2026-08-09 — incident ledger landed** (sequence step 1):
   `docs/INCIDENTS.md`, 475 entries across 11 subsystem sections — every
   measured-incident comment in the tree, numbers verbatim, plus the
