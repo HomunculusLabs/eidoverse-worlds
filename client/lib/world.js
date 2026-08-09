@@ -12,7 +12,7 @@ import { fitCollider, removeCollider, reindexCollider, refitCollider } from './c
 import { setTerrain, setGrass, clearGrass, heightAt } from './terrain.js';
 import { buildFloraField } from './flora.js';
 import { applySky, attachLocalLights } from './sky.js';
-import { foldSkyEntry } from './forecast.js';
+import { foldSkyEntry } from '../../shared/forecast.js';
 import { makeLight, updateLight, disposeLight } from './lights.js';
 import { logChat } from './chat.js';
 import { whenBooted } from './boot.js';

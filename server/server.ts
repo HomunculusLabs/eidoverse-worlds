@@ -13,10 +13,10 @@ import { BehaviorHost, wireBehaviorGate, wireBehaviorStore, behaviorLimits, type
 import { summarizeGlb } from "./geometry.ts";
 // Pure and dependency-free — the same fold the browser client and the mcpl
 // agent run, which is what keeps all three planes' skies in agreement.
-import { foldSkyEntry } from "../client/lib/forecast.js";
+import { foldSkyEntry } from "../shared/forecast.js";
 // Likewise for the `particles` component: one validator, so the flight
 // recorder's opinion about an emitter is the renderer's own opinion.
-import { normalizeParticles } from "../client/lib/particles.js";
+import { normalizeParticles } from "../shared/particles.js";
 
 const PORT = Number(process.env.PORT ?? 8940);
 // Show-night door policy. Empty = open (dev on a tailnet). On a public box you
@@ -1815,6 +1815,12 @@ const server = Bun.serve({
     }
     if (url.pathname.startsWith("/node_modules/"))
       return serveFrom(join(ROOT, "client"), url.pathname.slice(1), true, req);
+    // shared/ — modules every runtime folds with (see shared/README.md). Code,
+    // so it gets the client-code caching policy: no-store, never heuristically
+    // stale. Client files reach it as ../../shared/…, which clamps to /shared/
+    // in a browser and resolves to the repo root on disk.
+    if (url.pathname.startsWith("/shared/"))
+      return serveFrom(join(ROOT, "shared"), url.pathname.slice("/shared/".length), false, req);
     if (url.pathname === "/client-version") {
       // A marker the renderer watchdog polls: the newest mtime across the
       // client files. A deploy (or a dev edit) moves it, so a hung-uptime-free

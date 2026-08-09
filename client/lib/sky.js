@@ -19,7 +19,7 @@ import { markPhase, whenBooted } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake,
   envTexture, adoptEnvironment } from './sky_baked.js';
 import { holdFrames, holdObjectCompiles, beginWork } from './loadwork.js';
-import { WEATHERS, effectiveSky, hoursAt } from './forecast.js';
+import { WEATHERS, effectiveSky, hoursAt } from '../../shared/forecast.js';
 // Who owns which per-frame hook. The sky claims by diffing a GLOBAL array
 // around its own async build; anything another subsystem marks as its own is
 // off limits, whenever it appeared.
@@ -137,7 +137,7 @@ Object.defineProperty(globalThis, 'makeSkySystem', {
 // The canonical weather list lives in forecast.js (pure, shared with the
 // sequencer fold and the mcpl agent) — re-exported here so existing importers
 // keep their path.
-export { WEATHERS } from './forecast.js';
+export { WEATHERS } from '../../shared/forecast.js';
 export const CLOUDS = ['clear', 'cumulus', 'stratus', 'cirrus'];
 // Only `earth` is offered.
 //

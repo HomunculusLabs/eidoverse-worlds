@@ -30,7 +30,7 @@
 import { THREE, scene, bus } from './core.js';
 import { loadEidoModule, primeFiles } from './assets.js';
 import { entities } from './world.js';
-import { normalizeParticles, resolvedCount, withSeededRandom, QUALITY_TIERS } from './particles.js';
+import { normalizeParticles, resolvedCount, withSeededRandom, QUALITY_TIERS } from '../../shared/particles.js';
 import { makeEmitterRegistry, retireEmitter, adoptSystem } from './emitter_field.js';
 import { autoHooks as autos, ownHook } from './autohooks.js';
 

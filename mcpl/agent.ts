@@ -12,11 +12,11 @@ import { HeadlessBody } from "./physics.ts";
 // The same pure sky fold + weather derivation the browser client and the
 // sequencer run — text-tier perception must land on the SAME hour and
 // weather every renderer shows (issue #29's shared-fact boundary).
-import { foldSkyEntry, describeSky, effectiveSky, effectiveClock, dayPhase, hoursAt } from "../client/lib/forecast.js";
+import { foldSkyEntry, describeSky, effectiveSky, effectiveClock, dayPhase, hoursAt } from "../shared/forecast.js";
 // The `particles` component's meaning, shared verbatim with the browser host:
 // a renderer client and a resident who perceives by reading must agree about
 // what is burning (#25's shared-facts boundary).
-import { describeParticles, emitterTransition, transitionLine } from "../client/lib/particles.js";
+import { describeParticles, emitterTransition, transitionLine } from "../shared/particles.js";
 
 (globalThis as any).THREE = Object.assign({}, THREE_W, TSL);
 
