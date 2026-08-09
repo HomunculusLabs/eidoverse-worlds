@@ -1,0 +1,427 @@
+# TEL0S_NOTES — rebuild notes: loading · lighting · performance · separation
+
+Status: working notes, 2026-08-08. Orientation + diagnosis by Fable (three
+deep read-throughs: loading pipeline, lighting system, module architecture),
+design directions proposed for discussion with tel0s. Nothing here is decided.
+
+---
+
+## 1. What must survive the rebuild (the keel)
+
+Before any diagnosis: a list of things the read-through found genuinely
+*right*, which the rebuild should carry forward rather than relitigate.
+
+- **The two-plane model** (log vs presence). Stated everywhere, honoured
+  everywhere. Not up for debate.
+- **The protocol** (`spec/PROTOCOL.md`, CC0, fixtures). Clean, closed verb
+  set with three open extension lanes. The rebuild targets runtimes, not the
+  log format — existing world logs must replay unchanged.
+- **`forecast.js`** — pure, deterministic time-of-day + weather, shared
+  verbatim by browser, sequencer, and agent. The best module in the repo.
+- **Motion as closed-form `f(params, t)`** with the generous reader
+  (`motion.js:45-66`): parsing generous, math exact.
+- **One code path for join and live** — `stateToEntries` (`world.js:597`)
+  re-synthesizing folded state into synthetic verbs so snapshot-join and
+  live entries share an apply path. The principle survives; its *level*
+  moves (see §3).
+- **Presence interpolation** (`remotes.js:16-28, 97-139, 228-243`) —
+  clock-offset smoothing, render-behind, bracket-and-lerp, re-plan on new
+  pairs only.
+- **The pure/hosted split where it was applied** — `flora_field.js` /
+  `emitter_field.js` / `autohooks.js`: DOM-free, unit-tested lifecycle
+  registries. **This is the pattern the whole client should follow** — the
+  rebuild is largely "apply this everywhere."
+- **The flight recorder** (`World.debug` ring + `/debug` + `world_debug`) —
+  "the log says what happened; this says why it didn't."
+- **The comments.** Nearly every non-obvious decision carries its incident,
+  measurement, and date (`net.js:568-576`, `assets.js:198-202`,
+  `sky.js:210-216`, `server.ts:1906-1911`…). A ground-up rebuild that
+  discards these will re-earn every one of those bugs. **First concrete
+  action of any rebuild: harvest them into an incident ledger** (an
+  ADR/incidents doc) so the knowledge survives file deletion.
+- **The test matrix** (`tools/comptest.ts`, `permtest.ts`, fixture
+  conformance, headless stubs). Evidence the pure/hosted split works.
+
+---
+
+## 2. Diagnosis — many symptoms, two diseases
+
+The three pain areas named for the rebuild — loading, lighting, performance /
+separation — trace back to **two root causes** plus a layer of measured
+hot-path debt.
+
+### Disease A: shader-graph shape instability
+
+On three.js WebGPU, a material's compiled pipeline is invalidated whenever
+the *shape* of its node graph changes. Today the shape changes at runtime
+constantly:
+
+- Upstream `weather_system` / `sky_system` integrate by **sweeping the scene
+  and rewrapping existing materials** after first compile
+  (`docs/upstream-wrap-once.md` — 44 materials rewrapped on one Safari join,
+  ~2–6s per graph on WebKit, ~0.5s on Chrome).
+- Every point-light grant/loss changes the lighting loop of every material
+  (`lights.js:11-13`; measured: grass + 4 lights never finished compiling,
+  grass + 2 booted in 429ms — `sky.js:726-733`).
+- `scene.environment` identity flips (already fixed with the persistent
+  512×256 env target, `sky.js:28-35` — proof this disease is curable).
+
+Nearly all the machinery the client is drowning in exists to absorb this one
+disease: `holdObjectCompiles` (25s cap), `holdFrames` (4s cap), the light
+budget of 4, whole-scene `compileAsync` per light grant, the deliberately
+held boot beat, and the boot-order dependency of sky-before-objects — which
+is a genuine circular wait broken only by timeouts (`sky.js:218` freezes
+object compiles mid-replay; `sky.js:418` then awaits boot; recorded worst
+case rode this to the 45s splash ceiling, `net.js:571-576`).
+
+### Disease B: the fold is entangled with realization
+
+The client's `applyEntry` both *updates world state* and *does scene work*
+(async asset loads, GPU compiles, awaited terrain builds). Consequences:
+
+- Join replay is a **serial `await` loop over entries** (`net.js:578-590`) —
+  exactly the "another serial loader" that `SCALING_AND_SNAPSHOT_PLAN.md` §9
+  warns about. 12s of one measured 13s cold boot was one crate download
+  blocking the loop (`net.js:562-563`).
+- Live entries race each other: `ws.onmessage` is async and unserialized
+  (`net.js:333-337`), so ordering is reconstructed downstream via
+  `pendingOps`/`pendingMounts` (`world.js:39-46`) instead of guaranteed
+  upstream.
+- There is no placeholder tier, no priority order (spawn assets fetch in Set
+  insertion order, `net.js:566`), no cancellation on demand fetches, and no
+  real progress: the two signals a loading UI needs (`hydrating`,
+  `entities-settled`) are emitted to **zero listeners**.
+- Boot is an emergent negotiation between five subsystems, held together by
+  escape hatches: 12s boot-gate escape (`boot.js:153`), 25s compile-hold cap,
+  4s frame-hold, 30s shadow fallback (`world.js:114`), 45s splash ceiling,
+  1200ms terrain-precompile cap. **The density of timeouts is the
+  diagnosis**: they are apologies for dependencies that shouldn't exist.
+
+### Supporting counts (the debt layer)
+
+Loading:
+- 3-RTT prologue before the WS even opens; `/avatars` is a **top-level
+  await** blocking the whole module graph (`main.js:74`); `core.js:100`
+  top-level-awaits `renderer.init()` for every importer.
+- No `modulepreload`; the 2.1MB engine is discovered at waterfall depth 3.
+- **No parsed-VRM cache** — N wearers of one body = N full parses
+  (`assets.js:134`); `.vrm` is deliberately `no-cache` server-side
+  (`server.ts:1340`) because names are mutable — content addressing fixes
+  both at once. `optimize.ts` excludes VRMs.
+- `byteCache` unbounded, retains compressed bytes forever (plan §11.3,
+  called out and unchanged); no service worker / Cache Storage.
+- `GLTFLoader.parse` is one opaque synchronous stall — no workers, no KTX2.
+- Server half of the snapshot plan is **done** (live fold, snapshot + ≤150
+  tail, byte-offset restart); client half (placeholders, priority,
+  cancellation, persistent cache) is **not**.
+
+Lighting:
+- Three systems that don't compose: the sky (sun+hemi+IBL — the only
+  physically coherent light), placed lights (one type: PointLight, cap 4,
+  never casts shadows, ignores time-of-day — a porch light burns at noon),
+  and emissive-derived lamps (client-side inference, ≤2 global, competing
+  for the same integer). Which objects win lamps depends on **load order** —
+  two clients in one world are lit differently (`sky.js:734-742`).
+- `keep` escapes the budget entirely (`lights.js:83`) — 50 kept lights
+  reproduce exactly the hang the budget exists to prevent.
+- One shadow caster in the world (the sun), static ortho frustum on origin —
+  shadows end ~46m out; terrain, grass, and avatars neither cast nor
+  receive.
+- One-way ratchets: `MAX_CAST` decrements permanently (`lights.js:150`),
+  shadow map 2048→1024 never restores (`main.js:1155`), and a transient
+  fps dip **writes the cloud downgrade to localStorage** (`sky.js:114`) —
+  degrading future sessions.
+- Five of eight sky-tuner sliders silently do nothing on the primary sky
+  path (`sky.js:660-691` vs `build.js:975-983`).
+- Spec drift: `keep` is implemented in four places and appears nowhere in
+  `PROTOCOL.md`.
+
+Per-frame hot path (measured/read offenders, worst first):
+1. Camera collision: recursive raycast over **every mesh of every entity**,
+   three call sites per frame, with `liveEntities()` allocating a fresh
+   array each call (`world.js:48`, `controller.js:386`) — while a BVH-backed
+   spatial grid sits unused in `colliders.js:286`.
+2. `physobj.js:137-149`: O(sims × all colliders) with a `Vector3` allocation
+   in the inner loop — same unused grid.
+3. `updateGaze` O(n²) per frame (`remotes.js:280-302`) recomputing an answer
+   that changes at conversational rate.
+4. `_autoParticleSystems` hooks and `tickMotion` run unconditionally — no
+   distance or visibility gates.
+
+Separation of concerns:
+- `main.js` is four modules in a trench coat (ragdoll, mounts, bodydrag
+  receive, pins, consent, voice-mouths, a 190-line command if-chain, the
+  governor, an emote toolbar, the frame loop — lines 105–1203 are one giant
+  `else` block).
+- No verb/comp dispatch table anywhere: a 26-case switch in `world.js:122`,
+  a 240-line mirror switch in `server.ts:255`, and **three different
+  registration idioms** for evaluators (hard imports, bus subscription,
+  per-frame polling).
+- Real import cycles, worst: `world → flora → controller → chat → net →
+  world` — the whole stack folded into a loop. Four communication mechanisms
+  in simultaneous use (module singletons, untyped bus, five hand-rolled DI
+  hooks, 34 globals).
+- `server.ts` is 2,896 lines / ~11 concerns; `message()` is ~930 lines;
+  sync `appendFileSync` per log entry in the ws handler; `readHistory`
+  re-reads the whole log per request (self-acknowledged at
+  `server.ts:1031`).
+- The server imports `foldSkyEntry` and `normalizeParticles` **out of
+  `client/lib/`** — right intent (one fold), wrong direction.
+- `build.js` contains literal NUL bytes as key separators — `grep` silently
+  skips the file.
+
+---
+
+## 3. The organizing principle: fold → state → realize
+
+One idea addresses both diseases and most of the debt, and it is a
+*generalization of the repo's own best patterns* (`stateToEntries`, the
+`_field.js` split):
+
+**Split the client into a pure fold and a set of scheduled realizers.**
+
+```
+log entry ──► fold (pure, sync, shared) ──► WorldState (data, always consistent)
+                                                │  diffs
+                          ┌─────────────┬───────┴──────┬──────────┬─────────┐
+                       models        lighting rig   terrain     sky     grass/…
+                     realizer         realizer      realizer  realizer
+                          └─────────────┴──────┬───────┴──────────┴─────────┘
+                                     ONE scheduler (priority, budget,
+                                     cancellation — no timeouts)
+```
+
+- **The fold is pure, synchronous, and shared.** One `fold.ts` in a
+  `shared/` package, used verbatim by server, browser, and agent — the
+  "fold is sacred / mirrored math" house rules become true *by construction*
+  instead of by discipline. Folding a snapshot takes milliseconds; hydration
+  is no longer a loader.
+- **Realizers are registered projections of state.** Each one (models,
+  lights, terrain, sky, flora, emitters, motion, colliders) subscribes to
+  state diffs and enqueues work into one scheduler. Idempotent: realize
+  (state) from scratch or incrementally — join and live are the same path,
+  one level up from where `stateToEntries` put it.
+- **The scheduler is the only loader.** Priorities computed from (distance
+  to camera, asset size, kind: your-body > bodies > near objects > far >
+  cosmetics), explicit cancellation tokens (entity removed / superseded /
+  world switched → pending work cancelled), bounded lanes, and **zero
+  timeout escapes** — dependencies are declared, not discovered. `loadwork`'s
+  lanes, `prefetch`'s demand-preemption, and `enqueueWorldBuild`'s gating
+  all fold into it.
+- Ordering hazards evaporate: live entries fold instantly in seq order
+  (fold is sync — no async interleaving); realizers catch up at their own
+  pace; `pendingOps`/`pendingMounts` machinery deletes.
+- Progress is free: the scheduler knows outstanding work per priority band —
+  a real loading bar and the plan's §19 gates (shell in 2-3s, recognizable
+  stage in 5s) become measurable instead of aspirational.
+
+### Placeholders make the world appear at fold time
+
+The snapshot (or `/geom`, which already computes bboxes) carries per-entity
+bounding boxes → the models realizer instantiates placeholder proxies at
+t≈0 (grey box / footprint), swapped as GLBs stream in by priority. Plan
+§9.1, finally cheap to do because state install is instant.
+
+---
+
+## 4. Loading, redesigned
+
+Boot becomes a short, declared sequence instead of a negotiation:
+
+1. **Static shell + `modulepreload`** for the known-at-build-time graph
+   (three.webgpu.js, addons, vrm libs) — kills the depth-3 waterfall.
+2. **WS opens immediately.** The join `hello` carries identity, roster,
+   rights, snapshot ref, recent chat, restore pose — the 3-RTT prologue
+   (`/avatars` → `/whoami` → connect) collapses into the socket. No
+   top-level awaits anywhere in the module graph (`core` exports an
+   explicit `init()`).
+3. **Fold snapshot → placeholders + terrain proxy visible.** Curtain policy
+   becomes a *choice* measured in one place: your body (idle+walk only) +
+   folded state + terrain. Everything else streams behind by priority.
+4. Sky, grass, prefetch, shadows, clip hydration: ordinary low-priority
+   scheduler entries — `whenBooted()` gating deletes.
+
+Asset identity and caching:
+
+- **Content-address everything, including VRMs** (plan §10) — mutable names
+  become alias → hash. Kills the `.vrm no-cache` hack, enables
+  `immutable` caching, service worker + Cache Storage for warm joins, and
+  honest cold/warm progress. Extend `optimize.ts` to VRMs.
+- **Parsed-prototype caches with refcounts and bounds**: bytes (evictable
+  once decoded), parsed GLB prototypes (exists), **parsed VRM prototypes
+  (missing — the single biggest miss for a 24-body room)**, compiled
+  pipelines. The plan's §11.3 language adopted as a contract.
+- **Parse off the main thread**: GLTF/Draco (and later KTX2/Basis) decode in
+  a worker pool; main thread does sliced GPU upload only. This attacks the
+  one genuinely unsliceable stall.
+
+With Disease A cured (§5), the compile-hold machinery — the *other* half of
+load jank — deletes outright.
+
+## 5. Lighting, redesigned
+
+**Contract: the shader graph's shape is fixed at boot; runtime changes are
+uniform writes.** This is the wrap-once ask (`docs/upstream-wrap-once.md`,
+option 2 — ubershader, uniform-gated) pursued in two moves:
+
+- **Client-side material factory**: every material entering the scene passes
+  through one factory that applies all wraps (wetness, cloud shadow, light
+  slots) at creation, *before* first compile. New assets compile once,
+  against their final graph. No sky-before-objects dependency → the
+  circular wait and both hold mechanisms delete.
+- **Upstream ask stands**: factory-form wraps or built-in uniform-gated
+  branches. The adapter shrinks as upstream improves (the
+  `emitters.js:26-28` doctrine).
+
+**One lighting rig** (a realizer) owns every runtime light:
+
+- Sun + hemi + IBL: sky-driven, as today — this part is healthy.
+- **N fixed light slots** (target 8–16 once adds don't recompile), allocated
+  at boot, driven to zero when idle. Placed lights and emissive lamps become
+  *light requests*; the rig assigns slots by priority: distance to camera,
+  authored > inferred, `keep` as top *priority* — **not** a budget escape.
+  Slot churn = uniform writes. Deterministic given (state, camera), so two
+  clients in the same spot light the same way.
+- **All lights live in time-of-day**: dayness/exposure context flows from
+  the rig; placed lights dim by day like lamps do (opt-out via a comp field
+  if someone wants a noon-burning porch light *on purpose*).
+- **Shadows**: the sun cascade follows the camera (step 1: re-centre the
+  existing ortho on the player — a few lines; step 2: CSM). Terrain
+  receives. Caster set is rig-budgeted by distance, replacing the
+  250ms-per-object drip.
+- **Governor with two-way levers**: one quality controller owning
+  (clouds, slots, emitters, grass, pixel ratio, shadow res) with degrade
+  *and recover* paths, session-scoped — never writing user preferences.
+  Tuner sliders either work or don't exist.
+- Spec: document `keep` (or its successor, `priority`) in PROTOCOL.md; add
+  a fixture.
+
+`forecast.js` and everything upstream of `nowHours()` is untouched.
+
+## 6. Client architecture
+
+- **`shared/` package** (server ← shared → client ← agent): protocol types,
+  `fold.ts`, `forecast.js`, particle/motion normalization, the pendulum
+  math (one file ends the mirror rule).
+- **One registry shape** for verbs/comps/realizers/frame-systems — replaces
+  the 26-case client switch, the 240-line server switch, and the three
+  registration idioms. AGENTS.md's "register nothing" becomes "register
+  once."
+- **Frame loop as an explicit system list** with per-system budget + enable
+  flags; the governor manipulates systems, not ad-hoc levers. Target:
+  `frame.ts` under ~120 lines.
+- **`main.js` dissolves** into boot / local-body (ragdoll, pins, mounts,
+  consent, shove) / commands (registry, one file per command) / governor /
+  frame.
+- **Spatial index as a service** (the `colliders.js` grid, promoted):
+  camera collision, physobj contacts, seat search, and gaze all query it.
+  Fixes hot-path offenders 1–3 in one move; add distance gates to emitter
+  hooks and motion ticks for #4.
+- **`HostAdapter`** — one seam for eidoverse-video: `loadModule`, `prime`,
+  `registerHook`/`retireHook`, `makeSky/makeTerrain/createFlora/…`. The
+  eval + Deno shim + 34 globals live behind it.
+- One communication idiom: state reads + typed events; globals only inside
+  the adapter.
+
+## 7. Server shape
+
+Split along the seams the file already shows (behaviors/geometry/optimize/
+aid1 prove the pattern): `auth` · `moderation` · `rights` · `reactions` ·
+`lint` · `routes` (table; `/upload` its own module) · **verb table**
+(`{rank, validate, fold, after}` — replaces the 280-line verb case and
+the five post-append if-chains) · `World` → `WorldLog` (persistence) /
+`WorldState` (fold, from `shared/`) / `WorldSession` (clients, leases,
+broadcast). Async/batched log appends (sync `appendFileSync` per entry sits
+in the ws handler today); segmented log + index (plan §6) when history
+queries actually hurt — `readHistory`'s full-file read is the present
+offender.
+
+## 8. What "ground up" should mean
+
+Recommendation: **rebuild the skeleton, transplant the organs.** The
+protocol, fold semantics, forecast, motion math, presence interpolation,
+`autohooks`, the `_field` modules, and the flight recorder survive nearly
+verbatim. What is genuinely ground-up: the boot path, the scheduler, the
+lighting rig, the frame loop, the module graph, and the server's dispatch —
+the *connective tissue*, which is where all the pain lives. A parallel
+big-bang rewrite would re-earn every measured incident in the comments; a
+skeleton-first strangler keeps the world bootable at every step:
+
+1. Harvest the incident comments into an incidents/ADR ledger.
+2. Extract `shared/` (fold, forecast, protocol types) — server stops
+   importing from `client/lib/`; agent folds identically. Pure motion.
+3. Land the scheduler + state/realize skeleton; port realizers one at a
+   time (models first, then lights, terrain, sky, flora, emitters).
+4. New boot path (1-RTT hello, placeholders, curtain policy).
+5. Material factory + lighting rig (Disease A cure; holds delete).
+6. Dissolve `main.js`; frame-system list; spatial-index service.
+7. Server split.
+
+Each step is independently shippable and testable against the existing
+fixture/tool matrix.
+
+## 9. Decisions (2026-08-09, tel0s + Fable — was "Open questions")
+
+1. **Compatibility scope.** Existing logs replay unchanged. The snapshot
+   grows optional per-entity bboxes (placeholder tier without a `/geom`
+   round trip) — a fold-output addition, not a verb change.
+2. **Upstream (Skye) vs local ownership.** tel0s will talk to Skye about
+   the wrap-once / `dispose()` / seed asks; meanwhile we build the
+   material factory ourselves — never bottleneck the rebuild on upstream.
+   The adapter shrinks as upstream improves.
+3. **Browser targets.** Chrome-first for the rebuild; Safari/Firefox
+   support wanted not long after. Graph-shape stability is held as a
+   standing constraint precisely because it is what makes WebKit
+   *possible* later without redesign.
+4. **Workers.** Yes to a small decode-worker pool, staged after the loader
+   skeleton lands, as plain ES-module workers
+   (`new Worker(url, {type: 'module'})`) — no build step. KTX2/Basis waits
+   for the asset pipeline plus measurement.
+5. **No-build doctrine holds.** `shared/` is plain JS + JSDoc types; Bun
+   imports it from TS directly, the browser natively; type safety via
+   `tsc --noEmit`. Revisit only if JSDoc friction becomes real.
+6. **Spectator client is in scope** — it is important, and it is exactly a
+   second, smaller realizer set over the same folded state.
+7. **Placed lights stay PointLight-only** for now (the rig + slots +
+   shadows are the actual win); a light-kinds conversation soon.
+
+## 10. Progress log
+
+- **2026-08-09 — `shared/` landed (sequence step 2, first slice).**
+  `forecast.js` and `particles.js` moved from `client/lib/` to `shared/`
+  (both were already pure and dependency-free — the move retires the
+  server's wrong-direction imports out of `client/lib/`). Imports updated
+  in `server/server.ts`, `mcpl/agent.ts`, `client/lib/{world,sky,emitters}.js`
+  (via `../../shared/…`, which resolves to repo root on disk and clamps to
+  `/shared/…` in the browser), and four test tools; `/shared/` route added
+  to the sequencer with client-code caching policy (no-store);
+  `shared/README.md` states the doctrine. Verified: forecast 77/77,
+  particles 93/93, skywatch 33/33, comptest 33/33, compfold 24/24 (against
+  a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
+  protocol types, then `fold.ts` (step 2b — server-side extraction first,
+  fixture-tested; client adoption rides the state/realize skeleton).
+- **2026-08-09 — incident ledger landed** (sequence step 1):
+  `docs/INCIDENTS.md`, 475 entries across 11 subsystem sections — every
+  measured-incident comment in the tree, numbers verbatim, plus the
+  AGENTS.md house rules with attributions and the cited commit hashes.
+  The harvest also surfaced **active landmines** (constraints current code
+  violates), verified where marked ✓:
+  1. ✓ `sendAnim` called but never imported (`main.js:621` vs the net.js
+     import at `:28`; exported at `net.js:51`) — the bus swallows the
+     ReferenceError, so a puppeted animation plays locally and never
+     relays. One-line fix.
+  2. ✓ House rule 3 ("no handler may throw out of Bun.serve") guards only
+     `message` — `open`/`close` and the two module-level `setInterval`s
+     are unguarded, and `close` reaches `appendFileSync`/rename. An
+     EIO/ENOSPC there is exactly the 4f82250 crash-loop failure.
+  3. The light budget is worse than §2 stated: lamps don't consult placed
+     lights' count, so 4 placed + 2 lamps = 6 casters — past the
+     measured-fatal count — before `keep` is even considered.
+  4. `loadwork.js`'s header promises one-at-a-time materialization; the
+     lanes are `max: 2`. Header lies.
+  5. `sky_baked.js:340` uses the two-arg `bakeEnv` form that `sky.js:468`
+     documents as a bug (different receiver — reconcile, may be benign).
+  Items 6–10 of the landmine report (hot-path raycast/allocs, one-way
+  ratchets, uncached VRM parse, unserialized log applies, dead signals)
+  are already §2 findings. Fixes for 1 and 2 proposed as immediate,
+  separate commits — they are live bugs, not rebuild work.
