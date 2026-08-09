@@ -51,7 +51,9 @@ type InboxItem = { ts: number; kind: "say" | "arrive" | "leave" | "act"; who: st
 
 /** Folded world state back into the verbs that produced it. Must stay in step
  *  with the browser client's stateToEntries — two renderers disagreeing about
- *  what a snapshot means is a world that looks different per species. */
+ *  what a snapshot means is a world that looks different per species. Deliberate
+ *  agent omissions: roles/grants and behaviors have no local reader, and spawn
+ *  `collide` is browser-only collider state; keep those absences explicit. */
 function stateToEntries(state: any, skipChatFromSeq = Infinity): any[] {
   if (!state) return [];
   const out: any[] = [];
@@ -74,6 +76,18 @@ function stateToEntries(state: any, skipChatFromSeq = Infinity): any[] {
       add("spawn", { id, lib: e.lib, pos: e.pos, yaw: e.yaw, ...(e.scale != null ? { scale: e.scale } : {}) },
         e.actor ?? "world", e.ts ?? Date.now());
     }
+  }
+  // folded components and cargo attachments, in a second pass so every spawn
+  // exists before anything lands on it — the mirror of the browser client's
+  // ordering (world.js stateToEntries). Without the comp entries a post-fold
+  // joiner can be REFUSED for a lock it was never shown, and every socket,
+  // reaction and emitter authored before the fold is missing from look()
+  // until someone rewrites it (#71). Replay reconstructs state and stops
+  // there: applyEntry runs these with live=false, so a fire lit last week is
+  // in look(), not in your ears, and nothing re-performs as an event.
+  for (const [id, e] of Object.entries<any>(state.entities ?? {})) {
+    for (const [type, data] of Object.entries<any>(e.comp ?? {})) add("comp", { id, type, data });
+    if (e.parent) add("mount", { id, ...e.parent });
   }
   // folded mounts: without these a rejoined agent doesn't know it is sitting
   // on anything — so "standing up" never dismounts, and the fold keeps the
