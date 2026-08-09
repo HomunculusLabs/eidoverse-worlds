@@ -1868,33 +1868,54 @@ const server = Bun.serve({
     return serveFrom(join(ROOT, "client"), url.pathname.slice(1));
   },
   websocket: {
+    // House rule 3 applies to EVERY ws callback, not just message: an
+    // uncaught throw out of open/close exits the process the same way (the
+    // 4f82250 crash loop), and close reaches disk (settleLease → append,
+    // rememberPose → write+rename) — an EIO/ENOSPC there must be a log line,
+    // never an exit.
     open(ws) {
-      const c: Client = { id: `anon-${nextClientNum++}`, ws, world: null, avatar: "", lastPose: null, spectator: false,
-        msgWin: 0, msgCount: 0, verbWin: 0, verbCount: 0 };
-      const sess = (ws as unknown as { data?: { session?: HnSession | null } }).data?.session;
-      if (sess && sess.exp > Date.now()) { c.auth = sess; c.sub = sess.sub; }
-      clients.set(ws, c);
+      try {
+        const c: Client = { id: `anon-${nextClientNum++}`, ws, world: null, avatar: "", lastPose: null, spectator: false,
+          msgWin: 0, msgCount: 0, verbWin: 0, verbCount: 0 };
+        const sess = (ws as unknown as { data?: { session?: HnSession | null } }).data?.session;
+        if (sess && sess.exp > Date.now()) { c.auth = sess; c.sub = sess.sub; }
+        clients.set(ws, c);
+      } catch (err) {
+        console.error(`[ws] open failed server-side:`, err);
+      }
     },
     close(ws) {
-      const c = clients.get(ws);
-      if (!c) return;
-      clients.delete(ws);
-      // dev crash forensics (?bc=1 clients): the last thing a dying renderer
-      // was doing, printed at the only moment we learn it died
-      if ((c as any).bcRing?.length) {
-        console.log(`[bc] ${c.id} last breadcrumbs: ${(c as any).bcRing.join(" | ")}`);
-      }
-      // a vanished simulator's objects land exactly where its last frame put
-      // them — the lease's whole promise (docs/leases.md)
-      if (c.world) for (const [lid, L] of [...c.world.leases]) if (L.holder === c) c.world.settleLease(lid);
-      if (c.world) {
-        c.world.clients.delete(c);
-        if (!c.spectator) {
-          if (!c.superseded) c.world.rememberPose(c.id, c.lastPose); // sleep where you stood
-          c.world.broadcast({ type: "leave", id: c.id });
-          c.world.bhv.onPresence("leave", c.id);
+      try {
+        const c = clients.get(ws);
+        if (!c) return;
+        clients.delete(ws);
+        // dev crash forensics (?bc=1 clients): the last thing a dying renderer
+        // was doing, printed at the only moment we learn it died
+        if ((c as any).bcRing?.length) {
+          console.log(`[bc] ${c.id} last breadcrumbs: ${(c as any).bcRing.join(" | ")}`);
         }
-        console.log(`[world:${c.world.name}] ${describe(c.world)} — ${c.id} ${c.spectator ? "stopped watching" : "left"}`);
+        // a vanished simulator's objects land exactly where its last frame put
+        // them — the lease's whole promise (docs/leases.md). Per-lease guard:
+        // a failed settle (disk) must not abandon the OTHER leases or the
+        // leave cleanup below — a ghost body standing forever (#56) is worse
+        // than one object hovering at its last streamed transform.
+        if (c.world) for (const [lid, L] of [...c.world.leases]) if (L.holder === c) {
+          try { c.world.settleLease(lid); } catch (err) { console.error(`[world:${c.world.name}] lease settle for ${lid} on close`, err); }
+        }
+        if (c.world) {
+          c.world.clients.delete(c);
+          if (!c.spectator) {
+            if (!c.superseded) {
+              try { c.world.rememberPose(c.id, c.lastPose); } // sleep where you stood
+              catch (err) { console.error(`[world:${c.world.name}] rememberPose for ${c.id} on close`, err); }
+            }
+            c.world.broadcast({ type: "leave", id: c.id });
+            c.world.bhv.onPresence("leave", c.id);
+          }
+          console.log(`[world:${c.world.name}] ${describe(c.world)} — ${c.id} ${c.spectator ? "stopped watching" : "left"}`);
+        }
+      } catch (err) {
+        console.error(`[ws] close failed server-side:`, err);
       }
     },
     message(ws, raw) {
@@ -2840,7 +2861,13 @@ const FRAME_MS = 66;                 // ~15Hz, matches the client's send throttl
 // a slow client skips to current instead of drifting behind the show.
 const FRAME_SKIP_BUFFERED = 32_000;
 setInterval(() => {
+  // per-world guard, same idiom as the behavior tick: one world's failure
+  // (the RECORD path appends to disk) must cost that world one tick, not
+  // exit the process or stall every other world's frames (house rule 3 —
+  // module-level intervals can take the sequencer down exactly like a ws
+  // callback)
   for (const w of worlds.values()) {
+    try {
     if (w.dirty.size === 0) continue;
     const data = JSON.stringify({ type: "frame", seq: w.frameSeq++, t: Date.now(), poses: Object.fromEntries(w.dirty) });
     w.dirty.clear();
@@ -2857,6 +2884,7 @@ setInterval(() => {
       if ((c.ws.getBufferedAmount?.() ?? 0) > FRAME_SKIP_BUFFERED) continue; // stale frames die here, not in the kernel
       c.ws.send(data);
     }
+    } catch (err) { console.error(`[world:${w.name}] frame tick`, err); }
   }
 }, FRAME_MS);
 
@@ -2866,12 +2894,15 @@ setInterval(() => {
 setInterval(() => {
   const now = Date.now();
   for (const w of worlds.values()) {
-    for (const [id, L] of [...w.leases]) {
-      if (now - L.lastAt > 10_000) {
-        w.debug("lease-swept", { id, holder: L.holder.id });
-        w.settleLease(id);
+    // per-world guard (house rule 3): settleLease appends to disk
+    try {
+      for (const [id, L] of [...w.leases]) {
+        if (now - L.lastAt > 10_000) {
+          w.debug("lease-swept", { id, holder: L.holder.id });
+          w.settleLease(id);
+        }
       }
-    }
+    } catch (err) { console.error(`[world:${w.name}] lease sweep`, err); }
   }
 }, 5_000);
 
