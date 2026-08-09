@@ -385,3 +385,99 @@ export function foldEntry(st, e) {
     default: return;   // unknown verbs shape nothing; the log still keeps them
   }
 }
+
+/** Turn a folded snapshot back into the verbs that would have produced it.
+ *
+ *  Deliberately NOT a second way of building a world: the state goes back
+ *  through whatever consumes ordinary entries, so there is exactly one code
+ *  path that gives a snapshot meaning. Order matters the way it does in a
+ *  log: ground before the things standing on it; every spawn before
+ *  anything lands on one. Synthetic entries carry negative seq (they are
+ *  pre-history, not positions in it) — EXCEPT chat, which keeps its real
+ *  seq because the scrollback cursor derives from it.
+ *
+ *  One implementation, every species: the browser client and the mcpl agent
+ *  each carried a hand-mirrored copy of this ("must stay in step…" — the
+ *  drift that crashed look() for every agent in a world is the incident in
+ *  the comment both copies carried). The flags encode the agents' deliberate
+ *  omissions EXPLICITLY, so an absence stays a decision instead of a drift:
+ *  - roles/behaviors: the agent has no local reader for either;
+ *  - collide: browser-only collider state riding the spawn verb;
+ *  - bodyMountRel 'seat' + bodyMountActor 'rider': text-tier perception
+ *    wants "who sits where", not offsets — and attributes the sitting to
+ *    the sitter.
+ *
+ *  @param {WorldState} state
+ *  @param {{ skipChatFromSeq?: number, roles?: boolean, behaviors?: boolean,
+ *            collide?: boolean, bodyMountRel?: 'full'|'seat',
+ *            bodyMountActor?: 'world'|'rider', now?: number }} [opts] */
+export function stateToEntries(state, {
+  skipChatFromSeq = Infinity, roles = true, behaviors = true, collide = true,
+  bodyMountRel = 'full', bodyMountActor = 'world', now = Date.now(),
+} = {}) {
+  if (!state) return [];
+  const out = [];
+  let seq = -1;
+  const add = (verb, args, actor = 'world', ts = now) =>
+    out.push({ seq: seq--, ts, actor, verb, args });
+
+  if (roles) {
+    for (const [id, r] of Object.entries(state.roles ?? {})) {
+      add('grant', { id, role: r.role, ...(r.gen ? { gen: true } : {}) });
+    }
+  }
+  if (state.terrain) add('terrain', state.terrain);
+  if (state.grass) add('grass', state.grass);
+  if (state.sky) add('sky', state.sky, 'world', state.sky.ts ?? now);
+  for (const a of state.assets ?? []) add('asset', a);
+  for (const [id, e] of Object.entries(state.entities ?? {})) {
+    if (e.kind === 'light') {
+      // folded lights have no lib — synthesizing one crashes every consumer
+      // that trusts `lib` on a spawn (Fable's porchlight vs look(), 07-30)
+      add('light', { id, pos: e.pos, color: e.color, intensity: e.intensity, range: e.range,
+        ...(e.keep ? { keep: true } : {}) },
+        e.actor ?? 'world', e.ts ?? now);
+    } else {
+      add('spawn', {
+        id, lib: e.lib, pos: e.pos, yaw: e.yaw,
+        ...(e.scale != null ? { scale: e.scale } : {}),
+        // the spawn verb's collide override decides exact-vs-box; dropping
+        // it made the same object walkable or solid depending on when you
+        // arrived (the drift house rule 1 forbids)
+        ...(collide && e.collide != null ? { collide: e.collide } : {}),
+      }, e.actor ?? 'world', e.ts ?? now);
+    }
+  }
+  // components and attachments, after every spawn exists — without the comp
+  // entries a post-fold joiner can be REFUSED for a lock it was never shown,
+  // and every socket, reaction and emitter authored before the fold is
+  // missing until someone rewrites it (#71)
+  for (const [id, e] of Object.entries(state.entities ?? {})) {
+    for (const [type, data] of Object.entries(e.comp ?? {})) add('comp', { id, type, data });
+    if (e.parent) add('mount', { id, ...e.parent });
+  }
+  // body mounts: without these a rejoined body doesn't know it is sitting on
+  // anything — "standing up" never dismounts (#61, princess on the crate)
+  for (const [rid, m] of Object.entries(state.mounts ?? {})) {
+    const rel = bodyMountRel === 'seat'
+      ? { to: m.to, ...(m.slot ? { slot: m.slot } : {}) }
+      : m;
+    add('mount', { id: rid, ...rel }, bodyMountActor === 'rider' ? rid : 'world');
+  }
+  if (behaviors) {
+    for (const [id, b] of Object.entries(state.behaviors ?? {})) {
+      add('behavior', { id, src: b.src, ...(b.runtime ? { runtime: b.runtime } : {}),
+        ...(b.knobs ? { knobs: b.knobs } : {}), by: b.author }, b.author ?? 'world', b.ts ?? now);
+    }
+  }
+  // Anything the tail will replay must not also be rendered from the
+  // snapshot. Chat keeps its REAL seq, unlike the world-shaping entries
+  // above: it is the only part of a snapshot that is a position in history
+  // rather than a description of the present.
+  for (const m of state.recentChat ?? []) {
+    if ((m.seq ?? -1) >= skipChatFromSeq) continue;
+    out.push({ seq: typeof m.seq === 'number' ? m.seq : seq--, ts: m.ts, actor: m.actor,
+               verb: 'say', args: { text: m.text } });
+  }
+  return out;
+}
