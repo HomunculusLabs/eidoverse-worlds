@@ -42,12 +42,72 @@ let nextGen = 1;
 
 const _v = new THREE.Vector3();
 
+// ---- placeholders -----------------------------------------------------------
+// The world appears at FOLD time: a translucent box the size of the real
+// thing (bbox from the server's geom side-channel), standing at the folded
+// transform until the GLB lands. ONE shared geometry + ONE shared material —
+// a placeholder tier that cost pipelines would be the disease it treats.
+// Placeholders are real entities to the maps (a `place` moves them, a mount
+// seats them, motion swings them, panels list them); they are invisible to
+// the camera's collision (noCamCollide) and to colliders/shadows, and they
+// carry no entityMeta — which is what keeps the parity probe's identity
+// check honestly silent about them.
+
+const libGeom = new Map();   // lib -> {bbox} — fed by the 'geom' message
+let _phGeo = null;
+let _phMat = null;
+
+function makePlaceholder(id, ent, g) {
+  _phGeo ??= new THREE.BoxGeometry(1, 1, 1);
+  _phMat ??= new THREE.MeshBasicNodeMaterial({ color: 0x8a9099, transparent: true, opacity: 0.22, depthWrite: false });
+  const grp = new THREE.Group();
+  const mesh = new THREE.Mesh(_phGeo, _phMat);
+  mesh.scale.set(Math.max(g.bbox.size?.[0] ?? 0.5, 0.05), Math.max(g.bbox.size?.[1] ?? 0.5, 0.05), Math.max(g.bbox.size?.[2] ?? 0.5, 0.05));
+  mesh.position.set(...(g.bbox.center ?? [0, 0, 0]));
+  mesh.castShadow = mesh.receiveShadow = false;
+  grp.add(mesh);
+  grp.userData.entityId = id;
+  grp.userData.placeholder = true;
+  grp.userData.noCamCollide = true;
+  grp.position.set(...(ent.pos ?? [0, 0, 0]));
+  grp.rotation.y = ent.yaw ?? 0;
+  if (ent.scale) grp.scale.setScalar(ent.scale);
+  grp.userData.base = { pos: grp.position.toArray(), yaw: grp.rotation.y };
+  return grp;
+}
+
+/** Stand a placeholder in for a still-loading reservation, if its size is
+ *  known. Safe to call again — only a bare `null` reservation upgrades. */
+function maybePlaceholder(id) {
+  if (entities.get(id) !== null) return;   // realized, placeholdered, or unknown
+  const ent = state.st.entities[id];
+  const g = ent?.lib ? libGeom.get(ent.lib) : null;
+  if (!ent || ent.kind === 'light' || !g?.bbox) return;
+  const grp = makePlaceholder(id, ent, g);
+  entities.set(id, grp);
+  scene.add(grp);
+  bus.emit('entity', { id, kind: 'placeholder' });
+}
+
+const isPlaceholder = (obj) => Boolean(obj?.userData?.placeholder);
+
+/** Drop a placeholder (or a bare reservation) for an id whose load resolved
+ *  some other way than realization. */
+function clearReservation(id) {
+  const cur = entities.get(id);
+  if (cur === null || isPlaceholder(cur)) {
+    if (cur) (cur.parent ?? scene).remove(cur);
+    entities.delete(id);
+  }
+}
+
 // ---- creation ---------------------------------------------------------------
 
 function createModel(id, ent) {
   const gen = nextGen++;
   tracked.set(id, { kind: 'model', lib: ent.lib, gen });
   entities.set(id, null);   // reservation — the contract every consumer knows
+  maybePlaceholder(id);     // …upgraded to a sized stand-in when geom is known
   schedule({
     key: `entity:${id}`, owner: `entity:${id}`, lane: 'net',
     // live distance from the camera to the entity's CURRENT folded position —
@@ -63,7 +123,7 @@ function createModel(id, ent) {
       // or this whole realizer generation was reset
       if (signal.aborted || t?.gen !== gen) return;
       if (!cur || cur.kind === 'light' || cur.lib !== ent.lib) {
-        if (entities.get(id) === null) entities.delete(id);
+        clearReservation(id);
         if (tracked.get(id)?.gen === gen) tracked.delete(id);
         return;
       }
@@ -78,6 +138,8 @@ function createModel(id, ent) {
 }
 
 function realizeModel(id, cur, obj) {
+  const stand = entities.get(id);
+  if (isPlaceholder(stand)) (stand.parent ?? scene).remove(stand);   // the real thing takes the spot
   obj.userData.lib = cur.lib;
   obj.userData.entityId = id;
   // receiveShadow now, castShadow later — one caster per beat once lanes
@@ -139,7 +201,7 @@ function refreshModel(id, ent) {
     obj.userData.base = { pos: obj.position.toArray(), yaw: obj.rotation.y };
   }
   if (ent.scale != null) obj.scale.setScalar(ent.scale);
-  refitCollider(id);   // rescale can cross the room-scale threshold
+  if (!isPlaceholder(obj)) refitCollider(id);   // placeholders own no collider
   bus.emit('entity', { id, kind: 'place' });
 }
 
@@ -371,6 +433,12 @@ function onEntry(entry) {
 
 /** Wire the realizer to state. Called once from main.js. */
 export function initModelsRealizer() {
+  // the geom side-channel lands a beat after the snapshot — upgrade every
+  // still-bare reservation to a sized stand-in the moment sizes are known
+  bus.on('lib-geom', (geom) => {
+    for (const [lib, g] of Object.entries(geom ?? {})) libGeom.set(lib, g);
+    for (const id of tracked.keys()) maybePlaceholder(id);
+  });
   onWorldChange((ev) => {
     if (ev.type === 'hydrated') reconcileModels();
     else if (ev.type === 'reset') {

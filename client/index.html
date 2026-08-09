@@ -456,6 +456,19 @@ body.touch #touch { display: block; }
   }
 }
 </script>
+<!-- The engine is 2.1MB discovered at waterfall depth 3 (HTML -> main.js ->
+     three.webgpu.js) unless declared here: modulepreload starts the fetch
+     +parse the moment the HTML lands, in parallel with main.js and the GPU
+     init. Only the STATIC graph belongs in this list — rapier is a dynamic
+     import behind a user action and preloading it would tax the very
+     window this exists to shorten. -->
+<link rel="modulepreload" href="./node_modules/three/build/three.webgpu.js">
+<link rel="modulepreload" href="./node_modules/three/build/three.tsl.js">
+<link rel="modulepreload" href="./node_modules/three-mesh-bvh/build/index.module.js">
+<link rel="modulepreload" href="./node_modules/@pixiv/three-vrm/lib/three-vrm.module.js">
+<link rel="modulepreload" href="./node_modules/@pixiv/three-vrm-materials-mtoon/lib/three-vrm-materials-mtoon.module.js">
+<link rel="modulepreload" href="./node_modules/@pixiv/three-vrm-materials-mtoon/lib/nodes/index.module.js">
+<link rel="modulepreload" href="./node_modules/@pixiv/three-vrm-animation/lib/three-vrm-animation.module.js">
 </head>
 <body>
 <!-- Static so it paints before any module loads. boot.js only fills it in. -->

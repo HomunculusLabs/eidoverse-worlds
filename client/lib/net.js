@@ -8,6 +8,7 @@ import { forgetBytes } from './assets.js';
 // sequencer runs — and the realizers project it into the scene.
 // EW.foldParity() measures fold-vs-scene drift on demand.
 import { hydrate as shadowHydrate, foldLive as shadowFold, reset as shadowReset } from './state.js';
+import { pending, P } from './scheduler.js';
 // The realizers (TEL0S_NOTES §11.4) own the scene: state verbs realize
 // FROM the fold, and fold-inert causes (use/punt/force, moderation
 // narration, live say) dispatch over the bus as 'live-entry' (causes.js
@@ -441,6 +442,13 @@ async function handle(msg) {
       bus.emit('lease', msg);
       break;
 
+    case 'geom':
+      // the placeholder tier's bbox side-channel — arrives a beat after the
+      // snapshot (async summaries; the join send stays synchronous). Bus,
+      // not import: the models realizer listens (net must not import it).
+      bus.emit('lib-geom', msg.geom ?? {});
+      break;
+
     case 'log':
       // shadow fold first, synchronously — seq-guarded, so the backlog
       // flush after hydration can never double-fold what landed here. When
@@ -507,6 +515,10 @@ async function handle(msg) {
 async function onSnapshot(msg) {
   // what the server says you may do here; live grants keep it fresh via world.js
   net.myRights = msg.yourRights ?? { role: 'builder', gen: true };
+  // the body roster rides the snapshot — resolveMyAvatarPath and the avatar
+  // panel read it with no /avatars round-trip (older servers: field absent,
+  // consumers fall back to the lazy fetch)
+  if (msg.avatars) { net.avatars = msg.avatars; bus.emit('avatars', msg.avatars); }
   bus.emit('your-rights', net.myRights);
   markPhase('connect', 1);
   net.joined = true;
@@ -593,7 +605,20 @@ async function onSnapshot(msg) {
     spanMs: rc.length > 1 ? rc[rc.length - 1].ts - rc[0].ts : null,
   });
 
-  markPhase('world', 1);
+  // Honest world progress: the phase tracks the scheduler's outstanding
+  // entity loads instead of jumping 0→1 (boot.js weights 'world' at 40 —
+  // this is the bar's biggest segment actually moving with the loads).
+  // The curtain does NOT wait on this; checkReady still gates on body +
+  // state + terrain only.
+  const initialPending = pending(P.FAR);
+  if (initialPending > 0) {
+    markPhase('world', Math.max(0.15, 1 - initialPending / (initialPending + 1)));
+    const tickProgress = setInterval(() => {
+      const left = pending(P.FAR);
+      markPhase('world', 1 - 0.85 * (left / initialPending));
+      if (!left) { clearInterval(tickProgress); markPhase('world', 1); }
+    }, 200);
+  } else markPhase('world', 1);
   bus.emit('hydrated');
   bus.emit('roster');
   hooks.onSnapshotDone();

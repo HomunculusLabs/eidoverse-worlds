@@ -959,6 +959,57 @@ setTimeout(() => {
 
 // -------------------------------------------------------------- http + ws
 
+/** Roster = Skye's library vrms + our overlay (assets/opt/...) — drop a
+ *  .vrm into either and it's an avatar, live, no restart, no manifest.
+ *  ?v=mtime makes each path content-versioned: clients cache it forever,
+ *  and any re-export mints a new URL. Served by GET /avatars AND carried in
+ *  the join snapshot, so a joiner needs no separate round-trip before it
+ *  can resolve a body name (the /avatars top-level await used to gate the
+ *  client's entire module graph). */
+function avatarRoster(): { name: string; path: string; height: number | null }[] {
+  const seen = new Map<string, string>();
+  for (const base of [LIBRARY_DIR, OPT_DIR]) {
+    const dir = join(base, "eidoverse/assets/vrms");
+    if (!existsSync(dir)) continue;
+    for (const f of readdirSync(dir)) {
+      if (f.endsWith(".vrm")) seen.set(f.replace(".vrm", ""), `eidoverse/assets/vrms/${f}?v=${Math.round(Bun.file(join(dir, f)).lastModified)}`);
+    }
+  }
+  // stature metadata, contributed alongside portraits (see POST /thumb)
+  let hmeta: Record<string, { h: number }> = {};
+  try {
+    const mp = join(OPT_DIR, "thumbs", "meta.json");
+    if (existsSync(mp)) hmeta = JSON.parse(readFileSync(mp, "utf8"));
+  } catch { /* roster works without heights */ }
+  return [...seen].map(([name, path]) => ({ name, path, height: hmeta[name.replace(/[^a-zA-Z0-9_-]/g, "_")]?.h ?? null }));
+}
+
+/** The placeholder tier's bbox side-channel, sent AFTER the snapshot as its
+ *  own message: summaries are async, and the join handler's synchronous
+ *  ordering is a guarantee (an awaited join would let the same client's
+ *  next messages interleave — the exact hazard the client's fold just
+ *  finished escaping). geometry.ts caches per lib+mtime, so the steady
+ *  state is microtasks and the message lands a beat after the snapshot,
+ *  long before any GLB. */
+function sendGeomFollowup(w: World, c: Client) {
+  const libs = new Set<string>();
+  for (const e of Object.values(w.state.entities)) if (e.lib && e.kind !== "light") libs.add(e.lib);
+  if (!libs.size) return;
+  (async () => {
+    const geom: Record<string, { bbox: unknown }> = {};
+    for (const lib of libs) {
+      try {
+        const file = resolveLibFile(lib);
+        const sum = file ? await summarizeGlb(file) : null;
+        if (sum?.bbox) geom[lib] = { bbox: sum.bbox };
+      } catch { /* a lib that won't parse simply has no placeholder */ }
+    }
+    if (Object.keys(geom).length && c.ws.readyState === 1) {
+      c.ws.send(JSON.stringify({ type: "geom", geom }));
+    }
+  })().catch((err) => console.error(`[world:${w.name}] geom followup`, err));
+}
+
 function contentType(path: string): string {
   if (path.endsWith(".html")) return "text/html";
   if (path.endsWith(".js") || path.endsWith(".mjs")) return "text/javascript";
@@ -1272,28 +1323,8 @@ const server = Bun.serve({
       return new Response(r.png, { headers: { "content-type": "image/png", "cache-control": "no-store" } });
     }
     if (url.pathname === "/avatars") {
-      // Roster = Skye's library vrms + our overlay (assets/opt/...) — drop a
-      // .vrm into either and it's an avatar, live, no restart, no manifest.
-      const seen = new Map<string, string>();
-      for (const base of [LIBRARY_DIR, OPT_DIR]) {
-        const dir = join(base, "eidoverse/assets/vrms");
-        if (!existsSync(dir)) continue;
-        for (const f of readdirSync(dir)) {
-          // ?v=mtime makes the URL content-versioned: clients cache it forever,
-          // and any re-export mints a new URL. Invalidation by construction.
-          if (f.endsWith(".vrm")) seen.set(f.replace(".vrm", ""), `eidoverse/assets/vrms/${f}?v=${Math.round(Bun.file(join(dir, f)).lastModified)}`);
-        }
-      }
-      // stature metadata, contributed alongside portraits (see POST /thumb)
-      let hmeta: Record<string, { h: number }> = {};
-      try {
-        const mp = join(OPT_DIR, "thumbs", "meta.json");
-        if (existsSync(mp)) hmeta = JSON.parse(readFileSync(mp, "utf8"));
-      } catch { /* roster works without heights */ }
-      return new Response(
-        JSON.stringify([...seen].map(([name, path]) => ({ name, path, height: hmeta[name.replace(/[^a-zA-Z0-9_-]/g, "_")]?.h ?? null }))),
-        { headers: { "content-type": "application/json", "cache-control": "no-store" } },
-      );
+      return new Response(JSON.stringify(avatarRoster()),
+        { headers: { "content-type": "application/json", "cache-control": "no-store" } });
     }
     if (url.pathname.startsWith("/thumb/")) {
       // Avatar thumbnails. VRMs have no shipped previews, and a name-only
@@ -1642,7 +1673,15 @@ const server = Bun.serve({
             ws.close(4004, "reserved name");
             return;
           }
-          c.avatar = String(msg.avatar ?? "eidoverse/assets/vrms/claude.vrm");
+          {
+          // a bare NAME resolves server-side against the same roster the
+          // snapshot carries — the client no longer round-trips /avatars
+          // before joining, and everyone else still sees the right body
+          const a = String(msg.avatar ?? "");
+          c.avatar = !a ? "eidoverse/assets/vrms/claude.vrm"
+            : a.includes("/") ? a
+            : (avatarRoster().find((r) => r.name === a)?.path ?? "eidoverse/assets/vrms/claude.vrm");
+        }
           c.spectator = Boolean(msg.spectate);
           c.agent = Boolean(msg.agent);
           c.renderer = Boolean(msg.renderer);
@@ -1739,6 +1778,9 @@ const server = Bun.serve({
             state: jp.state,
             throughSeq: jp.throughSeq,
             entries: jp.tail,
+            // the body roster rides along — a joiner resolves names with no
+            // extra round-trip (bbox geometry follows as its own message)
+            avatars: avatarRoster(),
             // what YOU may do here, as of now (live grants update it client-side).
             // `open` = no owner exists, so rights are the everyone-builds default.
             yourRights: { ...rightsOf(w, c.id, c.sub), open: !worldHasOwner(w.state) },
@@ -1751,6 +1793,7 @@ const server = Bun.serve({
               id: o.id, avatar: o.avatar, pose: settledPose(o.lastPose), agent: o.agent,
             })),
           }));
+          sendGeomFollowup(w, c);
           if (!c.spectator) w.broadcast({ type: "arrive", id: c.id, avatar: c.avatar, agent: c.agent }, c);
           if (!c.spectator) w.bhv.onPresence("enter", c.id);
           // Whispers that arrived while this identity was away. Held in memory

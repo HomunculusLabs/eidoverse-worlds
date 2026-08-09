@@ -400,6 +400,36 @@ fixture/tool matrix.
   a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
   protocol types, then `fold.ts` (step 2b — server-side extraction first,
   fixture-tested; client adoption rides the state/realize skeleton).
+- **2026-08-11 — step 4, first slice: the boot path sheds its prologue and
+  gains a placeholder tier.**
+  - `modulepreload` for the static heavy graph (rapier excluded — dynamic);
+    the 2.1MB engine starts fetching the moment HTML lands.
+  - The `/avatars` top-level await — which gated the ENTIRE module graph —
+    is gone. Bare names resolve server-side for everyone else's view; the
+    local body path comes from a cached last-resolution (warm boots: zero
+    roster requests) or a non-blocking early fetch raced against the
+    snapshot's own roster (cold boots). Measured en route: making the body
+    wait for the snapshot instead cost +350ms at 25mbit/40ms — the VRM's
+    START time is the boot; the race keeps it as early as the old blocking
+    prologue without the blocking.
+  - The join snapshot now carries the avatar roster, and a `geom` message
+    follows it (async bbox summaries; the join send stays synchronous — an
+    awaited join would let the same client's next messages interleave,
+    the exact hazard the client fold just escaped). The models realizer
+    stands **placeholders** at fold time: one shared geometry + material,
+    translucent boxes at the folded transform, real entities to every map
+    (place moves them, mounts seat them, motion swings them) but invisible
+    to camera collision, colliders, shadows, and the parity identity check.
+  - World-phase progress tracks `scheduler.pending(P.FAR)` instead of
+    jumping 0→1 — the bar's biggest segment finally moves with the loads.
+    The curtain policy is unchanged (body + state + terrain).
+  - Measured (bootbench, Edge, cold cache): localhost flat (~1.1s);
+    25mbit/40ms throttled 1735ms vs 1745ms baseline with 0.8MB fewer
+    bytes — cold-boot parity, with the wins living where the bench can't
+    see: warm boots (cached path), placeholders, honest progress, and
+    higher-RTT links. paritybench PASS incl. reconnect; foldfix 16/16.
+  Still ahead in step 4: the pre-module-graph early socket (1-RTT join) —
+  staged separately; it touches auth/door flows headless can't fully gate.
 - **2026-08-11 — the legacy path is deleted. One fold, one writer, every
   runtime.** With tel0s's go-ahead on the spawn question (deviate from
   upstream's original view), the two holds cleared and the axe fell:

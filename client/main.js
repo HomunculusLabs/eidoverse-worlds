@@ -76,13 +76,45 @@ globalThis.__ewBC = BC;
 
 // ---------------------------------------------------------------- identity
 
-const roster = await fetch('/avatars').then((r) => r.json()).catch(() => []);
+// No boot-blocking roster round-trip: the top-level `await fetch('/avatars')`
+// that lived here gated the ENTIRE module graph on one RTT (the bench's
+// "engine" number silently included it). A bare name now resolves from
+// (1) the cached last resolution, or (2) the roster the join snapshot
+// carries — and the server resolves names for everyone ELSE's view either
+// way, so the wire never waits on us. UI that wants the full roster (the
+// first-run door, the avatar panel) fetches it lazily at open.
 const want = CONFIG.params.get('avatar') || localStorage.getItem('ew-avatar-name') || 'claude';
-let myAvatarPath = want.includes('/')
-  ? want
-  : (roster.find((a) => a.name === want)?.path ?? 'eidoverse/assets/vrms/claude.vrm');
 let myAvatarName = want.includes('/') ? want.split('/').pop().replace(/\.vrm.*$/, '') : want;
-setMyAvatarPath(myAvatarPath);
+let myAvatarPath = want.includes('/') ? want : null;
+if (!myAvatarPath) {
+  try {
+    const c = JSON.parse(localStorage.getItem('ew-avatar-path') ?? 'null');
+    if (c?.name === want && typeof c.path === 'string') myAvatarPath = c.path;
+  } catch { /* cold cache — the snapshot roster resolves it */ }
+}
+if (myAvatarPath) setMyAvatarPath(myAvatarPath);
+const rosterLazy = () => fetch('/avatars').then((r) => r.json()).catch(() => []);
+// Cold cache only: START the roster fetch now, await it never — it rides in
+// parallel with module parse and GPU init instead of gating them, and the
+// body begins downloading as early as the old blocking prologue allowed.
+// (Measured: making the body wait for the SNAPSHOT's roster instead cost
+// +350ms at 25mbit/40ms — the multi-MB VRM is the long pole, and its start
+// time is the boot.) Warm boots have the cached path and skip the request.
+const rosterEarly = myAvatarPath ? null : rosterLazy();
+/** The body path: cache, else whichever of (early fetch | snapshot roster)
+ *  lands first. Nothing here ever blocked the module graph. */
+async function resolveMyAvatarPath() {
+  if (myAvatarPath) return myAvatarPath;
+  const fromBus = new Promise((res) => {
+    const off = bus.on('avatars', (l) => { off(); res(l); });
+    setTimeout(() => { off(); res(null); }, 8000);   // offline: default body
+  });
+  const list = net.avatars ?? await Promise.race([rosterEarly, fromBus]) ?? [];
+  myAvatarPath = (list ?? []).find((a) => a.name === want)?.path ?? 'eidoverse/assets/vrms/claude.vrm';
+  try { localStorage.setItem('ew-avatar-path', JSON.stringify({ name: want, path: myAvatarPath })); } catch { /* private mode */ }
+  setMyAvatarPath(myAvatarPath);
+  return myAvatarPath;
+}
 
 let me = null;
 const isViewer = CONFIG.spectate || CONFIG.renderer;
@@ -180,15 +212,20 @@ if (isViewer) {
   // with no way to change either and no idea what the keys were.
   const firstRun = !CONFIG.params.has('name') && localStorage.getItem('ew-name-set') !== '1';
   if (firstRun) {
-    openDoor({
+    // the door is already an interactive pause — its roster fetch is lazy,
+    // and the choice is cached so the NEXT boot needs no fetch at all
+    rosterLazy().then((roster) => openDoor({
       roster,
       needsKey: CONFIG.params.has('needkey'),
       login: loginUrl(),
       onEnter: ({ avatar, avatarName }) => {
-        if (avatar) { myAvatarPath = avatar; myAvatarName = avatarName; setMyAvatarPath(avatar); }
+        if (avatar) {
+          myAvatarPath = avatar; myAvatarName = avatarName; setMyAvatarPath(avatar);
+          try { localStorage.setItem('ew-avatar-path', JSON.stringify({ name: avatarName, path: avatar })); } catch { /* private mode */ }
+        }
         start();
       },
-    });
+    }));
   } else start();
 }
 
@@ -196,13 +233,13 @@ if (isViewer) {
 // into a wall forever.
 bus.on('bad-key', () => {
   toast('that door key was refused', 'err', 20000);
-  openDoor({
+  rosterLazy().then((roster) => openDoor({
     roster, needsKey: true, login: loginUrl(),
     onEnter: ({ avatar, avatarName }) => {
       if (avatar) { myAvatarPath = avatar; myAvatarName = avatarName; setMyAvatarPath(avatar); }
       connect();
     },
-  });
+  }));
 });
 
 function start() {
@@ -215,7 +252,8 @@ function start() {
   setHint('<kbd>WASD</kbd> move · <kbd>Enter</kbd> chat · <kbd>B</kbd> build · <kbd>?</kbd> help');
 
   if (!isViewer) {
-    makeAvatar(CONFIG.name, myAvatarPath, { urgent: true }) // your body skips the load queue
+    resolveMyAvatarPath()
+      .then((path) => makeAvatar(CONFIG.name, path, { urgent: true })) // your body skips the load queue
       .then((av) => {
         me = av;
         markPhase('body', 1);
@@ -229,7 +267,7 @@ function start() {
 }
 
 wireNet({
-  myAvatarPath: () => myAvatarPath,
+  myAvatarPath: () => myAvatarPath ?? want,   // a bare name: the server resolves
   myState,
   me: () => me,
   onRestore: (r) => {
