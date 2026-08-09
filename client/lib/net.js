@@ -10,6 +10,11 @@ import { applyEntry, stateToEntries } from './world.js';
 // measures drift between it and the legacy applyEntry path for the whole
 // migration window. Realizers start reading it at 3b.
 import { hydrate as shadowHydrate, foldLive as shadowFold, reset as shadowReset } from './state.js';
+// The models realizer (TEL0S_NOTES §11.4) owns the entity verbs when active:
+// it realizes them FROM state (which the shadow folds feed), so this file
+// must keep legacy applyEntry off them — one writer per verb, always.
+// ?realize=0 flips every seam below back to the legacy path.
+import { REALIZE, PORTED } from './realize/seam.js';
 import { remotes, ensureRemote, dropRemote, pushPose, noteServerTime, noteSpeaking } from './remotes.js';
 import { logChat, logWhisper, noteTyping, noteHistoryContext } from './chat.js';
 import { composeFirstPerson } from './fp_view.js';
@@ -440,12 +445,14 @@ async function handle(msg) {
 
     case 'log':
       // shadow fold first, synchronously — seq-guarded, so the backlog
-      // flush after hydration can never double-fold what landed here
+      // flush after hydration can never double-fold what landed here. When
+      // the realizer is active this IS the delivery for ported verbs: the
+      // fold event drives realization, and legacy applyEntry never sees them.
       shadowFold(msg.entry);
       if (hydrating) pendingLive.push(msg.entry);
       else if ((msg.entry.seq ?? -1) > lastSeq) {
         lastSeq = msg.entry.seq;
-        await applyEntry(msg.entry, true);
+        if (!(REALIZE && PORTED.has(msg.entry.verb))) await applyEntry(msg.entry, true);
         if (msg.entry.verb === 'say') noteSpeaking(msg.entry.actor);
       }
       break;
@@ -566,13 +573,20 @@ async function onSnapshot(msg) {
   // Warm the bytes for every still-live spawn in parallel BEFORE the ordered
   // replay — join time becomes the slowest asset, not the sum of all of them.
   hydrating = true; pendingLive = [];
+  // Every tail seq counts as delivered whether or not legacy replays it —
+  // the realizer's entries are filtered out below, and an under-advanced
+  // lastSeq would let the backlog re-apply what state already holds.
+  for (const e of msg.entries) if ((e.seq ?? -1) > lastSeq) lastSeq = e.seq;
   // A joiner is told the world as it IS (folded state) plus only what has
-  // happened since. Both halves go through the same applyEntry.
+  // happened since. Both halves go through the same applyEntry — minus the
+  // verbs the models realizer owns (it reconciled them from state the moment
+  // the shadow hydrated, scheduling loads by live camera distance).
   const oldestTailSeq = msg.entries.length
     ? Math.min(...msg.entries.map((e) => e.seq ?? Infinity))
     : Infinity;
   const folded = stateToEntries(msg.state, { skipChatFromSeq: oldestTailSeq });
-  const replay = [...folded, ...msg.entries];
+  const replay = [...folded, ...msg.entries]
+    .filter((e) => !(REALIZE && PORTED.has(e.verb)));
   const removed = new Set(replay.filter((e) => e.verb === 'remove').map((e) => e.args?.id));
   const libs = new Set(replay
     .filter((e) => e.verb === 'spawn' && e.args?.lib && !removed.has(e.args.id))
@@ -583,6 +597,8 @@ async function onSnapshot(msg) {
   // a 13s boot, spent staring at a splash while a crate downloaded. Objects
   // materialising around you over the next few seconds is what this world does
   // anyway; the log's ORDER is what has to be respected, not its bytes.
+  // (Under the realizer, spawns are not in `replay` and this pool is empty —
+  // the scheduler's net lane is the warm path, priority-ordered.)
   parallelMap([...libs], (lib) => fetchBytes(`/library/${lib}`).catch(() => {}), 6);
 
   // Replay stays strictly ordered, but these verbs do not BLOCK the entries
@@ -613,7 +629,10 @@ async function onSnapshot(msg) {
   // flush the events that raced us, in order, once
   const backlog = pendingLive.filter((e) => (e.seq ?? -1) > lastSeq).sort((a, b) => a.seq - b.seq);
   pendingLive = []; hydrating = false;
-  for (const e of backlog) { lastSeq = e.seq; await applyEntry(e, true); }
+  for (const e of backlog) {
+    lastSeq = e.seq;
+    if (!(REALIZE && PORTED.has(e.verb))) await applyEntry(e, true);
+  }
 
   const rc = msg.state?.recentChat ?? [];
   noteHistoryContext({

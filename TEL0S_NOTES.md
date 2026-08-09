@@ -400,6 +400,27 @@ fixture/tool matrix.
   a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
   protocol types, then `fold.ts` (step 2b — server-side extraction first,
   fixture-tested; client adoption rides the state/realize skeleton).
+- **2026-08-10 — 3b landed: the models realizer.** The whole flat entity-id
+  namespace (`spawn/place/remove/light/comp/motion/mount/dismount`) is now
+  realized FROM state when active: `realize/models_field.js` (pure planner,
+  12/12 headless) + `realize/models.js` (hosted executor) + `realize/seam.js`
+  (the `?realize=0` kill switch as a LEAF, so net.js consulting it creates
+  no cycle). The design's one trick: every load completion re-reads current
+  state, so `pendingOps`/`pendingMounts` have no successor — a mid-flight
+  `place`/`remove` just changes state, and an unexecutable mount simply
+  stays visible in the fold until both ends realize (`mountsTouching`).
+  Loads go through the scheduler: keyed `entity:<id>`, owned, prioritized
+  by live camera distance at dequeue, cancelled on remove. Compatibility:
+  writes the same maps and emits the same bus events as legacy, so every
+  consumer (motion, emitters, panels, terrain re-seat, remotes) is
+  untouched; two fold-faithfulness upgrades — orphaned cargo lands at the
+  FOLD's stamped pose, and a same-id spawn follows the fold's overwrite.
+  **Spec/impl contradiction flagged**: PROTOCOL.md §3 says spawn is "no-op
+  if id exists"; the reference fold overwrites. Per the spec's own rule the
+  implementation wins until filed — raise with Skye/upstream. Legacy cases
+  stay intact behind the seam; they die at 3c cleanup. In-browser
+  validation: paritybench (CDP harness over Edge, in progress) on both
+  `?realize=1` and `=0` paths.
 - **2026-08-09 — 3a landed: the skeleton's pure half + shadow mode.**
   `client/lib/state.js` (world-as-data over `shared/fold.js`; sync,
   seq-guarded, subscriber-guarded) and `client/lib/scheduler.js` (the one

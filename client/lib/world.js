@@ -93,6 +93,10 @@ let lastGrassArgs = null;
 // object per beat, spreading the per-caster depth-pipeline compiles that
 // would otherwise stack into the load window.
 const shadowless = new Set();
+// The models realizer feeds the same drain when it owns spawns — one shadow
+// policy regardless of which path realized the object.
+export const markShadowless = (id) => { shadowless.add(id); };
+export const unmarkShadowless = (id) => { shadowless.delete(id); };
 let drainingShadows = false;
 async function drainShadows() {
   if (drainingShadows) return;

@@ -14,6 +14,7 @@ import { updateSky, updateAutoSystems, skyArgs, skyImpl,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './lib/sky.js';
 import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
 import { foldParity } from './lib/parity.js';
+import { initModelsRealizer, reconcileModels } from './lib/realize/models.js';
 import { hasGrass, setGrassDensity, getGrassDensity } from './lib/terrain.js';
 // side-effecting: the `particles` component's host wires itself to the comp
 // and entity buses on import (it has no boot step of its own)
@@ -124,6 +125,10 @@ sun.shadow.camera.updateProjectionMatrix();
 
 setSkyArgsSource(skyArgs);
 setCameraCollisionTargets(liveEntities);
+// The models realizer projects entity state into the scene when active
+// (?realize=0 restores legacy applyEntry). Wired before connect() so the
+// hydrated event of the very first snapshot finds it listening.
+initModelsRealizer();
 
 // ---------------------------------------------------------------- boot
 
@@ -1200,6 +1205,7 @@ globalThis.EW = {
   mods: modsApi,     // load/run/offer runtime client scripts (🧩)
   bodysim: { engine: bodyEngine, setEngine: setBodyEngine },  // swappable body physics
   foldParity,        // shadow-mode drift probe (TEL0S_NOTES §11.6)
+  reconcileModels,   // force a full realizer pass (idempotent — §11.4)
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)
