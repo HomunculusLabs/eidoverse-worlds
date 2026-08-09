@@ -8,7 +8,7 @@ import * as THREE_W from "three/webgpu";
 import * as TSL from "three/tsl";
 import { NoiseGate, SHORT_STINT_MS, APPROACH_REFRACT_MS, APPROACH_RADIUS, REARM_RADIUS,
   ACTIVITY_RADIUS_M, ACTIVITY_PULSE_MS, ACTIVITY_REFRESH_MS, MOVER_MIN_M } from "./denoise.ts";
-import { HeadlessBody } from "./physics.ts";
+import { HeadlessBody, setHeightField, registerSupport, removeSupport } from "./physics.ts";
 // The same pure sky fold + weather derivation the browser client and the
 // sequencer run — text-tier perception must land on the SAME hour and
 // weather every renderer shows (issue #29's shared-fact boundary).
@@ -29,7 +29,7 @@ const EMITTER_COALESCE_MS = Number(process.env.EW_EMITTER_COALESCE_SEC ?? 4) * 1
 
 type Vec2 = { x: number; z: number };
 type Pose = { p: number[]; yaw: number; speed: number; clip: string };
-type Entity = { id: string; lib: string; pos: number[]; yaw: number; actor: string;
+type Entity = { id: string; lib: string; pos: number[]; yaw: number; actor: string; scale?: number;
   /** component bag (sockets, reactions, motion, …) — what a thing can DO;
    *  this is how affordances reach text-tier perception */
   comp?: Record<string, any> };
@@ -104,6 +104,39 @@ function stateToEntries(state: any, skipChatFromSeq = Infinity): any[] {
   }
   return out;
 }
+
+/** How much of a `/geom` top-surface band is actually SURFACE.
+ *
+ *  A Surface carries the real up-facing `area` and, separately, the x/z
+ *  rectangle that BOUNDS the band. Those are very different claims, and this
+ *  is the first consumer to have treated the rectangle as solid extent. A
+ *  palm's fronds bound a wide rectangle around almost nothing; a rubble pile
+ *  spreads 1.8m² of jagged faces across 404m² of bounding box. Registering
+ *  the rectangle invents a floor in the canopy and rests bodies on air. */
+const fillOf = (t: { area: number; x: number[]; z: number[] }) => {
+  const rect = (t.x[1] - t.x[0]) * (t.z[1] - t.z[0]);
+  return rect > 1e-6 ? t.area / rect : 0;
+};
+
+/** Minimum fill before a band may be believed as a floor.
+ *
+ *  From a survey of the shipped library (59 libs, 342 surfaces, 57 that this
+ *  code would otherwise register), NOT from taste. The two populations
+ *  separate cleanly and the gap is empty: everything sparse lands at or below
+ *  0.361 (rubble piles 0.004–0.036 — the worst is 226× overclaim, 1.8m² of
+ *  surface in a 404m² rectangle; palm canopy 0.101; excavators and rig
+ *  superstructure 0.019–0.31), while every real deck lands at or above 0.532
+ *  (perimeter walls 0.53–0.57, tank hull 0.73, wall pillar 0.76, watchtower
+ *  decks 0.76 and 0.86, rig top deck 0.83, wall gate 1.00). No surveyed
+ *  surface falls between. 0.45 sits in the middle of that empty band, so
+ *  library drift in either direction has to travel before it changes an
+ *  answer. This is the one line to move if the split needs revisiting.
+ *
+ *  The cost is deliberate: a real-but-open deck (a catwalk, a grating) is
+ *  abstained on and a body falls to terrain instead. That is the honest
+ *  pre-#17 answer. The alternative is inventing geometry, and a body resting
+ *  in a palm canopy is exactly the bug this PR exists to end. */
+const DECK_FILL = 0.45;
 
 // A canned "knocked over" pose for headless agents, which cannot simulate.
 const DOWNED_POSE: Record<string, number[]> = {
@@ -266,6 +299,13 @@ export class WorldAgent {
     this.gate.dispose(); // held narration dies with the session
     for (const s of this.emitterNarration.values()) clearTimeout(s.timer);
     this.emitterNarration.clear();
+    // Take this world's floors out with us. The collider map is process
+    // state (see physics.ts's declared seam), so an agent that leaves and is
+    // replaced by one joining somewhere else would otherwise leave its
+    // platforms standing in empty air under the new world — a ghost floor by
+    // the back door, and the exact failure the motion fence exists to
+    // prevent. Leaving is the one moment this agent knows they are its own.
+    for (const id of [...this.supportIds.keys()]) this.dropSupport(id);
     this.ws?.close();
   }
 
@@ -437,6 +477,7 @@ export class WorldAgent {
                 break;
               }
               this.draggedBy = msg.by; this.dragAt = Date.now();
+              ++this.bodyEpoch;                    // a hand outranks any tumble still loading
               this.body?.stop(); this.stopSim();   // the dragger's sim owns the tumble now
               this.clip = "ragdoll";
               this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by,
@@ -635,8 +676,10 @@ export class WorldAgent {
   private async applyEntry(entry: any, live: boolean) {
     const { verb, args, actor, ts } = entry;
     if (verb === "spawn") {
-      this.entities.set(args.id, { id: args.id, lib: args.lib, pos: args.pos ?? [0, 0, 0], yaw: args.yaw ?? 0, actor });
+      this.entities.set(args.id, { id: args.id, lib: args.lib, pos: args.pos ?? [0, 0, 0], yaw: args.yaw ?? 0,
+        ...(args.scale != null ? { scale: args.scale } : {}), actor });
       if (live) this.noteBuild(actor, args.pos);
+      this.trackSupport(this.syncSupport(args.id));   // a placed thing is a thing bodies can rest on (#17)
     } else if (verb === "light") {
       // a light is an entity too, so text-tier perception can see it and it can
       // be moved/removed by id like anything else. Re-issued on an existing id
@@ -647,11 +690,13 @@ export class WorldAgent {
       if (live) this.noteBuild(actor, args.pos);
     } else if (verb === "place") {
       const e = this.entities.get(args.id);
-      if (e) { e.pos = args.pos; if (args.yaw != null) e.yaw = args.yaw; }
+      if (e) { e.pos = args.pos; if (args.yaw != null) e.yaw = args.yaw; if (args.scale != null) e.scale = args.scale; }
       if (live) this.noteBuild(actor, args.pos);
+      this.trackSupport(this.syncSupport(args.id));   // support follows the thing it belongs to
     } else if (verb === "remove") {
       if (live) this.noteBuild(actor, this.entities.get(args.id)?.pos);
       this.entities.delete(args.id);
+      this.dropSupport(args.id);
       for (const [rid, m] of this.mounts) if (m.to === args.id) this.mounts.delete(rid);
     } else if (verb === "comp") {
       // affordances are components — track them or look() can't tell anyone
@@ -667,6 +712,9 @@ export class WorldAgent {
         if (args.type === "particles" && live) {
           this.noteEmitter(actor, String(args.id), before, args.data ?? null, e.pos, ts);
         }
+        // a motion arriving or leaving changes whether this thing may hold a
+        // body up (see hasActiveMotion)
+        if (args.type === "motion" || args.type.startsWith("motion:")) this.trackSupport(this.syncSupport(args.id));
       }
     } else if (verb === "motion") {
       const e = this.entities.get(args.id);
@@ -674,11 +722,26 @@ export class WorldAgent {
         e.comp ??= {};
         const { id: _id, ...m } = args;
         if (m.type == null) delete e.comp.motion; else e.comp.motion = m;
+        this.trackSupport(this.syncSupport(args.id));   // starts moving = stops supporting, and back
       }
     } else if (verb === "mount") {
       this.mounts.set(args.id, { to: args.to, slot: args.slot });
+      // Cargo rides its parent, so its own support goes stale the instant the
+      // parent moves — world.js drops the collider here for exactly that
+      // reason and lets the pair collide as the parent. Entities only: a
+      // mount whose id is not a thing is a BODY taking a seat, which owns no
+      // support and is a separate seam.
+      if (this.entities.has(args.id)) this.dropSupport(args.id);
     } else if (verb === "dismount") {
       this.mounts.delete(args.id);
+      const e = this.entities.get(args.id);
+      if (e) {
+        // a dismount stamps where the ride let go; the support must be built
+        // from THAT, not from the transform the thing had before it mounted
+        if (Array.isArray(args.pos) && args.pos.length === 3) e.pos = args.pos;
+        if (args.yaw != null) e.yaw = args.yaw;
+        this.trackSupport(this.syncSupport(args.id));   // stand it back up
+      }
     } else if (verb === "force") {
       // an instantaneous radial CAUSE (blast, gust) — live only, because a
       // replay must never re-detonate. Same falloff math as browser bodies
@@ -859,10 +922,150 @@ export class WorldAgent {
       (0, eval)(this.terrainSrc);
     }
     this.terrain = (globalThis as any).makeTerrain({ ...args, layers: [] });
+    // the settle sim clamps against the SAME ground the walking clamp reads —
+    // not one height sampled at the fall site (#17)
+    void setHeightField((x, z) => this.heightAt(x, z));
   }
 
   heightAt(x: number, z: number): number {
     return this.terrain ? this.terrain.heightAt(x, z) : 0;
+  }
+
+  // ---- support surfaces (#17) ----------------------------------------------
+  // A body settling headless used to see bare terrain: every placed floor —
+  // a platform, a deck, the bell pavilion's slab — simply was not there, and
+  // a body released above one settled through it to the dirt underneath.
+  // The server already reads shape as data (GET /geom: bbox + up-facing flat
+  // zones); each entity this agent knows about contributes support boxes to
+  // the sim's collider map. Small solid things contribute their whole box —
+  // the same thing a browser's box collider reads. Room-scale things (the
+  // browser gives those exact trimesh interiors) contribute their floor DECKS
+  // as thin slabs instead, so a body can rest on the pavilion floor without
+  // the pavilion sealing into a solid block. Walls stay a browser-side seam:
+  // a data box carries floors, not architecture.
+
+  private geomCache = new Map<string, Promise<any | null>>();
+  private supportIds = new Map<string, string[]>();   // entity id -> registered box ids
+  /** This agent's claim token on shared support boxes. Per INSTANCE, not per
+   *  name: two agents can carry the same name across a reconnect, and a
+   *  holder set that collapsed them would let the departing one release the
+   *  arriving one's floors. */
+  private readonly supportHolder = `agent#${++WorldAgent.holderSeq}`;
+  private static holderSeq = 0;
+  /** Every support sync currently in flight. Replay fires one per spawn and
+   *  `/geom` is a network round trip, so for the first moment of a join the
+   *  world's floors exist in the log but not yet in the sim — and a body
+   *  released in that window falls through a platform that this agent simply
+   *  had not finished learning about. supportReady() is the barrier; a settle
+   *  that intends to claim placed-floor support waits on it. */
+  private supportPending = new Set<Promise<void>>();
+
+  /** Resolves once every support sync issued so far has landed. Re-checked in
+   *  a loop because a sync can enqueue while we wait (a spawn replayed behind
+   *  the one we were waiting on). Bounded so a hung fetch cannot freeze a
+   *  body forever — a late floor is a bug, a body that never settles is
+   *  worse. */
+  private async supportReady(timeoutMs = 3000) {
+    const deadline = Date.now() + timeoutMs;
+    while (this.supportPending.size && Date.now() < deadline) {
+      await Promise.race([
+        Promise.all([...this.supportPending]),
+        new Promise((r) => setTimeout(r, Math.max(0, deadline - Date.now()))),
+      ]);
+    }
+  }
+
+  /** Run a support sync and keep it visible to the barrier for its lifetime. */
+  private trackSupport(p: Promise<void>) {
+    this.supportPending.add(p);
+    void p.finally(() => this.supportPending.delete(p));
+  }
+
+  /** Is anything on this entity animating right now?
+   *
+   *  A motion component is PARAMETERS, not frames: the browser evaluates a
+   *  pendulum/spin/orbit/bob/path every frame and its collider rides along.
+   *  A support box registered from the AUTHORED transform does not — it would
+   *  sit where the swing used to be, and a body would come to rest on a floor
+   *  that is no longer there. A ghost floor is worse than no floor: no floor
+   *  is the honest pre-#17 answer for that entity, while a ghost floor is
+   *  geometry this code invented.
+   *
+   *  Deliberately conservative — ANY motion, including a `motion:<part>` on a
+   *  single named node, disqualifies the whole entity. A part motion leaves
+   *  the entity's own transform alone, but the /geom summary that produced
+   *  these boxes measured the model WITH that part in it, and nothing here
+   *  can tell which deck belongs to the moving piece. Until headless
+   *  evaluates the same deterministic motion the browsers do, the safe answer
+   *  is to abstain. */
+  private hasActiveMotion(e: Entity | undefined): boolean {
+    if (!e?.comp) return false;
+    for (const [k, v] of Object.entries(e.comp)) {
+      if (k !== "motion" && !k.startsWith("motion:")) continue;
+      if (v && (v as any).type != null) return true;
+    }
+    return false;
+  }
+
+  private geomFor(lib: string): Promise<any | null> {
+    let p = this.geomCache.get(lib);
+    if (!p) {
+      p = fetch(`${this.httpBase}/geom?lib=${encodeURIComponent(lib)}`)
+        .then((r) => (r.ok ? r.json() : null))
+        .then((g) => (g && !g.error && g.bbox ? g : null))
+        .catch(() => null);                            // no geometry is a soft state, never a crash
+      this.geomCache.set(lib, p);
+    }
+    return p;
+  }
+
+  private async syncSupport(id: string) {
+    const before = this.entities.get(id);
+    if (!before || !before.lib || before.lib === "(light)") return;  // lights carry no collider
+    // A moving thing supports nothing here — and stops supporting the moment
+    // it starts moving, so this is the drop path as well as the skip path.
+    // Mounted cargo is the same story told by a different verb: it rides a
+    // parent whose transform this code does not track.
+    if (this.hasActiveMotion(before) || this.mounts.has(id)) { this.dropSupport(id); return; }
+    const g = await this.geomFor(before.lib);
+    // Re-read, and re-CHECK: an id can be removed and respawned as something
+    // else while its geometry is in flight, and "the entity still exists" is
+    // not the same question as "it is still the thing I fetched for". Without
+    // the lib comparison a crate's decks could land under a lamp post that
+    // merely inherited its id.
+    const e = this.entities.get(id);
+    if (!g || !e || e.lib !== before.lib) return;
+    // started moving, or got mounted, while its geometry was in flight —
+    // replay folds a mount right behind the spawn that triggered this fetch
+    if (this.hasActiveMotion(e) || this.mounts.has(id)) { this.dropSupport(id); return; }
+    this.dropSupport(id);
+    const s = e.scale ?? 1;
+    const xform = { position: e.pos, yaw: e.yaw ?? 0, scale: s };
+    const [w, h, d] = [g.bbox.size[0] * s, g.bbox.size[1] * s, g.bbox.size[2] * s];
+    const ids: string[] = [];
+    const roomScale = w * d >= 16 && h >= 2.2;         // decide()'s own gate, from the bbox alone
+    const decks = roomScale
+      ? (g.topSurfaces ?? [])
+          .filter((t: any) => t.area * s * s >= 1 && fillOf(t) >= DECK_FILL)
+          .slice(0, 6)
+      : [];
+    if (roomScale && decks.length) {
+      for (let k = 0; k < decks.length; k++) {
+        const t = decks[k], bid = `${this.world}/${id}#${k}`;
+        void registerSupport(this.supportHolder, bid, [t.x[0], t.y - 0.15, t.z[0]], [t.x[1], t.y, t.z[1]], xform);
+        ids.push(bid);
+      }
+    } else if (!roomScale) {
+      const bid = `${this.world}/${id}`;
+      void registerSupport(this.supportHolder, bid, g.bbox.min, g.bbox.max, xform);
+      ids.push(bid);
+    }                                                   // room-scale with no readable decks: browser-only, declared
+    if (ids.length) this.supportIds.set(id, ids);
+  }
+
+  private dropSupport(id: string) {
+    for (const bid of this.supportIds.get(id) ?? []) void removeSupport(this.supportHolder, bid);
+    this.supportIds.delete(id);
   }
 
   private tick() {
@@ -928,6 +1131,17 @@ export class WorldAgent {
     if (!this.pushable || this.draggedBy) return;
     if (this.target) { this.walkDone?.(false); this.walkDone = null; this.target = null; }
     this.speed = 0;
+    // Down NOW, not when the physics finishes loading. tumble() awaits the
+    // skeleton, the height field and the support barrier before it can set
+    // this — and every one of those is a real wait on a cold join. In that
+    // window the body was knocked over but still reported clip "idle", so a
+    // hand reaching for it was refused ("only limp bodies drag") and the
+    // tumble then landed on top of the drag that never happened. Being
+    // knocked over is a fact about the blow, not about our readiness to
+    // simulate it; the canned slump holds the shape until the sim produces a
+    // real pose, exactly as it does when there is no sim at all.
+    this.clip = "ragdoll";
+    this.heldPose ??= DOWNED_POSE;
     this.onEvent?.({ ts: Date.now(), kind: "say", who: by, text: notice } as any);
     void this.tumble(lean);
   }
@@ -938,8 +1152,23 @@ export class WorldAgent {
     return this.body;
   }
 
+  /** Whose turn it is to drive this body.
+   *
+   *  tumble() and settleFromDrag() both await real latency — the skeleton
+   *  parse, the height field, the support barrier — and the world does not
+   *  hold still for them. A knockdown that pauses on a slow /geom can resume
+   *  AFTER a hand has grabbed the body, dragged it somewhere and let go, and
+   *  then begin() its own stale fall on top of the settle that was already
+   *  running. Checking `draggedBy` alone cannot see that: by the time the
+   *  tumble wakes, the drag is over and the field is null again. Every act
+   *  that takes authority over the body bumps this, and any suspended act
+   *  that finds it changed abandons itself. */
+  private bodyEpoch = 0;
+
   private async tumble(lean: number[] | null) {
+    const epoch = ++this.bodyEpoch;
     const body = await this.ensureBody();
+    if (this.bodyEpoch !== epoch) return;
     if (!body) {
       // fallback: land where the shove was taking you, then the slump
       if (Array.isArray(lean) && lean.length === 3 && lean.every(Number.isFinite)) {
@@ -955,9 +1184,14 @@ export class WorldAgent {
       return;
     }
     if (this.draggedBy) return;   // a hand arrived while the skeleton loaded
+    // the sim's ground is process state — assert OURS before every run
+    // (see physics.ts's declared seam)
+    await setHeightField((x, z) => this.heightAt(x, z));
+    if (this.bodyEpoch !== epoch) return;
+    await this.supportReady();    // don't fall through a floor still in flight
+    if (this.bodyEpoch !== epoch || this.draggedBy) return;
     body.begin({
       x: this.pos.x, z: this.pos.z,
-      groundY: this.heightAt(this.pos.x, this.pos.z),
       yaw: this.yaw,
       // no direction given = the browser default: you fall the way you face
       lean: lean ?? [Math.sin(this.yaw) * 0.9, 0, Math.cos(this.yaw) * 0.9],
@@ -970,12 +1204,22 @@ export class WorldAgent {
   /** Resume MY OWN sim from wherever a drag left this body — the same
    *  settle-under-owner-authority browsers do, pins enforced for real. */
   private async settleFromDrag(pose: Record<string, number[]> | null, sim?: any) {
+    const epoch = ++this.bodyEpoch;
     const body = await this.ensureBody();
+    if (this.bodyEpoch !== epoch) return;
     if (!body) { this.heldPose = pose ?? this.heldPose ?? DOWNED_POSE; this.heldPoseAuthored = false; this.clip = "ragdoll"; return; }
     if (this.draggedBy) return;
+    // the sim's ground is process state — assert OURS before every run
+    await setHeightField((x, z) => this.heightAt(x, z));
+    if (this.bodyEpoch !== epoch) return;
+    // A release (or a 1.2s dragger silence) can land in the first moment of a
+    // join, while replayed spawns are still fetching their geometry. Settling
+    // then would drop the body through a platform the log already knows
+    // about — the #17 failure, arriving by a different door.
+    await this.supportReady();
+    if (this.bodyEpoch !== epoch || this.draggedBy) return;
     body.begin({
       x: this.pos.x, z: this.pos.z,
-      groundY: this.heightAt(this.pos.x, this.pos.z),
       yaw: this.yaw,
       pose: pose ?? this.heldPose ?? null,
       rootY: this.pos.y,
@@ -1015,6 +1259,7 @@ export class WorldAgent {
       this.heldPose = null; this.heldPoseAuthored = false; this.clip = "idle";
     }
     this.pins.clear();      // and walking tears out every nail
+    ++this.bodyEpoch;       // ...and outranks a tumble or settle still loading
     this.body?.stop(); this.stopSim();   // a body that decides to walk is done tumbling
     // deciding to walk IS getting up — shed the held pose, or the body zombie-
     // walks with it frozen over the stride. ALL of it goes, authored or not:
