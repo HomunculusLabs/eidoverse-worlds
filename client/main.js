@@ -25,7 +25,7 @@ import {
 import {
   remotes, updateRemotes, updateGaze, noteSpeaking, setLodBias,
 } from './lib/remotes.js';
-import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendPuppet, sendWhisper, sendTyping, sendWorldFork, sendWorldReset, sendMod, requestDebug } from './lib/net.js';
+import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendAnim, sendPuppet, sendWhisper, sendTyping, sendWorldFork, sendWorldReset, sendMod, requestDebug } from './lib/net.js';
 import {
   initPalette, updateBuild, wireAvatarSwitch, setMyAvatarPath, toggleBuildMenu,
   hasGhost, hasSelection, toggleEditMode, isEditing,
