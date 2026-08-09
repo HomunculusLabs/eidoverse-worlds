@@ -13,14 +13,15 @@
 // object is in flight or riding a motion comp.
 
 import { state } from './state.js';
-import { entities, comps, avatarMounts } from './world.js';
+import { entities, entityMeta, comps, avatarMounts } from './world.js';
 
 const jstr = (v) => JSON.stringify(v ?? null);
 
 export function foldParity() {
   const shadow = state.st;
   const out = { hydrated: state.hydrated, lastSeq: state.lastSeq,
-    checked: 0, onlyShadow: [], onlyLegacy: [], compDiffs: [], mountDiffs: [] };
+    checked: 0, onlyShadow: [], onlyLegacy: [], compDiffs: [], mountDiffs: [],
+    identityDiffs: [] };
 
   const legacyIds = new Set(entities.keys());
   const shadowIds = new Set(Object.keys(shadow.entities));
@@ -35,6 +36,19 @@ export function foldParity() {
     if (jstr(legacyBag) !== jstr(shadowBag)) {
       out.compDiffs.push({ id, legacy: legacyBag, shadow: shadowBag });
     }
+    // identity: the fold's word on WHAT this id is (a light? which model?)
+    // vs what the scene realized — where same-id-spawn overwrite semantics
+    // would drift first (a still-loading reservation has no meta yet: skip)
+    const meta = entityMeta.get(id);
+    if (meta) {
+      const ent = shadow.entities[id];
+      const sceneKind = meta.kind === 'light' ? 'light' : 'model';
+      const foldKind = ent.kind === 'light' ? 'light' : 'model';
+      if (sceneKind !== foldKind || (foldKind === 'model' && meta.lib !== ent.lib)) {
+        out.identityDiffs.push({ id, legacy: { kind: sceneKind, lib: meta.lib },
+          shadow: { kind: foldKind, lib: ent.lib } });
+      }
+    }
   }
 
   // body mounts: world.js's avatarMounts map vs the fold's mounts record
@@ -47,10 +61,11 @@ export function foldParity() {
   }
 
   out.ok = !out.onlyShadow.length && !out.onlyLegacy.length
-    && !out.compDiffs.length && !out.mountDiffs.length;
-  console.log(`[parity] ${out.ok ? '✓ fold and legacy agree' : '✗ DRIFT'} — ` +
+    && !out.compDiffs.length && !out.mountDiffs.length && !out.identityDiffs.length;
+  console.log(`[parity] ${out.ok ? '✓ fold and scene agree' : '✗ DRIFT'} — ` +
     `${out.checked} entities checked, +${out.onlyShadow.length} shadow-only, ` +
     `+${out.onlyLegacy.length} legacy-only, ${out.compDiffs.length} comp diffs, ` +
-    `${out.mountDiffs.length} mount diffs (seq ${out.lastSeq})`);
+    `${out.mountDiffs.length} mount diffs, ${out.identityDiffs.length} identity diffs ` +
+    `(seq ${out.lastSeq})`);
   return out;
 }
