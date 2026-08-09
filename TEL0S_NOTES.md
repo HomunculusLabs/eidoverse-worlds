@@ -439,3 +439,133 @@ fixture/tool matrix.
   ratchets, uncached VRM parse, unserialized log applies, dead signals)
   are already §2 findings. Fixes for 1 and 2 proposed as immediate,
   separate commits — they are live bugs, not rebuild work.
+
+## 11. The skeleton, sketched — step 3 reference design
+
+Written 2026-08-09, before implementation, so the interfaces exist on paper
+for review and posterity. This is the concrete form of §3's principle.
+
+### 11.1 Module inventory
+
+```
+shared/fold.js            the fold (landed — step 2)
+client/lib/state.js       folded WorldState + change events   (3a, pure)
+client/lib/scheduler.js   the one loader                      (3a, pure)
+client/lib/realize/*.js   registered projections of state     (3b+)
+client/lib/systems.js     the frame loop's explicit list      (step 6)
+```
+
+`state.js` and `scheduler.js` are DOM-free and THREE-free on purpose — the
+`_field.js` discipline — so both are headless-testable (`tools/state-test.ts`,
+`tools/scheduler-test.ts`).
+
+### 11.2 state.js — the world as data
+
+```js
+import { foldEntry, emptyState } from '../../shared/fold.js';
+
+state.st        // WorldState (shared/fold.js typedef) — THE world, as data
+state.lastSeq   // highest folded seq
+
+hydrate(snapshotState, tail)  // adopt server state wholesale (it IS
+                              // WorldState-shaped), fold the tail, emit
+                              // {type:'hydrated'} — milliseconds, sync
+foldLive(entry)               // foldEntry + emit {type:'entry', entry} — sync
+reset()                       // world switch/fork → emptyState + {type:'reset'}
+onWorldChange(fn) → off       // subscribe; events carry the entry, state is
+                              // read from state.st (events are invalidation
+                              // signals, not data carriers)
+```
+
+Invariants:
+- **Folding is synchronous and in seq order.** The net layer feeds entries
+  one at a time; `foldLive` warns on seq regression and drops duplicates.
+  This kills the async-onmessage interleave (§2, hazard 15) at the source:
+  only *realization* is async, and it reads consistent state.
+- `state.st` is a pure function of (snapshot, entries) — the same contract
+  the server's fold has, because it IS the server's fold.
+- Nothing in `state.js` touches the scene, the DOM, or THREE.
+
+Event vocabulary starts minimal (`hydrated | reset | entry`); realizer-
+facing refinement (per-facet interests) is added at 3b with its first
+consumer, not speculated now.
+
+### 11.3 scheduler.js — the one loader
+
+```js
+schedule({ key,               // dedupe identity ('glb:deco/crate.glb')
+           owner,             // cancellation scope ('entity:crate1')
+           lane,              // 'net' (6) | 'cpu' (2) | 'gpu' (2) — the
+                              // measured caps from loadwork/assets carry over
+           priority,          // number | () => number, re-evaluated at
+                              // dequeue (distance to camera moves)
+           run(signal) })     // does the work; honours AbortSignal
+  → { cancel(), done }        // done: Promise
+cancelOwner(owner)            // entity removed / superseded / world switch
+pending(minPriority?)         // outstanding count at or above a band
+onIdle(fn, minPriority?)      // curtain + progress read THESE, not timeouts
+```
+
+Priority bands (constants, not magic numbers): `BODY_SELF > BODY > NEAR >
+VISIBLE > FAR > COSMETIC`. FIFO within a band. Dedupe by `key`: scheduling
+an already-queued key keeps one job at the higher priority.
+
+Invariants:
+- **No timeouts anywhere.** Readiness is observed (queue drain per band),
+  never assumed. The 12s/25s/4s/30s/45s escape-hatch stack (§2) has no
+  successor in this design.
+- Runtime-agnostic pumping (microtask on schedule/completion), so Bun tests
+  drive it without a renderer. Budget slicing stays inside jobs (loadwork's
+  `tick()` mechanics survive as the work-record layer, which the scheduler
+  does not replace — only the lanes).
+- During migration the old `loadwork.enqueue` delegates into the scheduler;
+  `holdObjectCompiles`/`holdFrames` stay until the material factory (step 5)
+  removes their reason.
+
+### 11.4 The realizer contract (3b+)
+
+```js
+makeModelsRealizer(ctx) → {
+  name: 'models',
+  interests: ['spawn','place','remove','comp','mount','dismount'],
+  reconcile(st),      // full idempotent pass — hydration, world switch,
+                      // late enable. Placeholders from snapshot bboxes
+                      // appear HERE, at fold time, before any bytes.
+  onChange(st, ev),   // one fold event — schedule loads/updates via the
+                      // scheduler, keyed and owned for cancellation
+  dispose(),
+}
+```
+
+- A realizer owns its scene objects (keyed by entity id) and its scheduler
+  jobs (owner = `entity:<id>`), and touches no other realizer's.
+- `reconcile ∘ reconcile = reconcile` — idempotence is the contract that
+  makes join and live the same path, one level above `stateToEntries`.
+- The entity-object registry stays compatible during migration: the models
+  realizer writes the same `world.js` `entities` Map existing consumers
+  read; the Map's ownership moves, its shape doesn't.
+
+Port order (each lands green, world bootable): **models** → lights (the
+rig's data side, ahead of step 5) → terrain → sky → grass/flora → emitters
+→ motion (stays a frame system, reading comps from `state.st`).
+
+### 11.5 What dies, and when
+
+| Machinery | Dies at |
+|---|---|
+| `stateToEntries` + synthetic negative-seq replay | models realizer (3b) |
+| `pendingOps` / `pendingMounts` ordering reconstruction | 3b (fold is sync; realizers read state) |
+| serial `await applyEntry` replay loop + `NON_GATING` | 3b–3c as cases port |
+| `whenBooted()` gating of sky/grass/prefetch | 3c (ordinary low-priority jobs) |
+| `holdObjectCompiles` / `holdFrames` + their timeout caps | step 5 (material factory) |
+| dead `hydrating`/`entities-settled` signals | replaced by scheduler band events (3a) |
+
+### 11.6 Migration safety: shadow mode (3a)
+
+3a wires `state.js` into `net.js` *alongside* the existing path: every
+snapshot hydrates it, every live entry folds into it, and nothing consumes
+it yet. A dev parity probe (debug surface) compares shadow state against
+the legacy maps — entity ids, transforms, comp bags — so drift between the
+shared fold and `applyEntry` is *measured for free* during the whole
+migration window, before any behavior moves. House rule 1's remaining
+mirror becomes an assertion instead of a hope.
