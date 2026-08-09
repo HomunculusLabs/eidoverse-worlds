@@ -1,22 +1,18 @@
 // net — the wire. One socket carrying two planes: the world log (ordered,
 // persisted, replayed on join) and presence (batched, lossy, never persisted).
 
-import { THREE, CONFIG, camera, scene, renderer, report, bus, parallelMap } from './core.js';
-import { fetchBytes, forgetBytes } from './assets.js';
-import { applyEntry, stateToEntries } from './world.js';
-// Shadow state (TEL0S_NOTES §11.6): every snapshot and live entry also folds
-// into the pure world-as-data model — synchronously, through the same
-// shared/fold.js the sequencer runs. Nothing consumes it yet; EW.foldParity()
-// measures drift between it and the legacy applyEntry path for the whole
-// migration window. Realizers start reading it at 3b.
+import { THREE, CONFIG, camera, scene, renderer, report, bus } from './core.js';
+import { forgetBytes } from './assets.js';
+// The world as data (TEL0S_NOTES §11.2): every snapshot and live entry
+// folds here — synchronously, through the same shared/fold.js the
+// sequencer runs — and the realizers project it into the scene.
+// EW.foldParity() measures fold-vs-scene drift on demand.
 import { hydrate as shadowHydrate, foldLive as shadowFold, reset as shadowReset } from './state.js';
-// The realizers (TEL0S_NOTES §11.4) own the scene when active: state verbs
-// realize FROM the fold, and fold-inert causes (use/punt/force, moderation
+// The realizers (TEL0S_NOTES §11.4) own the scene: state verbs realize
+// FROM the fold, and fold-inert causes (use/punt/force, moderation
 // narration, live say) dispatch over the bus as 'live-entry' (causes.js
 // listens — emitted rather than imported so this file adds no lap around
-// the net → chat → net cycle). One writer per verb, always; ?realize=0
-// flips every seam below back to the legacy applyEntry path wholesale.
-import { REALIZE } from './realize/seam.js';
+// the net → chat → net cycle). One writer per verb, always.
 import { remotes, ensureRemote, dropRemote, pushPose, noteServerTime, noteSpeaking } from './remotes.js';
 import { logChat, logWhisper, noteTyping, noteHistoryContext } from './chat.js';
 import { composeFirstPerson } from './fp_view.js';
@@ -454,8 +450,7 @@ async function handle(msg) {
       if (hydrating) pendingLive.push(msg.entry);
       else if ((msg.entry.seq ?? -1) > lastSeq) {
         lastSeq = msg.entry.seq;
-        if (REALIZE) bus.emit('live-entry', msg.entry);
-        else await applyEntry(msg.entry, true);
+        bus.emit('live-entry', msg.entry);
         if (msg.entry.verb === 'say') noteSpeaking(msg.entry.actor);
       }
       break;
@@ -508,10 +503,6 @@ async function handle(msg) {
       break;
   }
 }
-
-/** Verbs whose completion must never gate arrival. Anything reaching the sky
- *  belongs here — see the deadlock note in the replay loop. */
-const NON_GATING = new Set(['spawn', 'sky', 'weather']);
 
 async function onSnapshot(msg) {
   // what the server says you may do here; live grants keep it fresh via world.js
@@ -580,56 +571,6 @@ async function onSnapshot(msg) {
   // the realizer's entries are filtered out below, and an under-advanced
   // lastSeq would let the backlog re-apply what state already holds.
   for (const e of msg.entries) if ((e.seq ?? -1) > lastSeq) lastSeq = e.seq;
-  // A joiner is told the world as it IS (folded state) plus only what has
-  // happened since. Under the realizers the whole ordered replay below is
-  // GONE: the shadow hydrate already reconciled every realizer from state
-  // (terrain enqueued and gating, model loads scheduled by live camera
-  // distance, chat window rendered), and live causes ride 'live-entry'.
-  // The legacy branch keeps the pre-skeleton path verbatim for ?realize=0.
-  if (!REALIZE) {
-  const oldestTailSeq = msg.entries.length
-    ? Math.min(...msg.entries.map((e) => e.seq ?? Infinity))
-    : Infinity;
-  const folded = stateToEntries(msg.state, { skipChatFromSeq: oldestTailSeq });
-  const replay = [...folded, ...msg.entries];
-  const removed = new Set(replay.filter((e) => e.verb === 'remove').map((e) => e.args?.id));
-  const libs = new Set(replay
-    .filter((e) => e.verb === 'spawn' && e.args?.lib && !removed.has(e.args.id))
-    .map((e) => e.args.lib));
-  bus.emit('hydrating', { total: replay.length, libs: libs.size, folded: folded.length });
-  // Warm the bytes, but do NOT wait for them. Blocking arrival on every model
-  // in the world made a cold join cost the sum of its heaviest assets — 12s of
-  // a 13s boot, spent staring at a splash while a crate downloaded. Objects
-  // materialising around you over the next few seconds is what this world does
-  // anyway; the log's ORDER is what has to be respected, not its bytes.
-  parallelMap([...libs], (lib) => fetchBytes(`/library/${lib}`).catch(() => {}), 6);
-
-  // Replay stays strictly ordered, but these verbs do not BLOCK the entries
-  // behind them — world.js queues any place/remove that lands on a body still
-  // in flight and applies it when the body arrives.
-  //
-  // `weather` belongs here for a sharper reason than cost. It routes into the
-  // same sky build as `sky`, which waits for boot to finish so it stops
-  // competing for bandwidth — and boot waits for replay. Awaiting a weather
-  // verb therefore DEADLOCKED the join until the 45s boot ceiling broke it.
-  // Anything that can reach the sky must not gate replay.
-  const settling = [];
-  for (let i = 0; i < replay.length; i++) {
-    const entry = replay[i];
-    // synthetic pre-history entries carry negative seq and must not advance it
-    if ((entry.seq ?? -1) >= 0) lastSeq = Math.max(lastSeq, entry.seq);
-    const p = applyEntry(entry, false);
-    // Spawns and the sky do not gate arrival. The sky verb pulls ~7.5MB of
-    // atmosphere and particle textures and then bakes an environment map —
-    // that was most of a cold boot, spent so the world could look finished the
-    // instant it appeared. Terrain still blocks (you need ground to stand on);
-    // the sky resolves over your head a moment later.
-    if (NON_GATING.has(entry.verb)) settling.push(p); else await p;
-    if (replay.length > 4) markPhase('world', 0.5 + 0.49 * ((i + 1) / replay.length));
-  }
-  // Let the tray, not the splash, carry the tail of the asset stream.
-  Promise.all(settling).then(() => bus.emit('entities-settled'));
-  }   // end of the legacy (!REALIZE) replay branch
   // flush the events that raced us, in order, once. Their folds already
   // landed at arrival (seq-guarded); under the realizers this delivers
   // their live causes, after the hydration window so a raced say lands
@@ -638,21 +579,17 @@ async function onSnapshot(msg) {
   pendingLive = []; hydrating = false;
   for (const e of backlog) {
     lastSeq = e.seq;
-    if (REALIZE) bus.emit('live-entry', e);
-    else await applyEntry(e, true);
+    bus.emit('live-entry', e);
   }
 
   const rc = msg.state?.recentChat ?? [];
   noteHistoryContext({
     total: msg.state?.chatTotal ?? null,
-    // what was ACTUALLY rendered: under the realizers the window is exactly
-    // state.recentChat (tail says beyond its 40-line cap are not re-played —
-    // they are fetchable by paging, and this count is what makes the
-    // "showing N of M" hint appear so a reader knows to page). Legacy also
-    // rendered the tail's says, so it counts both (review B2 — the old
-    // double-count suppressed the hint precisely when lines were missing).
-    shown: REALIZE ? rc.length
-      : rc.length + msg.entries.filter((e) => e.verb === 'say').length,
+    // what was ACTUALLY rendered: the window is exactly state.recentChat
+    // (tail says beyond its 40-line cap are not re-played — they are
+    // fetchable by paging, and this count is what makes the "showing N of
+    // M" hint appear so a reader knows to page; review B2).
+    shown: rc.length,
     spanMs: rc.length > 1 ? rc[rc.length - 1].ts - rc[0].ts : null,
   });
 

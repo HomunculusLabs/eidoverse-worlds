@@ -400,6 +400,35 @@ fixture/tool matrix.
   a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
   protocol types, then `fold.ts` (step 2b — server-side extraction first,
   fixture-tested; client adoption rides the state/realize skeleton).
+- **2026-08-11 — the legacy path is deleted. One fold, one writer, every
+  runtime.** With tel0s's go-ahead on the spawn question (deviate from
+  upstream's original view), the two holds cleared and the axe fell:
+  - **S9 pinned**: PROTOCOL.md §3.1 documents overwrite semantics as a
+    dated erratum (implementation wins, no dialect bump — every persisted
+    log already meant this); `keep`/`collide` join the documented shapes;
+    **fixture 04-overwrite** (driven through the real door) pins same-id
+    replacement, cross-kind replacement both ways, and light-on-light
+    partial merge. foldfix 16/16.
+  - **S8 retired**: `stateToEntries` joined shared/fold.js — the browser
+    and the mcpl agent both consume it, the agent's deliberate omissions
+    encoded as explicit flags instead of a hand-mirrored copy. compfold
+    24/24.
+  - **Deleted**: `applyEntry` and its 26-case switch, `pendingOps`,
+    `pendingMounts`, `applyMount`/`retryMounts`, the legacy replay branch
+    in onSnapshot, `NON_GATING`, the dead `hydrating`/`entities-settled`
+    signals, the `?realize` seam (realizers init unconditionally; PORTED
+    lives in models.js), and `resetWorld` (zero callers; the realizers'
+    reset handlers are the successor). world.js is 345 lines of registries
+    + world-scope builders, down from ~670. paritybench is single-pass —
+    what keeps it honest now is the reconnect leg, the mount-pose bucket,
+    the refusal gate, and the server-fold witness, not a second
+    implementation. AGENTS.md house rule 1 rewritten: the fold is
+    SINGULAR.
+  - Verified on the deleted tree: comptest 33/33 · compfold 24/24 ·
+    permtest unchanged · state 24/24 · scheduler 9/9 · models-field 12/12
+    · foldfix 16/16 · paritybench PASS (all three reads). §11.5's table is
+    fully checked off except the compile-holds row, which was always
+    step 5's (material factory).
 - **2026-08-10 — 3c review round: deletion held, gate upgraded, blockers
   fixed.** The adversarial Opus review returned 3 blockers + 9 should-fixes
   (and a long checked-and-clean list confirming the core: the gen guard,

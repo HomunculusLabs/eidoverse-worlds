@@ -12,7 +12,6 @@
 import { state, onWorldChange } from '../state.js';
 import { applyGrantState, applyBehaviorState } from '../world.js';
 import { logChat } from '../chat.js';
-import { REALIZE } from './seam.js';
 
 function reconcileSocial() {
   const st = state.st;
@@ -35,7 +34,6 @@ function onEntry(entry) {
 const VERBS = new Set(['grant', 'behavior']);
 
 export function initSocialRealizer() {
-  if (!REALIZE) return false;
   onWorldChange((ev) => {
     if (ev.type === 'hydrated') reconcileSocial();
     else if (ev.type === 'entry' && VERBS.has(ev.entry.verb)) onEntry(ev.entry);

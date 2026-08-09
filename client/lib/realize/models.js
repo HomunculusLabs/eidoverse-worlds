@@ -1,6 +1,5 @@
 // models — the first realizer (TEL0S_NOTES §11.4): entity lifecycle as a
-// projection of state.st, replacing applyEntry's spawn/place/remove/light/
-// comp/motion/mount/dismount cases when active (?realize=0 falls back).
+// projection of state.st. The applyEntry switch this replaced is gone.
 //
 // The design's one trick, and why pendingOps/pendingMounts have no successor
 // here: EVERY completion re-reads current state. A `place` landing while the
@@ -10,22 +9,17 @@
 // STAYS in the fold — state is the pending list — and re-checks when a
 // spawn realizes (mountsTouching). Nothing is remembered twice.
 //
-// Compatibility contract during the migration: this module writes the SAME
-// maps legacy applyEntry wrote (world.js entities/entityMeta/comps/
-// avatarMounts) and emits the SAME bus events ('entity', 'comp', 'mount'),
-// so every consumer — motion, emitters, panels, controller, remotes,
-// terrain re-seat — is untouched. What changes is who drives the writes,
-// and that loads go through the scheduler: keyed, owned, prioritized by
-// live camera distance, cancellable.
+// This module writes the maps every consumer shares (world.js entities/
+// entityMeta/comps/avatarMounts) and emits the bus events they subscribe
+// to ('entity', 'comp', 'mount') — motion, emitters, panels, controller,
+// remotes, and the terrain re-seat all read those, not this file. Loads go
+// through the scheduler: keyed, owned, prioritized by live camera distance
+// at dequeue, cancelled on remove.
 //
-// Fold-faithfulness notes (places this is MORE correct than legacy):
-// - a removed carrier's cargo lands at the pose the FOLD stamped (the same
-//   trigonometry every joiner and the server agree on), not wherever the
-//   scene's live motion happened to hold it;
-// - a same-id spawn follows the fold (overwrite → rebuild). PROTOCOL.md §3
-//   says "no-op if id exists", the reference fold overwrites — a spec/impl
-//   contradiction flagged in TEL0S_NOTES; the realizer projects the fold
-//   either way.
+// Fold-faithfulness: a removed carrier's cargo lands at the pose the FOLD
+// stamped (the trigonometry every joiner and the server agree on), and a
+// same-id spawn REPLACES wholesale — PROTOCOL.md §3.1, the 2026-08-11
+// erratum, pinned by fixture 04-overwrite.
 
 import { THREE, scene, camera, report, bus } from '../core.js';
 import { loadGLB } from '../assets.js';
@@ -36,7 +30,9 @@ import { entities, entityMeta, comps, avatarMounts, findPart, markShadowless, un
 import { state, onWorldChange } from '../state.js';
 import { schedule, cancelOwner, onIdle, P } from '../scheduler.js';
 import { planReconcile, bandForDistance, mountsTouching } from './models_field.js';
-import { PORTED, REALIZE } from './seam.js';
+
+/** The verbs this realizer owns — the whole flat entity-id namespace. */
+export const PORTED = new Set(['spawn', 'place', 'remove', 'light', 'comp', 'motion', 'mount', 'dismount']);
 
 /** id → {kind:'model'|'light', lib?, gen} — the realizer's own view of what
  *  it has handled. gen guards a load completion against acting for a
@@ -373,10 +369,8 @@ function onEntry(entry) {
   } catch (e) { report(`realize ${verb}`, e); }
 }
 
-/** Wire the realizer to state. Called once from main.js; inert under
- *  ?realize=0. */
+/** Wire the realizer to state. Called once from main.js. */
 export function initModelsRealizer() {
-  if (!REALIZE) return false;
   onWorldChange((ev) => {
     if (ev.type === 'hydrated') reconcileModels();
     else if (ev.type === 'reset') {

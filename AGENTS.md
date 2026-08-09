@@ -338,12 +338,13 @@ client-side behavior — are code. Pull the repo, then:
 
 House rules, learned the hard way (each one is a past incident):
 
-1. **The fold is sacred.** The reference `foldEntry` now lives in
-   `shared/fold.js` (one copy, imported by the sequencer; conformance:
-   `bun tools/foldfix-test.ts` against `spec/fixtures/`). The client's
-   `applyEntry` must agree with it until it, too, consumes the shared fold —
-   and both must stay pure functions of the log. If they drift, joiners see
-   a world that never existed.
+1. **The fold is sacred — and now it is singular.** `shared/fold.js` is the
+   one fold: the sequencer, the browser (via `client/lib/state.js` + the
+   realizers in `client/lib/realize/`), and the mcpl agent all consume it.
+   It must stay a pure function of the log (conformance:
+   `bun tools/foldfix-test.ts` against `spec/fixtures/`; browser:
+   `bun tools/paritybench.ts` reads EW.foldParity() over CDP). A realizer
+   projects state; it never invents it.
 2. **Mirrored math stays mirrored.** `pendulumImpulse` (server) and
    `pendulumTheta` (client/lib/motion.js) implement the same physics — a
    change to one without the other makes the pushed swing disagree with the

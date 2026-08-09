@@ -128,8 +128,7 @@ sun.shadow.camera.updateProjectionMatrix();
 
 setSkyArgsSource(skyArgs);
 setCameraCollisionTargets(liveEntities);
-// The realizers project folded state into the scene when active
-// (?realize=0 restores legacy applyEntry wholesale). Wired before connect()
+// The realizers project folded state into the scene. Wired before connect()
 // so the hydrated event of the very first snapshot finds them listening;
 // causes.js takes the fold-inert live verbs off the 'live-entry' bus.
 initModelsRealizer();

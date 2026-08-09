@@ -16,7 +16,6 @@
 
 import { state, onWorldChange } from '../state.js';
 import { applyTerrainState, applyGrassState, applySkyFolded, applyAssetState } from '../world.js';
-import { REALIZE } from './seam.js';
 
 function reconcileEnvironment() {
   const st = state.st;
@@ -46,7 +45,6 @@ function onEntry(entry) {
 const VERBS = new Set(['terrain', 'grass', 'sky', 'weather', 'asset']);
 
 export function initEnvironmentRealizer() {
-  if (!REALIZE) return false;
   onWorldChange((ev) => {
     if (ev.type === 'hydrated') reconcileEnvironment();
     else if (ev.type === 'entry' && VERBS.has(ev.entry.verb)) onEntry(ev.entry);

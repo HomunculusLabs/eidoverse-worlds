@@ -3,8 +3,6 @@
 //   bun tools/paritybench.ts                     # headless Edge, own scratch sequencer
 //   bun tools/paritybench.ts --headed            # same, with a window you can watch
 //   bun tools/paritybench.ts --console           # echo every page console line
-//   bun tools/paritybench.ts --legacy-only       # only the ?realize=0 side of the seam
-//   bun tools/paritybench.ts --realize-only      # only the models-realizer side
 //   CHROME="C:\Program Files\Google\Chrome\Application\chrome.exe" bun tools/paritybench.ts
 //   EIDOVERSE_DIR=/path/to/eidoverse-video PORT=8970 bun tools/paritybench.ts
 //
@@ -17,15 +15,12 @@
 // human in a tab. Boot a scratch sequencer, join it with a headless Chromium,
 // drive a build sequence over a SECOND socket, then read the probe over CDP.
 //
-// TWO PASSES, because there are two scenes. client/lib/realize/seam.js hands
-// spawn/place/remove/light/comp/motion/mount/dismount to the models realizer,
-// and `?realize=0` hands them back to legacy applyEntry; the seam's own comment
-// promises the probe "stays meaningful on both sides". The realizer pass is the
-// weaker of the two by construction — the realizer WRITES the scene maps from
-// state.st, so it largely agrees with itself — and the legacy pass is the
-// original House-rule-1 mirror: two independent implementations of one fold.
-// Checking only the default is checking half the migration, so both run, each
-// in a world of its own, in the one browser.
+// ONE PASS since the 3c deletion: the realizers are the only writers, and
+// the probe measures the scene they build against the fold that drove them.
+// (During the migration this ran a second, ?realize=0 pass against legacy
+// applyEntry — the original House-rule-1 mirror. That seam is gone; what
+// keeps this pass honest now is the reconnect leg, the mount-pose bucket,
+// and the server-fold witness below.)
 //
 // The probe is read TWICE per pass, and a third socket vouches for the reading.
 // Read only at the end of a build-then-teardown sequence and the comp-rich
@@ -297,17 +292,12 @@ await cdp.send("Runtime.enable");
 await cdp.send("Page.enable");
 await cdp.send("Log.enable");
 
-// ---- 4. the two sides of the seam ------------------------------------------
+// ---- 4. the pass -------------------------------------------------------------
 //
-// client/lib/realize/seam.js: the models realizer owns spawn/place/remove/
-// light/comp/motion/mount/dismount, and `?realize=0` hands them back to legacy
-// applyEntry. The shadow fold runs under both, and the seam's own comment says
-// so — "EW.foldParity() stays meaningful on both sides" — which is exactly why
-// checking one side is checking half the migration. The realizer side is the
-// weaker test by construction (it WRITES the scene maps from state.st, so it
-// largely agrees with itself); the legacy side is the original House-rule-1
-// mirror, two independent implementations of the same fold. Both run, in two
-// fresh worlds, in the one browser.
+// The realizers own the scene (client/lib/realize/); the probe measures what
+// they built against the fold that drove them. The reading is kept honest by
+// the reconnect leg (reconcile over a live scene), the mount-pose bucket, the
+// refusal gate, and the server-fold witness — not by a second implementation.
 
 const evalJson = async (expr: string) => {
   const r = await cdp.send<any>("Runtime.evaluate", { expression: expr, returnByValue: true, awaitPromise: true });
@@ -574,8 +564,10 @@ async function runPass(name: string, extraParams: string): Promise<boolean> {
 // ---- 7. both sides, then the verdict ---------------------------------------
 
 const PASSES: [string, string][] = [];
-if (!has("legacy-only")) PASSES.push(["realize", ""]);              // models realizer active
-if (!has("realize-only")) PASSES.push(["legacy", "&realize=0"]);    // legacy applyEntry
+// One path since the 3c deletion: the realizers own the scene, and the
+// probe measures them against the fold. (--legacy-only/--realize-only died
+// with the ?realize seam.)
+PASSES.push(["realize", ""]);
 const results: [string, boolean][] = [];
 for (const [name, params] of PASSES) results.push([name, await runPass(name, params)]);
 

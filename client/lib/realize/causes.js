@@ -17,7 +17,11 @@
 
 import { bus } from '../core.js';
 import { logChat } from '../chat.js';
-import { REALIZE, STATE_VERBS } from './seam.js';
+import { PORTED } from './models.js';
+
+// Everything realized from folded state — the set that separates "handled
+// elsewhere" from a genuinely unknown verb deserving the forward-compat trace.
+const STATE_VERBS = new Set([...PORTED, 'terrain', 'grass', 'sky', 'weather', 'asset', 'grant', 'behavior']);
 
 export function handleLiveCause(entry) {
   const { verb, args = {}, actor } = entry;
@@ -65,7 +69,5 @@ export function handleLiveCause(entry) {
 }
 
 export function initCauses() {
-  if (!REALIZE) return false;
   bus.on('live-entry', handleLiveCause);
-  return true;
 }
