@@ -21,6 +21,7 @@ import { stateToEntries as sharedStateToEntries } from "../shared/fold.js";
 // a renderer client and a resident who perceives by reading must agree about
 // what is burning (#25's shared-facts boundary).
 import { describeParticles, emitterTransition, transitionLine } from "../shared/particles.js";
+import { effectiveWorldTransform, type Effective } from "./effective.ts";
 
 (globalThis as any).THREE = Object.assign({}, THREE_W, TSL);
 
@@ -138,7 +139,10 @@ export class WorldAgent {
   private walkDone: ((arrived: boolean) => void) | null = null;
   entities = new Map<string, Entity>();
   /** who/what rides what: mount verbs, keyed by the rider (body or thing) */
-  mounts = new Map<string, { to: string; slot?: string }>();
+  /** Every mount's full wire shape — offset/yaw OVERRIDE socket defaults in
+   *  the world transform (#82), so dropping them here made the composed
+   *  position disagree with every renderer. */
+  mounts = new Map<string, { to: string; slot?: string; offset?: number[]; yaw?: number }>();
   people = new Map<string, Person>();
   inbox: InboxItem[] = [];
   private inboxCursor = 0;
@@ -322,6 +326,31 @@ export class WorldAgent {
   private noteMalformed(verb: string, args: unknown) {
     if (this.malformedSeen++ >= 5) return;
     console.error(`[agent ${this.name}] malformed ${verb} entry — position kept: ${JSON.stringify(args)?.slice(0, 160)}`);
+  }
+
+  /** Server-to-local clock offset, smoothed — the headless serverNow()
+   *  (mirrors client/lib/remotes.js: same source, same 0.92/0.08 EMA).
+   *  Motion is a function of SEQUENCER time; evaluating it on a skewed host
+   *  clock makes this body report a different pendulum phase than every
+   *  browser looking at the same swing, while both run the same closed form
+   *  (#92 review, B1). Fed from the embodied plane's frame stamps. */
+  private clockOffset: number | null = null;
+  noteServerTime(t: unknown) {
+    if (typeof t !== "number" || !Number.isFinite(t)) return;
+    const sample = t - Date.now();
+    this.clockOffset = this.clockOffset === null ? sample : this.clockOffset * 0.92 + sample * 0.08;
+  }
+  /** Epoch ms on the sequencer's clock, best estimate. Before the first
+   *  frame lands this is local time — the browser's exact fallback. */
+  serverNow(): number { return Date.now() + (this.clockOffset ?? 0); }
+
+  /** A composition gap is a perception limit, not a world error: say so a
+   *  few times (the noteMalformed bound), then stay quiet. Callers that hit
+   *  one must ABSTAIN, never fall back to a stale coordinate (#92, B2). */
+  effGaps = 0;
+  private noteEffGap(id: string, why: string) {
+    if (this.effGaps++ >= 5) return;
+    console.error(`[agent ${this.name}] effective transform unavailable for ${id} — ${why}`);
   }
 
   /** A build act (spawn/place/light/remove) near this body counts as activity. */
@@ -539,7 +568,10 @@ export class WorldAgent {
             this.notePose(msg.id, msg.pose);
             break;
           case "frame":
-            // batched embodied plane: latest pose per id, one message per tick
+            // batched embodied plane: latest pose per id, one message per tick.
+            // The frame's server stamp also feeds the clock estimate — the
+            // same source the browser smooths into serverNow() (#92, B1).
+            this.noteServerTime((msg as { t?: unknown }).t);
             for (const [id, pose] of Object.entries(msg.poses as Record<string, Pose>)) {
               if (id !== this.name) this.notePose(id, pose);
             }
@@ -691,7 +723,15 @@ export class WorldAgent {
         // Replay reconstructs the state above and stops there: a fire that was
         // lit last week is in look(), not in your ears (#25).
         if (args.type === "particles" && live) {
-          this.noteEmitter(actor, String(args.id), before, args.data ?? null, e.pos, ts);
+          // proximity-gate on where the emitter's owner ACTUALLY is — a
+          // carried lantern is judged at the carrier, not at its pre-mount
+          // spot (#82). When the chain cannot compose, ABSTAIN: gating on
+          // the stale pos would deliver a live sensory event to people near
+          // an abandoned address and miss those beside the actual carrier
+          // (#92, B2). The gap is logged, bounded, not performed.
+          const fx = this.eff(String(args.id), this.serverNow());
+          if (fx.ok) this.noteEmitter(actor, String(args.id), before, args.data ?? null, fx.pos, ts);
+          else this.noteEffGap(String(args.id), fx.why);
         }
         // a motion arriving or leaving changes whether this thing may hold a
         // body up (see hasActiveMotion)
@@ -706,7 +746,12 @@ export class WorldAgent {
         this.trackSupport(this.syncSupport(args.id));   // starts moving = stops supporting, and back
       }
     } else if (verb === "mount") {
-      this.mounts.set(args.id, { to: args.to, slot: args.slot });
+      // offset/yaw are kept RAW: effective.ts refuses non-finite values with
+      // a named link rather than silently substituting the socket default —
+      // a substitution would disagree with what the browser renders.
+      this.mounts.set(args.id, { to: args.to, slot: args.slot,
+        ...(args.offset != null ? { offset: args.offset } : {}),
+        ...(args.yaw != null ? { yaw: args.yaw } : {}) });
       // Cargo rides its parent, so its own support goes stale the instant the
       // parent moves — world.js drops the collider here for exactly that
       // reason and lets the pair collide as the parent. Entities only: a
@@ -1479,10 +1524,38 @@ export class WorldAgent {
     return dirs[Math.round(((a + Math.PI * 2) % (Math.PI * 2)) / (Math.PI / 4)) % 8];
   }
 
-  look(): string {
+  /** Where a thing ACTUALLY is right now: the mount chain and any whole-
+   *  entity motion, composed at read time by effective.ts with the same
+   *  closed forms the renderer runs. Every numeric spatial claim in
+   *  perception goes through this — reading `e.pos` directly is how mounted
+   *  cargo was reported 11m from its carrier (#82). */
+  private eff(id: string, nowMs: number): Effective {
+    return effectiveWorldTransform(id, {
+      entity: (eid) => this.entities.get(eid),
+      mount: (eid) => this.mounts.get(eid),
+    }, nowMs);
+  }
+
+  look(nowMs = this.serverNow()): string {
     const L: string[] = [];
-    const me = this.pos;
-    L.push(`You are "${this.name}" in world "${this.world}" at (${me.x.toFixed(1)}, ${me.z.toFixed(1)}), ground height ${me.y.toFixed(2)}m, facing ${this.bearing(Math.sin(this.yaw), Math.cos(this.yaw))}.`);
+    // The agent's own seat rides its parent too: seated on a moving ferry,
+    // every distance below is measured from where the body actually is.
+    // this.pos itself stays the controller's (dismount restores it) — the
+    // composition is a READ, here and nowhere else. When the OWN chain
+    // cannot compose (a part-socket seat), the position is UNKNOWN: the
+    // header says so and every dependent distance/bearing below is
+    // suppressed — never measured from the stale controller pos while the
+    // same line claims "seated on" (#92, B2).
+    const selfRide = this.mounts.get(this.name);
+    const selfEff = selfRide ? this.eff(this.name, nowMs) : null;
+    const meKnown = !selfRide || selfEff?.ok === true;
+    const me = selfEff?.ok ? { x: selfEff.pos[0], y: selfEff.pos[1], z: selfEff.pos[2] } : this.pos;
+    const seated = selfRide ? `, seated on ${selfRide.to}${selfEff?.ok && selfEff.moving ? ` (riding its ${selfEff.moving})` : ""}` : "";
+    if (meKnown) {
+      L.push(`You are "${this.name}" in world "${this.world}" at (${me.x.toFixed(1)}, ${me.z.toFixed(1)}), ground height ${me.y.toFixed(2)}m, facing ${this.bearing(Math.sin(this.yaw), Math.cos(this.yaw))}${seated}.`);
+    } else {
+      L.push(`You are "${this.name}" in world "${this.world}", position unknown (${selfEff && !selfEff.ok ? selfEff.why : "seat unresolved"}), facing ${this.bearing(Math.sin(this.yaw), Math.cos(this.yaw))}${seated}. Distances are withheld until your seat resolves — dismount {id: "${this.name}"} restores a stamped position.`);
+    }
     // Structured object, NEVER a bare string: consumers of look() were
     // reading {hours, azimuth, clouds, ts, …} long before the forecast
     // existed, and a type change here silently breaks them (Sill, postdeploy
@@ -1517,16 +1590,23 @@ export class WorldAgent {
       const posed = held ? `, holding a pose (${Object.keys(held).length} bones)` : "";
       const ride = this.mounts.get(p.id);
       const riding = ride ? ` — on ${ride.to}${ride.slot ? ` (${ride.slot})` : ""}` : "";
-      L.push(`  - ${p.id}: ${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} at (${x.toFixed(1)}, ${z.toFixed(1)}), ${doing}${posed}${riding}`);
+      L.push(`  - ${p.id}: ${meKnown ? `${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} ` : ""}at (${x.toFixed(1)}, ${z.toFixed(1)}), ${doing}${posed}${riding}`);
     }
 
     const ents = [...this.entities.values()];
     L.push(ents.length ? `\nThings (${ents.length}):` : "\nNo placed things yet.");
-    for (const e of ents.sort((a, b) => {
-      const da = Math.hypot(a.pos[0] - me.x, a.pos[2] - me.z), db = Math.hypot(b.pos[0] - me.x, b.pos[2] - me.z);
-      return da - db;
-    })) {
-      const dx = e.pos[0] - me.x, dz = e.pos[2] - me.z;
+    // one composition per entity per look, shared by the sort and the line.
+    // Resolved things sort by their EFFECTIVE distance; unresolved ones make
+    // no spatial claim at all, so they list last in stable fold order —
+    // never placed by their abandoned pre-mount address (#92, B2). And with
+    // the agent's own position unknown, distance itself means nothing:
+    // fold order for everything.
+    const fx = new Map<string, Effective>();
+    for (const e of ents) fx.set(e.id, this.eff(e.id, nowMs));
+    const sortKey = (e: Entity) => { const f = fx.get(e.id)!; return f.ok ? Math.hypot(f.pos[0] - me.x, f.pos[2] - me.z) : Infinity; };
+    const ordered = meKnown ? [...ents].sort((a, b) => sortKey(a) - sortKey(b)) : ents;
+    for (const e of ordered) {
+      const f = fx.get(e.id)!;
       const short = (e.lib ?? "(light)").split("/").pop()!.replace(".glb", "").split("_").slice(0, 5).join(" ");
       // Affordances read out loud: a thing that can be sat on, used, or is
       // moving SAYS SO in text-tier perception — this is how the capability
@@ -1549,10 +1629,23 @@ export class WorldAgent {
       const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
-      if (ride) aff.push(`mounted on ${ride.to}`);
+      if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);
       const riders = [...this.mounts.entries()].filter(([, m]) => m.to === e.id).map(([rid, m]) => `${rid}${m.slot ? ` (${m.slot})` : ""}`);
       if (riders.length) aff.push(`carrying: ${riders.join(", ")}`);
-      L.push(`  - [${e.id}] ${short}: ${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} at (${e.pos[0].toFixed(1)}, ${e.pos[1].toFixed(1)}, ${e.pos[2].toFixed(1)})${e.pos[1] > 0.05 ? " (elevated)" : ""}${aff.length ? ` — ${aff.join(" · ")}` : ""}`);
+      if (f.ok) {
+        // the EFFECTIVE position — mount chain and motion composed at nowMs.
+        // For an unmounted, unmoving thing this is exactly the folded pos.
+        // Distance/bearing only exist relative to a KNOWN self (#92, B2).
+        const dx = f.pos[0] - me.x, dz = f.pos[2] - me.z;
+        L.push(`  - [${e.id}] ${short}: ${meKnown ? `${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} ` : ""}at (${f.pos[0].toFixed(1)}, ${f.pos[1].toFixed(1)}, ${f.pos[2].toFixed(1)})${f.pos[1] > 0.05 ? " (elevated)" : ""}${aff.length ? ` — ${aff.join(" · ")}` : ""}`);
+      } else {
+        // No number is better than a wrong number: when the chain cannot be
+        // composed (a part socket, an unknown motion type, a malformed link),
+        // perception says whose frame the thing rides and why the coordinate
+        // is withheld — never the stale pre-mount pos next to "mounted on".
+        const where = ride ? `position rides ${ride.to}` : `position unavailable`;
+        L.push(`  - [${e.id}] ${short}: ${where} — ${f.why}${aff.length ? ` — ${aff.join(" · ")}` : ""}`);
+      }
     }
     if (ents.some((e) => e.comp?.sockets || e.comp?.reactions)) {
       L.push(`  (interact via world_verb: use {id, action} · sit/ride via mount {id: "${this.name}", to, slot} — both open to everyone; dismount {id: "${this.name}"} to get off)`);
