@@ -11,7 +11,7 @@ import {
 } from './lib/core.js';
 import { contributeThumbnail, makeAvatar, EMOTE_ORDER, EMOTES } from './lib/avatar.js';
 import { updateSky, updateAutoSystems, skyArgs, skyImpl } from './lib/sky.js';
-import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
+import { setSkyArgsSource, entities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
 import { foldParity } from './lib/parity.js';
 import { initModelsRealizer, reconcileModels, residencyDebug, setResidencyFocus } from './lib/realize/models.js';
 import { initEnvironmentRealizer } from './lib/realize/environment.js';
@@ -23,7 +23,7 @@ import './lib/emitters.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateFollowCamera, updateSpectator, setCamYaw, setPosture,
-  togglePhotoMode, setCameraCollisionTargets, keys, setSeatHook,
+  togglePhotoMode, keys, setSeatHook,
 } from './lib/controller.js';
 import {
   remotes, updateRemotes, updateGaze, noteSpeaking,
@@ -147,7 +147,6 @@ if (CONFIG.params.has('mintthumbs')) {
 // because shadowMap enabled/type are pipeline-shape.
 
 setSkyArgsSource(skyArgs);
-setCameraCollisionTargets(liveEntities);
 setResidencyFocus(() => myState?.pos ?? null);   // the body anchors residency too (§13.3)
 // The realizers project folded state into the scene. Wired before connect()
 // so the hydrated event of the very first snapshot finds them listening;

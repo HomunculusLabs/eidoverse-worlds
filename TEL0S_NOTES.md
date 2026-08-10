@@ -390,6 +390,29 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — 6a COMPLETE: the spatial service, and all four hot paths
+  are dead.** `raySegment(origin, dir, far)` in colliders.js answers the
+  follow camera's one question — how far back may the eye sit — from the
+  grid: candidate ids from the cells the ≤6m segment overlaps, slab test
+  against each OBB (the same world→local transform surfaceUnder uses),
+  BVH `raycastFirst` for exact entries (the camera still slides through a
+  doorway instead of bumping the pavilion's box), the walking POST for
+  pillars (a tree's canopy box must not yank the camera the way its
+  sparse meshes never did), `camGhost` hoisted onto the entry at
+  fitCollider. The recursive every-mesh-of-every-entity raycast with its
+  three per-frame allocations (offender #1) is deleted, along with the
+  `setCameraCollisionTargets` DI hook — the grid needs no entity list.
+  `findSeat` and `surfaceUnder` leave their full-map scans for
+  `nearColliders` (a seat search ran every X press and the 0.45s hint
+  beat); rapierdoll's hand-rolled 8m filter becomes the grid query it
+  was imitating. With slice 1 (physobj, gaze 4Hz, motion 90m gate,
+  pusher reuse) all four §2 hot-path offenders are gone. Deferred small
+  tail: the ragdoll body-level cell cache (a resolveColliders signature
+  change; ~171 map lookups/frame, modest). En route: a `_want` name
+  collision with photo mode broke module load — caught by the new habit,
+  a 2s esbuild parse pass before any bench roundtrip. Verified:
+  lightbench 19/19 · paritybench PASS. Next: 6b (frame-system list).
+
 - **2026-08-09 — STEP 5½ COMPLETE — the review round.** An adversarial
   Fable review of the whole 5½ diff verified the §13 contracts against
   source (stable bucketing, shared-buffer upload/dispose semantics,

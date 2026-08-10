@@ -204,7 +204,10 @@ function decide(entry, s) {
 export function fitCollider(id, obj, { collide, scale = 1 } = {}) {
   const box = new THREE.Box3().setFromObject(obj); // obj still at identity here
   if (box.isEmpty()) return;
-  const entry = { obj, box, pref: collide, pillar: false, exact: null, cells: [] };
+  // camGhost hoisted from userData so the camera query never touches the
+  // object graph (the flag lives on roots: gizmos, placeholders)
+  const entry = { obj, box, pref: collide, pillar: false, exact: null, cells: [],
+    camGhost: !!obj.userData?.noCamCollide };
   decide(entry, scale);
   colliders.set(id, entry);
   bucketAdd(id, entry);
@@ -278,7 +281,10 @@ function* near(x, z) {
 
 /** Variable-radius neighbourhood, [id, entry] pairs — the promoted service
  *  query (§14.2 6a). The 3×3 `near` above caps at ~8m; seat search reaches
- *  30 and physics wants its own radius. Dedupes ids that straddle cells. */
+ *  30 and physics wants its own radius. Dedupes ids that straddle cells.
+ *  ⚠️ NOT REENTRANT: the dedupe Set is shared (zero-alloc per query), so a
+ *  loop body iterating this generator must never start a second
+ *  nearColliders iteration — take a different scratch or collect first. */
 const _seen = new Set();
 export function* nearColliders(x, z, r = CELL) {
   const x0 = Math.floor((x - r) / CELL), x1 = Math.floor((x + r) / CELL);
@@ -296,6 +302,90 @@ export function* nearColliders(x, z, r = CELL) {
       }
     }
   }
+}
+
+// ---- camera segment query (§14.2 6a — hot-path offender #1) -----------------
+// The follow camera used to raycast recursively into EVERY MESH of EVERY
+// entity, three allocations per frame, to learn one number: how far back it
+// may sit. This answers the same question from the grid: candidate ids from
+// the cells the ≤6m segment overlaps, then per entry a slab test against the
+// OBB (world→local is sub(pos), rotY(−yaw), ÷scale — the same transform
+// surfaceUnder uses) — except exact entries, which raycast their BVH so the
+// camera still slides through a doorway instead of bumping the pavilion's
+// bounding box, and pillars, which test the walking post so a tree's canopy
+// box doesn't yank the camera the way its sparse meshes never did.
+
+const _rsO = new THREE.Vector3();
+const _rsD = new THREE.Vector3();
+const _rsRay = new THREE.Ray();
+const _rsPost = new THREE.Box3();
+const _rsSeen = new Set();
+
+function slabT(o, d, box, far) {
+  let t0 = 0, t1 = far;
+  for (const ax of ['x', 'y', 'z']) {
+    const dv = d[ax];
+    if (Math.abs(dv) < 1e-9) {
+      if (o[ax] < box.min[ax] || o[ax] > box.max[ax]) return null;
+      continue;
+    }
+    let a = (box.min[ax] - o[ax]) / dv;
+    let b = (box.max[ax] - o[ax]) / dv;
+    if (a > b) { const t = a; a = b; b = t; }
+    if (a > t0) t0 = a;
+    if (b < t1) t1 = b;
+    if (t0 > t1) return null;
+  }
+  return t0;   // 0 when the origin starts inside — a solid box is solid
+}
+
+/** Nearest blocking distance along origin+dir, within `far`; null = clear.
+ *  camGhost entries (gizmos, placeholders) never block. */
+export function raySegment(origin, dir, far) {
+  let bestT = Infinity;
+  const ex = origin.x + dir.x * far, ez = origin.z + dir.z * far;
+  const x0 = Math.floor(Math.min(origin.x, ex) / CELL) - 1;
+  const x1 = Math.floor(Math.max(origin.x, ex) / CELL) + 1;
+  const z0 = Math.floor(Math.min(origin.z, ez) / CELL) - 1;
+  const z1 = Math.floor(Math.max(origin.z, ez) / CELL) + 1;
+  _rsSeen.clear();
+  for (let cx = x0; cx <= x1; cx++) {
+    for (let cz = z0; cz <= z1; cz++) {
+      const set = buckets.get(`${cx},${cz}`);
+      if (!set) continue;
+      for (const id of set) {
+        if (_rsSeen.has(id)) continue;
+        _rsSeen.add(id);
+        const e = colliders.get(id);
+        if (!e || e.camGhost || !e.box) continue;
+        const o = e.obj;
+        const s = o.scale?.x || 1;
+        const yaw = o.rotation?.y ?? 0;
+        _rsO.copy(origin).sub(o.position);
+        _rsD.copy(dir);
+        if (yaw) { _rsO.applyAxisAngle(UP, -yaw); _rsD.applyAxisAngle(UP, -yaw); }
+        _rsO.divideScalar(s);
+        const lfar = Math.min(far, bestT) / s;
+        if (e.exact?.bvh) {
+          _rsRay.origin.copy(_rsO);
+          _rsRay.direction.copy(_rsD);
+          const hit = e.exact.bvh.raycastFirst(_rsRay, THREE.DoubleSide);
+          if (hit && hit.distance <= lfar) bestT = hit.distance * s;
+          continue;
+        }
+        let box = e.box;
+        if (e.pillar) {
+          const mx = (e.box.min.x + e.box.max.x) / 2, mz = (e.box.min.z + e.box.max.z) / 2;
+          _rsPost.min.set(mx - 0.25, e.box.min.y, mz - 0.25);
+          _rsPost.max.set(mx + 0.25, e.box.max.y, mz + 0.25);
+          box = _rsPost;
+        }
+        const t = slabT(_rsO, _rsD, box, lfar);
+        if (t !== null) bestT = t * s;
+      }
+    }
+  }
+  return bestT === Infinity ? null : bestT;
 }
 
 // ---- resolution -------------------------------------------------------------
@@ -434,7 +524,10 @@ export function resolveColliders(pos, terrainAt, r = 0.32, tall = TALL) {
  *  the geometry IS the affordance. Returns {y, x, z, yaw, id} or null. */
 export function findSeat(pos, range = 1.2) {
   let best = null;
-  for (const [id, { obj, box, pillar, exact }] of colliders) {
+  // grid-bounded (§14.2 6a): a chair within `range` has its footprint cells
+  // inside the query disc — the old full-map scan ran on every X press and
+  // the 0.45s seat-hint beat
+  for (const [id, { obj, box, pillar, exact }] of nearColliders(pos.x, pos.z, range)) {
     if (pillar || exact) continue; // interiors aren't chairs; furniture inside them is
     const sc = obj.scale?.x || 1;
     const topY = obj.position.y + box.max.y * sc;
@@ -457,7 +550,9 @@ export function findSeat(pos, range = 1.2) {
 export function surfaceUnder(x, z, terrainAt, maxY = Infinity, skipId = null) {
   let y = terrainAt(x, z);
   let onto = null;
-  for (const [id, { obj, box, pillar, exact }] of colliders) {
+  // a surface UNDER the point must have its footprint over the point — the
+  // point's own cell holds every such entry (grid-bounded, §14.2 6a)
+  for (const [id, { obj, box, pillar, exact }] of nearColliders(x, z, 0.5)) {
     if (pillar || id === skipId) continue;
     if (exact) {
       // dropped things land on the actual surface (stair tread, mezzanine)
