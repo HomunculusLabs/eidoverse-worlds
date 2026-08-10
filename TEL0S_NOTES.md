@@ -390,6 +390,20 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — step 8 opened: the rough first minute, measured and
+  designed.** New tools/bootjank.ts replays a byte-copy of commons and
+  attributes every long frame via document-start GPU hooks: rough
+  0→8.4s then flat 120fps; worst frames are draws waiting on pipeline
+  bursts (641ms, 1166ms). Two extractions grounded §16: compileAsync
+  is ~10 yieldToMain per render object (rAF-quantised on Firefox) and
+  the tiler multiplied mojave into 68 objects of ~51 instances (per-
+  tile node builds via uuid cache key; <1024 instances bakes the count
+  into WGSL); shadow depth + cold tiles + capped terrain compile
+  synchronously inside render(); the residency gate is inert at join
+  (everything loads, then far demotes); fitCollider rebuilds BVHs per
+  ENTITY. Design: warm conductor, occupancy tiler + host texture
+  cache, join gate + promote budget, storm edges. Slices 8a-8e in
+  §16.3.
 - **2026-08-10 — STEP 7 COMPLETE — the server split. THE §8 SEQUENCE IS
   DONE.** Four slices in one night, each gated 12/12 + paritybench
   (7c also lightbench 19/19): **7a** (d852118) config/auth/moderation/
@@ -1558,3 +1572,222 @@ join internals and the verb case delegate).
 - **7d** (own slice, most careful): batched appends per §15.1's
   constraint + explicit flush points; loadtest + full battery.
 Every slice: servergate + paritybench (client against split server).
+
+## 16. The rough first minute — step 8 reference design (the smooth arrival)
+
+The foundation is laid; this is the first optimization pass on top of it.
+The complaint (tel0s, 2026-08-10): loading is fast on a good connection,
+but the frame rate is rough for the first while — especially when grass
+loads — before settling at 120fps. Measured, mapped, and designed here.
+
+### 16.1 Ground truth (bootjank + perflogs + two extractions, 2026-08-10)
+
+`tools/bootjank.ts` (new) replays a byte-copy of worlds/commons in a
+scratch sequencer and records every frame from document start, with
+document-start hooks on createRenderPipeline/createShaderModule/
+writeBuffer/writeTexture/copyExternalImageToTexture, longtask spans, and
+resource timings. Headless Edge run: **rough 0→8.4s, then flat 120fps**
+(p50 8.3ms). 22 frames over 25ms; worst 641ms (t=2.7s) and 1166ms
+(t=8.4s) — both frames with almost no JS in them, arriving right after
+pipeline-creation bursts. 56 pipelines / 122 shader modules total, all
+in the first 8s. Real-session corroboration in worlds/.perflogs.jsonl
+(Firefox 153, the live commons): `build grass 3000/6077/6487ms` with
+six-seven ~230-250ms solo-grass frame gaps each, session fps 86.
+
+The mechanisms, in causal order:
+
+**(a) compileAsync is frame-quantised and multiplied by render-object
+count.** Three's compileAsync awaits `yieldToMain()` ~10× per render
+object (NodeBuilder yields after every build stage × shader stage, plus
+the per-object loop: three.webgpu.js:52670-52702, 58758-58790).
+`yieldToMain` = `scheduler.yield()` where available, else
+**requestAnimationFrame** (three.core.js:2074-2088). On Firefox that is
+~10 full frames per render object; the mojave field is **68 render
+objects** (57 tiles + 6 leaf + 5 stem) → ~680 frames ≈ the measured
+6s "build grass". On Chrome/Edge scheduler.yield makes it a same-turn
+continuation storm instead — faster wall clock, but it starves rAF
+while it runs. Either way the cost scales with OBJECT COUNT, and the
+tiler multiplied 7 strokes into 68 objects.
+
+**(b) The mojave tiler is pathological for sparse strokes.**
+TILE_MIN_INSTANCES (flora.js:221) gates on stroke TOTAL (2000), not
+per-tile occupancy: 2912 sparse desert plants shred into 57 tiles
+averaging **51 instances**. Three consequences: (1)
+getMaterialCacheKey appends object.uuid for any InstancedMesh
+(three.webgpu.js:30185) and the node-builder cache keys on it
+(:54283-54286) — **every tile is a full NodeBuilder codegen run** even
+though all share one material; (2) below **1024 instances**
+(64KB maxUniformBufferBindingSize / 64B) the identity instanceMatrix
+becomes a uniform array with the count **baked into the WGSL text**
+(:18041, :76760) — up to ~55 distinct vertex programs, distinct
+GPURenderPipelines; (3) 68 objects × per-frame renderObject overhead
+forever after. Above 1024 the matrix rides a storage buffer and
+pipelines dedupe by program source (:32248) — which is why lightbench's
+dense 16-tile field compiles in 1.4-1.6s while sparse mojave takes 6.
+
+**(c) Whole pipeline families are never pre-warmed and compile
+synchronously inside render().** The normal render path calls the
+BLOCKING device.createRenderPipeline (three.webgpu.js:78990); only
+compileAsync reaches the async variant. Never warmed: **the shadow
+depth pass** (compileAsync only walks the main camera's render list —
+every caster the rig enables, ≤2 per 300ms casterPass beat, pays a
+sync compile inside render; lightrig.js:287-288 knows); **cold grass
+tiles** (compileAsync skips visible=false and out-of-frustum objects
+(three.webgpu.js:60819, :60869), and applyTiles runs BEFORE the warm
+(flora.js:318) against wherever the camera is at build time — tiles
+beyond 140m or outside the boot frustum compile synchronously when
+the resident first looks at them: the jank that follows you around
+the first minute); **shrub stems' depth variants** (vegetation.js:989
+ships castShadow=true, prepareObject never clears it); **terrain past
+its 1200ms compile cap** (world.js:122-127 races and gives up, the
+biggest material in the world then codegens inside render);
+**node-graph-only textures** (collectTextures walks Object.values(m)
+only — assets.js:154-166 — so the factory noiseTex and MToon node maps
+upload inside first bind).
+
+**(d) Unlaned compiles bypass the gpu lane.** Of loadGLB's three
+compile paths only the first-of-lib one is enqueued gpu(2); the
+repeat-clone (assets.js:248) and racing-second-caller (:274) paths call
+compileAsync bare — up to 6 concurrent compiles fighting rAF, invisible
+to the jank attribution (no beginWork record).
+
+**(e) Single-frame CPU boulders in the promote path.** realizeModel is
+fully synchronous: fitCollider builds a fresh BVH **per entity** (never
+cached per lib — 20 blankets of one lib do 20 per-vertex topLie walks;
+colliders.js:162-214), toNonIndexed() triples vertex allocations,
+plus per-promote O(N) scans (placeholder cargo step-out models.js:168,
+mountsTouching models_field.js:72) and the O(N²) residencySweep every
+500ms. Terrain build lands 573ms in one frame, then re-seats every
+entity (world.js:131-137). GLTFLoader.parse (never parseAsync) runs
+100-200ms per GLB on the main thread, cpu-lane(2) throttled.
+
+**(f) The residency gate is inert at join.** models.js:119 requires the
+entity to already BE a placeholder to skip far loads, but at hydration
+entities.get(id) === null (geom arrives strictly after the snapshot) —
+so **every model in the world loads regardless of distance**, then the
+sweep demotes the far ones ≤500ms later. Full download+parse+clone+
+compile paid for things that immediately become stand-ins again.
+Invisible in 6-model commons; ruinous at city scale.
+
+**(g) Storm-adjacent scheduling own-goals.** The sky warm (3.1s
+measured) runs AFTER the curtain lifts (sky.js:414→452) — squarely in
+the visible window. contributeThumbnail fires by setTimeout at t+4s —
+a render-target compile burst mid-storm (main.js:184). The roster VRM
+prefetch pulled 45MB (aletheia+aporia+claude_suit) at t=5-6s with
+nobody else in the world. The governor sheds during the storm (fps
+genuinely dips) then unwinds afterward — each pixels notch a
+render-target realloc, each detail flip a 16MB shadow-map realloc
+(governor.js:170-188). Texture uploads spike 25-34MB in single frames.
+And grass tiles all sort as co-located (render sort uses
+geometry.boundingSphere — three.webgpu.js:60872-60880 — and tile
+geometries share the plant-local position attribute), so the
+alpha-tested meadow renders in arbitrary order forever: worse early-Z
+every frame, not just at boot.
+
+Also measured and NOT the problem: applyTiles/_tileTick recounts
+(count-only, no re-upload, 57 iterations/300ms — noise), pusher
+uniforms (768B/frame), wind (one float per stroke per frame),
+updateMaterials (~12 uniform writes). The steady state is genuinely
+clean — everything above is arrival cost.
+
+### 16.2 The design
+
+One principle: **nothing compiles, parses, or builds inside a visible
+frame without a budget.** Four fronts:
+
+**A. The warm conductor (new client/lib/warmqueue.js).** One serialized
+frame-budgeted queue through which EVERY pipeline warm passes:
+grass tiles, GLB libs (all three paths — 248/274 get laned), VRM
+bodies, sky domes, terrain, and NEW: shadow-depth variants. Depth
+warming works by rendering the caster once into a 1×1 throwaway
+depth target with the rig's shadow camera — same pipeline key as the
+real pass — before castShadow flips true (casterPass asks the queue,
+budget stays ≤2/beat as today but the compile happens off-frame).
+Grass tile warming: after build, per tile briefly set
+frustumCulled=false + visible=true and compileAsync(tile, camera,
+scene) one at a time through the queue — kills the whole cold-tile
+class. Terrain joins the queue with no cap (arrival can gate on the
+splash a moment longer; an uncompiled ground is worse). The queue
+yields to rAF between items (real frame yields, not scheduler.yield),
+so warms stretch a little longer but never own a frame.
+
+**B. Grass: fewer, fuller tiles + shared textures (flora.js + host).**
+(1) Tile size derives from OCCUPANCY, not fixed 12m: choose the grid
+so expected per-tile count ≥ ~1024 (storage-buffer instancing, shared
+WGSL program, one node build amortised) with a floor of 2×2 tiles for
+big fields; sparse strokes that cannot reach ~256/tile stay untiled
+(their per-stroke world sphere already culls). Mojave: 57 objects →
+~4-6. lightbench-density fields keep their culling win. (2) Host-level
+URL cache in loadImageTexture (assets.js:500) — vegetation.js's
+loadMap is uncached upstream, 38 decodes/uploads where 24 are unique
+(~197MB→~123MB VRAM); the host cache fixes every toolkit module
+without touching upstream. (3) Per-tile geometry.boundingSphere set
+to the tile's world sphere (each tile owns its BufferGeometry object;
+attributes stay shared) — restores front-to-back sort for the
+alpha-tested meadow. (4) prepareObject(kind:'grass') clears
+castShadow on shrub stems (blob-shadow philosophy; kills 5 unwarmed
+depth pipelines). (5) The discarded original InstancedMesh (64B/inst
++ n identity setMatrixAt, pure garbage at 109k instances) — upstream
+ask for Skye (a build-without-mesh entry point), recorded in
+docs/upstream-wrap-once.md; not worth an adapter hack.
+
+**C. The join gate + promote budget (models.js/colliders.js).**
+(1) The residency gate works from POSITION with a conservative default
+radius when libGeom hasn't arrived (R_BASE + DIAG_K × defaultDiag);
+geom arrival re-runs the gate for anything it grew. Far entities never
+load at join. (2) fitCollider caches decide() per (libPath, quantised
+scale) — BVH and topLie built once per lib, not per entity. (3)
+realizeModel's tail (fitCollider, reindex, attachLamps, casters) moves
+behind a small per-frame budget so six promotes cannot land their
+boulders in one frame; scene.add stays immediate (the thing appears,
+its collider follows within a frame or two). (4) The O(N) scans:
+carrier/mount lookups get an index maintained on entity events instead
+of Object.values/entries per promote; residencySweep reuses it.
+(5) parseAsync where three offers it; the VRM path keeps its phase
+yields.
+
+**D. Calm the storm's edges.** Sky warm joins the conductor BEFORE the
+curtain lifts (arrival gates on it; it is 3s of splash, not 3s of
+jank). contributeThumbnail and roster VRM prefetch wait for the
+governor's goodFor signal (5 smooth seconds), not a wall-clock timer.
+The governor gets a boot grace: no shed/restore while the warm queue
+or load lanes are non-empty — the storm is not a performance regime,
+it is loading. collectTextures walks node graphs (traverse material
+via .colorNode etc or simply prime the factory's known shared
+textures) so compileAsync stops meeting cold textures.
+
+### 16.3 Slices and gates
+
+- **8a** grass: occupancy tiler + host texture cache + tile spheres +
+  stem castShadow + warm-all-tiles through a minimal queue. Gate:
+  bootjank (build grass wall time, worst-frame, pipeline count —
+  expect 68→~12 objects), lightbench 19/19 incl. --measure,
+  paritybench, grass-quality/flora suites.
+- **8b** warm conductor: warmqueue.js; lane the bare compiles; depth
+  pre-warm; terrain uncapped; sky warm pre-curtain. Gate: bootjank
+  (no >100ms frame after curtain in the commons replica), lightbench,
+  paritybench; casterPass behavior unchanged in lightbench's caster
+  checks.
+- **8c** join gate + promote budget + collider cache + indices. Gate:
+  bootjank on a WIDE world (author a far-city fixture — assert far
+  entities never fetch), paritybench incl. residency cycle,
+  collider-survey/collider-test, models-field-test.
+- **8d** storm edges: governor grace, deferred thumbnail/prefetch,
+  node-graph texture priming. Gate: bootjank + lightbench + governor
+  behavior probe.
+- **8e** observability: EW.grass() tile stats (promised at §13 and
+  never landed), scheduler.laneStats + loadwork lanes on EW, bootjank
+  joins the standing gate list for client changes.
+
+Deferred, recorded: KTX2/basis transcode through the existing server
+optQueue (kills the 512MB upload bill properly — its own step),
+ES-module decode workers (no-build doctrine allows), parse in a worker.
+
+### 16.4 bootjank facts worth keeping
+
+Headless Edge renders at 120Hz (p50 8.3ms is a real vsync). The
+`__jank` recorder hooks survive the whole session at negligible cost.
+`EW.frame()` returns an ARRAY of {name, ms (EWMA α=0.05), every,
+enabled} — a burst never shows in it; the GPU hooks are the honest
+witness. Buffer-upload total (888MB/40s) is dominated by steady-state
+per-object UBO writes — not a boot problem, ignore it in reports.
