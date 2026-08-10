@@ -31,8 +31,29 @@ const MEASURE = has("measure");
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const EIDOVERSE_DIR = process.env.EIDOVERSE_DIR ?? join(ROOT, "..", "eidoverse-video");
+// A WebGPU-capable Chromium, wherever this machine keeps one — CHROME env
+// wins, else the first candidate that exists (paritybench's list, copied:
+// the tools stay self-contained).
+const BROWSER_CANDIDATES: Record<string, string[]> = {
+  win32: [
+    "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe",
+    "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+  ],
+  darwin: [
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+    "/Applications/Chromium.app/Contents/MacOS/Chromium",
+  ],
+  linux: [
+    "/usr/bin/google-chrome", "/usr/bin/microsoft-edge",
+    "/usr/bin/chromium-browser", "/usr/bin/chromium",
+  ],
+};
 const CHROME = process.env.CHROME
-  ?? "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
+  ?? (BROWSER_CANDIDATES[process.platform] ?? []).find((p) => existsSync(p))
+  ?? BROWSER_CANDIDATES[process.platform]?.[0] ?? "chrome";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const bold = (s: string) => `\x1b[1m${s}\x1b[0m`;

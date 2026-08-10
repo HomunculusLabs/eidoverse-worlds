@@ -75,8 +75,32 @@ const ECHO = has("console");
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const EIDOVERSE_DIR = process.env.EIDOVERSE_DIR ?? join(ROOT, "..", "eidoverse-video");
-const CHROME = process.env.CHROME
-  ?? "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
+// A WebGPU-capable Chromium, wherever this machine keeps one. CHROME env
+// always wins; otherwise the first of these that exists. (The old default
+// was the Windows Edge path alone — unrunnable on a MacBook.)
+const BROWSER_CANDIDATES: Record<string, string[]> = {
+  win32: [
+    "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe",
+    "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+  ],
+  darwin: [
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+    "/Applications/Chromium.app/Contents/MacOS/Chromium",
+  ],
+  linux: [
+    "/usr/bin/google-chrome", "/usr/bin/microsoft-edge",
+    "/usr/bin/chromium-browser", "/usr/bin/chromium",
+  ],
+};
+function findBrowser(): string {
+  if (process.env.CHROME) return process.env.CHROME;
+  const found = (BROWSER_CANDIDATES[process.platform] ?? []).find((p) => existsSync(p));
+  return found ?? (BROWSER_CANDIDATES[process.platform]?.[0] ?? "chrome");
+}
+const CHROME = findBrowser();
 // Empty = open door. Set JOIN_TOKEN to exercise the door; the browser gets it
 // as ?key= and the driver socket as join.token.
 const TOKEN = process.env.JOIN_TOKEN ?? "";
@@ -94,9 +118,9 @@ if (!existsSync(join(EIDOVERSE_DIR, "eidoverse", "assets"))) {
   process.exit(2);
 }
 if (!existsSync(CHROME)) {
-  console.error(`\n✗ no browser at ${CHROME}`);
-  console.error(`  Set CHROME to a Chromium with WebGPU (Edge, Chrome, Brave):`);
-  console.error(`    CHROME="C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe" bun tools/paritybench.ts\n`);
+  console.error(`\n✗ no browser found (tried ${(BROWSER_CANDIDATES[process.platform] ?? []).length} known locations, last resort: ${CHROME})`);
+  console.error(`  Set CHROME to any Chromium with WebGPU (Edge, Chrome, Brave), e.g.:`);
+  console.error(`    CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" bun tools/paritybench.ts\n`);
   process.exit(2);
 }
 
