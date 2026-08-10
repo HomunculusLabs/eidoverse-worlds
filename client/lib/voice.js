@@ -22,6 +22,10 @@ import { myState } from './controller.js';
 import { flashHint } from './ui.js';
 import { receivingVoice, volumeFor, isHushed } from './voiceconsent.js';
 
+// How long an unanswered local offer stays 'live' for glare purposes. Past
+// this, an incoming offer is treated as a rejoin rather than a rival — a real
+// glare rival answers within a round trip.
+const GLARE_GRACE_MS = 4000;
 const RTC_CFG = { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] };
 const FULL_M = 3, SILENT_M = 20;   // full volume inside 3m, gone by 20m
 
@@ -78,6 +82,20 @@ function reenableInbound(p) {
 function applyDirection(p) {
   const dir = wantDirection();
   try {
+    // A live mic with nothing attached is the same class of mismatch as a
+    // wrong direction, so it is repaired in the same place. addTrack runs only
+    // in peerFor's construction path, which leaves two windows where a peer
+    // ends up permanently silent: a mic opened after the peer was built, and —
+    // the race that made this intermittent — a peer built DURING the await on
+    // getUserMedia, when micStream is still null and any one-shot back-fill
+    // has already run. Every offer and renegotiation passes through here, so
+    // attaching here makes it an invariant rather than a patch per path.
+    if (micStream) {
+      const track = micStream.getAudioTracks()[0];
+      const sender = p.pc.getSenders().find((s) => s.track?.kind === 'audio' || !s.track);
+      if (track && sender && sender.track !== track) sender.replaceTrack(track).catch((e) => report('voice track', e));
+      else if (track && !sender) p.pc.addTrack(track, micStream);
+    }
     for (const t of p.pc.getTransceivers?.() ?? []) {
       if (t.receiver?.track?.kind === 'audio' || t.sender?.track?.kind === 'audio' || !t.receiver) {
         if (t.direction !== dir) t.direction = dir;
@@ -94,7 +112,7 @@ function peerFor(id) {
   const audio = new Audio();
   audio.autoplay = true;
   audio.playsInline = true;
-  p = { pc, audio };
+  p = { pc, audio, gen: ++_peerGen };
   peers.set(id, p);
   if (micStream) for (const t of micStream.getTracks()) pc.addTrack(t, micStream);
   pc.ontrack = (e) => {
@@ -163,13 +181,56 @@ async function offerOn(p, id, label) {
     applyDirection(p);
     const offer = await p.pc.createOffer();
     await p.pc.setLocalDescription(offer);
+    p._offeredAt = Date.now();     // for the rejoin-vs-glare distinction
     sendRtc(id, { sdp: p.pc.localDescription });
   } catch (e) { report(label, e); } finally { p._offering = false; }
 }
 
+/** Fire exactly one follow-up offer if our track set changed while this peer
+ *  was mid-negotiation. Generation-bound: pending work raised against an
+ *  earlier peer object is discarded rather than applied to its replacement.
+ *  Idempotent — the flag is cleared before the offer, so a repeated call
+ *  cannot stack duplicate offers. */
+function reconcilePending(p, id) {
+  // Bounded trace of every reconciliation decision. The cross-generation seam
+  // is invisible downstream — a leaked follow-up may still bail on signaling
+  // state, so an offer COUNT cannot see it — and this is what makes the
+  // refusal assertable. Capped so a long session cannot grow it without bound.
+  {
+    const L = (globalThis.__reconcileLog ??= []);
+    L.push(`id=${id} owed=${p?.pendingReneg} gen=${p?.gen} isCurrent=${peers.get(id) === p}`);
+    if (L.length > 200) L.splice(0, L.length - 200);
+  }
+  if (!p || p.pendingReneg == null) return;
+  const owed = p.pendingReneg;
+  p.pendingReneg = null;                 // clear FIRST: no duplicate follow-ups
+  if (owed !== p.gen) return;            // debt belongs to this peer object
+  // ...and this peer object must still BE the peer for this id. The generation
+  // check above is self-referential: an old answer handler that was already
+  // mid-await when its peer was dropped and rebuilt compares the old object to
+  // its own gen, matches, and then renegotiate(id) resolves peers.get(id) —
+  // the REPLACEMENT. So the dead peer's debt gets paid by its successor, which
+  // is the exact leak the generation stamp was meant to prevent (Mica, #62).
+  if (peers.get(id) !== p) return;
+  if (p.pc.signalingState !== 'stable') return;
+  renegotiate(id);
+}
+
 async function renegotiate(id) {
   const p = peers.get(id);
-  if (!p || p.pc.signalingState !== 'stable') return;
+  if (!p) return;
+  if (p.pc.signalingState !== 'stable') {
+    // FOURTH TIMING CLASS (Mica, #62). Our track set changed while a
+    // negotiation was already in flight, so we cannot offer now — but the
+    // old offer was built without this track, and no second event will
+    // bring us back here. Dropping the request is how a live mic ends up
+    // on a sendrecv transceiver carrying silence. Record the intent,
+    // STAMPED WITH THIS PEER'S GENERATION, and reconcile on return to
+    // stable; a peer that gets dropped and rebuilt takes its pending work
+    // with it rather than handing it to its successor.
+    p.pendingReneg = p.gen;
+    return;
+  }
   await offerOn(p, id, 'voice renegotiate');
 }
 
@@ -237,7 +298,27 @@ async function processSignal(p, from, payload) {
       // glare: both sides offered at once — the LOWER id's offer stands, the
       // higher id rolls back and answers (deterministic, no extra messages)
       if (p.pc.signalingState === 'have-local-offer') {
-        if ((myId ?? '') < from) return;               // mine stands; ignore theirs
+        // GLARE vs REJOIN. Glare's premise is that BOTH offers are live, so
+        // the loser's offer will be answered by the winner. A peer that
+        // RELOADED breaks that premise: their old session is gone, nobody is
+        // left to answer the offer we are protecting, and returning here
+        // discards the only live offer in the exchange — both sides strand,
+        // silently, forever. Field receipt 2026-08-08: "she could hear me
+        // until she hard reloaded."
+        //
+        // The tell is that our offer has been outstanding with no answer. A
+        // true glare rival answers within a round trip; a reloaded peer never
+        // will, because the session that owed us that answer no longer exists.
+        // So yield to an offer that arrives after our own has gone unanswered
+        // past a round trip, and keep the id rule only for the genuine
+        // simultaneous case.
+        // The tell is not TIME — a slow link can exceed any grace legitimately —
+        // it is whether this peer has ever answered anything of ours. A true
+        // glare rival is mid-exchange on a live connection; a reloaded peer is
+        // brand new to us and has never completed a negotiation. `_everStable`
+        // is set the first time we reach a settled state with them, so an
+        // offer from a peer we have never settled with is a JOIN, not a rival.
+        if (p._everStable && (myId ?? '') < from) return;   // real glare: mine stands
         await p.pc.setLocalDescription({ type: 'rollback' });
       }
       await p.pc.setRemoteDescription(payload.sdp);
@@ -248,14 +329,27 @@ async function processSignal(p, from, payload) {
       applyDirection(p);            // our answer states OUR consent, not theirs
       const answer = await p.pc.createAnswer();
       await p.pc.setLocalDescription(answer);
+      p._everStable = true;      // we answered them: a real exchange happened
       sendRtc(from, { sdp: p.pc.localDescription });
+      // NOT reconciled here. Answering lands us in stable, but applyDirection
+      // above already put the current track set into the answer we just sent —
+      // the far end has it. Firing a follow-up offer would re-destabilize a
+      // peer that is already correct, and it regressed the mid-negotiation
+      // test (peer ended have-local-offer instead of stable). The pending flag
+      // is owed only where WE were the offerer and our offer went out stale.
+      p.pendingReneg = null;
+
     } else if (payload.sdp?.type === 'answer') {
       if (p.pc.signalingState === 'have-local-offer') {
+        p._offeredAt = null;       // answered: no longer an outstanding offer
+        p._everStable = true;      // we have completed a negotiation with them
         await p.pc.setRemoteDescription(payload.sdp);
-      for (const c of p.pendingIce ?? []) {
-        await p.pc.addIceCandidate(c).catch((err) => (window.__iceLog ??= []).push(`flushIce-FAIL ${err.name}`));
-      }
-      p.pendingIce = [];
+        for (const c of p.pendingIce ?? []) {
+          await p.pc.addIceCandidate(c).catch((err) => (window.__iceLog ??= []).push(`flushIce-FAIL ${err.name}`));
+        }
+        p.pendingIce = [];
+        // Back to stable: pay any renegotiation we owed from mid-flight.
+        reconcilePending(p, from);
       }
     } else if (payload.ice) {
       if (p.pc.remoteDescription) {
@@ -303,7 +397,20 @@ export async function toggleMic(name) {
     flashHint('microphone unavailable — check browser permission');
     return false;
   }
-  for (const id of humanIds()) offerTo(id);
+  // Attach FIRST, renegotiate second. applyDirection is where the track is
+  // adopted, but renegotiate() bails on a peer that is not 'stable' — and a
+  // peer mid-negotiation when the mic opens is exactly one of the cases this
+  // is repairing, so routing the attachment only through renegotiate would
+  // skip it. Attaching is safe in any signaling state; replaceTrack on an
+  // existing sender needs no renegotiation at all.
+  for (const p of peers.values()) applyDirection(p);
+  for (const id of [...peers.keys()]) renegotiate(id);
+  // Only reach for peers we do NOT already hold. A peer mid-negotiation has
+  // an answer in flight that will carry the track we just attached — offering
+  // into it forces glare against ourselves and leaves the peer parked in
+  // have-local-offer (Mica, #34). renegotiate() above already covers the
+  // stable ones; this covers the strangers.
+  for (const id of humanIds()) if (!peers.has(id)) offerTo(id);
   flashHint('🎙 live — speak, neighbors hear · <b>mute</b> in the dock');
   bus.emit('voice', { on: true });
   startOnsetWatch();
@@ -315,6 +422,11 @@ export async function toggleMic(name) {
 // mute your presence. Level crossing the visible panel floor emits one
 // 'mic' typing-presence event; hysteresis (fall to 60% of floor) plus a
 // 1.5s refractory keep sustained speech from machine-gunning the channel.
+// Monotonic peer generation. A peer REPLACED by dropPeer+rebuild is a
+// different peer with the same id, and work scheduled against the old one
+// must not land on the new one — answers carry no negotiation identity of
+// their own, so we supply it (Mica, #62 review).
+let _peerGen = 0;
 let _onsetTimer = null, _above = false, _lastOnset = 0;
 function onsetTick() {
   const floor = micFloor();
@@ -469,6 +581,16 @@ export const voiceDebug = () => Object.fromEntries([...peers].map(([id, p]) => [
  *  audible while its mouth never moves, a half-repair visible only to everyone
  *  ELSE. Exported so that gap is assertable (and greppable in prod) rather
  *  than only observable by watching a face that should be talking. */
+/** Which peers owe a follow-up offer, and at which generation. The fourth
+ *  timing class is invisible from outside otherwise: a peer that owes a
+ *  renegotiation looks exactly like one that does not. */
+/** TEST SEAM: clear a peer's pending debt so a regression can isolate work
+ *  that could only have come from a DIFFERENT peer generation. */
+export const voiceClearPending = (id) => { const p = peers.get(id); if (p) p.pendingReneg = null; };
+
+export const voicePendingReneg = () =>
+  Object.fromEntries([...peers].map(([id, p]) => [id, p.pendingReneg ?? null]));
+
 export const voiceMouthBound = () =>
   Object.fromEntries([...peers].map(([id, p]) => [id, !!p.stream]));
 export const voicePcs = () => [...peers.values()].map((p) => p.pc); // experiment branch: raw pcs for stats probes
