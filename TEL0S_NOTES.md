@@ -390,6 +390,28 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — 7-prep: servergate lands, and the battery baselines
+  CLEAN.** `tools/servergate.ts` runs the step-7 gate lattice as one
+  command: twelve suites, each external-server tool getting a fresh
+  scratch sequencer with its exact env header, kill-by-child-handle +
+  a post-run port sweep for the self-booting suites' leaked servers
+  (Windows children outlive parents), per-tool log files. Two runner
+  lessons paid for: piped child output with no reader deadlocks a
+  verbose tool until its timeout (the first baseline spent 37 minutes
+  proving it — stream to files); and `bunx`-triggered root installs
+  PRUNE hoisted deps from root node_modules (mcpl's three/webgpu
+  resolution died mid-session — mcpl now has its own node_modules;
+  note bun install refuses mcpl/package.json on this box for reasons
+  bun's own JSON parser disproves, npm works). And the big one: the
+  "permtest 2 pre-existing env failures" carried in memory since the
+  early sessions root-caused at last — **mcpl/tokens.json (gitignored
+  secrets) simply doesn't exist on this machine**; the tests were
+  written against a dev fixture (`dev-token` → claude). Fixture
+  created locally; permtest 23/0, authtest 23/0 (its nick-reservation
+  case was the same absence). **Baseline: 12/12** — smoke 85 ·
+  authtest 23 · collide-fold 6 · support-lifecycle 22 · permtest 23 ·
+  comptest 33 · modtest 23 · locktest 13 · leasetest 19 · worldops 23 ·
+  compfold 24 · behaviortest 27. The split's gate is unqualified green.
 - **2026-08-09 — STEP 6 COMPLETE — 6c: the trench coat comes off.**
   main.js 1120 → 381 lines: what remains is what the header always
   claimed — boot wiring, the door, the frame-system list, EW. The rest
