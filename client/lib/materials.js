@@ -233,18 +233,29 @@ export function prepareMaterial(mat, receiver = null) {
  *  sweeps skip it, applies the shadow-receiving policy for its kind, and
  *  wraps every material. Idempotent; call before the first compile. */
 export function prepareObject(root, { kind = 'model' } = {}) {
-  // grass stays a non-receiver for now (its fragment cost is the client's
-  // biggest, and it never received before); bodies keep their blob until the
-  // caster budget lands (§12.5)
   const receive = kind === 'model' || kind === 'terrain';
+  const grass = kind === 'grass';
   root.traverse((o) => {
     if (!o.isMesh) return;
     stats.meshes++;
     o.userData.noWet = true;           // the upstream sweeps' skip markers —
     o.userData.noCloudShadow = true;   // this mesh is already dressed
-    if (receive) o.receiveShadow = true;
+    // EXPLICIT both ways: upstream vegetation ships receiveShadow=true, and
+    // an if-without-else here silently left the scene's biggest fill
+    // surface paying per-fragment shadow taps while the comment claimed
+    // otherwise (§13.1 — intent is not behavior)
+    o.receiveShadow = receive;
     const mats = Array.isArray(o.material) ? o.material : o.material ? [o.material] : [];
-    for (const m of mats) prepareMaterial(m, o);
+    for (const m of mats) {
+      // grass never puddles: blade normals are deliberately forced straight
+      // up for clump lighting, which sails through the puddle flatness gate
+      // — without this, rain paints puddles ON BLADES and rewrites
+      // roughness/metalness across 318k instances. The gate is compile-time
+      // (§12.2), so the branch costs nothing. Wet darkening + cloud shade
+      // stay — a rain-dark meadow under crossing cloud shadows is the shot.
+      if (grass) m.userData.noPuddles = true;
+      prepareMaterial(m, o);
+    }
   });
   return root;
 }

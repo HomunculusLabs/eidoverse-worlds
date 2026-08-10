@@ -163,6 +163,48 @@ function wireDensityDial(field) {
   };
 }
 
+// ---- frustum culling -------------------------------------------------------
+// Upstream ships frustumCulled = false, and it HAS to: the engine's
+// instanceMatrix is all identity (every transform rides the aPosRot/
+// aScaleVar/aPhase attributes inside positionNode), so three's own
+// computeBoundingSphere would union identity matrices into a half-meter
+// sphere at the world origin and the field would vanish whenever the origin
+// left the view. The adapter knows better: aPosRot IS the world placement
+// (heights baked at build), so a correct world-space sphere is one pass
+// over the attribute. Assign it explicitly — a non-null boundingSphere is
+// never recomputed — and culling turns on: looking away from the meadow
+// stops drawing every blade of it (§13.2 G1).
+function wireFieldCulling(field) {
+  const geo = field.mesh.geometry;
+  const posRot = geo.getAttribute('aPosRot');
+  const scaleVar = geo.getAttribute('aScaleVar');
+  if (!posRot || !field.count) return;
+  const box = new THREE.Box3();
+  const v = new THREE.Vector3();
+  for (let i = 0; i < field.count; i++) {
+    box.expandByPoint(v.set(posRot.getX(i), posRot.getY(i), posRot.getZ(i)));
+  }
+  // plant height × the tallest instance, plus wind/pusher lean slack (the
+  // tanh lean ceiling is 0.6 in the engine) — conservative on every axis
+  geo.computeBoundingBox();   // per-plant LOCAL bounds (positions, not instances)
+  const plantH = Math.max(0.5, geo.boundingBox.max.y - Math.min(0, geo.boundingBox.min.y));
+  let maxScale = 1;
+  if (scaleVar) {
+    for (let i = 0; i < field.count; i++) maxScale = Math.max(maxScale, scaleVar.getY(i));
+  }
+  box.expandByScalar(plantH * maxScale + 0.6);
+  const sphere = new THREE.Sphere();
+  box.getBoundingSphere(sphere);
+  // the field group sits at the scene root with an identity transform, so a
+  // world-space sphere is directly what the frustum test wants
+  field.mesh.boundingSphere = sphere;
+  field.mesh.frustumCulled = true;
+  if (field.stemMesh) {   // shrub wood is a CHILD mesh — culled independently
+    field.stemMesh.boundingSphere = sphere;
+    field.stemMesh.frustumCulled = true;
+  }
+}
+
 // ---- pushers ---------------------------------------------------------------
 // The brush's own interaction model: up to 4 pusher slots part the plants
 // around moving bodies. Slot 0 is the local avatar; the rest are the nearest
@@ -215,6 +257,7 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       f.strokeLabel = `${fields.length}:${st.species ?? 'grass'}`;
       wireDensityDial(f);
       mask.wire(f.material);
+      wireFieldCulling(f);
       group.add(f.mesh);
       fields.push(f);
     }
