@@ -8,7 +8,8 @@
 // so it can be unit-tested without a browser:
 //   flora_args.js  — legacy makeGrass-bag mapping + preset/variety strokes
 //   flora_field.js — field composition + retirement lifecycle
-// Both are covered by tools/flora.test.ts.
+//   flora_lod.js   — blade-LOD index subsets for tiled strokes (§17b)
+// All are covered by tools/flora.test.ts.
 import { THREE, TSL, bus, camera, renderer } from './core.js';
 import { primeFiles } from './assets.js';
 import { colliders } from './colliders.js';
@@ -16,6 +17,7 @@ import { myState } from './controller.js';
 import { remotes } from './remotes.js';
 import { mapGrassArgs, presetStrokes } from './flora_args.js';
 import { composeField } from './flora_field.js';
+import { bladeLodIndex } from './flora_lod.js';
 import { densityCount } from './grass_quality.js';
 import { pushHostHook } from './autohooks.js';
 
@@ -205,7 +207,7 @@ function wireFieldCulling(field) {
   }
 }
 
-// ---- tiling (§13.2 G2, re-cut §16.2.B) -------------------------------------
+// ---- tiling (§13.2 G2, re-cut §16.2.B) + blade LOD (§17b) -------------------
 // One monolithic InstancedMesh can never cull a blade behind you and pays
 // full fragment cost regardless of view. So a big stroke is re-cut into XZ
 // tiles AFTER the density shuffle: K geometries SHARING the vertex/index/aH
@@ -247,6 +249,11 @@ const TILE_MIN_OCC = 256;          // can't reach this per tile → stay whole
 const TILE_MAX_AXIS = 8;           // K stays modest (§13.2: ~8×8 on a big stand)
 const GRASS_NEAR = 30;             // full density inside this
 const GRASS_FAR = 140;             // invisible beyond this
+const BLADE_LOD_KEEP = 0.4;        // far tiles keep ceil(0.4 × perBunch) blades per tuft (§17b)
+const BLADE_LOD_OUT = 60;          // m — a tile past this swaps to the far-LOD index…
+const BLADE_LOD_IN = 50;           // m — …and only swaps back inside this: the hysteresis
+                                   // band keeps a resident hovering at one boundary from
+                                   // flipping geometries every 300ms tick
 const _tv = new THREE.Vector3();
 
 /** The uniform-vs-attribute fork for the identity instanceMatrix, read off
@@ -265,7 +272,7 @@ function matrixPathCaps() {
   return { threshold, cross: cross * 64 <= 262144 ? cross : 0 };
 }
 
-function tileField(f) {
+function tileField(f, bladeLod = false) {
   // the shrub archetype pairs a stem mesh sharing backing arrays — skip it
   if (f.stemMesh || (f.count ?? 0) < TILE_MIN_INSTANCES) return false;
   const src = f.mesh.geometry;
@@ -303,9 +310,23 @@ function tileField(f) {
   src.computeBoundingBox();          // per-plant LOCAL bounds (tiny)
   const plantH = Math.max(0.5, src.boundingBox.max.y - Math.min(0, src.boundingBox.min.y));
   const pad = plantH * maxScale + 0.6;   // tallest plant + the wind/push lean ceiling
+  // §17b — ONE far-LOD index per STROKE: the count falloff thins INSTANCES;
+  // this thins BLADES PER TUFT on the instances that remain. Whole 24-entry
+  // blade runs, evenly strided, still pointing into the SHARED vertex
+  // buffers (flora_lod.js re-verifies the run layout entry by entry — a
+  // reshaped upstream degrades to no LOD, never a torn tuft). Every tile's
+  // far twin wears this same attribute object, so the whole stroke pays one
+  // extra GPU index buffer (~kept×24 entries) and nothing else.
+  let farIndex = null;
+  if (bladeLod) {
+    const srcIdx = src.getIndex();
+    const sub = srcIdx && bladeLodIndex(srcIdx.array, src.getAttribute('position').count, BLADE_LOD_KEEP);
+    if (sub) farIndex = new THREE.BufferAttribute(sub, 1);
+  }
   const container = new THREE.Group();
   container.userData = { ...f.mesh.userData };
   const tiles = [];
+  const lodGeos = new Map();         // tile → { near, far } geometry twins (§17b)
   const m4 = new THREE.Matrix4();
   for (const idx of buckets) {
     if (!idx.length) continue;
@@ -346,6 +367,30 @@ function tileField(f) {
     tm.castShadow = false;
     tm.receiveShadow = f.mesh.receiveShadow;
     tm.userData.fullCount = idx.length;
+    // §17b — the tile's far-LOD twin: the same shared vertex attribute
+    // objects, the SAME sliced instanced attribute objects (zero copies —
+    // the density shuffle permuted instanced data before tiling, and an
+    // index addresses per-vertex data only), the stroke's one far index.
+    // The attribute LAYOUT is identical to the near twin's, and every
+    // layout key in the vendored renderer is built from names/formats plus
+    // an index PRESENCE flag — never the index object's identity
+    // (three.webgpu.js:30035-30081, :81752-81780) — so the swap re-keys
+    // nothing: zero new programs, zero new pipelines (see applyTiles).
+    if (farIndex) {
+      const fg = new THREE.BufferGeometry();
+      fg.setIndex(farIndex);           // per-STROKE object, shared by every tile
+      for (const name of ['position', 'normal', 'uv', 'aH']) {
+        const a = src.getAttribute(name);
+        if (a) fg.setAttribute(name, a);
+      }
+      for (const name of names) fg.setAttribute(name, tg.getAttribute(name));
+      // the render sort reads geometry.boundingSphere (:60872-60880) and
+      // culling reads the object's — the twin shares the SAME sphere object
+      // as the near geometry, so both stay true across every swap
+      fg.boundingSphere = sphere;
+      tm.userData.lodFar = false;      // observable per-tile state (EW.grass)
+      lodGeos.set(tm, { near: tg, far: fg });
+    }
     container.add(tm);
     tiles.push(tm);
   }
@@ -366,6 +411,23 @@ function tileField(f) {
           : 1 - 0.75 * ((d - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR));
       t.count = densityCount(t.userData.fullCount, eff * fall);
       t.visible = t.count > 0;
+      // §17b — blade LOD rides the same distance one band later, with
+      // hysteresis. The swap is a pointer write, never a compile: the live
+      // render object mutates in place and keeps its pipeline outright
+      // (three.webgpu.js:30430-30434 setGeometry, :32305-32309 +
+      // :81690-81744 — the backend's needsRenderUpdate never looks at
+      // geometry), and even a cold re-key lands on the same cached
+      // program/pipeline because both twins share one attribute layout.
+      // t.count semantics are untouched (#74): instances ride the count,
+      // blades ride the index — independent dimensions.
+      const pair = lodGeos.get(t);
+      if (pair) {
+        if (!t.userData.lodFar && d >= BLADE_LOD_OUT) {
+          t.geometry = pair.far; t.userData.lodFar = true;
+        } else if (t.userData.lodFar && d <= BLADE_LOD_IN) {
+          t.geometry = pair.near; t.userData.lodFar = false;
+        }
+      }
     }
   };
   f.setDensity = (k) => { eff = k; applyTiles(); };
@@ -379,8 +441,12 @@ function tileField(f) {
   };
   applyTiles();
   f.dispose = () => {
-    for (const t of tiles) t.geometry.dispose();   // teardown-only: shared
-    origDispose?.call(f);                          // buffers die with the field
+    for (const t of tiles) {                       // teardown-only: shared
+      const pair = lodGeos.get(t);                 // buffers die with the field;
+      if (pair) (t.geometry === pair.far ? pair.near : pair.far).dispose();
+      t.geometry.dispose();                        // …the unmounted LOD twin too
+    }
+    origDispose?.call(f);
   };
   return true;
 }
@@ -445,8 +511,11 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       wireDensityDial(f);
       mask.wire(f.material);
       // big blade/corn strokes tile (per-tile culling + distance density);
-      // small ones keep the whole-stroke sphere from G1
-      if (!tileField(f)) wireFieldCulling(f);
+      // small ones keep the whole-stroke sphere from G1. Only the 'blades'
+      // archetype carries blade-LOD twins (§17b) — corn/shrub/yucca
+      // geometry has no per-blade run structure to subset
+      const arch = mod.FLORA_SPECIES[st.species ?? 'grass']?.archetype;
+      if (!tileField(f, arch === 'blades')) wireFieldCulling(f);
       group.add(f.mesh);
       fields.push(f);
     }
@@ -462,6 +531,9 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
   for (const f of fields) {
     if (f._tileTick) { pushHostHook(f._tileTick); field.autoHooks.push(f._tileTick); }
   }
+  // the sky's scene-diff claim must never own the meadow (§17c) — a grass
+  // build regularly overlaps an async sky build at boot
+  group.userData.skyExempt = true;
   scene.add(group);
   return field;
 }
@@ -477,6 +549,18 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
 // culling defeated, one real frame between objects. Three yields ~10 rAF
 // frames per object internally (NodeBuilder stage yields), so the field
 // warms in ~K×10 background frames — and NO tile is ever cold after.
+//
+// Blade-LOD twins (§17b) need no second pass: one warm per tile covers both
+// geometry variants. The node builder caches on the render object's initial
+// cache key, whose geometry part is LAYOUT-only — sorted attribute names/
+// formats plus an index PRESENCE flag, never the index object
+// (three.webgpu.js:30035-30081 via :54283-54286) — and the pipeline cache
+// key is stage ids + the same layout-keyed backend key (:32248-32251,
+// :81752-81780), so the far twin key-matches everything the near warm
+// already built; on the live swap the render object keeps its compiled
+// pipeline outright (:32305-32309, :81690-81744). The far index buffer
+// itself uploads at first use — a few hundred bytes per stroke, keyed on
+// the shared attribute object (:31031-31043), not a compile.
 
 /** Compile every render object of a built field (tiles, untiled stroke
  *  meshes, shrub stems) off the render path, then re-settle tile counts

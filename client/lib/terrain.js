@@ -36,7 +36,14 @@ export function setTerrain(t) {
   // ground/grid are null under the headless core stub — an agent process sets
   // terrain for its settle sim and has no stage floor to hide (issue #17)
   if (t) {
-    if (t.mesh) scene.add(t.mesh);
+    if (t.mesh) {
+      // the sky's scene-diff claim must never own the ground: a terrain
+      // landing while an async sky build is in flight got CLAIMED (tel0s's
+      // trace: "sky warm terrain") and the next sky rebuild would have
+      // removed it (§17c)
+      if (t.mesh.userData) t.mesh.userData.skyExempt = true;
+      scene.add(t.mesh);
+    }
     // terrain replaces the stage floor
     if (ground) ground.visible = false;
     if (grid) grid.visible = false;
@@ -140,6 +147,11 @@ export function grassTiles() {
       drawn: tiles.length
         ? tiles.reduce((s, t) => s + t.count, 0)
         : (f.mesh?.count ?? f.count ?? 0),
+      // §17b blade LOD, observable: `lod` says the stroke carries far-index
+      // twins at all; `lodTiles` counts tiles drawing the thinned tuft right
+      // now. Existing fields stay put (bootjank prints them).
+      lod: tiles.some((t) => t.userData.lodFar !== undefined),
+      lodTiles: tiles.filter((t) => t.userData.lodFar === true).length,
     };
   });
   return { field: true, strokes };

@@ -212,6 +212,37 @@ async function primeTextures(obj, work) {
   }
 }
 
+// Prime-on-decode (§17a): toolkit textures ride TSL node graphs
+// (vegetation.js texNode(maps.albedo), the sky's domes) — invisible to
+// collectTextures' property walk, so they used to upload at first bind
+// INSIDE a warm's compileAsync (measured: three 41ms frames as the strokes
+// built, one 108ms frame for the 4K starmap — tel0s's trace, §17). Every
+// one of them passes through loadImageTexture, so each decoded texture
+// queues here and uploads through the same bytes-per-frame budget BEFORE
+// any compile binds it. A compile that wins the race anyway just uploads
+// at bind, exactly as before — this spreads, never gates.
+const texPrimeQueue = [];
+let texPrimePumping = false;
+function queueTexturePrime(tex) {
+  texPrimeQueue.push(tex);
+  if (texPrimePumping) return;
+  texPrimePumping = true;
+  (async () => {
+    let spent = 0;
+    while (texPrimeQueue.length) {
+      const t = texPrimeQueue.shift();
+      const est = textureUploadBytes(t);
+      if (spent > 0 && spent + est > TEX_FRAME_BYTES) {
+        await nextFrame();
+        spent = 0;
+      }
+      try { renderer.initTexture(t); } catch { /* disposed/pre-init — bind pays */ }
+      spent += est;
+    }
+    texPrimePumping = false;
+  })();
+}
+
 export async function loadVRM(libPath, { priority = 1 } = {}) {
   const work = beginWork(`vrm ${libPath.split('/').pop()}`);
   try {
@@ -611,6 +642,7 @@ globalThis.loadImageTexture = async (bytes, opts = {}) => {
       tex.userData.ewShared = true;   // served from cache — teardowns must skip it
       tex.dispose = () => {};         // session-pinned (see above)
     }
+    queueTexturePrime(tex);           // §17a: upload spread, ahead of the compile
     return tex;
   })();
   if (cacheable) {

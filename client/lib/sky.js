@@ -328,9 +328,16 @@ function snapshotSceneOwnership() {
 }
 function claimSkyAdditions(snap) {
   skyOwned = scene.children.filter((c) => !snap.before.has(c)
-    // never claim anything the world itself owns — entities and bodies can be
-    // added by other code while an async sky build is in flight
-    && !c.userData?.entityId && !c.userData?.isBody);
+    // never claim anything the world itself owns — entities, bodies, the
+    // terrain, the meadow, debug groups: all can be added by other code
+    // while an async sky build is in flight. skyExempt is the positive
+    // marker world-owned roots wear at their add site (§17c — tel0s's
+    // trace caught the claim swallowing the TERRAIN: a later sky rebuild
+    // would have removed the ground with the old dome set)
+    // (isDebug: debug.js has worn this marker with a "sky must not adopt"
+    // comment since it was written — the filter just never read it)
+    && !c.userData?.entityId && !c.userData?.isBody
+    && !c.userData?.skyExempt && !c.userData?.isDebug);
   // Hooks are claimed the same way the scene children above are: by identity,
   // and never something another owner marked as theirs. It used to be a LENGTH
   // mark, which meant anything that registered a per-frame hook after the sky

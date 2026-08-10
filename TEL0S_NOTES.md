@@ -390,6 +390,35 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — §17 LANDED (17a/17b/17c): vegetation part 2.** Grounded
+  in tel0s's own trace (§17 header). **17a** prime-on-decode: every
+  toolkit texture (vegetation texNode maps, sky domes — all TSL-node-
+  held, invisible to collectTextures) uploads through the 16MB/frame
+  budget at the loadImageTexture chokepoint, right after decode — the
+  t≈6.5-6.8s stroke hitches are GONE from bootjank, the 4K starmap
+  frame went 108→33ms. **17b** blade-LOD by index subset (new
+  flora_lod.js, pure + unit-tested 13 checks): far tiles (>60m out,
+  <50m back in) swap to a per-stroke index keeping 40% of blades,
+  evenly strided, whole 24-entry runs only — shares every vertex
+  buffer, and the executing agent PROVED zero new programs/pipelines
+  from three.webgpu.js source (geometry is not a render-object chain
+  key; the layout cache key never reads index identity; a live
+  geometry swap keeps the compiled pipeline outright — one warm covers
+  both twins). Far-field triangle bill ≈41% of before, compounding the
+  instance falloff; near field bit-identical. EW.grass() reports
+  lod/lodTiles. Structural re-verification in bladeLodIndex degrades
+  to no-LOD on upstream version skew, never a torn tuft. **17c** the
+  sky claim fence: terrain mesh, grass group wear userData.skyExempt
+  at their add sites; claimSkyAdditions filters on it AND on isDebug
+  (debug.js had worn that marker with a "sky must not adopt" comment
+  since it was written — the filter never read it; tel0s's trace
+  caught the claim swallowing the TERRAIN, which a sky rebuild would
+  then have removed). Gate: flora 55/55, grass-quality 57/57, bootjank
+  (no sky-claim leaks, no veg-texture stalls), lightbench --measure
+  19/19 at 120fps, paritybench PASS. **17d — tel0s's call, open**: the
+  26-52fps dead band (a 40fps meadow machine sheds nothing; the
+  resident dial is today's control), near falloff tuning, device
+  defaults.
 - **2026-08-10 — 8e LANDED. STEP 8 COMPLETE — the rough first minute is
   measured, engineered away, and observable.** EW.grass() (terrain.js
   grassTiles — per-stroke tiled/planted/drawn/visible-tiles; §13.2's
@@ -1926,3 +1955,61 @@ Headless Edge renders at 120Hz (p50 8.3ms is a real vsync). The
 enabled} — a burst never shows in it; the GPU hooks are the honest
 witness. Buffer-upload total (888MB/40s) is dominated by steady-state
 per-object UBO writes — not a boot problem, ignore it in reports.
+
+## 17. The meadow's draw bill, part 2 — vegetation LOD + the last hitches
+
+Step 8 fixed the compile storms; tel0s's own trace (2026-08-10, their
+machine) shows what remains: (a) 41ms hitches at t≈6.5-6.8s exactly when
+the vegetation strokes build — their textures ride TSL nodes
+(vegetation.js texNode(maps.albedo)), invisible to collectTextures'
+property walk, so they upload at first bind INSIDE the warm's compile
+items (the 4K starmap does the same at t≈1.7s: 34MB, 108ms); (b) a full
+meadow holds their MacBook at ~40fps — the fill bill: mojave ≈ 1.72M
+alpha-tested DoubleSide triangles (§16.1b), the classic countless-blades
+problem (GPU Gems ch.7), and 40fps sits in the governor's 26/52 dead band
+forever so no lever ever moves; (c) the sky's scene-diff claim swallowed
+the TERRAIN mesh in their trace ("sky warm terrain") — anything added
+while the async sky build is in flight and not wearing entityId/isBody
+gets claimed, and teardownSky would then REMOVE it on the next sky
+rebuild. The grass group is equally claimable. Real bug, made visible by
+8b's warm labels.
+
+### 17.1 The design
+
+**17a — prime-on-decode at the host chokepoint.** Every toolkit texture
+passes through loadImageTexture (assets.js). After decode, queue the
+texture into the existing bytes-per-frame budget (renderer.initTexture,
+~16MB/frame, real frame yields) — uploads spread BEFORE any compile binds
+them, for vegetation, sky, and every future toolkit module at once. A
+compile that wins the race anyway just uploads at bind as today.
+
+**17b — blade-LOD by index subset, per tile.** The 'blades' archetype
+builds perBunch blades per instanced geometry (galleta 34, meadow grass
+8), contiguous vertex/index runs per blade (LOOPS=4 segments). A far-LOD
+BufferGeometry SHARES every vertex attribute object and carries only a
+shorter index (keep k of n blades, evenly strided) — same attribute
+layout ⇒ same WGSL program ⇒ ZERO new pipelines (§16.1b's sharing rule).
+applyTiles swaps tile.geometry by distance with hysteresis (~60m out,
+~50m back in); count falloff already thins instances, blade LOD compounds
+it: far-field triangle bill drops ~60% with the near field untouched.
+Tiled strokes only (shrub leaf-planes and yucca are small counts,
+untiled — recorded tail if ever needed).
+
+**17c — the sky claim fence.** World-owned roots wear
+userData.skyExempt (terrain mesh at setTerrain, grass group at
+buildFloraField, debug groups at their creation); claimSkyAdditions
+filters on it alongside entityId/isBody. A positive marker at the add
+site, not a name heuristic.
+
+**17d — policy, tel0s's call (not implemented unprompted):** the
+26-52fps dead band means a 40fps meadow machine never sheds; the
+resident grass dial (#60: full/medium/low, persisted per browser) is
+today's intended control. Options if wanted later: grass-only shed
+below ~45fps, steeper near falloff (GRASS_NEAR 30→24), device-default
+quality. All change look or policy — none land without a decision.
+
+### 17.2 Gates
+17a/17c: bootjank (the 6.5-6.8s hitches and the 34MB starmap frame
+shrink; no "sky warm terrain"/grass claims in the load log), lightbench,
+paritybench. 17b: those plus flora.test, grass-quality, lightbench
+--measure fps, and EW.grass() showing LOD state per tile.
