@@ -65,6 +65,10 @@ function makePlaceholder(id, ent, g) {
   mesh.scale.set(Math.max(g.bbox.size?.[0] ?? 0.5, 0.05), Math.max(g.bbox.size?.[1] ?? 0.5, 0.05), Math.max(g.bbox.size?.[2] ?? 0.5, 0.05));
   mesh.position.set(...(g.bbox.center ?? [0, 0, 0]));
   mesh.castShadow = mesh.receiveShadow = false;
+  // the shared translucent stand-in material must never be swept into a
+  // weather wrap — that would recompile it mid-session for every placeholder
+  mesh.userData.noWet = true;
+  mesh.userData.noCloudShadow = true;
   grp.add(mesh);
   grp.userData.entityId = id;
   grp.userData.placeholder = true;

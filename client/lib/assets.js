@@ -15,6 +15,7 @@ import { MToonNodeMaterial } from '@pixiv/three-vrm-materials-mtoon/nodes';
 import { VRMAnimationLoaderPlugin, createVRMAnimationClip } from '@pixiv/three-vrm-animation';
 import { clone as skeletonClone } from 'three/addons/utils/SkeletonUtils.js';
 import { beginWork, enqueue } from './loadwork.js';
+import { prepareObject } from './materials.js';
 
 // ---- loading tray -----------------------------------------------------------
 // Every in-flight asset (downloads with byte progress, builds as spinners) is
@@ -149,6 +150,9 @@ export async function loadVRM(libPath, { priority = 1 } = {}) {
       work.phase('skeleton');
       VRMUtils.combineSkeletons?.(vrm.scene) ?? VRMUtils.removeUnnecessaryJoints?.(vrm.scene);
       VRMUtils.rotateVRM0(vrm); // VRM0 → faces +Z
+      // through the factory BEFORE the first compile: the final graph shape
+      // (wetness on MToon, sweep markers) is born with the body
+      prepareObject(vrm.scene, { kind: 'body' });
       await work.yield();
       work.phase('textures');
       await primeTextures(vrm.scene, work);
@@ -176,6 +180,9 @@ export async function loadGLB(libPath) {
         return await enqueue(async () => {
           work.phase('parse');
           const gltf = await new Promise((res, rej) => makeLoader(false).parse(buf, '', res, rej));
+          // the PROTOTYPE goes through the factory once; every skeletonClone
+          // shares its wrapped materials and copies its mesh markers
+          prepareObject(gltf.scene, { kind: 'model' });
           await work.yield();
           work.phase('textures');
           await primeTextures(gltf.scene, work);

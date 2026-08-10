@@ -129,6 +129,10 @@ async function build(emitter, { id }) {
     // snapshot scene.children mid-flight must never claim (and then dispose)
     // somebody's hearth. Same marker entities and bodies carry.
     sys.mesh.userData.entityId = id;
+    // …and the weather sweep must not wet a fire (or recompile its
+    // instanced material mid-session trying)
+    sys.mesh.userData.noWet = true;
+    sys.mesh.userData.noCloudShadow = true;
 
     const handle = {
       id,

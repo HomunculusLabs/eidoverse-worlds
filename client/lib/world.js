@@ -13,6 +13,7 @@
 
 import { THREE, scene, camera, renderer, report, bus } from './core.js';
 import { loadEidoModule, noiseTexture, loadTrack, loadDone, libLabels } from './assets.js';
+import { prepareObject } from './materials.js';
 import { beginWork } from './loadwork.js';
 import { reindexCollider } from './colliders.js';
 import { setTerrain, setGrass, clearGrass, heightAt } from './terrain.js';
@@ -99,6 +100,10 @@ export function applyTerrainState(args) {
       map: noiseTexture(l.color ?? '#4a5d33'), repeat: l.repeat ?? 16,
     }));
     const t = globalThis.makeTerrain({ ...args, layers });
+    // the factory dresses the ground BEFORE its compile: wetness + cloud
+    // shade + receiveShadow (real terrain never received before — only the
+    // stage floor did, and that hides when this lands)
+    if (t?.mesh) prepareObject(t.mesh, { kind: 'terrain' });
     // compile the ground's pipelines BEFORE it enters the scene — an
     // unprecompiled terrain material otherwise codegens synchronously
     // inside the first render() that sees it. BOUNDED: this build GATES
@@ -138,6 +143,10 @@ export function applyGrassState(args) {
     // Legacy makeGrass bags persisted in old world logs are mapped
     // inside buildFloraField; the log itself is never rewritten.
     const field = await buildFloraField(args, { scene, heightFn: heightAt });
+    // factory pass before the precompile (field.mesh is the whole stroke
+    // group): wet sheen on the meadow, sweep markers, no shadow receipt
+    // (grass never received, and its fragment cost is the client's biggest)
+    if (field?.mesh) prepareObject(field.mesh, { kind: 'grass' });
     // borrow the mesh back out for a precompile
     // (compileAsync skips invisible objects, so hiding wouldn't work —
     // detach, compile against the scene's lighting, re-add warm)

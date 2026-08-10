@@ -387,6 +387,25 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — 5a landed: the material factory.** `client/lib/materials.js`
+  — every material entering the world passes through `prepareObject` at
+  creation, before first compile: a shape-identical port of upstream's
+  wetness wrap (same nodes, same `noPuddles` gate, our uniforms), our own
+  two-tap cloud-shade field (seeded tileable noise born at boot — every
+  client grows the same field — wind-scrolled, sun-projected via the live
+  sun light), and the shadow-receiving policy (terrain receives at last;
+  placeholders/gizmos never). Every prepared mesh carries `noWet` +
+  `noCloudShadow`, so upstream's sweeps find nothing; unprepared (🧩 mod)
+  materials still get swept as before. The driver reads FOLDED state
+  (`effectiveSky` → wet/coverage targets, ~1Hz derive + per-frame ease:
+  wets in ~10s, dries in ~40s) — wet ground works before the sky modules
+  arrive, and under the SkyMesh fallback. Wired at every birth site: GLB
+  prototypes, VRMs (MToon gets wetness, matching the sweep), terrain,
+  grass (whole stroke group), stage floor; markers on placeholders,
+  gizmos, emitters (a fire no longer gets wet — deliberate). Verified:
+  paritybench PASS (terrain/grass/model compiles all through wrapped
+  graphs, reconnect leg green). Visual tuning + the uniforms-move probe
+  ride 5g. `EW.materials()` exposes the counters.
 - **2026-08-09 — step 5 grounded: the extraction round, and §12.** Three
   line-level extraction passes (Opus agents, verified against the design):
   upstream's wrap mechanics, three.webgpu r184's actual invalidation

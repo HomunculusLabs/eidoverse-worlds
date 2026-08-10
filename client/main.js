@@ -55,6 +55,7 @@ import { initPhysObj, tickPhysObj, kick, leaseApi } from './lib/physobj.js';
 import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { shedALight, litCount } from './lib/lights.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
+import { updateMaterials, materialsDebug } from './lib/materials.js';
 import { framesHeld } from './lib/loadwork.js';
 import { startPrefetch } from './lib/prefetch.js';
 
@@ -1080,6 +1081,7 @@ function frame(now) {
   tickMotion();                  // the world's moving parts (log-authored)
   BC('sky');
   updateSky(now, t);
+  updateMaterials(now);          // weather → uniforms; the factory's live half
 
   BC('me-drive');
   if (CONFIG.renderer) { /* camera is driven per snap request */ }
@@ -1250,6 +1252,7 @@ globalThis.EW = {
   bodysim: { engine: bodyEngine, setEngine: setBodyEngine },  // swappable body physics
   foldParity,        // shadow-mode drift probe (TEL0S_NOTES §11.6)
   reconcileModels,   // force a full realizer pass (idempotent — §11.4)
+  materials: materialsDebug,   // factory counters + live weather uniforms (§12.3)
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)

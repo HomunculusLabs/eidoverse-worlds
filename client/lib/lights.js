@@ -52,6 +52,8 @@ export function makeLightGizmo(color = 0xffd9a0) {
   );
   m.userData.noCamCollide = true;   // don't let the camera collide with a bulb
   m.castShadow = m.receiveShadow = false;
+  m.userData.noWet = true;          // a glowing bulb does not get rained dark —
+  m.userData.noCloudShadow = true;  // and the sweep must not recompile it
   return m;
 }
 
