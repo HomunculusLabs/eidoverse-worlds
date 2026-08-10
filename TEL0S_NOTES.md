@@ -390,6 +390,23 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — MacBook CONFIRMATION (tel0s's own --heavyjoin trace)
+  closes the §19 arc.** First wear of the 21MB body: parse 68ms,
+  textures 352ms over 24 frames; ZERO frames >25ms after t=14.9s
+  through both heavy joins; the MToon compile (~4s) fully off-frame;
+  rewear "pool-hit — 1ms / compile skipped". The Metal compile of the
+  sky's 1.5MB bake shader costs ~7.2s and its 5s frame lands INSIDE
+  the 13.7s splash — invisible; warm visits will skip most of it.
+  Steady state locks their 60Hz vsync (p50 16.7ms). VERDICT: the
+  worker-parse tail is NOT justified by data (parse was the smallest
+  number in the trace) — shelved on evidence. ELEVATED by the same
+  trace: KTX2/basis via the server optQueue — their Mac pays
+  1.0-1.2s/GLB in texture decode and 1.07GB of raw RGBA uploads
+  (vs ~456MB on the dev box); compressed textures collapse both
+  4-8×. That is the next arc when tel0s calls it. Minor note: the
+  16MB/frame upload budget produces ~100ms frames on Mac's slower
+  uploads (one 100ms frame at t=14.9s) — a per-platform budget is
+  the five-minute version, KTX2 the real one.
 - **2026-08-10 — §19b LANDED: the VRM instance pool — a body parsed
   once is never re-paid.** The step-5½ deferred tail, landed with its
   recorded landmine defused: three-vrm has NO blessed deep-clone (its
