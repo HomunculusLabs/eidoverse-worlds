@@ -354,6 +354,9 @@ skeleton-first strangler keeps the world bootable at every step:
    time (models first, then lights, terrain, sky, flora, emitters).
 4. New boot path (1-RTT hello, placeholders, curtain policy).
 5. Material factory + lighting rig (Disease A cure; holds delete).
+5½. Streamed residency (demote/promote + proto eviction) and grass
+   render optimization (culling, tiling, distance density) — §13.
+   Inserted 2026-08-09 at tel0s's direction, before main.js dissolves.
 6. Dissolve `main.js`; frame-system list; spatial-index service.
 7. Server split.
 
@@ -1093,3 +1096,142 @@ WeakMap identity (one stable proxy per scene); bootbench before/after
 `docs/upstream-wrap-once.md`: `strikeLight` injection, a per-material
 cloud-shadow wrap entry, and blessing `noWet`/`noCloudShadow` as
 supported markers.
+
+## 13. Streamed residency and the meadow's draw bill — step 5½ reference design
+
+Two extraction passes (2026-08-09) ground this: the vegetation toolkit's
+instancing internals, and the client's full asset-ownership/disposal graph.
+
+### 13.1 The binding facts
+
+**Vegetation** (`vegetation.js`): one InstancedMesh per stroke; every
+per-instance transform lives in three custom attributes (`aPosRot` xyz+yaw,
+`aScaleVar`, `aPhase` incl. tilt) applied in `positionNode` — **the
+instanceMatrix is all identity**, which is why upstream ships
+`frustumCulled = false`: three would cull against a meaningless half-meter
+sphere at the origin and vanish the field. Wind is ONE uniform (vertex
+stage, gust texture sampled in-shader); the per-frame hook writes one
+float; **all grass cost is GPU fill** (alpha-tested opaque cutout,
+DoubleSide, the client's measured "318k blades is the frame budget on
+Safari"). The node graph binds attributes by NAME and holds no mesh
+reference; the clearing mask wires the MATERIAL; heights are baked at
+build time into `aPosRot.y`. The client's `wireDensityDial` already
+Fisher-Yates-shuffles the instance arrays (seeded), which is what makes a
+`count` prefix a uniform density dial — and makes stable-order tile
+bucketing compose with it for free. Grass material is `MeshSSSNodeMaterial`
+(PBR duck yes) — so today it takes the FULL factory wrap including puddles
+(and blade normals are forced straight up, which sails through the
+puddle flatness gate: rain paints puddles ON BLADES), and upstream sets
+`receiveShadow = true`, which the factory never clears (its "grass stays
+a non-receiver" comment described intent, not behavior).
+
+**Residency** (client audit): `loadGLB` clones share geometry, materials,
+textures, pipelines with the cached prototype — a per-entity dispose may
+touch NONE of it; dropping a clone frees scene-graph, matrices,
+camera-collision triangles, collider BVH heap, and ~zero VRAM. All GPU
+bytes are pinned by `glbCache` (never evicted, no refcount), and three
+r184 holds STRONG maps of every geometry (`_geometryDisposeListeners`)
+and texture/attribute (`Info.memoryMap`) ever uploaded — GC alone frees
+nothing; only explicit `dispose()` reaches `GPUBuffer.destroy`. Real
+weights: median optimized model ~350KB wire but ~22MB resident (4x1024²
+texture sets + mips); `byteCache` holds a 29.5MB VRM forever after one
+look; `denoFiles` keeps a second full copy of every toolkit asset;
+`vrmaCache` ~14-20MB. `renderer.info.memory` is real byte accounting and
+nothing reads it. Found leak: `setTerrain` removes the old terrain and
+never disposes it. `retire()` is a correct scene-graph retire with zero
+GPU deallocation (right, given sharing). Scheduler dedupe/cancel is
+promote-churn-ready (one gap: `loadGLB` takes no AbortSignal — an
+in-flight load runs to completion and warms the cache, which is fine).
+The three demote-impossibles: carriers with mounted cargo, part-socket
+mounts (`findPart` on a placeholder is null; `mbase` is per-clone),
+live physobj sims. `parity.js`'s parent/mount-pose buckets need a
+placeholder exemption or a demoted child reads as false drift.
+
+### 13.2 Grass, in two moves
+
+**G1 — the free wins (no tiling):**
+- Per-stroke WORLD bounding sphere assigned by the adapter (computable
+  from `aPosRot` min/max + height×maxScale + 0.6m lean slack; the group
+  sits at the scene root with identity transform) + `frustumCulled =
+  true`. Looking away stops drawing the whole field. Assign explicitly —
+  never let `computeBoundingSphere` run (it reads the identity matrices).
+- `kind: 'grass'` in the factory sets `receiveShadow = false` explicitly
+  (else-branch, not absence) — no more per-fragment shadow taps on the
+  scene's biggest fill surface.
+- `mat.userData.noPuddles = true` before the wrap — the ported
+  compile-time gate zeroes the puddle branch. Wet sheen darkening and
+  cloud shade STAY (rain-dark meadows and cloud shadows crossing grass
+  are the money shots); puddles-on-blades and the metalness rewrite go.
+
+**G2 — tiling:** after `wireDensityDial` + `mask.wire`, before
+`prepareObject`/compile: bucket instances by XZ tile (STABLE order, so
+each tile's order stays a uniform random permutation → per-tile `count`
+is a uniform thinner). K geometries share the vertex/index/`aH` attribute
+OBJECTS (uploaded once — the backend keys buffers on the attribute
+object) and carry sliced copies of only the three instanced attributes
+(~44B/instance); K meshes share ONE material (mask/wind/factory wrap all
+material- or name-bound); per-tile spheres, `frustumCulled = true`.
+Distance density rides per-tile `count` (near full → far thinned → beyond
+R invisible) on a throttled tick. Tile only blade-grass/corn strokes
+above ~2k instances (shrubs are hundreds; their stem mesh is a child
+sharing backing arrays — pair or skip). Integration seams (from
+extraction): replace `field.setDensity` with the per-tile fan-out; keep
+the #74 applied-truth working (`strokeApplied` reads `mesh.count` — give
+the container a summing getter or keep per-stroke reporting); wrap
+`field.dispose` to free tile geometries; copy the `userData.no*` flags +
+`castShadow=false`/`receiveShadow` onto every tile; keep K modest (~8×8
+on a big stand — one pipeline, K draw calls, culling wins dominate).
+Pre-existing, noted not fixed: shrub wood shares the leaf's pre-mask
+positionNode → clearings never sank wood.
+
+### 13.3 Residency, in three tiers
+
+**R1 — de-realization (CPU/frame relief).** Demotion is the fold→state→
+realize doctrine read backwards: state never changes, the PROJECTION
+coarsens. A far entity swaps back to the placeholder tier (already legal
+everywhere), its loads cancel by owner, lamps/casters release, collider
+drops (beyond interaction range by construction; the clearing mask
+repaints on entity events at promote). Promote IS `createModel` — the
+existing pipeline re-reads state, re-executes mounts, re-announces comp
+bags (emitters re-attach off those events). Sweep: models.js, ~500ms,
+distances from FOLDED positions (works for placeholders too), hysteresis
+promote below R_in / demote above R_out, radius scaled by bbox diagonal
+(a mountain never demotes at 90m). REFUSE to demote: carriers with
+cargo, part-socket mounts, live physobj sims, the selected/dragged
+entity. `kind: 'demote'` on the entity bus; emitters retire their handle
+on it; parity.js exempts placeholders from parent/mount-pose buckets.
+Also in this slice: the `setTerrain` disposal leak fix.
+
+**R2 — proto eviction (the actual VRAM).** Refcount libs
+(`loadGLB`/release on retire+demote); at zero refs, under
+`onIdle(P.NEAR)` and over a `renderer.info.memory.total` budget: traverse
+the proto, dispose unique geometries/materials/textures (copy
+`retireField`'s discipline — the one teardown that gets ownership right),
+delete `glbCache` + `compiledLibs` entries. `byteCache` keeps the
+compressed bytes (prefetch already made the wire cost a disk read —
+re-promote is a parse, not a download; that assumption is load-bearing).
+NEVER dispose per-entity: shared with every clone, and material.dispose
+releases pipeline refcounts scene-wide.
+
+**R3 — the byte tier.** LRU byte budget on `byteCache` (pure JS heap, no
+GPU coupling, tens of MB reclaimed risk-free); `denoFiles` stays (sync
+read contract) but its byteCache twins are LRU-evictable.
+
+Out of scope, flagged: a VRM prototype cache (the "24-body room" miss) —
+because `avatar.dispose()` deepDisposes today, safe ONLY while bodies
+re-parse; the day a proto cache lands that becomes a cross-body
+texture-blanking bug. Bodies are presence with their own lifecycle;
+separate slice.
+
+**Governor + debug:** residency radius and grass distance-R become
+two-way levers; `EW.residency()`, `EW.gpu()` (= renderer.info.memory —
+finally read), grass tile stats on the debug surface. Gates: paritybench
+(small worlds — nothing demotes; the parity exemption still verified),
+lightbench extension (spawn far → placeholder; move EW.camera → promote;
+eviction drops info.memory), and a grass tile check (tile count, culled
+draws, blades-drawn ≈ eff × count).
+
+### 13.4 Order of work
+
+G1 (free wins) → R1 + terrain-leak fix → G2 (tiling + distance density)
+→ R2 + R3 (eviction + byte LRU) → probes + adversarial review → §10.
