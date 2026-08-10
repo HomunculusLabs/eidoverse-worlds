@@ -23,7 +23,7 @@
 
 import { THREE, scene, camera, report, bus } from '../core.js';
 import { loadGLB, retainGLB, releaseGLB, evictIdleProtos } from '../assets.js';
-import { fitCollider, removeCollider, reindexCollider, refitCollider } from '../colliders.js';
+import { colliders, fitCollider, removeCollider, reindexCollider, refitCollider } from '../colliders.js';
 import { attachLamps, releaseOwner, registerCaster, releaseCaster } from '../lightrig.js';
 import { makeLight, updateLight, disposeLight } from '../lights.js';
 import { entities, entityMeta, comps, avatarMounts, findPart, editHolds } from '../world.js';
@@ -105,6 +105,86 @@ function clearReservation(id) {
   }
 }
 
+// ---- mount indices (§16.2.C) ------------------------------------------------
+// The promote path used to pay two O(N) scans per promote (the rider step-out
+// walked ALL entities; mountsTouching Object.entries'd them again) and the
+// 500ms sweep paid O(N) per demote CANDIDATE (canDemote's carrier scan) —
+// O(N²) at scale. These two maps are faster spellings of those exact
+// predicates, never state: fold parity cannot see them.
+//
+// TWO indices because the two truths genuinely diverge:
+// - FOLD truth (parent-id -> children whose state parent.to is it) serves
+//   canDemote's carrier refusal, the sockets re-seat, and mountsTouching —
+//   consumers asking "what does the fold WANT mounted here". Maintained at
+//   one choke point (indexFoldParent) driven from the verbs that can write a
+//   parent record: mount/dismount set/clear the id's own; spawn/light replace
+//   the record wholesale; remove deletes the children's records too.
+// - SCENE truth (parent-id -> children whose realized object is attached,
+//   i.e. userData.mountedTo) serves the two cargo step-out loops — a `remove`
+//   folds the children's parent records away BEFORE retire() runs, so at
+//   step-out time the scene attachment is all there is left to read.
+//   Maintained exactly where userData.mountedTo is written or cleared.
+const foldChildren = new Map();  // parent id -> Set(child id)   (state truth)
+const foldParentOf = new Map();  // child id -> parent id        (reverse, O(1) moves)
+const sceneChildren = new Map(); // parent id -> Set(child id)   (scene truth)
+const sceneParentOf = new Map();
+
+function indexFoldParent(id) {
+  const to = state.st.entities[id]?.parent?.to ?? null;
+  const prev = foldParentOf.get(id) ?? null;
+  if (prev === to) return;
+  if (prev) {
+    const s = foldChildren.get(prev);
+    if (s) { s.delete(id); if (!s.size) foldChildren.delete(prev); }
+  }
+  if (to) {
+    let s = foldChildren.get(to);
+    if (!s) foldChildren.set(to, s = new Set());
+    s.add(id);
+    foldParentOf.set(id, to);
+  } else foldParentOf.delete(id);
+}
+
+/** Re-derive after a verb that can write parent records. For `remove`, the
+ *  fold has already stripped the children's records — refresh them too. */
+function refoldParents(verb, id) {
+  if (!id) return;
+  if (verb === 'remove') {
+    const kids = foldChildren.get(id);
+    if (kids) for (const cid of [...kids]) indexFoldParent(cid);
+  }
+  indexFoldParent(id);
+}
+
+function rebuildFoldIndex() {
+  foldChildren.clear();
+  foldParentOf.clear();
+  for (const [cid, ent] of Object.entries(state.st.entities)) {
+    const to = ent.parent?.to;
+    if (!to) continue;
+    let s = foldChildren.get(to);
+    if (!s) foldChildren.set(to, s = new Set());
+    s.add(cid);
+    foldParentOf.set(cid, to);
+  }
+}
+
+/** Mirror one userData.mountedTo write (`to` = parent id) or clear (null). */
+function indexSceneMount(id, to) {
+  const prev = sceneParentOf.get(id) ?? null;
+  if (prev === to) return;
+  if (prev) {
+    const s = sceneChildren.get(prev);
+    if (s) { s.delete(id); if (!s.size) sceneChildren.delete(prev); }
+  }
+  if (to) {
+    let s = sceneChildren.get(to);
+    if (!s) sceneChildren.set(to, s = new Set());
+    s.add(id);
+    sceneParentOf.set(id, to);
+  } else sceneParentOf.delete(id);
+}
+
 // ---- creation ---------------------------------------------------------------
 
 function createModel(id, ent) {
@@ -112,11 +192,16 @@ function createModel(id, ent) {
   tracked.set(id, { kind: 'model', lib: ent.lib, gen });
   entities.set(id, null);   // reservation — the contract every consumer knows
   maybePlaceholder(id);     // …upgraded to a sized stand-in when geom is known
-  // STREAMING (§13.3 R1): an entity standing beyond its residency radius as
-  // an honest sized stand-in loads NOTHING — no bytes move for the far city
-  // until someone walks toward it (the sweep promotes it then). An entity
-  // with no bbox yet loads anyway: there is nothing honest to stand in.
-  if (isPlaceholder(entities.get(id)) && entDist(ent) > residencyRadius(ent)) return;
+  // STREAMING (§13.3 R1 + §16.2.C): the gate works from POSITION, stand-in
+  // or not. At hydration the geom side-channel hasn't landed yet, so the old
+  // placeholder-only gate was inert exactly when it mattered (§16.1f) —
+  // every model in the world loaded just to be demoted by the first sweep.
+  // A far entity keeps its reservation (a sized stand-in the moment geom
+  // lands) and loads NOTHING; the 500ms sweep promotes it if anything —
+  // a walk, a `place`, a grown radius — brings it inside R. Unknown sizes
+  // err LARGE via DIAG_DEFAULT. Live spawns share this path, which is what
+  // keeps spawn-beyond-radius-never-loads (§13.3) holding.
+  if (entDist(ent) > residencyRadius(ent)) return;
   scheduleLoad(id, ent, gen);
 }
 
@@ -156,42 +241,44 @@ function scheduleLoad(id, ent, gen) {
   });
 }
 
+// The VISIBLE half of a promote is synchronous — the thing appears the same
+// frame it always did. The HEAVY TAIL (collider fit incl. possible BVH
+// build, lamp scan, caster scan, mount re-checks) drains ≤~4ms per frame
+// through 'promote-tail' (main.js frame list): six loads resolving in one
+// task batch used to land six boulders in a single frame (§16.1e). A seat/
+// surface/camera query in the frames before the collider lands simply
+// misses the brand-new object — accepted (§16.2.C).
 function realizeModel(id, cur, obj) {
   const stand = entities.get(id);
   if (isPlaceholder(stand)) {
     // durable children attach to placeholders by design (execMount takes any
     // truthy parent) — step them out BEFORE the stand's subtree is removed,
-    // and clear mountRel so the execMount pass below re-attaches them to the
+    // and clear mountRel so the tail's execMount pass re-attaches them to the
     // real thing instead of early-returning on an identical key (review B1:
     // cargo mounted on a far carrier vanished forever at promote, parity
-    // silently green)
-    for (const [, cobj] of entities) {
+    // silently green). mountedTo stays (and so does the scene index entry):
+    // that is what lets a retire() racing the re-mount still step them off.
+    const kids = sceneChildren.get(id);
+    if (kids) for (const cid of [...kids]) {
+      const cobj = entities.get(cid);
       if (cobj?.userData?.mountedTo === id && cobj.parent) {
         scene.attach(cobj);
         delete cobj.userData.mountRel;
       }
     }
+    // the stand itself may have ridden a carrier; the fresh clone starts
+    // unattached — the tail's mountsTouching pass re-executes the linkage
+    if (stand.userData.mountedTo) indexSceneMount(id, null);
     (stand.parent ?? scene).remove(stand);   // the real thing takes the spot
   }
   retainGLB(cur.lib);   // the proto is worn — eviction must not undress it
   obj.userData.lib = cur.lib;
   obj.userData.entityId = id;
-  // receiveShadow came from the factory at parse time (clones inherit);
-  // castShadow is the rig's caster budget — nearest K cast, live, toggles
-  // free (§12.5). The old markShadowless/drainShadows drip is gone.
-  registerCaster(id, obj);
   const sc = cur.scale;
-  fitCollider(id, obj, { collide: cur.collide, scale: sc || 1 });
   obj.position.set(...(cur.pos ?? [0, 0, 0]));
   obj.rotation.y = cur.yaw ?? 0;
   if (sc) obj.scale.setScalar(sc);
   obj.userData.base = { pos: obj.position.toArray(), yaw: obj.rotation.y };
-  reindexCollider(id);
-  // emissive surfaces become lamp REQUESTS — synchronous now: a request
-  // costs nothing until the rig assigns it a slot, and that is uniform
-  // writes (the old whenBooted deferral rationed recompiles that no longer
-  // happen)
-  attachLamps(obj, `entity:${id}`);
   entities.set(id, obj);
   entityMeta.set(id, { actor: cur.actor, lib: cur.lib, ts: cur.ts });
   scene.add(obj);
@@ -199,8 +286,80 @@ function realizeModel(id, cur, obj) {
   // comps that folded while the GLB was in flight (or that rode the
   // snapshot) announce now — emitters and panels attach off these events
   emitCompBag(id);
+  promoteTail.set(id, obj);   // the boulders land within the next frames
+}
+
+// ---- the promote tail (§16.2.C) ---------------------------------------------
+
+/** id -> the realized object awaiting its heavy tail. Identity IS the guard:
+ *  the drain runs an item only while entities.get(id) is still this object —
+ *  deleted/demoted/replaced entities drop their tail silently (retire and
+ *  demote also cancel eagerly, so a demoted stand-in can never inherit the
+ *  real model's collider). */
+const promoteTail = new Map();
+
+/** Sharing the per-lib collider derivations is sound exactly when the
+ *  subtree is the pristine clone: no rider glued in (a mount verb may have
+ *  landed in the gap; stepped-out riders sit at the scene root and don't
+ *  count), no part motion that may already have bent a named node since the
+ *  clone was cut. Everything else builds per-entity — correctness beats
+ *  sharing (§16.2.C). */
+function shareableLib(id, cur) {
+  if (!cur?.lib) return null;
+  const kids = sceneChildren.get(id);
+  if (kids) for (const cid of kids) {
+    const cobj = entities.get(cid);
+    if (cobj && cobj.parent && cobj.parent !== scene) return null;
+  }
+  const bag = cur.comp;
+  if (bag) {
+    if (bag.motion?.part) return null;
+    for (const k in bag) if (k.startsWith('motion:')) return null;
+  }
+  return cur.lib;
+}
+
+function runPromoteTail(id, obj) {
+  const cur = state.st.entities[id];
+  if (!cur) return;   // a remove raced the drain; retire already cleaned up
+  // receiveShadow came from the factory at parse time (clones inherit);
+  // castShadow is the rig's caster budget — nearest K cast, live, toggles
+  // free (§12.5). The old markShadowless/drainShadows drip is gone.
+  registerCaster(id, obj);
+  // a mount verb may have landed in the gap: a mounted child carries no
+  // collider of its own (execMount law — the pair collides as the carrier)
+  if (!obj.userData.mountedTo) {
+    // localFrame: the spawn transform is already applied here (unlike the
+    // old at-identity fit), so the box must be computed root-local. The fit
+    // buckets at the live position — the old post-transform reindexCollider
+    // is subsumed.
+    fitCollider(id, obj, {
+      collide: cur.collide, scale: cur.scale || 1,
+      lib: shareableLib(id, cur), localFrame: true,
+    });
+    // the grass clearing mask repaints on entity events and used to see the
+    // interior verdict at 'spawn' (the collider predated the event); the
+    // tail landing an interior is the same news, announced when it exists
+    if (colliders.get(id)?.interior) bus.emit('entity', { id, kind: 'collider' });
+  }
+  // emissive surfaces become lamp REQUESTS — a request costs nothing until
+  // the rig assigns it a slot, and that is uniform writes
+  attachLamps(obj, `entity:${id}`);
   // mounts that were waiting on this id — as child or carrier
-  for (const mid of mountsTouching(state.st.entities, id)) execMount(mid);
+  for (const mid of mountsTouching(state.st.entities, id, foldChildren)) execMount(mid);
+}
+
+/** Drain within ~4ms, at least one item per frame — registered as the
+ *  'promote-tail' system (main.js, near 'build'). */
+export function drainPromoteTail() {
+  if (!promoteTail.size) return;
+  const t0 = performance.now();
+  for (const [id, obj] of promoteTail) {
+    promoteTail.delete(id);
+    if (entities.get(id) !== obj) continue;   // the guard: same realized object only
+    try { runPromoteTail(id, obj); } catch (e) { report(`promote tail ${id}`, e); }
+    if (performance.now() - t0 >= 4) break;
+  }
 }
 
 function createLight(id, ent) {
@@ -256,13 +415,19 @@ function refreshLight(id, ent) {
 function retire(id) {
   cancelOwner(`entity:${id}`);
   releaseOwner(`entity:${id}`);   // lamp + placed-light requests die with it
+  promoteTail.delete(id);         // a pending heavy tail dies with the id
   const obj = entities.get(id);
   if (obj && !isPlaceholder(obj) && obj.userData?.lib) releaseGLB(obj.userData.lib);
   if (obj) {
     if (obj.userData?.isLight) disposeLight(obj);
     // cargo steps off before the carrier vanishes — at the pose the FOLD
-    // stamped for it, so every joiner and this client agree where it landed
-    for (const [cid, cobj] of entities) {
+    // stamped for it, so every joiner and this client agree where it landed.
+    // The scene index is the same membership the old all-entities walk
+    // filtered for (userData.mountedTo === id), read in O(children).
+    const kids = sceneChildren.get(id);
+    if (kids) for (const cid of [...kids]) {
+      const cobj = entities.get(cid);
+      indexSceneMount(cid, null);
       if (cobj?.userData?.mountedTo !== id) continue;
       scene.attach(cobj);
       delete cobj.userData.mountedTo;
@@ -275,6 +440,7 @@ function retire(id) {
     }
     (obj.parent ?? scene).remove(obj);
   }
+  indexSceneMount(id, null);      // if the retired thing itself rode a carrier
   entities.delete(id);
   entityMeta.delete(id);
   comps.delete(id);
@@ -309,9 +475,8 @@ function onComp(id, type) {
   // socket's arrival is what makes it right (review S5; the relKey includes
   // the resolved socket for exactly this)
   if (type === 'sockets') {
-    for (const [cid, ent] of Object.entries(state.st.entities)) {
-      if (ent.parent?.to === id) execMount(cid);
-    }
+    const kids = foldChildren.get(id);   // same membership as the old full scan
+    if (kids) for (const cid of kids) execMount(cid);
   }
   bus.emit('comp', { id, type, data });
 }
@@ -361,6 +526,7 @@ function execMount(id) {
   if (partNode) partNode.attach(child);
   child.userData.mountedTo = rel.to;
   child.userData.mountRel = relKey;
+  indexSceneMount(id, rel.to);
   // the parent's collider is what the pair collides as while attached
   removeCollider(id);
   bus.emit('mount', { id, to: rel.to, slot: rel.slot });
@@ -372,6 +538,7 @@ function execDismount(id, ent) {
     scene.attach(obj);   // keeps the world transform it had
     delete obj.userData.mountedTo;
     delete obj.userData.mountRel;
+    indexSceneMount(id, null);
     // plane-transition stamp wins over wherever the ride left it
     if (ent?.pos) obj.position.set(...ent.pos);
     if (ent?.yaw != null) obj.rotation.set(0, ent.yaw, 0);
@@ -411,11 +578,15 @@ function syncBodyMounts() {
 const R_BASE = 80;     // meters: promote below R, demote above R + R_HYST
 const R_HYST = 20;     // the band that keeps a walk along the edge quiet
 const DIAG_K = 4;      // big things stay: radius grows with bbox diagonal
+const DIAG_DEFAULT = 12; // assumed bbox diagonal (m) before the geom
+                         // side-channel lands — err LARGE, so a big thing
+                         // near the edge still loads at join (§16.2.C)
 const resStats = { demotes: 0, promotes: 0 };
 
 function residencyRadius(ent) {
   const s = ent?.lib ? libGeom.get(ent.lib)?.bbox?.size : null;
-  return R_BASE + (s ? Math.hypot(s[0] ?? 0, s[1] ?? 0, s[2] ?? 0) * DIAG_K : 0);
+  const diag = s ? Math.hypot(s[0] ?? 0, s[1] ?? 0, s[2] ?? 0) : DIAG_DEFAULT;
+  return R_BASE + diag * DIAG_K;
 }
 // distance is min(camera, avatar): in photo-mode flight the body may stand
 // on something the camera left behind — demoting its floor drops it through
@@ -439,9 +610,14 @@ function canDemote(id, ent) {
   if (!obj || isPlaceholder(obj) || editHolds.has(id)) return false;
   if (!libGeom.get(ent.lib)?.bbox) return false;    // nothing honest to stand in
   // a carrier: children mounted on it would need the cargo step-off, which
-  // is semantically a removal (it re-stamps fold poses) — refuse instead
-  for (const e of Object.values(state.st.entities)) if (e.parent?.to === id) return false;
+  // is semantically a removal (it re-stamps fold poses) — refuse instead.
+  // foldChildren holds exactly the ids the old Object.values scan matched
+  // (state parent.to === id), maintained at the fold-write choke point —
+  // the same predicate, O(1) and allocation-free per candidate (§16.2.C)
+  if (foldChildren.get(id)?.size) return false;
   // a body in its seat: someone is sitting on it, wherever WE are standing
+  // (avatarMounts is rider-keyed and bounded by bodies present, not
+  // entities — the scan stays)
   for (const rel of avatarMounts.values()) if (rel.to === id) return false;
   const bag = state.st.entities[id]?.comp;
   if (bag) {
@@ -449,8 +625,8 @@ function canDemote(id, ent) {
     // (mbase is per-clone; findPart on a box is null). Whole-entity motion
     // is fine — the stand-in carries userData.base and swings honestly.
     if (bag.motion?.part) return false;
-    for (const k of Object.keys(bag)) if (k.startsWith('motion:')) return false;
-    for (const s of Object.values(bag.sockets ?? {})) if (s?.part) return false;
+    for (const k in bag) if (k.startsWith('motion:')) return false;
+    if (bag.sockets) for (const k in bag.sockets) if (bag.sockets[k]?.part) return false;
   }
   return true;   // a live physobj sim self-clears in ~0.45s and kicks are
                  // near-range by nature — distance already excludes them
@@ -459,6 +635,9 @@ function canDemote(id, ent) {
 function demote(id) {
   const ent = state.st.entities[id];
   const obj = entities.get(id);
+  promoteTail.delete(id);   // a demoted stand-in must not inherit the real
+                            // model's collider/lamps — the pending tail dies
+  indexSceneMount(id, null);   // belt: canDemote refuses mounted children
   if (obj.userData?.lib) releaseGLB(obj.userData.lib);
   cancelOwner(`entity:${id}`);
   releaseOwner(`entity:${id}`);          // lamp requests die with the meshes
@@ -492,7 +671,13 @@ function residencySweep() {
     const d = entDist(ent);
     if (obj && !isPlaceholder(obj) && d > R + R_HYST) {
       if (canDemote(id, ent)) demote(id);
-    } else if (isPlaceholder(obj) && d < R && !t.loading
+    // BOTH stand-in shapes promote by distance: the join gate leaves far
+    // entities as bare null reservations (no geom yet, or a geom-less lib
+    // that never grows a placeholder) — if only placeholders promoted, a
+    // `place` that moves one near before geom arrives would never load
+    // (§16.2.C). The invariant: within its radius an entity eventually
+    // loads; beyond it, it never fetches a byte.
+    } else if ((obj === null || isPlaceholder(obj)) && d < R && !t.loading
       && (!t.failedAt || now - t.failedAt > 30000)) {
       resStats.promotes++;
       t.gen = nextGen++;                 // stale in-flight completions no-op
@@ -502,15 +687,17 @@ function residencySweep() {
 }
 
 export const residencyDebug = () => {
-  let real = 0, standins = 0, loading = 0;
+  let real = 0, standins = 0, loading = 0, waiting = 0;
   for (const [id, t] of tracked) {
     if (t.kind !== 'model') continue;
     const obj = entities.get(id);
-    if (obj === null) loading++;
+    // a bare reservation is only "loading" while a job is actually in
+    // flight — the join gate leaves far entities unscheduled ("waiting")
+    if (obj === null) (t.loading ? loading++ : waiting++);
     else if (isPlaceholder(obj)) standins++;
     else if (obj) real++;
   }
-  return { real, standins, loading, ...resStats, rBase: R_BASE, rHyst: R_HYST };
+  return { real, standins, loading, waiting, ...resStats, rBase: R_BASE, rHyst: R_HYST };
 };
 
 // ---- reconcile + dispatch ---------------------------------------------------
@@ -554,6 +741,11 @@ export function reconcileModels() {
 function onEntry(entry) {
   const { verb, args = {} } = entry;
   try {
+    // the fold has already written state — refresh the parent index BEFORE
+    // any handler runs (retire's step-out reads the SCENE index; canDemote,
+    // mountsTouching and the sockets re-seat read this one)
+    if (verb === 'spawn' || verb === 'light' || verb === 'remove'
+      || verb === 'mount' || verb === 'dismount') refoldParents(verb, args.id);
     switch (verb) {
       case 'spawn':
       case 'light':
@@ -598,12 +790,20 @@ export function initModelsRealizer() {
   // plenty — a person covers ~3m between beats at a run
   setInterval(residencySweep, 500);
   onWorldChange((ev) => {
-    if (ev.type === 'hydrated') reconcileModels();
-    else if (ev.type === 'reset') {
+    if (ev.type === 'hydrated') {
+      // the snapshot's entities carry folded parent records (#71/#79: the
+      // late joiner sees every folded mount) — index them BEFORE the
+      // reconcile pass whose promotes will consult mountsTouching
+      rebuildFoldIndex();
+      reconcileModels();
+    } else if (ev.type === 'reset') {
       // a real teardown, not just bookkeeping: leaving the scene populated
       // while tracked empties means the next hydrate re-creates every id ON
       // TOP of its orphaned twin (review S4 — world switch without reload)
       for (const id of [...tracked.keys()]) retire(id);
+      rebuildFoldIndex();          // state is empty — so is the index
+      sceneChildren.clear();
+      sceneParentOf.clear();
     } else if (ev.type === 'entry' && PORTED.has(ev.entry.verb)) onEntry(ev.entry);
   });
   return true;

@@ -12,7 +12,7 @@
 // is, by the same data, sittable and placeable-on. Nobody authors that.
 
 import { THREE } from './core.js';
-import { MeshBVH } from 'three-mesh-bvh';
+import { MeshBVH, estimateMemoryInBytes } from 'three-mesh-bvh';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 
 const UP = new THREE.Vector3(0, 1, 0);
@@ -44,6 +44,67 @@ function buildExact(obj) {
   });
   if (!geoms.length) return null;
   return { bvh: new MeshBVH(mergeGeometries(geoms, false)) };
+}
+
+// ---- per-lib shared derivations (§16.2.C) ------------------------------------
+// buildExact and topLie already work in the entity's ROOT-LOCAL frame: every
+// mesh is transformed by inv(root.matrixWorld) · mesh.matrixWorld, which folds
+// the root's position/yaw/scale OUT of the product, and every query path
+// (raySegment, resolveColliders, surfaceUnder, hasFloor) transforms INTO that
+// frame per entity (subtract position, un-rotate yaw, divide by live scale).
+// So the merged geometry, the BVH, the lie scalar and the hasFloor verdict are
+// IDENTICAL for every clone of a lib at ANY uniform scale — 20 blankets used
+// to pay 20 per-vertex topLie walks and 20 BVH builds for one answer. The key
+// is the lib path alone; scale needs no place in it because the product is
+// scale-free (per-entity decisions apply `s` at use, as they always did).
+//
+// Sharing is only SOUND for a pristine clone. models.js passes `lib` exactly
+// when the subtree is the untouched lib clone (promote time, before mounts
+// execute, no part motion having bent a named node); every other path — the
+// dismount/step-out re-fits, refit flips on already-lived objects, conjured
+// meshes with no lib — keeps the per-entity build. Cache WRITES happen only
+// from those pristine fits; refit-time cache READS are safe (the product is
+// rest-pose lib geometry, which is what promote-time fits always baked).
+//
+// Everything here is CPU heap (geometry arrays + BVH nodes, nothing ever
+// uploaded) — refcounted by the collider entries wearing it, dropped for GC
+// at zero refs (demote/delete releases). Sizes: colliderCacheStats (8e).
+const libCache = new Map(); // lib -> { refs, lie?, exact?: {bvh, interior} }
+
+/** CPU bytes and refcounts per cached lib — the 8e observability hook. */
+export const colliderCacheStats = () => {
+  const libs = [];
+  let bytes = 0;
+  for (const [lib, c] of libCache) {
+    let b = 0;
+    if (c.exact) { try { b = estimateMemoryInBytes(c.exact.bvh); } catch { /* debug util, best-effort */ } }
+    bytes += b;
+    libs.push({ lib, refs: c.refs, exact: !!c.exact, lie: c.lie ?? null, bytes: b });
+  }
+  return { libs, bytes };
+};
+
+const _lbInv = new THREE.Matrix4();
+const _lbRel = new THREE.Matrix4();
+const _lbBox = new THREE.Box3();
+/** The entity-root-local bounding box — setFromObject's answer at identity,
+ *  computable at ANY current transform (inv(root) folds the pose back out).
+ *  The promote tail fits colliders AFTER the spawn transform lands, and every
+ *  consumer treats `box` as root-local (subtract position, un-rotate, divide
+ *  by scale per query), so the box must not inherit the world pose. */
+function localBox(obj) {
+  obj.updateMatrixWorld(true);
+  _lbInv.copy(obj.matrixWorld).invert();
+  const box = new THREE.Box3();
+  obj.traverse((o) => {
+    const g = o.geometry;
+    if (!g) return;
+    if (g.boundingBox === null) g.computeBoundingBox();
+    if (!g.boundingBox || g.boundingBox.isEmpty()) return;
+    _lbBox.copy(g.boundingBox).applyMatrix4(_lbRel.multiplyMatrices(_lbInv, o.matrixWorld));
+    box.union(_lbBox);
+  });
+  return box;
 }
 
 // ---- spatial hash -----------------------------------------------------------
@@ -159,7 +220,9 @@ function topLie(obj, box) {
   return box.max.y - (tops.length % 2 ? tops[h] : (tops[h - 1] + tops[h]) / 2);
 }
 
-function decide(entry, s) {
+/** `fresh` marks a pristine-clone fit (see the lib-cache header): only those
+ *  may WRITE the shared derivations; refits and step-out re-fits read only. */
+function decide(entry, s, fresh = false) {
   const { box, pref } = entry;
   // SIZE decides walkability — with one exception below.
   //
@@ -189,26 +252,61 @@ function decide(entry, s) {
   // blanket), five hovercars, a shark. If those should firm up too, this is
   // the one line to move.
   const floorShaped = !roomScale && w * d >= 2 && h <= 1.0;
-  const uneven = floorShaped && (entry.lie ??= topLie(entry.obj, box)) * s > 0.10;
+  const shared = entry.lib ? libCache.get(entry.lib) : null;
+  // the lie is local-space and scale-free (the gate applies `s` below), so
+  // one per-vertex walk per LIB answers for every clone; same laziness as
+  // before — nothing pays for the probe unless the shape gate consults it
+  if (floorShaped && entry.lie == null) {
+    if (shared && shared.lie != null) entry.lie = shared.lie;
+    else {
+      entry.lie = topLie(entry.obj, box);
+      if (shared && fresh) shared.lie = entry.lie;
+    }
+  }
+  const uneven = floorShaped && (entry.lie ?? 0) * s > 0.10;
   const exact = pref === 'exact' ? true : pref === 'box' ? false : (roomScale || uneven);
-  if (exact && !entry.exact) entry.exact = buildExact(entry.obj);
+  if (exact && !entry.exact) {
+    if (shared?.exact) entry.exact = shared.exact;
+    else {
+      const built = buildExact(entry.obj);
+      if (built) {
+        // hasFloor reads only the local bvh + local box (its `s` is unused):
+        // the verdict rides the shared product instead of re-raycasting 16
+        // times per clone — same inputs, same boolean, computed once
+        built.interior = hasFloor(built.bvh, box, s);
+        if (shared && fresh) shared.exact = built;
+      }
+      entry.exact = built;
+    }
+  }
   if (!exact) entry.exact = null;         // small/solid: use pillar/box, no trimesh
   entry.pillar = !entry.exact && (box.max.y - box.min.y) * s > 2.4;
   // Clearing is a SEPARATE question from collision: a palm is now exact (you
   // walk under the fronds and bump the trunk, which is right), but stamping its
   // canopy footprint into the grass mask would leave a bald ring under every
   // tree. Only things with a real floor suppress the meadow.
-  entry.interior = entry.exact ? hasFloor(entry.exact.bvh, box, s) : false;
+  entry.interior = entry.exact ? entry.exact.interior : false;
 }
 
-export function fitCollider(id, obj, { collide, scale = 1 } = {}) {
-  const box = new THREE.Box3().setFromObject(obj); // obj still at identity here
+/** `lib` opts in to the per-lib shared derivations — pass it ONLY for a
+ *  pristine clone (see the lib-cache header; models.js's promote tail is the
+ *  one caller). `localFrame` computes the box in the root-local frame at any
+ *  current transform — required when fitting after the spawn transform landed
+ *  (the promote tail); legacy callers fit at identity and keep setFromObject. */
+export function fitCollider(id, obj, { collide, scale = 1, lib = null, localFrame = false } = {}) {
+  const box = localFrame ? localBox(obj) : new THREE.Box3().setFromObject(obj);
   if (box.isEmpty()) return;
+  removeCollider(id);   // a re-fit REPLACES: drop the old entry's bucket cells + lib ref
   // camGhost hoisted from userData so the camera query never touches the
   // object graph (the flag lives on roots: gizmos, placeholders)
   const entry = { obj, box, pref: collide, pillar: false, exact: null, cells: [],
-    camGhost: !!obj.userData?.noCamCollide };
-  decide(entry, scale);
+    camGhost: !!obj.userData?.noCamCollide, lib };
+  if (lib) {
+    const c = libCache.get(lib) ?? { refs: 0 };
+    c.refs++;
+    libCache.set(lib, c);
+  }
+  decide(entry, scale, Boolean(lib));
   colliders.set(id, entry);
   bucketAdd(id, entry);
 }
@@ -254,7 +352,15 @@ export function refitCollider(id) {
 }
 export function removeCollider(id) {
   const e = colliders.get(id);
-  if (e) bucketRemove(id, e);
+  if (e) {
+    bucketRemove(id, e);
+    if (e.lib) {
+      const c = libCache.get(e.lib);
+      // zero refs: no resident entity wears this lib's derivations — drop
+      // the CPU-side geometry + BVH for GC (demote/delete land here)
+      if (c && --c.refs <= 0) libCache.delete(e.lib);
+    }
+  }
   colliders.delete(id);
 }
 /** Call after moving an entity so its bucket registration follows it. */
@@ -581,4 +687,5 @@ export function surfaceUnder(x, z, terrainAt, maxY = Infinity, skipId = null) {
 export function clearColliders() {
   colliders.clear();
   buckets.clear();
+  libCache.clear();
 }

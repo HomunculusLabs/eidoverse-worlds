@@ -14,7 +14,7 @@ import { contributeThumbnail, makeAvatar, EMOTE_ORDER } from './lib/avatar.js';
 import { updateSky, updateAutoSystems, skyArgs } from './lib/sky.js';
 import { setSkyArgsSource, entities, buildsPending, avatarMounts } from './lib/world.js';
 import { foldParity } from './lib/parity.js';
-import { initModelsRealizer, reconcileModels, residencyDebug, setResidencyFocus } from './lib/realize/models.js';
+import { initModelsRealizer, reconcileModels, residencyDebug, setResidencyFocus, drainPromoteTail } from './lib/realize/models.js';
 import { initEnvironmentRealizer } from './lib/realize/environment.js';
 import { initSocialRealizer } from './lib/realize/social.js';
 import { initCauses } from './lib/realize/causes.js';
@@ -341,6 +341,10 @@ registerSystem('mods', (dt, t, now) => tickMods(dt, now));       // 🧩 runtime
 registerSystem('remotes', (dt, t, now) => updateRemotes(dt, now));
 registerSystem('gaze', (dt, t, now) => updateGaze(myState.pos, getMe(), CONFIG.name, now));
 registerSystem('build', () => updateBuild());
+registerSystem('promote-tail', () => drainPromoteTail());        // §16.2.C: promote
+                                 // boulders (colliders/lamps/casters/mount
+                                 // re-checks) land ≤~4ms/frame, not six in one;
+                                 // before 'debug' so F3 sees same-frame colliders
 registerSystem('debug', (dt, t, now) => updateDebug(now));       // F3 wireframes
 registerSystem('send-pose', (dt, t, now) => sendPose(now));
 registerSystem('render', () => renderer.render(scene, camera));

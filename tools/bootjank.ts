@@ -2,6 +2,9 @@
 //
 //   bun tools/bootjank.ts                     # replay worlds/commons in a scratch
 //                                             #   sequencer, record 40s of frames
+//   bun tools/bootjank.ts --wide              # author a far-city world instead:
+//                                             #   near models + models at 300-500m,
+//                                             #   ASSERT the far libs never fetch
 //   bun tools/bootjank.ts --mbit 25           # throttled arrivals (spread storm)
 //   bun tools/bootjank.ts --secs 60           # longer observation window
 //   bun tools/bootjank.ts --headed --console  # watch it happen
@@ -34,7 +37,8 @@ const num = (n: string, d: number) => {
 const HEADED = has("headed");
 const ECHO = has("console");
 const MBIT = num("mbit", 0);
-const SECS = num("secs", 40);
+const WIDE = has("wide");
+const SECS = num("secs", WIDE ? 25 : 40);
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const EIDOVERSE_DIR = process.env.EIDOVERSE_DIR ?? join(ROOT, "..", "eidoverse-video");
@@ -50,9 +54,26 @@ if (!existsSync(join(EIDOVERSE_DIR, "eidoverse", "assets"))) {
   console.error(`✗ asset library not found at ${EIDOVERSE_DIR}`); process.exit(2);
 }
 if (!existsSync(CHROME)) { console.error(`✗ no browser at ${CHROME}`); process.exit(2); }
-if (!existsSync(join(ROOT, "worlds", "commons", "log.jsonl"))) {
+if (!WIDE && !existsSync(join(ROOT, "worlds", "commons", "log.jsonl"))) {
   console.error("✗ worlds/commons/log.jsonl not found — bootjank replays the real commons"); process.exit(2);
 }
+
+// --wide: the libs an arrival should and should NOT fetch. Distinct sets, so
+// the network log is an unambiguous witness (§16.2.C: far entities never
+// load at join — the join gate works from position, geom or no geom).
+const NEAR_LIBS = [
+  "eidoverse/assets/models/scifi_art_deco_office_desk.glb",
+  "eidoverse/assets/models/streetlight_lamp_light_street_blade_runner_cyberpunk.glb",
+  "eidoverse/assets/models/scifi_barrels_group_of_four.glb",
+];
+const FAR_LIBS = [
+  "eidoverse/assets/models/crate_large_blue.glb",
+  "eidoverse/assets/models/crate_large_green.glb",
+  "eidoverse/assets/models/crate_large_red.glb",
+  "eidoverse/assets/models/crate_large_yellow.glb",
+  "eidoverse/assets/models/scifi_barrels_single.glb",
+  "eidoverse/assets/models/modern_sedan_car_grey_vehicle_generic.glb",
+];
 
 function freePort(from: number, tries = 40): number {
   for (let p = from; p < from + tries; p++) {
@@ -100,9 +121,10 @@ async function die(code: number, ...lines: string[]) {
 
 const WORLDS = join(SCRATCH, "worlds");
 mkdirSync(WORLDS, { recursive: true });
-cpSync(join(ROOT, "worlds", "commons"), join(WORLDS, "commons"), { recursive: true });
+if (!WIDE) cpSync(join(ROOT, "worlds", "commons"), join(WORLDS, "commons"), { recursive: true });
+const WORLD = WIDE ? `wide-${Math.random().toString(36).slice(2, 7)}` : "commons";
 
-console.log(`\n${bold("bootjank")} — commons replica on :${PORT}${MBIT ? ` at ${MBIT}mbit` : ""}, ${SECS}s window`);
+console.log(`\n${bold("bootjank")} — ${WIDE ? "far-city world" : "commons replica"} on :${PORT}${MBIT ? ` at ${MBIT}mbit` : ""}, ${SECS}s window`);
 seq = Bun.spawn([process.execPath, join(ROOT, "server", "server.ts")], {
   cwd: ROOT,
   env: { ...process.env, PORT: String(PORT), JOIN_TOKEN: "", EIDOVERSE_DIR, WORLDS_DIR: WORLDS },
@@ -115,6 +137,37 @@ seq = Bun.spawn([process.execPath, join(ROOT, "server", "server.ts")], {
     try { up = (await fetch(`${BASE}/avatars`)).ok; } catch { await sleep(250); }
   }
   if (!up) await die(2, `✗ sequencer never came up on :${PORT}`);
+}
+
+// ---- --wide: author the far city (driver socket, lightbench's pattern) ------
+if (WIDE) {
+  const verbs: Array<[string, unknown]> = [
+    ["terrain", { seed: 7, size: 1200, segments: 200, amplitude: 6, flatRadius: 16 }],
+    ["sky", { clouds: "clear", hours: 12, azimuth: 180 }],
+    ...NEAR_LIBS.map((lib, i): [string, unknown] =>
+      ["spawn", { id: `near${i}`, lib, pos: [3 + i * 3, 0, -8 - i * 2], yaw: 0 }]),
+    ...FAR_LIBS.map((lib, i): [string, unknown] =>
+      ["spawn", { id: `far${i}`, lib, pos: [300 + i * 40, 0, 300 + i * 40], yaw: 0 }]),
+  ];
+  await new Promise<void>((resolve, reject) => {
+    const dws = new WebSocket(`ws://127.0.0.1:${PORT}/ws`);
+    dws.onopen = () => dws.send(JSON.stringify({ type: "join", world: WORLD, id: "widedriver", token: "" }));
+    dws.onmessage = async (ev) => {
+      const m = JSON.parse(String(ev.data));
+      if (m.type === "snapshot") {
+        for (const [verb, args] of verbs) {
+          dws.send(JSON.stringify({ type: "verb", verb, args }));
+          await sleep(150);
+        }
+        await sleep(400);
+        try { dws.close(); } catch { /* fine */ }
+        resolve();
+      }
+      if (m.type === "error") reject(new Error(`driver refused: ${m.error}`));
+    };
+    dws.onerror = () => reject(new Error("driver socket failed"));
+    setTimeout(() => reject(new Error("driver never got a snapshot")), 15_000);
+  }).catch((e) => die(2, `✗ wide-world authoring failed: ${e.message}`));
 }
 
 // ---- browser ----------------------------------------------------------------
@@ -266,7 +319,7 @@ await cdp.send("Page.addScriptToEvaluateOnNewDocument", { source: RECORDER });
 // ---- run --------------------------------------------------------------------
 
 const t0 = Date.now();
-await cdp.send("Page.navigate", { url: `${BASE}/?name=jankbot&world=commons` });
+await cdp.send("Page.navigate", { url: `${BASE}/?name=jankbot&world=${WORLD}` });
 for (let i = 0; i < 240 && !bootReady; i++) await sleep(250);
 if (!bootReady) await die(2, "✗ client never booted", ...pageErrors.slice(0, 5));
 console.log(`  ${dim(bootReady)}`);
@@ -397,6 +450,29 @@ if (data.ew?.residency) {
   console.log(`\n${bold("── residency at end")}  real=${r.real} standins=${r.standins} promotes=${r.promotes} demotes=${r.demotes}`);
 }
 
+// ---- --wide verdict: the join gate's network witness ------------------------
+let wideFailed = 0;
+if (WIDE) {
+  console.log(`\n${bold("── far-city gate")}`);
+  const fetched = new Set(resources.map((r) => r.name.split("?")[0]));
+  const base = (lib: string) => lib.split("/").at(-1)!.slice(0, 60);
+  for (const lib of FAR_LIBS) {
+    const hit = fetched.has(base(lib));
+    if (hit) wideFailed++;
+    console.log(`  ${hit ? "\x1b[31m✗ FETCHED\x1b[0m" : "\x1b[32m✓ never fetched\x1b[0m"}  ${base(lib)}`);
+  }
+  for (const lib of NEAR_LIBS) {
+    const hit = fetched.has(base(lib));
+    if (!hit) wideFailed++;
+    console.log(`  ${hit ? "\x1b[32m✓ loaded\x1b[0m" : "\x1b[31m✗ NEVER LOADED\x1b[0m"}  ${base(lib)} ${dim("(near)")}`);
+  }
+  const r = data.ew?.residency;
+  const standinsOk = (r?.standins ?? 0) + (r?.loading ?? 0) >= FAR_LIBS.length;
+  if (!standinsOk) wideFailed++;
+  console.log(`  ${standinsOk ? "\x1b[32m✓\x1b[0m" : "\x1b[31m✗\x1b[0m"} far entities are stand-ins/unloaded, not absent  ${dim(`real=${r?.real} standins=${r?.standins} loading=${r?.loading}`)}`);
+  console.log(`\n${wideFailed === 0 ? "\x1b[32mPASS\x1b[0m" : "\x1b[31mFAIL\x1b[0m"} — far-city gate`);
+}
+
 const knownBenign = (l: string) => l.includes("favicon") || l.includes("Autoplay");
 const realErrors = pageErrors.filter((l) => !knownBenign(l));
 if (realErrors.length) {
@@ -406,4 +482,4 @@ if (realErrors.length) {
 
 console.log("");
 await cleanup();
-process.exit(0);
+process.exit(wideFailed ? 1 : 0);

@@ -390,6 +390,39 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — 8c LANDED: the join gate works, promotes drip, colliders
+  share.** (1) createModel gates on POSITION unconditionally —
+  residencyRadius falls back to DIAG_DEFAULT=12 (gate at 128m) until geom
+  lands; the sweep now promotes bare null reservations too, not just
+  placeholders (found live: a `place` moving a far entity near pre-geom
+  would never have loaded). bootjank --wide (new fixture: 3 near + 6 far
+  spawns at 300-500m, distinct libs) is the network witness — pre-8c it
+  failed 6/6 FETCHED with demotes=6; now 6/6 never fetched, demotes=0.
+  (2) realizeModel split: the visible half stays synchronous (step-out,
+  scene.add, comp events); the heavy tail (fitCollider, attachLamps,
+  registerCaster, mount re-execution) drains ≤4ms/frame through a new
+  'promote-tail' frame system (after 'build'), identity-guarded, cancelled
+  by demote/retire. A mount landing in the gap skips the child's collider
+  (execMount law); the tail emits {kind:'collider'} so the grass clearing
+  mask still learns interiors. (3) colliders.js per-lib cache — the brief
+  assumed buildExact was world-baked; IT WAS ALREADY LOCAL (inv(root) folds
+  the pose out), so the key is lib alone (scale-free product) and zero
+  query paths changed. Shared: merged geometry+BVH, the topLie scalar, the
+  hasFloor verdict. Writes only from pristine-clone fits (no glued riders,
+  no part motions — shareableLib); step-out re-fits stay per-entity;
+  refcounted, dropped at zero. colliderCacheStats() exported for 8e.
+  Incidental fix: re-fits now clear stale bucket cells. (4) Two mount
+  indices (fold-truth by parent.to at one choke point; scene-truth by
+  userData.mountedTo at its write sites — a remove folds children's parent
+  records away before retire runs, so scene truth is all step-out has) —
+  the two O(N)-per-promote scans and canDemote's carrier scan are now
+  O(children). parseAsync skipped (promisified same-thread parse — zero
+  win). Gate: collider-test 34/34, models-field 12/12, flora 42/42,
+  bootjank --wide PASS, bootjank commons (worst 400ms, everything after
+  t=2s ≤50ms), lightbench 19/19, paritybench PASS. Known transient
+  (flagged by the executing agent): a parity read in the 1-2 frame tail
+  window of a promoted CARRIER could see mount-pose drift — no current
+  bench samples that window. Remaining: the t≈1s parse/upload burst (8d).
 - **2026-08-10 — 8b LANDED: the warm conductor.** client/lib/warmqueue.js:
   every pipeline warm rides one serialized queue with priority classes —
   P_GATE (terrain) > P_MODEL (GLBs, the avatar body) > P_AMBIENT (sky

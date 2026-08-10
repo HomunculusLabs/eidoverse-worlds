@@ -69,7 +69,17 @@ export function bandForDistance(d) {
  *  single pending list, there is no pendingMounts map to maintain: a mount
  *  that cannot execute yet simply stays visible in the fold until both ends
  *  are live. */
-export function mountsTouching(stEntities, touchedId) {
+export function mountsTouching(stEntities, touchedId, childrenOf = null) {
+  // `childrenOf` (parent id -> Set of child ids, the hosted half's
+  // fold-parent index, §16.2.C) answers the carrier direction in
+  // O(children) instead of O(world); membership is identical to the scan
+  // below by construction (the index is maintained on every parent write).
+  if (childrenOf) {
+    const out = stEntities[touchedId]?.parent ? [touchedId] : [];
+    const kids = childrenOf.get(touchedId);
+    if (kids) for (const cid of kids) out.push(cid);
+    return out;
+  }
   const out = [];
   for (const [id, ent] of Object.entries(stEntities)) {
     if (!ent.parent) continue;
