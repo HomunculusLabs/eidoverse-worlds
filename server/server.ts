@@ -994,6 +994,9 @@ for (const sig of ["SIGINT", "SIGTERM"] as const) {
         if (!c.spectator && !c.superseded && c.lastPose) w.rememberPose(c.id, c.lastPose);
       }
       if (w.entries.length) w.fold("shutdown");
+      // fold only runs on a non-empty tail — a world whose batch is armed
+      // but whose tail was just folded still owes the file its last lines
+      try { w.flushLog(); } catch (err) { console.error(`[world:${w.name}] shutdown flush failed`, err); }
     }
     process.exit(0);
   });

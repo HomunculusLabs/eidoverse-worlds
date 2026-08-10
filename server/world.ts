@@ -137,6 +137,12 @@ export class WorldLog {
     if (seq < 0) return;
     const payload = JSON.stringify({ v: 1, seq, bytes, ts: Date.now(), state: this.state });
     try {
+      // the snapshot's `bytes` is a promise about the FILE — the batch must
+      // land first, or the recorded offset points past bytes that aren't
+      // there and the next boot discards the snapshot (§15.1's one hard
+      // async-append constraint). A flush failure aborts the fold: state
+      // stays unfolded, retried on the next threshold, honestly.
+      this.flushLog();
       writeFileSync(this.snapPath + ".tmp", payload);
       renameSync(this.snapPath + ".tmp", this.snapPath);
       this.snapSeq = seq;
@@ -154,6 +160,8 @@ export class WorldLog {
    *  never destruction — and zero the in-memory log. The facade owns the
    *  other half (behavior teardown + the fresh genesis). */
   reset(): string {
+    this.flushLog();   // pending lines belong to the OLD log — they must be
+                       // in the file before it is renamed into the archive
     const dir = join(WORLDS_DIR, this.name);
     const arch = join(dir, `erased-${new Date().toISOString().replace(/[:.]/g, "-")}`);
     mkdirSync(arch, { recursive: true });
@@ -187,9 +195,11 @@ export class WorldLog {
       const e = this.entries[i];
       if (want(e)) { out.push(e); seen.add(e.seq); }
     }
-    // older than what is in memory — go to the file
+    // older than what is in memory — go to the file (flushed first, so a
+    // page can never miss an entry the memory tail has already dropped)
     const oldestInMemory = this.entries.length ? this.entries[0].seq : Infinity;
     if (out.length < limit && before > 0 && oldestInMemory > 0 && existsSync(this.logPath)) {
+      this.flushLog();
       const lines = readFileSync(this.logPath, "utf8").split("\n");
       for (let i = lines.length - 1; i >= 0 && out.length < limit; i--) {
         const line = lines[i];
@@ -225,11 +235,49 @@ export class WorldLog {
     const entry: LogEntry = { seq, ts: Date.now(), actor, verb, args };
     this.entries.push(entry);
     const line = JSON.stringify(entry) + "\n";
-    appendFileSync(this.logPath, line);
+    // Batched, not per-entry (§15.1, 7d): seq, the memory tail, logBytes
+    // accounting, and the live fold stay SYNCHRONOUS — every reader of
+    // world state sees the entry immediately — while the byte hits disk on
+    // the next macrotask, so a verb, its reaction, and its behavior emits
+    // coalesce into one write instead of three syscalls in the ws handler.
+    // Durability is unchanged in kind: the old per-entry appendFileSync
+    // promised page cache, never the platter (no fsync existed); this
+    // promises the same, one tick later, and every point that makes a
+    // claim about the FILE (fold's byte offset, fork's copy, reset's
+    // archive, readHistory's scan, shutdown) flushes first.
+    this.pending.push(line);
     this.logBytes += Buffer.byteLength(line);
+    if (!this.flushArmed) {
+      this.flushArmed = true;
+      setTimeout(() => {
+        this.flushArmed = false;
+        try { this.flushLog(); } catch (err) {
+          // pending is retained — the next flush point retries; house rule 3
+          console.error(`[world:${this.name}] log flush failed`, err);
+        }
+      }, 0);
+    }
     foldEntry(this.state, entry);
     if (++this.dirtySinceFold >= FOLD_EVERY) this.fold();
     return entry;
+  }
+
+  private pending: string[] = [];
+  private flushArmed = false;
+
+  /** Drain the write batch — one appendFileSync per batch. Called by the
+   *  timer, and synchronously by everything that reads or repositions the
+   *  file (fold, fork, reset, readHistory's file leg, shutdown). */
+  flushLog() {
+    if (!this.pending.length) return;
+    const chunk = this.pending.join("");
+    this.pending = [];
+    try {
+      appendFileSync(this.logPath, chunk);
+    } catch (err) {
+      this.pending.unshift(chunk);   // nothing lost — retried at the next point
+      throw err;
+    }
   }
 }
 
@@ -346,6 +394,7 @@ export class World {
     this.session.settleLease(id, final);
   }
   fold(reason = "threshold") { this.log.fold(reason); }
+  flushLog() { this.log.flushLog(); }
   readHistory(opts: { before?: number; after?: number; limit?: number; verbs?: Set<string> | null }) {
     return this.log.readHistory(opts);
   }
@@ -398,6 +447,7 @@ export function forkWorld(src: World, to: string): { ok: true; world: World } | 
   if (worlds.has(to) || existsSync(destDir)) return { ok: false, err: `world "${to}" already exists` };
   const srcDir = join(WORLDS_DIR, src.name);
   if (!existsSync(join(srcDir, "log.jsonl"))) return { ok: false, err: `"${src.name}" has no history to copy yet` };
+  src.flushLog();   // the copy is a claim about the FILE — the batch lands first
   mkdirSync(destDir, { recursive: true });
   for (const f of ["log.jsonl", "snapshot.json", "poses.json"]) {
     const p = join(srcDir, f);
