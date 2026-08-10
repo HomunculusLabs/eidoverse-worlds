@@ -9,7 +9,7 @@
 //   flora_args.js  — legacy makeGrass-bag mapping + preset/variety strokes
 //   flora_field.js — field composition + retirement lifecycle
 // Both are covered by tools/flora.test.ts.
-import { THREE, TSL, bus } from './core.js';
+import { THREE, TSL, bus, camera } from './core.js';
 import { primeFiles } from './assets.js';
 import { colliders } from './colliders.js';
 import { myState } from './controller.js';
@@ -205,6 +205,124 @@ function wireFieldCulling(field) {
   }
 }
 
+// ---- tiling (§13.2 G2) -----------------------------------------------------
+// One monolithic InstancedMesh can never cull a blade behind you and pays
+// full fragment cost regardless of view. So a big stroke is re-cut into XZ
+// tiles AFTER the density shuffle: K geometries SHARING the vertex/index/aH
+// attribute objects (the backend keys GPU buffers on the attribute object —
+// uploaded once) with sliced copies of only the three instanced attributes
+// (~44 bytes/instance), K meshes sharing the ONE material (wind, clearing
+// mask, and the factory wrap are all material- or name-bound). Each tile
+// carries its own world sphere → three's frustum culling finally works —
+// and per-tile `count` becomes distance density for free, because bucketing
+// in stable order preserves the shuffle: any prefix of a tile is still a
+// uniform random subset of its plants.
+
+const TILE_MIN_INSTANCES = 2000;   // shrubs/yucca are hundreds — stay whole
+const TILE_SIZE = 12;              // meters per tile edge, roughly
+const GRASS_NEAR = 30;             // full density inside this
+const GRASS_FAR = 140;             // invisible beyond this
+const _tv = new THREE.Vector3();
+
+function tileField(f) {
+  // the shrub archetype pairs a stem mesh sharing backing arrays — skip it
+  if (f.stemMesh || (f.count ?? 0) < TILE_MIN_INSTANCES) return false;
+  const src = f.mesh.geometry;
+  const names = ['aPosRot', 'aScaleVar', 'aPhase'];
+  const inst = names.map((n) => src.getAttribute(n));
+  if (inst.some((a) => !a)) return false;
+  const posRot = inst[0], scaleVar = inst[1];
+  const n = f.count;
+  let minX = Infinity, maxX = -Infinity, minZ = Infinity, maxZ = -Infinity, maxScale = 1;
+  for (let i = 0; i < n; i++) {
+    const x = posRot.getX(i), z = posRot.getZ(i);
+    if (x < minX) minX = x; if (x > maxX) maxX = x;
+    if (z < minZ) minZ = z; if (z > maxZ) maxZ = z;
+    const s = scaleVar.getY(i);
+    if (s > maxScale) maxScale = s;
+  }
+  const nx = Math.max(1, Math.round((maxX - minX) / TILE_SIZE));
+  const nz = Math.max(1, Math.round((maxZ - minZ) / TILE_SIZE));
+  if (nx * nz < 4) return false;     // culling can't win on a postage stamp
+  const spanX = (maxX - minX) || 1, spanZ = (maxZ - minZ) || 1;
+  const buckets = Array.from({ length: nx * nz }, () => []);
+  for (let i = 0; i < n; i++) {      // STABLE scan — preserves the shuffle
+    const tx = Math.min(nx - 1, Math.floor((posRot.getX(i) - minX) / spanX * nx));
+    const tz = Math.min(nz - 1, Math.floor((posRot.getZ(i) - minZ) / spanZ * nz));
+    buckets[tz * nx + tx].push(i);
+  }
+  src.computeBoundingBox();          // per-plant LOCAL bounds (tiny)
+  const plantH = Math.max(0.5, src.boundingBox.max.y - Math.min(0, src.boundingBox.min.y));
+  const pad = plantH * maxScale + 0.6;   // tallest plant + the wind/push lean ceiling
+  const container = new THREE.Group();
+  container.userData = { ...f.mesh.userData };
+  const tiles = [];
+  const m4 = new THREE.Matrix4();
+  for (const idx of buckets) {
+    if (!idx.length) continue;
+    const tg = new THREE.BufferGeometry();
+    tg.setIndex(src.getIndex());
+    for (const name of ['position', 'normal', 'uv', 'aH']) {
+      const a = src.getAttribute(name);
+      if (a) tg.setAttribute(name, a);   // SHARED objects — one GPU upload
+    }
+    const box = new THREE.Box3();
+    names.forEach((name, j) => {
+      const a = inst[j], sz = a.itemSize;
+      const arr = new a.array.constructor(idx.length * sz);
+      for (let k = 0; k < idx.length; k++) {
+        for (let c = 0; c < sz; c++) arr[k * sz + c] = a.array[idx[k] * sz + c];
+      }
+      tg.setAttribute(name, new THREE.InstancedBufferAttribute(arr, sz));
+    });
+    for (const i of idx) box.expandByPoint(_tv.set(posRot.getX(i), posRot.getY(i), posRot.getZ(i)));
+    box.expandByScalar(pad);
+    const tm = new THREE.InstancedMesh(tg, f.mesh.material, idx.length);
+    for (let k = 0; k < idx.length; k++) tm.setMatrixAt(k, m4.identity());   // the engine's identity contract
+    tm.boundingSphere = box.getBoundingSphere(new THREE.Sphere());
+    tm.frustumCulled = true;
+    Object.assign(tm.userData, f.mesh.userData);   // noWalkable/noSupportCheck/…
+    tm.castShadow = false;
+    tm.receiveShadow = f.mesh.receiveShadow;
+    tm.userData.fullCount = idx.length;
+    container.add(tm);
+    tiles.push(tm);
+  }
+  // the container answers for the stroke: #74's applied-truth reads .count
+  Object.defineProperty(container, 'count', {
+    get: () => tiles.reduce((s, t) => s + (t.visible ? t.count : 0), 0),
+  });
+  const origDispose = f.dispose;
+  f.mesh = container;
+  f.tiled = true;
+  f.tiles = tiles;
+  let eff = 1;
+  const applyTiles = () => {
+    for (const t of tiles) {
+      const d = _tv.copy(t.boundingSphere.center).distanceTo(camera.position);
+      const fall = d >= GRASS_FAR ? 0
+        : d <= GRASS_NEAR ? 1
+          : 1 - 0.75 * ((d - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR));
+      t.count = densityCount(t.userData.fullCount, eff * fall);
+      t.visible = t.count > 0;
+    }
+  };
+  f.setDensity = (k) => { eff = k; applyTiles(); };
+  let lastTick = 0;
+  f._tileTick = () => {              // buildFloraField hangs this on autoHooks
+    const now = performance.now();
+    if (now - lastTick < 300) return;
+    lastTick = now;
+    applyTiles();
+  };
+  applyTiles();
+  f.dispose = () => {
+    for (const t of tiles) t.geometry.dispose();   // teardown-only: shared
+    origDispose?.call(f);                          // buffers die with the field
+  };
+  return true;
+}
+
 // ---- pushers ---------------------------------------------------------------
 // The brush's own interaction model: up to 4 pusher slots part the plants
 // around moving bodies. Slot 0 is the local avatar; the rest are the nearest
@@ -257,7 +375,9 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       f.strokeLabel = `${fields.length}:${st.species ?? 'grass'}`;
       wireDensityDial(f);
       mask.wire(f.material);
-      wireFieldCulling(f);
+      // big blade/corn strokes tile (per-tile culling + distance density);
+      // small ones keep the whole-stroke sphere from G1
+      if (!tileField(f)) wireFieldCulling(f);
       group.add(f.mesh);
       fields.push(f);
     }
@@ -269,6 +389,9 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
   }
   const field = composeField({ group, fields, mask });
   field.autoHooks.push(wirePushers(field));   // setGrass unhooks everything the field owns
+  for (const f of fields) {
+    if (f._tileTick) { pushHostHook(f._tileTick); field.autoHooks.push(f._tileTick); }
+  }
   scene.add(group);
   return field;
 }

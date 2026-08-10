@@ -390,6 +390,23 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — step 5½ G2: the meadow is tiled.** Big blade/corn strokes
+  (≥2k instances) re-cut after the density shuffle into ~12m XZ tiles: K
+  geometries sharing the vertex/index/`aH` attribute OBJECTS (one GPU
+  upload) with sliced copies of only the three instanced attributes, K
+  meshes sharing the ONE material, per-tile world spheres +
+  `frustumCulled = true` — three's culling finally works on grass, and
+  per-tile `count` gives distance density free (stable bucketing
+  preserves the shuffle, so a tile prefix stays a uniform thinner): full
+  inside 30m, →25% at 140m, invisible beyond, on a 300ms tick.
+  `setDensity` is the per-tile fan-out; the container answers #74's
+  applied-truth with a summing `count` getter and `strokeApplied` learned
+  `applied-with-falloff` (deliberate under-draw is not a failed dial —
+  the cap binds from above with per-tile rounding slack). Tile geometries
+  die with the field (`dispose` wrapped); userData flags + shadow policy
+  copied per tile; shrubs (stem-mesh pairs, hundreds of instances) keep
+  G1's whole-stroke sphere. Verified: lightbench 19/19 + measure sweep
+  (grass builds ~1.5s through the tiler, 120fps) · paritybench PASS.
 - **2026-08-09 — step 5½, first two slices: grass G1 + residency R1.**
   G1 (§13.2): per-stroke WORLD bounding spheres assigned by the adapter +
   `frustumCulled = true` (upstream couldn't — its instanceMatrix is all
