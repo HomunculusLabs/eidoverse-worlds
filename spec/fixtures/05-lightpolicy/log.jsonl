@@ -1,0 +1,7 @@
+{"seq":0,"ts":1786320000000,"actor":"world","verb":"genesis","args":{"v":2,"dialect":"eidoverse-log"}}
+{"seq":1,"ts":1786320000001,"actor":"world","verb":"grant","args":{"id":"author","role":"owner","gen":true}}
+{"seq":2,"ts":1786320000002,"actor":"author","verb":"light","args":{"id":"porch","pos":[1,2,1],"color":16767392,"intensity":20,"range":8,"day":false}}
+{"seq":3,"ts":1786320000003,"actor":"author","verb":"light","args":{"id":"porch","intensity":30}}
+{"seq":4,"ts":1786320000004,"actor":"author","verb":"light","args":{"id":"porch","day":true}}
+{"seq":5,"ts":1786320000005,"actor":"author","verb":"light","args":{"id":"lamp","pos":[0,2,0],"keep":true,"day":false}}
+{"seq":6,"ts":1786320000006,"actor":"author","verb":"light","args":{"id":"lamp","keep":false}}

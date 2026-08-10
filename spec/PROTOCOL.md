@@ -42,7 +42,7 @@ Folding produces, at minimum:
 {
   "entities": { "<id>": { "pos": [x,y,z], "yaw": r, "lib": "path",   // things
                            "scale": s?, "actor": who, "ts": ms, "collide"?,
-                           "kind": "light"?, "color"?, "intensity"?, "range"?, "keep"?,
+                           "kind": "light"?, "color"?, "intensity"?, "range"?, "keep"?, "day"?,
                            "comp": { "<type>": <opaque data> }?,      // §4
                            "parent": { "to", "slot"?, "offset"?, "yaw"? }? } },
   "mounts": { "<body-id>": { "to", "slot"?, "offset"?, "yaw"? } }?,   // §5
@@ -63,7 +63,7 @@ measured on the fields above (see `fixtures/README.md`).
 | `genesis` | `{v, dialect}` | nothing (version marker) |
 | `spawn` | `{id, lib, pos?, yaw?, scale?, collide?}` | create **or replace** entity (see §3.1) |
 | `place` | `{id, pos?, yaw?, scale?}` | update transform; re-stamps rest pose |
-| `light` | `{id, pos?, color?, intensity?, range?, keep?}` | create light entity; re-issuing on an id that already folds as a light is a **partial update** (absent fields keep their prior value); a non-light holding the id is replaced wholesale (§3.1) |
+| `light` | `{id, pos?, color?, intensity?, range?, keep?, day?}` | create light entity; re-issuing on an id that already folds as a light is a **partial update** (absent fields keep their prior value); a non-light holding the id is replaced wholesale (§3.1) |
 | `remove` | `{id}` | delete entity; children mounted on it get their **absolute pose computed and stamped** (parent pos + yaw-rotated offset), then orphaned; body mounts onto it are cleared |
 | `comp` | `{id, type, data\|null}` | `entities[id].comp[type] = data`; null deletes. **Blind**: data is opaque to the fold. Writers SHOULD keep data ≤ 8 KB |
 | `motion` | `{id, type, …params}` | sugar: `comp[motion] = args-minus-id`; `type: null` deletes. If `t0` absent, fold stamps `t0 = entry.ts` |
@@ -96,9 +96,16 @@ persisted v1 log already means what this section now says — the text was
 wrong, not the worlds. Documented under §0's rule that the implementation
 wins the argument; no dialect bump.
 
-`keep` (lights) folds into the entity (§2) and marks the light exempt from
-client perf-governor shedding. It is client policy carried in world state,
-not a rendering guarantee.
+`keep` and `day` (lights) fold into the entity (§2) and carry client policy
+in world state, not rendering guarantees. `keep: true` gives the light
+**first claim on a casting slot** and exempts it from perf-governor
+shedding — top *priority*, not an unbounded promise: a client's slot pool
+is finite, and past it a kept light still glows without casting. `day:
+false` opts a light out of the time-of-day cycle: it burns at its authored
+intensity at noon (the deliberate porch light). Absent or true, a placed
+light dims toward midday the way lamps do. Both are stored only in their
+non-default state (`keep: true`, `day: false`); partial updates merge them
+like any other light field. Pinned by fixture `05-lightpolicy`.
 
 ## 4. Components
 

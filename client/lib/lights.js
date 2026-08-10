@@ -47,20 +47,20 @@ export function makeLightGizmo(color = 0xffd9a0) {
 
 /** Build a placed-light entity: gizmo + a rig request keyed to its id. The
  *  slot follows the group, so a `place` moves the cast with the bulb. */
-export function makeLight({ color = 0xffd9a0, intensity = 16, range = 10, keep = false } = {}, owner = null) {
+export function makeLight({ color = 0xffd9a0, intensity = 16, range = 10, keep = false, day } = {}, owner = null) {
   const group = new THREE.Group();
   const gizmo = makeLightGizmo(color);
   group.add(gizmo);
 
   group.userData.isLight = true;
-  group.userData.lightParams = { color, intensity, range, keep: !!keep };
+  group.userData.lightParams = { color, intensity, range, keep: !!keep, day: day !== false };
   group.userData.noCamCollide = true;
 
   const key = `placed:${owner ?? group.uuid}`;
   group.userData.rigKey = key;
   requestLight(key, {
     obj: group, color, intensity, range,
-    keep: !!keep, authored: true, dayAware: true,
+    keep: !!keep, authored: true, dayAware: day !== false,
     owner: owner ? `entity:${owner}` : null,
   });
   return group;
@@ -71,13 +71,14 @@ export function makeLight({ color = 0xffd9a0, intensity = 16, range = 10, keep =
  *  the fold upstream merges the same way, so a joiner and a live client
  *  agree. Slot assignment reacts on the rig's next pass — checking "keep
  *  lit" on an outbid light re-lights it visibly. */
-export function updateLight(group, { color, intensity, range, keep } = {}) {
+export function updateLight(group, { color, intensity, range, keep, day } = {}) {
   if (!group?.userData?.isLight) return;
   const p = group.userData.lightParams;
   if (color != null) p.color = color;
   if (intensity != null) p.intensity = intensity;
   if (range != null) p.range = range;
   if (keep != null) p.keep = !!keep;
+  if (day != null) p.day = day !== false;
 
   if (color != null) {
     const gizmo = group.children.find((o) => o.isMesh);
@@ -85,6 +86,7 @@ export function updateLight(group, { color, intensity, range, keep } = {}) {
   }
   updateRequest(group.userData.rigKey, {
     color: p.color, intensity: p.intensity, range: p.range, keep: p.keep,
+    dayAware: p.day,
   });
 }
 
@@ -126,6 +128,9 @@ registerEditor(({ id, obj, commit }) => {
       <label style="display:flex;gap:6px;align-items:center;cursor:pointer">
         <input type="checkbox" data-lp="keep" ${p.keep ? 'checked' : ''}>
         keep lit — first claim on a light slot, never governor-shed</label>
+      <label style="display:flex;gap:6px;align-items:center;cursor:pointer">
+        <input type="checkbox" data-lp="day" ${p.day === false ? 'checked' : ''}>
+        burns at noon — opts out of the day cycle</label>
       ${isCasting(obj.userData.rigKey) ? '' : '<div style="color:var(--dim);font-size:11px">glow-only right now (slot pool spent) — it may still cast for others</div>'}
     </div>`,
     wire(root) {
@@ -134,7 +139,8 @@ registerEditor(({ id, obj, commit }) => {
         const read = () =>
           field === 'color' ? parseInt(el.value.slice(1), 16)
             : field === 'keep' ? el.checked
-              : Number(el.value);
+              : field === 'day' ? !el.checked   // checked = burns at noon = day:false
+                : Number(el.value);
         el.addEventListener('input', () => {
           updateLight(obj, { [field]: read() });
           const out = root.querySelector(`[data-lp-out="${field}"]`);

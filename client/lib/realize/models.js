@@ -175,7 +175,7 @@ function realizeModel(id, cur, obj) {
 
 function createLight(id, ent) {
   tracked.set(id, { kind: 'light', gen: nextGen++ });
-  const g = makeLight({ color: ent.color, intensity: ent.intensity, range: ent.range, keep: ent.keep }, id);
+  const g = makeLight({ color: ent.color, intensity: ent.intensity, range: ent.range, keep: ent.keep, day: ent.day }, id);
   g.userData.entityId = id;
   g.position.set(...(ent.pos ?? [0, 1, 0]));
   entities.set(id, g);
@@ -209,7 +209,14 @@ function refreshModel(id, ent) {
 function refreshLight(id, ent) {
   const g = entities.get(id);
   if (!g?.userData?.isLight) return;
-  updateLight(g, { color: ent.color, intensity: ent.intensity, range: ent.range, keep: ent.keep });
+  // explicit values, not a partial patch: the FOLD already merged, and a
+  // cleared keep/day folds as an ABSENT field — passing it through
+  // updateLight's null-skip guard would leave the old value stuck on
+  // (a live landmine for keep before day existed)
+  updateLight(g, {
+    color: ent.color, intensity: ent.intensity, range: ent.range,
+    keep: ent.keep === true, day: ent.day !== false,
+  });
   if (ent.pos) g.position.set(...ent.pos);
   bus.emit('entity', { id, kind: 'light' });
 }

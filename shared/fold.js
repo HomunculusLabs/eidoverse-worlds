@@ -50,12 +50,13 @@ import { foldSkyEntry } from './forecast.js';
  *   lib?: string, yaw?: number, scale?: number,
  *   collide?: string,
  *   color?: number, intensity?: number, range?: number,
- *   keep?: boolean,
+ *   keep?: boolean, day?: false,
  *   comp?: Record<string, unknown>,
  *   parent?: { to: string, slot?: string, offset?: number[], yaw?: number },
  * }>} entities
- *   Things and lights, one flat id namespace. `keep` (lights) = exempt from
- *   the client perf governor's shedding. `comp` is the generic component bag,
+ *   Things and lights, one flat id namespace. `keep` (lights) = first claim
+ *   on a casting slot, never governor-shed; `day: false` (lights) = burns
+ *   at noon, opted out of the time-of-day cycle. `comp` is the generic bag,
  *   written by `comp` verbs and folded BLINDLY — the fold never learns what a
  *   component means; meaning lives in evaluators (motion, sockets,
  *   reactions, …), so a new component type is evaluator code + emitted
@@ -185,18 +186,23 @@ export function foldEntry(st, e) {
       // Re-issuing `light` on an id that already folds as a light is a partial
       // UPDATE: absent fields keep their prior value, so `{id, intensity: 40}`
       // brightens without resetting color/range/pos. `keep: true` marks the
-      // light exempt from the client perf governor's shedding (keep: false
-      // clears it). A non-light already holding the id is replaced wholesale,
-      // same as before — the id namespace is flat.
+      // light first-in-line for a casting slot and exempt from perf-governor
+      // shedding (keep: false clears it); `day: false` opts it out of the
+      // time-of-day cycle — the deliberate noon porch light (day: true, the
+      // default, clears it). Both stored only in their non-default state.
+      // A non-light already holding the id is replaced wholesale, same as
+      // before — the id namespace is flat. (PROTOCOL §3.1, fixture 05.)
       const prev = st.entities[a.id];
       const base = prev?.kind === "light" ? prev : null;
       const keep = a.keep ?? base?.keep;
+      const day = a.day ?? base?.day;
       st.entities[a.id] = {
         kind: "light", pos: a.pos ?? base?.pos ?? [0, 1, 0],
         color: a.color ?? base?.color ?? 0xffd9a0,
         intensity: a.intensity ?? base?.intensity ?? 16,
         range: a.range ?? base?.range ?? 10,
         ...(keep ? { keep: true } : {}),
+        ...(day === false ? { day: false } : {}),
         actor: e.actor, ts: e.ts,
       };
       return;
@@ -435,7 +441,8 @@ export function stateToEntries(state, {
       // folded lights have no lib — synthesizing one crashes every consumer
       // that trusts `lib` on a spawn (Fable's porchlight vs look(), 07-30)
       add('light', { id, pos: e.pos, color: e.color, intensity: e.intensity, range: e.range,
-        ...(e.keep ? { keep: true } : {}) },
+        ...(e.keep ? { keep: true } : {}),
+        ...(e.day === false ? { day: false } : {}) },
         e.actor ?? 'world', e.ts ?? now);
     } else {
       add('spawn', {
