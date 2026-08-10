@@ -17,7 +17,7 @@ import { THREE, scene, sun, hemi, renderer, camera, report, bus } from './core.j
 import { loadEidoModule, primeFiles, listLibrary, fetchBytes } from './assets.js';
 import { markPhase } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake,
-  envTexture, adoptEnvironment } from './sky_baked.js';
+  envTexture, adoptEnvironment, bakedCloudsPinned } from './sky_baked.js';
 import { beginWork } from './loadwork.js';
 import { setDayness, releaseForeignLights } from './lightrig.js';
 import { warm, P_AMBIENT } from './warmqueue.js';
@@ -40,6 +40,7 @@ scene.environment = envTexture();
 
 let impl = null;           // 'eidoverse' | 'skymesh' | null
 let skyApi = null;         // Skye's sky object when impl === 'eidoverse'
+let skyInner = null;       // _internals.sky — upstream's declared escape hatch (§18b)
 let skyMesh = null;
 // The skymesh-path fill light is born EAGERLY: light topology is frozen at
 // boot (TEL0S_NOTES §12.1 — a light appearing later recompiles every lit
@@ -240,6 +241,12 @@ async function renderOnce() {
       } else {
         report('eidoverse sky (falling back)', e);
       }
+      // the build budget counts FAILURES (§18b): it used to count every
+      // build, so one failed-then-recovered boot left skyBuilds at MAX and
+      // every later sky verb stacked a SkyMesh over the working eidoverse
+      // sky without a teardown — and froze its updates (updateSky gates on
+      // impl === 'eidoverse')
+      skyBuilds++;
       degrade++;
       skyApi = null;
       currentWorld = null;
@@ -439,11 +446,11 @@ async function buildSky(a, world, wantAudio) {
     await loadEidoModule('sky_worlds.js');
     if (typeof globalThis.makeSky !== 'function') throw new Error('sky_worlds.js exposed no makeSky');
     if (skyMesh) { scene.remove(skyMesh); skyMesh = null; }
-    skyBuilds++;
     // A fresh build asserts state rather than easing into it — reset the
     // applyLive guards so the first applyLive after this re-asserts
     // everything against the new skyApi.
     forecastCursor = null; appliedWeather = null; appliedClouds = null; appliedColors = null;
+    lastLiveHours = null;
     // Construct at the DERIVED weather, not the raw authored field — under a
     // forecast the authored field may be segments stale. Mid-transition, start
     // from the segment's previous state; applyLive transitions the remainder.
@@ -459,6 +466,28 @@ async function buildSky(a, world, wantAudio) {
       audio: wantAudio,
     });
     claimSkyAdditions(ownership);
+    // ---- the clear↔cloudy fence (§18b) -------------------------------------
+    // The baked tier's graph cache keys on preset !== 'clear' (sky_system
+    // bakeKey …|c0/c1), and building the cloud-carrying graph costs a
+    // ~1.5MB-WGSL compile that stalls the whole GPU process ~5-10s — even
+    // async (Chrome serializes submits behind Tint). Nothing can hide that
+    // compile; the fence makes a session pay it AT MOST ONCE: while the
+    // pin is still c0 (clear world), 'clear' passes through untouched and
+    // the boot stays cheap; the first cloudy change pays the one c0→c1
+    // rebuild (as any change did before — but now ONCE); from then on
+    // bakedCloudsPinned() is true and 'clear' is respelled as an EMPTY
+    // cumulus (finalMul 0 — the march gates itself off at runtime), so the
+    // preset never flips back and no later change rebuilds anything. The
+    // wrap sits on the INTERNAL setter because the weather system drives
+    // setClouds('clear') behind the api (WEATHER.clear). The 'off' tier
+    // keeps genuine 'clear' always: it constructs c0 and must stay there.
+    skyInner = skyApi?._internals?.sky ?? null;
+    if (skyInner?.setClouds && cloudQuality !== 'off') {
+      const orig = skyInner.setClouds.bind(skyInner);
+      skyInner.setClouds = (kind, over) => (kind === 'clear' && bakedCloudsPinned()
+        ? orig('cumulus', { ...(over ?? {}), finalMul: 0, wispOn: 0, stormCanopy: 0 })
+        : orig(kind, over));
+    }
     // Warm the sky's OWN pipelines off the render path: the cloud march is
     // the biggest single compile in the client, and a regular render that
     // meets an uncompiled dome creates its pipeline SYNCHRONOUSLY — one big
@@ -582,13 +611,28 @@ let forecastCursor = null;   // O(1) live ticking — the segment walk never re-
 let appliedWeather = null;   // `state|k` last asserted on skyApi; null = fresh build
 let appliedClouds = null;
 let appliedColors = null;
+let lastLiveHours = null;    // detects VERB-driven clock jumps (§18b)
 function applyLive(a) {
   if (!skyApi) return;
-  skyApi.setTime?.(nowHours());
+  const h = nowHours();
+  skyApi.setTime?.(h);
   // Baked tiers re-bake on their own cadence (which covers TOD drift too);
   // the debounced TOD bake only serves the live 'high' tier's env-IBL.
   if (!bakedActive()) scheduleEnvBake();
   let changed = false;
+  // A dusk/dawn VERB used to wait out the 9s bake cadence before the
+  // visible dome moved (§18b) — a clock JUMP asks for a bake now. Circular
+  // delta so the daily midnight wrap doesn't read as a jump; TOD drift
+  // between 1Hz calls stays far under the threshold.
+  if (lastLiveHours !== null) {
+    const d = Math.abs(h - lastLiveHours);
+    if (Math.min(d, 24 - d) > 0.75) changed = true;
+  }
+  lastLiveHours = h;
+  // An authored 'clear' flows to the setter like any other kind — the §18b
+  // fence renders it as an EMPTY cumulus on capable tiers so the graph
+  // never flips flavours. Unauthored stays null (construction's default
+  // look, exactly as before).
   const clouds = cloudQuality === 'off' ? 'clear'
     : (a.clouds && CLOUDS.includes(a.clouds) ? a.clouds : null);
   if (clouds && clouds !== appliedClouds) {

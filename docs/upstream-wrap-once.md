@@ -92,3 +92,29 @@ This shrinks the moment you land any of the below:
    contract instead of an implementation detail we're leaning on). Note
    AGENTS.md currently says to mark *materials* `noWet`; the code checks
    the *mesh*.
+
+## Addendum 2 (2026-08-10) — the baked sky's graph flip, and friends
+
+Found while hunting a ~5s mid-session halt: crossing the clear↔cloudy
+line flips `bakeEnv`'s cache key (`bakeKey = …|c0/c1`) and rebuilds the
+full-quad 4096×2048 8-pass graph in one task. We now fence it host-side
+(an empty cumulus stands in for 'clear', and cloudy→clear never rebakes),
+but the clean fixes are yours:
+
+4. **Cache `_envBake` per `bakeKey`** instead of the single slot
+   (`bake?.dispose()` on every flavour change). A two-entry Map makes
+   clear↔cloudy flips a pointer swap after first use.
+5. **Make `bopts.includeClouds` authoritative** — today it's ANDed with
+   `state.preset !== 'clear'`, so a host cannot pin one graph for the
+   session. One word (`!== false` standing alone) deletes our whole fence.
+6. **A `bopts.target` (or `buildOnly`) for `bakeEnv`** — it always renders
+   into `sys._envTarget` and resizes it in place, so a host cannot warm a
+   graph without destroying the dome's front texture.
+7. **`dispose()` on the sky_worlds api.** `sys.dispose()` exists but is
+   unreachable from the returned api — every rebuild leaks the 4096×2048
+   HalfFloat env target (~67MB) plus both data textures.
+8. **An azimuth setter with defined units.** `opts.azimuth` seeds
+   `state.azBase` (radians) at construction and nothing can move it after;
+   our `sky` verb carries `azimuth` in degrees and silently drops it. A
+   `setAzimuth(deg|rad)` — either unit, just documented — would let a
+   placed sun actually move.

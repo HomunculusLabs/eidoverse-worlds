@@ -372,6 +372,9 @@ function createLight(id, ent) {
   const g = makeLight({ color: ent.color, intensity: ent.intensity, range: ent.range, keep: ent.keep, day: ent.day }, id);
   g.userData.entityId = id;
   g.position.set(...(ent.pos ?? [0, 1, 0]));
+  // rest pose, same as models carry — refreshLight re-stamps it on every
+  // fold refresh, so create and refresh agree on where "at rest" is
+  g.userData.base = { pos: g.position.toArray(), yaw: g.rotation.y };
   entities.set(id, g);
   entityMeta.set(id, { actor: ent.actor, kind: 'light', ts: ent.ts });
   scene.add(g);
@@ -400,6 +403,11 @@ function refreshModel(id, ent) {
   bus.emit('entity', { id, kind: 'place' });
 }
 
+/** Live refresh ≡ join create: after this runs, the realized light must be
+ *  indistinguishable from what createLight would build off the same folded
+ *  entity — EVERY folded field re-applied (params, mount-guarded transform,
+ *  entityMeta, comp bag, parent linkage), so a live edit and a rejoin render
+ *  identically. (Slice 18a; the divergence was the user-visible bug.) */
 function refreshLight(id, ent) {
   const g = entities.get(id);
   if (!g?.userData?.isLight) return;
@@ -411,8 +419,21 @@ function refreshLight(id, ent) {
     color: ent.color, intensity: ent.intensity, range: ent.range,
     keep: ent.keep === true, day: ent.day !== false,
   });
-  if (ent.pos) g.position.set(...ent.pos);
+  // A MOUNTED light's transform is carrier-relative; ent.pos is the fold's
+  // absolute pre-mount pose, and writing it here jumped the bulb by the
+  // carrier offset — live only, which is exactly the live-vs-join drift
+  // this function must never produce (same law as refreshModel; the
+  // dismount stamp brings the fold's word back when the ride ends).
+  if (!g.userData.mountedTo) {
+    if (ent.pos) g.position.set(...ent.pos);
+    g.userData.base = { pos: g.position.toArray(), yaw: g.rotation.y };
+  }
+  entityMeta.set(id, { actor: ent.actor, kind: 'light', ts: ent.ts });
   bus.emit('entity', { id, kind: 'light' });
+  // comps that folded onto the light and its folded parent re-announce and
+  // re-execute, exactly as a join create would (createLight + the tail)
+  emitCompBag(id);
+  execMount(id);
 }
 
 // ---- retirement -------------------------------------------------------------
@@ -736,7 +757,10 @@ export function reconcileModels() {
   for (const [id, t] of tracked) {
     if (created.has(id) || !state.st.entities[id]) continue;
     const ent = state.st.entities[id];
-    if (t.kind === 'light') refreshLight(id, ent); else refreshModel(id, ent);
+    // refreshLight ≡ join create: it re-announces the bag and re-executes
+    // the mount itself — calling them again here would double-emit
+    if (t.kind === 'light') { refreshLight(id, ent); continue; }
+    refreshModel(id, ent);
     emitCompBag(id);
     execMount(id);
   }
@@ -790,6 +814,14 @@ export function initModelsRealizer() {
   bus.on('lib-geom', (geom) => {
     for (const [lib, g] of Object.entries(geom ?? {})) libGeom.set(lib, g);
     for (const id of tracked.keys()) maybePlaceholder(id);
+  });
+  // a REFUSED `light` verb never folds, but the editor already previewed it —
+  // lights.js names the stranded id ('light-refused', off net.js's refusal
+  // event) and the rollback is one call: refreshLight re-derives every
+  // folded field, so the preview snaps back to exactly what a joiner sees
+  bus.on('light-refused', ({ id }) => {
+    const ent = state.st.entities[id];
+    if (ent?.kind === 'light' && tracked.get(id)?.kind === 'light') refreshLight(id, ent);
   });
   // the residency sweep: fold positions in, demote/promote out. 500ms is
   // plenty — a person covers ~3m between beats at a run

@@ -218,13 +218,20 @@ function assign(now) {
   // Mirrors (the adopted lightning) hold RESERVED slots: they are upstream's
   // own lights with transient authored intensity, so they neither compete on
   // camera distance nor answer to the governor's cap — a shed-to-zero pool
-  // must not silently delete a storm's strikes (review note 5). Everything
-  // else fills what the cap allows of the remaining slots.
+  // must not silently delete a storm's strikes (review note 5).
   const mirrors = ranked.filter((x) => x.r.mirror).slice(0, N_SLOTS).map((x) => x.r);
-  const rest = ranked.filter((x) => !x.r.mirror)
-    .slice(0, Math.max(0, Math.min(slotCap, N_SLOTS - mirrors.length)))
+  const nonMirror = ranked.filter((x) => !x.r.mirror);
+  // `keep` exempts a light from perf-governor shedding (PROTOCOL §3.1): the
+  // cap applies to the SHEDDABLE tail only, so keep-tier requests always
+  // assign. Only physics outbids a keep — more keeps than slots and the
+  // nearest win; the rest glow without casting, the honest limit.
+  const keeps = nonMirror.filter((x) => x.r.keep)
+    .slice(0, Math.max(0, N_SLOTS - mirrors.length))
     .map((x) => x.r);
-  const winners = [...mirrors, ...rest];
+  const rest = nonMirror.filter((x) => !x.r.keep)
+    .slice(0, Math.max(0, Math.min(slotCap, N_SLOTS - mirrors.length - keeps.length)))
+    .map((x) => x.r);
+  const winners = [...mirrors, ...keeps, ...rest];
   const winnerSet = new Set(winners);
   // evicted requests free their slots first, then newcomers take free ones —
   // a request that stays assigned keeps its slot (no one-frame handoff)

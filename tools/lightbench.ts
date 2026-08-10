@@ -355,6 +355,166 @@ async function residencyState(pred: (r: any) => boolean, label: string): Promise
     pNear ? `checked=${pNear.checked}` : "no parity");
 }
 
+// ============================================================ live edit
+// live(fold) === join(fold), per field (slice 18a): a light edited LIVE must
+// render exactly as a fresh joiner folding the same log renders it. The
+// keeps anchor the uniform reads: keep-tier requests are exempt from the
+// governor's slot cap (PROTOCOL §3.1), so they cast deterministically even
+// when a slow headless box sheds the sheddable tail.
+console.log(`\n${bold("── live edit")}`);
+
+const lightRow = (id: string) => evalJson(`(() => {
+  const rig = EW.lightrig();
+  const r = rig.requests.find(x => x.key === 'placed:${id}');
+  if (!r) return null;
+  const grp = EW.scene.children.find(c => c.name === 'lightrig');
+  const pl = r.slot >= 0 ? grp.children.find(l => l.name === 'slot' + r.slot) : null;
+  return { keep: r.keep, authored: r.authored, dayAware: r.dayAware, cast: r.slot >= 0,
+    dayness: rig.dayness, cap: rig.cap,
+    uniforms: pl ? { color: pl.color.getHexString(), intensity: +pl.intensity.toFixed(2),
+      distance: pl.distance, pos: pl.position.toArray().map((v) => +v.toFixed(2)) } : null };
+})()`);
+async function settleOn<T>(fn: () => Promise<T>, pred: (v: T) => boolean, tries = 12): Promise<T> {
+  let v = await fn();
+  for (let i = 0; i < tries && !pred(v); i++) { await sleep(1000); v = await fn(); }
+  return v;
+}
+
+// 1. per-field live re-apply, at an hour where dayGlow > 0 ---------------------
+// (at noon a day-aware slot writes intensity 0 — nothing to see move)
+let dayness = 1;
+for (const hours of [22, 5, 20, 6, 19, 7]) {
+  await driver.verb("sky", { hours });
+  const row: any = await settleOn(() => lightRow("keep1"), (r: any) => r != null && r.dayness <= 0.7, 6);
+  dayness = row?.dayness ?? 1;
+  if (dayness <= 0.7) break;
+}
+check("live edit: found an hour with dayGlow > 0", dayness <= 0.7, `dayness=${dayness}`);
+
+const before: any = await settleOn(() => lightRow("keep1"), (r: any) => r?.uniforms != null);
+check("live edit: the keep casts (slot uniforms readable)", before?.uniforms != null, JSON.stringify(before));
+
+await driver.verb("light", { id: "keep1", color: 0x22ccff });
+const c1: any = await settleOn(() => lightRow("keep1"), (r: any) => r?.uniforms?.color === "22ccff");
+check("live edit: color re-applies to the owning slot",
+  c1?.uniforms?.color === "22ccff" && before?.uniforms?.color !== "22ccff",
+  `${before?.uniforms?.color} → ${c1?.uniforms?.color}`);
+
+await driver.verb("light", { id: "keep1", intensity: 33 });
+const c2: any = await settleOn(() => lightRow("keep1"), (r: any) =>
+  r?.uniforms != null && Math.abs(r.uniforms.intensity - (c1?.uniforms?.intensity ?? 0)) > 0.25);
+check("live edit: intensity moves the slot uniform",
+  c2?.uniforms != null && Math.abs(c2.uniforms.intensity - (c1?.uniforms?.intensity ?? 0)) > 0.25
+  && c2.uniforms.intensity > 0,
+  `${c1?.uniforms?.intensity} → ${c2?.uniforms?.intensity} (dayness ${c2?.dayness})`);
+
+await driver.verb("light", { id: "keep1", range: 22 });
+const c3: any = await settleOn(() => lightRow("keep1"), (r: any) => r?.uniforms?.distance === 22);
+check("live edit: range re-applies to the owning slot",
+  c3?.uniforms?.distance === 22 && before?.uniforms?.distance === 10,
+  `${before?.uniforms?.distance} → ${c3?.uniforms?.distance}`);
+
+await driver.verb("light", { id: "keep1", day: false });
+const c4: any = await settleOn(() => lightRow("keep1"), (r: any) =>
+  r != null && r.dayAware === false && Math.abs((r.uniforms?.intensity ?? 0) - 33) < 0.01);
+check("live edit: day:false re-applies (burns at the authored 33, dayAware off)",
+  c4?.dayAware === false && Math.abs((c4?.uniforms?.intensity ?? 0) - 33) < 0.01,
+  `intensity ${c2?.uniforms?.intensity} → ${c4?.uniforms?.intensity}`);
+
+// 2. at noon, toggling day:false live starts it burning within a few frames ---
+await driver.verb("sky", { hours: 12 });
+const noon: any = await settleOn(() => lightRow("keep2"),
+  (r: any) => r != null && r.dayness >= 0.999 && r.uniforms != null && r.uniforms.intensity < 0.01, 15);
+check("noon: a day-aware light's slot writes intensity 0",
+  noon?.uniforms != null && noon.uniforms.intensity < 0.01,
+  `dayness=${noon?.dayness} intensity=${noon?.uniforms?.intensity}`);
+await driver.verb("light", { id: "keep2", day: false });
+const burn: any = await settleOn(() => lightRow("keep2"), (r: any) => (r?.uniforms?.intensity ?? 0) > 19.5, 10);
+check("noon: toggling day:false live starts it burning within a few frames",
+  (burn?.uniforms?.intensity ?? 0) > 19.5 && Math.abs((burn?.uniforms?.intensity ?? 0) - 20) < 0.5,
+  `intensity ${noon?.uniforms?.intensity} → ${burn?.uniforms?.intensity}`);
+
+// 3. the parity signature: live(fold) === join(fold) --------------------------
+const signature = () => evalJson(`(() => {
+  const rig = EW.lightrig();
+  const grp = EW.scene.children.find(c => c.name === 'lightrig');
+  return rig.requests.filter(r => r.key.startsWith('placed:')).map(r => {
+    const pl = r.slot >= 0 ? grp.children.find(l => l.name === 'slot' + r.slot) : null;
+    return { key: r.key, keep: r.keep, authored: r.authored, dayAware: r.dayAware,
+      uniforms: pl ? { color: pl.color.getHexString(), intensity: +pl.intensity.toFixed(2),
+        distance: pl.distance, pos: pl.position.toArray().map(v => +v.toFixed(2)) } : null };
+  }).sort((a, b) => (a.key < b.key ? -1 : 1));
+})()`);
+const capOf = async () => (await evalJson("EW.lightrig()"))?.cap;
+const sigLive = await signature();
+const capLive = await capOf();
+await bootInto(WORLD);          // a fresh join folds the same log
+console.log(`  ${dim(bootReady)}`);
+await sleep(3000);
+let sigJoin = await signature();
+for (let i = 0; i < 12 && JSON.stringify(sigJoin) !== JSON.stringify(sigLive); i++) {
+  await sleep(1000);
+  sigJoin = await signature();
+}
+const capJoin = await capOf();
+{
+  const exact = JSON.stringify(sigJoin) === JSON.stringify(sigLive);
+  // The governor's slot cap is a CLIENT lever, not fold state: a slow live
+  // session may have shed sheddable lights a fresh join hasn't. Flags must
+  // match for every light, uniforms for every light casting on both sides,
+  // and every keep must cast on both (cap-exempt) — cast-ness of a sheddable
+  // is the only difference the cap may explain.
+  const byKey = (s: any[]) => Object.fromEntries((s ?? []).map((x: any) => [x.key, x]));
+  const L: any = byKey(sigLive), J: any = byKey(sigJoin);
+  const keys = [...new Set([...Object.keys(L), ...Object.keys(J)])];
+  const flagsOk = keys.every((k) => L[k] && J[k] && L[k].keep === J[k].keep
+    && L[k].authored === J[k].authored && L[k].dayAware === J[k].dayAware);
+  const uniformsOk = keys.filter((k) => L[k]?.uniforms && J[k]?.uniforms)
+    .every((k) => JSON.stringify(L[k].uniforms) === JSON.stringify(J[k].uniforms));
+  const keepsCastBoth = keys.filter((k) => L[k]?.keep)
+    .every((k) => L[k]?.uniforms != null && J[k]?.uniforms != null);
+  check("parity signature: live(fold) === join(fold) per light",
+    exact || (flagsOk && uniformsOk && keepsCastBoth),
+    exact ? `${keys.length} lights, exact` : `capLive=${capLive} capJoin=${capJoin} live=${JSON.stringify(sigLive)} join=${JSON.stringify(sigJoin)}`);
+  if (!exact && flagsOk && uniformsOk && keepsCastBoth) {
+    note("parity signature", `sheddable cast-ness diverged with the governor cap (live=${capLive}, join=${capJoin}) — a client lever, not fold state; flags, keeps, and every both-cast uniform matched`);
+  }
+}
+
+// 4. foldParity across a live edit of a comped + mounted light ----------------
+// (pins the fold preserving comp/parent through light-on-light AND the
+// realizer's refreshLight not clobbering the carrier-relative transform)
+await driver.verb("comp", { id: "porch", type: "aura", data: { tint: "amber" } });
+await driver.verb("mount", { id: "porch", to: "ball1", offset: [0, 1.6, 0] });
+await driver.verb("light", { id: "porch", intensity: 26 });
+let pLit: any = null;
+for (let i = 0; i < 20; i++) {
+  pLit = await evalJson("EW.foldParity()");
+  if (pLit?.ok) break;
+  await sleep(1000);
+}
+check("fold parity holds after a live edit of a comped + mounted light", pLit?.ok === true,
+  pLit ? `checked=${pLit.checked} comp=${pLit.compDiffs?.length} parent=${pLit.parentDiffs?.length} pose=${pLit.mountPoseDiffs?.length}` : "no parity");
+
+// 5. keep exemption survives live edits with the pool oversubscribed ----------
+await driver.verb("light", { id: "plain4", pos: [12, 2, -12], intensity: 18 });
+await driver.verb("light", { id: "plain5", pos: [15, 2, -15], intensity: 18 });
+await driver.verb("light", { id: "plain6", pos: [18, 2, -18], intensity: 18 });
+await driver.verb("light", { id: "keep1", intensity: 24 });   // churn the request set live
+await driver.verb("light", { id: "keep2", range: 14 });
+let rigPost: any = null;
+for (let i = 0; i < 10; i++) {
+  rigPost = await evalJson("EW.lightrig()");
+  const casting = (rigPost?.requests ?? []).filter((r: any) => r.slot >= 0).map((r: any) => r.key);
+  if (["placed:keep1", "placed:keep2"].every((k) => casting.includes(k))) break;
+  await sleep(1000);
+}
+const postKeys = (rigPost?.requests ?? []).filter((r: any) => r.slot >= 0).map((r: any) => r.key).sort();
+check("keep exemption: both keeps still hold slots after the live edits (9 placed > 8 slots)",
+  (rigPost?.requests ?? []).filter((r: any) => r.key.startsWith("placed:")).length === 9
+  && ["placed:keep1", "placed:keep2"].every((k) => postKeys.includes(k)),
+  `cap=${rigPost?.cap} casting: ${postKeys.join(", ")}`);
+
 // -- hygiene ------------------------------------------------------------------
 const knownBenign = (l: string) => l.includes("favicon") || l.includes("Autoplay");
 const realErrors = pageErrors.filter((l) => !knownBenign(l));

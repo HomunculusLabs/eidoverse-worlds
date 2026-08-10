@@ -544,6 +544,11 @@ async function handle(msg) {
     case 'error':
       // Server-side refusals are the user's problem to see, not the console's.
       toast(msg.error, 'warn');
+      // ...and any module holding an optimistic preview needs to hear it: a
+      // refused verb never folds, so a preview kept past this moment is a
+      // world that never existed (lights.js rolls its edits back off this).
+      // The wire names no verb — every refusal on this socket is ours.
+      bus.emit('verb-refused', { error: String(msg.error ?? '') });
       break;
   }
 }

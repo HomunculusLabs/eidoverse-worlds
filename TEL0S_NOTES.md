@@ -390,6 +390,56 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — §18 LANDED: the sky stops halting, light edits stop
+  lying.** Two user reports from tel0s's MacBook session, both
+  root-caused by extraction and fixed. **18a (lights, a bug FAMILY —
+  executed by a Fable agent, full servergate 12/12 gate):** (1) the
+  fold's light-on-light case wholesale-replaced the entity, destroying
+  comp/parent/yaw/scale — violating PROTOCOL §3.1's own "partial
+  update" text; it now carries them (base kind-guarded; fixture 05
+  extended after byte-identical regeneration proof; foldfix 24/24,
+  state 31/31 gain light cases; stateToEntries roundtrips yaw/scale
+  via a synthetic in-vocabulary `place`). (2) refreshLight ≡
+  createLight now (mounted-pose guard, base/meta re-stamp,
+  emitCompBag + execMount — a mounted light no longer JUMPS on a live
+  brightness edit). (3) keeps are exempt from the governor's slotCap
+  slice per PROTOCOL :99-108 (cap sheds the sheddable tail only).
+  (4) the editor coalesces drags to ~1 verb/350ms (11.4/4s < the 12
+  VERB_RATE — a colour-picker gesture no longer strands the local
+  preview behind rate-limit refusals) and rolls back on refusal
+  (net.js emits verb-refused → one refreshLight re-derives from fold).
+  (5) lightbench gains `── live edit`: per-field re-apply at
+  dayGlow>0, noon day:false ignition, the live-vs-join parity
+  SIGNATURE across a re-join, foldParity over a comped+mounted light
+  edit, keep exemption at 9 lights > 8 slots — 30/30. **18b (the ~5s
+  sky halt, by hand):** the extraction KILLED the rebuild hypothesis —
+  mid-session sky verbs never rebuild (world-identity only); the halt
+  is maybeRefreshGraph's clear↔cloudy graph flip: a ~1.5MB-WGSL 8-pass
+  cloud-march bake graph whose compile stalls the whole GPU process
+  5-10s — measured, and NOTHING hides it (even createRenderPipelineAsync
+  blocks Chrome's queue submits behind Tint; an eager boot pin moved a
+  9-12s stall INTO clear worlds' first minute — reverted). The landed
+  design: LAZY fence — clear worlds pin the cheap c0 graph; the first
+  cloudy change pays the one c0→c1 rebuild (once per session, at the
+  user's own change); from then on bakedCloudsPinned() gates the
+  _internals.sky.setClouds wrap so 'clear' is respelled as an EMPTY
+  cumulus (finalMul 0) and the preset never flips back — every
+  subsequent sky change is uniform writes. cloudy→clear NEVER rebakes
+  (one-directional maybeRefreshGraph). Plus: a dusk/dawn verb now
+  requests a bake immediately (was: up to 9s of cadence latency —
+  circular-delta jump detection); the band-context bake pipeline warms
+  through the conductor before any band renders it ('warming' state);
+  the degrade ladder counts FAILURES not builds (one recovered boot no
+  longer condemns every later sky verb to a stacked frozen SkyMesh);
+  azimuth stays dropped (units undefined upstream — ask #8).
+  docs/upstream-wrap-once.md Addendum 2: per-bakeKey cache,
+  authoritative includeClouds, bopts.target, api dispose (67MB leak
+  per rebuild), azimuth setter. OPEN, tel0s's call: the one-time c1
+  compile stall remains (~5-10s cold GPU, once) — options: pre-pay it
+  inside the boot splash for weather-bearing worlds, or shrink it
+  everywhere via cfg.cloudPasses (quality trade). Gate: servergate
+  12/12, lightbench 30/30, paritybench PASS, bootjank max 516ms /
+  p99 8.5ms over 45s, --wide PASS.
 - **2026-08-10 — §17 LANDED (17a/17b/17c): vegetation part 2.** Grounded
   in tel0s's own trace (§17 header). **17a** prime-on-decode: every
   toolkit texture (vegetation texNode maps, sky domes — all TSL-node-

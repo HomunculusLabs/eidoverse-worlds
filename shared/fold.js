@@ -203,6 +203,17 @@ export function foldEntry(st, e) {
         range: a.range ?? base?.range ?? 10,
         ...(keep ? { keep: true } : {}),
         ...(day === false ? { day: false } : {}),
+        // A partial update is not re-authoring (§3.1): what the merge doesn't
+        // author must survive it — the comp bag (§4: annotations are
+        // preserved), the parent attachment, and any yaw/scale a `place`
+        // stamped onto the light. Wholesale assignment here used to destroy
+        // all four on every re-light: brightening a comped, mounted lantern
+        // dismounted it for every joiner. A non-light base still carries
+        // nothing — replacement across kinds stays wholesale (fixture 04).
+        ...(base?.comp ? { comp: base.comp } : {}),
+        ...(base?.parent ? { parent: base.parent } : {}),
+        ...(base?.yaw != null ? { yaw: base.yaw } : {}),
+        ...(base?.scale != null ? { scale: base.scale } : {}),
         actor: e.actor, ts: e.ts,
       };
       return;
@@ -444,6 +455,18 @@ export function stateToEntries(state, {
         ...(e.keep ? { keep: true } : {}),
         ...(e.day === false ? { day: false } : {}) },
         e.actor ?? 'world', e.ts ?? now);
+      // the light verb carries no yaw/scale (PROTOCOL §3): a transform a
+      // `place` stamped onto the light re-enters the way it arrived — as a
+      // place — or the snapshot roundtrip silently drops what the light-on-
+      // light merge just learned to preserve. pos rides along (idempotent
+      // over the light entry) because a pos-less place is legal but at least
+      // one consumer (mcpl applyEntry) assigns args.pos unguarded.
+      if (e.yaw != null || e.scale != null) {
+        add('place', { id, pos: e.pos,
+          ...(e.yaw != null ? { yaw: e.yaw } : {}),
+          ...(e.scale != null ? { scale: e.scale } : {}) },
+          e.actor ?? 'world', e.ts ?? now);
+      }
     } else {
       add('spawn', {
         id, lib: e.lib, pos: e.pos, yaw: e.yaw,

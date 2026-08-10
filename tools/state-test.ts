@@ -95,5 +95,40 @@ for (const dir of fixtures) {
     && Object.keys(state.st.entities).length === 0);
 }
 
+// 7. lights through the live path: a partial `light` merges instead of
+//    re-authoring (§3.1) — the comp bag, parent, and place-written yaw/scale
+//    survive it — and a hydrated snapshot carrying a decorated light merges
+//    identically when the partial arrives as live tail (live ≡ join, the
+//    slice-18a invariant; fixture 05 pins the pure fold shape)
+{
+  reset();
+  state.hydrated = true;
+  let n = 100;
+  const e = (verb: string, args: unknown) => foldLive({ seq: ++n, ts: 5000 + n, actor: "t", verb, args });
+  e("light", { id: "L", pos: [1, 2, 3], color: 0x112233, intensity: 20, range: 8, keep: true, day: false });
+  e("comp", { id: "L", type: "halo", data: { r: 2 } });
+  e("mount", { id: "L", to: "post", offset: [0, 1, 0] });
+  e("place", { id: "L", yaw: 0.5, scale: 2 });
+  e("light", { id: "L", intensity: 40 });
+  const live = JSON.parse(JSON.stringify((state.st.entities as any).L));
+  check("live light merge keeps comp/parent/yaw/scale (+ keep/day pins)",
+    live.intensity === 40 && live.keep === true && live.day === false
+    && live.comp?.halo?.r === 2 && live.parent?.to === "post" && live.yaw === 0.5 && live.scale === 2,
+    JSON.stringify(live));
+
+  // join path: snapshot holds the decorated light; the partial rides the tail
+  const snap = emptyState();
+  for (let s = 101; s <= 104; s++) foldEntry(snap, { seq: s, ts: 5000 + s, actor: "t", verb: ["light", "comp", "mount", "place"][s - 101],
+    args: [{ id: "L", pos: [1, 2, 3], color: 0x112233, intensity: 20, range: 8, keep: true, day: false },
+      { id: "L", type: "halo", data: { r: 2 } },
+      { id: "L", to: "post", offset: [0, 1, 0] },
+      { id: "L", yaw: 0.5, scale: 2 }][s - 101] } as any);
+  reset();
+  hydrate(JSON.parse(JSON.stringify(snap)), [], 104);
+  foldLive({ seq: 105, ts: 5105, actor: "t", verb: "light", args: { id: "L", intensity: 40 } });
+  check("hydrate + live partial light equals the pure live fold",
+    jeq(JSON.parse(JSON.stringify((state.st.entities as any).L)), live));
+}
+
 console.log(`\n${passed} passed, ${failed} failed`);
 if (failed) process.exit(1);

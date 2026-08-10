@@ -22,7 +22,7 @@
 // dayness); the deliberate noon-burning porch light gets its opt-out verb
 // arg with the 5f spec work.
 
-import { THREE } from './core.js';
+import { THREE, bus } from './core.js';
 import { requestLight, updateRequest, releaseLight, isCasting } from './lightrig.js';
 import { registerEditor } from './inspect.js';
 
@@ -102,13 +102,68 @@ export function disposeLight(group) {
   });
 }
 
+// ---- the editor's commit coalescer + refusal rollback -------------------------
+// A colour-picker gesture fires input/change continuously; committing every
+// event ate the whole verb budget (VERB_RATE, 12 per 4s) mid-drag, the server
+// refused the rest, and the local preview ran ahead of a fold that never
+// heard it — until the next rejoin snapped the light back. So edits commit at
+// most one `light` verb per EDIT_COMMIT_MS (a trailing send guarantees the
+// FINAL value of the gesture), and a refusal rolls the preview back to fold
+// truth: net.js announces 'verb-refused' on the bus, this module names every
+// light with an edit in flight ('light-refused'), and the models realizer
+// re-derives it from state — one refreshLight call, live ≡ join.
+const EDIT_COMMIT_MS = 350;   // 4000/350 ≈ 11.4 per rate window, under VERB_RATE
+                              // (chatbridge paces world verbs the same way)
+const liveEdits = new Map();  // id -> { commit, pending, sent, timer, lastSend }
+
+function queueCommit(id, commit, patch) {
+  let e = liveEdits.get(id);
+  if (!e) liveEdits.set(id, e = { commit, pending: null, sent: null, timer: 0, lastSend: 0 });
+  e.commit = commit;
+  if (Date.now() - e.lastSend > 5000) e.sent = null;   // dedup is per-gesture, not forever
+  // drop echoes: range/checkbox controls fire `change` with the exact value
+  // the throttled `input` send already carried — one gesture, one final verb
+  const fresh = Object.entries(patch).filter(([k, v]) => e.sent?.[k] !== v);
+  if (!fresh.length && !e.pending) return;
+  e.pending = { ...(e.pending ?? {}), ...patch };
+  if (e.timer) return;   // a trailing send is armed and will carry this value
+  const wait = EDIT_COMMIT_MS - (Date.now() - e.lastSend);
+  const flush = () => {
+    e.timer = 0;
+    if (!e.pending) return;
+    const args = e.pending;
+    e.pending = null;
+    e.sent = { ...(e.sent ?? {}), ...args };
+    e.lastSend = Date.now();
+    e.commit('light', { id, ...args });
+  };
+  if (wait <= 0) flush();
+  else e.timer = setTimeout(flush, wait);
+}
+
+// Refusals arrive as a bare {type:'error'} with prose — the wire names no
+// verb, but every refusal on this socket is OURS, and rolling an edited
+// light back to fold truth is correct even when the refusal was for
+// something else: if the light verb actually landed, its log entry
+// re-applies it a beat later. Convergence either way.
+bus.on('verb-refused', () => {
+  const now = Date.now();
+  for (const [id, e] of liveEdits) {
+    const inFlight = Boolean(e.timer) || e.pending != null || now - e.lastSend < 5000;
+    if (e.timer) { clearTimeout(e.timer); e.timer = 0; }
+    if (inFlight) bus.emit('light-refused', { id });
+    liveEdits.delete(id);
+  }
+});
+
 // ---- the inspector's light editor -------------------------------------------
 // Registered here because the MEANING of these fields lives in this module:
 // what a sane brightness range is, and what `keep` honestly promises (top
 // priority in the slot pool — but still glow-only when the pool is spent on
-// other keeps). Dragging previews locally through updateLight; releasing
-// commits ONE partial `light` verb (just the touched field — the fold
-// merges), so a gesture is one log line, not a stream.
+// other keeps). Dragging previews locally through updateLight and commits
+// through the coalescer above — at most one partial `light` verb per
+// EDIT_COMMIT_MS (just the touched field — the fold merges), with the
+// gesture's final value always sent on release.
 registerEditor(({ id, obj, commit }) => {
   if (!obj?.userData?.isLight) return null;
   const p = obj.userData.lightParams ?? {};
@@ -143,11 +198,15 @@ registerEditor(({ id, obj, commit }) => {
                 : Number(el.value);
         el.addEventListener('input', () => {
           updateLight(obj, { [field]: read() });
+          // commit rides the drag, coalesced — the fold tracks the preview
+          // instead of hearing one stale gesture-end after a rate refusal
+          queueCommit(id, commit, { [field]: read() });
           const out = root.querySelector(`[data-lp-out="${field}"]`);
           if (out) out.textContent = el.value;
         });
         el.addEventListener('change', () => {
-          commit('light', { id, [field]: read() });
+          updateLight(obj, { [field]: read() });
+          queueCommit(id, commit, { [field]: read() });   // final value, always sent (trailing)
           el.blur();   // release focus so the panel's held repaints resume
         });
       }
