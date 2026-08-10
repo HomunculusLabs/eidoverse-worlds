@@ -72,7 +72,7 @@ const ampOf = (m, def = 0) => {
  *  get a real t0 stamped at fold; this is the fallback for old logs.) */
 const since = (m, nowMs) => Math.max(0, (nowMs - (m.t0 ?? (m._t0 ??= nowMs))) / 1000);
 
-/** ⚠ MIRRORS pendulumImpulse math in server/server.ts — keep in sync, or a
+/** ⚠ MIRRORS pendulumImpulse math in server/reactions.ts — keep in sync, or a
  *  joiner's swing disagrees with the one being pushed.
  *  Missing damp = 0 = swings FOREVER. Friction is opt-in: a declared
  *  pendulum is ambient decoration, and a default 0.06 meant every

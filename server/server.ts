@@ -6,432 +6,25 @@
 // No world manifest: everything about a world arrives through its log.
 
 import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, renameSync, readdirSync, copyFileSync } from "node:fs";
-import { join, resolve, normalize, basename } from "node:path";
+import { join, normalize, basename } from "node:path";
 import { randomBytes } from "node:crypto";
-import { verifyToken, JtiCache } from "./aid1.ts";
+// config FIRST — it carries the WORLDS_DIR mkdir, and auth.ts/moderation.ts
+// carry their restore-at-boot blocks, so this import order IS the unsplit
+// file's boot order: mkdir → session restore → ban restore (§15, step 7a).
+import { PORT, JOIN_TOKEN, UPLOAD_CAP, RECORD, ROOT, WORLDS_DIR, LIBRARY_DIR, OPT_DIR, STORE_MIN, FOLD_EVERY, VERB_RATE, MSG_RATE, FRAME_MS, FRAME_SKIP_BUFFERED } from "./config.ts";
+import { type HnSession, hnSessions, hnJti, sessionFromCookie, saveSessions, SESSION_TTL_MS, HN_ISSUER_KEY, HN_ISS, HN_AUD, HN_LOGIN_URL, HN_REQUIRE_LOGIN, agentTokens } from "./auth.ts";
+import { globalBans, saveGlobalBans, findBan } from "./moderation.ts";
+import { isAdminId, worldHasOwner, rightsOf, VERB_NEEDS, lockRefusal } from "./rights.ts";
+import { resolveLibFile, lintMotion, lintParticles } from "./lint.ts";
+import { reactToUse } from "./reactions.ts";
+import { verifyToken } from "./aid1.ts";
 import { BehaviorHost, wireBehaviorGate, wireBehaviorStore, behaviorLimits } from "./behaviors.ts";
 import { summarizeGlb } from "./geometry.ts";
 // The reference fold (spec/PROTOCOL.md §2–§3), extracted to shared/ so the
 // sequencer, the browser client, and the mcpl agent stop mirroring it by
 // hand — house rule 1 by construction. Pure and dependency-free; it imports
 // shared/forecast.js itself for the sky/weather cases.
-import { foldEntry, emptyState, trimRecentChat, ROLE_RANK, type LogEntry, type WorldState } from "../shared/fold.js";
-// Likewise for the `particles` component: one validator, so the flight
-// recorder's opinion about an emitter is the renderer's own opinion.
-import { normalizeParticles } from "../shared/particles.js";
-
-const PORT = Number(process.env.PORT ?? 8940);
-// Show-night door policy. Empty = open (dev on a tailnet). On a public box you
-// MUST set this — the boot log shouts if you forgot. Checked at join and upload.
-const JOIN_TOKEN = process.env.JOIN_TOKEN ?? "";
-const UPLOAD_CAP = Number(process.env.UPLOAD_CAP_MB ?? 20) * 1_000_000;
-// ---- archipelago-home identity (docs/home-node.md §7) ----------------------
-// The second door, alongside JOIN_TOKEN: humans log in with Discord at the
-// home node, arrive at /auth with an aid1 token in the URL fragment, swap it
-// for a session cookie here, and join with a VERIFIED identity. Verification
-// is offline (issuer pubkey below); the home node down = existing sessions
-// and the JOIN_TOKEN door keep working.
-//   HN_ISSUER_KEY   pinned issuer pubkey `ed25519:…` — unset disables the door
-//   HN_ISS          issuer domain            (default id.animalabs.ai)
-//   HN_LOGIN_URL    where "Login with Discord" sends people
-//   HN_REQUIRE_LOGIN=1  browser clients without a session are sent to login
-//                       (JOIN_TOKEN joins still pass — invite links keep working)
-const HN_ISSUER_KEY = process.env.HN_ISSUER_KEY ?? "";
-const HN_ISS = process.env.HN_ISS ?? "id.animalabs.ai";
-const HN_AUD = "eidoverse";
-const HN_LOGIN_URL = process.env.HN_LOGIN_URL ?? `https://${HN_ISS}/login?audience=${HN_AUD}`;
-const HN_REQUIRE_LOGIN = process.env.HN_REQUIRE_LOGIN === "1";
-const SESSION_TTL_MS = 12 * 60 * 60_000; // event-length; re-login is two clicks
-
-type HnSession = { sub: string; name: string; scopes: string[]; claims?: Record<string, unknown>; exp: number };
-const hnSessions = new Map<string, HnSession>();
-const hnJti = new JtiCache();
-function sessionFromCookie(cookie: string | null): HnSession | null {
-  const m = /(?:^|;\s*)ew_sess=([a-f0-9]{64})/.exec(cookie ?? "");
-  if (!m) return null;
-  const s = hnSessions.get(m[1]!);
-  if (!s) return null;
-  if (s.exp < Date.now()) { hnSessions.delete(m[1]!); return null; }
-  return s;
-}
-// RECORD_FRAMES=1 appends every broadcast stage frame (plus roster deltas) to
-// worlds/<name>/frames-<bootTs>.jsonl. World log + frames file + asset store =
-// enough to re-render the whole performance offline, at production quality,
-// forever. Clients are told at join — recording is never invisible.
-const RECORD = process.env.RECORD_FRAMES === "1";
-const ROOT = resolve(import.meta.dir, "..");
-// Dev instances point this elsewhere so a scratch sequencer can't append to the
-// live worlds' logs (they are append-only and forever — a stray dev spawn is
-// permanent). Default keeps the production path unchanged.
-const WORLDS_DIR = resolve(process.env.WORLDS_DIR ?? join(ROOT, "worlds"));
-// The eidoverse-video checkout = the asset library (models, VRMs, animations).
-const LIBRARY_DIR = resolve(process.env.EIDOVERSE_DIR ?? join(ROOT, "..", "eidoverse-video"));
-const OPT_DIR = join(ROOT, "assets", "opt");
-// Optimized shadows of store uploads (draco+webp@1024, see server/optimize.ts).
-// Originals in store/ are never touched; /library serving prefers a store-min
-// sibling when one exists. `.failed` markers stop hopeless files from being
-// retried every boot.
-const STORE_MIN = join(OPT_DIR, "store-min");
-
-mkdirSync(WORLDS_DIR, { recursive: true });
-
-// ---- session persistence ----------------------------------------------------
-// Sessions used to be memory-only, so every deploy logged the whole show out
-// and sent verified humans back to the door mid-event. They survive restarts
-// now. The file holds bearer-equivalent session ids — 0600 and gitignored,
-// same posture as mcpl/tokens.json.
-const SESSIONS_FILE = join(ROOT, ".sessions.json");
-function saveSessions() {
-  try {
-    const live = [...hnSessions].filter(([, s]) => s.exp > Date.now());
-    writeFileSync(`${SESSIONS_FILE}.tmp`, JSON.stringify(Object.fromEntries(live)), { mode: 0o600 });
-    renameSync(`${SESSIONS_FILE}.tmp`, SESSIONS_FILE); // atomic — a crash mid-write never truncates the live file
-  } catch (e) { console.log(`[auth] session save failed: ${e}`); }
-}
-try {
-  if (existsSync(SESSIONS_FILE)) {
-    const raw = JSON.parse(readFileSync(SESSIONS_FILE, "utf8")) as Record<string, HnSession>;
-    for (const [sid, s] of Object.entries(raw)) {
-      if (/^[a-f0-9]{64}$/.test(sid) && s.exp > Date.now()) hnSessions.set(sid, s);
-    }
-    if (hnSessions.size) console.log(`[auth] restored ${hnSessions.size} live session(s)`);
-  }
-} catch (e) { console.log(`[auth] session restore failed (starting empty): ${e}`); }
-
-// ---- global bans ------------------------------------------------------------
-// Per-world bans live in each world's log (the `ban` verb — event-sourced,
-// auditable, fork-copied, like roles). There is no global log, so the
-// instance-wide list is a JSON file INSIDE WORLDS_DIR (not ROOT): bans are
-// world data, and a dev sequencer pointed at a scratch WORLDS_DIR must get a
-// scratch ban list too — same doctrine as the logs themselves. Keyed by
-// lowercased display id, carrying the durable principal `sub` when it was
-// known at ban time (a name is evadable by /name; a sub is not).
-type BanRec = { by: string; ts: number; reason?: string; sub?: string };
-const BANS_FILE = join(WORLDS_DIR, ".bans.json");
-const globalBans: Record<string, BanRec> = {};
-function saveGlobalBans() {
-  try {
-    writeFileSync(`${BANS_FILE}.tmp`, JSON.stringify(globalBans, null, 2), { mode: 0o600 });
-    renameSync(`${BANS_FILE}.tmp`, BANS_FILE);
-  } catch (e) { console.log(`[mod] global ban save failed: ${e}`); }
-}
-try {
-  if (existsSync(BANS_FILE)) {
-    const raw = JSON.parse(readFileSync(BANS_FILE, "utf8")) as Record<string, BanRec>;
-    for (const [id, b] of Object.entries(raw)) if (b && typeof b.by === "string") globalBans[id.toLowerCase()] = b;
-    if (Object.keys(globalBans).length) console.log(`[mod] ${Object.keys(globalBans).length} global ban(s) loaded`);
-  }
-} catch (e) { console.log(`[mod] global ban restore failed (starting empty): ${e}`); }
-
-/** Does this ban list hit this identity? Checked under both handles, same
- *  doctrine as rightsOf: the display id (case-insensitive) and the durable
- *  principal sub. Ban lists are small; the sub scan is nothing. */
-function findBan(map: Record<string, BanRec> | undefined, id: string, sub?: string): BanRec | null {
-  if (!map) return null;
-  const hit = map[id.toLowerCase()];
-  if (hit) return hit;
-  if (sub) for (const b of Object.values(map)) if (b.sub === sub) return b;
-  return null;
-}
-
-// ---------------------------------------------------------------- world logs
-
-/** How many entries may accumulate past a snapshot before folding again.
- *  Small enough that a joiner's tail stays trivial, large enough that a busy
- *  world is not writing a snapshot per action. */
-const FOLD_EVERY = Number(process.env.FOLD_EVERY ?? 150);
-/** Authored verbs allowed per client per 4s. A griefer gets silence; a person
- *  arranging furniture must not. Configurable because a build session and a
- *  show night want different answers. */
-const VERB_RATE = Number(process.env.VERB_RATE ?? 12);
-/** All messages per client per second — 15Hz of pose plus verbs plus slack. */
-const MSG_RATE = Number(process.env.MSG_RATE ?? 60);
-
-// ---------------------------------------------------------------- motion lint
-//
-// The fold is blind and the evaluator is client-side — which means a motion
-// whose params the evaluator can't read fails as pure SILENCE: rights-legal,
-// shape-legal, folded, and perfectly still. Fable spent a night debugging
-// exactly that, reading a flight recorder that truthfully contained nothing,
-// because the server had no opinion and the one component type it DOES
-// understand (it stamps t0, computes impulses) never shared what it knew.
-//
-// This is the sharing. Advisory only — the entry has already folded and
-// nothing here can (or should) block it. Runs detached from the verb path;
-// findings land in the recorder within a second, kind "motion-lint".
-
-const MOTION_TYPES: Record<string, Set<string>> = {
-  pendulum: new Set(["type", "axis", "pivot", "amp", "amplitude", "period", "phase", "damp", "maxAmp", "t0", "part", "cause", "by"]),
-  spin: new Set(["type", "axis", "pivot", "degPerSec", "rpm", "phase", "t0", "part", "cause", "by"]),
-  orbit: new Set(["type", "center", "radius", "degPerSec", "phase", "face", "t0", "part", "cause", "by"]),
-  bob: new Set(["type", "axis", "amp", "amplitude", "period", "phase", "t0", "part", "cause", "by"]),
-  path: new Set(["type", "points", "speed", "duration", "loop", "face", "t0", "part", "cause", "by"]),
-};
-
-function resolveLibFile(lib: string): string | null {
-  const rel = normalize(lib).replace(/^\/+/, "");
-  if (rel.includes("..") || !/\.(glb|vrm)$/i.test(rel)) return null;
-  for (const base of [OPT_DIR, LIBRARY_DIR]) {
-    const p = normalize(join(base, rel));
-    if (p.startsWith(base) && existsSync(p)) return p;
-  }
-  return null;
-}
-
-function lintMotion(w: World, entry: LogEntry): void {
-  // detached on purpose: geometry parsing is async and the verb path is not
-  void (async () => {
-    try {
-      const a = entry.args as Record<string, unknown>;
-      const m: Record<string, unknown> = entry.verb === "motion" ? a
-        : (a?.data as Record<string, unknown>) ?? {};
-      const type = m.type;
-      if (type == null) return;                       // coming to rest — nothing to lint
-      const id = String(a.id ?? "");
-      const part = typeof m.part === "string" ? m.part
-        : entry.verb === "comp" && String(a.type ?? "").startsWith("motion:") ? String(a.type).slice(7) : null;
-      const known = MOTION_TYPES[String(type)];
-      if (!known) {
-        w.debug("motion-lint", { entity: id, by: entry.actor,
-          why: `motion type "${type}" is unknown to current clients (${Object.keys(MOTION_TYPES).join("/")}) — the thing will stand still until an evaluator learns it` });
-        return;
-      }
-      const ignored = Object.keys(m).filter((k) => k !== "id" && !known.has(k) && !k.startsWith("_"));
-      if (ignored.length) {
-        w.debug("motion-lint", { entity: id, by: entry.actor,
-          why: `params the evaluator will ignore on ${type}: ${ignored.join(", ")} (accepted: ${[...known].filter((k) => !["cause", "by", "part", "type"].includes(k)).join(", ")})` });
-      }
-      if (part) {
-        const ent = w.state.entities[id];
-        const file = ent?.lib ? resolveLibFile(ent.lib) : null;
-        const sum = file ? await summarizeGlb(file) : null;
-        if (sum) {
-          const names = sum.nodes.map((n) => n.name);
-          if (!names.includes(part)) {
-            const orphanNote = sum.orphans?.includes(part)
-              ? ` — "${part}" IS in the file but attached to no scene: an export leftover no client renders`
-              : "";
-            w.debug("motion-lint", { entity: id, by: entry.actor,
-              why: `part "${part}" is not among ${id}'s rendered parts [${names.join(", ")}]${orphanNote}` });
-          }
-        }
-      }
-    } catch { /* lint must never hurt anything */ }
-  })();
-}
-
-/** The same courtesy for `particles`, from the same shared module the browser
- *  host and the mcpl agent validate with — so what the recorder says is
- *  exactly what a renderer will do, not a second opinion about it. Advisory:
- *  the component has already folded, and an unrenderable emitter still
- *  persists and still reads as an emitter in text-tier perception. */
-function lintParticles(w: World, entry: LogEntry): void {
-  try {
-    const a = entry.args as Record<string, unknown>;
-    const id = String(a.id ?? "");
-    if (a.data == null) return;                      // put out — nothing to lint
-    const r = normalizeParticles(a.data, { entityId: id });
-    if (!r.ok) {
-      w.debug("particles-lint", { entity: id, by: entry.actor, why: r.why });
-      return;
-    }
-    if (r.notes.length) {
-      w.debug("particles-lint", { entity: id, by: entry.actor, why: r.notes.join(" · ") });
-    }
-  } catch { /* lint must never hurt anything */ }
-}
-
-// ---------------------------------------------------------------- reactions
-//
-// The first slice of the behavior runtime: an entity's `reactions` component
-// maps a use-action to an effect. The shape is the general one — triggers in,
-// ordinary logged verbs out, cause carried in the entry — even though only one
-// effect kind exists so far (a pendulum impulse: the swing). Reactions run
-// with WORLD authority precisely because the trigger is rank 0: a visitor may
-// push the swing, and the push moving the swing is the AUTHOR's standing
-// decision (they attached the component), not the visitor's rights.
-//
-// Wrapped whole in try/catch: no reaction may ever take the server down
-// (lesson of the 4f82250 crash loop — a ws handler must never leak a throw).
-
-function reactToUse(w: World, cause: LogEntry): void {
-  const a = cause.args as Record<string, unknown>;
-  const id = String(a?.id ?? "");
-  const action = String(a?.action ?? "use");
-  try {
-    const ent = w.state.entities[id];
-    if (!ent) {
-      w.debug("reaction-skip", { entity: id, action, by: cause.actor, why: "no such entity" });
-      return;
-    }
-    const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
-    if (!rx) {
-      w.debug("reaction-skip", { entity: id, action, by: cause.actor,
-        why: ent.comp?.reactions ? `no reaction for "${action}" (has: ${Object.keys(ent.comp.reactions as object).join(", ")})`
-          : "entity has no reactions component" });
-      return;
-    }
-    if (rx.impulse != null) {
-      const m = (ent.comp?.motion as Record<string, unknown>) ?? {};
-      if (m.type != null && m.type !== "pendulum") {   // impulses push pendulums (so far)
-        w.debug("reaction-skip", { entity: id, action, by: cause.actor,
-          why: `impulse needs a pendulum motion, found "${m.type}"` });
-        return;
-      }
-      const next = pendulumImpulse(m, Number(rx.impulse), cause.ts);
-      const entry = w.append("world", "motion",
-        { id: a.id, ...next, cause: cause.seq, by: cause.actor });
-      w.broadcast({ type: "log", entry });
-      w.debug("reaction", { entity: id, action, by: cause.actor, cause: cause.seq, effect: entry.seq });
-      return;
-    }
-    w.debug("reaction-skip", { entity: id, action, by: cause.actor,
-      why: `reaction has no effect this server knows (${Object.keys(rx).join(", ")})` });
-  } catch (err) {
-    console.error(`[world:${w.name}] reaction failed (never fatal)`, err);
-    w.debug("reaction-error", { entity: id, action, by: cause.actor, error: String(err) });
-  }
-}
-
-/** Closed-form pendulum push: evaluate angle and angular velocity at the push
- *  instant, add the impulse to velocity, re-express as fresh (amp, phase, t0).
- *  Pushing against the motion does little; pushing with it builds — a real
- *  swing's feel, in one logged entry. Damping is applied to amplitude between
- *  pushes and ignored in the instantaneous velocity term (small for the damp
- *  values that look right).
- *  ⚠ MIRRORED in client/lib/motion.js (evalPendulum) — keep the math in sync,
- *  or joiners see a swing that disagrees with the one being pushed. */
-function pendulumImpulse(m: Record<string, unknown>, impulse: number, ts: number) {
-  const period = Number(m.period ?? 3.5);
-  const w0 = (2 * Math.PI) / period;
-  // mirrored with pendulumTheta: missing damp = 0 = perpetual. Friction is
-  // opt-in; pushable-swing recipes set it explicitly because decay-between-
-  // pushes is part of that design.
-  const damp = Number(m.damp ?? 0);
-  const t = m.t0 != null ? Math.max(0, (ts - Number(m.t0)) / 1000) : 0;
-  // generous reader, mirrored with the client: `amplitude` is amp too
-  const amp = Number(m.amp ?? (m as any).amplitude ?? 0) * Math.exp(-damp * t);
-  const ph = w0 * t + Number(m.phase ?? 0);
-  const theta = amp * Math.cos(ph);
-  const vel = -amp * w0 * Math.sin(ph) + (Number.isFinite(impulse) ? impulse : 0);
-  const maxAmp = Number(m.maxAmp ?? 1.1);
-  const namp = Math.min(maxAmp, Math.hypot(theta, vel / w0));
-  const nphase = Math.atan2(-(vel / w0), theta);
-  return {
-    type: "pendulum",
-    axis: (m.axis as number[]) ?? [1, 0, 0],
-    pivot: (m.pivot as number[]) ?? [0, 2, 0],
-    period, damp,
-    ...(m.maxAmp != null ? { maxAmp } : {}),
-    amp: Math.round(namp * 1000) / 1000,
-    phase: Math.round(nphase * 1000) / 1000,
-    t0: ts,
-  };
-}
-
-// ---------------------------------------------------------------- permissions
-//
-// Per-world roles, aligned with connectome/docs/home-node.md: the id in the
-// roles map is the principal — today a self-asserted name (humans) or a
-// token-verified agent name; when archipelago-home lands, aid1 `sub`s slot in
-// here without the model changing. Rights ladder:
-//   visitor  present, talk, emote           (say)
-//   builder  + spawn / place / remove / drag         (build)
-//   owner    + terrain / grass / sky / weather / grant  (shape the world)
-//   gen      orthogonal capability: introduce NEW assets (`asset` verb) —
-//            the landing point of Orrery generations, i.e. "spend".
-// A world with no owner is OPEN: everyone is builder+gen (pre-permissions
-// behaviour; scratch worlds stay frictionless). First embodied joiner of a
-// brand-new world is auto-granted owner. The ladder itself (ROLE_RANK) is
-// protocol (§7) and lives in shared/fold.js — imported above.
-// Operators (comma-separated ids) who are owner+gen EVERYWHERE — the
-// bootstrap for pre-permissions worlds and the lockout recovery.
-const ADMIN_IDS = new Set((process.env.WORLD_ADMIN ?? "").split(",").map((s) => s.trim()).filter(Boolean));
-
-function worldHasOwner(st: WorldState): boolean {
-  for (const [id, r] of Object.entries(st.roles ?? {})) {
-    if (id !== "*" && r.role === "owner") return true;
-  }
-  return false;
-}
-function rightsOf(w: World, id: string, sub?: string): { role: string; gen: boolean } {
-  // Grants are honored under either handle: the display id (what owners see
-  // and type) or the durable principal sub (what survives a rename —
-  // home-node.md §5: key state by sub). WORLD_ADMIN accepts both too.
-  if (ADMIN_IDS.has(id) || (sub && ADMIN_IDS.has(sub))) return { role: "owner", gen: true };
-  if (!worldHasOwner(w.state)) return { role: "builder", gen: true };   // open world
-  // In an OWNED world, unlisted ids take the wildcard default: builder
-  // WITHOUT gen unless the owner says otherwise. Editing stays frictionless
-  // for drop-in company; introducing new assets (spend) is what's restricted
-  // by default. `/grant * visitor` closes the world; `/grant * +gen` opens
-  // generation to everyone.
-  let r = (sub ? w.state.roles?.[sub] : undefined) ?? w.state.roles?.[id] ?? w.state.roles?.["*"] ?? { role: "builder" as const };
-  // a name-keyed grant that KNOWS its subject's sub is worn only by that sub
-  if ((r as any).sub && (r as any).sub !== sub) {
-    r = w.state.roles?.["*"] ?? { role: "builder" as const };
-  }
-  return { role: r.role, gen: r.role === "owner" || Boolean(r.gen) };
-}
-/** What each verb demands. `asset` is the spend gate; `grant` is owner-only. */
-const VERB_NEEDS: Record<string, { rank: number; gen?: boolean }> = {
-  say: { rank: 0 },
-  // Using the world is for everyone; only authoring it is gated.
-  use: { rank: 0 },
-  // mount/dismount are rank 1 for THINGS (loading cargo is building) but the
-  // gate drops them to rank 0 when you mount YOURSELF — sitting on a swing is
-  // using the world, not editing it. See the verb handler.
-  mount: { rank: 1 }, dismount: { rank: 1 },
-  comp: { rank: 1 }, motion: { rank: 1 },
-  // Binding a runtime script is building — the sandbox, capability mask,
-  // author-rights-at-emit, and budgets are what make builder-rank safe.
-  // (`bstate` is deliberately absent: only the server writes script state.)
-  behavior: { rank: 1 },
-  spawn: { rank: 1 }, place: { rank: 1 }, remove: { rank: 1 }, light: { rank: 1 },
-  // An instantaneous radial push (blast, gust). Authoring a physical event is
-  // building; whether any BODY moves stays each body's own consent (pushable,
-  // client-side) — this rank only stops visitors from spamming detonations.
-  force: { rank: 1 },
-  // Punting a thing is USING the world (docs/leases.md): the verb is the
-  // CAUSE — logged, attributed, replay-inert — and any present client with a
-  // physics plugin volunteers to simulate it (the lease table arbitrates the
-  // race). This is why agents need no special tool: world_verb punt. (It is
-  // `punt`, not `kick`, on the wire — `kick` is moderation's remove-a-person,
-  // and one log word meaning two acts by referent type is a landmine.)
-  punt: { rank: 0 },
-  asset: { rank: 1, gen: true },
-  terrain: { rank: 2 }, grass: { rank: 2 }, sky: { rank: 2 }, weather: { rank: 2 },
-  grant: { rank: 2 },
-  // Moderation is owner power, exactly like grant — and agents get it through
-  // the same gate, so an agent OWNING a world can moderate it with no extra
-  // capability machinery. (Global bans are not verbs at all: see "global-ban".)
-  kick: { rank: 2 }, ban: { rank: 2 }, unban: { rank: 2 },
-};
-
-/** WORLD_ADMIN under either handle — the same doctrine as rightsOf. */
-function isAdminId(id: string, sub?: string): boolean {
-  return ADMIN_IDS.has(id) || (sub != null && ADMIN_IDS.has(sub));
-}
-
-/** Is this verb trying to move or destroy a nailed-down thing?
- *
- *  `comp {id, type: "lock", data: true}` nails an entity in place: while the
- *  lock is on, nothing may move it (place, punt, cargo-mount), replace it
- *  (spawn/light onto the same id), or remove it. It is an ACCIDENT guard, not
- *  a rights system — anyone builder+ can toggle it, and the deliberate
- *  unlock (`data: null`) is exactly what converts an accident into an intent.
- *  Everything that doesn't relocate the thing stays open: sitting ON it
- *  (self-mount), use, motion, behaviors, other comps — content, not carpentry.
- *  Applies to everyone including the locker: your own stray drag is the
- *  original accident (a build-mode fallthrough once relocated Fable's swing). */
-const LOCK_GUARDED = new Set(["place", "remove", "punt", "mount", "spawn", "light"]);
-function lockRefusal(w: World, verb: string, args: Record<string, unknown> | undefined): string | null {
-  if (!LOCK_GUARDED.has(verb)) return null;
-  const id = String(args?.id ?? "");
-  const ent = id ? w.state.entities[id] : undefined;   // people aren't entities — self-mount passes here
-  if (!ent?.comp?.lock) return null;
-  const act = verb === "remove" ? "remove" : verb === "spawn" || verb === "light" ? "replace" : "move";
-  return `"${id}" is locked — unlock it first (comp {id: "${id}", type: "lock", data: null}) to ${act} it`;
-}
+import { foldEntry, emptyState, ROLE_RANK, type LogEntry, type WorldState } from "../shared/fold.js";
 
 // Behavior sandbox wiring: a script's emit is gated by its AUTHOR's live
 // rights (revoke the grant, the behavior loses its teeth) through the same
@@ -440,44 +33,14 @@ wireBehaviorStore(join(ROOT, "assets", "opt"));
 wireBehaviorGate((w, author, verb, args) => {
   const needs = VERB_NEEDS[verb];
   if (!needs) return `verb not allowed: ${verb}`;
-  const rights = rightsOf(w as unknown as World, author);
+  const rights = rightsOf((w as unknown as World).state, author);
   if (ROLE_RANK[rights.role] < needs.rank || (needs.gen && !rights.gen)) {
     return `"${verb}" needs more than ${author}'s "${rights.role}" role here`;
   }
   // a locked thing refuses scripts by the same rule as hands (a behavior
   // nudging a nailed-down bench is still an accident vector)
-  return lockRefusal(w as unknown as World, verb, args);
+  return lockRefusal((w as unknown as World).state, verb, args);
 });
-
-// Agent identity: the MCPL door (mcpl/tokens.json) already holds per-agent
-// bearer tokens. The sequencer reads the same file so (a) an agent's name is
-// RESERVED — a plain browser join cannot claim it — and (b) a join carrying
-// the right token is a verified agent. Hot-reloaded by mtime, like the MCPL
-// server does.
-const AGENT_TOKENS_PATH = join(ROOT, "mcpl", "tokens.json");
-let agentTokCache: { mtime: number; byToken: Map<string, string>; names: Set<string> } | null = null;
-function agentTokens() {
-  try {
-    const mtime = existsSync(AGENT_TOKENS_PATH) ? Math.round(Bun.file(AGENT_TOKENS_PATH).lastModified) : 0;
-    if (!agentTokCache || agentTokCache.mtime !== mtime) {
-      const byToken = new Map<string, string>();
-      const names = new Set<string>();
-      if (mtime) {
-        const raw = JSON.parse(readFileSync(AGENT_TOKENS_PATH, "utf8")) as Record<string, { id?: string }>;
-        for (const [tok, v] of Object.entries(raw)) {
-          if (!v?.id) continue;
-          byToken.set(tok, v.id);
-          names.add(v.id.toLowerCase());
-        }
-      }
-      agentTokCache = { mtime, byToken, names };
-    }
-  } catch (e) {
-    console.error("[perm] mcpl/tokens.json unreadable:", (e as Error).message);
-    agentTokCache ??= { mtime: 0, byToken: new Map(), names: new Set() };
-  }
-  return agentTokCache;
-}
 
 /** A pose as it should be handed to SOMEONE ELSE — the settled result rather
  *  than whatever frame the body happened to be in.
@@ -500,6 +63,8 @@ function settledPose(pose: unknown): Record<string, unknown> | null {
   if (still.clip === "ragdoll") { still.clip = "idle"; delete still.pose; }
   return still;
 }
+
+// ---------------------------------------------------------------- world logs
 
 class World {
   name: string;
@@ -1167,19 +732,10 @@ const server = Bun.serve({
       // the parsed tier. Same trust level as the world log: public reads.
       const j = (o: unknown, status = 200) =>
         new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json" } });
-      const resolveLib = (lib: string): string | null => {
-        const rel = normalize(lib).replace(/^\/+/, "");
-        if (rel.includes("..") || !/\.(glb|vrm)$/i.test(rel)) return null;
-        for (const base of [OPT_DIR, LIBRARY_DIR]) {
-          const p = normalize(join(base, rel));
-          if (p.startsWith(base) && existsSync(p)) return p;
-        }
-        return null;
-      };
       const wname = url.searchParams.get("world");
       if (!wname) {
         const lib = url.searchParams.get("lib") ?? "";
-        const file = resolveLib(lib);
+        const file = resolveLibFile(lib);
         if (!file) return j({ error: `no such asset: ${lib}` }, 404);
         const sum = await summarizeGlb(file);
         return sum ? j({ lib, ...sum }) : j({ error: "geometry parsing unavailable" }, 503);
@@ -1194,7 +750,7 @@ const server = Bun.serve({
       if (id) {
         const e = w.state.entities[id];
         if (!e) return j({ error: `no entity "${id}" in ${wname}` }, 404);
-        const file = e.lib ? resolveLib(e.lib) : null;
+        const file = e.lib ? resolveLibFile(e.lib) : null;
         const sum = file ? await summarizeGlb(file) : null;
         return j({ id, lib: e.lib ?? null, pos: e.pos, yaw: e.yaw ?? 0, scale: e.scale ?? 1,
           parent: e.parent ?? null, comp: e.comp ?? {},
@@ -1204,7 +760,7 @@ const server = Bun.serve({
       const withBoxes = url.searchParams.get("boxes") !== "0";
       const out = [];
       for (const [eid, e] of Object.entries(w.state.entities)) {
-        const file = withBoxes && e.lib ? resolveLib(e.lib) : null;
+        const file = withBoxes && e.lib ? resolveLibFile(e.lib) : null;
         const sum = file ? await summarizeGlb(file) : null;
         out.push({ id: eid, lib: e.lib ?? null, kind: e.kind ?? "thing",
           pos: e.pos, yaw: e.yaw ?? 0, scale: e.scale ?? 1,
@@ -1783,7 +1339,7 @@ const server = Bun.serve({
             avatars: avatarRoster(),
             // what YOU may do here, as of now (live grants update it client-side).
             // `open` = no owner exists, so rights are the everyone-builds default.
-            yourRights: { ...rightsOf(w, c.id, c.sub), open: !worldHasOwner(w.state) },
+            yourRights: { ...rightsOf(w.state, c.id, c.sub), open: !worldHasOwner(w.state) },
             // wake where you fell asleep — the world's memory of your body
             restore: c.spectator ? null : (w.poses[c.id] ?? null),
             present: [...w.clients].filter(o => o !== c && !o.spectator).map(o => ({
@@ -1839,7 +1395,7 @@ const server = Bun.serve({
           const selfMount = (msg.verb === "mount" || msg.verb === "dismount")
             && String((msg.args as Record<string, unknown> | undefined)?.id ?? "") === c.id;
           const needRank = selfMount ? 0 : needs.rank;
-          const rights = rightsOf(c.world, c.id, c.sub);
+          const rights = rightsOf(c.world.state, c.id, c.sub);
           if (ROLE_RANK[rights.role] < needRank || (needs.gen && !rights.gen)) {
             const why = needs.gen && ROLE_RANK[rights.role] >= needs.rank
               ? "bringing new assets into this world needs the gen capability — ask its owner"
@@ -1851,7 +1407,7 @@ const server = Bun.serve({
           // the lock gate sits AFTER rank (a visitor's refusal should teach
           // rank, not locks) and BEFORE shape-checks/append: a locked thing
           // refuses everyone identically, locker included
-          const lockedWhy = lockRefusal(c.world, msg.verb as string, msg.args as Record<string, unknown> | undefined);
+          const lockedWhy = lockRefusal(c.world.state, msg.verb as string, msg.args as Record<string, unknown> | undefined);
           if (lockedWhy) {
             c.world.debug("denied", { who: c.id, verb: String(msg.verb), why: "locked" });
             ws.send(JSON.stringify({ type: "error", error: lockedWhy }));
@@ -1969,7 +1525,7 @@ const server = Bun.serve({
                 ws.send(JSON.stringify({ type: "error", error: `${id} is a world operator — operators cannot be ${msg.verb === "kick" ? "kicked" : "banned"}` }));
                 return;
               }
-              if (msg.verb !== "unban" && rightsOf(c.world, id, targetSub).role === "owner") {
+              if (msg.verb !== "unban" && rightsOf(c.world.state, id, targetSub).role === "owner") {
                 ws.send(JSON.stringify({ type: "error", error: `${id} also owns this world — owners cannot ${msg.verb} each other (a WORLD_ADMIN can)` }));
                 return;
               }
@@ -1994,7 +1550,7 @@ const server = Bun.serve({
                 ws.send(JSON.stringify({ type: "error", error: 'behavior runtime must be "client" (or absent for the server sandbox)' }));
                 return;
               }
-              if (runtime === "client" && ROLE_RANK[rightsOf(c.world, c.id, c.sub).role] < 2 && !isAdminId(c.id, c.sub)) {
+              if (runtime === "client" && ROLE_RANK[rightsOf(c.world.state, c.id, c.sub).role] < 2 && !isAdminId(c.id, c.sub)) {
                 c.world.debug("denied", { who: c.id, verb: "behavior", why: "client-runtime mods are owner-only" });
                 ws.send(JSON.stringify({ type: "error", error: "offering mods to visitors' clients is for this world's owner" }));
                 return;
@@ -2377,7 +1933,7 @@ const server = Bun.serve({
           if (!c.world || c.spectator) return;
           // the RELEASE is a `place` verb the gate above checks; the live drag
           // must agree with it or visitors can slide props they can't commit
-          if (ROLE_RANK[rightsOf(c.world, c.id, c.sub).role] < 1) return;
+          if (ROLE_RANK[rightsOf(c.world.state, c.id, c.sub).role] < 1) return;
           c.world.broadcast({ type: "drag", id: msg.id, pos: msg.pos, yaw: msg.yaw, by: c.id }, c);
           break;
         }
@@ -2410,7 +1966,7 @@ const server = Bun.serve({
             ws.send(JSON.stringify({ type: "error", error: "spectators can't copy worlds — join embodied" }));
             return;
           }
-          const rights = rightsOf(c.world, c.id, c.sub);
+          const rights = rightsOf(c.world.state, c.id, c.sub);
           if (ROLE_RANK[rights.role] < 2) {
             ws.send(JSON.stringify({ type: "error", error: `copying a world needs its owner — you are a ${rights.role} here` }));
             return;
@@ -2436,7 +1992,7 @@ const server = Bun.serve({
             ws.send(JSON.stringify({ type: "error", error: "spectators can't erase worlds — join embodied" }));
             return;
           }
-          const rights = rightsOf(c.world, c.id, c.sub);
+          const rights = rightsOf(c.world.state, c.id, c.sub);
           if (ROLE_RANK[rights.role] < 2) {
             ws.send(JSON.stringify({ type: "error", error: `erasing a world needs its owner — you are a ${rights.role} here` }));
             return;
@@ -2550,13 +2106,6 @@ const server = Bun.serve({
 // tick. Frames are disposable (latest-value-wins): a client whose socket is
 // backed up skips ticks instead of queueing history it will only fast-forward
 // through. Idle worlds cost one Map.size check.
-const FRAME_MS = 66;                 // ~15Hz, matches the client's send throttle
-// Bytes of unsent backlog before we drop frames to a client. Keep TIGHT: with
-// nginx fronting, its buffers + the kernel's absorb a lot before Bun's
-// bufferedAmount rises at all (measured 2026-07-26: 33s of latency built up
-// without ever tripping a 256KB threshold). 32KB ≈ half a second of frames —
-// a slow client skips to current instead of drifting behind the show.
-const FRAME_SKIP_BUFFERED = 32_000;
 setInterval(() => {
   // per-world guard, same idiom as the behavior tick: one world's failure
   // (the RECORD path appends to disk) must cost that world one tick, not
