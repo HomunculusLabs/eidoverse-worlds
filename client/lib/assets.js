@@ -1,10 +1,12 @@
 // assets — every byte the client pulls, and the host shims that let Skye's
 // toolkit modules run unmodified in a browser.
 //
-// Three caches, all keyed by library path and all "download+parse once":
+// Four caches, all keyed by library path and all "download+parse once":
 //   byteCache  raw bytes (with progress reporting into the loading tray)
 //   glbCache   parsed GLB prototypes — every use gets a skeleton clone
 //   vrmaCache  animation bytes, retargeted per-VRM at use
+//   vrmPool    whole parsed VRM instances at rest (§19b — no clone exists
+//              for a bound rig, so released bodies are reworn intact)
 
 import { THREE, renderer, camera, scene, report, bus } from './core.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -14,7 +16,7 @@ import { MToonMaterialLoaderPlugin } from '@pixiv/three-vrm-materials-mtoon';
 import { MToonNodeMaterial } from '@pixiv/three-vrm-materials-mtoon/nodes';
 import { VRMAnimationLoaderPlugin, createVRMAnimationClip } from '@pixiv/three-vrm-animation';
 import { clone as skeletonClone } from 'three/addons/utils/SkeletonUtils.js';
-import { beginWork, enqueue, nextFrame } from './loadwork.js';
+import { beginWork, enqueue, nextFrame, loadNote } from './loadwork.js';
 import { warm } from './warmqueue.js';
 import { prepareObject } from './materials.js';
 
@@ -244,6 +246,14 @@ function queueTexturePrime(tex) {
 }
 
 export async function loadVRM(libPath, { priority = 1 } = {}) {
+  // §19b: a body parsed and compiled this session never re-pays. The pool is
+  // consulted FIRST — a hit skips download+parse+skeleton+textures entirely.
+  const t0 = performance.now();
+  const pooled = takePooledVrm(libPath);
+  if (pooled) {
+    loadNote(`vrm ${libPath.split('/').pop()}: pool-hit — ${Math.round(performance.now() - t0)}ms`);
+    return pooled;
+  }
   const work = beginWork(`vrm ${libPath.split('/').pop()}`);
   try {
     work.phase('download');
@@ -257,6 +267,9 @@ export async function loadVRM(libPath, { priority = 1 } = {}) {
       work.phase('parse');
       const gltf = await new Promise((res, rej) => makeLoader(true).parse(buf, '', res, rej));
       const vrm = gltf.userData.vrm;
+      // pool ledger (§19b): path for the release side, source bytes as the
+      // VRAM proxy the pool budget counts
+      vrmMeta.set(vrm, { libPath, bytes: buf.byteLength });
       await work.yield();
       work.phase('skeleton');
       VRMUtils.combineSkeletons?.(vrm.scene) ?? VRMUtils.removeUnnecessaryJoints?.(vrm.scene);
@@ -271,6 +284,136 @@ export async function loadVRM(libPath, { priority = 1 } = {}) {
     }, { lane: 'cpu', priority });
   } finally { work.end(); }
 }
+
+// ---- the VRM instance pool (§19b) -------------------------------------------
+// GLBs cache a proto and hand out skeleton clones; VRMs cannot — three-vrm
+// binds humanoid/expressions/springBones/lookAt to SPECIFIC nodes, and the
+// vendored 3.5.2 ships no deep-clone that rebinds them (VRMUtils has exactly
+// combineMorphs/combineSkeletons/deepDispose/removeUnnecessaryJoints/
+// removeUnnecessaryVertices/rotateVRM0; the lookAt/humanoid clone()s reference
+// the SAME nodes — verified). So switching bodies pools WHOLE PARSED
+// INSTANCES: release resets one to rest and shelves it intact; take hands it
+// back out and the whole download+parse+skeleton+textures pipeline is
+// skipped. One instance serves one body at a time — two residents wearing the
+// same VRM are two instances, and the second ALSO pools on release.
+//
+// THE POOL OWNS DISPOSAL (the §13.3 landmine, recorded since step 5½):
+// Avatar.dispose used to deepDispose the body's geometry/materials/textures,
+// and a disposed-then-pooled instance is a black-avatar bug. Bodies now come
+// back here UNTOUCHED; the real deepDispose happens only at pool eviction —
+// LRU under the caps below, or the residency sweep's GPU-budget drain
+// (pooled bodies are zero-ref by construction, so they evict before protos).
+const vrmPool = new Map();        // libPath -> [{ vrm, bytes, at }], oldest first
+const vrmMeta = new WeakMap();    // vrm -> { libPath, bytes }, stamped at parse
+const warmedVrms = new WeakSet(); // instances whose pipelines warmed once
+const VRM_POOL_MAX = 2;                    // whole parsed bodies held at rest
+const VRM_POOL_BYTES = 64 * 1024 * 1024;   // source-byte proxy for their VRAM
+let vrmPoolBytes = 0;
+let vrmPoolCount = 0;
+let vrmPoolEvictions = 0;
+
+/** Has this INSTANCE been through makeAvatar's conductor warm? A pooled
+ *  body's pipelines are live in the renderer's cache — a re-warm would be a
+ *  cheap no-op that still occupies the conductor, so makeAvatar skips it.
+ *  Instance-keyed, not lib-keyed: a second fresh parse of the same lib has
+ *  brand-new material objects and warms like any first wear. */
+export const vrmWarmed = (vrm) => warmedVrms.has(vrm);
+export const markVrmWarmed = (vrm) => { warmedVrms.add(vrm); };
+
+/** Reset a parsed instance to rest — every call verified supported in the
+ *  vendored @pixiv/three-vrm 3.5.2 (lib/three-vrm.module.js):
+ *    humanoid.resetNormalizedPose / resetRawPose  (:1959, :1965)
+ *    expressionManager.resetValues                 (:370)
+ *    lookAt.reset                                  (:2500)
+ *    springBoneManager.reset                       (:5540 — per-joint rest
+ *      rotation, tails re-derived from the freshly-reset world matrices)
+ *  The closing vrm.update(0) pushes it all through the managers (normalized →
+ *  raw copy, neutral morph weights applied, lookAt applier at 0/0); spring
+ *  joints hard-guard `delta <= 0` (:5368), so the settled state survives it. */
+function resetVrmInstance(vrm) {
+  if (vrm.lookAt) { vrm.lookAt.target = null; vrm.lookAt.reset(); }
+  vrm.humanoid?.resetNormalizedPose();
+  vrm.humanoid?.resetRawPose();
+  vrm.expressionManager?.resetValues();
+  vrm.scene.updateMatrixWorld(true);   // spring tails derive from world matrices
+  vrm.springBoneManager?.reset();
+  vrm.update(0);
+}
+
+/** Deep-dispose the LRU pooled instance. `keep` is never evicted — the house
+ *  pattern (noteBytes): what just landed doesn't leave, so one over-budget
+ *  body still pools rather than thrashing. Returns false when nothing can go. */
+function evictOldestPooled(keep = null) {
+  let path = null, list = null;
+  for (const [p, l] of vrmPool) {
+    if (l[0] && (!list || l[0].at < list[0].at)) { path = p; list = l; }
+  }
+  const oldest = list?.[0];
+  if (!oldest || oldest === keep) return false;
+  list.shift();
+  if (!list.length) vrmPool.delete(path);
+  vrmPoolCount--; vrmPoolBytes -= oldest.bytes;
+  vrmMeta.delete(oldest.vrm);          // a later stray release deep-disposes, never re-pools
+  VRMUtils.deepDispose?.(oldest.vrm.scene);
+  vrmPoolEvictions++;
+  return true;
+}
+
+/** Give a body back. The instance pools INTACT — never disposed here — unless
+ *  its reset throws (evict rather than pool a haunted body: correctness beats
+ *  caching) or it never came from loadVRM (old contract: deep-dispose now). */
+export function releaseVRM(vrm) {
+  if (!vrm?.scene) return;
+  for (const list of vrmPool.values()) {  // double-release guard, before any
+    if (list.some((e) => e.vrm === vrm)) return;  // mutation: one slot per instance
+  }
+  vrm.scene.parent?.remove(vrm.scene); // detach from the scene before pooling
+  const meta = vrmMeta.get(vrm);
+  if (!meta) { VRMUtils.deepDispose?.(vrm.scene); return; }
+  try { resetVrmInstance(vrm); } catch (e) {
+    console.warn('[vrmpool] reset failed — evicting instead of pooling', e);
+    vrmMeta.delete(vrm);
+    VRMUtils.deepDispose?.(vrm.scene);
+    vrmPoolEvictions++;
+    return;
+  }
+  let list = vrmPool.get(meta.libPath);
+  if (!list) vrmPool.set(meta.libPath, list = []);
+  const entry = { vrm, bytes: meta.bytes, at: performance.now() };
+  list.push(entry);
+  vrmPoolCount++; vrmPoolBytes += entry.bytes;
+  while ((vrmPoolCount > VRM_POOL_MAX || vrmPoolBytes > VRM_POOL_BYTES)
+    && evictOldestPooled(entry)) { /* LRU out until within budget */ }
+}
+
+/** Pop an instance for re-wear. Defensively re-resets — a borrower (the
+ *  thumbnail pass runs behind whenCalm and can outlive a fast switch) may
+ *  have posed a body mid-pool; if THAT reset throws, the instance is disposed
+ *  and the caller re-parses — a miss, never a haunted hit. */
+function takePooledVrm(libPath) {
+  const list = vrmPool.get(libPath);
+  if (!list?.length) return null;
+  const entry = list.pop();
+  if (!list.length) vrmPool.delete(libPath);
+  vrmPoolCount--; vrmPoolBytes -= entry.bytes;
+  try { resetVrmInstance(entry.vrm); } catch (e) {
+    console.warn('[vrmpool] take-reset failed — re-parsing instead', e);
+    vrmMeta.delete(entry.vrm);
+    VRMUtils.deepDispose?.(entry.vrm.scene);
+    vrmPoolEvictions++;
+    return null;
+  }
+  return entry.vrm;
+}
+
+/** Debug shape — rides EW.gpu() via protoStats, like the proto/byte tiers. */
+export const poolStats = () => ({
+  instances: vrmPoolCount,
+  bytes: vrmPoolBytes,
+  budget: { instances: VRM_POOL_MAX, bytes: VRM_POOL_BYTES },
+  evictions: vrmPoolEvictions,
+  libs: [...vrmPool.entries()].map(([p, l]) => `${p.split('/').pop()}×${l.length}`),
+});
 
 // Friendly names for library paths — store hashes are unreadable, and the
 // loading tray should say "deco desk", not "4fee4b7c4794a2be".
@@ -396,6 +539,11 @@ const GPU_BUDGET = 1_500_000_000;   // bytes of renderer.info.memory.total
 export async function evictIdleProtos() {
   if ((renderer.info?.memory?.total ?? 0) < GPU_BUDGET) return 0;
   let evicted = 0;
+  // The VRM pool drains first (§19b): pooled bodies are zero-ref by
+  // construction — nobody wears an instance that sits in the pool — so under
+  // real GPU pressure they are the cheapest correct thing to give back.
+  while ((renderer.info?.memory?.total ?? 0) >= GPU_BUDGET && evictOldestPooled()) evicted++;
+  if ((renderer.info?.memory?.total ?? 0) < GPU_BUDGET) return evicted;
   for (const [lib, promise] of [...glbCache]) {
     if (libRefs.has(lib) || loadsInFlight.has(lib)) continue;   // worn, or being fitted
     const proto = await promise.catch(() => null);
@@ -425,6 +573,7 @@ export async function evictIdleProtos() {
 export const protoStats = () => ({
   protos: glbCache.size, referenced: libRefs.size,
   bytesCached: byteSizes.size, byteTotal,
+  vrmPool: poolStats(),   // §19b — rides EW.gpu() like the other tiers
 });
 
 // ---- VRMA clips -------------------------------------------------------------

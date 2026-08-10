@@ -79,6 +79,10 @@ wireAvatarSwitch(async (path, name) => {
   if (path === myAvatarPath) return;
   toast(`changing into ${name}…`, 'info', 3000);
   try {
+    // The switch order is load-bearing (§19b): NEW body fully ready (pool-hit
+    // or parse+compile; the Avatar constructor is the swap into the scene) →
+    // only then does the old body shed. dispose() releases its VRM to the
+    // instance pool, so switching BACK is a 0ms pool-hit, not a re-parse.
     const next = await makeAvatar(CONFIG.name, path, { urgent: true }); // build before shedding the old
     me?.dispose();
     me = next;

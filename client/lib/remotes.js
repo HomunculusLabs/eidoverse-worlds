@@ -34,7 +34,9 @@ export async function ensureRemote(id, avatarPath, meta = {}) {
     // same person, new body: rebuild (live avatar switching re-announces via
     // join). A switch that lands while the OLD body is still loading must not
     // be dropped — delete the map entry and let the stale load's own guard
-    // dispose it when it completes.
+    // dispose it when it completes. This dispose is the §19b release point:
+    // the old VRM returns to the instance pool intact, so a switch back —
+    // or anyone else arriving in this body — skips the re-parse.
     if (avatarPath && existing.avatarPath !== avatarPath) {
       remotes.delete(id);
       existing.avatar?.dispose();

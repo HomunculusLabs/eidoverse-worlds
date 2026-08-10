@@ -113,6 +113,15 @@ export function beginWork(label) {
   return rec;
 }
 
+/** Record a one-line load fact outside any work record. beginWork only logs
+ *  work over 120ms — the right filter for stalls, the wrong one for wins: a
+ *  VRM pool hit (§19b) finishes in ~0ms and is exactly the line that proves
+ *  the cache worked. Same console tag, same automation mirror, same cap. */
+export function loadNote(line) {
+  console.log(`[load] ${line}`);
+  if (loadLog.length < 300) loadLog.push(line);
+}
+
 // ---- serialization ----------------------------------------------------------
 
 /** Queue heavy leaf work. LEAF OPERATIONS ONLY — see the invariant at the top

@@ -330,15 +330,27 @@ console.log(`  ${dim(bootReady)}`);
 
 let heavyAt = 0;
 if (HEAVYJOIN) {
+  const heavyJoin = (id: string) => {
+    const hws = new WebSocket(`ws://127.0.0.1:${PORT}/ws`);
+    hws.onopen = () => hws.send(JSON.stringify({
+      type: "join", world: WORLD, id, token: "",
+      avatar: "eidoverse/assets/vrms/aletheia.vrm",   // library-relative, like resolveMyAvatarPath
+    }));
+    return hws;
+  };
   await sleep(12_000);   // let the boot storm fully settle first
   heavyAt = Date.now() - t0;
   console.log(dim(`  heavy resident joins at t=${(heavyAt / 1000).toFixed(1)}s (aletheia.vrm, 21MB)…`));
-  const hws = new WebSocket(`ws://127.0.0.1:${PORT}/ws`);
-  hws.onopen = () => hws.send(JSON.stringify({
-    type: "join", world: WORLD, id: "heavyguest", token: "",
-    avatar: "eidoverse/assets/vrms/aletheia.vrm",   // library-relative, like resolveMyAvatarPath
-  }));
-  // stays connected for the rest of the window; cleanup kills the process
+  const first = heavyJoin("heavyguest");
+  // leave, then a SECOND wearer of the same body: the first parse pooled at
+  // departure, so the rejoin must be a pool hit — §19b's whole point. The
+  // loadLog witness is a "pool-hit" line for aletheia.
+  await sleep(10_000);
+  console.log(dim("  heavy resident leaves (body → pool)…"));
+  try { first.close(); } catch { /* fine */ }
+  await sleep(5_000);
+  console.log(dim(`  rejoins at t=${((Date.now() - t0) / 1000).toFixed(1)}s — expect pool-hit…`));
+  heavyJoin("heavyguest2");
 }
 const remaining = SECS * 1000 - (Date.now() - t0);
 if (remaining > 0) {
@@ -461,7 +473,7 @@ if (data.bills?.length) {
 
 if (data.loadLog?.length) {
   console.log(`\n${bold("── load log")}`);
-  for (const l of data.loadLog.slice(0, 30)) console.log(`  ${dim(String(l))}`);
+  for (const l of data.loadLog.slice(0, 60)) console.log(`  ${dim(String(l))}`);
 }
 if (data.ew?.residency) {
   const r = data.ew.residency;

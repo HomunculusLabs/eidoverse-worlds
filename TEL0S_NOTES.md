@@ -390,6 +390,33 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — §19b LANDED: the VRM instance pool — a body parsed
+  once is never re-paid.** The step-5½ deferred tail, landed with its
+  recorded landmine defused: three-vrm has NO blessed deep-clone (its
+  plugins bind to specific nodes — verified against vendored 3.5.2), so
+  the cache is a pool of whole parsed INSTANCES: Avatar.dispose splits —
+  per-body artifacts (label/bubble/mixer/scene membership) die as
+  before; the VRM returns to the pool INTACT via releaseVRM (real
+  deepDispose only at pool eviction; dispose is now idempotent so a
+  stale second dispose can't re-pool a worn body). Reset at release AND
+  defensively at take (lookAt/humanoid/expressions/springBoneManager
+  resets, all line-verified; a reset that throws evicts rather than
+  pools a haunted body). Budget: 2 instances / 64MB, LRU,
+  never-evict-what-just-landed; evictIdleProtos drains the pool FIRST
+  under GPU pressure; poolStats rides EW.gpu(). The own-body switch
+  order (mybody wireAvatarSwitch) was verified already-correct
+  (new-ready → swap → release) and is now documented load-bearing.
+  Pool hits skip the conductor compile explicitly (instance-keyed
+  vrmWarmed). PROOF in bootjank --heavyjoin's new join→leave→rejoin
+  leg: first wear "parse 124ms over 24 frames + warm 3.3s off-frame";
+  rejoin "vrm aletheia.vrm: pool-hit — 0ms" + "compile skipped —
+  pooled body" with ZERO jank frames. Gate: lightbench 30/30,
+  paritybench PASS. Known transients (agent-flagged): spring bones on
+  a pool hit see the placement jump exactly as a fresh parse does; the
+  whenCalm thumbnail borrow race is pre-existing and now SAFER.
+  Remaining for the MacBook switch halt: first-wear Metal pipeline
+  compile + parse speed — awaiting tel0s's --heavyjoin trace there
+  before weighing the worker-parse project.
 - **2026-08-10 — §19a LANDED: the cloud-graph compile is splash, not
   session (tel0s's call).** The §18b fence is eager again — 'clear'
   always respells as empty cumulus on capable tiers — and the one big
