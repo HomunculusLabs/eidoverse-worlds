@@ -390,6 +390,33 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — STEP 7 COMPLETE — the server split. THE §8 SEQUENCE IS
+  DONE.** Four slices in one night, each gated 12/12 + paritybench
+  (7c also lightbench 19/19): **7a** (d852118) config/auth/moderation/
+  rights/lint/reactions step out with the cycle-breaking signatures
+  (rightsOf reads the folded state; ban data separates from expel; the
+  pendulum mirror moves to reactions.ts with the client cross-ref
+  updated). **7b** (bdb988e) the verb table — one row per verb {rank,
+  gen?, selfRankZero?, validate?, after?} + runVerb; preamble prose and
+  the six post-append hooks byte-identical; expel injected via ctx; the
+  okSim destructure bug fixed. **7c** (64e776b) World → WorldLog (the
+  fold is the log's projection) / WorldSession (presence; depends on
+  log one-way) behind a facade that keeps WorldLike and VerbWorld
+  holding unedited; routes.ts table + upload.ts; the type-hygiene trio.
+  **7d** (72bd0ed) batched appends — seq/tail/logBytes/fold stay
+  synchronous, bytes coalesce per macrotask, and every claim about the
+  FILE flushes first (fold's offset, fork's copy, reset's archive,
+  readHistory's scan, shutdown's sweep); durability unchanged in kind
+  and now stated honestly (page cache, as ever — no fsync ever
+  existed). server.ts: 2,630 → 1,005 lines across 7 modules + world/
+  routes/upload/verbs. Slices 7a-7c executed by directed Fable
+  subagents from scratchpad briefs (each ended its turn mid-gate; I
+  gated + committed — zombie-port sweeps between runs are part of the
+  recipe now); 7d by hand, as durability deserved. **Steps 1-7 of §8
+  plus the inserted 5½ are all landed.** The rebuild's foundation is
+  laid: one fold, one loader, one lighting rig, fixed graph shapes,
+  streamed residency, a culled meadow, a dissolved client, a split
+  server, and 300+ wire-contract checks green around all of it.
 - **2026-08-10 — 7-prep: servergate lands, and the battery baselines
   CLEAN.** `tools/servergate.ts` runs the step-7 gate lattice as one
   command: twelve suites, each external-server tool getting a fresh
