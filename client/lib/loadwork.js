@@ -148,28 +148,13 @@ export function enqueue(fn, { lane = 'cpu', priority = 0 } = {}) {
     pumpLane(l);
   });
 }
-// While a sky is building, object (priority-0) compiles in the gpu lane wait:
-// the sky's weather wraps and env bake rewrite material graphs, so an object
-// compiled before the sky pays its full compile TWICE. On Safari a single
-// model's WGSL->Metal compile measures ~6 SECONDS — compile-once ordering is
-// the difference between painful and fine there. Bodies (priority >= 1) are
-// never held: a person appearing beats a person appearing correctly lit.
-let objectsHeld = false;
-export function holdObjectCompiles(until, maxMs = 25000) {
-  if (objectsHeld) return;
-  objectsHeld = true;
-  Promise.race([until, new Promise((r) => setTimeout(r, maxMs))])
-    .catch(() => {})
-    .then(() => { objectsHeld = false; pumpLane(lanes.gpu); });
-}
-function takeJob(l) {
-  if (l !== lanes.gpu || !objectsHeld) return l.jobs.shift();
-  const i = l.jobs.findIndex((j) => j.priority >= 1);
-  return i === -1 ? undefined : l.jobs.splice(i, 1)[0];
-}
+// (holdObjectCompiles lived here — object compiles paused while a sky was
+// building, because the sky's wraps rewrote every graph after the fact. The
+// material factory ended that: materials are born with their final shape,
+// so there is no wrong moment to compile one. TEL0S_NOTES §12.7.)
 function pumpLane(l) {
   while (l.running < l.max && l.jobs.length) {
-    const job = takeJob(l);
+    const job = l.jobs.shift();
     if (!job) break;
     l.running++;
     (async () => {
@@ -178,11 +163,12 @@ function pumpLane(l) {
     })();
   }
 }
-// 'lanes-idle' fires when every queued load has finished — the signal for
-// work that should wait for ALL of it (deferred shadow-in, see world.js).
+// 'lanes-idle' fires when every queued load has finished. (Its one historic
+// consumer — the deferred shadow drain — is gone; the event stays as the
+// generic "all loadwork settled" signal.)
 function checkIdle() {
   if (!lanes.cpu.jobs.length && !lanes.gpu.jobs.length
-    && !lanes.cpu.running && !lanes.gpu.running && !objectsHeld) {
+    && !lanes.cpu.running && !lanes.gpu.running) {
     bus.emit('lanes-idle');
   }
 }
@@ -191,27 +177,11 @@ export function serialize(fn, { urgent = false, lane = 'cpu', priority } = {}) {
   return enqueue(fn, { lane, priority: priority ?? (urgent ? 2 : 0) });
 }
 
-// ---- frame holds ------------------------------------------------------------
-// Some scene changes invalidate EVERY compiled pipeline at once (the sky
-// setting scene.environment, weather wrapping materials). The next render()
-// then rebuilds them synchronously — the post-splash "long freezes". There is
-// no way to render the old state while the new one compiles, so the honest
-// option is chosen deliberately: hold presentation for one bounded moment,
-// run compileAsync over the whole scene (its slices yield, input stays live),
-// and resume with everything warm. One held beat instead of ten stuttered
-// seconds. The frame LOOP keeps running — simulation, poses, chat all tick;
-// only renderer.render is skipped while held.
-
-let holding = 0;
-let holdDeadline = 0;
-export const framesHeld = () => holding > 0 && performance.now() < holdDeadline;
-export async function holdFrames(promise, maxMs = 4000) {
-  holding++;
-  holdDeadline = Math.max(holdDeadline, performance.now() + maxMs);
-  try {
-    await Promise.race([promise, new Promise((r) => setTimeout(r, maxMs))]);
-  } finally { holding--; }
-}
+// (holdFrames lived here — presentation paused for one bounded beat while a
+// whole-scene recompile settled behind it. Nothing invalidates the whole
+// scene anymore — the factory fixes graph shapes at birth, the light rig
+// freezes topology at boot, the env texture is persistent — so there is
+// nothing left to hold for. TEL0S_NOTES §12.7.)
 
 // ---- long-task attribution --------------------------------------------------
 // The browser already measures every main-thread stall over 50ms; all that was
@@ -233,7 +203,7 @@ try {
 
 // Frame-gap watchdog — Safari has no longtask observer, so frame gaps are the
 // portable truth about felt freezes. Anything that holds a frame >150ms logs
-// with the same attribution. (framesHeld beats are deliberate and skipped.)
+// with the same attribution.
 // ---- perf beacon ------------------------------------------------------------
 // Safari's console can't be read over WebDriver and most visitors never open
 // one — so the profile phones home instead: one small POST per session at
@@ -278,7 +248,7 @@ setTimeout(() => postPerf('120s'), 120_000);
 let lastFrameAt = 0;
 requestAnimationFrame(function gapWatch(t) {
   fpsTick++;
-  if (lastFrameAt && t - lastFrameAt > 150 && !document.hidden && !framesHeld()) {
+  if (lastFrameAt && t - lastFrameAt > 150 && !document.hidden) {
     const line = `${Math.round(t - lastFrameAt)}ms frame gap during: ${activeLabels() || '(unattributed)'}`;
     console.warn(`[jank] ${line}`);
     if (jankLog.length < 200) jankLog.push(line);

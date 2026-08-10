@@ -18,7 +18,7 @@ import { loadEidoModule, primeFiles, listLibrary, fetchBytes } from './assets.js
 import { markPhase, whenBooted } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake,
   envTexture, adoptEnvironment } from './sky_baked.js';
-import { holdFrames, holdObjectCompiles, beginWork } from './loadwork.js';
+import { beginWork } from './loadwork.js';
 import { setDayness } from './lightrig.js';
 import { WEATHERS, effectiveSky, hoursAt } from '../../shared/forecast.js';
 // Who owns which per-frame hook. The sky claims by diffing a GLOBAL array
@@ -209,35 +209,19 @@ async function renderOnce() {
     return markPhase('sky', 1);
   }
 
-  // A sky is coming: pause OBJECT pipeline compiles until its wraps + env
-  // bake exist, so every material compiles once, with its final graph —
-  // instead of once now and once again when the weather rewrites it. (On a
-  // slow-loading Safari the sky lost this race and the wraps hit 44 already-
-  // compiled materials; at ~6s per graph compile there, that ordering WAS the
-  // twenty painful seconds.) Released in the finally below on every path —
-  // settle, skymesh fallback, or failure — with a 25s cap behind it.
-  let releaseObjects = null;
-  if (!skyApi) holdObjectCompiles(new Promise((r) => { releaseObjects = r; }));
-  try {
+  // No hold, no settle beat, no ordering dependency. A sky arriving used to
+  // be the single most disruptive moment a running client had — weather
+  // wraps rewrote materials, the env flip invalidated every pipeline, a new
+  // light changed the topology — and holdObjectCompiles/holdFrames existed
+  // to absorb exactly that. The factory (materials.js) now applies the
+  // wraps at material birth, the env texture is persistent, and the light
+  // rig swallows the weather's bolt: sky arrival invalidates NOTHING. The
+  // sky's own meshes precompile detached inside buildSky, so even their
+  // first frame doesn't stall. (TEL0S_NOTES §12.7 — the holds are gone.)
+  {
     while (degrade < 2 && skyBuilds < MAX_SKY_BUILDS) {
     try {
-      const buildsBefore = skyBuilds;
       await renderEidoverse(a);
-      // A FRESH sky build is the single most disruptive moment a running
-      // client has: weather wraps rewrite materials and the env bake flips
-      // scene.environment from null, which together invalidate every compiled
-      // pipeline in the scene — the next render() then rebuilds them all
-      // SYNCHRONOUSLY (the post-splash "unresponsive for ten seconds with
-      // long freezes", 08-02). Nothing can render the old state while the new
-      // one compiles, so: hold presentation for one bounded beat, settle the
-      // whole scene through compileAsync (slices yield, input stays live),
-      // resume warm. Rebakes and slider previews don't build → don't hold.
-      if (skyBuilds !== buildsBefore) {
-        const settle = beginWork('sky settle'); // the whole-scene recompile behind the held beat
-        try {
-          await holdFrames(renderer.compileAsync(scene, camera).catch(() => {}), 4000);
-        } finally { settle.end(); }
-      }
       return;
     } catch (e) {
       const why = e?.message ?? String(e);
@@ -263,7 +247,7 @@ async function renderOnce() {
     impl = 'skymesh';
     await renderSkyMesh(a);
     markPhase('sky', 1);
-  } finally { releaseObjects?.(); }
+  }
 }
 
 // ============================================================ Skye's sky
@@ -442,6 +426,24 @@ async function buildSky(a, world, wantAudio) {
       audio: wantAudio,
     });
     claimSkyAdditions(ownership);
+    // Warm the sky's OWN pipelines off the render path: the cloud march is
+    // the biggest single compile in the client, and a regular render that
+    // meets an uncompiled dome creates its pipeline SYNCHRONOUSLY — one big
+    // stall exactly when the sky first appears. compileAsync skips objects
+    // not in the scene-graph-under-compile... and skips nothing here: each
+    // claimed addition detaches, compiles against the live scene, re-adds
+    // warm (the grass precompile pattern, world.js). Nothing ELSE needs
+    // settling — sky arrival no longer invalidates the rest of the scene.
+    {
+      const warm = beginWork('sky warm');
+      try {
+        for (const o of skyOwned) {
+          scene.remove(o);
+          await renderer.compileAsync(o, camera, scene).catch(() => {});
+          scene.add(o);
+        }
+      } finally { warm.end(); }
+    }
     currentWorld = world;
     impl = 'eidoverse';
     scene.background = null;

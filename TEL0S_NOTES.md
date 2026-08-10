@@ -387,6 +387,21 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — 5e landed: the holds are deleted.** `holdObjectCompiles`
+  (25s cap, the sky-before-objects wait), `holdFrames`/`framesHeld` (the
+  4s settle beat), the gpu-lane held-object filter, and the render skip
+  in the frame loop are all gone — presentation never pauses again. The
+  reason they existed is cured, not suppressed: materials are born with
+  their final graph (5a), light topology is frozen at boot (5b), the env
+  texture is persistent, so sky arrival invalidates NOTHING. The one real
+  cost that remains — the sky's own dome pipelines, the biggest single
+  compile in the client — warms detached (claim-diff list → remove →
+  compileAsync → re-add, the grass precompile pattern) so even the sky's
+  first frame doesn't stall. `checkIdle` drops its objectsHeld coupling;
+  the jank watchdog stops excusing held beats (there are none to excuse).
+  The boot beat is dead; §2's timeout-density diagnosis is now fully
+  answered — no compile-ordering timeout survives in the client.
+  Verified: paritybench PASS.
 - **2026-08-09 — 5d landed: the governor is two-way, and the tuner stops
   lying.** `client/lib/governor.js` — one lever ladder (casters → light
   slots → emitters → grass → pixels → LOD+shadow-res), every lever with

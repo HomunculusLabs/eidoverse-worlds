@@ -55,7 +55,6 @@ import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { governPerformance, governorDebug } from './lib/governor.js';
 import { updateMaterials, materialsDebug } from './lib/materials.js';
 import { updateRig, rigDebug } from './lib/lightrig.js';
-import { framesHeld } from './lib/loadwork.js';
 import { startPrefetch } from './lib/prefetch.js';
 
 // ---- crash breadcrumbs (?bc=1): streamed over a BroadcastChannel so a
@@ -1105,11 +1104,8 @@ function frame(now) {
   BC('send-pose');
   sendPose(now);
 
-  // A held frame = a whole-scene pipeline settle is in progress (sky arrival
-  // invalidates everything at once). Presentation pauses for one bounded
-  // beat; everything above still ticked, so the world snaps current on resume.
   BC('render');
-  if (!framesHeld()) renderer.render(scene, camera);
+  renderer.render(scene, camera);
   BC('post-render');
 
   frames++;
