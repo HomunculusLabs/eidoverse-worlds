@@ -1430,3 +1430,82 @@ ranges verified). main.js is 1164 lines; 142-1164 is one else-block (the
   preserve kick/push fallthrough order); main.js = the boot sequence.
 Gates per slice: paritybench + lightbench; 6a additionally an A/B frame
 probe (camera-collision cost) if measurable headless.
+
+## 15. Step 7 reference design — the server split
+
+Grounded by the server.ts structure map (2026-08-09; 2,630 lines — §2's
+"2,896 / verb switch at :255" was stale, the fold moved to shared/ in
+step 2). Binding facts:
+
+### 15.1 What the map pinned
+- Verb dispatch today = VERB_NEEDS rank table + 8 inline validator blocks
+  + a common preamble (world/spectator/rate/allow-list/rank/lock, with
+  exact error prose six suites assert on) + append→broadcast + SIX
+  post-append hooks: bhv.onEntry (unconditional), reactToUse (use),
+  bhv.sync (behavior), lintMotion (motion|comp:motion), lintParticles
+  (comp:particles), the expel loop (ban|kick).
+- Ordering invariant at all six append sites: **seq assigned →
+  appendFileSync → foldEntry → threshold fold → broadcast**. seq comes
+  from snapSeq+entries.length+1 in append() and NOWHERE else. fold()
+  writes bytes=logBytes, so logBytes must equal the real file size when
+  fold runs — the async-append design's one hard constraint: keep (seq,
+  entries.push, foldEntry) synchronous; defer only the byte write;
+  flush must be awaited by fold/fork/reset/readHistory-file-leg/shutdown.
+  No fsync anywhere today (page-cache durability — be honest about it).
+- Wire contract = API: close codes 4002-4006, {type:"error"} prose
+  substrings, the snapshot field set, present[].pose = settledPose
+  (pinned by SOURCE-TEXT regex), geom as a separate post-join message
+  (join stays synchronous), lease message shapes, whisperKey's  .
+- **Source-text gates**: settled-pose-test, whisper-disable-test,
+  voice-wiring-test regex server.ts ITSELF — so settledPose + the
+  whisper/rtc/typing cases STAY in server.ts; the split extracts around
+  them. (Cheaper than re-pointing three suites; revisit later.)
+- behaviors.ts's WorldLike + wireBehaviorGate/Store is the proven DI
+  seam — the World facade must keep that surface.
+- Cycle breaks: rightsOf/worldHasOwner/lockRefusal narrow to
+  (state, …) not (World, …); expel lives with the session (moderation
+  owns only ban DATA); after-hooks get a ctx {log, state, session,
+  recorder, rights} instead of importing World; getWorld's forward
+  reference must stay a function declaration (hoisting is load-bearing).
+- Fix en route: bodydrag okSim destructure bug (validates sim.v, never
+  sim.q — real); dead trimRecentChat import; resolveLibFile duplicate;
+  lastPose typed unknown but dereferenced; (c as any).bcRing undeclared.
+
+### 15.2 The modules
+config.ts (env + dirs + cadences) · auth.ts (HN sessions, jti,
+sessionFromCookie, agentTokens, .sessions.json) · moderation.ts (ban
+DATA: BanRec, globalBans, findBan, save/restore) · rights.ts
+(VERB_NEEDS, rightsOf(state,…), worldHasOwner, lockRefusal,
+LOCK_GUARDED, isAdminId) · lint.ts (MOTION_TYPES, lintMotion,
+lintParticles, one resolveLibFile) · reactions.ts (reactToUse,
+pendulumImpulse — the house-rule-2 mirror comment travels) · verbs.ts
+(THE TABLE: {rank, gen?, selfRankZero?, validate?(ctx,args),
+after?(ctx,entry)} + the shell; after-hooks dispatch synchronously
+inside message's try/catch, exactly as today) · world.ts (World →
+WorldLog [entries/snapSeq/logBytes/append/fold/readHistory/reset +
+state, since the fold is the log's projection] + WorldSession
+[clients/dirty/leases/frameSeq/recPath/broadcast/settleLease — session
+depends on log, one-way] + the debug recorder; World stays a thin
+facade honoring WorldLike so behaviors.ts never changes) · routes.ts
+(the fetch table + serveFrom/contentType/gzCache) · upload.ts
+(/upload + optQueue/pumpOptimize, per §7). The ws switch STAYS in
+server.ts (source-text gates + it shrinks to a session-relay list once
+join internals and the verb case delegate).
+
+### 15.3 Slices and gates
+- **7-prep: tools/servergate.ts** — one runner that boots a scratch
+  sequencer per tool with its exact env header (permtest 8991,
+  modtest 8992+WORLD_ADMIN, comptest 8993, locktest 8994, compfold
+  8995+FOLD_EVERY=1, leasetest 8997, behaviortest 8994+BHV_TIMER_MIN=1,
+  worldops 8992) plus the self-booting suites (smoke, authtest,
+  support-lifecycle), sequentially, kill-by-child-handle, PASS/FAIL
+  table. Baseline it GREEN on the unsplit server first.
+- **7a**: extract auth/moderation/rights/lint/reactions (+config) with
+  the narrowed signatures; server.ts imports back. Pure motion.
+- **7b**: verbs.ts — the table + shell replace the verb case and the
+  six hooks. Error prose byte-identical (suites assert substrings).
+- **7c**: World → Log/Session decomposition behind the facade +
+  routes.ts/upload.ts table.
+- **7d** (own slice, most careful): batched appends per §15.1's
+  constraint + explicit flush points; loadtest + full battery.
+Every slice: servergate + paritybench (client against split server).
