@@ -390,6 +390,26 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — STEP 6 COMPLETE — 6c: the trench coat comes off.**
+  main.js 1120 → 381 lines: what remains is what the header always
+  claimed — boot wiring, the door, the frame-system list, EW. The rest
+  moved per §14.2: `mybody.js` (identity + the `me` handle behind one
+  getter — 18 closure sites read one seam; the avatar-updated cold-cache
+  crash fixed with a load-bearing `?.`), `localbody.js` (ragdoll/mounts/
+  pins/dragged/shove — logChat INJECTED via initLocalBody so the chat
+  knot stays open), `consent.js` (zero-import), `voicemouths.js`
+  (caption/speech twins merged), `emotebar.js`, `mint.js` (dynamic), and
+  `commands/` — registry.js a PURE table importing nothing, chat.js
+  deriving autocomplete from it (the hand-kept copy and its duplicate
+  /kick row die; chat→handlers→net→chat never closes), handlers.js
+  preserving the kick/push disambiguator fallthrough, the dead /rename
+  answering honestly at last. tools/voice-wiring-test.ts followed its
+  code (35/35). Executed by a directed Fable subagent against the §14
+  map; module-graph claims audited before commit (registry imports
+  nothing ✓, localbody never imports chat ✓, chat imports only the
+  registry ✓). Verified: lightbench PASS · paritybench PASS. Step 6 is
+  closed — remaining small tail: the ragdoll body-level cell cache.
+  **Next: step 7 — the server split (§7).**
 - **2026-08-09 — 6b landed: the frame loop is a system list.**
   `lib/frame.js` owns the loop; main.js registers ~18 systems in the
   order §14.1's constraints demand. Each tick is timed into a rolling
