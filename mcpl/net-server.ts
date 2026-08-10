@@ -49,6 +49,7 @@ const PORT = Number(process.env.MCPL_PORT ?? 8941);
 // hands them the string. tokens.json remains the legacy/fleet door.
 const HN_ISSUER_KEY = process.env.HN_ISSUER_KEY ?? "";
 const HN_ISS = process.env.HN_ISS ?? "id.animalabs.ai";
+const HN_AUD = process.env.HN_AUD ?? "eidoverse";
 const ts = () => new Date().toISOString().slice(11, 19);
 const TOKENS_PATH = fileURLToPath(new URL("./tokens.json", import.meta.url));
 
@@ -1071,7 +1072,7 @@ wss.on("connection", (ws, req) => {
   let auth = token ? readTokens()[token] : undefined;
   let aidReason: string | null = null;
   if (!auth && token?.startsWith("aid1.") && HN_ISSUER_KEY) {
-    const v = verifyToken(token, { issuerId: HN_ISSUER_KEY, iss: HN_ISS, aud: "eidoverse", requireScopes: ["worlds:join"] });
+    const v = verifyToken(token, { issuerId: HN_ISSUER_KEY, iss: HN_ISS, aud: HN_AUD, requireScopes: ["worlds:join"] });
     if (v.ok) {
       const p = v.payload;
       // id = mention handle (world addressing is name-based); name uniqueness

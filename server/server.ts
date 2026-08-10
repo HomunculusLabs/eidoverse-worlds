@@ -31,12 +31,13 @@ const UPLOAD_CAP = Number(process.env.UPLOAD_CAP_MB ?? 20) * 1_000_000;
 // and the JOIN_TOKEN door keep working.
 //   HN_ISSUER_KEY   pinned issuer pubkey `ed25519:…` — unset disables the door
 //   HN_ISS          issuer domain            (default id.animalabs.ai)
+//   HN_AUD          token audience to verify (default eidoverse; staging uses eidoverse2)
 //   HN_LOGIN_URL    where "Login with Discord" sends people
 //   HN_REQUIRE_LOGIN=1  browser clients without a session are sent to login
 //                       (JOIN_TOKEN joins still pass — invite links keep working)
 const HN_ISSUER_KEY = process.env.HN_ISSUER_KEY ?? "";
 const HN_ISS = process.env.HN_ISS ?? "id.animalabs.ai";
-const HN_AUD = "eidoverse";
+const HN_AUD = process.env.HN_AUD ?? "eidoverse";
 const HN_LOGIN_URL = process.env.HN_LOGIN_URL ?? `https://${HN_ISS}/login?audience=${HN_AUD}`;
 const HN_REQUIRE_LOGIN = process.env.HN_REQUIRE_LOGIN === "1";
 const SESSION_TTL_MS = 12 * 60 * 60_000; // event-length; re-login is two clicks
