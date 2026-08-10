@@ -19,7 +19,7 @@ import { markPhase, whenBooted } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake,
   envTexture, adoptEnvironment } from './sky_baked.js';
 import { beginWork } from './loadwork.js';
-import { setDayness } from './lightrig.js';
+import { setDayness, releaseForeignLights } from './lightrig.js';
 import { WEATHERS, effectiveSky, hoursAt } from '../../shared/forecast.js';
 // Who owns which per-frame hook. The sky claims by diffing a GLOBAL array
 // around its own async build; anything another subsystem marks as its own is
@@ -244,6 +244,10 @@ async function renderOnce() {
       currentWorld = null;
     }
     }
+    // Falling to the basic sky without a full teardown (build budget spent):
+    // the weather system will not be rebuilt, so its adopted bolt must not
+    // outlive it here either.
+    releaseForeignLights();
     impl = 'skymesh';
     await renderSkyMesh(a);
     markPhase('sky', 1);
@@ -325,6 +329,12 @@ function claimSkyAdditions(snap) {
   autoSystemsOwned = claimUnowned(snap.autos);
 }
 function teardownSky() {
+  // The adopted lightning first: the scene diff below cannot see it (the
+  // rig's seam kept it OUT of the scene), and on teardowns that never
+  // build a replacement weather system its registry-eviction release never
+  // fires — without this, a dead mirror holds a reserved slot forever,
+  // frozen at whatever the last strike left it.
+  releaseForeignLights();
   // Put the parked live domes back first: the diff below claimed them at
   // build time, so restoring them lets the disposal pass find and free them.
   detachBakedDome();

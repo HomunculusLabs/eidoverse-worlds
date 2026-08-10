@@ -387,6 +387,39 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — STEP 5 COMPLETE — 5g: measured, reviewed, fixed.**
+  `tools/lightbench.ts` (CDP, scratch door, headless Edge) now proves what
+  paritybench can't see: rain folded → wet/cover targets exact and rising
+  frame-over-frame; six placed lights + the adopted bolt assign exactly per
+  §12.4 (keeps + mirror cast, casting = min(requests, cap)); at noon only
+  the `day:false` porch burns among eight slots; **the lightning is a
+  mirrored `foreign:` request and the scene's light topology is exactly
+  the fixed inventory** (hemi, sun, slots, eager fill); casters track
+  realized models; zero page errors. **The slot sweep answers the oldest
+  number in this rebuild**: grass compiled 1379/1510/1551/1597ms at
+  4/8/12/16 slots and held ~120fps at every count — the "grass + 4 lights
+  never finished compiling" hang was runtime-recompile churn, cured
+  structurally; default pool raised 4→8 (measured, the modest end of §5's
+  band; `?slots=N` re-measures). Throttled boot (25mbit/40ms) median
+  2054ms on a heavier world than step 4's, connect mark 86–101ms — the
+  early socket intact, no regression. An adversarial Fable review of the
+  whole step-5 diff confirmed the §12 contract surface against source
+  (wetness port node-for-node, r184 claims, proxy vs consumer, module
+  graph acyclic) and found **2 blockers, both fixed**: the governor's
+  grass restore read EFFECTIVE density (capped residents wedged the
+  unwind — casters/lights/emitters never recovered; the governor now
+  tracks its own dial) and the adopted lightning leaked across
+  eidoverse→skymesh teardowns (scene-diff can't see what the seam kept
+  out of the scene; `releaseForeignLights()` rides teardownSky + the
+  build-budget fallback — a dead mirror could have burned at strike
+  intensity 12000 forever). Plus: pointless-shed guards (lights/casters
+  levers verify something is actually casting), `?slots=abc` NaN guard
+  (froze the frame loop), mirrors hold RESERVED slots (exempt from the
+  governor cap — a shed-to-zero pool must not delete a storm's strikes),
+  ladder-robust caster stepping. Re-gated after fixes: lightbench 15/15 ·
+  paritybench PASS. Disease A is cured: no compile-ordering timeout, no
+  hold, no recompile storm survives in the client. **Next: step 6 —
+  main.js dissolution, frame-system list, spatial-index service.**
 - **2026-08-09 — 5f landed: the light policy is spec.** PROTOCOL §3.1 now
   states what `keep` honestly means under the rig (first claim on a
   casting slot, never governor-shed — top *priority*, not an unbounded

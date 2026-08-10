@@ -37,7 +37,8 @@
 // chattering; the dead band between them counts toward neither.
 
 import { renderer, sun, BASE_PIXEL_RATIO } from './core.js';
-import { setSlotCap, getSlotCap, maxSlots, setCasterBudget, getCasterBudget } from './lightrig.js';
+import { setSlotCap, getSlotCap, maxSlots, litCount,
+  setCasterBudget, getCasterBudget, casterCount } from './lightrig.js';
 import { setEmitterQuality, emitterQuality, emitterCount } from './emitters.js';
 import { setGrassDensity, getGrassDensity, hasGrass } from './terrain.js';
 import { setLodBias } from './remotes.js';
@@ -56,24 +57,30 @@ const GRASS_STEPS = [1, 0.6, 0.35];
 const LEVERS = [
   {
     name: 'casters',
+    // step to the largest ladder value strictly below/above the current
+    // budget — robust to an off-ladder value if anything else ever calls
+    // setCasterBudget (review note 6: indexOf-based stepping could RAISE it)
     shed() {
-      const i = CASTER_STEPS.indexOf(getCasterBudget());
-      const next = i >= 0 ? CASTER_STEPS[i + 1] : CASTER_STEPS[1];
-      if (next === undefined || getCasterBudget() <= CASTER_STEPS[CASTER_STEPS.length - 1]) return false;
+      if (casterCount() === 0) return false;   // nothing casting → no relief,
+                                               // don't burn the shed window
+      const next = CASTER_STEPS.find((s) => s < getCasterBudget());
+      if (next === undefined) return false;
       setCasterBudget(next);
       return true;
     },
     restore() {
-      const i = CASTER_STEPS.indexOf(getCasterBudget());
-      if (i <= 0) return false;
-      setCasterBudget(CASTER_STEPS[i - 1]);
+      const next = [...CASTER_STEPS].reverse().find((s) => s > getCasterBudget());
+      if (next === undefined) return false;
+      setCasterBudget(next);
       return true;
     },
   },
   {
     name: 'lights',
     shed() {
-      if (getSlotCap() === 0) return false;
+      // a cap cut only relieves GPU if something is actually casting — an
+      // empty world must not eat shed windows and toast lies (review note 3)
+      if (getSlotCap() === 0 || litCount() === 0) return false;
       setSlotCap(getSlotCap() - 1);
       toast('turned a light down to keep the frame rate — it still glows', 'warn', 6000);
       return true;
@@ -102,20 +109,25 @@ const LEVERS = [
   },
   {
     name: 'grass',
-    // steps from the EFFECTIVE density: the resident's grass⚙ cap already
-    // applies, and "shedding" a meadow the cap holds below the step would
-    // toast without changing a blade
+    // The governor tracks its OWN dial. Effective density = min(resident's
+    // grass⚙ cap, this dial) — shed still steps from EFFECTIVE (a meadow
+    // the cap already holds below the step must not toast a no-op), but
+    // restore answers for the dial alone: restoring against effective
+    // returned "true" forever under a capped resident (min() ate the
+    // change), wedging the unwind so casters/lights/emitters never
+    // recovered (review blocker 1 — the exact ratchet §12.6 exists to kill).
     shed() {
       const eff = getGrassDensity();
       if (!hasGrass() || eff <= GRASS_STEPS[GRASS_STEPS.length - 1]) return false;
-      setGrassDensity(eff > 0.65 ? 0.6 : 0.35);
+      grassDial = eff > 0.65 ? 0.6 : 0.35;
+      setGrassDensity(grassDial);
       toast('grass thinned to keep the frame rate', 'warn', 8000);
       return true;
     },
     restore() {
-      const eff = getGrassDensity();
-      if (!hasGrass() || eff >= 1) return false;
-      setGrassDensity(eff < 0.5 ? 0.6 : 1);
+      if (!hasGrass() || grassDial >= 1) return false;
+      grassDial = grassDial < 0.5 ? 0.6 : 1;
+      setGrassDensity(grassDial);
       return true;
     },
   },
@@ -161,6 +173,7 @@ const LEVERS = [
   },
 ];
 let shedDetail = false;
+let grassDial = 1;
 
 let slowFor = 0;
 let goodFor = 0;

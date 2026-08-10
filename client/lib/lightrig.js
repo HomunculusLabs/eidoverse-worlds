@@ -24,12 +24,15 @@
 // escape: with more keeps than slots, the farthest keep glows without
 // casting — the pool is the physics, honestly stated.
 //
-// N starts at today's measured-safe 4 (the old MAX_CAST — though keeps used
-// to cast OUTSIDE it, so 4 fixed slots are strictly cheaper than the old
-// worst case). Raising it is a 5g re-measure (?slots=N), not a guess: the
-// per-fragment loop runs over every slot even at intensity 0, and the old
-// "grass + 4 never compiled" number must be re-taken with the compile at
-// boot instead of mid-session.
+// N defaults to 8 — MEASURED, not guessed (lightbench --measure, 2026-08-09):
+// with the compile at boot instead of mid-session, a full grass field
+// compiled in 1379/1510/1551/1597ms at 4/8/12/16 slots and held ~120fps at
+// every count on this hardware. The old "grass + 4 lights never finished
+// compiling" was the runtime-recompile churn, now structurally gone. 8 is
+// the modest end of the §5 target band because per-fragment loop cost and
+// WGSL→Metal compile scale with slot count and weaker machines haven't
+// been measured yet; the governor's cap lever handles them downward, and
+// ?slots=N re-measures anytime.
 //
 // ---- the foreign-light seam -------------------------------------------------
 // makeWeatherSystem permanently scene.add()s one lightning PointLight at
@@ -50,7 +53,12 @@ import { THREE, scene, camera, renderer, sun, CONFIG } from './core.js';
 
 // ---- the fixed inventory ----------------------------------------------------
 
-const N_SLOTS = Math.max(0, Math.min(16, Number(CONFIG.params.get('slots') ?? 4)));
+// Number.isFinite guard: ?slots=abc yielding NaN would create zero slots and
+// then throw in updateRig's Array(NaN) every frame — with no try/catch around
+// the frame loop, that silently stops rAF and freezes the whole client. The
+// measurement knob must not be a foot-gun (review note 4).
+const _slotsParam = Number(CONFIG.params.get('slots') ?? 8);
+const N_SLOTS = Number.isFinite(_slotsParam) ? Math.max(0, Math.min(16, Math.round(_slotsParam))) : 8;
 
 const rigGroup = new THREE.Group();
 rigGroup.name = 'lightrig';
@@ -202,11 +210,20 @@ function assign(now) {
     const d = worldPosOf(r, _p).distanceTo(camera.position);
     return {
       r,
-      tier: r.keep || r.mirror ? 0 : r.authored ? 1 : 2,
+      tier: r.keep ? 0 : r.authored ? 1 : 2,
       d: r.slot >= 0 ? d * 0.85 : d,   // incumbents hold their ground
     };
   }).sort((a, b) => a.tier - b.tier || a.d - b.d || (a.r.key < b.r.key ? -1 : 1));
-  const winners = ranked.slice(0, slotCap).map((x) => x.r);
+  // Mirrors (the adopted lightning) hold RESERVED slots: they are upstream's
+  // own lights with transient authored intensity, so they neither compete on
+  // camera distance nor answer to the governor's cap — a shed-to-zero pool
+  // must not silently delete a storm's strikes (review note 5). Everything
+  // else fills what the cap allows of the remaining slots.
+  const mirrors = ranked.filter((x) => x.r.mirror).slice(0, N_SLOTS).map((x) => x.r);
+  const rest = ranked.filter((x) => !x.r.mirror)
+    .slice(0, Math.max(0, Math.min(slotCap, N_SLOTS - mirrors.length)))
+    .map((x) => x.r);
+  const winners = [...mirrors, ...rest];
   const winnerSet = new Set(winners);
   // evicted requests free their slots first, then newcomers take free ones —
   // a request that stays assigned keeps its slot (no one-frame handoff)
@@ -283,6 +300,7 @@ export function registerCaster(id, obj) {
   casters.set(id, { obj, meshes, casting: false });
 }
 export function releaseCaster(id) { casters.delete(id); }
+export const casterCount = () => casters.size;
 export function setCasterBudget(k) { casterBudget = Math.max(0, k); }
 export const getCasterBudget = () => casterBudget;
 
@@ -407,6 +425,19 @@ function adoptForeign(light) {
 }
 function unadoptForeign(light) {
   releaseLight(`foreign:${light.uuid}`);
+}
+
+/** Release every adopted foreign light. The sky's teardown calls this: the
+ *  scene-diff that undoes a sky build cannot see the bolt (the seam kept it
+ *  OUT of the scene on purpose), and on the eidoverse→skymesh paths that
+ *  never construct a replacement weather system, the registry-eviction
+ *  release never fires either — a dead mirror would hold a reserved slot
+ *  forever, frozen at whatever intensity the last strike left it (review
+ *  blocker 2: storms peak at intensity 12000). */
+export function releaseForeignLights() {
+  for (const k of [...requests.keys()]) {
+    if (k.startsWith('foreign:')) releaseLight(k);
+  }
 }
 
 let _realMakeWeatherSystem = null;
