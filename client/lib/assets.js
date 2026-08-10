@@ -496,30 +496,69 @@ globalThis.Deno = {
 
 /** Decode image bytes into a three texture — the browser implementation of the
  *  engine's loadImageTexture contract (render_scene.mjs). createImageBitmap is
- *  native here, so this is the short version of the Deno one. */
+ *  native here, so this is the short version of the Deno one.
+ *
+ *  Decoded textures are CACHED by bytes-object identity + the constructing
+ *  options (§16.2.B): Skye's loaders (vegetation.js loadMap, sky_worlds
+ *  readTex, …) have no cache of their own and re-read the same primed file
+ *  per stroke/build — and Deno.readFileSync returns the SAME Uint8Array per
+ *  path, so object identity IS the URL. Mojave decoded and uploaded 38
+ *  vegetation textures where 24 were unique (§16.1). A WeakMap, so callers
+ *  handing us fresh buffers simply miss — nothing transient gets pinned.
+ *
+ *  Cached textures are session-pinned: an upstream stroke's dispose()
+ *  (vegetation.js:1006-1013) frees its map set on every regrow, and a
+ *  disposed shared texture served from cache is a black-field bug — so a
+ *  cached texture's dispose becomes a no-op, marked userData.ewShared.
+ *  Accepted in the §16 design (~24 grass maps); a regrow now REUSES its
+ *  textures instead of leaking freshly decoded copies of them. */
+const imageTexCache = new WeakMap(); // bytes object -> Map<opts key, Promise<Texture>>
 globalThis.loadImageTexture = async (bytes, opts = {}) => {
-  const u8 = bytes instanceof Uint8Array ? bytes
-    : bytes instanceof ArrayBuffer ? new Uint8Array(bytes)
-      : new Uint8Array(bytes);
-  // Engine contract (render_scene.mjs loadImageTexture): the vertical flip is
-  // BAKED into the pixels (browser flipY convention) and tex.flipY stays
-  // false, so it composes with repeat tiling; { flipY: false } skips the bake
-  // for glTF-convention images. This shim must match or every texture sampled
-  // through authored UVs (the vegetation trim sheets were the first) arrives
-  // vertically mirrored.
-  const bitmap = await createImageBitmap(new Blob([u8]), {
-    colorSpaceConversion: 'none',
-    imageOrientation: opts.flipY !== false ? 'flipY' : 'none',
-  });
-  const tex = new THREE.Texture(bitmap);
-  tex.colorSpace = opts.srgb ? THREE.SRGBColorSpace : THREE.NoColorSpace;
-  tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
-  tex.flipY = false;         // matches the engine's bitmap orientation
-  tex.generateMipmaps = true;
-  tex.minFilter = THREE.LinearMipmapLinearFilter;
-  tex.magFilter = THREE.LinearFilter;
-  tex.needsUpdate = true;
-  return tex;
+  // srgb + flipY are the only options that alter the CONSTRUCTED texture;
+  // wrap/anisotropy are caller-side mutations, identical for every same-URL
+  // same-opts call site (vegetation.js keeps leaf sets ClampToEdge and stem
+  // sets Repeat on different files — verified, they never diverge)
+  const cacheable = typeof bytes === 'object' && bytes !== null;
+  const key = `${opts.srgb ? 's' : 'l'}:${opts.flipY !== false ? 'f' : 'n'}`;
+  if (cacheable) {
+    const hit = imageTexCache.get(bytes)?.get(key);
+    if (hit) return hit;
+  }
+  const p = (async () => {
+    const u8 = bytes instanceof Uint8Array ? bytes
+      : bytes instanceof ArrayBuffer ? new Uint8Array(bytes)
+        : new Uint8Array(bytes);
+    // Engine contract (render_scene.mjs loadImageTexture): the vertical flip is
+    // BAKED into the pixels (browser flipY convention) and tex.flipY stays
+    // false, so it composes with repeat tiling; { flipY: false } skips the bake
+    // for glTF-convention images. This shim must match or every texture sampled
+    // through authored UVs (the vegetation trim sheets were the first) arrives
+    // vertically mirrored.
+    const bitmap = await createImageBitmap(new Blob([u8]), {
+      colorSpaceConversion: 'none',
+      imageOrientation: opts.flipY !== false ? 'flipY' : 'none',
+    });
+    const tex = new THREE.Texture(bitmap);
+    tex.colorSpace = opts.srgb ? THREE.SRGBColorSpace : THREE.NoColorSpace;
+    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+    tex.flipY = false;         // matches the engine's bitmap orientation
+    tex.generateMipmaps = true;
+    tex.minFilter = THREE.LinearMipmapLinearFilter;
+    tex.magFilter = THREE.LinearFilter;
+    tex.needsUpdate = true;
+    if (cacheable) {
+      tex.userData.ewShared = true;   // served from cache — teardowns must skip it
+      tex.dispose = () => {};         // session-pinned (see above)
+    }
+    return tex;
+  })();
+  if (cacheable) {
+    let per = imageTexCache.get(bytes);
+    if (!per) imageTexCache.set(bytes, per = new Map());
+    per.set(key, p);
+    p.catch(() => per.delete(key));   // a transient decode failure must not stick
+  }
+  return p;
 };
 
 // Toolkit modules construct their own loader for celestial meshes. The Deno

@@ -17,7 +17,7 @@ import { prepareObject } from './materials.js';
 import { beginWork } from './loadwork.js';
 import { reindexCollider } from './colliders.js';
 import { setTerrain, setGrass, clearGrass, heightAt } from './terrain.js';
-import { buildFloraField } from './flora.js';
+import { buildFloraField, warmField } from './flora.js';
 import { applySky } from './sky.js';
 import { whenBooted } from './boot.js';
 
@@ -156,15 +156,14 @@ export function applyGrassState(args) {
     // group): wet sheen on the meadow, sweep markers, no shadow receipt
     // (grass never received, and its fragment cost is the client's biggest)
     if (field?.mesh) prepareObject(field.mesh, { kind: 'grass' });
-    // borrow the mesh back out for a precompile
-    // (compileAsync skips invisible objects, so hiding wouldn't work —
-    // detach, compile against the scene's lighting, re-add warm)
-    if (field?.mesh) {
-      const parent = field.mesh.parent;
-      parent?.remove(field.mesh);
-      await renderer.compileAsync(field.mesh, camera, scene).catch(() => {});
-      (parent ?? scene).add(field.mesh);
-    }
+    // warm EVERY render object off the render path. The old field-level
+    // compileAsync silently skipped whatever applyTiles had culled against
+    // the boot camera (visible=false / out of frustum), and those tiles
+    // compiled synchronously inside render() when first looked at.
+    // warmField (flora.js) detaches per object, defeats culling, compiles
+    // one per frame, then re-settles tile counts against the live camera —
+    // still inside this build's beginWork('build grass') accounting.
+    if (field?.mesh) await warmField(field, renderer, camera, scene);
     setGrass(field);
   });
 }

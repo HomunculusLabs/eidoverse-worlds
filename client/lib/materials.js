@@ -245,6 +245,13 @@ export function prepareObject(root, { kind = 'model' } = {}) {
     // surface paying per-fragment shadow taps while the comment claimed
     // otherwise (§13.1 — intent is not behavior)
     o.receiveShadow = receive;
+    // grass never CASTS either: leaf cards already ship castShadow=false
+    // upstream, but shrub wood ships TRUE (vegetation.js:989) — five
+    // shadow-depth pipelines nothing ever pre-warms, compiled synchronously
+    // on the first shadow frame after grass lands. Blob-shadow philosophy
+    // (§16.2.B); castShadow sits in NO pipeline cache key (§12.1), and this
+    // runs before the field's warm (world.js), so clearing it here is free.
+    if (grass) o.castShadow = false;
     const mats = Array.isArray(o.material) ? o.material : o.material ? [o.material] : [];
     for (const m of mats) {
       // grass never puddles: blade normals are deliberately forced straight

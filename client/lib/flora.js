@@ -9,7 +9,7 @@
 //   flora_args.js  — legacy makeGrass-bag mapping + preset/variety strokes
 //   flora_field.js — field composition + retirement lifecycle
 // Both are covered by tools/flora.test.ts.
-import { THREE, TSL, bus, camera } from './core.js';
+import { THREE, TSL, bus, camera, renderer } from './core.js';
 import { primeFiles } from './assets.js';
 import { colliders } from './colliders.js';
 import { myState } from './controller.js';
@@ -205,7 +205,7 @@ function wireFieldCulling(field) {
   }
 }
 
-// ---- tiling (§13.2 G2) -----------------------------------------------------
+// ---- tiling (§13.2 G2, re-cut §16.2.B) -------------------------------------
 // One monolithic InstancedMesh can never cull a blade behind you and pays
 // full fragment cost regardless of view. So a big stroke is re-cut into XZ
 // tiles AFTER the density shuffle: K geometries SHARING the vertex/index/aH
@@ -217,12 +217,53 @@ function wireFieldCulling(field) {
 // and per-tile `count` becomes distance density for free, because bucketing
 // in stable order preserves the shuffle: any prefix of a tile is still a
 // uniform random subset of its plants.
+//
+// The grid derives from OCCUPANCY, not a fixed edge (§16.1b): a fixed ~12m
+// edge shredded 2912 sparse desert plants into 57 tiles averaging 51
+// instances — and every InstancedMesh is a full NodeBuilder codegen run,
+// because the material cache key carries object.uuid for any instanced
+// object (three.webgpu.js:30181). Aim ~THRESHOLD instances per tile so the
+// per-object costs amortise; cap the edge so the distance falloff keeps its
+// granularity; refuse to tile strokes that cannot fill tiles (their
+// whole-stroke sphere from wireFieldCulling already culls them).
+//
+// Every tile's instanceMatrix is ALLOCATED past the uniform-buffer limit —
+// the shader path reads the attribute ALLOCATION, never the live draw
+// count (three.webgpu.js:18031/:18041): at or below the limit the identity
+// matrices become a uniform array with the COUNT BAKED INTO THE WGSL TEXT,
+// a distinct program (and GPURenderPipeline) per tile size; above it they
+// ride an interleaved instanced attribute whose program is
+// count-independent, so every tile of a material shares ONE program and
+// pipelines dedupe by source (:32003/:32248). ≤65KB of identity matrices
+// per tile buys that, uploaded once — and the matrix data stays
+// semantically live (normalLocal transforms through it; identity is the
+// engine's contract). The sliced instanced attributes keep their REAL
+// counts: the draw's instanceCount comes from live object.count
+// (three.webgpu.js:29971-29973), which never exceeds them.
 
 const TILE_MIN_INSTANCES = 2000;   // shrubs/yucca are hundreds — stay whole
-const TILE_SIZE = 12;              // meters per tile edge, roughly
+const TILE_MAX_EDGE = 45;          // m — the distance falloff needs granularity
+const TILE_MIN_OCC = 256;          // can't reach this per tile → stay whole
+const TILE_MAX_AXIS = 8;           // K stays modest (§13.2: ~8×8 on a big stand)
 const GRASS_NEAR = 30;             // full density inside this
 const GRASS_FAR = 140;             // invisible beyond this
 const _tv = new THREE.Vector3();
+
+/** The uniform-vs-attribute fork for the identity instanceMatrix, read off
+ *  the live backend (WebGPU: device.limits.maxUniformBufferBindingSize —
+ *  65536 with three's default device request; WebGL2 fallback:
+ *  MAX_UNIFORM_BLOCK_SIZE). `threshold` is the occupancy the grid aims for;
+ *  `cross` is the smallest ALLOCATION that takes the shared-program
+ *  attribute path — 0 when an exotic limit would make forcing it wasteful
+ *  (tiles then keep per-size programs: degraded, never wrong). */
+function matrixPathCaps() {
+  let limit = 65536;
+  try { limit = renderer.backend.capabilities.getUniformBufferLimit() || 65536; }
+  catch { /* pre-init or stubbed backend — assume the WebGPU default */ }
+  const threshold = Math.floor(Math.min(65536, limit) / 64);
+  const cross = Math.floor(limit / 64) + 1;
+  return { threshold, cross: cross * 64 <= 262144 ? cross : 0 };
+}
 
 function tileField(f) {
   // the shrub archetype pairs a stem mesh sharing backing arrays — skip it
@@ -241,10 +282,18 @@ function tileField(f) {
     const s = scaleVar.getY(i);
     if (s > maxScale) maxScale = s;
   }
-  const nx = Math.max(1, Math.round((maxX - minX) / TILE_SIZE));
-  const nz = Math.max(1, Math.round((maxZ - minZ) / TILE_SIZE));
-  if (nx * nz < 4) return false;     // culling can't win on a postage stamp
   const spanX = (maxX - minX) || 1, spanZ = (maxZ - minZ) || 1;
+  const { threshold, cross } = matrixPathCaps();
+  // as many tiles as the stroke affords at ~threshold occupancy, spread by
+  // aspect; the edge cap may then ADD columns/rows a sparse stroke cannot
+  // afford — which is exactly what the occupancy floor below refuses
+  const afford = Math.max(1, Math.floor(n / threshold));
+  let nx = Math.min(TILE_MAX_AXIS, Math.max(1, Math.round(Math.sqrt(afford * spanX / spanZ))));
+  let nz = Math.min(TILE_MAX_AXIS, Math.max(1, Math.round(afford / nx)));
+  nx = Math.max(nx, Math.ceil(spanX / TILE_MAX_EDGE));
+  nz = Math.max(nz, Math.ceil(spanZ / TILE_MAX_EDGE));
+  if (nx * nz < 4) return false;     // culling can't win on a postage stamp
+  if (n / (nx * nz) < TILE_MIN_OCC) return false;   // sparse: stroke sphere already culls
   const buckets = Array.from({ length: nx * nz }, () => []);
   for (let i = 0; i < n; i++) {      // STABLE scan — preserves the shuffle
     const tx = Math.min(nx - 1, Math.floor((posRot.getX(i) - minX) / spanX * nx));
@@ -277,9 +326,21 @@ function tileField(f) {
     });
     for (const i of idx) box.expandByPoint(_tv.set(posRot.getX(i), posRot.getY(i), posRot.getZ(i)));
     box.expandByScalar(pad);
-    const tm = new THREE.InstancedMesh(tg, f.mesh.material, idx.length);
-    for (let k = 0; k < idx.length; k++) tm.setMatrixAt(k, m4.identity());   // the engine's identity contract
-    tm.boundingSphere = box.getBoundingSphere(new THREE.Sphere());
+    // allocation crosses the uniform-buffer limit → one shared program for
+    // every tile of this material (see the section header)
+    const alloc = Math.max(idx.length, cross);
+    const tm = new THREE.InstancedMesh(tg, f.mesh.material, alloc);
+    for (let k = 0; k < alloc; k++) tm.setMatrixAt(k, m4.identity());   // the engine's identity contract
+    tm.count = idx.length;             // the DRAW count is live; the allocation is not
+    const sphere = box.getBoundingSphere(new THREE.Sphere());
+    tm.boundingSphere = sphere;        // frustum culling (tiles carry identity
+    // transforms, so local == world) — and the SAME sphere on the geometry:
+    // the render sort reads geometry.boundingSphere, not the object's
+    // (three.webgpu.js:60872-60880), and the shared plant-local position
+    // attribute would sort every tile as co-located at the origin, leaving
+    // the alpha-tested meadow in arbitrary order. Both assigned non-null,
+    // so neither is ever recomputed (raycasts never touch grass).
+    tg.boundingSphere = sphere;
     tm.frustumCulled = true;
     Object.assign(tm.userData, f.mesh.userData);   // noWalkable/noSupportCheck/…
     tm.castShadow = false;
@@ -308,6 +369,7 @@ function tileField(f) {
     }
   };
   f.setDensity = (k) => { eff = k; applyTiles(); };
+  f._applyTiles = applyTiles;        // warmField re-settles counts post-warm
   let lastTick = 0;
   f._tileTick = () => {              // buildFloraField hangs this on autoHooks
     const now = performance.now();
@@ -395,10 +457,65 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
     throw e;
   }
   const field = composeField({ group, fields, mask });
+  field._strokes = fields;   // warmField re-settles per-tile falloff after the warm
   field.autoHooks.push(wirePushers(field));   // setGrass unhooks everything the field owns
   for (const f of fields) {
     if (f._tileTick) { pushHostHook(f._tileTick); field.autoHooks.push(f._tileTick); }
   }
   scene.add(group);
   return field;
+}
+
+// ---- the warm (§16.2.B) -----------------------------------------------------
+// compileAsync skips visible=false and out-of-frustum objects
+// (three.webgpu.js:60819/:60869), and applyTiles has already run against the
+// boot camera by the time the field compiles — a field-level compileAsync
+// leaves every culled tile COLD, and a cold tile codegens SYNCHRONOUSLY
+// inside the first render() that looks at it: the jank that used to follow
+// the resident around the first minute. So the warm is per render object,
+// house pattern (sky.js:450-453): each object compiles detached with its
+// culling defeated, one real frame between objects. Three yields ~10 rAF
+// frames per object internally (NodeBuilder stage yields), so the field
+// warms in ~K×10 background frames — and NO tile is ever cold after.
+
+/** Compile every render object of a built field (tiles, untiled stroke
+ *  meshes, shrub stems) off the render path, then re-settle tile counts
+ *  against the live camera. Awaited by the grass build (world.js) between
+ *  prepareObject and setGrass; errors are swallowed like every house warm. */
+export async function warmField(field, renderer, camera, scene) {
+  const root = field?.mesh;
+  if (!root) return;
+  const meshes = [];
+  root.traverse((o) => { if (o.isMesh) meshes.push(o); });
+  // the whole field leaves the scene for the duration — a real frame
+  // mid-warm must never meet a still-cold sibling and pay its compile
+  // synchronously inside render()
+  const sceneParent = root.parent;
+  sceneParent?.remove(root);
+  try {
+    for (const o of meshes) {
+      const parent = o.parent;
+      parent?.remove(o);               // detached: never drawn mid-compile —
+      const save = { visible: o.visible, frustumCulled: o.frustumCulled, count: o.count };
+      o.visible = true;                // …compileAsync(o, …) still walks it
+      o.frustumCulled = false;
+      if (o.isInstancedMesh && o.count < 2) o.count = 2;  // count-0 tiles still compile
+      try {
+        await renderer.compileAsync(o, camera, scene).catch(() => {});
+      } finally {
+        o.visible = save.visible;
+        o.frustumCulled = save.frustumCulled;
+        if (o.isInstancedMesh) o.count = save.count;
+        parent?.add(o);
+      }
+      // a REAL frame between objects — scheduler.yield-style continuations
+      // starve rAF on Chromium; the warm must breathe with the renderer
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+  } finally {
+    sceneParent?.add(root);
+  }
+  // tile counts/visibility were settled at BUILD time against the boot
+  // camera — re-settle now that every tile is warm and the camera is live
+  for (const f of field._strokes ?? []) f._applyTiles?.();
 }

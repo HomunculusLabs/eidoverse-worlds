@@ -390,6 +390,33 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — 8a LANDED: the meadow arrives warm.** Occupancy tiler
+  (mojave 68→17 render objects; every tile's instanceMatrix ALLOCATED
+  past the uniform-buffer limit so all tiles of a material share ONE
+  program — three's fork reads the allocation, never the live count),
+  host texture cache in loadImageTexture (bytes-identity WeakMap:
+  Deno.readFileSync returns the same primed array per path, so identity
+  IS the URL; 38→24 decodes; regrow reuses instead of re-decoding;
+  cached textures dispose-proofed against upstream stroke dispose()),
+  per-tile geometry.boundingSphere (the render sort reads the GEOMETRY
+  sphere — the meadow no longer sorts as co-located at the origin),
+  shrub stems stop casting (5 never-warmed depth pipelines gone), and
+  warmField: every render object compiles DETACHED, one per real frame,
+  then applyTiles re-settles against the live camera — no tile is ever
+  cold. Gate: flora 42/42, grass-quality 57/57 (fixed its own Windows
+  pathname bug: URL.pathname → fileURLToPath), lightbench 17+19 (120fps
+  at 4-16 slots; dense-field build wall +~0.7s — the price of warming
+  every tile, accepted), paritybench PASS, bootjank on the commons
+  replica: rough window 8.4s→4.2s, worst frame 1166→825ms, pipelines
+  56→31, ZERO pipeline creations after t=4s. Executed by a Fable agent
+  from a scratchpad brief; its three deviations (above the limit the
+  matrix rides an interleaved instanced ATTRIBUTE, not a storage
+  buffer — program still count-independent; the cache-key gate is
+  isInstancedMesh alone so the count=1 clamp is unnecessary; the whole
+  field stays detached for the warm's duration so mid-warm frames never
+  meet a cold sibling) all verified sound. Remaining boot jank is
+  models (8b: unlaned compiles, depth pre-warm) and texture-upload
+  spikes (8d).
 - **2026-08-10 — step 8 opened: the rough first minute, measured and
   designed.** New tools/bootjank.ts replays a byte-copy of commons and
   attributes every long frame via document-start GPU hooks: rough
