@@ -390,6 +390,18 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — 6b landed: the frame loop is a system list.**
+  `lib/frame.js` owns the loop; main.js registers ~18 systems in the
+  order §14.1's constraints demand. Each tick is timed into a rolling
+  average (`EW.frame()` prints the bill), carries enable + stride flags,
+  and is fenced — a throwing system reports (throttled) instead of
+  killing rAF and freezing the world. `perf.js` (zero-import leaf) holds
+  fps for governor/HUD/debug; `hud.js` takes paintHud; `bc.js` takes the
+  breadcrumbs (system names stamp as they run). `startFrame()` is
+  explicit — the loop still starts only after identity resolves. The
+  governor gains its first system-stride lever: 'cosmetics' halves the
+  autos hooks under pressure, two-way. Verified: lightbench 19/19 ·
+  paritybench PASS. Remaining in step 6: 6c dissolution.
 - **2026-08-09 — 6a COMPLETE: the spatial service, and all four hot paths
   are dead.** `raySegment(origin, dir, far)` in colliders.js answers the
   follow camera's one question — how far back may the eye sit — from the
