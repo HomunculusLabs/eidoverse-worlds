@@ -120,6 +120,31 @@ export function getGrassApplied() {
   return { ...base, field: true, ...rep };
 }
 
+/** Tile-level truth (§13.2's promised-and-never-landed stats, landed 8e):
+ *  how each stroke is actually cut and what it draws right now — the render-
+ *  object count that §16 spent a night shrinking, readable in-session. */
+export function grassTiles() {
+  if (!currentGrass) return { field: false, strokes: [] };
+  const strokes = (currentGrass._strokes ?? []).map((f, i) => {
+    const tiles = f.tiles ?? [];
+    return {
+      stroke: f.strokeLabel ?? `stroke ${i}`,
+      tiled: !!f.tiled,
+      // tiled strokes: f.count is the LIVE summing getter (#74), so the
+      // planted total lives on the tiles' fullCount
+      planted: tiles.length
+        ? tiles.reduce((s, t) => s + (t.userData.fullCount ?? 0), 0)
+        : (f.count ?? 0),
+      tiles: tiles.length,
+      visible: tiles.filter((t) => t.visible).length,
+      drawn: tiles.length
+        ? tiles.reduce((s, t) => s + t.count, 0)
+        : (f.mesh?.count ?? f.count ?? 0),
+    };
+  });
+  return { field: true, strokes };
+}
+
 // The resident's own dial (#60): full | medium | low | off, persisted per
 // browser. Never a verb — the shared field is world state, the draw cost is
 // not.

@@ -170,6 +170,11 @@ function pumpLane(l) {
 export const laneBusy = () => Boolean(
   lanes.cpu.running || lanes.gpu.running
   || lanes.cpu.jobs.length || lanes.gpu.jobs.length);
+/** Queue depths per lane — the 8e debug shape (EW.lanes). */
+export const laneStats = () => ({
+  cpu: { running: lanes.cpu.running, queued: lanes.cpu.jobs.length, max: lanes.cpu.max },
+  gpu: { running: lanes.gpu.running, queued: lanes.gpu.jobs.length, max: lanes.gpu.max },
+});
 // 'lanes-idle' fires when every queued load has finished. (Its one historic
 // consumer — the deferred shadow drain — is gone; the event stays as the
 // generic "all loadwork settled" signal.)

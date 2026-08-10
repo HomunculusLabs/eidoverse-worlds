@@ -349,6 +349,8 @@ const data = await evalJson(`(() => {
       residency: globalThis.EW?.residency?.(),
       gpu: globalThis.EW?.gpu?.(),
       frame: globalThis.EW?.frame?.(),
+      grass: globalThis.EW?.grass?.(),
+      warm: globalThis.EW?.warm?.(),
     };
   } catch (e) { /* partial is fine */ }
   return { frames: J.frames ?? [], gpu: J.gpu ?? [], bills: J.bills ?? [],
@@ -448,6 +450,13 @@ if (data.loadLog?.length) {
 if (data.ew?.residency) {
   const r = data.ew.residency;
   console.log(`\n${bold("── residency at end")}  real=${r.real} standins=${r.standins} promotes=${r.promotes} demotes=${r.demotes}`);
+}
+if (data.ew?.grass?.field) {
+  const g = data.ew.grass;
+  const w = data.ew.warm;
+  console.log(`${bold("── grass tiles")}  ${g.strokes.map((s: any) =>
+    `${s.stroke}:${s.tiled ? `${s.visible}/${s.tiles}t` : "whole"} ${s.drawn}/${s.planted}`).join(" · ")}`);
+  if (w) console.log(`${bold("── warm queue")}  done=${w.done} failed=${w.failed} pending=${w.pending}`);
 }
 
 // ---- --wide verdict: the join gate's network witness ------------------------

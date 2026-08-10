@@ -390,6 +390,24 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — 8e LANDED. STEP 8 COMPLETE — the rough first minute is
+  measured, engineered away, and observable.** EW.grass() (terrain.js
+  grassTiles — per-stroke tiled/planted/drawn/visible-tiles; §13.2's
+  promised stats finally land), EW.warm() (conductor queue), EW.lanes()
+  (scheduler + loadwork depths vs caps), EW.colliderCache() (per-lib
+  BVH bytes/refs). bootjank prints the grass-tile and warm-queue lines
+  in every run. THE STANDING GATE for client changes is now:
+  paritybench + lightbench + bootjank (add bootjank --wide when
+  residency/loading is touched). Final commons-replica numbers for the
+  night, before→after: worst frame 1166→350ms, pipelines in the boot
+  window 56→14, p99 8.6ms, texture uploads ≤34MB/frame (was 112),
+  far-city worlds fetch NOTHING beyond the radius, and after t≈6s the
+  frame trace is flat 120fps. The residue: one ~300ms GLTF-parse
+  longtask at t≈1s (worker parse is the recorded tail), and boot is
+  ~2s longer by design (sky warmth moved into the splash, capped 8s).
+  Deferred tails standing: KTX2 via the server optQueue, ES-module
+  decode/parse workers, ragdoll cell cache, VRM proto cache, CSM,
+  segmented log index.
 - **2026-08-10 — 8d LANDED: the storm's edges are calm.** (1) Governor
   loading grace: while warm-conductor items are queued/running, loadwork
   lanes busy, or promote tails pending, BOTH lever directions freeze and

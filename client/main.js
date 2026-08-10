@@ -47,6 +47,11 @@ import { initPhysObj, tickPhysObj, leaseApi } from './lib/physobj.js';
 import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { protoStats } from './lib/assets.js';
+import { grassTiles } from './lib/terrain.js';
+import { warmStats } from './lib/warmqueue.js';
+import { laneStats as schedLaneStats } from './lib/scheduler.js';
+import { laneStats as loadLaneStats } from './lib/loadwork.js';
+import { colliderCacheStats } from './lib/colliders.js';
 import { governPerformance, governorDebug, whenCalm } from './lib/governor.js';
 import { registerSystem, startFrame, frameDebug } from './lib/frame.js';
 import { perf } from './lib/perf.js';
@@ -382,6 +387,10 @@ globalThis.EW = {
   residency: residencyDebug,   // real/stand-in/loading counts + sweep stats (§13.3)
   gpu: () => ({ ...renderer.info.memory, ...protoStats() }),   // bytes + proto/byte tiers
   frame: frameDebug,           // per-system rolling ms + strides (§14.2 6b)
+  grass: grassTiles,           // tile-level draw truth (§13.2, landed 8e)
+  warm: warmStats,             // the conductor's queue (§16.2.A)
+  lanes: () => ({ sched: schedLaneStats(), load: loadLaneStats() }),  // queue depths vs caps
+  colliderCache: colliderCacheStats,   // per-lib shared BVH/lie bytes (§16.2.C)
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)
