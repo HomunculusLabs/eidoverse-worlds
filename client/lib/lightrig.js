@@ -46,7 +46,7 @@
 // The seam deletes the day upstream grows a strikeLight injection
 // (docs/upstream-wrap-once.md addendum).
 
-import { THREE, scene, camera, CONFIG } from './core.js';
+import { THREE, scene, camera, renderer, sun, CONFIG } from './core.js';
 
 // ---- the fixed inventory ----------------------------------------------------
 
@@ -64,6 +64,19 @@ for (let i = 0; i < N_SLOTS; i++) {
   rigGroup.add(pl);
 }
 scene.add(rigGroup);
+
+// The sun is the one shadow caster, and its config is topology: shadowMap
+// enabled/type are in the pipeline cache key (§12.1), so they are set here,
+// once, before the first compile, and never touched again. mapSize/bias and
+// the camera extents are uniform-level — the governor may move mapSize both
+// ways, and the frustum follows the camera below. (This block lived in
+// main.js; the rig owns the caster, so it owns the caster's terms.)
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+sun.shadow.bias = -0.0006;
+sun.shadow.normalBias = 0.02;
 
 // ---- requests ---------------------------------------------------------------
 
@@ -211,10 +224,90 @@ function assign(now) {
   }
 }
 
+// ---- the sun shadow ---------------------------------------------------------
+// The frustum FOLLOWS the camera. The old ±46 box was pinned to the world
+// origin — shadows simply stopped existing 46 units from spawn. Moving
+// sun.position would fight the sky (which rewrites it per frame on the
+// eidoverse path and at 1Hz on the skymesh path), so the follow slides the
+// ORTHO EXTENTS instead: express the camera in the light's view frame and
+// re-centre left/right/top/bottom/near/far around it. Extents are uniform-
+// level (§12.1 — we call updateProjectionMatrix ourselves; three won't),
+// so this is recompile-free and sky-agnostic. Extents snap to shadow-map
+// texels or every step of the walk re-samples every shadow edge (shimmer).
+
+const SHADOW_HALF = 46;    // the measured box, unchanged — CSM later
+const SHADOW_DEPTH = 90;   // covers relief + trees around the focus plane
+const _sm = new THREE.Matrix4();
+const _sx = new THREE.Vector3(), _sy = new THREE.Vector3(), _sz = new THREE.Vector3();
+const _rel = new THREE.Vector3();
+const _ZERO = new THREE.Vector3();
+
+function updateShadow() {
+  const cam = sun.shadow.camera;
+  _rel.copy(camera.position).sub(sun.position);
+  _sm.lookAt(sun.position, _ZERO, THREE.Object3D.DEFAULT_UP);
+  _sm.extractBasis(_sx, _sy, _sz);
+  const texel = (2 * SHADOW_HALF) / (sun.shadow.mapSize.x || 2048);
+  const fx = Math.round(_rel.dot(_sx) / texel) * texel;
+  const fy = Math.round(_rel.dot(_sy) / texel) * texel;
+  cam.left = fx - SHADOW_HALF;
+  cam.right = fx + SHADOW_HALF;
+  cam.top = fy + SHADOW_HALF;
+  cam.bottom = fy - SHADOW_HALF;
+  // the light camera looks down -z, so the focus sits -fz in front of it;
+  // a below-horizon sun makes that negative — clamp to a sane window
+  const dist = -_rel.dot(_sz);
+  cam.near = Math.max(0.1, dist - SHADOW_DEPTH);
+  cam.far = Math.max(cam.near + 20, dist + SHADOW_DEPTH);
+  cam.updateProjectionMatrix();
+}
+
+// ---- the caster budget ------------------------------------------------------
+// object.castShadow is in NO pipeline cache key (§12.1) — toggling it only
+// changes shadow-pass render-list membership. So the caster set is a live
+// distance budget, not a drip: the nearest K entities cast, the rest keep
+// receiving. New enables are throttled (each newly-cast object pays its
+// depth pipeline once, on the next shadow render — ≤2 per pass keeps that
+// spread, which was the one virtue of the old 250ms drainShadows drip,
+// kept without its lanes-idle coupling or 30s fallback). Bodies stay on
+// their blob shadows until measured (§12.5).
+
+const casters = new Map();   // id -> { obj, meshes, casting }
+let casterBudget = 12;
+let lastCasterPass = 0;
+
+/** The models realizer registers every realized model here; retire releases. */
+export function registerCaster(id, obj) {
+  const meshes = [];
+  obj.traverse((o) => { if (o.isMesh) meshes.push(o); });
+  casters.set(id, { obj, meshes, casting: false });
+}
+export function releaseCaster(id) { casters.delete(id); }
+export function setCasterBudget(k) { casterBudget = Math.max(0, k); }
+export const getCasterBudget = () => casterBudget;
+
+function casterPass() {
+  const ranked = [...casters.values()]
+    .map((c) => ({ c, d: c.obj.getWorldPosition(_p).distanceToSquared(camera.position) }))
+    .sort((a, b) => a.d - b.d);
+  let enables = 0;
+  for (let i = 0; i < ranked.length; i++) {
+    const { c } = ranked[i];
+    const want = i < casterBudget;
+    if (want === c.casting) continue;
+    if (want && enables >= 2) continue;   // spread first-cast depth compiles
+    if (want) enables++;
+    c.casting = want;
+    for (const m of c.meshes) m.castShadow = want;
+  }
+}
+
 // ---- the per-frame drive ----------------------------------------------------
 
 /** Call once per frame. Reassigns when needed; writes every slot's uniforms. */
 export function updateRig(now) {
+  updateShadow();
+  if (now - lastCasterPass > 300) { lastCasterPass = now; casterPass(); }
   if (assignDirty || now - lastAssign > 600 || _lastCam.distanceToSquared(camera.position) > 2.25) {
     assign(now);
   }
@@ -264,6 +357,8 @@ export function restoreALight() {
 
 export const rigDebug = () => ({
   slots: N_SLOTS, cap: slotCap, dayness: +dayness.toFixed(3),
+  casters: casters.size, casterBudget,
+  casting: [...casters.values()].filter((c) => c.casting).length,
   requests: [...requests.values()].map((r) => ({
     key: r.key, slot: r.slot, keep: r.keep, authored: r.authored,
     mirror: Boolean(r.mirror), dayAware: r.dayAware,

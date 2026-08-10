@@ -24,11 +24,11 @@
 import { THREE, scene, camera, report, bus } from '../core.js';
 import { loadGLB } from '../assets.js';
 import { fitCollider, removeCollider, reindexCollider, refitCollider } from '../colliders.js';
-import { attachLamps, releaseOwner } from '../lightrig.js';
+import { attachLamps, releaseOwner, registerCaster, releaseCaster } from '../lightrig.js';
 import { makeLight, updateLight, disposeLight } from '../lights.js';
-import { entities, entityMeta, comps, avatarMounts, findPart, markShadowless, unmarkShadowless } from '../world.js';
+import { entities, entityMeta, comps, avatarMounts, findPart } from '../world.js';
 import { state, onWorldChange } from '../state.js';
-import { schedule, cancelOwner, onIdle, P } from '../scheduler.js';
+import { schedule, cancelOwner } from '../scheduler.js';
 import { planReconcile, bandForDistance, mountsTouching } from './models_field.js';
 
 /** The verbs this realizer owns — the whole flat entity-id namespace. */
@@ -146,10 +146,10 @@ function realizeModel(id, cur, obj) {
   if (isPlaceholder(stand)) (stand.parent ?? scene).remove(stand);   // the real thing takes the spot
   obj.userData.lib = cur.lib;
   obj.userData.entityId = id;
-  // receiveShadow now, castShadow later — one caster per beat once lanes
-  // drain (world.js drainShadows), same reasoning as legacy spawn
-  obj.traverse((o) => { if (o.isMesh) o.receiveShadow = true; });
-  markShadowless(id);
+  // receiveShadow came from the factory at parse time (clones inherit);
+  // castShadow is the rig's caster budget — nearest K cast, live, toggles
+  // free (§12.5). The old markShadowless/drainShadows drip is gone.
+  registerCaster(id, obj);
   const sc = cur.scale;
   fitCollider(id, obj, { collide: cur.collide, scale: sc || 1 });
   obj.position.set(...(cur.pos ?? [0, 0, 0]));
@@ -171,13 +171,6 @@ function realizeModel(id, cur, obj) {
   emitCompBag(id);
   // mounts that were waiting on this id — as child or carrier
   for (const mid of mountsTouching(state.st.entities, id)) execMount(mid);
-  // deferred shadow-in must wait for the SCHEDULER's loads, not loadwork's
-  // lanes: under the realizer the byte fetches live here, and loadwork's
-  // lanes go quiet while five models are still arriving — which started the
-  // one-caster-per-beat drain mid-load, stacking exactly the depth-pipeline
-  // compiles it exists to spread (review S3). Re-armed per realize: onIdle
-  // is one-shot, and firing 'lanes-idle' re-uses the drain's own wiring.
-  onIdle(() => bus.emit('lanes-idle'), P.FAR);
 }
 
 function createLight(id, ent) {
@@ -247,7 +240,7 @@ function retire(id) {
   entities.delete(id);
   entityMeta.delete(id);
   comps.delete(id);
-  unmarkShadowless(id);
+  releaseCaster(id);
   removeCollider(id);
   tracked.delete(id);
   bus.emit('entity', { id, kind: 'remove' });

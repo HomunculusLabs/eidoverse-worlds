@@ -206,36 +206,11 @@ export function applyBehaviorState(id, rec, live = false) {
   bus.emit('behavior-roster', { live });
 }
 
-// ---- deferred shadow-in -----------------------------------------------------
-// Spawned objects come in without castShadow (see the spawn case). Once every
-// queued load has finished — or after a hard 30s fallback, so a world where
-// something never drains still gets its light right — shadows switch on one
-// object per beat, spreading the per-caster depth-pipeline compiles that
-// would otherwise stack into the load window.
-const shadowless = new Set();
-// The models realizer feeds the same drain when it owns spawns — one shadow
-// policy regardless of which path realized the object.
-export const markShadowless = (id) => { shadowless.add(id); };
-export const unmarkShadowless = (id) => { shadowless.delete(id); };
-let drainingShadows = false;
-async function drainShadows() {
-  if (drainingShadows) return;
-  drainingShadows = true;
-  try {
-    while (shadowless.size) {
-      const id = shadowless.values().next().value;
-      shadowless.delete(id);
-      const obj = entities.get(id);
-      if (obj) {
-        obj.castShadow = true;
-        obj.traverse((o) => { if (o.isMesh) o.castShadow = true; });
-        await new Promise((r) => setTimeout(r, 250)); // one depth compile per beat
-      }
-    }
-  } finally { drainingShadows = false; }
-}
-bus.on('lanes-idle', drainShadows);
-setTimeout(drainShadows, 30000);
+// (The deferred shadow-in drain that lived here — markShadowless /
+// drainShadows, one caster per 250ms beat, lanes-idle trigger, 30s fallback
+// — is gone: object.castShadow is in no pipeline cache key, so the light
+// rig budgets the caster set live by camera distance, reversibly.
+// lightrig.js §12.5.)
 
 // Per-world roles as replayed from grant entries. A mirror for UI honesty —
 // the sequencer enforces; this only lets the client SAY what you are.

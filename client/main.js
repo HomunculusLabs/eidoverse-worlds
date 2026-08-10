@@ -144,21 +144,9 @@ if (CONFIG.params.has('mintthumbs')) {
 } else {
 
 // ---------------------------------------------------------------- lighting
-// No shadows at all meant everything floated: objects had no contact with the
-// ground and a jump had no readable height. One cascade off the sun plus the
-// per-avatar blob shadows is the biggest visual-quality-per-line change here.
-
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-sun.castShadow = true;
-sun.shadow.mapSize.set(2048, 2048);
-sun.shadow.camera.near = 1;
-sun.shadow.camera.far = 160;
-const S = 46;
-Object.assign(sun.shadow.camera, { left: -S, right: S, top: S, bottom: -S });
-sun.shadow.bias = -0.0006;
-sun.shadow.normalBias = 0.02;
-sun.shadow.camera.updateProjectionMatrix();
+// The sun shadow's config and camera-following frustum live in the light
+// rig (lightrig.js §12.5) — set at module init, before the first compile,
+// because shadowMap enabled/type are pipeline-shape.
 
 setSkyArgsSource(skyArgs);
 setCameraCollisionTargets(liveEntities);

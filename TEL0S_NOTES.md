@@ -387,6 +387,21 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — 5c landed: the shadow follows the camera; casters are a
+  budget, not a drip.** The sun's config moved into the rig (shadowMap
+  enabled/type are pipeline-shape → set once at module init); the frustum
+  follows by sliding the ORTHO EXTENTS — the camera expressed in the
+  light's view frame, left/right/top/bottom/near/far re-centred around it,
+  texel-snapped against shimmer, our own updateProjectionMatrix (three
+  never calls it). Recompile-free on both sky paths, no fight over
+  sun.position (the sky rewrites it per frame). Shadows now exist
+  everywhere, not just ±46m from spawn. Casters: castShadow is in no
+  cache key, so the nearest-K entities cast (K=12, a governor lever),
+  re-ranked every 300ms, ≤2 new enables per pass to spread first-cast
+  depth pipelines — the one virtue of the old drainShadows drip, kept
+  without its 250ms beats, lanes-idle coupling, or 30s fallback (all
+  deleted, world.js and the models realizer's re-arm both). Bodies stay
+  on blob shadows until measured. Verified: paritybench PASS.
 - **2026-08-09 — 5b landed: the lighting rig.** `client/lib/lightrig.js` —
   the light topology is born at module init and never changes: N point
   slots (start 4 = the old measured-safe MAX_CAST, `?slots=N` for the 5g
