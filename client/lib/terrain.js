@@ -28,6 +28,9 @@ export function setTerrain(t) {
         m.dispose?.();
       }
     });
+    // layer textures ride the colorNode, not material properties (world.js
+    // stashes them at build for exactly this pass)
+    for (const tex of current.layerTextures ?? []) tex?.dispose?.();
   }
   current = t;
   // ground/grid are null under the headless core stub — an agent process sets

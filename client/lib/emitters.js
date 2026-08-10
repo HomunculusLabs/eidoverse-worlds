@@ -203,10 +203,18 @@ bus.on('entity', ({ id, kind }) => {
     // and the emitter re-attaches through the ordinary pending path.
     pending.delete(id);
     registry.retire(id);
-  } else if (kind === 'spawn' && pending.has(id)) {
-    const emitter = pending.get(id);
-    pending.delete(id);
-    void registry.apply(id, emitter);
+  } else if (kind === 'spawn') {
+    // a promote replaces the placeholder SUBTREE — an emitter attached to the
+    // stand would survive as a live hook on a detached mesh, and the comp
+    // re-announcement would hit the registry's same-key idempotence guard and
+    // keep the stale handle (review B2). Retire first (no-op when none), so
+    // the re-announced bag rebuilds on the real object.
+    registry.retire(id);
+    if (pending.has(id)) {
+      const emitter = pending.get(id);
+      pending.delete(id);
+      void registry.apply(id, emitter);
+    }
   }
 });
 

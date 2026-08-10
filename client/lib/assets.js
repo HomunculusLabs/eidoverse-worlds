@@ -58,7 +58,12 @@ function demandEnd() { demandActive = Math.max(0, demandActive - 1); lastDemandA
 
 const byteCache = new Map();
 export function forgetBytes(match) {
-  for (const key of [...byteCache.keys()]) if (key.includes(match)) byteCache.delete(key);
+  for (const key of [...byteCache.keys()]) {
+    if (!key.includes(match)) continue;
+    byteCache.delete(key);
+    const s = byteSizes.get(key);   // the ledger forgets too, or byteTotal
+    if (s !== undefined) { byteTotal -= s; byteSizes.delete(key); }   // drifts forever (review S1)
+  }
 }
 
 // ---- the byte tier's budget (§13.3 R3) --------------------------------------
@@ -78,6 +83,8 @@ function touchBytes(path) {
   byteSizes.set(path, size);
 }
 function noteBytes(path, len) {
+  const prev = byteSizes.get(path);
+  if (prev !== undefined) { byteTotal -= prev; byteSizes.delete(path); }   // re-fetch: replace, never double-count
   byteSizes.set(path, len);
   byteTotal += len;
   while (byteTotal > BYTE_BUDGET && byteSizes.size > 1) {
@@ -200,10 +207,12 @@ export const libLabels = new Map();
 const glbCache = new Map();
 export async function loadGLB(libPath) {
   const short = (libLabels.get(libPath) ?? libPath.split('/').pop()).slice(0, 28);
+  loadsInFlight.set(libPath, (loadsInFlight.get(libPath) ?? 0) + 1);
+  try {
   if (!glbCache.has(libPath)) {
     const key = `glb:${short}`;
     loadTrack(key, short);
-    glbCache.set(libPath, (async () => {
+    const p = (async () => {
       const work = beginWork(`glb ${short}`);
       try {
         work.phase('download');
@@ -221,7 +230,12 @@ export async function loadGLB(libPath) {
           return gltf.scene;
         }, { lane: 'cpu', priority: 0 });
       } finally { loadDone(key); work.end(); }
-    })());
+    })();
+    // a REJECTED promise must not be the lib's answer forever — the residency
+    // sweep re-promotes near placeholders, and a cached rejection turned one
+    // bad fetch into an instant-fail loop (review S3; models backs off too)
+    p.catch(() => { if (glbCache.get(libPath) === p) glbCache.delete(libPath); });
+    glbCache.set(libPath, p);
   }
   const proto = await glbCache.get(libPath);
   const obj = skeletonClone(proto); // safe for rigged + static alike
@@ -259,11 +273,18 @@ export async function loadGLB(libPath) {
   await libCompiles.get(libPath).catch(() => {});
   await renderer.compileAsync(obj, camera, scene).catch(() => {}); // warm now
   return obj;
+  } finally {
+    const n = (loadsInFlight.get(libPath) ?? 1) - 1;
+    if (n <= 0) loadsInFlight.delete(libPath); else loadsInFlight.set(libPath, n);
+  }
 }
 // Libs whose pipelines have been compiled once this session — repeat spawns
 // skip the queue. Compiled once is compiled: graph shapes are fixed at birth.
 const compiledLibs = new Set();
 const libCompiles = new Map(); // libPath -> in-flight first compile
+// loads mid-flight count as references: eviction during a clone's compile
+// yield would dispose the proto it shares (review S2)
+const loadsInFlight = new Map();
 
 // ---- proto residency (§13.3 R2) ---------------------------------------------
 // All GPU bytes live on the PROTOTYPES (clones share everything), and three
@@ -284,10 +305,12 @@ export async function evictIdleProtos() {
   if ((renderer.info?.memory?.total ?? 0) < GPU_BUDGET) return 0;
   let evicted = 0;
   for (const [lib, promise] of [...glbCache]) {
-    if (libRefs.has(lib)) continue;   // someone real still wears it
+    if (libRefs.has(lib) || loadsInFlight.has(lib)) continue;   // worn, or being fitted
+    const proto = await promise.catch(() => null);
+    // the awaits yield — re-check before touching anything (review S2)
+    if (libRefs.has(lib) || loadsInFlight.has(lib)) continue;
     glbCache.delete(lib);
     compiledLibs.delete(lib);
-    const proto = await promise.catch(() => null);
     if (proto) {
       const seenMats = new Set();
       proto.traverse((o) => {

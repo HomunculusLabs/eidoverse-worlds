@@ -13,7 +13,7 @@
 import { THREE, scene, camera, canvas, CONFIG, report, bus } from './core.js';
 import { loadGLB, libLabels, listLibrary } from './assets.js';
 import { makeLightGizmo } from './lights.js';
-import { entities, entityMeta, comps, findPart } from './world.js';
+import { entities, entityMeta, comps, findPart, editHolds } from './world.js';
 import { surfaceUnder, reindexCollider } from './colliders.js';
 import { heightAt, GRASS_QUALITY, getGrassQuality, setGrassQuality,
   getGrassDensity, getGrassShed, getGrassApplied } from './terrain.js';
@@ -129,9 +129,9 @@ export function select(id) {
   const obj = entities.get(id);
   if (!obj) return;
   selected = { id, obj };
-  // the residency sweep must never demote what someone is editing — a
-  // selection made through the scene panel can be arbitrarily far away
-  obj.userData.editHold = true;
+  // the residency sweep must never demote what someone is editing — id-based
+  // because promotion swaps the object out from under a userData flag
+  editHolds.add(id);
   outline.box.setFromObject(obj);
   outline.visible = true;
   showInspector(id);
@@ -140,7 +140,7 @@ export function select(id) {
   sceneSelect(id);
 }
 export function deselect() {
-  if (selected?.obj?.userData) delete selected.obj.userData.editHold;
+  if (selected) editHolds.delete(selected.id);
   selected = null;
   dragging = null;
   outline.visible = false;

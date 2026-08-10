@@ -26,7 +26,7 @@ import { loadGLB, retainGLB, releaseGLB, evictIdleProtos } from '../assets.js';
 import { fitCollider, removeCollider, reindexCollider, refitCollider } from '../colliders.js';
 import { attachLamps, releaseOwner, registerCaster, releaseCaster } from '../lightrig.js';
 import { makeLight, updateLight, disposeLight } from '../lights.js';
-import { entities, entityMeta, comps, avatarMounts, findPart } from '../world.js';
+import { entities, entityMeta, comps, avatarMounts, findPart, editHolds } from '../world.js';
 import { state, onWorldChange } from '../state.js';
 import { schedule, cancelOwner } from '../scheduler.js';
 import { planReconcile, bandForDistance, mountsTouching } from './models_field.js';
@@ -149,6 +149,7 @@ function scheduleLoad(id, ent, gen) {
     const t = tracked.get(id);
     if (t?.gen === gen) t.loading = false;
     if (e?.name === 'AbortError') return;
+    if (t) t.failedAt = Date.now();   // the sweep backs off, not machine-guns (review S3)
     // a failed load keeps its reservation, exactly like legacy: the id stays
     // addressable (a later remove folds cleanly), it just never renders
     report(`realize spawn ${id}`, e);
@@ -157,7 +158,21 @@ function scheduleLoad(id, ent, gen) {
 
 function realizeModel(id, cur, obj) {
   const stand = entities.get(id);
-  if (isPlaceholder(stand)) (stand.parent ?? scene).remove(stand);   // the real thing takes the spot
+  if (isPlaceholder(stand)) {
+    // durable children attach to placeholders by design (execMount takes any
+    // truthy parent) — step them out BEFORE the stand's subtree is removed,
+    // and clear mountRel so the execMount pass below re-attaches them to the
+    // real thing instead of early-returning on an identical key (review B1:
+    // cargo mounted on a far carrier vanished forever at promote, parity
+    // silently green)
+    for (const [, cobj] of entities) {
+      if (cobj?.userData?.mountedTo === id && cobj.parent) {
+        scene.attach(cobj);
+        delete cobj.userData.mountRel;
+      }
+    }
+    (stand.parent ?? scene).remove(stand);   // the real thing takes the spot
+  }
   retainGLB(cur.lib);   // the proto is worn — eviction must not undress it
   obj.userData.lib = cur.lib;
   obj.userData.entityId = id;
@@ -402,14 +417,26 @@ function residencyRadius(ent) {
   const s = ent?.lib ? libGeom.get(ent.lib)?.bbox?.size : null;
   return R_BASE + (s ? Math.hypot(s[0] ?? 0, s[1] ?? 0, s[2] ?? 0) * DIAG_K : 0);
 }
-const entDist = (ent) => camera.position.distanceTo(_v.set(...(ent?.pos ?? [0, 0, 0])));
+// distance is min(camera, avatar): in photo-mode flight the body may stand
+// on something the camera left behind — demoting its floor drops it through
+// the world (review S6). main.js injects the avatar-position source.
+let residencyFocus = null;
+export function setResidencyFocus(fn) { residencyFocus = fn; }
+const _f = new THREE.Vector3();
+function entDist(ent) {
+  _v.set(...(ent?.pos ?? [0, 0, 0]));
+  let d = camera.position.distanceTo(_v);
+  const p = residencyFocus?.();
+  if (p) d = Math.min(d, _f.set(p.x, p.y, p.z).distanceTo(_v));
+  return d;
+}
 
 /** The audit's three impossibles plus the edit hold — things whose demote
  *  has no clean undo. All are cheap fold-truth predicates. */
 function canDemote(id, ent) {
   if (!ent || ent.kind === 'light' || ent.parent) return false;   // lights are cheap; mounted children ride carriers
   const obj = entities.get(id);
-  if (!obj || isPlaceholder(obj) || obj.userData?.editHold) return false;
+  if (!obj || isPlaceholder(obj) || editHolds.has(id)) return false;
   if (!libGeom.get(ent.lib)?.bbox) return false;    // nothing honest to stand in
   // a carrier: children mounted on it would need the cargo step-off, which
   // is semantically a removal (it re-stamps fold poses) — refuse instead
@@ -465,7 +492,8 @@ function residencySweep() {
     const d = entDist(ent);
     if (obj && !isPlaceholder(obj) && d > R + R_HYST) {
       if (canDemote(id, ent)) demote(id);
-    } else if (isPlaceholder(obj) && d < R && !t.loading) {
+    } else if (isPlaceholder(obj) && d < R && !t.loading
+      && (!t.failedAt || now - t.failedAt > 30000)) {
       resStats.promotes++;
       t.gen = nextGen++;                 // stale in-flight completions no-op
       scheduleLoad(id, ent, t.gen);

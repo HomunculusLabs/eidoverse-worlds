@@ -390,6 +390,28 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — STEP 5½ COMPLETE — the review round.** An adversarial
+  Fable review of the whole 5½ diff verified the §13 contracts against
+  source (stable bucketing, shared-buffer upload/dispose semantics,
+  identity-instanceMatrix load-bearing via r184's setupPosition, culling
+  path, retain/release balance, LRU safety) and found **2 blockers, both
+  fixed**: promote removed the stand-in SUBTREE wholesale while mounts
+  and emitters legally hang durable children off placeholders — cargo
+  mounted on a far carrier vanished forever (parity silently green;
+  realizeModel now steps riders out + clears mountRel so execMount
+  re-attaches) and emitters attached to a stand-in survived as stale
+  registry handles (the spawn event now retires-then-reapplies). Plus
+  five should-fixes: the forgetBytes byte-ledger drift (double-count +
+  LRU stall), eviction racing in-flight clones (loadsInFlight refs +
+  post-await recheck), a failed lib becoming a 500ms promote loop
+  (rejection leaves glbCache + 30s backoff), editHold made id-based in
+  world.js (promotion swaps the object under a userData flag), terrain's
+  layer textures (colorNode-bound, unreachable from material props —
+  stashed at build, disposed at replace), and residency distance =
+  min(camera, avatar) so photo-mode flight can't demote the floor under
+  your own body. Re-gated: lightbench 19/19 · paritybench PASS. Step 5½
+  is closed. **Next: step 6 — main.js dissolution, frame-system list,
+  spatial-index service.**
 - **2026-08-09 — step 5½ R2+R3: protos evict under a VRAM budget, bytes
   ride an LRU.** `glbCache` is refcounted (realize retains, retire/demote
   release); every ~5s the residency sweep reads

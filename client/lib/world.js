@@ -42,6 +42,11 @@ export const behaviors = new Map();
 
 export const liveEntities = () => [...entities.values()].filter(Boolean);
 
+/** ids someone is actively editing — the residency sweep must never demote
+ *  them (review S4: id-based, because promote/demote SWAPS the object a
+ *  userData flag would ride). build.js and panel editors add/remove. */
+export const editHolds = new Set();
+
 // Heavy world construction (terrain ~2s, grass ~1s of main-thread geometry
 // generation) runs on its own ordered chain so log replay — and everything
 // after it — doesn't wait behind it. Safe because spawns carry their logged y,
@@ -100,6 +105,10 @@ export function applyTerrainState(args) {
       map: noiseTexture(l.color ?? '#4a5d33'), repeat: l.repeat ?? 16,
     }));
     const t = globalThis.makeTerrain({ ...args, layers });
+    // the layer textures ride the engine's colorNode, unreachable from
+    // material properties — carry them so terrain disposal can free them
+    // (review S5)
+    if (t) t.layerTextures = layers.map((l) => l.map);
     // the factory dresses the ground BEFORE its compile: wetness + cloud
     // shade + receiveShadow (real terrain never received before — only the
     // stage floor did, and that hides when this lands)
