@@ -19,6 +19,7 @@ import { markPhase, whenBooted } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake,
   envTexture, adoptEnvironment } from './sky_baked.js';
 import { holdFrames, holdObjectCompiles, beginWork } from './loadwork.js';
+import { setDayness } from './lightrig.js';
 import { WEATHERS, effectiveSky, hoursAt } from '../../shared/forecast.js';
 // Who owns which per-frame hook. The sky claims by diffing a GLOBAL array
 // around its own async build; anything another subsystem marks as its own is
@@ -39,14 +40,15 @@ scene.environment = envTexture();
 let impl = null;           // 'eidoverse' | 'skymesh' | null
 let skyApi = null;         // Skye's sky object when impl === 'eidoverse'
 let skyMesh = null;
-let fillLight = null;
-const lampLights = new Set();
-/** Point lights the emissive-lamp system currently casts — shared so the
- *  explicit-light budget counts the WHOLE scene, not just its own. */
-export const lampCount = () => lampLights.size;
-/** Total point lights the world may hang off emissive materials. See
- *  attachLocalLights for why this is a hard ceiling rather than a soft one. */
-const MAX_LAMPS = 2;
+// The skymesh-path fill light is born EAGERLY: light topology is frozen at
+// boot (TEL0S_NOTES §12.1 — a light appearing later recompiles every lit
+// material, and the old lazy creation fired exactly when the sky DEGRADED,
+// the worst possible moment to pay a recompile storm). On the eidoverse
+// path it idles at intensity 0, which costs its loop iteration and nothing
+// else. (The emissive-lamp system that lived here is lightrig.js now —
+// lamps are slot requests, not scene lights.)
+const fillLight = new THREE.DirectionalLight(0xffffff, 0);
+scene.add(fillLight);
 let clock = null;          // { args, t0 } — the server-stamped epoch
 let currentWorld = null;
 
@@ -663,10 +665,6 @@ function applyTuning(a, day, warmth = Math.pow(1 - day, 1.5), sunPos = null, sky
     // Low sun ≠ dark subjects: golden hour is FULL of scattered warm light.
     hemi.intensity = (0.6 + 0.4 * day) * (a.ambient ?? 1);
 
-    if (!fillLight) {
-      fillLight = new THREE.DirectionalLight(0xffffff, 0);
-      scene.add(fillLight);
-    }
     fillLight.color.copy(hemi.color);
     if (sunPos) {
       fillLight.position.set(-sunPos.x, Math.max(0.35, sunPos.y), -sunPos.z).multiplyScalar(60);
@@ -682,7 +680,7 @@ function applyTuning(a, day, warmth = Math.pow(1 - day, 1.5), sunPos = null, sky
       scene.fog.color.lerpColors(cool, warm, warmth);
       scene.fog.density = 0.018 * (a.fog ?? 1);
     }
-  } else if (fillLight) {
+  } else {
     fillLight.intensity = 0; // the real sky supplies its own bounce
   }
 
@@ -691,67 +689,9 @@ function applyTuning(a, day, warmth = Math.pow(1 - day, 1.5), sunPos = null, sky
   renderer.toneMappingExposure = (skyOwnsLights ? 1 : (1.0 - 0.22 * warmth)) * (a.exposure ?? 1);
 
   dayness = day;
-  const lampGlow = Math.pow(1 - day, 2);
-  for (const l of lampLights) {
-    let root = l; while (root.parent) root = root.parent;
-    if (root !== scene) { lampLights.delete(l); continue; } // its object left
-    l.intensity = l.userData.base * lampGlow;
-  }
-}
-
-// ---------------------------------------------------------------- lamps
-// Models that glow should also SHED light. Any spawned object with emissive
-// surfaces gets a point light at each emissive mesh's centre; the sky clock
-// dims them at noon and lights them at dusk. No per-model configuration —
-// the material IS the declaration.
-
-export async function attachLocalLights(obj) {
-  // Deferred until after arrival, deliberately. Adding point lights
-  // invalidates every material variant in the scene, and with a grass field up
-  // that recompile is enormous — measured 2026-07-26: a world with grass took
-  // 1.3s to boot, and 10.6s once two emissive streetlights were in it. Neither
-  // alone is expensive; the product is. Lamps are also near-invisible in
-  // daylight, so nothing is lost by hanging them a moment later.
-  await whenBooted();
-  const emissive = [];
-  obj.traverse((o) => {
-    if (!o.isMesh) return;
-    const m = o.material;
-    const glow = (m?.emissiveIntensity ?? 1) *
-      Math.max(m?.emissive?.r ?? 0, m?.emissive?.g ?? 0, m?.emissive?.b ?? 0);
-    if (glow > 0.5 || (m?.emissiveMap && (m?.emissiveIntensity ?? 1) > 1)) {
-      emissive.push({ mesh: o, glow: Math.max(glow, m?.emissiveIntensity ?? 1) });
-    }
-  });
-  // Hard global cap. Each additional point light forces another material
-  // variant to compile across the WHOLE scene, and with an instanced grass
-  // field that recompile is brutal. Measured 2026-07-26 on the same world:
-  // grass + 2 lights booted in 429ms at 61fps and stayed responsive; grass +
-  // 4 lights never finished compiling and hung the tab outright. The cost is
-  // superlinear in light COUNT, so the count is what has to be bounded — not
-  // the number of lamps a world may contain. Two is what is MEASURED to be
-  // safe here; raising it needs a re-measure, not an assumption.
-  const budget = Math.max(0, MAX_LAMPS - lampLights.size);
-  if (budget === 0) {
-    if (!attachLocalLights._warned) {
-      attachLocalLights._warned = true;
-      console.warn(`[lights] lamp budget (${MAX_LAMPS}) reached — further emissive objects glow but do not cast`);
-    }
-    return;
-  }
-  for (const { mesh, glow } of emissive.slice(0, Math.min(2, budget))) { // and per object
-    mesh.geometry.computeBoundingSphere();
-    // saturated emissive keeps its colour; whitish emissive reads as a warm bulb
-    const ec = mesh.material.emissive;
-    const sat = Math.max(ec.r, ec.g, ec.b) - Math.min(ec.r, ec.g, ec.b);
-    const color = sat > 0.25 ? ec.clone() : new THREE.Color(0xffd9a0);
-    const light = new THREE.PointLight(color, 0, 12, 1.7); // tight radius: grass fragments cost
-    light.position.copy(mesh.geometry.boundingSphere.center);
-    light.userData.base = Math.min(40, 6 + 2.6 * glow);
-    light.intensity = light.userData.base * Math.pow(1 - dayness, 2);
-    mesh.add(light);
-    lampLights.add(light);
-  }
+  // the rig dims lamps and placed lights on this same clock (lamp inference
+  // itself lives there too — lightrig.attachLamps, requests not lights)
+  setDayness(day);
 }
 
 // ---------------------------------------------------------------- per-frame

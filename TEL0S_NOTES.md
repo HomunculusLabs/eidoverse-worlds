@@ -387,6 +387,29 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — 5b landed: the lighting rig.** `client/lib/lightrig.js` —
+  the light topology is born at module init and never changes: N point
+  slots (start 4 = the old measured-safe MAX_CAST, `?slots=N` for the 5g
+  re-measure) under one group, idle = intensity 0. Placed lights, emissive
+  lamps, and foreign lights are REQUESTS: assignment is keep/adopted >
+  authored > inferred, ties by camera distance with a 15% incumbent bonus
+  (no boundary flicker); slot churn is uniform writes. `keep` is now top
+  priority, NOT a budget escape (old keeps cast outside the budget —
+  unbounded; 4 fixed slots are strictly cheaper than the old worst case).
+  The weather system's permanent lightning PointLight is adopted through a
+  stable scene Proxy on the makeWeatherSystem seam (lights swallowed at
+  add(), mirrored into a slot verbatim per frame; the one-system-per-scene
+  registry eviction reaches our release because the proxy is stable).
+  Dead: MAX_CAST + grantCast + the compileAsync-per-grant, sky.js's
+  MAX_LAMPS/lampLights/attachLocalLights (lamps are rig requests now, no
+  whenBooted deferral — nothing left to defer), the lights.js→sky.js
+  import edge, and fillLight's lazy birth (eager now — it used to appear
+  exactly when the sky DEGRADED, paying a recompile storm at the worst
+  moment). Placed lights now live in time-of-day like lamps (the §5
+  design; `day:false` opt-out rides 5f). Governor's shed lever maps onto
+  a slot cap that can come back up. Verified: paritybench PASS (light
+  verb + partial update through the request path, reconnect green).
+  `EW.lightrig()` shows the pool.
 - **2026-08-09 — 5a landed: the material factory.** `client/lib/materials.js`
   — every material entering the world passes through `prepareObject` at
   creation, before first compile: a shape-identical port of upstream's

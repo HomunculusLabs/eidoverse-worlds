@@ -56,6 +56,7 @@ import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { shedALight, litCount } from './lib/lights.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { updateMaterials, materialsDebug } from './lib/materials.js';
+import { updateRig, rigDebug } from './lib/lightrig.js';
 import { framesHeld } from './lib/loadwork.js';
 import { startPrefetch } from './lib/prefetch.js';
 
@@ -1082,6 +1083,7 @@ function frame(now) {
   BC('sky');
   updateSky(now, t);
   updateMaterials(now);          // weather → uniforms; the factory's live half
+  updateRig(now);                // light slots follow their requests (§12.4)
 
   BC('me-drive');
   if (CONFIG.renderer) { /* camera is driven per snap request */ }
@@ -1253,6 +1255,7 @@ globalThis.EW = {
   foldParity,        // shadow-mode drift probe (TEL0S_NOTES §11.6)
   reconcileModels,   // force a full realizer pass (idempotent — §11.4)
   materials: materialsDebug,   // factory counters + live weather uniforms (§12.3)
+  lightrig: rigDebug,          // slot pool + request table (§12.4)
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)

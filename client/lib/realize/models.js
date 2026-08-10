@@ -24,7 +24,7 @@
 import { THREE, scene, camera, report, bus } from '../core.js';
 import { loadGLB } from '../assets.js';
 import { fitCollider, removeCollider, reindexCollider, refitCollider } from '../colliders.js';
-import { attachLocalLights } from '../sky.js';
+import { attachLamps, releaseOwner } from '../lightrig.js';
 import { makeLight, updateLight, disposeLight } from '../lights.js';
 import { entities, entityMeta, comps, avatarMounts, findPart, markShadowless, unmarkShadowless } from '../world.js';
 import { state, onWorldChange } from '../state.js';
@@ -157,7 +157,11 @@ function realizeModel(id, cur, obj) {
   if (sc) obj.scale.setScalar(sc);
   obj.userData.base = { pos: obj.position.toArray(), yaw: obj.rotation.y };
   reindexCollider(id);
-  attachLocalLights(obj);   // async, deliberately not awaited — same as legacy
+  // emissive surfaces become lamp REQUESTS — synchronous now: a request
+  // costs nothing until the rig assigns it a slot, and that is uniform
+  // writes (the old whenBooted deferral rationed recompiles that no longer
+  // happen)
+  attachLamps(obj, `entity:${id}`);
   entities.set(id, obj);
   entityMeta.set(id, { actor: cur.actor, lib: cur.lib, ts: cur.ts });
   scene.add(obj);
@@ -178,7 +182,7 @@ function realizeModel(id, cur, obj) {
 
 function createLight(id, ent) {
   tracked.set(id, { kind: 'light', gen: nextGen++ });
-  const g = makeLight({ color: ent.color, intensity: ent.intensity, range: ent.range, keep: ent.keep });
+  const g = makeLight({ color: ent.color, intensity: ent.intensity, range: ent.range, keep: ent.keep }, id);
   g.userData.entityId = id;
   g.position.set(...(ent.pos ?? [0, 1, 0]));
   entities.set(id, g);
@@ -221,6 +225,7 @@ function refreshLight(id, ent) {
 
 function retire(id) {
   cancelOwner(`entity:${id}`);
+  releaseOwner(`entity:${id}`);   // lamp + placed-light requests die with it
   const obj = entities.get(id);
   if (obj) {
     if (obj.userData?.isLight) disposeLight(obj);
