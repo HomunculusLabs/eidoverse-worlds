@@ -42,6 +42,7 @@ import { setSlotCap, getSlotCap, maxSlots, litCount,
 import { setEmitterQuality, emitterQuality, emitterCount } from './emitters.js';
 import { setGrassDensity, getGrassDensity, hasGrass } from './terrain.js';
 import { setLodBias } from './remotes.js';
+import { setSystemEvery, getSystemEvery } from './frame.js';
 import { toast } from './ui.js';
 
 let pixelRatio = BASE_PIXEL_RATIO;
@@ -105,6 +106,22 @@ const LEVERS = [
       const i = EMITTER_TIERS.indexOf(emitterQuality());
       if (i <= 0) return false;
       return Boolean(setEmitterQuality(EMITTER_TIERS[i - 1]));
+    },
+  },
+  {
+    // the first system-stride lever (§14.2 6b): the cosmetic per-frame
+    // hooks — cloud drift, grass wind, emitter billboards — at half rate.
+    // 30Hz wind is a degrade nobody reports; a lost frame is.
+    name: 'cosmetics',
+    shed() {
+      if (getSystemEvery('autos') >= 2) return false;
+      setSystemEvery('autos', 2);
+      return true;
+    },
+    restore() {
+      if (getSystemEvery('autos') <= 1) return false;
+      setSystemEvery('autos', 1);
+      return true;
     },
   },
   {

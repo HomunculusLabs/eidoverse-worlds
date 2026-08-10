@@ -10,7 +10,7 @@ import {
   bus, report, setName,
 } from './lib/core.js';
 import { contributeThumbnail, makeAvatar, EMOTE_ORDER, EMOTES } from './lib/avatar.js';
-import { updateSky, updateAutoSystems, skyArgs, skyImpl } from './lib/sky.js';
+import { updateSky, updateAutoSystems, skyArgs } from './lib/sky.js';
 import { setSkyArgsSource, entities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
 import { foldParity } from './lib/parity.js';
 import { initModelsRealizer, reconcileModels, residencyDebug, setResidencyFocus } from './lib/realize/models.js';
@@ -39,7 +39,7 @@ import './lib/mictoggle.js'; // mic + headphone toggles beside the HUD, both off
 import { initAudioPanel } from './lib/audiopanel.js';
 import { initSceneGraph, sceneAttach, sceneDetach } from './lib/scenegraph.js';
 import {
-  toast, setHud, setHint, setAmbientHint, flashHint, buildHelp, toggleHelp,
+  toast, setHint, setAmbientHint, flashHint, buildHelp, toggleHelp,
   openDoor, toggleRoster, initRoster, initDock, paintRoster, panelFrame, el,
 } from './lib/ui.js';
 import { initDebug, updateDebug, toggleDebug } from './lib/debug.js';
@@ -54,25 +54,15 @@ import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { protoStats } from './lib/assets.js';
 import { governPerformance, governorDebug } from './lib/governor.js';
+import { registerSystem, startFrame, frameDebug } from './lib/frame.js';
+import { perf } from './lib/perf.js';
+import { paintHud } from './lib/hud.js';
 import { updateMaterials, materialsDebug } from './lib/materials.js';
 import { updateRig, rigDebug } from './lib/lightrig.js';
 import { startPrefetch } from './lib/prefetch.js';
 
-// ---- crash breadcrumbs (?bc=1): streamed over a BroadcastChannel so a
-// SECOND same-origin tab can hold them in its own memory — the only place
-// that reliably outlives a renderer crash (localStorage writes from a dying
-// renderer turn out to be discardable). Dev-only diagnostics.
-let _bcN = 0;
-const BC = new URLSearchParams(location.search).has('bc')
-  ? (tag) => {
-    // over the live world socket: the server rings the last 40 per client and
-    // prints them when the socket dies — the only observer a renderer crash
-    // cannot take down with it (same-origin tabs share the renderer process,
-    // and localStorage writes from a dying renderer are discardable).
-    try { net.ws?.readyState === 1 && net.ws.send(JSON.stringify({ type: 'bc', tag: `${++_bcN} ${tag}` })); } catch { /* dying */ }
-  }
-  : () => {};
-globalThis.__ewBC = BC;
+// (Crash breadcrumbs live in lib/bc.js now; the frame loop stamps each
+// system's name as it runs. avatar.js still reads globalThis.__ewBC.)
 
 // ---------------------------------------------------------------- identity
 
@@ -180,7 +170,7 @@ initDebug({
   ragdoll: () => dragSim() ?? ragdoll,
   downed: () => !!dragSim() || downed,
   dragging: () => !!dragSim(),
-  fps: () => fps,
+  fps: () => perf.fps,
   // drop again from where you stand, so a shape can be reproduced back to back
   reLimp: () => { if (downed) getUp(); goLimp(); },
 });
@@ -1050,92 +1040,58 @@ const readyPoll = setInterval(() => {
 }, 400);
 
 // ---------------------------------------------------------------- frame loop
+// The loop itself lives in lib/frame.js (§14.2 6b); this is the LIST — the
+// registration order IS the execution order, and it encodes the constraints
+// §14.1 documents: motion before remotes, sky → materials → rig,
+// voice-mouths before the avatar update, bodydrag before remotes, gaze
+// after, send-pose after every myState writer, render last. Each system is
+// timed (EW.frame() prints the bill) and the governor may stride cosmetic
+// ones. The governor + HUD ride the 1Hz pulse, registered last.
 
-let last = performance.now();
-let frames = 0, fpsAt = last, fps = 0;
-
-function frame(now) {
-  const dt = Math.min(0.1, (now - last) / 1000);
-  last = now;
-  const t = now / 1000;
-  globalThis._sceneTime = t;
-
-  BC('frame');
-  updateAutoSystems(t);          // grass wind, particles
-  BC('motion');
-  tickMotion();                  // the world's moving parts (log-authored)
-  BC('sky');
-  updateSky(now, t);
-  updateMaterials(now);          // weather → uniforms; the factory's live half
-  updateRig(now);                // light slots follow their requests (§12.4)
-
-  BC('me-drive');
+registerSystem('autos', (dt, t) => updateAutoSystems(t));       // grass wind, particles
+registerSystem('motion', () => tickMotion());                   // the world's moving parts
+registerSystem('sky', (dt, t, now) => updateSky(now, t));
+registerSystem('materials', (dt, t, now) => updateMaterials(now)); // weather → uniforms
+registerSystem('rig', (dt, t, now) => updateRig(now));          // light slots follow requests
+registerSystem('me-drive', (dt) => {
   if (CONFIG.renderer) { /* camera is driven per snap request */ }
   else if (CONFIG.spectate) updateSpectator(dt, CONFIG.follow ? remotes.get(CONFIG.follow) : null);
   else if (downed) stepRagdoll(dt);     // the controller yields while limp
   else if (avatarMounts.has(CONFIG.name)) updateMountedMe(dt);  // seated: derived, not driven
   else updateMe(dt, me);
   updateSeatHint(dt);            // "X — sit" while a declared seat is in reach
-
-  // my own held pose: apply on change so I see what everyone else sees of me.
-  // While downed the ragdoll owns setPose directly, so skip this path.
-  BC('held-pose');
+});
+registerSystem('held-pose', () => {
+  // my own held pose: apply on change so I see what everyone else sees of
+  // me. While downed the ragdoll owns setPose directly, so skip this path.
   if (!downed && me && myState.pose !== me._poseSig) {
     me._poseSig = myState.pose;
     if (myState.pose) me.setPose(myState.pose); else me.clearPose();
   }
-  BC('me-update');
-  updateVoiceMouths(now);        // BEFORE the avatar updates that consume it
+});
+registerSystem('me-update', (dt, t, now) => {
+  updateVoiceMouths(now);        // BEFORE the avatar update that consumes it
   me?.update(dt, now);
-  BC('bodydrag');
-  updateBodyDrag(dt, now);       // BEFORE remotes: the takeover sim's pose must
-                                 // land in the same frame's avatar.update
-  BC('physobj');
-  tickPhysObj(dt, now);          // entity leases I hold (kicked balls, etc.)
-  BC('mods');
-  tickMods(dt, now);             // runtime-loaded client scripts (🧩 mods)
-  BC('remotes');
-  updateRemotes(dt, now);
-  BC('gaze');
-  updateGaze(myState.pos, me, CONFIG.name, now);
-  BC('build');
-  updateBuild();
-  BC('debug');
-  updateDebug(now);              // collider/ragdoll wireframes, when F3 is up
-  BC('send-pose');
-  sendPose(now);
+});
+registerSystem('bodydrag', (dt, t, now) => updateBodyDrag(dt, now)); // before remotes:
+                                 // the takeover pose lands in this frame's avatar.update
+registerSystem('physobj', (dt, t, now) => tickPhysObj(dt, now)); // entity leases I hold
+registerSystem('mods', (dt, t, now) => tickMods(dt, now));       // 🧩 runtime scripts
+registerSystem('remotes', (dt, t, now) => updateRemotes(dt, now));
+registerSystem('gaze', (dt, t, now) => updateGaze(myState.pos, me, CONFIG.name, now));
+registerSystem('build', () => updateBuild());
+registerSystem('debug', (dt, t, now) => updateDebug(now));       // F3 wireframes
+registerSystem('send-pose', (dt, t, now) => sendPose(now));
+registerSystem('render', () => renderer.render(scene, camera));
+let _pulseAt = 0;
+registerSystem('pulse', (dt, t, now) => {
+  if (now - _pulseAt < 1000) return;
+  _pulseAt = now;
+  governPerformance(perf.fps);
+  paintHud();
+});
 
-  BC('render');
-  renderer.render(scene, camera);
-  BC('post-render');
-
-  frames++;
-  if (now - fpsAt > 1000) {
-    fps = frames; frames = 0; fpsAt = now;
-    governPerformance(fps);
-    paintHud();
-  }
-  requestAnimationFrame(frame);
-}
-
-// The perf governor lives in lib/governor.js now — one ladder, every lever
-// two-way, session-scoped, and it never touches the cloud tier (§12.6).
-
-const statusDot = {
-  live: '<span class="ok">●</span>', connecting: '<span>○</span>',
-  retrying: '<span class="bad">●</span>', rejected: '<span class="bad">✕</span>',
-};
-function paintHud() {
-  const n = remotes.size;
-  setHud(
-    `${statusDot[net.status] ?? ''} <b>${CONFIG.name}</b> @ ${CONFIG.world}   ` +
-    `${fps}fps   ${n} other${n === 1 ? '' : 's'}` +
-    (isEditing() ? '   <span class="edit">✎ editing</span>' : '') +
-    (skyImpl() === 'skymesh' ? '   <span style="opacity:.6">basic sky</span>' : ''),
-  );
-}
-
-requestAnimationFrame(frame);
+startFrame();   // explicit — the loop starts only after identity resolved
 
 // Idle bandwidth streams the rest of the library into the HTTP cache — fire
 // and forget; it waits out the boot and yields to every real load on its own
@@ -1158,6 +1114,7 @@ globalThis.EW = {
   governor: governorDebug,     // the two-way lever ladder (§12.6)
   residency: residencyDebug,   // real/stand-in/loading counts + sweep stats (§13.3)
   gpu: () => ({ ...renderer.info.memory, ...protoStats() }),   // bytes + proto/byte tiers
+  frame: frameDebug,           // per-system rolling ms + strides (§14.2 6b)
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)
