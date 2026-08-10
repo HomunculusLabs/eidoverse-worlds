@@ -14,7 +14,8 @@ import { MToonMaterialLoaderPlugin } from '@pixiv/three-vrm-materials-mtoon';
 import { MToonNodeMaterial } from '@pixiv/three-vrm-materials-mtoon/nodes';
 import { VRMAnimationLoaderPlugin, createVRMAnimationClip } from '@pixiv/three-vrm-animation';
 import { clone as skeletonClone } from 'three/addons/utils/SkeletonUtils.js';
-import { beginWork, enqueue } from './loadwork.js';
+import { beginWork, enqueue, nextFrame } from './loadwork.js';
+import { warm } from './warmqueue.js';
 import { prepareObject } from './materials.js';
 
 // ---- loading tray -----------------------------------------------------------
@@ -241,37 +242,57 @@ export async function loadGLB(libPath) {
   const obj = skeletonClone(proto); // safe for rigged + static alike
   // Precompile pipelines OFF the render path — otherwise the first frame that
   // sees a new material stalls the main thread (the ~1.5s spawn freeze).
-  // Only the FIRST use of a model queues (it pays real codegen + pipeline
-  // creation); repeats are cache hits and would just sit in line to discover
-  // that — prod trace: "queued 19311ms · compile 5ms".
+  // ALL THREE compile paths run through the warm conductor (warmqueue.js,
+  // §16.2.A): the repeat-clone and racing-second-caller paths used to call
+  // compileAsync BARE — up to 6 concurrent compiles starving rAF, invisible
+  // to jank attribution (§16.1d) — and the gpu lane's 2-wide concurrency let
+  // even the laned ones fight each other. Only the FIRST use of a model pays
+  // real codegen + pipeline creation; repeats are cache hits — prod trace:
+  // "queued 19311ms · compile 5ms".
   if (compiledLibs.has(libPath)) {
-    await renderer.compileAsync(obj, camera, scene).catch(() => {});
+    await warm(`compile ${short}`, () => renderer.compileAsync(obj, camera, scene).catch(() => {}));
     return obj;
   }
   // Two spawns of the same model racing used to BOTH queue a full compile —
-  // and with two gpu slots they ran CONCURRENTLY, each paying the whole
-  // codegen+pipeline cost (Safari: ~6s each, twice, for one model). Clones
-  // share material references, so one compile warms them all: the first
-  // caller compiles, everyone else awaits it and then cache-hits.
+  // each paying the whole codegen+pipeline cost (Safari: ~6s each, twice,
+  // for one model). Clones share material references, so one compile warms
+  // them all: the first caller compiles, everyone else awaits it and then
+  // cache-hits.
   if (!libCompiles.has(libPath)) {
-    const work = beginWork(`compile ${short}`);
-    work.phase('queued'); // before enqueue — an empty lane starts the job synchronously
     // In the loading tray too: on Safari a single material graph compiles for
     // SECONDS — a spinner named after the model turns that from mystery jank
-    // into visible progress.
+    // into visible progress. (The conductor's own beginWork carries the
+    // queued/warm phases the old record here tracked.)
     loadTrack(`compile:${libPath}`, `⚙ ${short}`);
-    const p = enqueue(() => {
-      work.phase('compile');
-      return renderer.compileAsync(obj, camera, scene).catch(() => {});
-    }, { lane: 'gpu', priority: 0 })
+    // Per-MESH inside the item, a real frame between: one compileAsync over a
+    // multi-material object batches every pipeline into one GPU-process gulp
+    // (the CRT monitor's 1123ms warm still stalled a frame 617ms even
+    // serialized). Mesh-by-mesh, shared materials cache-hit after their
+    // first mesh and the burst spreads. frustumCulled defeats the walk's
+    // culling for detached clones whose world matrices are still stale.
+    const p = warm(`compile ${short}`, async () => {
+      const meshes = [];
+      obj.traverse((o) => { if (o.isMesh) meshes.push(o); });
+      for (const mesh of meshes) {
+        const culled = mesh.frustumCulled;
+        mesh.frustumCulled = false;
+        try { await renderer.compileAsync(mesh, camera, scene).catch(() => {}); }
+        finally { mesh.frustumCulled = culled; }
+        await nextFrame();
+      }
+    })
       .then(() => compiledLibs.add(libPath))
-      .finally(() => { libCompiles.delete(libPath); work.end(); loadDone(`compile:${libPath}`); });
+      .finally(() => { libCompiles.delete(libPath); loadDone(`compile:${libPath}`); });
     libCompiles.set(libPath, p);
     await p;
     return obj;
   }
+  // The racing second caller awaits the first-of-lib compile OUTSIDE the
+  // conductor (a conductor item must never await another conductor item —
+  // that is item-awaits-item, a deadlock at concurrency 1), then queues its
+  // own now-cheap warm.
   await libCompiles.get(libPath).catch(() => {});
-  await renderer.compileAsync(obj, camera, scene).catch(() => {}); // warm now
+  await warm(`compile ${short}`, () => renderer.compileAsync(obj, camera, scene).catch(() => {}));
   return obj;
   } finally {
     const n = (loadsInFlight.get(libPath) ?? 1) - 1;

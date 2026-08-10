@@ -390,6 +390,38 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — 8b LANDED: the warm conductor.** client/lib/warmqueue.js:
+  every pipeline warm rides one serialized queue with priority classes —
+  P_GATE (terrain) > P_MODEL (GLBs, the avatar body) > P_AMBIENT (sky
+  domes, shadow-depth variants). The classes exist because the first gate
+  MEASURED the failure: FIFO queued a rain world's cloud-march compiles
+  ahead of the terrain compile the curtain waits on and boot went 2s→16s.
+  GLB and avatar compiles run mesh-by-mesh inside their item with a real
+  rAF between — a whole-object compileAsync still gulped ~11 pipelines in
+  one GPU-process batch (measured 383/491ms stalls) even serialized.
+  Depth pre-warm: casterPass never flips an unwarmed caster; warmDepth
+  compiles the exact shadow-pass state through compileAsync against the
+  sun's shadow camera (the r184 trap — renderObject RESTORES its shadow-
+  override mutations before compileAsync's deferred codegen runs, so a
+  naive warm compiles the wrong pipeline; the warm material is
+  pre-configured to the post-mutation state; the full line-number proof
+  lives in warmqueue.js's header). Terrain's 1200ms compile cap deleted
+  (P_GATE, awaited fully — an uncompiled ground is worse than a longer
+  splash). Sky warm moved BEFORE the curtain: whenSkyWarm gate with an
+  8s cap, riding its own counter beside the worldBuild chain (grass
+  parks that chain on whenBooted — a sky queued behind it would deadlock
+  the curtain; buildSky's own whenBooted wait removed for the same
+  reason). Numbers (commons replica): frames>25ms 22→12, worst frame
+  1166→433ms, pipelines 56→14, p99 16.5ms; boot 3.0→5.0s — the sky's
+  warmth moved INTO the splash by design, rain worlds cap at 8s.
+  lightbench's caster check now POLLS (first-cast has designed-in warm
+  latency — the bench asserts the end state, not the old timing).
+  Observed while gating, pre-existing: the sky's scene-diff claim can
+  swallow concurrently-added debug helper groups (warm labels "sky warm
+  debug:colliders") — harmless for warming, but teardownSky would remove
+  them with the sky; noted, not fixed here. Remaining boot jank: the
+  hydration/parse longtask storm (8c) and 59-112MB single-frame texture
+  uploads (8d).
 - **2026-08-10 — 8a LANDED: the meadow arrives warm.** Occupancy tiler
   (mojave 68→17 render objects; every tile's instanceMatrix ALLOCATED
   past the uniform-buffer limit so all tiles of a material share ONE

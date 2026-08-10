@@ -251,8 +251,16 @@ check("rig: casting count = min(requests, cap)",
   castingKeys.length === Math.min((rig?.requests ?? []).length, rig?.cap ?? 0), castingKeys.join(" "));
 check("rig: both keeps hold slots", ["placed:keep1", "placed:keep2"].every((k) => castingKeys.includes(k)),
   `casting: ${castingKeys.join(", ")}`);
-check("rig: caster budget tracks realized models", rig?.casters === 2 && rig?.casting === 2,
-  `casters=${rig?.casters} casting=${rig?.casting}`);
+// Casters WARM before they flip (8b, warmqueue.warmDepth): first-cast has
+// designed-in latency — a depth warm must drain through the conductor before
+// castShadow=true. Poll to the same end state instead of asserting mid-warm.
+let casterRig = rig;
+for (let i = 0; i < 15 && !(casterRig?.casters === 2 && casterRig?.casting === 2); i++) {
+  await sleep(1000);
+  casterRig = await evalJson("EW.lightrig()");
+}
+check("rig: caster budget tracks realized models", casterRig?.casters === 2 && casterRig?.casting === 2,
+  `casters=${casterRig?.casters} casting=${casterRig?.casting}`);
 
 // -- the day cycle ------------------------------------------------------------
 // At noon dayGlow is 0: every day-aware slot writes intensity 0, and only the

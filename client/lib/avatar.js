@@ -7,7 +7,8 @@ import {
   loadVRM, clipFor, vrmaBytes, loadTrack, loadDone,
   CLIP_SLOTS, CLIP_SPEED, VRMUtils,
 } from './assets.js';
-import { beginWork, enqueue, idleYield } from './loadwork.js';
+import { beginWork, enqueue, idleYield, nextFrame } from './loadwork.js';
+import { warm } from './warmqueue.js';
 import { DRIVEN_BONES } from './ragdoll.js';
 import { stroke as strokeIcon } from './icons.js';
 
@@ -801,10 +802,24 @@ export async function makeAvatar(id, libPath, { full = false, urgent = false } =
       try { clips[slot] = await clipFor(vrm, slot, { priority }); } catch (e) { report(`clip ${slot}`, e); }
     }
     work.phase('compile');
-    // gpu lane: codegen slices interleave with the frame loop; the long tail
-    // is driver-side pipeline creation, which overlaps other compiles fine.
-    await enqueue(() => renderer.compileAsync(vrm.scene, camera, scene).catch(() => {}),
-      { lane: 'gpu', priority });
+    // Through the warm conductor (§16.2.A), mesh by mesh with a real frame
+    // between: the body's MToon set is a burst of ~11 pipelines, and both
+    // the old 2-wide gpu lane AND a single whole-scene conductor item landed
+    // that burst in one GPU-process gulp — bootjank attributed 383ms/491ms
+    // compile-stall frames to exactly that. Spread, shared materials
+    // cache-hit after their first mesh. frustumCulled defeats the compile
+    // walk's culling while the body is still detached (stale matrices).
+    await warm(`avatar ${id}`, async () => {
+      const meshes = [];
+      vrm.scene.traverse((o) => { if (o.isMesh) meshes.push(o); });
+      for (const mesh of meshes) {
+        const culled = mesh.frustumCulled;
+        mesh.frustumCulled = false;
+        try { await renderer.compileAsync(mesh, camera, scene).catch(() => {}); }
+        finally { mesh.frustumCulled = culled; }
+        await nextFrame();
+      }
+    });
     const av = new Avatar(id, vrm, clips);
     // The rest arrives behind you. Remote bodies hydrate too — someone else
     // breaking into a run should not be stuck walking on your screen.

@@ -15,11 +15,12 @@
 
 import { THREE, scene, sun, hemi, renderer, camera, report, bus } from './core.js';
 import { loadEidoModule, primeFiles, listLibrary, fetchBytes } from './assets.js';
-import { markPhase, whenBooted } from './boot.js';
+import { markPhase } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake,
   envTexture, adoptEnvironment } from './sky_baked.js';
 import { beginWork } from './loadwork.js';
 import { setDayness, releaseForeignLights } from './lightrig.js';
+import { warm, P_AMBIENT } from './warmqueue.js';
 import { WEATHERS, effectiveSky, hoursAt } from '../../shared/forecast.js';
 // Who owns which per-frame hook. The sky claims by diffing a GLOBAL array
 // around its own async build; anything another subsystem marks as its own is
@@ -296,6 +297,18 @@ async function primeFor(world, wantAudio) {
 // produced six stacked sky systems and six weather systems. The guard has to
 // be the in-flight PROMISE, not the finished result.
 let building = null;
+
+// The FIRST sky's warm, as a single-shot promise the boot gate can race
+// (world.applySkyFolded): resolved when the first eidoverse build's dome
+// warm drains through the conductor, OR when the sky lands on the skymesh
+// fallback (its dome is one small material — nothing left worth gating on),
+// whichever a degrading retry ladder reaches first. Later verbs/rebuilds
+// never re-arm it: a mid-session sky has no curtain.
+let _skyWarmResolve = null;
+const _skyWarmDone = new Promise((r) => { _skyWarmResolve = r; });
+function resolveSkyWarm() { _skyWarmResolve?.(); _skyWarmResolve = null; }
+export const whenSkyWarm = () => _skyWarmDone;
+
 // What the last sky build put into the scene.
 //
 // makeSky returns an api with no dispose — so `skyApi?.dispose?.()` was a
@@ -408,10 +421,13 @@ async function buildSky(a, world, wantAudio) {
     envKnobs.DCACHE = undefined;
     envKnobs.LCACHE = a.quality === 'high' ? undefined : '0';
 
-    // Let the person get into the world first. On a throttled link the sky's
-    // assets and the body's were racing each other through the same pipe, and
-    // the body is the one arrival actually waits for.
-    await whenBooted();
+    // (An `await whenBooted()` lived here — a bandwidth yield so the sky's
+    // assets wouldn't race the body's through one pipe. It had to go: during
+    // initial hydration arrival now GATES on this build's warm
+    // (world.applySkyFolded, §16.2.D), and a sky that waits for boot while
+    // boot waits for the sky is a splash that never lifts. The gating order
+    // itself provides what the wait was for — the sky is no longer
+    // competing with boot-critical work, it IS boot work.)
     await primeFor(world, wantAudio);
     await loadEidoModule('sky_worlds.js');
     if (typeof globalThis.makeSky !== 'function') throw new Error('sky_worlds.js exposed no makeSky');
@@ -439,21 +455,24 @@ async function buildSky(a, world, wantAudio) {
     // Warm the sky's OWN pipelines off the render path: the cloud march is
     // the biggest single compile in the client, and a regular render that
     // meets an uncompiled dome creates its pipeline SYNCHRONOUSLY — one big
-    // stall exactly when the sky first appears. compileAsync skips objects
-    // not in the scene-graph-under-compile... and skips nothing here: each
-    // claimed addition detaches, compiles against the live scene, re-adds
-    // warm (the grass precompile pattern, world.js). Nothing ELSE needs
-    // settling — sky arrival no longer invalidates the rest of the scene.
-    {
-      const warm = beginWork('sky warm');
-      try {
-        for (const o of skyOwned) {
-          scene.remove(o);
-          await renderer.compileAsync(o, camera, scene).catch(() => {});
-          scene.add(o);
-        }
-      } finally { warm.end(); }
+    // stall exactly when the sky first appears. Each claimed addition goes
+    // through the warm conductor (§16.2.A) — one item per dome, serialized
+    // against every other pipeline warm, a real frame between items: it
+    // detaches, compiles against the live scene, re-adds warm (the grass
+    // precompile pattern). Nothing ELSE needs settling — sky arrival no
+    // longer invalidates the rest of the scene. During initial hydration
+    // the curtain waits for this loop (whenSkyWarm below) — measured 3.1s
+    // that used to land squarely in the visible window (§16.1g).
+    for (const o of skyOwned) {
+      // P_AMBIENT: dome warmth never queues ahead of the ground/models a
+      // person is actually waiting for (the 16s-boot lesson, warmqueue.js)
+      await warm(`sky warm ${(o.name || o.type || 'dome').slice(0, 24)}`, async () => {
+        scene.remove(o);
+        try { await renderer.compileAsync(o, camera, scene).catch(() => {}); }
+        finally { scene.add(o); }
+      }, { p: P_AMBIENT });
     }
+    resolveSkyWarm();
     currentWorld = world;
     impl = 'eidoverse';
     scene.background = null;
@@ -665,6 +684,9 @@ async function renderSkyMesh(a) {
   scene.background = null;
 
   applyTuning(a, day, warmth, sunPos);
+  // every degraded/fallback route ends here — the boot gate must not wait
+  // for a dome warm that will never come
+  resolveSkyWarm();
 }
 
 // ============================================================ shared tuning

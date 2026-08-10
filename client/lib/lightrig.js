@@ -50,6 +50,7 @@
 // (docs/upstream-wrap-once.md addendum).
 
 import { THREE, scene, camera, renderer, sun, CONFIG } from './core.js';
+import { warmDepth } from './warmqueue.js';
 
 // ---- the fixed inventory ----------------------------------------------------
 
@@ -283,13 +284,15 @@ function updateShadow() {
 // object.castShadow is in NO pipeline cache key (§12.1) — toggling it only
 // changes shadow-pass render-list membership. So the caster set is a live
 // distance budget, not a drip: the nearest K entities cast, the rest keep
-// receiving. New enables are throttled (each newly-cast object pays its
-// depth pipeline once, on the next shadow render — ≤2 per pass keeps that
-// spread, which was the one virtue of the old 250ms drainShadows drip,
-// kept without its lanes-idle coupling or 30s fallback). Bodies stay on
-// their blob shadows until measured (§12.5).
+// receiving. A caster's depth pipelines are PRE-WARMED through the conductor
+// (warmqueue.warmDepth, §16.2.A) before its castShadow ever flips — the old
+// flow paid a synchronous createRenderPipeline inside the next shadow render
+// per enable, which was the rhythmic 300ms-beat hitch (§16.1c). The ≤2/beat
+// budget stays, now counting FLIPS of already-warm casters; disables stay
+// immediate (free — castShadow is in no cache key). Bodies stay on their
+// blob shadows until measured (§12.5).
 
-const casters = new Map();   // id -> { obj, meshes, casting }
+const casters = new Map();   // id -> { obj, meshes, casting, warm, released }
 let casterBudget = 12;
 let lastCasterPass = 0;
 
@@ -297,9 +300,13 @@ let lastCasterPass = 0;
 export function registerCaster(id, obj) {
   const meshes = [];
   obj.traverse((o) => { if (o.isMesh) meshes.push(o); });
-  casters.set(id, { obj, meshes, casting: false });
+  casters.set(id, { id, obj, meshes, casting: false, warm: 'none', released: false });
 }
-export function releaseCaster(id) { casters.delete(id); }
+export function releaseCaster(id) {
+  const c = casters.get(id);
+  if (c) c.released = true;   // a queued warm re-reads this and skips the work
+  casters.delete(id);
+}
 export const casterCount = () => casters.size;
 export function setCasterBudget(k) { casterBudget = Math.max(0, k); }
 export const getCasterBudget = () => casterBudget;
@@ -313,10 +320,25 @@ function casterPass() {
     const { c } = ranked[i];
     const want = i < casterBudget;
     if (want === c.casting) continue;
-    if (want && enables >= 2) continue;   // spread first-cast depth compiles
-    if (want) enables++;
-    c.casting = want;
-    for (const m of c.meshes) m.castShadow = want;
+    if (!want) {                          // disables are free — flip now
+      c.casting = false;
+      for (const m of c.meshes) m.castShadow = false;
+      continue;
+    }
+    // an unwarmed caster never flips: ask the conductor once, flip on a
+    // later beat once its depth pipelines exist (the end state is identical
+    // to the old flow, merely later by the warm latency)
+    if (c.warm === 'none') {
+      c.warm = 'pending';
+      warmDepth(`depth ${String(c.id).slice(0, 24)}`, () => (c.released ? [] : c.meshes))
+        .then(() => { c.warm = 'done'; });
+      continue;
+    }
+    if (c.warm !== 'done') continue;      // still warming
+    if (enables >= 2) continue;           // ≤2 FLIPS per beat, as before
+    enables++;
+    c.casting = true;
+    for (const m of c.meshes) m.castShadow = true;
   }
 }
 

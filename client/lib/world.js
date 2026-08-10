@@ -18,8 +18,9 @@ import { beginWork } from './loadwork.js';
 import { reindexCollider } from './colliders.js';
 import { setTerrain, setGrass, clearGrass, heightAt } from './terrain.js';
 import { buildFloraField, warmField } from './flora.js';
-import { applySky } from './sky.js';
-import { whenBooted } from './boot.js';
+import { applySky, whenSkyWarm } from './sky.js';
+import { whenBooted, bootDone } from './boot.js';
+import { warm, P_GATE } from './warmqueue.js';
 
 /** id -> Object3D. `null` is a reservation held while the GLB downloads, so a
  *  duplicate spawn in the same tick can't create two bodies for one id. */
@@ -78,8 +79,12 @@ function enqueueWorldBuild(what, fn) {
       bus.emit('build-queue', { depth: buildDepth, what });
     });
 }
-export const buildsPending = () => gatingDepth;
-export const anyBuildsPending = () => buildDepth;
+// The sky's arrival gate rides its own counter, NOT the worldBuild chain:
+// grass parks that chain on whenBooted(), so a sky queued behind it would
+// hold the curtain against itself (see applySkyFolded).
+let skyGate = 0;
+export const buildsPending = () => gatingDepth + skyGate;
+export const anyBuildsPending = () => buildDepth + skyGate;
 
 // Guards so a re-join (avatar switch, reconnect) that replays the log doesn't
 // regenerate an identical world.
@@ -115,15 +120,19 @@ export function applyTerrainState(args) {
     if (t?.mesh) prepareObject(t.mesh, { kind: 'terrain' });
     // compile the ground's pipelines BEFORE it enters the scene — an
     // unprecompiled terrain material otherwise codegens synchronously
-    // inside the first render() that sees it. BOUNDED: this build GATES
-    // arrival, and on Safari one compile can cost seconds (measured
-    // 08-02: boot went 10.7s) — past the cap the ground arrives anyway
-    // and the still-running compile finishes warming it moments later.
+    // inside the first render() that sees it. UNCAPPED, through the warm
+    // conductor and awaited fully (§16.2.A): this build gates arrival, so
+    // the splash simply holds a moment longer and the ground enters
+    // compiled. (A 1200ms Promise.race cap lived here for slow-compile
+    // Safari boots — but past the cap the biggest material in the world
+    // entered the scene UNCOMPILED and codegen'd inside the first render()
+    // that saw it, §16.1c. An uncompiled ground is worse than a longer
+    // splash.)
     if (t?.mesh) {
-      await Promise.race([
-        renderer.compileAsync(t.mesh, camera, scene).catch(() => {}),
-        new Promise((r) => setTimeout(r, 1200)),
-      ]);
+      // P_GATE: arrival waits on THIS item — the first 8b gate measured a
+      // rain world booting in 16s because the cloud-march compiles queued
+      // ahead of the ground the curtain was actually waiting for
+      await warm('compile terrain', () => renderer.compileAsync(t.mesh, camera, scene).catch(() => {}), { p: P_GATE });
     }
     setTerrain(t);
     // re-seat only ground-level entities — anything with a meaningful y
@@ -170,9 +179,45 @@ export function applyGrassState(args) {
 
 /** Apply an already-FOLDED sky bag (state.st.sky or foldSkyEntry output).
  *  `ts` anchors live transition timing; a snapshot passes the bag's own. */
+// During INITIAL hydration, arrival gates on the sky's pipeline warm
+// (§16.2.D): the dome compiles are ~3s of splash instead of ~3s of visible
+// jank — the warm used to await whenBooted() and land squarely AFTER the
+// curtain lifted (§16.1g). Capped: a degraded or headless sky must never
+// brick arrival (lightbench's bolt-seam section knows sky can degrade) —
+// past the cap the curtain lifts and the warm continues in the conductor
+// behind it. A mid-session sky verb (bootDone) gates nothing and behaves
+// exactly as before; a world with no sky verb never reaches this and gates
+// on nothing. The gate registers synchronously inside the hydration
+// realizer pass — before checkReady can ever observe an empty queue (same
+// ordering guarantee terrain leans on, realize/environment.js).
+let skyGated = false;
+const SKY_GATE_MAX_MS = 8000;
 export function applySkyFolded(bag, ts) {
   if (!bag) return Promise.resolve();
-  return Promise.resolve(applySky(bag, ts ?? bag.ts)).catch((e) => report('sky', e));
+  const p = Promise.resolve(applySky(bag, ts ?? bag.ts)).catch((e) => report('sky', e));
+  if (!skyGated && !bootDone()) {
+    skyGated = true;
+    skyGate = 1;
+    loadTrack('build:sky', 'warming the sky');
+    bus.emit('build-queue', { depth: buildDepth, what: 'sky' });
+    const work = beginWork('sky gate');
+    work.phase('warm');
+    Promise.race([
+      whenSkyWarm(),
+      new Promise((r) => setTimeout(() => r('timeout'), SKY_GATE_MAX_MS)),
+    ]).then((how) => {
+      skyGate = 0;
+      loadDone('build:sky');
+      bus.emit('build-queue', { depth: buildDepth, what: 'sky' });
+      if (how === 'timeout') {
+        // visible in __loadLog: the gate line names the giving-up, and the
+        // still-running warm keeps its own conductor records
+        work.phase('lifted-at-cap');
+        setTimeout(() => work.end(), 2);
+      } else work.end();
+    });
+  }
+  return p;
 }
 
 /** An upload became part of this world's vocabulary: the palette grows for

@@ -644,8 +644,8 @@ async function onSnapshot(msg) {
   // Honest world progress: the phase tracks the scheduler's outstanding
   // entity loads instead of jumping 0→1 (boot.js weights 'world' at 40 —
   // this is the bar's biggest segment actually moving with the loads).
-  // The curtain does NOT wait on this; checkReady still gates on body +
-  // state + terrain only.
+  // The curtain does NOT wait on this; checkReady gates on body + state +
+  // terrain + the first sky's capped pipeline warm (world.applySkyFolded).
   const initialPending = pending(P.FAR);
   if (initialPending > 0) {
     markPhase('world', Math.max(0.15, 1 - initialPending / (initialPending + 1)));
