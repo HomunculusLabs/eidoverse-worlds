@@ -1311,3 +1311,67 @@ draws, blades-drawn ≈ eff × count).
 
 G1 (free wins) → R1 + terrain-leak fix → G2 (tiling + distance density)
 → R2 + R3 (eviction + byte LRU) → probes + adversarial review → §10.
+
+## 14. Step 6 reference design — the trench coat comes off
+
+Grounded by the main.js structure map (2026-08-09; extraction agent, line
+ranges verified). main.js is 1164 lines; 142-1164 is one else-block (the
+?mintthumbs branch), gated behind a top-level await initIdentity() at 192.
+
+### 14.1 Binding facts
+- Frame loop (1058-1120): 20 steps, exact order + documented constraints:
+  motion before remotes (mounted derive); sky -> materials -> rig (sun
+  position); voice-mouths before avatar update; bodydrag before remotes;
+  gaze after remotes; sendPose after every myState writer; exactly one of
+  the five me-drives per frame; governor+HUD at 1Hz post-render.
+- Hot paths confirmed: camera collision = 3 Vector3 allocs + fresh
+  liveEntities array + recursive intersectObjects over every mesh
+  (controller.js:378-392) while colliders.js has OBBs + BVHs + an 8m grid;
+  physobj = O(sims x ALL colliders) + alloc in inner loop (137-149),
+  IGNORES rotation/scale (latent); rapierdoll:342 same with manual 8m
+  filter; gaze O(n^2)/frame at conversational rate; ungated: tickMotion
+  (every comp bag every frame), autoParticleSystems hooks, flora pusher
+  hook (2 arrays + sort every frame), seat-hint full comps x sockets scan.
+- Grid today: CELL=8, 2D, string keys, generator near() fixed 3x3 (radius
+  capped ~8m), entries {obj|duck, local Box3 + yaw = OBB, pillar, exact
+  BVH, interior, lie}. findSeat/surfaceUnder/physobj/rapierdoll DON'T use
+  it. fitSupportBox duck (headless agents) must survive promotion.
+- Dissolution risks: `me` closed over by ~18 sites -> lib/mybody.js
+  ({get me, setMe} + avatar-path state, imports core only); commands
+  cycle chat->registry->net->chat -> split registry.js (pure table,
+  imports NOTHING, chat imports only it) from handler modules registered
+  at boot; kick/push disambiguators need ordered fallthrough; fps ->
+  lib/perf.js leaf; BC -> lib/bc.js (imports net only; avatar reads the
+  global); boot.js (splash) stays a leaf — the SEQUENCE stays in main.js,
+  which shrinks to ~120 lines of boot; mint.js dynamically imported kills
+  the else-block; loop start becomes explicit startFrame() (today rAF
+  waits on the identity RTT — keep that ordering deliberately).
+- Found bugs to fix en route: /rename emitted by chat.js:514, no
+  subscriber (dead command); avatar-updated handler throws on null
+  myAvatarPath (main.js:304, cold cache); duplicate /kick autocomplete
+  row (chat.js:406/411); duplicate bodydrag import (main.js:46/51).
+
+### 14.2 The slices
+- **6a spatial service** (perf first): variable-radius near(x,z,r) with
+  interned integer keys + zero-alloc iteration; raySegment(origin,dir,far)
+  -> nearest {t,id} (2D DDA over cells, OBB slab test, BVH raycastFirst
+  only for exact entries, per-entry noCamCollide hoisted) replacing the
+  camera raycast at its three call sites' shared core; physobj +
+  rapierdoll + findSeat + surfaceUnder onto near(); gaze throttled to
+  250ms + speaker epoch (rate fix, not index — n is room-scale); distance
+  gates: tickMotion skips entities beyond ~90m (closed-form motion
+  catches up exactly on re-entry), flora pusher hook reuses arrays;
+  ragdoll body-level cell cache (one query, 19 joints).
+- **6b frame.js**: registerSystem({name, tick, enabled, every}) honoring
+  the documented order constraints; per-system rolling ms exposed
+  (EW.frame()); governor gains system strides as levers; perf.js owns
+  fps; hud.js owns paintHud; bc.js extracted; explicit startFrame().
+- **6c dissolution**: mint.js (dynamic import, kills the else); mybody.js
+  (me + avatar-path + swap + avatar-updated guard); localbody.js
+  (ragdoll/mounts+seats/pins/dragged/shove/puppet/force — logChat via
+  bus or init hook, NOT import, until the chat knot is cut);
+  consent.js (zero-dep); voicemouths.js (mouths + caption/speech merge);
+  commands/registry.js + handlers (fix /rename, kill the dup /kick row,
+  preserve kick/push fallthrough order); main.js = the boot sequence.
+Gates per slice: paritybench + lightbench; 6a additionally an A/B frame
+probe (camera-collision cost) if measurable headless.
