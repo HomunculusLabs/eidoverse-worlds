@@ -1006,3 +1006,13 @@ console.log(`eidoverse-worlds sequencer on http://0.0.0.0:${PORT}`);
 console.log(`  library: ${LIBRARY_DIR}`);
 console.log(`  worlds:  ${WORLDS_DIR}`);
 if (!JOIN_TOKEN) console.log("  ⚠ NO JOIN_TOKEN — the door is OPEN. Fine on a tailnet, wrong on a public box.");
+// A fresh clone without the client's install step serves a client that can
+// never wake: the importmap points `three` at client/node_modules, every
+// module import 404s, and the splash used to sit at "waking the engine"
+// forever with nothing in THIS terminal. Say it where the operator looks.
+if (!existsSync(join(ROOT, "client", "node_modules", "three"))) {
+  console.log("  ⚠ client/node_modules is MISSING — browsers will hang at the splash. Run: cd client && bun install");
+}
+if (!existsSync(join(LIBRARY_DIR, "eidoverse"))) {
+  console.log(`  ⚠ no eidoverse-video library at ${LIBRARY_DIR} — avatars/sky/vegetation will be absent. Set EIDOVERSE_DIR.`);
+}

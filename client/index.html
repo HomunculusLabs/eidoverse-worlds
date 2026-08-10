@@ -542,6 +542,33 @@ body.touch #touch { display: block; }
 <div id="door" class="scrim"><div class="sheet panel"></div></div>
 <div id="help" class="scrim"><div class="sheet panel"></div></div>
 
+<script>
+  // Boot watchdog — pre-module, zero imports. A failed or hanging module
+  // graph (missing client/node_modules on a fresh clone, a browser without
+  // WebGPU) used to leave this splash saying "waking the engine" forever,
+  // name "…", nothing anywhere — the least debuggable failure the client
+  // had. The truth now lands ON the splash: any uncaught error or
+  // rejection before the engine marks itself up is shown, and twenty
+  // silent seconds earn a diagnosis hint. core.js sets __ewEngineUp after
+  // renderer.init() — module resolution AND the GPU both proven.
+  (() => {
+    const phase = () => document.querySelector('.sp-phase');
+    const fail = (msg) => {
+      const el = phase();
+      if (globalThis.__ewEngineUp || !el) return;
+      el.textContent = msg;
+      el.style.color = '#ff9d8a';
+    };
+    addEventListener('error', (e) => fail(
+      `the engine failed to load — ${e.message || (e.target && e.target.src) || 'see the console'}`));
+    addEventListener('unhandledrejection', (e) => fail(
+      `the engine failed to start — ${(e.reason && e.reason.message) || e.reason || 'see the console'}`));
+    setTimeout(() => {
+      if (globalThis.__ewEngineUp) return;
+      fail('still waking after 20s — open the console. Fresh checkout? run: cd client && bun install. And the client needs WebGPU (current Chrome).');
+    }, 20000);
+  })();
+</script>
 <script type="module" src="./main.js"></script>
 </body>
 </html>

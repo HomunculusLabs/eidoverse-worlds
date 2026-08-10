@@ -98,6 +98,9 @@ renderer.setPixelRatio(BASE_PIXEL_RATIO);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 await renderer.init();
+// the splash watchdog (index.html) stops worrying: modules resolved and the
+// GPU answered — everything past this point can report its own failures
+globalThis.__ewEngineUp = true;
 
 export const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x101828);
