@@ -11,14 +11,17 @@ import { randomBytes } from "node:crypto";
 // config FIRST — it carries the WORLDS_DIR mkdir, and auth.ts/moderation.ts
 // carry their restore-at-boot blocks, so this import order IS the unsplit
 // file's boot order: mkdir → session restore → ban restore (§15, step 7a).
-import { PORT, JOIN_TOKEN, UPLOAD_CAP, RECORD, ROOT, WORLDS_DIR, LIBRARY_DIR, OPT_DIR, STORE_MIN, FOLD_EVERY, VERB_RATE, MSG_RATE, FRAME_MS, FRAME_SKIP_BUFFERED } from "./config.ts";
+import { PORT, JOIN_TOKEN, UPLOAD_CAP, RECORD, ROOT, WORLDS_DIR, LIBRARY_DIR, OPT_DIR, STORE_MIN, FOLD_EVERY, MSG_RATE, FRAME_MS, FRAME_SKIP_BUFFERED } from "./config.ts";
 import { type HnSession, hnSessions, hnJti, sessionFromCookie, saveSessions, SESSION_TTL_MS, HN_ISSUER_KEY, HN_ISS, HN_AUD, HN_LOGIN_URL, HN_REQUIRE_LOGIN, agentTokens } from "./auth.ts";
 import { globalBans, saveGlobalBans, findBan } from "./moderation.ts";
 import { isAdminId, worldHasOwner, rightsOf, VERB_NEEDS, lockRefusal } from "./rights.ts";
-import { resolveLibFile, lintMotion, lintParticles } from "./lint.ts";
-import { reactToUse } from "./reactions.ts";
+import { resolveLibFile } from "./lint.ts";
+// The authored plane's dispatch — table + shell (§15, 7b). It pulls in lint's
+// linters, reactions, and the behavior cap itself; server.ts keeps only what
+// the presence plane and HTTP surface still touch directly.
+import { runVerb } from "./verbs.ts";
 import { verifyToken } from "./aid1.ts";
-import { BehaviorHost, wireBehaviorGate, wireBehaviorStore, behaviorLimits } from "./behaviors.ts";
+import { BehaviorHost, wireBehaviorGate, wireBehaviorStore } from "./behaviors.ts";
 import { summarizeGlb } from "./geometry.ts";
 // The reference fold (spec/PROTOCOL.md §2–§3), extracted to shared/ so the
 // sequencer, the browser client, and the mcpl agent stop mirroring it by
@@ -1366,281 +1369,12 @@ const server = Bun.serve({
           break;
         }
         case "verb": {
-          if (!c.world) return;
-          // spectators watch; authoring needs a body. (This is the entire
-          // show-night moderation model: the audience cannot touch the stage.)
-          if (c.spectator) {
-            ws.send(JSON.stringify({ type: "error", error: "spectators can't author — join embodied to build" }));
-            return;
-          }
-          if (now - c.verbWin > 4000) { c.verbWin = now; c.verbCount = 0; }
-          if (++c.verbCount > VERB_RATE) {
-            if (c.verbCount === VERB_RATE + 1) c.world.debug("rate-limit", { who: c.id });
-            ws.send(JSON.stringify({ type: "error", error: "slow down — verb rate limit" }));
-            return;
-          }
-          // verb allow-list + per-world rights (see the permissions block).
-          const needs = VERB_NEEDS[msg.verb as string];
-          if (!needs) {
-            c.world.debug("denied", { who: c.id, verb: String(msg.verb), why: "verb not allowed" });
-            // the refusal teaches the lanes: the verb set is closed ON PURPOSE
-            // and each kind of extension has a designed door
-            ws.send(JSON.stringify({ type: "error",
-              error: `verb not allowed: ${msg.verb} — the verb set is closed by design; extend state with comp {id, type, data}, interactions with use {id, action}, semantics with behavior scripts (see AGENTS.md). New verbs are protocol amendments.` }));
-            return;
-          }
-          // Mounting or dismounting YOURSELF (sit on the swing, step off the
-          // ferry) is a visitor act — using the world, not editing it. Moving
-          // OTHER things (cargo onto a truck) stays building.
-          const selfMount = (msg.verb === "mount" || msg.verb === "dismount")
-            && String((msg.args as Record<string, unknown> | undefined)?.id ?? "") === c.id;
-          const needRank = selfMount ? 0 : needs.rank;
-          const rights = rightsOf(c.world.state, c.id, c.sub);
-          if (ROLE_RANK[rights.role] < needRank || (needs.gen && !rights.gen)) {
-            const why = needs.gen && ROLE_RANK[rights.role] >= needs.rank
-              ? "bringing new assets into this world needs the gen capability — ask its owner"
-              : `"${msg.verb}" needs ${needs.rank >= 2 ? "the world's owner" : "builder rights"} here — you are a ${rights.role}`;
-            c.world.debug("denied", { who: c.id, verb: String(msg.verb), why });
-            ws.send(JSON.stringify({ type: "error", error: why }));
-            return;
-          }
-          // the lock gate sits AFTER rank (a visitor's refusal should teach
-          // rank, not locks) and BEFORE shape-checks/append: a locked thing
-          // refuses everyone identically, locker included
-          const lockedWhy = lockRefusal(c.world.state, msg.verb as string, msg.args as Record<string, unknown> | undefined);
-          if (lockedWhy) {
-            c.world.debug("denied", { who: c.id, verb: String(msg.verb), why: "locked" });
-            ws.send(JSON.stringify({ type: "error", error: lockedWhy }));
-            return;
-          }
-          let args = (msg.args ?? {}) as Record<string, unknown>;
-          if (msg.verb === "grant") {
-            // shape-check before it becomes history: {id, role?, gen?}
-            const id = String(args.id ?? "").slice(0, 64);
-            const role = args.role != null ? String(args.role) : undefined;
-            const gen = args.gen != null ? Boolean(args.gen) : undefined;
-            if (!id || (role == null && gen == null) || (role != null && ROLE_RANK[role] == null)) {
-              ws.send(JSON.stringify({ type: "error", error: "grant wants {id, role: owner|builder|visitor} and/or {gen: true|false}" }));
-              return;
-            }
-            if (id === "*" && role === "owner") {
-              ws.send(JSON.stringify({ type: "error", error: "everyone cannot own a world" }));
-              return;
-            }
-            // resolve-at-grant: if the subject is PRESENT with a durable sub,
-            // bind the grant to it — authority follows the person, not the nick
-            const subject = [...c.world.clients].find((o) => o.id === id && o.sub);
-            args = { id, ...(role != null ? { role } : {}), ...(gen != null ? { gen } : {}),
-              ...(subject?.sub ? { sub: subject.sub } : {}) };
-          }
-          if (msg.verb === "force") {
-            // shape-check before it becomes history: {at:[x,y,z], radius?,
-            // power?}. Bounded HARD — the receiver caps what it applies to
-            // itself, but the log should never carry a number that reads as a
-            // weapon, and a replayed entry must be as harmless as a live one
-            // is consensual.
-            const at = Array.isArray(args.at) ? (args.at as unknown[]).map(Number) : null;
-            if (!at || at.length !== 3 || at.some((n) => !Number.isFinite(n))) {
-              ws.send(JSON.stringify({ type: "error", error: "force wants {at: [x,y,z], radius?, power?}" }));
-              return;
-            }
-            const radius = Math.min(30, Math.max(0.5, Number(args.radius ?? 4)));
-            const power = Math.min(12, Math.max(0.2, Number(args.power ?? 3)));
-            args = { at, radius, power };
-          }
-          if (msg.verb === "punt") {
-            // shape-check before it becomes history: {id, dir?, power?}. The
-            // target must exist, the power is bounded, and the kicker must be
-            // NEAR the thing — an arm's-length act like /push, checked here
-            // because agents reach this verb with no client-side gate. The
-            // object's LIVE position counts (a leased ball is where its sim
-            // says, not where the log left it).
-            const id = String(args.id ?? "").slice(0, 64);
-            if (!id || !c.world.state.entities[id]) {
-              ws.send(JSON.stringify({ type: "error", error: `nothing here called "${id}" to kick` }));
-              return;
-            }
-            const at = c.world.leases.get(id)?.lastState?.p ?? c.world.state.entities[id].pos;
-            const me = c.lastPose?.p;
-            if (!me || Math.hypot(me[0] - at[0], me[2] - at[2]) > 4) {
-              c.world.debug("denied", { who: c.id, verb: "punt", why: `${id} is out of reach` });
-              ws.send(JSON.stringify({ type: "error", error: `${id} is too far away to kick` }));
-              return;
-            }
-            const power = Math.min(10, Math.max(0.5, Number(args.power ?? 5)));
-            const dir = Array.isArray(args.dir) ? (args.dir as unknown[]).slice(0, 3).map(Number) : null;
-            args = { id, power, ...(dir && dir.length === 3 && dir.every(Number.isFinite) ? { dir } : {}) };
-          }
-          if (msg.verb === "comp") {
-            // shape-check before it becomes history: {id, type, data|null}.
-            // data is opaque but BOUNDED — components are parameters, not
-            // payloads; anything bigger belongs in /upload + a path here.
-            const id = String(args.id ?? "").slice(0, 64);
-            const type = String(args.type ?? "").slice(0, 32);
-            if (!id || !type) {
-              c.world.debug("rejected", { who: c.id, verb: "comp", why: "malformed — wants {id, type, data|null}" });
-              ws.send(JSON.stringify({ type: "error", error: "comp wants {id, type, data|null}" }));
-              return;
-            }
-            if (args.data !== undefined && args.data !== null
-              && JSON.stringify(args.data).length > 8192) {
-              c.world.debug("rejected", { who: c.id, verb: "comp", why: `data too large (8KB max) on ${id}.${type}` });
-              ws.send(JSON.stringify({ type: "error", error: "component data too large (8KB max) — put big things in /upload and reference the path" }));
-              return;
-            }
-            args = { id, type, data: args.data ?? null };
-          }
-          if (msg.verb === "mount") {
-            const id = String(args.id ?? "").slice(0, 64);
-            const to = String(args.to ?? "").slice(0, 64);
-            if (!id || !to || id === to || !c.world.state.entities[to]) {
-              c.world.debug("rejected", { who: c.id, verb: "mount",
-                why: !c.world.state.entities[to] ? `no entity "${to}" to mount onto` : "malformed mount" });
-              ws.send(JSON.stringify({ type: "error", error: "mount wants {id, to: <existing entity>, slot?, offset?, yaw?}" }));
-              return;
-            }
-          }
-          if (msg.verb === "kick" || msg.verb === "ban" || msg.verb === "unban") {
-            // Moderation verbs: {id, reason?}. Owner-rank, checked above like
-            // grant. Shape-checked and TARGET-checked before they become
-            // history: no self-moderation, no wildcard, and the power ladder
-            // does not eat itself — operators are untouchable, and one owner
-            // cannot ban another (a WORLD_ADMIN can; that is what it is for).
-            const id = String(args.id ?? "").trim().slice(0, 64);
-            if (!id || id === "*") {
-              ws.send(JSON.stringify({ type: "error", error: `${msg.verb} wants {id, reason?} — a specific participant, not everyone` }));
-              return;
-            }
-            if (id.toLowerCase() === c.id.toLowerCase()) {
-              ws.send(JSON.stringify({ type: "error", error: "you cannot moderate yourself" }));
-              return;
-            }
-            // The durable principal, when the target is standing right here —
-            // a ban keyed only to a display name is evaded by /name; carrying
-            // the sub makes it stick to the person, not the label.
-            const targetC = [...c.world.clients].find((o) => o.id.toLowerCase() === id.toLowerCase());
-            const targetSub = targetC?.sub;
-            if (!isAdminId(c.id, c.sub)) {
-              if (isAdminId(id, targetSub)) {
-                ws.send(JSON.stringify({ type: "error", error: `${id} is a world operator — operators cannot be ${msg.verb === "kick" ? "kicked" : "banned"}` }));
-                return;
-              }
-              if (msg.verb !== "unban" && rightsOf(c.world.state, id, targetSub).role === "owner") {
-                ws.send(JSON.stringify({ type: "error", error: `${id} also owns this world — owners cannot ${msg.verb} each other (a WORLD_ADMIN can)` }));
-                return;
-              }
-            }
-            const reason = args.reason != null ? String(args.reason).slice(0, 200) : undefined;
-            args = { id, ...(reason ? { reason } : {}), ...(msg.verb === "ban" && targetSub ? { sub: targetSub } : {}) };
-          }
-          if (msg.verb === "behavior") {
-            // Bind a runtime script: {id, src, attach?, caps?, knobs?} or
-            // {id, remove: true}. src must be a content-addressed script
-            // upload — the binding pins exact bytes, so replay is exact.
-            const id = String(args.id ?? "").replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 48);
-            if (!id) { ws.send(JSON.stringify({ type: "error", error: "behavior wants {id, src|remove}" })); return; }
-            if (args.remove) { args = { id, remove: true }; }
-            else {
-              // runtime "client" = a MOD OFFER (docs/leases.md §self-animation):
-              // code visitors may choose to run in their own clients, each by
-              // per-script consent. Publishing code for OTHERS' machines is an
-              // owner act — a stricter gate than binding a sandboxed behavior.
-              const runtime = args.runtime != null ? String(args.runtime) : undefined;
-              if (runtime !== undefined && runtime !== "client") {
-                ws.send(JSON.stringify({ type: "error", error: 'behavior runtime must be "client" (or absent for the server sandbox)' }));
-                return;
-              }
-              if (runtime === "client" && ROLE_RANK[rightsOf(c.world.state, c.id, c.sub).role] < 2 && !isAdminId(c.id, c.sub)) {
-                c.world.debug("denied", { who: c.id, verb: "behavior", why: "client-runtime mods are owner-only" });
-                ws.send(JSON.stringify({ type: "error", error: "offering mods to visitors' clients is for this world's owner" }));
-                return;
-              }
-              const src = String(args.src ?? "");
-              if (!/^store\/scripts\/[a-f0-9]{16}\.js$/.test(src) || !existsSync(join(ROOT, "assets", "opt", src))) {
-                c.world.debug("rejected", { who: c.id, verb: "behavior", why: `no such script: ${src} — upload with POST /upload?as=script first` });
-                ws.send(JSON.stringify({ type: "error", error: "src must be an uploaded script path (POST /upload?as=script → store/scripts/<hash>.js)" }));
-                return;
-              }
-              const nBehaviors = Object.keys(c.world.state.behaviors ?? {}).length;
-              if (!c.world.state.behaviors?.[id] && nBehaviors >= behaviorLimits.MAX_BEHAVIORS_PER_WORLD) {
-                ws.send(JSON.stringify({ type: "error", error: `this world already runs ${nBehaviors} behaviors (cap ${behaviorLimits.MAX_BEHAVIORS_PER_WORLD})` }));
-                return;
-              }
-              const attach = args.attach != null ? String(args.attach).slice(0, 64) : undefined;
-              if (attach && !c.world.state.entities[attach]) {
-                ws.send(JSON.stringify({ type: "error", error: `nothing here called "${attach}" to attach to` }));
-                return;
-              }
-              if (args.knobs != null && JSON.stringify(args.knobs).length > 4096) {
-                ws.send(JSON.stringify({ type: "error", error: "knobs too large (4KB)" }));
-                return;
-              }
-              const capsIn = (args.caps ?? {}) as Record<string, unknown>;
-              const caps = {
-                ...(Array.isArray(capsIn.verbs) ? { verbs: capsIn.verbs.map(String).slice(0, 16) } : {}),
-                ...(capsIn.selfOnly != null ? { selfOnly: Boolean(capsIn.selfOnly) } : {}),
-              };
-              args = { id, src, ...(attach ? { attach } : {}),
-                ...(runtime === "client" ? { runtime: "client" } : {}),
-                ...(Object.keys(caps).length ? { caps } : {}),
-                ...(args.knobs != null ? { knobs: args.knobs } : {}) };   // author = entry.actor, never client-supplied
-            }
-          }
-          if (msg.verb === "say") {
-            // Spoken-say protocol: `spoken`/`utt`/`t0` are display metadata for
-            // a voice that already performed as captions. t0 is a REORDER key
-            // on every client, so it is never trusted raw — it exists only
-            // inside the spoken protocol, must be finite, and is clamped to a
-            // bounded utterance window ending at arrival. Ordinary says get all
-            // three stripped: a confused client degrades to normal chat rather
-            // than breaking.
-            const a = args as Record<string, unknown>;
-            const now = Date.now();
-            const MAX_UTTER_MS = 300_000;
-            const uttN = Number(a.utt);
-            const t0N = Number(a.t0);
-            if (a.spoken === true && Number.isSafeInteger(uttN) && uttN >= 0) {
-              a.spoken = true;
-              a.utt = uttN;
-              if (Number.isFinite(t0N)) {
-                a.t0 = Math.min(now, Math.max(now - MAX_UTTER_MS, t0N));
-              } else delete a.t0;
-            } else { delete a.spoken; delete a.utt; delete a.t0; }
-          }
-          const entry = c.world.append(c.id, msg.verb, args);
-          c.world.broadcast({ type: "log", entry }); // everyone, including author (authoritative echo)
-          // A `use` is a cause; reactions turn it into logged effects.
-          if (msg.verb === "use") reactToUse(c.world, entry);
-          // Runtime scripts hear causes too — and a (re)bind reconciles sandboxes.
-          if (msg.verb === "behavior") c.world.bhv.sync();
-          c.world.bhv.onEntry(entry);
-          // a folded motion that can't move is a silence someone will debug
-          // at 4am — lint it into the recorder while the fold is still warm
-          if (msg.verb === "motion" || (msg.verb === "comp" && /^motion(:|$)/.test(String((args as any).type ?? "")))) {
-            lintMotion(c.world, entry);
-          }
-          // Same courtesy for an emitter that won't emit: an unknown preset or
-          // a clamped parameter is a silence the author would otherwise have
-          // to discover by asking someone with a GPU what they can see.
-          if (msg.verb === "comp" && String((args as any).type ?? "") === "particles") {
-            lintParticles(c.world, entry);
-          }
-          // A ban or kick lands NOW on every matching body, not at some future
-          // join — the fold recorded the fact; this is the fact taking effect.
-          if (msg.verb === "ban" || msg.verb === "kick") {
-            const tid = String((args as { id: string }).id).toLowerCase();
-            const tsub = (args as { sub?: string }).sub;
-            const treason = (args as { reason?: string }).reason;
-            const w = c.world;
-            for (const other of [...w.clients]) {
-              if (other === c) continue;
-              if (other.id.toLowerCase() !== tid && !(tsub && other.sub === tsub)) continue;
-              expel(w, other, msg.verb === "ban"
-                ? `you were banned from "${w.name}" by ${c.id}${treason ? ` — ${treason}` : ""}`
-                : `you were removed from "${w.name}" by ${c.id}${treason ? ` — ${treason}` : ""}`);
-              console.log(`[world:${w.name}] ${other.id} ${msg.verb === "ban" ? "banned" : "kicked"} by ${c.id}${treason ? ` (${treason})` : ""}`);
-            }
-          }
+          // The authored plane in one call — table + shell live in
+          // server/verbs.ts (§15, 7b): preamble, validators, append +
+          // broadcast, after hooks, byte-identical. expel rides in the ctx,
+          // injected: verbs.ts must never import server.ts (the cycle break
+          // §15.1 pinned).
+          runVerb({ w: c.world!, c, now, expel }, msg.verb, msg.args);
           break;
         }
         case "history": {
@@ -1842,13 +1576,19 @@ const server = Bun.serve({
         case "bodydrag": {
           const okSim = (v: any) => {
             if (!v || typeof v !== "object") return false;
-            const { j, p, q } = { j: v.j, p: v.p, q: v.v };
+            // §15.1's destructure bug lived here: `q: v.v` — a binding named
+            // for quats fed the VELOCITIES. There are no quats anywhere on
+            // this path: both engines' snapshot() (rapierdoll.js/ragdoll.js)
+            // hand over {j, p, v} — joint names, positions and velocities,
+            // three finite numbers per joint each — so validate exactly
+            // that, under its real name. Accepted payloads are unchanged.
+            const { j, p, v: vel } = { j: v.j, p: v.p, v: v.v };
             if (!Array.isArray(j) || j.length === 0 || j.length > 24) return false;
-            if (!Array.isArray(p) || !Array.isArray(q)) return false;
-            if (p.length !== j.length * 3 || q.length !== j.length * 3) return false;
+            if (!Array.isArray(p) || !Array.isArray(vel)) return false;
+            if (p.length !== j.length * 3 || vel.length !== j.length * 3) return false;
             return j.every((n: unknown) => typeof n === "string" && n.length <= 24)
               && p.every((n: unknown) => Number.isFinite(n))
-              && q.every((n: unknown) => Number.isFinite(n));
+              && vel.every((n: unknown) => Number.isFinite(n));
           };
           // Interactive ragdoll drag — the takeover stream. A dragger runs the
           // body's sim on ITS machine and streams the result to the body's
