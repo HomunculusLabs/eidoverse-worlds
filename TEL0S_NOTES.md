@@ -390,6 +390,19 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — step 5½ R2+R3: protos evict under a VRAM budget, bytes
+  ride an LRU.** `glbCache` is refcounted (realize retains, retire/demote
+  release); every ~5s the residency sweep reads
+  `renderer.info.memory.total` against a 1.5GB budget and zero-ref protos
+  dispose their unique geometries/materials/textures (the factory's
+  shared noise texture rides the node graph — unreachable from material
+  properties) and leave `glbCache`/`compiledLibs`. Compressed bytes stay
+  (byteCache/HTTP cache): re-promote is a parse, not a download.
+  `byteCache` is a 128MB LRU (Map order = recency) — the 29.5MB
+  VRM-after-one-glance class of retention is gone. `EW.gpu()` = info
+  .memory + tier stats. Verified: lightbench 19/19 · paritybench PASS.
+  Step 5½ implementation complete — adversarial review round is the
+  remaining gate before the step closes.
 - **2026-08-09 — step 5½ G2: the meadow is tiled.** Big blade/corn strokes
   (≥2k instances) re-cut after the density shuffle into ~12m XZ tiles: K
   geometries sharing the vertex/index/`aH` attribute OBJECTS (one GPU

@@ -22,7 +22,7 @@
 // erratum, pinned by fixture 04-overwrite.
 
 import { THREE, scene, camera, report, bus } from '../core.js';
-import { loadGLB } from '../assets.js';
+import { loadGLB, retainGLB, releaseGLB, evictIdleProtos } from '../assets.js';
 import { fitCollider, removeCollider, reindexCollider, refitCollider } from '../colliders.js';
 import { attachLamps, releaseOwner, registerCaster, releaseCaster } from '../lightrig.js';
 import { makeLight, updateLight, disposeLight } from '../lights.js';
@@ -158,6 +158,7 @@ function scheduleLoad(id, ent, gen) {
 function realizeModel(id, cur, obj) {
   const stand = entities.get(id);
   if (isPlaceholder(stand)) (stand.parent ?? scene).remove(stand);   // the real thing takes the spot
+  retainGLB(cur.lib);   // the proto is worn — eviction must not undress it
   obj.userData.lib = cur.lib;
   obj.userData.entityId = id;
   // receiveShadow came from the factory at parse time (clones inherit);
@@ -241,6 +242,7 @@ function retire(id) {
   cancelOwner(`entity:${id}`);
   releaseOwner(`entity:${id}`);   // lamp + placed-light requests die with it
   const obj = entities.get(id);
+  if (obj && !isPlaceholder(obj) && obj.userData?.lib) releaseGLB(obj.userData.lib);
   if (obj) {
     if (obj.userData?.isLight) disposeLight(obj);
     // cargo steps off before the carrier vanishes — at the pose the FOLD
@@ -430,6 +432,7 @@ function canDemote(id, ent) {
 function demote(id) {
   const ent = state.st.entities[id];
   const obj = entities.get(id);
+  if (obj.userData?.lib) releaseGLB(obj.userData.lib);
   cancelOwner(`entity:${id}`);
   releaseOwner(`entity:${id}`);          // lamp requests die with the meshes
   releaseCaster(id);
@@ -444,7 +447,15 @@ function demote(id) {
   bus.emit('entity', { id, kind: 'demote' });   // emitters retire their handle
 }
 
+let lastEvict = 0;
 function residencySweep() {
+  // the VRAM tier (R2): every ~5s, if GPU memory is over budget, zero-ref
+  // protos dispose. Self-gating and usually a no-op single number read.
+  const now = Date.now();
+  if (now - lastEvict > 5000) {
+    lastEvict = now;
+    evictIdleProtos().catch(() => {});
+  }
   for (const [id, t] of tracked) {
     if (t.kind !== 'model') continue;
     const ent = state.st.entities[id];

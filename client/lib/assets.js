@@ -61,7 +61,36 @@ export function forgetBytes(match) {
   for (const key of [...byteCache.keys()]) if (key.includes(match)) byteCache.delete(key);
 }
 
+// ---- the byte tier's budget (§13.3 R3) --------------------------------------
+// byteCache retained the raw bytes of everything ever fetched, forever —
+// including 29.5MB VRMs after one glance. Pure JS heap, no GPU coupling: an
+// LRU with a byte budget reclaims it risk-free. Map iteration order IS the
+// LRU (touched entries re-insert at the tail). The HTTP cache still holds
+// the wire bytes (immutable/etag), so a re-fetch after eviction is a disk
+// read, not a download — prefetch made that assumption load-bearing.
+const BYTE_BUDGET = 128 * 1024 * 1024;
+const byteSizes = new Map();   // path -> resolved byteLength, insertion = LRU
+let byteTotal = 0;
+function touchBytes(path) {
+  const size = byteSizes.get(path);
+  if (size === undefined) return;
+  byteSizes.delete(path);
+  byteSizes.set(path, size);
+}
+function noteBytes(path, len) {
+  byteSizes.set(path, len);
+  byteTotal += len;
+  while (byteTotal > BYTE_BUDGET && byteSizes.size > 1) {
+    const oldest = byteSizes.keys().next().value;
+    if (oldest === path) break;         // never evict what just landed
+    byteTotal -= byteSizes.get(oldest) ?? 0;
+    byteSizes.delete(oldest);
+    byteCache.delete(oldest);
+  }
+}
+
 export async function fetchBytes(path) {
+  if (byteCache.has(path)) { touchBytes(path); return byteCache.get(path); }
   if (!byteCache.has(path)) {
     byteCache.set(path, (async () => {
       loadTrack(path, path.split('/').pop().split('?')[0]);
@@ -85,9 +114,12 @@ export async function fetchBytes(path) {
           const buf = new Uint8Array(got);
           let o = 0;
           for (const c of chunks) { buf.set(c, o); o += c.length; }
+          noteBytes(path, buf.byteLength);
           return buf.buffer;
         }
-        return await r.arrayBuffer();
+        const ab = await r.arrayBuffer();
+        noteBytes(path, ab.byteLength);
+        return ab;
       } finally { loadDone(path); demandEnd(); }
     })());
   }
@@ -229,10 +261,56 @@ export async function loadGLB(libPath) {
   return obj;
 }
 // Libs whose pipelines have been compiled once this session — repeat spawns
-// skip the queue. (A sky/weather wrap or a new light can invalidate pipeline
-// caches; the direct compileAsync above still handles that, just unqueued.)
+// skip the queue. Compiled once is compiled: graph shapes are fixed at birth.
 const compiledLibs = new Set();
 const libCompiles = new Map(); // libPath -> in-flight first compile
+
+// ---- proto residency (§13.3 R2) ---------------------------------------------
+// All GPU bytes live on the PROTOTYPES (clones share everything), and three
+// pins every uploaded geometry/texture in strong maps — only explicit
+// dispose() frees VRAM. So protos are refcounted by realized clones, and
+// when GPU memory crosses the budget, zero-ref protos evict: dispose their
+// unique resources, drop the cache entries. The compressed bytes stay
+// available (byteCache/HTTP cache), so a re-promote is a parse, not a
+// download. NEVER call this per-entity — disposal here reaches every clone.
+const libRefs = new Map();     // lib -> count of realized clones in the scene
+export function retainGLB(lib) { libRefs.set(lib, (libRefs.get(lib) ?? 0) + 1); }
+export function releaseGLB(lib) {
+  const n = (libRefs.get(lib) ?? 0) - 1;
+  if (n <= 0) libRefs.delete(lib); else libRefs.set(lib, n);
+}
+const GPU_BUDGET = 1_500_000_000;   // bytes of renderer.info.memory.total
+export async function evictIdleProtos() {
+  if ((renderer.info?.memory?.total ?? 0) < GPU_BUDGET) return 0;
+  let evicted = 0;
+  for (const [lib, promise] of [...glbCache]) {
+    if (libRefs.has(lib)) continue;   // someone real still wears it
+    glbCache.delete(lib);
+    compiledLibs.delete(lib);
+    const proto = await promise.catch(() => null);
+    if (proto) {
+      const seenMats = new Set();
+      proto.traverse((o) => {
+        o.geometry?.dispose?.();
+        for (const m of Array.isArray(o.material) ? o.material : o.material ? [o.material] : []) {
+          if (seenMats.has(m)) continue;
+          seenMats.add(m);
+          // the factory's shared cloud-noise texture rides the node graph,
+          // not a material property — Object.values never reaches it
+          for (const v of Object.values(m)) if (v?.isTexture) v.dispose();
+          m.dispose();
+        }
+      });
+      evicted++;
+    }
+    if ((renderer.info?.memory?.total ?? 0) < GPU_BUDGET) break;
+  }
+  return evicted;
+}
+export const protoStats = () => ({
+  protos: glbCache.size, referenced: libRefs.size,
+  bytesCached: byteSizes.size, byteTotal,
+});
 
 // ---- VRMA clips -------------------------------------------------------------
 

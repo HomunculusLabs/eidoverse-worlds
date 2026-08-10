@@ -52,6 +52,7 @@ import { initBodyDrag, updateBodyDrag, beingDragged, revokeDragged, dragState } 
 import { initPhysObj, tickPhysObj, kick, leaseApi } from './lib/physobj.js';
 import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
+import { protoStats } from './lib/assets.js';
 import { governPerformance, governorDebug } from './lib/governor.js';
 import { updateMaterials, materialsDebug } from './lib/materials.js';
 import { updateRig, rigDebug } from './lib/lightrig.js';
@@ -1156,7 +1157,7 @@ globalThis.EW = {
   lightrig: rigDebug,          // slot pool + request table (§12.4)
   governor: governorDebug,     // the two-way lever ladder (§12.6)
   residency: residencyDebug,   // real/stand-in/loading counts + sweep stats (§13.3)
-  gpu: () => ({ ...renderer.info.memory }),   // real byte accounting, finally read
+  gpu: () => ({ ...renderer.info.memory, ...protoStats() }),   // bytes + proto/byte tiers
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)
