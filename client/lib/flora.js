@@ -329,19 +329,26 @@ function tileField(f) {
 // remote presences. Per-frame and cheap (a uniform write).
 function wirePushers(field) {
   const R = 1.1;
+  // reused across frames — this hook ran every frame allocating two arrays
+  // and sorting all remotes to keep 4 pusher slots (§14.1 offender #4)
+  const list = [];
+  const cand = [];
   const hook = () => {
-    const list = [];
+    list.length = 0;
     if (myState?.pos) list.push({ x: myState.pos.x, y: myState.pos.y, z: myState.pos.z, r: R });
     if (remotes?.size) {
-      const near = [];
+      cand.length = 0;
       for (const [, rb] of remotes) {
         const p = rb?.avatar?.root?.position;
-        if (p) near.push(p);
+        if (p) cand.push(p);
       }
-      if (myState?.pos) {
-        near.sort((a, b) => a.distanceToSquared(myState.pos) - b.distanceToSquared(myState.pos));
+      if (myState?.pos && cand.length > 3) {
+        cand.sort((a, b) => a.distanceToSquared(myState.pos) - b.distanceToSquared(myState.pos));
       }
-      for (const p of near.slice(0, 3)) list.push({ x: p.x, y: p.y, z: p.z, r: R });
+      for (let i = 0; i < Math.min(3, cand.length); i++) {
+        const p = cand[i];
+        list.push({ x: p.x, y: p.y, z: p.z, r: R });
+      }
     }
     field.setPushers(list);
   };

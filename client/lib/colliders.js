@@ -276,6 +276,28 @@ function* near(x, z) {
   }
 }
 
+/** Variable-radius neighbourhood, [id, entry] pairs — the promoted service
+ *  query (§14.2 6a). The 3×3 `near` above caps at ~8m; seat search reaches
+ *  30 and physics wants its own radius. Dedupes ids that straddle cells. */
+const _seen = new Set();
+export function* nearColliders(x, z, r = CELL) {
+  const x0 = Math.floor((x - r) / CELL), x1 = Math.floor((x + r) / CELL);
+  const z0 = Math.floor((z - r) / CELL), z1 = Math.floor((z + r) / CELL);
+  _seen.clear();
+  for (let cx = x0; cx <= x1; cx++) {
+    for (let cz = z0; cz <= z1; cz++) {
+      const s = buckets.get(`${cx},${cz}`);
+      if (!s) continue;
+      for (const id of s) {
+        if (_seen.has(id)) continue;
+        _seen.add(id);
+        const e = colliders.get(id);
+        if (e) yield [id, e];
+      }
+    }
+  }
+}
+
 // ---- resolution -------------------------------------------------------------
 
 let blockedTop = null;

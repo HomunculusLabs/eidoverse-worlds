@@ -269,7 +269,14 @@ export function noteSpeaking(id, ms = 4000) {
  *  speaker if there is one, otherwise the nearest other body. This is the
  *  cheapest presence win in the client — VRM ships a lookAt rig and nothing
  *  was ever aiming it, so every avatar had dead eyes. */
+let _gazeAt = 0;
 export function updateGaze(myPos, myAvatar, myName, now = performance.now()) {
+  // Attention changes at conversational rate, not frame rate — the O(n²)
+  // focus pass at 60Hz was hot-path offender #3 (§14.1). 4Hz is beyond
+  // perceptual limits for gaze retargeting (the VRM lookAt rig eases the
+  // turn itself); the scan is unchanged, just honestly paced.
+  if (now - _gazeAt < 250) return;
+  _gazeAt = now;
   let speaker = null;
   for (const r of remotes.values()) {
     if (r.speakingUntil > now && r.avatar) {
