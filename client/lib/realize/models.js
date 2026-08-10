@@ -18,7 +18,7 @@
 //
 // Fold-faithfulness: a removed carrier's cargo lands at the pose the FOLD
 // stamped (the trigonometry every joiner and the server agree on), and a
-// same-id spawn REPLACES wholesale — PROTOCOL.md §3.1, the 2026-08-11
+// same-id spawn REPLACES wholesale — PROTOCOL.md §3.1, the 2026-08-09
 // erratum, pinned by fixture 04-overwrite.
 
 import { THREE, scene, camera, report, bus } from '../core.js';

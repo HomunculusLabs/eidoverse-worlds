@@ -387,6 +387,27 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — step 5 grounded: the extraction round, and §12.** Three
+  line-level extraction passes (Opus agents, verified against the design):
+  upstream's wrap mechanics, three.webgpu r184's actual invalidation
+  rules, and the client's material/governor/shadow map. The findings
+  reshaped §5 into a concrete reference design — **§12** — with the
+  binding facts: the lights hash is per-light `(id, castShadow)` in
+  traversal order (identity, not count — so the weather system's
+  permanent lightning PointLight needs a scene-proxy adoption seam, not a
+  swap trick); there is no intensity-0 culling (dim-to-zero is the
+  supported "off"); `object.castShadow` is in no cache key (the
+  caster-budget drip can die) while `receiveShadow` is in both (set at
+  birth, never toggle); `weather.wrapMaterial` is already factory-form
+  and the wetness wrap is stubbable shape-identically before the modules
+  arrive, while cloud shadow is not (we bring our own field). Bugs
+  surfaced en route: real terrain never receives shadows; the shadow box
+  is pinned ±46 around the *origin*; the governor's cloud lever persists
+  degradation to localStorage and answers slowness with a full sky
+  rebuild; 5 of 8 tuner sliders are dead on the real sky; `fillLight`'s
+  lazy birth is itself a topology change. Also: every date stamped
+  2026-08-10/11 in this log, PROTOCOL §3.1, and fixture 04's README was
+  wrong (git: steps 1–4 all landed 2026-08-09) — corrected.
 - **2026-08-09 — `shared/` landed (sequence step 2, first slice).**
   `forecast.js` and `particles.js` moved from `client/lib/` to `shared/`
   (both were already pure and dependency-free — the move retires the
@@ -400,7 +421,7 @@ fixture/tool matrix.
   a `FOLD_EVERY=1` scratch sequencer per its header). Next in `shared/`:
   protocol types, then `fold.ts` (step 2b — server-side extraction first,
   fixture-tested; client adoption rides the state/realize skeleton).
-- **2026-08-11 — step 4 complete: the early socket. The wire opens before
+- **2026-08-09 — step 4 complete: the early socket. The wire opens before
   the engine wakes.** An inline zero-import script in index.html (inline
   because a file would cost a blocking fetch on exactly the RTT it saves)
   opens the WS and sends the join the moment the HTML lands; net.js ADOPTS
@@ -420,7 +441,7 @@ fixture/tool matrix.
   wrong-key path falls back by construction to the pre-existing 4003
   handling. §8 step 4 is done — next: step 5, the material factory +
   lighting rig (Disease A).
-- **2026-08-11 — step 4, first slice: the boot path sheds its prologue and
+- **2026-08-09 — step 4, first slice: the boot path sheds its prologue and
   gains a placeholder tier.**
   - `modulepreload` for the static heavy graph (rapier excluded — dynamic);
     the 2.1MB engine starts fetching the moment HTML lands.
@@ -450,7 +471,7 @@ fixture/tool matrix.
     higher-RTT links. paritybench PASS incl. reconnect; foldfix 16/16.
   Still ahead in step 4: the pre-module-graph early socket (1-RTT join) —
   staged separately; it touches auth/door flows headless can't fully gate.
-- **2026-08-11 — the legacy path is deleted. One fold, one writer, every
+- **2026-08-09 — the legacy path is deleted. One fold, one writer, every
   runtime.** With tel0s's go-ahead on the spawn question (deviate from
   upstream's original view), the two holds cleared and the axe fell:
   - **S9 pinned**: PROTOCOL.md §3.1 documents overwrite semantics as a
@@ -479,7 +500,7 @@ fixture/tool matrix.
     · foldfix 16/16 · paritybench PASS (all three reads). §11.5's table is
     fully checked off except the compile-holds row, which was always
     step 5's (material factory).
-- **2026-08-10 — 3c review round: deletion held, gate upgraded, blockers
+- **2026-08-09 — 3c review round: deletion held, gate upgraded, blockers
   fixed.** The adversarial Opus review returned 3 blockers + 9 should-fixes
   (and a long checked-and-clean list confirming the core: the gen guard,
   the pendingOps-retirement trick, boot gating, backlog ordering, comp
@@ -520,7 +541,7 @@ fixture/tool matrix.
   in recentChat — needs a server fold change), S7 (tuner-preview + weather
   test), world-phase progress from `scheduler.pending()`, per-comp clone
   cost, reconnect event-storm nit.
-- **2026-08-10 — 3c ports landed: environment + social realizers, causes
+- **2026-08-09 — 3c ports landed: environment + social realizers, causes
   dispatcher.** Terrain/grass/sky/weather/asset realize from the folded
   singletons (`realize/environment.js` — thin, because the application
   logic was EXTRACTED into world.js functions shared with the legacy
@@ -539,7 +560,7 @@ fixture/tool matrix.
   sky/rain/grant/say exercised in-browser. Deletion of the legacy path
   (applyEntry switch, stateToEntries, pendingOps/pendingMounts, the seam)
   is the next commit, gated on an Opus review of this diff.
-- **2026-08-10 — 3b landed: the models realizer.** The whole flat entity-id
+- **2026-08-09 — 3b landed: the models realizer.** The whole flat entity-id
   namespace (`spawn/place/remove/light/comp/motion/mount/dismount`) is now
   realized FROM state when active: `realize/models_field.js` (pure planner,
   12/12 headless) + `realize/models.js` (hosted executor) + `realize/seam.js`
@@ -558,7 +579,7 @@ fixture/tool matrix.
   if id exists"; the reference fold overwrites. Per the spec's own rule the
   implementation wins until filed — raise with Skye/upstream. Legacy cases
   stay intact behind the seam; they die at 3c cleanup.
-- **2026-08-10 — the 3b gate is green: paritybench PASS on both paths.**
+- **2026-08-09 — the 3b gate is green: paritybench PASS on both paths.**
   `tools/paritybench.ts` (Opus-built, verified first-hand): scratch
   sequencer + headless Edge (real WebGPU adapter, no GPU flags needed) +
   driven compfold recipe + `EW.foldParity()` read mid-sequence AND
@@ -754,3 +775,177 @@ the legacy maps — entity ids, transforms, comp bags — so drift between the
 shared fold and `applyEntry` is *measured for free* during the whole
 migration window, before any behavior moves. House rule 1's remaining
 mirror becomes an assertion instead of a hope.
+
+## 12. Materials and light, grounded — step 5 reference design
+
+Three extraction passes (2026-08-09) pinned the facts this design binds to:
+upstream's wrap mechanics (`weather_system.js`/`sky_system.js`, read at
+line level), the vendored three build's invalidation rules (r184,
+unminified), and the full client map (material birth sites, governor,
+shadow machinery, hold callers).
+
+### 12.1 The rules of the game (three.webgpu r184, verified)
+
+A render object's pipeline key has two halves. **Material half** (re-read
+only on `material.needsUpdate`): the node graph *by node identity*, every
+material property (numbers collapsed to on/off), `object.receiveShadow`,
+geometry/morph/skeleton/instancing shape. **Dynamic half** (checked every
+draw): the lights hash, env node, fog node, `shadowMap.enabled`/`.type`,
+`receiveShadow` again. The lights hash is **per-light `(id, castShadow)`
+in scene-traversal order** — identity and order, not count.
+
+Uniform-level (never in any key, safe to animate): light `intensity`
+(**no intensity-0 culling exists** — zero is the supported "off"),
+`color`, `position`, `distance` (even through 0), `decay`; shadow
+`mapSize` (realloc, no recompile) / `bias` / camera extents (call
+`updateProjectionMatrix()` ourselves — three won't); env texture
+*content*; fog color/density; `toneMappingExposure`.
+
+Shape-level (frozen at boot or pay a full-scene recompile): the light
+set, order, and each light's `castShadow`; `light.visible` (**culls it
+from the hash — never use**); `shadowMap.enabled`/`.type`; `scene.fog`
+object identity; `scene.environment` identity; tone mapping crossing
+`NoToneMapping`; post-processing. `object.castShadow` is in **no key** —
+a free runtime toggle (shadow-pass render-list membership only), while
+`object.receiveShadow` is in **both** — set at creation, never toggle.
+Node reassignment without `material.needsUpdate = true` is silently
+ignored.
+
+### 12.2 Upstream wrap truth
+
+- **Wetness** (`weather_system`): `wrapMaterial(mat, mesh)` is exported —
+  factory-form exists. The sweep's skip registry is closure-private, but
+  `mesh.userData.noWet` skips it cleanly. The wrap's dependencies are
+  three shared uniforms + built-in TSL + two pure noise fns, **no
+  textures** — a shape-identical client-side build is feasible before the
+  weather modules exist. `mat.userData.noPuddles` is a compile-time gate
+  the port must reproduce.
+- **Cloud shadow** (`sky_system`): sweep-only (no per-material entry);
+  `mesh.userData.noCloudShadow` skips cleanly; the graph is a 16-tap
+  march over textures generated inside `makeSkySystem` — **not** stubbable
+  shape-identically ahead of it.
+- After either wrap lands, every weather/cloud/TOD change is uniform-only.
+  The disease was only ever *when* the wrap lands.
+- `makeWeatherSystem` permanently `scene.add`s one lightning PointLight at
+  construction (upstream already treats it as a slot: "a strike changes
+  uniform data only"). Identity-keyed hashing means no swap trick absorbs
+  it — it needs the adapter seam below.
+
+### 12.3 `materials.js` — the factory
+
+One seam, `prepare(root)` / `prepareMaterial(mat, opts)`, applied at every
+material birth site (GLB/VRM parse, terrain, flora, placeholders, gizmos,
+domes) **before first compile**. Lit node materials get the wrap stack;
+unlit get markers and `receiveShadow` policy only. The factory also owns
+the clone paths (`ghostify`, the light-placement ghost) so clones stay
+prepared.
+
+The wrap stack is client-owned and uniform-gated, applied once at birth:
+
+1. **Wetness** — a shape-identical port of upstream's wrap (same node
+   structure, same `noPuddles` gate), driven by factory-global uniforms.
+2. **Cloud shade** — our *own* cheap field: a client-generated noise
+   DataTexture (born at boot, identity stable), fixed tap count,
+   wind-scrolled, `coverage`/`strength` uniforms, strength 0 ≡ gain 1.0.
+   Deliberately not Skye's march: hers is already a cheap approximation
+   of the dome, and ground shadows need to *read* as clouds, not match it
+   tap-for-tap.
+3. **`receiveShadow` set at birth** — terrain finally receives (today only
+   the hidden stage floor does); placeholders and gizmos stay off.
+
+Every prepared mesh gets `noWet` + `noCloudShadow`, so upstream's sweeps
+find nothing to do. `wrapScene()` still runs for unprepared materials
+(the 🧩 mods escape hatch degrades exactly as today). The uniforms are
+driven from **folded state**, not upstream internals: `effectiveSky` →
+weather name + k → wet/coverage targets via a small table; sun direction
+from our own sun light. Wet ground in rain stops requiring Skye's modules
+at all — it works identically under the skymesh fallback.
+
+### 12.4 `lightrig.js` — the rig
+
+Fixed inventory born before first compile, one Group, one order, never
+added/removed/reparented/visible-toggled after: **sun** (the one shadow
+caster), **hemi**, **fill** (no longer lazily created — its lazy birth
+today is itself a topology change), **N point slots** (start 8; the
+ceiling is measured in 5g, not assumed — the old "grass + 4 hung" number
+was runtime-recompile churn, and that compile now happens once at boot
+behind the splash). Idle slot = intensity 0.
+
+Everything else becomes a **light request**, not a light: placed `light`
+entities (from folded state), emissive lamps (inferred at model realize —
+the material is the declaration, as today), and adopted toolkit lights.
+Assignment is deterministic in (state, camera): keep-authored > authored >
+inferred, ties by camera distance, with hysteresis so boundary churn
+doesn't flicker; churn is uniform writes. Two clients in one spot light
+the same way. The rig computes dayness and dims day-aware requests (lamps
+by default; placed lights too, with a verb-arg opt-out for the deliberate
+noon porch light — documented with `keep` in 5f).
+
+**The bolt seam**: intercept the `makeWeatherSystem` global (the same
+`defineProperty` seam sky.js uses for `makeSkySystem`) and hand it a
+stable per-scene Proxy whose `add`/`remove` swallows lights into an
+adoption list; the rig mirrors an adopted light's pos/color/intensity/
+distance into a reserved slot per frame. Even one rendered frame with a
+foreign light in the scene is a full recompile storm, which is why the
+swallow must happen at `add`, not after construction. The seam deletes
+the day upstream grows a `strikeLight` injection (ask recorded).
+
+`lights.js` keeps the gizmo + inspector editor and loses the budget
+(`MAX_CAST`, `grantCast`, `shedALight`); `sky.js` loses `lampLights`,
+`MAX_LAMPS`, and `attachLocalLights`' boot deferral (nothing left to
+defer). The `lights.js → sky.js` import edge — the one non-core cycle in
+the module graph — dies with them.
+
+### 12.5 Sun shadow
+
+The frustum follows the camera: re-centre the ortho box each frame
+(uniform + our own `updateProjectionMatrix()`), keeping the ±46 extent
+initially; CSM later. Today's box is pinned to the *origin* — shadows
+stop existing 46 units from spawn. Casters: `castShadow` toggles are
+free, so the rig budgets the caster set by camera distance per frame
+(top-K, K a governor lever) — `markShadowless`/`drainShadows`, the
+250ms drip, the `lanes-idle` coupling, and the 30s fallback all die.
+Bodies can finally cast (measure, then retire the blob). `mapSize`
+becomes a two-way lever.
+
+### 12.6 Governor, two-way
+
+One controller, session-scoped, **no localStorage writes ever** (today
+the cloud lever persists a degradation across sessions and answers
+slowness with a full sky rebuild — the most expensive possible response).
+Levers, each with degrade *and* recover: pixel ratio (already two-way),
+caster budget K, active-slot cap (compiled cost of N is paid at boot;
+capping is pure GPU relief), emitter tier, grass density, shadow mapSize,
+LOD bias (already two-way), and cloud tier **last, baked-tiers only**
+(re-bake, never rebuild; the live-march 'high' tier is a user choice the
+governor never touches). Tuner sliders work or die: `hours`/`rate`/
+`exposure` already work; `fog` gets rewired to density (upstream only
+writes fog *color* — density is ours on both paths); `sun`/`ambient`
+become post-`update()` multipliers the rig applies after
+`applyToLights`; `azimuth`/`fill` die honestly on the real-sky path.
+
+### 12.7 What dies at step 5
+
+`holdObjectCompiles` + its 25s cap + the `objectsHeld` coupling inside
+`checkIdle`; `holdFrames`/`framesHeld` + the settle beat; the whole-scene
+`compileAsync` per light grant; `markShadowless`/`drainShadows` + the 30s
+fallback; `MAX_CAST`/`MAX_LAMPS`/`shedALight`; the lazy `fillLight`; the
+localStorage cloud ratchet. `whenBooted` survives only as a *bandwidth*
+yield (sky prime, prefetch) — it no longer orders compiles. The
+`compiledLibs` cache's caveat comment ("a wrap or a new light can
+invalidate") becomes false and is deleted: compiled once is compiled.
+
+### 12.8 Order of work, and what 5g must measure
+
+5a factory → 5b rig + bolt seam → 5c shadow follow + caster budget →
+5d governor + tuner → 5e delete the holds → 5f spec (`keep`, day-dim
+opt-out, fixture) → 5g measure. Each lands green behind paritybench.
+5g measures: the slot ceiling with grass at N = 4/8/12/16 (boot-time
+compile + per-fragment loop cost — the loop is real even at intensity 0);
+MToon under the ported wetness wrap (today's sweep already wraps MToon —
+parity, not regression); the Proxy seam against `weatherRegistry`'s
+WeakMap identity (one stable proxy per scene); bootbench before/after
+(the settle beat should vanish). Upstream asks to record alongside
+`docs/upstream-wrap-once.md`: `strikeLight` injection, a per-material
+cloud-shadow wrap entry, and blessing `noWet`/`noCloudShadow` as
+supported markers.

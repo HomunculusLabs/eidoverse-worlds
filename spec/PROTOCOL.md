@@ -90,7 +90,7 @@ landing on a light id, or a `light` landing on a model id, replaces it. The
 one exception is `light`-on-`light`, which merges as a partial update (the
 table above) — brightening a lamp is not re-authoring it.
 
-*Erratum (2026-08-11):* this section previously read "no-op if id exists"
+*Erratum (2026-08-09):* this section previously read "no-op if id exists"
 for `spawn`. Every reference fold since genesis has overwritten, so every
 persisted v1 log already means what this section now says — the text was
 wrong, not the worlds. Documented under §0's rule that the implementation

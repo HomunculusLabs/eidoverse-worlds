@@ -22,7 +22,7 @@ Notes per fixture:
   implementation knows — which MUST fold to nothing and be kept.
 - `03-authority` — first embodied joiner auto-owns a brand-new world;
   grants; the `*` wildcard (which can never be an owner).
-- `04-overwrite` — the flat id namespace (§3.1, the 2026-08-11 erratum
+- `04-overwrite` — the flat id namespace (§3.1, the 2026-08-09 erratum
   pinned): a same-id `spawn` replaces the previous holder WHOLESALE (its
   comp bag dies with it); a `light` on a model id and a `spawn` on a light
   id replace across kinds; `light`-on-`light` merges as a partial update
