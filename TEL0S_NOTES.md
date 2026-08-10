@@ -390,6 +390,25 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — §19a LANDED: the cloud-graph compile is splash, not
+  session (tel0s's call).** The §18b fence is eager again — 'clear'
+  always respells as empty cumulus on capable tiers — and the one big
+  compile lands INSIDE the boot gate: whenSkyWarm now waits for
+  ensureSkyBake + whenBakeReady (the band pipeline warm), cap raised
+  8→25s (measured: the stall spans t≈6→15.3s on this box's cold GPU
+  cache and the curtain lifts as it ends; the gate resolves EARLY when
+  warm — the cap binds only pathologically; warm Dawn caches pay ~0).
+  Boot on commons: ~5s → ~15s cold, first visit only. Every
+  mid-session sky change is now uniform writes, no exceptions. Also:
+  bootjank gains --heavyjoin (a 21MB-avatar resident joins at t≈+12s —
+  the §19b measurement mode). MEASURED on this box: the heavy arrival
+  is CLEAN (parse 125ms, textures 168ms, spread over 24 frames, worst
+  frame 41.7ms) — tel0s's couple-of-seconds switch halt does not
+  reproduce here, pointing at the SWITCH-specific path (old-body
+  teardown + fresh MToon pipeline compiles on Metal) and/or MacBook
+  parse speed. §19b next: VRM proto cache (the recorded tail — with
+  the dispose landmine) + switch-path teardown deferral; MacBook trace
+  requested to confirm the dominant term.
 - **2026-08-10 — §18 LANDED: the sky stops halting, light edits stop
   lying.** Two user reports from tel0s's MacBook session, both
   root-caused by extraction and fixed. **18a (lights, a bug FAMILY —

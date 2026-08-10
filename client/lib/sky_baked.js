@@ -58,6 +58,14 @@ let pinnedCloudsOn = null;   // whether the pinned bake graph HAS a cloud branch
  *  cloudy change, instead of every clear↔cloudy flip (the old behavior) or
  *  at every clear-world boot (the eager fence). */
 export const bakedCloudsPinned = () => pinnedCloudsOn === true;
+
+// §19a: arrival gates on the FIRST bake's band pipeline being warm (the
+// boot pays the one big cloud-graph compile behind the splash — tel0s's
+// call). Single-shot; only meaningful on baked tiers (sky.js guards).
+let _bakeReadyResolve = null;
+const _bakeReady = new Promise((r) => { _bakeReadyResolve = r; });
+export const whenBakeReady = () => _bakeReady;
+function resolveBakeReady() { _bakeReadyResolve?.(); _bakeReadyResolve = null; }
 // scene.environment stays a dedicated small target (what IBL was sized for
 // all along) — PMREM from the full 4096 display bake was a ~150ms stall
 // every cycle. Each fresh bake is blitted down into this instead.
@@ -288,7 +296,10 @@ export function attachBakedDome(skyApi, opts = {}) {
   // compile inside one frame (measured 12s on the first cadence cycle). The
   // cycle holds in 'warming' until the band pipeline exists.
   state = 'warming';
-  warmBakePipeline().then(() => { if (state === 'warming') state = 'idle'; });
+  warmBakePipeline().then(() => {
+    if (state === 'warming') state = 'idle';
+    resolveBakeReady();          // §19a: the boot gate may lift now
+  });
   pendingForce = false;
   nextAt = performance.now() + cfg.intervalMs;
   console.log(`[sky] baked dome crossfade loop — ${A.width}x${A.height}, `

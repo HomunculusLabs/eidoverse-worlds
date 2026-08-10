@@ -38,7 +38,11 @@ const HEADED = has("headed");
 const ECHO = has("console");
 const MBIT = num("mbit", 0);
 const WIDE = has("wide");
-const SECS = num("secs", WIDE ? 25 : 40);
+const HEAVYJOIN = has("heavyjoin");   // a 21MB-avatar resident arrives at t≈+12s
+                                      // after boot — measures the VRM-parse halt
+                                      // (the same main-thread path an avatar
+                                      // SWITCH takes, §19b)
+const SECS = num("secs", WIDE ? 25 : HEAVYJOIN ? 50 : 40);
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const EIDOVERSE_DIR = process.env.EIDOVERSE_DIR ?? join(ROOT, "..", "eidoverse-video");
@@ -324,6 +328,18 @@ for (let i = 0; i < 240 && !bootReady; i++) await sleep(250);
 if (!bootReady) await die(2, "✗ client never booted", ...pageErrors.slice(0, 5));
 console.log(`  ${dim(bootReady)}`);
 
+let heavyAt = 0;
+if (HEAVYJOIN) {
+  await sleep(12_000);   // let the boot storm fully settle first
+  heavyAt = Date.now() - t0;
+  console.log(dim(`  heavy resident joins at t=${(heavyAt / 1000).toFixed(1)}s (aletheia.vrm, 21MB)…`));
+  const hws = new WebSocket(`ws://127.0.0.1:${PORT}/ws`);
+  hws.onopen = () => hws.send(JSON.stringify({
+    type: "join", world: WORLD, id: "heavyguest", token: "",
+    avatar: "eidoverse/assets/vrms/aletheia.vrm",   // library-relative, like resolveMyAvatarPath
+  }));
+  // stays connected for the rest of the window; cleanup kills the process
+}
 const remaining = SECS * 1000 - (Date.now() - t0);
 if (remaining > 0) {
   console.log(dim(`  observing ${Math.round(remaining / 1000)}s more…`));

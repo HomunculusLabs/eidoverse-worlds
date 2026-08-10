@@ -191,7 +191,14 @@ export function applyGrassState(args) {
 // realizer pass — before checkReady can ever observe an empty queue (same
 // ordering guarantee terrain leans on, realize/environment.js).
 let skyGated = false;
-const SKY_GATE_MAX_MS = 8000;
+// 25s, was 8: the gate now covers the first bake's cloud-graph compile
+// (§19a — measured 9.3s ending at t=15.3s on THIS box's cold GPU cache;
+// a slower GPU must not have the curtain lift mid-stall, and the gate
+// resolves EARLY via whenBakeReady the moment the pipeline is warm — the
+// cap only binds pathological cases. Near-zero on warm Dawn caches.
+// tel0s chose splash over a mid-session stall until upstream can cache
+// the graph per flavour.)
+const SKY_GATE_MAX_MS = 25000;
 export function applySkyFolded(bag, ts) {
   if (!bag) return Promise.resolve();
   const p = Promise.resolve(applySky(bag, ts ?? bag.ts)).catch((e) => report('sky', e));

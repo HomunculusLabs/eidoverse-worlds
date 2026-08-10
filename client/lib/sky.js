@@ -17,7 +17,7 @@ import { THREE, scene, sun, hemi, renderer, camera, report, bus } from './core.j
 import { loadEidoModule, primeFiles, listLibrary, fetchBytes } from './assets.js';
 import { markPhase } from './boot.js';
 import { attachBakedDome, detachBakedDome, updateBakedDome, bakedActive, requestBake,
-  envTexture, adoptEnvironment, bakedCloudsPinned } from './sky_baked.js';
+  envTexture, adoptEnvironment, whenBakeReady } from './sky_baked.js';
 import { beginWork } from './loadwork.js';
 import { setDayness, releaseForeignLights } from './lightrig.js';
 import { warm, P_AMBIENT } from './warmqueue.js';
@@ -400,6 +400,12 @@ async function renderEidoverse(a) {
   applyLive(a);
   const bake = beginWork('sky bake');    // names the env-bake + reflections gaps
   try { await ensureSkyBake(); } finally { bake.end(); }
+  // §19a: on baked tiers the curtain waits for the first bake's band
+  // pipeline too — the one big cloud-graph compile lands behind the splash
+  // (tel0s's call), not in the first visible minute. Non-baked tiers and
+  // degraded paths resolve through renderSkyMesh/dome-warm as before.
+  if (bakedActive()) await whenBakeReady();
+  resolveSkyWarm();
 }
 
 async function buildSky(a, world, wantAudio) {
@@ -466,25 +472,28 @@ async function buildSky(a, world, wantAudio) {
       audio: wantAudio,
     });
     claimSkyAdditions(ownership);
-    // ---- the clear↔cloudy fence (§18b) -------------------------------------
+    // ---- the clear↔cloudy fence (§18b, pre-paid §19a) ----------------------
     // The baked tier's graph cache keys on preset !== 'clear' (sky_system
     // bakeKey …|c0/c1), and building the cloud-carrying graph costs a
-    // ~1.5MB-WGSL compile that stalls the whole GPU process ~5-10s — even
-    // async (Chrome serializes submits behind Tint). Nothing can hide that
-    // compile; the fence makes a session pay it AT MOST ONCE: while the
-    // pin is still c0 (clear world), 'clear' passes through untouched and
-    // the boot stays cheap; the first cloudy change pays the one c0→c1
-    // rebuild (as any change did before — but now ONCE); from then on
-    // bakedCloudsPinned() is true and 'clear' is respelled as an EMPTY
-    // cumulus (finalMul 0 — the march gates itself off at runtime), so the
-    // preset never flips back and no later change rebuilds anything. The
-    // wrap sits on the INTERNAL setter because the weather system drives
-    // setClouds('clear') behind the api (WEATHER.clear). The 'off' tier
-    // keeps genuine 'clear' always: it constructs c0 and must stay there.
+    // ~1.5MB-WGSL compile that stalls the whole GPU process ~5-10s cold —
+    // even async (Chrome serializes submits behind Tint). Nothing can hide
+    // that compile; the only question is WHEN a session pays it. tel0s's
+    // call (2026-08-10): inside the boot splash — so on cloud-capable
+    // tiers 'clear' is ALWAYS respelled as an empty cumulus (finalMul 0 —
+    // the march gates itself off at runtime): the preset is never 'clear',
+    // the c1 graph pins at the boot bake (inside the sky gate, cap raised
+    // for it), and every later sky change — dawn, dusk, clouds, weather —
+    // is uniform writes. Warm-cache visits (Dawn's disk cache) pay ~none
+    // of it. The wrap sits on the INTERNAL setter because the weather
+    // system drives setClouds('clear') behind the api (WEATHER.clear).
+    // The 'off' tier keeps genuine 'clear' always: it constructs c0 and
+    // must stay there. When Skye lands the upstream asks (Addendum 2:
+    // per-bakeKey cache / authoritative includeClouds), this whole fence
+    // shrinks to one option flag.
     skyInner = skyApi?._internals?.sky ?? null;
     if (skyInner?.setClouds && cloudQuality !== 'off') {
       const orig = skyInner.setClouds.bind(skyInner);
-      skyInner.setClouds = (kind, over) => (kind === 'clear' && bakedCloudsPinned()
+      skyInner.setClouds = (kind, over) => (kind === 'clear'
         ? orig('cumulus', { ...(over ?? {}), finalMul: 0, wispOn: 0, stormCanopy: 0 })
         : orig(kind, over));
     }
@@ -508,7 +517,8 @@ async function buildSky(a, world, wantAudio) {
         finally { scene.add(o); }
       }, { p: P_AMBIENT });
     }
-    resolveSkyWarm();
+    // resolveSkyWarm moved to renderEidoverse (§19a): the gate now waits
+    // for the first BAKE too, not just the dome warms
     currentWorld = world;
     impl = 'eidoverse';
     scene.background = null;
