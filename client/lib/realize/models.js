@@ -112,6 +112,17 @@ function createModel(id, ent) {
   tracked.set(id, { kind: 'model', lib: ent.lib, gen });
   entities.set(id, null);   // reservation — the contract every consumer knows
   maybePlaceholder(id);     // …upgraded to a sized stand-in when geom is known
+  // STREAMING (§13.3 R1): an entity standing beyond its residency radius as
+  // an honest sized stand-in loads NOTHING — no bytes move for the far city
+  // until someone walks toward it (the sweep promotes it then). An entity
+  // with no bbox yet loads anyway: there is nothing honest to stand in.
+  if (isPlaceholder(entities.get(id)) && entDist(ent) > residencyRadius(ent)) return;
+  scheduleLoad(id, ent, gen);
+}
+
+function scheduleLoad(id, ent, gen) {
+  const t0 = tracked.get(id);
+  if (t0) t0.loading = true;   // the sweep must not re-promote a load in flight
   schedule({
     key: `entity:${id}`, owner: `entity:${id}`, lane: 'net',
     // live distance from the camera to the entity's CURRENT folded position —
@@ -122,9 +133,10 @@ function createModel(id, ent) {
       const obj = await loadGLB(ent.lib);
       const cur = state.st.entities[id];
       const t = tracked.get(id);
+      if (t?.gen === gen) t.loading = false;
       // the world may have moved on while the bytes flew: retired, replaced
       // by a light, re-spawned with a different lib (its own job follows),
-      // or this whole realizer generation was reset
+      // demoted-then-reset, or this whole realizer generation was reset
       if (signal.aborted || t?.gen !== gen) return;
       if (!cur || cur.kind === 'light' || cur.lib !== ent.lib) {
         clearReservation(id);
@@ -134,6 +146,8 @@ function createModel(id, ent) {
       realizeModel(id, cur, obj);
     },
   }).done.catch((e) => {
+    const t = tracked.get(id);
+    if (t?.gen === gen) t.loading = false;
     if (e?.name === 'AbortError') return;
     // a failed load keeps its reservation, exactly like legacy: the id stays
     // addressable (a later remove folds cleanly), it just never renders
@@ -367,6 +381,99 @@ function syncBodyMounts() {
   }
 }
 
+// ---- residency (§13.3 R1) ---------------------------------------------------
+// Demotion is fold→state→realize read BACKWARDS: state never changes, the
+// projection coarsens. A far entity swaps back to the placeholder tier —
+// already legal to every consumer — freeing its scene subtree, collider BVH,
+// camera-collision triangles, lamp requests, and caster slot. Promotion is
+// the existing load pipeline rerun: realizeModel re-reads state, re-executes
+// mounts, re-announces comp bags (emitters re-attach off those events). The
+// clone shared every GPU resource with the cached prototype, so demote frees
+// CPU and frame cost; VRAM falls when the proto itself evicts (R2).
+
+const R_BASE = 80;     // meters: promote below R, demote above R + R_HYST
+const R_HYST = 20;     // the band that keeps a walk along the edge quiet
+const DIAG_K = 4;      // big things stay: radius grows with bbox diagonal
+const resStats = { demotes: 0, promotes: 0 };
+
+function residencyRadius(ent) {
+  const s = ent?.lib ? libGeom.get(ent.lib)?.bbox?.size : null;
+  return R_BASE + (s ? Math.hypot(s[0] ?? 0, s[1] ?? 0, s[2] ?? 0) * DIAG_K : 0);
+}
+const entDist = (ent) => camera.position.distanceTo(_v.set(...(ent?.pos ?? [0, 0, 0])));
+
+/** The audit's three impossibles plus the edit hold — things whose demote
+ *  has no clean undo. All are cheap fold-truth predicates. */
+function canDemote(id, ent) {
+  if (!ent || ent.kind === 'light' || ent.parent) return false;   // lights are cheap; mounted children ride carriers
+  const obj = entities.get(id);
+  if (!obj || isPlaceholder(obj) || obj.userData?.editHold) return false;
+  if (!libGeom.get(ent.lib)?.bbox) return false;    // nothing honest to stand in
+  // a carrier: children mounted on it would need the cargo step-off, which
+  // is semantically a removal (it re-stamps fold poses) — refuse instead
+  for (const e of Object.values(state.st.entities)) if (e.parent?.to === id) return false;
+  // a body in its seat: someone is sitting on it, wherever WE are standing
+  for (const rel of avatarMounts.values()) if (rel.to === id) return false;
+  const bag = state.st.entities[id]?.comp;
+  if (bag) {
+    // part motions and part sockets need named nodes a placeholder lacks
+    // (mbase is per-clone; findPart on a box is null). Whole-entity motion
+    // is fine — the stand-in carries userData.base and swings honestly.
+    if (bag.motion?.part) return false;
+    for (const k of Object.keys(bag)) if (k.startsWith('motion:')) return false;
+    for (const s of Object.values(bag.sockets ?? {})) if (s?.part) return false;
+  }
+  return true;   // a live physobj sim self-clears in ~0.45s and kicks are
+                 // near-range by nature — distance already excludes them
+}
+
+function demote(id) {
+  const ent = state.st.entities[id];
+  const obj = entities.get(id);
+  cancelOwner(`entity:${id}`);
+  releaseOwner(`entity:${id}`);          // lamp requests die with the meshes
+  releaseCaster(id);
+  removeCollider(id);                    // far beyond interaction range by construction
+  (obj.parent ?? scene).remove(obj);
+  const grp = makePlaceholder(id, ent, libGeom.get(ent.lib));
+  entities.set(id, grp);
+  scene.add(grp);
+  // entityMeta and comps STAY — labels and evaluators read fold truth, and
+  // the parity probe's identity check compares fold-to-fold either way
+  resStats.demotes++;
+  bus.emit('entity', { id, kind: 'demote' });   // emitters retire their handle
+}
+
+function residencySweep() {
+  for (const [id, t] of tracked) {
+    if (t.kind !== 'model') continue;
+    const ent = state.st.entities[id];
+    if (!ent || ent.kind === 'light') continue;
+    const obj = entities.get(id);
+    const R = residencyRadius(ent);
+    const d = entDist(ent);
+    if (obj && !isPlaceholder(obj) && d > R + R_HYST) {
+      if (canDemote(id, ent)) demote(id);
+    } else if (isPlaceholder(obj) && d < R && !t.loading) {
+      resStats.promotes++;
+      t.gen = nextGen++;                 // stale in-flight completions no-op
+      scheduleLoad(id, ent, t.gen);
+    }
+  }
+}
+
+export const residencyDebug = () => {
+  let real = 0, standins = 0, loading = 0;
+  for (const [id, t] of tracked) {
+    if (t.kind !== 'model') continue;
+    const obj = entities.get(id);
+    if (obj === null) loading++;
+    else if (isPlaceholder(obj)) standins++;
+    else if (obj) real++;
+  }
+  return { real, standins, loading, ...resStats, rBase: R_BASE, rHyst: R_HYST };
+};
+
 // ---- reconcile + dispatch ---------------------------------------------------
 
 /** One id, after its identity may have changed: create, retire, rebuild, or
@@ -448,6 +555,9 @@ export function initModelsRealizer() {
     for (const [lib, g] of Object.entries(geom ?? {})) libGeom.set(lib, g);
     for (const id of tracked.keys()) maybePlaceholder(id);
   });
+  // the residency sweep: fold positions in, demote/promote out. 500ms is
+  // plenty — a person covers ~3m between beats at a run
+  setInterval(residencySweep, 500);
   onWorldChange((ev) => {
     if (ev.type === 'hydrated') reconcileModels();
     else if (ev.type === 'reset') {

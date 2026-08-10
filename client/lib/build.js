@@ -129,6 +129,9 @@ export function select(id) {
   const obj = entities.get(id);
   if (!obj) return;
   selected = { id, obj };
+  // the residency sweep must never demote what someone is editing — a
+  // selection made through the scene panel can be arbitrarily far away
+  obj.userData.editHold = true;
   outline.box.setFromObject(obj);
   outline.visible = true;
   showInspector(id);
@@ -137,6 +140,7 @@ export function select(id) {
   sceneSelect(id);
 }
 export function deselect() {
+  if (selected?.obj?.userData) delete selected.obj.userData.editHold;
   selected = null;
   dragging = null;
   outline.visible = false;

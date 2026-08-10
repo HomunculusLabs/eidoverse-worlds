@@ -196,7 +196,11 @@ bus.on('comp', ({ id, type, data }) => {
 });
 
 bus.on('entity', ({ id, kind }) => {
-  if (kind === 'remove') {
+  if (kind === 'remove' || kind === 'demote') {
+    // demote (residency §13.3): the entity's subtree left the scene with the
+    // emitter mesh inside it — retire the handle or its per-frame hook keeps
+    // ticking against a detached group. Promotion re-announces the comp bag
+    // and the emitter re-attaches through the ordinary pending path.
     pending.delete(id);
     registry.retire(id);
   } else if (kind === 'spawn' && pending.has(id)) {

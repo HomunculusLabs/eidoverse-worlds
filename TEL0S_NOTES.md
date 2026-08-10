@@ -390,6 +390,30 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — step 5½, first two slices: grass G1 + residency R1.**
+  G1 (§13.2): per-stroke WORLD bounding spheres assigned by the adapter +
+  `frustumCulled = true` (upstream couldn't — its instanceMatrix is all
+  identity, so three would cull a half-meter sphere at the origin);
+  looking away from the meadow stops drawing every blade. Grass
+  `receiveShadow` now EXPLICITLY false (the old if-without-else left the
+  scene's biggest fill surface paying shadow taps while the comment
+  claimed otherwise) and `noPuddles` gates the puddle branch off at
+  compile (blade normals are forced straight up — rain painted puddles ON
+  BLADES); wet darkening + cloud shade stay. R1 (§13.3): the 500ms
+  residency sweep — beyond 80m + 4×bbox-diagonal (20m hysteresis) a
+  realized entity de-realizes back to the placeholder tier (subtree,
+  collider BVH, camera-collision triangles, lamps, caster freed);
+  promotion reruns the ordinary load pipeline; and an entity SPAWNING
+  beyond its radius with a known bbox never loads at all — the far city
+  is honest boxes until approached. Refusals: carriers, mounted
+  children, part sockets/motions, seated bodies, the selected entity
+  (editHold). Emitters retire on the new 'demote' event. Plus the
+  setTerrain disposal leak fix, `EW.residency()`, `EW.gpu()`. Verified:
+  lightbench 19/19 (drive an entity across the boundary with `place`;
+  fold parity holds demoted AND re-promoted) · paritybench PASS ·
+  measure sweep 15/15. Remaining in step 5½: G2 (tiling + distance
+  density), R2 (refcounted proto eviction under the info.memory
+  budget), R3 (byte LRU).
 - **2026-08-09 — STEP 5 COMPLETE — 5g: measured, reviewed, fixed.**
   `tools/lightbench.ts` (CDP, scratch door, headless Edge) now proves what
   paritybench can't see: rain folded → wet/cover targets exact and rising

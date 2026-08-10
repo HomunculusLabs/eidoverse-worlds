@@ -14,7 +14,21 @@ export const heightAt = (x, z) => (current ? current.heightAt(x, z) : 0);
 export const hasTerrain = () => current !== null;
 
 export function setTerrain(t) {
-  if (current) scene.remove(current.mesh);
+  if (current) {
+    scene.remove(current.mesh);
+    // …and FREE it (audit §13.1): three's WebGPU renderer pins every
+    // geometry and texture it has uploaded in strong maps, so a replaced
+    // terrain stayed GPU-resident forever. Terrain resources are per-build
+    // (engine mesh + client-baked layer noiseTextures) — nothing shared,
+    // safe to dispose wholesale.
+    current.mesh?.traverse?.((o) => {
+      o.geometry?.dispose?.();
+      for (const m of Array.isArray(o.material) ? o.material : o.material ? [o.material] : []) {
+        for (const v of Object.values(m)) if (v?.isTexture) v.dispose();
+        m.dispose?.();
+      }
+    });
+  }
   current = t;
   // ground/grid are null under the headless core stub — an agent process sets
   // terrain for its settle sim and has no stage floor to hide (issue #17)

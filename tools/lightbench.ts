@@ -313,6 +313,40 @@ if (impl === "adopted") {
   note("bolt seam", `no foreign request after 90s — sky likely degraded headless (scene lights: ${(sceneLights ?? []).join(", ")}); unverified here, verify headed`);
 }
 
+// -- residency (§13.3 R1) -----------------------------------------------------
+// The driver walks an entity across the residency boundary with `place`
+// verbs: far → the sweep demotes it to a stand-in; near again → the sweep
+// promotes it back through the ordinary load pipeline. Fold parity must
+// hold on BOTH sides — state never changed, only the projection.
+async function residencyState(pred: (r: any) => boolean, label: string): Promise<any> {
+  let r: any = null;
+  for (let i = 0; i < 16; i++) {
+    r = await evalJson("EW.residency()");
+    if (pred(r)) return r;
+    await sleep(700);
+  }
+  return r;
+}
+{
+  const r0 = await evalJson("EW.residency()");
+  await driver.verb("place", { id: "ball2", pos: [300, 0, 300] });
+  const far = await residencyState((r) => r.demotes > (r0?.demotes ?? 0), "demote");
+  check("residency: a far entity demotes to a stand-in",
+    far?.demotes > (r0?.demotes ?? 0) && far?.standins >= 1,
+    `real=${far?.real} standins=${far?.standins} demotes=${far?.demotes}`);
+  const pFar = await evalJson("EW.foldParity()");
+  check("residency: fold parity holds while demoted", pFar?.ok === true,
+    pFar ? `checked=${pFar.checked}` : "no parity");
+  await driver.verb("place", { id: "ball2", pos: [3, 0, 3] });
+  const near = await residencyState((r) => r.promotes > (far?.promotes ?? 0) && r.standins === 0, "promote");
+  check("residency: walking near promotes it back to a real model",
+    near?.promotes > (far?.promotes ?? 0) && near?.standins === 0,
+    `real=${near?.real} promotes=${near?.promotes}`);
+  const pNear = await evalJson("EW.foldParity()");
+  check("residency: fold parity holds after re-promotion", pNear?.ok === true,
+    pNear ? `checked=${pNear.checked}` : "no parity");
+}
+
 // -- hygiene ------------------------------------------------------------------
 const knownBenign = (l: string) => l.includes("favicon") || l.includes("Autoplay");
 const realErrors = pageErrors.filter((l) => !knownBenign(l));

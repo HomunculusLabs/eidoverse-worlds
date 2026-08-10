@@ -13,7 +13,7 @@ import { contributeThumbnail, makeAvatar, EMOTE_ORDER, EMOTES } from './lib/avat
 import { updateSky, updateAutoSystems, skyArgs, skyImpl } from './lib/sky.js';
 import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
 import { foldParity } from './lib/parity.js';
-import { initModelsRealizer, reconcileModels } from './lib/realize/models.js';
+import { initModelsRealizer, reconcileModels, residencyDebug } from './lib/realize/models.js';
 import { initEnvironmentRealizer } from './lib/realize/environment.js';
 import { initSocialRealizer } from './lib/realize/social.js';
 import { initCauses } from './lib/realize/causes.js';
@@ -1155,6 +1155,8 @@ globalThis.EW = {
   materials: materialsDebug,   // factory counters + live weather uniforms (§12.3)
   lightrig: rigDebug,          // slot pool + request table (§12.4)
   governor: governorDebug,     // the two-way lever ladder (§12.6)
+  residency: residencyDebug,   // real/stand-in/loading counts + sweep stats (§13.3)
+  gpu: () => ({ ...renderer.info.memory }),   // real byte accounting, finally read
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)
