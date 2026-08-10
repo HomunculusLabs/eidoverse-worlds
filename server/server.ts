@@ -5,14 +5,13 @@
 //  - serves the browser client and the eidoverse-video asset library
 // No world manifest: everything about a world arrives through its log.
 
-import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, renameSync, readdirSync, copyFileSync } from "node:fs";
-import { join, normalize, basename } from "node:path";
-import { randomBytes } from "node:crypto";
+import { existsSync, appendFileSync, readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
 // config FIRST — it carries the WORLDS_DIR mkdir, and auth.ts/moderation.ts
 // carry their restore-at-boot blocks, so this import order IS the unsplit
 // file's boot order: mkdir → session restore → ban restore (§15, step 7a).
-import { PORT, JOIN_TOKEN, UPLOAD_CAP, RECORD, ROOT, WORLDS_DIR, LIBRARY_DIR, OPT_DIR, STORE_MIN, FOLD_EVERY, MSG_RATE, FRAME_MS, FRAME_SKIP_BUFFERED } from "./config.ts";
-import { type HnSession, hnSessions, hnJti, sessionFromCookie, saveSessions, SESSION_TTL_MS, HN_ISSUER_KEY, HN_ISS, HN_AUD, HN_LOGIN_URL, HN_REQUIRE_LOGIN, agentTokens } from "./auth.ts";
+import { PORT, JOIN_TOKEN, RECORD, ROOT, WORLDS_DIR, LIBRARY_DIR, MSG_RATE, FRAME_MS, FRAME_SKIP_BUFFERED } from "./config.ts";
+import { type HnSession, agentTokens, HN_ISSUER_KEY, HN_ISS, HN_AUD } from "./auth.ts";
 import { globalBans, saveGlobalBans, findBan } from "./moderation.ts";
 import { isAdminId, worldHasOwner, rightsOf, VERB_NEEDS, lockRefusal } from "./rights.ts";
 import { resolveLibFile } from "./lint.ts";
@@ -21,13 +20,19 @@ import { resolveLibFile } from "./lint.ts";
 // the presence plane and HTTP surface still touch directly.
 import { runVerb } from "./verbs.ts";
 import { verifyToken } from "./aid1.ts";
-import { BehaviorHost, wireBehaviorGate, wireBehaviorStore } from "./behaviors.ts";
+import { wireBehaviorGate, wireBehaviorStore } from "./behaviors.ts";
 import { summarizeGlb } from "./geometry.ts";
-// The reference fold (spec/PROTOCOL.md §2–§3), extracted to shared/ so the
-// sequencer, the browser client, and the mcpl agent stop mirroring it by
-// hand — house rule 1 by construction. Pure and dependency-free; it imports
-// shared/forecast.js itself for the sky/weather cases.
-import { foldEntry, emptyState, ROLE_RANK, type LogEntry, type WorldState } from "../shared/fold.js";
+// The world itself — WorldLog + WorldSession behind the unsplit facade, with
+// the registry (§15, 7c). The boot sweep below stays HERE: waking scripted
+// worlds with the server is boot policy, not world mechanics.
+import { World, type Client, worlds, getWorld, forkWorld, wireSettledPose } from "./world.ts";
+// The HTTP surface — one route table, /upload behind it in upload.ts (§15,
+// 7c). fetch() below delegates; avatarRoster rides back for the join
+// snapshot, pendingSnaps for the renderer's snap-result replies.
+import { route, avatarRoster, pendingSnaps } from "./routes.ts";
+// The reference fold lives in shared/ (house rule 1 by construction; the
+// world folds with it in world.ts) — what remains here is the role ladder.
+import { ROLE_RANK } from "../shared/fold.js";
 
 // Behavior sandbox wiring: a script's emit is gated by its AUTHOR's live
 // rights (revoke the grant, the behavior loses its teeth) through the same
@@ -66,251 +71,12 @@ function settledPose(pose: unknown): Record<string, unknown> | null {
   if (still.clip === "ragdoll") { still.clip = "idle"; delete still.pose; }
   return still;
 }
+// The log's rememberPose settles through this SAME function — one rule for
+// both planes. world.ts takes it by injection because the source-text gates
+// (§15.1: settled-pose-test regexes this file) pin the definition here.
+wireSettledPose(settledPose);
 
-// ---------------------------------------------------------------- world logs
-
-class World {
-  name: string;
-  entries: LogEntry[] = [];
-  clients = new Set<Client>();
-  /** Poses received since the last stage-frame tick — latest value wins.
-   *  The embodied plane is batched: N performers × M spectators must not be
-   *  N×M×15Hz individual sends (24×200 would be 72k msgs/s); it's one frame
-   *  per world per tick, fanned out once. */
-  dirty = new Map<string, unknown>();
-  /** Entity animation leases (docs/leases.md): who may animate each object
-   *  right now, and the last transform they streamed — the server's memory,
-   *  so a crashed or preempted simulator never loses an object. Presence
-   *  plane: never persisted; outcomes commit as `place` verbs. */
-  leases = new Map<string, { holder: Client; lastState: { p: number[]; yaw?: number; q?: number[] } | null; lastAt: number }>();
-
-  /** Commit-and-forget one entity lease (docs/leases.md): the last streamed
-   *  transform becomes an ordinary `place` entry — server-authored like a
-   *  reaction effect, the cause in args — so nothing is ever lost to a
-   *  crashed, preempted, or stale simulator. */
-  settleLease(id: string, final?: { p?: number[] | null; yaw?: number | null }) {
-    const L = this.leases.get(id);
-    if (!L) return;
-    const p = final?.p ?? L.lastState?.p ?? null;
-    const yaw = final?.yaw ?? L.lastState?.yaw;
-    this.leases.delete(id);
-    if (p && this.state.entities[id]) {
-      const entry = this.append("world", "place", {
-        id, pos: p, ...(yaw != null ? { yaw } : {}), by: L.holder.id, via: "lease",
-      });
-      this.broadcast({ type: "log", entry });
-    }
-    this.broadcast({ type: "lease", op: "released", id });
-  }
-  /** The runtime's flight recorder — the "why didn't it work" surface.
-   *
-   *  The world log holds what HAPPENED; this ring holds what DIDN'T and why:
-   *  denied verbs, rejected shapes, rate limits, reactions that fired /
-   *  skipped / failed. In-memory only, capped, never persisted — it is
-   *  diagnosis, not history. Readable by anyone in the world (ws `debug`,
-   *  `/debug` in the client, `world_debug` over MCPL): the log is public, so
-   *  the reasons things bounced off it are public too. */
-  debugLog: Record<string, unknown>[] = [];
-  debug(kind: string, detail: Record<string, unknown>): void {
-    this.debugLog.push({ ts: Date.now(), kind, ...detail });
-    if (this.debugLog.length > 300) this.debugLog.splice(0, this.debugLog.length - 300);
-  }
-  frameSeq = 0;
-  recPath: string | null = null; // frames archive, created lazily on first recorded frame
-  lastRoster = "";               // last written roster line — deltas only
-  /** The folded world. Kept live: every append updates it, so writing a
-   *  snapshot is O(1) rather than a replay. */
-  state: WorldState = emptyState();
-  /** Runtime-script host — sandboxes, budgets, per-behavior log rings. */
-  bhv!: BehaviorHost;
-  /** How much of the log the snapshot already accounts for. Entries after this
-   *  are the tail a joiner still has to be told about. */
-  snapSeq = -1;
-  private snapBytes = 0;      // byte offset in log.jsonl just past snapSeq
-  private logBytes = 0;
-  private dirtySinceFold = 0;
-  private logPath: string;
-  private posesPath: string;
-  private snapPath: string;
-  /** Where each identity last stood — the world remembers your resting place
-   *  across disconnects, restarts, and hosts. Presence is ephemeral; the
-   *  place you fell asleep is yours. */
-  poses: Record<string, unknown> = {};
-
-  constructor(name: string) {
-    this.name = name;
-    const dir = join(WORLDS_DIR, name);
-    mkdirSync(dir, { recursive: true });
-    this.logPath = join(dir, "log.jsonl");
-    this.posesPath = join(dir, "poses.json");
-    this.snapPath = join(dir, "snapshot.json");
-
-    // Boot = snapshot + the bytes after it. The offset is what keeps startup
-    // proportional to the TAIL rather than to the whole history: without it we
-    // would still parse every line ever written just to find where to resume.
-    if (existsSync(this.snapPath)) {
-      try {
-        const snap = JSON.parse(readFileSync(this.snapPath, "utf8"));
-        if (snap?.state && typeof snap.seq === "number") {
-          this.state = snap.state;
-          this.snapSeq = snap.seq;
-          this.snapBytes = snap.bytes ?? 0;
-        }
-      } catch { /* a corrupt cache is not a corrupt world — rebuild below */ }
-    }
-    if (existsSync(this.logPath)) {
-      const buf = readFileSync(this.logPath);
-      this.logBytes = buf.length;
-      // If the offset is not credible (log truncated, forked, or snapshot from
-      // another timeline) fall back to reading everything. The log is truth.
-      const usable = this.snapSeq >= 0 && this.snapBytes > 0 && this.snapBytes <= buf.length;
-      if (!usable) { this.state = emptyState(); this.snapSeq = -1; this.snapBytes = 0; }
-      const text = buf.toString("utf8", usable ? this.snapBytes : 0);
-      for (const line of text.split("\n")) {
-        if (!line.trim()) continue;
-        const e = JSON.parse(line) as LogEntry;
-        this.entries.push(e);
-        foldEntry(this.state, e);
-      }
-      this.dirtySinceFold = this.entries.length;
-    }
-    if (existsSync(this.posesPath)) {
-      try { this.poses = JSON.parse(readFileSync(this.posesPath, "utf8")); } catch { /* corrupt = fresh */ }
-    }
-    // A brand-new world's first entry names the log dialect — the one fix
-    // with a deadline, because it only helps logs written after it exists
-    // (Hesperus finding #5). Old readers fold it as an unknown verb: nothing.
-    if (this.logBytes === 0 && this.snapSeq < 0) {
-      this.append("world", "genesis", { v: 2, dialect: "eidoverse-log" });
-    }
-    // Runtime scripts wake with the world — a behavior keeps behaving with
-    // nobody connected (timers), which is the point of running server-side.
-    this.bhv = new BehaviorHost(this);
-    this.bhv.sync();
-    const total = this.snapSeq + 1 + this.entries.length;
-    console.log(`[world:${name}] loaded — ${Object.keys(this.state.entities).length} things, `
-      + `${this.entries.length} tail entr${this.entries.length === 1 ? "y" : "ies"}`
-      + (this.snapSeq >= 0 ? ` (snapshot through seq ${this.snapSeq}, ${total} total)` : "")
-      + `, ${Object.keys(this.poses).length} remembered poses`);
-  }
-
-  /** Write the folded state beside the log. Atomic, and recording the byte
-   *  offset so the next boot can seek instead of scan. */
-  fold(reason = "threshold") {
-    const bytes = this.logBytes;
-    const seq = this.snapSeq + this.entries.length;
-    if (seq < 0) return;
-    const payload = JSON.stringify({ v: 1, seq, bytes, ts: Date.now(), state: this.state });
-    try {
-      writeFileSync(this.snapPath + ".tmp", payload);
-      renameSync(this.snapPath + ".tmp", this.snapPath);
-      this.snapSeq = seq;
-      this.snapBytes = bytes;
-      this.entries = [];          // history lives in the file; memory holds the tail
-      this.dirtySinceFold = 0;
-      console.log(`[world:${this.name}] folded through seq ${seq} (${reason})`);
-    } catch (err) {
-      console.error(`[world:${this.name}] fold failed`, err);
-    }
-  }
-
-  /** Erase the world back to zero.
-   *
-   *  The log is append-only and forever — so a reset ARCHIVES, it never
-   *  destroys. Everything the world was (log, snapshot, remembered poses)
-   *  moves into worlds/<name>/erased-<ts>/, recoverable by hand, and the
-   *  live world starts over from an empty state. Frames recordings stay
-   *  where they are: they are performances, not world state.
-   *
-   *  Returns the archive directory. The caller decides who owns the fresh
-   *  world and how to tell everyone standing in it. */
-  reset(): string {
-    const dir = join(WORLDS_DIR, this.name);
-    const arch = join(dir, `erased-${new Date().toISOString().replace(/[:.]/g, "-")}`);
-    mkdirSync(arch, { recursive: true });
-    for (const f of ["log.jsonl", "snapshot.json", "poses.json"]) {
-      const p = join(dir, f);
-      if (existsSync(p)) renameSync(p, join(arch, f));
-    }
-    this.entries = [];
-    this.state = emptyState();
-    this.snapSeq = -1;
-    this.snapBytes = 0;
-    this.logBytes = 0;
-    this.dirtySinceFold = 0;
-    this.poses = {};
-    this.bhv.disposeAll();
-    this.bhv.sync();
-    this.append("world", "genesis", { v: 2, dialect: "eidoverse-log" });
-    return arch;
-  }
-
-  /** A page of history, newest-first paging via `before`.
-   *
-   *  Folding bounds what a JOIN costs; it does not delete anything, so this is
-   *  how anyone gets at what came before: a human scrolling chat upward, or an
-   *  agent asking what happened while it was not thinking. The tail is served
-   *  from memory; older pages read the log, which is O(file) per request and
-   *  the obvious place a real index goes when that starts to hurt. */
-  readHistory({ before = Infinity, after = -Infinity, limit = 50, verbs = null as Set<string> | null }) {
-    const out: LogEntry[] = [];
-    const seen = new Set<number>();
-    const want = (e: LogEntry) => e.seq < before && e.seq > after && (!verbs || verbs.has(e.verb));
-
-    for (let i = this.entries.length - 1; i >= 0 && out.length < limit; i--) {
-      const e = this.entries[i];
-      if (want(e)) { out.push(e); seen.add(e.seq); }
-    }
-    // older than what is in memory — go to the file
-    const oldestInMemory = this.entries.length ? this.entries[0].seq : Infinity;
-    if (out.length < limit && before > 0 && oldestInMemory > 0 && existsSync(this.logPath)) {
-      const lines = readFileSync(this.logPath, "utf8").split("\n");
-      for (let i = lines.length - 1; i >= 0 && out.length < limit; i--) {
-        const line = lines[i];
-        if (!line.trim()) continue;
-        let e: LogEntry;
-        try { e = JSON.parse(line); } catch { continue; }
-        if (seen.has(e.seq) || !want(e)) continue;
-        out.push(e); seen.add(e.seq);
-      }
-    }
-    out.reverse();                                   // hand back in world order
-    const oldest = out.length ? out[0].seq : null;
-    return { entries: out, oldestSeq: oldest, hasMore: oldest !== null && oldest > 0 };
-  }
-
-  /** What a joiner needs: the world as it is, plus anything since. */
-  joinPayload() {
-    return { state: this.state, tail: this.entries, throughSeq: this.snapSeq };
-  }
-
-  rememberPose(id: string, pose: unknown) {
-    if (!pose) return;
-    const still = settledPose(pose)!;
-    this.poses[id] = still;
-    writeFileSync(this.posesPath + ".tmp", JSON.stringify(this.poses));
-    renameSync(this.posesPath + ".tmp", this.posesPath);
-  }
-
-  append(actor: string, verb: string, args: Record<string, unknown>): LogEntry {
-    // seq is global across the world's whole history, not an index into what
-    // happens to be in memory — folding must not renumber the past.
-    const seq = this.snapSeq + this.entries.length + 1;
-    const entry: LogEntry = { seq, ts: Date.now(), actor, verb, args };
-    this.entries.push(entry);
-    const line = JSON.stringify(entry) + "\n";
-    appendFileSync(this.logPath, line);
-    this.logBytes += Buffer.byteLength(line);
-    foldEntry(this.state, entry);
-    if (++this.dirtySinceFold >= FOLD_EVERY) this.fold();
-    return entry;
-  }
-
-  broadcast(msg: unknown, except?: Client) {
-    const data = JSON.stringify(msg);
-    for (const c of this.clients) if (c !== except) c.ws.send(data);
-  }
-}
+// ------------------------------------------------------------------ presence
 
 /** Remove a client from its world NOW — the kick/ban primitive, same shape as
  *  the identity-takeover block in `join`. All four bookkeeping steps or a ghost
@@ -336,8 +102,6 @@ function describe(w: World): string {
   const eyes = w.clients.size - real;
   return `${real} present${eyes ? `, ${eyes} watching` : ""}`;
 }
-
-const worlds = new Map<string, World>();
 
 // One clock drives every world's script timers. This is what makes a
 // behavior keep behaving with NOBODY connected — the ferry runs, the
@@ -380,77 +144,6 @@ try {
   }
   if (woken) console.log(`[boot] ${woken} scripted world(s) woken — their behaviors run without visitors`);
 } catch (err) { console.error("[boot] world sweep failed", err); }
-function getWorld(name: string): World {
-  if (!/^[a-z0-9_-]{1,64}$/i.test(name)) throw new Error(`bad world name: ${name}`);
-  let w = worlds.get(name);
-  if (!w) { w = new World(name); worlds.set(name, w); }
-  return w;
-}
-
-/** Copy a world into a brand-new name. The log IS the world, so a fork is a
- *  byte-copy of the log plus its derived snapshot (whose byte offset stays
- *  valid because the copy is identical) and the remembered poses — a complete
- *  copy, roles and ownership included, since grants live in the log like every
- *  other fact. The whole copy is one synchronous block on a single-threaded
- *  event loop: no append can interleave, so log and snapshot cannot drift. */
-function forkWorld(src: World, to: string): { ok: true; world: World } | { ok: false; err: string } {
-  if (!/^[a-z0-9_-]{1,64}$/i.test(to)) return { ok: false, err: `bad world name "${to}" — letters, digits, - and _ only` };
-  if (to === src.name) return { ok: false, err: "a world cannot be copied onto itself" };
-  const destDir = join(WORLDS_DIR, to);
-  if (worlds.has(to) || existsSync(destDir)) return { ok: false, err: `world "${to}" already exists` };
-  const srcDir = join(WORLDS_DIR, src.name);
-  if (!existsSync(join(srcDir, "log.jsonl"))) return { ok: false, err: `"${src.name}" has no history to copy yet` };
-  mkdirSync(destDir, { recursive: true });
-  for (const f of ["log.jsonl", "snapshot.json", "poses.json"]) {
-    const p = join(srcDir, f);
-    if (existsSync(p)) copyFileSync(p, join(destDir, f));
-  }
-  return { ok: true, world: getWorld(to) };   // load it now: a fork that cannot boot should fail loudly here
-}
-
-// ------------------------------------------------------------------- clients
-
-type Client = {
-  id: string;          // participant id (v1: self-declared; later: key-derived)
-  ws: { send(data: string): void; close?(code?: number, reason?: string): void; getBufferedAmount?(): number };
-  world: World | null;
-  avatar: string;      // VRM library path chosen at join
-  lastPose: unknown;   // latest pose, forwarded to late joiners so they see everyone immediately
-  spectator: boolean;  // retina/observer connections: receive everything, appear as nothing
-  agent?: boolean;     // self-declared: an MCPL body, not a person at a keyboard
-  auth?: HnSession;    // archipelago-home session bound at WS upgrade (verified human)
-  sub?: string;        // durable principal id when authenticated (`human:discord:…`)
-  superseded?: boolean; // kicked by identity takeover — don't let its stale pose overwrite the successor's
-  renderer?: boolean;  // donates rendering: can answer snap requests for its world
-  // rate windows: a griefer or a stuck client gets silence, not fanout
-  msgWin: number; msgCount: number;   // all messages, per second
-  verbWin: number; verbCount: number; // authored verbs, per 4s
-};
-
-// ---- snapshots: the world serves views of itself ---------------------------
-// GET /snap?world=W&follow=ID → the sequencer asks a renderer client (an
-// invisible hub-spectator on some GPU box, dialed OUT to us like any client)
-// to jump its camera to ID's head and return one frame. Clients never know
-// rendering exists as a separate thing — it's just the world's API.
-type PendingSnap = { resolve: (r: { ok: true; png: Uint8Array } | { ok: false; err: string; status: number }) => void };
-const pendingSnaps = new Map<string, PendingSnap>();
-let nextSnapId = 1;
-
-function requestSnap(world: World, follow: string, view = "first"): Promise<{ ok: true; png: Uint8Array } | { ok: false; err: string; status: number }> {
-  const renderer = [...world.clients].find((c) => c.renderer);
-  if (!renderer) return Promise.resolve({ ok: false, err: `no renderer is currently serving world "${world.name}"`, status: 503 });
-  const target = [...world.clients].find((c) => c.id === follow && !c.spectator);
-  if (!target) return Promise.resolve({ ok: false, err: `"${follow}" is not present in "${world.name}"`, status: 404 });
-  if (!["first", "third", "selfie"].includes(view)) view = "first";
-  const id = `snap-${nextSnapId++}`;
-  return new Promise((resolve) => {
-    pendingSnaps.set(id, { resolve });
-    renderer.ws.send(JSON.stringify({ type: "snap", id, follow, view }));
-    setTimeout(() => {
-      if (pendingSnaps.delete(id)) resolve({ ok: false, err: "renderer timed out", status: 504 });
-    }, 12_000);
-  });
-}
 
 /** Whispers waiting for someone who wasn't here. Memory only, deliberately:
  *  see the `whisper` message case.
@@ -463,94 +156,8 @@ const pendingWhispers = new Map<string, unknown[]>();
 const whisperKey = (world: string, recipient: string) => `${world}\u0000${recipient}`;
 const WHISPERS_ENABLED = process.env.EIDO_WHISPERS_ENABLED !== "0";
 
-let clientVersionCache: { at: number; v: string } | null = null;
 let nextClientNum = 1;
 const clients = new Map<unknown, Client>();
-const uploadWin = new Map<string, { t: number; n: number }>(); // per-IP upload rate windows
-
-// ---- store optimization -----------------------------------------------------
-// Every uploaded GLB (drag-drop, Orrery conjures) gets a draco+webp shadow in
-// store-min/, built by a SUBPROCESS — draco encoding is CPU-seconds of
-// synchronous wasm, and inside this process it would freeze pose relay for
-// every world. One file at a time; the sequencer never waits on it.
-const optQueue: string[] = [];
-let optRunning = false;
-function queueOptimize(absPath: string) {
-  if (!optQueue.includes(absPath)) { optQueue.push(absPath); pumpOptimize(); }
-}
-async function pumpOptimize() {
-  if (optRunning) return;
-  optRunning = true;
-  try {
-    while (optQueue.length) {
-      const src = optQueue.shift()!;
-      const base = basename(src);                      // <hash>.glb
-      const dest = join(STORE_MIN, base);
-      const failed = join(STORE_MIN, `${base}.failed`);
-      if (!existsSync(src) || existsSync(dest) || existsSync(failed)) continue;
-      mkdirSync(STORE_MIN, { recursive: true });
-      // process.execPath = the running bun binary — PATH under systemd has no bun
-      const proc = Bun.spawn([process.execPath, "run", join(ROOT, "server", "optimize.ts"), src, dest],
-        { stdout: "pipe", stderr: "pipe" });
-      const code = await proc.exited;
-      const err = (await new Response(proc.stderr).text()).trim();
-      if (code === 0) {
-        const ratio = (Bun.file(src).size / Math.max(1, Bun.file(dest).size)).toFixed(1);
-        console.log(`[store] optimized ${base} (${ratio}x)`);
-      } else if (code === 2) {
-        // already lean — mark so the boot sweep stops re-measuring it
-        writeFileSync(failed, "not-smaller");
-        console.log(`[store] ${base} already lean — serving original`);
-      } else {
-        // Environmental failures (deps not installed yet) must NOT mark the
-        // file — that would permanently skip every upload made before the
-        // first successful `bun install`. Only content failures stick.
-        const envFail = /cannot find module|cannot resolve|error: script not found/i.test(err);
-        if (!envFail) writeFileSync(failed, err.slice(0, 2000) || `exit ${code}`);
-        console.error(`[store] optimize ${envFail ? "unavailable (deps?)" : `FAILED ${base}`}: ${err.split("\n")[0] || `exit ${code}`}`);
-        if (envFail) { optQueue.length = 0; break; } // no point grinding the rest
-      }
-    }
-  } finally { optRunning = false; }
-}
-// Boot sweep: whatever accumulated before this shipped (or failed mid-queue
-// last run) gets its shadow now. Deferred so boot stays about serving worlds.
-setTimeout(() => {
-  const dir = join(OPT_DIR, "store");
-  if (!existsSync(dir)) return;
-  const pending = readdirSync(dir).filter((f) => f.endsWith(".glb")
-    && !existsSync(join(STORE_MIN, f)) && !existsSync(join(STORE_MIN, `${f}.failed`)));
-  if (!pending.length) return;
-  console.log(`[store] boot sweep: ${pending.length} unoptimized upload(s) queued`);
-  for (const f of pending) queueOptimize(join(dir, f));
-}, 5000);
-
-// -------------------------------------------------------------- http + ws
-
-/** Roster = Skye's library vrms + our overlay (assets/opt/...) — drop a
- *  .vrm into either and it's an avatar, live, no restart, no manifest.
- *  ?v=mtime makes each path content-versioned: clients cache it forever,
- *  and any re-export mints a new URL. Served by GET /avatars AND carried in
- *  the join snapshot, so a joiner needs no separate round-trip before it
- *  can resolve a body name (the /avatars top-level await used to gate the
- *  client's entire module graph). */
-function avatarRoster(): { name: string; path: string; height: number | null }[] {
-  const seen = new Map<string, string>();
-  for (const base of [LIBRARY_DIR, OPT_DIR]) {
-    const dir = join(base, "eidoverse/assets/vrms");
-    if (!existsSync(dir)) continue;
-    for (const f of readdirSync(dir)) {
-      if (f.endsWith(".vrm")) seen.set(f.replace(".vrm", ""), `eidoverse/assets/vrms/${f}?v=${Math.round(Bun.file(join(dir, f)).lastModified)}`);
-    }
-  }
-  // stature metadata, contributed alongside portraits (see POST /thumb)
-  let hmeta: Record<string, { h: number }> = {};
-  try {
-    const mp = join(OPT_DIR, "thumbs", "meta.json");
-    if (existsSync(mp)) hmeta = JSON.parse(readFileSync(mp, "utf8"));
-  } catch { /* roster works without heights */ }
-  return [...seen].map(([name, path]) => ({ name, path, height: hmeta[name.replace(/[^a-zA-Z0-9_-]/g, "_")]?.h ?? null }));
-}
 
 /** The placeholder tier's bbox side-channel, sent AFTER the snapshot as its
  *  own message: summaries are async, and the join handler's synchronous
@@ -578,538 +185,17 @@ function sendGeomFollowup(w: World, c: Client) {
   })().catch((err) => console.error(`[world:${w.name}] geom followup`, err));
 }
 
-function contentType(path: string): string {
-  if (path.endsWith(".html")) return "text/html";
-  if (path.endsWith(".js") || path.endsWith(".mjs")) return "text/javascript";
-  if (path.endsWith(".json")) return "application/json";
-  if (path.endsWith(".css")) return "text/css";
-  if (path.endsWith(".md")) return "text/markdown; charset=utf-8";
-  if (path.endsWith(".png")) return "image/png";
-  if (path.endsWith(".jpg") || path.endsWith(".jpeg")) return "image/jpeg";
-  if (path.endsWith(".hdr")) return "application/octet-stream";
-  return "application/octet-stream";
-}
-
-const gzCache = new Map<string, { mtime: number; gz: Uint8Array }>();
-
-function serveFrom(base: string, rel: string, cache = false, req?: Request, immutable = false): Response {
-  const path = normalize(join(base, rel));
-  if (!path.startsWith(base)) return new Response("forbidden", { status: 403 });
-  // A missing file must be a 404, not a Bun.file stream blowing up into a 500 —
-  // prod 08-02: an asset absent from the VPS library (rsync gap) turned every
-  // spawn of it into "Internal Server Error" instead of an honest not-found.
-  if (!existsSync(path)) return new Response("not found", { status: 404 });
-  const f = Bun.file(path);
-  const headers: Record<string, string> = { "content-type": contentType(path) };
-  // ETag from size+mtime: makes no-cache revalidation a 304, not a re-download
-  // (an 11MB avatar re-pulled per reload is invisible on localhost and rude
-  // over tailnet).
-  if (f.size > 0) {
-    const etag = `"${f.size}-${f.lastModified}"`;
-    headers["etag"] = etag;
-    if (req?.headers.get("if-none-match") === etag) {
-      // cache-control must ride along on the 304 (it refreshes the stored response's lifetime)
-      headers["cache-control"] = immutable ? "public, max-age=31536000, immutable"
-        : cache && !path.endsWith(".vrm") ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
-      return new Response(null, { status: 304, headers });
-    }
-  }
-  // client code must never be heuristically cached (stale main.js = ghost bugs);
-  // library assets cache hard — EXCEPT avatars: .vrm files get iterated on
-  // (rig fixes, re-exports) and a 24h-stale avatar is a debugging nightmare
-  // (2026-07-22: "sydney's arms are swapped" was three of us looking at three
-  // different cached rigs). no-cache = revalidate each load, still cheap.
-  const hard = cache && !path.endsWith(".vrm");
-  headers["cache-control"] = immutable ? "public, max-age=31536000, immutable"
-    : hard ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
-  // gzip the JS modules: three.webgpu.js is 2.1MB raw / ~500KB gzipped, and
-  // over a DERP-relayed tailnet link that difference is seconds.
-  //
-  // .vrma and .vrm are here too, and the old comment claiming "binary assets
-  // are already compressed" was only half right. Measured 2026-07-26: GLB
-  // models compress to 0.99 (already Draco/webp packed inside — genuinely
-  // pointless), but VRM bodies hit 0.50 and the VRMA animation clips 0.44,
-  // because their float animation tracks and mesh data are stored raw. Seven
-  // clips at ~1.9MB each was the second-largest slice of a cold boot; half of
-  // it was air.
-  if (/\.(m?js|json|css|html|vrma|vrm)$/.test(path) && req?.headers.get("accept-encoding")?.includes("gzip") && f.size > 10_000) {
-    let entry = gzCache.get(path);
-    if (!entry || entry.mtime !== f.lastModified) {
-      entry = { mtime: f.lastModified, gz: Bun.gzipSync(new Uint8Array(require("node:fs").readFileSync(path))) };
-      gzCache.set(path, entry);
-    }
-    headers["content-encoding"] = "gzip";
-    headers["vary"] = "accept-encoding";
-    return new Response(entry.gz, { headers });
-  }
-  return new Response(f, { headers });
-}
+// -------------------------------------------------------------- http + ws
 
 const server = Bun.serve({
   port: PORT,
   hostname: "0.0.0.0",
   async fetch(req, srv) {
-    const url = new URL(req.url);
-    if (url.pathname === "/ws") {
-      // Session rides the upgrade: browsers attach cookies to WS upgrades, so
-      // the join below can carry a VERIFIED identity without the client ever
-      // seeing a token. (fkm web-ui precedent: "the WS is the authentication
-      // event" — here inverted, the cookie is, and the WS rides it.)
-      const session = sessionFromCookie(req.headers.get("cookie"));
-      if (srv.upgrade(req, { data: { session } })) return undefined as unknown as Response;
-      return new Response("expected websocket", { status: 400 });
-    }
-    // ---- archipelago-home doors (docs/home-node.md §7) ----
-    if (url.pathname === "/authcfg") {
-      return new Response(
-        JSON.stringify({ login: HN_ISSUER_KEY ? HN_LOGIN_URL : null, required: HN_REQUIRE_LOGIN && Boolean(HN_ISSUER_KEY) }),
-        { headers: { "content-type": "application/json", "cache-control": "no-store" } },
-      );
-    }
-    if (url.pathname === "/whoami") {
-      const s = sessionFromCookie(req.headers.get("cookie"));
-      if (!s) return new Response(JSON.stringify({ error: "no session" }), { status: 401, headers: { "content-type": "application/json" } });
-      return new Response(JSON.stringify({ sub: s.sub, name: s.name, scopes: s.scopes, claims: s.claims ?? {} }),
-        { headers: { "content-type": "application/json", "cache-control": "no-store" } });
-    }
-    if (url.pathname === "/auth" && req.method === "GET") {
-      // The landing spot for the home node's redirect. The token is in the URL
-      // FRAGMENT (never reaches this server's logs); this page posts it back.
-      return new Response(`<!doctype html><meta charset="utf-8"><title>entering…</title>
-<style>body{font:16px/1.5 system-ui;max-width:36rem;margin:15vh auto;padding:0 1rem;color:#ddd;background:#111}</style>
-<p id=m>entering…</p><script>
-(async () => {
-  const m = document.getElementById('m');
-  const tok = new URLSearchParams(location.hash.slice(1)).get('token');
-  if (!tok) { m.textContent = 'no token — start again from the login page'; return; }
-  history.replaceState(null, '', '/auth');
-  const r = await fetch('/auth', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ token: tok }) });
-  const j = await r.json().catch(() => ({}));
-  if (r.ok) { m.textContent = 'welcome, ' + j.name; location.replace('/'); }
-  else m.textContent = 'login failed: ' + (j.error ?? r.status) + ' — start again from the login page';
-})();
-</script>`, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
-    }
-    if (url.pathname === "/auth" && req.method === "POST") {
-      if (!HN_ISSUER_KEY) return new Response(JSON.stringify({ error: "identity door not configured" }), { status: 503, headers: { "content-type": "application/json" } });
-      let tok = "";
-      try { tok = String(((await req.json()) as { token?: string }).token ?? ""); } catch { /* fall through */ }
-      const v = verifyToken(tok, { issuerId: HN_ISSUER_KEY, iss: HN_ISS, aud: HN_AUD });
-      if (!v.ok) {
-        console.log(`[auth] login token rejected: ${v.reason}`);
-        return new Response(JSON.stringify({ error: v.reason }), { status: 403, headers: { "content-type": "application/json" } });
-      }
-      const p = v.payload;
-      if (p.jti && !hnJti.claim(p.jti, p.exp)) {
-        console.log(`[auth] login token replayed: ${p.sub}`);
-        return new Response(JSON.stringify({ error: "token already used" }), { status: 403, headers: { "content-type": "application/json" } });
-      }
-      const sid = randomBytes(32).toString("hex");
-      // opportunistic sweep — one entry per login, the map stays small
-      for (const [k, s] of hnSessions) if (s.exp < Date.now()) hnSessions.delete(k);
-      hnSessions.set(sid, { sub: p.sub, name: p.name, scopes: p.scopes, claims: p.claims, exp: Date.now() + SESSION_TTL_MS });
-      saveSessions();
-      const secure = (req.headers.get("x-forwarded-proto") ?? url.protocol.replace(":", "")) === "https" ? "; Secure" : "";
-      console.log(`[auth] session for ${p.sub} ("${p.name}") [${p.scopes.join(" ")}]`);
-      return new Response(JSON.stringify({ ok: true, name: p.name, sub: p.sub }), {
-        headers: {
-          "content-type": "application/json",
-          "set-cookie": `ew_sess=${sid}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${Math.floor(SESSION_TTL_MS / 1000)}${secure}`,
-        },
-      });
-    }
-    if (url.pathname === "/logout") {
-      const m = /(?:^|;\s*)ew_sess=([a-f0-9]{64})/.exec(req.headers.get("cookie") ?? "");
-      if (m && hnSessions.delete(m[1]!)) saveSessions();
-      return new Response(JSON.stringify({ ok: true }), {
-        headers: { "content-type": "application/json", "set-cookie": "ew_sess=; Path=/; HttpOnly; Max-Age=0" },
-      });
-    }
-    if (url.pathname === "/geom") {
-      // Geometry as DATA, for beings who perceive by reading. Three tiers:
-      //   /geom?lib=<path>           one asset: bbox, flat zones, named parts
-      //   /geom?world=W&id=<entity>  that asset + the entity's world transform
-      //   /geom?world=W              the whole scene: every entity + transform
-      //                              (+local bbox; &boxes=0 to skip the parses)
-      // Raw bytes stay at GET /library/<lib> for local processing; this is
-      // the parsed tier. Same trust level as the world log: public reads.
-      const j = (o: unknown, status = 200) =>
-        new Response(JSON.stringify(o), { status, headers: { "content-type": "application/json" } });
-      const wname = url.searchParams.get("world");
-      if (!wname) {
-        const lib = url.searchParams.get("lib") ?? "";
-        const file = resolveLibFile(lib);
-        if (!file) return j({ error: `no such asset: ${lib}` }, 404);
-        const sum = await summarizeGlb(file);
-        return sum ? j({ lib, ...sum }) : j({ error: "geometry parsing unavailable" }, 503);
-      }
-      // read-only: answer for LOADED or on-disk worlds, never create one
-      if (!/^[a-z0-9_-]{1,64}$/i.test(wname)
-        || (!worlds.has(wname) && !existsSync(join(WORLDS_DIR, wname, "log.jsonl")))) {
-        return j({ error: "no such world" }, 404);
-      }
-      const w = getWorld(wname);
-      const id = url.searchParams.get("id");
-      if (id) {
-        const e = w.state.entities[id];
-        if (!e) return j({ error: `no entity "${id}" in ${wname}` }, 404);
-        const file = e.lib ? resolveLibFile(e.lib) : null;
-        const sum = file ? await summarizeGlb(file) : null;
-        return j({ id, lib: e.lib ?? null, pos: e.pos, yaw: e.yaw ?? 0, scale: e.scale ?? 1,
-          parent: e.parent ?? null, comp: e.comp ?? {},
-          geometry: sum,   // local frame — compose with pos/yaw/scale for world space
-          note: "geometry coords are the MODEL's local frame; sockets use the same frame, so a topSurface center is a socket pos verbatim" });
-      }
-      const withBoxes = url.searchParams.get("boxes") !== "0";
-      const out = [];
-      for (const [eid, e] of Object.entries(w.state.entities)) {
-        const file = withBoxes && e.lib ? resolveLibFile(e.lib) : null;
-        const sum = file ? await summarizeGlb(file) : null;
-        out.push({ id: eid, lib: e.lib ?? null, kind: e.kind ?? "thing",
-          pos: e.pos, yaw: e.yaw ?? 0, scale: e.scale ?? 1,
-          parent: e.parent ?? null, comp: e.comp ?? {},
-          ...(sum ? { bbox: sum.bbox, tris: sum.tris } : {}) });
-      }
-      return j({ world: wname, entities: out, mounts: w.state.mounts ?? {} });
-    }
-    if (url.pathname === "/upload" && req.method === "POST") {
-      // Live asset ingestion. Two destinations:
-      //  - models (default): content-addressed into assets/opt/store/<hash>.glb —
-      //    immutable by construction, so spawn verbs can reference the path
-      //    forever and clients cache it forever. DESIGN.md's "content-addressed
-      //    assets" plane, made real.
-      //  - ?as=avatar&name=foo: named into the overlay vrms dir, because the
-      //    roster is name-keyed and people re-export their bodies (mtime
-      //    versioning handles the cache).
-      // Trust model: the door token, any per-agent bearer from
-      // mcpl/tokens.json, OR an aid1 credential the home node vouches for
-      // (so Orrery and agents can push generated GLBs here directly — the
-      // store is content-addressed and inert; what enters a WORLD is still
-      // the `asset`/`spawn` verbs, which per-world roles gate), plus per-IP
-      // rate limiting — live generation is the feature, an upload flood is
-      // not. `?by=` is attribution for the console trail.
-      const upTok = url.searchParams.get("token") ?? "";
-      let upAgent = agentTokens().byToken.get(upTok);
-      // The aid1 leg the join door has: guests enrolled via archipelago-home
-      // carry no tokens.json entry, but the scripting tier's `behavior` verb
-      // is already reachable to them through world_verb — the bytes it binds
-      // must be landable by the same identity, or the tier is half-open.
-      // Same audience/scope/slug derivation as the two doors, no jti burn
-      // (an aid1 credential is reusable until expiry at every door).
-      if (!upAgent && HN_ISSUER_KEY && upTok.startsWith("aid1.")) {
-        const v = verifyToken(upTok, { issuerId: HN_ISSUER_KEY, iss: HN_ISS, aud: HN_AUD, requireScopes: ["worlds:join"] });
-        if (v.ok) upAgent = v.payload.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || v.payload.sub;
-      }
-      if (JOIN_TOKEN && upTok !== JOIN_TOKEN && !upAgent)
-        return new Response("token required", { status: 401 });
-      const upBy = (url.searchParams.get("by") ?? upAgent ?? "?").slice(0, 64);
-      // Behind the show's nginx front every socket is 127.0.0.1 — the real
-      // client address rides X-Real-IP. (Spoofable only when directly exposed,
-      // which is the tailnet dev case where rate limits hardly matter.)
-      const ip = req.headers.get("x-real-ip") ?? srv.requestIP(req)?.address ?? "?";
-      const u = uploadWin.get(ip) ?? { t: 0, n: 0 };
-      if (Date.now() - u.t > 60_000) { u.t = Date.now(); u.n = 0; }
-      u.n++; uploadWin.set(ip, u);
-      if (u.n > 4) return new Response("upload rate limit (4/min)", { status: 429 });
-      const body = new Uint8Array(await req.arrayBuffer());
-      if (body.length > UPLOAD_CAP) return new Response(`too large (${UPLOAD_CAP / 1e6}MB cap)`, { status: 413 });
-      if (url.searchParams.get("as") === "script") {
-        // Runtime-script ingestion: plain UTF-8 JS, content-addressed like
-        // models, so a `behavior` entry pins exact bytes forever. The store
-        // is inert — what RUNS is still gated by the behavior verb + sandbox.
-        if (body.length > 64 * 1024) return new Response("script too large (64KB cap)", { status: 413 });
-        let text: string;
-        try { text = new TextDecoder("utf-8", { fatal: true }).decode(body); } catch {
-          return new Response("script must be UTF-8 text", { status: 415 });
-        }
-        if (!text.trim()) return new Response("empty script", { status: 415 });
-        const shash = new Bun.CryptoHasher("sha256").update(body).digest("hex").slice(0, 16);
-        const sdir = join(OPT_DIR, "store", "scripts");
-        mkdirSync(sdir, { recursive: true });
-        const srel = `store/scripts/${shash}.js`;
-        if (!existsSync(join(OPT_DIR, srel))) writeFileSync(join(OPT_DIR, srel), body);
-        console.log(`[upload] script ${srel} (${body.length}B) by ${upBy}`);
-        return new Response(JSON.stringify({ path: srel }),
-          { headers: { "content-type": "application/json" } });
-      }
-      if (body.length < 12 || new DataView(body.buffer).getUint32(0, true) !== 0x46546c67)
-        return new Response("not a GLB container (glb/vrm)", { status: 415 });
-      if (url.searchParams.get("as") === "avatar") {
-        const raw = url.searchParams.get("name") ?? "unnamed";
-        const name = raw.replace(/\.vrm$/i, "").replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 48) || "unnamed";
-        const dir = join(OPT_DIR, "eidoverse/assets/vrms");
-        mkdirSync(dir, { recursive: true });
-        writeFileSync(join(dir, `${name}.vrm`), body);
-        console.log(`[upload] avatar "${name}" (${(body.length / 1e6).toFixed(1)}MB) by ${upBy}`);
-        // Live cache invalidation: avatars are name-keyed and mutable (people
-        // iterate on their bodies), so every connected client — all worlds —
-        // learns the file changed; wearers hot-swap with the fresh version.
-        const rel = `eidoverse/assets/vrms/${name}.vrm`;
-        const update = JSON.stringify({ type: "avatar-updated", name, path: rel, v: Date.now() });
-        let notified = 0;
-        for (const w of worlds.values()) for (const c of w.clients) { c.ws.send(update); notified++; }
-        if (notified) console.log(`[upload] avatar-updated "${name}" → ${notified} client(s)`);
-        return new Response(JSON.stringify({ name, path: rel }),
-          { headers: { "content-type": "application/json" } });
-      }
-      const hash = new Bun.CryptoHasher("sha256").update(body).digest("hex").slice(0, 16);
-      const dir = join(OPT_DIR, "store");
-      mkdirSync(dir, { recursive: true });
-      const rel = `store/${hash}.glb`;
-      if (!existsSync(join(OPT_DIR, rel))) writeFileSync(join(OPT_DIR, rel), body);
-      queueOptimize(join(OPT_DIR, rel)); // draco+webp shadow, built off the request path
-      // The store is content-addressed, so the human name arrives ONLY here —
-      // record it, or the catalog can never list this object as anything but
-      // a hash (an orrery send used to vanish into exactly that black hole).
-      const upName = (url.searchParams.get("name") ?? "").replace(/\.glb$/i, "").replace(/[^a-zA-Z0-9 _-]/g, "").slice(0, 64).trim();
-      {
-        const mp = join(dir, "manifest.json");
-        let man: Record<string, { name?: string; by: string; ts: number }> = {};
-        try { if (existsSync(mp)) man = JSON.parse(readFileSync(mp, "utf8")); } catch { /* fresh */ }
-        man[hash] = { ...(upName ? { name: upName } : {}), by: upBy, ts: Date.now() };
-        writeFileSync(`${mp}.tmp`, JSON.stringify(man));
-        renameSync(`${mp}.tmp`, mp);
-      }
-      console.log(`[upload] model ${rel}${upName ? ` ("${upName}")` : ""} (${(body.length / 1e6).toFixed(1)}MB) by ${upBy}`);
-      return new Response(JSON.stringify({ path: rel }), { headers: { "content-type": "application/json" } });
-    }
-    if (url.pathname === "/snap") {
-      const w = worlds.get(url.searchParams.get("world") ?? "commons");
-      const follow = url.searchParams.get("follow") ?? "";
-      if (!w) return new Response("unknown world", { status: 404 });
-      const r = await requestSnap(w, follow, url.searchParams.get("view") ?? "first");
-      if (!r.ok) return new Response(r.err, { status: r.status });
-      return new Response(r.png, { headers: { "content-type": "image/png", "cache-control": "no-store" } });
-    }
-    if (url.pathname === "/avatars") {
-      return new Response(JSON.stringify(avatarRoster()),
-        { headers: { "content-type": "application/json", "cache-control": "no-store" } });
-    }
-    if (url.pathname.startsWith("/thumb/")) {
-      // Avatar thumbnails. VRMs have no shipped previews, and a name-only
-      // roster where each choice costs a multi-megabyte download is a blind
-      // pick. So thumbnails are CONTRIBUTED: whoever wears a body renders one
-      // off its own loaded VRM and posts it back. The roster fills in as people
-      // use it — no build step, no manifest, no bulk render job.
-      const name = decodeURIComponent(url.pathname.slice("/thumb/".length)).replace(/\.png$/, "");
-      const safe = name.replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 48);
-      const f = Bun.file(join(OPT_DIR, "thumbs", `${safe}.png`));
-      if (!(await f.exists())) return new Response("no thumb", { status: 404 });
-      return new Response(f, {
-        headers: { "content-type": "image/png", "cache-control": "public, max-age=3600" },
-      });
-    }
-    if (url.pathname === "/perflog" && req.method === "POST") {
-      // Load-performance beacon (client/lib/loadwork.js): jank + load lines
-      // from real visits, because Safari's console is unreachable and most
-      // visitors never open one. Append-only JSONL beside the worlds, capped —
-      // diagnosis data, not surveillance; it holds only timing lines and a UA.
-      try {
-        const body = await req.text();
-        if (body.length < 100_000) {
-          const dest = join(WORLDS_DIR, ".perflogs.jsonl");
-          const big = existsSync(dest) && Bun.file(dest).size > 5_000_000;
-          if (!big) {
-            const ip = req.headers.get("x-real-ip") ?? srv.requestIP(req)?.address ?? "?";
-            appendFileSync(dest, JSON.stringify({ ts: Date.now(), ip, ...JSON.parse(body) }) + "\n");
-          }
-        }
-      } catch { /* malformed beacon: drop */ }
-      return new Response("ok");
-    }
-    if (url.pathname === "/thumb" && req.method === "POST") {
-      if (JOIN_TOKEN && url.searchParams.get("token") !== JOIN_TOKEN)
-        return new Response("token required", { status: 401 });
-      const safe = (url.searchParams.get("name") ?? "").replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 48);
-      if (!safe) return new Response("name required", { status: 400 });
-      const dir = join(OPT_DIR, "thumbs");
-      mkdirSync(dir, { recursive: true });
-      const dest = join(dir, `${safe}.png`);
-      // The portrait carries the body's measured stature (skeleton-derived,
-      // client-side) — kept beside the images so /avatars can hand catalogs a
-      // roster drawn to a common scale.
-      const height = Number(url.searchParams.get("height"));
-      if (Number.isFinite(height) && height > 0.2 && height < 20) {
-        const metaPath = join(dir, "meta.json");
-        let meta: Record<string, { h: number }> = {};
-        try { if (existsSync(metaPath)) meta = JSON.parse(readFileSync(metaPath, "utf8")); } catch { /* fresh */ }
-        meta[safe] = { h: Math.round(height * 100) / 100 };
-        writeFileSync(`${metaPath}.tmp`, JSON.stringify(meta));
-        renameSync(`${metaPath}.tmp`, metaPath);
-      }
-      // First contributor wins (re-posting on every join would be pointless
-      // write traffic) — unless a re-mint pass explicitly forces the refresh.
-      const force = url.searchParams.get("force") === "1";
-      if (existsSync(dest) && !force) return new Response(JSON.stringify({ ok: true, existed: true }),
-        { headers: { "content-type": "application/json" } });
-      const body = new Uint8Array(await req.arrayBuffer());
-      if (body.length > 400_000) return new Response("thumb too large", { status: 413 });
-      if (body.length < 8 || body[0] !== 0x89 || body[1] !== 0x50) return new Response("not a PNG", { status: 415 });
-      writeFileSync(dest, body);
-      console.log(`[thumb] ${safe} (${(body.length / 1000).toFixed(0)}KB${force ? ", forced" : ""})`);
-      return new Response(JSON.stringify({ ok: true }), { headers: { "content-type": "application/json" } });
-    }
-    if (url.pathname === "/library-list") {
-      // Directory listing over the library. The browser host primes Skye's
-      // toolkit modules into a virtual filesystem before eval-loading them
-      // (they read assets synchronously, Deno-style), and it should DISCOVER
-      // what to prime rather than carry a hardcoded manifest — the no-manifest
-      // rule applies to the client too.
-      const rel = url.searchParams.get("dir") ?? "";
-      const out: { path: string; size: number }[] = [];
-      const walk = (base: string, sub: string, depth: number) => {
-        if (depth > 4) return;
-        const abs = normalize(join(base, sub));
-        if (!abs.startsWith(base) || !existsSync(abs)) return;
-        for (const e of readdirSync(abs, { withFileTypes: true })) {
-          const childRel = sub ? `${sub}/${e.name}` : e.name;
-          if (e.isDirectory()) walk(base, childRel, depth + 1);
-          else out.push({ path: childRel, size: Bun.file(join(abs, e.name)).size });
-        }
-      };
-      // opt first: /library/ serving prefers the optimized mirror, so the
-      // listed size must describe the file a client will actually receive —
-      // the prefetcher sorts and budgets by these numbers, and the raw-library
-      // size of a draco+webp'd model is off by ~30x.
-      for (const base of [OPT_DIR, LIBRARY_DIR]) walk(base, rel, 0);
-      // opt mirror shadows the library at the same path — dedupe, first wins
-      const seen = new Set<string>();
-      const uniq = out.filter((f) => !seen.has(f.path) && seen.add(f.path));
-      return new Response(JSON.stringify(uniq), {
-        headers: { "content-type": "application/json", "cache-control": "no-store" },
-      });
-    }
-    if (url.pathname === "/library-models") {
-      // The catalog agents already had (mcpl `list_library`), served to humans.
-      // Filename token scoring — crude, but it is what ranks the agent-side
-      // search today and parity matters more than cleverness here.
-      const q = (url.searchParams.get("q") ?? "").toLowerCase().split(/\s+/).filter(Boolean);
-      const dirs = [join(LIBRARY_DIR, "eidoverse/assets/models"), join(OPT_DIR, "eidoverse/assets/models")];
-      const files = new Map<string, number>();
-      for (const d of dirs) {
-        if (!existsSync(d)) continue;
-        for (const f of readdirSync(d)) {
-          if (!f.endsWith(".glb")) continue;
-          const low = f.toLowerCase();
-          const score = q.length ? q.filter((t) => low.includes(t)).length : 1;
-          if (score > 0) files.set(f, Math.max(files.get(f) ?? 0, score));
-        }
-      }
-      const hits = [...files]
-        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-        .slice(0, 60)
-        .map(([f]) => {
-          // Skye ships a _preview.jpg beside every model. Picking from a list of
-          // `stylized_yucca_joshua_tree_desert_cactus_plant.glb` is not picking;
-          // with the previews it becomes an actual catalog.
-          const prev = f.replace(/\.glb$/i, "_preview.jpg");
-          const hasPrev = dirs.some((d) => existsSync(join(d, prev)));
-          return {
-            path: `eidoverse/assets/models/${f}`,
-            // strip the SEO-soup filenames into something a person can read
-            name: f.replace(/\.glb$/i, "").replace(/_/g, " ").slice(0, 48),
-            preview: hasPrev ? `eidoverse/assets/models/${prev}` : null,
-          };
-        });
-      // Conjured/delivered objects (the content-addressed store) are catalog
-      // too — an orrery send should land somewhere findable, not in a black
-      // hole only its hash can name. Newest first, names from the manifest.
-      const storeDir = join(OPT_DIR, "store");
-      if (existsSync(storeDir)) {
-        let man: Record<string, { name?: string; by?: string; ts?: number }> = {};
-        try { man = JSON.parse(readFileSync(join(storeDir, "manifest.json"), "utf8")); } catch { /* unnamed */ }
-        const store = readdirSync(storeDir)
-          .filter((f) => f.endsWith(".glb"))
-          .map((f) => {
-            const hash = f.replace(/\.glb$/i, "");
-            const m = man[hash];
-            return {
-              path: `store/${f}`,
-              name: (m?.name ?? `conjured ${hash.slice(0, 8)}`).slice(0, 48),
-              preview: null as string | null,
-              ts: m?.ts ?? 0,
-              score: q.length ? q.filter((t) => (m?.name ?? "").toLowerCase().includes(t)).length : 1,
-            };
-          })
-          .filter((s) => s.score > 0)
-          .sort((a, b) => b.ts - a.ts)
-          .slice(0, 30)
-          .map(({ path, name, preview }) => ({ path, name, preview }));
-        hits.push(...store);
-      }
-      return new Response(JSON.stringify(hits), {
-        headers: { "content-type": "application/json", "cache-control": "no-store" },
-      });
-    }
-    if (url.pathname.startsWith("/library/")) {
-      const rel = url.pathname.slice("/library/".length);
-      // optimized mirror first (draco+webp): same path, ~30x smaller
-      const versioned = url.searchParams.has("v") || rel.startsWith("store/"); // content-addressed = immutable
-      // store uploads: prefer the store-min shadow — same address, the
-      // original stays as provenance and as the fallback while (or if) the
-      // optimize pass hasn't landed for this hash
-      if (rel.startsWith("store/")) {
-        const minRel = `store-min/${rel.slice("store/".length)}`;
-        const min = normalize(join(OPT_DIR, minRel));
-        if (min.startsWith(OPT_DIR) && existsSync(min)) return serveFrom(OPT_DIR, minRel, true, req, true);
-      }
-      const opt = normalize(join(OPT_DIR, rel));
-      if (opt.startsWith(OPT_DIR) && existsSync(opt)) return serveFrom(OPT_DIR, rel, true, req, versioned);
-      return serveFrom(LIBRARY_DIR, rel, true, req, versioned);
-    }
-    if (url.pathname.startsWith("/node_modules/"))
-      return serveFrom(join(ROOT, "client"), url.pathname.slice(1), true, req);
-    // shared/ — modules every runtime folds with (see shared/README.md). Code,
-    // so it gets the client-code caching policy: no-store, never heuristically
-    // stale. Client files reach it as ../../shared/…, which clamps to /shared/
-    // in a browser and resolves to the repo root on disk.
-    if (url.pathname.startsWith("/shared/"))
-      return serveFrom(join(ROOT, "shared"), url.pathname.slice("/shared/".length), false, req);
-    if (url.pathname === "/client-version") {
-      // A marker the renderer watchdog polls: the newest mtime across the
-      // client files. A deploy (or a dev edit) moves it, so a hung-uptime-free
-      // renderer still reloads for new code. Cheap, cached 5s.
-      const now = Date.now();
-      if (!clientVersionCache || now - clientVersionCache.at > 5000) {
-        let newest = 0;
-        const dir = join(ROOT, "client");
-        const walk = (d: string, depth: number) => {
-          if (depth > 3) return;
-          for (const e of readdirSync(d, { withFileTypes: true })) {
-            if (e.name === "node_modules") continue;
-            const p = join(d, e.name);
-            if (e.isDirectory()) walk(p, depth + 1);
-            else newest = Math.max(newest, Bun.file(p).lastModified);
-          }
-        };
-        try { walk(dir, 0); } catch { /* best effort */ }
-        clientVersionCache = { at: now, v: String(newest) };
-      }
-      return new Response(clientVersionCache.v, { headers: { "content-type": "text/plain", "cache-control": "no-store" } });
-    }
-    if (url.pathname === "/favicon.ico") {
-      // Browsers ask for this unprompted; the static handler threw ENOENT and
-      // answered 500, so every page load logged a server error for a file
-      // nobody asked us to have.
-      return new Response(
-        `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-           <rect width="32" height="32" rx="7" fill="#0c1720"/>
-           <circle cx="16" cy="16" r="6" fill="#8fe8c8"/>
-           <circle cx="16" cy="16" r="10.5" fill="none" stroke="#8fe8c8" stroke-opacity=".45" stroke-width="1.5"/>
-         </svg>`,
-        { headers: { "content-type": "image/svg+xml", "cache-control": "public, max-age=86400" } },
-      );
-    }
-    if (url.pathname.toLowerCase() === "/agents.md") {
-      // The closed-verb-set error says "see AGENTS.md" — so the file has to be
-      // reachable from the world itself, not just the repo. Any casing works
-      // (/AGENTS.md, /agents.md): agents type both, and a 404 on the spelling
-      // the error message taught you is a locked door with a sign on it.
-      return serveFrom(ROOT, "AGENTS.md", false, req);
-    }
-    if (url.pathname === "/" || url.pathname === "/index.html")
-      return serveFrom(join(ROOT, "client"), "index.html");
-    return serveFrom(join(ROOT, "client"), url.pathname.slice(1));
+    // The whole HTTP surface is routes.ts's table (§15, 7c) — one row per
+    // endpoint, first match wins, in exactly the order the if-chain had.
+    // /ws upgrades inside its row: a successful upgrade returns no Response,
+    // same contract as before.
+    return route(req, srv);
   },
   websocket: {
     // House rule 3 applies to EVERY ws callback, not just message: an
@@ -1135,8 +221,8 @@ const server = Bun.serve({
         clients.delete(ws);
         // dev crash forensics (?bc=1 clients): the last thing a dying renderer
         // was doing, printed at the only moment we learn it died
-        if ((c as any).bcRing?.length) {
-          console.log(`[bc] ${c.id} last breadcrumbs: ${(c as any).bcRing.join(" | ")}`);
+        if (c.bcRing?.length) {
+          console.log(`[bc] ${c.id} last breadcrumbs: ${c.bcRing.join(" | ")}`);
         }
         // a vanished simulator's objects land exactly where its last frame put
         // them — the lease's whole promise (docs/leases.md). Per-lease guard:
@@ -1497,7 +583,7 @@ const server = Bun.serve({
         case "bc": {
           // dev crash forensics: keep the client's last N breadcrumbs in
           // memory, printed on disconnect (see close). Never persisted.
-          const ring = ((c as any).bcRing ??= []);
+          const ring = (c.bcRing ??= []);
           ring.push(String(msg.tag ?? "").slice(0, 64));
           if (ring.length > 40) ring.shift();
           return;
