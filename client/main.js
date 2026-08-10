@@ -6,29 +6,27 @@
 // system lives in lib/.
 
 import {
-  THREE, scene, camera, renderer, sun, canvas, CONFIG, BASE_PIXEL_RATIO,
+  THREE, scene, camera, renderer, sun, canvas, CONFIG,
   bus, report, setName,
 } from './lib/core.js';
 import { contributeThumbnail, makeAvatar, EMOTE_ORDER, EMOTES } from './lib/avatar.js';
-import { updateSky, updateAutoSystems, skyArgs, skyImpl,
-  CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './lib/sky.js';
+import { updateSky, updateAutoSystems, skyArgs, skyImpl } from './lib/sky.js';
 import { setSkyArgsSource, entities, liveEntities, buildsPending, roleOf, worldHasOwner, comps, avatarMounts, mountTransform, socketWorldPos } from './lib/world.js';
 import { foldParity } from './lib/parity.js';
 import { initModelsRealizer, reconcileModels } from './lib/realize/models.js';
 import { initEnvironmentRealizer } from './lib/realize/environment.js';
 import { initSocialRealizer } from './lib/realize/social.js';
 import { initCauses } from './lib/realize/causes.js';
-import { hasGrass, setGrassDensity, getGrassDensity } from './lib/terrain.js';
 // side-effecting: the `particles` component's host wires itself to the comp
 // and entity buses on import (it has no boot step of its own)
-import { emitterCount, emitterQuality, setEmitterQuality } from './lib/emitters.js';
+import './lib/emitters.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateFollowCamera, updateSpectator, setCamYaw, setPosture,
   togglePhotoMode, setCameraCollisionTargets, keys, setSeatHook,
 } from './lib/controller.js';
 import {
-  remotes, updateRemotes, updateGaze, noteSpeaking, setLodBias,
+  remotes, updateRemotes, updateGaze, noteSpeaking,
 } from './lib/remotes.js';
 import { net, connect, initIdentity, loginUrl, wireNet, sendVerb, sendPose, sendAnim, sendPuppet, sendWhisper, sendTyping, sendWorldFork, sendWorldReset, sendMod, requestDebug } from './lib/net.js';
 import {
@@ -53,8 +51,8 @@ import { makeRagdoll, bodyEngine, setBodyEngine } from './lib/bodysim.js';
 import { initBodyDrag, updateBodyDrag, beingDragged, revokeDragged, dragState } from './lib/bodydrag.js';
 import { initPhysObj, tickPhysObj, kick, leaseApi } from './lib/physobj.js';
 import { initMods, tickMods, modsApi } from './lib/mods.js';
-import { shedALight, litCount } from './lib/lights.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
+import { governPerformance, governorDebug } from './lib/governor.js';
 import { updateMaterials, materialsDebug } from './lib/materials.js';
 import { updateRig, rigDebug } from './lib/lightrig.js';
 import { framesHeld } from './lib/loadwork.js';
@@ -1055,8 +1053,6 @@ const readyPoll = setInterval(() => {
 
 let last = performance.now();
 let frames = 0, fpsAt = last, fps = 0;
-let pixelRatio = BASE_PIXEL_RATIO;
-let slowFor = 0;
 
 function frame(now) {
   const dt = Math.min(0.1, (now - last) / 1000);
@@ -1125,90 +1121,8 @@ function frame(now) {
   requestAnimationFrame(frame);
 }
 
-// Shed pixels before shedding frames; shed animation detail before pixels.
-// Clouds come off before pixels do. The volumetric march measured 40fps at
-// high vs 60 at medium under identical GPU-bound load — a bigger lever than
-// resolution, and a slightly plainer sky reads better than a blurry whole
-// world. Stepped at most once every few seconds so a hitch cannot cascade
-// the setting all the way to 'off'.
-let lastLightDrop = 0;
-function shedLight() {
-  const now = performance.now();
-  if (now - lastLightDrop < 6000 || litCount() === 0) return false;
-  lastLightDrop = now;
-  if (!shedALight()) return false;
-  toast('turned a light down to keep the frame rate — it still glows', 'warn', 6000);
-  return true;
-}
-let lastCloudDrop = 0;
-function shedClouds(now) {
-  if (now - lastCloudDrop < 8000) return false;
-  const i = CLOUD_QUALITY.indexOf(getCloudQuality());
-  if (i <= 0) return false;
-  lastCloudDrop = now;
-  const next = CLOUD_QUALITY[i - 1];
-  setCloudQuality(next);
-  toast(`clouds turned down to "${next}" to keep the frame rate — change it in the sky panel`, 'warn', 8000);
-  return true;
-}
-
-// Thin the meadow before dropping resolution: 318k blades of fill is the
-// frame budget on some browsers (Safari, measured 08-02 — "grass really
-// kills visual smoothness"), and a 60% field at full resolution reads far
-// better than a full field at 70% resolution. Sticky across re-grows.
-// Steps from the EFFECTIVE density (the resident's grass⚙ cap already
-// applies), so a capped meadow isn't "shed" to a value the cap was already
-// below — that would toast without changing a single blade.
-function shedGrass() {
-  const eff = getGrassDensity();
-  if (!hasGrass() || eff <= 0.35) return false;
-  setGrassDensity(eff > 0.65 ? 0.6 : 0.35);
-  toast(`grass thinned to keep the frame rate`, 'warn', 8000);
-  return true;
-}
-
-// Emitters are alpha-blended fill like grass is, and a long shared session
-// accumulates them (#25 requirement 5). Thinning is a per-emitter instance
-// count — no rebuild, no hitch — and it changes only how many sprites THIS
-// machine draws: preset, state, seed and provenance stay shared facts, so two
-// people on different tiers are still looking at the same fire.
-const EMITTER_TIERS = ['auto', 'med', 'low'];
-function shedEmitters() {
-  if (!emitterCount()) return false;
-  const i = EMITTER_TIERS.indexOf(emitterQuality());
-  if (i < 0 || i >= EMITTER_TIERS.length - 1) return false;
-  if (!setEmitterQuality(EMITTER_TIERS[i + 1])) return false;
-  toast('particle effects thinned to keep the frame rate', 'warn', 8000);
-  return true;
-}
-
-function governPerformance(f) {
-  if (f > 0 && f < 26) {
-    slowFor++;
-    if (slowFor > 2 && shedClouds(performance.now())) { /* clouds first */ }
-    else if (slowFor > 2 && shedLight()) { /* then a light — point lights are costly */ }
-    else if (slowFor > 2 && shedEmitters()) { /* then sprite fill — cheapest to give back */ }
-    else if (slowFor > 2 && shedGrass()) { /* then the meadow — fill rate */ }
-    else if (slowFor > 2 && pixelRatio > 0.7) {
-      pixelRatio = Math.max(0.7, pixelRatio - 0.25);
-      renderer.setPixelRatio(pixelRatio);
-    } else if (slowFor > 4) {
-      setLodBias(2);              // far bodies animate at half rate again
-      if (sun.shadow.mapSize.width > 1024) {
-        sun.shadow.mapSize.set(1024, 1024);
-        sun.shadow.map?.dispose();
-        sun.shadow.map = null;
-      }
-    }
-  } else if (f > 52) {
-    slowFor = 0;
-    setLodBias(1);
-    if (pixelRatio < BASE_PIXEL_RATIO) {
-      pixelRatio = Math.min(BASE_PIXEL_RATIO, pixelRatio + 0.125);
-      renderer.setPixelRatio(pixelRatio);
-    }
-  }
-}
+// The perf governor lives in lib/governor.js now — one ladder, every lever
+// two-way, session-scoped, and it never touches the cloud tier (§12.6).
 
 const statusDot = {
   live: '<span class="ok">●</span>', connecting: '<span>○</span>',
@@ -1244,6 +1158,7 @@ globalThis.EW = {
   reconcileModels,   // force a full realizer pass (idempotent — §11.4)
   materials: materialsDebug,   // factory counters + live weather uniforms (§12.3)
   lightrig: rigDebug,          // slot pool + request table (§12.4)
+  governor: governorDebug,     // the two-way lever ladder (§12.6)
 };
 
 } // end of the normal-boot branch (?mintthumbs takes the path above)

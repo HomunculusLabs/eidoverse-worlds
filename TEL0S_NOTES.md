@@ -387,6 +387,26 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-09 — 5d landed: the governor is two-way, and the tuner stops
+  lying.** `client/lib/governor.js` — one lever ladder (casters → light
+  slots → emitters → grass → pixels → LOD+shadow-res), every lever with
+  degrade AND recover, unwound back-to-front on 5 smooth seconds
+  (pixels return first, the meadow regrows last). One shed per 3-second
+  slow window (a hitch cannot cascade the ladder); 26/52 fps hysteresis
+  with a dead band that counts toward neither. Session-scoped — no
+  localStorage writes ever. The cloud lever is GONE: it persisted a
+  degradation across sessions and answered slowness with a full sky
+  rebuild; cloud tier is the resident's ⚙ preference alone now. Tuner
+  rescue: fog density works on both sky paths (upstream only ever wrote
+  fog COLOR — the slider was dead on the shipped sky for no reason);
+  sun/ambient ride as post-update multipliers after applyToLights (the
+  layering sky_worlds' own comment invites); azimuth/fill dim honestly
+  with "the detailed sky drives this itself" instead of sitting there
+  dead. 5 of 8 dead-on-real-sky sliders → 1 honest death + 3 rescued.
+  Verified: paritybench PASS. `EW.governor()` shows the ladder + move
+  history. (Noted en route: build.js's seat-gizmo keys embed raw NUL
+  separators — deliberate, but it makes ripgrep treat the file as
+  binary; a future cleanup could use the escape form.)
 - **2026-08-09 — 5c landed: the shadow follows the camera; casters are a
   budget, not a drip.** The sun's config moved into the rig (shadowMap
   enabled/type are pipeline-shape → set once at module init); the frustum

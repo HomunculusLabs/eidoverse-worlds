@@ -678,11 +678,15 @@ function applyTuning(a, day, warmth = Math.pow(1 - day, 1.5), sunPos = null, sky
       const cool = new THREE.Color().setHSL(0.6, 0.2, 0.05 + 0.5 * day);
       const warm = new THREE.Color().setHSL(0.07, 0.32, 0.04 + 0.45 * day);
       scene.fog.color.lerpColors(cool, warm, warmth);
-      scene.fog.density = 0.018 * (a.fog ?? 1);
     }
   } else {
     fillLight.intensity = 0; // the real sky supplies its own bounce
   }
+
+  // Fog DENSITY is the world's on both paths: the real sky drives fog
+  // COLOR (applyToLights) and never the density — so this slider was dead
+  // on the shipped sky for no reason at all (§12.6's tuner audit).
+  if (scene.fog) scene.fog.density = 0.018 * (a.fog ?? 1);
 
   // Exposure is the world's, not the sky's — it's the tuner's one global knob
   // and it must work identically on both implementations.
@@ -709,6 +713,16 @@ export function updateSky(nowMs, t) {
       if (r && typeof r.catch === 'function') r.catch(noteSkyFailure);
       else updateFailures = 0;
     } catch (e) { noteSkyFailure(e); }
+    // The sun/ambient sliders, rescued: the engine's applyToLights rewrites
+    // sun/hemi intensity EVERY frame inside update(t), so a multiplier
+    // applied after it neither fights nor compounds — the palette drives,
+    // the resident garnishes. (This is the layering sky_worlds' own
+    // comment invites: "update, then adjust, then render".)
+    const a = clock?.args;
+    if (a) {
+      if (a.sun != null && a.sun !== 1) sun.intensity *= a.sun;
+      if (a.ambient != null && a.ambient !== 1) hemi.intensity *= a.ambient;
+    }
     updateBakedDome(nowMs);   // camera-follow + the band-bake/crossfade cycle
   }
   // A rated sky advances everyone's sun in lockstep, and a forecast needs the

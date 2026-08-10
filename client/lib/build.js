@@ -21,7 +21,7 @@ import { sendVerb, sendDrag } from './net.js';
 import { myState, mouse, setPointerClaim, setEditingProbe } from './controller.js';
 import { makeSection, toast, flashHint, collapseAll, panelFrame } from './ui.js';
 import { sceneSelect } from './scenegraph.js';
-import { previewSky, skyArgs, WEATHERS, CLOUDS, SKY_WORLDS,
+import { previewSky, skyArgs, skyImpl, WEATHERS, CLOUDS, SKY_WORLDS,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './sky.js';
 
 const raycaster = new THREE.Raycaster();
@@ -1146,6 +1146,22 @@ function paintSky(body) {
   bus.on('grass-budget', syncGrassRow);   // governor sheds repaint immediately
   body.appendChild(gqRow);
 
+  // Sliders that only the BASIC sky answers. On the real sky the engine owns
+  // sun direction and supplies its own bounce fill (sky.js documents the
+  // ownership boundary) — a slider that does nothing must say so, not sit
+  // there lying. sun/ambient/fog work on BOTH paths now: fog density was
+  // always ours, and sun/ambient ride as post-update multipliers (§12.6).
+  const BASIC_ONLY = new Set(['azimuth', 'fill']);
+  const basicRows = [];
+  const syncBasicOnly = () => {
+    const dead = skyImpl() === 'eidoverse';
+    for (const { row, input } of basicRows) {
+      input.disabled = dead;
+      row.style.opacity = dead ? '.45' : '';
+      row.title = dead ? 'the detailed sky drives this itself — basic sky only' : '';
+    }
+  };
+
   for (const [key, label, min, max, step, dflt] of SLIDERS) {
     const input = document.createElement('input');
     input.type = 'range';
@@ -1161,8 +1177,10 @@ function paintSky(body) {
     inputs[key] = input;
     const row = mkRow(label, input);
     row.appendChild(val);
+    if (BASIC_ONLY.has(key)) basicRows.push({ row, input });
     body.appendChild(row);
   }
+  syncBasicOnly();
 
   // The sun can follow a REAL clock: `clock: real` makes the world's hour BE
   // the named timezone's wall hour (DST included, hoursAt owns the formula)
@@ -1219,6 +1237,7 @@ function paintSky(body) {
     if (a.world) wl.value = a.world;
     ck.value = a.clock === 'real' ? 'real' : '';
     syncClockUi();
+    syncBasicOnly();
     syncGrassRow();
   };
   body._sync();
