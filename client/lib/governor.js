@@ -35,8 +35,22 @@
 // restore needs 5 consecutive smooth seconds. The 26/52 fps gap between
 // the two thresholds is the hysteresis that keeps shed/restore from
 // chattering; the dead band between them counts toward neither.
+//
+// Loading grace (§16.2.D): while the engine is LOADING — warm conductor
+// items queued or running, loadwork lanes busy, promote tails pending —
+// storm fps is not a performance regime and lever moves make it worse
+// (each pixels notch is a render-target realloc, each detail flip a 16MB
+// shadow-map realloc, §16.1g). Both directions freeze and the streak
+// counters reset, so a storm never carries partial counts into calm.
+// whenCalm() is the storm-edge signal the deferred extras (thumbnail
+// contribution, roster prefetch) wait on: 5 consecutive smooth seconds
+// with no loading work in flight — the restore ladder's own 1Hz fps read,
+// not a second meter.
 
 import { renderer, sun, BASE_PIXEL_RATIO } from './core.js';
+import { warmStats } from './warmqueue.js';
+import { laneBusy } from './loadwork.js';
+import { promoteTailPending } from './realize/models.js';
 import { setSlotCap, getSlotCap, maxSlots, litCount,
   setCasterBudget, getCasterBudget, casterCount } from './lightrig.js';
 import { setEmitterQuality, emitterQuality, emitterCount } from './emitters.js';
@@ -196,10 +210,54 @@ let slowFor = 0;
 let goodFor = 0;
 const history = [];   // recent lever moves, for the debug surface
 
+// ---- loading grace + the calm signal (§16.2.D) ------------------------------
+
+/** The busy predicate: is the engine loading RIGHT NOW? Composed from the
+ *  three places load work actually lives — the warm conductor (queued or
+ *  mid-item), loadwork's cpu/gpu lanes, and the promote tail's pending
+ *  boulders — each read through its own smallest honest export. */
+function loadingBusy() {
+  const w = warmStats();
+  return w.pending > 0 || w.running || laneBusy() || promoteTailPending() > 0;
+}
+
+let grace = false;        // the last pulse was held by loading grace
+let graceDipped = false;  // this grace spell already told its story in history
+let calmFor = 0;          // consecutive smooth AND non-busy seconds (never
+                          // consumed by restores — goodFor is, per lever)
+let calmReached = false;  // sticky: arrival proved smooth once this session
+const calmWaiters = [];
+
+/** Resolves once smoothness (the restore ladder's >52fps read, fed at 1Hz)
+ *  has held 5 consecutive seconds with the busy predicate false throughout.
+ *  Sticky: this is a storm-edge signal for boot-deferred extras, and once
+ *  the arrival has proven itself the answer stays yes. */
+export function whenCalm() {
+  if (calmReached) return Promise.resolve();
+  return new Promise((res) => calmWaiters.push(res));
+}
+
 /** Feed once per second with the measured fps. */
 export function governPerformance(fps) {
+  if (loadingBusy()) {
+    // freeze BOTH directions and reset every streak: a storm-dip shed and a
+    // splash-smooth restore are both answers to loading, not to the machine
+    if (!grace) { grace = true; graceDipped = false; }
+    if (fps > 0 && fps < 26 && !graceDipped) {
+      // one history line per grace spell, only when grace actually swallowed
+      // a would-be slow second — the story without the 1Hz flap spam
+      graceDipped = true;
+      if (history.length < 60) history.push(`⏸ grace held ${Math.round(fps)}fps @${Math.round(performance.now() / 1000)}s`);
+    }
+    slowFor = 0;
+    goodFor = 0;
+    calmFor = 0;
+    return;
+  }
+  grace = false;
   if (fps > 0 && fps < 26) {
     goodFor = 0;
+    calmFor = 0;
     slowFor++;
     if (slowFor > 2) {
       for (const lever of LEVERS) {
@@ -212,6 +270,12 @@ export function governPerformance(fps) {
     }
   } else if (fps > 52) {
     slowFor = 0;
+    calmFor++;
+    if (!calmReached && calmFor > 4) {
+      calmReached = true;
+      if (history.length < 60) history.push(`✓ calm @${Math.round(performance.now() / 1000)}s`);
+      while (calmWaiters.length) calmWaiters.shift()();
+    }
     goodFor++;
     if (goodFor > 4) {
       // unwind back-to-front: pixels return before the meadow regrows
@@ -224,15 +288,17 @@ export function governPerformance(fps) {
       }
     }
   } else {
-    // the dead band: neither slow nor provably smooth — both counters
+    // the dead band: neither slow nor provably smooth — all counters
     // re-earn their streaks
     slowFor = 0;
     goodFor = 0;
+    calmFor = 0;
   }
 }
 
 export const governorDebug = () => ({
   pixelRatio, slowFor, goodFor,
+  grace, calmFor, calm: calmReached,
   casterBudget: getCasterBudget(), slotCap: getSlotCap(),
   emitters: emitterQuality(), grass: getGrassDensity(),
   detailShed: shedDetail, history: [...history],

@@ -47,7 +47,7 @@ import { initPhysObj, tickPhysObj, leaseApi } from './lib/physobj.js';
 import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { protoStats } from './lib/assets.js';
-import { governPerformance, governorDebug } from './lib/governor.js';
+import { governPerformance, governorDebug, whenCalm } from './lib/governor.js';
 import { registerSystem, startFrame, frameDebug } from './lib/frame.js';
 import { perf } from './lib/perf.js';
 import { paintHud } from './lib/hud.js';
@@ -179,9 +179,11 @@ function start() {
         setMe(av);
         markPhase('body', 1);
         // Contribute a portrait of this body so the next person picks from
-        // faces instead of filenames. Deferred — it costs an offscreen render,
-        // and the first seconds belong to getting the person into the world.
-        setTimeout(() => contributeThumbnail(getMyAvatarName(), av.vrm, CONFIG.token), 4000);
+        // faces instead of filenames. Deferred behind the governor's calm
+        // signal — it costs an offscreen render-target compile burst, and the
+        // old t+4s wall clock dropped that into the middle of the boot storm
+        // (§16.1g). Calm = 5 smooth seconds with no load work in flight.
+        whenCalm().then(() => contributeThumbnail(getMyAvatarName(), av.vrm, CONFIG.token));
       })
       .catch((e) => { markPhase('body', 1); report('avatar', e); });
   }

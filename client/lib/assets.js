@@ -152,6 +152,19 @@ function makeLoader(vrm = false) {
 // GPU texture creation + upload otherwise happens inside the first compile or
 // render that binds each texture — batched into one frame. Walking the object
 // and uploading a budget-slice per frame moves that cost off the stall.
+//
+// Coverage (§16.1c, investigated 8d): the Object.values(m) walk sees every own
+// enumerable property, and that IS where the model/body texture set lives —
+// three's material classes and MToonNodeMaterial (vendored 3.5.2) assign
+// every map in their constructors (map, normalMap, emissiveMap,
+// shadeMultiplyTexture, shadingShiftTexture, rimMultiplyTexture,
+// matcapTexture, outlineWidthMultiplyTexture, uvAnimationMaskTexture — all
+// plain `this.X = …`), and their TSL graphs reference those PROPERTIES via
+// materialReference, so no MToon texture lives only inside a node. The one
+// node-graph-only texture in the client is the factory's shared cloud
+// noiseTex (a TSL texture(...) node holds it as node.value inside every PBR
+// wrap's colorNode) — primed once at factory init (materials.js), not
+// collected here. No graph walk needed; nothing unbounded.
 function collectTextures(obj) {
   const seen = new Set();
   const out = [];
@@ -165,10 +178,37 @@ function collectTextures(obj) {
   });
   return out;
 }
+// Bytes-per-frame budget for uploads. work.tick's CPU-ms budget alone let
+// several 4K textures land in one tick window: renderer.initTexture returns
+// in microseconds while the GPU process swallows upload + mipgen — measured
+// 59-112MB single-frame spikes, 75-141ms hitches at t≈1.4-2s (bootjank
+// worst-15, §16.1g). Estimate what each upload will cost and take a REAL
+// frame once a frame's budget is spent.
+const TEX_FRAME_BYTES = 16 * 1024 * 1024;
+function textureUploadBytes(t) {
+  const img = t.image;
+  const w = img?.width ?? 0, h = img?.height ?? 0;
+  if (!w || !h) return 4 * 1024 * 1024;   // dimensionless (data/undecoded):
+                                          // charge something so a run of
+                                          // unknowns still spreads
+  return w * h * 4 * (t.generateMipmaps === false ? 1 : 1.33);
+}
 async function primeTextures(obj, work) {
+  let spent = 0;
   for (const t of collectTextures(obj)) {
+    const est = textureUploadBytes(t);
+    // budget check BEFORE the upload; the `spent > 0` guard means one
+    // oversized texture (a 4K map alone is ~89MB) still uploads — the
+    // budget spreads, never skips — just alone in its own frame
+    if (spent > 0 && spent + est > TEX_FRAME_BYTES) {
+      await work.yield();
+      spent = 0;
+    }
     try { renderer.initTexture(t); } catch { /* first bind will get it */ }
-    await work.tick();
+    spent += est;
+    await work.tick();   // the CPU-ms budget stays — decode-side cost is real
+                         // too (a tick yield without a byte reset only makes
+                         // the spread MORE generous, never less)
   }
 }
 

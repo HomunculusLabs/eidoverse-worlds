@@ -39,7 +39,7 @@
 // cloud field, so two people standing together watch the same shadow cross
 // the same meadow.
 
-import { THREE, TSL, sun, ground } from './core.js';
+import { THREE, TSL, sun, ground, renderer } from './core.js';
 import { state } from './state.js';
 import { effectiveSky } from '../../shared/forecast.js';
 
@@ -122,6 +122,12 @@ function makeCloudNoise(size = 256) {
 }
 
 const noiseTex = makeCloudNoise();
+// Primed ONCE at factory init (§16.1c): this texture rides INSIDE every PBR
+// wrap's colorNode subtree (a TSL texture(...) node holds it as node.value),
+// where assets.js collectTextures' Object.values walk can never see it — so
+// every wrapped material's first compile used to meet it cold. core.js
+// top-level-awaits renderer.init(), so the device exists here.
+try { renderer.initTexture(noiseTex); } catch { /* first bind will get it */ }
 // world-meters per texture tile, two octaves at different scales/speeds so
 // the field boils instead of sliding as one rigid sheet
 const CLOUD_SCALE1 = 1 / 420;

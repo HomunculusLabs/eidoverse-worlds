@@ -390,6 +390,31 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — 8d LANDED: the storm's edges are calm.** (1) Governor
+  loading grace: while warm-conductor items are queued/running, loadwork
+  lanes busy, or promote tails pending, BOTH lever directions freeze and
+  every streak counter resets — storm fps is loading, not a performance
+  regime; EW.governor() carries grace/calmFor/calm + one "⏸ grace held"
+  history line per spell. (2) whenCalm(): 5 consecutive smooth seconds
+  (the restore ladder's own >52fps 1Hz read) with the busy predicate
+  false, on its OWN counter (goodFor is consumed by every restore),
+  sticky once latched. The thumbnail contribution and the speculative
+  prefetch stream (roster VRMs — measured 45MB racing the storm at
+  t≈5s) both ride it now; demand loads never touched prefetch and its
+  'demand' abort preemption is intact. Policy note (flagged by the
+  agent): a machine permanently in the 26-52fps dead band never latches
+  calm, so those extras never start there — no wall-clock fallback, by
+  design, revisit if it bites. (3) primeTextures spends a ~16MB
+  estimated-bytes budget per frame (w×h×4×1.33; one oversized texture
+  still uploads, alone in its frame) — single-frame tex uploads fell
+  from 59-112MB to ≤34MB, hitches 75-141→41-100ms. The factory's shared
+  noiseTex is primed once at module init (it rides colorNode graphs,
+  invisible to Object.values); MToon was investigated and is NOT a gap
+  (every map is an own constructor property read via materialReference —
+  documented at collectTextures). Gate: grass-quality 57/57, bootjank
+  (max frame 358ms — the residue is one 298ms GLTF-parse longtask,
+  worker-parse is the recorded deferred tail), --wide PASS, lightbench
+  19/19, paritybench PASS.
 - **2026-08-10 — 8c LANDED: the join gate works, promotes drip, colliders
   share.** (1) createModel gates on POSITION unconditionally —
   residencyRadius falls back to DIAG_DEFAULT=12 (gate at 128m) until geom

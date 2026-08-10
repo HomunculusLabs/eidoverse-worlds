@@ -23,6 +23,7 @@
 
 import { bus, CONFIG, report } from './core.js';
 import { whenBooted } from './boot.js';
+import { whenCalm } from './governor.js';
 import { demandState, listLibrary } from './assets.js';
 
 const QUIET_MS = 1500;      // demand-free time required before (re)taking the wire
@@ -115,6 +116,13 @@ export async function startPrefetch() {
   if (CONFIG.params.get('prefetch') === '0') return;  // escape hatch
   if (navigator.connection?.saveData) return;         // respect data saver
   await whenBooted();
+  // The storm's edge (§16.2.D): the roster pull used to start ~5s in — 45MB
+  // of speculative VRMs racing the boot storm's own compiles. Calm is the
+  // governor's word: 5 smooth seconds with no load work in flight. This
+  // gates only the SPECULATIVE stream — anything the world actually needs
+  // goes through fetchBytes directly and never waited on prefetch, and the
+  // 'demand' abort below still preempts us the instant a real load starts.
+  await whenCalm();
   await quietWindow(); // let the join's own warm-fetches drain first
   const queue = await buildQueue().catch((e) => { report('prefetch', e); return []; });
   if (!queue.length) return;

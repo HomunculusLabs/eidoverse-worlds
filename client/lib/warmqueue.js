@@ -74,7 +74,10 @@ async function pump() {
   running = false;
 }
 
-export const warmStats = () => ({ ...stats, pending: queue.length });
+// `pending` counts queued items only — the item currently being warmed has
+// been shifted off the queue, so `running` is part of the honest busy answer
+// (the governor's loading grace reads both, §16.2.D).
+export const warmStats = () => ({ ...stats, pending: queue.length, running });
 
 // ---- shadow-depth pre-warm --------------------------------------------------
 // The shadow-depth pass was the one pipeline family NOTHING warmed: every

@@ -163,6 +163,13 @@ function pumpLane(l) {
     })();
   }
 }
+/** Whether any lane holds running or queued work — the same truth checkIdle()
+ *  gates on, exposed as a predicate for the governor's loading grace
+ *  (§16.2.D): storm fps under live lane work is loading, not a performance
+ *  regime. */
+export const laneBusy = () => Boolean(
+  lanes.cpu.running || lanes.gpu.running
+  || lanes.cpu.jobs.length || lanes.gpu.jobs.length);
 // 'lanes-idle' fires when every queued load has finished. (Its one historic
 // consumer — the deferred shadow drain — is gone; the event stays as the
 // generic "all loadwork settled" signal.)

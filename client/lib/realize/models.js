@@ -349,6 +349,11 @@ function runPromoteTail(id, obj) {
   for (const mid of mountsTouching(state.st.entities, id, foldChildren)) execMount(mid);
 }
 
+/** Realized objects still owing their heavy tail — the governor's loading
+ *  grace (§16.2.D) counts these: fps dips while boulders are still landing
+ *  are loading, not a performance regime. */
+export const promoteTailPending = () => promoteTail.size;
+
 /** Drain within ~4ms, at least one item per frame — registered as the
  *  'promote-tail' system (main.js, near 'build'). */
 export function drainPromoteTail() {
