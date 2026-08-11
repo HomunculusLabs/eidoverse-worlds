@@ -390,6 +390,31 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22b: the sticky-35fps ratchet was the SKY, and it's
+  fixed.** tel0s's repro named the sky pane's quality knob — and the
+  §18 extraction's "setCloudQuality has no caller anywhere" was
+  defeated by the recorded build.js NUL-byte footgun (ripgrep skipped
+  the one file with the caller, build.js:1089). The chain: every
+  quality flip forces a full sky rebuild, and teardownSky could never
+  reach the engine's dispose() (not on the api) — so each flip leaked
+  the ~64MB _envTarget, the bake target, and the noise/weather
+  textures. PROVEN by probe (scratchpad skyq-probe): pre-fix textures
+  69→73→74→77 and renderTargets 7→9→9→11 across two flips, monotonic;
+  post-fix perfectly periodic (69↔68, 7↔6) AND 96MB less resident at
+  the baked tier (the first rebuild now frees boot leftovers too). The
+  fix: teardownSky calls skyInner.dispose() via the §18b _internals
+  ref (cloudShadowRoots is empty in this client — the factory marks
+  everything noCloudShadow — so its unwrap loop is a no-op, no
+  recompiles). EW.setCloudQuality exposed for diagnosis. The DROP to
+  35 at 'high' is honest cost, not a bug: high is the LIVE volumetric
+  march every frame (baked tiers re-bake per 9s) — beyond a fanless
+  Air's budget by design; tel0s's "clouds are extremely unoptimized"
+  is this tier + weather states, a future arc (upstream graph-caching
+  asks are the real fix). Gate: lightbench 30/30, paritybench PASS.
+  BENCH NOTE: bootjank baselines SHIFTED tonight — tel0s planted a
+  lush meadow (density 1.4, 153k instances) in the real commons,
+  which bootjank faithfully replays; p95/p99 comparisons against
+  pre-planting runs are apples-to-oranges now.
 - **2026-08-10 — §22: grassdiag — the meadow's GPU cost, attributed by
   difference.** tel0s suspects grass PHYSICS (the shader pushers) over
   fill on the MacBook's 50fps. The costs are GPU-side and invisible to
