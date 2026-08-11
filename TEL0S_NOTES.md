@@ -390,6 +390,26 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22p (branch): the 34ms mystery dies twice.** Verdict
+  in two parts, both measured. (1) tel0s's recurring worst=34 is VSYNC
+  QUANTIZATION: on a 60Hz panel a frame either makes the slot (16.7ms)
+  or waits for the next (33.3ms), so EVERY sub-60 second must contain
+  doubled frames — worst=34 in a 41fps phase is arithmetic, not a
+  hitch, and their distribution is actually TIGHT (worst never exceeded
+  2×vsync). The density-35% row proves it exactly: 58fps = 56 single +
+  2 doubled frames. (2) Underneath, a REAL ~1-per-10s GPU spike
+  (42-45ms, zero longtasks, zero heap movement — main thread clean)
+  matches the sky baked-tier re-bake cadence (9-12s); it hides inside
+  vsync headroom when the frame is light and surfaces sub-60. Already
+  on the clouds arc's books. THE FIX: perf gains doubled/spikes
+  per-second counters (frame.js window classification: >25ms = waited
+  one vsync, >40ms = beyond any pacing explanation); grassDiag prints
+  2×/s and spk/s per phase with the legend "doubled is EXPECTED
+  sub-60". Smoked: doubled/s tracks the fps deficit arithmetically,
+  both columns zero at 61fps. The worst-alone metric can never send
+  us ghost-hunting again. Gate: parity PASS, lightbench 30/30,
+  bootjank clean.
+
 - **2026-08-11 — §22o (branch): the MSAA policy lands + the tile trim.**
   tel0s confirmed MSAA's 5-10 frame cost by eye, and their full diag
   attributed the whole remaining gap to grass (hidden 61 vs baseline

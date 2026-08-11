@@ -38,15 +38,23 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function sample(secs) {
   await sleep(1200);                       // settle: one full pulse past the toggle
   const fps = [], ms = [], worst = [];
+  let doubled = 0, spikes = 0;
   for (let i = 0; i < Math.max(2, secs - 1); i++) {
     await sleep(1000);
     fps.push(perf.fps); ms.push(perf.ms); worst.push(perf.worst);
+    doubled += perf.doubled ?? 0; spikes += perf.spikes ?? 0;
   }
   fps.sort((a, b) => a - b); ms.sort((a, b) => a - b);
+  const n = Math.max(2, secs - 1);
   return {
     fps: fps[Math.floor(fps.length / 2)],
     ms: +ms[Math.floor(ms.length / 2)].toFixed(1),
     worst: Math.round(Math.max(...worst)),
+    // §22p: pacing vs stutter, separated. doubled/s is EXPECTED to be
+    // nonzero whenever fps < refresh (vsync arithmetic); spikes/s > 0 is
+    // the only line that means a real hitch.
+    doubledPerSec: +(doubled / n).toFixed(1),
+    spikesPerSec: +(spikes / n).toFixed(1),
   };
 }
 
@@ -131,9 +139,10 @@ export async function grassDiag({ secsPer = 4 } = {}) {
   }
   const base = out[0];
   console.log('grass diag — recovery vs baseline names the dominant cost');
+  console.log('  (2×/s = vsync-doubled frames, EXPECTED sub-60; spk/s = real >40ms hitches)');
   for (const r of out) {
     const d = r === base ? '' : `  Δ ${r.fps - base.fps >= 0 ? '+' : ''}${r.fps - base.fps}fps ${(r.ms - base.ms).toFixed(1)}ms`;
-    console.log(`  ${r.phase.padEnd(28)} ${String(r.fps).padStart(4)}fps ${String(r.ms).padStart(6)}ms  worst ${String(r.worst).padStart(4)}ms${d}`);
+    console.log(`  ${r.phase.padEnd(28)} ${String(r.fps).padStart(4)}fps ${String(r.ms).padStart(6)}ms  2× ${String(r.doubledPerSec).padStart(4)}/s spk ${String(r.spikesPerSec).padStart(3)}/s${d}`);
   }
   return out;
 }
