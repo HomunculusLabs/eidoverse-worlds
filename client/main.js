@@ -44,9 +44,6 @@ import { dragSim, updateBodyDrag, dragState } from './lib/bodydrag.js';
 import { initChat, logChat } from './lib/chat.js';
 import { bodyEngine, setBodyEngine, listBodyEngines } from './lib/bodysim.js';
 import { initPhysObj, tickPhysObj, leaseApi } from './lib/physobj.js';
-import { initBodyDrag, updateBodyDrag, beingDragged, revokeDragged, dragState } from './lib/bodydrag.js';
-import { initPhysObj, tickPhysObj, kick, leaseApi } from './lib/physobj.js';
->>>>>>> origin/main
 import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { protoStats } from './lib/assets.js';
