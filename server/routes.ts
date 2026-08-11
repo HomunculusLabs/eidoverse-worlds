@@ -135,7 +135,7 @@ function serveFrom(base: string, rel: string, cache = false, req?: Request, immu
   // because their float animation tracks and mesh data are stored raw. Seven
   // clips at ~1.9MB each was the second-largest slice of a cold boot; half of
   // it was air.
-  if (/\.(m?js|json|css|html|vrma|vrm)$/.test(path) && req?.headers.get("accept-encoding")?.includes("gzip") && f.size > 10_000) {
+  if (/\.(m?js|json|css|html|vrma|vrm|wasm)$/.test(path) && req?.headers.get("accept-encoding")?.includes("gzip") && f.size > 10_000) {
     let entry = gzCache.get(path);
     if (!entry || entry.mtime !== f.lastModified) {
       entry = { mtime: f.lastModified, gz: Bun.gzipSync(new Uint8Array(require("node:fs").readFileSync(path))) };

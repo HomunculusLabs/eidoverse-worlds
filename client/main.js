@@ -42,8 +42,11 @@ import {
 import { initDebug, updateDebug, toggleDebug } from './lib/debug.js';
 import { dragSim, updateBodyDrag, dragState } from './lib/bodydrag.js';
 import { initChat, logChat } from './lib/chat.js';
-import { bodyEngine, setBodyEngine } from './lib/bodysim.js';
+import { bodyEngine, setBodyEngine, listBodyEngines } from './lib/bodysim.js';
 import { initPhysObj, tickPhysObj, leaseApi } from './lib/physobj.js';
+import { initBodyDrag, updateBodyDrag, beingDragged, revokeDragged, dragState } from './lib/bodydrag.js';
+import { initPhysObj, tickPhysObj, kick, leaseApi } from './lib/physobj.js';
+>>>>>>> origin/main
 import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { protoStats } from './lib/assets.js';
@@ -380,7 +383,7 @@ globalThis.EW = {
   setPushable, get pushable() { return pushable(); }, dragState,
   lease: leaseApi,   // the entity-lease surface runtime plugins script against
   mods: modsApi,     // load/run/offer runtime client scripts (🧩)
-  bodysim: { engine: bodyEngine, setEngine: setBodyEngine },  // swappable body physics
+  bodysim: { engine: bodyEngine, setEngine: setBodyEngine, list: listBodyEngines },  // swappable body physics
   foldParity,        // shadow-mode drift probe (TEL0S_NOTES §11.6)
   reconcileModels,   // force a full realizer pass (idempotent — §11.4)
   materials: materialsDebug,   // factory counters + live weather uniforms (§12.3)
