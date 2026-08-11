@@ -604,6 +604,14 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       });
       // named so an applied-truth report (#74) can identify the stroke
       f.strokeLabel = `${fields.length}:${st.species ?? 'grass'}`;
+      // §22m: report the material generation the stroke ACTUALLY built —
+      // read from the material, never from the options (the palette
+      // sampler can fall back silently, and three screenshot rounds once
+      // compared cards to cards because nothing surfaced that)
+      f.grassMode = !isBladeSpecies ? 'n/a'
+        : f.material?.alphaTest === 0 ? 'opaque'
+        : f.material?.type === 'MeshSSSNodeMaterial' ? 'cards-sss' : 'cards-fast';
+      if (isBladeSpecies) console.log(`[flora] ${f.strokeLabel} blades mode: ${f.grassMode}`);
       wireDensityDial(f);
       mask.wire(f.material);
       // big blade/corn strokes tile (per-tile culling + distance density);

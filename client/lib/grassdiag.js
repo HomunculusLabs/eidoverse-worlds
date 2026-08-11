@@ -26,9 +26,11 @@
 // no-grass fps names the dominant cost.
 
 import { perf } from './perf.js';
-import { renderer } from './core.js';
+import { renderer, THREE } from './core.js';
 import { freezePushers, forceBladeLod, setDiagDensityScope } from './flora.js';
-import { getGrassField, getGrassDensity } from './terrain.js';
+import { getGrassField, getGrassDensity, getTerrainMesh, grassTiles } from './terrain.js';
+import { skyOwnedObjects } from './sky.js';
+import { governorDebug } from './governor.js';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -61,8 +63,38 @@ export async function grassDiag({ secsPer = 4 } = {}) {
     out.push({ phase: name, ...(await sample(secsPer)) });
     off();
   };
+  // §22m: the diag stopped assuming grass owns the frame. Header prints the
+  // regime (pixel ratio, buffer size, render-scale dial, per-stroke material
+  // generation), and scene-level phases attribute the NON-grass draw too —
+  // "grass hidden barely helps" is an answer, not a dead end.
+  const g = governorDebug();
+  const size = renderer.getDrawingBufferSize?.(new THREE.Vector2()) ?? null;
+  const strokes = grassTiles().strokes;
+  console.log(`grassdiag regime: pr ${g.pixelRatio} scale⚙ ${g.renderScale}` +
+    (size ? ` buffer ${size.x}×${size.y}` : ''));
+  for (const s of strokes) console.log(`  stroke ${s.stroke}: mode ${s.mode}, drawn ${s.drawn}/${s.planted}`);
+  const skyObjs = skyOwnedObjects();
+  const skyVis = skyObjs.map((o) => o.visible);
+  const terrain = getTerrainMesh();
   try {
     out.push({ phase: 'baseline', ...(await sample(secsPer)) });
+    if (skyObjs.length) {
+      await run('sky hidden', () => skyObjs.forEach((o) => { o.visible = false; }),
+        () => skyObjs.forEach((o, i) => { o.visible = skyVis[i]; }));
+    }
+    if (terrain) {
+      await run('terrain hidden', () => { terrain.visible = false; },
+        () => { terrain.visible = true; });
+    }
+    // per-stroke isolation: with several strokes, name WHICH one bills
+    const live = getGrassField()?._strokes ?? [];
+    if (live.length > 1) {
+      for (const f of live) {
+        if (!f.mesh) continue;
+        await run(`stroke ${f.strokeLabel ?? '?'} hidden (${f.grassMode ?? '?'})`,
+          () => { f.mesh.visible = false; }, () => { f.mesh.visible = true; });
+      }
+    }
     await run('pushers off', () => freezePushers(true), () => freezePushers(false));
     if (savedAutos) {
       await run('autos off (wind+billboards)', () => { autos.length = 0; },
@@ -84,6 +116,9 @@ export async function grassDiag({ secsPer = 4 } = {}) {
       () => { field.mesh.visible = true; });
   } finally {
     // belt & braces — a throw mid-phase must not leave the world frozen
+    skyObjs.forEach((o, i) => { o.visible = skyVis[i]; });
+    if (terrain) terrain.visible = true;
+    for (const f of getGrassField()?._strokes ?? []) if (f.mesh) f.mesh.visible = true;
     freezePushers(false);
     forceBladeLod(null);
     setDiagDensityScope(null);

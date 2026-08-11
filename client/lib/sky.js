@@ -56,6 +56,9 @@ let currentWorld = null;
 
 export const skyArgs = () => clock?.args ?? {};
 export const skyImpl = () => impl;
+/** §22m diag: the sky-owned scene roots, for cost-attribution phases that
+ *  hide the sky's DRAW without touching its state. Read-only. */
+export const skyOwnedObjects = () => skyOwned ?? [];
 /** 0 at night → 1 at noon. Lamps and other night-aware things read this. */
 export let dayness = 1;
 
