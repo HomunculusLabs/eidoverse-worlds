@@ -390,6 +390,34 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — UPSTREAM MERGE: six commits from anima-research/main
+  (c2c51d8..0775b93), cherry-picked -x in order.** Clean: incident-88
+  door hardening (+3 suites), modclose 4006-through-close(), both
+  voice fixes (mic-track timing classes; the one-AudioContext leak,
+  +audioctx.js). Translated: HN_AUD env knob → server/auth.ts (the
+  block moved in 7a); the motioneval extraction — upstream pulled the
+  motion closed-forms into DOM-free motioneval.js for the agent's
+  text-tier perception (their flora_lod-style move), adopted whole
+  with our two deltas re-applied (the 90m camera gate, the
+  pendulumImpulse mirror comment now pointing at server/reactions.ts);
+  mcpl/agent.ts kept OUR shared-fold stateToEntries delegation (theirs
+  is a drifted local copy) + their new effective.ts import. Local
+  portability patches to their new suites: process.execPath-never-
+  "bun" (the Windows shim footgun) in incident-88-door-test +
+  modclose, EIDOVERSE_DIR house default in modclose. Gate: motioneval,
+  audioctx 7/7, incident-88 20/20 + edge 10/10, modclose PASS,
+  servergate smoke/authtest/behaviortest 3/3, paritybench, lightbench
+  30/30, bootjank A/B-verified vs a pre-merge worktree (the slower
+  sky compile this evening is environmental — identical pre-merge).
+  KNOWN INHERITED: voice-lifecycle 93/95 — the 2 failing checks fail
+  IDENTICALLY on pristine upstream/main (their documented-open
+  double-offer answer loss, "main loses the second at setLocal");
+  candidate for us to fix under the standing upstream-redo permission.
+  KNOWN LOCAL: incident-88-door-test still times out on Windows after
+  the spawn fix (its fixed-port mcpl boot; sibling coverage green) —
+  flagged, not chased. mcpl/bun.lock is TRACKED (old upstream commit)
+  — do not delete it; the footgun is running bun INSTALLS in mcpl,
+  not the lockfile.
 - **2026-08-10 — MacBook CONFIRMATION (tel0s's own --heavyjoin trace)
   closes the §19 arc.** First wear of the 21MB body: parse 68ms,
   textures 352ms over 24 frames; ZERO frames >25ms after t=14.9s
