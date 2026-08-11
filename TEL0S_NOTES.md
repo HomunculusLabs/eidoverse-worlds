@@ -390,6 +390,44 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — §20a+20b LANDED: KTX2, server arm + client loader.**
+  optimize.ts --ktx2 (diet minus webp, plus per-texture toktx/ktx —
+  probed KTX2_TOKTX→toktx→ktx, exit 3 = no-encoder = env-skip; UASTC+
+  RDO+zstd for non-color slots, ETC1S q128 for baseColor/emissive,
+  --genmipmap; not-smaller gate 1.25× vs SOURCE for ktx2 mode);
+  upload.ts library sweep (boot-deferred, recursive over
+  eidoverse/assets/models/**.glb, path-preserving OPT_DIR/<rel>.ktx2.glb
+  dests through the same serial pump; VRMs excluded per doctrine);
+  routes.ts negotiated serving (?ktx2=1 + .glb + variant-exists, else
+  byte-identical originals — agents/tools never see extensionsRequired
+  they can't parse) + .ktx2/.wasm content types. Client: one KTX2Loader
+  singleton beside draco (vendored basis transcoder path, detectSupport
+  post-TLA-init), setKTX2Loader in makeLoader (all three parse sites),
+  globalThis.KTX2Loader for toolkit modules, ?ktx2=1 appended to .glb
+  library fetches when workerConfig exists, textureUploadBytes
+  compressed branch (mip-byte sum). MEASURED: the commons five
+  transcode 1.8-4.2× (CRT 39.3→9.5MB); negotiation curl-verified
+  (6.7MB unflagged / 3.6MB flagged); bootjank shows the client
+  self-negotiating (?ktx2=1 URLs + basis_transcoder.wasm fetch) and
+  per-GLB texture phases COLLAPSED — CRT textures 10ms (the Mac paid
+  1221ms for the raw original). Encoder for this box: a portable
+  toktx v4.4.2 (7z-extracted NSIS, scratchpad, no install); prod Mac:
+  brew install ktx. Gate: 5/5 transcodes + ktx2check, lightbench 30/30
+  (the cloud-easing check now samples up to 5 rAF pairs — a loaded
+  headless box batches rAF callbacks and a single pair can read dt=0),
+  paritybench PASS (variants realized live in bootjank's browser).
+  FINDINGS: JPEG-textured models can exceed the 1.25× gate (UASTC 8bpp
+  floor vs JPEG source — crow 2.9→6.0MB, honest .failed, originals
+  served; threshold/resize is tel0s's call); pristine optimize.ts has
+  NEVER run on this Windows box (ndarray-pixels' nested sharp 0.35
+  clashes with root sharp 0.33 — the ktx2 arm sidesteps it by feeding
+  toktx PNG/JPEG directly, sharp best-effort only); collider-survey's
+  single-file mode crashes on ORIGINALS too (empty-stats guard missing
+  — pre-existing, noted not fixed); ~0.7s of the sky-bake stall tail
+  can leak past the curtain (residual queue drain after whenBakeReady
+  resolves — minor, watch it). REMAINING: 20c VRMs (surgical container
+  rewrite), 20d loose toolkit PNGs (the last big tex-upload chunk:
+  veg 92.5MB + the 4K sky sources).
 - **2026-08-10 — UPSTREAM MERGE: six commits from anima-research/main
   (c2c51d8..0775b93), cherry-picked -x in order.** Clean: incident-88
   door hardening (+3 suites), modclose 4006-through-close(), both
@@ -2096,6 +2134,67 @@ Headless Edge renders at 120Hz (p50 8.3ms is a real vsync). The
 enabled} — a burst never shows in it; the GPU hooks are the honest
 witness. Buffer-upload total (888MB/40s) is dominated by steady-state
 per-object UBO writes — not a boot problem, ignore it in reports.
+
+## 20. KTX2 — the texture bill, paid in the right currency
+
+The MacBook trace's mandate (§10): 1.0-1.2s/GLB of createImageBitmap
+decode and 1.07GB of raw RGBA uploads, both collapsing 4-8× with
+GPU-native compressed textures. Grounded by a full extraction of the opt
+pipeline, serving precedence, vendored KTX2Loader/WebGPU paths, and the
+encoder gap (task record 2026-08-10).
+
+### 20.1 The shape
+
+**Encoder** (the one hard gap): KTX-Software's toktx/ktx CLI, probed
+KTX2_TOKTX env → toktx → ktx on PATH; absent = optimize exit code 3 =
+env-skip, never a .failed marker (the sharp-degrade pattern,
+optimize.ts:50-59). Prod Mac: `brew install ktx`. Dev box: a portable
+extraction (7z on the NSIS installer) pointed at by env — no install.
+
+**Server (20a)**: optimize.ts gains a --ktx2 mode: full existing diet
+(dedup/prune/resample/draco — skip the webp stage) + per-texture toktx:
+UASTC+zstd for normal/ORM/packed slots (MToon samples .r/.b scalars —
+ETC1S block noise reads as data corruption there), ETC1S for
+baseColor/emissive, --genmipmap. KHR_texture_basisu is already in
+ALL_EXTENSIONS. A recursive library sweep (boot-deferred, serial, like
+the store sweep at upload.ts:69-77 but path-preserving — the store arm's
+basename() collides for library rels) writes OPT_DIR/<rel>.ktx2.glb for
+eidoverse/assets/models/**.glb. VRMs excluded (doctrine at
+optimize.ts:19-21 + gltf-transform drops VRM extensions — the surgical
+container rewrite is 20c).
+
+**Serving**: NEGOTIATED, not shadowed — OPT_DIR already wins
+unconditionally (routes.ts:505-506), but agents/tools parse library GLBs
+with no KTX2 decode, and KHR_texture_basisu lands in extensionsRequired
+(old parsers THROW, GLTFLoader.js:1476). So the variant serves ONLY on
+`?ktx2=1` + variant-exists, else the original — one small branch in the
+/library route, distinct URL = clean nginx cache entry. contentType
+gains .ktx2 (20d's loose files will need it anyway).
+
+**Client (20b)**: one KTX2Loader singleton beside the draco one
+(assets.js:141) — transcoder path
+/node_modules/three/examples/jsm/libs/basis/ (vendored, served via
+routes.ts:511-513), detectSupport(renderer) at module scope (core.js:100
+top-level-awaits init, so ordering is free); setKTX2Loader in makeLoader
+(covers all three parse sites) + globalThis.KTX2Loader beside the
+GLTFLoader export for toolkit modules. loadGLB appends ?ktx2=1 to
+/library .glb fetches once workerConfig exists. textureUploadBytes gains
+the compressed branch (sum of mipmap byteLengths — the w*h*4 estimate
+over-charges BC7 4× and re-wastes the §17a budget win).
+
+**20c (later)**: VRMs via container-level rewrite (images/textures/
+extensionsUsed patched, VRM JSON untouched byte-for-byte otherwise);
+the VRM meta thumbnail (_extractGLTFImage → <img>) is the one raw-bytes
+reader — needThumbnailImage defaults false, stays false. **20d
+(later)**: loose toolkit PNGs (.ktx2 siblings + the loadImageTexture
+branch + the baked-flipY contract handled at encode time).
+
+### 20.2 Gate
+Transcode the five commons libs with the portable encoder; assert:
+variant served with flag / original without (curl); bootjank commons —
+texture-upload total and per-GLB decode phases collapse; lightbench,
+paritybench; collider-survey still parses a transcoded GLB
+(gltf-transform reads the container without decoding pixels).
 
 ## 17. The meadow's draw bill, part 2 — vegetation LOD + the last hitches
 

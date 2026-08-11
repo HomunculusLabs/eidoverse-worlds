@@ -305,13 +305,27 @@ check("factory: rain wet target derived from folded state", Math.abs((m1?.target
   `target.wet=${m1?.target?.wet}`);
 check("factory: rain cover target derived from folded state", Math.abs((m1?.target?.cover ?? 0) - 0.9) < 1e-6,
   `target.cover=${m1?.target?.cover}`);
-const ease = await evalJson(`new Promise((res) => {
-  const a = EW.materials(); let done = false;
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    done = true; res({ a, b: EW.materials() });
-  }));
-  setTimeout(() => { if (!done) res(null); }, 10000);
-})`);
+// One rAF pair can sample dt=0 on a loaded headless box (two callbacks in
+// one batch → the eased value hasn't moved), which mis-reads the per-frame
+// contract as a failure. Sample up to 5 pairs and accept the first that
+// MOVED — the contract is "eases frame-over-frame", not "eases across the
+// specific pair we happened to catch".
+const ease = await evalJson(`(async () => {
+  const pair = () => new Promise((res) => {
+    const a = EW.materials(); let done = false;
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      done = true; res({ a, b: EW.materials() });
+    }));
+    setTimeout(() => { if (!done) res(null); }, 10000);
+  });
+  let last = null;
+  for (let i = 0; i < 5; i++) {
+    last = await pair();
+    if (!last) return null;
+    if (last.b.wet > last.a.wet && last.b.cover > last.a.cover) return last;
+  }
+  return last;
+})()`);
 if (ease) {
   check("factory: ground wets frame-over-frame", ease.b.wet > ease.a.wet && ease.b.wet > 0.01,
     `wet ${ease.a.wet} → ${ease.b.wet}`);

@@ -11,6 +11,7 @@
 import { THREE, renderer, camera, scene, report, bus } from './core.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { KTX2Loader } from 'three/addons/loaders/KTX2Loader.js';
 import { VRMLoaderPlugin, VRMUtils } from '@pixiv/three-vrm';
 import { MToonMaterialLoaderPlugin } from '@pixiv/three-vrm-materials-mtoon';
 import { MToonNodeMaterial } from '@pixiv/three-vrm-materials-mtoon/nodes';
@@ -139,9 +140,18 @@ export async function fetchBytes(path) {
 // ---- loaders ----------------------------------------------------------------
 
 const draco = new DRACOLoader().setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
+// §20b: ONE KTX2 transcoder for every parse site (VRM, GLB, loadGLBBytes).
+// The transcoder is the vendored basis wasm, served by the /node_modules
+// route. detectSupport at module scope is ordering-safe: core.js top-level-
+// awaits renderer.init() (core.js:100) before this module evaluates, which
+// is exactly what the deprecated detectSupportAsync shim would re-await.
+const ktx2 = new KTX2Loader()
+  .setTranscoderPath('/node_modules/three/examples/jsm/libs/basis/')
+  .detectSupport(renderer);
 function makeLoader(vrm = false) {
   const l = new GLTFLoader();
   l.setDRACOLoader(draco);
+  l.setKTX2Loader(ktx2);
   if (vrm) {
     l.register((p) => new VRMLoaderPlugin(p, {
       mtoonMaterialPlugin: new MToonMaterialLoaderPlugin(p, { materialType: MToonNodeMaterial }),
@@ -190,6 +200,10 @@ const TEX_FRAME_BYTES = 16 * 1024 * 1024;
 function textureUploadBytes(t) {
   const img = t.image;
   const w = img?.width ?? 0, h = img?.height ?? 0;
+  // compressed (KTX2 → BC7/ASTC/ETC): the upload bill is the literal mip
+  // bytes — the raw-RGBA w*h*4 estimate below over-charges BC7 4× and
+  // squanders the per-frame budget the §17a spread runs on
+  if (t.isCompressedTexture) return t.mipmaps?.reduce((s, m) => s + (m.data?.byteLength ?? 0), 0) || (w * h);
   if (!w || !h) return 4 * 1024 * 1024;   // dimensionless (data/undecoded):
                                           // charge something so a run of
                                           // unknowns still spreads
@@ -431,7 +445,13 @@ export async function loadGLB(libPath) {
       const work = beginWork(`glb ${short}`);
       try {
         work.phase('download');
-        const buf = await fetchBytes(`/library/${libPath}`);
+        // §20: ask for the KTX2 variant only when the transcoder detected
+        // support (detectSupport stamps workerConfig) and only for bare .glb
+        // paths — the server answers with the variant when one exists, the
+        // original otherwise. The full URL keys byteCache, so variant and
+        // original are distinct entries, which is correct.
+        const flag = libPath.endsWith('.glb') && ktx2.workerConfig ? '?ktx2=1' : '';
+        const buf = await fetchBytes(`/library/${libPath}${flag}`);
         work.phase('queued');
         return await enqueue(async () => {
           work.phase('parse');
@@ -808,6 +828,10 @@ globalThis.loadImageTexture = async (bytes, opts = {}) => {
 // `globalThis.GLTFLoader is not a constructor` and fell back to the basic sky.
 globalThis.GLTFLoader = GLTFLoader;
 globalThis.DRACOLoader = DRACOLoader;
+// the configured SINGLETON, not the class: a toolkit module constructing its
+// own GLTFLoader attaches it via setKTX2Loader(globalThis.KTX2Loader) and
+// gets the transcoder path + detectSupport it could not redo itself
+globalThis.KTX2Loader = ktx2;
 
 /** GLB bytes → scene, for toolkit modules that load their own meshes. */
 globalThis.loadGLBBytes = async (bytes) => {

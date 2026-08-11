@@ -6,9 +6,9 @@
 // the deferred boot sweep that queues whatever accumulated while the server
 // was down. routes.ts delegates the endpoint here; nothing else changes hands.
 
-import { existsSync, mkdirSync, readFileSync, writeFileSync, renameSync, readdirSync } from "node:fs";
-import { join, basename } from "node:path";
-import { JOIN_TOKEN, UPLOAD_CAP, ROOT, OPT_DIR, STORE_MIN } from "./config.ts";
+import { existsSync, mkdirSync, readFileSync, writeFileSync, renameSync, readdirSync, statSync } from "node:fs";
+import { join, basename, dirname, relative } from "node:path";
+import { JOIN_TOKEN, UPLOAD_CAP, ROOT, OPT_DIR, STORE_MIN, LIBRARY_DIR } from "./config.ts";
 import { agentTokens, HN_ISSUER_KEY, HN_ISS, HN_AUD } from "./auth.ts";
 import { verifyToken } from "./aid1.ts";
 import { worlds } from "./world.ts";
@@ -24,41 +24,58 @@ const uploadWin = new Map<string, { t: number; n: number }>(); // per-IP upload 
 // store-min/, built by a SUBPROCESS — draco encoding is CPU-seconds of
 // synchronous wasm, and inside this process it would freeze pose relay for
 // every world. One file at a time; the sequencer never waits on it.
-const optQueue: string[] = [];
+type OptItem = { src: string; dest: string; mode?: "--ktx2" };
+const optQueue: OptItem[] = [];
 let optRunning = false;
+let ktx2Skip = false; // set when a --ktx2 run exits 3 (no encoder) — stop queuing variants this boot
 function queueOptimize(absPath: string) {
-  if (!optQueue.includes(absPath)) { optQueue.push(absPath); pumpOptimize(); }
+  if (!optQueue.some((q) => q.src === absPath && !q.mode)) {
+    optQueue.push({ src: absPath, dest: join(STORE_MIN, basename(absPath)) });
+    pumpOptimize();
+  }
 }
 async function pumpOptimize() {
   if (optRunning) return;
   optRunning = true;
   try {
     while (optQueue.length) {
-      const src = optQueue.shift()!;
-      const base = basename(src);                      // <hash>.glb
-      const dest = join(STORE_MIN, base);
-      const failed = join(STORE_MIN, `${base}.failed`);
-      if (!existsSync(src) || existsSync(dest) || existsSync(failed)) continue;
-      mkdirSync(STORE_MIN, { recursive: true });
+      const { src, dest, mode } = optQueue.shift()!;
+      const base = basename(src);                      // <hash>.glb / <model>.glb
+      const failed = `${dest}.failed`;
+      if (!existsSync(src) || existsSync(failed)) continue;
+      // Store shadows are content-addressed — existing means done forever.
+      // KTX2 variants shadow MUTABLE library files, so a variant older than
+      // its source rebuilds (the sweep filters too, but a file can change
+      // while its item waits behind slow encodes).
+      if (existsSync(dest) && (!mode || statSync(dest).mtimeMs > statSync(src).mtimeMs)) continue;
+      mkdirSync(dirname(dest), { recursive: true });
       // process.execPath = the running bun binary — PATH under systemd has no bun
-      const proc = Bun.spawn([process.execPath, "run", join(ROOT, "server", "optimize.ts"), src, dest],
+      const proc = Bun.spawn([process.execPath, "run", join(ROOT, "server", "optimize.ts"), ...(mode ? [mode] : []), src, dest],
         { stdout: "pipe", stderr: "pipe" });
       const code = await proc.exited;
       const err = (await new Response(proc.stderr).text()).trim();
       if (code === 0) {
         const ratio = (Bun.file(src).size / Math.max(1, Bun.file(dest).size)).toFixed(1);
-        console.log(`[store] optimized ${base} (${ratio}x)`);
+        console.log(mode ? `[ktx2] ${base} → ${basename(dest)} (${ratio}x)` : `[store] optimized ${base} (${ratio}x)`);
       } else if (code === 2) {
         // already lean — mark so the boot sweep stops re-measuring it
         writeFileSync(failed, "not-smaller");
-        console.log(`[store] ${base} already lean — serving original`);
+        console.log(mode ? `[ktx2] ${base} came out bigger — no variant` : `[store] ${base} already lean — serving original`);
+      } else if (code === 3 && mode) {
+        // No KTX2 encoder on this box — ENVIRONMENTAL, never a .failed marker
+        // (that would permanently skip every model authored before
+        // KTX-Software lands — the sharp-degrade doctrine). And no point
+        // grinding the rest of the sweep against the same missing binary.
+        console.log("[ktx2] no encoder — brew install ktx / set KTX2_TOKTX; variants skipped this boot");
+        ktx2Skip = true;
+        for (let i = optQueue.length - 1; i >= 0; i--) if (optQueue[i].mode) optQueue.splice(i, 1);
       } else {
         // Environmental failures (deps not installed yet) must NOT mark the
         // file — that would permanently skip every upload made before the
         // first successful `bun install`. Only content failures stick.
         const envFail = /cannot find module|cannot resolve|error: script not found/i.test(err);
         if (!envFail) writeFileSync(failed, err.slice(0, 2000) || `exit ${code}`);
-        console.error(`[store] optimize ${envFail ? "unavailable (deps?)" : `FAILED ${base}`}: ${err.split("\n")[0] || `exit ${code}`}`);
+        console.error(`[${mode ? "ktx2" : "store"}] optimize ${envFail ? "unavailable (deps?)" : `FAILED ${base}`}: ${err.split("\n")[0] || `exit ${code}`}`);
         if (envFail) { optQueue.length = 0; break; } // no point grinding the rest
       }
     }
@@ -75,6 +92,36 @@ setTimeout(() => {
   console.log(`[store] boot sweep: ${pending.length} unoptimized upload(s) queued`);
   for (const f of pending) queueOptimize(join(dir, f));
 }, 5000);
+// Library KTX2 sweep (§20a): every library model gets a GPU-native-texture
+// variant at OPT_DIR/<rel>.ktx2.glb, served only on ?ktx2=1 (routes.ts).
+// PATH-PRESERVING, unlike the store arm — basename() collides across library
+// rels — and through the SAME serial pump, deferred further so boot stays
+// about serving worlds. VRMs and anything outside models/**.glb are excluded
+// (doctrine, optimize.ts header): the container rewrite for bodies is §20c.
+setTimeout(() => {
+  if (ktx2Skip) return;
+  const root = join(LIBRARY_DIR, "eidoverse", "assets", "models");
+  if (!existsSync(root)) return;
+  const items: OptItem[] = [];
+  const walk = (dir: string) => {
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+      const p = join(dir, e.name);
+      if (e.isDirectory()) { walk(p); continue; }
+      if (!e.name.endsWith(".glb")) continue;
+      const dest = join(OPT_DIR, `${relative(LIBRARY_DIR, p)}.ktx2.glb`);
+      if (existsSync(`${dest}.failed`)) continue;
+      // mtime, not mere existence: library files are mutable — an updated
+      // model rebuilds its variant next boot
+      if (existsSync(dest) && statSync(dest).mtimeMs > statSync(p).mtimeMs) continue;
+      items.push({ src: p, dest, mode: "--ktx2" });
+    }
+  };
+  walk(root);
+  if (!items.length) return;
+  console.log(`[ktx2] boot sweep: ${items.length} library model(s) queued for variants`);
+  optQueue.push(...items);
+  pumpOptimize();
+}, 15_000);
 
 // ---- the endpoint -----------------------------------------------------------
 

@@ -87,6 +87,8 @@ function contentType(path: string): string {
   if (path.endsWith(".md")) return "text/markdown; charset=utf-8";
   if (path.endsWith(".png")) return "image/png";
   if (path.endsWith(".jpg") || path.endsWith(".jpeg")) return "image/jpeg";
+  if (path.endsWith(".ktx2")) return "image/ktx2";
+  if (path.endsWith(".wasm")) return "application/wasm";
   if (path.endsWith(".hdr")) return "application/octet-stream";
   return "application/octet-stream";
 }
@@ -494,6 +496,18 @@ const ROUTES: Route[] = [
       const rel = url.pathname.slice("/library/".length);
       // optimized mirror first (draco+webp): same path, ~30x smaller
       const versioned = url.searchParams.has("v") || rel.startsWith("store/"); // content-addressed = immutable
+      // KTX2 is NEGOTIATED (§20), never the unflagged answer: the variant's
+      // KHR_texture_basisu sits in extensionsRequired, and parsers without a
+      // KTX2 decoder — agents, tools, old clients — THROW on required
+      // extensions (GLTFLoader.js:1476). Only a client that detected support
+      // asks with ?ktx2=1; everyone else gets exactly today's bytes. Same
+      // cache ladder as the base file (non-immutable, ETag revalidates), and
+      // the distinct URL is its own clean nginx/browser cache entry.
+      if (url.searchParams.get("ktx2") === "1" && rel.endsWith(".glb")) {
+        const kRel = `${rel}.ktx2.glb`;
+        const k = normalize(join(OPT_DIR, kRel));
+        if (k.startsWith(OPT_DIR) && existsSync(k)) return serveFrom(OPT_DIR, kRel, true, req, versioned);
+      }
       // store uploads: prefer the store-min shadow — same address, the
       // original stays as provenance and as the fallback while (or if) the
       // optimize pass hasn't landed for this hash
