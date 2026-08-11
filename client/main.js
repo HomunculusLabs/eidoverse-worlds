@@ -123,6 +123,8 @@ initDebug({
   downed: () => !!dragSim() || isDowned(),
   dragging: () => !!dragSim(),
   fps: () => perf.fps,
+  perf: () => perf,          // fps + frame ms + worst-of-last-second
+  bill: frameDebug,          // per-system EWMA ms — where the frame goes
   // drop again from where you stand, so a shape can be reproduced back to back
   reLimp: () => { if (isDowned()) getUp(); goLimp(); },
 });

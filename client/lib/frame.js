@@ -55,9 +55,18 @@ export const frameDebug = () => systems.map((s) => ({
   name: s.name, ms: +s.ms.toFixed(3), every: s.every, enabled: s.enabled,
 }));
 
+let windowWorst = 0;
 function frame(now) {
-  const dt = Math.min(0.1, (now - last) / 1000);
+  const dtMs = now - last;
+  const dt = Math.min(0.1, dtMs / 1000);
   last = now;
+  // A hidden tab suspends rAF; the resume gap is a suspension, not a frame —
+  // it must not read as a 5000ms jank spike. Real frames feed the ms EWMA
+  // and the window's worst.
+  if (dtMs < 2000) {
+    perf.ms += (dtMs - perf.ms) * 0.1;
+    if (dtMs > windowWorst) windowWorst = dtMs;
+  }
   const t = now / 1000;
   globalThis._sceneTime = t;
 
@@ -73,6 +82,8 @@ function frame(now) {
   frames++;
   if (now - fpsAt > 1000) {
     perf.fps = frames;
+    perf.worst = windowWorst;
+    windowWorst = 0;
     frames = 0;
     fpsAt = now;
   }

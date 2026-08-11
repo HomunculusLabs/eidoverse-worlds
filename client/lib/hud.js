@@ -17,9 +17,13 @@ const statusDot = {
 
 export function paintHud() {
   const n = remotes.size;
+  // fps alone hides jank — a "60fps" second can hold one 100ms frame. The
+  // ms is the honest number; the worst-of-last-second appears ONLY when it
+  // broke a ~25ms budget (a silent HUD is the smooth-frame reward).
+  const spike = perf.worst > 25 ? `  <span class="bad">▲${Math.round(perf.worst)}ms</span>` : '';
   setHud(
     `${statusDot[net.status] ?? ''} <b>${CONFIG.name}</b> @ ${CONFIG.world}   ` +
-    `${perf.fps}fps   ${n} other${n === 1 ? '' : 's'}` +
+    `${perf.fps}fps ${perf.ms.toFixed(1)}ms${spike}   ${n} other${n === 1 ? '' : 's'}` +
     (isEditing() ? '   <span class="edit">✎ editing</span>' : '') +
     (skyImpl() === 'skymesh' ? '   <span style="opacity:.6">basic sky</span>' : ''),
   );

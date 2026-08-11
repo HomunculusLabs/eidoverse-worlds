@@ -415,8 +415,17 @@ export function updateDebug(now = performance.now()) {
     const k = kindOf(e);
     if (k === 'box') box++; else if (k === 'pillar') pillar++; else exact++;
   }
+  const p = providers.perf?.();
+  const bill = (providers.bill?.() ?? [])
+    .filter((s) => s.ms > 0.05)
+    .sort((a, b) => b.ms - a.ms)
+    .slice(0, 5);
   const lines = [
-    `fps      ${String(providers.fps?.() ?? 0).padStart(5)}`,
+    p
+      ? `frame    ${String(p.fps).padStart(5)} fps  ${p.ms.toFixed(1)}ms  worst ${Math.round(p.worst)}ms`
+      : `fps      ${String(providers.fps?.() ?? 0).padStart(5)}`,
+    // the per-system bill (EWMA ms) — where the frame actually goes
+    ...bill.map((s) => `  ${s.name.padEnd(12)} ${s.ms.toFixed(2).padStart(6)}ms${s.every > 1 ? ` /${s.every}f` : ''}`),
     `things   ${String(colliders.size).padStart(5)}`,
     `  box    ${String(box).padStart(5)}   walk on top, solid between`,
     `  pillar ${String(pillar).padStart(5)}   slim column, pass under`,
