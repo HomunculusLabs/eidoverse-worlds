@@ -514,8 +514,15 @@ const ROUTES: Route[] = [
       // avatar-updated and every client refetches immediately), so a variant
       // OLDER than the winning original is someone's stale body under a fresh
       // ?v= — serve the original until the next boot sweep rebuilds it.
-      if (url.searchParams.get("ktx2") === "1" && (rel.endsWith(".glb") || rel.endsWith(".vrm"))) {
-        const kRel = rel.endsWith(".glb") ? `${rel}.ktx2.glb` : `${rel}.ktx2.vrm`;
+      // Loose images (§20d) negotiate like GLBs: a flip-baked .ktx2 sibling
+      // (OPT_DIR/<rel>.ktx2, built only for the curated sweep dirs) answers a
+      // flagged fetch; contentType serves it as image/ktx2. The client's
+      // loadImageTexture sniffs the container magic, so the SAME path carries
+      // either byte shape.
+      if (url.searchParams.get("ktx2") === "1"
+          && (rel.endsWith(".glb") || rel.endsWith(".vrm") || /\.(png|jpe?g)$/i.test(rel))) {
+        const kRel = rel.endsWith(".glb") ? `${rel}.ktx2.glb`
+          : rel.endsWith(".vrm") ? `${rel}.ktx2.vrm` : `${rel}.ktx2`;
         const k = normalize(join(OPT_DIR, kRel));
         if (k.startsWith(OPT_DIR) && existsSync(k)) {
           let fresh = true;

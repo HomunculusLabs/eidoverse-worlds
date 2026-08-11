@@ -390,6 +390,46 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — §20d LANDED — THE KTX2 ARC IS COMPLETE (models 20a/b,
+  avatars 20c, loose textures 20d).** optimize.ts --ktx2-img: pngjs/
+  jpeg-js decode (the arc's ONE dep addition, pure-JS, flagged — sharp
+  is broken on this box and the flip must gate deterministically) →
+  vertical row flip BAKED (three's KTX2Loader ignores KTX orientation
+  metadata; the engine contract stores the flip in pixels) → toktx.
+  Filename→codec/transfer classification with a verified CALL SITE per
+  rule (127 files dry-run: grass albedo/translucency + sky photos
+  ETC1S/sRGB, normals/roughness UASTC/linear, particle sprites
+  UASTC/sRGB — emitters.js loads them {srgb:true}, overruling the
+  brief's table; trace_06.png has CONFLICTING consumers → honestly no
+  variant; 9 non-POT files skipped with reasons). Sweep arm #3 over
+  the three curated dirs; /library ?ktx2=1 extended to images; the
+  client negotiates at the FILE layer (primeFiles) so every path/cache
+  identity is unchanged and loadImageTexture routes by 12-byte magic
+  sniff (detached-buffer hazard defused: parse gets a copy, never the
+  primed storage). ORIENTATION PROVEN two ways: a constructed corner-
+  marker round-tripped through the independent KTX transcoder, and
+  pixel statistics on the shipped albedo (mean |diff| 2.19 vs flipped
+  source, 22.29 vs unflipped). Gate: 28 variants built + 4 honest
+  skips; bootjank shows every asset class negotiating (veg maps
+  ?ktx2=1, starmap 2.9MB→1.2MB wire, the 92.5MB veg upload block →
+  16MB); lightbench 30/30 + measure at 120fps (the meadow renders
+  through KTX2 — visual truth); paritybench PASS.
+- **2026-08-10 — §21 LANDED: the voice double-offer, diagnosed
+  deeper.** The brief's premise corrected by the agent: upstream
+  ALREADY serializes per-peer (sigQ) — the two inherited check
+  failures were Windows/Bun TIMER artifacts (~15.6ms setTimeout
+  granularity × three sequential awaits missing the suite's 20/60ms
+  windows), so upstream likely never saw them fail on their boxes;
+  our earlier "fails identically on pristine upstream/main" was true
+  on THIS box specifically. The fix is real regardless: the stored
+  chain now carries its own .catch (a rejected link could WEDGE every
+  signal queued behind it — a genuine latent bug), and
+  setRemoteDescription/createAnswer submit together (spec-faithful:
+  RTCPeerConnection's internal op chain orders them; the sequential
+  await bought only latency) — answers leave one tick sooner
+  everywhere. Glare logic untouched. voice-lifecycle 95/95 ×4 (three
+  agent runs + operator). Platform note: the suite's margins are
+  tick-exact on Windows/Bun.
 - **2026-08-10 — §20c LANDED: VRMs, KTX2 by surgical container
   rewrite.** No gltf-transform Document ever touches a VRM (it drops
   the VRM/VRMC extensions): optimize.ts --ktx2-vrm parses the GLB

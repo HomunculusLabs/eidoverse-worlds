@@ -556,20 +556,136 @@ export async function transcodeVrmKtx2(bytes: Uint8Array, encoder: string):
   return { out, converted: newImageBytes.size, etc1s, uastc: uastcN };
 }
 
-// ---- CLI: bun run server/optimize.ts [--ktx2|--ktx2-vrm] <in> <out> ---------
+// ---- KTX2 for loose library images (§20d) -----------------------------------
+// Vegetation, sky, and particle textures reach the client as RAW image bytes
+// through the Deno-shim file layer (assets.js primeFiles → readFileSync →
+// loadImageTexture): ~92.5MB of decoded RGBA uploads for the meadow, a 34MB
+// single-frame upload for the 4K starmap alone. The .ktx2 sibling pays that in
+// GPU currency — but TWO contracts must be baked at ENCODE time, because
+// three's KTX2Loader ignores KTX orientation metadata and the client takes the
+// container's word over the call site's:
+//   1. THE FLIP. The engine's loadImageTexture contract bakes the vertical
+//      flip into the PIXELS (browser flipY convention; tex.flipY stays false
+//      so it composes with repeat tiling — UV-authored trim sheets arrive
+//      mirrored without it). Every curated-dir call site takes the default
+//      flip, so every encode here flips rows before the encoder ever runs.
+//      Decoding is pngjs/jpeg-js — pure JS, deterministic on every platform.
+//      sharp is deliberately NOT used in this mode: it is broken on the win32
+//      dev box (the recorded two-libvips clash), and a flip that silently
+//      failed to happen is a vertically mirrored meadow.
+//   2. THE TRANSFER. The DFD's OETF must match what the call site's opts.srgb
+//      would have set on the raster texture — the client reads colorSpace
+//      from the DFD (KTX2Loader parseColorSpace) and must not override it, so
+//      a mismatch is a visible lighting error. Classification is by FILENAME,
+//      verified against the actual consumers: vegetation.js loadMap,
+//      sky_worlds.js readTex, and the client's own emitters.js spriteTexture.
+
+const isPow2 = (n: number) => n > 0 && (n & (n - 1)) === 0;
+
+/** Filename → codec/transfer, or a refusal. Every rule cites the call site it
+ *  matches (all in ../eidoverse-video unless noted). Order matters: the
+ *  particle dir is classified as a DIR (its consumer ignores filenames), data
+ *  keywords beat color keywords (asteroid_moon_normal contains "moon"). */
+export function classifyLooseImage(srcPath: string): { srgb: boolean; uastc: boolean } | { conflict: string } {
+  const p = srcPath.replace(/\\/g, "/").toLowerCase();
+  const name = basename(p);
+  if (p.includes("/particle_textures/")) {
+    // trace_06.png is consumed BOTH ways: sky_worlds.js loads it linear as
+    // the storm bolt (readTex(..., false)) while emitters.js loads every
+    // authored sprite { srgb: true }. One DFD cannot serve both callers —
+    // no variant; both keep today's raster bytes.
+    if (name === "trace_06.png") return { conflict: "loaded linear by sky_worlds (bolt) AND srgb by emitters" };
+    // Every other sprite has ONE loader: emitters.js spriteTexture,
+    // { srgb: true }. UASTC, not ETC1S: smooth radial alpha gradients are
+    // ETC1S's worst case, and the whole dir is 4.7MB — quality over bytes.
+    return { srgb: true, uastc: true };
+  }
+  // Data maps — sampled as per-channel scalars/vectors, loaded WITHOUT srgb
+  // (vegetation.js loadMap normal/roughness; sky_worlds.js band + solar set:
+  // NormalGL/Roughness/Metalness/ao/height/landmask): linear + UASTC (ETC1S
+  // block color noise reads as data corruption there — §20 doctrine).
+  if (/(normal|rough|metal|_ao\b|height|mask|bump|occlusion|displace)/.test(name)) return { srgb: false, uastc: true };
+  // Color maps — loaded { srgb: true }: vegetation albedo/translucency
+  // (loadMap srgb:true), everything the sky reads as color (readTex(.., true):
+  // starmap/moon/rock_giant/rain_streak/solar Color; asteroid_moon_baked is
+  // the shattered moon's albedo atlas). ETC1S q128: eye-facing sRGB, 4-8×
+  // smaller, block noise hides in shading.
+  if (/(albedo|translucen|_color|basecolor|diffuse|emissi|_baked|starmap|kloppenheim|puresky|moon|rock_giant|rain_streak)/.test(name)) return { srgb: true, uastc: false };
+  // Unmatched ⇒ UASTC + linear (safe for data, merely bigger). A COLOR file
+  // landing here would render with darkened mids — extend the color list when
+  // a new name shows up rather than letting it fall through.
+  return { srgb: false, uastc: true };
+}
+
+/** The --ktx2-img arm: decode (pure JS) → flip rows → temp PNG → toktx.
+ *  Refusals (`skip`) are content judgements — exit 2, serve the original:
+ *  non-POT/non-4-aligned dims (a compressed mip ladder breaks mid-chain on
+ *  upload), or a file whose consumers disagree about the transfer. */
+export async function transcodeImageKtx2(src: Uint8Array, srcPath: string, encoder: string):
+  Promise<{ out: Uint8Array; srgb: boolean; uastc: boolean } | { skip: string }> {
+  const cls = classifyLooseImage(srcPath);
+  if ("conflict" in cls) return { skip: `conflicted consumers — ${cls.conflict}` };
+  const ext = srcPath.toLowerCase().match(/\.(png|jpe?g)$/)?.[1];
+  if (!ext) return { skip: `not a png/jpeg (${basename(srcPath)})` };
+  // pngjs/jpeg-js: the ONE deliberate dep addition of §20d (pure JS — the
+  // flip must gate locally and sharp cannot be trusted on this box). Lazy
+  // imports so every other optimize mode keeps working before `bun install`
+  // catches up (a resolve failure here reads as env-skip in the pump).
+  let w: number, h: number, data: Uint8Array;
+  if (ext === "png") {
+    const { PNG } = (await import("pngjs")) as any;
+    const img = PNG.sync.read(Buffer.from(src)); // normalized to 8-bit RGBA
+    w = img.width; h = img.height; data = img.data;
+  } else {
+    const jpeg = (await import("jpeg-js")) as any;
+    const img = (jpeg.decode ?? jpeg.default.decode)(src, { useTArray: true }); // RGBA out
+    w = img.width; h = img.height; data = img.data;
+  }
+  if (!(isPow2(w) && isPow2(h) && w % 4 === 0 && h % 4 === 0))
+    return { skip: `${w}x${h} is not POT/4-aligned — compressed mip chain would break mid-ladder` };
+  // THE FLIP — bake the engine contract into the pixels (see section header)
+  const row = w * 4;
+  const flipped = Buffer.allocUnsafe(row * h);
+  for (let y = 0; y < h; y++) flipped.set(data.subarray((h - 1 - y) * row, (h - y) * row), y * row);
+  const { PNG } = (await import("pngjs")) as any;
+  const png = new PNG({ width: w, height: h });
+  png.data = flipped;
+  // deflateLevel 1: this PNG exists for milliseconds, purely to feed toktx —
+  // and pngjs writes no gAMA/sRGB chunk, so --assign_oetf stays authoritative
+  const pngBytes = PNG.sync.write(png, { deflateLevel: 1 });
+  const tmp = mkdtempSync(join(tmpdir(), "ew-ktx2img-"));
+  try {
+    const inPath = join(tmp, "in.png");
+    await Bun.write(inPath, pngBytes);
+    const outPath = join(tmp, "out.ktx2");
+    const isToktx = basename(encoder).toLowerCase().includes("toktx");
+    const proc = Bun.spawn(ktx2EncodeArgs(encoder, isToktx, cls.srgb, cls.uastc, inPath, outPath), { stdout: "ignore", stderr: "pipe" });
+    const code = await proc.exited;
+    const err = (await new Response(proc.stderr).text()).trim();
+    if (code !== 0 || !existsSync(outPath))
+      throw new Error(`ktx2-img: encode failed (${err.split("\n")[0] || `exit ${code}`})`);
+    return { out: new Uint8Array(await Bun.file(outPath).arrayBuffer()), srgb: cls.srgb, uastc: cls.uastc };
+  } finally { rmSync(tmp, { recursive: true, force: true }); }
+}
+
+// ---- CLI: bun run server/optimize.ts [--ktx2|--ktx2-vrm|--ktx2-img] <in> <out>
 // Exit 0 = wrote out. Exit 2 = optimization made it BIGGER — or, for
-// --ktx2-vrm, there was nothing to convert (no raster images) — nothing
-// written, serve the original. Exit 1 = failure, reason on stderr.
-// Exit 3 (--ktx2/--ktx2-vrm) = no KTX2 encoder on this box — environmental,
+// --ktx2-vrm, there was nothing to convert (no raster images); or, for
+// --ktx2-img, the image is not suitable (non-POT/4-misaligned dims,
+// conflicted consumers) — nothing written, serve the original. Exit 1 =
+// failure, reason on stderr.
+// Exit 3 (any --ktx2* mode) = no KTX2 encoder on this box — environmental,
 // the caller must env-skip (never a .failed marker).
 
 if (import.meta.main) {
   const argv = process.argv.slice(2);
-  const mode = argv.includes("--ktx2-vrm") ? "--ktx2-vrm" : argv.includes("--ktx2") ? "--ktx2" : null;
+  const mode = argv.includes("--ktx2-img") ? "--ktx2-img"
+    : argv.includes("--ktx2-vrm") ? "--ktx2-vrm"
+    : argv.includes("--ktx2") ? "--ktx2" : null;
   const ktx2Mode = mode !== null;
   const [inPath, outPath] = argv.filter((a) => !a.startsWith("--"));
   if (!inPath || !outPath) {
-    console.error("usage: bun run server/optimize.ts [--ktx2|--ktx2-vrm] <in> <out>");
+    console.error("usage: bun run server/optimize.ts [--ktx2|--ktx2-vrm|--ktx2-img] <in> <out>");
     process.exit(1);
   }
   let encoder: string | null = null;
@@ -581,7 +697,15 @@ if (import.meta.main) {
     const src = new Uint8Array(await Bun.file(inPath).arrayBuffer());
     const t0 = performance.now();
     let out: Uint8Array;
-    if (mode === "--ktx2-vrm") {
+    if (mode === "--ktx2-img") {
+      const r = await transcodeImageKtx2(src, inPath, encoder!);
+      if ("skip" in r) {
+        console.error(`[optimize] ktx2-img: ${r.skip} — keeping original`);
+        process.exit(2);
+      }
+      console.log(`[optimize] ktx2-img: ${basename(inPath)} → ${r.uastc ? "uastc" : "etc1s"}/${r.srgb ? "srgb" : "linear"}, flip baked`);
+      out = r.out;
+    } else if (mode === "--ktx2-vrm") {
       const r = await transcodeVrmKtx2(src, encoder!);
       if (r.converted === 0) {
         console.error(`[optimize] ktx2-vrm: no convertible raster images (${Math.round(performance.now() - t0)}ms) — keeping original`);

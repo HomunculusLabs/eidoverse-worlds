@@ -97,8 +97,14 @@ async function buildQueue() {
     let url = path.startsWith('/') ? path : `/library/${path}`;
     // Warm the SAME cache key demand fetches will use (§20c gate finding):
     // capable clients fetch .glb/.vrm with ?ktx2=1 — unflagged warmth lands
-    // in a different HTTP-cache entry and is pure waste for them.
-    if (ktx2Capable() && /\.(glb|vrm)$/.test(url.split('?')[0])) {
+    // in a different HTTP-cache entry and is pure waste for them. Loose
+    // images (§20d) negotiate too, but ONLY where the file layer does
+    // (primeFiles, i.e. the curated toolkit dirs) — catalog previews and
+    // other images are consumed unflagged, and flagging them here would be
+    // the same wasted-warmth bug in the other direction.
+    const bare = url.split('?')[0];
+    if (ktx2Capable() && (/\.(glb|vrm)$/.test(bare)
+      || (/^\/library\/eidoverse\/assets\/(grass|sky|particle_textures)\//.test(bare) && /\.(png|jpe?g)$/i.test(bare)))) {
       url += (url.includes('?') ? '&' : '?') + 'ktx2=1';
     }
     if (!seen.has(url) && seen.add(url)) q.push({ url, size });
