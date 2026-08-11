@@ -390,6 +390,28 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22n (branch): vertex LOD built, measured, acquitted —
+  and MSAA convicted.** The coarse far twin (flora_lod bladeCoarseIndex:
+  every blade at loops 0→2→4, 12 index entries referencing 6 of 10
+  verts — an index subset never renumbers, so the §22h dither's bladeId
+  survives untouched; same structural layout proof, 61/61 unit tests)
+  rides the §17b swap machinery with bands 45/38. Measured at 2×
+  fullscreen, drift-controlled, engagement VERIFIED (22/60 tiles wearing
+  the 96-entry twin): 44/44 vs 44-45 — INERT. The M5's vertex throughput
+  acquits vertex count for the third time (§22c +3, §22f retirement,
+  now this). Default OFF on the evidence; ?grassvlod=on is the opt-in
+  for vertex-bound tiers. The same slice armed the audit's next lever:
+  ?msaa=0 (core.js antialias param, default unchanged) — and THAT is
+  the missing bill: 44 → 54fps (+10, drift-stable). The 4×MSAA resolve
+  at 2× retina costs ~4ms/frame. Policy candidate: antialias off when
+  dPR ≥ 1.5 — but opaque blades have GEOMETRIC edges where cards had
+  alpha ones, so shimmer-in-motion is tel0s's eyeball call before any
+  default flips. Cache postscript: tel0s's "opaque ≈ cards, 26fps" was
+  the /library 24h browser cache serving the pre-§22l SSS shader
+  through a server restart — fixed in d87cd13 (.js/.mjs/.json now
+  no-cache + ETag 304s; the .vrm carve-out extended to code). Gate:
+  flora.test 61/61, parity PASS, lightbench 30/30, bootjank clean.
+
 - **2026-08-11 — §22m (branch grass-opaque-blades): Sol's meadow, in
   geometry.** tel0s green-lit the Tsushima-lineage rewrite with "keep
   it close to Sol's art" as the constraint — and the codebase met us

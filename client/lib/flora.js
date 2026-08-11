@@ -17,7 +17,7 @@ import { myState } from './controller.js';
 import { remotes } from './remotes.js';
 import { mapGrassArgs, presetStrokes } from './flora_args.js';
 import { composeField } from './flora_field.js';
-import { bladeLodIndex } from './flora_lod.js';
+import { bladeLodIndex, bladeCoarseIndex } from './flora_lod.js';
 import { densityCount } from './grass_quality.js';
 import { pushHostHook } from './autohooks.js';
 
@@ -277,16 +277,23 @@ const GRASS_FALL_EXP = 2.5;        // the curve's bite — shared with the shade
                                    // per-instance dither (§22f) so the CPU budget
                                    // and the visible density are the same law
 const BLADE_LOD_KEEP = 0.4;        // far tiles keep ceil(0.4 × perBunch) blades per tuft (§17b)
-// §22f: the per-tile blade swap is RETIRED from normal operation — it was
-// the second visible pop (a whole 30-45m square flipping 8→4 blades), and
-// round 3 on the Air proved blade count nearly free (+3fps) while round 4's
-// per-instance evidence moved ALL density shaping into the shader dither.
-// Infinity bands = every tile keeps the full-blade geometry; the far twins
-// still build (tiny memory) so grassdiag's forceBladeLod('far') remains a
-// live diagnostic lever, and the constants remain the re-entry point if a
-// weaker GPU tier ever wants the swap back.
-const BLADE_LOD_OUT = Infinity;    // m — never swaps in normal operation (§22f)
-const BLADE_LOD_IN = Infinity;
+// §22f: the per-tile blade-COUNT swap is RETIRED — it was the second visible
+// pop (a whole tile flipping 8→4 blades), and round 3 proved blade count
+// nearly free while the shader dither took over all density shaping.
+//
+// §22n: the swap machinery returns with a DIFFERENT far twin — the coarse
+// index keeps EVERY blade at 2 segments instead of 4 (loops 0→2→4, 6 of 10
+// verts referenced; no count change → no §22d pop). Built on the theory
+// that opaque blades (§22m) would shift the bill to the vertex program —
+// then MEASURED INERT on the Air (44/44 vs 44-45 at 2×, drift-controlled,
+// 22/60 tiles engaged and verified wearing the 96-entry twin): the M5's
+// vertex throughput acquits vertex count for the THIRD time (§22c blade
+// thinning +3, §22f swap retirement, now this). Default OFF on the
+// evidence; ?grassvlod=on is the opt-in for vertex-bound GPU tiers, and
+// the coarse twin doubles as a diag lever via forceBladeLod('far').
+const VLOD_ON = CONFIG.params.get('grassvlod') === 'on';
+const BLADE_LOD_OUT = VLOD_ON ? 45 : Infinity;   // m — tile swaps to coarse past this
+const BLADE_LOD_IN = VLOD_ON ? 38 : Infinity;    // m — and back only inside this
 const _tv = new THREE.Vector3();
 
 /** The uniform-vs-attribute fork for the identity instanceMatrix, read off
@@ -353,7 +360,10 @@ function tileField(f, bladeLod = false) {
   let farIndex = null;
   if (bladeLod) {
     const srcIdx = src.getIndex();
-    const sub = srcIdx && bladeLodIndex(srcIdx.array, src.getAttribute('position').count, BLADE_LOD_KEEP);
+    // §22n: the far twin is the COARSE index (every blade, 2 segments) —
+    // the count-subset builder stays available for diag/weak-tier use
+    const sub = srcIdx && (bladeCoarseIndex(srcIdx.array, src.getAttribute('position').count)
+      ?? bladeLodIndex(srcIdx.array, src.getAttribute('position').count, BLADE_LOD_KEEP));
     if (sub) farIndex = new THREE.BufferAttribute(sub, 1);
   }
   const container = new THREE.Group();

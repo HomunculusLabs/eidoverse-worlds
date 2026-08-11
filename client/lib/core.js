@@ -89,7 +89,10 @@ canvas.tabIndex = -1;
 canvas.style.outline = 'none';
 document.body.prepend(canvas);
 
-export const renderer = new THREE.WebGPURenderer({ canvas, antialias: true });
+// ?msaa=0 — diagnostic lever (§22n): boots without 4×MSAA so the resolve
+// cost at 2× retina can be measured by A/B. Default unchanged.
+export const renderer = new THREE.WebGPURenderer({ canvas,
+  antialias: CONFIG.params.get('msaa') !== '0' });
 renderer.setSize(innerWidth, innerHeight);
 // Spectators start a notch lower — an audience laptop's job is 30fps for an
 // hour, not maximum sharpness. Adaptive scaling adjusts from here.

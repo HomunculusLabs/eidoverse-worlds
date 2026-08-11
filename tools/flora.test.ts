@@ -16,7 +16,8 @@
 
 import { mapGrassArgs, presetStrokes, hexToMultiplier, isLegacyArgs } from "../client/lib/flora_args.js";
 import { composeField, retireField } from "../client/lib/flora_field.js";
-import { bladeLodIndex, BLADE_VERTS, BLADE_INDICES } from "../client/lib/flora_lod.js";
+import { bladeLodIndex, bladeCoarseIndex, BLADE_VERTS, BLADE_INDICES,
+  BLADE_COARSE_INDICES } from "../client/lib/flora_lod.js";
 
 let pass = 0, fail = 0;
 const check = (name: string, ok: boolean, extra = "") => {
@@ -175,6 +176,26 @@ console.log("\nblade LOD index subsets (far tiles thin blades per tuft, §17b)")
   check("a cross-blade reference refuses", bladeLodIndex(torn, 4 * BLADE_VERTS, 0.4) === null);
   check("keep ≥ 1 (nothing to drop) refuses", bladeLodIndex(galleta, 34 * BLADE_VERTS, 1) === null);
   check("keep ≤ 0 refuses", bladeLodIndex(galleta, 34 * BLADE_VERTS, 0) === null);
+
+  // §22n — the coarse (vertex-LOD) far index: every blade, loops 0→2→4
+  const coarse: any = bladeCoarseIndex(grass, 8 * BLADE_VERTS);
+  check("coarse index keeps ALL 8 blades at 12 entries each",
+    !!coarse && coarse.length === 8 * BLADE_COARSE_INDICES, String(coarse?.length));
+  check("coarse index stays same-typed", coarse instanceof Uint16Array);
+  if (coarse) {
+    let ok = true;
+    for (let b = 0; b < 8; b++) {
+      const base = b * BLADE_VERTS, d = b * BLADE_COARSE_INDICES;
+      // 2 quads with the source winding, spanning loops 0→2 and 2→4
+      const want = [0, 1, 4, 1, 5, 4, 4, 5, 8, 5, 9, 8].map((o) => base + o);
+      for (let e = 0; e < BLADE_COARSE_INDICES; e++) if (coarse[d + e] !== want[e]) ok = false;
+    }
+    check("every blade spans loops 0→2→4 with the source winding", ok);
+    check("coarse references only loop-0/2/4 vertex pairs (6 of 10 per blade)",
+      Array.from(coarse as Uint16Array).every((v: number) => [0, 1, 4, 5, 8, 9].includes(v % BLADE_VERTS)));
+  }
+  check("coarse: a cross-blade reference refuses", bladeCoarseIndex(torn, 4 * BLADE_VERTS) === null);
+  check("coarse: a vertex-count mismatch refuses", bladeCoarseIndex(galleta, 34 * BLADE_VERTS + 1) === null);
 }
 
 console.log("\nfield lifecycle (grow → replace → mow)");
