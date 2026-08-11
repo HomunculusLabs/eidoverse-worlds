@@ -24,7 +24,7 @@ const uploadWin = new Map<string, { t: number; n: number }>(); // per-IP upload 
 // store-min/, built by a SUBPROCESS — draco encoding is CPU-seconds of
 // synchronous wasm, and inside this process it would freeze pose relay for
 // every world. One file at a time; the sequencer never waits on it.
-type OptItem = { src: string; dest: string; mode?: "--ktx2" };
+type OptItem = { src: string; dest: string; mode?: "--ktx2" | "--ktx2-vrm" };
 const optQueue: OptItem[] = [];
 let optRunning = false;
 let ktx2Skip = false; // set when a --ktx2 run exits 3 (no encoder) — stop queuing variants this boot
@@ -92,33 +92,47 @@ setTimeout(() => {
   console.log(`[store] boot sweep: ${pending.length} unoptimized upload(s) queued`);
   for (const f of pending) queueOptimize(join(dir, f));
 }, 5000);
-// Library KTX2 sweep (§20a): every library model gets a GPU-native-texture
-// variant at OPT_DIR/<rel>.ktx2.glb, served only on ?ktx2=1 (routes.ts).
-// PATH-PRESERVING, unlike the store arm — basename() collides across library
-// rels — and through the SAME serial pump, deferred further so boot stays
-// about serving worlds. VRMs and anything outside models/**.glb are excluded
-// (doctrine, optimize.ts header): the container rewrite for bodies is §20c.
+// Library KTX2 sweep (§20a, VRMs §20c): every library model gets a
+// GPU-native-texture variant at OPT_DIR/<rel>.ktx2.glb, and every avatar a
+// surgical-rewrite variant at OPT_DIR/<rel>.ktx2.vrm — both served only on
+// ?ktx2=1 (routes.ts). PATH-PRESERVING, unlike the store arm — basename()
+// collides across library rels — and through the SAME serial pump, deferred
+// further so boot stays about serving worlds. GLBs go through the full
+// gltf-transform diet; VRMs go through --ktx2-vrm ONLY (optimize.ts header
+// doctrine: bodies get their textures swapped, everything else
+// byte-preserved). Avatars live in TWO bases — Skye's library and the upload
+// overlay (assets/opt/...) — and serving prefers the overlay, so the sweep
+// sources each rel from the base that actually wins.
 setTimeout(() => {
   if (ktx2Skip) return;
-  const root = join(LIBRARY_DIR, "eidoverse", "assets", "models");
-  if (!existsSync(root)) return;
   const items: OptItem[] = [];
-  const walk = (dir: string) => {
+  const seen = new Set<string>();
+  const walk = (base: string, dir: string, ext: ".glb" | ".vrm", mode: OptItem["mode"]) => {
+    if (!existsSync(dir)) return;
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p = join(dir, e.name);
-      if (e.isDirectory()) { walk(p); continue; }
-      if (!e.name.endsWith(".glb")) continue;
-      const dest = join(OPT_DIR, `${relative(LIBRARY_DIR, p)}.ktx2.glb`);
+      if (e.isDirectory()) { walk(base, p, ext, mode); continue; }
+      if (!e.name.endsWith(ext)) continue;
+      // never re-encode an encode: variants live beside overlay originals
+      // (OPT_DIR/<rel>.ktx2.vrm ends in .vrm too) and must not queue themselves
+      if (e.name.endsWith(`.ktx2${ext}`)) continue;
+      const rel = relative(base, p);
+      if (seen.has(rel)) continue; // overlay walked first — it shadows the library copy
+      seen.add(rel);
+      const dest = join(OPT_DIR, `${rel}.ktx2${ext}`);
       if (existsSync(`${dest}.failed`)) continue;
       // mtime, not mere existence: library files are mutable — an updated
-      // model rebuilds its variant next boot
+      // model/body rebuilds its variant next boot
       if (existsSync(dest) && statSync(dest).mtimeMs > statSync(p).mtimeMs) continue;
-      items.push({ src: p, dest, mode: "--ktx2" });
+      items.push({ src: p, dest, mode });
     }
   };
-  walk(root);
+  walk(LIBRARY_DIR, join(LIBRARY_DIR, "eidoverse", "assets", "models"), ".glb", "--ktx2");
+  // overlay first (it wins in routes.ts serving and the /avatars roster)
+  walk(OPT_DIR, join(OPT_DIR, "eidoverse", "assets", "vrms"), ".vrm", "--ktx2-vrm");
+  walk(LIBRARY_DIR, join(LIBRARY_DIR, "eidoverse", "assets", "vrms"), ".vrm", "--ktx2-vrm");
   if (!items.length) return;
-  console.log(`[ktx2] boot sweep: ${items.length} library model(s) queued for variants`);
+  console.log(`[ktx2] boot sweep: ${items.length} library asset(s) queued for variants`);
   optQueue.push(...items);
   pumpOptimize();
 }, 15_000);

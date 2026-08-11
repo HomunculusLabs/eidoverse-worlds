@@ -67,7 +67,9 @@ export function avatarRoster(): { name: string; path: string; height: number | n
     const dir = join(base, "eidoverse/assets/vrms");
     if (!existsSync(dir)) continue;
     for (const f of readdirSync(dir)) {
-      if (f.endsWith(".vrm")) seen.set(f.replace(".vrm", ""), `eidoverse/assets/vrms/${f}?v=${Math.round(Bun.file(join(dir, f)).lastModified)}`);
+      // .ktx2.vrm files are §20c texture variants living beside overlay
+      // originals — negotiated serving artifacts, not bodies of their own
+      if (f.endsWith(".vrm") && !f.endsWith(".ktx2.vrm")) seen.set(f.replace(".vrm", ""), `eidoverse/assets/vrms/${f}?v=${Math.round(Bun.file(join(dir, f)).lastModified)}`);
     }
   }
   // stature metadata, contributed alongside portraits (see POST /thumb)
@@ -437,7 +439,9 @@ const ROUTES: Route[] = [
       for (const d of dirs) {
         if (!existsSync(d)) continue;
         for (const f of readdirSync(d)) {
-          if (!f.endsWith(".glb")) continue;
+          // ktx2 variants live beside originals in OPT_DIR — they are the
+          // same model, not a catalog entry (the ghost-listing fix, §20c)
+          if (!f.endsWith(".glb") || f.endsWith(".ktx2.glb")) continue;
           const low = f.toLowerCase();
           const score = q.length ? q.filter((t) => low.includes(t)).length : 1;
           if (score > 0) files.set(f, Math.max(files.get(f) ?? 0, score));
@@ -503,10 +507,25 @@ const ROUTES: Route[] = [
       // asks with ?ktx2=1; everyone else gets exactly today's bytes. Same
       // cache ladder as the base file (non-immutable, ETag revalidates), and
       // the distinct URL is its own clean nginx/browser cache entry.
-      if (url.searchParams.get("ktx2") === "1" && rel.endsWith(".glb")) {
-        const kRel = `${rel}.ktx2.glb`;
+      // VRMs (§20c) negotiate identically — avatar URLs carry ?v= minted from
+      // the ORIGINAL's mtime (the version identity is the original; ktx2=1 is
+      // its own cache key) — with one extra guard: bodies are the one asset
+      // class that mutates MID-SESSION (POST /upload?as=avatar broadcasts
+      // avatar-updated and every client refetches immediately), so a variant
+      // OLDER than the winning original is someone's stale body under a fresh
+      // ?v= — serve the original until the next boot sweep rebuilds it.
+      if (url.searchParams.get("ktx2") === "1" && (rel.endsWith(".glb") || rel.endsWith(".vrm"))) {
+        const kRel = rel.endsWith(".glb") ? `${rel}.ktx2.glb` : `${rel}.ktx2.vrm`;
         const k = normalize(join(OPT_DIR, kRel));
-        if (k.startsWith(OPT_DIR) && existsSync(k)) return serveFrom(OPT_DIR, kRel, true, req, versioned);
+        if (k.startsWith(OPT_DIR) && existsSync(k)) {
+          let fresh = true;
+          if (rel.endsWith(".vrm")) {
+            const orig = [[OPT_DIR, normalize(join(OPT_DIR, rel))], [LIBRARY_DIR, normalize(join(LIBRARY_DIR, rel))]]
+              .find(([base, p]) => p.startsWith(base) && existsSync(p))?.[1];
+            fresh = !!orig && Bun.file(k).lastModified > Bun.file(orig).lastModified;
+          }
+          if (fresh) return serveFrom(OPT_DIR, kRel, true, req, versioned);
+        }
       }
       // store uploads: prefer the store-min shadow — same address, the
       // original stays as provenance and as the fallback while (or if) the

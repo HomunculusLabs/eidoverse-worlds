@@ -390,6 +390,38 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — §20c LANDED: VRMs, KTX2 by surgical container
+  rewrite.** No gltf-transform Document ever touches a VRM (it drops
+  the VRM/VRMC extensions): optimize.ts --ktx2-vrm parses the GLB
+  container raw, classifies every image across THREE schema
+  generations (core glTF + VRMC_materials_mtoon + VRM0
+  materialProperties; scalar-sampled slots → UASTC, unclassifiable →
+  UASTC), swaps image bytes IN PLACE (every bufferView keeps its
+  index; offsets recomputed 4-aligned; zero reindexing;
+  accessor-shared views never touched), and VALIDATES its own output
+  before writing — 13 untouched JSON sections stringify-identical,
+  every unreplaced view byte-compared; any discrepancy refuses. A
+  torn VRM is someone's body. Sweep covers vrms/**.vrm both bases
+  (skipping .ktx2.vrm self-encodes); /library's ?ktx2=1 branch covers
+  .vrm with a freshness guard (avatars mutate mid-session);
+  avatarRoster filters variant ghosts; loadVRM flags capable fetches
+  (the &ktx2=1-after-?v= case). MEASURED: aletheia 31→23.3MB
+  (6,982-check independent verification, ktx2check 3/3,
+  deterministic); the heavyjoin gate shows 14.1MB on the wire
+  (gzipped variant), textures 42ms (raw original: 352ms), pool-hit
+  0ms intact. claude.vrm turned out to have ZERO textures — a pure
+  vertex-color body; honest exit 2. Adjacent fixes landed with it:
+  prefetch now warms the SAME ?ktx2=1 cache key demand fetches use
+  (ktx2Capable export — unflagged warmth was pure waste for capable
+  clients, a 20b-era gap), /library-models stops listing .ktx2.glb
+  ghosts. Gate: lightbench 30/30, paritybench PASS. Known: a freshly
+  uploaded avatar gets its variant at the next boot sweep (freshness
+  guard keeps serving correct meanwhile); .failed markers don't
+  expire on source change; sharp remains unusable on this Windows box
+  (two-libvips clash — skip-the-texture posture holds). REMAINING in
+  the arc: 20d loose toolkit PNGs (veg + 4K sky = the last big
+  chunk), the JPEG-threshold decision, then the voice double-offer
+  fix (queued by tel0s).
 - **2026-08-10 — §20a+20b LANDED: KTX2, server arm + client loader.**
   optimize.ts --ktx2 (diet minus webp, plus per-texture toktx/ktx —
   probed KTX2_TOKTX→toktx→ktx, exit 3 = no-encoder = env-skip; UASTC+

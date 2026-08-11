@@ -148,6 +148,9 @@ const draco = new DRACOLoader().setDecoderPath('https://www.gstatic.com/draco/ve
 const ktx2 = new KTX2Loader()
   .setTranscoderPath('/node_modules/three/examples/jsm/libs/basis/')
   .detectSupport(renderer);
+/** Whether this GPU/browser negotiates KTX2 variants (?ktx2=1) — prefetch
+ *  must warm the SAME cache key demand fetches will use. */
+export const ktx2Capable = () => !!ktx2.workerConfig;
 function makeLoader(vrm = false) {
   const l = new GLTFLoader();
   l.setDRACOLoader(draco);
@@ -271,7 +274,18 @@ export async function loadVRM(libPath, { priority = 1 } = {}) {
   const work = beginWork(`vrm ${libPath.split('/').pop()}`);
   try {
     work.phase('download');
-    const buf = await fetchBytes(`/library/${libPath}`);
+    // §20c: bodies negotiate KTX2 exactly like GLBs (loadGLB above) — when
+    // the transcoder detected support, ask and the server answers with the
+    // surgical-rewrite variant when a fresh one exists, the original
+    // otherwise. avatarPath arrives in BOTH forms — bare library rels and
+    // roster paths already carrying ?v=mtime — so the flag APPENDS (&) after
+    // an existing query rather than assuming one. The full URL keys
+    // byteCache (variant and original are distinct byte entries — correct),
+    // while the vrmPool and its vrmMeta ledger key on libPath UNTOUCHED, so
+    // pool identity is unaffected by negotiation.
+    const flag = libPath.split('?')[0].endsWith('.vrm') && ktx2.workerConfig
+      ? (libPath.includes('?') ? '&ktx2=1' : '?ktx2=1') : '';
+    const buf = await fetchBytes(`/library/${libPath}${flag}`);
     work.phase('queued');
     // The parse and skeleton passes are the irreducibly-synchronous chunk of a
     // body: serialize so two arrivals can't stack theirs into the same frames,
