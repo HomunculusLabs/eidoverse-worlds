@@ -97,6 +97,17 @@ function contentType(path: string): string {
 
 const gzCache = new Map<string, { mtime: number; gz: Uint8Array }>();
 
+// What may cache for a day WITHOUT asking: heavy, rarely-edited art. What may
+// NOT: things we iterate on, where a silently stale copy costs a debugging
+// session — avatars (2026-07-22, "sydney's arms are swapped": three people on
+// three cached rigs) and, since upstream-patched/ (§22g), library CODE and
+// its data sidecars (2026-08-11: a 24h-cached vegetation.js served tel0s the
+// pre-§22l shader through a server restart and a whole branch A/B — mode
+// read 'cards-sss' while the wire had 'opaque'). no-cache still rides the
+// ETag: revalidation is a 304, not a re-download.
+const hardCacheable = (path: string) =>
+  !path.endsWith(".vrm") && !/\.(m?js|json)$/i.test(path);
+
 function serveFrom(base: string, rel: string, cache = false, req?: Request, immutable = false): Response {
   const path = normalize(join(base, rel));
   if (!path.startsWith(base)) return new Response("forbidden", { status: 403 });
@@ -115,7 +126,7 @@ function serveFrom(base: string, rel: string, cache = false, req?: Request, immu
     if (req?.headers.get("if-none-match") === etag) {
       // cache-control must ride along on the 304 (it refreshes the stored response's lifetime)
       headers["cache-control"] = immutable ? "public, max-age=31536000, immutable"
-        : cache && !path.endsWith(".vrm") ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
+        : cache && hardCacheable(path) ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
       return new Response(null, { status: 304, headers });
     }
   }
@@ -124,7 +135,7 @@ function serveFrom(base: string, rel: string, cache = false, req?: Request, immu
   // (rig fixes, re-exports) and a 24h-stale avatar is a debugging nightmare
   // (2026-07-22: "sydney's arms are swapped" was three of us looking at three
   // different cached rigs). no-cache = revalidate each load, still cheap.
-  const hard = cache && !path.endsWith(".vrm");
+  const hard = cache && hardCacheable(path);
   headers["cache-control"] = immutable ? "public, max-age=31536000, immutable"
     : hard ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
   // gzip the JS modules: three.webgpu.js is 2.1MB raw / ~500KB gzipped, and
