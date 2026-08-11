@@ -136,8 +136,15 @@ const ERP_LIMIT = 0.35;         // source default: how hard limits are held
 const BT_CONSTRAINT_STOP_ERP = 3; // this build's setParam id (source, verbatim)
 const ACTIVE_TAG = 1;
 
-const LIN_DAMP = 0.12;          // source setDamping(0.12, 0.45)
-const ANG_DAMP = 0.45;
+const LIN_DAMP = 0.12;          // source setDamping(0.12, —)
+// 0.7, not the source's 0.45: rapierdoll's validated value for this regime.
+// The source's doll is posed and grounded; ours tumbles, and at 0.45 the
+// light extremities (hands carrying nine spring phalanges, the head) ring at
+// 1-12 rad/s indefinitely — the island never quiets enough to sleep, and the
+// deadline captures mid-jitter.
+const ANG_DAMP = 0.7;
+const ANG_DAMP_FINGER = 0.95;   // spring-driven 20 g boxes: dissipate hard
+const LIN_DAMP_FINGER = 0.3;
 const FRICTION = 0.85;
 const RESTITUTION = 0.03;
 
@@ -238,6 +245,14 @@ const _b = new THREE.Vector3();
 const _q = new THREE.Quaternion();
 const _qp = new THREE.Quaternion();
 const _m4 = new THREE.Matrix4();
+
+/** Body world rotation → THREE, consumed IMMEDIATELY. Ammo's value-returning
+ *  methods (getRotation among them) share one static temporary per method —
+ *  two held results alias each other. Every rotation read goes through here. */
+function quatOf2(body, out) {
+  const r = body.getCenterOfMassTransform().getRotation();
+  return out.set(r.x(), r.y(), r.z(), r.w());
+}
 
 /** Deterministic frame with Y along `dir` — rapierdoll's frameQuat, kept for
  *  the same reason: setFromUnitVectors is singular for antiparallel inputs and
@@ -512,7 +527,7 @@ export class AmmoRagdoll {
       compound.calculateLocalInertia(mass, _bv1);
       const ci = keep(new AMMO.btRigidBodyConstructionInfo(mass, ms, compound, _bv1));
       const rb = keep(new AMMO.btRigidBody(ci));
-      rb.setDamping(LIN_DAMP, ANG_DAMP);
+      rb.setDamping(isFinger ? LIN_DAMP_FINGER : LIN_DAMP, isFinger ? ANG_DAMP_FINGER : ANG_DAMP);
       rb.setFriction(FRICTION);
       // Rolling friction, which the source never needed: its boxes sat on a
       // plane under a posed doll, ours land tumbling — and a 20-gram foot box
@@ -744,11 +759,16 @@ export class AmmoRagdoll {
       const hi = [xhi, S.twist * DEG, S.z[1] * DEG];
 
       // born excursion per axis, in the joint basis — a joint must contain
-      // the pose it was born in
-      const rp = parentBody.getCenterOfMassTransform().getRotation();
-      const rc = childBody.getCenterOfMassTransform().getRotation();
-      const rel = _q.set(rp.x(), rp.y(), rp.z(), rp.w()).invert()
-        .multiply(_qp.set(rc.x(), rc.y(), rc.z(), rc.w()));
+      // the pose it was born in.
+      // ⚠️ ONE getRotation() PER STATEMENT: ammo's value-returning methods
+      // hand back a single static temporary per method, so holding two
+      // results before reading makes them alias — rel computed from a held
+      // pair is ALWAYS identity, which silently disabled this widening (and
+      // the jointAngles instrument, vacuously greening the limits gate).
+      // Consume each into a THREE object before the next call.
+      quatOf2(parentBody, _q);
+      quatOf2(childBody, _qp);
+      const rel = _q.invert().multiply(_qp);
       const relF = basis.clone().invert().multiply(rel).multiply(basis);
       const eul = new THREE.Euler().setFromQuaternion(relF, 'XYZ');
       const born = [eul.x, eul.y, eul.z];
@@ -757,23 +777,39 @@ export class AmmoRagdoll {
         hi[i] = Math.max(hi[i], born[i] + BUILD_WIDEN);
       }
 
-      // frames: basis from rest anatomy, origin from the live anchor
-      const mkFrame = (body, restOrigin) => {
+      // CENTER THE RANGE ON THE FRAME. Bullet's angular limit logic wraps the
+      // measured Euler angle to whichever representation violates least, so a
+      // wide one-sided range like the knee's (−145°, +7°) has a wrap midpoint
+      // at (hi+lo+2π)/2 ≈ 111° — one contact impulse on a light shin crosses
+      // it inside a substep, and from there the limit HOLDS the joint on the
+      // wrong side (measured: knees pinned at +145° hyperextension, sustained
+      // — antra's "knees bend only backwards", live, 2026-08-10). Rotating the
+      // PARENT frame by the range midpoint makes every range symmetric and
+      // pushes the wrap point to 180°: the same forbidden-way shove that ran
+      // to 145° then stops at 7°, and a 10× kick still does.
+      const mid = [(lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2, (lo[2] + hi[2]) / 2];
+      const midQ = new THREE.Quaternion().setFromEuler(new THREE.Euler(mid[0], mid[1], mid[2], 'XYZ'));
+      const basisA = basis.clone().multiply(midQ);
+
+      // frames: basis from rest anatomy (parent's carries the centering),
+      // origin from the live anchor
+      const mkFrame = (body, frameBasis) => {
         const tr = keep(new AMMO.btTransform());
         tr.setIdentity();
         const o = localOf(body, liveAt);
         _bv2.setValue(o.x, o.y, o.z); tr.setOrigin(_bv2);
-        _bq1.setValue(basis.x, basis.y, basis.z, basis.w); tr.setRotation(_bq1);
+        _bq1.setValue(frameBasis.x, frameBasis.y, frameBasis.z, frameBasis.w);
+        tr.setRotation(_bq1);
         return tr;
       };
-      const fa = mkFrame(parentBody, parentRestOrigin);
-      const fb = mkFrame(childBody, childRestOrigin);
+      const fa = mkFrame(parentBody, basisA);
+      const fb = mkFrame(childBody, basis);
       const C = spring ? AMMO.btGeneric6DofSpringConstraint : AMMO.btGeneric6DofConstraint;
       const con = keep(new C(parentBody, childBody, fa, fb, true));
       _bv1.setValue(0, 0, 0);
       con.setLinearLowerLimit(_bv1); con.setLinearUpperLimit(_bv1);
-      _bv1.setValue(lo[0], lo[1], lo[2]); con.setAngularLowerLimit(_bv1);
-      _bv1.setValue(hi[0], hi[1], hi[2]); con.setAngularUpperLimit(_bv1);
+      _bv1.setValue(lo[0] - mid[0], lo[1] - mid[1], lo[2] - mid[2]); con.setAngularLowerLimit(_bv1);
+      _bv1.setValue(hi[0] - mid[0], hi[1] - mid[1], hi[2] - mid[2]); con.setAngularUpperLimit(_bv1);
       if (spring) {
         for (let ax = 3; ax < 6; ax++) {
           con.enableSpring(ax, true);
@@ -790,8 +826,8 @@ export class AmmoRagdoll {
       this._constraints.push(con);
       this.jointMeta.push({
         name, spec, axisX: x.clone(), axisY: y.clone(), axisZ: z.clone(),
-        lo: [...lo], hi: [...hi], born: [...born],
-        parentBody, childBody, basis: basis.clone(),
+        lo: [...lo], hi: [...hi], born: [...born], mid: [...mid],
+        parentBody, childBody, basisA, basisB: basis.clone(),
       });
       return con;
     };
@@ -992,13 +1028,16 @@ export class AmmoRagdoll {
   jointAngles() {
     const out = [];
     for (const J of this.jointMeta) {
-      const rp = J.parentBody.getCenterOfMassTransform().getRotation();
-      const rc = J.childBody.getCenterOfMassTransform().getRotation();
-      const rel = _q.set(rp.x(), rp.y(), rp.z(), rp.w()).invert()
-        .multiply(_qp.set(rc.x(), rc.y(), rc.z(), rc.w()));
-      const relF = J.basis.clone().invert().multiply(rel).multiply(J.basis);
+      // one getRotation per statement — see quatOf2
+      quatOf2(J.parentBody, _q);
+      quatOf2(J.childBody, _qp);
+      const rel = _q.invert().multiply(_qp);
+      // measure in the constraint's own frames (parent carries the range
+      // centering), then report in ANATOMICAL coordinates by adding the
+      // midpoint back — lo/hi here are the anatomical table values
+      const relF = J.basisA.clone().invert().multiply(rel).multiply(J.basisB);
       const eul = new THREE.Euler().setFromQuaternion(relF, 'XYZ');
-      const ang = [eul.x, eul.y, eul.z];
+      const ang = [eul.x + J.mid[0], eul.y + J.mid[1], eul.z + J.mid[2]];
       out.push({
         name: J.name, spec: J.spec, angles: ang, lo: J.lo, hi: J.hi,
         over: Math.max(...ang.map((a2, i) => Math.max(J.lo[i] - a2, a2 - J.hi[i], 0))),
@@ -1086,10 +1125,7 @@ export class AmmoRagdoll {
       // a p2p with a hard impulse clamp: a distant target PULLS the body at
       // bounded force instead of teleporting it (the clamp is the source's
       // whole grab feel, and its stability)
-      const t = seg.body.getCenterOfMassTransform();
-      const o = t.getOrigin(), r = t.getRotation();
       const anchor = (seg.a === joint ? seg.localA : seg.localB);
-      _q.set(r.x(), r.y(), r.z(), r.w());
       // seg.local* are rest-local = body-local (rest-aligned bodies)
       _bv1.setValue(anchor.x, anchor.y, anchor.z);
       const con = new AMMO.btPoint2PointConstraint(seg.body, _bv1);
