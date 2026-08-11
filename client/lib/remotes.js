@@ -27,6 +27,13 @@ export function noteServerTime(t) {
 }
 export const serverNow = () => performance.timeOrigin + performance.now() + (clockOffset ?? 0);
 
+/** Per-identity generation counter (#95): every AUTHORITATIVE (re)creation
+ *  of an id bumps it, and async continuations validate record identity
+ *  before touching the scene — a departed generation can neither delete
+ *  nor repopulate its successor. Session-lifetime, monotonic. */
+const gens = new Map();
+export const remoteGen = (id) => gens.get(id) ?? 0;
+
 export async function ensureRemote(id, avatarPath, meta = {}) {
   const existing = remotes.get(id);
   if (existing) {
@@ -38,15 +45,57 @@ export async function ensureRemote(id, avatarPath, meta = {}) {
     if (avatarPath && existing.avatarPath !== avatarPath) {
       remotes.delete(id);
       existing.avatar?.dispose();
-    } else return existing;
+    } else {
+      // Same body re-announced = a TAKEOVER (the server suppresses the old
+      // connection's leave and re-arrives the identity — server.ts ~2023).
+      // The successor must be a FRESH RECORD OBJECT, not the predecessor's
+      // with fields wiped: every continuation guard in this file compares
+      // record identity, and a reused object makes a predecessor's captured
+      // reference pass as current (#97 review B2). The loaded avatar itself
+      // transplants — same mesh, no flicker, single ownership moves to the
+      // successor — while streamed state (the pose buffer) stays behind on
+      // the orphaned record, uninherited (#95 acceptance 4).
+      if (meta.authority) {
+        // the mesh transplants; its EXPRESSIONS do not — typing, bubble,
+        // held pose, limp, gaze were the predecessor generation's (#97 B2':
+        // avatar-owned transients must not survive ownership moving)
+        existing.avatar?.resetTransients?.();
+        const fresh = {
+          id, avatar: existing.avatar, avatarPath: existing.avatarPath,
+          loading: false, agent: !!(meta.agent ?? existing.agent),
+          gen: (gens.get(id) ?? 0) + 1,
+          buf: [], lastClip: 'idle', lodAcc: 0, lodTick: 0, speakingUntil: 0,
+        };
+        gens.set(id, fresh.gen);
+        remotes.set(id, fresh);
+        // predecessor still mid-load: its completion will see a record that
+        // isn't its own and dispose (the stale-load guard below); the
+        // successor starts its OWN load — bytes are cached, so this is
+        // cheap, and ownership stays unambiguous
+        if (!fresh.avatar) {
+          fresh.loading = true;
+          try {
+            const av = await makeAvatar(id, fresh.avatarPath || DEFAULT_AVATAR);
+            if (remotes.get(id) !== fresh) { av.dispose(); return fresh; }
+            fresh.avatar = av;
+            if (fresh.buf.length) applyImmediate(fresh);
+          } catch (e) { report(`avatar ${id}`, e); }
+          fresh.loading = false;
+        }
+        return fresh;
+      }
+      return existing;
+    }
   }
   const r = {
     id, avatar: null, avatarPath, loading: true, agent: !!meta.agent,
+    gen: (gens.get(id) ?? 0) + 1,
     buf: [],                 // [{ t, p:[x,y,z], yaw, speed, clip, pitch }]
     lastClip: 'idle',
     lodAcc: 0, lodTick: 0,
     speakingUntil: 0,
   };
+  gens.set(id, r.gen);
   remotes.set(id, r);
   try {
     r.avatar = await makeAvatar(id, avatarPath || DEFAULT_AVATAR);
@@ -61,10 +110,18 @@ export async function ensureRemote(id, avatarPath, meta = {}) {
   return r;
 }
 
-export function dropRemote(id) {
+/** Remove a body. Idempotent, and GENERATION-CONDITIONAL when handed the
+ *  record the caller believes it is dropping: a predecessor's late cleanup
+ *  (a drag callback, a stale timer) cannot delete the successor that now
+ *  owns the id (#95 acceptance 4). Returns the dropped record, or null when
+ *  there was nothing to drop / the record didn't match. */
+export function dropRemote(id, expected) {
   const r = remotes.get(id);
+  if (!r) return null;
+  if (expected && r !== expected) return null;   // a successor owns this id now
   remotes.delete(id);
-  r?.avatar?.dispose();
+  r.avatar?.dispose();
+  return r;
 }
 
 /** Feed one presence sample. `t` is the server stamp when available. */

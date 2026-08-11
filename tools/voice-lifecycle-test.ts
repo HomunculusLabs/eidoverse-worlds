@@ -217,7 +217,24 @@ const bus = stubs.bus;
 voice.initVoice("me");
 
 const settle = () => new Promise((r) => setTimeout(r, 20));
-const offerFrom = (who: string) => bus.emit("rtc", { from: who, payload: { sdp: { type: "offer", sdp: "x" } } });
+// #95's roster rule: RTC never builds a peer for an id the world hasn't
+// announced. Sections announce their speakers lazily, at the moment of
+// speaking (seed-if-absent, so a section's richer seed — an avatar with
+// distance, say — is never clobbered), which keeps mic-on from courting
+// the whole future cast at once.
+const announce = (who: string) => { if (!stubs.remotes.has(who)) stubs.remotes.set(who, { id: who, agent: false }); };
+const offerFrom = (who: string) => { announce(who); bus.emit("rtc", { from: who, payload: { sdp: { type: "offer", sdp: "x" } } }); };
+
+// ---- #95: the unannounced are refused --------------------------------------
+{
+  offerFrom("unannounced-ghost");
+  await settle();
+  check("an SDP offer from an id the world never announced builds no peer",
+    !created.some((pc: any) => pc._for === "unannounced-ghost") && created.length === 0);
+  bus.emit("rtc", { from: "unannounced-ghost", payload: { recvReady: true } });
+  await settle();
+  check("recvReady from an unannounced id courts nobody", stubs.sent.length === 0);
+}
 
 // ---- receive consent ------------------------------------------------------
 consent.setReceiveVoice(false);
@@ -589,7 +606,7 @@ check("unhush rejoins the SAME peer at full volume",
   bus.emit("rtc", { from: "peerC", payload: { ice: { candidate: "gen1-stale" } } });
   await settle();                                   // queued on gen1 (no answer yet)
   gen1.signalingState = "have-local-offer";         // wedge it so recvReady rebuilds
-  bus.emit("rtc", { from: "peerC", payload: { recvReady: true } });
+  announce("peerC"); bus.emit("rtc", { from: "peerC", payload: { recvReady: true } });
   await settle();
   const gen2 = created.at(-1)!;
   check("rebuild actually made a fresh pc", gen2 !== gen1);
@@ -609,7 +626,7 @@ check("unhush rejoins the SAME peer at full volume",
   w.__iceLog = [];
   created.length = 0;
   stubs.sent.length = 0;
-  bus.emit("rtc", { from: "racer", payload: { sdp: { type: "offer", sdp: "o1" } } });
+  announce("racer"); bus.emit("rtc", { from: "racer", payload: { sdp: { type: "offer", sdp: "o1" } } });
   bus.emit("rtc", { from: "racer", payload: { sdp: { type: "offer", sdp: "o2" } } });  // same tick — no settle between
   await new Promise((r) => setTimeout(r, 60));
   const sigFails = (w.__iceLog ?? []).filter((x) => typeof x === "string" && x.startsWith("signal-FAIL"));
@@ -708,7 +725,7 @@ check("unhush rejoins the SAME peer at full volume",
   stubs.remotes.set("early", { agent: false });
   bus.emit("roster");                                // peer built with no mic
   await settle();
-  bus.emit("rtc", { from: "early", payload: { sdp: { type: "offer", sdp: "x" } } });
+  announce("early"); bus.emit("rtc", { from: "early", payload: { sdp: { type: "offer", sdp: "x" } } });
   await settle();
   const pcEarly = created.at(-1)!;
   if (!voice.micOn()) { await voice.toggleMic("me"); await settle(); }   // mic ON now
@@ -735,7 +752,7 @@ check("unhush rejoins the SAME peer at full volume",
   const micOpening = voice.micOn() ? Promise.resolve(false) : voice.toggleMic("me");
   await settle();
   stubs.remotes.set("during", { agent: false });
-  bus.emit("rtc", { from: "during", payload: { sdp: { type: "offer", sdp: "x" } } });
+  announce("during"); bus.emit("rtc", { from: "during", payload: { sdp: { type: "offer", sdp: "x" } } });
   await settle();                                    // peer now exists, micStream still null
   release!();
   await micOpening;
@@ -812,7 +829,7 @@ check("unhush rejoins the SAME peer at full volume",
   const held = new Promise<void>((r) => { release = r; });
   const origCreateAnswer = FakePC.prototype.createAnswer;
   FakePC.prototype.createAnswer = async function () { await held; return origCreateAnswer.call(this); };
-  bus.emit("rtc", { from: "midneg", payload: { sdp: { type: "offer", sdp: "x" } } });
+  announce("midneg"); bus.emit("rtc", { from: "midneg", payload: { sdp: { type: "offer", sdp: "x" } } });
   await settle();
   const pcMid = created.at(-1)!;
   check("mid-negotiation: peer is parked in have-remote-offer",
@@ -1061,12 +1078,38 @@ check("unhush rejoins the SAME peer at full volume",
 
   const answersBefore = pcR.answersCreated ?? 0;
   // they reload and offer fresh
-  bus.emit("rtc", { from: "zzz-rejoin", payload: { sdp: { type: "offer", sdp: "after-reload" } } });
+  announce("zzz-rejoin"); bus.emit("rtc", { from: "zzz-rejoin", payload: { sdp: { type: "offer", sdp: "after-reload" } } });
   await settle(); await settle();
 
   check("rejoin: a reloaded peer's offer is ANSWERED, not discarded as glare",
     (pcR.answersCreated ?? 0) > answersBefore,
     `answersCreated stayed at ${pcR.answersCreated} — their fresh offer was dropped`);
+  consent.setReceiveVoice(false);
+}
+
+// ---- #97: generation-end retires the voice peer while the id is PRESENT ---
+// A takeover re-arrives an id that never leaves the roster, so the roster
+// sweep can never retire its predecessor's peer — the 'participant-teardown'
+// event must, directly. Deterministic: peer built, audio delivered, analyser
+// live, then the event; the id stays in `remotes` throughout.
+{
+  consent.setReceiveVoice(true);
+  created.length = 0;
+  const who = "genend";
+  offerFrom(who);                                 // announce() seeds remotes
+  await settle();
+  const pc = created.at(-1) as FakePC;
+  check("generation-end setup: a live peer exists", !!pc && !pc.closed);
+  pc.deliverAudio();
+  voice.peerLevels();                             // builds the mouth analyser lazily
+  const before = voice.voiceAnalyserCount();
+  check("…with a live analyser", before >= 1, String(before));
+  bus.emit("participant-teardown", who);
+  await settle();
+  check("the event retires the peer — roster presence notwithstanding",
+    pc.closed && stubs.remotes.has(who), `closed=${pc.closed}, still announced=${stubs.remotes.has(who)}`);
+  check("…and the analyser with it (the census leak, dead)",
+    voice.voiceAnalyserCount() < before, `${before} → ${voice.voiceAnalyserCount()}`);
   consent.setReceiveVoice(false);
 }
 
