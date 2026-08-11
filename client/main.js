@@ -48,6 +48,7 @@ import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { protoStats } from './lib/assets.js';
 import { grassTiles } from './lib/terrain.js';
+import { grassDiag } from './lib/grassdiag.js';
 import { warmStats } from './lib/warmqueue.js';
 import { laneStats as schedLaneStats } from './lib/scheduler.js';
 import { laneStats as loadLaneStats } from './lib/loadwork.js';
@@ -390,6 +391,7 @@ globalThis.EW = {
   gpu: () => ({ ...renderer.info.memory, ...protoStats() }),   // bytes + proto/byte tiers
   frame: frameDebug,           // per-system rolling ms + strides (§14.2 6b)
   grass: grassTiles,           // tile-level draw truth (§13.2, landed 8e)
+  grassDiag,                   // §22: `await EW.grassDiag()` — the meadow's GPU cost, attributed by difference
   warm: warmStats,             // the conductor's queue (§16.2.A)
   lanes: () => ({ sched: schedLaneStats(), load: loadLaneStats() }),  // queue depths vs caps
   colliderCache: colliderCacheStats,   // per-lib shared BVH/lie bytes (§16.2.C)

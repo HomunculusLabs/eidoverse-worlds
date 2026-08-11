@@ -1,0 +1,91 @@
+// grassdiag — which part of the meadow is eating the GPU? (§22)
+//
+// tel0s's MacBook holds ~50fps with the meadow, 60 without — and suspects
+// the "physics" (the shader-side pusher displacement) rather than the fill.
+// On a vsync-bound machine the grass cost hides inside 'render' as GPU
+// time, invisible to the per-system CPU bill. So this measures by
+// DIFFERENCE: freeze one component at a time for a few seconds and watch
+// fps / frame-ms recover. Run from the console:
+//
+//   await EW.grassDiag()               // ~30s, prints a table, restores all
+//   await EW.grassDiag({ secsPer: 5 }) // longer phases on a noisy machine
+//
+// The phases:
+//   pushers off   the 4-slot per-vertex displacement loop goes to zero work
+//                 (an empty pusher list — the shader's early-out)
+//   autos off     wind + gust + billboards + tile ticks freeze (coarse
+//                 bucket: everything riding _autoParticleSystems, pushers
+//                 included — reads as "all grass animation")
+//   blades far    every tile drops to the 40% far-LOD index (vertex AND
+//                 fill shrink together — the §17b lever, forced)
+//   density low   instance count to 35% (the governor's deepest shed)
+//   grass hidden  the whole field skipped — total grass cost, the ceiling
+//
+// Interpretation on a 60Hz vsync-bound machine: deltas clamp at the vsync
+// floor (16.7ms), so read RECOVERY — the first phase that reaches the
+// no-grass fps names the dominant cost.
+
+import { perf } from './perf.js';
+import { freezePushers, forceBladeLod } from './flora.js';
+import { getGrassField, getGrassDensity } from './terrain.js';
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/** Sample fps/ms/worst over ~secs (1Hz pulses drive perf). */
+async function sample(secs) {
+  await sleep(1200);                       // settle: one full pulse past the toggle
+  const fps = [], ms = [], worst = [];
+  for (let i = 0; i < Math.max(2, secs - 1); i++) {
+    await sleep(1000);
+    fps.push(perf.fps); ms.push(perf.ms); worst.push(perf.worst);
+  }
+  fps.sort((a, b) => a - b); ms.sort((a, b) => a - b);
+  return {
+    fps: fps[Math.floor(fps.length / 2)],
+    ms: +ms[Math.floor(ms.length / 2)].toFixed(1),
+    worst: Math.round(Math.max(...worst)),
+  };
+}
+
+export async function grassDiag({ secsPer = 4 } = {}) {
+  const field = getGrassField();
+  if (!field?.mesh) { console.warn('[grassdiag] no grass field'); return null; }
+  const autos = globalThis._autoParticleSystems;
+  const savedAutos = autos ? [...autos] : null;
+  const savedDensity = getGrassDensity();
+  const out = [];
+  const run = async (name, on, off) => {
+    on();
+    out.push({ phase: name, ...(await sample(secsPer)) });
+    off();
+  };
+  try {
+    out.push({ phase: 'baseline', ...(await sample(secsPer)) });
+    await run('pushers off', () => freezePushers(true), () => freezePushers(false));
+    if (savedAutos) {
+      await run('autos off (wind+billboards)', () => { autos.length = 0; },
+        () => { autos.push(...savedAutos); });
+    }
+    await run('blades far-LOD everywhere', () => forceBladeLod('far'), () => forceBladeLod(null));
+    await run('density 35%', () => field.setDensity?.(0.35),
+      () => field.setDensity?.(savedDensity));
+    await run('grass hidden', () => { field.mesh.visible = false; },
+      () => { field.mesh.visible = true; });
+  } finally {
+    // belt & braces — a throw mid-phase must not leave the world frozen
+    freezePushers(false);
+    forceBladeLod(null);
+    if (savedAutos && autos && autos.length !== savedAutos.length) {
+      autos.length = 0; autos.push(...savedAutos);
+    }
+    field.setDensity?.(savedDensity);
+    if (field.mesh) field.mesh.visible = true;
+  }
+  const base = out[0];
+  console.log('grass diag — recovery vs baseline names the dominant cost');
+  for (const r of out) {
+    const d = r === base ? '' : `  Δ ${r.fps - base.fps >= 0 ? '+' : ''}${r.fps - base.fps}fps ${(r.ms - base.ms).toFixed(1)}ms`;
+    console.log(`  ${r.phase.padEnd(28)} ${String(r.fps).padStart(4)}fps ${String(r.ms).padStart(6)}ms  worst ${String(r.worst).padStart(4)}ms${d}`);
+  }
+  return out;
+}

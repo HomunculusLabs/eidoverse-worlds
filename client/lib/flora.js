@@ -243,6 +243,12 @@ function wireFieldCulling(field) {
 // counts: the draw's instanceCount comes from live object.count
 // (three.webgpu.js:29971-29973), which never exceeds them.
 
+// §22 grassdiag toggles — normal operation leaves both alone
+let pushersFrozen = false;
+let lodForce = null;               // null | 'near' | 'far'
+export function freezePushers(on) { pushersFrozen = !!on; }
+export function forceBladeLod(mode) { lodForce = mode ?? null; }   // takes effect within one 300ms tile tick
+
 const TILE_MIN_INSTANCES = 2000;   // shrubs/yucca are hundreds — stay whole
 const TILE_MAX_EDGE = 45;          // m — the distance falloff needs granularity
 const TILE_MIN_OCC = 256;          // can't reach this per tile → stay whole
@@ -422,9 +428,14 @@ function tileField(f, bladeLod = false) {
       // blades ride the index — independent dimensions.
       const pair = lodGeos.get(t);
       if (pair) {
-        if (!t.userData.lodFar && d >= BLADE_LOD_OUT) {
+        // lodForce (§22 grassdiag) overrides the distance bands; null = the
+        // normal hysteresis, restated: a far tile stays far until it comes
+        // inside IN, a near tile stays near until it passes OUT
+        const wantFar = lodForce ? lodForce === 'far'
+          : (t.userData.lodFar ? d > BLADE_LOD_IN : d >= BLADE_LOD_OUT);
+        if (wantFar && !t.userData.lodFar) {
           t.geometry = pair.far; t.userData.lodFar = true;
-        } else if (t.userData.lodFar && d <= BLADE_LOD_IN) {
+        } else if (!wantFar && t.userData.lodFar) {
           t.geometry = pair.near; t.userData.lodFar = false;
         }
       }
@@ -463,6 +474,10 @@ function wirePushers(field) {
   const cand = [];
   const hook = () => {
     list.length = 0;
+    // diag freeze (§22 grassdiag): an empty pusher list zeroes the per-vertex
+    // displacement work in the shader — the A/B that answers "is it the
+    // pushers?" on a GPU-bound machine
+    if (pushersFrozen) { field.setPushers(list); return; }
     if (myState?.pos) list.push({ x: myState.pos.x, y: myState.pos.y, z: myState.pos.z, r: R });
     if (remotes?.size) {
       cand.length = 0;

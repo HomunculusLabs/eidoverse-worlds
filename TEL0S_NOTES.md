@@ -390,6 +390,23 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-10 — §22: grassdiag — the meadow's GPU cost, attributed by
+  difference.** tel0s suspects grass PHYSICS (the shader pushers) over
+  fill on the MacBook's 50fps. The costs are GPU-side and invisible to
+  the CPU bill, so the diagnostic is differential: `await
+  EW.grassDiag()` freezes one component per ~4s phase — pushers (empty
+  list → the per-vertex displacement early-outs), all autos
+  (wind/gust/billboards/ticks), blades forced far-LOD, density 35%,
+  grass hidden — sampling fps/ms/worst, fully self-restoring
+  (try/finally). New flora exports freezePushers/forceBladeLod (the
+  LOD hysteresis restated equivalently for the force hook — verified
+  near↔far bands unchanged); terrain.getGrassField; bootjank
+  --grassdiag [--pixels N] runs it headless. Validated mechanically
+  here (all phases cycle+restore, no page errors, lightbench 30/30);
+  this box holds 121fps even at pixelRatio 3 so deltas are zero BY
+  RIGHTS — the discriminating run is tel0s's vsync-bound Mac, where
+  the first phase that recovers toward the no-grass fps names the
+  dominant cost.
 - **2026-08-10 — §20d LANDED — THE KTX2 ARC IS COMPLETE (models 20a/b,
   avatars 20c, loose textures 20d).** optimize.ts --ktx2-img: pngjs/
   jpeg-js decode (the arc's ONE dep addition, pure-JS, flagged — sharp

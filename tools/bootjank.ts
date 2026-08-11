@@ -42,7 +42,12 @@ const HEAVYJOIN = has("heavyjoin");   // a 21MB-avatar resident arrives at t≈+
                                       // after boot — measures the VRM-parse halt
                                       // (the same main-thread path an avatar
                                       // SWITCH takes, §19b)
-const SECS = num("secs", WIDE ? 25 : HEAVYJOIN ? 50 : 40);
+const GRASSDIAG = has("grassdiag");   // §22: run EW.grassDiag() post-boot and
+                                      // print its table. Combine with
+                                      // --pixels N to force the GPU-bound
+                                      // regime the diag needs to show deltas.
+const PIXELS = num("pixels", 0);      // renderer.setPixelRatio(N) post-boot
+const SECS = num("secs", WIDE ? 25 : HEAVYJOIN ? 50 : GRASSDIAG ? 75 : 40);
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const EIDOVERSE_DIR = process.env.EIDOVERSE_DIR ?? join(ROOT, "..", "eidoverse-video");
@@ -262,6 +267,11 @@ ws.addEventListener("message", (ev: any) => {
 });
 await cdp.send("Runtime.enable");
 await cdp.send("Page.enable");
+
+const evalJson = async (expr: string) => {
+  const r = await cdp.send<any>("Runtime.evaluate", { expression: expr, returnByValue: true, awaitPromise: true });
+  return r?.result?.value;
+};
 if (MBIT > 0) {
   await cdp.send("Network.enable");
   const bps = (MBIT * 1_000_000) / 8;
@@ -349,6 +359,23 @@ for (let i = 0; i < 240 && !bootReady; i++) await sleep(250);
 if (!bootReady) await die(2, "✗ client never booted", ...pageErrors.slice(0, 5));
 console.log(`  ${dim(bootReady)}`);
 
+if (GRASSDIAG) {
+  await sleep(14_000);   // let the boot storm and warms fully settle
+  if (PIXELS > 0) {
+    await evalJson(`(() => { EW.renderer.setPixelRatio(${PIXELS}); return EW.renderer.getPixelRatio(); })()`);
+    console.log(dim(`  pixelRatio forced to ${PIXELS} — GPU-bound regime`));
+    await sleep(3000);
+  }
+  console.log(dim("  running EW.grassDiag()…"));
+  const rows = await evalJson("EW.grassDiag({ secsPer: 4 })");
+  if (rows) {
+    const base = rows[0];
+    for (const r of rows) {
+      const d = r === rows[0] ? "" : `  Δ ${r.fps - base.fps >= 0 ? "+" : ""}${r.fps - base.fps}fps ${(r.ms - base.ms).toFixed(1)}ms`;
+      console.log(`  ${String(r.phase).padEnd(28)} ${String(r.fps).padStart(4)}fps ${String(r.ms).padStart(6)}ms  worst ${String(r.worst).padStart(4)}ms${d}`);
+    }
+  } else console.log("  ✗ grassDiag returned nothing");
+}
 let heavyAt = 0;
 if (HEAVYJOIN) {
   const heavyJoin = (id: string) => {
@@ -380,11 +407,6 @@ if (remaining > 0) {
 }
 
 // ---- harvest ----------------------------------------------------------------
-
-const evalJson = async (expr: string) => {
-  const r = await cdp.send<any>("Runtime.evaluate", { expression: expr, returnByValue: true, awaitPromise: true });
-  return r?.result?.value;
-};
 
 const data = await evalJson(`(() => {
   const J = globalThis.__jank ?? {};

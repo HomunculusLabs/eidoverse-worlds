@@ -77,6 +77,8 @@ export function setGrass(field) {
 }
 export const clearGrass = () => setGrass(null);
 export const hasGrass = () => currentGrass !== null;
+/** The live field object — grassdiag's toggle surface (§22). */
+export const getGrassField = () => currentGrass;
 
 // The meadow budget: the resident's persisted cap × the governor's session
 // shed (grass_quality.js owns the semantics — effective is their min).
