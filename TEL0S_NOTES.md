@@ -390,6 +390,34 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22f: density becomes a continuous law — the visible
+  squares cannot exist.** tel0s (round 5, ~55+ usual / 47-48 worst):
+  the per-TILE quantization was VISIBLE — whole 30-45m squares of
+  count/blade change while walking; they proposed subdividing tiles.
+  The landed answer keeps tiles big (8a's 17-draw economy) and makes
+  them invisible instead: (1) the falloff's SHAPE moves into the
+  shader per instance — keep(d) at the exact CPU curve, an instance
+  survives iff its DRAW-ORDER RANK < keep, where the rank is written
+  into the flutter-phase lane post-shuffle per tile (rank-as-phase is
+  still uniform per location; zero new attributes) — this is the
+  CPU count-prefix refined continuously, single-thinned, seamless at
+  every boundary; (2) the CPU count becomes a BUDGET at the tile's
+  NEAREST edge (keep(dNearest) ≥ every instance's keep — the shader
+  never wants what wasn't submitted; also fixes the center-based
+  over-cull at GRASS_FAR); (3) the per-tile blade swap is RETIRED
+  (BLADE_LOD bands = Infinity — round 3 proved blade count ~free and
+  the swap was the second visible pop; forceBladeLod stays a live
+  diag lever and the constants are the weak-GPU re-entry point);
+  (4) grassdiag's scope split gets its own DIAG_SCOPE_EDGE=20. RISK
+  flagged: dither-killed instances still pay vertex fetch (submitted
+  budget > visible, e.g. lush commons submits 131.5k for a
+  curve-shaped visible set) — round-3 evidence says the far bill was
+  raster-side so this should hold; the Air's round-6 table decides.
+  vegetation.js carries a SECOND local commit in ../eidoverse-video
+  (rank-dither in the lodGrow block; opts-gated, byte-identical
+  without exp) — format-patch both for the Air. Gate: flora 55/55,
+  grass-quality 57/57, bootjank clean, lightbench 30/30 + measure
+  120fps, paritybench PASS.
 - **2026-08-11 — §22e: density-compensation grow — appearance restored
   in the cheap currency, savings kept in the expensive one.** tel0s's
   round-4 diag: EVERY lever now recovers to the 61fps ceiling (the

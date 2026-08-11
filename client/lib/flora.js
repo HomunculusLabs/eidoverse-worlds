@@ -246,7 +246,9 @@ function wireFieldCulling(field) {
 // §22 grassdiag toggles — normal operation leaves all of these alone
 let pushersFrozen = false;
 let lodForce = null;               // null | 'near' | 'far'
-let diagScope = null;              // {near, far} density multipliers by LOD band
+let diagScope = null;              // {near, far} density multipliers by diag band
+const DIAG_SCOPE_EDGE = 20;        // m — grassdiag's near/far split (was the LOD
+                                   // band edge until §22f retired the swap)
 export function freezePushers(on) { pushersFrozen = !!on; }
 export function forceBladeLod(mode) { lodForce = mode ?? null; }   // takes effect within one 300ms tile tick
 /** §22c: scope a density cut to the near ring or the far sea — the spatial
@@ -267,19 +269,20 @@ const TILE_MAX_AXIS = 8;           // K stays modest (§13.2: ~8×8 on a big sta
 // closer, done sooner: d=40m → ~0.44, d=60m → ~0.16.
 const GRASS_NEAR = 15;             // full density inside this
 const GRASS_FAR = 90;              // invisible beyond this
+const GRASS_FALL_EXP = 2.5;        // the curve's bite — shared with the shader's
+                                   // per-instance dither (§22f) so the CPU budget
+                                   // and the visible density are the same law
 const BLADE_LOD_KEEP = 0.4;        // far tiles keep ceil(0.4 × perBunch) blades per tuft (§17b)
-// §22c: tel0s's Air grassDiag convicted BLADE VOLUME outright — far-LOD
-// everywhere recovered 44→61fps (the full no-grass ceiling; worst 50→17ms)
-// while pushers and wind each bought ONE frame. At meadow density a tuft's
-// individual blades stop being resolvable well before the old 60m, so full
-// blades are for the ring underfoot only: with ~30-45m tiles this keeps the
-// tile you stand in lush and drops everything else to the geometry the
-// measurement proved free. Swaps stay pointer-writes (17b) — churn from the
-// tighter band costs no compiles.
-const BLADE_LOD_OUT = 20;          // m — a tile past this swaps to the far-LOD index…
-const BLADE_LOD_IN = 15;           // m — …and only swaps back inside this: the hysteresis
-                                   // band keeps a resident hovering at one boundary from
-                                   // flipping geometries every 300ms tick
+// §22f: the per-tile blade swap is RETIRED from normal operation — it was
+// the second visible pop (a whole 30-45m square flipping 8→4 blades), and
+// round 3 on the Air proved blade count nearly free (+3fps) while round 4's
+// per-instance evidence moved ALL density shaping into the shader dither.
+// Infinity bands = every tile keeps the full-blade geometry; the far twins
+// still build (tiny memory) so grassdiag's forceBladeLod('far') remains a
+// live diagnostic lever, and the constants remain the re-entry point if a
+// weaker GPU tier ever wants the swap back.
+const BLADE_LOD_OUT = Infinity;    // m — never swaps in normal operation (§22f)
+const BLADE_LOD_IN = Infinity;
 const _tv = new THREE.Vector3();
 
 /** The uniform-vs-attribute fork for the identity instanceMatrix, read off
@@ -371,6 +374,16 @@ function tileField(f, bladeLod = false) {
       }
       tg.setAttribute(name, new THREE.InstancedBufferAttribute(arr, sz));
     });
+    // §22f: draw-order rank into the flutter-phase lane, PER TILE — the
+    // shader dither (vegetation lodGrow.exp) keeps an instance iff
+    // rank < keep(distance), which is exactly this tile's count-prefix
+    // refined continuously: no double-thinning, no tile seams. The rank
+    // rides as phase (×2π) so the flutter stays uniform per location —
+    // the order IS the density shuffle, spatially random.
+    {
+      const ph = tg.getAttribute('aPhase');
+      if (ph) for (let k = 0; k < idx.length; k++) ph.array[k * 3] = (Math.PI * 2 * k) / idx.length;
+    }
     for (const i of idx) box.expandByPoint(_tv.set(posRot.getX(i), posRot.getY(i), posRot.getZ(i)));
     box.expandByScalar(pad);
     // allocation crosses the uniform-buffer limit → one shared program for
@@ -432,14 +445,19 @@ function tileField(f, bladeLod = false) {
   const applyTiles = () => {
     for (const t of tiles) {
       const d = _tv.copy(t.boundingSphere.center).distanceTo(camera.position);
-      // exponent 2.5 (§22e — was 2): the shader's grow now covers for the
-      // removed instances, so the count curve can bite harder: d=40 → 0.33,
-      // d=60 → 0.08. Round-4 diag: near AND far rings each held 61fps at
-      // 0.35, so this is inside the measured-safe envelope on both ends.
-      const fall = d >= GRASS_FAR ? 0
-        : d <= GRASS_NEAR ? 1
-          : (1 - (d - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR)) ** 2.5;
-      const scope = diagScope ? (d < BLADE_LOD_OUT ? diagScope.near : diagScope.far) : 1;
+      // §22f: the CPU count is a BUDGET evaluated at the tile's NEAREST
+      // point (keep(dNearest) ≥ keep(d) for every instance in it), and the
+      // shader dither shapes the VISIBLE density per instance at the exact
+      // same curve (GRASS_FALL_EXP, vegetation lodGrow.exp) — the budget is
+      // never the bottleneck and tile seams vanish. Also fixes a subtle
+      // over-cull: a tile whose CENTER passed GRASS_FAR used to hide while
+      // its near half was still inside. Exponent 2.5 (§22e): round-4 diag
+      // measured both rings safe at 0.35; the shader grow covers the look.
+      const dN = Math.max(0.01, d - t.boundingSphere.radius);
+      const fall = dN >= GRASS_FAR ? 0
+        : dN <= GRASS_NEAR ? 1
+          : (1 - (dN - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR)) ** GRASS_FALL_EXP;
+      const scope = diagScope ? (d < DIAG_SCOPE_EDGE ? diagScope.near : diagScope.far) : 1;
       t.count = densityCount(t.userData.fullCount, eff * fall * scope);
       t.visible = t.count > 0;
       // §17b — blade LOD rides the same distance one band later, with
@@ -553,7 +571,7 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       const blades = mod.FLORA_SPECIES?.[st.species]?.archetype === 'blades';
       const f = await mod.createFlora({
         ...st, heightFn,
-        ...(blades ? { lodGrow: { near: GRASS_NEAR, far: GRASS_FAR, cap: 1.7 } } : {}),
+        ...(blades ? { lodGrow: { near: GRASS_NEAR, far: GRASS_FAR, cap: 1.7, exp: GRASS_FALL_EXP } } : {}),
       });
       // named so an applied-truth report (#74) can identify the stroke
       f.strokeLabel = `${fields.length}:${st.species ?? 'grass'}`;
@@ -564,7 +582,17 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       // archetype carries blade-LOD twins (§17b) — corn/shrub/yucca
       // geometry has no per-blade run structure to subset
       const arch = mod.FLORA_SPECIES[st.species ?? 'grass']?.archetype;
-      if (!tileField(f, arch === 'blades')) wireFieldCulling(f);
+      if (!tileField(f, arch === 'blades')) {
+        wireFieldCulling(f);
+        // §22f: untiled strokes get the whole-stroke draw-order rank in the
+        // flutter lane (the tiled path writes it per tile) — the shader
+        // dither needs it wherever lodGrow.exp rides
+        const ph = f.mesh?.geometry?.getAttribute?.('aPhase');
+        if (ph && f.count) {
+          for (let k = 0; k < f.count; k++) ph.array[k * 3] = (Math.PI * 2 * k) / f.count;
+          ph.needsUpdate = true;
+        }
+      }
       group.add(f.mesh);
       fields.push(f);
     }
