@@ -390,6 +390,22 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22g (tel0s's idea): upstream-patched/ — the forks
+  come home.** Deliberate upstream redos now live IN this repo:
+  upstream-patched/<rel> shadows the same rel in eidoverse-video via
+  a top-precedence /library branch (PATCH_DIR in config; delete the
+  file to fall back to Skye's). vegetation.js (the §22e/f lodGrow +
+  dither patch) is the first resident; ../eidoverse-video is reset to
+  PRISTINE (8b37f0f — the two local commits' content is canonical
+  here now; never patch her checkout in place again, and the old
+  format-patch carrying instructions are OBSOLETE: one git pull of
+  THIS repo delivers everything to every machine). Proven end-to-end:
+  the route serves the patched copy (2 lodGrow hits) while disk
+  upstream has 0; lightbench 30/30 + measure 120fps building the
+  meadow from the overlay; bootjank 14 rough frames (best lush-commons
+  yet); paritybench PASS. The README carries the doctrine: minimal
+  opt-gated deltas, byte-identical without the opt, PR to Skye then
+  delete.
 - **2026-08-11 — §22f: density becomes a continuous law — the visible
   squares cannot exist.** tel0s (round 5, ~55+ usual / 47-48 worst):
   the per-TILE quantization was VISIBLE — whole 30-45m squares of

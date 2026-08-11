@@ -12,7 +12,7 @@
 import { existsSync, readFileSync, writeFileSync, renameSync, readdirSync, mkdirSync, appendFileSync } from "node:fs";
 import { join, normalize } from "node:path";
 import { randomBytes } from "node:crypto";
-import { ROOT, WORLDS_DIR, LIBRARY_DIR, OPT_DIR, JOIN_TOKEN } from "./config.ts";
+import { ROOT, WORLDS_DIR, LIBRARY_DIR, OPT_DIR, PATCH_DIR, JOIN_TOKEN } from "./config.ts";
 import { hnSessions, hnJti, sessionFromCookie, saveSessions, SESSION_TTL_MS, HN_ISSUER_KEY, HN_ISS, HN_AUD, HN_LOGIN_URL, HN_REQUIRE_LOGIN } from "./auth.ts";
 import { verifyToken } from "./aid1.ts";
 import { resolveLibFile } from "./lint.ts";
@@ -500,6 +500,12 @@ const ROUTES: Route[] = [
       const rel = url.pathname.slice("/library/".length);
       // optimized mirror first (draco+webp): same path, ~30x smaller
       const versioned = url.searchParams.has("v") || rel.startsWith("store/"); // content-addressed = immutable
+      // Deliberate upstream forks win over EVERYTHING (upstream-patched/
+      // README.md): same URL, versioned in this repo, delete-to-fall-back.
+      {
+        const p = normalize(join(PATCH_DIR, rel));
+        if (p.startsWith(PATCH_DIR) && existsSync(p)) return serveFrom(PATCH_DIR, rel, true, req, versioned);
+      }
       // KTX2 is NEGOTIATED (§20), never the unflagged answer: the variant's
       // KHR_texture_basisu sits in extensionsRequired, and parsers without a
       // KTX2 decoder — agents, tools, old clients — THROW on required
