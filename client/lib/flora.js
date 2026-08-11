@@ -10,7 +10,7 @@
 //   flora_field.js — field composition + retirement lifecycle
 //   flora_lod.js   — blade-LOD index subsets for tiled strokes (§17b)
 // All are covered by tools/flora.test.ts.
-import { THREE, TSL, bus, camera, renderer } from './core.js';
+import { THREE, TSL, bus, camera, renderer, CONFIG } from './core.js';
 import { primeFiles } from './assets.js';
 import { colliders } from './colliders.js';
 import { myState } from './controller.js';
@@ -572,14 +572,22 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       // opts.lodGrow) makes the survivors cover for the removed: constants
       // MATCH the falloff's so the two halves of the trade stay coupled.
       // Shrubs/yucca are untiled (no falloff) and get no grow.
-      const blades = mod.FLORA_SPECIES?.[st.species]?.archetype === 'blades';
+      //
+      // §22i A/B kill-switch (round-7 anomaly: density-35% stopped
+      // recovering — either the 22h shader costs more than it saves on
+      // Metal, or the Air was thermally throttled; two reloads on the same
+      // machine state decide):
+      //   ?grasslod=off       no lodGrow at all — the pre-§22e shader
+      //   ?grasslod=nodither  grow only (the §22e shader, no rank/blade dither)
+      //   (default)           the full §22h shader
+      const lodMode = CONFIG.params.get('grasslod') ?? 'full';
+      const blades = mod.FLORA_SPECIES?.[st.species]?.archetype === 'blades'
+        && lodMode !== 'off';
       const f = await mod.createFlora({
         ...st, heightFn,
-        ...(blades ? { lodGrow: { near: GRASS_NEAR, far: GRASS_FAR, cap: 1.7, exp: GRASS_FALL_EXP,
-          // §22h: continuous blade-level dither (10 verts per blade, both
-          // blade archetypes) fading to the retired per-tile swap's proven
-          // 0.4 ratio — its +12fps on the Air, with no pop
-          vertsPerBlade: 10, bladeKeepFar: 0.4 } } : {}),
+        ...(blades ? { lodGrow: { near: GRASS_NEAR, far: GRASS_FAR, cap: 1.7,
+          ...(lodMode !== 'nodither' ? { exp: GRASS_FALL_EXP, vertsPerBlade: 10, bladeKeepFar: 0.4 } : {}),
+        } } : {}),
       });
       // named so an applied-truth report (#74) can identify the stroke
       f.strokeLabel = `${fields.length}:${st.species ?? 'grass'}`;
