@@ -61,8 +61,36 @@ import { setLodBias } from './remotes.js';
 import { setSystemEvery, getSystemEvery } from './frame.js';
 import { toast } from './ui.js';
 
+// ---- the resident's render-scale dial (§22k) --------------------------------
+// The §22j A/B proved pixel-bound machines exist; the cruise answers them
+// automatically. This is the MANUAL override, a preference like clouds⚙ and
+// grass⚙ (persisted — an explicit choice is a preference; machine pressure
+// stays session-only): 'auto' lets the cruise drive, a pinned factor sets
+// the base outright and turns the cruise off — the resident's word is not
+// something the governor argues with. The emergency <26fps pixels lever
+// still sheds below a pinned base (and restores back to it): a crisis
+// outranks a preference, but only for as long as it lasts.
+const RS_KEY = 'ew-render-scale';
+export const RENDER_SCALES = ['auto', '1', '0.85', '0.7'];
+let renderScale = RENDER_SCALES.includes(localStorage.getItem(RS_KEY))
+  ? localStorage.getItem(RS_KEY) : 'auto';
+const residentBase = () =>
+  renderScale === 'auto' ? BASE_PIXEL_RATIO : BASE_PIXEL_RATIO * Number(renderScale);
+
 let pixelRatio = BASE_PIXEL_RATIO;
 const setPR = (v) => { pixelRatio = v; renderer.setPixelRatio(v); };
+
+export const getRenderScale = () => renderScale;
+export function setRenderScale(v) {
+  if (!RENDER_SCALES.includes(v)) return renderScale;
+  renderScale = v;
+  localStorage.setItem(RS_KEY, v);
+  // an explicit move re-anchors outright — session sheds don't survive the
+  // resident taking the wheel
+  setPR(residentBase());
+  return renderScale;
+}
+if (renderScale !== 'auto') setPR(residentBase());
 
 const EMITTER_TIERS = ['auto', 'med', 'low'];
 const CASTER_STEPS = [12, 6, 2];
@@ -172,8 +200,8 @@ const LEVERS = [
       return true;
     },
     restore() {
-      if (pixelRatio >= BASE_PIXEL_RATIO) return false;
-      setPR(Math.min(BASE_PIXEL_RATIO, pixelRatio + 0.125));
+      if (pixelRatio >= residentBase()) return false;
+      setPR(Math.min(residentBase(), pixelRatio + 0.125));
       return true;
     },
   },
@@ -226,7 +254,8 @@ let grassDial = 1;
 // its smaller step and the 5s-vs-8s streak asymmetry damp the boundary
 // oscillation. ?cruise=off disables the whole thing (the §17d A/B lever).
 const CRUISE = (CONFIG.params.get('cruise') ?? 'on') !== 'off';
-const CRUISE_PR_FLOOR = Math.max(0.7, BASE_PIXEL_RATIO * 0.7);
+const cruiseFloor = () => Math.max(0.7, residentBase() * 0.7);
+const cruiseActive = () => CRUISE && renderScale === 'auto';   // a pinned scale is the resident's word
 let midFor = 0;
 
 let slowFor = 0;
@@ -322,8 +351,8 @@ export function governPerformance(fps) {
     goodFor = 0;
     calmFor = 0;
     midFor++;
-    if (CRUISE && midFor > 7 && pixelRatio > CRUISE_PR_FLOOR) {
-      setPR(Math.max(CRUISE_PR_FLOOR, pixelRatio - 0.25));
+    if (cruiseActive() && midFor > 7 && pixelRatio > cruiseFloor()) {
+      setPR(Math.max(cruiseFloor(), pixelRatio - 0.25));
       midFor = 0;
       if (history.length < 60) history.push(`− pixels (cruise) @${Math.round(performance.now() / 1000)}s`);
     }
@@ -331,7 +360,7 @@ export function governPerformance(fps) {
 }
 
 export const governorDebug = () => ({
-  pixelRatio, slowFor, goodFor, midFor,
+  pixelRatio, slowFor, goodFor, midFor, renderScale,
   grace, calmFor, calm: calmReached,
   casterBudget: getCasterBudget(), slotCap: getSlotCap(),
   emitters: emitterQuality(), grass: getGrassDensity(),

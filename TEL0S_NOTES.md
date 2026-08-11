@@ -390,6 +390,26 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22k: the resident takes the pixel wheel.** The freeze
+  tel0s reported after §22j turned out to be Zen/Firefox, not Chrome —
+  hunt closed (headless+headed Chrome soaks had already cleared the
+  cruise path; the headed "repro" was Chrome's occluded-window
+  throttle, proven by a mid-freeze `sample`: main thread 97% idle at
+  mach_msg). Per tel0s: render scale becomes a resident dial. build.js
+  grows a scale⚙ row beside grass⚙ (auto | 100% | 85% | 70%,
+  persisted as ew-render-scale — an explicit choice is a preference;
+  machine pressure stays session-only). governor: residentBase() =
+  BASE × factor; 'auto' = cruise drives (default, unchanged); a pinned
+  factor anchors pixelRatio outright and stands the cruise down — the
+  emergency <26fps pixels lever still sheds below a pin and restores
+  to it (a crisis outranks a preference, only while it lasts).
+  Housekeeping: build.js's SIX raw NUL bytes (the seat-gizmo `id\x00
+  slot` map keys — the very footgun that hid setCloudQuality at
+  :1089) are now \x00 escapes, byte-identical semantics; the file
+  greps clean for the first time. Gate: paritybench PASS, lightbench
+  30/30, bootjank clean, rs-smoke (pin 0.7 → pr 1.4 at boot, zero
+  cruise moves; live flip to auto re-anchors pr 2) PASS.
+
 - **2026-08-11 — §22j: the dead band learns the pixel law.** Session
   moved onto the Air itself; the ?grasslod three-way A/B ran drift-
   controlled (off / nodither / full / off-again, one browser, warm-up
