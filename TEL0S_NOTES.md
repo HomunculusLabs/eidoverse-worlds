@@ -390,6 +390,24 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22o (branch): the MSAA policy lands + the tile trim.**
+  tel0s confirmed MSAA's 5-10 frame cost by eye, and their full diag
+  attributed the whole remaining gap to grass (hidden 61 vs baseline
+  41; sky/terrain/physics ≈ free; density 35% → 58 — instance count
+  still rules under opaque; far sea +9 vs near +5). Landed: (a) hiDPI
+  boots (dPR ≥ 1.5) default to NO MSAA — the 4× resolve at retina is
+  ~4ms/frame for stairsteps ~220dpi already hides; ?msaa=1 restores
+  (the shimmer escape hatch). (b) TILE_MAX_AXIS 8→12 (?grasstiles=N
+  diag override): finer tiles pin the §22h nearest-edge budget to the
+  dither curve — 7.3k fewer submitted instances, +2fps, visible
+  density identical; 16 adds nothing. Probe-view stack since morning:
+  31 → ~55 (opaque + no-MSAA + tiles12) before the cruise. OPEN
+  MYSTERY logged: a recurring worst=34ms frame rides grass visibility
+  in EVERY diag phase (even at 58fps, autos off) and disappears only
+  when the field hides — periodic, grass-linked, not wind/autos/sky;
+  suspect list starts at the 300ms tile tick. Gate: flora.test 61/61,
+  parity PASS, lightbench 30/30, bootjank clean.
+
 - **2026-08-11 — §22n (branch): vertex LOD built, measured, acquitted —
   and MSAA convicted.** The coarse far twin (flora_lod bladeCoarseIndex:
   every blade at loops 0→2→4, 12 index entries referencing 6 of 10

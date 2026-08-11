@@ -262,7 +262,13 @@ const TILE_MAX_EDGE = 28;          // m — §22h: the nearest-edge budget over-
                                    // round-6 regression) — smaller tiles halve the
                                    // waste while the dither keeps them invisible
 const TILE_MIN_OCC = 256;          // can't reach this per tile → stay whole
-const TILE_MAX_AXIS = 8;           // K stays modest (§13.2: ~8×8 on a big stand)
+const TILE_MAX_AXIS = 12;          // §22n: was 8 (§13.2). Finer tiles pin the
+                                   // nearest-edge budget to the dither curve:
+                                   // measured on the lush meadow at 2×, 12×12
+                                   // submits 7.3k fewer instances for +2fps,
+                                   // visible density identical; 16 adds nothing
+                                   // (the residual waste is the curve's own
+                                   // integral, not tile granularity).
 // §22d: tel0s's Air convicted the FAR SEA's instance count outright —
 // far-only density 35% recovered 46→61fps/worst 17 (identical to
 // grass-hidden) while blade-thinning the same tiles bought +3. Distant
@@ -335,8 +341,11 @@ function tileField(f, bladeLod = false) {
   // aspect; the edge cap may then ADD columns/rows a sparse stroke cannot
   // afford — which is exactly what the occupancy floor below refuses
   const afford = Math.max(1, Math.floor(n / threshold));
-  let nx = Math.min(TILE_MAX_AXIS, Math.max(1, Math.round(Math.sqrt(afford * spanX / spanZ))));
-  let nz = Math.min(TILE_MAX_AXIS, Math.max(1, Math.round(afford / nx)));
+  // ?grasstiles=N — §22n diag override: finer tiles pin the nearest-edge
+  // budget (§22h) tighter to the true dither curve, at more draw calls
+  const axisCap = Number(CONFIG.params.get('grasstiles')) || TILE_MAX_AXIS;
+  let nx = Math.min(axisCap, Math.max(1, Math.round(Math.sqrt(afford * spanX / spanZ))));
+  let nz = Math.min(axisCap, Math.max(1, Math.round(afford / nx)));
   nx = Math.max(nx, Math.ceil(spanX / TILE_MAX_EDGE));
   nz = Math.max(nz, Math.ceil(spanZ / TILE_MAX_EDGE));
   if (nx * nz < 4) return false;     // culling can't win on a postage stamp
