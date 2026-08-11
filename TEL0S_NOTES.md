@@ -390,6 +390,21 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22c: the meadow's verdict — blade VOLUME, and the
+  bands were too generous.** tel0s's Air grassDiag on full×lush:
+  pushers off +1fps, wind off +1fps (the physics theory ACQUITTED),
+  far-LOD everywhere 44→61fps / worst 50→17ms — the complete
+  no-grass ceiling. The cost is blades-per-tuft × instances, nothing
+  else. Fix: BLADE_LOD_OUT/IN 60/50 → 20/15 — full 8-blade tufts only
+  in the tile underfoot; everything else draws the 40% index the
+  measurement proved visually free at meadow density (swaps stay
+  pointer-writes, 17b). Local proof against the SAME lush commons:
+  bootjank 48→17 frames >25ms, p95 16.7→8.4ms. Gate: flora 55/55,
+  lightbench 30/30 + measure 120fps, paritybench PASS. Awaiting
+  tel0s's Air retest; the constants are the whole knob if the middle
+  distance wants more lushness, and a third mid-tier index is a small
+  slice on the same machinery if bands alone can't satisfy both eyes
+  and fps.
 - **2026-08-11 — §22b: the sticky-35fps ratchet was the SKY, and it's
   fixed.** tel0s's repro named the sky pane's quality knob — and the
   §18 extraction's "setCloudQuality has no caller anywhere" was

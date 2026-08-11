@@ -256,8 +256,16 @@ const TILE_MAX_AXIS = 8;           // K stays modest (§13.2: ~8×8 on a big sta
 const GRASS_NEAR = 30;             // full density inside this
 const GRASS_FAR = 140;             // invisible beyond this
 const BLADE_LOD_KEEP = 0.4;        // far tiles keep ceil(0.4 × perBunch) blades per tuft (§17b)
-const BLADE_LOD_OUT = 60;          // m — a tile past this swaps to the far-LOD index…
-const BLADE_LOD_IN = 50;           // m — …and only swaps back inside this: the hysteresis
+// §22c: tel0s's Air grassDiag convicted BLADE VOLUME outright — far-LOD
+// everywhere recovered 44→61fps (the full no-grass ceiling; worst 50→17ms)
+// while pushers and wind each bought ONE frame. At meadow density a tuft's
+// individual blades stop being resolvable well before the old 60m, so full
+// blades are for the ring underfoot only: with ~30-45m tiles this keeps the
+// tile you stand in lush and drops everything else to the geometry the
+// measurement proved free. Swaps stay pointer-writes (17b) — churn from the
+// tighter band costs no compiles.
+const BLADE_LOD_OUT = 20;          // m — a tile past this swaps to the far-LOD index…
+const BLADE_LOD_IN = 15;           // m — …and only swaps back inside this: the hysteresis
                                    // band keeps a resident hovering at one boundary from
                                    // flipping geometries every 300ms tick
 const _tv = new THREE.Vector3();
