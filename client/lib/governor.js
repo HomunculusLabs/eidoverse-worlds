@@ -34,7 +34,9 @@
 // one lever per window, so a hitch cannot cascade the whole ladder. A
 // restore needs 5 consecutive smooth seconds. The 26/52 fps gap between
 // the two thresholds is the hysteresis that keeps shed/restore from
-// chattering; the dead band between them counts toward neither.
+// chattering; the dead band between them counts toward neither ladder —
+// but see the cruise lever below (§22j): a sustained cruise inside the
+// band steps pixels alone down, because pixel-bound machines live there.
 //
 // Loading grace (§16.2.D): while the engine is LOADING — warm conductor
 // items queued or running, loadwork lanes busy, promote tails pending —
@@ -47,7 +49,7 @@
 // with no loading work in flight — the restore ladder's own 1Hz fps read,
 // not a second meter.
 
-import { renderer, sun, BASE_PIXEL_RATIO } from './core.js';
+import { renderer, sun, BASE_PIXEL_RATIO, CONFIG } from './core.js';
 import { warmStats } from './warmqueue.js';
 import { laneBusy } from './loadwork.js';
 import { promoteTailPending } from './realize/models.js';
@@ -206,6 +208,27 @@ const LEVERS = [
 let shedDetail = false;
 let grassDial = 1;
 
+// ---- the cruise lever (§22j — reopens §17d with evidence) -------------------
+//
+// The dead band was designed as neutral ground: neither slow enough to shed
+// nor smooth enough to restore, so nothing moves. Then the grasslod A/B on
+// the pixel-bound Air (§22i, drift-controlled) measured the law directly:
+// at 1× render scale EVERY grass shader runs 60fps, at 2× EVERY one runs
+// ~30 — the machine's whole steady state lives inside 26–52, where the
+// ladder never engages, and resolution is the only lever that moves it.
+//
+// So ONE lever — pixels, the least visible and the first to restore — also
+// answers a *sustained* mid-band cruise. Deliberately gentler than the
+// emergency ladder: an 8s streak (vs 3), and a higher floor — 70% of BASE,
+// never the emergency 0.7 absolute (on a 2× panel that floor is 1.4, still
+// a 1.4× effective ratio; ~51% of the pixels for roughly +20fps by the A/B's
+// own render-scale rows). Restore is the shared silent +0.125 above 52fps;
+// its smaller step and the 5s-vs-8s streak asymmetry damp the boundary
+// oscillation. ?cruise=off disables the whole thing (the §17d A/B lever).
+const CRUISE = (CONFIG.params.get('cruise') ?? 'on') !== 'off';
+const CRUISE_PR_FLOOR = Math.max(0.7, BASE_PIXEL_RATIO * 0.7);
+let midFor = 0;
+
 let slowFor = 0;
 let goodFor = 0;
 const history = [];   // recent lever moves, for the debug surface
@@ -252,12 +275,14 @@ export function governPerformance(fps) {
     slowFor = 0;
     goodFor = 0;
     calmFor = 0;
+    midFor = 0;
     return;
   }
   grace = false;
   if (fps > 0 && fps < 26) {
     goodFor = 0;
     calmFor = 0;
+    midFor = 0;
     slowFor++;
     if (slowFor > 2) {
       for (const lever of LEVERS) {
@@ -270,6 +295,7 @@ export function governPerformance(fps) {
     }
   } else if (fps > 52) {
     slowFor = 0;
+    midFor = 0;
     calmFor++;
     if (!calmReached && calmFor > 4) {
       calmReached = true;
@@ -288,16 +314,24 @@ export function governPerformance(fps) {
       }
     }
   } else {
-    // the dead band: neither slow nor provably smooth — all counters
-    // re-earn their streaks
+    // the dead band: neither slow nor provably smooth — the ladder counters
+    // re-earn their streaks. But a SUSTAINED cruise here is the pixel-bound
+    // regime (§22j above): pixels alone may step down, gently, to its own
+    // higher floor.
     slowFor = 0;
     goodFor = 0;
     calmFor = 0;
+    midFor++;
+    if (CRUISE && midFor > 7 && pixelRatio > CRUISE_PR_FLOOR) {
+      setPR(Math.max(CRUISE_PR_FLOOR, pixelRatio - 0.25));
+      midFor = 0;
+      if (history.length < 60) history.push(`− pixels (cruise) @${Math.round(performance.now() / 1000)}s`);
+    }
   }
 }
 
 export const governorDebug = () => ({
-  pixelRatio, slowFor, goodFor,
+  pixelRatio, slowFor, goodFor, midFor,
   grace, calmFor, calm: calmReached,
   casterBudget: getCasterBudget(), slotCap: getSlotCap(),
   emitters: emitterQuality(), grass: getGrassDensity(),

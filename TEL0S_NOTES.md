@@ -390,6 +390,29 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22j: the dead band learns the pixel law.** Session
+  moved onto the Air itself; the ?grasslod three-way A/B ran drift-
+  controlled (off / nodither / full / off-again, one browser, warm-up
+  boot excluded). Verdict: at 1× render scale ALL configs run 60fps;
+  at 2× ALL run ~30 (off 30/30, nodither 29/29, full 31/31, off#2
+  30/29). The §22e-h shader work is FREE (keep it — it buys the
+  seamless look), round 7's 26fps baseline was machine state, and the
+  machine is simply pixel-bound: resolution is the only lever that
+  moves it, and its whole steady state lives inside the 26-52 dead
+  band where the ladder never engages. So §17d reopens WITH evidence
+  (it was closed "for now" before these tables): governor.js gains a
+  cruise lever — after 8 consecutive dead-band seconds, pixels alone
+  steps −0.25 toward a floor of max(0.7, BASE×0.7) (1.4 on a 2×
+  panel); restore is the shared silent +0.125 above 52fps; ?cruise=off
+  disables (the A/B lever). Cruise-probe on the Air: 2→1.75→1.5→1.4
+  in 30s, steady 38-41fps (was 30-31), zero oscillation over 100s.
+  Everything else about §17d stands — no other lever enters the band.
+  Gate: paritybench PASS, lightbench 30/30, bootjank clean.
+  Housekeeping: TEL0S_NOTES.md itself contained a raw NUL byte (§21's
+  whisperKey line) that made every grep against this file silently
+  return nothing — the build.js:1089 footgun's sibling, now spelled
+  out as text.
+
 - **2026-08-11 — §22h: the dither pays its debts.** Round 6 on the Air
   REGRESSED to 40fps — the flagged risk real: dither-killed instances
   paid the full vertex program (submitted 131.5k vs 98.5k, and
@@ -2091,7 +2114,7 @@ step 2). Binding facts:
 - Wire contract = API: close codes 4002-4006, {type:"error"} prose
   substrings, the snapshot field set, present[].pose = settledPose
   (pinned by SOURCE-TEXT regex), geom as a separate post-join message
-  (join stays synchronous), lease message shapes, whisperKey's  .
+  (join stays synchronous), lease message shapes, whisperKey's NUL separator (a raw \x00 byte once lived HERE and made this whole file invisible to grep - the build.js:1089 footgun's sibling).
 - **Source-text gates**: settled-pose-test, whisper-disable-test,
   voice-wiring-test regex server.ts ITSELF — so settledPose + the
   whisper/rtc/typing cases STAY in server.ts; the split extracts around
