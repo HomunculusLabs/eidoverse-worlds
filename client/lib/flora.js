@@ -256,7 +256,11 @@ export function forceBladeLod(mode) { lodForce = mode ?? null; }   // takes effe
 export function setDiagDensityScope(scope) { diagScope = scope ?? null; }
 
 const TILE_MIN_INSTANCES = 2000;   // shrubs/yucca are hundreds — stay whole
-const TILE_MAX_EDGE = 45;          // m — the distance falloff needs granularity
+const TILE_MAX_EDGE = 28;          // m — §22h: the nearest-edge budget over-submits
+                                   // by ~the tile radius's worth of curve, and
+                                   // dither-killed instances aren't free (the Air's
+                                   // round-6 regression) — smaller tiles halve the
+                                   // waste while the dither keeps them invisible
 const TILE_MIN_OCC = 256;          // can't reach this per tile → stay whole
 const TILE_MAX_AXIS = 8;           // K stays modest (§13.2: ~8×8 on a big stand)
 // §22d: tel0s's Air convicted the FAR SEA's instance count outright —
@@ -571,7 +575,11 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       const blades = mod.FLORA_SPECIES?.[st.species]?.archetype === 'blades';
       const f = await mod.createFlora({
         ...st, heightFn,
-        ...(blades ? { lodGrow: { near: GRASS_NEAR, far: GRASS_FAR, cap: 1.7, exp: GRASS_FALL_EXP } } : {}),
+        ...(blades ? { lodGrow: { near: GRASS_NEAR, far: GRASS_FAR, cap: 1.7, exp: GRASS_FALL_EXP,
+          // §22h: continuous blade-level dither (10 verts per blade, both
+          // blade archetypes) fading to the retired per-tile swap's proven
+          // 0.4 ratio — its +12fps on the Air, with no pop
+          vertsPerBlade: 10, bladeKeepFar: 0.4 } } : {}),
       });
       // named so an applied-truth report (#74) can identify the stroke
       f.strokeLabel = `${fields.length}:${st.species ?? 'grass'}`;

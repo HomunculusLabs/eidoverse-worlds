@@ -390,6 +390,21 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22h: the dither pays its debts.** Round 6 on the Air
+  REGRESSED to 40fps — the flagged risk real: dither-killed instances
+  paid the full vertex program (submitted 131.5k vs 98.5k, and
+  far-LOD was worth +12 again = live vertex ALU binding). Corrections
+  in the patch file: (1) the alive test hoists and the dynamics
+  (wind×3 + gust fetch + pusher loop) run inside If(alive) — dead
+  vertices near-free (emission byte-identical without lodGrow.exp);
+  (2) blade-level dither via vertexIndex (10-vert runs, per-instance
+  hash, fading to the retired swap's proven 0.4) — the +12 recovered
+  continuously; (3) TILE_MAX_EDGE 45→28 — discovered INERT for the
+  lush meadow (the 8×8 TILE_MAX_AXIS already binds at ~11m tiles;
+  helps mid-size fields only; the ~30% budget waste stands but its
+  PRICE is what (1) cut). Gate: lightbench 30/30 + measure 120fps
+  (the TSL compiles), bootjank clean, grass-quality 57/57,
+  paritybench PASS. Round 7 decides.
 - **2026-08-11 — §22g (tel0s's idea): upstream-patched/ — the forks
   come home.** Deliberate upstream redos now live IN this repo:
   upstream-patched/<rel> shadows the same rel in eidoverse-video via

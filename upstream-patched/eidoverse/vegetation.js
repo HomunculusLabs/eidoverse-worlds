@@ -22,6 +22,7 @@ const {
     positionLocal, attribute, uniform, uniformArray, texture: texNode,
     float, vec2, vec3, vec4, sin, cos, dot, normalize, smoothstep, max: tmax,
     pow, saturate, step, fract, positionWorld, cameraPosition, Fn, tanh, luminance, min: tmin,
+    If, vertexIndex,
     normalLocal, transformNormalToView, uv: uvNode, mix,
 } = T3;
 
@@ -842,16 +843,33 @@ export async function createFlora(opts = {}) {
         // Without the opt, grow ≡ 1: byte-identical behavior everywhere.
         const lg = o.lodGrow;
         let grow = float(1);
+        let aliveCond = null;   // bool node when the dither is active — gates
+                                // the expensive dynamics below (§22h: a
+                                // zero-scaled instance skips no raster work
+                                // but WAS paying the full vertex program)
         if (lg) {
             const dCam = aPR.xz.sub(cameraPosition.xz).length();
-            grow = mix(float(1), float(lg.cap ?? 1.7),
-                smoothstep(float(lg.near ?? 15), float(lg.far ?? 90), dCam));
+            const t01 = smoothstep(float(lg.near ?? 15), float(lg.far ?? 90), dCam);
+            grow = mix(float(1), float(lg.cap ?? 1.7), t01);
             if (lg.exp != null) {
                 const keep = pow(saturate(
                     float(lg.far ?? 90).sub(dCam)
                         .div(float((lg.far ?? 90) - (lg.near ?? 15)))), float(lg.exp));
                 const rank = fract(aPh.x.mul(0.15915494309189535));   // 1/2π: phase → [0,1) rank
+                aliveCond = rank.lessThanEqual(keep);
                 grow = grow.mul(step(rank, keep));
+                if (lg.vertsPerBlade) {
+                    // §22h: BLADE-level dither — the retired per-tile geometry
+                    // swap, continuous: each blade (a contiguous run of
+                    // vertsPerBlade vertices) fades by the same distance law,
+                    // hashed per instance so different tufts lose different
+                    // blades. Recovers the swap's measured win with no pop.
+                    const bladeId = float(vertexIndex).div(float(lg.vertsPerBlade)).floor();
+                    const bKeep = mix(float(1), float(lg.bladeKeepFar ?? 0.4), t01);
+                    const bRank = fract(bladeId.mul(0.6180339887).add(rank.mul(7.13)));
+                    aliveCond = aliveCond.and(bRank.lessThanEqual(bKeep));
+                    grow = grow.mul(step(bRank, bKeep));
+                }
             }
         }
         let p = positionLocal.mul(vec3(aSV.x, aSV.y, aSV.x).mul(grow)).toVar();
@@ -867,6 +885,13 @@ export async function createFlora(opts = {}) {
         const world = p.add(aPR.xyz).toVar();
 
         const hF = aHgt, h2 = hF.mul(hF);
+        // §22h: the dynamics (three wind layers + gust fetch + the pusher
+        // loop) are the vertex program's expensive tail — a dither-killed
+        // vertex must not pay them. Everything below writes into `disp`;
+        // with the dither active it runs inside If(alive), else unguarded
+        // (byte-identical emission for hosts without lodGrow.exp).
+        const disp = vec2(0, 0).toVar();
+        const buildDynamics = () => {
         // layer 1 — global sway
         const gPhase = dot(world.xz, uWindDir).mul(0.5).add(uT.mul(1.2));
         const gSway = uWindDir.mul(sin(gPhase)).mul(uBase).toVar();
@@ -914,7 +939,9 @@ export async function createFlora(opts = {}) {
         // push yields the WHOLE plant (roots 30%, tips 100%) — pure h² left
         // low branches pinned through a character's legs mid-crossing
         const pushH = hF.mul(0.7).add(0.3);
-        const disp = windXZ.add(pushCapped.mul(pushH));
+        disp.assign(windXZ.add(pushCapped.mul(pushH)));
+        };   // end buildDynamics (§22h)
+        if (aliveCond) If(aliveCond, buildDynamics); else buildDynamics();
         return world.add(vec3(disp.x, float(0), disp.y));
     })();
 
