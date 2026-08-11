@@ -432,9 +432,13 @@ function tileField(f, bladeLod = false) {
   const applyTiles = () => {
     for (const t of tiles) {
       const d = _tv.copy(t.boundingSphere.center).distanceTo(camera.position);
+      // exponent 2.5 (§22e — was 2): the shader's grow now covers for the
+      // removed instances, so the count curve can bite harder: d=40 → 0.33,
+      // d=60 → 0.08. Round-4 diag: near AND far rings each held 61fps at
+      // 0.35, so this is inside the measured-safe envelope on both ends.
       const fall = d >= GRASS_FAR ? 0
         : d <= GRASS_NEAR ? 1
-          : (1 - (d - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR)) ** 2;
+          : (1 - (d - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR)) ** 2.5;
       const scope = diagScope ? (d < BLADE_LOD_OUT ? diagScope.near : diagScope.far) : 1;
       t.count = densityCount(t.userData.fullCount, eff * fall * scope);
       t.visible = t.count > 0;
@@ -541,7 +545,16 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
   const fields = [];
   try {
     for (const st of strokes) {
-      const f = await mod.createFlora({ ...st, heightFn });
+      // §22e: blades-archetype strokes are the tileable ones the count
+      // falloff cuts — the shader's density-compensation grow (upstream
+      // opts.lodGrow) makes the survivors cover for the removed: constants
+      // MATCH the falloff's so the two halves of the trade stay coupled.
+      // Shrubs/yucca are untiled (no falloff) and get no grow.
+      const blades = mod.FLORA_SPECIES?.[st.species]?.archetype === 'blades';
+      const f = await mod.createFlora({
+        ...st, heightFn,
+        ...(blades ? { lodGrow: { near: GRASS_NEAR, far: GRASS_FAR, cap: 1.7 } } : {}),
+      });
       // named so an applied-truth report (#74) can identify the stroke
       f.strokeLabel = `${fields.length}:${st.species ?? 'grass'}`;
       wireDensityDial(f);

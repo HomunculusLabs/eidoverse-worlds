@@ -390,6 +390,28 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22e: density-compensation grow — appearance restored
+  in the cheap currency, savings kept in the expensive one.** tel0s's
+  round-4 diag: EVERY lever now recovers to the 61fps ceiling (the
+  residual ~2.4ms is thin enough that anything clears it) — and the
+  22d curve "reads a little too sparse". The classic fix, both asks at
+  once: the count falloff bites harder (exponent 2→2.5; round 4
+  measured BOTH rings safe at 0.35) while the upstream grass shader
+  grows the SURVIVORS with camera distance (opts.lodGrow: smoothstep
+  GRASS_NEAR→FAR, cap 1.7 — area ∝ scale², compensating ~3×
+  thinning). Safe by tel0s's own data: blade-thinning (an area cut)
+  bought +3fps in round 3, so area is NOT what the Air pays for —
+  instances are; restoring coverage via scale gives back almost none
+  of the win. The vegetation.js patch is opts-gated (no lodGrow →
+  grow ≡ 1, byte-identical for every other host) and committed in the
+  eidoverse-video repo LOCALLY — tel0s pushes that repo when ready;
+  it's PR material for Skye with the rest. flora passes lodGrow only
+  for blades-archetype strokes (the tiled ones the falloff cuts;
+  shrubs/yucca have no falloff and get no grow), constants shared so
+  the trade stays coupled. Gate: flora 55/55, grass-quality 57/57,
+  bootjank clean (lush commons drawn 106.5k→98.5k), lightbench 30/30
+  + measure 120fps no page errors, paritybench PASS. Awaiting the
+  Air's fifth table + eyes.
 - **2026-08-11 — §22d: the far sea convicted — the falloff curve was
   inert on human-scale fields.** Three Air diag rounds converged:
   round 1 (half-window confound — the inspector pane halved the
