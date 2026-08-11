@@ -390,6 +390,35 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22m (branch grass-opaque-blades): Sol's meadow, in
+  geometry.** tel0s green-lit the Tsushima-lineage rewrite with "keep
+  it close to Sol's art" as the constraint — and the codebase met us
+  halfway: bunchGeometry was already one card per blade with loop
+  widths fitted to the atlas art's measured envelope (_fit.json), so
+  the opaque blade IS the fitted strip (the envelope already tapers to
+  the art's tip), and the material IS the existing no-maps path
+  (alphaTest 0, attribute('color'), cheap backlit) once maps aren't
+  loaded. New: sampleBladePalette bakes each atlas column into a
+  root→tip vertex-color ladder (alpha-weighted, sRGB→linear, per-blade
+  hue jitter); ladder gains calibrated against the card render by
+  screenshot means (R 1.00 G 0.97 B 1.10 final). No alpha test → the
+  TBDR's hidden-surface removal eats the meadow's overdraw.
+  ?grassgeo=cards restores the atlas cards (A/B in one boot).
+  Bugs found on the way, both instructive: (1) the flora tiler copies
+  a NAMED list of shared attributes — 'color' wasn't on it and missing
+  attribute bindings render BLACK (fixed in tile + far-twin lists);
+  (2) since the §22l sweep, primeFiles negotiates KTX2 bytes under PNG
+  names, so the palette sampler got undecodable bytes and silently
+  fell back — THREE screenshot rounds compared cards to cards (the
+  probe now refetches raw art when primed bytes aren't PNG). Also: a
+  0.55 partial-normal experiment turned the meadow charcoal —
+  side-facing normals see neither sun nor sky; Sol's up-normal trick
+  is the meadow's brightness (specular veil muted at the material:
+  roughness ×1.35, specularIntensity 0.35). Measured, drift-controlled
+  2× spawn view: cards 40-41 → opaque 49±1 (the saga's biggest single
+  lever). 1× vsync-caps. Gate: parity PASS, lightbench 30/30, bootjank
+  clean. AWAITING tel0s's eye before merge.
+
 - **2026-08-11 — §22l: the fragment diet + the sweep that never ran.**
   A full levers audit (Fable fork, GPU Gems ch.7 lineage vs the actual
   material) found the bill is fragment-side: every meadow pixel paid 4
