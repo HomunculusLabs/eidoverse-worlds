@@ -444,7 +444,9 @@ fixture/tool matrix.
   per-GLB texture phases COLLAPSED — CRT textures 10ms (the Mac paid
   1221ms for the raw original). Encoder for this box: a portable
   toktx v4.4.2 (7z-extracted NSIS, scratchpad, no install); prod Mac:
-  brew install ktx. Gate: 5/5 transcodes + ktx2check, lightbench 30/30
+  pkgutil-extract per docs/ktx2-encoder.md (brew has no formula — a
+  correction; the pkg's Rosetta demand is an installer-metadata bug over
+  a fully arm64 payload). Gate: 5/5 transcodes + ktx2check, lightbench 30/30
   (the cloud-easing check now samples up to 5 rAF pairs — a loaded
   headless box batches rAF callbacks and a single pair can read dt=0),
   paritybench PASS (variants realized live in bootjank's browser).
@@ -2180,7 +2182,10 @@ encoder gap (task record 2026-08-10).
 **Encoder** (the one hard gap): KTX-Software's toktx/ktx CLI, probed
 KTX2_TOKTX env → toktx → ktx on PATH; absent = optimize exit code 3 =
 env-skip, never a .failed marker (the sharp-degrade pattern,
-optimize.ts:50-59). Prod Mac: `brew install ktx`. Dev box: a portable
+optimize.ts:50-59). Prod Mac: pkgutil-extract the arm64 pkg (docs/ktx2-encoder.md —
+brew has no formula, and the pkg installer falsely demands Rosetta:
+its metadata lacks hostArchitectures while the payload is pure arm64).
+Dev box: a portable
 extraction (7z on the NSIS installer) pointed at by env — no install.
 
 **Server (20a)**: optimize.ts gains a --ktx2 mode: full existing diet

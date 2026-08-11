@@ -66,7 +66,7 @@ async function pumpOptimize() {
         // (that would permanently skip every model authored before
         // KTX-Software lands — the sharp-degrade doctrine). And no point
         // grinding the rest of the sweep against the same missing binary.
-        console.log("[ktx2] no encoder — brew install ktx / set KTX2_TOKTX; variants skipped this boot");
+        console.log("[ktx2] no encoder — set KTX2_TOKTX or put toktx/ktx on PATH (docs/ktx2-encoder.md); variants skipped this boot");
         ktx2Skip = true;
         for (let i = optQueue.length - 1; i >= 0; i--) if (optQueue[i].mode) optQueue.splice(i, 1);
       } else {

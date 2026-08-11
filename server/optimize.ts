@@ -574,7 +574,7 @@ if (import.meta.main) {
   }
   let encoder: string | null = null;
   if (ktx2Mode && !(encoder = findKtx2Encoder())) {
-    console.error("[optimize] ktx2: no encoder — brew install ktx (so toktx/ktx is on PATH) or set KTX2_TOKTX");
+    console.error("[optimize] ktx2: no encoder — set KTX2_TOKTX or put toktx/ktx on PATH (docs/ktx2-encoder.md)");
     process.exit(3);
   }
   try {
