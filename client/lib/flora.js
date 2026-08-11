@@ -581,13 +581,18 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       //   ?grasslod=nodither  grow only (the §22e shader, no rank/blade dither)
       //   (default)           the full §22h shader
       const lodMode = CONFIG.params.get('grasslod') ?? 'full';
-      const blades = mod.FLORA_SPECIES?.[st.species]?.archetype === 'blades'
-        && lodMode !== 'off';
+      // §22l: the blades fragment diet (upstream opts.fastShade — one albedo
+      // sample; no relief/rough/SSS fetches a 4cm blade could never show).
+      // ?grassshade=full restores upstream's four-fetch material for A/B.
+      const shadeMode = CONFIG.params.get('grassshade') ?? 'fast';
+      const isBladeSpecies = mod.FLORA_SPECIES?.[st.species]?.archetype === 'blades';
+      const blades = isBladeSpecies && lodMode !== 'off';
       const f = await mod.createFlora({
         ...st, heightFn,
         ...(blades ? { lodGrow: { near: GRASS_NEAR, far: GRASS_FAR, cap: 1.7,
           ...(lodMode !== 'nodither' ? { exp: GRASS_FALL_EXP, vertsPerBlade: 10, bladeKeepFar: 0.4 } : {}),
         } } : {}),
+        ...(isBladeSpecies && shadeMode === 'fast' ? { fastShade: true } : {}),
       });
       // named so an applied-truth report (#74) can identify the stroke
       f.strokeLabel = `${fields.length}:${st.species ?? 'grass'}`;

@@ -86,7 +86,14 @@ export async function optimizeGlb(bytes: Uint8Array): Promise<Uint8Array> {
 export function findKtx2Encoder(): string | null {
   const env = process.env.KTX2_TOKTX;
   if (env && existsSync(env)) return env;
-  return Bun.which("toktx") ?? Bun.which("ktx");
+  const which = Bun.which("toktx") ?? Bun.which("ktx");
+  if (which) return which;
+  // the docs/ktx2-encoder.md recipe lands here (bin+lib siblings for
+  // @rpath) — a PATH-less install must not silently exit-3 the sweep
+  const home = process.env.HOME ?? process.env.USERPROFILE ?? "";
+  for (const p of [`${home}/.local/ktx/bin/toktx`, `${home}/.local/ktx/bin/ktx`])
+    if (home && existsSync(p)) return p;
+  return null;
 }
 
 // baseColor/emissive are the eye-facing sRGB slots — ETC1S block noise hides

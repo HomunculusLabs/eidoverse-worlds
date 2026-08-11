@@ -390,6 +390,31 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22l: the fragment diet + the sweep that never ran.**
+  A full levers audit (Fable fork, GPU Gems ch.7 lineage vs the actual
+  material) found the bill is fragment-side: every meadow pixel paid 4
+  texture fetches (albedo/normal/rough/transl) + per-light SSS on
+  MeshSSSNodeMaterial + alphaTest discard (defeats TBDR HSR) — and the
+  KTX2 image sweep had NEVER run on the Air: tel0s's pkgutil-expanded
+  KTX sat in ~/Downloads, never on PATH, so §20d exit-3-skipped every
+  boot and the atlases served raw RGBA. Fixes: (1) encoder assembled at
+  ~/.local/ktx (bin+lib siblings), findKtx2Encoder now probes that
+  docs-recipe path as a fallback — a PATH-less install can't silently
+  starve the sweep again; boot sweep encoded 93 variants (meadow albedo
+  4.9×, transl 5.7×). (2) upstream-patched opts.fastShade (blades
+  default via flora.js, ?grassshade=full = upstream's exact material):
+  MeshStandardNodeMaterial, ONE shared albedo sample (color+opacity),
+  no relief/rough fetches, the already-authored cheap backlit term
+  instead of per-light SSS, albedo aniso 4→1. Byte-identical without
+  the opt. Measured (drift-controlled, 2×, spawn view): 31 (morning
+  §22h baseline) → 36-39 (ktx2 alone) → 41-42 (+fastShade); at 1× the
+  meadow now vsync-caps at 61. Screenshot pair eyeballed: same blade
+  character, no visible relief loss. Audit verdict recorded: full
+  opaque-blade rewrite (Tsushima lineage, no discard → TBDR HSR eats
+  the overdraw) is the L-sized root fix IF this lands short — needs
+  tel0s's art-direction call. Gate: parity PASS, lightbench 30/30,
+  bootjank clean.
+
 - **2026-08-11 — §22k: the resident takes the pixel wheel.** The freeze
   tel0s reported after §22j turned out to be Zen/Firefox, not Chrome —
   hunt closed (headless+headed Chrome soaks had already cleared the

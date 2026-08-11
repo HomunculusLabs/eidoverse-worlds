@@ -805,7 +805,20 @@ export async function createFlora(opts = {}) {
 
     // ── material ────────────────────────────────────────────────────────────
     const isBlades = spec.archetype === 'blades';
-    const hasTransl = !!(maps && maps.transl);
+    // opts.fastShade (eidoverse-worlds §22l): the blades fragment diet. A
+    // 4cm blade at meadow density cannot show normal-map relief or per-pixel
+    // roughness, and per-light SSS on it reads the same as the cheap backlit
+    // term below — but at 2× retina the meadow's fragments pay all four
+    // fetches (albedo/normal/rough/transl) plus the SSS lobe per light.
+    // fastShade collapses that to ONE albedo sample on MeshStandardNodeMaterial.
+    // Off (the default), everything below is byte-identical to upstream.
+    const fast = !!o.fastShade;
+    // fastShade also drops albedo anisotropy 4 → 1: the multi-tap grazing-angle
+    // filter runs exactly where blades are subpixel; the softening reads as
+    // depth haze. (Sampler state on the shared texture — acceptable because
+    // the atlas is species-specific and the kill-switch boots a fresh page.)
+    if (fast && maps && maps.albedo) maps.albedo.anisotropy = 1;
+    const hasTransl = !!(maps && maps.transl) && !fast;
     const MatClass = hasTransl ? T3.MeshSSSNodeMaterial : T3.MeshStandardNodeMaterial;
     const mat = new MatClass({
         side: T3.DoubleSide, metalness: 0, roughness: spec.rough,
@@ -959,16 +972,23 @@ export async function createFlora(opts = {}) {
     // sprays — a LIGHT-GATHER direction); detail = the tangent map's deviation
     // from the interpolated surface normal, decoded in the true geometric
     // frame. base + delta keeps the volume shading AND the surface relief.
-    if (maps && maps.normal) {
+    if (maps && maps.normal && !fast) {
         const relief = T3.normalMap(texNode(maps.normal)).sub(T3.normalView);
         mat.normalNode = normalize(rotNormal.add(relief.mul(0.85)));
     } else {
+        // fastShade: the blended-up gather normal alone — relief on a blade
+        // this thin was never visible, only paid for
         mat.normalNode = rotNormal;
     }
 
     // colour: sheet albedo (or baked blade vertex colour) × per-instance shade
     const shade = float(1.0).add(aSV.w.sub(0.5).mul(0.15));
-    let albRGB = maps ? texNode(maps.albedo).rgb : attribute('color');
+    // fastShade shares ONE albedo sample between color and opacity — the
+    // two independent texNode() calls below may or may not CSE in codegen;
+    // sharing the node makes the single fetch a certainty
+    const albSample = (fast && maps) ? texNode(maps.albedo) : null;
+    let albRGB = albSample ? albSample.rgb
+        : maps ? texNode(maps.albedo).rgb : attribute('color');
     if (spec.leafTint) albRGB = albRGB.mul(vec3(...spec.leafTint));
     // recolor mode: hue from the target, detail from the atlas luminance —
     // the atlas's own hue is fully discarded (multiply can't unmake green)
@@ -985,8 +1005,9 @@ export async function createFlora(opts = {}) {
     }
     mat.colorNode = albRGB.mul(shade);
     if (maps) {
-        mat.opacityNode = texNode(maps.albedo).a;
-        if (maps.rough) mat.roughnessNode = texNode(maps.rough).r.mul(spec.rough);
+        mat.opacityNode = albSample ? albSample.a : texNode(maps.albedo).a;
+        if (maps.rough && !fast) mat.roughnessNode = texNode(maps.rough).r.mul(spec.rough);
+        // fastShade: constant material.roughness (spec.rough) already set above
     }
 
     // backlit translucency: light coming from behind glows through the sheet
