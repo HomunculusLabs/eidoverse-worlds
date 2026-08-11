@@ -243,11 +243,15 @@ function wireFieldCulling(field) {
 // counts: the draw's instanceCount comes from live object.count
 // (three.webgpu.js:29971-29973), which never exceeds them.
 
-// §22 grassdiag toggles — normal operation leaves both alone
+// §22 grassdiag toggles — normal operation leaves all of these alone
 let pushersFrozen = false;
 let lodForce = null;               // null | 'near' | 'far'
+let diagScope = null;              // {near, far} density multipliers by LOD band
 export function freezePushers(on) { pushersFrozen = !!on; }
 export function forceBladeLod(mode) { lodForce = mode ?? null; }   // takes effect within one 300ms tile tick
+/** §22c: scope a density cut to the near ring or the far sea — the spatial
+ *  discriminator (WHERE does a density win come from?). null restores. */
+export function setDiagDensityScope(scope) { diagScope = scope ?? null; }
 
 const TILE_MIN_INSTANCES = 2000;   // shrubs/yucca are hundreds — stay whole
 const TILE_MAX_EDGE = 45;          // m — the distance falloff needs granularity
@@ -423,7 +427,8 @@ function tileField(f, bladeLod = false) {
       const fall = d >= GRASS_FAR ? 0
         : d <= GRASS_NEAR ? 1
           : 1 - 0.75 * ((d - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR));
-      t.count = densityCount(t.userData.fullCount, eff * fall);
+      const scope = diagScope ? (d < BLADE_LOD_OUT ? diagScope.near : diagScope.far) : 1;
+      t.count = densityCount(t.userData.fullCount, eff * fall * scope);
       t.visible = t.count > 0;
       // §17b — blade LOD rides the same distance one band later, with
       // hysteresis. The swap is a pointer write, never a compile: the live

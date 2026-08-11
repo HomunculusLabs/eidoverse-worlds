@@ -26,7 +26,8 @@
 // no-grass fps names the dominant cost.
 
 import { perf } from './perf.js';
-import { freezePushers, forceBladeLod } from './flora.js';
+import { renderer } from './core.js';
+import { freezePushers, forceBladeLod, setDiagDensityScope } from './flora.js';
 import { getGrassField, getGrassDensity } from './terrain.js';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -53,6 +54,7 @@ export async function grassDiag({ secsPer = 4 } = {}) {
   const autos = globalThis._autoParticleSystems;
   const savedAutos = autos ? [...autos] : null;
   const savedDensity = getGrassDensity();
+  const savedPr = renderer.getPixelRatio();
   const out = [];
   const run = async (name, on, off) => {
     on();
@@ -69,12 +71,23 @@ export async function grassDiag({ secsPer = 4 } = {}) {
     await run('blades far-LOD everywhere', () => forceBladeLod('far'), () => forceBladeLod(null));
     await run('density 35%', () => field.setDensity?.(0.35),
       () => field.setDensity?.(savedDensity));
+    // §22c second round — the full-window Air run acquitted blade volume and
+    // convicted something density-shaped: these three split WHERE and WHAT.
+    await run('near ring only @35%', () => setDiagDensityScope({ near: 0.35, far: 1 }),
+      () => setDiagDensityScope(null));
+    await run('far sea only @35%', () => setDiagDensityScope({ near: 1, far: 0.35 }),
+      () => setDiagDensityScope(null));
+    await run(`render scale 80% (pr ${(savedPr * 0.8).toFixed(2)})`,
+      () => renderer.setPixelRatio(savedPr * 0.8),
+      () => renderer.setPixelRatio(savedPr));
     await run('grass hidden', () => { field.mesh.visible = false; },
       () => { field.mesh.visible = true; });
   } finally {
     // belt & braces — a throw mid-phase must not leave the world frozen
     freezePushers(false);
     forceBladeLod(null);
+    setDiagDensityScope(null);
+    renderer.setPixelRatio(savedPr);
     if (savedAutos && autos && autos.length !== savedAutos.length) {
       autos.length = 0; autos.push(...savedAutos);
     }
