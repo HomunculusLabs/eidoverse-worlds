@@ -390,6 +390,24 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22d: the far sea convicted — the falloff curve was
+  inert on human-scale fields.** Three Air diag rounds converged:
+  round 1 (half-window confound — the inspector pane halved the
+  canvas) pointed at blade volume; round 2 at full window acquitted
+  blades and convicted something density-shaped; round 3's spatial
+  split was unambiguous — far-sea-only @35% recovered 46→61fps/worst
+  17 IDENTICAL to grass-hidden, near-ring-only 53, blade-thinning +3,
+  render-scale-80% 59. Distant tufts are subpixel cards: near-pure
+  per-instance overhead + 2×2 quad-overshading — at distance the
+  meadow wants FEWER, not thinner. The old linear 30→140m falloff
+  granted ~0.8 to every tile of a 90×80 field (inert by design range);
+  now quadratic 15→90m (d=40 → 0.44, d=60 → 0.16). Lush commons drawn
+  150k→106.5k on the bench camera. grassdiag grew the discriminating
+  phases (near/far density scope, render scale) that found it. Gate:
+  flora 55/55, grass-quality 57/57, bootjank clean, lightbench 30/30 +
+  measure 120fps, paritybench PASS. Awaiting the Air's fps + eyes;
+  the tuning surface is GRASS_NEAR/FAR + the exponent. The
+  render-scale-59 datapoint keeps the 17d dead-band question warm.
 - **2026-08-11 — §22c: the meadow's verdict — blade VOLUME, and the
   bands were too generous.** tel0s's Air grassDiag on full×lush:
   pushers off +1fps, wind off +1fps (the physics theory ACQUITTED),

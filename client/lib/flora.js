@@ -257,8 +257,16 @@ const TILE_MIN_INSTANCES = 2000;   // shrubs/yucca are hundreds — stay whole
 const TILE_MAX_EDGE = 45;          // m — the distance falloff needs granularity
 const TILE_MIN_OCC = 256;          // can't reach this per tile → stay whole
 const TILE_MAX_AXIS = 8;           // K stays modest (§13.2: ~8×8 on a big stand)
-const GRASS_NEAR = 30;             // full density inside this
-const GRASS_FAR = 140;             // invisible beyond this
+// §22d: tel0s's Air convicted the FAR SEA's instance count outright —
+// far-only density 35% recovered 46→61fps/worst 17 (identical to
+// grass-hidden) while blade-thinning the same tiles bought +3. Distant
+// tufts are subpixel cards: near-pure per-instance overhead and 2×2
+// quad-overshading waste. At distance the meadow wants FEWER, not
+// thinner. The old linear 30→140m curve was inert on a field that fits
+// inside ~60m (tile centers all scored ~0.8) — quadratic, starting
+// closer, done sooner: d=40m → ~0.44, d=60m → ~0.16.
+const GRASS_NEAR = 15;             // full density inside this
+const GRASS_FAR = 90;              // invisible beyond this
 const BLADE_LOD_KEEP = 0.4;        // far tiles keep ceil(0.4 × perBunch) blades per tuft (§17b)
 // §22c: tel0s's Air grassDiag convicted BLADE VOLUME outright — far-LOD
 // everywhere recovered 44→61fps (the full no-grass ceiling; worst 50→17ms)
@@ -426,7 +434,7 @@ function tileField(f, bladeLod = false) {
       const d = _tv.copy(t.boundingSphere.center).distanceTo(camera.position);
       const fall = d >= GRASS_FAR ? 0
         : d <= GRASS_NEAR ? 1
-          : 1 - 0.75 * ((d - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR));
+          : (1 - (d - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR)) ** 2;
       const scope = diagScope ? (d < BLADE_LOD_OUT ? diagScope.near : diagScope.far) : 1;
       t.count = densityCount(t.userData.fullCount, eff * fall * scope);
       t.visible = t.count > 0;
