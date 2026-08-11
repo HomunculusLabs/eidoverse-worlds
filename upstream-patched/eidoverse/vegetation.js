@@ -176,6 +176,64 @@ async function loadMap(name, { srgb = false } = {}) {
     } catch { return null; }
 }
 
+// ── opaque-blade palette (eidoverse-worlds §22m) ─────────────────────────────
+// The Tsushima-lineage trade: real tapered blade geometry, ZERO alpha test —
+// with Sol's art still the source of truth. The atlas columns are sampled at
+// build time into per-column root→tip color ladders (alpha-weighted, sRGB →
+// linear); bunchGeometry bakes them into vertex colors and the fitted
+// envelope (_fit.json) keeps each column's silhouette. At draw time there is
+// no fetch and no discard, so the opaque pass depth-rejects occluded meadow
+// fragments for free — the overdraw that alpha test forced the TBDR to shade.
+async function sampleBladePalette(name, cols, loops) {
+    try {
+        let bytes = await Deno.readFile(ASSET_DIR + name);
+        if (!(bytes[0] === 0x89 && bytes[1] === 0x50) && typeof fetch === 'function') {
+            // the eidoverse-worlds host primes NEGOTIATED bytes under the PNG
+            // name (§20d KTX2 file-layer negotiation) — GPU-native, but not
+            // decodable art. The palette needs the raw PNG; ask the wire
+            // directly. On a real-file host the primed bytes ARE the PNG and
+            // this branch never runs.
+            bytes = new Uint8Array(await (await fetch('/library/' + ASSET_DIR + name)).arrayBuffer());
+        }
+        if (!(bytes[0] === 0x89 && bytes[1] === 0x50)) return null;   // PNG bytes only
+        const bmp = await createImageBitmap(new Blob([bytes]));
+        const cv = new OffscreenCanvas(bmp.width, bmp.height);
+        const cx = cv.getContext('2d', { willReadFrequently: true });
+        cx.drawImage(bmp, 0, 0);
+        const { data } = cx.getImageData(0, 0, bmp.width, bmp.height);
+        const colW = bmp.width / cols;
+        const lin = (v) => ((v /= 255), v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+        const pal = [];
+        for (let c = 0; c < cols; c++) {
+            const ladder = [];
+            for (let lp = 0; lp <= loops; lp++) {
+                const t = lp / loops;
+                // geometry t=0 is the blade ROOT; three flips PNGs (uv v=0 =
+                // image bottom), so the root ladder rung reads the bottom rows
+                const rowC = Math.round((1 - t) * (bmp.height - 1));
+                let r = 0, g = 0, b = 0, w = 0;
+                for (let dy = -6; dy <= 6; dy++) {
+                    const y = Math.min(bmp.height - 1, Math.max(0, rowC + dy));
+                    for (let x = Math.floor(c * colW); x < Math.floor((c + 1) * colW); x++) {
+                        const i = (y * bmp.width + x) * 4, a = data[i + 3] / 255;
+                        if (a < 0.5) continue;
+                        r += lin(data[i]) * a; g += lin(data[i + 1]) * a; b += lin(data[i + 2]) * a; w += a;
+                    }
+                }
+                // an empty band (past the art's tip) inherits the rung below.
+                // The small linear gains are CALIBRATED against Sol's card
+                // render: same meadow band, screenshot means, one iteration —
+                // flat vertex color loses the atlas's dark micro-structure,
+                // and this puts the aggregate back on Sol's numbers.
+                ladder.push(w ? [(r / w) * 0.91, (g / w) * 0.86, (b / w) * 1.28]
+                    : (ladder[lp - 1] ?? [0.05, 0.12, 0.03]));
+            }
+            pal.push(ladder);
+        }
+        return pal;
+    } catch { return null; }   // no palette → caller keeps the atlas-card path
+}
+
 async function loadSpeciesMaps(base) {
     const [albedo, normal, rough, transl] = await Promise.all([
         loadMap(`${base}_albedo.png`, { srgb: true }),
@@ -288,11 +346,11 @@ function tuftGeometry(spec, rng) {
 // blade atlas column — and the card's loop widths/centres are FITTED to the
 // measured envelope of that column's art (close, not exact: no tip modeling)
 // so the empty-alpha margin, and with it the overdraw, mostly disappears.
-function bunchGeometry(spec, rng, fit) {
+function bunchGeometry(spec, rng, fit, palette) {
     const { perBunch, bunchR, h, w, lean } = spec.blades;
     const COLS = 8;
     const cardW = w * 2;                  // full card width the atlas column maps to
-    const pos = [], aH = [], uv = [], idx = [];
+    const pos = [], aH = [], uv = [], idx = [], col = [];
     let vb = 0;
     const LOOPS = 4;                      // horizontal segments carry the bend (4: smoother arcs AND tighter UV tracking of curved atlas blades — instanced, so the cost is per-blade-geometry only)
     for (let b = 0; b < perBunch; b++) {
@@ -304,6 +362,11 @@ function bunchGeometry(spec, rng, fit) {
         const cr = Math.cos(roll), sr = Math.sin(roll);
         const c = Math.floor(rng() * COLS);
         const bands = fit ? fit[c] : null;
+        // §22m opaque mode: this blade's color ladder + per-blade jitter —
+        // independent per channel, so tufts drift slightly in hue the way
+        // the atlas's own blades do, not just in brightness
+        const lad = palette ? palette[c] : null;
+        const jr = 0.9 + rng() * 0.2, jg = 0.9 + rng() * 0.2, jb = 0.9 + rng() * 0.2;
         const s0 = vb;
         for (let lp = 0; lp <= LOOPS; lp++) {
             const t = lp / LOOPS;
@@ -312,12 +375,19 @@ function bunchGeometry(spec, rng, fit) {
             const artC = fcx * bw;                        // follow the art's curve
             const px = bx + cr * (bend + artC), pz = bz + sr * (bend + artC);
             const py = t * bh;
-            const hwW = fhw * bw;                         // fitted half-width
+            // opaque mode: the strip IS the silhouette — the fitted envelope
+            // already tapers to a near-point tip (the art's), so the only
+            // guard is a tiny floor at the top loop against a zero-area sliver
+            const hwW = (palette ? Math.max(fhw, lp === LOOPS ? 0.012 : fhw) : fhw) * bw;
             pos.push(px - sr * hwW, py, pz + cr * hwW);
             pos.push(px + sr * hwW, py, pz - cr * hwW);
             // UVs sample exactly the strip of art the fitted card covers
             uv.push((c + 0.5 + fcx - fhw) / COLS, t, (c + 0.5 + fcx + fhw) / COLS, t);
             aH.push(t, t);
+            if (lad) {
+                const [lr, lg, lb] = lad[lp];
+                col.push(lr * jr, lg * jg, lb * jb, lr * jr, lg * jg, lb * jb);
+            }
             vb += 2;
         }
         for (let lp = 0; lp < LOOPS; lp++) {
@@ -329,8 +399,13 @@ function bunchGeometry(spec, rng, fit) {
     g.setAttribute('position', new T3.Float32BufferAttribute(pos, 3));
     g.setAttribute('aH', new T3.Float32BufferAttribute(aH, 1));
     g.setAttribute('uv', new T3.Float32BufferAttribute(uv, 2));
+    if (col.length) g.setAttribute('color', new T3.Float32BufferAttribute(col, 3));
     g.setIndex(idx);
     g.computeVertexNormals();
+    // (§22m note: a 0.55 partial-normal experiment turned the meadow
+    // charcoal — side-facing normals see neither sun nor sky. Sol's
+    // up-normal "light like the ground plane" trick is the meadow's
+    // brightness; the specular veil is handled at the material instead.)
     return blendNormalsUp(g, 1.0);   // blades: normals straight up — light like the ground plane
 }
 
@@ -735,7 +810,15 @@ export async function createFlora(opts = {}) {
             },
         };
     }
-    const maps = spec.maps ? await loadSpeciesMaps(spec.maps) : null;
+    // §22m: opaque blades sample the atlas into a palette INSTEAD of loading
+    // GPU textures — with maps null, every existing no-maps branch below
+    // (alphaTest 0, attribute('color'), no opacity/relief/rough nodes, the
+    // cheap backlit term) IS the opaque material. A failed sample falls back
+    // to the atlas-card path untouched. COLS/LOOPS match bunchGeometry's.
+    const wantOpaque = !!o.opaqueBlades && spec.archetype === 'blades' && !!spec.maps;
+    const palette = wantOpaque ? await sampleBladePalette(spec.maps + '_albedo.png', 8, 4) : null;
+    if (wantOpaque && !palette) console.warn('[grass2] opaque-blade palette sample failed — atlas cards fallback');
+    const maps = (spec.maps && !palette) ? await loadSpeciesMaps(spec.maps) : null;
     let bladeFit = null;
     if (spec.archetype === 'blades' && spec.maps) {
         try { bladeFit = JSON.parse(await Deno.readTextFile(ASSET_DIR + spec.maps + '_fit.json')); }
@@ -766,7 +849,7 @@ export async function createFlora(opts = {}) {
         : cornBuild ? cornBuild.geo
         : spec.archetype === 'rosette' ? rosetteGeometry(spec, gRng)
         : spec.archetype === 'yucca' ? yuccaGeometry(spec, gRng)
-        : spec.archetype === 'blades' ? bunchGeometry(spec, gRng, bladeFit)
+        : spec.archetype === 'blades' ? bunchGeometry(spec, gRng, bladeFit, palette)
         : tuftGeometry(spec, gRng);
 
     const inst = o.placements
@@ -824,6 +907,10 @@ export async function createFlora(opts = {}) {
         side: T3.DoubleSide, metalness: 0, roughness: spec.rough,
         alphaTest: maps ? 0.35 : 0, transparent: false,
     });
+    // §22m: palette blades also mute the specular veil directly — high
+    // roughness plus reduced intensity; what remains reads as blade glints
+    // via the varied normals baked in bunchGeometry
+    if (palette) { mat.roughness = Math.min(1, (spec.rough ?? 0.7) * 1.35); mat.specularIntensity = 0.35; }
     // (vertex colour is read in colorNode below — setting material.vertexColors
     // too would apply it twice and square the colour toward black)
 
@@ -1027,7 +1114,9 @@ export async function createFlora(opts = {}) {
         const V = normalize(cameraPosition.sub(positionWorld));
         const backlit = pow(saturate(dot(V.negate(), uSunDir)), 3.0);
         const sssTerm = albRGB.mul(0.5).mul(backlit).mul(sssAmt).mul(aHgt.mul(0.5).add(0.5));
-        mat.emissiveNode = albRGB.mul(isBlades ? 0.2 : 0.1).add(sssTerm);
+        // §22m: palette-baked blades take the atlas path's 0.08 fill, not the
+        // no-asset 0.2 — the bigger lift washed the sampled greens milky
+        mat.emissiveNode = albRGB.mul(palette ? 0.08 : isBlades ? 0.2 : 0.1).add(sssTerm);
     }
 
     // shrub wood: second instanced mesh, same placement, real bark maps riding

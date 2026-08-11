@@ -365,10 +365,13 @@ function tileField(f, bladeLod = false) {
     if (!idx.length) continue;
     const tg = new THREE.BufferGeometry();
     tg.setIndex(src.getIndex());
-    for (const name of ['position', 'normal', 'uv', 'aH']) {
+    for (const name of ['position', 'normal', 'uv', 'aH', 'color']) {
       const a = src.getAttribute(name);
       if (a) tg.setAttribute(name, a);   // SHARED objects — one GPU upload
-    }
+    }                                    // 'color': §22m opaque blades bake
+                                         // Sol's palette per vertex — a tile
+                                         // without it draws BLACK (attribute
+                                         // reads of a missing binding)
     const box = new THREE.Box3();
     names.forEach((name, j) => {
       const a = inst[j], sz = a.itemSize;
@@ -422,7 +425,7 @@ function tileField(f, bladeLod = false) {
     if (farIndex) {
       const fg = new THREE.BufferGeometry();
       fg.setIndex(farIndex);           // per-STROKE object, shared by every tile
-      for (const name of ['position', 'normal', 'uv', 'aH']) {
+      for (const name of ['position', 'normal', 'uv', 'aH', 'color']) {
         const a = src.getAttribute(name);
         if (a) fg.setAttribute(name, a);
       }
@@ -585,6 +588,10 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       // sample; no relief/rough/SSS fetches a 4cm blade could never show).
       // ?grassshade=full restores upstream's four-fetch material for A/B.
       const shadeMode = CONFIG.params.get('grassshade') ?? 'fast';
+      // §22m (this branch): opaque geometry blades — Sol's silhouette via the
+      // fitted envelope, Sol's palette baked to vertex colors, zero alpha
+      // test. ?grassgeo=cards boots the atlas-card meadow for the A/B.
+      const geoMode = CONFIG.params.get('grassgeo') ?? 'opaque';
       const isBladeSpecies = mod.FLORA_SPECIES?.[st.species]?.archetype === 'blades';
       const blades = isBladeSpecies && lodMode !== 'off';
       const f = await mod.createFlora({
@@ -593,6 +600,7 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
           ...(lodMode !== 'nodither' ? { exp: GRASS_FALL_EXP, vertsPerBlade: 10, bladeKeepFar: 0.4 } : {}),
         } } : {}),
         ...(isBladeSpecies && shadeMode === 'fast' ? { fastShade: true } : {}),
+        ...(isBladeSpecies && geoMode === 'opaque' ? { opaqueBlades: true } : {}),
       });
       // named so an applied-truth report (#74) can identify the stroke
       f.strokeLabel = `${fields.length}:${st.species ?? 'grass'}`;
