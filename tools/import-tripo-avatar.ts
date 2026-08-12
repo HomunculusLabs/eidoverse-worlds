@@ -123,10 +123,15 @@ for (const mat of root.listMaterials()) {
   } else if (name === 'GOLD') {
     mat.setDoubleSided(true);            // factor + default metallic already right
   } else if (name === 'eyeballs' && !mat.getBaseColorTexture()) {
-    // the once-mysterious Sphere: give bare eyes a dark iris-ish gloss
-    // rather than default white-out
+    // AUTHOR WINS here too (the black-eyeballs incident): vertex-painted
+    // eyes (COLOR_0 on the prims — Janus paints the sclera per-vertex)
+    // pass through untouched; the dark gloss is a repair for eyes with no
+    // paint of ANY kind, which would otherwise render blank white
+    const painted = root.listMeshes().some((mesh2) => mesh2.listPrimitives().some((p2) =>
+      p2.getMaterial() === mat && p2.getAttribute('COLOR_0')));
+    if (painted) { say('eyeballs: vertex-painted, kept'); continue; }
     mat.setBaseColorFactor([0.06, 0.05, 0.06, 1]).setMetallicFactor(0).setRoughnessFactor(0.1);
-    say('eyeballs → dark gloss');
+    say('eyeballs → dark gloss (no paint of any kind)');
   }
 }
 
