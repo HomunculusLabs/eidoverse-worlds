@@ -31,8 +31,13 @@ const ENGINES = new Map([
   }],
 ]);
 
+// The DEFAULT is the Bullet engine (antra, after a day of live falls across
+// old and new avatars: "these physics are just plainly better than anything
+// else we had so far"). The ladder below keeps every promise the old default
+// made: while the wasm warms — or if it never opens — falls run verlet, and
+// a stored choice always wins over the default.
 const stored = localStorage.getItem(KEY);
-let engine = ENGINES.has(stored) ? stored : 'verlet';
+let engine = ENGINES.has(stored) ? stored : 'ammo';
 
 async function loadEngine(name) {
   const e = ENGINES.get(name);
