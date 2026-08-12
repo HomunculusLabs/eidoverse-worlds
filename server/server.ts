@@ -33,6 +33,15 @@ import { route, avatarRoster, pendingSnaps } from "./routes.ts";
 // The reference fold lives in shared/ (house rule 1 by construction; the
 // world folds with it in world.ts) — what remains here is the role ladder.
 import { ROLE_RANK } from "../shared/fold.js";
+// Seat profiles (#101, upstream): the store + its external-change poll are
+// wired; the proposal/countersign HTTP routes are NOT ported into the route
+// table yet — the feature is dormant here, not torn. (The crash this line
+// heals: the poll timer auto-merged in while the declaration hunk fell on
+// the fork side of a conflict — restart counter reached 15 before anyone
+// noticed, because /version kept answering from the brief up-windows.)
+import { SeatStore } from "./seats.ts";
+import { OPT_DIR } from "./config.ts";
+const seatStore = new SeatStore(OPT_DIR, LIBRARY_DIR);
 
 // Behavior sandbox wiring: a script's emit is gated by its AUTHOR's live
 // rights (revoke the grant, the behavior loses its teeth) through the same
