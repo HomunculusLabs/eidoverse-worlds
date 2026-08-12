@@ -98,6 +98,11 @@ for (const mat of root.listMaterials()) {
       say(`textures transplanted onto ${name}`);
     } else say(`⚠ ${name} is textureless and the donor cannot help (${DONOR})`);
   } else if (name === 'RAVEN') {
+    // AUTHOR WINS: an export that arrives with its own factors or extensions
+    // (Janus ships her own iridescence now) passes through untouched — the
+    // house look below is a REPAIR for bare materials, not a house style
+    if (mat.getBaseColorFactor().some((v: number, i: number) => v !== 1 && i < 3)
+      || mat.listExtensions().length) { say('RAVEN: author-provided, kept'); continue; }
     mat.setBaseColorFactor([0.015, 0.015, 0.022, 1]).setMetallicFactor(0.2)
       .setRoughnessFactor(0.22).setDoubleSided(true);
     mat.setExtension('KHR_materials_clearcoat',
@@ -107,6 +112,8 @@ for (const mat of root.listMaterials()) {
         .setIridescenceThicknessMinimum(200).setIridescenceThicknessMaximum(500));
     say('RAVEN → iridescent black');
   } else if (name === 'PORCELAIN') {
+    if (mat.getBaseColorFactor().some((v: number, i: number) => v !== 1 && i < 3)
+      || mat.listExtensions().length) { say('PORCELAIN: author-provided, kept'); continue; }
     for (const k of ['BaseColor', 'MetallicRoughness'] as const) (mat as any)[`set${k}Texture`](null);
     mat.setNormalTexture(null);
     mat.setBaseColorFactor([1, 1, 1, 1]).setMetallicFactor(0).setRoughnessFactor(0.28).setDoubleSided(true);
