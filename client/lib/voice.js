@@ -64,6 +64,10 @@ let myId = null;
 //   _micLive true + muted   → open but deliberately silent
 //   _micLive true + !muted  → open; the gate decides moment to moment
 let _micLive = false;
+// The lane exists because a SYNTHESIZER adopted it, not a device. Cleared the
+// moment a real device takes over (mic beats TTS).
+let _synthLane = false;
+export const synthLaneActive = () => _synthLane && !!micStream;
 export const micOn = () => !!micStream && _micLive && !muted;
 /** Am I audible RIGHT NOW — i.e. is the gate open this instant? For a live
  *  indicator, not for state. This is the affordance R asked for: "we have no
@@ -119,6 +123,22 @@ function reenableInbound(p) {
   p.audio.play().catch(() => addEventListener('click', () => p.audio.play().catch(() => {}), { once: true }));
 }
 
+/** THE track this body should be sending right now — the single answer both
+ *  handoff sites consult. Without it, applyDirection re-attached micStream's
+ *  gated track on EVERY renegotiation, silently undoing a mic-off TTS
+ *  takeover minutes later (r3 B4 field catch: the sender held the gate's
+ *  destination again by the next reconcile — two mechanisms, one sender,
+ *  last-writer-wins forever). Mic live → the gated lane; otherwise, if a
+ *  synthesizer is armed and has a generator, the generator; else the lane. */
+function activeSendTrack() {
+  if (!micStream) return null;
+  const lane = micStream.getAudioTracks()[0] || null;
+  if (_micLive) return lane;                      // a live mic always wins
+  const gen = _synthTrack;
+  return gen && gen.readyState === 'live' ? gen : lane;
+}
+let _synthTrack = null;                            // set by the takeover sites
+
 function applyDirection(p) {
   const dir = wantDirection();
   try {
@@ -131,7 +151,7 @@ function applyDirection(p) {
     // has already run. Every offer and renegotiation passes through here, so
     // attaching here makes it an invariant rather than a patch per path.
     if (micStream) {
-      const track = micStream.getAudioTracks()[0];
+      const track = activeSendTrack();
       const sender = p.pc.getSenders().find((s) => s.track?.kind === 'audio' || !s.track);
       if (track && sender && sender.track !== track) sender.replaceTrack(track).catch((e) => report('voice track', e));
       else if (track && !sender) p.pc.addTrack(track, micStream);
@@ -486,12 +506,16 @@ export async function toggleMic(name) {
       // broken one. Fixing only the mic-on direction would be exactly the
       // asymmetric repair voicesource.js warns about two lines up from its own
       // mix site.
-      import('./voicesource.js').then(async (vs) => {
+      // ONE mechanism (#91 B3): the generator goes ON the sender, here as
+      // everywhere. The old path mixed synth into micgate's destination node —
+      // a mouth sewn shut wherever the AudioContext clock stalls, and a second
+      // divergent handoff whose ordering against tts.js's own takeover could
+      // leave synth mixed in while the raw mic reopened. replaceTrack only.
+      import('./voicesource.js').then((vs) => {
         const sp = vs.synthProvider?.();
         if (!sp?.available?.()) return;
-        const m = await import('./micgate.js');
-        if (!m.isGated?.()) return;              // no lane; voiceSource handles it
-        m.mixSynthTrack(sp.start());
+        _synthTrack = sp.start();
+        rebindSenders(_synthTrack);
       }).catch(() => {});
     return false;
   }
@@ -514,7 +538,13 @@ export async function toggleMic(name) {
   // lane" — and it is ALREADY the discriminator twelve lines down, where
   // attachSource decides whether to reuse the standing graph. Same question,
   // same answer, both places.
-  if (micStream && !_micReleased) {
+  // …and not a SYNTH-ADOPTED lane: that branch re-enables an existing DEVICE,
+  // and a synthetic lane has none — the same discriminator class as
+  // _micReleased, caught by the same suite the hour it was introduced. Mic ON
+  // over a synth lane must ACQUIRE the device; the device then replaces the
+  // generator on the senders (mic beats TTS), and the fresh-mic path below
+  // already does exactly that.
+  if (micStream && !_micReleased && !_synthLane) {
     // 🔴 THE SAME TRACK THE OFF-PATH TOUCHED. micStream is the GATED output now,
     // so re-enabling its track does nothing for the RAW device track that mic-off
     // disabled — the mic came back once and was silent forever after (R,
@@ -547,6 +577,7 @@ export async function toggleMic(name) {
       // data, paced by the wall clock, exactly as designed.
       const reused = rawMic.synthetic ? null : (_micReleased ? attachSource(rawMic) : null);
       micStream = rawMic.synthetic ? rawMic : (reused || gateStream(rawMic, micAnalyserLevel));
+      _synthLane = !!rawMic.synthetic;
       // B2: a null gate is a REFUSAL, not a fallback. Stop the device we just
       // opened (no capture without a lane), tell the user the true state, and
       // do not transmit. allowUngated(true) + retry is the explicit override.
@@ -569,6 +600,23 @@ export async function toggleMic(name) {
   // is repairing, so routing the attachment only through renegotiate would
   // skip it. Attaching is safe in any signaling state; replaceTrack on an
   // existing sender needs no renegotiation at all.
+  // Retire the synth producer FIRST (#91 B3: mic beats TTS, and the handoff
+  // must be ordered — applyDirection below puts the gated mic track back on
+  // every sender via replaceTrack, so stopping the pacer before that leaves
+  // no window with two producers and no window with none).
+  import('./voicesource.js').then((vs) => vs.synthProvider?.()?.stop?.()).catch(() => {});
+  // 🔴 PRODUCER STATE FLIPS BEFORE THE REBIND (r4 — the founding receipt's
+  // third catch). applyDirection consults activeSendTrack(), which reads
+  // _micLive — and _micLive used to be set BELOW this loop, so at the exact
+  // moment the mic went live every sender was handed the GENERATOR: a dead
+  // outbound leg (pacer stopped, device track never bound) that the
+  // acceptance greenwashed by asserting only the CAPTURE side. Same class as
+  // the _micReleased and _synthLane discriminator bugs: a state flag read
+  // before its writer ran. The unmute lesson rides along: mic ON is an
+  // unmute, or a muted user pressing the button wedges with every light
+  // reading silence.
+  _micLive = true;
+  muted = false;
   for (const p of peers.values()) applyDirection(p);
   for (const id of [...peers.keys()]) renegotiate(id);
   // Only reach for peers we do NOT already hold. A peer mid-negotiation has
@@ -577,14 +625,6 @@ export async function toggleMic(name) {
   // have-local-offer (Mica, #34). renegotiate() above already covers the
   // stable ones; this covers the strangers.
   for (const id of humanIds()) if (!peers.has(id)) offerTo(id);
-  _micLive = true;
-  // 🔴 TURNING THE MIC ON IS AN UNMUTE. The off-path clears `muted`; this path
-  // did not — so a user who muted and then pressed the mic button was wedged:
-  // micOn() stayed false (it requires !muted), every press re-entered THIS
-  // branch, and the raw tracks it re-enables were live while micOn/isMuted/
-  // micTransmitting all reported silence. Broadcasting while every light says
-  // muted is the display-vs-real-state bug in its worst costume.
-  muted = false;
   flashHint('🎙 live — speak, neighbors hear · <b>mute</b> in the dock');
   bus.emit('voice', { on: true });
   startOnsetWatch();
@@ -929,7 +969,9 @@ export function initVoice(name) {
     // micOn(), not micStream: since mic-off keeps the stream and only disables
     // the track, `micStream` is truthy while muted and would court strangers we
     // have nothing to say to. Transmitting is the condition that matters.
-    if (micOn()) for (const id of humanIds()) if (!peers.has(id)) offerTo(id);
+    // A synth-lane body courts arrivals exactly like a live mic: it is a
+    // transmitting body whose voice happens to be synthesized (r3 B4).
+    if (micOn() || synthLaneActive()) for (const id of humanIds()) if (!peers.has(id)) offerTo(id);
     for (const id of [...peers.keys()]) if (!remotes.has(id)) dropPeer(id);
   });
   // Two clocks on purpose. Distance is a slow fact — 300ms is plenty and
@@ -1110,19 +1152,66 @@ export function peerLevels() {
 // perfectly healthy — indistinguishable from the audio:ended blocker seen in
 // the field. replaceTrack needs no renegotiation, so the repair is cheap and
 // safe in any signaling state.
+/** Put `track` on every audio sender — replaceTrack only, zero SDP churn.
+ *  The ONE mechanism for handing the lane between producers (#91 B3): the
+ *  mic-off→TTS takeover, the TTS-generator rebuild, and the TTS-only body
+ *  all route through here. (Mic-ON goes through applyDirection, which adopts
+ *  micStream's gated track by the same replaceTrack — one mechanism per
+ *  direction, no WebAudio mixing anywhere.) */
+export function rebindSenders(track) {
+  for (const p of peers.values())
+    for (const s of p.pc.getSenders())
+      if (!s.track || s.track.kind === 'audio')
+        s.replaceTrack(track).catch((e) => report('voice track rebind', e));
+}
+
 setGeneratorRebuildHook((track) => {
-  if (!micStream) return;
-  // Keep the local stream in step where it CAN be — a synthetic or stubbed
-  // source is not always a real MediaStream (the suite caught this hook
-  // throwing on removeTrack, inside the very recovery it exists to perform).
-  // Re-binding the senders is the part that matters; stream bookkeeping is not
-  // worth failing the repair for.
-  try {
-    if (typeof micStream.removeTrack === 'function' && typeof micStream.addTrack === 'function') {
-      for (const t of micStream.getTracks()) if (t !== track) micStream.removeTrack(t);
-      if (!micStream.getTracks().includes(track)) micStream.addTrack(track);
-    }
-  } catch (e) { report('voice stream rebind', e); }
+  // ADOPT THE SYNTH LANE (r3 B4, caught by the first real-media acceptance
+  // run): rebindSenders repairs senders that EXIST, but a body whose mic was
+  // never live has none — its transceivers are recvonly (the reconciler's
+  // listener shape) and wantDirection() reads micStream to decide send. Every
+  // fake-engine suite passed around that hole; two real browsers sent 0 RTP.
+  // So a synth track arriving with no lane BECOMES the lane: micStream is the
+  // synthetic stream, direction gains send, existing peers renegotiate, and
+  // strangers get courted — the same arc a fresh mic takes, minus the gate
+  // (frames are data; there is no room noise to gate). _micLive stays false:
+  // micOn() asks about the DEVICE, and no device is capturing.
+  //
+  // Deliberately NOT undone when TTS is disabled: the lane stands and carries
+  // silence (the pacer stops feeding it), exactly the standing-lane contract
+  // the mic release path documents — going quiet is a data change.
+  if (!micStream) {
+    if (!track) return;
+    micStream = new MediaStream([track]);
+    _synthLane = true;
+    _synthTrack = track;
+    for (const p of peers.values()) applyDirection(p);
+    for (const id of [...peers.keys()]) renegotiate(id);
+    for (const id of humanIds()) if (!peers.has(id)) offerTo(id);
+    return;
+  }
+  // 🔴 NEVER MUTATE A DEVICE LANE (r4 self-audit — the fourth member of the
+  // state-discriminator family). This block used to swap the arriving
+  // generator INTO micStream unconditionally. For a SYNTH lane that is the
+  // correct rebuild bookkeeping — the stream's whole content is the
+  // generator. But when micStream is the STANDING DEVICE LANE (mic used,
+  // then off — the release contract keeps it up), the swap evicted the gated
+  // destination track and made the lane NAME the generator: the next mic-ON
+  // re-enabled the device, asked activeSendTrack() for the lane, and bound
+  // the generator — a dead outbound leg via a different door than the one
+  // r4 closed (sequence: mic on → off → enable TTS → mic on). The lane is
+  // micgate's output and only micgate may restaff it; the hook's job on a
+  // device lane is the SENDERS only, and activeSendTrack() already prefers
+  // _synthTrack while the mic is not live.
+  if (_synthLane) {
+    try {
+      if (typeof micStream.removeTrack === 'function' && typeof micStream.addTrack === 'function') {
+        for (const t of micStream.getTracks()) if (t !== track) micStream.removeTrack(t);
+        if (!micStream.getTracks().includes(track)) micStream.addTrack(track);
+      }
+    } catch (e) { report('voice stream rebind', e); }
+  }
+  _synthTrack = track;
   for (const p of peers.values()) {
     for (const s of p.pc.getSenders()) {
       if (s.track && s.track.kind !== 'audio') continue;
@@ -1218,12 +1307,27 @@ export async function hasMicDevice() {
 
 export function micDiag() {
   const raw = _rawMic?.getAudioTracks?.()[0] || null;
-  const sent = micStream?.getAudioTracks?.()[0] || null;
+  // WHAT THE SENDERS HOLD, not what local bookkeeping names (r3 B4 field
+  // catch): after a mic-off TTS takeover, rebindSenders puts the generator on
+  // every sender while micStream still names the standing gated lane — so
+  // reading micStream here reported the gate's destination as "sentToPeers"
+  // and flunked a transition that was in fact correct on the wire. Ask a real
+  // sender first; fall back to the stream only when no peer exists to ask.
+  let sent = null;
+  for (const p of peers.values()) {
+    const st = p.pc.getSenders?.().find((x) => x.track?.kind === 'audio')?.track;
+    if (st) { sent = st; break; }
+  }
+  sent = sent || micStream?.getAudioTracks?.()[0] || null;
   const settings = (t) => { try { return t?.getSettings?.() || {}; } catch { return {}; } };
   const kindOf = (t) => {
     if (!t) return 'none';
+    // Constructor first, deviceId second: real Chromium stamps a deviceId on
+    // MediaStreamTrackGenerator tracks too (r3 B4 reporter run: the sender
+    // provably held the generator — ids matched — while this heuristic called
+    // it a microphone). "Has a deviceId" is not "is a device".
+    if (t.constructor?.name === 'MediaStreamTrackGenerator') return 'synthetic (generator)';
     const s = settings(t);
-    // A real device reports a deviceId; a generator or a graph destination does not.
     if (s.deviceId) return `microphone (${t.label || 'unnamed'})`;
     return t.label ? `synthetic (${t.label})` : 'synthetic/graph output';
   };
@@ -1237,6 +1341,14 @@ export function micDiag() {
     // became something else.
     verdict: !raw ? 'NO DEVICE — nothing was ever opened'
       : !sent ? 'no track being sent'
+      // The contradiction case FIRST (r4 review): a live mic whose peers are
+      // receiving the synthesizer is a dead outbound leg wearing a green
+      // light — the exact state the founding receipt exposed. Never report
+      // 'ok' from the capture side alone.
+      : micOn() && !/microphone/.test(kindOf(sent))
+        ? 'BROKEN: mic is live but peers receive ' + kindOf(sent)
+      : !micOn() && /microphone/.test(kindOf(sent)) && gateOpenness() === 0
+        ? 'suspect: mic not live yet a device track is on the senders'
       : /microphone/.test(kindOf(raw)) ? 'ok: a real microphone is the source'
       : 'BROKEN: the source is not a microphone',
   };
