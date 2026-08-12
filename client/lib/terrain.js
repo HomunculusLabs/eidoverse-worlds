@@ -12,6 +12,8 @@ let current = null;
 
 export const heightAt = (x, z) => (current ? current.heightAt(x, z) : 0);
 export const hasTerrain = () => current !== null;
+/** §22m diag: the terrain mesh, for cost-attribution phases. */
+export const getTerrainMesh = () => current?.mesh ?? null;
 
 export function setTerrain(t) {
   if (current) {
@@ -77,6 +79,8 @@ export function setGrass(field) {
 }
 export const clearGrass = () => setGrass(null);
 export const hasGrass = () => currentGrass !== null;
+/** The live field object — grassdiag's toggle surface (§22). */
+export const getGrassField = () => currentGrass;
 
 // The meadow budget: the resident's persisted cap × the governor's session
 // shed (grass_quality.js owns the semantics — effective is their min).
@@ -136,6 +140,10 @@ export function grassTiles() {
     const tiles = f.tiles ?? [];
     return {
       stroke: f.strokeLabel ?? `stroke ${i}`,
+      // §22m: which material generation this stroke actually built —
+      // 'opaque' (palette blades), 'cards-fast', 'cards-sss', or species
+      // default. Answers "is the branch's grass actually on?" in one read.
+      mode: f.grassMode ?? 'n/a',
       tiled: !!f.tiled,
       // tiled strokes: f.count is the LIVE summing getter (#74), so the
       // planted total lives on the tiles' fullCount

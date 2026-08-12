@@ -56,6 +56,9 @@ let currentWorld = null;
 
 export const skyArgs = () => clock?.args ?? {};
 export const skyImpl = () => impl;
+/** §22m diag: the sky-owned scene roots, for cost-attribution phases that
+ *  hide the sky's DRAW without touching its state. Read-only. */
+export const skyOwnedObjects = () => skyOwned ?? [];
 /** 0 at night → 1 at noon. Lamps and other night-aware things read this. */
 export let dayness = 1;
 
@@ -365,6 +368,17 @@ function teardownSky() {
   // Put the parked live domes back first: the diff below claimed them at
   // build time, so restoring them lets the disposal pass find and free them.
   detachBakedDome();
+  // §22b: the engine's OWN dispose — the only path to the ~64MB _envTarget,
+  // the bake target, and the noise/weather textures. detachBakedDome above
+  // deliberately leaves target A alive (it blits from it), and the api never
+  // exposed dispose — so every cloud-quality rebuild leaked all of it
+  // (measured: textures 69→77, renderTargets 7→11 across two flips — the
+  // sticky-35fps ratchet on a unified-memory Mac). cloudShadowRoots is empty
+  // in this client (the factory marks every mesh noCloudShadow), so the
+  // unwrap loop inside is a no-op — no recompiles. Runs AFTER the blit,
+  // BEFORE the dome disposal walk (double-dispose is idempotent in three).
+  try { skyInner?.dispose?.(); } catch (e) { console.warn('[sky] engine dispose', e?.message ?? e); }
+  skyInner = null;
   for (const o of skyOwned) {
     scene.remove(o);
     o.traverse?.((n) => {

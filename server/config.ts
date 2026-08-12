@@ -25,6 +25,11 @@ export const WORLDS_DIR = resolve(process.env.WORLDS_DIR ?? join(ROOT, "worlds")
 // The eidoverse-video checkout = the asset library (models, VRMs, animations).
 export const LIBRARY_DIR = resolve(process.env.EIDOVERSE_DIR ?? join(ROOT, "..", "eidoverse-video"));
 export const OPT_DIR = join(ROOT, "assets", "opt");
+// Deliberate forks of upstream library files (versioned IN this repo —
+// upstream-patched/README.md carries the doctrine): /library serves these
+// with TOP precedence, so every machine gets the standing-permission
+// upstream redos via ordinary git pull while eidoverse-video stays pristine.
+export const PATCH_DIR = join(ROOT, "upstream-patched");
 // Optimized shadows of store uploads (draco+webp@1024, see server/optimize.ts).
 // Originals in store/ are never touched; /library serving prefers a store-min
 // sibling when one exists. `.failed` markers stop hopeless files from being

@@ -23,6 +23,7 @@ import { makeSection, toast, flashHint, collapseAll, panelFrame } from './ui.js'
 import { sceneSelect } from './scenegraph.js';
 import { previewSky, skyArgs, skyImpl, WEATHERS, CLOUDS, SKY_WORLDS,
   CLOUD_QUALITY, getCloudQuality, setCloudQuality } from './sky.js';
+import { RENDER_SCALES, getRenderScale, setRenderScale } from './governor.js';
 
 const raycaster = new THREE.Raycaster();
 const groundPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
@@ -362,7 +363,7 @@ function removeSelected() {
 // refine, Q/E to face, Del to remove, one undoable log entry per commit.
 // Zero server involvement — this is all authoring UI over the comp verb.
 
-const seatGizmos = new Map();   // "id slot" -> gizmo (child of entity root)
+const seatGizmos = new Map();   // "id\x00slot" -> gizmo (child of entity root)
 let seatSel = null;             // { id, slot } — the anchor under edit
 let seatDrag = null;            // { armed, startX, startY, pending } drag state
 let seatArm = null;             // entity id waiting for a placement click
@@ -396,10 +397,10 @@ function refreshSeatGizmos() {
       g.position.set(...(sock.pos ?? [0, 0.5, 0]));
       g.rotation.y = sock.yaw ?? 0;
       root.add(g);
-      seatGizmos.set(`${id} ${slot}`, g);
+      seatGizmos.set(`${id}\x00${slot}`, g);
     }
   }
-  if (seatSel && !seatGizmos.has(`${seatSel.id} ${seatSel.slot}`)) deselectSeat();
+  if (seatSel && !seatGizmos.has(`${seatSel.id}\x00${seatSel.slot}`)) deselectSeat();
   else refreshSeatHighlight();
 }
 bus.on('comp', ({ type }) => { if (type === 'sockets') refreshSeatGizmos(); });
@@ -407,7 +408,7 @@ bus.on('entity', () => { if (editMode) refreshSeatGizmos(); });
 
 function refreshSeatHighlight() {
   for (const [k, g] of seatGizmos) {
-    const on = seatSel && k === `${seatSel.id} ${seatSel.slot}`;
+    const on = seatSel && k === `${seatSel.id}\x00${seatSel.slot}`;
     g.scale.setScalar(on ? 1.6 : 1);
     g.traverse((o) => o.material?.color.setHex(on ? 0x8fe8c8 : 0xf5c96b));
   }
@@ -426,7 +427,7 @@ function pickSeat(ray) {
     if (d < tol && d < bestD) { bestD = d; best = k; }
   }
   if (!best) return null;
-  const [id, slot] = best.split(' ');
+  const [id, slot] = best.split('\x00');
   return { id, slot };
 }
 
@@ -546,7 +547,7 @@ function updateSeatDrag() {
   if (!hit) return;
   const next = seatFromHit(seatSel.id, root, hit);
   seatDrag.pending = next;
-  const g = seatGizmos.get(`${seatSel.id} ${seatSel.slot}`);
+  const g = seatGizmos.get(`${seatSel.id}\x00${seatSel.slot}`);
   if (g) g.position.set(...next.pos);
 }
 
@@ -1149,6 +1150,23 @@ function paintSky(body) {
   syncGrassRow();
   bus.on('grass-budget', syncGrassRow);   // governor sheds repaint immediately
   body.appendChild(gqRow);
+
+  // Render scale is YOURS too (§22k) — the whole frame's pixel budget, the
+  // one lever a pixel-bound machine actually answers to (§22j's tables).
+  // 'auto' lets the governor's cruise drive; a pinned % is the resident's
+  // word and turns the cruise off. Persisted like the other two dials.
+  const rs = document.createElement('select');
+  rs.style.cssText = wx.style.cssText;
+  rs.setAttribute('aria-label', 'render scale — local only, never shared with the world');
+  for (const v of RENDER_SCALES) rs.appendChild(new Option(v === 'auto' ? 'auto' : `${Math.round(v * 100)}%`, v));
+  rs.value = getRenderScale();
+  rs.onchange = () => {
+    setRenderScale(rs.value);
+    flashHint(`render scale: ${rs.value === 'auto' ? 'auto' : `${Math.round(rs.value * 100)}%`} (yours only)`);
+  };
+  const rsRow = mkRow('scale⚙', rs);
+  rsRow.title = 'local performance setting — not shared with the world';
+  body.appendChild(rsRow);
 
   // Sliders that only the BASIC sky answers. On the real sky the engine owns
   // sun direction and supplies its own bounce fill (sky.js documents the

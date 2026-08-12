@@ -148,6 +148,9 @@ const draco = new DRACOLoader().setDecoderPath('https://www.gstatic.com/draco/ve
 const ktx2 = new KTX2Loader()
   .setTranscoderPath('/node_modules/three/examples/jsm/libs/basis/')
   .detectSupport(renderer);
+/** Whether this GPU/browser negotiates KTX2 variants (?ktx2=1) — prefetch
+ *  must warm the SAME cache key demand fetches will use. */
+export const ktx2Capable = () => !!ktx2.workerConfig;
 function makeLoader(vrm = false) {
   const l = new GLTFLoader();
   l.setDRACOLoader(draco);
@@ -271,7 +274,18 @@ export async function loadVRM(libPath, { priority = 1 } = {}) {
   const work = beginWork(`vrm ${libPath.split('/').pop()}`);
   try {
     work.phase('download');
-    const buf = await fetchBytes(`/library/${libPath}`);
+    // §20c: bodies negotiate KTX2 exactly like GLBs (loadGLB above) — when
+    // the transcoder detected support, ask and the server answers with the
+    // surgical-rewrite variant when a fresh one exists, the original
+    // otherwise. avatarPath arrives in BOTH forms — bare library rels and
+    // roster paths already carrying ?v=mtime — so the flag APPENDS (&) after
+    // an existing query rather than assuming one. The full URL keys
+    // byteCache (variant and original are distinct byte entries — correct),
+    // while the vrmPool and its vrmMeta ledger key on libPath UNTOUCHED, so
+    // pool identity is unaffected by negotiation.
+    const flag = libPath.split('?')[0].endsWith('.vrm') && ktx2.workerConfig
+      ? (libPath.includes('?') ? '&ktx2=1' : '?ktx2=1') : '';
+    const buf = await fetchBytes(`/library/${libPath}${flag}`);
     work.phase('queued');
     // The parse and skeleton passes are the irreducibly-synchronous chunk of a
     // body: serialize so two arrivals can't stack theirs into the same frames,
@@ -698,7 +712,17 @@ export async function primeFiles(paths, { concurrency = 6 } = {}) {
     while (q.length) {
       const p = q.shift();
       try {
-        const buf = await fetchBytes(`/library/${p}`);
+        // §20d: loose images negotiate KTX2 at the FILE layer — capable
+        // clients ask, and the server answers with the flip-baked .ktx2
+        // sibling when the sweep built one (curated dirs), the original
+        // otherwise. Only the WIRE URL changes: denoFiles still keys on the
+        // bare library path, so readFileSync, the bytes-identity texture
+        // cache (§16.2.B), and every toolkit module see the same identities —
+        // the bytes just arrive GPU-native, and loadImageTexture sniffs the
+        // container magic to tell which shape it got.
+        const flag = ktx2Capable() && /\.(png|jpe?g)$/i.test(p)
+          ? (p.includes('?') ? '&ktx2=1' : '?ktx2=1') : '';
+        const buf = await fetchBytes(`/library/${p}${flag}`);
         denoFiles.set(p, new Uint8Array(buf));
       } catch (e) { missing.push(p); }
     }
@@ -774,6 +798,10 @@ globalThis.Deno = {
  *  Accepted in the §16 design (~24 grass maps); a regrow now REUSES its
  *  textures instead of leaking freshly decoded copies of them. */
 const imageTexCache = new WeakMap(); // bytes object -> Map<opts key, Promise<Texture>>
+// The full 12-byte KTX2 identifier («KTX 20»\r\n\x1a\n) — the file-format spec's
+// own magic, matched byte-for-byte so nothing else can ever route to the
+// transcoder by accident.
+const KTX2_MAGIC = [0xab, 0x4b, 0x54, 0x58, 0x20, 0x32, 0x30, 0xbb, 0x0d, 0x0a, 0x1a, 0x0a];
 globalThis.loadImageTexture = async (bytes, opts = {}) => {
   // srgb + flipY are the only options that alter the CONSTRUCTED texture;
   // wrap/anisotropy are caller-side mutations, identical for every same-URL
@@ -789,6 +817,35 @@ globalThis.loadImageTexture = async (bytes, opts = {}) => {
     const u8 = bytes instanceof Uint8Array ? bytes
       : bytes instanceof ArrayBuffer ? new Uint8Array(bytes)
         : new Uint8Array(bytes);
+    // §20d: the file layer negotiates KTX2 (primeFiles ?ktx2=1), so library
+    // bytes may arrive GPU-native — route by the container itself, never the
+    // path. The 12-byte KTX2 identifier can't prefix a PNG/JPEG, so non-KTX2
+    // bytes fall through to EXACTLY today's path.
+    if (u8.length >= 12 && KTX2_MAGIC.every((v, i) => u8[i] === v)) {
+      // Both engine contracts were baked at ENCODE (server --ktx2-img):
+      //   - the vertical flip is in the PIXELS (three's KTX2Loader ignores
+      //     KTX orientation metadata, so it could not be honoured later);
+      //   - colorSpace comes from the container's DFD transfer, which the
+      //     encoder matched to this call site's opts.srgb — do NOT override
+      //     it here (parseColorSpace already set it).
+      // ktx2.parse TRANSFERS its buffer to the transcoder worker (detached on
+      // return) — hand it a COPY, never the primed file's own storage: Deno.
+      // readFileSync returns the same Uint8Array per path, and detaching it
+      // would corrupt every later read. One copy per bytes+opts, then cached.
+      const tex = await new Promise((res, rej) => ktx2.parse(u8.slice().buffer, res, rej));
+      // Same property treatment as the raster path where applicable: repeat
+      // wrap (callers retighten to ClampToEdge exactly as they do today);
+      // flipY stays false (CompressedTexture's only valid value — the flip is
+      // baked); generateMipmaps stays false and min/mag filters are already
+      // set by the loader (the mips are IN the container).
+      tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+      if (cacheable) {
+        tex.userData.ewShared = true;   // served from cache — teardowns must skip it
+        tex.dispose = () => {};         // session-pinned, same as the raster path
+      }
+      queueTexturePrime(tex);           // §17a: initTexture sums literal mip bytes
+      return tex;
+    }
     // Engine contract (render_scene.mjs loadImageTexture): the vertical flip is
     // BAKED into the pixels (browser flipY convention) and tex.flipY stays
     // false, so it composes with repeat tiling; { flipY: false } skips the bake

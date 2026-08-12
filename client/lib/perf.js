@@ -9,4 +9,7 @@
 //          (a "60fps" second can contain one 100ms frame; this one number
 //          is what tel0s asked to SEE, 2026-08-10)
 
-export const perf = { fps: 0, ms: 0, worst: 0 };
+// doubled: frames that waited one extra vsync (pacing — arithmetic whenever
+// fps < refresh). spikes: frames >40ms, beyond any pacing explanation — the
+// only real stutter events. (§22p: 'worst 34' alone sent us ghost-hunting.)
+export const perf = { fps: 0, ms: 0, worst: 0, doubled: 0, spikes: 0 };

@@ -56,6 +56,8 @@ export const frameDebug = () => systems.map((s) => ({
 }));
 
 let windowWorst = 0;
+let windowDoubled = 0;
+let windowSpikes = 0;
 function frame(now) {
   const dtMs = now - last;
   const dt = Math.min(0.1, dtMs / 1000);
@@ -66,6 +68,13 @@ function frame(now) {
   if (dtMs < 2000) {
     perf.ms += (dtMs - perf.ms) * 0.1;
     if (dtMs > windowWorst) windowWorst = dtMs;
+    // §22p: pacing vs stutter. On a 60Hz panel every sub-60 second MUST
+    // contain ~33ms frames (vsync doubling) — that is arithmetic, not a
+    // hitch, and reading it as "worst 34ms" sent us hunting a ghost.
+    // doubled = frames that waited one extra vsync; spikes = frames beyond
+    // ANY pacing explanation (>40ms) — only those are real events.
+    if (dtMs > 40) windowSpikes++;
+    else if (dtMs > 25) windowDoubled++;
   }
   const t = now / 1000;
   globalThis._sceneTime = t;
@@ -83,7 +92,11 @@ function frame(now) {
   if (now - fpsAt > 1000) {
     perf.fps = frames;
     perf.worst = windowWorst;
+    perf.doubled = windowDoubled;
+    perf.spikes = windowSpikes;
     windowWorst = 0;
+    windowDoubled = 0;
+    windowSpikes = 0;
     frames = 0;
     fpsAt = now;
   }

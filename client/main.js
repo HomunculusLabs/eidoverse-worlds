@@ -11,7 +11,7 @@ import {
   THREE, scene, camera, renderer, CONFIG, bus, report,
 } from './lib/core.js';
 import { contributeThumbnail, makeAvatar, EMOTE_ORDER } from './lib/avatar.js';
-import { updateSky, updateAutoSystems, skyArgs } from './lib/sky.js';
+import { updateSky, updateAutoSystems, skyArgs, setCloudQuality } from './lib/sky.js';
 import { setSkyArgsSource, entities, buildsPending, avatarMounts } from './lib/world.js';
 import { foldParity } from './lib/parity.js';
 import { initModelsRealizer, reconcileModels, residencyDebug, setResidencyFocus, drainPromoteTail } from './lib/realize/models.js';
@@ -48,6 +48,7 @@ import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { protoStats } from './lib/assets.js';
 import { grassTiles } from './lib/terrain.js';
+import { grassDiag } from './lib/grassdiag.js';
 import { warmStats } from './lib/warmqueue.js';
 import { laneStats as schedLaneStats } from './lib/scheduler.js';
 import { laneStats as loadLaneStats } from './lib/loadwork.js';
@@ -390,6 +391,8 @@ globalThis.EW = {
   gpu: () => ({ ...renderer.info.memory, ...protoStats() }),   // bytes + proto/byte tiers
   frame: frameDebug,           // per-system rolling ms + strides (§14.2 6b)
   grass: grassTiles,           // tile-level draw truth (§13.2, landed 8e)
+  grassDiag,                   // §22: `await EW.grassDiag()` — the meadow's GPU cost, attributed by difference
+  setCloudQuality,             // §22b: the sky pane's tier knob, console-reachable for diagnosis
   warm: warmStats,             // the conductor's queue (§16.2.A)
   lanes: () => ({ sched: schedLaneStats(), load: loadLaneStats() }),  // queue depths vs caps
   colliderCache: colliderCacheStats,   // per-lib shared BVH/lie bytes (§16.2.C)

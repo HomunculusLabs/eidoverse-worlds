@@ -286,11 +286,18 @@ async function onRtc(msg) {
   if (!p) return;
   // Per-peer signal serialization: two concurrent onRtc invocations for the
   // same peer interleave across their awaits (offer A setRemote -> offer B
-  // setRemote -> A answers -> B's createAnswer fires in 'stable'). Chain
-  // errors handled per-link so one failed signal doesn't wedge the queue.
+  // setRemote -> A answers -> B's createAnswer fires in 'stable'). One chain
+  // per PEER OBJECT, not per id: it rides the peer record, so a peer dropped
+  // and rebuilt starts with a fresh chain and never inherits links queued
+  // against the dead generation — those run out against the closed pc, where
+  // each op fails as one caught, logged line (house rule: one bad message is
+  // one line). The .catch is part of the STORED chain, not the awaiter's,
+  // so a rejected link can never wedge every signal queued behind it.
   // recvReady stays outside the chain above — it may rebuild the peer.
-  p.sigQ = (p.sigQ ?? Promise.resolve()).then(() => processSignal(p, from, payload));
-  await p.sigQ.catch(() => {});
+  p.sigQ = (p.sigQ ?? Promise.resolve())
+    .then(() => processSignal(p, from, payload))
+    .catch(() => {});   // processSignal try/catches internally; this is the wedge-proof rail
+  await p.sigQ;
 }
 
 async function processSignal(p, from, payload) {
@@ -322,13 +329,27 @@ async function processSignal(p, from, payload) {
         if (p._everStable && (myId ?? '') < from) return;   // real glare: mine stands
         await p.pc.setLocalDescription({ type: 'rollback' });
       }
-      await p.pc.setRemoteDescription(payload.sdp);
+      applyDirection(p);            // our answer states OUR consent, not theirs
+      // PIPELINED, not sequential. setRemoteDescription and createAnswer are
+      // submitted together: both land on the connection's internal operations
+      // chain (WebRTC-PC §4.4.1.2), which already guarantees the answer is
+      // built only after the remote offer has been applied — awaiting each
+      // step before starting the next buys no ordering the chain does not
+      // give. What sequential awaits DID cost was wall clock: every await is
+      // a trip through the scheduler, and on a coarse-timer host that made
+      // the answer to the second offer of a same-tick double-offer burst
+      // miss its window while the first was still being paid out one tick at
+      // a time. applyDirection stays ahead of both on purpose — any sender
+      // or direction repair is in place before the answer is composed.
+      const remoteSet = p.pc.setRemoteDescription(payload.sdp);
+      const answerP = p.pc.createAnswer();
+      answerP.catch(() => {});      // if setRemote rejects, the chained reject must not float unhandled
+      await remoteSet;
       for (const c of p.pendingIce ?? []) {
         await p.pc.addIceCandidate(c).catch((err) => (window.__iceLog ??= []).push(`flushIce-FAIL ${err.name}`));
       }
       p.pendingIce = [];
-      applyDirection(p);            // our answer states OUR consent, not theirs
-      const answer = await p.pc.createAnswer();
+      const answer = await answerP;
       await p.pc.setLocalDescription(answer);
       p._everStable = true;      // we answered them: a real exchange happened
       sendRtc(from, { sdp: p.pc.localDescription });

@@ -390,6 +390,428 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-12 — §22r: MSAA back on by default.** tel0s's call: a
+  silently-missing AA reads as a rendering bug to colleagues who
+  weren't holding the §22n measurement. The dPR-gated auto-off is
+  reverted; MSAA is the default everywhere, ?msaa=0 stays as the
+  opt-out (+10fps at 2× retina, one flag away), and §22q already
+  bought frames back for the default look. A proper settings row
+  (alongside the other quality dials) is the eventual home.
+
+- **2026-08-11 — §22q: shaped resident density.** The Tsushima trade,
+  applied at every distance instead of only past 15m: DENSE_BASE thins
+  instances through the §22h rank dither (keep ×= base), survivors
+  widen by 1/√base — WIDTH ONLY, the height envelope a taller meadow
+  would betray stays untouched — and a guard ring (2..8m smoothstep)
+  holds full density at the camera's feet, the one place a missing
+  tuft is individually legible. Density cut and width comp ride ONE
+  ramp, so density × coverage is continuous everywhere. The CPU tile
+  budget mirrors the law at each tile's nearest point (denseAt ≥ every
+  instance's keep multiplier — the budget stays a ceiling, never a
+  seam), which is where the submitted-instance win comes from.
+  MEASURED (real-meadow scale 153k planted, 2940×1912 buffer @2×,
+  cruise off, drift-controlled): 1.0 → 52fps, 0.8 → 60 dipping (lo
+  52), 0.65 → locked 60-61 at 121k→84k submitted (−30%), 0.5 → 60
+  (68k) with visibly chunkier near-mid blades. Screenshot means moved
+  ≤ 0.5 RGB across the whole sweep — the width comp holds coverage.
+  Default 0.65 (least thinning that holds the cap); ?grassdense=N
+  overrides, =1 is the kill switch (byte-identical shader, untouched
+  budgets). grassDiag regime header now prints `dense N`. tel0s's eye
+  remains the gate on the default.
+
+- **2026-08-11 — §22 merge: grass-opaque-blades → main.** tel0s's eye
+  signed off; fast-forward (06aa000..b34d8b1), tree identical to the
+  gate-green branch tip, branch deleted. The A/B lever survives as
+  `?grassgeo=cards`. Their real session across the arc: 26 (ghost
+  shader) → 37 (opaque) → ~50 (MSAA policy). Remaining headroom on the
+  books: near/mid-field density shaping, and the sky re-bake spike
+  (clouds arc).
+
+- **2026-08-11 — §22p (branch): the 34ms mystery dies twice.** Verdict
+  in two parts, both measured. (1) tel0s's recurring worst=34 is VSYNC
+  QUANTIZATION: on a 60Hz panel a frame either makes the slot (16.7ms)
+  or waits for the next (33.3ms), so EVERY sub-60 second must contain
+  doubled frames — worst=34 in a 41fps phase is arithmetic, not a
+  hitch, and their distribution is actually TIGHT (worst never exceeded
+  2×vsync). The density-35% row proves it exactly: 58fps = 56 single +
+  2 doubled frames. (2) Underneath, a REAL ~1-per-10s GPU spike
+  (42-45ms, zero longtasks, zero heap movement — main thread clean)
+  matches the sky baked-tier re-bake cadence (9-12s); it hides inside
+  vsync headroom when the frame is light and surfaces sub-60. Already
+  on the clouds arc's books. THE FIX: perf gains doubled/spikes
+  per-second counters (frame.js window classification: >25ms = waited
+  one vsync, >40ms = beyond any pacing explanation); grassDiag prints
+  2×/s and spk/s per phase with the legend "doubled is EXPECTED
+  sub-60". Smoked: doubled/s tracks the fps deficit arithmetically,
+  both columns zero at 61fps. The worst-alone metric can never send
+  us ghost-hunting again. Gate: parity PASS, lightbench 30/30,
+  bootjank clean.
+
+- **2026-08-11 — §22o (branch): the MSAA policy lands + the tile trim.**
+  tel0s confirmed MSAA's 5-10 frame cost by eye, and their full diag
+  attributed the whole remaining gap to grass (hidden 61 vs baseline
+  41; sky/terrain/physics ≈ free; density 35% → 58 — instance count
+  still rules under opaque; far sea +9 vs near +5). Landed: (a) hiDPI
+  boots (dPR ≥ 1.5) default to NO MSAA — the 4× resolve at retina is
+  ~4ms/frame for stairsteps ~220dpi already hides; ?msaa=1 restores
+  (the shimmer escape hatch). (b) TILE_MAX_AXIS 8→12 (?grasstiles=N
+  diag override): finer tiles pin the §22h nearest-edge budget to the
+  dither curve — 7.3k fewer submitted instances, +2fps, visible
+  density identical; 16 adds nothing. Probe-view stack since morning:
+  31 → ~55 (opaque + no-MSAA + tiles12) before the cruise. OPEN
+  MYSTERY logged: a recurring worst=34ms frame rides grass visibility
+  in EVERY diag phase (even at 58fps, autos off) and disappears only
+  when the field hides — periodic, grass-linked, not wind/autos/sky;
+  suspect list starts at the 300ms tile tick. Gate: flora.test 61/61,
+  parity PASS, lightbench 30/30, bootjank clean.
+
+- **2026-08-11 — §22n (branch): vertex LOD built, measured, acquitted —
+  and MSAA convicted.** The coarse far twin (flora_lod bladeCoarseIndex:
+  every blade at loops 0→2→4, 12 index entries referencing 6 of 10
+  verts — an index subset never renumbers, so the §22h dither's bladeId
+  survives untouched; same structural layout proof, 61/61 unit tests)
+  rides the §17b swap machinery with bands 45/38. Measured at 2×
+  fullscreen, drift-controlled, engagement VERIFIED (22/60 tiles wearing
+  the 96-entry twin): 44/44 vs 44-45 — INERT. The M5's vertex throughput
+  acquits vertex count for the third time (§22c +3, §22f retirement,
+  now this). Default OFF on the evidence; ?grassvlod=on is the opt-in
+  for vertex-bound tiers. The same slice armed the audit's next lever:
+  ?msaa=0 (core.js antialias param, default unchanged) — and THAT is
+  the missing bill: 44 → 54fps (+10, drift-stable). The 4×MSAA resolve
+  at 2× retina costs ~4ms/frame. Policy candidate: antialias off when
+  dPR ≥ 1.5 — but opaque blades have GEOMETRIC edges where cards had
+  alpha ones, so shimmer-in-motion is tel0s's eyeball call before any
+  default flips. Cache postscript: tel0s's "opaque ≈ cards, 26fps" was
+  the /library 24h browser cache serving the pre-§22l SSS shader
+  through a server restart — fixed in d87cd13 (.js/.mjs/.json now
+  no-cache + ETag 304s; the .vrm carve-out extended to code). Gate:
+  flora.test 61/61, parity PASS, lightbench 30/30, bootjank clean.
+
+- **2026-08-11 — §22m (branch grass-opaque-blades): Sol's meadow, in
+  geometry.** tel0s green-lit the Tsushima-lineage rewrite with "keep
+  it close to Sol's art" as the constraint — and the codebase met us
+  halfway: bunchGeometry was already one card per blade with loop
+  widths fitted to the atlas art's measured envelope (_fit.json), so
+  the opaque blade IS the fitted strip (the envelope already tapers to
+  the art's tip), and the material IS the existing no-maps path
+  (alphaTest 0, attribute('color'), cheap backlit) once maps aren't
+  loaded. New: sampleBladePalette bakes each atlas column into a
+  root→tip vertex-color ladder (alpha-weighted, sRGB→linear, per-blade
+  hue jitter); ladder gains calibrated against the card render by
+  screenshot means (R 1.00 G 0.97 B 1.10 final). No alpha test → the
+  TBDR's hidden-surface removal eats the meadow's overdraw.
+  ?grassgeo=cards restores the atlas cards (A/B in one boot).
+  Bugs found on the way, both instructive: (1) the flora tiler copies
+  a NAMED list of shared attributes — 'color' wasn't on it and missing
+  attribute bindings render BLACK (fixed in tile + far-twin lists);
+  (2) since the §22l sweep, primeFiles negotiates KTX2 bytes under PNG
+  names, so the palette sampler got undecodable bytes and silently
+  fell back — THREE screenshot rounds compared cards to cards (the
+  probe now refetches raw art when primed bytes aren't PNG). Also: a
+  0.55 partial-normal experiment turned the meadow charcoal —
+  side-facing normals see neither sun nor sky; Sol's up-normal trick
+  is the meadow's brightness (specular veil muted at the material:
+  roughness ×1.35, specularIntensity 0.35). Measured, drift-controlled
+  2× spawn view: cards 40-41 → opaque 49±1 (the saga's biggest single
+  lever). 1× vsync-caps. Gate: parity PASS, lightbench 30/30, bootjank
+  clean. AWAITING tel0s's eye before merge.
+
+- **2026-08-11 — §22l: the fragment diet + the sweep that never ran.**
+  A full levers audit (Fable fork, GPU Gems ch.7 lineage vs the actual
+  material) found the bill is fragment-side: every meadow pixel paid 4
+  texture fetches (albedo/normal/rough/transl) + per-light SSS on
+  MeshSSSNodeMaterial + alphaTest discard (defeats TBDR HSR) — and the
+  KTX2 image sweep had NEVER run on the Air: tel0s's pkgutil-expanded
+  KTX sat in ~/Downloads, never on PATH, so §20d exit-3-skipped every
+  boot and the atlases served raw RGBA. Fixes: (1) encoder assembled at
+  ~/.local/ktx (bin+lib siblings), findKtx2Encoder now probes that
+  docs-recipe path as a fallback — a PATH-less install can't silently
+  starve the sweep again; boot sweep encoded 93 variants (meadow albedo
+  4.9×, transl 5.7×). (2) upstream-patched opts.fastShade (blades
+  default via flora.js, ?grassshade=full = upstream's exact material):
+  MeshStandardNodeMaterial, ONE shared albedo sample (color+opacity),
+  no relief/rough fetches, the already-authored cheap backlit term
+  instead of per-light SSS, albedo aniso 4→1. Byte-identical without
+  the opt. Measured (drift-controlled, 2×, spawn view): 31 (morning
+  §22h baseline) → 36-39 (ktx2 alone) → 41-42 (+fastShade); at 1× the
+  meadow now vsync-caps at 61. Screenshot pair eyeballed: same blade
+  character, no visible relief loss. Audit verdict recorded: full
+  opaque-blade rewrite (Tsushima lineage, no discard → TBDR HSR eats
+  the overdraw) is the L-sized root fix IF this lands short — needs
+  tel0s's art-direction call. Gate: parity PASS, lightbench 30/30,
+  bootjank clean.
+
+- **2026-08-11 — §22k: the resident takes the pixel wheel.** The freeze
+  tel0s reported after §22j turned out to be Zen/Firefox, not Chrome —
+  hunt closed (headless+headed Chrome soaks had already cleared the
+  cruise path; the headed "repro" was Chrome's occluded-window
+  throttle, proven by a mid-freeze `sample`: main thread 97% idle at
+  mach_msg). Per tel0s: render scale becomes a resident dial. build.js
+  grows a scale⚙ row beside grass⚙ (auto | 100% | 85% | 70%,
+  persisted as ew-render-scale — an explicit choice is a preference;
+  machine pressure stays session-only). governor: residentBase() =
+  BASE × factor; 'auto' = cruise drives (default, unchanged); a pinned
+  factor anchors pixelRatio outright and stands the cruise down — the
+  emergency <26fps pixels lever still sheds below a pin and restores
+  to it (a crisis outranks a preference, only while it lasts).
+  Housekeeping: build.js's SIX raw NUL bytes (the seat-gizmo `id\x00
+  slot` map keys — the very footgun that hid setCloudQuality at
+  :1089) are now \x00 escapes, byte-identical semantics; the file
+  greps clean for the first time. Gate: paritybench PASS, lightbench
+  30/30, bootjank clean, rs-smoke (pin 0.7 → pr 1.4 at boot, zero
+  cruise moves; live flip to auto re-anchors pr 2) PASS.
+
+- **2026-08-11 — §22j: the dead band learns the pixel law.** Session
+  moved onto the Air itself; the ?grasslod three-way A/B ran drift-
+  controlled (off / nodither / full / off-again, one browser, warm-up
+  boot excluded). Verdict: at 1× render scale ALL configs run 60fps;
+  at 2× ALL run ~30 (off 30/30, nodither 29/29, full 31/31, off#2
+  30/29). The §22e-h shader work is FREE (keep it — it buys the
+  seamless look), round 7's 26fps baseline was machine state, and the
+  machine is simply pixel-bound: resolution is the only lever that
+  moves it, and its whole steady state lives inside the 26-52 dead
+  band where the ladder never engages. So §17d reopens WITH evidence
+  (it was closed "for now" before these tables): governor.js gains a
+  cruise lever — after 8 consecutive dead-band seconds, pixels alone
+  steps −0.25 toward a floor of max(0.7, BASE×0.7) (1.4 on a 2×
+  panel); restore is the shared silent +0.125 above 52fps; ?cruise=off
+  disables (the A/B lever). Cruise-probe on the Air: 2→1.75→1.5→1.4
+  in 30s, steady 38-41fps (was 30-31), zero oscillation over 100s.
+  Everything else about §17d stands — no other lever enters the band.
+  Gate: paritybench PASS, lightbench 30/30, bootjank clean.
+  Housekeeping: TEL0S_NOTES.md itself contained a raw NUL byte (§21's
+  whisperKey line) that made every grep against this file silently
+  return nothing — the build.js:1089 footgun's sibling, now spelled
+  out as text.
+
+- **2026-08-11 — §22h: the dither pays its debts.** Round 6 on the Air
+  REGRESSED to 40fps — the flagged risk real: dither-killed instances
+  paid the full vertex program (submitted 131.5k vs 98.5k, and
+  far-LOD was worth +12 again = live vertex ALU binding). Corrections
+  in the patch file: (1) the alive test hoists and the dynamics
+  (wind×3 + gust fetch + pusher loop) run inside If(alive) — dead
+  vertices near-free (emission byte-identical without lodGrow.exp);
+  (2) blade-level dither via vertexIndex (10-vert runs, per-instance
+  hash, fading to the retired swap's proven 0.4) — the +12 recovered
+  continuously; (3) TILE_MAX_EDGE 45→28 — discovered INERT for the
+  lush meadow (the 8×8 TILE_MAX_AXIS already binds at ~11m tiles;
+  helps mid-size fields only; the ~30% budget waste stands but its
+  PRICE is what (1) cut). Gate: lightbench 30/30 + measure 120fps
+  (the TSL compiles), bootjank clean, grass-quality 57/57,
+  paritybench PASS. Round 7 decides.
+- **2026-08-11 — §22g (tel0s's idea): upstream-patched/ — the forks
+  come home.** Deliberate upstream redos now live IN this repo:
+  upstream-patched/<rel> shadows the same rel in eidoverse-video via
+  a top-precedence /library branch (PATCH_DIR in config; delete the
+  file to fall back to Skye's). vegetation.js (the §22e/f lodGrow +
+  dither patch) is the first resident; ../eidoverse-video is reset to
+  PRISTINE (8b37f0f — the two local commits' content is canonical
+  here now; never patch her checkout in place again, and the old
+  format-patch carrying instructions are OBSOLETE: one git pull of
+  THIS repo delivers everything to every machine). Proven end-to-end:
+  the route serves the patched copy (2 lodGrow hits) while disk
+  upstream has 0; lightbench 30/30 + measure 120fps building the
+  meadow from the overlay; bootjank 14 rough frames (best lush-commons
+  yet); paritybench PASS. The README carries the doctrine: minimal
+  opt-gated deltas, byte-identical without the opt, PR to Skye then
+  delete.
+- **2026-08-11 — §22f: density becomes a continuous law — the visible
+  squares cannot exist.** tel0s (round 5, ~55+ usual / 47-48 worst):
+  the per-TILE quantization was VISIBLE — whole 30-45m squares of
+  count/blade change while walking; they proposed subdividing tiles.
+  The landed answer keeps tiles big (8a's 17-draw economy) and makes
+  them invisible instead: (1) the falloff's SHAPE moves into the
+  shader per instance — keep(d) at the exact CPU curve, an instance
+  survives iff its DRAW-ORDER RANK < keep, where the rank is written
+  into the flutter-phase lane post-shuffle per tile (rank-as-phase is
+  still uniform per location; zero new attributes) — this is the
+  CPU count-prefix refined continuously, single-thinned, seamless at
+  every boundary; (2) the CPU count becomes a BUDGET at the tile's
+  NEAREST edge (keep(dNearest) ≥ every instance's keep — the shader
+  never wants what wasn't submitted; also fixes the center-based
+  over-cull at GRASS_FAR); (3) the per-tile blade swap is RETIRED
+  (BLADE_LOD bands = Infinity — round 3 proved blade count ~free and
+  the swap was the second visible pop; forceBladeLod stays a live
+  diag lever and the constants are the weak-GPU re-entry point);
+  (4) grassdiag's scope split gets its own DIAG_SCOPE_EDGE=20. RISK
+  flagged: dither-killed instances still pay vertex fetch (submitted
+  budget > visible, e.g. lush commons submits 131.5k for a
+  curve-shaped visible set) — round-3 evidence says the far bill was
+  raster-side so this should hold; the Air's round-6 table decides.
+  vegetation.js carries a SECOND local commit in ../eidoverse-video
+  (rank-dither in the lodGrow block; opts-gated, byte-identical
+  without exp) — format-patch both for the Air. Gate: flora 55/55,
+  grass-quality 57/57, bootjank clean, lightbench 30/30 + measure
+  120fps, paritybench PASS.
+- **2026-08-11 — §22e: density-compensation grow — appearance restored
+  in the cheap currency, savings kept in the expensive one.** tel0s's
+  round-4 diag: EVERY lever now recovers to the 61fps ceiling (the
+  residual ~2.4ms is thin enough that anything clears it) — and the
+  22d curve "reads a little too sparse". The classic fix, both asks at
+  once: the count falloff bites harder (exponent 2→2.5; round 4
+  measured BOTH rings safe at 0.35) while the upstream grass shader
+  grows the SURVIVORS with camera distance (opts.lodGrow: smoothstep
+  GRASS_NEAR→FAR, cap 1.7 — area ∝ scale², compensating ~3×
+  thinning). Safe by tel0s's own data: blade-thinning (an area cut)
+  bought +3fps in round 3, so area is NOT what the Air pays for —
+  instances are; restoring coverage via scale gives back almost none
+  of the win. The vegetation.js patch is opts-gated (no lodGrow →
+  grow ≡ 1, byte-identical for every other host) and committed in the
+  eidoverse-video repo LOCALLY — tel0s pushes that repo when ready;
+  it's PR material for Skye with the rest. flora passes lodGrow only
+  for blades-archetype strokes (the tiled ones the falloff cuts;
+  shrubs/yucca have no falloff and get no grow), constants shared so
+  the trade stays coupled. Gate: flora 55/55, grass-quality 57/57,
+  bootjank clean (lush commons drawn 106.5k→98.5k), lightbench 30/30
+  + measure 120fps no page errors, paritybench PASS. Awaiting the
+  Air's fifth table + eyes.
+- **2026-08-11 — §22d: the far sea convicted — the falloff curve was
+  inert on human-scale fields.** Three Air diag rounds converged:
+  round 1 (half-window confound — the inspector pane halved the
+  canvas) pointed at blade volume; round 2 at full window acquitted
+  blades and convicted something density-shaped; round 3's spatial
+  split was unambiguous — far-sea-only @35% recovered 46→61fps/worst
+  17 IDENTICAL to grass-hidden, near-ring-only 53, blade-thinning +3,
+  render-scale-80% 59. Distant tufts are subpixel cards: near-pure
+  per-instance overhead + 2×2 quad-overshading — at distance the
+  meadow wants FEWER, not thinner. The old linear 30→140m falloff
+  granted ~0.8 to every tile of a 90×80 field (inert by design range);
+  now quadratic 15→90m (d=40 → 0.44, d=60 → 0.16). Lush commons drawn
+  150k→106.5k on the bench camera. grassdiag grew the discriminating
+  phases (near/far density scope, render scale) that found it. Gate:
+  flora 55/55, grass-quality 57/57, bootjank clean, lightbench 30/30 +
+  measure 120fps, paritybench PASS. Awaiting the Air's fps + eyes;
+  the tuning surface is GRASS_NEAR/FAR + the exponent. The
+  render-scale-59 datapoint keeps the 17d dead-band question warm.
+- **2026-08-11 — §22c: the meadow's verdict — blade VOLUME, and the
+  bands were too generous.** tel0s's Air grassDiag on full×lush:
+  pushers off +1fps, wind off +1fps (the physics theory ACQUITTED),
+  far-LOD everywhere 44→61fps / worst 50→17ms — the complete
+  no-grass ceiling. The cost is blades-per-tuft × instances, nothing
+  else. Fix: BLADE_LOD_OUT/IN 60/50 → 20/15 — full 8-blade tufts only
+  in the tile underfoot; everything else draws the 40% index the
+  measurement proved visually free at meadow density (swaps stay
+  pointer-writes, 17b). Local proof against the SAME lush commons:
+  bootjank 48→17 frames >25ms, p95 16.7→8.4ms. Gate: flora 55/55,
+  lightbench 30/30 + measure 120fps, paritybench PASS. Awaiting
+  tel0s's Air retest; the constants are the whole knob if the middle
+  distance wants more lushness, and a third mid-tier index is a small
+  slice on the same machinery if bands alone can't satisfy both eyes
+  and fps.
+- **2026-08-11 — §22b: the sticky-35fps ratchet was the SKY, and it's
+  fixed.** tel0s's repro named the sky pane's quality knob — and the
+  §18 extraction's "setCloudQuality has no caller anywhere" was
+  defeated by the recorded build.js NUL-byte footgun (ripgrep skipped
+  the one file with the caller, build.js:1089). The chain: every
+  quality flip forces a full sky rebuild, and teardownSky could never
+  reach the engine's dispose() (not on the api) — so each flip leaked
+  the ~64MB _envTarget, the bake target, and the noise/weather
+  textures. PROVEN by probe (scratchpad skyq-probe): pre-fix textures
+  69→73→74→77 and renderTargets 7→9→9→11 across two flips, monotonic;
+  post-fix perfectly periodic (69↔68, 7↔6) AND 96MB less resident at
+  the baked tier (the first rebuild now frees boot leftovers too). The
+  fix: teardownSky calls skyInner.dispose() via the §18b _internals
+  ref (cloudShadowRoots is empty in this client — the factory marks
+  everything noCloudShadow — so its unwrap loop is a no-op, no
+  recompiles). EW.setCloudQuality exposed for diagnosis. The DROP to
+  35 at 'high' is honest cost, not a bug: high is the LIVE volumetric
+  march every frame (baked tiers re-bake per 9s) — beyond a fanless
+  Air's budget by design; tel0s's "clouds are extremely unoptimized"
+  is this tier + weather states, a future arc (upstream graph-caching
+  asks are the real fix). Gate: lightbench 30/30, paritybench PASS.
+  BENCH NOTE: bootjank baselines SHIFTED tonight — tel0s planted a
+  lush meadow (density 1.4, 153k instances) in the real commons,
+  which bootjank faithfully replays; p95/p99 comparisons against
+  pre-planting runs are apples-to-oranges now.
+- **2026-08-10 — §22: grassdiag — the meadow's GPU cost, attributed by
+  difference.** tel0s suspects grass PHYSICS (the shader pushers) over
+  fill on the MacBook's 50fps. The costs are GPU-side and invisible to
+  the CPU bill, so the diagnostic is differential: `await
+  EW.grassDiag()` freezes one component per ~4s phase — pushers (empty
+  list → the per-vertex displacement early-outs), all autos
+  (wind/gust/billboards/ticks), blades forced far-LOD, density 35%,
+  grass hidden — sampling fps/ms/worst, fully self-restoring
+  (try/finally). New flora exports freezePushers/forceBladeLod (the
+  LOD hysteresis restated equivalently for the force hook — verified
+  near↔far bands unchanged); terrain.getGrassField; bootjank
+  --grassdiag [--pixels N] runs it headless. Validated mechanically
+  here (all phases cycle+restore, no page errors, lightbench 30/30);
+  this box holds 121fps even at pixelRatio 3 so deltas are zero BY
+  RIGHTS — the discriminating run is tel0s's vsync-bound Mac, where
+  the first phase that recovers toward the no-grass fps names the
+  dominant cost.
+- **2026-08-10 — §20d LANDED — THE KTX2 ARC IS COMPLETE (models 20a/b,
+  avatars 20c, loose textures 20d).** optimize.ts --ktx2-img: pngjs/
+  jpeg-js decode (the arc's ONE dep addition, pure-JS, flagged — sharp
+  is broken on this box and the flip must gate deterministically) →
+  vertical row flip BAKED (three's KTX2Loader ignores KTX orientation
+  metadata; the engine contract stores the flip in pixels) → toktx.
+  Filename→codec/transfer classification with a verified CALL SITE per
+  rule (127 files dry-run: grass albedo/translucency + sky photos
+  ETC1S/sRGB, normals/roughness UASTC/linear, particle sprites
+  UASTC/sRGB — emitters.js loads them {srgb:true}, overruling the
+  brief's table; trace_06.png has CONFLICTING consumers → honestly no
+  variant; 9 non-POT files skipped with reasons). Sweep arm #3 over
+  the three curated dirs; /library ?ktx2=1 extended to images; the
+  client negotiates at the FILE layer (primeFiles) so every path/cache
+  identity is unchanged and loadImageTexture routes by 12-byte magic
+  sniff (detached-buffer hazard defused: parse gets a copy, never the
+  primed storage). ORIENTATION PROVEN two ways: a constructed corner-
+  marker round-tripped through the independent KTX transcoder, and
+  pixel statistics on the shipped albedo (mean |diff| 2.19 vs flipped
+  source, 22.29 vs unflipped). Gate: 28 variants built + 4 honest
+  skips; bootjank shows every asset class negotiating (veg maps
+  ?ktx2=1, starmap 2.9MB→1.2MB wire, the 92.5MB veg upload block →
+  16MB); lightbench 30/30 + measure at 120fps (the meadow renders
+  through KTX2 — visual truth); paritybench PASS.
+- **2026-08-10 — §21 LANDED: the voice double-offer, diagnosed
+  deeper.** The brief's premise corrected by the agent: upstream
+  ALREADY serializes per-peer (sigQ) — the two inherited check
+  failures were Windows/Bun TIMER artifacts (~15.6ms setTimeout
+  granularity × three sequential awaits missing the suite's 20/60ms
+  windows), so upstream likely never saw them fail on their boxes;
+  our earlier "fails identically on pristine upstream/main" was true
+  on THIS box specifically. The fix is real regardless: the stored
+  chain now carries its own .catch (a rejected link could WEDGE every
+  signal queued behind it — a genuine latent bug), and
+  setRemoteDescription/createAnswer submit together (spec-faithful:
+  RTCPeerConnection's internal op chain orders them; the sequential
+  await bought only latency) — answers leave one tick sooner
+  everywhere. Glare logic untouched. voice-lifecycle 95/95 ×4 (three
+  agent runs + operator). Platform note: the suite's margins are
+  tick-exact on Windows/Bun.
+- **2026-08-10 — §20c LANDED: VRMs, KTX2 by surgical container
+  rewrite.** No gltf-transform Document ever touches a VRM (it drops
+  the VRM/VRMC extensions): optimize.ts --ktx2-vrm parses the GLB
+  container raw, classifies every image across THREE schema
+  generations (core glTF + VRMC_materials_mtoon + VRM0
+  materialProperties; scalar-sampled slots → UASTC, unclassifiable →
+  UASTC), swaps image bytes IN PLACE (every bufferView keeps its
+  index; offsets recomputed 4-aligned; zero reindexing;
+  accessor-shared views never touched), and VALIDATES its own output
+  before writing — 13 untouched JSON sections stringify-identical,
+  every unreplaced view byte-compared; any discrepancy refuses. A
+  torn VRM is someone's body. Sweep covers vrms/**.vrm both bases
+  (skipping .ktx2.vrm self-encodes); /library's ?ktx2=1 branch covers
+  .vrm with a freshness guard (avatars mutate mid-session);
+  avatarRoster filters variant ghosts; loadVRM flags capable fetches
+  (the &ktx2=1-after-?v= case). MEASURED: aletheia 31→23.3MB
+  (6,982-check independent verification, ktx2check 3/3,
+  deterministic); the heavyjoin gate shows 14.1MB on the wire
+  (gzipped variant), textures 42ms (raw original: 352ms), pool-hit
+  0ms intact. claude.vrm turned out to have ZERO textures — a pure
+  vertex-color body; honest exit 2. Adjacent fixes landed with it:
+  prefetch now warms the SAME ?ktx2=1 cache key demand fetches use
+  (ktx2Capable export — unflagged warmth was pure waste for capable
+  clients, a 20b-era gap), /library-models stops listing .ktx2.glb
+  ghosts. Gate: lightbench 30/30, paritybench PASS. Known: a freshly
+  uploaded avatar gets its variant at the next boot sweep (freshness
+  guard keeps serving correct meanwhile); .failed markers don't
+  expire on source change; sharp remains unusable on this Windows box
+  (two-libvips clash — skip-the-texture posture holds). REMAINING in
+  the arc: 20d loose toolkit PNGs (veg + 4K sky = the last big
+  chunk), the JPEG-threshold decision, then the voice double-offer
+  fix (queued by tel0s).
 - **2026-08-10 — §20a+20b LANDED: KTX2, server arm + client loader.**
   optimize.ts --ktx2 (diet minus webp, plus per-texture toktx/ktx —
   probed KTX2_TOKTX→toktx→ktx, exit 3 = no-encoder = env-skip; UASTC+
@@ -412,7 +834,9 @@ fixture/tool matrix.
   per-GLB texture phases COLLAPSED — CRT textures 10ms (the Mac paid
   1221ms for the raw original). Encoder for this box: a portable
   toktx v4.4.2 (7z-extracted NSIS, scratchpad, no install); prod Mac:
-  brew install ktx. Gate: 5/5 transcodes + ktx2check, lightbench 30/30
+  pkgutil-extract per docs/ktx2-encoder.md (brew has no formula — a
+  correction; the pkg's Rosetta demand is an installer-metadata bug over
+  a fully arm64 payload). Gate: 5/5 transcodes + ktx2check, lightbench 30/30
   (the cloud-easing check now samples up to 5 rAF pairs — a loaded
   headless box batches rAF callbacks and a single pair can read dt=0),
   paritybench PASS (variants realized live in bootjank's browser).
@@ -1861,7 +2285,7 @@ step 2). Binding facts:
 - Wire contract = API: close codes 4002-4006, {type:"error"} prose
   substrings, the snapshot field set, present[].pose = settledPose
   (pinned by SOURCE-TEXT regex), geom as a separate post-join message
-  (join stays synchronous), lease message shapes, whisperKey's  .
+  (join stays synchronous), lease message shapes, whisperKey's NUL separator (a raw \x00 byte once lived HERE and made this whole file invisible to grep - the build.js:1089 footgun's sibling).
 - **Source-text gates**: settled-pose-test, whisper-disable-test,
   voice-wiring-test regex server.ts ITSELF — so settledPose + the
   whisper/rtc/typing cases STAY in server.ts; the split extracts around
@@ -2148,7 +2572,10 @@ encoder gap (task record 2026-08-10).
 **Encoder** (the one hard gap): KTX-Software's toktx/ktx CLI, probed
 KTX2_TOKTX env → toktx → ktx on PATH; absent = optimize exit code 3 =
 env-skip, never a .failed marker (the sharp-degrade pattern,
-optimize.ts:50-59). Prod Mac: `brew install ktx`. Dev box: a portable
+optimize.ts:50-59). Prod Mac: pkgutil-extract the arm64 pkg (docs/ktx2-encoder.md —
+brew has no formula, and the pkg installer falsely demands Rosetta:
+its metadata lacks hostArchitectures while the payload is pure arm64).
+Dev box: a portable
 extraction (7z on the NSIS installer) pointed at by env — no install.
 
 **Server (20a)**: optimize.ts gains a --ktx2 mode: full existing diet

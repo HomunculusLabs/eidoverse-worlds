@@ -12,7 +12,7 @@
 import { existsSync, readFileSync, writeFileSync, renameSync, readdirSync, mkdirSync, appendFileSync } from "node:fs";
 import { join, normalize } from "node:path";
 import { randomBytes } from "node:crypto";
-import { ROOT, WORLDS_DIR, LIBRARY_DIR, OPT_DIR, JOIN_TOKEN } from "./config.ts";
+import { ROOT, WORLDS_DIR, LIBRARY_DIR, OPT_DIR, PATCH_DIR, JOIN_TOKEN } from "./config.ts";
 import { hnSessions, hnJti, sessionFromCookie, saveSessions, SESSION_TTL_MS, HN_ISSUER_KEY, HN_ISS, HN_AUD, HN_LOGIN_URL, HN_REQUIRE_LOGIN } from "./auth.ts";
 import { verifyToken } from "./aid1.ts";
 import { resolveLibFile } from "./lint.ts";
@@ -67,7 +67,9 @@ export function avatarRoster(): { name: string; path: string; height: number | n
     const dir = join(base, "eidoverse/assets/vrms");
     if (!existsSync(dir)) continue;
     for (const f of readdirSync(dir)) {
-      if (f.endsWith(".vrm")) seen.set(f.replace(".vrm", ""), `eidoverse/assets/vrms/${f}?v=${Math.round(Bun.file(join(dir, f)).lastModified)}`);
+      // .ktx2.vrm files are §20c texture variants living beside overlay
+      // originals — negotiated serving artifacts, not bodies of their own
+      if (f.endsWith(".vrm") && !f.endsWith(".ktx2.vrm")) seen.set(f.replace(".vrm", ""), `eidoverse/assets/vrms/${f}?v=${Math.round(Bun.file(join(dir, f)).lastModified)}`);
     }
   }
   // stature metadata, contributed alongside portraits (see POST /thumb)
@@ -95,6 +97,17 @@ function contentType(path: string): string {
 
 const gzCache = new Map<string, { mtime: number; gz: Uint8Array }>();
 
+// What may cache for a day WITHOUT asking: heavy, rarely-edited art. What may
+// NOT: things we iterate on, where a silently stale copy costs a debugging
+// session — avatars (2026-07-22, "sydney's arms are swapped": three people on
+// three cached rigs) and, since upstream-patched/ (§22g), library CODE and
+// its data sidecars (2026-08-11: a 24h-cached vegetation.js served tel0s the
+// pre-§22l shader through a server restart and a whole branch A/B — mode
+// read 'cards-sss' while the wire had 'opaque'). no-cache still rides the
+// ETag: revalidation is a 304, not a re-download.
+const hardCacheable = (path: string) =>
+  !path.endsWith(".vrm") && !/\.(m?js|json)$/i.test(path);
+
 function serveFrom(base: string, rel: string, cache = false, req?: Request, immutable = false): Response {
   const path = normalize(join(base, rel));
   if (!path.startsWith(base)) return new Response("forbidden", { status: 403 });
@@ -113,7 +126,7 @@ function serveFrom(base: string, rel: string, cache = false, req?: Request, immu
     if (req?.headers.get("if-none-match") === etag) {
       // cache-control must ride along on the 304 (it refreshes the stored response's lifetime)
       headers["cache-control"] = immutable ? "public, max-age=31536000, immutable"
-        : cache && !path.endsWith(".vrm") ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
+        : cache && hardCacheable(path) ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
       return new Response(null, { status: 304, headers });
     }
   }
@@ -122,7 +135,7 @@ function serveFrom(base: string, rel: string, cache = false, req?: Request, immu
   // (rig fixes, re-exports) and a 24h-stale avatar is a debugging nightmare
   // (2026-07-22: "sydney's arms are swapped" was three of us looking at three
   // different cached rigs). no-cache = revalidate each load, still cheap.
-  const hard = cache && !path.endsWith(".vrm");
+  const hard = cache && hardCacheable(path);
   headers["cache-control"] = immutable ? "public, max-age=31536000, immutable"
     : hard ? "public, max-age=86400" : cache ? "no-cache" : "no-store";
   // gzip the JS modules: three.webgpu.js is 2.1MB raw / ~500KB gzipped, and
@@ -437,7 +450,9 @@ const ROUTES: Route[] = [
       for (const d of dirs) {
         if (!existsSync(d)) continue;
         for (const f of readdirSync(d)) {
-          if (!f.endsWith(".glb")) continue;
+          // ktx2 variants live beside originals in OPT_DIR — they are the
+          // same model, not a catalog entry (the ghost-listing fix, §20c)
+          if (!f.endsWith(".glb") || f.endsWith(".ktx2.glb")) continue;
           const low = f.toLowerCase();
           const score = q.length ? q.filter((t) => low.includes(t)).length : 1;
           if (score > 0) files.set(f, Math.max(files.get(f) ?? 0, score));
@@ -496,6 +511,12 @@ const ROUTES: Route[] = [
       const rel = url.pathname.slice("/library/".length);
       // optimized mirror first (draco+webp): same path, ~30x smaller
       const versioned = url.searchParams.has("v") || rel.startsWith("store/"); // content-addressed = immutable
+      // Deliberate upstream forks win over EVERYTHING (upstream-patched/
+      // README.md): same URL, versioned in this repo, delete-to-fall-back.
+      {
+        const p = normalize(join(PATCH_DIR, rel));
+        if (p.startsWith(PATCH_DIR) && existsSync(p)) return serveFrom(PATCH_DIR, rel, true, req, versioned);
+      }
       // KTX2 is NEGOTIATED (§20), never the unflagged answer: the variant's
       // KHR_texture_basisu sits in extensionsRequired, and parsers without a
       // KTX2 decoder — agents, tools, old clients — THROW on required
@@ -503,10 +524,32 @@ const ROUTES: Route[] = [
       // asks with ?ktx2=1; everyone else gets exactly today's bytes. Same
       // cache ladder as the base file (non-immutable, ETag revalidates), and
       // the distinct URL is its own clean nginx/browser cache entry.
-      if (url.searchParams.get("ktx2") === "1" && rel.endsWith(".glb")) {
-        const kRel = `${rel}.ktx2.glb`;
+      // VRMs (§20c) negotiate identically — avatar URLs carry ?v= minted from
+      // the ORIGINAL's mtime (the version identity is the original; ktx2=1 is
+      // its own cache key) — with one extra guard: bodies are the one asset
+      // class that mutates MID-SESSION (POST /upload?as=avatar broadcasts
+      // avatar-updated and every client refetches immediately), so a variant
+      // OLDER than the winning original is someone's stale body under a fresh
+      // ?v= — serve the original until the next boot sweep rebuilds it.
+      // Loose images (§20d) negotiate like GLBs: a flip-baked .ktx2 sibling
+      // (OPT_DIR/<rel>.ktx2, built only for the curated sweep dirs) answers a
+      // flagged fetch; contentType serves it as image/ktx2. The client's
+      // loadImageTexture sniffs the container magic, so the SAME path carries
+      // either byte shape.
+      if (url.searchParams.get("ktx2") === "1"
+          && (rel.endsWith(".glb") || rel.endsWith(".vrm") || /\.(png|jpe?g)$/i.test(rel))) {
+        const kRel = rel.endsWith(".glb") ? `${rel}.ktx2.glb`
+          : rel.endsWith(".vrm") ? `${rel}.ktx2.vrm` : `${rel}.ktx2`;
         const k = normalize(join(OPT_DIR, kRel));
-        if (k.startsWith(OPT_DIR) && existsSync(k)) return serveFrom(OPT_DIR, kRel, true, req, versioned);
+        if (k.startsWith(OPT_DIR) && existsSync(k)) {
+          let fresh = true;
+          if (rel.endsWith(".vrm")) {
+            const orig = [[OPT_DIR, normalize(join(OPT_DIR, rel))], [LIBRARY_DIR, normalize(join(LIBRARY_DIR, rel))]]
+              .find(([base, p]) => p.startsWith(base) && existsSync(p))?.[1];
+            fresh = !!orig && Bun.file(k).lastModified > Bun.file(orig).lastModified;
+          }
+          if (fresh) return serveFrom(OPT_DIR, kRel, true, req, versioned);
+        }
       }
       // store uploads: prefer the store-min shadow — same address, the
       // original stays as provenance and as the fallback while (or if) the
