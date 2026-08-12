@@ -21,6 +21,12 @@ import { buildFloraField, warmField } from './flora.js';
 import { applySky, whenSkyWarm } from './sky.js';
 import { whenBooted, bootDone } from './boot.js';
 import { warm, P_GATE } from './warmqueue.js';
+// seat correction for mounted riders (upstream #101) — the me-drive frame
+// calls these for every seated body; their import fell on the fork side of
+// a merge hunk while the call site auto-merged, and every SIT threw 56
+// ReferenceErrors a second (antra, live, from a swing in commons2)
+import { seatCorrectionFor } from './seats.js';
+import { applySeatCorrection } from './seatcore.js';
 
 /** id -> Object3D. `null` is a reservation held while the GLB downloads, so a
  *  duplicate spawn in the same tick can't create two bodies for one id. */
