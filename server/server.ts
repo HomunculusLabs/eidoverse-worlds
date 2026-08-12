@@ -1396,6 +1396,65 @@ function serveFrom(base: string, rel: string, cache = false, req?: Request, immu
   return new Response(f, { headers });
 }
 
+// Build identity, resolved once at boot. "What is production running?" must be
+// a lookup, not an inference from merge timestamps (2026-08-07: voice fixes
+// were merged for hours while the running sequencer predated them, and nobody
+// could tell from inside the world). Git is queried at startup only — a
+// deployed tree without .git falls back to BUILD_SHA (deploy scripts can set
+// it) and then to "unknown", honestly.
+const BUILD = (() => {
+  const gitLine = (...args: string[]) => {
+    try {
+      return new TextDecoder().decode(
+        Bun.spawnSync(["git", ...args], { cwd: import.meta.dir }).stdout).trim();
+    } catch { return ""; /* no git in the deploy image */ }
+  };
+  const sha = process.env.BUILD_SHA
+    || ((process.env.BUILD_TIME || process.env.BUILD_DIRTY != null) ? "unknown" : gitLine("rev-parse", "--short", "HEAD") || "unknown");
+  // WHEN the code is from, not just which commit. A sha is opaque to anyone
+  // without the repo in front of them; "code from 2026-08-10T14:32Z" lets a
+  // participant answer "did the deploy pick up this afternoon's fix?" without
+  // resolving hashes. Distinct from startedAt on purpose: startedAt says the
+  // PROCESS is fresh, commitTime says the CODE is — a restart of stale code
+  // looks healthy on the first and stale on the second.
+  // SHA AND TIME ARE ONE PROVENANCE PAIR (r3, Antra's re-review): r2 fixed
+  // this class for dirty and left its sibling open — BUILD_SHA without
+  // BUILD_TIME paired the image's sha with the LOCAL checkout's HEAD
+  // timestamp (and vice versa). Both from env, or both from the same git
+  // HEAD, or the missing partner is "unknown" — never filled from another
+  // identity.
+  const envSha = process.env.BUILD_SHA || "";
+  const envTime = process.env.BUILD_TIME || "";
+  // envIdentity computed below governs all three; forward-declare the parts it needs.
+  const envDirtyPresent = process.env.BUILD_DIRTY != null;
+  const commitTime = envTime
+    || ((envSha || envDirtyPresent) ? "unknown" : gitLine("show", "-s", "--format=%cI", "HEAD") || "unknown");
+  // A sha identifies HEAD — not the bytes actually executing. A tree with
+  // uncommitted edits reports a clean-looking sha while running modified
+  // code, which is exactly the deployment mystery this endpoint exists to
+  // end. So say so: dirty=true|false from `git status --porcelain`, or the
+  // BUILD_DIRTY env for image builds, or "unknown" when neither can answer —
+  // never a silent default that reads as clean.
+  // WHOLE-IDENTITY MATCH (r3+, adversarial review): sha, commitTime and dirty
+  // are ONE provenance triple. If ANY of the three comes from the environment
+  // (an image build), the other two are env-or-unknown — never filled from the
+  // local git tree, in any direction. So a lone BUILD_DIRTY no more licenses a
+  // git-derived sha/time than a lone BUILD_SHA licenses a git-derived dirty:
+  // the local tree is trusted for dirtiness ONLY when the whole identity is
+  // git-derived (no BUILD_SHA, BUILD_TIME, or BUILD_DIRTY set).
+  const envIdentity = !!(process.env.BUILD_SHA || process.env.BUILD_TIME || process.env.BUILD_DIRTY);
+  const dirtyRaw = process.env.BUILD_DIRTY ?? (() => {
+    if (envIdentity) return "unknown";        // BUILD_SHA or BUILD_TIME set, DIRTY not: image sha, no coherent local partner
+    const out = gitLine("status", "--porcelain");
+    // gitLine returns "" both for a clean tree and for no-git; disambiguate
+    // by whether HEAD resolves — no sha from git means no git to trust.
+    return gitLine("rev-parse", "HEAD") ? (out ? "true" : "false") : "unknown";
+  })();
+  return { sha: sha || "unknown", commitTime: commitTime || "unknown",
+           dirty: dirtyRaw === "true" ? true : dirtyRaw === "false" ? false : "unknown",
+           startedAt: new Date().toISOString() };
+})();
+
 const server = Bun.serve({
   port: PORT,
   hostname: "0.0.0.0",
@@ -1474,6 +1533,12 @@ const server = Bun.serve({
       if (m && hnSessions.delete(m[1]!)) saveSessions();
       return new Response(JSON.stringify({ ok: true }), {
         headers: { "content-type": "application/json", "set-cookie": "ew_sess=; Path=/; HttpOnly; Max-Age=0" },
+      });
+    }
+    if (url.pathname === "/version") {
+      // Public, cheap, cache-hostile: the whole point is knowing what runs NOW.
+      return new Response(JSON.stringify(BUILD), {
+        headers: { "content-type": "application/json", "cache-control": "no-store" },
       });
     }
     if (url.pathname === "/geom") {

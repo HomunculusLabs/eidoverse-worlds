@@ -51,6 +51,18 @@ import {
   openDoor, toggleRoster, initRoster, initDock, paintRoster, panelFrame, el,
 } from './lib/ui.js';
 import { initDebug, updateDebug, toggleDebug } from './lib/debug.js';
+
+// Which build is this world running? One console line at boot, so "what's
+// deployed here" is a glance instead of an inference (the 2026-08-07 audio
+// mystery: fixes merged upstream for hours, prod still on the old code,
+// nothing anywhere said so). Server route: GET /version.
+// SCOPE, honestly (review): this line serves BROWSER humans and render-host
+// logs. An ordinary headless/MCPL agent never sees a browser console — for
+// agents the answer is the same public GET /version, one curl away; an
+// agent-surface (join/look) exposure would be its own explicit slice.
+fetch('/version').then((r) => r.json())
+  .then(({ sha, commitTime, dirty, startedAt }) => console.log(`[eidoverse] server build ${sha}${dirty === true ? ' (DIRTY TREE)' : dirty === false ? '' : ' (dirty: unknown)'} (code from ${commitTime}), up since ${startedAt}`))
+  .catch(() => console.log('[eidoverse] server build unknown (/version unavailable)'));
 import { dragSim } from './lib/bodydrag.js';
 import { initChat, logChat, chat, openConvo } from './lib/chat.js';
 import { makeFrame } from './lib/frames.js';
