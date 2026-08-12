@@ -170,7 +170,8 @@ const DEG = Math.PI / 180;
 // the torso is one body here. Mass from proxy volume was the measured mistake:
 // a 0.4 kg pelvis "whipped around like a bead".
 const MASS_FRAC = {
-  torso: 0.14 + 0.14 + 0.16,
+  torso: 0.14 + 0.14 + 0.16,   // kept for the degenerate no-spine-bones trunk
+  pelvis: 0.14, spineSeg: 0.14, chestSeg: 0.16,   // rigdef.py's rows, used apart
   head: 0.081,
   upperArm: 0.028, lowerArm: 0.016, hand: 0.006,
   upperLeg: 0.100, lowerLeg: 0.047, foot: 0.015,
@@ -224,6 +225,11 @@ const GRAB_CLAMP_X = 1.2;       // × total mass
 // (rapierdoll's law; also the source's thumb lesson).
 //   ref: what X is crossed against — 'fwd' | 'up' | 'palm' | 'pinky'
 const JOINT_SPECS = {
+  // trunk (rigdef.py: spine ±25/±20/±25, chest ±20/±20/±20). Modest ranges —
+  // a spine is stiff — but the difference between these and NO joint is the
+  // difference between a body that folds and a plank.
+  spine: { ref: 'fwd', x: [-25, 25], twist: 20, z: [-25, 25] },
+  chest: { ref: 'fwd', x: [-20, 20], twist: 20, z: [-20, 20] },
   head: { ref: 'fwd', x: [-40, 40], twist: 45, z: [-35, 35] },
   upperArm: { ref: 'fwd', x: [-85, 85], twist: 70, z: [-85, 85] },
   lowerArm: { ref: 'fwd', flex: 145, ext: 2, want: 'fwd', twist: 5, z: [-5, 5] },
@@ -257,6 +263,8 @@ const EXTRA_SEGMENTS = [
   { a: 'rightFoot', b: 'rightToes', part: 'foot' },
 ];
 const CORE_JOINTS = [
+  { at: 'spine', parent: 'hips|spine', child: 'spine|chest', spec: 'spine' },
+  { at: 'chest', parent: 'spine|chest', child: 'chest|neck', spec: 'chest' },
   { at: 'neck', parent: 'chest', child: 'neck|head', spec: 'head' },
   { at: 'leftUpperArm', parent: 'chest', child: 'leftUpperArm|leftLowerArm', spec: 'upperArm' },
   { at: 'rightUpperArm', parent: 'chest', child: 'rightUpperArm|rightLowerArm', spec: 'upperArm' },
@@ -660,37 +668,66 @@ export class AmmoRagdoll {
     };
     const limbW = (ra, rb2) => Math.max(0.02, ra.distanceTo(rb2) * 0.16);
 
-    // torso body: pelvis + spine + chest boxes on ONE rigid body
-    const torsoBoxes = [];
-    for (const key of ['hips|spine', 'spine|chest', 'chest|neck']) {
-      const [a, b2] = key.split('|');
-      if (!restP[a] || !restP[b2]) continue;
-      torsoBoxes.push(boxFor(restTorsoMid, restP[a], restP[b2], torsoR, torsoR * 0.6));
-    }
-    if (!torsoBoxes.length) {       // degenerate trunk: one box hips→upper
-      torsoBoxes.push(boxFor(restTorsoMid, restP.hips, restUpper, torsoR, torsoR * 0.6));
-    }
-    const torsoBody = mkBody(MASS_FRAC.torso * massScale, liveTorsoMid, torsoQ, torsoBoxes, false);
-    this.torsoBody = torsoBody;
-    bodyIndex.set(torsoBody, 0);
-
+    // The trunk is THREE bodies — pelvis, spine, chest — jointed by the source's
+    // own spine and chest limits.
+    //
+    // It was one. A single rigid body from hips to neck cannot bend, so a doll
+    // fell as a plank: no fold at the waist, no shoulders leading the hips, no
+    // curl on landing. And it is not only a look. Every arm and the head hung
+    // off ONE body carrying half the doll's mass, so a hand dragged across the
+    // floor loaded the whole arm chain against that slab and the arm joints
+    // absorbed all of it — measured at ~118 degrees past their limits, and
+    // unchanged by softening the drag handle from x8 to x1.2, because the
+    // handle was never what was saturating.
+    //
+    // The rows of MASS_FRAC.torso were already the three Dempster fractions
+    // (0.14 + 0.14 + 0.16) added together; they are simply used apart now.
     const segMeta = new Map();      // segKey -> { body, restOrigin }
-    for (const key of TORSO_KEYS) {
+    const TRUNK = [
+      ['hips|spine', 'pelvis'], ['spine|chest', 'spineSeg'], ['chest|neck', 'chestSeg'],
+    ];
+    let nextBit = 0;
+    let trunkBuilt = 0;
+    for (const [key, part] of TRUNK) {
       const [a, b2] = key.split('|');
       if (!restP[a] || !restP[b2] || !live[a] || !live[b2]) continue;
+      const ra = restP[a], rb2 = restP[b2];
+      const restMid = ra.clone().add(rb2).multiplyScalar(0.5);
+      const liveMid = live[a].clone().add(live[b2]).multiplyScalar(0.5);
+      const body = mkBody(MASS_FRAC[part] * massScale, liveMid, torsoQ,
+        [boxFor(restMid, ra, rb2, torsoR, torsoR * 0.6)], false);
       const seg = {
-        key, a, b: b2, body: torsoBody, torso: true,
-        restA: restP[a].clone(), restB: restP[b2].clone(),
-        localA: restP[a].clone().sub(restTorsoMid),
-        localB: restP[b2].clone().sub(restTorsoMid),
+        key, a, b: b2, body, torso: true,
+        restA: ra.clone(), restB: rb2.clone(),
+        localA: ra.clone().sub(restMid), localB: rb2.clone().sub(restMid),
         r: torsoR,
       };
       this.segs.set(key, seg);
-      segMeta.set(key, { body: torsoBody, restOrigin: restTorsoMid });
+      segMeta.set(key, { body, restOrigin: restMid });
+      if (nextBit <= BODY_BITS) bodyIndex.set(body, nextBit++);
+      trunkBuilt++;
     }
+    // Degenerate trunk (a rig with no spine/chest bones): fall back to the old
+    // single body, so those rigs behave exactly as before rather than losing
+    // their torso entirely.
+    if (!trunkBuilt) {
+      const body = mkBody(MASS_FRAC.torso * massScale, liveTorsoMid, torsoQ,
+        [boxFor(restTorsoMid, restP.hips, restUpper, torsoR, torsoR * 0.6)], false);
+      segMeta.set('hips|spine', { body, restOrigin: restTorsoMid });
+      segMeta.set('chest|neck', { body, restOrigin: restTorsoMid });
+      this.segs.set('hips|spine', {
+        key: 'hips|spine', a: 'hips', b: 'spine', body, torso: true,
+        restA: restP.hips.clone(), restB: restUpper.clone(),
+        localA: restP.hips.clone().sub(restTorsoMid),
+        localB: restUpper.clone().sub(restTorsoMid), r: torsoR,
+      });
+      if (nextBit <= BODY_BITS) bodyIndex.set(body, nextBit++);
+    }
+    // The trunk body other code asks for by name. Callers want "the thing the
+    // arms and head hang off", which is the chest once the trunk articulates.
+    this.torsoBody = (segMeta.get('chest|neck') ?? segMeta.get('hips|spine'))?.body ?? null;
 
     // limb + head + hand/foot bodies
-    let nextBit = 1;
     const partOf = (key) => {
       if (key === 'neck|head') return 'head';
       if (/UpperArm\|/.test(key)) return 'upperArm';
@@ -969,10 +1006,12 @@ export class AmmoRagdoll {
       return con;
     };
 
+    // Named trunk anchors. The legs hang off the PELVIS and the arms and head
+    // off the CHEST; when they all pointed at one fused body these two names
+    // resolved to the same thing, which is exactly what made the trunk rigid.
     const metaOf = (ref) => {
-      if (ref === 'hips' || ref === 'chest' || TORSO_KEYS.has(ref)) {
-        return { body: torsoBody, restOrigin: restTorsoMid };
-      }
+      if (ref === 'hips') return segMeta.get('hips|spine');
+      if (ref === 'chest') return segMeta.get('chest|neck') ?? segMeta.get('hips|spine');
       return segMeta.get(ref);
     };
     for (const J of CORE_JOINTS) {
