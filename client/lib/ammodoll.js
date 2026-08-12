@@ -653,9 +653,31 @@ export class AmmoRagdoll {
       const w = part === 'head' ? Math.max(limbW(ra, rb2), torsoR * 0.55)
         : part === 'foot' ? Math.max(limbW(ra, rb2), 0.03)
           : limbW(ra, rb2);
+      // …and the skull is a VOLUME the head bone only anchors: VRM puts that
+      // bone at the skull base, so a box ending there — and only as wide as
+      // the neck — leaves the face and crown hollow, and a prone body sank
+      // face-first to the ears before its neck stub touched ground (antra,
+      // live, on FLAT terrain — the slope fix was innocent). Two dimensions
+      // matter and only one is obvious: the box runs ON past the bone to a
+      // height-scaled crown point, and — the one that actually carries a
+      // prone head — its PERPENDICULAR half-extents grow to skull scale
+      // (extending along the bone axis lifts nothing when that axis lies on
+      // the ground; measured: crown-only moved the prone head 2.7→2.9cm).
+      // The verlet never shows this because its head particle carries an
+      // explicit clearance radius; the source rig never shows it because its
+      // head box was measured from the MESH. Collision only — seg endpoints,
+      // .p and pins keep the true bone.
+      const isHead = part === 'head';
+      const boxEnd = isHead
+        ? rb2.clone().addScaledVector(
+          rb2.clone().sub(ra).normalize(),
+          Math.min(0.22, Math.max(0.08, H * 0.11)))
+        : rb2;
+      const wHead = isHead ? Math.max(w, H * 0.05) : w;
+      const dHead = isHead ? Math.max(w, H * 0.058) : w;
       const body = mkBody(
         MASS_FRAC[part] * massScale, liveMid, qB,
-        [boxFor(restMid, ra, rb2, w)], false);
+        [boxFor(restMid, ra, boxEnd, wHead, dHead)], false);
       const seg = {
         key, a, b: b2, body, torso: false,
         restA: ra.clone(), restB: rb2.clone(),
