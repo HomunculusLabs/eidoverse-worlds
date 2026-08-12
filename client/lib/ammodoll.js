@@ -737,7 +737,9 @@ export class AmmoRagdoll {
           }
         }
       }
+      this._groupOf = new Map();
       for (const [body, bit] of bodyIndex) {
+        this._groupOf.set(body, (G_STATIC << 1) << bit);
         let mask = G_STATIC;
         for (const [other, obit] of bodyIndex) {
           if (other === body) continue;
@@ -993,6 +995,87 @@ export class AmmoRagdoll {
           this.world.addConstraint(con, true);
           this._constraints.push(con);
         }
+      }
+    }
+
+    // ---- BULLET HAIR (the source's per-lock sim, when the rig carries the
+    // chains its hair_rig.py builds). Each Hair_<chain>_<idx> bone becomes a
+    // thin box body chained to the HEAD body by 6DOF spring constraints:
+    // angular limits ramp down each lock ((j+1)/n)^1.5 like the source, the
+    // spring's equilibrium is the pose the lock was born in, per-segment
+    // gravity is fractional (hair floats a little, always), and CCD keeps
+    // fast tips from tunnelling. Hair collides with the world and the skull
+    // box only. It is LOCAL DRESSING: excluded from settle, snapshot and the
+    // pose wire — remotes render whatever hair system their client runs.
+    this._hairSegs = [];
+    {
+      const headSeg = this.segs.get('neck|head');
+      const hairNodes = [];
+      avatar.root?.traverse?.((o) => { if (/^Hair_\d+_\d+$/.test(o.name ?? '')) hairNodes.push(o); });
+      const chains = new Map();
+      for (const nd of hairNodes) {
+        const m = nd.name.match(/^Hair_(\d+)_(\d+)$/);
+        if (!chains.has(m[1])) chains.set(m[1], []);
+        chains.get(m[1]).push({ i: Number(m[2]), node: nd });
+      }
+      if (headSeg && chains.size) {
+        const headGroup = this._groupOf.get(headSeg.body) ?? G_STATIC;
+        const R = Math.max(0.004 * H, 0.004);
+        const HAIR_LIM = 25 * DEG, HAIR_ROOT = 1.5, HAIR_GRAV = 0.55;
+        let built = 0;
+        for (const [, list] of chains) {
+          list.sort((x2, y2) => x2.i - y2.i);
+          let parentBody = headSeg.body;
+          let prevLen = 0.05;
+          for (let j2 = 0; j2 < list.length; j2++) {
+            const nd = list[j2].node;
+            const aW = nd.getWorldPosition(new THREE.Vector3());
+            const childNd = list[j2 + 1]?.node;
+            const bW = childNd ? childNd.getWorldPosition(new THREE.Vector3())
+              : aW.clone().add(nd.getWorldDirection(new THREE.Vector3()).multiplyScalar(-prevLen));
+            const len = Math.max(aW.distanceTo(bW), 0.015);
+            prevLen = len;
+            const mid = aW.clone().add(bW).multiplyScalar(0.5);
+            const body = mkBody(0.01, mid, new THREE.Quaternion(),
+              [boxFor(mid, aW, bW, R)], true);
+            body.setDamping(0.25, 0.9);
+            body.setCcdMotionThreshold(len * 0.5);
+            body.setCcdSweptSphereRadius(R * 0.9);
+            this.world.addRigidBody(body, G_FINGER, G_STATIC | headGroup);
+            _bv1.setValue(0, -9.81 * HAIR_GRAV, 0);
+            body.setGravity(_bv1);       // AFTER addRigidBody — the source's lesson
+            const lim = HAIR_LIM * Math.pow((j2 + 1) / list.length, HAIR_ROOT) + 0.12;
+            const mkF = (bdy) => {
+              const tr = keep(new AMMO.btTransform());
+              tr.setIdentity();
+              const o = localOf(bdy, aW);
+              _bv2.setValue(o.x, o.y, o.z); tr.setOrigin(_bv2);
+              return tr;
+            };
+            const con = keep(new AMMO.btGeneric6DofSpringConstraint(
+              parentBody, body, mkF(parentBody), mkF(body), true));
+            _bv1.setValue(0, 0, 0);
+            con.setLinearLowerLimit(_bv1); con.setLinearUpperLimit(_bv1);
+            _bv1.setValue(-lim, -lim, -lim); con.setAngularLowerLimit(_bv1);
+            _bv1.setValue(lim, lim, lim); con.setAngularUpperLimit(_bv1);
+            for (let ax = 3; ax < 6; ax++) {
+              con.enableSpring(ax, true);
+              con.setStiffness(ax, 2.0);
+              con.setDamping(ax, 0.9);
+              con.setParam(BT_CONSTRAINT_STOP_ERP, ERP_LIMIT, ax);
+            }
+            con.setEquilibriumPoint();
+            this.world.addConstraint(con, true);
+            this._constraints.push(con);
+            this._hairSegs.push({
+              body, node: nd, parent: nd.parent,
+              restWorldQ: nd.getWorldQuaternion(new THREE.Quaternion()),
+            });
+            parentBody = body;
+            built++;
+          }
+        }
+        if (built) console.log(`[ammodoll] bullet hair: ${chains.size} locks, ${built} segments`);
       }
     }
 
@@ -1302,6 +1385,15 @@ export class AmmoRagdoll {
     }
     this.pose = pose;
     this.avatar.setPose(pose);
+
+    // hair rides raw nodes, local only: world orientation = the body's
+    // rest→live rotation composed on the born orientation (rest-aligned
+    // bodies make that exact), then into parent-local
+    for (const hs of this._hairSegs) {
+      quatOf2(hs.body, _q).multiply(hs.restWorldQ);
+      hs.parent.getWorldQuaternion(_qp).invert();
+      hs.node.quaternion.copy(_qp.multiply(_q));
+    }
 
     if (this.settledFor >= SETTLE_TIME || this.elapsed >= DEADLINE) {
       this.done = true;
