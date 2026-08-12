@@ -943,6 +943,9 @@ export async function createFlora(opts = {}) {
         // Without the opt, grow ≡ 1: byte-identical behavior everywhere.
         const lg = o.lodGrow;
         let grow = float(1);
+        let growW = null;       // §22q: width-only extra grow (never height —
+                                // a taller meadow near the camera would READ;
+                                // wider blades at constant coverage do not)
         let aliveCond = null;   // bool node when the dither is active — gates
                                 // the expensive dynamics below (§22h: a
                                 // zero-scaled instance skips no raster work
@@ -951,10 +954,27 @@ export async function createFlora(opts = {}) {
             const dCam = aPR.xz.sub(cameraPosition.xz).length();
             const t01 = smoothstep(float(lg.near ?? 15), float(lg.far ?? 90), dCam);
             grow = mix(float(1), float(lg.cap ?? 1.7), t01);
+            // §22q (eidoverse-worlds): shaped resident density. baseKeep < 1
+            // thins instances at EVERY distance through the same rank dither
+            // (keep ×= baseKeep), and the survivors widen by 1/√baseKeep so
+            // screen-space coverage stays constant (area ∝ width × count).
+            // A guard ring (guardNear..guardFar) ramps the thinning in: the
+            // blades at the camera's feet — the only place a missing tuft is
+            // individually legible — stay at full density, and both the keep
+            // cut and the width comp ride ONE ramp so density × coverage is
+            // continuous everywhere. Requires the dither (lg.exp); without
+            // baseKeep the emission is byte-identical to §22h.
+            const bk = lg.exp != null && lg.baseKeep < 1 ? lg.baseKeep : null;
+            let baseT = null;
+            if (bk != null) {
+                baseT = smoothstep(float(lg.guardNear ?? 2), float(lg.guardFar ?? 8), dCam);
+                growW = mix(float(1), float(1 / Math.sqrt(bk)), baseT);
+            }
             if (lg.exp != null) {
-                const keep = pow(saturate(
+                let keep = pow(saturate(
                     float(lg.far ?? 90).sub(dCam)
                         .div(float((lg.far ?? 90) - (lg.near ?? 15)))), float(lg.exp));
+                if (baseT != null) keep = keep.mul(mix(float(1), float(bk), baseT));
                 const rank = fract(aPh.x.mul(0.15915494309189535));   // 1/2π: phase → [0,1) rank
                 aliveCond = rank.lessThanEqual(keep);
                 grow = grow.mul(step(rank, keep));
@@ -972,7 +992,11 @@ export async function createFlora(opts = {}) {
                 }
             }
         }
-        let p = positionLocal.mul(vec3(aSV.x, aSV.y, aSV.x).mul(grow)).toVar();
+        // §22q: the width comp multiplies x/z only; a dither-killed instance
+        // still collapses to zero on every axis (grow carries the step)
+        let p = growW == null
+            ? positionLocal.mul(vec3(aSV.x, aSV.y, aSV.x).mul(grow)).toVar()
+            : positionLocal.mul(vec3(aSV.x.mul(growW), aSV.y, aSV.x.mul(growW)).mul(grow)).toVar();
         const cR = cos(aPR.w), sR = sin(aPR.w);
         p = vec3(p.x.mul(cR).sub(p.z.mul(sR)), p.y, p.x.mul(sR).add(p.z.mul(cR))).toVar();
         // world tilt (aPhase.yz): random lean + the stroke's surface-normal

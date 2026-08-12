@@ -297,6 +297,35 @@ const BLADE_LOD_KEEP = 0.4;        // far tiles keep ceil(0.4 × perBunch) blade
 // thinning +3, §22f swap retirement, now this). Default OFF on the
 // evidence; ?grassvlod=on is the opt-in for vertex-bound GPU tiers, and
 // the coarse twin doubles as a diag lever via forceBladeLod('far').
+// §22q: shaped resident density — tel0s's diag put the remaining grass cost
+// in the near/mid instance count (density 35% recovered 41→58fps while sky/
+// terrain/physics measured ≈free). Uniform thinning is the ugly version; the
+// shaped lever thins by DENSE_BASE at every distance through the §22h rank
+// dither, widens survivors by 1/√DENSE_BASE (width only — constant coverage,
+// unchanged height envelope), and holds a full-density guard ring at the
+// camera's feet where a missing tuft is individually legible. The CPU tile
+// budget follows the same law (denseAt at the tile's NEAREST point, so the
+// budget is never the bottleneck) — that's where the submitted-instance win
+// comes from. ?grassdense=N (0..1] overrides; 1 is the kill switch
+// (byte-identical shader, untouched budgets).
+const DENSE_DEFAULT = 0.65;        // §22q probe (real-meadow scale, 2940×1912
+                                   // @2×, drift-controlled): 1.0 → 52fps,
+                                   // 0.8 → 60 but dipping (lo 52), 0.65 → a
+                                   // locked 60-61 at 30% fewer submitted
+                                   // instances; screenshot means Δ ≤ 0.5 RGB.
+                                   // The least thinning that holds the cap.
+export const DENSE_BASE = (() => {
+  const v = Number(CONFIG.params.get('grassdense'));
+  return Number.isFinite(v) && v > 0 && v <= 1 ? v : DENSE_DEFAULT;
+})();
+const DENSE_GUARD_NEAR = 2;        // m — full density inside this…
+const DENSE_GUARD_FAR = 8;         // m — …ramped to DENSE_BASE by this
+/** CPU mirror of the shader's guard ramp: the density factor at distance d. */
+const denseAt = (d) => {
+  if (DENSE_BASE >= 1) return 1;
+  const t = Math.min(1, Math.max(0, (d - DENSE_GUARD_NEAR) / (DENSE_GUARD_FAR - DENSE_GUARD_NEAR)));
+  return 1 + (DENSE_BASE - 1) * t * t * (3 - 2 * t);   // smoothstep, same knots
+};
 const VLOD_ON = CONFIG.params.get('grassvlod') === 'on';
 const BLADE_LOD_OUT = VLOD_ON ? 45 : Infinity;   // m — tile swaps to coarse past this
 const BLADE_LOD_IN = VLOD_ON ? 38 : Infinity;    // m — and back only inside this
@@ -484,7 +513,9 @@ function tileField(f, bladeLod = false) {
         : dN <= GRASS_NEAR ? 1
           : (1 - (dN - GRASS_NEAR) / (GRASS_FAR - GRASS_NEAR)) ** GRASS_FALL_EXP;
       const scope = diagScope ? (d < DIAG_SCOPE_EDGE ? diagScope.near : diagScope.far) : 1;
-      t.count = densityCount(t.userData.fullCount, eff * fall * scope);
+      // §22q: denseAt at the nearest point ≥ the shader's keep multiplier for
+      // every instance in the tile — budget stays a ceiling, never a seam
+      t.count = densityCount(t.userData.fullCount, eff * fall * scope * denseAt(dN));
       t.visible = t.count > 0;
       // §17b — blade LOD rides the same distance one band later, with
       // hysteresis. The swap is a pointer write, never a compile: the live
@@ -616,7 +647,12 @@ export async function buildFloraField(rawArgs, { scene, heightFn }) {
       const f = await mod.createFlora({
         ...st, heightFn,
         ...(blades ? { lodGrow: { near: GRASS_NEAR, far: GRASS_FAR, cap: 1.7,
-          ...(lodMode !== 'nodither' ? { exp: GRASS_FALL_EXP, vertsPerBlade: 10, bladeKeepFar: 0.4 } : {}),
+          ...(lodMode !== 'nodither' ? { exp: GRASS_FALL_EXP, vertsPerBlade: 10, bladeKeepFar: 0.4,
+            // §22q: the shaped resident density rides the dither — see the
+            // DENSE_BASE block above; absent (=1) the shader is byte-identical
+            ...(DENSE_BASE < 1 ? { baseKeep: DENSE_BASE,
+              guardNear: DENSE_GUARD_NEAR, guardFar: DENSE_GUARD_FAR } : {}),
+          } : {}),
         } } : {}),
         ...(isBladeSpecies && shadeMode === 'fast' ? { fastShade: true } : {}),
         ...(isBladeSpecies && geoMode === 'opaque' ? { opaqueBlades: true } : {}),

@@ -27,7 +27,7 @@
 
 import { perf } from './perf.js';
 import { renderer, THREE } from './core.js';
-import { freezePushers, forceBladeLod, setDiagDensityScope } from './flora.js';
+import { freezePushers, forceBladeLod, setDiagDensityScope, DENSE_BASE } from './flora.js';
 import { getGrassField, getGrassDensity, getTerrainMesh, grassTiles } from './terrain.js';
 import { skyOwnedObjects } from './sky.js';
 import { governorDebug } from './governor.js';
@@ -79,7 +79,7 @@ export async function grassDiag({ secsPer = 4 } = {}) {
   const size = renderer.getDrawingBufferSize?.(new THREE.Vector2()) ?? null;
   const strokes = grassTiles().strokes;
   console.log(`grassdiag regime: pr ${g.pixelRatio} scale⚙ ${g.renderScale}` +
-    (size ? ` buffer ${size.x}×${size.y}` : ''));
+    (size ? ` buffer ${size.x}×${size.y}` : '') + ` dense ${DENSE_BASE}`);
   for (const s of strokes) console.log(`  stroke ${s.stroke}: mode ${s.mode}, drawn ${s.drawn}/${s.planted}`);
   const skyObjs = skyOwnedObjects();
   const skyVis = skyObjs.map((o) => o.visible);

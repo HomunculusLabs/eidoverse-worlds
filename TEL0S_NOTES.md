@@ -390,6 +390,27 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22q: shaped resident density.** The Tsushima trade,
+  applied at every distance instead of only past 15m: DENSE_BASE thins
+  instances through the §22h rank dither (keep ×= base), survivors
+  widen by 1/√base — WIDTH ONLY, the height envelope a taller meadow
+  would betray stays untouched — and a guard ring (2..8m smoothstep)
+  holds full density at the camera's feet, the one place a missing
+  tuft is individually legible. Density cut and width comp ride ONE
+  ramp, so density × coverage is continuous everywhere. The CPU tile
+  budget mirrors the law at each tile's nearest point (denseAt ≥ every
+  instance's keep multiplier — the budget stays a ceiling, never a
+  seam), which is where the submitted-instance win comes from.
+  MEASURED (real-meadow scale 153k planted, 2940×1912 buffer @2×,
+  cruise off, drift-controlled): 1.0 → 52fps, 0.8 → 60 dipping (lo
+  52), 0.65 → locked 60-61 at 121k→84k submitted (−30%), 0.5 → 60
+  (68k) with visibly chunkier near-mid blades. Screenshot means moved
+  ≤ 0.5 RGB across the whole sweep — the width comp holds coverage.
+  Default 0.65 (least thinning that holds the cap); ?grassdense=N
+  overrides, =1 is the kill switch (byte-identical shader, untouched
+  budgets). grassDiag regime header now prints `dense N`. tel0s's eye
+  remains the gate on the default.
+
 - **2026-08-11 — §22 merge: grass-opaque-blades → main.** tel0s's eye
   signed off; fast-forward (06aa000..b34d8b1), tree identical to the
   gate-green branch tip, branch deleted. The A/B lever survives as
