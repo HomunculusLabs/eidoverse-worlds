@@ -23,6 +23,7 @@ import { stateToEntries as sharedStateToEntries } from "../shared/fold.js";
 // what is burning (#25's shared-facts boundary).
 import { describeParticles, emitterTransition, transitionLine } from "../shared/particles.js";
 import { effectiveWorldTransform, type Effective } from "./effective.ts";
+import { makeVerdictCache, seatGateCore, nameFromAvatarPath } from "../client/lib/seatcore.js";
 
 (globalThis as any).THREE = Object.assign({}, THREE_W, TSL);
 
@@ -176,6 +177,19 @@ export class WorldAgent {
    *  ambient scenery (roster + movers + acts); `roster` lets an unchanged
    *  cast be compacted to a count instead of ten names, every time. */
   private lastPulse = { sig: "", roster: "", at: 0 };
+  // Seat-profile verdicts (#101): the same server-judged values /avatars
+  // hands the browser, fetched over httpBase at join and on the two update
+  // events. The cache — epochs, pending demotion, event-rev floors — is
+  // seatcore.makeVerdictCache, the SAME implementation the browser runs
+  // (#105 review B1: the logic existed twice and each copy had the same
+  // holes). effective.ts reads these through the view — never a rederived
+  // hash, never a quiet default.
+  private seatCache = makeVerdictCache(async () => {
+    const res = await fetch(`${this.httpBase}/avatars`);
+    if (!res.ok) throw new Error(`roster ${res.status}`);
+    const rev = Number(res.headers.get("x-profiles-rev") ?? NaN);
+    return { rev, entries: await res.json() as { name: string; seat?: any }[] };
+  });
   /** Stateful denoiser for ambient narration (arrive/leave/acts). Says,
    *  mentions, and whispers never pass through it — a knock is not chatter.
    *  See denoise.ts for the doctrine. */
@@ -454,6 +468,7 @@ export class WorldAgent {
             if (typeof msg.throughSeq === "number") this.lastSeq = Math.max(this.lastSeq, msg.throughSeq);
             for (const e of msg.entries) this.lastSeq = Math.max(this.lastSeq, e.seq ?? -1);
             this.joined = true;
+            this.seatCache.init().catch(() => { /* declared-approximate until it lands */ });
             if (!this.ticker) this.ticker = setInterval(() => this.tick(), TICK_MS);
             clearTimeout(timeout);
             resolve();
@@ -579,6 +594,15 @@ export class WorldAgent {
           case "leave":
             this.people.delete(msg.id);
             this.gate.presence(msg.id, "leave");
+            break;
+          case "avatar-updated":
+            // avatar bytes changed: the held verdict demotes to pending NOW
+            // and the refetch departs after the bump — a response already in
+            // flight can never install the pre-change value (#105 B1)
+            this.seatCache.note(msg.name, NaN).catch(() => { /* pending names stay pending; the next event retries */ });
+            break;
+          case "avatar-profile-updated":
+            this.seatCache.note(msg.name, Number(msg.rev)).catch(() => { /* same */ });
             break;
           case "pose":
             this.notePose(msg.id, msg.pose);
@@ -1572,8 +1596,28 @@ export class WorldAgent {
     return effectiveWorldTransform(id, {
       entity: (eid) => this.entities.get(eid),
       mount: (eid) => this.mounts.get(eid),
+      seatVerdict: (eid) => this.seatVerdictFor(eid),
     }, nowMs);
   }
+
+  /** The served verdict for whatever avatar this body currently wears —
+   *  roster truth (p.avatar) mapped through the same name derivation every
+   *  consumer uses. Undefined = no profile, declared. */
+  private seatVerdictFor(id: string) {
+    const path = id === this.name ? this.avatar : this.people.get(id)?.avatar;
+    const nm = nameFromAvatarPath(path);
+    return nm ? this.seatCache.get(nm) : undefined;
+  }
+
+  /** The declared-approximation suffix for a seated person's line (#101):
+   *  the same reason string the browser consoles and the nameplate ≈ carry —
+   *  one contract, three declarations. Empty when the seat is profiled. */
+  private seatSuffix(id: string, ride: { to: string; slot?: string }): string {
+    const sock = ride.slot ? this.entities.get(ride.to)?.comp?.sockets?.[ride.slot] : undefined;
+    const g = seatGateCore({ sock, verdict: this.seatVerdictFor(id), pose: sock?.pose ?? "sitchair" });
+    return g.apply ? "" : ` (seat approximate: ${g.reason})`;
+  }
+
 
   look(nowMs = this.serverNow()): string {
     const L: string[] = [];
@@ -1589,7 +1633,10 @@ export class WorldAgent {
     const selfEff = selfRide ? this.eff(this.name, nowMs) : null;
     const meKnown = !selfRide || selfEff?.ok === true;
     const me = selfEff?.ok ? { x: selfEff.pos[0], y: selfEff.pos[1], z: selfEff.pos[2] } : this.pos;
-    const seated = selfRide ? `, seated on ${selfRide.to}${selfEff?.ok && selfEff.moving ? ` (riding its ${selfEff.moving})` : ""}` : "";
+    // #101: an uncorrected seat composition is never silent — the same
+    // "(seat approximate: reason)" every renderer consumer declares.
+    const selfSeatNote = selfEff?.ok && selfEff.seat?.state === "approximate" ? ` (seat approximate: ${selfEff.seat.reason})` : "";
+    const seated = selfRide ? `, seated on ${selfRide.to}${selfEff?.ok && selfEff.moving ? ` (riding its ${selfEff.moving})` : ""}${selfSeatNote}` : "";
     if (meKnown) {
       L.push(`You are "${this.name}" in world "${this.world}" at (${me.x.toFixed(1)}, ${me.z.toFixed(1)}), ground height ${me.y.toFixed(2)}m, facing ${this.bearing(Math.sin(this.yaw), Math.cos(this.yaw))}${seated}.`);
     } else {
@@ -1628,7 +1675,7 @@ export class WorldAgent {
       const held = (p.pose as { pose?: Record<string, unknown> | null }).pose;
       const posed = held ? `, holding a pose (${Object.keys(held).length} bones)` : "";
       const ride = this.mounts.get(p.id);
-      const riding = ride ? ` — on ${ride.to}${ride.slot ? ` (${ride.slot})` : ""}` : "";
+      const riding = ride ? ` — on ${ride.to}${ride.slot ? ` (${ride.slot})` : ""}${this.seatSuffix(p.id, ride)}` : "";
       L.push(`  - ${p.id}: ${meKnown ? `${Math.hypot(dx, dz).toFixed(1)}m ${this.bearing(dx, dz)} ` : ""}at (${x.toFixed(1)}, ${z.toFixed(1)}), ${doing}${posed}${riding}`);
     }
 
