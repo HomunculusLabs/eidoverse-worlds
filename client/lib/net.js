@@ -1,9 +1,19 @@
 // net — the wire. One socket carrying two planes: the world log (ordered,
 // persisted, replayed on join) and presence (batched, lossy, never persisted).
 
-import { THREE, CONFIG, camera, scene, renderer, report, bus, parallelMap } from './core.js';
-import { fetchBytes, forgetBytes } from './assets.js';
-import { applyEntry, stateToEntries } from './world.js';
+import { THREE, CONFIG, camera, scene, renderer, report, bus } from './core.js';
+import { forgetBytes } from './assets.js';
+// The world as data (TEL0S_NOTES §11.2): every snapshot and live entry
+// folds here — synchronously, through the same shared/fold.js the
+// sequencer runs — and the realizers project it into the scene.
+// EW.foldParity() measures fold-vs-scene drift on demand.
+import { hydrate as shadowHydrate, foldLive as shadowFold, reset as shadowReset } from './state.js';
+import { pending, P } from './scheduler.js';
+// The realizers (TEL0S_NOTES §11.4) own the scene: state verbs realize
+// FROM the fold, and fold-inert causes (use/punt/force, moderation
+// narration, live say) dispatch over the bus as 'live-entry' (causes.js
+// listens — emitted rather than imported so this file adds no lap around
+// the net → chat → net cycle). One writer per verb, always.
 import { remotes, ensureRemote, dropRemote, pushPose, noteServerTime, noteSpeaking } from './remotes.js';
 import { logChat, logWhisper, noteTyping, noteHistoryContext } from './chat.js';
 import { composeFirstPerson } from './fp_view.js';
@@ -269,13 +279,49 @@ export async function connect() {
   // re-login is silent while Discord still authorizes, so don't make them
   // rediscover the door.
   if (bounceToLogin()) return;
+  // The early socket (inline boot script in index.html): the HTML may have
+  // already opened the WS and sent this exact join while the module graph
+  // was still parsing — the snapshot downloaded DURING parse instead of
+  // after it. Adopt it only when the join it sent is byte-for-byte the one
+  // we would send now; on ANY mismatch (rename at the door, avatar switch,
+  // a login flow) close it and connect fresh. The early socket is an
+  // optimization, never an authority.
+  const early = globalThis.__ewEarlySocket;
+  globalThis.__ewEarlySocket = null;
+  if (early) {
+    const wantJoin = JSON.stringify({ world: CONFIG.world, id: CONFIG.name,
+      avatar: hooks.myAvatarPath(), token: CONFIG.token });
+    if (!early.failed && early.ws.readyState <= 1 && JSON.stringify(early.sent) === wantJoin) {
+      net.status = 'connecting';
+      bus.emit('net', net);
+      net.ws = early.ws;
+      retryDelay = 1200;
+      // Drain what raced ahead of us IN ORDER while the boot script's own
+      // buffering handler still catches anything arriving mid-drain; the
+      // rewire below is synchronous with the final empty check, so no
+      // message can slip between the two.
+      while (early.buffered.length) {
+        const raw = early.buffered.shift();
+        let msg;
+        try { msg = JSON.parse(raw); } catch { continue; }
+        try { await handle(msg); } catch (e) { report(`net ${msg.type}`, e); }
+      }
+      wireSocket(net.ws);   // live delivery takes over (onopen stays the boot script's)
+      return;
+    }
+    try { early.ws.close(); } catch { /* already dead */ }
+  }
   net.status = 'connecting';
   bus.emit('net', net);
   net.ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`);
-
   net.ws.onopen = () => { retryDelay = 1200; sendJoin(); };
+  wireSocket(net.ws);
+}
 
-  net.ws.onclose = (ev) => {
+/** close/error/message wiring, shared by a fresh connect and an adopted
+ *  early socket (the inline boot script in index.html — see connect()). */
+function wireSocket(ws) {
+  ws.onclose = (ev) => {
     net.joined = false;
     if (intentionalClose) { intentionalClose = false; return; } // rejoin() drives its own reconnect
     // 4002 = session takeover: this identity re-arrived elsewhere. Retrying
@@ -328,9 +374,9 @@ export async function connect() {
     retryDelay = Math.min(15000, retryDelay * 1.6); // back off instead of hammering
   };
 
-  net.ws.onerror = () => { /* onclose always follows; nothing useful here */ };
+  ws.onerror = () => { /* onclose always follows; nothing useful here */ };
 
-  net.ws.onmessage = async (ev) => {
+  ws.onmessage = async (ev) => {
     let msg;
     try { msg = JSON.parse(ev.data); } catch { return; }
     try { await handle(msg); } catch (e) { report(`net ${msg.type}`, e); }
@@ -492,11 +538,23 @@ async function handle(msg) {
       bus.emit('lease', msg);
       break;
 
+    case 'geom':
+      // the placeholder tier's bbox side-channel — arrives a beat after the
+      // snapshot (async summaries; the join send stays synchronous). Bus,
+      // not import: the models realizer listens (net must not import it).
+      bus.emit('lib-geom', msg.geom ?? {});
+      break;
+
     case 'log':
+      // shadow fold first, synchronously — seq-guarded, so the backlog
+      // flush after hydration can never double-fold what landed here. When
+      // the realizers are active this IS the delivery: the fold event
+      // drives state realization, and 'live-entry' carries the causes.
+      shadowFold(msg.entry);
       if (hydrating) pendingLive.push(msg.entry);
       else if ((msg.entry.seq ?? -1) > lastSeq) {
         lastSeq = msg.entry.seq;
-        await applyEntry(msg.entry, true);
+        bus.emit('live-entry', msg.entry);
         if (msg.entry.verb === 'say') noteSpeaking(msg.entry.actor);
       }
       break;
@@ -539,6 +597,7 @@ async function handle(msg) {
       // path is the one rebuild that cannot disagree with the server.
       toast(`${msg.by} reset "${msg.world}" to zero — reloading…`, 'warn', 4000);
       logChat('*', `${msg.by} reset this world to zero`);
+      shadowReset();
       setTimeout(() => location.reload(), 1800);
       break;
     }
@@ -552,17 +611,22 @@ async function handle(msg) {
     case 'error':
       // Server-side refusals are the user's problem to see, not the console's.
       toast(msg.error, 'warn');
+      // ...and any module holding an optimistic preview needs to hear it: a
+      // refused verb never folds, so a preview kept past this moment is a
+      // world that never existed (lights.js rolls its edits back off this).
+      // The wire names no verb — every refusal on this socket is ours.
+      bus.emit('verb-refused', { error: String(msg.error ?? '') });
       break;
   }
 }
 
-/** Verbs whose completion must never gate arrival. Anything reaching the sky
- *  belongs here — see the deadlock note in the replay loop. */
-const NON_GATING = new Set(['spawn', 'sky', 'weather']);
-
 async function onSnapshot(msg) {
   // what the server says you may do here; live grants keep it fresh via world.js
   net.myRights = msg.yourRights ?? { role: 'builder', gen: true };
+  // the body roster rides the snapshot — resolveMyAvatarPath and the avatar
+  // panel read it with no /avatars round-trip (older servers: field absent,
+  // consumers fall back to the lazy fetch)
+  if (msg.avatars) { net.avatars = msg.avatars; bus.emit('avatars', msg.avatars); }
   bus.emit('your-rights', net.myRights);
   markPhase('connect', 1);
   net.joined = true;
@@ -614,66 +678,59 @@ async function onSnapshot(msg) {
       .catch((e) => report(`present ${p.id}`, e));
   }
 
+  // Shadow state adopts the snapshot FIRST, synchronously — before the
+  // legacy replay's first await can let a live entry interleave. Today's
+  // server sends live-folded state (it already contains the tail's effects;
+  // the tail rides along for the chat overlap), so the shadow folds nothing
+  // twice: it marks the highest covered seq and lets foldLive take over.
+  shadowHydrate(msg.state, [], Math.max(
+    typeof msg.throughSeq === 'number' ? msg.throughSeq : -1,
+    ...(msg.entries?.length ? msg.entries.map((e) => e.seq ?? -1) : [-1]),
+  ));
+
   // Warm the bytes for every still-live spawn in parallel BEFORE the ordered
   // replay — join time becomes the slowest asset, not the sum of all of them.
   hydrating = true; pendingLive = [];
-  // A joiner is told the world as it IS (folded state) plus only what has
-  // happened since. Both halves go through the same applyEntry.
-  const oldestTailSeq = msg.entries.length
-    ? Math.min(...msg.entries.map((e) => e.seq ?? Infinity))
-    : Infinity;
-  const folded = stateToEntries(msg.state, { skipChatFromSeq: oldestTailSeq });
-  const replay = [...folded, ...msg.entries];
-  const removed = new Set(replay.filter((e) => e.verb === 'remove').map((e) => e.args?.id));
-  const libs = new Set(replay
-    .filter((e) => e.verb === 'spawn' && e.args?.lib && !removed.has(e.args.id))
-    .map((e) => e.args.lib));
-  bus.emit('hydrating', { total: replay.length, libs: libs.size, folded: folded.length });
-  // Warm the bytes, but do NOT wait for them. Blocking arrival on every model
-  // in the world made a cold join cost the sum of its heaviest assets — 12s of
-  // a 13s boot, spent staring at a splash while a crate downloaded. Objects
-  // materialising around you over the next few seconds is what this world does
-  // anyway; the log's ORDER is what has to be respected, not its bytes.
-  parallelMap([...libs], (lib) => fetchBytes(`/library/${lib}`).catch(() => {}), 6);
-
-  // Replay stays strictly ordered, but these verbs do not BLOCK the entries
-  // behind them — world.js queues any place/remove that lands on a body still
-  // in flight and applies it when the body arrives.
-  //
-  // `weather` belongs here for a sharper reason than cost. It routes into the
-  // same sky build as `sky`, which waits for boot to finish so it stops
-  // competing for bandwidth — and boot waits for replay. Awaiting a weather
-  // verb therefore DEADLOCKED the join until the 45s boot ceiling broke it.
-  // Anything that can reach the sky must not gate replay.
-  const settling = [];
-  for (let i = 0; i < replay.length; i++) {
-    const entry = replay[i];
-    // synthetic pre-history entries carry negative seq and must not advance it
-    if ((entry.seq ?? -1) >= 0) lastSeq = Math.max(lastSeq, entry.seq);
-    const p = applyEntry(entry, false);
-    // Spawns and the sky do not gate arrival. The sky verb pulls ~7.5MB of
-    // atmosphere and particle textures and then bakes an environment map —
-    // that was most of a cold boot, spent so the world could look finished the
-    // instant it appeared. Terrain still blocks (you need ground to stand on);
-    // the sky resolves over your head a moment later.
-    if (NON_GATING.has(entry.verb)) settling.push(p); else await p;
-    if (replay.length > 4) markPhase('world', 0.5 + 0.49 * ((i + 1) / replay.length));
-  }
-  // Let the tray, not the splash, carry the tail of the asset stream.
-  Promise.all(settling).then(() => bus.emit('entities-settled'));
-  // flush the events that raced us, in order, once
+  // Every tail seq counts as delivered whether or not legacy replays it —
+  // the realizer's entries are filtered out below, and an under-advanced
+  // lastSeq would let the backlog re-apply what state already holds.
+  for (const e of msg.entries) if ((e.seq ?? -1) > lastSeq) lastSeq = e.seq;
+  // flush the events that raced us, in order, once. Their folds already
+  // landed at arrival (seq-guarded); under the realizers this delivers
+  // their live causes, after the hydration window so a raced say lands
+  // below the arrival chat window, not above it.
   const backlog = pendingLive.filter((e) => (e.seq ?? -1) > lastSeq).sort((a, b) => a.seq - b.seq);
   pendingLive = []; hydrating = false;
-  for (const e of backlog) { lastSeq = e.seq; await applyEntry(e, true); }
+  for (const e of backlog) {
+    lastSeq = e.seq;
+    bus.emit('live-entry', e);
+  }
 
   const rc = msg.state?.recentChat ?? [];
   noteHistoryContext({
     total: msg.state?.chatTotal ?? null,
-    shown: rc.length + msg.entries.filter((e) => e.verb === 'say').length,
+    // what was ACTUALLY rendered: the window is exactly state.recentChat
+    // (tail says beyond its 40-line cap are not re-played — they are
+    // fetchable by paging, and this count is what makes the "showing N of
+    // M" hint appear so a reader knows to page; review B2).
+    shown: rc.length,
     spanMs: rc.length > 1 ? rc[rc.length - 1].ts - rc[0].ts : null,
   });
 
-  markPhase('world', 1);
+  // Honest world progress: the phase tracks the scheduler's outstanding
+  // entity loads instead of jumping 0→1 (boot.js weights 'world' at 40 —
+  // this is the bar's biggest segment actually moving with the loads).
+  // The curtain does NOT wait on this; checkReady gates on body + state +
+  // terrain + the first sky's capped pipeline warm (world.applySkyFolded).
+  const initialPending = pending(P.FAR);
+  if (initialPending > 0) {
+    markPhase('world', Math.max(0.15, 1 - initialPending / (initialPending + 1)));
+    const tickProgress = setInterval(() => {
+      const left = pending(P.FAR);
+      markPhase('world', 1 - 0.85 * (left / initialPending));
+      if (!left) { clearInterval(tickProgress); markPhase('world', 1); }
+    }, 200);
+  } else markPhase('world', 1);
   bus.emit('hydrated');
   bus.emit('roster');
   hooks.onSnapshotDone();

@@ -14,11 +14,14 @@ import { isFiniteVec3 } from "./shape.ts";
 // The same pure sky fold + weather derivation the browser client and the
 // sequencer run — text-tier perception must land on the SAME hour and
 // weather every renderer shows (issue #29's shared-fact boundary).
-import { foldSkyEntry, describeSky, effectiveSky, effectiveClock, dayPhase, hoursAt } from "../client/lib/forecast.js";
+import { foldSkyEntry, describeSky, effectiveSky, effectiveClock, dayPhase, hoursAt } from "../shared/forecast.js";
+// The snapshot re-synthesizer, shared with the browser — this agent's
+// deliberate omissions ride as flags (see stateToEntries below).
+import { stateToEntries as sharedStateToEntries } from "../shared/fold.js";
 // The `particles` component's meaning, shared verbatim with the browser host:
 // a renderer client and a resident who perceives by reading must agree about
 // what is burning (#25's shared-facts boundary).
-import { describeParticles, emitterTransition, transitionLine } from "../client/lib/particles.js";
+import { describeParticles, emitterTransition, transitionLine } from "../shared/particles.js";
 import { effectiveWorldTransform, type Effective } from "./effective.ts";
 import { makeVerdictCache, seatGateCore, nameFromAvatarPath } from "../client/lib/seatcore.js";
 
@@ -53,63 +56,19 @@ function posePosition(pose: Pose | null | undefined): [number, number, number] |
 }
 type InboxItem = { ts: number; kind: "say" | "arrive" | "leave" | "act"; who: string; text?: string; seq?: number | null };
 
-/** Folded world state back into the verbs that produced it. Must stay in step
- *  with the browser client's stateToEntries — two renderers disagreeing about
- *  what a snapshot means is a world that looks different per species. Deliberate
- *  agent omissions: roles/grants and behaviors have no local reader, and spawn
- *  `collide` is browser-only collider state; keep those absences explicit. */
+/** The snapshot re-synthesizer lives in shared/fold.js now — one
+ *  implementation, every species, with this agent's deliberate omissions
+ *  encoded as EXPLICIT flags rather than a hand-mirrored copy that "must
+ *  stay in step" (the drift that crashed look() for every agent in the
+ *  world is the incident that comment carried): roles/grants and behaviors
+ *  have no local reader here, spawn `collide` is browser-only collider
+ *  state, and body mounts read as "who sits where", attributed to the
+ *  sitter. */
 function stateToEntries(state: any, skipChatFromSeq = Infinity): any[] {
-  if (!state) return [];
-  const out: any[] = [];
-  let seq = -1;
-  const add = (verb: string, args: any, actor = "world", ts = Date.now()) =>
-    out.push({ seq: seq--, ts, actor, verb, args });
-  if (state.terrain) add("terrain", state.terrain);
-  if (state.grass) add("grass", state.grass);
-  if (state.sky) add("sky", state.sky, "world", state.sky.ts ?? Date.now());
-  for (const a of state.assets ?? []) add("asset", a);
-  for (const [id, e] of Object.entries<any>(state.entities ?? {})) {
-    if (e.kind === "light") {
-      // folded lights have no lib — must stay in step with the browser
-      // client's stateToEntries (a drift here is how Fable's porchlight
-      // crashed look() for every agent in the world)
-      add("light", { id, pos: e.pos, color: e.color, intensity: e.intensity, range: e.range,
-        ...(e.keep ? { keep: true } : {}) },
-        e.actor ?? "world", e.ts ?? Date.now());
-    } else {
-      add("spawn", { id, lib: e.lib, pos: e.pos, yaw: e.yaw, ...(e.scale != null ? { scale: e.scale } : {}) },
-        e.actor ?? "world", e.ts ?? Date.now());
-    }
-  }
-  // folded components and cargo attachments, in a second pass so every spawn
-  // exists before anything lands on it — the mirror of the browser client's
-  // ordering (world.js stateToEntries). Without the comp entries a post-fold
-  // joiner can be REFUSED for a lock it was never shown, and every socket,
-  // reaction and emitter authored before the fold is missing from look()
-  // until someone rewrites it (#71). Replay reconstructs state and stops
-  // there: applyEntry runs these with live=false, so a fire lit last week is
-  // in look(), not in your ears, and nothing re-performs as an event.
-  for (const [id, e] of Object.entries<any>(state.entities ?? {})) {
-    for (const [type, data] of Object.entries<any>(e.comp ?? {})) add("comp", { id, type, data });
-    if (e.parent) add("mount", { id, ...e.parent });
-  }
-  // folded mounts: without these a rejoined agent doesn't know it is sitting
-  // on anything — so "standing up" never dismounts, and the fold keeps the
-  // body glued to its socket on every renderer (the second half of #61:
-  // princess stood, her session had no idea she was mounted, antra kept
-  // seeing her seated on the crate)
-  for (const [rid, m] of Object.entries<any>(state.mounts ?? {})) {
-    // full wire shape, like entity parents above — a folded mount that loses
-    // its offset/yaw overrides composes to the wrong seat (#82)
-    add("mount", { id: rid, to: m.to, ...(m.slot ? { slot: m.slot } : {}),
-      ...(m.offset ? { offset: m.offset } : {}), ...(m.yaw != null ? { yaw: m.yaw } : {}) }, rid);
-  }
-  for (const m of state.recentChat ?? []) {
-    if ((m.seq ?? -1) >= skipChatFromSeq) continue;   // the tail will bring these
-    out.push({ seq: typeof m.seq === "number" ? m.seq : seq--, ts: m.ts, actor: m.actor,
-               verb: "say", args: { text: m.text } });
-  }
-  return out;
+  return sharedStateToEntries(state, {
+    skipChatFromSeq, roles: false, behaviors: false, collide: false,
+    bodyMountRel: "seat", bodyMountActor: "rider",
+  });
 }
 
 /** How much of a `/geom` top-surface band is actually SURFACE.

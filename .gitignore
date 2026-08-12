@@ -37,3 +37,9 @@ tools/node_modules/
 # says what the model is.
 client/voices/*.onnx
 client/accept-*.onnx*
+
+# a SYMLINK named node_modules dodges the dir-only pattern above — the
+# worktree-symlink footgun that shipped a Mac path to the VPS (2026-08-12)
+node_modules
+client/node_modules
+mcpl/node_modules
