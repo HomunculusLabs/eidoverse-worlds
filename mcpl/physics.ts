@@ -316,11 +316,13 @@ export class HeadlessBody {
   }
 
   /** Add/update/remove a pin, in WORLD coordinates. */
-  setPin(joint: string | null, at?: number[] | null) {
+  setPin(joint: string | null, at?: number[] | null, firm = true) {
     if (!this.rd) return;
     if (!joint) { this.rd.setPin(null); return; }
     if (!Array.isArray(at)) { this.rd.setPin(joint, null); return; }
-    this.rd.setPin(joint, new this.m.THREE.Vector3(at[0], at[1], at[2]));
+    // Pins arriving here are NAILS (begin's opts.pins, and the bodydrag relay's
+    // pin map) — a hand is simulated by whoever is holding it, not replicated.
+    this.rd.setPin(joint, new this.m.THREE.Vector3(at[0], at[1], at[2]), firm);
   }
 
   /** Advance; returns what to stream, or null once the sim has captured. */

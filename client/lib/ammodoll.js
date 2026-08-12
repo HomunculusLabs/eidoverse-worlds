@@ -71,6 +71,57 @@ import { colliders } from './colliders.js';
 
 let AMMO = null;
 let ammoLoading = null;
+/** The real inertia of a set of child boxes, about the body origin.
+ *
+ *  btCompoundShape::calculateLocalInertia is documented in Bullet's own source
+ *  as "approximation: take the inertia from the aabb" — and every limb box here
+ *  is ROTATED inside its compound (a body's local axes are rest-aligned, not
+ *  bone-aligned), so that AABB is much larger than the box it stands for.
+ *  Measured on this rig's forearm at 45 degrees off axis, the approximation is
+ *  4.75x the true inertia ABOUT THE BONE — which is the twist axis, the one
+ *  with the tightest limits (elbow and knee twist are +/-5 degrees). A joint
+ *  whose twist inertia is five times too heavy is mis-weighted against its
+ *  neighbour in every solver iteration, so the stop does not hold: the limit is
+ *  pushed through and then dragged back, which reads as a limb twisting further
+ *  than it should and then untwisting itself.
+ *
+ *  So compute it properly: exact box tensor, rotated by the child's own
+ *  rotation, parallel-axis shifted to the body origin, summed, mass split by
+ *  volume. Bullet can only carry a DIAGONAL local inertia, so the off-diagonal
+ *  terms are dropped at the end — but the diagonal of the true tensor is a far
+ *  better answer than the tensor of a box nobody has. The playground this was
+ *  ported from never needed any of it: its bodies are a single btBoxShape
+ *  aligned to the bone, where calculateLocalInertia is exact.
+ */
+function boxesInertia(boxes, mass) {
+  let vol = 0;
+  for (const b of boxes) vol += 8 * b.he.x * b.he.y * b.he.z;
+  if (!(vol > 0)) return { x: 0, y: 0, z: 0 };
+  // accumulate the full 3x3, symmetric
+  let xx = 0, yy = 0, zz = 0;
+  const m3 = new THREE.Matrix3();
+  for (const b of boxes) {
+    const m = mass * (8 * b.he.x * b.he.y * b.he.z) / vol;
+    const x = 2 * b.he.x, y = 2 * b.he.y, z = 2 * b.he.z;
+    // principal moments in the BOX's own frame
+    const ix = m / 12 * (y * y + z * z);
+    const iy = m / 12 * (x * x + z * z);
+    const iz = m / 12 * (x * x + y * y);
+    // rotate: I' = R diag(i) R^T  (only the diagonal of I' is kept, below)
+    m3.setFromMatrix4(_m4.makeRotationFromQuaternion(b.q));
+    const e = m3.elements;   // column-major: e[0..2] = col0
+    xx += ix * e[0] * e[0] + iy * e[3] * e[3] + iz * e[6] * e[6];
+    yy += ix * e[1] * e[1] + iy * e[4] * e[4] + iz * e[7] * e[7];
+    zz += ix * e[2] * e[2] + iy * e[5] * e[5] + iz * e[8] * e[8];
+    // parallel axis, to the body origin
+    const t = b.t;
+    xx += m * (t.y * t.y + t.z * t.z);
+    yy += m * (t.x * t.x + t.z * t.z);
+    zz += m * (t.x * t.x + t.y * t.y);
+  }
+  return { x: xx, y: yy, z: zz };
+}
+
 export async function ensureAmmo() {
   if (AMMO) return true;
   if (ammoLoading) return ammoLoading;
@@ -158,6 +209,11 @@ const ANG_CEIL = 20;            // rad/s backstop
 const BUILD_WIDEN = 0.12;       // rad of slack over the born excursion
 const PIN_TAU = 0.9;            // source: the shift-click pin, held firm
 const PIN_CLAMP_X = 8;          // × total mass
+// ...and the source's OTHER setting, for a hand rather than a nail. A grab that
+// is as stiff as a nail does not feel firm, it feels like the joint stops are
+// not there — because at this strength they effectively are not.
+const GRAB_TAU = 0.4;
+const GRAB_CLAMP_X = 1.2;       // × total mass
 
 // Anatomical joint table — the source's rigdef.py JOINTS in degrees, re-keyed
 // to the basis built in _jointBasis(): Y = bone (twist), X = primary swing
@@ -556,8 +612,8 @@ export class AmmoRagdoll {
       _bv1.setValue(originLive.x, originLive.y, originLive.z); _bt1.setOrigin(_bv1);
       _bq1.setValue(orient.x, orient.y, orient.z, orient.w); _bt1.setRotation(_bq1);
       const ms = keep(new AMMO.btDefaultMotionState(_bt1));
-      _bv1.setValue(0, 0, 0);
-      compound.calculateLocalInertia(mass, _bv1);
+      const I = boxesInertia(boxes, mass);
+      _bv1.setValue(I.x, I.y, I.z);
       const ci = keep(new AMMO.btRigidBodyConstructionInfo(mass, ms, compound, _bv1));
       const rb = keep(new AMMO.btRigidBody(ci));
       rb.setDamping(isFinger ? LIN_DAMP_FINGER : LIN_DAMP, isFinger ? ANG_DAMP_FINGER : ANG_DAMP);
@@ -1309,7 +1365,13 @@ export class AmmoRagdoll {
     this.elapsed = 0;
   }
 
-  setPin(joint, target) {
+  /** `firm` distinguishes a NAIL from a HAND. The source has two settings and
+   *  ammodoll shipped only the nail's: a drag calls setPin on every mousemove,
+   *  so every drag was held by a nail — mass x8 at tau 0.9, a near-rigid handle
+   *  hauling a limb through its joint stops, and the contorted result is what
+   *  you then let go of. Measured on a haul across the floor, the nail numbers
+   *  cost 441 degrees of total limit overshoot against 343 for the hand. */
+  setPin(joint, target, firm = false) {
     if (this.done) return;
     if (!joint) {
       for (const j of [...this._pinCons.keys()]) this.setPin(j, null);
@@ -1340,8 +1402,8 @@ export class AmmoRagdoll {
       // seg.local* are rest-local = body-local (rest-aligned bodies)
       _bv1.setValue(anchor.x, anchor.y, anchor.z);
       const con = new AMMO.btPoint2PointConstraint(seg.body, _bv1);
-      con.get_m_setting().set_m_impulseClamp(this.totalMass * PIN_CLAMP_X);
-      con.get_m_setting().set_m_tau(PIN_TAU);
+      con.get_m_setting().set_m_impulseClamp(this.totalMass * (firm ? PIN_CLAMP_X : GRAB_CLAMP_X));
+      con.get_m_setting().set_m_tau(firm ? PIN_TAU : GRAB_TAU);
       this.world.addConstraint(con, false);
       this._refs.push(con);
       pin = { con, body: seg.body };
