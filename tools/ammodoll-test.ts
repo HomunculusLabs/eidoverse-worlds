@@ -524,6 +524,38 @@ console.log('\nfingers (spring phalanges, additive by absence):');
   }
 }
 
+// ---------------------------------------------------------------------------
+// SLOPED TERRAIN — the ground must follow the field, not one sample. The
+// Verlet resolves heightAt per joint per step; the first ammo build laid a
+// single flat cuboid at heightAt(hips) and heads buried wherever the field
+// rose above that sample (antra, live on a meadow hillside). The terrain
+// module is headless-injectable by design (issue #17), so the suite tilts
+// the world and drops a body on the grade.
+console.log('\nsloped terrain (the ground follows the field):');
+{
+  const { setTerrain, heightAt } = await import('../client/lib/terrain.js');
+  setTerrain({ heightAt: (x: number, z: number) => 0.4 * x + 0.15 * Math.sin(z) });
+  const rig: any = FLEET[0];
+  const bad: string[] = [];
+  for (const yaw of [0, Math.PI / 2]) {
+    const av = makeAvatar(rig.P, { realParent: rig.realParent });
+    av.root.rotation.y = yaw;
+    av.root.position.y = heightAt(av.root.position.x, av.root.position.z);
+    av.root.updateMatrixWorld(true);
+    const rd: any = new AmmoRagdoll(av, toppleLean(yaw, 6), av.restBonePositions());
+    let steps = 0;
+    while (!rd.done && steps < 900) { rd.step(1 / 60); steps++; }
+    for (const [j, p] of Object.entries(rd.p) as any) {
+      const under = heightAt(p.x, p.z) - p.y;
+      // tolerance = a box half-width of grazing; the flat-cuboid bug buried
+      // parts by the full local rise (0.3-0.5m on this grade)
+      if (under > 0.25) bad.push(`${yaw ? 'E' : 'N'}:${j}(${(under * 100).toFixed(0)}cm under)`);
+    }
+  }
+  setTerrain(null);
+  check('no joint rests buried in a sloped field', bad.length === 0, bad.slice(0, 6).join(' '));
+}
+
 console.log('\nlifecycle (one rig, every downstream contract):');
 {
   const rig: any = FLEET[0];
