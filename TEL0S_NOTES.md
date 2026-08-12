@@ -390,6 +390,14 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-12 — §22r: MSAA back on by default.** tel0s's call: a
+  silently-missing AA reads as a rendering bug to colleagues who
+  weren't holding the §22n measurement. The dPR-gated auto-off is
+  reverted; MSAA is the default everywhere, ?msaa=0 stays as the
+  opt-out (+10fps at 2× retina, one flag away), and §22q already
+  bought frames back for the default look. A proper settings row
+  (alongside the other quality dials) is the eventual home.
+
 - **2026-08-11 — §22q: shaped resident density.** The Tsushima trade,
   applied at every distance instead of only past 15m: DENSE_BASE thins
   instances through the §22h rank dither (keep ×= base), survivors

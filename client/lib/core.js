@@ -89,15 +89,15 @@ canvas.tabIndex = -1;
 canvas.style.outline = 'none';
 document.body.prepend(canvas);
 
-// MSAA policy (§22n, measured then confirmed by tel0s): the 4×MSAA resolve
-// at 2× retina costs ~4ms/frame (+10fps when dropped, drift-controlled A/B)
-// while ~220dpi already hides most 1px stairsteps — so hiDPI boots default
-// to NO MSAA and low-DPI keeps it. ?msaa=1 / ?msaa=0 override either way
-// (the escape hatch if geometric blade edges shimmer in motion — opaque
-// grass has real edges where the atlas cards had alpha ones).
-const msaaParam = CONFIG.params.get('msaa');
+// MSAA policy (§22n measured, §22r reverted to ON): the 4×MSAA resolve at
+// 2× retina costs ~4ms/frame (+10fps when dropped, drift-controlled A/B),
+// but a silently-vanished AA reads as a rendering bug to anyone not holding
+// the measurement — so MSAA stays the default everywhere and ?msaa=0 is the
+// opt-out lever (the +10fps is one flag away; §22q bought the frames back
+// for the default look). The dPR-gated auto-off waits for a real settings
+// row alongside the other quality dials.
 export const renderer = new THREE.WebGPURenderer({ canvas,
-  antialias: msaaParam != null ? msaaParam !== '0' : devicePixelRatio < 1.5 });
+  antialias: CONFIG.params.get('msaa') !== '0' });
 renderer.setSize(innerWidth, innerHeight);
 // Spectators start a notch lower — an audience laptop's job is 30fps for an
 // hour, not maximum sharpness. Adaptive scaling adjusts from here.
