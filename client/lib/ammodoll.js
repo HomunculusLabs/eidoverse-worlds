@@ -444,7 +444,39 @@ export class AmmoRagdoll {
     };
     const hips = live.hips ?? avatar.root.position;
     this.groundY = heightAt(hips.x, hips.z);
-    addStatic(60, 0.5, 60, { x: hips.x, y: this.groundY - 0.5, z: hips.z }, null, FRICTION);
+    // TERRAIN-FOLLOWING GROUND. The Verlet resolves heightAt(x,z) per joint
+    // per step, so its bodies follow every slope; a single flat cuboid
+    // sampled at the hips buried heads wherever the field rose above that
+    // one sample (antra, live on a meadow hillside). Sample a grid around
+    // the fall and lay box TILES at the field's own heights; a flat world
+    // (every sample within 2cm) keeps the one-cuboid fast path. Beyond the
+    // grid, a wide apron at the LOWEST sampled height catches a long tumble
+    // without ever poking above a tile inside it.
+    {
+      // TILE bounds the stair-step error: a flat tile is slope×TILE/2 below the
+      // field at its uphill edge — 0.75m keeps a steep 40% grade within 15cm
+      // (a box half-width), and gentle meadows within a few cm.
+      const GROUND_R = 12, TILE = 0.75;
+      const tiles = [];
+      let lo = this.groundY, flat = true;
+      for (let gx = -GROUND_R; gx <= GROUND_R; gx += TILE) {
+        for (let gz = -GROUND_R; gz <= GROUND_R; gz += TILE) {
+          const h = heightAt(hips.x + gx, hips.z + gz);
+          tiles.push([gx, gz, h]);
+          lo = Math.min(lo, h);
+          if (Math.abs(h - this.groundY) > 0.02) flat = false;
+        }
+      }
+      if (flat) {
+        addStatic(60, 0.5, 60, { x: hips.x, y: this.groundY - 0.5, z: hips.z }, null, FRICTION);
+      } else {
+        addStatic(60, 0.5, 60, { x: hips.x, y: lo - 0.5, z: hips.z }, null, FRICTION);
+        for (const [gx, gz, h] of tiles) {
+          addStatic(TILE / 2 + 0.02, 0.5, TILE / 2 + 0.02,
+            { x: hips.x + gx, y: h - 0.5, z: hips.z + gz }, null, FRICTION);
+        }
+      }
+    }
     for (const [, c] of colliders) {
       const obj = c.obj;
       if (!obj || c.interior || !c.box) continue;
