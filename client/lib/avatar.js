@@ -9,6 +9,8 @@ import {
 } from './assets.js';
 import { beginWork, enqueue, idleYield, nextFrame, loadNote } from './loadwork.js';
 import { warm } from './warmqueue.js';
+import { heightAt } from './terrain.js';
+import { surfaceUnder } from './colliders.js';
 import { DRIVEN_BONES } from './ragdoll.js';
 import { stroke as strokeIcon } from './icons.js';
 import { SEAT_CLIP_FILE } from './seatcore.js';
@@ -732,6 +734,26 @@ export class Avatar {
 
     BC('av:gaze-expr');
     this.vrm.update(dt);
+
+    // ---- contact shadow: on the GROUND, not on the body.
+    // The blob is a child of root at a fixed local y, so it rode along under a
+    // lifted body at a constant 2cm — which is precisely the one thing it
+    // exists to disprove ("how high a jump went"). Put it at the surface under
+    // her instead, and let it shrink and fade with the gap, so height reads
+    // even when the ground is out of frame. surfaceUnder, not heightAt: a body
+    // held over a platform casts onto the PLATFORM.
+    if (this.shadow) {
+      const rp = this.root.position;
+      const gy = surfaceUnder(rp.x, rp.z, heightAt, rp.y + 0.05).y;
+      const gap = Math.max(0, rp.y - gy);
+      this.shadow.position.y = (gy - rp.y) + 0.02;
+      // 3 m up the blob is gone; directly underfoot it is full size.
+      const k = THREE.MathUtils.clamp(1 - gap / 3, 0, 1);
+      this.shadow.scale.setScalar(0.55 + 0.45 * k);
+      this.shadow.material.opacity = k * k;
+      this.shadow.visible = k > 0.02;
+    }
+
     BC('av:plates');
 
     // ---- nameplate: fade with distance and stop screaming across the stage.
