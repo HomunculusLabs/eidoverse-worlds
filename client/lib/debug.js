@@ -200,6 +200,35 @@ function disposeCapsules() {
   ragCaps = null;
 }
 
+// Box volumes. Geometry is a unit cube built once and SCALED per box, so N
+// volumes cost N transforms — the same bargain the collider boxes strike.
+let ragVols = null;
+function syncVolumes(vols) {
+  if (!ragVols || ragVols.items.length !== vols.length) {
+    disposeVolumes();
+    const items = vols.map(() => {
+      const mesh = onTop(new THREE.LineSegments(unitBoxWire(), lineMat(RAG_COLOR.bone)));
+      ragGroup.add(mesh);
+      return mesh;
+    });
+    ragVols = { items };
+  }
+  vols.forEach((v, i) => {
+    const m = ragVols.items[i];
+    m.position.copy(v.p);
+    m.quaternion.copy(v.q);
+    m.scale.set(v.he.x * 2, v.he.y * 2, v.he.z * 2);
+  });
+}
+function disposeVolumes() {
+  // NOT m.geometry.dispose(): every box shares the one unit cube, so disposing
+  // it through any single mesh guts all the others.
+  for (const m of ragVols?.items ?? []) ragGroup?.remove(m);
+  ragVols = null;
+}
+let _boxWire = null;
+const unitBoxWire = () => (_boxWire ??= new THREE.WireframeGeometry(new THREE.BoxGeometry(1, 1, 1)));
+
 function syncRagdoll(rd) {
   // ---- joint spheres, at the radius the GROUND and props are tested against
   // (which is per-joint, and not the same number as a bone's radius)
@@ -217,7 +246,15 @@ function syncRagdoll(rd) {
   });
   ragJoints.mesh.instanceMatrix.needsUpdate = true;
 
+  // ---- box volumes, for engines that hold boxes rather than capsules
+  // (ammo/rapier). The verlet answers with caps/radius below; a Bullet doll
+  // answered with nothing at all until volumes() existed, so the panel showed
+  // a skeleton floating in no body.
+  const vols = rd.volumes?.() ?? [];
+  if (vols.length) syncVolumes(vols); else disposeVolumes();
+
   // ---- bone capsules
+  if (!rd.caps) return;
   if (ragCaps?.rd !== rd) buildCapsules(rd);
   for (const it of ragCaps.items) {
     const pa = rd.p[it.cap.a], pb = rd.p[it.cap.b];
@@ -391,6 +428,7 @@ function clearColliders() {
 function clearRagdoll() {
   if (ragJoints) { ragGroup?.remove(ragJoints.mesh); ragJoints = null; }
   disposeCapsules();
+  disposeVolumes();
 }
 
 const fmt = (n, d = 2) => (Number.isFinite(n) ? n.toFixed(d) : '--');
@@ -450,6 +488,13 @@ export function updateDebug(now = performance.now()) {
       `  speed  ${fmt(rd.maxV, 3).padStart(5)} m/s`,
       `  still  ${fmt(rd.settledFor, 2).padStart(5)} s`,
       `  age    ${fmt(rd.elapsed, 2).padStart(5)} s`,
+      // hipsOffset is how far the render root hangs below the hips. It is a
+      // property of the RIG, so it should read the same on every body of the
+      // same avatar and never change across a drag or a release — when it
+      // drifts, the whole body renders that far off the sim, which is what
+      // floating and clipping through the floor both look like from inside.
+      `  hipsΔ  ${fmt(rd.hipsOffset, 3).padStart(5)} m  (rig constant)`,
+      `  rootY  ${fmt(rd.avatar?.root?.position?.y, 3).padStart(5)} m`,
       // steps vs age separates "nobody is calling step()" from "step() is
       // being called with dt 0" — two very different bugs that look identical
       // from a frozen body.
