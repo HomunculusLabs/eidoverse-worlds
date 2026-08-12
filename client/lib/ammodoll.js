@@ -542,6 +542,7 @@ export class AmmoRagdoll {
     this._massOf = new Map();       // body -> mass (Bullet only hands back 1/m)
     const bodyIndex = new Map();    // body -> filter bit index (core only)
 
+    this._vol = [];                 // debug: the boxes, body-local, per body
     const mkBody = (mass, originLive, orient, boxes, isFinger) => {
       const compound = keep(new AMMO.btCompoundShape());
       for (const bx of boxes) {
@@ -580,6 +581,16 @@ export class AmmoRagdoll {
       this._bodies.push(rb);
       this._massOf.set(rb, mass);
       if (!isFinger) this._cores.push(rb);
+      // Keep the child boxes for the debug overlay. The volumes are the ONE
+      // thing about this engine you cannot infer from the skeleton — a bone
+      // line says nothing about the thickness that stops a forearm passing
+      // through a torso — and debug.js could not draw them for ammo at all:
+      // it reads `caps`/`radius`, which only the verlet has, so the panel drew
+      // joints and nothing else. See volumes().
+      this._vol.push({
+        body: rb,
+        boxes: boxes.map((bx) => ({ he: bx.he.clone(), t: bx.t.clone(), q: bx.q.clone() })),
+      });
       return rb;
     };
 
@@ -828,9 +839,23 @@ export class AmmoRagdoll {
       const relF = basis.clone().invert().multiply(rel).multiply(basis);
       const eul = new THREE.Euler().setFromQuaternion(relF, 'XYZ');
       const born = [eul.x, eul.y, eul.z];
+      // ...but only a FRESH body is born into an arbitrary pose. A seeded body
+      // is a HANDOVER — the same tumble continuing on another machine — and its
+      // pose is a sim state, not an anatomy. Widening to contain it enshrines
+      // whatever bend the body happened to be in as its new limits, and since
+      // every drag release constructs a new doll, the limits RATCHET: measured
+      // on mythospaint, the neck's lateral range went 70° → 103° → 115° → 132°
+      // over four drag-and-release cycles, which is the head "bending weirdly
+      // and rotating all the way round" after you let go. So on a handover the
+      // widening may buy the solver a little slack, but never more than
+      // BUILD_WIDEN past the anatomical table: a joint that arrives outside its
+      // range is then pushed BACK into it over the next few steps, which is the
+      // behaviour we want, instead of being granted the excursion forever.
+      const cap = seedVel ? BUILD_WIDEN : Infinity;
+      const anatLo = lo.slice(), anatHi = hi.slice();
       for (let i = 0; i < 3; i++) {
-        lo[i] = Math.min(lo[i], born[i] - BUILD_WIDEN);
-        hi[i] = Math.max(hi[i], born[i] + BUILD_WIDEN);
+        lo[i] = Math.max(anatLo[i] - cap, Math.min(lo[i], born[i] - BUILD_WIDEN));
+        hi[i] = Math.min(anatHi[i] + cap, Math.max(hi[i], born[i] + BUILD_WIDEN));
       }
 
       // CENTER THE RANGE ON THE FRAME. Bullet's angular limit logic wraps the
@@ -1152,9 +1177,32 @@ export class AmmoRagdoll {
 
     if (lean) this._topple(lean);
     this._syncP();
-    // measured against the sim's OWN hips (the rest-shaped torso reconstructs
-    // p.hips a few mm off the live skeleton's — rapierdoll's frame-one jump)
-    this.hipsOffset = (this.p.hips?.y ?? live.hips?.y ?? 0) - avatar.root.position.y;
+    // How far the render root sits below the hips. This is a property of the
+    // RIG (~0.9m on a standing adult), and measuring it against the sim's own
+    // hips is right for a fresh body, whose sim starts AT the rest pose — it
+    // absorbs the few mm by which the rest-shaped torso reconstructs p.hips off
+    // the live skeleton (rapierdoll's frame-one jump).
+    //
+    // A SEEDED body starts mid-tumble, where p.hips is a metre from rest and
+    // near the floor. Measuring there bakes the tumble into the rig: the offset
+    // comes out far too small or too large, and every subsequent frame renders
+    // the root that much off — she sinks through the ground after a drop, and
+    // never on the first push, because only a release rebuilds. restP is the
+    // rest pose in WORLD space taken with the root where it is now, so
+    // restP.hips.y - root.y is the same constant no matter what the sim is
+    // doing or where the root has drifted to.
+    // A SEEDED body is not the only one that starts away from rest: the DRAGGER
+    // builds a fresh doll on its copy of a body that is already lying down
+    // (bodydrag.js), and measuring a standing constant off a prone pose is how
+    // she came to land two feet in the air. So do not key on the seed — key on
+    // whether the measurement AGREES with the rig. Within a few cm they are the
+    // same number and the measured one is kept, preserving the frame-one fix;
+    // beyond that the body simply is not at rest, the measurement means
+    // nothing, and the rig constant is the only honest answer.
+    const restHipsY = this.restP?.hips?.y;
+    const measured = (this.p.hips?.y ?? live.hips?.y ?? 0) - avatar.root.position.y;
+    const constant = restHipsY != null ? restHipsY - avatar.root.position.y : measured;
+    this.hipsOffset = Math.abs(measured - constant) > 0.05 ? constant : measured;
   }
 
   // ---------------------------------------------------------------- instruments
@@ -1162,6 +1210,32 @@ export class AmmoRagdoll {
   // "is it finite / did it settle" cannot see an anatomy failure)
 
   /** Live per-axis joint angles against their bounds, in the joint basis. */
+  /** The collision volumes as the SOLVER holds them, in world space:
+   *  `[{ p, q, he }]`, one entry per box (bodies are compounds, so the torso
+   *  yields three). The debug overlay's box counterpart to the verlet's
+   *  `caps`/`radius`; without it the panel can only draw the skeleton, and the
+   *  skeleton is precisely the part that was never in doubt. */
+  volumes() {
+    const out = [];
+    if (!AMMO) return out;
+    for (const { body, boxes } of this._vol ?? []) {
+      // one value-returning ammo call per statement — see quatOf2
+      const t = body.getCenterOfMassTransform();
+      const o = t.getOrigin();
+      const bp = new THREE.Vector3(o.x(), o.y(), o.z());
+      const r = t.getRotation();
+      const bq = new THREE.Quaternion(r.x(), r.y(), r.z(), r.w());
+      for (const bx of boxes) {
+        out.push({
+          p: bx.t.clone().applyQuaternion(bq).add(bp),
+          q: bq.clone().multiply(bx.q),
+          he: bx.he.clone(),
+        });
+      }
+    }
+    return out;
+  }
+
   jointAngles() {
     const out = [];
     for (const J of this.jointMeta) {
