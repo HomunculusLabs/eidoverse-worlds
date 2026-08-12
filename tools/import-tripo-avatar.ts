@@ -202,11 +202,62 @@ g.extensions.VRMC_vrm = {
 };
 say(`vrmified: ${Object.keys(humanBones).length} humanoid bones`);
 
+// ---- 4b: HAIR → VRM SpringBone --------------------------------------------
+// The rig pipeline builds per-lock bone chains (Hair_<chain>_<idx>, built by
+// hair_rig.py from hand-painted marks). Declared as VRMC_springBone, three-vrm
+// simulates them client-side every frame — hair that moves while WALKING, not
+// only in a Bullet fall, at zero engine cost. Parameters are the source's
+// hair-tuning translated to springbone semantics: stiffness ramps DOWN the
+// chain (roots hold shape, tips swing), a touch of gravity, and a head-sphere
+// collider so locks rest on the skull instead of inside it.
+{
+  const chains = new Map<string, { idx: number; node: number }[]>();
+  for (const [name, ni] of idx.entries()) {
+    const m = /^Hair_(\d+)_(\d+)$/.exec(String(name));
+    if (m) {
+      const c = chains.get(m[1]) ?? [];
+      c.push({ idx: Number(m[2]), node: ni as number });
+      chains.set(m[1], c);
+    }
+  }
+  if (chains.size) {
+    const springs: unknown[] = [];
+    for (const [cname, joints] of chains) {
+      joints.sort((a, b) => a.idx - b.idx);
+      if (joints.length < 2) continue;
+      springs.push({
+        name: `hair_${cname}`,
+        joints: joints.map((j, i) => {
+          const t = i / Math.max(1, joints.length - 1);   // 0 root → 1 tip
+          return {
+            node: j.node,
+            hitRadius: 0.012,
+            stiffness: 0.65 - 0.4 * t,
+            gravityPower: 0.02 + 0.05 * t,
+            gravityDir: [0, -1, 0],
+            dragForce: 0.4,
+          };
+        }),
+        colliderGroups: [0],
+      });
+    }
+    g.extensionsUsed = [...new Set([...(g.extensionsUsed ?? []), 'VRMC_springBone'])];
+    g.extensions.VRMC_springBone = {
+      specVersion: '1.0',
+      colliders: [{ node: need('Head'), shape: { sphere: { offset: [0, 0.05, 0.01], radius: 0.095 } } }],
+      colliderGroups: [{ name: 'head', colliders: [0] }],
+      springs,
+    };
+    say(`springbones: ${springs.length} hair chains declared (+head collider)`);
+  }
+}
+
 // ---- 5: scale bake ----------------------------------------------------------
 // measure current height from hips..head span the way the engines do
 // FULL TRS walk — translations alone once measured a NEGATIVE height on an
 // export whose armature carried a rotation, and the tool nearly baked a
 // mirror-flip ×-5.857 into the avatar
+let wpReset = () => {};
 const wp = (() => {
   const parent = new Map();
   g.nodes.forEach((n: any, i: number) => (n.children ?? []).forEach((c: number) => parent.set(c, i)));
@@ -220,6 +271,7 @@ const wp = (() => {
     return [t[0], t[1], t[2]];
   };
   const memo = new Map();
+  wpReset = () => memo.clear();
   const world = (i: number): { p: number[]; q: number[] } => {
     if (memo.has(i)) return memo.get(i);
     const n = g.nodes[i];
@@ -237,6 +289,32 @@ const wp = (() => {
   };
   return (i: number) => world(i).p;
 })();
+// AXIS DETECTION: the rig pipeline's own exports are Z-up ("no conversion
+// anywhere" is its doctrine); a Y-span measured on one is ~0 and the abort
+// below would end the import. If the head-foot delta runs dominantly along
+// Z, rebase every parentless node with a -90° X rotation (Z-up → Y-up) and
+// re-measure — three-vrm normalizes rest rotations, so a rotated root is
+// legitimate VRM.
+{
+  const h0 = wp(need('Head') as number), f0 = wp(need('L_Foot') as number);
+  const d = [h0[0] - f0[0], h0[1] - f0[1], h0[2] - f0[2]].map(Math.abs);
+  if (d[2] > d[1] && d[2] > d[0]) {
+    const hasParent = new Set<number>();
+    g.nodes.forEach((n: any) => (n.children ?? []).forEach((c: number) => hasParent.add(c)));
+    const RX = [-Math.SQRT1_2, 0, 0, Math.SQRT1_2];   // -90° about X
+    const qm = (a: number[], b: number[]) => [
+      a[3] * b[0] + a[0] * b[3] + a[1] * b[2] - a[2] * b[1],
+      a[3] * b[1] - a[0] * b[2] + a[1] * b[3] + a[2] * b[0],
+      a[3] * b[2] + a[0] * b[1] - a[1] * b[0] + a[2] * b[3],
+      a[3] * b[3] - a[0] * b[0] - a[1] * b[1] - a[2] * b[2]];
+    g.nodes.forEach((n: any, i: number) => {
+      if (hasParent.has(i)) return;
+      n.rotation = qm(RX, n.rotation ?? [0, 0, 0, 1]);
+    });
+    wpReset();
+    say('Z-up export detected — rebased to Y-up');
+  }
+}
 const headY = wp(need('Head') as number)[1];
 const footY = wp(need('L_Foot') as number)[1];
 const span = headY - footY;
