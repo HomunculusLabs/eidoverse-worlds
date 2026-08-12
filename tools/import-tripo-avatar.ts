@@ -220,7 +220,7 @@ say(`vrmified: ${Object.keys(humanBones).length} humanoid bones`);
       chains.set(m[1], c);
     }
   }
-  if (chains.size) {
+  if (chains.size && !args.includes('--no-hair-springs')) {
     const springs: unknown[] = [];
     for (const [cname, joints] of chains) {
       joints.sort((a, b) => a.idx - b.idx);
