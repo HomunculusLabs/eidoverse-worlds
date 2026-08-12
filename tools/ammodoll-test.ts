@@ -524,6 +524,68 @@ console.log('\nfingers (spring phalanges, additive by absence):');
   }
 }
 
+// ---------------------------------------------------------------------------
+// SLOPED TERRAIN — the ground must follow the field, not one sample. The
+// Verlet resolves heightAt per joint per step; the first ammo build laid a
+// single flat cuboid at heightAt(hips) and heads buried wherever the field
+// rose above that sample (antra, live on a meadow hillside). The terrain
+// module is headless-injectable by design (issue #17), so the suite tilts
+// the world and drops a body on the grade.
+console.log('\nsloped terrain (the ground follows the field):');
+{
+  const { setTerrain, heightAt } = await import('../client/lib/terrain.js');
+  setTerrain({ heightAt: (x: number, z: number) => 0.4 * x + 0.15 * Math.sin(z) });
+  const rig: any = FLEET[0];
+  const bad: string[] = [];
+  for (const yaw of [0, Math.PI / 2]) {
+    const av = makeAvatar(rig.P, { realParent: rig.realParent });
+    av.root.rotation.y = yaw;
+    av.root.position.y = heightAt(av.root.position.x, av.root.position.z);
+    av.root.updateMatrixWorld(true);
+    const rd: any = new AmmoRagdoll(av, toppleLean(yaw, 6), av.restBonePositions());
+    let steps = 0;
+    while (!rd.done && steps < 900) { rd.step(1 / 60); steps++; }
+    for (const [j, p] of Object.entries(rd.p) as any) {
+      const under = heightAt(p.x, p.z) - p.y;
+      // tolerance = a box half-width of grazing; the flat-cuboid bug buried
+      // parts by the full local rise (0.3-0.5m on this grade)
+      if (under > 0.25) bad.push(`${yaw ? 'E' : 'N'}:${j}(${(under * 100).toFixed(0)}cm under)`);
+    }
+  }
+  setTerrain(null);
+  check('no joint rests buried in a sloped field', bad.length === 0, bad.slice(0, 6).join(' '));
+}
+
+// ---------------------------------------------------------------------------
+// FACE-PLANT — the skull is collision volume, not just the head bone. VRM
+// puts the head bone at the skull base; a head box ending there leaves the
+// face and crown hollow, and a prone body sinks face-first to the ears
+// before its neck stub touches ground (antra, live, on FLAT terrain). Shove
+// a body over face-first and demand the head bone rests clear of the floor
+// by more than a neck's half-width.
+console.log('\nface-plant (the skull keeps the face out of the floor):');
+{
+  const bad: string[] = [];
+  for (const rig of FLEET.slice(0, 5)) {
+    const P: any = rig.P;
+    const up = (P.neck ?? P.chest).clone().sub(P.hips).normalize();
+    const lat = P.leftUpperArm.clone().sub(P.rightUpperArm);
+    lat.addScaledVector(up, -lat.dot(up)).normalize();
+    const fwd = new THREE.Vector3().crossVectors(lat, up).normalize();
+    const av = makeAvatar(rig.P, { realParent: rig.realParent });
+    const rd: any = new AmmoRagdoll(av, fwd.multiplyScalar(5), av.restBonePositions());
+    let steps = 0;
+    while (!rd.done && steps < 900) { rd.step(1 / 60); steps++; }
+    // height-scaled bar: a skull is ~14% of standing height, so the head
+    // BONE (skull base) prone on the ground rests about half a skull depth
+    // up — small rigs have proportionally small heads
+    const H = (P.head.y - Math.min(P.leftFoot?.y ?? 0, P.rightFoot?.y ?? 0)) * 1.12;
+    const clear = rd.p.head?.y ?? 0;   // flat world: ground is y=0
+    if (clear < H * 0.045) bad.push(`${rig.name}(head at ${(clear * 100).toFixed(1)}cm, bar ${(H * 4.5).toFixed(1)}cm)`);
+  }
+  check('a face-first fall rests the head clear of the floor', bad.length === 0, bad.join(' '));
+}
+
 console.log('\nlifecycle (one rig, every downstream contract):');
 {
   const rig: any = FLEET[0];

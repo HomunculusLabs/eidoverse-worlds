@@ -444,7 +444,39 @@ export class AmmoRagdoll {
     };
     const hips = live.hips ?? avatar.root.position;
     this.groundY = heightAt(hips.x, hips.z);
-    addStatic(60, 0.5, 60, { x: hips.x, y: this.groundY - 0.5, z: hips.z }, null, FRICTION);
+    // TERRAIN-FOLLOWING GROUND. The Verlet resolves heightAt(x,z) per joint
+    // per step, so its bodies follow every slope; a single flat cuboid
+    // sampled at the hips buried heads wherever the field rose above that
+    // one sample (antra, live on a meadow hillside). Sample a grid around
+    // the fall and lay box TILES at the field's own heights; a flat world
+    // (every sample within 2cm) keeps the one-cuboid fast path. Beyond the
+    // grid, a wide apron at the LOWEST sampled height catches a long tumble
+    // without ever poking above a tile inside it.
+    {
+      // TILE bounds the stair-step error: a flat tile is slope×TILE/2 below the
+      // field at its uphill edge — 0.75m keeps a steep 40% grade within 15cm
+      // (a box half-width), and gentle meadows within a few cm.
+      const GROUND_R = 12, TILE = 0.75;
+      const tiles = [];
+      let lo = this.groundY, flat = true;
+      for (let gx = -GROUND_R; gx <= GROUND_R; gx += TILE) {
+        for (let gz = -GROUND_R; gz <= GROUND_R; gz += TILE) {
+          const h = heightAt(hips.x + gx, hips.z + gz);
+          tiles.push([gx, gz, h]);
+          lo = Math.min(lo, h);
+          if (Math.abs(h - this.groundY) > 0.02) flat = false;
+        }
+      }
+      if (flat) {
+        addStatic(60, 0.5, 60, { x: hips.x, y: this.groundY - 0.5, z: hips.z }, null, FRICTION);
+      } else {
+        addStatic(60, 0.5, 60, { x: hips.x, y: lo - 0.5, z: hips.z }, null, FRICTION);
+        for (const [gx, gz, h] of tiles) {
+          addStatic(TILE / 2 + 0.02, 0.5, TILE / 2 + 0.02,
+            { x: hips.x + gx, y: h - 0.5, z: hips.z + gz }, null, FRICTION);
+        }
+      }
+    }
     for (const [, c] of colliders) {
       const obj = c.obj;
       if (!obj || c.interior || !c.box) continue;
@@ -621,9 +653,31 @@ export class AmmoRagdoll {
       const w = part === 'head' ? Math.max(limbW(ra, rb2), torsoR * 0.55)
         : part === 'foot' ? Math.max(limbW(ra, rb2), 0.03)
           : limbW(ra, rb2);
+      // …and the skull is a VOLUME the head bone only anchors: VRM puts that
+      // bone at the skull base, so a box ending there — and only as wide as
+      // the neck — leaves the face and crown hollow, and a prone body sank
+      // face-first to the ears before its neck stub touched ground (antra,
+      // live, on FLAT terrain — the slope fix was innocent). Two dimensions
+      // matter and only one is obvious: the box runs ON past the bone to a
+      // height-scaled crown point, and — the one that actually carries a
+      // prone head — its PERPENDICULAR half-extents grow to skull scale
+      // (extending along the bone axis lifts nothing when that axis lies on
+      // the ground; measured: crown-only moved the prone head 2.7→2.9cm).
+      // The verlet never shows this because its head particle carries an
+      // explicit clearance radius; the source rig never shows it because its
+      // head box was measured from the MESH. Collision only — seg endpoints,
+      // .p and pins keep the true bone.
+      const isHead = part === 'head';
+      const boxEnd = isHead
+        ? rb2.clone().addScaledVector(
+          rb2.clone().sub(ra).normalize(),
+          Math.min(0.22, Math.max(0.08, H * 0.11)))
+        : rb2;
+      const wHead = isHead ? Math.max(w, H * 0.05) : w;
+      const dHead = isHead ? Math.max(w, H * 0.058) : w;
       const body = mkBody(
         MASS_FRAC[part] * massScale, liveMid, qB,
-        [boxFor(restMid, ra, rb2, w)], false);
+        [boxFor(restMid, ra, boxEnd, wHead, dHead)], false);
       const seg = {
         key, a, b: b2, body, torso: false,
         restA: ra.clone(), restB: rb2.clone(),
