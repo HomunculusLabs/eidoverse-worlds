@@ -390,6 +390,14 @@ fixture/tool matrix.
 
 ## 10. Progress log
 
+- **2026-08-11 — §22 merge: grass-opaque-blades → main.** tel0s's eye
+  signed off; fast-forward (06aa000..b34d8b1), tree identical to the
+  gate-green branch tip, branch deleted. The A/B lever survives as
+  `?grassgeo=cards`. Their real session across the arc: 26 (ghost
+  shader) → 37 (opaque) → ~50 (MSAA policy). Remaining headroom on the
+  books: near/mid-field density shaping, and the sky re-bake spike
+  (clouds arc).
+
 - **2026-08-11 — §22p (branch): the 34ms mystery dies twice.** Verdict
   in two parts, both measured. (1) tel0s's recurring worst=34 is VSYNC
   QUANTIZATION: on a 60Hz panel a frame either makes the slot (16.7ms)
