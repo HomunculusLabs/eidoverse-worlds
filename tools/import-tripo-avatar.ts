@@ -120,6 +120,18 @@ for (const mat of root.listMaterials()) {
     mat.setExtension('KHR_materials_clearcoat',
       clearcoatExt.createClearcoat().setClearcoatFactor(0.25).setClearcoatRoughnessFactor(0.12));
     say('PORCELAIN → white glaze');
+  } else if (name === 'HAIR_UNDER') {
+    // The rig pipeline's hair_underlayer duplicates the hair inward as a
+    // second surface — it arrives wearing Blender's default light grey and
+    // glows PALE through every parting between locks ("vertices within the
+    // hair that don't have color", 08-12). It is the shadow layer: match
+    // the RAVEN locks but darker and matte, no sheen — depth should read
+    // as occlusion, not as a second head of hair.
+    if (mat.getBaseColorFactor().some((v: number, i: number) => v < 0.7 && i < 3)
+      || mat.listExtensions().length) { say('HAIR_UNDER: author-provided, kept'); continue; }
+    mat.setBaseColorFactor([0.008, 0.008, 0.014, 1]).setMetallicFactor(0.1)
+      .setRoughnessFactor(0.6).setDoubleSided(true);
+    say('HAIR_UNDER → matte shadow black');
   } else if (name === 'GOLD') {
     mat.setDoubleSided(true);            // factor + default metallic already right
   } else if (name === 'eyeballs' && !mat.getBaseColorTexture()) {
@@ -240,13 +252,16 @@ say(`vrmified: ${Object.keys(humanBones).length} humanoid bones`);
             node: j.node,
             hitRadius: 0.012,
             // Tuned on mythos_painthair (08-12), with center=hips doing the
-            // heavy lifting (see above). Moderate stiffness holds the
-            // sculpted silhouette; near-zero gravity because the droop is
-            // already modelled in.
-            stiffness: 1.2 - 0.5 * t,
+            // heavy lifting (see above). The first center-frame numbers
+            // (1.2/0.6) were set while a stale-cache bug hid every deploy —
+            // tuned blind, they came out rigid. Softened once feedback was
+            // real: enough stiffness to recover the sculpted silhouette,
+            // low enough that turns and leans visibly stir the locks.
+            // Near-zero gravity because the droop is already modelled in.
+            stiffness: 0.75 - 0.35 * t,
             gravityPower: 0.01 + 0.02 * t,
             gravityDir: [0, -1, 0],
-            dragForce: 0.6,
+            dragForce: 0.45,
           };
         }),
         colliderGroups: [0],
