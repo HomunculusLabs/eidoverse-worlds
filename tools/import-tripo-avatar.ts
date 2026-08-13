@@ -86,9 +86,31 @@ const carry = (srcTex: any) => {
 };
 const clearcoatExt = doc.createExtension(KHRMaterialsClearcoat);
 const iridescenceExt = doc.createExtension(KHRMaterialsIridescence);
+// "Does this primitive have a COLOR_0" is NOT a paint test — Blender happily
+// exports an all-white layer, and that trap produced white eyeballs right
+// after a log line said "vertex-painted, kept". Paint means the values VARY:
+// sample the prim's COLOR_0 and call it painted only if a real fraction of
+// verts is non-white.
+const primPainted = (mat: any): boolean =>
+  root.listMeshes().some((mesh2) => mesh2.listPrimitives().some((p2) => {
+    if (p2.getMaterial() !== mat) return false;
+    const col = p2.getAttribute('COLOR_0');
+    if (!col) return false;
+    const n = col.getCount(), e = [0, 0, 0, 0];
+    let nonWhite = 0, seen = 0;
+    for (let i = 0; i < n; i += Math.max(1, n >> 10)) {
+      col.getElement(i, e); seen++;
+      if (Math.min(e[0], e[1], e[2]) < 0.98) nonWhite++;
+    }
+    return nonWhite / Math.max(1, seen) > 0.05;
+  }));
 for (const mat of root.listMaterials()) {
   const name = mat.getName();
   if (name.startsWith('tripo_material') && !mat.getBaseColorTexture()) {
+    // A PAINTED body must not have donor textures stomped on top of it —
+    // the bake IS the look; texture × paint double-darkens. The donor
+    // transplant is a repair for paintless exports only.
+    if (primPainted(mat)) { say(`${name}: vertex-painted, donor transplant skipped`); continue; }
     const src = (donorMats as any)[name];
     if (src?.getBaseColorTexture()) {
       mat.setBaseColorTexture(carry(src.getBaseColorTexture()));
@@ -136,12 +158,12 @@ for (const mat of root.listMaterials()) {
     mat.setDoubleSided(true);            // factor + default metallic already right
   } else if (name === 'eyeballs' && !mat.getBaseColorTexture()) {
     // AUTHOR WINS here too (the black-eyeballs incident): vertex-painted
-    // eyes (COLOR_0 on the prims — Janus paints the sclera per-vertex)
-    // pass through untouched; the dark gloss is a repair for eyes with no
-    // paint of ANY kind, which would otherwise render blank white
-    const painted = root.listMeshes().some((mesh2) => mesh2.listPrimitives().some((p2) =>
-      p2.getMaterial() === mat && p2.getAttribute('COLOR_0')));
-    if (painted) { say('eyeballs: vertex-painted, kept'); continue; }
+    // eyes (Janus paints the sclera per-vertex) pass through untouched; the
+    // dark gloss is a repair for eyes with no paint of ANY kind, which
+    // would otherwise render blank white. Tested by VALUE, not COLOR_0
+    // presence — an all-white COLOR_0 once passed this check and shipped
+    // white eyeballs right after the log said "vertex-painted, kept".
+    if (primPainted(mat)) { say('eyeballs: vertex-painted, kept'); continue; }
     mat.setBaseColorFactor([0.06, 0.05, 0.06, 1]).setMetallicFactor(0).setRoughnessFactor(0.1);
     say('eyeballs → dark gloss (no paint of any kind)');
   }
@@ -180,6 +202,10 @@ const need = (n: string) => {
 const MAP: Record<string, string> = {
   hips: 'Hip', spine: 'Waist', chest: 'Spine01', upperChest: 'Spine02',
   neck: 'NeckTwist01', head: 'Head',
+  // eye bones arrived with the baked-dec-eyebones generation (08-12);
+  // mapping them gives three-vrm gaze for free. Eyelid bones have no VRM
+  // slot and FK-follow the head, per spec. Absent bones simply skip.
+  leftEye: 'L_Eye', rightEye: 'R_Eye',
   leftShoulder: 'L_Clavicle', leftUpperArm: 'L_Upperarm', leftLowerArm: 'L_Forearm', leftHand: 'L_Hand',
   rightShoulder: 'R_Clavicle', rightUpperArm: 'R_Upperarm', rightLowerArm: 'R_Forearm', rightHand: 'R_Hand',
   leftUpperLeg: 'L_Thigh', leftLowerLeg: 'L_Calf', leftFoot: 'L_Foot', leftToes: 'L_ToeBase',
@@ -197,7 +223,10 @@ for (const side of ['left', 'right']) {
   }
 }
 const humanBones: Record<string, { node: unknown }> = {};
-for (const [vrm, tri] of Object.entries(MAP)) humanBones[vrm] = { node: need(tri) };
+for (const [vrm, tri] of Object.entries(MAP)) {
+  const ni = need(tri);
+  if (ni != null) humanBones[vrm] = { node: ni };   // optional bones (eyes) skip when absent
+}
 g.extensionsUsed = [...new Set([...(g.extensionsUsed ?? []), 'VRMC_vrm'])];
 g.extensions = g.extensions ?? {};
 g.extensions.VRMC_vrm = {
