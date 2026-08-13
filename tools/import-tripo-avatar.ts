@@ -120,6 +120,18 @@ for (const mat of root.listMaterials()) {
     mat.setExtension('KHR_materials_clearcoat',
       clearcoatExt.createClearcoat().setClearcoatFactor(0.25).setClearcoatRoughnessFactor(0.12));
     say('PORCELAIN → white glaze');
+  } else if (name === 'HAIR_UNDER') {
+    // The rig pipeline's hair_underlayer duplicates the hair inward as a
+    // second surface — it arrives wearing Blender's default light grey and
+    // glows PALE through every parting between locks ("vertices within the
+    // hair that don't have color", 08-12). It is the shadow layer: match
+    // the RAVEN locks but darker and matte, no sheen — depth should read
+    // as occlusion, not as a second head of hair.
+    if (mat.getBaseColorFactor().some((v: number, i: number) => v < 0.7 && i < 3)
+      || mat.listExtensions().length) { say('HAIR_UNDER: author-provided, kept'); continue; }
+    mat.setBaseColorFactor([0.008, 0.008, 0.014, 1]).setMetallicFactor(0.1)
+      .setRoughnessFactor(0.6).setDoubleSided(true);
+    say('HAIR_UNDER → matte shadow black');
   } else if (name === 'GOLD') {
     mat.setDoubleSided(true);            // factor + default metallic already right
   } else if (name === 'eyeballs' && !mat.getBaseColorTexture()) {
@@ -227,15 +239,31 @@ say(`vrmified: ${Object.keys(humanBones).length} humanoid bones`);
       if (joints.length < 2) continue;
       springs.push({
         name: `hair_${cname}`,
+        // center=hips: tails simulate RELATIVE to the hips, so locomotion
+        // does not excite the hair at all (without it, every walk step
+        // translates the root under world-anchored tails and the whole mass
+        // sweeps back like wind — drag/stiffness scalars cannot fix that;
+        // drag only damps accumulated velocity, and the displacement is
+        // instantaneous). Rotation and lean still give natural sway.
+        center: need('Hip'),
         joints: joints.map((j, i) => {
           const t = i / Math.max(1, joints.length - 1);   // 0 root → 1 tip
           return {
             node: j.node,
             hitRadius: 0.012,
-            stiffness: 0.65 - 0.4 * t,
-            gravityPower: 0.02 + 0.05 * t,
+            // Tuned on mythos_painthair (08-12), with center=hips doing the
+            // heavy lifting (see above). Three field iterations to get here:
+            // flat-stiff (1.2/0.6) read as rigid; flat-soft (0.75/0.45) let
+            // the ROOT segments swing as freely as the tips and the scalp
+            // showed through while running. Thick locks are anchored firm at
+            // the scalp and loosen toward the ends — so the ramp is
+            // root-heavy (quadratic falloff), not flat: roots hold coverage
+            // near the old-stiff numbers, tips stay softer than the flat-
+            // soft cut. Near-zero gravity: the droop is already modelled in.
+            stiffness: 0.35 + 0.95 * (1 - t) ** 2,
+            gravityPower: 0.01 + 0.02 * t,
             gravityDir: [0, -1, 0],
-            dragForce: 0.4,
+            dragForce: 0.7 - 0.3 * t,
           };
         }),
         colliderGroups: [0],
@@ -244,6 +272,8 @@ say(`vrmified: ${Object.keys(humanBones).length} humanoid bones`);
     g.extensionsUsed = [...new Set([...(g.extensionsUsed ?? []), 'VRMC_springBone'])];
     g.extensions.VRMC_springBone = {
       specVersion: '1.0',
+      // radius is a PLACEHOLDER — stage 5b re-fits it to the largest sphere
+      // that clears the authored rest pose, after the scale bake.
       colliders: [{ node: need('Head'), shape: { sphere: { offset: [0, 0.05, 0.01], radius: 0.095 } } }],
       colliderGroups: [{ name: 'head', colliders: [0] }],
       springs,
@@ -258,6 +288,7 @@ say(`vrmified: ${Object.keys(humanBones).length} humanoid bones`);
 // export whose armature carried a rotation, and the tool nearly baked a
 // mirror-flip ×-5.857 into the avatar
 let wpReset = () => {};
+let wq: (i: number) => number[] = () => [0, 0, 0, 1];
 const wp = (() => {
   const parent = new Map();
   g.nodes.forEach((n: any, i: number) => (n.children ?? []).forEach((c: number) => parent.set(c, i)));
@@ -287,6 +318,7 @@ const wp = (() => {
     }
     memo.set(i, out); return out;
   };
+  wq = (i: number) => world(i).q;
   return (i: number) => world(i).p;
 })();
 // AXIS DETECTION: the rig pipeline's own exports are Z-up ("no conversion
@@ -354,6 +386,45 @@ for (const sk of g.skins ?? []) {
   for (let i = 0; i < a.count; i++) for (const e of [12, 13, 14]) {
     const off = base + i * step + e * 4;
     bin.writeFloatLE(bin.readFloatLE(off) * S, off);
+  }
+}
+// ---- 5b: collider fit — a springbone collider must never intersect the
+// authored rest pose (bit 08-12 on mythos_painthair: an eyeballed r=0.095
+// head sphere reached past the crown roots' rest tails and expelled every
+// back lock 37–94° AT IDLE — "misshapen bones in the back of the hair").
+// The largest safe sphere is a property of the rig, not a constant: min
+// rest-tail distance to the collider center, minus the joint hitRadius and
+// a margin, clamped to sanity. Runs AFTER the scale bake so the measurement
+// is in the same final-space units as the emitted radii.
+{
+  const sb = (g.extensions ?? {}).VRMC_springBone;
+  const sph = sb?.colliders?.[0]?.shape?.sphere;
+  if (sb?.springs?.length && sph) {
+    wpReset();
+    const qmul = (a: number[], b: number[]) => [
+      a[3] * b[0] + a[0] * b[3] + a[1] * b[2] - a[2] * b[1],
+      a[3] * b[1] - a[0] * b[2] + a[1] * b[3] + a[2] * b[0],
+      a[3] * b[2] + a[0] * b[1] - a[1] * b[0] + a[2] * b[3],
+      a[3] * b[3] - a[0] * b[0] - a[1] * b[1] - a[2] * b[2]];
+    const qrot = (q: number[], v: number[]) => {
+      const t = qmul(qmul(q, [v[0], v[1], v[2], 0]), [-q[0], -q[1], -q[2], q[3]]);
+      return [t[0], t[1], t[2]];
+    };
+    const hi = sb.colliders[0].node as number;
+    const hp = wp(hi), off = qrot(wq(hi), sph.offset ?? [0, 0, 0]);
+    const c = [hp[0] + off[0], hp[1] + off[1], hp[2] + off[2]];
+    let minD = Infinity, hit = 0.012;
+    for (const s of sb.springs) {
+      for (let i = 1; i < s.joints.length; i++) {   // joint i is joint i-1's tail
+        const t = wp(s.joints[i].node);
+        minD = Math.min(minD, Math.hypot(t[0] - c[0], t[1] - c[1], t[2] - c[2]));
+        hit = Math.max(hit, s.joints[i - 1].hitRadius ?? 0);
+      }
+    }
+    const fitted = Math.min(0.09, Math.max(0.03, +(minD - hit - 0.005).toFixed(3)));
+    say(`collider fit: nearest rest tail ${minD.toFixed(3)} → head sphere r=${fitted}`
+      + (fitted < sph.radius ? ` (was ${sph.radius})` : ''));
+    sph.radius = fitted;
   }
 }
 let jsonBuf = Buffer.from(JSON.stringify(g));
