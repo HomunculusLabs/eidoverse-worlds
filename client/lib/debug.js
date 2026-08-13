@@ -17,6 +17,7 @@ import { THREE, scene } from './core.js';
 import { MeshBVHHelper } from 'three-mesh-bvh';
 import { colliders } from './colliders.js';
 import { closestParams, TUNING } from './ragdoll.js';
+import { JOINT_SPECS } from './ammodoll.js';
 import { makeFrame } from './frames.js';
 
 // box = an OBB, walkable on top, solid on the sides between min.y and max.y
@@ -336,6 +337,118 @@ function dialRow(key, lo, hi, step) {
   return { wrap, reset: () => { TUNING[key] = DEFAULTS[key]; sl.value = DEFAULTS[key]; paint(); } };
 }
 
+// ---- joint limits ----------------------------------------------------------
+//
+// Anatomy is a matter of taste as much as measurement — a spine's range is a
+// real number, but how floppy a RAGDOLL should look inside it is a judgement,
+// and judging it from a table of degrees is guesswork. (It cost a round of
+// exactly that: halving the trunk's range looked right on every metric and
+// hyperextended the knees 148 degrees, because a stiff trunk stops absorbing a
+// landing.) So: pick a joint, drag its ranges, watch the body.
+//
+// Live — retune() pushes the table into the running constraints, so a body
+// already lying on the floor changes under your hands.
+
+// what each spec exposes: directional joints carry flex/ext, the rest an x pair
+const LIMIT_FIELDS = [
+  ['flex', 0, 180, 1], ['ext', 0, 180, 1],
+  ['twist', 0, 90, 1],
+  ['x0', -180, 0, 1], ['x1', 0, 180, 1],
+  ['z0', -180, 0, 1], ['z1', 0, 180, 1],
+];
+const getF = (S, f) => (f === 'x0' ? S.x?.[0] : f === 'x1' ? S.x?.[1]
+  : f === 'z0' ? S.z?.[0] : f === 'z1' ? S.z?.[1] : S[f]);
+const setF = (S, f, v) => {
+  if (f === 'x0') S.x[0] = v; else if (f === 'x1') S.x[1] = v;
+  else if (f === 'z0') S.z[0] = v; else if (f === 'z1') S.z[1] = v;
+  else S[f] = v;
+};
+
+let jointSel = null, jointRows = null, jointDefaults = null;
+
+function buildJointPanel(stack) {
+  // one snapshot of the shipped table, so "reset" means the defaults and not
+  // whatever was on the sliders when the panel was opened
+  jointDefaults = JSON.parse(JSON.stringify(JOINT_SPECS));
+
+  const pick = document.createElement('select');
+  for (const k of Object.keys(JOINT_SPECS)) {
+    const o = document.createElement('option');
+    o.value = k; o.textContent = k;
+    pick.appendChild(o);
+  }
+  jointSel = pick;
+
+  const rows = document.createElement('div');
+  rows.style.cssText = 'display:flex;flex-direction:column;gap:3px';
+  jointRows = rows;
+
+  const apply = () => {
+    const rd = providers.ragdoll?.();
+    if (rd?.retune) rd.retune();
+  };
+
+  const paint = () => {
+    rows.textContent = '';
+    const S = JOINT_SPECS[pick.value];
+    if (!S) return;
+    for (const [f, lo, hi, st] of LIMIT_FIELDS) {
+      if (getF(S, f) === undefined) continue;
+      const wrap = document.createElement('div');
+      wrap.className = 'row';
+      const nm = document.createElement('span');
+      nm.className = 'nm'; nm.style.width = '42px'; nm.textContent = f;
+      const sl = document.createElement('input');
+      sl.type = 'range'; sl.min = lo; sl.max = hi; sl.step = st; sl.value = getF(S, f);
+      const val = document.createElement('span');
+      val.className = 'v'; val.style.width = '34px';
+      const show = () => { val.textContent = `${getF(S, f)}°`; };
+      sl.oninput = () => { setF(S, f, Number(sl.value)); show(); apply(); };
+      show();
+      wrap.append(nm, sl, val);
+      rows.appendChild(wrap);
+    }
+  };
+  pick.onchange = paint;
+  paint();
+
+  const btns = document.createElement('div');
+  btns.className = 'row';
+  const mk = (label, fn) => {
+    const b = document.createElement('button');
+    b.textContent = label; b.onclick = fn; btns.appendChild(b); return b;
+  };
+  mk('reset joint', () => {
+    Object.assign(JOINT_SPECS[pick.value], JSON.parse(JSON.stringify(jointDefaults[pick.value])));
+    paint(); apply();
+  });
+  // The point of tuning is to KEEP the answer. Printing the whole table as a
+  // paste-able literal is the difference between a nice afternoon and a number
+  // you have to find twice.
+  mk('copy table', async () => {
+    const txt = Object.entries(JOINT_SPECS).map(([k, S]) => {
+      const parts = [`ref: '${S.ref}'`];
+      if (S.flex != null) parts.push(`flex: ${S.flex}`, `ext: ${S.ext}`, `want: '${S.want}'`);
+      else parts.push(`x: [${S.x[0]}, ${S.x[1]}]`);
+      parts.push(`twist: ${S.twist}`, `z: [${S.z[0]}, ${S.z[1]}]`);
+      return `  ${k}: { ${parts.join(', ')} },`;
+    }).join('\n');
+    const out = `const JOINT_SPECS = {\n${txt}\n};`;
+    try { await navigator.clipboard.writeText(out); toastLike('joint table copied'); }
+    catch { console.log(out); toastLike('joint table logged to console'); }
+  });
+
+  const head = document.createElement('div');
+  head.className = 'row';
+  const hl = document.createElement('span');
+  hl.className = 'nm'; hl.style.width = '42px'; hl.textContent = 'joint';
+  head.append(hl, pick);
+  stack.append(head, rows, btns);
+}
+
+// the panel has no toast of its own; keep the dependency to one line
+function toastLike(msg) { console.log(`[debug] ${msg}`); }
+
 // ---- panel -----------------------------------------------------------------
 
 function row(label, key, onChange) {
@@ -410,6 +523,14 @@ export function initDebug(p = {}) {
     resets.push(d.reset);
     stack.appendChild(d.wrap);
   }
+
+  // joint limits, live
+  const jhead = document.createElement('div');
+  jhead.className = 'row';
+  jhead.style.cssText = 'margin-top:6px;opacity:.75';
+  jhead.textContent = '— joint limits (live) —';
+  stack.appendChild(jhead);
+  buildJointPanel(stack);
 
   statsEl = document.createElement('pre');
   statsEl.className = 'dbg-stats';

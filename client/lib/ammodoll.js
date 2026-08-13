@@ -176,6 +176,11 @@ const MASS_FRAC = {
   upperArm: 0.028, lowerArm: 0.016, hand: 0.006,
   upperLeg: 0.100, lowerLeg: 0.047, foot: 0.015,
 };
+// Depth as a fraction of trunk half-width. Was 0.6 — a torso flattened like a
+// plank of wood. The proxy-mesh boxes this rig was ported from are 0.096-0.110
+// of height deep against 0.093-0.125 wide: a trunk is very nearly as deep as it
+// is broad.
+const TRUNK_DEPTH = 0.88;
 const REAL_H = 1.70;            // rigdef.py: reference height for the mass budget
 const BODY_KG = 62.0;           // at REAL_H, scaled by (H/1.70)³
 const FINGER_MASS_FRAC = 0.0016; // per phalanx body (~20 g at 62 kg); thumb ×1.4
@@ -224,21 +229,42 @@ const GRAB_CLAMP_X = 1.2;       // × total mass
 // the two sides of the body mirror, and a hard-coded sign is wrong on one
 // (rapierdoll's law; also the source's thumb lesson).
 //   ref: what X is crossed against — 'fwd' | 'up' | 'palm' | 'pinky'
-const JOINT_SPECS = {
-  // trunk (rigdef.py: spine ±25/±20/±25, chest ±20/±20/±20). Modest ranges —
-  // a spine is stiff — but the difference between these and NO joint is the
-  // difference between a body that folds and a plank.
-  spine: { ref: 'fwd', x: [-25, 25], twist: 20, z: [-25, 25] },
-  chest: { ref: 'fwd', x: [-20, 20], twist: 20, z: [-20, 20] },
-  head: { ref: 'fwd', x: [-40, 40], twist: 45, z: [-35, 35] },
-  upperArm: { ref: 'fwd', x: [-85, 85], twist: 70, z: [-85, 85] },
+export const JOINT_SPECS = {
+  // TUNED BY HAND, in-world, against a real body falling — not derived. The
+  // debug panel's "joint limits (live)" section retunes running constraints, so
+  // these came from watching and adjusting rather than from argument. Where
+  // they depart from rigdef.py that is deliberate: rigdef describes a living
+  // spine's range, and a ragdoll with no muscle tone spends all of it.
+  //
+  // Two axes are LOCKED at zero (trunk twist, knee side-bend). A locked axis is
+  // exempt from the born-widening below, which would otherwise hand back
+  // ±BUILD_WIDEN of the freedom the zero was there to remove.
+  spine: { ref: 'fwd', x: [-10, 10], twist: 0, z: [-4, 4] },
+  chest: { ref: 'fwd', x: [-20, 20], twist: 0, z: [-6, 6] },
+  head: { ref: 'fwd', x: [-33, 33], twist: 24, z: [-19, 19] },
+  upperArm: { ref: 'fwd', x: [-85, 85], twist: 56, z: [-85, 85] },
   lowerArm: { ref: 'fwd', flex: 145, ext: 2, want: 'fwd', twist: 5, z: [-5, 5] },
-  // wrist, translated by MEANING not by letter: the source measured flexion
-  // ±45, deviation ±15, twist ±8 (its own X/Z were "the other way round")
   hand: { ref: 'palm', flex: 45, ext: 45, want: 'palm', twist: 8, z: [-15, 15] },
+  // THE ONE ROW NOT AS TUNED. The hand-tuned hip was flex 90 / ext 8 /
+  // twist 0 / z ±13, and it looks better in the world — but narrowing the hip
+  // that far makes the KNEE fold backwards: 125 degrees of "hyperextension" on
+  // all three rigs, which tools/ammodoll-test.ts catches and which is the same
+  // thing as "a joint gets twisted and then is stuck like that".
+  //
+  // It is not the knee bending too far. The magnitude tracks the knee's own
+  // flexion limit exactly (flex 123 -> 125 deg, flex 145 -> 146 deg): the knee
+  // is sitting AT its legal limit, measured on the wrong side of Bullet's
+  // angular wrap, and it stays there. A hip that cannot rotate about the leg's
+  // axis has to send that rotation somewhere and the knee is next in the chain.
+  // Measured: restoring ext alone leaves 48-83 deg, twist alone 77 deg on two
+  // rigs; only all three together come back clean.
+  //
+  // The real fix is upstream of any of these numbers — build the constraint
+  // frames at the pose like the source rig does, so joints operate near zero
+  // where no wrap point is reachable. Put the tuned row back once that lands.
   upperLeg: { ref: 'fwd', flex: 90, ext: 45, want: 'fwd', twist: 30, z: [-45, 45] },
-  lowerLeg: { ref: 'fwd', flex: 145, ext: 0, want: 'back', twist: 5, z: [-5, 5] },
-  foot: { ref: 'up', x: [-35, 35], twist: 15, z: [-20, 20] },
+  lowerLeg: { ref: 'fwd', flex: 123, ext: 0, want: 'back', twist: 3, z: [0, 0] },
+  foot: { ref: 'up', x: [-35, 35], twist: 12, z: [-12, 12] },
   fingerProx: { ref: 'palm', flex: 90, ext: 6, want: 'palm', twist: 8, z: [-12, 12] },
   fingerMid: { ref: 'palm', flex: 100, ext: 0, want: 'palm', twist: 4, z: [-4, 4] },
   thumb: { ref: 'pinky', flex: 55, ext: 10, want: 'pinky', twist: 12, z: [-25, 25] },
@@ -453,7 +479,18 @@ export class AmmoRagdoll {
     const massScale = BODY_KG * (H / REAL_H) ** 3;
     const span = restP.leftUpperArm && restP.rightUpperArm
       ? restP.leftUpperArm.distanceTo(restP.rightUpperArm) : H * 0.3;
-    const torsoR = Math.max(0.05, span * 0.22);
+    // Trunk half-width. span is the distance between the two SHOULDER JOINTS,
+    // which is a good deal narrower than a torso, so x0.22 of it made a body
+    // 0.12m wide on a 1.5m rig. Measured against the source's proxy-mesh boxes
+    // (rig.json, normalised by height): pelvis/spine/chest run 0.093-0.125 of
+    // height WIDE and 0.096-0.110 DEEP. Take the wider of the two estimates so
+    // a rig with genuinely broad shoulders still governs its own width.
+    //
+    // This went unnoticed while the trunk was one fused body whose inertia came
+    // from btCompoundShape's AABB — the approximation inflated it and hid the
+    // undersized boxes. With real inertia the dimensions finally matter, and an
+    // undersized trunk is a floppy one.
+    const torsoR = Math.max(0.05, span * 0.22, H * 0.055);
 
     // ---- extrapolate missing tips so hands/feet can be bodies --------------
     // rigdef's skeleton-only fallback sizes a box from the bone alone; a VRM
@@ -695,7 +732,7 @@ export class AmmoRagdoll {
       const restMid = ra.clone().add(rb2).multiplyScalar(0.5);
       const liveMid = live[a].clone().add(live[b2]).multiplyScalar(0.5);
       const body = mkBody(MASS_FRAC[part] * massScale, liveMid, torsoQ,
-        [boxFor(restMid, ra, rb2, torsoR, torsoR * 0.6)], false);
+        [boxFor(restMid, ra, rb2, torsoR, torsoR * TRUNK_DEPTH)], false);
       const seg = {
         key, a, b: b2, body, torso: true,
         restA: ra.clone(), restB: rb2.clone(),
@@ -712,7 +749,7 @@ export class AmmoRagdoll {
     // their torso entirely.
     if (!trunkBuilt) {
       const body = mkBody(MASS_FRAC.torso * massScale, liveTorsoMid, torsoQ,
-        [boxFor(restTorsoMid, restP.hips, restUpper, torsoR, torsoR * 0.6)], false);
+        [boxFor(restTorsoMid, restP.hips, restUpper, torsoR, torsoR * TRUNK_DEPTH)], false);
       segMeta.set('hips|spine', { body, restOrigin: restTorsoMid });
       segMeta.set('chest|neck', { body, restOrigin: restTorsoMid });
       this.segs.set('hips|spine', {
@@ -775,7 +812,11 @@ export class AmmoRagdoll {
       const boxEnd = isHead
         ? rb2.clone().addScaledVector(
           rb2.clone().sub(ra).normalize(),
-          Math.min(0.22, Math.max(0.08, H * 0.11)))
+          // The skull runs on past the head bone — but only to a real crown.
+          // H*0.11 on top of the neck->head bone made a 0.27m head on a 1.5m
+          // rig; the proxy mesh measures a head 0.124 of height LONG, so the
+          // extension is what is LEFT after the bone itself, not another head.
+          Math.min(0.16, Math.max(0.05, H * 0.124 - rb2.distanceTo(ra))))
         : rb2;
       const wHead = isHead ? Math.max(w, H * 0.05) : w;
       const dHead = isHead ? Math.max(w, H * 0.058) : w;
@@ -947,6 +988,11 @@ export class AmmoRagdoll {
       const cap = seedVel ? BUILD_WIDEN : Infinity;
       const anatLo = lo.slice(), anatHi = hi.slice();
       for (let i = 0; i < 3; i++) {
+        // An axis the table LOCKS (lo === hi) stays locked. Widening it to
+        // contain the born pose would quietly hand back +/-BUILD_WIDEN of the
+        // very freedom the zero was there to remove — 6.9 degrees per joint,
+        // which up a three-body trunk is most of a spine's worth of corkscrew.
+        if (anatHi[i] - anatLo[i] === 0) continue;
         lo[i] = Math.max(anatLo[i] - cap, Math.min(lo[i], born[i] - BUILD_WIDEN));
         hi[i] = Math.min(anatHi[i] + cap, Math.max(hi[i], born[i] + BUILD_WIDEN));
       }
@@ -1002,6 +1048,9 @@ export class AmmoRagdoll {
         name, spec, axisX: x.clone(), axisY: y.clone(), axisZ: z.clone(),
         lo: [...lo], hi: [...hi], born: [...born], mid: [...mid],
         parentBody, childBody, basisA, basisB: basis.clone(),
+        // retune() needs these: the constraint to talk to, and which way +X
+        // flexes on THIS side (derived from geometry at build, never assumed).
+        con, positiveFlexes: S.flex != null ? xhi > 0 : null,
       });
       return con;
     };
@@ -1213,6 +1262,14 @@ export class AmmoRagdoll {
         bone: seg.a, child: seg.b, node: bn, parent: bn.parent,
         restDir: refDir.normalize(),
         restQuat: bn.getWorldQuaternion(new THREE.Quaternion()),
+        // ...and the BODY, plus the orientation it was born holding. A bone
+        // driven from its direction alone cannot express roll (see step); these
+        // two are what make roll recoverable. q0 is identity on a fresh build,
+        // where live IS rest — but a seeded body is built mid-tumble, and
+        // composing its born orientation onto itself is the "renders at twice
+        // its offset" bug this table's own header warns about.
+        body: seg.body,
+        q0inv: quatOf2(seg.body, new THREE.Quaternion()).invert(),
       });
     }
     this.drivenBones = new Set(this.drive.map((d) => d.bone));
@@ -1329,6 +1386,47 @@ export class AmmoRagdoll {
       }
     }
     return out;
+  }
+
+  /** Re-apply JOINT_SPECS to the LIVE constraints, no rebuild.
+   *
+   *  Limits are baked in at construction, so tuning a table by hand and waiting
+   *  for the next fall to see it is a slow way to find a number. This pushes
+   *  the current table straight into the running joints.
+   *
+   *  The constraint frames still carry the midpoint they were BUILT with, so
+   *  the same midpoint is subtracted back off here — which keeps the numbers
+   *  meaning anatomical degrees. What it does not re-do is the frame rotation
+   *  itself, so a range retuned to be wildly more asymmetric than it was built
+   *  sits closer to Bullet's wrap point than a fresh build would. Tuned values
+   *  are meant to be written into the table and rebuilt from; this is the dial,
+   *  not the destination.
+   */
+  retune() {
+    if (!AMMO) return 0;
+    let n = 0;
+    for (const J of this.jointMeta ?? []) {
+      const S = JOINT_SPECS[J.spec];
+      if (!S || !J.con) continue;
+      let xlo, xhi;
+      if (S.flex != null) {
+        xlo = (J.positiveFlexes ? -S.ext : -S.flex) * DEG;
+        xhi = (J.positiveFlexes ? S.flex : S.ext) * DEG;
+      } else {
+        xlo = S.x[0] * DEG; xhi = S.x[1] * DEG;
+      }
+      const lo = [xlo, -S.twist * DEG, S.z[0] * DEG];
+      const hi = [xhi, S.twist * DEG, S.z[1] * DEG];
+      _bv1.setValue(lo[0] - J.mid[0], lo[1] - J.mid[1], lo[2] - J.mid[2]);
+      J.con.setAngularLowerLimit(_bv1);
+      _bv1.setValue(hi[0] - J.mid[0], hi[1] - J.mid[1], hi[2] - J.mid[2]);
+      J.con.setAngularUpperLimit(_bv1);
+      J.lo = lo; J.hi = hi;
+      n++;
+    }
+    // a sleeping body will not notice its joints changed under it
+    for (const b of this._bodies) b.activate();
+    return n;
   }
 
   jointAngles() {
@@ -1549,10 +1647,21 @@ export class AmmoRagdoll {
     for (const d of this.drive) {
       const bp = this.p[d.bone], cp = this.p[d.child];
       if (!bp || !cp) continue;
-      _b.copy(cp).sub(bp);
-      if (_b.lengthSq() < 1e-6) continue;
-      _b.normalize();
-      shortestArc(d.restDir, _b, _q).multiply(d.restQuat);
+      // The BODY's rotation, not the bone's direction.
+      //
+      // This used to be shortestArc(restDir, liveDir) — the minimal rotation
+      // taking the bone from where it pointed to where it points now. That is
+      // a pure SWING: it reproduces the direction exactly and discards roll
+      // about the bone's own axis completely. So a thigh could be pointing
+      // perfectly while its knee faced wherever shortestArc happened to land,
+      // which reads as "the leg ended up backwards" — and no twist limit can
+      // touch it, because the sim's twist was never what was wrong. Same
+      // reason a forearm never showed pronation.
+      //
+      // Bodies are rest-aligned, so the body's rotation since it was built IS
+      // the bone's rotation since it was built. The hair segments (§118) were
+      // already driven this way; the core skeleton was not.
+      quatOf2(d.body, _q).multiply(d.q0inv).multiply(d.restQuat);
       d.parent.getWorldQuaternion(_qp).invert();
       _qp.multiply(_q);
       d.node.quaternion.copy(_qp);
