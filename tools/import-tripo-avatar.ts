@@ -252,16 +252,18 @@ say(`vrmified: ${Object.keys(humanBones).length} humanoid bones`);
             node: j.node,
             hitRadius: 0.012,
             // Tuned on mythos_painthair (08-12), with center=hips doing the
-            // heavy lifting (see above). The first center-frame numbers
-            // (1.2/0.6) were set while a stale-cache bug hid every deploy —
-            // tuned blind, they came out rigid. Softened once feedback was
-            // real: enough stiffness to recover the sculpted silhouette,
-            // low enough that turns and leans visibly stir the locks.
-            // Near-zero gravity because the droop is already modelled in.
-            stiffness: 0.75 - 0.35 * t,
+            // heavy lifting (see above). Three field iterations to get here:
+            // flat-stiff (1.2/0.6) read as rigid; flat-soft (0.75/0.45) let
+            // the ROOT segments swing as freely as the tips and the scalp
+            // showed through while running. Thick locks are anchored firm at
+            // the scalp and loosen toward the ends — so the ramp is
+            // root-heavy (quadratic falloff), not flat: roots hold coverage
+            // near the old-stiff numbers, tips stay softer than the flat-
+            // soft cut. Near-zero gravity: the droop is already modelled in.
+            stiffness: 0.35 + 0.95 * (1 - t) ** 2,
             gravityPower: 0.01 + 0.02 * t,
             gravityDir: [0, -1, 0],
-            dragForce: 0.45,
+            dragForce: 0.7 - 0.3 * t,
           };
         }),
         colliderGroups: [0],
