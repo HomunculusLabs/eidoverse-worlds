@@ -17,7 +17,8 @@ import { THREE, scene } from './core.js';
 import { MeshBVHHelper } from 'three-mesh-bvh';
 import { colliders } from './colliders.js';
 import { closestParams, TUNING } from './ragdoll.js';
-import { JOINT_SPECS } from './ammodoll.js';
+import { JOINT_SPECS, HAIR_TUNING } from './ammodoll.js';
+import { BLINK } from './avatar.js';
 import { makeFrame } from './frames.js';
 
 // box = an OBB, walkable on top, solid on the sides between min.y and max.y
@@ -446,6 +447,109 @@ function buildJointPanel(stack) {
   stack.append(head, rows, btns);
 }
 
+// ---- hair -------------------------------------------------------------------
+// The hair is the one system with no good headless metric: "peak segment speed"
+// cannot tell flowing from whipping, and a fall's numbers are dominated by the
+// body's own motion. So it gets dials and a pair of eyes.
+// Which way an eyelid SHUTS depends on how its bone was rolled, so the sign is
+// a coin flip from here — a dial settles it in one blink. Rigs that export a
+// Limit Rotation constraint (see eido_export.py) use their own value and ignore
+// this one.
+const BLINK_FIELDS = [
+  ['closed', -2, 2, 0.02],   // upper lid
+  ['lower', -2, 2, 0.02],    // lower lid — an upper alone does not shut an eye
+  ['dur', 0.05, 0.8, 0.01],  // seconds for the whole close-and-open
+  ['hz', 0.2, 4, 0.1],
+  // eyeMax 0 pins the eyeballs at rest — the way to tell "the eyes are rigged
+  // wrong" from "the gaze code is turning them wrong" without rebuilding.
+  ['eyeMax', 0, 1.2, 0.02],
+  ['axis', 0, 2, 1],          // 0=x 1=y 2=z — which way the lid hinges
+];
+
+const HAIR_FIELDS = [
+  ['mass', 0.001, 0.05, 0.001],
+  ['tension', 0, 40, 0.5],
+  ['damping', 0, 1, 0.02],
+  ['gravity', 0, 1.5, 0.05],
+  ['limit', 0, 90, 1],
+  ['rootExp', 0.2, 3, 0.1],
+];
+
+function buildBlinkPanel(stack) {
+  const rows = document.createElement('div');
+  rows.style.cssText = 'display:flex;flex-direction:column;gap:3px';
+  for (const [f, lo, hi, st] of BLINK_FIELDS) {
+    const wrap = document.createElement('div');
+    wrap.className = 'row';
+    const nm = document.createElement('span');
+    nm.className = 'nm'; nm.style.width = '54px'; nm.textContent = f;
+    const sl = document.createElement('input');
+    sl.type = 'range'; sl.min = lo; sl.max = hi; sl.step = st; sl.value = BLINK[f];
+    const val = document.createElement('span');
+    val.className = 'v'; val.style.width = '44px';
+    const show = () => {
+      val.textContent = (f === 'closed' || f === 'lower')
+        ? `${(BLINK[f] * 180 / Math.PI).toFixed(0)}°`
+        : f === 'dur' ? `${(BLINK[f] * 1000).toFixed(0)}ms`
+          : f === 'eyeMax' ? `${(BLINK[f] * 180 / Math.PI).toFixed(0)}°`
+            : f === 'axis' ? ['x', 'y', 'z'][BLINK[f]] ?? '?' : `${BLINK[f]}x`;
+    };
+    sl.oninput = () => { BLINK[f] = Number(sl.value); show(); };
+    show();
+    wrap.append(nm, sl, val);
+    rows.appendChild(wrap);
+  }
+  stack.appendChild(rows);
+}
+
+function buildHairPanel(stack) {
+  const defaults = { ...HAIR_TUNING };
+  const rows = document.createElement('div');
+  rows.style.cssText = 'display:flex;flex-direction:column;gap:3px';
+  const apply = () => {
+    const rd = providers.ragdoll?.();
+    if (rd?.retuneHair) rd.retuneHair();
+  };
+  const mk = () => {
+    rows.textContent = '';
+    for (const [f, lo, hi, st] of HAIR_FIELDS) {
+      const wrap = document.createElement('div');
+      wrap.className = 'row';
+      const nm = document.createElement('span');
+      nm.className = 'nm'; nm.style.width = '54px'; nm.textContent = f;
+      const sl = document.createElement('input');
+      sl.type = 'range'; sl.min = lo; sl.max = hi; sl.step = st; sl.value = HAIR_TUNING[f];
+      const val = document.createElement('span');
+      val.className = 'v'; val.style.width = '44px';
+      const show = () => {
+        val.textContent = f === 'mass' ? `${(HAIR_TUNING[f] * 1000).toFixed(1)}g`
+          : f === 'limit' ? `${HAIR_TUNING[f]}°` : String(HAIR_TUNING[f]);
+      };
+      sl.oninput = () => { HAIR_TUNING[f] = Number(sl.value); show(); apply(); };
+      show();
+      wrap.append(nm, sl, val);
+      rows.appendChild(wrap);
+    }
+  };
+  mk();
+  const btns = document.createElement('div');
+  btns.className = 'row';
+  const b1 = document.createElement('button');
+  b1.textContent = 'reset hair';
+  b1.onclick = () => { Object.assign(HAIR_TUNING, defaults); mk(); apply(); };
+  const b2 = document.createElement('button');
+  b2.textContent = 'copy hair';
+  b2.onclick = async () => {
+    const out = 'export const HAIR_TUNING = {\n'
+      + Object.entries(HAIR_TUNING).map(([k, v]) => `  ${k}: ${v},`).join('\n')
+      + '\n};';
+    try { await navigator.clipboard.writeText(out); toastLike('hair tuning copied'); }
+    catch { console.log(out); toastLike('hair tuning logged'); }
+  };
+  btns.append(b1, b2);
+  stack.append(rows, btns);
+}
+
 // the panel has no toast of its own; keep the dependency to one line
 function toastLike(msg) { console.log(`[debug] ${msg}`); }
 
@@ -523,6 +627,22 @@ export function initDebug(p = {}) {
     resets.push(d.reset);
     stack.appendChild(d.wrap);
   }
+
+  // blink, live
+  const bhead = document.createElement('div');
+  bhead.className = 'row';
+  bhead.style.cssText = 'margin-top:6px;opacity:.75';
+  bhead.textContent = '— blink (live) —';
+  stack.appendChild(bhead);
+  buildBlinkPanel(stack);
+
+  // hair, live
+  const hhead = document.createElement('div');
+  hhead.className = 'row';
+  hhead.style.cssText = 'margin-top:6px;opacity:.75';
+  hhead.textContent = '— hair (live, while ragdolled) —';
+  stack.appendChild(hhead);
+  buildHairPanel(stack);
 
   // joint limits, live
   const jhead = document.createElement('div');
