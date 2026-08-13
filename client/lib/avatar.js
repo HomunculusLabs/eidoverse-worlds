@@ -20,6 +20,31 @@ import { SEAT_CLIP_FILE } from './seatcore.js';
 // largest chunk of a cold boot, spent on animations most arrivals don't use in
 // the first minute (nobody lands mid-climb). So a body is born able to stand
 // and walk, and learns the rest while you're already moving.
+// How far an upper lid swings to shut, in radians about its own X, when the rig
+// exports no limit of its own. Signed: which way is "closed" depends on how the
+// lid bone was rolled, so this is a dial, not a constant of nature — the first
+// guess here blinked mythos UPWARD, which is the other 50%.
+export const BLINK = {
+  closed: 1.2,   // radians — 69 deg, found on the slider against her own lids
+  hz: 1,         // blink-rate multiplier
+  // Which AXIS a lid swings about is a property of how the bone was rolled, and
+  // Blender's bone axes are not glTF's — a lid that shuts about X in Blender may
+  // need Y or Z here. 0=x 1=y 2=z. Rotating about the wrong one sweeps the lid
+  // sideways instead of down, which looks like an eye you can see straight
+  // through however far you close it.
+  axis: 0,
+  lower: -0.35,  // the LOWER lid's share, signed and usually opposite. An upper
+                 // lid alone does not shut an eye: it covers the top and leaves
+                 // the sclera and iris showing under it, which is why a "closed"
+                 // eye read as a white eyeball with a dark dot.
+  eyeMax: 0.42,  // radians an eyeball may turn off the head's forward (~24 deg).
+                 // Human eyes reach further, but a doll whose eyes track hard
+                 // reads as staring; the head is meant to do most of the work.
+  dur: 0.28,     // seconds for a full close-and-open. 0.13 was the original and
+                 // it is barely perceptible: a real blink is 100-150ms of
+                 // CLOSING plus the reopen, and this curve covers both halves.
+};
+
 const CORE_CLIPS = ['idle', 'walk'];
 const LATER_CLIPS = CLIP_SLOTS.filter((s) => !CORE_CLIPS.includes(s));
 // Until a clip arrives, the nearest thing that HAS arrived stands in. Silently
@@ -169,6 +194,15 @@ function drawTypingDots(sprite, t, state) {
 
 const _v = new THREE.Vector3();
 const _pq = new THREE.Quaternion();
+const _Y2 = new THREE.Vector3(0, 1, 0);
+const _Z2 = new THREE.Vector3(0, 0, 1);
+const _gq = new THREE.Quaternion();        // gaze scratch — hot path, no allocs
+const _gd = new THREE.Quaternion();
+const _gi = new THREE.Quaternion();
+const _gpq = new THREE.Quaternion();
+const _gf = new THREE.Vector3();
+const _gw = new THREE.Vector3();
+const _gp = new THREE.Vector3();
 const _X = new THREE.Vector3(1, 0, 0);      // scratch — hot paths must not allocate
 const _v2 = new THREE.Vector3();
 
@@ -223,6 +257,77 @@ export class Avatar {
     this.root.add(this.shadow);
 
     scene.add(this.root);
+  }
+
+  /** Find the eyeball bones once. VRM ships a lookAt rig and three-vrm drives
+   *  it — but only if the file HAS one, and this rig has hand-rigged bones
+   *  instead: L_Eye / R_Eye. Same gaze target either way. */
+  _findEyes() {
+    this._eyes = null;
+    if (!this.vrm?.scene) return;
+    const found = [];
+    this.vrm.scene.traverse((o) => {
+      if (/^[LR]_Eye$/.test(o.name ?? '')) found.push({ node: o, rest: o.quaternion.clone() });
+    });
+    if (found.length) this._eyes = found;
+  }
+
+  /** Hold the eyes shut (1) or let them open (0). Eased in update() so it
+   *  reads as closing rather than snapping. Returns false if this body has no
+   *  eyelid bones, so a caller can say so instead of appearing to work. */
+  setEyes(shut) {
+    if (this._lids === undefined) this._findLids();
+    if (!this._lids) return false;
+    this._eyesGoal = shut ? 1 : 0;
+    return true;
+  }
+
+  /** Find the eyelid bones once, and remember where OPEN is.
+   *
+   *  Named by the rig pipeline: L_/R_Eyelid_Upper (and _Lower, unused for now —
+   *  a lower lid barely moves in a human blink). The closing angle comes from
+   *  the Limit Rotation constraint the rig author set in Blender, carried out
+   *  as a node extra by eido_export.py; BLINK.closed is the live fallback for a rig
+   *  that never exported one, and is deliberately modest — a lid that overshoots
+   *  reads as a wince, and this is the value you would rather have too small.
+   */
+  _findLids() {
+    this._lids = null;
+    if (!this.vrm?.scene) return;
+    const found = [];
+    this.vrm.scene.traverse((o) => {
+      const m = /^[LR]_Eyelid_(Upper|Lower)$/.exec(o.name ?? '');
+      if (!m) return;
+      const ex = o.userData?.gltfExtras ?? o.userData ?? {};
+      // A Limit Rotation's numbers are ABSOLUTE angles in the bone's own frame,
+      // not offsets from rest — mythos's upper lids export min 150 / max 240
+      // degrees, bracketing the ~195 the lid actually rests at. Read as a delta
+      // that is a 240-degree sweep: the lid leaves the head entirely and the eye
+      // is bare, which reads as "you can see through the eyelids" and survives
+      // any amount of making the mesh bigger.
+      //
+      // Rest sits at the middle of a range that brackets it, so the closing
+      // delta is closed - centre = 45 degrees here. Anything that does not come
+      // out plausible is discarded in favour of the dial: a rig may have set
+      // those limits for something other than a blink.
+      let lim = NaN;
+      const mn = Number(ex.limit_min_x), mx = Number(ex.limit_max_x);
+      const cl = Number(ex.blink_closed_x);
+      if ([mn, mx, cl].every(Number.isFinite) && mx > mn) {
+        const d = cl - (mn + mx) / 2;
+        if (Math.abs(d) > 1e-3 && Math.abs(d) < 1.6) lim = d;
+      }
+      found.push({
+        node: o,
+        rest: o.quaternion.clone(),
+        lower: m[1] === 'Lower',
+        exported: Number.isFinite(lim) && Math.abs(lim) > 1e-4 ? lim : null,
+      });
+    });
+    // NOT report() — that is the error channel, and report(msg, null) renders
+    // as "unknown error", which is what it did: a clean load announcing a fault
+    // that never happened.
+    if (found.length) this._lids = found;
   }
 
   // ---- first-person anchors (fp_view.js consumes these) -------------------
@@ -433,6 +538,19 @@ export class Avatar {
     on = !!on;
     if (on === this._limp) return;
     this._limp = on;
+    // Eyes close when the body goes slack, and open when it gets up. Only for a
+    // rig with eyelid BONES — setEyes says so itself and does nothing otherwise,
+    // so a VRM that blinks with a blendshape is unaffected.
+    //
+    // This is driven from setLimp rather than from the ragdoll, which means it
+    // is also true of everyone ELSE you watch fall: remotes call setLimp the
+    // moment a streamed clip turns to 'ragdoll'. Nothing new on the wire.
+    //
+    // _limpEyes remembers that WE closed them, so getting up only reopens eyes
+    // that the fall shut — someone who chose to lie there with their eyes closed
+    // (/eyes) keeps them closed.
+    if (on) { this._limpEyes = this.setEyes(true); }
+    else if (this._limpEyes) { this._limpEyes = false; this.setEyes(false); }
     if (!on) {
       // Hand the bones back as we found them. three.js only writes a bone when
       // the clip's computed value CHANGES, so a track that holds still — a
@@ -698,18 +816,84 @@ export class Avatar {
       this.gaze.position.lerp(_v, 1 - Math.exp(-3 * dt));
     }
 
+    // ---- blink: irregular, in pairs sometimes, never metronomic
+    //
+    // The CLOCK runs whether or not this body has expressions. It used to live
+    // inside `if (em)`, which is fine for a VRM authored with a blink
+    // blendshape and silently nothing for one without: a rig whose eyelids are
+    // BONES has no expressions at all, so the timer never advanced and the
+    // avatar never blinked. Value first, consumers after.
+    let blinkV = 0;
+    if (this.blinkT >= 0) {
+      this.blinkT += dt;
+      const k = this.blinkT / Math.max(0.05, BLINK.dur);
+      blinkV = k < 1 ? Math.sin(k * Math.PI) : 0;
+      if (k >= 1) {
+        this.blinkT = -1;
+        // Schedule from the END of the blink, not its start. Measured from the
+        // start, the 260ms "pair" gap is shorter than a 280ms blink — so the
+        // next one is already due the instant this one finishes and EVERY blink
+        // came in twos. It only worked before because the blink was 130ms, i.e.
+        // the bug was hidden by the duration rather than absent.
+        const rate = Math.max(0.15, BLINK.hz);
+        this.blinkAt = now + (Math.random() < 0.22 ? 220
+          : (2200 + Math.random() * 4200) / rate);
+      }
+    } else if (now > this.blinkAt) {
+      this.blinkT = 0;
+    }
+    // eyelids as BONES: rotate the uppers from their rest pose by the same
+    // curve. Rest is captured once, so a blink cannot integrate — the lids
+    // return exactly where they started rather than creeping shut over an hour.
+    // ---- eyeballs: point them at the same target the gaze already eases to
+    if (this._eyes === undefined) this._findEyes();
+    if (this._eyes && this.head) {
+      this.head.getWorldQuaternion(_gq);
+      _gf.set(0, 0, 1).applyQuaternion(_gq);          // where the head faces NOW
+      for (const e of this._eyes) {
+        e.node.getWorldPosition(_gp);
+        _gw.copy(this.gaze.position).sub(_gp);
+        if (_gw.lengthSq() < 1e-10) continue;
+        _gw.normalize();
+        _gd.setFromUnitVectors(_gf, _gw);             // the world-space turn
+        const ang = 2 * Math.acos(Math.min(1, Math.abs(_gd.w)));
+        if (ang > BLINK.eyeMax) {                     // clamp into a cone
+          _gi.identity().slerp(_gd, BLINK.eyeMax / ang);
+          _gd.copy(_gi);
+        }
+        // local = parentWorld⁻¹ · turn · parentWorld · rest
+        e.node.parent.getWorldQuaternion(_gpq);
+        _gi.copy(_gpq).invert().multiply(_gd).multiply(_gpq).multiply(e.rest);
+        e.node.quaternion.copy(_gi);
+      }
+    }
+
+    if (this._lids === undefined) this._findLids();
+    // ease toward the held state — a lid that snaps shut reads as a flinch
+    this._eyesShut = this._eyesShut ?? 0;
+    const goal = this._eyesGoal ?? 0;
+    if (this._eyesShut !== goal) {
+      this._eyesShut += (goal - this._eyesShut) * (1 - Math.exp(-12 * dt));
+      if (Math.abs(goal - this._eyesShut) < 0.002) this._eyesShut = goal;
+    }
+    if (this._lids) {
+      // a held close (/eyes) and a blink share the lids: whichever is further
+      // shut wins, so blinking while your eyes are closed changes nothing
+      const amt = Math.max(blinkV, this._eyesShut ?? 0);
+      for (const l of this._lids) {
+        l.node.quaternion.copy(l.rest);
+        // the rig's own exported limit wins; BLINK.closed is the dial otherwise
+        const shut = l.exported ?? (l.lower ? BLINK.lower : BLINK.closed);
+        if (amt > 0) {
+          const ax = BLINK.axis === 1 ? _Y2 : BLINK.axis === 2 ? _Z2 : _X;
+          l.node.quaternion.multiply(_pq.setFromAxisAngle(ax, shut * amt));
+        }
+      }
+    }
+
     const em = this.vrm.expressionManager;
     if (em) {
-      // ---- blink: irregular, in pairs sometimes, never metronomic
-      if (this.blinkT >= 0) {
-        this.blinkT += dt;
-        const k = this.blinkT / 0.13;
-        em.setValue('blink', k < 1 ? Math.sin(k * Math.PI) : 0);
-        if (k >= 1) { this.blinkT = -1; em.setValue('blink', 0); }
-      } else if (now > this.blinkAt) {
-        this.blinkT = 0;
-        this.blinkAt = now + (Math.random() < 0.22 ? 260 : 2200 + Math.random() * 4200);
-      }
+      em.setValue('blink', blinkV);
       // ---- mouth: no audio to drive visemes from, but a frozen mouth during
       // a paragraph of speech is worse than an approximate one. Syllable-rate
       // envelope for the duration of the utterance.
