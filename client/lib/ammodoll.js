@@ -192,6 +192,10 @@ const FINGER_TENDON = 8.0;
 const ERP_LIMIT = 0.35;         // source default: how hard limits are held
 const BT_CONSTRAINT_STOP_ERP = 3; // this build's setParam id (source, verbatim)
 const ACTIVE_TAG = 1;
+// Bullet's own enum values. ammo.js does not export them as constants, and an
+// undefined global here bundles clean and throws at the first hair lock.
+const CF_KINEMATIC = 2;            // btCollisionObject::CF_KINEMATIC_OBJECT
+const DISABLE_DEACTIVATION = 4;    // never sleep — a kinematic anchor must not
 
 const LIN_DAMP = 0.12;          // source setDamping(0.12, —)
 // 0.7, not the source's 0.45: rapierdoll's validated value for this regime.
@@ -229,6 +233,32 @@ const GRAB_CLAMP_X = 1.2;       // × total mass
 // the two sides of the body mirror, and a hard-coded sign is wrong on one
 // (rapierdoll's law; also the source's thumb lesson).
 //   ref: what X is crossed against — 'fwd' | 'up' | 'palm' | 'pinky'
+/** Hair tuning, live. The values are the source playground's slider defaults
+ *  — except where they are DIMENSIONAL, which is the trap: that rig works in a
+ *  unit-scaled world (height 0.999, gravity -5.7664) and this one in real
+ *  metres at 1.7m and -9.81. Dimensionless quantities (damping, the gravity
+ *  FRACTION, the limit ramp) port straight across; mass does not — it goes as
+ *  length cubed, so the source's 3 g is ~14.7 g here. Tune in-world and copy
+ *  the table back out. */
+export const HAIR_TUNING = {
+  // TUNED IN-WORLD, on a falling body, with the panel's sliders — not derived.
+  // Worth saying that these landed a long way from the source playground's
+  // defaults (mass 3 g, tension 8, damping 0.6, gravity 0.45, limit 25,
+  // rootExp 1.0), and that transplanting those verbatim did NOT reproduce its
+  // look. Some of that is scale — the source works unit-scaled at height 0.999
+  // and gravity -5.7664 where this is real metres at 1.7 m and -9.81, so mass
+  // and stiffness needed converting and the dimensionless ones did not — but
+  // not all of it: full gravity and a root-heavy ramp (rootExp < 1) were found
+  // by eye, against theory. Hair is the one system here with no honest headless
+  // metric, so the eye is the instrument.
+  mass: 0.022,      // kg per segment
+  tension: 20,      // 6DOF angular spring stiffness
+  damping: 0.22,    // both the spring's and the body's angular damping
+  gravity: 1.5,     // fraction of world gravity — heavier than real, and right
+  limit: 75,        // degrees at the TIP
+  rootExp: 0.4,     // ramp exponent: lim = limit * (j/n)^rootExp
+};
+
 export const JOINT_SPECS = {
   // TUNED BY HAND, in-world, against a real body falling — not derived. The
   // debug panel's "joint limits (live)" section retunes running constraints, so
@@ -697,9 +727,13 @@ export class AmmoRagdoll {
 
     // a box spanning ra→rb in REST coordinates, expressed local to a body
     // whose rest origin is `origin` (identity orientation at rest)
-    const boxFor = (origin, ra, rb2, halfW, halfD = halfW) => {
+    // minLen: the 0.04 floor is a LIMB's — it stops a stubby bone becoming a
+    // degenerate box. Applied to hair it inflates a 1cm segment into a 4cm bar,
+    // and inertia goes as length SQUARED, so the shortest segments carried ~15x
+    // the rotational inertia they should. A lock of five 4cm bars is a stick.
+    const boxFor = (origin, ra, rb2, halfW, halfD = halfW, minLen = 0.04) => {
       const dir = rb2.clone().sub(ra);
-      const len = Math.max(dir.length(), 0.04);
+      const len = Math.max(dir.length(), minLen);
       const mid = ra.clone().add(rb2).multiplyScalar(0.5).sub(origin);
       return { he: new THREE.Vector3(halfW, len / 2, halfD), t: mid, q: frameQuat(dir) };
     };
@@ -1188,13 +1222,68 @@ export class AmmoRagdoll {
         chains.get(m[1]).push({ i: Number(m[2]), node: nd });
       }
       if (headSeg && chains.size) {
+        // The combed pose, captured ONCE per avatar and never re-derived.
+        //
+        // This block used to read whatever pose the hair happened to be in and
+        // call setEquilibriumPoint() on it. After a tumble that pose IS the
+        // tumble, so "combed" was redefined as "however it looked just then" —
+        // and since every drag release rebuilds, the crumple ratcheted in and
+        // outlived the ragdoll entirely. HANDOFF.md names this: "Never rebuild
+        // a rig from a simulated pose."
+        //
+        // Stored on the AVATAR, not the doll, because the doll is what keeps
+        // being rebuilt.
+        if (!avatar.__hairRest) {
+          const rest = new Map();
+          for (const [, list0] of chains) {
+            for (const it of list0) rest.set(it.node, it.node.quaternion.clone());
+          }
+          avatar.__hairRest = rest;
+        }
+        // ...and start combed, not mid-tumble.
+        for (const [nd0, q0] of avatar.__hairRest) nd0.quaternion.copy(q0);
+        avatar.root.updateMatrixWorld(true);
         const headGroup = this._groupOf.get(headSeg.body) ?? G_STATIC;
         const R = Math.max(0.004 * H, 0.004);
-        const HAIR_LIM = 25 * DEG, HAIR_ROOT = 1.5, HAIR_GRAV = 0.55;
+        // The source playground's DEFAULTS, transplanted. Where this port
+        // guessed, it guessed like a FINGER — hair is built with isFinger=true,
+        // so it inherited the finger damping and the finger collision group,
+        // and the numbers below had drifted from the ones the hair was actually
+        // tuned with. Each value here is the source's slider default; see
+        // HANDOFF.md "Hair physics" for what each was measured against.
+        const HT = HAIR_TUNING;      // live — see retuneHair()
+        const HAIR_LIM = HT.limit * DEG, HAIR_ROOT = HT.rootExp;
+        const HAIR_GRAV = HT.gravity, HAIR_MASS = HT.mass;
+        const HAIR_TENS = HT.tension, HAIR_DAMP = HT.damping;
         let built = 0;
+        this._hairAnchors = [];
         for (const [, list] of chains) {
           list.sort((x2, y2) => x2.i - y2.i);
-          let parentBody = headSeg.body;
+          // A KINEMATIC anchor per lock, not the dynamic head.
+          //
+          // Springing a lock's root to the head body makes a loop: every jitter
+          // and every collision impulse on the head is injected into all 75
+          // locks, and the locks' reaction torques feed back into the head. The
+          // source hangs each lock from a mass-0 kinematic box that touches
+          // nothing and is re-driven from the skeleton before each step —
+          // infinitely stiff, perfectly smooth, and one-way.
+          const rootW = list[0].node.getWorldPosition(new THREE.Vector3());
+          const aShape = keep(new AMMO.btBoxShape(new AMMO.btVector3(R, R, R)));
+          _bt1.setIdentity();
+          _bv1.setValue(rootW.x, rootW.y, rootW.z); _bt1.setOrigin(_bv1);
+          const aMs = keep(new AMMO.btDefaultMotionState(_bt1));
+          _bv1.setValue(0, 0, 0);
+          const aCi = keep(new AMMO.btRigidBodyConstructionInfo(0, aMs, aShape, _bv1));
+          const anchor = keep(new AMMO.btRigidBody(aCi));
+          anchor.setCollisionFlags(anchor.getCollisionFlags() | CF_KINEMATIC);
+          anchor.setActivationState(DISABLE_DEACTIVATION);
+          this.world.addRigidBody(anchor, G_FINGER, 0);   // mask 0: touches nothing
+          this._bodies.push(anchor);
+          // where the anchor sits in the HEAD's frame, so it can be carried
+          this._hairAnchors.push({
+            anchor, head: headSeg.body, local: localOf(headSeg.body, rootW),
+          });
+          let parentBody = anchor;
           let prevLen = 0.05;
           for (let j2 = 0; j2 < list.length; j2++) {
             const nd = list[j2].node;
@@ -1205,15 +1294,38 @@ export class AmmoRagdoll {
             const len = Math.max(aW.distanceTo(bW), 0.015);
             prevLen = len;
             const mid = aW.clone().add(bW).multiplyScalar(0.5);
-            const body = mkBody(0.01, mid, new THREE.Quaternion(),
-              [boxFor(mid, aW, bW, R)], true);
-            body.setDamping(0.25, 0.9);
+            const body = mkBody(HAIR_MASS, mid, new THREE.Quaternion(),
+              [boxFor(mid, aW, bW, R, R, len)], true);
+            // Angular damping 0.9 was the finger constant. Per Bullet's
+            // w *= (1-d)^dt, 0.9 bleeds angular momentum ~2.5x faster per step
+            // than 0.6 — hair that cannot carry a swing through its arc reads
+            // as rigid, and then snaps between poses instead of flowing.
+            body.setDamping(0.25, HAIR_DAMP);
+            // Hair does not bounce; it just stops. The body defaults are a
+            // LIMB's (friction 0.85, restitution 0.03, rolling 0.05) and give
+            // stick-slip chatter against the scalp.
+            body.setFriction(0.3);
+            body.setRestitution(0.0);
+            body.setRollingFriction(0.0);
             body.setCcdMotionThreshold(len * 0.5);
             body.setCcdSweptSphereRadius(R * 0.9);
-            this.world.addRigidBody(body, G_FINGER, G_STATIC | headGroup);
+            // The ROOT segment does not collide with the head.
+            //
+            // Every lock is anchored AT the scalp, so its first segment is born
+            // inside any collider big enough to be a head — and a contact born
+            // penetrating cannot be resolved: split impulse only converts
+            // penetration to position down to 2cm, and the rest is paid off as
+            // kinetic energy. That is the poof. The source excludes j===0 for
+            // exactly this reason (and uses a concave mesh collider rather than
+            // this box, which is a larger change than this one).
+            this.world.addRigidBody(body, G_FINGER,
+              j2 === 0 ? G_STATIC : (G_STATIC | headGroup));
             _bv1.setValue(0, -9.81 * HAIR_GRAV, 0);
             body.setGravity(_bv1);       // AFTER addRigidBody — the source's lesson
-            const lim = HAIR_LIM * Math.pow((j2 + 1) / list.length, HAIR_ROOT) + 0.12;
+            // No additive slack. The +0.12 here was BUILD_WIDEN, a limb-joint
+            // constant, adding 6.88 degrees to EVERY hair joint — which made the
+            // root 9.1 degrees where the source gives it 5.0.
+            const lim = HAIR_LIM * Math.pow((j2 + 1) / list.length, HAIR_ROOT);
             const mkF = (bdy) => {
               const tr = keep(new AMMO.btTransform());
               tr.setIdentity();
@@ -1229,9 +1341,16 @@ export class AmmoRagdoll {
             _bv1.setValue(lim, lim, lim); con.setAngularUpperLimit(_bv1);
             for (let ax = 3; ax < 6; ax++) {
               con.enableSpring(ax, true);
-              con.setStiffness(ax, 2.0);
-              con.setDamping(ax, 0.9);
-              con.setParam(BT_CONSTRAINT_STOP_ERP, ERP_LIMIT, ax);
+              // Bullet's spring "damping" is a target-velocity GAIN, not a
+              // dissipation term: velFactor = fps * damping / iterations. At
+              // 2.0/0.9 this commanded the joint toward equilibrium 1.5x faster
+              // than the source while having a QUARTER of the force to hold it
+              // there — snaps, then cannot carry itself.
+              con.setStiffness(ax, HAIR_TENS);
+              con.setDamping(ax, HAIR_DAMP);
+              // and no stop-ERP override: the source leaves hair limits at
+              // Bullet's default 0.2, where this port drove them at 0.35 — 75%
+              // stiffer, so a loose limit gets hit hard.
             }
             con.setEquilibriumPoint();
             this.world.addConstraint(con, true);
@@ -1239,6 +1358,7 @@ export class AmmoRagdoll {
             this._hairSegs.push({
               body, node: nd, parent: nd.parent,
               restWorldQ: nd.getWorldQuaternion(new THREE.Quaternion()),
+              con, j: j2, n: list.length,   // retuneHair() re-derives the ramp
             });
             parentBody = body;
             built++;
@@ -1429,6 +1549,38 @@ export class AmmoRagdoll {
     return n;
   }
 
+  /** Push HAIR_TUNING into the running hair, no rebuild.
+   *
+   *  Everything here is settable on a live body or constraint, so a lock
+   *  already swinging changes under your hand — which is the only way to tell
+   *  "flows" from "whips" without rebuilding and losing the state you were
+   *  looking at. Mass needs its inertia recomputed from the shape, or a heavier
+   *  segment keeps a lighter one's resistance to rotation.
+   */
+  retuneHair() {
+    if (!AMMO || !this._hairSegs?.length) return 0;
+    const HT = HAIR_TUNING;
+    for (const hs of this._hairSegs) {
+      hs.body.setDamping(0.25, HT.damping);
+      _bv1.setValue(0, -9.81 * HT.gravity, 0);
+      hs.body.setGravity(_bv1);
+      _bv1.setValue(0, 0, 0);
+      hs.body.getCollisionShape().calculateLocalInertia(HT.mass, _bv1);
+      hs.body.setMassProps(HT.mass, _bv1);
+      hs.body.updateInertiaTensor();
+      hs.body.activate();
+      if (!hs.con) continue;
+      const lim = HT.limit * DEG * Math.pow((hs.j + 1) / hs.n, HT.rootExp);
+      _bv1.setValue(-lim, -lim, -lim); hs.con.setAngularLowerLimit(_bv1);
+      _bv1.setValue(lim, lim, lim); hs.con.setAngularUpperLimit(_bv1);
+      for (let ax = 3; ax < 6; ax++) {
+        hs.con.setStiffness(ax, HT.tension);
+        hs.con.setDamping(ax, HT.damping);
+      }
+    }
+    return this._hairSegs.length;
+  }
+
   jointAngles() {
     const out = [];
     for (const J of this.jointMeta) {
@@ -1595,7 +1747,27 @@ export class AmmoRagdoll {
 
   step(dt) {
     if (this.done) return null;
-    dt = Math.min(0.25, Math.max(0, dt || 0));
+    // 0.05, not 0.25 (the source's clamp). 8 substeps at 1/120 covers only
+    // 0.067s, so anything past that is handed to the solver as ONE enormous
+    // residual step — on hair which, unlike the core bodies, has no angular
+    // velocity ceiling. A frame hitch then reads as the hair teleporting.
+    dt = Math.min(0.05, Math.max(0, dt || 0));
+    // Kinematic roots move BEFORE the step (the source's law): Bullet derives a
+    // kinematic body's velocity as (new - old)/dt, so moving one after the step
+    // hands the solver a stale offset and the chains get whipped.
+    for (const ha of this._hairAnchors ?? []) {
+      const t0 = ha.head.getCenterOfMassTransform();
+      const o0 = t0.getOrigin();
+      _v.set(o0.x(), o0.y(), o0.z());
+      const r0 = t0.getRotation();
+      _q.set(r0.x(), r0.y(), r0.z(), r0.w());
+      _b.copy(ha.local).applyQuaternion(_q).add(_v);
+      _bt1.setIdentity();
+      _bv1.setValue(_b.x, _b.y, _b.z); _bt1.setOrigin(_bv1);
+      _bq1.setValue(_q.x, _q.y, _q.z, _q.w); _bt1.setRotation(_bq1);
+      ha.anchor.getMotionState().setWorldTransform(_bt1);
+      ha.anchor.setWorldTransform(_bt1);
+    }
     if (dt > 0) this.world.stepSimulation(dt, MAX_SUBSTEPS, FIXED_DT);
 
     // angular ceiling: nothing anatomical rotates at 20 rad/s, and residual
@@ -1693,6 +1865,13 @@ export class AmmoRagdoll {
   dispose() {
     if (this._freed) return;
     this._freed = true;
+    // The hair is left WHERE THE SIM ENDED — dishevelled, and deliberately so:
+    // a body that has just been thrown across a room should not stand up with
+    // its hair combed. What is NOT left behind is that pose's authority: the
+    // combed shape is captured once on the avatar (see __hairRest) and every
+    // rebuild snaps back to it before building its springs, so a crumple can
+    // never become the next tumble's definition of rest. Restoring the comb
+    // here instead is a one-line change if that is ever wanted.
     this.done = true;
     try {
       for (const c of this._constraints) this.world.removeConstraint(c);

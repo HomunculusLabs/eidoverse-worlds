@@ -213,6 +213,31 @@ async function skeletonFor(httpBase: string, avatarPath: string) {
     const P: Record<string, any> = {};
     for (const [b, n] of Object.entries(bones)) if (g.nodes[n as number]) P[b] = wp(n);
     if (!P.hips) throw new Error("no hips bone");
+    // Hair chains too, with their real parenting.
+    //
+    // The stand-in carried HUMANOID bones only, so a headless body had no
+    // Hair_<chain>_<idx> nodes — and that is exactly what ammodoll's hair block
+    // looks for. Agents therefore ran with NO hair simulation while the browser
+    // ran 75 locks of it, and the fleet suite never touched that code path
+    // either: a whole subsystem absent and untested in the process that is
+    // supposed to BE the body.
+    const byName = new Map<string, number>();
+    g.nodes.forEach((n: any, i: number) => { if (n.name) byName.set(n.name, i); });
+    const parentOf = new Map<number, number>();
+    g.nodes.forEach((n: any, i: number) =>
+      (n.children ?? []).forEach((c: number) => parentOf.set(c, i)));
+    const hairParent: Record<string, string> = {};
+    for (const [name, i] of byName) {
+      if (!/^Hair_\d+_\d+$/.test(name)) continue;
+      P[name] = wp(i);
+      const pi = parentOf.get(i);
+      const pn = pi != null ? g.nodes[pi]?.name : null;
+      // a lock either continues another lock, or hangs off the head
+      hairParent[name] = (pn && /^Hair_\d+_\d+$/.test(pn)) ? pn : "head";
+    }
+    if (Object.keys(hairParent).length) {
+      Object.defineProperty(P, "__hairParent", { value: hairParent, enumerable: false });
+    }
     skeletons.set(key, P);
     return P;
   } catch (e) {
@@ -232,7 +257,11 @@ export class HeadlessBody {
 
   private constructor(m: NonNullable<typeof simMods>, P: Record<string, any>) {
     this.m = m;
-    this.av = m.rig.makeAvatar(P);
+    // realParent carries the hair chains; without it makeAvatar drops any bone
+    // that is not in its humanoid PARENT table, hair included.
+    const hp = (P as any).__hairParent;
+    this.av = hp ? m.rig.makeAvatar(P, { realParent: { ...(m.rig as any).PARENT, ...hp } })
+      : m.rig.makeAvatar(P);
   }
 
   /** null when physics is unavailable for this process or this VRM. */
