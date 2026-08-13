@@ -227,15 +227,26 @@ say(`vrmified: ${Object.keys(humanBones).length} humanoid bones`);
       if (joints.length < 2) continue;
       springs.push({
         name: `hair_${cname}`,
+        // center=hips: tails simulate RELATIVE to the hips, so locomotion
+        // does not excite the hair at all (without it, every walk step
+        // translates the root under world-anchored tails and the whole mass
+        // sweeps back like wind — drag/stiffness scalars cannot fix that;
+        // drag only damps accumulated velocity, and the displacement is
+        // instantaneous). Rotation and lean still give natural sway.
+        center: need('Hip'),
         joints: joints.map((j, i) => {
           const t = i / Math.max(1, joints.length - 1);   // 0 root → 1 tip
           return {
             node: j.node,
             hitRadius: 0.012,
-            stiffness: 0.65 - 0.4 * t,
-            gravityPower: 0.02 + 0.05 * t,
+            // Tuned on mythos_painthair (08-12), with center=hips doing the
+            // heavy lifting (see above). Moderate stiffness holds the
+            // sculpted silhouette; near-zero gravity because the droop is
+            // already modelled in.
+            stiffness: 1.2 - 0.5 * t,
+            gravityPower: 0.01 + 0.02 * t,
             gravityDir: [0, -1, 0],
-            dragForce: 0.4,
+            dragForce: 0.6,
           };
         }),
         colliderGroups: [0],
