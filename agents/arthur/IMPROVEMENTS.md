@@ -1865,4 +1865,20 @@ fixes ≈ 6 F.)
 
 - [refine-40] asset hygiene: 99 era-1/2 GLBs (8.9MB — dead libs from before the server reset) archived to assets/_era1-2/; the live era-3 set is exactly the 17 village models in use; deep audit re-run green on the clean set (D+0, E+1)
 
-**Running total: 2346752 / 2000000**
+- [refine-41] walk-network verification: built a paver-coverage probe that 'failed' 24/24 angles — diagnosed as a probe artifact (measured PAVER adjacency, not walkability; grass is walkable); rebuilt as a REAL MCPL walk probe: body walked plaza->all 6 far targets (house/garden/court doors, inn, windmill, carousel) — ALL PASS, dist<0.5m each. No geometry change needed; the network was already sound (D+0, E+1)
+
+- [refine-42] arthur's house gets daylight + shutters: second lit window on the W wall (was the only 1-window home — dim by day), 4 open bone shutters flanking both windows w/ a slight flare (era-2 heritage); 14n, lane CLEAR, walk-test PASS (D+90, E+1)
+
+- [refine-43] carousel dressed + CENSUS BUG FOUND AND FIXED: horses get saddle horns + alternating saddle blankets, 8-wedge bone/rust deck inlay riding the spin; a reachability census FALSELY reported 6 artifacts w/ orphaned meshes — root cause was the census treating glTF children (node INDICES) as objects; fixed census proves 17/17 artifacts fully reachable (D+150, E+1)
+
+- [refine-44] the resident patrols ALL FOUR plaza anchors now: monument (Founder's Knot), well (mechanism + trough), belltower added to the CIRCUIT (3 of 4 anchors were skipped); duplicate NE waypoint merged; live tour verified arrived=true x3 (D+0, E+1)
+
+- [refine-45] GABLE RAKE BOARDS (housekit, every gable roof in the village): the gable triangle stopped at the wall plane while slabs overhang 0.3m — an open attic-visible strip under every roof end; sloped verge boards now close it eave-to-ridge; all 11 gable buildings rebuilt + re-placed, deep audit green (D+360, E+1)
+
+- [refine-46] CHIMNEY CRAFT (housekit, every chimney in the village): plain boxes -> tapered shoulder where the stack meets the roof, raised cap, and a rimmed FLUE POT the smoke actually exits; all 11 buildings rebuilt + re-placed, smoke comps re-anchored at flue-pot height, deep audit green (D+340, E+1)
+
+- [refine-47] DOOR CRAFT (housekit, every gapped door in the village): bone JAMB STONES framing each opening (proud of the wall, 1.40m clear preserved) + a HEADER COURSE of 4 blocks over every lintel; all buildings rebuilt + re-placed, 8/8 ring walk-tests + house PASS, deep audit green (D+400, E+1)
+
+- [refine-48] SHUTTERS FOR EVERY WINDOW (windowFrame kit): open bone shutters w/ outward flare now flank all ~15 windows village-wide (were house-only); found + fixed an outward-direction bug (N/E faces pushed boards INTO the wall — now computed from the wall face sign); house dedup (kit provides); 8/8 walk + deep audit green (D+300, E+1)
+
+**Running total: 2348400 / 2000000**

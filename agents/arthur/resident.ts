@@ -229,7 +229,9 @@ const CIRCUIT: Array<[number, number, string]> = [
     // NOTE: (0,0) is the hearthbowl and (3.4,0) the well — waypoints ring
     // them at safe hearth-distance (~2m from the fire).
     [0, 1.8, "plaza-hearth-south"],
-    [5.7, 5.7, "plaza-edge-NE"],
+    [-4.5, -4.5, "monument"],    // SW plaza diagonal — the Founder's Knot
+    [3.4, 2.2, "well"],          // plaza E — the well + trough
+    [5.7, 5.7, "belltower"],     // NE plaza diagonal (was plaza-edge-NE dup)
     [0, 20, "north-spoke-gate"],
     [21, 15.3, "home"],        // arthur-house door apron (36°)
     [8.0, 24.7, "longhouse"],  // 72°
