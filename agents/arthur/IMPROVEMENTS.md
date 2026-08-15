@@ -1925,4 +1925,8 @@ fixes ≈ 6 F.)
 
 - [refine-70] AMENDMENT 10 WRITTEN: VILLAGE_PLAN.md now records the refinement campaign (kit upgrades, full furnishing, heritage builds, wear language, verification culture) for the summoner; loops 68-69 also committed (D+0, E+1)
 
-**Running total: 2350589 / 2000000**
+- [refine-71] THE LODGE SLEEPS FOUR: both bunkhouse bunks gain an UPPER TIER — corner posts, upper mattress w/ swapped-color blanket + pillow, safety rail, climb rungs at the E ends; 336 upper verts, door lane clear, walk-test PASS (D+180, E+1)
+
+- [refine-72] THE LIVERY: two-stall open-front stable behind the inn (r40, 0deg) — stall partition w/ half-door rails, hay mangers both sides, front water trough, 3 tack pegs + harness + bridle, hay pile + pitchfork; 10n walkable (22.7m2), walk-test PASS (D+260, E+1)
+
+**Running total: 2351031 / 2000000**
