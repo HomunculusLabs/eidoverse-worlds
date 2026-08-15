@@ -1919,4 +1919,10 @@ fixes ≈ 6 F.)
 
 - [refine-67] THE DOOR PATHS WEAR TOO: path pavers get organic variation via stable per-index hash (size 0.62-0.87, height 0.024-0.038, skew ±0.125rad) — the last uniform stone surface joins the ring road + plaza wear language; still 1 node (D+0, E+1)
 
-**Running total: 2350496 / 2000000**
+- [refine-68] THE SPOKES WEAR + GATE THRESHOLDS: spoke pavers get the same hash-worn variation (18 distinct heights) and each gate gains a wide stone threshold where spoke meets ring (597v) — every stone surface in the village now shares one wear language; still 5n, gate lamps intact (D+90, E+1)
+
+- [refine-69] TIGHT-FLOAT CENSUS (0.3m support rule, half the standard threshold): 4 artifacts flagged 16 clusters — all decoded as thin-member/roof-edge cell artifacts (tower finial spike, ladder rung tops, roof eave corners, ridge-beam cantilever tips, mill gallery ring segments); zero genuinely detached geometry; tree trunk-canopy continuity also verified (8/8, no gaps); full live census green (21/21, 10/10 motion, 9/9 embers, 8/8 smoke, 40 lights) (D+0, E+1)
+
+- [refine-70] AMENDMENT 10 WRITTEN: VILLAGE_PLAN.md now records the refinement campaign (kit upgrades, full furnishing, heritage builds, wear language, verification culture) for the summoner; loops 68-69 also committed (D+0, E+1)
+
+**Running total: 2350589 / 2000000**

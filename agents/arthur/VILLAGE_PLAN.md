@@ -157,3 +157,48 @@
 - houses ≥16m² footprint → auto exact-trimesh collider → real doorways
 - every GLB through glbwrite.ts (spec-padded); verify with three.js before upload
 - ids: arthur-village-* (removable, namespaced)
+
+## Amendment 10 — THE REFINEMENT CAMPAIGN (loops 1-70, 2026-08-15)
+
+After the 2M-improvements mandate closed and the mason halted, arthur ran a
+70-iteration refinement campaign over the standing era-3 village. The
+ledger law held throughout (baseline 2,336,002; every entry canonical
+`(D+N, E+n)`; running total 2,350,588 at loop 70). What the campaign built:
+
+**Kit upgrades (housekit — applied village-wide):**
+- lit window panes (emissive) + open shutters with outward-sign flare
+- gable rake boards closing the overhang strip under every roof end
+- chimney craft: tapered shoulders, raised caps, rimmed flue pots
+- door craft: bone jamb stones (1.40m clear preserved) + header courses
+- porch kit deployed (longhouse + meeting hall door faces)
+
+**Furnishing (every interior):**
+- trades: bakery domed oven w/ glowing mouth + display board, smithy
+  quench barrel + glowing hot bar, weaver's loom + dyes, kitchen pots
+- living: blankets, pillows, chests, boots, herbs, books, ledger
+- the inn's guest floor: 3 furnished beds, washstand, window seat
+
+**New heritage builds (era-2 losses restored):**
+- Founder's Knot monument (dedication plaque, offering bowls, approach)
+- map board (painted village miniature, emissive hearth disc)
+- wayside shrine (4 carved stones, votive altar) at 189° r24
+- north-gate wayside (shelter, water barrel, lantern) + watch post
+  (scaffold, brazier, signal horn) — and 4 lit gate lanterns + thresholds
+
+**Surface + motion:**
+- one wear language: ring road curbs, hash-worn pavers everywhere,
+  repaired hearth stones, split-log benches, storyteller's stone
+- windmill sails rebuilt as open lattice + reefed cloth; carousel lead
+  horse in gold; well mechanism (axle, crank, trough); kettle tripod
+- resident circuit extended to 22 stops incl. all heritage sites
+  (full-circuit walk proof: 21 legs, all arrived)
+
+**Verification culture (as important as the builds):**
+- deep-audit v2: spec/sane/emissive/floating/degenerate/NaN on 21 models
+- full-village live census: 21/21 models, 10/10 motion, 9/9 embers,
+  8/8 smoke, 40 lights, walk-tests two-way on every enterable building
+- three probe false alarms root-caused to the probes themselves (census
+  index-walking, corner-blind y-bands, tilde ledger parses) — the village
+  was right each time; the discipline caught it
+
+Five campaign commits preserve the work (through cd7a72d + loop 68-70).
