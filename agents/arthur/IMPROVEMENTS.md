@@ -1953,4 +1953,6 @@ fixes ≈ 6 F.)
 
 - [refine-84] SMOKE AUDIT CLEAN + STORYTELLER STONE OFF THE AXIS: all 8 smoke origins verified inside their flue-pot mouth bands (house 5.10 vs pot-top 5.17); the plaza v8 tale-seat sat at x0 blocking the N gate-to-hearth sightline — shifted to (0.8,2.9), axis clear, plaza re-placed v9 (D+0, E+1)
 
-**Running total: 2351779 / 2000000**
+- [refine-85] THE TREELINE READS GROWN: canopy silhouette variation — each tree picks a crown habit (standard / tall-narrow cypress / wide-squat orchard); crown tops now range 3.66-6.33m (was uniform ~4.5), spans 1.48-2.38m; still 8n, spoke-safe (D+120, E+1)
+
+**Running total: 2351900 / 2000000**
