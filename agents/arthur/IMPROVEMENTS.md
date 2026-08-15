@@ -1929,4 +1929,8 @@ fixes ≈ 6 F.)
 
 - [refine-72] THE LIVERY: two-stall open-front stable behind the inn (r40, 0deg) — stall partition w/ half-door rails, hay mangers both sides, front water trough, 3 tack pegs + harness + bridle, hay pile + pitchfork; 10n walkable (22.7m2), walk-test PASS (D+260, E+1)
 
-**Running total: 2351031 / 2000000**
+- [refine-73] STABLE ROOF FIX: the lean-to front edge underhung the wall top by 6cm (slab offset 0.25 -> 0.34) — now overshoots correctly; the residual 2.64 vert decoded as the eave overhang tip (correct anatomy); court shed roofs verified fine; loops 71-72 committed (1aa676b) (D+0, E+1)
+
+- [refine-74] THE MARKET RETURNS (era-2 heritage): two trestle stalls at the NW plaza diagonal facing the hearth — baker's stall (3 baskets w/ loaves) + weaver's stall (cloth bolts, jugs), pole awnings w/ pitched cloth; 10n, walk-test PASS (D+290, E+1)
+
+**Running total: 2351323 / 2000000**
