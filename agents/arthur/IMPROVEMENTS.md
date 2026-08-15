@@ -1955,4 +1955,6 @@ fixes ≈ 6 F.)
 
 - [refine-85] THE TREELINE READS GROWN: canopy silhouette variation — each tree picks a crown habit (standard / tall-narrow cypress / wide-squat orchard); crown tops now range 3.66-6.33m (was uniform ~4.5), spans 1.48-2.38m; still 8n, spoke-safe (D+120, E+1)
 
-**Running total: 2351900 / 2000000**
+- [refine-86] THE PALETTE CANON: village-wide color census (every COLOR_0 + material decoded across 24 artifacts) — all flags decoded as tolerance borders, glow tones, or garden greens, ZERO true violations; the 19-color accent canon + emissive families documented in housekit ACCENTS for all future builds (D+0, E+1)
+
+**Running total: 2351901 / 2000000**
