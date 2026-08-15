@@ -1947,4 +1947,6 @@ fixes ≈ 6 F.)
 
 - [refine-81] AUDIT COVERAGE GAP CLOSED: deep-audit2 list grew 21 -> 23 files (stable + market joined the permanent sweep — both clean: 10n, 0 floating, 0 degen, 0 NaN); post-fix circuit legs still arriving true (D+0, E+1)
 
-**Running total: 2351571 / 2000000**
+- [refine-82] THE MAP CATCHES UP: the painted board was 7 builds stale — stable, market, shrine, watchpost, wayside, monument chips added at scaled village positions (+204v board-band, 536->698); the map shows the village as it IS (D+204, E+0)
+
+**Running total: 2351775 / 2000000**
