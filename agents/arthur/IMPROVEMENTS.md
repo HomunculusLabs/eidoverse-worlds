@@ -1957,4 +1957,6 @@ fixes ≈ 6 F.)
 
 - [refine-86] THE PALETTE CANON: village-wide color census (every COLOR_0 + material decoded across 24 artifacts) — all flags decoded as tolerance borders, glow tones, or garden greens, ZERO true violations; the 19-color accent canon + emissive families documented in housekit ACCENTS for all future builds (D+0, E+1)
 
-**Running total: 2351901 / 2000000**
+- [refine-87] THE INNKEEPER'S CRAFT: common room completed — 2 iron wall sconces w/ candle flames, hearth tool stand (poker + shovel leaning), THE KEY CABINET behind the bar (3 brass hooks w/ bone tags — the room keys); 29n, walk-test PASS (D+140, E+1)
+
+**Running total: 2352042 / 2000000**
