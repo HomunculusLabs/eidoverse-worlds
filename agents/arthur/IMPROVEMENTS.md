@@ -1941,4 +1941,6 @@ fixes ≈ 6 F.)
 
 - [refine-78] PAYLOAD AUDIT: all 24 GLBs lean — zero wide indices (no Uint32 where Uint16 suffices), buffer padding < 64B per file, named-node census decoded (mergekit material buckets = one draw call per material, the intended minimum); ~2.1MB total for the whole village; loops 76-77 committed (b86350c) (D+0, E+1)
 
-**Running total: 2351418 / 2000000**
+- [refine-79] THE KEEPER'S DESK, FURNISHED: arthur-house gains a wool blanket, a three-legged desk stool, the OPEN LEDGER (bone page on leather cover), quill + inkpot — the record-keeper can finally sit and write; 19n, door lane clear, walk-test PASS (D+150, E+1)
+
+**Running total: 2351569 / 2000000**
