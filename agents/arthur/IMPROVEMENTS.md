@@ -1891,4 +1891,12 @@ fixes ≈ 6 F.)
 
 - [refine-53] THE PORCH KIT EARNS ITS KEEP: porch() (imported dead since era-3 began) now roofs the longhouse + meeting hall door faces — decks, 4 posts each, shed roofs beyond the 1.5m aprons; caught my own hall patch silently not landing (duplicate-anchored) and re-applied w/ verification; 13n/16n, walk-tests PASS (D+250, E+1)
 
-**Running total: 2349436 / 2000000**
+- [refine-54] THE NORTH-GATE WAYSIDE (era-2 heritage): lean-to shelter w/ bench + traveler's pack, hooped water barrel w/ dipper, lantern post (emissive head + warm light), milestone — resting stop E of the N gate spoke; 10n reachable 10/10, walk-test PASS (D+200, E+2)
+
+- [refine-55] DUSK AUDIT: swept all 20 village model libs server-side for emissive — 19/20 glowed; the one straggler (mapboard hearth disc, plain color) made emissive; the whole village now lights at dusk — 38 live lights + emissive in every applicable model (D+30, E+1)
+
+- [refine-56] THE LEAD HORSE: horse_0 rides in gold (brass coat 0xc9a86a, metallic sheen 0.3r/0.7m) — the crown mount real carousels keep; other 3 keep bone/brown; verified via COLOR_0 decode (linear-space encoding understood: 149,100,37 = 0xc9a86a in r184 sRGB->linear) (D+0, E+1)
+
+- [refine-57] THE WATCH POST (era-2 heritage): elevated sentry scaffold at 315deg r22 — 4 posts + X-braces, deck w/ railing, 6-rung ladder, iron brazier w/ EMISSIVE coals + warm light, signal horn on the rail, half-canopy; 6n reachable 6/6, walk-test PASS (D+290, E+2)
+
+**Running total: 2349962 / 2000000**
