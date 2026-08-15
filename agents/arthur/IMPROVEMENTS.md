@@ -1939,4 +1939,6 @@ fixes ≈ 6 F.)
 
 - [refine-77] THE KEEPER MEETS THE TRADERS + HORSES: circuit extended to 24 stops — market stall leg (NW plaza) + livery leg (behind the inn, check the horses); live tour verified arrived=true x2 (D+0, E+1)
 
-**Running total: 2351417 / 2000000**
+- [refine-78] PAYLOAD AUDIT: all 24 GLBs lean — zero wide indices (no Uint32 where Uint16 suffices), buffer padding < 64B per file, named-node census decoded (mergekit material buckets = one draw call per material, the intended minimum); ~2.1MB total for the whole village; loops 76-77 committed (b86350c) (D+0, E+1)
+
+**Running total: 2351418 / 2000000**
