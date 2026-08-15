@@ -1899,4 +1899,10 @@ fixes ≈ 6 F.)
 
 - [refine-57] THE WATCH POST (era-2 heritage): elevated sentry scaffold at 315deg r22 — 4 posts + X-braces, deck w/ railing, 6-rung ladder, iron brazier w/ EMISSIVE coals + warm light, signal horn on the rail, half-canopy; 6n reachable 6/6, walk-test PASS (D+290, E+2)
 
-**Running total: 2349962 / 2000000**
+- [refine-58] DEGENERATE-GEOMETRY SWEEP + AUDIT v2: checked all 21 artifacts (29,453 tris) for zero-area triangles and NaN verts — ALL CLEAN; the check is now PERMANENT (deep-audit2 v2: degen+NaN columns, 21-file list incl. the 4 new heritage builds); loops 54-57 committed (47f9465) (D+0, E+1)
+
+- [refine-59] the keeper walks the whole village: circuit extended to 22 waypoints — mapboard, wayside (N gate), shrine (tend the votives), watchpost (one look at the horizon) join the patrol; live tour verified arrived=true x4 (D+0, E+1)
+
+- [refine-60] THE GATES LIGHT UP: the 4 gate lanterns + inn porch had emissive heads but NO light comps — dark gates at night despite their posts; 5 warm lights placed (gates r18.4 y2.3, inn porch), all verified live at exact positions; village light census now 40+ (D+0, E+5)
+
+**Running total: 2349969 / 2000000**

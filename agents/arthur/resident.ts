@@ -244,6 +244,10 @@ const CIRCUIT: Array<[number, number, string]> = [
     [-18.8, 25.9, "carousel"], // SE landmark
     [28, 0, "inn"],            // N spoke end (inn door apron)
     [-32, 0, "windmill"],      // W spoke end (mill door apron)
+    [1.9, 9.4, "mapboard"],    // N gate path — check the map
+    [2.4, 14.4, "wayside"],    // N gate — rest by the lantern
+    [-23.0, -4.3, "shrine"],   // SW behind the trees — tend the votives
+    [14.9, -14.9, "watchpost"],// SW scaffold — one look at the horizon
     [5.7, -5.7, "plaza-edge-SE"],
 ];
 let circuitLeg = 0;
