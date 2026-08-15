@@ -1933,4 +1933,6 @@ fixes ≈ 6 F.)
 
 - [refine-74] THE MARKET RETURNS (era-2 heritage): two trestle stalls at the NW plaza diagonal facing the hearth — baker's stall (3 baskets w/ loaves) + weaver's stall (cloth bolts, jugs), pole awnings w/ pitched cloth; 10n, walk-test PASS (D+290, E+1)
 
-**Running total: 2351323 / 2000000**
+- [refine-75] THE BELL ROPE: hemp rope drops from clap height to a cleat on the S pier (knot bulge, free tail below) — era-2 heritage; bell pendulum group untouched (3ch); loops 73-74 committed (D+90, E+1)
+
+**Running total: 2351414 / 2000000**
