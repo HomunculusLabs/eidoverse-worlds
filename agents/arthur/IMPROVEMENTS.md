@@ -1905,4 +1905,12 @@ fixes ≈ 6 F.)
 
 - [refine-60] THE GATES LIGHT UP: the 4 gate lanterns + inn porch had emissive heads but NO light comps — dark gates at night despite their posts; 5 warm lights placed (gates r18.4 y2.3, inn porch), all verified live at exact positions; village light census now 40+ (D+0, E+5)
 
-**Running total: 2349969 / 2000000**
+- [refine-61] FALSE ALARM, FULLY ROOT-CAUSED: tower balustrade posts "missing" — instrumented housekit (posts added), isolated mergekit repro (merge fine), toGLB direct check (24 verts in file) — final root cause: my probe y-bands were CORNER-BLIND (indexed boxes carry only 8 corner positions; y3.2-3.7 falls between 3.025/3.875 corners). Posts were never missing (216 corner verts verified). Loops 58-60 committed (D+0, E+1)
+
+- [refine-62] THE SAILS BECOME SAILS: solid bone slabs -> open lattice frames (shaft + trailing spar + 6 cross-ribs each, wind passes through) with REEFED CLOTH on each arm's inner half — the way real mills work the wind; 916 verts under the sails group, 4 material buckets; mill walk-test PASS (D+180, E+1)
+
+- [refine-63] THE HEARTH CIRCLE SEATED: 4 bare log cylinders -> split-log benches (flattened seating face, lighter end-grain discs on the outer ends) + the STORYTELLER'S STONE at the S approach — a taller seat facing the fire; 21n, well group intact, walk-safe (D+120, E+1)
+
+- [refine-64] THE RING ROAD WEARS IN: curbs (48 half-buried edge stones on the outer face, 576v) + every 3rd paver sits 1cm lower (worn stone, 192v) — the road reads walked-on now, not laid-yesterday; still 5n, gate lamps intact (D+160, E+1)
+
+**Running total: 2350433 / 2000000**
