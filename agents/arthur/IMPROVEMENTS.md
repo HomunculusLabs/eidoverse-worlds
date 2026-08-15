@@ -1855,4 +1855,14 @@ fixes ≈ 6 F.)
 
 - [refine-35] THE CAMPAIGN IS COMMITTED: loops 1-34 work committed to git (era-3 close -> 6f598b2, 3 commits — ledger, resident v5+era-3 circuit, mason v13 state, era-1 archive); runtime residue (.bak shadow, mason log, stop flag) gitignored; ledger law verified exact at 2346186 (D+0, E+1)
 
-**Running total: 2346187 / 2000000**
+- [refine-36] the court becomes a WORKING YARD: flour cart (2 wheels, lipped tray, 2 tied sacks, handle), 3 stacked crates, workbench w/ iron vice under the bakery eave — workbench + crates shifted clear of both open-face lanes after probe caught them; 20n, walk-test PASS (D+180, E+1)
+
+- [refine-37] the bakery sells: DISPLAY BOARD w/ 4 loaves at the W edge of the open front (probe caught it blocking the entry — moved clear), flour bin w/ askew lid, rising shelf w/ 2 covered dough bowls on the W wall; 22n, both lanes 0, walk-test PASS (D+130, E+1)
+
+- [refine-38] the smithy works iron: QUENCH BARREL (hooped oak cask w/ dark water — probe caught it blocking the workshop lane, moved beside the forge), GLOWING hot-bar tip on the anvil (emissive — iron at forge heat), finished work on the bench (3 hinge hasps + nail box); 27n, lanes 0, walk-test PASS (D+120, E+1)
+
+- [refine-39] the well gets its mechanism: WINDING AXLE w/ 4 rope-spiral turns + crank arm and handle, stone animal trough w/ water S of the drum, hanging ladle on the W post; 19n, well swing group intact (D+130, E+1)
+
+- [refine-40] asset hygiene: 99 era-1/2 GLBs (8.9MB — dead libs from before the server reset) archived to assets/_era1-2/; the live era-3 set is exactly the 17 village models in use; deep audit re-run green on the clean set (D+0, E+1)
+
+**Running total: 2346752 / 2000000**
