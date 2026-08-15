@@ -1913,4 +1913,6 @@ fixes ≈ 6 F.)
 
 - [refine-64] THE RING ROAD WEARS IN: curbs (48 half-buried edge stones on the outer face, 576v) + every 3rd paver sits 1cm lower (worn stone, 192v) — the road reads walked-on now, not laid-yesterday; still 5n, gate lamps intact (D+160, E+1)
 
-**Running total: 2350433 / 2000000**
+- [refine-65] FULL-CIRCUIT WALK PROOF: a real body walked all 21 circuit stops sequentially against CURRENT geometry (curbs, hearth benches, storyteller stone, wayside posts all present) — 21/21 PASS, worst arrival 0.4m; loops 61-64 committed (cd7a72d) (D+0, E+1)
+
+**Running total: 2350434 / 2000000**
