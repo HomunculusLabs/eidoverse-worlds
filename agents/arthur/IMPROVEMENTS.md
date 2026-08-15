@@ -1915,4 +1915,8 @@ fixes ≈ 6 F.)
 
 - [refine-65] FULL-CIRCUIT WALK PROOF: a real body walked all 21 circuit stops sequentially against CURRENT geometry (curbs, hearth benches, storyteller stone, wayside posts all present) — 21/21 PASS, worst arrival 0.4m; loops 61-64 committed (cd7a72d) (D+0, E+1)
 
-**Running total: 2350434 / 2000000**
+- [refine-66] THE GATHERING RING WEARS TOO: 4 alternating hearth stones get raised repair caps; the 8 gathering pavers alternate size + 1cm dips + slight skew (trampled daily, matching the ring road wear); 22n, well intact (D+60, E+1)
+
+- [refine-67] THE DOOR PATHS WEAR TOO: path pavers get organic variation via stable per-index hash (size 0.62-0.87, height 0.024-0.038, skew ±0.125rad) — the last uniform stone surface joins the ring road + plaza wear language; still 1 node (D+0, E+1)
+
+**Running total: 2350496 / 2000000**
