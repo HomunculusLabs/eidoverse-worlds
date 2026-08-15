@@ -232,6 +232,7 @@ const CIRCUIT: Array<[number, number, string]> = [
     [-4.5, -4.5, "monument"],    // SW plaza diagonal — the Founder's Knot
     [3.4, 2.2, "well"],          // plaza E — the well + trough
     [5.7, 5.7, "belltower"],     // NE plaza diagonal (was plaza-edge-NE dup)
+    [-4.4, 4.4, "market"],       // NW plaza diagonal — the traders' stalls
     [0, 20, "north-spoke-gate"],
     [21, 15.3, "home"],        // arthur-house door apron (36°)
     [8.0, 24.7, "longhouse"],  // 72°
@@ -244,6 +245,7 @@ const CIRCUIT: Array<[number, number, string]> = [
     [-18.8, 25.9, "carousel"], // SE landmark
     [28, 0, "inn"],            // N spoke end (inn door apron)
     [-32, 0, "windmill"],      // W spoke end (mill door apron)
+    [38.4, 0, "livery"],       // behind the inn — check the horses
     [1.9, 9.4, "mapboard"],    // N gate path — check the map
     [2.4, 14.4, "wayside"],    // N gate — rest by the lantern
     [-23.0, -4.3, "shrine"],   // SW behind the trees — tend the votives

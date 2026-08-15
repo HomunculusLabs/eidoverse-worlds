@@ -1935,4 +1935,8 @@ fixes ≈ 6 F.)
 
 - [refine-75] THE BELL ROPE: hemp rope drops from clap height to a cleat on the S pier (knot bulge, free tail below) — era-2 heritage; bell pendulum group untouched (3ch); loops 73-74 committed (D+90, E+1)
 
-**Running total: 2351414 / 2000000**
+- [refine-76] DUSK COVERAGE COMPLETE: market lantern (between the stalls, warm amber) + livery tack-wall lamp — the last two gathering spots light up; village light census 40 -> 42 (D+0, E+2)
+
+- [refine-77] THE KEEPER MEETS THE TRADERS + HORSES: circuit extended to 24 stops — market stall leg (NW plaza) + livery leg (behind the inn, check the horses); live tour verified arrived=true x2 (D+0, E+1)
+
+**Running total: 2351417 / 2000000**
