@@ -1943,4 +1943,6 @@ fixes ≈ 6 F.)
 
 - [refine-79] THE KEEPER'S DESK, FURNISHED: arthur-house gains a wool blanket, a three-legged desk stool, the OPEN LEDGER (bone page on leather cover), quill + inkpot — the record-keeper can finally sit and write; 19n, door lane clear, walk-test PASS (D+150, E+1)
 
-**Running total: 2351569 / 2000000**
+- [refine-80] THE CIRCUIT BUG, ROOT-CAUSED AND FIXED: every circuit leg since the 22-stop era logged reached:false (76-leg streak) — the 60s idle-shift was stealing the body mid-leg because circuit walks never claimed the control wheel (tours did; that is why tours passed); fix = circuit claims + holds the wheel through leg and dwell; keeper now RESTS 20s at hearth/inn/market (dwell); first post-fix leg arrived TRUE; well-mechanism false alarm also closed (rope origin == axle axis, verified 47 overlapping verts) (D+0, E+1)
+
+**Running total: 2351570 / 2000000**

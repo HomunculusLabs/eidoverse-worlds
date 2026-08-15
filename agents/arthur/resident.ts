@@ -259,21 +259,31 @@ setInterval(() => {
     if (Date.now() - lastControlAt < 180_000) return; // operator has the wheel
     const [x, z, name] = CIRCUIT[circuitLeg % CIRCUIT.length];
     circuitLeg++;
+    // claim the wheel while the keeper walks his round — otherwise the
+    // idle-shift below steals the body every 60s mid-leg and cancels the
+    // walk (root cause of the 76-leg false streak; loop #80)
+    lastControlAt = Date.now();
+    // DWELL (loop #80): the keeper RESTS at his stops like a villager —
+    // 20s at the hearth (warming), the inn (a mug), the market (traders).
+    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000 };
     circuitWalking = true;
     console.log(`[circuit] heading to ${name} (${x},${z})`);
     // door-aware egress: if inside the house footprint, exit via the door
     // first — a direct line to any village target hits the east wall
     const pos = (agent as any).pos ?? (agent as any).body?.pos;
     const insideHouse = pos ? Math.abs(pos.x - 6) < 2.6 && Math.abs(pos.z - 12) < 2.6 : false;
-    const leg = async () => {
-        if (insideHouse) {
-            await agent.walkTo(8.0, 10.5).catch(() => {}); // door
-            await new Promise((r2) => setTimeout(r2, 800));
-        }
-        return agent.walkTo(x, z);
-    };
-    leg()
-        .then((ok) => console.log(`[circuit] ${name} reached: ${ok}`))
+    const egress = insideHouse
+        ? agent.walkTo(8.0, 10.5).catch(() => false).then(() => new Promise((r2) => setTimeout(r2, 800)))
+        : Promise.resolve();
+    egress
+        .then(() => agent.walkTo(x, z))
+        .then((ok) => {
+            console.log(`[circuit] ${name} reached: ${ok}`);
+            lastControlAt = Date.now(); // keep the wheel through the dwell
+            const dwell = ok ? DWELL[name] ?? 0 : 0;
+            if (dwell > 0) return new Promise((r2) => setTimeout(r2, dwell)).then(() => ok);
+            return ok;
+        })
         .catch(() => {})
         .finally(() => { circuitWalking = false; });
 }, 8 * 60_000);
