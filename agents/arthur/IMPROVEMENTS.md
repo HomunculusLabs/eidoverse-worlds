@@ -1945,4 +1945,6 @@ fixes ≈ 6 F.)
 
 - [refine-80] THE CIRCUIT BUG, ROOT-CAUSED AND FIXED: every circuit leg since the 22-stop era logged reached:false (76-leg streak) — the 60s idle-shift was stealing the body mid-leg because circuit walks never claimed the control wheel (tours did; that is why tours passed); fix = circuit claims + holds the wheel through leg and dwell; keeper now RESTS 20s at hearth/inn/market (dwell); first post-fix leg arrived TRUE; well-mechanism false alarm also closed (rope origin == axle axis, verified 47 overlapping verts) (D+0, E+1)
 
-**Running total: 2351570 / 2000000**
+- [refine-81] AUDIT COVERAGE GAP CLOSED: deep-audit2 list grew 21 -> 23 files (stable + market joined the permanent sweep — both clean: 10n, 0 floating, 0 degen, 0 NaN); post-fix circuit legs still arriving true (D+0, E+1)
+
+**Running total: 2351571 / 2000000**
