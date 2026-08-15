@@ -1949,4 +1949,6 @@ fixes ≈ 6 F.)
 
 - [refine-82] THE MAP CATCHES UP: the painted board was 7 builds stale — stable, market, shrine, watchpost, wayside, monument chips added at scaled village positions (+204v board-band, 536->698); the map shows the village as it IS (D+204, E+0)
 
-**Running total: 2351775 / 2000000**
+- [refine-83] LIGHT ALIGNMENT FIX: the market lantern sat 5.7m from its stalls, the stable lamp 3.4m from the tack wall, the inn porch light outside the building — all three re-placed onto their geometry via live entity pos/yaw math (D+0, E+3)
+
+**Running total: 2351778 / 2000000**
