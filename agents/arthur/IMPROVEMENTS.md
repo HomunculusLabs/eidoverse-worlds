@@ -1881,4 +1881,6 @@ fixes ≈ 6 F.)
 
 - [refine-48] SHUTTERS FOR EVERY WINDOW (windowFrame kit): open bone shutters w/ outward flare now flank all ~15 windows village-wide (were house-only); found + fixed an outward-direction bug (N/E faces pushed boards INTO the wall — now computed from the wall face sign); house dedup (kit provides); 8/8 walk + deep audit green (D+300, E+1)
 
-**Running total: 2348400 / 2000000**
+- [refine-49] CAMPAIGN COMMIT (loops 41-48: kit upgrades — shutters/rake/flue/door craft, circuit anchors, census fix) + full live audit: 17/17 entities, 9/9 embers, 8/8 smoke, 10/10 motion, 78 field clean, 108 entities total; deep audit green (D+0, E+1)
+
+**Running total: 2348401 / 2000000**
