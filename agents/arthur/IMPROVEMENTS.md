@@ -1951,4 +1951,6 @@ fixes ≈ 6 F.)
 
 - [refine-83] LIGHT ALIGNMENT FIX: the market lantern sat 5.7m from its stalls, the stable lamp 3.4m from the tack wall, the inn porch light outside the building — all three re-placed onto their geometry via live entity pos/yaw math (D+0, E+3)
 
-**Running total: 2351778 / 2000000**
+- [refine-84] SMOKE AUDIT CLEAN + STORYTELLER STONE OFF THE AXIS: all 8 smoke origins verified inside their flue-pot mouth bands (house 5.10 vs pot-top 5.17); the plaza v8 tale-seat sat at x0 blocking the N gate-to-hearth sightline — shifted to (0.8,2.9), axis clear, plaza re-placed v9 (D+0, E+1)
+
+**Running total: 2351779 / 2000000**
