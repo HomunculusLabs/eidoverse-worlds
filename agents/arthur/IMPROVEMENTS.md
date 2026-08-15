@@ -1959,4 +1959,6 @@ fixes ≈ 6 F.)
 
 - [refine-87] THE INNKEEPER'S CRAFT: common room completed — 2 iron wall sconces w/ candle flames, hearth tool stand (poker + shovel leaning), THE KEY CABINET behind the bar (3 brass hooks w/ bone tags — the room keys); 29n, walk-test PASS (D+140, E+1)
 
-**Running total: 2352042 / 2000000**
+- [refine-88] DRAW-CALL CENSUS + WATCHPOST EMBERS: village-wide mesh-node census = 340 draw calls across 23 artifacts (worst: carousel 40 — all architecture-minimal); the watchpost brazier glowed but had NO particles — embers comp added at the computed brazier position (yaw-transformed), the sentry fire now lives (D+0, E+1)
+
+**Running total: 2352043 / 2000000**
