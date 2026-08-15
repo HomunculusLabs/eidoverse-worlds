@@ -1853,6 +1853,6 @@ fixes ≈ 6 F.)
 
 - [refine-34] THE FOUR GATES: each spoke-ring junction gains a capped milestone + a lantern post (post, arm, EMISSIVE lamp head) — the village gates now read at night; roads3 5n, first emissive on the roads entity (D+90, E+1)
 
-- [refine-35] THE CAMPAIGN IS COMMITTED: loops 1-34 work committed to git (era-3 close -> 6f598b2, 3 commits — ledger, resident v5+era-3 circuit, mason v13 state, era-1 archive); runtime residue (.bak shadow, mason log, stop flag) gitignored; ledger law verified exact at 2346186 (E+1)
+- [refine-35] THE CAMPAIGN IS COMMITTED: loops 1-34 work committed to git (era-3 close -> 6f598b2, 3 commits — ledger, resident v5+era-3 circuit, mason v13 state, era-1 archive); runtime residue (.bak shadow, mason log, stop flag) gitignored; ledger law verified exact at 2346186 (D+0, E+1)
 
 **Running total: 2346187 / 2000000**
