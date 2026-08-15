@@ -1883,4 +1883,12 @@ fixes ≈ 6 F.)
 
 - [refine-49] CAMPAIGN COMMIT (loops 41-48: kit upgrades — shutters/rake/flue/door craft, circuit anchors, census fix) + full live audit: 17/17 entities, 9/9 embers, 8/8 smoke, 10/10 motion, 78 field clean, 108 entities total; deep audit green (D+0, E+1)
 
-**Running total: 2348401 / 2000000**
+- [refine-50] LOOP 50 — the inn's guest floor furnished: pillows + alternating wool blankets on all 3 beds, traveler chest at each foot, washstand w/ basin by the stair hole, window seat w/ cushion under the twin E windows; 25n, stair-hole lane clear, walk-test PASS (D+200, E+1)
+
+- [refine-51] THE MAP BOARD RETURNS (era-2 heritage): standing painted board beside the N gate path — tilted bone-framed map w/ hearth disc, ring-road torus, 4 spokes, 8 building chips at true angles, landmark chips (inn/windmill/carousel/belltower), brass you-are-here pin; 9n, reachable 9/9 (D+280, E+1)
+
+- [refine-52] THE SHRINE RETURNS (era-2 heritage): 4 leaning carved standing stones w/ rune inlays at the diagonals, altar slab w/ 3 emissive votive candles + brass offering bowl, stone bench — open-air at 189deg r24 (between the 198 door path and W spoke, discovered not displayed); 7n, warm votive light placed (D+300, E+2)
+
+- [refine-53] THE PORCH KIT EARNS ITS KEEP: porch() (imported dead since era-3 began) now roofs the longhouse + meeting hall door faces — decks, 4 posts each, shed roofs beyond the 1.5m aprons; caught my own hall patch silently not landing (duplicate-anchored) and re-applied w/ verification; 13n/16n, walk-tests PASS (D+250, E+1)
+
+**Running total: 2349436 / 2000000**
