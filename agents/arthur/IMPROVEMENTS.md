@@ -2080,4 +2080,6 @@ fixes ≈ 6 F.)
 
 - [refine-148] THE VILLAGE CLOCK (new-era loop 49): bell decode — the tower bell swings on a perpetual pendulum (amp 8/5s), always moving, never rung ON PURPOSE; the keeper now RINGS THE HOUR (5:00-21:00, agent.say visible act, aligned to the top of each hour); the perpetual swing reads as breeze, the ring is deliberate; daemon restarted clean (D+0, E+1)
 
+- [refine-149] THE BELL IS RINGABLE (new-era loop 50): audio census decoded the engine's hidden affordance layer — the use verb + reactions comp + pendulumImpulse (server/reactions.ts): a closed-form damped swing where PUSHING WITH THE MOTION BUILDS AMPLITUDE like a real bell; the belltower now carries a bare motion comp (damp 0.975 — the swing settles when nobody rings) + reactions use impulse 16; VERIFIED LIVE: a use verb pushed the pendulum and the world logged the impulse (amp 1.1 phase -1.339); anyone in the world can now ring the village bell (D+0, E+0)
+
 **Running total: 2362370 / 2000000**
