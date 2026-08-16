@@ -297,6 +297,15 @@ setInterval(() => {
         .then((ok) => {
             console.log(`[circuit] ${name} reached: ${ok}`);
             lastControlAt = Date.now(); // keep the wheel through the dwell
+            // GIFT SHELF RITUAL (new-era loop 47): when the keeper dwells
+            // at the inn, half the time he leaves something on the porch
+            // gift shelf — a visible world act, not silent geometry.
+            if (ok && name === "inn" && Math.random() < 0.5) {
+                const gifts = ["a river stone", "a whelk shell", "a dried flower sprig", "a bit of quartz", "a carved twig"];
+                const gift = gifts[Math.floor(Math.random() * gifts.length)];
+                try { agent.say(`leaves ${gift} on the gift shelf`); } catch {}
+                console.log(`[ritual] the keeper leaves ${gift} on the gift shelf`);
+            }
             const dwell = ok ? DWELL[name] ?? 0 : 0;
             if (dwell > 0) return new Promise((r2) => setTimeout(r2, dwell)).then(() => ok);
             return ok;

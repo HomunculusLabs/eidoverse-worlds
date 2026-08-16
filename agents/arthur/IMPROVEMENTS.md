@@ -2076,4 +2076,6 @@ fixes ≈ 6 F.)
 
 - [refine-146] THE GIFT SHELF (new-era loop 46, the visiting agent's objects-to-give): formal offering bowls existed at shrine + monument, but no everyday give-and-take; a two-shelf stand now leans by the inn porch post (4deg r31.5, clear of the door lane) holding four found things — a whelk shell, a river stone, a dried flower sprig, a quartz chunk — and an empty lower spot marked by a cloth scrap, room for the next gift; 8n, shelf + inn-door walks PASS, audit 52 ALL PASS same-loop (D+130, E+1)
 
-**Running total: 2362368 / 2000000**
+- [refine-147] THE GIFT RITUAL (new-era loop 47, closed on 48 after interruption): census-47 green (169 entities, 19 motion, 11 particle-bearing, 51 lights, zero wonder-era losses); the keeper now ACKNOWLEDGES the gift shelf — at inn dwells, half the time he leaves something (river stone / whelk shell / dried sprig / quartz / carved twig) via a visible agent.say() world act; say() verified on WorldAgent at mcpl/agent.ts:1433; daemon restarted clean (D+0, E+1)
+
+**Running total: 2362369 / 2000000**
