@@ -2147,4 +2147,6 @@ fixes ≈ 6 F.)
 
 - [refine-181] THE NIGHT ROUND GROWS (new-era loop 81): decode found the night circuit frozen at 3 stops (hearth, belltower, home) while the village grew 62 models — the boundary lanterns and the pre-dawn milking went unwatched; +2 night stops (gate-S at the dusk lantern, goat-pen under the loop-76 lantern — milking is a pre-dawn chore, the 04-05 tail of the night window); both waypoints walk-true; daemon restarted clean (D+0, E+1)
 
+- [refine-182] HONEST CORRECTION (new-era loop 81, appended same loop): the loop-75 verification claim "route holds 35 stops" double-counted — the broad bracket-regex swept the 3 night stops into the day count; truth: DAY circuit 32 stops (grainfield/flaxpond/dyehouse added to 29), NIGHT circuit now 5 (was 3); village unchanged, my arithmetic framing was off; recorded so the ledger never carries the stale 35 (D+0, E+0)
+
 **Running total: 2365495 / 2000000**
