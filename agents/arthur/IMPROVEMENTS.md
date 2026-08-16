@@ -2042,4 +2042,6 @@ fixes ≈ 6 F.)
 
 - [refine-129] THE KEEPER MEETS THE WORKING YARDS (new-era loop 28): census-28 ALL GREEN first (44/44 models, 13/13 motion incl. the pecking hens, 150 entities); circuit extended 25 -> 28 stops — coop (feed the fowl), woodyard (fuel inspection), millyard (grain going out); all 3 new legs walk-verified 0.3-0.4m, daemon restarted clean (D+0, E+1)
 
-**Running total: 2359616 / 2000000**
+- [refine-130] THE KEEPER WORKS (new-era loop 29): dwell census — 4 rest dwells but zero work dwells; the keeper now TENDS at the coop (12s), SPLITS at the woodyard (10s), TENDS the garden (10s), and READS in the tower study (15s); 8 dwells total across the 28-stop circuit, daemon restarted, legs still arriving (D+0, E+1)
+
+**Running total: 2359617 / 2000000**
