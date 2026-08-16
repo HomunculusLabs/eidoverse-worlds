@@ -307,7 +307,24 @@ setInterval(() => {
                 console.log(`[ritual] the keeper leaves ${gift} on the gift shelf`);
             }
             const dwell = ok ? DWELL[name] ?? 0 : 0;
-            if (dwell > 0) return new Promise((r2) => setTimeout(r2, dwell)).then(() => ok);
+            if (dwell > 0) {
+                // THE KEEPER SITS (new-era loop 55): at seated dwell stops,
+                // mount the socket for the rest, then dismount — the keeper
+                // uses the village's own seats.
+                const SEATED: Record<string, [string, string]> = {
+                    "plaza-hearth-south": ["av-plaza-hearth", "log_0"],
+                    inn: ["av-inn", "bench_0"],
+                    belltower: ["av-bellbase", "bench"],
+                };
+                const seat = SEATED[name];
+                if (seat) {
+                    try { agent.verb("mount", { id: agent.name ?? "arthur", to: seat[0], slot: seat[1] }); console.log(`[circuit] seated at ${name} (${seat[1]})`); } catch {}
+                }
+                return new Promise((r2) => setTimeout(r2, dwell)).then(() => {
+                    if (seat) { try { agent.verb("dismount", { id: agent.name ?? "arthur" }); } catch {} }
+                    return ok;
+                });
+            }
             return ok;
         })
         .catch(() => {})

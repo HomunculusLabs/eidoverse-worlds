@@ -2090,4 +2090,6 @@ fixes ≈ 6 F.)
 
 - [refine-153] SEATS EVERYWHERE THE KEEPER DWELLS (new-era loop 54): sockets census — only the hearth ring was sittable; the bell bench, both inn benches, and the tower study desk now carry seat sockets too (geometry decoded from the builds: bench slab y0.46, inn benches z +/-2.0, study desk at the W wall); 4 entities now sittable, village seat sockets total 9 (D+0, E+0)
 
-**Running total: 2362370 / 2000000**
+- [refine-154] THE KEEPER SITS (new-era loop 55): the keeper walked, dwelled, rang, gave — but never sat; at seated dwell stops (hearth log, inn bench, bell bench) the keeper now MOUNTS the socket for the rest and dismounts after, using the village's own seats; VERIFIED LIVE: [circuit] seated at plaza-hearth-south (log_0) in the daemon log after restart (D+0, E+1)
+
+**Running total: 2362371 / 2000000**
