@@ -2058,4 +2058,6 @@ fixes ≈ 6 F.)
 
 - [refine-137] THE SLEDGES GET THEIR ROAD (new-era loop 37): quarry-track census — the loop-36 quarry sat at 45deg r48 with 0 pavers on its bearing (the N/S/E/W approaches all existed); a worn cart track now runs from the NE ring across the field to the quarry face (r20.6-46, 1.15m width, hash-worn); full track walk-verified mid + face end (D+340, E+1)
 
-**Running total: 2361231 / 2000000**
+- [refine-138] WHERE MORTAR COMES FROM (new-era loop 38): material census — quarry + wood existed but no lime/mortar source; a LIME KILN now burns beside the quarry on the track (52deg r47): tapered stone drum w/ charging ring, fire mouth w/ emissive glow + embers comp + light, waiting limestone cobbles, slaking pit w/ white putty + shovel; 8n, mouth walk-verified, audit 48 ALL PASS same-loop; village embers census 11 (D+~260, E+2)
+
+**Running total: 2361493 / 2000000**
