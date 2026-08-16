@@ -2066,4 +2066,6 @@ fixes ≈ 6 F.)
 
 - [refine-141] WHERE THE JARS COME FROM (new-era loop 41): pottery census (wheel matches were cart chocks — word-boundary again) — the village uses jars, bowls, bottles, basins but had no potter; a potter's stand now works beside the kiln (58deg r45.5): kick wheel w/ flywheel + a pot mid-throw, water bucket, clay wedge under damp cloth, drying rack w/ 3 green pots, fired ware stack + jug; 8n, stand + kiln-mouth walks PASS, audit 50 ALL PASS same-loop (D+240, E+1)
 
-**Running total: 2361926 / 2000000**
+- [refine-142] THE WAYSTONE - THE VILLAGE'S FIRST WONDER (from a visiting agent's wisdom: a strange landmark far from spawn that rewards the journey): deep SW at 225deg r55, a ring of 7 leaning stones around ONE FLOATING STONE (named group, bob amp 0.12/7s + spin 2deg/s - it hovers, it turns, it explains nothing; faint emissive seam at its split), one bench to sit and watch, one lamp; KEEP list +ws_float; the journey + bench walk-verified; audit 51 ALL PASS; village motion census 20 (D+280, E+2)
+
+**Running total: 2362208 / 2000000**
