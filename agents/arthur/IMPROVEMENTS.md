@@ -2008,4 +2008,6 @@ fixes ≈ 6 F.)
 
 - [refine-112] TRADE SIGNS (new-era loop 11): signage census found only the inn signed — hanging pictogram signs added for bakery (loaf), smithy (hammer), weaver (spool), livery (horseshoe): iron bracket + bone board + raised glyphs; 4 builds spec-clean, hung on door-side walls, plan slots registered (D+330, E+4)
 
-**Running total: 2356056 / 2000000**
+- [refine-113] THE N AND S GATES OPEN ONTO ROADS (new-era loop 12): outward-approach census found E and W served (inn/windmill paths) but N and S dropping visitors onto grass — two worn cart tracks now run 10m outward from both gates (r20.6-30.6, 192v each); both ends walk-verified 0.4m; field-ring census also clean (8/8 arcs, 55 works) (D+384, E+1)
+
+**Running total: 2356441 / 2000000**
