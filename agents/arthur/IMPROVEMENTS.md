@@ -2062,4 +2062,6 @@ fixes ≈ 6 F.)
 
 - [refine-139] THE LEDGER TOOL CANONICALIZED (new-era loop 39): the tilde slip struck twice (loops 21, 38) because every loop wrote a fresh one-off python append script — some exactified, some didn't; ledger-append.py now stands as the single tool: exact-by-construction (refuses tilde input), verifies the law closes BEFORE appending, refuses to write on any break (D+0, E+1)
 
-**Running total: 2361494 / 2000000**
+- [refine-140] THE SMITH'S FUEL GETS ITS SOURCE (new-era loop 40): fuel-chain census — the smithy burns charcoal (loop 19 bin) but nothing MADE charcoal; a collier's clamp now smolders near the wood yard (57deg r35): log dome under turf patches, crown vent w/ emissive shimmer + rising wisp discs + smoke comp, a cooled finished pile of black lumps, and the collier's stake + shovel; 7n, approach walk-verified, audit 49 ALL PASS same-loop; village smoke census 9 (D+190, E+1)
+
+**Running total: 2361685 / 2000000**
