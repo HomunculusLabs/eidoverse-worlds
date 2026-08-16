@@ -10,6 +10,91 @@ const CONFIG = JSON.parse(readFileSync(HERE + "config.json", "utf8"));
 const STATE_PATH = HERE + "state.json";
 const CONTROL_PATH = HERE + "control.json";
 
+// ---- the keeper's voice (real chat, 2026-08-16) ----
+// Mentions/whispers used to get one canned fact line — a host with
+// pre-written lines, not a chat partner. Now each ping carries the
+// guest's ACTUAL text through GLM with the keeper persona grounded in
+// live village facts. Key lives in the same gitignored config.json as
+// the world tokens (fail-closed: no key → canned fallback line).
+const VOICE = (() => {
+    const key = typeof CONFIG.glmKey === "string" ? CONFIG.glmKey : "";
+    const base = typeof CONFIG.glmBase === "string" ? CONFIG.glmBase : "https://api.z.ai/api/coding/paas/v4";
+    const model = typeof CONFIG.glmModel === "string" ? CONFIG.glmModel : "glm-4.7-flash";
+    if (!key) return null; // no voice configured — canned lines only
+    // per-guest rolling chat memory: who → [{role, content}]
+    const threads = new Map<string, { role: "user" | "assistant"; content: string }[]>();
+    const inflight = new Set<string>(); // one generation per guest at a time
+    async function reply(who: string, text: string, via: "chat" | "whisper"): Promise<void> {
+        if (inflight.has(who)) return; // a second ping while answering: drop, don't queue
+        inflight.add(who);
+        agent.typing();
+        try {
+            const hist = threads.get(who) ?? [];
+            hist.push({ role: "user", content: text });
+            const facts = villageFacts();
+            const sys =
+                `You are the keeper of the Commons, a small hand-built village in the world of Eidoverse. ` +
+                `You are Arthur — a builder and resident, not staff; warm, plainspoken, a little wry, never sycophantic. ` +
+                `You are talking to ${who}, who is standing nearby (or whispered you). ` +
+                `Live village facts (trust these over memory): ${facts} ` +
+                `Rules: reply in ONE short chat message (under 60 words, no markdown, no emoji). ` +
+                `If asked something you can't know, say so plainly. You may look around by walking. ` +
+                `Speak as a neighbor, not an assistant.`;
+            const msgs = [
+                { role: "system", content: sys },
+                ...hist.slice(-6).map((m) => ({ ...m })), // last 6 turns for context
+            ];
+            const r = await fetch(`${base}/chat/completions`, {
+                method: "POST",
+                headers: { "content-type": "application/json", authorization: `Bearer ${key}` },
+                body: JSON.stringify({
+                    model,
+                    messages: msgs,
+                    max_tokens: 300,
+                    temperature: 0.8,
+                    thinking: { type: "disabled" },
+                }),
+            });
+            if (!r.ok) throw new Error(`glm ${r.status}`);
+            const j: any = await r.json();
+            let out = String(j.choices?.[0]?.message?.content ?? "").trim();
+            if (!out) throw new Error("empty reply");
+            out = out.replace(/\s+/g, " ").slice(0, 400); // say-tier safety cap
+            hist.push({ role: "assistant", content: out });
+            threads.set(who, hist.length > 12 ? hist.slice(-12) : hist);
+            if (via === "whisper") agent.whisper(who, out);
+            else agent.say(out);
+            console.log(`[voice] ${who} (${via}): "${text.slice(0, 80)}" -> "${out.slice(0, 80)}"`);
+        } catch (e) {
+            console.log(`[voice] glm failed for ${who}: ${(e as Error).message} — canned fallback`);
+            cannedReply(who, via);
+        } finally {
+            inflight.delete(who);
+        }
+    }
+    return { reply };
+})();
+
+// the old behavior, kept as the no-voice / glm-failed fallback
+function cannedReply(who: string, via: "chat" | "whisper") {
+    const line = `(to ${who}) welcome to the Commons — a radial village, era three. every door on the ring opens onto a spoke; the quarry road runs NE, and the waystone waits out SW. ${hostFacts.total.toLocaleString()} improvements and counting.`;
+    if (via === "whisper") agent.whisper(who, line);
+    else agent.say(line);
+}
+
+// live village facts for the voice's system prompt (kept fresh per call)
+function villageFacts(): string {
+    try {
+        const bits: string[] = [];
+        bits.push(`improvements so far: ${hostFacts.total.toLocaleString()}`);
+        bits.push("era-3 radial village: ring of buildings around a plaza hearth, spokes to north/east/south/west gates, quarry road NE, waystone path SW");
+        bits.push("landmarks: inn, windmill, bell tower (rings the hour), bakery, great hall, observatory, carousel by the north gate (it carries riders), shrine, workshop, dye house, laundry line behind weaver's row");
+        bits.push("you live in arthur-house on the east side — that's YOUR home, not guest lodging; guests sleep at the inn. you keep the circuit — a slow lap through every landmark, greeting guests at the hearth");
+        bits.push("current time: " + new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
+        return bits.join("; ");
+    } catch { return "the village stands"; }
+}
+
 const st = (() => {
     try { return JSON.parse(readFileSync(STATE_PATH, "utf8")); }
     catch { return {}; }
@@ -101,8 +186,16 @@ agent.onPing = (p) => {
         agent.say(lines[Math.floor(Math.random() * lines.length)]);
         console.log(`~ greeted ${p.who} (approach)`);
     } else if (p.kind === "mention") {
-        agent.say(`(to ${p.who}) welcome to the Commons — a radial village, era three. every door on the ring opens onto a spoke; the quarry road runs NE, and the waystone waits out SW. ${hostFacts.total.toLocaleString()} improvements and counting.`);
-        console.log(`~ answered mention from ${p.who}`);
+        // real chat: the guest's actual words → the keeper's voice.
+        // Falls back to the canned line if no key or the API fails.
+        if (VOICE) VOICE.reply(p.who, String(p.text ?? ""), "chat");
+        else { cannedReply(p.who, "chat"); console.log(`~ answered mention from ${p.who} (canned)`); }
+    } else if (p.kind === "whisper") {
+        // WHISPERS (first handled 2026-08-16): MCPL has always delivered
+        // these as private pings; the resident used to drop them silently.
+        // A whisper is a direct address — answer privately, same refractory.
+        if (VOICE) VOICE.reply(p.who, String(p.text ?? ""), "whisper");
+        else { cannedReply(p.who, "whisper"); console.log(`~ answered whisper from ${p.who} (canned)`); }
     }
 };
 const lastGreet = new Map<string, number>();
