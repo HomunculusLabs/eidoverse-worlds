@@ -53,6 +53,7 @@ const VOICE = (() => {
                     `[GO <landmark>] to walk to a named place (windmill, inn, carousel, forge, bakery, hall, shrine, tower, garden, home...), ` +
                     `[SIT] to take the nearest seat near the speaker and sit with them (use when invited to sit, resting, chatting a while), ` +
                     `[STAND] to rise, ` +
+                    `[EMOTE <name>] to play a body emote — wave, cheer, dance, point, salute, clap (use when greeting, celebrating, waving back, saying goodbye), ` +
                     `[STOP] to stand still. ` +
                     `Tags are stripped before speaking — they are not part of the sentence. Use them freely when invited or when leading. ` +
                     `Emoji are fine sparingly (one or two when natural — the chat and bubble both render them); never emoji-spam. No markdown. ` +
@@ -209,6 +210,7 @@ function loadIdentity(): string {
 //   [GO <landmark>] walk to a named circuit waypoint
 //   [SIT]           take the nearest seat near the speaker (sockets comp)
 //   [STAND]         rise from a seat
+//   [EMOTE <name>]  play a body emote (wave, cheer, dance, point, salute, clap)
 //   [STOP]          stand still (ends follow; circuit resumes later)
 // Follow is time-boxed (5 min) and self-heals if the target leaves.
 // Seated-keepalive: while seated, each answered exchange extends the sit,
@@ -286,6 +288,16 @@ function coopAct(tag: string, arg: string, speaker: string) {
         console.log(`[coop] STOP (stand)`);
         return true;
     }
+    if (tag === "EMOTE") {
+        // body emotes ride the PRESENCE plane (pose.emote one-shot), not the
+        // verb log — agent.emote() queues it onto the next pose packet.
+        // Valid names mirror client/lib/avatar.js EMOTES.
+        const EMOTES = new Set(["wave", "cheer", "dance", "point", "salute", "clap", "talk", "flail"]);
+        if (!EMOTES.has(a)) { console.log(`[coop] EMOTE ${a}: unknown (valid: ${[...EMOTES].join(", ")})`); return false; }
+        agent.emote(a);
+        console.log(`[coop] emote: ${a}`);
+        return true;
+    }
     if (tag === "SIT") {
         endFollow("sit");
         return trySitNear(speaker);
@@ -324,7 +336,7 @@ function coopAct(tag: string, arg: string, speaker: string) {
 }
 // strip action tags from a relay reply, executing them; returns spoken prose
 function applyCoopTags(out: string, speaker: string): string {
-    return out.replace(/\[(FOLLOW|COME|GO|SIT|STAND|STOP)([^\]]*)\]/g, (m, tag, arg) => {
+    return out.replace(/\[(FOLLOW|COME|GO|SIT|STAND|EMOTE|STOP)([^\]]*)\]/g, (m, tag, arg) => {
         coopAct(tag, String(arg), speaker);
         return "";
     }).replace(/\s+/g, " ").trim();
