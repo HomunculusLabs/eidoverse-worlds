@@ -55,7 +55,8 @@ const VOICE = (() => {
                     `[STAND] to rise, ` +
                     `[STOP] to stand still. ` +
                     `Tags are stripped before speaking — they are not part of the sentence. Use them freely when invited or when leading. ` +
-                    `Reply in ONE short chat message (under 60 words, no markdown, no emoji). Speak as a neighbor, not an assistant.`;
+                    `Emoji are fine sparingly (one or two when natural — the chat and bubble both render them); never emoji-spam. No markdown. ` +
+                    `Reply in ONE short chat message (under 60 words). Speak as a neighbor, not an assistant.`;
                 const msgs = [
                     { role: "system", content: sys },
                     ...hist.slice(-6).map((m) => ({ ...m })),
@@ -98,7 +99,7 @@ const VOICE = (() => {
                 `This is casual in-world chat, not a terminal: warm, plainspoken, a little wry, never sycophantic. ` +
                 `You are talking to ${who}${who.toLowerCase().includes("bill") ? " — that's Bill himself, your summoner" : ", who is standing nearby (or whispered you)"}. ` +
                 `Live village facts (trust these over memory): ${facts} ` +
-                `Rules: reply in ONE short chat message (under 60 words, no markdown, no emoji). ` +
+                `Rules: reply in ONE short chat message (under 60 words, no markdown; emoji sparingly is fine). ` +
                 `If asked something you can't know, say so plainly. You may look around by walking. ` +
                 `Speak as a neighbor, not an assistant.\n\n` +
                 identity;
