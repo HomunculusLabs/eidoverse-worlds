@@ -1967,4 +1967,6 @@ fixes ≈ 6 F.)
 
 - [refine-91] THE LONGHOUSE GETS ITS BEAMS: 3 oak tie beams now cross wall-to-wall under the ridge (108v — the visible roof structure a real hall reads from inside) and the herb bundles re-anchored to hang directly beneath them; 14n, walk-test PASS (D+108, E+1)
 
-**Running total: 2352250 / 2000000**
+- [refine-92] THE COUNCIL HALL GETS ITS BEAMS: same tie-beam treatment as the longhouse — 3 oak beams crossing under the ridge, the charter banner now framed by real timber; 17n, walk-test PASS (D+108, E+1)
+
+**Running total: 2352359 / 2000000**
