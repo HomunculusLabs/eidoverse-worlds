@@ -2110,4 +2110,6 @@ fixes ≈ 6 F.)
 
 - [refine-163] THE GRAIN FIELD (new-era loop 63): material-chain census — the bakery bakes and the mill grinds, but NOTHING grew the grain; a wheat strip now stands W of the mill (172deg r42): 90 crossed-plane stalks w/ heavy heads on 2/3, hash-varied heights, 14-stalk stubble edge already harvested, 3 bound sheaves at the field edge; field-edge + W-road walks PASS, audit 55 ALL PASS same-loop; the chain now closes: field -> mill -> bakery -> table (D+620, E+1)
 
-**Running total: 2363226 / 2000000**
+- [refine-164] THE FIELD GUARD + THE HONEST FOLD (new-era loop 64): loop 63 left draw-cost debt (30n — anonymous sheaf groups unmergeable); sheaves rebuilt as mergeable meshes, 30n -> 9n (pure material buckets); THE SCARECROW now guards the field: pole + crossbar, straw torso, sleeved coat, burlap head w/ straw hat — and a CROW perched on his W arm mocking him (the village second bird); field re-placed, audit 55 ALL PASS (D+210, E+1)
+
+**Running total: 2363437 / 2000000**
