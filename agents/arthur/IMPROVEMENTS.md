@@ -2136,4 +2136,7 @@ fixes ≈ 6 F.)
 
 - [refine-176] THE GOAT-PEN LANTERN (new-era loop 76): light census by proximity — the pen is the farthest NE work yard and its nearest light was the stable's, 6.9m away; an early-morning milking now has its own gate lantern (av-goatlamp at 42.8,2.1,-0.9, warm 0xffb066, range 6.5), ack-watched per the loop-43 law and persistence-verified by fresh rejoin; fresh census also corrects the record: 61 lights now stand (49 was the Amendment-12 count); first raw-WS verb shape attempt decoded — the canonical builder pattern paces one verb per server message (D+0, E+1)
 
-**Running total: 2364791 / 2000000**
+
+- [refine-177] THE WAYSTONE TRACK (new-era loop 77): the whisper (loop 45) promised a reason to walk SW but the grass gave no answer; a worn single-file track now runs 225deg from the ring road (r20.6) out to r48 — wider steps 1.35, sparser than the quarry track (fewer feet) — then FADES in the grass a stone's throw before the waystone; not a road, a rumor of one; artifact verified 504 SW-ray paver verts w/ 72 in the fade zone; fade-zone walks PASS; first probe misread the entity yaw (decoded, artifact was right) (D+504, E+0)
+
+**Running total: 2365295 / 2000000**
