@@ -2106,4 +2106,6 @@ fixes ≈ 6 F.)
 
 - [refine-161] HOSPITALITY PAUSE (new-era loop 62): decode found the greeting system works (19 greetings logged, incl bill) but the keeper TOURS — a visitor walking up mid-leg chased a moving host; on approach pings the keeper now pauses 25s (lastControlAt push holds the circuit gate), greeting the guest from a standstill; approach radius/rearm decoded from mcpl source (2.5m, must leave-and-return); live guest test dispatched (D+0, E+1)
 
+- [refine-162] HONEST CLOSEOUT (new-era loop 62): the live guest-walk did NOT trigger the hospitality pause this window — the test guest stood at the hearth ~2min while the keeper toured elsewhere (approach needs the visitor within 2.5m of the keeper himself); state recorded honestly: pause implemented, parses, daemon running it; live-fire awaits the next real approach — no claim beyond what the log shows (D+0, E+0)
+
 **Running total: 2362605 / 2000000**
