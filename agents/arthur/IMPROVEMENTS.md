@@ -1969,4 +1969,6 @@ fixes ≈ 6 F.)
 
 - [refine-92] THE COUNCIL HALL GETS ITS BEAMS: same tie-beam treatment as the longhouse — 3 oak beams crossing under the ridge, the charter banner now framed by real timber; 17n, walk-test PASS (D+108, E+1)
 
-**Running total: 2352359 / 2000000**
+- [refine-93] THE BEAM LANGUAGE COMPLETE: house (2 beams, 48v) + inn common room (3 beams at y2.95, H=2.7) join the longhouse + hall — every gable-roofed interior now shows its oak tie beams under the ridge; both walk-tests PASS (D+120, E+1)
+
+**Running total: 2352480 / 2000000**
