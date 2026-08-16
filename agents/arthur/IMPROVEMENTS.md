@@ -2040,4 +2040,6 @@ fixes ≈ 6 F.)
 
 - [refine-128] THE WOOD YARD (new-era loop 27): fuel census (another word-boundary false positive: "cord" inside "record") — 10 hearths but no seasoned stock; a 3-sided woodshed now stands behind the longhouse: 5 posts, back windbreak boards, slanted lean-to roof, 5 rows of stacked cordwood (87 logs, split faces alternating), splitting stump w/ embedded axe, kindling bundle; audit 43 ALL PASS same-loop; yard + longhouse door walk-verified (D+420, E+1)
 
-**Running total: 2359615 / 2000000**
+- [refine-129] THE KEEPER MEETS THE WORKING YARDS (new-era loop 28): census-28 ALL GREEN first (44/44 models, 13/13 motion incl. the pecking hens, 150 entities); circuit extended 26 -> 29 stops — coop (feed the fowl), woodyard (fuel inspection), millyard (grain going out); all 3 new legs walk-verified 0.3-0.4m, daemon restarted clean (D+0, E+1)
+
+**Running total: 2359616 / 2000000**

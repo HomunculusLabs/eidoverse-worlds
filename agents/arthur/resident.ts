@@ -250,6 +250,9 @@ const CIRCUIT: Array<[number, number, string]> = [
     [2.4, 14.4, "wayside"],    // N gate — rest by the lantern
     [-15.9, 9.1, "cartstop"],  // ring edge — where the traders park
     [38.0, -2.6, "paddock"],   // beside the livery — check the horses' fence
+    [-28.9, 11.4, "coop"],     // the fowl run — grain for the hens
+    [15.0, 28.9, "woodyard"],  // the woodshed — fuel inspection
+    [-35.4, -1.3, "millyard"], // the miller's sacks — grain going out
     [-23.0, -4.3, "shrine"],   // SW behind the trees — tend the votives
     [14.9, -14.9, "watchpost"],// SW scaffold — one look at the horizon
     [5.7, -5.7, "plaza-edge-SE"],
