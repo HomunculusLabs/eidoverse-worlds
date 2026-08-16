@@ -2022,4 +2022,6 @@ fixes ≈ 6 F.)
 
 - [refine-119] THE MILLER'S YARD (new-era loop 18): the windmill — the only mill — carried zero grain logistics; yard now holds 4 grain sacks (3 standing + 1 leaning, tied necks), a raised grain bin w/ legs + heaped grain + lid, and a flour barrel w/ mounded top; yaw decoded before editing (local +Z faces village — yard on the near side); sack cluster + mill door walk-verified 0.3m; census-18 green before build (D+290, E+1)
 
-**Running total: 2357923 / 2000000**
+- [refine-120] THE FORGE'S INPUT SIDE (new-era loop 19): trade-staging census found the smithy complete on OUTPUT (hasps, nails, tools) but empty on INPUT — charcoal basket w/ heaped fuel beside the forge + 2 iron bar stock rows racked on the wall w/ shelf bracket; court 30n, workshop + door lanes walk-verified (D+110, E+1)
+
+**Running total: 2358034 / 2000000**
