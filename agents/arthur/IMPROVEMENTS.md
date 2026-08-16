@@ -2046,4 +2046,6 @@ fixes ≈ 6 F.)
 
 - [refine-131] THE KEEPER SLEEPS (new-era loop 30): time census — zero hour-awareness, the keeper toured fields at 3am; NIGHT MODE added: 21:00-05:00 the circuit collapses to a 3-stop lamp-lit round (hearth, bell bench, home), full 28-stop circuit by day; caught my own increment bug (day legs would have frozen at one stop) before restart; daemon live, legs incrementing (D+0, E+1)
 
-**Running total: 2359618 / 2000000**
+- [refine-132] THE VILLAGE DECLARES ITSELF (new-era loop 31, closed after interrupted turns): gate-lantern audit clean (752v fixtures + lights aligned), but the village was NAMELESS — the N gate lintel now carries a carved bone name board w/ raised inscription bars: THE COMMONS (192v board + 96v bars); roads 9n, re-placed (D+288, E+1)
+
+**Running total: 2359907 / 2000000**
