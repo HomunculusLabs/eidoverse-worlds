@@ -2171,4 +2171,6 @@ fixes ≈ 6 F.)
 
 - [refine-193] THE INN DOOR (new-era loop 92): door census — doorGapWall means every door in the village is a GAP, no leaf anywhere; the shutters (72) established windows close but doors never did; the inn — the public house — gets its door: 5-plank leaf w/ 3 battens, strap hinges, ring handle, LATCH LIFTED, standing AJAR ~35deg on its hinge line; rides the inn frame (dist 0.000, yaw match) so the swing lands beside the threshold; walks PASS (through the door + porch clear), audit 68 ALL PASS same-loop; the village reads lived-in at its most public threshold (D+140, E+1)
 
-**Running total: 2366662 / 2000000**
+- [refine-194] THE HARVEST CART (new-era loop 93): chain decode — the field has stood MID-HARVEST since 63/64 (stubble + sheaves) while the mill grinds on; the missing stage was the TRANSPORT: sheaves never traveled; a loaded harvest cart now parks between the grain field and the W road (167deg r38): plank bed + side rails, 2 spoked wheels w/ iron hubs, draw pole + yoke, heaped sheaf load (5 banded bundles in straw tones), rope lash over, PITCHFORK standing in the load — a cart mid-work, not parked; walks PASS (cart + W lane), audit 69 ALL PASS same-loop; the bread chain finally has its middle mile (D+310, E+1)
+
+**Running total: 2366973 / 2000000**
