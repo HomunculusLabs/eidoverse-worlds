@@ -2010,4 +2010,6 @@ fixes ≈ 6 F.)
 
 - [refine-113] THE N AND S GATES OPEN ONTO ROADS (new-era loop 12): outward-approach census found E and W served (inn/windmill paths) but N and S dropping visitors onto grass — two worn cart tracks now run 10m outward from both gates (r20.6-30.6, 192v each); both ends walk-verified 0.4m; field-ring census also clean (8/8 arcs, 55 works) (D+384, E+1)
 
-**Running total: 2356441 / 2000000**
+- [refine-114] THE LONGEST WATER HAUL CLOSED (new-era loop 13): water-access census found the garden cottage hauling 26m to the plaza well (every other home <=15m); a rain barrel of its own now sits at its eave (144deg r30) — 4m; spec-clean 4n, live, plan registered (D+125, E+1)
+
+**Running total: 2356567 / 2000000**
