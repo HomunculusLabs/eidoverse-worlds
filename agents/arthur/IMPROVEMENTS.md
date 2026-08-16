@@ -1983,4 +1983,6 @@ fixes ≈ 6 F.)
 
 - [refine-99] HUB COLLARS + A FALSE ALARM CLOSED: carousel pole gains brass collars where it enters the deck and pierces the canopy (91v + 91v); the suspected stair-deck lip died at source-check (deck top 0.77 = top step, flush — I had misread the underside slab); all 10 motion comps re-applied post-place (D+120, E+1)
 
-**Running total: 2353511 / 2000000**
+- [refine-100] THE HUNDREDTH LOOP: full-village census ALL GREEN (23/23 models, 10/10 motion, 10/10 embers, 8/8 smoke, 42 lights, 124 entities) + deep audit ALL PASS + Amendment 11 written into VILLAGE_PLAN (the campaign record); tree clean through d80fcca (D+0, E+1)
+
+**Running total: 2353512 / 2000000**

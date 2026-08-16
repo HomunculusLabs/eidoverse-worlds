@@ -202,3 +202,27 @@ ledger law held throughout (baseline 2,336,002; every entry canonical
   was right each time; the discipline caught it
 
 Five campaign commits preserve the work (through cd7a72d + loop 68-70).
+
+## Amendment 11 — THE HUNDREDH LOOP (2026-08-16)
+
+Loops 71-100 continued the campaign to its structural completion:
+- THE BEAM LANGUAGE (91-96): oak tie beams in all 11 gabled interiors,
+  a king post in the round tower study, beams under the mill ceiling
+- WALL BASE COURSES (97): wallSpan gained plinths — every wall meets
+  the earth properly (kit-level, 11 buildings rebuilt in one edit)
+- STRUCTURE COMPLETION: chimney flue pots, door jambs + headers + the
+  tower frame, hearth/court craft, innkeeper's cabinet, stable livery,
+  market stalls, map board current through loop 82
+- CENSUS DISCIPLINE: full live census after every village-wide rollout —
+  caught the inn sign comp loss (#98), watchpost embers gap (#88),
+  three misplaced lights (#83), a stale map (#82)
+- FALSE ALARMS CLOSED AT THE SOURCE (4 total): orphaned meshes (#43),
+  missing balustrade posts (#61), disconnected well rope (#80),
+  carousel stair lip (#99) — every one a probe artifact, the village
+  correct each time
+- The resident walks again: the 76-leg circuit failure streak (#80)
+  root-caused to idle-shift wheel theft and fixed; keeper now dwells
+
+At loop 100: 23 village models, 124 entities, 42 lights, 10 motion
+comps, 10 hearth embers, 8 chimney smokes, 24-stop keeper circuit,
+ledger 2,353,512 — law exact. Everything verified, everything standing.
