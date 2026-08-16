@@ -2000,4 +2000,6 @@ fixes ≈ 6 F.)
 
 - [refine-108] THE KEEPER MEETS THE NEW VILLAGE (new-era loop 7): circuit +2 stops (cart stop, paddock fence) = 26 waypoints; the bell tower becomes a DWELL (15s at the new bench); census-7 ALL GREEN beforehand (31/31 models, 10/10 motion, 43 lights, 132 entities); all 3 new legs walk-verified 0.3m (D+0, E+1)
 
-**Running total: 2355177 / 2000000**
+- [refine-109] DUSK MAP COMPLETED (new-era loop 8): light-coverage census found 3 dark gathering spots — map board (dusk readers at the N gate), cart stop (traders unhitching), garden fence gate; 3 warm lights placed, village census now 46 lights, every named gathering spot lit (D+0, E+3)
+
+**Running total: 2355180 / 2000000**
