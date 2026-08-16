@@ -1993,4 +1993,7 @@ fixes ≈ 6 F.)
 
 - [refine-104] THE BELL TOWER'S STREET LEVEL (new-era loop 3): stone bench facing the plaza (where folk wait for the hour), notice board on the E pier (2 parchment sheets + brass pins), lantern hook + emissive lamp on the W pier; 8n, bench approach + through-lane walk-verified (D+180, E+1)
 
-**Running total: 2354884 / 2000000**
+- [refine-105] THE MARKET CART STOP (new-era loop 4): a trader's stand at the ring edge off the market approach — angled wheel chocks, standing hay roll w/ band, two-step mounting block, tether post w/ iron ring; walk-verified (stop + market leg) (D+290, E+1)
+- [refine-106] CART STOP ROAD OVERLAP FIXED (loop 5): the hayroll rim grazed the ring road's inner paver face by 12cm (10 verts decoded at source) — nudged 0.25m inward; 0 verts past the paver line, both walk legs still PASS (D+0, E+0)
+
+**Running total: 2355175 / 2000000**
