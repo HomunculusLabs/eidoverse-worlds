@@ -2056,4 +2056,6 @@ fixes ≈ 6 F.)
 
 - [refine-136] WHERE THE STONE COMES FROM (new-era loop 36): material census — every wall is cut stone but no quarry existed anywhere; a quarry trace now stands NE beyond the ring (45deg r48): 3-tier stepped cut face w/ tool marks, size-graded rubble scatter, a half-extracted block w/ feather gap, a loaded stone sledge on runners, 2 crowbars, and a mason lamp; 10n, approach walk-verified, audit 47 ALL PASS same-loop (D+380, E+1)
 
-**Running total: 2360890 / 2000000**
+- [refine-137] THE SLEDGES GET THEIR ROAD (new-era loop 37): quarry-track census — the loop-36 quarry sat at 45deg r48 with 0 pavers on its bearing (the N/S/E/W approaches all existed); a worn cart track now runs from the NE ring across the field to the quarry face (r20.6-46, 1.15m width, hash-worn); full track walk-verified mid + face end (D+340, E+1)
+
+**Running total: 2361231 / 2000000**
