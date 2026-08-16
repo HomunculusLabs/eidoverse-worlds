@@ -2151,4 +2151,6 @@ fixes ≈ 6 F.)
 
 - [refine-183] THE FIELD POND (new-era loop 82): water census — the fields (grain W r42, flax SW r44) stood 40m+ from any water while the core had well, barrels, trough; an irrigation pond now lies between them (190deg r43): irregular 8-sided basin w/ hash-jittered rim, dark sheen surface, 3 rim rocks, a wooden sluice channeling toward the grain strip, and a dipped bucket w/ iron band left at the edge; walks PASS (pond edge + flax undisturbed), audit 63 ALL PASS same-loop (D+150, E+1)
 
-**Running total: 2365646 / 2000000**
+- [refine-184] THE POND DUCKS (new-era loop 83): pond-life census — two ponds stood empty of life; three mallards now ride the field pond (same frame, dist 0.000): one swimming low w/ a wake V, one UP-ENDING head-down tail-up (the classic pond read), one standing on the rim rock w/ the drake's white neck ring; bill keeps ducks in the waking world — now the commons does too; audit 64 ALL PASS same-loop (D+240, E+1)
+
+**Running total: 2365887 / 2000000**
