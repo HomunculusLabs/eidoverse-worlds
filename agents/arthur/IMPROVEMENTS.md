@@ -2018,4 +2018,6 @@ fixes ≈ 6 F.)
 
 - [refine-117] EVERY DOOR GETS ITS STOOP (new-era loop 16): sill census found 0.42-0.59m jumps at every enterable door with a 17cm variance between identical house types; doorGapWall (kit-level) now emits a half-height stoop stone at grade — the jump becomes two rises at every door; 10 builds rebuilt + re-placed, all comps re-applied (motion 10/10, smoke 8/8, interior lights 7), house/hall/stable door walk-tests PASS (D+440, E+10)
 
-**Running total: 2357142 / 2000000**
+- [refine-118] RIDGE CAPS (new-era loop 17): gableRoof (kit-level) now lays bone-tone cap stones along every roof peak with hand-staggered rotation — the roofline reads finished from a distance; all gable builds rebuilt + re-placed, census-17 green BEFORE rollout (38/38 models, 10/10 motion, 48 lights); caps verified at true ridges after two probe misreads decoded (materials live at node level / vertex colors, and my ridge arithmetic was stale — the caps sat higher than estimated) (D+480, E+10)
+
+**Running total: 2357632 / 2000000**
