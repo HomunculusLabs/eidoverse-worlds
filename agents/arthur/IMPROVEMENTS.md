@@ -1973,4 +1973,6 @@ fixes ≈ 6 F.)
 
 - [refine-94] BEAMS EVERYWHERE: garden, row, bunkhouse (2 each) + one per court shed — all 10 gabled interiors now carry the oak tie-beam language; 4 artifacts rebuilt + re-placed, walk-tests PASS (D+192, E+4)
 
-**Running total: 2352676 / 2000000**
+- [refine-95] BEAM COLLISION AUDIT: cross-checked the 10 new beam sets against ceiling-mounted geometry — every flagged cluster decoded as beam corners TYING INTO wall plates (the structural point), roof posts, or the herbs hung from them; ZERO true collisions; deep audit re-run ALL PASS post-94 rebuilds (D+0, E+1)
+
+**Running total: 2352677 / 2000000**
