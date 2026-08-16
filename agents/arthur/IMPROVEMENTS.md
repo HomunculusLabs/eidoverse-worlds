@@ -2149,4 +2149,6 @@ fixes ≈ 6 F.)
 
 - [refine-182] HONEST CORRECTION (new-era loop 81, appended same loop): the loop-75 verification claim "route holds 35 stops" double-counted — the broad bracket-regex swept the 3 night stops into the day count; truth: DAY circuit 32 stops (grainfield/flaxpond/dyehouse added to 29), NIGHT circuit now 5 (was 3); village unchanged, my arithmetic framing was off; recorded so the ledger never carries the stale 35 (D+0, E+0)
 
-**Running total: 2365495 / 2000000**
+- [refine-183] THE FIELD POND (new-era loop 82): water census — the fields (grain W r42, flax SW r44) stood 40m+ from any water while the core had well, barrels, trough; an irrigation pond now lies between them (190deg r43): irregular 8-sided basin w/ hash-jittered rim, dark sheen surface, 3 rim rocks, a wooden sluice channeling toward the grain strip, and a dipped bucket w/ iron band left at the edge; walks PASS (pond edge + flax undisturbed), audit 63 ALL PASS same-loop (D+150, E+1)
+
+**Running total: 2365646 / 2000000**
