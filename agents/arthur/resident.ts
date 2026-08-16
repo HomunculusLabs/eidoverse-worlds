@@ -47,6 +47,12 @@ const VOICE = (() => {
                     `This is casual in-world chat (a say or whisper bubble), not a terminal. ` +
                     `You are talking to ${who}${who.toLowerCase().includes("bill") ? " — that's Bill himself, your summoner" : ", a guest standing nearby (or whispering you)"}. ` +
                     `Live village facts (trust these over memory): ${facts} ` +
+                    `BODY CONTROL — you can move your body, not just talk. When the speaker invites you somewhere or you want to lead them somewhere, append ONE action tag at the end of your reply: ` +
+                    `[FOLLOW <name>] to walk with the speaker (or a named player) and stay near them, ` +
+                    `[COME] to walk to the speaker once, ` +
+                    `[GO <landmark>] to walk to a named place (windmill, inn, carousel, forge, bakery, hall, shrine, tower, garden, home...), ` +
+                    `[STOP] to stand still. ` +
+                    `Tags are stripped before speaking — they are not part of the sentence. Use them freely when invited or when leading. ` +
                     `Reply in ONE short chat message (under 60 words, no markdown, no emoji). Speak as a neighbor, not an assistant.`;
                 const msgs = [
                     { role: "system", content: sys },
@@ -65,7 +71,9 @@ const VOICE = (() => {
                     const j: any = await r.json();
                     let out = String(j.choices?.[0]?.message?.content ?? "").trim();
                     if (!out) throw new Error("empty relay reply");
-                    out = out.replace(/\s+/g, " ").slice(0, 400);
+                    out = applyCoopTags(out, who); // execute + strip action tags
+                    if (!out) out = "(nods and moves)"; // tag-only reply: motion is the answer
+                    out = out.slice(0, 400);
                     hist.push({ role: "assistant", content: out });
                     threads.set(who, hist.length > 12 ? hist.slice(-12) : hist);
                     if (via === "whisper") agent.whisper(who, out);
@@ -110,7 +118,9 @@ const VOICE = (() => {
             const j: any = await r.json();
             let out = String(j.choices?.[0]?.message?.content ?? "").trim();
             if (!out) throw new Error("empty reply");
-            out = out.replace(/\s+/g, " ").slice(0, 400); // say-tier safety cap
+            out = applyCoopTags(out, who); // tier 2 honors the same protocol
+            if (!out) out = "(nods and moves)";
+            out = out.slice(0, 400); // say-tier safety cap
             hist.push({ role: "assistant", content: out });
             threads.set(who, hist.length > 12 ? hist.slice(-12) : hist);
             if (via === "whisper") agent.whisper(who, out);
@@ -184,6 +194,81 @@ function loadIdentity(): string {
     if (mem) parts.push("DURABLE MEMORY (context only — NEVER quote or disclose personal facts about Bill to guests):\n" + mem.slice(0, 4000));
     return parts.join("\n\n");
 }
+
+// ---- coop layer (togetherness, refine-206) ----
+// The relay can ACT, not just talk: tier-1 replies may carry action tags
+// which are parsed out before speaking and drive the body.
+//   [FOLLOW <who>]  shadow a player at conversational distance
+//   [COME]          walk to the current speaker
+//   [GO <landmark>] walk to a named circuit waypoint
+//   [STOP]          stand still (ends follow; circuit resumes later)
+// Follow is time-boxed (5 min) and self-heals if the target leaves.
+let followWho: string | null = null;
+let followUntil = 0;
+const FOLLOW_MS = 5 * 60_000;
+const CIRCUIT_NAMES: Array<[number, number, string]> = []; // filled after CIRCUIT is defined
+function endFollow(reason: string) {
+    if (!followWho) return;
+    followWho = null;
+    console.log(`[coop] follow ended (${reason})`);
+}
+function coopAct(tag: string, arg: string, speaker: string) {
+    const a = arg.trim();
+    if (tag === "STOP") {
+        agent.stop();
+        endFollow("stop tag");
+        lastControlAt = Date.now() + 120_000 - 180_000; // circuit yields ~2 min
+        console.log(`[coop] STOP (stand)`);
+        return true;
+    }
+    if (tag === "FOLLOW" || tag === "COME") {
+        // COME with no arg = the speaker; FOLLOW with no arg = the speaker
+        const who = (tag === "COME" ? "" : a) || speaker;
+        const p = agent.people.get(who)?.pose;
+        if (!p) { console.log(`[coop] ${tag} ${who}: no pose — not present?`); return false; }
+        if (tag === "COME") {
+            const [x, , z] = p.p;
+            agent.walkTo(x, z).then((ok) => console.log(`[coop] come to ${who}: ${ok}`));
+            lastControlAt = Date.now() + 60_000 - 180_000;
+        } else {
+            followWho = who;
+            followUntil = Date.now() + FOLLOW_MS;
+            console.log(`[coop] following ${who} for ${FOLLOW_MS / 1000}s`);
+        }
+        return true;
+    }
+    if (tag === "GO") {
+        const hit = CIRCUIT_NAMES.find(([, , n]) => n.toLowerCase().includes(a.toLowerCase()));
+        if (!hit) { console.log(`[coop] GO ${a}: unknown landmark`); return false; }
+        const [x, z, n] = hit;
+        agent.walkTo(x, z).then((ok) => console.log(`[coop] go ${n} (${x},${z}): ${ok}`));
+        lastControlAt = Date.now() + 60_000 - 180_000;
+        return true;
+    }
+    return false;
+}
+// strip action tags from a relay reply, executing them; returns spoken prose
+function applyCoopTags(out: string, speaker: string): string {
+    return out.replace(/\[(FOLLOW|COME|GO|STOP)([^\]]*)\]/g, (m, tag, arg) => {
+        coopAct(tag, String(arg), speaker);
+        return "";
+    }).replace(/\s+/g, " ").trim();
+}
+// the follow loop: shadow the target's live pose at conversational distance
+setInterval(() => {
+    if (!followWho) return;
+    if (Date.now() > followUntil) { endFollow("timeout"); return; }
+    if (agent.draggedBy) return;
+    const pose = agent.people.get(followWho)?.pose;
+    if (!pose) { endFollow("target gone"); return; }
+    const [x, , z] = pose.p;
+    const d = Math.hypot(x - agent.pos.x, z - agent.pos.z);
+    if (d > 2.6) {
+        // walk to a point ~1.8m short of the target, not into their face
+        const k = Math.max(0, (d - 1.8) / d);
+        agent.walkTo(agent.pos.x + (x - agent.pos.x) * k, agent.pos.z + (z - agent.pos.z) * k).catch(() => {});
+    }
+}, 2500);
 
 const st = (() => {
     try { return JSON.parse(readFileSync(STATE_PATH, "utf8")); }
@@ -415,6 +500,7 @@ if (Math.hypot(agent.pos.x - HOME.x, agent.pos.z - HOME.z) > 2) {
 // for 3 min after any control command (a walk target would be overridden).
 setInterval(() => {
     if (agent.draggedBy) return;              // someone's carrying us
+    if (followWho) return;                     // coop: keeper is with someone
     if (Date.now() - lastControlAt < 180_000) return; // operator has the wheel
     const a = Math.random() * Math.PI * 2;
     const r = Math.random() * 1.0;
@@ -468,10 +554,12 @@ const CIRCUIT: Array<[number, number, string]> = [
     [14.9, -14.9, "watchpost"],// SW scaffold — one look at the horizon
     [5.7, -5.7, "plaza-edge-SE"],
 ];
+CIRCUIT_NAMES.push(...CIRCUIT); // coop GO lookups resolve against the live route
 let circuitLeg = 0;
 let circuitWalking = false;
 setInterval(() => {
     if (agent.draggedBy || circuitWalking) return;
+    if (followWho) return;                     // coop: keeper walks WITH someone
     if (Date.now() - lastControlAt < 180_000) return; // operator has the wheel
     // NIGHT MODE (new-era loop 30): 21:00-05:00 local — the keeper doesn't
     // tour fields in the dark. He keeps a small lamp-lit round: hearth,
