@@ -83,6 +83,9 @@ agent.onPing = (p) => {
             `ah, ${p.who}. there's a stone that floats, far out SW past the field — follow the worn track past where it fades, and keep walking. worth it.`,
             `${p.who}, welcome. the goats are milking by the NE pen, the bread's fresh at the bakery board, and the dye vats hang blue behind the weaver's. make yourself at home.`,
             `${p.who}, rest a while. the hall's benches seat sixteen now, the well works, and the hens peck by the garden. the Commons keeps itself.`,
+            // loop #95 — the invitation the keeper can now make truthfully
+            // (he rides it himself since 90; the signpost points since 91):
+            `${p.who} — the carousel by the inn carries riders now. eight mounts, horses bobbing. I ride it on my rounds. take a horse.`,
         ];
         agent.say(lines[Math.floor(Math.random() * lines.length)]);
         console.log(`~ greeted ${p.who} (approach)`);

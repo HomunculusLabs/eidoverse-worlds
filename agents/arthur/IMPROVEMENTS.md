@@ -2175,4 +2175,6 @@ fixes ≈ 6 F.)
 
 - [refine-195] THE DYER'S LAUNDRY (new-era loop 94): cloth-chain decode — dye (70) ends the craft but no garment anywhere wore the blue; the era-2 laundry line (qol1) was NEVER PLACED; a line now stands behind the weaver's row (205deg r26.5, E of the dye house): 6 garments on pegs — bone, brass, and TWO flax-blue pieces (the dyer's own output, worn), one half-pinned MID-HANGING (slipped low, tilted), a wash basket + folded blue cloth at the post; the cloth chain's last mile — dye -> WEAR — finally visible on bodies, not just racks; walks PASS (line + shrine path), audit 70 ALL PASS same-loop (D+190, E+1)
 
-**Running total: 2367164 / 2000000**
+- [refine-196] THE INVITATION (new-era loop 95): the greetings had aged again — the keeper rides the carousel (90) and the signpost points (91) but his own words never asked a visitor to ride; +1 greeting line (6 total): 'the carousel by the inn carries riders now. eight mounts, horses bobbing. I ride it on my rounds. take a horse.' — every claim verified true live BEFORE the restart (8 sockets, 4 bob comps, near the inn, keeper SEATED); daemon restarted clean (D+0, E+1)
+
+**Running total: 2367165 / 2000000**
