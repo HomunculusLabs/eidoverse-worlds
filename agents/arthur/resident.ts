@@ -248,6 +248,8 @@ const CIRCUIT: Array<[number, number, string]> = [
     [38.4, 0, "livery"],       // behind the inn — check the horses
     [1.9, 9.4, "mapboard"],    // N gate path — check the map
     [2.4, 14.4, "wayside"],    // N gate — rest by the lantern
+    [-15.9, 9.1, "cartstop"],  // ring edge — where the traders park
+    [38.0, -2.6, "paddock"],   // beside the livery — check the horses' fence
     [-23.0, -4.3, "shrine"],   // SW behind the trees — tend the votives
     [14.9, -14.9, "watchpost"],// SW scaffold — one look at the horizon
     [5.7, -5.7, "plaza-edge-SE"],
@@ -265,7 +267,7 @@ setInterval(() => {
     lastControlAt = Date.now();
     // DWELL (loop #80): the keeper RESTS at his stops like a villager —
     // 20s at the hearth (warming), the inn (a mug), the market (traders).
-    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000 };
+    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000, "belltower": 15000 };
     circuitWalking = true;
     console.log(`[circuit] heading to ${name} (${x},${z})`);
     // door-aware egress: if inside the house footprint, exit via the door
