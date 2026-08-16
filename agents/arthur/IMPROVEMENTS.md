@@ -2026,4 +2026,6 @@ fixes ≈ 6 F.)
 
 - [refine-121] THE CANDLELIT STUDY FURNISHED (new-era loop 20): the tower upper room (empty since era-3) gains its study — writing desk w/ legs against the W wall, open two-page book, lit candle w/ emissive flame, and a 3-book stack in the corner; tower 20n 20/20 reach, door walk-verified; shed-roof audit first (clean — wall-backed edges, correct anatomy) (D+260, E+1)
 
-**Running total: 2358295 / 2000000**
+- [refine-122] AUDIT CAUGHT ITS OWN COVERAGE GAP + A REAL DEFECT (new-era loop 21): the 7 builds since loop 6 (millyard, 4 signs, 2 milestones) were outside the audit list — folded in (31 -> 38 files); the very first full run then caught 64 zero-area tris in millyard3 (CapsuleGeometry pole caps, 4 sacks x 16) — sacks rebuilt pole-free (cylinder + squashed-sphere tops); full 38-file audit ALL PASS, re-placed (D+~30, E+1)
+
+**Running total: 2358326 / 2000000**
