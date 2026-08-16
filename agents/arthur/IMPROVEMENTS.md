@@ -1977,4 +1977,6 @@ fixes ≈ 6 F.)
 
 - [refine-96] THE LAST ROOMS GET STRUCTURE: mill room joins the beam language (2 oak beams under its flat ceiling, 48v) + the tower study gets a KING POST (oak, floor-to-apex — the structural heart of a round room); mill + tower walk-tests PASS (D+100, E+2)
 
-**Running total: 2352779 / 2000000**
+- [refine-97] EVERY WALL MEETS THE EARTH PROPERLY: wallSpan gains a BASE COURSE — a wider stone plinth at every wall base (kit-level: house + 7 ring + inn + mill + stable all rebuilt); plinth rims verified in all 10 wallSpan consumers; walk-tests PASS (D+600, E+10)
+
+**Running total: 2353389 / 2000000**
