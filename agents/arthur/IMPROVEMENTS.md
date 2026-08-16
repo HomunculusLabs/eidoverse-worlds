@@ -1975,4 +1975,6 @@ fixes ≈ 6 F.)
 
 - [refine-95] BEAM COLLISION AUDIT: cross-checked the 10 new beam sets against ceiling-mounted geometry — every flagged cluster decoded as beam corners TYING INTO wall plates (the structural point), roof posts, or the herbs hung from them; ZERO true collisions; deep audit re-run ALL PASS post-94 rebuilds (D+0, E+1)
 
-**Running total: 2352677 / 2000000**
+- [refine-96] THE LAST ROOMS GET STRUCTURE: mill room joins the beam language (2 oak beams under its flat ceiling, 48v) + the tower study gets a KING POST (oak, floor-to-apex — the structural heart of a round room); mill + tower walk-tests PASS (D+100, E+2)
+
+**Running total: 2352779 / 2000000**
