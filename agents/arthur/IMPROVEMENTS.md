@@ -2128,4 +2128,6 @@ fixes ≈ 6 F.)
 
 - [refine-172] THE STUDY SHUTTERS (new-era loop 72): window census — every pane in the village open forever, day and night alike; the keeper's study drum window (decoded at source: twin at local (0,4.3,2.79), 0.6x0.75, +Z) now carries a half-drawn pair: LEFT folded open against the wall, RIGHT drawn shut w/ iron hinges + a pull-ring; the evening read: someone was just there; live alignment verified (window face -7.86,27.49 vs shutter face -7.86,27.54); audit 61 ALL PASS same-loop (D+95, E+1)
 
+- [refine-173] VERIFICATION-ONLY (new-era loop 73, loop-15 precedent): census SUSPECTED the inn lacked lodging — decode found it complete since loops 50/87 (14-step stair flight, 3 guest beds w/ pillows + blankets + traveler chests, washstand, window seat); the bakery commerce too (display board w/ 4 loaves, loop ~20); stair waypoints + upper deck ALL walk-true (5/5); pos.y decoded as probe-blind (walk sim tracks x/z only — control on the known-sittable bench reads 0.00 too); no gap found; nothing built (D+0, E+0)
+
 **Running total: 2364789 / 2000000**
