@@ -2016,4 +2016,6 @@ fixes ≈ 6 F.)
 
 - [refine-116] THE VERIFICATION-ONLY LOOP (new-era loop 15): three fresh audits all clean — fence placements decoded correct against host geometry (garden plot behind the cottage, paddock S of the stable yard), plaza rest spots all within 3-4m of light, night silhouette even across all 8 arcs (field lamps carry the far glow); deep audit ALL PASS; no gap found this pass (D+0, E+1)
 
-**Running total: 2356692 / 2000000**
+- [refine-117] EVERY DOOR GETS ITS STOOP (new-era loop 16): sill census found 0.42-0.59m jumps at every enterable door with a 17cm variance between identical house types; doorGapWall (kit-level) now emits a half-height stoop stone at grade — the jump becomes two rises at every door; 10 builds rebuilt + re-placed, all comps re-applied (motion 10/10, smoke 8/8, interior lights 7), house/hall/stable door walk-tests PASS (D+440, E+10)
+
+**Running total: 2357142 / 2000000**
