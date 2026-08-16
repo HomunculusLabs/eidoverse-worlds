@@ -2048,6 +2048,6 @@ fixes ≈ 6 F.)
 
 - [refine-132] THE VILLAGE DECLARES ITSELF (new-era loop 31, closed after interrupted turns): gate-lantern audit clean (752v fixtures + lights aligned), but the village was NAMELESS — the N gate lintel now carries a carved bone name board w/ raised inscription bars: THE COMMONS (192v board + 96v bars); roads 9n, re-placed (D+288, E+1)
 
-- [refine-133] THE WALK HOME IS LIT (new-era loops 32-33, after loop-31 closeout): 8 iron street lamps at spoke midpoints (r10 — the dark stretch between plaza glow and door-path lamps): tapered posts, drip pans, emissive lantern cores + 8 light comps; spoke walk verified past a lamp; audit 44 ALL PASS same-loop; village light census 64 (D+420, E+9)
+- [refine-133] THE WALK HOME IS LIT (new-era loops 32-33, after loop-31 closeout): 8 iron street lamps at spoke midpoints (r10 — the dark stretch between plaza glow and door-path lamps): tapered posts, drip pans, emissive lantern cores + 8 light comps; spoke walk verified past a lamp; audit 44 ALL PASS same-loop; village light census 49 (8 new) (D+420, E+9)
 
 **Running total: 2360336 / 2000000**
