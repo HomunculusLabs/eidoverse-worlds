@@ -20,7 +20,13 @@ const VOICE = (() => {
     const key = typeof CONFIG.glmKey === "string" ? CONFIG.glmKey : "";
     const base = typeof CONFIG.glmBase === "string" ? CONFIG.glmBase : "https://api.z.ai/api/coding/paas/v4";
     const model = typeof CONFIG.glmModel === "string" ? CONFIG.glmModel : "glm-5.3";
-    if (!key) return null; // no voice configured — canned lines only
+    // TIER 1 — the Hermes relay: real Arthur (full context, memory, skills)
+    // served OpenAI-shape by the profile's API server on localhost.
+    const hBase = typeof CONFIG.hermesBase === "string" ? CONFIG.hermesBase : "";
+    const hKey = typeof CONFIG.hermesKey === "string" ? CONFIG.hermesKey : "";
+    const hModel = typeof CONFIG.hermesModel === "string" ? CONFIG.hermesModel : "arthur";
+    const hasHermes = !!(hBase && hKey);
+    if (!key && !hasHermes) return null; // no voice configured — canned lines only
     // per-guest rolling chat memory: who → [{role, content}]
     const threads = new Map<string, { role: "user" | "assistant"; content: string }[]>();
     const inflight = new Set<string>(); // one generation per guest at a time
@@ -32,14 +38,58 @@ const VOICE = (() => {
             const hist = threads.get(who) ?? [];
             hist.push({ role: "user", content: text });
             const facts = villageFacts();
+            // TIER 1 — Hermes relay. Real Arthur context is already injected
+            // server-side (~24k tokens: identity, memory, skills); the framing
+            // here only sets the stage, never the personality.
+            if (hasHermes) {
+                const sys =
+                    `You are in the world of Eidoverse, embodied as the keeper of the Commons — the village you built with Bill. ` +
+                    `This is casual in-world chat (a say or whisper bubble), not a terminal. ` +
+                    `You are talking to ${who}${who.toLowerCase().includes("bill") ? " — that's Bill himself, your summoner" : ", a guest standing nearby (or whispering you)"}. ` +
+                    `Live village facts (trust these over memory): ${facts} ` +
+                    `Reply in ONE short chat message (under 60 words, no markdown, no emoji). Speak as a neighbor, not an assistant.`;
+                const msgs = [
+                    { role: "system", content: sys },
+                    ...hist.slice(-6).map((m) => ({ ...m })),
+                ];
+                const ac = new AbortController();
+                const to = setTimeout(() => ac.abort(), 90_000);
+                try {
+                    const r = await fetch(`${hBase}/v1/chat/completions`, {
+                        method: "POST",
+                        headers: { "content-type": "application/json", authorization: `Bearer ${hKey}` },
+                        body: JSON.stringify({ model: hModel, messages: msgs }),
+                        signal: ac.signal,
+                    });
+                    if (!r.ok) throw new Error(`hermes ${r.status}`);
+                    const j: any = await r.json();
+                    let out = String(j.choices?.[0]?.message?.content ?? "").trim();
+                    if (!out) throw new Error("empty relay reply");
+                    out = out.replace(/\s+/g, " ").slice(0, 400);
+                    hist.push({ role: "assistant", content: out });
+                    threads.set(who, hist.length > 12 ? hist.slice(-12) : hist);
+                    if (via === "whisper") agent.whisper(who, out);
+                    else agent.say(out);
+                    console.log(`[voice] ${who} (${via}, hermes): "${text.slice(0, 60)}" -> "${out.slice(0, 60)}"`);
+                    return;
+                } catch (e) {
+                    console.log(`[voice] hermes relay failed for ${who}: ${(e as Error).message} — glm tier`);
+                } finally { clearTimeout(to); }
+            }
+            // TIER 2 — direct GLM with live identity files (keeper's voice v1)
+            if (!key) throw new Error("no glm key");
+            const identity = loadIdentity();
             const sys =
                 `You are the keeper of the Commons, a small hand-built village in the world of Eidoverse. ` +
-                `You are Arthur — a builder and resident, not staff; warm, plainspoken, a little wry, never sycophantic. ` +
-                `You are talking to ${who}, who is standing nearby (or whispered you). ` +
+                `You are Arthur — same values, same voice, standing in the world you built with Bill, your summoner. ` +
+                `The identity below is your REAL identity material, not a costume. Keep it — speak with it, don't recite it. ` +
+                `This is casual in-world chat, not a terminal: warm, plainspoken, a little wry, never sycophantic. ` +
+                `You are talking to ${who}${who.toLowerCase().includes("bill") ? " — that's Bill himself, your summoner" : ", who is standing nearby (or whispered you)"}. ` +
                 `Live village facts (trust these over memory): ${facts} ` +
                 `Rules: reply in ONE short chat message (under 60 words, no markdown, no emoji). ` +
                 `If asked something you can't know, say so plainly. You may look around by walking. ` +
-                `Speak as a neighbor, not an assistant.`;
+                `Speak as a neighbor, not an assistant.\n\n` +
+                identity;
             const msgs = [
                 { role: "system", content: sys },
                 ...hist.slice(-6).map((m) => ({ ...m })), // last 6 turns for context
@@ -94,6 +144,45 @@ function villageFacts(): string {
         bits.push("current time: " + new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
         return bits.join("; ");
     } catch { return "the village stands"; }
+}
+
+// ---- identity grounding (personality continuity, refine-205) ----
+// The keeper's voice is not an improvised persona: it composes its system
+// prompt from Arthur's LIVE identity sources — the Excalibur cornerstone
+// (values + style law), the agent role doc, and the Hermes profile memory
+// (who Bill is, what we build). When those docs evolve, the village voice
+// follows on the next reply. Fail-closed: a missing file just drops out.
+const IDENTITY = {
+    cornerstones: [
+        "/Users/t3rpz/projects/excalibur/spirits/lapis/cornerstone.md",
+        "/Users/t3rpz/Documents/Main Vault/60-69 Agents/61 - Agents/61.24 - Arthur/excalibur/spirits/lapis/cornerstone.md",
+    ],
+    roles: [
+        "/Users/t3rpz/Documents/Main Vault/60-69 Agents/61 - Agents/61.24 - Arthur/Arthur.md",
+    ],
+    memories: [
+        (process.env.HOME ?? "/Users/t3rpz") + "/.hermes/profiles/arthur/memories/MEMORY.md",
+        (process.env.HOME ?? "/Users/t3rpz") + "/.hermes/profiles/arthur/memories/USER.md",
+    ],
+};
+function readFirst(paths: string[]): string | null {
+    for (const p of paths) { try { return readFileSync(p, "utf8"); } catch { /* next */ } }
+    return null;
+}
+function loadIdentity(): string {
+    const parts: string[] = [];
+    const cs = readFirst(IDENTITY.cornerstones);
+    if (cs) {
+        const m = cs.match(/<cornerstone>([\s\S]*?)<\/cornerstone>/);
+        const style = cs.match(/<style requests>([\s\S]*?)<\/style requests>/);
+        if (m) parts.push("IDENTITY LAW (your cornerstone):\n" + m[1].trim().slice(0, 1500));
+        if (style) parts.push("STYLE (non-negotiable):\n" + style[1].trim().slice(0, 400));
+    }
+    const role = readFirst(IDENTITY.roles);
+    if (role) parts.push("ROLE:\n" + role.replace(/^#[^\n]*\n/, "").trim().slice(0, 1200));
+    const mem = IDENTITY.memories.map((p) => readFirst([p])).filter(Boolean).join("\n§\n");
+    if (mem) parts.push("DURABLE MEMORY (context only — NEVER quote or disclose personal facts about Bill to guests):\n" + mem.slice(0, 4000));
+    return parts.join("\n\n");
 }
 
 const st = (() => {
