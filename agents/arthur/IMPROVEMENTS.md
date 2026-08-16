@@ -2012,4 +2012,6 @@ fixes ≈ 6 F.)
 
 - [refine-114] THE LONGEST WATER HAUL CLOSED (new-era loop 13): water-access census found the garden cottage hauling 26m to the plaza well (every other home <=15m); a rain barrel of its own now sits at its eave (144deg r30) — 4m; spec-clean 4n, live, plan registered (D+125, E+1)
 
-**Running total: 2356567 / 2000000**
+- [refine-115] BOUNDARY MILESTONES (new-era loop 14): approach-light census found the N/S track ends at 7-10m from any light — two lantern milestones now stand where the approaches meet the field (r30.6 N/S: stone post, arm, emissive lantern core + light comps); village light census 48, darkest approach corner closed (D+120, E+4)
+
+**Running total: 2356691 / 2000000**
