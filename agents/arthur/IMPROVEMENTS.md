@@ -2096,4 +2096,6 @@ fixes ≈ 6 F.)
 
 - [refine-156] AUDIT PARITY LAW (new-era loop 57): disk-vs-audit census found the FIFTH coverage lag — the loop-13 garden barrel (rainbarrel_g, built after the loop-6 barrel fold) sat unaudited for 44 loops; folded in, the audit list now EXACTLY matches disk (53/53) by a parity check that is now part of the loop pattern; full 53-file audit ALL PASS (D+0, E+0)
 
-**Running total: 2362511 / 2000000**
+- [refine-157] THE READER SITS TO READ (new-era loop 58): seated-dwell census — the keeper reads in the study (15s dwell) but stood to do it while 3 other stops sat; the study socket is now mapped, the keeper sits at the desk for his reading (av-tower-house study); 4 seated stops of 8 dwells (market stands as a trader should, coop/woodyard/garden are work) (D+0, E+1)
+
+**Running total: 2362512 / 2000000**

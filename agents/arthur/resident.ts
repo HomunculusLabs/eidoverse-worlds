@@ -315,6 +315,7 @@ setInterval(() => {
                     "plaza-hearth-south": ["av-plaza-hearth", "log_0"],
                     inn: ["av-inn", "bench_0"],
                     belltower: ["av-bellbase", "bench"],
+                    tower: ["av-tower-house", "study"],
                 };
                 const seat = SEATED[name];
                 if (seat) {
