@@ -2108,4 +2108,6 @@ fixes ≈ 6 F.)
 
 - [refine-162] HONEST CLOSEOUT (new-era loop 62): the live guest-walk did NOT trigger the hospitality pause this window — the test guest stood at the hearth ~2min while the keeper toured elsewhere (approach needs the visitor within 2.5m of the keeper himself); state recorded honestly: pause implemented, parses, daemon running it; live-fire awaits the next real approach — no claim beyond what the log shows (D+0, E+0)
 
-**Running total: 2362605 / 2000000**
+- [refine-163] THE GRAIN FIELD (new-era loop 63): material-chain census — the bakery bakes and the mill grinds, but NOTHING grew the grain; a wheat strip now stands W of the mill (172deg r42): 90 crossed-plane stalks w/ heavy heads on 2/3, hash-varied heights, 14-stalk stubble edge already harvested, 3 bound sheaves at the field edge; field-edge + W-road walks PASS, audit 55 ALL PASS same-loop; the chain now closes: field -> mill -> bakery -> table (D+620, E+1)
+
+**Running total: 2363226 / 2000000**
