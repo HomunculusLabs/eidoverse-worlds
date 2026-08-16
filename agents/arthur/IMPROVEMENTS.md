@@ -2163,4 +2163,6 @@ fixes ≈ 6 F.)
 
 - [refine-189] THE CIRCUIT CATCHES UP, AGAIN (new-era loop 88): the map-lag class recurs in the keeper's route — the field pond (82) and chopping block (78) stood unvisited while he walks past both; +2 day stops (fieldpond: dip water for the fields, chopblock: split the morning's rounds), day route 32 -> 34, dwells 10s/8s; both waypoints walk-true; daemon restarted clean (D+0, E+1)
 
-**Running total: 2366481 / 2000000**
+- [refine-190] THE CAROUSEL RIDES (new-era loop 89): seat census — 16 seats across the village but the WONDER piece had none; the carousel spun and bobbed for nobody; +8 sockets decoded from mkcarousel mounts (4 horses above their bobbing bodies facing outward, 4 bench seats between), ack-watched + persistence-verified; live mount test rode horse_0 (pos snapped, then dismounted); the village seat count 16 -> 24 — a visitor can finally RIDE the carousel (D+0, E+8)
+
+**Running total: 2366489 / 2000000**
