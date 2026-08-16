@@ -2139,4 +2139,6 @@ fixes ≈ 6 F.)
 
 - [refine-177] THE WAYSTONE TRACK (new-era loop 77): the whisper (loop 45) promised a reason to walk SW but the grass gave no answer; a worn single-file track now runs 225deg from the ring road (r20.6) out to r48 — wider steps 1.35, sparser than the quarry track (fewer feet) — then FADES in the grass a stone's throw before the waystone; not a road, a rumor of one; artifact verified 504 SW-ray paver verts w/ 72 in the fade zone; fade-zone walks PASS; first probe misread the entity yaw (decoded, artifact was right) (D+504, E+0)
 
-**Running total: 2365295 / 2000000**
+- [refine-178] THE CHOPPING BLOCK (new-era loop 78): wood-chain census — stacks, firewood, charcoal, a sawhorse in the workshop, but logs never got SPLIT anywhere; a splitting station now stands at the woodyard edge (59deg r29.8): squat oak block w/ checking-crack end-grain top, a maul STUCK mid-stroke in a fresh split (as real blocks are), 3 split halves scattered, a round log waiting w/ pale end face, iron wedge + ring on the ground; walks PASS (block + woodyard dwell), audit 62 ALL PASS same-loop; comp census green en route (37 comp-bearing, 19 motion, 24 particle, carousel/windmill/windlass trio intact) (D+190, E+1)
+
+**Running total: 2365486 / 2000000**
