@@ -1981,4 +1981,6 @@ fixes ≈ 6 F.)
 
 - [refine-98] POST-ROLLLout CENSUS CAUGHT A LOSS: full live census after the #97 village-wide rebuild found the inn SIGN SWING missing (comp-wipe on re-place — smoke/embers placers ran, the sign comp did not); restored; census now 23/23 models, 10/10 motion, 10/10 embers, 8/8 smoke, 42 lights, 124 entities (D+0, E+1)
 
-**Running total: 2353390 / 2000000**
+- [refine-99] HUB COLLARS + A FALSE ALARM CLOSED: carousel pole gains brass collars where it enters the deck and pierces the canopy (91v + 91v); the suspected stair-deck lip died at source-check (deck top 0.77 = top step, flush — I had misread the underside slab); all 10 motion comps re-applied post-place (D+120, E+1)
+
+**Running total: 2353511 / 2000000**
