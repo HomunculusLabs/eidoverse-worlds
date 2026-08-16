@@ -61,6 +61,10 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 ## REGISTER (worst-first)
 
 ### R-101 [INTERSECTION] av-run × av-garden-cottage — LIVE: 3.6m × 3.34m
+- Walk-test side-finding (wakeup 3): sim log "support seam on av-run —
+  uneven top (lie 0.11m) without a usable grid — abstaining, no box". The
+  run's mesh reads as uneven-topped to the collider classifier; when this
+  defect is fixed (re-place clear of the beds), also consider the shape.
 - Evidence: composed footprints. run3 bbox local
   [-1.6..1.6]x[0.34..2.65]; garden3 extends to local x -4.85 (garden beds W
   side). At plan (r=24, ang=150) vs (r= 26, ang=144) the run's local +Z
