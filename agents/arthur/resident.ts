@@ -319,6 +319,14 @@ setInterval(() => {
 const bellRitual = () => {
     const hour = new Date().getHours();
     if (hour < 5 || hour >= 21) return;
+    // ring the REAL bell (new-era loop 51): the use verb drives the
+    // physical pendulum via the reactions comp — three pushes, timed with
+    // the swing, then the visible act
+    try {
+        agent.verb("use", { id: "av-belltower", action: "use" });
+        setTimeout(() => { try { agent.verb("use", { id: "av-belltower", action: "use" }); } catch {} }, 1200);
+        setTimeout(() => { try { agent.verb("use", { id: "av-belltower", action: "use" }); } catch {} }, 2400);
+    } catch {}
     try { agent.say("rings the bell — the hour turns"); } catch {}
     console.log(`[ritual] the keeper rings the hour (${hour}:00)`);
 };
