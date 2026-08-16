@@ -1985,4 +1985,6 @@ fixes ≈ 6 F.)
 
 - [refine-100] THE HUNDREDTH LOOP: full-village census ALL GREEN (23/23 models, 10/10 motion, 10/10 embers, 8/8 smoke, 42 lights, 124 entities) + deep audit ALL PASS + Amendment 11 written into VILLAGE_PLAN (the campaign record); tree clean through d80fcca (D+0, E+1)
 
-**Running total: 2353512 / 2000000**
+- [refine-101] THE FENCES (the missing woodwork): garden picket fence L-run w/ gate gap guarding the cottage plot (posts + double rails + pickets) + livery paddock (squared rails on chunky posts, 2m gated gap w/ header bar); both 3n walkable-verified (approach 0.3m, gate 0.2m) (D+540, E+2)
+
+**Running total: 2354054 / 2000000**
