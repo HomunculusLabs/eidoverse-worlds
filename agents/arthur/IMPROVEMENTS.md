@@ -2112,4 +2112,6 @@ fixes ≈ 6 F.)
 
 - [refine-164] THE FIELD GUARD + THE HONEST FOLD (new-era loop 64): loop 63 left draw-cost debt (30n — anonymous sheaf groups unmergeable); sheaves rebuilt as mergeable meshes, 30n -> 9n (pure material buckets); THE SCARECROW now guards the field: pole + crossbar, straw torso, sleeved coat, burlap head w/ straw hat — and a CROW perched on his W arm mocking him (the village second bird); field re-placed, audit 55 ALL PASS (D+210, E+1)
 
-**Running total: 2363437 / 2000000**
+- [refine-165] THE GOATS (new-era loop 65): livestock census — horses work, hens lay, but the village kept no dairy/meat stock; a goat pen now stands beside the paddock (355deg r43, the paddock post-and-rail language): 3 goats in 3 poses (browsing the hay rack, alert toward the village, grazing) w/ back-swept horns, up-tails, dark/light coats; hay rack + water trough; pole-free, 7 pure buckets, 0 anon; gate + paddock-side walks PASS, audit 56 ALL PASS same-loop; bill keeps goats in the waking world - now the commons does too (D+330, E+1)
+
+**Running total: 2363768 / 2000000**
