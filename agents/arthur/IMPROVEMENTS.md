@@ -2060,4 +2060,6 @@ fixes ≈ 6 F.)
 
 - [refine-138] WHERE MORTAR COMES FROM (new-era loop 38): material census — quarry + wood existed but no lime/mortar source; a LIME KILN now burns beside the quarry on the track (52deg r47): tapered stone drum w/ charging ring, fire mouth w/ emissive glow + embers comp + light, waiting limestone cobbles, slaking pit w/ white putty + shovel; 8n, mouth walk-verified, audit 48 ALL PASS same-loop; village embers census 11 (D+260, E+2)
 
-**Running total: 2361493 / 2000000**
+- [refine-139] THE LEDGER TOOL CANONICALIZED (new-era loop 39): the tilde slip struck twice (loops 21, 38) because every loop wrote a fresh one-off python append script — some exactified, some didn't; ledger-append.py now stands as the single tool: exact-by-construction (refuses tilde input), verifies the law closes BEFORE appending, refuses to write on any break (D+0, E+1)
+
+**Running total: 2361494 / 2000000**
