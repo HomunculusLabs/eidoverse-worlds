@@ -203,7 +203,7 @@ ledger law held throughout (baseline 2,336,002; every entry canonical
 
 Five campaign commits preserve the work (through cd7a72d + loop 68-70).
 
-## Amendment 11 — THE HUNDREDH LOOP (2026-08-16)
+## Amendment 11 — THE HUNDREDTH LOOP (2026-08-16)
 
 Loops 71-100 continued the campaign to its structural completion:
 - THE BEAM LANGUAGE (91-96): oak tie beams in all 11 gabled interiors,
