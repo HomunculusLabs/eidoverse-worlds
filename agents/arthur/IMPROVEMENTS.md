@@ -2072,4 +2072,6 @@ fixes ≈ 6 F.)
 
 - [refine-144] FIREFLIES (new-era loop 44, from the visiting agent's world-events list): the engine's magic preset (motes of light) now drifts at 3 treeline clusters and swirls around the waystone's floating stone — evening motes, wonder begetting wonder; ack-watched into place and verified live (4 comps) (D+0, E+4)
 
-**Running total: 2362212 / 2000000**
+- [refine-145] THE WHISPER (new-era loop 45): the waystone was undiscoverable by design but unfindable in practice; the map board now carries a faint unlabeled smudge at its far corner (SW, past the edge of known things, 0x57503f — quieter than any chip) — no road, no name, just a reason to walk into the field; mapboard rebuilt + re-placed, chip verts verified (D+24, E+1)
+
+**Running total: 2362237 / 2000000**
