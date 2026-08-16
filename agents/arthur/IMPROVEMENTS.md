@@ -2183,4 +2183,6 @@ fixes ≈ 6 F.)
 
 - [refine-199] THE BAKERY CISTERN (new-era loop 97): water census by trade — the bakery/court drew dough-water from the plaza well 25m+ away, NOTHING within 15m; a stone cistern now stands at the court E side (317deg r24.2): 4-slab open box w/ dark water surface below the rim, wooden lid LEANING against it (mid-use), copper scoop hung on a rim peg — rain-fed like the g-barrel; walks PASS (cistern + court door), audit 71 ALL PASS same-loop; the bakery finally has its water at the door (D+210, E+1)
 
-**Running total: 2367377 / 2000000**
+- [refine-200] THE SMITHY FORGE ANNEX (new-era loop 98): trade decode — the smithy SIGN hangs at the court but the era-2 workshop (forge, anvil, bellows) was archived to _era1-2 at the era-3 rebuild, never re-placed: the trade was signed but unstaffed; a forge annex now stands at the court NE corner (322deg r26.5): stone hearth w/ firebox mouth + GLOWING COALS + hooded flue, hung bellows, anvil on an oak stump (body/horn/heel/base), hammer resting on the anvil face, tongs on the hearth side, quench barrel w/ water + iron hoops; LIVE effects: ember particles (the hearth's own preset) + warm forge light (0xff8040 range 6) — ack-watched, persistence-verified; walks PASS (forge front + court door), audit 72 ALL PASS same-loop; the hammer sign finally has its hammer down (D+420, E+2)
+
+**Running total: 2367799 / 2000000**
