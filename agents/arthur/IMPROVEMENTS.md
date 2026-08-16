@@ -2161,4 +2161,6 @@ fixes ≈ 6 F.)
 
 - [refine-188] THE MAP CATCHES UP, AGAIN (new-era loop 87): the lag class recurs — loops 72-86 built 8 things and the board stood still; +6 marks (same 1:31 scale): chopping block at the woodyard edge, the field pond in dark water-blue w/ 3 duck-specks, hutch + run on the garden side, the dyer sign in cloth-blue; bucket count 20 -> 23 (three new-material chips, three sharing); the map now carries every standing thing; audit 67 ALL PASS, board re-placed (D+60, E+0)
 
-**Running total: 2366480 / 2000000**
+- [refine-189] THE CIRCUIT CATCHES UP, AGAIN (new-era loop 88): the map-lag class recurs in the keeper's route — the field pond (82) and chopping block (78) stood unvisited while he walks past both; +2 day stops (fieldpond: dip water for the fields, chopblock: split the morning's rounds), day route 32 -> 34, dwells 10s/8s; both waypoints walk-true; daemon restarted clean (D+0, E+1)
+
+**Running total: 2366481 / 2000000**

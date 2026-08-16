@@ -263,6 +263,8 @@ const CIRCUIT: Array<[number, number, string]> = [
     [-35.4, -1.3, "millyard"], // the miller's sacks — grain going out
     [-40.0, 2.0, "grainfield"], // THE FIELD WALK (loop 75): check the crop
     [-42.5, -4.5, "flaxpond"], // the retting pond — turn the bundles
+    [-42.3, -6.0, "fieldpond"], // THE WATER HAUL (loop 88): the irrigation pond — dip for the fields
+    [15.3, 24.4, "chopblock"], // split the morning's rounds at the block
     [-12.7, 22.8, "dyehouse"], // the vats — stir and hang
     [-23.0, -4.3, "shrine"],   // SW behind the trees — tend the votives
     [14.9, -14.9, "watchpost"],// SW scaffold — one look at the horizon
@@ -300,7 +302,7 @@ setInterval(() => {
     lastControlAt = Date.now();
     // DWELL (loop #80): the keeper RESTS at his stops like a villager —
     // 20s at the hearth (warming), the inn (a mug), the market (traders).
-    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000, "belltower": 15000, "coop": 12000, "milkstand": 12000, "grainfield": 10000, "flaxpond": 10000, "dyehouse": 12000, "woodyard": 10000, "garden": 10000, "tower": 15000 };
+    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000, "belltower": 15000, "coop": 12000, "milkstand": 12000, "grainfield": 10000, "flaxpond": 10000, "fieldpond": 10000, "chopblock": 8000, "dyehouse": 12000, "woodyard": 10000, "garden": 10000, "tower": 15000 };
     circuitWalking = true;
     console.log(`[circuit] heading to ${name} (${x},${z})`);
     // door-aware egress: if inside the house footprint, exit via the door
