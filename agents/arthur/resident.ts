@@ -302,7 +302,7 @@ setInterval(() => {
     lastControlAt = Date.now();
     // DWELL (loop #80): the keeper RESTS at his stops like a villager —
     // 20s at the hearth (warming), the inn (a mug), the market (traders).
-    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000, "belltower": 15000, "coop": 12000, "milkstand": 12000, "grainfield": 10000, "flaxpond": 10000, "fieldpond": 10000, "chopblock": 8000, "dyehouse": 12000, "woodyard": 10000, "garden": 10000, "tower": 15000 };
+    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000, "belltower": 15000, "coop": 12000, "milkstand": 12000, "grainfield": 10000, "flaxpond": 10000, "fieldpond": 10000, "chopblock": 8000, "dyehouse": 12000, "woodyard": 10000, "garden": 10000, "tower": 15000, "carousel": 14000 };
     circuitWalking = true;
     console.log(`[circuit] heading to ${name} (${x},${z})`);
     // door-aware egress: if inside the house footprint, exit via the door
@@ -336,6 +336,10 @@ setInterval(() => {
                     inn: ["av-inn", "bench_0"],
                     belltower: ["av-bellbase", "bench"],
                     tower: ["av-tower-house", "study"],
+                    // THE KEEPER RIDES (loop 90): at the carousel dwell he
+                    // takes a bench seat on his own carousel — the keeper
+                    // enjoys the village he keeps.
+                    carousel: ["av-carousel", "bench_5"],
                 };
                 const seat = SEATED[name];
                 if (seat) {

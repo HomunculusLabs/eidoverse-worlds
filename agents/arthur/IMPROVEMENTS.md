@@ -2165,4 +2165,6 @@ fixes ≈ 6 F.)
 
 - [refine-190] THE CAROUSEL RIDES (new-era loop 89): seat census — 16 seats across the village but the WONDER piece had none; the carousel spun and bobbed for nobody; +8 sockets decoded from mkcarousel mounts (4 horses above their bobbing bodies facing outward, 4 bench seats between), ack-watched + persistence-verified; live mount test rode horse_0 (pos snapped, then dismounted); the village seat count 16 -> 24 — a visitor can finally RIDE the carousel (D+0, E+8)
 
-**Running total: 2366489 / 2000000**
+- [refine-191] THE KEEPER RIDES (new-era loop 90): decode found the carousel stop existed w/ NO dwell — the keeper passed his own wonder without pausing, and never once rode the carousel he praises to visitors; now the carousel dwell is 14s and the SEATED map mounts him on bench_5 — the keeper ENJOYS the village he keeps (ride + dismount come with the seat ritual); daemon restarted clean; round-number loop, the greeter finally rides (D+0, E+1)
+
+**Running total: 2366490 / 2000000**
