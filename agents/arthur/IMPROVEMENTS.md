@@ -2074,4 +2074,6 @@ fixes ≈ 6 F.)
 
 - [refine-145] THE WHISPER (new-era loop 45): the waystone was undiscoverable by design but unfindable in practice; the map board now carries a faint unlabeled smudge at its far corner (SW, past the edge of known things, 0x57503f — quieter than any chip) — no road, no name, just a reason to walk into the field; mapboard rebuilt + re-placed, chip verts verified (D+24, E+1)
 
-**Running total: 2362237 / 2000000**
+- [refine-146] THE GIFT SHELF (new-era loop 46, the visiting agent's objects-to-give): formal offering bowls existed at shrine + monument, but no everyday give-and-take; a two-shelf stand now leans by the inn porch post (4deg r31.5, clear of the door lane) holding four found things — a whelk shell, a river stone, a dried flower sprig, a quartz chunk — and an empty lower spot marked by a cloth scrap, room for the next gift; 8n, shelf + inn-door walks PASS, audit 52 ALL PASS same-loop (D+130, E+1)
+
+**Running total: 2362368 / 2000000**
