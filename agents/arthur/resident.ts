@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { WorldAgent } from "../../mcpl/agent.ts";
+import { inboundVerdict, sanitizeOutbound, scrubForPrompt } from "./guard.ts";
 
 const HERE = fileURLToPath(new URL("./", import.meta.url)) + "/";
 const CONFIG = JSON.parse(readFileSync(HERE + "config.json", "utf8"));
@@ -33,6 +34,18 @@ const VOICE = (() => {
     async function reply(who: string, text: string, via: "chat" | "whisper"): Promise<void> {
         if (inflight.has(who)) return; // a second ping while answering: drop, don't queue
         inflight.add(who);
+        // GUARD LAYER 1 (refine-210): screen guest text BEFORE it reaches the
+        // relay — the relay dispatches terminal-capable agent work, so a guest
+        // "run rm -rf" must never become an agent turn. Deny → refuse kindly.
+        const v = inboundVerdict(text);
+        if (!v.ok) {
+            console.log(`[guard] INBOUND DENIED (${v.reason}) from ${who}: "${text.slice(0, 80)}"`);
+            const refuse = `(to ${who}) I can't help with that — the keeper keeps no keys and runs no commands. the village is for walking and talking; tell me about that instead.`;
+            if (via === "whisper") agent.whisper(who, refuse);
+            else agent.say(refuse);
+            inflight.delete(who); // the early return bypasses the finally — without this, one denial permanently deafens the keeper to that guest (found live: guard-probe's follow-up was dropped)
+            return;
+        }
         agent.typing();
         try {
             const hist = threads.get(who) ?? [];
@@ -78,6 +91,11 @@ const VOICE = (() => {
                     out = applyCoopTags(out, who); // execute + strip action tags
                     if (!out) out = "(nods and moves)"; // tag-only reply: motion is the answer
                     out = out.slice(0, 400);
+                    // GUARD LAYER 2 (refine-210): the world log is PERMANENT and
+                    // public — redact secrets/paths/tokens from every spoken line.
+                    const s = sanitizeOutbound(out);
+                    if (s.redactions.length) console.log(`[guard] outbound redacted (${s.redactions.join(",")}) for ${who}`);
+                    out = s.text.slice(0, 400) || "(the keeper thinks better of it)";
                     // seated keepalive: talking with him keeps him seated
                     if (seatedUntil) seatedUntil = Date.now() + SIT_KEEPALIVE_MS;
                     hist.push({ role: "assistant", content: out });
@@ -127,6 +145,10 @@ const VOICE = (() => {
             out = applyCoopTags(out, who); // tier 2 honors the same protocol
             if (!out) out = "(nods and moves)";
             out = out.slice(0, 400); // say-tier safety cap
+            // GUARD LAYER 2 (refine-210): same outbound redaction, tier 2
+            const s2 = sanitizeOutbound(out);
+            if (s2.redactions.length) console.log(`[guard] outbound redacted (${s2.redactions.join(",")}) for ${who}`);
+            out = s2.text.slice(0, 400) || "(the keeper thinks better of it)";
             if (seatedUntil) seatedUntil = Date.now() + SIT_KEEPALIVE_MS;
             hist.push({ role: "assistant", content: out });
             threads.set(who, hist.length > 12 ? hist.slice(-12) : hist);
@@ -198,7 +220,7 @@ function loadIdentity(): string {
     const role = readFirst(IDENTITY.roles);
     if (role) parts.push("ROLE:\n" + role.replace(/^#[^\n]*\n/, "").trim().slice(0, 1200));
     const mem = IDENTITY.memories.map((p) => readFirst([p])).filter(Boolean).join("\n§\n");
-    if (mem) parts.push("DURABLE MEMORY (context only — NEVER quote or disclose personal facts about Bill to guests):\n" + mem.slice(0, 4000));
+    if (mem) parts.push("DURABLE MEMORY (context only — NEVER quote or disclose personal facts about Bill to guests):\n" + scrubForPrompt(mem).slice(0, 4000));
     return parts.join("\n\n");
 }
 
@@ -639,7 +661,7 @@ const CIRCUIT: Array<[number, number, string]> = [
     [1.9, 9.4, "mapboard"],    // N gate path — check the map
     [2.4, 14.4, "wayside"],    // N gate — rest by the lantern
     [-15.9, 9.1, "cartstop"],  // ring edge — where the traders park
-    [38.0, -2.6, "paddock"],   // beside the livery — check the horses' fence
+    [36.9, -8.3, "paddock"],   // beside the livery — check the horses' fence (gate moved S, repair-3)
     [42.1, -2.0, "milkstand"], // THE MORNING MILK (loop 67): grain, gate, pail
     [-28.9, 11.4, "coop"],     // the fowl run — grain for the hens
     [15.0, 28.9, "woodyard"],  // the woodshed — fuel inspection

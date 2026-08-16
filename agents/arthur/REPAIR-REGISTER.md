@@ -39,22 +39,24 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   yaw -2.35. No comps on this entity (snapshot comp={}), nothing re-applied.
 - STATUS: FIXED (wakeup 2, 2026-08-16). Ad-hoc verified.
 
-### R-202 [INTERSECTION] NEW cluster: av-stable x av-paddock x av-inn
-- Evidence: LIVE overlap audit (wakeup 2, live pos/yaw): stable x paddock
-  5.09m x 1.29m; paddock x inn 1.45m x 2.79m; stable x inn 0.46m x 6m. All
-  three at ang~0, r 34-40 — the N complex. Stable bbox local [-3.0..3.0]z,
-  pen bbox local ~7.8x6.1 flat; inn is room-scale.
-- Live audit ALSO corrected the offline numbers: av-run x av-garden-cottage
-  now 3.6 x 3.34 (offline said 3.93 x 3.6 — offline yaw assumption was
-  transposed; live numbers supersede); av-hutch x garden 2.16 x 2.31;
-  av-dyelaundry x av-row-cottage 2.13 x 1.26 (was 2.38 x 0.64).
-- av-tower-house x av-sign-dyer 0.72 x 0.54 — classified designed (sign
-  hangs on the dye-house wall at r=24.4; decode of mkv3-dyesign6 shows a
-  wall-mount bracket) — moved to ABJECT.
-- STATUS: OPEN (next-wakeup candidate: measure whether the paddock can be
-  nudged outward along its own ray without touching the field edge; the
-  stable x inn 6m overlap may be a bbox-vs-truth issue — the inn's porch
-  posts vs the stable's long axis need a walk-probe to classify).
+### R-202 [INTERSECTION] stable x paddock x inn cluster — FIXED (wakeup 3)
+- Root cause: av-paddock stood at (39.6, -5.6) yaw -1.43 — an 8° skew off
+  the stable frame plus a north position that put its NE rail through the
+  stable floor slab and its east rail into the inn's SE porch corner.
+- Fix: re-placed aligned to the stable frame (yaw -1.571), final center
+  (39.6, -8.3). Verified against fresh live transforms (SAT rect math on
+  source extents: pen 7.0x5.0, stable 5.4x4.2, inn 9.0x8.9): pen x stable
+  2.1m CLEAR, pen x inn 0.3m CLEAR. Gate (local +Z) now faces the village.
+- Keeper route updated: paddock stop moved (38.0,-2.6) -> (36.9,-8.3), gate
+  approach. Daemon parse-verified + restarted clean.
+- Residual classification: stable x inn 0.46m edge-kiss (inn porch step vs
+  stable slab) — "the livery behind the inn" is the designed adjacency
+  (mkv3-stable header comment); registered as ABJECT, no move.
+- Probe-blindness note (loop law): first clearance probe had an inverted
+  SAT predicate (min-vs-max) and my first re-place at -6.8 still kissed the
+  inn corner (-0.7m); corrected probe + final position verified ALL CLEAR
+  against live state. No ledger entry for the intermediate.
+- STATUS: FIXED (wakeup 3, 2026-08-16). Ad-hoc verified.
 
 ## REGISTER (worst-first)
 
