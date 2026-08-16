@@ -2002,4 +2002,6 @@ fixes ≈ 6 F.)
 
 - [refine-109] DUSK MAP COMPLETED (new-era loop 8): light-coverage census found 3 dark gathering spots — map board (dusk readers at the N gate), cart stop (traders unhitching), garden fence gate; 3 warm lights placed, village census now 46 lights, every named gathering spot lit (D+0, E+3)
 
-**Running total: 2355180 / 2000000**
+- [refine-110] THE THIN ARCS FILLED (new-era loop 9): understory census by 30-degree arc found 4 arcs at 38-79v vs 288-401v everywhere else (they flank the 90/270 spokes — the loop-33 spoke guard clamps scatter toward distant anchors); spoke-safe interlude scatter added at 75/105/255/285deg — all four arcs now 289-330v, still 8n, re-placed (D+110, E+1)
+
+**Running total: 2355291 / 2000000**
