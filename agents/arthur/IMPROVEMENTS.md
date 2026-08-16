@@ -2177,4 +2177,6 @@ fixes ≈ 6 F.)
 
 - [refine-196] THE INVITATION (new-era loop 95): the greetings had aged again — the keeper rides the carousel (90) and the signpost points (91) but his own words never asked a visitor to ride; +1 greeting line (6 total): 'the carousel by the inn carries riders now. eight mounts, horses bobbing. I ride it on my rounds. take a horse.' — every claim verified true live BEFORE the restart (8 sockets, 4 bob comps, near the inn, keeper SEATED); daemon restarted clean (D+0, E+1)
 
+- [refine-197] HONEST CORRECTION, same loop (95): the new greeting line first said the carousel stands 'by the inn' — the era-2 say-text memory; the village truth is the era-3 radial rebuild put it N-central (17m from the north gate, 55m from the inn); claim-check BEFORE restart caught it, line corrected to 'by the north gate'; every greeting claim re-verified true; nothing built this entry — the fix is the build (D+0, E+0)
+
 **Running total: 2367165 / 2000000**
