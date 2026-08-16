@@ -2064,4 +2064,6 @@ fixes ≈ 6 F.)
 
 - [refine-140] THE SMITH'S FUEL GETS ITS SOURCE (new-era loop 40): fuel-chain census — the smithy burns charcoal (loop 19 bin) but nothing MADE charcoal; a collier's clamp now smolders near the wood yard (57deg r35): log dome under turf patches, crown vent w/ emissive shimmer + rising wisp discs + smoke comp, a cooled finished pile of black lumps, and the collier's stake + shovel; 7n, approach walk-verified, audit 49 ALL PASS same-loop; village smoke census 9 (D+190, E+1)
 
-**Running total: 2361685 / 2000000**
+- [refine-141] WHERE THE JARS COME FROM (new-era loop 41): pottery census (wheel matches were cart chocks — word-boundary again) — the village uses jars, bowls, bottles, basins but had no potter; a potter's stand now works beside the kiln (58deg r45.5): kick wheel w/ flywheel + a pot mid-throw, water bucket, clay wedge under damp cloth, drying rack w/ 3 green pots, fired ware stack + jug; 8n, stand + kiln-mouth walks PASS, audit 50 ALL PASS same-loop (D+240, E+1)
+
+**Running total: 2361926 / 2000000**
