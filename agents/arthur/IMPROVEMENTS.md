@@ -2098,4 +2098,6 @@ fixes ≈ 6 F.)
 
 - [refine-157] THE READER SITS TO READ (new-era loop 58): seated-dwell census — the keeper reads in the study (15s dwell) but stood to do it while 3 other stops sat; the study socket is now mapped, the keeper sits at the desk for his reading (av-tower-house study); 4 seated stops of 8 dwells (market stands as a trader should, coop/woodyard/garden are work) (D+0, E+1)
 
-**Running total: 2362512 / 2000000**
+- [refine-158] THE VILLAGE GREETS (new-era loop 59): spawn decode — only bill holds a remembered pose; every NEW visitor materializes at the plaza heart, the village best face but unoriented; a welcome board now stands at the S plaza rim (235deg r5.2, facing the hearth): THE COMMONS name bar + 4 pointer arms (N road+gate, E well, SW monument, SE market); board + S-lane walks PASS, audit 54 ALL PASS same-loop (D+90, E+1)
+
+**Running total: 2362603 / 2000000**
