@@ -60,32 +60,28 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 
 ## REGISTER (worst-first)
 
-### R-101 [INTERSECTION] av-run × av-garden-cottage — LIVE: 3.6m × 3.34m
-- Walk-test side-finding (wakeup 3): sim log "support seam on av-run —
-  uneven top (lie 0.11m) without a usable grid — abstaining, no box". The
-  run's mesh reads as uneven-topped to the collider classifier; when this
-  defect is fixed (re-place clear of the beds), also consider the shape.
-- Evidence: composed footprints. run3 bbox local
-  [-1.6..1.6]x[0.34..2.65]; garden3 extends to local x -4.85 (garden beds W
-  side). At plan (r=24, ang=150) vs (r= 26, ang=144) the run's local +Z
-  (world +X at yaw≈324°… verify) penetrates the cottage garden beds.
-- Class: INTERSECTION (accidental — run placed "beside the garden fence",
-  but its foot overlaps the beds ~2.4m x ~2.0m in the worst axis pair).
-- Planned fix: move av-run along the fence line (away from beds, keep rider
-  adjacency to hutch), verify ≥0.3m clearance numerically post-place.
-- STATUS: OPEN
-- Live-verify: /geom id=av-run + av-garden-cottage; walk-probe not needed
-  (furniture-scale).
-
-### R-102 [INTERSECTION] av-hutch × av-garden-cottage — 2.31m × 2.16m
-- Evidence: same audit. hutch3 local bbox [-0.62..1.22]x[-0.38..1.2] roughly,
-  at r=24 ang=150; garden beds extend to local -4.85 (W side, toward hutch).
-- Class: accidental overlap of hutch into the cottage garden beds — hutch
-  plan comment says "beside the garden fence" (deliberate adjacency), but the
-  numeric overlap (2.3 x 2.2) reads as buried-in rather than beside.
-- Planned fix: shift hutch + run together (keep hutch→run rider spacing)
-  along fence, clear of beds; verify clearance.
-- STATUS: OPEN
+### R-101 [INTERSECTION + COLLISION] av-run × cottage apron/door-lane — FIXED (wakeup 4)
+### R-102 [INTERSECTION] av-hutch × cottage apron — FIXED (wakeup 4)
+- Root cause (decoded at source, live): the hutch sat at cottage-local
+  (2.55, 2.10) — ON the cottage's front-right floor apron, inside the 2.0 x
+  1.5m clear apron the door lane requires; the run (3.2 x 2.3m) covered part
+  of the door lane itself. "Beside the garden fence" (plan comment) was never
+  true at these coordinates.
+- Fix: pair relocated to open ground south of the garden fence's east end:
+  hutch (-28.0, 17.8) yaw 0, run (-28.0, 19.8) yaw 0 — run gate abuts the
+  hutch (0.12m, designed adjacency), both face east toward the track.
+  Verified vs fresh live transforms: hutch x slab 1.08m / x fence 2.48m;
+  run x slab 0.4m / x fence 4.04m; door apron 10.1m clear (was on the lane).
+  Two-way MCPL walk-test (fresh body): track point 0.35m, hutch front 0.30m,
+  coop-side exit 0.39m, cottage door apron now WALKABLE at 0.28m — the door
+  lane defect is closed with the move.
+- Placer bug decoded (probe blindness, not a village defect): first placer
+  gated verb 2 on a second snapshot that never comes — verbs are timer-paced
+  now; av-run landed on the retry placer.
+- Residual (registered, not fixed this wakeup): sim still abstains support
+  on av-run ("uneven top, lie 0.11m") — the run's mesh reads uneven-topped
+  to the classifier. Cosmetic-class; candidate for a mesh refinement pass.
+- STATUS: FIXED (wakeup 4, 2026-08-16). Ad-hoc verified.
 
 ### R-3xx [INTERSECTION] av-forge × av-court — 2.69m × 2.2m
 - Evidence: forge3 local bbox [-0.87..1.46]x[-0.78..0.6] at r=26.5 ang=322;
