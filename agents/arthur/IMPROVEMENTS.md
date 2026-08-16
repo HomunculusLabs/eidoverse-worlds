@@ -1989,4 +1989,6 @@ fixes ≈ 6 F.)
 
 - [refine-102] RAIN BARRELS (new-era loop 1): coopered barrels under 4 eave corners (house/longhouse/inn/bunkhouse) — staves, double iron hoops, water surface, tilted diverter plank from the eave; 4 builds x 4n, all live at plan slots clear of door lanes (D+500, E+4)
 
-**Running total: 2354558 / 2000000**
+- [refine-103] HERITAGE SPURS (new-era loop 2): trodden approaches to the off-path landmarks — shrine (189deg), watchpost (315deg), wayside (81deg) now reached by hash-worn paver spurs from the ring road, same wear language as every path; all 3 walk-verified 0.3-0.4m arrivals; door service intact (D+144, E+1)
+
+**Running total: 2354703 / 2000000**
