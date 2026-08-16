@@ -2050,4 +2050,6 @@ fixes ≈ 6 F.)
 
 - [refine-133] THE WALK HOME IS LIT (new-era loops 32-33, after loop-31 closeout): 8 iron street lamps at spoke midpoints (r10 — the dark stretch between plaza glow and door-path lamps): tapered posts, drip pans, emissive lantern cores + 8 light comps; spoke walk verified past a lamp; audit 44 ALL PASS same-loop; village light census 49 (8 new) (D+420, E+9)
 
-**Running total: 2360336 / 2000000**
+- [refine-134] THE FAR WALKS GET THEIR REST (new-era loop 34): seat census by radius — every near/mid destination has a seat, but the two farthest walks (mill r37, stable r40) ended seatless; two resting benches in the wayside language (slab + feet + lantern post w/ emissive core) now stand at the mill yard edge and the stable front; both walk-verified 0.4m; audit 46 ALL PASS same-loop (D+170, E+2)
+
+**Running total: 2360508 / 2000000**
