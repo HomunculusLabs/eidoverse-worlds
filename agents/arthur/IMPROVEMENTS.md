@@ -2169,4 +2169,6 @@ fixes ≈ 6 F.)
 
 - [refine-192] THE CAROUSEL ARM (new-era loop 91): deep-census round — lights balanced (11/15/19/17 by quadrant), hearth healthy (particles + light), audit parity EXACT 67/67; the found gap: the welcome board's 4 arms pointed road/monument/well/market but NOT at the village's signature wonder; +1 arm (ESE, the carousel at r32/126 plainly visible from spawn) — the first thing a visitor reads now includes the invitation to ride; artifact rebuilt (5 arms, band verts verified), board re-placed same-position (comps were empty, nothing to re-apply) (D+30, E+1)
 
-**Running total: 2366521 / 2000000**
+- [refine-193] THE INN DOOR (new-era loop 92): door census — doorGapWall means every door in the village is a GAP, no leaf anywhere; the shutters (72) established windows close but doors never did; the inn — the public house — gets its door: 5-plank leaf w/ 3 battens, strap hinges, ring handle, LATCH LIFTED, standing AJAR ~35deg on its hinge line; rides the inn frame (dist 0.000, yaw match) so the swing lands beside the threshold; walks PASS (through the door + porch clear), audit 68 ALL PASS same-loop; the village reads lived-in at its most public threshold (D+140, E+1)
+
+**Running total: 2366662 / 2000000**
