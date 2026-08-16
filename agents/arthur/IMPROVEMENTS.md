@@ -1965,4 +1965,6 @@ fixes ≈ 6 F.)
 
 - [refine-90] FRESHNESS + DRIFT AUDIT (milestone 90): all 23 glbs newer than their sources (zero stale builds); the 3 most-rebuilt artifacts (plaza/court/inn) verified byte-identical live via content-hash re-upload — NO DRIFT between local builds and the standing village (D+0, E+1)
 
-**Running total: 2352141 / 2000000**
+- [refine-91] THE LONGHOUSE GETS ITS BEAMS: 3 oak tie beams now cross wall-to-wall under the ridge (108v — the visible roof structure a real hall reads from inside) and the herb bundles re-anchored to hang directly beneath them; 14n, walk-test PASS (D+108, E+1)
+
+**Running total: 2352250 / 2000000**
