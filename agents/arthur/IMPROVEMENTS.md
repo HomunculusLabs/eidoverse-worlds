@@ -2124,4 +2124,6 @@ fixes ≈ 6 F.)
 
 - [refine-170] THE DYE HOUSE (new-era loop 70): cloth-chain final step — the weaver wove but nothing was ever dyed; an open dye shelter now stands behind her row (118deg r27): 4 posts + slanted roof + windbreak boards, 3 wood vats w/ tinted liquors (flax-flower blue, madder red, weld yellow) banded in iron, a stirring pole, and a drying line — one strip dyed blue, one still bone-white waiting; chain complete: flax -> ret -> stook -> spin -> weave -> DYE -> wear; walk PASS, audit 60 ALL PASS same-loop (D+240, E+1)
 
-**Running total: 2364573 / 2000000**
+- [refine-171] THE MAP CATCHES UP (new-era loop 71): the board still showed the era-3 core while the village grew past it; +9 marks (same 1:31 scale): grainfield + flax/pond W, quarry + kiln NE, goats + milkstand NE, dyehouse NW (its chip dyed the cloth-blue), charcoal clamp, welcome board; positional verify PASS (156 far-E verts, 54 far-W), audit 60 ALL PASS, map re-placed (D+120, E+0)
+
+**Running total: 2364693 / 2000000**
