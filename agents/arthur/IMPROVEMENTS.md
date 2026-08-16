@@ -1961,4 +1961,6 @@ fixes ≈ 6 F.)
 
 - [refine-88] DRAW-CALL CENSUS + WATCHPOST EMBERS: village-wide mesh-node census = 340 draw calls across 23 artifacts (worst: carousel 40 — all architecture-minimal); the watchpost brazier glowed but had NO particles — embers comp added at the computed brazier position (yaw-transformed), the sentry fire now lives (D+0, E+1)
 
-**Running total: 2352043 / 2000000**
+- [refine-89] DOOR CENSUS + THE LAST DOOR FRAMED: measured door clearances across all 10 buildings (all conform 2.2-2.5m; mill tailpole decoded on the far side); the tower was the one door without craft — bone jambs + lintel bar added (72v + 24v), walk-test PASS (D+96, E+1)
+
+**Running total: 2352140 / 2000000**
