@@ -1996,4 +1996,6 @@ fixes ≈ 6 F.)
 - [refine-105] THE MARKET CART STOP (new-era loop 4): a trader's stand at the ring edge off the market approach — angled wheel chocks, standing hay roll w/ band, two-step mounting block, tether post w/ iron ring; walk-verified (stop + market leg) (D+290, E+1)
 - [refine-106] CART STOP ROAD OVERLAP FIXED (loop 5): the hayroll rim grazed the ring road's inner paver face by 12cm (10 verts decoded at source) — nudged 0.25m inward; 0 verts past the paver line, both walk legs still PASS (D+0, E+0)
 
-**Running total: 2355175 / 2000000**
+- [refine-107] AUDIT COVERAGE CAUGHT UP AGAIN: the 8 new-era builds (rainbarrels x4, fences x2, bellbase, cartstop) audited — all CLEAN (spec/sane/degen/NaN) — and folded into the permanent deep-audit list (23 -> 31 files); ALL PASS on the full set (D+0, E+1)
+
+**Running total: 2355176 / 2000000**
