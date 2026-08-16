@@ -2118,4 +2118,6 @@ fixes ≈ 6 F.)
 
 - [refine-167] THE KEEPER MILKS (new-era loop 67): the milkstand stood but the keeper never came; circuit +1 stop (milkstand at 42.1,-2.0, the 32nd) + 12s milking dwell — grain, gate, pail; daemon restarted, approach walk PASS (D+0, E+1)
 
-**Running total: 2363920 / 2000000**
+- [refine-168] THE MILK CHURN (new-era loop 68): the pail needed a destination; a coopered stave churn w/ iron hoops + knobbed lid + bone label plate now stands on the inn porch beside the gift shelf (3deg r30.4), with a cloth-covered morning jug; the chain reads goat -> pail -> churn -> kitchen; churn + inn-door walks PASS, audit 58 ALL PASS same-loop (D+130, E+1)
+
+**Running total: 2364051 / 2000000**
