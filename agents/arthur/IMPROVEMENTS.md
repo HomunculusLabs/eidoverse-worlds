@@ -2054,4 +2054,6 @@ fixes ≈ 6 F.)
 
 - [refine-135] THE SECOND ERA RECORDED (new-era loop 35): Amendment 12 written into VILLAGE_PLAN — the loops 101-135 LIFE layer (fences, barrels, animals, working yards, hearth craft, the living keeper) plus the verification culture; census: 112 models, 161 entities, 49 lights, 18 motion-bearing (vs 23/124/48/10 at loop 100) (D+0, E+1)
 
-**Running total: 2360509 / 2000000**
+- [refine-136] WHERE THE STONE COMES FROM (new-era loop 36): material census — every wall is cut stone but no quarry existed anywhere; a quarry trace now stands NE beyond the ring (45deg r48): 3-tier stepped cut face w/ tool marks, size-graded rubble scatter, a half-extracted block w/ feather gap, a loaded stone sledge on runners, 2 crowbars, and a mason lamp; 10n, approach walk-verified, audit 47 ALL PASS same-loop (D+380, E+1)
+
+**Running total: 2360890 / 2000000**
