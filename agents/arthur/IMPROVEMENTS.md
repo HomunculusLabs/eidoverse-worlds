@@ -2036,4 +2036,6 @@ fixes ≈ 6 F.)
 
 - [refine-126] THE HENS GET THEIR CARE (new-era loop 25): husbandry census — pecking hens but no feeder or waterer; a raised feeder trough w/ visible grain + a stone-sided water dish w/ water surface now stand in the run, clear of the 3 hen stations; coop 7n, walk-verified, audit 42 ALL PASS (D+90, E+1)
 
-**Running total: 2358973 / 2000000**
+- [refine-127] THE INN COOKS (new-era loop 26): food-chain census (one false alarm decoded — the plaza cooking rig exists, my grep missed tpod_) — the inn hearth was a fireplace, not a kitchen; it gains a swung iron HEARTH CRANE (post, arm, hook, hanging kettle) + a frying pan on a 3-leg trivet; inn 30n, all 10 landmark comps re-applied post-place, walk PASS (D+220, E+1)
+
+**Running total: 2359194 / 2000000**
