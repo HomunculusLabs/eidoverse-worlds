@@ -262,8 +262,20 @@ let circuitWalking = false;
 setInterval(() => {
     if (agent.draggedBy || circuitWalking) return;
     if (Date.now() - lastControlAt < 180_000) return; // operator has the wheel
-    const [x, z, name] = CIRCUIT[circuitLeg % CIRCUIT.length];
+    // NIGHT MODE (new-era loop 30): 21:00-05:00 local — the keeper doesn't
+    // tour fields in the dark. He keeps a small lamp-lit round: hearth,
+    // home, bell bench. Anything else waits for dawn.
+    const hour = new Date().getHours();
+    const night = hour >= 21 || hour < 5;
+    const NIGHT_CIRCUIT: Array<[number, number, string]> = [
+        [0, 1.8, "plaza-hearth-south"],
+        [4.9, 4.9, "belltower"],
+        [21, 15.3, "home"],
+    ];
+    const route = night ? NIGHT_CIRCUIT : CIRCUIT;
+    const idx = night ? circuitLeg % NIGHT_CIRCUIT.length : circuitLeg % CIRCUIT.length;
     circuitLeg++;
+    const [x, z, name] = route[idx];
     // claim the wheel while the keeper walks his round — otherwise the
     // idle-shift below steals the body every 60s mid-leg and cancels the
     // walk (root cause of the 76-leg false streak; loop #80)

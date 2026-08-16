@@ -2044,4 +2044,6 @@ fixes ≈ 6 F.)
 
 - [refine-130] THE KEEPER WORKS (new-era loop 29): dwell census — 4 rest dwells but zero work dwells; the keeper now TENDS at the coop (12s), SPLITS at the woodyard (10s), TENDS the garden (10s), and READS in the tower study (15s); 8 dwells total across the 28-stop circuit, daemon restarted, legs still arriving (D+0, E+1)
 
-**Running total: 2359617 / 2000000**
+- [refine-131] THE KEEPER SLEEPS (new-era loop 30): time census — zero hour-awareness, the keeper toured fields at 3am; NIGHT MODE added: 21:00-05:00 the circuit collapses to a 3-stop lamp-lit round (hearth, bell bench, home), full 28-stop circuit by day; caught my own increment bug (day legs would have frozen at one stop) before restart; daemon live, legs incrementing (D+0, E+1)
+
+**Running total: 2359618 / 2000000**
