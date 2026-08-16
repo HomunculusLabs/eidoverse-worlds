@@ -51,6 +51,8 @@ const VOICE = (() => {
                     `[FOLLOW <name>] to walk with the speaker (or a named player) and stay near them, ` +
                     `[COME] to walk to the speaker once, ` +
                     `[GO <landmark>] to walk to a named place (windmill, inn, carousel, forge, bakery, hall, shrine, tower, garden, home...), ` +
+                    `[SIT] to take the nearest seat near the speaker and sit with them (use when invited to sit, resting, chatting a while), ` +
+                    `[STAND] to rise, ` +
                     `[STOP] to stand still. ` +
                     `Tags are stripped before speaking — they are not part of the sentence. Use them freely when invited or when leading. ` +
                     `Reply in ONE short chat message (under 60 words, no markdown, no emoji). Speak as a neighbor, not an assistant.`;
@@ -74,6 +76,8 @@ const VOICE = (() => {
                     out = applyCoopTags(out, who); // execute + strip action tags
                     if (!out) out = "(nods and moves)"; // tag-only reply: motion is the answer
                     out = out.slice(0, 400);
+                    // seated keepalive: talking with him keeps him seated
+                    if (seatedUntil) seatedUntil = Date.now() + SIT_KEEPALIVE_MS;
                     hist.push({ role: "assistant", content: out });
                     threads.set(who, hist.length > 12 ? hist.slice(-12) : hist);
                     if (via === "whisper") agent.whisper(who, out);
@@ -121,6 +125,7 @@ const VOICE = (() => {
             out = applyCoopTags(out, who); // tier 2 honors the same protocol
             if (!out) out = "(nods and moves)";
             out = out.slice(0, 400); // say-tier safety cap
+            if (seatedUntil) seatedUntil = Date.now() + SIT_KEEPALIVE_MS;
             hist.push({ role: "assistant", content: out });
             threads.set(who, hist.length > 12 ? hist.slice(-12) : hist);
             if (via === "whisper") agent.whisper(who, out);
@@ -201,10 +206,16 @@ function loadIdentity(): string {
 //   [FOLLOW <who>]  shadow a player at conversational distance
 //   [COME]          walk to the current speaker
 //   [GO <landmark>] walk to a named circuit waypoint
+//   [SIT]           take the nearest seat near the speaker (sockets comp)
+//   [STAND]         rise from a seat
 //   [STOP]          stand still (ends follow; circuit resumes later)
 // Follow is time-boxed (5 min) and self-heals if the target leaves.
+// Seated-keepalive: while seated, each answered exchange extends the sit,
+// so the keeper stays in the chair as long as the conversation does; any
+// walk (FOLLOW/GO/COME) auto-dismounts and clears it.
 let followWho: string | null = null;
 let followUntil = 0;
+let seatedUntil = 0;
 const FOLLOW_MS = 5 * 60_000;
 const CIRCUIT_NAMES: Array<[number, number, string]> = []; // filled after CIRCUIT is defined
 function endFollow(reason: string) {
@@ -212,6 +223,59 @@ function endFollow(reason: string) {
     followWho = null;
     console.log(`[coop] follow ended (${reason})`);
 }
+// ---- sitting (refine-207): find the nearest seat to a point ----
+// The village's seats are entities carrying a `sockets` comp. Walk the live
+// entity map, find socket slots within SEAT_SCAN_R of the speaker, pick the
+// nearest not occupied by another player (mounts map), mount it.
+const SEAT_SCAN_R = 14;
+function seatNear(x: number, z: number): { ent: string; slot: string; pos: [number, number] } | null {
+    let best: { ent: string; slot: string; pos: [number, number] } | null = null;
+    let bestD = Infinity;
+    for (const [id, e] of agent.entities) {
+        if (!e.comp?.sockets || !Array.isArray(e.pos)) continue;
+        for (const [slot, sock] of Object.entries(e.comp.sockets as Record<string, any>)) {
+            const sp = (sock as any)?.pos;
+            if (!Array.isArray(sp) || sp.length < 2) continue;
+            // entity pos + slot offset (model-local, unrotated approximation
+            // is fine at seat scale — slots sit within ~1m of the parent)
+            const wx = e.pos[0] + Number(sp[0] ?? 0);
+            const wz = e.pos[2] + Number(sp[2] ?? 0);
+            const d = Math.hypot(wx - x, wz - z);
+            if (d > SEAT_SCAN_R) continue;
+            if (d < bestD) {
+                best = { ent: id, slot, pos: [wx, wz] };
+                bestD = d;
+            }
+        }
+    }
+    return best;
+}
+function isSeatTaken(ent: string, slot: string): boolean {
+    for (const [who, ride] of agent.mounts) {
+        if (ride.to === ent && (!slot || ride.slot === slot)) return true;
+    }
+    return false;
+}
+function trySitNear(speaker: string): boolean {
+    const pose = agent.people.get(speaker)?.pose;
+    if (!pose) return false;
+    const [x, , z] = pose.p;
+    // walk close first (mounts are proximity-gated ~4m server-side; the walk
+    // also auto-dismounts any current seat per walkTo's contract)
+    const seat = seatNear(x, z);
+    if (!seat) { console.log(`[coop] SIT: no seat within ${SEAT_SCAN_R}m of ${speaker}`); return false; }
+    if (isSeatTaken(seat.ent, seat.slot)) { console.log(`[coop] SIT: nearest seat ${seat.ent}.${seat.slot} taken — standing by`); return false; }
+    agent.walkTo(seat.pos[0], seat.pos[1]).then((ok) => {
+        if (!ok) { console.log(`[coop] SIT walk failed`); return; }
+        try {
+            agent.verb("mount", { id: agent.name ?? "arthur", to: seat.ent, slot: seat.slot });
+            seatedUntil = Date.now() + SIT_KEEPALIVE_MS;
+            console.log(`[coop] seated at ${seat.ent}.${seat.slot} near ${speaker}`);
+        } catch (e) { console.log(`[coop] mount failed: ${(e as Error).message}`); }
+    });
+    return true;
+}
+const SIT_KEEPALIVE_MS = 90_000; // each answered exchange extends this
 function coopAct(tag: string, arg: string, speaker: string) {
     const a = arg.trim();
     if (tag === "STOP") {
@@ -219,6 +283,16 @@ function coopAct(tag: string, arg: string, speaker: string) {
         endFollow("stop tag");
         lastControlAt = Date.now() + 120_000 - 180_000; // circuit yields ~2 min
         console.log(`[coop] STOP (stand)`);
+        return true;
+    }
+    if (tag === "SIT") {
+        endFollow("sit");
+        return trySitNear(speaker);
+    }
+    if (tag === "STAND") {
+        try { agent.verb("dismount", { id: agent.name ?? "arthur" }); } catch {}
+        seatedUntil = 0;
+        console.log(`[coop] stood up`);
         return true;
     }
     if (tag === "FOLLOW" || tag === "COME") {
@@ -249,11 +323,23 @@ function coopAct(tag: string, arg: string, speaker: string) {
 }
 // strip action tags from a relay reply, executing them; returns spoken prose
 function applyCoopTags(out: string, speaker: string): string {
-    return out.replace(/\[(FOLLOW|COME|GO|STOP)([^\]]*)\]/g, (m, tag, arg) => {
+    return out.replace(/\[(FOLLOW|COME|GO|SIT|STAND|STOP)([^\]]*)\]/g, (m, tag, arg) => {
         coopAct(tag, String(arg), speaker);
         return "";
     }).replace(/\s+/g, " ").trim();
 }
+// seated-keepalive: a live exchange extends the sit; silence expires it.
+// checked from the SIT mount onward; any walk tears it down via walkTo's
+// auto-dismount, and the keepalive gate below stands him up on expiry.
+function seatedTick() {
+    if (!seatedUntil) return;
+    if (Date.now() > seatedUntil) {
+        seatedUntil = 0;
+        try { agent.verb("dismount", { id: agent.name ?? "arthur" }); } catch {}
+        console.log(`[coop] sit expired — standing`);
+    }
+}
+setInterval(seatedTick, 15_000);
 // the follow loop: shadow the target's live pose at conversational distance
 setInterval(() => {
     if (!followWho) return;
@@ -560,6 +646,7 @@ let circuitWalking = false;
 setInterval(() => {
     if (agent.draggedBy || circuitWalking) return;
     if (followWho) return;                     // coop: keeper walks WITH someone
+    if (seatedUntil) return;                   // coop: keeper is seated nearby
     if (Date.now() - lastControlAt < 180_000) return; // operator has the wheel
     // NIGHT MODE (new-era loop 30): 21:00-05:00 local — the keeper doesn't
     // tour fields in the dark. He keeps a small lamp-lit round: hearth,
