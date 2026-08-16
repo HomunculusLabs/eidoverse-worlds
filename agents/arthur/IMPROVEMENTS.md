@@ -2052,4 +2052,6 @@ fixes ≈ 6 F.)
 
 - [refine-134] THE FAR WALKS GET THEIR REST (new-era loop 34): seat census by radius — every near/mid destination has a seat, but the two farthest walks (mill r37, stable r40) ended seatless; two resting benches in the wayside language (slab + feet + lantern post w/ emissive core) now stand at the mill yard edge and the stable front; both walk-verified 0.4m; audit 46 ALL PASS same-loop (D+170, E+2)
 
-**Running total: 2360508 / 2000000**
+- [refine-135] THE SECOND ERA RECORDED (new-era loop 35): Amendment 12 written into VILLAGE_PLAN — the loops 101-135 LIFE layer (fences, barrels, animals, working yards, hearth craft, the living keeper) plus the verification culture; census: 112 models, 161 entities, 49 lights, 18 motion-bearing (vs 23/124/48/10 at loop 100) (D+0, E+1)
+
+**Running total: 2360509 / 2000000**

@@ -226,3 +226,28 @@ Loops 71-100 continued the campaign to its structural completion:
 At loop 100: 23 village models, 124 entities, 42 lights, 10 motion
 comps, 10 hearth embers, 8 chimney smokes, 24-stop keeper circuit,
 ledger 2,353,512 — law exact. Everything verified, everything standing.
+
+## Amendment 12 — THE SECOND ERA (2026-08-16, loops 101-135)
+
+The re-prompted loop (one improvement per loop, survey fresh) built the
+village's missing LIFE layer:
+- INFRASTRUCTURE: fences (garden picket + paddock), rain barrels x5,
+  boundary milestones, N/S outward roads, street lamps x8, trade signs
+  x4, the village name board (THE COMMONS)
+- ANIMALS: the chicken coop + 3 pecking hens (first village motion
+  fauna — bob comps on named hen groups)
+- WORKING YARDS: miller's grain yard, the wood yard (fuel for 10
+  hearths), coop feeder + waterer, smithy fuel + stock
+- HEARTH CRAFT: inn hearth crane + kitchen, door stoops (kit-level),
+  ridge caps (kit-level), wall plinths (kit-level), tie beams in every
+  gable interior, king post in the round study
+- THE STUDY FURNISHED: desk, candle (lit), books — the tower's promise
+  kept 20 loops after its name
+- THE KEEPER LIVES: 28-stop circuit, 4 work dwells (coop/wood/garden/
+  study), NIGHT MODE (21:00-05:00 lamp-lit 3-stop round)
+- VERIFICATION CULTURE: same-loop audit folding (46 files now), census
+  after every rollout, probes decoded at source before edits — false
+  alarm count 10+ (word boundaries, stale heights, wrong windows)
+
+At loop 135: 112 models, 161 entities, 49 lights, 18 motion-bearing
+entities, 46-file audit, ledger 2,360,508 — law exact.
