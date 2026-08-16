@@ -2102,4 +2102,6 @@ fixes ≈ 6 F.)
 
 - [refine-159] DISK GUARD (new-era loop 61): the loop-60 greeting work was cut off mid-turn by mkstemp ENOSPC — the disk hit 99% (11Gi free); loop-61 survey made the SYSTEM the gap: swept hermes T-dir residue (21 files, snap/verify/blocked scripts, 4.7MB results) and recorded the disk situation honestly — the big consumers (kotlin logs, caches, xpi) are OUTSIDE my lane and belong to bill; work continues but large-file operations now watch df (D+0, E+0)
 
-**Running total: 2362603 / 2000000**
+- [refine-160] THE KEEPER SPEAKS OF THE VILLAGE THAT STANDS (new-era loops 60-61, ENOSPC-interrupted, disk freed by bill): decode found the greeting lines still describing era-2 — mason works, east hamlets, cloister fountains, a river-field labyrinth, ALL swept in the era-3 rebuild; the hospitality voice now speaks true: the Commons, the ringable bell, the gift-shelf pact, the waystone whisper on the map, the working mill; mention answer updated too; daemon restarted clean (D+0, E+1)
+
+**Running total: 2362604 / 2000000**

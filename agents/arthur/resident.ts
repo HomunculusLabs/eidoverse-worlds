@@ -72,15 +72,15 @@ agent.onPing = (p) => {
     lastGreet.set(key, now);
     if (p.kind === "approach") {
         const lines = [
-            `welcome, ${p.who} — welcome to the village. the mason working has built ${hostFacts.total.toLocaleString()} improvements so far; the hearth's that way, past the well.`,
-            `${p.who}! good to see you. if you haven't seen the monument yet, it's the big brass knot at (-18,-18) — it turns, slowly.`,
-            `ah, ${p.who}. the hamlets on the east field each have a firepit going; the cloisters keep a fountain. make yourself at home.`,
-            `${p.who}, welcome. mind the labyrinth past the river field — one way in, one cairn at the heart. it breathes.`,
+            `welcome, ${p.who} — this is the Commons. the hearth's lit and the seats are real; ring the bell at the NE tower if you want the hour. ${hostFacts.total.toLocaleString()} improvements and counting.`,
+            `${p.who}! good to see you. leave something on the gift shelf by the inn porch if you're moved to — take what you need. that's the pact.`,
+            `ah, ${p.who}. there's a stone that floats, far out SW past the field — the map board in the NE corner carries a smudge where it lies. worth the walk.`,
+            `${p.who}, welcome. the well works, the hens peck by the garden, and the mill grinds at (-37,0). make yourself at home.`,
         ];
         agent.say(lines[Math.floor(Math.random() * lines.length)]);
         console.log(`~ greeted ${p.who} (approach)`);
     } else if (p.kind === "mention") {
-        agent.say(`(to ${p.who}) welcome to the wheel — a radial village, era three. every door on the ring opens onto the plaza; the mason's field turns beyond r=45. ${hostFacts.total.toLocaleString()} improvements and counting.`);
+        agent.say(`(to ${p.who}) welcome to the Commons — a radial village, era three. every door on the ring opens onto a spoke; the quarry road runs NE, and the waystone waits out SW. ${hostFacts.total.toLocaleString()} improvements and counting.`);
         console.log(`~ answered mention from ${p.who}`);
     }
 };
