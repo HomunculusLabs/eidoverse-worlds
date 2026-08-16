@@ -2120,4 +2120,6 @@ fixes ≈ 6 F.)
 
 - [refine-168] THE MILK CHURN (new-era loop 68): the pail needed a destination; a coopered stave churn w/ iron hoops + knobbed lid + bone label plate now stands on the inn porch beside the gift shelf (3deg r30.4), with a cloth-covered morning jug; the chain reads goat -> pail -> churn -> kitchen; churn + inn-door walks PASS, audit 58 ALL PASS same-loop (D+130, E+1)
 
-**Running total: 2364051 / 2000000**
+- [refine-169] THE FLAX FIELD + RETTING POND (new-era loop 69): fiber census — the weaver works but nothing grew her thread; a flax strip now stands S of the grain field (187deg r44): thinner stalks w/ blue blooms on half, a dark retting pond w/ stone lip + 2 soaking bundles, and a teepee stook of dried stalks at the edge; the fiber chain reads flax -> pond -> dry stook -> weaver; walks PASS, audit 59 ALL PASS same-loop (D+280, E+1)
+
+**Running total: 2364332 / 2000000**
