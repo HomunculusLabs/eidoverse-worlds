@@ -2038,4 +2038,6 @@ fixes ≈ 6 F.)
 
 - [refine-127] THE INN COOKS (new-era loop 26): food-chain census (one false alarm decoded — the plaza cooking rig exists, my grep missed tpod_) — the inn hearth was a fireplace, not a kitchen; it gains a swung iron HEARTH CRANE (post, arm, hook, hanging kettle) + a frying pan on a 3-leg trivet; inn 30n, all 10 landmark comps re-applied post-place, walk PASS (D+220, E+1)
 
-**Running total: 2359194 / 2000000**
+- [refine-128] THE WOOD YARD (new-era loop 27): fuel census (another word-boundary false positive: "cord" inside "record") — 10 hearths but no seasoned stock; a 3-sided woodshed now stands behind the longhouse: 5 posts, back windbreak boards, slanted lean-to roof, 5 rows of stacked cordwood (87 logs, split faces alternating), splitting stump w/ embedded axe, kindling bundle; audit 43 ALL PASS same-loop; yard + longhouse door walk-verified (D+420, E+1)
+
+**Running total: 2359615 / 2000000**
