@@ -2153,4 +2153,6 @@ fixes ≈ 6 F.)
 
 - [refine-184] THE POND DUCKS (new-era loop 83): pond-life census — two ponds stood empty of life; three mallards now ride the field pond (same frame, dist 0.000): one swimming low w/ a wake V, one UP-ENDING head-down tail-up (the classic pond read), one standing on the rim rock w/ the drake's white neck ring; bill keeps ducks in the waking world — now the commons does too; audit 64 ALL PASS same-loop (D+240, E+1)
 
-**Running total: 2365887 / 2000000**
+- [refine-185] THE RABBIT HUTCH (new-era loop 84): homestead census — bill keeps goats, ducks, AND bunnies; the commons mirrored two of three; a hutch now stands beside the garden (150deg r24): raised two-compartment box w/ wire-front gaps, one lid closed one PROPPED OPEN, ramp to the ground, straw spilled at its foot; 2 rabbits — a lopped-ear loaf in the open compartment, a stretched mid-hopper on the grass — the homestead trio complete: goats (65), ducks (83), bunnies (84); walks PASS (hutch + garden approach), audit 65 ALL PASS same-loop (D+330, E+1)
+
+**Running total: 2366218 / 2000000**
