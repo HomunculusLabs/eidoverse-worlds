@@ -2189,4 +2189,6 @@ fixes ≈ 6 F.)
 
 - [refine-202] THE CENTENNIAL MAP (new-era loop 100): the lag class recurs a third time — 6 builds since 87 stood unmarked; +5 marks (same 1:31): harvest cart in straw-yellow, the laundry line in bone, the bakery cistern in water-dark, THE FORGE in ember-orange (the only BRIGHT mark on the board — fire reads), and the way-lamp as a tiny warm dot on the whisper ray; the inn door rides the inn (too small to mark); the whisper stays a whisper; board re-placed, audit 72 ALL PASS (D+65, E+0)
 
-**Running total: 2367865 / 2000000**
+- [refine-203] THE MENTION FIX (bill's question in the terminal, 2026-08-16 ~21:41): bill asked why arthur was not responding in eidoverse; decode found the daemon's own greeting-dedupe (10-min per-guest, written for approaches) was gating MENTIONS on the same key — bill's 2nd/3rd/4th pings inside the window were silently swallowed (log shows 1 answered, 3 dropped); fix: mentions dedupe on their own key w/ a 20s refractory only — a direct address always answers; approaches keep the 10-min courtesy; live-fire verified (test mention answered instantly), daemon restarted, direct apology + welcome said to bill in-world (D+0, E+1)
+
+**Running total: 2367866 / 2000000**

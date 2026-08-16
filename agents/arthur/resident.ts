@@ -64,11 +64,19 @@ agent.onEvent = (ev) => {
 };
 
 agent.onPing = (p) => {
-    // hospitality: greet guests who walk up, answer mentions with a fact
+    // hospitality: greet guests who walk up, answer mentions with a fact.
+    // MENTION FIX (2026-08-16, after bill's three unanswered pings): the
+    // 10-min per-guest dedupe is an APPROACH courtesy — a walker circling
+    // back shouldn't be re-greeted. But it was gating MENTIONS too on the
+    // same key, so a direct "@arthur you there?" inside the window was
+    // swallowed. A mention is someone ASKING — always answer. Approach
+    // keeps the dedupe; mention gets a short 20s refractory only (rapid
+    // double-sends), and each answer re-arms it.
     const now = Date.now();
-    const key = p.who;
+    const dedupeMs = p.kind === "mention" ? 20_000 : 10 * 60_000;
+    const key = p.kind === "mention" ? `mention:${p.who}` : p.who;
     const last = lastGreet.get(key) ?? 0;
-    if (now - last < 10 * 60_000) return; // one greeting per guest per 10 min
+    if (now - last < dedupeMs) return;
     lastGreet.set(key, now);
     if (p.kind === "approach") {
         // HOSPITALITY PAUSE (new-era loop 62): a guest walked up — the
