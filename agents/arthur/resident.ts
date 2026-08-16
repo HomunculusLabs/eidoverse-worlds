@@ -282,6 +282,13 @@ setInterval(() => {
         [0, 1.8, "plaza-hearth-south"],
         [4.9, 4.9, "belltower"],
         [21, 15.3, "home"],
+        // THE NIGHT ROUND GROWS (new-era loop 81): the village outgrew its
+        // 3-stop night watch. Gate-S — check the dusk lantern at the
+        // boundary — and the goat pen: milking is a pre-dawn chore, and
+        // the tail of the night window (04-05) is exactly when he walks
+        // that way anyway. The lantern (loop 76) lights his approach.
+        [0.2, -21.5, "gate-s"],
+        [41.5, -1.0, "goat-pen-night"],
     ];
     const route = night ? NIGHT_CIRCUIT : CIRCUIT;
     const idx = night ? circuitLeg % NIGHT_CIRCUIT.length : circuitLeg % CIRCUIT.length;

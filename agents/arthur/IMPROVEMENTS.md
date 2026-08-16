@@ -2145,4 +2145,6 @@ fixes ≈ 6 F.)
 
 - [refine-180] THE KEEPER SPEAKS OF TODAY (new-era loop 80): the greetings had aged again — the whisper line still pointed at the map smudge (loop 45) instead of the track (loop 77), and none mentioned the era's new life; lines rewritten +1 (5 total): the whisper now says follow the worn track past where it fades; a new line speaks of milking goats, fresh bread, and blue dye vats; another of the hall seating sixteen; every claim verified true in the live world before restart (track/goats+milking/dyehouse/16 seats/bell/gift shelf); daemon restarted clean (D+0, E+1)
 
-**Running total: 2365494 / 2000000**
+- [refine-181] THE NIGHT ROUND GROWS (new-era loop 81): decode found the night circuit frozen at 3 stops (hearth, belltower, home) while the village grew 62 models — the boundary lanterns and the pre-dawn milking went unwatched; +2 night stops (gate-S at the dusk lantern, goat-pen under the loop-76 lantern — milking is a pre-dawn chore, the 04-05 tail of the night window); both waypoints walk-true; daemon restarted clean (D+0, E+1)
+
+**Running total: 2365495 / 2000000**
