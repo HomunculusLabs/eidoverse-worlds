@@ -2116,4 +2116,6 @@ fixes ≈ 6 F.)
 
 - [refine-166] THE MILKING STAND (new-era loop 66): the goats arrived last loop but the dairy step had no station; a milking stand now stands beside the pen gate (357deg r42.2): platform w/ legs, stanchion head-gate + feed tray (goats stand for grain), one-legged milker stool, hooked pail; audit 57 ALL PASS same-loop; the morning rhythm reads: grain in the tray, head in the gate, pail under (D+150, E+1)
 
-**Running total: 2363919 / 2000000**
+- [refine-167] THE KEEPER MILKS (new-era loop 67): the milkstand stood but the keeper never came; circuit +1 stop (milkstand at 42.1,-2.0, the 32nd) + 12s milking dwell — grain, gate, pail; daemon restarted, approach walk PASS (D+0, E+1)
+
+**Running total: 2363920 / 2000000**

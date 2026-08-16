@@ -256,6 +256,7 @@ const CIRCUIT: Array<[number, number, string]> = [
     [2.4, 14.4, "wayside"],    // N gate — rest by the lantern
     [-15.9, 9.1, "cartstop"],  // ring edge — where the traders park
     [38.0, -2.6, "paddock"],   // beside the livery — check the horses' fence
+    [42.1, -2.0, "milkstand"], // THE MORNING MILK (loop 67): grain, gate, pail
     [-28.9, 11.4, "coop"],     // the fowl run — grain for the hens
     [15.0, 28.9, "woodyard"],  // the woodshed — fuel inspection
     [-35.4, -1.3, "millyard"], // the miller's sacks — grain going out
@@ -288,7 +289,7 @@ setInterval(() => {
     lastControlAt = Date.now();
     // DWELL (loop #80): the keeper RESTS at his stops like a villager —
     // 20s at the hearth (warming), the inn (a mug), the market (traders).
-    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000, "belltower": 15000, "coop": 12000, "woodyard": 10000, "garden": 10000, "tower": 15000 };
+    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000, "belltower": 15000, "coop": 12000, "milkstand": 12000, "woodyard": 10000, "garden": 10000, "tower": 15000 };
     circuitWalking = true;
     console.log(`[circuit] heading to ${name} (${x},${z})`);
     // door-aware egress: if inside the house footprint, exit via the door
