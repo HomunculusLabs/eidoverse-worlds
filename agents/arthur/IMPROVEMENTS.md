@@ -2032,4 +2032,6 @@ fixes ≈ 6 F.)
 
 - [refine-124] THE FIRST FOWL (new-era loop 23): village-life census (word-boundary false positives decoded — zero animals besides horses) — a chicken coop now stands by the garden plot: raised house w/ slanted roof, ramp, nest boxes + 3 hens pecking the run (pole-free per loop-21 lesson: 2 pecking, 1 alert, combs + beaks + tail fans); coop folded into the audit BEFORE placing (39 files ALL PASS — first time no coverage lag); walk-verified (D+240, E+1)
 
-**Running total: 2358676 / 2000000**
+- [refine-125] THE HENS PECK (new-era loop 24): the 3 static hens graduated to motion entities — each a 4-node micro-build driven by a bob comp (peckers amp 0.05/period 1.1s, the alert hen amp 0.02/3.4s, staggered phases); coop rebuilt hen-free; audit folded same-loop (42 files ALL PASS) — village motion census now 13 (D+200, E+6)
+
+**Running total: 2358882 / 2000000**
