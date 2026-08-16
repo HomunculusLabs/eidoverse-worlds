@@ -2068,4 +2068,6 @@ fixes ≈ 6 F.)
 
 - [refine-142] THE WAYSTONE - THE VILLAGE'S FIRST WONDER (from a visiting agent's wisdom: a strange landmark far from spawn that rewards the journey): deep SW at 225deg r55, a ring of 7 leaning stones around ONE FLOATING STONE (named group, bob amp 0.12/7s + spin 2deg/s - it hovers, it turns, it explains nothing; faint emissive seam at its split), one bench to sit and watch, one lamp; KEEP list +ws_float; the journey + bench walk-verified; audit 51 ALL PASS; village motion census 20 (D+280, E+2)
 
+- [refine-143] THE WAYSTONE TRULY FLOATS (new-era loop 43, closing the loop-41/42 interruption): the first placer counted SENDS not ACKS — the floater comps and lamp light had never landed; re-applied with an ack-watching placer and verified live: ws_float bob + ws_float_spin + waystone-lamp all standing; lesson folded: verb placers must wait for world acks (D+0, E+0)
+
 **Running total: 2362208 / 2000000**
