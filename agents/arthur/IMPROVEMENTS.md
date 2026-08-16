@@ -2157,4 +2157,6 @@ fixes ≈ 6 F.)
 
 - [refine-186] THE RABBIT RUN (new-era loop 86 of the homestead care series): the hutch's hopper hopped on open grass with nothing to hop IN; a low wicket run now attaches to the hutch (same frame, dist 0.000): 3 hurdles in the garden-fence language scaled down (2 withes, hand-leaned stakes), a pop-hole w/ leaning flap in the W side — the hopper's exit — and 3 clover clumps inside; the run reads exactly why a rabbit can be mid-hop outside its hutch; walks PASS (run approach + garden door), audit 66 ALL PASS same-loop (D+160, E+1)
 
-**Running total: 2366379 / 2000000**
+- [refine-187] THE DYER'S SIGN (new-era loop 86): trade census — the pictograms (loop 11) read loaf, hammer, spool, shoe, but the era's new trade went unsigned; a fifth sign now hangs at the dye-house front (-11.5,21.5, 2.6m out, facing the vats): same bracket-and-board language, glyph = a cloth strip hung over a line-bar, upper half bone, lower half DYED FLAX-BLUE, one drip bead below the edge — the trade reads at a glance; first plan-row miscalc decoded + fixed in-loop (r/ang vs cartesian); walks PASS, audit 67 ALL PASS same-loop (D+40, E+1)
+
+**Running total: 2366420 / 2000000**
