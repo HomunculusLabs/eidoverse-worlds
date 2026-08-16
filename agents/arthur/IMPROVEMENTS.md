@@ -2104,4 +2104,6 @@ fixes ≈ 6 F.)
 
 - [refine-160] THE KEEPER SPEAKS OF THE VILLAGE THAT STANDS (new-era loops 60-61, ENOSPC-interrupted, disk freed by bill): decode found the greeting lines still describing era-2 — mason works, east hamlets, cloister fountains, a river-field labyrinth, ALL swept in the era-3 rebuild; the hospitality voice now speaks true: the Commons, the ringable bell, the gift-shelf pact, the waystone whisper on the map, the working mill; mention answer updated too; daemon restarted clean (D+0, E+1)
 
-**Running total: 2362604 / 2000000**
+- [refine-161] HOSPITALITY PAUSE (new-era loop 62): decode found the greeting system works (19 greetings logged, incl bill) but the keeper TOURS — a visitor walking up mid-leg chased a moving host; on approach pings the keeper now pauses 25s (lastControlAt push holds the circuit gate), greeting the guest from a standstill; approach radius/rearm decoded from mcpl source (2.5m, must leave-and-return); live guest test dispatched (D+0, E+1)
+
+**Running total: 2362605 / 2000000**

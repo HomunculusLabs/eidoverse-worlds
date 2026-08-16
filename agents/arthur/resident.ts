@@ -71,6 +71,12 @@ agent.onPing = (p) => {
     if (now - last < 10 * 60_000) return; // one greeting per guest per 10 min
     lastGreet.set(key, now);
     if (p.kind === "approach") {
+        // HOSPITALITY PAUSE (new-era loop 62): a guest walked up — the
+        // keeper stops touring for a moment and gives them standing room.
+        // The circuit yields: hold the wheel 25s so the guest isn't
+        // chasing a walking host.
+        lastControlAt = Date.now() + 25_000 - 180_000; // circuit gate sees ~25s remaining
+        console.log(`[hospitality] pausing for ${p.who} (25s)`);
         const lines = [
             `welcome, ${p.who} — this is the Commons. the hearth's lit and the seats are real; ring the bell at the NE tower if you want the hour. ${hostFacts.total.toLocaleString()} improvements and counting.`,
             `${p.who}! good to see you. leave something on the gift shelf by the inn porch if you're moved to — take what you need. that's the pact.`,
