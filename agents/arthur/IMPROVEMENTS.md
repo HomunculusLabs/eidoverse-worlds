@@ -2092,4 +2092,6 @@ fixes ≈ 6 F.)
 
 - [refine-154] THE KEEPER SITS (new-era loop 55): the keeper walked, dwelled, rang, gave — but never sat; at seated dwell stops (hearth log, inn bench, bell bench) the keeper now MOUNTS the socket for the rest and dismounts after, using the village's own seats; VERIFIED LIVE: [circuit] seated at plaza-hearth-south (log_0) in the daemon log after restart (D+0, E+1)
 
-**Running total: 2362371 / 2000000**
+- [refine-155] THE WAYSTONE ANSWERS (new-era loop 56): the wonder rewarded the journey with nothing; a previous traveler left an offering on the bench end — a weathered token disc, a pressed flower under a small pebble (139v) — take it or leave one, that is the pact; waystone re-placed (9n), all 3 comps re-applied (float bob + spin + motes), audit ALL PASS (D+139, E+1)
+
+**Running total: 2362511 / 2000000**
