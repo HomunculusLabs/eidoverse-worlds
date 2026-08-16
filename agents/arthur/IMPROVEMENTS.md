@@ -1963,4 +1963,6 @@ fixes ≈ 6 F.)
 
 - [refine-89] DOOR CENSUS + THE LAST DOOR FRAMED: measured door clearances across all 10 buildings (all conform 2.2-2.5m; mill tailpole decoded on the far side); the tower was the one door without craft — bone jambs + lintel bar added (72v + 24v), walk-test PASS (D+96, E+1)
 
-**Running total: 2352140 / 2000000**
+- [refine-90] FRESHNESS + DRIFT AUDIT (milestone 90): all 23 glbs newer than their sources (zero stale builds); the 3 most-rebuilt artifacts (plaza/court/inn) verified byte-identical live via content-hash re-upload — NO DRIFT between local builds and the standing village (D+0, E+1)
+
+**Running total: 2352141 / 2000000**
