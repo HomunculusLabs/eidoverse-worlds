@@ -2155,4 +2155,6 @@ fixes ≈ 6 F.)
 
 - [refine-185] THE RABBIT HUTCH (new-era loop 84): homestead census — bill keeps goats, ducks, AND bunnies; the commons mirrored two of three; a hutch now stands beside the garden (150deg r24): raised two-compartment box w/ wire-front gaps, one lid closed one PROPPED OPEN, ramp to the ground, straw spilled at its foot; 2 rabbits — a lopped-ear loaf in the open compartment, a stretched mid-hopper on the grass — the homestead trio complete: goats (65), ducks (83), bunnies (84); walks PASS (hutch + garden approach), audit 65 ALL PASS same-loop (D+330, E+1)
 
-**Running total: 2366218 / 2000000**
+- [refine-186] THE RABBIT RUN (new-era loop 86 of the homestead care series): the hutch's hopper hopped on open grass with nothing to hop IN; a low wicket run now attaches to the hutch (same frame, dist 0.000): 3 hurdles in the garden-fence language scaled down (2 withes, hand-leaned stakes), a pop-hole w/ leaning flap in the W side — the hopper's exit — and 3 clover clumps inside; the run reads exactly why a rabbit can be mid-hop outside its hutch; walks PASS (run approach + garden door), audit 66 ALL PASS same-loop (D+160, E+1)
+
+**Running total: 2366379 / 2000000**
