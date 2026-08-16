@@ -2088,4 +2088,6 @@ fixes ≈ 6 F.)
 
 - [refine-152] THE SEATS ARE SITTABLE (new-era loop 53, the visiting agent's sit-on affordance): decoded the engine's sockets comp (seat anchors, client/lib/build.js:392) sitting unused; the hearth gathering ring now carries 5 seat sockets — the 4 log benches (45/135/225/315deg r1.9, y0.32, facing the fire) + the storyteller's stone; VERIFIED LIVE: a mount verb onto log_0 snapped the body to the bench pos; dismount clean (D+0, E+0)
 
+- [refine-153] SEATS EVERYWHERE THE KEEPER DWELLS (new-era loop 54): sockets census — only the hearth ring was sittable; the bell bench, both inn benches, and the tower study desk now carry seat sockets too (geometry decoded from the builds: bench slab y0.46, inn benches z +/-2.0, study desk at the W wall); 4 entities now sittable, village seat sockets total 9 (D+0, E+0)
+
 **Running total: 2362370 / 2000000**
