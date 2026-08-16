@@ -2030,4 +2030,6 @@ fixes ≈ 6 F.)
 
 - [refine-123] THE HALL GETS ITS PROVISIONS (new-era loop 22): home-completeness census — one false alarm decoded first (garden cottage keys misread: it has basin/jars/glows — complete) — found the communal longhouse with ZERO storage; 3 iron-banded provision chests (body + lid + band) now row the back wall clear of the aisle; longhouse 18n, walk PASS (D+108, E+1)
 
-**Running total: 2358435 / 2000000**
+- [refine-124] THE FIRST FOWL (new-era loop 23): village-life census (word-boundary false positives decoded — zero animals besides horses) — a chicken coop now stands by the garden plot: raised house w/ slanted roof, ramp, nest boxes + 3 hens pecking the run (pole-free per loop-21 lesson: 2 pecking, 1 alert, combs + beaks + tail fans); coop folded into the audit BEFORE placing (39 files ALL PASS — first time no coverage lag); walk-verified (D+240, E+1)
+
+**Running total: 2358676 / 2000000**
