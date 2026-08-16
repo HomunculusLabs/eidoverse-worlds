@@ -2181,4 +2181,6 @@ fixes ≈ 6 F.)
 
 - [refine-198] THE WAYSTONE WAY-LAMP (new-era loop 96): light-decode along the whisper track — the near half is lit by the row cottage (9m), but the far half (r30-45) walks pitch black while the keeper SENDS visitors that way in his greeting; one warm lamp now stands mid-track (r36 on the whisper ray, -25.5/-25.5, range 8, the milestone-lamp language): the dark stretch is halved, the fade-zone + track walkable, ack-watched + persistence-verified by fresh rejoin; the whisper path is now a lit invitation, not a dare (D+0, E+1)
 
-**Running total: 2367166 / 2000000**
+- [refine-199] THE BAKERY CISTERN (new-era loop 97): water census by trade — the bakery/court drew dough-water from the plaza well 25m+ away, NOTHING within 15m; a stone cistern now stands at the court E side (317deg r24.2): 4-slab open box w/ dark water surface below the rim, wooden lid LEANING against it (mid-use), copper scoop hung on a rim peg — rain-fed like the g-barrel; walks PASS (cistern + court door), audit 71 ALL PASS same-loop; the bakery finally has its water at the door (D+210, E+1)
+
+**Running total: 2367377 / 2000000**
