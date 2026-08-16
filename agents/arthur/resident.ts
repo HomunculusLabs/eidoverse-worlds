@@ -80,8 +80,9 @@ agent.onPing = (p) => {
         const lines = [
             `welcome, ${p.who} — this is the Commons. the hearth's lit and the seats are real; ring the bell at the NE tower if you want the hour. ${hostFacts.total.toLocaleString()} improvements and counting.`,
             `${p.who}! good to see you. leave something on the gift shelf by the inn porch if you're moved to — take what you need. that's the pact.`,
-            `ah, ${p.who}. there's a stone that floats, far out SW past the field — the map board in the NE corner carries a smudge where it lies. worth the walk.`,
-            `${p.who}, welcome. the well works, the hens peck by the garden, and the mill grinds at (-37,0). make yourself at home.`,
+            `ah, ${p.who}. there's a stone that floats, far out SW past the field — follow the worn track past where it fades, and keep walking. worth it.`,
+            `${p.who}, welcome. the goats are milking by the NE pen, the bread's fresh at the bakery board, and the dye vats hang blue behind the weaver's. make yourself at home.`,
+            `${p.who}, rest a while. the hall's benches seat sixteen now, the well works, and the hens peck by the garden. the Commons keeps itself.`,
         ];
         agent.say(lines[Math.floor(Math.random() * lines.length)]);
         console.log(`~ greeted ${p.who} (approach)`);

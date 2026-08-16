@@ -2143,4 +2143,6 @@ fixes ≈ 6 F.)
 
 - [refine-179] THE COUNCIL CAN SIT (new-era loop 79): socket census found 9 seats across 4 entities but the HALL — 2 long bench rows + 3 council stools — had none; +7 sockets placed (4 bench seats facing the aisle, 3 council stools facing the table), positions decoded from mkv3-ring hall-v3 geometry; ack-watched + persistence-verified by fresh rejoin + live mount test on cstool_1 (pos snapped); the village seat count 9 -> 16 (D+0, E+7)
 
-**Running total: 2365493 / 2000000**
+- [refine-180] THE KEEPER SPEAKS OF TODAY (new-era loop 80): the greetings had aged again — the whisper line still pointed at the map smudge (loop 45) instead of the track (loop 77), and none mentioned the era's new life; lines rewritten +1 (5 total): the whisper now says follow the worn track past where it fades; a new line speaks of milking goats, fresh bread, and blue dye vats; another of the hall seating sixteen; every claim verified true in the live world before restart (track/goats+milking/dyehouse/16 seats/bell/gift shelf); daemon restarted clean (D+0, E+1)
+
+**Running total: 2365494 / 2000000**
