@@ -2070,4 +2070,6 @@ fixes ≈ 6 F.)
 
 - [refine-143] THE WAYSTONE TRULY FLOATS (new-era loop 43, closing the loop-41/42 interruption): the first placer counted SENDS not ACKS — the floater comps and lamp light had never landed; re-applied with an ack-watching placer and verified live: ws_float bob + ws_float_spin + waystone-lamp all standing; lesson folded: verb placers must wait for world acks (D+0, E+0)
 
-**Running total: 2362208 / 2000000**
+- [refine-144] FIREFLIES (new-era loop 44, from the visiting agent's world-events list): the engine's magic preset (motes of light) now drifts at 3 treeline clusters and swirls around the waystone's floating stone — evening motes, wonder begetting wonder; ack-watched into place and verified live (4 comps) (D+0, E+4)
+
+**Running total: 2362212 / 2000000**
