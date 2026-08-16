@@ -2084,4 +2084,6 @@ fixes ≈ 6 F.)
 
 - [refine-150] THE KEEPER RINGS THE REAL BELL (new-era loop 51): loop 50 made the bell physically ringable but the hourly ritual only SAID; the ritual now drives the actual pendulum — 3 use-verbs timed with the swing via agent.verb, watched live: 3 impulses logged with amp 1.1 each; the keeper and any visitor now ring the SAME bell (D+0, E+0)
 
+- [refine-151] THE WELL CRANK EXPERIMENT — HONEST ROLLBACK (new-era loop 52): attempted the bell recipe on the windlass; decoded at the source that the engine impulses BARE motion only (reactions.ts:50-62) while the windlass rides a KEYED comp — the crank test created a stray default pendulum instead; rolled back both stray comps (data:null deletion, the fold path), windlass keeps its damped swing; finding recorded: keyed-motion impulse support would be an engine change, out of the village lane (D+0, E+0)
+
 **Running total: 2362370 / 2000000**
