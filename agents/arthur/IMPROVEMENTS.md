@@ -2024,4 +2024,6 @@ fixes ≈ 6 F.)
 
 - [refine-120] THE FORGE'S INPUT SIDE (new-era loop 19): trade-staging census found the smithy complete on OUTPUT (hasps, nails, tools) but empty on INPUT — charcoal basket w/ heaped fuel beside the forge + 2 iron bar stock rows racked on the wall w/ shelf bracket; court 30n, workshop + door lanes walk-verified (D+110, E+1)
 
-**Running total: 2358034 / 2000000**
+- [refine-121] THE CANDLELIT STUDY FURNISHED (new-era loop 20): the tower upper room (empty since era-3) gains its study — writing desk w/ legs against the W wall, open two-page book, lit candle w/ emissive flame, and a 3-book stack in the corner; tower 20n 20/20 reach, door walk-verified; shed-roof audit first (clean — wall-backed edges, correct anatomy) (D+260, E+1)
+
+**Running total: 2358295 / 2000000**
