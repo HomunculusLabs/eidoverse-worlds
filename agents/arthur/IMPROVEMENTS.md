@@ -2020,4 +2020,6 @@ fixes ≈ 6 F.)
 
 - [refine-118] RIDGE CAPS (new-era loop 17): gableRoof (kit-level) now lays bone-tone cap stones along every roof peak with hand-staggered rotation — the roofline reads finished from a distance; all gable builds rebuilt + re-placed, census-17 green BEFORE rollout (38/38 models, 10/10 motion, 48 lights); caps verified at true ridges after two probe misreads decoded (materials live at node level / vertex colors, and my ridge arithmetic was stale — the caps sat higher than estimated) (D+480, E+10)
 
-**Running total: 2357632 / 2000000**
+- [refine-119] THE MILLER'S YARD (new-era loop 18): the windmill — the only mill — carried zero grain logistics; yard now holds 4 grain sacks (3 standing + 1 leaning, tied necks), a raised grain bin w/ legs + heaped grain + lid, and a flour barrel w/ mounded top; yaw decoded before editing (local +Z faces village — yard on the near side); sack cluster + mill door walk-verified 0.3m; census-18 green before build (D+290, E+1)
+
+**Running total: 2357923 / 2000000**
