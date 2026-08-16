@@ -2187,4 +2187,6 @@ fixes ≈ 6 F.)
 
 - [refine-201] THE SMITH'S CALL (new-era loop 99): the lag class recurs — the forge was built at 98 but stood off the keeper's route; +1 day stop (forge, adjacent the court, 9s dwell: bank the coals), day route 34 -> 35; the waypoint walk-true; daemon restarted clean; the keeper now tends every live fire in the village — hearth, kiln, forge (D+0, E+1)
 
-**Running total: 2367800 / 2000000**
+- [refine-202] THE CENTENNIAL MAP (new-era loop 100): the lag class recurs a third time — 6 builds since 87 stood unmarked; +5 marks (same 1:31): harvest cart in straw-yellow, the laundry line in bone, the bakery cistern in water-dark, THE FORGE in ember-orange (the only BRIGHT mark on the board — fire reads), and the way-lamp as a tiny warm dot on the whisper ray; the inn door rides the inn (too small to mark); the whisper stays a whisper; board re-placed, audit 72 ALL PASS (D+65, E+0)
+
+**Running total: 2367865 / 2000000**
