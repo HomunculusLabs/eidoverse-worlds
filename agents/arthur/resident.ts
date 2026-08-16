@@ -255,6 +255,7 @@ const CIRCUIT: Array<[number, number, string]> = [
     [-8.0, -24.7, "bunkhouse"],// 252°
     [8.0, -24.7, "hall"],      // 288°
     [21, -15.3, "court"],      // 324°
+    [20.9, -15.5, "forge"],    // THE SMITH'S CALL (loop 99): the new forge — bank the coals
     [-18.8, 25.9, "carousel"], // SE landmark
     [28, 0, "inn"],            // N spoke end (inn door apron)
     [-32, 0, "windmill"],      // W spoke end (mill door apron)
@@ -308,7 +309,7 @@ setInterval(() => {
     lastControlAt = Date.now();
     // DWELL (loop #80): the keeper RESTS at his stops like a villager —
     // 20s at the hearth (warming), the inn (a mug), the market (traders).
-    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000, "belltower": 15000, "coop": 12000, "milkstand": 12000, "grainfield": 10000, "flaxpond": 10000, "fieldpond": 10000, "chopblock": 8000, "dyehouse": 12000, "woodyard": 10000, "garden": 10000, "tower": 15000, "carousel": 14000 };
+    const DWELL: Record<string, number> = { "plaza-hearth-south": 20000, "inn": 20000, "market": 20000, "belltower": 15000, "coop": 12000, "milkstand": 12000, "grainfield": 10000, "flaxpond": 10000, "fieldpond": 10000, "chopblock": 8000, "dyehouse": 12000, "woodyard": 10000, "garden": 10000, "tower": 15000, "carousel": 14000, "forge": 9000 };
     circuitWalking = true;
     console.log(`[circuit] heading to ${name} (${x},${z})`);
     // door-aware egress: if inside the house footprint, exit via the door
