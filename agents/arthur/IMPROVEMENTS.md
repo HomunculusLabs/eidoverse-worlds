@@ -1987,4 +1987,6 @@ fixes ≈ 6 F.)
 
 - [refine-101] THE FENCES (the missing woodwork): garden picket fence L-run w/ gate gap guarding the cottage plot (posts + double rails + pickets) + livery paddock (squared rails on chunky posts, 2m gated gap w/ header bar); both 3n walkable-verified (approach 0.3m, gate 0.2m) (D+540, E+2)
 
-**Running total: 2354054 / 2000000**
+- [refine-102] RAIN BARRELS (new-era loop 1): coopered barrels under 4 eave corners (house/longhouse/inn/bunkhouse) — staves, double iron hoops, water surface, tilted diverter plank from the eave; 4 builds x 4n, all live at plan slots clear of door lanes (D+500, E+4)
+
+**Running total: 2354558 / 2000000**
