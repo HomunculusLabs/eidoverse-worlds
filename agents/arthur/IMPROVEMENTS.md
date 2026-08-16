@@ -2141,4 +2141,6 @@ fixes ≈ 6 F.)
 
 - [refine-178] THE CHOPPING BLOCK (new-era loop 78): wood-chain census — stacks, firewood, charcoal, a sawhorse in the workshop, but logs never got SPLIT anywhere; a splitting station now stands at the woodyard edge (59deg r29.8): squat oak block w/ checking-crack end-grain top, a maul STUCK mid-stroke in a fresh split (as real blocks are), 3 split halves scattered, a round log waiting w/ pale end face, iron wedge + ring on the ground; walks PASS (block + woodyard dwell), audit 62 ALL PASS same-loop; comp census green en route (37 comp-bearing, 19 motion, 24 particle, carousel/windmill/windlass trio intact) (D+190, E+1)
 
-**Running total: 2365486 / 2000000**
+- [refine-179] THE COUNCIL CAN SIT (new-era loop 79): socket census found 9 seats across 4 entities but the HALL — 2 long bench rows + 3 council stools — had none; +7 sockets placed (4 bench seats facing the aisle, 3 council stools facing the table), positions decoded from mkv3-ring hall-v3 geometry; ack-watched + persistence-verified by fresh rejoin + live mount test on cstool_1 (pos snapped); the village seat count 9 -> 16 (D+0, E+7)
+
+**Running total: 2365493 / 2000000**
