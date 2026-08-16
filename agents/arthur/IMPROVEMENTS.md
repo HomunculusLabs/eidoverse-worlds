@@ -2126,4 +2126,6 @@ fixes ≈ 6 F.)
 
 - [refine-171] THE MAP CATCHES UP (new-era loop 71): the board still showed the era-3 core while the village grew past it; +9 marks (same 1:31 scale): grainfield + flax/pond W, quarry + kiln NE, goats + milkstand NE, dyehouse NW (its chip dyed the cloth-blue), charcoal clamp, welcome board; positional verify PASS (156 far-E verts, 54 far-W), audit 60 ALL PASS, map re-placed (D+120, E+0)
 
-**Running total: 2364693 / 2000000**
+- [refine-172] THE STUDY SHUTTERS (new-era loop 72): window census — every pane in the village open forever, day and night alike; the keeper's study drum window (decoded at source: twin at local (0,4.3,2.79), 0.6x0.75, +Z) now carries a half-drawn pair: LEFT folded open against the wall, RIGHT drawn shut w/ iron hinges + a pull-ring; the evening read: someone was just there; live alignment verified (window face -7.86,27.49 vs shutter face -7.86,27.54); audit 61 ALL PASS same-loop (D+95, E+1)
+
+**Running total: 2364789 / 2000000**
