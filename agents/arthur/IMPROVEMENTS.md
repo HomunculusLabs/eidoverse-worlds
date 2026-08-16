@@ -1979,4 +1979,6 @@ fixes ≈ 6 F.)
 
 - [refine-97] EVERY WALL MEETS THE EARTH PROPERLY: wallSpan gains a BASE COURSE — a wider stone plinth at every wall base (kit-level: house + 7 ring + inn + mill + stable all rebuilt); plinth rims verified in all 10 wallSpan consumers; walk-tests PASS (D+600, E+10)
 
-**Running total: 2353389 / 2000000**
+- [refine-98] POST-ROLLLout CENSUS CAUGHT A LOSS: full live census after the #97 village-wide rebuild found the inn SIGN SWING missing (comp-wipe on re-place — smoke/embers placers ran, the sign comp did not); restored; census now 23/23 models, 10/10 motion, 10/10 embers, 8/8 smoke, 42 lights, 124 entities (D+0, E+1)
+
+**Running total: 2353390 / 2000000**
