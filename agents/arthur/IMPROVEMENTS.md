@@ -2173,4 +2173,6 @@ fixes ≈ 6 F.)
 
 - [refine-194] THE HARVEST CART (new-era loop 93): chain decode — the field has stood MID-HARVEST since 63/64 (stubble + sheaves) while the mill grinds on; the missing stage was the TRANSPORT: sheaves never traveled; a loaded harvest cart now parks between the grain field and the W road (167deg r38): plank bed + side rails, 2 spoked wheels w/ iron hubs, draw pole + yoke, heaped sheaf load (5 banded bundles in straw tones), rope lash over, PITCHFORK standing in the load — a cart mid-work, not parked; walks PASS (cart + W lane), audit 69 ALL PASS same-loop; the bread chain finally has its middle mile (D+310, E+1)
 
-**Running total: 2366973 / 2000000**
+- [refine-195] THE DYER'S LAUNDRY (new-era loop 94): cloth-chain decode — dye (70) ends the craft but no garment anywhere wore the blue; the era-2 laundry line (qol1) was NEVER PLACED; a line now stands behind the weaver's row (205deg r26.5, E of the dye house): 6 garments on pegs — bone, brass, and TWO flax-blue pieces (the dyer's own output, worn), one half-pinned MID-HANGING (slipped low, tilted), a wash basket + folded blue cloth at the post; the cloth chain's last mile — dye -> WEAR — finally visible on bodies, not just racks; walks PASS (line + shrine path), audit 70 ALL PASS same-loop (D+190, E+1)
+
+**Running total: 2367164 / 2000000**
