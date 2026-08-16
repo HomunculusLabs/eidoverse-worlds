@@ -2014,4 +2014,6 @@ fixes ≈ 6 F.)
 
 - [refine-115] BOUNDARY MILESTONES (new-era loop 14): approach-light census found the N/S track ends at 7-10m from any light — two lantern milestones now stand where the approaches meet the field (r30.6 N/S: stone post, arm, emissive lantern core + light comps); village light census 48, darkest approach corner closed (D+120, E+4)
 
-**Running total: 2356691 / 2000000**
+- [refine-116] THE VERIFICATION-ONLY LOOP (new-era loop 15): three fresh audits all clean — fence placements decoded correct against host geometry (garden plot behind the cottage, paddock S of the stable yard), plaza rest spots all within 3-4m of light, night silhouette even across all 8 arcs (field lamps carry the far glow); deep audit ALL PASS; no gap found this pass (D+0, E+1)
+
+**Running total: 2356692 / 2000000**
