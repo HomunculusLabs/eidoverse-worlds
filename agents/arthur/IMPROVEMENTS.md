@@ -2159,4 +2159,6 @@ fixes ≈ 6 F.)
 
 - [refine-187] THE DYER'S SIGN (new-era loop 86): trade census — the pictograms (loop 11) read loaf, hammer, spool, shoe, but the era's new trade went unsigned; a fifth sign now hangs at the dye-house front (-11.5,21.5, 2.6m out, facing the vats): same bracket-and-board language, glyph = a cloth strip hung over a line-bar, upper half bone, lower half DYED FLAX-BLUE, one drip bead below the edge — the trade reads at a glance; first plan-row miscalc decoded + fixed in-loop (r/ang vs cartesian); walks PASS, audit 67 ALL PASS same-loop (D+40, E+1)
 
-**Running total: 2366420 / 2000000**
+- [refine-188] THE MAP CATCHES UP, AGAIN (new-era loop 87): the lag class recurs — loops 72-86 built 8 things and the board stood still; +6 marks (same 1:31 scale): chopping block at the woodyard edge, the field pond in dark water-blue w/ 3 duck-specks, hutch + run on the garden side, the dyer sign in cloth-blue; bucket count 20 -> 23 (three new-material chips, three sharing); the map now carries every standing thing; audit 67 ALL PASS, board re-placed (D+60, E+0)
+
+**Running total: 2366480 / 2000000**
