@@ -2122,4 +2122,6 @@ fixes ≈ 6 F.)
 
 - [refine-169] THE FLAX FIELD + RETTING POND (new-era loop 69): fiber census — the weaver works but nothing grew her thread; a flax strip now stands S of the grain field (187deg r44): thinner stalks w/ blue blooms on half, a dark retting pond w/ stone lip + 2 soaking bundles, and a teepee stook of dried stalks at the edge; the fiber chain reads flax -> pond -> dry stook -> weaver; walks PASS, audit 59 ALL PASS same-loop (D+280, E+1)
 
-**Running total: 2364332 / 2000000**
+- [refine-170] THE DYE HOUSE (new-era loop 70): cloth-chain final step — the weaver wove but nothing was ever dyed; an open dye shelter now stands behind her row (118deg r27): 4 posts + slanted roof + windbreak boards, 3 wood vats w/ tinted liquors (flax-flower blue, madder red, weld yellow) banded in iron, a stirring pole, and a drying line — one strip dyed blue, one still bone-white waiting; chain complete: flax -> ret -> stook -> spin -> weave -> DYE -> wear; walk PASS, audit 60 ALL PASS same-loop (D+240, E+1)
+
+**Running total: 2364573 / 2000000**
