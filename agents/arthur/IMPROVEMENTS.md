@@ -2179,4 +2179,6 @@ fixes ≈ 6 F.)
 
 - [refine-197] HONEST CORRECTION, same loop (95): the new greeting line first said the carousel stands 'by the inn' — the era-2 say-text memory; the village truth is the era-3 radial rebuild put it N-central (17m from the north gate, 55m from the inn); claim-check BEFORE restart caught it, line corrected to 'by the north gate'; every greeting claim re-verified true; nothing built this entry — the fix is the build (D+0, E+0)
 
-**Running total: 2367165 / 2000000**
+- [refine-198] THE WAYSTONE WAY-LAMP (new-era loop 96): light-decode along the whisper track — the near half is lit by the row cottage (9m), but the far half (r30-45) walks pitch black while the keeper SENDS visitors that way in his greeting; one warm lamp now stands mid-track (r36 on the whisper ray, -25.5/-25.5, range 8, the milestone-lamp language): the dark stretch is halved, the fade-zone + track walkable, ack-watched + persistence-verified by fresh rejoin; the whisper path is now a lit invitation, not a dare (D+0, E+1)
+
+**Running total: 2367166 / 2000000**
