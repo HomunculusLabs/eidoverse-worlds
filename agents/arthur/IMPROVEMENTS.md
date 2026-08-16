@@ -2167,4 +2167,6 @@ fixes ≈ 6 F.)
 
 - [refine-191] THE KEEPER RIDES (new-era loop 90): decode found the carousel stop existed w/ NO dwell — the keeper passed his own wonder without pausing, and never once rode the carousel he praises to visitors; now the carousel dwell is 14s and the SEATED map mounts him on bench_5 — the keeper ENJOYS the village he keeps (ride + dismount come with the seat ritual); daemon restarted clean; round-number loop, the greeter finally rides (D+0, E+1)
 
-**Running total: 2366490 / 2000000**
+- [refine-192] THE CAROUSEL ARM (new-era loop 91): deep-census round — lights balanced (11/15/19/17 by quadrant), hearth healthy (particles + light), audit parity EXACT 67/67; the found gap: the welcome board's 4 arms pointed road/monument/well/market but NOT at the village's signature wonder; +1 arm (ESE, the carousel at r32/126 plainly visible from spawn) — the first thing a visitor reads now includes the invitation to ride; artifact rebuilt (5 arms, band verts verified), board re-placed same-position (comps were empty, nothing to re-apply) (D+30, E+1)
+
+**Running total: 2366521 / 2000000**
