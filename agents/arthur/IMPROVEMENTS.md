@@ -2034,4 +2034,6 @@ fixes ≈ 6 F.)
 
 - [refine-125] THE HENS PECK (new-era loop 24): the 3 static hens graduated to motion entities — each a 4-node micro-build driven by a bob comp (peckers amp 0.05/period 1.1s, the alert hen amp 0.02/3.4s, staggered phases); coop rebuilt hen-free; audit folded same-loop (42 files ALL PASS) — village motion census now 13 (D+200, E+6)
 
-**Running total: 2358882 / 2000000**
+- [refine-126] THE HENS GET THEIR CARE (new-era loop 25): husbandry census — pecking hens but no feeder or waterer; a raised feeder trough w/ visible grain + a stone-sided water dish w/ water surface now stand in the run, clear of the 3 hen stations; coop 7n, walk-verified, audit 42 ALL PASS (D+90, E+1)
+
+**Running total: 2358973 / 2000000**
