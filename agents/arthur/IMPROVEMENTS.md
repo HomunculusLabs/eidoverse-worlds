@@ -1971,4 +1971,6 @@ fixes ≈ 6 F.)
 
 - [refine-93] THE BEAM LANGUAGE COMPLETE: house (2 beams, 48v) + inn common room (3 beams at y2.95, H=2.7) join the longhouse + hall — every gable-roofed interior now shows its oak tie beams under the ridge; both walk-tests PASS (D+120, E+1)
 
-**Running total: 2352480 / 2000000**
+- [refine-94] BEAMS EVERYWHERE: garden, row, bunkhouse (2 each) + one per court shed — all 10 gabled interiors now carry the oak tie-beam language; 4 artifacts rebuilt + re-placed, walk-tests PASS (D+192, E+4)
+
+**Running total: 2352676 / 2000000**
