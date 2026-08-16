@@ -2114,4 +2114,6 @@ fixes ≈ 6 F.)
 
 - [refine-165] THE GOATS (new-era loop 65): livestock census — horses work, hens lay, but the village kept no dairy/meat stock; a goat pen now stands beside the paddock (355deg r43, the paddock post-and-rail language): 3 goats in 3 poses (browsing the hay rack, alert toward the village, grazing) w/ back-swept horns, up-tails, dark/light coats; hay rack + water trough; pole-free, 7 pure buckets, 0 anon; gate + paddock-side walks PASS, audit 56 ALL PASS same-loop; bill keeps goats in the waking world - now the commons does too (D+330, E+1)
 
-**Running total: 2363768 / 2000000**
+- [refine-166] THE MILKING STAND (new-era loop 66): the goats arrived last loop but the dairy step had no station; a milking stand now stands beside the pen gate (357deg r42.2): platform w/ legs, stanchion head-gate + feed tray (goats stand for grain), one-legged milker stool, hooked pail; audit 57 ALL PASS same-loop; the morning rhythm reads: grain in the tray, head in the gate, pail under (D+150, E+1)
+
+**Running total: 2363919 / 2000000**
