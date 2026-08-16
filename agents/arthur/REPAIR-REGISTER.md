@@ -113,7 +113,20 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   verify ≥0.3m clearance.
 - R-3xx numbering: keep as R-103.
 
-### R-103 [INTERSECTION] av-dyelaundry × av-row-cottage — 2.38m × 0.64m
+### R-103 [INTERSECTION] av-dyelaundry × av-row-cottage — FIXED (wakeup 5)
+- Root cause (live decode): the laundry line stood at (-24.0, -11.2) yaw
+  1.134 — its z-band (-12.9..-9.5) crossed the row cottage's slab edge
+  (z -11.3) by 1.6m, i.e. the line stood IN the row's back-wall zone,
+  "behind the weaver row" only by intent, not by geometry.
+- Fix: re-placed at the row's W end, aligned to the row's frame:
+  (-26.7, -13.0) yaw 0.941. Verified vs fresh live transforms: clearance
+  to row slab 0.49m; nearest real neighbor (av-sign-weaver, a wall-mount
+  rider) 2.47m; generous-rect sibling sweep found no other contacts.
+- Two-way MCPL walk-test (fresh body): row-side start 0.27m, laundry front
+  0.35m, exit toward shrine path 0.39m. No comps on the entity; keeper
+  route does not reference the laundry.
+- STATUS: FIXED (wakeup 5, 2026-08-16). Ad-hoc verified.
+
 ### R-104 [INTERSECTION] av-tower-house × av-sign-dyer — 0.54m × 0.72m
 - Evidence: sign_dyer local bbox is y 1.81..2.45 only (a hanging sign
   bracket on the dye-house wall — at r=24.4 ang=118, tower at r=26 ang=108.
@@ -124,12 +137,15 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   design. Rider-like → exclusion.
 - STATUS: RESOLVED-BY-CLASSIFICATION (sign rides dye-house wall).
 
-### R-105 [INTERSECTION] av-bcistern × av-watchpost — 0.26m × 1.41m
-- Evidence: watchpost at r=22 ang=315 (1.7x1.8m footprint, h=3.9); cistern
-  at r=24.2 ang=3 annex at court E. Overlap 0.26 x 1.41 — marginal edge
-  kiss between two furniture props near the court. 0.26m penetration.
-- Planned fix: 0.26m nudge of cistern along court wall, verify clear.
-- STATUS: OPEN
+### R-105 [INTERSECTION] av-bcistern × av-watchpost — FIXED (wakeup 5)
+- Root cause: edge kiss at the court corner — cistern at (17.7,-16.5)
+  overlapped the watchpost's platform corner by 0.07-0.26m (both furniture
+  props near the court W edge).
+- Fix: 0.5m nudge along the court wall to (18.2,-16.5). Verified vs fresh
+  live transforms: cistern x watchpost 0.43m CLEAR; court annex contact
+  unchanged (designed, per R-3xx classification).
+- STATUS: FIXED (wakeup 5, 2026-08-16). Ad-hoc verified (numeric; both
+  furniture-scale — walk-test not applicable per collision policy).
 
 ### R-2xx [REFINEMENT] "messed-up houses cluster" — LIVE DECODE REQUIRED
 - Bill's report: "bunch of houses clustered together that are totally messed
