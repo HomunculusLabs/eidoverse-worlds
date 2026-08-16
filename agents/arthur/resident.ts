@@ -313,6 +313,23 @@ setInterval(() => {
         .catch(() => {})
         .finally(() => { circuitWalking = false; });
 }, 8 * 60_000);
+// THE VILLAGE CLOCK (new-era loop 49): on each daylight hour, the keeper
+// rings the bell — a visible world act at the tower (5-21h). The bell's
+// perpetual pendulum stays (breeze sway); the RING is deliberate.
+const bellRitual = () => {
+    const hour = new Date().getHours();
+    if (hour < 5 || hour >= 21) return;
+    try { agent.say("rings the bell — the hour turns"); } catch {}
+    console.log(`[ritual] the keeper rings the hour (${hour}:00)`);
+};
+const msToNextHour = () => {
+    const now = new Date();
+    return (60 - now.getMinutes()) * 60_000 - now.getSeconds() * 1000;
+};
+setTimeout(() => {
+    bellRitual();
+    setInterval(bellRitual, 60 * 60_000);
+}, msToNextHour());
 // after each full lap, come home
 const circuitHomeWatcher = setInterval(() => {
     if (circuitLeg > 0 && circuitLeg % CIRCUIT.length === 0 && !circuitWalking && Date.now() - lastControlAt >= 180_000) {

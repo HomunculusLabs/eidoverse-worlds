@@ -2078,4 +2078,6 @@ fixes ≈ 6 F.)
 
 - [refine-147] THE GIFT RITUAL (new-era loop 47, closed on 48 after interruption): census-47 green (169 entities, 19 motion, 11 particle-bearing, 51 lights, zero wonder-era losses); the keeper now ACKNOWLEDGES the gift shelf — at inn dwells, half the time he leaves something (river stone / whelk shell / dried sprig / quartz / carved twig) via a visible agent.say() world act; say() verified on WorldAgent at mcpl/agent.ts:1433; daemon restarted clean (D+0, E+1)
 
-**Running total: 2362369 / 2000000**
+- [refine-148] THE VILLAGE CLOCK (new-era loop 49): bell decode — the tower bell swings on a perpetual pendulum (amp 8/5s), always moving, never rung ON PURPOSE; the keeper now RINGS THE HOUR (5:00-21:00, agent.say visible act, aligned to the top of each hour); the perpetual swing reads as breeze, the ring is deliberate; daemon restarted clean (D+0, E+1)
+
+**Running total: 2362370 / 2000000**
