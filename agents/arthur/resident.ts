@@ -19,7 +19,7 @@ const CONTROL_PATH = HERE + "control.json";
 const VOICE = (() => {
     const key = typeof CONFIG.glmKey === "string" ? CONFIG.glmKey : "";
     const base = typeof CONFIG.glmBase === "string" ? CONFIG.glmBase : "https://api.z.ai/api/coding/paas/v4";
-    const model = typeof CONFIG.glmModel === "string" ? CONFIG.glmModel : "glm-4.7-flash";
+    const model = typeof CONFIG.glmModel === "string" ? CONFIG.glmModel : "glm-5.3";
     if (!key) return null; // no voice configured — canned lines only
     // per-guest rolling chat memory: who → [{role, content}]
     const threads = new Map<string, { role: "user" | "assistant"; content: string }[]>();
@@ -50,9 +50,10 @@ const VOICE = (() => {
                 body: JSON.stringify({
                     model,
                     messages: msgs,
-                    max_tokens: 300,
+                    max_tokens: 4096, // reasoning tokens share this budget —
+                    // glm-5.3 thinks first; a small cap starves the reply
+                    // empty (the flash probe's failure mode at 20 tokens)
                     temperature: 0.8,
-                    thinking: { type: "disabled" },
                 }),
             });
             if (!r.ok) throw new Error(`glm ${r.status}`);
