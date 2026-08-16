@@ -2094,4 +2094,6 @@ fixes ≈ 6 F.)
 
 - [refine-155] THE WAYSTONE ANSWERS (new-era loop 56): the wonder rewarded the journey with nothing; a previous traveler left an offering on the bench end — a weathered token disc, a pressed flower under a small pebble (139v) — take it or leave one, that is the pact; waystone re-placed (9n), all 3 comps re-applied (float bob + spin + motes), audit ALL PASS (D+139, E+1)
 
+- [refine-156] AUDIT PARITY LAW (new-era loop 57): disk-vs-audit census found the FIFTH coverage lag — the loop-13 garden barrel (rainbarrel_g, built after the loop-6 barrel fold) sat unaudited for 44 loops; folded in, the audit list now EXACTLY matches disk (53/53) by a parity check that is now part of the loop pattern; full 53-file audit ALL PASS (D+0, E+0)
+
 **Running total: 2362511 / 2000000**
