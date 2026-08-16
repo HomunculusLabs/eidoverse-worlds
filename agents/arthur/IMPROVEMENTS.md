@@ -2132,4 +2132,6 @@ fixes ≈ 6 F.)
 
 - [refine-174] THE DAEMON KILLER, SLAIN (new-era loop 74): survey read the resident.err log and found 560 RangeError OOMs — each one KILLED the daemon outright (Bun banner = process death; KeepAlive restarts masked it, 41+ restarts); decode traced registerSupport -> fitSupportBox -> bucketAdd: a pathological support bbox (corrupt scale read) walks 100k x 100k cells and dies mid-loop; TWO fixes land in client/lib/colliders.js: (1) bucketAdd abstains >4096 cells (the seam-probe doctrine applied to the engine itself — refuse the box, keep the process), (2) re-fit now bucketRemoves the old entry first (fitSupportBox + fitSupportGrid leaked every prior-position cell); unit-proven through the real registerSupport door: 50 pathological re-fits survive, normal boxes register; daemon restarted on the patched file (D+0, E+0)
 
-**Running total: 2364789 / 2000000**
+- [refine-175] THE CIRCUIT CATCHES UP (new-era loop 75): the same lag the map had (loop 71) had grown in the keeper's route — the grain field, retting pond, and dye house (loops 63-70) had no stop; +3 stops (grainfield W the mill, flaxpond at the pond, dyehouse behind the weaver) w/ dwells 10/10/12s, route 32 -> 35; OOM fix holding (560 frozen, zero new); all 3 stop-coords walk-true; daemon restarted clean (D+0, E+1)
+
+**Running total: 2364790 / 2000000**
