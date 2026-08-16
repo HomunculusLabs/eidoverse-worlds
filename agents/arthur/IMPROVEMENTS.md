@@ -2134,4 +2134,6 @@ fixes ≈ 6 F.)
 
 - [refine-175] THE CIRCUIT CATCHES UP (new-era loop 75): the same lag the map had (loop 71) had grown in the keeper's route — the grain field, retting pond, and dye house (loops 63-70) had no stop; +3 stops (grainfield W the mill, flaxpond at the pond, dyehouse behind the weaver) w/ dwells 10/10/12s, route 32 -> 35; OOM fix holding (560 frozen, zero new); all 3 stop-coords walk-true; daemon restarted clean (D+0, E+1)
 
-**Running total: 2364790 / 2000000**
+- [refine-176] THE GOAT-PEN LANTERN (new-era loop 76): light census by proximity — the pen is the farthest NE work yard and its nearest light was the stable's, 6.9m away; an early-morning milking now has its own gate lantern (av-goatlamp at 42.8,2.1,-0.9, warm 0xffb066, range 6.5), ack-watched per the loop-43 law and persistence-verified by fresh rejoin; fresh census also corrects the record: 61 lights now stand (49 was the Amendment-12 count); first raw-WS verb shape attempt decoded — the canonical builder pattern paces one verb per server message (D+0, E+1)
+
+**Running total: 2364791 / 2000000**
