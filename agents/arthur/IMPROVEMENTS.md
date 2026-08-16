@@ -2006,4 +2006,6 @@ fixes ≈ 6 F.)
 
 - [refine-111] THE GATES READ AS GATES (new-era loop 10): each of the 4 village gates gains a frame — 2 oak posts w/ caps flanking the spoke (±1.6m, clear of the paver width) + a lintel beam at 2.6m (240v caps + 192v lintels); all 4 gates walk-through PASS (0.3-0.4m); seat census also run clean (every rest spot carries a seat) (D+430, E+1)
 
-**Running total: 2355722 / 2000000**
+- [refine-112] TRADE SIGNS (new-era loop 11): signage census found only the inn signed — hanging pictogram signs added for bakery (loaf), smithy (hammer), weaver (spool), livery (horseshoe): iron bracket + bone board + raised glyphs; 4 builds spec-clean, hung on door-side walls, plan slots registered (D+330, E+4)
+
+**Running total: 2356056 / 2000000**
