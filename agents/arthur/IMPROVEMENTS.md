@@ -2100,4 +2100,6 @@ fixes ≈ 6 F.)
 
 - [refine-158] THE VILLAGE GREETS (new-era loop 59): spawn decode — only bill holds a remembered pose; every NEW visitor materializes at the plaza heart, the village best face but unoriented; a welcome board now stands at the S plaza rim (235deg r5.2, facing the hearth): THE COMMONS name bar + 4 pointer arms (N road+gate, E well, SW monument, SE market); board + S-lane walks PASS, audit 54 ALL PASS same-loop (D+90, E+1)
 
+- [refine-159] DISK GUARD (new-era loop 61): the loop-60 greeting work was cut off mid-turn by mkstemp ENOSPC — the disk hit 99% (11Gi free); loop-61 survey made the SYSTEM the gap: swept hermes T-dir residue (21 files, snap/verify/blocked scripts, 4.7MB results) and recorded the disk situation honestly — the big consumers (kotlin logs, caches, xpi) are OUTSIDE my lane and belong to bill; work continues but large-file operations now watch df (D+0, E+0)
+
 **Running total: 2362603 / 2000000**
