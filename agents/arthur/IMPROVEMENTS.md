@@ -1991,4 +1991,6 @@ fixes ≈ 6 F.)
 
 - [refine-103] HERITAGE SPURS (new-era loop 2): trodden approaches to the off-path landmarks — shrine (189deg), watchpost (315deg), wayside (81deg) now reached by hash-worn paver spurs from the ring road, same wear language as every path; all 3 walk-verified 0.3-0.4m arrivals; door service intact (D+144, E+1)
 
-**Running total: 2354703 / 2000000**
+- [refine-104] THE BELL TOWER'S STREET LEVEL (new-era loop 3): stone bench facing the plaza (where folk wait for the hour), notice board on the E pier (2 parchment sheets + brass pins), lantern hook + emissive lamp on the W pier; 8n, bench approach + through-lane walk-verified (D+180, E+1)
+
+**Running total: 2354884 / 2000000**
