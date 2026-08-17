@@ -359,3 +359,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   pin refreshed; census 48 live / 0 dead).
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
+- 2026-08-17 ~11:4x — wakeup 80: cheap tick (no new commits since audit-79; verify ALL PASS; 0 OPEN).
