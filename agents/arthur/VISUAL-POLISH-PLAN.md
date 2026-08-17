@@ -56,6 +56,9 @@ wakeups. This lane is the standing fix for that blindness.
       PENDING: live /geom read + verbs approval-blocked this tick — next
       wakeup runs `bun agents/arthur/assets/placecarousel.ts` (needs no
       edits; it rebuilds before upload), then visual gate + register close.
+      LANE COLLISION: the files above rode into concurrent tex-62 `ed6f2af`
+      while staged during the texture lane's commit burst; this commit is
+      the polish-1 marker for the audit trail.
 - [ ] Carousel stair landing transition (declared-open in rework plan).
 - [ ] Carousel night contrast: warm lights vs canopy shadow — spectate at
       night cycle, consider lantern emissives under canopy edge.
