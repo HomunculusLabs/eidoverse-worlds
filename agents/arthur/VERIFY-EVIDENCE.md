@@ -2142,3 +2142,26 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-76 closing evidence — 2026-08-17T23:48:29.121Z
+
+```
+PASS pre-state: hall on disk is tex-76 build (3f8f9e6f)
+PASS mkv3-ring.ts: hall rebuild deterministic + == live build (3f8f9e6f98bbbd04) — 3f8f9e6f98bbbd04
+PASS ring-safety: six siblings restored byte-identical (21e4e46f/ffe8236b/b82a4104/2f2cacf9)
+PASS decode: timber + iron + stone present — timber,stone,glow2,plaster,glow4,iron,glow6
+PASS timber ≡ house wallSpan's + iron ≡ forge family's + stone ≡ kiln's (buffer-compared)
+PASS fire emissive node survives
+PASS TEXCOORD_0 == POSITION on texMat buckets (banner/candle/logs flat by design) — buckets 3
+PASS texture bytes < 400KB + GLB < 20MB — 41606B / 145.7KB
+PASS place-tex76-timber42.ts effect: hall live, pose (8,-24.7), smoke comp recovered — store/3f8f9e6f98bbbd04.glb
+PASS census anchors: inn + windmill current, woodyard untouched (approval block honored)
+PASS verify-tex76.ts present (committed, non-self-deleting)
+PASS verify-tex76.ts runs 0 / ALL PASS — code=0
+PASS both prior one-shots consumed (-paths, -tracker absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-76 pin + tex-4 multi pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
