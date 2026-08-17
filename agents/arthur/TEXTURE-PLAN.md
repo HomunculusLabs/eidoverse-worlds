@@ -178,6 +178,17 @@ ASHLAR COVERAGE: plinths (10 buildings) + forge hearth + kiln drum.
 LIVE-EVOLUTION LAW reaffirmed ×3 — census anchors must name CURRENT
 builds, not "untouched" ones, when lanes run parallel.
 
+### [tex-10] STONE III — the bakery cistern (2026-08-17, wakeups 40–42) — DONE
+All 5 cistern slabs on the village ashlar tile (stoneMat params verbatim).
+Decode 8/8 — the tile PNG bytes are BYTE-IDENTICAL to the kiln's (family
+consistency at byte level); slab STONE/STONE_DK alternation replaced by
+the tile's own tone variation. Rollout comp-law (no comps); census 6/6.
+Ledger refine-236. Pin: tex-10 cistern.
+ASHLAR COVERAGE: plinths (10 buildings) + forge hearth + kiln drum +
+cistern box.
+BYTE-FAMILY LAW: same texMat params ⇒ identical tile bytes — family
+consistency is provable, not assumed.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
