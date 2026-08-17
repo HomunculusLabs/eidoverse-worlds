@@ -687,3 +687,26 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-54 ad-hoc verification (r5) — 2026-08-17T18:40:49.176Z
+
+```
+PASS mkv3-hutch84.ts: rebuild deterministic + == live build (6263e8a20eb17cc9) — 6263e8a20eb17cc9
+PASS decode: timber material, 1 deduped image
+PASS timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS rabbit_sit + rabbit_hop GROUP anchors survive (motion comp targets)
+PASS timber buckets carry TEXCOORD_0 == POSITION (rabbits/straw flat by design) — buckets 1
+PASS texture bytes < 400KB — 19698B
+PASS GLB < 20MB — 51.5KB
+PASS place-tex54-timber24.ts effect: hutch live, pose (-28,17.8), rabbit comps recovered — store/6263e8a20eb17cc9.glb
+PASS census (verify-tex54-live.ts assertions): house + plaza current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS — code=0
+PASS tex-54 pin green
+PASS tex-21 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS all prior tex-54 one-shots consumed (self-deleting law)
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
