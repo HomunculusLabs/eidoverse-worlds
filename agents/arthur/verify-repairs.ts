@@ -27,19 +27,18 @@ const sep = (a: number[], b: number[]) => Math.max(Math.max(a[0] - b[1], b[0] - 
 
 // --- per-defect live assertions (mirror of the register's FIXED entries) ---
 const D = ents["av-dyehouse"], S = ents["av-sign-dyer"], R = ents["av-row-cottage"];
-ck("[tex-2] av-stable on thatch+timber build (aaf04bc81719be50)", ents["av-stable"]?.lib === "store/aaf04bc81719be50.glb");
-ck("[tex-3] 8 gabled buildings on plaster builds",
-    ents["arthur-house"]?.lib === "store/3039085e1aa4e9e1.glb"
-    && ents["av-longhouse"]?.lib === "store/5c20ad8b7a28dd71.glb"
-    && ents["av-garden-cottage"]?.lib === "store/0ae0e9e34b8a7902.glb"
-    && ents["av-row-cottage"]?.lib === "store/08522f1a1223128f.glb"
-    && ents["av-bunkhouse"]?.lib === "store/3da26168b6e8081f.glb"
-    && ents["av-hall"]?.lib === "store/6a2ce330b370794f.glb"
-    && ents["av-court"]?.lib === "store/5249d2abed15e735.glb"
-    && ents["av-inn"]?.lib === "store/bbb052da598d469c.glb");
-ck("[tex-2] windmill + stable on timber-era builds (untouched by tex-3)",
-    ents["av-windmill"]?.lib === "store/2988dc642276bcfb.glb"
-    && ents["av-stable"]?.lib === "store/aaf04bc81719be50.glb");
+ck("[tex-4] av-stable on thatch+timber+stone build (fedd5d15de53f903)", ents["av-stable"]?.lib === "store/fedd5d15de53f903.glb");
+ck("[tex-4] 10 wallSpan buildings on stone builds",
+    ents["arthur-house"]?.lib === "store/36cd42b6d0b818e8.glb"
+    && ents["av-longhouse"]?.lib === "store/21e4e46f17481b28.glb"
+    && ents["av-garden-cottage"]?.lib === "store/f47574b7e16368fb.glb"
+    && ents["av-row-cottage"]?.lib === "store/ffe8236b459c89fb.glb"
+    && ents["av-bunkhouse"]?.lib === "store/b82a410467f22cdd.glb"
+    && ents["av-hall"]?.lib === "store/9e2d43ac32729cec.glb"
+    && ents["av-court"]?.lib === "store/2f2cacf9664e69e3.glb"
+    && ents["av-inn"]?.lib === "store/45e51e8ecd7dc57e.glb"
+    && ents["av-windmill"]?.lib === "store/d18cbc3f5e3e43b2.glb"
+    && ents["av-stable"]?.lib === "store/fedd5d15de53f903.glb");
 ck("[R-106] dyehouse at (-21,-21.6) yaw .941", !!D && Math.abs(D.pos[0] + 21) < 0.01 && Math.abs(D.pos[2] + 21.6) < 0.01 && Math.abs(D.yaw - 0.941) < 0.005);
 ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(R, 2.95, 2.67)) > 0 && sep(rect(D, 1.64, 1.10), rect(ents["av-carousel"], 4.35, 4.1)) > 0);
 {
