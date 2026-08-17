@@ -216,6 +216,18 @@ texMat + flat buckets will false-FAIL an over-broad chain assertion.
 *** EVERY WALKED SURFACE IS TEXTURED: door paths, gathering ring, plaza
 ring, ring road, spokes (one earth); curbs + thresholds (one stone). ***
 
+### [tex-13] STONE IV — the wayside shrine (2026-08-17, wakeup 47) — DONE
+4 standing stones + altar top on village ashlar; 5 trodden pavers on the
+soil family (both byte-identical to standing GLBs). Flames/bowl/runes
+flat. Decode 10/10 with one probe-miscount decoded (v1 anchor walk
+counted group wrappers AND children; exactly 3 flame_v GROUP anchors
+stand — the comp targets). Rollout comp-law: 3 votive-flicker comps
+captured + re-applied; census 6/6. Ledger refine-244b (refine-244 tag
+taken by refinement lane's retting pond — collision, -b suffix per the
+exactify path). Pin: tex-13 shrine (3 votive comps).
+ASHLAR: plinths + forge + kiln + cistern + shrine.
+Sacred ground = working ground: same stone, same earth.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
