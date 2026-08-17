@@ -14,7 +14,7 @@ This working does not count a couple of added primitives as completion. The caro
 
 - Preserve entity id `av-carousel`, live footprint, current pose, and the radial village layout.
 - Before replacement, capture the complete live component bag and socket map from `/geom`; do not infer it from placers.
-- Same-id spawn wipes components. Re-apply every captured component after replacement, including sockets and pennant motion.
+- Same-id spawn wipes components. Re-apply every captured component after replacement, including sockets. Pennants are static canopy geometry under the rotating platform; they must not carry independent orbit/pendulum comps.
 - Decode suspected defects at source and decode the rebuilt GLB before upload.
 - Keep the nested `mergeByMaterial` architecture: static geometry merges; only intentional motion/socket anchors remain named.
 - Upload one new content hash, pace the upload, and place at the current live pose—not the stale era-2 `(26,18)` pose in `placecarousel.ts`.
@@ -30,7 +30,7 @@ Captured from the live world before rework:
 - Yaw: `2.5137152734169854`
 - Motion: platform spin plus four horse bob components
 - Sockets: eight riding positions: `horse_0`, `bench_1`, `horse_2`, `bench_3`, `horse_4`, `bench_5`, `horse_6`, `bench_7`
-- Pennant anchors: `cr_flag_0` through `cr_flag_7`, each with its own pendulum parameters
+- Pennant anchors: `cr_flag_0` through `cr_flag_7`, parented under the rotating platform with no independent motion components
 
 The current source and live bag disagree about horse motion naming (`horse_0..3` in the live bag versus `horse_0/2/4/6` in the current source-era conventions). This is a contract defect to resolve before rollout, not something to paper over. The rework will establish one canonical anchor map and update the dedicated placer and verifier together.
 
@@ -196,6 +196,14 @@ For each rollout candidate:
 9. Capture visual frames and compare against the baseline.
 10. Only after Bill’s eye-check: append the exact ledger entry and include the source/placer/verification evidence in the refinement record.
 
+### [candidate-6] RIDER SOCKET CONTACT + NO-ORBIT PENNANTS — LIVE
+
+- Horse sockets moved to the authored saddle plane at local `y=1.97`.
+- Bench sockets moved to the authored bench slab plane at local `y=1.46`.
+- A live mount/dismount smoke test mounted `arthur-builder` to `av-carousel.horse_0`, observed the live parent/slot record, and dismounted cleanly.
+- Mounted-body composition follows the parent entity's animated transform through the server's effective-transform contract, so riders inherit carousel rotation.
+- Pennant motion comps were removed; the eight pennant nodes remain under the rotating platform and inherit only its spin.
+
 ## Acceptance criteria
 
 The rework is not complete until all are true:
@@ -204,7 +212,7 @@ The rework is not complete until all are true:
 - horse legs have deliberate, stable compositions and read at gameplay distance
 - canopy, deck, horse bodies, blankets, brass, and dark hardware read as different materials
 - canopy ribs visibly connect the mast hub to the fabric edge
-- platform spin, horse bob, pennant motion, and all eight riding sockets survive replacement
+- platform spin, horse bob, and all eight riding sockets survive replacement; pennants inherit platform spin without independent orbit
 - current pose and village footprint remain unchanged
 - rebuilt GLB is deterministic, under texture budget, and has no dead motion anchors
 - live hash and component/socket census are recorded
