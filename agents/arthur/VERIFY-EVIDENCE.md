@@ -1251,3 +1251,21 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-63 r3 evidence (tracker follow-up) — 2026-08-17T21:49:32.198Z
+
+```
+PASS mkv3-miles14.ts: rebuilds deterministic + == live builds (n a2b6bfab…, s 3d423bc3…) — a2b6bfab613f/3d423bc3590b
+PASS milestone-n: stone ≡ kiln's + iron ≡ forge family's (byte-family, buffer-compared) + glow survives — stone,iron,glow2
+PASS milestone-s: stone ≡ kiln's + iron ≡ forge family's (byte-family, buffer-compared) + glow survives — stone,iron,glow2
+PASS place-tex63-multi7.ts effect: both milestones live on textured builds, poses preserved — store/a2b6bfab613f0e84.glb / store/3d423bc3590b5068.glb
+PASS anchors current + woodyard untouched (approval block honored)
+PASS verify-tex63.ts present (committed, does not self-delete)
+PASS verify-tex63.ts runs 0 / ALL PASS — code=0
+PASS both listed one-shots consumed (-paths, -r2 absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-63 pin + refreshed tex-27 pins + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
