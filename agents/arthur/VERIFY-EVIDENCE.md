@@ -235,3 +235,21 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-51 ad-hoc verification — 2026-08-17T18:01:11.721Z
+
+```
+PASS timber + iron materials (weaves already stand from tex-8) — timber,iron,weave-blue,weave-bone2
+PASS 4 deduped images (timber/iron/weave-blue/weave-bone2) — images 4
+PASS timber ≡ house wallSpan's (byte-family law)
+PASS iron ≡ forge's (byte-family law — hoops are smithed)
+PASS dh_strip_blue + dh_strip_bone GROUP anchors survive (wind comps)
+PASS no duplicate NAMED node names — clean
+PASS timber + iron buckets carry TEXCOORD_0 == POSITION (liquids + rope flat by design) — buckets 2
+PASS texture bytes < 400KB — 21834B
+PASS GLB < 20MB — 63.0KB
+PASS rebuild deterministic — 29b4efc54101
+
+ALL PASS
+
+```
