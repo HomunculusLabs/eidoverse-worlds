@@ -477,3 +477,22 @@ PASS rebuild deterministic — cff51defbdac
 ALL PASS
 
 ```
+
+## tex-53 final ad-hoc verification — 2026-08-17T18:28:25.777Z
+
+```
+PASS house rebuild deterministic + == live build (cff51defbdacd0ce) — cff51defbdacd0ce
+PASS timber + iron + stone materials (4 families total, 4 deduped images)
+PASS timber ≡ standing family + iron ≡ forge's + stone ≡ kiln's (byte-family, buffer-compared)
+PASS fire + flame + lamp anchors survive
+PASS arthur-house live on textured-interior build, pose (22,16), smoke comp recovered — store/cff51defbdacd0ce.glb
+PASS woodyard untouched (approval block honored)
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-4 pin) — code=0
+PASS tex-53 pin green
+PASS tex-4 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS listed one-shots consumed
+
+ALL PASS
+
+```
