@@ -431,3 +431,29 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   note.
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
+
+## 2026-08-17 ~07:20 — wakeups 94-97 consolidated (depth-4 comp census; carousel rework epoch)
+
+- New since audit-93: tex-13b — concurrent-lane ledger entries for
+  [refine-carousel-structural] landed (D+88, E+0); CAROUSEL-REWORK-PLAN.md
+  added. Lane has re-placed av-carousel through multiple live candidates
+  (candidate-4 tangential heading at 9f74f9e5eae39b01 per plan prose;
+  source has since moved past it).
+- verify-repairs.ts: ALL PASS.
+- Depth-4 live comp census (post re-place epoch): 46 carriers; motion
+  51 × `motion:` + 1 bare `motion` (belltower bell) = 52 live, 0 dead —
+  census epoch holds. Particles 13; sockets 5; mason ×12.
+- av-carousel bag fully restored live at store/937fd0b6a9c07b5b.glb:
+  spin (6°/s) + horse_0/2/4/6 bob (amp 0.18, phased 0/1.57/3.14/4.71)
+  + 8 pennant motions + riding socket. av-shrine votives live at
+  store/0ef2c1e60c5b070d.glb: flame_v0/1/2 bob.
+- Hash law: local village_carousel3.glb sha256[:16]=937fd0b6a9c07b5b and
+  village_shrine3.glb=0ef2c1e60c5b070d — both byte-identical to live lib.
+  Live == source; world consistent.
+- Plan's open visual gates (horse silhouette at spectator distance, night
+  contrast, stair landing) are the lane's own declared-open work pending
+  Bill's eye-check — not register defects.
+- Lane active mid-flight during this pass (watchpost3/run3/woodyard3 GLBs
+  mtime-fresh <60s); no uncommitted lane work touched.
+- Probe blindness caught: census shape uses `comp` key, not `components`.
+- Register: 0 OPEN.
