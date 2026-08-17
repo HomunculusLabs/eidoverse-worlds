@@ -1763,3 +1763,23 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-71 confirmation evidence (tracker follow-up) — 2026-08-17T22:59:23.675Z
+
+```
+PASS mkv3-charcoal40.ts: rebuild deterministic + == live build (dcb3bb63442a764c) — dcb3bb63442a764c
+PASS decode: timber + iron materials, 2 deduped images — timber,glow1,iron
+PASS timber ≡ house wallSpan's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS TEXCOORD_0 == POSITION on all texMat buckets (turf/vent/wisps/char flat by design) — buckets 2
+PASS texture bytes < 400KB + GLB < 20MB — 20455B / 53.1KB
+PASS place-tex71-timber38.ts effect: charcoal live, pose (19.1,29.4), smoke comp recovered — store/dcb3bb63442a764c.glb
+PASS census anchors: quarry + kiln current, woodyard untouched (approval block honored)
+PASS verify-tex71.ts present (committed, does not self-delete)
+PASS verify-tex71.ts runs 0 / ALL PASS — code=0
+PASS prior one-shot consumed (hermes-verify-tex71-paths.ts absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-71 pin + refreshed tex-25 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
