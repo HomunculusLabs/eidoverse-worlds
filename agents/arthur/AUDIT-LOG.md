@@ -198,3 +198,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Register: 0 OPEN.
 - 2026-08-17 ~05:4x — wakeup 36: cheap tick (only refine-227 ledger-race repair since audit-35; law re-verified EXACT inline; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~05:5x — wakeup 37: cheap tick (no new commits since audit-36; verify ALL PASS; 0 OPEN).
+- 2026-08-17 ~06:0x — wakeup 38: cheap tick (no new commits since audit-37; verify ALL PASS; 0 OPEN).
