@@ -127,6 +127,14 @@ wakeups. This lane is the standing fix for that blindness.
 
 ## Laws (carried from the skill + audit protocol)
 
+- **Offline render gate (polish-9)**: `python3 agents/arthur/render-carousel.py
+  /tmp` renders the staged carousel from 6 fixed views (software rasterizer,
+  z-buffer, Lambert shading, per-material colors = decoded texture averages;
+  NO WebGL needed — headless Chrome cannot screenshot WebGL on this Mac).
+  Phase-2 structure gate: PASS (silhouette/canopy/poles/attachments).
+  Signal recorded: legs read weakly articulated in flat shade (offline
+  proxy) — live polish-3 read + Bill's eye outrank it; candidate subject.
+
 - Decode at source before editing; the village has always been right when
   the probe was wrong.
 - Probes are one-shot: write, run once, delete. Prefer inline `bun -e`.
