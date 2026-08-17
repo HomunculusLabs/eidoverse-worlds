@@ -1657,3 +1657,31 @@ PASS ledger law EXACT + HEAD gate green (polish-inclusive)
 ALL PASS
 ```
 carousel disk artifact re-restored: 38fbbc26dcdfcc1a (polish staged build, byte-identical)
+
+## tex-69 changed-paths evidence — 2026-08-17T22:44:05.311Z
+
+```
+PASS carousel backup exists (polish staged build snapshot)
+PASS pre-state: disk carousel is the polish staged build (38fbbc26) — 38fbbc26dcdfcc1a
+PASS mkv3-landmarks.ts: belltower rebuild deterministic + == live build (82e4c316b62e5006) — 82e4c316b62e5006
+PASS carousel-safety: re-restored byte-identical to polish staged build (38fbbc26) — 38fbbc26dcdfcc1a
+PASS collateral: inn byte-identical (45e51e8ecd7dc57e) — 45e51e8ecd7dc57e
+PASS collateral: windmill byte-identical (d18cbc3f5e3e43b2) — d18cbc3f5e3e43b2
+PASS decode: stone + timber materials, 2 deduped images — stone,timber,glow2
+PASS stone ≡ kiln's + timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS bell GROUP anchor survives (motion comp target)
+PASS texMat buckets carry TEXCOORD_0 == POSITION (bell brass/rope/lamp flat by design) — buckets 2
+PASS texture bytes < 400KB + GLB < 20MB — 21183B / 76.1KB
+PASS place-tex69-timber36.ts effect: belltower live, pose (5.7,5.7), motion+reactions recovered — store/82e4c316b62e5006.glb
+PASS live carousel untouched by tex-69 (cd22d0b0, polish lane's approved build) — store/cd22d0b09e70bebc.glb
+PASS census anchors: watchpost + plaza current, woodyard untouched (approval block honored)
+PASS verify-tex69.ts present (committed, does not self-delete)
+PASS verify-tex69.ts runs 0 / ALL PASS — code=0
+PASS carousel-safety post-verifier restore (38fbbc26) — 38fbbc26dcdfcc1a
+PASS prior one-shot consumed (hermes-verify-tex69-pre.ts absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-69 pin + refreshed tex-20 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
