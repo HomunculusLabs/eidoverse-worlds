@@ -1029,3 +1029,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-60 changed-paths evidence — 2026-08-17T19:25:44.659Z
+
+```
+PASS mkv3-dyelaundry94.ts: rebuild deterministic + == live build (c5f85611ffefc522) — c5f85611ffefc522
+PASS decode: timber material (+ 4 standing weaves), 5 deduped images — timber,weave-blue,weave-bone,weave-brass,weave-brown
+PASS timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS all six dl_cloth GROUP anchors survive (wind comp targets)
+PASS timber buckets carry TEXCOORD_0 == POSITION (rope line flat by design) — buckets 1
+PASS texture bytes < 400KB — 22460B
+PASS GLB < 20MB — 48.3KB
+PASS place-tex60-timber28.ts effect: laundry live, pose (-26.7,-13), all six wind comps recovered — store/c5f85611ffefc522.glb
+PASS census anchors: monument + shrine current, woodyard untouched (approval block honored)
+PASS verify-tex60.ts present (committed, does not self-delete)
+PASS verify-tex60.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-60 pin + refreshed tex-5 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
