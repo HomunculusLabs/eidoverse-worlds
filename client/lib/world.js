@@ -344,6 +344,12 @@ const _mtQ = new THREE.Quaternion();
 const _mtF = new THREE.Vector3();
 const _mtV = new THREE.Vector3();
 const _mtM = new THREE.Matrix4();
+const _mtBase = new THREE.Matrix4();
+const _mtLive = new THREE.Matrix4();
+const _mtDisp = new THREE.Matrix4();
+const _mtInv = new THREE.Matrix4();
+const _mtParentBase = new THREE.Matrix4();
+const _mtParentRestWorld = new THREE.Matrix4();
 /** Fill outPos with rider's world seat position; returns {yaw, pose, to,
  *  seatState, seatReason} or null when not mounted (or the parent isn't live
  *  yet). `rider` is {path, av} — the roster path and live wrapper of the
@@ -360,13 +366,29 @@ export function mountTransform(riderId, outPos, rider) {
   _mtF.set(...(m.offset ?? sock.pos ?? [0, 0.5, 0])).applyMatrix4(parent.matrixWorld);
   const part = sock.part ? findPart(parent, String(sock.part)) : null;
   if (part && part.parent && part.userData.mbase) {
-    // mbase = the part's rest pose, captured by motion.js the first time it
-    // animates it. Absent mbase means the part has never moved: identity.
+    // mbase/live are both in the horse's carousel-parent frame. Apply the
+    // horse bob displacement there, then carry the result through the
+    // carousel parent's CURRENT world matrix. The old implementation built
+    // the rest matrix with that current (already-spun) parent matrix, which
+    // canceled the carousel orbit and left riders bobbing at fixed X/Z.
     const b = part.userData.mbase;
     part.updateWorldMatrix(true, false);
-    _mtM.compose(_mtV.set(...b.pos), _mtQ.fromArray(b.quat), part.scale)
-      .premultiply(part.parent.matrixWorld).invert();       // world → part-at-rest
-    _mtF.applyMatrix4(_mtM).applyMatrix4(part.matrixWorld); // …re-emerge from the live part
+    _mtBase.compose(_mtV.set(...b.pos), _mtQ.fromArray(b.quat), part.scale);
+    _mtLive.copy(part.matrix);
+    _mtDisp.copy(_mtLive).premultiply(_mtInv.copy(_mtBase).invert());
+    // The socket is authored in the entity/model frame, not in the carousel
+    // node's live local frame. Convert it through the carousel's REST matrix;
+    // using its current spun matrix here rotates the point back to its old
+    // world X/Z and leaves only the horse bob visible.
+    const pb = part.parent.userData.mbase;
+    if (pb && part.parent.parent) {
+      _mtParentBase.compose(_mtV.set(...pb.pos), _mtQ.fromArray(pb.quat), part.parent.scale);
+      _mtParentRestWorld.copy(part.parent.parent.matrixWorld).multiply(_mtParentBase);
+    } else {
+      _mtParentRestWorld.copy(part.parent.matrixWorld);
+    }
+    _mtF.applyMatrix4(_mtInv.copy(_mtParentRestWorld).invert())
+      .applyMatrix4(_mtDisp).applyMatrix4(part.parent.matrixWorld);
     rideFrame = part;
   }
   // The profile correction (#101): contact plane onto the authored socket
