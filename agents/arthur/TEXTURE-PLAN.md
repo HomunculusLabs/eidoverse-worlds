@@ -189,6 +189,19 @@ cistern box.
 BYTE-FAMILY LAW: same texMat params ⇒ identical tile bytes — family
 consistency is provable, not assumed.
 
+### [tex-11] SOIL II — the plaza gathering ring (2026-08-17, wakeups 43–45) — DONE
+8 gathering-ring pavers on the 6-variant soil family (soil law); soil-0
+byte-identical to door-paths' (byte-family law now spans the ground).
+DECODE-CAUGHT DEFECT: my first pick stride (pv*3 % 6 over 8 pavers)
+visited only 2 of 6 variants — probe caught it BEFORE rollout, fixed to
+pv % 6, re-decode 7/7. Rollout comp-law: hearth's 4 live comps (fire
+particles, well sway, sockets, kettle simmer) captured + re-applied;
+census 10/10. Ledger refine-237. Pin: tex-11 plaza (4 comps).
+STRIDE LAW: variant pick strides must be checked against the instance
+count — a stride sharing factors with the count silently collapses
+diversity; decode the distinct-tile count before rollout.
+GROUND FAMILY COMPLETE: door paths + gathering ring, one earth.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
