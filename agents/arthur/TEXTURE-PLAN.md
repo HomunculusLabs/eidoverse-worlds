@@ -863,6 +863,23 @@ verifier `verify-tex71.ts` committed (14/14 ALL PASS). Ledger
 refine-303. Pin: tex-71 charcoal. TIMBER: thirty-eighth site — the
 collier works with the village's own wood, dome to stake.
 
+### [tex-72] STONE XIX + TIMBER XXXIX — the windmill joins (2026-08-17, resumed wakeup 11) — DONE
+The village's second tower, flat since the new era: 5-tier tapered
+tower + both millstones on village ashlar (≡ kiln's — belltower law
+tex-20/69; the millstones ARE stone, ground querns); ALL built
+woodwork on timber (≡ wallSpan's): tie beams (tex-53 chain), tailpole
++ crossbar + tailwheel + yoking stakes (built-post chain tex-68), 4
+sail shafts + spars, drive shaft, bench + leg, cap, gallery ring. Sail
+cloth + flour sacks stay flat (cloth/goods); hub stays brass; lamp
+stays emissive. sails GROUP anchor survives; motion:sails comp
+recovered — the mill still turns. CAROUSEL-SAFETY exercised again:
+carousel byte-identical restored (38fbbc26 disk / cd22d0b0 live
+untouched); belltower + inn byte-identical. Persistent verifier
+`verify-tex72.ts` committed (19/19 ALL PASS; restores carousel
+internally after each rebuild). Ledger refine-304. Pin: tex-72
+windmill. STONE: nineteenth; TIMBER: thirty-ninth — the village's two
+towers read as one village, bell to mill.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
