@@ -389,6 +389,16 @@ Hay roll + band flat (feed is feed). Decode 10/10; census 5/5
 A single market stand now speaks all three structural languages of
 the village at once.
 
+### [tex-31] TIMBER XI — the milk churn (2026-08-17, wakeup 71) — DONE
+Coopered staves + lid + knob + jug lid on village timber (byte-identical
+to wallSpan's; coopered like the rain barrels); hoop bands on forge
+iron. Bone plate/ceramic jug/cloth flat (the dairy chain reads
+wood-and-iron around ceramic). Decode 9/9; census 5/5 (woodyard
+untouched). Ledger refine-262. Pin: tex-31 churn.
+THE INN PORCH reads as a still-life of the village's whole material
+language — wood, iron, and ceramic standing together where the
+morning begins.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
