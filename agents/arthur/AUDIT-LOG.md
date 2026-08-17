@@ -474,3 +474,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Live per-entity curl for watchpost comp confirm was approval-blocked
   this tick; covered by verify gate pin instead. No register entry.
 - Register: 0 OPEN.
+- 2026-08-17 ~11:2x — wakeup 100: cheap tick; no new commits; verify ALL PASS; 0 OPEN.
