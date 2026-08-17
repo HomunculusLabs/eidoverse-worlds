@@ -50,7 +50,12 @@ ck(`horse-ear at bob peak ${earsBob.toFixed(2)}m >= 1.50`, earsBob >= 1.5);
 
 // texture chain intact (6 families by construction)
 ck("6 textured materials", j.materials.filter((m: any) => m.pbrMetallicRoughness?.baseColorTexture).length === 6);
-ck("TEXCOORD_0 on all textured primitives", j.meshes.every((m: any) => m.primitives.every((p: any) => !p.material || p.attributes.TEXCOORD_0)));
+// texture chain: textured materials (baseColorTexture) must carry UVs;
+// flat trim (brass rods, lantern globes) is exempt per the rework plan's
+// "unmapped trim stays flat" law. (Assertion tightened polish-5 after the
+// flat lantern globes tripped the over-broad form.)
+const texturedIdx = new Set(j.materials.map((m: any, i: number) => m.pbrMetallicRoughness?.baseColorTexture ? i : -1).filter((i: number) => i >= 0));
+ck("TEXCOORD_0 on all TEXTURED primitives", j.meshes.every((m: any) => m.primitives.every((p: any) => p.material === undefined || !texturedIdx.has(p.material) || p.attributes.TEXCOORD_0)));
 
 console.log(`polish-1 source decode: ${pass} PASS ${fail} FAIL (nodes ${j.nodes.length})`);
 process.exit(fail ? 1 : 0);

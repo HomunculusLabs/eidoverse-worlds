@@ -56,7 +56,7 @@ ck("no stale socket y=2.47 anywhere", !blob.includes("2.47"));
 // 6. staged build unchanged (placer rebuilds it before upload)
 // (pin refreshed polish-3: paint widening joined the staged rollout)
 const h = createHash("sha256").update(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/village_carousel3.glb")).digest("hex").slice(0, 16);
-ck("staged GLB is polish-4 build 7ac6d8a63a290cae", h === "7ac6d8a63a290cae", h);
+ck("staged GLB is polish-5 build 38fbbc26dcdfcc1a", h === "38fbbc26dcdfcc1a", h);
 
 console.log(`polish-2 placer unit tests: ${pass} PASS ${fail} FAIL`);
 process.exit(fail ? 1 : 0);

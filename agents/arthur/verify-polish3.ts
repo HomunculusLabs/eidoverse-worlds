@@ -15,7 +15,7 @@ const ck = (n: string, c: boolean, d = "") => { if (c) pass++; else { fail++; co
 const build = spawnSync("bun", [`${ROOT}/agents/arthur/assets/mkcarousel.ts`], { cwd: ROOT, encoding: "utf8" });
 if (build.status !== 0) { console.log("FAIL: rebuild", build.stderr); process.exit(1); }
 const h = createHash("sha256").update(readFileSync(GLB)).digest("hex").slice(0, 16);
-ck("deterministic staged build 7ac6d8a63a290cae", h === "7ac6d8a63a290cae", h);
+ck("deterministic staged build 38fbbc26dcdfcc1a", h === "38fbbc26dcdfcc1a", h);
 
 // 2. decode paint tile luminances (RGBA PNG, filter-aware)
 const b = readFileSync(GLB);
@@ -66,10 +66,12 @@ ck("bone is the lightest family", L["carousel_bone_paint"] > L["carousel_gold_pa
 ck("blue is the darkest paint family", L["carousel_blue_paint"] < L["carousel_gold_paint"] && L["carousel_blue_paint"] < L["carousel_bone_paint"]);
 ck("untouched families stable (wood/fabric within muted band)", L["carousel_wood"] < 0.40 && L["carousel_fabric"] < 0.40);
 
-// 4. node count unchanged (paint-only change: 177)
+// 4. node count: carousel is authored fully-named/unmerged; lanterns add 16
 const jlen = b.readUInt32LE(12);
 const j = JSON.parse(b.slice(20, 20 + jlen).toString());
-ck("node count still 177 (paint-only)", j.nodes.length === 177, String(j.nodes.length));
+ck("node count 193 (177 + 16 lantern nodes, carousel's all-named convention)", j.nodes.length === 193, String(j.nodes.length));
+const lanternNames = j.nodes.map((n: any) => n.name).filter((n: string) => n?.startsWith("cr_lantern"));
+ck("8 lanterns + 8 rods named, none match KEEP motion prefixes", lanternNames.length === 16 && !lanternNames.some((n: string) => /^(carousel$|horse_|cr_flag|fire|flame|lamp|glow|ember)/.test(n.replace("cr_lantern_rod_", "").replace("cr_lantern_", "x"))), lanternNames.join(","));
 
 // 5. the polish-1 lift still holds end-to-end
 const v1 = spawnSync("bun", [`${ROOT}/agents/arthur/verify-polish1.ts`], { cwd: ROOT, encoding: "utf8" });

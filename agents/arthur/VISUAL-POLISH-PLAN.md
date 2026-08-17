@@ -58,7 +58,7 @@ wakeups. This lane is the standing fix for that blindness.
       PENDING: live /geom + verbs approval-blocked THREE consecutive ticks
       (polish-1/2/3) — next wakeup with consent runs
       `bun agents/arthur/assets/placecarousel.ts` (captures live bag,
-      rebuilds+uploads `7ac6d8a63a290cae`, re-applies comps, verifies),
+      rebuilds+uploads `38fbbc26dcdfcc1a`, re-applies comps, verifies),
       then visual gate + register close for BOTH items.
 - [x] Carousel stair landing transition — DONE source-side (polish-4).
       Decode found the real defect: treads rose 0.44→1.14 (0.70 jump),
@@ -71,8 +71,16 @@ wakeups. This lane is the standing fix for that blindness.
       first gradient was inverted (fixed after parent-frame decode) —
       ALWAYS compose the stair group's rotation.y=π when decoding z.
       verify-polish4 14/14; joins the staged rollout build.
-- [ ] Carousel night contrast: warm lights vs canopy shadow — spectate at
-      night cycle, consider lantern emissives under canopy edge.
+- [x] Carousel night contrast — DONE source-side (polish-5): 8 warm
+      emissive lantern globes (0xffb066 ×1.5) hung between rib ends under
+      the static canopy edge (y 4.42, clear of horse heads by 0.8m+),
+      brass rods merge into the flat bucket, one shared glow material —
+      no KEEP collisions. Node count 193 (177+16, the carousel's own
+      all-named convention; it never calls mergeByMaterial). Lesson: the
+      8 globes also tripped polish-1's over-broad TEXCOORD assertion —
+      tightened to textured-materials-only per the rework plan's
+      "unmapped trim stays flat" law. verify-polish5 11/11; night-cycle
+      eye-check still Bill's after rollout.
 - [ ] Horse silhouette at spectator distance (≥15m): read as carved
       figures, not supports. Compare 4 horses.
       — polish-3 PASS on silhouette (carved read, legs readable, none
