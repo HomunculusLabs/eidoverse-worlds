@@ -420,6 +420,15 @@ part-nodes unique, 8 cores present. Decode 9/9 real; census 4/4
 IRON: three sites — the forge, the chopblock, and every lamp on the
 walk home.
 
+### [tex-34] TIMBER XIII — the chicken coop (2026-08-17, wakeup 74) — DONE
+4 posts + coop box + slanted roof + ramp + nest boxes/lid + feeder
+legs/trough + waterer stand on village timber (byte-identical to
+wallSpan's). Hens flat (life-stays-flat law); grain, water face, and
+door inset flat (feed/water/shadow). Decode 8/8; census 4/4 (woodyard
+untouched). Ledger refine-265. Pin: tex-34 coop.
+TIMBER: thirteen sites — the village's wood now shelters its people,
+its rabbits, its goats' yard, its potter, its traders, and its hens.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
