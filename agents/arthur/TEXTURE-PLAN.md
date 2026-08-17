@@ -716,6 +716,16 @@ pin advanced to `c5f85611ffefc522` (same commit). Persistent verifier
 tex-60 dyelaundry. TIMBER: twenty-ninth site — the cloth chain hangs
 end to end on the village's own wood.
 
+### [tex-61] TIMBER XXX — the map board completes (2026-08-17, wakeup 101) — DONE
+Both posts + the cap roof on village timber (≡ wallSpan's — a post is
+a post; the cap is a plank; the village builds the whole board from
+the same trees). Bone frame stays bone; painted map chips stay painted
+(the village reads as itself at miniature); brass pin stays brass.
+PIN-REFRESH: tex-17 mapboard pin advanced to `d555acbd0b0ab516` (same
+commit). Persistent verifier `verify-tex61.ts` committed (14/14 ALL
+PASS). Ledger refine-293. Pin: tex-61 mapboard. TIMBER: thirtieth
+site — the map hangs on the same wood it maps.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
