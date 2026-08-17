@@ -215,3 +215,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   "water-bob" name in the commit title is prose shorthand, not a comp key.
   Claim holds. No finding.
 - 2026-08-17 ~06:3x — wakeup 41: cheap tick (no new commits since audit-40 addendum; verify ALL PASS; 0 OPEN).
+- 2026-08-17 ~06:4x — wakeup 42: cheap tick (no new commits since audit-41; verify ALL PASS; 0 OPEN).
