@@ -304,6 +304,15 @@ at source: 2 GROUPS, not 6 — wrappers+children again, tex-13 lesson).
 Rollout comp-law: both rabbit comps recovered; census 6/6 (woodyard
 untouched). Ledger refine-252. Pin: tex-21 hutch (rabbit comps).
 
+### [tex-22] TIMBER VI — both fences (2026-08-17, wakeup 61) — DONE
+Garden picket fence + paddock pen: pickets, rails, gate headers on
+village timber (byte-identical to wallSpan's, both GLBs). Posts stay
+DARK flat (structural). Decode 12/12 across both; rollout comp-law
+(neither carries comps); census 7/7 (woodyard untouched). Ledger
+refine-253. Pins: tex-22 fences; honest-top garden-fence pin REFRESHED
+to the standing tex-22 build (geometry unchanged — material swap only).
+TIMBER: walls, scaffold, greeting, map, hutch, and every fence line.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
