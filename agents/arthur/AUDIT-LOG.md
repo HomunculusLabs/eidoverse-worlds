@@ -214,3 +214,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   motion:duck_d1/d2/d3 on av-pondlife — live-confirmed present. The
   "water-bob" name in the commit title is prose shorthand, not a comp key.
   Claim holds. No finding.
+- 2026-08-17 ~06:3x — wakeup 41: cheap tick (no new commits since audit-40 addendum; verify ALL PASS; 0 OPEN).
