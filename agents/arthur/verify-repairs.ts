@@ -42,6 +42,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
 ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-67] av-plaza-hearth on iron-bowl build (933ab1f96fe1e734, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/933ab1f96fe1e734.glb");
 ck("[tex-66] av-kiln on ring-stone build (0bdc0d18dddacf9b, fire+smoke)", ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb");
 ck("[tex-65] av-potter on timber-woodwork build (cea5c582bf05d72f, wheel comp)", ents["av-potter"]?.lib === "store/cea5c582bf05d72f.glb");
 ck("[tex-64] av-waystone on bench-timber build (5fcaa644f4ba290b, float+spin+ffw)", ents["av-waystone"]?.lib === "store/5fcaa644f4ba290b.glb");
@@ -56,7 +57,7 @@ ck("[tex-56] av-forge on woodwork build (6715b0f885deaed7, fire comps)", ents["a
 ck("[tex-55] av-bcistern on 3-family build (a96ee31d29c2085f)", ents["av-bcistern"]?.lib === "store/a96ee31d29c2085f.glb");
 ck("[tex-54] av-hutch on leg-timber build (6263e8a20eb17cc9, rabbit comps)", ents["av-hutch"]?.lib === "store/6263e8a20eb17cc9.glb");
 ck("[tex-53] arthur-house on textured-interior build (cff51defbdacd0ce)", ents["arthur-house"]?.lib === "store/cff51defbdacd0ce.glb");
-ck("[tex-52] av-plaza-hearth on 3-family build (4e58865a35f82ab9, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/4e58865a35f82ab9.glb");
+ck("[tex-52] av-plaza-hearth on 3-family build (933ab1f9 → pin refreshed by tex-67, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/933ab1f96fe1e734.glb");
 ck("[tex-51] av-dyehouse on textured build (29b4efc54101106d, wind comps)", ents["av-dyehouse"]?.lib === "store/29b4efc54101106d.glb");
 ck("[tex-50] av-watchpost on iron-bowl build (e7f5534850748fd3, fire comps)", ents["av-watchpost"]?.lib === "store/e7f5534850748fd3.glb");
 ck("[tex-49] av-stable on textured-fittings build (89dc80d7bb8fc395)", ents["av-stable"]?.lib === "store/89dc80d7bb8fc395.glb");
@@ -112,7 +113,7 @@ ck("[tex-15] av-welcome on textured build (fa0c9d94a07b9ef5)", ents["av-welcome"
 ck("[tex-14] av-watchpost on timber build (e7f55348 → pin refreshed by tex-50, sentry comps)", ents["av-watchpost"]?.lib === "store/e7f5534850748fd3.glb");
 ck("[tex-13] av-shrine on textured build (0ef2c1e60c5b070d, 3 votive comps)", ents["av-shrine"]?.lib === "store/d0d3743a60802625.glb");
 ck("[tex-12] av-roads3 on ground build (20234503da4e1b55)", ents["av-roads3"]?.lib === "store/20234503da4e1b55.glb");
-ck("[tex-11] av-plaza-hearth on soil build (4e58865a → pin refreshed by tex-52, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/4e58865a35f82ab9.glb");
+ck("[tex-11] av-plaza-hearth on soil build (4e58865a → pin refreshed by tex-52, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/933ab1f96fe1e734.glb");
 ck("[tex-10] av-bcistern on ashlar build (a96ee31d → pin refreshed by tex-55)", ents["av-bcistern"]?.lib === "store/a96ee31d29c2085f.glb");
 ck("[tex-9] av-kiln on ashlar build (0bdc0d18 → pin refreshed by tex-66, +fire anchor r45)", ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb");
 ck("[tex-8] av-market + av-dyehouse on weave builds (market pin refreshed by tex-57; dyehouse by tex-51)",
