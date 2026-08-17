@@ -1414,3 +1414,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-66 fresh evidence (tracker follow-up) — 2026-08-17T22:13:30.321Z
+
+```
+PASS mkv3-kiln38.ts: rebuild deterministic + == live build (0bdc0d18dddacf9b) — 0bdc0d18dddacf9b
+PASS decode: stone + timber materials, 2 deduped images — stone,timber,glow2
+PASS stone ≡ quarry's ashlar + timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS fire_kiln GROUP anchor survives (fire comp target)
+PASS texMat buckets carry TEXCOORD_0 == POSITION (cobbles/putty/fire flat by design) — buckets 2
+PASS texture bytes < 400KB + GLB < 20MB — 21183B / 46.0KB
+PASS place-tex66-stone18.ts effect: kiln live, pose (28.9,37), fire + smoke comps recovered — store/0bdc0d18dddacf9b.glb
+PASS census anchors: potter + waystone current, woodyard untouched (approval block honored)
+PASS verify-tex66.ts present (committed, does not self-delete)
+PASS verify-tex66.ts runs 0 / ALL PASS — code=0
+PASS prior one-shot consumed (hermes-verify-tex66-paths.ts absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-66 pin + refreshed tex-9 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
