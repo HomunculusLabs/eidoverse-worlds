@@ -710,3 +710,21 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-55 ad-hoc verification — 2026-08-17T18:43:41.973Z
+
+```
+PASS stone + timber + iron materials — stone,timber,iron
+PASS 3 deduped images — images 3
+PASS stone ≡ kiln's ashlar (byte-family law, standing from tex-10)
+PASS timber ≡ house wallSpan's (byte-family law)
+PASS iron ≡ forge's (byte-family law — smithed scoop)
+PASS no duplicate NAMED node names — clean
+PASS texMat buckets carry TEXCOORD_0 == POSITION (water flat by design) — buckets 3
+PASS texture bytes < 400KB — 21940B
+PASS GLB < 20MB — 38.8KB
+PASS rebuild deterministic — a96ee31d29c2
+
+ALL PASS
+
+```
