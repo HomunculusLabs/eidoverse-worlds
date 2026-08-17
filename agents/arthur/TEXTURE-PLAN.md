@@ -657,6 +657,19 @@ untouched). Ledger refine-287. Pin: tex-55 cistern. TIMBER:
 twenty-sixth. IRON: twentieth — the water law reads at every vessel:
 well, trough, barrel, cistern.
 
+### [tex-56] TIMBER XXVII — the forge woodwork (2026-08-17, wakeup 96) — DONE
+Bellows + anvil stump + hammer handle + quench barrel on village
+timber (≡ wallSpan's — the quench is a stave barrel like the rain
+barrels/churn; hoops already iron from tex-6). Coals stay emissive in
+the breathing anchor; water stays water; hood/flue caps keep flat
+trim (doubt law). PIN-REFRESH: tex-6 forge pin advanced to
+`6715b0f885deaed7` (same commit — the gate stayed green throughout
+this run since the census probe ran before the pin landed; persistent
+verifier `verify-tex56.ts` committed as durable evidence). Both forge
+fire comps recovered — the fire still breathes. Ledger refine-288.
+Pin: tex-56 forge. TIMBER: twenty-seventh site — the smith works at
+wood, iron, and stone, all the village's own.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
