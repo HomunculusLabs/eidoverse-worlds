@@ -339,6 +339,16 @@ particles:smoke comp, recovered live). Decode 8/9 real; census 6/6
 FUEL CHAIN READS END TO END: woodyard logs → clamp char → forge
 coals — one wood, one iron, source to fire.
 
+### [tex-26] TIMBER IX — the rain barrels ×5 (2026-08-17, wakeup 66) — DONE
+ALL 5 barrels (house/longhouse/inn/bunkhouse/grain-store): staves +
+diverter planks on village timber, hoops on forge iron — both tiles
+byte-identical to standing families in every GLB. Water flat. Decode
+21/21 (20 decode first-run; determinism re-checked with corrected
+probe logic — v1's compare-against-rainbarrel_h was a PROBE bug, all
+five rebuild byte-deterministic). Census 7/7 (woodyard untouched).
+Ledger refine-257. Pin: tex-26 barrels (5-entity pin).
+EVERY EAVE CATCHES THE SAME RAIN — and it lands in the village's wood.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
