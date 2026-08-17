@@ -75,3 +75,19 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - 2026-08-17 ~02:3x — wakeup 18: cheap tick (no new commits since audit-17; depth-1 re-sweep ALL CLEAR over 28 entities for good measure).
 - 2026-08-17 ~02:4x — wakeup 19: cheap tick (no new commits since audit-18).
 - 2026-08-17 ~02:5x — wakeup 20: cheap tick (no new commits since audit-19).
+
+## 2026-08-17 ~02:5x — wakeup 20 (cheap tick + verify FAIL decode)
+
+- verify-repairs.ts: 1 FAILURE — "[tex-1] av-stable stands on the thatch
+  build (56d0122215bcca65)".
+- Decoded at source (not a village defect): av-stable live lib is
+  store/aaf04bc81719be50.glb, and the LOCAL village_stable3.glb hashes to
+  exactly aaf04bc81719be50 — **live == current source**. The world is
+  consistent; the verify PIN is stale: TEXTURE-PLAN shows tex-2 (TIMBER via
+  housekit wallSpan, which the stable consumes) as the next unchecked item —
+  an in-flight texture-loop run rebuilt + re-placed the stable after tex-1,
+  and the pin refresh belongs to that run's close-out (tex-1 did the same).
+- No register entry: the standing world is correct; the pin is the texture
+  lane's to update on commit. ESCALATION RULE for next wakeup: if verify
+  still FAILs on this pin AND the texture lane has gone quiet (no new
+  commits), append it to the register as a stale-pin defect.
