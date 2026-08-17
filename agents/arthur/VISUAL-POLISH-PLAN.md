@@ -93,6 +93,13 @@ wakeups. This lane is the standing fix for that blindness.
 - [ ] Interiors visible through doorways — furnished read at threshold.
 - [ ] Village night lighting balance: interior lights ×6 + hearths; look
       for dead-dark buildings on the ring.
+      — polish-6 DUSK BASELINE (plaza-center frame + vision read): 6 warm
+      lights visible (2/4/5/7/8/10 o'clock), 6 dark (1/3/6/9/11 + the
+      belltower at 12 — landmark by design, carries the material-table
+      lamp); distribution balanced, not lopsided. Source census: ALL 8
+      enterable buildings carry fire/lamp glow anchors. Dusk wash makes
+      dead-dark calls INCONCLUSIVE — night-cycle re-read is the real gate;
+      no source change forced (that would be invented work).
 
 ## Closed
 
