@@ -1607,3 +1607,28 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-68 fresh re-verification (persistent verifier + gate, run directly) — 2026-08-17T22:32:20Z
+
+```
+PASS watchpost rebuild deterministic + == live build (256e16a13027fb93) — 256e16a13027fb93
+PASS decode: timber + iron materials — timber,iron,glow2
+PASS 2 deduped images — images 2
+PASS timber ≡ house wallSpan's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS fire_coals GROUP anchor survives (fire comp target)
+PASS no duplicate NAMED node names — clean
+PASS texMat buckets carry TEXCOORD_0 == POSITION (horn/coals flat by design) — buckets 2
+PASS texture bytes < 400KB — 20455B
+PASS GLB < 20MB — 54.2KB
+PASS place-tex68-timber35.ts effect: watchpost live, pose (15.6,-15.6), fire comps recovered — store/256e16a13027fb93.glb
+PASS census anchors: plaza + kiln current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-14 pin) — code=0
+PASS tex-68 pin green
+PASS tex-14 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green (polish-inclusive)
+
+ALL PASS
+--- standing gate:
+ALL PASS
+```
+T-dir residue check: hermes-verify-tex68* remaining = 0 (prior one-shot consumed after its single 13/13 pass, output committed at 4b714a1)
