@@ -306,3 +306,20 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
 - 2026-08-17 ~09:3x — wakeup 59: cheap tick (no new commits since audit-58; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~10:0x — wakeups 60-70 consolidated
+
+- Wakeups 60-61: 1 FAIL (hygiene: probe-tex8b.ts on disk, texture lane
+  in-flight; windmill3+inn3 GLBs mtime-fresh 02:05). Did not self-resolve
+  within 25s — held as pending the lane's close-out.
+- Wakeups 62-69: no processing (loop stacked; context window advanced).
+- Now: FOUR new commits since audit-59 — refine-234 (carousel pennants
+  fly, cr_flag anchors + 8 wind comps, rate-limit resume pattern),
+  refine-235 (the crow lives — grainfield crow + fidget comp, census 41
+  live / 0 dead), refine-236 (the kettle simmers — plaza pz_kettle
+  pendulum, census 42 live / 0 dead), tex-10 (bakery cistern on village
+  ashlar, byte-identical family tile, census 6/6, byte-family law).
+- verify-repairs.ts: ALL PASS (probe-tex8b.ts now deleted; the wakeup-60
+  hygiene finding resolved by the lane's own close-out — no register
+  entry needed).
+- Register: 0 OPEN.
