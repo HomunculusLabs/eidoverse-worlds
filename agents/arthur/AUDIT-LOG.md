@@ -124,3 +124,14 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   if av-inn still lacks motion:sign next wakeup AND tex-3 has gone quiet,
   register it (comp-wipe law violation class — loop #98 precedent).
 - Interior lights 6/6. Register: 0 OPEN.
+
+## 2026-08-17 ~03:5x — wakeup 25 (escalation: R-110 registered)
+
+- New since audit-24: tex-3 PLASTER closed (1b4e097 + f8615b1; 8 gabled
+  buildings, census 20/20, pins refreshed).
+- verify-repairs.ts: ALL PASS.
+- The audit-24 escalation rule FIRED: av-inn still lacks motion:sign and
+  the texture lane is quiet. Deeper decode: NO placer file in the repo
+  contains motion:sign — the comp was applied once (pre-audit era) and no
+  re-apply path exists. R-110 registered (comp-wipe class, loop #98
+  precedent). Register: 1 OPEN.

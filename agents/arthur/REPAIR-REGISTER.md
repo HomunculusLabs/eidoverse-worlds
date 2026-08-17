@@ -276,3 +276,19 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   state + update TEXTURE-PLAN + refresh the pin to the live hash aaf04bc8),
   OR pin-refresh alone if tex-2 is abandoned. Do not hand-edit the ledger.
 - STATUS: FIXED (tex-2 commits 34caeeb/854ae04/43abf78 pinned the timber libs; verify-repairs.ts ALL PASS; world==source 24/24 confirmed by audit-22)
+
+### R-110 [COLLISION/COMP] av-inn motion:sign comp lost across texture re-places — OPEN (audit-25)
+- Evidence: live av-inn comps are [particles:smoke, particles] — motion:sign
+  GONE. It was present at audit-16's census (37 comp entities, av-inn had
+  4 comps incl. motion:sign + sockets). tex-2 (10 re-places incl. inn) and
+  tex-3 (8 re-places incl. inn) both re-placed av-inn; the comp was wiped
+  and never re-applied.
+- Root decode: `grep -r "motion:sign" agents/arthur/assets/place-*.ts`
+  returns NOTHING — no standing placer file re-applies the inn sign comp.
+  This is the loop #98 precedent exactly: smoke/embers re-applied, the
+  sign comp's placer never existed in the chain.
+- Fix for the texture/refinement lane: re-apply the inn sign comp (recreate
+  the original comp data — check ledger refine history for the sign's
+  origin entry; place via a comp placer FILE per the no-inline-JSON law),
+  then add it to a standing placer so the next re-place can't drop it.
+- STATUS: OPEN
