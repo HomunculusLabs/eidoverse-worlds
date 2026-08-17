@@ -852,6 +852,17 @@ thirty-seventh site; IRON: twenty-fourth — where the village's stone
 is born reads on all three of its own materials, face to sledge to
 lamp.
 
+### [tex-71] TIMBER XXXVIII — the charcoal clamp completes (2026-08-17, resumed wakeup 10) — DONE
+Collier's stake on village timber (≡ wallSpan's — the tool-handle
+chain tex-37/56/66: pitchfork, smith's hammer, lime-worker's shovel,
+now the collier's stake). Turf stays earth; vent stays char; shimmer
+stays emissive; wisps stay gray; charcoal stays black (tex-25's law).
+Smoke comp recovered — the clamp still smolders. PIN-REFRESH: tex-25
+charcoal pin advanced to `dcb3bb63442a764c` (same commit). Persistent
+verifier `verify-tex71.ts` committed (14/14 ALL PASS). Ledger
+refine-303. Pin: tex-71 charcoal. TIMBER: thirty-eighth site — the
+collier works with the village's own wood, dome to stake.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
