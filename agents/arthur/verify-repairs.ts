@@ -28,16 +28,18 @@ const sep = (a: number[], b: number[]) => Math.max(Math.max(a[0] - b[1], b[0] - 
 // --- per-defect live assertions (mirror of the register's FIXED entries) ---
 const D = ents["av-dyehouse"], S = ents["av-sign-dyer"], R = ents["av-row-cottage"];
 ck("[tex-2] av-stable on thatch+timber build (aaf04bc81719be50)", ents["av-stable"]?.lib === "store/aaf04bc81719be50.glb");
-ck("[tex-2] all 10 wallSpan buildings on timber builds",
-    ents["arthur-house"]?.lib === "store/25f429d26ee63c2f.glb"
-    && ents["av-longhouse"]?.lib === "store/581cc44acb44ae7d.glb"
-    && ents["av-garden-cottage"]?.lib === "store/707e25e90adeb0ce.glb"
-    && ents["av-row-cottage"]?.lib === "store/d1e0864e34cd84df.glb"
-    && ents["av-bunkhouse"]?.lib === "store/82bee8d7bce286ff.glb"
-    && ents["av-hall"]?.lib === "store/4bd4e2c0ba5eccab.glb"
-    && ents["av-court"]?.lib === "store/eb04d4cecbba7fc3.glb"
-    && ents["av-inn"]?.lib === "store/cb6a93f745e2b9b7.glb"
-    && ents["av-windmill"]?.lib === "store/2988dc642276bcfb.glb");
+ck("[tex-3] 8 gabled buildings on plaster builds",
+    ents["arthur-house"]?.lib === "store/3039085e1aa4e9e1.glb"
+    && ents["av-longhouse"]?.lib === "store/5c20ad8b7a28dd71.glb"
+    && ents["av-garden-cottage"]?.lib === "store/0ae0e9e34b8a7902.glb"
+    && ents["av-row-cottage"]?.lib === "store/08522f1a1223128f.glb"
+    && ents["av-bunkhouse"]?.lib === "store/3da26168b6e8081f.glb"
+    && ents["av-hall"]?.lib === "store/6a2ce330b370794f.glb"
+    && ents["av-court"]?.lib === "store/5249d2abed15e735.glb"
+    && ents["av-inn"]?.lib === "store/bbb052da598d469c.glb");
+ck("[tex-2] windmill + stable on timber-era builds (untouched by tex-3)",
+    ents["av-windmill"]?.lib === "store/2988dc642276bcfb.glb"
+    && ents["av-stable"]?.lib === "store/aaf04bc81719be50.glb");
 ck("[R-106] dyehouse at (-21,-21.6) yaw .941", !!D && Math.abs(D.pos[0] + 21) < 0.01 && Math.abs(D.pos[2] + 21.6) < 0.01 && Math.abs(D.yaw - 0.941) < 0.005);
 ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(R, 2.95, 2.67)) > 0 && sep(rect(D, 1.64, 1.10), rect(ents["av-carousel"], 4.35, 4.1)) > 0);
 {
