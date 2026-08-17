@@ -42,6 +42,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds",
 ck("[tex-5] av-dyelaundry on weave build (d55427b88073320c, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/d55427b88073320c.glb");
 ck("[tex-6] av-forge on metal build (49e411d67e40d2f5, +coals anchor r44)", ents["av-forge"]?.lib === "store/49e411d67e40d2f5.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-23] av-run on timber build (6c3c4f1127446592)", ents["av-run"]?.lib === "store/6c3c4f1127446592.glb");
 ck("[tex-22] av-garden-fence + av-paddock on timber builds (c06c6d14/cd74f723)",
     ents["av-garden-fence"]?.lib === "store/c06c6d147b9141d8.glb"
     && ents["av-paddock"]?.lib === "store/cd74f723d7ce15e8.glb");
@@ -92,7 +93,7 @@ ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(
     // honest-top pins (refinement wakeups 1-4): fixed libs standing at the
     // verified poses; comps empty by design (no placers needed for these)
     const R = ents["av-run"], F = ents["av-garden-fence"];
-    ck("[honest-top] av-run fixed lib @ (-28,18.6)", !!R && R.lib === "store/35871bfcfee51392.glb"
+    ck("[honest-top] av-run fixed lib @ (-28,18.6)", !!R && R.lib === "store/6c3c4f1127446592.glb"
         && Math.abs(R.pos[0] + 28) < 0.01 && Math.abs(R.pos[2] - 18.6) < 0.01
         && Math.abs(R.yaw) < 0.005 && Object.keys(R.comp ?? {}).length === 0);
     ck("[honest-top] av-garden-fence fixed lib", !!F && F.lib === "store/c06c6d147b9141d8.glb"
