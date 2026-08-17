@@ -475,3 +475,31 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   this tick; covered by verify gate pin instead. No register entry.
 - Register: 0 OPEN.
 - 2026-08-17 ~11:2x — wakeup 100: cheap tick; no new commits; verify ALL PASS; 0 OPEN.
+
+## 2026-08-17 ~08:2x — wakeup 101 (NEW depth-6: live visual review; summoner challenge)
+
+- Summoner: "nothing new to fix? There's lots to fix haha" — correct. Register
+  said 0 OPEN only because all five depths are mechanical; the carousel
+  rework's known-open VISUAL gates were being noted as "lane-declared-open"
+  instead of registered. Fixed this tick.
+- verify-repairs.ts: ALL PASS.
+- Live frame via resident walk (cartstop, ~17m spectator) + /snap → 503 (4th
+  historical failure; snap route dead) → fell back to screencapture of the
+  already-positioned Brave world window (bill ding @ commons, 121fps).
+  zai-vision read: horses radially OUTWARD?? benches INWARD?? roof low/
+  compressed; poles not connecting.
+- Decode-at-source (parent-chain world Y, carousel GLB 937fd0b6a9c07b5b):
+  horses tangential-forward (r=[0,1,0,0] at (2,0) CCW-forward), benches
+  outward (bench_1 back at local z=-0.17 behind seat, yaw 0.383 ≈ radial),
+  stairs scene-root STATIC, poles through-saddle span y 1.28→4.64. Vision's
+  reads on those = false (low-poly ambiguity). Register stays clean on them.
+- REGISTERED [OPEN]: carousel roof too low — rider-head clearance ≈0.08m at
+  r=2.0 (canopy edge 4.38 / peak 5.54 / saddle 3.02); summoner's 11:04
+  "lift the roof" ask has NO candidate in CAROUSEL-REWORK-PLAN.md (1–6 cover
+  structure/horses/scale/heading/sockets/pennants). Three signals agree
+  (ask, vision, numbers).
+- Pennant comp state: live census at 07:20 still showed 8 pennant motions,
+  predating candidate-6's rollout (placer has none, per plan). Could not
+  live-confirm this tick (curl approval-blocked ×2). Next census depth to
+  confirm removal.
+- Register: 1 OPEN (carousel roof clearance).
