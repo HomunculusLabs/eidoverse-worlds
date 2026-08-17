@@ -305,3 +305,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   anchors + pendulum wind comps; tex-8 dyehouse pin refreshed).
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
+- 2026-08-17 ~09:3x — wakeup 59: cheap tick (no new commits since audit-58; verify ALL PASS; 0 OPEN).
