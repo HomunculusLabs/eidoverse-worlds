@@ -429,6 +429,15 @@ untouched). Ledger refine-265. Pin: tex-34 coop.
 TIMBER: thirteen sites — the village's wood now shelters its people,
 its rabbits, its goats' yard, its potter, its traders, and its hens.
 
+### [tex-35] TIMBER XIV — the milking stand (2026-08-17, wakeup 75) — DONE
+Platform + 4 legs + stanchion + tray + milker's stool on village
+timber (byte-identical to wallSpan's); pail + hook on forge iron
+(dairy equipment is smithed, not carved). Decode 9/9; census 4/4
+(woodyard untouched). Ledger refine-266. Pin: tex-35 milkstand.
+THE DAIRY CHAIN now reads end to end in the village's own materials:
+goat → pail → churn → inn kitchen — iron, then wood, then iron, then
+wood.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
