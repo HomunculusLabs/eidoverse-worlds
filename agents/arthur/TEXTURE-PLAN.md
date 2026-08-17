@@ -71,6 +71,19 @@ identical; pose/lib re-verified in placer, MCPL walk left to the audit lane.
       First rollout: prove upload/spawn/comp-reapply/verify pipeline on ONE building first, then
       kit-wide + full census + verify-repairs texture assertions.
 - [ ] tex-2 TIMBER — wallSpan beams (housekit.ts, one edit, all buildings). Wood grain, 2 tones.
+### [tex-2] TIMBER — all 10 wallSpan buildings (2026-08-17, wakeup 19) — DONE
+One housekit wallSpan edit → timber tile on every wall panel of arthur-house,
+longhouse, garden-cottage, row-cottage, bunkhouse, hall, court, inn, windmill,
+stable. Tones 0x4a4038/0x554a3e/0x3f362e (2:1:1), rough .9, scale 3. Plinths
+plain. Decode 30/30; rollout live census 22/22 (10 libs + smoke×8 + interior
+lights×6 + inn embers/lights + windmill sails/light); belltower bell lives
+under comp key 'motion' (probe lesson). verify-repairs pins all 10 timber libs.
+Ledger refine-220 (law restored after double-suffix race; refinement lane also
+used refine-218 tag — tags are lane-local, tool doesn't enforce uniqueness).
+Commits 854ae04, 34caeeb. PLACER LESSON: verb rate limit is shared across
+lanes — placers are resume-safe (skip already-live shas) with 700ms pacing +
+slow-down backoff. PENDING BILL: eye-check timber walls at distance.
+
 - [ ] tex-3 PLASTER — wall infill panels. Subtle mottling, 2-3 tones.
 - [ ] tex-4 STONE — foundations/plinths/well/kiln. 3-4 muted tones.
 - [ ] tex-5 TEXTILES — dye-trade tints (dyehouse awnings, laundry line, market bolts).
