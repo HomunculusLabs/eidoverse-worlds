@@ -362,3 +362,14 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - 2026-08-17 ~11:4x — wakeup 80: cheap tick (no new commits since audit-79; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~11:5x — wakeup 81: cheap tick (no new commits since audit-80; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~12:0x — wakeup 82: cheap tick (no new commits since audit-81; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~12:1x — wakeup 83 (transient ledger-race; refine-241 noted)
+
+- First runs: 1 FAIL — ledger law 2,367,913 == 2,367,912 (off-by-one,
+  working tree churning; plaza3/run3 GLBs mtime-fresh 04:22). Classic
+  concurrent-ledger race — the refinement lane was mid-commit.
+- After ~30s: refine-241 LANDED (the kiln burn pulses — fire_kiln anchor
+  + deep slow draft comp; tex-9 pin refreshed; census 47 live / 0 dead)
+  and verify-repairs.ts: ALL PASS (ledger realigned by the lane's own
+  ledger-entry commit). In-flight class; no register entry.
+- Register: 0 OPEN.
