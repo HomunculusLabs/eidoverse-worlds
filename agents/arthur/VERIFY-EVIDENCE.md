@@ -599,3 +599,22 @@ PASS rebuild deterministic — 6263e8a20eb1
 ALL PASS
 
 ```
+
+## tex-54 final ad-hoc verification — 2026-08-17T18:37:13.655Z
+
+```
+PASS hutch rebuild deterministic + == live build (6263e8a20eb17cc9) — 6263e8a20eb17cc9
+PASS timber material, 1 deduped image
+PASS timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS rabbit_sit + rabbit_hop GROUP anchors survive (motion comp targets)
+PASS av-hutch live on leg-timber build, pose (-28,17.8), rabbit comps recovered — store/6263e8a20eb17cc9.glb
+PASS woodyard untouched (approval block honored)
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-21 pin) — code=0
+PASS tex-54 pin green
+PASS tex-21 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS listed one-shots consumed
+
+ALL PASS
+
+```
