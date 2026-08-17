@@ -150,3 +150,17 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   still pending a builder lane that reads the register).
 - Keeper bonus check (cheap while here): daemon PID 43556 alive, laps
   completing. Register: 1 OPEN (R-110).
+
+## 2026-08-17 ~04:5x — wakeup 31 (rotation depth 5: keeper + register status)
+
+- New since audit-30: refine-223 (dead-motion census — hens/waystone revived,
+  8 mason dead comps folded; 0 dead targets village-wide). Note: refine-223
+  touched MOTION comps broadly but R-110's av-inn motion:sign is still
+  missing — the dead-motion census folded comps, it didn't recreate the inn
+  sign from the register's fix path.
+- verify-repairs.ts: ALL PASS.
+- Depth-5 keeper sanity: daemon PID 43556 alive (same PID across 3 checks
+  now — stable), circuit laps continuing. No OOM recurrence in resident.err.
+- Register: R-110 still OPEN (2 wakeups unaddressed by builder lanes — the
+  refinement loop is running but skipping the register; flagging louder in
+  this entry so its next run reads it).
