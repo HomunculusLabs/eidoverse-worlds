@@ -287,8 +287,11 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   returns NOTHING — no standing placer file re-applies the inn sign comp.
   This is the loop #98 precedent exactly: smoke/embers re-applied, the
   sign comp's placer never existed in the chain.
-- Fix for the texture/refinement lane: re-apply the inn sign comp (recreate
-  the original comp data — check ledger refine history for the sign's
-  origin entry; place via a comp placer FILE per the no-inline-JSON law),
-  then add it to a standing placer so the next re-place can't drop it.
-- STATUS: OPEN
+- Fix (refinement wakeup 17): ALL av-inn comps re-applied via the new
+  standing placer agents/arthur/assets/place-inn-comps.ts (sign pendulum
+  verbatim refine-193 data + embers + smoke + bench sockets; ember/smoke
+  origins recomputed from live pose via local-frame transform — (34,1,-3.45)
+  and (35.2,6.6,-2.4), exact matches to the historical capture). Live
+  verify: comp keys [particles:smoke, particles, motion:sign, sockets].
+  The placer is standing: any future av-inn re-place re-runs this file.
+- STATUS: FIXED (refinement wakeup 17, 2026-08-17). Ad-hoc verified.

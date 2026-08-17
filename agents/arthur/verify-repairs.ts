@@ -77,6 +77,12 @@ ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(
         && Math.abs(F.pos[0] + 28.7) < 0.01 && Math.abs(F.pos[2] - 11.6) < 0.01
         && Math.abs(F.yaw - 1.9549) < 0.005 && Object.keys(F.comp ?? {}).length === 0);
 }
+{
+    // R-110 pin: the inn's full comp set must survive every re-place
+    const I = ents["av-inn"];
+    ck("[R-110] av-inn carries sign+embers+smoke+sockets",
+        !!I && ["motion:sign", "particles", "particles:smoke", "sockets"].every((k) => k in (I.comp ?? {})));
+}
 
 // --- ledger law (canonical algorithm) ---
 const led = readFileSync(`${W}/agents/arthur/IMPROVEMENTS.md`, "utf8");
