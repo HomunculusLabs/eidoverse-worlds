@@ -834,3 +834,25 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-56 evidence one-shot — 2026-08-17T18:57:29.261Z
+
+```
+PASS mkv3-forge98.ts: rebuild deterministic + == live build (6715b0f885deaed7) — 6715b0f885deaed7
+PASS decode: timber + iron + stone materials, 3 deduped images
+PASS timber ≡ house's + iron ≡ standing forge family (bellbase) + stone ≡ kiln's (byte-family, buffer-compared)
+PASS fire_fg_coals GROUP anchor survives (forge-fire comp target)
+PASS timber buckets carry TEXCOORD_0 == POSITION (coals/water/trim flat by design) — buckets 1
+PASS texture bytes < 400KB — 21940B
+PASS GLB < 20MB — 58.4KB
+PASS place-tex56-timber26.ts effect: forge live, pose (20.9,-16.3), fire comps recovered — store/6715b0f885deaed7.glb
+PASS census anchors: cistern + hutch current, woodyard untouched
+PASS verify-tex56.ts present (committed, does not self-delete)
+PASS verify-tex56.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-56 pin + refreshed tex-6 pin + ledger + HEAD) — code=0
+PASS prior tex-56 T-dir one-shots consumed (self-deleting law)
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
