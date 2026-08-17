@@ -2273,4 +2273,6 @@ fixes ≈ 6 F.)
 
 - [refine-235] THE CROW LIVES (refinement wakeup 36): the life-dressing census moves to the field — the grainfield's scarecrow has been mocked by a frozen crow since loop 64 (perched on the guard's W arm, pole-free merged statics, comp {}); rebuilt the crow as a gf_crow anchor group (KEEP gained gf_crow; 10 nodes, field/sheaves/scarecrow stay merged), re-placed same pose (-41.6,5.8) yaw 1.7093, bird life applied: a quick purposeful fidget (0.008m at 0.9s — crow-nervous, not smooth like the waterbirds); the scarecrow rightly stays STILL (it is the joke); run+carousel regressions byte-identical; census 41 live / 0 dead; 9/9 ad-hoc verified (D+0, E+1)
 
-**Running total: 2367905 / 2000000**
+- [refine-236] THE KETTLE SIMMERS (refinement wakeups 37-38): life-dressing reaches the plaza fire — the hearth's kettle has hung dead-still over its embers since loop 28 while the well bucket swayed beside it; rebuilt the kettle as a pz_kettle anchor group (KEEP gained pz_kettle; 23 nodes, spout/lid/chain stay static — the pot swings, its mount does not), re-placed same pose (0,0) yaw 0 with all THREE prior comps re-applied VERBATIM (embers particles, well pendulum amp 3/9s/damp .99 exact, 5 log sockets), then the simmer: a slow 2.5deg pendulum about the chain hook at y1.55, period 11s — a pot barely disturbed by its own boil; run+carousel+grainfield regressions byte-identical; census 42 live / 0 dead; 14/14 ad-hoc verified (D+0, E+1)
+
+**Running total: 2367906 / 2000000**
