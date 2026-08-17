@@ -333,3 +333,11 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   anchors + out-of-phase candlelight; census 45 live / 0 dead).
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
+
+## 2026-08-17 ~10:5x — wakeups 74-75 consolidated (refine-238 noted)
+
+- New since audit-72..73: refine-238 (the wayside lamp breathes —
+  single comp on the surviving lamp node, NO rebuild; census 46 live /
+  0 dead).
+- verify-repairs.ts: ALL PASS (wakeup 74 stacked unprocessed).
+- Register: 0 OPEN.
