@@ -314,3 +314,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-51 closing ad-hoc verification — 2026-08-17T18:07:21.502Z
+
+```
+PASS mkv3-dyehouse70.ts: rebuild deterministic + == live build (29b4efc54101106d) — 29b4efc54101106d
+PASS decode: timber + iron materials, 4 deduped images
+PASS timber ≡ house's + iron ≡ forge's (byte-family, buffer-compared)
+PASS dh_strip GROUP anchors survive (wind comp targets)
+PASS timber + iron buckets carry TEXCOORD_0 == POSITION (liquids + rope flat by design) — buckets 2
+PASS place-tex51-timber22.ts effect: dyehouse live, pose (-21,-21.6), wind comps recovered — store/29b4efc54101106d.glb
+PASS census (verify-tex51-live.ts assertions): dyelaundry + watchpost current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS — code=0
+PASS tex-51 pin green
+PASS tex-8 pin green with refresh annotation
+PASS ledger law EXACT + HEAD gate green
+PASS all prior tex-51 one-shots consumed (self-deleting law)
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
