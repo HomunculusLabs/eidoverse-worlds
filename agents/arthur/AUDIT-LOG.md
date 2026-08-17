@@ -139,3 +139,14 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - 2026-08-17 ~04:1x — wakeup 27: cheap tick (no new commits since audit-26; R-110 still OPEN awaiting builder lane).
 - 2026-08-17 ~04:2x — wakeup 28: cheap tick (no new commits since audit-27; R-110 still OPEN — builder loops idle, audit lane holds the fort).
 - 2026-08-17 ~04:3x — wakeup 29: cheap tick (no new commits since audit-28; one transient verify blip re-ran clean 3x; R-110 OPEN).
+
+## 2026-08-17 ~04:4x — wakeup 30 (cheap tick + keeper sanity bonus)
+
+- New since audit-29: tex-4 STONE closed (f807fd0 + 8f3969c; ashlar on
+  wallSpan plinths, census 22/22, pins refreshed).
+- verify-repairs.ts: ALL PASS (clean, no blip).
+- R-110 check: av-inn motion:sign STILL missing — tex-4 didn't touch it
+  (stone plinths don't re-place the sign placer; the register fix path is
+  still pending a builder lane that reads the register).
+- Keeper bonus check (cheap while here): daemon PID 43556 alive, laps
+  completing. Register: 1 OPEN (R-110).
