@@ -284,3 +284,15 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   mtime-fresh, working tree churning). Same in-flight class as audit-49;
   transient, not a defect.
 - Register: 0 OPEN.
+
+## 2026-08-17 ~08:5x — wakeup 55 (refine-232 closes tex-8 window; hygiene blip)
+
+- New since audit-54: refine-232 (the awnings breathe — market mk_awn
+  anchors + out-of-phase breeze comps; tex-8 pin refreshed). Live-confirmed:
+  av-market on new build ee64ba18 with motion:mk_awn_0/1 standing.
+- verify-repairs.ts: two transient FAILs mid-run-race — first the tex-8
+  pins, then a hygiene check flagging probe-tex8-state.ts still on disk
+  (the texture lane's in-flight probe, deleted seconds later). Both
+  self-resolved within ~20s; final run ALL PASS. In-flight class; the
+  lane's commit closes both.
+- Register: 0 OPEN.
