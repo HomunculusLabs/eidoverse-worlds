@@ -499,6 +499,15 @@ tex-23 law, same as ducks/hens/rabbits); hay wisps + water flat
 census 5/5 (woodyard untouched). Ledger refine-272. Pin: tex-41 goats.
 TIMBER: nineteen sites.
 
+### [tex-42] THREE FAMILIES II — the far rest benches (2026-08-17, wakeup 82) — DONE
+BOTH benches (mill yard edge + stable front): slabs + feet on village
+ashlar (≡ kiln's — the bell-tower bench language); lantern posts on
+forge iron; emissive cores untouched (light is not metal). Decode
+16/16 (both GLBs); census 5/5 (woodyard untouched). Ledger refine-274.
+Pin: tex-42 far benches. THE SEAT LAW now spans the whole village —
+the bench at the bell, the benches at the far doors: one stone, one
+iron, one hand.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
