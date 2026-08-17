@@ -11,6 +11,8 @@ from PIL import Image
 
 GLB = "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/village_carousel3.glb"
 OUT = sys.argv[1] if len(sys.argv) > 1 else "/tmp"
+import os
+os.makedirs(OUT, exist_ok=True)
 
 b = open(GLB, "rb").read()
 jlen = struct.unpack("<I", b[12:12+4])[0]
