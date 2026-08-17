@@ -647,6 +647,16 @@ pin advanced to `6263e8a20eb17cc9` (tex-54b). Census 5/5 (woodyard
 untouched). Ledger refine-286. Pin: tex-54 hutch. TIMBER:
 twenty-fifth site — the hutch now reads as built, not painted.
 
+### [tex-55] TIMBER XXVI + IRON XX — the bakery cistern (2026-08-17, wakeup 95) — DONE
+Leaning lid + 2 battens + rim peg on village timber (≡ wallSpan's);
+copper scoop + handle on forge iron (≡ forge's — a smithed vessel; the
+metalness tile reads as true metal). Stone slabs stand from tex-10;
+water stays flat (pond law). PIN-REFRESH: tex-10 cistern pin advanced
+to `a96ee31d29c2085f` (tex-55b). Decode 10/10; census 4/4 (woodyard
+untouched). Ledger refine-287. Pin: tex-55 cistern. TIMBER:
+twenty-sixth. IRON: twentieth — the water law reads at every vessel:
+well, trough, barrel, cistern.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
