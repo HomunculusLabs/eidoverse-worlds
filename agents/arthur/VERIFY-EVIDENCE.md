@@ -91,3 +91,23 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-49 ad-hoc verification (r3) — 2026-08-17T17:47:54.642Z
+
+```
+PASS mkv3-stable.ts: rebuild deterministic + == live build (89dc80d7bb8fc395) — 89dc80d7bb8fc395
+PASS decode: 4 families (thatch/stone/timber/iron), 4 deduped images
+PASS timber ≡ house's + iron ≡ forge's + stone ≡ kiln's (byte-family, buffer-compared)
+PASS tex-49 buckets carry TEXCOORD_0 == POSITION (hay/water/tack flat by design) — buckets 2
+PASS place-tex49-timber21.ts effect: stable live, pose (40,0) — store/89dc80d7bb8fc395.glb
+PASS census (verify-tex49-live.ts assertions): treeline + fieldpond + stablebench current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS — code=0
+PASS tex-49 pin green
+PASS refreshed tex-4 pin green (89dc80d7)
+PASS ledger law EXACT + HEAD gate green
+PASS all prior tex-49 one-shots consumed (self-deleting law)
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
