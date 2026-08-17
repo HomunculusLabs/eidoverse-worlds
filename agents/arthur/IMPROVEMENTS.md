@@ -2299,4 +2299,6 @@ fixes ≈ 6 F.)
 
 - [refine-244b] THE SHRINE KEEPS ITS OLD STONE (texture loop tex-13, wakeup 47): the wayside shrine joins both ground families — four carved standing stones + altar top on village ashlar (cell law), five trodden pavers on the soil family (byte-identical to every walked surface), flames and rune inlays flat (emissive + trim); decode 10/10 with one probe-miscount decoded (v1 anchor walk counted group wrappers AND children — exactly three flame_v GROUP anchors stand, each with its votive child; comp targets are the groups); both tiles byte-identical to standing families (kiln stone, paths soil); 21190B texture bytes, deterministic rebuild; rollout comp-law: three votive-flicker comps captured + re-applied, census 6/6 with roads/plaza/kiln anchors current; ashlar coverage: plinths, forge hearth, kiln, cistern, shrine — the village's sacred ground is the same stone and earth as its working ground (D+0, E+1)
 
-**Running total: 2367918 / 2000000**
+- [refine-carousel-structural] full carousel structural and material rework candidate deployed; attached canopy ribs, canonical horse anchors, textured families, and complete live motion/socket contract verified; visual gate flags horse silhouette and stair transition for next pass (D+88, E+0)
+
+**Running total: 2368006 / 2000000**
