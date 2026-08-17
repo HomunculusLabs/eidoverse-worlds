@@ -527,6 +527,17 @@ census 4/4 (woodyard untouched). Ledger refine-276. Pin: tex-44 four
 signs. IRON: thirteen sites — THE SIGN LAW IS NOW TOTAL: every
 trade, old four and newest, hangs on the same iron.
 
+### [tex-45] STONE XI — the flax field (2026-08-17, wakeup 85) — DONE
+Retting pond's stone lip (5 placed rim rocks) on village ashlar (≡
+kiln's — placed stones take the village stone, the waystone-ring
+precedent). Flax flat (life — tex-23), water flat, bank flat, stook
+flat (dried plants are goods). fx_bundle GROUP anchor survives;
+motion:fx_bundle comp recovered — the bundles still float. Decode 9/9;
+census 5/5 (woodyard untouched). Ledger refine-277. Pin: tex-45 flax.
+ASHLAR: fourteenth GLB — THE CLOTH CHAIN now reads in one material
+story: flax in the field, retting behind village stone, spinning at
+the timber wheel, dyeing in flax-blue vats, drying on smithed iron.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
