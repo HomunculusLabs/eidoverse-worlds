@@ -1331,3 +1331,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-65 r2 evidence (tracker follow-up) — 2026-08-17T22:05:19.781Z
+
+```
+PASS mkv3-potter41.ts: rebuild deterministic + == live build (cea5c582bf05d72f) — cea5c582bf05d72f
+PASS decode: timber material, 1 deduped image — timber
+PASS timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS pwheel GROUP anchor survives (wheel comp target)
+PASS timber buckets carry TEXCOORD_0 == POSITION (clay/ware/cloth flat by design) — buckets 2
+PASS texture bytes < 400KB + GLB < 20MB — 19698B / 49.7KB
+PASS place-tex65-timber32.ts effect: potter live, pose (24.1,38.6), wheel comp recovered — store/cea5c582bf05d72f.glb
+PASS census anchors: waystone + milestone-n current, woodyard untouched (approval block honored)
+PASS verify-tex65.ts present (committed, does not self-delete)
+PASS verify-tex65.ts runs 0 / ALL PASS — code=0
+PASS prior one-shot consumed (hermes-verify-tex65-paths.ts absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-65 pin + refreshed tex-29 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
