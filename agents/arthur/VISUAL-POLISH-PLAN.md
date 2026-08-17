@@ -127,6 +127,15 @@ wakeups. This lane is the standing fix for that blindness.
 
 ## Laws (carried from the skill + audit protocol)
 
+- **Rollout dry-run harness (polish-10)**: `bun agents/arthur/dryrun-carousel.ts`
+  stands up a local mock world (mock-carousel-server.ts) and executes the REAL
+  placer end-to-end: geom capture (live spin 5°/s + socket y=1.97 preferred),
+  rebuild, upload with a FORCED first-attempt 429 (retry proven), ws join +
+  verb pacing, full comp re-apply in wipe-then-reapply order, both lights,
+  post-verify — 19/19. The staged rollout is now execution-proven; when
+  consent arrives, `bun agents/arthur/assets/placecarousel.ts` runs the exact
+  tested code path against the real world.
+
 - **Offline render gate (polish-9)**: `python3 agents/arthur/render-carousel.py
   /tmp` renders the staged carousel from 6 fixed views (software rasterizer,
   z-buffer, Lambert shading, per-material colors = decoded texture averages;
