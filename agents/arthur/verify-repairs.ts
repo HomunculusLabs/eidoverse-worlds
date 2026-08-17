@@ -42,6 +42,11 @@ ck("[tex-4] 10 wallSpan buildings on stone builds",
 ck("[tex-5] av-dyelaundry on weave build (d55427b88073320c, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/d55427b88073320c.glb");
 ck("[tex-6] av-forge on metal build (49e411d67e40d2f5, +coals anchor r44)", ents["av-forge"]?.lib === "store/49e411d67e40d2f5.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-44] four trade signs on iron builds (6c948ea7/6c54b963/f76b6b33/afb2309a)",
+    ents["av-sign-bakery"]?.lib === "store/6c948ea7c8630889.glb"
+    && ents["av-sign-smithy"]?.lib === "store/6c54b963019e06d5.glb"
+    && ents["av-sign-weaver"]?.lib === "store/f76b6b33cbd05fac.glb"
+    && ents["av-sign-livery"]?.lib === "store/afb2309ad8a607ff.glb");
 ck("[tex-43] av-sign-dyer on iron build (a7f36a1460616bf1)", ents["av-sign-dyer"]?.lib === "store/a7f36a1460616bf1.glb");
 ck("[tex-42] far benches on textured builds (417e6040/21eacf00)",
     ents["av-millbench"]?.lib === "store/417e60402d36a079.glb"
