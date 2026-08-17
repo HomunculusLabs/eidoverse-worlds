@@ -2212,3 +2212,27 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-77 final evidence — 2026-08-17T23:58:34.103Z
+
+```
+PASS pre-state: longhouse on disk is tex-77 build (33369174)
+PASS backups fresh: hall=3f8f9e6f, longhouse=33369174
+PASS mkv3-ring.ts: longhouse rebuild deterministic + == live build (333691747dd14c5c) — 333691747dd14c5c
+PASS ring-safety: five siblings + hall restored byte-identical (10042008/ffe8236b/b82a4104/2f2cacf9/3f8f9e6f)
+PASS decode: timber + iron + stone present — timber,stone,glow2,plaster,iron,glow5,glow6
+PASS timber ≡ house wallSpan's + iron ≡ forge family's + stone ≡ kiln's (buffer-compared)
+PASS fire emissive node survives
+PASS TEXCOORD_0 == POSITION on texMat buckets (firewood/herbs flat by design) — buckets 3
+PASS texture bytes < 400KB + GLB < 20MB — 41606B / 141.1KB
+PASS place-tex77-timber43.ts effect: longhouse live, pose (8,24.7), smoke comp recovered — store/333691747dd14c5c.glb
+PASS census anchors: hall + inn current, woodyard untouched (approval block honored)
+PASS verify-tex77.ts present (committed, non-self-deleting)
+PASS verify-tex77.ts runs 0 / ALL PASS — code=0
+PASS both prior one-shots consumed (-confirm, -paths absent)
+PASS evidence log carries this turn's committed records (-paths fc2d7df, -confirm 21f1269)
+PASS verify-repairs.ts 0 / ALL PASS (tex-77 pin + tex-4 multi pin + ledger + HEAD) — code=0
+
+ALL PASS
+
+```
