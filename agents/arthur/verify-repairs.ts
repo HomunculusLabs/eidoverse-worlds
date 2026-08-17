@@ -55,6 +55,17 @@ ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(
         Math.abs(C.pos[0] + 33.1) < 0.01 && Math.abs(C.pos[2] - 12.4) < 0.01 && Math.abs(C.yaw - 1.956) < 0.005
         && sep(rect(C, 1.06, 1.14), rect(F, 3.23, 1.34)) > 0);
 }
+{
+    // honest-top pins (refinement wakeups 1-4): fixed libs standing at the
+    // verified poses; comps empty by design (no placers needed for these)
+    const R = ents["av-run"], F = ents["av-garden-fence"];
+    ck("[honest-top] av-run fixed lib @ (-28,18.6)", !!R && R.lib === "store/35871bfcfee51392.glb"
+        && Math.abs(R.pos[0] + 28) < 0.01 && Math.abs(R.pos[2] - 18.6) < 0.01
+        && Math.abs(R.yaw) < 0.005 && Object.keys(R.comp ?? {}).length === 0);
+    ck("[honest-top] av-garden-fence fixed lib", !!F && F.lib === "store/82d9288df665a63d.glb"
+        && Math.abs(F.pos[0] + 28.7) < 0.01 && Math.abs(F.pos[2] - 11.6) < 0.01
+        && Math.abs(F.yaw - 1.9549) < 0.005 && Object.keys(F.comp ?? {}).length === 0);
+}
 
 // --- ledger law (canonical algorithm) ---
 const led = readFileSync(`${W}/agents/arthur/IMPROVEMENTS.md`, "utf8");
@@ -77,7 +88,7 @@ ck("comp placers intact", existsSync(`${A}/place-smoke.ts`) && existsSync(`${A}/
 // --- git state ---
 try {
     const head = execSync("git log --oneline -1", { cwd: W, encoding: "utf8" }).trim();
-    ck("HEAD is a repair/tex/audit commit", /^[\da-f]+ (repair-\d|tex-\d|audit-)/.test(head), head);
+    ck("HEAD is a repair/tex/audit/refine commit", /^[\da-f]+ (repair-\d|tex-\d|audit-\d|refine-\d)/.test(head), head);
 } catch { console.log("INFO git check unavailable (guard) — skipped"); }
 
 console.log(fail ? `${fail} FAILURE(S)` : "ALL PASS");

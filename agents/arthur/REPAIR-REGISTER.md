@@ -230,3 +230,34 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - probe-overlap1.ts created, run once (exit 0, 32 footprints, 7 raw overlaps,
   4 real after designed-contact exclusions). DELETE after register write.
 - All offline decode used local GLBs + plan; no network was touched.
+
+### R-2xx [REFINEMENT] support-abstain residuals (run/pondlife/fence) — FIXED/CLOSED (refinement wakeup 1-4, 2026-08-17)
+- Priority-1 mesh pass on the registered cosmetic residuals. Live lie decode
+  first: av-run 0.106, av-garden-fence 0.105, av-pondlife 0.168.
+- DECODE AT SOURCE found the real defect under av-run's abstain: the run's
+  withes had run ACROSS the yard since loop 85 — atan2(dx,dz) is the
+  +Z-forward convention but the cylinders are rotZ(90)-oriented X-forward;
+  side rails crossed the pen interior, far rail 0.9m past the back line.
+  The 0.106 abstain was the visible tip of a real orientation bug.
+- Fix (av-run): yaw law atan2(-dz,dx) — rails now run along the yard lines
+  (vertex census: E 102, W 102, N 136 on x=±0.9/z=1.75); stakes cut 0.42
+  to 0.34 (tips flush with the top rail) and rhythm tightened 0.45 to 0.24
+  (wattle density is FUNCTIONAL: the vertex-grid lie probe sees cylinder
+  rims only, so dense stakes fill the classifier cells); sub-visual clover
+  clumps removed (they dragged the median to ground). Post-place live lie
+  0.106 -> 0.000 (server /geom verified). Placement: hutch stand-off — run
+  origin z 17.8 -> 18.6 so the hopper rabbit (hutch-local z 0.39..0.61,
+  world z 18.19..18.41) sits mid-hop in the 0.8m gap, E-hurdle
+  clears it by 0.54m in z; hutch bbox to yard gap 0.06m reads attached.
+  Fence clearance 1.27m (live-yaw SAT). Comps: verified empty pre-place —
+  nothing to re-apply.
+- Fix (av-garden-fence): gate posts 1.0 -> 0.92 — tops level with the
+  picket line. Post-place live lie 0.105 -> 0.025.
+- CLOSED-BY-CLASSIFICATION (av-pondlife): the 0.168 lie is the ducks
+  standing proud of the waterline — the classifier working as designed
+  (pond water is not support). No mesh change.
+- Intermediate (no ledger entry, loop law): first re-place at z 17.8 put
+  the E hurdle line through the rabbit's x-band (z-projection only —
+  rabbit clear by 0.54m in z); corrected to z 18.6 same wakeup.
+- STATUS: FIXED (refinement wakeups 1-4). Ad-hoc verified (live lie
+  decode + vertex census + verify-repairs ALL PASS).
