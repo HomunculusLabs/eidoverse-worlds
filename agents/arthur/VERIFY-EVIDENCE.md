@@ -1122,3 +1122,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-61 r3 evidence (tracker follow-up) — 2026-08-17T20:10:39.880Z
+
+```
+PASS mkv3-mapboard.ts: rebuild deterministic + == live build (d555acbd0b0ab516) — d555acbd0b0ab516
+PASS decode: timber material, 1 deduped image — timber,glow1
+PASS timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS timber buckets carry TEXCOORD_0 == POSITION (frame/chips/pin flat by design) — buckets 1
+PASS texture bytes < 400KB — 19698B
+PASS GLB < 20MB — 83.9KB
+PASS place-tex61-timber29.ts effect: mapboard live, pose (1.7,8.5) — store/d555acbd0b0ab516.glb
+PASS anchors current + woodyard untouched (approval block honored)
+PASS verify-tex61.ts present (committed, does not self-delete)
+PASS verify-tex61.ts runs 0 / ALL PASS — code=0
+PASS all three listed one-shots consumed (-final, -paths, -r2 absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-61 pin + refreshed tex-17 pin + ledger + HEAD incl. polish lane) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
