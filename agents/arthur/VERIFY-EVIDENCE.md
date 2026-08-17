@@ -53,3 +53,21 @@ PASS rebuild deterministic — 89dc80d7bb8f
 ALL PASS
 
 ```
+
+## tex-49 final ad-hoc verification — 2026-08-17T17:46:01.186Z
+
+```
+PASS stable rebuild deterministic + == live build (89dc80d7bb8fc395) — 89dc80d7bb8fc395
+PASS 4 families (thatch/stone/timber/iron), 4 deduped images
+PASS timber ≡ house's + iron ≡ forge's + stone ≡ kiln's (byte-family, buffer-compared)
+PASS av-stable live on textured-fittings build, pose (40,0) — store/89dc80d7bb8fc395.glb
+PASS woodyard untouched (approval block honored)
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-4 pin) — code=0
+PASS tex-49 pin green
+PASS tex-4 stable pin refreshed to 89dc80d7 (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS listed one-shots consumed
+
+ALL PASS
+
+```
