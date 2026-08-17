@@ -42,6 +42,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
 ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-63] av-milestone-n/s on stone+iron builds (a2b6bfab/3d423bc3)", ents["av-milestone-n"]?.lib === "store/a2b6bfab613f0e84.glb" && ents["av-milestone-s"]?.lib === "store/3d423bc3590b5068.glb");
 ck("[tex-62] av-wayside on timber-woodwork build (5db486a79ff5cc6e, lamp comp)", ents["av-wayside"]?.lib === "store/5db486a79ff5cc6e.glb");
 ck("[tex-61] av-mapboard on timber-post build (d555acbd0b0ab516)", ents["av-mapboard"]?.lib === "store/d555acbd0b0ab516.glb");
 ck("[tex-60] av-dyelaundry on timber-woodwork build (c5f85611ffefc522, 6 wind comps)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
@@ -84,8 +85,8 @@ ck("[tex-30] av-cartstop on 3-family build (a50a880415570539)", ents["av-cartsto
 ck("[tex-29] av-potter on timber build (473357af7cf217cd, wheel spins)", ents["av-potter"]?.lib === "store/473357af7cf217cd.glb");
 ck("[tex-28] av-waystone on ashlar build (f6531989649974c4, float+spin+ffw)", ents["av-waystone"]?.lib === "store/f6531989649974c4.glb");
 ck("[tex-27] av-milestone-n + av-milestone-s on ashlar builds (35ed6a57/05b03249)",
-    ents["av-milestone-n"]?.lib === "store/35ed6a570297eff9.glb"
-    && ents["av-milestone-s"]?.lib === "store/05b032496e99f27b.glb");
+    ents["av-milestone-n"]?.lib === "store/a2b6bfab613f0e84.glb"
+    && ents["av-milestone-s"]?.lib === "store/3d423bc3590b5068.glb");
 ck("[tex-26] all 5 rain barrels on textured builds (85edf547/2781edae/b12a17a3/ab728fbb/ea1f501d)",
     ents["av-rainbarrel-h"]?.lib === "store/85edf547c4a2e962.glb"
     && ents["av-rainbarrel-l"]?.lib === "store/2781edae5043cc08.glb"
