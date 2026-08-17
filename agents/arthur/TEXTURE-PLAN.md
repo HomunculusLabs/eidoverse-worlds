@@ -240,6 +240,15 @@ HEAD-GATE LAW (self-caught): commit messages in this repo must match
 `repair-|tex-|audit-|refine-` — verify-repairs HEAD gate fails otherwise;
 amend own unpushed commit (62d9d3c fix).
 
+### [tex-15] TIMBER III — the welcome board (2026-08-17, wakeup 53) — DONE
+Post + 5 pointer arms on the village timber (byte-identical to
+wallSpan's); foot stone on ashlar; sign faces stay flat BONE (painted
+faces read flat at distance by design). Decode 8/8; census 5/5; rollout
+comp-law (no comps). Ledger refine-246. Pin: tex-15 welcome.
+TIMBER: 10 buildings' walls + sentry scaffold + the village's greeting.
+BYTE-FAMILY LAW now spans six GLBs (house/kiln referenced across
+tex-9/10/12/13/14/15).
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
