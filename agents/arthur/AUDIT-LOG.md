@@ -137,3 +137,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   precedent). Register: 1 OPEN.
 - 2026-08-17 ~04:0x — wakeup 26: cheap tick (no new commits since audit-25; R-110 OPEN awaiting builder lane).
 - 2026-08-17 ~04:1x — wakeup 27: cheap tick (no new commits since audit-26; R-110 still OPEN awaiting builder lane).
+- 2026-08-17 ~04:2x — wakeup 28: cheap tick (no new commits since audit-27; R-110 still OPEN — builder loops idle, audit lane holds the fort).
