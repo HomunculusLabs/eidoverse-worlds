@@ -899,3 +899,19 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-57 fresh evidence — 2026-08-17T19:07:46.136Z
+
+```
+PASS verify-tex57.ts (covers mkv3-market.ts rebuild+decode, place-tex57 rollout+comps, verify-repairs gate) runs 0 / ALL PASS — code=0
+PASS …rebuild deterministic + == live pin (2bb51287d4e1a2a2) asserted
+PASS …timber ≡ house wallSpan's (byte-family) asserted
+PASS …market live, wind comps recovered asserted
+PASS verify-tex57.ts present in repo
+PASS prior tex-57 T-dir one-shots consumed
+PASS verify-repairs.ts 0 / ALL PASS (tex-57 pin + refreshed tex-8 pin) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
