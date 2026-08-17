@@ -726,6 +726,17 @@ commit). Persistent verifier `verify-tex61.ts` committed (14/14 ALL
 PASS). Ledger refine-293. Pin: tex-61 mapboard. TIMBER: thirtieth
 site — the map hangs on the same wood it maps.
 
+### [tex-62] TIMBER XXXI + STONE XVI — the wayside completes (2026-08-17, resumed loop wakeup 1) — DONE
+Shelter posts + bench legs + lantern post + water barrel (stave cask,
+quench-barrel law) on village timber (≡ wallSpan's); milestone cap on
+ashlar (≡ kiln's). Pack stays leather, dipper stays wood-tone (a found
+stick), lamp head stays emissive. Lamp comp recovered — the wayside
+lamp still sways at dusk. PIN-REFRESH: tex-19 wayside pin advanced to
+`5db486a79ff5cc6e` (same commit). Persistent verifier `verify-tex62.ts`
+committed (14/14 ALL PASS). Ledger refine-294. Pin: tex-62 wayside.
+TIMBER: thirty-first site; STONE: sixteenth — every road out of the
+village rests on the village's own wood.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
