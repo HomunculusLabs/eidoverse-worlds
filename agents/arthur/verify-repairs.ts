@@ -42,6 +42,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
 ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-66] av-kiln on ring-stone build (0bdc0d18dddacf9b, fire+smoke)", ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb");
 ck("[tex-65] av-potter on timber-woodwork build (cea5c582bf05d72f, wheel comp)", ents["av-potter"]?.lib === "store/cea5c582bf05d72f.glb");
 ck("[tex-64] av-waystone on bench-timber build (5fcaa644f4ba290b, float+spin+ffw)", ents["av-waystone"]?.lib === "store/5fcaa644f4ba290b.glb");
 ck("[tex-63] av-milestone-n/s on stone+iron builds (a2b6bfab/3d423bc3)", ents["av-milestone-n"]?.lib === "store/a2b6bfab613f0e84.glb" && ents["av-milestone-s"]?.lib === "store/3d423bc3590b5068.glb");
@@ -113,7 +114,7 @@ ck("[tex-13] av-shrine on textured build (0ef2c1e60c5b070d, 3 votive comps)", en
 ck("[tex-12] av-roads3 on ground build (20234503da4e1b55)", ents["av-roads3"]?.lib === "store/20234503da4e1b55.glb");
 ck("[tex-11] av-plaza-hearth on soil build (4e58865a → pin refreshed by tex-52, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/4e58865a35f82ab9.glb");
 ck("[tex-10] av-bcistern on ashlar build (a96ee31d → pin refreshed by tex-55)", ents["av-bcistern"]?.lib === "store/a96ee31d29c2085f.glb");
-ck("[tex-9] av-kiln on ashlar build (8ad12f3984210c4c, +fire anchor r45)", ents["av-kiln"]?.lib === "store/8ad12f3984210c4c.glb");
+ck("[tex-9] av-kiln on ashlar build (0bdc0d18 → pin refreshed by tex-66, +fire anchor r45)", ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb");
 ck("[tex-8] av-market + av-dyehouse on weave builds (market pin refreshed by tex-57; dyehouse by tex-51)",
     ents["av-market"]?.lib === "store/2bb51287d4e1a2a2.glb"
     && ents["av-dyehouse"]?.lib === "store/29b4efc54101106d.glb");
