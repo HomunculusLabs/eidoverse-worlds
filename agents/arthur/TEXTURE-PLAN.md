@@ -737,6 +737,19 @@ committed (14/14 ALL PASS). Ledger refine-294. Pin: tex-62 wayside.
 TIMBER: thirty-first site; STONE: sixteenth — every road out of the
 village rests on the village's own wood.
 
+### [tex-63] STONE XVII + IRON XXI — the boundary milestones (2026-08-17, resumed wakeup 2) — DONE
+Both milestones' post caps on ashlar (≡ kiln's — a capping slab is
+laid stone); lantern arms + lantern caps on forge iron (≡ forge
+family — sign-ironwork law). Emissive cores stay burning (glow buckets;
+mlantern merged into statics, no comps — MERGED-STATICS law confirmed
+at source; first probe expected a named anchor, corrected).
+PIN-REFRESH: tex-27 milestone pins advanced to `a2b6bfab…` /
+`3d423bc3…` (same commit). Persistent verifier `verify-tex63.ts`
+committed (17/17 ALL PASS). Ledger refine-295. Pin: tex-63
+milestone-n/s (one assertion, two libs). STONE: seventeenth pair; IRON:
+twenty-first — the last stretch of road out reads as the village's own
+work, stone to light.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
