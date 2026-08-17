@@ -277,6 +277,14 @@ untouched, approval block honored). Ledger refine-249. Pin: tex-18
 monument (knot spin).
 ASHLAR: plinths + forge + kiln + cistern + shrine + founder's pedestal.
 
+### [tex-19] STONE VI — the wayside (2026-08-17, wakeup 58) — DONE
+Milestone on ashlar; barrel hoops on forge iron; shelter roof + bench
+plank on timber — THREE families in one GLB, all byte-identical to
+standing GLBs. Posts/pack/cask/dipper/lamp flat (material truth).
+Decode 9/9; rollout comp-law: motion:lamp recovered; census 6/6
+(woodyard untouched). Ledger refine-250. Pin: tex-19 wayside.
+The wayside carries the village in miniature: its stone, iron, wood.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
