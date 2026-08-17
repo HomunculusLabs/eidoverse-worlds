@@ -705,6 +705,17 @@ committed (14/14 ALL PASS). Ledger refine-291. Pin: tex-59 monument.
 STONE: fifteenth site — brass aloft, stone below, all the village's
 own.
 
+### [tex-60] TIMBER XXIX — the dye laundry woodwork (2026-08-17, wakeup 100) — DONE
+Both posts + all 6 pegs + the wash basket on village timber (≡
+wallSpan's — sawn posts and wicker, the market law). The rope line
+stays flat dark (rope is rope; at 12mm it reads as line, not
+material). All six cloth GROUP anchors survive; all six wind comps
+recovered — every garment still sways. PIN-REFRESH: tex-5 dyelaundry
+pin advanced to `c5f85611ffefc522` (same commit). Persistent verifier
+`verify-tex60.ts` committed (15/15 ALL PASS). Ledger refine-292. Pin:
+tex-60 dyelaundry. TIMBER: twenty-ninth site — the cloth chain hangs
+end to end on the village's own wood.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
