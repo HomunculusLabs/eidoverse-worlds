@@ -945,3 +945,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-58 fresh evidence (tracker follow-up) — 2026-08-17T19:13:50.863Z
+
+```
+PASS mkv3-shrine.ts: rebuild deterministic + == live build (d0d3743a60802625) — d0d3743a60802625
+PASS decode: stone material present — soil-0,stone,glow2
+PASS stone ≡ kiln's ashlar (byte-family, buffer-compared)
+PASS flame_v0 + flame_v1 + flame_v2 GROUP anchors survive (votive comp targets)
+PASS stone buckets carry TEXCOORD_0 == POSITION (bowl/candles/runes flat by design) — buckets 1
+PASS texture bytes < 400KB — 21190B
+PASS GLB < 20MB — 59.6KB
+PASS place-tex58-stone13.ts effect: shrine live, pose (-23.7,-3.8), votive comps recovered — store/d0d3743a60802625.glb
+PASS census anchors: market + forge current, woodyard untouched (approval block honored)
+PASS verify-tex58.ts present (committed, does not self-delete)
+PASS verify-repairs.ts 0 / ALL PASS (tex-58 pin + refreshed tex-13 pin + ledger + HEAD) — code=0
+PASS prior one-shot consumed (hermes-verify-tex58-evidence.ts absent)
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
