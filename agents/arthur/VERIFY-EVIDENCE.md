@@ -1143,3 +1143,45 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-62 changed-paths evidence — 2026-08-17T21:39:48.316Z
+
+```
+PASS mkv3-wayside.ts: rebuild deterministic + == live build (5db486a79ff5cc6e) — 5db486a79ff5cc6e
+PASS decode: timber + iron + stone materials, 3 deduped images — timber,iron,stone,glow3
+PASS timber ≡ house's + iron ≡ forge family's + stone ≡ kiln's (byte-family, buffer-compared)
+FAIL lamp anchor survives (motion:lamp comp target)
+PASS texMat buckets carry TEXCOORD_0 == POSITION (pack/dipper/lamp flat by design) — buckets 3
+PASS texture bytes < 400KB — 21940B
+PASS GLB < 20MB — 49.9KB
+PASS place-tex62-timber30.ts effect: wayside live, pose (2.4,15), lamp comp recovered — store/5db486a79ff5cc6e.glb
+PASS census anchors: mapboard + laundry current, woodyard untouched (approval block honored)
+PASS verify-tex62.ts present (committed, does not self-delete)
+PASS verify-tex62.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-62 pin + refreshed tex-19 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+1 FAIL
+
+```
+
+## tex-62 changed-paths evidence (v2, lamp anchor shape corrected from source) — 2026-08-17T21:40:38.876Z
+
+```
+PASS mkv3-wayside.ts: rebuild deterministic + == live build (5db486a79ff5cc6e) — 5db486a79ff5cc6e
+PASS decode: timber + iron + stone materials, 3 deduped images — timber,iron,stone,glow3
+PASS timber ≡ house's + iron ≡ forge family's + stone ≡ kiln's (byte-family, buffer-compared)
+PASS lamp anchor survives as a named MESH node (motion:lamp comp target — source-decoded shape)
+PASS texMat buckets carry TEXCOORD_0 == POSITION (pack/dipper flat; lamp emissive) — buckets 3
+PASS texture bytes < 400KB — 21940B
+PASS GLB < 20MB — 49.9KB
+PASS place-tex62-timber30.ts effect: wayside live, pose (2.4,15), lamp comp recovered — store/5db486a79ff5cc6e.glb
+PASS census anchors: mapboard + laundry current, woodyard untouched (approval block honored)
+PASS verify-tex62.ts present (committed, does not self-delete)
+PASS verify-tex62.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-62 pin + refreshed tex-19 pin + ledger + HEAD) — code=0
+FAIL git tree clean for this lane's paths
+
+1 FAIL
+
+```

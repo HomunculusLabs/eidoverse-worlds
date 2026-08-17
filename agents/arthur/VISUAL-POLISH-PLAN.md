@@ -47,10 +47,15 @@ wakeups. This lane is the standing fix for that blindness.
 
 ## Worklist (one subject per wakeup; prepend new subjects as they surface)
 
-- [ ] **Carousel roof lift** (REGISTER OPEN, audit-101): rider-head
-      clearance ≈0.08m at r=2.0 — lift canopy_hub/fabric/edge, lengthen
-      ribs + drop-pole tops; target ≥0.4m rider clearance, canopy ≥1.5m
-      above horse ears; re-apply full comp bag + sockets. FIRST.
+- [ ] **Carousel roof lift** (REGISTER OPEN, audit-101) — SOURCE-SIDE DONE
+      (polish-1): canopy assembly +0.45 (hub 5.15, cone base 4.81/apex 5.99,
+      edge 4.83, finial 6.08; mast lengthened, drop-poles/ribs/flags follow).
+      Decode 29/29 ALL PASS: rider head clears 0.63m @r=2.0 (target ≥0.4),
+      ears 1.66m @r=2.1 (≥1.5), bob-peak both green; horses/sockets/comps
+      untouched; build byte-deterministic `e0227166a8a7fe6b`. ROLLOUT
+      PENDING: live /geom read + verbs approval-blocked this tick — next
+      wakeup runs `bun agents/arthur/assets/placecarousel.ts` (needs no
+      edits; it rebuilds before upload), then visual gate + register close.
 - [ ] Carousel stair landing transition (declared-open in rework plan).
 - [ ] Carousel night contrast: warm lights vs canopy shadow — spectate at
       night cycle, consider lantern emissives under canopy edge.
