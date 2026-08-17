@@ -259,6 +259,14 @@ Pin: tex-16 chopblock. BYTE-FAMILY spans seven GLBs.
 APPROVAL-BLOCK NOTE: the woodyard (staged axe-sway, refinement lane)
 is contested — this lane touched neither its files nor its entity.
 
+### [tex-17] TIMBER IV — the map board (2026-08-17, wakeup 55) — DONE
+Board slab on the village timber (byte-identical to wallSpan's).
+Painted map chips + bone frame + brass pin stay flat (material-truth
+law — the slab is wood, the survey is paint). Decode 7/7; census 5/5;
+rollout comp-law (no comps). Ledger refine-248. Pin: tex-17 mapboard.
+*** TIMBER FAMILY COMPLETE: 10 buildings' walls + sentry scaffold +
+the greeting + the map — one wood. ***
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
