@@ -915,3 +915,18 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-57 final2 evidence — 2026-08-17T19:08:31.906Z
+
+```
+PASS verify-tex57.ts runs 0 / ALL PASS (mkv3-market rebuild+decode, place-tex57 rollout+comps, gate) — code=0
+PASS rebuild deterministic + == live pin asserted
+PASS timber ≡ wallSpan byte-family asserted
+PASS live rollout + wind comps asserted
+PASS listed one-shots consumed (-evidence, -fresh)
+PASS verify-repairs.ts 0 / ALL PASS — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
