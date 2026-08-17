@@ -1007,3 +1007,25 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-59 r2 evidence (tracker follow-up) — 2026-08-17T19:20:09.765Z
+
+```
+PASS mkv3-monument.ts: rebuild deterministic + == live build (9520e61fc8e9d887) — 9520e61fc8e9d887
+PASS decode: stone material present — stone,soil-0,glow2
+PASS stone ≡ kiln's ashlar (byte-family, buffer-compared)
+PASS knot GROUP anchor survives (spin comp target)
+PASS stone buckets carry TEXCOORD_0 == POSITION (knot/bowls/plaque/lamp flat by design) — buckets 1
+PASS texture bytes < 400KB — 21190B
+PASS GLB < 20MB — 156.1KB
+PASS place-tex59-stone14.ts effect: monument live, pose (-6.4,-6.4), knot comp recovered — store/9520e61fc8e9d887.glb
+PASS census anchors: shrine + market current, woodyard untouched (approval block honored)
+PASS verify-tex59.ts present (committed, does not self-delete)
+PASS verify-tex59.ts runs 0 / ALL PASS — code=0
+PASS listed one-shot consumed (hermes-verify-tex59-evidence.ts absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-59 pin + refreshed tex-18 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
