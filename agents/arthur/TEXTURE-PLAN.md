@@ -819,6 +819,25 @@ committed (15/15 ALL PASS). Ledger refine-300. Pin: tex-68 watchpost.
 TIMBER: thirty-fifth site — the sentry stands on the village's own
 posts, ground to rail.
 
+### [tex-69] TIMBER XXXVI — the belltower completes (2026-08-17, resumed wakeup 8) — DONE
+All 16 wind braces + ladder rails/rungs + belfry floor + pyramid cap on
+village timber (≡ wallSpan's — structural-wood chain: the watchpost
+scaffold tex-68 reads on the same posts; a tower's braces are its
+scaffold); cap ring on ashlar (band/cap chain tex-58→63). Bell stays
+brass (it rings, not iron); rope/knot/cleat stay rope; finial stays
+brass; lamp stays emissive. bell GROUP anchor survives; motion +
+reactions comps recovered. CAROUSEL-SAFETY LAW (new, first exercise):
+mkv3-landmarks.ts writes 4 GLBs including the carousel = polish lane's
+staged build — snapshot → backup → rebuild → restore → verify; carousel
+returned byte-identical `38fbbc26` (disk + untouched live `cd22d0b0`),
+inn/windmill byte-identical. Only the belltower rolled out.
+PIN-REFRESH: tex-20 belltower pin advanced to `82e4c316b62e5006` (same
+commit). Persistent verifier `verify-tex69.ts` committed (16/16 ALL
+PASS; re-restore of the carousel disk artifact after each verifier run
+is part of the protocol). Ledger refine-301. Pin: tex-69 belltower.
+TIMBER: thirty-sixth site — pier to cap, the tower's scaffold reads as
+the village's own wood.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
