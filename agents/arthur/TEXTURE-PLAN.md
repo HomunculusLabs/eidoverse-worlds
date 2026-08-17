@@ -249,6 +249,16 @@ TIMBER: 10 buildings' walls + sentry scaffold + the village's greeting.
 BYTE-FAMILY LAW now spans six GLBs (house/kiln referenced across
 tex-9/10/12/13/14/15).
 
+### [tex-16] METAL II — the chopping block (2026-08-17, wakeup 54) — DONE
+Maul head + wedge + iron ring on the forge iron tile (byte-identical —
+one iron through smith's and woodsplitter's hands). ALL wood stays flat
+OAK BY DESIGN: family laws bind by material truth, not maximal coverage
+(warm OAK ≠ wall timber; forcing it would break distance identity).
+Decode 7/7; census 5/5; rollout comp-law (no comps). Ledger refine-247.
+Pin: tex-16 chopblock. BYTE-FAMILY spans seven GLBs.
+APPROVAL-BLOCK NOTE: the woodyard (staged axe-sway, refinement lane)
+is contested — this lane touched neither its files nor its entity.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
