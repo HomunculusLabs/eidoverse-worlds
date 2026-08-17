@@ -248,3 +248,12 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   ALL PASS. Not a defect — in-flight rollout (audit-20 pattern). The
   lane's commit will close it; no register entry.
 - Register: 0 OPEN.
+
+## 2026-08-17 ~08:0x — wakeup 50 (refine-231 closes the in-flight window)
+
+- New since audit-49: refine-231 (the wind finds the line — laundry
+  garment anchors + out-of-phase wind comps; tex-5 pin refreshed). This
+  is the commit that closes the in-flight window decoded at audit-49.
+- verify-repairs.ts: ALL PASS (tex-5 pin green on new build).
+- Spot-check: av-dyelaundry carries the wind comps live.
+- Register: 0 OPEN.
