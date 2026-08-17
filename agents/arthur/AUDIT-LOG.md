@@ -351,3 +351,11 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Register: 0 OPEN.
 - 2026-08-17 ~11:1x — wakeup 77: cheap tick (no new commits since audit-76; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~11:2x — wakeup 78: cheap tick (no new commits since audit-77; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~11:3x — wakeup 79 (refine-240 noted)
+
+- New since audit-78: refine-240 (the forge fire works — fire_fg_coals
+  anchor covering both coals as one body + bellows-rhythm breath; tex-6
+  pin refreshed; census 48 live / 0 dead).
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
