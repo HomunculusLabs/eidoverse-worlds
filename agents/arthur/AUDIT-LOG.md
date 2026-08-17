@@ -403,3 +403,11 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   probe-law note: EVERY WALKED SURFACE IS NOW TEXTURED.
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
+
+## 2026-08-17 ~13:2x — wakeup 90 (refine-243 noted)
+
+- New since audit-89: refine-243 (the hay rick rolls — hc_wheel anchor
+  unifying both wheels + axle as one rolling body, slow wind-nudge
+  roll; census 51 live / 0 dead).
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
