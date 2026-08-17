@@ -120,6 +120,21 @@ wakeups. This lane is the standing fix for that blindness.
       artificial lights active, balanced). Night frame unavailable this
       tick; gate waits for the world's own cycle to reach night. No work
       invented.
+      — polish-11 CLOCK DECODE + RAMP EVIDENCE (subject this wakeup): the
+      cycle is now DECODED, not blind. (a) No sky verbs in recent world
+      history (resident `history` read — control channel works; note the
+      `verbs` filter param does NOT apply, it returns unfiltered) → world
+      runs the DEFAULT clock: real wall time, tz≈local (in-game chat
+      timestamps == wall EDT; dusk frame at 19:10 wall contradicts an LA-tz
+      clock, which would read full afternoon). (b) sky.js:739 sun curve is
+      FIXED 6→18 (day = sin((h−6)/12·π)); lamps ramp on the same clock
+      after 18:00 (sky.js:805, lightrig governor). (c) Three live frames
+      (window 1323, look-only, Bill's camera never steered): 19:10 dusk /
+      0 lamps → 19:15 five faint white lamps ramping → 19:18 twilight /
+      3–4 lamps — the ramp WORKS; no dead lamp observed in the visible
+      wedge. GATE NOW SCHEDULABLE: full-night read (sky dark, lamps full)
+      at wall ≥20:00; the dead-dark building census runs then. polish-6's
+      dusk 6-warm/6-dark read stays the distribution baseline.
 
 ## Closed
 
