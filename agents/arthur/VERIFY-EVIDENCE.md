@@ -728,3 +728,21 @@ PASS rebuild deterministic — a96ee31d29c2
 ALL PASS
 
 ```
+
+## tex-55 final ad-hoc verification — 2026-08-17T18:46:26.602Z
+
+```
+PASS cistern rebuild deterministic + == live build (a96ee31d29c2085f) — a96ee31d29c2085f
+PASS stone + timber + iron materials, 3 deduped images
+PASS stone ≡ kiln's + timber ≡ house's + iron ≡ forge's (byte-family, buffer-compared)
+PASS av-bcistern live on 3-family build, pose (18.2,-16.5) — store/a96ee31d29c2085f.glb
+PASS woodyard untouched (approval block honored)
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-10 pin) — code=0
+PASS tex-55 pin green
+PASS tex-10 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS listed one-shots consumed
+
+ALL PASS
+
+```
