@@ -17,3 +17,39 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-49 ad-hoc verification — 2026-08-17T17:42:13.001Z
+
+```
+PASS timber + iron materials (thatch already stands from tex-1) — timber,stone,thatch,iron
+FAIL 2 deduped images — images 4
+PASS timber ≡ house wallSpan's (byte-family law)
+PASS iron ≡ forge's (byte-family law)
+PASS no duplicate NAMED node names — clean
+PASS texMat buckets carry TEXCOORD_0 == POSITION (hay/water/harness flat by design) — buckets 2
+PASS texture bytes < 400KB — 41639B
+PASS GLB < 20MB — 71.9KB
+PASS rebuild deterministic — 89dc80d7bb8f
+
+1 FAIL
+
+```
+
+## tex-49b ad-hoc verification (corrected 4-family expectation) — 2026-08-17T17:42:48.147Z
+
+```
+PASS 4 texture families present (thatch/stone/timber/iron) — timber,stone,thatch,iron
+PASS 4 deduped images (one per family) — images 4
+PASS timber ≡ house wallSpan's (byte-family law)
+PASS iron ≡ forge's (byte-family law)
+PASS stone ≡ kiln's (byte-family law)
+PASS thatch tile unchanged (self-consistent with tex-1 standing build)
+PASS no duplicate NAMED node names — clean
+PASS tex-49 texMat buckets carry TEXCOORD_0 == POSITION (hay/water/harness flat by design) — buckets 2
+PASS texture bytes < 400KB — 41639B
+PASS GLB < 20MB — 71.9KB
+PASS rebuild deterministic — 89dc80d7bb8f
+
+ALL PASS
+
+```
