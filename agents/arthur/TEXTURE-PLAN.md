@@ -508,6 +508,15 @@ Pin: tex-42 far benches. THE SEAT LAW now spans the whole village —
 the bench at the bell, the benches at the far doors: one stone, one
 iron, one hand.
 
+### [tex-43] METAL IV — the dyer's sign (2026-08-17, wakeup 83) — DONE
+Bracket plate + arm + both hanger chains on forge iron (≡ forge's —
+signs hang on smithed iron). Bone board + painted glyph flat
+(material truth: signs speak in bone and paint; the dipped cloth is
+the message). Decode 8/8; census 4/4 (dye-house pose preserved;
+woodyard untouched). Ledger refine-275. Pin: tex-43 sign-dyer.
+IRON: ninth site — the last unsigned trade now reads at a glance
+like all the others, on the same iron.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
