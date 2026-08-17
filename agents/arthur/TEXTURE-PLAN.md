@@ -356,6 +356,18 @@ to kiln's in each GLB). Caps/lantern arms/emissive cores flat. Decode
 milestones (2-entity pin). ASHLAR: ELEVEN sites — from quarry bedrock
 through every plinth to the posts that say HERE THE VILLAGE BEGINS.
 
+### [tex-28] STONE X — the waystone (2026-08-17, wakeup 68) — DONE
+All 7 ring stones on village ashlar (byte-identical to kiln's). The
+FLOATING stone deliberately stays flat warm 0x8a7a5a — the stranger's
+stone, apart in tone and law (giving it the village tile would explain
+it; it explains nothing). Bench/offering/lamp flat. ws_float +
+ws_float_spin nested GROUP anchors survive. Decode 8/8; rollout
+comp-law: bob + spin + fireflies all recovered; census 5/5 (woodyard
+untouched). Ledger refine-259. Pin: tex-28 waystone.
+ASHLAR: TWELVE sites — the village's stone reaches from the quarry
+bedrock to the edge of the known world, where it stops and the
+wonder begins.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
