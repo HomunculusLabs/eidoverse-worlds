@@ -98,6 +98,19 @@ UV LAW CONFIRMED: glbwrite passes authored UVs × repeat exactly (decoded
 0,0/2,0/1,2); mergekit zero-fill remains the fallback for unauthored geoms.
 
 - [ ] tex-4 STONE — foundations/plinths/well/kiln. 3-4 muted tones.
+### [tex-4] STONE — wallSpan plinths, 10 buildings (2026-08-17, wakeup 21) — DONE
+texMat gained `cell` mode (32px block quantization — ashlar reads as coursed
+blocks, not noise; decode proves cells constant + 3 block tones). One housekit
+edit (stoneMat singleton on both plinth branches) → stone on all 10 wallSpan
+consumers. Tones 0x4a4038/0x524a41/0x423a32 (2:1:1), rough .95, scale 2.
+Decode 35/36 (one FAIL = probe misexpectation: windmill has no gable so
+2 tiles is correct). Rollout one pass (10 uploads, 29 verbs); census 22/22.
+Ledger refine-222. Commit f807fd0. Pins: tex-4 ten stone libs + stable pin
+refreshed to fedd5d15. Families live: thatch, timber, plaster, stone.
+CELL MODE LAW: cell-quantized picks come from block coords — future stone
+sites (well/kiln/chimney caps) should reuse stoneMat() for village-wide
+consistency.
+
 - [ ] tex-5 TEXTILES — dye-trade tints (dyehouse awnings, laundry line, market bolts).
 - [ ] tex-6 METAL — forge/anvil/hardware. Low-key, roughness-led.
 - [ ] tex-7 SOIL — paths, garden beds.
