@@ -1685,3 +1685,22 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-70 changed-paths evidence — 2026-08-17T22:50:58.063Z
+
+```
+PASS mkv3-quarry36.ts: rebuild deterministic + == live build (6b3da17816aeeb55) — 6b3da17816aeeb55
+PASS decode: stone + timber + iron materials, 3 deduped images — stone,timber,iron,glow3
+PASS stone ≡ kiln's + timber ≡ house wallSpan's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS texMat buckets carry TEXCOORD_0 == POSITION (tool marks/gap/lamp core flat by design) — buckets 3
+PASS texture bytes < 400KB + GLB < 20MB — 21940B / 60.5KB
+PASS place-tex70-timber37.ts effect: quarry live, pose (33.9,33.9) — store/6b3da17816aeeb55.glb
+PASS census anchors: belltower + watchpost current, woodyard untouched (approval block honored)
+PASS verify-tex70.ts present (committed, does not self-delete)
+PASS verify-tex70.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-70 pin + refreshed tex-24 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
