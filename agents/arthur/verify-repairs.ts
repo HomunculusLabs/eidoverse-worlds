@@ -100,9 +100,9 @@ ck("[tex-12] av-roads3 on ground build (20234503da4e1b55)", ents["av-roads3"]?.l
 ck("[tex-11] av-plaza-hearth on soil build (cd31cfa0d121feb1, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/cd31cfa0d121feb1.glb");
 ck("[tex-10] av-bcistern on ashlar build (e6827189ae8d8c35)", ents["av-bcistern"]?.lib === "store/e6827189ae8d8c35.glb");
 ck("[tex-9] av-kiln on ashlar build (8ad12f3984210c4c, +fire anchor r45)", ents["av-kiln"]?.lib === "store/8ad12f3984210c4c.glb");
-ck("[tex-8] av-market + av-dyehouse on weave builds",
+ck("[tex-8] av-market + av-dyehouse on weave builds (dyehouse pin refreshed by tex-51)",
     ents["av-market"]?.lib === "store/ee64ba1860979060.glb"
-    && ents["av-dyehouse"]?.lib === "store/c1555dced9a5362c.glb");
+    && ents["av-dyehouse"]?.lib === "store/29b4efc54101106d.glb");
 ck("[R-106] dyehouse at (-21,-21.6) yaw .941", !!D && Math.abs(D.pos[0] + 21) < 0.01 && Math.abs(D.pos[2] + 21.6) < 0.01 && Math.abs(D.yaw - 0.941) < 0.005);
 ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(R, 2.95, 2.67)) > 0 && sep(rect(D, 1.64, 1.10), rect(ents["av-carousel"], 4.35, 4.1)) > 0);
 {
