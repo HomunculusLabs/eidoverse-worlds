@@ -489,6 +489,16 @@ preserved; woodyard untouched). Ledger refine-271. Pin: tex-40
 inndoor. TIMBER: eighteen sites — the village's hospitality now has a
 material signature: the same wood, the same iron, the same hand.
 
+### [tex-41] TIMBER XIX — the goat yard (2026-08-17, wakeup 81) — DONE
+Pen posts + rails + hay rack legs/bars + trough on village timber
+(byte-identical to wallSpan's — the goat yard speaks the paddock's
+language, which is the village's wood). Goats flat (life-stays-flat —
+tex-23 law, same as ducks/hens/rabbits); hay wisps + water flat
+(feed/water). All 3 goat GROUP anchors survive; both motion comps
+(goat_a, goat_c) recovered — the goats still wander. Decode 9/9;
+census 5/5 (woodyard untouched). Ledger refine-272. Pin: tex-41 goats.
+TIMBER: nineteen sites.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
