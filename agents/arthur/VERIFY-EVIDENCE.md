@@ -440,3 +440,40 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-53 ad-hoc verification — 2026-08-17T18:25:09.334Z
+
+```
+PASS timber + iron materials — timber,stone,glow2,plaster,iron,glow5,glow6
+FAIL 2 deduped images — images 4
+PASS timber ≡ standing wallSpan family (byte-family law; house is the source)
+PASS iron ≡ forge's (byte-family law — smithed pot)
+PASS fire + flame + lamp anchors survive
+PASS no duplicate NAMED node names — clean
+PASS texMat buckets carry TEXCOORD_0 == POSITION (fires/books/blanket/rug flat by design) — buckets 2
+PASS texture bytes < 400KB — 41606B
+PASS GLB < 20MB — 131.6KB
+PASS rebuild deterministic — cff51defbdac
+
+1 FAIL
+
+```
+
+## tex-53b ad-hoc verification (corrected 4-image expectation) — 2026-08-17T18:25:37.565Z
+
+```
+PASS timber + iron + stone + plaster materials (+ 3 emissive glows) — timber,stone,glow2,plaster,iron,glow5,glow6
+PASS 4 deduped images (timber/stone/plaster/iron — the 4 texture families) — images 4
+PASS timber ≡ standing wallSpan family (byte-family law)
+PASS iron ≡ forge's (byte-family law — smithed pot)
+PASS stone ≡ kiln's (byte-family law, standing from earlier phase)
+PASS fire + flame + lamp anchors survive
+PASS no duplicate NAMED node names — clean
+PASS tex-53 buckets carry TEXCOORD_0 == POSITION (fires/books/blanket/rug flat by design) — buckets 2
+PASS texture bytes < 400KB — 41606B
+PASS GLB < 20MB — 131.6KB
+PASS rebuild deterministic — cff51defbdac
+
+ALL PASS
+
+```
