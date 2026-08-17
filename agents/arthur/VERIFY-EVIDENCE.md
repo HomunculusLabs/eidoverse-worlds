@@ -542,3 +542,26 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-53 ad-hoc verification (r4) — 2026-08-17T18:31:11.637Z
+
+```
+PASS mkv3-house.ts: rebuild deterministic + == live build (cff51defbdacd0ce) — cff51defbdacd0ce
+PASS decode: timber + iron + stone materials, 4 deduped images
+PASS timber ≡ standing family + iron ≡ forge's + stone ≡ kiln's (byte-family, buffer-compared)
+PASS fire + flame + lamp anchors survive
+PASS tex-53 buckets carry TEXCOORD_0 == POSITION (fires/books/blanket/rug flat by design) — buckets 2
+PASS texture bytes < 400KB — 41606B
+PASS GLB < 20MB — 131.6KB
+PASS place-tex53-timber23.ts effect: house live, pose (22,16), smoke comp recovered — store/cff51defbdacd0ce.glb
+PASS census (verify-tex53-live.ts assertions): plaza + dyehouse current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS — code=0
+PASS tex-53 pin green
+PASS tex-4 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS all prior tex-53 one-shots consumed (self-deleting law)
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
