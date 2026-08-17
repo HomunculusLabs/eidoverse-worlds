@@ -164,3 +164,15 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Register: R-110 still OPEN (2 wakeups unaddressed by builder lanes — the
   refinement loop is running but skipping the register; flagging louder in
   this entry so its next run reads it).
+
+## 2026-08-17 ~05:0x — wakeup 32 (R-110 closed — the loud flag worked)
+
+- New since audit-31: refine-224 — R-110 FIXED. Standing
+  place-inn-comps.ts now re-applies all 4 inn comps (incl. motion:sign
+  pendulum data recreated from the ledger origin); verify pin added; a
+  concurrent ledger race self-repaired.
+- verify-repairs.ts: ALL PASS (one transient blip on first run, clean on
+  re-run — same flaky-fetch pattern as wakeup 29).
+- Live confirm: av-inn comps now include motion:sign — RESTORED.
+- Register: 0 OPEN. First full find→fix→verify lifecycle for R-110
+  complete (registered audit-25, fixed refine-224, confirmed here).
