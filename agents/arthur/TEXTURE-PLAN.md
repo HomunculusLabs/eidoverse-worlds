@@ -166,6 +166,18 @@ LIVE-EVOLUTION LAW: census expectations go stale when lanes run parallel —
 decode against live + local bytes before calling drift (d55427b8 was the
 refinement lane's garment-sway evolution, weaves intact 4/4).
 
+### [tex-9] STONE II — the lime kiln (2026-08-17, wakeups 26–38) — DONE
+Kiln drum (both frusta) + slaking trough carry the village ashlar tile
+(stoneMat params verbatim — cell law); fire mouth/ring/putty stay flat.
+Decode 11/11; rollout comp-law (fire-embers particles comp captured +
+re-applied); census 5/5 after two live-evolution decodes (market awning-
+sway ee64ba18, dyehouse strip-sway c1555dce — refinement lane evolved both
+post-tex-8; weaves survived 2/2 each, local==live exact). Ledger
+refine-234. Pins: tex-9 kiln + tex-8 refreshed to evolved builds.
+ASHLAR COVERAGE: plinths (10 buildings) + forge hearth + kiln drum.
+LIVE-EVOLUTION LAW reaffirmed ×3 — census anchors must name CURRENT
+builds, not "untouched" ones, when lanes run parallel.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
