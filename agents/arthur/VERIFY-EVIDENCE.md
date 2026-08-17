@@ -930,3 +930,18 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-58 evidence one-shot — 2026-08-17T19:12:58.277Z
+
+```
+PASS verify-tex58.ts runs 0 / ALL PASS (mkv3-shrine rebuild+decode, place-tex58 rollout+comps, gate) — code=0
+PASS rebuild deterministic + == live pin asserted
+PASS stone ≡ kiln byte-family asserted
+PASS votive flame comps recovered asserted
+PASS verify-tex58.ts present in repo
+PASS verify-repairs.ts 0 / ALL PASS (tex-58 pin + refreshed tex-13 pin) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
