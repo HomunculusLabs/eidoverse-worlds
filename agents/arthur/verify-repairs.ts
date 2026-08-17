@@ -27,7 +27,7 @@ const sep = (a: number[], b: number[]) => Math.max(Math.max(a[0] - b[1], b[0] - 
 
 // --- per-defect live assertions (mirror of the register's FIXED entries) ---
 const D = ents["av-dyehouse"], S = ents["av-sign-dyer"], R = ents["av-row-cottage"];
-ck("[tex-4] av-stable on thatch+timber+stone build (fedd5d15de53f903)", ents["av-stable"]?.lib === "store/fedd5d15de53f903.glb");
+ck("[tex-4] av-stable on thatch+timber+stone build (89dc80d7 → pin refreshed by tex-49)", ents["av-stable"]?.lib === "store/89dc80d7bb8fc395.glb");
 ck("[tex-4] 10 wallSpan buildings on stone builds",
     ents["arthur-house"]?.lib === "store/36cd42b6d0b818e8.glb"
     && ents["av-longhouse"]?.lib === "store/21e4e46f17481b28.glb"
@@ -38,7 +38,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds",
     && ents["av-court"]?.lib === "store/2f2cacf9664e69e3.glb"
     && ents["av-inn"]?.lib === "store/45e51e8ecd7dc57e.glb"
     && ents["av-windmill"]?.lib === "store/d18cbc3f5e3e43b2.glb"
-    && ents["av-stable"]?.lib === "store/fedd5d15de53f903.glb");
+    && ents["av-stable"]?.lib === "store/89dc80d7bb8fc395.glb");
 ck("[tex-5] av-dyelaundry on weave build (d55427b88073320c, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/d55427b88073320c.glb");
 ck("[tex-6] av-forge on metal build (49e411d67e40d2f5, +coals anchor r44)", ents["av-forge"]?.lib === "store/49e411d67e40d2f5.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
