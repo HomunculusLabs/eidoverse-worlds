@@ -85,6 +85,18 @@ lanes — placers are resume-safe (skip already-live shas) with 700ms pacing +
 slow-down backoff. PENDING BILL: eye-check timber walls at distance.
 
 - [ ] tex-3 PLASTER — wall infill panels. Subtle mottling, 2-3 tones.
+### [tex-3] PLASTER — 8 gabled buildings (2026-08-17, wakeup 20) — DONE
+One housekit gableRoof edit (module-singleton plasterMat + authored triangle
+UVs 0,0/1,0/.5,1 per face — custom BufferGeometry needs in-kit UVs) → plaster
+tile on every gable end of arthur-house, longhouse, garden-cottage,
+row-cottage, bunkhouse, hall, court, inn. Tones 0x4a4038/0x554b40/0x403830
+(2:1:1), rough .95, scale 2 (finer than timber). Decode 52/52; rollout clean
+one pass (8 uploads, 25 verbs, zero rate hits); census 20/20 with untouched
+anchors intact. Ledger refine-221. Commit 1b4e097. Pins: tex-3 8 plaster libs
++ windmill/stable timber-era.
+UV LAW CONFIRMED: glbwrite passes authored UVs × repeat exactly (decoded
+0,0/2,0/1,2); mergekit zero-fill remains the fallback for unauthored geoms.
+
 - [ ] tex-4 STONE — foundations/plinths/well/kiln. 3-4 muted tones.
 - [ ] tex-5 TEXTILES — dye-trade tints (dyehouse awnings, laundry line, market bolts).
 - [ ] tex-6 METAL — forge/anvil/hardware. Low-key, roughness-led.
