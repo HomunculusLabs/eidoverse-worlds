@@ -253,3 +253,43 @@ PASS rebuild deterministic — 29b4efc54101
 ALL PASS
 
 ```
+
+## tex-51 final ad-hoc verification — 2026-08-17T18:04:23.570Z
+
+```
+PASS dyehouse rebuild deterministic + == live build (29b4efc54101106d) — 29b4efc54101106d
+PASS timber + iron materials, 4 deduped images
+PASS timber ≡ house's + iron ≡ forge's (byte-family, buffer-compared)
+PASS dh_strip GROUP anchors survive (wind comp targets)
+PASS timber + iron buckets carry TEXCOORD_0 == POSITION (liquids + rope flat by design) — buckets 2
+PASS av-dyehouse live on textured build, pose (-21,-21.6), wind comps recovered — store/29b4efc54101106d.glb
+PASS woodyard untouched (approval block honored)
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-8 pin) — code=0
+PASS tex-51 pin green
+FAIL tex-8 pin refreshed to 29b4efc5 (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS listed one-shots consumed
+
+1 FAIL
+
+```
+
+## tex-51b final ad-hoc verification (label-line regex corrected) — 2026-08-17T18:05:14.166Z
+
+```
+PASS dyehouse rebuild deterministic + == live build (29b4efc54101106d) — 29b4efc54101106d
+PASS timber + iron materials, 4 deduped images
+PASS timber ≡ house's + iron ≡ forge's (byte-family, buffer-compared)
+PASS dh_strip GROUP anchors survive (wind comp targets)
+PASS timber + iron buckets carry TEXCOORD_0 == POSITION (liquids + rope flat by design) — buckets 2
+PASS av-dyehouse live on textured build, pose (-21,-21.6), wind comps recovered — store/29b4efc54101106d.glb
+PASS woodyard untouched (approval block honored)
+PASS verify-repairs.ts 0 / ALL PASS — code=0
+PASS tex-51 pin green
+PASS tex-8 pin green with refresh annotation (label reads 'refreshed by tex-51'; hash on continuation line)
+PASS ledger law EXACT + HEAD gate green
+PASS all prior tex-51 one-shots consumed (self-deleting law)
+
+ALL PASS
+
+```
