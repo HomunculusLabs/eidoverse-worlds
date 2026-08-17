@@ -517,6 +517,16 @@ woodyard untouched). Ledger refine-275. Pin: tex-43 sign-dyer.
 IRON: ninth site — the last unsigned trade now reads at a glance
 like all the others, on the same iron.
 
+### [tex-44] METAL V — the four trade signs (2026-08-17, wakeup 84) — DONE
+ALL FOUR signs (bakery loaf / smithy hammer / weaver spool / livery
+horseshoe): bracket plates + arms + hanger chains on forge iron (≡
+forge's — the tex-43 law applied to the whole family). Boards flat
+wood, faces bone, glyphs painted (the glyph is the message; the
+horseshoe is drawn, not hung). Decode 29/29 across all 4 GLBs;
+census 4/4 (woodyard untouched). Ledger refine-276. Pin: tex-44 four
+signs. IRON: thirteen sites — THE SIGN LAW IS NOW TOTAL: every
+trade, old four and newest, hangs on the same iron.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
