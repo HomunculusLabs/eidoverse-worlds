@@ -296,6 +296,14 @@ rolled out). Rollout comp-law: motion + reactions recovered; census
 ASHLAR: plinths, forge, kiln, cistern, shrine, monument, wayside
 milestone, and the tower that rings the hours.
 
+### [tex-21] TIMBER V — the rabbit hutch (2026-08-17, wakeup 60) — DONE
+Body + divider + both lids + ramp on village timber (byte-identical to
+wallSpan's). Legs/straw/fur flat (structural, litter, life). rabbit_sit
++ rabbit_hop GROUP anchors survive. Decode 9/9 (anchor count corrected
+at source: 2 GROUPS, not 6 — wrappers+children again, tex-13 lesson).
+Rollout comp-law: both rabbit comps recovered; census 6/6 (woodyard
+untouched). Ledger refine-252. Pin: tex-21 hutch (rabbit comps).
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
