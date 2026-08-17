@@ -765,6 +765,18 @@ re-asserted as material-less). Ledger refine-296. Pin: tex-64 waystone.
 TIMBER: thirty-second site; IRON: twenty-second — even the wonder's
 rest stop reads as the village's own work.
 
+### [tex-65] TIMBER XXXIII — the potter's stand completes (2026-08-17, resumed wakeup 4) — DONE
+Kick-wheel post + wheel head + both drying-rack posts on village
+timber (≡ wallSpan's — sawn posts and a wooden head; the rack bar
+already carried it, now the whole stand does). Clay/pots/ware/cloth
+stay flat (the potter works BETWEEN wood and clay — tex-29's law).
+pwheel GROUP anchor survives; wheel comp recovered — the wheel still
+turns, slow, mid-throw. PIN-REFRESH: tex-29 potter pin advanced to
+`cea5c582bf05d72f` (same commit). Persistent verifier `verify-tex65.ts`
+committed (15/15 ALL PASS). Ledger refine-297. Pin: tex-65 potter.
+TIMBER: thirty-third site — the craft corners stand on the village's
+own wood, wheel to rack.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
