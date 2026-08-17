@@ -438,6 +438,16 @@ THE DAIRY CHAIN now reads end to end in the village's own materials:
 goat → pail → churn → inn kitchen — iron, then wood, then iron, then
 wood.
 
+### [tex-36] TIMBER XV — the study shutters (2026-08-17, wakeup 76) — DONE
+All 6 slats + rails on village timber (byte-identical to wallSpan's —
+the tower's window dressed in the same wood as its walls); hinge
+straps + pull-ring on forge iron (hardware is smithed). Decode 9/9;
+census 4/4 (tower-frame pose preserved; woodyard untouched). Ledger
+refine-267. Pin: tex-36 shutters.
+TIMBER: fifteen sites — the village's wood now reaches from the
+foundations to the windows, from the walls a family sleeps behind to
+the shutters one of them draws against the dark.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
