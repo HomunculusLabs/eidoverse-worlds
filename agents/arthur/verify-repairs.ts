@@ -39,9 +39,12 @@ ck("[tex-4] 10 wallSpan buildings on stone builds",
     && ents["av-inn"]?.lib === "store/45e51e8ecd7dc57e.glb"
     && ents["av-windmill"]?.lib === "store/d18cbc3f5e3e43b2.glb"
     && ents["av-stable"]?.lib === "store/fedd5d15de53f903.glb");
-ck("[tex-5] av-dyelaundry on weave build (603df21be6d95c25)", ents["av-dyelaundry"]?.lib === "store/603df21be6d95c25.glb");
+ck("[tex-5] av-dyelaundry on weave build (d55427b88073320c, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/d55427b88073320c.glb");
 ck("[tex-6] av-forge on metal build (a34e5b529440bd41)", ents["av-forge"]?.lib === "store/a34e5b529440bd41.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-8] av-market + av-dyehouse on weave builds",
+    ents["av-market"]?.lib === "store/c6f20bfe82c5ccd8.glb"
+    && ents["av-dyehouse"]?.lib === "store/ee8bbf129b86c3af.glb");
 ck("[R-106] dyehouse at (-21,-21.6) yaw .941", !!D && Math.abs(D.pos[0] + 21) < 0.01 && Math.abs(D.pos[2] + 21.6) < 0.01 && Math.abs(D.yaw - 0.941) < 0.005);
 ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(R, 2.95, 2.67)) > 0 && sep(rect(D, 1.64, 1.10), rect(ents["av-carousel"], 4.35, 4.1)) > 0);
 {
