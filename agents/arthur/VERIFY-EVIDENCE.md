@@ -1206,3 +1206,24 @@ PASS verify-repairs.ts 0 / ALL PASS (tex-62 pin + refreshed tex-19 pin + ledger 
 ALL PASS
 
 ```
+
+## tex-63 changed-paths evidence — 2026-08-17T21:47:18.594Z
+
+```
+PASS mkv3-miles14.ts: rebuilds deterministic + == live builds (n a2b6bfab…, s 3d423bc3…) — a2b6bfab613f/3d423bc3590b
+PASS milestone-n: stone + iron + glow materials — stone,iron,glow2
+PASS milestone-n: stone ≡ kiln's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS milestone-n: texMat buckets carry TEXCOORD_0 == POSITION — buckets 2
+PASS milestone-s: stone + iron + glow materials — stone,iron,glow2
+PASS milestone-s: stone ≡ kiln's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS milestone-s: texMat buckets carry TEXCOORD_0 == POSITION — buckets 2
+PASS place-tex63-multi7.ts effect: both milestones live on textured builds, poses preserved — store/a2b6bfab613f0e84.glb / store/3d423bc3590b5068.glb
+PASS anchors current + woodyard untouched (approval block honored)
+PASS verify-tex63.ts present (committed, does not self-delete)
+PASS verify-tex63.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-63 pin + refreshed tex-27 pins + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
