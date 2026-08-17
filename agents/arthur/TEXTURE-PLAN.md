@@ -380,6 +380,15 @@ Ledger refine-260. Pin: tex-29 potter.
 TIMBER: ten sites — from the village walls down to the wheel a potter
 kicks with her foot.
 
+### [tex-30] THREE FAMILIES — the market cart stop (2026-08-17, wakeup 70) — DONE
+Wheel chocks + both mounting-block steps on village ashlar; tether
+post on village timber; harness ring on forge iron — all three tiles
+byte-identical to standing families IN ONE GLB (3 deduped images).
+Hay roll + band flat (feed is feed). Decode 10/10; census 5/5
+(woodyard untouched). Ledger refine-261. Pin: tex-30 cartstop.
+A single market stand now speaks all three structural languages of
+the village at once.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
