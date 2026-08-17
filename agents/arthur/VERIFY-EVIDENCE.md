@@ -812,3 +812,25 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-55 ad-hoc verification (r5) — 2026-08-17T18:49:43.610Z
+
+```
+PASS mkv3-bakery-cistern97.ts: rebuild deterministic + == live build (a96ee31d29c2085f) — a96ee31d29c2085f
+PASS decode: stone + timber + iron materials, 3 deduped images
+PASS stone ≡ kiln's + timber ≡ house's + iron ≡ forge's (byte-family, buffer-compared)
+PASS texMat buckets carry TEXCOORD_0 == POSITION (water flat by design) — buckets 3
+PASS texture bytes < 400KB — 21940B
+PASS GLB < 20MB — 38.8KB
+PASS place-tex55-timber25.ts effect: cistern live, pose (18.2,-16.5) — store/a96ee31d29c2085f.glb
+PASS census (verify-tex55-live.ts assertions): hutch + house current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS — code=0
+PASS tex-55 pin green
+PASS tex-10 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS all prior tex-55 one-shots consumed (self-deleting law)
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
