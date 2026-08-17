@@ -142,6 +142,19 @@ near-flat with close tones; future metal sites reuse the iron tile params.
 
 - [ ] tex-7 SOIL — paths, garden beds.
 
+### [tex-7] SOIL — the door paths (2026-08-17, wakeup 24) — DONE
+6 shared soil variants (seed law — per-paver unique would blow 400KB at
+60×20KB), paver picks by its existing stable hash (no two neighbors match).
+Tones 0x6b5d4f/0x746656/0x5f5344 anchored on MID, scale 3, rough .97.
+Decode 13/13 (6 distinct tiles proven by pixel-hash); census 5/5; 118080B
+texture bytes. Ledger refine-229. Commit 3046c4c. Pin: tex-7 soil build.
+SOIL LAW: cap variant count (~6), vary by seed + hash pick; per-instance
+uniques are a size-law trap at village scale.
+*** ORIGINAL SEVEN-FAMILY QUEUE COMPLETE: thatch, timber, plaster, stone,
+textiles, metal, soil — all live. Follow-up candidates: market awnings +
+dyehouse strips (stripe weaves), well/kiln stone (cell ashlar), ring road
++ plaza pavers (soil variants). Bill's eye-check outstanding on all. ***
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
