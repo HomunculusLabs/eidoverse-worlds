@@ -265,6 +265,13 @@ export class Avatar {
   _findEyes() {
     this._eyes = null;
     if (!this.vrm?.scene) return;
+    // DEFER to three-vrm when the rig maps its eyes properly. import-tripo-avatar
+    // (#120) now maps L_Eye/R_Eye to VRM leftEye/rightEye, which gives the stock
+    // lookAt rig those bones — and this.gaze is already its target. Driving them
+    // from here as well would be two writers on one bone every frame, and the
+    // one that lost would be whichever ran second. Bone-rigged eyes with no VRM
+    // mapping (anything imported before that landed) still need us.
+    if (this.vrm.lookAt && this.vrm.humanoid?.getNormalizedBoneNode?.('leftEye')) return;
     const found = [];
     this.vrm.scene.traverse((o) => {
       if (/^[LR]_Eye$/.test(o.name ?? '')) found.push({ node: o, rest: o.quaternion.clone() });
