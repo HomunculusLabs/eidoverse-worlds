@@ -2066,3 +2066,20 @@ FAIL git tree clean for this lane's paths
 1 FAIL
 
 ```
+
+## tex-75 final evidence — 2026-08-17T23:38:28.014Z
+
+```
+PASS tex-final-survey.py re-runs clean (exit 0) — code=0
+PASS reproduces 93 law-classified flats across 51 makers — 93
+PASS reproduces 12 printed law-bucket rows — 12
+PASS reproduces the ring-cluster unclassified inventory (221, ring:… entries)
+PASS tex-final-survey.py committed (clean in git)
+PASS TEXTURE-PLAN.md carries the committed tex-75 survey section
+PASS IMPROVEMENTS.md carries refine-307 (ledger closes via gate below)
+PASS both prior one-shots consumed (-survey, -survey2 absent)
+PASS verify-repairs.ts 0 / ALL PASS (ledger law EXACT + HEAD gate) — code=0
+
+ALL PASS
+
+```
