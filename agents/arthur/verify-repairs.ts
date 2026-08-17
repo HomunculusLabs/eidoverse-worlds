@@ -42,6 +42,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
 ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-73] av-chopblock on handle-timber build (ab5031c118d925c0)", ents["av-chopblock"]?.lib === "store/ab5031c118d925c0.glb");
 ck("[tex-72] av-windmill on 2-family build (7fc779a5c7dd5dc5, sails comp)", ents["av-windmill"]?.lib === "store/7fc779a5c7dd5dc5.glb");
 ck("[tex-71] av-charcoal on stake-timber build (dcb3bb63442a764c, smoke comp)", ents["av-charcoal"]?.lib === "store/dcb3bb63442a764c.glb");
 ck("[tex-70] av-quarry on 3-family build (6b3da17816aeeb55)", ents["av-quarry"]?.lib === "store/6b3da17816aeeb55.glb");
@@ -113,7 +114,7 @@ ck("[tex-20] av-belltower on ashlar build (82e4c316 → pin refreshed by tex-69,
 ck("[tex-19] av-wayside on textured build (5cbb8e4cacefc16f, lamp comp)", ents["av-wayside"]?.lib === "store/5db486a79ff5cc6e.glb");
 ck("[tex-18] av-monument on textured build (0ec3fe2e3c050081, knot spin)", ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb");
 ck("[tex-17] av-mapboard on timber build (965fe0f6a9f90103)", ents["av-mapboard"]?.lib === "store/d555acbd0b0ab516.glb");
-ck("[tex-16] av-chopblock on metal build (1f8b7d34bfe59272)", ents["av-chopblock"]?.lib === "store/1f8b7d34bfe59272.glb");
+ck("[tex-16] av-chopblock on metal build (1f8b7d34bfe59272)", ents["av-chopblock"]?.lib === "store/ab5031c118d925c0.glb");
 ck("[tex-15] av-welcome on textured build (fa0c9d94a07b9ef5)", ents["av-welcome"]?.lib === "store/fa0c9d94a07b9ef5.glb");
 ck("[tex-14] av-watchpost on timber build (e7f55348 → pin refreshed by tex-50, sentry comps)", ents["av-watchpost"]?.lib === "store/256e16a13027fb93.glb");
 ck("[tex-13] av-shrine on textured build (0ef2c1e60c5b070d, 3 votive comps)", ents["av-shrine"]?.lib === "store/d0d3743a60802625.glb");
