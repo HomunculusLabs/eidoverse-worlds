@@ -945,6 +945,23 @@ PASS; restores siblings internally after each rebuild). Ledger
 refine-308. Pin: tex-76 hall. TIMBER: 42nd; IRON: 26th; STONE: 20th —
 where the village argues, it reads as one village, dais to ridge.
 
+### [tex-77] TIMBER XLIII + IRON XXVII + STONE XXI — the longhouse (2026-08-17, resumed wakeup 16) — DONE
+Ring arc #2: hearth + mantel, both trestle tables + legs, N bench,
+bed alcove, HIGH SEAT (all 4 carved pieces), candle stand, 3 tie
+beams, 3 provisions chests + lids on village timber; chest BANDS on
+forge iron (barrel law); dais on ashlar (tex-76 precedent). Floor
+stays DARK; fire/flame/lamp stay emissive; firewood + herb bundles
+stay flat (fuel/herbs). RING-SAFETY + new lesson: converted siblings'
+backups go STALE after each rollout — the hall backup was pre-tex-76
+and briefly clobbered the tex-76 build; law banked: REFRESH CONVERTED
+SIBLINGS' BACKUPS AFTER EACH ROLLOUT (hall backup now pins 3f8f9e6f;
+longhouse backup refreshed same commit). Five untouched siblings
+restored byte-identical; only the longhouse rolled out; smoke comp
+recovered. tex-4 multi pin longhouse hash updated in-gate. Persistent
+verifier `verify-tex77.ts` committed (17/17 ALL PASS). Ledger
+refine-309. Pin: tex-77 longhouse. TIMBER: 43rd; IRON: 27th; STONE:
+21st — the elder's hall and the council hall read as one work.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
