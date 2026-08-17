@@ -1982,3 +1982,28 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-74 fresh re-verification — 2026-08-17T23:28:34.261Z
+
+```
+PASS pre-state: disk carousel is polish staged (38fbbc26)
+PASS mkv3-landmarks.ts: inn rebuild deterministic + == live build (33e8a1748ab4b8cf) — 33e8a1748ab4b8cf
+PASS carousel-safety: restored byte-identical after both rebuilds (38fbbc26)
+PASS collateral: belltower (82e4c316) + windmill (7fc779a5) byte-identical
+PASS decode: timber + iron present, 4 deduped images (multi-family: timber/stone/plaster/iron) — timber,stone,glow2,plaster,iron,glow5,glow6
+PASS timber ≡ house wallSpan's + iron ≡ forge family's (buffer-compared)
+PASS sign GROUP anchor survives
+PASS fire emissive node survives
+PASS TEXCOORD_0 == POSITION on texMat buckets (goods/cloth/sign flat by design) — buckets 2
+PASS texture bytes < 400KB + GLB < 20MB — 41606B / 232.0KB
+PASS place-tex74-timber41.ts effect: inn live, pose (34,0), all 4 comps recovered — store/33e8a1748ab4b8cf.glb
+PASS live carousel untouched (cd22d0b0) + windmill/belltower anchors current + woodyard untouched
+PASS verify-tex74.ts present (committed, non-self-deleting)
+PASS verify-tex74.ts runs 0 / ALL PASS — code=0
+PASS prior one-shot consumed (hermes-verify-tex74-paths.ts absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-74 pin + tex-4 multi pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
