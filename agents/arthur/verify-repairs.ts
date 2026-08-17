@@ -42,6 +42,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
 ck("[tex-5] av-dyelaundry on weave build (d55427b88073320c, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/d55427b88073320c.glb");
 ck("[tex-6] av-forge on metal build (49e411d67e40d2f5, +coals anchor r44)", ents["av-forge"]?.lib === "store/49e411d67e40d2f5.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-54] av-hutch on leg-timber build (6263e8a20eb17cc9, rabbit comps)", ents["av-hutch"]?.lib === "store/6263e8a20eb17cc9.glb");
 ck("[tex-53] arthur-house on textured-interior build (cff51defbdacd0ce)", ents["arthur-house"]?.lib === "store/cff51defbdacd0ce.glb");
 ck("[tex-52] av-plaza-hearth on 3-family build (4e58865a35f82ab9, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/4e58865a35f82ab9.glb");
 ck("[tex-51] av-dyehouse on textured build (29b4efc54101106d, wind comps)", ents["av-dyehouse"]?.lib === "store/29b4efc54101106d.glb");

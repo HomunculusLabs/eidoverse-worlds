@@ -565,3 +565,37 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-54 ad-hoc verification — 2026-08-17T18:33:52.870Z
+
+```
+PASS timber material — timber
+PASS 1 deduped image — images 1
+PASS timber ≡ house wallSpan's (byte-family law — legs join the boards)
+FAIL rabbits GROUP anchor survives (rabbit motion comp)
+PASS no duplicate NAMED node names — clean
+PASS timber buckets carry TEXCOORD_0 == POSITION (rabbits/straw/tails flat by design) — buckets 1
+PASS texture bytes < 400KB — 19698B
+PASS GLB < 20MB — 51.5KB
+PASS rebuild deterministic — 6263e8a20eb1
+
+1 FAIL
+
+```
+
+## tex-54b ad-hoc verification (anchor names corrected from source) — 2026-08-17T18:34:27.051Z
+
+```
+PASS timber material — timber
+PASS 1 deduped image — images 1
+PASS timber ≡ house wallSpan's (byte-family law — legs join the boards)
+PASS rabbit_sit + rabbit_hop GROUP anchors survive (motion comp targets)
+PASS no duplicate NAMED node names — clean
+PASS timber buckets carry TEXCOORD_0 == POSITION (rabbits/straw/tails flat by design) — buckets 1
+PASS texture bytes < 400KB — 19698B
+PASS GLB < 20MB — 51.5KB
+PASS rebuild deterministic — 6263e8a20eb1
+
+ALL PASS
+
+```
