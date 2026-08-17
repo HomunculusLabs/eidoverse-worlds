@@ -1,0 +1,79 @@
+# VISUAL POLISH PLAN — VILLAGE VISUAL POLISH LOOP
+
+Durable state for the visual polish lane. Read this file FIRST every wakeup
+and update it as work lands. The loop's job: make the village LOOK right at
+spectate distance — silhouettes, seating, attachment, proportion, materials
+reading as materials — not just verify right.
+
+Created 2026-08-17 after audit-101: the mechanical depths were blind to
+visual quality and the carousel roof sat unregistered through a dozen
+wakeups. This lane is the standing fix for that blindness.
+
+## Per-wakeup protocol (in order)
+
+1. Load skill `eidoverse-world-building` FIRST.
+2. Run `bun agents/arthur/verify-repairs.ts` — a FAIL is decoded at source
+   before anything else (parallel lanes churn; transient = wait ~30s, re-run).
+3. **Register-first**: if REPAIR-REGISTER.md has an OPEN item, fix that
+   before any new work. Close it in the register (evidence, numbers) when
+   the live world shows the fix.
+4. Else pick ONE subject from the worklist below. One subject per wakeup —
+   no shotgunning.
+5. **Build**: mk script edit → `bun` rebuild → upload (16–21s pace, 429
+   retry) → spawn SAME id → re-apply ALL comps via placer FILES (comp wipe
+   law). Never inline-shell comps.
+6. **Visual gate (mandatory, before claiming done)**:
+   a. Spectate frame: write `{"cmd":"walk","x":…,"z":…}` to
+      `agents/arthur/control.json` to stand the resident 15–20m from the
+      subject, confirm the file is consumed, then capture the LIVE frame.
+      `/snap` returns 503 (4 known failures) — fallback is `screencapture`
+      of the already-positioned game window (find pid via Brave/eidoverse
+      window; NEVER steer Bill's camera). Two frames ~10s apart when motion
+      matters.
+   b. Read the frame with `mcp__zai_vision__analyze_image`.
+   c. **Decode every vision claim at source** (GLB JSON chunk, parent-chain
+      world coords) before believing it — vision reads tangential horses as
+      "radial" and through-body poles as "disconnected" at low-poly
+      distance (audit-101 false reads).
+   d. The gate passes only when the frame shows the intended fix. Bill's
+      eye-check remains the final authority — report, don't self-declare
+      beauty.
+7. **Verify**: walk-test if enterable, else vertex probe; then
+   verify-repairs.ts ALL PASS. Ad-hoc verified, never "suite green".
+8. **Ledger** via `python3 agents/arthur/ledger-append.py` with exact
+   `(D+N, E+n)`; **commit** with a `polish-N:` prefix; update this file's
+   worklist + closed list in the same commit.
+9. Report concisely what was seen, changed, and verified.
+
+## Worklist (one subject per wakeup; prepend new subjects as they surface)
+
+- [ ] **Carousel roof lift** (REGISTER OPEN, audit-101): rider-head
+      clearance ≈0.08m at r=2.0 — lift canopy_hub/fabric/edge, lengthen
+      ribs + drop-pole tops; target ≥0.4m rider clearance, canopy ≥1.5m
+      above horse ears; re-apply full comp bag + sockets. FIRST.
+- [ ] Carousel stair landing transition (declared-open in rework plan).
+- [ ] Carousel night contrast: warm lights vs canopy shadow — spectate at
+      night cycle, consider lantern emissives under canopy edge.
+- [ ] Horse silhouette at spectator distance (≥15m): read as carved
+      figures, not supports. Compare 4 horses.
+- [ ] av-run / av-pondlife / av-garden-fence mesh quality (Bill's standing
+      priority list).
+- [ ] Interiors visible through doorways — furnished read at threshold.
+- [ ] Village night lighting balance: interior lights ×6 + hearths; look
+      for dead-dark buildings on the ring.
+
+## Closed
+
+- (none yet — first tick pending)
+
+## Laws (carried from the skill + audit protocol)
+
+- Decode at source before editing; the village has always been right when
+  the probe was wrong.
+- Probes are one-shot: write, run once, delete. Prefer inline `bun -e`.
+- Live-yaw rotated SAT only; door lanes 1.4m; uploads 16–21s; verbs 12/4s.
+- Never commit another lane's in-flight work; HEAD gate regex accepts
+  `repair-\d|tex-\d|audit-|refine-` — polish commits append `polish-` to
+  verify-repairs.ts line 80 regex on the FIRST polish commit (or the gate
+  FAILs by design; that FAIL is the reminder).
+- Only Bill stops the loop (LOOP_COMPLETE requires his explicit stop).
