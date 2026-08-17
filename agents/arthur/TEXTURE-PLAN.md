@@ -410,6 +410,16 @@ census 4/4 (woodyard untouched). Ledger refine-263. Pin: tex-32
 giftshelf. The giving shelf stands in the village's own wood, holding
 things that belong to no one and everyone.
 
+### [tex-33] METAL III — the street lamps (2026-08-17, wakeup 73) — DONE
+ALL 8 lamps: tapered posts + drip pans + caps + finials on forge iron
+(byte-identical to the forge's). The 8 emissive cores untouched (the
+light is the light, not the metal). Probe correction: lamp GROUP
+wrappers were never named (mergekit doesn't name groups); all 40 named
+part-nodes unique, 8 cores present. Decode 9/9 real; census 4/4
+(woodyard untouched). Ledger refine-264. Pin: tex-33 streetlamps.
+IRON: three sites — the forge, the chopblock, and every lamp on the
+walk home.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
