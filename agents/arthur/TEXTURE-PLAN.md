@@ -566,6 +566,18 @@ Pin: tex-48 treeline. ASHLAR: fifteenth GLB — the stone law now
 rings the whole village: hearth to belfry to benches to ponds to
 the wild edge.
 
+### [tex-49] TIMBER XXI — the livery fittings (2026-08-17, wakeup 89) — DONE
+Stall partition + both rails + both mangers + trough + 3 tack pegs +
+pitchfork handle on village timber (≡ wallSpan's); pitchfork tines on
+forge iron (≡ forge's — tines are smithed). Hay flat (feed), trough
+water flat, harness + bridle flat (leather goods). The build now
+carries FOUR families (thatch/stone/timber/iron) — first probe's
+2-image expectation was a misexpectation, corrected at source (tex-49b
+probe 11/11). PIN-REFRESH (tex-22 law): the tex-4 stable pin advanced
+to `89dc80d7bb8fc395` in its own explanatory commit (tex-49b). Decode
+11/11; census 5/5 (woodyard untouched). Ledger refine-281. Pin: tex-49
+stable. TIMBER: twenty-first site. IRON: fifteenth.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
