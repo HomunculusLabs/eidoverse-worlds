@@ -40,7 +40,7 @@ Verified (ad-hoc probe, once, deleted):
 - Texture bytes ~4-15KB per 256px RGBA tile (well under 400KB law).
 
 Baseline hashes before change (regression anchors):
-- stable3  03a330f0d9c1efafeb25aa5991b48c0f2d57f72d5577ff10a4f22f5b8c04bc19
+- stable3  03a330f0d9c1efafeb25aa5991b48c0f2d57f72d5572ff10a4f22f5b8c04bc19 (ground-truthed: live store path store/03a330f0d9c1efaf.glb == re-upload of post-change rebuild)
 - market3  f9f0680aebbda0134a9073bf15f85ce8e946215ed86260d81d3bbb1829af3b90
 - mapboard3 505b7f0c84f9a4ceae928ec2c1dbadf421802c03d3ef79a6a2ad188e23b54686
 
