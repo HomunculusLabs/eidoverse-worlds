@@ -1290,3 +1290,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-64 fresh evidence (tracker follow-up) — 2026-08-17T21:58:59.507Z
+
+```
+PASS mkv3-waystone41.ts: rebuild deterministic + == live build (5fcaa644f4ba290b) — 5fcaa644f4ba290b
+PASS decode: stone + timber + iron materials, 3 deduped images — stone,timber,iron,glow3,glow4
+PASS stone ≡ kiln's + timber ≡ house's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS ws_float + ws_float_spin GROUP anchors survive (motion comp targets)
+PASS the FLOATING stone stays flat (STRANGER'S-STONE law — material-less prim, no tile)
+PASS texMat buckets carry TEXCOORD_0 == POSITION — buckets 3
+PASS texture bytes < 400KB + GLB < 20MB — 21940B / 47.3KB
+PASS place-tex64-timber31.ts effect: waystone live, pose (-38.9,-38.9), all three comps recovered — store/5fcaa644f4ba290b.glb
+PASS census anchors: milestone-n + wayside current, woodyard untouched (approval block honored)
+PASS verify-tex64.ts present (committed, does not self-delete)
+PASS verify-tex64.ts runs 0 / ALL PASS — code=0
+PASS prior one-shot consumed (hermes-verify-tex64-paths.ts absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-64 pin + refreshed tex-28 pin + ledger + HEAD) — code=0
+
+ALL PASS
+
+```
