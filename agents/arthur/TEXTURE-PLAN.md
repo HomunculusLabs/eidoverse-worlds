@@ -448,6 +448,18 @@ TIMBER: fifteen sites — the village's wood now reaches from the
 foundations to the windows, from the walls a family sleeps behind to
 the shutters one of them draws against the dark.
 
+### [tex-37] TIMBER XVI — the harvest cart (2026-08-17, wakeup 77) — DONE
+Bed + rails + head board + wheel rims/spokes + axle + pole + yoke +
+fork handle on village timber (byte-identical to wallSpan's); wheel
+hubs + fork tines on forge iron (wear parts are the smith's).
+Sheaves/bands/rope flat (straw is straw, rope is rope). hc_wheel
+GROUP anchor survives; motion:hc_wheel rolling comp recovered (the
+wheels still roll). Decode 10/10; census 5/5 (woodyard untouched).
+Ledger refine-268. Pin: tex-37 harvestcart.
+TIMBER: sixteen sites — and the harvest chain now reads end to end in
+the village's materials: standing grain, cut sheaves, a wooden cart on
+iron hubs, the mill, the bread.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
