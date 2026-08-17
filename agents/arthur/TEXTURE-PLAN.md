@@ -681,6 +681,18 @@ sway. PIN-REFRESH: tex-8 market pin advanced to `2bb51287d4e1a2a2`
 twenty-eighth site — the market reads as built and dressed, wood
 under cloth.
 
+### [tex-58] STONE XIV — the shrine altar + bench (2026-08-17, wakeup 98) — DONE
+Altar plinth + the devout's stone bench + both legs on village ashlar
+(≡ kiln's — the plinth is the same coursed stone as its slab; a stone
+bench is stone, the pond-lip law at furniture scale). Brass offering
+bowl stays flat (monument-bowl precedent); candles/flames stay
+emissive; rune inlays stay dark. All three votive flame GROUP anchors
+survive; all three comps recovered — the votives still flicker.
+PIN-REFRESH: tex-13 shrine pin advanced to `d0d3743a60802625` (same
+commit). Persistent verifier `verify-tex58.ts` committed (14/14 ALL
+PASS). Ledger refine-290. Pin: tex-58 shrine. STONE: fourteenth site
+— the shrine reads as one carved gesture, base to flame.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
