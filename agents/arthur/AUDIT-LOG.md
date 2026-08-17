@@ -105,3 +105,22 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   timber batch — world == source everywhere.
 - Register: 0 OPEN.
 - 2026-08-17 ~03:2x — wakeup 23: cheap tick (no new commits since audit-22; verify ALL PASS).
+
+## 2026-08-17 ~03:4x — wakeup 24 (depth 4: comp census, mid-tex-3)
+
+- New since audit-23: refine-221 (inn door leaf to threshold + ledger race
+  repair). tex-3 PLASTER is IN FLIGHT right now: place-tex3-plaster.ts +
+  rebuilt garden3 at 00:39-00:40, refine-221 ledger entry uncommitted.
+- verify-repairs.ts: ALL PASS. Ledger law EXACT (221 wrote itself once).
+- Depth-4 census on the timber-re-placed buildings: av-inn carries
+  particles(embers)+particles:smoke — good. 6 buildings show
+  particles:smoke only, no hearth "particles" embers — SUSPECT, but
+  decoded: the embers placer history shows embers were only ever placed
+  on the inn hearth (refine-88 watchpost/embers, tex placers target
+  av-inn); the other 6 chimneyed buildings carry SMOKE by design, embers
+  were never theirs. motion:sign missing on av-inn: SUSPECT — tex-3's
+  placer (00:40) re-places av-inn LAST among its targets; the sign comp
+  re-apply is that in-flight run's step, still pending. ESCALATION RULE:
+  if av-inn still lacks motion:sign next wakeup AND tex-3 has gone quiet,
+  register it (comp-wipe law violation class — loop #98 precedent).
+- Interior lights 6/6. Register: 0 OPEN.
