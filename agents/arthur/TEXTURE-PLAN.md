@@ -349,6 +349,13 @@ five rebuild byte-deterministic). Census 7/7 (woodyard untouched).
 Ledger refine-257. Pin: tex-26 barrels (5-entity pin).
 EVERY EAVE CATCHES THE SAME RAIN — and it lands in the village's wood.
 
+### [tex-27] STONE IX — the boundary milestones (2026-08-17, wakeup 67) — DONE
+Both milestone posts (N + S at r30.6) on village ashlar (byte-identical
+to kiln's in each GLB). Caps/lantern arms/emissive cores flat. Decode
+11/11; census 5/5 (woodyard untouched). Ledger refine-258. Pin: tex-27
+milestones (2-entity pin). ASHLAR: ELEVEN sites — from quarry bedrock
+through every plinth to the posts that say HERE THE VILLAGE BEGINS.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
