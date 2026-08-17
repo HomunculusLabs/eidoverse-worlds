@@ -460,6 +460,18 @@ TIMBER: sixteen sites — and the harvest chain now reads end to end in
 the village's materials: standing grain, cut sheaves, a wooden cart on
 iron hubs, the mill, the bread.
 
+### [tex-38] THREE FAMILIES — the bell tower's street level (2026-08-17, wakeup 78) — DONE
+Bench slab + both feet on village ashlar (≡ kiln's — folk wait for
+the hour on the belfry's own stone); notice board on village timber;
+lamp hook + cap on forge iron. Parchment flat (paper), brass pins flat
+(brass is its own material), lantern core stays emissive (light is not
+metal — tex-33 law). First decode FAILED the stone byte-family check
+(invented tones) — fixed by copying the standing family's exact bytes;
+the probe caught it before rollout. Decode 10/10; census 5/5 (sockets
+comp recovered; woodyard untouched). Ledger refine-269. Pin: tex-38
+bellbase. The bell tower now reads in one material story from bedrock
+plinth to belfry to the bench where the village waits.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
