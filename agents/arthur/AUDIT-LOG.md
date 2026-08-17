@@ -91,3 +91,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   lane's to update on commit. ESCALATION RULE for next wakeup: if verify
   still FAILs on this pin AND the texture lane has gone quiet (no new
   commits), append it to the register as a stale-pin defect.
+- 2026-08-17 ~03:0x — wakeup 21: R-109 registered (stale pin per audit-20 escalation rule; texture lane quiet since 00:25, tex-2 uncommitted).
