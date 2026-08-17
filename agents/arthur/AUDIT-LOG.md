@@ -188,3 +188,11 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Spot-check of refine-225's claim: av-monument motion:knot ALIVE live —
   the class-closure holds.
 - Register: 0 OPEN.
+
+## 2026-08-17 ~05:3x — wakeup 35 (tex-5 spot-check)
+
+- New since audit-34: refine-226 (goats chew — anchor groups + calm life
+  comps, census 17 live / 0 dead) and tex-5 TEXTILES (woven stripe mode on
+  the laundry line, census 4/4, plan closed with dye-trade sites noted).
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
