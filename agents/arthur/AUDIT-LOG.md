@@ -235,3 +235,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Register: 0 OPEN. Milestone noted; eye-check of all seven families
   remains Bill's pass.
 - 2026-08-17 ~07:2x — wakeup 46: cheap tick (no new commits since audit-45; verify ALL PASS; 0 OPEN).
+- 2026-08-17 ~07:3x — wakeup 47: cheap tick (no new commits since audit-46; verify ALL PASS; 0 OPEN).
