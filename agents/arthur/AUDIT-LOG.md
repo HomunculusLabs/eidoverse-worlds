@@ -41,3 +41,19 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   hash (store/56d0122215bcca65 per tex-1's own confirm); standing world
   == source of truth across the whole set.
 - Register: 0 OPEN items. No findings.
+
+## 2026-08-17 ~02:1x — wakeup 16 (depth 4: comp census)
+
+- verify-repairs.ts: ALL PASS.
+- Census: 37 entities carry comps — all smoke/particles, motion anchors
+  (carousel horses, hens, sails, bell, well, knot, waystone, mason works),
+  sockets, and fireflies present and accounted.
+- **Probe-blindness catch, not a defect:** my EXPECT table listed
+  av-stable as a smoke carrier — it is NOT one by design. Decoded at
+  source: mkv3-stable.ts (open-front livery) has no chimney/hearth/lamp
+  anchor, and place-smoke.ts's chimney list correctly excludes it. So
+  comp=[] on the tex-1 re-placed stable is the design, not a comp-wipe
+  loss. No register entry per the loop law.
+- Interior lights census (separate light entities, not comps):
+  6/6 PRESENT (tw/gc/rc/bk/hl/ct).
+- Register: 0 OPEN items.
