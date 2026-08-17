@@ -53,12 +53,18 @@ wakeups. This lane is the standing fix for that blindness.
       Decode 29/29 ALL PASS: rider head clears 0.63m @r=2.0 (target ≥0.4),
       ears 1.66m @r=2.1 (≥1.5), bob-peak both green; horses/sockets/comps
       untouched; build byte-deterministic `e0227166a8a7fe6b`. ROLLOUT
-      PENDING: live /geom read + verbs approval-blocked this tick — next
-      wakeup runs `bun agents/arthur/assets/placecarousel.ts` (needs no
-      edits; it rebuilds before upload), then visual gate + register close.
-      LANE COLLISION: the files above rode into concurrent tex-62 `ed6f2af`
-      while staged during the texture lane's commit burst; this commit is
-      the polish-1 marker for the audit trail.
+      PENDING: live /geom read + verbs approval-blocked TWO consecutive
+      ticks (polish-1, polish-2) — next wakeup runs
+      `bun agents/arthur/assets/placecarousel.ts`, now REWRITTEN
+      contract-safe (polish-2): captures the live comp/socket bag from
+      /geom at execution time instead of baking stale values (the old
+      placer's socket y=2.47 predated candidate-6's saddle-plane 1.97 —
+      it would have seated riders 0.5m high); re-applies the captured bag,
+      verifies lib+comps+pose post-place. Unit-tested offline 19/19
+      (verify-polish2.ts). Then visual gate + register close.
+      Gate note: tex-27 pin FAIL during polish-2 was the texture lane's
+      own tex-63 in-flight window — self-resolved at their `1b6c72f`
+      (transient, not a finding; audit-20/49 class).
 - [ ] Carousel stair landing transition (declared-open in rework plan).
 - [ ] Carousel night contrast: warm lights vs canopy shadow — spectate at
       night cycle, consider lantern emissives under canopy edge.
