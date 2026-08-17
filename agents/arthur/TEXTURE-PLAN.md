@@ -806,6 +806,19 @@ pin advanced to `933ab1f96fe1e734` (same commit). Persistent verifier
 tex-67 plaza. IRON: twenty-third site — the village's center reads
 smith-made, bowl to kettle in one metal.
 
+### [tex-68] TIMBER XXXV — the watchpost scaffold completes (2026-08-17, resumed wakeup 7) — DONE
+4 scaffold posts + 4 rail posts + 4 rails + 2 canopy posts on village
+timber (≡ wallSpan's — the built-post law chain tex-46→54→62: a built
+post is a built post; tex-14's "heavy structural stays flat" rationale
+superseded — the braces beside those posts carried the tile for fifty
+phases). Horn stays flat (horn is horn); coals stay emissive.
+fire_coals GROUP anchor survives; smoke + fire comps recovered — the
+sentry fire still burns. PIN-REFRESH: tex-14 watchpost pin advanced to
+`256e16a13027fb93` (same commit). Persistent verifier `verify-tex68.ts`
+committed (15/15 ALL PASS). Ledger refine-300. Pin: tex-68 watchpost.
+TIMBER: thirty-fifth site — the sentry stands on the village's own
+posts, ground to rail.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
