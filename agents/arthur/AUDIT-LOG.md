@@ -29,3 +29,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Wakeups 3-13: no new commits appeared between checks (texture loop's
   next commit still pending) — cheap ticks, consolidated here.
 - Register: 0 OPEN items.
+- 2026-08-17 ~01:4x — wakeup 14: cheap tick (no new commits since c672f93; tex-1 still mid-flight).
