@@ -911,6 +911,23 @@ in-gate (no separate refresh needed). Persistent verifier
 tex-74 inn. TIMBER: forty-first; IRON: twenty-fifth — the inn's lamps
 burn over the village's own boards, tap to attic.
 
+### [tex-75] THE FINAL SURVEY (2026-08-17, resumed wakeup 14) — DONE (survey)
+The plan's named final survey, executed source-wide (`tex-final-survey.py`,
+committed): 93 flats auto-classified as flat-BY-LAW across 13 banked laws
+(feed, water, leather, goods/cloth, rope, char/earth, painted signs,
+brass/art, raw-log, stranger's-stone, floors, life, bone). THE REAL
+REMAINING INVENTORY (221 unclassified): the RING CLUSTER — `mkv3-ring.ts`
+writes 7 GLBs (longhouse/tower/garden/row/bunk/hall/court); 5+ are LIVE
+under old pins (row-cottage `ffe8236b`, bunkhouse `b82a4104`, hall
+`9e2d43ac`, court `2f2cacf9`, longhouse `21e4e46f` in the tex-4 multi
+pin) with wallSpan walls but ALL-FLAT interiors — the inn's tex-74
+class, building-by-building. Plus stragglers: welcome board post, field
+pond handle, inn shovel handle, wayside pack, watchpost horn (horn is
+flat by law — verify only). NEXT ARC: one ring building per wakeup
+(hall first — biggest interior), full pipeline, tex-4 multi pin refresh
+each time. Survey script: `agents/arthur/tex-final-survey.py`. No
+rollout this wakeup (survey is the deliverable). Ledger refine-307.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
