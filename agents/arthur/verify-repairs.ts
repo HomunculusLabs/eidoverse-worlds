@@ -48,6 +48,12 @@ ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(
     ck("[R-101/102] run clears cottage slab+fence", sep(rR, slabG) > 0 && sep(rR, fenceG) > 0);
     ck("[R-202] paddock clears stable+inn", sep(rect(P, 3.5, 2.5), rect(Sl, 2.7, 2.1)) > 0 && sep(rect(P, 3.5, 2.5), rect(I, 4.5, 4.45)) > 0);
 }
+{
+    const C = ents["av-coop"], F = ents["av-garden-fence"];
+    ck("[R-107] coop at (-33.1,12.4) yaw 1.956, clears fence",
+        Math.abs(C.pos[0] + 33.1) < 0.01 && Math.abs(C.pos[2] - 12.4) < 0.01 && Math.abs(C.yaw - 1.956) < 0.005
+        && sep(rect(C, 1.06, 1.14), rect(F, 3.23, 1.34)) > 0);
+}
 
 // --- ledger law (canonical algorithm) ---
 const led = readFileSync(`${W}/agents/arthur/IMPROVEMENTS.md`, "utf8");
