@@ -546,6 +546,16 @@ flat (dressed straw, not construction), crow flat AND STILL FIDGETS
 untouched). Ledger refine-278. Pin: tex-46 grainfield. TIMBER: twenty
 sites.
 
+### [tex-47] THREE FAMILIES III — the field pond (2026-08-17, wakeup 87) — DONE
+Rim rocks on village ashlar (≡ kiln's — placed-stones law, the
+flax-pond precedent); sluice plank + side boards + bucket on village
+timber (≡ wallSpan's); bucket band on forge iron (≡ forge's — hoops
+are smithed). Water flat, mud basin flat, rope handle flat (water is
+water, earth is earth, rope is rope). Decode 10/10; census 4/4
+(woodyard untouched). Ledger refine-279. Pin: tex-47 fieldpond.
+IRON: fourteenth site — THE WATER LAW now reads at every pond: flax
+retting and field drinking, both behind village stone.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
