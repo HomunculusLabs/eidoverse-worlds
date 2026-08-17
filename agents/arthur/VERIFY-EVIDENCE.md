@@ -1050,3 +1050,21 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-60 final evidence (tracker follow-up) — 2026-08-17T19:26:42.797Z
+
+```
+PASS mkv3-dyelaundry94.ts: rebuild deterministic + == live build (c5f85611ffefc522) — c5f85611ffefc522
+PASS timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS all six dl_cloth GROUP anchors survive (wind comp targets)
+PASS place-tex60-timber28.ts effect: laundry live, pose (-26.7,-13), all six wind comps recovered — store/c5f85611ffefc522.glb
+PASS anchors current + woodyard untouched (approval block honored)
+PASS verify-tex60.ts present (committed, does not self-delete)
+PASS verify-tex60.ts runs 0 / ALL PASS — code=0
+PASS prior one-shot consumed (hermes-verify-tex60-paths.ts absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-60 pin + refreshed tex-5 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
