@@ -15,7 +15,7 @@ const ck = (n: string, c: boolean, d = "") => { if (c) pass++; else { fail++; co
 const build = spawnSync("bun", [`${ROOT}/agents/arthur/assets/mkcarousel.ts`], { cwd: ROOT, encoding: "utf8" });
 if (build.status !== 0) { console.log("FAIL: rebuild", build.stderr); process.exit(1); }
 const h = createHash("sha256").update(readFileSync(GLB)).digest("hex").slice(0, 16);
-ck("deterministic staged build 7a2faa19dfde62cb", h === "7a2faa19dfde62cb", h);
+ck("deterministic staged build 7ac6d8a63a290cae", h === "7ac6d8a63a290cae", h);
 
 // 2. decode paint tile luminances (RGBA PNG, filter-aware)
 const b = readFileSync(GLB);

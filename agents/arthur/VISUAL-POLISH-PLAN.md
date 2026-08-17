@@ -58,9 +58,19 @@ wakeups. This lane is the standing fix for that blindness.
       PENDING: live /geom + verbs approval-blocked THREE consecutive ticks
       (polish-1/2/3) — next wakeup with consent runs
       `bun agents/arthur/assets/placecarousel.ts` (captures live bag,
-      rebuilds+uploads `7a2faa19dfde62cb`, re-applies comps, verifies),
+      rebuilds+uploads `7ac6d8a63a290cae`, re-applies comps, verifies),
       then visual gate + register close for BOTH items.
-- [ ] Carousel stair landing transition (declared-open in rework plan).
+- [x] Carousel stair landing transition — DONE source-side (polish-4).
+      Decode found the real defect: treads rose 0.44→1.14 (0.70 jump),
+      then dropped 0.30 onto the deck, AND penetrated to z 2.33 INSIDE
+      the rim ring (r 2.9) — the rotating fascia crossed the fixed stair
+      continuously. Rebuilt as a real boarding flight: grounded at z 3.4,
+      stops OUTSIDE the swept radius (inner tread edge 2.98 vs band 2.93),
+      uniform 0.16 risers (tops 0.60/0.76/0.92), 0.16 step-up onto the
+      deck floor 1.08; rim band stays the boarding lip. Gate lesson: my
+      first gradient was inverted (fixed after parent-frame decode) —
+      ALWAYS compose the stair group's rotation.y=π when decoding z.
+      verify-polish4 14/14; joins the staged rollout build.
 - [ ] Carousel night contrast: warm lights vs canopy shadow — spectate at
       night cycle, consider lantern emissives under canopy edge.
 - [ ] Horse silhouette at spectator distance (≥15m): read as carved
