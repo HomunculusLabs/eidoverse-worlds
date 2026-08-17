@@ -355,6 +355,7 @@ export function mountTransform(riderId, outPos, rider) {
   const parent = entities.get(m.to);
   if (!parent) return null;
   const sock = (comps.get(m.to)?.sockets ?? {})[m.slot] ?? {};
+  let rideFrame = parent;
   parent.updateWorldMatrix(true, false);
   _mtF.set(...(m.offset ?? sock.pos ?? [0, 0.5, 0])).applyMatrix4(parent.matrixWorld);
   const part = sock.part ? findPart(parent, String(sock.part)) : null;
@@ -366,6 +367,7 @@ export function mountTransform(riderId, outPos, rider) {
     _mtM.compose(_mtV.set(...b.pos), _mtQ.fromArray(b.quat), part.scale)
       .premultiply(part.parent.matrixWorld).invert();       // world → part-at-rest
     _mtF.applyMatrix4(_mtM).applyMatrix4(part.matrixWorld); // …re-emerge from the live part
+    rideFrame = part;
   }
   // The profile correction (#101): contact plane onto the authored socket
   // plane, applied AFTER part displacement so a profiled rider carries it
@@ -380,7 +382,7 @@ export function mountTransform(riderId, outPos, rider) {
     if (c) _mtF.set(c[0], c[1], c[2]);
   }
   outPos.copy(_mtF);
-  parent.getWorldQuaternion(_mtQ);
+  rideFrame.getWorldQuaternion(_mtQ);
   _mtF.set(0, 0, 1).applyQuaternion(_mtQ);
   const parentYaw = Math.atan2(_mtF.x, _mtF.z);
   return { yaw: parentYaw + (m.yaw ?? sock.yaw ?? 0), pose: sock.pose ?? 'sitchair', to: m.to,
