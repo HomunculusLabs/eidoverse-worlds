@@ -578,6 +578,19 @@ to `89dc80d7bb8fc395` in its own explanatory commit (tex-49b). Decode
 11/11; census 5/5 (woodyard untouched). Ledger refine-281. Pin: tex-49
 stable. TIMBER: twenty-first site. IRON: fifteenth.
 
+### [tex-50] METAL VI — the watchpost brazier (2026-08-17, wakeup 90) — DONE
+Brazier bowl on forge iron (≡ forge's — braziers are smithed vessels,
+the forge's-own-bowl law). Coals stay flat emissive (own glow2 mat —
+light is light); signal horn stays flat as a MERGED-STATIC (source
+decode: 31-vert material-less bucket, geometry survives — tex-25 law).
+Two probe corrections this run: glTF child-index handling, then the
+horn's folded name. PIN-REFRESH: tex-14 watchpost pin advanced to
+`e7f5534850748fd3` (tex-50b). Decode 11/11; census 5/5 — both fire
+comps (particles + motion:fire_coals) recovered, the sentry fire still
+burns (woodyard untouched). Ledger refine-282. Pin: tex-50 watchpost.
+IRON: sixteenth site — the fire law reads at every hearth: forge,
+kiln, brazier — all on one iron.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
