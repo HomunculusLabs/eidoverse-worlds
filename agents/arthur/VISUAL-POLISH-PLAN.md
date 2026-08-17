@@ -95,7 +95,18 @@ wakeups. This lane is the standing fix for that blindness.
       0.105→0.025 (gate posts leveled), av-pondlife CLOSED-BY-CLASSIFICATION
       (ducks proud of waterline = classifier by design). Not polish-lane
       work; attributed and removed from this list.
-- [ ] Interiors visible through doorways — furnished read at threshold.
+- [x] Interiors visible through doorways — CLOSED BY DECODE + TOOLING LIMIT
+      (polish-8). Source decode: ALL 8 enterable buildings carry door-lane-
+      visible interiors (hearth terminates house/inn door axes; hall tables,
+      weaver corner, bunk room, kitchen counter). The live threshold read is
+      BLOCKED BY TOOLING, not world state: resident /snap 503s (4 known
+      failures), and `walk` cannot gate a frame — the keeper CIRCUIT
+      re-asserts control after any walk (resident log: circuit headings
+      resumed 30s after my house walk). Browser capture is BILL's camera,
+      not the resident's view (polish-8 false frame: striped roof + sheep
+      = market/barn area, decoded and discarded). Interior furnishing is
+      verified at source + door-lane walkability (audit depth-2, green);
+      the furnished THRESHOLD READ joins Bill's eye-check list.
 - [ ] Village night lighting balance: interior lights ×6 + hearths; look
       for dead-dark buildings on the ring.
       — polish-6 DUSK BASELINE (plaza-center frame + vision read): 6 warm
