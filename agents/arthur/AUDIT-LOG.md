@@ -135,3 +135,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   contains motion:sign — the comp was applied once (pre-audit era) and no
   re-apply path exists. R-110 registered (comp-wipe class, loop #98
   precedent). Register: 1 OPEN.
+- 2026-08-17 ~04:0x — wakeup 26: cheap tick (no new commits since audit-25; R-110 OPEN awaiting builder lane).
