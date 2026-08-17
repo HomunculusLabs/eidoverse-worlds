@@ -167,16 +167,17 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   for the intermediate.
 - STATUS: FIXED (wakeup 6, 2026-08-16). Ad-hoc verified.
 
-### R-107 [INTERSECTION] av-coop × av-garden-fence — 2.01m — OPEN
-- Evidence (fresh full audit): coop (-30.6, 12.4) yaw 1.956 (2.12 x 2.27)
-  overlaps the garden fence's footprint (-28.7, 11.6, 6.46 x 2.68) by
-  2.01m. Both furniture-scale; coop plan comment "the fowl run" at r 33
-  ang 158, fence at r 31 ang 158 — same bearing, 2m radial gap intended
-  but their footprints cross.
-- Planned fix: nudge coop outward along its ray (r 33 -> 34+) or rotate to
-  align with the fence line; verify numeric clearance + walk-probe the
-  coop approach.
-- STATUS: OPEN (next wakeup's defect).
+### R-107 [INTERSECTION] av-coop × av-garden-fence — FIXED (wakeup 7)
+- Root cause: coop at (-30.6, 12.4) stood inside the garden fence's
+  footprint (2.01m) — same bearing (ang 158), 2m radial gap intended but
+  their footprints crossed.
+- Fix: coop now forms the fowl run's west wall: (-33.1, 12.4) yaw 1.956
+  (aligned to the fence) — clears the fence by 0.49m; hutch 3.3m, run
+  4.8m, cottage 5.4m all clear. Hens are ambient (peck comps) and
+  re-path around the new wall naturally.
+- Keeper's coop stop (-28.9, 11.4) unchanged and walk-tested (fresh
+  body): track 0.25m, coop stop 0.33m, NW exit 0.26m.
+- STATUS: FIXED (wakeup 7, 2026-08-17). Ad-hoc verified.
 
 ### R-2xx [COLLISION] door-lane audit — CLOSED CLEAN (wakeup 6)
 - Fresh audit of all 12 enterable buildings' 1.4m x 2.2m door lanes vs
