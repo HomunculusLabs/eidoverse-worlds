@@ -213,3 +213,25 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-50 ad-hoc verification (r4) — 2026-08-17T17:58:16.004Z
+
+```
+PASS mkv3-watchpost.ts: rebuild deterministic + == live build (e7f5534850748fd3) — e7f5534850748fd3
+PASS decode: iron material, 2 deduped images
+PASS iron ≡ forge's (byte-family, buffer-compared)
+PASS fire_coals GROUP anchor survives (sentry-fire comp target)
+PASS horn survives as flat merged static (MERGED-STATICS, tex-25)
+PASS iron bucket carries TEXCOORD_0 == POSITION (bowl only; coals + horn flat by design) — buckets 1
+PASS place-tex50-metal5.ts effect: watchpost live, pose (15.6,-15.6), fire comps recovered — store/e7f5534850748fd3.glb
+PASS census (verify-tex50-live.ts assertions): stable + treeline current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS — code=0
+PASS tex-50 pin green
+PASS refreshed tex-14 pin green (e7f55348)
+PASS ledger law EXACT + HEAD gate green
+PASS all prior tex-50 one-shots consumed (self-deleting law)
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
