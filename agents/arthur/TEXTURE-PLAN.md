@@ -322,6 +322,13 @@ Ledger refine-254. Pins: tex-23 run; honest-top av-run refreshed.
 TIMBER LATTICE COMPLETE: walls, scaffold, greeting, map, hutch,
 fences, and the run where the rabbits play.
 
+### [tex-24] STONE VIII — the quarry (2026-08-17, wakeup 64) — DONE
+3-tier cut face + all rubble + half-cut block + sledge load on village
+ashlar (byte-identical to kiln's — the SOURCE of the village's stone
+wears the same tile); both crowbars on forge iron. Lamp/wood/shadow
+flat. Decode 8/8; census 6/6 (woodyard untouched). Ledger refine-255.
+Pin: tex-24 quarry. ASHLAR: nine sites, from bedrock to belfry.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
