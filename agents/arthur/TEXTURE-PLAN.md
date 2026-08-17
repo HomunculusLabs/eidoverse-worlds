@@ -368,6 +368,18 @@ ASHLAR: TWELVE sites — the village's stone reaches from the quarry
 bedrock to the edge of the known world, where it stops and the
 wonder begins.
 
+### [tex-29] TIMBER X — the potter's stand (2026-08-17, wakeup 69) — DONE
+Kick-wheel flywheel + rack bar + water bucket on village timber
+(byte-identical to wallSpan's). Clay/ware/cloth flat (the potter works
+BETWEEN wood and clay). pwheel GROUP anchor survives. NEW PROBE LAW:
+duplicate-node-name check — caught my own first rackbar edit creating
+two pw_rackbar nodes; fixed at source before the build (decode probes
+catch edit bugs too). Decode 9/9; rollout comp-law: motion:pwheel
+recovered (wheel still turns); census 5/5 (woodyard untouched).
+Ledger refine-260. Pin: tex-29 potter.
+TIMBER: ten sites — from the village walls down to the wheel a potter
+kicks with her foot.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
