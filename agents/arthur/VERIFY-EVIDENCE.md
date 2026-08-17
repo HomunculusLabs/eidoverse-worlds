@@ -394,3 +394,26 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-52 ad-hoc verification (r3) — 2026-08-17T18:17:37.500Z
+
+```
+PASS mkv3-plaza.ts: rebuild deterministic + == live build (4e58865a35f82ab9) — 4e58865a35f82ab9
+PASS decode: stone + timber + iron + 6 soil, 9 deduped images
+PASS stone ≡ kiln's + timber ≡ house's + iron ≡ forge's (byte-family, buffer-compared)
+PASS pz_kettle + well_ GROUP anchors survive (simmer + pendulum comps)
+PASS texMat buckets carry TEXCOORD_0 == POSITION (logs/rope/water/fire flat by design) — buckets 6
+PASS texture bytes < 400KB — 140020B
+PASS GLB < 20MB — 239.5KB
+PASS place-tex52-multi6.ts effect: plaza live, pose (0,0), all 4 comps recovered — store/4e58865a35f82ab9.glb
+PASS census (verify-tex52-live.ts assertions): dyehouse + watchpost current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS — code=0
+PASS tex-52 pin green
+PASS tex-11 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS all prior tex-52 one-shots consumed (self-deleting law)
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
