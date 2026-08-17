@@ -880,6 +880,18 @@ internally after each rebuild). Ledger refine-304. Pin: tex-72
 windmill. STONE: nineteenth; TIMBER: thirty-ninth — the village's two
 towers read as one village, bell to mill.
 
+### [tex-73] TIMBER XL — the maul handle; tool-handle chain ×5 (2026-08-17, resumed wakeup 12) — DONE
+Chopblock refinement: the maul HANDLE alone joins the timber (≡
+wallSpan's — the tool-handle chain tex-37/56/66/71 now five deep;
+a handle is a handle). RAW-LOG LAW STANDS: block, split halves,
+waiting log, end-grain faces, cracks all stay flat OAK (raw logs are
+not construction). No comps (spawn-only at preserved pose).
+PIN-REFRESH: tex-16 chopblock pin advanced to `ab5031c118d925c0` (same
+commit). Persistent verifier `verify-tex73.ts` committed (14/14 ALL
+PASS). Ledger refine-305. Pin: tex-73 chopblock. TIMBER: fortieth
+site — the tool handles of the village read as one wood, pitchfork to
+maul.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
