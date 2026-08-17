@@ -422,3 +422,12 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   live / 0 dead). In-flight class; no register entry.
 - verify-repairs.ts (post-landing): ALL PASS.
 - Register: 0 OPEN.
+
+## 2026-08-17 ~13:5x — wakeup 93 (tex-13 noted)
+
+- New since audit-92: tex-13 (wayside shrine on both ground families —
+  ashlar stones + soil pavers, byte-proven; census 6/6, pin added;
+  votive comps recovered). Plan closed with a tag-collision -b-suffix
+  note.
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
