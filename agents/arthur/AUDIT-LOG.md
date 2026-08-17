@@ -257,3 +257,10 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - verify-repairs.ts: ALL PASS (tex-5 pin green on new build).
 - Spot-check: av-dyelaundry carries the wind comps live.
 - Register: 0 OPEN.
+
+- Addendum: my grep for "wind" in comp keys found none — decode: the
+  wind IS the motion comps (motion:dl_cloth_0..5 on the garments, named
+  for the cloth anchors; "wind comps" in the commit title is prose for
+  the out-of-phase swaying these drive). All 6 cloth comps live on
+  av-dyelaundry — claim holds. Same prose-vs-key pattern as audit-40's
+  "water-bob".
