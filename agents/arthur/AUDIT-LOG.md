@@ -412,3 +412,13 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
 - 2026-08-17 ~13:3x — wakeup 91: cheap tick (no new commits since audit-90; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~13:4x — wakeup 92 (transient blip; refine-244 noted)
+
+- First verify run: 1 FAIL (unprocessed grep — lane churning; pondlife3
+  + harvestcart3 GLBs mtime-fresh). Re-runs immediately after: ALL PASS
+  twice — refine-244 landed mid-check (the retting pond wakes — fx_bundle
+  anchor + quiet water-bob; the cloth chain moves end to end; census 52
+  live / 0 dead). In-flight class; no register entry.
+- verify-repairs.ts (post-landing): ALL PASS.
+- Register: 0 OPEN.
