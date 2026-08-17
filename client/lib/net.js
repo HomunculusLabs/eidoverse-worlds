@@ -442,15 +442,21 @@ async function handle(msg) {
       // before transplanting it into a fresh record.
       if (remotes.has(msg.id)) bus.emit('participant-teardown', msg.id);
       ensureRemote(msg.id, msg.avatar, { agent: msg.agent, authority: true });
-      logChat('*', `${msg.id} arrived`);
+      // Headless worker legs (agents) churn joins constantly — mason/builder
+      // style workers reconnect on a timer. Their arrivals are machinery, not
+      // conversation: humans get the sys line, agents are silent.
+      if (!msg.agent) logChat('*', `${msg.id} arrived`);
       bus.emit('roster');
       break;
 
-    case 'leave':
+    case 'leave': {
+      // capture before teardown drops the record — the agent flag rides the remote
+      const wasAgent = !!remotes.get(msg.id)?.agent;
       teardownParticipant(msg.id);
-      logChat('*', `${msg.id} left`);
+      if (!wasAgent) logChat('*', `${msg.id} left`);
       bus.emit('roster');
       break;
+    }
 
     case 'pose': {
       // Presence UPDATES bodies; it never creates them (#95). A pose for an
