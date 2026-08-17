@@ -237,3 +237,14 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - 2026-08-17 ~07:2x — wakeup 46: cheap tick (no new commits since audit-45; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~07:3x — wakeup 47: cheap tick (no new commits since audit-46; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~07:4x — wakeup 48: cheap tick (no new commits since audit-47; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~07:5x — wakeup 49 (mid-flight tex rework, no finding)
+
+- verify-repairs.ts first 2 runs: 1 FAIL ([tex-5] laundry on old weave pin
+  603df21b) — decoded: texture lane IN FLIGHT (assets mtime 01:35, plan
+  01:29); it re-placed av-dyelaundry to a NEW weave build d55427b8
+  (+cloth anchors r21, live==local confirmed) and the pin edit was landing
+  in the working tree as I ran. With the lane's pin update in place:
+  ALL PASS. Not a defect — in-flight rollout (audit-20 pattern). The
+  lane's commit will close it; no register entry.
+- Register: 0 OPEN.
