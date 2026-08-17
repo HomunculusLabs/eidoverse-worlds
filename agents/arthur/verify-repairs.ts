@@ -28,8 +28,8 @@ const sep = (a: number[], b: number[]) => Math.max(Math.max(a[0] - b[1], b[0] - 
 // --- per-defect live assertions (mirror of the register's FIXED entries) ---
 const D = ents["av-dyehouse"], S = ents["av-sign-dyer"], R = ents["av-row-cottage"];
 ck("[tex-4] av-stable on thatch+timber+stone build (89dc80d7 → pin refreshed by tex-49)", ents["av-stable"]?.lib === "store/89dc80d7bb8fc395.glb");
-ck("[tex-4] 10 wallSpan buildings on stone builds",
-    ents["arthur-house"]?.lib === "store/36cd42b6d0b818e8.glb"
+ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53)",
+    ents["arthur-house"]?.lib === "store/cff51defbdacd0ce.glb"
     && ents["av-longhouse"]?.lib === "store/21e4e46f17481b28.glb"
     && ents["av-garden-cottage"]?.lib === "store/f47574b7e16368fb.glb"
     && ents["av-row-cottage"]?.lib === "store/ffe8236b459c89fb.glb"
