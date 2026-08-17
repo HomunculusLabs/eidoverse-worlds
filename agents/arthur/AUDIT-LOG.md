@@ -224,3 +224,13 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   groups + gentle life comps; census 22 live / 0 dead).
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
+
+## 2026-08-17 ~07:1x — wakeup 45 (tex-7 milestone)
+
+- New since audit-44: tex-7 SOIL (trodden earth on door paths, 6
+  seed-variant tiles, census 5/5) — THE ORIGINAL SEVEN-FAMILY TEXTURE
+  QUEUE IS COMPLETE: thatch, timber, plaster, stone, textiles, metal,
+  soil. Plan closed with the soil law + follow-ups listed.
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN. Milestone noted; eye-check of all seven families
+  remains Bill's pass.
