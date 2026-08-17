@@ -1830,3 +1830,27 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-72 final evidence — 2026-08-17T23:07:54.853Z
+
+```
+PASS pre-state: disk carousel is polish staged (38fbbc26)
+PASS mkv3-landmarks.ts: windmill rebuild deterministic + == live build (7fc779a5c7dd5dc5) — 7fc779a5c7dd5dc5
+PASS carousel-safety: restored byte-identical after both rebuilds (38fbbc26)
+PASS collateral: belltower (82e4c316) + inn (45e51e8e) byte-identical
+PASS decode: stone + timber, 2 deduped images — timber,stone,glow2,glow3
+PASS stone ≡ kiln's + timber ≡ house wallSpan's (buffer-compared)
+PASS sails GROUP anchor survives
+PASS TEXCOORD_0 == POSITION on all texMat buckets (cloth/sacks/hub/lamp flat by design) — buckets 3
+PASS texture bytes < 400KB + GLB < 20MB — 21183B / 122.5KB
+PASS place-tex72-timber39.ts effect: windmill live, pose (-38,0), sails comp recovered — store/7fc779a5c7dd5dc5.glb
+PASS live carousel untouched (cd22d0b0) + belltower/quarry anchors current + woodyard untouched
+PASS verify-tex72.ts present (committed, non-self-deleting)
+PASS verify-tex72.ts runs 0 / ALL PASS — code=0
+PASS both prior one-shots consumed (-paths, -tracker absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-72 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
