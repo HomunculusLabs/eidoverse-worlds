@@ -208,3 +208,9 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   swimmer/upender/drake; census 20 live / 0 dead), refine-229 renumber.
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
+
+- Spot-check NOTE (post-commit): my "water-bob" grep found no carriers, but
+  decoding refine-228's ledger text shows the comps landed as
+  motion:duck_d1/d2/d3 on av-pondlife — live-confirmed present. The
+  "water-bob" name in the commit title is prose shorthand, not a comp key.
+  Claim holds. No finding.
