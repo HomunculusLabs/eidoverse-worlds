@@ -928,6 +928,23 @@ flat by law — verify only). NEXT ARC: one ring building per wakeup
 each time. Survey script: `agents/arthur/tex-final-survey.py`. No
 rollout this wakeup (survey is the deliverable). Ledger refine-307.
 
+### [tex-76] TIMBER XLII + IRON XXVI + STONE XX — the meeting hall (2026-08-17, resumed wakeup 15) — DONE
+The ring arc begins (survey's named first building): firebowl on
+forge iron (brazier-bowl law tex-50/67); both bench rows + legs,
+council table + legs + 3 stools, 3 tie beams on village timber
+(house-interior law tex-53/74); dais on ashlar (a speaking platform is
+a plinth). Floor stays DARK; fire/candle/lamps stay emissive; banner
+cloth/brass + firewood logs stay flat (cloth/brass, raw-log law).
+RING-SAFETY law (new, first exercise — the ring cluster's
+carousel-safety): mkv3-ring.ts writes 7 GLBs — snapshot all, backup,
+rebuild, restore six siblings byte-identical (longhouse 21e4e46f, row
+ffe8236b, bunk b82a4104, court 2f2cacf9, +tower/garden); only the hall
+rolled out. smoke comp recovered. tex-4 multi pin hall hash updated
+in-gate. Persistent verifier `verify-tex76.ts` committed (17/17 ALL
+PASS; restores siblings internally after each rebuild). Ledger
+refine-308. Pin: tex-76 hall. TIMBER: 42nd; IRON: 26th; STONE: 20th —
+where the village argues, it reads as one village, dais to ridge.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
