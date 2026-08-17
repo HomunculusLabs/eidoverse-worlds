@@ -131,6 +131,15 @@ Remaining dye-trade sites (market awnings/bolts, dyehouse strips) are
 follow-up candidates — same pattern, different GLBs.
 
 - [ ] tex-6 METAL — forge/anvil/hardware. Low-key, roughness-led.
+### [tex-6] METAL — the forge (2026-08-17, wakeup 23) — DONE
+Brushed-iron tile (2px stripe grain, tones 0x59595e/0x515259 2:1, rough .4 /
+metal .55 — roughness-led) on anvil/horn/hammer/tongs/hoops; hearth masonry
+takes the ashlar tile (stoneMat params duplicated verbatim — same bytes).
+Decode 13/13; rollout comp-law (coals comp captured + re-applied); census
+6/6. Ledger refine-228. Commit 315d303. Pin: tex-6 metal build.
+METAL LAW: metal reads through PBR response (rough/metal), albedo stays
+near-flat with close tones; future metal sites reuse the iron tile params.
+
 - [ ] tex-7 SOIL — paths, garden beds.
 
 ## Open risks / notes
