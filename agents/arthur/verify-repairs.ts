@@ -40,7 +40,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds",
     && ents["av-windmill"]?.lib === "store/d18cbc3f5e3e43b2.glb"
     && ents["av-stable"]?.lib === "store/fedd5d15de53f903.glb");
 ck("[tex-5] av-dyelaundry on weave build (d55427b88073320c, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/d55427b88073320c.glb");
-ck("[tex-6] av-forge on metal build (a34e5b529440bd41)", ents["av-forge"]?.lib === "store/a34e5b529440bd41.glb");
+ck("[tex-6] av-forge on metal build (49e411d67e40d2f5, +coals anchor r44)", ents["av-forge"]?.lib === "store/49e411d67e40d2f5.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
 ck("[tex-10] av-bcistern on ashlar build (e6827189ae8d8c35)", ents["av-bcistern"]?.lib === "store/e6827189ae8d8c35.glb");
 ck("[tex-9] av-kiln on ashlar build (76097cecbdb91765)", ents["av-kiln"]?.lib === "store/76097cecbdb91765.glb");
