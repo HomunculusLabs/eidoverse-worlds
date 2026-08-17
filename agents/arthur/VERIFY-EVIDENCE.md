@@ -1539,3 +1539,27 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-67 durable evidence (persistent verifier run directly) — 2026-08-17T22:25:23Z
+
+```
+PASS plaza rebuild deterministic + == live build (933ab1f96fe1e734) — 933ab1f96fe1e734
+PASS decode: stone + timber + iron materials — iron,stone,soil-0,soil-1,soil-2,soil-3,soil-4,soil-5,timber,glow9
+PASS 9 deduped images (3 tex-67 families + 6 soil paver variants standing from tex-11) — images 9
+PASS stone ≡ kiln's + timber ≡ house's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS pz_kettle GROUP anchor survives (kettle comp target)
+PASS bowl carried by the iron material (merged into pz3_* statics — not a KEEP node; MERGED-STATICS law)
+PASS no duplicate NAMED node names — clean
+PASS texMat buckets carry TEXCOORD_0 == POSITION (logs/grain/rope/ladle/water flat by design) — buckets 6
+PASS texture bytes < 400KB — 140020B
+PASS GLB < 20MB — 239.3KB
+PASS place-tex67-iron23.ts effect: plaza live, pose (0,0), all 4 comps recovered — store/933ab1f96fe1e734.glb
+PASS census anchors: kiln + potter current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-52 pin) — code=0
+PASS tex-67 pin green
+PASS tex-52 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green (polish-inclusive)
+
+ALL PASS
+```
+T-dir tex-67 one-shot residue: 0 (all consumed per hygiene law)
