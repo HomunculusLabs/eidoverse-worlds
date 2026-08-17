@@ -1227,3 +1227,27 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-63 r2 evidence (tracker follow-up) — 2026-08-17T21:48:23.640Z
+
+```
+PASS mkv3-miles14.ts: rebuilds deterministic + == live builds (n a2b6bfab…, s 3d423bc3…) — a2b6bfab613f/3d423bc3590b
+PASS milestone-n: stone + iron + glow materials — stone,iron,glow2
+PASS milestone-n: stone ≡ kiln's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS milestone-n: texMat buckets carry TEXCOORD_0 == POSITION (lantern glow flat) — buckets 2
+PASS milestone-n: texture bytes < 400KB + GLB < 20MB — 2242B / 10.0KB
+PASS milestone-s: stone + iron + glow materials — stone,iron,glow2
+PASS milestone-s: stone ≡ kiln's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS milestone-s: texMat buckets carry TEXCOORD_0 == POSITION (lantern glow flat) — buckets 2
+PASS milestone-s: texture bytes < 400KB + GLB < 20MB — 2242B / 10.0KB
+PASS place-tex63-multi7.ts effect: both milestones live on textured builds, poses preserved — store/a2b6bfab613f0e84.glb / store/3d423bc3590b5068.glb
+PASS anchors current + woodyard untouched (approval block honored)
+PASS verify-tex63.ts present (committed, does not self-delete)
+PASS verify-tex63.ts runs 0 / ALL PASS — code=0
+PASS listed one-shot consumed (hermes-verify-tex63-paths.ts absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-63 pin + refreshed tex-27 pins + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
