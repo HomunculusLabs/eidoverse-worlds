@@ -341,3 +341,11 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   0 dead).
 - verify-repairs.ts: ALL PASS (wakeup 74 stacked unprocessed).
 - Register: 0 OPEN.
+
+## 2026-08-17 ~11:0x — wakeup 76 (refine-239 noted)
+
+- New since audit-74..75: refine-239 (the sentry fire breathes —
+  watchpost fire_coals anchor + coal-breath comp; embers verbatim;
+  census 47 live / 0 dead).
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
