@@ -72,3 +72,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   daemon (19:37, pre-restart; err file not written since). Not a live
   fault; watching for recurrence next depth-5 rotation.
 - Register: 0 OPEN items. No findings.
+- 2026-08-17 ~02:3x — wakeup 18: cheap tick (no new commits since audit-17; depth-1 re-sweep ALL CLEAR over 28 entities for good measure).
