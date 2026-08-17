@@ -228,6 +228,18 @@ exactify path). Pin: tex-13 shrine (3 votive comps).
 ASHLAR: plinths + forge + kiln + cistern + shrine.
 Sacred ground = working ground: same stone, same earth.
 
+### [tex-14] TIMBER II — the watchpost (2026-08-17, wakeup 52) — DONE
+Braces, deck, ladder rails/rungs, canopy on the village timber tile
+(byte-identical to wallSpan's — house walls and scaffold one wood).
+Posts stay DARK flat (structural); brazier/coals/horn flat. fire_coals
+GROUP anchor survives. Decode 8/8; rollout comp-law (embers particles +
+sentry-fire breath captured + re-applied); census 6/6. Ledger refine-245.
+Pin: tex-14 watchpost (sentry comps).
+TIMBER COVERAGE: 10 buildings' walls + watchpost scaffold.
+HEAD-GATE LAW (self-caught): commit messages in this repo must match
+`repair-|tex-|audit-|refine-` — verify-repairs HEAD gate fails otherwise;
+amend own unpushed commit (62d9d3c fix).
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
