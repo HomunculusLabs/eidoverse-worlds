@@ -44,7 +44,22 @@ Baseline hashes before change (regression anchors):
 - market3  f9f0680aebbda0134a9073bf15f85ce8e946215ed86260d81d3bbb1829af3b90
 - mapboard3 505b7f0c84f9a4ceae928ec2c1dbadf421802c03d3ef79a6a2ad188e23b54686
 
-## Phase queue (one family per run)
+### [tex-1] THATCH PROOF — the stable (2026-08-17, wakeups 3-5)
+STATUS: BUILT + DECODE-VERIFIED; world rollout (upload/spawn) deferred — terminal
+network approval gate timed out with user away (curl blocked twice). Rollout script
+ready: `assets/place-tex1-stable.ts` (reads live pose, uploads, spawns same id,
+re-verifies). Run it first thing next wakeup BEFORE new work.
+
+Edit: mkv3-stable.ts roof slab mat(C.MID) -> texMat("thatch",
+[0x6b5d4f, 0x7a6a56, 0x5d5142], {rough .92, scale 5, weights [2,1,1]}) — tones
+anchored on old flat MID for continuity; ~1m tile, ~0.2m bundles at world scale.
+New GLB: 56d0122215bcca6512438251f25c96fa3ec2b9f76a1719f3abd2cf1c276fc87a (47.8KB,
+10 nodes unchanged). Decode probe 11/11 ALL PASS: 1 PNG (19699B), chain resolves,
+TEXCOORD_0 == POSITION on the roof prim only (9 plain prims UV-free), COLOR_0 white,
+pixels exact sRGB tones at 2:1:1 weights, deterministic rebuild, <400KB law.
+No comps on av-stable (source-decoded wakeup 3: no placer targets it) — re-place
+needs no comp re-apply. Geometry untouched (texture-only change) — walk surface
+identical; pose/lib re-verified in placer, MCPL walk left to the audit lane.
 
 - [ ] tex-1 THATCH — roof material on gableRoof (housekit.ts kit edit = all buildings at once).
       Muted straw tones (2-3), directional streak bias so slopes read as layered thatch at distance.
