@@ -57,3 +57,18 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Interior lights census (separate light entities, not comps):
   6/6 PRESENT (tw/gc/rc/bk/hl/ct).
 - Register: 0 OPEN items.
+
+## 2026-08-17 ~02:2x — wakeup 17 (depth 5: keeper daemon + route sanity)
+
+- New since audit-16: refine-218 (honest-top run+fence — the support-abstain
+  residuals FIXED, lie 0.106→0.000 / 0.105→0.025; register close-out).
+  verify-repairs.ts: ALL PASS (now accepts refine- prefixed HEADs too).
+- Keeper daemon: launchctl shows dev.arthur.eidoverse-resident PID 43556
+  running (exit-code slot −15 = previously SIGTERMed instance, current one
+  alive). resident.log writing as of 1 min ago — 746 circuit entries, laps
+  completing ("lap complete — resting at home"), goat-pen-night stop
+  reached: true. Route sanity: GOOD.
+- resident.err holds 3 OOM RangeErrors — timestamps decode to the OLD
+  daemon (19:37, pre-restart; err file not written since). Not a live
+  fault; watching for recurrence next depth-5 rotation.
+- Register: 0 OPEN items. No findings.
