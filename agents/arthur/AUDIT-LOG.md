@@ -373,3 +373,13 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   and verify-repairs.ts: ALL PASS (ledger realigned by the lane's own
   ledger-entry commit). In-flight class; no register entry.
 - Register: 0 OPEN.
+
+## 2026-08-17 ~12:2x — wakeup 84 (tex-11 noted; ground family complete)
+
+- New since audit-83: tex-11 (trodden earth on the plaza gathering
+  ring, soil family, byte-proven — census 10/10, pin added; a stride
+  defect was decode-caught PRE-rollout and fixed before landing — the
+  lane's own gate working as designed). Plan closed with the stride
+  law: the GROUND family is complete.
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
