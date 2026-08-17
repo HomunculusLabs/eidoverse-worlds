@@ -296,3 +296,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   self-resolved within ~20s; final run ALL PASS. In-flight class; the
   lane's commit closes both.
 - Register: 0 OPEN.
+- 2026-08-17 ~09:0x — wakeup 56: cheap tick (no new commits since audit-55; verify ALL PASS clean; 0 OPEN).
