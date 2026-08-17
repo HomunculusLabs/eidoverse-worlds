@@ -335,3 +335,22 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-52 ad-hoc verification — 2026-08-17T18:12:26.873Z
+
+```
+PASS stone + timber + iron + 6 soil materials — stone,soil-0,soil-1,soil-2,soil-3,soil-4,soil-5,timber,iron,glow9
+PASS 9 deduped images (3 families + 6 soil variants) — images 9
+PASS stone ≡ kiln's ashlar (byte-family law)
+PASS timber ≡ house wallSpan's (byte-family law)
+PASS iron ≡ forge's (byte-family law)
+PASS fire + pz_kettle + well_ anchors survive (embers/simmer/pendulum comps)
+PASS no duplicate NAMED node names — clean
+PASS stone + timber + iron buckets carry TEXCOORD_0 == POSITION (logs/rope/water/fire flat by design) — buckets 6
+PASS texture bytes < 400KB — 140020B
+PASS GLB < 20MB — 239.5KB
+PASS rebuild deterministic — 4e58865a35f8
+
+ALL PASS
+
+```
