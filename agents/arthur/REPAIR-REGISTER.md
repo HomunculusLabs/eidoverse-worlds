@@ -261,3 +261,18 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   rabbit clear by 0.54m in z); corrected to z 18.6 same wakeup.
 - STATUS: FIXED (refinement wakeups 1-4). Ad-hoc verified (live lie
   decode + vertex census + verify-repairs ALL PASS).
+
+### R-109 [VERIFICATION] stale tex-1 pin in verify-repairs.ts — OPEN (audit-21)
+- Evidence: verify-repairs.ts FAILs "[tex-1] av-stable stands on the thatch
+  build (56d0122215bcca65)" — stable live lib is store/aaf04bc81719be50.glb,
+  which IS the sha256[:16] of current local village_stable3.glb (world ==
+  source; the WORLD is correct). The pin is stale.
+- Decode: a texture-lane tex-2 run (TIMBER via housekit wallSpan) rebuilt
+  stable3 + house3 + run3 (~00:21-00:25) and re-placed the stable, but the
+  run ended before committing (no tex-2 commit; tree clean; TEXTURE-PLAN
+  untouched since 00:15 with tex-2 still `[ ]`). Per the audit-20 escalation
+  rule (lane quiet + pin still failing), this registers.
+- Fix for the refinement/texture lane: EITHER resume tex-2 (commit the built
+  state + update TEXTURE-PLAN + refresh the pin to the live hash aaf04bc8),
+  OR pin-refresh alone if tex-2 is abandoned. Do not hand-edit the ledger.
+- STATUS: OPEN
