@@ -39,9 +39,10 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
     && ents["av-inn"]?.lib === "store/45e51e8ecd7dc57e.glb"
     && ents["av-windmill"]?.lib === "store/d18cbc3f5e3e43b2.glb"
     && ents["av-stable"]?.lib === "store/89dc80d7bb8fc395.glb");
-ck("[tex-5] av-dyelaundry on weave build (d55427b88073320c, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/d55427b88073320c.glb");
+ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-60] av-dyelaundry on timber-woodwork build (c5f85611ffefc522, 6 wind comps)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-59] av-monument on full-ashlar build (9520e61fc8e9d887, knot comp)", ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb");
 ck("[tex-58] av-shrine on full-ashlar build (d0d3743a60802625, votive comps)", ents["av-shrine"]?.lib === "store/d0d3743a60802625.glb");
 ck("[tex-57] av-market on woodwork build (2bb51287d4e1a2a2, wind comps)", ents["av-market"]?.lib === "store/2bb51287d4e1a2a2.glb");
