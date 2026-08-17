@@ -42,6 +42,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
 ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-71] av-charcoal on stake-timber build (dcb3bb63442a764c, smoke comp)", ents["av-charcoal"]?.lib === "store/dcb3bb63442a764c.glb");
 ck("[tex-70] av-quarry on 3-family build (6b3da17816aeeb55)", ents["av-quarry"]?.lib === "store/6b3da17816aeeb55.glb");
 ck("[tex-69] av-belltower on full-timber build (82e4c316b62e5006, bell comps)", ents["av-belltower"]?.lib === "store/82e4c316b62e5006.glb");
 ck("[tex-68] av-watchpost on full-post-timber build (256e16a13027fb93, fire comps)", ents["av-watchpost"]?.lib === "store/256e16a13027fb93.glb");
@@ -100,7 +101,7 @@ ck("[tex-26] all 5 rain barrels on textured builds (85edf547/2781edae/b12a17a3/a
     && ents["av-rainbarrel-i"]?.lib === "store/b12a17a3d56944b3.glb"
     && ents["av-rainbarrel-b"]?.lib === "store/ab728fbb2278b7e7.glb"
     && ents["av-rainbarrel-g"]?.lib === "store/ea1f501de84e4301.glb");
-ck("[tex-25] av-charcoal on textured build (4f350e33f0f7de8f, smoke comp)", ents["av-charcoal"]?.lib === "store/4f350e33f0f7de8f.glb");
+ck("[tex-25] av-charcoal on textured build (4f350e33f0f7de8f, smoke comp)", ents["av-charcoal"]?.lib === "store/dcb3bb63442a764c.glb");
 ck("[tex-24] av-quarry on textured build (dd953ab2188427db)", ents["av-quarry"]?.lib === "store/6b3da17816aeeb55.glb");
 ck("[tex-23] av-run on timber build (6c3c4f1127446592)", ents["av-run"]?.lib === "store/6c3c4f1127446592.glb");
 ck("[tex-22] av-garden-fence + av-paddock on timber builds (c06c6d14/cd74f723)",
