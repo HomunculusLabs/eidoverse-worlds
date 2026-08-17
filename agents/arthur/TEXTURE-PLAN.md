@@ -556,6 +556,16 @@ water, earth is earth, rope is rope). Decode 10/10; census 4/4
 IRON: fourteenth site — THE WATER LAW now reads at every pond: flax
 retting and field drinking, both behind village stone.
 
+### [tex-48] STONE XII — the treeline (2026-08-17, wakeup 88) — DONE
+Understory boulders on village ashlar (≡ kiln's — the pond law
+extended to the wild edge: field stones speak the belfry's stone).
+Trees/canopies/tufts/shrubs/grass flat (life — tex-23). All three
+firefly comps (ff1–ff3) recovered — the fireflies still drift.
+Decode 8/8; census 5/5 (woodyard untouched). Ledger refine-280.
+Pin: tex-48 treeline. ASHLAR: fifteenth GLB — the stone law now
+rings the whole village: hearth to belfry to benches to ponds to
+the wild edge.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
