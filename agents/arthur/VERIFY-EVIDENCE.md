@@ -149,3 +149,23 @@ PASS rebuild deterministic — e7f553485074
 ALL PASS
 
 ```
+
+## tex-50 final ad-hoc verification — 2026-08-17T17:55:10.914Z
+
+```
+PASS watchpost rebuild deterministic + == live build (e7f5534850748fd3) — e7f5534850748fd3
+PASS iron material, 2 deduped images
+PASS iron ≡ forge's (byte-family, buffer-compared)
+PASS fire_coals GROUP anchor survives
+PASS horn survives as flat merged static (MERGED-STATICS)
+PASS av-watchpost live on iron-bowl build, pose (15.6,-15.6), fire comps recovered — store/e7f5534850748fd3.glb
+PASS woodyard untouched (approval block honored)
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-14 pin) — code=0
+PASS tex-50 pin green
+PASS tex-14 watchpost pin refreshed to e7f55348 (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS listed one-shots consumed
+
+ALL PASS
+
+```
