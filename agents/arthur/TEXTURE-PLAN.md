@@ -538,6 +538,14 @@ ASHLAR: fourteenth GLB — THE CLOTH CHAIN now reads in one material
 story: flax in the field, retting behind village stone, spinning at
 the timber wheel, dyeing in flax-blue vats, drying on smithed iron.
 
+### [tex-46] TIMBER XX — the grain field (2026-08-17, wakeup 86) — DONE
+Scarecrow pole + crossbar on village timber (≡ wallSpan's — a built
+post is a built post). Grain flat (life — tex-23), scarecrow body
+flat (dressed straw, not construction), crow flat AND STILL FIDGETS
+(motion:gf_crow recovered). Decode 9/9; census 5/5 (woodyard
+untouched). Ledger refine-278. Pin: tex-46 grainfield. TIMBER: twenty
+sites.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
