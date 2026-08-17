@@ -285,6 +285,17 @@ Decode 9/9; rollout comp-law: motion:lamp recovered; census 6/6
 (woodyard untouched). Ledger refine-250. Pin: tex-19 wayside.
 The wayside carries the village in miniature: its stone, iron, wood.
 
+### [tex-20] STONE VII — the belltower (2026-08-17, wakeup 59) — DONE
+Base slab + 4 piers + 4 arch beams on village ashlar (byte-identical
+to kiln's). Bell brass/rungs/braces/cap flat. bell GROUP anchor
+survives (pendulum). Decode 9/9 — incl. INN proven untouched
+(independent groups) and carousel/windmill disk drift decoded as the
+refinement lane's in-flight work, NOT this lane's (only the tower
+rolled out). Rollout comp-law: motion + reactions recovered; census
+6/6. Ledger refine-251. Pin: tex-20 belltower.
+ASHLAR: plinths, forge, kiln, cistern, shrine, monument, wayside
+milestone, and the tower that rings the hours.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
