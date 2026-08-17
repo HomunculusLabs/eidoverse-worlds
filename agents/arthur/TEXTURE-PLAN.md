@@ -621,6 +621,21 @@ twenty-third. IRON: eighteenth. THE PLAN'S NAMED FOLLOW-UPS ARE
 DONE (well closed; chimney caps were the only other, already
 absorbed by the CELL MODE LAW sites).
 
+### [tex-53] TIMBER XXIV + IRON XIX — the keeper's house interiors (2026-08-17, wakeup 93) — DONE
+The reference building's interiors join the families: hearth + mantel
++ ledger desk + leg + shelf + bed + stool seat/legs + candle stand +
+writing stool + ledger book + both tie beams + door step-bench on
+village timber (≡ wallSpan family); inkpot on forge iron (≡ forge's).
+Fires stay emissive, pillow/quill/pages stay bone, blanket stays wool,
+books stay leather/cloth, woven rug stays flat (doubt law). The build
+carries FOUR families now (timber/stone/plaster/iron) — first probe
+expected 2, corrected at source (tex-53b 11/11). PIN-REFRESH: tex-4
+house pin advanced to `cff51defbdacd0ce` (tex-53b). Smoke comp
+recovered — the chimney still smokes. Census 5/5 (woodyard
+untouched). Ledger refine-285. Pin: tex-53 arthur-house. TIMBER:
+twenty-fourth. IRON: nineteenth — the reference building now teaches
+the material law to anyone who walks in.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
