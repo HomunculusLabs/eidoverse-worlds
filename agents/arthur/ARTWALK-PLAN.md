@@ -56,4 +56,14 @@ The four diagonals carry landmarks (NE belltower, NW market+mapboard, SW monumen
 
 ## Log
 
-_(entries appended per wakeup, TEXTURE-PLAN style)_
+### [h-1] THE LISSAJOUS REBORN (2026-08-17) — DONE, LIVE
+Era-1's curve reborn on the village's own materials: same curve (x=sin3t,
+y=sin2t+π/2, z=sint, R=1.35), same brass, same 9°/s y-spin; two-tier ashlar
+pedestal ≡ Founder's Knot stone, pole/collar/ferrule ≡ streetlamp iron, 3 soil
+approach pavers; curve + plaque flat (material truth). KEEP class extended
+`lissa$` (knot-class law). Build deterministic `66b208d1ce30ab12` ×4; decode
+14/14 (both family sources re-verified ≡ live pins before byte-compare);
+rollout 4 verbs; live census: `av-artwalk-lissa` (26.9,-26.9) yaw -0.79,
+comp `motion:lissa` spin y 9°/s, warm light at 2.5m; standing gate ALL PASS.
+Ledger refine-273 (D+9, E+2). SITED: SE diagonal r=38 (r=33 refused by
+pre-flight — smithy sign 2.7m). Bill's eye-check pending; he may steer pose.
