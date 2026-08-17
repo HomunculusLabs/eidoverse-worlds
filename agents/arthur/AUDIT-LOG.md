@@ -323,3 +323,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   hygiene finding resolved by the lane's own close-out — no register
   entry needed).
 - Register: 0 OPEN.
+- 2026-08-17 ~10:1x — wakeup 71: cheap tick (no new commits since audit-60..70 consolidation; verify ALL PASS; 0 OPEN).
