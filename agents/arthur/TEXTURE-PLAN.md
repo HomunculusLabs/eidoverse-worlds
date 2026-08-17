@@ -838,6 +838,20 @@ is part of the protocol). Ledger refine-301. Pin: tex-69 belltower.
 TIMBER: thirty-sixth site — pier to cap, the tower's scaffold reads as
 the village's own wood.
 
+### [tex-70] TIMBER XXXVII + IRON XXIV — the quarry completes (2026-08-17, resumed wakeup 9) — DONE
+Sledge tray + both runners on village timber (≡ wallSpan's — the
+cart-bed law: the harvest cart's bed and mapboard's posts read on the
+same boards); mason's dawn lamp post on forge iron (≡ forge family —
+the lantern-post chain tex-63/64; its flat params were already
+metallic). Tool marks + feather gap stay dark insets (shadow, not
+material); lamp core stays emissive. No comps (spawn-only at preserved
+pose). PIN-REFRESH: tex-24 quarry pin advanced to `6b3da17816aeeb55`
+(same commit). Persistent verifier `verify-tex70.ts` committed (14/14
+ALL PASS). Ledger refine-302. Pin: tex-70 quarry. TIMBER:
+thirty-seventh site; IRON: twenty-fourth — where the village's stone
+is born reads on all three of its own materials, face to sledge to
+lamp.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
