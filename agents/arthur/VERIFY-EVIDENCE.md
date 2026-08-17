@@ -2032,3 +2032,37 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-75 survey verification evidence — 2026-08-17T23:36:50.825Z
+
+```
+PASS tex-final-survey.py re-runs clean — code=0
+PASS survey reproduces 93 law-classified flats — 93
+FAIL 13 law buckets present — 0
+PASS ring-cluster inventory surfaced (221 unclassified, ring:… entries)
+PASS tex-final-survey.py committed (clean in git)
+PASS TEXTURE-PLAN.md: tex-75 final survey section present
+PASS IMPROVEMENTS.md: refine-307 entry present (ledger law closes via gate below)
+PASS verify-repairs.ts 0 / ALL PASS (ledger EXACT + HEAD gate) — code=0
+PASS git tree clean for this lane's paths
+
+1 FAIL
+
+```
+
+## tex-75 survey verification evidence (v2 — bucket-regex corrected at source) — 2026-08-17T23:37:40.042Z
+
+```
+PASS tex-final-survey.py re-runs clean — code=0
+PASS survey reproduces 93 law-classified flats — 93
+PASS 12 printed law-bucket rows (13 laws defined; STRANGER'S-STONE & MONUMENT-BOWL have 0 current hits) — 12
+PASS ring-cluster inventory surfaced (221 unclassified, ring:… entries)
+PASS tex-final-survey.py committed (clean in git)
+PASS TEXTURE-PLAN.md: tex-75 final survey section present
+PASS IMPROVEMENTS.md: refine-307 entry present
+PASS verify-repairs.ts 0 / ALL PASS (ledger EXACT + HEAD gate) — code=0
+FAIL git tree clean for this lane's paths
+
+1 FAIL
+
+```
