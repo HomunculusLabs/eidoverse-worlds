@@ -313,6 +313,15 @@ refine-253. Pins: tex-22 fences; honest-top garden-fence pin REFRESHED
 to the standing tex-22 build (geometry unchanged — material swap only).
 TIMBER: walls, scaffold, greeting, map, hutch, and every fence line.
 
+### [tex-23] TIMBER VII — the rabbit run (2026-08-17, wakeups 62–63) — DONE
+All wicket withes + stakes + pop-hole flap on village timber
+(byte-identical to wallSpan's). Pondlife ducks decoded and
+DELIBERATELY LEFT FLAT (life is not building material — material
+truth cuts both ways). Decode 7/7; census 5/5 (woodyard untouched).
+Ledger refine-254. Pins: tex-23 run; honest-top av-run refreshed.
+TIMBER LATTICE COMPLETE: walls, scaffold, greeting, map, hutch,
+fences, and the run where the rabbits play.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
