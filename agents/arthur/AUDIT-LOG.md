@@ -200,3 +200,11 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - 2026-08-17 ~05:5x — wakeup 37: cheap tick (no new commits since audit-36; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~06:0x — wakeup 38: cheap tick (no new commits since audit-37; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~06:1x — wakeup 39: cheap tick (no new commits since audit-38; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~06:2x — wakeup 40 (refine-228 pond-life spot-check)
+
+- New since audit-39: tex-6 METAL (plan closed with metal law), refine-228
+  (the pond lives — duck anchors + water-bob comps:
+  swimmer/upender/drake; census 20 live / 0 dead), refine-229 renumber.
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
