@@ -262,7 +262,7 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - STATUS: FIXED (refinement wakeups 1-4). Ad-hoc verified (live lie
   decode + vertex census + verify-repairs ALL PASS).
 
-### R-109 [VERIFICATION] stale tex-1 pin in verify-repairs.ts — OPEN (audit-21)
+### R-109 [VERIFICATION] stale tex-1 pin in verify-repairs.ts — FIXED (tex-2, audit-22)
 - Evidence: verify-repairs.ts FAILs "[tex-1] av-stable stands on the thatch
   build (56d0122215bcca65)" — stable live lib is store/aaf04bc81719be50.glb,
   which IS the sha256[:16] of current local village_stable3.glb (world ==
@@ -275,4 +275,4 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - Fix for the refinement/texture lane: EITHER resume tex-2 (commit the built
   state + update TEXTURE-PLAN + refresh the pin to the live hash aaf04bc8),
   OR pin-refresh alone if tex-2 is abandoned. Do not hand-edit the ledger.
-- STATUS: OPEN
+- STATUS: FIXED (tex-2 commits 34caeeb/854ae04/43abf78 pinned the timber libs; verify-repairs.ts ALL PASS; world==source 24/24 confirmed by audit-22)

@@ -92,3 +92,15 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   still FAILs on this pin AND the texture lane has gone quiet (no new
   commits), append it to the register as a stale-pin defect.
 - 2026-08-17 ~03:0x — wakeup 21: R-109 registered (stale pin per audit-20 escalation rule; texture lane quiet since 00:25, tex-2 uncommitted).
+
+## 2026-08-17 ~03:1x — wakeup 22 (depth 3: hash drift, post-tex-2)
+
+- New since audit-21: tex-2 TIMBER landed (854ae04 timber on all 10 wallSpan
+  buildings, live census 22/22, comps re-applied; 34caeeb pins timber libs;
+  43abf78 plan closed). R-109 CLOSED — the texture lane resumed, committed,
+  and refreshed the pins exactly per the register's fix path.
+- verify-repairs.ts: ALL PASS (superseded tex-1 pin now pinned to the
+  thatch+timber build).
+- Depth 3: 24 MATCH / 0 DRIFT across all village GLBs incl. the rebuilt
+  timber batch — world == source everywhere.
+- Register: 0 OPEN.
