@@ -892,6 +892,25 @@ PASS). Ledger refine-305. Pin: tex-73 chopblock. TIMBER: fortieth
 site — the tool handles of the village read as one wood, pitchfork to
 maul.
 
+### [tex-74] TIMBER XLI + IRON XXV — the inn's interiors (2026-08-17, resumed wakeup 13) — DONE
+The village's great house joins (house-interior law, tex-53): hearth +
+mantel, both long tables + trestle legs + benches, bar counter, both
+cellar cradles, 14 stair treads, 3 tie beams, 3 guest beds, traveler
+chests, washstand, window seat + stand, porch deck + posts + roof on
+village timber (≡ wallSpan's); cellar cask HOOPS on forge iron (barrel
+law). Floors stay flat DARK (house law); fires/candles/sconces stay
+emissive; tankards/bottles/pillows/blankets/cushions stay flat
+(goods/cloth); sign face stays painted. 4 deduped images (multi-family:
+timber/stone/plaster shell/iron — corrected at source after decode).
+sign pendulum + fire emissive survive; ALL 4 comps recovered
+(smoke/hearth-fire/sign/sockets). CAROUSEL-SAFETY exercised: carousel
+byte-identical restored (38fbbc26 disk / cd22d0b0 live untouched);
+belltower + windmill byte-identical. tex-4 multi pin's inn hash updated
+in-gate (no separate refresh needed). Persistent verifier
+`verify-tex74.ts` committed (21/21 ALL PASS). Ledger refine-306. Pin:
+tex-74 inn. TIMBER: forty-first; IRON: twenty-fifth — the inn's lamps
+burn over the village's own boards, tap to attic.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
