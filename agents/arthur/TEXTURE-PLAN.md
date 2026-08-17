@@ -591,6 +591,19 @@ burns (woodyard untouched). Ledger refine-282. Pin: tex-50 watchpost.
 IRON: sixteenth site — the fire law reads at every hearth: forge,
 kiln, brazier — all on one iron.
 
+### [tex-51] TIMBER XXII — the dye house (2026-08-17, wakeup 91) — DONE
+4 posts + slanted roof + wind boards + stirring pole + 3 vat tubs on
+village timber (≡ wallSpan's); 3 vat bands on forge iron (≡ forge's —
+hoops are smithed). Dyed liquids stay flat tinted (pond law), rope
+stays rope; cloth strips already weave (tex-8). Both dh_strip GROUP
+anchors survive; both wind comps recovered — the cloth still dries.
+PIN-REFRESH: tex-8 dyehouse pin advanced to `29b4efc54101106d`
+(tex-51b). Decode 10/10; census 5/5 (woodyard untouched). Ledger
+refine-283. Pin: tex-51 dyehouse. TIMBER: twenty-second site. IRON:
+seventeenth — THE CLOTH CHAIN now reads end to end: flax in the
+field, retting behind stone, spinning at timber, dyeing in timber
+vats banded with iron, drying on the wind.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
