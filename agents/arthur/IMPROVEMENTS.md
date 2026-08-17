@@ -2295,4 +2295,6 @@ fixes ≈ 6 F.)
 
 - [refine-243] THE HAY RICK ROLLS (refinement wakeup 47): the machine arc rolls to the road — the harvest cart's two spoked wheels stood locked on the W road since loop 93 while everything around them learned to move; rebuilt both wheels AND the axle as ONE hc_wheel anchor group (KEEP gained hc_wheel, tight so bed/rails/pole statics merge; 10 nodes) — a rolling assembly, not two wheels turning separately, spinning 6 deg/s about the axle: a parked cart the wind nudges, not a runaway; re-placed same pose (-37,8.5) yaw 1.7966; run+potter regressions byte-identical; census 51 live / 0 dead; 9/9 ad-hoc verified (D+0, E+1)
 
-**Running total: 2367916 / 2000000**
+- [refine-244] THE RETTING POND WAKES (refinement wakeup 48): the water arc returns to its source — the flax field's retting pond held its two soaking bundles motionless since loop 69 while the ducks learned to bob downstream; rebuilt both bundles as ONE fx_bundle anchor group (KEEP gained fx_bundle; 9 nodes, stalks/pond/stook stay merged — the stook rightly stands), re-placed same pose (-43.7,-5.4) yaw 1.4478, retting-water bob applied: 0.01m at 3.4s — the same water-language as the mallards but quieter, soaking stillness with breath; run+harvestcart+pondlife regressions byte-identical; census 52 live / 0 dead; 10/10 ad-hoc verified; THE CLOTH CHAIN NOW MOVES END TO END: flax in the pond -> spun at the wheel -> dyed at the house -> dried on the line -> swaying in the wind (D+0, E+1)
+
+**Running total: 2367917 / 2000000**
