@@ -90,7 +90,7 @@ ck("[tex-23] av-run on timber build (6c3c4f1127446592)", ents["av-run"]?.lib ===
 ck("[tex-22] av-garden-fence + av-paddock on timber builds (c06c6d14/cd74f723)",
     ents["av-garden-fence"]?.lib === "store/c06c6d147b9141d8.glb"
     && ents["av-paddock"]?.lib === "store/cd74f723d7ce15e8.glb");
-ck("[tex-21] av-hutch on timber build (dffbeaaeed350b50, rabbit comps)", ents["av-hutch"]?.lib === "store/dffbeaaeed350b50.glb");
+ck("[tex-21] av-hutch on timber build (6263e8a2 → pin refreshed by tex-54, rabbit comps)", ents["av-hutch"]?.lib === "store/6263e8a20eb17cc9.glb");
 ck("[tex-20] av-belltower on ashlar build (3acd32b2004b990f, bell comps)", ents["av-belltower"]?.lib === "store/3acd32b2004b990f.glb");
 ck("[tex-19] av-wayside on textured build (5cbb8e4cacefc16f, lamp comp)", ents["av-wayside"]?.lib === "store/5cbb8e4cacefc16f.glb");
 ck("[tex-18] av-monument on textured build (0ec3fe2e3c050081, knot spin)", ents["av-monument"]?.lib === "store/0ec3fe2e3c050081.glb");
