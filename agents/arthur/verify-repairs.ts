@@ -42,6 +42,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
 ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-62] av-wayside on timber-woodwork build (5db486a79ff5cc6e, lamp comp)", ents["av-wayside"]?.lib === "store/5db486a79ff5cc6e.glb");
 ck("[tex-61] av-mapboard on timber-post build (d555acbd0b0ab516)", ents["av-mapboard"]?.lib === "store/d555acbd0b0ab516.glb");
 ck("[tex-60] av-dyelaundry on timber-woodwork build (c5f85611ffefc522, 6 wind comps)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-59] av-monument on full-ashlar build (9520e61fc8e9d887, knot comp)", ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb");
@@ -99,7 +100,7 @@ ck("[tex-22] av-garden-fence + av-paddock on timber builds (c06c6d14/cd74f723)",
     && ents["av-paddock"]?.lib === "store/cd74f723d7ce15e8.glb");
 ck("[tex-21] av-hutch on timber build (6263e8a2 → pin refreshed by tex-54, rabbit comps)", ents["av-hutch"]?.lib === "store/6263e8a20eb17cc9.glb");
 ck("[tex-20] av-belltower on ashlar build (3acd32b2004b990f, bell comps)", ents["av-belltower"]?.lib === "store/3acd32b2004b990f.glb");
-ck("[tex-19] av-wayside on textured build (5cbb8e4cacefc16f, lamp comp)", ents["av-wayside"]?.lib === "store/5cbb8e4cacefc16f.glb");
+ck("[tex-19] av-wayside on textured build (5cbb8e4cacefc16f, lamp comp)", ents["av-wayside"]?.lib === "store/5db486a79ff5cc6e.glb");
 ck("[tex-18] av-monument on textured build (0ec3fe2e3c050081, knot spin)", ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb");
 ck("[tex-17] av-mapboard on timber build (965fe0f6a9f90103)", ents["av-mapboard"]?.lib === "store/d555acbd0b0ab516.glb");
 ck("[tex-16] av-chopblock on metal build (1f8b7d34bfe59272)", ents["av-chopblock"]?.lib === "store/1f8b7d34bfe59272.glb");
