@@ -111,3 +111,41 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-50b ad-hoc verification (corrected child-index handling) — 2026-08-17T17:51:24.346Z
+
+```
+PASS iron + timber materials (glow2 = emissive coals) — timber,iron,glow2
+PASS 2 deduped images — images 2
+PASS iron ≡ forge's (byte-family law — braziers are smithed)
+PASS fire_coals GROUP anchor survives (sentry-fire comp target)
+PASS coals stay flat emissive (own glow2 material, not iron/timber)
+FAIL horn node present (stays flat by design)
+PASS no duplicate NAMED node names — clean
+PASS iron bucket carries TEXCOORD_0 == POSITION (bowl only) — buckets 1
+PASS texture bytes < 400KB — 20455B
+PASS GLB < 20MB — 52.3KB
+PASS rebuild deterministic — e7f553485074
+
+1 FAIL
+
+```
+
+## tex-50c ad-hoc verification (horn = merged static, source-verified) — 2026-08-17T17:52:19.801Z
+
+```
+PASS iron + timber materials (glow2 = emissive coals) — timber,iron,glow2
+PASS 2 deduped images — images 2
+PASS iron ≡ forge's (byte-family law — braziers are smithed)
+PASS fire_coals GROUP anchor survives (sentry-fire comp target)
+PASS coals stay flat emissive (own glow2 material, not iron/timber)
+PASS horn survives as flat merged static (MERGED-STATICS, tex-25; ~31-vert material-less bucket)
+PASS no duplicate NAMED node names — clean
+PASS iron bucket carries TEXCOORD_0 == POSITION (bowl only) — buckets 1
+PASS texture bytes < 400KB — 20455B
+PASS GLB < 20MB — 52.3KB
+PASS rebuild deterministic — e7f553485074
+
+ALL PASS
+
+```
