@@ -1937,3 +1937,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-73 all-paths evidence — 2026-08-17T23:18:50.797Z
+
+```
+PASS mkv3-chopblock78.ts: rebuild deterministic + == live build (ab5031c118d925c0) — ab5031c118d925c0
+PASS decode: timber + iron, 2 deduped images — timber,iron
+PASS timber ≡ house wallSpan's + iron ≡ forge family's (buffer-compared)
+PASS raw-log flats law: block/halves/log/end-grain stay material-less (tex-16 stands) — 4 flat-static meshes
+PASS TEXCOORD_0 == POSITION on all texMat buckets — buckets 2
+PASS texture bytes < 400KB + GLB < 20MB — 20455B / 46.3KB
+PASS place-tex73-timber40.ts effect: chopblock live at pose (15.3,25.5) — store/ab5031c118d925c0.glb
+PASS census anchors: windmill + quarry current, woodyard untouched (approval block honored)
+PASS verify-tex73.ts present (committed, non-self-deleting)
+PASS verify-tex73.ts runs 0 / ALL PASS — code=0
+PASS all four listed one-shots consumed (-close, -final, -paths, -tracker absent)
+PASS verify-repairs.ts 0 / ALL PASS (tex-73 pin + refreshed tex-16 + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
