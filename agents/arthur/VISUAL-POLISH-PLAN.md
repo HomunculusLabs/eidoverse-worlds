@@ -88,8 +88,13 @@ wakeups. This lane is the standing fix for that blindness.
       fix staged). Gate lesson: `walk` positions the BODY, not the camera
       heading — capture frames from positions where the subject sits
       front-of-view regardless of heading.
-- [ ] av-run / av-pondlife / av-garden-fence mesh quality (Bill's standing
-      priority list).
+- [x] av-run / av-pondlife / av-garden-fence mesh quality (Bill's standing
+      priority list). — CLOSED by the REFINEMENT lane (register R-2xx
+      "support-abstain residuals", refinement wakeups 1-4): av-run lie
+      0.106→0.000 (withes orientation bug fixed at source), av-garden-fence
+      0.105→0.025 (gate posts leveled), av-pondlife CLOSED-BY-CLASSIFICATION
+      (ducks proud of waterline = classifier by design). Not polish-lane
+      work; attributed and removed from this list.
 - [ ] Interiors visible through doorways — furnished read at threshold.
 - [ ] Village night lighting balance: interior lights ×6 + hearths; look
       for dead-dark buildings on the ring.
@@ -100,6 +105,10 @@ wakeups. This lane is the standing fix for that blindness.
       enterable buildings carry fire/lamp glow anchors. Dusk wash makes
       dead-dark calls INCONCLUSIVE — night-cycle re-read is the real gate;
       no source change forced (that would be invented work).
+      — polish-7 RE-READ ATTEMPT: world cycle now at DAY (light sky, zero
+      artificial lights active, balanced). Night frame unavailable this
+      tick; gate waits for the world's own cycle to reach night. No work
+      invented.
 
 ## Closed
 
