@@ -27,6 +27,7 @@ const sep = (a: number[], b: number[]) => Math.max(Math.max(a[0] - b[1], b[0] - 
 
 // --- per-defect live assertions (mirror of the register's FIXED entries) ---
 const D = ents["av-dyehouse"], S = ents["av-sign-dyer"], R = ents["av-row-cottage"];
+ck("[tex-1] av-stable stands on the thatch build (56d0122215bcca65)", ents["av-stable"]?.lib === "store/56d0122215bcca65.glb");
 ck("[R-106] dyehouse at (-21,-21.6) yaw .941", !!D && Math.abs(D.pos[0] + 21) < 0.01 && Math.abs(D.pos[2] + 21.6) < 0.01 && Math.abs(D.yaw - 0.941) < 0.005);
 ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(R, 2.95, 2.67)) > 0 && sep(rect(D, 1.64, 1.10), rect(ents["av-carousel"], 4.35, 4.1)) > 0);
 {
@@ -76,7 +77,7 @@ ck("comp placers intact", existsSync(`${A}/place-smoke.ts`) && existsSync(`${A}/
 // --- git state ---
 try {
     const head = execSync("git log --oneline -1", { cwd: W, encoding: "utf8" }).trim();
-    ck("HEAD is a repair/tex commit", /^[\da-f]+ (repair-\d|tex-\d)/.test(head), head);
+    ck("HEAD is a repair/tex/audit commit", /^[\da-f]+ (repair-\d|tex-\d|audit-)/.test(head), head);
 } catch { console.log("INFO git check unavailable (guard) — skipped"); }
 
 console.log(fail ? `${fail} FAILURE(S)` : "ALL PASS");
