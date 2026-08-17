@@ -104,3 +104,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Depth 3: 24 MATCH / 0 DRIFT across all village GLBs incl. the rebuilt
   timber batch — world == source everywhere.
 - Register: 0 OPEN.
+- 2026-08-17 ~03:2x — wakeup 23: cheap tick (no new commits since audit-22; verify ALL PASS).
