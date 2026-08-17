@@ -118,16 +118,25 @@ export function updateMountedMe(dt) {
  *  (case-insensitive), so `/sit 34` reaches 3485c78e without the full hash. */
 const _sitV = new THREE.Vector3();
 function nearestSeat(arg, reach) {
-  const want = arg ? String(arg).toLowerCase() : null;
+  const target = arg ? String(arg).toLowerCase() : "";
+  const dot = target.indexOf(".");
+  const want = dot >= 0 ? target.slice(0, dot) : target || null;
+  const wantSlot = dot >= 0 ? target.slice(dot + 1) : null;
   let best = null, bestD = reach;
   for (const [id, bag] of comps) {
     if (!bag.sockets) continue;
     if (want && !id.toLowerCase().startsWith(want)) continue;
     for (const slot of Object.keys(bag.sockets)) {
+      if (wantSlot && slot.toLowerCase() !== wantSlot) continue;
       const p = socketWorldPos(id, slot, _sitV);
       if (!p) continue;
       const d = Math.hypot(p.x - myState.pos.x, p.z - myState.pos.z);
-      if (d < bestD) { bestD = d; best = { id, slot, d }; }
+      // `/sit av-carousel` means ride the carousel, not whichever bench
+      // happens to be nearest. Horse slots are the canonical ride target;
+      // explicit `.bench_N` still selects a bench when requested.
+      const carouselHorse = want === "av-carousel" && slot.toLowerCase().startsWith("horse_") && !wantSlot;
+      const score = carouselHorse ? d - 1000 : d;
+      if (score < bestD) { bestD = score; best = { id, slot, d }; }
     }
   }
   return best;
@@ -144,6 +153,12 @@ export function trySitOn(arg) {
     if (far) logChat('*', `nearest seat is ${far.id} (${far.slot}), ${far.d.toFixed(0)}m away — walk closer, or /sit ${far.id}`);
     return false;
   }
+  // Self mounts are allowed at rank zero. Install the local relation before
+  // sending the verb so the next controller tick enters updateMountedMe
+  // immediately; waiting for the folded echo leaves the ground controller in
+  // charge for a frame/window and pins the rider back to y=0. The server echo
+  // remains authoritative and reconcile will replace/remove this exact record.
+  avatarMounts.set(CONFIG.name, { to: best.id, slot: best.slot });
   sendVerb('mount', { id: CONFIG.name, to: best.id, slot: best.slot });
   logChat('*', `you sit on ${best.id} (${best.slot}) — X or move to get off`);
   return true;
