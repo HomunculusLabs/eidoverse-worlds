@@ -792,6 +792,20 @@ tex-66 kiln. STONE: eighteenth site; TIMBER: thirty-fourth — where
 mortar is born reads as the village's own work, drum to ring to
 shovel.
 
+### [tex-67] IRON XXIII — the hearth bowl (2026-08-17, resumed wakeup 6) — DONE
+The plaza hearth's fire bowl — the last flat at the village's center —
+on forge iron (≡ forge family — the brazier-bowl law tex-50: a smithed
+vessel that holds flame is the smith's own). Split-log benches stay
+raw (chopblock law — a log is not a board); grain discs/rope/ladle/
+water stay flat. pz_kettle GROUP anchor survives; all 4 comps
+recovered — hearth burns, well sways, kettle simmers. Bowl merges into
+pz3_* statics (iron material present; MERGED-STATICS law — first probe
+expected a named node, corrected at source). PIN-REFRESH: tex-52 plaza
+pin advanced to `933ab1f96fe1e734` (same commit). Persistent verifier
+`verify-tex67.ts` committed (16/16 ALL PASS). Ledger refine-299. Pin:
+tex-67 plaza. IRON: twenty-third site — the village's center reads
+smith-made, bowl to kettle in one metal.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
