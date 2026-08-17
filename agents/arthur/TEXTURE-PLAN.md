@@ -110,6 +110,10 @@ refreshed to fedd5d15. Families live: thatch, timber, plaster, stone.
 CELL MODE LAW: cell-quantized picks come from block coords — future stone
 sites (well/kiln/chimney caps) should reuse stoneMat() for village-wide
 consistency.
+COMP LAW (R-110 lesson): capture comp inventories from LIVE comp keys
+BEFORE any re-place — placer grep only finds comps that HAVE placers;
+wiped-then-lost comps are invisible to it (motion:sign survived only in
+ledger prose). Standing placers: place-inn-comps.ts (all inn comps).
 
 - [ ] tex-5 TEXTILES — dye-trade tints (dyehouse awnings, laundry line, market bolts).
 - [ ] tex-6 METAL — forge/anvil/hardware. Low-key, roughness-led.

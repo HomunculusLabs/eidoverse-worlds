@@ -277,7 +277,7 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   OR pin-refresh alone if tex-2 is abandoned. Do not hand-edit the ledger.
 - STATUS: FIXED (tex-2 commits 34caeeb/854ae04/43abf78 pinned the timber libs; verify-repairs.ts ALL PASS; world==source 24/24 confirmed by audit-22)
 
-### R-110 [COLLISION/COMP] av-inn motion:sign comp lost across texture re-places — FIXED (refine-224)
+### R-110 [COLLISION/COMP] av-inn motion:sign comp lost across texture re-places — FIXED (refine-224, tex-4 wakeup 21)
 - Evidence: live av-inn comps are [particles:smoke, particles] — motion:sign
   GONE. It was present at audit-16's census (37 comp entities, av-inn had
   4 comps incl. motion:sign + sockets). tex-2 (10 re-places incl. inn) and
@@ -286,12 +286,14 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - Root decode: `grep -r "motion:sign" agents/arthur/assets/place-*.ts`
   returns NOTHING — no standing placer file re-applies the inn sign comp.
   This is the loop #98 precedent exactly: smoke/embers re-applied, the
-  sign comp's placer never existed in the chain.
-- Fix (refinement wakeup 17): ALL av-inn comps re-applied via the new
-  standing placer agents/arthur/assets/place-inn-comps.ts (sign pendulum
-  verbatim refine-193 data + embers + smoke + bench sockets; ember/smoke
-  origins recomputed from live pose via local-frame transform — (34,1,-3.45)
-  and (35.2,6.6,-2.4), exact matches to the historical capture). Live
-  verify: comp keys [particles:smoke, particles, motion:sign, sockets].
+  sign comp's placer never existed in the chain. (Texture lane's R-110 fix
+  place-inn-sign.ts reconstructed the comp from ledger refine-12 the same
+  minute; superseded by the all-comps placer below.)
+- Fix (refinement wakeup 17 + tex-4 wakeup 21, convergent): ALL av-inn
+  comps re-applied via the standing placer
+  agents/arthur/assets/place-inn-comps.ts (sign pendulum verbatim
+  refine-193 data + embers + smoke + bench sockets; ember/smoke origins
+  recomputed from live pose via local-frame transform). Live verify:
+  comp keys [particles:smoke, particles, motion:sign, sockets].
   The placer is standing: any future av-inn re-place re-runs this file.
-- STATUS: FIXED (refinement wakeup 17, 2026-08-17). Ad-hoc verified.
+- STATUS: FIXED (2026-08-17). Ad-hoc verified (verify-r110.ts PASS).
