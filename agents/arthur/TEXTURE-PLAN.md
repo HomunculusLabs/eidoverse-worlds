@@ -481,6 +481,14 @@ THE GRAIN CHAIN now reads in one material story: standing grain,
 sheaves on the timber cart with iron hubs, the mill's wooden bin,
 the flour in the wooden barrel.
 
+### [tex-40] TIMBER XVIII — the inn door (2026-08-17, wakeup 80) — DONE
+All 5 planks + 3 battens on village timber (byte-identical to
+wallSpan's); strap hinges + lifted latch + handle ring on forge iron
+(hardware is smithed). Decode 9/9; census 4/4 (inn-frame pose
+preserved; woodyard untouched). Ledger refine-271. Pin: tex-40
+inndoor. TIMBER: eighteen sites — the village's hospitality now has a
+material signature: the same wood, the same iron, the same hand.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
