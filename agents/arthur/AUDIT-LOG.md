@@ -385,3 +385,11 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Register: 0 OPEN.
 - 2026-08-17 ~12:3x — wakeup 85: cheap tick (no new commits since audit-84; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~12:4x — wakeup 86: cheap tick (no new commits since audit-85; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~12:5x — wakeup 87 (refine-242 noted)
+
+- New since audit-86: refine-242 (the potter's wheel turns — pwheel
+  anchor unifying flywheel+head+throwing pot as one body, steady
+  14deg/s spin; census 50 live / 0 dead).
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
