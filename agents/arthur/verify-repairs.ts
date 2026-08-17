@@ -93,7 +93,7 @@ ck("[tex-18] av-monument on textured build (0ec3fe2e3c050081, knot spin)", ents[
 ck("[tex-17] av-mapboard on timber build (965fe0f6a9f90103)", ents["av-mapboard"]?.lib === "store/965fe0f6a9f90103.glb");
 ck("[tex-16] av-chopblock on metal build (1f8b7d34bfe59272)", ents["av-chopblock"]?.lib === "store/1f8b7d34bfe59272.glb");
 ck("[tex-15] av-welcome on textured build (fa0c9d94a07b9ef5)", ents["av-welcome"]?.lib === "store/fa0c9d94a07b9ef5.glb");
-ck("[tex-14] av-watchpost on timber build (dd2374c90f6cf0e7, sentry comps)", ents["av-watchpost"]?.lib === "store/dd2374c90f6cf0e7.glb");
+ck("[tex-14] av-watchpost on timber build (e7f55348 → pin refreshed by tex-50, sentry comps)", ents["av-watchpost"]?.lib === "store/e7f5534850748fd3.glb");
 ck("[tex-13] av-shrine on textured build (0ef2c1e60c5b070d, 3 votive comps)", ents["av-shrine"]?.lib === "store/0ef2c1e60c5b070d.glb");
 ck("[tex-12] av-roads3 on ground build (20234503da4e1b55)", ents["av-roads3"]?.lib === "store/20234503da4e1b55.glb");
 ck("[tex-11] av-plaza-hearth on soil build (cd31cfa0d121feb1, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/cd31cfa0d121feb1.glb");
