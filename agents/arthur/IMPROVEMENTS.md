@@ -2281,4 +2281,6 @@ fixes ≈ 6 F.)
 
 - [refine-238] THE WAYSIDE LAMP BREATHES (refinement wakeup 42): the light-dressing arc finds its cheapest win yet — the wayside shelter's lantern head ALREADY survived merge as a 'lamp' node (KEEP from the old kit law), standing at the N gate glowing but frozen; no rebuild, no upload, a single comp verb: a gentle 0.007m bob at 1.3s — oil-flame breathing at a traveler's shelter, steadier than the shrine's votives (a working lamp, not a prayer); verified live (lib unchanged 2bc98b45, comp landed), census 46 live / 0 dead, 6/6 ad-hoc verified; THE KIT LAW'S DIVIDEND: anchors placed by earlier laws keep paying out (D+0, E+1)
 
-**Running total: 2367909 / 2000000**
+- [refine-239] THE SENTRY FIRE BREATHES (refinement wakeup 43): the light-dressing arc climbs the watchpost — the sentry platform's brazier coals glowed frozen above their ember particles since loop 57; rebuilt the coals as a fire_coals anchor group (fire already KEEP — the second no-kit-edit anchor this arc), re-placed same pose (15.6,-15.6) yaw -0.7854 with the prior embers particle comp re-applied VERBATIM (origin [15.14,3,-15.57], count 14 — world-frame origin preserved exactly), then the coal breath: a slow 0.01m bob at 2.2s — coals pulse slower and lower than flame, a settling fire; run+shrine regressions byte-identical; census 47 live / 0 dead; 8/8 ad-hoc verified (D+0, E+1)
+
+**Running total: 2367910 / 2000000**
