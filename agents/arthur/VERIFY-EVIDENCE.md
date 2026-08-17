@@ -1586,3 +1586,24 @@ PASS ledger law EXACT + HEAD gate green (polish-inclusive)
 ALL PASS
 ```
 T-dir tex-68 one-shot residue: 0 (none minted this run — persistent-verifier pattern)
+
+## tex-68 changed-paths evidence — 2026-08-17T22:31:35.248Z
+
+```
+PASS mkv3-watchpost.ts: rebuild deterministic + == live build (256e16a13027fb93) — 256e16a13027fb93
+PASS decode: timber + iron materials, 2 deduped images — timber,iron,glow2
+PASS timber ≡ house wallSpan's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS fire_coals GROUP anchor survives (fire comp target)
+PASS no duplicate NAMED node names — clean
+PASS texMat buckets carry TEXCOORD_0 == POSITION (horn/coals flat by design) — buckets 2
+PASS texture bytes < 400KB + GLB < 20MB — 20455B / 54.2KB
+PASS place-tex68-timber35.ts effect: watchpost live, pose (15.6,-15.6), fire comps recovered — store/256e16a13027fb93.glb
+PASS census anchors: plaza + kiln current, woodyard untouched (approval block honored)
+PASS verify-tex68.ts present (committed, does not self-delete)
+PASS verify-tex68.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-68 pin + refreshed tex-14 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
