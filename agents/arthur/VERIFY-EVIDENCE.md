@@ -878,3 +878,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-57 evidence one-shot — 2026-08-17T19:03:55.737Z
+
+```
+PASS mkv3-market.ts: rebuild deterministic + == live build (2bb51287d4e1a2a2) — 2bb51287d4e1a2a2
+PASS decode: timber material, 3 deduped images (timber + 2 standing weaves)
+PASS timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS mk_awn_0 + mk_awn_1 GROUP anchors survive (wind comp targets)
+PASS timber buckets carry TEXCOORD_0 == POSITION (loaves/jugs flat by design) — buckets 1
+PASS texture bytes < 400KB — 21077B
+PASS GLB < 20MB — 61.6KB
+PASS place-tex57-timber27.ts effect: market live, pose (-5.7,5.7), wind comps recovered — store/2bb51287d4e1a2a2.glb
+PASS census anchors: forge + cistern current, woodyard untouched
+PASS verify-tex57.ts present (committed, does not self-delete)
+PASS verify-tex57.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-57 pin + refreshed tex-8 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
