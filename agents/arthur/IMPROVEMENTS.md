@@ -2279,4 +2279,6 @@ fixes ≈ 6 F.)
 
 - [refine-237] THE VOTIVES FLICKER (refinement wakeups 39-40): the life-dressing arc reaches the sacred — the shrine's three votive flames glowed but never moved (merged statics since era-2, comp []); rebuilt each flame as a flame_vN anchor group — the flame prefix was ALREADY in KEEP, so no mergekit edit this time (the kit law proving itself in reverse); re-placed same pose (-23.7,-3.8) yaw 1.4118, candlelight applied: three tiny out-of-phase bobs (amp 0.006-0.009, periods 0.62/0.81/0.7s) — the uneven breathing of real candlelight, no metronome; the stones and altar rightly stay still; run+plaza+carousel regressions byte-identical; census 45 live / 0 dead; 8/8 ad-hoc verified (D+0, E+1)
 
-**Running total: 2367908 / 2000000**
+- [refine-238] THE WAYSIDE LAMP BREATHES (refinement wakeup 42): the light-dressing arc finds its cheapest win yet — the wayside shelter's lantern head ALREADY survived merge as a 'lamp' node (KEEP from the old kit law), standing at the N gate glowing but frozen; no rebuild, no upload, a single comp verb: a gentle 0.007m bob at 1.3s — oil-flame breathing at a traveler's shelter, steadier than the shrine's votives (a working lamp, not a prayer); verified live (lib unchanged 2bc98b45, comp landed), census 46 live / 0 dead, 6/6 ad-hoc verified; THE KIT LAW'S DIVIDEND: anchors placed by earlier laws keep paying out (D+0, E+1)
+
+**Running total: 2367909 / 2000000**
