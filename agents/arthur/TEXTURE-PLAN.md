@@ -604,6 +604,23 @@ seventeenth — THE CLOTH CHAIN now reads end to end: flax in the
 field, retting behind stone, spinning at timber, dyeing in timber
 vats banded with iron, drying on the wind.
 
+### [tex-52] THREE FAMILIES IV — the well + hearth ring (2026-08-17, wakeup 92) — DONE
+THE WELL (the plan's named follow-up since tex-4) + hearth ring:
+well drum + stone trough + 8 hearth stones + 4 caps + storyteller's
+seat on village ashlar (≡ kiln's — placed stones come home to the
+hearth); well posts + crossbar + axle + crank handle + tripod legs +
+well bucket on village timber (≡ wallSpan's); kettle + chain + spout
++ lid + crank arm on forge iron (≡ forge's). Log seats + firewood
+flat (barked logs, not sawn boards), rope flat, water flat, fire
+emissive flat. All three anchors (fire, pz_kettle, well_) survive;
+ALL FOUR comps recovered — embers rise, well bucket sways, kettle
+simmers. PIN-REFRESH: tex-11 plaza pin advanced to `4e58865a35f82ab9`
+(tex-52b). Decode 11/11; census 5/5 (woodyard untouched). Ledger
+refine-284. Pin: tex-52 plaza. ASHLAR: sixteenth. TIMBER:
+twenty-third. IRON: eighteenth. THE PLAN'S NAMED FOLLOW-UPS ARE
+DONE (well closed; chimney caps were the only other, already
+absorbed by the CELL MODE LAW sites).
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
