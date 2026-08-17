@@ -472,6 +472,15 @@ comp recovered; woodyard untouched). Ledger refine-269. Pin: tex-38
 bellbase. The bell tower now reads in one material story from bedrock
 plinth to belfry to the bench where the village waits.
 
+### [tex-39] TIMBER XVII — the mill yard (2026-08-17, wakeup 79) — DONE
+Grain bin (4 legs + box + lid) + flour barrel on village timber
+(byte-identical to wallSpan's). Sacks, grain heap, flour flat
+(milled goods are goods, not construction). Decode 8/8; census 4/4
+(woodyard untouched). Ledger refine-270. Pin: tex-39 millyard.
+THE GRAIN CHAIN now reads in one material story: standing grain,
+sheaves on the timber cart with iron hubs, the mill's wooden bin,
+the flour in the wooden barrel.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
