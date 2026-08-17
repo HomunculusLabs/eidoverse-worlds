@@ -177,3 +177,14 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Register: 0 OPEN. First full find→fix→verify lifecycle for R-110
   complete (registered audit-25, fixed refine-224, confirmed here).
 - 2026-08-17 ~05:1x — wakeup 33: cheap tick (no new commits since audit-32; register 0 OPEN, R-110 lifecycle complete).
+
+## 2026-08-17 ~05:2x — wakeup 34 (register consolidation + refine-225 spot-check)
+
+- New since audit-33: 99ba3fb (R-110 consolidation — ledger-reconstructed
+  comp + comp-law lesson recorded in plan) and refine-225 (KEEP class
+  audit that probe-caught a latent monument motion kill; knot$ anchor
+  class-closed, 4/4 re-verified).
+- verify-repairs.ts: ALL PASS.
+- Spot-check of refine-225's claim: av-monument motion:knot ALIVE live —
+  the class-closure holds.
+- Register: 0 OPEN.
