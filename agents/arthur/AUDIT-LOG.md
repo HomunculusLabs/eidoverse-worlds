@@ -297,3 +297,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   lane's commit closes both.
 - Register: 0 OPEN.
 - 2026-08-17 ~09:0x — wakeup 56: cheap tick (no new commits since audit-55; verify ALL PASS clean; 0 OPEN).
+- 2026-08-17 ~09:1x — wakeup 57: cheap tick (no new commits since audit-56; verify ALL PASS; 0 OPEN).
