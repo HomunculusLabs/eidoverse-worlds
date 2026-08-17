@@ -48,28 +48,28 @@ wakeups. This lane is the standing fix for that blindness.
 ## Worklist (one subject per wakeup; prepend new subjects as they surface)
 
 - [ ] **Carousel roof lift** (REGISTER OPEN, audit-101) — SOURCE-SIDE DONE
-      (polish-1): canopy assembly +0.45 (hub 5.15, cone base 4.81/apex 5.99,
-      edge 4.83, finial 6.08; mast lengthened, drop-poles/ribs/flags follow).
-      Decode 29/29 ALL PASS: rider head clears 0.63m @r=2.0 (target ≥0.4),
-      ears 1.66m @r=2.1 (≥1.5), bob-peak both green; horses/sockets/comps
-      untouched; build byte-deterministic `e0227166a8a7fe6b`. ROLLOUT
-      PENDING: live /geom read + verbs approval-blocked TWO consecutive
-      ticks (polish-1, polish-2) — next wakeup runs
-      `bun agents/arthur/assets/placecarousel.ts`, now REWRITTEN
-      contract-safe (polish-2): captures the live comp/socket bag from
-      /geom at execution time instead of baking stale values (the old
-      placer's socket y=2.47 predated candidate-6's saddle-plane 1.97 —
-      it would have seated riders 0.5m high); re-applies the captured bag,
-      verifies lib+comps+pose post-place. Unit-tested offline 19/19
-      (verify-polish2.ts). Then visual gate + register close.
-      Gate note: tex-27 pin FAIL during polish-2 was the texture lane's
-      own tex-63 in-flight window — self-resolved at their `1b6c72f`
-      (transient, not a finding; audit-20/49 class).
+      (polish-1) + paint widening joined (polish-3): staged build
+      `7a2faa19dfde62cb` now carries BOTH fixes — canopy +0.45 (hub 5.15,
+      base 4.81/apex 5.99, rider 0.63m/ears 1.66m clear, decode 29/29)
+      AND widened paint families (blue 0.31/gold 0.58/bone 0.80 lums,
+      gaps ≥0.22, verify-polish3 10/10). Live vision read found the 4
+      horses "uniform gray" at 18m AND 10m under fog (register: HORSE
+      PAINT VARIATION UNREADABLE) — silhouette itself PASSES. ROLLOUT
+      PENDING: live /geom + verbs approval-blocked THREE consecutive ticks
+      (polish-1/2/3) — next wakeup with consent runs
+      `bun agents/arthur/assets/placecarousel.ts` (captures live bag,
+      rebuilds+uploads `7a2faa19dfde62cb`, re-applies comps, verifies),
+      then visual gate + register close for BOTH items.
 - [ ] Carousel stair landing transition (declared-open in rework plan).
 - [ ] Carousel night contrast: warm lights vs canopy shadow — spectate at
       night cycle, consider lantern emissives under canopy edge.
 - [ ] Horse silhouette at spectator distance (≥15m): read as carved
       figures, not supports. Compare 4 horses.
+      — polish-3 PASS on silhouette (carved read, legs readable, none
+      malformed); FAIL spun off to register (paint variation unreadable,
+      fix staged). Gate lesson: `walk` positions the BODY, not the camera
+      heading — capture frames from positions where the subject sits
+      front-of-view regardless of heading.
 - [ ] av-run / av-pondlife / av-garden-fence mesh quality (Bill's standing
       priority list).
 - [ ] Interiors visible through doorways — furnished read at threshold.

@@ -298,7 +298,29 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   The placer is standing: any future av-inn re-place re-runs this file.
 - STATUS: FIXED (2026-08-17). Ad-hoc verified (verify-r110.ts PASS).
 
-### [OPEN] CAROUSEL ROOF TOO LOW — rider-head clearance ~0.08m at horse radius (audit-101, 2026-08-17)
+### [OPEN] HORSE PAINT VARIATION UNREADABLE AT SPECTATOR DISTANCE (polish-3, 2026-08-17)
+
+- Evidence: live vision reads at ~18m AND ~10m both report the 4 carousel
+  horses "uniform gray/dark brown", blankets invisible, horses "small and
+  indistinct" (frames /tmp/polish3-spectate.png, /tmp/polish3-close.png).
+- Source decode (RGB avg of paint tiles): gold (180,121,63) lum 0.51,
+  bone (188,176,153) lum 0.70, blue (71,86,92) lum 0.33 — distinct at
+  source, converging under distance+fog in live view. Rework-plan Phase-2
+  gate: "variation must be readable without becoming a rainbow" — FAILS
+  readability at gameplay distance.
+- Caveat: second frame had camera heading off-subject (walk positions the
+  body, not the view direction — gate lesson recorded in polish plan);
+  magnitude of the defect is fog-dependent. Silhouette itself PASSES
+  (horses read as carved figures, legs readable, none malformed).
+- Fix direction (polish-3, source-side): widen pairwise paint luminance —
+  gold lifted ~0.51→~0.58 warm amber, bone ~0.70→~0.74 cream, blue
+  deepened to saturated slate ~0.34; blankets untouched (close-range
+  detail). Ships with the staged audit-101 roof-lift rollout (one rollout,
+  both fixes); live distance re-read closes this item after rollout.
+- STATUS: OPEN — source fix staged, live confirmation pending network
+  consent.
+
+### [OPEN] CAROUSEL ROOF TOO LOW — rider-head clearance ~0.08m at horse radius (audit-101, 2026-08-17; source fix staged polish-1)
 
 - Entity: av-carousel, pose (-18.8, 0, 25.9), live lib store/937fd0b6a9c07b5b.glb (== local source, byte-identical).
 - Source decode (parent-chain world Y): deck top ≈1.1; horse head top 3.49; saddle 3.02 (rider seat); canopy edge 4.38; peak 5.54.
