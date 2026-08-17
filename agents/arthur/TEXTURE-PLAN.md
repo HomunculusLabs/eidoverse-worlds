@@ -116,6 +116,20 @@ wiped-then-lost comps are invisible to it (motion:sign survived only in
 ledger prose). Standing placers: place-inn-comps.ts (all inn comps).
 
 - [ ] tex-5 TEXTILES — dye-trade tints (dyehouse awnings, laundry line, market bolts).
+### [tex-5] TEXTILES — the laundry line (2026-08-17, wakeup 22) — DONE
+texMat gained `stripe` mode (24px horizontal bands — warp/weft; picks come
+from the band row). mkv3-dyelaundry94: 4 weave materials (bone, flax-blue,
+brass, brown), close-tone pairs 2:1 anchored on old flats. Decode 9/10 (the
+FAIL = probe misexpectation: 2 tones over 10 bands IS the design). Only
+2762B texture bytes. Rollout applied the COMP LAW (live keys captured
+before re-place — none found); census 4/4, inn sign + stone untouched.
+Ledger refine-226. Commit b4b2823. Pin: tex-5 weave build.
+STRIPE MODE LAW: bands run along texture-Y; box faces map world-Y to V, so
+garments hang with warp vertical as built. Future cloth sites (market
+awnings, dyehouse strips) should use stripe weaves with their own tints.
+Remaining dye-trade sites (market awnings/bolts, dyehouse strips) are
+follow-up candidates — same pattern, different GLBs.
+
 - [ ] tex-6 METAL — forge/anvil/hardware. Low-key, roughness-led.
 - [ ] tex-7 SOIL — paths, garden beds.
 
