@@ -457,3 +457,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   mtime-fresh <60s); no uncommitted lane work touched.
 - Probe blindness caught: census shape uses `comp` key, not `components`.
 - Register: 0 OPEN.
+- 2026-08-17 ~07:2x — wakeup 98: cheap tick; no new commits; verify ALL PASS; 0 OPEN.
