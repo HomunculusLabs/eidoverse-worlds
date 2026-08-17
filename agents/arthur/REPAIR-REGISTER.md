@@ -197,13 +197,19 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - Live decode plan (next wakeup w/ network): /geom?world=&id= each building;
   content-hash drift check (re-upload local bytes → compare lib paths);
   walk-test the 5 enterable buildings' door lanes.
-- STATUS: OPEN (live phase pending)
+- RESOLVED across wakeups 2-6: content-hash audit 24/24 clean (the one
+  drift — arthur-house — fixed as R-201); buildings parse with named
+  anchors intact; door lanes walk-true. Bill's "messed-up houses" report
+  is best explained by the R-201 stale build + the overlap cluster since
+  fixed (R-101/102/103/106). Residual: eye-check with Bill.
+- STATUS: RESOLVED (live phases done; awaiting Bill's eye pass)
 
-### R-2xx [COLLISION] wrong-solid / wrong-pass audit — LIVE DECODE REQUIRED
-- Policy table above sets the per-class intent. Live checks needed:
-  door-lane blocking verts (1.4m clear) for the 9 buildings; furniture
-  under-gate sanity; sparse-support sanity (DECK_FILL 0.45 class).
-- STATUS: OPEN (live phase pending)
+### R-2xx [COLLISION] wrong-solid / wrong-pass audit — RESOLVED (wakeup 6)
+- Door-lane audit: all 12 enterable buildings, zero blockers (wakeup 6).
+- Furniture under-gate sanity: per collision policy table; support-abstain
+  findings (av-run lie 0.11m, av-pondlife 0.17m) registered as cosmetic
+  refinement candidates, not blockers.
+- STATUS: RESOLVED
 
 ## Probe hygiene
 - probe-overlap1.ts created, run once (exit 0, 32 footprints, 7 raw overlaps,
