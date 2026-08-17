@@ -399,6 +399,17 @@ THE INN PORCH reads as a still-life of the village's whole material
 language — wood, iron, and ceramic standing together where the
 morning begins.
 
+### [tex-32] TIMBER XII — the gift shelf (2026-08-17, wakeup 72) — DONE
+Twin posts + both shelves on village timber (byte-identical to
+wallSpan's). EVERY FOUND THING flat — shell/stone/flower/quartz/cloth
+are gifts, not construction (material truth at its gentlest). Two
+probe misexpectations corrected at source (gifts were never named
+nodes; original had ZERO materials — flat vertex statics; tex-32 has
+exactly ONE, the timber, all 6 gift meshes intact). Decode 8/8 real;
+census 4/4 (woodyard untouched). Ledger refine-263. Pin: tex-32
+giftshelf. The giving shelf stands in the village's own wood, holding
+things that belong to no one and everyone.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
