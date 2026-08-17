@@ -458,3 +458,19 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Probe blindness caught: census shape uses `comp` key, not `components`.
 - Register: 0 OPEN.
 - 2026-08-17 ~07:2x — wakeup 98: cheap tick; no new commits; verify ALL PASS; 0 OPEN.
+
+## 2026-08-17 ~07:3x — wakeup 99 (depth-5 keeper daemon; tex-14 noted)
+
+- New since audit-98: tex-14 — watchpost scaffold on village timber
+  (byte-identical wallSpan tile); census 6/6, pin added; sentry comps
+  recovered; plan closed with HEAD-gate law note (timber family spans
+  walls + scaffold).
+- verify-repairs.ts: ALL PASS (includes tex-14 pin + comp placers).
+- Depth-5: launchctl shows dev.arthur.eidoverse-resident PID 631,
+  status 0. resident.log live and current — keeper walked to the
+  reworked carousel and is seated at bench_5 (rideability cross-check
+  of the carousel rework). resident.err mtime 05:08 (stale), tail shows
+  only informational mason abstains, no errors.
+- Live per-entity curl for watchpost comp confirm was approval-blocked
+  this tick; covered by verify gate pin instead. No register entry.
+- Register: 0 OPEN.
