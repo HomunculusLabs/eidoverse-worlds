@@ -95,7 +95,7 @@ ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(
     ck("[honest-top] av-run fixed lib @ (-28,18.6)", !!R && R.lib === "store/35871bfcfee51392.glb"
         && Math.abs(R.pos[0] + 28) < 0.01 && Math.abs(R.pos[2] - 18.6) < 0.01
         && Math.abs(R.yaw) < 0.005 && Object.keys(R.comp ?? {}).length === 0);
-    ck("[honest-top] av-garden-fence fixed lib", !!F && F.lib === "store/82d9288df665a63d.glb"
+    ck("[honest-top] av-garden-fence fixed lib", !!F && F.lib === "store/c06c6d147b9141d8.glb"
         && Math.abs(F.pos[0] + 28.7) < 0.01 && Math.abs(F.pos[2] - 11.6) < 0.01
         && Math.abs(F.yaw - 1.9549) < 0.005 && Object.keys(F.comp ?? {}).length === 0);
 }
