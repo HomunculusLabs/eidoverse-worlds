@@ -36,12 +36,13 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
     && ents["av-bunkhouse"]?.lib === "store/b82a410467f22cdd.glb"
     && ents["av-hall"]?.lib === "store/9e2d43ac32729cec.glb"
     && ents["av-court"]?.lib === "store/2f2cacf9664e69e3.glb"
-    && ents["av-inn"]?.lib === "store/45e51e8ecd7dc57e.glb"
+    && ents["av-inn"]?.lib === "store/33e8a1748ab4b8cf.glb"
     && ents["av-windmill"]?.lib === "store/7fc779a5c7dd5dc5.glb"
     && ents["av-stable"]?.lib === "store/89dc80d7bb8fc395.glb");
 ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-74] av-inn on interior-timber build (33e8a1748ab4b8cf, 4 comps)", ents["av-inn"]?.lib === "store/33e8a1748ab4b8cf.glb");
 ck("[tex-73] av-chopblock on handle-timber build (ab5031c118d925c0)", ents["av-chopblock"]?.lib === "store/ab5031c118d925c0.glb");
 ck("[tex-72] av-windmill on 2-family build (7fc779a5c7dd5dc5, sails comp)", ents["av-windmill"]?.lib === "store/7fc779a5c7dd5dc5.glb");
 ck("[tex-71] av-charcoal on stake-timber build (dcb3bb63442a764c, smoke comp)", ents["av-charcoal"]?.lib === "store/dcb3bb63442a764c.glb");
