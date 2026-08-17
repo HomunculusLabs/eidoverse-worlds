@@ -2083,3 +2083,17 @@ PASS verify-repairs.ts 0 / ALL PASS (ledger law EXACT + HEAD gate) — code=0
 ALL PASS
 
 ```
+
+## tex-75 close-out evidence — 2026-08-17T23:39:24.642Z
+
+```
+PASS tex-final-survey.py re-runs clean (exit 0) — code=0
+PASS reproduces 93 law-classified flats / 51 makers / 12 buckets / 221 ring-cluster inventory
+PASS survey script + plan + ledger all committed (clean in git)
+PASS all three listed one-shots consumed (-final, -survey, -survey2 absent)
+PASS evidence log carries the committed tex-75 records (8a98abe / 05a805f content)
+PASS verify-repairs.ts 0 / ALL PASS (ledger EXACT + HEAD gate) — code=0
+
+ALL PASS
+
+```
