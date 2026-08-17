@@ -1632,3 +1632,28 @@ ALL PASS
 ALL PASS
 ```
 T-dir residue check: hermes-verify-tex68* remaining = 0 (prior one-shot consumed after its single 13/13 pass, output committed at 4b714a1)
+
+## tex-69 durable evidence (persistent verifier run directly) — 2026-08-17T22:43:06Z
+
+```
+PASS pre-state: carousel on disk is the polish staged build (38fbbc26) — 38fbbc26dcdfcc1a
+PASS belltower rebuild deterministic + == live build (82e4c316b62e5006) — 82e4c316b62e5006
+PASS decode: stone + timber materials — stone,timber,glow2
+PASS 2 deduped images — images 2
+PASS stone ≡ kiln's + timber ≡ house wallSpan's (byte-family, buffer-compared)
+PASS bell GROUP anchor survives (motion comp target)
+PASS no duplicate NAMED node names — clean
+PASS texMat buckets carry TEXCOORD_0 == POSITION (bell brass/rope/lamp flat by design) — buckets 2
+PASS texture bytes < 400KB — 21183B
+PASS GLB < 20MB — 76.1KB
+PASS place-tex69-timber36.ts effect: belltower live, pose (5.7,5.7), motion+reactions recovered — store/82e4c316b62e5006.glb
+PASS carousel-safety law: live carousel untouched by tex-69 (polish lane's 38fbbc26 staged build) — store/cd22d0b09e70bebc.glb
+PASS census anchors: watchpost + plaza current, woodyard untouched
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-20 pin) — code=0
+PASS tex-69 pin green
+PASS tex-20 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green (polish-inclusive)
+
+ALL PASS
+```
+carousel disk artifact re-restored: 38fbbc26dcdfcc1a (polish staged build, byte-identical)
