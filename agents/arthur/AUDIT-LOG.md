@@ -324,3 +324,12 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   entry needed).
 - Register: 0 OPEN.
 - 2026-08-17 ~10:1x — wakeup 71: cheap tick (no new commits since audit-60..70 consolidation; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~10:3x — wakeups 72-73 consolidated (refine-237 noted)
+
+- Wakeup 72: verify showed transient 1 FAIL (lane churning; not
+  processed before wakeup 73 stacked).
+- New since audit-71: refine-237 (the votives flicker — shrine flame_v
+  anchors + out-of-phase candlelight; census 45 live / 0 dead).
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
