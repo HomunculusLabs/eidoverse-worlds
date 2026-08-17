@@ -196,3 +196,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   the laundry line, census 4/4, plan closed with dye-trade sites noted).
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
+- 2026-08-17 ~05:4x — wakeup 36: cheap tick (only refine-227 ledger-race repair since audit-35; law re-verified EXACT inline; verify ALL PASS; 0 OPEN).
