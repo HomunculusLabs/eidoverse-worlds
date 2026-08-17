@@ -670,6 +670,17 @@ fire comps recovered — the fire still breathes. Ledger refine-288.
 Pin: tex-56 forge. TIMBER: twenty-seventh site — the smith works at
 wood, iron, and stone, all the village's own.
 
+### [tex-57] TIMBER XXVIII — the market woodwork (2026-08-17, wakeup 97) — DONE
+Both counter tops + 8 splayed trestle legs + 4 awning poles + baker's
+3 baskets on village timber (≡ wallSpan's; wicker reads as wood at
+distance). Loaves stay bone, jugs stay clay (goods). Both awning
+GROUP anchors survive; both wind comps recovered — the awnings still
+sway. PIN-REFRESH: tex-8 market pin advanced to `2bb51287d4e1a2a2`
+(same commit). Persistent verifier `verify-tex57.ts` committed
+(15/15 ALL PASS). Ledger refine-289. Pin: tex-57 market. TIMBER:
+twenty-eighth site — the market reads as built and dressed, wood
+under cloth.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
