@@ -264,3 +264,12 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   the out-of-phase swaying these drive). All 6 cloth comps live on
   av-dyelaundry — claim holds. Same prose-vs-key pattern as audit-40's
   "water-bob".
+
+## 2026-08-17 ~08:1x — wakeup 51 (tex-8 noted)
+
+- New since audit-50: tex-8 (dye-trade cloth chain complete — market +
+  dyehouse weaves; census 8/8, pin added; live-evolution law recorded).
+  The texture lane continues past the original seven into follow-up
+  sites, as its plan flagged.
+- verify-repairs.ts: ALL PASS (tex-8 pin green).
+- Register: 0 OPEN.
