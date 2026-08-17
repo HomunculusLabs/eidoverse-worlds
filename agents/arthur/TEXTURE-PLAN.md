@@ -693,6 +693,18 @@ commit). Persistent verifier `verify-tex58.ts` committed (14/14 ALL
 PASS). Ledger refine-290. Pin: tex-58 shrine. STONE: fourteenth site
 — the shrine reads as one carved gesture, base to flame.
 
+### [tex-59] STONE XV — the Founder's Knot completes (2026-08-17, wakeup 99) — DONE
+Dedication band ring + both offering-bowl stubs on village ashlar
+(≡ kiln's — a carved ring is the plinth's stone; stubs are little
+pedestals, the pond-lip law at miniature scale). Brass bowls/knot/beads
+stay flat (monument-bowl precedent), plaque stays bone-dark, lamp stays
+emissive. Knot GROUP anchor survives; spin comp recovered — the founder
+still turns. PIN-REFRESH: tex-18 monument pin advanced to
+`9520e61fc8e9d887` (same commit). Persistent verifier `verify-tex59.ts`
+committed (14/14 ALL PASS). Ledger refine-291. Pin: tex-59 monument.
+STONE: fifteenth site — brass aloft, stone below, all the village's
+own.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
