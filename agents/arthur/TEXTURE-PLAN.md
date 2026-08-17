@@ -329,6 +329,16 @@ wears the same tile); both crowbars on forge iron. Lamp/wood/shadow
 flat. Decode 8/8; census 6/6 (woodyard untouched). Ledger refine-255.
 Pin: tex-24 quarry. ASHLAR: nine sites, from bedrock to belfry.
 
+### [tex-25] TIMBER VIII — the charcoal clamp (2026-08-17, wakeup 65) — DONE
+Log dome on village timber (byte-identical to wallSpan's — fuel-wood
+is still the village's wood); collier's shovel on forge iron. Turf/
+vent/smoke/char pile flat (earth, char, ephemera). Wisps are MERGED
+STATICS by design (probe misexpectation decoded: the smoke is the
+particles:smoke comp, recovered live). Decode 8/9 real; census 6/6
+(woodyard untouched). Ledger refine-256. Pin: tex-25 charcoal.
+FUEL CHAIN READS END TO END: woodyard logs → clamp char → forge
+coals — one wood, one iron, source to fire.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
