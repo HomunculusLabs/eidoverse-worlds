@@ -42,6 +42,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
 ck("[tex-5] av-dyelaundry on weave build (d55427b88073320c, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/d55427b88073320c.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-57] av-market on woodwork build (2bb51287d4e1a2a2, wind comps)", ents["av-market"]?.lib === "store/2bb51287d4e1a2a2.glb");
 ck("[tex-56] av-forge on woodwork build (6715b0f885deaed7, fire comps)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
 ck("[tex-55] av-bcistern on 3-family build (a96ee31d29c2085f)", ents["av-bcistern"]?.lib === "store/a96ee31d29c2085f.glb");
 ck("[tex-54] av-hutch on leg-timber build (6263e8a20eb17cc9, rabbit comps)", ents["av-hutch"]?.lib === "store/6263e8a20eb17cc9.glb");
@@ -105,8 +106,8 @@ ck("[tex-12] av-roads3 on ground build (20234503da4e1b55)", ents["av-roads3"]?.l
 ck("[tex-11] av-plaza-hearth on soil build (4e58865a → pin refreshed by tex-52, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/4e58865a35f82ab9.glb");
 ck("[tex-10] av-bcistern on ashlar build (a96ee31d → pin refreshed by tex-55)", ents["av-bcistern"]?.lib === "store/a96ee31d29c2085f.glb");
 ck("[tex-9] av-kiln on ashlar build (8ad12f3984210c4c, +fire anchor r45)", ents["av-kiln"]?.lib === "store/8ad12f3984210c4c.glb");
-ck("[tex-8] av-market + av-dyehouse on weave builds (dyehouse pin refreshed by tex-51)",
-    ents["av-market"]?.lib === "store/ee64ba1860979060.glb"
+ck("[tex-8] av-market + av-dyehouse on weave builds (market pin refreshed by tex-57; dyehouse by tex-51)",
+    ents["av-market"]?.lib === "store/2bb51287d4e1a2a2.glb"
     && ents["av-dyehouse"]?.lib === "store/29b4efc54101106d.glb");
 ck("[R-106] dyehouse at (-21,-21.6) yaw .941", !!D && Math.abs(D.pos[0] + 21) < 0.01 && Math.abs(D.pos[2] + 21.6) < 0.01 && Math.abs(D.yaw - 0.941) < 0.005);
 ck("[R-106] dyehouse clears row+carousel", !!D && sep(rect(D, 1.64, 1.10), rect(R, 2.95, 2.67)) > 0 && sep(rect(D, 1.64, 1.10), rect(ents["av-carousel"], 4.35, 4.1)) > 0);
