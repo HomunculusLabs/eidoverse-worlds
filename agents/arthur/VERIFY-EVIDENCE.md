@@ -1477,3 +1477,23 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-67 changed-paths evidence — 2026-08-17T22:22:13.763Z
+
+```
+PASS mkv3-plaza.ts: rebuild deterministic + == live build (933ab1f96fe1e734) — 933ab1f96fe1e734
+PASS decode: stone + timber + iron (bowl) + 6 soil pavers, 9 deduped images — iron,stone,soil-0,soil-1,soil-2,soil-3,soil-4,soil-5,timber,glow9
+PASS stone ≡ kiln's + timber ≡ house's + iron ≡ forge family's (byte-family, buffer-compared)
+PASS pz_kettle GROUP anchor survives (kettle comp target)
+PASS texMat buckets carry TEXCOORD_0 == POSITION (logs/grain/rope/ladle/water flat by design) — buckets 6
+PASS texture bytes < 400KB + GLB < 20MB — 140020B / 239.3KB
+PASS place-tex67-iron23.ts effect: plaza live, pose (0,0), all 4 comps recovered — store/933ab1f96fe1e734.glb
+PASS census anchors: kiln + potter current, woodyard untouched (approval block honored)
+PASS verify-tex67.ts present (committed, does not self-delete)
+FAIL verify-tex67.ts runs 0 / ALL PASS — code=1
+FAIL verify-repairs.ts 0 / ALL PASS (tex-67 pin + refreshed tex-52 pin + ledger + HEAD) — code=1
+PASS git tree clean for this lane's paths
+
+2 FAIL
+
+```
