@@ -750,6 +750,21 @@ milestone-n/s (one assertion, two libs). STONE: seventeenth pair; IRON:
 twenty-first — the last stretch of road out reads as the village's own
 work, stone to light.
 
+### [tex-64] TIMBER XXXII + IRON XXII — the waystone bench + lamp (2026-08-17, resumed wakeup 3) — DONE
+Bench plank + both feet on village timber (≡ wallSpan's — the
+shrine/wayside bench law, an hour's walk out); lamp post on forge iron
+(≡ forge family — the milestone lantern-arm law). The FLOATING stone
+stays flat 0x8a7a5a (STRANGER'S-STONE law — now verified as a
+material-less prim, no tile); offering stays flat; lamp core stays
+emissive. ws_float + ws_float_spin GROUP anchors survive; all three
+comps recovered (float, spin, fireflies). PIN-REFRESH: tex-28 waystone
+pin advanced to `5fcaa644f4ba290b` (same commit). Persistent verifier
+`verify-tex64.ts` committed (16/16 ALL PASS; first run's stranger-stone
+check was a misexpectation — flat prims carry no baseColorFactor,
+re-asserted as material-less). Ledger refine-296. Pin: tex-64 waystone.
+TIMBER: thirty-second site; IRON: twenty-second — even the wonder's
+rest stop reads as the village's own work.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
