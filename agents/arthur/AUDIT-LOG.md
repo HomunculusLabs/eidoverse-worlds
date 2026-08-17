@@ -394,3 +394,12 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - verify-repairs.ts: ALL PASS.
 - Register: 0 OPEN.
 - 2026-08-17 ~13:0x — wakeup 88: cheap tick (no new commits since audit-87; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~13:1x — wakeup 89 (tex-12 noted; texture plan fully closed)
+
+- New since audit-88: tex-12 (radial bones on ground families — soil
+  pavers + ashlar curbs, byte-proven across 4 GLBs; census 6/6, pin
+  added; TEXCOORD_0 law scoped to texMat buckets). Plan closed with
+  probe-law note: EVERY WALKED SURFACE IS NOW TEXTURED.
+- verify-repairs.ts: ALL PASS.
+- Register: 0 OPEN.
