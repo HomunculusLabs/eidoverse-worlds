@@ -267,6 +267,16 @@ rollout comp-law (no comps). Ledger refine-248. Pin: tex-17 mapboard.
 *** TIMBER FAMILY COMPLETE: 10 buildings' walls + sentry scaffold +
 the greeting + the map — one wood. ***
 
+### [tex-18] STONE V — the Founder's Knot (2026-08-17, wakeups 56–57) — DONE
+All 3 plinth tiers on village ashlar; 4 approach pavers on the soil
+family (both byte-identical to standing GLBs). Knot, beads, bowls,
+plaque, lamp stay flat (brass/bone/emissive — material truth). knot
+GROUP anchor survives (spin comp target). Decode 9/9; rollout
+comp-law: motion:knot captured + re-applied; census 6/6 (woodyard
+untouched, approval block honored). Ledger refine-249. Pin: tex-18
+monument (knot spin).
+ASHLAR: plinths + forge + kiln + cistern + shrine + founder's pedestal.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
