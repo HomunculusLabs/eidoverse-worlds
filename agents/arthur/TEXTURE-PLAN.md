@@ -777,6 +777,21 @@ committed (15/15 ALL PASS). Ledger refine-297. Pin: tex-65 potter.
 TIMBER: thirty-third site — the craft corners stand on the village's
 own wood, wheel to rack.
 
+### [tex-66] STONE XVIII + TIMBER XXXIV — the kiln completes (2026-08-17, resumed wakeup 5) — DONE
+Charging ring on village ashlar (≡ quarry's, family params unchanged
+— the band/cap chain tex-58→63: a masonry ring on a stone drum is laid
+stone); shovel handle on timber (≡ wallSpan's — the tool-handle chain:
+pitchfork tex-37, hammer tex-56, now the lime-worker's shovel). Pale
+limestone cobbles stay flat (raw charge ≠ construction, the grain
+law); putty stays white; mouth stays dark; fire keeps its emissive
+burn. fire_kiln GROUP anchor survives; smoke + fire comps recovered —
+the lime burn still never stops. PIN-REFRESH: tex-9 kiln pin advanced
+to `0bdc0d18dddacf9b` (same commit). Persistent verifier
+`verify-tex66.ts` committed (16/16 ALL PASS). Ledger refine-298. Pin:
+tex-66 kiln. STONE: eighteenth site; TIMBER: thirty-fourth — where
+mortar is born reads as the village's own work, drum to ring to
+shovel.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
