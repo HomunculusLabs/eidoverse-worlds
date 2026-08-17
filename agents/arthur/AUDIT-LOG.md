@@ -273,3 +273,4 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   sites, as its plan flagged.
 - verify-repairs.ts: ALL PASS (tex-8 pin green).
 - Register: 0 OPEN.
+- 2026-08-17 ~08:2x — wakeup 52: cheap tick (no new commits since audit-51; verify ALL PASS; 0 OPEN).
