@@ -275,3 +275,12 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
 - Register: 0 OPEN.
 - 2026-08-17 ~08:2x — wakeup 52: cheap tick (no new commits since audit-51; verify ALL PASS; 0 OPEN).
 - 2026-08-17 ~08:3x — wakeup 53: cheap tick (no new commits since audit-52; verify ALL PASS; 0 OPEN).
+
+## 2026-08-17 ~08:4x — wakeup 54 (transient tex-8 blip, no finding)
+
+- verify-repairs.ts: first run 1 FAIL ([tex-8] market+dyehouse weave pins),
+  immediate re-run ALL PASS with no code change — the texture lane is
+  actively rebuilding/re-placing right now (kiln3 + dyelaundry3 GLBs
+  mtime-fresh, working tree churning). Same in-flight class as audit-49;
+  transient, not a defect.
+- Register: 0 OPEN.
