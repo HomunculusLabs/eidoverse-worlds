@@ -202,6 +202,20 @@ count — a stride sharing factors with the count silently collapses
 diversity; decode the distinct-tile count before rollout.
 GROUND FAMILY COMPLETE: door paths + gathering ring, one earth.
 
+### [tex-12] GROUND COMPLETE — radial bones (2026-08-17, wakeup 46) — DONE
+Plaza ring + ring road + 4 spokes on the 6-variant soil family (position-
+hash pick); curbs + gate thresholds on village ashlar (cell law — laid
+stone). Byte-family proven across FOUR GLBs (roads soil-0 == paths',
+roads stone == kiln's). Decode 8/8 after a probe-law correction:
+TEXCOORD_0 == POSITION binds only texMat buckets — flat trim buckets
+(milestone caps, gate lettering) are legitimately untextured and exempt.
+119565B texture bytes; census 6/6; rollout comp-law (no comps).
+Ledger refine-242. Pin: tex-12 roads.
+PROBE-LAW NOTE: assert UV laws only on mapped materials; a GLB mixing
+texMat + flat buckets will false-FAIL an over-broad chain assertion.
+*** EVERY WALKED SURFACE IS TEXTURED: door paths, gathering ring, plaza
+ring, ring road, spokes (one earth); curbs + thresholds (one stone). ***
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
