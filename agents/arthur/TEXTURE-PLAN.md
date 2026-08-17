@@ -155,6 +155,17 @@ textiles, metal, soil — all live. Follow-up candidates: market awnings +
 dyehouse strips (stripe weaves), well/kiln stone (cell ashlar), ring road
 + plaza pavers (soil variants). Bill's eye-check outstanding on all. ***
 
+### [tex-8] TEXTILES II — market + dye house (2026-08-17, wakeup 25) — DONE
+Rust/slate stripe weaves on market awnings + weaver bolts; flax-blue +
+bone weaves on dyehouse drying strips (seed-distinct from laundry's).
+Decode 16/16; rollout comp-law (no comps on either); census 8/8, sign-dyer
+rider intact. Ledger refine-230. Pins: tex-8 (refinement lane convergently
+refreshed tex-5 to the evolved d55427b8 laundry build).
+CLOTH CHAIN COMPLETE: laundry → market → dye house, flax to finished goods.
+LIVE-EVOLUTION LAW: census expectations go stale when lanes run parallel —
+decode against live + local bytes before calling drift (d55427b8 was the
+refinement lane's garment-sway evolution, weaves intact 4/4).
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
