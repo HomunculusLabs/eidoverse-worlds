@@ -179,6 +179,19 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   body): track 0.25m, coop stop 0.33m, NW exit 0.26m.
 - STATUS: FIXED (wakeup 7, 2026-08-17). Ad-hoc verified.
 
+### R-108 [INTERSECTION] av-garden-cottage × av-carousel — 0.78m — OPEN
+- Evidence (wakeup 7's final full audit — first sweep to compose this
+  pair): cottage (-21, 15.3) yaw 2.2 (footprint 8.7 x 6.8 incl. garden
+  plot) vs carousel (-18.8, 25.9, live yaw — not 0). SAT -0.78m. Likely
+  the carousel's fence corner reaching the cottage's garden-plot corner;
+  needs the source decode (is the contact plot-soil [pass-through] or
+  structure?) before any move — plot contact may classify as designed
+  yard adjacency, carousel-fence contact is a real defect.
+- Planned fix (next wakeup): decode carousel live yaw + which cottage
+  corner; if real, nudge carousel N along its own ray (it sits at r~32
+  ang 126 per ledger) or trim the plot corner in mkv3-ring.
+- STATUS: OPEN (next wakeup's defect).
+
 ### R-2xx [COLLISION] door-lane audit — CLOSED CLEAN (wakeup 6)
 - Fresh audit of all 12 enterable buildings' 1.4m x 2.2m door lanes vs
   every known-footprint prop: ZERO blockers. (The R-101 fix had already
