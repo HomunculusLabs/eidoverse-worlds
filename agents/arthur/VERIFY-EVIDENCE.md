@@ -354,3 +354,22 @@ PASS rebuild deterministic — 4e58865a35f8
 ALL PASS
 
 ```
+
+## tex-52 final ad-hoc verification — 2026-08-17T18:15:36.810Z
+
+```
+PASS plaza rebuild deterministic + == live build (4e58865a35f82ab9) — 4e58865a35f82ab9
+PASS stone + timber + iron + 6 soil materials, 9 deduped images
+PASS stone ≡ kiln's + timber ≡ house's + iron ≡ forge's (byte-family, buffer-compared)
+PASS pz_kettle + well_ GROUP anchors survive
+PASS av-plaza-hearth live on 3-family build, pose (0,0), all 4 comps recovered — store/4e58865a35f82ab9.glb
+PASS woodyard untouched (approval block honored)
+PASS verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-11 pin) — code=0
+PASS tex-52 pin green
+PASS tex-11 pin refreshed (no FAIL)
+PASS ledger law EXACT + HEAD gate green
+PASS listed one-shots consumed
+
+ALL PASS
+
+```
