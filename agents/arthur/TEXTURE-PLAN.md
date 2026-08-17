@@ -636,6 +636,17 @@ untouched). Ledger refine-285. Pin: tex-53 arthur-house. TIMBER:
 twenty-fourth. IRON: nineteenth — the reference building now teaches
 the material law to anyone who walks in.
 
+### [tex-54] TIMBER XXV — the hutch legs (2026-08-17, wakeup 94) — DONE
+The rabbit hutch's 4 legs join the family (≡ wallSpan's — a sawn post
+is a sawn post; the boards now run to the ground). Rabbits + straw +
+wire-gaps stay flat (life-stays-flat, tex-23). Rabbit motion anchors
+are named rabbit_sit/rabbit_hop (not 'rabbits') — first probe's
+expectation corrected at source (tex-54b 9/9). Both rabbit comps
+recovered — the rabbits still sit and hop. PIN-REFRESH: tex-21 hutch
+pin advanced to `6263e8a20eb17cc9` (tex-54b). Census 5/5 (woodyard
+untouched). Ledger refine-286. Pin: tex-54 hutch. TIMBER:
+twenty-fifth site — the hutch now reads as built, not painted.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
