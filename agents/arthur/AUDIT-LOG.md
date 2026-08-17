@@ -30,3 +30,14 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   next commit still pending) — cheap ticks, consolidated here.
 - Register: 0 OPEN items.
 - 2026-08-17 ~01:4x — wakeup 14: cheap tick (no new commits since c672f93; tex-1 still mid-flight).
+
+## 2026-08-17 ~02:0x — wakeup 15 (depth 3: content-hash drift)
+
+- New commits since audit-14: tex-1 thatch rollout live-confirmed
+  (aba3d0d + 65febfd) — the audit's first real coverage of texture work.
+- verify-repairs.ts: ALL PASS (incl. the tex-1 verify pin).
+- Depth 3: sha256[:16] of all 24 village GLBs vs live lib paths —
+  **24 MATCH / 0 DRIFT**. The thatched stable is live on the new content
+  hash (store/56d0122215bcca65 per tex-1's own confirm); standing world
+  == source of truth across the whole set.
+- Register: 0 OPEN items. No findings.
