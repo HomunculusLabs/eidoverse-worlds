@@ -147,7 +147,44 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - STATUS: FIXED (wakeup 5, 2026-08-16). Ad-hoc verified (numeric; both
   furniture-scale — walk-test not applicable per collision policy).
 
-### R-2xx [REFINEMENT] "messed-up houses cluster" — LIVE DECODE REQUIRED
+### R-106 [INTERSECTION] av-dyehouse × tower-house bay (+carousel) — FIXED (wakeup 6)
+- Root cause (fresh full-audit finding, missed by wakeup-1's narrower
+  footprint set): the tower-house's bay porches overflow its ring slot; the
+  dyehouse at ang 118 r 27 overlapped it by 1.54m AND kissed the carousel
+  (-0.21m). No ring bearing clears both — the exclusion zones of tower bay
+  and carousel overlap at ang 116-119.
+- Fix: relocated to the plan comment's own intent — "behind the weaver's
+  row cottage": (-21.0, -21.6) yaw 0.941 (aligned to the row). Verified vs
+  fresh live transforms: row 0.37m, laundry 5.02m, tower 40m, carousel
+  39.7m, garden 29.4m, shrine 14m — all CLEAR. The sign-dyer (wall-mount
+  rider, dyehouse-local (0.03, 2.59)) moved with it to (-18.89, -20.10);
+  rider offset preserved exactly.
+- Two-way MCPL walk-test (fresh body): row-side start 0.26m, dye vats
+  0.36m, south exit 0.28m.
+- Probe-blindness note: first move (ang 122 r 27.5) cleared tower/garden
+  but DROVE INTO the carousel (-2.08m) — the carousel was missing from the
+  earlier footprint sets. Corrected by the widened audit; no ledger entry
+  for the intermediate.
+- STATUS: FIXED (wakeup 6, 2026-08-16). Ad-hoc verified.
+
+### R-107 [INTERSECTION] av-coop × av-garden-fence — 2.01m — OPEN
+- Evidence (fresh full audit): coop (-30.6, 12.4) yaw 1.956 (2.12 x 2.27)
+  overlaps the garden fence's footprint (-28.7, 11.6, 6.46 x 2.68) by
+  2.01m. Both furniture-scale; coop plan comment "the fowl run" at r 33
+  ang 158, fence at r 31 ang 158 — same bearing, 2m radial gap intended
+  but their footprints cross.
+- Planned fix: nudge coop outward along its ray (r 33 -> 34+) or rotate to
+  align with the fence line; verify numeric clearance + walk-probe the
+  coop approach.
+- STATUS: OPEN (next wakeup's defect).
+
+### R-2xx [COLLISION] door-lane audit — CLOSED CLEAN (wakeup 6)
+- Fresh audit of all 12 enterable buildings' 1.4m x 2.2m door lanes vs
+  every known-footprint prop: ZERO blockers. (The R-101 fix had already
+  cleared the worst — the run on the garden cottage's lane.)
+- STATUS: CLOSED (no defects).
+
+### R-2xx [REFINEMENT] "messed-up houses cluster" — PARTIALLY RESOLVED
 - Bill's report: "bunch of houses clustered together that are totally messed
   up, some objects are not fully together/look bad visually because they're
   not completed". The offline pass can decode geometry presence per building
