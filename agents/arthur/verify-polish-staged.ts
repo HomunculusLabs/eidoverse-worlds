@@ -189,12 +189,22 @@ const capC = P.captureFromGeom({ entities: [ { id: "av-carousel", pos: [5,0,-10]
 const sc = P.planVerbs(capC, "store/m.glb").find(v => v[0]==="comp" && v[1].type==="particles:smoke");
 const dc = (sc?.[1] as any)?.data ?? {};
 console.log("H3=" + (JSON.stringify(dc.origin)==="[5,6.3,-10]" && !("originLocal" in dc)));
+// polish-69 H4: light re-anchor (p55, verified once — now standing)
+const L = (pos: number[]) => P.captureFromGeom({ entities: [
+  { id: "av-carousel", pos: [-18.8,0,25.9], yaw: 2.5137, comp: { "motion:carousel": {data:{}}, sockets: {data:{}} } },
+  { id: "av-car-l1", pos } ] });
+const lp = (pos: number[]) => P.planVerbs(L(pos), "store/x.glb").find((v: any) => v[0]==="light")[1].pos;
+const consistent = JSON.stringify(lp([-18.8,3.2,25.9]))==="[-18.8,3.2,25.9]";
+const reanchored = JSON.stringify(lp([-18.8,3.2,25.9+31]))==="[-18.8,3.2,25.9]"; // drifted 31m away
+const jitterKept = JSON.stringify(lp([-18.6,3.2,26.0]))==="[-18.6,3.2,26]"; // benign <0.5m
+console.log("H4=" + (consistent && reanchored && jitterKept));
 `);
     const h = sh(`bun ${probe}`);
     rmSync(probe, { force: true });
     ck("heal behavioral: smoke-less capture heals in village idiom (7 planned)", h.includes("H1=true") && h.includes("N=7"), h.trim().split("\n")[0]?.slice(0, 60) ?? "");
     ck("heal behavioral: no double-apply, live data wins", h.includes("H2=true"), h.trim().split("\n")[1]?.slice(0, 40) ?? "");
     ck("heal behavioral: pose-relative (moved pose carries the heal, no leak)", h.includes("H3=true"), h.trim().split("\n")[2]?.slice(0, 40) ?? "");
+    ck("light re-anchor behavioral: consistent verbatim / drifted re-anchored / jitter kept", h.includes("H4=true"), h.trim().split("\n")[3]?.slice(0, 40) ?? "");
     // polish-58 DECODER BEHAVIORALS (the three byte-decoders were one-shot
     // verified at p44/p48/p56 — a regression would pass silently; re-prove
     // each run against the staged builds + in-domain negatives):

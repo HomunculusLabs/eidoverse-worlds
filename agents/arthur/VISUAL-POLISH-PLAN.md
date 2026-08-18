@@ -904,6 +904,16 @@ wakeups. This lane is the standing fix for that blindness.
            exactly; no comp loss since tex-69. Full verifier
            26/26 ALL PASS. Read-only throughout.
 
+      — polish-69 LIGHT RE-ANCHOR STANDING (subject this
+           wakeup): the p55 re-anchor was verified once and never
+           again — a regression in the lights block would pass
+           silently (the p47/p53/p58 pattern). H4 added: consistent
+           capture emits verbatim; a light drifted 31m re-anchors to
+           the pose; benign sub-0.5m jitter is kept. Verifier now
+           27/27, first run green — all four placer behaviorals
+           (heal idiom / no-dup / pose-relative / light re-anchor)
+           re-prove every run.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
