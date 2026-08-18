@@ -650,6 +650,19 @@ wakeups. This lane is the standing fix for that blindness.
  note (charcoal precedent: 6 @ 0.22 for a lighter puff).
  Verified: the heal now emits the exact village shape.
  Register entry updated below.
+ — polish-47 HEAL IN THE STANDING VERIFIER (subject this
+ wakeup): the KNOWN_BAG heal — the package's subtlest
+ piece — had NO standing coverage (verify-polish-staged
+ checked placer contract markers only; a wrong-shape
+ restore would ship silently). The verifier gained two
+ BEHAVIORAL heal checks (smoke-less capture heals in the
+ exact village idiom, 7 planned; no double-apply, live
+ data wins) + a residue-clean check. Now 20/20 ALL PASS
+ — every future run re-proves the heal. Honest arc: two
+ fix passes (multi-line bun -e broke sh -c quoting →
+ probe moved to a self-deleting temp file; missing
+ writeFileSync import), each caught by exec before
+ commit. The verifier's check count moves 17 → 20.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 

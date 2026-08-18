@@ -14,7 +14,7 @@
 //   D. Gate + hygiene: verify-repairs.ts ALL PASS; control idle.
 // Run: bun agents/arthur/verify-polish-staged.ts
 import { execSync } from "node:child_process";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, writeFileSync, rmSync } from "node:fs";
 import { createHash } from "node:crypto";
 
 const W = "/Users/t3rpz/projects/eidoverse-worlds";
@@ -97,6 +97,30 @@ if (import.meta.main) {
     // welcome placer pure helpers behavioral (import side-effect-free — guarded)
     const r = sh(`bun -e 'const m = await import("${A}/placewelcome.ts"); const v = m.planVerbs({pos:[1,0,-4], yaw:2}, "store/z.glb"); console.log("V=" + v[0][1].id + "@" + JSON.stringify(v[0][1].pos) + "y" + v[0][1].yaw);'`);
     ck("placewelcome helpers pure (spawn at captured pose)", r.includes("V=av-welcome@[1,0,-4]y2"), r.trim().slice(0, 60));
+    // polish-47 HEAL BEHAVIORAL (the KNOWN_BAG is the package's subtlest
+    // piece — a wrong-shape restore would ship silently; re-prove each run).
+    // Probe written to a temp file (multi-line bun -e breaks sh -c quoting);
+    // probe self-deletes — the verifier leaves no residue.
+    const probe = `${W}/agents/arthur/.heal-probe-${process.pid}.ts`;
+    writeFileSync(probe, `import * as P from "${A}/placecarousel.ts";
+const capA = P.captureFromGeom({ entities: [ { id: "av-carousel", pos: [-18.8,0,25.9], yaw: 2.5137, comp: {
+  "motion:carousel": {data:{degPerSec:5}}, "motion:horse_0": {data:{}}, "motion:horse_2": {data:{}}, "motion:horse_4": {data:{}}, "motion:horse_6": {data:{}}, sockets: {data:{}} } },
+  { id: "av-car-l1", pos: [-18.8,3.2,25.9] }, { id: "av-car-l2", pos: [-18.8,1.6,25.9] } ] });
+const va = P.planVerbs(capA, "store/new.glb");
+const sa = va.filter(v => v[0]==="comp" && v[1].type==="particles:smoke");
+const d = (sa[0]?.[1] as any)?.data ?? {};
+const idiom = d.preset==="smoke" && JSON.stringify(d.origin)==="[-18.8,6.3,25.9]" && d.count===50 && d.size===0.4 && d.speed===0.35;
+console.log("H1=" + (sa.length===1 && idiom) + " N=" + va.filter(v=>v[0]==="comp").length);
+const capB = P.captureFromGeom({ entities: [ { id: "av-carousel", pos: [-18.8,0,25.9], yaw: 2.5137, comp: { "motion:carousel": {data:{}}, sockets: {data:{}},
+  "particles:smoke": {data:{preset:"smoke",origin:[0,9,0],count:3,size:0.1,speed:0.2}} } } ] });
+const sb = P.planVerbs(capB, "store/x.glb").filter(v => v[0]==="comp" && v[1].type==="particles:smoke");
+console.log("H2=" + (sb.length===1 && (sb[0][1] as any).data.origin[1]===9));
+`);
+    const h = sh(`bun ${probe}`);
+    rmSync(probe, { force: true });
+    ck("heal behavioral: smoke-less capture heals in village idiom (7 planned)", h.includes("H1=true") && h.includes("N=7"), h.trim().split("\n")[0]?.slice(0, 60) ?? "");
+    ck("heal behavioral: no double-apply, live data wins", h.includes("H2=true"), h.trim().split("\n")[1]?.slice(0, 40) ?? "");
+    ck("heal probe residue clean (self-deleted)", !existsSync(probe));
 
     // ---- D. gate + hygiene ----
     const gate = sh(`bun ${W}/agents/arthur/verify-repairs.ts`);
