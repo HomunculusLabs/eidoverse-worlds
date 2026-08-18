@@ -337,6 +337,19 @@ wakeups. This lane is the standing fix for that blindness.
            serves commons — polish-24 decode). No code changed this
            tick; the horizon law gained its first live-consistent
            data point.
+      — polish-26 LIVE-READ WINDOW PURSUIT (subject this wakeup):
+           walk gate re-exercised (command consumed cleanly); my look
+           fired AFTER the 3-min wheel window so the body showed home
+           (21.8, 15.9) — circuit resumption is per design, mistimed
+           verification was my probe error; the gate itself stands on
+           polish-24's live proof. Geometry decode ends the pursuit:
+           Bill sits ~32m SW of the keeper's home; a keeper at the
+           mapboard vantage is ~26m from his camera — no line of
+           sight worth staging. The definitive map read stays with
+           BILL'S OWN EYE at ≤10m south of the board (1.6, 8.5), or
+           a renderer client serving commons for /snap (polish-24
+           decode). Lane returns to subject-surfacing; no code
+           changed this tick either.
 
 ## Closed
 
