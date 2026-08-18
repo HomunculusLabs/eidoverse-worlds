@@ -47,6 +47,7 @@ MAT_COLOR = {
     "carousel_blue_paint": (63, 83, 100), "carousel_blanket": (133, 89, 68),
 }
 FLAT = {}
+EMIT = set()  # material indices carrying emissiveFactor (light sources; full glow in night renders)
 for mi, m in enumerate(j["materials"]):
     name = m.get("name", "")
     if name in MAT_COLOR:
@@ -60,6 +61,7 @@ for mi, m in enumerate(j["materials"]):
     if m.get("emissiveFactor"):
         e = m["emissiveFactor"]
         FLAT[mi] = (min(255, int(255*e[0])), min(255, int(255*e[1])), min(255, int(255*e[2])))
+        EMIT.add(mi)
 
 def node_transform(n):
     t = n.get("translation", [0, 0, 0]); r = n.get("rotation", [0, 0, 0, 1]); s = n.get("scale", [1, 1, 1])
@@ -101,7 +103,7 @@ for si in scene_nodes:
 
 print(f"triangles: {len(tris)}")
 
-def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=None):
+def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=None, night=False):
     # orthonormal basis
     ex = eye_dir
     l = math.sqrt(sum(c*c for c in ex)); ex = tuple(-c/l for c in ex)  # camera looks along -eye? we define eye_dir = from camera toward scene
@@ -111,7 +113,10 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=No
     lr = math.sqrt(sum(c*c for c in rx)) or 1.0
     rx = tuple(c/lr for c in rx)
     ry = (bx[1]*rx[2]-bx[2]*rx[1], bx[2]*rx[0]-bx[0]*rx[2], bx[0]*rx[1]-bx[1]*rx[0])
-    img = Image.new("RGB", (W, H), (24, 26, 34))
+    if night:
+        img = Image.new("RGB", (W, H), (7, 7, 12))
+    else:
+        img = Image.new("RGB", (W, H), (24, 26, 34))
     px = img.load()
     zbuf = [1e9] * (W * H)
     LIGHT = (0.4, 0.75, 0.5)
@@ -132,9 +137,21 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=No
         facing = -(nx*ex[0]+ny*ex[1]+nz*ex[2])/nl
         if facing <= 0:
             continue
-        lam = max(0.25, abs(nx*LIGHT[0]+ny*LIGHT[1]+nz*LIGHT[2])/nl)
         base = FLAT.get(mi, (160, 160, 160))
-        col = tuple(min(255, int(ch*lam)) for ch in base)
+        if night:
+            # NIGHT MODE (polish-15): emissive materials glow at full strength
+            # regardless of the sun (they are light sources, not lit surfaces);
+            # everything else is lamp-lit — dim ambient floor + warm Lambert
+            # from below/inside, as the ring of lantern globes would light it.
+            if mi in EMIT:
+                col = base
+            else:
+                lamp = (0.25, 0.55, 0.8)  # warm light rising from the lantern ring
+                lam = max(0.06, abs(nx*lamp[0]+ny*lamp[1]+nz*lamp[2])/nl)
+                col = tuple(min(255, int(ch*lam)) for ch in base)
+        else:
+            lam = max(0.25, abs(nx*LIGHT[0]+ny*LIGHT[1]+nz*LIGHT[2])/nl)
+            col = tuple(min(255, int(ch*lam)) for ch in base)
         # screen bbox
         xs = [a[0], bb[0], c[0]]; ys = [a[1], bb[1], c[1]]; zs = [a[2], bb[2], c[2]]
         x0 = max(0, int((min(xs)+half_w)/(2*half_w)*W)); x1 = min(W-1, int((max(xs)+half_w)/(2*half_w)*W))
@@ -167,4 +184,8 @@ render("threeq",  (0.7, -0.3, 0.7), (0, 1, 0), (0, 2.8, 0), 4.2, 4.2)
 render("horse0-side", (1, -0.15, 0), (0, 1, 0), (2, 2.9, 0), 1.3, 1.3, clip=(1.0, 3.0, -1.1, 1.1))
 render("horse0-front", (0, -0.15, 1), (0, 1, 0), (2, 2.9, 0), 1.3, 1.3, clip=(1.0, 3.0, -1.1, 1.1))
 render("horse0-3q", (0.7, -0.15, 0.7), (0, 1, 0), (2, 2.9, 0), 1.3, 1.3, clip=(1.0, 3.0, -1.1, 1.1))
+# NIGHT MODE (polish-15): pre-verify the staged polish-5 night-contrast claim —
+# emissive lantern globes must read as distinct warm lights under a dark sky.
+render("night-front", (0, -0.22, 1), (0, 1, 0), (0, 3.0, 0), 4.6, 4.6, night=True)
+render("night-threeq", (0.7, -0.24, 0.7), (0, 1, 0), (0, 3.0, 0), 4.6, 4.6, night=True)
 print("renders complete")

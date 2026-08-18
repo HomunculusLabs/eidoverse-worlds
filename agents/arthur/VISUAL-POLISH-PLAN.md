@@ -180,6 +180,18 @@ wakeups. This lane is the standing fix for that blindness.
       19/19 ALL PASS. Staged rollout is now drop-resilient, not just
       retry-resilient. (LSP caught one slip mid-edit — line 116 stale
       `verb` reference — fixed before any run; nothing broken shipped.)
+ — polish-15 NIGHT RENDER GATE (subject this wakeup; offline — no game
+      window this tick, Brave closed after Bill's ~20:00 ride):
+      render-carousel.py gained a night mode (night= param: dark sky,
+      lamp-lit Lambert with 0.06 floor, EMIT set renders emissive
+      materials at FULL self-glow — light sources ignore the sun).
+      Renders 2 night views of the staged build; vision gate on
+      night-threeq: 8 distinct warm lights, evenly distributed, dark
+      silhouette readable, none floating/clipped — the polish-5
+      night-contrast claim now has RENDER evidence ahead of rollout
+      (decode pins globes at y=4.42 under canopy edge; vision's
+      "platform" placement prose = usual low-poly perspective artifact).
+ Day views byte-unchanged behavior (same render() default path).
 
 ## Closed
 
