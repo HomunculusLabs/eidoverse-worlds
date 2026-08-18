@@ -1006,6 +1006,18 @@ Persistent verifier `verify-tex80.ts` committed (17/17 ALL PASS).
 Ledger refine-312. Pin: tex-80 bunkhouse. TIMBER: 46th — the lodge
 sleeps on the village's boards, lower bunk to upper rail.
 
+### [tex-81] TIMBER XLVII — the row cottage; THE LOOM (2026-08-18, resumed wakeup 21) — DONE
+Ring arc #6: hearth, table + leg, bed, LOOM (both uprights + warp
+beam — the tool chain's grandest member), linen chest, dye-jar shelf,
+2 tie beams on village timber. Heddle stays bone-flat; cloth/basket/
+threads/jars stay flat (goods); herbs flat; dormer cheeks keep C.STONE
+(cottage masonry trim identity); fire/flame/lamp emissive. RING-SAFETY
+held: 5 converted builds + court byte-identical, row backup refreshed.
+smoke comp recovered. tex-4 multi pin row hash updated. Persistent
+verifier `verify-tex81.ts` committed (17/17 ALL PASS). Ledger
+refine-313. Pin: tex-81 row. TIMBER: 47th — shuttle to ridge, the
+weaver's house reads on the village's boards.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
