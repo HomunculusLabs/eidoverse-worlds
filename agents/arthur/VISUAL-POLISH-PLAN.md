@@ -350,6 +350,21 @@ wakeups. This lane is the standing fix for that blindness.
            a renderer client serving commons for /snap (polish-24
            decode). Lane returns to subject-surfacing; no code
            changed this tick either.
+      — polish-27 RECORD CORRECTION (subject this wakeup): polish-25's
+           "welcome board … plain by design" was WRONG at source —
+           mkv3-welcome59.ts decodes: BONE board 1.0×0.42 + carved
+           name bar "THE COMMONS" (0x8a7a5a, 0.72×0.08, top) + FIVE
+           timber pointer arms fanning below (N road/E well/SW
+           monument/SE market/ESE carousel, loop-91). Corrected
+           plainly per plan law. The correction SURFACES a real
+           subject: at 5m night vision read the board as a "plain
+           solid white rectangle" — either the probe under-read a
+           night frame (probe-skepticism law) or the name bar's
+           contrast (0x8a7a5a on 0xd8cdb5, no emissive) genuinely
+           fails to read at night spectator distance — polish-16
+           class. QUEUED as next decode: re-capture at ≤5m and
+           pixel-check for the bar stripe + arms before touching the
+           source.
 
 ## Closed
 
