@@ -9,6 +9,20 @@ Created 2026-08-17 after audit-101: the mechanical depths were blind to
 visual quality and the carousel roof sat unregistered through a dozen
 wakeups. This lane is the standing fix for that blindness.
 
+## LANE STATUS (one glance — updated each polish record; the p70 law)
+- **Staged, consent-blocked**: carousel `38fbbc26` (roof+paint+smoke-heal
+  via placer), welcome lamp `62746d1a`, mapboard chip `b77ef40a`. Live
+  unchanged: `cd22d0b0` / `fa0c9d94` / `e732ce10` (sweep #4, p74).
+- **Proven gates**: three-point time-safe (day/dusk/night x3 subjects,
+  p29/43/50/51/71/72/75); horizons (lamp ~5m/10m, mapboard ~10m, carousel
+  ~30m BEACON, halved in heavy fog p76); rebuild determinism all 3 (p63/64).
+- **Standing verifier**: 28 checks — 4 placer behaviorals + 3 decoders +
+  3 rebuilds + runbook-sync guard + sentinel (live via POLISH_LIVE=1).
+- **Known-blocked**: all live rollouts (Bill's consent or tex-lane banking);
+  mock dry-runs (:8793/:8794 consent-blocked, no retry).
+- **Next**: post-rollout live re-reads; tex-lane watch; new visual axes as
+  they surface. Register: 3 OPEN (R-107 another lane's, lamp, smoke-heal).
+
 ## Per-wakeup protocol (in order)
 
 1. Load skill `eidoverse-world-building` FIRST.
