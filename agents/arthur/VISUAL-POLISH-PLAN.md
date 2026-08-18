@@ -825,6 +825,21 @@ wakeups. This lane is the standing fix for that blindness.
            distances. (Plan record one commit late again — the
            anchor lived in the commit message; verify block caught.)
 
+      — polish-62 WELCOME LAMP HORIZON (subject this wakeup): the
+           third point of the horizon-law family — mapboard ~10m,
+           carousel ~30m BEACON, welcome lamp gated at 5m only
+           (116 warm px). Distance ladder ADDED to render-mapboard.py
+           (10/16/24m, night, scalar fog 0.018, cam_dist=d — the p61
+           lesson applied first try). PIXEL LADDER: 7/3/1 warm px.
+           VISION: 10m = GLOW (faint identifiable warmth — a
+           wayfinding dot if you know where to look, not a beacon).
+           LAW: the welcome lamp's night horizon is ~5m BEACON /
+           ~10m GLOW / gone by ~16m — a single-globe signpost, as
+           expected against the carousel's 8-lantern ring. The
+           horizon-law family now covers all three staged subjects
+           with graded expectations per structure size. (Plan record
+           one commit late — em-dash anchor; verify block caught.)
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
