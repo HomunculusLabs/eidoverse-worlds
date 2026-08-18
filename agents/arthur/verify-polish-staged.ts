@@ -294,7 +294,7 @@ console.log("H4=" + (consistent && reanchored && jitterKept));
         const s = plan.match(/\*\*Standing verifier\*\*: (\d+) checks/);
         const cited = m ? Number(m[1]) : -1;
         const statusCited = s ? Number(s[1]) : -1;
-        const actual = checks + 1; // this check included
+        const actual = checks + 2; // BOTH sync guards included (p79: +1 broke when the second guard landed — self-referential counts must count every future check)
         ck(`runbook sync (plan cites ${cited} = verifier actual ${actual})`, cited === actual, cited === actual ? `${actual}` : `plan says ${cited}, verifier runs ${actual} — refresh the runbook`);
         ck(`status-block sync (lane status cites ${statusCited} = verifier actual ${actual})`, statusCited === actual, statusCited === actual ? `${actual}` : `status block says ${statusCited} — refresh it`);
     }
