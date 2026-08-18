@@ -136,11 +136,17 @@ const capB = P.captureFromGeom({ entities: [ { id: "av-carousel", pos: [-18.8,0,
   "particles:smoke": {data:{preset:"smoke",origin:[0,9,0],count:3,size:0.1,speed:0.2}} } } ] });
 const sb = P.planVerbs(capB, "store/x.glb").filter(v => v[0]==="comp" && v[1].type==="particles:smoke");
 console.log("H2=" + (sb.length===1 && (sb[0][1] as any).data.origin[1]===9));
+// polish-53 H3: pose-relative heal — a MOVED pose carries the heal, no leak
+const capC = P.captureFromGeom({ entities: [ { id: "av-carousel", pos: [5,0,-10], yaw: 0.7, comp: { "motion:carousel": {data:{}}, sockets: {data:{}} } } ] });
+const sc = P.planVerbs(capC, "store/m.glb").find(v => v[0]==="comp" && v[1].type==="particles:smoke");
+const dc = (sc?.[1] as any)?.data ?? {};
+console.log("H3=" + (JSON.stringify(dc.origin)==="[5,6.3,-10]" && !("originLocal" in dc)));
 `);
     const h = sh(`bun ${probe}`);
     rmSync(probe, { force: true });
     ck("heal behavioral: smoke-less capture heals in village idiom (7 planned)", h.includes("H1=true") && h.includes("N=7"), h.trim().split("\n")[0]?.slice(0, 60) ?? "");
     ck("heal behavioral: no double-apply, live data wins", h.includes("H2=true"), h.trim().split("\n")[1]?.slice(0, 40) ?? "");
+    ck("heal behavioral: pose-relative (moved pose carries the heal, no leak)", h.includes("H3=true"), h.trim().split("\n")[2]?.slice(0, 40) ?? "");
     ck("heal probe residue clean (self-deleted)", !existsSync(probe));
 
     // ---- D. gate + hygiene ----

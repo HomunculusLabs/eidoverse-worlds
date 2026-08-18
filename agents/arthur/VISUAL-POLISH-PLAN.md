@@ -736,6 +736,15 @@ wakeups. This lane is the standing fix for that blindness.
            to [5, 6.3, -10]; no originLocal key leaks into the
            verb data. LAW: heals ride the capture law — never a
            hardcoded world anchor.
+      — polish-53 POSE-RELATIVE IN THE STANDING VERIFIER (subject
+           this wakeup): the polish-52 pose-relative heal had no
+           standing coverage — the verifier's H1/H2 ran at the
+           default pose only; a regression back to a hardcoded
+           origin would pass silently. H3 added: a MOVED pose
+           (5, -10, yaw 0.7) must carry the heal to [5, 6.3,
+           -10] with no originLocal leak. Verifier now 21/21 —
+           every future run re-proves all three heal behaviorals
+           (idiom / no-dup / pose-relative). First run green.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
