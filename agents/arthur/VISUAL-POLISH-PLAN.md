@@ -1037,6 +1037,27 @@ wakeups. This lane is the standing fix for that blindness.
            protects — adding a citation surface means extending
            the guard in the SAME commit.
 
+      — polish-80 DUSK CHAIN GATE (subject this wakeup; a REAL
+           visual axis back in balance after the meta-ticks): the
+           welcome-mapboard corridor was night-gated (p31) and
+           fog-gated (p32) but never at dusk. HONEST ARC (three
+           finds, one subject): (1) my 60% ramp fixture was WRONG
+           — engine decode: dayness = max(0,sin((h-6)/12*pi)),
+           lamp glow = (1-dayness)^2, so AFTER 18:00 lamps are at
+           FULL strength (the ramp 16->17->18 = 25/55/100%);
+           (2) the dusk branch fell through to the day sun-lambert
+           and silently overwrote the emissive (lamp dimmed to
+           ~74%); (3) after the fix, single-subject dusk == night
+           EXACTLY (lamp 255,183,91 both, 29 warm px both). The
+           chain composite still shows a lamp-cluster z-order
+           artifact (11 vs 31 px) — deferred to the next wakeup as
+           an open harness question, NOT a subject defect: the
+           engine law is proven and the subject reads correctly in
+           isolation. LAWS: (a) decode the engine's actual curve —
+           'ramp' prose hid a square-of-sine law with full-on by
+           18:00; (b) emissive branches must not fall through to
+           lambert branches.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:

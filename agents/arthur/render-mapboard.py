@@ -138,9 +138,13 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=F
         if facing <= 0: continue
         base = MAT.get(mi, (160, 160, 160))
         if dusk and mi in EMIT:
-            # ramp mid-point: emissive at 60% blended over warm sun lighting
-            lam = max(0.30, abs(nx*0.62+ny*0.42+nz*0.30)/nl)
-            col = tuple(min(255, int(max(ch * lam, ch * 0.60))) for ch in base)
+            pass
+            # polish-80b HONEST DUSK (engine-decoded): dayness = max(0,sin((h-6)/12*pi))
+            # so AFTER 18:00 dayness=0 and lamp glow = (1-dayness)^2 = FULL.
+            # The first pass wrongly scaled the emissive to 60% AND scaled base
+            # with a sun term — the near lamp vanished. Post-18:00 dusk =
+            # emissive at full strength, exactly like night; only the SKY differs.
+            col = base
         if night:
             if mi in EMIT:
                 col = base
@@ -153,7 +157,12 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=F
                     col = tuple(min(255, int(ch*lam)) for ch in avg)
                 else:
                     col = tuple(min(255, int(ch*lam)) for ch in base)
-        else:
+        elif not (dusk and mi in EMIT):
+            # polish-80b: dusk EMIT must NOT fall through to the sun lambert —
+            # the first dusk pass set col=base then silently OVERWROTE it here
+            # (lamp rendered at ~74% sun-lambert, near-lamp vanished). Emissive
+            # tris in dusk keep their full-strength glow; only lit surfaces
+            # take the low warm sun.
             LIGHT = (0.62, 0.42, 0.30) if dusk else (0.4, 0.75, 0.5)  # dusk: low warm sun
             ll = math.sqrt(sum(x*x for x in LIGHT)); LIGHT = tuple(x/ll for x in LIGHT)
             lam = max(0.25, abs(nx*LIGHT[0]+ny*LIGHT[1]+nz*LIGHT[2])/nl)
@@ -306,4 +315,9 @@ if len(sys.argv) > 6 and sys.argv[3] == "chain":
     # showed 0 warm px where physics allows the near lamp at ~6% loss).
     render("chain-fog-base", (0, -0.10, -1), (0, 1, 0), (0.8, 1.6, -12), 8.0, 5.2, night=True, fog=0.018, cam_dist=0.0)
     render("chain-fog-heavy", (0, -0.10, -1), (0, 1, 0), (0.8, 1.6, -12), 8.0, 5.2, night=True, fog=0.036, cam_dist=0.0)
+    # polish-80 DUSK CHAIN GATE: the corridor was night-gated (p31) and fog-gated
+    # (p32) but never at the ramp — how the near lamp AND the far hearth read
+    # TOGETHER at dusk is the village's actual arrival experience after 18:00.
+    # Dusk mode + honest twilight bg (p73); cam_dist stays 0 (chain law).
+    render("chain-dusk", (0, -0.10, -1), (0, 1, 0), (0.8, 1.6, -12), 8.0, 5.2, dusk=True, cam_dist=0.0)
 print("renders complete")
