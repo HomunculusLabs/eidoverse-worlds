@@ -68,6 +68,26 @@ export async function decodeLamp(srcPathOrUrl: string): Promise<string> {
     return glow ? `LAMP (glow2 emissive ${JSON.stringify(glow.emissiveFactor)})` : "NO-LAMP (no lamp emissive)";
 }
 
+// ---- chip decoder (polish-56; offline-testable) ----
+// Completes the decoder family: the mapboard UNKNOWN branch was the last
+// blind one ("investigate" only). The polish-20 chip added 24 verts to the
+// COLOR_0 pipeline (1478 -> 1502) — a merge-proof byte signature.
+export async function decodeChip(srcPathOrUrl: string): Promise<string> {
+    const buf: Uint8Array = srcPathOrUrl.startsWith("http")
+        ? new Uint8Array(await (await fetch(srcPathOrUrl)).arrayBuffer())
+        : new Uint8Array(await Bun.file(srcPathOrUrl).arrayBuffer());
+    const jlen = buf[12] | (buf[13] << 8) | (buf[14] << 16) | (buf[15] << 24);
+    const j = JSON.parse(new TextDecoder().decode(buf.subarray(20, 20 + jlen)));
+    const total = (j.meshes ?? []).flatMap((m: any) => (m.primitives ?? [])
+        .flatMap((p: any) => Object.entries(p.attributes ?? {})
+            .filter(([k]) => k === "COLOR_0")
+            .map(([, i]) => j.accessors[i]?.count ?? 0)))
+        .reduce((a: number, b: number) => a + b, 0);
+    if (total >= 1490) return `CHIP (COLOR_0 total ${total} >= chip-era 1502)`;
+    if (total > 0 && total <= 1480) return `NO-CHIP (COLOR_0 total ${total} <= pre-chip 1478)`;
+    return `AMBIGUOUS (COLOR_0 total ${total})`;
+}
+
 if (import.meta.main) {
     // ---- A. staged builds: byte-exact + deterministic ----
     const BUILDS: Array<[string, string]> = [
@@ -194,7 +214,7 @@ console.log("H3=" + (JSON.stringify(dc.origin)==="[5,6.3,-10]" && !("originLocal
             else console.log(`SENTINEL welcome: UNKNOWN build ${wel} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeLamp("<store-url-or-local-path>"))' (LAMP = close item; NO-LAMP = open)`);
             if (map === "store/b77ef40aae3a9dae.glb") console.log("SENTINEL mapboard: tower chip ROLLED live");
             else if (map === "store/e732ce10400c1979.glb") console.log("SENTINEL mapboard: live pin e732ce10 stands (chip staged)");
-            else console.log(`SENTINEL mapboard: UNKNOWN build ${map} — investigate`);
+            else console.log(`SENTINEL mapboard: UNKNOWN build ${map} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeChip("<store-url-or-local-path>"))' (CHIP = chip live; NO-CHIP = pre-chip)`);
         } catch (e: any) {
             console.log(`SENTINEL live read failed (non-fatal): ${e?.message ?? e}`);
         }
