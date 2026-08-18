@@ -230,8 +230,16 @@ exit 0; live census). Never self-judge the village done.
   mapboard) now sit newest in assets — still Bill's-call subjects, skipped
   per the loop's own rule; queue dry 36th tick, held per the lane's law —
   no model changed, live village untouched.
-- lift-41 (this): thirty-seventh lean hold — steady state identical: no
+- lift-41 (3f0f51b): thirty-seventh lean hold — steady state identical: no
   lane banked, staged-trio GLBs still newest in assets (skipped,
   Bill's-call), gate ALL PASS, census ALL GREEN 36th consecutive, resident
   log unchanged; queue dry 37th tick, held per the lane's law — no model
   changed, live village untouched.
+- lift-42 (this): thirty-eighth lean hold — tex-85 GOLDEN-HOUR CANON
+  banked mid-hold (4a3a50e): whole-village warm re-tone, 67 entities live,
+  77 makers rebuilt, 64 gate pins + 30 verifiers advanced with trails, all
+  gates ALL PASS incl. my lift-1 court verifier; for THIS lane a re-tone,
+  not new jank — woodyard untouched, knot byte-frozen, carousel still
+  staged, all four lift tiers remain exhausted; census ALL GREEN 37th
+  consecutive (held green through the rollout); queue dry 38th tick, held
+  per the lane's law — no model changed by this lane.
