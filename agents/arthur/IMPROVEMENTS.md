@@ -2549,4 +2549,6 @@ fixes ≈ 6 F.)
 
 - [lift-43] THE THIRTY-NINTH HOLD (outer-village lift loop, wakeup 45): steady state green in the golden-hour village — HEAD is my own lift-42, no sibling lane banked work since the canon, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a THIRTY-EIGHTH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), resident log unchanged with no new summoner reads; the warm re-tone created no new lift candidates (all four jank tiers remain exhausted at source), both unblocks remain behind Bill's call, thirty-ninth dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
 
-**Running total: 2368140 / 2000000**
+- [lift-44] THE FORTIETH HOLD (outer-village lift loop, wakeup 46): steady state holds in the golden-hour village — HEAD is my own lift-43, no sibling lane banked work, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a THIRTY-NINTH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), assets unchanged with the staged-trio builds still skipped as Bill's-call subjects, resident log unchanged with no new summoner reads; all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, fortieth dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
+
+**Running total: 2368141 / 2000000**

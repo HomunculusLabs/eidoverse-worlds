@@ -243,7 +243,12 @@ exit 0; live census). Never self-judge the village done.
   staged, all four lift tiers remain exhausted; census ALL GREEN 37th
   consecutive (held green through the rollout); queue dry 38th tick, held
   per the lane's law — no model changed by this lane.
-- lift-43 (this): thirty-ninth lean hold — steady state post-golden-hour:
+- lift-43 (d8b4a67): thirty-ninth lean hold — steady state post-golden-hour:
   no new lane commits, gate ALL PASS, census ALL GREEN 38th consecutive,
   resident log unchanged; queue dry 39th tick, held per the lane's law —
   no model changed, live village untouched by this lane.
+- lift-44 (this): fortieth lean hold — steady state holds post-golden-hour:
+  no new lane commits, gate ALL PASS (register 3 OPEN expected), census ALL
+  GREEN 39th consecutive on the truthed instrument, assets unchanged, resident
+  log unchanged (no new summoner reads); queue dry 40th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
