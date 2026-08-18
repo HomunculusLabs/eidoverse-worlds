@@ -218,6 +218,12 @@ for d in (10, 16, 24):
 for d in (5, 10):
     render(f"lamp-dusk{d}", (0, -0.03, 1), (0, 1, 0), (0, 4.0, -5), d * 0.58 if d == 10 else 2.9, d * 0.58 if d == 10 else 2.9, night=False, dusk=True)
 
+# polish-75 MAPBOARD HEARTH DUSK GATE (the three-point law's third subject):
+# the hearth glow (glow1 [1.5,.216,.016]) was night-gated (388px) and
+# day-gated (280px + p50 chip gate) but never at the ramp moment.
+for d in (6, 10):
+    render(f"hearth-dusk{d}", (0, -0.08, 1), (0, 1, 0), (1.6, 1.5, 8.5), 3.5 if d == 6 else 5.8, 3.5 if d == 6 else 5.8, dusk=True)
+
 render("wb-day5", (0, -0.06, 1), (0, 1, 0), (0, 1.3, -5), 2.9, 2.9)
 render("wb-night3", (0, -0.08, 1), (0, 1, 0), (0, 1.3, -5), 1.75, 1.75, night=True)
 # polish-31 WAYFINDING CHAIN (composite): both staged sign GLBs at world

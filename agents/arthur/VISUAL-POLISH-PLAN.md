@@ -975,6 +975,19 @@ wakeups. This lane is the standing fix for that blindness.
            e732ce10 pin stands). No comp loss; decoders armed, no
            UNKNOWN arrived. Verifier 28/28 ALL PASS. Read-only.
 
+      — polish-75 HEARTH DUSK GATE (subject this wakeup): the
+           three-point law's third and final subject — the mapboard
+           hearth glow (glow1 [1.5,.216,.016]) was night-gated
+           (388px) and day-gated (280px) but never at the ramp.
+           Gate under the p73-corrected honest twilight fixture:
+           vision PASS — hearth reads as a soft warm map mark, lit
+           but not glaring; other map marks stay readable; natural
+           dusk atmosphere. PIXEL: 5/2 warm-family px at 6/10m
+           dusk (the glow recedes honestly as the sun dims it).
+           LAW CLOSED: all three staged subjects are now
+           three-point time-safe (day / dusk / night each) — lamp
+           p43/p71/p29, chip p50/p75/p21, lanterns p51/p72/p15.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
