@@ -558,6 +558,17 @@ wakeups. This lane is the standing fix for that blindness.
  check was consent-blocked (no retry, block law); its code
  mirrors the standing gate's proven GET pattern. Mock
  killed, port 8794 released, residue cleaned.
+      — polish-40 SENTINEL FIRST LIVE RUN (subject this wakeup): the
+ polish-39 sentinel's live path verified for real —
+ POLISH_LIVE=1 run performed the standing gate's own
+ read-only /geom GET and read all three subjects correctly:
+ carousel=cd22d0b0 (defect still LIVE → register OPEN
+ correct), welcome=fa0c9d94 (lamp not rolled → OPEN
+ correct; matches the tex lane's recorded live build),
+ mapboard=e732ce10 (live pin stands, chip staged). Full
+ verifier incl. sentinel: ALL PASS. Read-only; no verb, no
+ place, no comp — the gate's own GET class. The rollout
+ watcher now stands proven both modes.
 
 ## Closed
 
