@@ -99,12 +99,15 @@ if (import.meta.main) {
         const h = sha16(`${A}/${f}`);
         ck(`staged ${f} at ${want}`, h === want, h);
     }
-    // determinism: rebuild mapboard + welcome (cheap) ×1 and re-hash; the
-    // carousel rebuild is heavy — hash equality above + committed record stand.
+    // determinism: rebuild mapboard + welcome (cheap) ×1 and re-hash.
+    // polish-63: the CAROUSEL rebuild joined — the placer rebuilds from
+    // source at rollout, so source->bytes drift would ship unverified. The
+    // rebuild is heavy (~6s) but the verifier's job is to catch exactly this.
     const mb = sh(`bun ${A}/mkv3-mapboard.ts`);
     const wb = sh(`bun ${A}/mkv3-welcome59.ts`);
     ck("rebuild mapboard deterministic (hash re-equal after rebuild)", sha16(`${A}/village_mapboard3.glb`) === "b77ef40aae3a9dae");
     ck("rebuild welcome deterministic (hash re-equal after rebuild)", sha16(`${A}/village_welcome3.glb`) === "62746d1af698eacc");
+    ck("rebuild carousel deterministic (hash re-equal after rebuild)", sha16(`${A}/village_carousel3.glb`) === "38fbbc26dcdfcc1a");
 
     // ---- B. GLB decodes (JSON chunk only — no network) ----
     const decode = (f: string) => {

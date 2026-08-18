@@ -840,6 +840,16 @@ wakeups. This lane is the standing fix for that blindness.
            with graded expectations per structure size. (Plan record
            one commit late — em-dash anchor; verify block caught.)
 
+      — polish-63 CAROUSEL REBUILD DETERMINISM (subject this
+           wakeup): a coverage hole in the verifier — it proved
+           mapboard + welcome source->bytes determinism every run
+           but NEVER the carousel's, though the placer REBUILDS
+           from source at rollout (drift would ship unverified).
+           Proven by exec first (backup pinned, rebuild ran:
+           38fbbc26dcdfcc1a reproduced byte-exact, 491,384B),
+           then added as a standing check. Verifier now 25/25 —
+           all three staged builds re-prove determinism each run.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
