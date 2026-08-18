@@ -706,6 +706,22 @@ wakeups. This lane is the standing fix for that blindness.
            per polish-21 + day landmark per this gate); the
            mapboard rollout keeps its green. No code changed;
            staged b77ef40a unchanged.
+      — polish-51 LANTERN DAY GATE (subject this wakeup): the
+           time-coverage table completed — the carousel's staged
+           lanterns were night-gated at polish-15 (8 warm lights);
+           the polish-22 day-spectate gates covered HORSE PAINT,
+           not the lanterns' day read. Offline rasterizer, the
+           exact day-spectate views (18m front/threeq, 10m front):
+           VISION PASS — lanterns visible as physical brass/amber
+           fixtures under the canopy edge, natural unlit, no
+           blobs/artifacts, palette harmonizes with the horse
+           paint families. PIXEL CORROBORATION: warm-fixture px
+           scales with proximity 42 @18m front → 90 @18m threeq →
+           135 @10m — the expected fixture signature. LAW: all
+           three staged subjects are now TIME-SAFE (welcome lamp
+           p43, mapboard chip p50, carousel lanterns p51 — night
+           anchor + day quiet each). The staged package's full
+           time coverage holds; every rollout keeps its green.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
