@@ -79,7 +79,10 @@ exit 0; live census). Never self-judge the village done.
   their re-sweep left R-113 standing routed-open, stewardship green); census
   ALL GREEN on the truthed instrument second consecutive tick; no summoner
   reads; queue dry third tick — holding, not manufacturing.
-- lift-7 (this): lean hold 4th dry tick — no lane banked, census ALL GREEN
+- lift-7 (ec88d99): lean hold 4th dry tick — no lane banked, census ALL GREEN
   3rd consecutive, both known summoner reads verified ANSWERED (roof live
   lift-2, watchpost routed R-113), candidates section refreshed to the true
   state (evidence / unblocks / hold).
+- lift-8 (this): lean hold 5th dry tick — census ALL GREEN 4th consecutive,
+  gate ALL PASS; the resident log's new lines are Bill riding the carousel
+  WITH hermes (engagement, not defect reads) — no new evidence; holding.
