@@ -1036,6 +1036,26 @@ longhouse, tower, garden, bunk, row, court). Persistent verifier
 tex-82 court. TIMBER: 48th; IRON: 28th; STONE: 23rd — oven to anvil
 to yard, the ring reads as one village.
 
+### [tex-83] TIMBER XLIX + IRON XXIX — the inn's hearth completes (2026-08-18, resumed wakeup 23) — DONE
+The post-ring re-survey surfaced what tex-74 missed: the innkeeper's
+hearth-side kit. Crane (post + arm + hook), hanging kettle, 3 trivet
+legs, frypan, poker, + sconce-class hearth iron on forge iron
+(HEARTH-IRON law: hearth iron is the smith's own); toolstand,
+hearth-shovel handle, panhandle, keybox on timber (tool-handle chain's
+inn members). Brass keyhooks + bone keytags stay flat; matchbox-scale
+sconce brackets stay flat (material-at-distance: a tile on a 5cm prim
+is noise). sign + fire anchors ride untouched. Inn now 4-family
+(timber/stone/plaster/iron). LANDMARKS-SAFETY: carousel at polish
+staged build, belltower + windmill at tex-69/72 builds (backups
+created fresh this run). All 4 comps recovered (smoke + particles +
+motion:sign + sockets). MAPBOARD PIN REFRESH ×2 (tex-61 + tex-17):
+polish-16 staged e732ce10 (distance skeleton) and polish-18 rolled it
+live — timber tile buffer-verified byte-identical to wallSpan's in
+their build (LIVE-EVOLUTION law; polish lane's evolution, not drift).
+Persistent verifier `verify-tex83.ts` committed (18/18 ALL PASS).
+Ledger refine-315. Pin: tex-83 inn. TIMBER: 49th; IRON: 29th — the
+great hearth cooks on the village's own iron, poker to panhandle.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
