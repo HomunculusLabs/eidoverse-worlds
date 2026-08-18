@@ -895,6 +895,15 @@ wakeups. This lane is the standing fix for that blindness.
            matching the p45 census exactly. Offline sub-branch:
            a 4-comp bag flags loss.
 
+      — polish-68 LIVE SWEEP #3 (subject this wakeup): fresh
+           read-only POLISH_LIVE=1 — all three subjects unchanged
+           (carousel cd22d0b0, welcome fa0c9d94, mapboard
+           e732ce10). The p67 bag census read live for the first
+           time in a sweep: "live bag 6 comps, smoke still lost
+           (heal rides rollout)" — matching the p45 census
+           exactly; no comp loss since tex-69. Full verifier
+           26/26 ALL PASS. Read-only throughout.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
