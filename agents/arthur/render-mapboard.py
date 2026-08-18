@@ -197,6 +197,12 @@ render("night-approach6", (0, -0.08, 1), (0, 1, 0), (1.6, 1.5, 8.5), 3.5, 3.5, n
 # rasterizer generic): 5m night = the distance vision read "plain white
 # rectangle" live; 5m day + 3m night bracket it. Board faces N (+z toward plaza).
 render("wb-night5", (0, -0.06, 1), (0, 1, 0), (0, 1.3, -5), 2.9, 2.9, night=True)
+# polish-62 WELCOME LAMP HORIZON: the third point of the horizon-law family —
+# mapboard ~10m, carousel ~30m BEACON, welcome lamp gated at 5m only. Distance
+# ladder on the LAMP build (scalar fog 0.018, cam_dist=d — subject-centered):
+for d in (10, 16, 24):
+    render(f"lamp-horizon{d}", (0, -0.02, 1), (0, 1, 0), (0, 4.0, -5), d * 0.58, d * 0.58, night=True, cam_dist=d, fog=0.018)
+
 render("wb-day5", (0, -0.06, 1), (0, 1, 0), (0, 1.3, -5), 2.9, 2.9)
 render("wb-night3", (0, -0.08, 1), (0, 1, 0), (0, 1.3, -5), 1.75, 1.75, night=True)
 # polish-31 WAYFINDING CHAIN (composite): both staged sign GLBs at world
