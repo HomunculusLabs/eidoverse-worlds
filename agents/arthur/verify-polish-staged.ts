@@ -287,10 +287,16 @@ console.log("H4=" + (consistent && reanchored && jitterKept));
     // cited "offline N checks" and compare to the ACTUAL count (self-included).
     {
         const plan = readFileSync(`${W}/agents/arthur/VISUAL-POLISH-PLAN.md`, "utf8");
+        // polish-79: guard EVERY cited count, not just the runbook's — the
+        // p77 status block cites "28 checks" in a different phrasing and the
+        // p70 guard missed it (my own addition violated my own law).
         const m = plan.match(/offline (\d+) checks/);
+        const s = plan.match(/\*\*Standing verifier\*\*: (\d+) checks/);
         const cited = m ? Number(m[1]) : -1;
+        const statusCited = s ? Number(s[1]) : -1;
         const actual = checks + 1; // this check included
         ck(`runbook sync (plan cites ${cited} = verifier actual ${actual})`, cited === actual, cited === actual ? `${actual}` : `plan says ${cited}, verifier runs ${actual} — refresh the runbook`);
+        ck(`status-block sync (lane status cites ${statusCited} = verifier actual ${actual})`, statusCited === actual, statusCited === actual ? `${actual}` : `status block says ${statusCited} — refresh it`);
     }
 
     console.log(fails.length ? `${fails.length} FAIL` : "ALL PASS");

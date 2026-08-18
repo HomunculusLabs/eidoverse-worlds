@@ -16,7 +16,7 @@ wakeups. This lane is the standing fix for that blindness.
 - **Proven gates**: three-point time-safe (day/dusk/night x3 subjects,
   p29/43/50/51/71/72/75); horizons (lamp ~5m/10m, mapboard ~10m, carousel
   ~30m BEACON, halved in heavy fog p76); rebuild determinism all 3 (p63/64).
-- **Standing verifier**: 28 checks — 4 placer behaviorals + 3 decoders +
+- **Standing verifier**: 29 checks — 4 placer behaviorals + 3 decoders +
   3 rebuilds + runbook-sync guard + sentinel (live via POLISH_LIVE=1).
 - **Known-blocked**: all live rollouts (Bill's consent or tex-lane banking);
   mock dry-runs (:8793/:8794 consent-blocked, no retry).
@@ -1025,10 +1025,22 @@ wakeups. This lane is the standing fix for that blindness.
            smoke still lost; welcome fa0c9d94 pre-lamp; mapboard
            e732ce10 pin stands). Verifier 28/28 ALL PASS. Read-only.
 
+      — polish-79 STATUS-BLOCK GUARD (subject this wakeup):
+           self-indictment — the p77 status block I added cites
+           "28 checks" in its own phrasing, which the p70 guard
+           (regex on 'offline N checks') did NOT cover — my own
+           addition violated my own records law on landing. Fixed:
+           the verifier now guards BOTH cited counts (runbook +
+           status block); both read 29 after the fix (the new
+           guard is itself a check). Verifier 29/29. LAW EXTENDED:
+           a records guard must enumerate every phrasing it
+           protects — adding a citation surface means extending
+           the guard in the SAME commit.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
-`POLISH_LIVE=1 bun agents/arthur/verify-polish-staged.ts` (offline 28 checks
+`POLISH_LIVE=1 bun agents/arthur/verify-polish-staged.ts` (offline 29 checks
 — 4 heal behaviorals + light re-anchor + 3 decoder behaviorals + 3 rebuild
 determinism + 2 placer behaviorals + runbook-sync guard — + live sentinel:
 reads live libs AND the live comp bag, maps to register action). (polish-59
