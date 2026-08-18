@@ -48,8 +48,8 @@ wakeups. This lane is the standing fix for that blindness.
 ## Worklist (one subject per wakeup; prepend new subjects as they surface)
 
 - [ ] **Carousel roof lift** (REGISTER OPEN, audit-101) — SOURCE-SIDE DONE
-      (polish-1) + paint widening joined (polish-3): staged build
-      `7a2faa19dfde62cb` now carries BOTH fixes — canopy +0.45 (hub 5.15,
+      (polish-1) + paint widening joined (polish-3): the staged build
+      carries BOTH fixes (current hash below) — canopy +0.45 (hub 5.15,
       base 4.81/apex 5.99, rider 0.63m/ears 1.66m clear, decode 29/29)
       AND widened paint families (blue 0.31/gold 0.58/bone 0.80 lums,
       gaps ≥0.22, verify-polish3 10/10). Live vision read found the 4
