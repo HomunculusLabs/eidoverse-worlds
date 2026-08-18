@@ -278,12 +278,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -310,12 +315,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -342,12 +352,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -374,12 +389,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -406,12 +426,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -438,12 +463,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -470,12 +500,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -502,12 +537,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -534,12 +574,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -566,12 +611,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -598,12 +648,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -630,12 +685,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -662,12 +722,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -694,12 +759,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -726,12 +796,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -758,12 +833,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -790,12 +870,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -822,12 +907,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -854,12 +944,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -886,12 +981,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -918,12 +1018,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -950,12 +1055,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -982,12 +1092,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1014,12 +1129,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1046,12 +1166,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1078,12 +1203,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1110,12 +1240,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1142,12 +1277,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1174,12 +1314,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1206,12 +1351,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1238,12 +1388,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1270,12 +1425,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1302,12 +1462,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1334,12 +1499,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1366,12 +1536,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1398,12 +1573,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1430,12 +1610,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1462,12 +1647,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1494,12 +1684,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1526,12 +1721,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1558,12 +1758,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1590,12 +1795,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1622,12 +1832,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1654,12 +1869,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1686,12 +1906,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1718,12 +1943,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1750,12 +1980,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1782,12 +2017,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1814,12 +2054,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1846,12 +2091,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1878,12 +2128,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1910,12 +2165,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1942,12 +2202,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -1974,12 +2239,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2006,12 +2276,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2038,12 +2313,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2070,12 +2350,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2102,12 +2387,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2134,12 +2424,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2166,12 +2461,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2198,12 +2498,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2230,12 +2535,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2262,12 +2572,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2294,12 +2609,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-48 (b6f7060): forty-fourth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 43rd
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2326,12 +2646,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2358,12 +2683,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2390,12 +2720,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2422,12 +2757,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2454,12 +2794,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2486,12 +2831,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2518,12 +2868,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2550,12 +2905,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2582,12 +2942,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2614,12 +2979,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2646,12 +3016,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2678,12 +3053,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2710,12 +3090,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2742,12 +3127,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2774,12 +3164,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2806,12 +3201,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2838,12 +3238,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2870,12 +3275,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2902,12 +3312,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2934,12 +3349,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2966,12 +3386,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -2998,12 +3423,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3030,12 +3460,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3062,12 +3497,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3094,12 +3534,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3126,12 +3571,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3158,12 +3608,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3190,12 +3645,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3222,12 +3682,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3254,12 +3719,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3286,12 +3756,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3318,12 +3793,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3350,12 +3830,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3382,12 +3867,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3414,12 +3904,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3446,12 +3941,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3478,12 +3978,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3510,12 +4015,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3542,12 +4052,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3574,12 +4089,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3606,12 +4126,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3638,12 +4163,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3670,12 +4200,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3702,12 +4237,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3734,12 +4274,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3766,12 +4311,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3798,12 +4348,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3830,12 +4385,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3862,12 +4422,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3894,12 +4459,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3926,12 +4496,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3958,12 +4533,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -3990,12 +4570,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4022,12 +4607,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4054,12 +4644,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4086,12 +4681,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4118,12 +4718,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4150,12 +4755,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4182,12 +4792,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4214,12 +4829,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4246,12 +4866,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4278,12 +4903,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4310,12 +4940,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4342,12 +4977,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-47 (3eaa115): forty-third lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 42nd
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4374,12 +5014,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4406,12 +5051,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4438,12 +5088,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4470,12 +5125,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4502,12 +5162,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4534,12 +5199,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4566,12 +5236,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4598,12 +5273,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4630,12 +5310,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4662,12 +5347,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4694,12 +5384,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4726,12 +5421,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4758,12 +5458,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4790,12 +5495,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4822,12 +5532,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4854,12 +5569,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4886,12 +5606,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4918,12 +5643,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4950,12 +5680,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -4982,12 +5717,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5014,12 +5754,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5046,12 +5791,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5078,12 +5828,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5110,12 +5865,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5142,12 +5902,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5174,12 +5939,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5206,12 +5976,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5238,12 +6013,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5270,12 +6050,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5302,12 +6087,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5334,12 +6124,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5366,12 +6161,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5398,12 +6198,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5430,12 +6235,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5462,12 +6272,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5494,12 +6309,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5526,12 +6346,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5558,12 +6383,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5590,12 +6420,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5622,12 +6457,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5654,12 +6494,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5686,12 +6531,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5718,12 +6568,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5750,12 +6605,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5782,12 +6642,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5814,12 +6679,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5846,12 +6716,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5878,12 +6753,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5910,12 +6790,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5942,12 +6827,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -5974,12 +6864,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6006,12 +6901,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6038,12 +6938,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6070,12 +6975,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6102,12 +7012,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6134,12 +7049,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6166,12 +7086,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6198,12 +7123,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6230,12 +7160,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6262,12 +7197,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6294,12 +7234,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6326,12 +7271,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6358,12 +7308,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6390,12 +7345,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-48 (b6f7060): forty-fourth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 43rd
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6422,12 +7382,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6454,12 +7419,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6486,12 +7456,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6518,12 +7493,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6550,12 +7530,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6582,12 +7567,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6614,12 +7604,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6646,12 +7641,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6678,12 +7678,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6710,12 +7715,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6742,12 +7752,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6774,12 +7789,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6806,12 +7826,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6838,12 +7863,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6870,12 +7900,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6902,12 +7937,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6934,12 +7974,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6966,12 +8011,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -6998,12 +8048,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7030,12 +8085,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7062,12 +8122,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7094,12 +8159,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7126,12 +8196,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7158,12 +8233,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7190,12 +8270,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7222,12 +8307,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7254,12 +8344,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7286,12 +8381,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7318,12 +8418,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7350,12 +8455,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7382,12 +8492,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7414,12 +8529,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7446,12 +8566,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7478,12 +8603,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7510,12 +8640,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7542,12 +8677,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7574,12 +8714,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7606,12 +8751,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7638,12 +8788,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7670,12 +8825,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7702,12 +8862,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7734,12 +8899,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7766,12 +8936,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7798,12 +8973,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7830,12 +9010,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7862,12 +9047,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7894,12 +9084,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7926,12 +9121,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7958,12 +9158,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -7990,12 +9195,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8022,12 +9232,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8054,12 +9269,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8086,12 +9306,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8118,12 +9343,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8150,12 +9380,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8182,12 +9417,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8214,12 +9454,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8246,12 +9491,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8278,12 +9528,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8310,12 +9565,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8342,12 +9602,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8374,12 +9639,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8406,12 +9676,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8438,12 +9713,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-46 (ca4fd67): forty-second lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 41st
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8470,12 +9750,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8502,12 +9787,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8534,12 +9824,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8566,12 +9861,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8598,12 +9898,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8630,12 +9935,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8662,12 +9972,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8694,12 +10009,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8726,12 +10046,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8758,12 +10083,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8790,12 +10120,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8822,12 +10157,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8854,12 +10194,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8886,12 +10231,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8918,12 +10268,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8950,12 +10305,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -8982,12 +10342,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9014,12 +10379,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9046,12 +10416,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9078,12 +10453,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9110,12 +10490,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9142,12 +10527,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9174,12 +10564,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9206,12 +10601,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9238,12 +10638,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9270,12 +10675,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9302,12 +10712,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9334,12 +10749,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9366,12 +10786,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9398,12 +10823,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9430,12 +10860,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9462,12 +10897,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9494,12 +10934,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9526,12 +10971,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9558,12 +11008,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9590,12 +11045,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9622,12 +11082,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9654,12 +11119,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9686,12 +11156,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9718,12 +11193,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9750,12 +11230,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9782,12 +11267,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9814,12 +11304,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9846,12 +11341,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9878,12 +11378,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9910,12 +11415,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9942,12 +11452,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -9974,12 +11489,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10006,12 +11526,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10038,12 +11563,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10070,12 +11600,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10102,12 +11637,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10134,12 +11674,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10166,12 +11711,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10198,12 +11748,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10230,12 +11785,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10262,12 +11822,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10294,12 +11859,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10326,12 +11896,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10358,12 +11933,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10390,12 +11970,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10422,12 +12007,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10454,12 +12044,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10486,12 +12081,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-48 (b6f7060): forty-fourth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 43rd
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10518,12 +12118,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10550,12 +12155,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10582,12 +12192,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10614,12 +12229,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10646,12 +12266,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10678,12 +12303,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10710,12 +12340,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10742,12 +12377,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10774,12 +12414,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10806,12 +12451,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10838,12 +12488,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10870,12 +12525,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10902,12 +12562,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10934,12 +12599,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10966,12 +12636,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -10998,12 +12673,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11030,12 +12710,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11062,12 +12747,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11094,12 +12784,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11126,12 +12821,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11158,12 +12858,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11190,12 +12895,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11222,12 +12932,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11254,12 +12969,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11286,12 +13006,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11318,12 +13043,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11350,12 +13080,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11382,12 +13117,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11414,12 +13154,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11446,12 +13191,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11478,12 +13228,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11510,12 +13265,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11542,12 +13302,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11574,12 +13339,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11606,12 +13376,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11638,12 +13413,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11670,12 +13450,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11702,12 +13487,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11734,12 +13524,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11766,12 +13561,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11798,12 +13598,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11830,12 +13635,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11862,12 +13672,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11894,12 +13709,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11926,12 +13746,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11958,12 +13783,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -11990,12 +13820,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12022,12 +13857,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12054,12 +13894,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12086,12 +13931,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12118,12 +13968,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12150,12 +14005,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12182,12 +14042,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12214,12 +14079,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12246,12 +14116,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12278,12 +14153,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12310,12 +14190,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12342,12 +14227,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12374,12 +14264,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12406,12 +14301,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12438,12 +14338,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12470,12 +14375,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12502,12 +14412,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12534,12 +14449,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-47 (3eaa115): forty-third lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 42nd
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12566,12 +14486,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12598,12 +14523,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12630,12 +14560,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12662,12 +14597,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12694,12 +14634,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12726,12 +14671,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12758,12 +14708,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12790,12 +14745,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12822,12 +14782,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12854,12 +14819,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12886,12 +14856,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12918,12 +14893,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12950,12 +14930,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -12982,12 +14967,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13014,12 +15004,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13046,12 +15041,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13078,12 +15078,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13110,12 +15115,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13142,12 +15152,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13174,12 +15189,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13206,12 +15226,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13238,12 +15263,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13270,12 +15300,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13302,12 +15337,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13334,12 +15374,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13366,12 +15411,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13398,12 +15448,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13430,12 +15485,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13462,12 +15522,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13494,12 +15559,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13526,12 +15596,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13558,12 +15633,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13590,12 +15670,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13622,12 +15707,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13654,12 +15744,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13686,12 +15781,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13718,12 +15818,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13750,12 +15855,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13782,12 +15892,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13814,12 +15929,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13846,12 +15966,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13878,12 +16003,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13910,12 +16040,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13942,12 +16077,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -13974,12 +16114,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14006,12 +16151,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14038,12 +16188,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14070,12 +16225,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14102,12 +16262,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14134,12 +16299,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14166,12 +16336,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14198,12 +16373,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14230,12 +16410,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14262,12 +16447,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14294,12 +16484,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14326,12 +16521,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14358,12 +16558,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14390,12 +16595,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14422,12 +16632,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14454,12 +16669,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14486,12 +16706,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14518,12 +16743,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14550,12 +16780,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14582,12 +16817,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-48 (b6f7060): forty-fourth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 43rd
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14614,12 +16854,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14646,12 +16891,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14678,12 +16928,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14710,12 +16965,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14742,12 +17002,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14774,12 +17039,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14806,12 +17076,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14838,12 +17113,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14870,12 +17150,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14902,12 +17187,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14934,12 +17224,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14966,12 +17261,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -14998,12 +17298,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15030,12 +17335,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15062,12 +17372,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15094,12 +17409,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15126,12 +17446,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15158,12 +17483,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15190,12 +17520,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15222,12 +17557,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15254,12 +17594,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15286,12 +17631,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15318,12 +17668,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15350,12 +17705,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15382,12 +17742,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15414,12 +17779,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15446,12 +17816,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15478,12 +17853,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15510,12 +17890,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15542,12 +17927,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15574,12 +17964,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15606,12 +18001,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15638,12 +18038,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15670,12 +18075,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15702,12 +18112,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15734,12 +18149,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15766,12 +18186,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15798,12 +18223,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15830,12 +18260,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15862,12 +18297,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15894,12 +18334,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15926,12 +18371,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15958,12 +18408,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -15990,12 +18445,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16022,12 +18482,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16054,12 +18519,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16086,12 +18556,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16118,12 +18593,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16150,12 +18630,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16182,12 +18667,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16214,12 +18704,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16246,12 +18741,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16278,12 +18778,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16310,12 +18815,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16342,12 +18852,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16374,12 +18889,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16406,12 +18926,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16438,12 +18963,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16470,12 +19000,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16502,12 +19037,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16534,12 +19074,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16566,12 +19111,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16598,12 +19148,17 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
@@ -16630,9 +19185,14 @@ exit 0; live census). Never self-judge the village done.
   resident tail shows only hermes NPC circuit chatter; queue dry 53rd tick,
   held per the lane's law — no model changed, live village untouched by this
   lane.
-- lift-58 (this): fifty-fourth lean hold — steady state holds: no new lane
+- lift-58 (419c330): fifty-fourth lean hold — steady state holds: no new lane
   commits (forge fix already banked as tex-86 last tick), gate ALL PASS
   (register 3 OPEN expected), census ALL GREEN 53rd consecutive on the
   truthed instrument, no new [bill ding] lines, resident tail still hermes NPC
   circuit chatter only; queue dry 54th tick, held per the lane's law — no
   model changed, live village untouched by this lane.
+- lift-59 (this): fifty-fifth lean hold — steady state holds: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 54th
+  consecutive on the truthed instrument, no new [bill ding] lines, resident
+  tail still NPC circuit chatter only; queue dry 55th tick, held per the
+  lane's law — no model changed, live village untouched by this lane.
