@@ -82,5 +82,43 @@ const gate = sh(`bun ${W}/agents/arthur/verify-repairs.ts`);
 ck("standing gate verify-repairs.ts ALL PASS", !/\nFAIL /.test("\n" + gate) && gate.includes("PASS"), (gate.match(/FAIL .*/g) ?? []).slice(0, 2).join(";"));
 ck("control.json absent (channel idle; existsSync)", !existsSync(`${W}/agents/arthur/control.json`));
 
+// ---- E. ROLLOUT SENTINEL (polish-39; env-gated live read) ----
+// Default runs stay OFFLINE (this section skips). With POLISH_LIVE=1 the
+// verifier performs the same read-only /geom GET the standing gate does,
+// reads the LIVE carousel + welcome + mapboard libs, and reports rollout
+// state against the register items:
+//   carousel: cd22d0b0 = defect (old low roof) still LIVE → register OPEN
+//             38fbbc26 = staged build ROLLED → close the register item
+//   welcome:  != 62746d1a = lamp not yet rolled; == → close that item
+//   mapboard: e732ce10 = live pin; b77ef40a = tower chip rolled
+// The sentinel only READS; it never places.
+if (process.env.POLISH_LIVE === "1") {
+    try {
+        const cfg = JSON.parse(readFileSync(`${W}/agents/arthur/config.json`, "utf8"));
+        const httpBase = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
+        const res = await fetch(`${httpBase}/geom?world=${cfg.world}&boxes=0`);
+        if (!res.ok) throw new Error(`geom ${res.status}`);
+        const d: any = await res.json();
+        const ents: any[] = Array.isArray(d?.entities) ? d.entities : Object.values(d?.entities ?? {});
+        const libOf = (id: string) => ents.find((e: any) => e?.id === id)?.lib ?? "(absent)";
+        const car = libOf("av-carousel");
+        const wel = libOf("av-welcome");
+        const map = libOf("av-mapboard");
+        console.log(`SENTINEL live libs: carousel=${car} welcome=${wel} mapboard=${map}`);
+        if (car === "store/cd22d0b09e70bebc.glb") console.log("SENTINEL carousel: defect still LIVE (old low roof) — register OPEN correct");
+        else if (car === "store/38fbbc26dcdfcc1a.glb") console.log("SENTINEL carousel: staged build ROLLED — CLOSE the roof+paint register items");
+        else console.log(`SENTINEL carousel: UNKNOWN build ${car} — investigate before touching the register`);
+        if (wel === "store/62746d1af698eacc.glb") console.log("SENTINEL welcome: lamp ROLLED — CLOSE the welcome register item");
+        else console.log("SENTINEL welcome: lamp not yet rolled — register OPEN correct");
+        if (map === "store/b77ef40aae3a9dae.glb") console.log("SENTINEL mapboard: tower chip ROLLED live");
+        else if (map === "store/e732ce10400c1979.glb") console.log("SENTINEL mapboard: live pin e732ce10 stands (chip staged)");
+        else console.log(`SENTINEL mapboard: UNKNOWN build ${map} — investigate`);
+    } catch (e: any) {
+        console.log(`SENTINEL live read failed (non-fatal): ${e?.message ?? e}`);
+    }
+} else {
+    console.log("SENTINEL skipped (offline default; set POLISH_LIVE=1 for the live rollout check)");
+}
+
 console.log(fails.length ? `${fails.length} FAIL` : "ALL PASS");
 process.exit(fails.length ? 1 : 0);

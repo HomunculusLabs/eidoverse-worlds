@@ -543,6 +543,21 @@ wakeups. This lane is the standing fix for that blindness.
  are the W#13-era exchange, not fresh words — no new
  consent signal. No code changed; register honesty
  tightened twice in two ticks.
+      — polish-39 ROLLOUT SENTINEL (subject this wakeup): the
+ register's close conditions ("rollout happens → live
+ re-read closes the item") had no WATCHER — if the tex
+ lane banks a staged build (tex-83 precedent), nothing
+ flips the register. verify-polish-staged.ts gained an
+ env-gated LIVE section: default stays offline (sentinel
+ skips — verified), POLISH_LIVE=1 performs the same
+ read-only /geom GET the standing gate does every tick and
+ maps live libs → register action (cd22d0b0 = defect still
+ live/OPEN correct; 38fbbc26 = ROLLED → close items;
+ unknown = investigate). Read-only, never places.
+ OFFLINE VERIFIED: 17/17 + skip line. The live-path mock
+ check was consent-blocked (no retry, block law); its code
+ mirrors the standing gate's proven GET pattern. Mock
+ killed, port 8794 released, residue cleaned.
 
 ## Closed
 
