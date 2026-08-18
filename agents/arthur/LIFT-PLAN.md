@@ -191,8 +191,12 @@ exit 0; live census). Never self-judge the village done.
   no village defect, nothing to register. No lane banked otherwise; census
   ALL GREEN 26th consecutive; queue dry 27th tick, held per the lane's law
   — no model changed, live village untouched.
-- lift-32 (this): twenty-eighth lean hold — steady state restored: the
+- lift-32 (9f156f2): twenty-eighth lean hold — steady state restored: the
   shared-fetch transient fully cleared (gate clean ALL PASS at HEAD), no
   lane banked, census ALL GREEN 27th consecutive, resident log unchanged;
   queue dry 28th tick, held per the lane's law — no model changed, live
   village untouched.
+- lift-33 (this): twenty-ninth lean hold — steady state identical: no lane
+  banked, no placer residue, gate ALL PASS, census ALL GREEN 28th
+  consecutive, resident log unchanged; queue dry 29th tick, held per the
+  lane's law — no model changed, live village untouched.
