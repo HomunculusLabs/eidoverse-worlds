@@ -274,6 +274,20 @@ wakeups. This lane is the standing fix for that blindness.
 	           a village map" at 6m. Staged evidence complete; live read
 	           stays with the tex lane's next live-evolution pass or
 	           consent rollout.
+      — polish-22 HORSE PAINT DAY-SPECTATE GATE (subject this wakeup;
+           register OPEN item pre-verified offline): render-carousel.py
+	           gained a DAY SPECTATE SET (day18/day10 front+threeq —
+	           the exact distances the live reads failed at, plain-sky
+	           charitable case). Vision gates: 18m front PASS (3 paint
+	           families separable, dark-blue clearly distinct from bone,
+	           "vary in color not uniform gray"), 18m threeq PASS (all
+	           three families named, verdict "vary in color"), 10m
+	           front PASS (families separable, verdict "vary in
+	           color"). The staged paint widening HOLDS at both
+	           complaint distances in the charitable case — fog was the
+	           live confound. Item stays OPEN pending live read after
+	           consent rollout (fog unmodeled; render PASS is
+	           necessary-not-sufficient). 12 views total now.
 
 ## Closed
 

@@ -188,4 +188,14 @@ render("horse0-3q", (0.7, -0.15, 0.7), (0, 1, 0), (2, 2.9, 0), 1.3, 1.3, clip=(1
 # emissive lantern globes must read as distinct warm lights under a dark sky.
 render("night-front", (0, -0.22, 1), (0, 1, 0), (0, 3.0, 0), 4.6, 4.6, night=True)
 render("night-threeq", (0.7, -0.24, 0.7), (0, 1, 0), (0, 3.0, 0), 4.6, 4.6, night=True)
+# polish-22 DAY SPECTATE SET — pre-verifies the HORSE PAINT register item at
+# the exact distances the live reads failed (18m/10m, ~fog): eye_dir slightly
+# above horizontal, half-extent ~ distance * tan(30deg FOV/2). At 18m the
+# carousel spans ~10.4 half — rendered against plain sky so paint contrast is
+# the only signal (fog not modeled; plain-sky is the charitable case, so a
+# FAIL here would be a hard FAIL, a PASS is necessary-not-sufficient).
+render("day18-front", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
+render("day18-threeq", (0.7, -0.17, 0.7), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
+render("day10-front", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 5.8, 5.8)
+render("day10-threeq", (0.7, -0.17, 0.7), (0, 1, 0), (0, 2.6, 0), 5.8, 5.8)
 print("renders complete")
