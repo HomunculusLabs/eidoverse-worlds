@@ -588,6 +588,39 @@ wakeups. This lane is the standing fix for that blindness.
  would need the carousel vantage (joins Bill's post-
  rollout list).
 
+## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
+
+The staged package, its proofs, and the exact close path. Verify first:
+`POLISH_LIVE=1 bun agents/arthur/verify-polish-staged.ts` (offline 17 checks
++ live sentinel: reads live libs, maps to register action).
+
+1. **Carousel (register: ROOF TOO LOW + HORSE PAINT)** — staged
+   `38fbbc26dcdfcc1a` (491,384B; textured families + roof lift +0.45 + paint
+   widening + stair fix; regresses NOTHING over live cd22d0b0 — same
+   conversion state). Execute: `bun agents/arthur/assets/placecarousel.ts`
+   (proven 19/19 incl. 429 recovery + silent-drop survival; captures live
+   comp bag, rebuilds, uploads, re-applies ALL comps, verifies pose+lib).
+   Then: sentinel → roof+paint items flip CLOSED; live vision re-read
+   (18m/10m + fog) closes the HORSE PAINT visual confirm; carousel lanterns
+   item rides the same build.
+2. **Welcome lamp (register: NIGHT-UNREADABLE)** — staged
+   `62746d1af698eacc` (5 nodes, glow2 [1.5,.48,.10]). Execute:
+   `bun agents/arthur/assets/placewelcome.ts` (chassis-proven; live
+   av-welcome carries no comps — geometry-level emissive, nothing to
+   re-apply). Then: sentinel → welcome item CLOSED; after-read at the
+   banked crop coords (x998-1191, y572-609, ~5m night) shows the lamp.
+3. **Mapboard tower chip (staged, NO register item — cosmetic)** — staged
+   `b77ef40aae3a9dae`. Execute: `bun agents/arthur/assets/placemapboard.ts`
+   (proven 8/8; mapboard carries NO comps — pose + lib only). Then: sentinel
+   reports chip ROLLED; render-gated at 6m night (polish-21).
+4. **After any of the three**: re-run the standing gate; watch the tex
+   lane's next pins (they may bank these builds themselves — tex-83
+   precedent); ledger entry via ledger-append.py (landed deltas only).
+
+Order: welcome (cheapest, zero-comp) → mapboard → carousel (comp-heaviest).
+All three live-rollout executions remain consent-gated; the sentinel is
+read-only and runs freely.
+
 ## Closed
 
 - (none yet — first tick pending)
