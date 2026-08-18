@@ -1103,6 +1103,12 @@ wakeups. This lane is the standing fix for that blindness.
            (b) a harness whose abstraction cannot express a claim
            must say so, not force the gate.
 
+      — polish-83 LIVE SWEEP #6 (subject this wakeup): fresh
+           read-only POLISH_LIVE=1 — all three subjects unchanged
+           (carousel cd22d0b0 defect live/OPEN correct, bag 6 comps
+           smoke still lost; welcome fa0c9d94 pre-lamp; mapboard
+           e732ce10 pin stands). Verifier 29/29 ALL PASS. Read-only.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
