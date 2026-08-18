@@ -2481,4 +2481,6 @@ fixes ≈ 6 F.)
 
 - [lift-11] THE SEVENTH HOLD (outer-village lift loop, wakeup 13): steady state green — no lane banked since lift-10, standing gate ALL PASS with the register back to its expected 3 OPEN (R-113's closure now recorded on align's side; the arc is closed on BOTH sides — registered from the summoner's report at lift-3, routed at lift-4, landed by align-3, residual spur healed by lift-10), census ALL GREEN a SIXTH consecutive tick on the truthed instrument, and the resident log carries only carousel social time ('so glad you came') — engagement, not defect reads; all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, seventh dry tick held honestly per the lane's own law — no model changed, the live village untouched by this lane (D+0, E+1)
 
-**Running total: 2368106 / 2000000**
+- [lift-12] THE EIGHTH HOLD (outer-village lift loop, wakeup 14): steady state green — HEAD is my own lift-11, no sibling lane banked work this window, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a SEVENTH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), and the resident log carries no new summoner reads (the last lines remain carousel social time; Bill said he's off at work); all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, eighth dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
+
+**Running total: 2368107 / 2000000**

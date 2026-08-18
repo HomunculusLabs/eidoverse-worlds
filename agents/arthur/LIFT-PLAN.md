@@ -99,6 +99,10 @@ exit 0; live census). Never self-judge the village done.
   radial 307.7° ending 0.55m from the new scaffold foot (14.02,−18.17),
   same spur idiom; deterministic 5357b28a ×2, live rollout (pin refreshed
   with trail bf157803 → 5357b28a), gate ALL PASS.
-- lift-11 (this): lean hold — census ALL GREEN 6th consecutive, gate ALL
+- lift-11 (638b7cf): lean hold — census ALL GREEN 6th consecutive, gate ALL
   PASS, register back to 3 OPEN (R-113 close recorded), no new evidence
   (carousel social time); the R-113 arc is fully closed on both sides.
+- lift-12 (this): eighth lean hold — steady state again: no lane banked,
+  gate ALL PASS, census ALL GREEN 7th consecutive, resident log unchanged
+  (no new reads; Bill said he's off at work); queue dry 8th tick, held per
+  the lane's law — no model changed, live village untouched.
