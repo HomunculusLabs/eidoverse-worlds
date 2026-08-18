@@ -201,7 +201,7 @@ ck("comp placers intact", existsSync(`${A}/place-smoke.ts`) && existsSync(`${A}/
 // --- git state ---
 try {
     const head = execSync("git log --oneline -1", { cwd: W, encoding: "utf8" }).trim();
-    ck("HEAD is a repair/tex/audit/refine/polish/plaza commit", /^[\da-f]+ (repair-\d|tex-\d|audit-\d|refine-\d|polish-\d|plaza-\d)/.test(head), head);
+    ck("HEAD is a repair/tex/audit/refine/polish/plaza/lift commit", /^[\da-f]+ (repair-\d|tex-\d|audit-\d|refine-\d|polish-\d|plaza-\d|lift-\d)/.test(head), head);
 } catch { console.log("INFO git check unavailable (guard) — skipped"); }
 
 console.log(fail ? `${fail} FAILURE(S)` : "ALL PASS");

@@ -320,6 +320,14 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - STATUS: OPEN — source fix staged, live confirmation pending network
   consent.
 
+### [OPEN->STAGED] COURT ROOFS COVERS NEITHER SHED — both gables stacked at court center over the yard (lift-1, 2026-08-18; source fix staged same tick)
+
+- Entity: av-court, live pose (21, 0, -15.3), live lib `store/ac75f33cab3fb5ce.glb` (tex-82 build, verify-repairs.ts:38).
+- Evidence: (a) summoner's in-world report 2026-08-18 (resident.log, walked with Arthur to the bakery): "the roof is wonky. It doesn't cover both units here. also lots of objects are outside the bakery" — Bill's camera, not a probe; (b) source decode of the live-pinned build: roof slabs `ct3_6`/`ct3_9` span x [-3.05,+3.05], gable ends `ct3_8` x [-2.70,+2.70] — but the two sheds stand at x=±3.4 spanning [-6.1,-0.7] and [+0.7,+6.1]; both gable roofs sit mid-court over the open yard, covering neither unit; the yard furniture (cart, crates, workbench, display board) stands under open sky between/beside them.
+- Root cause: `gableRoof(g,...)` builds in PARENT frame with no x argument; mkv3-ring.ts called it twice on the court group whose two sheds are offset ±3.4 — the roof geometry was authored for one building per group, the court broke that assumption silently.
+- Fix staged (lift-1): `addRoofAt` helper — gableRoof into a scratch group, children reparented with the shed x baked in (pure parent-frame translation); bakery roof at x=-3.4, workshop at x=+3.4, same stone/ridge/rake/gable-end kit so the court reads as two sibling sheds of one build. Sibling GLBs byte-identical.
+- STATUS: OPEN — staged: source fix + verify-lift1.ts 8/8 ALL PASS (deterministic bb31e8a5, siblings byte-identical, 13/13 roof bins covered); placer place-lift1-court.ts staged (capture-then-reapply); live confirmation pending rollout consent.
+
 ### [OPEN] CAROUSEL ROOF TOO LOW — rider-head clearance ~0.08m at horse radius (audit-101, 2026-08-17; source fix staged polish-1)
 
 - Entity: av-carousel, pose (-18.8, 0, 25.9). Live lib `store/cd22d0b09e70bebc.glb` (tex lane pin, verify-tex69.ts:106 — CORRECTED polish-37: this entry previously cited audit-101-era `937fd0b6a9c07b5b.glb`; then RE-CORRECTED polish-38: my polish-37 note claimed "roof geometry unchanged between builds" — WRONG. Chronology: live `cd22d0b0` was rolled at tex-69 (daytime Aug 17), BEFORE the polish loop existed (21:43) — it carries the OLD LOW ROOF. The staged `38fbbc26` (current mkcarousel.ts: textured families + roof lift + paint widening + stair fix) carries the fix. Implication: live roof is still low (defect live, register correct), the staged rollout IS the close path, and it regresses nothing — the staged build is already texture-family converted, same as live).
