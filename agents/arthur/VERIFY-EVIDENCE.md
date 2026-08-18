@@ -2530,3 +2530,25 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-81 changed-paths evidence — 2026-08-18T00:38:42.072Z
+
+```
+PASS pre-state: row on disk is tex-81 build (7ec9fc54)
+PASS mkv3-ring.ts: row cottage rebuild deterministic + == live build (7ec9fc54b9d79897) — 7ec9fc54b9d79897
+PASS ring-safety: court + 5 converted builds byte-identical (2f2cacf9 + 3f8f9e6f/33369174/7f60f1f7/1790e181/4bfacdd7)
+PASS decode: timber present — timber,stone,glow2,plaster,glow4,glow5
+PASS timber ≡ house wallSpan's (buffer-compared)
+PASS fire emissive node survives
+PASS TEXCOORD_0 == POSITION on texMat buckets (heddle/cloth/jars/threads flat by design) — buckets 1
+PASS texture bytes < 400KB + GLB < 20MB — 40849B / 124.4KB
+PASS place-tex81-timber47.ts effect: row-cottage live, pose (-21,-15.3), smoke comp recovered — store/7ec9fc54b9d79897.glb
+PASS census anchors: hall + bunk current, woodyard untouched (approval block honored)
+PASS verify-tex81.ts present (committed, non-self-deleting)
+PASS verify-tex81.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-81 pin + tex-4 multi pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
