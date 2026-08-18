@@ -2741,4 +2741,6 @@ fixes ≈ 6 F.)
 
 - [mason-37] cheap hold — HEAD was my own mason-36 (sibling quiet since mason-35; no interleave this tick); fresh survey green (gate ALL PASS real exit 0, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
 
+- [mason-38] cheap hold covering stacked wakeups 7-9 (one batch entry per double-delivery precedent) — HEAD my mason-37, sibling quiet since mason-35; fresh survey green (gate ALL PASS real exit 0, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
+
 **Running total: 2368285 / 2000000**
