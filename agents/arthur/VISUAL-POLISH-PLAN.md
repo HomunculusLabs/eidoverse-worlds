@@ -1019,6 +1019,12 @@ wakeups. This lane is the standing fix for that blindness.
            BASE fog — heavy-fog extinction there is expected, not
            a defect).
 
+      — polish-78 LIVE SWEEP #5 (subject this wakeup): fresh
+           read-only POLISH_LIVE=1 — all three subjects unchanged
+           (carousel cd22d0b0 defect live/OPEN correct, bag 6 comps
+           smoke still lost; welcome fa0c9d94 pre-lamp; mapboard
+           e732ce10 pin stands). Verifier 28/28 ALL PASS. Read-only.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
