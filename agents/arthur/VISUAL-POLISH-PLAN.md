@@ -210,6 +210,21 @@ wakeups. This lane is the standing fix for that blindness.
 	           chips × 24), glow1 emissiveFactor [1.5, …]. Live rollout
 	           joins the consent-blocked queue (mapboard placer = same
 	           pattern as placecarousel; visual gate post-rollout).
+      — polish-17 MAPBOARD RENDER GATE (subject this wakeup): built
+           render-mapboard.py — the carousel rasterizer (polish-9/15)
+	           adapted to VERTEX-COLORED GLBs (reads COLOR_0 normalized
+	           bytes, gamma-decoded; the carousel renderer was material-
+	           table-driven). Night renders of the staged build: 20m
+	           spectate = honest FAIL (2.3m signpost ~64px, hearth ~7px —
+	           20m threshold is carousel-scale, not signpost-scale); 10m
+	           night approach = PASS: glowing hearth visible, pale ring +
+	           4 spokes distinct, 8 building dots readable, verdict "reads
+	           as a map of a village". READABILITY HORIZON recorded: the
+	           mapboard reads at ≤10m night (approach object; a signpost
+	           has no 20m duty). Live gate stays post-rollout (Bill's
+	           eye); probe-bug lesson carried: glTF indices accessor
+	           count = INDEX count (144 idx = 48 tris), not triangle
+	           count.
 
 ## Closed
 
