@@ -692,6 +692,20 @@ wakeups. This lane is the standing fix for that blindness.
            Full verifier incl. live sentinel: ALL PASS. The
            decoders stand armed for a real UNKNOWN; none arrived.
            No rollout, no verb — read-only throughout.
+      — polish-50 TOWER-CHIP DAY GATE (subject this wakeup): the
+           time-coverage audit continued — the mapboard chip was
+           vision-gated at NIGHT only (polish-21, 6m approach);
+           the day-close render existed for tri counts but never
+           got a day gate. Offline rasterizer, 4m day-close view:
+           VISION PASS — chip distinguishable as its own mark
+           (rectangular, uniform umber against the pale board;
+           strong day contrast), reads as a natural landmark, no
+           legibility cost. Pixel corroboration: 15290 dark-mark
+           px in the upper half — the map's marks read strong by
+           day. LAW: the staged chip is time-safe (night distinct
+           per polish-21 + day landmark per this gate); the
+           mapboard rollout keeps its green. No code changed;
+           staged b77ef40a unchanged.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
