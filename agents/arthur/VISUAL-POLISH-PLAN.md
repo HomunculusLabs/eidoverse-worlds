@@ -863,6 +863,17 @@ wakeups. This lane is the standing fix for that blindness.
            25/25 green. LAW: destructive checks must fail safe —
            back up before you overwrite what you pin.
 
+      — polish-65 LIVE SENTINEL SWEEP #2 (subject this wakeup):
+           15 wakeups since the last live read (p49); the tex lane
+           banked builds all night. Read-only POLISH_LIVE=1 run: all
+           three subjects UNCHANGED — carousel cd22d0b0 (defect
+           live, OPEN correct), welcome fa0c9d94 (3-way branch:
+           pre-lamp, OPEN correct), mapboard e732ce10 (pin stands,
+           chip staged). Full verifier incl. live sentinel + the
+           new rebuild-safety tier: 25/25 ALL PASS. The armed
+           decoders were ready for an UNKNOWN; none arrived. No
+           rollout, no verb — read-only throughout.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
