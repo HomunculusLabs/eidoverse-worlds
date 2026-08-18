@@ -23,6 +23,9 @@ const state: any = {
         { id: "av-car-l1", pos: [-18.8, 3.2, 25.9], color: 0xffb066, intensity: 2.8, range: 7 },
         { id: "av-car-l2", pos: [-18.8, 1.6, 25.9], color: 0xffd09a, intensity: 1.8, range: 5 },
         { id: "av-unrelated", lib: "store/other.glb", pos: [1, 0, 1], yaw: 0 },
+        // polish-18: the mapboard mock entity (bare — the real av-mapboard
+        // carries no comps; live pose (1.6, 8.5) yaw 0 from tex-61's pin)
+        { id: "av-mapboard", lib: "store/oldmaphash.glb", pos: [1.6, 0, 8.5], yaw: 0 },
     ],
 };
 
@@ -47,13 +50,14 @@ const server = Bun.serve({
                     console.log("[mock] SILENT DROP of first comp verb (no ack) — watchdog must re-send");
                     return;
                 }
-                if (verb === "spawn" && args?.id === "av-carousel") {
-                    const car = state.entities.find((e: any) => e.id === "av-carousel");
-                    car.lib = args.lib; car.pos = args.pos; car.yaw = args.yaw; car.comp = {};
+                if (verb === "spawn") {
+                    const e = state.entities.find((x: any) => x.id === args?.id);
+                    if (e) { e.lib = args.lib; e.pos = args.pos; e.yaw = args.yaw; e.comp = {}; }
+                    else state.entities.push({ id: args.id, lib: args.lib, pos: args.pos, yaw: args.yaw, comp: {} });
                 }
-                if (verb === "comp" && args?.id === "av-carousel") {
-                    const car = state.entities.find((e: any) => e.id === "av-carousel");
-                    car.comp[args.type] = { data: args.data };
+                if (verb === "comp") {
+                    const e = state.entities.find((x: any) => x.id === args?.id);
+                    if (e) e.comp[args.type] = { data: args.data };
                 }
                 ws.send(JSON.stringify({ type: "log", ok: true, verb }));
             }
