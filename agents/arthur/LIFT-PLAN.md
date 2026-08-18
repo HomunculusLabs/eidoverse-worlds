@@ -141,7 +141,11 @@ exit 0; live census). Never self-judge the village done.
   (Post-commit gate re-run tripped only on the align lane's in-flight
   probe-align8.ts — known shared-lane transient, self-resolved by next
   tick, confirmed cleared.)
-- lift-21 (this): seventeenth lean hold — steady state identical: no lane
+- lift-21 (edb25df): seventeenth lean hold — steady state identical: no lane
   banked (align transient cleared), gate ALL PASS, census ALL GREEN 16th
   consecutive, resident log unchanged; queue dry 17th tick, held per the
   lane's law — no model changed, live village untouched.
+- lift-22 (this): eighteenth lean hold — steady state identical: no lane
+  banked, gate ALL PASS, census ALL GREEN 17th consecutive, resident log
+  unchanged; queue dry 18th tick, held per the lane's law — no model
+  changed, live village untouched.
