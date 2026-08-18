@@ -2621,3 +2621,25 @@ FAIL git tree clean for this lane's paths
 1 FAIL
 
 ```
+
+## tex-82 changed-paths evidence — 2026-08-18T00:48:15.972Z
+
+```
+PASS pre-state: court on disk is tex-82 build (ac75f33c)
+PASS mkv3-ring.ts: court rebuild deterministic + == live build (ac75f33cab3fb5ce) — ac75f33cab3fb5ce
+PASS ring-safety: all 6 converted siblings byte-identical (3f8f9e6f/33369174/7f60f1f7/1790e181/4bfacdd7/7ec9fc54)
+PASS decode: timber + iron + stone present — timber,stone,plaster,glow3,iron,glow5,glow6,glow7
+PASS timber ≡ wallSpan's + iron ≡ forge's + stone ≡ kiln's (buffer-compared)
+PASS fire + fire2 emissive nodes survive
+PASS TEXCOORD_0 == POSITION on texMat buckets (loaves/sacks/hasps/stock flat by design) — buckets 3
+PASS texture bytes < 400KB + GLB < 20MB — 41606B / 207.8KB
+PASS place-tex82-timber48.ts effect: court live, pose (21,-15.3), smoke comp recovered — store/ac75f33cab3fb5ce.glb
+PASS census anchors: hall + row current, woodyard untouched (approval block honored)
+PASS verify-tex82.ts present (committed, non-self-deleting)
+PASS verify-tex82.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-82 pin + tex-4 multi pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
