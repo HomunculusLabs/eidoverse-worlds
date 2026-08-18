@@ -432,7 +432,27 @@ wakeups. This lane is the standing fix for that blindness.
            frame (first model local, second world) — fixed with the
            explicit first-offset arg; one malformed comprehension line
            was caught by ast.parse and removed before any run (lint
-           discipline held).
+ discipline held).
+ — polish-32 CHAIN FOG GATE (subject this wakeup): the wayfinding
+ pair gated under the REAL confound — FogExp2 ported into
+ the mapboard rasterizer (village truth: 0x101828 / 0.018
+ base / 0.036 weather, core.js:115 + sky.js:798, same math
+ as polish-23). Honest arc: (1) first heavy-fog frame came
+ back 0 warm px — PIXEL DECODE caught my cam_dist=13.6
+ double-count (chain view's `center` IS the camera; zs
+ already camera-relative) — fixed to cam_dist=0. (2) Vision
+ read the buggy frame as "lantern not visible" (consistent
+ with the bug, not physics) and the corrected frame as
+ "pair reads" — pixel math and vision now cohere.
+ CORRECTED RESULTS: base fog (0.018): pair UNCHANGED (132
+ warm px, 2 clusters — identical to no-fog). Heavy fog
+ (0.036): near lamp 26→12 px (~6% physics loss at 7m), far
+ hearth dot intact (emissive 1.5 survives the ~40% blend at
+ 20m); vision verdict on the corrected frame: pair reads.
+ LAW: the wayfinding pair survives both baseline and 2x
+ weather fog offline; the near lamp is the fog-proof anchor
+ by geometry. Live fog-chain read joins Bill's list
+ post-rollout.
 
 ## Closed
 

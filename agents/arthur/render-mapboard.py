@@ -104,7 +104,14 @@ for ni in j["scenes"][j["scene"]]["nodes"]:
 
 print(f"triangles: {len(tris)}")
 
-def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=False):
+# polish-32: village fog color 0x101828
+FOGC = (16, 24, 40)
+
+def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=False, fog=None, cam_dist=None):
+    # polish-32 FOG GATE: fog = FogExp2 density (village truth core.js:115
+    # FogExp2(0x101828, 0.018), weather-scaled sky.js:798 0.018*a.fog).
+    # cam_dist = camera-to-center distance; per-tri factor = 1-exp(-(d*dist)^2)
+    # toward fog color 0x101828, exactly as the carousel rasterizer (polish-23).
     ex = eye_dir
     l = math.sqrt(sum(c*c for c in ex)); ex = tuple(-c/l for c in ex)
     bx = tuple(-c for c in ex)
@@ -149,6 +156,12 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=F
             else:
                 col = tuple(min(255, int(ch*lam)) for ch in base)
         xs = [a[0], bb[0], c[0]]; ys = [a[1], bb[1], c[1]]; zs = [a[2], bb[2], c[2]]
+        # polish-32 fog blend: FogExp2 toward (16,24,40), per-tri mean depth.
+        if fog is not None:
+            cd = cam_dist if cam_dist is not None else 0.0
+            dist = cd + (zs[0] + zs[1] + zs[2]) / 3.0
+            fr = 1.0 - math.exp(-((fog * max(dist, 0.0)) ** 2))
+            col = tuple(int(round(ch + (FOGC[ch_i] - ch) * fr)) for ch_i, ch in enumerate(col))
         x0 = max(0, int((min(xs)+half_w)/(2*half_w)*W)); x1 = min(W-1, int((max(xs)+half_w)/(2*half_w)*W))
         y0 = max(0, int((min(ys)+half_h)/(2*half_h)*H)); y1 = min(H-1, int((max(ys)+half_h)/(2*half_h)*H))
         if x1 < x0 or y1 < y0: continue
@@ -258,4 +271,12 @@ if len(sys.argv) > 6 and sys.argv[3] == "chain":
     # camera: southern arrival at (0.8, ~1.6 eye, -12), looking N (+z); frame must hold
     # welcome (0,-5) near-bottom and mapboard (1.6,8.5) up-frame ~20m away.
     render("chain-night", (0, -0.10, -1), (0, 1, 0), (0.8, 1.6, -12), 8.0, 5.2, night=True)
+    # polish-32 FOG GATE on the chain: same arrival view under the REAL
+    # village fog (0.018 base, core.js:115) and a 2x weather case (0.036).
+    # NOTE: in the chain view `center` IS the camera position, so zs is
+    # already camera-relative depth — cam_dist stays 0 (the first patch
+    # passed 13.6 and double-counted; pixel decode caught it: heavy fog
+    # showed 0 warm px where physics allows the near lamp at ~6% loss).
+    render("chain-fog-base", (0, -0.10, -1), (0, 1, 0), (0.8, 1.6, -12), 8.0, 5.2, night=True, fog=0.018, cam_dist=0.0)
+    render("chain-fog-heavy", (0, -0.10, -1), (0, 1, 0), (0.8, 1.6, -12), 8.0, 5.2, night=True, fog=0.036, cam_dist=0.0)
 print("renders complete")
