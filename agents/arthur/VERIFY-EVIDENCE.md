@@ -2308,3 +2308,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-78 closing evidence — 2026-08-18T00:11:42.275Z
+
+```
+PASS mkv3-ring.ts pre-state: tower = tex-78 build (7f60f1f7)
+PASS mkv3-ring.ts: tower rebuild deterministic ×2 + == live build (7f60f1f7a5794411) — 7f60f1f7a5794411
+PASS mkv3-ring.ts ring-safety: 4 siblings + hall + longhouse byte-identical
+PASS mkv3-ring.ts decode: timber present + flame node + 3 glow buckets (MERGED-STATICS)
+PASS mkv3-ring.ts byte-family: timber ≡ wallSpan's (buffer-compared)
+PASS place-tex78-timber44.ts effect: tower-house live, pose (-8,24.7), sockets comp recovered — store/7f60f1f7a5794411.glb
+PASS census: hall + longhouse current, woodyard untouched (approval block honored)
+PASS verify-tex78.ts present (committed, non-self-deleting)
+PASS verify-tex78.ts runs 0 / ALL PASS — code=0
+PASS all three listed one-shots consumed (-confirm, -final, -paths absent)
+PASS evidence log carries all their committed records (changed-paths b983ed7 / confirmation 84a8158 / final e1b6e7f)
+PASS verify-repairs.ts 0 / ALL PASS (tex-78 pin + ledger EXACT + HEAD gate) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
