@@ -18,7 +18,12 @@ const state: any = {
             "motion:horse_0": { data: { type: "bob", amp: 0.18, period: 2.4, phase: 0 } },
             "motion:horse_2": { data: { type: "bob", amp: 0.18, period: 2.4, phase: 1.57 } },
             "sockets": { data: { horse_0: { pos: [2, 1.97, 0], yaw: Math.PI, part: "horse_0" } } },
-            "particles:smoke": { data: { rate: 3 } },
+            // polish-57 MOCK FIDELITY: the mock carried the pre-polish-45 shape
+            // (smoke present, {rate:3} — a stub authored before the live census).
+            // Today's REAL live bag is 6 comps, smoke LOST at tex-69 — the mock
+            // now mirrors that exactly, so future dry-runs exercise a capture
+            // that matches production (and the KNOWN_BAG heal fires against it).
+            // (horse_4/6 omitted as before — the mock stays minimal.)
         } },
         { id: "av-car-l1", pos: [-18.8, 3.2, 25.9], color: 0xffb066, intensity: 2.8, range: 7 },
         { id: "av-car-l2", pos: [-18.8, 1.6, 25.9], color: 0xffd09a, intensity: 1.8, range: 5 },
