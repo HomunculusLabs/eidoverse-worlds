@@ -883,6 +883,18 @@ wakeups. This lane is the standing fix for that blindness.
            yaw 0). First run green — verifier now 26/26; the
            placer tier has behaviorals for both zero-comp subjects.
 
+      — polish-67 DEFECT-BRANCH BAG CENSUS (subject this wakeup):
+           the sentinel's defect-live branch reported the lib hash
+           alone (p54 gave the bag census only to the ROLLED
+           branch) — a tex-lane re-place dropping MORE comps (below
+           the known 6) would surface nowhere, and the smoke item's
+           close condition ("bag reads 7") was invisible. The
+           defect branch now censuses the live bag every sweep and
+           flags COMP LOSS below 6. LIVE-PROVEN first run: "live
+           bag 6 comps, smoke still lost (heal rides rollout)" —
+           matching the p45 census exactly. Offline sub-branch:
+           a 4-comp bag flags loss.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:

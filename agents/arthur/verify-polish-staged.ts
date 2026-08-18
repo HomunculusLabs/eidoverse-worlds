@@ -237,7 +237,16 @@ console.log("H3=" + (JSON.stringify(dc.origin)==="[5,6.3,-10]" && !("originLocal
             const wel = libOf("av-welcome");
             const map = libOf("av-mapboard");
             console.log(`SENTINEL live libs: carousel=${car} welcome=${wel} mapboard=${map}`);
-            if (car === "store/cd22d0b09e70bebc.glb") console.log("SENTINEL carousel: defect still LIVE (old low roof) — register OPEN correct");
+            if (car === "store/cd22d0b09e70bebc.glb") {
+                // polish-67: the defect branch now censuses the live comp bag
+                // too — a re-place dropping MORE comps (below the known 6)
+                // must surface here, and the smoke item's close condition
+                // ("bag reads 7") is visible every sweep.
+                const carEnt0 = ents.find((e: any) => e?.id === "av-carousel");
+                const bag = Object.keys(carEnt0?.comp ?? {});
+                const smoke0 = bag.includes("particles:smoke");
+                console.log(`SENTINEL carousel: defect still LIVE (old low roof) — register OPEN correct; live bag ${bag.length} comps${bag.length < 6 ? " — COMP LOSS vs the known 6, investigate" : ""}, smoke ${smoke0 ? "present" : "still lost (heal rides rollout)"}`);
+            }
             else if (car === "store/38fbbc26dcdfcc1a.glb") {
                 // polish-54: split advice — the smoke item is COMP-level with
                 // its own close condition (bag reads 7); a lane banking our
