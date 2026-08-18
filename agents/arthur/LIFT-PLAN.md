@@ -224,9 +224,14 @@ exit 0; live census). Never self-judge the village done.
   banked, no placer residue, gate ALL PASS, census ALL GREEN 34th
   consecutive, resident log unchanged; queue dry 35th tick, held per the
   lane's law — no model changed, live village untouched.
-- lift-40 (this): thirty-sixth lean hold — steady state identical: no lane
+- lift-40 (8a6286f): thirty-sixth lean hold — steady state identical: no lane
   banked, gate ALL PASS, census ALL GREEN 35th consecutive, resident log
   unchanged. Note: fresh GLB builds of the staged trio (carousel/welcome/
   mapboard) now sit newest in assets — still Bill's-call subjects, skipped
   per the loop's own rule; queue dry 36th tick, held per the lane's law —
   no model changed, live village untouched.
+- lift-41 (this): thirty-seventh lean hold — steady state identical: no
+  lane banked, staged-trio GLBs still newest in assets (skipped,
+  Bill's-call), gate ALL PASS, census ALL GREEN 36th consecutive, resident
+  log unchanged; queue dry 37th tick, held per the lane's law — no model
+  changed, live village untouched.
