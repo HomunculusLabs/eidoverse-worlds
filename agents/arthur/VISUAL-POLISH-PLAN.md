@@ -470,6 +470,21 @@ wakeups. This lane is the standing fix for that blindness.
  placer (carousel 19/19, mapboard 8/8) proved this chassis
  incl. 429 recovery + silent-drop survival. Staged build
  62746d1af698eacc unchanged; live world untouched.
+ — polish-34 PERSISTENT VERIFIER (subject this wakeup): the lane
+ gains its first committed standing verifier —
+ verify-polish-staged.ts (tex-lane pattern; NOT a one-shot;
+ reproducible via `bun agents/arthur/verify-polish-staged.ts`).
+ Covers the whole staged package offline in one command:
+ (A) three staged builds byte-exact (carousel 38fbbc26 /
+ mapboard b77ef40a / welcome 62746d1a) + mapboard/welcome
+ rebuild determinism; (B) GLB decodes (mapboard 24 nodes,
+ welcome 5, glow2 emissive [1.5,.48,.10]); (C) all three
+ placers present with contract markers + welcome helpers
+ pure; (D) standing gate + control idle. FIRST RUN: 17/17
+ ALL PASS. The staged package is now one-command verifiable
+ — the answer to the flag-cycle (persistent green artifact
+ instead of one-shot residue). No network, no mock (the
+ consent-blocked dry-run untouched).
 
 ## Closed
 
