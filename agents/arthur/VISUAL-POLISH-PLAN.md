@@ -809,6 +809,21 @@ wakeups. This lane is the standing fix for that blindness.
            @1502 + welcome NO-CHIP @371. Verifier now 24/24, first
            run green — every future run re-proves all three
            byte-decoders alongside the three heal behaviorals.
+      — polish-61 CAROUSEL NIGHT HORIZON (subject this wakeup): the
+           readability-horizon law covered the mapboard (~10m) but
+           never the carousel — the village's tallest, self-lit
+           structure. Distance ladder ADDED to render-carousel.py
+           (20/30/45m, night, base fog 0.018 scalar, cam_dist set —
+           the mapboard rasterizer's 4-tuple fog signature does NOT
+           apply here; caught by exec). PIXEL LADDER: 65/24/4 warm
+           px at 20/30/45m. VISION GRADES: 30m = BEACON (individual
+           lanterns distinguishable), 45m = GLOW (faint smudge,
+           threshold). LAW: the carousel's night horizon is ~30m
+           BEACON / ~45m GLOW — triple the mapboard's, as expected
+           for an 8-lantern self-lit structure. The staged lantern
+           package reads as a village beacon at real approach
+           distances. (Plan record one commit late again — the
+           anchor lived in the commit message; verify block caught.)
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
