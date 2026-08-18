@@ -2351,3 +2351,24 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-79 final evidence — 2026-08-18T00:18:45.413Z
+
+```
+PASS mkv3-ring.ts pre-state: garden = tex-79 build (1790e181)
+PASS mkv3-ring.ts: garden rebuild deterministic ×2 + == live build (1790e1816f08b85e) — 1790e1816f08b85e
+PASS mkv3-ring.ts ring-safety: 3 siblings + hall + longhouse + tower byte-identical
+PASS mkv3-ring.ts decode: timber + stone + fire emissive present — timber,stone,glow2,plaster,glow4,glow5
+PASS mkv3-ring.ts byte-family: timber ≡ wallSpan's + stone ≡ kiln's (buffer-compared)
+PASS place-tex79-timber45.ts effect: garden-cottage live, pose (-21,15.3), smoke comp recovered — store/1790e1816f08b85e.glb
+PASS census: hall + tower current, woodyard untouched (approval block honored)
+PASS verify-tex79.ts present (committed, non-self-deleting)
+PASS verify-tex79.ts runs 0 / ALL PASS — code=0
+PASS prior one-shot consumed (hermes-verify-tex79-paths.ts absent)
+PASS evidence log carries its committed record (ba736f7)
+PASS verify-repairs.ts 0 / ALL PASS (tex-79 pin + tex-4 multi pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
