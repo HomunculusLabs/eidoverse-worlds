@@ -978,6 +978,20 @@ fresh (tower was never pinned). Persistent verifier `verify-tex78.ts`
 committed (18/18 ALL PASS). Ledger refine-310. Pin: tex-78 tower.
 TIMBER: 44th — the keeper's two rooms read on the village's boards.
 
+### [tex-79] TIMBER XLV + STONE XXII — the garden cottage (2026-08-18, resumed wakeup 19) — DONE
+Ring arc #4, first to extend OUTSIDE: kitchen counter + hearth, pot
+rail, basin stand, bed, table + leg, 3 garden planters, 2 trellis
+poles + crossbar, 2 tie beams on village timber; 4 stepping stones on
+ashlar (walked-surface chain: soil pavers at house door, ashlar slabs
+at garden scale). Pots/hooks/jars/basin/watering can stay flat
+(goods); crops/flowers/vines/berries stay flat (life); fire/flame/lamp
+stay emissive. tex-4 multi pin garden hash updated (first run's 1 FAIL
+was the stale multi pin — refreshed, not a defect). RING-SAFETY held:
+hall/longhouse/tower at their builds, 3 siblings byte-identical,
+garden backup refreshed. smoke comp recovered. Persistent verifier
+`verify-tex79.ts` committed (17/17 ALL PASS). Ledger refine-311. Pin:
+tex-79 garden. TIMBER: 45th; STONE: 22nd — kitchen to trellis.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
