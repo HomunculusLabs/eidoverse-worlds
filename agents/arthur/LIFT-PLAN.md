@@ -507,11 +507,19 @@ exit 0; live census). Never self-judge the village done.
   chatter only. Staged trio still Bill's-call. All four jank tiers
   exhausted at source. Queue dry 82nd tick — held: no model changed,
   live village untouched by this lane.
-- lift-87 (this): eighty-third lean hold — steady state. HEAD own
+- lift-87 (cab6abc): eighty-third lean hold — steady state. HEAD own
   lift-86, no lane banked. Gate ALL PASS, register 3 OPEN (R-107
   coop×fence expected). Census ALL GREEN 82nd consecutive: models
   21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities
   195 — zero drift. No new [bill ding] reads; resident tail NPC
   chatter only. Staged trio still Bill's-call. All four jank tiers
   exhausted at source. Queue dry 83rd tick — held: no model changed,
+  live village untouched by this lane.
+- lift-88 (this): eighty-fourth lean hold — steady state. HEAD own
+  lift-87, no lane banked. Gate ALL PASS, register 3 OPEN (R-107
+  coop×fence expected). Census ALL GREEN 83rd consecutive: models
+  21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities
+  195 — zero drift. No new [bill ding] reads; resident tail NPC
+  chatter only. Staged trio still Bill's-call. All four jank tiers
+  exhausted at source. Queue dry 84th tick — held: no model changed,
   live village untouched by this lane.
