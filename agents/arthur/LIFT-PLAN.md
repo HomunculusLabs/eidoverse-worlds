@@ -595,7 +595,7 @@ exit 0; live census). Never self-judge the village done.
   chatter only. Staged trio still Bill's-call. All four jank tiers
   exhausted at source. Queue dry 93rd tick — held: no model changed,
   live village untouched by this lane.
-- lift-98 (this): ninety-fourth lean hold — steady state. HEAD own
+- lift-98 (df40e67): ninety-fourth lean hold — steady state. HEAD own
   lift-97, no lane banked. Gate ALL PASS, register 3 OPEN (R-107
   coop×fence expected). Census ALL GREEN 93rd consecutive: models
   21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities
@@ -603,3 +603,18 @@ exit 0; live census). Never self-judge the village done.
   chatter only. Staged trio still Bill's-call. All four jank tiers
   exhausted at source. Queue dry 94th tick — held: no model changed,
   live village untouched by this lane.
+- lift-99 (this): MASON-FIELD LIFT — Bill's call unblocked the queue:
+  "check my current position, all of these models are messed up" then
+  "ohh yeah we need to fix the mason entries". Found him at (-35.8,39.5)
+  in the era-2 mason field: 78 av-mason-* works standing vertex-color-
+  only, outside every lane's instrument scope (gate pins 0 mason, census
+  counts without inspecting). Fixed at source: familymap.ts (seven
+  standing families, byte-family law — soil/timber/iron/weave params
+  corrected to verbatim standing values after first-draft drift),
+  masonretex.ts rebuilt all 60 slots deterministically (60/60 byte-
+  identical re-run), masonrollout.ts re-placed 60/60 same-id with comp
+  capture→reapply (10 comp bags), 60/60 live pins match. Register R-116
+  opened (lane-collision survey remains OPEN). Gate ALL PASS, census
+  ALL GREEN 94th consecutive, entities 195→200 (18 mason lights now
+  counted). Village models untouched. Next: lane-collision survey of
+  the 60 sites (R-116).

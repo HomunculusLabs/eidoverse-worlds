@@ -428,3 +428,4 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
   daemon's natural restart — resident lane owns that restart). Sweep after:
   73 entities, 135 pairs, 0 unclassified ALL CLEAR; verify-repairs.ts ALL
   PASS exit 0.
+- [ ] R-116 MASON FIELD UNTExTURED (Bill-confirmed 2026-08-18: "all of these models are messed up" at (-35.8,39.5)) — 78 av-mason-* works (60 slots + 18 lights) from the era-2 mason daemon stood vertex-color-only outside every lane's instrument scope; also collides with windmill approach lanes. FIX: familymap.ts + masonretex.ts rebuilt all 60 with the seven standing families (byte-family law verbatim params), masonrollout.ts re-placed 60/60 same-id with comp capture/reapply. OPEN: lane-collision survey of the 60 sites vs windmill/spoke lanes (next tick).
