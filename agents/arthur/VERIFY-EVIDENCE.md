@@ -2461,3 +2461,26 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-80 final evidence — 2026-08-18T00:31:22.985Z
+
+```
+PASS mkv3-ring.ts pre-state: bunk = tex-80 build (4bfacdd7)
+PASS mkv3-ring.ts: bunkhouse rebuild deterministic ×2 + == live build (4bfacdd739b9bd0e) — 4bfacdd739b9bd0e
+PASS mkv3-ring.ts ring-safety: 2 siblings + 4 converted builds byte-identical
+PASS mkv3-ring.ts decode: timber + fire emissive present — timber,stone,plaster,glow3,glow4
+PASS mkv3-ring.ts byte-family: timber ≡ wallSpan's (buffer-compared)
+PASS mkv3-ring.ts chains: TEXCOORD_0 == POSITION (bedding/goods flat by design) — buckets 1
+PASS mkv3-ring.ts sizes: tex < 400KB + GLB < 20MB — 40849B / 125.7KB
+PASS place-tex80-timber46.ts effect: bunkhouse live, pose (-8,-24.7), smoke comp recovered — store/4bfacdd739b9bd0e.glb
+PASS place-tex80-timber46.ts census: hall + garden current, woodyard untouched
+PASS verify-tex80.ts present (committed, non-self-deleting)
+PASS verify-tex80.ts runs 0 / ALL PASS — code=0
+PASS both prior one-shots consumed (-confirm, -paths absent)
+PASS evidence log carries both committed records (8e58fcb / 35a5c1c)
+PASS verify-repairs.ts 0 / ALL PASS (tex-80 pin + tex-4 multi pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
