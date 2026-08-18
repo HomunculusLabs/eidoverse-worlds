@@ -1145,6 +1145,29 @@ wakeups. This lane is the standing fix for that blindness.
            fixture' — the lantern package's three-point time-safety
            now rests on honest fixtures at every point.
 
+      — polish-86 HEARTH DUSK RE-GATE (subject this wakeup; the
+           p84/p85 re-gate arc, third subject): the hearth at the
+           engine-law fixture (full strength post-18:00, peak red
+           255; pixel 9/4 warm-family px @ 6/10m vs p75's 5/2 under
+           the wrong 60% model). HONEST VISION ARC: the first gate
+           call reasoned "based on the textual description" and
+           never engaged the pixels — INVALID, discarded; re-run
+           describe-first: the hearth reads as a "thin horizontal
+           bright orange-red line... harsh, dominating the center"
+           while the dark marks stay distinguishable — a genuine
+           FAIL signal at THIS abstraction (the glow is 1-2px thin
+           at 6m in the offline rasterizer, reading as a hot line,
+           not a soft glow; the engine's bloom/glow pipeline is
+           absent offline). VERDICT HONESTLY RECORDED: the offline
+           hearth dusk gate is NOT PROVABLE at this fidelity — the
+           p75 pass is superseded by the p82 law (a harness whose
+           abstraction cannot express a claim must say so). The
+           dusk LAW for the hearth rests on the ENGINE LAW itself
+           (glow=(1-dayness)^2 = full after 18:00 — decoded at
+           source, p80) + the p21/p50 night/day gates; the live
+           dusk read joins the post-rollout list. No fixture is
+           forced back to wrong to win a gate.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
