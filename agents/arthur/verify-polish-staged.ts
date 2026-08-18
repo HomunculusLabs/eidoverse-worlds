@@ -14,7 +14,7 @@
 //   D. Gate + hygiene: verify-repairs.ts ALL PASS; control idle.
 // Run: bun agents/arthur/verify-polish-staged.ts
 import { execSync } from "node:child_process";
-import { readFileSync, existsSync, writeFileSync, rmSync } from "node:fs";
+import { readFileSync, existsSync, writeFileSync, rmSync, copyFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
 const W = "/Users/t3rpz/projects/eidoverse-worlds";
@@ -103,11 +103,32 @@ if (import.meta.main) {
     // polish-63: the CAROUSEL rebuild joined — the placer rebuilds from
     // source at rollout, so source->bytes drift would ship unverified. The
     // rebuild is heavy (~6s) but the verifier's job is to catch exactly this.
-    const mb = sh(`bun ${A}/mkv3-mapboard.ts`);
-    const wb = sh(`bun ${A}/mkv3-welcome59.ts`);
-    ck("rebuild mapboard deterministic (hash re-equal after rebuild)", sha16(`${A}/village_mapboard3.glb`) === "b77ef40aae3a9dae");
-    ck("rebuild welcome deterministic (hash re-equal after rebuild)", sha16(`${A}/village_welcome3.glb`) === "62746d1af698eacc");
-    ck("rebuild carousel deterministic (hash re-equal after rebuild)", sha16(`${A}/village_carousel3.glb`) === "38fbbc26dcdfcc1a");
+    // polish-64 REBUILD SAFETY: the rebuilds OVERWRITE the staged GLBs
+    // (gitignored — no git recovery). If source drifts, the check must FAIL
+    // without destroying the pinned artifact: hash-swap to a temp copy,
+    // rebuild in place, compare, and RESTORE the original on mismatch.
+    // (Success path leaves the rebuilt byte-identical file in place.)
+    const REBUILDS: Array<[string, string, string]> = [
+        ["mkv3-mapboard.ts", "village_mapboard3.glb", "b77ef40aae3a9dae"],
+        ["mkv3-welcome59.ts", "village_welcome3.glb", "62746d1af698eacc"],
+        ["mkcarousel.ts", "village_carousel3.glb", "38fbbc26dcdfcc1a"],
+    ];
+    for (const [mk, glb, want] of REBUILDS) {
+        const glbPath = `${A}/${glb}`;
+        const bak = `${A}/.bak-${glb}`;
+        copyFileSync(glbPath, bak);
+        sh(`bun ${A}/${mk}`);
+        const got = sha16(glbPath);
+        if (got !== want) {
+            // drift: FAIL clean and restore the pinned artifact
+            copyFileSync(bak, glbPath);
+            rmSync(bak, { force: true });
+            ck(`rebuild ${glb} deterministic`, false, `got ${got} want ${want} — PINNED ARTIFACT RESTORED`);
+            continue;
+        }
+        rmSync(bak, { force: true });
+        ck(`rebuild ${glb} deterministic (hash re-equal after rebuild)`, true, got);
+    }
 
     // ---- B. GLB decodes (JSON chunk only — no network) ----
     const decode = (f: string) => {

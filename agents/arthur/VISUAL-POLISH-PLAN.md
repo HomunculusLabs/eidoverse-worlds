@@ -850,6 +850,19 @@ wakeups. This lane is the standing fix for that blindness.
            then added as a standing check. Verifier now 25/25 —
            all three staged builds re-prove determinism each run.
 
+      — polish-64 REBUILD SAFETY (subject this wakeup): p63's
+           addition exposed a hole in the verifier itself — the
+           rebuild checks OVERWRITE the staged GLBs (gitignored,
+           no git recovery); a source-drift FAIL would have already
+           DESTROYED the pinned artifact. Hash-swap safety added:
+           copy to .bak, rebuild in place, compare, RESTORE the
+           original on mismatch (success leaves the byte-identical
+           rebuild). All three rebuilds now run under the guard;
+           restore-path verified (corrupt-then-restore preserves
+           bytes, pinned hash intact); zero .bak residue. Verifier
+           25/25 green. LAW: destructive checks must fail safe —
+           back up before you overwrite what you pin.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
