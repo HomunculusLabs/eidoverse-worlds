@@ -2727,4 +2727,6 @@ fixes ≈ 6 F.)
 
 - [mason-30] cheap hold — dual-lane interleave clean (HEAD still my mason-29, sibling quiet this window; both lanes holding); fresh survey green (gate ALL PASS real exit 0 at 2fdd0bd, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding)); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
 
-**Running total: 2368284 / 2000000**
+- [mason-31] MASON-31 CHEAP HOLD: dual-lane interleave clean — sibling banked mason-29 (2fdd0bd) + mason-30 (f21ef81) since my mason-28; zero tag collisions across the window; deferred mason-28 verify probe executed this tick (10 PASS; single stale-HEAD artifact, not a defect). Survey green — gate ALL PASS real exit 0, guard 60/60 manifest-pinned + 23 lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0, law closes. Bill's two open calls unchanged: (1) which lane window closes, (2) R-118 fleet-shape (4 measured options, rescale recommended). Queue: (b) closed; (a) behind R-118; (c) blocked on (a). Field untouched (D+0, E+1)
+
+**Running total: 2368285 / 2000000**
