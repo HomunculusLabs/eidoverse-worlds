@@ -569,6 +569,24 @@ wakeups. This lane is the standing fix for that blindness.
  verifier incl. sentinel: ALL PASS. Read-only; no verb, no
  place, no comp — the gate's own GET class. The rollout
  watcher now stands proven both modes.
+      — polish-41 DEEP-NIGHT RE-READ (subject this wakeup): a second
+ time-point for the polish-36-closed night-balance box —
+ 01:57 full deep night, six hours past polish-12's 19:56
+ verdict, look-only from Bill's fixed camera. Pixel census:
+ ~7000 warm px, 4 distinct near lights (plaza hearth big
+ at 4-5 o'clock, two at 8-9, one at 11). Vision summary
+ read "unbalanced / dead-dark buildings" — DECODED before
+ declaring: this vantage (plaza south) differs from
+ polish-12's frame 2 (carousel), and dead-distant is the
+ lightrig 8-slot budget law (polish-12 frame 1: distant
+ lights outbid BY DESIGN, not broken). The observed
+ distance profile (near bright, far dimmed) is exactly
+ what the law predicts. VERDICT: consistent — no register
+ item; the closure stands on polish-12 + this
+ corroboration-by-law. HONEST CAVEAT: this is not a
+ same-vantage repeat; a true apples-to-apples re-read
+ would need the carousel vantage (joins Bill's post-
+ rollout list).
 
 ## Closed
 
