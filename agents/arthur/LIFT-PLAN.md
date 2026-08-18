@@ -161,8 +161,12 @@ exit 0; live census). Never self-judge the village done.
   banked, gate ALL PASS, census ALL GREEN 20th consecutive, resident log
   unchanged; queue dry 21st tick, held per the lane's law — no model
   changed, live village untouched.
-- lift-26 (this): twenty-second lean hold — align-8 banked (062d897) as
+- lift-26 (745fa81): twenty-second lean hold — align-8 banked (062d897) as
   tooling only (sweep promoted to standing tool, R-114 closed, no model
   touched, no live write → no candidate conflict); gate ALL PASS, census
   ALL GREEN 21st consecutive, resident log unchanged; queue dry 22nd tick,
   held per the lane's law — no model changed, live village untouched.
+- lift-27 (this): twenty-third lean hold — steady state identical: no lane
+  banked, gate ALL PASS, census ALL GREEN 22nd consecutive, resident log
+  unchanged; queue dry 23rd tick, held per the lane's law — no model
+  changed, live village untouched.
