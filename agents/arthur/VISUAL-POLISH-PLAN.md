@@ -365,6 +365,24 @@ wakeups. This lane is the standing fix for that blindness.
            class. QUEUED as next decode: re-capture at ≤5m and
            pixel-check for the bar stripe + arms before touching the
            source.
+      — polish-28 WELCOME BOARD NIGHT GATE (subject this wakeup): the
+           queued decode executed — render-mapboard.py made GLB-generic
+           (argv[2]; still mapboard-default) + 3 welcome views (5m
+           night / 5m day / 3m night, board faces N). VISION GATES:
+           5m NIGHT = FAIL — "plain board": name bar barely
+           discernible, arms don't read, and this is the CHARITABLE
+           case (no fog, ideal angle) → genuine polish-16-class
+           defect CONFIRMED, not a live under-read (vindicates the
+           polish-27 correction). 5m DAY = PASS — bar + all arms
+           read. So the defect is NIGHT-SPECIFIC: no emissive, no
+           lamp; the lightrig 8-slot budget leaves the S-rim board
+           dark at night. FIX DIRECTION (next build tick): the map
+           board's own medicine — a small emissive bar-glow (like
+           map_hearth) or a lamp over the board; village-native, one
+           material. Live re-capture failed this tick (Bill's camera
+           moved off the board; candidates decoded as lamp prop) —
+           offline charitable case is the honest gate. Fix rides the
+           same staged-rollout law as the mapboard chip.
 
 ## Closed
 

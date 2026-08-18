@@ -10,10 +10,11 @@ import sys, json, math, struct
 from PIL import Image
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else "/tmp"
+GLB = sys.argv[2] if len(sys.argv) > 2 else "agents/arthur/assets/village_mapboard3.glb"
 import os
 os.makedirs(OUT, exist_ok=True)
 
-data = open("agents/arthur/assets/village_mapboard3.glb", "rb").read()
+data = open(GLB, "rb").read()
 dv = newDV = None
 import io
 dv = struct.unpack("<I", data[12:16])[0]
@@ -179,4 +180,10 @@ render("day-close", (0, -0.10, 1), (0, 1, 0), (1.6, 1.5, 8.5), 2.0, 2.0)
 # approach object — 2.3m wide; 20m spectate is out of scope for a signpost)
 render("night-approach10", (0, -0.08, 1), (0, 1, 0), (1.6, 1.5, 8.5), 5.8, 5.8, night=True)
 render("night-approach6", (0, -0.08, 1), (0, 1, 0), (1.6, 1.5, 8.5), 3.5, 3.5, night=True)
+# polish-28 WELCOME BOARD GATE (charitable offline case; GLB argv makes the
+# rasterizer generic): 5m night = the distance vision read "plain white
+# rectangle" live; 5m day + 3m night bracket it. Board faces N (+z toward plaza).
+render("wb-night5", (0, -0.06, 1), (0, 1, 0), (0, 1.3, -5), 2.9, 2.9, night=True)
+render("wb-day5", (0, -0.06, 1), (0, 1, 0), (0, 1.3, -5), 2.9, 2.9)
+render("wb-night3", (0, -0.08, 1), (0, 1, 0), (0, 1.3, -5), 1.75, 1.75, night=True)
 print("renders complete")
