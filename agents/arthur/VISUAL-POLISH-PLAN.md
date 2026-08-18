@@ -239,6 +239,18 @@ wakeups. This lane is the standing fix for that blindness.
 	           now execution-proven, one command each when consent lands:
 	           bun agents/arthur/assets/placecarousel.ts ;
 	           bun agents/arthur/assets/placemapboard.ts
+      — polish-19 MAPBOARD LIVE (tex-83 banked the rollout): the texture
+           lane's LIVE-EVOLUTION law carried the polish-16 build into the
+           world — gate pins av-mapboard → store/e732ce10400c1979.glb
+           (my hash) PASSING against the live world, timber tile
+           byte-preserved. ROLLOUT VERIFIED LIVE at lib+pose level. LIVE
+           NIGHT EYE-READ: attempted 3 surfaces this tick — resident walk
+           (circuit re-asserted, polish-8 class), resident /snap (503,
+           5th known failure), Bill's camera (he is in-world; mapboard
+           out of his view; never steered). Readability horizon ≤10m
+           (polish-17 render gate) stands; the night eye-read joins
+           BILL'S list with the approach note: read it from ≤10m south
+	           (board faces S toward plaza).
 
 ## Closed
 
