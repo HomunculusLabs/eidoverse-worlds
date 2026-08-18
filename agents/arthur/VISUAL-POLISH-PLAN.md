@@ -81,13 +81,17 @@ wakeups. This lane is the standing fix for that blindness.
       tightened to textured-materials-only per the rework plan's
       "unmapped trim stays flat" law. verify-polish5 11/11; night-cycle
       eye-check still Bill's after rollout.
-- [ ] Horse silhouette at spectator distance (≥15m): read as carved
+- [x] Horse silhouette at spectator distance (≥15m): read as carved
       figures, not supports. Compare 4 horses.
       — polish-3 PASS on silhouette (carved read, legs readable, none
       malformed); FAIL spun off to register (paint variation unreadable,
       fix staged). Gate lesson: `walk` positions the BODY, not the camera
       heading — capture frames from positions where the subject sits
       front-of-view regardless of heading.
+      — polish-36 WORKLIST HONESTY: box closed to match its own record —
+      the SILHOUETTE subject passed at polish-3; the spun-off paint item
+      lives in the register (staged 38fbbc26, offline gates green through
+      polish-22/23 fog). No open work hides under this box.
 - [x] av-run / av-pondlife / av-garden-fence mesh quality (Bill's standing
       priority list). — CLOSED by the REFINEMENT lane (register R-2xx
       "support-abstain residuals", refinement wakeups 1-4): av-run lie
@@ -107,7 +111,7 @@ wakeups. This lane is the standing fix for that blindness.
       = market/barn area, decoded and discarded). Interior furnishing is
       verified at source + door-lane walkability (audit depth-2, green);
       the furnished THRESHOLD READ joins Bill's eye-check list.
-- [ ] Village night lighting balance: interior lights ×6 + hearths; look
+- [x] Village night lighting balance: interior lights ×6 + hearths; look
       for dead-dark buildings on the ring.
       — polish-6 DUSK BASELINE (plaza-center frame + vision read): 6 warm
       lights visible (2/4/5/7/8/10 o'clock), 6 dark (1/3/6/9/11 + the
@@ -153,6 +157,11 @@ wakeups. This lane is the standing fix for that blindness.
       = carousel roof-edge lanterns absent LIVE — already registered
       (polish-5 staged in 38fbbc26dcdfcc1a, rollout consent-blocked);
       frame 2 independently corroborates the register.
+      — polish-36 WORKLIST HONESTY: box closed to match polish-12's own
+      terminal verdict ("night balance PASS; no register item opened" —
+      7 distinct warm lights, zero dead-dark, on the world's own cycle).
+      The only live gap (carousel lanterns) is register-tracked and
+      rides the staged rollout; no open work hides under this box.
       — polish-13 CONSENT WINDOW (subject this wakeup): history shows Bill
       in-world at the carousel with the resident at ~20:00 (seq 3328-3331,
       both mounted horse_0, Bill dismounted at (-19.55, 0, 24.84)) — the
@@ -494,6 +503,16 @@ wakeups. This lane is the standing fix for that blindness.
  pose, defect class, gate numbers, staged hash, close
  condition). The register is the durable cross-lane
  record; the plan alone was not enough. No code changed.
+      — polish-36 WORKLIST HONESTY (subject this wakeup): two worklist
+ boxes closed to match their own terminal records — horse
+ silhouette (polish-3 PASS; the paint FAIL lives in the
+ register) and night lighting balance (polish-12 VERDICT
+ PASS, 7 warm lights / zero dead-dark on the world's own
+ cycle). Stale checkboxes were misrepresenting the lane's
+ true open surface: what remains genuinely open is now ONLY
+ the consent-blocked register items (carousel roof+paint
+ rollout, welcome lamp rollout) — one rollout away from
+ closing both. No code changed.
 
 ## Closed
 
