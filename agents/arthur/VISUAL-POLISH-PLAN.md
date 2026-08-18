@@ -399,6 +399,21 @@ wakeups. This lane is the standing fix for that blindness.
            warmest (255,183,91). NOT rolled out (staged-rollout
            law; live av-welcome still at its tex-15 build — next
            live-evolution pass or consent carries it).
+      — polish-30 LIVE BEFORE-ANCHOR (subject this wakeup): the
+           welcome board PIXEL-LOCATED live for the first time —
+           warm-pale rect x998-1191, y572-609 in Bill's frame (same
+           camera position as polish-25's "plain white rectangle at 2
+           o'clock, 5m"; bearing/distance match the board at (0,-5)).
+           Pixel structure: pale face 167-183 lum, dark lower-edge
+           stripe 103-124 (name-bar/rim at oblique angle), flanking
+           darker stubs at mid-height (arms) — consistent with the
+           polish-28 night-gate FAIL at the live site. This banks the
+           BEFORE coordinates for the post-rollout after-comparison
+           (same crop, lamp visible = decisive). Vision crop-read on
+           this exact region remains inconclusive ×3 (cylinder /
+           container / hexagon mis-reads) — recorded as a known
+           low-confidence crop; pixel evidence stands. No code
+           changed; no rollout (staged law holds).
 
 ## Closed
 
