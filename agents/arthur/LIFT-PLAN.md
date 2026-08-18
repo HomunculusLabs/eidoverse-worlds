@@ -252,8 +252,13 @@ exit 0; live census). Never self-judge the village done.
   GREEN 39th consecutive on the truthed instrument, assets unchanged, resident
   log unchanged (no new summoner reads); queue dry 40th tick, held per the
   lane's law — no model changed, live village untouched by this lane.
-- lift-45 (this): forty-first lean hold — steady state unchanged: no new lane
+- lift-45 (ee4813e): forty-first lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 40th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 41st tick, held per the lane's
+  law — no model changed, live village untouched by this lane.
+- lift-46 (this): forty-second lean hold — steady state unchanged: no new lane
+  commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 41st
+  consecutive on the truthed instrument, assets unchanged, resident log
+  unchanged (no new summoner reads); queue dry 42nd tick, held per the lane's
   law — no model changed, live village untouched by this lane.
