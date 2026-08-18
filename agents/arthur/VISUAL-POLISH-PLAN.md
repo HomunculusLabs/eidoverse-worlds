@@ -383,6 +383,22 @@ wakeups. This lane is the standing fix for that blindness.
            moved off the board; candidates decoded as lamp prop) —
            offline charitable case is the honest gate. Fix rides the
            same staged-rollout law as the mapboard chip.
+      — polish-29 WELCOME BOARD NIGHT FIX (subject this wakeup, the
+           queued BUILD): mkv3-welcome59.ts gained a NIGHT LAMP —
+           timber arm (0.34m) over the board + one warm emissive
+           globe (0xffb066 / emissive 0xff9a4a ×1.5, the carousel-
+           lantern & map-hearth tone), node wb_lamp (KEEP `lamp`
+           law) + wb_lamp_arm. Staged build 62746d1af698eacc (5
+           nodes; ×2 byte-deterministic; decode: glow2
+           emissiveFactor [1.5, .48, .10] present, 132 tris vs 52
+           pre-fix). POST-FIX GATE (rasterizer, 5m night): PASS on
+           the claim — lantern clearly visible, verdict "reads as a
+           signposted place at night" vs prior "blank pale
+           rectangle"; arms stay dark BY DESIGN (landing point, not
+           full illumination); pixel corroboration: 116 warm px,
+           warmest (255,183,91). NOT rolled out (staged-rollout
+           law; live av-welcome still at its tex-15 build — next
+           live-evolution pass or consent carries it).
 
 ## Closed
 
