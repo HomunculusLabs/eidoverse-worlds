@@ -2575,3 +2575,26 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-81 closing evidence — 2026-08-18T00:40:43.228Z
+
+```
+PASS mkv3-ring.ts pre-state: row = tex-81 build (7ec9fc54)
+PASS mkv3-ring.ts: row cottage rebuild deterministic ×2 + == live build (7ec9fc54b9d79897) — 7ec9fc54b9d79897
+PASS mkv3-ring.ts ring-safety: court + 5 converted builds byte-identical (2f2cacf9 + 3f8f9e6f/33369174/7f60f1f7/1790e181/4bfacdd7)
+PASS mkv3-ring.ts decode: timber + fire emissive present — timber,stone,glow2,plaster,glow4,glow5
+PASS mkv3-ring.ts byte-family: timber ≡ house wallSpan's (buffer-compared)
+PASS mkv3-ring.ts chains: TEXCOORD_0 == POSITION (heddle/cloth/jars/threads flat by design) — buckets 1
+PASS mkv3-ring.ts sizes: tex < 400KB + GLB < 20MB — 40849B / 124.4KB
+PASS place-tex81-timber47.ts effect: row-cottage live, pose (-21,-15.3), smoke comp recovered — store/7ec9fc54b9d79897.glb
+PASS place-tex81-timber47.ts census: hall + bunk current, woodyard untouched (approval block honored)
+PASS verify-tex81.ts present (committed, non-self-deleting)
+PASS verify-tex81.ts runs 0 / ALL PASS — code=0
+PASS both listed one-shots consumed (-final, -paths absent from T-dir)
+PASS evidence log carries both committed records (6457277 / 0617815)
+PASS verify-repairs.ts 0 / ALL PASS (tex-81 pin + tex-4 multi pin + ledger EXACT + HEAD gate) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
