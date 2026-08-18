@@ -722,6 +722,20 @@ wakeups. This lane is the standing fix for that blindness.
            p43, mapboard chip p50, carousel lanterns p51 — night
            anchor + day quiet each). The staged package's full
            time coverage holds; every rollout keeps its green.
+      — polish-52 POSE-RELATIVE HEAL (subject this wakeup): the
+           smoke heal's origin was HARDCODED world coords (-18.8,
+           6.3, 25.9) — if any lane re-places the carousel at a
+           moved pose, the healed smoke would float at the STALE
+           location. The bag now stores the LOCAL anchor
+           (finial top, local y=6.3, x/z=0 — ON the spin axis,
+           yaw-invariant); planVerbs transforms it into the
+           captured pose's world frame at rollout. VERIFIED:
+           original pose reproduces [-18.8, 6.3, 25.9] exactly
+           (standing verifier unchanged, 20/20 incl. both heal
+           behaviorals); a moved pose (5, -10) carries the heal
+           to [5, 6.3, -10]; no originLocal key leaks into the
+           verb data. LAW: heals ride the capture law — never a
+           hardcoded world anchor.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
