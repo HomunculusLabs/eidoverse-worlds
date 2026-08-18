@@ -373,7 +373,7 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - Fix: slide the sign 0.725m along its own arm axis (+local-X̂ → world (-0.703,+0.711)) → new pos (37.79, 0, 1.91), yaw -2.350 unchanged, same lib. After (corner math): plate spans world x 37.70..37.88 — near corner 0.02m off the stable wall face 37.90 (corner-mount kiss on the livery's own building), fully out of the interior; board far corner (37.30, 2.41) — 0.30m clear of the inn wall face 37.0 and 0.60m clear of the stable face; seam span at sign height 0.90m, sign occupies it as a wall-mounted angled flag per family language.
 - STATUS: OPEN — registered align-2 before fix.
 
-### [OPEN->ROUTED: align] R-112 WATCHPOST BLOCKS THE BAKERY DOOR — summoner-falsified classification (lift-3, 2026-08-18)
+### [OPEN->ROUTED: align] R-113 (registered R-112 at lift-3; renumbered lift-4 — the concurrent in-flight align-2 entry took R-112 for its livery-sign find) WATCHPOST BLOCKS THE BAKERY DOOR — summoner-falsified classification (lift-3, 2026-08-18)
 
 - Entity: av-watchpost (era-2 heritage, 1.1m-square scaffold legs, deck at y2.6) at the court's W edge, directly off the bakery's open face (R-105 cistern-clearance geometry places it ≈ court-local W edge; live pose read consent-blocked this tick — align lane to ground exact numbers from /geom).
 - Evidence: (a) the summoner's in-world report 2026-08-18 (resident.log, walked to the bakery with Arthur): "the tower in front of the door doesn't allow me to go inside" — his avatar could not enter; (b) align-1 (007f8d1) walk-tested the same pinch at 0.38m/0.35m and classified it THREADABLE + "watchpost→court already ABJECT per policy, deferred".

@@ -12,7 +12,7 @@ exit 0; live census). Never self-judge the village done.
 - **Staged package, awaiting Bill's call** (lift loop skips): carousel roof
   (staged 38fbbc26 vs live cd22d0b0), welcome lamp (62746d1a vs fa0c9d94),
   mapboard chip (b77ef40a vs live e732ce10).
-- **Pure placement = align lane's**: see R-112 (watchpost×court door,
+- **Pure placement = align lane's**: see R-113 (watchpost×court door,
   summoner-falsified) below.
 - **Plaza lane's active artifact**: av-roads3 (paving plaza-1 → kerbs plaza-2
   → milestones plaza-3; its remaining flats — gate-frame oak posts/lintels,
@@ -39,7 +39,7 @@ exit 0; live census). Never self-judge the village done.
 
 ## Open items routed to other lanes
 
-- **R-112 (align)**: watchpost×court bakery door — align-1 classified the
+- **R-113 (align; registered R-112 at lift-3, renumbered lift-4 after align-2's in-flight entry took the tag)**: watchpost×court bakery door — align-1 classified the
   pinch THREADABLE (0.38/0.35m walk-test); the summoner's own in-world
   report falsifies it ("the tower in front of the door doesn't allow me to
   go inside"). Re-place is align's tool; lift defers to their queue.
@@ -58,5 +58,9 @@ exit 0; live census). Never self-judge the village done.
 
 - lift-1 (05d3b67): court roof source fix staged (addRoofAt).
 - lift-2 (b8f591f): court roof rollout + pins + gate heal (align- prefix).
-- lift-3 (this): phantom-gate finding, R-112 routed, plan file born; no
+- lift-3 (63a43f8): phantom-gate finding, R-112 routed, plan file born; no
   model changed — honest survey tick.
+- lift-4 (this): queue items 2+3 decoded CLEAN at source (treeline flora-flat
+  by tex-48 law + fireflies live; millyard crafted + timber tex-39, goods flat
+  by material-truth) — R-112 renumbered R-113 (align-2's in-flight entry took
+  the tag; shared-lane collision law); honest survey tick, no model changed.
