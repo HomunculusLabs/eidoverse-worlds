@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-wayside.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_wayside3.glb`);
 execSync("bun agents/arthur/assets/mkv3-wayside.ts", { cwd: W, stdio: "pipe" });
-ok("wayside rebuild deterministic + == live build (5db486a79ff5cc6e)", p1 === sha(`${A}/village_wayside3.glb`) && p1.startsWith("5db486a79ff5cc6e"), p1.slice(0, 16));
+ok("wayside rebuild deterministic + == live build (8da60306e51c68dd)", p1 === sha(`${A}/village_wayside3.glb`) && p1.startsWith("8da60306e51c68dd"), p1.slice(0, 16));
 
 // 2) decode: 3-family byte-family + chains + sizes
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -81,11 +81,11 @@ for (const x of g.entities) ents[x.id] = x;
 const wsEnt = ents["av-wayside"];
 const wsComps = Object.keys(wsEnt?.comp ?? {});
 ok("place-tex62-timber30.ts effect: wayside live, pose (2.4,15), lamp comp recovered",
-    wsEnt?.lib === "store/5db486a79ff5cc6e.glb" && Math.abs(wsEnt.pos[0] - 2.4) < 0.01 && Math.abs(wsEnt.pos[2] - 15) < 0.01
+    wsEnt?.lib === "store/8da60306e51c68dd.glb" && Math.abs(wsEnt.pos[0] - 2.4) < 0.01 && Math.abs(wsEnt.pos[2] - 15) < 0.01
     && wsComps.includes("motion:lamp"), wsEnt?.lib ?? "missing");
 ok("census anchors: mapboard + laundry current, woodyard untouched",
     ents["av-mapboard"]?.lib === "store/e732ce10400c1979.glb"
-    && ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb"
+    && ents["av-dyelaundry"]?.lib === "store/30dd0a5ac7c00fe4.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-62 pin + refreshed tex-19 pin + ledger + HEAD

@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-plaza.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_plaza3.glb`);
 execSync("bun agents/arthur/assets/mkv3-plaza.ts", { cwd: W, stdio: "pipe" });
-ok("plaza rebuild deterministic + == live build (933ab1f9 → 0f9553f6 plaza-1 → 1a656f00 plaza-4 ring stones)", p1 === sha(`${A}/village_plaza3.glb`) && p1.startsWith("1a656f00ab66db91"), p1.slice(0, 16));
+ok("plaza rebuild deterministic + == live build (933ab1f9 → 0f9553f6 plaza-1 → 1a656f00 plaza-4 ring stones)", p1 === sha(`${A}/village_plaza3.glb`) && p1.startsWith("43fcaf1442f5d6b8"), p1.slice(0, 16));
 
 // 2) decode: 3-family byte-family + anchors + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -86,11 +86,11 @@ for (const x of g.entities) ents[x.id] = x;
 const pz = ents["av-plaza-hearth"];
 const pzComps = Object.keys(pz?.comp ?? {});
 ok("place-tex67-iron23.ts effect: plaza live, pose (0,0), all 4 comps recovered",
-    pz?.lib === "store/1a656f00ab66db91.glb" && Math.abs(pz.pos[0]) < 0.01 && Math.abs(pz.pos[2]) < 0.01
+    pz?.lib === "store/43fcaf1442f5d6b8.glb" && Math.abs(pz.pos[0]) < 0.01 && Math.abs(pz.pos[2]) < 0.01
     && ["particles", "motion:well_", "sockets", "motion:pz_kettle"].every((c) => pzComps.includes(c)), pz?.lib ?? "missing");
 ok("census anchors: kiln + potter current, woodyard untouched",
-    ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb"
-    && ents["av-potter"]?.lib === "store/cea5c582bf05d72f.glb"
+    ents["av-kiln"]?.lib === "store/69c0e48a917d4ed2.glb"
+    && ents["av-potter"]?.lib === "store/66836b01897cfebc.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-67 pin + refreshed tex-52 pin + ledger + HEAD

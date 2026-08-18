@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-chopblock78.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_chopblock3.glb`);
 execSync("bun agents/arthur/assets/mkv3-chopblock78.ts", { cwd: W, stdio: "pipe" });
-ok("chopblock rebuild deterministic + == live build (ab5031c118d925c0)", p1 === sha(`${A}/village_chopblock3.glb`) && p1.startsWith("ab5031c118d925c0"), p1.slice(0, 16));
+ok("chopblock rebuild deterministic + == live build (462433ed8a148a4b)", p1 === sha(`${A}/village_chopblock3.glb`) && p1.startsWith("462433ed8a148a4b"), p1.slice(0, 16));
 
 // 2) decode: timber + iron byte-family + raw-log flats law + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -81,10 +81,10 @@ const ents: Record<string, any> = {};
 for (const x of g.entities) ents[x.id] = x;
 const cb = ents["av-chopblock"];
 ok("place-tex73-timber40.ts effect: chopblock live, pose (15.3,25.5)",
-    cb?.lib === "store/ab5031c118d925c0.glb" && Math.abs(cb.pos[0] - 15.3) < 0.01 && Math.abs(cb.pos[2] - 25.5) < 0.01, cb?.lib ?? "missing");
+    cb?.lib === "store/462433ed8a148a4b.glb" && Math.abs(cb.pos[0] - 15.3) < 0.01 && Math.abs(cb.pos[2] - 25.5) < 0.01, cb?.lib ?? "missing");
 ok("census anchors: windmill + quarry current, woodyard untouched",
-    ents["av-windmill"]?.lib === "store/7fc779a5c7dd5dc5.glb"
-    && ents["av-quarry"]?.lib === "store/6b3da17816aeeb55.glb"
+    ents["av-windmill"]?.lib === "store/4feee38977d7c6e5.glb"
+    && ents["av-quarry"]?.lib === "store/8582f2d45440dfed.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-73 pin + refreshed tex-16 pin + ledger + HEAD

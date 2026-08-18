@@ -37,12 +37,12 @@ const restore = () => {
 };
 
 // 0) ring-safety pre-state
-ok("pre-state: tower on disk is the tex-78 build (7f60f1f7)", sha(`${A}/village_tower3.glb`).slice(0, 16) === "7f60f1f7a5794411");
+ok("pre-state: tower on disk is the tex-78 build (fb590200)", sha(`${A}/village_tower3.glb`).slice(0, 16) === "fb590200245f5985");
 ok("all sibling backups exist + hall/longhouse/tower backups fresh",
     SIB.every((f) => existsSync(`/tmp/ring-bak-${f}.glb`))
-    && sha(`/tmp/ring-bak-village_hall3.glb`).slice(0, 16) === "3f8f9e6f98bbbd04"
-    && sha(`/tmp/ring-bak-village_longhouse3.glb`).slice(0, 16) === "333691747dd14c5c"
-    && sha(`/tmp/ring-bak-village_tower3.glb`).slice(0, 16) === "7f60f1f7a5794411");
+    && sha(`/tmp/ring-bak-village_hall3.glb`).slice(0, 16) === "d9251dd0857e451f"
+    && sha(`/tmp/ring-bak-village_longhouse3.glb`).slice(0, 16) === "05149e3e7d5e5918"
+    && sha(`/tmp/ring-bak-village_tower3.glb`).slice(0, 16) === "fb590200245f5985");
 
 // 1) mkv3-ring.ts: rebuild — tower deterministic + == live pin
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
@@ -50,16 +50,16 @@ restore();
 const p1 = sha(`${A}/village_tower3.glb`);
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
 restore();
-ok("tower rebuild deterministic + == live build (7f60f1f7a5794411)",
-    p1 === sha(`${A}/village_tower3.glb`) && p1.startsWith("7f60f1f7a5794411"), p1.slice(0, 16));
-ok("ring-safety: four siblings restored byte-identical (f47574b7 garden, ffe8236b row, b82a4104 bunk, 2f2cacf9 court)",
-    sha(`${A}/village_garden3.glb`).slice(0, 16) === "1790e1816f08b85e"
-    && sha(`${A}/village_row3.glb`).slice(0, 16) === "7ec9fc54b9d79897"
-    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "4bfacdd739b9bd0e"
-    && sha(`${A}/village_court3.glb`).slice(0, 16) === "ac75f33cab3fb5ce");
-ok("ring-safety: hall (3f8f9e6f) + longhouse (33369174) kept at their builds",
-    sha(`${A}/village_hall3.glb`).slice(0, 16) === "3f8f9e6f98bbbd04"
-    && sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "333691747dd14c5c");
+ok("tower rebuild deterministic + == live build (fb590200245f5985)",
+    p1 === sha(`${A}/village_tower3.glb`) && p1.startsWith("fb590200245f5985"), p1.slice(0, 16));
+ok("ring-safety: four siblings restored byte-identical (f47574b7 garden, 845ee738 row, e4c0651d bunk, 543b53d0 court)",
+    sha(`${A}/village_garden3.glb`).slice(0, 16) === "e0a6a7c426d39398"
+    && sha(`${A}/village_row3.glb`).slice(0, 16) === "845ee738e09d5c1f"
+    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "e4c0651d5618b73b"
+    && sha(`${A}/village_court3.glb`).slice(0, 16) === "543b53d03ac2f104");
+ok("ring-safety: hall (d9251dd0) + longhouse (05149e3e) kept at their builds",
+    sha(`${A}/village_hall3.glb`).slice(0, 16) === "d9251dd0857e451f"
+    && sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "05149e3e7d5e5918");
 
 // 2) decode: timber byte-family + anchors + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -108,11 +108,11 @@ for (const x of g.entities) ents[x.id] = x;
 const tw = ents["av-tower-house"];
 const twComps = Object.keys(tw?.comp ?? {});
 ok("place-tex78-timber44.ts effect: tower-house live, pose (-8,24.7), sockets comp recovered",
-    tw?.lib === "store/7f60f1f7a5794411.glb" && Math.abs(tw.pos[0] + 8) < 0.01 && Math.abs(tw.pos[2] - 24.7) < 0.01
+    tw?.lib === "store/fb590200245f5985.glb" && Math.abs(tw.pos[0] + 8) < 0.01 && Math.abs(tw.pos[2] - 24.7) < 0.01
     && twComps.includes("sockets"), tw?.lib ?? "missing");
 ok("census anchors: hall + longhouse current, woodyard untouched",
-    ents["av-hall"]?.lib === "store/3f8f9e6f98bbbd04.glb"
-    && ents["av-longhouse"]?.lib === "store/333691747dd14c5c.glb"
+    ents["av-hall"]?.lib === "store/d9251dd0857e451f.glb"
+    && ents["av-longhouse"]?.lib === "store/05149e3e7d5e5918.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-78 pin + tex-4 multi pin + ledger + HEAD

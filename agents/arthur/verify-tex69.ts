@@ -38,8 +38,8 @@ run("bun agents/arthur/assets/mkcarousel.ts"); // restore deterministically (pla
 const p1 = sha(`${A}/village_belltower3.glb`);
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
 run("bun agents/arthur/assets/mkcarousel.ts"); // restore deterministically (plaza-1: /tmp backup is volatile across restarts)
-ok("belltower rebuild deterministic + == live build (82e4c316b62e5006)",
-    p1 === sha(`${A}/village_belltower3.glb`) && p1.startsWith("82e4c316b62e5006"), p1.slice(0, 16));
+ok("belltower rebuild deterministic + == live build (66524bcde061a437)",
+    p1 === sha(`${A}/village_belltower3.glb`) && p1.startsWith("66524bcde061a437"), p1.slice(0, 16));
 // NOTE: after the rebuild inside THIS verifier, the carousel GLB is the
 // landmarks-legacy output again — the placer script's backup-restore is
 // part of the rollout, not of this verifier. So assert the rollout-side
@@ -100,13 +100,13 @@ for (const x of g.entities) ents[x.id] = x;
 const bt = ents["av-belltower"];
 const btComps = Object.keys(bt?.comp ?? {});
 ok("place-tex69-timber36.ts effect: belltower live, pose (5.7,5.7), motion+reactions recovered",
-    bt?.lib === "store/82e4c316b62e5006.glb" && Math.abs(bt.pos[0] - 5.7) < 0.01 && Math.abs(bt.pos[2] - 5.7) < 0.01
+    bt?.lib === "store/66524bcde061a437.glb" && Math.abs(bt.pos[0] - 5.7) < 0.01 && Math.abs(bt.pos[2] - 5.7) < 0.01
     && btComps.includes("motion") && btComps.includes("reactions"), bt?.lib ?? "missing");
 ok("carousel-safety law: live carousel untouched by tex-69 (polish lane's 38fbbc26 staged build)",
     ents["av-carousel"]?.lib === "store/cd22d0b09e70bebc.glb", ents["av-carousel"]?.lib ?? "missing");
 ok("census anchors: watchpost + plaza current, woodyard untouched",
-    ents["av-watchpost"]?.lib === "store/256e16a13027fb93.glb"
-    && ents["av-plaza-hearth"]?.lib === "store/1a656f00ab66db91.glb"
+    ents["av-watchpost"]?.lib === "store/4ac5cacf91ed5d2d.glb"
+    && ents["av-plaza-hearth"]?.lib === "store/43fcaf1442f5d6b8.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-69 pin + refreshed tex-20 pin + ledger + HEAD

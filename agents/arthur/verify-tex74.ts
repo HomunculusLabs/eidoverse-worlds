@@ -38,13 +38,13 @@ run("bun agents/arthur/assets/mkcarousel.ts"); // plaza-1: /tmp is volatile; res
 const p1 = sha(`${A}/village_inn3.glb`);
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
 run("bun agents/arthur/assets/mkcarousel.ts"); // plaza-1: /tmp is volatile; restore by rebuild (hash-asserted below)
-ok("inn rebuild deterministic + == live build (6f35f80a336889cd)",
-    p1 === sha(`${A}/village_inn3.glb`) && p1.startsWith("6f35f80a336889cd"), p1.slice(0, 16));
+ok("inn rebuild deterministic + == live build (8de1af9446f98eb9)",
+    p1 === sha(`${A}/village_inn3.glb`) && p1.startsWith("8de1af9446f98eb9"), p1.slice(0, 16));
 ok("carousel-safety: restored byte-identical after both rebuilds (38fbbc26)",
     sha(`${A}/village_carousel3.glb`).slice(0, 16) === "38fbbc26dcdfcc1a");
 ok("collateral: belltower (82e4c316) + windmill (7fc779a5) byte-identical",
-    sha(`${A}/village_belltower3.glb`).slice(0, 16) === "82e4c316b62e5006"
-    && sha(`${A}/village_windmill3.glb`).slice(0, 16) === "7fc779a5c7dd5dc5");
+    sha(`${A}/village_belltower3.glb`).slice(0, 16) === "66524bcde061a437"
+    && sha(`${A}/village_windmill3.glb`).slice(0, 16) === "4feee38977d7c6e5");
 
 // 2) decode: timber + iron byte-family + fire/sign anchors + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -101,13 +101,13 @@ for (const x of g.entities) ents[x.id] = x;
 const inn = ents["av-inn"];
 const innComps = Object.keys(inn?.comp ?? {});
 ok("place-tex74-timber41.ts effect: inn live, pose (34,0), all 4 comps recovered",
-    inn?.lib === "store/6f35f80a336889cd.glb" && Math.abs(inn.pos[0] - 34) < 0.01 && Math.abs(inn.pos[2]) < 0.01
+    inn?.lib === "store/8de1af9446f98eb9.glb" && Math.abs(inn.pos[0] - 34) < 0.01 && Math.abs(inn.pos[2]) < 0.01
     && innComps.includes("particles:smoke") && innComps.includes("particles")
     && innComps.includes("motion:sign") && innComps.includes("sockets"), inn?.lib ?? "missing");
 ok("carousel-safety: live carousel untouched (cd22d0b0)", ents["av-carousel"]?.lib === "store/cd22d0b09e70bebc.glb");
 ok("census anchors: windmill + belltower current, woodyard untouched",
-    ents["av-windmill"]?.lib === "store/7fc779a5c7dd5dc5.glb"
-    && ents["av-belltower"]?.lib === "store/82e4c316b62e5006.glb"
+    ents["av-windmill"]?.lib === "store/4feee38977d7c6e5.glb"
+    && ents["av-belltower"]?.lib === "store/66524bcde061a437.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-74 pin + tex-4 multi pin + ledger + HEAD

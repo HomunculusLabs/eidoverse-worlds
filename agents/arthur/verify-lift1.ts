@@ -22,12 +22,12 @@ const W = "/Users/t3rpz/projects/eidoverse-worlds";
 const A = `${W}/agents/arthur/assets`;
 const CONVERTED = ["village_hall3", "village_longhouse3", "village_tower3", "village_garden3", "village_bunk3", "village_row3"];
 const EXPECT: Record<string, string> = {
-    "village_hall3": "3f8f9e6f98bbbd04",
-    "village_longhouse3": "333691747dd14c5c",
-    "village_tower3": "7f60f1f7a5794411",
-    "village_garden3": "1790e1816f08b85e",
-    "village_bunk3": "4bfacdd739b9bd0e",
-    "village_row3": "7ec9fc54b9d79897",
+    "village_hall3": "d9251dd0857e451f",
+    "village_longhouse3": "05149e3e7d5e5918",
+    "village_tower3": "fb590200245f5985",
+    "village_garden3": "e0a6a7c426d39398",
+    "village_bunk3": "e4c0651d5618b73b",
+    "village_row3": "845ee738e09d5c1f",
 };
 const fails: string[] = [];
 const ok = (n: string, c: boolean, d = "") => {
@@ -112,7 +112,7 @@ ok("standing gate ALL PASS (live court now on the lift-1 build, pins refreshed)"
 //    the bag verbatim, so 1 in = 1 out here).
 const g = await (await fetch("https://eidoverse.billding.dev/geom?world=commons&boxes=0")).json();
 const ct: any = g.entities.find((x: any) => x.id === "av-court");
-ok("live: av-court on the lift-1 build (bb31e8a5ffdc1e16)", ct?.lib === "store/bb31e8a5ffdc1e16.glb", ct?.lib ?? "missing");
+ok("live: av-court on the lift-1 build (543b53d03ac2f104)", ct?.lib === "store/543b53d03ac2f104.glb", ct?.lib ?? "missing");
 ok("live: pose preserved (21, -15.3, yaw -0.941)", Math.abs(ct.pos[0] - 21) < 0.01 && Math.abs(ct.pos[2] + 15.3) < 0.01 && Math.abs(Number(ct.yaw) + 0.941) < 0.01, JSON.stringify(ct?.pos) + " yaw " + ct?.yaw);
 const bag = Object.keys(ct?.comp ?? {});
 ok("live: smoke comp recovered after re-place", bag.includes("particles:smoke"), bag.join(",") || "none");

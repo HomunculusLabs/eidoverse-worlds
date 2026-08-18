@@ -29,7 +29,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-market.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_market3.glb`);
 execSync("bun agents/arthur/assets/mkv3-market.ts", { cwd: W, stdio: "pipe" });
-ok("market rebuild deterministic + == live build (2bb51287d4e1a2a2)", p1 === sha(`${A}/village_market3.glb`) && p1.startsWith("2bb51287d4e1a2a2"), p1.slice(0, 16));
+ok("market rebuild deterministic + == live build (b7167aad118e47c5)", p1 === sha(`${A}/village_market3.glb`) && p1.startsWith("b7167aad118e47c5"), p1.slice(0, 16));
 
 // 2) decode: timber byte-family + awning anchors + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -82,11 +82,11 @@ for (const x of g.entities) ents[x.id] = x;
 const mk = ents["av-market"];
 const mkComps = Object.keys(mk?.comp ?? {});
 ok("place-tex57-timber27.ts effect: market live, pose (-5.7,5.7), wind comps recovered",
-    mk?.lib === "store/2bb51287d4e1a2a2.glb" && Math.abs(mk.pos[0] + 5.7) < 0.01 && Math.abs(mk.pos[2] - 5.7) < 0.01
+    mk?.lib === "store/b7167aad118e47c5.glb" && Math.abs(mk.pos[0] + 5.7) < 0.01 && Math.abs(mk.pos[2] - 5.7) < 0.01
     && mkComps.includes("motion:mk_awn_0") && mkComps.includes("motion:mk_awn_1"), mk?.lib ?? "missing");
 ok("census anchors: forge + cistern current, woodyard untouched",
-    ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb"
-    && ents["av-bcistern"]?.lib === "store/a96ee31d29c2085f.glb"
+    ents["av-forge"]?.lib === "store/7fe0ce6607ed2d1b.glb"
+    && ents["av-bcistern"]?.lib === "store/e132952021178a89.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-57 pin + refreshed tex-8 pin + ledger + HEAD

@@ -40,16 +40,16 @@ const restore = () => {
 };
 
 // 0) ring-safety pre-state
-ok("pre-state: row on disk is the tex-81 build (7ec9fc54)", sha(`${A}/village_row3.glb`).slice(0, 16) === "7ec9fc54b9d79897");
-ok("all backups exist + converted backups fresh (3f8f9e6f/33369174/7f60f1f7/1790e181/4bfacdd7/7ec9fc54)",
+ok("pre-state: row on disk is the tex-81 build (845ee738)", sha(`${A}/village_row3.glb`).slice(0, 16) === "845ee738e09d5c1f");
+ok("all backups exist + converted backups fresh (d9251dd0/05149e3e/fb590200/1790e181/e4c0651d/845ee738)",
     SIB.every((f) => existsSync(`/tmp/ring-bak-${f}.glb`))
     && CONVERTED.every((f) => existsSync(`/tmp/ring-bak-${f}.glb`))
-    && sha(`/tmp/ring-bak-village_hall3.glb`).slice(0, 16) === "3f8f9e6f98bbbd04"
-    && sha(`/tmp/ring-bak-village_longhouse3.glb`).slice(0, 16) === "333691747dd14c5c"
-    && sha(`/tmp/ring-bak-village_tower3.glb`).slice(0, 16) === "7f60f1f7a5794411"
-    && sha(`/tmp/ring-bak-village_garden3.glb`).slice(0, 16) === "1790e1816f08b85e"
-    && sha(`/tmp/ring-bak-village_bunk3.glb`).slice(0, 16) === "4bfacdd739b9bd0e"
-    && sha(`/tmp/ring-bak-village_row3.glb`).slice(0, 16) === "7ec9fc54b9d79897");
+    && sha(`/tmp/ring-bak-village_hall3.glb`).slice(0, 16) === "d9251dd0857e451f"
+    && sha(`/tmp/ring-bak-village_longhouse3.glb`).slice(0, 16) === "05149e3e7d5e5918"
+    && sha(`/tmp/ring-bak-village_tower3.glb`).slice(0, 16) === "fb590200245f5985"
+    && sha(`/tmp/ring-bak-village_garden3.glb`).slice(0, 16) === "e0a6a7c426d39398"
+    && sha(`/tmp/ring-bak-village_bunk3.glb`).slice(0, 16) === "e4c0651d5618b73b"
+    && sha(`/tmp/ring-bak-village_row3.glb`).slice(0, 16) === "845ee738e09d5c1f");
 
 // 1) mkv3-ring.ts: rebuild — row deterministic + == live pin
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
@@ -57,16 +57,16 @@ restore();
 const p1 = sha(`${A}/village_row3.glb`);
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
 restore();
-ok("row rebuild deterministic + == live build (7ec9fc54b9d79897)",
-    p1 === sha(`${A}/village_row3.glb`) && p1.startsWith("7ec9fc54b9d79897"), p1.slice(0, 16));
-ok("ring-safety: court restored byte-identical (2f2cacf9)",
-    sha(`${A}/village_court3.glb`).slice(0, 16) === "ac75f33cab3fb5ce");
+ok("row rebuild deterministic + == live build (845ee738e09d5c1f)",
+    p1 === sha(`${A}/village_row3.glb`) && p1.startsWith("845ee738e09d5c1f"), p1.slice(0, 16));
+ok("ring-safety: court restored byte-identical (543b53d0)",
+    sha(`${A}/village_court3.glb`).slice(0, 16) === "543b53d03ac2f104");
 ok("ring-safety: hall + longhouse + tower + garden + bunk kept at their builds",
-    sha(`${A}/village_hall3.glb`).slice(0, 16) === "3f8f9e6f98bbbd04"
-    && sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "333691747dd14c5c"
-    && sha(`${A}/village_tower3.glb`).slice(0, 16) === "7f60f1f7a5794411"
-    && sha(`${A}/village_garden3.glb`).slice(0, 16) === "1790e1816f08b85e"
-    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "4bfacdd739b9bd0e");
+    sha(`${A}/village_hall3.glb`).slice(0, 16) === "d9251dd0857e451f"
+    && sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "05149e3e7d5e5918"
+    && sha(`${A}/village_tower3.glb`).slice(0, 16) === "fb590200245f5985"
+    && sha(`${A}/village_garden3.glb`).slice(0, 16) === "e0a6a7c426d39398"
+    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "e4c0651d5618b73b");
 
 // 2) decode: timber byte-family + fire emissive + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -114,11 +114,11 @@ for (const x of g.entities) ents[x.id] = x;
 const rc = ents["av-row-cottage"];
 const rcComps = Object.keys(rc?.comp ?? {});
 ok("place-tex81-timber47.ts effect: row-cottage live, pose (-21,-15.3), smoke comp recovered",
-    rc?.lib === "store/7ec9fc54b9d79897.glb" && Math.abs(rc.pos[0] + 21) < 0.01 && Math.abs(rc.pos[2] + 15.3) < 0.01
+    rc?.lib === "store/845ee738e09d5c1f.glb" && Math.abs(rc.pos[0] + 21) < 0.01 && Math.abs(rc.pos[2] + 15.3) < 0.01
     && rcComps.includes("particles:smoke"), rc?.lib ?? "missing");
 ok("census anchors: hall + bunk current, woodyard untouched",
-    ents["av-hall"]?.lib === "store/3f8f9e6f98bbbd04.glb"
-    && ents["av-bunkhouse"]?.lib === "store/4bfacdd739b9bd0e.glb"
+    ents["av-hall"]?.lib === "store/d9251dd0857e451f.glb"
+    && ents["av-bunkhouse"]?.lib === "store/e4c0651d5618b73b.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-81 pin + tex-4 multi pin + ledger + HEAD

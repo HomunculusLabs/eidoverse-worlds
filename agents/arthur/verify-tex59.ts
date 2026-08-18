@@ -51,7 +51,7 @@ const tile = (mi: number): Buffer => {
     const bv = j.bufferViews[j.images[j.textures[tex].source].bufferView];
     return Buffer.from(buf.subarray(binStart + bv.byteOffset, binStart + bv.byteOffset + bv.byteLength));
 };
-ok("stone ≡ kiln's ashlar (byte-family law)", Buffer.compare(tile(sIdx), tileOf("village_kiln3.glb", "stone")!) === 0);
+ok("stone ≡ knot's frozen family basis (byte-family law, plaza-palette era: knot stays old-generation by HARD LAW; cross-generation compare retired)", Buffer.compare(tile(sIdx), tileOf("village_monument3.glb", "stone")!) === 0);
 const isGrp = (n: any) => n.children !== undefined && n.mesh === undefined;
 const knot = j.nodes.find((n: any) => n.name === "knot");
 ok("knot GROUP anchor survives (spin comp target)", !!knot && isGrp(knot));
@@ -80,8 +80,8 @@ ok("place-tex59-stone14.ts effect: monument live, pose (-6.4,-6.4), knot comp re
     mn?.lib === "store/9520e61fc8e9d887.glb" && Math.abs(mn.pos[0] + 6.4) < 0.01 && Math.abs(mn.pos[2] + 6.4) < 0.01
     && Object.keys(mn?.comp ?? {}).includes("motion:knot"), mn?.lib ?? "missing");
 ok("census anchors: shrine + market current, woodyard untouched",
-    ents["av-shrine"]?.lib === "store/d0d3743a60802625.glb"
-    && ents["av-market"]?.lib === "store/2bb51287d4e1a2a2.glb"
+    ents["av-shrine"]?.lib === "store/78611c7dc9a3cb6e.glb"
+    && ents["av-market"]?.lib === "store/b7167aad118e47c5.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-59 pin + refreshed tex-18 pin + ledger + HEAD

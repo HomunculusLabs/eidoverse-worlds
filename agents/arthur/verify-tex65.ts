@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-potter41.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_potter3.glb`);
 execSync("bun agents/arthur/assets/mkv3-potter41.ts", { cwd: W, stdio: "pipe" });
-ok("potter rebuild deterministic + == live build (cea5c582bf05d72f)", p1 === sha(`${A}/village_potter3.glb`) && p1.startsWith("cea5c582bf05d72f"), p1.slice(0, 16));
+ok("potter rebuild deterministic + == live build (66836b01897cfebc)", p1 === sha(`${A}/village_potter3.glb`) && p1.startsWith("66836b01897cfebc"), p1.slice(0, 16));
 
 // 2) decode: timber byte-family + pwheel anchor + chains + sizes
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -79,11 +79,11 @@ for (const x of g.entities) ents[x.id] = x;
 const pt = ents["av-potter"];
 const ptComps = Object.keys(pt?.comp ?? {});
 ok("place-tex65-timber32.ts effect: potter live, pose (24.1,38.6), wheel comp recovered",
-    pt?.lib === "store/cea5c582bf05d72f.glb" && Math.abs(pt.pos[0] - 24.1) < 0.01 && Math.abs(pt.pos[2] - 38.6) < 0.01
+    pt?.lib === "store/66836b01897cfebc.glb" && Math.abs(pt.pos[0] - 24.1) < 0.01 && Math.abs(pt.pos[2] - 38.6) < 0.01
     && ptComps.includes("motion:pwheel"), pt?.lib ?? "missing");
 ok("census anchors: waystone + milestone-n current, woodyard untouched",
-    ents["av-waystone"]?.lib === "store/5fcaa644f4ba290b.glb"
-    && ents["av-milestone-n"]?.lib === "store/a2b6bfab613f0e84.glb"
+    ents["av-waystone"]?.lib === "store/c418d713c69d23ae.glb"
+    && ents["av-milestone-n"]?.lib === "store/5d2112b381b20672.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-65 pin + refreshed tex-29 pin + ledger + HEAD

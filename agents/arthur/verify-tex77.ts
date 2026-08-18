@@ -31,10 +31,10 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 const restoreSibs = () => { for (const f of SIB) copyFileSync(`/tmp/ring-bak-${f}.glb`, `${A}/${f}.glb`); };
 
 // 0) ring-safety pre-state
-ok("pre-state: longhouse on disk is the tex-77 build (33369174)", sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "333691747dd14c5c");
-ok("all five sibling backups exist + hall backup is tex-76 (3f8f9e6f)",
+ok("pre-state: longhouse on disk is the tex-77 build (05149e3e)", sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "05149e3e7d5e5918");
+ok("all five sibling backups exist + hall backup is tex-76 (d9251dd0)",
     SIB.every((f) => existsSync(`/tmp/ring-bak-${f}.glb`))
-    && sha(`/tmp/ring-bak-village_hall3.glb`).slice(0, 16) === "3f8f9e6f98bbbd04");
+    && sha(`/tmp/ring-bak-village_hall3.glb`).slice(0, 16) === "d9251dd0857e451f");
 
 // 1) mkv3-ring.ts: rebuild — longhouse deterministic + == live pin
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
@@ -44,14 +44,14 @@ const p1 = sha(`${A}/village_longhouse3.glb`);
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
 restoreSibs();
 copyFileSync(`/tmp/ring-bak-village_hall3.glb`, `${A}/village_hall3.glb`);
-ok("longhouse rebuild deterministic + == live build (333691747dd14c5c)",
-    p1 === sha(`${A}/village_longhouse3.glb`) && p1.startsWith("333691747dd14c5c"), p1.slice(0, 16));
-ok("ring-safety: five siblings restored byte-identical (10042008 tower, ffe8236b row, b82a4104 bunk, 2f2cacf9 court)",
-    sha(`${A}/village_tower3.glb`).slice(0, 16) === "7f60f1f7a5794411"
-    && sha(`${A}/village_row3.glb`).slice(0, 16) === "7ec9fc54b9d79897"
-    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "4bfacdd739b9bd0e"
-    && sha(`${A}/village_court3.glb`).slice(0, 16) === "ac75f33cab3fb5ce");
-ok("ring-safety: hall kept at tex-76 build (3f8f9e6f)", sha(`${A}/village_hall3.glb`).slice(0, 16) === "3f8f9e6f98bbbd04");
+ok("longhouse rebuild deterministic + == live build (05149e3e7d5e5918)",
+    p1 === sha(`${A}/village_longhouse3.glb`) && p1.startsWith("05149e3e7d5e5918"), p1.slice(0, 16));
+ok("ring-safety: five siblings restored byte-identical (fb590200 tower, 845ee738 row, e4c0651d bunk, 543b53d0 court)",
+    sha(`${A}/village_tower3.glb`).slice(0, 16) === "fb590200245f5985"
+    && sha(`${A}/village_row3.glb`).slice(0, 16) === "845ee738e09d5c1f"
+    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "e4c0651d5618b73b"
+    && sha(`${A}/village_court3.glb`).slice(0, 16) === "543b53d03ac2f104");
+ok("ring-safety: hall kept at tex-76 build (d9251dd0)", sha(`${A}/village_hall3.glb`).slice(0, 16) === "d9251dd0857e451f");
 
 // 2) decode: 3-family byte-family + fire anchor + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -103,11 +103,11 @@ for (const x of g.entities) ents[x.id] = x;
 const lh = ents["av-longhouse"];
 const lhComps = Object.keys(lh?.comp ?? {});
 ok("place-tex77-timber43.ts effect: longhouse live, pose (8,24.7), smoke comp recovered",
-    lh?.lib === "store/333691747dd14c5c.glb" && Math.abs(lh.pos[0] - 8) < 0.01 && Math.abs(lh.pos[2] - 24.7) < 0.01
+    lh?.lib === "store/05149e3e7d5e5918.glb" && Math.abs(lh.pos[0] - 8) < 0.01 && Math.abs(lh.pos[2] - 24.7) < 0.01
     && lhComps.includes("particles:smoke"), lh?.lib ?? "missing");
 ok("census anchors: hall + inn current, woodyard untouched",
-    ents["av-hall"]?.lib === "store/3f8f9e6f98bbbd04.glb"
-    && ents["av-inn"]?.lib === "store/6f35f80a336889cd.glb"
+    ents["av-hall"]?.lib === "store/d9251dd0857e451f.glb"
+    && ents["av-inn"]?.lib === "store/8de1af9446f98eb9.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-77 pin + tex-4 multi pin + ledger + HEAD

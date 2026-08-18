@@ -22,12 +22,12 @@ const W = "/Users/t3rpz/projects/eidoverse-worlds";
 const A = `${W}/agents/arthur/assets`;
 const CONVERTED = ["village_hall3", "village_longhouse3", "village_tower3", "village_garden3", "village_bunk3", "village_row3"];
 const EXPECT: Record<string, string> = {
-    "village_hall3": "3f8f9e6f98bbbd04",
-    "village_longhouse3": "333691747dd14c5c",
-    "village_tower3": "7f60f1f7a5794411",
-    "village_garden3": "1790e1816f08b85e",
-    "village_bunk3": "4bfacdd739b9bd0e",
-    "village_row3": "7ec9fc54b9d79897",
+    "village_hall3": "d9251dd0857e451f",
+    "village_longhouse3": "05149e3e7d5e5918",
+    "village_tower3": "fb590200245f5985",
+    "village_garden3": "e0a6a7c426d39398",
+    "village_bunk3": "e4c0651d5618b73b",
+    "village_row3": "845ee738e09d5c1f",
 };
 const fails: string[] = [];
 const ok = (n: string, c: boolean, d = "") => {
@@ -39,11 +39,11 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 const restore = () => { for (const f of CONVERTED) copyFileSync(`/tmp/ring-bak-${f}.glb`, `${A}/${f}.glb`); };
 
 // 0) ring-safety pre-state
-ok("pre-state: court on disk is the lift-1 build (ac75f33c → bb31e8a5 by lift-1)", sha(`${A}/village_court3.glb`).slice(0, 16) === "bb31e8a5ffdc1e16");
+ok("pre-state: court on disk is the lift-1 build (543b53d0 → 543b53d0 by lift-1)", sha(`${A}/village_court3.glb`).slice(0, 16) === "543b53d03ac2f104");
 ok("all six converted backups fresh",
     CONVERTED.every((f) => existsSync(`/tmp/ring-bak-${f}.glb`))
     && CONVERTED.every((f) => sha(`/tmp/ring-bak-${f}.glb`).slice(0, 16) === EXPECT[f])
-    && sha(`/tmp/ring-bak-village_court3.glb`).slice(0, 16) === "bb31e8a5ffdc1e16");
+    && sha(`/tmp/ring-bak-village_court3.glb`).slice(0, 16) === "543b53d03ac2f104");
 
 // 1) mkv3-ring.ts: rebuild — court deterministic + == live pin
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
@@ -51,8 +51,8 @@ restore();
 const p1 = sha(`${A}/village_court3.glb`);
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
 restore();
-ok("court rebuild deterministic + == live build (ac75f33c → bb31e8a5 by lift-1)",
-    p1 === sha(`${A}/village_court3.glb`) && p1.startsWith("bb31e8a5ffdc1e16"), p1.slice(0, 16));
+ok("court rebuild deterministic + == live build (543b53d0 → 543b53d0 by lift-1)",
+    p1 === sha(`${A}/village_court3.glb`) && p1.startsWith("543b53d03ac2f104"), p1.slice(0, 16));
 ok("ring-safety: all six converted siblings kept at their builds",
     CONVERTED.every((f) => sha(`${A}/${f}.glb`).slice(0, 16) === EXPECT[f]));
 
@@ -107,11 +107,11 @@ for (const x of g.entities) ents[x.id] = x;
 const ct = ents["av-court"];
 const ctComps = Object.keys(ct?.comp ?? {});
 ok("place-tex82-timber48.ts effect: court live, pose (21,-15.3), smoke comp recovered",
-    ct?.lib === "store/bb31e8a5ffdc1e16.glb" && Math.abs(ct.pos[0] - 21) < 0.01 && Math.abs(ct.pos[2] + 15.3) < 0.01
+    ct?.lib === "store/543b53d03ac2f104.glb" && Math.abs(ct.pos[0] - 21) < 0.01 && Math.abs(ct.pos[2] + 15.3) < 0.01
     && ctComps.includes("particles:smoke"), ct?.lib ?? "missing");
 ok("census anchors: hall + row current, woodyard untouched",
-    ents["av-hall"]?.lib === "store/3f8f9e6f98bbbd04.glb"
-    && ents["av-row-cottage"]?.lib === "store/7ec9fc54b9d79897.glb"
+    ents["av-hall"]?.lib === "store/d9251dd0857e451f.glb"
+    && ents["av-row-cottage"]?.lib === "store/845ee738e09d5c1f.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-82 pin + tex-4 multi pin + ledger + HEAD

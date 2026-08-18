@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-watchpost.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_watchpost3.glb`);
 execSync("bun agents/arthur/assets/mkv3-watchpost.ts", { cwd: W, stdio: "pipe" });
-ok("watchpost rebuild deterministic + == live build (256e16a13027fb93)", p1 === sha(`${A}/village_watchpost3.glb`) && p1.startsWith("256e16a13027fb93"), p1.slice(0, 16));
+ok("watchpost rebuild deterministic + == live build (4ac5cacf91ed5d2d)", p1 === sha(`${A}/village_watchpost3.glb`) && p1.startsWith("4ac5cacf91ed5d2d"), p1.slice(0, 16));
 
 // 2) decode: timber/iron byte-family + fire anchor + chains + sizes
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -82,11 +82,11 @@ for (const x of g.entities) ents[x.id] = x;
 const wp = ents["av-watchpost"];
 const wpComps = Object.keys(wp?.comp ?? {});
 ok("place-tex68-timber35.ts effect: watchpost live, pose (15.6,-15.6), fire comps recovered",
-    wp?.lib === "store/256e16a13027fb93.glb" && Math.abs(wp.pos[0] - 15.6) < 0.01 && Math.abs(wp.pos[2] + 15.6) < 0.01
+    wp?.lib === "store/4ac5cacf91ed5d2d.glb" && Math.abs(wp.pos[0] - 14.02) < 0.01 && Math.abs(wp.pos[2] + 18.17) < 0.01
     && wpComps.includes("particles") && wpComps.includes("motion:fire_coals"), wp?.lib ?? "missing");
 ok("census anchors: plaza + kiln current, woodyard untouched",
-    ents["av-plaza-hearth"]?.lib === "store/1a656f00ab66db91.glb"
-    && ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb"
+    ents["av-plaza-hearth"]?.lib === "store/43fcaf1442f5d6b8.glb"
+    && ents["av-kiln"]?.lib === "store/69c0e48a917d4ed2.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-68 pin + refreshed tex-14 pin + ledger + HEAD

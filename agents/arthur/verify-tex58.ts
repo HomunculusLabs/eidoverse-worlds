@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-shrine.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_shrine3.glb`);
 execSync("bun agents/arthur/assets/mkv3-shrine.ts", { cwd: W, stdio: "pipe" });
-ok("shrine rebuild deterministic + == live build (d0d3743a60802625)", p1 === sha(`${A}/village_shrine3.glb`) && p1.startsWith("d0d3743a60802625"), p1.slice(0, 16));
+ok("shrine rebuild deterministic + == live build (78611c7dc9a3cb6e)", p1 === sha(`${A}/village_shrine3.glb`) && p1.startsWith("78611c7dc9a3cb6e"), p1.slice(0, 16));
 
 // 2) decode: stone + soil byte-family + votive anchors + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -80,11 +80,11 @@ for (const x of g.entities) ents[x.id] = x;
 const sh = ents["av-shrine"];
 const shComps = Object.keys(sh?.comp ?? {});
 ok("place-tex58-stone13.ts effect: shrine live, pose (-23.7,-3.8), votive comps recovered",
-    sh?.lib === "store/d0d3743a60802625.glb" && Math.abs(sh.pos[0] + 23.7) < 0.01 && Math.abs(sh.pos[2] + 3.8) < 0.01
+    sh?.lib === "store/78611c7dc9a3cb6e.glb" && Math.abs(sh.pos[0] + 23.7) < 0.01 && Math.abs(sh.pos[2] + 3.8) < 0.01
     && ["motion:flame_v0", "motion:flame_v1", "motion:flame_v2"].every((c) => shComps.includes(c)), sh?.lib ?? "missing");
 ok("census anchors: market + forge current, woodyard untouched",
-    ents["av-market"]?.lib === "store/2bb51287d4e1a2a2.glb"
-    && ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb"
+    ents["av-market"]?.lib === "store/b7167aad118e47c5.glb"
+    && ents["av-forge"]?.lib === "store/7fe0ce6607ed2d1b.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-58 pin + refreshed tex-13 pin + ledger + HEAD

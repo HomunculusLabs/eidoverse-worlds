@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-kiln38.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_kiln3.glb`);
 execSync("bun agents/arthur/assets/mkv3-kiln38.ts", { cwd: W, stdio: "pipe" });
-ok("kiln rebuild deterministic + == live build (0bdc0d18dddacf9b)", p1 === sha(`${A}/village_kiln3.glb`) && p1.startsWith("0bdc0d18dddacf9b"), p1.slice(0, 16));
+ok("kiln rebuild deterministic + == live build (69c0e48a917d4ed2)", p1 === sha(`${A}/village_kiln3.glb`) && p1.startsWith("69c0e48a917d4ed2"), p1.slice(0, 16));
 
 // 2) decode: stone + timber byte-family + fire anchor + chains + sizes
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -83,11 +83,11 @@ for (const x of g.entities) ents[x.id] = x;
 const kl = ents["av-kiln"];
 const klComps = Object.keys(kl?.comp ?? {});
 ok("place-tex66-stone18.ts effect: kiln live, pose (28.9,37), fire + smoke comps recovered",
-    kl?.lib === "store/0bdc0d18dddacf9b.glb" && Math.abs(kl.pos[0] - 28.9) < 0.01 && Math.abs(kl.pos[2] - 37) < 0.01
+    kl?.lib === "store/69c0e48a917d4ed2.glb" && Math.abs(kl.pos[0] - 28.9) < 0.01 && Math.abs(kl.pos[2] - 37) < 0.01
     && klComps.includes("particles") && klComps.includes("motion:fire_kiln"), kl?.lib ?? "missing");
 ok("census anchors: potter + waystone current, woodyard untouched",
-    ents["av-potter"]?.lib === "store/cea5c582bf05d72f.glb"
-    && ents["av-waystone"]?.lib === "store/5fcaa644f4ba290b.glb"
+    ents["av-potter"]?.lib === "store/66836b01897cfebc.glb"
+    && ents["av-waystone"]?.lib === "store/c418d713c69d23ae.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-66 pin + refreshed tex-9 pin + ledger + HEAD

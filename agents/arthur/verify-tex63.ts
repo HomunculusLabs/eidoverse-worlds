@@ -29,8 +29,8 @@ const n1 = sha(`${A}/village_milestone_n.glb`);
 const s1 = sha(`${A}/village_milestone_s.glb`);
 execSync("bun agents/arthur/assets/mkv3-miles14.ts", { cwd: W, stdio: "pipe" });
 ok("milestones rebuild deterministic + == live builds (n a2b6bfab…, s 3d423bc3…)",
-    n1 === sha(`${A}/village_milestone_n.glb`) && n1.startsWith("a2b6bfab613f0e84")
-    && s1 === sha(`${A}/village_milestone_s.glb`) && s1.startsWith("3d423bc3590b5068"), n1.slice(0, 12) + "/" + s1.slice(0, 12));
+    n1 === sha(`${A}/village_milestone_n.glb`) && n1.startsWith("5d2112b381b20672")
+    && s1 === sha(`${A}/village_milestone_s.glb`) && s1.startsWith("6ccaeb40f50003e2"), n1.slice(0, 12) + "/" + s1.slice(0, 12));
 
 // 2) decode: stone + iron byte-family + chains + sizes (both GLBs)
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -45,7 +45,7 @@ const tileOf = (glbName: string, matName: string): Buffer | null => {
 };
 const refStone = tileOf("village_kiln3.glb", "stone")!;
 const refIron = tileOf("village_bellbase3.glb", "iron")!;
-for (const [nm, pin] of [["n", "a2b6bfab613f0e84"], ["s", "3d423bc3590b5068"]] as const) {
+for (const [nm, pin] of [["n", "5d2112b381b20672"], ["s", "6ccaeb40f50003e2"]] as const) {
     const buf = readFileSync(`${A}/village_milestone_${nm}.glb`);
     const jl = buf.readUInt32LE(12);
     const binStart = 28 + jl;
@@ -83,11 +83,11 @@ for (const x of g.entities) ents[x.id] = x;
 const mn = ents["av-milestone-n"];
 const ms = ents["av-milestone-s"];
 ok("place-tex63-multi7.ts effect: both milestones live on textured builds, poses preserved",
-    mn?.lib === "store/a2b6bfab613f0e84.glb" && Math.abs(mn.pos[0] - 0) < 0.01 && Math.abs(mn.pos[2] - 30.6) < 0.01
-    && ms?.lib === "store/3d423bc3590b5068.glb" && Math.abs(ms.pos[0] - 0) < 0.01 && Math.abs(ms.pos[2] + 30.6) < 0.01,
+    mn?.lib === "store/5d2112b381b20672.glb" && Math.abs(mn.pos[0] - 0) < 0.01 && Math.abs(mn.pos[2] - 30.6) < 0.01
+    && ms?.lib === "store/6ccaeb40f50003e2.glb" && Math.abs(ms.pos[0] - 0) < 0.01 && Math.abs(ms.pos[2] + 30.6) < 0.01,
     `${mn?.lib ?? "missing"} / ${ms?.lib ?? "missing"}`);
 ok("census anchors: wayside + mapboard current, woodyard untouched",
-    ents["av-wayside"]?.lib === "store/5db486a79ff5cc6e.glb"
+    ents["av-wayside"]?.lib === "store/8da60306e51c68dd.glb"
     && ents["av-mapboard"]?.lib === "store/e732ce10400c1979.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 

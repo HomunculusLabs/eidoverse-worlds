@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-waystone41.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_waystone3.glb`);
 execSync("bun agents/arthur/assets/mkv3-waystone41.ts", { cwd: W, stdio: "pipe" });
-ok("waystone rebuild deterministic + == live build (5fcaa644f4ba290b)", p1 === sha(`${A}/village_waystone3.glb`) && p1.startsWith("5fcaa644f4ba290b"), p1.slice(0, 16));
+ok("waystone rebuild deterministic + == live build (c418d713c69d23ae)", p1 === sha(`${A}/village_waystone3.glb`) && p1.startsWith("c418d713c69d23ae"), p1.slice(0, 16));
 
 // 2) decode: 3-family byte-family + float anchors + chains + sizes
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -93,11 +93,11 @@ for (const x of g.entities) ents[x.id] = x;
 const wsx = ents["av-waystone"];
 const wsComps = Object.keys(wsx?.comp ?? {});
 ok("place-tex64-timber31.ts effect: waystone live, pose (-38.9,-38.9), all three comps recovered",
-    wsx?.lib === "store/5fcaa644f4ba290b.glb" && Math.abs(wsx.pos[0] + 38.9) < 0.01 && Math.abs(wsx.pos[2] + 38.9) < 0.01
+    wsx?.lib === "store/c418d713c69d23ae.glb" && Math.abs(wsx.pos[0] + 38.9) < 0.01 && Math.abs(wsx.pos[2] + 38.9) < 0.01
     && ["motion:ws_float", "motion:ws_float_spin", "particles:ffw"].every((c) => wsComps.includes(c)), wsx?.lib ?? "missing");
 ok("census anchors: milestone-n + wayside current, woodyard untouched",
-    ents["av-milestone-n"]?.lib === "store/a2b6bfab613f0e84.glb"
-    && ents["av-wayside"]?.lib === "store/5db486a79ff5cc6e.glb"
+    ents["av-milestone-n"]?.lib === "store/5d2112b381b20672.glb"
+    && ents["av-wayside"]?.lib === "store/8da60306e51c68dd.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-64 pin + refreshed tex-28 pin + ledger + HEAD

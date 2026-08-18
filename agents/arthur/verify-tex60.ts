@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-dyelaundry94.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_dyelaundry3.glb`);
 execSync("bun agents/arthur/assets/mkv3-dyelaundry94.ts", { cwd: W, stdio: "pipe" });
-ok("laundry rebuild deterministic + == live build (c5f85611ffefc522)", p1 === sha(`${A}/village_dyelaundry3.glb`) && p1.startsWith("c5f85611ffefc522"), p1.slice(0, 16));
+ok("laundry rebuild deterministic + == live build (30dd0a5ac7c00fe4)", p1 === sha(`${A}/village_dyelaundry3.glb`) && p1.startsWith("30dd0a5ac7c00fe4"), p1.slice(0, 16));
 
 // 2) decode: timber byte-family + cloth anchors + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -79,11 +79,11 @@ for (const x of g.entities) ents[x.id] = x;
 const dl = ents["av-dyelaundry"];
 const dlComps = Object.keys(dl?.comp ?? {});
 ok("place-tex60-timber28.ts effect: laundry live, pose (-26.7,-13), all six wind comps recovered",
-    dl?.lib === "store/c5f85611ffefc522.glb" && Math.abs(dl.pos[0] + 26.7) < 0.01 && Math.abs(dl.pos[2] + 13) < 0.01
+    dl?.lib === "store/30dd0a5ac7c00fe4.glb" && Math.abs(dl.pos[0] + 26.7) < 0.01 && Math.abs(dl.pos[2] + 13) < 0.01
     && [0, 1, 2, 3, 4, 5].every((i) => dlComps.includes(`motion:dl_cloth_${i}`)), dl?.lib ?? "missing");
 ok("census anchors: monument + shrine current, woodyard untouched",
     ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb"
-    && ents["av-shrine"]?.lib === "store/d0d3743a60802625.glb"
+    && ents["av-shrine"]?.lib === "store/78611c7dc9a3cb6e.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-60 pin + refreshed tex-5 pin + ledger + HEAD

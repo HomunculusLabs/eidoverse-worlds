@@ -32,8 +32,8 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-bakery-cistern97.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_bcistern3.glb`);
 execSync("bun agents/arthur/assets/mkv3-bakery-cistern97.ts", { cwd: W, stdio: "pipe" });
-ok("mkv3-bakery-cistern97.ts: rebuild deterministic + == live build (a96ee31d29c2085f)",
-    p1 === sha(`${A}/village_bcistern3.glb`) && p1.startsWith("a96ee31d29c2085f"), p1.slice(0, 16));
+ok("mkv3-bakery-cistern97.ts: rebuild deterministic + == live build (e132952021178a89)",
+    p1 === sha(`${A}/village_bcistern3.glb`) && p1.startsWith("e132952021178a89"), p1.slice(0, 16));
 
 // 2) decode: 3-family byte-family + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -83,10 +83,10 @@ const ents: Record<string, any> = {};
 for (const x of g.entities) ents[x.id] = x;
 const bc = ents["av-bcistern"];
 ok("place-tex55-timber25.ts effect: cistern live, pose (18.2,-16.5)",
-    bc?.lib === "store/a96ee31d29c2085f.glb" && Math.abs(bc.pos[0] - 18.2) < 0.01 && Math.abs(bc.pos[2] + 16.5) < 0.01, bc?.lib ?? "missing");
+    bc?.lib === "store/e132952021178a89.glb" && Math.abs(bc.pos[0] - 18.2) < 0.01 && Math.abs(bc.pos[2] + 16.5) < 0.01, bc?.lib ?? "missing");
 ok("census (verify-tex55-live.ts assertions): hutch + house current, woodyard untouched",
-    ents["av-hutch"]?.lib === "store/6263e8a20eb17cc9.glb"
-    && ents["arthur-house"]?.lib === "store/cff51defbdacd0ce.glb"
+    ents["av-hutch"]?.lib === "store/f5f47791dadb5abe.glb"
+    && ents["arthur-house"]?.lib === "store/db08a24143ee5443.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-55 pin + refreshed tex-10 pin + ledger + HEAD

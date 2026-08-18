@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-quarry36.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_quarry3.glb`);
 execSync("bun agents/arthur/assets/mkv3-quarry36.ts", { cwd: W, stdio: "pipe" });
-ok("quarry rebuild deterministic + == live build (6b3da17816aeeb55)", p1 === sha(`${A}/village_quarry3.glb`) && p1.startsWith("6b3da17816aeeb55"), p1.slice(0, 16));
+ok("quarry rebuild deterministic + == live build (8582f2d45440dfed)", p1 === sha(`${A}/village_quarry3.glb`) && p1.startsWith("8582f2d45440dfed"), p1.slice(0, 16));
 
 // 2) decode: 3-family byte-family + chains + sizes
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -80,10 +80,10 @@ const ents: Record<string, any> = {};
 for (const x of g.entities) ents[x.id] = x;
 const qy = ents["av-quarry"];
 ok("place-tex70-timber37.ts effect: quarry live, pose (33.9,33.9)",
-    qy?.lib === "store/6b3da17816aeeb55.glb" && Math.abs(qy.pos[0] - 33.9) < 0.01 && Math.abs(qy.pos[2] - 33.9) < 0.01, qy?.lib ?? "missing");
+    qy?.lib === "store/8582f2d45440dfed.glb" && Math.abs(qy.pos[0] - 33.9) < 0.01 && Math.abs(qy.pos[2] - 33.9) < 0.01, qy?.lib ?? "missing");
 ok("census anchors: belltower + watchpost current, woodyard untouched",
-    ents["av-belltower"]?.lib === "store/82e4c316b62e5006.glb"
-    && ents["av-watchpost"]?.lib === "store/256e16a13027fb93.glb"
+    ents["av-belltower"]?.lib === "store/66524bcde061a437.glb"
+    && ents["av-watchpost"]?.lib === "store/4ac5cacf91ed5d2d.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-70 pin + refreshed tex-24 pin + ledger + HEAD

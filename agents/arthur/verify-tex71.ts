@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-charcoal40.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_charcoal3.glb`);
 execSync("bun agents/arthur/assets/mkv3-charcoal40.ts", { cwd: W, stdio: "pipe" });
-ok("charcoal rebuild deterministic + == live build (dcb3bb63442a764c)", p1 === sha(`${A}/village_charcoal3.glb`) && p1.startsWith("dcb3bb63442a764c"), p1.slice(0, 16));
+ok("charcoal rebuild deterministic + == live build (1d9a1c2d95f785b6)", p1 === sha(`${A}/village_charcoal3.glb`) && p1.startsWith("1d9a1c2d95f785b6"), p1.slice(0, 16));
 
 // 2) decode: timber/iron byte-family + chains + sizes
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -79,11 +79,11 @@ for (const x of g.entities) ents[x.id] = x;
 const ch = ents["av-charcoal"];
 const chComps = Object.keys(ch?.comp ?? {});
 ok("place-tex71-timber38.ts effect: charcoal live, pose (19.1,29.4), smoke comp recovered",
-    ch?.lib === "store/dcb3bb63442a764c.glb" && Math.abs(ch.pos[0] - 19.1) < 0.01 && Math.abs(ch.pos[2] - 29.4) < 0.01
+    ch?.lib === "store/1d9a1c2d95f785b6.glb" && Math.abs(ch.pos[0] - 19.1) < 0.01 && Math.abs(ch.pos[2] - 29.4) < 0.01
     && chComps.includes("particles:smoke"), ch?.lib ?? "missing");
 ok("census anchors: quarry + kiln current, woodyard untouched",
-    ents["av-quarry"]?.lib === "store/6b3da17816aeeb55.glb"
-    && ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb"
+    ents["av-quarry"]?.lib === "store/8582f2d45440dfed.glb"
+    && ents["av-kiln"]?.lib === "store/69c0e48a917d4ed2.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-71 pin + refreshed tex-25 pin + ledger + HEAD

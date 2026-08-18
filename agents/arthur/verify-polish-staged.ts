@@ -5,8 +5,8 @@
 // no mock — the consent-blocked dry-run is NOT attempted here):
 //   A. Staged builds (byte-exact, ×2 deterministic):
 //      carousel  38fbbc26dcdfcc1a  (roof lift + paint widening + stair fix)
-//      mapboard  b77ef40aae3a9dae  (distance skeleton + tower chip)
-//      welcome   62746d1af698eacc  (night lamp, emissive glow2)
+//      mapboard  b77ef40aae3a9dae → 44eeba91 (plaza-palette warm)  (distance skeleton + tower chip)
+//      welcome   62746d1af698eacc → 83bced0a (plaza-palette warm)  (night lamp, emissive glow2)
 //   B. GLB decodes: welcome glow2 emissiveFactor [1.5,*,*]; mapboard 24
 //      nodes; welcome 5 nodes; mapboard COLOR_0 census (1502 verts).
 //   C. Placers present + contract-bearing (carousel/mapboard/welcome):
@@ -94,8 +94,8 @@ if (import.meta.main) {
     // ---- A. staged builds: byte-exact + deterministic ----
     const BUILDS: Array<[string, string]> = [
         ["village_carousel3.glb", "38fbbc26dcdfcc1a"],
-        ["village_mapboard3.glb", "b77ef40aae3a9dae"],
-        ["village_welcome3.glb", "62746d1af698eacc"],
+        ["village_mapboard3.glb", "1f1a10f4dce71a0e"], // plaza-palette: warm structure, lamp emissives exempted
+        ["village_welcome3.glb", "6cd75bbbbf379df5"], // plaza-palette: warm structure, lamp emissives exempted
     ];
     for (const [f, want] of BUILDS) {
         const h = sha16(`${A}/${f}`);
@@ -111,8 +111,8 @@ if (import.meta.main) {
     // rebuild in place, compare, and RESTORE the original on mismatch.
     // (Success path leaves the rebuilt byte-identical file in place.)
     const REBUILDS: Array<[string, string, string]> = [
-        ["mkv3-mapboard.ts", "village_mapboard3.glb", "b77ef40aae3a9dae"],
-        ["mkv3-welcome59.ts", "village_welcome3.glb", "62746d1af698eacc"],
+        ["mkv3-mapboard.ts", "village_mapboard3.glb", "1f1a10f4dce71a0e"],
+        ["mkv3-welcome59.ts", "village_welcome3.glb", "6cd75bbbbf379df5"],
         ["mkcarousel.ts", "village_carousel3.glb", "38fbbc26dcdfcc1a"],
     ];
     for (const [mk, glb, want] of REBUILDS) {
@@ -233,8 +233,8 @@ console.log("H4=" + (consistent && reanchored && jitterKept));
     // state against the register items:
     //   carousel: cd22d0b0 = defect (old low roof) still LIVE → register OPEN
     //             38fbbc26 = staged build ROLLED → close the register item
-    //   welcome:  != 62746d1a = lamp not yet rolled; == → close that item
-    //   mapboard: e732ce10 = live pin; b77ef40a = tower chip rolled
+    //   welcome:  != 83bced0a = lamp not yet rolled; == → close that item
+    //   mapboard: e732ce10 = live pin; 44eeba91 = tower chip rolled (plaza-palette warm)
     // The sentinel only READS; it never places.
     if (process.env.POLISH_LIVE === "1") {
         try {
@@ -269,10 +269,10 @@ console.log("H4=" + (consistent && reanchored && jitterKept));
                 console.log(`SENTINEL carousel: staged build ROLLED — CLOSE the roof+paint register items; smoke item: live bag ${nComps} comps${smoke ? ", smoke PRESENT — close it too" : ", smoke STILL LOST — the heal was skipped (re-apply particles:smoke or run the heal), keep the item OPEN"}`);
             }
             else console.log(`SENTINEL carousel: UNKNOWN build ${car} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeRoof("<store-url-or-local-path>"))' (LIFTED = close items; LOW = old roof still live)`);
-            if (wel === "store/62746d1af698eacc.glb") console.log("SENTINEL welcome: lamp ROLLED — CLOSE the welcome register item");
+            if (wel === "store/6cd75bbbbf379df5.glb") console.log("SENTINEL welcome: lamp ROLLED — CLOSE the welcome register item (plaza-palette warm staged)");
             else if (wel === "store/fa0c9d94a07b9ef5.glb") console.log("SENTINEL welcome: tex-15 build live (pre-lamp) — register OPEN correct");
             else console.log(`SENTINEL welcome: UNKNOWN build ${wel} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeLamp("<store-url-or-local-path>"))' (LAMP = close item; NO-LAMP = open)`);
-            if (map === "store/b77ef40aae3a9dae.glb") console.log("SENTINEL mapboard: tower chip ROLLED live");
+            if (map === "store/1f1a10f4dce71a0e.glb") console.log("SENTINEL mapboard: tower chip ROLLED live (plaza-palette warm staged)");
             else if (map === "store/e732ce10400c1979.glb") console.log("SENTINEL mapboard: live pin e732ce10 stands (chip staged)");
             else console.log(`SENTINEL mapboard: UNKNOWN build ${map} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeChip("<store-url-or-local-path>"))' (CHIP = chip live; NO-CHIP = pre-chip)`);
         } catch (e: any) {

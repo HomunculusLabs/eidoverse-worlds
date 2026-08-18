@@ -32,7 +32,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-forge98.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_forge3.glb`);
 execSync("bun agents/arthur/assets/mkv3-forge98.ts", { cwd: W, stdio: "pipe" });
-ok("forge rebuild deterministic + == live build (6715b0f885deaed7)", p1 === sha(`${A}/village_forge3.glb`) && p1.startsWith("6715b0f885deaed7"), p1.slice(0, 16));
+ok("forge rebuild deterministic + == live build (7fe0ce6607ed2d1b)", p1 === sha(`${A}/village_forge3.glb`) && p1.startsWith("7fe0ce6607ed2d1b"), p1.slice(0, 16));
 
 // 2) decode: 3-family byte-family + fire anchor + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -86,10 +86,10 @@ for (const x of g.entities) ents[x.id] = x;
 const fg = ents["av-forge"];
 const fgComps = Object.keys(fg?.comp ?? {});
 ok("place-tex56-timber26.ts effect: forge live on woodwork build, fire comps recovered",
-    fg?.lib === "store/6715b0f885deaed7.glb" && fgComps.some((c) => c.startsWith("particles")) && fgComps.some((c) => c.startsWith("motion:fire")), fg?.lib ?? "missing");
+    fg?.lib === "store/7fe0ce6607ed2d1b.glb" && fgComps.some((c) => c.startsWith("particles")) && fgComps.some((c) => c.startsWith("motion:fire")), fg?.lib ?? "missing");
 ok("census anchors: cistern + hutch current, woodyard untouched",
-    ents["av-bcistern"]?.lib === "store/a96ee31d29c2085f.glb"
-    && ents["av-hutch"]?.lib === "store/6263e8a20eb17cc9.glb"
+    ents["av-bcistern"]?.lib === "store/e132952021178a89.glb"
+    && ents["av-hutch"]?.lib === "store/f5f47791dadb5abe.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-56 pin + refreshed tex-6 pin + ledger + HEAD

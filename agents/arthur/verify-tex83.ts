@@ -36,7 +36,7 @@ const restore = () => {
 };
 
 // 0) landmarks-safety pre-state
-ok("pre-state: inn on disk is the tex-83 build (6f35f80a)", sha(`${A}/village_inn3.glb`).slice(0, 16) === "6f35f80a336889cd");
+ok("pre-state: inn on disk is the tex-83 build (6f35f80a)", sha(`${A}/village_inn3.glb`).slice(0, 16) === "8de1af9446f98eb9");
 ok("sibling backups fresh (carousel 38fbbc26, belltower 82e4c316, windmill 7fc779a5)",
     existsSync("/tmp/carousel-polish-backup.glb")
     && existsSync("/tmp/ring-bak-village_belltower3.glb")
@@ -48,12 +48,12 @@ restore();
 const p1 = sha(`${A}/village_inn3.glb`);
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
 restore();
-ok("inn rebuild deterministic + == live build (6f35f80a336889cd)",
-    p1 === sha(`${A}/village_inn3.glb`) && p1.startsWith("6f35f80a336889cd"), p1.slice(0, 16));
+ok("inn rebuild deterministic + == live build (8de1af9446f98eb9)",
+    p1 === sha(`${A}/village_inn3.glb`) && p1.startsWith("8de1af9446f98eb9"), p1.slice(0, 16));
 ok("landmarks-safety: carousel (38fbbc26) + belltower (82e4c316) + windmill (7fc779a5) byte-identical",
     sha(`${A}/village_carousel3.glb`).slice(0, 16) === "38fbbc26dcdfcc1a"
-    && sha(`${A}/village_belltower3.glb`).slice(0, 16) === "82e4c316b62e5006"
-    && sha(`${A}/village_windmill3.glb`).slice(0, 16) === "7fc779a5c7dd5dc5");
+    && sha(`${A}/village_belltower3.glb`).slice(0, 16) === "66524bcde061a437"
+    && sha(`${A}/village_windmill3.glb`).slice(0, 16) === "4feee38977d7c6e5");
 
 // 2) decode: 4-family byte-family + anchors + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -104,12 +104,12 @@ for (const x of g.entities) ents[x.id] = x;
 const inn = ents["av-inn"];
 const innComps = Object.keys(inn?.comp ?? {});
 ok("place-tex83-timber49.ts effect: inn live, pose (34,0), all 4 comps recovered (smoke + particles + motion:sign + sockets)",
-    inn?.lib === "store/6f35f80a336889cd.glb" && Math.abs(inn.pos[0] - 34) < 0.01 && Math.abs(inn.pos[2]) < 0.01
+    inn?.lib === "store/8de1af9446f98eb9.glb" && Math.abs(inn.pos[0] - 34) < 0.01 && Math.abs(inn.pos[2]) < 0.01
     && innComps.includes("particles:smoke") && innComps.includes("particles")
     && innComps.includes("motion:sign") && innComps.includes("sockets"), inn?.lib ?? "missing");
 ok("census anchors: court + hall current (ring closed), woodyard untouched",
-    ents["av-court"]?.lib === "store/ac75f33cab3fb5ce.glb"
-    && ents["av-hall"]?.lib === "store/3f8f9e6f98bbbd04.glb"
+    ents["av-court"]?.lib === "store/543b53d03ac2f104.glb"
+    && ents["av-hall"]?.lib === "store/d9251dd0857e451f.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-83 pin + tex-4 multi pin + ledger + HEAD
