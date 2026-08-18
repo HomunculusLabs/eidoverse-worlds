@@ -153,6 +153,17 @@ wakeups. This lane is the standing fix for that blindness.
       = carousel roof-edge lanterns absent LIVE — already registered
       (polish-5 staged in 38fbbc26dcdfcc1a, rollout consent-blocked);
       frame 2 independently corroborates the register.
+      — polish-13 CONSENT WINDOW (subject this wakeup): history shows Bill
+      in-world at the carousel with the resident at ~20:00 (seq 3328-3331,
+      both mounted horse_0, Bill dismounted at (-19.55, 0, 24.84)) — the
+      summoner stood AT the consent-blocked subject minutes before this
+      tick. Both OPEN items remain ready: staged GLB 38fbbc26dcdfcc1a
+      hash-verified intact this tick (491,384B), placer contract-safe and
+      dry-run-proven. UNBLOCK ATTEMPTED via the resident's own say channel
+      (control.json → consumed): one line in the resident's voice offering
+      the staged roof lift + paint widening + lanterns. No reply yet at
+      commit time. Next tick: check chat log for a reply before anything
+      else; consent still Bill's alone.
 
 ## Closed
 
