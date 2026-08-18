@@ -288,6 +288,23 @@ wakeups. This lane is the standing fix for that blindness.
 	           live confound. Item stays OPEN pending live read after
 	           consent rollout (fog unmodeled; render PASS is
 	           necessary-not-sufficient). 12 views total now.
+      — polish-23 FOG GATE (subject this wakeup): the live reads failed
+           "under fog" — so the REAL fog was decoded at source and
+           modeled: core.js:115 FogExp2(0x101828, 0.018), weather-
+           scaled sky.js:798 (0.018 * a.fog). render-carousel.py gained
+           a fog= param (three.js FogExp2 math, per-tri factor
+           1-exp(-(d*dist)²), fog color 0x101828) + 3 gated views:
+           fog18-base (true 0.018), fog18-heavy (0.036 = 2x weather),
+           fog10-base. VISION GATE heavy fog: PASS — "vary in color",
+           darkest vs palest still separable, cool cast noted. Base-
+           fog vision read was a PROBE ARTIFACT (claimed no horses
+           visible — on a frame strictly between two passing brackets);
+           pixel decode settles it: lum spread 95 clear / 85 base / 61
+           heavy — monotonic, physical, base > heavy. The live
+           "uniform gray" reads cohere: they read the OLD narrow
+           paint; the staged widening is exactly what survives fog.
+           Register item remains OPEN for the live read (now with the
+           full offline case: clear + fog + heavy fog all PASS).
 
 ## Closed
 

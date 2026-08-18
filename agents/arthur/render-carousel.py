@@ -103,7 +103,12 @@ for si in scene_nodes:
 
 print(f"triangles: {len(tris)}")
 
-def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=None, night=False):
+def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=None, night=False, cam_dist=None, fog=None):
+    # polish-23 FOG GATE: fog = FogExp2 density (village truth: core.js:115
+    # FogExp2(0x101828, 0.018), weather-scaled by sky.js:798 `0.018 * a.fog`).
+    # Per-pixel blend toward the fog color, factor = 1 - exp(-(d*dist)^2)
+    # (three.js FogExp2 math); cam_dist = camera-to-center distance so the
+    # per-pixel depth composes to true view distance.
     # orthonormal basis
     ex = eye_dir
     l = math.sqrt(sum(c*c for c in ex)); ex = tuple(-c/l for c in ex)  # camera looks along -eye? we define eye_dir = from camera toward scene
@@ -138,6 +143,8 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=No
         if facing <= 0:
             continue
         base = FLAT.get(mi, (160, 160, 160))
+        # fog base color (village truth 0x101828)
+        FOGC = (16, 24, 40)
         if night:
             # NIGHT MODE (polish-15): emissive materials glow at full strength
             # regardless of the sun (they are light sources, not lit surfaces);
@@ -152,6 +159,12 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=No
         else:
             lam = max(0.25, abs(nx*LIGHT[0]+ny*LIGHT[1]+nz*LIGHT[2])/nl)
             col = tuple(min(255, int(ch*lam)) for ch in base)
+        # polish-23 fog: per-TRIANGLE fog factor from the tri's true view
+        # distance (cam_dist + mean z) — FogExp2 factor 1-exp(-(d*dist)^2)
+        if fog is not None:
+            dist = (cam_dist or 0) + (a[2] + bb[2] + c[2]) / 3
+            f = 1 - math.exp(-((fog * dist) ** 2))
+            col = tuple(int(round(ch + (FOGC[k] - ch) * f)) for k, ch in enumerate(col))
         # screen bbox
         xs = [a[0], bb[0], c[0]]; ys = [a[1], bb[1], c[1]]; zs = [a[2], bb[2], c[2]]
         x0 = max(0, int((min(xs)+half_w)/(2*half_w)*W)); x1 = min(W-1, int((max(xs)+half_w)/(2*half_w)*W))
@@ -198,4 +211,12 @@ render("day18-front", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
 render("day18-threeq", (0.7, -0.17, 0.7), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
 render("day10-front", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 5.8, 5.8)
 render("day10-threeq", (0.7, -0.17, 0.7), (0, 1, 0), (0, 2.6, 0), 5.8, 5.8)
+# polish-23 FOG GATE SET — the REAL confound at last: village fog decoded at
+# source (core.js:115 FogExp2(0x101828, 0.018); sky.js:798 weather-scaled
+# 0.018*a.fog). The live reads failed "under fog" — these views apply the
+# true density (and a 2x weather-heavy case) at the complaint distances.
+# cam_dist = the view's camera distance (10.4/5.8 half-extents over tan30).
+render("fog18-base", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4, cam_dist=18, fog=0.018)
+render("fog18-heavy", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4, cam_dist=18, fog=0.036)
+render("fog10-base", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 5.8, 5.8, cam_dist=10, fog=0.018)
 print("renders complete")
