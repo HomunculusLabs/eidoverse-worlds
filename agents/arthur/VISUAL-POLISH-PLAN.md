@@ -1129,6 +1129,22 @@ wakeups. This lane is the standing fix for that blindness.
            valid at its framing; the fixture now matches the
            engine law everywhere.
 
+      — polish-85 DUSK RE-GATE (subject this wakeup): the p84
+           fixture fix changed what the carousel dusk renders
+           actually show — full-strength lanterns vs the wrongly-
+           dimmed 60% model p72 graded. RE-GATED per the p73 law
+           (fix the fixture, re-gate every subject that ran under
+           it): vision PASS at 18m — full-strength lanterns still
+           read as soft warm accents against the brighter twilight
+           (72,58,48), no glare, silhouette clearly readable, natural
+           post-18:00 dusk. Pixel 36 warm px @18m (same count as the
+           wrong fixture — the threshold brackets both; the PEAK
+           color is the honest signature: 202-214 full-strength vs
+           the old ~60% suppression). The p72 verdict UPGRADES from
+           'pass under wrong fixture' to 'pass under the engine-law
+           fixture' — the lantern package's three-point time-safety
+           now rests on honest fixtures at every point.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
