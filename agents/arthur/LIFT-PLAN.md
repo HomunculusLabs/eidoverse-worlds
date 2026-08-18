@@ -106,7 +106,11 @@ exit 0; live census). Never self-judge the village done.
   gate ALL PASS, census ALL GREEN 7th consecutive, resident log unchanged
   (no new reads; Bill said he's off at work); queue dry 8th tick, held per
   the lane's law — no model changed, live village untouched.
-- lift-13 (this): ninth lean hold — steady state unchanged: no lane banked,
+- lift-13 (b7973e5): ninth lean hold — steady state unchanged: no lane banked,
   gate ALL PASS (register 3 OPEN expected), census ALL GREEN 8th
   consecutive, resident log unchanged; queue dry 9th tick, held per the
+  lane's law — no model changed, live village untouched.
+- lift-14 (this): tenth lean hold — steady state identical: no lane banked,
+  gate ALL PASS (register 3 OPEN expected), census ALL GREEN 9th
+  consecutive, resident log unchanged; queue dry 10th tick, held per the
   lane's law — no model changed, live village untouched.
