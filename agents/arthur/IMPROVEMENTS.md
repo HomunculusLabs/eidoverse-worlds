@@ -2707,4 +2707,6 @@ fixes ≈ 6 F.)
 
 - [mason-20] lean hold + TAG-RACE RESOLVED — sibling cron's single in-flight fire banked mason-19 (665c625, clean renumber 18→19, law intact 2368280, no world action); cron now CONFIRMED REMOVED from scheduler (14 jobs, none mason) — this /loop is sole lane, duplicate-tag hazard closed, escalation moot; survey green — gate 0, guard 60/60 + 23 lights, sweep 9 (1 walkable), overhang 0, stop file present; queue unchanged ((b) closed, (a) behind Bill's R-118 call, (c) blocked); field untouched (D+0, E+0)
 
+- [mason-21] lean hold — survey green unchanged (gate 0, guard 60/60 + 23 lights, sweep 9, overhang 0, ledger exact, sole lane confirmed); queue parked ((b) closed, (a) behind Bill's R-118 call, (c) blocked); held per lane law, live field untouched (D+0, E+0)
+
 **Running total: 2368280 / 2000000**
