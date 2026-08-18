@@ -681,6 +681,17 @@ wakeups. This lane is the standing fix for that blindness.
  command. VERIFIED: staged → LAMP; mapboard + carousel
  negatives; hearth-collision negative. Verifier
  standalone still ALL PASS (20/20).
+      — polish-49 LIVE SENTINEL SWEEP (subject this wakeup): fresh
+           read-only POLISH_LIVE=1 run against the live world —
+           all three subjects UNCHANGED after the tex lane's busy
+           night (kilns/laundry/awnings touched nothing of ours):
+           carousel cd22d0b0 (defect live, register OPEN correct),
+           welcome fa0c9d94 — the new 3-way branch reading
+           correctly IN PRODUCTION (tex-15 pre-lamp → OPEN
+           correct), mapboard e732ce10 (pin stands, chip staged).
+           Full verifier incl. live sentinel: ALL PASS. The
+           decoders stand armed for a real UNKNOWN; none arrived.
+           No rollout, no verb — read-only throughout.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
