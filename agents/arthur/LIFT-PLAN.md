@@ -257,5630 +257,9214 @@ exit 0; live census). Never self-judge the village done.
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 41st tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 45th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-48 (b6f7060): forty-fourth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 43rd
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 44th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 45th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-47 (3eaa115): forty-third lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 42nd
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 43rd tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 45th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-48 (b6f7060): forty-fourth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 43rd
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 44th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 45th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-46 (ca4fd67): forty-second lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 41st
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 42nd tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 45th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-48 (b6f7060): forty-fourth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 43rd
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 44th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 45th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-47 (3eaa115): forty-third lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 42nd
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 43rd tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 45th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-48 (b6f7060): forty-fourth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 43rd
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 44th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-49 (8e4d1da): forty-fifth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 44th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 45th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-50 (fe6ce40): forty-sixth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 45th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 46th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-51 (aefe8a9): forty-seventh lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 46th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 47th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-52 (6e2493b): forty-eighth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 47th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 48th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-53 (81a84b6): forty-ninth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 48th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 49th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
 - lift-54 (59115ef): fiftieth lean hold — steady state unchanged: no new lane
   commits, gate ALL PASS (register 3 OPEN expected), census ALL GREEN 49th
   consecutive on the truthed instrument, assets unchanged, resident log
   unchanged (no new summoner reads); queue dry 50th tick, held per the lane's
   law — no model changed, live village untouched by this lane.
-- lift-55 (this): fifty-first lean hold — steady state holds: no new lane
+- lift-55 (12be436): fifty-first lean hold — steady state holds: no new lane
   commits banked (sibling forge work mkv3-forge98.ts visible in-flight in
   assets/, untouched per the transients law), gate ALL PASS (register 3 OPEN
   expected), census ALL GREEN 50th consecutive on the truthed instrument,
   resident log unchanged (no new summoner reads); queue dry 51st tick, held
   per the lane's law — no model changed, live village untouched by this lane.
+- lift-56 (this): fifty-second lean hold — steady state holds: no lane commits
+  banked (sibling forge rollout visibly in-flight: mkv3-forge98.ts,
+  village_forge3.glb, place-tex86-forge.ts — untouched per the transients
+  law), gate ALL PASS (register 3 OPEN expected), census ALL GREEN 51st
+  consecutive on the truthed instrument, resident log unchanged (no new
+  summoner reads); queue dry 52nd tick, held per the lane's law — no model
+  changed, live village untouched by this lane.
