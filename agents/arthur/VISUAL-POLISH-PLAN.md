@@ -526,6 +526,23 @@ wakeups. This lane is the standing fix for that blindness.
  Same staleness audit applied to the welcome entry: its
  lib citation is generic ("live lib at tex-15 build"),
  already current. No code changed.
+ — polish-38 CHRONOLOGY RE-CORRECTION (subject this wakeup):
+ my own polish-37 note ("roof geometry unchanged
+ between builds") was WRONG — decoded chronology: live
+ `cd22d0b0` was rolled at tex-69 BEFORE the polish loop
+ existed (21:43 vs daytime), so live carries the OLD LOW
+ ROOF; staged `38fbbc26` carries the lift. Register
+ re-corrected (defect live, register framing correct,
+ staged rollout IS the close path). GOOD NEWS surfaced by
+ the same decode: the staged build is already
+ texture-family converted (mkcarousel.ts carries texMat
+ families) — rolling it regresses NOTHING (my earlier
+ worry about a vertex-color regression over live textures
+ was unfounded; same conversion state). Also decoded: the
+ "@arthur come sit on the carousel" lines in the log tail
+ are the W#13-era exchange, not fresh words — no new
+ consent signal. No code changed; register honesty
+ tightened twice in two ticks.
 
 ## Closed
 
