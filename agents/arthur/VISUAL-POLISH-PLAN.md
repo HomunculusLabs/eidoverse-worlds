@@ -54,12 +54,14 @@ wakeups. This lane is the standing fix for that blindness.
       AND widened paint families (blue 0.31/gold 0.58/bone 0.80 lums,
       gaps ≥0.22, verify-polish3 10/10). Live vision read found the 4
       horses "uniform gray" at 18m AND 10m under fog (register: HORSE
-      PAINT VARIATION UNREADABLE) — silhouette itself PASSES. ROLLOUT
-      PENDING: live /geom + verbs approval-blocked THREE consecutive ticks
-      (polish-1/2/3) — next wakeup with consent runs
-      `bun agents/arthur/assets/placecarousel.ts` (captures live bag,
-      rebuilds+uploads `38fbbc26dcdfcc1a`, re-applies comps, verifies),
-      then visual gate + register close for BOTH items.
+      PAINT VARIATION UNREADABLE) — silhouette itself PASSES. STAGED
+      BUILD (polish-5 refresh, correction p60): `38fbbc26dcdfcc1a`
+      (491,384B — the polish-1/3 era hash `7a2faa19dfde62cb` cited here
+      before was the OLD pre-refresh build). The placer now also carries
+      the KNOWN_BAG smoke heal (p45/46/52), light re-anchor (p55); the
+      runbook (p59 refresh) is the authoritative execution path —
+      ROLLOUT remains consent-gated (live /geom + verbs approval-blocked
+      since the loop began; Bill's in-world words are the unlock).
 - [x] Carousel stair landing transition — DONE source-side (polish-4).
       Decode found the real defect: treads rose 0.44→1.14 (0.70 jump),
       then dropped 0.30 onto the deck, AND penetrated to z 2.33 INSIDE
