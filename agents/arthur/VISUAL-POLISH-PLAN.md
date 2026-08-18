@@ -225,6 +225,20 @@ wakeups. This lane is the standing fix for that blindness.
 	           eye); probe-bug lesson carried: glTF indices accessor
 	           count = INDEX count (144 idx = 48 tris), not triangle
 	           count.
+      — polish-18 MAPBOARD PLACER (subject this wakeup): built
+           placemapboard.ts on the contract-safe chassis (placecarousel
+	           polish-2/10/14, stall watchdog included) — av-mapboard
+	           carries NO comps (bare static signpost, tex-61), so the
+	           verb plan is capture → spawn-at-live-pose → verify (lib +
+	           pose). Mock made id-generic (spawn/comp accept any entity
+	           id; av-mapboard mock entity added at live pose 1.6, 8.5).
+	           DRY-RUN 8/8 ALL PASS: the REAL placer ran end-to-end vs
+	           the mock — live pose captured, rebuild, forced-429 retry,
+	           spawn at captured pose, post-place verify PASS, port
+	           released. BOTH staged rollouts (carousel + mapboard) are
+	           now execution-proven, one command each when consent lands:
+	           bun agents/arthur/assets/placecarousel.ts ;
+	           bun agents/arthur/assets/placemapboard.ts
 
 ## Closed
 
