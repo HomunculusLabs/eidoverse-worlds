@@ -41,7 +41,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
     && ents["av-stable"]?.lib === "store/89dc80d7bb8fc395.glb");
 ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb");
 ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/6715b0f885deaed7.glb");
-ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
+ck("[tex-7] av-door-paths on soil build (bf157803 → pin refreshed by lift-10 spur re-aim)", ents["av-door-paths"]?.lib === "store/5357b28a015f6c8e.glb");
 ck("[tex-84] full-stack regression (28 verifiers tex-55..83 sequential + gate) re-runnable", existsSync("agents/arthur/verify-tex84.ts"));
 ck("[tex-83] av-inn on 4-family build (6f35f80a336889cd, 4 comps)", ents["av-inn"]?.lib === "store/6f35f80a336889cd.glb");
 ck("[tex-82] av-court on 3-family build (ac75f33c → pin refreshed by lift-1, smoke comp)", ents["av-court"]?.lib === "store/bb31e8a5ffdc1e16.glb");

@@ -86,9 +86,16 @@ exit 0; live census). Never self-judge the village done.
 - lift-8 (6e43aa6): lean hold 5th dry tick — census ALL GREEN 4th consecutive,
   gate ALL PASS; the resident log's new lines are Bill riding the carousel
   WITH hermes (engagement, not defect reads) — no new evidence; holding.
-- lift-9 (678e4c8): lean hold 6th dry tick — census ALL GREEN 5th consecutive,
+- lift-9 (2b5e4c9): lean hold 6th dry tick — census ALL GREEN 5th consecutive,
   gate ALL PASS, no new commits, no new summoner reads (carousel social
-  time continues); holding. NOTE mid-tick: probe re-run caught
-  probe-alignwalk3.ts live — align-3 is EXECUTING the R-113 watchpost fix
-  right now (register line "fix executing align-3"); the routed promise is
-  landing. Verify next tick, then close my stewardship of the item.
+  time continues); holding. Mid-tick: caught align-3 executing the R-113
+  watchpost fix live (probe-alignwalk3 on disk, register "fix executing").
+- lift-10 (this): R-113 LANDED — align-3 banked (983332a): scaffold moved
+  off the bakery door, two-way walk-test of the summoner's own move OPEN
+  (0.39/0.34/0.39 vs control 0.27); my stewardship of the routed item
+  CLOSED clean. The fix's residual was MY shape: the heritage spur
+  (dp_watch, baked in av-door-paths) still aimed 315° at the scaffold's
+  vacant era-2 spot — a trodden path to nowhere. RE-AIMED at source:
+  radial 307.7° ending 0.55m from the new scaffold foot (14.02,−18.17),
+  same spur idiom; deterministic 5357b28a ×2, live rollout (pin refreshed
+  with trail bf157803 → 5357b28a), gate ALL PASS.
