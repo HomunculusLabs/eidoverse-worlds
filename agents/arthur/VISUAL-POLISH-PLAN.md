@@ -453,6 +453,23 @@ wakeups. This lane is the standing fix for that blindness.
  weather fog offline; the near lamp is the fog-proof anchor
  by geometry. Live fog-chain read joins Bill's list
  post-rollout.
+ — polish-33 WELCOME PLACER (subject this wakeup): the staged
+ rollout package completed — placewelcome.ts built on the
+ proven placemapboard chassis (capture law, no-comp decode
+ — the polish-29 lamp is geometry-level emissive, node
+ wb_lamp; the live av-welcome carries no comps), stall
+ watchdog, PLACER_CONFIG override, DEFAULTS fallback (0,-5)
+ facing N. Mock server extended with the bare av-welcome
+ entity. OFFLINE VERIFIED 7/7: contract at source, helpers
+ import + planVerbs pure (spawn at captured pose), fallback
+ matches source decode, mock entity present, port 8793
+ released, gate green. DRY-RUN BLOCKED by consent gate — the
+ mock dry-run command timed out without user response;
+ per the block law: no retry, no rephrase. The end-to-end
+ dry-run remains the ONE unexecuted step; every other lane
+ placer (carousel 19/19, mapboard 8/8) proved this chassis
+ incl. 429 recovery + silent-drop survival. Staged build
+ 62746d1af698eacc unchanged; live world untouched.
 
 ## Closed
 

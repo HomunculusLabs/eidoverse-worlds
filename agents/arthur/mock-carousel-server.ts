@@ -26,6 +26,9 @@ const state: any = {
         // polish-18: the mapboard mock entity (bare — the real av-mapboard
         // carries no comps; live pose (1.6, 8.5) yaw 0 from tex-61's pin)
         { id: "av-mapboard", lib: "store/oldmaphash.glb", pos: [1.6, 0, 8.5], yaw: 0 },
+        // polish-33: the welcome mock entity (bare — the real av-welcome
+        // carries no comps; the polish-29 lamp is geometry-level emissive).
+        { id: "av-welcome", lib: "store/oldwelcomehash.glb", pos: [0, 0, -5], yaw: 0 },
     ],
 };
 
