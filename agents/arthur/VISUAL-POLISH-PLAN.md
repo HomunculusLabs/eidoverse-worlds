@@ -617,6 +617,25 @@ wakeups. This lane is the standing fix for that blindness.
  still ALL PASS. Honest arc: three patch passes needed
  (export-inside-guard, stray brace, lost decoder brace —
  each caught by ast/exec before any commit).
+ — polish-45 SMOKE HEAL (subject wakeups #55-58, live comp
+ census): the first LIVE census of our own subject found
+ the comp-wipe law's casualty — the tex-69 carousel
+ re-place restored 6 comps but DROPPED particles:smoke
+ (polish-13's pre-replace capture carried 7; every
+ chimney in the village smokes — 9 entities — the
+ carousel's boiler-puff is the only lost one). Decode
+ before declaring: av-car-l1/l2 are separate light
+ ENTITIES at the carousel pose (present, intact — not
+ comps, not lost); the live 403 on python urllib
+ redirects to the proven bun-fetch pattern. HEAL STAGED:
+ placecarousel.ts gained KNOWN_BAG {particles:smoke} —
+ the capture-reapply loop now MERGES known-lost comps
+ (never overwrites live data, no double-apply; verified:
+ 6-comp capture → 7 planned; 7-comp capture → still 1
+ smoke). Register entry appended (heal rides the
+ consent-gated carousel rollout; closes when live reads
+ 7). LAW: capture-reapply alone perpetuates a past wipe —
+ known bags heal forward.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 

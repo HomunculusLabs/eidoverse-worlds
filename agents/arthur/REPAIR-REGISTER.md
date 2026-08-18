@@ -337,3 +337,11 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - Post-fix gate (rasterizer, 5m night): PASS on the claim — lantern clearly visible, "reads as a signposted place at night"; arms dark by design (landing point, not full illumination); pixel corroboration 116 warm px.
 - Rollout: staged-rollout law (live av-welcome untouched until consent or the tex lane's next live-evolution pass; placer placewelcome.ts staged polish-33, offline 7/7). Close this item on the live after-read (same crop coords, lamp visible).
 - STATUS: OPEN — source fix staged + offline-gated; live confirmation pending rollout consent.
+
+### [OPEN->STAGED-HEAL] CAROUSEL SMOKE COMP LOST AT TEX-69 RE-PLACE — live bag 6/7 (polish-45 find, 2026-08-18; heal staged same tick)
+
+- Entity: av-carousel, pose (-18.8, 0, 25.9), live lib store/cd22d0b09e70bebc.glb.
+- Defect: comp-wipe law casualty — the tex-69 carousel re-place restored motion:carousel + horse_0/2/4/6 + sockets but NOT particles:smoke. Live census this tick: 6 comps; polish-13's pre-replace capture at ~00:00 carried 7. Every chimney in the village smokes (9 entities); the carousel's boiler-puff is the only lost one.
+- Decode before declaring: av-car-l1/l2 are separate LIGHT ENTITIES at the carousel pose (present, intact — not comps, not lost). Smoke absence confirmed against live /geom and the polish-13 record.
+- Heal staged (polish-45): placecarousel.ts gained KNOWN_BAG {particles:smoke} — the capture-then-reapply loop now MERGES known-lost comps, never overwrites live data, no double-apply (verified: 6-comp capture -> 7 planned; 7-comp capture -> still 1 smoke). Rides the consent-gated carousel rollout; closes when the live bag reads 7 again.
+- STATUS: OPEN — heal staged in the placer; live confirmation pending rollout consent.
