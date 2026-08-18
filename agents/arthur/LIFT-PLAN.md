@@ -102,7 +102,11 @@ exit 0; live census). Never self-judge the village done.
 - lift-11 (638b7cf): lean hold — census ALL GREEN 6th consecutive, gate ALL
   PASS, register back to 3 OPEN (R-113 close recorded), no new evidence
   (carousel social time); the R-113 arc is fully closed on both sides.
-- lift-12 (this): eighth lean hold — steady state again: no lane banked,
+- lift-12 (8f20636): eighth lean hold — steady state again: no lane banked,
   gate ALL PASS, census ALL GREEN 7th consecutive, resident log unchanged
   (no new reads; Bill said he's off at work); queue dry 8th tick, held per
   the lane's law — no model changed, live village untouched.
+- lift-13 (this): ninth lean hold — steady state unchanged: no lane banked,
+  gate ALL PASS (register 3 OPEN expected), census ALL GREEN 8th
+  consecutive, resident log unchanged; queue dry 9th tick, held per the
+  lane's law — no model changed, live village untouched.

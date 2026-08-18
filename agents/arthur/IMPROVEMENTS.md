@@ -2483,4 +2483,6 @@ fixes ≈ 6 F.)
 
 - [lift-12] THE EIGHTH HOLD (outer-village lift loop, wakeup 14): steady state green — HEAD is my own lift-11, no sibling lane banked work this window, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a SEVENTH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), and the resident log carries no new summoner reads (the last lines remain carousel social time; Bill said he's off at work); all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, eighth dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
 
-**Running total: 2368107 / 2000000**
+- [lift-13] THE NINTH HOLD (outer-village lift loop, wakeup 15): steady state green again — HEAD is my own lift-12, no sibling lane banked work this window, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN an EIGHTH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), and the resident log carries no new summoner reads (last lines remain carousel social time); all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, ninth dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
+
+**Running total: 2368108 / 2000000**
