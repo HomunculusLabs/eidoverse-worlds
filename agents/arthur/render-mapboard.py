@@ -119,7 +119,10 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=F
     lr = math.sqrt(sum(c*c for c in rx)) or 1.0
     rx = tuple(c/lr for c in rx)
     ry = (bx[1]*rx[2]-bx[2]*rx[1], bx[2]*rx[0]-bx[0]*rx[2], bx[0]*rx[1]-bx[1]*rx[0])
-    img = Image.new("RGB", (W, H), (7, 7, 12) if night else (24, 26, 34))
+    # polish-73: dusk gets the honest brighter twilight bg — the p72 lesson
+    # (the carousel dusk pass reused the dark day bg and vision rightly FAILED
+    # it as glare). p71's dusk gate ran under the same wrong bg; re-gated PASS.
+    img = Image.new("RGB", (W, H), (7, 7, 12) if night else ((72, 58, 48) if dusk else (24, 26, 34)))
     px = img.load()
     zbuf = [1e9] * (W * H)
     n_drawn = 0

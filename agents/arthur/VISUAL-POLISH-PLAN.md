@@ -954,6 +954,20 @@ wakeups. This lane is the standing fix for that blindness.
            is now three-point time-safe (day p51 / dusk p72 /
            night p15).
 
+      — polish-73 RETROACTIVE FIXTURE FIX (subject this wakeup):
+           the p72 harness-first law, applied retroactively — p71's
+           welcome-lamp dusk gate ran under the SAME wrong dark
+           day background that p72 caught in the carousel
+           rasterizer. Fixed in render-mapboard.py (dusk now uses
+           the honest twilight bg 72,58,48) and the gate RE-RUN:
+           vision PASS — lamp still a soft warm accent, no glare,
+           transition natural. Pixel unchanged (12/2 @ 5/10m — the
+           lamp itself is tiny; the fixture, not the subject, was
+           wrong). The p71 verdict now stands on an honest
+           fixture. LAW CONFIRMED: harness flaws are lane-wide —
+           fix the fixture ONCE and re-gate every subject that ran
+           under it.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
