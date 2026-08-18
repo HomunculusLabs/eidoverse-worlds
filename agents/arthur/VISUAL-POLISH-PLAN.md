@@ -758,6 +758,19 @@ wakeups. This lane is the standing fix for that blindness.
            VERIFIED offline both ways (6-comp heal-skipped → keep
            OPEN; healed → close it too); live run re-read all three
            subjects correct. Read-only as ever.
+      — polish-55 LIGHT RE-ANCHOR (subject this wakeup): the
+           polish-52 staleness law applies to the LIGHT entities
+           too — av-car-l1/l2 are separate entities captured at
+           their own absolute positions; a lane re-placing the
+           carousel at a moved pose WITHOUT moving the lights
+           would leave the placer faithfully re-emitting drifted
+           positions (perpetuating the drift). Guard added: if a
+           captured light sits >0.5m horizontally from the
+           CAPTURED carousel pose, re-anchor to pose + dy (the
+           local light geometry). VERIFIED three ways: consistent
+           capture verbatim; drifted light re-anchored to the new
+           pose; benign sub-0.5m jitter KEPT (the guard never
+           fights small offsets). Verifier 21/21 unchanged.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
