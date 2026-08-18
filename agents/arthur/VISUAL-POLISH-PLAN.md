@@ -320,6 +320,23 @@ wakeups. This lane is the standing fix for that blindness.
            with the circuit actively seated — 0.3m tolerance. The
            keeper now goes where sent. Daemon restart performed
            (launchctl stop/start); bell + rituals intact.
+      — polish-25 LIVE NIGHT EYE-READ ATTEMPT (subject this wakeup):
+           Bill in-world at (-4,-3.3), full night, camera captured
+           look-only. Vision found one plain white board at 2 o'clock,
+           5-8m — decode: that is the WELCOME BOARD (S r5 ≈ (0,-5),
+           5.0m ESE of Bill; plain by design), NOT the mapboard. The
+           mapboard (1.6, 8.5) is 13.1m NNE of Bill — beyond the ≤10m
+           readability horizon — and indeed NO map pattern is
+           discernible anywhere in the frame: pixel scan of the frame's
+           only warm-pale rect (x849-1269 y400-465) shows a smooth lit
+           gradient (no emissive dot, 6.5:1 aspect ≠ mapboard's 1.5:1).
+           VERDICT: no map read at 13.1m — CONSISTENT with the
+           polish-17 horizon law (live corroboration, weak form).
+           Definitive live read still wants a vantage ≤10m S of the
+           board (or the resident's /snap once a renderer client
+           serves commons — polish-24 decode). No code changed this
+           tick; the horizon law gained its first live-consistent
+           data point.
 
 ## Closed
 
