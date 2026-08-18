@@ -20,8 +20,10 @@ import { createHash } from "node:crypto";
 const W = "/Users/t3rpz/projects/eidoverse-worlds";
 const A = `${W}/agents/arthur/assets`;
 const fails: string[] = [];
+let checks = 0; // polish-70: live check counter (runbook-sync reads it)
 const ck = (n: string, c: boolean, d = "") => {
     console.log((c ? "PASS " : "FAIL ") + n + (d ? " | " + d : ""));
+    checks++;
     if (!c) fails.push(n);
 };
 const sh = (cmd: string) => { try { return execSync(cmd, { cwd: W, encoding: "utf8" }); } catch (e: any) { return (e.stdout ?? "") + (e.stderr ?? ""); } };
@@ -278,6 +280,17 @@ console.log("H4=" + (consistent && reanchored && jitterKept));
         }
     } else {
         console.log("SENTINEL skipped (offline default; set POLISH_LIVE=1 for the live rollout check)");
+    }
+
+    // polish-70 RUNBOOK SYNC (records standing guard — drift landed twice:
+    // the p59 runbook cited 24 while the verifier ran 27): read the plan's
+    // cited "offline N checks" and compare to the ACTUAL count (self-included).
+    {
+        const plan = readFileSync(`${W}/agents/arthur/VISUAL-POLISH-PLAN.md`, "utf8");
+        const m = plan.match(/offline (\d+) checks/);
+        const cited = m ? Number(m[1]) : -1;
+        const actual = checks + 1; // this check included
+        ck(`runbook sync (plan cites ${cited} = verifier actual ${actual})`, cited === actual, cited === actual ? `${actual}` : `plan says ${cited}, verifier runs ${actual} — refresh the runbook`);
     }
 
     console.log(fails.length ? `${fails.length} FAIL` : "ALL PASS");

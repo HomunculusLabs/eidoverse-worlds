@@ -914,12 +914,26 @@ wakeups. This lane is the standing fix for that blindness.
            (heal idiom / no-dup / pose-relative / light re-anchor)
            re-prove every run.
 
+      — polish-70 RUNBOOK-SYNC GUARD (subject this wakeup):
+           records drift landed twice (p59 cited 24 checks while
+           the verifier ran 27 — rebuild + mapboard behavioral +
+           H4 all landed after the citation). The standing-coverage
+           pattern applied to records themselves: ck() now counts
+           live, and the verifier's LAST check reads the plan's
+           cited "offline N checks" and FAILs on mismatch (self-
+           included). FIRST RUN CAUGHT THE REAL DRIFT: plan 24 vs
+           actual 28; runbook synced to 28. Verifier 28/28. LAW:
+           every number a record cites about the tooling must be
+           guarded by the tooling — counts drift, guards hold.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
-`POLISH_LIVE=1 bun agents/arthur/verify-polish-staged.ts` (offline 24 checks
-— 3 heal behaviorals + 3 decoder behaviorals — + live sentinel: reads live
-libs AND the live comp bag, maps to register action). (polish-59 refresh:
+`POLISH_LIVE=1 bun agents/arthur/verify-polish-staged.ts` (offline 28 checks
+— 4 heal behaviorals + light re-anchor + 3 decoder behaviorals + 3 rebuild
+determinism + 2 placer behaviorals + runbook-sync guard — + live sentinel:
+reads live libs AND the live comp bag, maps to register action). (polish-59
+refresh, count synced p70:
 the runbook was written at p42, 16 iterations before the smoke heal, the
 split advice, the light re-anchor, and the decoders.)
 
