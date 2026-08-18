@@ -27,6 +27,7 @@ const state: any = {
 };
 
 let uploadAttempts = 0;
+let droppedOnce = false; // polish-14 silent-drop simulation latch
 const server = Bun.serve({
     port: PORT,
     websocket: {
@@ -37,6 +38,15 @@ const server = Bun.serve({
             if (m.type === "join") { ws.send(JSON.stringify({ type: "snapshot", t: Date.now() })); return; }
             if (m.type === "verb") {
                 const { verb, args } = m;
+                // SILENT-DROP SIMULATION (polish-14): the real server drops
+                // rate-capped messages with NO ack (server.ts:350-354). Drop
+                // the FIRST comp verb for av-carousel exactly once — the
+                // placer's stall watchdog must re-send and recover.
+                if (verb === "comp" && args?.id === "av-carousel" && !droppedOnce) {
+                    droppedOnce = true;
+                    console.log("[mock] SILENT DROP of first comp verb (no ack) — watchdog must re-send");
+                    return;
+                }
                 if (verb === "spawn" && args?.id === "av-carousel") {
                     const car = state.entities.find((e: any) => e.id === "av-carousel");
                     car.lib = args.lib; car.pos = args.pos; car.yaw = args.yaw; car.comp = {};
