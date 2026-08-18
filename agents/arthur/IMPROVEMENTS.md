@@ -2701,4 +2701,6 @@ fixes ≈ 6 F.)
 
 - [mason-17] lean hold — survey green unchanged (gate 0, guard 60/60 + 23 lights, sweep 9, overhang 0, ledger exact); queue parked ((b) closed, (a) behind Bill's R-118 call, (c) blocked); held per lane law, live field untouched (D+0, E+0)
 
+- [mason-18] lean hold — survey green unchanged (gate 0, guard 60/60 + 23 lights, sweep 9, overhang 0, ledger exact); queue parked ((b) closed, (a) behind Bill's R-118 call, (c) blocked); held per lane law, live field untouched (D+0, E+0)
+
 **Running total: 2368279 / 2000000**
