@@ -322,7 +322,7 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 
 ### [OPEN] CAROUSEL ROOF TOO LOW — rider-head clearance ~0.08m at horse radius (audit-101, 2026-08-17; source fix staged polish-1)
 
-- Entity: av-carousel, pose (-18.8, 0, 25.9), live lib store/937fd0b6a9c07b5b.glb (== local source, byte-identical).
+- Entity: av-carousel, pose (-18.8, 0, 25.9). Live lib `store/cd22d0b09e70bebc.glb` (tex lane pin, verify-tex69.ts:106 — CORRECTED polish-37: this entry previously cited audit-101-era `937fd0b6a9c07b5b.glb`, stale since the texture lane's carousel re-place; roof geometry unchanged between builds — the tex lane's rebuild returns byte-identical `38fbbc26` disk-side, so the defect and staged fix both stand).
 - Source decode (parent-chain world Y): deck top ≈1.1; horse head top 3.49; saddle 3.02 (rider seat); canopy edge 4.38; peak 5.54.
 - Numbers: cone underside at horse radius r=2.0 ≈ 4.68m (slope 0.43/m from edge 4.38 @ r≈2.7 to peak 5.54). Seated rider head ≈ 4.6m → clearance ≈ 0.08m. Canopy clears horse ears by ~0.9m at peak, reads compressed over the horse layer at gameplay distance.
 - Evidence: (a) summoner's explicit ask ~11:04 "roof too short — lift it higher" has NO candidate in CAROUSEL-REWORK-PLAN.md (candidates 1-6: structure, horses, export-scale, heading, sockets, pennants — none lifts the roof); (b) live frame vision review independently reads "low and flat, compressed appearance"; (c) decoded source numbers above.

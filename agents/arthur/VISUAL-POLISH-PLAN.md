@@ -513,6 +513,19 @@ wakeups. This lane is the standing fix for that blindness.
  the consent-blocked register items (carousel roof+paint
  rollout, welcome lamp rollout) — one rollout away from
  closing both. No code changed.
+      — polish-37 REGISTER LIB CORRECTION (subject this wakeup): the
+ roof-lift entry's live-lib evidence line was STALE — it
+ cited audit-101-era `937fd0b6…` while the tex lane has
+ since re-placed the carousel (their committed verifier
+ verify-tex69.ts:106 pins live `cd22d0b09e70bebc`). Decode
+ before edit: roof geometry is UNCHANGED between the builds
+ (tex lane's own rebuild returns byte-identical 38fbbc26
+ disk-side) — so the defect and staged fix both stand; only
+ the cited lib was stale. Corrected with attribution + a
+ note that the staged rollout remains the close path.
+ Same staleness audit applied to the welcome entry: its
+ lib citation is generic ("live lib at tex-15 build"),
+ already current. No code changed.
 
 ## Closed
 
