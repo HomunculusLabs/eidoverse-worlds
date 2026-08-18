@@ -305,6 +305,21 @@ wakeups. This lane is the standing fix for that blindness.
            paint; the staged widening is exactly what survives fog.
            Register item remains OPEN for the live read (now with the
            full offline case: clear + fog + heavy fog all PASS).
+      — polish-24 WALK GATE + SNAP DECODE (batch of 11 wakeups served
+           as one; subjects picked per batch law): (a) /snap 503 ×5
+           DECODED at source — routes.ts:40-41 requires a RENDERER
+           client (invisible hub-spectator) serving the world; none is
+           deployed on commons → deterministic 503, a server
+           deployment surface, NOT daemon-fixable. Recorded; the
+           first-person channel stays closed until a renderer client
+           exists. (b) the walk-vs-circuit race (polish-19's walk was
+           eaten mid-leg) FIXED agent-side: control walk now waits out
+           the in-flight leg (bounded 25s) then claims the wheel
+           (lastControlAt) before walkTo. PROVEN LIVE: walk to the
+           mapboard vantage (1.6, 17.5) landed the body at (1.9, 17.5)
+           with the circuit actively seated — 0.3m tolerance. The
+           keeper now goes where sent. Daemon restart performed
+           (launchctl stop/start); bell + rituals intact.
 
 ## Closed
 

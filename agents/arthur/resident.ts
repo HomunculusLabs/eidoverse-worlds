@@ -527,7 +527,17 @@ async function controlLoop() {
     try {
         if (cmd === "say") { agent.say(String(c.text)); }
         else if (cmd === "whisper") { agent.whisper(String(c.to), String(c.text)); }
-        else if (cmd === "walk") { await agent.walkTo(Number(c.x), Number(c.z)); }
+        else if (cmd === "walk") {
+            // polish-24 WALK GATE: the old one-liner raced the keeper circuit
+            // (polish-19's walk to the mapboard was eaten mid-leg by the next
+            // circuit step winning the body). Bounded wait-out for the current
+            // leg (up to 25s), then take the wheel and go. `walkTo`'s own
+            // contract already dismounts/cancels; lastControlAt keeps the
+            // circuit idle-shifts off the wheel for the 3-min window.
+            for (let w = 0; w < 25 && circuitWalking; w++) await new Promise((r) => setTimeout(r, 1000));
+            lastControlAt = Date.now();
+            await agent.walkTo(Number(c.x), Number(c.z));
+        }
         else if (cmd === "tour") {
             // chain of waypoints: [{"x":..,"z":..,"waitMs":..}, ...]
             for (const wp of c.points ?? []) {
