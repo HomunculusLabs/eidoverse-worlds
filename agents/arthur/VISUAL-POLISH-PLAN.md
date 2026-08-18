@@ -192,6 +192,24 @@ wakeups. This lane is the standing fix for that blindness.
       (decode pins globes at y=4.42 under canopy edge; vision's
       "platform" placement prose = usual low-poly perspective artifact).
  Day views byte-unchanged behavior (same render() default path).
+      — polish-16 MAPBOARD DISTANCE SKELETON (subject this wakeup; found via
+           fresh 20m-night survey frame + vision read — "blackboard, no
+           visible writing"): decoded at source before believing (plan law):
+           the board DOES carry a rich painted map (hearth glow, bone ring,
+	           4 spokes, 8 building chips, 30+ landmark marks, whisper, brass
+	           pin) — but the skeleton read approach-range only: hearth r
+	           0.09/emissive 0.9, torus tube 0.02, spokes 0.04, ring chips
+	           C.DARK (near-black on dark timber — invisible at night
+	           distance). Same class as polish-3 horse paint. FIX (minimal,
+	           material truth kept — paint stays paint, detail chips stay
+	           approach-range): hearth r→0.12 + emissive→1.5, ring bar
+	           0.045→0.055, torus tube 0.02→0.03, spokes 0.04→0.05, ring
+	           chips C.DARK→umber 0x7a5a42 (still dark against bone ring).
+	           Staged build e732ce10400c1979 (24 nodes, 85.9KB), rebuilt ×2
+	           byte-deterministic; decode: 192 umber verts in COLOR_0 (8
+	           chips × 24), glow1 emissiveFactor [1.5, …]. Live rollout
+	           joins the consent-blocked queue (mapboard placer = same
+	           pattern as placecarousel; visual gate post-rollout).
 
 ## Closed
 
