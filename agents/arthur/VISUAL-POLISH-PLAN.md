@@ -874,6 +874,15 @@ wakeups. This lane is the standing fix for that blindness.
            decoders were ready for an UNKNOWN; none arrived. No
            rollout, no verb — read-only throughout.
 
+      — polish-66 MAPBOARD PLACER BEHAVIORAL (subject this
+           wakeup): the placer tier's coverage was asymmetric —
+           welcome had a behavioral check, mapboard only marker
+           checks. Added: a MOVED capture (9, -7, yaw 1.2) must
+           carry through to the spawn verb exactly; a NULL capture
+           falls back to the DEFAULTS pose verbatim (1.6, 8.5,
+           yaw 0). First run green — verifier now 26/26; the
+           placer tier has behaviorals for both zero-comp subjects.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:

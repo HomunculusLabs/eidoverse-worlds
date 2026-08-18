@@ -162,6 +162,10 @@ if (import.meta.main) {
     // welcome placer pure helpers behavioral (import side-effect-free — guarded)
     const r = sh(`bun -e 'const m = await import("${A}/placewelcome.ts"); const v = m.planVerbs({pos:[1,0,-4], yaw:2}, "store/z.glb"); console.log("V=" + v[0][1].id + "@" + JSON.stringify(v[0][1].pos) + "y" + v[0][1].yaw);'`);
     ck("placewelcome helpers pure (spawn at captured pose)", r.includes("V=av-welcome@[1,0,-4]y2"), r.trim().slice(0, 60));
+    // polish-66 MAPBOARD PLACER BEHAVIORAL (parity with welcome: marker checks
+    // alone can't prove the verb shape; a moved capture must carry through):
+    const mp = sh(`bun -e 'const m = await import("${A}/placemapboard.ts"); const v = m.planVerbs({pos:[9,0,-7], yaw:1.2}, "store/m.glb"); const a = m.planVerbs(null, "store/d.glb"); console.log("M=" + v[0][1].id + "@" + JSON.stringify(v[0][1].pos) + "y" + v[0][1].yaw + "s" + v[0][1].scale + "|D=" + JSON.stringify(a[0][1].pos) + "y" + a[0][1].yaw);'`);
+    ck("placemapboard helpers pure (captured pose carries; defaults verbatim)", mp.includes("M=av-mapboard@[9,0,-7]y1.2s1") && mp.includes("D=[1.6,0,8.5]y0"), mp.trim().slice(0, 70));
     // polish-47 HEAL BEHAVIORAL (the KNOWN_BAG is the package's subtlest
     // piece — a wrong-shape restore would ship silently; re-prove each run).
     // Probe written to a temp file (multi-line bun -e breaks sh -c quoting);
