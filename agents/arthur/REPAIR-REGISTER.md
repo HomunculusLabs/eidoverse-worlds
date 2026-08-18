@@ -389,3 +389,42 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - (2) av-woodyard × av-charcoal 0.737m, y-overlap 1.51m — artifact (y-separated elements). Woodyard (15.00,0,29.40) yaw -2.670; charcoal (19.10,0,29.40) yaw -2.565; both ON plan (r33/63°, r35/57°). Source: charcoal dome decodes woodyard-local x∈[-4.92,-2.38] — clears the shed back-wall boards (x≥-1.6) by 0.78m; the cooled pile (charcoal-local +1.9,+0.8 → woodyard-local ≈ (-2.3,+2.1), y∈[0,0.385]) passes under the slanted roof overhang 1.9m above it. Clamp "near the wood yard" is the plan's own comment (fuel-wood country). Ground heap beside the eave line — no shared volume.
 - (3) av-millyard × av-millbench 0.135m — designed. Bench r34/180° deliberately inside the mill yard r37/180° (same maker family mkv3-farbench34; stablebench rides the stable the same way). Yard seating idiom.
 - STATUS: CLOSED (align-8, 2026-08-18). No defect — all three classified expected-by-design with source decode; baked into sweep-align.ts's standing table. Post-close sweep: 0 unclassified hits on 136 pairs. verify-repairs.ts ALL PASS.
+
+### R-115 [INTERSECTION/BLOCKED-MOVEMENT] av-forge sunk INTO av-court interior floor — summoner-falsified (align-9, 2026-08-18)
+- Summoner evidence: Bill in-world "nope forge is still sticking out at my
+  current location" AFTER the tex-86 material fix — the summoner's body
+  outranks the sweep's designed-abutment classification (R-113 precedent).
+- Live evidence: forge pos (20.9, 0, -16.3) yaw -0.908 vs court
+  (21, 0, -15.3) yaw -0.941. Forge center is 1.00m from court center; in
+  COURT local frame forge center = (-0.87, -0.51) vs court span lx ±6.5,
+  lz -2.94..3 → fully contained in the court interior, 7.4m in lx from the
+  NE corner (6.5, 3). Rotated-SAT: 1.387m overlap on the forge's FULL 1.387m
+  depth axis = fully inside.
+- Root cause: plan polar slot forge (r=26.5, ang=322) is only ~0.9m of arc
+  from the court's slot (r=26, ang=324); the court's 13m bbox dwarfs that
+  separation, so the "NE corner annex" slot lands at court center.
+- Classification bug: old R-3xx "designed annex" read the plan comment but
+  never computed court-local coords — annex INTENT real, POSE never achieved
+  it. av-court|av-forge stays in the sweep table; now it will actually be an
+  abutment.
+- Fix: re-place flush against court E face at the NE corner — court-local
+  origin (7.373, 1.677) (forge W face lx=-0.873 flush on court E face
+  lx=6.5; lz span 0.9..2.29), yaw = court yaw (-0.9411511441487406).
+  Companion light av-forge-l (old forge center +1m y) moves with it.
+  Comps captured BEFORE (particles:embers scale 0.6;
+  motion:fire_fg_coals bob y amp 0.014 period 1.8), re-applied AFTER.
+- STATUS: FIXED (align-9, 2026-08-18). Live /geom after: forge
+  (23.986, 0, -8.353) yaw -0.9412 (= court yaw), court-local origin
+  (7.373, 1.677) — W face flush on court E face lx=6.5, lz span 0.9..2.29
+  at the NE corner. forge×court SAT 1.387m -> 0.0000m (true abutment); vs
+  every other entity 0.000m (only ground decal av-door-paths 1.387m =
+  classified ground layer). Comps re-applied verbatim (particles:embers
+  scale 0.6; motion:fire_fg_coals bob y amp 0.014 period 1.8 — live comp
+  bag keys match pre-place capture). Light av-forge-l re-spawned at
+  (23.986, 1, -8.353), Δ(0,1,0) vs forge preserved EXACTLY; color/intensity
+  honestly reconstructed (0xffa050/1.6/5, mason fire idiom — align-3
+  precedent, params not exposed by /geom). Resident "GO forge" waypoint
+  re-aimed in resident.ts source (20.9,-15.5 -> 23.99,-8.35; picks up on
+  daemon's natural restart — resident lane owns that restart). Sweep after:
+  73 entities, 135 pairs, 0 unclassified ALL CLEAR; verify-repairs.ts ALL
+  PASS exit 0.

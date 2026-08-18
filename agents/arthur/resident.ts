@@ -663,7 +663,7 @@ const CIRCUIT: Array<[number, number, string]> = [
     [-8.0, -24.7, "bunkhouse"],// 252°
     [8.0, -24.7, "hall"],      // 288°
     [21, -15.3, "court"],      // 324°
-    [20.9, -15.5, "forge"],    // THE SMITH'S CALL (loop 99): the new forge — bank the coals
+    [23.99, -8.35, "forge"],    // THE SMITH'S CALL (loop 99, re-aimed align-9): forge annex now flush at court E face (was court-center pre-align-9) — bank the coals
     [-18.8, 25.9, "carousel"], // SE landmark
     [28, 0, "inn"],            // N spoke end (inn door apron)
     [-32, 0, "windmill"],      // W spoke end (mill door apron)
