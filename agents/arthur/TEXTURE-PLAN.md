@@ -1056,6 +1056,23 @@ Persistent verifier `verify-tex83.ts` committed (18/18 ALL PASS).
 Ledger refine-315. Pin: tex-83 inn. TIMBER: 49th; IRON: 29th — the
 great hearth cooks on the village's own iron, poker to panhandle.
 
+### [tex-84] THE FULL-STACK REGRESSION (2026-08-18, resumed wakeup 25) — DONE
+The lane's first whole-village regression: all 28 persistent verifiers
+(tex-55..83) run in one batch-order-realistic sequence + the standing
+gate. The first pass FAILED 12 — and the failures were the finding:
+STALE-EXPECTATION class (each verifier written against the village as
+it stood at its cycle): HEAD regex pre-polish ×9 (tex-55..63), ring
+sibling hashes pre-later-conversions ×7 (tex-72..81), mapboard
+pre-LIVE-EVOLUTION ×3, plus ONE TRUE BUG — verify-tex69 called
+copyFileSync without importing it (error swallowed mid-script), so
+batch runs after it read a poisoned carousel pre-state. All fixed at
+root, evolution trails named in labels. MAPBOARD-IN-FLIGHT law banked:
+polish's source now builds b77ef40a (staged e732ce10 still live;
+timber byte-preserved through both edits) — tex-61 pins source
+determinism, not the live store path. Final: 28/28 + gate ALL PASS,
+exit 0. `verify-tex84.ts` committed as the re-runnable full-stack
+verifier. Ledger refine-316. One village, not 83 phases.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
