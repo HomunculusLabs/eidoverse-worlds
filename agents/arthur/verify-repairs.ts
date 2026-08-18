@@ -128,7 +128,7 @@ ck("[tex-16] av-chopblock on metal build (1f8b7d34bfe59272)", ents["av-chopblock
 ck("[tex-15] av-welcome on textured build (fa0c9d94a07b9ef5)", ents["av-welcome"]?.lib === "store/fa0c9d94a07b9ef5.glb");
 ck("[tex-14] av-watchpost on timber build (e7f55348 → pin refreshed by tex-50, sentry comps)", ents["av-watchpost"]?.lib === "store/256e16a13027fb93.glb");
 ck("[tex-13] av-shrine on textured build (0ef2c1e60c5b070d, 3 votive comps)", ents["av-shrine"]?.lib === "store/d0d3743a60802625.glb");
-ck("[tex-12] av-roads3 on ground build (20234503 → 2892af9e by plaza-1 → 6358e1ab by plaza-2 kerb variance)", ents["av-roads3"]?.lib === "store/6358e1abbe9c0164.glb");
+ck("[tex-12] av-roads3 on ground build (20234503 → 2892af9e plaza-1 → 6358e1ab plaza-2 → 453f9ae5 plaza-3 milestones)", ents["av-roads3"]?.lib === "store/453f9ae5b885686b.glb");
 ck("[tex-11] av-plaza-hearth on soil build (4e58865a → pin refreshed by plaza-1, 4 comps)", ents["av-plaza-hearth"]?.lib === "store/0f9553f638f24ad5.glb");
 ck("[tex-10] av-bcistern on ashlar build (a96ee31d → pin refreshed by tex-55)", ents["av-bcistern"]?.lib === "store/a96ee31d29c2085f.glb");
 ck("[tex-9] av-kiln on ashlar build (0bdc0d18 → pin refreshed by tex-66, +fire anchor r45)", ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb");
