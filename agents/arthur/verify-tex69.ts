@@ -106,7 +106,7 @@ ok("carousel-safety law: live carousel untouched by tex-69 (polish lane's 38fbbc
     ents["av-carousel"]?.lib === "store/cd22d0b09e70bebc.glb", ents["av-carousel"]?.lib ?? "missing");
 ok("census anchors: watchpost + plaza current, woodyard untouched",
     ents["av-watchpost"]?.lib === "store/256e16a13027fb93.glb"
-    && ents["av-plaza-hearth"]?.lib === "store/0f9553f638f24ad5.glb"
+    && ents["av-plaza-hearth"]?.lib === "store/1a656f00ab66db91.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-69 pin + refreshed tex-20 pin + ledger + HEAD

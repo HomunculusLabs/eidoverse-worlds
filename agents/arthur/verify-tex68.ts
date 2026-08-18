@@ -85,7 +85,7 @@ ok("place-tex68-timber35.ts effect: watchpost live, pose (15.6,-15.6), fire comp
     wp?.lib === "store/256e16a13027fb93.glb" && Math.abs(wp.pos[0] - 15.6) < 0.01 && Math.abs(wp.pos[2] + 15.6) < 0.01
     && wpComps.includes("particles") && wpComps.includes("motion:fire_coals"), wp?.lib ?? "missing");
 ok("census anchors: plaza + kiln current, woodyard untouched",
-    ents["av-plaza-hearth"]?.lib === "store/0f9553f638f24ad5.glb"
+    ents["av-plaza-hearth"]?.lib === "store/1a656f00ab66db91.glb"
     && ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
