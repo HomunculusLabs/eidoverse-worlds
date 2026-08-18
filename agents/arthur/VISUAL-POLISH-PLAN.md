@@ -135,6 +135,24 @@ wakeups. This lane is the standing fix for that blindness.
       wedge. GATE NOW SCHEDULABLE: full-night read (sky dark, lamps full)
       at wall ≥20:00; the dead-dark building census runs then. polish-6's
       dusk 6-warm/6-dark read stays the distribution baseline.
+      — polish-12 FULL-NIGHT CENSUS (executed on the world's own cycle,
+      19:56–19:59): frame 1 (Bill's fixed camera): 2 warm lamps right-
+      clustered, A-frame center-left reads dead-dark — INCONCLUSIVE BY
+      DESIGN: lightrig.js runs an 8-slot light pool assigned by camera
+      distance (N=8 measured 2026-08-09, lightrig.js:21; distant lights
+      are outbid, not broken) and the A-frame's lit faces are interior
+      anchors seen only through door/window lanes at glancing angles
+      (mkv3-house.ts carries 15 fire/lamp/glow/flame anchors). Frame 2
+      (carousel vantage, during a live human moment — Bill in-world, the
+      resident seated at av-carousel.horse_0 on his invitation; camera
+      never steered): SEVEN distinct warm lights (street lamps 10/2
+      o'clock, carousel fire-glow 11–1, market-stall lanterns 3/4, well
+      lantern 9, distant glowing window 11), ZERO dead-dark buildings,
+      village reads warm and alive. VERDICT: night balance PASS; no
+      register item opened; no source change forced. Confirmed night gap
+      = carousel roof-edge lanterns absent LIVE — already registered
+      (polish-5 staged in 38fbbc26dcdfcc1a, rollout consent-blocked);
+      frame 2 independently corroborates the register.
 
 ## Closed
 
