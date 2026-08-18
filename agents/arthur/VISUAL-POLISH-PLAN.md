@@ -771,6 +771,19 @@ wakeups. This lane is the standing fix for that blindness.
            capture verbatim; drifted light re-anchored to the new
            pose; benign sub-0.5m jitter KEPT (the guard never
            fights small offsets). Verifier 21/21 unchanged.
+      — polish-56 CHIP DECODER (subject this wakeup): the decoder
+           family completed — the mapboard UNKNOWN branch was the
+           last blind one ("investigate" only). decodeChip counts
+           the COLOR_0 pipeline verts: CHIP ≥ 1490 (chip-era 1502;
+           polish-20 added 24), NO-CHIP ≤ 1480 (pre-chip 1478).
+           VERIFIED: staged b77ef40 → CHIP (exactly 1502); welcome
+           → NO-CHIP (371, in-domain negative). SCOPE NOTE (honest):
+           the carousel GLB reads CHIP (8762 verts) — true but
+           out-of-domain; like decodeRoof, the decoder answers its
+           OWN subject's builds. The mapboard UNKNOWN branch now
+           prints the exact decode command. Verifier 21/21. (Record
+           landed one commit late — the first patch's anchor text
+           mismatched; the verify block caught it.)
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
