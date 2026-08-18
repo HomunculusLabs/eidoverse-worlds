@@ -2329,3 +2329,25 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-79 changed-paths evidence — 2026-08-18T00:17:56.326Z
+
+```
+PASS pre-state: garden on disk is tex-79 build (1790e181)
+PASS mkv3-ring.ts: garden rebuild deterministic + == live build (1790e1816f08b85e) — 1790e1816f08b85e
+PASS ring-safety: 3 siblings + hall + longhouse + tower restored byte-identical (ffe8236b/b82a4104/2f2cacf9/3f8f9e6f/33369174/7f60f1f7)
+PASS decode: timber + stone present — timber,stone,glow2,plaster,glow4,glow5
+PASS timber ≡ house wallSpan's + stone ≡ kiln's (buffer-compared)
+PASS fire emissive node survives
+PASS TEXCOORD_0 == POSITION on texMat buckets (pots/jars/crops/flowers flat by design) — buckets 2
+PASS texture bytes < 400KB + GLB < 20MB — 40849B / 181.4KB
+PASS place-tex79-timber45.ts effect: garden-cottage live, pose (-21,15.3), smoke comp recovered — store/1790e1816f08b85e.glb
+PASS census anchors: hall + tower current, woodyard untouched (approval block honored)
+PASS verify-tex79.ts present (committed, non-self-deleting)
+PASS verify-tex79.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-79 pin + tex-4 multi pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
