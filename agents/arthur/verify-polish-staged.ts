@@ -167,6 +167,17 @@ console.log("H3=" + (JSON.stringify(dc.origin)==="[5,6.3,-10]" && !("originLocal
     ck("heal behavioral: smoke-less capture heals in village idiom (7 planned)", h.includes("H1=true") && h.includes("N=7"), h.trim().split("\n")[0]?.slice(0, 60) ?? "");
     ck("heal behavioral: no double-apply, live data wins", h.includes("H2=true"), h.trim().split("\n")[1]?.slice(0, 40) ?? "");
     ck("heal behavioral: pose-relative (moved pose carries the heal, no leak)", h.includes("H3=true"), h.trim().split("\n")[2]?.slice(0, 40) ?? "");
+    // polish-58 DECODER BEHAVIORALS (the three byte-decoders were one-shot
+    // verified at p44/p48/p56 — a regression would pass silently; re-prove
+    // each run against the staged builds + in-domain negatives):
+    const dr = await decodeRoof(`${A}/village_carousel3.glb`);
+    ck("decoder roof: staged carousel -> LIFTED (hub y=5.15)", dr.includes("LIFTED (hub y=5.15)"), dr);
+    const dl = await decodeLamp(`${A}/village_welcome3.glb`);
+    const dln = await decodeLamp(`${A}/village_mapboard3.glb`);
+    ck("decoder lamp: staged welcome -> LAMP; mapboard hearth -> NO-LAMP (green-channel separation)", dl.includes("LAMP (glow2") && dln.startsWith("NO-LAMP"), dl + " / " + dln);
+    const dc = await decodeChip(`${A}/village_mapboard3.glb`);
+    const dcn = await decodeChip(`${A}/village_welcome3.glb`);
+    ck("decoder chip: staged mapboard -> CHIP @1502; welcome -> NO-CHIP @371", dc.includes("1502") && dcn.startsWith("NO-CHIP"), dc + " / " + dcn);
     ck("heal probe residue clean (self-deleted)", !existsSync(probe));
 
     // ---- D. gate + hygiene ----

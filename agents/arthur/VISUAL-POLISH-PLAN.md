@@ -798,6 +798,15 @@ wakeups. This lane is the standing fix for that blindness.
            (it listens at import) — killed by port 8791, verified
            free; verb-log residue cleaned. (Record again one commit
            late — anchor text; caught by the verify block.)
+      — polish-58 DECODERS IN THE STANDING VERIFIER (subject this
+           wakeup): decodeRoof/decodeLamp/decodeChip were one-shot
+           verified at p44/p48/p56 — a regression in any of them
+           would pass silently. D1-D3 added: roof -> staged LIFTED
+           (hub y=5.15); lamp -> staged LAMP + mapboard-hearth
+           NO-LAMP (green-channel separation); chip -> staged CHIP
+           @1502 + welcome NO-CHIP @371. Verifier now 24/24, first
+           run green — every future run re-proves all three
+           byte-decoders alongside the three heal behaviorals.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
