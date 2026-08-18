@@ -1,0 +1,666 @@
+{
+ "builtAt": "2026-08-18T20:33:34.597Z",
+ "from": 1635,
+ "to": 1694,
+ "results": [
+  {
+   "id": "av-mason-0015",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1635_hamlet.glb",
+   "hash": "353dd6fbcf5215c3",
+   "families": [
+    "timber",
+    "stone",
+    "plaster"
+   ]
+  },
+  {
+   "id": "av-mason-0016",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1636_cloister.glb",
+   "hash": "4efdd4602c62966b",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0017",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1637_wayside.glb",
+   "hash": "b46c543afae781a0",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0018",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1638_forest.glb",
+   "hash": "546718f819b5f702",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0019",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1639_garden.glb",
+   "hash": "d916f37355701255",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0020",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1640_orchard.glb",
+   "hash": "24bcfc6a15d55613",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0021",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1641_terrace.glb",
+   "hash": "e8417696ee8ab62b",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0022",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1642_cairnfield.glb",
+   "hash": "a4450b4094f75297",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0023",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1643_mosaic.glb",
+   "hash": "1655ae806c3b8fe3",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0024",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1644_seed.glb",
+   "hash": "710ec3e5c66a0378",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0025",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1645_labyrinth.glb",
+   "hash": "3273205286ab16bb",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0026",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1646_statuary.glb",
+   "hash": "ba69e7158262698a",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0027",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1647_lavender.glb",
+   "hash": "d4ab74d0d530b4a8",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0028",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1648_hamlet.glb",
+   "hash": "032b6e24f4c4a142",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0029",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1649_cloister.glb",
+   "hash": "afa06673d4f1831f",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0030",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1650_wayside.glb",
+   "hash": "d2a2b028b1ce9077",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0031",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1651_forest.glb",
+   "hash": "f61645b4aba14fc6",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0032",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1652_garden.glb",
+   "hash": "38e4718c5efd1374",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0033",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1653_orchard.glb",
+   "hash": "7044745d293cc340",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0034",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1654_terrace.glb",
+   "hash": "e8417696ee8ab62b",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0035",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1655_cairnfield.glb",
+   "hash": "09ed84ef059f3bc7",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0036",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1656_mosaic.glb",
+   "hash": "b6491515b25ef439",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0037",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1657_seed.glb",
+   "hash": "710ec3e5c66a0378",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0038",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1658_labyrinth.glb",
+   "hash": "2d3d2032d3e806f8",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0039",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1659_statuary.glb",
+   "hash": "61d7a70c8b530b83",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0040",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1660_lavender.glb",
+   "hash": "56b752abf7f5eba4",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0041",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1661_hamlet.glb",
+   "hash": "473f671c274ef653",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0042",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1662_cloister.glb",
+   "hash": "255739e0c2a5d391",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0043",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1663_wayside.glb",
+   "hash": "b693c67eaedeb71b",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0044",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1664_forest.glb",
+   "hash": "43e4c8c3a843881d",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0045",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1665_garden.glb",
+   "hash": "856d56746e3a42a3",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0046",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1666_orchard.glb",
+   "hash": "ec93dc09acc0ddfa",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0047",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1667_terrace.glb",
+   "hash": "e8417696ee8ab62b",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0048",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1668_cairnfield.glb",
+   "hash": "5d6c3edda71cc228",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0049",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1669_mosaic.glb",
+   "hash": "83c4817f73507493",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0050",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1670_seed.glb",
+   "hash": "710ec3e5c66a0378",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0051",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1671_labyrinth.glb",
+   "hash": "d93deb842f9998da",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0052",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1672_statuary.glb",
+   "hash": "8c560202486fa0cd",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0053",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1673_lavender.glb",
+   "hash": "d8fac6d1e0279f07",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0054",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1674_hamlet.glb",
+   "hash": "766992061b3a8e5f",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0055",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1675_cloister.glb",
+   "hash": "2cc686bfee6a1c17",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0056",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1676_wayside.glb",
+   "hash": "21dd4ad5c0ad0b53",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0057",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1677_forest.glb",
+   "hash": "18ea1385cf64d504",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0058",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1678_garden.glb",
+   "hash": "e54ee386f08a7c21",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0059",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1679_orchard.glb",
+   "hash": "8d3959f01e32c335",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0000",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1680_terrace.glb",
+   "hash": "e8417696ee8ab62b",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0001",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1681_cairnfield.glb",
+   "hash": "109e5bc57c5f7cb0",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0002",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1682_mosaic.glb",
+   "hash": "505bec0b589f786f",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0003",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1683_seed.glb",
+   "hash": "710ec3e5c66a0378",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0004",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1684_labyrinth.glb",
+   "hash": "6ecff24946390a7d",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0005",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1685_statuary.glb",
+   "hash": "dd0985508d0157c2",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0006",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1686_lavender.glb",
+   "hash": "26f0eed96a94e0d2",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0007",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1687_hamlet.glb",
+   "hash": "e2f134cfba7f9e86",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0008",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1688_cloister.glb",
+   "hash": "c6014616c233ac01",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0009",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1689_wayside.glb",
+   "hash": "91f2a1bf9b997abe",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0010",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1690_forest.glb",
+   "hash": "e7d130f7747d9e9a",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0011",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1691_garden.glb",
+   "hash": "01a4e80c02f03de7",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0012",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1692_orchard.glb",
+   "hash": "dc4d7059985e47a8",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0013",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1693_terrace.glb",
+   "hash": "e8417696ee8ab62b",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  },
+  {
+   "id": "av-mason-0014",
+   "file": "/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/assets/../mason/glb-retex/work_1694_cairnfield.glb",
+   "hash": "efedd3614fe4ae88",
+   "families": [
+    "timber",
+    "stone",
+    "plaster",
+    "iron"
+   ]
+  }
+ ]
+}
