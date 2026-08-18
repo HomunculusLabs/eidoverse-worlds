@@ -164,6 +164,22 @@ wakeups. This lane is the standing fix for that blindness.
       the staged roof lift + paint widening + lanterns. No reply yet at
       commit time. Next tick: check chat log for a reply before anything
       else; consent still Bill's alone.
+      — polish-14 VERB STALL WATCHDOG (subject this wakeup): decoded the
+      real server's verb path — rate-capped messages are DROPPED SILENTLY
+      (server.ts:350-354, no ack, no error; MSG_RATE window). The placer's
+      ack-clocked verb loop had NO recovery: a dropped verb mid-rollout =
+      stall to the 90s timeout, world left half-dressed (worse: spawn
+      landed, comps half-gone — the comp-wipe law's nightmare). With the
+      texture lane sharing the same IP's 12/4s verb budget, this was the
+      rollout's weakest seam. FIX: watchdog re-sends the in-flight verb
+      after 6s without ack, max 3 re-sends, then aborts with a named verb
+      for manual look. PROVEN: mock extended with silent-drop simulation
+      (first comp verb dropped exactly once, no ack); dry-run re-ran the
+      FULL sequence — "verb stall — re-send #1: comp" fired in-log, all
+      7 comps + sockets + both lights landed, post-place verify PASS,
+      19/19 ALL PASS. Staged rollout is now drop-resilient, not just
+      retry-resilient. (LSP caught one slip mid-edit — line 116 stale
+      `verb` reference — fixed before any run; nothing broken shipped.)
 
 ## Closed
 
