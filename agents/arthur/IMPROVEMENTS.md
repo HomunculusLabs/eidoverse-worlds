@@ -2507,4 +2507,6 @@ fixes ≈ 6 F.)
 
 - [lift-24] THE TWENTIETH HOLD (outer-village lift loop, wakeup 26): steady state green — HEAD is my own lift-23, no sibling lane banked work, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a NINETEENTH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), resident log unchanged with no new summoner reads; all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, twentieth dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
 
-**Running total: 2368119 / 2000000**
+- [lift-25] THE TWENTY-FIRST HOLD (outer-village lift loop, wakeup 27): steady state green — HEAD is my own lift-24, no sibling lane banked work, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a TWENTIETH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), resident log unchanged with no new summoner reads; all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, twenty-first dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
+
+**Running total: 2368120 / 2000000**
