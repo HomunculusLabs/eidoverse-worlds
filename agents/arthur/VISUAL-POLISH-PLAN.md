@@ -636,6 +636,20 @@ wakeups. This lane is the standing fix for that blindness.
  consent-gated carousel rollout; closes when live reads
  7). LAW: capture-reapply alone perpetuates a past wipe —
  known bags heal forward.
+ — polish-46 HEAL DATA CORRECTION (subject this wakeup): the
+ polish-45 heal stubbed {x:1} — mirroring the MOCK's
+ comp shape, not the live village. Live decode of all 9
+ smoking entities + place-smoke.ts:28: the true idiom is
+ {preset:"smoke", origin:[wx, topY, wz], count:50,
+ size:0.4, speed:0.35}. The original carousel comp data
+ was never captured (no record; resident.log holds only
+ building chimneys) — HONEST RECONSTRUCTION in the
+ village idiom: origin at the finial top (mkcarousel
+ finial 6.08 + r 0.18 → y≈6.3, world (-18.8, 25.9)),
+ chimney-grade count/speed, with a recorded tune-down
+ note (charcoal precedent: 6 @ 0.22 for a lighter puff).
+ Verified: the heal now emits the exact village shape.
+ Register entry updated below.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
