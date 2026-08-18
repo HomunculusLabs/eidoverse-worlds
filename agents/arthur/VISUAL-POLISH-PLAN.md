@@ -939,6 +939,21 @@ wakeups. This lane is the standing fix for that blindness.
            12/2 warm px at 5/10m dusk. LAW: time-coverage wants
            THREE points — day, night, and the ramp between them.
 
+      — polish-72 CAROUSEL DUSK GATE (subject this wakeup; the
+           p71 three-point law, second subject): HONEST GATE ARC —
+           the first dusk pass reused the dark DAY background
+           (24,26,34) and vision rightly FAILED the lanterns as
+           GLARING against it. Decode: the failure was in my
+           rasterizer's sky, not the lanterns — the engine's real
+           dusk is a brighter twilight. Corrected bg (72,58,48):
+           vision PASS — lanterns read as soft warm accents in
+           twilight, no glare, silhouette clearly readable.
+           PIXEL: 36/3 warm px at 18/30m dusk. LAW: a gate FAIL
+           indicts the harness first — decode the fixture (bg, fog,
+           sun) before indicting the subject. The lantern package
+           is now three-point time-safe (day p51 / dusk p72 /
+           night p15).
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:

@@ -103,7 +103,7 @@ for si in scene_nodes:
 
 print(f"triangles: {len(tris)}")
 
-def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=None, night=False, cam_dist=None, fog=None):
+def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=None, night=False, cam_dist=None, fog=None, dusk=False):
     # polish-23 FOG GATE: fog = FogExp2 density (village truth: core.js:115
     # FogExp2(0x101828, 0.018), weather-scaled by sky.js:798 `0.018 * a.fog`).
     # Per-pixel blend toward the fog color, factor = 1 - exp(-(d*dist)^2)
@@ -120,11 +120,16 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=No
     ry = (bx[1]*rx[2]-bx[2]*rx[1], bx[2]*rx[0]-bx[0]*rx[2], bx[0]*rx[1]-bx[1]*rx[0])
     if night:
         img = Image.new("RGB", (W, H), (7, 7, 12))
+    elif dusk:
+        # polish-72b: the first dusk pass reused the dark day bg (24,26,34)
+        # — vision rightly FAILED the lanterns as glaring against it. The
+        # engine's real dusk sky is a brighter twilight; use an honest one.
+        img = Image.new("RGB", (W, H), (72, 58, 48))
     else:
         img = Image.new("RGB", (W, H), (24, 26, 34))
     px = img.load()
     zbuf = [1e9] * (W * H)
-    LIGHT = (0.4, 0.75, 0.5)
+    LIGHT = (0.62, 0.42, 0.30) if dusk else (0.4, 0.75, 0.5)  # polish-72: low warm sun at dusk
     ll = math.sqrt(sum(c*c for c in LIGHT)); LIGHT = tuple(c/ll for c in LIGHT)
     n_drawn = 0
     for mi, v0, v1, v2 in tris:
@@ -145,6 +150,11 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=No
         base = FLAT.get(mi, (160, 160, 160))
         # fog base color (village truth 0x101828)
         FOGC = (16, 24, 40)
+        if dusk and mi in EMIT:
+            # polish-72 DUSK RAMP: emissive at 60% (ramp mid-point) blended
+            # over the low warm sun — the honest switch-on moment.
+            lam = max(0.30, abs(nx*0.62+ny*0.42+nz*0.30)/nl)
+            col = tuple(min(255, int(max(ch * lam, ch * 0.60))) for ch in base)
         if night:
             # NIGHT MODE (polish-15): emissive materials glow at full strength
             # regardless of the sun (they are light sources, not lit surfaces);
@@ -213,6 +223,10 @@ render("night-threeq", (0.7, -0.24, 0.7), (0, 1, 0), (0, 3.0, 0), 4.6, 4.6, nigh
 # (subject-centered views need it; chain law does not apply here):
 for d in (20, 30, 45):
     render(f"horizon-night{d}", (0, -0.05, 1), (0, 1, 0), (0, 3.6, 0), d * 0.58, d * 0.58, night=True, cam_dist=d, fog=0.018)
+
+# polish-72 CAROUSEL DUSK GATE (the p71 three-point law, second subject):
+for d in (18, 30):
+    render(f"dusk{d}", (0, -0.10, 1), (0, 1, 0), (0, 3.2, 0), d * 0.58, d * 0.58, dusk=True, cam_dist=d, fog=0.018)
 
 render("day18-front", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
 render("day18-threeq", (0.7, -0.17, 0.7), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
