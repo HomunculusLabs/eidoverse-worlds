@@ -2712,3 +2712,26 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-83 changed-paths evidence — 2026-08-18T01:04:11.940Z
+
+```
+PASS pre-state: inn on disk is tex-83 build (6f35f80a)
+PASS mkv3-landmarks.ts: inn rebuild deterministic + == live build (6f35f80a336889cd) — 6f35f80a336889cd
+PASS landmarks-safety: carousel (38fbbc26) + belltower (82e4c316) + windmill (7fc779a5) byte-identical
+PASS decode: timber + iron present (tex-83's hearth iron) — timber,stone,glow2,plaster,iron,glow5,glow6
+PASS timber ≡ house wallSpan's + iron ≡ forge family's (buffer-compared)
+PASS sign + fire anchors survive
+PASS TEXCOORD_0 == POSITION on texMat buckets (keyhooks/keytags flat by design) — buckets 2
+PASS texture bytes < 400KB + GLB < 20MB — 41606B / 231.6KB
+PASS place-tex83-timber49.ts effect: inn live, pose (34,0), all 4 comps recovered — store/6f35f80a336889cd.glb
+PASS census anchors: court + hall current, woodyard untouched
+PASS mapboard LIVE-EVOLUTION: polish rollout e732ce10 live (pins refreshed) — store/e732ce10400c1979.glb
+PASS verify-tex83.ts present (committed, non-self-deleting)
+PASS verify-tex83.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-83 pin + tex-4 multi pin + refreshed mapboard pins + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
