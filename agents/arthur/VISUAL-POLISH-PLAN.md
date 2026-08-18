@@ -1058,6 +1058,27 @@ wakeups. This lane is the standing fix for that blindness.
            18:00; (b) emissive branches must not fall through to
            lambert branches.
 
+      — polish-81 CHAIN-HARNESS AUDIT (subject this wakeup; the
+           p80 deferred question): decoded the composite line by
+           line. FINDINGS: (1) the chain dims EVERYTHING vs night
+           (~0.5 factor on lit surfaces too — mapboard face
+           184->97), so it is NOT an emissive bug; (2) the night
+           chain's lamp px (228,99,47) != base (255,183,91) — the
+           composite deviates from base AT NIGHT TOO, i.e. a
+           PRE-EXISTING harness quirk (welcome-only chain shows
+           almost no glow — the second-GLB offset path paints over
+           argv[2]'s lamp), NOT a p80 regression; (3) p31's
+           "106+26 px" used a looser filter — not comparable to
+           today's strict 31. VERDICT: the p80 subject verdict
+           (lamp full-strength at dusk, == night) stands PROVEN in
+           isolation; the chain harness has a pre-existing
+           composite artifact affecting night and dusk alike.
+           DEFERRED: chain rework (needs its own wakeup; candidate
+           cause = z-paint order across the two offset tri sets).
+           LAW: a harness artifact that predates the branch under
+           test is not that branch's regression — prove the
+           baseline deviates too before blaming the delta.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
