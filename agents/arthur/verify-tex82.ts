@@ -39,11 +39,11 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 const restore = () => { for (const f of CONVERTED) copyFileSync(`/tmp/ring-bak-${f}.glb`, `${A}/${f}.glb`); };
 
 // 0) ring-safety pre-state
-ok("pre-state: court on disk is the tex-82 build (ac75f33c)", sha(`${A}/village_court3.glb`).slice(0, 16) === "ac75f33cab3fb5ce");
+ok("pre-state: court on disk is the lift-1 build (ac75f33c → bb31e8a5 by lift-1)", sha(`${A}/village_court3.glb`).slice(0, 16) === "bb31e8a5ffdc1e16");
 ok("all six converted backups fresh",
     CONVERTED.every((f) => existsSync(`/tmp/ring-bak-${f}.glb`))
     && CONVERTED.every((f) => sha(`/tmp/ring-bak-${f}.glb`).slice(0, 16) === EXPECT[f])
-    && sha(`/tmp/ring-bak-village_court3.glb`).slice(0, 16) === "ac75f33cab3fb5ce");
+    && sha(`/tmp/ring-bak-village_court3.glb`).slice(0, 16) === "bb31e8a5ffdc1e16");
 
 // 1) mkv3-ring.ts: rebuild — court deterministic + == live pin
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
@@ -51,8 +51,8 @@ restore();
 const p1 = sha(`${A}/village_court3.glb`);
 execSync("bun agents/arthur/assets/mkv3-ring.ts", { cwd: W, stdio: "pipe" });
 restore();
-ok("court rebuild deterministic + == live build (ac75f33cab3fb5ce)",
-    p1 === sha(`${A}/village_court3.glb`) && p1.startsWith("ac75f33cab3fb5ce"), p1.slice(0, 16));
+ok("court rebuild deterministic + == live build (ac75f33c → bb31e8a5 by lift-1)",
+    p1 === sha(`${A}/village_court3.glb`) && p1.startsWith("bb31e8a5ffdc1e16"), p1.slice(0, 16));
 ok("ring-safety: all six converted siblings kept at their builds",
     CONVERTED.every((f) => sha(`${A}/${f}.glb`).slice(0, 16) === EXPECT[f]));
 
@@ -107,7 +107,7 @@ for (const x of g.entities) ents[x.id] = x;
 const ct = ents["av-court"];
 const ctComps = Object.keys(ct?.comp ?? {});
 ok("place-tex82-timber48.ts effect: court live, pose (21,-15.3), smoke comp recovered",
-    ct?.lib === "store/ac75f33cab3fb5ce.glb" && Math.abs(ct.pos[0] - 21) < 0.01 && Math.abs(ct.pos[2] + 15.3) < 0.01
+    ct?.lib === "store/bb31e8a5ffdc1e16.glb" && Math.abs(ct.pos[0] - 21) < 0.01 && Math.abs(ct.pos[2] + 15.3) < 0.01
     && ctComps.includes("particles:smoke"), ct?.lib ?? "missing");
 ok("census anchors: hall + row current, woodyard untouched",
     ents["av-hall"]?.lib === "store/3f8f9e6f98bbbd04.glb"
@@ -120,7 +120,7 @@ ok("verify-repairs.ts 0 / ALL PASS", vr.code === 0 && vr.out.includes("ALL PASS"
 ok("tex-82 pin green", /^\s*PASS \[tex-82\]/m.test(vr.out));
 ok("tex-4 multi pin carries new court hash (no FAIL)", !/FAIL \[tex-4\]/.test(vr.out));
 ok("ledger law EXACT + HEAD gate green (polish-inclusive)",
-    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)?(\/lift)? commit/m.test(vr.out));
+    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)?(\/lift)?(\/align)? commit/m.test(vr.out));
 
 console.log(fails.length ? `\n${fails.length} FAIL` : "\nALL PASS");
 process.exit(fails.length ? 1 : 0);

@@ -116,7 +116,7 @@ ok("verify-repairs.ts 0 / ALL PASS (incl. tex-4 multi pin w/ new longhouse hash)
 ok("tex-77 pin green", /^\s*PASS \[tex-77\]/m.test(vr.out));
 ok("tex-4 multi pin carries the new longhouse hash (no FAIL)", !/FAIL \[tex-4\]/.test(vr.out));
 ok("ledger law EXACT + HEAD gate green (polish-inclusive)",
-    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)?(\/lift)? commit/m.test(vr.out));
+    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)?(\/lift)?(\/align)? commit/m.test(vr.out));
 
 console.log(fails.length ? `\n${fails.length} FAIL` : "\nALL PASS");
 process.exit(fails.length ? 1 : 0);

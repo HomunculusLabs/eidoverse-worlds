@@ -104,7 +104,18 @@ ok("emissive materials present (oven mouth / work bar)", hasEmissive);
 
 // 3) the standing gate green at the CURRENT live state
 const vr = execSync("bun agents/arthur/verify-repairs.ts", { cwd: W, encoding: "utf8", timeout: 120000 });
-ok("standing gate ALL PASS (live court still tex-82 — rollout pending consent)", vr.includes("ALL PASS"));
+ok("standing gate ALL PASS (live court now on the lift-1 build, pins refreshed)", vr.includes("ALL PASS"));
+
+// 4) LIVE post-rollout close: court on the lift-1 lib at preserved pose,
+//    smoke comp recovered (R-110 law: av-court carries sign+embers+smoke
+//    +sockets — pre-rollout bag read 1 comp; capture-then-reapply preserves
+//    the bag verbatim, so 1 in = 1 out here).
+const g = await (await fetch("https://eidoverse.billding.dev/geom?world=commons&boxes=0")).json();
+const ct: any = g.entities.find((x: any) => x.id === "av-court");
+ok("live: av-court on the lift-1 build (bb31e8a5ffdc1e16)", ct?.lib === "store/bb31e8a5ffdc1e16.glb", ct?.lib ?? "missing");
+ok("live: pose preserved (21, -15.3, yaw -0.941)", Math.abs(ct.pos[0] - 21) < 0.01 && Math.abs(ct.pos[2] + 15.3) < 0.01 && Math.abs(Number(ct.yaw) + 0.941) < 0.01, JSON.stringify(ct?.pos) + " yaw " + ct?.yaw);
+const bag = Object.keys(ct?.comp ?? {});
+ok("live: smoke comp recovered after re-place", bag.includes("particles:smoke"), bag.join(",") || "none");
 
 console.log(fails.length ? `\n${fails.length} FAIL` : "\nALL PASS");
 process.exit(fails.length ? 1 : 0);

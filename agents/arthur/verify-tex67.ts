@@ -99,7 +99,7 @@ ok("verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-52 pin)", vr.code === 0 
 ok("tex-67 pin green", /^\s*PASS \[tex-67\]/m.test(vr.out));
 ok("tex-52 pin refreshed (no FAIL)", !/FAIL \[tex-52\]/.test(vr.out));
 ok("ledger law EXACT + HEAD gate green (polish-inclusive)",
-    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)?(\/lift)? commit/m.test(vr.out));
+    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)?(\/lift)?(\/align)? commit/m.test(vr.out));
 
 console.log(fails.length ? `\n${fails.length} FAIL` : "\nALL PASS");
 process.exit(fails.length ? 1 : 0);

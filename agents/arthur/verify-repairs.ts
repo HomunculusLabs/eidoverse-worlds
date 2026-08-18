@@ -28,14 +28,14 @@ const sep = (a: number[], b: number[]) => Math.max(Math.max(a[0] - b[1], b[0] - 
 // --- per-defect live assertions (mirror of the register's FIXED entries) ---
 const D = ents["av-dyehouse"], S = ents["av-sign-dyer"], R = ents["av-row-cottage"];
 ck("[tex-4] av-stable on thatch+timber+stone build (89dc80d7 → pin refreshed by tex-49)", ents["av-stable"]?.lib === "store/89dc80d7bb8fc395.glb");
-ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53)",
+ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53; court → bb31e8a5 lift-1)",
     ents["arthur-house"]?.lib === "store/cff51defbdacd0ce.glb"
     && ents["av-longhouse"]?.lib === "store/333691747dd14c5c.glb"
     && ents["av-garden-cottage"]?.lib === "store/1790e1816f08b85e.glb"
     && ents["av-row-cottage"]?.lib === "store/7ec9fc54b9d79897.glb"
     && ents["av-bunkhouse"]?.lib === "store/4bfacdd739b9bd0e.glb"
     && ents["av-hall"]?.lib === "store/3f8f9e6f98bbbd04.glb"
-    && ents["av-court"]?.lib === "store/ac75f33cab3fb5ce.glb"
+    && ents["av-court"]?.lib === "store/bb31e8a5ffdc1e16.glb"
     && ents["av-inn"]?.lib === "store/6f35f80a336889cd.glb"
     && ents["av-windmill"]?.lib === "store/7fc779a5c7dd5dc5.glb"
     && ents["av-stable"]?.lib === "store/89dc80d7bb8fc395.glb");
@@ -44,7 +44,7 @@ ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coal
 ck("[tex-7] av-door-paths on soil build (bf15780386a790ac)", ents["av-door-paths"]?.lib === "store/bf15780386a790ac.glb");
 ck("[tex-84] full-stack regression (28 verifiers tex-55..83 sequential + gate) re-runnable", existsSync("agents/arthur/verify-tex84.ts"));
 ck("[tex-83] av-inn on 4-family build (6f35f80a336889cd, 4 comps)", ents["av-inn"]?.lib === "store/6f35f80a336889cd.glb");
-ck("[tex-82] av-court on 3-family build (ac75f33cab3fb5ce, smoke comp)", ents["av-court"]?.lib === "store/ac75f33cab3fb5ce.glb");
+ck("[tex-82] av-court on 3-family build (ac75f33c → pin refreshed by lift-1, smoke comp)", ents["av-court"]?.lib === "store/bb31e8a5ffdc1e16.glb");
 ck("[tex-81] av-row-cottage on timber build (7ec9fc54b9d79897, smoke comp)", ents["av-row-cottage"]?.lib === "store/7ec9fc54b9d79897.glb");
 ck("[tex-80] av-bunkhouse on timber build (4bfacdd739b9bd0e, smoke comp)", ents["av-bunkhouse"]?.lib === "store/4bfacdd739b9bd0e.glb");
 ck("[tex-79] av-garden-cottage on 2-family build (1790e1816f08b85e, smoke comp)", ents["av-garden-cottage"]?.lib === "store/1790e1816f08b85e.glb");
@@ -201,7 +201,7 @@ ck("comp placers intact", existsSync(`${A}/place-smoke.ts`) && existsSync(`${A}/
 // --- git state ---
 try {
     const head = execSync("git log --oneline -1", { cwd: W, encoding: "utf8" }).trim();
-    ck("HEAD is a repair/tex/audit/refine/polish/plaza/lift commit", /^[\da-f]+ (repair-\d|tex-\d|audit-\d|refine-\d|polish-\d|plaza-\d|lift-\d)/.test(head), head);
+    ck("HEAD is a repair/tex/audit/refine/polish/plaza/lift/align commit", /^[\da-f]+ (repair-\d|tex-\d|audit-\d|refine-\d|polish-\d|plaza-\d|lift-\d|align-\d)/.test(head), head);
 } catch { console.log("INFO git check unavailable (guard) — skipped"); }
 
 console.log(fail ? `${fail} FAILURE(S)` : "ALL PASS");
