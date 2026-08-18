@@ -151,10 +151,13 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, clip=No
         # fog base color (village truth 0x101828)
         FOGC = (16, 24, 40)
         if dusk and mi in EMIT:
-            # polish-72 DUSK RAMP: emissive at 60% (ramp mid-point) blended
-            # over the low warm sun — the honest switch-on moment.
-            lam = max(0.30, abs(nx*0.62+ny*0.42+nz*0.30)/nl)
-            col = tuple(min(255, int(max(ch * lam, ch * 0.60))) for ch in base)
+            # polish-84 HONEST DUSK (the p80 engine decode, p73 retroactive law):
+            # dayness = max(0,sin((h-6)/12*pi)), lamp glow = (1-dayness)^2 ->
+            # after 18:00 lamps are at FULL strength. The p72-era 60% ramp model
+            # was wrong (~17:00); post-18:00 dusk = emissive at full, like night;
+            # only the SKY is twilight. Emissive must not fall through to lambert
+            # (the p80 fall-through bug class).
+            col = base
         if night:
             # NIGHT MODE (polish-15): emissive materials glow at full strength
             # regardless of the sun (they are light sources, not lit surfaces);

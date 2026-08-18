@@ -1109,6 +1109,26 @@ wakeups. This lane is the standing fix for that blindness.
            smoke still lost; welcome fa0c9d94 pre-lamp; mapboard
            e732ce10 pin stands). Verifier 29/29 ALL PASS. Read-only.
 
+      — polish-84 CAROUSEL DUSK FIXTURE FIX (subject this
+           wakeup; the p73 retroactive law, applied to the p80
+           engine decode): the carousel rasterizer still carried
+           the p72-era WRONG 60%-ramp dusk model after p80 decoded
+           the engine truth (dayness = max(0,sin((h-6)/12*pi));
+           glow = (1-dayness)^2 — full strength after 18:00).
+           Fixed: dusk EMIT -> col = base (full strength, like
+           night; only the sky is twilight) + the no-fall-through
+           guard. VERIFIED: dusk30 lantern peak 202 ~= night30 204
+           (full strength, was suppressed under the old model).
+           HONEST RESIDUAL: dusk warm-count 3 vs night 20 at 30m —
+           the delta is NON-EMIT surfaces (y=332 row: night
+           185-191 warm = the night model's lamp-spill on the
+           carousel's own structure; dusk sun-lambert does not
+           spill). That is the harness's day/night model
+           difference, not an emissive defect — recorded, not
+           forced. p72's vision PASS (soft warm accents) remains
+           valid at its framing; the fixture now matches the
+           engine law everywhere.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
