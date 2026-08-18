@@ -485,6 +485,15 @@ wakeups. This lane is the standing fix for that blindness.
  — the answer to the flag-cycle (persistent green artifact
  instead of one-shot residue). No network, no mock (the
  consent-blocked dry-run untouched).
+ — polish-35 REGISTER-FIRST COMPLETION (subject this wakeup): the
+ welcome-board night defect — CONFIRMED by polish-28's
+ charitable-case gate, corroborated live by polish-25/30,
+ fixed-staged by polish-29 — had never been appended to
+ REPAIR-REGISTER.md (the cross-lane surface). Protocol
+ breach closed: full entry appended with evidence (entity,
+ pose, defect class, gate numbers, staged hash, close
+ condition). The register is the durable cross-lane
+ record; the plan alone was not enough. No code changed.
 
 ## Closed
 

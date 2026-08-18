@@ -327,3 +327,13 @@ approval timeout). Re-run live audit before acting on any R-2xx item.
 - Numbers: cone underside at horse radius r=2.0 ≈ 4.68m (slope 0.43/m from edge 4.38 @ r≈2.7 to peak 5.54). Seated rider head ≈ 4.6m → clearance ≈ 0.08m. Canopy clears horse ears by ~0.9m at peak, reads compressed over the horse layer at gameplay distance.
 - Evidence: (a) summoner's explicit ask ~11:04 "roof too short — lift it higher" has NO candidate in CAROUSEL-REWORK-PLAN.md (candidates 1-6: structure, horses, export-scale, heading, sockets, pennants — none lifts the roof); (b) live frame vision review independently reads "low and flat, compressed appearance"; (c) decoded source numbers above.
 - Fix direction (for refinement lane): raise canopy_hub/fabric/edge and lengthen ribs/drop-pole tops; target rider-head clearance ≥ 0.4m at r=2.0 and canopy ≥ 1.5m above horse ears; re-apply full comp bag + sockets after re-place; pins refresh.
+
+### [OPEN->STAGED] WELCOME BOARD UNREADABLE AT NIGHT, 5m — name bar/arms invisible in the charitable case (polish-28, 2026-08-18; source fix staged polish-29)
+
+- Entity: av-welcome, plaza S rim (0, -5), facing N. Live lib at tex-15 build.
+- Defect class: polish-16 (source-distinct, night-unreadable). Offline rasterizer gate (charitable case — no fog, ideal angle): 5m NIGHT = FAIL ("plain board": name bar barely discernible, 5 timber pointer arms unreadable); 5m DAY = PASS (bar + arms read). Defect is night-specific: no emissive, no lamp; the S-rim board sits dark under the lightrig 8-slot budget.
+- Live corroboration: polish-25/30 — Bill's camera read the board as a "plain solid white rectangle" at ~5m night; pixel-located at x998-1191 y572-609 (before-anchor banked for the post-rollout after-comparison).
+- Fix staged (polish-29): NIGHT LAMP — timber arm + warm emissive globe (0xffb066 / emissive 0xff9a4a x1.5, node wb_lamp per the KEEP lamp law, the carousel-lantern and map-hearth tone). Staged build 62746d1af698eacc (5 nodes; x2 byte-deterministic; decode: glow2 emissiveFactor [1.5, .48, .10]).
+- Post-fix gate (rasterizer, 5m night): PASS on the claim — lantern clearly visible, "reads as a signposted place at night"; arms dark by design (landing point, not full illumination); pixel corroboration 116 warm px.
+- Rollout: staged-rollout law (live av-welcome untouched until consent or the tex lane's next live-evolution pass; placer placewelcome.ts staged polish-33, offline 7/7). Close this item on the live after-read (same crop coords, lamp visible).
+- STATUS: OPEN — source fix staged + offline-gated; live confirmation pending rollout consent.
