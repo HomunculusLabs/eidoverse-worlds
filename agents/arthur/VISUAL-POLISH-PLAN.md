@@ -600,6 +600,23 @@ wakeups. This lane is the standing fix for that blindness.
  day-sore. LAW: the staged lamp is time-safe (night
  anchor + day quiet); the welcome rollout keeps its
  green. No code changed; staged 62746d1a unchanged.
+ — polish-44 ROOF DECODER (subject this wakeup): the sentinel's
+ UNKNOWN carousel branch had no teeth — "investigate" if
+ the tex lane rolls a NEWER build. Now self-answering from
+ bytes: decodeRoof(path|URL) walks the GLB JSON to the
+ cr_canopy_hub node and classifies by world Y (LIFTED >=
+ 5.0 / LOW <= 4.8 / AMBIGUOUS / NO-HUB). The sentinel
+ UNKNOWN branch now prints the exact decode command
+ (LIFTED = close items; LOW = old roof still live); it
+ never auto-downloads — strictly /geom-class. Structural
+ work alongside: the verifier body is now guarded by
+ import.meta.main (proper module hygiene — decodeRoof
+ importable for tests; the run body silent on import).
+ VERIFIED: staged 38fbbc26 → LIFTED (hub y=5.15); welcome
+ GLB → NO-HUB-NODE (correct negative); standalone run
+ still ALL PASS. Honest arc: three patch passes needed
+ (export-inside-guard, stray brace, lost decoder brace —
+ each caught by ast/exec before any commit).
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
