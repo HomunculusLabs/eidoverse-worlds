@@ -2575,4 +2575,6 @@ fixes ≈ 6 F.)
 
 - [lift-56] THE FIFTY-SECOND HOLD (outer-village lift loop, wakeup 58): steady state holds in the golden-hour village — HEAD is my own lift-55, no sibling lane banked work this tick (the forge rollout is now visibly in-flight in assets/ — mkv3-forge98.ts, village_forge3.glb, place-tex86-forge.ts — sibling preparation, untouched per the transients law), standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a FIFTY-FIRST consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), resident log unchanged with no new summoner reads; all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, fifty-second dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
 
-**Running total: 2368153 / 2000000**
+- [tex-86] forge fire fix (summoner: forge still sticking out) — coals were the village's only dead fire: flat COLOR_0, no emissive, metalness 0.75; tex-85 rotation moved the flat ff7030 to febe4a (lemon-gold) making it worse. Fixed at source: real emissives, court fire-basket recipe (ff9040 base, ff6a1a emis at 1.0), second coal ffa050/ff7a2a at 0.85; 7fe0ce66 to fcc66d79; rollout 3 verbs (spawn + particles + fire comp re-applied); pins tex-6/tex-56 refreshed (D+0, E+1)
+
+**Running total: 2368154 / 2000000**

@@ -40,7 +40,7 @@ ck("[tex-4] 10 wallSpan buildings on stone builds (house pin refreshed by tex-53
     && ents["av-windmill"]?.lib === "store/4feee38977d7c6e5.glb"
     && ents["av-stable"]?.lib === "store/84ba3b1b110282d9.glb");
 ck("[tex-5] av-dyelaundry on weave build (c5f85611 → pin refreshed by tex-60, +cloth anchors r21)", ents["av-dyelaundry"]?.lib === "store/30dd0a5ac7c00fe4.glb");
-ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44)", ents["av-forge"]?.lib === "store/7fe0ce6607ed2d1b.glb");
+ck("[tex-6] av-forge on metal build (6715b0f8 → pin refreshed by tex-56, +coals anchor r44 → tex-86 emissive coals)", ents["av-forge"]?.lib === "store/fcc66d79b76b109e.glb");
 ck("[tex-7] av-door-paths on soil build (bf157803 → pin refreshed by lift-10 spur re-aim)", ents["av-door-paths"]?.lib === "store/5357b28a015f6c8e.glb");
 ck("[tex-84] full-stack regression (28 verifiers tex-55..83 sequential + gate) re-runnable", existsSync("agents/arthur/verify-tex84.ts"));
 ck("[tex-83] av-inn on 4-family build (8de1af9446f98eb9, 4 comps)", ents["av-inn"]?.lib === "store/8de1af9446f98eb9.glb");
@@ -69,7 +69,7 @@ ck("[tex-60] av-dyelaundry on timber-woodwork build (30dd0a5ac7c00fe4, 6 wind co
 ck("[tex-59] av-monument on full-ashlar build (9520e61fc8e9d887, knot comp)", ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb");
 ck("[tex-58] av-shrine on full-ashlar build (78611c7dc9a3cb6e, votive comps)", ents["av-shrine"]?.lib === "store/78611c7dc9a3cb6e.glb");
 ck("[tex-57] av-market on woodwork build (b7167aad118e47c5, wind comps)", ents["av-market"]?.lib === "store/b7167aad118e47c5.glb");
-ck("[tex-56] av-forge on woodwork build (7fe0ce6607ed2d1b, fire comps)", ents["av-forge"]?.lib === "store/7fe0ce6607ed2d1b.glb");
+ck("[tex-56] av-forge on woodwork build (7fe0ce66 → fcc66d79 by tex-86: real emissive coals, court fire recipe)", ents["av-forge"]?.lib === "store/fcc66d79b76b109e.glb");
 ck("[tex-55] av-bcistern on 3-family build (e132952021178a89)", ents["av-bcistern"]?.lib === "store/e132952021178a89.glb");
 ck("[tex-54] av-hutch on leg-timber build (f5f47791dadb5abe, rabbit comps)", ents["av-hutch"]?.lib === "store/f5f47791dadb5abe.glb");
 ck("[tex-53] arthur-house on textured-interior build (db08a24143ee5443)", ents["arthur-house"]?.lib === "store/db08a24143ee5443.glb");
