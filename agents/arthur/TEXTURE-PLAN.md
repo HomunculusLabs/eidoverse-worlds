@@ -1018,6 +1018,24 @@ verifier `verify-tex81.ts` committed (17/17 ALL PASS). Ledger
 refine-313. Pin: tex-81 row. TIMBER: 47th — shuttle to ridge, the
 weaver's house reads on the village's boards.
 
+### [tex-82] TIMBER XLVIII + IRON XXVIII + STONE XXIII — the court; THE RING CLOSES (2026-08-18, resumed wakeup 22) — DONE
+Ring arc #7, FINAL: bakery (peel handle, counter, display board +
+legs, flour tub + lid, rising shelf) + workshop (bench, 3 tool
+handles, charcoal tub, stock shelf, quench cask + 2 hoops, anvil body
++ horn, forge hood) + yard (cart: 2 wheels + tray + lips + handle,
+3 crates, workbench + legs + vice, 2 tie beams) on timber; anvil/
+hood/hoops/vice on forge iron; forge BODY + 6 yard pavers on ashlar
+(forge hearth = laid stone, kiln law; yard = walked-surface chain's
+widest reach). Loaves/sacks/bowls/hasps/stock/stump/charcoal stay
+flat (goods/raw); oven + fire + fire2 emissive. RING-SAFETY held: all
+6 converted siblings byte-identical through both rebuilds, court
+backup refreshed. smoke comp recovered. tex-4 multi pin court hash
+updated. ALL SEVEN RING BUILDINGS NOW CONVERTED (tex-76→82: hall,
+longhouse, tower, garden, bunk, row, court). Persistent verifier
+`verify-tex82.ts` committed (18/18 ALL PASS). Ledger refine-314. Pin:
+tex-82 court. TIMBER: 48th; IRON: 28th; STONE: 23rd — oven to anvil
+to yard, the ring reads as one village.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
