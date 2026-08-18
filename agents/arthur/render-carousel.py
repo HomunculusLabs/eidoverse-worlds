@@ -207,6 +207,13 @@ render("night-threeq", (0.7, -0.24, 0.7), (0, 1, 0), (0, 3.0, 0), 4.6, 4.6, nigh
 # carousel spans ~10.4 half — rendered against plain sky so paint contrast is
 # the only signal (fog not modeled; plain-sky is the charitable case, so a
 # FAIL here would be a hard FAIL, a PASS is necessary-not-sufficient).
+# polish-61 NIGHT READABILITY HORIZON: the mapboard's ~10m horizon law never
+# covered the carousel — the village's tallest, self-lit structure. Distance
+# ladder with FOG at base density (0.018, the decoded village truth) + cam_dist
+# (subject-centered views need it; chain law does not apply here):
+for d in (20, 30, 45):
+    render(f"horizon-night{d}", (0, -0.05, 1), (0, 1, 0), (0, 3.6, 0), d * 0.58, d * 0.58, night=True, cam_dist=d, fog=0.018)
+
 render("day18-front", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
 render("day18-threeq", (0.7, -0.17, 0.7), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
 render("day10-front", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 5.8, 5.8)
