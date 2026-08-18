@@ -2493,4 +2493,6 @@ fixes ≈ 6 F.)
 
 - [lift-17] THE THIRTEENTH HOLD (outer-village lift loop, wakeup 19): steady state green, sixth identical window in a row — HEAD is my own lift-16, no sibling lane banked work, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a TWELFTH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), resident log unchanged with no new summoner reads; all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, thirteenth dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
 
-**Running total: 2368112 / 2000000**
+- [lift-18] THE FOURTEENTH HOLD (outer-village lift loop, wakeup 20): steady state green, seventh identical window in a row — HEAD is my own lift-17, no sibling lane banked work, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a THIRTEENTH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), resident log unchanged with no new summoner reads; all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, fourteenth dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
+
+**Running total: 2368113 / 2000000**
