@@ -179,7 +179,15 @@ console.log("H3=" + (JSON.stringify(dc.origin)==="[5,6.3,-10]" && !("originLocal
             const map = libOf("av-mapboard");
             console.log(`SENTINEL live libs: carousel=${car} welcome=${wel} mapboard=${map}`);
             if (car === "store/cd22d0b09e70bebc.glb") console.log("SENTINEL carousel: defect still LIVE (old low roof) — register OPEN correct");
-            else if (car === "store/38fbbc26dcdfcc1a.glb") console.log("SENTINEL carousel: staged build ROLLED — CLOSE the roof+paint register items");
+            else if (car === "store/38fbbc26dcdfcc1a.glb") {
+                // polish-54: split advice — the smoke item is COMP-level with
+                // its own close condition (bag reads 7); a lane banking our
+                // build via their own placer could skip the KNOWN_BAG heal.
+                const carEnt = ents.find((e: any) => e?.id === "av-carousel");
+                const nComps = Object.keys(carEnt?.comp ?? {}).length;
+                const smoke = Object.keys(carEnt?.comp ?? {}).some(k => k === "particles:smoke");
+                console.log(`SENTINEL carousel: staged build ROLLED — CLOSE the roof+paint register items; smoke item: live bag ${nComps} comps${smoke ? ", smoke PRESENT — close it too" : ", smoke STILL LOST — the heal was skipped (re-apply particles:smoke or run the heal), keep the item OPEN"}`);
+            }
             else console.log(`SENTINEL carousel: UNKNOWN build ${car} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeRoof("<store-url-or-local-path>"))' (LIFTED = close items; LOW = old roof still live)`);
             if (wel === "store/62746d1af698eacc.glb") console.log("SENTINEL welcome: lamp ROLLED — CLOSE the welcome register item");
             else if (wel === "store/fa0c9d94a07b9ef5.glb") console.log("SENTINEL welcome: tex-15 build live (pre-lamp) — register OPEN correct");

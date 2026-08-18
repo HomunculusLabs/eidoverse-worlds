@@ -745,6 +745,19 @@ wakeups. This lane is the standing fix for that blindness.
            -10] with no originLocal leak. Verifier now 21/21 —
            every future run re-proves all three heal behaviorals
            (idiom / no-dup / pose-relative). First run green.
+      — polish-54 SENTINEL SPLIT ADVICE (subject this wakeup): the
+           carousel ROLLED branch advised closing ALL register items
+           on the lib hash alone — but the smoke item is COMP-level
+           with its own close condition (bag reads 7). If the tex
+           lane banks our staged build via their OWN placer, the lib
+           reads ROLLED while smoke stays lost — the old advice would
+           close a still-broken item. The branch now reads the live
+           comp bag from the SAME /geom payload and splits the
+           advice: smoke PRESENT → close all three; smoke STILL
+           LOST → "the heal was skipped, keep the item OPEN".
+           VERIFIED offline both ways (6-comp heal-skipped → keep
+           OPEN; healed → close it too); live run re-read all three
+           subjects correct. Read-only as ever.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
