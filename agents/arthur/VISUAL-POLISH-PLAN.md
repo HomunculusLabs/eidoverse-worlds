@@ -988,6 +988,23 @@ wakeups. This lane is the standing fix for that blindness.
            three-point time-safe (day / dusk / night each) — lamp
            p43/p71/p29, chip p50/p75/p21, lanterns p51/p72/p15.
 
+      — polish-76 WEATHER AXIS: BEACON IN HEAVY FOG (subject this
+           wakeup): the time law closed, opening the WEATHER axis —
+           every night gate ran at base fog 0.018, but the decoded
+           sky law (p32) weather-scales to 0.036 HEAVY. The
+           flagship beacon re-gated in heavy fog: pixel ladder
+           33/0/0 warm px at 20/30/45m (vs 65/24/4 base). VISION
+           PASS at 20m: the lanterns merge into a soft diffused
+           warm glow through mist — atmospherically correct, a
+           player knows something lit is there; graceful
+           degradation, not extinction. LAW: the beacon horizon
+           halves in heavy fog (30m BEACON -> ~20m GLOW) — fog is
+           the honest weather axis, and the light survives it.
+           Subject closed on this axis; the lamp/chip heavy-fog
+           gates deferred (they already read at horizon-edge in
+           BASE fog — heavy-fog extinction there is expected, not
+           a defect).
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:

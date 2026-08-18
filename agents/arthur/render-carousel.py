@@ -228,6 +228,12 @@ for d in (20, 30, 45):
 for d in (18, 30):
     render(f"dusk{d}", (0, -0.10, 1), (0, 1, 0), (0, 3.2, 0), d * 0.58, d * 0.58, dusk=True, cam_dist=d, fog=0.018)
 
+# polish-76 WEATHER AXIS: every night gate ran at base fog 0.018; the decoded
+# sky law (p32) weather-scales to 0.036 HEAVY. The flagship beacon must hold
+# in heavy fog too — night-horizon ladder re-run at 0.036.
+for d in (20, 30, 45):
+    render(f"heavyfog-night{d}", (0, -0.05, 1), (0, 1, 0), (0, 3.6, 0), d * 0.58, d * 0.58, night=True, cam_dist=d, fog=0.036)
+
 render("day18-front", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
 render("day18-threeq", (0.7, -0.17, 0.7), (0, 1, 0), (0, 2.6, 0), 10.4, 10.4)
 render("day10-front", (0, -0.15, 1), (0, 1, 0), (0, 2.6, 0), 5.8, 5.8)
