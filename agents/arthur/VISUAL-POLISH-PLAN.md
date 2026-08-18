@@ -811,8 +811,11 @@ wakeups. This lane is the standing fix for that blindness.
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:
-`POLISH_LIVE=1 bun agents/arthur/verify-polish-staged.ts` (offline 17 checks
-+ live sentinel: reads live libs, maps to register action).
+`POLISH_LIVE=1 bun agents/arthur/verify-polish-staged.ts` (offline 24 checks
+— 3 heal behaviorals + 3 decoder behaviorals — + live sentinel: reads live
+libs AND the live comp bag, maps to register action). (polish-59 refresh:
+the runbook was written at p42, 16 iterations before the smoke heal, the
+split advice, the light re-anchor, and the decoders.)
 
 1. **Carousel (register: ROOF TOO LOW + HORSE PAINT)** — staged
    `38fbbc26dcdfcc1a` (491,384B; textured families + roof lift +0.45 + paint
@@ -820,19 +823,31 @@ The staged package, its proofs, and the exact close path. Verify first:
    conversion state). Execute: `bun agents/arthur/assets/placecarousel.ts`
    (proven 19/19 incl. 429 recovery + silent-drop survival; captures live
    comp bag, rebuilds, uploads, re-applies ALL comps, verifies pose+lib).
-   Then: sentinel → roof+paint items flip CLOSED; live vision re-read
-   (18m/10m + fog) closes the HORSE PAINT visual confirm; carousel lanterns
-   item rides the same build.
+   Then: sentinel — the ROLLED branch SPLITS (p54): roof+paint flip CLOSED
+   on the lib hash; the SMOKE item (p45, comp-level) closes only if the
+   live bag reads 7 with particles:smoke present — if the tex lane banked
+   the build via their own placer and skipped our heal, re-apply
+   particles:smoke (village idiom, finial anchor, p46/p52) and KEEP the
+   item OPEN until the bag reads 7. The placer now carries the KNOWN_BAG
+   heal + light re-anchor (>0.5m drift guard, p55) — running OUR placer
+   gets both. Live vision re-read (18m/10m + fog) closes the HORSE PAINT
+   visual confirm; carousel lanterns ride the same build (night-gated p15,
+   day-gated p51).
 2. **Welcome lamp (register: NIGHT-UNREADABLE)** — staged
    `62746d1af698eacc` (5 nodes, glow2 [1.5,.48,.10]). Execute:
    `bun agents/arthur/assets/placewelcome.ts` (chassis-proven; live
    av-welcome carries no comps — geometry-level emissive, nothing to
-   re-apply). Then: sentinel → welcome item CLOSED; after-read at the
-   banked crop coords (x998-1191, y572-609, ~5m night) shows the lamp.
+   re-apply). Then: sentinel — UNKNOWN welcome lib? run decodeLamp (p48;
+   glow2 [1.5,~.48,~.10] signature, merge-proof) before touching the
+   register; lamp ROLLED → welcome item CLOSED; after-read at the
+   banked crop coords (x998-1191, y572-609, ~5m night) shows the lamp
+   (night-gated p29, day-gated p43).
 3. **Mapboard tower chip (staged, NO register item — cosmetic)** — staged
    `b77ef40aae3a9dae`. Execute: `bun agents/arthur/assets/placemapboard.ts`
    (proven 8/8; mapboard carries NO comps — pose + lib only). Then: sentinel
-   reports chip ROLLED; render-gated at 6m night (polish-21).
+   reports chip ROLLED — UNKNOWN mapboard lib? run decodeChip (p56;
+   COLOR_0 1502 chip-era vs 1478 pre-chip); render-gated 6m night (p21)
+   AND 4m day (p50).
 4. **After any of the three**: re-run the standing gate; watch the tex
    lane's next pins (they may bank these builds themselves — tex-83
    precedent); ledger entry via ledger-append.py (landed deltas only).
