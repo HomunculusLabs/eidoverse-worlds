@@ -784,6 +784,20 @@ wakeups. This lane is the standing fix for that blindness.
            prints the exact decode command. Verifier 21/21. (Record
            landed one commit late — the first patch's anchor text
            mismatched; the verify block caught it.)
+      — polish-57 MOCK FIDELITY (subject this wakeup): the committed
+           mock carried the pre-polish-45 world shape — smoke
+           PRESENT with stub data {rate:3}, authored before the
+           live census. Today's real bag is 6 comps, smoke LOST at
+           tex-69; a future dry-run against the stale mock would
+           exercise the wrong capture. The mock's carousel entity
+           now mirrors live exactly (smoke removed). VERIFIED: mock
+           source reads smoke-absent; a mock-shaped 4-comp capture
+           heals to 7 planned with smoke restored in the village
+           idiom (the heal fires exactly as it would in
+           production). NOTE: importing the mock STARTS the server
+           (it listens at import) — killed by port 8791, verified
+           free; verb-log residue cleaned. (Record again one commit
+           late — anchor text; caught by the verify block.)
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
