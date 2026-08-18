@@ -182,7 +182,7 @@ exit 0; live census). Never self-judge the village done.
   banked, gate ALL PASS, census ALL GREEN 25th consecutive, resident log
   unchanged; queue dry 26th tick, held per the lane's law — no model
   changed, live village untouched.
-- lift-31 (this): twenty-seventh lean hold — steady state, one finding: the
+- lift-31 (7b90940): twenty-seventh lean hold — steady state, one finding: the
   gate tripped 58→76 simultaneous tex-pin FAILs then recovered to ALL PASS
   within the same tick (three runs: FAIL-mass, 0 FAIL, ALL PASS). Root
   cause decoded at source: verify-repairs.ts:16 makes ONE shared /geom
@@ -191,3 +191,8 @@ exit 0; live census). Never self-judge the village done.
   no village defect, nothing to register. No lane banked otherwise; census
   ALL GREEN 26th consecutive; queue dry 27th tick, held per the lane's law
   — no model changed, live village untouched.
+- lift-32 (this): twenty-eighth lean hold — steady state restored: the
+  shared-fetch transient fully cleared (gate clean ALL PASS at HEAD), no
+  lane banked, census ALL GREEN 27th consecutive, resident log unchanged;
+  queue dry 28th tick, held per the lane's law — no model changed, live
+  village untouched.
