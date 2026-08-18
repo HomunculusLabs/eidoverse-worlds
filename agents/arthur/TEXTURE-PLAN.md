@@ -992,6 +992,20 @@ garden backup refreshed. smoke comp recovered. Persistent verifier
 `verify-tex79.ts` committed (17/17 ALL PASS). Ledger refine-311. Pin:
 tex-79 garden. TIMBER: 45th; STONE: 22nd — kitchen to trellis.
 
+### [tex-80] TIMBER XLVI — the bunkhouse (2026-08-18, resumed wakeup 20) — DONE
+Ring arc #5: both lower bunks, 8 double-deck corner posts, both upper
+bunks, safety rails, 4 climb rungs, bench + leg, side table + legs,
+woodbox, 2 wall pegs, 2 tie beams, TIMBER-FRAMED hearth-brazier on
+village timber. BRAZIER DISTINCTION banked: hall's firebowl is iron
+(tex-76), but this brazier is a timber frame — furniture, not
+smithwork. Mattresses/blankets/pillows/mugs/cloaks/boots/logs stay
+flat (cloth/goods/leather/raw-log); fire + lamp emissive. RING-SAFETY
+held: 4 converted builds + 2 siblings byte-identical, bunk backup
+refreshed. smoke comp recovered. tex-4 multi pin bunk hash updated.
+Persistent verifier `verify-tex80.ts` committed (17/17 ALL PASS).
+Ledger refine-312. Pin: tex-80 bunkhouse. TIMBER: 46th — the lodge
+sleeps on the village's boards, lower bunk to upper rail.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
