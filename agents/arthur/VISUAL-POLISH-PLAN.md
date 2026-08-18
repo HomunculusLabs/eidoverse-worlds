@@ -251,6 +251,20 @@ wakeups. This lane is the standing fix for that blindness.
            (polish-17 render gate) stands; the night eye-read joins
            BILL'S list with the approach note: read it from ≤10m south
 	           (board faces S toward plaza).
+      — polish-20 THE MAP CATCHES UP AGAIN (subject this wakeup): decode
+           found tex-78's drum tower-house (the village's TALLEST
+	           landmark, keeper's tower + upper study, at (-8, 24.7))
+	           had NO mark on the painted map — every other post-#100
+	           build got one. Added map_tower chip at board-local
+	           (-0.26, 0.80) (1:31 scale), timber-dark 0x6a5a4a,
+	           0.07²×0.016 — ring-building read (the tower IS a home).
+	           Staged build b77ef40aae3a9dae (24 nodes); decode: color
+	           census 1478→1502 (+24 = exactly one box), 168 verts at
+	           the tower tone (7 chips share it). NOT rolled out: the
+	           live mapboard stands at e732ce10 (polish-16/19); this
+	           mark joins the NEXT live-evolution pass or consent
+	           rollout (placemapboard.ts re-captures pose and rolls
+	           the new build — dry-run-proven chassis).
 
 ## Closed
 
