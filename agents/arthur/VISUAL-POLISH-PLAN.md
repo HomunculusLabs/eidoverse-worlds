@@ -926,6 +926,19 @@ wakeups. This lane is the standing fix for that blindness.
            every number a record cites about the tooling must be
            guarded by the tooling — counts drift, guards hold.
 
+      — polish-71 DUSK RAMP GATE (subject this wakeup): the
+           time-coverage family covered day and night but never the
+           TRANSITION — the world clock ramps lamps after 18:00
+           (p11 law), the moment the lamp must read neither glaring
+           nor absent. render-mapboard.py gained a DUSK mode (low
+           warm sun 0.62/0.42/0.30 at dusk vs 0.4/0.75/0.5 day;
+           emissive ramped to 60% — the honest ramp mid-point).
+           VISION PASS: the lamp reads as a soft warm accent just
+           waking up, no glare, natural transition; the board reads
+           as a dark silhouette (correct for the hour). PIXEL:
+           12/2 warm px at 5/10m dusk. LAW: time-coverage wants
+           THREE points — day, night, and the ramp between them.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:

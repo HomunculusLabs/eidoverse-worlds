@@ -107,7 +107,7 @@ print(f"triangles: {len(tris)}")
 # polish-32: village fog color 0x101828
 FOGC = (16, 24, 40)
 
-def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=False, fog=None, cam_dist=None):
+def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=False, fog=None, cam_dist=None, dusk=False):
     # polish-32 FOG GATE: fog = FogExp2 density (village truth core.js:115
     # FogExp2(0x101828, 0.018), weather-scaled sky.js:798 0.018*a.fog).
     # cam_dist = camera-to-center distance; per-tri factor = 1-exp(-(d*dist)^2)
@@ -134,6 +134,10 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=F
         facing = -(nx*ex[0]+ny*ex[1]+nz*ex[2])/nl
         if facing <= 0: continue
         base = MAT.get(mi, (160, 160, 160))
+        if dusk and mi in EMIT:
+            # ramp mid-point: emissive at 60% blended over warm sun lighting
+            lam = max(0.30, abs(nx*0.62+ny*0.42+nz*0.30)/nl)
+            col = tuple(min(255, int(max(ch * lam, ch * 0.60))) for ch in base)
         if night:
             if mi in EMIT:
                 col = base
@@ -147,7 +151,7 @@ def render(view_name, eye_dir, up, center, half_w, half_h, W=640, H=640, night=F
                 else:
                     col = tuple(min(255, int(ch*lam)) for ch in base)
         else:
-            LIGHT = (0.4, 0.75, 0.5)
+            LIGHT = (0.62, 0.42, 0.30) if dusk else (0.4, 0.75, 0.5)  # dusk: low warm sun
             ll = math.sqrt(sum(x*x for x in LIGHT)); LIGHT = tuple(x/ll for x in LIGHT)
             lam = max(0.25, abs(nx*LIGHT[0]+ny*LIGHT[1]+nz*LIGHT[2])/nl)
             if cc is not None:
@@ -202,6 +206,14 @@ render("wb-night5", (0, -0.06, 1), (0, 1, 0), (0, 1.3, -5), 2.9, 2.9, night=True
 # ladder on the LAMP build (scalar fog 0.018, cam_dist=d — subject-centered):
 for d in (10, 16, 24):
     render(f"lamp-horizon{d}", (0, -0.02, 1), (0, 1, 0), (0, 4.0, -5), d * 0.58, d * 0.58, night=True, cam_dist=d, fog=0.018)
+
+# polish-71 DUSK RAMP GATE: the time-coverage family covers day and night,
+# but never the TRANSITION — the world clock ramps lamps after 18:00 (p11 law),
+# when the lamp must read neither glaring nor absent. Dusk model: sun low
+# (warm slanted light, ~40% day strength) + the emissive already at full —
+# the honest worst case for "does the lamp glare at switch-on".
+for d in (5, 10):
+    render(f"lamp-dusk{d}", (0, -0.03, 1), (0, 1, 0), (0, 4.0, -5), d * 0.58 if d == 10 else 2.9, d * 0.58 if d == 10 else 2.9, night=False, dusk=True)
 
 render("wb-day5", (0, -0.06, 1), (0, 1, 0), (0, 1.3, -5), 2.9, 2.9)
 render("wb-night3", (0, -0.08, 1), (0, 1, 0), (0, 1.3, -5), 1.75, 1.75, night=True)
