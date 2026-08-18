@@ -962,6 +962,22 @@ verifier `verify-tex77.ts` committed (17/17 ALL PASS). Ledger
 refine-309. Pin: tex-77 longhouse. TIMBER: 43rd; IRON: 27th; STONE:
 21st — the elder's hall and the council hall read as one work.
 
+### [tex-78] TIMBER XLIV — the tower house (2026-08-18, resumed wakeup 18) — DONE
+Ring arc #3: desk + leg, shelf ring, chair, ladder (2 rails + 7
+rungs), upper bed, chest, candle stand, KING POST, upper-study desk +
+legs on village timber. TOWER-HOUSE LAW (new): the 24 round stone
+wall segments stay flat C.STONE — the drum is the tower's masonry
+identity at distance; the tile would break on curvature. Books/
+candle stay flat (parchment/goods); flame + uflame emissives survive
+(uflame folded into glow buckets — MERGED-STATICS, verified as
+materials). Entity-id lesson: live id is av-tower-HOUSE (first placer
+draft died on av-tower; placement-plan settled it). RING-SAFETY held:
+hall + longhouse kept at their builds, 4 siblings byte-identical,
+tower backup refreshed. sockets comp recovered. tex-78 pin added
+fresh (tower was never pinned). Persistent verifier `verify-tex78.ts`
+committed (18/18 ALL PASS). Ledger refine-310. Pin: tex-78 tower.
+TIMBER: 44th — the keeper's two rooms read on the village's boards.
+
 ## Open risks / notes
 
 - verify-repairs.ts texture assertions pending (add with tex-1 when first textured entity lands).
