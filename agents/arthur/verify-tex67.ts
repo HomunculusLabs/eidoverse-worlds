@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-plaza.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_plaza3.glb`);
 execSync("bun agents/arthur/assets/mkv3-plaza.ts", { cwd: W, stdio: "pipe" });
-ok("plaza rebuild deterministic + == live build (933ab1f96fe1e734)", p1 === sha(`${A}/village_plaza3.glb`) && p1.startsWith("933ab1f96fe1e734"), p1.slice(0, 16));
+ok("plaza rebuild deterministic + == live build (933ab1f9 → 0f9553f6 by plaza-1 paving)", p1 === sha(`${A}/village_plaza3.glb`) && p1.startsWith("0f9553f638f24ad5"), p1.slice(0, 16));
 
 // 2) decode: 3-family byte-family + anchors + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -48,7 +48,7 @@ const sIdx = j.materials.findIndex((m: any) => m.name === "stone");
 const tIdx = j.materials.findIndex((m: any) => m.name === "timber");
 const iIdx = j.materials.findIndex((m: any) => m.name === "iron");
 ok("decode: stone + timber + iron materials", sIdx >= 0 && tIdx >= 0 && iIdx >= 0, j.materials.map((m: any) => m.name).join(","));
-ok("9 deduped images (3 tex-67 families + 6 soil paver variants standing from tex-11)", j.images.length === 9, "images " + j.images.length);
+ok("3 deduped images (tex-67 families; the 6 tex-11 soil variants retired by plaza-1 — paving now ashlar)", j.images.length === 3, "images " + j.images.length);
 const tile = (mi: number): Buffer => {
     const tex = j.materials[mi].pbrMetallicRoughness.baseColorTexture.index;
     const bv = j.bufferViews[j.images[j.textures[tex].source].bufferView];
@@ -86,7 +86,7 @@ for (const x of g.entities) ents[x.id] = x;
 const pz = ents["av-plaza-hearth"];
 const pzComps = Object.keys(pz?.comp ?? {});
 ok("place-tex67-iron23.ts effect: plaza live, pose (0,0), all 4 comps recovered",
-    pz?.lib === "store/933ab1f96fe1e734.glb" && Math.abs(pz.pos[0]) < 0.01 && Math.abs(pz.pos[2]) < 0.01
+    pz?.lib === "store/0f9553f638f24ad5.glb" && Math.abs(pz.pos[0]) < 0.01 && Math.abs(pz.pos[2]) < 0.01
     && ["particles", "motion:well_", "sockets", "motion:pz_kettle"].every((c) => pzComps.includes(c)), pz?.lib ?? "missing");
 ok("census anchors: kiln + potter current, woodyard untouched",
     ents["av-kiln"]?.lib === "store/0bdc0d18dddacf9b.glb"
@@ -99,7 +99,7 @@ ok("verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-52 pin)", vr.code === 0 
 ok("tex-67 pin green", /^\s*PASS \[tex-67\]/m.test(vr.out));
 ok("tex-52 pin refreshed (no FAIL)", !/FAIL \[tex-52\]/.test(vr.out));
 ok("ledger law EXACT + HEAD gate green (polish-inclusive)",
-    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)? commit/m.test(vr.out));
+    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)? commit/m.test(vr.out));
 
 console.log(fails.length ? `\n${fails.length} FAIL` : "\nALL PASS");
 process.exit(fails.length ? 1 : 0);

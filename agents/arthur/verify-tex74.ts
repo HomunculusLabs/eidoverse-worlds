@@ -30,14 +30,14 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 
 // 0) carousel-safety pre-state
 ok("pre-state: carousel on disk is the polish staged build (38fbbc26)", sha(`${A}/village_carousel3.glb`).slice(0, 16) === "38fbbc26dcdfcc1a");
-ok("carousel backup exists", existsSync(BK));
+ok("carousel mk source exists (deterministic restore path)", existsSync(`${A}/mkcarousel.ts`));
 
 // 1) mkv3-landmarks.ts: rebuild — inn deterministic + == live pin
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
-copyFileSync(BK, `${A}/village_carousel3.glb`);
+run("bun agents/arthur/assets/mkcarousel.ts"); // plaza-1: /tmp is volatile; restore by rebuild (hash-asserted below)
 const p1 = sha(`${A}/village_inn3.glb`);
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
-copyFileSync(BK, `${A}/village_carousel3.glb`);
+run("bun agents/arthur/assets/mkcarousel.ts"); // plaza-1: /tmp is volatile; restore by rebuild (hash-asserted below)
 ok("inn rebuild deterministic + == live build (6f35f80a336889cd)",
     p1 === sha(`${A}/village_inn3.glb`) && p1.startsWith("6f35f80a336889cd"), p1.slice(0, 16));
 ok("carousel-safety: restored byte-identical after both rebuilds (38fbbc26)",
@@ -116,7 +116,7 @@ ok("verify-repairs.ts 0 / ALL PASS (incl. tex-4 multi pin w/ new inn hash)", vr.
 ok("tex-74 pin green", /^\s*PASS \[tex-74\]/m.test(vr.out));
 ok("tex-4 multi pin carries the new inn hash (no FAIL)", !/FAIL \[tex-4\]/.test(vr.out));
 ok("ledger law EXACT + HEAD gate green (polish-inclusive)",
-    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)? commit/m.test(vr.out));
+    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)? commit/m.test(vr.out));
 
 console.log(fails.length ? `\n${fails.length} FAIL` : "\nALL PASS");
 process.exit(fails.length ? 1 : 0);

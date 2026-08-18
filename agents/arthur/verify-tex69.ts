@@ -34,10 +34,10 @@ ok("pre-state: carousel on disk is the polish staged build (38fbbc26)", carousel
 
 // 1) mkv3-landmarks.ts: rebuild — belltower deterministic + == live pin
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
-copyFileSync("/tmp/carousel-polish-backup.glb", `${A}/village_carousel3.glb`); // restore immediately (batch-order safety)
+run("bun agents/arthur/assets/mkcarousel.ts"); // restore deterministically (plaza-1: /tmp backup is volatile across restarts)
 const p1 = sha(`${A}/village_belltower3.glb`);
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
-copyFileSync("/tmp/carousel-polish-backup.glb", `${A}/village_carousel3.glb`); // restore immediately (batch-order safety)
+run("bun agents/arthur/assets/mkcarousel.ts"); // restore deterministically (plaza-1: /tmp backup is volatile across restarts)
 ok("belltower rebuild deterministic + == live build (82e4c316b62e5006)",
     p1 === sha(`${A}/village_belltower3.glb`) && p1.startsWith("82e4c316b62e5006"), p1.slice(0, 16));
 // NOTE: after the rebuild inside THIS verifier, the carousel GLB is the
@@ -106,7 +106,7 @@ ok("carousel-safety law: live carousel untouched by tex-69 (polish lane's 38fbbc
     ents["av-carousel"]?.lib === "store/cd22d0b09e70bebc.glb", ents["av-carousel"]?.lib ?? "missing");
 ok("census anchors: watchpost + plaza current, woodyard untouched",
     ents["av-watchpost"]?.lib === "store/256e16a13027fb93.glb"
-    && ents["av-plaza-hearth"]?.lib === "store/933ab1f96fe1e734.glb"
+    && ents["av-plaza-hearth"]?.lib === "store/0f9553f638f24ad5.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-69 pin + refreshed tex-20 pin + ledger + HEAD
@@ -115,7 +115,7 @@ ok("verify-repairs.ts 0 / ALL PASS (incl. refreshed tex-20 pin)", vr.code === 0 
 ok("tex-69 pin green", /^\s*PASS \[tex-69\]/m.test(vr.out));
 ok("tex-20 pin refreshed (no FAIL)", !/FAIL \[tex-20\]/.test(vr.out));
 ok("ledger law EXACT + HEAD gate green (polish-inclusive)",
-    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)? commit/m.test(vr.out));
+    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)? commit/m.test(vr.out));
 
 console.log(fails.length ? `\n${fails.length} FAIL` : "\nALL PASS");
 process.exit(fails.length ? 1 : 0);
