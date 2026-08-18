@@ -2815,3 +2815,175 @@ PASS T-dir hermes-verify residue 0 (one-shot hygiene law) — 0
 ALL PASS
 
 ```
+
+## tex-84 full-stack regression evidence — 2026-08-18T01:28:58.359Z
+
+```
+PASS backups exist (carousel + belltower + windmill)
+tex-55: ALL PASS
+tex-56: ALL PASS
+tex-57: ALL PASS
+tex-58: ALL PASS
+tex-59: ALL PASS
+tex-60: ALL PASS
+tex-61: ALL PASS
+tex-62: ALL PASS
+tex-63: ALL PASS
+tex-64: ALL PASS
+tex-65: ALL PASS
+tex-66: ALL PASS
+tex-67: ALL PASS
+tex-68: ALL PASS
+tex-69: ALL PASS
+tex-70: ALL PASS
+tex-71: ALL PASS
+tex-72: ALL PASS
+tex-73: ALL PASS
+tex-74: ALL PASS
+tex-76: ALL PASS
+tex-77: ALL PASS
+tex-78: ALL PASS
+tex-79: ALL PASS
+tex-80: ALL PASS
+tex-81: ALL PASS
+tex-82: ALL PASS
+tex-83: ALL PASS
+PASS full stack green (tex-55..83, 28 verifiers) — 28/28 green
+PASS verify-repairs.ts 0 / ALL PASS (all pins + ledger EXACT + HEAD gate) — code=0
+FAIL T-dir hermes-verify residue 0 (one-shot hygiene law) — 1
+
+1 FAIL
+
+```
+
+## tex-84 focused evidence (verify-tex84.ts changed path) — 2026-08-18T01:28:58.361Z
+
+```
+PASS verify-tex84.ts present (committed, non-self-deleting)
+PASS verify-tex84.ts committed (clean in git) — clean
+PASS hygiene check scoped to hermes-verify-tex* (polish standing verifiers excluded by design)
+FAIL live T-dir: tex one-shots=1 (must be 0), polish standing=2 (other lane's, ignored) — tex=1 polish=2
+FAIL verify-tex84.ts runs end-to-end: 28/28 + gate + hygiene — ALL PASS, exit 0 — code=1
+PASS backups exist (carousel + belltower + windmill)
+tex-55: ALL PASS
+tex-56: ALL PASS
+tex-57: ALL PASS
+tex-58: ALL PASS
+tex-59: ALL PASS
+tex-60: ALL PASS
+tex-61: ALL PASS
+tex-62: ALL PASS
+tex-63: ALL PASS
+tex-64: ALL PASS
+tex-65: ALL PASS
+tex-66: ALL PASS
+tex-67: ALL PASS
+tex-68: ALL PASS
+tex-69: ALL PASS
+tex-70: ALL PASS
+tex-71: ALL PASS
+tex-72: ALL PASS
+tex-73: ALL PASS
+tex-74: ALL PASS
+tex-76: ALL PASS
+tex-77: ALL PASS
+tex-78: ALL PASS
+tex-79: ALL PASS
+tex-80: ALL PASS
+tex-81: ALL PASS
+tex-82: ALL PASS
+tex-83: ALL PASS
+PASS full stack green (tex-55..83, 28 verifiers) — 28/28 green
+PASS verify-repairs.ts 0 / ALL PASS (all pins + ledger EXACT + HEAD gate) — code=0
+FAIL T-dir hermes-verify residue 0 (one-shot hygiene law) — 1
+1 FAIL
+
+2 FAIL
+
+```
+
+## tex-84 full-stack regression evidence — 2026-08-18T01:30:34.432Z
+
+```
+PASS backups exist (carousel + belltower + windmill)
+tex-55: ALL PASS
+tex-56: ALL PASS
+tex-57: ALL PASS
+tex-58: ALL PASS
+tex-59: ALL PASS
+tex-60: ALL PASS
+tex-61: ALL PASS
+tex-62: ALL PASS
+tex-63: ALL PASS
+tex-64: ALL PASS
+tex-65: ALL PASS
+tex-66: ALL PASS
+tex-67: ALL PASS
+tex-68: ALL PASS
+tex-69: ALL PASS
+tex-70: ALL PASS
+tex-71: ALL PASS
+tex-72: ALL PASS
+tex-73: ALL PASS
+tex-74: ALL PASS
+tex-76: ALL PASS
+tex-77: ALL PASS
+tex-78: ALL PASS
+tex-79: ALL PASS
+tex-80: ALL PASS
+tex-81: ALL PASS
+tex-82: ALL PASS
+tex-83: ALL PASS
+PASS full stack green (tex-55..83, 28 verifiers) — 28/28 green
+PASS verify-repairs.ts 0 / ALL PASS (all pins + ledger EXACT + HEAD gate) — code=0
+PASS T-dir hermes-verify residue 0 (one-shot hygiene law) — 0
+
+ALL PASS
+
+```
+
+## tex-84 focused evidence v2 (verify-tex84.ts changed path; v1's 2 FAILs self-referential — probe name matched its own hygiene scan, fixed by hermes-check- prefix) — 2026-08-18T01:30:34.435Z
+
+```
+PASS verify-tex84.ts present (committed, non-self-deleting)
+PASS verify-tex84.ts committed (clean in git) — clean
+PASS hygiene check scoped to hermes-verify-tex* (polish standing verifiers excluded by design)
+PASS live T-dir: tex one-shots=0 (must be 0), polish standing=2 (other lane's, ignored) — tex=0 polish=2
+PASS verify-tex84.ts runs end-to-end: 28/28 + gate + hygiene — ALL PASS, exit 0 — code=0
+PASS backups exist (carousel + belltower + windmill)
+tex-55: ALL PASS
+tex-56: ALL PASS
+tex-57: ALL PASS
+tex-58: ALL PASS
+tex-59: ALL PASS
+tex-60: ALL PASS
+tex-61: ALL PASS
+tex-62: ALL PASS
+tex-63: ALL PASS
+tex-64: ALL PASS
+tex-65: ALL PASS
+tex-66: ALL PASS
+tex-67: ALL PASS
+tex-68: ALL PASS
+tex-69: ALL PASS
+tex-70: ALL PASS
+tex-71: ALL PASS
+tex-72: ALL PASS
+tex-73: ALL PASS
+tex-74: ALL PASS
+tex-76: ALL PASS
+tex-77: ALL PASS
+tex-78: ALL PASS
+tex-79: ALL PASS
+tex-80: ALL PASS
+tex-81: ALL PASS
+tex-82: ALL PASS
+tex-83: ALL PASS
+PASS full stack green (tex-55..83, 28 verifiers) — 28/28 green
+PASS verify-repairs.ts 0 / ALL PASS (all pins + ledger EXACT + HEAD gate) — code=0
+PASS T-dir hermes-verify residue 0 (one-shot hygiene law) — 0
+ALL PASS
+
+ALL PASS
+
+```
