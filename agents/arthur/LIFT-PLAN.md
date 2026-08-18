@@ -73,3 +73,7 @@ exit 0; live census). Never self-judge the village done.
   first ALL GREEN census in lane history (21/21, 10/10, 3/3, 8/8, 55 lights).
   No model changed; the queue reads dry — next real work is fresh summoner
   evidence or an unblock (woodyard / staged package).
+- lift-6 (this): steady-state hold — align-2 banked (R-112 livery closed,
+  their re-sweep left R-113 standing routed-open, stewardship green); census
+  ALL GREEN on the truthed instrument second consecutive tick; no summoner
+  reads; queue dry third tick — holding, not manufacturing.
