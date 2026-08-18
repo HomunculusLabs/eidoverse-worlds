@@ -265,6 +265,15 @@ wakeups. This lane is the standing fix for that blindness.
 	           mark joins the NEXT live-evolution pass or consent
 	           rollout (placemapboard.ts re-captures pose and rolls
 	           the new build — dry-run-proven chassis).
+      — polish-21 TOWER-CHIP RENDER GATE (subject this wakeup): render-
+           mapboard.py reads the staged b77ef40 build directly (the
+	           rasterizer is artifact-driven); 4 views re-rendered, 388
+	           tris (was 384 — +4 = the new chip's faces). Vision gate on
+	           night-approach6: distinct dark mark in the board's upper
+	           region confirmed, ~8-10 marks readable, verdict "reads as
+	           a village map" at 6m. Staged evidence complete; live read
+	           stays with the tex lane's next live-evolution pass or
+	           consent rollout.
 
 ## Closed
 
