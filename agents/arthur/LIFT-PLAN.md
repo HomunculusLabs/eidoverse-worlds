@@ -90,7 +90,7 @@ exit 0; live census). Never self-judge the village done.
   gate ALL PASS, no new commits, no new summoner reads (carousel social
   time continues); holding. Mid-tick: caught align-3 executing the R-113
   watchpost fix live (probe-alignwalk3 on disk, register "fix executing").
-- lift-10 (this): R-113 LANDED — align-3 banked (983332a): scaffold moved
+- lift-10 (714c5bb): R-113 LANDED — align-3 banked (983332a): scaffold moved
   off the bakery door, two-way walk-test of the summoner's own move OPEN
   (0.39/0.34/0.39 vs control 0.27); my stewardship of the routed item
   CLOSED clean. The fix's residual was MY shape: the heritage spur
@@ -99,3 +99,6 @@ exit 0; live census). Never self-judge the village done.
   radial 307.7° ending 0.55m from the new scaffold foot (14.02,−18.17),
   same spur idiom; deterministic 5357b28a ×2, live rollout (pin refreshed
   with trail bf157803 → 5357b28a), gate ALL PASS.
+- lift-11 (this): lean hold — census ALL GREEN 6th consecutive, gate ALL
+  PASS, register back to 3 OPEN (R-113 close recorded), no new evidence
+  (carousel social time); the R-113 arc is fully closed on both sides.
