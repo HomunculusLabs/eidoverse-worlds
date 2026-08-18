@@ -2745,4 +2745,6 @@ fixes ≈ 6 F.)
 
 - [mason-39] batch hold wakeups 15-18 (stacked batch, matching sibling's mason-38 batch convention) — survey green once for the batch (gate ALL PASS real exit 0 at b5189b7, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding)); sibling now batching holds itself, protocol symmetric; queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
 
+- [mason-40] cheap hold wakeup 10 — HEAD sibling mason-39 (sibling also batching stacked wakeups; two loop counters, one tag sequence, no collision); fresh survey green (gate ALL PASS real exit 0, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
+
 **Running total: 2368285 / 2000000**
