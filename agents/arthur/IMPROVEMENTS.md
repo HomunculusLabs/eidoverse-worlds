@@ -2697,4 +2697,6 @@ fixes ≈ 6 F.)
 
 - [mason-15] MASON-15 LEAN HOLD: queue parked, no summoner input. Survey green and unchanged — HEAD mason-14 (own), gate ALL PASS exit 0, guard 60/60 works manifest-pinned + 23 hamlet lights + mason/stop present (daemon inert) + ids within 0000-0059, sweep steady 9 overlaps (1 walkable), overhang census 0 (R-119 holding), ledger law exact at 2368277. Queue unchanged: item (b) closed mason-3; item (a) relocation parked behind Bill's R-118 fleet-shape decision (4 options with measured numbers, rescale recommended); item (c) close-out blocked on (a). Held per lane law — no work invented, live village untouched by this lane this tick (D+0, E+1)
 
-**Running total: 2368278 / 2000000**
+- [mason-16] MASON-16 LEAN HOLD: queue parked, no summoner input. Survey green and unchanged — HEAD mason-15 (own), gate ALL PASS exit 0, guard 60/60 works manifest-pinned + 23 hamlet lights + mason/stop present (daemon inert) + ids within 0000-0059, sweep steady 9 overlaps (1 walkable), overhang census 0 (R-119 holding), ledger law exact at 2368278. Queue unchanged: item (b) closed mason-3; item (a) relocation parked behind Bill's R-118 fleet-shape decision (4 options with measured numbers, rescale recommended); item (c) close-out blocked on (a). Held per lane law — no work invented, live village untouched by this lane this tick (D+0, E+1)
+
+**Running total: 2368279 / 2000000**
