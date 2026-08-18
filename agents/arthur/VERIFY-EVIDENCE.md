@@ -2236,3 +2236,26 @@ PASS verify-repairs.ts 0 / ALL PASS (tex-77 pin + tex-4 multi pin + ledger + HEA
 ALL PASS
 
 ```
+
+## tex-78 changed-paths evidence — 2026-08-18T00:08:33.686Z
+
+```
+PASS pre-state: tower on disk is tex-78 build (7f60f1f7)
+PASS backups fresh: hall=3f8f9e6f, longhouse=33369174, tower=7f60f1f7
+PASS mkv3-ring.ts: tower rebuild deterministic + == live build (7f60f1f7a5794411) — 7f60f1f7a5794411
+PASS ring-safety: four siblings + hall + longhouse restored byte-identical (f47574b7/ffe8236b/b82a4104/2f2cacf9/3f8f9e6f/33369174)
+PASS decode: timber present, drum walls flat by tower-house law — timber,glow1,glow2,glow3
+PASS timber ≡ house wallSpan's (buffer-compared)
+PASS flame node survives + 3 glow buckets (uflame folded — MERGED-STATICS)
+PASS TEXCOORD_0 == POSITION on texMat buckets (books/candle/walls flat by design) — buckets 1
+PASS texture bytes < 400KB + GLB < 20MB — 19698B / 107.4KB
+PASS place-tex78-timber44.ts effect: tower-house live, pose (-8,24.7), sockets comp recovered — store/7f60f1f7a5794411.glb
+PASS census anchors: hall + longhouse current, woodyard untouched (approval block honored)
+PASS verify-tex78.ts present (committed, non-self-deleting)
+PASS verify-tex78.ts runs 0 / ALL PASS — code=0
+PASS verify-repairs.ts 0 / ALL PASS (tex-78 pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
