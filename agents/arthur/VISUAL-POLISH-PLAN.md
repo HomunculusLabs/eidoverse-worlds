@@ -663,6 +663,24 @@ wakeups. This lane is the standing fix for that blindness.
  probe moved to a self-deleting temp file; missing
  writeFileSync import), each caught by exec before
  commit. The verifier's check count moves 17 → 20.
+ — polish-48 LAMP DECODER (subject this wakeup): welcome's
+ sentinel branch was blind (if the tex lane rolls a
+ NEWER welcome build, the sentinel couldn't tell whether
+ the lamp survived). decodeLamp(path|URL) answers from
+ bytes — but the FIRST signature was WRONG: I keyed on
+ the wb_lamp node name and the staged build read
+ NO-LAMP. DECODE LAW (learned, recorded): mergeByMaterial
+ RENAMES nodes — the staged build carries wb3_0..wb3_4;
+ wb_lamp exists only in the mk script pre-merge. The
+ truthful merge-proof signature is the glow2 EMISSIVE
+ MATERIAL itself ([1.5, ~.48, ~.10]) — and the green
+ channel separates it from the mapboard hearth's
+ [1.5, .216, .016] (cross-subject collision tested).
+ The sentinel welcome branch now 3-ways: rolled / tex-15
+ (pre-lamp, OPEN correct) / UNKNOWN + exact decode
+ command. VERIFIED: staged → LAMP; mapboard + carousel
+ negatives; hearth-collision negative. Verifier
+ standalone still ALL PASS (20/20).
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 

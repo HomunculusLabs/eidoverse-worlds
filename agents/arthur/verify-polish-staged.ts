@@ -47,6 +47,27 @@ export async function decodeRoof(srcPathOrUrl: string): Promise<string> {
     return y >= 5.0 ? `LIFTED (hub y=${y})` : y <= 4.8 ? `LOW (hub y=${y}) — OLD ROOF` : `AMBIGUOUS (hub y=${y})`;
 }
 
+// ---- lamp decoder (polish-48; offline-testable) ----
+// Answers the sentinel's welcome branch from bytes. DECODE LAW (learned this
+// tick): mergeByMaterial RENAMES nodes (staged build carries wb3_0..wb3_4,
+// NOT wb_lamp) — the node-name signature I first shipped read NO-LAMP on the
+// lamp build. The truthful, merge-proof signature is the glow2 EMISSIVE
+// MATERIAL itself ([1.5, ~.48, ~.10]) — unique to the lamp. LAMP = that
+// material present; NO-LAMP = absent. Local path or URL; the sentinel never
+// auto-downloads (stays /geom-class) — it prints the command.
+export async function decodeLamp(srcPathOrUrl: string): Promise<string> {
+    const buf: Uint8Array = srcPathOrUrl.startsWith("http")
+        ? new Uint8Array(await (await fetch(srcPathOrUrl)).arrayBuffer())
+        : new Uint8Array(await Bun.file(srcPathOrUrl).arrayBuffer());
+    const jlen = buf[12] | (buf[13] << 8) | (buf[14] << 16) | (buf[15] << 24);
+    const j = JSON.parse(new TextDecoder().decode(buf.subarray(20, 20 + jlen)));
+    const glow = j.materials?.find((m: any) => Array.isArray(m.emissiveFactor)
+        && Math.abs(m.emissiveFactor[0] - 1.5) < 0.05
+        && Math.abs(m.emissiveFactor[1] - 0.48) < 0.05
+        && Math.abs(m.emissiveFactor[2] - 0.10) < 0.05);
+    return glow ? `LAMP (glow2 emissive ${JSON.stringify(glow.emissiveFactor)})` : "NO-LAMP (no lamp emissive)";
+}
+
 if (import.meta.main) {
     // ---- A. staged builds: byte-exact + deterministic ----
     const BUILDS: Array<[string, string]> = [
@@ -155,7 +176,8 @@ console.log("H2=" + (sb.length===1 && (sb[0][1] as any).data.origin[1]===9));
             else if (car === "store/38fbbc26dcdfcc1a.glb") console.log("SENTINEL carousel: staged build ROLLED — CLOSE the roof+paint register items");
             else console.log(`SENTINEL carousel: UNKNOWN build ${car} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeRoof("<store-url-or-local-path>"))' (LIFTED = close items; LOW = old roof still live)`);
             if (wel === "store/62746d1af698eacc.glb") console.log("SENTINEL welcome: lamp ROLLED — CLOSE the welcome register item");
-            else console.log("SENTINEL welcome: lamp not yet rolled — register OPEN correct");
+            else if (wel === "store/fa0c9d94a07b9ef5.glb") console.log("SENTINEL welcome: tex-15 build live (pre-lamp) — register OPEN correct");
+            else console.log(`SENTINEL welcome: UNKNOWN build ${wel} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeLamp("<store-url-or-local-path>"))' (LAMP = close item; NO-LAMP = open)`);
             if (map === "store/b77ef40aae3a9dae.glb") console.log("SENTINEL mapboard: tower chip ROLLED live");
             else if (map === "store/e732ce10400c1979.glb") console.log("SENTINEL mapboard: live pin e732ce10 stands (chip staged)");
             else console.log(`SENTINEL mapboard: UNKNOWN build ${map} — investigate`);
