@@ -414,6 +414,25 @@ wakeups. This lane is the standing fix for that blindness.
            container / hexagon mis-reads) — recorded as a known
            low-confidence crop; pixel evidence stands. No code
            changed; no rollout (staged law holds).
+      — polish-31 WAYFINDING CHAIN GATE (subject this wakeup): the two
+           staged signs gated TOGETHER for the first time — the
+           rasterizer gained a chain mode (multi-GLB composite at world
+           offsets; welcome lamp at (0,-5) + mapboard hearth at (1.6,
+           8.5)) and a southern-arrival night view (camera (0.8,-12)
+           looking N, welcome ~7m near-frame, mapboard ~20m up-frame).
+           VISION GATE: PASS — two distinct warm glows at different
+           depths, read as a vertically-aligned leading pair, verdict
+           "signed/wayfound at night". PIXEL CORROBORATION: two warm
+           clusters — y126-134 tight (106 px, far map-hearth) + y186-192
+           wide-thin (26 px, near lamp edge-on); 130 px total. The
+           chain claim (near lantern leads the eye to the map's glow)
+           holds offline in the charitable case. Live chain read joins
+           Bill's list post-rollout (both builds ride the staged law).
+           Patch notes: first composite attempt had an incoherent
+           frame (first model local, second world) — fixed with the
+           explicit first-offset arg; one malformed comprehension line
+           was caught by ast.parse and removed before any run (lint
+           discipline held).
 
 ## Closed
 

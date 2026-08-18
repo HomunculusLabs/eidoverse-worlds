@@ -186,4 +186,76 @@ render("night-approach6", (0, -0.08, 1), (0, 1, 0), (1.6, 1.5, 8.5), 3.5, 3.5, n
 render("wb-night5", (0, -0.06, 1), (0, 1, 0), (0, 1.3, -5), 2.9, 2.9, night=True)
 render("wb-day5", (0, -0.06, 1), (0, 1, 0), (0, 1.3, -5), 2.9, 2.9)
 render("wb-night3", (0, -0.08, 1), (0, 1, 0), (0, 1.3, -5), 1.75, 1.75, night=True)
+# polish-31 WAYFINDING CHAIN (composite): both staged sign GLBs at world
+# positions — welcome (0,-5, facing N) + mapboard (1.6, 8.5, facing S) —
+# one night view from a southern arrival point (0.8, 1.5, -12) looking N.
+# The claim: the near lamp + distant map-hearth read as a leading pair.
+if len(sys.argv) > 6 and sys.argv[3] == "chain":
+    import copy
+    # rebuild tris with offsets: argv[4] = second GLB, then "x,z" offsets
+    second = sys.argv[4]
+    ox, oz = map(float, sys.argv[5].split(","))
+    data2 = open(second, "rb").read()
+    # re-run the loader by temporarily swapping the global `data`/parsed tris
+    # (the script is linear; simplest: parse the second GLB inline)
+    jlen2 = int.from_bytes(data2[12:16], "little")
+    j2 = json.loads(data2[20:20+jlen2].decode())
+    bin2 = 20 + jlen2 + 8
+    def f32b(a, buf, bs):
+        bv = j2["bufferViews"][a["bufferView"]]
+        off = bs + (bv.get("byteOffset", 0)) + (a.get("byteOffset", 0))
+        return [struct.unpack_from("<3f", buf, off + i*12) for i in range(a["count"])]
+    def colb(a, buf, bs):
+        bv = j2["bufferViews"][a["bufferView"]]
+        off = bs + (bv.get("byteOffset", 0)) + (a.get("byteOffset", 0))
+        return [tuple(int(round(((buf[off+i*3+c]/255.0) ** (1/2.2)) * 255)) for c in range(3)) for i in range(a["count"])]
+    def idxb(a, buf, bs):
+        bv = j2["bufferViews"][a["bufferView"]]
+        off = bs + (bv.get("byteOffset", 0)) + (a.get("byteOffset", 0))
+        n = a["count"] // 3
+        if a["componentType"] == 5123:
+            return [struct.unpack_from("<3H", buf, off + i*6) for i in range(n)]
+        return [struct.unpack_from("<3I", buf, off + i*12) for i in range(n)]
+    def walkb(ni, M):
+        n = j2["nodes"][ni]
+        import math as _m
+        def nmul(A, B): return [[sum(A[i][k]*B[k][jj] for k in range(4)) for jj in range(4)] for i in range(4)]
+        t = n.get("translation", [0,0,0]); r = n.get("rotation", [0,0,0,1]); s = n.get("scale", [1,1,1])
+        x, y, z, w = r
+        M2 = nmul(M, [[1-2*(y*y+z*z), 2*(x*y-z*w), 2*(x*z+y*w), t[0]],
+                      [2*(x*y+z*w), 1-2*(x*x+z*z), 2*(y*z-x*w), t[1]],
+                      [2*(x*z-y*w), 2*(y*z+x*w), 1-2*(x*x+y*y), t[2]], [0,0,0,1]])
+        def ap(p): return tuple(sum(M2[r2][c]*p[c] for c in range(3)) + M2[r2][3] for r2 in range(3))
+        if "mesh" in n:
+            for pr in j2["meshes"][n["mesh"]]["primitives"]:
+                attrs = pr["attributes"]
+                if "POSITION" not in attrs: continue
+                pos = f32b(j2["accessors"][attrs["POSITION"]], data2, bin2)
+                col = colb(j2["accessors"][attrs["COLOR_0"]], data2, bin2) if "COLOR_0" in attrs else None
+                idx = idxb(j2["accessors"][pr["indices"]], data2, bin2) if "indices" in pr else [(i, i+1, i+2) for i in range(0, len(pos), 3)]
+                mi = pr.get("material")
+                for a2, b2, c2 in idx:
+                    v = [ap(pos[i]) for i in (a2, b2, c2)]
+                    vv = [(v[0][0]+ox, v[0][1], v[0][2]+oz), (v[1][0]+ox, v[1][1], v[1][2]+oz), (v[2][0]+ox, v[2][1], v[2][2]+oz)]
+                    cc = (col[a2], col[b2], col[c2]) if col else None
+                    tris.append((mi, vv, cc))
+        for ch in n.get("children", []): walkb(ch, M2)
+    for ni in j2["scenes"][j2["scene"]]["nodes"]:
+        walkb(ni, [[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]])
+    # the FIRST GLB (mapboard via argv[2]) renders at ITS world pos already through centers;
+    # for the chain we need its triangles offset too — the default views use centers, so
+    # instead place the FIRST glb by offset as well when chain mode is on: reload trick —
+    # the tris list currently holds argv[2]'s model in LOCAL coords. Offset it by its world pos.
+    # (chain assumes argv[2] = mapboard at 1.6,8.5 — pass offsets accordingly.)
+    # ALSO offset the FIRST model (argv[2]) from local to world coords — argv[6] "x,z".
+    # Without this the composite is incoherent (first model local-at-origin, second at world).
+    fx, fz = map(float, sys.argv[6].split(","))
+    fixed = []
+    for (mi, vv, cc) in tris:
+        fixed.append((mi, [(x+fx, y, z+fz) for (x, y, z) in vv], cc))
+    tris[:] = fixed
+    print(f"chain: argv2 at +({fx},{fz}), second at +({ox},{oz}); tris {len(tris)}")
+    # camera: southern arrival at (0.8, ~1.6 eye, -12), looking N (+z); frame must hold
+    # welcome (0,-5) near-bottom and mapboard (1.6,8.5) up-frame ~20m away.
+    render("chain-night", (0, -0.10, -1), (0, 1, 0), (0.8, 1.6, -12), 8.0, 5.2, night=True)
 print("renders complete")
