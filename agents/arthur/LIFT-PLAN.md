@@ -83,6 +83,12 @@ exit 0; live census). Never self-judge the village done.
   3rd consecutive, both known summoner reads verified ANSWERED (roof live
   lift-2, watchpost routed R-113), candidates section refreshed to the true
   state (evidence / unblocks / hold).
-- lift-8 (this): lean hold 5th dry tick — census ALL GREEN 4th consecutive,
+- lift-8 (6e43aa6): lean hold 5th dry tick — census ALL GREEN 4th consecutive,
   gate ALL PASS; the resident log's new lines are Bill riding the carousel
   WITH hermes (engagement, not defect reads) — no new evidence; holding.
+- lift-9 (678e4c8): lean hold 6th dry tick — census ALL GREEN 5th consecutive,
+  gate ALL PASS, no new commits, no new summoner reads (carousel social
+  time continues); holding. NOTE mid-tick: probe re-run caught
+  probe-alignwalk3.ts live — align-3 is EXECUTING the R-113 watchpost fix
+  right now (register line "fix executing align-3"); the routed promise is
+  landing. Verify next tick, then close my stewardship of the item.
