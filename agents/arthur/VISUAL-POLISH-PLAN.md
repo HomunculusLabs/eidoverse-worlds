@@ -1079,6 +1079,30 @@ wakeups. This lane is the standing fix for that blindness.
            test is not that branch's regression — prove the
            baseline deviates too before blaming the delta.
 
+      — polish-82 CHAIN REWORK + HONEST VISION CLOSE (subject
+           this wakeup): FIRST FIND — my p80/p81 chain runs passed
+           the WRONG mapboard offset (1.6,13.5 — I conflated the
+           13.6m corridor length with the world Z; the block's own
+           comment says 1.6,8.5). Re-run at the correct offset: the
+           p80 fix now works IN THE CHAIN — lamp peak 229 vs night
+           237 (~97%), hearth present. So p81's "harness quirk" was
+           partly MY offset error; the residual dimming is the dusk
+           model treating lit surfaces as sun-lit (a defensible
+           look: sun gone, lamps carry). VISION: 3 refusals at
+           chain framing (far + close) — the offline rasterizer's
+           abstraction (no ground, no context) cannot carry a
+           'corridor' claim at dusk; night carried it because
+           glows dominate the frame. HONEST CLOSE: the chain DUSK
+           claim is not visually provable with this harness — the
+           per-subject dusk gates (p71/72/75) carry the dusk law;
+           the chain's pixel evidence (lamp ~97% of night, hearth
+           present, correct geometry) is recorded as the offline
+           proof. Live chain read remains a post-rollout item.
+           LAWS: (a) read the block's own contract comment before
+           passing its args — my offset error survived two wakeups;
+           (b) a harness whose abstraction cannot express a claim
+           must say so, not force the gate.
+
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
 The staged package, its proofs, and the exact close path. Verify first:

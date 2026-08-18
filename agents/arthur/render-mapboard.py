@@ -320,4 +320,9 @@ if len(sys.argv) > 6 and sys.argv[3] == "chain":
     # TOGETHER at dusk is the village's actual arrival experience after 18:00.
     # Dusk mode + honest twilight bg (p73); cam_dist stays 0 (chain law).
     render("chain-dusk", (0, -0.10, -1), (0, 1, 0), (0.8, 1.6, -12), 8.0, 5.2, dusk=True, cam_dist=0.0)
+    # polish-82: the corridor framing at 8.0 half_w under-represents the glows
+    # (two tiny dots in empty twilight — vision correctly refused to read a
+    # 'corridor'). Add an honest CLOSER dusk arrival: camera 3m behind the
+    # welcome sign so the lamp reads large and the hearth leads up-frame.
+    render("chain-dusk-close", (0, -0.06, -1), (0, 1, 0), (0.4, 1.7, -8), 3.6, 2.6, dusk=True, cam_dist=0.0)
 print("renders complete")
