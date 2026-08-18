@@ -46,15 +46,17 @@ exit 0; live census). Never self-judge the village done.
   report falsifies it ("the tower in front of the door doesn't allow me to
   go inside"). Re-place is align's tool; lift defers to their queue.
 
-## Next-wakeup candidates (in order)
+## Next-wakeup candidates (in order, refreshed lift-7)
 
-1. Fresh eyes on tier 3/4 with the live frame: if Bill's walked reports add
-   new reads, those outrank every heuristic (the court roof proved it).
-2. Treeline flora audit (tex-48 covered boulders — are trunks/canopies flat
-   by flora law or missed? decode before touching).
-3. Millyard deep decode (my3_0 212pt — check for box-crude members under
-   the timber).
-4. If the queue runs dry again: hold at survey, don't manufacture jank.
+1. Summoner evidence first: re-check the resident log for new in-world
+   reads — Bill's camera outranks every heuristic (the court roof proved
+   it twice). Both known reads are ANSWERED (roof: live since lift-2;
+   watchpost: R-113 on align's queue).
+2. Unblocks: woodyard (Bill's staged-package call) or the staged trio
+   (carousel roof / welcome lamp / mapboard chip) — none are lift's to
+   roll.
+3. Otherwise HOLD at survey: census + gate + log-check, lean ledger.
+   The lane does not manufacture jank.
 
 ## Lane record
 
@@ -77,3 +79,7 @@ exit 0; live census). Never self-judge the village done.
   their re-sweep left R-113 standing routed-open, stewardship green); census
   ALL GREEN on the truthed instrument second consecutive tick; no summoner
   reads; queue dry third tick — holding, not manufacturing.
+- lift-7 (this): lean hold 4th dry tick — no lane banked, census ALL GREEN
+  3rd consecutive, both known summoner reads verified ANSWERED (roof live
+  lift-2, watchpost routed R-113), candidates section refreshed to the true
+  state (evidence / unblocks / hold).
