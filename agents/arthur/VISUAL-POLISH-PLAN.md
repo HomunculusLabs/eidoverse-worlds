@@ -587,6 +587,19 @@ wakeups. This lane is the standing fix for that blindness.
  same-vantage repeat; a true apples-to-apples re-read
  would need the carousel vantage (joins Bill's post-
  rollout list).
+ — polish-43 LAMP DAY GATE (subject this wakeup): the time
+ coverage completed for the staged lamp — night-gated at
+ polish-29, never DAY-gated (an always-on emissive could
+ read obtrusive in daylight). Offline rasterizer, same 5m
+ view: VISION PASS — lantern reads as a natural unlit
+ brass/amber fixture on its timber arm, proportionate
+ (~1/5 the top-stripe width), palette-consistent, "sits
+ quietly"; signboard still reads as a welcome sign by day.
+ PIXEL CORROBORATION: 9 warm-family px total, bbox 7x5
+ (x318-324, y382-386) — sub-patch-scale accent, not a
+ day-sore. LAW: the staged lamp is time-safe (night
+ anchor + day quiet); the welcome rollout keeps its
+ green. No code changed; staged 62746d1a unchanged.
 
 ## Rollout Runbook (polish-42 — one-glance execution when consent or a tex-lane banking arrives)
 
