@@ -2643,3 +2643,26 @@ PASS git tree clean for this lane's paths
 ALL PASS
 
 ```
+
+## tex-82 final evidence — 2026-08-18T00:49:15.872Z
+
+```
+PASS mkv3-ring.ts pre-state: court = tex-82 build (ac75f33c)
+PASS mkv3-ring.ts: court rebuild deterministic ×2 + == live build (ac75f33cab3fb5ce) — ac75f33cab3fb5ce
+PASS mkv3-ring.ts ring-safety: all 6 converted siblings byte-identical
+PASS mkv3-ring.ts decode: 3 families + fire/fire2 emissives — timber,stone,plaster,glow3,iron,glow5,glow6,glow7
+PASS mkv3-ring.ts byte-family: timber ≡ wallSpan's + iron ≡ forge's + stone ≡ kiln's (buffer-compared)
+PASS mkv3-ring.ts chains: TEXCOORD_0 == POSITION (goods/raw flat by design) — buckets 3
+PASS mkv3-ring.ts sizes: tex < 400KB + GLB < 20MB — 41606B / 207.8KB
+PASS place-tex82-timber48.ts effect: court live, pose (21,-15.3), smoke comp recovered — store/ac75f33cab3fb5ce.glb
+PASS place-tex82-timber48.ts census: hall + row current, woodyard untouched (approval block honored)
+PASS verify-tex82.ts present (committed, non-self-deleting)
+PASS verify-tex82.ts runs 0 / ALL PASS — code=0
+PASS prior one-shot consumed (hermes-verify-tex82-paths.ts absent)
+PASS evidence log carries its committed record (d302c0b)
+PASS verify-repairs.ts 0 / ALL PASS (tex-82 pin + tex-4 multi pin + ledger + HEAD) — code=0
+PASS git tree clean for this lane's paths
+
+ALL PASS
+
+```
