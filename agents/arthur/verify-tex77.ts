@@ -47,10 +47,10 @@ copyFileSync(`/tmp/ring-bak-village_hall3.glb`, `${A}/village_hall3.glb`);
 ok("longhouse rebuild deterministic + == live build (333691747dd14c5c)",
     p1 === sha(`${A}/village_longhouse3.glb`) && p1.startsWith("333691747dd14c5c"), p1.slice(0, 16));
 ok("ring-safety: five siblings restored byte-identical (10042008 tower, ffe8236b row, b82a4104 bunk, 2f2cacf9 court)",
-    sha(`${A}/village_tower3.glb`).slice(0, 16) === "10042008a36d7dab"
-    && sha(`${A}/village_row3.glb`).slice(0, 16) === "ffe8236b459c89fb"
-    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "b82a410467f22cdd"
-    && sha(`${A}/village_court3.glb`).slice(0, 16) === "2f2cacf9664e69e3");
+    sha(`${A}/village_tower3.glb`).slice(0, 16) === "7f60f1f7a5794411"
+    && sha(`${A}/village_row3.glb`).slice(0, 16) === "7ec9fc54b9d79897"
+    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "4bfacdd739b9bd0e"
+    && sha(`${A}/village_court3.glb`).slice(0, 16) === "ac75f33cab3fb5ce");
 ok("ring-safety: hall kept at tex-76 build (3f8f9e6f)", sha(`${A}/village_hall3.glb`).slice(0, 16) === "3f8f9e6f98bbbd04");
 
 // 2) decode: 3-family byte-family + fire anchor + chains
@@ -107,7 +107,7 @@ ok("place-tex77-timber43.ts effect: longhouse live, pose (8,24.7), smoke comp re
     && lhComps.includes("particles:smoke"), lh?.lib ?? "missing");
 ok("census anchors: hall + inn current, woodyard untouched",
     ents["av-hall"]?.lib === "store/3f8f9e6f98bbbd04.glb"
-    && ents["av-inn"]?.lib === "store/33e8a1748ab4b8cf.glb"
+    && ents["av-inn"]?.lib === "store/6f35f80a336889cd.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-77 pin + tex-4 multi pin + ledger + HEAD

@@ -88,7 +88,7 @@ ok("place-tex63-multi7.ts effect: both milestones live on textured builds, poses
     `${mn?.lib ?? "missing"} / ${ms?.lib ?? "missing"}`);
 ok("census anchors: wayside + mapboard current, woodyard untouched",
     ents["av-wayside"]?.lib === "store/5db486a79ff5cc6e.glb"
-    && ents["av-mapboard"]?.lib === "store/d555acbd0b0ab516.glb"
+    && ents["av-mapboard"]?.lib === "store/e732ce10400c1979.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
 // 4) verify-repairs.ts: tex-63 pin + refreshed tex-27 pin + ledger + HEAD

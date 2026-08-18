@@ -38,8 +38,8 @@ copyFileSync(BK, `${A}/village_carousel3.glb`);
 const p1 = sha(`${A}/village_inn3.glb`);
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
 copyFileSync(BK, `${A}/village_carousel3.glb`);
-ok("inn rebuild deterministic + == live build (33e8a1748ab4b8cf)",
-    p1 === sha(`${A}/village_inn3.glb`) && p1.startsWith("33e8a1748ab4b8cf"), p1.slice(0, 16));
+ok("inn rebuild deterministic + == live build (6f35f80a336889cd)",
+    p1 === sha(`${A}/village_inn3.glb`) && p1.startsWith("6f35f80a336889cd"), p1.slice(0, 16));
 ok("carousel-safety: restored byte-identical after both rebuilds (38fbbc26)",
     sha(`${A}/village_carousel3.glb`).slice(0, 16) === "38fbbc26dcdfcc1a");
 ok("collateral: belltower (82e4c316) + windmill (7fc779a5) byte-identical",
@@ -101,7 +101,7 @@ for (const x of g.entities) ents[x.id] = x;
 const inn = ents["av-inn"];
 const innComps = Object.keys(inn?.comp ?? {});
 ok("place-tex74-timber41.ts effect: inn live, pose (34,0), all 4 comps recovered",
-    inn?.lib === "store/33e8a1748ab4b8cf.glb" && Math.abs(inn.pos[0] - 34) < 0.01 && Math.abs(inn.pos[2]) < 0.01
+    inn?.lib === "store/6f35f80a336889cd.glb" && Math.abs(inn.pos[0] - 34) < 0.01 && Math.abs(inn.pos[2]) < 0.01
     && innComps.includes("particles:smoke") && innComps.includes("particles")
     && innComps.includes("motion:sign") && innComps.includes("sockets"), inn?.lib ?? "missing");
 ok("carousel-safety: live carousel untouched (cd22d0b0)", ents["av-carousel"]?.lib === "store/cd22d0b09e70bebc.glb");

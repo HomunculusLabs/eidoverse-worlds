@@ -60,7 +60,7 @@ restore();
 ok("row rebuild deterministic + == live build (7ec9fc54b9d79897)",
     p1 === sha(`${A}/village_row3.glb`) && p1.startsWith("7ec9fc54b9d79897"), p1.slice(0, 16));
 ok("ring-safety: court restored byte-identical (2f2cacf9)",
-    sha(`${A}/village_court3.glb`).slice(0, 16) === "2f2cacf9664e69e3");
+    sha(`${A}/village_court3.glb`).slice(0, 16) === "ac75f33cab3fb5ce");
 ok("ring-safety: hall + longhouse + tower + garden + bunk kept at their builds",
     sha(`${A}/village_hall3.glb`).slice(0, 16) === "3f8f9e6f98bbbd04"
     && sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "333691747dd14c5c"

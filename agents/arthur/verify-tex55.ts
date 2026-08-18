@@ -95,7 +95,7 @@ ok("verify-repairs.ts 0 / ALL PASS", vr.code === 0 && vr.out.includes("ALL PASS"
 ok("tex-55 pin green", /^\s*PASS \[tex-55\]/m.test(vr.out));
 ok("tex-10 pin refreshed (no FAIL)", !/FAIL \[tex-10\]/.test(vr.out));
 ok("ledger law EXACT + HEAD gate green",
-    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine commit/m.test(vr.out));
+    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)? commit/m.test(vr.out));
 
 // 5) hygiene: all T-dir one-shots consumed (self-deleting law)
 ok("all tex-55 T-dir one-shots consumed (self-deleting law)",

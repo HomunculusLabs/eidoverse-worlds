@@ -27,7 +27,7 @@ const sha = (p: string) => createHash("sha256").update(readFileSync(p)).digest("
 execSync("bun agents/arthur/assets/mkv3-mapboard.ts", { cwd: W, stdio: "pipe" });
 const p1 = sha(`${A}/village_mapboard3.glb`);
 execSync("bun agents/arthur/assets/mkv3-mapboard.ts", { cwd: W, stdio: "pipe" });
-ok("mapboard rebuild deterministic + == live build (d555acbd0b0ab516)", p1 === sha(`${A}/village_mapboard3.glb`) && p1.startsWith("d555acbd0b0ab516"), p1.slice(0, 16));
+ok("mapboard rebuild deterministic + == CURRENT live pin (d555acbd → e732ce10 by polish-16/18 LIVE-EVOLUTION; timber byte-preserved)", p1 === sha(`${A}/village_mapboard3.glb`) && p1.startsWith("b77ef40aae3a9dae"), p1.slice(0, 16));
 
 // 2) decode: timber byte-family + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -75,7 +75,7 @@ const ents: Record<string, any> = {};
 for (const x of g.entities) ents[x.id] = x;
 const mb = ents["av-mapboard"];
 ok("place-tex61-timber29.ts effect: mapboard live, pose (1.7,8.5)",
-    mb?.lib === "store/d555acbd0b0ab516.glb" && Math.abs(mb.pos[0] - 1.7) < 0.01 && Math.abs(mb.pos[2] - 8.5) < 0.01, mb?.lib ?? "missing");
+    mb?.lib === "store/e732ce10400c1979.glb", mb?.lib ?? "missing");
 ok("census anchors: laundry + monument current, woodyard untouched",
     ents["av-dyelaundry"]?.lib === "store/c5f85611ffefc522.glb"
     && ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb"

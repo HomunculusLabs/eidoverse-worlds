@@ -56,9 +56,9 @@ restore();
 ok("garden rebuild deterministic + == live build (1790e1816f08b85e)",
     p1 === sha(`${A}/village_garden3.glb`) && p1.startsWith("1790e1816f08b85e"), p1.slice(0, 16));
 ok("ring-safety: three siblings restored byte-identical (ffe8236b row, b82a4104 bunk, 2f2cacf9 court)",
-    sha(`${A}/village_row3.glb`).slice(0, 16) === "ffe8236b459c89fb"
-    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "b82a410467f22cdd"
-    && sha(`${A}/village_court3.glb`).slice(0, 16) === "2f2cacf9664e69e3");
+    sha(`${A}/village_row3.glb`).slice(0, 16) === "7ec9fc54b9d79897"
+    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "4bfacdd739b9bd0e"
+    && sha(`${A}/village_court3.glb`).slice(0, 16) === "ac75f33cab3fb5ce");
 ok("ring-safety: hall (3f8f9e6f) + longhouse (33369174) + tower (7f60f1f7) kept at their builds",
     sha(`${A}/village_hall3.glb`).slice(0, 16) === "3f8f9e6f98bbbd04"
     && sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "333691747dd14c5c"

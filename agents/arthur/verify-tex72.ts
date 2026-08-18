@@ -42,7 +42,7 @@ ok("windmill rebuild deterministic + == live build (7fc779a5c7dd5dc5)",
 ok("carousel-safety: restored byte-identical after both rebuilds (38fbbc26)",
     sha(`${A}/village_carousel3.glb`).slice(0, 16) === "38fbbc26dcdfcc1a");
 ok("collateral: belltower byte-identical (82e4c316)", sha(`${A}/village_belltower3.glb`).slice(0, 16) === "82e4c316b62e5006");
-ok("collateral: inn byte-identical (45e51e8e)", sha(`${A}/village_inn3.glb`).slice(0, 16) === "45e51e8ecd7dc57e");
+ok("collateral: inn byte-identical (6f35f80a)", sha(`${A}/village_inn3.glb`).slice(0, 16) === "6f35f80a336889cd");
 
 // 2) decode: stone + timber byte-family + sails anchor + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {

@@ -13,7 +13,7 @@
 //      pin, ledger law, HEAD gate.
 // Run: bun agents/arthur/verify-tex69.ts
 import { execSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readFileSync, copyFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
 const W = "/Users/t3rpz/projects/eidoverse-worlds";
@@ -34,8 +34,10 @@ ok("pre-state: carousel on disk is the polish staged build (38fbbc26)", carousel
 
 // 1) mkv3-landmarks.ts: rebuild — belltower deterministic + == live pin
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
+copyFileSync("/tmp/carousel-polish-backup.glb", `${A}/village_carousel3.glb`); // restore immediately (batch-order safety)
 const p1 = sha(`${A}/village_belltower3.glb`);
 execSync("bun agents/arthur/assets/mkv3-landmarks.ts", { cwd: W, stdio: "pipe" });
+copyFileSync("/tmp/carousel-polish-backup.glb", `${A}/village_carousel3.glb`); // restore immediately (batch-order safety)
 ok("belltower rebuild deterministic + == live build (82e4c316b62e5006)",
     p1 === sha(`${A}/village_belltower3.glb`) && p1.startsWith("82e4c316b62e5006"), p1.slice(0, 16));
 // NOTE: after the rebuild inside THIS verifier, the carousel GLB is the

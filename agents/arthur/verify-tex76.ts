@@ -43,10 +43,10 @@ restoreSibs();
 ok("hall rebuild deterministic + == live build (3f8f9e6f98bbbd04)",
     p1 === sha(`${A}/village_hall3.glb`) && p1.startsWith("3f8f9e6f98bbbd04"), p1.slice(0, 16));
 ok("ring-safety: six siblings restored byte-identical (21e4e46f longhouse, ffe8236b row, b82a4104 bunk, 9e2d43ac hall-old? NO — see hash check)",
-    sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "21e4e46f17481b28"
-    && sha(`${A}/village_row3.glb`).slice(0, 16) === "ffe8236b459c89fb"
-    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "b82a410467f22cdd"
-    && sha(`${A}/village_court3.glb`).slice(0, 16) === "2f2cacf9664e69e3");
+    sha(`${A}/village_longhouse3.glb`).slice(0, 16) === "333691747dd14c5c"
+    && sha(`${A}/village_row3.glb`).slice(0, 16) === "7ec9fc54b9d79897"
+    && sha(`${A}/village_bunk3.glb`).slice(0, 16) === "4bfacdd739b9bd0e"
+    && sha(`${A}/village_court3.glb`).slice(0, 16) === "ac75f33cab3fb5ce");
 
 // 2) decode: 3-family byte-family + fire anchor + chains
 const tileOf = (glbName: string, matName: string): Buffer | null => {
@@ -102,7 +102,7 @@ ok("place-tex76-timber42.ts effect: hall live, pose (8,-24.7), smoke comp recove
     hall?.lib === "store/3f8f9e6f98bbbd04.glb" && Math.abs(hall.pos[0] - 8) < 0.01 && Math.abs(hall.pos[2] + 24.7) < 0.01
     && hallComps.includes("particles:smoke"), hall?.lib ?? "missing");
 ok("census anchors: inn + windmill current, woodyard untouched",
-    ents["av-inn"]?.lib === "store/33e8a1748ab4b8cf.glb"
+    ents["av-inn"]?.lib === "store/6f35f80a336889cd.glb"
     && ents["av-windmill"]?.lib === "store/7fc779a5c7dd5dc5.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 
