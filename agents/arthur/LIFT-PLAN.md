@@ -27,11 +27,13 @@ exit 0; live census). Never self-judge the village done.
 - **Tier 1 (vertex-color-only) OUTSIDE exclusions: NONE STANDING.** Whole-
   village material census: only hens/pondlife (fauna law) and woodyard
   (blocked) carry zero textured materials. Every other artifact ≥1 family.
-- **Tier 2 (crude silhouette): sampled clean.** Lowest-vert candidates
-  decoded SHAPED, not box-crude: rainbarrels (stave cylinders, 120pt),
-  millbench/stablebench (lath detail), cartstop, wayside, watchpost
-  (224pt scaffold), millyard (212pt), harvestcart (spoked wheels, 230pt),
-  milestones (intentional megalith minimalism, plaza-3 ashlar).
+- **Tier 2 (crude silhouette): FULL-VILLAGE SWEEP CLEAN (lift-5).** All 71
+  GLBs bucket-scanned: every box% leader is legitimately rectilinear —
+  inndoor3 92% (a door IS boxes: leaf/frame/threshold), trade signs 89/80/50/40%
+  (hanging boards), dyelaundry 89% (cloth strips + wind comps), streetlamps 60%
+  (square-cut posts, 6 comps), stable 67% (stall furniture). The lift-3
+  low-vert sample (rainbarrels/benches/cartstop/wayside/watchpost/millyard/
+  harvestcart/milestones) also stands: all SHAPED.
 - **Tier 3 (wrong scale) / tier 4 (dead where peers live): no unregistered
   evidence.** Life census: hens/ducks/goats/rabbits/bell/sails/knot/well/
   waystone/kettle/awnings/laundry/sign/wheel all carry motion; 9 smoke
@@ -60,7 +62,14 @@ exit 0; live census). Never self-judge the village done.
 - lift-2 (b8f591f): court roof rollout + pins + gate heal (align- prefix).
 - lift-3 (63a43f8): phantom-gate finding, R-112 routed, plan file born; no
   model changed — honest survey tick.
-- lift-4 (this): queue items 2+3 decoded CLEAN at source (treeline flora-flat
-  by tex-48 law + fireflies live; millyard crafted + timber tex-39, goods flat
-  by material-truth) — R-112 renumbered R-113 (align-2's in-flight entry took
-  the tag; shared-lane collision law); honest survey tick, no model changed.
+- lift-4 (a4381f8): queue items 2+3 decoded CLEAN at source (treeline
+  flora-flat by tex-48 law + fireflies live; millyard crafted + timber
+  tex-39, goods flat by material-truth) — R-112 renumbered R-113 (align-2's
+  in-flight entry took the tag; shared-lane collision law); honest survey
+  tick, no model changed.
+- lift-5 (this): INSTRUMENT TICK — full-village tier-2 sweep (71 GLBs, clean,
+  findings folded into the tier ledger above) + the census script TRUTHED at
+  source (bell → bare 'motion' key, horses → 0/2/4/6, embers → 3 by design):
+  first ALL GREEN census in lane history (21/21, 10/10, 3/3, 8/8, 55 lights).
+  No model changed; the queue reads dry — next real work is fresh summoner
+  evidence or an unblock (woodyard / staged package).
