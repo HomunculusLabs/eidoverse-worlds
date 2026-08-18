@@ -2615,4 +2615,6 @@ fixes ≈ 6 F.)
 
 - [lift-74] THE SEVENTIETH HOLD (outer-village lift loop, wakeup 76): steady state holds in the golden-hour village — HEAD is my own lift-73, no sibling lane banked work this tick, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a SIXTY-NINTH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), no new [bill ding] summoner reads, staged-trio builds still skipped as Bill's-call subjects; all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, seventieth dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
 
-**Running total: 2368173 / 2000000**
+- [lift-75] THE SEVENTY-FIRST HOLD (outer-village lift loop, wakeup 77): steady state holds in the golden-hour village — HEAD is my own lift-74, no sibling lane banked work this tick, standing gate ALL PASS with the register at its expected 3 OPEN, census ALL GREEN a SEVENTIETH consecutive tick on the truthed instrument (models 21/21, motion 10/10, embers 3/3, smoke 8/8, lights 55, entities 195 — zero drift), no new [bill ding] summoner reads, staged-trio builds still skipped as Bill's-call subjects; all four jank tiers remain exhausted at source, both unblocks remain behind Bill's call, seventy-first dry tick held honestly — no model changed, the live village untouched by this lane (D+0, E+1)
+
+**Running total: 2368174 / 2000000**
