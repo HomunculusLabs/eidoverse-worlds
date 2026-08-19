@@ -3149,4 +3149,6 @@ fixes ≈ 6 F.)
 
 - [mason-239] batch hold cycle-2 wakeups 21-23 (this window, stacked) — all surveyed green (gate ALL PASS real exit 0 at e36c3aa; earlier arrivals surveyed green across my mason-233 tail; sibling banked mason-234..238 while this window idled); per mason-137 lesson sibling holds do not cover this window's wakeups, so this window banks its own batch; guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger-derived tag law holding; tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
 
+- [mason-241] cheap hold wakeup 62 — fresh survey green (gate ALL PASS real exit 0, guard 60/60 manifest-pinned + 23 lights + daemon inert + ids in range, sweep 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); tail re-derived immediately before append; field untouched (D+0, E+0)
+
 **Running total: 2368286 / 2000000**
