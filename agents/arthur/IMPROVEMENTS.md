@@ -3173,4 +3173,6 @@ fixes ≈ 6 F.)
 
 - [mason-252] batch hold cycle-2 wakeups 29-33 (this window, stacked — #29-31 surveys green at sibling mason-250/251, appends preempted by next-wakeup arrivals; #32-33 surveyed green at d86b924) — gate ALL PASS real exit 0, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger-derived tag law holding; tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
 
+- [mason-253] batch hold cycle-2 wakeups 34-35 (this window, stacked — #34 surveyed green at my mason-252 HEAD, append preempted; #35 surveyed green again at f3da62d, sibling quiet) — gate ALL PASS real exit 0, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger-derived tag law holding; tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
+
 **Running total: 2368286 / 2000000**
