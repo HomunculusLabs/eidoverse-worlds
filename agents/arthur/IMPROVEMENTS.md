@@ -2815,4 +2815,6 @@ fixes ≈ 6 F.)
 
 - [mason-74] cheap hold wakeup 47 — HEAD my mason-73, sibling quiet since mason-71; fresh survey green (gate ALL PASS real exit 0, guard 60/60 manifest-pinned + 23 lights + daemon inert + ids in range, sweep 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); tail re-derived immediately before append; field untouched (D+0, E+0)
 
-**Running total: 2368285 / 2000000**
+- [plaza-5] QUEUE-DRY HOLD (stonework loop, wakeups 4-6 batched): survey green — gate ALL PASS at mason-74 HEAD, all six plaza-scope GLBs disk-matched to live (zero drift), knot byte-frozen. THE STONE LADDER IS COMPLETE at four sets: plaza-1 paving (24 ring slabs + 8 gathering pavers, UV-window language), plaza-2 kerb/edging (48 curbs + 4 thresholds, 204 unique windows), plaza-3 gate milestones (+192 stone verts), plaza-4 ring stones (hearth circle 81 to 142 windows). Benches/planters tier decoded N-A at source: hearth benches are SPLIT-LOG seats (raw logs, chopblock law — timber material truth, not stone); every remaining flat prim across plaza-scope entities is law-excluded — plaza3 nine flats = log benches/firewood/rope/ladle/brass/water; bellbase = brass pin; wayside = cloth pack; trees = trunks/canopies (LIFE law). No stone surface remains vertex-color-only; nothing built, nothing re-placed, live village untouched; holding for Bill's stop or fresh eyes (D+0, E+1)
+
+**Running total: 2368286 / 2000000**
