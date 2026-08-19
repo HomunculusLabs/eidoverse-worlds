@@ -2823,4 +2823,6 @@ fixes ≈ 6 F.)
 
 - [mason-77] cheap hold wakeup 54 — HEAD my mason-76; fresh survey green (gate ALL PASS real exit 0, guard 60/60 manifest-pinned + 23 lights + daemon inert + ids in range, sweep 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); tail re-derived immediately before append; field untouched (D+0, E+0)
 
+- [mason-78] batch hold wakeups 55-59 (stacked batch; 55-58 surveyed green prior turns with appends deferred, 59 surveyed green now — gate ALL PASS real exit 0 at aa6ef3b, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding)); interleave advanced through mason-72..77 (sibling) + plaza-5 (new sibling lane, no mason conflict), all clean; queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger-derived tag law holding; tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
+
 **Running total: 2368286 / 2000000**
