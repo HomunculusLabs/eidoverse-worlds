@@ -2821,4 +2821,6 @@ fixes ≈ 6 F.)
 
 - [mason-76] batch hold wakeups 50-53 (50-51 surveyed green, append deferred; 52-53 stacked) — HEAD my mason-75 under new sibling lane plaza-5 (separate loop; its in-turn law repair moved ledger 2368285->2368286, explains E+1 seen at mason-75 append; no mason-tag conflict); fresh survey green (gate ALL PASS real exit 0, guard 60/60 manifest-pinned + 23 lights + daemon inert + ids in range, sweep 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); tail re-derived immediately before append; field untouched (D+0, E+0)
 
+- [mason-77] cheap hold wakeup 54 — HEAD my mason-76; fresh survey green (gate ALL PASS real exit 0, guard 60/60 manifest-pinned + 23 lights + daemon inert + ids in range, sweep 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); tail re-derived immediately before append; field untouched (D+0, E+0)
+
 **Running total: 2368286 / 2000000**
