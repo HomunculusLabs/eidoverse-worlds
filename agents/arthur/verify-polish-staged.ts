@@ -269,10 +269,9 @@ console.log("H4=" + (consistent && reanchored && jitterKept));
                 console.log(`SENTINEL carousel: staged build ROLLED — CLOSE the roof+paint register items; smoke item: live bag ${nComps} comps${smoke ? ", smoke PRESENT — close it too" : ", smoke STILL LOST — the heal was skipped (re-apply particles:smoke or run the heal), keep the item OPEN"}`);
             }
             else console.log(`SENTINEL carousel: UNKNOWN build ${car} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeRoof("<store-url-or-local-path>"))' (LIFTED = close items; LOW = old roof still live)`);
-            if (wel === "store/6cd75bbbbf379df5.glb") console.log("SENTINEL welcome: lamp ROLLED — CLOSE the welcome register item (plaza-palette warm staged)");
-            else if (wel === "store/fa0c9d94a07b9ef5.glb") console.log("SENTINEL welcome: tex-15 build live (pre-lamp) — register OPEN correct");
+            if (wel === "store/6cd75bbbbf379df5.glb") console.log("SENTINEL welcome: lamp ROLLED — register item should be CLOSED");
             else console.log(`SENTINEL welcome: UNKNOWN build ${wel} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeLamp("<store-url-or-local-path>"))' (LAMP = close item; NO-LAMP = open)`);
-            if (map === "store/1f1a10f4dce71a0e.glb") console.log("SENTINEL mapboard: tower chip ROLLED live (plaza-palette warm staged)");
+            if (map === "store/1f1a10f4dce71a0e.glb") console.log("SENTINEL mapboard: tower chip ROLLED live — register cosmetic item CLOSED");
             else if (map === "store/e732ce10400c1979.glb") console.log("SENTINEL mapboard: live pin e732ce10 stands (chip staged)");
             else console.log(`SENTINEL mapboard: UNKNOWN build ${map} — decode before touching the register: bun -e 'const m = await import("${W}/agents/arthur/verify-polish-staged.ts"); console.log(await m.decodeChip("<store-url-or-local-path>"))' (CHIP = chip live; NO-CHIP = pre-chip)`);
         } catch (e: any) {

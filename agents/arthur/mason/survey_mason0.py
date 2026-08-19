@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """mason-0 survey: mason guard — manifest hash match, stop file, id range."""
-import json, hashlib, os, urllib.request, sys
+import json, hashlib, os, urllib.request, sys, re
 
 BASE = 'https://eidoverse.billding.dev'
 D = 'agents/arthur/mason/glb-retex'
@@ -18,9 +18,10 @@ print(f"local retex glbs: {len(lh)}")
 
 req = urllib.request.Request(BASE + '/geom?world=commons&boxes=0', headers={'User-Agent': 'curl/8.7.1'})
 ents = json.load(urllib.request.urlopen(req))['entities']
-mason = [e for e in ents if e.get('id', '').startswith('av-mason-')]
+mason = [e for e in ents if re.fullmatch(r'av-mason-\d{4}', e.get('id', ''))]
+lights = [e for e in ents if re.fullmatch(r'av-mason-\d{4}-l', e.get('id', ''))]
+print(f"live mason works: {len(mason)} | lights: {len(lights)}")
 ids = [e['id'] for e in mason]
-print(f"live mason entities: {len(mason)}")
 
 bad_ids = []
 for i in ids:
@@ -30,7 +31,7 @@ for i in ids:
             bad_ids.append(i)
     except ValueError:
         bad_ids.append(i)
-print(f"ids outside 0000-0059: {bad_ids if bad_ids else 'none'}")
+print(f"work ids outside 0000-0059: {bad_ids if bad_ids else 'none'}")
 
 drift = []
 for e in mason:
@@ -45,11 +46,12 @@ for d in drift[:15]:
 print(f"mason/stop file present: {os.path.exists('agents/arthur/mason/' + chr(115) + 'top')}")
 
 # dump positions for collision survey (next step)
-json.dump([{'id': e['id'], 'pos': e.get('pos'), 'kind': e.get('kind'),
+json.dump([{'id': e['id'], 'pos': e.get('pos'), 'scale': e.get('scale', 1), 'kind': e.get('kind'),
             'lib': (e.get('lib') or '').split('/')[-1]} for e in mason],
           open('/tmp/mason-live.json', 'w'), indent=0)
 print("positions dumped to /tmp/mason-live.json")
-works_drift = [d for d in drift if d[0].split('-')[-1] != 'l']
-lights = [i for i in ids if i.endswith('-l')]
-print(f"verdict: works_drift={len(works_drift)} (expect 0), lights={len(lights)} (daemon family)")
-sys.exit(1 if works_drift else 0)
+expected_scales = {'av-mason-0002': 0.7, 'av-mason-0023': 0.7, 'av-mason-0036': 0.7, 'av-mason-0049': 0.7}
+bad_scale = [(e['id'], e.get('scale', 1), expected_scales[e['id']]) for e in mason if e['id'] in expected_scales and abs(e.get('scale', 1) - expected_scales[e['id']]) > 0.01]
+print(f"scale pins: {bad_scale if bad_scale else '0002/0023/0036/0049 = 0.7'}")
+print(f"verdict: works_drift={len(drift)} (expect 0), bad_scale={len(bad_scale)}, lights={len(lights)}")
+sys.exit(1 if drift or bad_scale else 0)

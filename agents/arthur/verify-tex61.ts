@@ -75,7 +75,7 @@ const ents: Record<string, any> = {};
 for (const x of g.entities) ents[x.id] = x;
 const mb = ents["av-mapboard"];
 ok("place-tex61-timber29.ts effect: mapboard live, pose (1.7,8.5)",
-    mb?.lib === "store/e732ce10400c1979.glb", mb?.lib ?? "missing");
+    mb?.lib === "store/1f1a10f4dce71a0e.glb", mb?.lib ?? "missing");
 ok("census anchors: laundry + monument current, woodyard untouched",
     ents["av-dyelaundry"]?.lib === "store/30dd0a5ac7c00fe4.glb"
     && ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb"

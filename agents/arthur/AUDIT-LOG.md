@@ -537,3 +537,33 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   freshness is **WATCH**, not a model defect.
 - Register: 3 OPEN items, unchanged. No files other than this audit log
   changed by the audit; no geometry or live-world writes performed.
+
+## 2026-08-19 12:27Z — queue-fix rollout and residual audit
+
+- Staged village queue rolled live in order: welcome lamp
+  `store/6cd75bbbbf379df5.glb`, mapboard chip
+  `store/1f1a10f4dce71a0e.glb`, carousel roof/paint/smoke
+  `store/38fbbc26dcdfcc1a.glb`.
+- Welcome and mapboard preserved captured poses with post-place hash+pose
+  PASS. Carousel preserved pose `[-18.8,0,25.9]`, yaw `2.513715`; full bag
+  restored with 7 comps: platform, four horse motions, sockets, smoke.
+- `POLISH_LIVE=1 bun agents/arthur/verify-polish-staged.ts`: **ALL PASS**;
+  staged deterministic rebuilds, live sentinels, lamp/chip/roof decoders,
+  component heal, and runbook sync all passed.
+- Four R-118 mega-works (`0002/0023/0036/0049`) rescaled to `0.7` with
+  unchanged lib/pose/yaw and empty component bags preserved. `survey_mason0.py`
+  now checks scale pins and correctly separates 60 works from 23 lights:
+  manifest drift 0, bad scale 0, ids clean.
+- Four feasible R-116 colliders re-seated sequentially with fresh live capture
+  and post-place verification: `0001`, `0005`, `0006`, `0013`. Corrected
+  scale-aware sweep reduced outer overlaps from 9 / 1 walkable to **3 / 0
+  walkable**: `0002×grainfield`, `0010×flax`, `0031×waystone`.
+- Probe correction: `sweep-mason-r116.ts` now applies live entity scale to
+  bbox centers, extents, and vertical bands. The pre-fix unchanged 9-hit
+  result was probe drift, not rollout failure.
+- Village core sweep remains **ALL CLEAR** (73 entities, 135 pairs,
+  0 unclassified). Standing `verify-repairs.ts` remains **ALL PASS**, ledger
+  law exact at 2,368,512.
+- Register: village polish items closed; R-116/R-118 remain open only for the
+  three structural outer-field residuals. Further movement requires Bill's
+  trim-fleet, widen-band, or accept-field-overlap decision; no blind nudge.

@@ -7,7 +7,7 @@
 // Law: mason works sit 46-70m from center in a sunflower ring; lanes/landmarks
 // (roads, treeline, windmill lane, field cluster) radiate from the village disc.
 // Overlap with a WALKABLE lane (roads/paths/treeline) = walk-test before moving.
-type Ent = { id: string; lib?: string; pos: number[]; yaw: number; bbox?: { min: number[]; max: number[] } };
+type Ent = { id: string; lib?: string; pos: number[]; yaw: number; scale?: number; bbox?: { min: number[]; max: number[] } };
 export {}; // module marker for top-level await
 
 const r = await fetch("https://eidoverse.billding.dev/geom?world=commons", { headers: { "User-Agent": "curl/8.7.1" } });
@@ -22,16 +22,17 @@ console.log(`mason works (lib+bbox): ${masons.length} | village footprints: ${vi
 
 function obb(e: Ent) {
   const c = Math.cos(e.yaw), s = Math.sin(e.yaw);
+  const scale = e.scale ?? 1;
   const cx = (e.bbox!.min[0] + e.bbox!.max[0]) / 2, cz = (e.bbox!.min[2] + e.bbox!.max[2]) / 2;
   return {
     id: e.id, pos: e.pos,
-    cx: e.pos[0] + cx * c + cz * s,
-    cz: e.pos[2] - cx * s + cz * c,
+    cx: e.pos[0] + (cx * scale) * c + (cz * scale) * s,
+    cz: e.pos[2] - (cx * scale) * s + (cz * scale) * c,
     ax: [c, -s] as [number, number],
     az: [s, c] as [number, number],
-    hx: (e.bbox!.max[0] - e.bbox!.min[0]) / 2,
-    hz: (e.bbox!.max[2] - e.bbox!.min[2]) / 2,
-    y0: e.pos[1] + e.bbox!.min[1], y1: e.pos[1] + e.bbox!.max[1],
+    hx: ((e.bbox!.max[0] - e.bbox!.min[0]) / 2) * scale,
+    hz: ((e.bbox!.max[2] - e.bbox!.min[2]) / 2) * scale,
+    y0: e.pos[1] + e.bbox!.min[1] * scale, y1: e.pos[1] + e.bbox!.max[1] * scale,
   };
 }
 const dot = (u: [number, number], v: [number, number]) => u[0] * v[0] + u[1] * v[1];

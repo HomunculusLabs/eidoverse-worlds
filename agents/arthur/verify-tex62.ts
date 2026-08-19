@@ -84,7 +84,7 @@ ok("place-tex62-timber30.ts effect: wayside live, pose (2.4,15), lamp comp recov
     wsEnt?.lib === "store/8da60306e51c68dd.glb" && Math.abs(wsEnt.pos[0] - 2.4) < 0.01 && Math.abs(wsEnt.pos[2] - 15) < 0.01
     && wsComps.includes("motion:lamp"), wsEnt?.lib ?? "missing");
 ok("census anchors: mapboard + laundry current, woodyard untouched",
-    ents["av-mapboard"]?.lib === "store/e732ce10400c1979.glb"
+    ents["av-mapboard"]?.lib === "store/1f1a10f4dce71a0e.glb"
     && ents["av-dyelaundry"]?.lib === "store/30dd0a5ac7c00fe4.glb"
     && ents["av-woodyard"]?.lib === "store/d1c45cdf8e41b05b.glb");
 

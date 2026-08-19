@@ -64,7 +64,10 @@ ck("[tex-65] av-potter on timber-woodwork build (66836b01897cfebc, wheel comp)",
 ck("[tex-64] av-waystone on bench-timber build (c418d713c69d23ae, float+spin+ffw)", ents["av-waystone"]?.lib === "store/c418d713c69d23ae.glb");
 ck("[tex-63] av-milestone-n/s on stone+iron builds (a2b6bfab/3d423bc3)", ents["av-milestone-n"]?.lib === "store/5d2112b381b20672.glb" && ents["av-milestone-s"]?.lib === "store/6ccaeb40f50003e2.glb");
 ck("[tex-62] av-wayside on timber-woodwork build (8da60306e51c68dd, lamp comp)", ents["av-wayside"]?.lib === "store/8da60306e51c68dd.glb");
-ck("[tex-61] av-mapboard on timber-post build (d555acbd0b0ab516 → pin refreshed by polish-16/18 live rollout e732ce10; timber tile byte-identical)", ents["av-mapboard"]?.lib === "store/e732ce10400c1979.glb");
+ck("[polish-255] av-mapboard on distance-chip build (1f1a10f4dce71a0e; timber tile byte-identical)", ents["av-mapboard"]?.lib === "store/1f1a10f4dce71a0e.glb");
+ck("[polish-256] av-carousel on lifted-roof/paint build (38fbbc26dcdfcc1a; smoke heal present)",
+    ents["av-carousel"]?.lib === "store/38fbbc26dcdfcc1a.glb"
+    && ["motion:carousel", "motion:horse_0", "motion:horse_2", "motion:horse_4", "motion:horse_6", "sockets", "particles:smoke"].every((k) => k in (ents["av-carousel"]?.comp ?? {})));
 ck("[tex-60] av-dyelaundry on timber-woodwork build (30dd0a5ac7c00fe4, 6 wind comps)", ents["av-dyelaundry"]?.lib === "store/30dd0a5ac7c00fe4.glb");
 ck("[tex-59] av-monument on full-ashlar build (9520e61fc8e9d887, knot comp)", ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb");
 ck("[tex-58] av-shrine on full-ashlar build (78611c7dc9a3cb6e, votive comps)", ents["av-shrine"]?.lib === "store/78611c7dc9a3cb6e.glb");
@@ -123,9 +126,9 @@ ck("[tex-21] av-hutch on timber build (6263e8a2 → pin refreshed by tex-54, rab
 ck("[tex-20] av-belltower on ashlar build (82e4c316 → pin refreshed by tex-69, bell comps)", ents["av-belltower"]?.lib === "store/66524bcde061a437.glb");
 ck("[tex-19] av-wayside on textured build (5cbb8e4cacefc16f, lamp comp)", ents["av-wayside"]?.lib === "store/8da60306e51c68dd.glb");
 ck("[tex-18] av-monument on textured build (0ec3fe2e3c050081, knot spin)", ents["av-monument"]?.lib === "store/9520e61fc8e9d887.glb");
-ck("[tex-17] av-mapboard on timber build (965fe0f6 → pin refreshed by tex-61, then polish-16/18 live rollout e732ce10; timber tile byte-identical)", ents["av-mapboard"]?.lib === "store/e732ce10400c1979.glb");
+ck("[polish-255] av-mapboard on distance-chip build (1f1a10f4dce71a0e; timber tile byte-identical)", ents["av-mapboard"]?.lib === "store/1f1a10f4dce71a0e.glb");
 ck("[tex-16] av-chopblock on metal build (1f8b7d34bfe59272)", ents["av-chopblock"]?.lib === "store/462433ed8a148a4b.glb");
-ck("[tex-15] av-welcome on textured build (fa0c9d94a07b9ef5)", ents["av-welcome"]?.lib === "store/fa0c9d94a07b9ef5.glb");
+ck("[polish-29] av-welcome on night-lamp build (6cd75bbbbf379df5)", ents["av-welcome"]?.lib === "store/6cd75bbbbf379df5.glb");
 ck("[tex-14] av-watchpost on timber build (e7f55348 → pin refreshed by tex-50, sentry comps)", ents["av-watchpost"]?.lib === "store/4ac5cacf91ed5d2d.glb");
 ck("[tex-13] av-shrine on textured build (0ef2c1e60c5b070d, 3 votive comps)", ents["av-shrine"]?.lib === "store/78611c7dc9a3cb6e.glb");
 ck("[tex-12] av-roads3 on ground build (20234503 → 2892af9e plaza-1 → 6358e1ab plaza-2 → 453f9ae5 plaza-3 milestones)", ents["av-roads3"]?.lib === "store/3b76b621559fa1a1.glb");

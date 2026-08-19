@@ -3175,4 +3175,14 @@ fixes ≈ 6 F.)
 
 - [mason-253] batch hold cycle-2 wakeups 34-35 (this window, stacked — #34 surveyed green at my mason-252 HEAD, append preempted; #35 surveyed green again at f3da62d, sibling quiet) — gate ALL PASS real exit 0, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger-derived tag law holding; tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
 
-**Running total: 2368286 / 2000000**
+- [polish-254] welcome board night-lamp rollout: 5-node emissive lamp build placed at captured pose and live hash+pose verified (D+5, E+0)
+
+- [polish-255] mapboard distance-chip rollout: 24-node chip build placed at captured pose and live hash+pose verified (D+24, E+0)
+
+- [polish-256] carousel lifted-roof and horse-paint rollout: 193-node build placed at captured pose with full motion/socket bag and particles:smoke restored (D+193, E+0)
+
+- [mason-257] R-116 collision relocations: mason-0001, 0005, 0006, 0013 moved to fresh scale-aware SAT-clear sites with pose/lib/component preservation (D+0, E+4)
+
+- [mason-258] R-118 mega-work decision executed: four works rescaled to 0.7 without rebuilds; scale-aware guard now pins the fleet shape (D+0, E+0)
+
+**Running total: 2368512 / 2000000**
