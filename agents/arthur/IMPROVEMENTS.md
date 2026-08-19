@@ -2795,4 +2795,6 @@ fixes ≈ 6 F.)
 
 - [mason-64] cheap hold wakeup 42 — survey green (gate ALL PASS real exit 0 at a86e841, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding)); tag law repaired and verified: mason-61/62 cross-window collision resolved by both lanes renumbering to next-free (sibling 74c0c08 + my a86e841), all mason tags unique again; queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
 
+- [mason-65] cheap hold wakeup 43 — survey green (gate ALL PASS real exit 0 at 710f865, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding)); interleave clean, sibling quiet this window; queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger-derived tag law holding; tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
+
 **Running total: 2368285 / 2000000**
