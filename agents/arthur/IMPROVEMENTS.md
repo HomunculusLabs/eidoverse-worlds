@@ -2977,4 +2977,6 @@ fixes ≈ 6 F.)
 
 - [mason-154] cheap hold wakeup 4 — fresh survey green (gate ALL PASS real exit 0, guard 60/60 manifest-pinned + 23 lights + daemon inert + ids in range, sweep 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); tail re-derived immediately before append; field untouched (D+0, E+0)
 
+- [mason-155] batch hold new-cycle wakeups 1-3 — counter reset after #100; wakeup 1 surveyed green at 0cf9728 (my mason-150), append preempted; this tick survey green (gate ALL PASS real exit 0 at e15084f, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding)); sibling banked mason-151/152/153, interleave clean; queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger-derived tag law holding; tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
+
 **Running total: 2368286 / 2000000**
