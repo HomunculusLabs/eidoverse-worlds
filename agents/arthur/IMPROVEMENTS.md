@@ -3155,4 +3155,6 @@ fixes ≈ 6 F.)
 
 - [mason-243] batch hold cycle-2 wakeups 24-25 (this window, stacked) — surveyed green at 001ac47 (gate ALL PASS real exit 0, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding)); prior tick's mason-239 tag collision resolved cleanly by sibling per dual-lane protocol — sibling renumbered its swept entry to mason-240 via follow-up commit 07c65e7 (no history rewrite), single [mason-239] entry confirmed in ledger, my batch hold stands; queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger-derived tag law holding; tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
 
+- [mason-244] cheap hold wakeup 64 — fresh survey green (gate ALL PASS real exit 0, guard 60/60 manifest-pinned + 23 lights + daemon inert + ids in range, sweep 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); tail re-derived immediately before append; field untouched (D+0, E+0)
+
 **Running total: 2368286 / 2000000**
