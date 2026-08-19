@@ -503,3 +503,37 @@ verify-repairs.ts runs first each wakeup — a failure is itself a finding.
   live-confirm this tick (curl approval-blocked ×2). Next census depth to
   confirm removal.
 - Register: 1 OPEN (carousel roof clearance).
+
+## 2026-08-19 11:47Z — end-to-end village + outer-field audit (find-only)
+
+- Standing gate: `bun agents/arthur/verify-repairs.ts` — **ALL PASS**, exit 0;
+  ledger law exact at 2,368,286; register remains 3 expected OPEN items.
+- Live `/geom?world=commons`: 200 entities, 133 model-bearing entities,
+  55 light-like entities, 47 component carriers, 0 duplicate ids, 0 mounts.
+  The 14 no-`lib` ids are gate/light/carrier entities, not missing models.
+- Village footprint sweep: `sweep-align.ts` — 73 footprint entities, 135
+  candidate pairs, 0 unclassified, **ALL CLEAR**. No new core-village
+  intersection or placement defect survived the standing source classifications.
+- Outer field: `sweep-mason-r116.ts` — 60 works, 9 known overlaps, 1 on a
+  walkable lane. Findings reproduce the open R-116/R-118 queue (0001×door-
+  paths; 0002×windmill/grainfield/harvestcart; 0005/0013/0031×waystone;
+  0006×goats; 0010×flax). `survey_mason0.py`: 60/60 manifest-pinned,
+  23 lights, ids in range for works, no origin sitters, no rim overhang.
+  No new outer-field defect; relocation remains blocked on the fleet-shape call.
+- Outer non-mason models at/over the village ring (`flax`, `potter`, `kiln`,
+  `quarry`, `waystone`) are present with expected live components; no new
+  source-freshness failure. Their edge placement is intentional outer-village
+  dressing, not a model loss.
+- Visual gate: current Brave frame is live at ~120 FPS. The tower-house reads
+  as a near-black, low-contrast silhouette from this camera; this is a visual
+  improvement candidate, not yet a registered geometry defect because the
+  frame is shadow/back-side dominated. Existing confirmed model work remains:
+  carousel roof clearance, carousel horse paint readability, welcome-board
+  night readability, and carousel smoke-comp recovery — all open/staged in
+  `REPAIR-REGISTER.md`, pending rollout consent/live after-read.
+- Keeper: launchd service is running (PID 585); resident log is valid and
+  circuit legs are reaching landmarks, but stdout last changed at 07:41Z and
+  stderr is stale at 20:36Z from the prior day. Route is loaded; current
+  freshness is **WATCH**, not a model defect.
+- Register: 3 OPEN items, unchanged. No files other than this audit log
+  changed by the audit; no geometry or live-world writes performed.
