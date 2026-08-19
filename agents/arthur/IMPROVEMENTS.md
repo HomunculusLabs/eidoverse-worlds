@@ -2791,6 +2791,6 @@ fixes ≈ 6 F.)
 
 - [mason-62] cheap hold wakeups 29-30 (29 surveyed green, append deferred) — HEAD my mason-60, sibling quiet since mason-58; survey green (gate ALL PASS real exit 0, guard 60/60 manifest-pinned + 23 lights + daemon inert + ids in range, sweep 9 (1 walkable), overhang 0); queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); tail re-checked before append; field untouched (D+0, E+0)
 
-- [mason-62] cheap hold wakeup 40 — survey green (gate ALL PASS real exit 0 at f876e0c, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding)); interleave clean, sibling quiet this window; queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
+- [mason-63] cheap hold wakeup 40 — survey green (gate ALL PASS real exit 0 at f876e0c, guard 60/60 works manifest-pinned + 23 hamlet lights + daemon inert + ids in range, sweep steady 9 (1 walkable), overhang 0 (R-119 holding)); interleave clean, sibling quiet this window; queue unchanged ((b) closed; (a) behind Bill's R-118 fleet-shape call, rescale recommended; (c) blocked on (a)); ledger tail re-checked immediately before this append; held per lane law, live field untouched (D+0, E+0)
 
 **Running total: 2368285 / 2000000**
