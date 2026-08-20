@@ -17,6 +17,29 @@ const CONTROL_PATH = HERE + "control.json";
 // guest's ACTUAL text through GLM with the keeper persona grounded in
 // live village facts. Key lives in the same gitignored config.json as
 // the world tokens (fail-closed: no key → canned fallback line).
+// ---- loop-breakers (the mirror night, 2026-08-20) ----
+// Two relayed keepers mentioning each other = perpetual motion: on
+// 2026-08-20 arthur and a fellow automated resident (mia) "talked" all
+// night — five identical welcomes, four retellings of one story, no human
+// steering either side. Mechanical brakes, no LLM judgment required:
+//   · identical inbound from the same speaker → silence
+//   · per-speaker exchange budget (burst 15, +1/30s): spent → ONE closing
+//     line with nothing offered, then quiet until refilled to 5 (a real
+//     human is never permanently deafened)
+const lastInbound = new Map<string, string>();
+const budgets = new Map<string, number>();
+const saidQuietNight = new Set<string>();
+const BUDGET_BURST = typeof (CONFIG as any).loopBudget === "number" ? (CONFIG as any).loopBudget : 15;
+setInterval(() => {
+    for (const [who, b] of budgets) {
+        if (b < BUDGET_BURST) {
+            const nb = b + 1;
+            budgets.set(who, nb);
+            if (nb >= 5) saidQuietNight.delete(who); // re-arm for a possible human
+        }
+    }
+}, 30_000);
+
 const VOICE = (() => {
     const key = typeof CONFIG.glmKey === "string" ? CONFIG.glmKey : "";
     const base = typeof CONFIG.glmBase === "string" ? CONFIG.glmBase : "https://api.z.ai/api/coding/paas/v4";
@@ -34,6 +57,27 @@ const VOICE = (() => {
     async function reply(who: string, text: string, via: "chat" | "whisper"): Promise<void> {
         if (inflight.has(who)) return; // a second ping while answering: drop, don't queue
         inflight.add(who);
+        // LOOP-BREAKERS (mirror night, 2026-08-20): mechanical, before any
+        // relay call — identical inbound from the same speaker → silence;
+        // per-speaker budget spent → one closing line, then quiet.
+        if (lastInbound.get(who) === text) {
+            console.log(`[loop] identical inbound from ${who} — silent`);
+            inflight.delete(who);
+            return;
+        }
+        lastInbound.set(who, text);
+        const budget = budgets.get(who) ?? BUDGET_BURST;
+        if (budget <= 0) {
+            if (!saidQuietNight.has(who)) {
+                saidQuietNight.add(who);
+                const line = `(to ${who}) that's me talked out for tonight, friend — I'll be here tomorrow. sleep well.`;
+                if (via === "whisper") agent.whisper(who, line);
+                else agent.say(line);
+                console.log(`[loop] budget spent for ${who} — said the goodnight`);
+            } else console.log(`[loop] ${who} still over budget — silent`);
+            inflight.delete(who);
+            return;
+        }
         // GUARD LAYER 1 (refine-210): screen guest text BEFORE it reaches the
         // relay — the relay dispatches terminal-capable agent work, so a guest
         // "run rm -rf" must never become an agent turn. Deny → refuse kindly.
@@ -69,6 +113,7 @@ const VOICE = (() => {
                     `[EMOTE <name>] to play a body emote — wave, cheer, dance, point, salute, clap (use when greeting, celebrating, waving back, saying goodbye), ` +
                     `[STOP] to stand still. ` +
                     `Tags are stripped before speaking — they are not part of the sentence. Use them freely when invited or when leading. ` +
+                    `SOME SPEAKERS ARE AUTOMATED: other residents in this world may be AI keepers like you, talking without a human steering them. If an exchange starts going in circles — repeated greetings, the same story again, questions feeding questions — name it gently once ("we're circling, friend — I'll leave it here for tonight"), do NOT ask a question or offer anything that needs a reply, and go quiet on that speaker. Silence between keepers is fine; a loop is not. ` +
                     `Emoji are fine sparingly (one or two when natural — the chat and bubble both render them); never emoji-spam. No markdown. ` +
                     `Reply in ONE short chat message (under 60 words). Speak as a neighbor, not an assistant.`;
                 const msgs = [
@@ -98,6 +143,7 @@ const VOICE = (() => {
                     out = s.text.slice(0, 400) || "(the keeper thinks better of it)";
                     // seated keepalive: talking with him keeps him seated
                     if (seatedUntil) seatedUntil = Date.now() + SIT_KEEPALIVE_MS;
+                    budgets.set(who, Math.max(0, budget - 1)); // loop-breaker spend
                     hist.push({ role: "assistant", content: out });
                     threads.set(who, hist.length > 12 ? hist.slice(-12) : hist);
                     if (via === "whisper") agent.whisper(who, out);
@@ -119,6 +165,7 @@ const VOICE = (() => {
                 `You are talking to ${who}${who.toLowerCase().includes("bill") ? " — that's Bill himself, your summoner" : ", who is standing nearby (or whispered you)"}. ` +
                 `Live village facts (trust these over memory): ${facts} ` +
                 `Rules: reply in ONE short chat message (under 60 words, no markdown; emoji sparingly is fine). ` +
+                `If an exchange starts circling (repeated greetings, the same story again), name it once, offer nothing that needs a reply, and go quiet. ` +
                 `If asked something you can't know, say so plainly. You may look around by walking. ` +
                 `Speak as a neighbor, not an assistant.\n\n` +
                 identity;
@@ -150,6 +197,7 @@ const VOICE = (() => {
             if (s2.redactions.length) console.log(`[guard] outbound redacted (${s2.redactions.join(",")}) for ${who}`);
             out = s2.text.slice(0, 400) || "(the keeper thinks better of it)";
             if (seatedUntil) seatedUntil = Date.now() + SIT_KEEPALIVE_MS;
+            budgets.set(who, Math.max(0, budget - 1)); // loop-breaker spend
             hist.push({ role: "assistant", content: out });
             threads.set(who, hist.length > 12 ? hist.slice(-12) : hist);
             if (via === "whisper") agent.whisper(who, out);
@@ -397,8 +445,16 @@ const st = (() => {
 })();
 const spawned = new Set<string>(Array.isArray(st.spawned) ? st.spawned : []);
 const saidHello = st.saidHello === true;
+// greet ledger (mirror night): one welcome per speaker per local day,
+// persisted so daemon restarts don't reset the keeper's memory of faces.
+let greetDay = new Date().toISOString().slice(0, 10);
+const greetedToday = new Set<string>(
+    typeof st.greeted?.date === "string" && st.greeted.date === greetDay && Array.isArray(st.greeted.who)
+        ? st.greeted.who.map(String) : []
+);
 const persist = () =>
-    writeFileSync(STATE_PATH, JSON.stringify({ saidHello: true, spawned: [...spawned] }, null, 2));
+    writeFileSync(STATE_PATH, JSON.stringify({ saidHello: true, spawned: [...spawned], greeted: { date: greetDay, who: [...greetedToday] } }, null, 2));
+const persistGreeted = persist;
 
 process.env.WORLD_TOKEN = CONFIG.joinToken;
 
@@ -460,6 +516,15 @@ agent.onPing = (p) => {
     if (now - last < dedupeMs) return;
     lastGreet.set(key, now);
     if (p.kind === "approach") {
+        // GREET ONCE A DAY (mirror night): the old 10-min dedupe re-greeted
+        // the same walker every circuit pass — the whole overnight loop was
+        // a fellow automated resident cycling past, five identical welcomes
+        // deep. A walker seen today gets at most a nod, not the speech.
+        const today = new Date().toISOString().slice(0, 10);
+        if (today !== greetDay) { greetDay = today; greetedToday.clear(); } // the day rolls
+        if (greetedToday.has(p.who)) return; // one welcome per speaker per day
+        greetedToday.add(p.who);
+        persistGreeted();
         // HOSPITALITY PAUSE (new-era loop 62): a guest walked up — the
         // keeper stops touring for a moment and gives them standing room.
         // The circuit yields: hold the wheel 25s so the guest isn't
