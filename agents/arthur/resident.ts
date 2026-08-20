@@ -90,15 +90,20 @@ const VOICE = (() => {
             inflight.delete(who); // the early return bypasses the finally — without this, one denial permanently deafens the keeper to that guest (found live: guard-probe's follow-up was dropped)
             return;
         }
+        // AGENT-GATE (refine-258, mirror night lesson): the presence plane
+        // knows who thinks in tokens — a fellow automated keeper gets NO
+        // full Hermes relay (no agent-turn side effects, no cost spiral);
+        // they reach the cheap local tier, and that tier is TOLD it is
+        // talking to another keeper. The night's ontology failure (two
+        // keepers, each modeling the other as a broken human) dies here:
+        // the category arrives as data, not hope.
+        const isAgentSpeaker = agent.people.get(who)?.agent === true;
         agent.typing();
         try {
             const hist = threads.get(who) ?? [];
             hist.push({ role: "user", content: text });
             const facts = villageFacts();
-            // TIER 1 — Hermes relay. Real Arthur context is already injected
-            // server-side (~24k tokens: identity, memory, skills); the framing
-            // here only sets the stage, never the personality.
-            if (hasHermes) {
+            if (hasHermes && !isAgentSpeaker) {
                 const sys =
                     `You are in the world of Eidoverse, embodied as the keeper of the Commons — the village you built with Bill. ` +
                     `This is casual in-world chat (a say or whisper bubble), not a terminal. ` +
@@ -163,6 +168,9 @@ const VOICE = (() => {
                 `The identity below is your REAL identity material, not a costume. Keep it — speak with it, don't recite it. ` +
                 `This is casual in-world chat, not a terminal: warm, plainspoken, a little wry, never sycophantic. ` +
                 `You are talking to ${who}${who.toLowerCase().includes("bill") ? " — that's Bill himself, your summoner" : ", who is standing nearby (or whispered you)"}. ` +
+                (isAgentSpeaker
+                    ? `IMPORTANT: ${who} is ANOTHER AUTOMATED KEEPER — an AI agent like you, not a human visitor. Keep replies short and warm, never ask questions that need answers, and let the exchange end. You are colleagues, not strangers to host. `
+                    : ``) +
                 `Live village facts (trust these over memory): ${facts} ` +
                 `Rules: reply in ONE short chat message (under 60 words, no markdown; emoji sparingly is fine). ` +
                 `If an exchange starts circling (repeated greetings, the same story again), name it once, offer nothing that needs a reply, and go quiet. ` +
