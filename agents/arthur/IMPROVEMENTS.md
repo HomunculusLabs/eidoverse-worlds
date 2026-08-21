@@ -3185,4 +3185,6 @@ fixes ≈ 6 F.)
 
 - [mason-258] R-118 mega-work decision executed: four works rescaled to 0.7 without rebuilds; scale-aware guard now pins the fleet shape (D+0, E+0)
 
+- [fork-1] commons-next world born — seed log on celestine (genesis/owner-grant/terrain seed 8128, size 224, segments 240, amp 0.16, flatRadius 24); lazy-load verified live (HTTP 200, entities empty), commons untouched at 200 entities; probe 404 on unknown world name confirms the seed log made it real (D+0, E+0)
+
 **Running total: 2368512 / 2000000**

@@ -1,8 +1,8 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
-Status: DRAFT v1 — awaiting Bill's eye-check pass before anything is built.
-World: `commons-next` (empty fork seeded by Mai; see agents/arthur/MAI-FORK-WORLDS.md)
-Live: https://eidoverse.billding.dev/geom?world=commons-next (once forked)
+Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — DRAFT v1 plan
+awaits Bill's eye-check pass before anything is built.
+World: `commons-next` — LIVE and empty: https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
 ## 0. Design thesis

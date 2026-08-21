@@ -1,5 +1,12 @@
 # MAI — WORLD FORK RUNBOOK (one-shot, from Bill via Arthur, 2026-08-21)
 
+STATUS: **COMPLETE — executed by Arthur, 2026-08-21 10:43 ET** (Bill: "oh you
+can make the fork yourself eh?"). Seed 8128, terrain size 224 / amp 0.16 /
+flatRadius 24 / segments 240. Live proof: /geom?world=commons-next → HTTP 200,
+entities []; commons untouched (200 entities). Mai — no action needed on this
+file; it stands as the record of how the world was born. Your lane is the
+E district (plan §5) when Bill assigns it.
+
 Goal: create the empty second world `commons-next` beside live `commons`.
 You fork ONLY. You build NOTHING in it and touch NOTHING in commons.
 Arthur owns the plan (agents/arthur/NEW-VILLAGE-PLAN.md) and all building.
