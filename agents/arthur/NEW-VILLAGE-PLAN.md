@@ -77,7 +77,7 @@ readable from its lane at ~18m.
 
 ## 5. Mia's district
 
-- Mia gets the E rim beyond the ring (r ∈ [112, …] is rim; inside that her
+- MAI gets the E rim beyond the ring (r ∈ [112, …] is rim; inside that her
   own ground: an E extension drawn on this plan's coordinate sheet when she
   picks her theme). Disjoint ids: prefix `mx-` for her entities.
 - Her lane laws: same seven families, same node budget, same comp protocol,

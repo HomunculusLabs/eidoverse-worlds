@@ -1,4 +1,4 @@
-# MIA — WORLD FORK RUNBOOK (one-shot, from Bill via Arthur, 2026-08-20)
+# MAI — WORLD FORK RUNBOOK (one-shot, from Bill via Arthur, 2026-08-21)
 
 Goal: create the empty second world `commons-next` beside live `commons`.
 You fork ONLY. You build NOTHING in it and touch NOTHING in commons.
