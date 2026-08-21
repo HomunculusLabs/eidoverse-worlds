@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: DRAFT v1 — awaiting Bill's eye-check pass before anything is built.
-World: `commons-next` (empty fork seeded by Mia; see agents/arthur/MIA-FORK-WORLDS.md)
+World: `commons-next` (empty fork seeded by Mai; see agents/arthur/MAI-FORK-WORLDS.md)
 Live: https://eidoverse.billding.dev/geom?world=commons-next (once forked)
 Old world stays live and untouched: ?world=commons
 
@@ -19,13 +19,13 @@ protocol, the keeper (resident.ts behaviors + refine-257/258 defenses).
 
 What gets fixed by design: R-118 band math (sized to fleet, not to an era-2
 layout), plot layout from one plan instead of hundreds of loop nudges,
-era-2 geometry zeroed (every building at current housekit quality), Mia's
+era-2 geometry zeroed (every building at current housekit quality), Mai's
 district drawn from day one, night lighting budgeted per district.
 
 ## 1. Terrain (seeded at fork)
 
 - size 224 (±112m), amplitude 0.16 (gentler than 0.2), flatRadius 24, segments 240.
-- Seed: NEW random (Mia picks; not 4666/7). Terrain relief is décor only — all
+- Seed: NEW random (Mai picks; not 4666/7). Terrain relief is décor only — all
   buildings sit at heightAt.
 - Rim: 112m half-size gives ~2.5× the usable band area of commons (160).
 
@@ -75,7 +75,7 @@ the ring's compass points, each with one landmark work and shared dressing:
 Approach lanes: one per district, from the nearest spoke, lamp-lit, each work
 readable from its lane at ~18m.
 
-## 5. Mia's district
+## 5. Mai's district
 
 - MAI gets the E rim beyond the ring (r ∈ [112, …] is rim; inside that her
   own ground: an E extension drawn on this plan's coordinate sheet when she
@@ -109,7 +109,7 @@ readable from its lane at ~18m.
 4. Ring lift-in: 60 works re-seated by district (capture/reapply comps by
    placer FILES; re-seat same lib first, elevate geometry per-work after —
    masonr loop hand-off).
-5. Mia's district (her lane).
+5. Mai's district (her lane).
 6. Keeper phase 1, night pass, full end-to-end audit (audit-254 protocol).
 
 Standing gate stays: verify-repairs.ts must exit 0 before any commit; new
@@ -121,4 +121,4 @@ world gets its own HEAD-gate consideration when its first lane opens.
 - Core building list: the 15 above — cut/add any?
 - Keeper: phase-1 second instance timing — with core build or after ring?
 - Public link: swap when? (default: never auto-swap; your explicit call)
-- Mia's district theme: hers to pick, or you assign?
+- Mai's district theme: hers to pick, or you assign?

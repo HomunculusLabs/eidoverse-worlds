@@ -28,7 +28,7 @@ make each work worth walking to. One work per wakeup.
 
 You do NOT touch: village-core entities, the resident daemon's behavior, any
 entity another lane owns, or anything with an id outside av-mason-0000..0059
-and the mason light ids. Mia (sibling agent, same harness) may be building in
+and the mason light ids. Mai (sibling agent, same harness) may be building in
 OTHER scopes — if commits with unfamiliar prefixes interleave, that is a
 sibling lane: never renumber history, take the next free ledger slot, never
 touch her entities.
@@ -109,7 +109,7 @@ distance), any Bill-call slot surfaced with numbers, ledger tag, commit.
 - Parked elsewhere, untouched by this lane: carousel roof/paint rollout,
   welcome-board night lamp, carousel smoke heal (all staged since 08-18,
   awaiting Bill's go — one-off lane when he calls it).
-- Mia partition proposal (agreed direction, not yet running): Mia BUILDS new
+- Mai partition proposal (agreed direction, not yet running): Mai BUILDS new
   scope (new ring/expansions, ids outside av-mason-*), Arthur REFINES the
   existing 60. Disjoint ids, disjoint plan files, disjoint prefixes. Never
   run both agents on the same prompt text — that was the mirror-night bug.
