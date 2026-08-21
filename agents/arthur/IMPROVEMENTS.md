@@ -3187,4 +3187,8 @@ fixes ≈ 6 F.)
 
 - [fork-1] commons-next world born — seed log on celestine (genesis/owner-grant/terrain seed 8128, size 224, segments 240, amp 0.16, flatRadius 24); lazy-load verified live (HTTP 200, entities empty), commons untouched at 200 entities; probe 404 on unknown world name confirms the seed log made it real (D+0, E+0)
 
-**Running total: 2368512 / 2000000**
+- [nv-1] plaza staked in commons-next — the beloved three placed from live commons libs and verified: nx-hearth (0,0), nx-welcome (-3,-4.3) yaw .609, nx-carousel (-18.8,25.9) yaw 2.514; comps deliberately deferred to post-eye-check tick; Bill standing in-world during placement (D+0, E+3)
+
+- [nv-2] plaza trio comp bags applied verbatim from fresh commons /geom reads: nx-carousel 7 comps (platform spin 6deg/s, four horse bobs, four horse sockets, particles smoke at identical world offset), nx-hearth 4 comps (embers preset, well-arm pendulum, five sockets incl the four log seats and tale_seat, kettle pendulum), nx-welcome kept empty as in commons; two lights placed: nx-plaza-l at plaza center carrying av-plaza authored params read from the commons world log (color 0xffcc80, intensity 2.5, range 7) and nx-welcome-l warm-modest over the board; 13 paced verbs, live /geom census plus log param readback all PASS (D+0, E+2)
+
+**Running total: 2368517 / 2000000**
