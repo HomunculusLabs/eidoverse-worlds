@@ -3223,4 +3223,6 @@ fixes ≈ 6 F.)
 
 - [nvp-16] full court ensemble atomic placement: five exact reviewed hashes/poses uploaded and spawned through one fail-closed placer, corrected entity-local oven smoke plus valid 84-count coal-bed embers and coal motion restored; live census confirms every lib/bbox/bag, placer rerun performs zero uploads/verbs, real MCPL body passes bakery and workshop doors both directions at 0.34m arrival. Exact-hash combined eight-frame daylight/night/motion harness shows coherent attached signs, apron-clear cistern, flush forge and open working yard with no visual regression; commons/mx untouched; verification 28 of 29 plus corrected 6 of 6 docs/live/gate pass (D+0, E+0)
 
+- [nvp-17] round tower-house review: deterministic exact hash, 18-draw/deep audit, six-frame all-side/night gate, full commons study-socket reconciliation and flat-seat SAT/rim/sightline proof. Highest-value defect was structural: seven ladder rungs reached y3.12 but a solid upper-floor slab sealed the landing; source now uses four slabs around a real 1.30-by-1.40m hatch containing both rails, while 1.48m door, 0.20m threshold, aprons, balcony and exterior silhouette remain coherent. Twenty-four-check proof passes; ARTHUR_REVIEWED_READY under shutter hold; target untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

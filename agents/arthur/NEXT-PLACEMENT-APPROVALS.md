@@ -198,3 +198,21 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T16:37:20Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-16 — exact double-sided smithy sign hash/yaw at workshop east-wall mount live, sharing court base-y; empty bag and forge/apron clearances verified; combined side/back evidence confirms attachment.`
+
+### nx-tower — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkv3-ring.ts` (tower section)
+- Output: `agents/arthur/assets/village_tower3.glb`
+- SHA-256: `38f50c9f4fea4583b2b8917752cfec0ef550f0aafb410fcbbd0e92994b186e2c`
+- Proposed pose: `pos [14.1,0,16.9], yaw -2.44347, scale 1`
+- Bounds / nodes / materials: `6.7572 × 8.30 × 6.85m; 18 GLB nodes / 18 draws; timber + glow1/glow2/glow3 and flat structural buckets; 112,152 bytes`
+- Component compatibility: `PASS — preserve exact commons study socket {pos:[-1.35,3,-0.5],yaw:-1.5707963267948966}; no named part required`
+- Structural checks: `PASS after repair — deterministic rebuild ×2; 0 degenerate triangles; 0 NaNs; 0 floating clusters; 1.48m clear door; 0.20m threshold; both aprons and door→ladder lane clear; source repaired from a sealed upper slab to a real 1.30×1.40m ladder hatch; proposed SAT/rim clear`
+- Visual checks: `PASS after repair — six-frame daylight/gameplay/night review; coherent two-level round landmark, complete balcony/rail and all-side silhouette; entry and quiet night beacons readable; no exterior regression from concealed floor repair`
+- Highest-value finding: `FIXED — seven ladder rungs reached the upper deck but the inherited solid floor slab sealed the landing. Four floor slabs now preserve the room around an open hatch containing both rails/rungs.`
+- Evidence: `agents/arthur/reviews/nx-tower/REVIEW.md`, `contact-sheet.jpg`, and `hatch-proof.png`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T17:06:05Z`
+- Placement state: `UNCONSUMED — tower-ensemble hold until shutters are independently reviewed-ready`
+- Placement evidence: ``
