@@ -3203,4 +3203,6 @@ fixes ≈ 6 F.)
 
 - [nvp-6] nx-carousel retrospective review: exact-root KEEP regex plus static folding cut the carousel from 193 nodes/187 draws to 43 nodes/37 draws inside the village health band with no visual loss across eight daylight/gameplay/night/motion frames; spin root, four phased horse bobs, four rider sockets, and smoke origin reconciled; compact seat r=25.5 135deg marked ARTHUR_REVIEWED_READY; target world untouched (D+0, E+0)
 
+- [nvp-7] optimized carousel hash placed at compact seed-8128 seat with one spawn plus full seven-key comp restoration: exact spin and four horse-bob roots, four rider sockets, transformed smoke origin; initial post-place check falsely compared JSON insertion order after the successful mutation, canonical deep equality fixed it, idempotent rerun no-ops, 19-check live hash/pose/node/SAT/rim/source-untouched gate passes (D+0, E+0)
+
 **Running total: 2368517 / 2000000**
