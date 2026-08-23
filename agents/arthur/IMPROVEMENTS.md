@@ -3197,4 +3197,6 @@ fixes ≈ 6 F.)
 
 - [nvp-3] nx-hearth placement tick closed idempotently: reviewed full hash, exact live pose/bbox/component tuple, rotated-SAT and rim clearance, hash-bound visual evidence, and standing gate all re-proved; zero spawn verbs because the approved tuple was already live, avoiding needless component wipe (D+0, E+0)
 
+- [nvp-4] nx-welcome review: deterministic rebuild, exact source/target reconciliation, focused deep audit, rotated-SAT seat check, and six-frame visual gate exposed the promised THE COMMONS face as one blank bar; source repaired with a real raised 3x5 COMMONS inscription at unchanged five-node budget, re-rendered and marked ARTHUR_REVIEWED_READY; target world untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**
