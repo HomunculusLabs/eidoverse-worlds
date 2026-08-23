@@ -144,3 +144,21 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T15:53:52Z`
 - Placement state: `UNCONSUMED — ensemble hold until cistern, bakery sign, and smithy sign are reviewed-ready`
 - Placement evidence: ``
+
+### nx-cistern — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkv3-bakery-cistern97.ts`
+- Output: `agents/arthur/assets/village_bcistern3.glb`
+- SHA-256: `85d956f6600f336d11666b59d53d8e5a889a793aa1b26cbce27b5d993f903f8d`
+- Proposed pose: `pos [15.703583236444484,0,-14.586880611718946], yaw -0.90756, scale 1; corrected court-local [-1.8,0,2.65]`
+- Bounds / nodes / materials: `1.66623 × 0.75553 × 0.83m; 4 GLB nodes / 4 draws; stone/timber/iron + flat water; 39,696 bytes`
+- Component compatibility: `PASS — commons source bag empty; candidate has no component targets`
+- Structural checks: `PASS after repair — deterministic rebuild ×2; 0 degenerate triangles; 0 NaNs; 0 floating clusters; furniture-scale grounded collider; corrected local extents clear court wall/roof/furnishings, both 1.4m lanes, both bakery aprons, reviewed forge, live field, and rim`
+- Visual checks: `PASS after repair — six-frame daylight/gameplay/night review; open water, scoop, stone tank and leaning lid coherent from all sides; appropriately subordinate`
+- Highest-value finding: `FIXED — inherited local anchor [-2.949,1.980] blocked the bakery threshold and both aprons. Accepted [-1.8,2.65] seat clears them by 0.15m; lid also reseated from floating shallow rails to grounded grade→rim support.`
+- Evidence: `agents/arthur/reviews/nx-cistern/REVIEW.md` and `agents/arthur/reviews/nx-cistern/contact-sheet.jpg`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T16:03:53Z`
+- Placement state: `UNCONSUMED — ensemble hold until bakery sign and smithy sign are reviewed-ready`
+- Placement evidence: ``

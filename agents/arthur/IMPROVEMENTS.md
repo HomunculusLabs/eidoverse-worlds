@@ -3215,4 +3215,6 @@ fixes ≈ 6 F.)
 
 - [nvp-12] smithy forge annex review: deterministic exact hash, 10-node/deep audit, eight-frame all-side/night/motion gate, court-local flush SAT and live-field/rim checks; model coherent with exact fire_fg_coals anchor and honest 0.014m bob, but inherited particles bag used ignored scale:0.6 and defaulted 140 embers to entity origin—review contract replaces it with valid 84-count entity-local [0,0.45,0.42] coal-bed emitter; marked ARTHUR_REVIEWED_READY under court-ensemble hold; target world untouched (D+0, E+0)
 
+- [nvp-13] bakery cistern review: deterministic four-node/deep audit and six-frame all-side gate found shallow lid floating 13cm and reading as detached rails; source re-angled/reseated lid plus battens grade-to-rim at min-y zero. Numerical seat gate then falsified inherited local [-2.949,1.980] as blocking bakery threshold and both aprons; corrected [-1.8,2.65] seat clears apron by 0.15m and low wall by 0.21m, with water/scoop identity, live-field/rim and 21-check proof passing; marked ARTHUR_REVIEWED_READY under ensemble hold; target world untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**
