@@ -105,10 +105,11 @@ Work on exactly one model.
 
 ## QUEUE — ONE SUBJECT AT A TIME
 
-1. Retrospective review of already-staked `nx-hearth`, `nx-welcome`, and
-   `nx-carousel`. Do not move/delete one until its Arthur review is complete;
-   any reseat still occurs on the later, separately verified placement tick. Carousel's
-   proposed compact seat is `r=25.5, 135°` → `(-18.0, y, 18.0)`, yaw 2.35619.
+1. Retrospective review of the staked plaza trio: `nx-hearth` PLACED_VERIFIED
+   (nvp-3), `nx-welcome` PLACED_VERIFIED (nvp-5), `nx-carousel`
+   ARTHUR_REVIEWED_READY at the optimized 43-node hash (nvp-6). Next action:
+   the placement tick for carousel at its compact seat `r=25.5, 135°` →
+   `(-18.0, y, 18.0)`, yaw 2.35619, with full comp-bag capture/re-apply.
 2. Four-way approach lamps. The inherited `village_streetlamps3.glb` contains
    eight lamps and DOES NOT match the plan. Rebuild/review a four-lamp asset at
    cardinal r=10 before marking it reviewed-ready.
