@@ -139,11 +139,12 @@ NW quadrant with common inward yaw `2.35619449`. Exact-source-bbox proof gives
 inner edge `66.403942m`, outer corner `107.963212m`, minimum pair SAT gap
 `0.652057m`, and center-law margin `0.741193m`.
 
-Selected landmark candidate: `nx-cultivation-orchard-0033`, sourced from
-read-only `commons / av-mason-0033`, planned at
-`[-61.871843354, heightAt, 61.871843354]`. It remains `CANDIDATE`: the next
-single-model review must repair its obscured human-scale orchard aisle before
-any placement tick.
+Selected landmark: `nx-cultivation-orchard-0033`, sourced from read-only
+`commons / av-mason-0033`, reviewed at
+`[-61.871843354, 0.02514020801364989, 61.871843354]`. `nvp-24` repaired its
+obscured arrival with a 1.65m full-depth aisle and 2.18m gate, then caught and
+raised a low lintel to 2.30m underside. Exact `a3bb3487...` tuple is
+`ARTHUR_REVIEWED_READY`; next wakeup places only this landmark.
 
 ## 5. Mai's district
 

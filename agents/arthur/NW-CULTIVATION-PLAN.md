@@ -1,6 +1,6 @@
 # NW CULTIVATION DISTRICT PLAN — nvp-23
 
-Status: `SLOTS_VERIFIED / LANDMARK_SELECTED / NO WORLD MUTATION`
+Status: `SLOTS_VERIFIED / LANDMARK ARTHUR_REVIEWED_READY / NO WORLD MUTATION`
 
 Canonical verifier: `agents/arthur/next-plan-nw-cultivation.ts`
 
@@ -33,7 +33,7 @@ This is a planned district, not a copy of the saturated commons sunflower seats.
 | `av-mason-0053` | `nx-cultivation-lavender-0053` | lavender | -24.823800969 | 77.240493873 | 2.35619449 | `work_1673_lavender.glb` |
 | `av-mason-0012` | `nx-cultivation-orchard-0012` | orchard | -88.734689257 | 35.796819057 | 2.35619449 | `work_1692_orchard.glb` |
 | `av-mason-0020` | `nx-cultivation-orchard-0020` | orchard | -75.254985408 | 43.897796381 | 2.35619449 | `work_1640_orchard.glb` |
-| `av-mason-0033` | `nx-cultivation-orchard-0033` | **orchard landmark** | -61.871843354 | 61.871843354 | 2.35619449 | `work_1653_orchard.glb` |
+| `av-mason-0033` | `nx-cultivation-orchard-0033` | **orchard landmark — REVIEWED_READY** | -61.871843354 | 61.871843354 | 2.35619449 | `village_cultivation_orchard_0033.glb` |
 | `av-mason-0046` | `nx-cultivation-orchard-0046` | orchard | -43.207549854 | 82.122368283 | 2.35619449 | `work_1666_orchard.glb` |
 | `av-mason-0059` | `nx-cultivation-orchard-0059` | orchard | -30.892702603 | 91.674106690 | 2.35619449 | `work_1679_orchard.glb` |
 | `av-mason-0011` | `nx-cultivation-garden-0011` | garden | -85.982440867 | 52.800436926 | 2.35619449 | `work_1691_garden.glb` |
@@ -53,7 +53,7 @@ Fresh `next-plan-nw-cultivation.ts` result:
 - every center lies in the NW quadrant;
 - minimum work inner edge: `66.403942201m` ≥ `66m`;
 - maximum work outer corner: `107.963212434m` ≤ `108m`;
-- minimum pairwise rotated-SAT gap: `0.652057367m`;
+- minimum pairwise rotated-SAT gap: `0.653457607m`;
 - minimum center-distance-law margin: `0.741193198m`;
 - zero pair overlaps;
 - common inward-facing yaw retained;
@@ -91,10 +91,10 @@ Evidence: `agents/arthur/reviews/nw-cultivation-selection/orchard-candidates.jpg
 
 ### One defect reserved for the single-model REVIEW tick
 
-At 18m, even the selected orchard reads too much like a generic grove: the quincunx rows are occluded by a continuous canopy and there is no unmistakable human-scale arrival aisle. The next wakeup must address **only that defect**—open and construct a legible central orchard aisle/threshold—then rebuild twice and perform the full single-model structural, source-component, exact-seat, and visual review. The inherited hash is therefore `CANDIDATE`, not reviewed-ready.
+At 18m, the selected inherited orchard read too much like a generic grove: the quincunx rows were occluded by a continuous canopy and there was no unmistakable human-scale arrival aisle. `nvp-24` repaired exactly that defect with a 30-tree six-column orchard, 1.65m full-depth soil aisle and 2.18m threshold. The first lintel failed the avatar head band and was raised to a 2.30m underside before acceptance. Final exact hash: `a3bb3487b355bf2dabc699aee3f16c234a11ac97d980e87d79143f3a91df30a7`.
 
 ## Next state
 
-`nx-cultivation-orchard-0033: CANDIDATE → next wakeup REVIEW`
+`nx-cultivation-orchard-0033: ARTHUR_REVIEWED_READY → next wakeup PLACE`
 
 No other cultivation work may be reviewed or placed behind it.

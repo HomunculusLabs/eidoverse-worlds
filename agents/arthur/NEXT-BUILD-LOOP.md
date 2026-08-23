@@ -131,9 +131,12 @@ Work on exactly one model.
    No third mass needed. DISTRICT RING OPEN.
 7. NW Cultivation planned (`nvp-23`): 14 exact orchard/garden/lavender slots
    pass annulus/rim/SAT/center laws. Landmark `nx-cultivation-orchard-0033`
-   selected at `[-61.871843354,heightAt,61.871843354]`, still `CANDIDATE`.
-   NEXT: REVIEW only that orchard; repair its obscured arrival aisle, rebuild
-   twice, and stop at ARTHUR_REVIEWED_READY. Do not begin another ring work.
+   selected at `[-61.871843354,heightAt,61.871843354]`.
+8. `nx-cultivation-orchard-0033` ARTHUR_REVIEWED_READY (`nvp-24`): exact
+   `a3bb3487...` four-draw orchard repairs the obscured arrival with a 1.65m
+   aisle and 2.18m gate; verifier caught/raised low lintel; exact district SAT,
+   avatar lane/aprons, deep and visual gates pass. NEXT: PLACE only this exact
+   tuple and walk its aisle both ways. Do not begin another ring work.
 
 ## PLACEMENT COORDINATES
 

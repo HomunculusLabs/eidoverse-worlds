@@ -269,15 +269,22 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 
 ## District queue
 
-### nx-cultivation-orchard-0033 — CANDIDATE
+### nx-cultivation-orchard-0033 — ARTHUR_REVIEWED_READY
 
 - District: `NW Cultivation landmark`
 - District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
-- Source maker: `agents/arthur/assets/mason.ts` → `composeOrchard`
-- Inherited output: `agents/arthur/mason/glb-retex/work_1653_orchard.glb`
-- Inherited SHA-256: `7044745d293cc340c080d18557eebe9e9b26d4a0625cdde01be3d3b134c4c80f`
-- Proposed slot: `pos [-61.87184335382291,heightAt,61.87184335382291], yaw 2.35619449, scale 1`
-- Source reconciliation: `commons / av-mason-0033 exact hash; empty component bag; target id absent`
-- Selection evidence: `agents/arthur/reviews/nw-cultivation-selection/orchard-candidates.jpg`
-- Highest-value defect for next REVIEW: `continuous canopy hides quincunx identity and supplies no legible human-scale arrival aisle at 18m`
-- State: `CANDIDATE — not reviewed-ready; target world unchanged`
+- Source: `agents/arthur/assets/mkv3-cultivation-orchard-0033.ts`
+- Output: `agents/arthur/assets/village_cultivation_orchard_0033.glb`
+- SHA-256: `a3bb3487b355bf2dabc699aee3f16c234a11ac97d980e87d79143f3a91df30a7`
+- Proposed pose: `pos [-61.87184335382291,0.02514020801364989,61.87184335382291], yaw 2.35619449, scale 1`
+- Bounds / nodes / materials: `14.4602475 × 3.7914057 × 14.5m; 4 GLB nodes / 4 draws; textured timber + soil with flat living canopy/fruit; 225,072 bytes`
+- Component compatibility: `PASS — read-only commons / av-mason-0033 carries inherited 7044745d293cc340 hash with empty bag; revised candidate has no component targets; target id absent`
+- Structural checks: `PASS after focused repair — deterministic final rebuild ×3; 0 degenerates/NaNs/floating clusters; grounded outdoor auto-trimesh; 1.65m aisle and 2.18m gate; full 1.4m lane plus exterior/interior aprons have 0 blocking avatar-band verts; initial low lintel caught and raised to 2.30m underside; exact district SAT/rim retained`
+- Visual checks: `PASS — top/aerial/four-side/18m gameplay/night review; disciplined rows, continuous central soil aisle and inward threshold read immediately; all-side silhouette coherent and grounded`
+- Highest-value finding: `FIXED — inherited continuous canopy read as a generic grove with no human-scale arrival. Thirty-tree six-column orchard now frames a legible full-depth aisle; gate head-clear defect caught by verifier and corrected before acceptance.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-orchard-0033/REVIEW.md`, `contact-sheet.jpg`, and `before-after.jpg`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T19:21:03Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
