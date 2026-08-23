@@ -109,7 +109,7 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-10 — exact reviewed hash uploaded once and atomically instantiated as four cardinal models plus four separate warm lights. All model ids/hash/poses/yaws/scales/bboxes/empty bags verified from fresh /geom; exact light color/intensity/range verified from the authored light-verb history fold because /geom intentionally projects lights to identity + pose only. Initial post-place check falsely treated those omitted /geom fields as drift after the successful eight-verb mutation; verifier was corrected at the proper history boundary and idempotent rerun sent zero verbs. Micro-OBB/rim, standing gate, and hash-bound visual evidence passed.`
 
-### nx-court — ARTHUR_REVIEWED_READY
+### nx-court — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-ring.ts` (court section)
 - Output: `agents/arthur/assets/village_court3.glb`
@@ -124,10 +124,10 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T15:42:03Z`
-- Placement state: `UNCONSUMED — ensemble hold until forge, cistern, bakery sign, and smithy sign are all reviewed-ready`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-16 — five-member reviewed ensemble placed atomically. Exact court hash/pose/bbox plus corrected entity-local oven smoke verified live; both 2.2m openings passed real MCPL two-way walk tests at 0.34m arrival; exact-hash combined daylight/night/motion evidence shows open aprons and coherent satellites.`
 
-### nx-forge — ARTHUR_REVIEWED_READY
+### nx-forge — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-forge98.ts`
 - Output: `agents/arthur/assets/village_forge3.glb`
@@ -142,10 +142,10 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T15:53:52Z`
-- Placement state: `UNCONSUMED — ensemble hold until cistern, bakery sign, and smithy sign are reviewed-ready`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-16 — exact reviewed forge hash/flush pose live; motion:fire_fg_coals and corrected 84-count local coal-bed embers bag deep-equal verified; combined night/motion evidence preserves subordinate beacon and subtle bob.`
 
-### nx-cistern — ARTHUR_REVIEWED_READY
+### nx-cistern — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-bakery-cistern97.ts`
 - Output: `agents/arthur/assets/village_bcistern3.glb`
@@ -160,10 +160,10 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T16:03:53Z`
-- Placement state: `UNCONSUMED — ensemble hold until bakery sign and smithy sign are reviewed-ready`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-16 — exact repaired cistern hash at corrected apron-clear pose live with empty bag; combined evidence shows grounded lid/water/scoop beside bakery without closing either lane.`
 
-### nx-sign-bakery — ARTHUR_REVIEWED_READY
+### nx-sign-bakery — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-signs11.ts` (bakery section)
 - Output: `agents/arthur/assets/village_sign_bakery.glb`
@@ -178,10 +178,10 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T16:22:03Z`
-- Placement state: `UNCONSUMED — ensemble hold until smithy sign is reviewed-ready`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-16 — exact double-sided sign hash/yaw at corrected bakery west-wall mount live, empty bag verified; combined front/back/side evidence shows flush external attachment and approach readability.`
 
-### nx-sign-smithy — ARTHUR_REVIEWED_READY
+### nx-sign-smithy — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-signs11.ts` (smithy section)
 - Output: `agents/arthur/assets/village_sign_smithy.glb`
@@ -196,5 +196,5 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T16:37:20Z`
-- Placement state: `UNCONSUMED — all five court members ready; place only as the pre-declared atomic ensemble on a later wakeup`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-16 — exact double-sided smithy sign hash/yaw at workshop east-wall mount live, sharing court base-y; empty bag and forge/apron clearances verified; combined side/back evidence confirms attachment.`

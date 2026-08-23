@@ -3221,4 +3221,6 @@ fixes ≈ 6 F.)
 
 - [nvp-15] smithy blade-sign review: deterministic four-draw/deep audit, neutral-fill six-frame all-side gate, mount and live-field/rim proof; inherited sign was one-sided and detached behind bakery half. Source added explicit second bone face plus mirrored exported hammer/handle; corrected workshop east-wall mount [6.13,-1.4] shares court base-y, flush-touches wall, faces both court approaches and clears roof/forge by 2.18m/aprons by 1.70m. Twenty-four-check proof passes; all five court members now ARTHUR_REVIEWED_READY for later atomic placement; target untouched (D+0, E+0)
 
+- [nvp-16] full court ensemble atomic placement: five exact reviewed hashes/poses uploaded and spawned through one fail-closed placer, corrected entity-local oven smoke plus valid 84-count coal-bed embers and coal motion restored; live census confirms every lib/bbox/bag, placer rerun performs zero uploads/verbs, real MCPL body passes bakery and workshop doors both directions at 0.34m arrival. Exact-hash combined eight-frame daylight/night/motion harness shows coherent attached signs, apron-clear cistern, flush forge and open working yard with no visual regression; commons/mx untouched; verification 28 of 29 plus corrected 6 of 6 docs/live/gate pass (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

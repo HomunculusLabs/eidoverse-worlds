@@ -110,12 +110,11 @@ Work on exactly one model.
    entity-local smoke corrected + PLACED_VERIFIED (nvp-7/nvp-8).
 2. Four-way `nx-approach-lamps` PLACED_VERIFIED (`nvp-10`): four exact
    twin-lantern models plus four separately history-verified warm lights.
-3. Full court ensemble ARTHUR_REVIEWED_READY: court `nvp-11`, forge `nvp-12`,
-   cistern `nvp-13`, bakery sign `nvp-14`, smithy sign `nvp-15`. NEXT: place
-   all five as the pre-declared atomic ensemble with corrected component bags.
+3. Full court ensemble PLACED_VERIFIED (`nvp-16`): all five reviewed tuples
+   live with corrected smoke/embers; both 2.2m shed lanes passed two-way MCPL walks.
    The court is already the bakery + workshop; do not invent a duplicate bakery.
    Place only when every member is Arthur-reviewed-ready, as one pre-declared atomic ensemble.
-4. Tower ensemble: `village_tower3.glb`, then shutters separately; shared pose.
+4. NEXT: review `village_tower3.glb`, then shutters separately; shared pose.
 5. Roads/paths are designed around accepted seats after the core walk.
 6. Run an autonomous end-to-end core walk and visual audit, then open the 60-work
    ring if it passes. Bill may visit whenever he likes, but his review is not a blocker.

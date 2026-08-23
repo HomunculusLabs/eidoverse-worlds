@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
-World: `commons-next` — plaza/lamp field live; full court ensemble ARTHUR_REVIEWED_READY:
+World: `commons-next` — plaza/lamp field + full court ensemble PLACED_VERIFIED; tower review next:
 https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
@@ -76,11 +76,11 @@ placer still resolves live `heightAt` immediately before spawn.
 | welcome | existing | `(-3, y, -4.3)` | `0.6092` | `PLACED_VERIFIED` nvp-5 at revised COMMONS-inscription hash. |
 | carousel | `r≈25.456, 135°` | `(-18, 0.00014950061063032772, 18)` | `2.35619` | `PLACED_VERIFIED` nvp-7 at optimized 43-node hash; smoke origin contract-corrected to local `[0,6.3,0]` (nvp-8). |
 | tower-house | `r=22, 50°` | `(14.1, y, 16.9)` | `-2.44347` | North-east vertical anchor, inside the flat-radius ground. Shutters share exact pose/yaw. |
-| bakery/workshop court | `r=24, 322°` | `(18.9, -1.5946487083102603e-8, -14.8)` | `-0.90756` | `ARTHUR_REVIEWED_READY` nvp-11 at repaired apron-clear hash; both open shed faces turn toward the hearth. |
-| forge annex | court-local | `(22.11785473473295, 0, -7.957568494595163)` | `-0.90756` | `ARTHUR_REVIEWED_READY` nvp-12; exact local anchor `(7.373,0,1.677)`, flush 0.000382m clear of court. |
-| bakery cistern | court-local | `(15.703583236444484, 0, -14.586880611718946)` | `-0.90756` | `ARTHUR_REVIEWED_READY` nvp-13; corrected local anchor `(-1.8,0,2.65)` clears bakery threshold/aprons. |
-| bakery sign | court-local | `(14.022735609615019, 0, -18.768525175210893)` | `2.234032653589793` | `ARTHUR_REVIEWED_READY` nvp-14; corrected external west-wall mount `(-6.13,0,1.4)`, double-sided. |
-| smithy sign | court-local | `(23.777264390384975, -1.5946487083102603e-8, -10.831474824789108)` | `-0.90756` | `ARTHUR_REVIEWED_READY` nvp-15; corrected workshop east-wall mount `(6.13,0,-1.4)`, double-sided. |
+| bakery/workshop court | `r=24, 322°` | `(18.9, -1.5946487083102603e-8, -14.8)` | `-0.90756` | `PLACED_VERIFIED` nvp-16 at repaired apron-clear hash; both doors two-way walk-tested. |
+| forge annex | court-local | `(22.11785473473295, 0, -7.957568494595163)` | `-0.90756` | `PLACED_VERIFIED` nvp-16; flush gap + corrected coal emitter live. |
+| bakery cistern | court-local | `(15.703583236444484, 0, -14.586880611718946)` | `-0.90756` | `PLACED_VERIFIED` nvp-16 at corrected apron-clear seat. |
+| bakery sign | court-local | `(14.022735609615019, 0, -18.768525175210893)` | `2.234032653589793` | `PLACED_VERIFIED` nvp-16 at double-sided west-wall mount. |
+| smithy sign | court-local | `(23.777264390384975, -1.5946487083102603e-8, -10.831474824789108)` | `-0.90756` | `PLACED_VERIFIED` nvp-16 at double-sided east-wall mount. |
 
 This makes a deliberate three-anchor composition around the hearth: carousel
 NW, tower NE, working court SE, with the SW arrival meadow left open. Pairwise
@@ -157,10 +157,9 @@ readable from its lane at ~18m.
    193→43 node optimization, and entity-local smoke correction live.
 2. Four-way approach lamps PLACED_VERIFIED (`nvp-10`): four exact two-draw
    models plus four separately verified warm lights at cardinal r=10.
-3. Full court ensemble individually reviewed-ready: court `nvp-11`, forge
-   `nvp-12`, cistern `nvp-13`, bakery sign `nvp-14`, smithy sign `nvp-15`.
-   Next wakeup places all five atomically, then two-way walk-tests both open shed lanes.
-4. Review tower and shutters separately; place at the shared pose only after
+3. Full court ensemble PLACED_VERIFIED (`nvp-16`): all five exact tuples live,
+   corrected smoke/embers present, both shed lanes passed two-way MCPL walks.
+4. Next: review tower and shutters separately; place at the shared pose only after
    both pass; two-way walk-test the 1.4m door lane and inspect the study at night.
 5. Draw roads and paths around the accepted seats, never the reverse.
 6. Run Arthur's live core walk and end-to-end visual audit. Open the 60-work
