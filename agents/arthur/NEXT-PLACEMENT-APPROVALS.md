@@ -1,15 +1,14 @@
-# COMMONS-NEXT PLACEMENT APPROVALS
+# COMMONS-NEXT PLACEMENT REVIEWS
 
-This is the fail-closed handoff between model review and target-world placement.
-A review packet is not permission to place. Only Bill may change a packet's
-`Bill decision` from `PENDING` to `APPROVED` (or direct Arthur to record that
-approval from the foreground conversation).
+This is the fail-closed handoff between Arthur's model-review tick and the
+later target-world placement tick. The filename is retained for continuity,
+but Bill explicitly does not want to review each model. Arthur owns this gate.
 
-Approval binds the exact tuple:
+Readiness binds the exact tuple:
 
 `subject id + SHA-256 + proposed world pose/yaw/scale`
 
-Any rebuilt hash or changed pose returns the subject to `PENDING`. After a
+Any rebuilt hash or changed pose returns the subject to `CANDIDATE`. After a
 successful live placement and verification, change `Placement state` from
 `UNCONSUMED` to `CONSUMED` and record the nvp-N tag and live evidence.
 
@@ -27,14 +26,14 @@ successful live placement and verification, change `Placement state` from
 - Visual checks: `<daylight angles, gameplay distance, night/motion when relevant>`
 - Highest-value finding: `<one finding, or NONE with evidence>`
 - Evidence: `<paths or live frame references>`
-- Bill decision: `PENDING | APPROVED | REJECTED`
-- Approval date: `<ISO date or blank>`
+- Arthur decision: `ARTHUR_REVIEWED_READY | REJECTED`
+- Review date: `<ISO date>`
 - Placement state: `UNCONSUMED | CONSUMED`
 - Placement evidence: `<nvp-N and verification references or blank>`
 
-## Current approvals
+## Current reviews
 
-### nx-hearth — REVIEWED_READY
+### nx-hearth — ARTHUR_REVIEWED_READY
 
 - Source: `agents/arthur/assets/mkv3-plaza.ts`
 - Output: `agents/arthur/assets/village_plaza3.glb`
@@ -46,11 +45,12 @@ successful live placement and verification, change `Placement state` from
 - Visual checks: `PASS — four daylight angles, 18m gameplay silhouette, night emissive read, and motion interval pair captured; complete from all sides and grounded`
 - Highest-value finding: `No blocking source defect. Low horizontal landmark needs paths/lamps/principal masses for village-scale readability; do not enlarge it to compensate for the empty world.`
 - Evidence: `agents/arthur/reviews/nx-hearth/REVIEW.md` and `agents/arthur/reviews/nx-hearth/contact-sheet.jpg`
-- Bill decision: `PENDING`
-- Approval date: ``
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T13:03:33Z`
 - Placement state: `UNCONSUMED`
 - Placement evidence: ``
 
-The remaining nv-1/nv-2 stake predates this gate. `nx-welcome` and
+The remaining nv-1/nv-2 stake predates this review gate. `nx-welcome` and
 `nx-carousel` require retrospective review before any move, replacement, or
 claim that the plaza composition is accepted.

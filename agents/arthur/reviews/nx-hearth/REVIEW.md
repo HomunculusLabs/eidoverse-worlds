@@ -48,4 +48,7 @@ No blocking source defect. The important limitation is contextual: the low heart
 
 ## Verdict
 
-`REVIEWED_READY` for the exact hash and unchanged center pose above. Bill decision remains pending. No placement, replacement, or world mutation occurred during this review.
+`ARTHUR_REVIEWED_READY` for the exact hash and unchanged center pose above.
+Bill explicitly delegated routine model review and placement to Arthur.
+No human approval is required. No placement, replacement, or world mutation
+occurred during this review.

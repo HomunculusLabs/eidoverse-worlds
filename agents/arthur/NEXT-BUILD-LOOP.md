@@ -1,7 +1,8 @@
-# COMMONS-NEXT INSPECT → APPROVE → PLACE LOOP — canonical prompt (nvp-N)
+# COMMONS-NEXT INSPECT → PLACE LOOP — canonical prompt (nvp-N)
 
-This supersedes the nv-N bulk-build prompt. It is deliberately slow: one
-model, one evidence packet, one human approval, one later placement.
+This supersedes the nv-N bulk-build prompt and the earlier per-model Bill
+approval gate. Bill explicitly does NOT want to review each model. Arthur owns
+model review and placement; review and placement still happen on separate ticks.
 
 ---8<--- LOOP PROMPT ---8<---
 
@@ -11,7 +12,7 @@ Load skill `eidoverse-world-building` FIRST.
 Repo: `/Users/t3rpz/projects/eidoverse-worlds`
 Target: `commons-next` (`https://eidoverse.billding.dev/?world=commons-next`)
 Canonical plan: `agents/arthur/NEW-VILLAGE-PLAN.md`
-Approval ledger: `agents/arthur/NEXT-PLACEMENT-APPROVALS.md`
+Review ledger: `agents/arthur/NEXT-PLACEMENT-APPROVALS.md` (legacy filename)
 
 NEVER modify world `commons`; it is read-only reference.
 NEVER touch `mx-` ids; that is Mai's ground.
@@ -23,7 +24,7 @@ per wakeup. English report, concise. Bill alone may end the loop.
 Place only coherent, finished models. Technical validity is necessary but
 not sufficient. Every candidate moves through this state machine:
 
-`CANDIDATE → REVIEWED_READY → BILL_APPROVED → PLACED_VERIFIED`
+`CANDIDATE → ARTHUR_REVIEWED_READY → PLACED_VERIFIED`
 
 Review and placement MUST occur on different wakeups. A model cannot be
 reviewed and spawned into `commons-next` in the same turn.
@@ -44,14 +45,14 @@ reviewed and spawned into `commons-next` in the same turn.
 
 ## MODE SELECTION
 
-### A. PLACE an approved model
+### A. PLACE an Arthur-reviewed model
 
-Choose this mode only when the approval ledger contains an unconsumed
-`APPROVED` record with all of: subject id, exact SHA-256, exact proposed pose,
-approver `Bill`, and approval date. Approval of one hash or pose does not
-transfer to a rebuilt hash or changed pose.
+Choose this mode only when the review ledger contains an unconsumed
+`ARTHUR_REVIEWED_READY` record with all of: subject id, exact SHA-256, exact
+proposed pose, reviewer `Arthur`, and review date. Readiness of one hash or pose
+does not transfer to rebuilt bytes or a changed pose.
 
-1. Rebuild once and prove the GLB still matches the approved SHA-256. Mismatch
+1. Rebuild once and prove the GLB still matches the reviewed SHA-256. Mismatch
    means stop and return the subject to review; never substitute new bytes.
 2. Re-fetch the target world and run bbox/rotated-SAT clearance at the planned
    pose. For enterable buildings, preflight the 1.4m door lane and both 2m ×
@@ -67,7 +68,7 @@ transfer to a rebuilt hash or changed pose.
 7. Take a fresh target-world visual frame at gameplay distance; add a night
    frame and interval pair when light/motion matters. If the live result is
    visually wrong, report the regression plainly and do not mark placed.
-8. Mark the approval record `CONSUMED` only after all checks pass.
+8. Mark the review record `CONSUMED` only after all checks pass.
 
 ### B. REVIEW the next candidate
 
@@ -95,27 +96,30 @@ Use this mode when no unconsumed approval is ready. Work on exactly one model.
 7. Test the proposed pose numerically against the canonical coordinate sheet:
    terrain height, rotated bbox clearance, sightline to hearth, approach lane,
    and pairwise spacing. A good model at a bad seat is not ready.
-8. Write a `REVIEWED_READY` evidence packet into the approval ledger containing
+8. Write an `ARTHUR_REVIEWED_READY` evidence packet into the review ledger containing
    subject, exact SHA-256, source, output, node/bounds/material summary,
    component compatibility, proposed pose, visual findings, and evidence paths.
-   Leave `Bill decision: PENDING`. STOP. Do not place it this wakeup.
+   reviewer `Arthur`, review date, and `Placement state: UNCONSUMED`. STOP. Do
+   not place it this wakeup; the next wakeup performs the independently gated place.
 
 ## QUEUE — ONE SUBJECT AT A TIME
 
 1. Retrospective review of already-staked `nx-hearth`, `nx-welcome`, and
-   `nx-carousel`. Do not move/delete them without a new approval. Carousel's
+   `nx-carousel`. Do not move/delete one until its Arthur review is complete;
+   any reseat still occurs on the later, separately verified placement tick. Carousel's
    proposed compact seat is `r=25.5, 135°` → `(-18.0, y, 18.0)`, yaw 2.35619.
 2. Four-way approach lamps. The inherited `village_streetlamps3.glb` contains
    eight lamps and DOES NOT match the plan. Rebuild/review a four-lamp asset at
-   cardinal r=10 before requesting approval.
+   cardinal r=10 before marking it reviewed-ready.
 3. Court ensemble, each model independently reviewed: `village_court3.glb`,
    `village_forge3.glb`, `village_bcistern3.glb`, bakery sign, smithy sign.
    The court is already the bakery + workshop; do not invent a duplicate bakery.
-   Place only when every member is approved, as one pre-declared atomic ensemble.
+   Place only when every member is Arthur-reviewed-ready, as one pre-declared atomic ensemble.
 4. Tower ensemble: `village_tower3.glb`, then shutters separately; shared pose.
 5. Roads/paths are designed around accepted seats after the core walk.
-6. STOP at the core eye-check. The 60-work ring does not open until Bill walks
-   and accepts the core. Thereafter each work follows this same review/approval law.
+6. Run an autonomous end-to-end core walk and visual audit, then open the 60-work
+   ring if it passes. Bill may visit whenever he likes, but his review is not a blocker.
+   Thereafter each work follows this same inspect-then-place law.
 
 ## PLACEMENT COORDINATES
 
@@ -136,9 +140,9 @@ summary and the plan differ, STOP and reconcile the prompt before acting.
 - Commit reviewed source/evidence or verified placement work with an `nvp-N`
   message. Do not push unless Bill asks.
 - Report: mode (REVIEW or PLACE), subject, exact hash, strongest visual finding,
-  checks actually run, whether the target world changed, and what Bill must decide.
-- HOLD LAW: if waiting on Bill, report the pending subject once and stop. Do not
-  manufacture audit ticks or begin a second subject behind an unresolved approval.
+  checks actually run, whether the target world changed, and the next autonomous step.
+- HOLD LAW: hold only on a real technical, safety, authority, or visual blocker.
+  Never hold routine model placement for Bill review; Bill explicitly delegated it.
 - `LOOP_COMPLETE`: NEVER. Only Bill says stop.
 
 ---8<--- END LOOP PROMPT ---8<---

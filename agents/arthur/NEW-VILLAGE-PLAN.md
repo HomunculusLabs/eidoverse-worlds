@@ -17,7 +17,7 @@ The nv-1/nv-2 stake proved transport and component restoration, but it did
 not prove that the target world reads as a coherent village. Three sparse
 models on a 224m disc read as nearly empty. From v2 onward, no new model is
 placed merely because it exists or passed a hash check. Every candidate must
-be inspected as a finished object, approved at an exact content hash, and
+be inspected as a finished object, accepted by Arthur at an exact content hash, and
 then seated on this coordinate plan.
 
 What carries over (proven assets): the 12 mason themes, the 7 material
@@ -62,9 +62,9 @@ core is therefore TWO principal building masses, not three:
 2. Tower-house (`village_tower3.glb`) with shutters at the identical pose.
 
 No inn or third building is implied. Add another principal mass only after
-Bill walks these two and names the missing function. Subtraction remains law.
+Arthur's live core walk identifies a missing function. Subtraction remains law.
 
-### 3.1 Coordinate sheet (proposed; approval-gated)
+### 3.1 Coordinate sheet (proposed; review-gated)
 
 Angles use the existing convention: 0° = +X/east, CCW positive. Building
 local +Z faces the hearth. All numbers below are design coordinates; the
@@ -99,8 +99,8 @@ Every model has two distinct states and two distinct ticks:
    four-angle daylight frames plus a gameplay-distance frame inspected;
    night frame and interval pair added when light or motion matters; highest-
    value defect fixed; exact SHA-256 and proposed pose recorded.
-2. `PLACED_VERIFIED`: Bill approved that exact hash and pose in
-   `NEXT-PLACEMENT-APPROVALS.md`; a later tick re-proved the hash, spawned via
+2. `PLACED_VERIFIED`: Arthur marked that exact hash and pose reviewed-ready in
+   `NEXT-PLACEMENT-APPROVALS.md` (legacy filename); a later tick re-proved the hash, spawned via
    a placer file, restored the full component bag, verified live hash/pose/
    components, and took a fresh target-world visual frame.
 
@@ -149,17 +149,19 @@ readable from its lane at ~18m.
 ## 8. Build order + verification
 
 1. Freeze new placement. Retrospectively review the already-staked hearth,
-   welcome board, and carousel; do not move or delete one without Bill's call.
+   welcome board, and carousel; do not move or delete one until its Arthur
+   review is complete and a later placement tick re-proves the tuple.
 2. Review and rebuild the four-way approach-lamp asset; place only after its
-   exact hash and four cardinal seats are approved.
+   exact hash and four cardinal seats are Arthur-reviewed-ready.
 3. Review the court ensemble one model at a time: court, forge, cistern,
    bakery sign, smithy sign. Place the ensemble only after every member is
-   individually approved; then two-way walk-test both open shed lanes.
+   individually Arthur-reviewed-ready; then two-way walk-test both open shed lanes.
 4. Review tower and shutters separately; place at the shared pose only after
    both pass; two-way walk-test the 1.4m door lane and inspect the study at night.
 5. Draw roads and paths around the accepted seats, never the reverse.
-6. Hold for Bill's core walk. Only then open the 60-work district queue.
-7. Ring lift-in remains one reviewed work per approval, capture/reapply comps
+6. Run Arthur's live core walk and end-to-end visual audit. Open the 60-work
+   district queue when that gate passes; Bill review is optional, never blocking.
+7. Ring lift-in remains one reviewed work per placement tick, capture/reapply comps
    by placer FILES, with district sweep after each accepted cluster.
 8. Mai's `mx-` district remains untouched. Keeper phase 1 and public-link swap
    remain Bill-only decisions. Finish with the end-to-end audit protocol.
@@ -169,6 +171,6 @@ world gets its own HEAD-gate consideration when its first lane opens.
 
 ## 9. Open decisions for Bill
 
-- Approve/reject each `REVIEWED_READY` hash and pose; no blanket approval.
-- After the two-building core walk: is one more principal mass actually needed?
-- Keeper phase-1 timing, public-link swap, and Mai's district remain deferred.
+- Arthur owns per-model review, acceptance, and placement; Bill does not review each item.
+- After the autonomous two-building core walk: add a third mass only if a function is missing.
+- Keeper phase-1 timing, public-link swap, and Mai's district remain Bill-only decisions.

@@ -3193,4 +3193,6 @@ fixes ≈ 6 F.)
 
 - [nvp-1] inspect-before-place retrospective review of nx-hearth: deterministic exact-hash rebuild, full GLB/deep audit, fresh commons-to-commons-next component reconciliation, eight-frame local visual evidence, and REVIEWED_READY packet; target world untouched (D+0, E+0)
 
+- [nvp-2] operator correction: Bill delegated routine per-model review and placement to Arthur; loop, plan, review ledger, and hearth verdict converted from ceremonial human approval to autonomous inspect-then-place while preserving separate ticks and all technical/visual gates (D+0, E+0)
+
 **Running total: 2368517 / 2000000**
