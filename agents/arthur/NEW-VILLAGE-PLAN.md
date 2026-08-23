@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
-World: `commons-next` — plaza trio PLACED_VERIFIED; four-way lamps ARTHUR_REVIEWED_READY:
+World: `commons-next` — plaza trio + four-way lamps PLACED_VERIFIED; court review next:
 https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
@@ -155,9 +155,9 @@ readable from its lane at ~18m.
 
 1. Entire plaza trio PLACED_VERIFIED through `nvp-8`; carousel compact reseat,
    193→43 node optimization, and entity-local smoke correction live.
-2. Four-way approach-lamp asset reviewed-ready at exact two-draw twin-lantern
-   hash (`nvp-9`); next tick places the four models + four lights atomically.
-3. Review the court ensemble one model at a time: court, forge, cistern,
+2. Four-way approach lamps PLACED_VERIFIED (`nvp-10`): four exact two-draw
+   models plus four separately verified warm lights at cardinal r=10.
+3. Next: review the court ensemble one model at a time: court, forge, cistern,
    bakery sign, smithy sign. Place the ensemble only after every member is
    individually Arthur-reviewed-ready; then two-way walk-test both open shed lanes.
 4. Review tower and shutters separately; place at the shared pose only after

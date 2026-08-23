@@ -90,7 +90,7 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-7 — optimized hash uploaded/spawned at exact compact seed-8128 height/yaw; all seven captured components reapplied with smoke origin rewritten to [-18,6.30014950061063,18]. Initial post-place verifier falsely failed because JSON.stringify treated object key order as semantic after the successful world mutation; placer equality was fixed to recursively canonicalize keys, rerun proved no-op idempotency, live hash/pose/bbox/43-node anchor bag/SAT/rim and standing gate all passed. nvp-8 correction: that world-space smoke origin violated the entity-relative ±8m particles contract (shared/particles.js normalizeOrigin clamps it, plume rendered ~11.3m off the ride in both worlds — latent since nv-2's verbatim copy from commons av-carousel); corrected to local [0,6.3,0] above the roof apex via the corrected placer (log seq 35), live bag deep-equal verified.`
 
-### nx-approach-lamps — ARTHUR_REVIEWED_READY
+### nx-approach-lamps — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-next-approach-lamp.ts`
 - Output: `agents/arthur/assets/village_approach_lamp.glb`
@@ -106,5 +106,5 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T15:22:21Z`
-- Placement state: `UNCONSUMED`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-10 — exact reviewed hash uploaded once and atomically instantiated as four cardinal models plus four separate warm lights. All model ids/hash/poses/yaws/scales/bboxes/empty bags verified from fresh /geom; exact light color/intensity/range verified from the authored light-verb history fold because /geom intentionally projects lights to identity + pose only. Initial post-place check falsely treated those omitted /geom fields as drift after the successful eight-verb mutation; verifier was corrected at the proper history boundary and idempotent rerun sent zero verbs. Micro-OBB/rim, standing gate, and hash-bound visual evidence passed.`

@@ -3209,4 +3209,6 @@ fixes ≈ 6 F.)
 
 - [nvp-9] four-way approach-lamp review: replaced inherited eight-lamp compound with one reusable two-draw iron/glow model at four exact cardinal seats plus four separately budgeted lights; six-frame visual gate found the first one-sided lantern vanished behind its post from the outward approach, source repaired to twin transverse lanterns at unchanged two-draw budget, deterministic hash/deep audit/micro-OBB/rim/evidence gates pass and ensemble marked ARTHUR_REVIEWED_READY; target world untouched; stale next-comps carousel smoke origin also healed against the entity-relative contract (D+0, E+0)
 
+- [nvp-10] four-way approach-lamp atomic placement: exact reviewed two-draw hash uploaded once, four cardinal models and four separately budgeted warm lights placed through one paced fail-closed placer; model hash/pose/yaw/bbox/empty bags verified by fresh geom and light color/intensity/range by authored history fold because geom intentionally omits those fields; initial verifier boundary corrected after successful eight-verb mutation, rerun no-ops, 22-check micro-OBB/plaza-clear/rim/visual/gate proof passes (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

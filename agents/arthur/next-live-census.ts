@@ -9,13 +9,18 @@ if (!res.ok) throw new Error(`GET ${url} -> HTTP ${res.status}`);
 const data: any = await res.json();
 const entities = (data.entities ?? []).filter((e: any) => !ONLY_ID || e.id === ONLY_ID).map((e: any) => ({
   id: e.id,
+  kind: e.kind,
   pos: e.pos,
   yaw: e.yaw,
   scale: e.scale,
   lib: e.lib,
+  color: e.color,
+  intensity: e.intensity,
+  range: e.range,
   bbox: e.bbox,
   compKeys: Object.keys(e.comp ?? {}).sort(),
   comp: e.comp ?? {},
 })).sort((a: any, b: any) => a.id.localeCompare(b.id));
 
 console.log(JSON.stringify({ world: WORLD, count: entities.length, entities }, null, 2));
+export {};
