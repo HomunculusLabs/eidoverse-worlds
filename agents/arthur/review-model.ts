@@ -41,7 +41,7 @@ const r=Math.max(size.x,size.z,4); const target=new THREE.Vector3(0,Math.max(0.7
 const views={
  front:[0,Math.max(2.3,size.y*.55),r*2.05], right:[r*2.05,Math.max(2.3,size.y*.55),0],
  back:[0,Math.max(2.3,size.y*.55),-r*2.05], left:[-r*2.05,Math.max(2.3,size.y*.55),0],
- gameplay:[0,1.65,18]
+ gameplay:[0,1.65,18], aerial:[r*1.15,Math.max(8,r*1.3),r*1.15], top:[0,Math.max(10,r*2.15),0.001]
 };
 let phase=0;
 const carousel=root.getObjectByName('carousel');
@@ -80,7 +80,7 @@ try{
   page.on("requestfailed", r => console.error("REQUESTFAILED", r.url(), r.failure()?.errorText));
   await page.goto(`http://127.0.0.1:${addr.port}/`,{waitUntil:"networkidle"});
   await page.waitForFunction(()=> (window as any).reviewReady===true, undefined, { timeout: 30_000 });
-  for(const view of ["front","right","back","left","gameplay"]){await page.evaluate(v=>(window as any).setView(v),view);await page.screenshot({path:join(outDir,`${view}.png`)});}
+  for(const view of ["front","right","back","left","gameplay","aerial","top"]){await page.evaluate(v=>(window as any).setView(v),view);await page.screenshot({path:join(outDir,`${view}.png`)});}
   await page.evaluate(()=>{(window as any).setView("gameplay");(window as any).setNight(true)}); await page.screenshot({path:join(outDir,"night.png")});
   await page.evaluate(()=>{(window as any).setNight(false);(window as any).setView("front");(window as any).setMotionPhase(0)}); await page.screenshot({path:join(outDir,"motion-a.png")});
   await page.evaluate(()=> (window as any).setMotionPhase(Math.PI/2)); await page.screenshot({path:join(outDir,"motion-b.png")});

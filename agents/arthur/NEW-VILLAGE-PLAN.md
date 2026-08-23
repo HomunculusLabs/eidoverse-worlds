@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
-World: `commons-next` — minimal two-mass core PLACED_VERIFIED; paths/core audit next:
+World: `commons-next` — minimal core live; core paths ARTHUR_REVIEWED_READY:
 https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
@@ -169,6 +169,8 @@ readable from its lane at ~18m.
    shutters live at shared pose; study socket restored; door/ladder lane passed
    four-leg MCPL walk; exact-hash night composition passed without GUI control.
 5. Draw roads and paths around the now-accepted core seats, never the reverse.
+   `nx-core-paths` is `ARTHUR_REVIEWED_READY` (`nvp-20`): 75 manifested
+   pavers, four draws, zero live-footprint overlaps, SW meadow preserved.
 6. Run Arthur's live core walk and end-to-end visual audit. Open the 60-work
    district queue when that gate passes; Bill review is optional, never blocking.
 7. Ring lift-in remains one reviewed work per placement tick, capture/reapply comps

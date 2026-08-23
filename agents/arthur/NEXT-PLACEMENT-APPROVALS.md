@@ -234,3 +234,21 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T17:16:28Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-19 — exact tangent half-open shutter hash placed atomically at the tower's identical pose/yaw with an empty bag; live micro-bbox proves the y4 study-window mount. Exact-hash composition confirms left leaf against the drum, right half shut, exposed half-window, and restrained night read.`
+
+### nx-core-paths — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkv3-next-core-paths.ts`
+- Output: `agents/arthur/assets/village_next_core_paths.glb`
+- SHA-256: `9ce1378d47fd8a227a6935704d750266e73c4e902781df905ae5da251307560c`
+- Proposed pose: `pos [0,0,0], yaw 0, scale 1`
+- Bounds / nodes / materials: `32.5762 × 0.05898 × 29.1328m; 4 GLB nodes / 4 draws; four deterministic trodden-soil materials; 152,536 bytes; 75 manifested pavers`
+- Component compatibility: `PASS — new commons-next-only ground model; no component targets or bag`
+- Structural checks: `PASS after repair — deterministic GLB + manifest rebuild ×2; 0 degenerate/NaN geometry; shallow walkable trimesh; exact 75-paver micro-SAT against all live footprints has 0 overlaps and minimum clearance 0.179586m; endpoints stop at tower and both court exterior-apron edges; rim clear`
+- Visual checks: `PASS after repair — top/aerial/gameplay/night harness review; coherent cardinal spokes, lateral lamp bypasses, tower route, forked court route and NW carousel route; SW meadow remains open; non-emissive and visually subordinate`
+- Highest-value finding: `FIXED — first draft stopped/restarted across 2m gaps at three lamps and read as disconnected debris. Lateral bypasses restore continuity; a follow-up micro-SAT then widened all bypasses/start radius to remove hidden hearth/lamp near-collisions.`
+- Evidence: `agents/arthur/reviews/nx-core-paths/REVIEW.md`, `top.png`, `aerial.png`, `gameplay.png`, and `contact-sheet.jpg`; exact geometry manifest beside GLB`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T17:48:55Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
