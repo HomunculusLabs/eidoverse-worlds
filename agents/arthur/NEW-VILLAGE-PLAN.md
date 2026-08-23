@@ -131,6 +131,20 @@ the ring's compass points, each with one landmark work and shared dressing:
 Approach lanes: one per district, from the nearest spoke, lamp-lit, each work
 readable from its lane at ~18m.
 
+### 4.1 NW Cultivation exact slots (`nvp-23`)
+
+The first district is now planned in `agents/arthur/NW-CULTIVATION-PLAN.md`:
+14 exact source-to-target slots (5 orchard, 5 garden, 4 lavender), all in the
+NW quadrant with common inward yaw `2.35619449`. Exact-source-bbox proof gives
+inner edge `66.403942m`, outer corner `107.963212m`, minimum pair SAT gap
+`0.652057m`, and center-law margin `0.741193m`.
+
+Selected landmark candidate: `nx-cultivation-orchard-0033`, sourced from
+read-only `commons / av-mason-0033`, planned at
+`[-61.871843354, heightAt, 61.871843354]`. It remains `CANDIDATE`: the next
+single-model review must repair its obscured human-scale orchard aisle before
+any placement tick.
+
 ## 5. Mai's district
 
 - MAI gets the E rim beyond the ring (r ∈ [112, …] is rim; inside that her
@@ -173,9 +187,9 @@ readable from its lane at ~18m.
 6. CORE_AUDIT_PASS (`nvp-22`): 21 exact entities, 15 models, six authored
    lights, zero unclassified overlaps, 72/72 MCPL path/door/ladder legs, exact-hash
    full-core day/night composition accepted. No third principal mass needed.
-7. DISTRICT RING OPEN. Next define exact NW Cultivation slots and choose its
-   landmark candidate; ring lift-in remains one reviewed work per placement tick,
-   capture/reapply comps
+7. DISTRICT RING OPEN. NW Cultivation slots and landmark selection completed
+   (`nvp-23`). NEXT: REVIEW only `nx-cultivation-orchard-0033`; ring lift-in
+   remains one reviewed work per placement tick, capture/reapply comps
    by placer FILES, with district sweep after each accepted cluster.
 8. Mai's `mx-` district remains untouched. Keeper phase 1 and public-link swap
    remain Bill-only decisions. Finish with the end-to-end audit protocol.

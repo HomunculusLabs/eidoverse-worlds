@@ -128,8 +128,12 @@ Work on exactly one model.
    75-paver micro-clearance and 64/64 MCPL route legs pass; SW meadow stays open.
 6. CORE_AUDIT_PASS (`nvp-22`): exact census/light fold/model+paver SAT, 72/72
    MCPL route/door/ladder legs and harness-only full-core day/night composition pass.
-   No third mass needed. DISTRICT RING OPEN. NEXT: define exact NW Cultivation
-   slots and select its landmark candidate; each work follows inspect-then-place law.
+   No third mass needed. DISTRICT RING OPEN.
+7. NW Cultivation planned (`nvp-23`): 14 exact orchard/garden/lavender slots
+   pass annulus/rim/SAT/center laws. Landmark `nx-cultivation-orchard-0033`
+   selected at `[-61.871843354,heightAt,61.871843354]`, still `CANDIDATE`.
+   NEXT: REVIEW only that orchard; repair its obscured arrival aisle, rebuild
+   twice, and stop at ARTHUR_REVIEWED_READY. Do not begin another ring work.
 
 ## PLACEMENT COORDINATES
 

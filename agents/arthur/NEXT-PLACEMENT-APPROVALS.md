@@ -266,3 +266,18 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Strongest non-blocking limitation: `core remains intentionally sparse at ~48m scale; district ring must add distant context without filling the SW meadow`
 - Evidence: `agents/arthur/reviews/nx-core-audit/CORE-AUDIT.md` and `contact-sheet.jpg`; `agents/arthur/next-audit-core.ts`
 - Result: `DISTRICT RING OPEN — Arthur review/placement law continues one work per tick`
+
+## District queue
+
+### nx-cultivation-orchard-0033 — CANDIDATE
+
+- District: `NW Cultivation landmark`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source maker: `agents/arthur/assets/mason.ts` → `composeOrchard`
+- Inherited output: `agents/arthur/mason/glb-retex/work_1653_orchard.glb`
+- Inherited SHA-256: `7044745d293cc340c080d18557eebe9e9b26d4a0625cdde01be3d3b134c4c80f`
+- Proposed slot: `pos [-61.87184335382291,heightAt,61.87184335382291], yaw 2.35619449, scale 1`
+- Source reconciliation: `commons / av-mason-0033 exact hash; empty component bag; target id absent`
+- Selection evidence: `agents/arthur/reviews/nw-cultivation-selection/orchard-candidates.jpg`
+- Highest-value defect for next REVIEW: `continuous canopy hides quincunx identity and supplies no legible human-scale arrival aisle at 18m`
+- State: `CANDIDATE — not reviewed-ready; target world unchanged`
