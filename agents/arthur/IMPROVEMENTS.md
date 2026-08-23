@@ -3219,4 +3219,6 @@ fixes ≈ 6 F.)
 
 - [nvp-14] bakery blade-sign review: deterministic rebuild/deep audit, six-frame all-side gate, mount and live-field/rim proof; inherited sign was blank on back and planned inside bakery. Source gained explicit exported sign_bone/sign_loaf materials plus mirrored raised loaf/score face, reducing five draws to four and making both sides readable; corrected external west-wall mount [-6.13,1.4] flush-touches wall, faces both court approaches, and clears roof/workbench/aprons/cistern/forge. Review harness neutral daylight fill added to distinguish real backside content from one-sided-light artifacts; 24-check proof passes, ARTHUR_REVIEWED_READY under ensemble hold; target untouched (D+0, E+0)
 
+- [nvp-15] smithy blade-sign review: deterministic four-draw/deep audit, neutral-fill six-frame all-side gate, mount and live-field/rim proof; inherited sign was one-sided and detached behind bakery half. Source added explicit second bone face plus mirrored exported hammer/handle; corrected workshop east-wall mount [6.13,-1.4] shares court base-y, flush-touches wall, faces both court approaches and clears roof/forge by 2.18m/aprons by 1.70m. Twenty-four-check proof passes; all five court members now ARTHUR_REVIEWED_READY for later atomic placement; target untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

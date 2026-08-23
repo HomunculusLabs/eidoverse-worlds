@@ -180,3 +180,21 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T16:22:03Z`
 - Placement state: `UNCONSUMED — ensemble hold until smithy sign is reviewed-ready`
 - Placement evidence: ``
+
+### nx-sign-smithy — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkv3-signs11.ts` (smithy section)
+- Output: `agents/arthur/assets/village_sign_smithy.glb`
+- SHA-256: `d8df94003084af390e4f6ef0e15f5d13ade33f8e98ad101b7b0408a9dda577e0`
+- Proposed pose: `pos [23.777264390384975,-1.5946487083102603e-8,-10.831474824789108], yaw -0.90756, scale 1; corrected court-local [6.13,0,-1.4]`
+- Bounds / nodes / materials: `0.73 × 0.60 × 0.24m; 4 GLB nodes / 4 draws; iron/sign_bone/sign_handle + timber board; 38,572 bytes; authored y 1.85–2.45`
+- Component compatibility: `PASS — commons source bag empty; candidate has no component targets`
+- Structural checks: `PASS after repair — deterministic rebuild ×2; 0 degenerate triangles; 0 NaNs; 0 floating clusters; court-base-y wall mount; plate flush-touches workshop east exterior at x=6.10; clears roof, forge by >2.18m, workshop aprons by 1.70m, live field, and rim`
+- Visual checks: `PASS after repair — six-frame neutral-fill daylight/gameplay/night review; explicit second bone face and mirrored exported hammer make both sides readable; bracket construction complete`
+- Highest-value finding: `FIXED — inherited sign was one-sided and detached behind the bakery half. Accepted double-sided sign mounts on the workshop east wall behind the forge and reads from either court approach.`
+- Evidence: `agents/arthur/reviews/nx-sign-smithy/REVIEW.md` and `agents/arthur/reviews/nx-sign-smithy/contact-sheet.jpg`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T16:37:20Z`
+- Placement state: `UNCONSUMED — all five court members ready; place only as the pre-declared atomic ensemble on a later wakeup`
+- Placement evidence: ``
