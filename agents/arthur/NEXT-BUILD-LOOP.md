@@ -16,6 +16,11 @@ Review ledger: `agents/arthur/NEXT-PLACEMENT-APPROVALS.md` (legacy filename)
 
 NEVER modify world `commons`; it is read-only reference.
 NEVER touch `mx-` ids; that is Mai's ground.
+NEVER use `computer_use`, browser automation, or GUI steering in this loop.
+Operate through committed harness/API/MCPL files and deterministic exact-hash
+local renderers. If a live camera frame would require GUI control, state that
+the frame is unavailable and continue with API identity + hash-bound render
+evidence; do not open, navigate, or move Bill's apps.
 NEVER place more than one reviewed model or one pre-declared atomic ensemble
 per wakeup. English report, concise. Bill alone may end the loop.
 
@@ -65,8 +70,10 @@ does not transfer to rebuilt bytes or a changed pose.
    and every other key. Re-place wipes components.
 6. Verify live: exact lib/hash, pose/yaw/scale, bbox, component census, no
    intersections, no rim overhang. Walk-test enterable models two-way.
-7. Take a fresh target-world visual frame at gameplay distance; add a night
-   frame and interval pair when light/motion matters. If the live result is
+7. Run the visual gate without GUI control: prefer a target-world frame only
+   when the harness/API can capture one directly; otherwise bind fresh live
+   API identity/pose/components to deterministic exact-hash composite renders.
+   Add night and interval evidence when light/motion matters. If the result is
    visually wrong, report the regression plainly and do not mark placed.
 8. Mark the review record `CONSUMED` only after all checks pass.
 

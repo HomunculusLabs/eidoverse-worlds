@@ -112,6 +112,12 @@ Every model has two distinct states and two distinct ticks:
 Review and placement never happen in the same wakeup. A model that is merely
 technically valid is not ready. A visual contradiction is a hard stop.
 
+The nvp loop is harness-only: no `computer_use`, browser automation, or GUI
+steering. Live truth comes from API/MCPL state and real walk tests; visual truth
+comes from direct harness capture when available, otherwise deterministic
+exact-hash local/composite renders bound to the fresh live tuple. An unavailable
+GUI-only camera frame is reported honestly and never pursued through Bill's apps.
+
 ## 4. Districts (the ring, organized)
 
 The 60 works group into 12 themes; themes group into 4 readable districts at
