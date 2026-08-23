@@ -3227,4 +3227,6 @@ fixes ≈ 6 F.)
 
 - [nvp-18] tower study-shutter review: deterministic two-draw rebuild, source component reconciliation, standalone audit classification and exact-hash tower composition across daylight/gameplay/night. Highest-value defect was visual/constructional: inherited open leaf used 0.66m-deep radial blades and read as a fence projecting from the drum; broad slats now seat tangent to the round wall at -0.17290rad with two rails and vertical hinge, while right leaf/pull remain shut over half the window. Twenty-three-check hash/material/fit/SAT/rim/evidence proof passes; both tower members ARTHUR_REVIEWED_READY for later atomic placement; target untouched (D+0, E+0)
 
+- [nvp-19] tower ensemble atomic placement reconciliation: exact repaired tower and tangent-shutter hashes live at shared NE pose through dedicated fail-closed harness; study socket restored, micro-bbox attached, fresh census shows twenty world entities and no mx ids. Real MCPL body passes outside-to-inside-to-ladder and full return at 0.265 to 0.380m arrivals; placer rerun performs zero verbs. Harness-only exact-hash daylight/gameplay/night composition binds visual acceptance without computer or browser control; twenty-two-check live/source/idempotency/walk/evidence/GUI-ban proof and standing gate pass; commons untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

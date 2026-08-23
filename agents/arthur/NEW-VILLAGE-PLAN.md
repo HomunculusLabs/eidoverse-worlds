@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
-World: `commons-next` — plaza/lamp field + court PLACED_VERIFIED; full tower ensemble ARTHUR_REVIEWED_READY:
+World: `commons-next` — minimal two-mass core PLACED_VERIFIED; paths/core audit next:
 https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
@@ -75,7 +75,7 @@ placer still resolves live `heightAt` immediately before spawn.
 | hearth | center | `(0, y, 0)` | existing | `PLACED_VERIFIED` nvp-3 at exact reviewed tuple; no re-place was needed. |
 | welcome | existing | `(-3, y, -4.3)` | `0.6092` | `PLACED_VERIFIED` nvp-5 at revised COMMONS-inscription hash. |
 | carousel | `r≈25.456, 135°` | `(-18, 0.00014950061063032772, 18)` | `2.35619` | `PLACED_VERIFIED` nvp-7 at optimized 43-node hash; smoke origin contract-corrected to local `[0,6.3,0]` (nvp-8). |
-| tower-house | `r=22, 50°` | `(14.1, 0, 16.9)` | `-2.44347` | Tower `ARTHUR_REVIEWED_READY` nvp-17 + tangent half-open shutters `ARTHUR_REVIEWED_READY` nvp-18; place atomically next. |
+| tower-house | `r=22, 50°` | `(14.1, 0, 16.9)` | `-2.44347` | Tower + tangent half-open shutters `PLACED_VERIFIED` nvp-19; study socket live, door/ladder lane walked both ways. |
 | bakery/workshop court | `r=24, 322°` | `(18.9, -1.5946487083102603e-8, -14.8)` | `-0.90756` | `PLACED_VERIFIED` nvp-16 at repaired apron-clear hash; both doors two-way walk-tested. |
 | forge annex | court-local | `(22.11785473473295, 0, -7.957568494595163)` | `-0.90756` | `PLACED_VERIFIED` nvp-16; flush gap + corrected coal emitter live. |
 | bakery cistern | court-local | `(15.703583236444484, 0, -14.586880611718946)` | `-0.90756` | `PLACED_VERIFIED` nvp-16 at corrected apron-clear seat. |
@@ -165,10 +165,10 @@ readable from its lane at ~18m.
    models plus four separately verified warm lights at cardinal r=10.
 3. Full court ensemble PLACED_VERIFIED (`nvp-16`): all five exact tuples live,
    corrected smoke/embers present, both shed lanes passed two-way MCPL walks.
-4. Full tower ensemble individually reviewed-ready: tower `nvp-17` after opening
-   its sealed ladder landing; tangent half-open shutters `nvp-18`. Next wakeup
-   places both atomically, then two-way walk-tests the door/ladder lane and inspects the study at night.
-5. Draw roads and paths around the accepted seats, never the reverse.
+4. Full tower ensemble PLACED_VERIFIED (`nvp-19`): exact repaired tower + tangent
+   shutters live at shared pose; study socket restored; door/ladder lane passed
+   four-leg MCPL walk; exact-hash night composition passed without GUI control.
+5. Draw roads and paths around the now-accepted core seats, never the reverse.
 6. Run Arthur's live core walk and end-to-end visual audit. Open the 60-work
    district queue when that gate passes; Bill review is optional, never blocking.
 7. Ring lift-in remains one reviewed work per placement tick, capture/reapply comps

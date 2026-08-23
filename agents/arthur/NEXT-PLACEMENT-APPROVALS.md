@@ -199,7 +199,7 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-16 — exact double-sided smithy sign hash/yaw at workshop east-wall mount live, sharing court base-y; empty bag and forge/apron clearances verified; combined side/back evidence confirms attachment.`
 
-### nx-tower — ARTHUR_REVIEWED_READY
+### nx-tower — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-ring.ts` (tower section)
 - Output: `agents/arthur/assets/village_tower3.glb`
@@ -214,10 +214,10 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T17:06:05Z`
-- Placement state: `UNCONSUMED — tower-ensemble hold until shutters are independently reviewed-ready`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-19 — exact repaired tower hash placed at the reviewed NE seat through a dedicated fail-closed atomic placer; exact pose/yaw/bbox and study socket verified live. Real MCPL body passed outside→inside→ladder→inside→outside with 0.265–0.380m arrivals. Placer reconciliation rerun sent zero verbs. Harness-only exact-hash composite daylight/gameplay/night evidence shows the vertical landmark, open hatch contract, quiet study beacon, and attached shutters without regression.`
 
-### nx-shutters — ARTHUR_REVIEWED_READY
+### nx-shutters — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-shutters72.ts`
 - Output: `agents/arthur/assets/village_shutters3.glb`
@@ -232,5 +232,5 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T17:16:28Z`
-- Placement state: `UNCONSUMED — both tower members ready; place only as the pre-declared atomic ensemble on a later wakeup`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-19 — exact tangent half-open shutter hash placed atomically at the tower's identical pose/yaw with an empty bag; live micro-bbox proves the y4 study-window mount. Exact-hash composition confirms left leaf against the drum, right half shut, exposed half-window, and restrained night read.`
