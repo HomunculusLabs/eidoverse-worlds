@@ -55,7 +55,7 @@ The remaining nv-1/nv-2 stake predates this review gate. `nx-carousel`
 requires retrospective review before any move, replacement, or claim that the
 plaza composition is accepted.
 
-### nx-welcome — ARTHUR_REVIEWED_READY
+### nx-welcome — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-welcome59.ts`
 - Output: `agents/arthur/assets/village_welcome3.glb`
@@ -70,5 +70,5 @@ plaza composition is accepted.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T13:33:35Z`
-- Placement state: `UNCONSUMED`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-5 — revised hash uploaded and spawned at the exact reviewed seat through agents/arthur/next-place-welcome.ts; pre-place empty comp bag captured; post-place live hash/pose/yaw/scale/empty bag and separate nx-welcome-l companion verified; rotated-SAT/rim checks clear; placer idempotency and standing gate re-proved. An unauthenticated headless live-client frame remained behind the deployment's invite-key door, so visual evidence is the exact-hash local six-frame render plus live API identity, not a claimed in-world camera frame.`

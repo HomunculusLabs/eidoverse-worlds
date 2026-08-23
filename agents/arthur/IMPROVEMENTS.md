@@ -3199,4 +3199,6 @@ fixes ≈ 6 F.)
 
 - [nvp-4] nx-welcome review: deterministic rebuild, exact source/target reconciliation, focused deep audit, rotated-SAT seat check, and six-frame visual gate exposed the promised THE COMMONS face as one blank bar; source repaired with a real raised 3x5 COMMONS inscription at unchanged five-node budget, re-rendered and marked ARTHUR_REVIEWED_READY; target world untouched (D+0, E+0)
 
+- [nvp-5] nx-welcome revised inscription hash placed through a dedicated fail-closed placer at the exact reviewed seat: empty pre-place comp bag captured, upload path pinned, one spawn verb sent, companion light preserved, live hash/pose/yaw/scale/empty bag plus rotated-SAT and rim clearance verified; idempotent rerun no-ops, 14-check ad-hoc gate passes (D+0, E+0)
+
 **Running total: 2368517 / 2000000**
