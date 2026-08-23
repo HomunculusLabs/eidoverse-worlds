@@ -107,7 +107,7 @@ Work on exactly one model.
 
 1. Plaza trio complete: `nx-hearth` PLACED_VERIFIED (nvp-3), `nx-welcome`
    PLACED_VERIFIED (nvp-5), `nx-carousel` optimized + compactly reseated +
-   PLACED_VERIFIED with full comp bag (nvp-7).
+   entity-local smoke corrected + PLACED_VERIFIED (nvp-7/nvp-8).
 2. NEXT: four-way approach lamps. The inherited `village_streetlamps3.glb` contains
    eight lamps and DOES NOT match the plan. Rebuild/review a four-lamp asset at
    cardinal r=10 before marking it reviewed-ready.

@@ -26,7 +26,9 @@ Target world changed: no
 
 Fresh `commons/av-carousel` and `commons-next/nx-carousel` reads were exact at the old hash/pose: seven component keys—platform spin, horse bobs `0/2/4/6`, four rider sockets, and smoke.
 
-The revised GLB preserves the exact live targets `carousel`, `horse_0`, `horse_2`, `horse_4`, and `horse_6`. The four socket `part` targets therefore remain valid. Motion/socket payloads carry unchanged. The proposed reseat changes the world-space smoke origin from `[-18.8,6.3,25.9]` to `[-18,6.30014950061063,18]`; the later placement tick must rewrite that payload after spawn.
+The revised GLB preserves the exact live targets `carousel`, `horse_0`, `horse_2`, `horse_4`, and `horse_6`. The four socket `part` targets therefore remain valid. Motion/socket payloads carry unchanged.
+
+Placement follow-up corrected an inherited component misconception: `shared/particles.js` defines `origin` as entity-relative metres and clamps every axis to ±8m. Commons' `[-18.8,6.3,25.9]` was therefore never a valid world anchor; it normalized to local `[-8,6.3,8]`, placing smoke roughly 11.3m off the carousel in both worlds. The contract-correct origin is `[0,6.3,0]`, just above the 6.26m roof apex, and travels with any seat.
 
 ## Visual review
 
