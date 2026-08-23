@@ -89,3 +89,22 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T14:47:42Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-7 — optimized hash uploaded/spawned at exact compact seed-8128 height/yaw; all seven captured components reapplied with smoke origin rewritten to [-18,6.30014950061063,18]. Initial post-place verifier falsely failed because JSON.stringify treated object key order as semantic after the successful world mutation; placer equality was fixed to recursively canonicalize keys, rerun proved no-op idempotency, live hash/pose/bbox/43-node anchor bag/SAT/rim and standing gate all passed. nvp-8 correction: that world-space smoke origin violated the entity-relative ±8m particles contract (shared/particles.js normalizeOrigin clamps it, plume rendered ~11.3m off the ride in both worlds — latent since nv-2's verbatim copy from commons av-carousel); corrected to local [0,6.3,0] above the roof apex via the corrected placer (log seq 35), live bag deep-equal verified.`
+
+### nx-approach-lamps — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkv3-next-approach-lamp.ts`
+- Output: `agents/arthur/assets/village_approach_lamp.glb`
+- SHA-256: `409084706b801f8d55282b44d2dc4635ea19f5ad4e0eded499aacc7a8932998b`
+- Proposed poses: `east [10,0,0] yaw -1.5707963267948966; north [0,0,10] yaw 3.141592653589793; west [-10,0,0] yaw 1.5707963267948966; south [0,0,-10] yaw 0; all scale 1`
+- Companion lights: `nx-approach-lamp-{e,n,w,s}-l; 0xffb066 / intensity 1.35 / range 4.5; transformed local midpoint [0,1.96,0.10]`
+- Bounds / nodes / materials: `0.88 × 2.315 × 0.46m; 2 GLB nodes / 2 draws; textured iron + glow1; 42,060 bytes`
+- Component compatibility: `model bags empty; four point lights are separate entities, so model replacement cannot wipe illumination`
+- Structural checks: `PASS — deterministic rebuild ×2; 0 degenerate triangles; 0 NaNs; 0 floating clusters; grounded micro-collider; four cardinal OBBs mutually clear and clear of the live plaza trio; rim clear`
+- Visual checks: `PASS after repair — six-frame daylight/gameplay/night review; twin-lantern identity visible from all four directions; night beacon crown readable at 18m`
+- Highest-value finding: `FIXED — first draft's one inward lantern was exactly hidden behind its post from the outward approach. Transverse twin lanterns remove the blind face at the same two-draw budget.`
+- Evidence: `agents/arthur/reviews/nx-approach-lamp/REVIEW.md` and `agents/arthur/reviews/nx-approach-lamp/contact-sheet.jpg`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T15:22:21Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``

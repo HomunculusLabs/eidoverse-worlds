@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
-World: `commons-next` — plaza trio PLACED_VERIFIED; four-way lamps next:
+World: `commons-next` — plaza trio PLACED_VERIFIED; four-way lamps ARTHUR_REVIEWED_READY:
 https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
@@ -90,6 +90,11 @@ points `(10,0)`, `(0,10)`, `(-10,0)`, `(0,-10)` only after the lamp asset is
 rebuilt and reviewed; the inherited eight-lamp `village_streetlamps3.glb`
 does not match this four-way plan and must not be placed as-is.
 
+The reviewed nvp-9 lamp ensemble uses one reusable two-draw model at those four
+exact seats, yawed inward, plus four separate warm point-light entities. The
+first one-sided draft failed its outward approach view; the accepted hash uses
+twin transverse lanterns so every approach gets a visible beacon face.
+
 ### 3.2 Inspect-before-place gate
 
 Every model has two distinct states and two distinct ticks:
@@ -150,8 +155,8 @@ readable from its lane at ~18m.
 
 1. Entire plaza trio PLACED_VERIFIED through `nvp-8`; carousel compact reseat,
    193→43 node optimization, and entity-local smoke correction live.
-2. Next: review and rebuild the four-way approach-lamp asset; place only after its
-   exact hash and four cardinal seats are Arthur-reviewed-ready.
+2. Four-way approach-lamp asset reviewed-ready at exact two-draw twin-lantern
+   hash (`nvp-9`); next tick places the four models + four lights atomically.
 3. Review the court ensemble one model at a time: court, forge, cistern,
    bakery sign, smithy sign. Place the ensemble only after every member is
    individually Arthur-reviewed-ready; then two-way walk-test both open shed lanes.

@@ -108,9 +108,9 @@ Work on exactly one model.
 1. Plaza trio complete: `nx-hearth` PLACED_VERIFIED (nvp-3), `nx-welcome`
    PLACED_VERIFIED (nvp-5), `nx-carousel` optimized + compactly reseated +
    entity-local smoke corrected + PLACED_VERIFIED (nvp-7/nvp-8).
-2. NEXT: four-way approach lamps. The inherited `village_streetlamps3.glb` contains
-   eight lamps and DOES NOT match the plan. Rebuild/review a four-lamp asset at
-   cardinal r=10 before marking it reviewed-ready.
+2. NEXT: place the nvp-9 `nx-approach-lamps` reviewed-ready atomic ensemble:
+   one exact two-draw twin-lantern model instanced at cardinal r=10, plus four
+   separate warm point lights. Full tuple is in the review ledger.
 3. Court ensemble, each model independently reviewed: `village_court3.glb`,
    `village_forge3.glb`, `village_bcistern3.glb`, bakery sign, smithy sign.
    The court is already the bakery + workshop; do not invent a duplicate bakery.

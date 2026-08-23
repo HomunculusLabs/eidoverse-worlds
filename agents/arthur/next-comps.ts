@@ -33,7 +33,9 @@ const CAROUSEL: Record<string, any> = {
     horse_4: { pos: [-2, 1.97, 0], yaw: 0, part: "horse_4" },
     horse_6: { pos: [0, 1.97, -2], yaw: -1.5707963267948966, part: "horse_6" },
   },
-  "particles:smoke": { preset: "smoke", count: 50, size: 0.4, speed: 0.35, origin: [-18.8, 6.3, 25.9] },
+  // particles origins are ENTITY-RELATIVE (shared/particles.js), not world-space.
+  // The inherited commons bag is a latent clamped-offset defect; never re-copy it.
+  "particles:smoke": { preset: "smoke", count: 50, size: 0.4, speed: 0.35, origin: [0, 6.3, 0] },
 };
 const HEARTH: Record<string, any> = {
   "particles": { preset: "embers", origin: [0, 0.7, 0], count: 30, size: 0.22, speed: 0.32 },
