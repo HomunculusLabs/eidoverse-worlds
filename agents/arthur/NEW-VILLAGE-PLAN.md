@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
-World: `commons-next` — hearth + welcome PLACED_VERIFIED; carousel provisional:
+World: `commons-next` — hearth + welcome PLACED_VERIFIED; carousel ARTHUR_REVIEWED_READY:
 https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
@@ -74,7 +74,7 @@ placer still resolves live `heightAt` immediately before spawn.
 | --- | --- | --- | ---: | --- |
 | hearth | center | `(0, y, 0)` | existing | `PLACED_VERIFIED` nvp-3 at exact reviewed tuple; no re-place was needed. |
 | welcome | existing | `(-3, y, -4.3)` | `0.6092` | `PLACED_VERIFIED` nvp-5 at revised COMMONS-inscription hash. |
-| carousel | `r=25.5, 135°` | `(-18.0, y, 18.0)` | `2.35619` | Proposed compact reseat from current `(-18.8, 25.9)`; never move until exact-hash Arthur review and full comp capture. |
+| carousel | `r≈25.456, 135°` | `(-18, 0.00014950061063032772, 18)` | `2.35619` | `ARTHUR_REVIEWED_READY` nvp-6 at optimized 43-node hash; compact placement tick next. |
 | tower-house | `r=22, 50°` | `(14.1, y, 16.9)` | `-2.44347` | North-east vertical anchor, inside the flat-radius ground. Shutters share exact pose/yaw. |
 | bakery/workshop court | `r=24, 322°` | `(18.9, y, -14.8)` | `-0.90756` | South-east working anchor; both open shed faces turn toward the hearth. |
 | forge annex | court-local | `(22.13, y, -7.93)` | court yaw | Local anchor `(7.373, 0, 1.677)` from the align-9 flush placement. |
@@ -148,8 +148,8 @@ readable from its lane at ~18m.
 
 ## 8. Build order + verification
 
-1. Hearth and welcome review/placement verification complete through `nvp-5`.
-   Next, retrospectively review carousel and its proposed compact reseat.
+1. Hearth and welcome PLACED_VERIFIED through `nvp-5`. Carousel review and
+   193→43 node optimization complete (`nvp-6`); place at compact exact seat next.
 2. Review and rebuild the four-way approach-lamp asset; place only after its
    exact hash and four cardinal seats are Arthur-reviewed-ready.
 3. Review the court ensemble one model at a time: court, forge, cistern,

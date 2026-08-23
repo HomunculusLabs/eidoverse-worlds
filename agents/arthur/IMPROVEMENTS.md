@@ -3201,4 +3201,6 @@ fixes ≈ 6 F.)
 
 - [nvp-5] nx-welcome revised inscription hash placed through a dedicated fail-closed placer at the exact reviewed seat: empty pre-place comp bag captured, upload path pinned, one spawn verb sent, companion light preserved, live hash/pose/yaw/scale/empty bag plus rotated-SAT and rim clearance verified; idempotent rerun no-ops, 14-check ad-hoc gate passes (D+0, E+0)
 
+- [nvp-6] nx-carousel retrospective review: exact-root KEEP regex plus static folding cut the carousel from 193 nodes/187 draws to 43 nodes/37 draws inside the village health band with no visual loss across eight daylight/gameplay/night/motion frames; spin root, four phased horse bobs, four rider sockets, and smoke origin reconciled; compact seat r=25.5 135deg marked ARTHUR_REVIEWED_READY; target world untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

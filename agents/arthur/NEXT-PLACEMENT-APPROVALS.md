@@ -51,9 +51,8 @@ successful live placement and verification, change `Placement state` from
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-3 — exact reviewed hash/pose/bbox/component tuple was already live in commons-next, so the placement tick correctly sent zero spawn verbs (avoiding needless comp wipe); rebuild hash re-proved, source/target bags matched, rotated-SAT/rim checks clear, standing gate ALL PASS, and existing gameplay/night/motion frames remain hash-bound evidence.`
 
-The remaining nv-1/nv-2 stake predates this review gate. `nx-carousel`
-requires retrospective review before any move, replacement, or claim that the
-plaza composition is accepted.
+The original nv-1/nv-2 stake has now been fully reviewed. Carousel placement
+at its compact reviewed seat remains the final unconsumed plaza-trio action.
 
 ### nx-welcome — PLACED_VERIFIED
 
@@ -72,3 +71,21 @@ plaza composition is accepted.
 - Review date: `2026-08-23T13:33:35Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-5 — revised hash uploaded and spawned at the exact reviewed seat through agents/arthur/next-place-welcome.ts; pre-place empty comp bag captured; post-place live hash/pose/yaw/scale/empty bag and separate nx-welcome-l companion verified; rotated-SAT/rim checks clear; placer idempotency and standing gate re-proved. An unauthenticated headless live-client frame remained behind the deployment's invite-key door, so visual evidence is the exact-hash local six-frame render plus live API identity, not a claimed in-world camera frame.`
+
+### nx-carousel — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkcarousel.ts` + `agents/arthur/assets/mergekit.ts`
+- Output: `agents/arthur/assets/village_carousel3.glb`
+- SHA-256: `d41a898f3054874b9918b1adf4f0fe3674088baa86416cf5a6c8ec84bd8958ec`
+- Proposed pose: `pos [-18, 0.00014950061063032772, 18], yaw 2.35619, scale 1`
+- Bounds / nodes / materials: `7.10 × 6.2600 × 7.3900m; 43 GLB nodes / 37 draws after optimization (was 193/187); carousel wood/fabric/blanket + gold/bone/blue paint + glow2; 349,852 bytes`
+- Component compatibility: `PASS — exact carousel and horse_0/2/4/6 roots survive for platform spin, phased bobs, and four rider sockets; proposed reseat rewrites only world-space smoke origin to [-18,6.30014950061063,18]`
+- Structural checks: `PASS — deterministic final rebuild ×2; spec/sanity; 0 degenerate triangles; 0 NaN vertices; 0 floating clusters; grounded structural ride; stairs outside swept radius`
+- Visual checks: `PASS after optimization — eight-frame daylight/gameplay/night/motion review; complete from all sides; no visual loss from 193→43 node merge; spin and alternating horse bobs visibly established`
+- Highest-value finding: `FIXED — source bypassed mergeByMaterial, wasting 187 draws. Exact-root KEEP plus static folding cuts to 37 draws inside the village health band with no visual loss.`
+- Evidence: `agents/arthur/reviews/nx-carousel/REVIEW.md` and `agents/arthur/reviews/nx-carousel/contact-sheet.jpg`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T14:47:42Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
