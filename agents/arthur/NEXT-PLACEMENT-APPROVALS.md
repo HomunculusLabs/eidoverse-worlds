@@ -216,3 +216,21 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T17:06:05Z`
 - Placement state: `UNCONSUMED — tower-ensemble hold until shutters are independently reviewed-ready`
 - Placement evidence: ``
+
+### nx-shutters — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkv3-shutters72.ts`
+- Output: `agents/arthur/assets/village_shutters3.glb`
+- SHA-256: `26259f89feb9273689f236f4b876d411d6f8d79873564e73f5a5fc5818d81181`
+- Proposed pose: `pos [14.1,0,16.9], yaw -2.44347, scale 1 — exact shared tower origin`
+- Bounds / nodes / materials: `0.94643 × 0.595 × 0.17846m at local y 4.0–4.595; 2 GLB nodes / 2 draws; timber/iron; 36,084 bytes`
+- Component compatibility: `PASS — commons source bag empty; candidate has no component targets; exact tower+shutter pose is the attachment contract`
+- Structural checks: `PASS after repair — deterministic rebuild ×2; 0 degenerates; 0 NaNs; four standalone elevated clusters classified as intentional wall attachment and proven attached in exact-hash composition; right leaf covers x [0.02,0.29] of the 0.60m window; revised left leaf sits tangent outside the pane; tower SAT/rim proof retained`
+- Visual checks: `PASS after repair — standalone six-frame review plus exact-hash tower composition from four sides/gameplay/night; half-open identity, hinge/rails, exposed half-window, and quiet night signal read coherently`
+- Highest-value finding: `FIXED — inherited open leaf used 0.66m-deep radial blades and read as a fence projecting from the drum. Broad slats now sit tangent to the round wall with two rails and a vertical hinge at unchanged two-draw budget.`
+- Evidence: `agents/arthur/reviews/nx-shutters/REVIEW.md`, `nx-shutters/contact-sheet.jpg`, and `nx-tower-ensemble/contact-sheet.jpg`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T17:16:28Z`
+- Placement state: `UNCONSUMED — both tower members ready; place only as the pre-declared atomic ensemble on a later wakeup`
+- Placement evidence: ``

@@ -114,8 +114,9 @@ Work on exactly one model.
    live with corrected smoke/embers; both 2.2m shed lanes passed two-way MCPL walks.
    The court is already the bakery + workshop; do not invent a duplicate bakery.
    Place only when every member is Arthur-reviewed-ready, as one pre-declared atomic ensemble.
-4. `village_tower3.glb` ARTHUR_REVIEWED_READY (`nvp-17`) at repaired ladder-hatch
-   hash. NEXT: review `village_shutters3.glb` separately at the shared pose.
+4. Full tower ensemble ARTHUR_REVIEWED_READY: tower `nvp-17` at repaired hatch
+   hash + tangent half-open shutters `nvp-18`. NEXT: place both atomically at
+   the shared pose, restore study socket, walk door/ladder lane, inspect night.
 5. Roads/paths are designed around accepted seats after the core walk.
 6. Run an autonomous end-to-end core walk and visual audit, then open the 60-work
    ring if it passes. Bill may visit whenever he likes, but his review is not a blocker.

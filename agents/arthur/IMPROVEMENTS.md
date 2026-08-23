@@ -3225,4 +3225,6 @@ fixes ≈ 6 F.)
 
 - [nvp-17] round tower-house review: deterministic exact hash, 18-draw/deep audit, six-frame all-side/night gate, full commons study-socket reconciliation and flat-seat SAT/rim/sightline proof. Highest-value defect was structural: seven ladder rungs reached y3.12 but a solid upper-floor slab sealed the landing; source now uses four slabs around a real 1.30-by-1.40m hatch containing both rails, while 1.48m door, 0.20m threshold, aprons, balcony and exterior silhouette remain coherent. Twenty-four-check proof passes; ARTHUR_REVIEWED_READY under shutter hold; target untouched (D+0, E+0)
 
+- [nvp-18] tower study-shutter review: deterministic two-draw rebuild, source component reconciliation, standalone audit classification and exact-hash tower composition across daylight/gameplay/night. Highest-value defect was visual/constructional: inherited open leaf used 0.66m-deep radial blades and read as a fence projecting from the drum; broad slats now seat tangent to the round wall at -0.17290rad with two rails and vertical hinge, while right leaf/pull remain shut over half the window. Twenty-three-check hash/material/fit/SAT/rim/evidence proof passes; both tower members ARTHUR_REVIEWED_READY for later atomic placement; target untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**
