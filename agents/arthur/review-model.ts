@@ -24,6 +24,9 @@ renderer.shadowMap.enabled=true; document.body.appendChild(renderer.domElement);
 const scene=new THREE.Scene(); scene.background=new THREE.Color(0xcbd6df);
 const camera=new THREE.PerspectiveCamera(42,960/720,0.05,100);
 const hemi=new THREE.HemisphereLight(0xffffff,0x48505a,2.0); scene.add(hemi);
+// nvp-14: four-angle inspection needs neutral fill; the single +Z key made
+// every -Z face render near-black and falsely hid valid backside geometry.
+const ambient=new THREE.AmbientLight(0xffffff,0.45); scene.add(ambient);
 const sun=new THREE.DirectionalLight(0xfff1d4,3.2); sun.position.set(8,12,6); sun.castShadow=true; scene.add(sun);
 const ground=new THREE.Mesh(new THREE.PlaneGeometry(80,80),new THREE.MeshStandardMaterial({color:0x7f8d70,roughness:1}));
 ground.rotation.x=-Math.PI/2; ground.receiveShadow=true; scene.add(ground);
@@ -46,7 +49,7 @@ const forgeCoals=root.getObjectByName('fire_fg_coals'),forgeCoalsBase=forgeCoals
 const horsePhases={horse_0:0,horse_2:1.57,horse_4:3.14,horse_6:4.71};
 const horseBases={};for(const n of Object.keys(horsePhases)){const h=root.getObjectByName(n);if(h)horseBases[n]=h.position.y;}
 window.setView=(name)=>{camera.position.fromArray(views[name]);camera.lookAt(target);renderer.render(scene,camera)};
-window.setNight=(on)=>{scene.background.set(on?0x111827:0xcbd6df);hemi.intensity=on?.18:2;sun.intensity=on?.15:3.2;renderer.render(scene,camera)};
+window.setNight=(on)=>{scene.background.set(on?0x111827:0xcbd6df);hemi.intensity=on?.18:2;ambient.intensity=on?.04:.45;sun.intensity=on?.15:3.2;renderer.render(scene,camera)};
 window.setMotionPhase=(p)=>{phase=p;const w=root.getObjectByName('well_'),k=root.getObjectByName('pz_kettle');if(w)w.rotation.x=Math.sin(p)*THREE.MathUtils.degToRad(3);if(k)k.rotation.z=Math.sin(p+.7)*THREE.MathUtils.degToRad(2.5);if(carousel)carousel.rotation.y=p*0.2;if(forgeCoals&&forgeCoalsBase!==undefined)forgeCoals.position.y=forgeCoalsBase+0.014*Math.sin(p);for(const [n,ph] of Object.entries(horsePhases)){const h=root.getObjectByName(n);if(h&&horseBases[n]!==undefined)h.position.y=horseBases[n]+0.18*Math.sin(p+ph);}renderer.render(scene,camera)};
 window.setView('front'); window.reviewReady=true;
 </script>`;

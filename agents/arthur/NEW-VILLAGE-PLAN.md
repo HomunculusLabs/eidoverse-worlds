@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
-World: `commons-next` — plaza/lamp field live; court + forge + cistern reviewed-ready, signs pending:
+World: `commons-next` — plaza/lamp field live; court + forge + cistern + bakery sign reviewed-ready:
 https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
@@ -79,7 +79,7 @@ placer still resolves live `heightAt` immediately before spawn.
 | bakery/workshop court | `r=24, 322°` | `(18.9, -1.5946487083102603e-8, -14.8)` | `-0.90756` | `ARTHUR_REVIEWED_READY` nvp-11 at repaired apron-clear hash; both open shed faces turn toward the hearth. |
 | forge annex | court-local | `(22.11785473473295, 0, -7.957568494595163)` | `-0.90756` | `ARTHUR_REVIEWED_READY` nvp-12; exact local anchor `(7.373,0,1.677)`, flush 0.000382m clear of court. |
 | bakery cistern | court-local | `(15.703583236444484, 0, -14.586880611718946)` | `-0.90756` | `ARTHUR_REVIEWED_READY` nvp-13; corrected local anchor `(-1.8,0,2.65)` clears bakery threshold/aprons. |
-| bakery sign | court-local | `(17.94, y, -18.29)` | review | Local anchor `(-3.364, 0, -1.394)`; orientation must be visually re-aimed after court placement. |
+| bakery sign | court-local | `(14.022735609615019, 0, -18.768525175210893)` | `2.234032653589793` | `ARTHUR_REVIEWED_READY` nvp-14; corrected external west-wall mount `(-6.13,0,1.4)`, double-sided. |
 | smithy sign | court-local | `(20.06, y, -20.41)` | review | Local anchor `(-3.729, 0, -4.372)`; orientation must be visually re-aimed after court placement. |
 
 This makes a deliberate three-anchor composition around the hearth: carousel
@@ -157,8 +157,8 @@ readable from its lane at ~18m.
    193→43 node optimization, and entity-local smoke correction live.
 2. Four-way approach lamps PLACED_VERIFIED (`nvp-10`): four exact two-draw
    models plus four separately verified warm lights at cardinal r=10.
-3. Court (`nvp-11`), forge (`nvp-12`), and corrected-seat cistern (`nvp-13`)
-   reviewed-ready. Next review bakery sign and smithy sign. Place the ensemble only after every member is
+3. Court (`nvp-11`), forge (`nvp-12`), cistern (`nvp-13`), and bakery sign
+   (`nvp-14`) reviewed-ready. Next review smithy sign. Place the ensemble only after every member is
    individually Arthur-reviewed-ready; then two-way walk-test both open shed lanes.
 4. Review tower and shutters separately; place at the shared pose only after
    both pass; two-way walk-test the 1.4m door lane and inspect the study at night.

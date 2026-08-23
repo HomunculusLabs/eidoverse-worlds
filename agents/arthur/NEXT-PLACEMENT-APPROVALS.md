@@ -162,3 +162,21 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T16:03:53Z`
 - Placement state: `UNCONSUMED — ensemble hold until bakery sign and smithy sign are reviewed-ready`
 - Placement evidence: ``
+
+### nx-sign-bakery — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkv3-signs11.ts` (bakery section)
+- Output: `agents/arthur/assets/village_sign_bakery.glb`
+- SHA-256: `599194ee7f4efd810735f59b1e2d686797a2c29b65249fdc958913619f8ec85c`
+- Proposed pose: `pos [14.022735609615019,0,-18.768525175210893], yaw 2.234032653589793, scale 1; corrected court-local [-6.13,0,1.4]`
+- Bounds / nodes / materials: `0.73 × 0.60 × 0.24m; 4 GLB nodes / 4 draws; iron/sign_bone/sign_loaf + timber board; 45,356 bytes; authored y 1.85–2.45`
+- Component compatibility: `PASS — commons source bag empty; candidate has no component targets`
+- Structural checks: `PASS after repair — deterministic rebuild ×2; 0 degenerate triangles; 0 NaNs; 0 floating clusters; furniture-scale wall-mounted collider; plate flush-touches bakery west exterior at x=-6.10; sign clears roof, workbench by 0.25m, aprons, cistern, forge, live field, and rim`
+- Visual checks: `PASS after repair — six-frame neutral-fill daylight/gameplay/night review; explicit exported bone/loaf materials and mirrored raised glyph make both faces readable; bracket construction complete`
+- Highest-value finding: `FIXED — inherited sign was blank on the back and mounted inside the bakery. Accepted four-draw double-sided sign mounts outside the west wall and reads from either court approach.`
+- Evidence: `agents/arthur/reviews/nx-sign-bakery/REVIEW.md` and `agents/arthur/reviews/nx-sign-bakery/contact-sheet.jpg`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T16:22:03Z`
+- Placement state: `UNCONSUMED — ensemble hold until smithy sign is reviewed-ready`
+- Placement evidence: ``

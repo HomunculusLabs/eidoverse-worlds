@@ -3217,4 +3217,6 @@ fixes ≈ 6 F.)
 
 - [nvp-13] bakery cistern review: deterministic four-node/deep audit and six-frame all-side gate found shallow lid floating 13cm and reading as detached rails; source re-angled/reseated lid plus battens grade-to-rim at min-y zero. Numerical seat gate then falsified inherited local [-2.949,1.980] as blocking bakery threshold and both aprons; corrected [-1.8,2.65] seat clears apron by 0.15m and low wall by 0.21m, with water/scoop identity, live-field/rim and 21-check proof passing; marked ARTHUR_REVIEWED_READY under ensemble hold; target world untouched (D+0, E+0)
 
+- [nvp-14] bakery blade-sign review: deterministic rebuild/deep audit, six-frame all-side gate, mount and live-field/rim proof; inherited sign was blank on back and planned inside bakery. Source gained explicit exported sign_bone/sign_loaf materials plus mirrored raised loaf/score face, reducing five draws to four and making both sides readable; corrected external west-wall mount [-6.13,1.4] flush-touches wall, faces both court approaches, and clears roof/workbench/aprons/cistern/forge. Review harness neutral daylight fill added to distinguish real backside content from one-sided-light artifacts; 24-check proof passes, ARTHUR_REVIEWED_READY under ensemble hold; target untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**
