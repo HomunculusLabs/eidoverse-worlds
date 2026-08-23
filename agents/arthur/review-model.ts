@@ -42,11 +42,12 @@ const views={
 };
 let phase=0;
 const carousel=root.getObjectByName('carousel');
+const forgeCoals=root.getObjectByName('fire_fg_coals'),forgeCoalsBase=forgeCoals?.position.y;
 const horsePhases={horse_0:0,horse_2:1.57,horse_4:3.14,horse_6:4.71};
 const horseBases={};for(const n of Object.keys(horsePhases)){const h=root.getObjectByName(n);if(h)horseBases[n]=h.position.y;}
 window.setView=(name)=>{camera.position.fromArray(views[name]);camera.lookAt(target);renderer.render(scene,camera)};
 window.setNight=(on)=>{scene.background.set(on?0x111827:0xcbd6df);hemi.intensity=on?.18:2;sun.intensity=on?.15:3.2;renderer.render(scene,camera)};
-window.setMotionPhase=(p)=>{phase=p;const w=root.getObjectByName('well_'),k=root.getObjectByName('pz_kettle');if(w)w.rotation.x=Math.sin(p)*THREE.MathUtils.degToRad(3);if(k)k.rotation.z=Math.sin(p+.7)*THREE.MathUtils.degToRad(2.5);if(carousel)carousel.rotation.y=p*0.2;for(const [n,ph] of Object.entries(horsePhases)){const h=root.getObjectByName(n);if(h&&horseBases[n]!==undefined)h.position.y=horseBases[n]+0.18*Math.sin(p+ph);}renderer.render(scene,camera)};
+window.setMotionPhase=(p)=>{phase=p;const w=root.getObjectByName('well_'),k=root.getObjectByName('pz_kettle');if(w)w.rotation.x=Math.sin(p)*THREE.MathUtils.degToRad(3);if(k)k.rotation.z=Math.sin(p+.7)*THREE.MathUtils.degToRad(2.5);if(carousel)carousel.rotation.y=p*0.2;if(forgeCoals&&forgeCoalsBase!==undefined)forgeCoals.position.y=forgeCoalsBase+0.014*Math.sin(p);for(const [n,ph] of Object.entries(horsePhases)){const h=root.getObjectByName(n);if(h&&horseBases[n]!==undefined)h.position.y=horseBases[n]+0.18*Math.sin(p+ph);}renderer.render(scene,camera)};
 window.setView('front'); window.reviewReady=true;
 </script>`;
 

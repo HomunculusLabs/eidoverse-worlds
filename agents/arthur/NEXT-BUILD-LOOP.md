@@ -110,9 +110,9 @@ Work on exactly one model.
    entity-local smoke corrected + PLACED_VERIFIED (nvp-7/nvp-8).
 2. Four-way `nx-approach-lamps` PLACED_VERIFIED (`nvp-10`): four exact
    twin-lantern models plus four separately history-verified warm lights.
-3. `village_court3.glb` ARTHUR_REVIEWED_READY (`nvp-11`) at repaired
-   apron-clear hash. NEXT: review `village_forge3.glb`; remaining members:
-   `village_bcistern3.glb`, bakery sign, smithy sign.
+3. `village_court3.glb` (`nvp-11`) and `village_forge3.glb` (`nvp-12`)
+   ARTHUR_REVIEWED_READY. NEXT: review `village_bcistern3.glb`; then bakery
+   sign and smithy sign.
    The court is already the bakery + workshop; do not invent a duplicate bakery.
    Place only when every member is Arthur-reviewed-ready, as one pre-declared atomic ensemble.
 4. Tower ensemble: `village_tower3.glb`, then shutters separately; shared pose.

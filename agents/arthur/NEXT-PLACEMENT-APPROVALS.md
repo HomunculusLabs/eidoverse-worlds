@@ -126,3 +126,21 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T15:42:03Z`
 - Placement state: `UNCONSUMED — ensemble hold until forge, cistern, bakery sign, and smithy sign are all reviewed-ready`
 - Placement evidence: ``
+
+### nx-forge — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkv3-forge98.ts`
+- Output: `agents/arthur/assets/village_forge3.glb`
+- SHA-256: `fcc66d79b76b109e8d826a1a1ad38e06fc09292a2b8c2da0d31f5702f8893596`
+- Proposed pose: `pos [22.11785473473295,0,-7.957568494595163], yaw -0.90756, scale 1; court-local [7.373,0,1.677]`
+- Bounds / nodes / materials: `2.332618 × 2.105 × 1.387m; 10 GLB nodes / 9 draws; stone/timber/iron + glow3/glow4; 60,172 bytes`
+- Component compatibility: `PASS with correction — preserve motion:fire_fg_coals {type:bob,axis:y,amp:0.014,period:1.8}; replace ignored particles scale:0.6 bag with valid {preset:embers,origin:[0,0.45,0.42],count:84}`
+- Structural checks: `PASS — deterministic rebuild ×2; 0 degenerate triangles; 0 NaNs; 0 floating clusters; furniture-scale collider; exact motion target survives; court-local min-x 6.500382m clears court max-x 6.5m; proposed OBB/rim clear`
+- Visual checks: `PASS — eight-frame daylight/gameplay/night/motion review; complete forge craft from all sides; annex remains subordinate to court; coal beacon readable; exact 0.014m bob honestly subtle`
+- Highest-value finding: `FIXED IN COMPONENT CONTRACT — inherited scale key is ignored and defaulted 140 embers to entity origin. Explicit 84-count emitter is now bound to the visible coal bed.`
+- Evidence: `agents/arthur/reviews/nx-forge/REVIEW.md` and `agents/arthur/reviews/nx-forge/contact-sheet.jpg`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T15:53:52Z`
+- Placement state: `UNCONSUMED — ensemble hold until cistern, bakery sign, and smithy sign are reviewed-ready`
+- Placement evidence: ``

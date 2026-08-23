@@ -3213,4 +3213,6 @@ fixes ≈ 6 F.)
 
 - [nvp-11] bakery-workshop court review: deterministic rebuild, 27-node/deep audit, exact source component inverse-decode, six-frame visual gate, terrain/OBB/rim and dual-door checks; one arrival-apron defect class found—bakery bench/bin and workshop anvil occupied required 2m-by-1.5m rectangles despite stale clear-lane comments—furniture moved beside openings, both 2.2m doors, 1.4m corridors, 0.2m thresholds and interior/exterior aprons now clear; corrected entity-local oven smoke tuple bound; court marked ARTHUR_REVIEWED_READY under ensemble hold; target world untouched (D+0, E+0)
 
+- [nvp-12] smithy forge annex review: deterministic exact hash, 10-node/deep audit, eight-frame all-side/night/motion gate, court-local flush SAT and live-field/rim checks; model coherent with exact fire_fg_coals anchor and honest 0.014m bob, but inherited particles bag used ignored scale:0.6 and defaulted 140 embers to entity origin—review contract replaces it with valid 84-count entity-local [0,0.45,0.42] coal-bed emitter; marked ARTHUR_REVIEWED_READY under court-ensemble hold; target world untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**
