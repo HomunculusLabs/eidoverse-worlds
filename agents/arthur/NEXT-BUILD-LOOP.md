@@ -31,7 +31,7 @@ reviewed and spawned into `commons-next` in the same turn.
 
 ## FRESH SURVEY — EVERY WAKEUP
 
-1. Read this prompt, the canonical plan, and the approval ledger fresh.
+1. Read this prompt, the canonical plan, and the review ledger fresh.
 2. Run `git status --short --branch` and `git log -5 --oneline`.
 3. Run `bun agents/arthur/verify-repairs.ts`; real exit 0 / `ALL PASS` is the
    standing gate. If red, fix the gate before any model work.
@@ -72,7 +72,8 @@ does not transfer to rebuilt bytes or a changed pose.
 
 ### B. REVIEW the next candidate
 
-Use this mode when no unconsumed approval is ready. Work on exactly one model.
+Use this mode when no unconsumed Arthur-reviewed-ready record is available.
+Work on exactly one model.
 
 1. Identify its source maker, output GLB, intended id, component targets, and
    proposed pose. If any are unknown, stop at inspection; do not guess.

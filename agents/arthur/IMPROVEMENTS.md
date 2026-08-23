@@ -3195,4 +3195,6 @@ fixes ≈ 6 F.)
 
 - [nvp-2] operator correction: Bill delegated routine per-model review and placement to Arthur; loop, plan, review ledger, and hearth verdict converted from ceremonial human approval to autonomous inspect-then-place while preserving separate ticks and all technical/visual gates (D+0, E+0)
 
+- [nvp-3] nx-hearth placement tick closed idempotently: reviewed full hash, exact live pose/bbox/component tuple, rotated-SAT and rim clearance, hash-bound visual evidence, and standing gate all re-proved; zero spawn verbs because the approved tuple was already live, avoiding needless component wipe (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

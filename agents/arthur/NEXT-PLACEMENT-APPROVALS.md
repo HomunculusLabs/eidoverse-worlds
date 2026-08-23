@@ -33,7 +33,7 @@ successful live placement and verification, change `Placement state` from
 
 ## Current reviews
 
-### nx-hearth — ARTHUR_REVIEWED_READY
+### nx-hearth — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-plaza.ts`
 - Output: `agents/arthur/assets/village_plaza3.glb`
@@ -48,8 +48,8 @@ successful live placement and verification, change `Placement state` from
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T13:03:33Z`
-- Placement state: `UNCONSUMED`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-3 — exact reviewed hash/pose/bbox/component tuple was already live in commons-next, so the placement tick correctly sent zero spawn verbs (avoiding needless comp wipe); rebuild hash re-proved, source/target bags matched, rotated-SAT/rim checks clear, standing gate ALL PASS, and existing gameplay/night/motion frames remain hash-bound evidence.`
 
 The remaining nv-1/nv-2 stake predates this review gate. `nx-welcome` and
 `nx-carousel` require retrospective review before any move, replacement, or

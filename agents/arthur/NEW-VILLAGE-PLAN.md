@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
-World: `commons-next` — LIVE with a provisional three-model stake (hearth, welcome, carousel):
+World: `commons-next` — LIVE: hearth PLACED_VERIFIED; welcome/carousel provisional:
 https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
@@ -72,9 +72,9 @@ placer still resolves live `heightAt` immediately before spawn.
 
 | Ensemble | Polar slot | Proposed world pose | Yaw | Notes |
 | --- | --- | --- | ---: | --- |
-| hearth | center | `(0, y, 0)` | existing | Provisional nv-1 stake; retrospective review first. |
+| hearth | center | `(0, y, 0)` | existing | `PLACED_VERIFIED` nvp-3 at exact reviewed tuple; no re-place was needed. |
 | welcome | existing | `(-3, y, -4.3)` | `0.6092` | South-west arrival threshold; keep the main arrival side open. |
-| carousel | `r=25.5, 135°` | `(-18.0, y, 18.0)` | `2.35619` | Proposed compact reseat from current `(-18.8, 25.9)`; never move until exact-hash approval and full comp capture. |
+| carousel | `r=25.5, 135°` | `(-18.0, y, 18.0)` | `2.35619` | Proposed compact reseat from current `(-18.8, 25.9)`; never move until exact-hash Arthur review and full comp capture. |
 | tower-house | `r=22, 50°` | `(14.1, y, 16.9)` | `-2.44347` | North-east vertical anchor, inside the flat-radius ground. Shutters share exact pose/yaw. |
 | bakery/workshop court | `r=24, 322°` | `(18.9, y, -14.8)` | `-0.90756` | South-east working anchor; both open shed faces turn toward the hearth. |
 | forge annex | court-local | `(22.13, y, -7.93)` | court yaw | Local anchor `(7.373, 0, 1.677)` from the align-9 flush placement. |
@@ -148,9 +148,10 @@ readable from its lane at ~18m.
 
 ## 8. Build order + verification
 
-1. Freeze new placement. Retrospectively review the already-staked hearth,
-   welcome board, and carousel; do not move or delete one until its Arthur
-   review is complete and a later placement tick re-proves the tuple.
+1. Hearth review + placement verification complete (`nvp-1`/`nvp-3`). Next,
+   retrospectively review the already-staked welcome board, then carousel; do
+   not move or delete one until its Arthur review is complete and a later
+   placement tick re-proves the tuple.
 2. Review and rebuild the four-way approach-lamp asset; place only after its
    exact hash and four cardinal seats are Arthur-reviewed-ready.
 3. Review the court ensemble one model at a time: court, forge, cistern,
