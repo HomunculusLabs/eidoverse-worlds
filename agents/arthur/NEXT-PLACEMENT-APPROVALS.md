@@ -235,7 +235,7 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-19 — exact tangent half-open shutter hash placed atomically at the tower's identical pose/yaw with an empty bag; live micro-bbox proves the y4 study-window mount. Exact-hash composition confirms left leaf against the drum, right half shut, exposed half-window, and restrained night read.`
 
-### nx-core-paths — ARTHUR_REVIEWED_READY
+### nx-core-paths — PLACED_VERIFIED
 
 - Source: `agents/arthur/assets/mkv3-next-core-paths.ts`
 - Output: `agents/arthur/assets/village_next_core_paths.glb`
@@ -250,5 +250,5 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T17:48:55Z`
-- Placement state: `UNCONSUMED`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-21 — exact reviewed four-draw hash placed at world origin through a dedicated manifest-driven fail-closed placer. Fresh live lib/pose/yaw/scale/empty bag and 75-paver 0.179586m minimum micro-clearance verified; rerun sent zero verbs. Real MCPL body walked tower, workshop, bakery, carousel and south-spoke routes out and back: 64/64 legs passed, maximum arrival 0.38m. Harness-only exact-hash top/aerial/gameplay/night evidence regenerated; commons and mx ground untouched.`

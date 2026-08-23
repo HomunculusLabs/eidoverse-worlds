@@ -3231,4 +3231,6 @@ fixes ≈ 6 F.)
 
 - [nvp-20] accepted-core path-network review: new four-draw seventy-five-paver soil asset built deterministically with exact geometry manifest and top/aerial review. First visual gate found 2m stop/restart gaps at north/east/west lamps; lateral bypasses restored route continuity. Exact paver micro-SAT then found a 2cm hearth overlap and sub-centimetre lamp pinches; starts moved to radius 4.8 and bypass offsets widened to 1m, yielding zero live-footprint overlaps and 0.179586m minimum clearance. Tower, forked court, carousel endpoints bind exact apron/approach coordinates; SW meadow stays empty; twenty-four-check proof passes; ARTHUR_REVIEWED_READY at origin; target untouched (D+0, E+0)
 
+- [nvp-21] core path network placement: exact reviewed four-draw hash spawned at origin through manifest-driven fail-closed harness, with live tuple/empty bag and all seventy-five paver micro-SAT clear at 0.179586m minimum; placer rerun sends zero verbs. Real MCPL body walks tower, workshop, bakery, carousel and south-spoke routes out-and-back in sixty-four of sixty-four passing legs, maximum arrival 0.38m. Exact-hash top/aerial/gameplay/night evidence regenerated harness-only; commons and mx untouched; eighteen-check live/idempotency/walk/evidence/state/gate proof passes (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

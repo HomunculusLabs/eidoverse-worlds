@@ -124,10 +124,9 @@ Work on exactly one model.
 4. Full tower ensemble PLACED_VERIFIED (`nvp-19`): exact repaired tower +
    tangent shutters live at shared pose; study socket restored; real four-leg
    MCPL door/ladder walk and harness-only exact-hash night composition passed.
-5. `nx-core-paths` ARTHUR_REVIEWED_READY (`nvp-20`): four-draw paver network
-   links accepted seats around lamp bypasses while preserving SW meadow. NEXT:
-   place exact path tuple, then walk every route before the core audit.
-6. Run an autonomous end-to-end core walk and visual audit, then open the 60-work
+5. `nx-core-paths` PLACED_VERIFIED (`nvp-21`): exact four-draw network live;
+   75-paver micro-clearance and 64/64 MCPL route legs pass; SW meadow stays open.
+6. NEXT: run an autonomous end-to-end core walk and visual audit, then open the 60-work
    ring if it passes. Bill may visit whenever he likes, but his review is not a blocker.
    Thereafter each work follows this same inspect-then-place law.
 
