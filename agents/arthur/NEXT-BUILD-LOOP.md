@@ -1,75 +1,144 @@
-# NEW-VILLAGE BUILD LOOP — canonical prompt (nv-N, created 2026-08-21 for Bill's painting session)
+# COMMONS-NEXT INSPECT → APPROVE → PLACE LOOP — canonical prompt (nvp-N)
 
-Every 2h tick. Reports to discord:#projects. Bill is AFK — full lane autonomy.
+This supersedes the nv-N bulk-build prompt. It is deliberately slow: one
+model, one evidence packet, one human approval, one later placement.
 
 ---8<--- LOOP PROMPT ---8<---
 
-NEW-VILLAGE BUILD LOOP — wakeup nv-N.
+COMMONS-NEXT PLACEMENT LOOP — wakeup nvp-N.
 
-Load skill `eidoverse-world-building` FIRST. Repo: /Users/t3rpz/projects/eidoverse-worlds
-Build world: commons-next (https://eidoverse.billding.dev/?world=commons-next)
-NEVER touch world `commons` (the keeper's home, 200 entities, read-only reference).
-NEVER touch ids with prefix mx- (Mai's future district).
-Bill is away painting. Full autonomy. English reports, concise.
+Load skill `eidoverse-world-building` FIRST.
+Repo: `/Users/t3rpz/projects/eidoverse-worlds`
+Target: `commons-next` (`https://eidoverse.billding.dev/?world=commons-next`)
+Canonical plan: `agents/arthur/NEW-VILLAGE-PLAN.md`
+Approval ledger: `agents/arthur/NEXT-PLACEMENT-APPROVALS.md`
 
-## PLAN (Bill-approved 2026-08-21: SUBTRACTION — keep only what Arthur loves)
-Total build = plaza (already staked) + 3 buildings + 4-way lamp ring + work ring + keeper-later.
-- Plaza trio STAKED & verified (nv-1): nx-hearth (0,0), nx-welcome (-3,0,-4.3) yaw .6092,
-  nx-carousel (-18.8,0,25.9) yaw 2.5137. Libs: hearth store/43fcaf1442f5d6b8.glb,
-  welcome store/6cd75bbbbf379df5.glb, carousel store/38fbbc26dcdfcc1a.glb.
-- Core (3 only): forge+court, bakery, tower-house — placed fresh at r 18-26, doors facing plaza,
-  rebuilt ONLY if era-2 libs look wrong; else carry live commons libs (content-addressed) first,
-  elevate later. Draw plot coords in the plan file BEFORE placing.
-- Lamps: plaza light (0,1.2,0) copied from commons av-plaza-l params; one lamp per approach;
-  welcome board lamp from day one (polish-29 lesson).
-- Work ring: 60 av-mason works lift from commons into band r∈[66,108], four districts
-  (NW cultivation: orchard/garden/lavender; NE craft: hamlet/cloister/statuary;
-  SE wild: forest/wayside/cairnfield; SW contemplative: labyrinth/terrace/seed/mosaic).
-  Center distance ≥ max(width_i,width_j)×0.75; inner edge ≥66m; farthest corner ≤108m.
-  Same libs, same ids renamed nx-mason-0000..0059; capture comp bags BEFORE from commons,
-  re-apply AFTER (comp-wipe law). Mason lights carry too (23).
-- Keeper: NOT in this loop's scope (phase 2, Bill's call).
+NEVER modify world `commons`; it is read-only reference.
+NEVER touch `mx-` ids; that is Mai's ground.
+NEVER place more than one reviewed model or one pre-declared atomic ensemble
+per wakeup. English report, concise. Bill alone may end the loop.
 
-## QUEUE (work top-down, one major item per tick)
-1. nv-2 COMPS (parked mid-stride — do FIRST): write placer FILE next-comps.ts applying
-   verbatim bags — nx-carousel: motion:carousel (spin 6°/s y-axis), motion:horse_0/2/4/6
-   (bob amp .18 period 2.4 phases 0/1.57/3.14/4.71), sockets (horse seats y 1.97, yaw π..),
-   particles:smoke (origin [-18.8,6.3,25.9] — carousel sits at identical offset, verbatim OK);
-   nx-hearth: particles embers (origin [0,0.7,0] count 30 size .22 speed .32), motion:well_
-   (pendulum x-axis amp 3 period 9 damp .99), sockets log_0/1/2 (pos ±1.344,0.32,±1.344,
-   yaw ∓2.356), motion:pz_kettle (pendulum z-axis pivot [0,1.55,0] amp 2.5 period 11);
-   nx-welcome: EMPTY in commons — here add a lamp light entity nx-welcome-l near (-3,2.2,-4.3),
-   warm, modest intensity. Also plaza light nx-plaza-l at (0,1.2,0) — read av-plaza-l's exact
-   color/intensity from commons /geom and copy. Verify all via live /geom census: carousel 6
-   comps, hearth 5, welcome 0+lamp entity. If a full comp JSON is needed, re-read it from
-   commons /geom fresh — never trust this prose over the live bag.
-2. nv-3 lamp ring + welcome lamp verification at night-equivalent (emissive anchors named).
-3. nv-4..6 the 3 core buildings (plot → place → walk-test two-way MCPL → comps).
-4. nv-7+ work ring by district, ~8-10 works per tick, comp bags carried, sweep after each
-   district (no work-work overlap, no rim overhang past 112m).
-5. Final: end-to-end audit (census, drift, intersections) + report to Bill.
+## PURPOSE
 
-## LAWS
-- Fresh survey each tick: git log -5; bun agents/arthur/verify-repairs.ts MUST exit 0 before
-  and after work (fix gate before building if red).
-- NEW-LANE LAW: the HEAD-gate regex (verify-repairs.ts:207) does NOT include nv- yet. The
-  FIRST nv- commit must widen the regex to include nv (and every verifier carrying the same
-  regex) IN THAT SAME COMMIT, else the gate trips.
-- Placer FILES only (see agents/arthur/next-plaza.ts for the chassis: WS join via
-  agents/arthur/config.json, paced verbs, /geom verify). Never inline shell JSON comps.
-- NEVER curl|python3 pipes (approval-blocked in cron): read live state via bun scripts using
-  fetch, or curl to a temp file then parse. Plain curl to the .dev URL prints fine.
-- Re-place wipes comps: capture BEFORE, re-apply ALL AFTER.
-- Ledger: python3 agents/arthur/ledger-append.py nv-N "D+n" "E+n" "prose" — tag from ledger
-  max, prose NEVER ends with a (D+n,E+n) pair.
-- Commit every tick: nv-N message. Push not required.
-- Uploads 4/min, verbs 12/4s — pace ≥600ms, retry once on 429.
-- HOLD LAW: if every remaining item blocks on Bill, say so ONCE in the report and do
-  lightweight audit/stewardship only. No 200 no-op ticks.
-- LOOP_COMPLETE: NEVER — only Bill says stop.
-- If a terminal approval blocks mid-tick: stop that thread cleanly, note it in the report,
-  move to the next queue item. Never push through a block.
-- Report each tick (delivered to #projects): survey result, what landed (ids, numbers,
-  before/after), what's next, anything needing Bill.
+Place only coherent, finished models. Technical validity is necessary but
+not sufficient. Every candidate moves through this state machine:
+
+`CANDIDATE → REVIEWED_READY → BILL_APPROVED → PLACED_VERIFIED`
+
+Review and placement MUST occur on different wakeups. A model cannot be
+reviewed and spawned into `commons-next` in the same turn.
+
+## FRESH SURVEY — EVERY WAKEUP
+
+1. Read this prompt, the canonical plan, and the approval ledger fresh.
+2. Run `git status --short --branch` and `git log -5 --oneline`.
+3. Run `bun agents/arthur/verify-repairs.ts`; real exit 0 / `ALL PASS` is the
+   standing gate. If red, fix the gate before any model work.
+4. Run `bun agents/arthur/next-live-census.ts commons-next` for the fresh target
+   `/geom` snapshot; use its optional `<world> <entity-id>` arguments for focused
+   source/target comparison. Read current ids, poses, libs, bboxes, and complete
+   component bags. Never infer live state from a ledger or inline an external URL
+   into the shell command (interactive security approval can stall `/loop`).
+5. Re-derive the next free nvp-N tag immediately before ledger append; sibling
+   lanes share the sequence.
+
+## MODE SELECTION
+
+### A. PLACE an approved model
+
+Choose this mode only when the approval ledger contains an unconsumed
+`APPROVED` record with all of: subject id, exact SHA-256, exact proposed pose,
+approver `Bill`, and approval date. Approval of one hash or pose does not
+transfer to a rebuilt hash or changed pose.
+
+1. Rebuild once and prove the GLB still matches the approved SHA-256. Mismatch
+   means stop and return the subject to review; never substitute new bytes.
+2. Re-fetch the target world and run bbox/rotated-SAT clearance at the planned
+   pose. For enterable buildings, preflight the 1.4m door lane and both 2m ×
+   1.5m aprons. A changed neighborhood invalidates placement until re-cleared.
+3. Capture the complete source/live component bag BEFORE any re-place.
+4. Spawn only through a committed placer FILE, paced for upload/verb limits.
+   No inline component JSON. Never use a generic inherited placer without
+   checking that its world, ids, pose, and tick loop are correct.
+5. Re-apply ALL components after spawn: motion, particles, lights, sockets,
+   and every other key. Re-place wipes components.
+6. Verify live: exact lib/hash, pose/yaw/scale, bbox, component census, no
+   intersections, no rim overhang. Walk-test enterable models two-way.
+7. Take a fresh target-world visual frame at gameplay distance; add a night
+   frame and interval pair when light/motion matters. If the live result is
+   visually wrong, report the regression plainly and do not mark placed.
+8. Mark the approval record `CONSUMED` only after all checks pass.
+
+### B. REVIEW the next candidate
+
+Use this mode when no unconsumed approval is ready. Work on exactly one model.
+
+1. Identify its source maker, output GLB, intended id, component targets, and
+   proposed pose. If any are unknown, stop at inspection; do not guess.
+2. Rebuild twice. Require byte-identical SHA-256 outputs.
+3. Decode the GLB and record:
+   - dimensions/bounds, node and draw-node counts, materials, textures, file size
+   - named motion/light/socket anchors and whether every component target exists
+   - degenerate/NaN/floating geometry checks and room/collider classification
+   - for buildings: 1.4m clear door, threshold ≤0.25m, clear interior/exterior
+     aprons, coherent interior circulation, furniture outside the walking lane
+4. Reconcile source names against the complete live component bag in `commons`
+   when the model stands there. Any mismatch is a hard stop.
+5. Inspect visually rather than trusting the manifest:
+   - four daylight angles plus one gameplay-distance silhouette
+   - identity/readability, construction logic, material hierarchy, scale,
+     grounding, back/side completeness, and camera occlusion
+   - night frame for emissive/light-bearing models
+   - two frames separated in time for motion; never infer motion from one still
+6. Name ONE highest-value defect. If a real defect exists, fix the source,
+   rebuild, and repeat the checks. Do not shotgun polish.
+7. Test the proposed pose numerically against the canonical coordinate sheet:
+   terrain height, rotated bbox clearance, sightline to hearth, approach lane,
+   and pairwise spacing. A good model at a bad seat is not ready.
+8. Write a `REVIEWED_READY` evidence packet into the approval ledger containing
+   subject, exact SHA-256, source, output, node/bounds/material summary,
+   component compatibility, proposed pose, visual findings, and evidence paths.
+   Leave `Bill decision: PENDING`. STOP. Do not place it this wakeup.
+
+## QUEUE — ONE SUBJECT AT A TIME
+
+1. Retrospective review of already-staked `nx-hearth`, `nx-welcome`, and
+   `nx-carousel`. Do not move/delete them without a new approval. Carousel's
+   proposed compact seat is `r=25.5, 135°` → `(-18.0, y, 18.0)`, yaw 2.35619.
+2. Four-way approach lamps. The inherited `village_streetlamps3.glb` contains
+   eight lamps and DOES NOT match the plan. Rebuild/review a four-lamp asset at
+   cardinal r=10 before requesting approval.
+3. Court ensemble, each model independently reviewed: `village_court3.glb`,
+   `village_forge3.glb`, `village_bcistern3.glb`, bakery sign, smithy sign.
+   The court is already the bakery + workshop; do not invent a duplicate bakery.
+   Place only when every member is approved, as one pre-declared atomic ensemble.
+4. Tower ensemble: `village_tower3.glb`, then shutters separately; shared pose.
+5. Roads/paths are designed around accepted seats after the core walk.
+6. STOP at the core eye-check. The 60-work ring does not open until Bill walks
+   and accepts the core. Thereafter each work follows this same review/approval law.
+
+## PLACEMENT COORDINATES
+
+- Tower: `r=22, 50°` → `(14.1, y, 16.9)`, yaw `-2.44347`.
+- Court: `r=24, 322°` → `(18.9, y, -14.8)`, yaw `-0.90756`.
+- Forge: court-local `(7.373, 0, 1.677)` → approx `(22.13, y, -7.93)`.
+- Cistern: court-local `(-2.949, 0, 1.980)` → approx `(15.54, y, -15.88)`.
+- Lamps: cardinal r=10 → `(10,0)`, `(0,10)`, `(-10,0)`, `(0,-10)` in X/Z.
+
+The canonical plan owns the full coordinate sheet and rationale. If this
+summary and the plan differ, STOP and reconcile the prompt before acting.
+
+## RECORD + REPORT
+
+- Ledger only after durable progress:
+  `python3 agents/arthur/ledger-append.py nvp-N "D+n" "E+n" "prose"`
+  Prose never ends with its own `(D+n, E+n)` pair.
+- Commit reviewed source/evidence or verified placement work with an `nvp-N`
+  message. Do not push unless Bill asks.
+- Report: mode (REVIEW or PLACE), subject, exact hash, strongest visual finding,
+  checks actually run, whether the target world changed, and what Bill must decide.
+- HOLD LAW: if waiting on Bill, report the pending subject once and stop. Do not
+  manufacture audit ticks or begin a second subject behind an unresolved approval.
+- `LOOP_COMPLETE`: NEVER. Only Bill says stop.
 
 ---8<--- END LOOP PROMPT ---8<---

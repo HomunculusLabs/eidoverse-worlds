@@ -3191,4 +3191,6 @@ fixes ≈ 6 F.)
 
 - [nv-2] plaza trio comp bags applied verbatim from fresh commons /geom reads: nx-carousel 7 comps (platform spin 6deg/s, four horse bobs, four horse sockets, particles smoke at identical world offset), nx-hearth 4 comps (embers preset, well-arm pendulum, five sockets incl the four log seats and tale_seat, kettle pendulum), nx-welcome kept empty as in commons; two lights placed: nx-plaza-l at plaza center carrying av-plaza authored params read from the commons world log (color 0xffcc80, intensity 2.5, range 7) and nx-welcome-l warm-modest over the board; 13 paced verbs, live /geom census plus log param readback all PASS (D+0, E+2)
 
+- [nvp-1] inspect-before-place retrospective review of nx-hearth: deterministic exact-hash rebuild, full GLB/deep audit, fresh commons-to-commons-next component reconciliation, eight-frame local visual evidence, and REVIEWED_READY packet; target world untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

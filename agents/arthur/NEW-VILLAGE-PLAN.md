@@ -1,8 +1,8 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
-Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — DRAFT v1 plan
-awaits Bill's eye-check pass before anything is built.
-World: `commons-next` — LIVE and empty: https://eidoverse.billding.dev/geom?world=commons-next
+Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
+World: `commons-next` — LIVE with a provisional three-model stake (hearth, welcome, carousel):
+https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
 ## 0. Design thesis
@@ -12,6 +12,13 @@ debt, a saturated mason ring (90% packing — R-118), and 3 standing collisions.
 Commons-next is a PLANNED village: the same craft, drawn once on purpose.
 The old world remains the keeper's home until the new one earns the swap —
 maybe forever. Zero risk, full optionality.
+
+The nv-1/nv-2 stake proved transport and component restoration, but it did
+not prove that the target world reads as a coherent village. Three sparse
+models on a 224m disc read as nearly empty. From v2 onward, no new model is
+placed merely because it exists or passed a hash check. Every candidate must
+be inspected as a finished object, approved at an exact content hash, and
+then seated on this coordinate plan.
 
 What carries over (proven assets): the 12 mason themes, the 7 material
 families, housekit idiom, slow-and-calm motion law, placer-FILE comps
@@ -25,8 +32,7 @@ district drawn from day one, night lighting budgeted per district.
 ## 1. Terrain (seeded at fork)
 
 - size 224 (±112m), amplitude 0.16 (gentler than 0.2), flatRadius 24, segments 240.
-- Seed: NEW random (Mai picks; not 4666/7). Terrain relief is décor only — all
-  buildings sit at heightAt.
+- Seed: 8128. Terrain relief is décor only — all buildings sit at heightAt.
 - Rim: 112m half-size gives ~2.5× the usable band area of commons (160).
 
 ## 2. Ring math (R-118 killed by design)
@@ -44,23 +50,62 @@ Fleet: 60 works, ~9,800 m² total footprint (unchanged), max work width ~21m
 - Live-world law (unchanged): every site checked against heightAt + actual
   bbox before place; two-way walk-test any lane a work abuts.
 
-## 3. Village core — drawn, not inherited
+## 3. Village core — minimal, inspected, then placed
 
-Core moves as HOUSEKIT SOURCES, not as placed GLBs. Each commons building is
-rebuilt from its mkv3 script at current quality and re-seated on a drawn plan:
+The earlier phrase “forge + court, bakery, tower-house” accidentally counted
+the bakery twice. `village_court3.glb` is already the bakery + workshop court;
+`village_forge3.glb` is its small exterior forge annex. The honest minimal
+core is therefore TWO principal building masses, not three:
 
-- Plaza: hearth, welcome board (night-lamp from day one), mapboard, carousel
-  (staged roof-lift + widened paint finally live), keeper's shelf. Radii
-  compact — everything readable at 18m spectator distance (polish-3 lesson).
-- Ring road: full circle at r≈30, 3.5m cart width, spokes at 60° with lamp
-  posts budgeted per spoke (welcome-board lesson: no dark rims).
-- Buildings (~15): inn, bakery, dyer/weaver, forge + court, tower house,
-  stables + paddock, coop + run, granary, kiln, cistern, watchpost at the
-  W gate, row cottage, garden cottage + fence, fieldpond. Each on a named
-  plot with setback, door lane facing a spoke or the ring, and a comp plan
-  (smoke/embers/lights) written BEFORE the first place.
-- Interiors: rooms ≥16 m², doors 1.4m clear (R-113 law), furniture placed
-  with the build, not after.
+1. Bakery + workshop court (`village_court3.glb`) with forge annex,
+   bakery cistern, and the two trade signs as separately reviewed satellites.
+2. Tower-house (`village_tower3.glb`) with shutters at the identical pose.
+
+No inn or third building is implied. Add another principal mass only after
+Bill walks these two and names the missing function. Subtraction remains law.
+
+### 3.1 Coordinate sheet (proposed; approval-gated)
+
+Angles use the existing convention: 0° = +X/east, CCW positive. Building
+local +Z faces the hearth. All numbers below are design coordinates; the
+placer still resolves live `heightAt` immediately before spawn.
+
+| Ensemble | Polar slot | Proposed world pose | Yaw | Notes |
+| --- | --- | --- | ---: | --- |
+| hearth | center | `(0, y, 0)` | existing | Provisional nv-1 stake; retrospective review first. |
+| welcome | existing | `(-3, y, -4.3)` | `0.6092` | South-west arrival threshold; keep the main arrival side open. |
+| carousel | `r=25.5, 135°` | `(-18.0, y, 18.0)` | `2.35619` | Proposed compact reseat from current `(-18.8, 25.9)`; never move until exact-hash approval and full comp capture. |
+| tower-house | `r=22, 50°` | `(14.1, y, 16.9)` | `-2.44347` | North-east vertical anchor, inside the flat-radius ground. Shutters share exact pose/yaw. |
+| bakery/workshop court | `r=24, 322°` | `(18.9, y, -14.8)` | `-0.90756` | South-east working anchor; both open shed faces turn toward the hearth. |
+| forge annex | court-local | `(22.13, y, -7.93)` | court yaw | Local anchor `(7.373, 0, 1.677)` from the align-9 flush placement. |
+| bakery cistern | court-local | `(15.54, y, -15.88)` | court yaw | Local anchor `(-2.949, 0, 1.980)` derived from the era-3 court plan. |
+| bakery sign | court-local | `(17.94, y, -18.29)` | review | Local anchor `(-3.364, 0, -1.394)`; orientation must be visually re-aimed after court placement. |
+| smithy sign | court-local | `(20.06, y, -20.41)` | review | Local anchor `(-3.729, 0, -4.372)`; orientation must be visually re-aimed after court placement. |
+
+This makes a deliberate three-anchor composition around the hearth: carousel
+NW, tower NE, working court SE, with the SW arrival meadow left open. Pairwise
+principal-anchor distances are 31.99–49.41m; each mass has breathing room and
+the hearth remains visible. Four approach lamps begin at the cardinal r=10
+points `(10,0)`, `(0,10)`, `(-10,0)`, `(0,-10)` only after the lamp asset is
+rebuilt and reviewed; the inherited eight-lamp `village_streetlamps3.glb`
+does not match this four-way plan and must not be placed as-is.
+
+### 3.2 Inspect-before-place gate
+
+Every model has two distinct states and two distinct ticks:
+
+1. `REVIEWED_READY`: deterministic rebuild; GLB structure/bounds/materials/
+   node budget/anchors decoded; source and component targets reconciled;
+   four-angle daylight frames plus a gameplay-distance frame inspected;
+   night frame and interval pair added when light or motion matters; highest-
+   value defect fixed; exact SHA-256 and proposed pose recorded.
+2. `PLACED_VERIFIED`: Bill approved that exact hash and pose in
+   `NEXT-PLACEMENT-APPROVALS.md`; a later tick re-proved the hash, spawned via
+   a placer file, restored the full component bag, verified live hash/pose/
+   components, and took a fresh target-world visual frame.
+
+Review and placement never happen in the same wakeup. A model that is merely
+technically valid is not ready. A visual contradiction is a hard stop.
 
 ## 4. Districts (the ring, organized)
 
@@ -103,22 +148,27 @@ readable from its lane at ~18m.
 
 ## 8. Build order + verification
 
-1. Terrain verified (fork done) — /geom census empty, no 404.
-2. Core skeleton: plaza + ring road + 3 buildings, walk-tested two-way.
-3. Remaining core, one district at a time, Bill eye-check per district.
-4. Ring lift-in: 60 works re-seated by district (capture/reapply comps by
-   placer FILES; re-seat same lib first, elevate geometry per-work after —
-   masonr loop hand-off).
-5. Mai's district (her lane).
-6. Keeper phase 1, night pass, full end-to-end audit (audit-254 protocol).
+1. Freeze new placement. Retrospectively review the already-staked hearth,
+   welcome board, and carousel; do not move or delete one without Bill's call.
+2. Review and rebuild the four-way approach-lamp asset; place only after its
+   exact hash and four cardinal seats are approved.
+3. Review the court ensemble one model at a time: court, forge, cistern,
+   bakery sign, smithy sign. Place the ensemble only after every member is
+   individually approved; then two-way walk-test both open shed lanes.
+4. Review tower and shutters separately; place at the shared pose only after
+   both pass; two-way walk-test the 1.4m door lane and inspect the study at night.
+5. Draw roads and paths around the accepted seats, never the reverse.
+6. Hold for Bill's core walk. Only then open the 60-work district queue.
+7. Ring lift-in remains one reviewed work per approval, capture/reapply comps
+   by placer FILES, with district sweep after each accepted cluster.
+8. Mai's `mx-` district remains untouched. Keeper phase 1 and public-link swap
+   remain Bill-only decisions. Finish with the end-to-end audit protocol.
 
 Standing gate stays: verify-repairs.ts must exit 0 before any commit; new
 world gets its own HEAD-gate consideration when its first lane opens.
 
 ## 9. Open decisions for Bill
 
-- Terrain seed/relief: gentler (0.16) or keep commons' character (0.2)?
-- Core building list: the 15 above — cut/add any?
-- Keeper: phase-1 second instance timing — with core build or after ring?
-- Public link: swap when? (default: never auto-swap; your explicit call)
-- Mai's district theme: hers to pick, or you assign?
+- Approve/reject each `REVIEWED_READY` hash and pose; no blanket approval.
+- After the two-building core walk: is one more principal mass actually needed?
+- Keeper phase-1 timing, public-link swap, and Mai's district remain deferred.

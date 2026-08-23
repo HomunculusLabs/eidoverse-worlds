@@ -125,7 +125,7 @@ ok("verify-repairs.ts 0 / ALL PASS", vr.code === 0 && vr.out.includes("ALL PASS"
 ok("tex-80 pin green", /^\s*PASS \[tex-80\]/m.test(vr.out));
 ok("tex-4 multi pin carries new bunk hash (no FAIL)", !/FAIL \[tex-4\]/.test(vr.out));
 ok("ledger law EXACT + HEAD gate green (polish-inclusive)",
-    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)?(\/lift)?(\/align)?(\/mason)?(\/nv)? commit/m.test(vr.out));
+    /^\s*PASS ledger law EXACT/m.test(vr.out) && /PASS HEAD is a repair\/tex\/audit\/refine(\/polish)?(\/plaza)?(\/lift)?(\/align)?(\/mason)?(\/nv)?(\/nvp)? commit/m.test(vr.out));
 
 console.log(fails.length ? `\n${fails.length} FAIL` : "\nALL PASS");
 process.exit(fails.length ? 1 : 0);
