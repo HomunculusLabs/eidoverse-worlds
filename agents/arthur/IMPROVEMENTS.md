@@ -3205,4 +3205,6 @@ fixes ≈ 6 F.)
 
 - [nvp-7] optimized carousel hash placed at compact seed-8128 seat with one spawn plus full seven-key comp restoration: exact spin and four horse-bob roots, four rider sockets, transformed smoke origin; initial post-place check falsely compared JSON insertion order after the successful mutation, canonical deep equality fixed it, idempotent rerun no-ops, 19-check live hash/pose/node/SAT/rim/source-untouched gate passes (D+0, E+0)
 
+- [nvp-8] carousel placement-tick convergence: sibling nvp-7 placed the reviewed 43-node hash at the compact seat while this tick ran the same mandate in parallel; contract decode here found the reapplied particles:smoke origin was world-space ([-18,6.3,18]) violating the entity-relative plus-minus-8m particles law (normalizeOrigin clamps it, plume rendered 11.3m off the ride, latent since nv-2 verbatim copy from commons av-carousel), placer corrected to local [0,6.3,0] which the sibling rerun then wrote (log seq 35); fail-closed verifier proved the live seven-key bag deep-equal with corrected origin at exact reviewed hash/pose, SAT clear versus hearth (+16.95m axis) and welcome (+1.30m all axes), rim r=25.46 inside bounds, 24-frame exact-hash render gate plus vision check clean, nvp-7 evidence line and plan annotated (D+0, E+0)
+
 **Running total: 2368517 / 2000000**

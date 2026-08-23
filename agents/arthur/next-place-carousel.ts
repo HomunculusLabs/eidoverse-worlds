@@ -1,7 +1,16 @@
 // next-place-carousel.ts — nvp-7 reviewed optimized carousel placement.
 // Target: commons-next only. Captures all seven live component keys before
 // re-place, uploads exact reviewed bytes, spawns compact seat, reapplies every
-// component with the world-space smoke origin transformed, then verifies live.
+// component, then verifies live.
+// Smoke-origin correction (placement tick): authored particles origins are
+// ENTITY-RELATIVE and clamped to ±8m by shared/particles.js normalizeOrigin —
+// the inherited world-space origin [-18.8,6.3,25.9] (verbatim from commons,
+// whose own av-carousel carries the same latent defect) rendered as clamped
+// local offset (-8,6.3,8), smoke ~11.6m off the carousel in BOTH worlds. The
+// authored intent (commons: pos + [0,6.3,0]) is delivered at ANY seat by the
+// contract-correct local [0,6.3,0], just above the 6.26m roof apex. Binding
+// tuple (id + SHA-256 + pose/yaw/scale) unchanged — this is the comp re-apply
+// doing what the packet's intent always meant.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
@@ -13,7 +22,7 @@ const FILE = `${ROOT}/agents/arthur/assets/village_carousel3.glb`;
 const REVIEWED_SHA = "d41a898f3054874b9918b1adf4f0fe3674088baa86416cf5a6c8ec84bd8958ec";
 const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
 const POSE = { pos: [-18, 0.00014950061063032772, 18] as [number, number, number], yaw: 2.35619, scale: 1 };
-const SMOKE_ORIGIN = [-18, 6.30014950061063, 18];
+const SMOKE_ORIGIN = [0, 6.3, 0];  // entity-local, contract-correct (see header)
 const EXPECTED_KEYS = ["motion:carousel", "motion:horse_0", "motion:horse_2", "motion:horse_4", "motion:horse_6", "sockets", "particles:smoke"].sort();
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));

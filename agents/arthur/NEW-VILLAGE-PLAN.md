@@ -74,7 +74,7 @@ placer still resolves live `heightAt` immediately before spawn.
 | --- | --- | --- | ---: | --- |
 | hearth | center | `(0, y, 0)` | existing | `PLACED_VERIFIED` nvp-3 at exact reviewed tuple; no re-place was needed. |
 | welcome | existing | `(-3, y, -4.3)` | `0.6092` | `PLACED_VERIFIED` nvp-5 at revised COMMONS-inscription hash. |
-| carousel | `r≈25.456, 135°` | `(-18, 0.00014950061063032772, 18)` | `2.35619` | `PLACED_VERIFIED` nvp-7 at optimized 43-node hash; smoke origin transformed. |
+| carousel | `r≈25.456, 135°` | `(-18, 0.00014950061063032772, 18)` | `2.35619` | `PLACED_VERIFIED` nvp-7 at optimized 43-node hash; smoke origin contract-corrected to local `[0,6.3,0]` (nvp-8). |
 | tower-house | `r=22, 50°` | `(14.1, y, 16.9)` | `-2.44347` | North-east vertical anchor, inside the flat-radius ground. Shutters share exact pose/yaw. |
 | bakery/workshop court | `r=24, 322°` | `(18.9, y, -14.8)` | `-0.90756` | South-east working anchor; both open shed faces turn toward the hearth. |
 | forge annex | court-local | `(22.13, y, -7.93)` | court yaw | Local anchor `(7.373, 0, 1.677)` from the align-9 flush placement. |
@@ -148,8 +148,8 @@ readable from its lane at ~18m.
 
 ## 8. Build order + verification
 
-1. Entire plaza trio PLACED_VERIFIED through `nvp-7`; carousel compact reseat
-   and 193→43 node optimization live with full motion/socket/smoke bag.
+1. Entire plaza trio PLACED_VERIFIED through `nvp-8`; carousel compact reseat,
+   193→43 node optimization, and entity-local smoke correction live.
 2. Next: review and rebuild the four-way approach-lamp asset; place only after its
    exact hash and four cardinal seats are Arthur-reviewed-ready.
 3. Review the court ensemble one model at a time: court, forge, cistern,
