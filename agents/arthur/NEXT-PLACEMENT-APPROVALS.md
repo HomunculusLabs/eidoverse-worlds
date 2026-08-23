@@ -108,3 +108,21 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T15:22:21Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-10 — exact reviewed hash uploaded once and atomically instantiated as four cardinal models plus four separate warm lights. All model ids/hash/poses/yaws/scales/bboxes/empty bags verified from fresh /geom; exact light color/intensity/range verified from the authored light-verb history fold because /geom intentionally projects lights to identity + pose only. Initial post-place check falsely treated those omitted /geom fields as drift after the successful eight-verb mutation; verifier was corrected at the proper history boundary and idempotent rerun sent zero verbs. Micro-OBB/rim, standing gate, and hash-bound visual evidence passed.`
+
+### nx-court — ARTHUR_REVIEWED_READY
+
+- Source: `agents/arthur/assets/mkv3-ring.ts` (court section)
+- Output: `agents/arthur/assets/village_court3.glb`
+- SHA-256: `38096b30b9131685be9d8ed829839767ded39dae26e54086dd6604f68cbb7b22`
+- Proposed pose: `pos [18.9,-1.5946487083102603e-8,-14.8], yaw -0.90756, scale 1`
+- Bounds / nodes / materials: `13 × 4.29 × 5.94m; 27 GLB nodes / 27 draws; timber/stone/plaster/iron + emissive fire/flame/lamp families; 212,808 bytes`
+- Component compatibility: `PASS with correction — commons carries particles:smoke only; inherited world-space origin inverse-decodes to the oven. Apply contract-correct local [-4.9,3.2,-0.8] with the same smoke recipe.`
+- Structural checks: `PASS after repair — deterministic rebuild ×2; 0 degenerate triangles; 0 NaNs; 0 floating clusters; two 2.2×2.3m openings; 0.20m thresholds; both 1.4m lanes and both 2m×1.5m interior/exterior aprons clear; room-scale trimesh posture; proposed OBB/rim clear`
+- Visual checks: `PASS after repair — six-frame daylight/gameplay/night review; two roofed sibling sheds remain coherent; bakery/workshop identity and open working yard readable; complete from all sides`
+- Highest-value finding: `FIXED — workbench, flour bin, and anvil station occupied the required arrival rectangles despite stale comments calling them clear. All moved beside their openings without visual loss.`
+- Evidence: `agents/arthur/reviews/nx-court/REVIEW.md` and `agents/arthur/reviews/nx-court/contact-sheet.jpg`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-23T15:42:03Z`
+- Placement state: `UNCONSUMED — ensemble hold until forge, cistern, bakery sign, and smithy sign are all reviewed-ready`
+- Placement evidence: ``

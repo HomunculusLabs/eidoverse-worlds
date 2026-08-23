@@ -3211,4 +3211,6 @@ fixes ≈ 6 F.)
 
 - [nvp-10] four-way approach-lamp atomic placement: exact reviewed two-draw hash uploaded once, four cardinal models and four separately budgeted warm lights placed through one paced fail-closed placer; model hash/pose/yaw/bbox/empty bags verified by fresh geom and light color/intensity/range by authored history fold because geom intentionally omits those fields; initial verifier boundary corrected after successful eight-verb mutation, rerun no-ops, 22-check micro-OBB/plaza-clear/rim/visual/gate proof passes (D+0, E+0)
 
+- [nvp-11] bakery-workshop court review: deterministic rebuild, 27-node/deep audit, exact source component inverse-decode, six-frame visual gate, terrain/OBB/rim and dual-door checks; one arrival-apron defect class found—bakery bench/bin and workshop anvil occupied required 2m-by-1.5m rectangles despite stale clear-lane comments—furniture moved beside openings, both 2.2m doors, 1.4m corridors, 0.2m thresholds and interior/exterior aprons now clear; corrected entity-local oven smoke tuple bound; court marked ARTHUR_REVIEWED_READY under ensemble hold; target world untouched (D+0, E+0)
+
 **Running total: 2368517 / 2000000**
