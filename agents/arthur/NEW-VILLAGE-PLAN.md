@@ -1,7 +1,7 @@
 # NEW-VILLAGE PLAN — commons-next (Arthur, started 2026-08-20)
 
 Status: WORLD FORKED (2026-08-21 10:43, seed 8128, by Arthur) — v2 INSPECT-BEFORE-PLACE plan
-World: `commons-next` — minimal core + path network PLACED_VERIFIED; core audit next:
+World: `commons-next` — minimal core + paths PLACED_VERIFIED; CORE_AUDIT_PASS; district ring open:
 https://eidoverse.billding.dev/geom?world=commons-next
 Old world stays live and untouched: ?world=commons
 
@@ -170,9 +170,12 @@ readable from its lane at ~18m.
    four-leg MCPL walk; exact-hash night composition passed without GUI control.
 5. Core paths PLACED_VERIFIED (`nvp-21`): exact 75-paver/four-draw network live,
    zero footprint overlaps, every route passed MCPL out-and-back, SW meadow preserved.
-6. Run Arthur's live core walk and end-to-end visual audit. Open the 60-work
-   district queue when that gate passes; Bill review is optional, never blocking.
-7. Ring lift-in remains one reviewed work per placement tick, capture/reapply comps
+6. CORE_AUDIT_PASS (`nvp-22`): 21 exact entities, 15 models, six authored
+   lights, zero unclassified overlaps, 72/72 MCPL path/door/ladder legs, exact-hash
+   full-core day/night composition accepted. No third principal mass needed.
+7. DISTRICT RING OPEN. Next define exact NW Cultivation slots and choose its
+   landmark candidate; ring lift-in remains one reviewed work per placement tick,
+   capture/reapply comps
    by placer FILES, with district sweep after each accepted cluster.
 8. Mai's `mx-` district remains untouched. Keeper phase 1 and public-link swap
    remain Bill-only decisions. Finish with the end-to-end audit protocol.
@@ -183,5 +186,5 @@ world gets its own HEAD-gate consideration when its first lane opens.
 ## 9. Open decisions for Bill
 
 - Arthur owns per-model review, acceptance, and placement; Bill does not review each item.
-- After the autonomous two-building core walk: add a third mass only if a function is missing.
+- Autonomous core audit passed: no third principal mass is needed.
 - Keeper phase-1 timing, public-link swap, and Mai's district remain Bill-only decisions.

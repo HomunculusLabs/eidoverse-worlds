@@ -252,3 +252,17 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T17:48:55Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-21 — exact reviewed four-draw hash placed at world origin through a dedicated manifest-driven fail-closed placer. Fresh live lib/pose/yaw/scale/empty bag and 75-paver 0.179586m minimum micro-clearance verified; rerun sent zero verbs. Real MCPL body walked tower, workshop, bakery, carousel and south-spoke routes out and back: 64/64 legs passed, maximum arrival 0.38m. Harness-only exact-hash top/aerial/gameplay/night evidence regenerated; commons and mx ground untouched.`
+
+## Core audit gate
+
+### commons-next minimal core — CORE_AUDIT_PASS
+
+- Audit: `nvp-22`
+- Live census: `21 exact entities; 15 exact model tuples; 6 exact authored lights`
+- Spatial gate: `0 unclassified model overlaps; 75 pavers clear at minimum 0.179585559m`
+- Walk gate: `64/64 path legs + 4/4 court door legs + 4/4 tower door/ladder legs = 72/72 pass`
+- Visual gate: `exact-hash full-core top/aerial/SW-arrival/gameplay/night composition with exact live light-history fold; pass`
+- Functional verdict: `court/workshop/bakery + tower residence/study + hearth/welcome + carousel fulfill the minimal core; no third principal mass needed`
+- Strongest non-blocking limitation: `core remains intentionally sparse at ~48m scale; district ring must add distant context without filling the SW meadow`
+- Evidence: `agents/arthur/reviews/nx-core-audit/CORE-AUDIT.md` and `contact-sheet.jpg`; `agents/arthur/next-audit-core.ts`
+- Result: `DISTRICT RING OPEN — Arthur review/placement law continues one work per tick`

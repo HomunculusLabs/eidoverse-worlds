@@ -126,9 +126,10 @@ Work on exactly one model.
    MCPL door/ladder walk and harness-only exact-hash night composition passed.
 5. `nx-core-paths` PLACED_VERIFIED (`nvp-21`): exact four-draw network live;
    75-paver micro-clearance and 64/64 MCPL route legs pass; SW meadow stays open.
-6. NEXT: run an autonomous end-to-end core walk and visual audit, then open the 60-work
-   ring if it passes. Bill may visit whenever he likes, but his review is not a blocker.
-   Thereafter each work follows this same inspect-then-place law.
+6. CORE_AUDIT_PASS (`nvp-22`): exact census/light fold/model+paver SAT, 72/72
+   MCPL route/door/ladder legs and harness-only full-core day/night composition pass.
+   No third mass needed. DISTRICT RING OPEN. NEXT: define exact NW Cultivation
+   slots and select its landmark candidate; each work follows inspect-then-place law.
 
 ## PLACEMENT COORDINATES
 
