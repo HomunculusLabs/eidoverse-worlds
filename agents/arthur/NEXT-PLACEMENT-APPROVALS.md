@@ -608,3 +608,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-59 — reviewed hash 61d7a70c...2167 re-proved byte-identical, then placed at the exact bound tuple [49.515665, -0.0301676564610222, 54.992717] yaw -2.35619449 scale 1 through agents/arthur/next-place-craft-statuary-0039.ts; preflight rim inner 68.009403 / outer 80.41708 inside [66,108], rotated-SAT min gap 7.418325m vs every live footprint (nearest the placed landmark 0026); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-craft-statuary-0052 — REVIEWED_READY
+
+- District: `NE Craft statuary 4 of 4 — FINAL statuary`
+- District plan: `agents/arthur/NE-CRAFT-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeStatuary idx 1672 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1672_statuary.glb`
+- SHA-256: `8c560202486fa0cd9028b111d18711c2896c51841bff97c951b846fbb9e3ddf5`
+- Proposed pose: `pos [33.595297, -0.024298703471806356, 65.934483], yaw -2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `11.84 x 1.8363 x 11.84m; 5 GLB nodes / 4 draws; statuary court twin of accepted siblings, 12 figures + border plinth ring + rubble; furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0052 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; ceremonial-court read identical to accepted siblings; night silhouette coherent`
+- Highest-value finding: `No blocking defect and none unique beyond family notes on record. Verdict accept as-is for its theta=63 seat closing the statuary arc. With placement, STATUARY completes 4/4; lane advances to hamlets per the planner slot order.`
+- Evidence: `agents/arthur/reviews/nx-craft-statuary-0052/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-craft-statuary-0052-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
