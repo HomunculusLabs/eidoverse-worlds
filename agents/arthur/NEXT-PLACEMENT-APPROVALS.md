@@ -286,5 +286,5 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-23T19:21:03Z`
-- Placement state: `UNCONSUMED`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-25 — exact reviewed hash a3bb3487...df30a7 rebuilt and re-proved byte-identical, then placed at the exact reviewed tuple [-61.87184335382291, 0.02514020801364989, 61.87184335382291] yaw 2.35619449 through agents/arthur/next-place-cultivation-orchard-0033.ts; preflight rim law inner 80.575 / outer 95.025 inside [66,108], rotated-SAT min gap 51.24414m (nearest nx-carousel); target id was absent (no comp bag to capture); post-place live lib/pose/scale/bbox/empty-bag verified, idempotent rerun sent zero verbs. Real MCPL two-way aisle walk (agents/arthur/next-walk-orchard.ts): approach→gate→mid→far end→mid→gate→approach = 6/6 legs pass, maximum arrival 0.365m.`

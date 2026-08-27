@@ -3239,4 +3239,6 @@ fixes ≈ 6 F.)
 
 - [nvp-24] NW Cultivation orchard-landmark review: inherited av-mason-0033 canopy wall lacked a human-scale arrival, so a dedicated deterministic four-draw source now forms thirty trees around a 1.65m full-depth soil aisle and 2.18m threshold. Focused verifier caught the first lintel inside the avatar head band; final lintel underside is 2.30m and fruit mark sits outside the 1.4m lane. Final exact hash passes twenty-seven geometry/lane/apron/source/terrain/district-SAT/visual/deep/gate checks plus thirteen state checks; district minimum gap improves to 0.653458m. Marked ARTHUR_REVIEWED_READY unconsumed; target world untouched (D+0, E+0)
 
-**Running total: 2368517 / 2000000**
+- [nvp-25] NW Cultivation orchard landmark placed: exact reviewed four-draw a3bb3487 hash rebuilt byte-identical and spawned at the reviewed tuple on the district bisector through the new fail-closed placer; preflight proved rim law inner 80.575 outer 95.025 and fifty-one-metre minimum SAT clearance; post-place live tuple and empty bag verified, idempotent rerun sent zero verbs, and a real MCPL body walked the aisle approach to gate to far end and back both ways with six of six legs and 0.365m maximum arrival; review record marked CONSUMED (D+0, E+1)
+
+**Running total: 2368518 / 2000000**
