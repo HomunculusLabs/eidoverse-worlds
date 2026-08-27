@@ -466,5 +466,5 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-27T00:00:00Z`
-- Placement state: `UNCONSUMED`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-43 — reviewed hash 01a4e80c...8b3a re-proved byte-identical, then placed at the exact bound tuple [-86.104625929, 0.0456712809132166, 52.696406703] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-garden-0011.ts; preflight rim inner 94.181017 / outer 107.877106 inside [66,108], rotated-SAT min gap 1.084464m vs every live footprint (nearest nx-cultivation-orchard-0012); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs. GARDEN FAMILY COMPLETE 5/5; lane advances to lavender per the nvp-23 slot map.`
