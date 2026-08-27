@@ -408,3 +408,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-37 — reviewed hash e54ee386...8111 re-proved byte-identical, then placed at the exact bound tuple [-53.224217316, 0.03137989008033212, 72.691689056] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-garden-0058.ts; preflight rim inner 83.976305 / outer 96.468638 inside [66,108], rotated-SAT min gap 0.757716m vs every live footprint (nearest nx-cultivation-orchard-0046); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-cultivation-garden-0032 — REVIEWED_READY
+
+- District: `NW Cultivation garden 3 of 5`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeGarden idx 1652 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1652_garden.glb`
+- SHA-256: `38e4718c5efd13749ea57027ad5216254d15266d99c2526b4aa9d1b8634566fe`
+- Proposed pose: `pos [-70.894119993, 0.0276505409363984, 72.469434032], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `11.3491 x 0.64 x 11.2090m; 6 GLB nodes; ring-hedge garden (three concentric rings) plus ~241 flowers, densest interior fill of the sibling set; low furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0032 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; coherent hedge band with a seeded-heart flower concentration; rings legible from above`
+- Highest-value finding: `No blocking defect. Densest interior flower fill of the siblings gives strongest eye-level color presence — correct for its outer-east seat beside the landmark and garden neighbours. Accept as-is. Physics note: support resolver correctly abstains on placed siblings' bumpy tops (non-walkable), consistent with last tick.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-garden-0032/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-garden-0032-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
