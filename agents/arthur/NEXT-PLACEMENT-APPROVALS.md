@@ -665,5 +665,5 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-27T00:00:00Z`
-- Placement state: `UNCONSUMED`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-65 — reviewed hash 353dd6fb...cca0 re-proved byte-identical, then placed at the exact bound tuple [79.285079, -0.019683875057015642, 38.519433] yaw -2.35619449 scale 1 through agents/arthur/next-place-craft-hamlet-0015.ts (adapted from the proven 0007 two-pass placer); preflight rim inner 79.648025 / outer 96.867263 inside [66,108], rotated-SAT min gap 0.543633m vs every live footprint (nearest the placed landmark 0026 — exactly the planned pair gap, positive); MANDATORY embers comp restored in the same placement pass (embersRestored true, exact payload); post-place live lib/pose/scale/bbox/comp deep-verified and idempotent rerun sent zero verbs; the 0007 placer's correct comp verb shape carried over first try.`
