@@ -1,4 +1,15 @@
-# SERVER LOOP — durable plan
+# SERVER LOOP — superseded plan
+
+Status: SUPERSEDED by the disjoint server workings below. Do not resume this
+stale broad queue; several seed items already landed after this file stopped
+tracking current state.
+
+- `RESILIENCE-LOOP.md` — authored-plane durability and fail-closed recovery
+- `PRESSURE-LOOP.md` — measured multiplayer scale, fairness, and backpressure
+- `VOCABULARY-LOOP.md` — complete browser/MCPL interaction affordances
+
+The production provenance/drift and explicit-deploy-authority laws from this
+file remain mandatory inside every replacement working.
 
 Loop name: SERVER LOOP
 Repo: /Users/t3rpz/projects/eidoverse-worlds

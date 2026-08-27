@@ -53,6 +53,7 @@ function reap(p: Bun.Subprocess | null) {
 type Row = { name: string; tool: string; server?: boolean; serverEnv?: Record<string, string>; env?: Record<string, string>; timeoutMs?: number; sweepPorts?: number[] };
 const BATTERY: Row[] = [
   { name: "smoke", tool: "tools/smoke.ts", sweepPorts: [8987] },
+  { name: "perflog-route", tool: "tools/perflog-route-test.ts" },
   { name: "authtest", tool: "tools/authtest.ts", sweepPorts: [8992] },
   { name: "collide-fold", tool: "tools/collide-fold-test.ts", sweepPorts: [8990] },
   { name: "support-lifecycle", tool: "tools/support-lifecycle-test.ts", timeoutMs: 420_000, sweepPorts: [8940] },

@@ -407,7 +407,10 @@ const ROUTES: Route[] = [
           const big = existsSync(dest) && Bun.file(dest).size > 5_000_000;
           if (!big) {
             const ip = req.headers.get("x-real-ip") ?? srv.requestIP(req)?.address ?? "?";
-            appendFileSync(dest, JSON.stringify({ ts: Date.now(), ip, ...JSON.parse(body) }) + "\n");
+            // Payload fields are useful diagnostics, but provenance belongs to
+            // the receiving server. Keep server-observed values last so a
+            // beacon cannot forge when or where its receipt was accepted.
+            appendFileSync(dest, JSON.stringify({ ...JSON.parse(body), ts: Date.now(), ip }) + "\n");
           }
         }
       } catch { /* malformed beacon: drop */ }
