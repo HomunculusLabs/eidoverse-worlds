@@ -308,3 +308,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-27 — reviewed hash dc4d7059...03d0bb re-proved byte-identical, then placed at the exact bound tuple [-88.7346892568504, 0.019921379876134182, 35.79681905684085] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-orchard-0012.ts; preflight rim inner 86.052106 / outer 105.465824 inside [66,108], rotated-SAT min gap 22.920277m vs every live footprint (nearest nx-cultivation-orchard-0033); target id was absent (empty-bag contract, no comps to restore); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs. Standing gate green before and after; visual evidence remains the exact-hash review renders plus live API identity (no in-world camera frame).`
+
+### nx-cultivation-orchard-0046 — REVIEWED_READY
+
+- District: `NW Cultivation supporting orchard (rank 3 of 5)`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeOrchard idx 1666 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1666_orchard.glb`
+- SHA-256: `ec93dc09acc0ddfa56e817ec3f311d4680c88e097cc1e34fada1e437a96783fd`
+- Proposed pose: `pos [-43.205814584, 0.041268072595556725, 82.188872132], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `14.7716 x 4.5400 x 14.5481m; 5 GLB nodes / 4 draws; single timber-family canopy texture + understory; 476,940 bytes`
+- Component compatibility: `PASS — commons source av-mason-0046 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical twice; quincunx 41 trees; grounded outdoor auto-trimesh; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; reads as a deliberate orchard at gameplay distance with organized column arcs; known family back-view darkness not re-flagged (skill law)`
+- Highest-value finding: `No blocking defect. Inherited rank-3 note stands — slightly softer central organization than siblings; correct for a supporting work away from the approach axis. Accept as-is.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-orchard-0046/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-orchard-0046-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
