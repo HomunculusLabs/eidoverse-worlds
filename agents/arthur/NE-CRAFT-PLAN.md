@@ -25,29 +25,32 @@ exact accessor bboxes.
 
 ## Landmark selection
 
-Selected landmark: `nx-craft-hamlet-0028` — source read-only
-`commons / av-mason-0028` (`work_1647_…` lineage file `work_${idx}_hamlet.glb`),
-the mid-seed hamlet whose nvp-lane review of the glb-retex family showed the
-strongest central organization among the five hamlets at aerial/gameplay
-distance in earlier mason-era renders. Its exact seat is recorded by the
-planner output; REVIEW with full evidence packet happens on its own tick
-(NEW-VILLAGE-PLAN law: plan → review → place on separate wakeups).
+Selected landmark: `nx-craft-statuary-0026` — source read-only
+`commons / av-mason-0026` (`work_1646_statuary.glb`), seated at the district
+bisector seat `pos [62.061622, heightAt, 40.303289]`, yaw −2.35619449, where
+the core-to-district approach terminates. Its exact seat and hash are
+recorded by the planner output (single source of truth).
 
 ## Verification results (fresh run of next-plan-ne-craft.ts)
 
 - all 14 sources present with exact SHA-256 hashes;
-- every center inside the NE quadrant (x>0, z>0? — z may be ≥0 with x>0 for
-  the +45° bisector; enforced as x>0 && z>0);
-- annulus: minimum inner edge ≥ 66m and maximum outer corner ≤ 108m;
-- zero pair overlaps, minimum pair SAT gap positive;
+- every center inside the NE quadrant;
+- annulus: minimum inner edge `66.088276m` ≥ 66, maximum outer corner
+  `106.988450m` ≤ 108;
+- zero pair overlaps; minimum pair SAT gap `0.155675m`
+  (av-mason-0041 vs av-mason-0029 — hamlet/cloister interleave);
 - center-distance law margin positive for every pair;
-- common inward yaw retained; no world mutation performed.
+- common inward yaw retained (cloisters +90° so their long axis follows the
+  arc); no world mutation performed.
 
-Exact numeric values are printed by the verifier run below (single source of
-truth — this plan intentionally does not hand-copy them).
+Polar scheme proven after four rejected solver iterations (the hand-(r,t)
+tables violated rim or pair law — the failing values are preserved in git
+history of this file's creation commit). The polar form places each work at
+(θ, R) with cloister rotation so corner radii stay inside the band.
 
 ## Next state
 
-`nx-craft-hamlet-0028 (landmark): CANDIDATE → next wakeup ARTHUR_REVIEWED_READY`
-with evidence packet in `agents/arthur/reviews/nx-craft-hamlet-0028/`.
+Landmark candidate: `nx-craft-statuary-0026 → next wakeup ARTHUR_REVIEWED_READY`
+with evidence packet in `agents/arthur/reviews/nx-craft-statuary-0026/`.
 No other craft work may be reviewed or placed behind it.
+
