@@ -328,3 +328,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-29 — reviewed hash ec93dc09...783fd re-proved byte-identical, then placed at the exact bound tuple [-43.205814584, 0.041268072595556725, 82.188872132] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-orchard-0046.ts; preflight rim inner 83.857547 / outer 102.109461 inside [66,108], rotated-SAT min gap 12.942386m vs every live footprint (nearest the 0033 landmark); target id was absent (empty-bag contract, no comps to restore); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-cultivation-orchard-0059 — REVIEWED_READY
+
+- District: `NW Cultivation supporting orchard (rank 4 of 5)`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeOrchard idx 1679 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1679_orchard.glb`
+- SHA-256: `8d3959f01e32c335c290d94b46da3551d45d55e624805c2c36638fa851f1672f`
+- Proposed pose: `pos [-30.841783310, -0.0002733106081673675, 91.622432800], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `14.6445 x 4.6109 x 14.4455m; 5 GLB nodes / 4 draws; single timber-family canopy texture + understory`
+- Component compatibility: `PASS — commons source av-mason-0059 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical twice; quincunx 41 trees; grounded outdoor auto-trimesh; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; coherent even canopy band with regular quincunx columns from above; family back-view darkness not re-flagged (skill law)`
+- Highest-value finding: `No blocking defect. Even canopy wall without a focal element caps landmark authority — correct character for a rank-4 background seat on the outer north arc. Accept as-is.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-orchard-0059/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-orchard-0059-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
