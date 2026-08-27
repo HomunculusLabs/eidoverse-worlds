@@ -588,3 +588,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-57 — reviewed hash dd098550...9f7a re-proved byte-identical, then placed at the exact bound tuple [70.378182, -0.026565256802728945, 22.867258] yaw -2.35619449 scale 1 through agents/arthur/next-place-craft-statuary-0005.ts; preflight rim inner 66.088276 / outer 82.003203 inside [66,108], rotated-SAT min gap 6.369832m vs every live footprint (nearest the placed landmark 0026); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-craft-statuary-0039 — REVIEWED_READY
+
+- District: `NE Craft statuary 3 of 4`
+- District plan: `agents/arthur/NE-CRAFT-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeStatuary idx 1659 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1659_statuary.glb`
+- SHA-256: `61d7a70c8b530b83c261eceb959483a6f269bd77a176f1aebb860e04bcab2167`
+- Proposed pose: `pos [49.515665, -0.0301676564610222, 54.992717], yaw -2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `11.84 x 1.8364 x 11.84m; 5 GLB nodes / 4 draws; statuary court, 12 figures processional + border plinth ring + rubble; furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0039 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; ceremonial-court read identical to accepted siblings, night silhouette coherent`
+- Highest-value finding: `No blocking defect and none unique beyond family notes on record. Verdict accept as-is for its theta=48 mid-arc seat adjacent to hamlet 0028.`
+- Evidence: `agents/arthur/reviews/nx-craft-statuary-0039/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-craft-statuary-0039-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
