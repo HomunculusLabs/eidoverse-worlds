@@ -568,3 +568,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-55 — reviewed hash ba69e715...2145 re-proved byte-identical, then placed at the exact bound tuple [62.061622, -0.033680292362306775, 40.303289] yaw -2.35619449 scale 1 through agents/arthur/next-place-craft-statuary-0026.ts (yaw law corrected to the NE district's inward-facing -2.35619449 before spawn); preflight rim inner 67.133562 / outer 81.14968 inside [66,108], rotated-SAT min gap 41.021697m vs every live footprint (nearest nx-tower — the NE district's first work sits far from all live mass); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-craft-statuary-0005 — REVIEWED_READY
+
+- District: `NE Craft statuary 2 of 4`
+- District plan: `agents/arthur/NE-CRAFT-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeStatuary idx 1685 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1685_statuary.glb`
+- SHA-256: `dd0985508d0157c2d8c5a17af42978fe62964e7c375b2d219e4751996bdc9f7a`
+- Proposed pose: `pos [70.378182, -0.026565256802728945, 22.867258], yaw -2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `11.84 x 1.8363 x 11.84m; 5 GLB nodes / 4 draws; statuary court twin of landmark 0026, 12 figures + border plinth ring + rubble; furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0005 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; identical ceremonial-court read to accepted landmark sibling; night silhouette coherent`
+- Highest-value finding: `No blocking defect and none unique beyond family notes on record. Verdict accept as-is for its theta=18 inner-arc seat.`
+- Evidence: `agents/arthur/reviews/nx-craft-statuary-0005/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-craft-statuary-0005-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
