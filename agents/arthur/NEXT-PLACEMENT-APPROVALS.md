@@ -348,3 +348,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-31 — reviewed hash 8d3959f0...672f re-proved byte-identical, then placed at the exact bound tuple [-30.841783310, -0.0002733106081673675, 91.622432800] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-orchard-0059.ts; preflight rim inner 87.01354 / outer 106.451789 inside [66,108], rotated-SAT min gap 0.656953m vs every live footprint (nearest nx-cultivation-orchard-0046 — first live-vs-live pair where planned and seated clearances nearly coincide, both positive); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-cultivation-orchard-0020 — REVIEWED_READY
+
+- District: `NW Cultivation supporting orchard (rank 5 of 5 — final orchard)`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeOrchard idx 1640 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1640_orchard.glb`
+- SHA-256: `24bcfc6a15d556134df9b9e42e789735272c8ef69ce2819aaa88f2dbfe4b58b4`
+- Proposed pose: `pos [-75.073890346, 0.03541361196741313, 43.892251036], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `14.7061 x 4.6038 x 14.5175m; 5 GLB nodes / 4 draws; single timber-family canopy texture + understory`
+- Component compatibility: `PASS — commons source av-mason-0020 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; quincunx 41 trees; grounded outdoor auto-trimesh; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; solid broad-crowned orchard with clean trunk hall and legible quincunx columns from above; family back-view darkness not re-flagged (skill law)`
+- Highest-value finding: `No blocking defect. Uniform roofline caps silhouette interest — correct for a background seat on the inner west arc backing onto lavender, facing no approach axis. Accept as-is.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-orchard-0020/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-orchard-0020-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
