@@ -628,3 +628,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-61 — reviewed hash 8c560202...ddf5 re-proved byte-identical, then placed at the exact bound tuple [33.595297, -0.024298703471806356, 65.934483] yaw -2.35619449 scale 1 through agents/arthur/next-place-craft-statuary-0052.ts; preflight rim inner 66.648832 / outer 81.548261 inside [66,108], rotated-SAT min gap 7.154397m vs every live footprint (nearest the placed 0039); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs. STATUARY FAMILY COMPLETE 4/4; lane advances to hamlets per the planner slot order.`
+
+### nx-craft-hamlet-0007 — REVIEWED_READY
+
+- District: `NE Craft hamlet 1 of 5 (first building-height work)`
+- District plan: `agents/arthur/NE-CRAFT-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeHamlet idx 1687 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1687_hamlet.glb`
+- SHA-256: `e2f134cfba7f9e86c4068eeca6bcdf4a9476182973e850dd813a85c375daaa0f`
+- Proposed pose: `pos [86.671814, -0.01918958686956854, 15.480445], yaw -2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `13.8539 x 13.0804 x 13.2930m (bbox min y -7.569: deep buried foundation); 5 GLB nodes; 3 cottages around a green with well + firepit; building-height room-class collider`
+- Component compatibility: `PASS WITH MANDATORY RESTORE — commons source av-mason-0007 bag = particles embers {preset:embers, origin:[2.2,0.35,1.2], count:40, size:0.25, speed:0.4}; re-place wipes comps so the placement placer MUST re-apply this exact payload after spawn; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded at true grade; no floats/degenerates in true-grade frames`
+- Visual checks: `PASS AT TRUE GRADE — first render pass grounded at min.y=0 hoisted the buried foundation into view (wreckage read); re-rendered all frames with grade-drop grounding (variant review-model-grade.ts, banked for remaining building-height craft works): cottages, well, firepit, lanterns all legible; night firepit glints coherent`
+- Highest-value finding: `RENDER PIPELINE FIX, not model defect: standard review grounding is wrong for buried-foundation models. review-model-grade.ts variant banked for hamlet/cloister reviews. Model at true grade: no blocking defect. Accept as-is WITH the embers comp restore law bound to its placement placer.`
+- Evidence: `agents/arthur/reviews/nx-craft-hamlet-0007/REVIEW.md and contact-sheet.jpg (true-grade frames); prover agents/arthur/assets/mkv3-craft-hamlet-0007-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
