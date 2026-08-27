@@ -548,3 +548,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-51 — reviewed hash 26f0eed9...7afa re-proved byte-identical, then placed at the exact bound tuple [-74.311739752, -0.012819972711928234, 24.706417735] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-lavender-0006.ts; preflight rim inner 68.743654 / outer 88.374625 inside [66,108], rotated-SAT min gap 0.682197m vs every live footprint (nearest orchard 0020); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs. NW CULTIVATION DISTRICT COMPLETE 14/14 (orchards 5/5, gardens 5/5, lavender 4/4).`
+
+### nx-craft-statuary-0026 — REVIEWED_READY
+
+- District: `NE Craft landmark`
+- District plan: `agents/arthur/NE-CRAFT-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeStatuary idx 1646 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1646_statuary.glb`
+- SHA-256: `ba69e7158262698aff10603075c6ea7f174648242a729ebc6ebf86224bb22145`
+- Proposed pose: `pos [62.061622, -0.033680292362306775, 40.303289], yaw -2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `11.84 x 1.8364 x 11.84m; 5 GLB nodes / 4 draws; statuary court, 12 figures processional + border plinth ring + rubble; furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0026 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; ceremonial statuary court reads immediately, figure tops give landmark authority against sky at 18m and at night`
+- Highest-value finding: `No blocking construction defect. Figure heights vary stepwise in two classes across the twelve — recorded as intentional-looking processional hierarchy. Accept as-is for the NE bisector landmark seat.`
+- Evidence: `agents/arthur/reviews/nx-craft-statuary-0026/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-craft-statuary-0026-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
