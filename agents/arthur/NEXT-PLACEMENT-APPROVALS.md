@@ -528,3 +528,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-49 — reviewed hash d8fac6d1...003a re-proved byte-identical, then placed at the exact bound tuple [-24.825469984, 0.03635458301689514, 77.242548616] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-lavender-0053.ts; preflight rim inner 71.484775 / outer 91.246459 inside [66,108], rotated-SAT min gap 0.693126m vs every live footprint (nearest the placed lavender 0040); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-cultivation-lavender-0006 — REVIEWED_READY
+
+- District: `NW Cultivation lavender 4 of 4 — FINAL district work`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeLavender idx 1686 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1686_lavender.glb`
+- SHA-256: `26f0eed96a94e0d2deac052aa7dee8578134d4f1990ee34edd51eed668ef7afa`
+- Proposed pose: `pos [-74.311739752, -0.012819972711928234, 24.706417735], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `19.8850 x 0.4816 x 12.0643m; 4 GLB nodes; 14 rows x 40 plants lavender field; low furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0006 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; dense rowed field identical in character to accepted siblings, fourteen clean parallel rows from above, night quiet`
+- Highest-value finding: `No blocking defect and none unique beyond family notes on record. Verdict accept as-is. With placement the ENTIRE NW CULTIVATION DISTRICT COMPLETES 14/14.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-lavender-0006/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-lavender-0006-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
