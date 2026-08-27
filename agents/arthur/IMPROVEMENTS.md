@@ -3375,4 +3375,6 @@ fixes ≈ 6 F.)
 
 - [nvp-56] NE Craft review tick, statuary number two of four: rebuilt work 1685 from the statuary composer through a dedicated prover byte-identical at dd098550 and matched the commons manifest pin; regenerated eight-frame review reads identically to the accepted landmark sibling with the processional line and border ring both legible from above; slot parsed verbatim from the committed planner polar table with row count asserted before computing; district SAT re-proved leaves neighbours clear at nearly four metres minimum on a wide-open outer-arc seat with the district minimum untouched; rim corners inside the band; terrain height read fresh at the slot; marked ARTHUR_REVIEWED_READY unconsumed for next wakeup placement; target world untouched (D+0, E+0) (D+0, E+0)
 
-**Running total: 2368568 / 2000000**
+- [nvp-57] NE Craft statuary number two placed: exact reviewed dd098550 bytes re-proved and spawned at the polar theta-eighteen outer-arc seat through the dedicated fail-closed placer with rim corners sixty-six point zero nine and eighty-two point zero zero inside the annulus band and six point three seven metres minimum rotated-SAT clearance against every live footprint nearest the placed landmark 0026; post-place tuple and empty bag verified live and the idempotent rerun sent zero verbs; review record marked CONSUMED (D+0, E+1)
+
+**Running total: 2368569 / 2000000**

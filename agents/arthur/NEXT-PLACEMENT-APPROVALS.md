@@ -586,5 +586,5 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-27T00:00:00Z`
-- Placement state: `UNCONSUMED`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-57 — reviewed hash dd098550...9f7a re-proved byte-identical, then placed at the exact bound tuple [70.378182, -0.026565256802728945, 22.867258] yaw -2.35619449 scale 1 through agents/arthur/next-place-craft-statuary-0005.ts; preflight rim inner 66.088276 / outer 82.003203 inside [66,108], rotated-SAT min gap 6.369832m vs every live footprint (nearest the placed landmark 0026); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
