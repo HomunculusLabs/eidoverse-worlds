@@ -32,7 +32,7 @@ const ground=new THREE.Mesh(new THREE.PlaneGeometry(80,80),new THREE.MeshStandar
 ground.rotation.x=-Math.PI/2; ground.receiveShadow=true; scene.add(ground);
 const gltf=await new GLTFLoader().loadAsync('/model.glb'); const root=gltf.scene; scene.add(root);
 root.updateMatrixWorld(true); const original=new THREE.Box3().setFromObject(root); const size=original.getSize(new THREE.Vector3());
-const center=original.getCenter(new THREE.Vector3()); root.position.x-=center.x; root.position.z-=center.z; root.position.y-=original.min.y; root.position.y-=7.569003868103027;
+const center=original.getCenter(new THREE.Vector3()); root.position.x-=center.x; root.position.z-=center.z; root.position.y-=original.min.y; root.position.y+=original.min.y;
 root.traverse(o=>{if(o.isMesh){o.castShadow=true;o.receiveShadow=true;}}); root.updateMatrixWorld(true);
 const nodes=[]; root.traverse(o=>nodes.push(o.name||'(unnamed)'));
 const meshes=[]; root.traverse(o=>{if(o.isMesh)meshes.push(o)});

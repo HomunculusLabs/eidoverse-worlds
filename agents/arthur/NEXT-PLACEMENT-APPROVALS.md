@@ -647,3 +647,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-27T00:00:00Z`
 - Placement evidence: `nvp-63 — reviewed hash e2f134cf...aa0f re-proved byte-identical, then placed at the exact bound tuple [86.671814, -0.01918958686956854, 15.480445] yaw -2.35619449 scale 1 through agents/arthur/next-place-craft-hamlet-0007.ts; preflight rim inner 78.652489 / outer 97.475116 inside [66,108], rotated-SAT min gap 3.897652m vs every live footprint (nearest statuary 0005); MANDATORY embers comp restored after spawn (two-pass placer, comp verb shape {id,type,data} per server contract); post-place live lib/pose/scale/bbox and embers comp deep-verified (embersRestored true) and idempotent rerun sent zero verbs; placement log kept honest: first run's comp verb failed on wrong shape, placer was fixed and re-run to completion — no silent gap.`
+
+### nx-craft-hamlet-0015 — REVIEWED_READY
+
+- District: `NE Craft hamlet 2 of 5`
+- District plan: `agents/arthur/NE-CRAFT-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeHamlet idx 1635 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1635_hamlet.glb`
+- SHA-256: `353dd6fbcf5215c3897dd4ec5846d903861890a53e4c4b137b20a466280dcca0`
+- Proposed pose: `pos [79.285079, -0.019683875057015642, 38.519433], yaw -2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `13.9531 x 13.1768 x 13.4156m (bbox min y -7.507: buried foundation); 5 GLB nodes; 3 cottages around a green with well + firepit; building-height room-class collider`
+- Component compatibility: `PASS WITH MANDATORY RESTORE — commons source av-mason-0015 bag = particles embers {preset:embers, origin:[2.2,0.35,1.2], count:40, size:0.25, speed:0.4} (same firepit recipe as 0007); placement placer MUST re-apply after spawn; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded at true grade; no floats/degenerates in true-grade frames`
+- Visual checks: `PASS AT TRUE GRADE — all frames re-rendered with the generalized grade variant (authored-y semantics replacing the hard-coded 0007 drop constant): cottages, well, firepit, lanterns legible; night firepit glints coherent`
+- Highest-value finding: `No blocking defect at true grade. Pipeline improvement: grade variant generalized (hard-coded drop → authored-y semantics), banked for remaining building-height works. Accept as-is WITH the embers comp restore law bound to its placement placer.`
+- Evidence: `agents/arthur/reviews/nx-craft-hamlet-0015/REVIEW.md and contact-sheet.jpg (true-grade frames); prover agents/arthur/assets/mkv3-craft-hamlet-0015-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
