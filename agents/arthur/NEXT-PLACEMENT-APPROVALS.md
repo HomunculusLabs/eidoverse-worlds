@@ -368,3 +368,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-33 — reviewed hash 24bcfc6a...58b4 re-proved byte-identical, then placed at the exact bound tuple [-75.073890346, 0.03541361196741313, 43.892251036] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-orchard-0020.ts; preflight rim inner 78.255293 / outer 95.994057 inside [66,108], rotated-SAT min gap 0.783947m vs every live footprint (nearest nx-cultivation-orchard-0012); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs. ORCHARD FAMILY COMPLETE 5/5; lane advances to gardens per the nvp-23 slot map.`
+
+### nx-cultivation-garden-0045 — REVIEWED_READY
+
+- District: `NW Cultivation garden 1 of 5`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeGarden idx 1665 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1665_garden.glb`
+- SHA-256: `856d56746e3a42a33e53150d9b6107b5d2f43d1b79194b581e5bc537619e1075`
+- Proposed pose: `pos [-61.502777956, 0.027529785945452547, 80.922243372], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `11.3326 x 0.64 x 10.9932m; 6 GLB nodes; ring-hedge garden (48 hedges, three concentric rings) plus ~241 two-tone flowers; low furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0045 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; low round ornamental bed reads coherently; radial pattern legible from above`
+- Highest-value finding: `No blocking defect. Composer's "parterre" label over-promises — rendered truth is a ring-and-scatter garden, recorded for narrative honesty. Correct low-infill character between orchard rows in the outer arc. Accept as-is. RIM NOTE: one theoretical bbox corner computes 108.005237m vs the 108m law (+5mm); below placement precision and inside verifier rounding; placement preflight must recompute the rim law against live data before spawning.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-garden-0045/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-garden-0045-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
