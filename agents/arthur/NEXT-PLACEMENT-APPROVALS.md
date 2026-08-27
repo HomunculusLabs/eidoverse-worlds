@@ -468,3 +468,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-43 — reviewed hash 01a4e80c...8b3a re-proved byte-identical, then placed at the exact bound tuple [-86.104625929, 0.0456712809132166, 52.696406703] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-garden-0011.ts; preflight rim inner 94.181017 / outer 107.877106 inside [66,108], rotated-SAT min gap 1.084464m vs every live footprint (nearest nx-cultivation-orchard-0012); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs. GARDEN FAMILY COMPLETE 5/5; lane advances to lavender per the nvp-23 slot map.`
+
+### nx-cultivation-lavender-0027 — REVIEWED_READY
+
+- District: `NW Cultivation lavender 1 of 4 (inner soft edge)`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeLavender idx 1647 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1647_lavender.glb`
+- SHA-256: `d4ab74d0d530b4a89ff37b466c936cb863819b9cc44a49b993bd28919c824819`
+- Proposed pose: `pos [-53.907189114, 0.02563520209327475, 48.166349585], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `19.8864 x 0.4816 x 12.0683m; 4 GLB nodes; 14 rows x 40 plants lavender field, widest flat work in the district; low furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0027 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; unmistakable rowed lavender field from all angles, fourteen clean parallel rows legible from above`
+- Highest-value finding: `No blocking defect. Honest family-texture note: bushes render violet-GREY rather than saturated purple after the lift-99 family pass — consistent across all four lavender works and clearly distinct from orchard/garden greens. Verdict accept as-is. Inner-edge seat is the district's tightest at 66.405026m, matching the planner's own recorded minInnerEdge exactly. Its SAT gap to 0040 IS the district minimum 0.653458m — planned by design, not a reduction.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-lavender-0027/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-lavender-0027-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
