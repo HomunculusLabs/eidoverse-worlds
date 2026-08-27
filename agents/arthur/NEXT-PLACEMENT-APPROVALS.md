@@ -546,5 +546,5 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Reviewer: `Arthur`
 - Arthur decision: `ARTHUR_REVIEWED_READY`
 - Review date: `2026-08-27T00:00:00Z`
-- Placement state: `UNCONSUMED`
-- Placement evidence: ``
+- Placement state: `CONSUMED`
+- Placement evidence: `nvp-51 — reviewed hash 26f0eed9...7afa re-proved byte-identical, then placed at the exact bound tuple [-74.311739752, -0.012819972711928234, 24.706417735] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-lavender-0006.ts; preflight rim inner 68.743654 / outer 88.374625 inside [66,108], rotated-SAT min gap 0.682197m vs every live footprint (nearest orchard 0020); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs. NW CULTIVATION DISTRICT COMPLETE 14/14 (orchards 5/5, gardens 5/5, lavender 4/4).`
