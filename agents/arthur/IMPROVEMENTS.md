@@ -3241,4 +3241,6 @@ fixes ≈ 6 F.)
 
 - [nvp-25] NW Cultivation orchard landmark placed: exact reviewed four-draw a3bb3487 hash rebuilt byte-identical and spawned at the reviewed tuple on the district bisector through the new fail-closed placer; preflight proved rim law inner 80.575 outer 95.025 and fifty-one-metre minimum SAT clearance; post-place live tuple and empty bag verified, idempotent rerun sent zero verbs, and a real MCPL body walked the aisle approach to gate to far end and back both ways with six of six legs and 0.365m maximum arrival; review record marked CONSUMED (D+0, E+1)
 
+- [nvp-26] NW Cultivation review tick, supporting orchard number two: rebuilt work 1692 from the mason composer through a dedicated prover twice byte-identical at dc4d7059 and matched the commons manifest pin; four-daylight-angle plus top/aerial/gameplay/night renders read as a legible tall quincunx orchard, the back-view darkness cross-checked against the accepted landmark under the same rig is a family lighting characteristic not a defect; district SAT re-proved from the committed planner table leaves the nearest neighbour clear by zero point seven eight four metres; terrain height read fresh at the slot; marked ARTHUR_REVIEWED_READY unconsumed for next wakeup placement; target world untouched (D+0, E+0) (D+0, E+0)
+
 **Running total: 2368518 / 2000000**

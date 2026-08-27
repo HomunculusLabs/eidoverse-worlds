@@ -288,3 +288,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-23T19:21:03Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-25 — exact reviewed hash a3bb3487...df30a7 rebuilt and re-proved byte-identical, then placed at the exact reviewed tuple [-61.87184335382291, 0.02514020801364989, 61.87184335382291] yaw 2.35619449 through agents/arthur/next-place-cultivation-orchard-0033.ts; preflight rim law inner 80.575 / outer 95.025 inside [66,108], rotated-SAT min gap 51.24414m (nearest nx-carousel); target id was absent (no comp bag to capture); post-place live lib/pose/scale/bbox/empty-bag verified, idempotent rerun sent zero verbs. Real MCPL two-way aisle walk (agents/arthur/next-walk-orchard.ts): approach→gate→mid→far end→mid→gate→approach = 6/6 legs pass, maximum arrival 0.365m.`
+
+### nx-cultivation-orchard-0012 — REVIEWED_READY
+
+- District: `NW Cultivation supporting orchard (rank 2 of 5)`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeOrchard idx 1692 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1692_orchard.glb`
+- SHA-256: `dc4d7059985e47a87aa3d50534748a51276b9be00afd1c92fb8b9ec82b03d0bb`
+- Proposed pose: `pos [-88.7346892568504, 0.019921379876134182, 35.79681905684085], yaw 2.35619449, scale 1` (heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `14.5789 x 4.5733 x 14.9143m; 4 GLB nodes / 4 draws; single timber-family canopy texture + understory; 469,984 bytes`
+- Component compatibility: `PASS — commons source av-mason-0012 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical twice; quincunx 41 trees; grounded outdoor auto-trimesh; no floats/degenerates observed in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; legible tall orchard at gameplay distance; quincunx columns read from above. Back-view near-black faceting cross-checked against the ACCEPTED 0033 landmark under the same rig: identical behavior = family/rig characteristic, not a defect of this work`
+- Highest-value finding: `No blocking defect. Inherited nvp-23 weakness stands — busier continuous canopy than the landmark's disciplined aisle form; correct for a SUPPORTING work seated off the approach terminus. Accept as-is; do not duplicate the landmark aisle treatment here.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-orchard-0012/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-orchard-0012-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
