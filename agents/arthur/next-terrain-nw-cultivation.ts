@@ -3,7 +3,7 @@
 import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg=JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json","utf8"));process.env.WORLD_TOKEN=cfg.joinToken;
-const pts:[string,number,number][]=[["lavender-0040 slot",-39.582634215,62.891797921]];
+const pts:[string,number,number][]=[["lavender-0053 slot",-24.825469984,77.242548616]];
 const agent=new WorldAgent({url:cfg.url,name:"arthur-terrain-read",world:"commons-next",avatar:cfg.avatar,agentToken:cfg.agentToken});
 try{await agent.connect();await Bun.sleep(2500);
 for(const[n,x,z]of pts)console.log(JSON.stringify({name:n,x,z,heightAt:agent.heightAt(x,z)}));}

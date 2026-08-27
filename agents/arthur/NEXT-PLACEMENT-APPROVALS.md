@@ -508,3 +508,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-47 — reviewed hash 56b752ab...1936 re-proved byte-identical, then placed at the exact bound tuple [-39.582634215, 0.04024847506294396, 62.891797921] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-lavender-0040.ts; preflight rim inner 66.745618 / outer 82.825149 inside [66,108], rotated-SAT min gap 0.65165m vs every live footprint (nearest the now-live 0027 — live-vs-live pair landing within 1.7mm of the planned district minimum 0.653458m, positive as designed); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-cultivation-lavender-0053 — REVIEWED_READY
+
+- District: `NW Cultivation lavender 3 of 4 (inner soft edge)`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeLavender idx 1673 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1673_lavender.glb`
+- SHA-256: `d8fac6d1e0279f07742fb72cf858cebb13015f54d661dd286e5c6f19a27e003a`
+- Proposed pose: `pos [-24.825469984, 0.03635458301689514, 77.242548616], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `19.8886 x 0.4816 x 12.0649m; 4 GLB nodes; 14 rows x 40 plants lavender field; low furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0053 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; dense rowed field with strong furrow rhythm, fourteen parallel rows legible from above, no breaks or clumping`
+- Highest-value finding: `No blocking defect and none unique beyond family notes on record. Verdict accept as-is.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-lavender-0053/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-lavender-0053-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
