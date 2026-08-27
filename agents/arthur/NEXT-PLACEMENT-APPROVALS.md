@@ -488,3 +488,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-45 — reviewed hash d4ab74d0...4819 re-proved byte-identical, then placed at the exact bound tuple [-53.907189114, 0.02563520209327475, 48.166349585] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-lavender-0027.ts; preflight rim inner 66.403942 (the district's tightest inner edge, matching the planner record exactly) / outer 79.45462 inside [66,108], rotated-SAT min gap 0.56917m vs every LIVE footprint (nearest nx-cultivation-orchard-0020; the 0.653458m 0040 pair had not yet placed, so live clearance is tighter than the planned-table pair and positive); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-cultivation-lavender-0040 — REVIEWED_READY
+
+- District: `NW Cultivation lavender 2 of 4 (inner soft edge)`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeLavender idx 1660 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1660_lavender.glb`
+- SHA-256: `56b752abf7f5eba4b816b4afb535de02578b5b22147845aade0df057c35f1936`
+- Proposed pose: `pos [-39.582634215, 0.04024847506294396, 62.891797921], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `19.8896 x 0.4816 x 12.0713m; 4 GLB nodes; 14 rows x 40 plants lavender field; low furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0040 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; dense rowed field with clean furrow rhythm, fourteen parallel rows legible from above, no breaks or bare patches`
+- Highest-value finding: `No blocking defect and none unique beyond the recorded family notes (violet-grey texture truth). Verdict accept as-is. Its pair gap to PLACED neighbor 0027 equals the planned district minimum 0.653458m by design.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-lavender-0040/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-lavender-0040-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
