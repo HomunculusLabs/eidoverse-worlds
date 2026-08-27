@@ -388,3 +388,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-35 — reviewed hash 856d5674...1075 re-proved byte-identical, then placed at the exact bound tuple [-61.502777956, 0.027529785945452547, 80.922243372] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-garden-0045.ts; the review's rim-law recheck condition was honored: live preflight computed rim inner 95.5541 / outer 107.963212 inside [66,108] (the +5mm theoretical corner note resolved in favor of the law under the placer's exact accessor math, matching the committed planner's own 107.963212), rotated-SAT min gap 0.828333m vs every live footprint (nearest nx-cultivation-orchard-0033); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-cultivation-garden-0058 — REVIEWED_READY
+
+- District: `NW Cultivation garden 2 of 5`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeGarden idx 1678 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1678_garden.glb`
+- SHA-256: `e54ee386f08a7c21c4abf92a4db15224c08717a4befaf08943948954cb8b8111`
+- Proposed pose: `pos [-53.224217316, 0.03137989008033212, 72.691689056], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `11.4078 x 0.64 x 10.8951m; 6 GLB nodes; ring-hedge garden (three concentric rings) plus scattered flowers; low furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0058 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; coherent hedge mound band with livelier seedling edge than sibling 0045; rings legible from above`
+- Highest-value finding: `No blocking defect and none unique beyond the family's recorded notes ("parterre" label over-promise). Slightly looser outer ring = wilder character, correct for its mid-arc seat beside orchard 0046. Accept as-is. Non-blocking physics note: headless support resolver correctly abstains on the placed sibling's bumpy hedge tops (no walkable grid) — walkers route around, 12m+ to any neighbor.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-garden-0058/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-garden-0058-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
