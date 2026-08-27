@@ -3327,4 +3327,6 @@ fixes ≈ 6 F.)
 
 - [nvp-49] NW Cultivation lavender number three placed: exact reviewed d8fac6d1 bytes re-proved and spawned at the bound district slot through the dedicated fail-closed placer with rim corners 71.48 and 91.25 inside the annulus law and zero point six nine metres minimum rotated-SAT clearance against every live footprint nearest the placed lavender 0040; post-place tuple and empty bag verified live and the idempotent rerun sent zero verbs; review record marked CONSUMED (D+0, E+1)
 
-**Running total: 2368549 / 2000000**
+- [viz-20] flash-vision audit subject twenty nx-cultivation-garden-0058 at minus fifty-three point two seventy-two point seven: fresh census bound live tuple yaw two point three five six lib store e54ee386f08a7c21 empty comp bag and the exact reviewed bytes work_1678 underscore garden sha256-proved byte-exact against the live store hash before any render; committed deterministic reviewer produced ten frames all natively viewed this tick; verdict PASS with instant garden identity a broad mass of round dark shrub crowns in concentric bands with golden flower stems threading through, slightly more open crown spacing than garden 0045 matching its own reviewed character while keeping the family signature clearly legible from aerial and top, every crown and stem grounded on all views, night expected-dark yet the low green mass keeps enough silhouette to stay findable from its approach lane, zero-pixel motion diff correct for an empty bag; nothing registered, world untouched (D+0, E+1)
+
+**Running total: 2368550 / 2000000**
