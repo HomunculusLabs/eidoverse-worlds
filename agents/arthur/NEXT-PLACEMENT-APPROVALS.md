@@ -428,3 +428,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-39 — reviewed hash 38e4718c...66fe re-proved byte-identical, then placed at the exact bound tuple [-70.894119993, 0.0276505409363984, 72.469434032] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-garden-0032.ts; preflight rim inner 95.877357 / outer 107.193025 inside [66,108], rotated-SAT min gap 1.018828m vs every live footprint (nearest nx-cultivation-orchard-0033); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs.`
+
+### nx-cultivation-garden-0019 — REVIEWED_READY
+
+- District: `NW Cultivation garden 4 of 5`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeGarden idx 1639 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1639_garden.glb`
+- SHA-256: `d916f37355701255d870729d39cfa3ebe495d362978faf925190aeb34faae6af`
+- Proposed pose: `pos [-79.354255867, 0.03701553556368211, 63.545330212], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `10.8531 x 0.64 x 11.0694m (smallest garden footprint); 6 GLB nodes; ring-hedge garden with even flower spread; low furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0019 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; coherent hedge band, rings legible from above, most compact of the set`
+- Highest-value finding: `No blocking defect and none unique beyond family notes on record. Most compact garden with an even flower spread — correct for its outer northeast arc seat beside the landmark. Accept as-is.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-garden-0019/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-garden-0019-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``

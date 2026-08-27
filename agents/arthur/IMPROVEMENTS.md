@@ -3269,4 +3269,6 @@ fixes ≈ 6 F.)
 
 - [nvp-39] NW Cultivation garden number three placed: exact reviewed 38e4718c bytes re-proved and spawned at the bound district slot through the dedicated fail-closed placer with rim corners 95.88 and 107.19 inside the annulus law and one point zero two metres minimum rotated-SAT clearance against every live footprint nearest the landmark orchard; post-place tuple and empty bag verified live and the idempotent rerun sent zero verbs; review record marked CONSUMED (D+0, E+1)
 
+- [nvp-40] NW Cultivation review tick, garden number four of five: rebuilt work 1639 from the garden composer through a dedicated prover byte-identical at d916f373 and matched the commons manifest pin; regenerated eight-frame review reads as a coherent hedge band with an even flower spread and the most compact footprint of the garden set; slot parsed verbatim from the committed planner table with row count asserted before computing; district SAT re-proved leaves neighbours clear at zero point seven six metres minimum with the district minimum untouched; rim outer corner has a comfortable sixty-five millimetre margin under the law this time; terrain height read fresh at the slot; marked ARTHUR_REVIEWED_READY unconsumed for next wakeup placement; target world untouched (D+0, E+0) (D+0, E+0)
+
 **Running total: 2368525 / 2000000**
