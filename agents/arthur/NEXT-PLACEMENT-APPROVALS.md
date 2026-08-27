@@ -448,3 +448,23 @@ at its compact reviewed seat remains the final unconsumed plaza-trio action.
 - Review date: `2026-08-27T00:00:00Z`
 - Placement state: `CONSUMED`
 - Placement evidence: `nvp-41 — reviewed hash d916f373...e6af re-proved byte-identical, then placed at the exact bound tuple [-79.354255867, 0.03701553556368211, 63.545330212] yaw 2.35619449 scale 1 through agents/arthur/next-place-cultivation-garden-0019.ts; preflight rim inner 95.683594 / outer 107.865773 inside [66,108], rotated-SAT min gap 0.760544m vs every live footprint (nearest nx-cultivation-orchard-0033); target id was absent (empty-bag contract); post-place live lib/pose/scale/bbox/empty compKeys verified and idempotent rerun sent zero verbs. Survey note: sibling viz-1 commit interleaved on main — respected, no renumbering.`
+
+### nx-cultivation-garden-0011 — REVIEWED_READY
+
+- District: `NW Cultivation garden 5 of 5 — FINAL garden`
+- District plan: `agents/arthur/NW-CULTIVATION-PLAN.md`
+- Source: `agents/arthur/assets/mason.ts` composeGarden idx 1691 via `agents/arthur/assets/masonretex.ts`
+- Output: `agents/arthur/mason/glb-retex/work_1691_garden.glb`
+- SHA-256: `01a4e80c02f03de70a58699236545177fa871272015059855bb3aa1096d38b3a`
+- Proposed pose: `pos [-86.104625929, 0.0456712809132166, 52.696406703], yaw 2.35619449, scale 1` (slot parsed verbatim from the committed planner table with row-count asserted; heightAt read fresh from the real WorldAgent terrain module)
+- Bounds / nodes / materials: `10.9562 x 0.64 x 11.4612m; 6 GLB nodes; ring-hedge garden with even flower spread; low furniture-scale collider`
+- Component compatibility: `PASS — commons source av-mason-0011 bag EMPTY, no component targets; target id absent from commons-next`
+- Structural checks: `PASS — rebuild prover byte-identical; grounded low mass; no floats/degenerates in any frame`
+- Visual checks: `PASS — front/right/back/left/top/aerial/18m-gameplay/night regenerated; coherent elongated hedge bed, rings legible from above, consistent with accepted siblings`
+- Highest-value finding: `No blocking defect and none unique beyond family notes on record. Even, restrained character suits its far-west seat backing onto orchards 0020/0012. Accept as-is. With placement, GARDENS COMPLETE 5/5; lane advances to lavender.`
+- Evidence: `agents/arthur/reviews/nx-cultivation-garden-0011/REVIEW.md and contact-sheet.jpg; prover agents/arthur/assets/mkv3-cultivation-garden-0011-probe.ts; terrain reader agents/arthur/next-terrain-nw-cultivation.ts`
+- Reviewer: `Arthur`
+- Arthur decision: `ARTHUR_REVIEWED_READY`
+- Review date: `2026-08-27T00:00:00Z`
+- Placement state: `UNCONSUMED`
+- Placement evidence: ``
