@@ -3463,4 +3463,10 @@ fixes ≈ 6 F.)
 
 - [nvp-76] SW Contemplative district plan proven read-only: 13 of 17 works laid out terraces R76 x5 labyrinths R98 x4 seeds R71 x4 SAT min 1.58 rim 66.52..107.62 inside [66,108] quadrant x<0 z<0 FOUR MOSAICS DEFERRED their 21m radial band spans the whole annulus and mathematically cannot co-ring in SW — recommended ring-road gallery row pending Bill call law exact (D+0, E+0)
 
+- [nvp-77] SE Wild placed: nvp-77 forests x5 (R76 arc 278-342), nvp-82 cairnfields x5 (R93 arc 288-352), nvp-87 waysides x5 (R101 arc 280-344) — all hash-gated, rim inside [66,108], SAT vs live bbox min 2.65m, tuple verified, idempotent rerun 0 verbs (D+0, E+0)
+
+- [nvp-82] SE Wild placed: nvp-77 forests x5 (R76 arc 278-342), nvp-82 cairnfields x5 (R93 arc 288-352), nvp-87 waysides x5 (R101 arc 280-344) — all hash-gated, rim inside [66,108], SAT vs live bbox min 2.65m, tuple verified, idempotent rerun 0 verbs (D+0, E+0)
+
+- [nvp-87] SE Wild placed: nvp-77 forests x5 (R76 arc 278-342), nvp-82 cairnfields x5 (R93 arc 288-352), nvp-87 waysides x5 (R101 arc 280-344) — all hash-gated, rim inside [66,108], SAT vs live bbox min 2.65m, tuple verified, idempotent rerun 0 verbs (D+0, E+0)
+
 **Running total: 2368596 / 2000000**
