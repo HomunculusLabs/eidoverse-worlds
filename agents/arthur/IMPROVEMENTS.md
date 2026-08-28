@@ -3459,4 +3459,8 @@ fixes ≈ 6 F.)
 
 - [nvp-74] NW Cultivation district discovery all thirteen non landmark slots already live: ran the batch placer with per slot hash gates and found every cultivation entity standing with exact reviewed bytes matching each planner slot hash the four lavenders the four orchards and the five gardens plus landmark orchard 0033 from the earlier nvp-24/25 seat no new verbs needed batch placer verified id collision drift check passed for all fourteen confirming the district was placed by the sibling lane in a prior window with correct hashes and yaws no world mutation performed by this tick the placement queue skipped ahead honestly rather than re spawning (D+0, E+0)
 
+- [nvp-75] SE Wild district plan proven read-only: 15 works staggered three-ring polar layout forests R76 x5 cairnfields R93 x5 waysides R101 x5 all SAT>0 rim 66.19..105.59 inside [66,108] quadrant x>0 z<0 law exact (D+0, E+0)
+
+- [nvp-76] SW Contemplative district plan proven read-only: 13 of 17 works laid out terraces R76 x5 labyrinths R98 x4 seeds R71 x4 SAT min 1.58 rim 66.52..107.62 inside [66,108] quadrant x<0 z<0 FOUR MOSAICS DEFERRED their 21m radial band spans the whole annulus and mathematically cannot co-ring in SW — recommended ring-road gallery row pending Bill call law exact (D+0, E+0)
+
 **Running total: 2368596 / 2000000**
