@@ -3511,4 +3511,14 @@ fixes ≈ 6 F.)
 
 - [nvp-131] Core town build-out: nvp-109 civic ring (mapboard/market/monument/belltower), nvp-112 house ring (hall/longhouse/tower-house/bunkhouse/cottages), nvp-118 working edge (inn/stable/windmill/woodyard/kiln/potter/dyehouse/shrine), nvp-125 gates x4 N/S/E/W, nvp-131 roads+streetlamps ground layers — 24 structures hash-gated, SAT vs live, idempotent; commons-next 105 entities TOWN COMPLETE (D+0, E+0)
 
+- [nvp-133] Core dressing pass: nvp-133 market square (banner/stringlights/giftshelf), nvp-136 plaza (fountain/bench), nvp-138 animal corner (goats/coop/hens/hutch), nvp-142 homestead props (harvestcart/churn/milkstand/charcoal), nvp-145 inn front (stablebench/well/chess) — 16 pieces hash-gated SAT-verified idempotent; commons-next 121 entities (D+0, E+0)
+
+- [nvp-136] Core dressing pass: nvp-133 market square (banner/stringlights/giftshelf), nvp-136 plaza (fountain/bench), nvp-138 animal corner (goats/coop/hens/hutch), nvp-142 homestead props (harvestcart/churn/milkstand/charcoal), nvp-145 inn front (stablebench/well/chess) — 16 pieces hash-gated SAT-verified idempotent; commons-next 121 entities (D+0, E+0)
+
+- [nvp-138] Core dressing pass: nvp-133 market square (banner/stringlights/giftshelf), nvp-136 plaza (fountain/bench), nvp-138 animal corner (goats/coop/hens/hutch), nvp-142 homestead props (harvestcart/churn/milkstand/charcoal), nvp-145 inn front (stablebench/well/chess) — 16 pieces hash-gated SAT-verified idempotent; commons-next 121 entities (D+0, E+0)
+
+- [nvp-142] Core dressing pass: nvp-133 market square (banner/stringlights/giftshelf), nvp-136 plaza (fountain/bench), nvp-138 animal corner (goats/coop/hens/hutch), nvp-142 homestead props (harvestcart/churn/milkstand/charcoal), nvp-145 inn front (stablebench/well/chess) — 16 pieces hash-gated SAT-verified idempotent; commons-next 121 entities (D+0, E+0)
+
+- [nvp-145] Core dressing pass: nvp-133 market square (banner/stringlights/giftshelf), nvp-136 plaza (fountain/bench), nvp-138 animal corner (goats/coop/hens/hutch), nvp-142 homestead props (harvestcart/churn/milkstand/charcoal), nvp-145 inn front (stablebench/well/chess) — 16 pieces hash-gated SAT-verified idempotent; commons-next 121 entities (D+0, E+0)
+
 **Running total: 2368596 / 2000000**
