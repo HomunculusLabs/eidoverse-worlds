@@ -56,6 +56,7 @@ const BATTERY: Row[] = [
   { name: "perflog-route", tool: "tools/perflog-route-test.ts" },
   { name: "torn-tail", tool: "tools/torn-tail-recovery-test.ts" },
   { name: "snapshot-corrupt", tool: "tools/snapshot-corruption-recovery-test.ts" },
+  { name: "snapshot-offset-eof", tool: "tools/snapshot-offset-eof-test.ts" },
   { name: "authtest", tool: "tools/authtest.ts", sweepPorts: [8992] },
   { name: "collide-fold", tool: "tools/collide-fold-test.ts", sweepPorts: [8990] },
   { name: "support-lifecycle", tool: "tools/support-lifecycle-test.ts", timeoutMs: 420_000, sweepPorts: [8940] },

@@ -53,7 +53,9 @@ entities, resident behavior, or another lane's in-flight files.
 - [x] Corrupt `snapshot.json` falls back to the log without semantic loss
       (`resilience-2`: malformed cache bytes quarantined content-addressed and
       byte-exact; live cache path cleared; log untouched; second boot clean).
-- [ ] Snapshot byte offset past EOF falls back safely.
+- [x] Snapshot byte offset past EOF falls back safely
+      (`resilience-3`: impossible cache metadata quarantined byte-exactly;
+      full-log replay preserves state; log untouched; second boot clean).
 - [ ] Snapshot byte offset into the middle of a UTF-8/JSONL record is rejected.
 - [ ] Snapshot/log sequence disagreement is detected rather than silently mixed.
 - [ ] A write failure cannot produce a success acknowledgement.

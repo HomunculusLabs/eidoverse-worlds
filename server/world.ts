@@ -35,6 +35,22 @@ let settle: (pose: unknown) => Record<string, unknown> | null = () => {
 };
 export function wireSettledPose(fn: typeof settle) { settle = fn; }
 
+/** Move an invalid live cache aside without losing its evidence. The
+ * content-addressed destination makes a retried recovery idempotent; an
+ * impossible same-name/different-bytes collision fails closed. */
+function quarantineBytes(livePath: string, dir: string, prefix: string, bytes: Buffer): string {
+  const hash = createHash("sha256").update(bytes).digest("hex").slice(0, 16);
+  const quarantine = join(dir, `${prefix}-${hash}.json`);
+  if (existsSync(quarantine)) {
+    if (!readFileSync(quarantine).equals(bytes))
+      throw new Error(`quarantine hash collision: ${quarantine}`);
+    unlinkSync(livePath);
+  } else {
+    renameSync(livePath, quarantine);
+  }
+  return quarantine;
+}
+
 // ------------------------------------------------------------------- clients
 
 export type Client = {
@@ -121,15 +137,7 @@ export class WorldLog {
         // cache bytes for diagnosis, remove them from the live path atomically,
         // then rebuild below. Content-addressing makes repeat recovery
         // idempotent and turns the impossible hash collision into a hard stop.
-        const hash = createHash("sha256").update(snapshotBytes).digest("hex").slice(0, 16);
-        const quarantine = join(dir, `corrupt-snapshot-${hash}.json`);
-        if (existsSync(quarantine)) {
-          if (!readFileSync(quarantine).equals(snapshotBytes))
-            throw new Error(`snapshot quarantine hash collision: ${quarantine}`);
-          unlinkSync(this.snapPath);
-        } else {
-          renameSync(this.snapPath, quarantine);
-        }
+        const quarantine = quarantineBytes(this.snapPath, dir, "corrupt-snapshot", snapshotBytes);
         console.error(`[world:${this.name}] quarantined corrupt snapshot as ${quarantine}; rebuilding from log`);
       }
     }
@@ -138,6 +146,10 @@ export class WorldLog {
       this.logBytes = buf.length;
       // If the offset is not credible (log truncated, forked, or snapshot from
       // another timeline) fall back to reading everything. The log is truth.
+      if (this.snapSeq >= 0 && this.snapBytes > buf.length && existsSync(this.snapPath)) {
+        const quarantine = quarantineBytes(this.snapPath, dir, "invalid-snapshot-offset", readFileSync(this.snapPath));
+        console.error(`[world:${this.name}] quarantined snapshot offset ${this.snapBytes} past log EOF ${buf.length} as ${quarantine}; rebuilding from log`);
+      }
       const usable = this.snapSeq >= 0 && this.snapBytes > 0 && this.snapBytes <= buf.length;
       if (!usable) { this.state = emptyState(); this.snapSeq = -1; this.snapBytes = 0; }
       const replayStart = usable ? this.snapBytes : 0;
