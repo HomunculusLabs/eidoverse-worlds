@@ -3485,4 +3485,6 @@ fixes ≈ 6 F.)
 
 - [nvp-108] Ring-road mosaic gallery row placed (Bill-approved ring-law exception at r=45): nvp-105 mosaics x4 at 30/90/150/210deg — hash-gated, SAT vs live bbox min 3.95m (vs carousel), tuple verified, idempotent rerun 0 verbs — VILLAGE 60/60 WORKS (D+0, E+0)
 
+- [resilience-2] malformed snapshot cache recovery made durable and observable: strict RED confirmed log fallback already preserved the committed entity but left corrupt snapshot.json active with no recovery evidence and retried it every process boot; WorldLog now content-hash names and atomically quarantines malformed snapshot bytes, clears the live cache path, replays authoritative log.jsonl without rewriting it, rejects a quarantine hash collision, and starts a second process without duplicate recovery; focused regression nine of nine and persistence core gate five of five pass; full servergate twelve of fifteen with unchanged auth permission and Ammo support failures; no live world production process deployment or sibling-owned file changed (D+0, E+0)
+
 **Running total: 2368596 / 2000000**

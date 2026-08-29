@@ -18,7 +18,7 @@
 // too; the boot sweep that CALLS getWorld stays in server.ts — waking
 // scripted worlds with the server is boot policy, not world mechanics.
 
-import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, renameSync, copyFileSync } from "node:fs";
+import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, renameSync, copyFileSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
 import { createHash } from "node:crypto";
 import { WORLDS_DIR, FOLD_EVERY } from "./config.ts";
@@ -108,14 +108,30 @@ export class WorldLog {
     // proportional to the TAIL rather than to the whole history: without it we
     // would still parse every line ever written just to find where to resume.
     if (existsSync(this.snapPath)) {
+      const snapshotBytes = readFileSync(this.snapPath);
       try {
-        const snap = JSON.parse(readFileSync(this.snapPath, "utf8"));
+        const snap = JSON.parse(snapshotBytes.toString("utf8"));
         if (snap?.state && typeof snap.seq === "number") {
           this.state = snap.state;
           this.snapSeq = snap.seq;
           this.snapBytes = snap.bytes ?? 0;
         }
-      } catch { /* a corrupt cache is not a corrupt world — rebuild below */ }
+      } catch {
+        // A snapshot is a rebuildable cache; the log is truth. Preserve bad
+        // cache bytes for diagnosis, remove them from the live path atomically,
+        // then rebuild below. Content-addressing makes repeat recovery
+        // idempotent and turns the impossible hash collision into a hard stop.
+        const hash = createHash("sha256").update(snapshotBytes).digest("hex").slice(0, 16);
+        const quarantine = join(dir, `corrupt-snapshot-${hash}.json`);
+        if (existsSync(quarantine)) {
+          if (!readFileSync(quarantine).equals(snapshotBytes))
+            throw new Error(`snapshot quarantine hash collision: ${quarantine}`);
+          unlinkSync(this.snapPath);
+        } else {
+          renameSync(this.snapPath, quarantine);
+        }
+        console.error(`[world:${this.name}] quarantined corrupt snapshot as ${quarantine}; rebuilding from log`);
+      }
     }
     if (existsSync(this.logPath)) {
       const buf = readFileSync(this.logPath);
