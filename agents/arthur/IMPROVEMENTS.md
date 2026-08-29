@@ -3469,4 +3469,10 @@ fixes ≈ 6 F.)
 
 - [nvp-87] SE Wild placed: nvp-77 forests x5 (R76 arc 278-342), nvp-82 cairnfields x5 (R93 arc 288-352), nvp-87 waysides x5 (R101 arc 280-344) — all hash-gated, rim inside [66,108], SAT vs live bbox min 2.65m, tuple verified, idempotent rerun 0 verbs (D+0, E+0)
 
+- [nvp-92] SW Contemplative placed: nvp-92 terraces x5 (R76 arc 185-257), nvp-97 labyrinths x4 (R98 arc 194-260), nvp-101 seeds x4 (R71 arc 194-248) — all hash-gated, rim inside [66,108], SAT vs live bbox min 1.58m, tuple verified, idempotent rerun 0 verbs (D+0, E+0)
+
+- [nvp-97] SW Contemplative placed: nvp-92 terraces x5 (R76 arc 185-257), nvp-97 labyrinths x4 (R98 arc 194-260), nvp-101 seeds x4 (R71 arc 194-248) — all hash-gated, rim inside [66,108], SAT vs live bbox min 1.58m, tuple verified, idempotent rerun 0 verbs (D+0, E+0)
+
+- [nvp-101] SW Contemplative placed: nvp-92 terraces x5 (R76 arc 185-257), nvp-97 labyrinths x4 (R98 arc 194-260), nvp-101 seeds x4 (R71 arc 194-248) — all hash-gated, rim inside [66,108], SAT vs live bbox min 1.58m, tuple verified, idempotent rerun 0 verbs (D+0, E+0)
+
 **Running total: 2368596 / 2000000**
