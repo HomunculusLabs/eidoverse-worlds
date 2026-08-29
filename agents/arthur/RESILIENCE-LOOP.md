@@ -59,7 +59,9 @@ entities, resident behavior, or another lane's in-flight files.
 - [x] Snapshot byte offset into the middle of a UTF-8/JSONL record is rejected
       (`resilience-4`: explicit pre-parse boundary gate; persistent fail-closed
       across restart; snapshot and log byte-identical; other worlds stay live).
-- [ ] Snapshot/log sequence disagreement is detected rather than silently mixed.
+- [x] Snapshot/log sequence disagreement is detected rather than silently mixed
+      (`resilience-5`: snapshot seq bound to the actual final covered JSONL
+      entry; silent entity loss blocked; files unchanged; restart rejects).
 - [ ] A write failure cannot produce a success acknowledgement.
 - [ ] Kill during snapshot temp-write/rename preserves the prior valid snapshot.
 - [ ] Fork/reset flush boundaries retain every preceding authored verb.

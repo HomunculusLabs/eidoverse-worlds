@@ -58,6 +58,7 @@ const BATTERY: Row[] = [
   { name: "snapshot-corrupt", tool: "tools/snapshot-corruption-recovery-test.ts" },
   { name: "snapshot-offset-eof", tool: "tools/snapshot-offset-eof-test.ts" },
   { name: "snapshot-offset-boundary", tool: "tools/snapshot-offset-boundary-test.ts" },
+  { name: "snapshot-sequence", tool: "tools/snapshot-sequence-disagreement-test.ts" },
   { name: "authtest", tool: "tools/authtest.ts", sweepPorts: [8992] },
   { name: "collide-fold", tool: "tools/collide-fold-test.ts", sweepPorts: [8990] },
   { name: "support-lifecycle", tool: "tools/support-lifecycle-test.ts", timeoutMs: 420_000, sweepPorts: [8940] },

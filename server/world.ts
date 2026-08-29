@@ -159,6 +159,18 @@ export class WorldLog {
       // untouched for operator inspection.
       if (replayStart > 0 && buf[replayStart - 1] !== 0x0a)
         throw new Error(`snapshot offset ${replayStart} is not a JSONL record boundary`);
+      if (replayStart > 0) {
+        // The byte boundary and sequence number are one promise. Verify the
+        // actual final covered entry without scanning the prefix: walk back to
+        // its preceding newline and parse exactly that one record. Accepting a
+        // mismatched pair silently mixes snapshot state from one timeline with
+        // a tail from another and can erase every covered-but-unsnapshotted act.
+        const coveredEnd = replayStart - 1; // exclude the boundary newline
+        const coveredStart = buf.lastIndexOf(0x0a, coveredEnd - 1) + 1;
+        const covered = JSON.parse(buf.toString("utf8", coveredStart, coveredEnd)) as LogEntry;
+        if (covered.seq !== this.snapSeq)
+          throw new Error(`snapshot seq ${this.snapSeq} disagrees with log seq ${covered.seq} at byte offset ${replayStart}`);
+      }
       const text = buf.toString("utf8", replayStart);
       const lines = text.split("\n");
       for (let i = 0; i < lines.length; i++) {
