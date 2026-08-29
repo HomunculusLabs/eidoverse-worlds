@@ -68,7 +68,9 @@ entities, resident behavior, or another lane's in-flight files.
 - [x] Kill during snapshot temp-write/rename preserves the prior valid snapshot
       (`resilience-7`: real SIGKILL after complete tmp write; prior snapshot
       byte-identical; committed tail restores full state on restart).
-- [ ] Fork/reset flush boundaries retain every preceding authored verb.
+- [x] Fork/reset flush boundaries retain every preceding authored verb
+      (`resilience-8`: zero-delay append→fork/reset regression; copy and archive
+      retain the last echo; fresh source/copy separation holds; no code fix).
 - [ ] Malformed and oversized WebSocket messages cannot crash or wedge a world.
 
 ## LAWS
