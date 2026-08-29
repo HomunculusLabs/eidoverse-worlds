@@ -3475,4 +3475,6 @@ fixes ≈ 6 F.)
 
 - [nvp-101] SW Contemplative placed: nvp-92 terraces x5 (R76 arc 185-257), nvp-97 labyrinths x4 (R98 arc 194-260), nvp-101 seeds x4 (R71 arc 194-248) — all hash-gated, rim inside [66,108], SAT vs live bbox min 1.58m, tuple verified, idempotent rerun 0 verbs (D+0, E+0)
 
+- [resilience-1] crash-torn final world-log append now recovers narrowly and honestly: strict RED reproduced a five hundred response with valid committed state unavailable and no recovery evidence; WorldLog now recognizes only an invalid unterminated final fragment at a valid record boundary, quarantines its bytes under a deterministic sha256-derived filename, atomically trims log.jsonl to the last committed newline, preserves every complete entity, never invents the partial entry, and restarts idempotently; newline-committed malformed records remain untouched and fail closed; focused regression eleven of eleven and persistence core gate four of four pass; full servergate eleven of fourteen with the same pre-existing auth permission and Ammo support failures; no live world production process deploy or sibling file changed (D+0, E+0)
+
 **Running total: 2368596 / 2000000**

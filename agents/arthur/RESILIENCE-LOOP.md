@@ -47,7 +47,9 @@ entities, resident behavior, or another lane's in-flight files.
 
 - [x] Client telemetry cannot override server-observed provenance fields
       (`resilience-0`: real-server receipt regression; server `ts`/`ip` win).
-- [ ] Truncated final JSONL record has an explicit, tested restart disposition.
+- [x] Truncated final JSONL record has an explicit, tested restart disposition
+      (`resilience-1`: byte-exact quarantine + atomic trim; committed corruption
+      remains fail-closed; second boot idempotent).
 - [ ] Corrupt `snapshot.json` falls back to the log without semantic loss.
 - [ ] Snapshot byte offset past EOF falls back safely.
 - [ ] Snapshot byte offset into the middle of a UTF-8/JSONL record is rejected.

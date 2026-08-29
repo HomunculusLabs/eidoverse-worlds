@@ -20,6 +20,7 @@
 
 import { mkdirSync, existsSync, appendFileSync, readFileSync, writeFileSync, renameSync, copyFileSync } from "node:fs";
 import { join } from "node:path";
+import { createHash } from "node:crypto";
 import { WORLDS_DIR, FOLD_EVERY } from "./config.ts";
 import { BehaviorHost } from "./behaviors.ts";
 import { foldEntry, emptyState, type LogEntry, type WorldState } from "../shared/fold.js";
@@ -123,10 +124,39 @@ export class WorldLog {
       // another timeline) fall back to reading everything. The log is truth.
       const usable = this.snapSeq >= 0 && this.snapBytes > 0 && this.snapBytes <= buf.length;
       if (!usable) { this.state = emptyState(); this.snapSeq = -1; this.snapBytes = 0; }
-      const text = buf.toString("utf8", usable ? this.snapBytes : 0);
-      for (const line of text.split("\n")) {
+      const replayStart = usable ? this.snapBytes : 0;
+      const text = buf.toString("utf8", replayStart);
+      const lines = text.split("\n");
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i]!;
         if (!line.trim()) continue;
-        const e = JSON.parse(line) as LogEntry;
+        let e: LogEntry;
+        try {
+          e = JSON.parse(line) as LogEntry;
+        } catch (err) {
+          // appendFileSync can be torn by a process/host crash. Only an
+          // invalid FINAL fragment with no terminating newline is recoverable:
+          // a malformed newline-committed record is durable corruption and
+          // still throws. The replay start must also be a record boundary — a
+          // snapshot offset into the middle of a record is a different fault.
+          const finalUnterminated = i === lines.length - 1
+            && buf.length > 0 && buf[buf.length - 1] !== 0x0a;
+          const replayOnBoundary = replayStart === 0 || buf[replayStart - 1] === 0x0a;
+          if (!finalUnterminated || !replayOnBoundary) throw err;
+
+          const cut = buf.lastIndexOf(0x0a) + 1;
+          const fragment = buf.subarray(cut);
+          const hash = createHash("sha256").update(fragment).digest("hex").slice(0, 16);
+          const quarantine = join(dir, `torn-tail-${cut}-${hash}.jsonfrag`);
+          // Content-addressing makes the recovery idempotent if a second crash
+          // lands after quarantine but before the atomic live-log trim.
+          if (!existsSync(quarantine)) writeFileSync(quarantine, fragment);
+          writeFileSync(this.logPath + ".recovering", buf.subarray(0, cut));
+          renameSync(this.logPath + ".recovering", this.logPath);
+          this.logBytes = cut;
+          console.error(`[world:${this.name}] quarantined ${fragment.length} crash-torn log byte(s) as ${quarantine}`);
+          break;
+        }
         this.entries.push(e);
         foldEntry(this.state, e);
       }
