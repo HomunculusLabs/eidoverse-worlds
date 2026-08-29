@@ -60,6 +60,7 @@ const BATTERY: Row[] = [
   { name: "snapshot-offset-boundary", tool: "tools/snapshot-offset-boundary-test.ts" },
   { name: "snapshot-sequence", tool: "tools/snapshot-sequence-disagreement-test.ts" },
   { name: "write-failure-ack", tool: "tools/write-failure-ack-test.ts" },
+  { name: "snapshot-atomic-kill", tool: "tools/snapshot-atomic-kill-test.ts" },
   { name: "authtest", tool: "tools/authtest.ts", sweepPorts: [8992] },
   { name: "collide-fold", tool: "tools/collide-fold-test.ts", sweepPorts: [8990] },
   { name: "support-lifecycle", tool: "tools/support-lifecycle-test.ts", timeoutMs: 420_000, sweepPorts: [8940] },

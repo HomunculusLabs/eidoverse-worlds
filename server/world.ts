@@ -234,6 +234,11 @@ export class WorldLog {
       // stays unfolded, retried on the next threshold, honestly.
       this.flushLog();
       writeFileSync(this.snapPath + ".tmp", payload);
+      // Deterministic crash-consistency seam: inert unless a dedicated scratch
+      // test process opts in. SIGKILL here exercises the exact atomic-replace
+      // window no external timer can target reliably.
+      if (process.env.EIDO_TEST_CRASH_AFTER_SNAPSHOT_TMP === "1")
+        process.kill(process.pid, "SIGKILL");
       renameSync(this.snapPath + ".tmp", this.snapPath);
       this.snapSeq = seq;
       this.snapBytes = bytes;

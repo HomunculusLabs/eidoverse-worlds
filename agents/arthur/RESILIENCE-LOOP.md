@@ -65,7 +65,9 @@ entities, resident behavior, or another lane's in-flight files.
 - [x] A write failure cannot produce a success acknowledgement
       (`resilience-6`: physical append precedes memory/echo; refusal rolls back
       completely and cannot hitchhike into a later writable append).
-- [ ] Kill during snapshot temp-write/rename preserves the prior valid snapshot.
+- [x] Kill during snapshot temp-write/rename preserves the prior valid snapshot
+      (`resilience-7`: real SIGKILL after complete tmp write; prior snapshot
+      byte-identical; committed tail restores full state on restart).
 - [ ] Fork/reset flush boundaries retain every preceding authored verb.
 - [ ] Malformed and oversized WebSocket messages cannot crash or wedge a world.
 
