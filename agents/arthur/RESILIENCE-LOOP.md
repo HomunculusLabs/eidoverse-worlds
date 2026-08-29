@@ -62,7 +62,9 @@ entities, resident behavior, or another lane's in-flight files.
 - [x] Snapshot/log sequence disagreement is detected rather than silently mixed
       (`resilience-5`: snapshot seq bound to the actual final covered JSONL
       entry; silent entity loss blocked; files unchanged; restart rejects).
-- [ ] A write failure cannot produce a success acknowledgement.
+- [x] A write failure cannot produce a success acknowledgement
+      (`resilience-6`: physical append precedes memory/echo; refusal rolls back
+      completely and cannot hitchhike into a later writable append).
 - [ ] Kill during snapshot temp-write/rename preserves the prior valid snapshot.
 - [ ] Fork/reset flush boundaries retain every preceding authored verb.
 - [ ] Malformed and oversized WebSocket messages cannot crash or wedge a world.

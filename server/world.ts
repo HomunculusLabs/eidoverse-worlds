@@ -323,6 +323,15 @@ export class WorldLog {
     // happens to be in memory — folding must not renumber the past.
     const seq = this.snapSeq + this.entries.length + 1;
     const entry: LogEntry = { seq, ts: Date.now(), actor, verb, args };
+    const line = JSON.stringify(entry) + "\n";
+    // The authored line lands BEFORE any in-memory mutation or authoritative
+    // echo. A broadcast `log` message is the success acknowledgement; if the
+    // append fails, runVerb's caller sends an error and this method leaves no
+    // state, sequence, index, or pending retry behind. The old one-macrotask
+    // batch acknowledged first and discovered EACCES later, allowing a refused
+    // verb to mutate memory and hitchhike into a later successful flush.
+    appendFileSync(this.logPath, line);
+    this.logBytes += Buffer.byteLength(line);
     this.entries.push(entry);
     // #57 attest lookup (review finding 3): performance receipts resolve a
     // say by seq, but fold() empties entries[] every FOLD_EVERY appends — a
@@ -335,50 +344,16 @@ export class WorldLog {
       this.recentSays.push(entry);
       if (this.recentSays.length > 256) this.recentSays.shift();
     }
-    const line = JSON.stringify(entry) + "\n";
-    // Batched, not per-entry (§15.1, 7d): seq, the memory tail, logBytes
-    // accounting, and the live fold stay SYNCHRONOUS — every reader of
-    // world state sees the entry immediately — while the byte hits disk on
-    // the next macrotask, so a verb, its reaction, and its behavior emits
-    // coalesce into one write instead of three syscalls in the ws handler.
-    // Durability is unchanged in kind: the old per-entry appendFileSync
-    // promised page cache, never the platter (no fsync existed); this
-    // promises the same, one tick later, and every point that makes a
-    // claim about the FILE (fold's byte offset, fork's copy, reset's
-    // archive, readHistory's scan, shutdown) flushes first.
-    this.pending.push(line);
-    this.logBytes += Buffer.byteLength(line);
-    if (!this.flushArmed) {
-      this.flushArmed = true;
-      setTimeout(() => {
-        this.flushArmed = false;
-        try { this.flushLog(); } catch (err) {
-          // pending is retained — the next flush point retries; house rule 3
-          console.error(`[world:${this.name}] log flush failed`, err);
-        }
-      }, 0);
-    }
     foldEntry(this.state, entry);
     if (++this.dirtySinceFold >= FOLD_EVERY) this.fold();
     return entry;
   }
 
-  private pending: string[] = [];
-  private flushArmed = false;
-
-  /** Drain the write batch — one appendFileSync per batch. Called by the
-   *  timer, and synchronously by everything that reads or repositions the
-   *  file (fold, fork, reset, readHistory's file leg, shutdown). */
+  /** Compatibility seam for callers that establish a file boundary before
+   *  fold/fork/reset/history/shutdown. Appends are synchronous now, so there
+   *  is no acknowledged in-memory batch left to drain. */
   flushLog() {
-    if (!this.pending.length) return;
-    const chunk = this.pending.join("");
-    this.pending = [];
-    try {
-      appendFileSync(this.logPath, chunk);
-    } catch (err) {
-      this.pending.unshift(chunk);   // nothing lost — retried at the next point
-      throw err;
-    }
+    return;
   }
 }
 
