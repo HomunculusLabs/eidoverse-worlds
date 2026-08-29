@@ -10,7 +10,7 @@ import { join } from "node:path";
 // config FIRST — it carries the WORLDS_DIR mkdir, and auth.ts/moderation.ts
 // carry their restore-at-boot blocks, so this import order IS the unsplit
 // file's boot order: mkdir → session restore → ban restore (§15, step 7a).
-import { PORT, JOIN_TOKEN, RECORD, ROOT, WORLDS_DIR, LIBRARY_DIR, MSG_RATE, FRAME_MS, FRAME_SKIP_BUFFERED } from "./config.ts";
+import { PORT, JOIN_TOKEN, RECORD, ROOT, WORLDS_DIR, LIBRARY_DIR, MSG_RATE, WS_MESSAGE_MAX_BYTES, FRAME_MS, FRAME_SKIP_BUFFERED } from "./config.ts";
 import { type HnSession, agentTokens, HN_ISSUER_KEY, HN_ISS, HN_AUD } from "./auth.ts";
 import { globalBans, saveGlobalBans, findBan } from "./moderation.ts";
 import { isAdminId, worldHasOwner, rightsOf, VERB_NEEDS, lockRefusal } from "./rights.ts";
@@ -344,14 +344,26 @@ const server = Bun.serve({
       // a drained socket's rtc/SDP reaching the successor's peers is the
       // wedge this whole flag exists to prevent.
       if (c.superseded) return;
-      let msg: any;
-      try { msg = JSON.parse(String(raw)); } catch { return; }
-
-      // message-rate cap: 15Hz poses + verbs + slack. Excess is dropped
-      // silently — closing would just trigger the client's auto-reconnect.
+      // Size gate BEFORE String conversion / JSON.parse: one peer cannot force
+      // an unbounded allocation. RFC 6455 close 1009 means message too big and
+      // is scoped to this socket; healthy peers and worlds continue.
+      const rawBytes = typeof raw === "string" ? Buffer.byteLength(raw) : raw.byteLength;
+      if (rawBytes > WS_MESSAGE_MAX_BYTES) {
+        try { ws.send(JSON.stringify({ type: "error", error: `message too large — ${WS_MESSAGE_MAX_BYTES} byte maximum` })); } catch { /* closing */ }
+        ws.close(1009, "message too large");
+        return;
+      }
+      // message-rate cap: 15Hz poses + verbs + slack. Malformed attempts count
+      // too; otherwise parse failures become a free response-amplification lane.
       const now = Date.now();
       if (now - c.msgWin > 1000) { c.msgWin = now; c.msgCount = 0; }
       if (++c.msgCount > MSG_RATE) return;
+      let msg: any;
+      try { msg = JSON.parse(String(raw)); }
+      catch {
+        ws.send(JSON.stringify({ type: "error", error: "malformed JSON message" }));
+        return;
+      }
 
       // No message may ever kill the process. An uncaught throw in Bun's ws
       // callback EXITS THE SERVER, and a client in a reconnect loop turns one

@@ -48,6 +48,11 @@ export const FOLD_EVERY = Number(process.env.FOLD_EVERY ?? 150);
 export const VERB_RATE = Number(process.env.VERB_RATE ?? 12);
 /** All messages per client per second — 15Hz of pose plus verbs plus slack. */
 export const MSG_RATE = Number(process.env.MSG_RATE ?? 60);
+/** Hard pre-parse frame cap. Ordinary messages are tiny, but the existing
+ *  semantic animation validator intentionally receives ~124KB adversarial
+ *  fixtures, so 256KB sits above the legitimate protocol envelope while still
+ *  bounding String/JSON allocation before any semantic parser runs. */
+export const WS_MESSAGE_MAX_BYTES = Number(process.env.WS_MESSAGE_MAX_BYTES ?? 256_000);
 
 export const FRAME_MS = 66;                 // ~15Hz, matches the client's send throttle
 // Bytes of unsent backlog before we drop frames to a client. Keep TIGHT: with

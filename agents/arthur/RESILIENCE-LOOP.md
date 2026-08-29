@@ -71,7 +71,10 @@ entities, resident behavior, or another lane's in-flight files.
 - [x] Fork/reset flush boundaries retain every preceding authored verb
       (`resilience-8`: zero-delay append→fork/reset regression; copy and archive
       retain the last echo; fresh source/copy separation holds; no code fix).
-- [ ] Malformed and oversized WebSocket messages cannot crash or wedge a world.
+- [x] Malformed and oversized WebSocket messages cannot crash or wedge a world
+      (`resilience-9`: malformed JSON explicitly refused and rate-counted;
+      pre-parse 256KB cap closes only sender with 1009; no authored residue;
+      existing 124KB animation semantic-refusal path remains reachable).
 
 ## LAWS
 
