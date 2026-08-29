@@ -3477,4 +3477,12 @@ fixes ≈ 6 F.)
 
 - [resilience-1] crash-torn final world-log append now recovers narrowly and honestly: strict RED reproduced a five hundred response with valid committed state unavailable and no recovery evidence; WorldLog now recognizes only an invalid unterminated final fragment at a valid record boundary, quarantines its bytes under a deterministic sha256-derived filename, atomically trims log.jsonl to the last committed newline, preserves every complete entity, never invents the partial entry, and restarts idempotently; newline-committed malformed records remain untouched and fail closed; focused regression eleven of eleven and persistence core gate four of four pass; full servergate eleven of fourteen with the same pre-existing auth permission and Ammo support failures; no live world production process deploy or sibling file changed (D+0, E+0)
 
+- [nvp-105] Ring-road mosaic gallery row placed (Bill-approved ring-law exception at r=45): nvp-105 mosaics x4 at 30/90/150/210deg — hash-gated, SAT vs live bbox min 3.95m (vs carousel), tuple verified, idempotent rerun 0 verbs — VILLAGE 60/60 WORKS (D+0, E+0)
+
+- [nvp-106] Ring-road mosaic gallery row placed (Bill-approved ring-law exception at r=45): nvp-105 mosaics x4 at 30/90/150/210deg — hash-gated, SAT vs live bbox min 3.95m (vs carousel), tuple verified, idempotent rerun 0 verbs — VILLAGE 60/60 WORKS (D+0, E+0)
+
+- [nvp-107] Ring-road mosaic gallery row placed (Bill-approved ring-law exception at r=45): nvp-105 mosaics x4 at 30/90/150/210deg — hash-gated, SAT vs live bbox min 3.95m (vs carousel), tuple verified, idempotent rerun 0 verbs — VILLAGE 60/60 WORKS (D+0, E+0)
+
+- [nvp-108] Ring-road mosaic gallery row placed (Bill-approved ring-law exception at r=45): nvp-105 mosaics x4 at 30/90/150/210deg — hash-gated, SAT vs live bbox min 3.95m (vs carousel), tuple verified, idempotent rerun 0 verbs — VILLAGE 60/60 WORKS (D+0, E+0)
+
 **Running total: 2368596 / 2000000**
