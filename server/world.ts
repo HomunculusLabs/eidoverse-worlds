@@ -153,6 +153,12 @@ export class WorldLog {
       const usable = this.snapSeq >= 0 && this.snapBytes > 0 && this.snapBytes <= buf.length;
       if (!usable) { this.state = emptyState(); this.snapSeq = -1; this.snapBytes = 0; }
       const replayStart = usable ? this.snapBytes : 0;
+      // In-range is not enough: the offset promise must land immediately
+      // after a committed JSONL newline. Mid-record offsets are ambiguous
+      // timeline metadata, so fail closed before parsing and leave both files
+      // untouched for operator inspection.
+      if (replayStart > 0 && buf[replayStart - 1] !== 0x0a)
+        throw new Error(`snapshot offset ${replayStart} is not a JSONL record boundary`);
       const text = buf.toString("utf8", replayStart);
       const lines = text.split("\n");
       for (let i = 0; i < lines.length; i++) {

@@ -56,7 +56,9 @@ entities, resident behavior, or another lane's in-flight files.
 - [x] Snapshot byte offset past EOF falls back safely
       (`resilience-3`: impossible cache metadata quarantined byte-exactly;
       full-log replay preserves state; log untouched; second boot clean).
-- [ ] Snapshot byte offset into the middle of a UTF-8/JSONL record is rejected.
+- [x] Snapshot byte offset into the middle of a UTF-8/JSONL record is rejected
+      (`resilience-4`: explicit pre-parse boundary gate; persistent fail-closed
+      across restart; snapshot and log byte-identical; other worlds stay live).
 - [ ] Snapshot/log sequence disagreement is detected rather than silently mixed.
 - [ ] A write failure cannot produce a success acknowledgement.
 - [ ] Kill during snapshot temp-write/rename preserves the prior valid snapshot.
