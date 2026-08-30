@@ -66,6 +66,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-9 | T-3 Pendulum Wave | 46°/36 (NE path past woodyard) | (25.01, −0.041, 25.9) | 0 (row ∥ X, swing ∥ Z) | LIVE, frozen moment, circuit walk 5/5 |
 | struct-10 | U-1 Hillside Theater | 122°/46 (SW reach) | (−23.32, 0.040, 37.31) | 0 (stage +Z → Bandstand) | LIVE, aisle climb walk 5/5 |
 | struct-11 | U-2 East Beacon | 338°/44 (E approach, SE side) | (40.8, −0.044, −16.48) | 0 | LIVE, + light entity, base circuit 4/4 |
+| struct-12 | REFINE: Observatory night read | — | exact standing tuple | — | LIVE, + light entity, walk 5/5 re-verified |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -404,3 +405,25 @@ nothing at night; the beacon answers both.
 
 **Bill should eye-check**: from the E gate after dusk — the lit lantern
 against the sky; by day, the slit-window rhythm up the shaft.
+
+## struct-12 — REFINE TICK 1: Observatory night read
+
+First refine tick under the N%3 cadence. Subject by deficit ranking: the
+Observatory's night read — the only deficit class where the fleet's own
+new work (beacon struct-11, lit orrery pairing struct-7) created it.
+
+- One defect, smallest change: the two dark slit windows became warm
+  emissive panes (KEEP-named `lamp_slit_e/w`, lit-window law) + companion
+  light `nx-struct-observatory-l` at the gnomon height inside. Slit
+  frames unchanged; nothing else touched.
+- Discipline: baseline hash reproduced exactly (337ce538) before editing;
+  candidate deterministic ×2, sha eb3c9b158195b268, 12 nodes (10 + 2
+  kept lamp nodes); pose-gated re-place at the EXACT standing tuple (any
+  drift refuses); empty comp bag preserved; 2 verbs; idempotent rerun
+  zero verbs; the standing 5/5 door walk re-run ALL PASS (no geometry
+  regression).
+- Night read NOT claimed — Bill's dusk eye-check: the two lit slits from
+  the NW walk toward the Observatory.
+
+**Bill should eye-check (dusk)**: from the NW walk — the two warm slits
+in the drum, the beacon further east, and the oculus open to the sky.
