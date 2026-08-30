@@ -22,6 +22,11 @@
 - Texture law: pieces join the standing material families (village timber / ashlar / forge iron / soil) with byte-identical tiles where they touch construction; art media (brass, bone) stay flat — brass is its own material.
 - Motion taste law (Bill, proven): SLOW and CALM, single-frequency; 9°/s-class spins, no fast or multi-frequency motion.
 - Verify ad-hoc (never "suite green"): decode + census + walk-test if enterable; report honestly.
+- Bill's 2026-08-30 visual-gate waiver: render review frames, but native image-input
+  failure does not block this lane. Proceed through deterministic decode,
+  geometry/material, SAT/rim, and live tuple gates; never invent a visual PASS,
+  and always name the exact live eye-check Bill should make after the reversible
+  first siting.
 - Ledger via `python3 agents/arthur/ledger-append.py`, exact `(D+N, E+n)` suffix.
 - REPAIR-REGISTER OPEN items belong to the refinement lane unless Bill assigns them here.
 - LOOP_COMPLETE only if Bill says stop in his own message.
@@ -34,7 +39,7 @@ Rebirth = re-site for the radial village, re-material into the standing families
 | # | Piece | Era-1 source | Motion | Notes |
 |---|-------|--------------|--------|-------|
 | H-1 | Lissajous sculpture | `mklissa.ts`, `placelissa.ts` | spin y 9°/s + slow precession | Era-1's "math pieces, as requested" star; full script chain exists |
-| H-2 | Golden spiral shell + borromean rings | `mkmath1.ts` | none (static pedestals) | Pedestal duo for one art-walk stop |
+| H-2 | Golden spiral shell + borromean rings — DONE | `mkmath1.ts` | none (static pedestals) | Pedestal duo live as `nx-artwalk-h2`; Bill eye-check pending |
 | H-3 | Hypar canopy | `mkmath1.ts` | none | Saddle from straight generatrices; may need UV authoring care |
 | H-4 | Mural stone pair | `_era1-2/village_mural_{a,b}.glb` | none | Story stones; decode era-1 glyphs, redraw in village palette |
 | H-5 | Möbius arch v2 | `_era1-2/village_mobius2.glb` (122 D) | none | The big one — a gate-class piece for an art-walk entry |
@@ -75,3 +80,18 @@ rollout 4 verbs; live census: `av-artwalk-lissa` (26.9,-26.9) yaw -0.79,
 comp `motion:lissa` spin y 9°/s, warm light at 2.5m; standing gate ALL PASS.
 Ledger refine-273 (D+9, E+2). SITED: SE diagonal r=38 (r=33 refused by
 pre-flight — smithy sign 2.7m). Bill's eye-check pending; he may steer pose.
+
+### [artwalk-3] THE GOLDEN MEASURE (2026-08-30) — DONE, LIVE
+Era-1's source-true golden spiral shell and Borromean rings reborn as one
+paired stop: flat bone/brass figures over standing ashlar, forge iron, and
+soil families, with one warm midpoint light. Deterministic build
+`f14d70564a107879977dec03fd46bf83422ecb43fa451d743502d0323bb13cd0`
+byte-identical x2; decode 9 meshes / 6,124 vertices / 3.628 x 2.645 x
+3.597m. Bill waived native image inspection as a blocking gate; review frames
+exist, but no visual PASS is claimed. Reversible first siting:
+`nx-artwalk-h2` at (27,-0.03516135170548859,-27), yaw -0.7853981633974483,
+SE spoke r≈38; band corners 36.430–40.023m, nearest live solid `nx-court`
+8.948m clear. Live tuple + warm light verified; idempotent rerun emitted zero
+verbs. Bill eye-check: whether both mathematical figures read immediately as
+one paired stop from the court-side approach, and whether he wants position
+two or three.

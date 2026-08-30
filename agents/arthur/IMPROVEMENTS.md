@@ -3531,4 +3531,6 @@ fixes ≈ 6 F.)
 
 - [polish-259] carousel horse tail re-orientation: old cone axis pointed the tip into the rump so the base protruded as a black horizontal spike; axis negated and re-anchored so the tail sweeps down-and-back at 38 degrees, no clipping; 45 nodes 38 draws unchanged, byte-identical double rebuild, placed at exact tuple with all 7 comp keys restored, idempotent rerun zero verbs; evidence in reviews/hero-assets/polish-259-carousel/ (D+45, E+1)
 
-**Running total: 2368696 / 2000000**
+- [artwalk-3] H-2 THE GOLDEN MEASURE: source-true golden spiral shell + Borromean-ring pedestal duo, standing stone/iron/soil families with flat brass/bone, deterministic f14d70564a107879 x2; reversible SE-spoke siting at (27,-0.03516135170548859,-27), band 36.430-40.023m and 8.948m nearest-solid clearance; exact live model/light tuples verified and idempotent rerun emitted zero verbs; native visual PASS not claimed under Bill visual-gate waiver (D+9, E+2)
+
+**Running total: 2368707 / 2000000**

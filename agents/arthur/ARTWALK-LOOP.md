@@ -35,8 +35,11 @@ decode reference for what it WAS; the new village decides what it BECOMES.
 3. Take the next queued piece from Phase H (or Phase F if Bill has called for
    fresh commissions). Decode the era-1 source at source-truth before editing.
 4. Build: `mkv3-` script → `bun` rebuild (deterministic, byte-identical ×2) →
-   decode audit (nodes, KEEP motion anchors, texture families) → review-render
-   and natively judge before placing.
+   decode audit (nodes, KEEP motion anchors, texture families) → review-render.
+   Native judgment is preferred when available, but Bill explicitly waived it
+   as a blocking gate on 2026-08-30. If image input fails, proceed from the
+   deterministic decode, geometry/material checks, and reversible first siting;
+   report the exact eye-check target to Bill after placement.
 5. Place: hash-gated placer FILE (never inline JSON) → upload/spawn
    `nx-artwalk-*` id → re-apply ALL comps via placer file (comp-wipe law) →
    SAT/rim preflight with the ground-layer and suspended-decor exemptions →
@@ -58,6 +61,9 @@ decode reference for what it WAS; the new village decides what it BECOMES.
   hold — never run a cheap-tick treadmill.
 - Siting: propose, place, let Bill steer through 2–3 positions; never
   over-commit to the first site.
+- Visual tooling failure is not a hold condition in this lane. Never invent a
+  visual verdict; mark the native review unavailable, place reversibly through
+  every remaining technical gate, and make Bill's live eye-check explicit.
 - `LOOP_COMPLETE` is forbidden unless Bill explicitly says stop.
 
 ---8<--- END LOOP PROMPT ---8<---
