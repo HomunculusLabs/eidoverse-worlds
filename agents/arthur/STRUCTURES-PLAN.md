@@ -40,6 +40,15 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 4. Extend housekit: `twistBand` primitive (graduating the Möbius form)
    when a second twisted-band structure is commissioned.
 
+## THIRD COMMISSION QUEUE (struct-10 onward — re-derived from census)
+
+1. **U-1 Hillside Theater** — [DONE struct-10] five terrace rows rising
+   behind a stone performance disc; SW reach, stage facing the Bandstand.
+   (Concentric-arc form rejected pre-build: mosaic-0048 occupies the row
+   radius and concave arcs defeat bbox SAT — straight rows keep the idea.)
+2. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
+   now live: every struct-N with N%3==0 is a refine tick (first: struct-12).
+
 ## Siting log
 
 | tick | structure | site (deg/r) | world pos | yaw | verdict |
@@ -52,6 +61,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-7 | T-1 The Orrery | 284°/38 (plaza→Observatory walk) | (9.19, −0.052, −36.87) | 0 | LIVE, motion:orb −0.5°/s, circle walk 5/5 |
 | struct-8 | T-2 Millrace Cascade | 200°/40 head; race runs W | (−37.59, −0.045, −13.68) | −π/2 | LIVE, bank walk 5/5 |
 | struct-9 | T-3 Pendulum Wave | 46°/36 (NE path past woodyard) | (25.01, −0.041, 25.9) | 0 (row ∥ X, swing ∥ Z) | LIVE, frozen moment, circuit walk 5/5 |
+| struct-10 | U-1 Hillside Theater | 122°/46 (SW reach) | (−23.32, 0.040, 37.31) | 0 (stage +Z → Bandstand) | LIVE, aisle climb walk 5/5 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -332,3 +342,34 @@ crossbeam. Same idea; no fake motion claim.
 
 **Bill should eye-check**: from the NE path — the frozen sine curve of
 bobs; walk the frame's circuit and read the wave from both sides.
+
+## struct-10 — U-1 HILLSIDE THEATER (concept contract + record)
+
+**Concept**: rows rising to face a stage. Five straight terrace rows
+(stone seat walls + timber caps, 1.9m pitch, 0.42m seat height, 0.7m
+aisle gaps) rising behind a stone performance disc with a brass spin
+pin; a dark crown mast with brass finial and banner arms closes the
+composition uphill. The Möbius Bandstand and the theater now form a
+performance quarter on the S side — stage circles, big and small.
+
+- Honest collider: mast lifts the bbox to 2.77m ≥ 2.2 → real trimesh,
+  grade lanes between rows genuinely walkable (reed-pool pattern).
+- Design honesty: the first form (concentric terrace arcs hugging the
+  Bandstand) was rejected BEFORE build — nx-gallery-mosaic-0048 stands
+  inside the first row's radius, and a concave arc defeats bbox SAT
+  anyway. Straight rows keep the same idea with ordinary collision math.
+- Build: mkv3-amphi.ts → village_amphi3.glb, deterministic ×2, sha256
+  0904c5da232cea1b, 4 nodes, 251.7m² footprint.
+- Siting: 122°/r46 → (−23.32, 0.040, 37.31), SW reach (gap 4.3m), stage
+  disc toward the Bandstand, rows rising toward the plaza. Terrain flat.
+- Placement: nx-struct-amphi PLACED_VERIFIED at exact tuple, 1 verb,
+  idempotent rerun zero verbs.
+- Walk: five-leg MCPL walk ALL PASS — onto the stage, to the front-row
+  lane, up an aisle to row 2, to the crown mast, and out (arrivals
+  ≤0.39m).
+- First tick under Bill's refine-phase cadence law (landed 035b089):
+  struct-10 is a build tick; the first refine tick will be struct-12.
+
+**Bill should eye-check**: stand on the performance disc and look
+uphill — five rows rising; take a seat mid-height and look back at the
+Bandstand.
