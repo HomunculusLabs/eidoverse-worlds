@@ -3657,4 +3657,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-24] B-14 EAST GATE DAWN FAN: seven alternating brass/bone rays spread from one horizon above the road-facing lintel; deterministic c67c0402bbfb7fd8 x2; exact host-local (0,2.72,0.2325), 5.396m nearest-solid clearance, zero-verb rerun, complete gate route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369485 / 2000000**
+- [artwalk-25] B-15 WEST GATE DUSK ARCS: three nested brass/bone parabolic arcs settle toward one horizon above the road-facing lintel; deterministic f1efad77be904a59 x2; exact host-local (0,2.72,0.2325), 2.683m nearest-solid clearance, zero-verb rerun, complete gate route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369489 / 2000000**

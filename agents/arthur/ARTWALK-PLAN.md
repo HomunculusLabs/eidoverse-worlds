@@ -83,7 +83,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     cadences ride the outer gateposts as `nx-artwalk-b13-south-tide-{west,east}`.
 14. **B-14 East Gate Dawn Fan — DONE**: seven alternating brass/bone rays
     spread above the outer lintel as `nx-artwalk-b14-east-gate-dawn-fan`.
-15. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+15. **B-15 West Gate Dusk Arcs — DONE**: three nested brass/bone parabolic
+    arcs settle over the outer lintel as `nx-artwalk-b15-west-gate-dusk-arcs`.
+16. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -248,6 +250,24 @@ max arrival 0.340m. Review frames were rendered, but native image input remains
 unavailable under Bill's waiver; no visual PASS is claimed. Eye-check from the
 east road: the seven rays should read as one dawn fan above the hanging sign,
 not as trim, and the threshold should remain visually open.
+
+### [artwalk-25] THE WEST GATE DUSK ARCS (2026-08-30) — DONE, LIVE
+The west threshold answers dawn with a distinct settling gesture: three nested
+brass/bone parabolic arcs descend toward one brass horizon over a forged field.
+The 2.3m span remains above the hanging sign and wholly inside the lintel's top
+envelope, so the gateway acquires an evening crown without touching passage.
+Deterministic build
+`f1efad77be904a59f466ab7d07d04a2825bfad5e85e08d2c674a905e6ea3826c`
+byte-identical x2; decode 3 merged nodes / 2.300 x 0.360 x 0.127m. Host truth
+was pinned to west gate `store/558489ed8a6477c4.glb`; exact outer-face
+host-local (0,2.72,0.2325) maps to (−19.7325,2.72,0), yaw −π/2. The relief
+spans y 2.72–3.080 inside the gate's 3.09m top. Live SAT found the nearest
+non-host solid, `nx-struct-hypar`, 2.683m clear. Exact tuple verified;
+idempotent rerun emitted zero verbs. The complete outside→plaza→outside gate
+route remained 6/6 PASS, max arrival 0.340m. Review frames were rendered, but
+native image input remains unavailable under Bill's waiver; no visual PASS is
+claimed. Eye-check from the west road: the three arcs should read as one dusk
+field above the sign and as a true counterpart—not a copy—of the east dawn fan.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
