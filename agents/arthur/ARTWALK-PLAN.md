@@ -81,7 +81,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     radiate around the fire mouth as `nx-artwalk-b12-kiln-heat-contours`.
 13. **B-13 South Gate Twin Tides — DONE**: paired seven-mark brass/bone
     cadences ride the outer gateposts as `nx-artwalk-b13-south-tide-{west,east}`.
-14. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+14. **B-14 East Gate Dawn Fan — DONE**: seven alternating brass/bone rays
+    spread above the outer lintel as `nx-artwalk-b14-east-gate-dawn-fan`.
+15. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -228,6 +230,24 @@ Review frames were rendered, but native image input remains unavailable under
 Bill's waiver; no visual PASS is claimed. Eye-check from the south road: the
 two seven-mark tides should read as one paired threshold rhythm without
 competing with the hanging sign or narrowing the passage.
+
+### [artwalk-24] THE EAST GATE DAWN FAN (2026-08-30) — DONE, LIVE
+The east threshold receives a low sunrise field on the outer lintel: seven
+alternating brass/bone rays open from one brass horizon over a forged backing.
+The 2.3m span stays above the hanging sign and entirely inside the gate's top
+envelope, making the road-facing crown readable without adding anything to the
+passage. Deterministic build
+`c67c0402bbfb7fd8d2fb47a3904017139762b15b6f6a2f27295098f52b5c91d4`
+byte-identical x2; decode 3 merged nodes / 2.300 x 0.367 x 0.115m. Host truth
+was pinned to east gate `store/558489ed8a6477c4.glb`; exact outer-face
+host-local (0,2.72,0.2325) maps to (19.7325,2.72,0), yaw π/2. The relief spans
+y 2.72–3.087 inside the gate's 3.09m top. Live SAT found the nearest non-host
+solid, `nx-forge`, 5.396m clear. Exact tuple verified; idempotent rerun emitted
+zero verbs. The complete outside→plaza→outside gate route remained 6/6 PASS,
+max arrival 0.340m. Review frames were rendered, but native image input remains
+unavailable under Bill's waiver; no visual PASS is claimed. Eye-check from the
+east road: the seven rays should read as one dawn fan above the hanging sign,
+not as trim, and the threshold should remain visually open.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 

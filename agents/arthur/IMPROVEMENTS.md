@@ -3655,4 +3655,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-23] B-13 SOUTH GATE TWIN TIDES: paired seven-mark brass/bone cadences ride the south gate outer posts; deterministic 8a6b49f61bcf138e x2; exact host-local anchors (-1.5,0.5,-0.18)/(1.5,0.5,-0.18), 3.887m nearest-solid clearance, zero-verb rerun, complete gate route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+2)
 
-**Running total: 2369481 / 2000000**
+- [artwalk-24] B-14 EAST GATE DAWN FAN: seven alternating brass/bone rays spread from one horizon above the road-facing lintel; deterministic c67c0402bbfb7fd8 x2; exact host-local (0,2.72,0.2325), 5.396m nearest-solid clearance, zero-verb rerun, complete gate route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369485 / 2000000**
