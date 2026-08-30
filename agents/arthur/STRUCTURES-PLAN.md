@@ -12,8 +12,9 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 2. [DONE struct-3] S-2 Shell Tower — golden-spiral ribbon tower between
    bunkhouse and hall; crown socket access (ramp trimesh not standable —
    engine limitation, same class as artwalk-8 stairs).
-3. S-3 Hypar Pavilion — Ruled Sky at building scale: hypar canopy on four
-   slender posts, plaza-adjacent shade structure.
+3. [DONE struct-4] S-3 Hypar Pavilion — Ruled Sky at building scale:
+   hypar canopy as 24 straight rulings, four posts, brass crest pins;
+   off the W gate approach.
 4. S-4 Möbius Bandstand — half-twist band roof over a performance circle;
    echoes the Half-Turn Gate.
 5. S-5 Reed Bridge / waterfront folly at the fieldpond — ripple rhythm
@@ -25,6 +26,7 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 |------|-----------|--------------|-----------|-----|---------|
 | struct-2 | S-1 Observatory | 292°/44 (NW wedge, hall↔artwalk column) | (16.48, −0.052, −40.80) | −0.3839 (door→plaza) | LIVE, walk 5/5 |
 | struct-3 | S-2 Shell Tower | 266°/38 (bunkhouse↔hall gap, N of axis) | (−2.65, −0.052, −37.91) | 0.0698 (widest→plaza) | LIVE, crown socket; ramp NOT standable (engine) |
+| struct-4 | S-3 Hypar Pavilion | 170°/28 (off W gate approach, N of road) | (−27.57, −0.005, 4.86) | π/2 (crest axis ∥ road) | LIVE, deck walk 5/5 |
 
 ## struct-2 — S-1 THE OBSERVATORY (concept contract + record)
 
@@ -102,3 +104,41 @@ the apex. Silhouette = shrinking spiral; reads "shell" before detail.
 **Bill should eye-check**: from the plaza, the N approach between hall and
 bunkhouse — the shrinking spiral silhouette against the sky; then teleport
 to the crown socket and look back at the village.
+
+## struct-4 — S-3 HYPAR PAVILION (concept contract + record)
+
+**Concept**: Ruled Sky at building scale. One idea: a saddle roof built
+entirely from straight lines. The canopy is z = k(x²−y²) over a 9m square,
+expressed as 24 timber slats — each a TRUE ruling line of the surface
+(y = x + c family), no curved geometry anywhere. Parabolic edge beams trace
+the boundary the eye follows; four slender dark posts hold the corners;
+two brass pins mark the crest midpoints.
+
+- Geometry as ornament: the rulings ARE the ornament; the saddle emerges
+  from their rotation, Judd-clear at gameplay distance.
+- First consumer of the new housekit `hyparShell` primitive (reusable
+  ruled-surface family, per loop law).
+- Gates honest: bbox 102.4m² ≥16, height 6.52 ≥2.2 → real trimesh. 4
+  nodes after merge (timber/stone/dark/brass buckets). Open pavilion —
+  entry from any side; E/W edges arch to 5.8m (free entry), N/S edges dip
+  to ~0.5m (natural windbreak sides).
+- Defect caught by source math BEFORE build: first post/pin placement
+  assumed corners were the high points; on this hypar the corners sit at
+  the mean plane and the CRESTS are edge midpoints — posts would have
+  poked 2.6m through the canopy. Fixed; verified in decode.
+- Build: mkv3-hypar.ts → village_hypar3.glb, deterministic ×2, sha256
+  ce246defccc75bff.
+- Siting: 170°/r28 → (−27.57, −0.005, 4.86), just off the W gate road
+  (gap 1.88m to road mesh), the nearest-in passing candidate from 470.
+  Crest axis rotated to run along the road so both crests read on
+  approach. Terrain flat (±0.02m).
+- Placement: nx-struct-hypar PLACED_VERIFIED at exact tuple, idempotent
+  rerun zero verbs, empty comp bag.
+- Walk: five-leg MCPL walk ALL PASS — road approach → center → both crest
+  sides → full crossing → back out (arrivals ≤0.36m, deck height holds).
+- Visual PASS not claimed (render approval-blocked; source decode +
+  parametric verification + walk only).
+
+**Bill should eye-check**: from the W gate road — the saddle silhouette
+and the ruled shadow the slats cast on the deck; walk under it and look
+up: every line straight, the surface curved only by their turning.
