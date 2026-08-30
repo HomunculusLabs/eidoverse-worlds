@@ -1,7 +1,15 @@
 # ARTWALK PLAN — the signature-touch loop
 
 **Created:** 2026-08-17 (Bill's mandate: "we're lacking Arthur's signature touch, like the statue in the plaza")
+**Retargeted:** 2026-08-30 to `commons-next` (the town build-out made it the main world; old-commons log kept below as heritage record)
 **Shape chosen:** HYBRID — Phase H reclaims proven era-1 stars, then Phase F graduates to fresh Arthur commissions.
+
+## CURRENT TARGET (commons-next)
+
+- World: `commons-next`; live surface `https://eidoverse.billding.dev/?world=commons-next`
+- Entity ids: `nx-artwalk-*` (spawn via WebSocket verb; never `mx-`)
+- Old-commons heritage: `av-artwalk-lissa` still stands in `commons` (read-only reference); the era-1 sources remain the decode reference for Phase H pieces.
+- Siting: derive FRESH at first wakeup from the live census.commons-next layout (core r0–30, four districts r66–108, gallery-row precedent at r≈45 from nvp-105..108). Candidate lanes: a spoke between two districts (walkable sequence entry-arch → pedestals → kinetic terminus), or a second gallery row. Ground-layer SAT exemptions apply if pavers are added; suspended-decor law if anything hangs.
 **Gap (quantified at loop start):** the radial village carries exactly ONE Arthur signature piece — the Founder's Knot (`av-monument`, SW diagonal). Era-1's entire art layer sits orphaned in `mk*.ts` + `_era1-2/*.glb`, never reborn: lissajous, möbius arch v2 (122-node half-twist), mural pair, golden shell, borromean rings, hypar canopy, observatory, chimes.
 
 ## Standing laws (inherited, non-negotiable)
