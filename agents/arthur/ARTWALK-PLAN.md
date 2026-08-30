@@ -57,8 +57,8 @@ are done; the artwalk language now moves INTO the architecture. New queue
    the council-room wall, live as `nx-artwalk-b1-hall-charter`.
 2. **B-2 Inn lintel — DONE**: wave-motif lintel + brass threshold live as
    `nx-artwalk-b2-inn-{lintel,threshold}`.
-3. **B-3 Ruled-Sky porch**: hypar canopy principle (straight generatrices)
-   as a small porch/awning on the market or potter stand.
+3. **B-3 Ruled-Sky porch — DONE**: straight-generatrix canopy live over the
+   potter's work apron as `nx-artwalk-b3-ruled-porch`.
 4. **B-4 Golden-ratio door proportions + brass spiral hinge-plates** on one
    district gate or the Half-Turn Gate's neighbor buildings.
 5. Re-derive from live buildings; prefer high-traffic surfaces visitors see
@@ -266,3 +266,25 @@ clear. Both tuples and host-relative transforms verified; idempotent rerun
 emitted zero verbs. Inn entry/exit remained 6/6 PASS, max arrival 0.364m.
 Bill eye-check: approach from the plaza at 2m and confirm the wave lintel reads
 before the brass threshold flashes underfoot, without either feeling pasted on.
+
+### [artwalk-12] THE POTTER'S RULED SKY (2026-08-30) — DONE, LIVE
+The Ruled Sky moves into a working building as a separate `nx-artwalk-*`
+host-rider, leaving the animated `nx-town-potter` and its wheel comp untouched.
+The porch is a compact hyperbolic-paraboloid canopy: two nine-line families of
+straight timber generatrices over a twisted quadrilateral, four forge-iron
+posts on ashlar feet, and two flat brass crest pins. Its visible 4.55 x 4.15m
+footprint is honestly room-scale (18.883m²), so exact trimesh preserves the
+open work apron instead of sealing it in a furniture box. Deterministic build
+`e1b66075d8e911e7e5c557c48d7e267253c15291d9299d62ce2db9b5a63773fb`
+byte-identical x2; decode 4 nodes / 4 meshes / 1,096 vertices / 4.550 x 3.085
+x 4.150m. Native review unavailable under Bill's waiver; frames exist, but no
+visual PASS is claimed. Host truth was pinned to potter
+`store/a4e277782dde8c04.glb`. The first host-local (0.45,0,0.35) candidate
+left only 0.396m to the kiln and was rejected before upload; final host-local
+(1.55,0,0.35) sits at world
+(24.49985871863018,0,41.02400012970429), potter yaw
+−2.5834592128922376, with 1.496m kiln clearance. Exact tuple and host-relative
+anchor verified; idempotent rerun emitted zero verbs. Potter approach and
+cross-apron circulation remained 6/6 PASS, max arrival 0.366m. Bill eye-check:
+approach from the open work side and confirm the straight ruling families read
+as one saddle-shaped porch while the turning wheel remains the focal craft.
