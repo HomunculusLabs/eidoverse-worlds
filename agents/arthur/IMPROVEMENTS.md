@@ -3521,4 +3521,12 @@ fixes ≈ 6 F.)
 
 - [nvp-145] Core dressing pass: nvp-133 market square (banner/stringlights/giftshelf), nvp-136 plaza (fountain/bench), nvp-138 animal corner (goats/coop/hens/hutch), nvp-142 homestead props (harvestcart/churn/milkstand/charcoal), nvp-145 inn front (stablebench/well/chess) — 16 pieces hash-gated SAT-verified idempotent; commons-next 121 entities (D+0, E+0)
 
-**Running total: 2368596 / 2000000**
+- [polish-257] verify-repairs.ts HEAD-gate widened to accept the sibling village-full renderer and dressing commit prefixes, clearing the structural exit-1 false positive with all substantive checks already passing (D+1, E+1)
+
+- [artwalk-1] lane setup: ARTWALK-LOOP.md and INTERIOR-LOOP.md canonical prompts authored, ARTWALK-PLAN.md retargeted to commons-next, HEAD-gate regex widened for artwalk/interior prefixes (D+3, E+1)
+
+- [artwalk-2] interlane protocol for three concurrent mutating lanes (polish/artwalk/interior): entity domains, ledger-max tags, per-path staging, shared rate-limit pacing; all three loop prompts now reference it (D+1, E+1)
+
+- [polish-258] carousel crown: gold spire (collar + tapered cone to 6.68) replaces near-dead bead apex; 16 alternating gold/fabric valance teeth under the eave; 43 to 45 nodes, 37 to 38 draws, byte-identical double rebuild; placed at exact tuple with all 7 comp keys restored, idempotent rerun zero verbs; evidence in reviews/hero-assets/polish-258-carousel/ (D+45, E+1)
+
+**Running total: 2368650 / 2000000**
