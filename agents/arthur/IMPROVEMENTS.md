@@ -3663,4 +3663,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-27] B-17 GARDEN SEED LATTICE: nine connected brass/bone seed marks crown the evolved garden-cottage door; deterministic 241db6453224af9f x2; interior-6 host reconciled byte-exact, exact host-local (0,2.08,1.8325), zero-verb rerun, full door route 6/6 PASS; nearest 2D carousel footprint 1.061m but wall rider is overhead; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369497 / 2000000**
+- [artwalk-28] B-18 WEAVER WARP COUNT: nine alternating brass/bone warp rules and one brass weft trace crown the evolved row-cottage door; deterministic d6d10de199f6fb03 x2; interior-8 host reconciled byte-exact, exact host-local (0,2.22,2.2825), 4.638m nearest-solid clearance, zero-verb rerun, full door route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369501 / 2000000**

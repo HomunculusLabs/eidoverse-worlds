@@ -89,7 +89,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     marks rise above the fire mouth as `nx-artwalk-b16-forge-seven-strikes`.
 17. **B-17 Garden Seed Lattice — DONE**: nine connected brass/bone seed marks
     crown the cottage door as `nx-artwalk-b17-garden-seed-lattice`.
-18. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+18. **B-18 Weaver Warp Count — DONE**: nine alternating warp rules and one
+    brass weft crown the row-cottage door as `nx-artwalk-b18-row-warp-count`.
+19. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -311,6 +313,25 @@ verified; idempotent rerun emitted zero verbs. Review frames were rendered,
 but native image input remains unavailable under Bill's waiver; no visual PASS
 is claimed. Eye-check from the garden track: the nine marks should read as one
 seed lattice crowning the door, not a sign or miniature map.
+
+### [artwalk-28] THE WEAVER WARP COUNT (2026-08-30) — DONE, LIVE
+The weaver's evolved row cottage receives an exterior measure of its interior
+loom: nine alternating brass/bone warp rules rise through one brass weft trace
+on a forged field above the centered door. The 1.62m span remains inside the
+front wall and below its 2.8m top, leaving the door and dyehouse approach open.
+Deterministic build
+`d6d10de199f6fb031bd425e6aa918257a443dd4144c93161c5cacdbd992cf75b`
+byte-identical x2; decode 3 merged nodes / 1.620 x 0.490 x 0.117m. Host truth
+was reconciled to the interior-8 row-cottage build
+`store/bd88cd386aec2a89.glb`, byte-identical to its durable `village_row3.glb`;
+exact host-local (0,2.22,2.2825) maps to
+(−21.155200197358777,2.22,−15.655931572361396), yaw 0.9411511441487406.
+Live SAT found the nearest non-host solid, the dyehouse, 4.638m clear. Exact
+tuple verified; idempotent rerun emitted zero verbs. The full
+outside→room→outside route remained 6/6 PASS, max arrival 0.365m. Review frames
+were rendered, but native image input remains unavailable under Bill's waiver;
+no visual PASS is claimed. Eye-check from the weaver track: the nine warp rules
+and single crossing trace should read as one woven door crown, not fence bars.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
