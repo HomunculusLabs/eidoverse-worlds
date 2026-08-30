@@ -3539,4 +3539,6 @@ fixes ≈ 6 F.)
 
 - [polish-260] deck inlay enlargement rejected under falsification: identical-camera aerial diff 2 of 691200 pixels and a true top-down probe showed the canopy fully overhangs the deck so deck-top detail is invisible from every player vantage; reverted to the exact live hash with live census unchanged, nothing placed; durable deck rule recorded in the plan (D+0, E+0)
 
-**Running total: 2368763 / 2000000**
+- [artwalk-4] H-3 THE RULED SKY: era-1 hypar reborn as a walk-through 22-ruling brass/bone saddle canopy on ashlar/iron/soil families; deterministic f33e9839b5d95241 x2; final SE-spoke r46 siting after rejecting a 0.764m pinch, now 1.764m clear of H-2; exact model/light tuples, zero-verb idempotent rerun, and 4/4 two-way transverse walk legs verified; native visual PASS not claimed under Bill waiver (D+6, E+2)
+
+**Running total: 2368771 / 2000000**

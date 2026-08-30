@@ -40,7 +40,7 @@ Rebirth = re-site for the radial village, re-material into the standing families
 |---|-------|--------------|--------|-------|
 | H-1 | Lissajous sculpture | `mklissa.ts`, `placelissa.ts` | spin y 9°/s + slow precession | Era-1's "math pieces, as requested" star; full script chain exists |
 | H-2 | Golden spiral shell + borromean rings — DONE | `mkmath1.ts` | none (static pedestals) | Pedestal duo live as `nx-artwalk-h2`; Bill eye-check pending |
-| H-3 | Hypar canopy | `mkmath1.ts` | none | Saddle from straight generatrices; may need UV authoring care |
+| H-3 | Hypar canopy — DONE | `mkmath1.ts` | none | Walk-through ruled saddle live as `nx-artwalk-h3`; Bill eye-check pending |
 | H-4 | Mural stone pair | `_era1-2/village_mural_{a,b}.glb` | none | Story stones; decode era-1 glyphs, redraw in village palette |
 | H-5 | Möbius arch v2 | `_era1-2/village_mobius2.glb` (122 D) | none | The big one — a gate-class piece for an art-walk entry |
 | H-6 (tail) | Chimes / observatory | `mkobs1.ts`, chimes glb | slow spin | Only if H-1..H-5 land clean and Bill wants more |
@@ -95,3 +95,24 @@ SE spoke r≈38; band corners 36.430–40.023m, nearest live solid `nx-court`
 verbs. Bill eye-check: whether both mathematical figures read immediately as
 one paired stop from the court-side approach, and whether he wants position
 two or three.
+
+### [artwalk-4] THE RULED SKY (2026-08-30) — DONE, LIVE
+Era-1's 18 straight generatrices + four posts decoded at source, then reborn
+as a genuinely walk-through hyperbolic-paraboloid shelter: 22 straight
+brass/bone rulings over a twisted quadrilateral, four forge-iron posts on
+ashlar feet, soil approach pavers, and one warm pendant. The 4.94 x 7.64m
+footprint intentionally crosses the room-scale collider threshold so the
+open underside uses exact trimesh rather than a solid furniture box.
+Deterministic build
+`f33e9839b5d9524109f86d70f07ef67d1a6bf1b2c8aa276913ea601d4328f84a`
+byte-identical x2; decode 6 meshes / 1,540 vertices / 4.940 x 3.552 x
+7.640m. Native review unavailable under Bill's standing waiver; frames exist,
+but no visual PASS is claimed. Final reversible siting: `nx-artwalk-h3` at
+(32.526911934581186,-0.0313912325769002,-32.526911934581186), yaw
+-0.7853981633974483, SE spoke center r=46; corridor corners 40.905–48.533m,
+1.764m clear of `nx-artwalk-h2`. The first r=45 siting left only 0.764m and
+was corrected within the same wakeup before ledgering. Exact model/light
+tuples verified; idempotent rerun emitted zero verbs. Two-way transverse
+walk through the canopy passed 4/4 legs, max arrival 0.32m. Bill eye-check:
+whether the two ruling families read as one saddle-shaped sky from H-2 and
+whether the warm pendant makes the shelter feel inhabited at night.
