@@ -340,6 +340,35 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
   lamp, welcome lettering, tower spire, monument beads, market fascia,
   court chimney, hall frames) or re-survey on new evidence.
 
+## HOLD — polish-270 (2026-08-30, wakeup #13)
+
+Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
+live pins verified in the live census (165 entities); local builds of every
+touched subject byte-identical to their live hashes. The named campaign
+defect set is exhausted:
+
+| subject | tick | outcome |
+|---|---|---|
+| nx-carousel crown | polish-258 | spire + valance, live |
+| nx-carousel tails | polish-259 | spike read eliminated, live |
+| nx-carousel deck | polish-260 | rejected (canopy occlusion proof) |
+| nx-carousel overall | polish-261 | judged hero-ready; eye-gate sent |
+| nx-hearth ring | polish-262 | gathering circle, live |
+| belltower lamp | polish-263 | un-entombed, night signal restored, live |
+| welcome lettering | polish-264 | readable at 18m, live |
+| tower spire | polish-265 | crowned, live |
+| monument beads | polish-266 | stray dots eliminated, live |
+| market fascia | polish-267 | cloth hem, live |
+| court chimney | polish-268 | smoke source restored, live |
+| hall frames | polish-269 | door-craft law completed, live |
+
+No remaining evidenced defect above threshold in the named core set.
+HOLDING for Bill's eye-gate verdicts on the ten accepted changes; the lane
+resumes on a visual correction, a new evidenced defect, or a widened queue.
+(Also once: per the hold-law amendment — if this hold produces repeated
+identical no-op surveys, say so and recommend /loop stop rather than burning
+tokens.)
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
