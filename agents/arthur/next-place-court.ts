@@ -1,0 +1,94 @@
+// next-place-court.ts — polish lane (268): re-place nx-court with the
+// bakery oven chimney. Chassis: next-place-belltower.ts. Captures the live comp bag
+// (sockets:study) verbatim, spawns same id at exact tuple, verifies,
+// idempotent rerun prints zero verbs.
+import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+
+const ROOT = "/Users/t3rpz/projects/eidoverse-worlds";
+const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
+const WORLD = "commons-next";
+const ID = "nx-court";
+const FILE = `${ROOT}/agents/arthur/assets/village_court3.glb`;
+const REVIEWED_SHA = "59534b10122e6b476996f619476328d7dd8c0ea090f6107747020b1b646b4d89";
+const REVIEWED_LIB = `store/${REVIEWED_SHA.slice(0, 16)}.glb`;
+const POSE = { pos: [18.9, -1.5946487083102603e-08, -14.8] as [number, number, number], yaw: -0.90756, scale: 1 };
+const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
+const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
+const die = (m: string): never => { throw new Error(m); };
+const near = (a: number, b: number) => Math.abs(a - b) < 1e-6;
+const canon = (v: any): any => Array.isArray(v)
+  ? v.map(canon)
+  : v && typeof v === "object"
+    ? Object.fromEntries(Object.keys(v).sort().map(k => [k, canon(v[k])]))
+    : v;
+const eq = (a: any, b: any) => JSON.stringify(canon(a)) === JSON.stringify(canon(b));
+
+async function geom() {
+  const r = await fetch(`${base}/geom?world=${WORLD}`);
+  if (!r.ok) die(`geom HTTP ${r.status}`);
+  const d: any = await r.json();
+  return Object.fromEntries((d.entities ?? []).map((e: any) => [e.id, e])) as Record<string, any>;
+}
+
+const bytes = readFileSync(FILE);
+const sha = createHash("sha256").update(bytes).digest("hex");
+if (sha !== REVIEWED_SHA) die(`reviewed hash mismatch: ${sha}`);
+
+const before = await geom();
+const live = before[ID];
+if (!live) die(`${ID} missing before placement`);
+const captured: Record<string, any> = structuredClone(live.comp ?? {});
+const keys = Object.keys(captured).sort();
+
+const already = live.lib === REVIEWED_LIB
+  && near(live.pos[0], POSE.pos[0]) && near(live.pos[1], POSE.pos[1]) && near(live.pos[2], POSE.pos[2])
+  && near(live.yaw, POSE.yaw) && (live.scale ?? 1) === 1
+  && eq(live.comp, captured);
+
+if (!already) {
+  const u = new URL(`${base}/upload`);
+  u.searchParams.set("token", cfg.agentToken);
+  u.searchParams.set("name", "court — polish-268 oven chimney");
+  u.searchParams.set("by", cfg.id);
+  let lib = "";
+  for (let attempt = 1; attempt <= 6; attempt++) {
+    const r = await fetch(u, { method: "POST", body: bytes });
+    if (r.ok) { lib = (await r.json()).path; break; }
+    if (r.status === 429 && attempt < 6) { await sleep(25_000); continue; }
+    die(`upload HTTP ${r.status}`);
+  }
+  if (lib !== REVIEWED_LIB) die(`upload returned ${lib}, expected ${REVIEWED_LIB}`);
+
+  const verbs: Array<[string, any]> = [["spawn", { id: ID, lib, pos: POSE.pos, yaw: POSE.yaw, scale: 1 }]];
+  for (const key of keys) verbs.push(["comp", { id: ID, type: key, data: captured[key] }]);
+  await new Promise<void>((resolve, reject) => {
+    const ws = new WebSocket(cfg.url);
+    let joined = false, i = 0;
+    const timer = setTimeout(() => { try { ws.close(); } catch {} reject(new Error("verb timeout")); }, 60_000);
+    const paced = setInterval(() => {
+      if (!joined || i >= verbs.length) return;
+      const [verb, args] = verbs[i++];
+      ws.send(JSON.stringify({ type: "verb", verb, args }));
+      if (i === verbs.length) setTimeout(() => { clearInterval(paced); clearTimeout(timer); try { ws.close(); } catch {} resolve(); }, 1800);
+    }, 700);
+    ws.onopen = () => ws.send(JSON.stringify({ type: "join", world: WORLD, id: "arthur-polish-court", avatar: cfg.avatar, token: cfg.joinToken }));
+    ws.onerror = () => { clearInterval(paced); clearTimeout(timer); reject(new Error("websocket error")); };
+    ws.onmessage = (ev: any) => {
+      const m = JSON.parse(ev.data);
+      if (m.type === "error") { clearInterval(paced); clearTimeout(timer); reject(new Error(`server ${JSON.stringify(m).slice(0, 240)}`)); return; }
+      if (m.type === "snapshot") joined = true;
+    };
+  });
+} else {
+  console.log("already live at reviewed tuple — no verbs");
+}
+
+const after = await geom();
+const placed = after[ID];
+const ok = placed?.lib === REVIEWED_LIB
+  && near(placed.pos[0], POSE.pos[0]) && near(placed.pos[1], POSE.pos[1]) && near(placed.pos[2], POSE.pos[2])
+  && near(placed.yaw, POSE.yaw) && (placed.scale ?? 1) === 1
+  && eq(placed.comp, captured);
+if (!ok) die(`post-place verification failed: ${JSON.stringify(placed)}`);
+console.log(JSON.stringify({ status: "PLACED_VERIFIED", id: ID, lib: placed.lib, pos: placed.pos, yaw: placed.yaw, compKeys: Object.keys(placed.comp ?? {}).sort() }));

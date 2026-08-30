@@ -278,6 +278,38 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
   idempotent rerun zero verbs.
 - Evidence: `agents/arthur/reviews/hero-assets/polish-267-market/`.
 
+### polish-268 — court bakery oven chimney (ACCEPTED, LIVE) — core re-survey subject
+
+- Subject: `nx-court` (SE court, pos [18.9,~0,-14.8], yaw −0.90756,
+  particles:smoke comp). Build source `assets/mkv3-ring.ts` (court block) →
+  `village_court3.glb` (live was 38096b30b9131685, 28 nodes / 27 draws).
+- Defect: the bakery oven — the court's fire source, whose live smoke origin
+  is [-4.9, 3.2, -0.8] — rose from a bare dome with NO chimney, while every
+  other fired building in the village vents through the housekit chimney.
+  Smoke had no source structure; the shed's working silhouette was unfinished.
+- Change (single edit): housekit `chimney()` stack at the oven's back edge
+  (x −5.5, z −0.8), base FY+1.2, top FY+3.6. First sizing (top FY+3.1) was
+  caught by decode: stack top y 3.42 sat BELOW the roof slope (~3.08 at that x
+  was cleared, but front-view occlusion + ridge 4.04 hid it) — raised to
+  FY+3.6 so cap+pot clear the slope; decode confirms chimney verts in the
+  stone bucket (ct3_3 max y 2.8→3.42→3.9, count 336→360) and left view shows
+  the stack breaking the ridge, attached and proportionate.
+- Candidate hash: `59534b10122e6b476996f619476328d7dd8c0ea090f6107747020b1b646b4d89`
+  (28 nodes / 27 draws unchanged — chimney merges into stone/iron buckets).
+  Double rebuild byte-identical.
+- Falsification: left + aerial views show the chimney breaking the roofline;
+  gameplay composition unchanged; smoke comp untouched (comp bag preserved
+  verbatim through re-place).
+- Cross-lane care: the shared `next-place-court-ensemble.ts` was NOT used —
+  it pins the interior lane's re-built nx-forge hash and would force foreign
+  entities. Wrote court-only `next-place-court.ts` instead; ensemble placer
+  untouched for its owner.
+- Placed: live lib `store/59534b10122e6b47.glb`, tuple exact, smoke comp
+  preserved, idempotent rerun zero verbs. commons' av-court pin untouched.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-268-court/`.
+- Next: eye-gate consideration — the named core landmark set is exhausted;
+  next tick surveys for any remaining evidenced defect or holds for Bill.
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
