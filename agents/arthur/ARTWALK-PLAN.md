@@ -48,7 +48,28 @@ Rebirth = re-site for the radial village, re-material into the standing families
 
 ## Phase F — fresh commissions (after H, or interleaved if Bill says)
 
-Arthur-originated, sited by plan. Candidates grounded in proven taste:
+**BILL DIRECTIVE 2026-08-30: "artwalk is so cool — I would love to see more of
+these style of designs built into the buildings."** Phase H standalone pieces
+are done; the artwalk language now moves INTO the architecture. New queue
+(phase B — built-in art), one intervention per tick, same evidence laws:
+
+1. **B-1 Hall charter wall**: brass rule-lines + spiral glyph band on the
+   council-room wall (Two Histories vocabulary, interior-scale).
+2. **B-2 Inn lintel**: carved wave-motif lintel over the common-room door
+   (echo of the wave stone) + brass threshold inlay.
+3. **B-3 Ruled-Sky porch**: hypar canopy principle (straight generatrices)
+   as a small porch/awning on the market or potter stand.
+4. **B-4 Golden-ratio door proportions + brass spiral hinge-plates** on one
+   district gate or the Half-Turn Gate's neighbor buildings.
+5. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+   at door-height. Motifs readable at walking distance, not micro-detail.
+
+Laws for phase B: motifs are carved/inlaid geometry in the standing families
+(brass and bone flat, ashlar/timber substrates), never painted noise; each
+intervention must be legible at 2m; keep node budgets (extend housekit with
+reusable motif primitives rather than one-offs).
+
+Arthur-originated standalone commissions (unchanged, siting by plan):
 
 - **Pendulum wave** — plaza-adjacent; the one calibration every village can read.
 - **Waterfront pieces at the fieldpond** (`-42.3,-7.5`) — ripple rings, reed harmonics.

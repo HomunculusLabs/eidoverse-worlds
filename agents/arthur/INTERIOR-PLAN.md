@@ -21,6 +21,15 @@ Queue IDs, poses, hashes, and comp bags are re-read live when each room reaches 
 
 ## Furniture contracts
 
+**BILL DIRECTIVE 2026-08-30 (artwalk into buildings):** where a room gains
+furniture or fixtures, carry the artwalk design language inward — brass
+rule-lines, spiral glyph bands, wave-motif lintels, golden-ratio proportions —
+as carved/inlaid geometry in the standing material families, legible at
+walking distance. Coordinate per-building motif choices with the artwalk
+lane's phase B queue (see ARTWALK-PLAN.md) so each building gets ONE coherent
+motif story, not competing ones. When artwalk phase B claims a building's
+wall/lintel, interior furnishing defers to it that tick.
+
 - Inn common room: two human-scale tables with paired benches, hearth and cooking tools, bar/casks, mugs/candles, clear local-X ±0.7m door corridor, warm light visible from the door.
 - Hall: one communal table, seats around rather than across circulation, hearth-facing story, ledger shelf.
 - Forge: work triangle between anvil, quench barrel, and toolrack; coals remain visible without narrowing entrance.
