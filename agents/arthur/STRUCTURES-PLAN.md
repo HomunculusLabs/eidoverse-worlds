@@ -52,7 +52,10 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 3. **U-3 Angler's Rest** — [DONE struct-13] timber cantilever lookout
    with chain-sag brass rail on the Reed Pool's west bank; the
    waterfront's first (and only needed) seat.
-4. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
+4. **U-4 Skene Wall** — [DONE struct-14] golden-ratio-niche backdrop
+   behind the Theater's performance disc; completes the performance
+   quarter.
+5. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
    now live: every struct-N with N%3==0 is a refine tick (first: struct-12
    done; next: struct-15).
 
@@ -72,6 +75,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-11 | U-2 East Beacon | 338°/44 (E approach, SE side) | (40.8, −0.044, −16.48) | 0 | LIVE, + light entity, base circuit 4/4 |
 | struct-12 | REFINE: Observatory night read | — | exact standing tuple | — | LIVE, + light entity, walk 5/5 re-verified |
 | struct-13 | U-3 Angler's Rest | Reed Pool W bank | (−23.6, −0.048, −38.37) | −π/2 (cantilever → water) | LIVE, bank walk 4/4 |
+| struct-14 | U-4 Skene Wall | behind Theater stage | (−23.32, 0.045, 48.05) | π (stage face → seats) | LIVE, stage walk 4/4 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -456,3 +460,28 @@ carried into furniture. Census gap: no seat anywhere on the waterfront.
 
 **Bill should eye-check**: sit on the bench and look across the water —
 the ripple bridge rail opposite, the reeds, and (at dusk) the beacon.
+
+## struct-14 — U-4 THE SKENE WALL (concept contract + record)
+
+**Concept**: the frame that makes a stage a stage. A 7m ashlar wall, 1.8m
+tall, with three tall dark niches at golden-ratio divisions of the span,
+a brass center pin on the stage face, and stone cheek walls angled
+forward in the proscenium embrace. The performance quarter now reads
+complete: Bandstand (small stage) + Hillside Theater (big stage) + Skene
+(the frame behind it).
+
+- Siting arithmetic before the gate: the natural behind-stage anchor
+  measured 1.29m axis-gap to the theater's own OBB — short of the 1.4
+  law — so the anchor moved north to 116°/r53.5 (1.54m clear, 19m+ to
+  every town entity). The wall is yawed π so the niche face reads from
+  the seats.
+- Build: mkv3-skene.ts → village_skene3.glb, deterministic ×2, sha256
+  3a62ee83d559b3fa, 3 nodes, 9.7×2.0 furniture-solid collider.
+- Placement: nx-struct-skene PLACED_VERIFIED at exact tuple, 1 verb,
+  idempotent rerun zero verbs.
+- Walk: four-leg stage → wall front → east cheek → behind → back to
+  stage ALL PASS.
+
+**Bill should eye-check**: stand on the performance disc — the niches
+should frame whoever stands against the wall; sit mid-height in the rows
+and the wall should close the far side of the stage.
