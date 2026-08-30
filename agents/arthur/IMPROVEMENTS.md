@@ -3549,4 +3549,6 @@ fixes ≈ 6 F.)
 
 - [interior-3] Longhouse communal sleeping room completed: inherited hearth and fire, trestle tables, high seat, bed alcove, provisions chests, tie beams, herbs, and lamps preserved; two sleeping benches with mattresses, pillows, and contrasting folded blankets now flank the front door facing the hearth while stopping outside the full entry lane, plus a warm room light; deterministic 6ffc4fdc75ea2a0e rebuild with twenty-one nodes and meshes, exact live model/light tuples, empty comp bag preserved, idempotent rerun zero verbs, six-leg door-to-hearth walk unchanged and focused gate ALL PASS (D+21, E+2)
 
-**Running total: 2368815 / 2000000**
+- [artwalk-6] H-5 THE HALF-TURN GATE: era-1 120-segment Möbius arch reborn as a 5.8m brass half-turn entry with ashlar feet, iron collars, compact soil approach, and paired lights; deterministic 3c48f921d262907a x2; first r30 plan rejected for court overlap, final r31/t-3 sits 1.730m clear; exact model/two-light tuples, zero-verb idempotent rerun, and 4/4 two-way passage verified; native visual PASS not claimed under Bill waiver (D+6, E+3)
+
+**Running total: 2368824 / 2000000**

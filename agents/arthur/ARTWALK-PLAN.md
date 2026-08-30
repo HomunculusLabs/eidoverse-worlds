@@ -42,7 +42,7 @@ Rebirth = re-site for the radial village, re-material into the standing families
 | H-2 | Golden spiral shell + borromean rings — DONE | `mkmath1.ts` | none (static pedestals) | Pedestal duo live as `nx-artwalk-h2`; Bill eye-check pending |
 | H-3 | Hypar canopy — DONE | `mkmath1.ts` | none | Walk-through ruled saddle live as `nx-artwalk-h3`; Bill eye-check pending |
 | H-4 | Mural stone pair — DONE | `_era1-2/village_mural_{a,b}.glb` | none | Spiral/wave story stones live as `nx-artwalk-h4`; Bill eye-check pending |
-| H-5 | Möbius arch v2 | `_era1-2/village_mobius2.glb` (122 D) | none | The big one — a gate-class piece for an art-walk entry |
+| H-5 | Möbius arch v2 — DONE | `_era1-2/village_mobius2.glb` (122 D) | none | Half-turn entry gate live as `nx-artwalk-h5`; Bill eye-check pending |
 | H-6 (tail) | Chimes / observatory | `mkobs1.ts`, chimes glb | slow spin | Only if H-1..H-5 land clean and Bill wants more |
 
 ## Phase F — fresh commissions (after H, or interleaved if Bill says)
@@ -138,3 +138,24 @@ verified; idempotent rerun emitted zero verbs. Both mural approaches passed
 two-way MCPL walking, 4/4 legs with max arrival 0.312m. Bill eye-check: whether
 the spiral and wave languages read distinctly at walking distance and whether
 the pair feels like one story stop rather than two unrelated signs.
+
+### [artwalk-6] THE HALF-TURN GATE (2026-08-30) — DONE, LIVE
+Era-1 source decoded as a 120-segment brass half-twist over a 5.5 x 2.709 x
+0.7m arch envelope, plus two feet (122 meshes, 4,392 vertices). Reborn with
+the same 120-segment / exact-180-degree law as a 5.8m-span walk-through brass
+ribbon, ashlar feet, forge-iron collars, compact two-sided soil pavers, and
+paired warm footlights. The visible 6.52 x 3.46m composition remains honestly
+above the room-scale threshold, preserving exact-trimesh passage without
+invisible classifier padding. Deterministic build
+`3c48f921d262907aeabd8b5f808ab21870665ea9d50db37090fee9a95d1520a8`
+byte-identical x2; decode 6 meshes / 3,272 vertices / 6.520 x 3.655 x
+3.460m. Native review unavailable under Bill's waiver; frames exist, but no
+visual PASS is claimed. The first r30 centered plan overlapped `nx-court` by
+1.109m; compacting the overlong approach and shifting to SE basis r31/t-3
+resolved the gate without touching prior pieces. Final `nx-artwalk-h5` pose:
+(19.79898987322333,-0.015837100520963706,-24.041630560342615), yaw
+-0.7853981633974483; corridor corners 29.271–33.323m, 1.730m clear of
+`nx-court`. Exact model/two-light tuples verified; idempotent rerun emitted
+zero verbs. Two-way passage through the arch passed 4/4 legs with max arrival
+0.340m. Bill eye-check: whether the half-twist reads from both approaches and
+whether the gate feels like the unmistakable beginning of the art walk.
