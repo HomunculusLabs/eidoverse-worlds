@@ -55,9 +55,11 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 4. **U-4 Skene Wall** — [DONE struct-14] golden-ratio-niche backdrop
    behind the Theater's performance disc; completes the performance
    quarter.
-5. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
+5. **U-5 Water Stair** — [DONE struct-16] five-tread stone stair into a
+   reflecting shelf on the N-gate walk; the N approach's water edge.
+6. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
    now live: every struct-N with N%3==0 is a refine tick (first: struct-12
-   done; next: struct-15).
+   done; next: struct-18).
 
 ## Siting log
 
@@ -77,6 +79,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-13 | U-3 Angler's Rest | Reed Pool W bank | (−23.6, −0.048, −38.37) | −π/2 (cantilever → water) | LIVE, bank walk 4/4 |
 | struct-14 | U-4 Skene Wall | behind Theater stage | (−23.32, 0.045, 48.05) | π (stage face → seats) | LIVE, stage walk 4/4 |
 | struct-15 | REFINE: Pendulum deficits | — | exact standing tuple | — | LIVE, posts out + beam up, walk 5/5 re-verified |
+| struct-16 | U-5 Water Stair | 270°/32 (N-gate walk axis) | (0, −0.032, −32) | 0 (descends toward village) | LIVE, circuit walk 4/4 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -506,3 +509,25 @@ only externally evidenced deficits in the pool.
 
 **Bill should eye-check**: from the NE path — the lifted sine of bobs,
 clear of both posts and the ground.
+
+## struct-16 — U-5 THE WATER STAIR (concept contract + record)
+
+**Concept**: the village steps down to touch its water. Five broad stone
+treads descend 0.9m from the N-gate walk into a small reflecting shelf
+(canon WATER), flanked by low stone cheek walls with brass finials. The
+W side has the Reed Pool + Angler's Rest, the SW has the Millrace — the
+N approach now carries its own water edge.
+
+- Orientation honesty: the first orientation (descending away from the
+  village) was blocked by the live gate against my own Shell Tower at
+  the shelf end; flipped to descend toward the village so the N walker
+  meets the stair crown first. Seat: 270°/r32, dead on the walk axis.
+- Build: mkv3-waterstair.ts → village_waterstair3.glb, deterministic ×2,
+  sha256 3ffa182cd6ea76d9, 3 nodes, 3.7×1.7 furniture-solid collider.
+- Placement: nx-struct-waterstair PLACED_VERIFIED at exact tuple, 1 verb,
+  idempotent rerun zero verbs.
+- Walk: four-leg approach + cheek circuit ALL PASS. Descent below grade
+  NOT claimed walkable (engine's non-standable trimesh class).
+
+**Bill should eye-check**: from the N gate — the stair falling into
+still water; the brass finials framing the crown.
