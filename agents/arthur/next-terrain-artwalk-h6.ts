@@ -1,0 +1,3 @@
+// next-terrain-artwalk-h6.ts — read-only terrain preflight for Seven Voices.
+import{WorldAgent}from"../../mcpl/agent.ts";import{readFileSync}from"node:fs";const cfg=JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json","utf8"));process.env.WORLD_TOKEN=cfg.joinToken;
+const x=38.53731957466684,z=-38.53731957466684;const agent=new WorldAgent({url:cfg.url,name:"arthur-artwalk-h6-terrain-read",world:"commons-next",avatar:cfg.avatar,agentToken:cfg.agentToken});try{await agent.connect();await Bun.sleep(2500);console.log(JSON.stringify({name:"artwalk-h6-se-terminus-r54.5",x,z,heightAt:agent.heightAt(x,z)}))}finally{agent.close()}

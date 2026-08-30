@@ -43,7 +43,8 @@ Rebirth = re-site for the radial village, re-material into the standing families
 | H-3 | Hypar canopy — DONE | `mkmath1.ts` | none | Walk-through ruled saddle live as `nx-artwalk-h3`; Bill eye-check pending |
 | H-4 | Mural stone pair — DONE | `_era1-2/village_mural_{a,b}.glb` | none | Spiral/wave story stones live as `nx-artwalk-h4`; Bill eye-check pending |
 | H-5 | Möbius arch v2 — DONE | `_era1-2/village_mobius2.glb` (122 D) | none | Half-turn entry gate live as `nx-artwalk-h5`; Bill eye-check pending |
-| H-6 (tail) | Chimes / observatory | `mkobs1.ts`, chimes glb | slow spin | Only if H-1..H-5 land clean and Bill wants more |
+| H-6a (tail) | Chimes — DONE | chimes glb / `mkwater1.ts` | whole assembly spin 2°/s | Seven Voices terminus live as `nx-artwalk-h6`; Bill eye-check pending |
+| H-6b (tail) | Observatory | `mkobs1.ts` | scope spin | Optional final heritage tail while loop continues |
 
 ## Phase F — fresh commissions (after H, or interleaved if Bill says)
 
@@ -159,3 +160,23 @@ resolved the gate without touching prior pieces. Final `nx-artwalk-h5` pose:
 zero verbs. Two-way passage through the arch passed 4/4 legs with max arrival
 0.340m. Bill eye-check: whether the half-twist reads from both approaches and
 whether the gate feels like the unmistakable beginning of the art walk.
+
+### [artwalk-7] SEVEN VOICES (2026-08-30) — DONE, LIVE
+Era-1 source decoded as a porch-scale seven-tube chime: hook, disc, seven
+unequal brass tubes + bone cords, clapper, and sail (18 meshes, 1,092
+vertices, 0.266 x 0.750 x 0.280m), turning as one assembly at 2°/s. Reborn
+as the kinetic terminus: the same seven-length law enlarged beneath a
+freestanding forge-iron yoke on ashlar feet, with soil approach pavers and a
+warm center lamp. The named `chime` group carries one calm
+`motion:chime` spin at 2°/s; no sound behavior is claimed. Deterministic build
+`a61457df1538000628c4efac846e0b973b851124a35af0999abf9637cae0de9b`
+byte-identical x2; recursive decode 32 nodes / 31 meshes / 1,191 vertices /
+4.320 x 4.065 x 4.800m. Native review unavailable under Bill's waiver;
+frames exist, but no visual PASS is claimed. Final `nx-artwalk-h6` pose:
+(38.53731957466684,-0.02768908298729972,-38.53731957466684), yaw
+-0.7853981633974483, SE terminus r=54.5; corridor corners 50.167–54.962m,
+1.650m clear of `nx-artwalk-h3`. Exact model/motion/light tuple verified;
+idempotent rerun emitted zero verbs. Approach and transverse passage passed
+6/6 MCPL legs with max arrival 0.372m. Bill eye-check: whether all seven tubes
+read as distinct hanging voices, whether the 2°/s turn stays calm, and whether
+the piece closes the walk decisively rather than reading as porch furniture.
