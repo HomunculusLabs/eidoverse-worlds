@@ -3533,4 +3533,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-3] H-2 THE GOLDEN MEASURE: source-true golden spiral shell + Borromean-ring pedestal duo, standing stone/iron/soil families with flat brass/bone, deterministic f14d70564a107879 x2; reversible SE-spoke siting at (27,-0.03516135170548859,-27), band 36.430-40.023m and 8.948m nearest-solid clearance; exact live model/light tuples verified and idempotent rerun emitted zero verbs; native visual PASS not claimed under Bill visual-gate waiver (D+9, E+2)
 
-**Running total: 2368707 / 2000000**
+- [interior-0] Inn common room refined from its already-furnished source: reusable housekit table/bench/shelf primitives added, two human-scale table ensembles now carry paired seating east of the exact one-point-four-metre door corridor, existing hearth/bar/casks/mugs/stairs preserved, warm room light history-verified; deterministic 9fdf24522f0de63f rebuild, thirty-node twenty-nine-draw decode, exact live tuple and empty comp bag preserved, idempotent reruns zero verbs, before/after six-leg MCPL walk unchanged and focused gate ALL PASS (D+30, E+2)
+
+**Running total: 2368739 / 2000000**
