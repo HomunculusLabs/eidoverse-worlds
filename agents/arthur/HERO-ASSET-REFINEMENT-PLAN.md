@@ -46,10 +46,31 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Horse trappings: saddle/blanket readability at 10–18m still unjudged.
 - Mane slab: dark iron fin on the neck reads flat at close range (front view);
   candidate for a softer sweep, next in the horse-quality lane.
-- Ticket-entry/fascia storytelling unjudged.
+- DECK RULE (polish-260 finding): the canopy fully overhangs the deck — deck-top
+  detail is invisible from every player vantage. Do not spend nodes on deck
+  surfaces; fascia/rim (vertical faces) are the visible storytelling surface.
 - Crown underside at close range: rib/valance junction density unjudged.
 
 ## Iteration history (continued)
+
+### polish-260 — deck inlay enlargement (REJECTED, reverted, nothing placed)
+
+- Hypothesis: 16 deck inlays (0.72 x 0.035 x 0.12, 4.75cm protrusion) were
+  present but sub-resolution; enlarging them would give the deck a readable
+  alternating cream/blanket ray pattern.
+- Candidate hash 4fc3bdc2493a563a3240c478c82e5c32a9336e02a320c01525274193cc08e37d
+  (inlays 1.15 x 0.055 x 0.3). Two rebuilds byte-identical.
+- Falsification: identical-camera aerial diff = 2 pixels of 691200; true
+  top-down probe showed the canopy (r 3.12, eave 4.83) fully overhangs the
+  deck (r 2.86) — the deck top is occluded from every player vantage.
+- Verdict: rejected; reverted to the exact live hash
+  `ce3633992d07055e…` (verified: fresh rebuild byte-identical, live census
+  lib/pose/7 comp keys unchanged). Nothing placed; live world untouched.
+- Durable finding: deck-surface detail is canopy-shaded — polish the fascia/
+  rim vertical faces instead. Top-down probe script pattern saved at
+  /tmp (one-shot; rewrite as needed).
+- Evidence: `agents/arthur/reviews/hero-assets/polish-260-carousel/`
+  (before/ = live build; after/ = rejected candidate, retained as record).
 
 ### polish-259 — horse tail re-orientation (ACCEPTED, LIVE)
 

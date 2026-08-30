@@ -3537,4 +3537,6 @@ fixes ≈ 6 F.)
 
 - [interior-1] Meeting hall council room refined: existing firebowl, dais, charter banner, benches, council table and stools preserved; shared housekit table and bench primitives now shape the seating, a two-tier six-volume charter ledger shelf gives the room a civic record, warm interior light added, and the exact center aisle remains clear between both doors; deterministic 44fec27226f02b74 rebuild, twenty-two nodes and meshes, exact live model/light tuples, empty comp bag preserved, idempotent rerun zero verbs, eight-leg two-door walk unchanged and focused gate ALL PASS (D+22, E+2)
 
+- [polish-260] deck inlay enlargement rejected under falsification: identical-camera aerial diff 2 of 691200 pixels and a true top-down probe showed the canopy fully overhangs the deck so deck-top detail is invisible from every player vantage; reverted to the exact live hash with live census unchanged, nothing placed; durable deck rule recorded in the plan (D+0, E+0)
+
 **Running total: 2368763 / 2000000**
