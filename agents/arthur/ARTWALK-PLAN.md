@@ -59,8 +59,8 @@ are done; the artwalk language now moves INTO the architecture. New queue
    `nx-artwalk-b2-inn-{lintel,threshold}`.
 3. **B-3 Ruled-Sky porch — DONE**: straight-generatrix canopy live over the
    potter's work apron as `nx-artwalk-b3-ruled-porch`.
-4. **B-4 Golden-ratio door proportions + brass spiral hinge-plates** on one
-   district gate or the Half-Turn Gate's neighbor buildings.
+4. **B-4 Golden-ratio gate — DONE**: nested φ frame, threshold, and spiral
+   hinge plates live on `nx-town-gate-n` as three `nx-artwalk-b4-*` riders.
 5. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
@@ -288,3 +288,29 @@ anchor verified; idempotent rerun emitted zero verbs. Potter approach and
 cross-apron circulation remained 6/6 PASS, max arrival 0.366m. Bill eye-check:
 approach from the open work side and confirm the straight ruling families read
 as one saddle-shaped porch while the turning wheel remains the focal craft.
+
+### [artwalk-13] THE GOLDEN MEASURE GATE (2026-08-30) — DONE, LIVE
+The north village gate receives a mathematically explicit inner measure without
+changing `nx-town-gate-n`: a suspended brass top with bone corner drops, a
+separate thin brass baseline, and a forged three-plate hinge stack carrying
+three nine-mark brass/bone spirals on the existing east stone post. The visual
+opening is width 1.560m x height 2.524133m, ratio exactly
+φ=1.618033988749895; the physical clear width between corner drops remains
+1.485m, above the 1.4m avatar law. Three collider-honest satellites prevent a
+compound box from sealing the passage. Deterministic builds, each
+byte-identical x2: top
+`98fabb814c668f298887a97229456c2956415ddb934fe3aa4c74509fd45809fc`
+(2 nodes / 72 vertices), baseline
+`db99bae44aa6ebcc7adf4afa6ccc8119850ad69caf24bf691f5f2a9545d725d8`
+(2 nodes / 96 vertices), hinges
+`78a457a5bab6874da9cad96da9e0a427e52e0f5039d19d29e4da354c52aa448f`
+(3 nodes / 720 vertices). Native review unavailable under Bill's waiver;
+frames exist, but no visual PASS is claimed. Host truth was pinned to gate
+`store/558489ed8a6477c4.glb`; exact host-local anchors are top
+(0,2.524133,0.26), baseline (0,0,0), hinges (1.5,0.7,0.26). Host contacts are
+classified as suspended frame, thin ground layer, and existing-post rider;
+nearest non-host solid is 4.051m clear. All tuples and relative transforms
+verified; idempotent rerun emitted zero verbs. Two-way gate passage remained
+6/6 PASS, max arrival 0.390m. Bill eye-check: approach from outside the north
+gate at 2m and confirm the nested golden rectangle reads before the spiral
+hinge plates, without the frame feeling narrow or decorative-only.
