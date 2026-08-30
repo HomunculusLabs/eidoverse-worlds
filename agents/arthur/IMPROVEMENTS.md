@@ -3669,4 +3669,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-30] B-20 BUNKHOUSE FOUR ROOMS: four alternating brass/bone open rooms line the entry-side wall; deterministic 152684b8dd6ba535 x2; first overhead trial rejected for violating 2.2m clearance, final host-local (-2.2,1.05,2.0325) leaves door lane clear, 7.774m nearest-solid clearance, zero-verb rerun, full door route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369509 / 2000000**
+- [artwalk-31] B-21 TOWER ASCENSION COUNT: nine widening brass/bone rungs rise around one spine above the drum-tower door; deterministic ba8f63884184b13e x2; exact live host-local (0,2.22,2.8225), 5.533m nearest-solid clearance, zero-verb rerun, full tower doorway route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369513 / 2000000**

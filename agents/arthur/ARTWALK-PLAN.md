@@ -95,7 +95,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     from one brass table line as `nx-artwalk-b19-longhouse-feast-count`.
 20. **B-20 Bunkhouse Four Rooms — DONE**: four alternating brass/bone rooms
     line the entry-side wall as `nx-artwalk-b20-bunkhouse-four-rooms`.
-21. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+21. **B-21 Tower Ascension Count — DONE**: nine widening brass/bone rungs rise
+    above the drum-tower door as `nx-artwalk-b21-tower-ascension-count`.
+22. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -376,6 +378,24 @@ outside→room→outside route remained 6/6 PASS, max arrival 0.365m. Review fra
 were rendered, but native image input remains unavailable under Bill's waiver;
 no visual PASS is claimed. Eye-check from the north approach: the four open
 rooms should read as one guest-house rhythm beside—not above—the door.
+
+### [artwalk-31] THE TOWER ASCENSION COUNT (2026-08-30) — DONE, LIVE
+The keeper's drum tower receives a door crown drawn from its own vertical life:
+nine alternating brass/bone rungs widen upward around one brass spine on a
+forged field. The 1.62m relief begins at y 2.22, just above the committed
+2.20m door opening, and keeps the round entry and upper-room route untouched.
+Deterministic build
+`ba8f63884184b13ea76349bd6041af5e60acb9f9186c3591330f5198aecaffb3`
+byte-identical x2; decode 3 merged nodes / 1.620 x 0.460 x 0.120m. Live host
+truth was pinned to tower house `store/bd1badd218fdbebd.glb`; exact host-local
+(0,2.22,2.8225) maps to
+(−8.130308960881354,2.22,23.314828916721183), yaw 2.828368080172068. Live
+SAT found the nearest non-host solid, south gate, 5.533m clear. Exact tuple
+verified; idempotent rerun emitted zero verbs. The full
+outside→tower-room→outside route remained 6/6 PASS, max arrival 0.370m. Review
+frames were rendered, but native image input remains unavailable under Bill's
+waiver; no visual PASS is claimed. Eye-check from the tower approach: the nine
+rungs should read as one ascension count over the doorway, not a literal ladder.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
