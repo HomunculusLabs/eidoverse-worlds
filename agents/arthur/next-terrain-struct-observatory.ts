@@ -4,7 +4,7 @@ import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
 process.env.WORLD_TOKEN = cfg.joinToken;
-const pts: [string, number, number][] = [["or-center", 9.19, -36.87], ["or-n", 9.2, -34.1], ["or-s", 9.1, -39.6]];
+const pts: [string, number, number][] = [["mr-head", -37.59, -13.68], ["mr-mid", -34.5, -13.7], ["mr-basin", -28.5, -13.7]];
 const agent = new WorldAgent({ url: cfg.url, name: "arthur-terrain-read", world: "commons-next", avatar: cfg.avatar, agentToken: cfg.agentToken });
 try {
     await agent.connect(); await Bun.sleep(2500);

@@ -31,8 +31,8 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 1. **T-1 The Orrery** — [DONE struct-7] brass armillary on a stone drum,
    first motion comp of the lane (motion:orb spin −0.5°/s); pairs with
    the Observatory on the NW walk.
-2. **T-2 Millrace Cascade** — harmonic steps near the windmill (-40,0):
-   stepped stone cascade with water in the canon family.
+2. **T-2 Millrace Cascade** — [DONE struct-8] harmonic seven-step water
+   descent west of the windmill; head-race + sluice + basin.
 3. **T-3 Pendulum Wave** — plaza-adjacent calibration piece (the one
    rhythm every village can read).
 4. Extend housekit: `twistBand` primitive (graduating the Möbius form)
@@ -48,6 +48,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-5 | S-4 Möbius Bandstand | 96°/40 (S side, tower-house↔longhouse) | (−4.18, 0.002, 39.78) | 0 (rotationally symmetric) | LIVE, stage walk 5/5 |
 | struct-6 | S-5 Reed Pool & Bridge | 246°/42 (W flank, NW of Shell Tower) | (−17.08, −0.044, −38.37) | −π/2 (bridge spans world X) | LIVE, two-way crossing 5/5 |
 | struct-7 | T-1 The Orrery | 284°/38 (plaza→Observatory walk) | (9.19, −0.052, −36.87) | 0 | LIVE, motion:orb −0.5°/s, circle walk 5/5 |
+| struct-8 | T-2 Millrace Cascade | 200°/40 head; race runs W | (−37.59, −0.045, −13.68) | −π/2 | LIVE, bank walk 5/5 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -267,3 +268,34 @@ with twelve bone hour marks. Silhouette: a brass sphere in a stone cup.
 **Bill should eye-check**: from the NW walk toward the Observatory —
 the brass armillary should be visibly, slowly turning (one full turn in
 12 minutes); the ecliptic beads against the sky.
+
+## struct-8 — T-2 MILLRACE CASCADE (concept contract + record)
+
+**Concept**: the windmill's water, let down in measures. One idea: a
+harmonic descent — a raised stone head-race with a timber sluice gate
+(raised, brass pin) pours over a visible chute into SEVEN diminishing
+stone steps (drops 0.30 → 0.12m, each carrying a calm canon-WATER film),
+ending in an oval stone-rimmed basin with reed accents (a callback to
+the Reed Pool). The stepped silhouette IS the idea; readable from the
+windmill road.
+
+- Water stays flat and calm (life-stays-flat); stone in the ashlar
+  family; sluice in timber; pin in brass.
+- Honest collider: 3.4×1.7×11.6, 39.7m² but height 1.71 < 2.2 → solid
+  furniture box — CORRECT for a water channel (walk the banks, not
+  through the race).
+- Build: mkv3-millrace.ts → village_millrace3.glb, deterministic ×2,
+  sha256 d2f46768af7dd0ae, 5 nodes.
+- Siting lesson (durable): the preflight tests the CANDIDATE POINT, not
+  the bbox-center offset — an 11.6m-long structure's center sits 4.5m
+  down-local-Z from its head. Two live-gate rejections (row-cottage at
+  +X, windmill at +Z) proved it; final orientation runs WEST into open
+  farmland, head at 200°/r40 beside the windmill (gap 4.5m at the head).
+- Placement: nx-struct-millrace PLACED_VERIFIED at exact tuple, 1 verb,
+  idempotent rerun zero verbs.
+- Walk: five-leg bank walk ALL PASS — road → head → north bank mid →
+  basin → south bank mid → south head (arrivals ≤0.38m; both banks and
+  the basin approach clear).
+
+**Bill should eye-check**: from the windmill road, the stepped water
+descent; walk the north bank and watch the drops diminish.
