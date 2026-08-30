@@ -2,8 +2,9 @@
 
 Active lanes: `polish-N` (hero-asset, entity `nx-carousel` only),
 `artwalk-N` (entities `nx-artwalk-*` only), `interior-N` (one queue building
-per tick, never `nx-carousel`). Read this file fresh every wakeup alongside
-your own loop file.
+per tick, never `nx-carousel`), `struct-N` (NEW `nx-struct-*` entities only,
+never re-places existing buildings). Read this file fresh every wakeup
+alongside your own loop file.
 
 ## Entity domain law (the hard boundary)
 
