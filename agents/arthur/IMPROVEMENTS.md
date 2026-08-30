@@ -3575,4 +3575,6 @@ fixes ≈ 6 F.)
 
 - [polish-266] monument knot-path beads: the 6 satellite beads used cos 3t sampling that collapsed all of them onto two points at the knot edge, the stray dark dot in renders; beads re-parametrized on the knot true path with p2 wave and q5 ring matching the geometry frequencies; 10 nodes 8 draws, byte-identical double rebuild, placed at exact tuple with empty comp bag preserved and idempotent rerun zero verbs; evidence in reviews/hero-assets/polish-266-monument/ (D+10, E+1)
 
-**Running total: 2368997 / 2000000**
+- [struct-3] S-2 SHELL TOWER raised live in commons-next: golden-spiral bone ribbon (2.25 turns, r3.4 to r0.6) around a dark columella with timber treads and brass finial eye, first consumer of the new reusable housekit spiralRamp primitive; deterministic double rebuild sha c7b641fa9bc9c0e3, 6 nodes, true bbox verified via node-transform decode; sited 266deg/r38 between bunkhouse and hall from 216 candidates (gap 3.25m), placed at exact tuple nx-struct-shelltower; stairable claim WITHDRAWN after MCPL climb legs kept body Y at grade and a physics support probe fell through the ramp at three parametric points (same engine trimesh class as artwalk-8 stairs), summit access delivered via crown teleport socket comp following the proven nx-tower study-socket pattern, deliberate comp-upgrade re-place 1 verb with idempotent rerun zero verbs; visual PASS not claimed - Bill eye-check on spiral silhouette from plaza N approach and crown socket arrival (D+18, E+1)
+
+**Running total: 2369016 / 2000000**

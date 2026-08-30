@@ -9,8 +9,9 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 1. [DONE struct-2] S-1 The Observatory — era-1 heritage reborn: ashlar drum
    with oculus-slit dome, harmonic ring courses, brass meridian band,
    circular sky-view bench inside.
-2. S-2 Shell Tower — golden-spiral shell section as a stairable tower
-   silhouette; bone-white inner face, timber treads.
+2. [DONE struct-3] S-2 Shell Tower — golden-spiral ribbon tower between
+   bunkhouse and hall; crown socket access (ramp trimesh not standable —
+   engine limitation, same class as artwalk-8 stairs).
 3. S-3 Hypar Pavilion — Ruled Sky at building scale: hypar canopy on four
    slender posts, plaza-adjacent shade structure.
 4. S-4 Möbius Bandstand — half-twist band roof over a performance circle;
@@ -23,6 +24,7 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 | tick | structure | site (deg/r) | world pos | yaw | verdict |
 |------|-----------|--------------|-----------|-----|---------|
 | struct-2 | S-1 Observatory | 292°/44 (NW wedge, hall↔artwalk column) | (16.48, −0.052, −40.80) | −0.3839 (door→plaza) | LIVE, walk 5/5 |
+| struct-3 | S-2 Shell Tower | 266°/38 (bunkhouse↔hall gap, N of axis) | (−2.65, −0.052, −37.91) | 0.0698 (widest→plaza) | LIVE, crown socket; ramp NOT standable (engine) |
 
 ## struct-2 — S-1 THE OBSERVATORY (concept contract + record)
 
@@ -58,5 +60,45 @@ detail: dome, arc, eye.
   (outside→inside→bench→far→inside→outside, all arrivals ≤0.39m).
 
 **Bill should eye-check**: from plaza NW approach — dome + brass meridian
-arc silhouette; night: no emissive on this structure (deliberate — it reads
+silhouette; night: no emissive on this structure (deliberate — it reads
 by day; an oculus star lamp can be added if he wants a night signal).
+
+## struct-3 — S-2 SHELL TOWER (concept contract + record)
+
+**Concept**: a nautilus you can ascend. One idea: a single logarithmic
+ribbon (golden spiral) winding 2.25 turns from a wide base sweep (r3.4) to
+a tight crown (r0.6) around a dark columella spine, brass finial eye at
+the apex. Silhouette = shrinking spiral; reads "shell" before detail.
+
+- Geometry as ornament: the spiral IS the structure — bone ribbon (76
+  tangent segments, one merged node), timber tread caps, dark spine,
+  brass tip. No applied trim.
+- First consumer of the new housekit `spiralRamp` primitive (reusable
+  form family, per loop law — not a one-off).
+- Room gates honest: bbox 8.1×8.1 (65.6m² ≥16), height 8.07 ≥2.2 → real
+  trimesh. 6 nodes after merge. No motion comps.
+- Build: mkv3-shelltower.ts → village_shelltower3.glb, deterministic ×2,
+  sha256 c7b641fa9bc9c0e3, true bbox verified via node-transform decode
+  (KEEP-node finial initially read as dipping to −0.28 in mesh-local
+  space — pitfall #4, transform-applied recheck = clean).
+- Siting: 266°/r38 → (−2.65, −0.052, −37.91), gap 3.25m to bunkhouse,
+  deliberately N of the 270° road axis, complementing the Observatory
+  across the NW quarter. From 216 candidates.
+- Placement: nx-struct-shelltower PLACED_VERIFIED at exact tuple,
+  idempotent rerun zero verbs.
+- **Honest limit — ramp not standable**: MCPL climb legs all arrived
+  horizontally but body Y stayed at grade (walked under the ribbon), and
+  a physics support probe (drop from 1m above ramp at t=.2/.5/.8) fell
+  through to grade at all three points — the same engine trimesh class
+  that blocked artwalk-8's stair test. Stairable claim WITHDRAWN. Summit
+  access delivered instead via a crown teleport socket (sockets comp,
+  pos [0, 7.45, 0]) — the village's proven vertical-access pattern
+  (nx-tower study socket). Re-place caught by the gate as deliberate
+  comp upgrade (1 verb), rerun idempotent. Socket teleports are a
+  Bill-eye-check item: does the crown arrival read as intended?
+- Visual PASS not claimed (render approval-blocked again this session;
+  source-grounded judgment + decode + probes only).
+
+**Bill should eye-check**: from the plaza, the N approach between hall and
+bunkhouse — the shrinking spiral silhouette against the sky; then teleport
+to the crown socket and look back at the village.
