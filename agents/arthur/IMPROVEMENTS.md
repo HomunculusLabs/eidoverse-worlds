@@ -3557,4 +3557,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-7] H-6a SEVEN VOICES: era-1 seven-tube porch chime enlarged into a freestanding ashlar/iron/soil kinetic terminus with flat brass/bone media; deterministic a61457df15380006 x2; named chime assembly turns at calm 2deg/s with no sound claim; final r54.5 siting is 1.650m clear; exact model/motion/light tuple, zero-verb idempotent rerun, and 6/6 approach/transverse walk legs verified; native visual PASS not claimed under Bill waiver (D+32, E+2)
 
-**Running total: 2368892 / 2000000**
+- [interior-5] Potter stand completed: inherited kick wheel and mid-throw pot, water bucket, damp-cloth clay stock, drying rack with green pots, and fired ware preserved; compact two-tier finished-ware shelf with three vessels added inside the inherited footprint, exact pwheel motion added at nine degrees per second, and warm stand light added while the full work apron remains clear; deterministic a4e277782dde8c04 rebuild with seven nodes and six meshes, exact live model/light/motion tuples, idempotent rerun zero verbs, six-leg apron walk unchanged and focused gate ALL PASS (D+7, E+2)
+
+**Running total: 2368901 / 2000000**
