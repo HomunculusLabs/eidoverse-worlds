@@ -3589,4 +3589,6 @@ fixes ≈ 6 F.)
 
 - [interior-7] Tower-house study completed: inherited desk and chair, book and quill, bookshelf, rug, ladder, and upper bedchamber with chest and candle preserved; one brass meridian ring with crossed rule-lines carries the Golden Measure vocabulary onto the study desk, target-only static merging brings the legacy build to twenty-two nodes and meshes with exact bbox unchanged, and warm study light added; deterministic bd1badd218fdbebd rebuild, exact live model/light tuples, empty comp bag preserved, idempotent rerun zero verbs, six-leg study walk unchanged and focused gate ALL PASS (D+22, E+2)
 
-**Running total: 2369159 / 2000000**
+- [artwalk-10] B-1 THE CHARTER WALL: Two Histories rule-lines and an 18-mark spiral moved into the meeting hall as a separate nx-artwalk wall-rider, leaving nx-town-hall untouched; deterministic 100eb5e9e89694a9 x2; exact host-local (-4.28,1.10,0) anchor and live tuple verified, host-only wall-rider exemption with 5.730m nearest non-host clearance, zero-verb rerun, and hall flow 8/8 PASS; native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369163 / 2000000**

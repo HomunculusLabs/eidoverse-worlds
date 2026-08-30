@@ -53,8 +53,8 @@ these style of designs built into the buildings."** Phase H standalone pieces
 are done; the artwalk language now moves INTO the architecture. New queue
 (phase B — built-in art), one intervention per tick, same evidence laws:
 
-1. **B-1 Hall charter wall**: brass rule-lines + spiral glyph band on the
-   council-room wall (Two Histories vocabulary, interior-scale).
+1. **B-1 Hall charter wall — DONE**: brass rule-lines + spiral glyph band on
+   the council-room wall, live as `nx-artwalk-b1-hall-charter`.
 2. **B-2 Inn lintel**: carved wave-motif lintel over the common-room door
    (echo of the wave stone) + brass threshold inlay.
 3. **B-3 Ruled-Sky porch**: hypar canopy principle (straight generatrices)
@@ -224,3 +224,24 @@ cannot prove vertical stair ascent; the browser alone evaluates exact-trimesh
 stairs. Bill eye-check: climb the seven steps, circulate the deck, and confirm
 the slow scope sweep and star table read as an observatory rather than a raised
 platform.
+
+### [artwalk-10] THE CHARTER WALL (2026-08-30) — DONE, LIVE
+Bill's built-in-art directive begins in the meeting hall without crossing
+lane ownership: a separate `nx-artwalk-*` wall-rider leaves
+`nx-town-hall` untouched. Two Histories vocabulary is compressed to one
+interior-scale intervention — an open forge-iron frame, three brass rule-lines
++ one datum, an 18-mark brass/bone spiral, and four bone oath-bars. The marks
+are geometry, not paint or text imitation. Deterministic build
+`100eb5e9e89694a9841f0a459d66f7256d52020cfdae241a50c481633d31e420`
+byte-identical x2; decode 3 nodes / 3 meshes / 720 vertices / 0.195 x 1.770 x
+2.800m. Native review unavailable under Bill's waiver; frames exist, but no
+visual PASS is claimed. Host truth was pinned to live hall
+`store/44fec27226f02b74.glb`; the relief sits on the W council wall at exact
+host-local (−4.28,1.10,0), world
+(4.928243671768526,1.1,−27.318787474730843), hall yaw
+−0.31322457341772525. Host overlap is explicitly classified as a wall-rider;
+nearest non-host solid is 5.730m clear. Exact tuple and host-relative anchor
+verified; idempotent rerun emitted zero verbs. Hall flow remained 8/8 PASS,
+max arrival 0.360m. Bill eye-check: stand at the council table about 2m away
+and confirm the spiral + rule-lines read as one charter surface rather than a
+floating sign or micro-detail.
