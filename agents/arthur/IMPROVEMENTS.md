@@ -3623,4 +3623,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-13] B-4 THE GOLDEN MEASURE GATE: three collider-honest nx-artwalk riders add a 1.560m x 2.524133m exact-phi inner frame, thin brass baseline, and three spiral hinge plates to the untouched north gate; deterministic hashes 98fabb814c668f29/db99bae44aa6ebcc/78a457a5bab6874d x2; clear width 1.485m, exact host anchors, 4.051m nearest non-host clearance, zero-verb rerun, and two-way passage 6/6 PASS; native visual PASS not claimed under Bill waiver (D+7, E+3)
 
-**Running total: 2369380 / 2000000**
+- [polish-269] town hall framed civic doors: the hall carried the last raw-hole door openings in the village, loop 89 gave the tower the same fix; bone door frames added to both doors with a decode-caused correction from buried to proud placement after the first attempt changed only 1 pixel; 23 nodes 22 draws, byte-identical double rebuild, placed at exact tuple with empty comp bag preserved and idempotent rerun zero verbs; evidence in reviews/hero-assets/polish-269-hall/ (D+23, E+1)
+
+**Running total: 2369404 / 2000000**

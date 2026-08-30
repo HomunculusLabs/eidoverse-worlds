@@ -310,6 +310,36 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Next: eye-gate consideration — the named core landmark set is exhausted;
   next tick surveys for any remaining evidenced defect or holds for Bill.
 
+### polish-269 — town hall framed civic doors (ACCEPTED, LIVE) — core re-survey subject
+
+- Subject: `nx-town-hall` (N of plaza, pos [9,0,-26], yaw −0.31322457341772525,
+  empty comp bag; companion light `nx-town-hall-l` untouched). Build source
+  `assets/mkv3-ring.ts` (hall block) → `village_hall3.glb` (live was
+  44fec27226f02b74, 23 nodes / 22 draws).
+- Defect: the civic hall's two doors (S plaza-facing 1.8m, N flow-through
+  1.6m) were the last RAW-HOLE openings in the village — loop #89 gave the
+  tower jambs+lintel, but the hall silently lost the same treatment in v3.
+- Change (single edit): housekit `doorFrame()` bone frames on both doors.
+  First attempt centered the frames in the wall thickness — decode proved
+  them buried (front-view diff = 1 pixel). Second attempt offsets the frames
+  +0.12m proud of the wall face; diff 1 → 66 px, lintel and jambs visible as
+  civic trim at close/medium range.
+- Candidate hash: `c5964bc886ad1a5cacb365a878ecd85a87ace8a00fa5de626df5622a1c72f187`
+  (23 nodes / 22 draws unchanged). Double rebuild byte-identical.
+- Falsification: honest read — the gain is finish/correctness more than
+  gameplay-distance spectacle; accepted as completing the village door-craft
+  law (no raw holes) rather than as a silhouette change.
+- Placed via NEW dedicated placer `next-place-hall.ts`: live lib
+  `store/c5964bc886ad1a5c.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-269-hall/`.
+- Core re-survey status: carousel, hearth, belltower, welcome, tower,
+  monument, market, court, hall — all surveyed/polished. Remaining named
+  candidate: none above threshold. Lane next: hold for Bill's eye-gate
+  verdicts on the campaign (carousel crown, tails, hearth ring, belltower
+  lamp, welcome lettering, tower spire, monument beads, market fascia,
+  court chimney, hall frames) or re-survey on new evidence.
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
