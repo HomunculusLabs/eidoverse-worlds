@@ -3565,4 +3565,8 @@ fixes ≈ 6 F.)
 
 - [polish-264] welcome board lettering enlargement: COMMONS pixels were 0.13m tall on a 1.0m board and read as a dark smudge at gameplay distance; letters enlarged to 0.26m tall with word width solved to 94 percent of the board after the first attempt overflowed; 6 nodes 5 draws, byte-identical double rebuild, placed at exact tuple with empty comp bag preserved and idempotent rerun zero verbs; companion lamp light untouched; evidence in reviews/hero-assets/polish-264-welcome/ (D+6, E+1)
 
-**Running total: 2368923 / 2000000**
+- [struct-1] structures lane setup: STRUCTURES-LOOP.md canonical prompt authored (silhouette-first artistic-architecture lane, nx-struct-* ids), interlane protocol extended to 4 lanes, HEAD-gate widened for struct- prefix (D+2, E+1)
+
+- [polish-265] tower crowned spire: the roof finial was a bare 0.12 by 0.5 stick so the crown died into a stub; replaced with brass collar plus tapered gold cone spire at tower scale, same accepted crown language as the carousel; 20 nodes 19 draws, byte-identical double rebuild with stash round trip proving the sibling interior residue inert, placed at exact tuple with sockets study preserved and idempotent rerun zero verbs; post-carousel landmark queue complete; evidence in reviews/hero-assets/polish-265-tower/ (D+20, E+1)
+
+**Running total: 2368947 / 2000000**

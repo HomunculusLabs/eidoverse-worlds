@@ -199,6 +199,34 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Evidence: `agents/arthur/reviews/hero-assets/polish-264-welcome/`.
 - Next subject: `nx-tower` (post-carousel queue #4).
 
+### polish-265 — tower crowned spire (ACCEPTED, LIVE) — post-carousel subject #4
+
+- Subject: `nx-tower` (NE civic landmark, pos [14.1,0,16.9], yaw −2.44347,
+  sockets:study comp). Build source `assets/mkv3-ring.ts` (tower block) →
+  `village_tower3.glb` (live was 38f50c9f4fea4583, 19 nodes / 18 draws).
+  NOTE: mkv3-ring.ts also carries the interior lane's staged garden-cottage
+  furnishing — the polish edit touched ONLY the tower finial block; the
+  interior change stayed in the working tree and was verified to reproduce
+  the exact pre-tick tower bytes when reverted (38f50c9f… stash-round-trip).
+- Defect: the roof finial was a bare 0.12×0.5m stick (y 7.6..8.1) — the crown
+  died into a stub, the same unfinished-crown read the carousel had before
+  polish-258's accepted spire.
+- Change (single edit, tower block only): brass collar (0.3×0.12) at the apex
+  + tapered gold cone spire (r 0.2, h 0.75 → apex 8.35). Same accepted crown
+  language at tower scale.
+- Candidate hash: `a989bdc3cad37b391442fcee313c1d8118f498a1576dea73b7e353eb879b466a`
+  (20 nodes / 19 draws, +1 for the split collar/spire). Double rebuild
+  byte-identical; stash-round-trip proves the interior residue is inert.
+- Falsification: gameplay + front views show a crowned silhouette with a
+  readable gold spire; night view keeps the lit window + porch lamp + spire
+  profile; no float/tilt/oversize.
+- Placed via NEW dedicated placer `next-place-tower.ts`: live lib
+  `store/a989bdc3cad37b39.glb`, tuple exact, sockets:study preserved,
+  idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-265-tower/`.
+- Post-carousel queue (4 named landmarks) is now complete. Next: re-survey
+  the core for the next-highest-defect landmark or hold for Bill's eye-gate.
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
