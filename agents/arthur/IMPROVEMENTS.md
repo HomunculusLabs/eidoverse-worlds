@@ -3631,4 +3631,6 @@ fixes ≈ 6 F.)
 
 - [polish-270] campaign hold: full fresh survey shows standing gate ALL PASS, all nine polish-lane live pins verified in the 165-entity census, and local builds byte-identical to live for every touched subject; the named defect set is exhausted across twelve ticks from carousel crown to hall frames; holding for Bill eye-gate verdicts on the ten accepted changes, lane resumes on visual correction new evidence or queue widening (D+0, E+0)
 
-**Running total: 2369432 / 2000000**
+- [artwalk-14] B-5 THE BELLTOWER THREE-RING PIER: a door-height Borromean echo of three flat brass/bone rings and two rule marks rides the plaza-facing east stone pier as a separate nx-artwalk entity, leaving the polished host and lamp untouched; deterministic 48aed5dabcb16a45 x2; exact host-local (0.75,0.65,0.99) anchor, 1.982m nearest real solid clearance, zero-verb rerun, and plaza-to-tower passage 6/6 PASS; native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369436 / 2000000**

@@ -61,7 +61,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
    potter's work apron as `nx-artwalk-b3-ruled-porch`.
 4. **B-4 Golden-ratio gate — DONE**: nested φ frame, threshold, and spiral
    hinge plates live on `nx-town-gate-n` as three `nx-artwalk-b4-*` riders.
-5. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+5. **B-5 Belltower three-ring pier — DONE**: Borromean echo live on the
+   plaza-facing east pier as `nx-artwalk-b5-belltower-rings`.
+6. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -314,3 +316,26 @@ verified; idempotent rerun emitted zero verbs. Two-way gate passage remained
 6/6 PASS, max arrival 0.390m. Bill eye-check: approach from outside the north
 gate at 2m and confirm the nested golden rectangle reads before the spiral
 hinge plates, without the frame feeling narrow or decorative-only.
+
+### [artwalk-14] THE BELLTOWER THREE-RING PIER (2026-08-30) — DONE, LIVE
+The next built-in target was re-derived from current core traffic rather than
+invented from the old queue: the NE belltower is seen from every plaza circuit,
+and its door-height east pier had no art language. A separate `nx-artwalk-*`
+rider leaves the newly polished `nx-town-belltower` untouched. Three flat
+brass/bone relief rings interlock over a forged vertical backing, bounded by
+two brass rule marks — a Borromean echo compressed to pier scale rather than a
+miniature monument. Deterministic build
+`48aed5dabcb16a45632fb2b93f900d74b3a53d659f905d65430f7888b73dbca5`
+byte-identical x2; decode 3 nodes / 3 meshes / 528 vertices / 0.645 x 1.420 x
+0.140m. Native review unavailable under Bill's waiver; frames exist, but no
+visual PASS is claimed. Host truth was pinned to live belltower
+`store/30407b959aa14962.glb`; exact host-local anchor (0.75,0.65,0.99) maps to
+world (5.269634200735408,0.65,6.330294372515229), tower yaw
+−2.356194490192345. Host contact is classified as a plaza-facing existing-pier
+rider; the compound `nx-town-streetlamps` bbox is explicitly exempted as the
+standing core-layer precedent. Nearest real non-host solid is the mapboard,
+1.982m clear. Exact tuple and relative anchor verified; idempotent rerun emitted
+zero verbs. Plaza→tower→back passage remained 6/6 PASS, max arrival 0.350m.
+Bill eye-check: approach from the plaza at door height and confirm the three
+rings read as one interlock on the pier without competing with the bell or the
+new warm belfry lamp.
