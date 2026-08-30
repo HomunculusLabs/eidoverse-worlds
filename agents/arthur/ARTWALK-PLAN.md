@@ -67,7 +67,10 @@ are done; the artwalk language now moves INTO the architecture. New queue
    `nx-artwalk-b6-market-lissa-{left,right}`.
 7. **B-7 Shrine seven-star panel — DONE**: connected brass/bone constellation
    live as `nx-artwalk-b7-shrine-stars`.
-8. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+8. **B-8 Livery Harmonic Rein — DONE**: twin single-frequency brass/bone
+   reins bridge the stable's open-front lintel as
+   `nx-artwalk-b8-stable-harmonic-rein`.
+9. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -107,6 +110,23 @@ idempotent rerun emitted zero verbs. Shrine approach/rear circuit remained
 6/6 PASS, max arrival 0.360m. Native review unavailable under Bill's waiver;
 eye-check from the altar: the seven-star line should read as a quiet chart on
 the rear stone without competing with candles, altar, or bench.
+
+### [artwalk-18] THE LIVERY HARMONIC REIN (2026-08-30) — DONE, LIVE
+The stable's source-true open front receives one walking-distance architectural
+rhythm: two calm, counter-running single-frequency brass/bone reins across a
+forged lintel. The 4.9m-wide intervention is geometry rather than paint and
+stays below the roof line while clearing avatar height. Deterministic build
+`cba8d0efb0518938c39120d1d3cdf80d9062fd47fab9e73bfd3c2f1f6959b9ea`
+byte-identical x2; decode 3 merged nodes / 4.900 x 0.420 x 0.153m. Host truth
+was pinned to stable `store/84ba3b1b110282d9.glb`; exact host-local
+(0,2.22,−2.16) maps to (45.16,2.22,0), yaw −π/2. The first back-wall trial
+at (40.84,1.65,0) left the work hidden in the 0.73m inn seam and was rejected;
+the final open-front siting is 2.825m clear of the nearest non-host solid.
+Exact tuple verified; idempotent rerun emitted zero verbs. Both stall approach
+lanes remained 6/6 PASS, max arrival 0.393m. Native image input failed under
+Bill's waiver, so no visual PASS is claimed. Eye-check from the paddock/open
+front: the two reins should read as one restrained harmonic lintel, not beads
+or signage, and should remain comfortably overhead.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 

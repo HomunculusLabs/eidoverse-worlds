@@ -3643,4 +3643,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-17] B-7 SHRINE SEVEN-STAR PANEL: seven connected brass/bone stars on a forged rear-stone rider bring Night Table vocabulary into the untouched shrine; deterministic a7ef8541e9561833 x2; exact host-local (-0.95,0.25,-1.16) anchor and tuple, zero-verb rerun, shrine circuit 6/6 PASS; native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369456 / 2000000**
+- [artwalk-18] B-8 LIVERY HARMONIC REIN: twin counter-running single-frequency brass/bone reins bridge the stable open-front lintel; deterministic cba8d0efb0518938 x2; exact host-local (0,2.22,-2.16) tuple, final open-front siting after rejecting the hidden inn-seam trial, zero-verb rerun, both stall approaches 6/6 PASS; native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369460 / 2000000**
