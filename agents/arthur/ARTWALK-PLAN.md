@@ -85,7 +85,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     spread above the outer lintel as `nx-artwalk-b14-east-gate-dawn-fan`.
 15. **B-15 West Gate Dusk Arcs — DONE**: three nested brass/bone parabolic
     arcs settle over the outer lintel as `nx-artwalk-b15-west-gate-dusk-arcs`.
-16. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+16. **B-16 Forge Seven Strikes — DONE**: seven widening brass/bone strike
+    marks rise above the fire mouth as `nx-artwalk-b16-forge-seven-strikes`.
+17. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -268,6 +270,25 @@ route remained 6/6 PASS, max arrival 0.340m. Review frames were rendered, but
 native image input remains unavailable under Bill's waiver; no visual PASS is
 claimed. Eye-check from the west road: the three arcs should read as one dusk
 field above the sign and as a true counterpart—not a copy—of the east dawn fan.
+
+### [artwalk-26] THE FORGE SEVEN STRIKES (2026-08-30) — DONE, LIVE
+The court annex's working hearth receives a cadence drawn from its own hammer:
+seven alternating brass/bone strike marks widen upward from one brass datum on
+a forged field above the glowing fire mouth. The compact 0.74m relief stays
+inside the hood/flue envelope and leaves the flame, anvil, and work apron clear.
+Deterministic build
+`54555b39274bc00c54b6e5d649a15db0e643434048ccd38f0e1fffe87c2fdddc`
+byte-identical x2; decode 3 merged nodes / 0.740 x 0.860 x 0.120m. Host truth
+was pinned to forge `store/2c902a90ed90145e.glb`; exact host-local
+(0,1.02,0.39) maps to
+(21.81053323270505,1.02,−7.717457073810321), yaw −0.90756. The nearest
+non-host solid is the deliberately abutting court at 0.503m; the complete
+fire-mouth approach and lateral work-apron route remained 6/6 PASS, max arrival
+0.346m. Exact tuple verified; idempotent rerun emitted zero verbs. Review frames
+were rendered, but native image input remains unavailable under Bill's waiver;
+no visual PASS is claimed. Eye-check from the work apron: the seven marks should
+read as one rising hammer cadence above the live coals without hiding the hood
+or feeling like a small sign.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 

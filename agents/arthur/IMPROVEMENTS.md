@@ -3659,4 +3659,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-25] B-15 WEST GATE DUSK ARCS: three nested brass/bone parabolic arcs settle toward one horizon above the road-facing lintel; deterministic f1efad77be904a59 x2; exact host-local (0,2.72,0.2325), 2.683m nearest-solid clearance, zero-verb rerun, complete gate route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369489 / 2000000**
+- [artwalk-26] B-16 FORGE SEVEN STRIKES: seven widening brass/bone marks rise above the live fire mouth from one forged datum; deterministic 54555b39274bc00c x2; exact host-local (0,1.02,0.39), zero-verb rerun, fire-mouth and lateral work-apron route 6/6 PASS; 0.503m court adjacency is the standing annex contact; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369493 / 2000000**
