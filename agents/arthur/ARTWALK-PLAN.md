@@ -93,7 +93,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     brass weft crown the row-cottage door as `nx-artwalk-b18-row-warp-count`.
 19. **B-19 Longhouse Feast Count — DONE**: twelve alternating place marks rise
     from one brass table line as `nx-artwalk-b19-longhouse-feast-count`.
-20. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+20. **B-20 Bunkhouse Four Rooms — DONE**: four alternating brass/bone rooms
+    line the entry-side wall as `nx-artwalk-b20-bunkhouse-four-rooms`.
+21. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -353,6 +355,27 @@ outside→porch→room→outside route remained 6/6 PASS, max arrival 0.370m. Re
 frames were rendered, but native image input remains unavailable under Bill's
 waiver; no visual PASS is claimed. Eye-check from the gathering path: the
 twelve marks should read as one feast count across the porch, not railings.
+
+### [artwalk-30] THE BUNKHOUSE FOUR ROOMS (2026-08-30) — DONE, LIVE
+The guest bunkhouse receives an exterior echo of its four furnished bunks and
+serial cubbies: four alternating brass/bone open rooms sit over one brass
+threshold on a forged field beside the centered entry. The first overhead
+siting was rejected before ledgering because its 2.12m bottom would have
+violated the 2.2m avatar-clearance law; the same exact bytes were moved to the
+west door-side wall, local x −3.11..−1.29, leaving the centered door lane
+x −0.65..0.65 fully clear. Deterministic build
+`152684b8dd6ba53537d4abfbbe144c435023df30722ae9662fdfdfe1a65082c7`
+byte-identical x2; decode 3 merged nodes / 1.820 x 0.460 x 0.120m. Host truth
+was reconciled to the interior-9 bunkhouse build
+`store/49f5acc4d91c4d45.glb`, byte-identical to its durable
+`village_bunkhouse.glb`; final host-local (−2.2,1.05,2.0325) maps to
+(−10.466688873766076,1.05,−23.388510004313474), yaw 0.31322457341772525.
+Live SAT found the nearest non-host solid, north gate, 7.774m clear. Final exact
+tuple verified; idempotent rerun emitted zero verbs. The full
+outside→room→outside route remained 6/6 PASS, max arrival 0.365m. Review frames
+were rendered, but native image input remains unavailable under Bill's waiver;
+no visual PASS is claimed. Eye-check from the north approach: the four open
+rooms should read as one guest-house rhythm beside—not above—the door.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
