@@ -64,12 +64,39 @@ Re-derive siting from live census each tick: spoke gaps, district
 interstices, or core-adjacent anchors Bill would see on approach. SAT/rim
 gates with the standing exemptions (ground-layer, suspended-decor).
 
+## REFINE PHASE (objects get refinement loops too)
+
+New structures land as first drafts. Cadence law: **every third wakeup
+(`struct-N` where N % 3 == 0) is a REFINEMENT tick, not a build tick** —
+unless the refine pool is empty, in which case build.
+
+- Refine pool = all standing `nx-struct-*` entities that have not reached
+  internally-judged hero-ready state (recorded per-entity in the plan log).
+- Pick the subject by highest evidenced visual deficit (approach silhouette,
+  night read, material hierarchy), never by convenience.
+- One closed visual iteration per refine tick, hero-asset discipline:
+  exact-hash baseline → identical-camera before renders → ONE highest-value
+  defect traced to source → smallest source change → rebuild ×2 byte-identical
+  → after renders + falsification → accept or revert (a reverted experiment
+  is valid progress, recorded, never placed).
+- Accepted refinement re-places the SAME `nx-struct-*` id at its exact
+  current pose with full comp-bag capture/reapply (comp-wipe law), post-place
+  tuple verify, idempotent rerun, and walk-test if enterable.
+- When a structure is judged internally hero-ready, mark it DONE in the plan
+  and present Bill one eye-gate packet (hash, gameplay/night/contact paths,
+  what changed) exactly once — do not hold the lane waiting.
+- Bill's visual correction on any structure immediately re-opens it as the
+  next refine subject, ahead of the deficit ranking.
+
 ## PER-WAKEUP PROCEDURE
 
 1. Read this file, STRUCTURES-PLAN.md, and INTERLANE-PROTOCOL.md fresh.
    Standing gate must be real exit 0 before any live mutation.
-2. Take the next commission. Write a one-paragraph concept contract first:
-   the single idea, the silhouette, the approach view, enterable or folly.
+2. Check the cadence: refine tick (N % 3 == 0 and pool non-empty) → take the
+   top-deficit standing structure through the REFINE PHASE iteration.
+   Otherwise → take the next commission. Write a one-paragraph concept
+   contract first: the single idea, the silhouette, the approach view,
+   enterable or folly.
 3. Build: housekit extension or new mk script → deterministic rebuild ×2 →
    decode audit → review-render (front/right/back/left/gameplay/aerial/
    night + approach at 3 distances) → judge against the concept contract.
