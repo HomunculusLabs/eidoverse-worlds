@@ -43,9 +43,32 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 
 ## Next highest-value defects (re-judge from current pixels each tick)
 
-- Crown underside at close range: rib/valance junction density unjudged.
-- Horse trappings: saddle/blanket readability at 10–18m unjudged this tick.
+- Horse trappings: saddle/blanket readability at 10–18m still unjudged.
+- Mane slab: dark iron fin on the neck reads flat at close range (front view);
+  candidate for a softer sweep, next in the horse-quality lane.
 - Ticket-entry/fascia storytelling unjudged.
+- Crown underside at close range: rib/valance junction density unjudged.
+
+## Iteration history (continued)
+
+### polish-259 — horse tail re-orientation (ACCEPTED, LIVE)
+
+- Defect: tail cone `rotation.x = PI/2 + 0.3` pointed its TIP forward-down into
+  the rump, so the wide BASE protruded backward as a black horizontal
+  spike/arrow (clear in the back render; the element that reads as an arrow
+  beside the white horse in old frames).
+- Change (single edit, `mkcarousel.ts`): negated axis to `rotation.x = -PI*0.71`
+  (sign-checked: tip dir (0,-0.61,-0.79) = ~38° below horizontal, down-and-back),
+  re-anchored to (0, 0.44, -0.72), lengthened 0.55→0.65, radius 0.12→0.13.
+  Tip at local (0, 0.24, -0.98) clears hooves/deck.
+- Candidate hash: `ce3633992d07055e02115782f258de59764f5a9d9b6c461460f90931b8823fa7`
+  (45 nodes / 38 draws, unchanged counts). Two rebuilds byte-identical.
+- Falsification verdict: accepted — left view shows a natural down-and-back
+  sweep on the blue horse, no clipping; gameplay silhouette unharmed; night
+  unaffected. Spike read eliminated.
+- Placed live: lib `store/ce3633992d07055e.glb`, tuple exact, 7 comp keys
+  restored, idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-259-carousel/`.
 
 ## Post-carousel queue
 

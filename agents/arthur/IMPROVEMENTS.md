@@ -3529,4 +3529,6 @@ fixes ≈ 6 F.)
 
 - [polish-258] carousel crown: gold spire (collar + tapered cone to 6.68) replaces near-dead bead apex; 16 alternating gold/fabric valance teeth under the eave; 43 to 45 nodes, 37 to 38 draws, byte-identical double rebuild; placed at exact tuple with all 7 comp keys restored, idempotent rerun zero verbs; evidence in reviews/hero-assets/polish-258-carousel/ (D+45, E+1)
 
-**Running total: 2368650 / 2000000**
+- [polish-259] carousel horse tail re-orientation: old cone axis pointed the tip into the rump so the base protruded as a black horizontal spike; axis negated and re-anchored so the tail sweeps down-and-back at 38 degrees, no clipping; 45 nodes 38 draws unchanged, byte-identical double rebuild, placed at exact tuple with all 7 comp keys restored, idempotent rerun zero verbs; evidence in reviews/hero-assets/polish-259-carousel/ (D+45, E+1)
+
+**Running total: 2368696 / 2000000**
