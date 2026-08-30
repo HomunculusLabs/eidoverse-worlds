@@ -71,6 +71,11 @@ Laws for phase B: motifs are carved/inlaid geometry in the standing families
 intervention must be legible at 2m; keep node budgets (extend housekit with
 reusable motif primitives rather than one-offs).
 
+Host-rider continuity law: a host re-place may change its pinned lib without
+moving the rider. Before adding another intervention, reconcile every evolved
+host against the rider's exact local anchor and passage contract; refresh the
+host pin only when pose/bbox/attachment geometry remain compatible.
+
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
 - **Pendulum wave** — plaza-adjacent; the one calibration every village can read.
@@ -339,3 +344,16 @@ zero verbs. Plaza→tower→back passage remained 6/6 PASS, max arrival 0.350m.
 Bill eye-check: approach from the plaza at door height and confirm the three
 rings read as one interlock on the pier without competing with the bell or the
 new warm belfry lamp.
+
+### [artwalk-15] CHARTER WALL HOST-EVOLUTION RECONCILIATION (2026-08-30) — CLOSED
+The polish lane evolved `nx-town-hall` from `store/44fec27226f02b74.glb` to
+`store/c5964bc886ad1a5c.glb` by adding proud bone frames to both door openings.
+Before selecting another built-in target, B-1 was re-grounded against current
+live truth. Hall pose, yaw, bbox, west council wall, and the charter's world
+tuple are unchanged; exact inverse transform still returns host-local
+(−4.28,1.10,0). The charter remains on
+`store/100eb5e9e89694a9.glb`; its idempotent placer emitted zero verbs after
+the host-pin refresh. Nearest non-host solid is now the Water Stair at 3.245m,
+and the full south↔north hall route remains 8/8 PASS, max arrival 0.360m. No
+world mutation and no visual PASS are claimed. Durable result: phase-B riders
+now explicitly reconcile host evolution before the next intervention.
