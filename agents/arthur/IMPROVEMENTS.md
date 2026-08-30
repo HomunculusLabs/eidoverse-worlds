@@ -3661,4 +3661,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-26] B-16 FORGE SEVEN STRIKES: seven widening brass/bone marks rise above the live fire mouth from one forged datum; deterministic 54555b39274bc00c x2; exact host-local (0,1.02,0.39), zero-verb rerun, fire-mouth and lateral work-apron route 6/6 PASS; 0.503m court adjacency is the standing annex contact; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369493 / 2000000**
+- [artwalk-27] B-17 GARDEN SEED LATTICE: nine connected brass/bone seed marks crown the evolved garden-cottage door; deterministic 241db6453224af9f x2; interior-6 host reconciled byte-exact, exact host-local (0,2.08,1.8325), zero-verb rerun, full door route 6/6 PASS; nearest 2D carousel footprint 1.061m but wall rider is overhead; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369497 / 2000000**

@@ -87,7 +87,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     arcs settle over the outer lintel as `nx-artwalk-b15-west-gate-dusk-arcs`.
 16. **B-16 Forge Seven Strikes — DONE**: seven widening brass/bone strike
     marks rise above the fire mouth as `nx-artwalk-b16-forge-seven-strikes`.
-17. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+17. **B-17 Garden Seed Lattice — DONE**: nine connected brass/bone seed marks
+    crown the cottage door as `nx-artwalk-b17-garden-seed-lattice`.
+18. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -289,6 +291,26 @@ were rendered, but native image input remains unavailable under Bill's waiver;
 no visual PASS is claimed. Eye-check from the work apron: the seven marks should
 read as one rising hammer cadence above the live coals without hiding the hood
 or feeling like a small sign.
+
+### [artwalk-27] THE GARDEN SEED LATTICE (2026-08-30) — DONE, LIVE
+The gardener's evolved cottage receives an exterior echo of its interior seed
+shelf: nine brass/bone seed marks connect into one branching lattice on a
+forged field above the centered door. The 1.5m span stays within the stone wall
+and below its 2.58m top, leaving the garden approach and doorway untouched.
+Deterministic build
+`241db6453224af9fa459eb7749c7c9fa1aee550becab737e8da8995276331315`
+byte-identical x2; decode 3 merged nodes / 1.500 x 0.460 x 0.136m. Host truth
+was reconciled to the interior-6 garden build
+`store/872aec35e3aa43b3.glb`, byte-identical to its durable local GLB; exact
+host-local (0,2.08,1.8325) maps to
+(−24.51890662066154,2.0809494488404763,17.920917680767694), yaw
+2.2004415094410525. The nearest 2D non-host footprint is the carousel at
+1.061m, but the lattice is a wall rider above the door; the full
+outside→room→outside route remained 6/6 PASS, max arrival 0.370m. Exact tuple
+verified; idempotent rerun emitted zero verbs. Review frames were rendered,
+but native image input remains unavailable under Bill's waiver; no visual PASS
+is claimed. Eye-check from the garden track: the nine marks should read as one
+seed lattice crowning the door, not a sign or miniature map.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
