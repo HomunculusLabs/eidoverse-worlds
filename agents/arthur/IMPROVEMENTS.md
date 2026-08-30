@@ -3559,4 +3559,6 @@ fixes ≈ 6 F.)
 
 - [interior-5] Potter stand completed: inherited kick wheel and mid-throw pot, water bucket, damp-cloth clay stock, drying rack with green pots, and fired ware preserved; compact two-tier finished-ware shelf with three vessels added inside the inherited footprint, exact pwheel motion added at nine degrees per second, and warm stand light added while the full work apron remains clear; deterministic a4e277782dde8c04 rebuild with seven nodes and six meshes, exact live model/light/motion tuples, idempotent rerun zero verbs, six-leg apron walk unchanged and focused gate ALL PASS (D+7, E+2)
 
-**Running total: 2368901 / 2000000**
+- [polish-263] belltower belfry lamp un-entombed: the emissive bead sat 0.4 inside the closed pyramid cap where cone radius 1.32 fully occluded it day and night, a dead light; moved into open belfry air between the arch posts clear of the bell; night warm-pixel count 0 to 34, 11 nodes 9 draws, byte-identical double rebuild, placed at exact tuple with empty comp bag preserved and idempotent rerun zero verbs; carousel rebuild from the shared landmarks script verified byte-identical; evidence in reviews/hero-assets/polish-263-belltower/ (D+11, E+1)
+
+**Running total: 2368913 / 2000000**

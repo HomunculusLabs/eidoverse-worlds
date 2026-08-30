@@ -153,8 +153,31 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
   (before/ = live 43fcaf14 build, after/ = 027f6f01 candidate).
 - Next subject: belltower (post-carousel queue #2).
 
+### polish-263 — belltower belfry lamp un-entombed (ACCEPTED, LIVE) — post-carousel subject #2
+
+- Subject: `nx-town-belltower` (civic ring, pos [6.5,0,6.5], yaw −2.35619).
+  Build source `assets/mkv3-landmarks.ts` (belltower block) →
+  `village_belltower3.glb` (live was 66524bcde061a437, 11 nodes / 9 draws).
+- Defect: the belfry lamp bead sat at (0, PH+1.9) = y 6.3 — 0.4 INSIDE the
+  closed pyramid cap (cone base 5.9, radius 1.32 at that height). Geometrically
+  occluded from EVERY vantage, day and night: a dead emissive. Warm-pixel
+  count in the night render was 0.
+- Change (single edit): lamp moved into open belfry air at (0.75, 5.6, 0.75),
+  between the arch posts, clear of the bell (r 0.42). The tower gains its warm
+  night signal.
+- Candidate hash: `30407b959aa149626be5b2d706887b5def4ade86b7027a1914c8fe2a8f10f5bb`
+  (11 nodes / 9 draws unchanged). Double rebuild byte-identical.
+- Falsification: night warm-pixel count 0 → 34 (lamp now renders); day view
+  shows a small warm accent in the belfry, not clutter. Carousel rebuild after
+  the shared landmarks script still byte-identical (ce3633992…).
+- Placed via NEW dedicated placer `next-place-belltower.ts`: live lib
+  `store/30407b959aa14962.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs. commons' av-belltower tex-69/20 pins untouched.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-263-belltower/`.
+- Next subject: welcome ensemble or tower (post-carousel queue #3/#4).
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
-plaza hearth ✅ (polish-262), belltower, welcome ensemble, tower. Present
-Bill one concise eye-gate packet exactly once at that point.
+plaza hearth ✅ (polish-262), belltower ✅ (polish-263), welcome ensemble,
+tower. Present Bill one concise eye-gate packet exactly once at that point.
