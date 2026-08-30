@@ -252,6 +252,32 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
   untouched (different world).
 - Evidence: `agents/arthur/reviews/hero-assets/polish-266-monument/`.
 
+### polish-267 — market awning fascia (ACCEPTED, LIVE) — core re-survey subject
+
+- Subject: `nx-town-market` (plaza SW, pos [-6.5,0,6.5], yaw 2.356194490192345,
+  empty comp bag; companion light `nx-town-market-l` untouched). Build source
+  `assets/mkv3-market.ts` → `village_market3.glb` (live was
+  1262295539e80fa1, 13 nodes / 10 draws).
+- Defect: the awnings were 3.5cm-thick bare slabs — razor-thin edges read as
+  floating tabletops, not cloth canopies.
+- Change (single edit): 1.9×0.11m fascia hems on both awnings' front edges,
+  riding the existing `mk_awn_${si}` KEEP anchors (wind comps keep their
+  targets; no new named nodes — merges into the awning bucket). Geometry
+  verified: fascia (y 1.946..2.054 at z 0.545) covers the slab's front edge
+  (y 1.987 at z 0.540) with no gap or z-fight.
+- Candidate hash: `dabf662e5fe11f96ae9548385e4e260987d3a4aeedb1e67b2bbacb68ddcdee8a`
+  (13 nodes / 10 draws unchanged). Double rebuild byte-identical.
+- Falsification: front view shows a clear cloth hem at both canopies; gameplay
+  view slightly improved (edge thickness reads at 18m); interior lane's
+  visitor walk, warm stall light, and all other checks still PASS.
+- Cross-lane pin refresh: `verify-interior4.ts` market byte pin advanced
+  1262295539e80fa1… → dabf662e… in this commit (the pin tracks the live
+  entity; interior lane notified via ledger).
+- Placed via NEW dedicated placer `next-place-market.ts`: live lib
+  `store/dabf662e5fe11f96.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-267-market/`.
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
