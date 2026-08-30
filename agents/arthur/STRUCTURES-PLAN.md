@@ -46,7 +46,10 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    behind a stone performance disc; SW reach, stage facing the Bandstand.
    (Concentric-arc form rejected pre-build: mosaic-0048 occupies the row
    radius and concave arcs defeat bbox SAT — straight rows keep the idea.)
-2. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
+2. **U-2 East Beacon** — [DONE struct-11] night landmark on the E
+   approach: stone tower, emissive lantern room + companion light
+   entity (first lit structure of the lane).
+3. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
    now live: every struct-N with N%3==0 is a refine tick (first: struct-12).
 
 ## Siting log
@@ -62,6 +65,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-8 | T-2 Millrace Cascade | 200°/40 head; race runs W | (−37.59, −0.045, −13.68) | −π/2 | LIVE, bank walk 5/5 |
 | struct-9 | T-3 Pendulum Wave | 46°/36 (NE path past woodyard) | (25.01, −0.041, 25.9) | 0 (row ∥ X, swing ∥ Z) | LIVE, frozen moment, circuit walk 5/5 |
 | struct-10 | U-1 Hillside Theater | 122°/46 (SW reach) | (−23.32, 0.040, 37.31) | 0 (stage +Z → Bandstand) | LIVE, aisle climb walk 5/5 |
+| struct-11 | U-2 East Beacon | 338°/44 (E approach, SE side) | (40.8, −0.044, −16.48) | 0 | LIVE, + light entity, base circuit 4/4 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -373,3 +377,30 @@ performance quarter on the S side — stage circles, big and small.
 **Bill should eye-check**: stand on the performance disc and look
 uphill — five rows rising; take a seat mid-height and look back at the
 Bandstand.
+
+## struct-11 — U-2 EAST BEACON (concept contract + record)
+
+**Concept**: the village's east door, lit. One idea: a beacon — a slim
+stone tower (four corner piers, ashlar infill, dark slit windows at
+harmonic 1.6/3.2/4.8m heights) rising to an open lantern room with
+emissive amber glass on all four sides under a brass pyramid cap and
+finial bead. The E quadrant carried no structure and the fleet read
+nothing at night; the beacon answers both.
+
+- First LIT structure of the lane: emissive panes in one KEEP group
+  `lamp` + companion light entity `nx-struct-beacon-l` (warm, 1.5
+  intensity, 9m range) at the lantern center — the Night Table's proven
+  light-verb pattern. Night read NOT claimed — Bill's dusk eye-check.
+- Honest collider: 3.1×8.7 furniture-solid tower (correct for a
+  landmark tower — approachable, not enterable).
+- Build: mkv3-beacon.ts → village_beacon3.glb, deterministic ×2, sha256
+  f5076e0014ed73cf, 7 nodes.
+- Siting: 338°/r44 → (40.8, −0.044, −16.48), the E approach past the
+  hutch/coop cluster (gap 4.76m). The 0–20° band is fully occupied by
+  the inn/stable/livery cluster — census re-derivation moved the beacon
+  to the SE-side east approach where it still reads from the E gate.
+- Placement: tower + light, 2 verbs, idempotent rerun zero verbs; four-
+  leg MCPL approach + base circuit ALL PASS.
+
+**Bill should eye-check**: from the E gate after dusk — the lit lantern
+against the sky; by day, the slit-window rhythm up the shaft.
