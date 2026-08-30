@@ -12,7 +12,7 @@
 // stay raw-log flat (tex-16 law — fuel is not construction).
 import * as THREE from "three";
 import { toGLB, mat, texMat } from "./glbwrite.ts";
-import { C, box, gableRoof, coneRoof, pyramidRoof, chimney, doorGapWall, wallSpan, windowFrame, porch, assertRoomScale } from "./housekit.ts";
+import { C, box, gableRoof, coneRoof, pyramidRoof, chimney, doorGapWall, wallSpan, windowFrame, porch, assertRoomScale, furnitureTable, furnitureBench, furnitureShelf } from "./housekit.ts";
 import { mergeByMaterial } from "./mergekit.ts";
 import { writeFileSync } from "node:fs";
 
@@ -556,17 +556,13 @@ const out: Built[] = [];
     // interior: firebowl center-W, bench rows flanking the center aisle (N door <-> S door)
     texBox(g, "firebowl", 1.1, 0.5, 1.1, -2.2, FY + 0.25, 0, ironTex);
     fireMesh(g, "fire", -2.2, FY + 0.6, 0, 0.26);
-    for (const [bi, bz] of [[0, -1.4], [1, 1.4]] as const) {
-        texBox(g, `bench_${bi}`, 2.7, 0.09, 0.35, 1.5, FY + 0.52, bz, timberTex);
-        texBox(g, `bleg_${bi}`, 2.4, 0.44, 0.2, 1.5, FY + 0.24, bz, timberTex);
-    }
+    for (const [bi, bz] of [[0, -1.4], [1, 1.4]] as const)
+        furnitureBench(g, `bench_${bi}`, 1.5, FY, bz, 2.7, timberTex);
     // speaker's stone at W end
     texBox(g, "dais", 1.4, 0.25, 2.2, -(W / 2 - 0.9), FY + 0.125, 0, stoneTex);
     // THE COUNCIL TABLE at the E end: long table + 3 stools (where disputes
     // are settled and treaties signed)
-    texBox(g, "ctable", 1.0, 0.09, 2.6, W / 2 - 1.1, FY + 0.82, 0, timberTex);
-    texBox(g, "ctleg_n", 0.09, 0.64, 0.09, W / 2 - 1.1, FY + 0.4, -1.05, timberTex);
-    texBox(g, "ctleg_s", 0.09, 0.64, 0.09, W / 2 - 1.1, FY + 0.4, 1.05, timberTex);
+    furnitureTable(g, "ctable", W / 2 - 1.1, FY, 0, 1.0, 2.6, timberTex);
     for (const [si, sz] of [[0, -0.75], [1, 0], [2, 0.75]] as const) {
         texBox(g, `cstool_${si}`, 0.34, 0.44, 0.34, W / 2 - 2.0, FY + 0.22, sz, timberTex);
     }
@@ -576,6 +572,14 @@ const out: Built[] = [];
     cf.name = "ccflame";
     cf.position.set(W / 2 - 1.1, FY + 1.06, 0.75);
     g.add(cf);
+    // interior-1: the charter ledger lives beside the council table rather
+    // than as loose decoration. Two wall shelves carry six bound volumes;
+    // the full x=0 door-to-door aisle remains untouched.
+    furnitureShelf(g, "ledger_shelf_lo", W / 2 - 0.18, FY + 1.15, 0, 1.9, 0.34, timberTex, "x");
+    furnitureShelf(g, "ledger_shelf_hi", W / 2 - 0.18, FY + 1.85, 0, 1.9, 0.34, timberTex, "x");
+    for (const [li, ly, lz] of [[0, 1.23, -0.62], [1, 1.23, 0], [2, 1.23, 0.62], [3, 1.93, -0.62], [4, 1.93, 0], [5, 1.93, 0.62]] as const) {
+        box(g, `ledger_${li}`, 0.18, 0.28, 0.08, W / 2 - 0.37, FY + ly, lz, li % 2 ? 0x8e6834 : 0x4e5c6a);
+    }
     // CHARTER BANNER on the W wall above the dais (the village's founding
     // standard — brass wheel on dark cloth)
     box(g, "banner_cloth", 1.2, 1.7, 0.05, -(W / 2 - T / 2 - 0.04), FY + 1.75, 0, 0x4c462a);

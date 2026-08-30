@@ -3535,4 +3535,6 @@ fixes ≈ 6 F.)
 
 - [interior-0] Inn common room refined from its already-furnished source: reusable housekit table/bench/shelf primitives added, two human-scale table ensembles now carry paired seating east of the exact one-point-four-metre door corridor, existing hearth/bar/casks/mugs/stairs preserved, warm room light history-verified; deterministic 9fdf24522f0de63f rebuild, thirty-node twenty-nine-draw decode, exact live tuple and empty comp bag preserved, idempotent reruns zero verbs, before/after six-leg MCPL walk unchanged and focused gate ALL PASS (D+30, E+2)
 
-**Running total: 2368739 / 2000000**
+- [interior-1] Meeting hall council room refined: existing firebowl, dais, charter banner, benches, council table and stools preserved; shared housekit table and bench primitives now shape the seating, a two-tier six-volume charter ledger shelf gives the room a civic record, warm interior light added, and the exact center aisle remains clear between both doors; deterministic 44fec27226f02b74 rebuild, twenty-two nodes and meshes, exact live model/light tuples, empty comp bag preserved, idempotent rerun zero verbs, eight-leg two-door walk unchanged and focused gate ALL PASS (D+22, E+2)
+
+**Running total: 2368763 / 2000000**
