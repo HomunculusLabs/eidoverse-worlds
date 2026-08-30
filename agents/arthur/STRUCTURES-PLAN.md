@@ -63,6 +63,22 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    derived gaps filled; both build lanes wait on Bill's eye-gate verdicts.
    Refine pool remaining: Observatory dome-shadow (source-judged, low).**
 
+## LANE STATE: HOLD (struct-18)
+
+Both queues exhausted. Build: every census-derived gap filled (13
+structures). Refine: pool empty (dome-shadow judged a lighting-read
+issue, not honest geometry work; night read already handled at struct-12).
+struct-18 = hold tick: fleet-wide pin check 15/15 byte-exact, zero
+drift. Gate ALL PASS.
+
+This loop produces nothing further until: Bill's eye-gate verdicts
+(re-opens refines at top priority), a new census gap, or a stop. The
+sibling polish lane holds the same posture (its hold tick 3 recommends
+a /loop stop). Recommended: one guided circuit (plaza → NW orrery/
+observatory → N shell tower/water stair → W hypar/reed pool/angler/
+millrace → S bandstand/theater/skene → E beacon → NE pendulum) or
+stop the /loop.
+
 ## Siting log
 
 | tick | structure | site (deg/r) | world pos | yaw | verdict |

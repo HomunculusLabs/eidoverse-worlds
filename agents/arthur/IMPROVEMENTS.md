@@ -3639,4 +3639,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-16] B-6 MARKET LISSAJOUS COUNTERS: twin forged counter-front riders carry 24-mark x=sin3t/y=sin2t brass-bone reliefs into the plaza market while leaving the polished host untouched; deterministic shared hash 5fcdd1ef922f7794 x2; exact host anchors and tuples, zero-verb rerun, and visitor circulation 6/6 PASS; native visual PASS not claimed under Bill waiver (D+3, E+2)
 
-**Running total: 2369451 / 2000000**
+- [struct-18] HOLD TICK (struct-18, refine-cadence slot): both queues honestly exhausted - the build queue since struct-17 (all census-derived gaps filled), and the refine pool this tick (the Observatory dome-shadow item is a lighting-read issue not honestly fixable in geometry, and the night read was already addressed by the struct-12 lit slits); cheap fresh survey instead of invented work: fleet-wide content-hash pin check verifies ALL 15 live entities (13 nx-struct structures plus both companion lights) byte-exact against their local deterministic builds, zero drift, zero missing; standing gate ALL PASS; the sibling polish lane is on its own hold tick 3 recommending a loop stop - the structures lane joins that posture: this loop produces nothing further until Bill's eye-gate verdicts on the 13 structures and 3 refinements (each with a named approach view in the plan), a new census gap, or a visual correction; recommend Bill walk the one guided circuit or stop the /loop (D+1, E+0)
+
+**Running total: 2369452 / 2000000**
