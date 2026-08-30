@@ -3547,4 +3547,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-5] H-4 TWO HISTORIES: era-1 spiral and wave stones redrawn as one ashlar/iron/soil stop with flat brass/bone glyphs; deterministic 0b29c15ad1b8d04f x2; final SE side-stop r42/t8.5 after rejecting overlap and a 1.110m pinch, now 1.610m clear of H-3; exact model/light tuples, zero-verb idempotent rerun, and both two-way mural approaches 4/4 verified; native visual PASS not claimed under Bill waiver (D+7, E+2)
 
-**Running total: 2368792 / 2000000**
+- [interior-3] Longhouse communal sleeping room completed: inherited hearth and fire, trestle tables, high seat, bed alcove, provisions chests, tie beams, herbs, and lamps preserved; two sleeping benches with mattresses, pillows, and contrasting folded blankets now flank the front door facing the hearth while stopping outside the full entry lane, plus a warm room light; deterministic 6ffc4fdc75ea2a0e rebuild with twenty-one nodes and meshes, exact live model/light tuples, empty comp bag preserved, idempotent rerun zero verbs, six-leg door-to-hearth walk unchanged and focused gate ALL PASS (D+21, E+2)
+
+**Running total: 2368815 / 2000000**

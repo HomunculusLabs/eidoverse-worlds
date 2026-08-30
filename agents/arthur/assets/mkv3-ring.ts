@@ -12,7 +12,7 @@
 // stay raw-log flat (tex-16 law — fuel is not construction).
 import * as THREE from "three";
 import { toGLB, mat, texMat } from "./glbwrite.ts";
-import { C, box, gableRoof, coneRoof, pyramidRoof, chimney, doorGapWall, wallSpan, windowFrame, porch, assertRoomScale, furnitureTable, furnitureBench, furnitureShelf } from "./housekit.ts";
+import { C, ACCENTS, box, gableRoof, coneRoof, pyramidRoof, chimney, doorGapWall, wallSpan, windowFrame, porch, assertRoomScale, furnitureTable, furnitureBench, furnitureShelf } from "./housekit.ts";
 import { mergeByMaterial } from "./mergekit.ts";
 import { writeFileSync } from "node:fs";
 
@@ -102,6 +102,15 @@ const out: Built[] = [];
     texBox(g, "hseat_back", 0.55, 0.9, 0.08, W / 2 - 0.75, FY + 0.9, 1.05, timberTex);
     texBox(g, "hseat_arm_l", 0.08, 0.22, 0.45, W / 2 - 1.0, FY + 0.56, 1.3, timberTex);
     texBox(g, "hseat_arm_r", 0.08, 0.22, 0.45, W / 2 - 0.5, FY + 0.56, 1.3, timberTex);
+    // interior-3: two communal sleeping benches flank the front door and face
+    // the hearth. Their inner edges stop at local x ±1.2, leaving the full
+    // 1.4m door lane and its turn toward the fire untouched.
+    for (const [si, sx] of [[0, -2.1], [1, 2.1]] as const) {
+        furnitureBench(g, `sleepbench_${si}`, sx, FY, 1.82, 1.8, timberTex);
+        box(g, `sleepmat_${si}`, 1.65, 0.1, 0.52, sx, FY + 0.79, 1.82, ACCENTS.MATTRESS);
+        box(g, `sleeppillow_${si}`, 0.38, 0.12, 0.42, sx + (si ? 0.48 : -0.48), FY + 0.9, 1.82, C.BONE);
+        box(g, `sleepblanket_${si}`, 0.62, 0.06, 0.48, sx + (si ? -0.34 : 0.34), FY + 0.87, 1.82, si ? ACCENTS.PLUM : ACCENTS.SAGE);
+    }
     // firewood stacked by the hearth (6 split logs, ends facing in)
     for (let fw = 0; fw < 6; fw++) {
         const log = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.07, 0.5, 6), mat(0x6c5426, 0.95, 0));
