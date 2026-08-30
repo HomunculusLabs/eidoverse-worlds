@@ -59,7 +59,9 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    reflecting shelf on the N-gate walk; the N approach's water edge.
 6. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
    now live: every struct-N with N%3==0 is a refine tick (first: struct-12
-   done; next: struct-18).
+   done; next: struct-18). **BUILD QUEUE HELD (struct-17): all census-
+   derived gaps filled; both build lanes wait on Bill's eye-gate verdicts.
+   Refine pool remaining: Observatory dome-shadow (source-judged, low).**
 
 ## Siting log
 
@@ -80,6 +82,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-14 | U-4 Skene Wall | behind Theater stage | (−23.32, 0.045, 48.05) | π (stage face → seats) | LIVE, stage walk 4/4 |
 | struct-15 | REFINE: Pendulum deficits | — | exact standing tuple | — | LIVE, posts out + beam up, walk 5/5 re-verified |
 | struct-16 | U-5 Water Stair | 270°/32 (N-gate walk axis) | (0, −0.032, −32) | 0 (descends toward village) | LIVE, circuit walk 4/4 |
+| struct-17 | REFINE: Shell Tower base | — | exact standing tuple | — | LIVE, 6 footing pads, socket re-applied, walk re-verified |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -531,3 +534,23 @@ N approach now carries its own water edge.
 
 **Bill should eye-check**: from the N gate — the stair falling into
 still water; the brass finials framing the crown.
+
+## struct-17 — REFINE TICK 3 (pulled forward): Shell Tower base
+
+Refine tick pulled forward from struct-18: the build queue is honestly
+exhausted (every census-derived gap filled), and the sibling polish lane
+declared campaign hold the same window — both build lanes now wait on
+Bill's eye-gate. Rather than force a filler build, this tick took the
+last source-judged deficit in the refine pool.
+
+- Deficit: the shell's underside read as floating on the bare plinth
+  disc. Fix: six dark footing pads plant the first ribbon turn to the
+  ground (radial pads at r3.4 spread over the outer sweep, tangent-
+  oriented).
+- Discipline: baseline reproduced (c7b641fa); candidate deterministic ×2,
+  sha bfdb1792374586e6; pose-gated re-place at the EXACT tuple with the
+  crown socket comp re-applied (comp-wipe law, 2 verbs); idempotent
+  rerun zero verbs; standing walk re-run CLIMB_PASS (no regression).
+
+**Bill should eye-check**: from the N approach — the shell's base sweep
+now touching ground at six points.
