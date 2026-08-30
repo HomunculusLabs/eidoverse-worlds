@@ -3641,4 +3641,6 @@ fixes ≈ 6 F.)
 
 - [struct-18] HOLD TICK (struct-18, refine-cadence slot): both queues honestly exhausted - the build queue since struct-17 (all census-derived gaps filled), and the refine pool this tick (the Observatory dome-shadow item is a lighting-read issue not honestly fixable in geometry, and the night read was already addressed by the struct-12 lit slits); cheap fresh survey instead of invented work: fleet-wide content-hash pin check verifies ALL 15 live entities (13 nx-struct structures plus both companion lights) byte-exact against their local deterministic builds, zero drift, zero missing; standing gate ALL PASS; the sibling polish lane is on its own hold tick 3 recommending a loop stop - the structures lane joins that posture: this loop produces nothing further until Bill's eye-gate verdicts on the 13 structures and 3 refinements (each with a named approach view in the plan), a new census gap, or a visual correction; recommend Bill walk the one guided circuit or stop the /loop (D+1, E+0)
 
-**Running total: 2369452 / 2000000**
+- [artwalk-17] B-7 SHRINE SEVEN-STAR PANEL: seven connected brass/bone stars on a forged rear-stone rider bring Night Table vocabulary into the untouched shrine; deterministic a7ef8541e9561833 x2; exact host-local (-0.95,0.25,-1.16) anchor and tuple, zero-verb rerun, shrine circuit 6/6 PASS; native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369456 / 2000000**

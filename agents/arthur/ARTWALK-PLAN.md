@@ -65,7 +65,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
    plaza-facing east pier as `nx-artwalk-b5-belltower-rings`.
 6. **B-6 Market Lissajous counters — DONE**: twin 3:2 reliefs live as
    `nx-artwalk-b6-market-lissa-{left,right}`.
-7. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+7. **B-7 Shrine seven-star panel — DONE**: connected brass/bone constellation
+   live as `nx-artwalk-b7-shrine-stars`.
+8. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -92,6 +94,19 @@ fronts. Exact tuples verified; idempotent rerun emitted zero verbs. Market
 visitor circulation remained 6/6 PASS, max arrival 0.389m. Native review was
 unavailable under Bill's waiver; eye-check from the plaza counter line: both
 curves should read as one paired 3:2 rhythm without hiding goods or hems.
+
+### [artwalk-17] THE SHRINE SEVEN-STAR PANEL (2026-08-30) — DONE, LIVE
+Night Table vocabulary enters the quiet west shrine as a forged rear-stone
+rider: seven connected brass/bone stars, geometry rather than painted symbol.
+Deterministic build
+`a7ef8541e9561833a553e44a0afef95f2f1d47f9216aefb5b1254e6c2e13b8ed`
+byte-identical x2; 3 merged nodes. Host pinned to
+`store/78611c7dc9a3cb6e.glb`; exact host-local (−0.95,0.25,−1.16) maps to
+(−26.295770450820214,0.25,−3.245626790785106). Exact tuple verified;
+idempotent rerun emitted zero verbs. Shrine approach/rear circuit remained
+6/6 PASS, max arrival 0.360m. Native review unavailable under Bill's waiver;
+eye-check from the altar: the seven-star line should read as a quiet chart on
+the rear stone without competing with candles, altar, or bench.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
