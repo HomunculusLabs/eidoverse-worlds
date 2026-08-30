@@ -369,6 +369,12 @@ resumes on a visual correction, a new evidenced defect, or a widened queue.
 identical no-op surveys, say so and recommend /loop stop rather than burning
 tokens.)
 
+Hold tick (wakeup #14, self-paced): state unchanged — gate ALL PASS,
+carousel pin re-verified live (`store/ce3633992d07055e.glb` at tuple),
+9/9 pins held at last full census. Still holding for Bill's eye-gate
+verdicts; no new evidence. Per the hold-law amendment this is the first
+identical no-op survey since the hold began.
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
