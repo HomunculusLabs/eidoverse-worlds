@@ -3545,4 +3545,6 @@ fixes ≈ 6 F.)
 
 - [polish-261] carousel hero-readiness judgment: mane slab candidate proven sub-threshold at every viewing distance and no other element rose to an evidenced defect on the 6-view contact sheet; verdict internally hero-ready, eye-gate packet delivered to Bill exactly once; live hash unchanged ce3633992d07055e with fresh rebuild byte-identical and live census verified; lane advances to plaza hearth next wakeup (D+0, E+0)
 
-**Running total: 2368783 / 2000000**
+- [artwalk-5] H-4 TWO HISTORIES: era-1 spiral and wave stones redrawn as one ashlar/iron/soil stop with flat brass/bone glyphs; deterministic 0b29c15ad1b8d04f x2; final SE side-stop r42/t8.5 after rejecting overlap and a 1.110m pinch, now 1.610m clear of H-3; exact model/light tuples, zero-verb idempotent rerun, and both two-way mural approaches 4/4 verified; native visual PASS not claimed under Bill waiver (D+7, E+2)
+
+**Running total: 2368792 / 2000000**

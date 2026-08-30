@@ -41,7 +41,7 @@ Rebirth = re-site for the radial village, re-material into the standing families
 | H-1 | Lissajous sculpture | `mklissa.ts`, `placelissa.ts` | spin y 9°/s + slow precession | Era-1's "math pieces, as requested" star; full script chain exists |
 | H-2 | Golden spiral shell + borromean rings — DONE | `mkmath1.ts` | none (static pedestals) | Pedestal duo live as `nx-artwalk-h2`; Bill eye-check pending |
 | H-3 | Hypar canopy — DONE | `mkmath1.ts` | none | Walk-through ruled saddle live as `nx-artwalk-h3`; Bill eye-check pending |
-| H-4 | Mural stone pair | `_era1-2/village_mural_{a,b}.glb` | none | Story stones; decode era-1 glyphs, redraw in village palette |
+| H-4 | Mural stone pair — DONE | `_era1-2/village_mural_{a,b}.glb` | none | Spiral/wave story stones live as `nx-artwalk-h4`; Bill eye-check pending |
 | H-5 | Möbius arch v2 | `_era1-2/village_mobius2.glb` (122 D) | none | The big one — a gate-class piece for an art-walk entry |
 | H-6 (tail) | Chimes / observatory | `mkobs1.ts`, chimes glb | slow spin | Only if H-1..H-5 land clean and Bill wants more |
 
@@ -116,3 +116,25 @@ tuples verified; idempotent rerun emitted zero verbs. Two-way transverse
 walk through the canopy passed 4/4 legs, max arrival 0.32m. Bill eye-check:
 whether the two ruling families read as one saddle-shaped sky from H-2 and
 whether the warm pendant makes the shelter feel inhabited at night.
+
+### [artwalk-5] TWO HISTORIES (2026-08-30) — DONE, LIVE
+Era-1 sources decoded as a 14-mark spiral stone (16 meshes, 576 vertices) and
+a four-by-eight wave stone (34 meshes, 1,224 vertices), both 1.8 x 2.4 x
+0.6m. Reborn as one paired telling: enlarged 18-mark brass spiral and
+four-by-nine bone wave field on two ashlar slabs, forge-iron panel frames,
+shared crest, soil approach pavers, and warm pendant. The 4.5 x 4.78m
+footprint deliberately crosses the room-scale threshold so the paver approach
+remains exact-trimesh walkable rather than a solid furniture box.
+Deterministic build
+`0b29c15ad1b8d04f8e1cb57b7953b6f92895030438c537164f3e9aefcbc71562`
+byte-identical x2; decode 7 meshes / 1,876 vertices / 4.500 x 2.800 x
+4.780m. Native review unavailable under Bill's waiver; frames exist, but no
+visual PASS is claimed. Final side-stop siting: `nx-artwalk-h4` at
+(35.70889244992065,-0.041880605288849126,-23.68807716974934), yaw
+-2.356194490192345, SE basis r42/t8.5; corridor corners 39.959–45.128m,
+1.610m clear of `nx-artwalk-h3`. The t6 trial overlapped H-3 and t8 left a
+1.110m pinch; both were rejected before mutation. Exact model/light tuples
+verified; idempotent rerun emitted zero verbs. Both mural approaches passed
+two-way MCPL walking, 4/4 legs with max arrival 0.312m. Bill eye-check: whether
+the spiral and wave languages read distinctly at walking distance and whether
+the pair feels like one story stop rather than two unrelated signs.
