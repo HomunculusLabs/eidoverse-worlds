@@ -3551,4 +3551,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-6] H-5 THE HALF-TURN GATE: era-1 120-segment Möbius arch reborn as a 5.8m brass half-turn entry with ashlar feet, iron collars, compact soil approach, and paired lights; deterministic 3c48f921d262907a x2; first r30 plan rejected for court overlap, final r31/t-3 sits 1.730m clear; exact model/two-light tuples, zero-verb idempotent rerun, and 4/4 two-way passage verified; native visual PASS not claimed under Bill waiver (D+6, E+3)
 
-**Running total: 2368824 / 2000000**
+- [interior-4] Market counters completed: inherited bread baskets and loaves, cloth bolts, jugs, trestle counters, poles, and both awning anchors preserved; two merchant-side shelves, a brass-pan baker balance, and a compact weaver coin box now sit behind the counter line with a warm stall light while the full visitor lane stays clear; deterministic 1262295539e80fa1 rebuild with twelve nodes and ten meshes, exact live model/light tuples, empty comp bag preserved, idempotent rerun zero verbs, six-leg counter-front walk unchanged and focused gate ALL PASS (D+12, E+2)
+
+**Running total: 2368838 / 2000000**
