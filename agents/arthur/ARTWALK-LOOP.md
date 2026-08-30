@@ -13,6 +13,8 @@ Load skill `eidoverse-world-building` FIRST on every wakeup.
 Repo: `/Users/t3rpz/projects/eidoverse-worlds`
 World: `commons-next` (live: `https://eidoverse.billding.dev/?world=commons-next`)
 Durable plan: `agents/arthur/ARTWALK-PLAN.md` (retargeted 2026-08-30 — read it fresh)
+Interlane: `agents/arthur/INTERLANE-PROTOCOL.md` — read it fresh EVERY wakeup;
+two sibling lanes (polish/interior) run concurrently with this one.
 English only. Bill alone may end this loop.
 
 ## PURPOSE

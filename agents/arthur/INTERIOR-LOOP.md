@@ -13,6 +13,8 @@ Repo: `/Users/t3rpz/projects/eidoverse-worlds`
 World: `commons-next` (live: `https://eidoverse.billding.dev/?world=commons-next`)
 Durable plan: `agents/arthur/INTERIOR-PLAN.md` (create on first wakeup from
 this spec if absent — building queue, per-building furniture contract, log)
+Interlane: `agents/arthur/INTERLANE-PROTOCOL.md` — read it fresh EVERY wakeup;
+two sibling lanes (polish/artwalk) run concurrently with this one.
 English only. Bill alone may end this loop.
 
 ## PURPOSE
