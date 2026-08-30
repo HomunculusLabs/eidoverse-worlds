@@ -79,7 +79,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     fill the woodyard windbreak as `nx-artwalk-b11-woodyard-heartwood-measure`.
 12. **B-12 Kiln Heat Contours — DONE**: three nested brass/bone burn rings
     radiate around the fire mouth as `nx-artwalk-b12-kiln-heat-contours`.
-13. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+13. **B-13 South Gate Twin Tides — DONE**: paired seven-mark brass/bone
+    cadences ride the outer gateposts as `nx-artwalk-b13-south-tide-{west,east}`.
+14. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -208,6 +210,24 @@ arrival 0.353m. Review frames were rendered, but native image input remains
 unavailable under Bill's waiver; no visual PASS is claimed. Eye-check from the
 track: the three rings should read as heat contours around the live mouth,
 without masking the flame or appearing detached from the tapered drum.
+
+### [artwalk-23] THE SOUTH GATE TWIN TIDES (2026-08-30) — DONE, LIVE
+The southern threshold now answers the north gate without copying it: one
+seven-mark brass/bone cadence rides each outer post, the paired vertical fields
+forming a slow tide rhythm before the hanging village sign. Each panel stays
+inside the post width and leaves the opening untouched. Deterministic shared
+build `8a6b49f61bcf138e71b9cb281234a406b5626a676bf4449b88714c0e37de3d3a`
+byte-identical x2; decode 3 merged nodes / 0.400 x 1.620 x 0.110m. Host truth
+was pinned to south gate `store/558489ed8a6477c4.glb`; exact outer-face
+host-local anchors (−1.5,0.5,−0.18) and (1.5,0.5,−0.18) map to
+(1.5,0.5,19.68) and (−1.5,0.5,19.68), with rider yaw 0 facing the outside
+road. Live SAT found the nearest non-host solid, the longhouse, 3.887m clear.
+Both tuples verified; idempotent rerun emitted zero verbs. The complete
+outside→plaza→outside gate route remained 6/6 PASS, max arrival 0.340m.
+Review frames were rendered, but native image input remains unavailable under
+Bill's waiver; no visual PASS is claimed. Eye-check from the south road: the
+two seven-mark tides should read as one paired threshold rhythm without
+competing with the hanging sign or narrowing the passage.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 

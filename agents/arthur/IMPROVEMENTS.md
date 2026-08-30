@@ -3653,4 +3653,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-22] B-12 KILN HEAT CONTOURS: three nested brass/bone relief rings radiate around the lime-kiln fire mouth; deterministic 1ad2a6139373b973 x2; exact host-local (0,0,1.15) tuple, 2.391m nearest-solid clearance, zero-verb rerun, fire-mouth track approach 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369476 / 2000000**
+- [artwalk-23] B-13 SOUTH GATE TWIN TIDES: paired seven-mark brass/bone cadences ride the south gate outer posts; deterministic 8a6b49f61bcf138e x2; exact host-local anchors (-1.5,0.5,-0.18)/(1.5,0.5,-0.18), 3.887m nearest-solid clearance, zero-verb rerun, complete gate route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+2)
+
+**Running total: 2369481 / 2000000**
