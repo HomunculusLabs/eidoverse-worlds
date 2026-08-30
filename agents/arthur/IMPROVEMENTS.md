@@ -3645,4 +3645,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-18] B-8 LIVERY HARMONIC REIN: twin counter-running single-frequency brass/bone reins bridge the stable open-front lintel; deterministic cba8d0efb0518938 x2; exact host-local (0,2.22,-2.16) tuple, final open-front siting after rejecting the hidden inn-seam trial, zero-verb rerun, both stall approaches 6/6 PASS; native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369460 / 2000000**
+- [artwalk-19] B-9 DYER'S CROSSING LOOM: seven brass warp rules cross seven bone weft rules over the dye-house windbreak; deterministic 6c3c85dee69191cf x2; exact host-local (0,0.48,-0.77) tuple, 1.527m nearest-solid clearance, zero-verb rerun, vat-side craft lane 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369464 / 2000000**

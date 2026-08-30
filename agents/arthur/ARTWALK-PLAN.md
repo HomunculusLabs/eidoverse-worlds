@@ -70,7 +70,10 @@ are done; the artwalk language now moves INTO the architecture. New queue
 8. **B-8 Livery Harmonic Rein — DONE**: twin single-frequency brass/bone
    reins bridge the stable's open-front lintel as
    `nx-artwalk-b8-stable-harmonic-rein`.
-9. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+9. **B-9 Dyer's Crossing Loom — DONE**: seven brass warp rules cross seven
+   bone weft rules over the dye-house windbreak as
+   `nx-artwalk-b9-dyehouse-crossing-loom`.
+10. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -127,6 +130,24 @@ lanes remained 6/6 PASS, max arrival 0.393m. Native image input failed under
 Bill's waiver, so no visual PASS is claimed. Eye-check from the paddock/open
 front: the two reins should read as one restrained harmonic lintel, not beads
 or signage, and should remain comfortably overhead.
+
+### [artwalk-19] THE DYER'S CROSSING LOOM (2026-08-30) — DONE, LIVE
+The craft lane's small dye shelter receives a wall-scale woven field above its
+three vats: seven brass warp rules cross seven bone weft rules on a forged
+backing, bounded by two quiet measure lines. It is geometry rather than paint,
+and the broad crossing remains readable through the open shed rather than
+becoming textile micro-detail. Deterministic build
+`6c3c85dee69191cf83802dc76fe15150a217e10f20fc5a5b2491aa06a070658e`
+byte-identical x2; decode 3 merged nodes / 2.250 x 0.860 x 0.137m. Host truth
+was pinned to dyehouse `store/8d750d7826584d9d.glb`; exact host-local
+(0,0.48,−0.77) maps to
+(−23.62227356310568,0.48,−23.4535147325719), yaw 0.941. Live SAT placed the
+nearest non-host solid, the row cottage, 1.527m clear. Exact tuple verified;
+idempotent rerun emitted zero verbs. The vat-side approach and lateral craft
+lane remained 6/6 PASS, max arrival 0.362m. Review frames were rendered, but
+native image input remains unavailable under Bill's waiver; no visual PASS is
+claimed. Eye-check from the row-cottage approach: the crossing should read as
+one woven architectural field above the vats without hiding the dyed cloth.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
