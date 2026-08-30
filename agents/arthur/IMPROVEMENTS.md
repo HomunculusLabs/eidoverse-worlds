@@ -3541,4 +3541,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-4] H-3 THE RULED SKY: era-1 hypar reborn as a walk-through 22-ruling brass/bone saddle canopy on ashlar/iron/soil families; deterministic f33e9839b5d95241 x2; final SE-spoke r46 siting after rejecting a 0.764m pinch, now 1.764m clear of H-2; exact model/light tuples, zero-verb idempotent rerun, and 4/4 two-way transverse walk legs verified; native visual PASS not claimed under Bill waiver (D+6, E+2)
 
-**Running total: 2368771 / 2000000**
+- [interior-2] Open forge bay completed: inherited hearth, breathing coals, bellows, anvil and hammer, tongs, and quench barrel preserved; added a bounded timber-and-iron rack with three files and chisels behind the tongs while retaining the exact footprint and clear front work apron, plus a warm bay light; deterministic 2c902a90ed90145e rebuild with ten nodes and nine meshes, exact live model/light tuples, coal motion and embers restored verbatim, idempotent rerun zero verbs, six-leg apron walk unchanged and focused gate ALL PASS (D+10, E+2)
+
+**Running total: 2368783 / 2000000**
