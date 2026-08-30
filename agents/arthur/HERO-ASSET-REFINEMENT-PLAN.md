@@ -176,8 +176,32 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Evidence: `agents/arthur/reviews/hero-assets/polish-263-belltower/`.
 - Next subject: welcome ensemble or tower (post-carousel queue #3/#4).
 
+### polish-264 — welcome board COMMONS lettering enlargement (ACCEPTED, LIVE) — post-carousel subject #3
+
+- Subject: `nx-welcome` (S rim, pos [-3,0,-4.3], yaw 0.6092). Build source
+  `assets/mkv3-welcome59.ts` → `village_welcome3.glb` (live was
+  4b94d42b9ef89826, 6 nodes / 5 draws).
+- Defect: the COMMONS lettering pixels were 0.13m tall / 0.59m wide on a
+  1.0m board — a dark smudge at gameplay distance (18m needs ~0.3m+ letter
+  height); the sign's central greeting promise failed its own read.
+- Change (single edit): letters enlarged to 0.26m tall × 0.94m word width
+  (cw 0.021→0.0333, ch 0.026→0.052). First attempt (cw 0.038) computed
+  wordW 1.038 > board 1.0 — caught in math BEFORE rendering, trimmed to fit.
+  Vertical band re-centered (top 1.46 → bottom 1.20 inside board 1.14..1.56).
+- Candidate hash: `362c5be14cb9a2459987851090e2e0c3afd0ca35fbced61386d5058c74a2b567`
+  (6 nodes / 5 draws unchanged). Double rebuild byte-identical.
+- Falsification: COMMONS readable at gameplay + medium views; lamp bead and
+  pointer arms clear; no board-edge overflow.
+- Placed via NEW dedicated placer `next-place-welcome.ts`: live lib
+  `store/362c5be14cb9a245.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs. Companion light `nx-welcome-l` untouched.
+  commons' av-welcome polish-29 pin untouched.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-264-welcome/`.
+- Next subject: `nx-tower` (post-carousel queue #4).
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
-plaza hearth ✅ (polish-262), belltower ✅ (polish-263), welcome ensemble,
-tower. Present Bill one concise eye-gate packet exactly once at that point.
+plaza hearth ✅ (polish-262), belltower ✅ (polish-263), welcome ensemble ✅
+(polish-264 — board done; the welcome lamp light entity remains), tower.
+Present Bill one concise eye-gate packet exactly once at that point.

@@ -3561,4 +3561,8 @@ fixes ≈ 6 F.)
 
 - [polish-263] belltower belfry lamp un-entombed: the emissive bead sat 0.4 inside the closed pyramid cap where cone radius 1.32 fully occluded it day and night, a dead light; moved into open belfry air between the arch posts clear of the bell; night warm-pixel count 0 to 34, 11 nodes 9 draws, byte-identical double rebuild, placed at exact tuple with empty comp bag preserved and idempotent rerun zero verbs; carousel rebuild from the shared landmarks script verified byte-identical; evidence in reviews/hero-assets/polish-263-belltower/ (D+11, E+1)
 
-**Running total: 2368913 / 2000000**
+- [artwalk-8] Bill directive recorded: artwalk design language moves into the buildings — phase B built-in-art queue drafted (hall charter wall, inn wave lintel, ruled-sky porch, golden-ratio gate details); interior lane cross-coordination law added (D+2, E+1)
+
+- [polish-264] welcome board lettering enlargement: COMMONS pixels were 0.13m tall on a 1.0m board and read as a dark smudge at gameplay distance; letters enlarged to 0.26m tall with word width solved to 94 percent of the board after the first attempt overflowed; 6 nodes 5 draws, byte-identical double rebuild, placed at exact tuple with empty comp bag preserved and idempotent rerun zero verbs; companion lamp light untouched; evidence in reviews/hero-assets/polish-264-welcome/ (D+6, E+1)
+
+**Running total: 2368923 / 2000000**
