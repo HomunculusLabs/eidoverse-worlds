@@ -3571,4 +3571,6 @@ fixes ≈ 6 F.)
 
 - [interior-6] Garden keeper cottage completed: live hash traced to the correct legacy house builder; inherited kitchen, hearth and pots, work table and carrot basket, furnished bed, garden walls, planters, flowers, vines, and bench preserved; west-wall seed shelf with three jars added outside the centered entry lane, target-only static merging reduced one hundred seven top-level nodes to twenty-two nodes and meshes with the exact bbox unchanged, and warm room light added; deterministic 872aec35e3aa43b3 rebuild, exact live model/light tuples, empty comp bag preserved, idempotent rerun zero verbs, six-leg room walk unchanged and focused gate ALL PASS (D+22, E+2)
 
-**Running total: 2368971 / 2000000**
+- [struct-2] S-1 THE OBSERVATORY raised live in commons-next: ashlar drum with oculus-slit dome, harmonic ring courses, brass meridian band arcing over the slit, bone-framed door facing the plaza, and a circular timber bench ring with brass gnomon under the oculus inside; one caught build defect (dome floated 2.4m) fixed and decode-verified; deterministic double rebuild sha 337ce538fc89feaf, 10 nodes, empty comp bag; sited in the NW wedge 292deg/r44 from 137 SAT-passing candidates (min gap 6.81m), placed at exact tuple nx-struct-observatory, idempotent rerun zero verbs, two-way MCPL door walk 5/5; visual PASS not claimed under standing waiver - Bill eye-check requested on the dome-plus-meridian silhouette from the NW plaza approach; plan at STRUCTURES-PLAN.md (D+14, E+1)
+
+**Running total: 2368986 / 2000000**
