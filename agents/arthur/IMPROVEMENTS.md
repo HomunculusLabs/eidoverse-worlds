@@ -3637,4 +3637,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-15] HOST-EVOLUTION RECONCILIATION: polish evolved nx-town-hall 44fec272→c5964bc8 with door frames; B-1 Charter Wall remained exact at host-local (-4.28,1.10,0), same tuple and bbox, zero-verb rerun, 3.245m nearest non-host clearance, hall route 8/8 PASS; refreshed the durable host pin and added the phase-B continuity law before selecting another target; no world mutation or visual PASS claimed (D+1, E+0)
 
-**Running total: 2369446 / 2000000**
+- [artwalk-16] B-6 MARKET LISSAJOUS COUNTERS: twin forged counter-front riders carry 24-mark x=sin3t/y=sin2t brass-bone reliefs into the plaza market while leaving the polished host untouched; deterministic shared hash 5fcdd1ef922f7794 x2; exact host anchors and tuples, zero-verb rerun, and visitor circulation 6/6 PASS; native visual PASS not claimed under Bill waiver (D+3, E+2)
+
+**Running total: 2369451 / 2000000**

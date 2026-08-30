@@ -63,7 +63,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
    hinge plates live on `nx-town-gate-n` as three `nx-artwalk-b4-*` riders.
 5. **B-5 Belltower three-ring pier — DONE**: Borromean echo live on the
    plaza-facing east pier as `nx-artwalk-b5-belltower-rings`.
-6. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+6. **B-6 Market Lissajous counters — DONE**: twin 3:2 reliefs live as
+   `nx-artwalk-b6-market-lissa-{left,right}`.
+7. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -75,6 +77,21 @@ Host-rider continuity law: a host re-place may change its pinned lib without
 moving the rider. Before adding another intervention, reconcile every evolved
 host against the rider's exact local anchor and passage contract; refresh the
 host pin only when pose/bbox/attachment geometry remain compatible.
+
+### [artwalk-16] THE MARKET LISSAJOUS COUNTERS (2026-08-30) — DONE, LIVE
+The current high-traffic target re-derived to the plaza market: two separate
+counter-front riders leave polished `nx-town-market` untouched. Each forged
+panel carries the same source law as H-1 — 24 brass/bone marks on
+x=sin(3t), y=sin(2t) — scaled to read across a transaction rather than as a
+miniature sculpture. Deterministic shared build
+`5fcdd1ef922f7794350d710da3f7b745d17c30d69006df7b93a198bda8ffd586`
+byte-identical x2; decode 3 nodes / 600 vertices / 1.450 x 0.500 x 0.113m.
+Host pinned to `store/dabf662e5fe11f96.glb`; exact local anchors
+(−1,0.38,0.44) and (1,0.38,0.44) place both reliefs on the existing counter
+fronts. Exact tuples verified; idempotent rerun emitted zero verbs. Market
+visitor circulation remained 6/6 PASS, max arrival 0.389m. Native review was
+unavailable under Bill's waiver; eye-check from the plaza counter line: both
+curves should read as one paired 3:2 rhythm without hiding goods or hems.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
