@@ -3543,4 +3543,6 @@ fixes ≈ 6 F.)
 
 - [interior-2] Open forge bay completed: inherited hearth, breathing coals, bellows, anvil and hammer, tongs, and quench barrel preserved; added a bounded timber-and-iron rack with three files and chisels behind the tongs while retaining the exact footprint and clear front work apron, plus a warm bay light; deterministic 2c902a90ed90145e rebuild with ten nodes and nine meshes, exact live model/light tuples, coal motion and embers restored verbatim, idempotent rerun zero verbs, six-leg apron walk unchanged and focused gate ALL PASS (D+10, E+2)
 
+- [polish-261] carousel hero-readiness judgment: mane slab candidate proven sub-threshold at every viewing distance and no other element rose to an evidenced defect on the 6-view contact sheet; verdict internally hero-ready, eye-gate packet delivered to Bill exactly once; live hash unchanged ce3633992d07055e with fresh rebuild byte-identical and live census verified; lane advances to plaza hearth next wakeup (D+0, E+0)
+
 **Running total: 2368783 / 2000000**

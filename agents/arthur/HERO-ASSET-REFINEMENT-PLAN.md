@@ -53,6 +53,39 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 
 ## Iteration history (continued)
 
+### polish-261 — hero-readiness judgment (NO SOURCE CHANGE; eye-gate delivered)
+
+- Candidate defect this tick: the mane iron slab. Multi-view zoom inspection
+  (front/right/aerial crops) could not resolve it at any normal viewing
+  distance — it is sub-threshold. No other element (saddles, base, stair,
+  lanterns, night structure) rose to an evidenced defect on the contact sheet.
+- Loop law: a survey-only wakeup is not progress, but neither is inventing
+  ornament for an invisible element. The closed iteration here is the
+  readiness JUDGMENT with evidence: night shows structure dimly present
+  (horses + base readable), day readability strong, crown/tails/spire all
+  accepted in polish-258/259, live tuple and comps verified.
+- Verdict: carousel internally hero-ready. Eye-gate packet delivered to Bill
+  exactly once (loop law), then the lane advances to the next ranked asset.
+- Live hash: `ce3633992d07055e02115782f258de59764f5a9d9b6c461460f90931b8823fa7`
+  (fresh rebuild byte-identical; live census lib/pose/7 comp keys verified).
+- Evidence: `agents/arthur/reviews/hero-assets/polish-261-carousel/`
+  (before/ = live build full rig; contact-sheet.jpg = 6-view packet).
+- Next subject (post-carousel queue head): `nx-hearth` plaza hearth.
+
+## EYE-GATE PACKET (delivered once, polish-261)
+
+- Subject: `nx-carousel`, world commons-next. Live exact hash:
+  `ce3633992d07055e02115782f258de59764f5a9d9b6c461460f90931b8823fa7`
+- What changed this campaign: gold spire + scalloped valance crown
+  (polish-258), horse tail re-orientation (polish-259); deck-inlay
+  experiment tested and rejected with the canopy-occlusion proof (polish-260).
+- Packet paths: reviews/hero-assets/polish-261-carousel/contact-sheet.jpg
+  (front/right/gameplay/night/aerial/motion) + full 10-view rigs in
+  polish-258/259/261 dirs. Live surface: billding.dev/?world=commons-next,
+  carousel NW of plaza at (-18, 18).
+- Bill's visual correction on this packet immediately re-prioritizes the
+  carousel; otherwise the lane moves to the plaza hearth next wakeup.
+
 ### polish-260 — deck inlay enlargement (REJECTED, reverted, nothing placed)
 
 - Hypothesis: 16 deck inlays (0.72 x 0.035 x 0.12, 4.75cm protrusion) were
