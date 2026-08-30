@@ -3651,4 +3651,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-21] B-11 HEARTWOOD MEASURE: five concentric brass/bone growth rings fill the woodyard windbreak above the cordwood; deterministic aa5f2550365c1f7f x2; exact host-local (0,0.75,-0.80) tuple, 2.650m nearest-solid clearance, zero-verb rerun, open-yard approach 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369472 / 2000000**
+- [artwalk-22] B-12 KILN HEAT CONTOURS: three nested brass/bone relief rings radiate around the lime-kiln fire mouth; deterministic 1ad2a6139373b973 x2; exact host-local (0,0,1.15) tuple, 2.391m nearest-solid clearance, zero-verb rerun, fire-mouth track approach 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369476 / 2000000**

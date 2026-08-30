@@ -77,7 +77,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     the mill-room door as `nx-artwalk-b10-windmill-four-wind-crown`.
 11. **B-11 Heartwood Measure — DONE**: five concentric brass/bone growth rings
     fill the woodyard windbreak as `nx-artwalk-b11-woodyard-heartwood-measure`.
-12. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+12. **B-12 Kiln Heat Contours — DONE**: three nested brass/bone burn rings
+    radiate around the fire mouth as `nx-artwalk-b12-kiln-heat-contours`.
+13. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -188,6 +190,24 @@ lateral yard lane remained 6/6 PASS, max arrival 0.343m. Review frames were
 rendered, but native image input remains unavailable under Bill's waiver; no
 visual PASS is claimed. Eye-check from the open yard: the five rings should
 read immediately as one heartwood measure above the stacked logs, not a sign.
+
+### [artwalk-22] THE KILN HEAT CONTOURS (2026-08-30) — DONE, LIVE
+The lime kiln's source-true continuous burn receives a direct architectural
+measure: three nested brass/bone relief rings radiate around the fire mouth,
+held by four forged mounts and one low datum. The 1.55m-wide contour field
+keeps the live flame visible while making the heat legible from the track.
+Deterministic build
+`1ad2a6139373b973057e0cb0b2c26c9e4b24b7ee83d79ab8f15bfe27bc1e19a0`
+byte-identical x2; decode 3 merged nodes / 1.550 x 1.588 x 0.125m. Host truth
+was pinned to kiln `store/69c0e48a917d4ed2.glb`; exact host-local
+(0,0,1.15) maps to (30.292104422821314,0,38.093697703958085), yaw
+−2.4784945651581642. Live SAT found the nearest non-host solid, the charcoal
+dressing, 2.391m clear. Exact tuple verified; idempotent rerun emitted zero
+verbs. The fire-mouth approach and lateral track remained 6/6 PASS, max
+arrival 0.353m. Review frames were rendered, but native image input remains
+unavailable under Bill's waiver; no visual PASS is claimed. Eye-check from the
+track: the three rings should read as heat contours around the live mouth,
+without masking the flame or appearing detached from the tapered drum.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
