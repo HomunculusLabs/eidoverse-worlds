@@ -33,8 +33,10 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    the Observatory on the NW walk.
 2. **T-2 Millrace Cascade** — [DONE struct-8] harmonic seven-step water
    descent west of the windmill; head-race + sluice + basin.
-3. **T-3 Pendulum Wave** — plaza-adjacent calibration piece (the one
-   rhythm every village can read).
+3. **T-3 Pendulum Wave** — [DONE struct-9] nine pendulums frozen at
+   maximum coherence, bobs tracing one sine curve; NE path past the
+   woodyard. Static by honest design (spin vocabulary can't express
+   per-pendulum phases).
 4. Extend housekit: `twistBand` primitive (graduating the Möbius form)
    when a second twisted-band structure is commissioned.
 
@@ -49,6 +51,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-6 | S-5 Reed Pool & Bridge | 246°/42 (W flank, NW of Shell Tower) | (−17.08, −0.044, −38.37) | −π/2 (bridge spans world X) | LIVE, two-way crossing 5/5 |
 | struct-7 | T-1 The Orrery | 284°/38 (plaza→Observatory walk) | (9.19, −0.052, −36.87) | 0 | LIVE, motion:orb −0.5°/s, circle walk 5/5 |
 | struct-8 | T-2 Millrace Cascade | 200°/40 head; race runs W | (−37.59, −0.045, −13.68) | −π/2 | LIVE, bank walk 5/5 |
+| struct-9 | T-3 Pendulum Wave | 46°/36 (NE path past woodyard) | (25.01, −0.041, 25.9) | 0 (row ∥ X, swing ∥ Z) | LIVE, frozen moment, circuit walk 5/5 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -299,3 +302,33 @@ windmill road.
 
 **Bill should eye-check**: from the windmill road, the stepped water
 descent; walk the north bank and watch the drops diminish.
+
+## struct-9 — T-3 PENDULUM WAVE (concept contract + record)
+
+**Concept**: the calibration piece, honestly rendered. A pendulum wave
+cycles nine periods through moments of coherence; the engine's motion
+vocabulary (single-node spin) cannot express per-pendulum phases — so
+the sculpture FREEZES the wave at its moment of maximum coherence: nine
+pendulums caught mid-swing at phases n·2π/9, 0.62 rad amplitude, their
+brass bobs tracing one clean sine curve across a timber A-frame and
+crossbeam. Same idea; no fake motion claim.
+
+- Static by design: dark rods, brass bobs, timber frame — standing
+  families only. Furniture-solid collider (correct for a kinetic-frame
+  sculpture).
+- Build: mkv3-pendulum.ts → village_pendulum3.glb, deterministic ×2,
+  sha256 97779023b5a27cd9, 3 nodes.
+- Siting: 46°/r36 → (25.01, −0.041, 25.9), NE path past the woodyard
+  (gap 3.87m), near-plaza. Row parallel X, swing plane facing the path.
+- Placement: nx-struct-pendulum PLACED_VERIFIED at exact tuple, 1 verb,
+  idempotent rerun zero verbs.
+- Walk: five-leg approach + full circuit of the frame ALL PASS.
+- ALSO this tick: resolved the sibling window's BLOCKED report on
+  struct-8. Fresh verification — idempotent placer pass, 5/5 bank walk,
+  live yaw −π/2 — proved no live conflict existed; the "conflicting
+  contract" was a stale +π/2 header comment left in my in-progress
+  placer draft while I was iterating orientations. Comment corrected
+  in-source with a note; no entity changed.
+
+**Bill should eye-check**: from the NE path — the frozen sine curve of
+bobs; walk the frame's circuit and read the wave from both sides.

@@ -1,23 +1,21 @@
-// next-place-struct-millrace.ts — struct-8: T-2 MILLRACE CASCADE placement.
-// commons-next only. NEW entity nx-struct-millrace (structures lane).
+// next-place-struct-pendulum.ts — struct-9: T-3 PENDULUM WAVE placement.
+// commons-next only. NEW entity nx-struct-pendulum (structures lane).
 // Two-pass chassis (hash gate -> fresh live SAT w/ exemptions -> upload
 // 429-paced -> spawn -> post-place verify -> idempotent rerun). Empty comp
-// bag. Site: 200deg/r40 head (-37.59,-13.68), race descending WEST away
-// from the windmill; YAW -pi/2 maps local +Z (downhill) to world -X (west).
-// (struct-8 note: an earlier draft ran +pi/2; the header comment above this
-// line previously said +pi/2 and was stale — the constant and live entity
-// are -pi/2, race west. Confirmed by idempotent rerun + bank walk.)
+// bag (frozen-moment sculpture; the wave is static by design). Site:
+// 46deg/r36 (25.01,25.9) NE path past the woodyard. YAW 0: the pendulum
+// row runs along local X = world X; swing plane faces the plaza.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 const ROOT = "/Users/t3rpz/projects/eidoverse-worlds", WORLD = "commons-next";
 const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
-const POS = [-37.59, -0.04525692432411782, -13.68] as const;
-const YAW = -Math.PI / 2; // local +Z (downhill) -> world -X: race runs WEST from the head into open farmland
+const POS = [25.01, -0.04056606885178893, 25.9] as const;
+const YAW = 0;
 const m = {
-    id: "nx-struct-millrace",
-    file: "village_millrace3.glb",
-    sha: "d2f46768af7dd0ae4e0a6c4079f9c1b6a74c95a32c8124eb8f80d26e1d37420a",
-    bbox: { min: [-1.71, -0.0, -1.3], max: [1.71, 1.71, 10.3] },
+    id: "nx-struct-pendulum",
+    file: "village_pendulum3.glb",
+    sha: "97779023b5a27cd9e519452bff19974a94d5a7af2c52e45bf80d745e1690777f",
+    bbox: { min: [-4, -0.02, -1.37], max: [4, 3.17, 1.37] },
     comp: {},
 } as const;
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
@@ -57,10 +55,10 @@ for (const e of Object.values(before)) {
     if (!e.bbox || e.id === m.id) continue;
     const bb = e.bbox;
     if (bb.max[1] - bb.min[1] <= 0.5) continue;       // ground layer
-    if (bb.min[1] > 1.5) continue;                     // suspended decor (above our 1.71 top)
+    if (bb.min[1] > 3.0) continue;                     // suspended decor (above our 3.17 top)
     if (gap(T, obb(e.pos, e.yaw ?? 0, bb)) < 1.4) collisions.push(e.id);
 }
-if (collisions.length) die(`millrace seat blocked (<1.4m clear): ${collisions}`);
+if (collisions.length) die(`pendulum seat blocked (<1.4m clear): ${collisions}`);
 const exist = before[m.id];
 if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1 && eq(exist.comp ?? {}, m.comp))) die(`${m.id} live collision/drift`);
 
@@ -68,7 +66,7 @@ let verbs: Array<[string, any]> = [];
 if (!exist) {
     const u = new URL(`${base}/upload`);
     u.searchParams.set("token", cfg.agentToken);
-    u.searchParams.set("name", `commons-next ${m.id} struct-8`);
+    u.searchParams.set("name", `commons-next ${m.id} struct-9`);
     u.searchParams.set("by", cfg.id);
     let lib = "";
     for (let a = 1; a <= 5; a++) {
@@ -90,7 +88,7 @@ if (verbs.length) await new Promise<void>((resolve, reject) => {
         ws.send(JSON.stringify({ type: "verb", verb, args }));
         if (i === verbs.length) setTimeout(() => { clearInterval(paced); clearTimeout(timer); ws.close(); resolve(); }, 1600);
     }, 650);
-    ws.onopen = () => ws.send(JSON.stringify({ type: "join", world: WORLD, id: "arthur-struct8-race", avatar: cfg.avatar, token: cfg.joinToken }));
+    ws.onopen = () => ws.send(JSON.stringify({ type: "join", world: WORLD, id: "arthur-struct9-pend", avatar: cfg.avatar, token: cfg.joinToken }));
     ws.onerror = () => reject(Error("websocket error"));
     ws.onmessage = (ev: any) => {
         const x = JSON.parse(ev.data);
