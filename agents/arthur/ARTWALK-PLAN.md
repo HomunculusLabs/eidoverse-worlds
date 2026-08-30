@@ -73,7 +73,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
 9. **B-9 Dyer's Crossing Loom — DONE**: seven brass warp rules cross seven
    bone weft rules over the dye-house windbreak as
    `nx-artwalk-b9-dyehouse-crossing-loom`.
-10. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+10. **B-10 Four-Wind Crown — DONE**: a four-axis brass/bone wind rose crowns
+    the mill-room door as `nx-artwalk-b10-windmill-four-wind-crown`.
+11. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -148,6 +150,24 @@ lane remained 6/6 PASS, max arrival 0.362m. Review frames were rendered, but
 native image input remains unavailable under Bill's waiver; no visual PASS is
 claimed. Eye-check from the row-cottage approach: the crossing should read as
 one woven architectural field above the vats without hiding the dyed cloth.
+
+### [artwalk-20] THE FOUR-WIND CROWN (2026-08-30) — DONE, LIVE
+The west-spoke windmill receives one unmistakable door crown: four alternating
+brass/bone rules converge through a central brass ring on a forged field, with
+four quiet edge measures. The 2.25m-wide wind rose is architecture-scale rather
+than sign-sized detail. Deterministic build
+`8e55e366b5a289877ef7386fe04be3bef9e797b94b417a276fe06a94ba3a37d8`
+byte-identical x2; decode 3 merged nodes / 2.250 x 0.650 x 0.170m. Host truth
+was pinned to windmill `store/4feee38977d7c6e5.glb`; exact host-local
+(0,2.22,2.62) maps to (−37.38,2.22,0), yaw π/2. The crown's bottom is 2.22m,
+above the 2.20m door opening, and its top is 2.87m inside the room/ceiling
+envelope. Live SAT found the nearest non-host solid, `nx-struct-hypar`, 4.615m
+clear. Exact tuple verified; idempotent rerun emitted zero verbs. The full
+outside→mill-room→outside door route remained 6/6 PASS, max arrival 0.370m.
+Review frames were rendered, but native image input remains unavailable under
+Bill's waiver; no visual PASS is claimed. Eye-check from the west spoke: the
+four axes and center ring should read as one wind crown before the sails take
+over above it, without narrowing the door.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 

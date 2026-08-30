@@ -3647,4 +3647,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-19] B-9 DYER'S CROSSING LOOM: seven brass warp rules cross seven bone weft rules over the dye-house windbreak; deterministic 6c3c85dee69191cf x2; exact host-local (0,0.48,-0.77) tuple, 1.527m nearest-solid clearance, zero-verb rerun, vat-side craft lane 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369464 / 2000000**
+- [artwalk-20] B-10 FOUR-WIND CROWN: four alternating brass/bone axes converge through a central ring above the windmill door; deterministic 8e55e366b5a28987 x2; exact host-local (0,2.22,2.62) tuple, 4.615m nearest-solid clearance, zero-verb rerun, complete mill-room door route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369468 / 2000000**
