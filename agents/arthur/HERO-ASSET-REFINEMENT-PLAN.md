@@ -124,8 +124,37 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
   restored, idempotent rerun zero verbs.
 - Evidence: `agents/arthur/reviews/hero-assets/polish-259-carousel/`.
 
+### polish-262 — plaza hearth gathering ring (ACCEPTED, LIVE) — first post-carousel subject
+
+- Subject: `nx-hearth` (village center of gravity, pos [0,0,0]). Build source
+  `assets/mkv3-plaza.ts` → `village_plaza3.glb` (live was 43fcaf1442f5d6b8,
+  19 nodes / 16 draws).
+- Defect: the 8 outer pavers of the gathering ring had their LONG side RADIAL
+  after the -a yaw — the ring was 8 disconnected slabs with ~1.6m bare gaps and
+  read as scattered planks around the fire, not a gathering circle.
+- Change (single edit): long side now TANGENTIAL (0.62/0.5 radial x
+  1.62/1.34 tangential), near-continuous ring with ~0.5m deliberate worn
+  gaps; wear alternation + UV windows kept; second edit trimmed radial depth
+  (0.56/0.44) after corner math showed a 2.5cm plan overlap with the log
+  benches at the shared diagonals (bench tip r 2.475 vs paver inner edge 2.45).
+- Candidate hash: `027f6f019f9981bfe11f53963996c5a56594e7021ad962aa40e90c98291ee5e6`
+  (19 nodes / 16 draws, unchanged). Double rebuild byte-identical.
+- Falsification: aerial + gameplay confirm the ring reads as a paved gathering
+  circle; benches/well/storyteller seat clear; no clipping.
+- Placed via NEW dedicated placer `next-place-hearth.ts` (chassis copied from
+  next-place-carousel.ts): live lib `store/027f6f019f9981bf.glb`, tuple exact,
+  all 4 comp keys restored, idempotent rerun zero verbs. Note: the first
+  placement attempt wiped comps (spawn before comp restore is inherent to
+  re-place); `next-comps.ts` re-applied all 4 immediately, then the placer's
+  own idempotent verify passed with the full bag.
+- Standing gate ALL PASS (commons av-plaza-hearth pins untouched — different
+  world, different entity).
+- Evidence: `agents/arthur/reviews/hero-assets/polish-262-hearth/`
+  (before/ = live 43fcaf14 build, after/ = 027f6f01 candidate).
+- Next subject: belltower (post-carousel queue #2).
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
-plaza hearth, belltower, welcome ensemble, tower. Present Bill one concise
-eye-gate packet exactly once at that point.
+plaza hearth ✅ (polish-262), belltower, welcome ensemble, tower. Present
+Bill one concise eye-gate packet exactly once at that point.

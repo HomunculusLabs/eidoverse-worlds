@@ -3553,4 +3553,8 @@ fixes ≈ 6 F.)
 
 - [interior-4] Market counters completed: inherited bread baskets and loaves, cloth bolts, jugs, trestle counters, poles, and both awning anchors preserved; two merchant-side shelves, a brass-pan baker balance, and a compact weaver coin box now sit behind the counter line with a warm stall light while the full visitor lane stays clear; deterministic 1262295539e80fa1 rebuild with twelve nodes and ten meshes, exact live model/light tuples, empty comp bag preserved, idempotent rerun zero verbs, six-leg counter-front walk unchanged and focused gate ALL PASS (D+12, E+2)
 
-**Running total: 2368838 / 2000000**
+- [polish-262] plaza hearth gathering ring: the 8 outer pavers had their long side radial leaving 1.6m bare gaps so the ring read as scattered planks; slabs re-laid tangentially as a near-continuous circle with deliberate worn gaps and radial depth trimmed after corner math flagged a bench overlap; 19 nodes 16 draws, byte-identical double rebuild, placed at exact tuple via new next-place-hearth placer with all 4 comp keys restored and idempotent rerun zero verbs; evidence in reviews/hero-assets/polish-262-hearth/ (D+19, E+1)
+
+- [artwalk-7] H-6a SEVEN VOICES: era-1 seven-tube porch chime enlarged into a freestanding ashlar/iron/soil kinetic terminus with flat brass/bone media; deterministic a61457df15380006 x2; named chime assembly turns at calm 2deg/s with no sound claim; final r54.5 siting is 1.650m clear; exact model/motion/light tuple, zero-verb idempotent rerun, and 6/6 approach/transverse walk legs verified; native visual PASS not claimed under Bill waiver (D+32, E+2)
+
+**Running total: 2368892 / 2000000**
