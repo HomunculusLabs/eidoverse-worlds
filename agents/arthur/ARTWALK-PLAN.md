@@ -91,7 +91,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
     crown the cottage door as `nx-artwalk-b17-garden-seed-lattice`.
 18. **B-18 Weaver Warp Count — DONE**: nine alternating warp rules and one
     brass weft crown the row-cottage door as `nx-artwalk-b18-row-warp-count`.
-19. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+19. **B-19 Longhouse Feast Count — DONE**: twelve alternating place marks rise
+    from one brass table line as `nx-artwalk-b19-longhouse-feast-count`.
+20. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -332,6 +334,25 @@ outside→room→outside route remained 6/6 PASS, max arrival 0.365m. Review fra
 were rendered, but native image input remains unavailable under Bill's waiver;
 no visual PASS is claimed. Eye-check from the weaver track: the nine warp rules
 and single crossing trace should read as one woven door crown, not fence bars.
+
+### [artwalk-29] THE LONGHOUSE FEAST COUNT (2026-08-30) — DONE, LIVE
+The communal hall receives a front-porch measure drawn from its own use: twelve
+alternating brass/bone place marks rise from one brass table line across a
+forged fascia at the porch roof edge. The 3.2m span reads at gathering distance
+while remaining above avatar height and clear of the center door lane.
+Deterministic build
+`98a4c17e73e4bac4d3334be1488231b74a3a475e839e3c2f0e2b7ea43e5bc536`
+byte-identical x2; decode 3 merged nodes / 3.200 x 0.320 x 0.120m. Host truth
+was reconciled to the interior-3 longhouse build
+`store/6ffc4fdc75ea2a0e.glb`, byte-identical to its durable
+`village_longhouse3.glb`; exact host-local (0,2.22,4.32) maps to
+(7.668887408682888,2.22,21.89018987430842), yaw −2.828368080172068. Live
+SAT found the nearest non-host solid, `nx-tower`, 3.111m clear. Exact tuple
+verified; idempotent rerun emitted zero verbs. The complete
+outside→porch→room→outside route remained 6/6 PASS, max arrival 0.370m. Review
+frames were rendered, but native image input remains unavailable under Bill's
+waiver; no visual PASS is claimed. Eye-check from the gathering path: the
+twelve marks should read as one feast count across the porch, not railings.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 

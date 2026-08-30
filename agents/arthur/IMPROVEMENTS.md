@@ -3665,4 +3665,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-28] B-18 WEAVER WARP COUNT: nine alternating brass/bone warp rules and one brass weft trace crown the evolved row-cottage door; deterministic d6d10de199f6fb03 x2; interior-8 host reconciled byte-exact, exact host-local (0,2.22,2.2825), 4.638m nearest-solid clearance, zero-verb rerun, full door route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369501 / 2000000**
+- [artwalk-29] B-19 LONGHOUSE FEAST COUNT: twelve alternating brass/bone place marks rise from one table line across the communal porch fascia; deterministic 98a4c17e73e4bac4 x2; interior-3 host reconciled byte-exact, exact host-local (0,2.22,4.32), 3.111m nearest-solid clearance, zero-verb rerun, full porch-door route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
+
+**Running total: 2369505 / 2000000**
