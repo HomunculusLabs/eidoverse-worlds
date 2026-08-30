@@ -55,8 +55,8 @@ are done; the artwalk language now moves INTO the architecture. New queue
 
 1. **B-1 Hall charter wall — DONE**: brass rule-lines + spiral glyph band on
    the council-room wall, live as `nx-artwalk-b1-hall-charter`.
-2. **B-2 Inn lintel**: carved wave-motif lintel over the common-room door
-   (echo of the wave stone) + brass threshold inlay.
+2. **B-2 Inn lintel — DONE**: wave-motif lintel + brass threshold live as
+   `nx-artwalk-b2-inn-{lintel,threshold}`.
 3. **B-3 Ruled-Sky porch**: hypar canopy principle (straight generatrices)
    as a small porch/awning on the market or potter stand.
 4. **B-4 Golden-ratio door proportions + brass spiral hinge-plates** on one
@@ -245,3 +245,24 @@ verified; idempotent rerun emitted zero verbs. Hall flow remained 8/8 PASS,
 max arrival 0.360m. Bill eye-check: stand at the council table about 2m away
 and confirm the spiral + rule-lines read as one charter surface rather than a
 floating sign or micro-detail.
+
+### [artwalk-11] THE WAVE THRESHOLD (2026-08-30) — DONE, LIVE
+Two Histories enters the Traveler's Rest as two collider-honest satellites,
+leaving `nx-town-inn` untouched: a suspended ashlar lintel with three
+nine-mark brass/bone wave rows and forged ends, plus a separate 5.2cm brass
+threshold plate with three iron rules. Splitting them prevents one tall
+compound furniture box from blocking the doorway. Deterministic builds:
+lintel `875942618767052c16b33def214b4d3843a0d57c211dd905d0621ee27e581670`
+(4 nodes / 720 vertices / 2.350 x 0.560 x 0.205m), threshold
+`cc80fa377494a76c3211ba3495e15094d403d1737de27d323379b4bc91f5d133`
+(2 nodes / 96 vertices / 1.660 x 0.052 x 0.360m), each byte-identical x2.
+Native review unavailable under Bill's waiver; frames exist, but no visual
+PASS is claimed. Host truth was pinned to live inn
+`store/9fdf24522f0de63f.glb`. Exact host-local anchors: lintel
+(0,2.78,3.03), threshold (0,0.198,2.95); the threshold top is 0.250m,
+matching the walkable threshold law. Host contacts are explicitly classified
+as suspended wall-rider + thin ground-layer; nearest non-host solid is 2.275m
+clear. Both tuples and host-relative transforms verified; idempotent rerun
+emitted zero verbs. Inn entry/exit remained 6/6 PASS, max arrival 0.364m.
+Bill eye-check: approach from the plaza at 2m and confirm the wave lintel reads
+before the brass threshold flashes underfoot, without either feeling pasted on.
