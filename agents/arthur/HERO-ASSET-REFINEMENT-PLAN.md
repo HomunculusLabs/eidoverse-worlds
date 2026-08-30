@@ -375,6 +375,13 @@ carousel pin re-verified live (`store/ce3633992d07055e.glb` at tuple),
 verdicts; no new evidence. Per the hold-law amendment this is the first
 identical no-op survey since the hold began.
 
+Hold tick (wakeup #15): state unchanged — gate ALL PASS, HEAD on sibling
+artwalk-15 commit (gate accepts), carousel/hall/court build-bytes and live
+carousel pin spot-checked identical. Second identical no-op survey since the
+hold began. Per the hold-law amendment, stated once last tick: this loop
+produces nothing until you act — recommend /loop stop, or hand me a visual
+correction / new subject and I resume immediately.
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
