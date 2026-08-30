@@ -28,10 +28,9 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 The first five stand. Candidates grounded in proven taste, in priority
 order (re-rank at each tick against the live census and Bill's eye-checks):
 
-1. **T-1 The Orrery** — a proper planetary clock (era-1 `orrery.glb`
-   reborn): brass armillary on a stone plinth, SLOW single-frequency
-   motion if motion comps prove reliable; site near the Observatory
-   (they pair).
+1. **T-1 The Orrery** — [DONE struct-7] brass armillary on a stone drum,
+   first motion comp of the lane (motion:orb spin −0.5°/s); pairs with
+   the Observatory on the NW walk.
 2. **T-2 Millrace Cascade** — harmonic steps near the windmill (-40,0):
    stepped stone cascade with water in the canon family.
 3. **T-3 Pendulum Wave** — plaza-adjacent calibration piece (the one
@@ -48,6 +47,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-4 | S-3 Hypar Pavilion | 170°/28 (off W gate approach, N of road) | (−27.57, −0.005, 4.86) | π/2 (crest axis ∥ road) | LIVE, deck walk 5/5 |
 | struct-5 | S-4 Möbius Bandstand | 96°/40 (S side, tower-house↔longhouse) | (−4.18, 0.002, 39.78) | 0 (rotationally symmetric) | LIVE, stage walk 5/5 |
 | struct-6 | S-5 Reed Pool & Bridge | 246°/42 (W flank, NW of Shell Tower) | (−17.08, −0.044, −38.37) | −π/2 (bridge spans world X) | LIVE, two-way crossing 5/5 |
+| struct-7 | T-1 The Orrery | 284°/38 (plaza→Observatory walk) | (9.19, −0.052, −36.87) | 0 | LIVE, motion:orb −0.5°/s, circle walk 5/5 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -235,3 +235,35 @@ with brass tips frame the crossing.
 
 **Bill should eye-check**: from the W approach — still water, the ripple
 rail, and the two brass-tipped masts; cross the bridge both ways.
+
+## struct-7 — T-1 THE ORRERY (concept contract + record)
+
+**Concept**: a planetary clock for the sky-watcher's village. One idea:
+the heavens as an instrument — a brass armillary sphere (equator, two
+meridians, 23.4°-tilted ecliptic with five planet beads, gold sun at the
+heart, dark polar axis) turning slowly in a dark cradle on a stone drum
+with twelve bone hour marks. Silhouette: a brass sphere in a stone cup.
+
+- First MOTION structure of the lane: the armillary is one KEEP group
+  `orb` (already in the mergekit KEEP regex) carrying `motion:orb`
+  {spin, y, −0.5°/s} — the Night Table's proven motion comp pattern
+  (artwalk-7's `motion:scope`) adapted to a per-node key. Motion NOT
+  visually verified (render blocked) — Bill's eye-check decides.
+- Furniture-scale honest: 2.2×3.18×2.2, 4.8m² — solid furniture box,
+  CORRECT for a sculpture (nothing to walk through).
+- Build: mkv3-orrery.ts → village_orrery3.glb, deterministic ×2, sha256
+  d680b1cdb64ed9e9, 8 nodes; true bbox via nested-node decode (KEEP
+  groups nest — accumulate parent translations, pitfall #4).
+- Siting: first candidate 288°/r38 blocked by the live gate against my
+  own Observatory (hand circle-math optimistic vs a 5m diagonal — third
+  reminder the gate outranks estimates). Final: 284°/r38 →
+  (9.19, −0.052, −36.87), on the plaza→Observatory walk, gap 4.5m to
+  hall, ~2.2m SAT to the Observatory.
+- Placement: nx-struct-orrery PLACED_VERIFIED, 2 verbs (spawn + motion
+  comp), idempotent rerun zero verbs.
+- Walk: five-leg approach + full circle around the plinth ALL PASS
+  (arrivals ≤0.39m; no phantom collider).
+
+**Bill should eye-check**: from the NW walk toward the Observatory —
+the brass armillary should be visibly, slowly turning (one full turn in
+12 minutes); the ecliptic beads against the sky.
