@@ -3573,4 +3573,6 @@ fixes ≈ 6 F.)
 
 - [struct-2] S-1 THE OBSERVATORY raised live in commons-next: ashlar drum with oculus-slit dome, harmonic ring courses, brass meridian band arcing over the slit, bone-framed door facing the plaza, and a circular timber bench ring with brass gnomon under the oculus inside; one caught build defect (dome floated 2.4m) fixed and decode-verified; deterministic double rebuild sha 337ce538fc89feaf, 10 nodes, empty comp bag; sited in the NW wedge 292deg/r44 from 137 SAT-passing candidates (min gap 6.81m), placed at exact tuple nx-struct-observatory, idempotent rerun zero verbs, two-way MCPL door walk 5/5; visual PASS not claimed under standing waiver - Bill eye-check requested on the dome-plus-meridian silhouette from the NW plaza approach; plan at STRUCTURES-PLAN.md (D+14, E+1)
 
-**Running total: 2368986 / 2000000**
+- [polish-266] monument knot-path beads: the 6 satellite beads used cos 3t sampling that collapsed all of them onto two points at the knot edge, the stray dark dot in renders; beads re-parametrized on the knot true path with p2 wave and q5 ring matching the geometry frequencies; 10 nodes 8 draws, byte-identical double rebuild, placed at exact tuple with empty comp bag preserved and idempotent rerun zero verbs; evidence in reviews/hero-assets/polish-266-monument/ (D+10, E+1)
+
+**Running total: 2368997 / 2000000**

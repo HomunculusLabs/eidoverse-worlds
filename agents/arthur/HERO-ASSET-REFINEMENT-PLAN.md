@@ -227,6 +227,31 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Post-carousel queue (4 named landmarks) is now complete. Next: re-survey
   the core for the next-highest-defect landmark or hold for Bill's eye-gate.
 
+### polish-266 — monument knot-path beads (ACCEPTED, LIVE) — core re-survey subject
+
+- Subject: `nx-town-monument` (plaza NW, pos [-7,0,-7], yaw 0.7853981633974483,
+  empty comp bag). Build source `assets/mkv3-monument.ts` →
+  `village_monument3.glb` (live was 9520e61fc8e9d887, 10 nodes / 8 draws).
+- Defect (stray-dot class): the 6 satellite beads used `cos(3t)/sin(3t)` with
+  `t = k·π/3` — every sample lands on `3t = k·π`, so ALL beads collapsed onto
+  two points at (±0.77, y, 0): a vertical dark cluster at the knot's edge (the
+  "stray dot" in gameplay renders) instead of beads riding the path.
+- Change (single edit): beads parametrized on the knot's actual path —
+  `x=cos(5t)·0.85, z=sin(5t)·0.85, y=sin(2t)·0.35` (p=2 wave, q=5 ring —
+  matching the knot geometry's own frequencies) — uniformly distributed
+  around the tube.
+- Candidate hash: `d7d3b15c6391aa7efafd8df9e5099ddfdbc2598e22df4a112e2b5492bd252922`
+  (10 nodes / 8 draws unchanged). Double rebuild byte-identical.
+- Falsification: gameplay view — the isolated stray dot at the knot edge is
+  gone; beads now sit ON the tube path woven through the loops (the remaining
+  small dark points read as tube gaps/shadows of the 3D weave, not detached
+  specks). Monument identity, plinth, approach all unchanged.
+- Placed via NEW dedicated placer `next-place-monument.ts`: live lib
+  `store/d7d3b15c6391aa7e.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs. commons' av-monument tex-59/18 knot-comp pins
+  untouched (different world).
+- Evidence: `agents/arthur/reviews/hero-assets/polish-266-monument/`.
+
 ## Post-carousel queue
 
 Ranked by gameplay visibility when carousel is internally hero-ready:
