@@ -18,8 +18,26 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 4. [DONE struct-5] S-4 Möbius Bandstand — half-twist band roof (36
    segments, twist φ=θ/2) over a stone performance circle; S side,
    mirroring the Shell Tower across the axis.
-5. S-5 Reed Bridge / waterfront folly at the fieldpond — ripple rhythm
-   balustrade.
+5. [DONE struct-6] S-5 Reed Pool & Bridge — the fieldpond commission
+   reborn as a self-contained pool folly (commons-next has no pond):
+   still WATER, reed clusters, flat crossing with a ripple-wave
+   balustrade; W flank.
+
+## SECOND COMMISSION QUEUE (struct-7 onward — re-derive from live census)
+
+The first five stand. Candidates grounded in proven taste, in priority
+order (re-rank at each tick against the live census and Bill's eye-checks):
+
+1. **T-1 The Orrery** — a proper planetary clock (era-1 `orrery.glb`
+   reborn): brass armillary on a stone plinth, SLOW single-frequency
+   motion if motion comps prove reliable; site near the Observatory
+   (they pair).
+2. **T-2 Millrace Cascade** — harmonic steps near the windmill (-40,0):
+   stepped stone cascade with water in the canon family.
+3. **T-3 Pendulum Wave** — plaza-adjacent calibration piece (the one
+   rhythm every village can read).
+4. Extend housekit: `twistBand` primitive (graduating the Möbius form)
+   when a second twisted-band structure is commissioned.
 
 ## Siting log
 
@@ -29,6 +47,9 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 | struct-3 | S-2 Shell Tower | 266°/38 (bunkhouse↔hall gap, N of axis) | (−2.65, −0.052, −37.91) | 0.0698 (widest→plaza) | LIVE, crown socket; ramp NOT standable (engine) |
 | struct-4 | S-3 Hypar Pavilion | 170°/28 (off W gate approach, N of road) | (−27.57, −0.005, 4.86) | π/2 (crest axis ∥ road) | LIVE, deck walk 5/5 |
 | struct-5 | S-4 Möbius Bandstand | 96°/40 (S side, tower-house↔longhouse) | (−4.18, 0.002, 39.78) | 0 (rotationally symmetric) | LIVE, stage walk 5/5 |
+| struct-6 | S-5 Reed Pool & Bridge | 246°/42 (W flank, NW of Shell Tower) | (−17.08, −0.044, −38.37) | −π/2 (bridge spans world X) | LIVE, two-way crossing 5/5 |
+
+**First commission queue COMPLETE (5/5): all five structures live.**
 
 ## struct-2 — S-1 THE OBSERVATORY (concept contract + record)
 
@@ -177,3 +198,40 @@ disc (r3.5) with a brass spin pin sits below — the bandstand's circle.
 **Bill should eye-check**: from the S approach past the longhouse — the
 half-twist band silhouette against the sky; stand on the stage pin and
 look up: one edge, one surface, one turn.
+
+## struct-6 — S-5 REED POOL & BRIDGE (concept contract + record)
+
+**Concept**: still water, crossed. One idea: the fieldpond's commission
+brought to a village that has no pond — a 9×6m pool of canon WATER,
+stone rim, reed clusters in vertical rhythm, and a flat timber crossing
+whose 18 balustrade posts carry ONE calm sine ripple along the rail:
+the water's rhythm lifted into the structure. Two dark mooring masts
+with brass tips frame the crossing.
+
+- Site law honesty: the original fieldpond is an old-commons entity;
+  commons-next carries no pond (census-verified) and world `commons` is
+  untouchable — so the folly brings its own water. Re-derivation, not
+  relocation.
+- Collider honesty (the trap caught in source): a sub-2.2m composition
+  would get a solid furniture box and BLOCK its own bridge. The mooring
+  masts raise the bbox to 2.65m ≥ 2.2 with an 83m² footprint → real
+  trimesh, deck planks genuinely walkable (the flat-threshold pattern,
+  NOT the non-standable ramp class).
+- Water stays flat (life-stays-flat law); reeds are flat verticals.
+- Build: mkv3-reedpool.ts → village_reedpool3.glb, deterministic ×2,
+  sha256 d3a81b79cb6fe58c, 6 nodes.
+- Siting (two honest rejections): first candidate 306°/r38 failed fine
+  SAT — the coarse scan underestimated the artwalk bboxes (lesson: fine
+  sweep before trusting a coarse pass). Second candidate 254°/r38 was
+  correctly blocked by the live gate for colliding with my own Shell
+  Tower (the gate includes nx-struct-* even though my preflight doesn't).
+  Final seat: 246°/r42 → (−17.08, −0.044, −38.37), W flank, ~5m clear
+  both ways. Terrain flat.
+- Placement: nx-struct-reedpool PLACED_VERIFIED at exact tuple
+  (yaw −π/2, bridge spanning world X), idempotent rerun zero verbs.
+- Walk: five-leg two-way crossing ALL_PASS — bank→deck→mid→deck→bank,
+  then the full re-cross (arrivals ≤0.39m).
+- Visual PASS not claimed.
+
+**Bill should eye-check**: from the W approach — still water, the ripple
+rail, and the two brass-tipped masts; cross the bridge both ways.

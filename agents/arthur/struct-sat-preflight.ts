@@ -54,7 +54,9 @@ for (let deg = dMin; deg <= dMax; deg += dStep) {
             const g = gap(T, o);
             if (g < minGap) { minGap = g; worst = o.id; }
         }
-        if (minGap >= 1.4) results.push({ deg, r, x: +px.toFixed(2), z: +pz.toFixed(2), minGap: +minGap.toFixed(2), worst });
+        const row = { deg, r, x: +px.toFixed(2), z: +pz.toFixed(2), minGap: +minGap.toFixed(2), worst };
+        if (minGap >= 1.4) results.push(row);
+        else results.push({ ...row, FAIL: true });
     }
 }
 results.sort((p, q) => q.minGap - p.minGap);
