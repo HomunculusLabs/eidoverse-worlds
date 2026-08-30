@@ -15,8 +15,9 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 3. [DONE struct-4] S-3 Hypar Pavilion — Ruled Sky at building scale:
    hypar canopy as 24 straight rulings, four posts, brass crest pins;
    off the W gate approach.
-4. S-4 Möbius Bandstand — half-twist band roof over a performance circle;
-   echoes the Half-Turn Gate.
+4. [DONE struct-5] S-4 Möbius Bandstand — half-twist band roof (36
+   segments, twist φ=θ/2) over a stone performance circle; S side,
+   mirroring the Shell Tower across the axis.
 5. S-5 Reed Bridge / waterfront folly at the fieldpond — ripple rhythm
    balustrade.
 
@@ -27,6 +28,7 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 | struct-2 | S-1 Observatory | 292°/44 (NW wedge, hall↔artwalk column) | (16.48, −0.052, −40.80) | −0.3839 (door→plaza) | LIVE, walk 5/5 |
 | struct-3 | S-2 Shell Tower | 266°/38 (bunkhouse↔hall gap, N of axis) | (−2.65, −0.052, −37.91) | 0.0698 (widest→plaza) | LIVE, crown socket; ramp NOT standable (engine) |
 | struct-4 | S-3 Hypar Pavilion | 170°/28 (off W gate approach, N of road) | (−27.57, −0.005, 4.86) | π/2 (crest axis ∥ road) | LIVE, deck walk 5/5 |
+| struct-5 | S-4 Möbius Bandstand | 96°/40 (S side, tower-house↔longhouse) | (−4.18, 0.002, 39.78) | 0 (rotationally symmetric) | LIVE, stage walk 5/5 |
 
 ## struct-2 — S-1 THE OBSERVATORY (concept contract + record)
 
@@ -142,3 +144,36 @@ two brass pins mark the crest midpoints.
 **Bill should eye-check**: from the W gate road — the saddle silhouette
 and the ruled shadow the slats cast on the deck; walk under it and look
 up: every line straight, the surface curved only by their turning.
+
+## struct-5 — S-4 MÖBIUS BANDSTAND (concept contract + record)
+
+**Concept**: a performance circle under a ring that turns over once. One
+idea: the half-twist — a 36-segment band whose pitch rotates 180° over the
+loop (φ = θ/2), so its edge rises and falls in a single slow wave as it
+goes around, the Half-Turn Gate's ribbon language at building scale. Six
+slender dark posts carry the band's centerline ring at 4m; a stone stage
+disc (r3.5) with a brass spin pin sits below — the bandstand's circle.
+
+- Geometry as ornament: the twist IS the structure; no applied trim. The
+  Möbius join closes continuously (segment 36 lands flipped onto segment
+  1 — verified by construction, N·Δθ = 2π, twist at join = π).
+- Open pavilion: enter through the post ring from any side; band clears
+  at 4m ± band half-width twist.
+- Gates honest: bbox 152.6m² ≥16, 5.0m ≥2.2 → real trimesh. 4 nodes
+  (roof MID / stone / dark / brass buckets). No motion, no comps.
+- Build: mkv3-mobius.ts → village_mobius3.glb, deterministic ×2, sha256
+  04d088e12a009993.
+- Siting: 96°/r40 → (−4.18, 0.002, 39.78), S side between tower-house
+  and longhouse (gap 3.39m to tower-house), near-mirroring the Shell
+  Tower (266°) across the village axis — the two vertical accents N and
+  S. From 376 candidates. Terrain flat (±0.01m).
+- Placement: nx-struct-mobius PLACED_VERIFIED at exact tuple (yaw 0 —
+  the band is rotationally symmetric), idempotent rerun zero verbs.
+- Walk: five-leg MCPL walk ALL PASS — N approach → stage rim → center →
+  opposite rim → out S → in W (arrivals ≤0.37m).
+- Visual PASS not claimed (render approval-blocked; source construction +
+  decode + walk only).
+
+**Bill should eye-check**: from the S approach past the longhouse — the
+half-twist band silhouette against the sky; stand on the stage pin and
+look up: one edge, one surface, one turn.
