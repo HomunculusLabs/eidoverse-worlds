@@ -49,8 +49,12 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 2. **U-2 East Beacon** — [DONE struct-11] night landmark on the E
    approach: stone tower, emissive lantern room + companion light
    entity (first lit structure of the lane).
-3. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
-   now live: every struct-N with N%3==0 is a refine tick (first: struct-12).
+3. **U-3 Angler's Rest** — [DONE struct-13] timber cantilever lookout
+   with chain-sag brass rail on the Reed Pool's west bank; the
+   waterfront's first (and only needed) seat.
+4. Re-derive next from census + Bill's eye-check verdicts. Refine cadence
+   now live: every struct-N with N%3==0 is a refine tick (first: struct-12
+   done; next: struct-15).
 
 ## Siting log
 
@@ -67,6 +71,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-10 | U-1 Hillside Theater | 122°/46 (SW reach) | (−23.32, 0.040, 37.31) | 0 (stage +Z → Bandstand) | LIVE, aisle climb walk 5/5 |
 | struct-11 | U-2 East Beacon | 338°/44 (E approach, SE side) | (40.8, −0.044, −16.48) | 0 | LIVE, + light entity, base circuit 4/4 |
 | struct-12 | REFINE: Observatory night read | — | exact standing tuple | — | LIVE, + light entity, walk 5/5 re-verified |
+| struct-13 | U-3 Angler's Rest | Reed Pool W bank | (−23.6, −0.048, −38.37) | −π/2 (cantilever → water) | LIVE, bank walk 4/4 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -427,3 +432,27 @@ new work (beacon struct-11, lit orrery pairing struct-7) created it.
 
 **Bill should eye-check (dusk)**: from the NW walk — the two warm slits
 in the drum, the beacon further east, and the oculus open to the sky.
+
+## struct-13 — U-3 THE ANGLER'S REST (concept contract + record)
+
+**Concept**: a place to sit at the water. One idea: the quiet seat — a
+timber lookout cantilevered off the Reed Pool's west bank on two dark
+posts with stone footings, a full bench on the landward side, and a
+chain-sag rail of small brass rods hanging in two catenary spans between
+brass-tipped posts on the water side — the Reed Pool's ripple language
+carried into furniture. Census gap: no seat anywhere on the waterfront.
+
+- Honest collider: 3.4×1.45 furniture-solid (sit at it, don't walk
+  through it).
+- Siting math caught before any gate: the instinctive spot sat 0.18m
+  INSIDE the reedpool's rotated OBB — hand axis-gap against the pool
+  edge moved the anchor west to a true 1.4m clearance.
+- Build: mkv3-angler.ts → village_angler3.glb, deterministic ×2, sha256
+  b3dfb28ac98169fa, 4 nodes.
+- Placement: nx-struct-angler PLACED_VERIFIED at exact tuple (yaw −π/2,
+  cantilever facing the water), 1 verb, idempotent rerun zero verbs.
+- Walk: four-leg bank → deck → bench → rail circuit ALL PASS.
+- Visual PASS not claimed.
+
+**Bill should eye-check**: sit on the bench and look across the water —
+the ripple bridge rail opposite, the reeds, and (at dusk) the beacon.
