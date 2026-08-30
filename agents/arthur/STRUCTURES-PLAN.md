@@ -76,6 +76,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
 | struct-12 | REFINE: Observatory night read | — | exact standing tuple | — | LIVE, + light entity, walk 5/5 re-verified |
 | struct-13 | U-3 Angler's Rest | Reed Pool W bank | (−23.6, −0.048, −38.37) | −π/2 (cantilever → water) | LIVE, bank walk 4/4 |
 | struct-14 | U-4 Skene Wall | behind Theater stage | (−23.32, 0.045, 48.05) | π (stage face → seats) | LIVE, stage walk 4/4 |
+| struct-15 | REFINE: Pendulum deficits | — | exact standing tuple | — | LIVE, posts out + beam up, walk 5/5 re-verified |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -485,3 +486,23 @@ complete: Bandstand (small stage) + Hillside Theater (big stage) + Skene
 **Bill should eye-check**: stand on the performance disc — the niches
 should frame whoever stands against the wall; sit mid-height in the rows
 and the wall should close the far side of the stage.
+
+## struct-15 — REFINE TICK 2: Pendulum Wave deficits
+
+Subject: the two deficits banked by the struct-9v reconciliation — the
+only externally evidenced deficits in the pool.
+
+- Deficit 1 (end bobs graze the A-post legs): posts moved out (offset
+  0.45→0.95, lean 0.55→0.3), falsified by leg-geometry math to 0.73m
+  clearance at bob height. An intermediate candidate (lean-only) was
+  itself falsified by the same math (−0.23m — still colliding) and
+  corrected BEFORE build.
+- Deficit 2 (bob band straddles the horizon): BEAM_Y 3.1→3.5; bob band
+  now 1.30–1.71m, cleanly above grade against the sky.
+- Discipline: baseline hash reproduced (97779023) before editing;
+  candidate deterministic ×2, sha 0a3120b294d669ed, 3 nodes; pose-gated
+  re-place at the EXACT standing tuple (1 verb); idempotent rerun zero
+  verbs; standing five-leg circuit walk re-run ALL PASS.
+
+**Bill should eye-check**: from the NE path — the lifted sine of bobs,
+clear of both posts and the ground.
