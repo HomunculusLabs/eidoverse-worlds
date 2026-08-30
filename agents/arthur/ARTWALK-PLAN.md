@@ -75,7 +75,9 @@ are done; the artwalk language now moves INTO the architecture. New queue
    `nx-artwalk-b9-dyehouse-crossing-loom`.
 10. **B-10 Four-Wind Crown — DONE**: a four-axis brass/bone wind rose crowns
     the mill-room door as `nx-artwalk-b10-windmill-four-wind-crown`.
-11. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+11. **B-11 Heartwood Measure — DONE**: five concentric brass/bone growth rings
+    fill the woodyard windbreak as `nx-artwalk-b11-woodyard-heartwood-measure`.
+12. Re-derive from live buildings; prefer high-traffic surfaces visitors see
    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
@@ -168,6 +170,24 @@ Review frames were rendered, but native image input remains unavailable under
 Bill's waiver; no visual PASS is claimed. Eye-check from the west spoke: the
 four axes and center ring should read as one wind crown before the sails take
 over above it, without narrowing the door.
+
+### [artwalk-21] THE HEARTWOOD MEASURE (2026-08-30) — DONE, LIVE
+The open woodyard receives one source-grounded field above its cordwood: five
+slightly offset concentric brass/bone rings read as a cut trunk's years, held
+to a forged backing by one datum and four quiet measure marks. The 2.6m-wide
+relief is deliberately broad enough to survive the shed approach rather than
+becoming decorative grain. Deterministic build
+`aa5f2550365c1f7f1abe7046f629cd4086b86f560b52276ff447dc5f0c5431c6`
+byte-identical x2; decode 3 merged nodes / 2.600 x 1.066 x 0.148m. Host truth
+was pinned to woodyard `store/1f2c6f592095b204.glb`; exact host-local
+(0,0.75,−0.80) maps to
+(16.3635762733503,0.75,31.712609495766586), yaw −2.669815142409043. Live SAT
+found the nearest non-host solid, the harvest cart, 2.650m clear. Exact tuple
+verified; idempotent rerun emitted zero verbs. The cordwood-side approach and
+lateral yard lane remained 6/6 PASS, max arrival 0.343m. Review frames were
+rendered, but native image input remains unavailable under Bill's waiver; no
+visual PASS is claimed. Eye-check from the open yard: the five rings should
+read immediately as one heartwood measure above the stacked logs, not a sign.
 
 Arthur-originated standalone commissions (unchanged, siting by plan):
 
