@@ -3569,4 +3569,6 @@ fixes ≈ 6 F.)
 
 - [polish-265] tower crowned spire: the roof finial was a bare 0.12 by 0.5 stick so the crown died into a stub; replaced with brass collar plus tapered gold cone spire at tower scale, same accepted crown language as the carousel; 20 nodes 19 draws, byte-identical double rebuild with stash round trip proving the sibling interior residue inert, placed at exact tuple with sockets study preserved and idempotent rerun zero verbs; post-carousel landmark queue complete; evidence in reviews/hero-assets/polish-265-tower/ (D+20, E+1)
 
-**Running total: 2368947 / 2000000**
+- [interior-6] Garden keeper cottage completed: live hash traced to the correct legacy house builder; inherited kitchen, hearth and pots, work table and carrot basket, furnished bed, garden walls, planters, flowers, vines, and bench preserved; west-wall seed shelf with three jars added outside the centered entry lane, target-only static merging reduced one hundred seven top-level nodes to twenty-two nodes and meshes with the exact bbox unchanged, and warm room light added; deterministic 872aec35e3aa43b3 rebuild, exact live model/light tuples, empty comp bag preserved, idempotent rerun zero verbs, six-leg room walk unchanged and focused gate ALL PASS (D+22, E+2)
+
+**Running total: 2368971 / 2000000**
