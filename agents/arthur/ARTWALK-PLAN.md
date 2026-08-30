@@ -44,7 +44,7 @@ Rebirth = re-site for the radial village, re-material into the standing families
 | H-4 | Mural stone pair — DONE | `_era1-2/village_mural_{a,b}.glb` | none | Spiral/wave story stones live as `nx-artwalk-h4`; Bill eye-check pending |
 | H-5 | Möbius arch v2 — DONE | `_era1-2/village_mobius2.glb` (122 D) | none | Half-turn entry gate live as `nx-artwalk-h5`; Bill eye-check pending |
 | H-6a (tail) | Chimes — DONE | chimes glb / `mkwater1.ts` | whole assembly spin 2°/s | Seven Voices terminus live as `nx-artwalk-h6`; Bill eye-check pending |
-| H-6b (tail) | Observatory | `mkobs1.ts` | scope spin | Optional final heritage tail while loop continues |
+| H-6b (tail) | Observatory — DONE | `mkobs1.ts` | scope spin −0.8°/s | Night Table live as `nx-artwalk-h7`; browser stair eye-check pending |
 
 ## Phase F — fresh commissions (after H, or interleaved if Bill says)
 
@@ -201,3 +201,26 @@ idempotent rerun emitted zero verbs. Approach and transverse passage passed
 6/6 MCPL legs with max arrival 0.372m. Bill eye-check: whether all seven tubes
 read as distinct hanging voices, whether the 2°/s turn stays calm, and whether
 the piece closes the walk decisively rather than reading as porch furniture.
+
+### [artwalk-9] THE NIGHT TABLE (2026-08-30) — DONE, LIVE
+Era-1 source decoded as a raised observatory with stair, three-sided rail,
+mounted brass telescope, and deterministic seven-star chart (42 meshes).
+Reborn with six true support posts, a 4.4m timber deck, seven contiguous
+0.28m-rise stair solids, forge-iron rails, ashlar scope pier, flat brass/bone
+instrument media, warm stair lamp, and a named `scope` group turning at a
+calm −0.8°/s. Deterministic build
+`7baac8fd9b45bc923faaae427abec3bc41fd0c7a9fccba381fdff7d405835ca0`
+byte-identical x2; decode 45 nodes / 44 meshes / 4.400 x 3.527 x 7.300m.
+Native review unavailable under Bill's waiver; frames exist, but no visual
+PASS is claimed. Final `nx-artwalk-h7` pose:
+(31.819805153394636,-0.037292896876929355,-43.13351365237939), yaw
+-0.7853981633974483, SE basis r53/t−8; corridor corners 48.250–56.134m,
+3.330m clear of `nx-artwalk-h3`. Exact model/scope-motion/light tuple verified;
+idempotent rerun emitted zero verbs. Live server geometry proves 782 triangles,
+a certified 19.36m² deck at y=2.10, and seven contiguous stair boxes rising
+0.28→1.96m. Horizontal approach/deck-plan routing passed 8/8 legs, max arrival
+0.388m. Verification boundary: `WorldAgent.heightAt` is terrain-only and
+cannot prove vertical stair ascent; the browser alone evaluates exact-trimesh
+stairs. Bill eye-check: climb the seven steps, circulate the deck, and confirm
+the slow scope sweep and star table read as an observatory rather than a raised
+platform.
