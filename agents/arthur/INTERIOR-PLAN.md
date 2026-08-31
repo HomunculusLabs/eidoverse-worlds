@@ -199,3 +199,25 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   `reviews/interior-p2-6/` under Bill's interior-lane visual waiver; no
   native visual PASS claimed. PASS 2 named queue now 6/6 complete —
   re-derive further rooms from the live census next tick.
+- Wakeup 7 / interior-16 (P2 next-wave: livery stable groom's corner):
+  PASS-2 named rooms done; re-derived remaining enterable candidates from
+  the live census (stable, dyehouse, windmill, kiln, woodyard) and took
+  `nx-town-stable` — the two-stall livery at `[43,0,0]`, yaw `-π/2`, open
+  front facing the village, empty comp bag, and notably NO light entity at
+  all (the only furnished-class building failing the warm-night law).
+  Local `mkv3-stable.ts` reproduced the live hash `84ba3b1b…` exactly
+  (pin fresh). Built the groom's corner — the stable-life layer: saddle on
+  a timber stand in the back stall corner, grooming shelf with brush and
+  comb on the partition's open end, and a hanging lantern (`glow` KEEP
+  anchor) by the open front, plus the stable's FIRST warm light entity
+  (`nx-town-stable-l`, 0xffb066 / 1.4 / 5 at the front lip). All inside the
+  inherited AABB (byte-identical → zero SAT change); stall lanes untouched.
+  New walk verifier `interior-walk-stable.ts` (yard → front → stall 0 →
+  back stall → out, 5 legs) ALL_PASS at 0.396 max arrival. Deterministic
+  `5beff62ed41ca6cf` ×2, 13 nodes / 12 meshes; PLACED_VERIFIED with 2 verbs
+  (spawn + new light), empty comp bag preserved, idempotent rerun zero
+  verbs. Visual review: side/aerial frames match the accepted family read
+  (open-side dark under the single key light); the player-side open-front
+  view needs the live check. Review packet `reviews/interior-16-stable/`
+  under Bill's interior-lane visual waiver; no native visual PASS claimed.
+  Next tick: dyehouse or kiln from the same census wave.
