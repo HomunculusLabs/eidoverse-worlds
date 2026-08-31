@@ -115,6 +115,7 @@ stop the /loop.
 | struct-32 | R3-6 Needle Rest | NW diagonal, th330/r47 | (41.1, −0.047, −23.8) | 7.330 (bench to walk) | LIVE, bench walk 5/5, shared sha |
 | struct-33 | REFINE: Sound Mirror ring night read | — | exact standing tuple (28.7, −0.026, −18.0) | — | LIVE, warm focus ring, walk 7/7 re-verified |
 | struct-34 | R3-7 Crossing Mark | plaza crossing NE corner | (3.6, −0.005, −3.6) | 0 (4-fold symmetric) | LIVE, corner circuit 7/7 |
+| struct-35 | ROUND 3 CLOSE | fleet pin check | — | — | 26/26 pins exact, 0 drift, gate ALL PASS |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -1015,3 +1016,34 @@ the leaning crowns frame the plaza ahead.
 
 **Bill should eye-check**: entering the plaza from any gate road — the
 four leaning crowns at the NE corner framing the crossing.
+
+## struct-35 — ROUND 3 CLOSE: fleet pin verification
+
+Struct-35 would be a build tick by cadence, but the honest census read:
+Round 3 is complete (seven of seven structures live: needle, waystones
+×4, echo arch, halt, sound mirror, needle rest, crossing mark — plus
+refines 5/6/7 completing the glow lineage across every terminus and
+interaction marker). Per the struct-18 precedent, no eighth commission
+is invented; this tick is the fleet verification and round close.
+
+- Fleet pin check: all 26 solid nx-struct entities live with libs
+  byte-exact to their accepted placements — zero drift, zero missing,
+  no unknown extras (the three -l companions and the echo arch account
+  for the full 30-entity population).
+- Standing gate ALL PASS at HEAD 4bded45.
+- Lane posture: holding for new census gaps, Bill's verdicts (R2-3
+  relocation options from struct-22 remain open), or a stop.
+
+## ROUND 3 FINAL SCOREBOARD
+
+| # | Structure | Tick | Status |
+|---|-----------|------|--------|
+| R3-1 | North Needle | struct-25 | ✓ live, lit |
+| R3-2 | Four Waystones | struct-26 | ✓ live ×4 |
+| R3-3 | Echo Arch | struct-28 | ✓ live, pins lit (struct-30) |
+| R3-4 | Wayfarer's Halt | struct-29 | ✓ live |
+| R3-5 | Sound Mirror | struct-31 | ✓ live, ring lit (struct-33) |
+| R3-6 | Needle Rest | struct-32 | ✓ live |
+| R3-7 | Crossing Mark | struct-34 | ✓ live |
+| — | Folly crown night | struct-27 | ✓ refine |
+| — | Orrery ring night | struct-21 | ✓ refine |
