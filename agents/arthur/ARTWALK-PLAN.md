@@ -181,7 +181,12 @@ are done; the artwalk language now moves INTO the architecture. New queue
     to end; the stand and the churn (B-32) answer each other across the
     yard.
     Bill eye-check pending from the goat-corner track.
-34. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+34. **B-34 Four Ways-Bands — DONE**: B-26's band (same bytes, store lib)
+    completes the set at E/S/W approach lamps — live as
+    `nx-artwalk-b34-wayband-{e,s,w}`, concentric. One village diagram
+    (B-22's Eight Ways) echoed at all four rim points.
+    Bill eye-check pending from any gate road.
+35. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
