@@ -388,3 +388,14 @@ Ranked by gameplay visibility when carousel is internally hero-ready:
 plaza hearth ✅ (polish-262), belltower ✅ (polish-263), welcome ensemble ✅
 (polish-264 — board done; the welcome lamp light entity remains), tower.
 Present Bill one concise eye-gate packet exactly once at that point.
+
+
+## BILL VERDICT 2026-08-31: ALL APPROVED, KEEP IMPROVING
+
+Bill: "they all look good, we should keep improving." All ten accepted
+changes (carousel suite, hearth, belltower belfry lamp, welcome ensemble,
+mapboard) eye-gate PASS. Hold lifted. The lane resumes the ranked-asset
+queue at plaza-core landmarks, now with the standing artwalk language
+directive active: motif geometry may join hero refinement where it serves
+readability at gameplay distance (coordinated with the artwalk lane's
+phase B log to avoid motif collisions per building).

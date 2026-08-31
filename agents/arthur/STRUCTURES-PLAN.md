@@ -570,3 +570,25 @@ last source-judged deficit in the refine pool.
 
 **Bill should eye-check**: from the N approach — the shell's base sweep
 now touching ground at six points.
+
+## BILL VERDICT 2026-08-31: ALL APPROVED, KEEP IMPROVING
+
+Bill reviewed the standing work: "they all look good, we should keep
+improving." Eye-gates PASS across the fleet — all 13 structures marked
+hero-accepted, the Night Table stair question accepted at Bill's risk.
+Hold lifted. Queue widened to STRUCTURES ROUND 2 (one per tick, same laws):
+
+1. **R2-1 The Orrery Ring** — orbital ring garden around the standing
+   orrery: brass orbit lines inlaid in soil, planet-marker stones at each
+   orbit's reach. Ground-layer SAT exemption applies.
+2. **R2-2 Spiral Stair Folly** — freestanding golden-ratio stair-to-sky at
+   the NE spoke terminus (near the pendulum), bone balustrade.
+3. **R2-3 Hypar Gate Arbor** — twin hypar panels forming a W-gate approach
+   arch, echoing the reed pool.
+4. **R2-4 Wave Cellar Door** — wave-motif cellar entry beside the inn,
+   interior-scale Two Histories echo.
+5. **R2-5 Sky Mirror Plinth** — still-water reflecting plinth at the
+   observatory forecourt.
+6. Re-derive beyond these from census gaps + refine deficits. Refine
+   cadence law unchanged (every N%3==0 tick). Bill's standing verdict:
+   approved-but-improvable — refines reopen by deficit, not by defect.

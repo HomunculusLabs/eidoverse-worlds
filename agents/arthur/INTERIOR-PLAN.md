@@ -54,3 +54,26 @@ wall/lintel, interior furnishing defers to it that tick.
 - Wakeup 6 / interior-7: `nx-town-tower-house` reconciled at `[-9,0,26]`, yaw `2.8283680802`, empty comp bag. Existing ground-floor desk/chair/book/quill/bookshelf/rug/ladder and upper bedchamber/chest/candle were preserved. Following Bill's artwalk-into-buildings directive, one brass meridian ring with crossed rule-lines now sits on the study desk as the tower's single Golden Measure motif. Target-only static merging brought the legacy output to 22 nodes / 22 meshes with the exact bbox unchanged. Deterministic hash `bd1badd218fdbebd`; exact model/light tuples verified live, idempotent rerun zero verbs, six-leg door-to-study walk unchanged at 0.377m maximum arrival error, focused gate ALL PASS. Review packet generated under Bill's standing interior-lane visual-tool waiver. Next: `nx-town-row-cottage`.
 - Wakeup 7 / interior-8: `nx-town-row-cottage` reconciled at `[-23,0,-17]`, yaw `0.9411511441`, empty comp bag, correctly traced to current `mkv3-ring.ts` / `village_row3.glb` rather than the separate legacy row-cottage artifact. Existing hearth/firewood, table/stools/candle, loom/thread basket, linen chest, dye shelf/jars, herbs, and exterior lantern were preserved. The bare north-wall bed now carries a mattress, pillow, and plum woven blanket with three brass rule-lines, making Two Histories the room's single built-in motif without duplicating the loom. Deterministic hash `bd88cd386aec2a89`, 25 nodes / 25 meshes, exact bbox unchanged. Exact model/light tuples verified live, idempotent rerun zero verbs, six-leg door-to-room walk unchanged at 0.384m maximum arrival error, focused gate ALL PASS. Review packet generated under Bill's standing interior-lane visual-tool waiver. Next: `nx-town-bunkhouse`.
 - Wakeup 8 / interior-9: `nx-town-bunkhouse` reconciled at `[-9,0,-26]`, yaw `0.3132245734`, empty comp bag, correctly traced to legacy `mkbunk.ts` / `village_bunkhouse.glb` rather than the separate era-3 bunk artifact. All four existing bunk frames were completed with pillows and alternating folded blankets; a four-bay east-wall cubby ensemble gives each sleeper one folded kit and brass rule-tag, using functional Judd-like serial repetition as the room's single built-in motif. Added a real emissive entry lamp and target-only static merging reduced the legacy output to 14 nodes / 14 meshes with exact bbox unchanged. Deterministic hash `49f5acc4d91c4d45`; exact model/light tuples verified live, idempotent rerun zero verbs, six-leg door-to-cubby walk unchanged at 0.380m maximum arrival error, focused gate ALL PASS. Review packet generated under Bill's standing interior-lane visual-tool waiver. First-pass queue now 10/10 complete; awaiting Bill's explicit stop or a new queue.
+
+
+## BILL VERDICT 2026-08-31: ALL APPROVED, KEEP IMPROVING + PASS 2
+
+Bill: "they all look good, we should keep improving." All 10 rooms eye-gate
+PASS. Hold lifted. Queue widened to INTERIOR PASS 2 — one room per tick,
+deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
+
+1. **P2-1 Inn guest rooms** — upstairs/alcove beds, travel bags, candle
+   glow per bed.
+2. **P2-2 Hall council wall story** — carved decision-history frieze above
+   the charter shelf (coordinate with artwalk: charter wall already claims
+   the motif; the frieze extends it, never competes).
+3. **P2-3 Forge living corner** — smith's stool, quenched blade rack,
+   apron hook.
+4. **P2-4 Longhouse feast kit** — serving boards, ale horn row on the
+   high seat.
+5. **P2-5 Market evening shutters** — closeable stall shutters with brass
+   tally inlay.
+6. **P2-6 Potter's glaze bench** — glaze cups in the proven palette
+   rhythm, unfired row.
+7. Re-derive beyond these from live rooms; defer to artwalk phase B when
+   it claims a building that tick.
