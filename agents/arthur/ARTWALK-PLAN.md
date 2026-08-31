@@ -133,7 +133,13 @@ are done; the artwalk language now moves INTO the architecture. New queue
     (0,1.5,0), concentric with the host post. The Eight Ways echoed at
     the rim, on the same N axis as the mapboard.
     Bill eye-check pending from the north gate road.
-27. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+27. **B-27 Waterline — DONE**: the field well on the working edge
+    (30,−4.5) carries two encircling rings — bone low (dry-year line),
+    brass high (wet-year line), embedded in the drum's taper — live as
+    `nx-artwalk-b27-waterline` at host-local (0,0,0), concentric.
+    The plaza well measures depth; this one remembers seasons.
+    Bill eye-check pending from the stable track.
+28. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
