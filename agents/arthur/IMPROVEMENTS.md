@@ -3705,4 +3705,6 @@ fixes ≈ 6 F.)
 
 - [polish-276] chess table pedestal: nx-dress-chess was a board at ground level, frame at y0, reading as a mat on the grass rather than furniture. Added dark foot and pedestal post raising the board frame to 0.75m playing height, squares and pieces lifted with it. Baseline 6ea47f4a to candidate cb215e8c, double rebuild byte-identical, reads as a proper pedestal game table close and at gameplay range. Placed at exact tuple, empty comp bag preserved, idempotent rerun zero verbs. Fresh census 190 entities confirmed bench at new pin and single arc-bench instance. (D+2, E+1)
 
-**Running total: 2369624 / 2000000**
+- [polish-277] eye gate packet: delivered exactly once for the polish-271 through 276 core dressing wave, six tile contact sheet at reviews/hero-assets/polish-277-eye-gate-packet.jpg covering fountain water day, fountain night, the four gate crowns, the banner pennant, the bench center leg and the chess pedestal, each tile label verified against its image before delivery. Walking circuit recorded in the plan. No source change this tick, live world untouched, no placement. (D+1, E+1)
+
+**Running total: 2369626 / 2000000**

@@ -506,6 +506,27 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Next: water/crown/pennant/night eye-gate packet (core-dressing wave
   complete: fountain ✓ night ✓ gates ×4 ✓ banner ✓ bench ✓ chess ✓).
 
+### polish-277 — EYE-GATE PACKET delivered (wave: polish-271..276, no source change)
+
+- Contact sheet: `agents/arthur/reviews/hero-assets/polish-277-eye-gate-packet.jpg`
+  (6 tiles, label-verified against the images before delivery).
+- Subjects and exact live hashes:
+  | subject | tick | live lib |
+  |---|---|---|
+  | fountain water (day) | polish-271 | store/3ff7af591b5635d4.glb (superseded by 274) |
+  | fountain night | polish-274 | store/72f07c2a466feae3.glb ← current pin |
+  | gate crowns ×4 | polish-272 | store/d1b90d6fc66b2db8.glb |
+  | banner pennant | polish-273 | store/d32e7bcb8b007d21.glb |
+  | bench center leg | polish-275 | store/09f4d1741fdb24a6.glb |
+  | chess pedestal | polish-276 | store/cb215e8c13c8ac79.glb |
+- Eye-check walking circuit: spawn → fountain (12.5, 4, SE of plaza, ~14m)
+  → bench (NW −9.5, −9.5) → gates N/S/E/W at r 19.5 → banner (SE −4, 9.5)
+  → chess (SW −27.5, −9). Fountain night check after dusk (jet reads faint
+  under the finial ball).
+- Per loop law: packet delivered exactly once; no hold while waiting. Next
+  tick re-surveys the core for any remaining evidenced defect above
+  threshold.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
