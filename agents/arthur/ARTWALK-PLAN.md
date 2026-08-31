@@ -127,7 +127,13 @@ are done; the artwalk language now moves INTO the architecture. New queue
     bbox-corner kiss (nearest source-true solid ~0.5m away) and exempted
     with a gap-bounded exact-match condition, not a blanket id skip.
     Bill eye-check pending from the SW gate path.
-26. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+26. **B-26 Way-Band — DONE**: the north approach lamp's bare post shaft
+    carries a survey band — forged wrap, brass datum, eight alternating
+    brass/bone ticks — live as `nx-artwalk-b26-wayband` at host-local
+    (0,1.5,0), concentric with the host post. The Eight Ways echoed at
+    the rim, on the same N axis as the mapboard.
+    Bill eye-check pending from the north gate road.
+27. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
