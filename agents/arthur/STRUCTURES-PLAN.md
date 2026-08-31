@@ -106,6 +106,7 @@ stop the /loop.
 | struct-23 | R2-4 Wave Cellar Door | inn S face, gap-window seat | (36.0, −0.045, 5.55) | 0 (face +Z to field) | LIVE, walk 9/9 |
 | struct-24 | R2-5 Sky Mirror Plinth | observatory forecourt pocket | (24.0, −0.054, −35.5) | 0 (hex, symmetric) | LIVE, circuit walk 9/9 |
 | struct-25 | R3-1 North Needle | NW diagonal terminus, th326/r57 | (47.3, −0.034, −31.9) | 0 (lean −3.4° about z) | LIVE, pad circuit 7/7, + summit light |
+| struct-26 | R3-2 Four Waystones | verge seats outside all 4 gates | (±22.1 / −20.0,2.9... ) | per-gate tick yaw | LIVE 4/4, shared sha |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -806,3 +807,28 @@ point at its summit, visible (in principle) from the plaza.
 R3-1 North Needle ✓ (struct-25). Queue open: re-derive each tick from
 census + Bill's verdicts. Open decisions with Bill: R2-3 relocation
 options (struct-22). Refine cadence: struct-27 is the next refine tick.
+
+## struct-26 — R3-2 THE FOUR WAYSTONES (Round 3; concept + record)
+
+**Concept**: the road home, pointed. One idea × four: a tapered ashlar
+milestone on each verge outside the gates — brass band at the head, one
+bone tick on the band aimed along the road toward the village. Fills the
+census gap: every gate had art inside the ring (dawn-fan, dusk-arcs,
+south-tide, golden threshold) and nothing on the outer roads; milestones
+were a named never-built core-town candidate. Shared ONE GLB
+(2f006e218ffbe97e, ×2, 4 nodes — SW-terrace degenerate-family precedent);
+per-gate yaw carries the tick direction.
+
+- Siting: N/E/S seats clean at 2.6m out. The W stone needed three
+  live-gate-honored moves: the roads compound mesh needed the ground-
+  layer exemption (its 2.94m bbox height is the gate arches baked into
+  the shared GLB — not pavement at the seat; exemption named in-source),
+  then the hypar pavilion (which hugs the W road) blocked two drafts.
+  Final seat grid-probed at (−20.0, 4.3): 2.05m min gap to BOTH gate and
+  pavilion. The gate outranked the probe three times; each refusal was
+  honored and the seat re-derived.
+- Placement: nx-struct-waystone-n/e/s/w PLACED_VERIFIED (4 spawns, 1
+  upload), idempotent rerun zero verbs.
+
+**Bill should eye-check**: walk out any gate road — the little milestone
+on the verge, its bone tick pointing back the way you came.
