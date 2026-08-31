@@ -100,6 +100,7 @@ stop the /loop.
 | struct-16 | U-5 Water Stair | 270°/32 (N-gate walk axis) | (0, −0.032, −32) | 0 (descends toward village) | LIVE, circuit walk 4/4 |
 | struct-17 | REFINE: Shell Tower base | — | exact standing tuple | — | LIVE, 6 footing pads, socket re-applied, walk re-verified |
 | struct-19 | R2-1 Orrery Ring | at orrery's exact pose (284°/38) | (9.19, −0.052, −36.87) | 0 (disc, symmetric) | LIVE, film walk 8/8 |
+| struct-20 | R2-2 Spiral Stair Folly | 36°/57 (NE diagonal past pendulum) | (46.11, −0.037, 33.50) | 0 (rotationally symmetric) | LIVE, interior walk 10/10 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -628,3 +629,35 @@ chart below is its frozen record — static by honest design.
 **Bill should eye-check**: from the plaza→Observatory walk — the brass
 chart ringing the orrery's plinth; stand on the bed between the orbit
 lines and look up at the turning armillary above.
+
+## struct-20 — R2-2 THE SPIRAL STAIR FOLLY (Round 2, concept + record)
+
+**Concept**: a stair that ends in the sky. One idea: a single logarithmic
+ribbon — radii in exact golden ratio (r3.1 → r3.1/φ) — winding three
+turns up a dark spine to a height that is φ × the base width (10.0m vs
+6.2m across), where the final step meets a floating brass ring: the last
+stair, going nowhere, facing the sky. Silhouette = white spiral climbing
+to a ring.
+
+- Second consumer of the housekit `spiralRamp` primitive (per loop law).
+- Room gates honest: 38.5m² footprint ≥16, 10.55m ≥2.2 → real trimesh;
+  the open ground-level interior walks. Ramp NOT standable (engine
+  non-standable-trimesh class, struct-3 precedent) — folly by commission.
+- Build: mkv3-spiralfolly.ts → village_spiralfolly3.glb, deterministic ×2,
+  sha256 655e9ec6d14beb85…, 5 nodes. Review: aerial + gameplay frames
+  judged — spiral continuous, crown ring reads, no defects.
+- Siting: first candidate 54°/r43.5 was correctly BLOCKED by the live
+  gate (kiln/potter/porch cluster — the coarse survey read missed them
+  because the first census script filtered on raw bbox centers without
+  adding entity pos; the gate outranked the probe, again). Full-sector
+  scan with the real OBB gap function re-sited to 36°/r57 →
+  (46.114, −0.037, 33.504), min gap 5.5m, the honest NE terminus past
+  the Pendulum Wave.
+- Placement: nx-struct-spiralfolly PLACED_VERIFIED, 1 verb, no comps,
+  idempotent rerun zero verbs.
+- Walk: ten-leg MCPL interior walk ALL PASS (two-way through the open
+  base, spine circuit; max arrival 0.392m).
+
+**Bill should eye-check**: from the NE path past the pendulum — the white
+spiral against the sky and the brass ring at its top; walk through the
+open base and look straight up the spine.
