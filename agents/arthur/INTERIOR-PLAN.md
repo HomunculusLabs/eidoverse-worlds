@@ -254,3 +254,18 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   rerun zero verbs. New placer `interior-place-kiln.ts`. Review packet
   `reviews/interior-18-kiln/` under Bill's interior-lane visual waiver; no
   native visual PASS claimed. Remaining census wave: windmill, woodyard.
+- Wakeup 10 / FINDING — woodyard blocked, windmill next (no world mutation):
+  began the woodyard tick and hit a disputed-bytes stop: the live
+  `nx-town-woodyard` carries `store/1f2c6f59…` while local
+  `mkv3-woodyard27.ts` builds `5ad78870…`. Decoded at the commit record:
+  tex-85's golden-hour rotation lists "woodyard untouched" as a HARD LAW —
+  the live entity intentionally keeps pre-canon bytes, and the local source
+  has drifted to the warm canon. Any edit + upload from this source would
+  smuggle the full tex-85 material delta into an interior-lane placement.
+  Fail-closed: no build, no upload, no place; woodyard stays as-is and the
+  discrepancy is recorded here once. Options for a future tick (need Bill's
+  call or a lane-owned source law): (a) refresh the woodyard to warm canon
+  under an explicit interior- or polish-N placement accepting the tex-85
+  delta wholesale, or (b) leave the old-gen yard alone and skip it. Next
+  tick: windmill (`nx-town-windmill`, [-40,0,0], sails-class host — will
+  reconcile its pin and comp history before any edit).
