@@ -238,3 +238,19 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   `interior-place-dyehouse.ts`. Review packet `reviews/interior-17-dyehouse/`
   under Bill's interior-lane visual waiver; no native visual PASS claimed.
   Remaining census wave: windmill, kiln, woodyard.
+- Wakeup 9 / interior-18 (P2 next-wave: lime kiln burn ledger + work lamp):
+  `nx-town-kiln` reconciled at `[31,0,39]`, yaw `-2.4784945652`, empty comp
+  bag, `fire_kiln` motion anchor live, no light entity. Local
+  `mkv3-kiln38.ts` reproduced the live hash `69c0e48a…` exactly (pin
+  fresh). Built the kiln's life layer: burn ledger board on the drum face
+  beside the mouth (one brass datum + seven alternating brass/bone burn
+  marks — the current firing's charge-and-draw count), and a warm lantern
+  (`glow` KEEP anchor) over the mouth, plus the kiln's FIRST light entity
+  (`nx-town-kiln-l`, 0xffb066 / 1.4 / 4.5 over the mouth). One LSP-caught
+  error fixed in-tick (texBox helper restored, same class as interior-17).
+  AABB byte-identical → zero SAT change; fire anchor untouched.
+  Deterministic `4d8ef8fc0b0955de` ×2, 11 nodes / 9 meshes; PLACED_VERIFIED
+  with 2 verbs (spawn + new light), empty comp bag preserved, idempotent
+  rerun zero verbs. New placer `interior-place-kiln.ts`. Review packet
+  `reviews/interior-18-kiln/` under Bill's interior-lane visual waiver; no
+  native visual PASS claimed. Remaining census wave: windmill, woodyard.

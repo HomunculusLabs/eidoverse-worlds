@@ -3759,4 +3759,6 @@ fixes ≈ 6 F.)
 
 - [struct-27] REFINE TICK 5: Spiral Stair Folly night read — the floating brass crown ring re-materialized with warm emissive (glow factor in GLB, no new light entity), the NE terminus summit now reads at dusk from the village beside the beacon lineage; pool ranked the folly top by evidenced deficit (57m out and fully dark while sibling termini carry the lane light language, same class struct-21 fixed on the orrery ring); baseline 655e9ec6d14beb85 reproduced exactly before edit, candidate deterministic 20c515a0e28a3c96 x2, single material change verified in accessor materials (one glow0 material), lib upgrade at the exact standing tuple via remove-gated spawn-replace (empty comp bag intact), idempotent rerun zero verbs, standing ten-leg interior walk re-run ALL PASS, night render judged showing the warm crown halo above the dark spiral; Bill dusk eye-check pending (D+2, E+1)
 
-**Running total: 2369787 / 2000000**
+- [interior-18] Interior pass 2 next wave at the lime kiln: burn ledger tally board mounted on the drum face beside the fire mouth with one brass datum and seven alternating brass bone burn marks counting the current firing plus a warm lantern over the mouth as the kiln first light entity so the night burn reads from the track, fire anchor and all existing pieces untouched and AABB byte-identical for zero SAT change, deterministic 4d8ef8fc0b0955de rebuild twice, exact tuple and new warm light verified live, empty comp bag preserved, idempotent rerun zero verbs (D+11, E+2)
+
+**Running total: 2369800 / 2000000**
