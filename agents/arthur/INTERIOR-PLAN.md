@@ -221,3 +221,20 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   view needs the live check. Review packet `reviews/interior-16-stable/`
   under Bill's interior-lane visual waiver; no native visual PASS claimed.
   Next tick: dyehouse or kiln from the same census wave.
+- Wakeup 8 / interior-17 (P2 next-wave: dyehouse batch board + work lamp):
+  `nx-town-dyehouse` reconciled at `[-23,0,-23]`, yaw `0.941`, empty comp
+  bag, no light entity. Local `mkv3-dyehouse70.ts` reproduced the live hash
+  `8d750d78…` exactly (pin fresh). Built the dyer's life layer: batch tally
+  board on the wind-break wall (one brass datum + five alternating
+  brass/bone batch marks — the trade counting convention), and a warm
+  lantern (`glow` KEEP anchor) hung from the roof beside the drying line,
+  plus the dyehouse's FIRST light entity (`nx-town-dyehouse-l`, 0xffb066 /
+  1.35 / 4.5 at the lantern). One LSP-caught error fixed in-tick (texBox
+  helper was local to the old block — restored). All within the inherited
+  AABB (byte-identical → zero SAT change); drying line and both `dh_strip_*`
+  wind anchors preserved. Deterministic `888be3597d2f772f` ×2, 14 nodes /
+  11 meshes; PLACED_VERIFIED with 2 verbs (spawn + new light), empty comp
+  bag preserved, idempotent rerun zero verbs. New placer
+  `interior-place-dyehouse.ts`. Review packet `reviews/interior-17-dyehouse/`
+  under Bill's interior-lane visual waiver; no native visual PASS claimed.
+  Remaining census wave: windmill, kiln, woodyard.
