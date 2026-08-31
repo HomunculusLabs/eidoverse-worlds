@@ -3761,4 +3761,6 @@ fixes ≈ 6 F.)
 
 - [interior-18] Interior pass 2 next wave at the lime kiln: burn ledger tally board mounted on the drum face beside the fire mouth with one brass datum and seven alternating brass bone burn marks counting the current firing plus a warm lantern over the mouth as the kiln first light entity so the night burn reads from the track, fire anchor and all existing pieces untouched and AABB byte-identical for zero SAT change, deterministic 4d8ef8fc0b0955de rebuild twice, exact tuple and new warm light verified live, empty comp bag preserved, idempotent rerun zero verbs (D+11, E+2)
 
-**Running total: 2369800 / 2000000**
+- [struct-28] R3-3 ECHO ARCH raised live beyond the SE diagonal terminus — two facing parabolic ashlar fins (f1.0m true conic, z equals y-squared over 4f, 14 tangent segments each) with vertices 8m apart and brass focus pins at the two foci: stand on one pin, whisper, be heard at the other, the village's first acoustic structure; deterministic 3a4a74c37f468dfa x2, 3 merged nodes, real trimesh walkable between the fins; visual judged on rendered aerial (mirror-symmetric parabolas, pins on axis) plus gameplay frames; seat th108/r60 (-18.5, 57.1) yaw 5.027 axis on the SE diagonal, 4.85m min gap past the skene, terrain sampled at five points; PLACED_VERIFIED one verb, idempotent rerun zero verbs, seven-leg focus-to-focus axis walk ALL PASS max arrival 0.390m; Bill eye-check pending (D+3, E+1)
+
+**Running total: 2369804 / 2000000**

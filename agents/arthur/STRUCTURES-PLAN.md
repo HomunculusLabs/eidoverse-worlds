@@ -108,6 +108,7 @@ stop the /loop.
 | struct-25 | R3-1 North Needle | NW diagonal terminus, th326/r57 | (47.3, −0.034, −31.9) | 0 (lean −3.4° about z) | LIVE, pad circuit 7/7, + summit light |
 | struct-26 | R3-2 Four Waystones | verge seats outside all 4 gates | (±22.1 / −20.0,2.9... ) | per-gate tick yaw | LIVE 4/4, shared sha |
 | struct-27 | REFINE: Folly crown night read | — | exact standing tuple (46.11, −0.037, 33.50) | — | LIVE, warm crown halo, walk 10/10 re-verified |
+| struct-28 | R3-3 Echo Arch | SE beyond skene, th108/r60 | (−18.5, 0.051, 57.1) | 5.027 (axis on diagonal) | LIVE, axis walk 7/7 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -854,3 +855,29 @@ the same deficit class struct-21 fixed on the Orrery Ring.
 
 **Bill should eye-check (dusk)**: from the NE path — the folly's crown
 floating as a faint warm ring above the dark spiral.
+
+## struct-28 — R3-3 THE ECHO ARCH (Round 3; concept + record)
+
+**Concept**: a whisper crosses eight meters. Two facing parabolic ashlar
+fins — TRUE conic geometry, z = y²/(4f), f = 1m, vertices 8m apart —
+with brass focus pins at the two foci. Stand on one pin, whisper; the
+parabola collects the voice at the other pin. The village's first
+acoustic structure, and the SE terminus finally answers the other
+diagonals' beyond-markers. The curve is the ruled language again: 14
+tangent segments per fin, curve by turning.
+
+- Build: mkv3-echoarch.ts → village_echoarch3.glb, deterministic ×2,
+  sha 3a4a74c37f468dfa, 3 merged nodes. Review: aerial (mirror-symmetric
+  parabolas, pins on axis) + gameplay (edge-on fin reads as one curved
+  wall) judged clean.
+- Real trimesh: ~63m² footprint, 3.35m tall → walkable between the fins.
+- Seat th108/r60 → (−18.5, 0.051, 57.1), yaw 5.027 (finB toward the
+  village, axis on the SE diagonal), 4.85m min gap past the Skene;
+  terrain flat (0.041..0.058 at five points).
+- Placement: nx-struct-echoarch PLACED_VERIFIED, 1 verb, no comps,
+  idempotent rerun zero verbs. Seven-leg walk: approach → focus pin A →
+  across to pin B → back → out (ALL PASS, 0.390m).
+
+**Bill should eye-check**: from the theater walk heading SE — two curved
+fins facing each other with two brass pins between; stand on a pin and
+whisper toward the far fin.
