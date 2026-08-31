@@ -102,6 +102,7 @@ stop the /loop.
 | struct-19 | R2-1 Orrery Ring | at orrery's exact pose (284°/38) | (9.19, −0.052, −36.87) | 0 (disc, symmetric) | LIVE, film walk 8/8 |
 | struct-20 | R2-2 Spiral Stair Folly | 36°/57 (NE diagonal past pendulum) | (46.11, −0.037, 33.50) | 0 (rotationally symmetric) | LIVE, interior walk 10/10 |
 | struct-21 | REFINE: Orrery Ring night read | — | exact standing tuple | — | LIVE, warm-emissive rings, walk 8/8 re-verified |
+| struct-22 | R2-3 Hypar Gate Arbor | INFEASIBLE (W+E, proven) | — | — | PROOF BANKED, options to Bill |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -684,3 +685,31 @@ struct-12 proved on the Observatory itself.
 
 **Bill should eye-check (dusk)**: from the plaza→Observatory walk — the
 orbital chart glowing softly in the soil beside the lit Observatory.
+
+## struct-22 — R2-3 HYPAR GATE ARBOR: infeasibility proof (delivered)
+
+Three build iterations produced the finished twin-panel form (45° draft
+d60f7549 → crest-pin fix at the edge midpoints per the struct-4 lesson
+5fee1ebe → edge-on v3 5bb3b848; every review rejection corrected in
+source before any upload — zero uploads, zero live mutations).
+
+Then the siting proof: the W road band solids are windmill
+x[−43.4,−36.6], hypar pavilion x[−32.6,−22.5] (z −0.2..9.9 — it hugs
+the road), shrine x[−26.3,−23.8]. The windmill→pavilion pinch is 4.0m
+wide; the 1.4m gap law on both sides leaves 1.2m for a straddling
+entity whose panels need ≥3.96m just to read. Full SAT station scans
+on BOTH the W and E axes returned zero legal seats (best W −1.15m at
+the windmill; best E −0.44m at the forge). Per the SW-mosaic precedent
+(probe pitfall 9): stop iterating, bank the arithmetic, surface the
+decision.
+
+**Three options for Bill:**
+1. **E-gate arch** — relocate the commission to the E approach (needs a
+   station scan wider than the forge block; may also prove tight).
+2. **Single-side W verge arbor** — one panel beside the road (not
+   straddling) on the S verge near the shrine; keeps the motif,
+   loses the "arch" (Bill's call if the frame matters).
+3. **Skip to R2-4** — Wave Cellar Door beside the inn; the arbor
+   re-enters the queue only if he wants a relocated variant.
+
+Queue advances to R2-4 (Wave Cellar Door) at struct-23 either way.
