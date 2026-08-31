@@ -109,6 +109,7 @@ stop the /loop.
 | struct-26 | R3-2 Four Waystones | verge seats outside all 4 gates | (±22.1 / −20.0,2.9... ) | per-gate tick yaw | LIVE 4/4, shared sha |
 | struct-27 | REFINE: Folly crown night read | — | exact standing tuple (46.11, −0.037, 33.50) | — | LIVE, warm crown halo, walk 10/10 re-verified |
 | struct-28 | R3-3 Echo Arch | SE beyond skene, th108/r60 | (−18.5, 0.051, 57.1) | 5.027 (axis on diagonal) | LIVE, axis walk 7/7 |
+| struct-29 | R3-4 Wayfarer's Halt | S road verge | (−2.0, −0.003, 30.0) | 0 (bench faces road) | LIVE, halt walk 8/8 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -881,3 +882,26 @@ tangent segments per fin, curve by turning.
 **Bill should eye-check**: from the theater walk heading SE — two curved
 fins facing each other with two brass pins between; stand on a pin and
 whisper toward the far fin.
+
+## struct-29 — R3-4 THE WAYFARER'S HALT (Round 3; concept + record)
+
+**Concept**: three posts and a roof — the smallest shelter. The axis
+census showed the S road (gate r20 → Bandstand r40) as the longest bare
+stretch in the village with nowhere to rest. One long bench facing the
+road under a shallow gable; the only ornament is a brass road-stud in
+the center post: the mark of "the road rests here."
+
+- Collider honesty: h 2.45 ≥ 2.2 → real trimesh, so the walk-through
+  under the roof is genuinely open (never a solid box over its own
+  bench).
+- Build: mkv3-wayfarershalt.ts → village_wayfarershalt3.glb,
+  deterministic ×2, sha bb227fd67ca93385, 5 nodes. Review frame clean.
+- Seat (−2, 30) from the S-road scan, 1.78m min gap (mobius side);
+  terrain flat (−0.002..−0.004 at five points).
+- Placement: nx-struct-halt PLACED_VERIFIED, 1 verb, no comps,
+  idempotent rerun zero verbs. Eight-leg road → under-roof → bench →
+  out walk ALL PASS (0.372m).
+
+**Bill should eye-check**: walking the S road between the gate and the
+Bandstand — the little halt on the west verge; sit on the bench and
+look back up the road to the gate.
