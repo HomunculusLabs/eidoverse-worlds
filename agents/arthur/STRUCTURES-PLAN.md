@@ -112,6 +112,7 @@ stop the /loop.
 | struct-29 | R3-4 Wayfarer's Halt | S road verge | (−2.0, −0.003, 30.0) | 0 (bench faces road) | LIVE, halt walk 8/8 |
 | struct-30 | REFINE: Echo Arch pins night read | — | exact standing tuple (−18.5, 0.051, 57.1) | — | LIVE, warm pin pair, axis walk 7/7 re-verified |
 | struct-31 | R3-5 Sound Mirror | NW flank, hall-h2 pocket | (28.7, −0.026, −18.0) | 0 (opens skyward) | LIVE, circuit walk 7/7 |
+| struct-32 | R3-6 Needle Rest | NW diagonal, th330/r47 | (41.1, −0.047, −23.8) | 7.330 (bench to walk) | LIVE, bench walk 5/5, shared sha |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -952,3 +953,19 @@ sounds and sky both focus at the ring.
 
 **Bill should eye-check**: from the NW walk between hall and observatory
 — the stone dish on the flank; stand at the brass ring and listen up.
+
+## struct-32 — R3-6 NEEDLE REST (Round 3; concept + record)
+
+**Concept**: the wayfarer network's second stone. The NW walk
+(gate r20 → needle r57) is the village's longest; its last bare gap ran
+observatory→needle. The proven halt GLB re-seated byte-for-byte (shared
+sha — degenerate-family precedent), bench turned to face the diagonal,
+so the walker rests facing the needle.
+
+- Seat th330/r47 → (41.1, −0.047, −23.8), yaw 7.330, 2.19m min gap past
+  artwalk h4; terrain flat (−0.045..−0.048 at five points).
+- Placement: nx-struct-needlerest PLACED_VERIFIED, 1 verb, no comps,
+  idempotent rerun zero verbs. Five-leg bench-side walk ALL PASS.
+
+**Bill should eye-check**: on the NW walk between the sky mirror and the
+needle — the halt with its bench turned toward the diagonal.

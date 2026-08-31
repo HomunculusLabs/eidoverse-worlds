@@ -1,0 +1,105 @@
+// next-place-struct-needlerest.ts — struct-32: R3-6 NEEDLE REST.
+// commons-next only. NEW entity nx-struct-needlerest (structures lane),
+// reusing the proven wayfarer's-halt GLB (degenerate-family precedent):
+// one shared sha, new id, bench yawed to face the NW diagonal walk.
+// Seat (41.1, -23.8) yaw 7.330, 2.19m min gap. No comps.
+import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+const ROOT = "/Users/t3rpz/projects/eidoverse-worlds", WORLD = "commons-next";
+const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
+const POS = [41.1, -0.04670478202487889, -23.8] as const;
+const YAW = 7.330;
+const m = {
+    id: "nx-struct-needlerest",
+    file: "village_wayfarershalt3.glb",
+    sha: "bb227fd67ca933857443fc4b000ed5239b7e139dcfadc0941a549bf0806f7639",
+    bbox: { min: [-2.2, 0, -1.2], max: [2.2, 2.45, 1.55] },
+    comp: {},
+} as const;
+const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
+const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
+const die = (msg: string): never => { throw Error(msg); };
+const near = (a: number, b: number) => Math.abs(a - b) < 1e-6;
+const canon = (v: any): any => Array.isArray(v) ? v.map(canon) : v && typeof v == "object" ? Object.fromEntries(Object.keys(v).sort().map(k => [k, canon(v[k])])) : v;
+const eq = (a: any, b: any) => JSON.stringify(canon(a)) === JSON.stringify(canon(b));
+async function geom(world = WORLD) {
+    const r = await fetch(`${base}/geom?world=${world}`);
+    if (!r.ok) die(`geom ${world} ${r.status}`);
+    const d: any = await r.json();
+    return Object.fromEntries((d.entities ?? []).map((e: any) => [e.id, e])) as Record<string, any>;
+}
+const bytes = new Uint8Array(readFileSync(`${ROOT}/agents/arthur/assets/${m.file}`));
+const h = createHash("sha256").update(bytes).digest("hex");
+if (h !== m.sha) die(`${m.id} reviewed hash drift ${h}`);
+type O = { c: [number, number]; u: [number, number]; v: [number, number]; hu: number; hv: number };
+function obb(pos: number[], yaw: number, bb: any): O {
+    const c = Math.cos(yaw), s = Math.sin(yaw), lx = (bb.min[0] + bb.max[0]) / 2, lz = (bb.min[2] + bb.max[2]) / 2;
+    return { c: [pos[0] + lx * c + lz * s, pos[2] - lx * s + lz * c], u: [c, -s], v: [s, c], hu: (bb.max[0] - bb.min[0]) / 2, hv: (bb.max[2] - bb.min[2]) / 2 };
+}
+function gap(A: O, B: O) {
+    let best = -Infinity;
+    for (const ax of [A.u, A.v, B.u, B.v]) {
+        const dd = Math.abs((B.c[0] - A.c[0]) * ax[0] + (B.c[1] - A.c[1]) * ax[1]);
+        const ra = A.hu * Math.abs(A.u[0] * ax[0] + A.u[1] * ax[1]) + A.hv * Math.abs(A.v[0] * ax[0] + A.v[1] * ax[1]);
+        const rb = B.hu * Math.abs(B.u[0] * ax[0] + B.u[1] * ax[1]) + B.hv * Math.abs(B.v[0] * ax[0] + B.v[1] * ax[1]);
+        best = Math.max(best, dd - ra - rb);
+    }
+    return best;
+}
+const before = await geom();
+const T = obb([...POS], YAW, m.bbox);
+const collisions: string[] = [];
+for (const e of Object.values(before)) {
+    if (!e.bbox || e.id === m.id) continue;
+    const bb = e.bbox;
+    if (bb.max[1] - bb.min[1] <= 0.5) continue;       // ground layer
+    if (bb.min[1] > 2.3) continue;
+    if (e.id === "nx-town-roads" || e.id === "nx-core-paths") continue;
+    if (gap(T, obb(e.pos, e.yaw ?? 0, bb)) < 1.4) collisions.push(e.id);
+}
+if (collisions.length) die(`needlerest seat blocked (<1.4m clear): ${collisions}`);
+const exist = before[m.id];
+if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1)) die(`${m.id} live collision/drift`);
+
+let verbs: Array<[string, any]> = [];
+const needComps = !exist || !eq(exist.comp ?? {}, m.comp);
+if (!exist) {
+    const u = new URL(`${base}/upload`);
+    u.searchParams.set("token", cfg.agentToken);
+    u.searchParams.set("name", `commons-next ${m.id} struct-32`);
+    u.searchParams.set("by", cfg.id);
+    let lib = "";
+    for (let a = 1; a <= 5; a++) {
+        const r = await fetch(u, { method: "POST", body: bytes });
+        if (r.ok) { lib = (await r.json()).path; break; }
+        if (r.status === 429 && a < 5) { await sleep(25_000); continue; }
+        die(`${m.id} upload ${r.status}`);
+    }
+    if (lib !== `store/${m.sha.slice(0, 16)}.glb`) die(`${m.id} upload path ${lib}`);
+    verbs = [["spawn", { id: m.id, lib: `store/${m.sha.slice(0, 16)}.glb`, pos: POS, yaw: YAW, scale: 1 }]];
+}
+if (needComps) for (const [type, data] of Object.entries(m.comp)) verbs.push(["comp", { id: m.id, type, data }]);
+if (verbs.length) await new Promise<void>((resolve, reject) => {
+    const ws = new WebSocket(cfg.url);
+    let joined = false, i = 0;
+    const timer = setTimeout(() => reject(Error("verb timeout")), 90_000);
+    const paced = setInterval(() => {
+        if (!joined || i >= verbs.length) return;
+        const [verb, args] = verbs[i++];
+        ws.send(JSON.stringify({ type: "verb", verb, args }));
+        if (i === verbs.length) setTimeout(() => { clearInterval(paced); clearTimeout(timer); ws.close(); resolve(); }, 1600);
+    }, 650);
+    ws.onopen = () => ws.send(JSON.stringify({ type: "join", world: WORLD, id: "arthur-struct32-rest", avatar: cfg.avatar, token: cfg.joinToken }));
+    ws.onerror = () => reject(Error("websocket error"));
+    ws.onmessage = (ev: any) => {
+        const x = JSON.parse(ev.data);
+        if (x.type === "error") reject(Error(`server ${x.error}`));
+        else if (x.type === "snapshot") joined = true;
+    };
+});
+else console.log(`${m.id} already live — no verbs`);
+
+const after = await geom();
+const e = after[m.id];
+if (!(e?.lib === `store/${m.sha.slice(0, 16)}.glb` && e.pos.every((n: number, i: number) => near(n, POS[i])) && near(e.yaw, YAW) && e.scale === 1 && eq(e.comp ?? {}, m.comp))) die(`${m.id} post-place failed`);
+console.log(JSON.stringify({ status: "PLACED_VERIFIED", id: m.id, lib: `store/${m.sha.slice(0, 16)}.glb`, pos: POS, yaw: YAW, compKeys: Object.keys(m.comp), verbs: verbs.length }));
