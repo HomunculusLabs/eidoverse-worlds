@@ -173,7 +173,15 @@ are done; the artwalk language now moves INTO the architecture. New queue
     live as `nx-artwalk-b32-morning-measure` at host-local (0,0,0),
     concentric, world (20,0,35) yaw −2.2. The dairy counts threes.
     Bill eye-check pending from the harvest track by the inn porch.
-33. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+33. **B-33 Milking Order — DONE**: the milking stand's milker-side
+    platform face carries a brass datum + three marks (the goats in turn
+    order) — live as `nx-artwalk-b33-milking-order` at host-local
+    (0,0.30,−0.276), world (22.5,0,33) yaw −2.4. The dairy chain
+    (goat → pail → churn → kitchen, per source) now counts threes end
+    to end; the stand and the churn (B-32) answer each other across the
+    yard.
+    Bill eye-check pending from the goat-corner track.
+34. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
