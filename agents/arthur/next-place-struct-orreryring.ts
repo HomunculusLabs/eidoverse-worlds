@@ -13,7 +13,8 @@ const YAW = 0;
 const m = {
     id: "nx-struct-orreryring",
     file: "village_orreryring3.glb",
-    sha: "41bce5d1377f14cf7f0519962d315316f479969f0e8e11dde71ff3ed00a83024",
+    sha: "f095519b61b3bf17f06371870264aa76851238b9d0e4c9f46821e289b2a8f70f",
+    prevSha: "41bce5d1377f14cf7f0519962d315316f479969f0e8e11dde71ff3ed00a83024", // struct-19 accepted baseline
     bbox: { min: [-2.8, 0, -2.8], max: [2.8, 0.215, 2.8] },
     comp: {},
 } as const;
@@ -84,12 +85,21 @@ const unexplained = nearMisses.filter(x => !ALLOWED_ADJACENT.includes(x.split(" 
 if (collisions.length || unexplained.length)
     die(`orreryring seat: overlaps=[${collisions}] unexplained-adjacency=[${unexplained}]`);
 console.log(`preflight PASS: disc r${R} — no solid overlap; audited adjacency: ${nearMisses.join("; ") || "none"}`);
-const exist = before[m.id];
-if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1)) die(`${m.id} live collision/drift`);
-
 let verbs: Array<[string, any]> = [];
+const exist = before[m.id];
+if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1)) {
+    // struct-21 reseat: accept ONLY the exact struct-19 baseline lib at the
+    // exact standing pose as a valid pre-state for a remove+spawn upgrade.
+    const baselineOk = exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`
+        && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1;
+    if (!baselineOk) die(`${m.id} live collision/drift`);
+    // remove verb exists server-side (proven pattern, nvp-133..148);
+    // comp bag on this entity is empty, so nothing to re-apply.
+    verbs.push(["remove", { id: m.id }]);
+}
+
 const needComps = !exist || !eq(exist.comp ?? {}, m.comp);
-if (!exist) {
+if (!exist || (exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`)) {
     const u = new URL(`${base}/upload`);
     u.searchParams.set("token", cfg.agentToken);
     u.searchParams.set("name", `commons-next ${m.id} struct-19`);

@@ -101,6 +101,7 @@ stop the /loop.
 | struct-17 | REFINE: Shell Tower base | — | exact standing tuple | — | LIVE, 6 footing pads, socket re-applied, walk re-verified |
 | struct-19 | R2-1 Orrery Ring | at orrery's exact pose (284°/38) | (9.19, −0.052, −36.87) | 0 (disc, symmetric) | LIVE, film walk 8/8 |
 | struct-20 | R2-2 Spiral Stair Folly | 36°/57 (NE diagonal past pendulum) | (46.11, −0.037, 33.50) | 0 (rotationally symmetric) | LIVE, interior walk 10/10 |
+| struct-21 | REFINE: Orrery Ring night read | — | exact standing tuple | — | LIVE, warm-emissive rings, walk 8/8 re-verified |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -661,3 +662,25 @@ to a ring.
 **Bill should eye-check**: from the NE path past the pendulum — the white
 spiral against the sky and the brass ring at its top; walk through the
 open base and look straight up the spine.
+
+## struct-21 — REFINE TICK 4: Orrery Ring night read
+
+Pool re-opened post-verdict; top deficit by evidence: the Ring sits on the
+NW walk that the Observatory's warm slits (struct-12) already light — and
+at dusk the unlit brass inlay vanished into the soil. Same deficit class
+struct-12 proved on the Observatory itself.
+
+- One defect, smallest change: the brass material gains warm emissive
+  (0x8a5a20 @ 0.55) — the rings ARE the lamps, inlaid chart-light; no new
+  light entity, no geometry change, soil/stone/markers untouched.
+- Discipline: baseline 41bce5d1377f14cf reproduced exactly before edit;
+  candidate deterministic f095519b61b3bf17 ×2; emissive verified in the
+  decoded accessor materials (one glow material, soil+stone clean);
+  lib upgrade at the EXACT standing tuple (spawn-replace; empty comp bag
+  intact); idempotent rerun zero verbs; standing 8-leg film walk re-run
+  ALL PASS (max arrival 0.395m).
+- Night render judged: three warm ring lines read as inlaid light, not
+  fire. Bill's dusk eye-check decides.
+
+**Bill should eye-check (dusk)**: from the plaza→Observatory walk — the
+orbital chart glowing softly in the soil beside the lit Observatory.

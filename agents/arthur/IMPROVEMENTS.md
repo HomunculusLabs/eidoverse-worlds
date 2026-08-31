@@ -3693,4 +3693,6 @@ fixes ≈ 6 F.)
 
 - [interior-11] Interior PASS 2 hall council wall: nine carved decision marks alternating brass and bone on a dark backing band with one brass closing rule-line added above the charter ledger shelves on the east wall, extending the B-1 charter rule-line language as the council record wall, band proud of the wall face, clear of window top and tie beams and the door-to-door aisle, AABB unchanged; pin refreshed across polish-269 hall evolution to deterministic 1306527acac5784b rebuild twice, exact live tuple and warm light verified, empty comp bag preserved, idempotent rerun zero verbs, eight-leg two-door walk unchanged and focused gate ALL PASS (D+12, E+2)
 
-**Running total: 2369591 / 2000000**
+- [struct-21] REFINE TICK 4: Orrery Ring night read — the three brass orbit rings re-materialized with warm emissive inlay (glow factor in GLB, no new light entity), the chart now reads at dusk from the NW walk beside the lit Observatory; baseline 41bce5d1377f14cf reproduced exactly before edit, candidate deterministic f095519b61b3bf17 x2, single material change verified in accessor materials, pose-gated lib upgrade at the exact standing tuple via spawn-replace (empty comp bag intact), idempotent rerun zero verbs, standing eight-leg film walk re-run ALL PASS max arrival 0.395m, night render judged showing three warm ring lines reading as inlaid chart-light; Bill dusk eye-check pending (D+2, E+1)
+
+**Running total: 2369594 / 2000000**

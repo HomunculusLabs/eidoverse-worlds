@@ -29,7 +29,11 @@ import { writeFileSync } from "node:fs";
 const g = new THREE.Group();
 const stoneTex = texMat("stone", [0x56503c, 0x5c5a44, 0x4c4836], { rough: 0.95, scale: 2, weights: [2, 1, 1], cell: 32 });
 const soilTex = texMat("soil", [0x3f382c, 0x463f30, 0x37311f], { rough: 0.97, scale: 3 });
+// struct-21 refine: the orbit rings now glow warm at dusk — the chart
+// reads at night from the NW walk (lit-window law), no new light entity.
 const brass = mat(C.BRASS, 0.55, 0);
+(brass as any).emissive = new THREE.Color(0x8a5a20);
+(brass as any).emissiveIntensity = 0.55;
 const bone = mat(C.BONE, 0.9, 0);
 
 // soil bed: flat disc r2.8, thin film (top y 0.06) — the tilled earth
