@@ -102,6 +102,35 @@ const out: Built[] = [];
     texBox(g, "hseat_back", 0.55, 0.9, 0.08, W / 2 - 0.75, FY + 0.9, 1.05, timberTex);
     texBox(g, "hseat_arm_l", 0.08, 0.22, 0.45, W / 2 - 1.0, FY + 0.56, 1.3, timberTex);
     texBox(g, "hseat_arm_r", 0.08, 0.22, 0.45, W / 2 - 0.5, FY + 0.56, 1.3, timberTex);
+    // interior-13 (P2-4): THE FEAST KIT on the high seat — the elder's place
+    // set for a feast night: a carved serving board with a round of cheese,
+    // an ale horn row (three horns, alternating brass/bone mounts) rising
+    // from one table line along the seat back rail, and one brass-feet
+    // platter. Counts live exactly on/above the existing seat volume
+    // (x∈[3.35,3.95], z∈[1.05,1.55]) — the dais, chair, and door lane
+    // stay untouched; nothing new reaches the floor.
+    {
+        // serving board across the seat front edge w/ cheese round
+        texBox(g, "feastboard", 0.5, 0.03, 0.3, W / 2 - 0.75, FY + 0.69, 1.42, timberTex);
+        const cheese = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.07, 0.05, 9), mat(0xd8c278, 0.9, 0));
+        cheese.name = "feastcheese";
+        cheese.position.set(W / 2 - 0.82, FY + 0.73, 1.44);
+        g.add(cheese);
+        // platter w/ brass feet on the seat, beside the board
+        const platter = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.09, 0.03, 9), mat(0xa0a248, 0.4, 0.55));
+        platter.name = "feastplatter";
+        platter.position.set(W / 2 - 0.6, FY + 0.7, 1.2);
+        g.add(platter);
+        // ale horn row: three horns on the back-rail line, alternating mounts
+        for (const [ki, kx, mount] of [[0, W / 2 - 0.95, 0xa0a248], [1, W / 2 - 0.75, C.BONE], [2, W / 2 - 0.55, 0xa0a248]] as const) {
+            const horn = new THREE.Mesh(new THREE.ConeGeometry(0.035, 0.26, 7), mat(0x8a6a3a, 0.75, 0.1));
+            horn.name = `alehorn_${ki}`;
+            horn.rotation.z = Math.PI;
+            horn.position.set(kx, FY + 1.06, 1.09);
+            g.add(horn);
+            box(g, `hornmount_${ki}`, 0.05, 0.05, 0.05, kx, FY + 0.94, 1.09, mount);
+        }
+    }
     // interior-3: two communal sleeping benches flank the front door and face
     // the hearth. Their inner edges stop at local x ±1.2, leaving the full
     // 1.4m door lane and its turn toward the fire untouched.

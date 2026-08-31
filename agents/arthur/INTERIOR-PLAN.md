@@ -141,3 +141,21 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   (SHA + node/mesh count + placer pin + bbox tolerance updated). Review
   packet `reviews/interior-p2-3/` under Bill's interior-lane visual waiver;
   no native visual PASS claimed. Next: P2-4 longhouse feast kit.
+- Wakeup 4 / interior-13 (P2-4 Longhouse feast kit): `nx-town-longhouse`
+  reconciled at `[9,0,26]`, yaw `-2.8283680802`, empty comp bag; local
+  `mkv3-ring.ts` reproduced the live hash `6ffc4fdc…` exactly before editing
+  (pin fresh). Built the feast kit on the high seat — the elder's place set
+  for a feast night: carved serving board with cheese round across the seat
+  front, brass platter beside it, and three ale horns in alternating
+  brass/bone mounts rising from one table line along the seat back rail.
+  All counts live on/above the existing seat volume (x∈[3.35,3.95],
+  z∈[1.05,1.55]); nothing new reaches the floor; dais, chair, and door lane
+  untouched. Deterministic `f2344409ac67fd77` ×2, 25 nodes / 25 meshes
+  (+~180 verts), AABB unchanged → zero SAT impact; all six sibling ring
+  GLBs byte-identical after rebuild (shared-script safety proven again).
+  PLACED_VERIFIED, empty comp bag preserved, warm light re-verified,
+  idempotent rerun zero verbs, six-leg door-to-hearth walk ALL_PASS 0.346
+  unchanged, focused gate `verify-interior3.ts` ALL PASS (SHA + node count
+  + placer pin updated). Review packet `reviews/interior-p2-4/` under Bill's
+  interior-lane visual waiver; no native visual PASS claimed. Next:
+  P2-5 market evening shutters.
