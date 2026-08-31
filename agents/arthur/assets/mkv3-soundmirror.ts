@@ -17,7 +17,11 @@ import { writeFileSync } from "node:fs";
 
 const g = new THREE.Group();
 const ash = mat(0x56503c, 0.95, 0);
+// struct-33 refine: the focus ring and stand now glow warm — the listening
+// seat reads at dusk (lit-seat law, beacon lineage); no new light entity.
 const brass = mat(C.BRASS, 0.55, 0);
+(brass as any).emissive = new THREE.Color(0x8a5a20);
+(brass as any).emissiveIntensity = 0.6;
 
 const F = 1.15, RIM = 2.0, H = 0.87;
 

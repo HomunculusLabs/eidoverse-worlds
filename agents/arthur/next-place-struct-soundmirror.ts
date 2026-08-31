@@ -11,7 +11,8 @@ const YAW = 0;
 const m = {
     id: "nx-struct-soundmirror",
     file: "village_soundmirror3.glb",
-    sha: "77913d8a3508a426698c2eee0573cab5f3b8998a58a23fd32be46690b349e66c",
+    sha: "5216db0a22ea8b2158bbb144c1bc481673dde42b10dd7ea3d0edffa405b2d79a",
+    prevSha: "77913d8a3508a426698c2eee0573cab5f3b8998a58a23fd32be46690b349e66c", // struct-31 baseline
     bbox: { min: [-2.35, 0, -2.35], max: [2.35, 1.45, 2.35] },
     comp: {},
 } as const;
@@ -56,15 +57,21 @@ for (const e of Object.values(before)) {
     if (gap(T, obb(e.pos, e.yaw ?? 0, bb)) < 1.4) collisions.push(e.id);
 }
 if (collisions.length) die(`soundmirror seat blocked (<1.4m clear): ${collisions}`);
-const exist = before[m.id];
-if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1)) die(`${m.id} live collision/drift`);
-
 let verbs: Array<[string, any]> = [];
+const exist = before[m.id];
+if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1)) {
+    // struct-33 reseat: accept ONLY the exact struct-31 baseline lib at the
+    // exact standing pose; spawn-replace upgrades the lib in place.
+    const baselineOk = exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`
+        && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1;
+    if (!baselineOk) die(`${m.id} live collision/drift`);
+    verbs.push(["remove", { id: m.id }]);
+}
 const needComps = !exist || !eq(exist.comp ?? {}, m.comp);
-if (!exist) {
+if (!exist || (exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`)) {
     const u = new URL(`${base}/upload`);
     u.searchParams.set("token", cfg.agentToken);
-    u.searchParams.set("name", `commons-next ${m.id} struct-31`);
+    u.searchParams.set("name", `commons-next ${m.id} struct-33`);
     u.searchParams.set("by", cfg.id);
     let lib = "";
     for (let a = 1; a <= 5; a++) {

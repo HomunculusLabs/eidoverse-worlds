@@ -3773,4 +3773,6 @@ fixes ≈ 6 F.)
 
 - [struct-32] R3-6 NEEDLE REST raised live on the NW diagonal — second halt instance completing the wayfarer network on the village's two longest stretches; reuses the proven wayfarer's-halt GLB byte-for-byte (bb227fd67ca93385, shared-sha degenerate-family precedent) as new entity nx-struct-needlerest, bench yawed 7.330 to face the diagonal walk; fills the last bare gap observatory r44 to needle r57; seat th330/r47 (41.1, -23.8) from the NW scan with 2.19m min gap past artwalk h4, terrain flat at five points; PLACED_VERIFIED one verb, idempotent rerun zero verbs, five-leg bench-side walk ALL PASS; Bill eye-check pending (D+3, E+1)
 
-**Running total: 2369838 / 2000000**
+- [struct-33] REFINE TICK 7: Sound Mirror night read — the brass focus ring and stand re-materialized with warm emissive (glow factor in GLB, no new light entity), the listening seat now reads at dusk from the NW walk; pool ranked the mirror top by evidenced deficit (its focus ring was the one brass interaction marker still dark while orrery rings folly crown and echo pins all carry the glow lineage); baseline 77913d8a3508a426 reproduced exactly before edit, candidate deterministic 5216db0a22ea8b21 x2, single material change verified, lib upgrade at the exact standing tuple via remove-gated spawn-replace (empty comp bag intact), idempotent rerun zero verbs, standing seven-leg circuit walk re-run ALL PASS, night render judged showing the warm ring floating above the dark dish; Bill dusk eye-check pending (D+2, E+1)
+
+**Running total: 2369841 / 2000000**

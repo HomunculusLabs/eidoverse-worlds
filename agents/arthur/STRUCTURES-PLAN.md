@@ -113,6 +113,7 @@ stop the /loop.
 | struct-30 | REFINE: Echo Arch pins night read | — | exact standing tuple (−18.5, 0.051, 57.1) | — | LIVE, warm pin pair, axis walk 7/7 re-verified |
 | struct-31 | R3-5 Sound Mirror | NW flank, hall-h2 pocket | (28.7, −0.026, −18.0) | 0 (opens skyward) | LIVE, circuit walk 7/7 |
 | struct-32 | R3-6 Needle Rest | NW diagonal, th330/r47 | (41.1, −0.047, −23.8) | 7.330 (bench to walk) | LIVE, bench walk 5/5, shared sha |
+| struct-33 | REFINE: Sound Mirror ring night read | — | exact standing tuple (28.7, −0.026, −18.0) | — | LIVE, warm focus ring, walk 7/7 re-verified |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -969,3 +970,22 @@ so the walker rests facing the needle.
 
 **Bill should eye-check**: on the NW walk between the sky mirror and the
 needle — the halt with its bench turned toward the diagonal.
+
+## struct-33 — REFINE TICK 7: Sound Mirror night read
+
+Pool ranked the Sound Mirror top by evidenced deficit: its brass focus
+ring was the one interaction marker still dark at dusk — the orrery
+rings, folly crown, and echo pins all carry the glow lineage now.
+
+- One defect, smallest change: the brass (stand + focus ring) gains warm
+  emissive (0x8a5a20 @ 0.6) — the ring IS the lamp; no new light entity,
+  no geometry change.
+- Discipline: baseline 77913d8a3508a426 reproduced exactly; candidate
+  5216db0a22ea8b21 deterministic ×2; glow verified; lib upgrade at the
+  EXACT standing tuple (remove-gated spawn-replace, comp bag intact);
+  idempotent rerun zero verbs; standing 7-leg circuit walk re-run ALL
+  PASS. Night render judged: warm ring floating above the dark dish.
+  Bill's dusk eye-check decides.
+
+**Bill should eye-check (dusk)**: from the NW walk — the faint warm ring
+hovering above the sound mirror's dark bowl.
