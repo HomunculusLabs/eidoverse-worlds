@@ -160,7 +160,13 @@ are done; the artwalk language now moves INTO the architecture. New queue
     Fives for coin where the court counts sevens; host re-pinned to the
     post-tex-8/interior-14 market (8c16ea9a…).
     Bill eye-check pending from the plaza market, beside the shutters.
-31. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+31. **B-31 Sheaf Tally — DONE**: the harvest cart's outer rail carries a
+    brass datum + five alternating brass/bone marks — the count EQUAL to
+    the five sheaves on the bed (decoded at source) — live as
+    `nx-artwalk-b31-sheaf-tally` at host-local (0.45,0.62,0.505),
+    world (12,0,36) yaw −2.6. The cart counts what it carries.
+    Bill eye-check pending from the harvest track.
+32. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
