@@ -166,7 +166,14 @@ are done; the artwalk language now moves INTO the architecture. New queue
     `nx-artwalk-b31-sheaf-tally` at host-local (0.45,0.62,0.505),
     world (12,0,36) yaw −2.6. The cart counts what it carries.
     Bill eye-check pending from the harvest track.
-32. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+32. **B-32 Morning Measure — DONE** (build tick interrupted pre-place at
+    #12; placed clean at artwalk-43): the milk churn's hoop-free band
+    carries a brass datum + three alternating brass/bone marks — one per
+    goat, count verified at source (three goats: browse/alert/graze) —
+    live as `nx-artwalk-b32-morning-measure` at host-local (0,0,0),
+    concentric, world (20,0,35) yaw −2.2. The dairy counts threes.
+    Bill eye-check pending from the harvest track by the inn porch.
+33. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
