@@ -139,7 +139,13 @@ are done; the artwalk language now moves INTO the architecture. New queue
     `nx-artwalk-b27-waterline` at host-local (0,0,0), concentric.
     The plaza well measures depth; this one remembers seasons.
     Bill eye-check pending from the stable track.
-28. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+28. **B-28 Bake Count — DONE**: the bakery shed's front counter (source
+    mkv3-ring.ts, court-local (−3.0, top 0.82, −1.68)) carries a brass
+    datum + seven alternating brass/bone batch marks — a week of bakes —
+    live as `nx-artwalk-b28-bake-count` at court-local (−3.0,0,−1.955).
+    Host re-pinned after interior-12's court evolution (59534b10…).
+    Bill eye-check pending from the court yard.
+29. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
