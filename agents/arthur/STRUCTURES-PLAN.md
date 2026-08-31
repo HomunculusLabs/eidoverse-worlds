@@ -105,6 +105,7 @@ stop the /loop.
 | struct-22 | R2-3 Hypar Gate Arbor | INFEASIBLE (W+E, proven) | — | — | PROOF BANKED, options to Bill |
 | struct-23 | R2-4 Wave Cellar Door | inn S face, gap-window seat | (36.0, −0.045, 5.55) | 0 (face +Z to field) | LIVE, walk 9/9 |
 | struct-24 | R2-5 Sky Mirror Plinth | observatory forecourt pocket | (24.0, −0.054, −35.5) | 0 (hex, symmetric) | LIVE, circuit walk 9/9 |
+| struct-25 | R3-1 North Needle | NW diagonal terminus, th326/r57 | (47.3, −0.034, −31.9) | 0 (lean −3.4° about z) | LIVE, pad circuit 7/7, + summit light |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -774,3 +775,34 @@ R2-5 Sky Mirror Plinth ✓ (struct-24). All named commissions resolved.
 Next: re-derive from census + Bill's verdicts (R2-3 relocation decision
 still open). Refine cadence: struct-25 will be a refine tick if the
 pool holds deficit candidates.
+
+## struct-25 — R3-1 THE NORTH NEEDLE (Round 3 opens; concept + record)
+
+**Concept**: one line, one lean, one light. The sector census showed
+every other diagonal carrying a terminus landmark (NE: Spiral Folly; SE:
+Theater+Skene; SW: Reed Pool+Angler; the axes: gates, beacon, windmill)
+— while the NW diagonal, the village's richest walk (hall → water stair
+→ shell tower → orrery+ring → observatory → sky mirror), simply stops.
+A leaning 12.4m mast — the lane's tallest — with brass grading bands and
+a summit ember lamp: by day a surveyor's needle, by night the farthest-
+visible point of the village, seen before any roofline.
+
+- Review caught the center-pivot axis bug (upper band floating 0.37m off
+  the mast — cylinder rotation pivots at center, not base); fixed with
+  the exact axis equation x(y)=(y−6.6)·tan(LEAN) before any upload.
+  Second render: bands seat, summit capped. sha 39ed7070104ddc61, ×2.
+- Seat th326/r57 → (47.3, −0.034, −31.9), 4.9m min gap past h6; terrain
+  flat (−0.031..−0.037 at five points).
+- Placement: nx-struct-northneedle + summit light nx-struct-northneedle-l
+  (beacon precedent), PLACED_VERIFIED 2 verbs, idempotent rerun zero
+  verbs. Seven-leg pad circuit walk ALL PASS (0.361m).
+
+**Bill should eye-check**: from the NW walk past the sky mirror — the
+needle against the sky where the diagonal ends; at dusk, the one warm
+point at its summit, visible (in principle) from the plaza.
+
+## ROUND 3 STATUS (struct-25)
+
+R3-1 North Needle ✓ (struct-25). Queue open: re-derive each tick from
+census + Bill's verdicts. Open decisions with Bill: R2-3 relocation
+options (struct-22). Refine cadence: struct-27 is the next refine tick.
