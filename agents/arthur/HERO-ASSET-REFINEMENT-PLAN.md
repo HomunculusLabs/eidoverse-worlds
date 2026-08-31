@@ -374,6 +374,36 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Next: remaining core-dressing family (birdbath shares mkwater1.ts — re-judge
   from pixels next tick), or first eye-gate consideration for the water pass.
 
+### polish-272 — town gate finished crowns (ACCEPTED, LIVE) ×4
+
+- Subject: `nx-town-gate-n/s/e/w` (four gates at r 19.5 on the compass axes,
+  one shared GLB → one edit improves four landmarks; empty comp bags). Build
+  source `assets/mkgate.ts` → `village_gate.glb` (live was 558489ed8a6477c4,
+  6 nodes).
+- Defect: the post crowns died into flat 0.5×0.16 cap slabs — the same
+  unfinished-crown class repaired on the carousel (polish-258) and tower
+  (polish-265). At gameplay distance the caps read clipped.
+- Change: brass collar + tapered gold spire (r 0.15, h 0.45) per post, the
+  accepted crown language at gate scale. **Falsified first placement**: crown
+  on the post cap (y 2.76..3.31) was occluded by the lintel (top y 3.09) —
+  renders showed only sub-threshold nub tips peeking over the beam.
+  REJECTED, then corrected in the same tick: re-based on the lintel top
+  (collar y 3.14, spire 3.19..3.64) where it crosses each post, fully open.
+  First rejected build 23e32f1a; accepted candidate
+  `d1b90d6fc66b2db805155a52f0ef844b6ac2c354bb77fb3810406e1bee660d1f`
+  (6 nodes / 6 meshes unchanged — crowns merge into material buckets).
+  Double rebuild byte-identical.
+- Falsification: front + gameplay views show both finials clearly; entrance
+  marker read completes; no float/clip/proportion issues. Lesson recorded:
+  check crown elements against OVERHANGING geometry above them, not just
+  what's beneath.
+- Placed via NEW batch placer `next-place-gates.ts` (4 slots, one upload):
+  live lib `store/d1b90d6fc66b2db8.glb` on all four gates, tuples exact,
+  empty comp bags preserved, idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-272-gate/`.
+- Next: welcome lamp light entity remains from the old queue; otherwise
+  core-dressing re-survey continues (giftshelf, banner, bench next ranked).
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
