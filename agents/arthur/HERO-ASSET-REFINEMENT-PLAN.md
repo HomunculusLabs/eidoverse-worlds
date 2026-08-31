@@ -595,6 +595,29 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Next: unnamed-core re-survey on fresh evidence, or hold for Bill's
   eye-gate verdicts on polish-271..280.
 
+### polish-281 — cistern readable water (ACCEPTED, LIVE)
+
+- Subject: `nx-cistern` (bakery cistern, court E side, pos
+  [15.703583236444484, 0, -14.586880611718946], yaw −0.90756, empty comp
+  bag). Build source `assets/mkv3-bakery-cistern97.ts` →
+  `village_bcistern3.glb` (live was 85d956f6600f336d, 4 buckets).
+- Defect: the interior water plane existed (bc_water, y 0.45 — accessor-
+  verified, not a probe artifact) but in cistern-dark `0x303840`; from above
+  it read as an EMPTY BLACK HOLE — the same falsification class the fountain
+  water showed at polish-271. (Artwalk's B-23 rain-count rider on the face
+  ignored during host judgment — ownership law.)
+- Change: housekit water blue `0x506a78` + faint same-hue emissive
+  `0x2e4a58` @ 0.45, the accepted fountain water treatment (polish-271/274).
+- Candidate hash: `d3d3ad75932cb3da0abbb800251d9d94205e2ba5a834464741b0feee655b8f4d`.
+  Double rebuild byte-identical.
+- Falsification: top view — interior now unmistakably a water surface,
+  natural not artificial; stone/lid/scoop unchanged.
+- Placed via NEW dedicated placer `next-place-cistern.ts`: live lib
+  `store/d3d3ad75932cb3da.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-281-cistern/`.
+- Next: nx-shutters survey, then re-survey/hold.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
