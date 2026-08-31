@@ -97,8 +97,16 @@ are done; the artwalk language now moves INTO the architecture. New queue
     line the entry-side wall as `nx-artwalk-b20-bunkhouse-four-rooms`.
 21. **B-21 Tower Ascension Count — DONE**: nine widening brass/bone rungs rise
     above the drum-tower door as `nx-artwalk-b21-tower-ascension-count`.
-22. Re-derive from live buildings; prefer high-traffic surfaces visitors see
-   at door-height. Motifs readable at walking distance, not micro-detail.
+22. **B-22 Mapboard Eight Ways — DONE**: the mapboard's bare plaza-facing back
+    carries a compass card — brass datum, bone measure ring, eight brass/bone
+    rays (long = the four gates, short = the four spokes), brass center pin —
+    live as `nx-artwalk-b22-mapboard-eight-ways` at host-local (0,0,−0.03)
+    hugging the slab's back plane (the rider bakes the board's 12° tilt).
+    First anchor (0,0,−0.14) was rejected live (rider sat map-side facing
+    into the board — host +Z faces the plaza) and reseated via remove-verb.
+    Bill eye-check pending from the plaza.
+23. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+    at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
 (brass and bone flat, ashlar/timber substrates), never painted noise; each
