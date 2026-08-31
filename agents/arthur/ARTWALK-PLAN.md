@@ -113,7 +113,13 @@ are done; the artwalk language now moves INTO the architecture. New queue
     compound bbox envelops the cistern (standing in the open yard between
     the sheds); exempted under the refine-214/R-105 DESIGNED classification.
     Bill eye-check pending from the court yard.
-24. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+24. **B-24 Well's Depth — DONE**: the plaza hearth's own well drum (highest
+    traffic in the village, zero riders before) carries the answer to B-23
+    on its clear north face — brass sounding-line datum + nine alternating
+    brass/bone depth marks NARROWING downward — live as
+    `nx-artwalk-b24-well-depth` at host-local (3.4,0.375,0.70).
+    Bill eye-check pending from the north plaza approach.
+25. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
