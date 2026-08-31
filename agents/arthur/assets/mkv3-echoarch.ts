@@ -19,7 +19,12 @@ import { writeFileSync } from "node:fs";
 
 const g = new THREE.Group();
 const ash = mat(0x56503c, 0.95, 0);
+// struct-30 refine: the focus pins now glow warm — the whisper seats read
+// at dusk from the theater walk (lit-seats law, beacon lineage); no new
+// light entity, the pins ARE the lamps.
 const brass = mat(C.BRASS, 0.55, 0);
+(brass as any).emissive = new THREE.Color(0x8a5a20);
+(brass as any).emissiveIntensity = 0.6;
 
 const F = 1.0;          // focal length
 const H = 3.2;          // fin height

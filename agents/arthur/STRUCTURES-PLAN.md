@@ -110,6 +110,7 @@ stop the /loop.
 | struct-27 | REFINE: Folly crown night read | — | exact standing tuple (46.11, −0.037, 33.50) | — | LIVE, warm crown halo, walk 10/10 re-verified |
 | struct-28 | R3-3 Echo Arch | SE beyond skene, th108/r60 | (−18.5, 0.051, 57.1) | 5.027 (axis on diagonal) | LIVE, axis walk 7/7 |
 | struct-29 | R3-4 Wayfarer's Halt | S road verge | (−2.0, −0.003, 30.0) | 0 (bench faces road) | LIVE, halt walk 8/8 |
+| struct-30 | REFINE: Echo Arch pins night read | — | exact standing tuple (−18.5, 0.051, 57.1) | — | LIVE, warm pin pair, axis walk 7/7 re-verified |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -905,3 +906,28 @@ the center post: the mark of "the road rests here."
 **Bill should eye-check**: walking the S road between the gate and the
 Bandstand — the little halt on the west verge; sit on the bench and
 look back up the road to the gate.
+
+## struct-30 — REFINE TICK 6: Echo Arch night read
+
+Pool ranked the Echo Arch top by evidenced deficit: the SE terminus was
+the only dark one at dusk — needle (NW), folly crown (NE), and beacon
+(E) all carry the lane's light language. Same proven class.
+
+- One defect, smallest change: the two focus pins' brass gains warm
+  emissive (0x8a5a20 @ 0.6) — the pins ARE the lamps; no new light
+  entity, no geometry change.
+- Discipline: baseline 3a4a74c37f468dfa reproduced exactly; candidate
+  f38d01bb0ce1e9bf deterministic ×2; glow verified; lib upgrade at the
+  EXACT standing tuple (remove-gated spawn-replace, comp bag intact);
+  idempotent rerun zero verbs; standing 7-leg axis walk re-run ALL PASS
+  (0.390m). Night render judged: two restrained warm points marking the
+  whisper seats. Bill's dusk eye-check decides.
+
+**Bill should eye-check (dusk)**: from the theater walk SE — two faint
+warm points marking the whisper seats between the fins.
+
+## ROUND 3 STATUS (struct-30)
+
+R3-1 North Needle ✓ · R3-2 Four Waystones ✓ · R3-3 Echo Arch ✓ ·
+R3-4 Wayfarer's Halt ✓ · refines: folly crown ✓ (27), echo pins ✓ (30).
+Open with Bill: R2-3 relocation options (struct-22).

@@ -12,7 +12,8 @@ const YAW = 5.027;
 const m = {
     id: "nx-struct-echoarch",
     file: "village_echoarch3.glb",
-    sha: "3a4a74c37f468dfa32c9f2481d9aefba51c9fd23892d7f27cf4f0fb7ce911663",
+    sha: "f38d01bb0ce1e9bf4b14c5f3c8677105649d2f6ed8af306fc58f549f15d1bf69",
+    prevSha: "3a4a74c37f468dfa32c9f2481d9aefba51c9fd23892d7f27cf4f0fb7ce911663", // struct-28 baseline
     bbox: { min: [-4.1, 0, 0], max: [4.1, 3.35, 10.3] },
     comp: {},
 } as const;
@@ -57,15 +58,21 @@ for (const e of Object.values(before)) {
     if (gap(T, obb(e.pos, e.yaw ?? 0, bb)) < 1.5) collisions.push(e.id);
 }
 if (collisions.length) die(`echoarch seat blocked (<1.5m clear): ${collisions}`);
-const exist = before[m.id];
-if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1)) die(`${m.id} live collision/drift`);
-
 let verbs: Array<[string, any]> = [];
+const exist = before[m.id];
+if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1)) {
+    // struct-30 reseat: accept ONLY the exact struct-28 baseline lib at the
+    // exact standing pose; spawn-replace upgrades the lib in place.
+    const baselineOk = exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`
+        && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1;
+    if (!baselineOk) die(`${m.id} live collision/drift`);
+    verbs.push(["remove", { id: m.id }]);
+}
 const needComps = !exist || !eq(exist.comp ?? {}, m.comp);
-if (!exist) {
+if (!exist || (exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`)) {
     const u = new URL(`${base}/upload`);
     u.searchParams.set("token", cfg.agentToken);
-    u.searchParams.set("name", `commons-next ${m.id} struct-28`);
+    u.searchParams.set("name", `commons-next ${m.id} struct-30`);
     u.searchParams.set("by", cfg.id);
     let lib = "";
     for (let a = 1; a <= 5; a++) {
