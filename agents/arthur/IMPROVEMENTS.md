@@ -3739,4 +3739,6 @@ fixes ≈ 6 F.)
 
 - [struct-24] R2-5 SKY MIRROR PLINTH raised live at the observatory forecourt — hexagonal ashlar plinth of three diminishing courses with a still canon-WATER mirror and a brass gnomon bead at center, the sky caught in a stone cup; deterministic 8331ba88ffcae0ff x2, 4 nodes, furniture-solid collider correct (0.9m, fixed feature); siting re-derived honestly: the narrow orreryring-observatory pocket maxes at 1.08m (fails the 1.4 law), full forecourt scan found the open pocket center at (24, -35.5) on the plaza approach with 3.82m min gap, terrain sampled at five points; PLACED_VERIFIED one verb, idempotent rerun zero verbs, nine-leg circuit walk ALL PASS max arrival 0.363m; visual judged on rendered gameplay plus top frames, Bill eye-check pending (D+3, E+1)
 
-**Running total: 2369729 / 2000000**
+- [polish-282] shutters survey: the study shutters are a tower host-rider, rendered alone they float by nature so mount falsification is impossible in isolation and the live mount tuple was already verified by the tower-ensemble placer gate. The panels themselves read correctly, timber slats with iron straps, believable open-shut pair, no defect above threshold on the piece itself. Left untouched. Live world untouched, no placement. This closes the unnamed core survey list, every core piece has now been judged this campaign. (D+1, E+1)
+
+**Running total: 2369731 / 2000000**

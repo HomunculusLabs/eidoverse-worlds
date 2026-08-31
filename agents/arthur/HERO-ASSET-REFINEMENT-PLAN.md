@@ -618,6 +618,25 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Evidence: `agents/arthur/reviews/hero-assets/polish-281-cistern/`.
 - Next: nx-shutters survey, then re-survey/hold.
 
+### polish-282 — shutters survey: NO DEFECT, core survey fully closed
+
+- Subject: `nx-shutters` (tower study-shutter host-rider, 26259f89feb92736…,
+  unchanged). Mounted on the tower drum at z≈2.82 — rendered alone it floats
+  by nature, so mount falsification is impossible in isolation; the live
+  mount tuple was already verified by the tower-ensemble placer gate.
+- Panels judged correct: timber slats, iron hinge straps, believable
+  open/shut pair (left folded, right drawn). No defect above threshold.
+- **Campaign milestone:** with this, every core landmark, dressing piece,
+  sign, and host-rider in commons-next has been surveyed — 9 accepted
+  improvements (polish-271..279+281), 4 clean no-defect verdicts
+  (giftshelf, trade signs, shutters). The survey list is EMPTY; further
+  productive ticks require new evidence (Bill's verdict, a sibling change,
+  or a fresh defect) or queue widening.
+- Live world untouched; no placement.
+- Next: hold for Bill's eye-gate verdicts on the wave, or re-survey on new
+  evidence. Identical no-op surveys from here: say so once per the hold-law
+  amendment and recommend `/loop stop` or a no-LLM monitor.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
