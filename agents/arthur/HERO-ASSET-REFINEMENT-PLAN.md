@@ -340,6 +340,40 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
   lamp, welcome lettering, tower spire, monument beads, market fascia,
   court chimney, hall frames) or re-survey on new evidence.
 
+### polish-271 — fountain water (ACCEPTED, LIVE) — first post-verdict subject
+
+- Subject: `nx-dress-fountain` (plaza edge, pos [12.5,0,4], yaw −0.7853981633974483,
+  EMPTY comp bag). Build source `assets/mkwater1.ts` (fountain block) →
+  `village_fountain.glb` (live was bce94cf4fbef9b1a, 5 nodes / ~4 draws).
+- Defect: the fountain was a DRY two-tier stone planter. Source comment promised
+  a water-particles comp that was never applied — and `shared/particles.js`
+  ships no water preset at all (fire/sparks/embers/smoke/dust/snow/magic/stars/
+  muzzle). Every other water body in the village (cistern, ponds, trough) is
+  geometry; the plaza centerpiece alone was dry.
+- Change (single coherent intervention): palette-water `0x506a78` geometry —
+  basin pool disc (r 1.38 at y 0.37), upper-bowl pool disc (r 0.63 at y 1.79),
+  central jet column (r 0.045→0.075, y 1.84..2.36), finial lifted 1.95→2.42 to
+  crown the jet. First attempt used the cistern's dark 0x303840; falsification
+  showed the basin pool blending into dark stone — recolored to the housekit
+  water blue (goat-trough precedent) for readability.
+- Candidate hash: `3ff7af591b5635d4861b1ef4e0edb24a4f7ea9c248ea77cdc1d0b0bc68c37217`
+  (8 top-level nodes). Double rebuild byte-identical.
+- Falsification: gameplay-distance silhouette now reads "working fountain"
+  (jet + lifted ball clear at range); top view shows both pools; dry-planter
+  read eliminated. Day/grip geometry otherwise unchanged.
+- Placement hazard note: the first edit run clobbered the baseline GLB before
+  the before-render was captured (assets/ is untracked, git show cannot
+  recover); recovered by reverting the source to baseline state and relying on
+  the build's proven byte-determinism — baseline rebuilt exact bce94cf4, hash
+  verified against the live lib before rendering. Lesson: capture before-bytes
+  BEFORE the first rebuild of an untracked asset.
+- Placed via NEW dedicated placer `next-place-fountain.ts`: live lib
+  `store/3ff7af591b5635d4.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-271-fountain/`.
+- Next: remaining core-dressing family (birdbath shares mkwater1.ts — re-judge
+  from pixels next tick), or first eye-gate consideration for the water pass.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane

@@ -3671,4 +3671,8 @@ fixes ≈ 6 F.)
 
 - [artwalk-31] B-21 TOWER ASCENSION COUNT: nine widening brass/bone rungs rise around one spine above the drum-tower door; deterministic ba8f63884184b13e x2; exact live host-local (0,2.22,2.8225), 5.533m nearest-solid clearance, zero-verb rerun, full tower doorway route 6/6 PASS; review frames rendered but native visual PASS not claimed under Bill waiver (D+3, E+1)
 
-**Running total: 2369513 / 2000000**
+- [artwalk-32] Bill verdict recorded across all lanes: everything approved, keep improving — structures round-2 queue (5 commissions), interior pass-2 queue (6 rooms), polish ranked-asset queue resumed; all holds lifted (D+3, E+1)
+
+- [polish-271] fountain water: nx-dress-fountain was a dry two-tier stone planter (source promised water particles the engine never shipped; engine has no water preset, cistern-law geometry instead). Added basin pool + upper-bowl pool + central jet in palette water 0x506a78, finial lifted to ride the jet crown (y 1.95 to 2.42). Baseline bce94cf4 to candidate 3ff7af59, 5 to 8 nodes, double rebuild byte-identical, gameplay jet read accepted on identical-camera rig. Placed at exact tuple, empty comp bag preserved, idempotent rerun zero verbs. (D+3, E+3)
+
+**Running total: 2369523 / 2000000**
