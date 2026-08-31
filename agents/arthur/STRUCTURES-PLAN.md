@@ -114,6 +114,7 @@ stop the /loop.
 | struct-31 | R3-5 Sound Mirror | NW flank, hall-h2 pocket | (28.7, −0.026, −18.0) | 0 (opens skyward) | LIVE, circuit walk 7/7 |
 | struct-32 | R3-6 Needle Rest | NW diagonal, th330/r47 | (41.1, −0.047, −23.8) | 7.330 (bench to walk) | LIVE, bench walk 5/5, shared sha |
 | struct-33 | REFINE: Sound Mirror ring night read | — | exact standing tuple (28.7, −0.026, −18.0) | — | LIVE, warm focus ring, walk 7/7 re-verified |
+| struct-34 | R3-7 Crossing Mark | plaza crossing NE corner | (3.6, −0.005, −3.6) | 0 (4-fold symmetric) | LIVE, corner circuit 7/7 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -989,3 +990,28 @@ rings, folly crown, and echo pins all carry the glow lineage now.
 
 **Bill should eye-check (dusk)**: from the NW walk — the faint warm ring
 hovering above the sound mirror's dark bowl.
+
+## struct-34 — R3-7 THE CROSSING MARK (Round 3; concept + record)
+
+**Concept**: every road in the village converges on the plaza crossing
+and nothing marked it. One idea: four lean stones at the crossing's NE
+corner, each leaning AWAY from the center with a brass binding ring at
+its head — the crossroads held open by four hands; from any gate road
+the leaning crowns frame the plaza ahead.
+
+- Review caught the center-pivot axis bug on the rings (floating 0.18m
+  past the tips — the SAME class as the needle's bands at struct-25, now
+  twice-caught): fixed with the exact axis equation before upload.
+  Second render clean. sha a5da939d54351eee, ×2, 3 nodes.
+- Siting honesty: the plaza core is packed. First seat (4.2, 4.2) and
+  the r3–6 annulus were correctly blocked by the live gate (hearth/
+  belltower/roads overlaps). Grid probe found the NE pocket (3.6, −3.6):
+  4.15m to the nearest real solid (welcome sign). The hearth compound
+  bbox wraps that corner at bbox level (−1.22m) — named exception
+  in-source (apron-edge seat; the fire bowl itself is centered) and the
+  roads ground-layer exemption per struct-26.
+- Placement: nx-struct-crossing PLACED_VERIFIED, 1 verb, no comps,
+  idempotent rerun zero verbs. Seven-leg corner circuit walk ALL PASS.
+
+**Bill should eye-check**: entering the plaza from any gate road — the
+four leaning crowns at the NE corner framing the crossing.
