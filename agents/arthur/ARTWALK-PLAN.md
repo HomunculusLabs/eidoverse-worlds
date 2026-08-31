@@ -119,7 +119,15 @@ are done; the artwalk language now moves INTO the architecture. New queue
     brass/bone depth marks NARROWING downward — live as
     `nx-artwalk-b24-well-depth` at host-local (3.4,0.375,0.70).
     Bill eye-check pending from the north plaza approach.
-25. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+25. **B-25 Village Mark — DONE**: the welcome board's bare back face
+    (decoded at source: front +Z carries COMMONS; back was empty) carries
+    the village's seal — brass hearth-dot, bone gathering-ring, eight
+    brass paver ticks — live as `nx-artwalk-b25-welcome-village-mark` at
+    host-local (0,1.35,−0.053). The monument SAT block was decoded as a
+    bbox-corner kiss (nearest source-true solid ~0.5m away) and exempted
+    with a gap-bounded exact-match condition, not a blanket id skip.
+    Bill eye-check pending from the SW gate path.
+26. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
