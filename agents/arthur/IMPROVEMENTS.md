@@ -3699,4 +3699,6 @@ fixes ≈ 6 F.)
 
 - [polish-275] bench legs and giftshelf verdict: the curved plaza bench carried legs only at its two ends, the three center slabs cantilevered unsupported and the middle read floating or broken. Added a third leg under the arc center. Baseline 185bc846 to candidate 09f4d174, double rebuild byte-identical, construction logic now sound with no clipping. Placed at exact tuple, empty comp bag preserved, idempotent rerun zero verbs. Same tick surveyed the gift shelf at close range and recorded NO DEFECT above threshold, objects readable, stand proportioned, deliberately quiet piece left untouched. (D+2, E+1)
 
-**Running total: 2369601 / 2000000**
+- [interior-12] Interior PASS 2 forge living corner: three-legged oak smith stool at working height beside the anvil, low quenched blade rack with three finished blades on brass-lined bars in the gap between toolrack and quench barrel, and iron apron hook with hanging leather apron on the hearth east face, the smith shown beside the smithing, all inside the inherited furniture AABB with the whole plus-Z work apron untouched, deterministic 620120c4d6f0b4a0 rebuild twice with fire coals motion and particles comps re-verified after the wipe, exact tuple and warm bay light restored, idempotent rerun zero verbs, six-leg work apron walk unchanged and focused gate ALL PASS (D+13, E+3)
+
+**Running total: 2369617 / 2000000**

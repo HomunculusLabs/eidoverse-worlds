@@ -122,3 +122,22 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   honest attribution rather than silently mixed. Review packet
   `reviews/interior-p2-2/` under Bill's interior-lane visual waiver; no
   native visual PASS claimed. Next: P2-3 forge living corner.
+- Wakeup 3 / interior-12 (P2-3 Forge living corner): `nx-forge` reconciled at
+  `[22.1178547347,0,-7.9575684946]`, yaw `-0.90756`, comp contract
+  `motion:fire_fg_coals` + `particles`; local `mkv3-forge98.ts` reproduced
+  the live hash `2c902a90…` exactly before editing — pin fresh, no sibling
+  evolution this time. Built the smith's living corner — the bay showed the
+  WORK, these three show the WORKER: three-legged oak stool (seat 0.44)
+  tucked behind the anvil horn line, low quenched-blade rack (three dark
+  blades on brass-lined bars) filling the toolrack↔quench gap, and an iron
+  apron hook with hanging leather apron on the hearth east face. All inside
+  the inherited furniture AABB (x-min −0.8726→−0.873 from the stool legs,
+  max unchanged) so the furniture-scale collider stays a solid box with no
+  approach drift; +Z work apron untouched. Deterministic `620120c4d6f0b4a0`
+  ×2, 13 nodes / 12 meshes (+~180 verts); PLACED_VERIFIED with 3 verbs
+  (spawn + both comps restored per comp-wipe law), warm bay light
+  re-verified, idempotent rerun zero verbs, six-leg work-apron walk
+  ALL_PASS 0.375 unchanged, focused gate `verify-interior2.ts` ALL PASS
+  (SHA + node/mesh count + placer pin + bbox tolerance updated). Review
+  packet `reviews/interior-p2-3/` under Bill's interior-lane visual waiver;
+  no native visual PASS claimed. Next: P2-4 longhouse feast kit.
