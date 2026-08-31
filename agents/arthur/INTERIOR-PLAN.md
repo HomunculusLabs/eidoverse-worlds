@@ -77,3 +77,25 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
    rhythm, unfired row.
 7. Re-derive beyond these from live rooms; defer to artwalk phase B when
    it claims a building that tick.
+
+## Pass 2 log
+
+- Wakeup 1 / interior-10 (P2-1 Inn guest rooms): `nx-town-inn` reconciled at
+  `[36,0,0]`, yaw `-π/2`, empty comp bag, pinned source `mkv3-landmarks.ts`
+  (reproduced the accepted hash `9fdf2452…` exactly before editing). Beds,
+  pillows, blankets, and foot-chests already existed (loop #50) — the honest
+  P2-1 delta was travel bags + bedside candles, NOT duplicate beds: three
+  leather satchels (body + iron flap + strap) beside each foot-chest on the
+  chest line, one bone candle stub with gentle emissive glow (0.85) along
+  each bed's west side. First siting put bags mid-deck (z=+0.05); aerial
+  review caught it and the pieces were re-sited to the chest line before
+  placement — open deck middle (z∈[-0.1,1.1]) preserved for the
+  stair-hole→window-seat walk. Merge stayed 30 nodes / 29 meshes (+594 verts,
+  AABB millimetre-identical → zero SAT change). Deterministic
+  `c180c26f4a3fb8ad` ×2; placed PLACED_VERIFIED, empty comp bag preserved,
+  warm light re-verified (pos [36,2.35,0], 0xffb066, 1.6, 6), idempotent
+  rerun zero verbs, walk ALL_PASS at maxArrival 0.364 (unchanged), focused
+  gate `verify-interior0.ts` ALL PASS (SHA + placer pin updated to the new
+  hash). Review packet `reviews/interior-p2-1/` under Bill's interior-lane
+  visual waiver; no native visual PASS claimed. Next: P2-2 hall council
+  frieze (coordinate with artwalk B-1 charter wall).

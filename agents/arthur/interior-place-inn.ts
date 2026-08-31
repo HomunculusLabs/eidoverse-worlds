@@ -2,7 +2,7 @@
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 const ROOT="/Users/t3rpz/projects/eidoverse-worlds",WORLD="commons-next",ID="nx-town-inn",LIGHT_ID="nx-town-inn-l";
-const OLD_LIB="store/8de1af9446f98eb9.glb",SHA="9fdf24522f0de63fbab86c044609681e6361912dc7dabfa6778f8e7af413bcee",LIB=`store/${SHA.slice(0,16)}.glb`;
+const OLD_LIB="store/9fdf24522f0de63f.glb",SHA="c180c26f4a3fb8ad0b4bb9584df2e6e6b4ba30fb15aad99e5e5ceb72f6ece74c",LIB=`store/${SHA.slice(0,16)}.glb`;
 const POS=[36,0,0],YAW=-Math.PI/2,LIGHT={id:LIGHT_ID,pos:[36,2.35,0],color:0xffb066,intensity:1.6,range:6};
 const cfg=JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`,"utf8")),base=cfg.url.replace("wss://","https://").replace("ws://","http://").replace("/ws","");
 const bytes=new Uint8Array(readFileSync(`${ROOT}/agents/arthur/assets/village_inn3.glb`));

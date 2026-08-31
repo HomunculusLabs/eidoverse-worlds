@@ -2,7 +2,7 @@
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { execSync } from "node:child_process";
-const ROOT="/Users/t3rpz/projects/eidoverse-worlds",WORLD="commons-next",ID="nx-town-inn",LID="nx-town-inn-l",SHA="9fdf24522f0de63fbab86c044609681e6361912dc7dabfa6778f8e7af413bcee";
+const ROOT="/Users/t3rpz/projects/eidoverse-worlds",WORLD="commons-next",ID="nx-town-inn",LID="nx-town-inn-l",SHA="c180c26f4a3fb8ad0b4bb9584df2e6e6b4ba30fb15aad99e5e5ceb72f6ece74c";
 const cfg=JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`,"utf8")),base=cfg.url.replace("wss://","https://").replace("ws://","http://").replace("/ws","");let fails=0;const ck=(n:string,c:boolean,d="")=>{console.log(`${c?"PASS":"FAIL"} ${n}${d?" — "+d:""}`);if(!c)fails++},near=(a:number,b:number)=>Math.abs(a-b)<1e-6,vec=(a:any,b:number[])=>Array.isArray(a)&&a.length===b.length&&a.every((n:number,i:number)=>near(n,b[i]));
 const file=`${ROOT}/agents/arthur/assets/village_inn3.glb`,buf=readFileSync(file),jl=buf.readUInt32LE(12),j=JSON.parse(buf.subarray(20,20+jl).toString()),names=j.nodes.map((n:any)=>n.name);
 ck("reviewed bytes",createHash("sha256").update(buf).digest("hex")===SHA);

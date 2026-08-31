@@ -3675,4 +3675,6 @@ fixes ≈ 6 F.)
 
 - [polish-271] fountain water: nx-dress-fountain was a dry two-tier stone planter (source promised water particles the engine never shipped; engine has no water preset, cistern-law geometry instead). Added basin pool + upper-bowl pool + central jet in palette water 0x506a78, finial lifted to ride the jet crown (y 1.95 to 2.42). Baseline bce94cf4 to candidate 3ff7af59, 5 to 8 nodes, double rebuild byte-identical, gameplay jet read accepted on identical-camera rig. Placed at exact tuple, empty comp bag preserved, idempotent rerun zero verbs. (D+3, E+3)
 
-**Running total: 2369523 / 2000000**
+- [interior-10] Interior PASS 2 opened at the inn guest rooms: three leather travel bags with flap and strap beside the existing foot-chests and one bedside candle with gentle emissive glow per bed added on the lodging floor, chest line and bed sides kept, open deck middle preserved for the stair-hole walk, AABB millimetre-identical to the accepted model, deterministic c180c26f4a3fb8ad rebuild twice, exact live tuple and warm light verified, empty comp bag preserved, idempotent rerun zero verbs, six-leg walk unchanged at 0.364 max arrival and focused gate ALL PASS (D+22, E+2)
+
+**Running total: 2369547 / 2000000**
