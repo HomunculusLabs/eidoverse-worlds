@@ -3767,4 +3767,6 @@ fixes ≈ 6 F.)
 
 - [struct-30] REFINE TICK 6: Echo Arch night read — the two brass focus pins re-materialized with warm emissive (glow factor in GLB, no new light entity), the whisper seats now read at dusk from the theater walk; pool ranked the arch top by evidenced deficit (the SE terminus was the only dark one while needle folly crown and beacon all carry the lane light language); baseline 3a4a74c37f468dfa reproduced exactly before edit, candidate deterministic f38d01bb0ce1e9bf x2, single material change verified, lib upgrade at the exact standing tuple via remove-gated spawn-replace (empty comp bag intact), idempotent rerun zero verbs, standing seven-leg axis walk re-run ALL PASS, night render judged showing two restrained warm points marking the seats; Bill dusk eye-check pending (D+2, E+1)
 
-**Running total: 2369811 / 2000000**
+- [interior-20] Interior pass 2 next wave at the windmill mill room: miller grist ledger board on the east wall with one brass datum and seven alternating brass bone grist marks counting the weeks sacks per the trade counting convention plus a stone flour bin with white heap and wooden scoop beside the bench, all against walls with the full door lane clear and nothing entering walk paths, sails and lamp anchors untouched, deterministic 0993836012d1b17d rebuild twice with inn carousel and belltower sibling GLBs byte-identical under the shared landmarks script, exact tuple verified live, empty comp bag preserved, idempotent rerun zero verbs (D+17, E+2)
+
+**Running total: 2369830 / 2000000**

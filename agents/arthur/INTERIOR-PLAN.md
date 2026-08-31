@@ -237,7 +237,7 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   bag preserved, idempotent rerun zero verbs. New placer
   `interior-place-dyehouse.ts`. Review packet `reviews/interior-17-dyehouse/`
   under Bill's interior-lane visual waiver; no native visual PASS claimed.
-  Remaining census wave: windmill, kiln, woodyard.
+  Remaining census wave: windmill, woodyard.
 - Wakeup 9 / interior-18 (P2 next-wave: lime kiln burn ledger + work lamp):
   `nx-town-kiln` reconciled at `[31,0,39]`, yaw `-2.4784945652`, empty comp
   bag, `fire_kiln` motion anchor live, no light entity. Local
@@ -269,3 +269,23 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   delta wholesale, or (b) leave the old-gen yard alone and skip it. Next
   tick: windmill (`nx-town-windmill`, [-40,0,0], sails-class host — will
   reconcile its pin and comp history before any edit).
+- Wakeup 11 / interior-20 (P2 next-wave: windmill miller's record):
+  `nx-town-windmill` reconciled at `[-40,0,0]`, yaw `+π/2`, empty comp bag,
+  in-model lamp + lit window panes already present (no new light entity
+  needed). Local `mkv3-landmarks.ts` reproduced the live hash `4feee389…`
+  exactly (pin fresh). Built the miller's record: grist ledger board on the
+  mill-room east wall (one brass datum + seven alternating brass/bone grist
+  marks — the week's sacks, the trade counting convention) and a stone
+  flour bin with white heap + wooden scoop beside the bench. All against
+  walls, full |x|<0.7 door lane clear, sails + lamp anchors untouched.
+  Shared-script safety proven: inn3/carousel3/belltower3 rebuilds stayed
+  byte-identical to their live pins (the carousel's live lib is polish-lane
+  staged from a dedicated script — untouched by this lane). Two LSP-caught
+  errors fixed in-tick (texBox g-arg signature, same class as 17/18).
+  Deterministic `0993836012d1b17d` ×2, 17 nodes / 16 meshes; PLACED_VERIFIED
+  with 1 verb, empty comp bag preserved, idempotent rerun zero verbs. New
+  placer `interior-place-windmill.ts`. Review packet
+  `reviews/interior-20-windmill/` under Bill's interior-lane visual waiver;
+  no native visual PASS claimed. Census wave now: stable ✓ dyehouse ✓
+  kiln ✓ windmill ✓; woodyard ⏸ awaits Bill's tex-85 refresh decision
+  (interior-19 finding). Wave complete except that decision.

@@ -623,6 +623,32 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     }
     texBox(g, "mbench", 1.4, 0.07, 0.35, RW / 2 - 0.85, FY + 0.48, -1.4, timberTex);
     texBox(g, "mbleg", 0.08, 0.4, 0.26, RW / 2 - 0.85, FY + 0.22, -1.4, timberTex);
+    // interior-20 (P2 next-wave): THE MILLER'S RECORD — the mill-room life
+    // layer. A grist ledger on the wall behind the millstones (one brass
+    // datum + seven alternating brass/bone grist marks — the sacks milled
+    // this week, the trade counting convention) and a small stone flour
+    // bin with a scoop by the bench. All against walls; the full door lane
+    // (|x|<0.7) stays clear; nothing enters the walk paths.
+    {
+        texBox(g, "grist_board", 0.6, 0.5, 0.03, RW / 2 - 0.5, FY + 1.5, 0.9, timberTex);
+        box(g, "grist_datum", 0.44, 0.022, 0.012, RW / 2 - 0.5, FY + 1.66, 0.922, C.BRASS);
+        for (let gi = 0; gi < 4; gi++)
+            box(g, `grist_mark_${gi}`, 0.026, gi % 2 ? 0.1 : 0.14, 0.012, RW / 2 - 0.66 + gi * 0.107, FY + 1.55, 0.922, gi % 2 ? C.BONE : C.BRASS);
+        for (let gi = 0; gi < 3; gi++)
+            box(g, `grist_mark2_${gi}`, 0.026, gi % 2 ? 0.1 : 0.14, 0.012, RW / 2 - 0.605 + gi * 0.107, FY + 1.42, 0.922, gi % 2 ? C.BONE : C.BRASS);
+        // flour bin: open-top stone box with a heap + wooden scoop
+        texBox(g, "flourbin", 0.6, 0.35, 0.5, RW / 2 - 0.55, FY + 0.18, 0.6, stoneTex);
+        const heap = new THREE.Mesh(new THREE.SphereGeometry(0.2, 8, 5), mat(0xf2f2e6, 0.95, 0));
+        heap.name = "flour_heap";
+        heap.scale.set(1.1, 0.5, 0.9);
+        heap.position.set(RW / 2 - 0.55, FY + 0.36, 0.6);
+        g.add(heap);
+        const scoop = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.04, 0.1), timberTex);
+        scoop.name = "flour_scoop";
+        scoop.rotation.z = 0.2;
+        scoop.position.set(RW / 2 - 0.85, FY + 0.42, 0.75);
+        g.add(scoop);
+    }
     // wooden cap + gallery
     const cap2 = new THREE.Mesh(new THREE.ConeGeometry(2.0, 1.6, 10), timberTex);
     cap2.name = "cap2";
