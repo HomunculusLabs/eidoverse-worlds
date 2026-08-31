@@ -99,6 +99,7 @@ stop the /loop.
 | struct-15 | REFINE: Pendulum deficits | — | exact standing tuple | — | LIVE, posts out + beam up, walk 5/5 re-verified |
 | struct-16 | U-5 Water Stair | 270°/32 (N-gate walk axis) | (0, −0.032, −32) | 0 (descends toward village) | LIVE, circuit walk 4/4 |
 | struct-17 | REFINE: Shell Tower base | — | exact standing tuple | — | LIVE, 6 footing pads, socket re-applied, walk re-verified |
+| struct-19 | R2-1 Orrery Ring | at orrery's exact pose (284°/38) | (9.19, −0.052, −36.87) | 0 (disc, symmetric) | LIVE, film walk 8/8 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -592,3 +593,38 @@ Hold lifted. Queue widened to STRUCTURES ROUND 2 (one per tick, same laws):
 6. Re-derive beyond these from census gaps + refine deficits. Refine
    cadence law unchanged (every N%3==0 tick). Bill's standing verdict:
    approved-but-improvable — refines reopen by deficit, not by defect.
+
+## struct-19 — R2-1 THE ORRERY RING (Round 2, concept + record)
+
+**Concept**: the machine's sky, drawn on the earth. One idea: the standing
+orrery's orbits, inlaid around its feet — a tilled soil bed disc (r2.8),
+three full brass orbit rings (r1.6/2.0/2.4), and four planet-marker stones
+(ashlar disc + bone bead) set at varied radii and bearings, like a chart
+recording where the planets have wandered. The armillary spins above; the
+chart below is its frozen record — static by honest design.
+
+- Thin-film ground-layer class (h 0.215 ≤ 0.5 — walkable, like the roads).
+- Build: mkv3-orreryring.ts → village_orreryring3.glb, deterministic ×2,
+  sha256 41bce5d1377f14cf…, 4 merged nodes.
+- Review: aerial + gameplay frames judged (rings complete/concentric,
+  markers distinct, reads as an orbital chart; no z-fighting/floating).
+- **Placement preflight lesson (durable)**: the square-bbox SAT proxy
+  blocked the r2.8 disc against the yawed Observatory (square gap −0.133m
+  even at half-2.0 = +0.667m — a disc tested as a square can never pass
+  here). Replaced with EXACT disc-vs-OBB geometry: hard-die on real
+  overlap; sub-1.4m film-edge adjacency audited and pinned to the known
+  set (only the Observatory apron, +0.252m — flat film meets a wall face,
+  no pinch possible; the 1.4m law is solid-solid). The encircled orrery
+  carries the NAMED Bill-approved exception (the commission is literally
+  "around the standing orrery"; inner ring r1.6 clears the round plinth
+  r1.1 by 0.5m).
+- Placement: nx-struct-orreryring PLACED_VERIFIED at the orrery's exact
+  pose (9.19, −0.052, −36.87), yaw 0, 1 verb, no comps, idempotent rerun
+  zero verbs; live census tuple exact.
+- Walk: eight-leg MCPL film walk ALL PASS (approach → cross → center →
+  N edge → diagonals → back out; max arrival 0.395m). The ring bed is
+  genuinely walkable ground.
+
+**Bill should eye-check**: from the plaza→Observatory walk — the brass
+chart ringing the orrery's plinth; stand on the bed between the orbit
+lines and look up at the turning armillary above.

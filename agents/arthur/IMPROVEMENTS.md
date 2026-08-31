@@ -3677,4 +3677,6 @@ fixes ≈ 6 F.)
 
 - [interior-10] Interior PASS 2 opened at the inn guest rooms: three leather travel bags with flap and strap beside the existing foot-chests and one bedside candle with gentle emissive glow per bed added on the lodging floor, chest line and bed sides kept, open deck middle preserved for the stair-hole walk, AABB millimetre-identical to the accepted model, deterministic c180c26f4a3fb8ad rebuild twice, exact live tuple and warm light verified, empty comp bag preserved, idempotent rerun zero verbs, six-leg walk unchanged at 0.364 max arrival and focused gate ALL PASS (D+22, E+2)
 
-**Running total: 2369547 / 2000000**
+- [struct-19] R2-1 ORRERY RING raised live: orbital chart garden at the standing orrery's exact pose — soil bed disc r2.8, three brass orbit rings r1.6/2.0/2.4, four planet-marker stones (ashlar disc + bone bead) at varied radii and bearings; deterministic 41bce5d1377f14cf x2, 4 nodes, thin-film ground-layer class (h 0.215), visual judged on rendered aerial plus gameplay frames (rings complete, markers distinct), placed PLACED_VERIFIED with one verb, rerun idempotent zero verbs, disc-vs-OBB preflight (square SAT proxy replaced by exact disc geometry, observatory adjacency plus 0.25m audited as film-meets-wall not pinch), eight-leg film walk ALL PASS max arrival 0.395m (D+3, E+1)
+
+**Running total: 2369551 / 2000000**
