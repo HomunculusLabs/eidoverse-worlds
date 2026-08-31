@@ -99,3 +99,26 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   hash). Review packet `reviews/interior-p2-1/` under Bill's interior-lane
   visual waiver; no native visual PASS claimed. Next: P2-2 hall council
   frieze (coordinate with artwalk B-1 charter wall).
+- Wakeup 2 / interior-11 (P2-2 Hall council wall story): `nx-town-hall`
+  reconciled at `[9,0,-26]`, yaw `-0.3132245734`, empty comp bag. Live pin had
+  advanced since interior-1 (polish-269 bone door frames: `44fec272…` →
+  `c5964bc8…`); artwalk-15 had already re-grounded its B-1 rider to the
+  evolved host, and the local `mkv3-ring.ts` reproduced the live hash exactly
+  before editing — a host-pin refresh, not drift. Built the decision-history
+  frieze: nine carved decision marks (alternating brass/bone tallies) on a
+  dark backing band with one brass closing rule-line, above the charter
+  ledger shelves on the east wall — extends the B-1 rule-line language as
+  the hall's own record wall rather than competing with it. Band proud of
+  the wall face (x∈[4.22,4.28]), y∈[2.54,2.96]: 0.14m above the window top,
+  0.42m below the tie beams, clear of the x=0 aisle. One build error caught
+  and fixed mid-tick (texBox takes a Material, not a raw hex — merge died
+  until the band used `mat(...)`). Merge 23 nodes / 23 meshes (+63 verts),
+  AABB unchanged → zero SAT impact. Deterministic `1306527acac5784b` ×2;
+  PLACED_VERIFIED, empty comp bag preserved, warm light re-verified, idempotent
+  rerun zero verbs, eight-leg two-door walk ALL_PASS 0.360 unchanged, focused
+  gate `verify-interior1.ts` ALL PASS (SHA + node count + placer pin updated).
+  The pre-existing uncommitted `mkv3-ring.ts` dirt (polish-265/268/269 +
+  interior-8, all live-verified) was committed in this lane's commit with
+  honest attribution rather than silently mixed. Review packet
+  `reviews/interior-p2-2/` under Bill's interior-lane visual waiver; no
+  native visual PASS claimed. Next: P2-3 forge living corner.

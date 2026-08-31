@@ -12,7 +12,7 @@
 // stay raw-log flat (tex-16 law — fuel is not construction).
 import * as THREE from "three";
 import { toGLB, mat, texMat } from "./glbwrite.ts";
-import { C, ACCENTS, box, gableRoof, coneRoof, pyramidRoof, chimney, doorGapWall, wallSpan, windowFrame, porch, assertRoomScale, furnitureTable, furnitureBench, furnitureShelf } from "./housekit.ts";
+import { C, ACCENTS, box, gableRoof, coneRoof, pyramidRoof, chimney, doorGapWall, doorFrame, wallSpan, windowFrame, porch, assertRoomScale, furnitureTable, furnitureBench, furnitureShelf } from "./housekit.ts";
 import { mergeByMaterial } from "./mergekit.ts";
 import { writeFileSync } from "node:fs";
 
@@ -261,7 +261,14 @@ const out: Built[] = [];
         }
     }
     coneRoof(g, "roof", R, 2.2, H);
-    box(g, "finial", 0.12, 0.5, 0.12, 0, H + 2.45, 0, C.BRASS);
+    // polish-265: the finial was a bare 0.12m stick (7.6..8.1) — the crown died
+    // into a stub, same gazebo-adjacent read the carousel had before polish-258.
+    // Same accepted treatment at tower scale: brass collar + tapered gold cone.
+    box(g, "finial_collar", 0.3, 0.12, 0.3, 0, H + 2.26, 0, C.BRASS);
+    const tspire = new THREE.Mesh(new THREE.ConeGeometry(0.2, 0.75, 10), mat(0xb98245, 0.78, 0));
+    tspire.name = "spire";
+    tspire.position.y = H + 2.7;
+    g.add(tspire);
     glow(g, "lamp", 0, 2.15, R + 0.35);
     // lit window on the upper drum (faces the door arc; emissive pane rides
     // the material table — the tower was the only unlit building at night)
@@ -314,6 +321,7 @@ const out: Built[] = [];
         g.add(jar);
     }
     texBox(g, "bed", 0.95, 0.24, 1.9, W / 2 - 0.65, FY + 0.12, -0.9, timberTex);
+
     texBox(g, "table", 1.1, 0.08, 0.7, 0.3, FY + 0.8, 0.9, timberTex);
     texBox(g, "tleg", 0.08, 0.66, 0.08, 0.3, FY + 0.4, 0.9, timberTex);
     glow(g, "flame", 0.3, FY + 0.93, 0.9, 0xffc98a, 0.045);
@@ -412,6 +420,14 @@ const out: Built[] = [];
     texBox(g, "table", 1.0, 0.08, 0.7, W / 2 - 0.75, FY + 0.8, 0.8, timberTex);
     texBox(g, "tleg", 0.08, 0.66, 0.08, W / 2 - 0.75, FY + 0.4, 0.8, timberTex);
     texBox(g, "bed", 1.9, 0.24, 0.95, 0.2, FY + 0.12, -(D / 2 - 0.65), timberTex);
+    // interior-8: the weaver's bed gains a mattress, pillow, and one folded
+    // blanket whose three brass rule-lines carry Two Histories into cloth.
+    // The whole ensemble stays on the north wall, outside the door lane.
+    box(g, "wbed_mat", 1.75, 0.1, 0.84, 0.2, FY + 0.29, -(D / 2 - 0.65), ACCENTS.MATTRESS);
+    box(g, "wbed_pillow", 0.42, 0.12, 0.5, -0.42, FY + 0.4, -(D / 2 - 0.65), C.BONE);
+    box(g, "wbed_blanket", 0.78, 0.06, 0.78, 0.55, FY + 0.38, -(D / 2 - 0.65), ACCENTS.PLUM);
+    for (const [ri, rz] of [[0, -1.84], [1, -1.6], [2, -1.36]] as const)
+        box(g, `wbed_rule_${ri}`, 0.68, 0.018, 0.028, 0.55, FY + 0.42, rz, C.BRASS);
     // ---- the weaver's corner (S wall, W of the door lane |x|>0.8) ----
     // LOOM: two uprights + warp beam + heddle bar + cloth on the beam
     texBox(g, "loomA", 0.08, 1.5, 0.08, 1.3, FY + 0.75, D / 2 - 0.45, timberTex);
@@ -511,6 +527,7 @@ const out: Built[] = [];
         mug.position.set(mx, FY + 0.8, mz);
         g.add(mug);
     }
+
     // woodbox beside the hearth (split logs inside)
     texBox(g, "woodbox", 0.8, 0.4, 0.55, -(W / 2 - 0.5), FY + 0.2, 1.35, timberTex);
     for (let wb = 0; wb < 3; wb++) {
@@ -555,6 +572,14 @@ const out: Built[] = [];
     wallSpan(g, "wall_e", D - 2 * T, H, T, W / 2 - T / 2, FY, 0, "z");
     doorGapWall(g, "door_s", W, H, T, 0, FY, D / 2 - T / 2, "z", C.STONE, 1.8, 2.4); // wide, faces plaza
     doorGapWall(g, "door_n", W, H, T, 0, FY, -(D / 2 - T / 2), "z", C.STONE, 1.6, 2.3); // flow-through
+    // polish-269: the civic hall's two doors were raw holes — the only unframed
+    // openings left in the village (loop #89 gave the tower the same fix). Bone
+    // frames on both doors give the plaza-facing entrance its civic read.
+    // Frames sit PROUD of the wall face (z offset +0.12) so the bone reads as
+    // applied trim, not buried trim: first attempt centered them in the wall
+    // thickness and the front render diff was 1 pixel — invisible.
+    doorFrame(g, "door_s_frame", 0, FY + 1.2, D / 2 - T / 2 + 0.12, 1.8, 2.4, "z");
+    doorFrame(g, "door_n_frame", 0, FY + 1.15, -(D / 2 - T / 2) - 0.12, 1.6, 2.3, "z");
     windowFrame(g, "win_w", -(W / 2 - T / 2), 1.9, 0, 0.8, 1.0, "x");
     windowFrame(g, "win_e", W / 2 - T / 2, 1.9, 0, 0.8, 1.0, "x");
     gableRoof(g, "roof", W, D, 2.0, FY + H, 0.45);
@@ -589,6 +614,18 @@ const out: Built[] = [];
     for (const [li, ly, lz] of [[0, 1.23, -0.62], [1, 1.23, 0], [2, 1.23, 0.62], [3, 1.93, -0.62], [4, 1.93, 0], [5, 1.93, 0.62]] as const) {
         box(g, `ledger_${li}`, 0.18, 0.28, 0.08, W / 2 - 0.37, FY + ly, lz, li % 2 ? 0x8e6834 : 0x4e5c6a);
     }
+    // interior-11 (P2-2): the council's decision-history frieze above the
+    // charter shelves — nine carved decision marks (alternating brass/bone
+    // tallies, one per founding decision) on a dark backing band, closed by
+    // one brass rule-line. Extends the B-1 charter-wall rule-line language
+    // on the hall's own record wall; sits y∈[2.54,2.96], clear of the east
+    // window top (2.4) and under the tie beams (3.18), proud of the wall
+    // face (x=4.28) the polish-269 way so the carving reads as applied work.
+    texBox(g, "frieze_band", 0.06, 0.42, 3.2, W / 2 - 0.25, FY + 2.55, 0, mat(0x4c462a, 0.95, 0));
+    for (const [di, dz] of [[0, -1.44], [1, -1.08], [2, -0.72], [3, -0.36], [4, 0], [5, 0.36], [6, 0.72], [7, 1.08], [8, 1.44]] as const) {
+        box(g, `decision_${di}`, 0.02, 0.3, 0.06, W / 2 - 0.29, FY + 2.55, dz, di % 2 ? C.BONE : 0xa0a248);
+    }
+    box(g, "frieze_rule", 0.02, 0.03, 3.2, W / 2 - 0.29, FY + 2.38, 0, 0xa0a248);
     // CHARTER BANNER on the W wall above the dais (the village's founding
     // standard — brass wheel on dark cloth)
     box(g, "banner_cloth", 1.2, 1.7, 0.05, -(W / 2 - T / 2 - 0.04), FY + 1.75, 0, 0x4c462a);
@@ -650,6 +687,12 @@ const out: Built[] = [];
     ovenDome.position.set(-4.9, FY + 1.0, -0.8);
     g.add(ovenDome);
     box(g, "oven_base", 1.5, 0.45, 1.3, -4.9, FY + 0.22, -0.8, C.MID);
+    // polish-268: the oven is the court's fire source (smoke origin lives at
+    // [-4.9, 3.2, -0.8]) but rose from a bare dome — every other fired building
+    // in the village vents through the housekit chimney with its flue pot.
+    // A stack at the dome's back edge gives the smoke a source and the shed a
+    // proper working silhouette.
+    chimney(g, "oven_chim", -5.5, -0.8, FY + 1.2, FY + 3.6);
     // glowing oven mouth: emissive disc facing the room (the bake fire)
     const mouth = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.36, 0.06), new THREE.MeshStandardMaterial({ color: 0xffb763, emissive: 0xff7a26, emissiveIntensity: 1.1, roughness: 0.6 }));
     mouth.name = "oven_mouth";

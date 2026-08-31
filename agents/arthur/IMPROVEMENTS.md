@@ -3691,4 +3691,6 @@ fixes ≈ 6 F.)
 
 - [polish-274] fountain night identity: the new water faces vanished entirely after dark, the fountain stands 13m from the plaza light past its range and the night render showed total black water. Faint same-hue emissive (0x2e4a58 at 0.55) on the three water faces only, moonlit-water read, no added light source, stone stays dark. Candidate 3ff7af59 to 72f07c2a, double rebuild byte-identical, night jet column now faintly visible under the finial while day read unchanged. Placed at exact tuple, empty comp bag preserved, idempotent rerun zero verbs. (D+2, E+1)
 
-**Running total: 2369577 / 2000000**
+- [interior-11] Interior PASS 2 hall council wall: nine carved decision marks alternating brass and bone on a dark backing band with one brass closing rule-line added above the charter ledger shelves on the east wall, extending the B-1 charter rule-line language as the council record wall, band proud of the wall face, clear of window top and tie beams and the door-to-door aisle, AABB unchanged; pin refreshed across polish-269 hall evolution to deterministic 1306527acac5784b rebuild twice, exact live tuple and warm light verified, empty comp bag preserved, idempotent rerun zero verbs, eight-leg two-door walk unchanged and focused gate ALL PASS (D+12, E+2)
+
+**Running total: 2369591 / 2000000**
