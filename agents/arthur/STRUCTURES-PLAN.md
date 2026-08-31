@@ -104,6 +104,7 @@ stop the /loop.
 | struct-21 | REFINE: Orrery Ring night read | — | exact standing tuple | — | LIVE, warm-emissive rings, walk 8/8 re-verified |
 | struct-22 | R2-3 Hypar Gate Arbor | INFEASIBLE (W+E, proven) | — | — | PROOF BANKED, options to Bill |
 | struct-23 | R2-4 Wave Cellar Door | inn S face, gap-window seat | (36.0, −0.045, 5.55) | 0 (face +Z to field) | LIVE, walk 9/9 |
+| struct-24 | R2-5 Sky Mirror Plinth | observatory forecourt pocket | (24.0, −0.054, −35.5) | 0 (hex, symmetric) | LIVE, circuit walk 9/9 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -739,3 +740,37 @@ behind it, and a brass high-water pin at the sill.
 **Bill should eye-check**: from the goat-field side of the inn — the
 little wave-carved cellar door in the inn's shadow; the sine course
 across the lintel, the brass ring, the high-water pin at the sill.
+
+## struct-24 — R2-5 THE SKY MIRROR PLINTH (Round 2, concept + record)
+
+**Concept**: the sky, caught in a stone cup. One idea: a low hexagonal
+ashlar plinth (three diminishing courses, 0.36/0.30/0.24 — a halving
+rhythm toward the water) carrying a still canon-WATER mirror with one
+brass gnomon bead at the center. On the plaza approach the observatory's
+dome reads doubled in the mirror.
+
+- Siting re-derived honestly: the literal orreryring↔observatory pocket
+  maxes at 1.08m clearance (fails the 1.4 law — recorded, not forced);
+  the wide forecourt scan found the open pocket center at (24, −35.5)
+  on the plaza approach, 3.82m min gap. Terrain sampled at five points
+  (−0.052..−0.055, flat).
+- Build: mkv3-skymirror.ts → village_skymirror3.glb, deterministic ×2,
+  sha256 8331ba88ffcae0ff…, 4 nodes. Review: gameplay + top frames
+  judged — water inside the rim, courses regular, bead centered.
+- Furniture-solid collider correct (0.9m fixed feature, Skene class).
+- Placement: nx-struct-skymirror PLACED_VERIFIED, 1 verb, no comps,
+  idempotent rerun zero verbs. Nine-leg circuit walk ALL PASS (0.363m).
+
+**Bill should eye-check**: from the plaza→Observatory walk — the still
+mirror catching the observatory's silhouette; look for the dome doubled
+in the water.
+
+## ROUND 2 STATUS (struct-24)
+
+R2-1 Orrery Ring ✓ (struct-19 + night refine struct-21) · R2-2 Spiral
+Stair Folly ✓ (struct-20) · R2-3 Hypar Gate Arbor ✗ infeasible, proven
+(struct-22, options with Bill) · R2-4 Wave Cellar Door ✓ (struct-23) ·
+R2-5 Sky Mirror Plinth ✓ (struct-24). All named commissions resolved.
+Next: re-derive from census + Bill's verdicts (R2-3 relocation decision
+still open). Refine cadence: struct-25 will be a refine tick if the
+pool holds deficit candidates.

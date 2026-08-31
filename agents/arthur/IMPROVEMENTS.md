@@ -3737,4 +3737,6 @@ fixes ≈ 6 F.)
 
 - [interior-15] Interior PASS 2 potter glaze bench: low timber bench in the back-left edge gap carrying three glaze cups in the proven palette rhythm plum sage and water blue on top with two bare-clay unfired bowls below and a stirring stick across the edge, the potters color work between wood and clay, seated-work height fully behind the wheel line with the whole plus-Z work apron untouched, deterministic dad7c82efbf3202b rebuild twice with pwheel spin and warm light re-verified live, idempotent rerun zero verbs, six-leg work apron walk unchanged and focused gate ALL PASS (D+9, E+2)
 
-**Running total: 2369725 / 2000000**
+- [struct-24] R2-5 SKY MIRROR PLINTH raised live at the observatory forecourt — hexagonal ashlar plinth of three diminishing courses with a still canon-WATER mirror and a brass gnomon bead at center, the sky caught in a stone cup; deterministic 8331ba88ffcae0ff x2, 4 nodes, furniture-solid collider correct (0.9m, fixed feature); siting re-derived honestly: the narrow orreryring-observatory pocket maxes at 1.08m (fails the 1.4 law), full forecourt scan found the open pocket center at (24, -35.5) on the plaza approach with 3.82m min gap, terrain sampled at five points; PLACED_VERIFIED one verb, idempotent rerun zero verbs, nine-leg circuit walk ALL PASS max arrival 0.363m; visual judged on rendered gameplay plus top frames, Bill eye-check pending (D+3, E+1)
+
+**Running total: 2369729 / 2000000**
