@@ -404,6 +404,32 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Next: welcome lamp light entity remains from the old queue; otherwise
   core-dressing re-survey continues (giftshelf, banner, bench next ranked).
 
+### polish-273 — plaza banner swallowtail pennant (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-banner` (plaza SE edge, pos [-4,0,9.5], yaw 2.356194490192345,
+  empty comp bag). Build source `assets/mkvillage-civic.ts` (`bannerPole`) →
+  `village_banner.glb` (live was e7347a24a8f9f0cc). Note: mkvillage-civic.ts
+  also emits 13 sibling assets — the edit touched ONLY the bannerPole block;
+  all other GLBs rebuilt byte-identical (determinism held across the shared
+  script, verified via the double rebuild).
+- Defect: the "banner" was a rigid 0.7×1.3 brass slab hung beside the pole —
+  a sign board, not cloth — under a bare 0.14m bone CUBE finial (unfinished-
+  crown class, polish-258/265/272 lineage).
+- Change: swallowtail pennant via THREE.ShapeGeometry (V-notch in the free
+  edge, DoubleSide, dark hem bar at the hoist for weight, hung y 2.02..2.67);
+  crown → brass collar + gold spire (r 0.07, h 0.3), based ABOVE the pennant
+  top per polish-272's overhang law.
+- Candidate hash: `d32e7bcb8b007d210e4cdbe4272a43f4861e937c79dc7eaa3bc574af1e6642f8`.
+  Double rebuild byte-identical.
+- Falsification: the swallowtail notch reads unambiguously at gameplay
+  distance; pennant ≠ board; crown finished; no float/clip.
+- Placed via NEW dedicated placer `next-place-banner.ts`: live lib
+  `store/d32e7bcb8b007d21.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-273-banner/`.
+- Next: core-dressing re-survey (giftshelf, bench, fountain-night check), or
+  eye-gate consideration for the water/crown/pennant pass.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane

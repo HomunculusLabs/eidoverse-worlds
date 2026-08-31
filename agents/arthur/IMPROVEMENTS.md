@@ -3683,4 +3683,6 @@ fixes ≈ 6 F.)
 
 - [polish-272] gate crown: the four town gates shared a flat-cap unfinished crown (same class the carousel and tower had before their accepted spires). Brass collar plus tapered gold spire based on the lintel top above each post; first placement on the post cap was falsified by the render rig, the lintel occluded the cap zone and only sub-threshold nub tips survived, so the crown was re-based fully in the open. Baseline 558489ed to candidate d1b90d6f, 6 nodes unchanged, double rebuild byte-identical, close and gameplay finial read accepted. One shared GLB, all four gate entities re-seated at exact tuples, empty comp bags preserved, idempotent rerun zero verbs. (D+4, E+4)
 
-**Running total: 2369563 / 2000000**
+- [polish-273] banner pennant: nx-dress-banner wore a rigid brass slab hung beside a bare bone cube finial, reading as a sign board on a stick. Reshaped the cloth into a swallowtail pennant (V-notch outer edge, DoubleSide, hem bar for weight, hung 2.02 to 2.67) and finished the crown with the accepted brass collar plus gold spire, based above the pennant top per the polish-272 overhang law. Baseline e7347a24 to candidate d32e7bcb, double rebuild byte-identical, swallowtail notch reads at gameplay distance. Placed at exact tuple, empty comp bag preserved, idempotent rerun zero verbs. (D+2, E+1)
+
+**Running total: 2369566 / 2000000**
