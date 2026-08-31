@@ -159,3 +159,24 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   + placer pin updated). Review packet `reviews/interior-p2-4/` under Bill's
   interior-lane visual waiver; no native visual PASS claimed. Next:
   P2-5 market evening shutters.
+- Wakeup 5 / interior-14 (P2-5 Market evening shutters): `nx-town-market`
+  reconciled at `[-6.5,0,6.5]`, yaw `2.3561944902`, empty comp bag; local
+  `mkv3-market.ts` reproduced the live hash `dabf662e…` exactly (pin fresh
+  — the tex-8 re-texture generation). Built the evening shutters: a timber
+  shutter panel leaned against each stall's merchant-side back with brass
+  hinge dots and two five-bar brass tally groups inlaid flush per shutter —
+  the day's sales, counted; the market now reads as closeable for the
+  night. All new depth sits behind the counter line (z≤−0.44) inside the
+  inherited AABB (z-max −0.502→−0.57 from shutter depth); the complete +Z
+  visitor lane untouched; both `mk_awn_*` wind anchors preserved (nodes
+  12 / meshes 10 unchanged, +~330 verts). One bookkeeping catch: the
+  placer's own SHA pin was stale since interior-4 (still `12622955…`,
+  pre-dating the re-texture) — the hash-gate correctly stopped the first
+  run; pin corrected to current truth before any live mutation, and the
+  bbox pin widened to the decoded −0.57. Deterministic `8c16ea9a756a95ad`
+  ×2; PLACED_VERIFIED, empty comp bag preserved, warm stall light
+  re-verified (0xffb066 / 1.35 / 4.5), idempotent rerun zero verbs,
+  visitor-counter walk ALL_PASS unchanged, focused gate
+  `verify-interior4.ts` ALL PASS (SHA updated; counts unchanged). Review
+  packet `reviews/interior-p2-5/` under Bill's interior-lane visual
+  waiver; no native visual PASS claimed. Next: P2-6 potter's glaze bench.
