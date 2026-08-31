@@ -186,7 +186,14 @@ are done; the artwalk language now moves INTO the architecture. New queue
     `nx-artwalk-b34-wayband-{e,s,w}`, concentric. One village diagram
     (B-22's Eight Ways) echoed at all four rim points.
     Bill eye-check pending from any gate road.
-35. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+35. **Eye-gate packet DELIVERED (artwalk-46)**: all 15 counting-series
+    riders re-verified live-exact; guided circuit + judgments at
+    `reviews/artwalk-counting-series-eye-gate.md`. Remaining bare
+    candidates (stablebench, giftshelf) are below threshold / carry
+    polish's NO-DEFECT verdict — **the series is closed and this lane
+    HOLDS for Bill's verdicts or a queue widening** (stop-recommendation:
+    `/loop stop` or re-issue when new work is commissioned).
+36. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
