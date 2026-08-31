@@ -551,6 +551,27 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Next: bakery/smithy trade signs (the remaining named polish candidates
   from the core-town buildout list), then core re-survey or verdict hold.
 
+### polish-279 — trade sign survey (bakery + smithy): NO DEFECT, both closed
+
+- Subjects: `nx-sign-bakery` (599194ee7f4efd81…, unchanged) and
+  `nx-sign-smithy` (d8df94003084af39…, unchanged). Baseline bytes rendered
+  from the local deterministic builds (hash-verified against live lib).
+- Bakery: raised loaf glyph with score marks reads clearly; board hangs
+  believably from the iron bracket arm; two-way faces present (nvp-14 law);
+  iron/bone/wood material truth holds.
+- Smithy: hammer glyph (iron head, wood handle) reads clearly; same sound
+  kit; two-way faces present (nvp-15 law).
+- Verdict: NO DEFECT above threshold on either sign. These were the last
+  named polish candidates from the core-town buildout list — the named
+  queue is now fully closed (every core landmark + dressing piece has been
+  surveyed: improved, or judged clean and left untouched).
+- Live world untouched; no placement; evidence:
+  `agents/arthur/reviews/hero-assets/polish-279-signs/`.
+- Next: unnamed-core re-survey on fresh evidence (artwalk keeps adding
+  riders), or hold for Bill's eye-gate verdicts on polish-271..278.
+  If repeated identical no-op surveys accrue, recommend /loop stop per the
+  hold-law amendment.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
