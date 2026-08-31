@@ -153,7 +153,14 @@ are done; the artwalk language now moves INTO the architecture. New queue
     iron, one counting language.
     Bill eye-check pending from the court yard (read B-28 and B-29
     together, facing each other).
-30. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+30. **B-30 Market Tally — DONE** (interrupted window closed at
+    artwalk-41): the cloth stall's counter front carries a brass datum +
+    five alternating brass/bone coin marks — the day's takings — live as
+    `nx-artwalk-b30-market-tally` at market-local (1.0,0.62,0.408).
+    Fives for coin where the court counts sevens; host re-pinned to the
+    post-tex-8/interior-14 market (8c16ea9a…).
+    Bill eye-check pending from the plaza market, beside the shutters.
+31. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
