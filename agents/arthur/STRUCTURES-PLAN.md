@@ -103,6 +103,7 @@ stop the /loop.
 | struct-20 | R2-2 Spiral Stair Folly | 36°/57 (NE diagonal past pendulum) | (46.11, −0.037, 33.50) | 0 (rotationally symmetric) | LIVE, interior walk 10/10 |
 | struct-21 | REFINE: Orrery Ring night read | — | exact standing tuple | — | LIVE, warm-emissive rings, walk 8/8 re-verified |
 | struct-22 | R2-3 Hypar Gate Arbor | INFEASIBLE (W+E, proven) | — | — | PROOF BANKED, options to Bill |
+| struct-23 | R2-4 Wave Cellar Door | inn S face, gap-window seat | (36.0, −0.045, 5.55) | 0 (face +Z to field) | LIVE, walk 9/9 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -713,3 +714,28 @@ decision.
    re-enters the queue only if he wants a relocated variant.
 
 Queue advances to R2-4 (Wave Cellar Door) at struct-23 either way.
+
+## struct-23 — R2-4 THE WAVE CELLAR DOOR (Round 2, concept + record)
+
+**Concept**: a cellar whose door is a wave. One idea: the Reed Pool's
+ripple language at doorway scale — one calm sine course of 11 tangent
+voussoirs riding the lintel of an ashlar frame, a recessed timber door
+behind it, and a brass high-water pin at the sill.
+
+- Review caught a floating lintel (0.08m gap over the wave crests) in the
+  first render; fixed in source (lintel seated at H+0.14) before any
+  upload. Second render clean. sha 5608e9f8ccdeac75, ×2, 5 nodes.
+- **Siting honesty (durable)**: the whole W face strip fails against the
+  inn's rotated OBB (x-extent 31.55–40.45, no 1.2m-clear slot). The S
+  face gave a measured gap profile (inn vs goats, 0.1m steps): a single
+  0.3m window z∈[5.55,5.85] satisfies both the 0.3m named-host lean-to
+  class and 1.4m-ish to the goats flock. First locked seat z6.02 was
+  correctly BLOCKED by the live gate (1.17m to goats — my scan's sort had
+  buried the constraint); re-seated at z5.55 (inn 0.30 / goats 1.37).
+- Placement: nx-struct-cellardoor PLACED_VERIFIED, 1 verb, no comps,
+  idempotent rerun zero verbs. Nine-leg approach walk ALL PASS (0.386m).
+- Furniture-solid collider correct (fixed feature, Skene Wall class).
+
+**Bill should eye-check**: from the goat-field side of the inn — the
+little wave-carved cellar door in the inn's shadow; the sine course
+across the lintel, the brass ring, the high-water pin at the sill.
