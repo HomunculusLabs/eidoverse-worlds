@@ -111,6 +111,7 @@ stop the /loop.
 | struct-28 | R3-3 Echo Arch | SE beyond skene, th108/r60 | (−18.5, 0.051, 57.1) | 5.027 (axis on diagonal) | LIVE, axis walk 7/7 |
 | struct-29 | R3-4 Wayfarer's Halt | S road verge | (−2.0, −0.003, 30.0) | 0 (bench faces road) | LIVE, halt walk 8/8 |
 | struct-30 | REFINE: Echo Arch pins night read | — | exact standing tuple (−18.5, 0.051, 57.1) | — | LIVE, warm pin pair, axis walk 7/7 re-verified |
+| struct-31 | R3-5 Sound Mirror | NW flank, hall-h2 pocket | (28.7, −0.026, −18.0) | 0 (opens skyward) | LIVE, circuit walk 7/7 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -931,3 +932,23 @@ warm points marking the whisper seats between the fins.
 R3-1 North Needle ✓ · R3-2 Four Waystones ✓ · R3-3 Echo Arch ✓ ·
 R3-4 Wayfarer's Halt ✓ · refines: folly crown ✓ (27), echo pins ✓ (30).
 Open with Bill: R2-3 relocation options (struct-22).
+
+## struct-31 — R3-5 THE SOUND MIRROR (Round 3; concept + record)
+
+**Concept**: the village that speaks at the Echo Arch now has somewhere
+to LISTEN. One idea: a stepped parabolic ashlar dish opening skyward —
+true conic (f1.15m), three stepped rings of 16 tangent segments each —
+with a slim brass stand rising to a focus ring above the bowl. Village
+sounds and sky both focus at the ring.
+
+- Build: mkv3-soundmirror.ts → village_soundmirror3.glb, deterministic
+  ×2, sha 77913d8a3508a426, 3 merged nodes. Review: aerial (rings
+  concentric, focus ring centered) + gameplay (dish silhouette) clean.
+- Siting: first seat (27.5, −20) correctly BLOCKED by the live gate
+  (artwalk h2 at true tolerance); grid probe re-sited to (28.7, −18),
+  3.32m min gap; terrain flat (−0.021..−0.031 at five points).
+- Placement: nx-struct-soundmirror PLACED_VERIFIED, 1 verb, no comps,
+  idempotent rerun zero verbs. Seven-leg circuit walk ALL PASS (0.389m).
+
+**Bill should eye-check**: from the NW walk between hall and observatory
+— the stone dish on the flank; stand at the brass ring and listen up.
