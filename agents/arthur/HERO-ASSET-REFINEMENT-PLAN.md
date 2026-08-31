@@ -481,6 +481,31 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Next: second bench (village_bench_arc has a sibling instance? — census
   check), chess table, then the water/crown/pennant/night eye-gate packet.
 
+### polish-276 — chess table pedestal (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-chess` (SW of plaza, pos [-27.5,0,-9], yaw 1.2, empty
+  comp bag). Build source `assets/mkqol1.ts` (chess block) →
+  `village_chess.glb` (live was 6ea47f4abc95cbdc, 24 nodes → 25).
+- Defect: the board sat at y=0 — frame on the grass, a mat rather than
+  furniture; nothing about it read "table" at any range.
+- Change: dark foot (0.34²) + pedestal post (0.09×0.68) raising frame to
+  BOARD_Y 0.75; squares and pieces lifted with it. mkqol1.ts emits 4 sibling
+  assets — rebuilt byte-identical (edit touched only the chess block).
+- Candidate hash: `cb215e8c13c8ac79dc607208c7e1cfbd5ddddc6b6300f29f7fe5b00b36d4d08a`.
+  Double rebuild byte-identical.
+- Falsification: reads as a proper pedestal game table close-up; at gameplay
+  range holds a table silhouette (vs the old ground patch); support sound,
+  no clip/float.
+- Placed via NEW dedicated placer `next-place-chess.ts`: live lib
+  `store/cb215e8c13c8ac79.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs.
+- Census note: fresh live census (190 entities) confirmed the bench at its
+  polish-275 pin and exactly ONE arc-bench instance (stable bench is a
+  different GLB) — no hidden second subject from polish-275.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-276-chess/`.
+- Next: water/crown/pennant/night eye-gate packet (core-dressing wave
+  complete: fountain ✓ night ✓ gates ×4 ✓ banner ✓ bench ✓ chess ✓).
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
