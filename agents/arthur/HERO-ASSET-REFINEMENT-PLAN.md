@@ -454,6 +454,33 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Next: core-dressing re-survey (giftshelf, bench) or eye-gate packet for the
   full water/crown/pennant/night pass.
 
+### polish-275 — plaza bench center leg (ACCEPTED, LIVE) + giftshelf no-defect verdict
+
+- Subjects: `nx-dress-bench-plaza` (plaza NW, pos [-9.5,0,-9.5], yaw 0.7853981633974483,
+  empty comp bag); `nx-dress-giftshelf` (surveyed, untouched).
+- Giftshelf verdict (survey-only but evidenced): objects readable at close
+  range, stand proportioned, cloth scrap marks the taking-place — no defect
+  above threshold. Deliberately small piece; forcing a change would be
+  invented ornament (loop law). Recorded, not forced.
+- Bench defect: legs existed only at the two arc ENDS — the three center
+  slabs cantilevered unsupported; the middle read floating/broken (visible
+  in the front render as a gap-to-ground under the arc center).
+- Change (one line): legs at `[0, mid, segs-1]` — third leg under the arc
+  center. Build source `assets/mkvillage-polish.ts` (`arcBench`) →
+  `village_bench_arc.glb` (live was 185bc8466382b5c1, 7 nodes → 8).
+- Candidate hash: `09f4d1741fdb24a631a42d0ecf8e89e03f95e1ea63ba557514b369bb64becc29`.
+  Double rebuild byte-identical. Note: mkvillage-polish.ts also emits
+  village_tree.glb — rebuilt byte-identical (edit touched only arcBench).
+- Falsification: center leg reads sound, no clip/float/proportion change;
+  seat silhouette unchanged.
+- Placed via NEW dedicated placer `next-place-bench.ts`: live lib
+  `store/09f4d1741fdb24a6.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-275-giftshelf/` (before
+  only — no change made) + `polish-275-bench/`.
+- Next: second bench (village_bench_arc has a sibling instance? — census
+  check), chess table, then the water/crown/pennant/night eye-gate packet.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
