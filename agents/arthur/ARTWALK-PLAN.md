@@ -145,7 +145,15 @@ are done; the artwalk language now moves INTO the architecture. New queue
     live as `nx-artwalk-b28-bake-count` at court-local (−3.0,0,−1.955).
     Host re-pinned after interior-12's court evolution (59534b10…).
     Bill eye-check pending from the court yard.
-29. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+29. **B-29 Strike Count — DONE**: the workshop shed's front bench
+    (court-local (3.2, top 1.06, −1.60)) carries a brass datum + seven
+    strike marks (alternating brass/bone AND widths — no two strikes
+    alike) — live as `nx-artwalk-b29-strike-count` at court-local
+    (3.2,0,−1.875). Sibling to B-28 across the same yard: bread and
+    iron, one counting language.
+    Bill eye-check pending from the court yard (read B-28 and B-29
+    together, facing each other).
+30. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
