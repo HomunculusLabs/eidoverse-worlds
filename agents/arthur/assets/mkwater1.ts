@@ -34,15 +34,23 @@ const fountain = new THREE.Group();
     // embers/smoke/dust/snow/magic/stars/muzzle only), so water is GEOMETRY,
     // same law as the bakery cistern (mkv3-bakery-cistern97.ts). Water faces:
     // basin pool + upper-bowl pool + central jet; finial rides the jet crown.
-    const basinWater = new THREE.Mesh(new THREE.CylinderGeometry(1.38, 1.38, 0.03, 14), mat(0x506a78, 0.25, 0.5));
+    // polish-274 night law: the water faces vanish after dark (fountain is
+    // 13m from the plaza light, past its range). Same-hue faint emissive on
+    // the three water faces only — moonlit-water read, no added light source,
+    // no bulb noise; stone stays unlit dark.
+    const waterMat = new THREE.MeshStandardMaterial({
+        color: 0x506a78, roughness: 0.25, metalness: 0.5,
+        emissive: new THREE.Color(0x2e4a58), emissiveIntensity: 0.55,
+    });
+    const basinWater = new THREE.Mesh(new THREE.CylinderGeometry(1.38, 1.38, 0.03, 14), waterMat);
     basinWater.name = "ft_basin_water";
     basinWater.position.y = 0.37;
     fountain.add(basinWater);
-    const bowlWater = new THREE.Mesh(new THREE.CylinderGeometry(0.63, 0.63, 0.03, 12), mat(0x506a78, 0.25, 0.5));
+    const bowlWater = new THREE.Mesh(new THREE.CylinderGeometry(0.63, 0.63, 0.03, 12), waterMat);
     bowlWater.name = "ft_bowl_water";
     bowlWater.position.y = 1.79;
     fountain.add(bowlWater);
-    const jet = new THREE.Mesh(new THREE.CylinderGeometry(0.045, 0.075, 0.52, 6), mat(0x506a78, 0.25, 0.5));
+    const jet = new THREE.Mesh(new THREE.CylinderGeometry(0.045, 0.075, 0.52, 6), waterMat);
     jet.name = "ft_jet";
     jet.position.y = 2.1;
     fountain.add(jet);

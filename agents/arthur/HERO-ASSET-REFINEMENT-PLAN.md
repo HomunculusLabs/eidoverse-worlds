@@ -430,6 +430,30 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
 - Next: core-dressing re-survey (giftshelf, bench, fountain-night check), or
   eye-gate consideration for the water/crown/pennant pass.
 
+### polish-274 — fountain night identity (ACCEPTED, LIVE)
+
+- Subject: `nx-dress-fountain` (same tuple as polish-271). Build source
+  `assets/mkwater1.ts` (fountain block) → `village_fountain.glb`
+  (live was 3ff7af591b5635d4).
+- Defect (judged from the durable polish-271 night.png, exact live bytes): the
+  water faces vanish entirely after dark — the fountain is 13m from the plaza
+  light, past its range, so pools + jet go total black; night criterion 6
+  failed for the water the day pass had just added.
+- Change: faint same-hue emissive (0x2e4a58, intensity 0.55) on the three
+  water faces ONLY (shared waterMat) — moonlit-water read; no added light
+  source, no bulb noise; stone stays unlit dark.
+- Candidate hash: `72f07c2a466feae3d932a02cda1a1ecfdd4fb88684559cbd2b2cb2f7b53e0a7e`.
+  Double rebuild byte-identical.
+- Falsification: night render — jet column now faintly visible beneath the
+  finial ball (before: black); day render — water unchanged, no artificial
+  glow. Restrained per the no-noise law.
+- Placed: `next-place-fountain.ts` hash updated to the new pin; live lib
+  `store/72f07c2a466feae3.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-274-fountain-night/`.
+- Next: core-dressing re-survey (giftshelf, bench) or eye-gate packet for the
+  full water/crown/pennant/night pass.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
