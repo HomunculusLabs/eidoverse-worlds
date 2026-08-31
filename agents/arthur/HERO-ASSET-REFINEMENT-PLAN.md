@@ -572,6 +572,29 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
   If repeated identical no-op surveys accrue, recommend /loop stop per the
   hold-law amendment.
 
+### polish-280 — approach lamp post finials (ACCEPTED, LIVE) ×4
+
+- Subject: `nx-approach-lamp-n/s/e/w` (one shared GLB instanced at the
+  cardinal axes r 10; empty comp bags; companion `*-l` light entities are
+  separate and untouched). Build source `assets/mkv3-next-approach-lamp.ts`
+  → `village_approach_lamp.glb` (live was 409084706b801f8d, 3 nodes).
+- Defect: the post above the crossarm ended in a bare flat cut — the
+  unfinished-crown class, reading as a stub at gameplay distance.
+- Change: brass finial spike (cone r 0.055, h 0.26) capping the post summit;
+  accepted crown language at lamp scale (iron post, brass cap — material
+  truth).
+- Candidate hash: `18b69a6bb2f5862f9848ec25687981a1eba5cd07b23b90d1ed6e735086672b87`.
+  3 nodes unchanged (finial merges into the iron... into the brass bucket
+  via its own material). Double rebuild byte-identical.
+- Falsification: post top now completes the silhouette close and at
+  gameplay range; spike proportionate, no clip/float.
+- Placed via NEW batch placer `next-place-approachlamps.ts` (4 slots, one
+  upload): live lib `store/18b69a6bb2f5862f.glb` on all four lamps, tuples
+  exact, empty comp bags preserved, idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-280-approachlamp/`.
+- Next: unnamed-core re-survey on fresh evidence, or hold for Bill's
+  eye-gate verdicts on polish-271..280.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane

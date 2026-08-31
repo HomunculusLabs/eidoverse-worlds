@@ -3725,4 +3725,6 @@ fixes ≈ 6 F.)
 
 - [interior-14] Interior PASS 2 market evening shutters: timber shutter panels leaned against the merchant-side back of both stalls with brass hinge dots and two five-bar brass tally groups inlaid flush per shutter as the days sales counted, stalls read closed for the night while the complete plus-Z visitor lane stays untouched with all new depth behind the counter line and within the inherited AABB, deterministic 8c16ea9a756a95ad rebuild twice with wind awning anchors preserved, exact tuple and warm stall light verified, empty comp bag preserved, idempotent rerun zero verbs, visitor-counter walk unchanged and focused gate ALL PASS (D+30, E+2)
 
-**Running total: 2369691 / 2000000**
+- [polish-280] approach lamp finial: the four approach lamps shared a post that died in a bare flat cut above the crossarm, the unfinished-crown class, visible as a stub at gameplay distance. Added a small brass finial spike capping the post summit, accepted crown language at lamp scale, iron post brass cap. Baseline 40908470 to candidate 18b69a6b, 3 nodes unchanged, double rebuild byte-identical, post top completes the silhouette close and at range. One shared GLB, all four lamp entities re-seated at exact tuples, empty comp bags preserved, companion light entities untouched, idempotent rerun zero verbs. (D+4, E+4)
+
+**Running total: 2369699 / 2000000**
