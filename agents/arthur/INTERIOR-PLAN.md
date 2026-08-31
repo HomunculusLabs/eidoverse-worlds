@@ -180,3 +180,22 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   `verify-interior4.ts` ALL PASS (SHA updated; counts unchanged). Review
   packet `reviews/interior-p2-5/` under Bill's interior-lane visual
   waiver; no native visual PASS claimed. Next: P2-6 potter's glaze bench.
+- Wakeup 6 / interior-15 (P2-6 Potter's glaze bench): `nx-town-potter`
+  reconciled at `[26,0,40.5]`, yaw `-2.5834592129`, comp contract
+  `motion:pwheel`; local `mkv3-potter41.ts` reproduced the live hash
+  `a4e27778…` exactly (pin fresh). Built the glaze bench — the potter's
+  color work BETWEEN wood and clay: low timber bench (top 0.5, seated-work
+  height) in the back-left edge gap, three glaze cups in the proven palette
+  rhythm (plum / sage / water-blue 0x506a78), two bare-clay unfired bowls
+  on the lower line, and a stirring stick across the top edge. Fully behind
+  the wheel line; +Z work apron untouched (AABB x-min −1.22→−1.725,
+  z-min −0.97→−1.0, max unchanged). Two LSP-caught errors fixed in-tick
+  (missing `ACCENTS` import; stray tuple comma). Deterministic
+  `dad7c82efbf3202b` ×2, 10 nodes / 9 meshes (+~250 verts); PLACED_VERIFIED
+  with 2 verbs (spawn + pwheel spin restored at 9°/s per comp-wipe law),
+  warm light re-verified, idempotent rerun zero verbs, six-leg work-apron
+  walk ALL_PASS unchanged, focused gate `verify-interior5.ts` ALL PASS
+  (SHA + node/mesh count + placer pin + bbox updated). Review packet
+  `reviews/interior-p2-6/` under Bill's interior-lane visual waiver; no
+  native visual PASS claimed. PASS 2 named queue now 6/6 complete —
+  re-derive further rooms from the live census next tick.
