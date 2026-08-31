@@ -105,7 +105,15 @@ are done; the artwalk language now moves INTO the architecture. New queue
     First anchor (0,0,−0.14) was rejected live (rider sat map-side facing
     into the board — host +Z faces the plaza) and reseated via remove-verb.
     Bill eye-check pending from the plaza.
-23. Re-derive from live buildings; prefer high-traffic surfaces visitors see
+23. **B-23 Cistern Rain Count — DONE**: the bakery cistern's plaza-facing
+    slab carries a water memory — brass gauge datum + seven alternating
+    brass/bone level ticks widening upward — live as
+    `nx-artwalk-b23-cistern-rain-count` at host-local (0,0.31,0.33).
+    The SAT gate's nx-court block was decoded at source: the court's 13m
+    compound bbox envelops the cistern (standing in the open yard between
+    the sheds); exempted under the refine-214/R-105 DESIGNED classification.
+    Bill eye-check pending from the court yard.
+24. Re-derive from live buildings; prefer high-traffic surfaces visitors see
     at door-height. Motifs readable at walking distance, not micro-detail.
 
 Laws for phase B: motifs are carved/inlaid geometry in the standing families
