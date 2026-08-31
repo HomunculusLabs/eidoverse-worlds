@@ -12,7 +12,8 @@ const YAW = 0; // rotationally symmetric climb; approach from the path side
 const m = {
     id: "nx-struct-spiralfolly",
     file: "village_spiralfolly3.glb",
-    sha: "655e9ec6d14beb85a1e9e59a7c3d6238228c5a2238ac71dc09dc27b4aafbbe0c",
+    sha: "20c515a0e28a3c96f3d50b99debd91c105ad318155b26a97fc0bd9db3bbbc566",
+    prevSha: "655e9ec6d14beb85a1e9e59a7c3d6238228c5a2238ac71dc09dc27b4aafbbe0c", // struct-20 baseline
     bbox: { min: [-3.3, 0, -3.3], max: [3.3, 10.56, 3.3] },
     comp: {},
 } as const;
@@ -57,15 +58,21 @@ for (const e of Object.values(before)) {
     if (gap(T, obb(e.pos, e.yaw ?? 0, bb)) < 1.4) collisions.push(e.id);
 }
 if (collisions.length) die(`spiralfolly seat blocked (<1.4m clear): ${collisions}`);
-const exist = before[m.id];
-if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1)) die(`${m.id} live collision/drift`);
-
 let verbs: Array<[string, any]> = [];
+const exist = before[m.id];
+if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1)) {
+    // struct-27 reseat: accept ONLY the exact struct-20 baseline lib at the
+    // exact standing pose; spawn-replace upgrades the lib in place.
+    const baselineOk = exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`
+        && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1;
+    if (!baselineOk) die(`${m.id} live collision/drift`);
+    verbs.push(["remove", { id: m.id }]);
+}
 const needComps = !exist || !eq(exist.comp ?? {}, m.comp);
-if (!exist) {
+if (!exist || (exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`)) {
     const u = new URL(`${base}/upload`);
     u.searchParams.set("token", cfg.agentToken);
-    u.searchParams.set("name", `commons-next ${m.id} struct-20`);
+    u.searchParams.set("name", `commons-next ${m.id} struct-27`);
     u.searchParams.set("by", cfg.id);
     let lib = "";
     for (let a = 1; a <= 5; a++) {

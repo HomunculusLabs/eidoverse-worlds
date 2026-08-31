@@ -107,6 +107,7 @@ stop the /loop.
 | struct-24 | R2-5 Sky Mirror Plinth | observatory forecourt pocket | (24.0, −0.054, −35.5) | 0 (hex, symmetric) | LIVE, circuit walk 9/9 |
 | struct-25 | R3-1 North Needle | NW diagonal terminus, th326/r57 | (47.3, −0.034, −31.9) | 0 (lean −3.4° about z) | LIVE, pad circuit 7/7, + summit light |
 | struct-26 | R3-2 Four Waystones | verge seats outside all 4 gates | (±22.1 / −20.0,2.9... ) | per-gate tick yaw | LIVE 4/4, shared sha |
+| struct-27 | REFINE: Folly crown night read | — | exact standing tuple (46.11, −0.037, 33.50) | — | LIVE, warm crown halo, walk 10/10 re-verified |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -832,3 +833,24 @@ per-gate yaw carries the tick direction.
 
 **Bill should eye-check**: walk out any gate road — the little milestone
 on the verge, its bone tick pointing back the way you came.
+
+## struct-27 — REFINE TICK 5: Folly crown night read
+
+Pool ranked the Spiral Stair Folly top by evidenced deficit: the NE
+terminus sits 57m out and went fully dark at dusk while its sibling
+termini carry the lane's light language (beacon E, North Needle NW) —
+the same deficit class struct-21 fixed on the Orrery Ring.
+
+- One defect, smallest change: the crown ring's brass gains warm
+  emissive (0x8a5a20 @ 0.6) — the ring IS the lamp; no new light entity,
+  no geometry change.
+- Discipline: baseline 655e9ec6d14beb85 reproduced exactly before edit;
+  candidate 20c515a0e28a3c96 deterministic ×2; glow verified in decoded
+  accessor materials; lib upgrade at the EXACT standing tuple
+  (remove-gated spawn-replace, empty comp bag intact); idempotent rerun
+  zero verbs; standing 10-leg interior walk re-run ALL PASS (0.392m).
+- Night render judged: warm crown halo above the dark spiral — a quiet
+  ring of light at the terminus. Bill's dusk eye-check decides.
+
+**Bill should eye-check (dusk)**: from the NE path — the folly's crown
+floating as a faint warm ring above the dark spiral.

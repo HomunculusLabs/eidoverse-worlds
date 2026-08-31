@@ -28,7 +28,12 @@ const R0 = 3.1, R1 = R0 / PHI, TURNS = 3, TOP = 10.0;
 const bone = mat(C.BONE, 0.9, 0);
 const timber = mat(C.DARK, 0.95, 0); // treads: dark timber family
 const dark = mat(C.DARK, 0.95, 0);
+// struct-27 refine: the crown ring now glows warm — the folly's summit
+// reads at dusk from the village (lit-crown law, beacon lineage); no new
+// light entity, the ring IS the lamp.
 const brass = mat(C.BRASS, 0.55, 0);
+(brass as any).emissive = new THREE.Color(0x8a5a20);
+(brass as any).emissiveIntensity = 0.6;
 const stoneTex = mat(0x56503c, 0.95, 0);
 
 // stone base disc (thin, r3.3 — under the first sweep)
