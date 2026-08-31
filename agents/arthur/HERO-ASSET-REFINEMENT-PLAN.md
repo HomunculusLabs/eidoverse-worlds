@@ -527,6 +527,30 @@ Canonical loop: `agents/arthur/HERO-ASSET-REFINEMENT-LOOP.md`.
   tick re-surveys the core for any remaining evidenced defect above
   threshold.
 
+### polish-278 — shrine stone embers (ACCEPTED, LIVE)
+
+- Subject: `nx-town-shrine` (W of plaza, pos [-25,-0.0012609260510534298,-4],
+  yaw 1.4118119548622732, empty comp bag). Build source `assets/mkv3-shrine.ts`
+  → `village_shrine3.glb` (live was 78611c7dc9a3cb6e, 11 nodes → 12).
+- Defect: the four standing stones ended in flat cuts (unfinished-crown
+  class) AND the night render showed the whole circle black except three
+  altar candle points — the weakest night identity in the core.
+- Change: one small warm ember bead (icosahedron r 0.045, votive flame
+  material family, intensity 0.9) on each stone summit. Stones become lit
+  markers ringing the altar; no new light entities.
+- Candidate hash: `53709062d3095dccd8410f2baa8c35dfb133f16a859f801a02aea758ad3713af`.
+  Double rebuild byte-identical.
+- Falsification: night — warm summit points visible above the altar candles,
+  restrained (4 small points, not a light show); day — beads read as unlit
+  warm stone, not pasted glow-orbs.
+- Placed via NEW dedicated placer `next-place-shrine.ts` (py from the
+  committed town placer, not snapped to 0): live lib
+  `store/53709062d3095dcc.glb`, tuple exact, empty comp bag preserved,
+  idempotent rerun zero verbs.
+- Evidence: `agents/arthur/reviews/hero-assets/polish-278-shrine/`.
+- Next: bakery/smithy trade signs (the remaining named polish candidates
+  from the core-town buildout list), then core re-survey or verdict hold.
+
 ## HOLD — polish-270 (2026-08-30, wakeup #13)
 
 Fresh full survey at hold time: standing gate ALL PASS; all 9 polish-lane
