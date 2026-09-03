@@ -99,7 +99,41 @@ Running lamp count per district is recorded per leg below.
   max arrival 0.38m.
 - **18m readability (approach-2)**: READABILITY_PASS for statuary-0052 and
   hamlet-0054 (arrivals 0.33/0.25, clean sightlines).
-- **Verdict**: leg 2 of 4 stands. Next leg (rotation 3): SE Wild.
+- **Verdict**: leg 2 of 4 stands.
+
+## Leg 3 — SE: INFEASIBLE from the gate ring (proof); rotation swap to SW (approach-3)
+
+- **SE infeasibility proof** (fresh 224-entity census, 0.2°-step sweep):
+  NO azimuth in 90–180° gives a clear r24–40 channel at the 1.5m law. The
+  inner SE ring is wall-to-wall: court (az128 r24), forge/bakery/smithy signs
+  (az109–143 r23–26), inn (az90 r36), hall (az161 r27.5), the artwalk shelter
+  line h2–h7 (az123–144 r31–55), and the struct termini (beacon, soundmirror,
+  observatory, northneedle, orrery, skymirror). The nearest per-band windows
+  never chain: r24–40 has none; r40–56 has only az169.6–176; r56–74 windows
+  (130.4–131.2 on the bisector, 147–149, 164–165) do not connect inward.
+  **Options for Bill** (siting call): (a) a lane segment r40→76 only, fed by
+  the S road (starts off-ring — breaks the gate-ring connection law);
+  (b) a road-side spur from gate-s along the S road verge (needs ring-law
+  exception); (c) leave SE approaches to the forest paths as-is.
+- **Rotation swap**: leg 3 executed as SW Contemplative instead.
+- **SW siting**: straight radial **az217.25** from r24 (between bunkhouse
+  az199/r27 and dyehouse az227/r32) to r71 (temple seed ring). Worst centerline
+  clearance 2.50m (struct-angler); 0.7m paver envelope CLEAR; one verge stone
+  seat (paver 22) within 1.3m of the angler — omitted per the per-stone
+  neighbor check, other 16 stand.
+- **Build**: `agents/arthur/assets/mkv3-sw-approach3.ts` — 52 pavers + 2 lamps,
+  47.0m walk, lamps at the 1/3 and 2/3 harmonic. Deterministic ×2:
+  `56b35877ecda923d`. Review: gameplay + night judged — continuous lane,
+  warm globes at night.
+- **Placement**: `nx-approach-sw-lane-003` at (0,0,0); lights
+  `nx-approach-sw-lamp-001-l` (−25.20, 1.96, −30.67) and
+  `nx-approach-sw-lamp-002-l` (−34.69, 1.96, −43.14); SW district lights
+  3 → 5. Idempotent rerun: zero verbs.
+- **Walk-test (approach-3)**: two-way MCPL, 5 legs, ALL PASS, max 0.37m.
+- **18m readability (approach-3)**: PASS — seed-0021 and terrace-0049,
+  arrivals 0.30/0.25, clean sightlines.
+- **Verdict**: leg 3 (SW) stands; SE deferred on proof. One leg remains
+  (SE, pending Bill's option call above).
 
 ## Leg map (all four)
 
