@@ -70,7 +70,36 @@ Running lamp count per district is recorded per leg below.
   the lane at 18m before `nx-cultivation-lavender-0027` and
   `nx-cultivation-orchard-0033`; both walked (arrivals 0.35/0.28), both
   sightlines clean, no solid blocker.
-- **Verdict**: leg 1 of 4 stands. Next leg (rotation 2): NE Craft.
+- **Verdict**: leg 1 of 4 stands.
+
+## Leg 2 — NE Craft gallery lane (approach-2)
+
+- **Siting study** (fresh 221-entity census): the pure az-45 bisector is
+  blocked (pendulum az~44 r36, spiral folly az37 r56, charcoal az45.6 r48.5,
+  kiln az38.5 r49.8, statuary-0039 az42 r74). The inner annulus r26–44 has
+  exactly ONE clear window: **az 52.4–56** (0.25°-step sweep). Leg shape:
+  - run: radial az 54 from r24 to r48 (threads the waist)
+  - jink: pivot at (54, az48) to clear the charcoal/kiln pair
+  - home: long straight to (72, az15) — lands between the statuary-0052
+    (7.5m) and hamlet-0054 (7.7m) arrival faces
+  - full-corridor clearance: worst 2.49m (tower); all other neighbors ≥2.68m.
+- **Build**: `agents/arthur/assets/mkv3-ne-approach2.ts` — 78 pavers + verge
+  hem + 2 lamps, 71.8m walk, lamps at the 1/3 and 2/3 harmonic of the FULL
+  walk (one on the run, one on the home straight). Deterministic ×2:
+  `a27bc9a252272b12`. Decode: film below 0.5, lamp trees to 2.56, flame
+  anchors KEEP-named at (39.71, 1.96, 27.0) and (32.89, 1.96, 50.15).
+- **Review**: `agents/arthur/reviews/ne-approach2/` — gameplay, night, front,
+  left judged: continuous lane, both bends joined, warm globes at night.
+  (Aerial/top framed the long axis too tightly to judge — gameplay view used
+  as the primary composed-lane evidence instead.)
+- **Placement**: `nx-approach-ne-lane-002` at (0,0,0) yaw 0, lights
+  `nx-approach-ne-lamp-001-l`/`-002-l` in the nvp-10 idiom; NE district
+  lights 4 → 6. Idempotent rerun: zero verbs.
+- **Walk-test (approach-2)**: two-way MCPL out-and-back, 7 legs, ALL PASS,
+  max arrival 0.38m.
+- **18m readability (approach-2)**: READABILITY_PASS for statuary-0052 and
+  hamlet-0054 (arrivals 0.33/0.25, clean sightlines).
+- **Verdict**: leg 2 of 4 stands. Next leg (rotation 3): SE Wild.
 
 ## Leg map (all four)
 
