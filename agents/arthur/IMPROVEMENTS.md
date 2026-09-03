@@ -3779,4 +3779,6 @@ fixes ≈ 6 F.)
 
 - [struct-35] ROUND 3 CLOSE: fleet-wide pin verification across all 26 solid nx-struct entities plus 3 companion lights and the echo arch — zero drift, every lib byte-exact to its accepted placement, no missing entities, no unknown extras (the four extras are the lane's own companion light entities and the echo arch registered under its build id); standing gate ALL PASS at HEAD 4bded45; round summary: R3-1 North Needle, R3-2 Four Waystones, R3-3 Echo Arch, R3-4 Wayfarer's Halt, R3-5 Sound Mirror, R3-6 Needle Rest, R3-7 Crossing Mark all live and verified, plus refines 5 (folly crown) and 6/7 (orrery ring echo pins sound mirror glow lineage complete); open with Bill: R2-3 relocation options from struct-22; no eighth commission invented — the census gaps this round filled are all filled (D+2, E+0)
 
-**Running total: 2369847 / 2000000**
+- [nvp-146] six-lane widening: dress-N + approach-N loop files opened (DRESSING-LOOP.md, APPROACH-LOOP.md), interlane protocol widened to six lanes, HEAD-gate prefixes extended (dress-/approach-); district dressing and approach-leg mandates from NEW-VILLAGE-PLAN §4 (D+195, E+4)
+
+**Running total: 2370046 / 2000000**
