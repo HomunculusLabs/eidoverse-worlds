@@ -1,12 +1,16 @@
-# INTERLANE PROTOCOL — concurrent mutating lanes (2026-08-30; widened 2026-09-03)
+# INTERLANE PROTOCOL — concurrent mutating lanes (2026-08-30; widened 2026-09-03 ×2)
 
 Active lanes: `polish-N` (hero-asset, entity `nx-carousel` only),
 `artwalk-N` (entities `nx-artwalk-*` only), `interior-N` (one queue building
 per tick, never `nx-carousel`), `struct-N` (NEW `nx-struct-*` entities only,
 never re-places existing buildings), `dress-N` (NEW
 `nx-dress-<district>-<kind>-<NNN>` district dressing only), `approach-N`
-(NEW `nx-approach-<dir>-<kind>-<NNN>` district legs only). Read this file
-fresh every wakeup alongside your own loop file.
+(NEW `nx-approach-<dir>-<kind>-<NNN>` district legs only). Two observer
+lanes run beside them: `night-N` (ZERO world mutation — night-read audit,
+defects routed to owners) and `sweep-N` (ZERO world mutation — integrator
+audit; census/overlap/walk/integrity). Observer lanes write only their own
+plans, registers, packets, and defect notes in owning lanes' plan files.
+Read this file fresh every wakeup alongside your own loop file.
 
 ## Entity domain law (the hard boundary)
 
