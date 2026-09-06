@@ -198,7 +198,12 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
 3. `nx-town-inn` — two floating diagonal planes at roof corners; dead
    unattached ridge box; porch emblem reads wheel-not-tankard (seeded,
    waysign-7); off-center entrance recess. Sev 1: floating geometry.
-   (guard: none)
+   (guard: none) [EXECUTED improve-7: gable horns killed via kit opt-ins,
+   solid ridge, chimney re-seated (was floating 0.72m — the "dead ridge
+   box"), tankard emblem built both faces; off-center-recess finding
+   DROPPED as probe artifact; D-note: emblem 18m front-view legibility
+   routed to round-1 eye-gate — decode-verified only, ZAI judged
+   side-view illegible at that resolution]
 4. `nx-town-windmill` — gallery ring floats with zero attachment; stray pole
    clips lit window; sail cross lopsided (one arm bare). Sev 1: floating
    geometry + weak identity. (guard: interior-20 Sep 1 interior only —
@@ -511,6 +516,95 @@ off-center recess; guard none. NOTE improve-5v law: re-judge under
 native vision at execution; re-check interior lane tail — interior-20
 touched the inn Sep 1, idle-guard expires 09-02, clear unless new
 commits land).
+
+- improve-7 (EXECUTION, queue item 3 `nx-town-inn`): contract committed
+  BEFORE editing. Idle-guard clear (interior-20 Sep 1, expired 09-02;
+  sweep-N inn walks are read-only verifications, not mutations). Live
+  tuple (36,0,0) yaw −π/2, lib c180c26f == local build (no disputed
+  bytes; baseline rebuild ×2 deterministic). Comp bag {} (census-fresh);
+  light companion nx-town-inn-l at (36,2.35,0) untouched. Host riders
+  b2-inn-lintel (local (0,2.5..3.06,~3.0)) and b2-inn-threshold
+  ((0,~0.2,~3.05)) — all edits stay OUTSIDE local x∈[−0.85,0.85] ∩
+  z∈[2.9,4.15] rider band. Native re-judgment attempted FIRST
+  (improve-5v law): vision_analyze errored 1210 — native down 18th
+  consecutive tick, disclosed; ZAI fallback used (2 calls, one timeout,
+  one paced retry succeeded).
+  Re-judgment results (confirm-or-drop):
+  - D1 gable horns → CONFIRMED (right elevation: stray box past the roof
+    slab on the rake; mechanism by DECODE: gableRoof(8,6) default
+    trueGableHalf=null → hw=w/2=4.0, but the triangle must span the
+    depth axis half-extent (6+0.9)/2=3.45 → 0.55m plaster horn per
+    gable end — same kit-bug class improve-4 decoded on the hall).
+  - D2 dashed ridge → CONFIRMED (blocky cap segments, apex notch; the
+    default 0.92-factor + ±0.03 stagger).
+  - D3 wheel-not-tankard emblem → CONFIRMED (light smudge, no legible
+    pictogram; seeded waysign-7 finding).
+  - D4 off-center entrance recess → DROPPED (front render: door, posts,
+    steps symmetric about the facade centerline — probe artifact).
+  - D5 floating chimney → CONFIRMED (NEW, decode-mechanical: chimney
+    base 5.1 vs roof surface 4.385 at z=−1.2 → floats 0.72m above the
+    roof plane, off-ridge. Very likely improve-1's "dead unattached
+    ridge box". ZAI right-view saw it floating with a sky sliver.)
+  Fixes (all mkv3-landmarks.ts inn block, no housekit change):
+  - D1/D2: roof call opts into proven kit fixes —
+    gableRoof(...,0.45,C.MID,solidRidge=true,trueGableHalf=3.45).
+  - D5: chimney baseY 5.1→4.3 (shoulder seats into the roof plane at
+    its (−2.4,−1.2) position, mid-slope seat law), topY 6.6→5.9 to keep
+    the stack length and above-ridge clearance ≥0.5m (5.9−5.08=0.82 ✓).
+    Shoulder (0.46 radius) swallows the roof thickness at the seat.
+    Chimney stays off-ridge on the N slope. No comp dependency on the
+    chimney nodes: the inn's comp bag is EMPTY (census-fresh compKeys
+    []), so nothing targets `chim_*` — re-seating is comp-free.
+  - D3: emblem rebuilt as a legible TANKARD pictogram: backboard 0.55w
+    × 0.42h × 0.05 flat panel (plain mat 0x7c6832, painted-face law),
+    tankard body 0.30w × 00.24h × 0.06, handle torus r=0.085 tube 0.018
+    on the right, foam cap 0.32w × 0.06h × 0.062 bone-tone with 3
+    rising foam beads (r 0.022/0.016/0.014) — reads as raised tankard
+    with overflowing foam at gameplay distance. Palette: body brass
+    (0xa0a248, metal 0.35, rough 0.5), foam C.BONE, board stays inn
+    oak. All child meshes plain-`mat` (no texMat) → same bucket as
+    board → merge into one node; sign GROUP survives (KEEP `sign$`).
+    Fuse box 0.1×0.08×0.06 on the left edge for the hanging bracket.
+  Falsification: after right.png shows NO geometry past the roof slab
+  at the rakes (horn killed); after top.png shows ridge running
+  continuous edge-to-edge; after front/right show chimney shoulder
+  SEATED on the roof plane (no sky sliver); emblem reads tankard with
+  foam at 18m (gameplay.png/front.png). Decode audit: bbox z-extent
+  drops 4.9→4.0 max (horn gone), chimney y-band present 4.3..5.9+,
+  x-bin chimney mass present at local x≈−2.4, z≈−1.2. Sibling
+  byte-equality: belltower/carousel/windmill shas unchanged.
+  Revert: revert the 3 edits (roof opts, chimney constants, emblem
+  block) → rebuild returns to live pin c180c26f (baseline rebuild ×2
+  already proven deterministic).
+
+  improve-7 EXECUTION COMPLETE: all three fixes landed in
+  mkv3-landmarks.ts (roof opts, chimney constants, emblem block);
+  rebuild ×2 deterministic sha 6e6ff2d0…; decode audit: gable triangles
+  span exactly ±3.45 (z-extent −4.0→−3.473, horn gone), ridge cap one
+  continuous bone run (y 5.08..5.17, x ±4.45), chimney shoulder rim
+  4.25 < roof top 4.385 = SEATED (vertex-level proof; rim-to-rim
+  cylinder surface bridges 4.25→4.6 with no empty y-band — corner-blind
+  law honored), pot top 6.269, above-ridge clearance 0.82m; sign group
+  intact with 4 sub-buckets (board / brass tankard / bone foam / iron
+  fuse), 4248 tris, 32 top-level nodes; siblings belltower/carousel/
+  windmill byte-identical (kit default path untouched). ZAI after-judge
+  (side view): horn GONE, ridge continuous, chimney seated no sky-gap;
+  emblem reads as dark plaque from the side (edge-on — expected);
+  front-view 18m emblem legibility un-judged (ZAI timeouts) — routed to
+  round-1 eye-gate with decode standing in (pictogram spans ~70% of
+  board, brass-on-oak contrast, both faces). Re-place remove+spawn at
+  the exact standing tuple (36,0,0) yaw −π/2, lib c180c26f→6e6ff2d0,
+  comp bag {} both sides, light companion nx-town-inn-l untouched.
+  Post-place tuple deep-verified; idempotent rerun ALREADY_LIVE_NO_VERBS
+  (zero verbs). Two-way 6-leg MCPL door walk ALL_PASS max arrival
+  0.36m. Placer: next-place-improve7-inn.ts; walk:
+  improve7-walk-inn.ts. Review evidence:
+  agents/arthur/reviews/improve7-inn/{before,after}/.
+
+Next queue item (improve-8): `nx-town-windmill` (Sev 1 — floating
+gallery ring, stray pole clipping lit window, lopsided sail cross;
+guard: interior-20 Sep 1 touched the windmill INTERIOR only — treat
+exterior as clear; re-check lane tail at execution).
 
 ## Carried laws
 

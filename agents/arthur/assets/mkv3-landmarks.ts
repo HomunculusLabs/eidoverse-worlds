@@ -335,8 +335,17 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     box(g, "uwall_s_lo", (W - 0.6 - 1.2) / 2, 2.2, T, -((W - 0.6 - 1.2) / 4 + 0.6), FY + H + 0.18, (D - 0.6) / 2 - T / 2, C.STONE);
     box(g, "uwall_s_hi", 1.2, 0.7, T, 0, FY + H + 0.18 + 1.85, (D - 0.6) / 2 - T / 2, C.STONE); // upper dormer gap
     box(g, "uwall_s_e", (W - 0.6 - 1.2) / 2, 2.2, T, (W - 0.6 - 1.2) / 4 + 0.6, FY + H + 0.18, (D - 0.6) / 2 - T / 2, C.STONE); // east segment (was missing)
-    gableRoof(g, "roof", W, D, 2.0, FY + H + 0.18, 0.45);
-    chimney(g, "chim", -2.4, -1.2, FY + H + 2.2, FY + H + 3.6);
+    // improve-7: inn opts into the kit's proven roof fixes — solidRidge
+    // (kills the dashed-cap read at 18m) + trueGableHalf 3.45 (the depth-
+    // plane half-extent the gable triangle must actually span; default
+    // w/2=4.0 horned 0.55m past the roof slabs per end — decode-proven,
+    // same class as the hall's 1.3m horn, improve-4/5).
+    gableRoof(g, "roof", W, D, 2.0, FY + H + 0.18, 0.45, C.MID, true, 3.45);
+    // improve-7 D5: chimney re-seated — roof surface at (−2.4,−1.2) is
+    // 3.08+2.0·(1−1.2/3.45)=4.385; old base 5.1 floated 0.72m above it.
+    // New base 4.3 sinks the shoulder INTO the slope (mid-slope seat
+    // law); topY 5.9 keeps stack length and 0.82m above-ridge clearance.
+    chimney(g, "chim", -2.4, -1.2, FY + H + 1.4, FY + H + 3.0);
     // interior-0: great-room hearth W end and two east-side table ensembles.
     // Their west edge is local x=+0.7, preserving the full local x ±0.7
     // door corridor; paired benches complete real seating on both sides.
@@ -528,12 +537,42 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     sboard.name = "sign_board";
     sboard.position.y = -0.32;
     sign.add(sboard);
-    // painted emblem: a brass circle (the wheel) on the board
-    const emblem = new THREE.Mesh(new THREE.CylinderGeometry(0.14, 0.14, 0.06, 10), mat(0xa0a248, 0.35, 0.6));
-    emblem.name = "sign_emblem";
-    emblem.rotation.x = Math.PI / 2;
-    emblem.position.y = -0.32;
-    sign.add(emblem);
+    // improve-7 D3: the emblem reads as a raised TANKARD (the inn's own
+    // glyph), replacing the brass disc that read as an illegible wheel/
+    // smudge at 18m (seeded waysign-7 flag). Pictogram spans ~70% of the
+    // board face — kills the emblem-scale collapse class. Painted-face
+    // law: plain mats, no texMat. Built on BOTH faces (z-mirrored parts)
+    // so the sign reads from either approach, like the old disc did.
+    const brassM = mat(0xa0a248, 0.35, 0.6); // same bucket as the old emblem
+    for (const fz of [1, -1] as const) {
+        const off = fz * 0.015; // body/lid centered, 0.02 proud of the face
+        const body = new THREE.Mesh(new THREE.BoxGeometry(0.30, 0.24, 0.06), brassM);
+        body.name = `sign_tankbody_${fz}`;
+        body.position.set(0, -0.34, off);
+        sign.add(body);
+        const lid = new THREE.Mesh(new THREE.BoxGeometry(0.32, 0.035, 0.06), brassM);
+        lid.name = `sign_tanklid_${fz}`;
+        lid.position.set(0, -0.205, off);
+        sign.add(lid);
+        const handle = new THREE.Mesh(new THREE.TorusGeometry(0.085, 0.018, 6, 14), brassM);
+        handle.name = `sign_tankhnd_${fz}`;
+        handle.position.set(0.235, -0.33, off);
+        sign.add(handle);
+        const foam = new THREE.Mesh(new THREE.BoxGeometry(0.32, 0.05, 0.062), mat(C.BONE, 0.7, 0));
+        foam.name = `sign_foam_${fz}`;
+        foam.position.set(0, -0.165, off);
+        sign.add(foam);
+        for (const [bi, br, bx, by] of [[0, 0.024, -0.075, -0.105], [1, 0.017, 0.005, -0.088], [2, 0.014, 0.065, -0.112]] as const) {
+            const bead = new THREE.Mesh(new THREE.IcosahedronGeometry(br, 0), mat(C.BONE, 0.7, 0));
+            bead.name = `sign_fbead_${fz}_${bi}`;
+            bead.position.set(bx, by, off);
+            sign.add(bead);
+        }
+        const fuse = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.1, 0.055), mat(0x404044, 0.5, 0.55));
+        fuse.name = `sign_fuse_${fz}`;
+        fuse.position.set(-0.295, -0.32, off);
+        sign.add(fuse);
+    }
     g.add(sign);
     glow(g, "lamp", 2.5, 2.35, D / 2 + 1.6);
     glow(g, "lamp2", -2.5, 2.35, D / 2 + 1.6);
