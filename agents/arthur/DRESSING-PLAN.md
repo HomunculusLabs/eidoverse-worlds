@@ -2062,3 +2062,41 @@ Bill-ruled). REPAIR-REGISTER zero nx-dress.
 - Standing unblock paths (say-once): Bill's SW lamp a/b/c policy call,
   or verdicts on the four-district eye-gate circuit
   (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+--- dress-60 (2026-09-06, pipeline tick 39) - HOLD
+
+- Shard: re-verified EMPTY at source on current bytes by full-row-window
+  scan with the complete annotation vocabulary
+  (EXECUTED/DROPPED/NATIVE-DROPPED/BILL-HELD): all nine nx-dress
+  Round-1 rows terminal (5/29/30/31 DROPPED - 30 via the NATIVE-DROPPED
+  survey-2 marker; 32/33/34/37/38 EXECUTED reseats). Row 39 confirmed
+  foreign and terminal (nx-town-longhouse, improve-20 EXECUTED);
+  survey round-2 heads route nx-town improve-own, zero dress rows;
+  fountain intake Bill-off-limits, his call. No un-shard clock (empty
+  at source, not idle).
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh kind-law recount:
+  exactly 3 live SW r>=35 lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0, kind=light). Spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae unchanged, zero VERDICT lines
+  (grep exit 1 fresh this tick).
+- Hold verification: standing gate ALL PASS real exit 0 at tick-start
+  HEAD 22ea039 (own dress-59 commit; no sibling commits absorbed this
+  window). Fresh census 259 HTTP-200 first fetch; 11/11 district
+  installs PIN_EXACT lib+tuple+yaw-radians+comps-empty vs the siting
+  log PLACED_VERIFIED source blocks (stile 135 deg = 2.35619, prayer
+  127.25 deg = 2.22093 confirmed against live). Probe self-catch
+  disclosed (15th tick-class): the pin table hand-derived yaw column
+  carried two wrong guesses (stile -0.785, prayer 0.0) - lib+pos exact
+  on both, world right, probe wrong; yaws derive from PLACED_VERIFIED
+  blocks, never memory (dress-26 law extended from units to
+  provenance). 27 nx-dress = 11 fleet + 16 legacy intact by
+  arithmetic; lights 38 (kind histogram thing 221 / light 38).
+  Interlane md5 f6254cd0 steady. Foreign dirt (mkv3-ring, core-paths
+  glb+review, tower3, court placer, fleet watcher, improve20/struct
+  terrain probes, review-improve19-pixels, untracked reviews) left
+  untouched.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed.
+- Standing unblock paths (say-once, unchanged): Bill SW lamp a/b/c
+  policy call, or verdicts on the four-district eye-gate circuit
+  (agents/arthur/reviews/dress-districts-eye-gate.md).

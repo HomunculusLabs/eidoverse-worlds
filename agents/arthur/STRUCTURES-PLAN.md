@@ -275,6 +275,54 @@ own commission queue (Round 3 scoreboard complete; Round 4 concept due)
 or re-arm rows routed in by improve's next sweep.
 Open with Bill: R2-3 relocation options (struct-22).
 
+## LANE STATE: SHARD EXECUTION (struct-47, 2026-09-06)
+
+Fresh re-derivation this tick: shard EMPTY at source (14/14 nx-struct-
+rows terminal; scan self-catch: crossing's `[NATIVE-survey-6 CLEAN]`
+terminal annotation initially missed by my token list — corrected, count
+verified). Native re-judge debts (struct-40 hypar v3, struct-41 pendulum,
+struct-42 mobius, struct-45 soundmirror) attempted: provider DOWN all
+tick (1210 ×2 + paced retry per subject class, disclosed). Deterministic
+anchoring performed instead (fresh review-model.ts renders of
+local==live-exact bytes vs durable verdict frames): hypar 8/8
+byte-identical, mobius 8/8 byte-identical, soundmirror 8/8
+byte-identical, pendulum GLB-exact with disclosed ~4.2k-px render
+determinism delta (rig deterministic fresh×2 today; durable frames from
+a different afternoon invocation — PNG provenance noted, world correct).
+Native debts stay owed; fresh frames banked as the re-judge substrate
+(reviews/struct47-*-{rejudge,anchor}/).
+
+struct-47 = R4-1 MERIDIAN STAIR (EXECUTED, live — own commission, Round
+4): the honest compact reading of the struct-22 infeasibility proof —
+the hypar language returns as a PORTAL, not a 19m gate. One idea:
+ASCENDING STEPS. Three true-hypar saddle panels (z=k(u²−v²), k=0.08,
+patch 2.133×5.0m, 11 ruling slats each — hyparShell's ruling law applied
+per-panel) side by side across a 5.0m walk lane, each stepped +0.55m
+above its left neighbor (ride heights 3.2/3.75/4.3), stepped parabola
+edge beams at the two lane faces; hypar_iron posts at the four panel
+boundaries (shared posts rise to the higher panel's corner); the two
+summit posts carry gold beads + warm glow cores (0x8a5a20@0.6 —
+struct-21/30/33 dusk lineage, no new light entity). Front elevation =
+three rising arcs. Materials all texMat lanes (struct-38 family law);
+static, no comps; 4 merged nodes; sha dec58a3b6bfcae4a… deterministic
+×2. Gates honest: 34.1m² ≥16, 4.41m ≥2.2 → real trimesh; door span
+1.95m ≥1.4; lane clearance 2.70m ≥2.2 (decode-verified per bucket).
+Siting th276/R55 → (5.7, −0.0378, −54.7) yaw 3.037 (portal lane radial,
+near face to village): OBB SAT pre-scan 52 candidates ≥2.0m, seat gap
+7.91m to nx-struct-observatory; placer fresh-SAT clean; terrain flat
+(−0.036…−0.040, 4mm spread, 5-point preflight). PLACED_VERIFIED 1 verb
+(plain spawn), idempotent rerun 0 verbs. 6-leg two-way MCPL walk
+ALL_PASS maxArrival 0.37m (approach → near mouth → mid-lane under
+lowest panel → far mouth → out → re-enter → back). Visual PASS NOT
+CLAIMED — judged under Bill's standing visual-tool waiver
+source-grounded only (native down all tick; before/after gameplay +
+night frames banked reviews/struct47-meridianstair/).
+
+**Bill should eye-check**: the far NW walk past the observatory — the
+compact stepped portal on the approach; three saddle arcs rising
+left-to-right, walkers passing under the lowest; at dusk the two gold
+summit pins mark the top of the ascent.
+
 ## Siting log
 
 | tick | structure | site (deg/r) | world pos | yaw | verdict |
@@ -321,6 +369,7 @@ Open with Bill: R2-3 relocation options (struct-22).
 | struct-43 | SHARD ROW 24: amphi stepped-bowl rebuild | exact standing tuple (−23.32, 0.03982105168676789, 37.31) yaw 0 | 0 | — | LIVE, lib 0904c5da→95a98c74, circuit walk 10/10 |
 | struct-44 | SHARD ROW 25: observatory front-bay closure | exact standing tuple (16.48, −0.05244011, −40.8) yaw −0.3839 | — | — | LIVE, lib eb3c9b15→3d9d6ae1, door walk 5/5 |
 | struct-45 | SHARD ROW 26: soundmirror true-bowl rebuild | exact standing tuple (28.7, −0.02608747, −18) yaw 0 | 0 | — | LIVE, lib 5216db0a→f313e59a, circuit walk 6/6 0.354m |
+| struct-47 | R4-1 Meridian Stair (portal) | th276/R55 NW wedge | (5.7, −0.0378, −54.7) | 3.037 (lane radial, near face to village) | LIVE, 6-leg two-way walk 6/6 0.37m |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
