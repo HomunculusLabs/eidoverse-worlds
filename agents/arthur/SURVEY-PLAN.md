@@ -89,6 +89,40 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   = struct-40/dress-20 mid-tick executions). Verdicts 4 confirmed /
   2 clean / 0 dropped. Zero world mutations, zero shared-budget use.
 
+- survey-7 (2026-09-06, NATIVE 8/8 + 1 night frame, 18m gameplay, fresh
+  live store bytes 8/8 HTTP 200 curl UA from /library/store/ on exact
+  census-7 libs; one native 1210 flap mid-slice, single paced retry
+  recovered, ZERO fallback): core district pass, severity backlog DRAINED
+  (round-1 rows 1-39 all EXECUTED/DROPPED by owners). Slice = improve-1
+  ZAI-CLEAN five (dyehouse, gate, market, potter, woodyard) + three core
+  landmarks with NO round-1 entry (hearth, welcome, tower). Verdicts:
+  dyehouse CLEAN (blue strip 431-461 carries identity, vats+tool rack
+  read; margin: bone-strip top edge melts into sky); gate-n CLEAN 4/4
+  (walk-through portal, grounded, clean crown; margin: hanging sign is
+  the blob-risk element, dot grid + 1px hangers hold); market CLEAN
+  (awning+counter+goods read, contact shadows anchor; margin: 1-2px legs
+  shimmer-risk); hearth CLEAN 4/4 (flame-only-saturated read, kettle
+  tripod, well windlass; margin: rope/bucket sub-visible at 18m);
+  tower CLEAN day (watchtower formula complete, sealed silhouette,
+  ladder readable) + night margin-tier only (one warm dot at 470,400
+  carries entire night read, upper mass dead — POLISH TIER, NOT routed:
+  village_tower3.glb dirty in sibling working tree = tower work in
+  flight, note would be stale-on-arrival); woodyard CONFIRM Sev 3
+  (vertical stack mass pure-black blob x370-552 y300-390, zero wood
+  read; gaps read voids; stump floats shadowless — log ends + axe carry
+  the identity alone); welcome CONFIRM Sev 3 (left stub arm detached,
+  ~5px gap x466-470 y341-345; welcome text dark-on-dark illegible —
+  sign-identity holds, welcome-semantic fails); potter CONFIRM Sev 4
+  identity-marginal (wheel disc reads generic, pot on 1px spindle reads
+  floating x470 y352-360; craft-station read holds, potter-specific
+  read rests on sub-pixel cues). 3 candidate rows routed to IMPROVE-PLAN
+  SURVEY CANDIDATES (round-2 intake), zero notes to other lanes' plans
+  (all three are nx-town-* = improve's own domain). Census 259 steady
+  0/0 vs sweep-34 (3 domain-valid sibling turnovers classified: shrine
+  948d5c49 improve-14 in flight, hedge a80e9121 dress-21 committed,
+  smithy 3522e5ab waysign-16 in flight). Verdicts 3 confirmed / 5 clean /
+  0 dropped. Zero world mutations, zero shared-budget use.
+
 ## Routed notes
 
 - survey-1: `nx-town-stable` (improve-own) — confirmed Sev 2, see improve plan.
@@ -142,3 +176,11 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   stand in the round queue). One mid-tick interleave pair honestly
   recorded (struct-40 hypar, dress-20 skeps — both judged pre-fix,
   corroborative only, no reopening).
+- survey-7: `nx-town-woodyard` + `nx-welcome` + `nx-town-potter`
+  (improve-own) — native-confirmed Sev 3/3/4, first three candidate rows
+  under IMPROVE-PLAN's new SURVEY CANDIDATES (round-2 intake) heading.
+  All three are nx-town-* (improve's own domain) — zero notes routed to
+  other lanes' plans this tick. Tower night margin (single warm dot
+  carrying night read) NOT routed: village_tower3.glb dirty in a
+  sibling's working tree (tower work in flight — note would be
+  stale-on-arrival; re-slice after that work lands).

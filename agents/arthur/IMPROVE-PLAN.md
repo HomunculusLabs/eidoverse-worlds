@@ -1474,6 +1474,31 @@ rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
   improve12-walk-stable.ts. Review evidence:
   agents/arthur/reviews/improve11-stable/{before,after,after2}/.
 
+## SURVEY CANDIDATES (round-2 intake)
+
+Confirmed under NATIVE vision at 18m from fresh live store bytes
+(survey-7, 2026-09-06). Findings are probes — confirm-or-drop and
+decode-at-source law stays with the executing lane. Grep-verified: no
+open duplicate notes for these objects.
+
+- `nx-town-woodyard` — Sev 3 (native survey-7): vertical stack mass is a
+  pure-black blob (x370-552 y300-390 in gameplay frame) — zero wood
+  read, no bark/end-grain/lit-face variation; inter-panel gaps read as
+  voids, not shaded depth; stump floats shadowless right of shelter.
+  Identity currently carried by log-end courses + planted axe alone.
+  NOTE: tex-85 live-freeze law applies — any edit derives from LIVE
+  store bytes 1f2c6f59, never a source rebuild. Evidence:
+  reviews/survey7-slice/nx-town-woodyard/gameplay.png
+- `nx-welcome` — Sev 3 (native survey-7): left stub arm detached from
+  post (~5px sky gap x466-470 y341-345); welcome text dark-on-dark
+  illegible at 18m (board holds sign-identity, welcome semantic fails).
+  Evidence: reviews/survey7-slice/nx-welcome/gameplay.png
+- `nx-town-potter` — Sev 4 identity-marginal (native survey-7): wheel
+  disc reads generic flat ellipse (could read table/press), pot on ~1px
+  spindle reads floating (x470 y352-360); shelf pots sub-pixel texture.
+  Craft-station read holds; potter-specific read rests on sub-pixel
+  cues. Related: nx-sign-potter-001 emblem fix is waysign R2 work.
+  Evidence: reviews/survey7-slice/nx-town-potter/gameplay.png
 
 ## Carried laws
 
