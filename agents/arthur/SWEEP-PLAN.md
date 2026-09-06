@@ -38,7 +38,33 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 
 || sweep-24 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-23 snapshot — thirteenth fully quiet delta of the wave; raw /geom snapshot sha-identical 6bc53d31c388710a, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs max-arr 0.38; NW 0.38 / NE 0.38 / SW 0.37, all real exit 0, verdicts content-anchored) + tier-2 inn 0.364 + stable 0.396 ALL PASS (sixth cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, woodyard 1f2c6f592095b204 exact, ledger law exact (2370208 at entry, 2370208 after D+0/E+0 append), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD 4100aad (sibling improve-4 decode+plan tick, zero world mutations per its message, accepted by prefix gate) | CLEAN SWEEP |
 
+|| sweep-25 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented lib change: nx-town-hall 1306527a→c92c1f91 at identical tuple (9,0,-26) yaw −0.313 — matches the improve-5 re-place ledger @ c455327 exactly, domain-valid, not drift; snapshot rewritten, raw sha 017e7d27a3b5b0b8) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, all real exit 0) + tier-2 hall 0.360 + row-cottage 0.384 ALL PASS (seventh cycle; hall walked against the new improve-5 bytes — interior door-lane contract intact post re-place) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, woodyard 1f2c6f592095b204 exact, ledger law exact (2370209 at entry, 2370209 after D+0/E+0 append), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD f26b224 (sibling improve-5v plan-steer accepted by prefix gate) | CLEAN SWEEP |
+
 ## Findings register
+
+sweep-25: none. Census 259==259 (0 arrivals, 0 departures, 0 unexplained
+drift). One documented lib change classified as expected sibling work, not
+drift: nx-town-hall 1306527a→c92c1f91 at identical tuple (9,0,-26) yaw −0.313,
+matching the improve-5 re-place ledger @ c455327 line-for-line (remove+spawn,
+comp bag empty/unchanged, 8-leg walk re-proven by the improve lane itself, and
+independently re-walked by THIS sweep's tier-2 hall leg against the new bytes
+— 0.360 ALL_PASS, interior door-lane contract intact). New sibling commits
+since sweep-24: improve-5 @ c455327 (world-mutating execution tick, re-place
+verified) and improve-5v @ f26b224 (plan steer only, zero mutations); both
+accepted by the prefix gate; interlane md5 1b933f3454e52504d89ff0c167c4e7dc
+stable. All five phases verified fresh this wakeup with zero failing checks
+(tier-1 legs run individually per sweep-18 timeout lesson, all real exit 0
+with status strings anchored; tier-2 seventh cycle: hall 0.360 + row-cottage
+0.384). Foreign-seam abstentions in walk stderr (cultivation gardens +
+dress-se-stones + struct-skymirror) are the known normalized diagnostic set,
+unchanged. Snapshot rewritten this sweep (raw sha 017e7d27a3b5b0b8 — the hall
+lib field changed, so no-rewrite was not available). No defect notes written.
+Next tier-2 pair (sweep-26): potter + market (seventh cycle). Standing note
+for Bill: the improve lane has begun EXECUTING its 38-entry round-1 queue
+(hall = item 1 complete; improve-5v re-judges unexecuted entries under the
+restored native vision before executing) — census diffs from sweep-26 on
+should expect further improve-domain lib changes on re-placed objects, each
+classifiable only against that tick's ledger tail.
 
 sweep-24: none. Steady-state census (259==259 vs the committed sweep-23
 snapshot — 0 arrivals, 0 departures, 0 drift on all shared ids; thirteenth
