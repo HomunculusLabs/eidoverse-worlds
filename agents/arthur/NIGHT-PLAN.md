@@ -115,7 +115,7 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 | night-1/N1 | lamp-head emissive consistency question | 4 (informational) | approach-N | same note | noted, no re-open |
 | night-2/D2 | NE leg unlit dead stretches: gate-edge(r~20)→lamp-001 33.5m, lamp-001→002 24.1m, lamp-002→first lit interior 28.1m (all census-verified; worse than NW) | 2 | approach-N | APPROACH-PLAN `### night-2 defect note` | OPEN, budget-bound (NE budget=2, spent by the same two lamps) |
 | night-2/N2 | lamps cast weak/no ground pools at range-10 — lights read as points pasted on darkness, not fixtures in space (recurring night-1/N1 class, now judged in 3 views) | 3 (informational→design) | approach-N (contract is live-client) | same note | noted; likely ambient/sky-budget question for the final packet |
-| night-2/N3 | DRESSING-PLAN lamp-budget table rows (NE=2, SE=0) contradict the census light count (NE=10, SE=9 at r≥35 — night-1 note says SE=8; +1 is sibling work) | 3 | dress-N | DRESSING-PLAN `### night-2 defect note` | OPEN for dress lane reconciliation |
+| night-2/N3 | DRESSING-PLAN lamp-budget table rows (NE=2, SE=0) contradict the census light count (NE=10, SE=9 at r≥35 — night-1 note says SE=8; +1 is sibling work) | 3 | dress-N | DRESSING-PLAN `### night-2 defect note` | CLOSED 2026-09-06 by dress-3 (owning lane): table recounted per the plan's own token-anchor rule → NW 2 / NE 10 / SE 8 / SW 3 (DRESSING-PLAN lamp-budget header, "closing night-2/N3"); night-7 later pinned the token-vs-kind=light law. Register row reconciled at night-8 |
 | night-3/D3 | SE corridor az315 ZERO lamps; path fades to black within a third of frame; last-stone→wild-margin link implied but unlit | 3 | approach-N | APPROACH-PLAN `### night-3 defect note` | OPEN, budget-bound (SE budget 8/8 spent on interior anchors) |
 | night-3/N4 | pavilion lamps read as detached points not fixtures (no ground pool/spill); one bare-emissive globe with no visible mount | 4 (informational) | approach-N (contract is live-client) | same note | noted; final packet question |
 | night-4/D4 | SW corridor dead stretches: gate-edge(~r20)→lamp-001(r39.7) ~20m unlit, lamp-001→002 15.8m, lamp-002(r55.4)→gravel gate(r74.7) ~19m; then the ENTIRE temple grounds (terraces/seeds/labyrinths, r71–98) carry ZERO lights of any kind — worst-in-class dead district after dark | 2 | approach-N | APPROACH-PLAN `### night-4 defect note` | OPEN, budget-bound (SW budget 3 per table; live in-quadrant count = 2 — table's third 'inn' anchor sits core-side, outside the r≥35 rule; census note recorded) |
@@ -346,3 +346,15 @@ STUDY COMPLETE (all facets judged; packet assembled).
   census 259 steady / 38 lights / zero night-prefixed entities; D1–D5 +
   N1–N7 disposition unchanged; packet unchanged; lane still HOLDS on Bill's
   verdicts. Zero world mutations.
+- night-8 (2026-09-06, pipeline-mode hold tick): register reconciliation —
+  night-2/N3 marked CLOSED: the owning dress lane's dress-3 reconciliation
+  (verified fresh at HEAD this tick) closed it, but this register's row was
+  never flipped; now records the dress-3 recount (NW 2 / NE 10 / SE 8 / SW 3,
+  token-anchor rule) as the closure. One real disposition change; D1–D5,
+  N1/N2/N4–N7, and the packet all verified UNCHANGED fresh (notes stand in
+  APPROACH-PLAN; packet md5 cdc435a2e7d742d616ed167471ff2622; no
+  verdict-class commits since night-7). Standing gate ALL PASS real exit 0 at
+  HEAD 5d54edd; census 259 steady / 38 lights / zero night-prefixed entities;
+  zero shard rows for night-; lane still HOLDS on Bill's verdicts (sky-palette
+  facet-5, lamp-budget policy D1–D5+N6, N5 detached-orb, N7 hierarchy
+  inversion). Zero world mutations.
