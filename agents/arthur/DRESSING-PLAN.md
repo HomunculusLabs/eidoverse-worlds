@@ -177,6 +177,25 @@ a/b/c budget policy (0 of 3 used). Native vision judged the rejudge +
 both v4 gameplay/gap views; the v4 close view fell to ZAI fallback
 (native 1210 ×2 after one paced retry, disclosed).
 
+**STATE AT dress-22 (2026-09-06, pipeline hold tick)**: lawful HOLD —
+every path closed this tick. Shard queue EMPTY, verified at source: all
+nine `nx-dress-*` rows in IMPROVE-PLAN Round 1 carry terminal annotations
+(5/29/30/31 DROPPED after native rejudge, 32/33/34/37/38 EXECUTED
+reseats); zero OPEN rows route to `nx-dress-*` — no un-shard clock is
+running. SW lamps remain the only own-queue item anywhere, blocked on
+Bill's a/b/c budget policy (0 of 3 used). Hold verification: standing
+gate ALL PASS real exit 0 at HEAD 38ab889 (absorbing sibling waysign-18,
+artwalk-66, struct-41, improve-14); fresh live census 259, ALL ELEVEN
+district installations tuple+lib EXACT vs this plan — dress-21 hedge
+`3d5c7d44`, dress-20 skeps `87d2dd16`, dress-18 stile `5e9d301d`,
+dress-10 logpile `cac71bff`, ne-yard `191227da`, ne-bench `46f3b6b1`,
+dress-19 woodstack `692bc54e`, dress-15 cairn `59031a0c`, dress-3 stones
+`8dafb9e5` @ (52.61, −0.011, −47.80) yaw 45°, dress-4 gravel `fd21de9f`
+@ (−45.22, −0.05, −59.46) yaw 127.25°, dress-8 prayer `5074600f`; 16
+legacy core `nx-dress-*` untouched (off-limits set intact). SURVEY INTAKE
+holds only survey-6 (consumed by dress-21). Zero world mutations, zero
+uploads, zero shared-budget use.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
