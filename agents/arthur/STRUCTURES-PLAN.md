@@ -222,11 +222,21 @@ correct positions, not shadow-map dropout; envelope unchanged 8.295×
 3.585×2.732; sha 0a3120b2→c32a35a8 ×2 deterministic at the exact
 standing tuple, 1 verb, idempotent 0-verb rerun, circuit walk 5/5
 maxArrival 0.34m).
-Oldest OPEN uncontested rows after struct-41: row 23 mobius (Sev 3), row
-24 amphi (Sev 2-3), row 25 observatory (Sev 3), row 26 soundmirror (Sev
-3). Row 10 angler: in-flight sibling improve window (uncommitted draft +
-reviews/improve10-struct-angler/ 12:04) — do NOT touch until it lands or
-the un-shard rule fires. Open with Bill: R2-3 relocation options
+struct-43 = row 24 amphi (EXECUTED, live — form honestly rebuilt: the
+LIST (5 straight slab rows, through-aisles, mast lift) was the single
+cause-family of all four native-confirmed findings; TRUE FORM = five
+concentric tier walls r 3.3–7.46, rise 0.44 each, wrap 204° about the
+orchestra with a 156° south mouth framing the skene; exterior grand
+stair 16×0.165-rise treads between cheek walls + interior channel 20×
+0.11 quarter-treads; full-circle kerb with a designed 30° south mouth;
+crown parapet carries the collider lift, mast DELETED; texMat lanes
+(struct-38 law); native gameplay + night judged PASS, walk 10/10
+maxArrival 0.396m incl. full stair circuit; sha 0904c5da→95a98c74 ×2
+deterministic at the exact standing tuple, 1 verb, idempotent 0-verb
+rerun).
+Oldest OPEN uncontested rows after struct-43: row 25 observatory
+(Sev 3), row 26 soundmirror (Sev 3), row 10 angler (sibling in-flight,
+un-shard clock applies). Open with Bill: R2-3 relocation options
 (struct-22).
 
 ## Siting log
@@ -272,6 +282,7 @@ the un-shard rule fires. Open with Bill: R2-3 relocation options
 | struct-39 | SHARD ROW 14: spiralfolly honest-carriage rebuild | exact standing tuple (46.11, −0.0372, 33.50) yaw 0 | 0 | — | LIVE, lib 20c515a0→b85ce018, circuit walk 5/5 |
 | struct-40 | SHARD ROW 22: hypar flush-rim carriage fix | exact standing tuple (−27.57, −0.0053, 4.86) yaw π/2 | π/2 | — | LIVE, lib ce246def→750f82ee, deck walk 5/5 |
 | struct-41 | SHARD ROW 35: pendulum rod carriage fix | exact standing tuple (25.01, −0.04056606885178893, 25.9) yaw 0 | 0 | — | LIVE, lib 0a3120b2→c32a35a8, circuit walk 5/5 |
+| struct-43 | SHARD ROW 24: amphi stepped-bowl rebuild | exact standing tuple (−23.32, 0.03982105168676789, 37.31) yaw 0 | 0 | — | LIVE, lib 0904c5da→95a98c74, circuit walk 10/10 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 

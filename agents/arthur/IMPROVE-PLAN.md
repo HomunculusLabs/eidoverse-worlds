@@ -614,6 +614,10 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     wrap ~120-150deg single rear bank, front 180deg empty. Sev 2-3
     stands, pole worst (2 native + 2 fallback unanimous). Evidence:
     reviews/survey5-slice/struct-amphi/gameplay.png]
+    [EXECUTED struct-43: form rebuilt — five concentric tier walls, 204°
+    wrap, exterior grand stair (0.165 rises) + channel quarter-treads,
+    orchestra kerb with south mouth; mast deleted; native gameplay+
+    night PASS, walk 10/10; sha 95a98c74 live at exact tuple]
 
 25. `nx-struct-observatory` — detached trim band; dome-to-wall slits. Sev
     3. (guard: none)
