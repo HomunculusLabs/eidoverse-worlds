@@ -1171,6 +1171,41 @@ rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
   checked vs bench/sign/b8; (5) night.png shows warm door + window.
   Revert: revert mkv3-stable.ts edits → rebuild returns 5beff62e.
 
+  improve-12 EXECUTION COMPLETE (closing the improve-11 contract): improve-11's
+  build 10fd723c FAILED its own night falsification — night.png max R 42,
+  zero warm pixels. Root cause by decode + kit read: the windowFrame pane
+  was BURIED (kit z default puts the emissive pane at wall-center z 1.98,
+  behind the wallSpan's outer face z 2.1 — it can never render; the hall's
+  identical call is the same class, its night glow actually comes from lamp
+  beads), and the only lantern bead sat at the FAR open-front (world W),
+  invisible from the road-side night vantage. Fixed in improve-12 (same
+  contract, night clause): (a) window seated PROUD of the wall face
+  (z = D/2−T/2+0.09 → pane 2.075..2.105, bone frame proud, shutters flare
+  from 2.21); (b) entrance lantern bead on the door lintel E end (local
+  (−0.55, 2.5, 2.05), same ember recipe as the yard lantern, polish-278
+  law; clears sign keep-out — bead y 2.3..2.55 at x −0.495..−0.605 vs
+  rider x≥−0.32 band at y 1.96..2.76 z 1.88..2.32, x-disjoint by 0.17).
+  Final sha 98f2d5b6 deterministic ×2, 17 nodes (pane stays own node;
+  door bead joins glow bucket). Decode audit on final: door-lane blocking
+  verts 0, sign keep-out 0, b8 keep-out 0, aisle verts 0; pane proud
+  2.075..2.105 (face 2.1), glow bucket 120 verts (yard + door beads).
+  Night falsification PASSED: 304 warm px at the window (max R 244,
+  x 570..602 = flank E) + door-bead speck (5 warm px, x 447). Native judge
+  (1210 ×2, paced retry recovered — native judgment): entrance clean
+  (opening/posts/lintel/stoop, no clipping), window seated with real
+  reveal + shutter contact shadows, zero floating/detached/intersecting
+  geometry, coherent enterable stable. ZAI fallback judged first
+  (disclosed): PASS on all four mechanics, semantic notes only (isolated
+  render — the livery sign rider hangs on this wall in the live world,
+  host-rider law). Re-place remove+spawn at the exact standing tuple
+  (43,0,0) yaw −π/2, lib 5beff62e→98f2d5b6, comp bag {} both sides
+  (census-fresh; riders + nx-town-stable-l untouched — separate entities).
+  PLACED_VERIFIED (2 verbs) + idempotent rerun ALREADY_LIVE_NO_VERBS.
+  Two-way 6-leg MCPL door walk ALL_PASS max arrival 0.325m (outside→door→
+  center→yard→back). Placer: next-place-improve12-stable.ts; walk:
+  improve12-walk-stable.ts. Review evidence:
+  agents/arthur/reviews/improve11-stable/{before,after,after2}/.
+
 
 ## Carried laws
 

@@ -40,7 +40,12 @@ box(g, "floor", W, 0.4, D, 0, 0, 0, C.DARK);
     // flank E x∈[−0.65,2.7] (len 3.35): wallSpan keeps plinth + timber,
     // carries the sign + a lit window
     wallSpan(g, "wall_back_e", 3.35, H, T, 1.025, FY, D / 2 - T / 2, "x", C.STONE);
-    windowFrame(g, "stable_win_e", 1.8, FY + 1.45, D / 2 - T / 2 - 0.02, 0.7, 0.75, "z");
+    // improve-12: pane seated PROUD of the wall's outer face (wall spans
+    // z 1.9..2.1; kit default z puts the emissive pane 0.1m BEHIND the face
+    // where it can never render — the buried-pane class, decode-caught).
+    // z = wall center + 0.09 → pane front 2.105 clears face 2.1, bone frame
+    // proud 0.06, shutters flare from 2.21.
+    windowFrame(g, "stable_win_e", 1.8, FY + 1.45, D / 2 - T / 2 + 0.09, 0.7, 0.75, "z");
     // flank W x∈[−2.7,−2.05] (len 0.65)
     wallSpan(g, "wall_back_w", 0.65, H, T, -2.375, FY, D / 2 - T / 2, "x", C.STONE);
     // timber lintel beam over the opening (y 2.4..2.56, spans x −2.15..−0.62,
@@ -159,6 +164,16 @@ texBox("fork_tines", 0.16, 0.18, 0.03, W / 2 - 1.4, FY + 1.34, -1.5, ironTex);
     lant.name = "lantern_core";
     lant.position.set(0, FY + 1.9, -(D / 2 - 0.3));
     glowGrp.add(lant);
+    // improve-12: entrance lantern on the door head — the road-side arrival
+    // face was emissive-dead at night (night.png max R 42) because the only
+    // glow sat at the far open-front. Same bead recipe as the yard lantern
+    // (polish-278 ember-marker law), seated under the lintel at the door's
+    // E edge — clears the sign rider keep-out (x -0.43 vs rider x≥-0.25...-0.32
+    // band is at y≥1.96; bead at y 2.3 x -0.43 sits between rider and gap).
+    const dlant = new THREE.Mesh(new THREE.IcosahedronGeometry(0.055, 0), new THREE.MeshStandardMaterial({ color: 0xffc98a, emissive: new THREE.Color(0xffc98a), emissiveIntensity: 0.9, roughness: 0.4 }));
+    dlant.name = "door_lantern";
+    dlant.position.set(-0.55, FY + 2.3, D / 2 - T / 2 + 0.05);
+    glowGrp.add(dlant);
     g.add(glowGrp);
 }
 
