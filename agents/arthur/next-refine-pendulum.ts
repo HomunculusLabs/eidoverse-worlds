@@ -1,4 +1,8 @@
-// next-refine-pendulum.ts — struct-15 REFINE: Pendulum Wave deficits.
+// next-refine-pendulum.ts — struct-15/struct-41 REFINE: Pendulum Wave deficits.
+// struct-41 (SHARD ROW 35): rod cross-section 0.028 -> 0.065 — strings
+// solid-continuous at 18m + rod shadows lifted off the raster floor; the
+// nine-dash band proven to BE the nine rod shadows (decode falsified the
+// "acne" class; centers align exactly with rod x-positions).
 // Re-place nx-struct-pendulum at its EXACT standing tuple with the new
 // hash: posts widened out (end bobs clear the A-legs by 0.73m at bob
 // height) and beam raised 3.1->3.5 (bob band 1.30-1.71m lifts off the
@@ -12,7 +16,7 @@ const YAW = 0;
 const m = {
     id: "nx-struct-pendulum",
     file: "village_pendulum3.glb",
-    sha: "0a3120b294d669eda3cafd8821b0eaec41715cd18c2939821fa1ff4de5b5fd9c",
+    sha: "c32a35a8cc1a433d2543f46c16061cfed63164adb5c6cad71fd393a365039397",
     bbox: { min: [-4.15, -0.01, -1.37], max: [4.15, 3.57, 1.37] },
     comp: {},
 } as const;

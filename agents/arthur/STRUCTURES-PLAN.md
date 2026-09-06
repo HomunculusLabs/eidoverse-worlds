@@ -201,7 +201,7 @@ compact strut-carried ring, curb-owned continuous silhouette; ALL
 materials texMat lane per struct-38 law; sha 20c515a0→b85ce018 at the
 exact standing tuple, circuit walk 5/5).
 struct-40 = row 22 hypar (EXECUTED, live — decode-first resolution of the
-survey-3/4 ZAI contradiction: source-math + vertex decode proved the
+survey-3/4 ZAI contradiction: source math + vertex decode proved the
 carriage defect class TRUE (overhung corner rulings at grade/6.41m) and
 resolved it WITHOUT a native judge via the probe-discipline law; housekit
 hyparShell gained the overhang-budget law; call-site over=0 flush rim;
@@ -209,7 +209,20 @@ posts/pins texMat per struct-38; sha ce246def→750f82ee at the exact
 standing tuple, deck walk 5/5; v3 judged ZAI fallback — native re-judge
 owed when provider returns; sole disclosed residual: designed saddle-dip
 reveal ~0.1m at mid-span).
-Oldest OPEN uncontested rows after struct-40: row 23 mobius (Sev 3), row
+struct-41 = row 35 pendulum (EXECUTED, live — both Sev-4 findings root-
+caused to ONE number: rod cross-section 0.028m renders ~1px hairline
+strings at 18m and put the nine rod shadows at the raster floor;
+0.028→0.065 = solid-continuous strings (ZAI fallback judged, native 1210
+×2 disclosed — native before-frame judged natively earlier in-tick and
+confirmed the defect; fixed-bytes native re-judge owed) and shadow widths
+3.4→4.9px avg (+44%); decode falsified the "acne" premise — dash centers
+align EXACTLY with the nine rod x-positions (328/364/402/440/480/516/
+552/590/627), the band is nine discrete rod shadows at physically
+correct positions, not shadow-map dropout; envelope unchanged 8.295×
+3.585×2.732; sha 0a3120b2→c32a35a8 ×2 deterministic at the exact
+standing tuple, 1 verb, idempotent 0-verb rerun, circuit walk 5/5
+maxArrival 0.34m).
+Oldest OPEN uncontested rows after struct-41: row 23 mobius (Sev 3), row
 24 amphi (Sev 2-3), row 25 observatory (Sev 3), row 26 soundmirror (Sev
 3). Row 10 angler: in-flight sibling improve window (uncommitted draft +
 reviews/improve10-struct-angler/ 12:04) — do NOT touch until it lands or
@@ -258,6 +271,7 @@ the un-shard rule fires. Open with Bill: R2-3 relocation options
 | struct-38 | SHARD ROW 13: millrace material+identity fix | exact standing tuple (−37.59, −0.04526, −13.68) yaw −π/2 | — | — | LIVE, lib d2f46768→6e82dd2e, bank walk 5/5 |
 | struct-39 | SHARD ROW 14: spiralfolly honest-carriage rebuild | exact standing tuple (46.11, −0.0372, 33.50) yaw 0 | 0 | — | LIVE, lib 20c515a0→b85ce018, circuit walk 5/5 |
 | struct-40 | SHARD ROW 22: hypar flush-rim carriage fix | exact standing tuple (−27.57, −0.0053, 4.86) yaw π/2 | π/2 | — | LIVE, lib ce246def→750f82ee, deck walk 5/5 |
+| struct-41 | SHARD ROW 35: pendulum rod carriage fix | exact standing tuple (25.01, −0.04056606885178893, 25.9) yaw 0 | 0 | — | LIVE, lib 0a3120b2→c32a35a8, circuit walk 5/5 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
