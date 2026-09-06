@@ -26,7 +26,7 @@ Rotation: working edge outward from the E road, then craft edge.
 | 2 | `nx-town-stable` | livery | drawn horseshoe | DONE waysign-1 |
 | 3 | `nx-town-dyehouse` | dyer | dyed cloth bolt (flax-blue) | DONE waysign-2 |
 | 4 | `nx-town-kiln` | kiln | flame over chamber | DONE waysign-3 |
-| 5 | `nx-town-potter` | potter | wheel in profile | pending |
+| 5 | `nx-town-potter` | potter | wheel in profile | DONE waysign-4 |
 | 6 | woodyard host (id from census) | woodyard | saw-buck | pending |
 | 7 | `nx-town-windmill` (or nx-windmill) | mill | four-sail cross | pending |
 | 8 | `nx-town-forge` / `nx-forge` | smithy | hammer (heritage) | pending |
@@ -103,6 +103,27 @@ the census + decode are truth.
   −2.4785 (host-relative anchor [0, 2.45, 0.86] exact). Bill eye-check:
   from the E ring track, the flame-over-chamber board should read on the
   kiln's mouth face above the heat-contours band, straps hugging the drum.
+
+- waysign-4 `nx-sign-potter-001` potter: mkv3-sign-potter.ts,
+  deterministic ×2, sha bc05a4f316d96558…, 6 nodes, no comps no lights.
+  Host is an OPEN WORK STAND (no wall/eave) → PLANTED-POST open-yard
+  idiom: iron post, bracket arm plaza-ward, three-link chains, bone
+  board. Glyph took FIVE versions: v1 merged blob; v2 inverted
+  hierarchy; v3 "!" mark; v4 magnifying-glass; v5 ACCEPTED —
+  HORIZONTAL layout, lathe-profile terracotta pot (single silhouette,
+  heritage bakery-loaf law) beside a wheel RING (torus + proud hub;
+  reads as wheel by its hole); v6 = +15% scale + terracotta 0xb96a45.
+  zai-vision ACCEPT + 8m front-view gate PASS (native vision provider
+  down error 1210 FOURTH consecutive tick — fallback, recorded not
+  claimed native). SAT refusal caught the first siting INSIDE sibling
+  artwalk b3's ruled-porch pavilion (2D −2.005, post top into canopy)
+  — resited to host-local [1.5, 0, 3.1], between the pavilion's two +z
+  posts, outside its envelope; minGap +0.545 vs b3, PLACED_VERIFIED
+  1 verb, idempotent rerun zero verbs, live tuple [23.086, 0, 38.665]
+  yaw −2.5835 (host-relative anchor exact). Bill eye-check: walk the
+  plaza-to-craft edge — the pot + wheel board should read between the
+  porch posts at the stand's approach, terracotta pot distinct from
+  the dark wheel at 8m.
 
 ## Carried laws
 
