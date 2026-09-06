@@ -600,7 +600,7 @@ const out: Built[] = [];
     wallSpan(g, "wall_w", D - 2 * T, H, T, -(W / 2 - T / 2), FY, 0, "z");
     wallSpan(g, "wall_e", D - 2 * T, H, T, W / 2 - T / 2, FY, 0, "z");
     doorGapWall(g, "door_s", W, H, T, 0, FY, D / 2 - T / 2, "z", C.STONE, 1.8, 2.4); // wide, faces plaza
-    doorGapWall(g, "door_n", W, H, T, 0, FY, -(D / 2 - T / 2), "z", C.STONE, 1.6, 2.3); // flow-through
+    doorGapWall(g, "door_n", W, H, T, 0, FY, -(D / 2 - T / 2), "z", C.STONE, 1.4, 1.95); // flow-through
     // polish-269: the civic hall's two doors were raw holes — the only unframed
     // openings left in the village (loop #89 gave the tower the same fix). Bone
     // frames on both doors give the plaza-facing entrance its civic read.
@@ -608,10 +608,22 @@ const out: Built[] = [];
     // applied trim, not buried trim: first attempt centered them in the wall
     // thickness and the front render diff was 1 pixel — invisible.
     doorFrame(g, "door_s_frame", 0, FY + 1.2, D / 2 - T / 2 + 0.12, 1.8, 2.4, "z");
-    doorFrame(g, "door_n_frame", 0, FY + 1.15, -(D / 2 - T / 2) - 0.12, 1.6, 2.3, "z");
+    // improve-4 D1: the N gap narrows 1.6 -> 1.4 and drops 2.3 -> 1.95 so the
+    // far opening reads as a DOOR, not a sky-hole, through the S porch (the
+    // first candidate at 1.4x2.3 FAILED its falsification: level rays
+    // 1.6-2.5 still exited the gap — casing + sconces alone do not kill the
+    // rectangle). No aisle obstruction — MCPL walkTo is straight-line, a
+    // solid screen would false-pass probes while blocking avatars (align-3
+    // class); interior-1/-11 keep the door-to-door aisle law. Walking happens
+    // below 1.9m; the added wall is above avatar head.
+    doorFrame(g, "door_n_frame", 0, FY + 0.975, -(D / 2 - T / 2) - 0.12, 1.4, 1.95, "z");
     windowFrame(g, "win_w", -(W / 2 - T / 2), 1.9, 0, 0.8, 1.0, "x");
     windowFrame(g, "win_e", W / 2 - T / 2, 1.9, 0, 0.8, 1.0, "x");
-    gableRoof(g, "roof", W, D, 2.0, FY + H, 0.45);
+    // improve-4 D2/D3: hall opts into the kit fixes — solidRidge (D3: the
+    // 0.92-factor staggered cap read DASHED at 18m) and trueGableHalf = the
+    // roof's true depth half-extent d/2+over (D2: gable triangle was authored
+    // w/2 = 4.5 → 1.3m plaster horn past the roof plane each gable end).
+    gableRoof(g, "roof", W, D, 2.0, FY + H, 0.45, C.MID, true, D / 2 + 0.45);
     chimney(g, "chim", -2.2, 0, FY + H + 1.2, FY + H + 2.6);
     // FRONT PORCH on the plaza-facing door (beyond the 1.5m apron) — the
     // council's covered threshold
@@ -688,6 +700,27 @@ const out: Built[] = [];
         beam.position.set(0, FY + H + 0.05, bz3);
         g.add(beam);
     }
+    // ---- improve-4 D1 (execution): lit-doorway read replaces the sky-void
+    // read (polish-273/274 emissive law: faint same-hue warm emissives, no
+    // new light sources). All anchors KEEP-named (lamp/glow) so they survive
+    // mergeByMaterial as named nodes. Nothing enters the x=0 aisle.
+    // Deep timber header inside the N opening — visible recess depth so the
+    // far doorway reads as a cased door, not a cut hole. Gap top now 1.95;
+    // header spans 1.79-1.95 flush under the lintel.
+    box(g, "n_header", 1.7, 0.16, T + 0.10, 0, FY + 1.87, -(D / 2) + T / 2 + 0.05, C.DARK);
+    // Warm sconce glows flanking the N door, INSIDE (x = ±0.95, clear of the
+    // 1.4 opening at 0.7 half-gap), at the upper-door height
+    glow(g, "lamp_nsconce_l", -0.95, FY + 1.7, -(D / 2) + 0.45, 0xffc98a, 0.055);
+    glow(g, "lamp_nsconce_r", 0.95, FY + 1.7, -(D / 2) + 0.45, 0xffc98a, 0.055);
+    // Porch lamp over the S door: wall-mounted above the door frame (the
+    // classic lintel lamp). Two hanging-bead candidates under the porch roof
+    // proved occluded at grazing angles by the tilted porch slab (night view:
+    // invisible speck) — decode + night render both checked; the wall mount
+    // sits in the open recess sight line, below the inner slab (y≈2.7).
+    glow(g, "lamp_porch", 0, FY + 2.6, D / 2, 0xffd9a0, 0.07);
+    // Lantern glows flanking the S door outside (village glow pattern)
+    glow(g, "lamp_slant_l", -1.15, FY + 0.9, D / 2 + 0.35, 0xffc98a, 0.05);
+    glow(g, "lamp_slant_r", 1.15, FY + 0.9, D / 2 + 0.35, 0xffc98a, 0.05);
     mergeByMaterial(g, "hl3");
     out.push({ name: "village_hall3", g });
 }

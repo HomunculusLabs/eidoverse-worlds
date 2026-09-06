@@ -400,6 +400,45 @@ LIVE store copy, never a source rebuild).
   audit → renders → accept/revert → remove+spawn re-place → walk →
   ledger improve-4 + commit.
 
+- improve-5 (EXECUTION COMPLETE, queue item 1 `nx-town-hall`, closes the
+  improve-4 contract): candidate-1 (cased 1.4-wide N door + sconces +
+  header) FAILED its own falsification — the after-render still read the
+  sky rectangle (level eye rays 1.6–2.5m exit the gap regardless of
+  casing; casing + glows alone cannot kill the read). Candidate-2 (the
+  accepted build): N gap lowered 2.3→1.95m + deep timber header inside
+  the opening — the unframed sky rectangle is GONE; the residual
+  door-sized bright patch sits below the header, framed symmetrically by
+  the sconce glows, reading as a lit far doorway. ACCEPTED WITH
+  RESIDUAL: any occluder below 1.95m enters the walking band (avatar
+  body height; align-3 avatar-outranks-probe law, 1.4m door law) — a
+  fully dark porch read is physically incompatible with a walkable
+  opposing door on the same aisle. The residual goes to the round-1
+  eye-gate circuit for Bill's judgment; revert path: revert the three
+  mkv3-ring.ts hall edits, rebuild, hashes return to live pin 1306527a.
+  D2/D3 fixed via the committed kit opt-ins (solidRidge + trueGableHalf
+  d/2+over): gable horn eliminated (bbox z-extent 4.85→3.47), ridge
+  confirmed continuous, all 6 sibling GLBs byte-identical (default kit
+  path untouched). Warm light kit (5 KEEP-named lamp anchors): 2 N
+  sconces, wall-mount porch lamp (two hanging-bead candidates were
+  occluded by the tilted porch slab at grazing angle — night-probed,
+  node present but invisible, moved to the lintel position and
+  night-verified 5/5), 2 S lanterns. 23→28 nodes, bbox center z 0.177
+  unchanged (SAT-neutral re-place). Re-place remove+spawn at the exact
+  standing tuple (9, 0, −26) yaw −0.31322457341772525, lib
+  1306527a→c92c1f91, comp bag empty before and after, light companion
+  nx-town-hall-l untouched. Post-place tuple deep-verified; idempotent
+  rerun ALREADY_LIVE_NO_VERBS (zero verbs). Two-way 8-leg MCPL interior
+  walk ALL_PASS, max arrival 0.36m — the interior-1 aisle contract is
+  intact at exactly its historical value. ZAI fallback vision (native
+  down 16th consecutive tick, disclosed). Review evidence:
+  agents/arthur/reviews/improve4-hall/{before,after,after-v2,
+  after-final,after-final2}/. Placer:
+  agents/arthur/next-place-improve5-hall.ts (idempotent both ways).
+
+Next queue item (improve-6): `nx-struct-echoarch` (Sev 1, decode-first
+flag — arch span + one leg invisible; struct lane idle since Aug 31,
+idle-guard clear).
+
 ## Carried laws
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
