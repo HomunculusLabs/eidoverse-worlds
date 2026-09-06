@@ -167,10 +167,20 @@ const signKit = (glyph: (g: THREE.Group) => void) => {
     texBox(g, "sg_plate", 0.06, 0.3, 0.24, 0, 2.3, 0, ironTex);
     texBox(g, "sg_arm", 0.5, 0.06, 0.06, 0.26, 2.42, 0, ironTex);
     {
-        const brace = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.53, 0.05), ironTex);
+        // v3 (waysign-16, bakery v6 fix applied to the same chassis): the
+        // v2 brace was rotated ~85 deg off intent — long axis up-LEFT, BOTH
+        // ends in air (top tip (0.16,2.55) floating 0.10m above the arm,
+        // bottom tip (0.38,2.07) stabbing the board's top edge; never
+        // touched plate or arm). Caught on bakery's iso3 native view
+        // (waysign-15), math-verified at decode — the smithy v2 chassis
+        // was the clone source, so it carries the identical defect.
+        // Correct forged triangle: rooted on the plate face (0.03,2.20),
+        // rising under the arm mid-span (0.30,2.41) — clear of the link
+        // stack. Envelope y-max SHRINKS 2.561->2.45 (SAT-safe).
+        const brace = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.05, 0.05), ironTex);
         brace.name = "sg_brace";
-        brace.position.set(0.27, 2.31, 0);
-        brace.rotation.z = Math.atan2(0.22, 0.48);
+        brace.position.set(0.165, 2.305, 0);
+        brace.rotation.z = Math.atan2(0.21, 0.27);
         g.add(brace);
     }
     // hangers: two alternating chain links per side (dyer idiom, waysign-2)

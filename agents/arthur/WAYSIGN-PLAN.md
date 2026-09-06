@@ -235,7 +235,13 @@ glyph + bone lift), R2-7 DONE
 waysign-15 (bakery live 49342c52, v6: dominant dark-crust boule + v6
 brace fix). NEXT OPEN: none — R2 queue COMPLETE (7/7). Also queued (own
 domain): live smithy 62a8c7fc carries the same v2 floating brace —
-re-open next wakeup. Each item: full chassis — host anchor re-derived from
+DONE waysign-16 (smithy live 3522e5ab, bakery v6 brace applied to the
+clone-source chassis; decode-proven on live baseline, all-native battery,
+reseat PLACED_VERIFIED exact tuple). All waysign work complete: 8/8 hosts
+resolved round 1, R2 emblem-collapse 7/7, brace closure on both court
+signs. Lane HOLDS for Bill's verdicts / eye-gate circuit
+(`reviews/waysign-eye-gate.md`); any visual correction re-opens ahead of
+rotation. Each item: full chassis — host anchor re-derived from
 CURRENT tuple per host-rider law, rider-only SAT + exemption ladder,
 unlit by default, 8m gate. Native vision is primary judge; ZAI fallback
 only when native is down that tick, disclosed.
@@ -378,6 +384,39 @@ only when native is down that tick, disclosed.
   then write placer (chassis = waysign-place-* reseat: remove+spawn, comp
   {} both sides — live has no comps, idempotent rerun) and seat v5.
   Baseline bytes: reviews/waysign14-bakery/before/ (599194ee).
+
+- waysign-16 `nx-sign-smithy` v3 brace fix DONE (own-domain re-open from
+ waysign-15): live 62a8c7fc carried the identical v2 floating brace the
+ bakery iso3 native catch exposed (clone-source chassis, rotated ~85deg,
+ both ends in air). Defect decode-proven on the LIVE baseline bytes
+ (reviews/waysign16-smithy/before/, sgs_0 y-max 2.5613 = the floating
+ tip; local == live byte-identical confirmed pre-edit). Fix = bakery v6
+ geometry verbatim (0.34 brace, plate face (0.03,2.20) to arm underside,
+ closed forged triangle). sha 3522e5ab deterministic ×2, 4 nodes,
+ bakery/weaver/livery byte-identical through the rebuild (proven each
+ pass). Post-fix decode audit: envelope x/z byte-identical to live =
+ SAT-neutral; y-max SHRINKS 2.561→2.450; brace bottom end 0.0008 from
+ plate face inside the band, top end 19mm INTO the arm volume (attached
+ — the script's printed label was inverted; raw coords unambiguous).
+ Battery ALL NATIVE (one 1210 flap, retry ok — no fallback this tick):
+ iso3-tight triangle CLOSED both ends attached (the queue defect
+ itself); ensemble 10m 4/4 (mounted, glyph holds, bracket coherent);
+ 18m 3/3 (clean silhouette above the arm — the v2 defect zone); night
+ ensemble PASS both (bone board highest-value element, bracket attached
+ by silhouette continuity). Two findings DROPPED with controls:
+ suspension "floating rings" — law-5 bakery control judged IDENTICAL
+ (deliberate dyer-idiom 25mm air gaps; link_1 hooks the board edge
+ 32mm); night iso "floating plate" — polish-282 isolated-rider artifact
+ (rig has no wall by design; mount proven by ensemble + tuple gate).
+ Rig bug caught + fixed in-tick: unquoted hyphen key crashed the module;
+ night-state leaked into the ensemble pass (identical dark renders) —
+ both fixed, ensemble re-shot day. Reseat waysign-place-smithy-3.ts:
+ host truth fresh (court 59534b10 = live), pin gate 62a8c7fc at the
+ exact standing tuple, comp {} both sides, PLACED_VERIFIED 2 verbs
+ remove+spawn, idempotent zero-verb rerun. Bill eye-check: court east
+ end wall — up close the smithy bracket should now read a closed forged
+ triangle (plate + arm + brace), identical to the bakery's across the
+ court.
 
 - waysign-15 `nx-sign-bakery` R2-7 DONE (heritage emblem-collapse fix +
   construction defect caught and fixed in-tick): v5 a8fd49bc re-proven
