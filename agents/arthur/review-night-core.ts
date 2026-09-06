@@ -38,7 +38,7 @@ const specs=[
  ["nx-town-tower-house","village_tower_house.glb",ASSETS,"11b31000ff639083",-9.0,0.0,26.0,2.828368],
  ["nx-town-bunkhouse","village_bunkhouse.glb",ASSETS,"c8636968968672af",-9.0,0.0,-26.0,0.313225],
  ["nx-town-row-cottage","village_row3.glb",ASSETS,"bd88cd386aec2a89",-23.0,0.0,-17.0,0.941151],
- ["nx-town-garden-cottage","village_garden_cottage.glb",ASSETS,"872aec35e3aa43b3",-26.0,0.000949,19.0,2.200442],
+ ["nx-town-garden-cottage","village_garden_cottage.glb",ASSETS,"cee52aca03429a62",-26.0,0.000949,19.0,2.200442], // night-47: re-pinned 872aec35→cee52aca (improve-16 sibling re-place; local file hash == live lib verified, pose exact)
  ["nx-town-woodyard","woodyard.glb",STORE,"80c2e14291308533",16.0,0.0,31.0,-2.669815],
  ["nx-town-dyehouse","village_dyehouse3.glb",ASSETS,"888be3597d2f772f",-23.0,0.0,-23.0,0.941],
  ["nx-town-shrine","village_shrine3.glb",ASSETS,"948d5c494252078b",-25.0,-0.001261,-4.0,1.411812],

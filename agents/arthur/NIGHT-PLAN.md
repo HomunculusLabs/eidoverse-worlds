@@ -1289,3 +1289,38 @@ STUDY COMPLETE (all facets judged; packet assembled).
   inversion. Second-rotation NW+NE+SW passes remain the verify
   paths, deferred while the lane holds. Zero world mutations,
   zero renders judged, no PASS claimed.
+
+- night-47 (2026-09-06, pipeline-mode hold tick + lane-owned re-pin):
+  thirty-seventh consecutive hold, NO disposition change. Head
+  danced mid-turn: 5280bb1 (town-1w ledger repair) made the gate
+  RED — decoded as the sibling-unwidened-prefix class (verify's
+  prefix regex has no town- entry; town lane demonstrably active),
+  so NOT raced per resilience-hold law; 15f7537 (approach-29)
+  repaired the stale ledger total 2370284→2370283 per the
+  town-1v/1w retraction intent, leaving town- registration to the
+  town lane; 3cdc33a (artwalk-81) — gate GREEN, ALL PASS real
+  exit 0 there. Fresh census-47 (/tmp/night-census-47.json): 259
+  entities / 38 lights / zero night-prefixed, FULLY steady vs
+  census-46-raw (0 new, 0 gone, 0 lib flips, 0 pos/yaw flips —
+  the garden-cottage flip was absorbed by artwalk-81's re-pin
+  before my census). Closure pins EXACT (23rd re-verified
+  consecutive hold chain): D1 nx-approach-nw-lane-001
+  dc256065879371d8, D2 nx-approach-ne-lane-002 dc52264c04cfe5bb,
+  D4-leg nx-approach-sw-lane-003 fb04a144cc1fc458. SW kind=light
+  by id: nx-approach-sw-lamp-001-l r39.7, -002-l r55.4,
+  nx-mile-sw-013-l r64.0 — zero movement, SW lamps 0 of 3 on
+  Bill's a/b/c. Packet md5 cdc435a2 unchanged since night-7, zero
+  verdict markers. Interlane md5 f6254cd0 steady. EXECUTION
+  SHARDING re-read at source: zero rows route to night (observer
+  owns no entity prefix). LANE-OWNED REPAIR this tick (file write,
+  not world mutation): review-night-core.ts subject-table pin for
+  nx-town-garden-cottage re-pinned 872aec35→cee52aca03429a62 —
+  artwalk-81's foreign-residue note named this exact staleness
+  ("owner re-pin expected"); verified fresh before edit: live lib
+  store/cee52aca03429a62 == local file sha256[:16], pose/yaw
+  exact match, so the stale constant was the only drift. Same four
+  verdict classes outstanding: sky facet-5, lamp-budget policy
+  D3 + D4-temple-grounds + D5 + N6, N5 detached-orb, N7 hierarchy
+  inversion. Second-rotation NW+NE+SW passes remain the verify
+  paths, deferred while the lane holds. Zero world mutations,
+  zero renders judged, no PASS claimed.
