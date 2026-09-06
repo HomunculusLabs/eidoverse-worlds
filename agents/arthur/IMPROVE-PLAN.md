@@ -760,6 +760,81 @@ Next queue item (improve-9): `nx-town-tower-house` (Sev 1–2 — stilts
 from pure-black underside, balcony door ~4m with no stair, broken
 railing; guard: none).
 
+- improve-9 (EXECUTION, queue item 6 `nx-town-tower-house`): contract
+  committed BEFORE editing. Idle-guard clear (rider b21 placed by
+  artwalk 2026-08-31 >24h; tex-78 interiors Aug 17; no lane commit
+  touches this entity in 24h). Live tuple (−9,0,26) yaw 2.828368080172068,
+  lib bd1badd218 == local build ×2 deterministic (no disputed bytes).
+  Comp bag {} (census-fresh); light companion nx-town-tower-house-l at
+  host-local (0,2.1,0.4) inside drum, untouched. Rider
+  nx-artwalk-b21-tower-ascension-count at host-local (0,2.22..2.68,
+  r≈2.83, front θ=0±16°) — KEEP-OUT ZONE: no new geometry at
+  θ∈[−18°,+18°], y<2.7, r∈[2.5,2.95].
+  Native re-judgment FIRST (improve-5v law; one 1210 paced-retry
+  recovered — native judgment, disclosed): all three improve-1 findings
+  CONFIRMED + mechanisms decoded:
+  - D1 "stilts from pure-black underside" → mechanism: open door-arc
+    (±18°) shows unlit interior + hairline ladder rungs (r 0.025);
+    deck reads paper-thin (0.1m bare cylinder slab, zero
+    brackets/fascia). Night view: building contributes NO light.
+  - D2 "balcony door no stair" → mechanism: the "door" is the rigid
+    banner slab (0.6×0.9×0.03 flat box at y 2.65..3.55, z R+0.68) —
+    polish-273 cloth-law violation, reads as frameless door decal onto
+    an unreachable deck; drum has NO upper opening and NO access.
+  - D3 "broken railing" → mechanism by decode: deck spans θ∈[−60°,+120°]
+    (cylinder convention x=sinθ,z=cosθ — front-centered) but rail posts
+    at (cos a, sin a)·(R+0.65) span a∈[−60°,+60°] — centered on +X,
+    ~60° AWAY from the deck center arc. Front/left deck bare, ragged
+    uncapped ends; comment promises a top rail the code never draws.
+  FIX (all in mkvillage-houses.ts towerHouse(), no housekit change):
+  - D3: railing rebuilt in the DECK's convention — 13 posts θ −60..+120
+    step 15° at r 3.25 y 3.05..3.95 (0.07 sq) + top rail ring (12 segs,
+    watchtower brail idiom, y 3.9) + mid rail y 3.5.
+  - D1a: 7 corbel arms under the deck (Box 0.12×0.22×0.8 at r 2.92,
+    y 2.83, rotation.y=θ, θ −52.5..+112.5 step 22.5 SKIPPING θ=0 —
+    b21 keep-out), STONE mat (merges with walls).
+  - D1b: fascia band under deck edge (open cylinder r=R+0.7=3.3,
+    h 0.24, y 2.88..3.12, same arc params as deck, MID mat) — kills
+    paper-thin read, caps both ragged ends.
+  - D1c: night/life — tw_flame and new study-desk candle flame get the
+    proven emissive recipe (color 0xffc98a, emissive 0xffa45f,
+    intensity 1.25 — mkatmos/windowFrame lit-pane law); study candle on
+    the desk (visible through door bay → warm read replaces void).
+  - D2a: banner replaced per polish-273 — swallowtail pennant
+    (ShapeGeometry V-notch 0.22 in free edge, DoubleSide, rust
+    0xa06c32), hoist bar at rail y 3.88, hangs OUTSIDE deck edge z 3.31
+    (clear of b21 — new cloth y 2.91..3.86 all above rider top 2.68).
+  - D2b: real balcony door on the drum above the deck — doorFrame
+    (0.95×1.25, y 3.0..4.25, front) + timber slab 0x5c4a30 + brass
+    handle dot (front θ=0 has no window — clean wall zone).
+  - D2c: exterior ladder at the deck's θ=−60° end (front-left, plaza-
+    visible): 2 stringers 0.09 sq × 3.35 + 9 rungs, raked ~10° leaning
+    to the fascia top, base under the deck overhang at r 2.75 — entire
+    ladder inside existing bbox (SAT-neutral same-tuple re-place).
+  Falsification: (1) after gameplay@18m: continuous railing full-arc
+  both ends, no bare third; (2) right/front views: corbels visible
+  under deck, fascia edge thickness (no paper read); (3) banner reads
+  hanging cloth with V-notch (not door slab); (4) timber door reads on
+  drum above deck; (5) ladder reads as access; (6) night: warm points
+  in door bay + bedchamber flame; (7) decode: b21 keep-out zone clean;
+  (8) bbox unchanged ±3.3/8.3, siblings (longhouse/garden/row) byte-
+  identical; (9) two-way MCPL door walk ALL_PASS.
+  Revert: revert towerHouse() edits → rebuild returns bd1badd218.
+
+  improve-9 STATUS (this tick, run-budget close): source edits LANDED
+  (rail arc fix, corbels, fascia, pennant, balcony door, ladder,
+  emissive flames) — build succeeds, 24 nodes, sha 34fb63fd…, all 3
+  siblings byte-identical (872aec35/b4ac2df4/30bc8ec3). EXECUTION
+  REMAINS: rebuild ×2 determinism, decode audit (b21 keep-out clean,
+  bbox ±3.3/8.3), before/after renders + native judge, remove+spawn
+  re-place at exact tuple, MCPL walk, PLACED_VERIFIED + idempotent
+  rerun. No world mutation yet — improve-4 contract-tick precedent.
+
+Next queue item (improve-10): FINISH improve-9 execution (above), then
+queue item 7 `nx-sign-*` packet stays waysign's; next eligible:
+`nx-town-stable` (Sev 2, guard none).
+
+
 ## Carried laws
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
