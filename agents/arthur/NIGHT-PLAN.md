@@ -118,7 +118,7 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 | night-2/N3 | DRESSING-PLAN lamp-budget table rows (NE=2, SE=0) contradict the census light count (NE=10, SE=9 at r≥35 — night-1 note says SE=8; +1 is sibling work) | 3 | dress-N | DRESSING-PLAN `### night-2 defect note` | CLOSED 2026-09-06 by dress-3 (owning lane): table recounted per the plan's own token-anchor rule → NW 2 / NE 10 / SE 8 / SW 3 (DRESSING-PLAN lamp-budget header, "closing night-2/N3"); night-7 later pinned the token-vs-kind=light law. Register row reconciled at night-8 |
 | night-3/D3 | SE corridor az315 ZERO lamps; path fades to black within a third of frame; last-stone→wild-margin link implied but unlit | 3 | approach-N | APPROACH-PLAN `### night-3 defect note` | OPEN, budget-bound (SE budget 8/8 spent on interior anchors) |
 | night-3/N4 | pavilion lamps read as detached points not fixtures (no ground pool/spill); one bare-emissive globe with no visible mount | 4 (informational) | approach-N (contract is live-client) | same note | noted; final packet question |
-| night-4/D4 | SW corridor dead stretches: gate-edge(~r20)→lamp-001(r39.7) ~20m unlit, lamp-001→002 15.8m, lamp-002(r55.4)→gravel gate(r74.7) ~19m; then the ENTIRE temple grounds (terraces/seeds/labyrinths, r71–98) carry ZERO lights of any kind — worst-in-class dead district after dark | 2 | approach-N | APPROACH-PLAN `### night-4 defect note` | OPEN, budget-bound (SW budget 3 per table; live in-quadrant count = 2 — table's third 'inn' anchor sits core-side, outside the r≥35 rule; census note recorded) |
+| night-4/D4 | SW corridor dead stretches: gate-edge(~r20)→lamp-001(r39.7) ~20m unlit, lamp-001→002 15.8m, lamp-002(r55.4)→gravel gate(r74.7) ~19m; then the ENTIRE temple grounds (terraces/seeds/labyrinths, r71–98) carry ZERO lights of any kind — worst-in-class dead district after dark | 2 | approach-N | APPROACH-PLAN `### night-4 defect note` | SPLIT-CLOSED 2026-09-06 by approach-13 (owning lane, commit 86f19c6): the finding's own text splits in two — LEG-DEAD-STRETCH component CLOSED in-budget on the approach-6/7 path (zero new light entities, kind=light 38 steady; 5 bone pillars ~9.2m alternating, each capped with one faint warm emissive bead, intensity 1.15, polish-274/278 moonlit law, beads r28.6→r65.5 covering all three leg dead stretches, max warm-point gap 9.3m over the 47m walk); live lib `fb04a144cc1fc458` on `nx-approach-sw-lane-003` confirmed in census-34b. Owning-lane night judgment NATIVE this time (approach-13, with probe-law-5 control); observer lane has NOT re-judged the live night read — no visual PASS claimed here; second-rotation SW pass is the verify path (joins NW/NE). TEMPLE-GROUNDS component (r71–98, zero lights of any kind) REMAINS OPEN, Bill-bound — needs SW lamp budget (0-of-3 on the a/b/c call; in-quadrant kind=light r≥35 census-verified again at night-34: 2 approach leg lamps + 1 mile lantern, zero movement) |
 | night-4/N5 | detached-orb lamp class now census-corroborated: SW + NW leg lamps are light-kind entities with NO fixture model entity in the world — judges in all four districts read them as floating orbs; whether the live client renders a post for kind=light is UNVERIFIED (rig bead stands in for the head, disclosed) | 3 (informational→design) | approach-N (contract is live-client) | same note | noted; final packet question + client-contract check |
 | night-5/D5 | CORE gate-to-plaza middle third (gate lamps r10 → plaza ring) carries ZERO active lights on all four spokes — path read by paver albedo only; off-axis approach loses the line entirely (judged in road-e-long, gate-inbound-n, plaza-eye) | 2 | approach-N | APPROACH-PLAN `### night-5 defect note` | OPEN, budget-bound (core approach budget spent on the four gate lamp pairs; closing needs Bill or budget policy) |
 | night-5/N6 | plaza night rhythm relies on a SINGLE central source (nx-plaza-l): hearth fire + emissive pool within range 10, but plaza-edge benches/stones/paving read gray — plaza reads destination without lit STREET level; plus mapboard (a wayfinding object on the N spoke) is an unlit black slab at night | 3 | approach-N (light placement) + plaza lane question | APPROACH-PLAN note | OPEN, informational→design |
@@ -712,8 +712,8 @@ STUDY COMPLETE (all facets judged; packet assembled).
   re-read: SW lamps still 0 of 3, blocked on Bill a/b/c. Lane HOLDS on
   Bill's verdict classes, now: sky facet-5, lamp-budget policy D3–D5+N6
   (D1+D2 closed), N5 detached-orb, N7 hierarchy inversion. Second-
-  rotation NW+NE passes remain the D1/D2 verify paths, deferred while
-  the lane holds. Zero world mutations, zero renders judged, no PASS
+  NW+NE passes remain the D1/D2 verify paths, deferred while the
+  lane holds. Zero world mutations, zero renders judged, no PASS
   claimed.
 - night-27 (2026-09-06, pipeline-mode hold tick): nineteenth consecutive
   hold with NO disposition change. Standing gate ALL PASS real exit 0 at
@@ -898,3 +898,55 @@ STUDY COMPLETE (all facets judged; packet assembled).
   closed), N5 detached-orb, N7 hierarchy inversion. Second-rotation
   NW+NE passes remain the D1/D2 verify paths, deferred while the lane
   holds. Zero world mutations, zero renders judged, no PASS claimed.
+- night-34 (2026-09-06, pipeline-mode hold tick + register reconciliation
+  — third disposition change, night-14/night-26 class): **night-4/D4
+  flipped OPEN→SPLIT-CLOSED.** The owning approach lane's approach-13
+  (commit 86f19c6, landed mid-survey and absorbed by the gate) closed
+  D4's LEG-DEAD-STRETCH component on the same in-budget path as
+  approach-6/7's D1/D2 closures: zero new light entities (kind=light 38
+  steady), 5 bone pillars (~9.2m alternating) each capped with one faint
+  warm emissive bead (intensity 1.15, polish-274/278 moonlit law), beads
+  world r28.6→r65.5 covering all three leg dead stretches; owning-lane
+  night judgment was NATIVE this time (with probe-law-5 control vs the
+  accepted NW sibling). Verified fresh this tick: APPROACH-PLAN
+  §approach-13 at HEAD; live lib `fb04a144cc1fc458` on
+  `nx-approach-sw-lane-003` in census-34b; SW quadrant kind=light r≥35
+  census re-verified = 2 approach leg lamps + 1 mile lantern (zero
+  budget movement). Observer lane claims no visual PASS and has NOT
+  re-judged the live night read — second-rotation SW pass joins NW/NE
+  as the verify paths. D4's TEMPLE-GROUNDS component (r71–98, zero
+  lights of any kind) REMAINS OPEN, Bill-bound on the SW lamp a/b/c
+  policy (0-of-3). PACKET STALENESS DISCLOSED (extends night-14/26's):
+  the packet (md5 cdc435a2, unchanged, assembled-exactly-once law) asks
+  Bill to rule on D1–D4 all-OPEN; D1+D2 closed and D4 leg-closed —
+  Bill's lamp-budget ruling now needed for D3, D4-temple-grounds, D5.
+  Standing gate ALL PASS real exit 0 at HEAD 8566495 (absorbing 86f19c6
+  approach-13 + dress-22 hold mid-survey; register 0 OPEN at gate time).
+  Census-34b (own fetch via curl — see stacked-window note below): 259
+  entities / 38 lights / zero night-prefixed, 0 new / 0 gone vs
+  census-33 with exactly THREE domain-valid sibling lib changes at
+  identical tuples — nx-approach-sw-lane-003 43817a4f→fb04a144
+  (approach-13, the D4 closure), nx-dress-nw-hedge-001
+  a80e9121→3d5c7d44 (dress-21 shard execution, committed b5bd952),
+  nx-struct-pendulum 0a3120b2→c32a35a8 (struct-41, committed 94bd0a3) —
+  all kind=thing, zero lights touched; grep-verified no register finding
+  or packet citation rests on the hedge or pendulum. D1 pin
+  dc256065879371d8 AND D2 pin dc52264c04cfe5bb both exact — NINTH
+  consecutive both-pins-steady tick. Packet md5 cdc435a2 unchanged
+  since night-7, zero verdict markers. Interlane md5 f6254cd0 steady.
+  Zero actionable night- shard rows in IMPROVE-PLAN (night- is an
+  observer). DRESSING-PLAN lamp ledger re-read: SW lamps still 0 of 3,
+  blocked on Bill a/b/c. STACKED-WINDOW NOTE (surfaced once,
+  night-12/duplicate-instance class): /tmp/night-census-34.json
+  appeared at 15:43 with fresh world state BEFORE this window's own
+  fetch (my urllib probe 403'd on UA and never wrote) — a second night
+  window is cycling this lane concurrently; ledger max re-derived AFTER
+  that capture still shows night-33, so this tick's night-34 tag is
+  collision-free as appended, and the sibling window should derive its
+  own tag fresh from the ledger max (expect night-35). Recommend
+  running ONE instance. Lane HOLDS on Bill's verdict classes, now: sky
+  facet-5, lamp-budget policy D3 + D4-temple-grounds + D5 + N6 (D1+D2
+  closed, D4 leg-closed), N5 detached-orb, N7 hierarchy inversion.
+  Second-rotation NW+NE+SW passes remain the verify paths, deferred
+  while the lane holds. Zero world mutations, zero renders judged, no
+  PASS claimed.
