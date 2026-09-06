@@ -28,7 +28,21 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 || sweep-19 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-18 snapshot — eighth fully quiet delta of the wave; snapshot byte-identical, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs; NW + NE + SW approach legs) + tier-2 hall + row-cottage ALL PASS (fifth cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 standing + 36 -l lights (38 lights live), woodyard 1f2c6f592095b204 exact, ledger law exact (2370204), interlane md5 f7865b648dfa9dc4 stable, standing gate real exit 0 at HEAD 825a844 | CLEAN SWEEP |
 | sweep-8 | 2026-09-06 | 251→256 (+5 domain-valid across two post-arrival checks: dress-7 SE cairn nx-dress-se-cairn-001 @ (58.70,0.0076,-58.70) yaw -0.785 lib bc601ed2, tuple matches e1d7968 exactly; mile-7 SW pair nx-mile-sw-013/-014 @ (-36.91,-0.042,-52.34)/(-40.57,-0.0499,-49.55) shared lib 052120d7 + LIT lamp nx-mile-sw-013-l; dress-8 SW prayer stones nx-dress-sw-prayer-001 @ (-52.26,-0.032,-64.53) yaw 2.221 lib 5074600f, landed mid-tick and verified post-arrival — SAT re-run clean; 0 departures, 0 drift on 251 shared ids; 38 lights live) | ALL CLEAR at 256 (218 bbox non-light ents, 227 classified, 0 unclassified — one new NAMED exemption class added: nx-dress-se-cairn-001\|nx-wild-forest-0044, source-true occupancy decode re-run, live lib 43e4c8c3 == decoded bytes, effective clearance 2.58m ≥ 1.4m pinch law, see findings) | tier-1 4/4 ALL PASS (core 0.38; NW 0.38 / NE 0.38 / SW 0.37) + tier-2 potter 0.366 + market 0.389 ALL PASS | pins 15/15 ALL_PINS_OK (bad: []), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps + 4 -l lights standing (38 lights live), woodyard 1f2c6f592095b204 exact, ledger law exact (2370196 at entry), interlane md5 f7865b648dfa9dc4 stable, standing gate exit 0 | CLEAN SWEEP |
 
+| sweep-20 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-19 snapshot — ninth fully quiet delta of the wave; snapshot byte-identical 71867B, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs; NW + NE + SW approach legs) + tier-2 potter + market ALL PASS (fifth cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 + -l lights standing (38 lights live), woodyard 1f2c6f592095b204 exact, ledger law exact (2370207), interlane md5 1b933f3454e52504 NEW BASELINE (nvp-150 widen-only diff verified line-by-line), standing gate real exit 0 at HEAD bc843e5 | CLEAN SWEEP |
+
 ## Findings register
+
+sweep-20: none. Steady-state census (259==259 vs the committed sweep-19
+snapshot — 0 arrivals, 0 departures, 0 drift on all shared ids; ninth
+fully quiet delta of the wave; no sibling lane has landed since dress-11).
+One protocol observation, not a finding: INTERLANE-PROTOCOL.md md5 changed
+f7865b648dfa9dc4 → 1b933f3454e52504 via sibling commit nvp-150 (HEAD
+bc843e5); the diff was read line-by-line and is exactly the improve-N
+lane-domain widening (5 lines) — no rule change touching this lane. New
+md5 baseline recorded in the integrity pins section. All four phases
+verified fresh this wakeup with zero failing checks (tier-2 fifth cycle:
+potter + market walked ALL PASS). No defect notes written. Next tier-2
+pair (sweep-21): inn + stable (fifth cycle).
 
 sweep-1: none. All 89 raw overlap hits classified into standing classes with
 named precedent (below). No defect notes written to any owning lane.
@@ -204,7 +218,9 @@ tier-2 leg is never claimed without its run that wakeup.
 - woodyard: nx-town-woodyard lib 1f2c6f592095b204 (deterministic pin).
 - standing gate: bun agents/arthur/verify-repairs.ts real exit 0.
 - ledger law EXACT; interlane md5 baseline
-  f7865b648dfa9dc4681876fd6855b5c2 (INTERLANE-PROTOCOL.md @ 0b860e4).
+  1b933f3454e52504d89ff0c167c4e7dc (INTERLANE-PROTOCOL.md @ bc843e5;
+  prior baseline f7865b648dfa9dc4 @ 0b860e4 — sweep-20 verified the
+  nvp-150 widen-only diff line-by-line before adopting).
 
 ## Census snapshot discipline
 

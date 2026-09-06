@@ -3897,4 +3897,6 @@ fixes ≈ 6 F.)
 
 - [nvp-150] improve-N lane opened — the refinement era: additive build-out closed (sweep-19 CLEAN, 259 entities), this lane takes one queued object per wakeup through analyze→evaluate→plan→execute with round structure (analysis ticks → ranked worst-first queue → executions → eye-gate); gate + interlane widened (improve- prefix) (D+2, E+1)
 
+- [sweep-20] full audit sweep at 259 live entities — CLEAN steady-state; census 259==259 vs sweep-19 snapshot (ninth fully quiet delta of the wave, snapshot byte-identical 71867B, 0 arrivals/departures/drift on all shared ids), overlap ALL CLEAR (221 bbox non-light, 229 classified, 0 unclassified), walks tier-1 4/4 (core 64 legs ALL_PASS; NW / NE / SW approach legs ALL_PASS) + tier-2 potter + market fifth cycle ALL PASS, pins 15/15 ALL_PINS_OK, carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 standing + -l lights (38 lights live), woodyard pin 1f2c6f592095b204 exact, interlane md5 1b933f3454e52504 (new baseline — nvp-150 widen-only diff verified), standing gate real exit 0 at HEAD bc843e5; zero findings, zero defect notes, zero world mutations (D+0, E+0)
+
 **Running total: 2370207 / 2000000**
