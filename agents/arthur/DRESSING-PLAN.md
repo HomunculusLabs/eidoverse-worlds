@@ -289,6 +289,31 @@ f6254cd0 unchanged; foreign mid-tick IMPROVE-PLAN edit (improve-15
 row-cottage contract) left unstaged. Zero world mutations, zero
 uploads, zero shared-budget use.
 
+**STATE AT dress-28 (2026-09-06, pipeline hold tick — 7th consecutive)**:
+lawful HOLD — every path closed this tick. Shard queue re-verified EMPTY
+at source by full-row read (my first 400-char row-regex showed row 37
+"OPEN?" only because its `[EXECUTED dress-20: …]` annotation sits past
+the capture window — reading the source region resolved it TERMINAL):
+all nine `nx-dress-*` rows terminal (5/29/30/31 DROPPED native rejudge;
+32/33/34/37/38 EXECUTED reseats); the NEW survey-8 slice routes outside
+the prefix (cistern/court/garden-0011/fountain/forge/shutters/
+temple-seed/streetlamps/wayside — zero district dressing). Own queue:
+SW lamps only, still blocked on Bill's a/b/c budget policy (0 of 3
+used); zero Bill verdict markers in ledger tail; SURVEY INTAKE
+unchanged (survey-6 consumed by dress-21). Hold verification: standing
+gate ALL PASS real exit 0 at HEAD 407da03 (absorbing improve-15,
+night-37, approach-18); fresh live census 259, ALL ELEVEN district
+installations PIN_EXACT lib+tuple+yaw — including ne-yard at its TRUE
+dress-2 tuple (55.91, −0.034, 87.10) yaw 147.3°/2.5709 rad, lib
+191227da; this tick's probe initially read it DRIFT only because it
+carried the ne-BENCH tuple into the ne-yard row — probe error, world
+correct, resolved against the dress-2 siting log). SW lamp budget
+re-reconciled fresh: 2 approach leg lamps + 1 boundary light
+(nx-town-inn-l at r=36.0 on the axis line; night-37's mile-lantern
+convention same count) = 3, dress spend 0. 16 legacy core `nx-dress-*`
+untouched; interlane md5 f6254cd0 unchanged. Zero world mutations,
+zero uploads, zero shared-budget use.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
