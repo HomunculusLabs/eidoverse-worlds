@@ -981,3 +981,37 @@ STUDY COMPLETE (all facets judged; packet assembled).
   passes remain the D1/D2/D4-leg verify paths, deferred while the
   lane holds. Zero world mutations, zero renders judged, no PASS
   claimed.
+
+- night-36 (2026-09-06, pipeline-mode hold tick + rig pin-table
+  reconciliation — lane-owned evidence repair): `review-night-core.ts`
+  working-tree refresh verified pin-by-pin against fresh census-36
+  before committing. 13 stale lib pins re-pinned EXACT vs live
+  (sign-bakery 49342c52, sign-smithy 3522e5ab, town-hall c92c1f91,
+  tower-house 11b31000, bunkhouse c8636968, shrine 948d5c49,
+  struct-hypar 750f82ee, struct-crossing 216c4bd4, nw-lane
+  dc2560658, ne-lane dc52264c0, sw-lane fb04a144, sign-dyer
+  8ce2081f, sign-woodyard f46e12ae — all kind=thing sibling reseats,
+  each ledger-matched to its owning lane's commit). Residual probe
+  flag resolved: woodyard STORE pin 80c2e142 is at-rest-scope-CORRECT
+  (documented night-2/tex-85 note: draco+webp-optimized store bytes
+  differ from lib token 1f2c6f59 by design; the rig gate hashes the
+  bytes actually rendered). Closes the artwalk-67 foreign-dirt report
+  naming this file. Standing gate ALL PASS real exit 0, absorbing one
+  sibling HEAD advance mid-survey (0fd880a approach-17 zero-mutation
+  hold). Fresh census-36: 259 entities / 38 lights / zero
+  night-prefixed, FULLY steady vs census-35 (capture
+  /tmp/night-census-36.json). D1 pin nx-approach-nw-lane-001
+  dc256065879371d8, D2 pin nx-approach-ne-lane-002 dc52264c04cfe5bb,
+  D4-leg pin nx-approach-sw-lane-003 fb04a144cc1fc458 — all THREE
+  exact (ELEVENTH consecutive all-pins-steady tick). SW quadrant
+  kind=light r≥35 census-verified: 2 approach leg lamps + 1 mile
+  lantern — zero budget movement, SW lamps still 0 of 3 on Bill's
+  a/b/c. Packet md5 cdc435a2 unchanged since night-7, zero verdict
+  markers; interlane md5 f6254cd0 steady. Zero actionable night-
+  shard rows in IMPROVE-PLAN (night- is an observer; working-tree
+  IMPROVE-PLAN diff = approach-lane rows only). Same four verdict
+  classes outstanding: sky facet-5, lamp-budget policy D3 +
+  D4-temple-grounds + D5 + N6 (D1+D2 closed, D4 leg-closed), N5
+  detached-orb, N7 hierarchy inversion. Second-rotation NW+NE+SW
+  passes remain the verify paths, deferred while the lane holds.
+  Zero world mutations, zero renders judged, no PASS claimed.
