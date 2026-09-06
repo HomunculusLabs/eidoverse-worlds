@@ -296,6 +296,16 @@ rotation: NE woodstack, NW log pile/stile — both go even if SW lamps hold)
   "path continues" (not rubble, not a duplicate of the big cairnfield art
   works to the sides). If the upper stack reads post-like/slender at an
   angle, it thickens in one pass.
+- **sweep-8 defect note (severity-3, doc-only)**: the siting prose above
+  cites "source-true cell clearance 3.37m" — that figure is the R83
+  OFF-1.1 candidate row. The PLACED tuple (58.70, −58.70) is R83 OFF0,
+  which decodes to **2.58m effective cell clearance** (already minus the
+  0.9m cairn radius; `dress7-forest44-occupancy.ts` re-run by sweep-8
+  against live lib sha 43e4c8c3a843881d, verified == live). 2.58m ≥ 1.4m
+  pinch law, so the siting is LAWFUL — but this plan's clearance figure
+  should be corrected to 2.58m when the dress lane next edits this entry,
+  so future reuse of the pose doesn't overstate margin. No world defect;
+  no action needed before Bill's eye-check.
 
 - dress-6: BUILT + PLACED + VERIFIED (2026-09-06 overnight fleet wave).
   Entry covers the four-version iteration (bench-2 parallelization, support

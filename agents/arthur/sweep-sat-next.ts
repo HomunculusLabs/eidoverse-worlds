@@ -40,6 +40,14 @@ const ALLOWED = new Set<string>([
                                    //   hearth compound bbox wraps the corner
   "nx-town-monument|nx-welcome",  // R-114 idiom carried to commons-next:
                                    //   welcome arm points at monument; bbox kiss
+  // sweep-8: dress-7 cairn past forest-0044's fat compound bbox — same class
+  // as hearth|struct-crossing. Source-true walking-band occupancy decode of
+  // the LIVE lib (sha 43e4c8c3a843881d verified == live, dress7-forest44-
+  // occupancy.ts, re-run sweep-8): cairn center R83 OFF0 cell-clearance
+  // 2.58m MINUS cairn radius already applied => 2.58m effective >= 1.4m pinch
+  // law. SAT gap -0.105 is dead bbox corner, no solid contact. NAMED
+  // exemption also carried in se-dress7-place.ts placer header.
+  "nx-dress-se-cairn-001|nx-wild-forest-0044",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });
