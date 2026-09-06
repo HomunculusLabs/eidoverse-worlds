@@ -29,7 +29,7 @@ Rotation: working edge outward from the E road, then craft edge.
 | 5 | `nx-town-potter` | potter | wheel in profile | DONE waysign-4 |
 | 6 | woodyard host (id from census) | woodyard | saw-buck | DONE waysign-5 (`nx-town-woodyard`) |
 | 7 | `nx-town-windmill` (or nx-windmill) | mill | four-sail cross | DONE waysign-6 |
-| 8 | `nx-town-forge` / `nx-forge` | smithy | hammer (heritage) | pending |
+| 8 | `nx-town-forge` / `nx-forge` | smithy | hammer (heritage) | CLOSED waysign-7 — census reconciliation: host lives as `nx-forge` and is ALREADY SIGNED by the standing heritage entity `nx-sign-smithy` (refine-276 iron idiom, viz-11 vision PASS hash-bound, polish-279 survey "bakery and smithy clean"; waysign-1's ledger had already recorded "forge already signed"). No duplicate sign — domain law forbids idiom duplication (inn precedent). |
 
 Every host's road-facing face is confirmed in the host build-source decode
 before the anchor is chosen — the roster above is expectation, not truth;
@@ -72,6 +72,16 @@ the census + decode are truth.
   under the rceil front edge, board proud of the wall face z 2.4.
 
 ## Siting + build log (filled per sign)
+
+- waysign-7 QUEUE CLOSURE (no build, no live mutation): item 8 reconciled
+  against the fresh 251-entity census — the forge host (`nx-forge`, lib
+  620120c4d6f0b4a0) already carries the standing heritage hammer sign
+  `nx-sign-smithy` (d8df94003084af39, viz-11 PASS, polish-279 clean), same
+  idiom family as `nx-sign-bakery`. Queue 8/8 resolved (1 folded-inn,
+  6 built, 1 closed-already-signed). Eye-gate circuit delivered ONCE at
+  `reviews/waysign-eye-gate.md` (walking order + judgments). Lane now HOLDS
+  for Bill's verdicts; any visual correction re-opens that sign's build
+  ahead of rotation.
 
 - waysign-1 `nx-sign-stable-001` livery: mkv3-sign-stable.ts, deterministic
   ×2, sha afee37dd9a5b5d67…, 3 nodes, iron + sign_bone materials, no comps
