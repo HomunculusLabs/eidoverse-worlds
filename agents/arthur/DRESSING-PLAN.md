@@ -131,7 +131,69 @@ remain open (worst next: 34 ne-woodstack Sev 3). SW lamps still the
 only own-queue item, blocked on Bill's a/b/c (0 of 3). One deduped
 upload slot spent on the idempotent rerun (known chassis wart above).
 
+**STATE AT dress-19 (2026-09-06 14:3x, pipeline shard tick)**: shard row
+34 `nx-dress-ne-woodstack-001` (Sev 3, worst open dress row) EXECUTED
+live. Native re-judgment on exact live bytes (pin: live lib
+`c832da5d691befe2` == local sha prefix, census 259, pos
+(59.708, −0.032, 51.781) yaw −135°, empty comp bag; live store bytes
+fetched + rendered via the DRACO chassis, rig
+`reviews/dress19-ne-woodstack-rejudge/`) — **2 of 3 findings CONFIRMED**
+(burnt right post, porous rack read), detached-left-post **DROPPED**
+(reads planted, foot merges with base + contact shadow). v7 ACCEPTED and
+live (details in the dress-19 siting-log entry below). Remaining open
+dress rows: 37 nw-skeps (Sev 4), 38 nw-hedge (Sev 4). SW lamps still the
+only own-queue item, blocked on Bill's a/b/c policy (0 of 3).
+
 ## Siting log
+
+### dress-19 — NE woodstack reseat (shard row 34 EXECUTED, PLACED, LIVE)
+
+- **Row 34 findings (native CONFIRMED on live v5 bytes)**: right cradle
+  post reads near-black/burnt; courses read porous like a rack, not solid
+  cordwood. Detached-left-post DROPPED (planted read).
+- **Root causes (source decode)**: v5's three leaners sat at x=1.28 —
+  fused with the right cradle post (x=1.25) into one dark mass — AND
+  physically floated (x-axis tilt leans toward +z, past the course logs'
+  x-extent ~1.17; nothing under them). Courses 8/7/6 unbonded: top-course
+  pitch 0.41m vs log dia ~0.26m = see-through gaps; protruding log
+  hovered 0.115m above the stack surface.
+- **v6** (`27643e8b…`, judged, rejected for posts only): leaners
+  removed; running-bond courses 9/8/9 nested
+  (y2=y1+0.87·(r1+r2), uniform per-course radii); protruding log
+  embedded at top+r·0.55. Judge: courses PASS (solid cordwood), nothing
+  floating PASS — but posts still near-black. Pixel decode grounded the
+  material claim: v5 posts rendered (0,0,0) pure black at the camera
+  face (67° off sun), v6 lifted to (40,33,10), still dark vs caps ~237.
+- **v7 ACCEPTED** (sha
+  `692bc54e02358cc11e0c29a21abaca8a16d113b15027f385d4ba21ba6872faf6`,
+  double-rebuild byte-identical): cradle posts BARK → stile TIMBER
+  0x6f6432 + pale CUT 0xf2eed0 sawn caps r0.11 on top — the dress-11
+  accepted family idiom ("pale sawn post-tops = the distance tell"), not
+  a new accent. Judged NATIVE: gameplay 4/4 PASS (posts read worked
+  timber, courses solid cordwood, nothing floating, tended stack) +
+  close 3/3 PASS (no z-fighting, staggered orderly courses, no mesh
+  artifacts). Judge noted the extra post height above the pile reads
+  "actively tended/fillable" — deliberate.
+- **Decode (v7)**: 7 nodes (budget 3–25 ✓); bbox x −1.5..1.5, z
+  −0.75..1.32 (center +0.285) — x/z footprint IDENTICAL to v5; y
+  −0.01..1.241 (top grew for the post caps only). No light anchors,
+  empty comp bag (static unlit family).
+- **Placement**: `ne-dress19-place.ts` — hash gate → blocker-epoch guard
+  (hamlet-0028 @ 032b6e24 re-verified live this tick, statuary-0026/0039,
+  cloister-0016) → migration gate (exact OLD dress-9 tuple or NEW;
+  comp-bag-empty asserted pre-verb) → fresh-census SAT/rim preflight
+  (rim 77.62..79.90 ∈ [66,108]; SAT clear, no sub-1.4m adjacency; host
+  back-to-wall exemption + statuary disc gates inherited from dress-9) →
+  upload (content-addressed) → remove+spawn reseat over one join WS
+  (paced 1000ms). **PLACED_VERIFIED** `nx-dress-ne-woodstack-001` @ lib
+  `store/692bc54e02358cc1.glb` (was `c832da5d691befe2`), pos
+  (59.708, −0.032, 51.781) yaw −135° — UNCHANGED pose, a lib swap at
+  the exact tuple. Idempotent rerun: 0 verbs, one deduped upload (known
+  chassis wart). NE lamp spend unchanged 0 of 10.
+- **Eye-check for Bill**: the woodstack on the plaza-ward flank of the
+  second NE hamlet should now read SOLID cordwood — tightly nested pale
+  end-grain discs between two mid-brown posts with pale sawn tops — not
+  a rack, and the posts should read worked timber, not charred.
 
 ### dress-18 — NW stile reseat (shard row 33 EXECUTED, PLACED, LIVE —
 ### interrupted-window recovery)

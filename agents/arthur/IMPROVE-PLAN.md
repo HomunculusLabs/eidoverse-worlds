@@ -554,6 +554,15 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     bound of 18m legibility]
 34. `nx-dress-ne-woodstack-001` — burnt right post; see-through gaps;
     detached left post. Sev 3. (guard: dress-9 today — until 09-07)
+    [EXECUTED dress-19: native re-judgment on exact live bytes CONFIRMED
+    burnt-post + porous-rack (2 of 3; detached-left DROPPED — reads
+    planted); root causes: x-tilted leaners at x=1.28 fused with the
+    right post AND floated, courses 8/7/6 unbonded; v7 fix: leaners
+    removed, running-bond courses 9/8/9, posts BARK->stile TIMBER +
+    pale CUT caps (dress-11 idiom; pixel decode v5 posts pure black);
+    judged 4/4 gameplay + 3/3 close native; sha 692bc54e x2; reseat at
+    exact unchanged tuple, lib c832da5d->692bc54e, PLACED_VERIFIED +
+    idempotent, comp {} both sides]
 35. `nx-struct-pendulum` — dashed shadow acne; hairline strings; weak
     identity read. Sev 4. (guard: none)
 36. `nx-approach-nw-lane-001` — banding/taper/raw boxes/lamp base. Sev 4.

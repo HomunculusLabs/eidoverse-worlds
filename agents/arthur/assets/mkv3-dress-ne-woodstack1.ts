@@ -16,6 +16,18 @@
 // plaza approach, hamlet yaw −135 ⇒ local +z is plaza-ward) sees log
 // SIDES; protruding log didn't break the top line; spills' caps sideways.
 // v3: frame corrected — logs run z, caps +z.
+// v6 (dress-19, shard row 34): native rejudge on live bytes CONFIRMED
+// "burnt right post" + "porous rack read"; "detached left post" DROPPED
+// (reads planted). Root causes: (1) the 3 "leaners" sat at x=1.28 fused
+// with the right cradle post (x=1.25) into one dark mass AND physically
+// floated (they tilt about x — lean toward +z, resting on nothing) ->
+// REMOVED (minimalism law: failing speculative accent comes out). (2)
+// courses 8/7/6 with no brick-bond left see-through gaps (top-course
+// pitch 0.41 vs log dia ~0.26) -> courses now 9/8/9 RUNNING-BOND
+// (offset pitch/2), uniform per-course radii, each course nested in the
+// valleys below (y2 = y1 + 0.87*(r1+r2)), every log grounded on contact;
+// protruding log now RESTS embedded in the top-course surface instead of
+// hovering 0.115m above it. Pale flush caps unchanged (v5 law).
 import * as THREE from "three";
 import { writeFileSync } from "node:fs";
 import { toGLB, mat } from "./glbwrite.ts";
@@ -51,54 +63,69 @@ const log = (y: number, x: number, r: number, seed: number) => {
     g.add(cap);
 };
 
-// --- courses: 3 high, packed along x between cradle posts (x ±1.25)
-const course = (y: number, seed: number, count: number) => {
+// --- courses (v6): RUNNING BOND — each upper log nests in the valley
+// between two below (offset half pitch, y2 = y1 + 0.87*(r1+r2)), uniform
+// per-course radii, ends staggered. Solid cordwood, not a rack.
+const course = (y: number, seed: number, count: number, r: number, offset = 0) => {
+    const pitch = 2.04 / Math.max(count - 1, 1);
     for (let i = 0; i < count; i++) {
-        const r = 0.11 + Math.abs(jit(seed + i * 5)) * 0.03;
-        const x = -1.02 + i * (2.04 / Math.max(count - 1, 1)) + jit(seed + i * 3) * 0.04;
+        const x = -1.02 + i * pitch + offset + jit(seed + i * 3) * 0.04;
         log(y, x, r, seed + i);
     }
 };
-course(0.13, 11, 8);   // ground course
-course(0.38, 27, 7);   // second course
-course(0.62, 43, 6);   // top course
-// one protruding log on the top course — sticks further +z AND +y, breaks the line (v4: raised y 0.86→0.92, pushed +z — v3 judge: read as rail/bump)
+// Ground course: 9 logs r0.13 sitting ON the ground (y = r).
+course(0.13, 11, 9, 0.13);
+// second course: 8 logs r0.12 nested in the ground course's valleys
+course(0.13 + 0.87 * (0.13 + 0.12), 27, 8, 0.12, 2.04 / 8 / 2);
+// top course: 9 logs r0.105 nested again — MORE logs than v5's 6: the
+// porous top was the rack read; a full nested course reads cordwood.
+course(0.13 + 0.87 * (0.13 + 0.12) + 0.87 * (0.12 + 0.105), 43, 9, 0.105);
+// one protruding log embedded in the top-course surface (v6: RESTS at
+// top y + r*0.55, half-sunk among the top logs — breaks the line without
+// hovering; v5's y 0.92 floated 0.115m above the stack surface)
 {
+    const topY = 0.13 + 0.87 * (0.13 + 0.12) + 0.87 * (0.12 + 0.105);
     const len = 1.12;
     const z0 = -0.75 + len / 2;
     const body = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, len, 8), BARK);
-    body.rotation.x = Math.PI / 2; body.position.set(0.55, 0.92, z0); g.add(body);
+    body.rotation.x = Math.PI / 2; body.position.set(0.55, topY + 0.105 * 0.55, z0); g.add(body);
     const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.108, 0.108, 0.05, 8), STRAW);
-    cap.rotation.x = Math.PI / 2; cap.position.set(0.55, 0.92, z0 + len / 2 - 0.025); g.add(cap);
+    cap.rotation.x = Math.PI / 2; cap.position.set(0.55, topY + 0.105 * 0.55, z0 + len / 2 - 0.025); g.add(cap);
 }
 // moss on the top course — SMALL patches only (v5: shrank — v4 judged the
-// top moss read as a fence rail spanning the stack)
+// top moss read as a fence rail spanning the stack). v6: re-seated on the
+// running-bond top surface (top course top y = 0.649 — v5 y 0.755 would
+// float 0.1m above the denser, better-nested stack).
 const moss1 = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.05, 0.3), MOSS);
-moss1.position.set(-0.35, 0.755, -0.35); moss1.rotation.y = 0.12; g.add(moss1);
+moss1.position.set(-0.35, 0.675, -0.35); moss1.rotation.y = 0.12; g.add(moss1);
 const moss2 = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.045, 0.22), MOSS);
-moss2.position.set(0.3, 0.77, -0.3); g.add(moss2);
+moss2.position.set(0.3, 0.685, -0.3); g.add(moss2);
 
-// --- cradle posts at both ends (x ±1.25), on rock pads
+// --- cradle posts at both ends (x ±1.25), on rock pads. v7 (dress-19):
+// posts were BARK (rendered near-black at 18m — the "burnt post" read;
+// pixel decode: v5 (0,0,0), v6 (40,33,10) vs caps ~237). Switched to the
+// stile's accepted TIMBER 0x6f6432 + pale CUT caps on top — the proven
+// dress-11 family idiom ("pale sawn post-tops = the distance tell"),
+// not a new accent.
+const TIMBER = mat(0x6f6432, .95, 0);  // stile post/rail bark-timber (dress-11)
+const CUT = mat(0xf2eed0, .95, 0);     // stile pale sawn post-top (dress-11 v4)
 for (const px of [-1.25, 1.25]) {
     const pad = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.2, 0.5), ROCK);
     pad.position.set(px, 0.09, -0.3); g.add(pad);
-    const post = new THREE.Mesh(new THREE.BoxGeometry(0.15, 1.05, 0.15), BARK);
+    const post = new THREE.Mesh(new THREE.BoxGeometry(0.15, 1.05, 0.15), TIMBER);
     post.position.set(px, 0.62, -0.3); g.add(post);
+    const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.11, 0.09, 8), CUT);
+    cap.position.set(px, 1.196, -0.3); g.add(cap);
 }
 
-// --- leaners: 3 logs leaning against the right flank (x +1.05), caps +z
-for (let i = 0; i < 3; i++) {
-    const z = -0.45 + i * 0.42 + jit(70 + i) * 0.05;
-    const len = 0.85;
-    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.105, 0.105, len, 8), BARK);
-    body.rotation.set(-0.40, 0, 0);            // top rests on the stack flank
-    body.position.set(1.28, 0.34, z);
-    g.add(body);
-    const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.095, 0.095, 0.05, 8), STRAW);
-    cap.rotation.set(-0.40, 0, 0);
-    cap.position.set(1.28, 0.34 + Math.sin(0.40) * (len / 2), z + Math.cos(0.40) * (len / 2) - 0.02);
-    g.add(cap);
-}
+// --- leaners (v6): REMOVED. v5's three x-axis-tilted logs at x=1.28
+// fused with the right cradle post into one dark mass (the "burnt post"
+// read) AND physically rested on nothing (they lean toward +z, past the
+// course logs' x extent — floating, per the native rejudge). A re-seat at
+// x=1.05 tilted about z would sit in the post's own footprint. Out they
+// come — the stack's flanks now read clean timber, and the pale caps
+// carry the distance value. (Minimalism law: failing accent removed, not
+// re-worked.)
 
 // --- pale-ended spill rounds near the base (caps facing +z)
 for (const [sx, sz, r] of [[0.62, 1.05, 0.13], [-0.55, 1.15, 0.10]] as const) {
