@@ -225,6 +225,24 @@ perpendicular, 3D ray passes over the 0.91m stone — foreign-lane margin note).
 Bill eye-check: NE gate at night — the gallery lane should now carry a quiet
 bead line between the lamps; by day the verge reads gray-bone hem.
 
+### approach-8 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD ef48090. Shard routing read precisely at
+source: IMPROVE-PLAN rows 16 (sw-lane-003) and 36 (nw-lane-001) both
+EXECUTED, zero OPEN rows route to nx-approach (the sharding prose count
+"approach 2" is stale; "verify at routing time" honored). Re-arm law seeds
+improve-own round-2 candidates, not approach rows. Own queue: three legs
+stand PLACED_VERIFIED, D1/D2 closed in-budget; SE leg awaits Bill's a/b/c
+siting call; D3–D5 + N5–N7 remain Bill budget/verdict classes. Cheap lawful
+hold verification (fresh live census 259, approach domain 17): all three leg
+libs PIN_EXACT (nw dc256065879371d8, ne dc52264c04cfe5bb, sw
+43817a4fcdd06a15), six leg `-l` lights standing, gate lamps untouched.
+Probe bug caught and fixed in-tick (pin check mis-stripped the `store/`
+lib prefix — suspect-the-probe law). Margin note: Leg-1's prose light-quote
+(−38.6, 30.9) is stale rounding vs live (−39.09, 30.26); the law-bearing
+pin (lib hash + approach-6's decode-translations-match-live proof) is
+exact — no action. Zero world mutations; no visual PASS claimed.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.
