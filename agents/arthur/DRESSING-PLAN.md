@@ -347,6 +347,33 @@ unchanged; SW lamp budget re-reconciled fresh: 3 live r≥35 SW lights
 (approach ×2 + mile lantern), spend 0 of 3. Zero world mutations, zero
 uploads, zero shared-budget use.
 
+**STATE AT dress-50 (2026-09-06, pipeline hold tick — 29th consecutive)**:
+lawful HOLD — every path closed fresh. Shard queue re-verified EMPTY at
+source against HEAD 52060d7 (IMPROVE-PLAN clean; nine `nx-dress-*`
+Round-1 rows terminal — 5/29/31 DROPPED, 30 NATIVE-DROPPED survey-2,
+32/33/34/37/38 EXECUTED; row 39 routes improve-own; survey-13 slice
+subjects cairn/garden/hamlet/lavender/orchard/seed — zero nx-dress;
+REPAIR-REGISTER zero nx-dress). Own queue: SW lamps only, still blocked
+on Bill's a/b/c budget policy — fresh recount 3 live r≥35 SW lights
+(nx-approach-sw-lamp-001-l, -002-l, nx-mile-sw-013-l), spend 0 of 3;
+eye-gate packet fd677cae md5-verified zero VERDICT lines. Hold
+verification: standing gate ALL PASS real exit 0 at HEAD 52060d7
+(improve-18 mapboard foreign commit absorbed); fresh live census 259
+(HTTP 200 first fetch), ALL ELEVEN district installations PIN_EXACT
+lib+tuple+yaw-radians+comps-empty via the dress-49 pin-resolution law
+(max enclosing dress-N tick + was-map supersession); 27 nx-dress
+arithmetic intact (11 fleet + 16 legacy core off-limits set);
+interlane md5 f6254cd0 unchanged. Probe self-catch 6th class
+disclosed: first row-scan read row 30 OPEN only because its annotation
+token is `[NATIVE-DROPPED survey-2:` — an annotation-prefix list
+checking only `[DROPPED`/`[EXECUTED` misses the hyphenated variant
+(annotation-vocabulary defect, kin to artwalk-67's quote-blind
+regexes); and the first pin pass re-committed the naive
+last-PLACED_VERIFIED-wins error dress-49 already retired (6/11
+false-DRIFT, all pre-reseat hexes). World correct, probe wrong — both
+resolved at source this tick. Zero world mutations, zero uploads, zero
+shared-budget use.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
