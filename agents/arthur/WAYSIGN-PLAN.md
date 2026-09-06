@@ -193,6 +193,41 @@ the census + decode are truth.
   the mill-room's door face left of the artwalk crown, brass hub clear
   at 8m, clear of the door lane and the millrace side.
 
+## ROUND 2 — sign packet re-opened (routed from improve-3, staged at
+improve-5w 2026-09-06)
+
+CROSS-LANE PACKET (defect-class, re-opens work ahead of rotation per
+interlane law): improve round-1 analysis (improve-2) judged the 8
+`nx-sign-*` riders at 18m from live bytes — 1 CLEAN (`nx-sign-stable-001`,
+dark horseshoe on cream holds) / 7 defective, one shared root class:
+emblem scale/contrast collapse at gameplay distance (motif <~1/3 of board
+face, low contrast, shape ambiguity). These re-places belong to waysign
+(domain law; improve never re-places a waysign-owned `nx-sign-*` rider).
+NOTE: findings were ZAI-fallback-judged (native down); per IMPROVE-PLAN
+native-vision-restored law, EACH item re-judges under native vision
+(8 views, 18m, exact live bytes) before execution — confirm-or-drop;
+the worst-first order below is provisional.
+
+| # | Sign | Finding (probe, 18m) | Sev |
+|---|------|----------------------|-----|
+| R2-1 | `nx-sign-smithy` | horseshoe a dark smudge, no U-shape; stray detached fragment left of board; bracket hairline-thin (heritage sign) | 2 |
+| R2-2 | `nx-sign-dyer-001` | flax-blue bolt reads near-black, fuses with dark frame (known waysign flag CONFIRMED) | 2 |
+| R2-3 | `nx-sign-kiln-001` | flame collapses to orange blob; chains hairline | 2 |
+| R2-4 | `nx-sign-woodyard-001` | saw-buck reads chevron; black header slab a content-free void; no mount silhouette | 2 |
+| R2-5 | `nx-sign-mill-001` | sails read as generic X, indistinguishable from crossed-tools; header unresolvable clump | 2 |
+| R2-6 | `nx-sign-potter-001` | wheel reads, pot a smudge; emblem ~1/3 of panel | 3 |
+| R2-7 | `nx-sign-bakery` | emblem gold-on-cream blob ~6px | 3 |
+
+Also standing from waysign-7: `nx-town-inn` porch emblem reads "wheel,
+not tankard" — host redesign belongs to the owner lane (improve queue
+item, not waysign's), recorded here so it isn't lost.
+
+Rotation: R2-1 → R2-7 (worst-first provisional; re-rank after native
+re-judgment). Each item: full chassis — host anchor re-derived from
+CURRENT tuple per host-rider law, rider-only SAT + exemption ladder,
+unlit by default, 8m gate. Native vision is primary judge; ZAI fallback
+only when native is down that tick, disclosed.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host

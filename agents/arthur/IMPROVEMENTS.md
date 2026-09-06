@@ -3923,4 +3923,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-48] charter-wall host-pin refresh: improve-5 evolved nx-town-hall 1306527a→c92c1f91 (gable fix, solid ridge, N door casing, 5 warm lights); B-1 re-grounded per artwalk-15/artwalk-39 continuity law — decode of c92c1f91 confirms wall_w inner face x=−4.28 unchanged, rider band y 1.115–2.885 clear of all improve-5 additions (N header y 1.79–1.95 on z wall; gable/ridge >3.16; lights on E/N/S), banner+window overlap dance predates to nvp-17 and stays under Bill's pending b1 eye-check; placer HOST_LIB re-pinned c5964bc8→c92c1f91, rerun zero verbs PLACED_VERIFIED anchor (−4.28,1.1,0) exact, fresh live SAT 3.245m waterstair (D+1, E+0)
 
+- [improve-5w] fleet widen: Bill directed 6 concurrent lanes per wave. waysign re-opened via cross-lane sign packet (7 nx-sign-* emblem-collapse findings routed from improve-3 queue into WAYSIGN-PLAN Round 2, native re-judgment before execution per restored-vision law); fleet-runner LANES widened improve sweep artwalk night waysign dress; mile out (findings moot); running 4-lane instance untouched, edit takes effect next launch (D+0, E+0)
+
 **Running total: 2370210 / 2000000**

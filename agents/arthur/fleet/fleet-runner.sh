@@ -16,18 +16,31 @@ LOGS="$FLEET_DIR/logs"
 PROMPTS="$FLEET_DIR/prompts"
 mkdir -p "$LOGS" "$PROMPTS"
 
-# ---- config ----
-HOURS=8
-MAX_TURNS=100
-RUN_BUDGET=2700
-WAVE_SPACER=120
+# ---- config (env-overridable) ----
+HOURS="${HOURS:-8}"
+MAX_TURNS="${MAX_TURNS:-100}"
+RUN_BUDGET="${RUN_BUDGET:-2700}"
+WAVE_SPACER="${WAVE_SPACER:-120}"
 SKILL=eidoverse-world-building
 
-declare -A LOOPFILE=(
-  [waysign]=WAYSIGN   [mile]=MILESTONE   [dress]=DRESSING
-  [sweep]=SWEEP       [night]=NIGHT      [artwalk]=ARTWALK
-)
-LANES=(waysign mile dress sweep night artwalk)
+# bash-3.2 portable lane table (no associative arrays on macOS /bin/bash)
+# 2026-09-06 Bill: 6 concurrent lanes per wave. waysign re-opened (sign
+# packet routed from improve-3 at improve-5w); dress holds one Bill item
+# (SW lamps) but stays cheap; mile stays out (findings judged moot at
+# improve-3, guarded anyway).
+LANES="${LANES:-improve sweep artwalk night waysign dress}"
+lane_loopfile() {
+  case "$1" in
+    waysign) echo WAYSIGN ;;
+    mile)    echo MILESTONE ;;
+    improve) echo IMPROVE ;;
+    dress)   echo DRESSING ;;
+    sweep)   echo SWEEP ;;
+    night)   echo NIGHT ;;
+    artwalk) echo ARTWALK ;;
+    *)       echo "" ;;
+  esac
+}
 
 END_EPOCH=$(( $(date +%s) + HOURS*3600 ))
 
@@ -45,15 +58,15 @@ report HOLD — do not manufacture work, do not invent queue items. English
 only. End your reply with LANE_TICK_DONE on its own line."
 
 # ---- build per-lane prompt files once (marker-extracted loop prompt) ----
-for lane in "${LANES[@]}"; do
-  f="$REPO/agents/arthur/${LOOPFILE[$lane]}-LOOP.md"
-  if [ ! -f "$f" ]; then echo "MISSING loop file: $f" >> "$LOGS/fleet.log"; exit 1; fi
+for lane in $LANES; do
+  f="$REPO/agents/arthur/$(lane_loopfile "$lane")-LOOP.md"
+  if [ ! -f "$f" ]; then echo "[$(date '+%F %T')] MISSING loop file: $f" >> "$LOGS/fleet.log"; exit 1; fi
   awk 'BEGIN{f=0} /^---8<--- LOOP PROMPT ---8<---$/{f=1;next} /^---8<--- END LOOP PROMPT ---8<---$/{f=0} f' "$f" > "$PROMPTS/$lane.txt"
   # sanity: extraction must be non-trivial
-  if [ "$(wc -l < "$PROMPTS/$lane.txt")" -lt 20 ]; then echo "BAD extraction for $lane" >> "$LOGS/fleet.log"; exit 1; fi
+  if [ "$(wc -l < "$PROMPTS/$lane.txt")" -lt 20 ]; then echo "[$(date '+%F %T')] BAD extraction for $lane" >> "$LOGS/fleet.log"; exit 1; fi
   { echo "$PREAMBLE"; echo ""; cat "$PROMPTS/$lane.txt"; } > "$PROMPTS/$lane.full.txt"
 done
-echo "[$(date '+%F %T')] prompts built for: ${LANES[*]}" >> "$LOGS/fleet.log"
+echo "[$(date '+%F %T')] prompts built for: $LANES" >> "$LOGS/fleet.log"
 
 # ---- wave loop ----
 WAVE=0
@@ -61,7 +74,7 @@ while [ "$(date +%s)" -lt "$END_EPOCH" ]; do
   if [ -f "$FLEET_DIR/STOP" ]; then echo "[$(date '+%F %T')] STOP file — halting" >> "$LOGS/fleet.log"; break; fi
   WAVE=$((WAVE+1))
   echo "[$(date '+%F %T')] wave $WAVE start" >> "$LOGS/fleet.log"
-  for lane in "${LANES[@]}"; do
+  for lane in $LANES; do
     (
       timeout $((RUN_BUDGET+300)) hermes chat \
         --query-file "$PROMPTS/$lane.full.txt" \
