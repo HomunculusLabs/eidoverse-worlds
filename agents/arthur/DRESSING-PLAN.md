@@ -2131,3 +2131,43 @@ Bill-ruled). REPAIR-REGISTER zero nx-dress.
 - Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
   policy call, or verdicts on the four-district eye-gate circuit
   (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+---
+
+## dress-62 (2026-09-06, pipeline tick 42) — HOLD
+
+- Shard: re-verified EMPTY at source fresh this tick (full-row-window
+  scan of IMPROVE-PLAN rows 29-38 window on current bytes): all nine
+  nx-dress Round-1 rows terminal (5/29/30/31 DROPPED native rejudge;
+  32/33/34/37/38 EXECUTED reseats). Row 39 foreign (nx-town-longhouse,
+  improve-20). Fountain Bill-off-limits, his call. No un-shard clock
+  (empty at source). Round-2 survey intake re-scanned: zero new
+  nx-dress rows (fountain remains the only dress-domain candidate,
+  legacy-core, Bill's ownership call).
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh kind-law recount:
+  exactly 3 live SW r>=35 lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0, kind=light). Spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae unchanged (mtime 09:42, zero
+  VERDICT lines, grep fresh this tick).
+- Hold verification: standing gate ALL PASS real exit 0 at tick-start
+  HEAD c9c5d64. Fresh live census 256 (was 260): FOUR light
+  departures identified as improve-21 R-120 work-in-flight — the four
+  cardinal gate lamps (nx-gate-*-lamp ids absent from light roster)
+  removed pending re-spawn on the full 16-hex lib per improve-21's
+  committed plan. thing histogram 222==222 unchanged; dress-domain
+  ZERO change; all three SW budget lights present. 11/11 district
+  installs PIN_EXACT by fresh programmatic compare (/tmp probe, plan
+  -parsed pins vs live: lib prefix, pos <0.02/0.03, yaw radians where
+  pinned, comps empty). Probe self-catch disclosed (16th tick-class,
+  pitfall-7): first regex over the dress-43 table dropped 3 rows to
+  line breaks (8/11 parsed) — row-count assert fired, whitespace
+  -tolerant regex re-parse landed all 11. 27 nx-dress = 11 fleet +
+  16 legacy intact by arithmetic. Interlane md5 f6254cd0 steady.
+  Foreign dirt (core-paths glb+review, tower3, court placer, fleet
+  watcher, improve21-decode-kiss, struct terrain probes,
+  review-improve19-pixels, untracked reviews) left untouched.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed.
+- Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
+  policy call, or verdicts on the four-district eye-gate circuit
+  (agents/arthur/reviews/dress-districts-eye-gate.md).
