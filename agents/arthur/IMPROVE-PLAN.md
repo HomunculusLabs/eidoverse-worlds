@@ -367,6 +367,24 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
    seam class); evenly spaced ridge notch/bump artifacts. Identity
    carried by silhouette alone. Sev 2 stands. Evidence:
    reviews/survey2-sev2-slice/bunkhouse/gameplay.png]
+   [EXECUTED improve-13: interrupted pre-place window recovered
+   (artwalk-32 class — dead window left build+renders on disk, zero
+   world mutation, live still at baseline 49f5acc4); two-build loop —
+   v1 a89b29ec passed day decode+native but FAILED its own night
+   falsification (interior bead occluded behind E door-flank wall,
+   improve-12 buried-lantern class) → v2 + entrance bead on door lintel
+   c8636968 ACCEPTED; walls→village timber texMat, 0.22h ashlar plinth
+   ring, proud back windows, door posts/threshold, solidRidge+
+   trueGableHalf (horn killed, bbox z ±3.5→±2.621, x/y unchanged);
+   native 8/8 (door reads DOOR, ridge continuous, plinth band reads,
+   windows cased+proud, night warm lantern, day bead mounted, top
+   horn-free, zero floating); stray-diagonal DROPPED (was the buried
+   shutters — improve-12 class); west-edge "floating railing" probe
+   DROPPED (pixel-diff region byte-stable, attention artifact);
+   remove+spawn exact tuple (−9,0,−26) lib 49f5acc4→c8636968, comp {}
+   both sides, PLACED_VERIFIED + idempotent zero-verb rerun; 6-leg
+   MCPL door walk ALL_PASS 0.333m; rider b20 + light companion
+   untouched, census 259]
 20. `nx-town-garden-cottage` — front face zero info; extension fuses with
     main volume. Sev 2. (guard: re-check interior lane tail at execution)
     [NATIVE-PARTIAL survey-2: front face near-featureless — windows
@@ -1347,6 +1365,30 @@ rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
   - D3 roof opts into solidRidge=true, trueGableHalf=(D+0.9)/2=2.45.
   - D4 (night clause): entry lantern bead already emissive; verify night.png warm bead; no new light entities (Bill-only).
   Falsification: after gameplay@18m facade reads layered (plinth + stone walls + plaster gable + cased openings), door reads DOOR (posts+threshold+lintel) not void; ridge continuous front/top; decode plinth band y 0.26..1.16, zero new verts in b20 keep-out, bbox unchanged (SAT-neutral same-tuple re-place); night warm bead visible. Revert: revert mkbunk.ts → rebuild returns 49f5acc4 (baseline ×2 proven this tick). SAT preflight vs fresh live census; nearest neighbor nx-town-dyehouse well clear.
+
+  improve-13 EXECUTION COMPLETE (this tick, recovering the dead window):
+  the prior window's build a89b29ec was re-verified deterministic ×2, decode
+  PASS, but its after-renders predated the final source edit — re-shot fresh
+  from pinned bytes. Native judgment (all calls up, no fallback): door reads
+  DOOR, ridge continuous (before: notched — direct corroboration), plinth
+  reads, back windows cased+proud, top horn-free, zero floating; night FAILED
+  (dead black — bead occluded, see v1 note) → v2 entrance bead on the door
+  lintel: center (0, y 2.52, z 2.05), spans z 1.97..2.13 proud of the wall
+  face, bead bottom y 2.44 clears the 2.31 opening head by 0.13m → night
+  PASS (warm lantern above entry), day bead PASS mounted
+  not floating. Final sha c8636968 ×2, 16 nodes, materials timber/stone/
+  plaster+2 glow buckets. Decode: keep-out NEW=0 (9=9), plinth 312 verts,
+  windows proud 162 verts, bbox x/y unchanged, z ±3.5→±2.621 (horn dead).
+  Back-view "floating railing past west edge" DROPPED by pixel-diff (region
+  byte-stable before/after, roof-overhang geometry predates edit — attention
+  artifact, probe law #5). Re-place remove+spawn exact tuple (−9,0,−26) yaw
+  0.313225, lib 49f5acc4→c8636968, comp {} both sides; PLACED_VERIFIED
+  (2 verbs) + idempotent ALREADY_LIVE_NO_VERBS; 6-leg MCPL door walk
+  ALL_PASS 0.333m; rider b20 + light companion nx-town-bunkhouse-l
+  untouched, census 259. Placer: next-place-improve13-bunk.ts; walk:
+  improve13-walk-bunk.ts; decode: improve13-decode-bunk.ts; renders:
+  reviews/improve13-bunkhouse/{before,after}/. Next: windmill guard expires
+  09-07 01:57, then queue item 4; then shrine (17, re-ranked Sev 3).
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
   one append per tick, stage only lane-owned paths, never push.
