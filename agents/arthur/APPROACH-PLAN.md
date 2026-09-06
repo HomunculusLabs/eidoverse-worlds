@@ -243,6 +243,25 @@ lib prefix — suspect-the-probe law). Margin note: Leg-1's prose light-quote
 pin (lib hash + approach-6's decode-translations-match-live proof) is
 exact — no action. Zero world mutations; no visual PASS claimed.
 
+### approach-9 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD 657539a; interlane md5 f6254cd0 steady.
+Shard routing read precisely at source: IMPROVE-PLAN rows 16 (sw-lane-003)
+and 36 (nw-lane-001) both EXECUTED (approach-4/5); zero OPEN rows route to
+nx-approach- (the "approach 2" prose count is stale; routing verified
+against rows, not prose). Re-arm law seeds improve-own round-2 candidates
+(nx-town-*/kit-debt), not approach rows. Own queue: three legs stand
+PLACED_VERIFIED, D1/D2 closed in-budget; SE leg awaits Bill's a/b/c siting
+call; D3–D5 + N5–N7 remain Bill budget/verdict classes. Cheap lawful hold
+verification (fresh live census 259, approach domain 17, lights 38,
+night-prefixed 0): all three leg libs PIN_EXACT (nw dc256065879371d8, ne
+dc52264c04cfe5bb, sw 43817a4fcdd06a15 — store/-prefix law applied), six leg
+`-l` lights standing at authored positions, four gate lamps untouched
+(18b69a6bb2f5862f). Census diff vs night-27: 0 new / 0 gone; sibling
+bunkhouse lib advance (49f5acc4→c8636968 at identical tuple) = improve-13
+landing in its own nx-town domain, domain-valid. Zero world mutations; no
+visual PASS claimed.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.
