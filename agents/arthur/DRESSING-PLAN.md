@@ -1873,3 +1873,36 @@ no visual PASS claimed.
   World correct, probe wrong.
 - Zero world mutations, zero uploads, zero shared-budget use, no visual
   PASS claimed. No un-shard clock (shard empty at source, not idle).
+
+
+## dress-54 (2026-09-06, pipeline tick 33) — HOLD
+
+- Shard: EMPTY at source at HEAD d833f3e (sweep-41 atop dress-53).
+  Annotation-aware re-scan: nine Round-1 nx-dress rows terminal (5/29/31
+  DROPPED native rejudge, 30 NATIVE-DROPPED survey-2, 32/33/34/37/38
+  EXECUTED reseats, 39 improve-own, 13 fountain Bill-off-limits); IMPROVE
+  round-2 intake routes zero dress-prefix rows (woodyard/welcome/potter/
+  court → improve primary per town-4; survey families → av-mason
+  improve-own). SURVEY INTAKE dispositioned: survey-6 consumed by
+  dress-21; survey-8 fountain probe-only, Bill-ruled off-limits.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh recount by corrected
+  quadrant (x<0, z<0, r>=35): exactly 3 live SW lights (nx-approach-
+  sw-lamp-001-l r39.7, -002-l r55.4, nx-mile-sw-013-l r64.0), spend 0
+  of 3; id-method agrees.
+- Verdicts: eye-gate packet fd677cae grep VERDICT = 0; zero in ledger
+  tail.
+- Hold verification: gate ALL PASS real exit 0 at HEAD d833f3e; census
+  259 HTTP-200 first fetch; id-diff vs dress-9-era capture 3 arrived =
+  own dress-18/19/20 reseats (logpile/stile/woodstack), 0 gone, 0
+  foreign; 11/11 district installs PIN_EXACT lib+pos+yaw live-fresh
+  (hedge 3d5c7d44, stile 5e9d301d, skeps 87d2dd16, logpile cac71bff,
+  woodstack 692bc54e, bench 46f3b6b1, yard 191227da, cairn 59031a0c,
+  stones 8dafb9e5, gravel fd21de9f, prayer 5074600f); 27 nx-dress = 11
+  fleet + 16 legacy intact; lights 38; interlane md5 f6254cd0 steady.
+- Probe self-catch disclosed: first SW-light filter keyed raw
+  startswith('approach-sw-lamp') — live ids carry the nx-approach-
+  prefix, so it undercounted to 1; corrected filter returns the exact
+  established trio. World correct, probe wrong (9th tick-class caught
+  at run time).
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock (shard empty at source, not idle).
