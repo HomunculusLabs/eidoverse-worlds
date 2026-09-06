@@ -4289,4 +4289,6 @@ fixes ≈ 6 F.)
 
 - [night-44] pipeline hold (34th) — gate ALL PASS exit 0 at 73f6ffb, census-44 259/38 fully steady vs 43 (0/0/0), closure pins EXACT 19th (D1 dc256065879371d8, D2 dc52264c04cfe5bb, D4-leg fb04a144cc1fc458), SW lamps 0-of-3 Bill-bound on a/b/c, packet cdc435a2 zero verdicts, zero rows route to night in EXECUTION SHARDING (re-read at source, line 878), zero mutations (D+0, E+0)
 
+- [approach-27] pipeline hold (15th) — shard empty at source (rows 16/36 terminal), SE a/b/c + D3/D5 + N5-N7 Bill-bound, gate ALL PASS exit 0 at 73f6ffb, fresh census 259/domain 17 three legs PIN_EXACT (nw dc256065879371d8, ne dc52264c04cfe5bb, sw fb04a144cc1fc458) + six leg lights + gate lamps untouched, diff vs night-44 AND approach-26 0/0/0, zero mutations (D+0, E+0)
+
 **Running total: 2370274 / 2000000**
