@@ -531,3 +531,26 @@ STUDY COMPLETE (all facets judged; packet assembled).
   lamp-budget policy D2-D5+N6, N5 detached-orb, N7 hierarchy inversion.
   Second-rotation NW pass remains the D1 verify path, deferred while the
   lane holds. Zero world mutations, zero renders judged, no PASS claimed.
+
+- night-19 (2026-09-06, pipeline-mode hold tick): twelfth consecutive hold
+  with NO disposition change. Standing gate ALL PASS real exit 0, absorbing
+  one sibling HEAD advance mid-tick (8256a42 sweep-30 at survey ->
+  dfecce4 improve-12 nx-town-stable window/lantern work while the gate ran;
+  its working-tree IMPROVEMENTS/IMPROVE-PLAN edits settled with it —
+  IMPROVEMENTS diff clean at bookkeeping). Fresh census-19: 259 entities /
+  38 lights / zero night-prefixed, set-steady vs census-18 (0 new, 0 gone)
+  with ONE domain-valid sibling lib change in flight: nx-sign-potter-001
+  bc05a4f3 -> 3a6c8fe7 at identical pos/yaw (waysign-13 rider re-place,
+  comp {}, kind=thing — ZERO lights touched; nothing in the register cites
+  it, no disposition change). D1 pin nx-approach-nw-lane-001 lib
+  dc256065879371d8 exact steady. Packet md5 cdc435a2 unchanged since
+  night-7. APPROACH-PLAN still last touched b1195ef, five defect-note
+  sections stand (D1 CLOSED by owner; D2–D5 budget-bound, N1/N2/N4–N7
+  informational). Interlane md5 f6254cd0 steady. Zero actionable night-
+  shard rows in IMPROVE-PLAN (grep hits are dress-15 row prose; night- is
+  an observer). DRESSING-PLAN lamp ledger re-read: SW lamps still 0 of 3,
+  blocked on Bill a/b/c. Same four verdict classes outstanding: sky
+  facet-5, lamp-budget policy D2–D5+N6, N5 detached-orb, N7 hierarchy
+  inversion. Second-rotation NW pass remains the D1 verify path, deferred
+  while the lane holds. Zero world mutations, zero renders judged, no PASS
+  claimed.
