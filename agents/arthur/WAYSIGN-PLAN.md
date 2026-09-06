@@ -520,6 +520,29 @@ only when native is down that tick, disclosed.
   world mutations, zero uploads, zero shared-budget use, no visual PASS
   claimed. Lane HOLDS for Bill's eye-gate verdicts
   (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+
+- waysign-19 HOLD (pipeline mode, 3rd consecutive) — queue complete
+  (8/8 R1, R2 7/7, both court brace closures); zero OPEN shard rows route
+  to `nx-sign-*`; eye-gate packet 8b88b6b3 unchanged, zero Bill verdicts.
+  Cheap lawful hold verification, STRENGTHENED by host-rider law
+  (artwalk-39): standing gate ALL PASS real exit 0 at HEAD 8566495
+  (absorbed dress-22; dress-23 landed mid-tick, absorbed); fresh live
+  census 259, ALL 8 `nx-sign-*` riders PIN_EXACT 8/8 at ledgered tuples
+  (stable afee37dd, dyer 8ce2081f, kiln ecbad903, potter 3a6c8fe7,
+  woodyard f46e12ae, mill 870256ce, bakery 49342c52, smithy 3522e5ab)
+  AND all 8 HOSTS checked — one finding: `nx-town-stable` lib CHANGED
+  5beff62e → 98f2d5b6 (improve-11/12 entrance execution), pos/yaw
+  unchanged. NEW-host decode audit (local `village_stable3.glb` sha256
+  prefix 98f2d5b6 = live, content-addressed match): zero verts inside
+  the sign keep-out (x±0.32, y1.96..2.76, z1.88..2.32 — improve-11's own
+  keep-out law upheld from the rider side), wall face plane intact under
+  the sign (63 verts z 2.003..2.17). Sign anchor VALID on the new host —
+  no re-derivation needed; the livery sign now marks improve-11's new
+  road-side entrance. All other 7 hosts lib-stable at placement pins.
+  Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. Lane HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any correction re-opens ahead of
+  rotation.
   sign's build ahead of rotation.
 
 ## Carried laws
