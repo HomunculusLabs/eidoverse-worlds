@@ -4207,4 +4207,6 @@ fixes ≈ 6 F.)
 
 - [dress-28] pipeline-mode hold tick (7th) — shard empty at source (nine nx-dress rows terminal; survey-8 slice routes outside prefix); SW lamps Bill-bound a/b/c 0-of-3; gate ALL PASS exit 0 at 407da03; census 259 eleven installs PIN_EXACT (ne-yard probe DRIFT resolved: stale ne-bench tuple in probe, true dress-2 tuple verified); SW budget 2 leg lamps + 1 boundary light = 3, spend 0; 16 legacy off-limits intact; zero mutations/uploads (D+0, E+0)
 
+- [artwalk-71] host re-pin b18 (row cottage): improve-15's legit remove+spawn staled the b18 placer host pin (bd88cd38 -> add42aea, pose unchanged); anchor band re-verified in NEW host decode (1260 verts, front face z 2.28..2.31, wall top 2.8 intact), local bytes == live lib (no disputed bytes); HL re-pinned, RED->GREEN: reconcile DRIFT pinStale:[b18] -> idempotent PLACED_VERIFIED zero verbs SAT 2.24m clear -> ALL_RECONCILED 259/54/38/34 33 pins/29 anchors identical coverage; zero uploads/verbs, no visual PASS (rider untouched); holds for Bill verdicts / Phase F / widening (D+0, E+0)
+
 **Running total: 2370269 / 2000000**

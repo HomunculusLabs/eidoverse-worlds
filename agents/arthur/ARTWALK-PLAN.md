@@ -1257,3 +1257,29 @@ zero uploads); census-diff vs artwalk-69 capture 259/259, 0 new, 0 gone,
 PASS claimed. Lane HOLDS for Bill's counting-series eye-gate verdicts
 (reviews/artwalk-counting-series-eye-gate.md), a Phase F fresh commission,
 or a queue widening.
+
+### [artwalk-71] HOST RE-PIN, ROW COTTAGE / B18 (2026-09-06) — CLOSED (bookkeeping re-pin, zero world mutations)
+
+First non-hold tick since the run of holds. Gate ALL PASS real exit 0 at HEAD
+407da03 (improve-15 absorbed). Fresh reads: loop file, ARTWALK-PLAN,
+INTERLANE-PROTOCOL; ledger tail re-checked immediately before append (max
+artwalk-70 -> this tag). SHARD EXECUTION re-proven at source: routing table
+row 25 (54-rider host-anchor reconciliation stays artwalk's own) surfaced REAL
+work this tick — improve-15's legit remove+spawn of nx-town-row-cottage (lib
+bd88cd38 -> add42aea, pose unchanged (-23,0,-17) yaw 0.9411511) staled the
+b18 placer's host pin (artwalk-58 class). Anchor compatibility verified at
+source before re-pinning: local village_row3.glb == live add42aeacca2ecc8
+(no disputed bytes); NEW host decode shows the b18 anchor band intact (1260
+verts in host-local x -0.9..0.9, y 2.0..2.8, z 1.9..2.4; front wall face
+still z 2.28..2.31; wall top 2.8 unchanged). Live rider world pose EXACTLY
+matches the local anchor (0,2.22,2.2825) transformed through the live host
+tuple — geometry already correct, only the pin was stale. Fix: HL re-pinned
+bd88cd38 -> add42aeacca2ecc8 in next-place-artwalk-b18.ts (comment names the
+class). RED->GREEN: reconcile DRIFT {pinStale:[b18]} -> placer idempotent run
+PLACED_VERIFIED zero verbs, SAT nearest 2.24m clear -> reconcile
+ALL_RECONCILED exit 0 (259/54/38/34, 33 pins/29 anchors — coverage counts
+identical, the fix moved the pin not the fleet). Zero uploads, zero verbs,
+no shared-budget use, no visual PASS claimed (no visual change — rider bytes
+and world pose untouched). Lane HOLDS for Bill's counting-series eye-gate
+verdicts (reviews/artwalk-counting-series-eye-gate.md), a Phase F fresh
+commission, or a queue widening.
