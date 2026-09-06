@@ -31,8 +31,11 @@ const placers = readdirSync(dir).filter((f) => /^next-place-artwalk-b\d+.*\.ts$/
 let pinsOK = 0; const pinStale: string[] = [];
 for (const f of placers) {
   const src = readFileSync(`${dir}/${f}`, "utf8");
-  const hosts = [...src.matchAll(/HOST(?:_LIB)?\s*=\s*"([\w.-]+)"/g)].map((m) => m[1]);
-  const hl = src.match(/(?:^|,)HL="([^"]+)"/)?.[1] ?? src.match(/HOST_LIB="([^"]+)"/)?.[1] ?? src.match(/HOST_LIB\s*=\s*"(store\/[0-9a-f]+\.glb)"/)?.[1];
+// artwalk-67: quote-agnostic HOST/HL pins (minified single-quote placers like
+// next-place-artwalk-b7.ts were silently SKIPPED by the double-quote-only
+// regexes — a stale pin survived an ALL_RECONCILED).
+  const hosts = [...src.matchAll(/HOST(?:_LIB)?\s*=\s*["']([\w.-]+)["']/g)].map((m) => m[1]);
+  const hl = src.match(/(?:^|,)HL=["']([^"']+)["']/)?.[1] ?? src.match(/HOST_LIB=["']([^"']+)["']/)?.[1] ?? src.match(/HOST_LIB\s*=\s*["'](store\/[0-9a-f]+\.glb)["']/)?.[1];
   for (const h of hosts) {
     if (h.startsWith("store/")) continue;
     const live = ents[h];
@@ -52,9 +55,9 @@ const anchors: Array<[string, string, [number, number, number], number]> = [];
 for (const f of placers) {
   const src = readFileSync(`${dir}/${f}`, "utf8").replace(/\s+/g, " ");
   if (src.includes("IDS=[") || src.includes("specs=[") || f.includes("b34")) continue;
-  const id = src.match(/ID = "(nx-artwalk-[\w-]+)"/)?.[1];
-  const host = src.match(/HOST = "([\w.-]+)"/)?.[1];
-  const l = src.match(/L: \[number, number, number\] = \[([-\d.e]+), ([-\d.e]+), ([-\d.e]+)\]/)?.slice(1) ?? src.match(/L = \[([-\d.e]+), ([-\d.e]+), ([-\d.e]+)\]/)?.slice(1);
+  const id = src.match(/ID\s*=\s*["'](nx-artwalk-[\w-]+)["']/)?.[1];
+  const host = src.match(/HOST\s*=\s*["']([\w.-]+)["']/)?.[1];
+  const l = src.match(/\bL\s*(?::\s*\[number,\s*number,\s*number\])?\s*=\s*\[\s*([-\d.e]+)\s*,\s*([-\d.e]+)\s*,\s*([-\d.e]+)\s*\]/)?.slice(1) ?? src.match(/L = \[([-\\d.e]+), ([-\\d.e]+), ([-\\d.e]+)\]/)?.slice(1);
   if (!(id && host && l)) continue;
   const dyaw = /ry = \(hy \+ Math\.PI\)/.test(src) ? Math.PI : 0;
   anchors.push([id, host, l.map(Number) as unknown as [number, number, number], dyaw]);

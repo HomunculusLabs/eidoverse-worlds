@@ -45,7 +45,7 @@ const jobs: Array<[string, string, string, string, number[]]> = [
     ["b2-lintel", "village_inn3.glb", "6e6ff2d08df9b3fb", "village_artwalk_b2_lintel.glb", [0, 2.78, 3.03]],
     ["b2-threshold", "village_inn3.glb", "6e6ff2d08df9b3fb", "village_artwalk_b2_threshold.glb", [0, 0.198, 2.95]],
     ["b3-porch", "village_potter3.glb", "dad7c82efbf3202b", "village_artwalk_b3.glb", [1.55, 0, 0.35]],
-    ["b7-stars", "village_shrine3.glb", "53709062d3095dcc", "village_artwalk_b7.glb", [-0.95, 0.25, -1.16]],
+    ["b7-stars", "village_shrine3.glb", "948d5c494252078b", "village_artwalk_b7.glb", [-0.95, 0.25, -1.16]],
     ["b8-rein", "village_stable3.glb", "5beff62ed41ca6cf", "village_artwalk_b8.glb", [0, 2.22, -2.16]],
     ["b9-loom", "village_dyehouse3.glb", "888be3597d2f772f", "village_artwalk_b9.glb", [0, 0.48, -0.77]],
     ["b10-crown", "village_windmill3.glb", "0993836012d1b17d", "village_artwalk_b10.glb", [0, 2.22, 2.62]],

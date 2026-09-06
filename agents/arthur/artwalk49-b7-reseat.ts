@@ -1,5 +1,7 @@
 // artwalk-49: b7 shrine-stars micro-reseat — absorb sibling host re-seat settle.
-// The shrine host (nx-town-shrine, lib 53709062) was re-seated by a sibling lane
+// artwalk-67: host pin re-pinned 53709062 -> 948d5c49 after improve-14's
+// shrine re-place (anchor/keep-out independently reconciled exact this tick).
+// The shrine host (nx-town-shrine, lib 948d5c49) was re-seated by a sibling lane
 // at y=-0.0012609260510534298 (terrain settle); the rider kept its original
 // absolute y=0.25, breaking the exact host-relative anchor (artwalk-39 law:
 // re-derive from the CURRENT live host tuple). This moves the rider 1.26mm down
@@ -8,7 +10,7 @@
 import { readFileSync } from "node:fs";
 const R = "/Users/t3rpz/projects/eidoverse-worlds", W = "commons-next",
   ID = "nx-artwalk-b7-shrine-stars", HOST = "nx-town-shrine",
-  HL = "store/53709062d3095dcc.glb", LIB = "store/a7ef8541e9561833.glb",
+  HL = "store/948d5c494252078b.glb", LIB = "store/a7ef8541e9561833.glb",
   L: [number, number, number] = [-0.95, 0.25, -1.16],
   cfg = JSON.parse(readFileSync(`${R}/agents/arthur/config.json`, "utf8")),
   base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", ""),

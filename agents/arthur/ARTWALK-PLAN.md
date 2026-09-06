@@ -1132,6 +1132,40 @@ census-diff vs artwalk-63 capture 259/259, 0 new, 0 gone, 0 rider drift.
 Lane holds for Bill's counting-series eye-gate verdicts, a Phase F fresh
 commission, or a queue widening.
 
+### [artwalk-67] b7 HOST-PIN RECONCILIATION + RECONCILER BLINDSPOT FIX (2026-09-06) — CLOSED
+
+artwalk-58-class duty executed: improve-14's shrine re-place (53709062 →
+948d5c49, commit 8335d80) landed after artwalk-66, making this the first
+artwalk tick on the new host bytes. Independent reconciliation (sibling
+claims NOT trusted, probe-law discipline):
+- Live: host tuple unchanged (−25, −0.00126, −4, yaw 1.41181, scale 1),
+  only lib flipped; b7 rider anchor host-derived EXACT to machine precision,
+  comp bag {} preserved; local build hashes 948d5c494252078b… == live store
+  lib (no disputed bytes).
+- Keep-out differential, own rotation-aware TRS probe (v1/v2 superseded;
+  v2 dropped node-own translation — fixed in v3): zero host verts inside
+  the FULL 3D anchor zone x∈[−1.55,−0.35], y∈[0.24,1.45], z∈[−1.20,−1.03]
+  in BOTH baseline and new builds. Frame cross-check vs improve-14's
+  translation-only decoder resolved: all node quats are identity, so both
+  frames agree; the sibling's "3==3" counted an x/z column without the y
+  bound (verts at y 1.499/1.506/−0.0 fall OUTSIDE the rider's y-band).
+  Stronger result, same verdict: the stone face b7 rides is untouched.
+- RECONCILER BLINDSPOT FOUND AND FIXED (RED→GREEN): the artwalk-52
+  fleet reconciler's double-quote-only HOST/HL/ID regexes silently SKIPPED
+  minified single-quote placers (next-place-artwalk-b7.ts) — the stale pin
+  survived a prior ALL_RECONCILED. Quote-agnostic regexes landed; pre-fix
+  run correctly DRIFTed on exactly the stale b7 pin; post-fix
+  ALL_RECONCILED with coverage UP (32→33 pins, 24→29 anchors — five
+  minified-placer anchors now actually verified).
+- Re-pins (3 lane-owned files): next-place-artwalk-b7.ts, artwalk49-b7-reseat.ts
+  (re-pinned HL proven live: host gate passes, ALREADY_EXACT, zero verbs),
+  artwalk49-band-decode.ts jobs table.
+- Foreign defect reported, not touched: review-night-core.ts (night lane's
+  pin table) still pins shrine 53709062 — night's next tick should re-pin.
+Zero world mutations this tick (reconcile + reseat probe are read-only;
+reseat emitted zero verbs). Lane still holds for Bill: counting-series
+eye-gate verdicts, a Phase F fresh commission, or a queue widening.
+
 ### [artwalk-66] PIPELINE HOLD (2026-09-06) — CLOSED (hold, zero mutations)
 
 Seventh consecutive steady hold tick. Gate ALL PASS real exit 0 at HEAD
