@@ -1815,3 +1815,35 @@ no visual PASS claimed.
 - Zero world mutations, zero uploads, zero shared-budget use, no visual
   PASS claimed. No un-shard clock running (shard empty at source, not
   idle).
+
+---
+
+## dress-52 (2026-09-06, pipeline tick 31) — HOLD
+
+- Shard: EMPTY at source at HEAD 02757f9 (nine Round-1 rows terminal:
+  5/29/31 DROPPED native rejudge, 30 NATIVE-DROPPED survey-2, 32/33/34/
+  37/38 EXECUTED reseats, 39 routes improve-own, 13 fountain DRESS-domain
+  off-limits per Bill). Round-2 intake scanned fresh: woodyard/welcome/
+  potter/court route IMPROVE-lane primary per town-4 routing — zero
+  nx-dress. SURVEY-PLAN latest tick 12, no survey-14+ intake. REPAIR-
+  REGISTER zero nx-dress lines.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh recount by BOTH
+  methods: id-method (approach-sw-lamp-001-l r39.7, -002-l r55.4,
+  nx-mile-sw-013-l r64.0) AND corrected-quadrant method (x<0, z<0) —
+  exactly 3 live r>=35 SW lights, spend 0 of 3.
+- Verdicts: zero in ledger tail AND eye-gate packet fd677cae unchanged
+  (md5 verified fresh, zero VERDICT lines).
+- Hold verification: standing gate ALL PASS real exit 0 at HEAD 02757f9;
+  fresh live census 259 (HTTP 200 first fetch), id-set diff vs dress-50
+  capture 0 new / 0 gone; 11/11 district installs PIN_EXACT lib+pos+yaw+
+  comp-empty via direct live-vs-live equality against plan pins; 27
+  nx-dress = 11 fleet + 16 legacy intact; census lights 38; interlane md5
+  f6254cd0 steady.
+- Probe self-catch disclosed (quadrant-convention class, 8th consecutive
+  tick-class): first SW filter keyed x<0 AND z>0, which is the NW
+  quadrant under the world's +z=north convention — the returned ids
+  (approach-nw-*) caught it immediately; recount by id-method agrees
+  exactly. World correct, probe wrong.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock running (shard empty at source, not
+  idle).
