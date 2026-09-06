@@ -45,7 +45,16 @@ round 4 gate stile DONE 2026-09-06 — NW QUEUE COMPLETE (all four NW items
 live). Remaining open item in ALL district queues: SW lamps only, blocked
 on Bill's lamp-budget policy (0 of 3 used). Chassis note: placer uploads
 before the already-live check, so idempotent reruns spend one deduped
-upload slot of the shared 4/min budget — acceptable, known wart.)
+upload slot of the shared 4/min budget — acceptable, known wart.
+
+**STATE AT dress-12 (2026-09-06)**: all four district queues COMPLETE
+(NW 4, NE 3, SE 3, SW 2 — eleven installations live). The four-district
+eye-gate packet was delivered ONCE at dress-12
+(`reviews/dress-districts-eye-gate.md`), folding in the SW lamp policy
+question (options a/b/c). The lane now HOLDS for verdicts: no new
+installation until Bill answers the packet or corrects a piece (a
+correction re-opens that district ahead of rotation). Sweep-8's routed
+doc defect (dress-7 clearance figure) corrected in place this tick.
 
 ## Siting log
 
@@ -449,7 +458,10 @@ upload slot of the shared 4/min budget — acceptable, known wart.)
   (0043 35.1° at 12.6m, wayside-0045 far, cairn-0048 far); rim corners
   82.1..83.9 ∈ [66,108] ✓; terrain flat (Δ2mm). (CORRECTED 2026-09-06,
   dress-9, per sweep-8 defect note: the placed R83 OFF0 tuple's effective
-  cell clearance is 2.58m, not 3.37m — lawful, ≥ the 1.4m pinch law.)
+  cell clearance is 2.58m, not 3.37m — lawful, ≥ the 1.4m pinch law.
+  CORRECTED AGAIN 2026-09-06, dress-12: the siting prose above still cited
+  the stale 3.37m figure in the final-pose line — now matches the sweep-8
+  decode. Clearance of record for this pose: **2.58m**.)
 - **Placement**: `se-dress7-place.ts` — hash gate → blocker-epoch guard
   (forest-0044, dress-3 stones, cairn-0043/0048, forest-0057) → fresh-census
   SAT + rim + arrival-cone gates (NAMED source-true exemption for
