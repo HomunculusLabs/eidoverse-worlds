@@ -452,3 +452,21 @@ STUDY COMPLETE (all facets judged; packet assembled).
   IMPROVE-PLAN. Lane HOLDS on Bill's verdict classes, now: sky facet-5,
   lamp-budget policy D2–D5+N6 (D1 closed), N5 detached-orb, N7 hierarchy
   inversion. Zero world mutations, zero renders judged, no PASS claimed.
+- night-15 (2026-09-06, pipeline-mode hold tick): eighth consecutive hold
+  with NO disposition change. Standing gate ALL PASS real exit 0 at HEAD
+  7362531 (artwalk-50 — itself a hold tick; no world-state commits since
+  night-14). Fresh census-15: 259 entities / 38 lights / zero
+  night-prefixed, set-steady AND tuple/lib-steady vs census-14 (full
+  per-entity diff: zero new, zero gone, zero pos/yaw/lib changes — the
+  census-14 sibling lib notes have not evolved further). Packet md5
+  cdc435a2 unchanged since night-7. APPROACH-PLAN still last touched
+  b1195ef, five defect-note sections stand (D1 CLOSED by owner; D2–D5
+  budget-bound, N1/N2/N4–N7 informational). Interlane md5 f6254cd0
+  steady. Zero actionable night- shard rows in IMPROVE-PLAN (both grep
+  hits remain dress-15 row prose). DRESSING-PLAN lamp ledger re-read:
+  SW lamps still 0 of 3, blocked on Bill a/b/c — unchanged. Same four
+  verdict classes outstanding: sky facet-5, lamp-budget policy D2–D5+N6,
+  N5 detached-orb, N7 hierarchy inversion. Second-rotation NW pass
+  remains the D1 verify path, deferred while the lane holds
+  (rotation-state law set at night-5, reaffirmed night-14). Zero world
+  mutations, zero renders judged, no PASS claimed.
