@@ -34,7 +34,7 @@ Rotation NW → NE → SW (→ SE if Bill opens a corridor).
 |---|-----|----------|-----------|--------|
 | 1 | NW | bend r58 (az306→315) | outer | **PLACED mile-1** |
 | 2 | NE | jink pivot r48 | outer | **PLACED mile-2** |
-| 3 | SW | midpoint r47 | outer | pending |
+| 3 | SW | midpoint r47 | outer | **PLACED mile-3** |
 | 4 | NW | district arrival r71 | inner (district-facing) | pending |
 | 5 | NE | district arrival r72 | inner | pending |
 | 6 | SW | district arrival r71 | inner | pending |
@@ -93,6 +93,25 @@ live leg decode shows a better verge shoulder.
   −0.033/−0.026). Unlit stone — NE lamp budget 0 spent (pivot flanked by the
   leg's own lamp rhythm). Verdict: PLACED_VERIFIED.
   NEXT: mile-3 SW midpoint r47.
+
+- **mile-3 (2026-09-06, overnight fleet)** — SW midpoint milestone pair.
+  Boundary: the SW leg's midpoint M = pol(47,217.25) = (−28.4488, −37.4121)
+  from the committed polyline (mkv3-sw-approach3.ts; straight radial az217.25
+  r24→71). Straight leg → pair straddles the PERPENDICULAR (pair axis
+  az307.25/127.25): `nx-mile-sw-005` village-side (−27.057, −0.052, −35.581)
+  and `nx-mile-sw-006` district-side (−29.841, −0.046, −39.243), ±2.3m off M.
+  Centerline clearance 2.3 − 0.46 paver half = 1.84m (paver + hem + pinch law
+  satisfied). Same proven GLB as mile-1/2 (village_mile_nw.glb, sha
+  `9459eaa3…` — degenerate fleet; accepted verdict carried by byte-identical
+  bytes, anchors MILESTONE-PLAN mile-1 + reviews/mile-nw-001). Placement:
+  hash-gated placer `mile-sw-place.ts` — fresh-census SAT clean (min solid
+  gaps 2.28m / 4.85m vs nx-struct-angler, both > 1.4 pinch law), NO upload
+  (lib already live on sibling nx-mile-nw-001 — no-upload law), 2 spawn verbs
+  @800ms, post-place tuple verify, idempotent rerun zero verbs. Terrain:
+  fresh preflight next-terrain-mile-sw.ts (M −0.050, posts −0.052/−0.046).
+  Unlit stone — SW lamp budget 0 spent (midpoint between the leg's own lamps
+  at r≈39.7/r≈55.4, 7.5m/8.5m away). Verdict: PLACED_VERIFIED.
+  NEXT: mile-4 NW district arrival r71 (inner, district-facing verge).
 
 ## Carried laws
 
