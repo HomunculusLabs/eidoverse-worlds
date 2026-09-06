@@ -57,7 +57,38 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 || sweep-35 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented domain-valid lib change at identical tuple: nx-town-row-cottage bd88cd38→add42aea — committed improve-15 execution, remove+spawn exact tuple, sha ×2 deterministic, door walk re-proven by its own lane; live bbox z max 2.673→2.72 cosmetic ridge-cap consequence, walk/SAT green; server /geom payload now also emits tris+parent — normalized out of the snapshot like-for-like per sweep-9 discipline) | ALL CLEAR 221/230/0 exit 0 | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, verdicts content-anchored, `[physics]` banner parse handled) + tier-2 thirteenth cycle potter 0.366 + market 0.389 ALL PASS | pins 14/15 + angler classified (live b3dfb28a UNCHANGED, quarantined sibling draft, racing law), carousel comps exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, ledger law exact (2370273), interlane md5 f6254cd0 stable, standing gate real exit 0 at e8a9eb0, snapshot rewritten normalized sha 06765b248775d8a3 drift ZERO post-rewrite | CLEAN SWEEP |
 || sweep-36 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented domain-valid lib change at identical tuple: nx-struct-mobius 04d088e1→5617f376 — committed struct-42 continuous-band rebuild @ 4b3275a, sha 5617f376 ×2 deterministic, exact-tuple re-place comp {}, PLACED_VERIFIED + idempotent + 5-leg walk 0.37 re-proven by its own lane; snapshot rewrite key-diff vs HEAD exactly this one lib field) | ALL CLEAR 221/230/0 exit 0 | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, legs run individually, verdicts content-anchored) + tier-2 fourteenth cycle inn 0.364 + stable 0.396 ALL PASS | pins 14/15 + angler classified (live b3dfb28a UNCHANGED, quarantined sibling improve draft, sweep-28..35 class, racing law), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 standing + 38 lights, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, ledger law exact 2370274 (first probe summed whole file; canonical post-[audit-balance] slice EXACT — corrected before verdict), interlane md5 f6254cd0 stable, standing gate real exit 0 at ece31e4, snapshot rewritten normalized sha 92086afc2ea7f562, post-rewrite drift vs live ZERO | CLEAN SWEEP |
 
+||| sweep-37 | 2026-09-06 | 259==259 fully steady (221 thing + 38 light; 0 arrivals, 0 departures, 0 drift on id+pos+yaw+lib vs BOTH the committed sweep-36 snapshot and the /tmp capture — first fully-quiet delta since sweep-24 (sweeps 25–36 each carried ≥1 classified lib change); no snapshot rewrite needed) | ALL CLEAR 221/230/0 exit 0 | tier-1 4/4 ALL_PASS (core 64/64 ok max-arr 0.38; NW 5 @ 0.38; NE 7 @ 0.38; SW 5 @ 0.37, legs run individually, verdicts content-anchored on status strings + per-leg ok counts) + tier-2 fifteenth cycle potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL_PASS | pins 14/15 + angler classified (live b3dfb28a unchanged, quarantined sibling improve draft, sweep-28..36 class, racing law), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, standing gate real exit 0 at ab7eb39, ledger law exact (base 2370285 at append — sibling holds appended mid-tick, absorbed) | CLEAN SWEEP |
+
 ## Findings register
+
+sweep-37: none. Census 259==259, the first fully-quiet delta since sweep-36
+(0 arrivals, 0 departures, 0 drift on id+pos+yaw+lib against BOTH the
+committed sweep-census baseline and the sweep-36 /tmp capture — verified
+two independent ways before calling it quiet; no snapshot rewrite, the
+committed file already describes the live world exactly). Overlap ALL
+CLEAR 221/230/0 exit 0. Tier-1 4/4 with per-leg ok counts verified (not
+just status strings): core 64/64 ok max-arr 0.38, NW 5 @ 0.38, NE 7 @
+0.38, SW 5 @ 0.37. Tier-2 fifteenth cycle: potter 6/6 @ 0.366 + market
+6/6 @ 0.389. Integrity: struct pins 14/15 + angler classified (live
+b3dfb28a UNCHANGED; local 8c1a5047 = known quarantined sibling improve
+draft, sweep-28..36 class, racing law — do not touch); carousel comp bag
+exact 7 + lib ce3633992d07055e; gate lamps 4/4 + 4 -l companions live;
+windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact; 38 lights;
+interlane md5 f6254cd0 stable. Probes: one of my own in-tick probes was
+wrong and corrected before any verdict (per-result walk filter keyed
+`status` where results carry `ok` — read 64/64 as "bad", corrected to the
+ok-field count; also my first gate-lamp grep keyed `gate`-in-id where the
+lamps are `nx-approach-lamp-{e,n,s,w}` — found by lib 18b69a6b instead)
+— probe discipline, village unaffected. Ledger base moved 2370274→2370285
+between gate and append (sibling holds appending mid-tick, normal
+pipeline life; law closed EXACT). Foreign working-tree dirt (IMPROVE-PLAN,
+mkvillage-houses.ts, village_tower3.glb, court placer, improve16 files,
+fleet watcher, struct terrain probes, review rigs) is sibling
+work-in-flight, untouched per interlane law. No defect notes written.
+Next tier-2 pair (sweep-38): inn + stable (sixteenth cycle). Standing
+note for Bill unchanged: improve/waysign/struct/dress/approach lanes hold
+with shards exhausted and Bill-bound verdicts pending; if verdicts stay
+pending expect continued quiet census deltas.
 
 sweep-36: none. Census 259==259 (0 arrivals, 0 departures). ONE documented
 lib change at identical tuple, classified domain-valid against the COMMITTED
