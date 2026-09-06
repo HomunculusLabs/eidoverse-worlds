@@ -24,7 +24,7 @@ Rotation: working edge outward from the E road, then craft edge.
 |---|--------------------|-------|-----------|--------|
 | 1 | `nx-town-inn` | inn | tankard + key | folded out — inn carries a BUILT-IN porch hanging sign (sign_board + brass wheel emblem + flanking lamps, mkv3-landmarks.ts:522-540); a second sign would duplicate the idiom. Defect note for Bill: the built-in emblem reads "wheel", not "tankard" — host redesign belongs to the owner lane, not waysign. |
 | 2 | `nx-town-stable` | livery | drawn horseshoe | DONE waysign-1 |
-| 3 | `nx-town-dyehouse` | dyer | dyed cloth bolt (flax-blue) | pending |
+| 3 | `nx-town-dyehouse` | dyer | dyed cloth bolt (flax-blue) | DONE waysign-2 |
 | 4 | `nx-town-kiln` | kiln | flame over chamber | pending |
 | 5 | `nx-town-potter` | potter | wheel in profile | pending |
 | 6 | woodyard host (id from census) | woodyard | saw-buck | pending |
@@ -42,6 +42,14 @@ the census + decode are truth.
   terminates at the stable, so visitors meet this wall head-on; open stalls
   face away. Anchor host-local [0, 0, 2.1], sign yaw = host yaw −0 (i.e.
   −π/2), plate flush on the wall face, glyph +z pointing down the road.
+- waysign-2 `nx-town-dyehouse` (lib 888be3597d2f772f, local source
+  hash-matches live): OPEN SHED — no front wall. Road-facing face = the
+  open front (host local +z, drying-line side), normal world dir (0.808,
+  0.589) toward the plaza approach. Anchor host-local [0, 2.05, 1.13] =
+  under the high front eave's rafter tail (roof tilted −0.12 rad, edge
+  z≈1.146 y≈2.08); TRUE hanging idiom, board in open air 0.15m proud.
+  Sibling artwalk rider nx-artwalk-b9-…-crossing-loom sits on the BACK
+  wall (host-local z −0.77) — no contact, verified in census.
 
 ## Siting + build log (filled per sign)
 
@@ -57,6 +65,25 @@ the census + decode are truth.
   [40.9, 0, ~0] yaw −π/2. Bill eye-check: walk the E road from the inn —
   the livery horseshoe should read on the stable's gable-end wall before
   you reach the stalls.
+
+- waysign-2 `nx-sign-dyer-001` dyer: mkv3-sign-dyer.ts, deterministic ×2,
+  sha 38416baede850b77…, 7 nodes (iron + sign_bone buckets + flat glyph
+  colors), no comps no lights. v1 REJECTED on zai-vision review (filled
+  neck slab read — chain links too small, glyph line-bar heavier than the
+  cloth, drip bead read as orphan stub); v2: three big alternating links
+  per side (r 0.032, ~2cm air gaps), corner hook rings, two dipped strips
+  (flax-blue + madder-red) on a thin bar — ACCEPT (isolated) + 18m stress
+  PASS on the 8m gate. Native vision provider down again this tick
+  (error 1210) — zai-vision fallback, recorded not claimed as native PASS.
+  Placer waysign-place-dyer-1.ts: rider-only SAT, host exemption explicit,
+  ground-layer exemption for the three approach-lane paver meshes
+  (sw-lane-003 compound bbox 29×38m blocked first run — dress-1 fat-bbox
+  precedent; lamps stay in the collision set), minGap +1.649 vs
+  nx-town-row-cottage, PLACED_VERIFIED 1 verb, idempotent rerun zero
+  verbs, live tuple [−22.087, 2.05, −22.334] yaw 0.941 (host-relative
+  anchor [0, 2.05, 1.13] exact). Distance note: flax-blue darkens toward
+  black past ~15m — heritage family color kept; flagged for Bill's
+  eye-check.
 
 ## Carried laws
 
