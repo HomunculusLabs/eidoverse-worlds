@@ -30,7 +30,21 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 
 | sweep-20 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-19 snapshot — ninth fully quiet delta of the wave; snapshot byte-identical 71867B, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs; NW + NE + SW approach legs) + tier-2 potter + market ALL PASS (fifth cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 + -l lights standing (38 lights live), woodyard 1f2c6f592095b204 exact, ledger law exact (2370207), interlane md5 1b933f3454e52504 NEW BASELINE (nvp-150 widen-only diff verified line-by-line), standing gate real exit 0 at HEAD bc843e5 | CLEAN SWEEP |
 
+| sweep-21 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-20 snapshot — tenth fully quiet delta of the wave; raw /geom snapshot byte-identical 71867B, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37) + tier-2 inn 0.364 + stable 0.396 ALL PASS (fifth cycle, all real exit 0) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 38 lights standing, woodyard 1f2c6f592095b204 exact, ledger law exact (2370208), interlane md5 1b933f3454e52504 stable, standing gate real exit 0 at HEAD c5ff981 (sibling improve-1 accepted by prefix gate) | CLEAN SWEEP |
+
 ## Findings register
+
+sweep-21: none. Steady-state census (259==259 vs the committed sweep-20
+snapshot — 0 arrivals, 0 departures, 0 drift on all shared ids; tenth fully
+quiet delta of the wave; raw /geom snapshot byte-identical 71867B so no
+rewrite was needed). All four phases verified fresh this wakeup with zero
+failing checks (tier-2 fifth cycle: inn 0.364 + stable 0.396 walked ALL
+PASS, all real exit 0). Standing gate real exit 0 at HEAD c5ff981 — the
+sibling improve-1 commit (round-1 analysis, zero world mutations, plan
+files only) was accepted by the prefix gate; interlane md5 unchanged so
+no protocol re-read was triggered beyond the fresh full read this wakeup.
+No defect notes written. Next tier-2 pair (sweep-22): hall + row-cottage
+(sixth cycle).
 
 sweep-20: none. Steady-state census (259==259 vs the committed sweep-19
 snapshot — 0 arrivals, 0 departures, 0 drift on all shared ids; ninth

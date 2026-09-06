@@ -3901,4 +3901,6 @@ fixes ≈ 6 F.)
 
 - [improve-1] round-1 analysis tick: fetched all 19 unique live store-min nx-town GLBs via /library/store/ (server serves DRACO shadows; new lane chassis review-model-draco.ts adds DRACOLoader), rendered 8 views each, judged at 18m gameplay vantage (ZAI fallback, native down 13th tick disclosed) — 6 CLEAN (dyehouse/gate/longhouse/market/potter/woodyard) / 12 unique models defective, ranked round-1 execution queue committed to IMPROVE-PLAN.md worst-first (hall see-through hole sev1; inn floating corner planes sev1; windmill floating gallery ring sev1; tower-house/stable/kiln sev2; mapboard/monument sev3); zero world mutations (D+0, E+0)
 
-**Running total: 2370207 / 2000000**
+- [sweep-21] CLEAN SWEEP (tenth quiet delta): census 259==259 raw byte-identical 71867B vs sweep-20 snapshot (0 arrivals/departures/drift; 221 thing + 38 light); overlap ALL CLEAR 221 bbox non-light / 229 classified / 0 unclassified (sweep-sat-next.ts exit 0); walks tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37) + tier-2 inn 0.364 + stable 0.396 ALL PASS (fifth cycle, all real exit 0); integrity pins 15/15 bad [] + carousel comp bag exact 7 lib ce3633992d07055e + gate lamps 4/4 + 38 lights + woodyard pin 1f2c6f592095b204 exact + interlane md5 1b933f3454e52504 stable; standing gate real exit 0 at HEAD c5ff981 (sibling improve-1 accepted); zero findings, zero defect notes, zero world mutations; next tier-2 pair sweep-22: hall + row-cottage (sixth cycle) (D+0, E+1)
+
+**Running total: 2370208 / 2000000**
