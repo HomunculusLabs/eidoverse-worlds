@@ -339,6 +339,50 @@ Two-way MCPL ALL_PASS (5 legs, max 0.37, baseline-identical). Read18 PASS
 eye-check: SW gate at night — quiet warm bead line between the lamps; by day
 the pale pillars read as path-edge markers.
 
+### approach-14 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD 8566495 (absorbing siblings struct-41,
+improve-14, dress-22, approach-13); interlane md5 f6254cd0 steady. Shard
+routing verified at source: IMPROVE-PLAN rows 16 (sw-lane-003) and 36
+(nw-lane-001) both EXECUTED (approach-4/5); zero OPEN rows route to
+nx-approach- (prose count stale; routing read from rows). Own queue: three
+legs stand PLACED_VERIFIED, D1/D2/D4-leg-component closed in-budget; SE leg
+awaits Bill's a/b/c siting call (his alone); D3 + D5 + N5-N7 remain Bill
+budget/verdict classes. Cheap lawful hold verification (fresh live census
+259, approach domain 17): all three leg libs PIN_EXACT (nw dc256065879371d8
+post-D1, ne dc52264c04cfe5bb post-D2, sw fb04a144cc1fc458 post-D4), six leg
+`-l` lights standing at authored positions, four gate lamps + companions
+untouched (18b69a6bb2f5862f). Zero world mutations; no visual PASS claimed.
+Standing eye-check pointer (delivered once each at approach-6/7/13): Bill at
+the NW/NE/SW gates at night for the three quiet bead cadences.
+
+Interrupted-window recovery named (approach-14 completion tick): the prior
+window died after writing this section but before ledger append + commit.
+This tick re-verified every claim fresh — gate ALL PASS real exit 0 at HEAD
+a7949d0, shard rows 16/36 EXECUTED at source, census 259/domain 17 pins
+exact as listed above — and closed the bookkeeping gap with one ledger
+append + this commit. Zero world mutations.
+
+### approach-15 (2026-09-06): pipeline-mode hold tick — approach-14 plan-file commit recovery
+
+Same interleaving class the approach-14 section itself described, one file
+over: the approach-14 ledger entry reached HEAD inside sibling night-34's
+snapshot (5e3af98 staged IMPROVEMENTS.md), but the approach-14 window's own
+commit never landed — APPROACH-PLAN.md carried its section as uncommitted
+lane-owned dirt until this tick. This tick re-verified everything fresh
+before committing: gate ALL PASS real exit 0 at HEAD f6e0a24 (artwalk-67
+absorbed); interlane md5 f6254cd0 steady; shard routing read at source
+(IMPROVE-PLAN rows 16/36 both EXECUTED, zero OPEN rows route to
+nx-approach-); fresh live census 259 / approach domain 17 / leg lights 6 +
+4 gate companions / night-prefixed 0: all three leg libs PIN_EXACT
+(nw dc256065879371d8, ne dc52264c04cfe5bb, sw fb04a144cc1fc458), six leg
+`-l` lights standing at authored positions, four gate lamps untouched
+(18b69a6bb2f5862f). Own queue unchanged: three legs PLACED_VERIFIED,
+D1/D2/D4-leg closed in-budget; SE leg awaits Bill's a/b/c siting call (his
+alone); D3/D5 + N5-N7 remain Bill budget/verdict classes. Zero world
+mutations, zero uploads, no visual PASS claimed; bookkeeping closed with
+one ledger append + one commit staging exactly the two lane-owned paths.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.
