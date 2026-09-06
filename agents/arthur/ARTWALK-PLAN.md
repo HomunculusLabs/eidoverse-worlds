@@ -1322,3 +1322,22 @@ markers; register 0 artwalk items; no Phase F commission, no widening. Zero
 world mutations, zero shared-budget use, no visual PASS claimed. Lane HOLDS
 for Bill's counting-series eye-gate verdicts, a Phase F fresh commission, or
 a queue widening.
+
+### [artwalk-74] PIPELINE HOLD (2026-09-06, 13th consecutive)
+
+Gate ALL PASS real exit 0 at a3fa291 (waysign-26 at tip). Fresh reads: loop
+file, ARTWALK-PLAN, INTERLANE-PROTOCOL; ledger max re-derived immediately
+before append (artwalk-73 -> this tag). SHARD EXECUTION verified at source:
+routing row 25 terminal (executed artwalk-52, re-proven artwalk-71); zero
+OPEN IMPROVE-PLAN rows route nx-artwalk-* — defect rows 1..39 are
+nx-town/struct/dress/approach/sign domains; improve-13/15 only NAME artwalk
+riders inside foreign keep-out contracts. Three sibling commits since
+artwalk-73 (approach-21, dress-30, waysign-26) all zero-mutation holds. Hold
+verification: fleet reconcile ALL_RECONCILED exit 0 — 259 census / 54 riders
+/ 38 lights / 34 placers / 33 host pins / 29 anchors, coverage identical,
+zero verbs, zero uploads (this pass also re-proves every host pin against
+the live census — no reconciliation due). Eye-gate packet 48bea194
+unchanged, zero verdict markers; register 0 artwalk items; no Phase F
+commission, no widening. Zero world mutations, zero shared-budget use, no
+visual PASS claimed. Lane HOLDS for Bill's counting-series eye-gate
+verdicts, a Phase F fresh commission, or a queue widening.
