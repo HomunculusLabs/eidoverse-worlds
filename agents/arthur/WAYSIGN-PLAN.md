@@ -223,12 +223,14 @@ not tankard" — host redesign belongs to the owner lane (improve queue
 item, not waysign's), recorded here so it isn't lost.
 
 Rotation: R2-1 → R2-7 (worst-first provisional; re-rank after native
-re-judgment). NEXT OPEN: R2-3 (kiln) — R2-1 DONE waysign-8 (smithy live
+re-judgment). NEXT OPEN: R2-4 (woodyard) — R2-1 DONE waysign-8 (smithy live
 62a8c7fc, court-wall host truth corrected), R2-2 DONE waysign-9 (dyer
-live 8ce2081f, scale-not-hue root class). Each item: full chassis — host
-anchor re-derived from CURRENT tuple per host-rider law, rider-only SAT +
-exemption ladder, unlit by default, 8m gate. Native vision is primary
-judge; ZAI fallback only when native is down that tick, disclosed.
+live 8ce2081f, scale-not-hue root class), R2-3 DONE waysign-10 (kiln
+live ecbad903, dominant-tongue scale fix + bone lift). Each item: full
+chassis — host anchor re-derived from CURRENT tuple per host-rider law,
+rider-only SAT + exemption ladder, unlit by default, 8m gate. Native
+vision is primary judge; ZAI fallback only when native is down that tick,
+disclosed.
 
 ## ROUND 2 execution log
 
@@ -266,6 +268,32 @@ judge; ZAI fallback only when native is down that tick, disclosed.
   x/z byte-identical (SAT-neutral re-place). Re-place remove+spawn exact
   tuple, comp {} both sides, idempotent zero-verb rerun. R2 queue: R2-3
   kiln next.
+
+- waysign-10 `nx-sign-kiln-001` R2-3 DONE (emblem-collapse fix): native
+  re-judgment on exact live bytes be3d8504 (18m true host-mounted pose,
+  rejudge rig review-waysign10-kiln.ts with host + b12 film at live census
+  poses) CONFIRMED the finding — flame "right at the legibility threshold"
+  straight-on, tongue detail smears oblique; DROPPED "chains hairline"
+  (iso3 native: individually resolvable links; 18m dark-cap read = family
+  far-LOD, identical on accepted dyer/smithy). Root class = SCALE (R2
+  family). Build v5: glyph 46%→73% face width — ONE DOMINANT tongue +
+  short secondary, wide clear-bone notch (the "one more pixel of
+  separation" the native 18m judge asked for), hot tip 0.032→0.055 wide,
+  stacked ember feet (no z-fight), bone lifted 0xe4e4c2→0xefeccf (drum-
+  shadow value crush, dyer v3b precedent), chamber deepened 0x26221a.
+  JUDGE-CATCH (law 11 exercised): one post-fix native 18m full-frame read
+  inverted polarity ("orange panel, dark smudges") — PIXEL DECODE of the
+  exact render contradicted it (bone face 223,216,179; flame 95–100,45,6;
+  chamber 9,7,4; 4px bone notch resolvable) — re-judged with decoded
+  anchors + 4× nearest-neighbor crop: PASS 4/4 (two tongues, stepped
+  tapers, hearth gestalt, fire-trade parse), ensemble 18m PASS 4/4 (board
+  pops, clear of arch + hooping bands), 8m gate PASS 4/4 (chains read as
+  chain, bracket deliberate, no defects). Native vision was UP this tick
+  (first call 1210, retry succeeded; every judgment native, no fallback).
+  sha ecbad903 deterministic ×2, 7 nodes, envelope x/z byte-identical
+  (SAT-neutral); re-place remove+spawn exact tuple be3d8504→ecbad903,
+  comp {} both sides, idempotent zero-verb rerun; host truth re-verified
+  (kiln 4d8ef8fc = local bytes). R2 queue: R2-4 woodyard next.
 
 ## Carried laws
 

@@ -35,7 +35,7 @@ import { writeFileSync } from "node:fs";
 
 const g = new THREE.Group();
 const ironTex = texMat("iron", [0x5c5c60, 0x54545a], { rough: 0.4, metal: 0.55, scale: 2, stripe: 2, weights: [2, 1] });
-const boneTex = texMat("sign_bone", [0xe4e4c2, 0xd8d8b8], { rough: 0.9, scale: 2, weights: [3, 1] });
+const boneTex = texMat("sign_bone", [0xefeccf, 0xe2dfba], { rough: 0.9, scale: 2, weights: [3, 1] });
 const FLAME = 0xd98026, FLAME_HOT = 0xf2b035, EMBER = 0xb8501e;
 
 const texBox = (name: string, w: number, h: number, d: number, x: number, y: number, z: number, m: THREE.Material) => {
@@ -89,19 +89,32 @@ texBox("sg_face_back", 0.42, 0.32, 0.04, 0, -0.65, 0.53, boneTex);
 // not flames): each tongue is now a STEPPED TAPER leaning its own way —
 // segments shrink and shift horizontally toward a flicked hot tip, the
 // two tongues leaning OPPOSITE directions, hard flame→ember root boundary.
+// v5 (R2-3, waysign-10 — improve-2 finding re-judged on exact live bytes:
+// native 18m straight-on = "right at the legibility threshold", oblique 18m
+// = tongue detail smears to a generic orange blotch; CONFIRMED. Root class
+// = SCALE, same as R2-1/R2-2. DROPPED: "chains hairline" — iso3 shows
+// individually resolvable links; the 18m dark-cap read is family far-LOD,
+// identical on accepted dyer/smithy): glyph grows 46%→73% of face width,
+// 72%→81% of face height — ONE DOMINANT tongue + short secondary, wide
+// clear-bone notch between them (13–18% face width, the "one more pixel of
+// separation" the 18m judge asked for), hot tip 0.032→0.055 wide, ember
+// feet stacked (not coplanar — no z-fight). Bone lifted 0xe4e4c2→0xefeccf
+// for the drum-shadow value crush (dyer v3b precedent: the 18m judge read
+// the shadowed face as a "dark navy field"). Chamber deepened 0x3a352c →
+// 0x26221a for glyph contrast. All edits inside the face envelope →
+// x/z bbox unchanged, SAT-neutral re-place.)
 const glyphZ = [0.655, 0.495];
 for (const [fi, gz] of glyphZ.entries()) {
-    box(g, `glyph_chamber_${fi}`, 0.30, 0.045, 0.02, 0, -0.79, gz, 0x3a352c);
-    // flame A — tall tongue, left of center, leaning RIGHT, flicked tip
-    box(g, `glyph_a_seg1_${fi}`, 0.082, 0.075, 0.02, -0.062, -0.720, gz, FLAME);
-    box(g, `glyph_a_seg2_${fi}`, 0.062, 0.065, 0.02, -0.050, -0.650, gz, FLAME);
-    box(g, `glyph_a_tip_${fi}`, 0.032, 0.055, 0.02, -0.035, -0.5875, gz, FLAME_HOT);
-    box(g, `glyph_a_ember_${fi}`, 0.082, 0.035, 0.02, -0.062, -0.785, gz, EMBER);
-    // flame B — shorter tongue, right of center, leaning LEFT, flicked tip
-    box(g, `glyph_b_seg1_${fi}`, 0.065, 0.060, 0.02, 0.058, -0.725, gz, FLAME);
-    box(g, `glyph_b_seg2_${fi}`, 0.048, 0.050, 0.02, 0.048, -0.672, gz, FLAME);
-    box(g, `glyph_b_tip_${fi}`, 0.026, 0.045, 0.02, 0.036, -0.625, gz, FLAME_HOT);
-    box(g, `glyph_b_ember_${fi}`, 0.065, 0.028, 0.02, 0.058, -0.775, gz, EMBER);
+    box(g, `glyph_chamber_${fi}`, 0.34, 0.05, 0.02, 0, -0.785, gz, 0x26221a);
+    // flame A — DOMINANT tongue, left of center, leaning RIGHT, flicked tip
+    box(g, `glyph_a_ember_${fi}`, 0.15, 0.035, 0.02, -0.085, -0.7425, gz, EMBER);
+    box(g, `glyph_a_seg1_${fi}`, 0.15, 0.075, 0.02, -0.085, -0.6875, gz, FLAME);
+    box(g, `glyph_a_seg2_${fi}`, 0.115, 0.095, 0.02, -0.068, -0.6075, gz, FLAME);
+    box(g, `glyph_a_tip_${fi}`, 0.055, 0.06, 0.02, -0.050, -0.53, gz, FLAME_HOT);
+    // flame B — short secondary tongue, right of center, leaning LEFT
+    box(g, `glyph_b_ember_${fi}`, 0.10, 0.03, 0.02, 0.095, -0.745, gz, EMBER);
+    box(g, `glyph_b_seg1_${fi}`, 0.10, 0.058, 0.02, 0.095, -0.701, gz, FLAME);
+    box(g, `glyph_b_tip_${fi}`, 0.048, 0.052, 0.02, 0.078, -0.646, gz, FLAME_HOT);
 }
 
 mergeByMaterial(g, "sgkiln");
