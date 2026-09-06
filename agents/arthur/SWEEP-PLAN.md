@@ -66,6 +66,55 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 
 || sweep-40 | 2026-09-06 | 259==259 fully quiet (221 thing + 38 light; 0 arrivals, 0 departures, 0 drift on id+pos+yaw+lib vs the committed sweep-39 baseline — second fully-quiet delta since sweep-37; no snapshot rewrite, committed file already exact) | exit 4 SWEEP COVERAGE HOLE on exactly the four bbox:null lamps (217 bbox non-light, 215 classified, 0 unclassified — correct loud state per R-120) | tier-1 4/4 per-leg verified (core 64/64 ok ALL_PASS, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 eighteenth cycle inn 6/6 + stable 5/5 ALL PASS | pins 14/15 + angler classified (racing law), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 bbox:null (R-120) + 4 companions live @ 1.96m, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, ledger law exact 2370298 at gate | FINDINGS — R-120 note 3 appended (escalation law) |
 
+|| sweep-41 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented lib change at identical tuple: nx-struct-soundmirror 5216db0a->f313e59a — committed struct-45 true-bowl rebuild @ 14fc884, PLACED_VERIFIED + idempotent + 6-leg walk 0.354m by its own lane — domain-valid, not drift; snapshot rewritten normalized sha 11a86e0cf7714cea, post-rewrite drift ZERO) | exit 4 SWEEP COVERAGE HOLE on exactly the four bbox:null lamps (217 bbox non-light, 215 classified, 0 unclassified — correct loud state per R-120) | tier-1 4/4 per-leg verified (core 64/64 ok ALL_PASS 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37 — 81/81 legs) + tier-2 nineteenth cycle potter 6/6 + market 6/6 ALL PASS | pins 14/15 + angler classified (racing law), carousel comp bag exact 7 + lib ce3633992d07055e, belltower 2419fbc5 + ladder comp live in bag (corroborates improve-17), gate lamps 4/4 bbox:null (R-120) + 4 companions live @ 1.96m, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, ledger law exact 2370302 at gate | ESCALATION — R-120 note 4 appended (escalation law): placer now committed but pins the truncated prefix; no lane owns the fix (no town lane in fleet, no improve row) |
+
+sweep-41: FOURTH-ESCALATION sweep, no new findings. R-120 (Sev 1)
+re-proven independently with fresh evidence (truncated lib
+store/18b69a6bb2.glb 404 / full 16-hex 18b69a6bb2f5862f 200 with
+7648B, /geom bbox:null x4 at the unchanged off-axis tuples, hardened
+SAT exit 4 on exactly those four, companions -l all live at 1.96m) —
+now UNADDRESSED a FOURTH consecutive sweep; note 4 appended to
+REPAIR-REGISTER per the escalation law and named for Bill. NEW
+evidence in note 4: the off-axis placer IS NOW COMMITTED (town-2 @
+15a5dec) but pins PINNED_SHA="18b69a6bb2" (10-hex prefix,
+next-place-gate-lamps-offaxis.ts:19) with a prefix-INCLUDES lib
+check — the town lane's own idempotent rerun would PERPETUATE the
+truncated lib rather than fix it; and the running fleet pipeline
+(fleet-pipeline.sh) carries NO town lane
+(LANES="improve struct dress approach waysign sweep artwalk night")
+while IMPROVE-PLAN has no gate-lamp row (town-4's "routed to improve"
+did not include R-120) — so NO lane currently owns this fix. R-121
+(Sev 2) unchanged (lamp-n tuple identical); fix travels with the
+R-120 re-spawn. Census 259==259 (0 arrivals, 0 departures, ONE
+documented lib change classified domain-valid: soundmirror
+5216db0a->f313e59a = committed struct-45 @ 14fc884, corroborated by
+its ledger prose + live comp {} + PLACED_VERIFIED tuple; snapshot
+rewritten normalized sha 11a86e0cf7714cea, one-field change asserted
+pre-write, post-rewrite drift ZERO). Overlap: exit 4 loud on exactly
+the four R-120 lamps (215 classified, 0 unclassified). Tier-1 4/4
+per-leg verified 81/81: core 64/64 ok max 0.38 ALL_PASS, NW 5/5 @
+0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37. Tier-2 nineteenth cycle: potter
+6/6 + market 6/6 ALL PASS. Integrity: pins 14/15 + angler classified
+(live b3dfb28a unchanged, quarantined sibling draft, racing law);
+carousel comp bag exact 7 + lib ce3633992d07055e; belltower 2419fbc5
++ ladder comp live in bag (corroborates improve-17); windmill
+0993836012d1b17d + woodyard 1f2c6f592095b204 exact; 38 lights;
+interlane md5 f6254cd0 stable; ledger law exact 2370302 at gate
+(survey-13 + dress-53 interleaves absorbed, both D+0/E+0, running
+total unchanged). Probes this tick: first "full 16-hex" curl used a
+literal-x placeholder path (invalid — 404 for the wrong reason),
+re-proven with the real hash 18b69a6bb2f5862f (200); walk-JSON
+schema-guess hit legs-as-int (core emits results[] + int legs),
+verdicts re-anchored on per-leg ok-counts + status strings. Foreign
+working-tree dirt (improve18 decodes/review, terrain probes,
+core-paths GLB/review, tower3, court placer, fleet watcher) is
+sibling work-in-flight, untouched per interlane law. Next tier-2
+pair (sweep-42): inn + stable (twentieth cycle). Standing note for
+Bill unchanged: with R-120 open expect exit 4 to persist until a
+town-style wakeup re-spawns the four lamps on the full 16-hex lib —
+correct loud state, not a tool defect; the four gate landmarks
+remain invisible meanwhile.
+
 sweep-40: THIRD-ESCALATION sweep, no new findings. R-120 (Sev 1) re-proven
 independently with fresh evidence (truncated lib 404, full 16-hex 200 with
 7648B, bbox:null x4 at off-axis tuples, SAT exit 4 on exactly those four,
