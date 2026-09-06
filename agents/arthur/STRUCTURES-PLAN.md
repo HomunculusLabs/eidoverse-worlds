@@ -126,16 +126,21 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    derived gaps filled; both build lanes wait on Bill's eye-gate verdicts.
    Refine pool remaining: Observatory dome-shadow (source-judged, low).**
 
-## LANE STATE: SHARD EXECUTION (struct-37, 2026-09-06)
+## LANE STATE: SHARD EXECUTION (struct-38, 2026-09-06)
 
 Commissioned queues exhausted (Rounds 1–3 complete, refine pool empty);
 per Bill's improve-5y 5-10x directive this lane now executes OPEN
 improve round-1 rows matching `nx-struct-` worst-first. struct-36 = row 11
 skene (EXECUTED, live). struct-37 = row 12 skymirror (EXECUTED, live —
 recovered the dead sibling window whose uncommitted draft sat in the tree
-since 12:54). Oldest OPEN uncontested rows after struct-37: row 13
-millrace (Sev 2, survey-2 NATIVE-CONFIRMED — intake note in SURVEY INTAKE
-above), row 14 spiralfolly (Sev 2, survey-1 NATIVE-CONFIRMED). Row 10
+since 12:54). struct-38 = row 13 millrace (EXECUTED, live — materials
+root-caused at glbwrite decode: plain mat() buckets exported with NO glTF
+material; water/reeds/pin rendered COLOR_0 × loader-default metal-1 =
+near-black sheenless. Fix: canon water material via the emissive lane,
+launder flume + chute + pour for millrace identity, stemmed gold bead,
+clumped reeds. Lib d2f46768→6e82dd2e at the exact standing tuple).
+Oldest OPEN uncontested rows after struct-38: row 14 spiralfolly (Sev 2,
+survey-1 NATIVE-CONFIRMED — intake note in SURVEY INTAKE above). Row 10
 angler: in-flight sibling improve window (uncommitted draft 8c1a5047 +
 reviews/improve10-struct-angler/ 12:04) — do NOT touch until it lands or
 the un-shard rule fires. Open with Bill: R2-3 relocation options
@@ -180,6 +185,7 @@ the un-shard rule fires. Open with Bill: R2-3 relocation options
 | struct-35 | ROUND 3 CLOSE | fleet pin check | — | — | 26/26 pins exact, 0 drift, gate ALL PASS |
 | struct-36 | SHARD ROW 11: skene wall-body fix | exact standing tuple (−23.32, 0.0447, 48.05) | — | π | LIVE, lib 3a62ee83→df7f7c43, walk 4/4 re-verified |
 | struct-37 | SHARD ROW 12: skymirror open-cup rebirth | exact standing tuple (24, −0.05395918, −35.5) | 0 | 0 | LIVE, lib 8331ba88→782eb864, circuit re-verifiable (folly, non-enterable) |
+| struct-38 | SHARD ROW 13: millrace material+identity fix | exact standing tuple (−37.59, −0.04526, −13.68) yaw −π/2 | — | — | LIVE, lib d2f46768→6e82dd2e, bank walk 5/5 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -1154,3 +1160,51 @@ source idle since Aug 30, comp bag {} — clean to take.
 face the wall — the niches should now read as deep recesses in solid
 stone (no sky through bays), the gold bead at the crown center; the
 mullion rhythm across the span at an angle.
+
+## struct-38 — SHARD ROW 13: MILLRACE MATERIAL + IDENTITY FIX (improve round-1)
+
+Survey-2's NATIVE 18m judgment of the live bytes (d2f46768) listed five
+findings. Re-judged natively on the exact live bytes this tick (before
+any edit): 4/5 CONFIRMED — floating pin speck, no-sheen basin, hairline
+reeds, fountain-not-millrace identity. The open-slit finding DROPPED
+(bands already read as shadowed risers at 18m).
+
+- Root cause (glbwrite decode, probe pitfall 11 satisfied): the millrace
+  was built with plain `mat()` for water/reeds/pin — and `toGLB` only
+  emits a real glTF material for texMat or emissive meshes. Three of five
+  merged buckets exported `primitive.material: undefined` and rendered
+  COLOR_0 × the loader's default material (metal-1, no envmap) —
+  near-black, sheenless. One cause, three findings.
+- Fix: canon WATER material through the emissive lane (real material:
+  baseColor 0x506a78, rough 0.25, metal 0.5 — polish-271 numbers — plus
+  faint 0x2e4a58 @ 0.45 glow per polish-281 shadowed-water law, same
+  numbers as bakery-cistern97). Textured gold (0xa09832 family,
+  waysign law) for the sluice lift: r0.028 stem through the gate top +
+  r0.09 bead. Identity fix: timber launder (open-top trough on two
+  trestle post pairs + cross-braces) carrying a water ribbon 2.2m
+  uphill, an inclined drop tongue onto the head pool, and a stone chute
+  + water pour descending into step 1. Reeds re-clustered: 5 clumps × 3
+  stalks at r0.035–0.045.
+- Build: sha d2f46768af7dd0ae → 6e82dd2e1eb8403e deterministic ×2;
+  6 nodes; bbox z extended −1.3→−3.8 (launder), y max 1.71→2.0 — still
+  furniture-solid class (<2.2).
+- Judged NATIVE: day gameplay PASS (step water = weir-pools with stone
+  cross-bands, reeds read with thickness, bead attached); top view PASS
+  (launder channel feeds the head on-axis — millrace identity); night
+  PASS 3/3 (moonlit water not black hole, warm bead point, quiet glow
+  — no fire read). The gameplay-camera "flume missing" FAIL was a
+  camera-sideness artifact (rig's gameplay camera views from the basin
+  side; the live approach is the windmill side) — disproven by the top
+  view + decoded timber bbox.
+- Placement: fresh live SAT cleared (launder extends 2.5m toward the
+  windmill; gap held); remove+spawn at the exact standing tuple
+  (−37.59, −0.04526, −13.68) yaw −π/2; comp {} both sides;
+  PLACED_VERIFIED 2 verbs; idempotent rerun zero verbs; standing 5-leg
+  bank walk re-run ALL_PASS (max 0.38m).
+- Row 13 annotated [EXECUTED struct-38] in IMPROVE-PLAN.md same tick.
+
+**Bill should eye-check**: walk the windmill road to the race — the
+raised timber flume now feeds the head box from the mill side (the
+millrace read), water stepping down weir-pools to the basin; at dusk the
+whole watercourse should read faintly moonlit blue with one warm gold
+bead at the sluice.

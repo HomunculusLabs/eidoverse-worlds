@@ -296,6 +296,21 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     fountain, millrace function absent. Sev 2 stands. Evidence:
     reviews/survey2-sev2-slice/millrace/gameplay.png; intake note
     STRUCTURES-PLAN SURVEY INTAKE]
+    [EXECUTED struct-38: native re-judge CONFIRMED 4/5 (floating pin
+    speck, no-sheen basin, hairline reeds, fountain-not-millrace
+    identity), DROPPED open-slit finding (bands already read as
+    shadowed risers at 18m); root cause = plain mat() water/reeds
+    exported NO glTF material -> COLOR_0 x loader-default metal-1
+    material rendered near-black sheenless; fix: real water material
+    via emissive lane (canon 0.25/0.5 + polish-281 0x2e4a58@0.45),
+    timber launder flume on trestle posts + drop tongue + stone
+    chute + visible pour, stemmed textured-gold bead 0.09, clumped
+    reeds r0.035-0.045 x3; sha d2f46768->6e82dd2e x2 deterministic,
+    6 nodes; day gameplay PASS (weir-pools not slits, reeds read,
+    bead attached), top view PASS (launder feeds head on-axis),
+    night PASS 3/3 (moonlit water, warm bead, quiet); remove+spawn
+    exact tuple, comp {} both sides, PLACED_VERIFIED + idempotent
+    0-verb rerun, 5-leg bank walk ALL_PASS 0.38m]
 14. `nx-struct-spiralfolly` — floating gold ring; detached treads; gaps;
     no top landing. Sev 2. (guard: none) [NATIVE-CONFIRMED survey-1:
     treads detached blocks with gaps, upper turns drift off core, gold
