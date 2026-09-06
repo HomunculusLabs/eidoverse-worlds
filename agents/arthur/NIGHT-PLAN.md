@@ -649,12 +649,35 @@ STUDY COMPLETE (all facets judged; packet assembled).
   on ['entities'] (shape trap recurred, corrected before trusting). D1 pin
   nx-approach-nw-lane-001 lib dc256065879371d8 exact steady. Packet md5
   cdc435a2 unchanged since night-7. APPROACH-PLAN still last touched
-  b1195ef, five defect-note sections stand (D1 CLOSED by owner; D2-D5
-  budget-bound; N1/N2/N4-N7 informational). Interlane md5 f6254cd0 steady.
+  b1195ef, five defect-note sections stand (D1 CLOSED by owner; D2–D5
+  budget-bound; N1/N2/N4–N7 informational). Interlane md5 f6254cd0 steady.
   Zero actionable night- shard rows in IMPROVE-PLAN (night- is an
   observer). DRESSING-PLAN lamp ledger re-read: SW lamps still 0 of 3,
   blocked on Bill a/b/c. Same four verdict classes outstanding: sky
-  facet-5, lamp-budget policy D2-D5+N6, N5 detached-orb, N7 hierarchy
+  facet-5, lamp-budget policy D2–D5+N6, N5 detached-orb, N7 hierarchy
   inversion. Second-rotation NW pass remains the D1 verify path, deferred
   while the lane holds. Zero world mutations, zero renders judged, no
   PASS claimed.
+- night-25 (2026-09-06, pipeline-mode hold tick): eighteenth consecutive
+  hold with NO disposition change. Standing gate ALL PASS real exit 0 at
+  HEAD 6915848 (artwalk-56, itself a zero-verb hold tick; sweep-32
+  between ticks is a zero-mutation audit). Fresh census-25: 259 entities
+  / 38 lights / zero night-prefixed, 0 new / 0 gone vs census-24 with ONE
+  domain-valid sibling lib change at identical tuple: nx-approach-ne-
+  lane-002 a27bc9a2 -> dc52264c (approach-7 NE leg work in flight — its
+  placer/review/terrain sources sit untracked in the working tree, plan
+  not yet committed; kind=thing comp {} pos [0,0,0] lane-entity
+  convention, light-set byte-equal at 38, ZERO lights touched, nothing in
+  this register or the packet cites it; capture /tmp/night-census-25.json).
+  D1 pin nx-approach-nw-lane-001 lib dc256065879371d8 exact steady.
+  Packet md5 cdc435a2 unchanged since night-7; packet evidence dirs clean
+  at HEAD (durable since night-6). APPROACH-PLAN still last touched
+  b1195ef, five defect-note sections stand (D1 CLOSED by owner; D2–D5
+  budget-bound; N1/N2/N4–N7 informational). Interlane md5 f6254cd0
+  steady. Zero actionable night- shard rows in IMPROVE-PLAN (night- is an
+  observer; routing covers struct/dress/approach/sign/town only).
+  DRESSING-PLAN lamp ledger re-read: SW lamps still 0 of 3, blocked on
+  Bill a/b/c. Same four verdict classes outstanding: sky facet-5,
+  lamp-budget policy D2–D5+N6, N5 detached-orb, N7 hierarchy inversion.
+  Second-rotation NW pass remains the D1 verify path, deferred while the
+  lane holds. Zero world mutations, zero renders judged, no PASS claimed.
