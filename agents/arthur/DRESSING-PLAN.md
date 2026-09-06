@@ -1717,3 +1717,42 @@ no visual PASS claimed.
 - Zero world mutations, zero uploads, zero shared-budget use, no
   visual PASS claimed. No un-shard clock running (shard empty at
   source, not idle).
+
+---
+
+## dress-49 (2026-09-06, pipeline tick 28) — HOLD
+
+- Shard: EMPTY at source — IMPROVE-PLAN.md clean at HEAD 14fc884
+  (struct-45); nine Round-1 rows terminal (5/29/30/31 DROPPED native
+  rejudge, 32/33/34/37/38 EXECUTED reseats, 39 routes nx-town
+  improve-own, row 13 fountain DRESS-DOMAIN off-limits per Bill);
+  round-2 SURVEY CANDIDATES intake carries zero nx-dress;
+  REPAIR-REGISTER zero nx-dress lines.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh recount:
+  SW-quadrant r≥35 = exactly 3 live lights (nx-approach-sw-lamp-001-l,
+  -002-l, nx-mile-sw-013-l kind=light). Spend 0 of 3.
+- Verdicts: zero in ledger tail AND eye-gate packet fd677cae unchanged
+  (md5 verified, zero VERDICT lines).
+- Hold verification: standing gate ALL PASS real exit 0 at HEAD
+  14fc884 (ledger law 2370302 EXACT); fresh live census 259 (HTTP 200
+  first fetch), 11/11 district installs PIN_EXACT lib+tuple+yaw+
+  comps-empty; 27 nx-dress = 11 fleet + 16 legacy intact; lights 38;
+  interlane md5 f6254cd0 unchanged.
+- Probe self-catch (5th consecutive tick-class, disclosed): first
+  parse read 9/11 with 4 lib DRIFTs — three probe defects, zero world
+  defects: (a) bare-radian yaws without unit markers (hedge −2.36,
+  skeps 2.3562) plus a trailing-period float capture ('2.3562.');
+  (b) hedge reseat block omits the comma before 'yaw' (regex
+  anchored on '[,] yaw' skipped the whole block); (c) the four reseat
+  pins (hedge/stile/skeps/woodstack, dress-18..21) live in the
+  pre-header reseat-ledger region of this plan — header-based
+  sectioning dropped it. Attribution-independent fix: '(was hex)'
+  supersession map + pre-header pseudo-section; 16 mentions parsed,
+  11 unique, reseat histories correct (woodstack 9→19, hedge 1→21,
+  skeps 5→20, stile 11→18, cairn 7→15). World correct, probe wrong.
+- Mid-tick interleave absorbed: sweep-40 appended + committed between
+  tick-start read and this append — caught by the pre-append tail
+  assert, absorbed per lane law.
+- Zero world mutations, zero uploads, zero shared-budget use, no
+  visual PASS claimed. No un-shard clock running (shard empty, not
+  idle).
