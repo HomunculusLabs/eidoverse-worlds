@@ -323,6 +323,38 @@ compact stepped portal on the approach; three saddle arcs rising
 left-to-right, walkers passing under the lowest; at dusk the two gold
 summit pins mark the top of the ascent.
 
+
+## struct-48 — REFINE-CADENCE TICK: native re-judge debt clearance (2/4)
+
+48%3==0 refine tick; shard re-derived EMPTY at source fresh (14/14
+nx-struct rows terminal incl. round-2 intake scan: zero nx-struct rows).
+Binding law held per subject: fresh census tuples exact (hypar 750f82ee,
+mobius 5617f376, pendulum c32a35a8, soundmirror f313e59a — all ==
+local sha256), this-tick review-model.ts renders into struct48-*-rejudge.
+
+- Provider PARTIAL this tick: pendulum + mobius frames judged NATIVE;
+  hypar + soundmirror 1210 x2 + one paced retry each — debts REMAIN
+  OWED (flap law; frames banked as next-tick substrate).
+- **PENDULUM native PASS** — strings solid-continuous all nine (struct-41
+  fix confirmed), dash-band = decode-proven correct-physics nine-rod
+  shadow, bobs one family, identity reads pendulum wave.
+- **MOBIUS native PASS** — rim smooth (struct-42 rebuild confirmed at
+  native), posts connected, half-twist + crossing legible, identity
+  deliberate mathematical pavilion. Residual native seam-sliver note
+  (x490-640) decode-falsified by EXTENDED fresh ray-trace over the full
+  cited range: watertight band (576 verts, 0 dups, 0 open edges), y262-266
+  NEAR hits, y274-278 FAR-only aperture threads, 0 through-face rays.
+- Rig determinism disclosed: mobius/pendulum/soundmirror 8/8 identical
+  to struct-47 substrate; hypar 5/8 (front/back/aerial unstable fresh x2
+  on identical bytes — rig nondeterminism class, sha256 equality carries
+  the binding law; gameplay/night frames stable and banked).
+- Zero world mutations (D+0 E+0). No placement; standing tuples
+  re-verified via census this tick.
+
+**Bill should eye-check**: nothing new standing this tick; the two cleared
+subjects (mobius bandstand S side, pendulum wave NE path) carry their
+prior eye-check pointers unchanged.
+
 ## Siting log
 
 | tick | structure | site (deg/r) | world pos | yaw | verdict |
@@ -370,6 +402,7 @@ summit pins mark the top of the ascent.
 | struct-44 | SHARD ROW 25: observatory front-bay closure | exact standing tuple (16.48, −0.05244011, −40.8) yaw −0.3839 | — | — | LIVE, lib eb3c9b15→3d9d6ae1, door walk 5/5 |
 | struct-45 | SHARD ROW 26: soundmirror true-bowl rebuild | exact standing tuple (28.7, −0.02608747, −18) yaw 0 | 0 | — | LIVE, lib 5216db0a→f313e59a, circuit walk 6/6 0.354m |
 | struct-47 | R4-1 Meridian Stair (portal) | th276/R55 NW wedge | (5.7, −0.0378, −54.7) | 3.037 (lane radial, near face to village) | LIVE, 6-leg two-way walk 6/6 0.37m |
+| struct-48 | REFINE: native re-judge clearance | mobius + pendulum exact standing tuples (no placement) | — | — | 2/4 native debts CLEARED (mobius PASS, pendulum PASS); hypar + soundmirror still owed |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 

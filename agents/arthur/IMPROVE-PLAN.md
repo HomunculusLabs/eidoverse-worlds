@@ -610,6 +610,19 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     bytes) — disclosed to eye-gate; lib-swap re-place exact tuple, comp
     {} both sides, PLACED_VERIFIED 1 verb + idempotent 0-verb rerun;
     5-leg MCPL walk ALL_PASS 0.37m]
+    [NATIVE-rejudge struct-48 (refine-cadence tick; provider PARTIAL this
+    tick — mobius frame judged natively clean): binding law fresh (census
+    lib 5617f376 == local sha256, this-tick renders 8/8 byte-identical to
+    the struct-47 substrate); rim SMOOTH — struct-42 jag fix CONFIRMED at
+    native; posts connected (no hover); half-twist + edge-crossing cue
+    legible; identity DELIBERATE MATHEMATICAL PAVILION PASS. One residual
+    native note: thin seam-region sliver x490-640 — EXTENDED ray-trace
+    fresh over the full cited range: band watertight (576 verts, 0 dups,
+    0 open edges), rows y262-266 NEAR-face hits 12.1-12.9m, rows y274-278
+    FAR-only threads 21-23m through the designed open aperture, 0
+    through-face rays — DECODE+FALSIFIED (struct-42 aperture class, not a
+    slit). Row stays EXECUTED/closed. Evidence:
+    reviews/struct48-mobius-rejudge/gameplay.png]
 
 24. `nx-struct-amphi` — disconnected seating slabs; flat bowl; telephone
     pole. Sev 3. (nx-struct-amphi is a struct lane work — struct lane
@@ -902,6 +915,16 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     when provider returns; residual discloses as correct-physics nine-line
     shadow, not consolidated band. Evidence:
     reviews/struct41-pendulum/{before,after}/gameplay.png]
+    [NATIVE-rejudge struct-48 (fixed bytes c32a35a8, binding law fresh,
+    renders 8/8 deterministic): strings SOLID-CONTINUOUS all nine —
+    struct-41 rod-width fix CONFIRMED at native; rod ground shadows read
+    as dashes but struct-41 decode already proved dash centers align
+    EXACTLY with the nine rod x-positions — correct-physics nine-line
+    shadow, disclosed, not defect; bob shading variation is lighting-
+    only within one family; identity reads pendulum wave (frozen sine
+    form is the documented design). NATIVE re-judge debt CLEARED. Row
+    stays EXECUTED/closed. Evidence:
+    reviews/struct48-pendulum-rejudge/gameplay.png]
 36. `nx-approach-nw-lane-001` — banding/taper/raw boxes/lamp base. Sev 4.
     (guard: approach idle since Sep 3)
     [EXECUTED approach-5: native re-judgment on hash-bound renders of
