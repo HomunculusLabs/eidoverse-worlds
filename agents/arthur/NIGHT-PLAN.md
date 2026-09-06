@@ -762,3 +762,29 @@ STUDY COMPLETE (all facets judged; packet assembled).
   N7 hierarchy inversion. Second-rotation NW+NE passes remain the D1/D2
   verify paths, deferred while the lane holds. Zero world mutations,
   zero renders judged, no PASS claimed.
+- night-29 (2026-09-06, pipeline-mode hold tick): twenty-first consecutive
+  hold with NO disposition change. Standing gate ALL PASS real exit 0 at
+  HEAD f334474, absorbing two sibling commits since night-28's survey:
+  bd552f5 (approach-10 — zero-verb pipeline hold) and f334474 (dress-20 —
+  real same-tuple reseat of nx-dress-nw-skeps-001 under the improve-5y
+  shard directive; world-state change classified against this register:
+  dress-N domain (nx-dress-*), kind=thing, zero lights touched, nothing
+  in the night-read register or the decision packet cites skeps).
+  Fresh census-29: 259 entities / 38 lights / zero night-prefixed,
+  0 new / 0 gone vs census-28 with exactly ONE domain-valid sibling lib
+  change at identical pos/yaw/scale: nx-dress-nw-skeps-001
+  806f2c4e -> 87d2dd16 (capture /tmp/night-census-29.json).
+  D1 pin nx-approach-nw-lane-001 lib dc256065879371d8 AND D2 pin
+  nx-approach-ne-lane-002 lib dc52264c04cfe5bb both exact (fourth
+  consecutive both-pins-steady tick). Packet md5 cdc435a2 unchanged
+  since night-7, zero verdict markers. APPROACH-PLAN append-only since
+  b1195ef (only approach hold records since); five night-N defect-note
+  sections stand verbatim (D1+D2 CLOSED by owner; D3–D5 budget-bound;
+  N1/N2/N4–N7 informational). Interlane md5 f6254cd0 steady. Zero
+  actionable night- shard rows in IMPROVE-PLAN (night- is an observer).
+  DRESSING-PLAN lamp ledger re-read: SW lamps still 0 of 3, blocked on
+  Bill a/b/c. Same four verdict classes outstanding: sky facet-5,
+  lamp-budget policy D3–D5+N6 (D1+D2 closed), N5 detached-orb, N7
+  hierarchy inversion. Second-rotation NW+NE passes remain the D1/D2
+  verify paths, deferred while the lane holds. Zero world mutations,
+  zero renders judged, no PASS claimed.
