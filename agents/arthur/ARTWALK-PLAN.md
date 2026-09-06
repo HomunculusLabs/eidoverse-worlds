@@ -1283,3 +1283,26 @@ no shared-budget use, no visual PASS claimed (no visual change — rider bytes
 and world pose untouched). Lane HOLDS for Bill's counting-series eye-gate
 verdicts (reviews/artwalk-counting-series-eye-gate.md), a Phase F fresh
 commission, or a queue widening.
+
+### [artwalk-72] PIPELINE HOLD (2026-09-06) — CLOSED (hold, zero mutations)
+
+Eleventh steady hold tick (first after the artwalk-71 re-pin). Gate ALL PASS
+real exit 0 at HEAD 908cbe6 (night-38 sibling absorbed; waysign-25 at fbd9b79
+landed mid-tick after the gate run — a zero-mutation hold, normal interleave).
+Fresh reads: loop file, ARTWALK-PLAN, INTERLANE-PROTOCOL; ledger tail
+re-checked immediately before append (max artwalk-71 -> this tag). SHARD
+EXECUTION verified at source: routing table row 25 (54-rider host-anchor
+reconciliation stays artwalk's own) terminal — executed at artwalk-52,
+re-proven at artwalk-71 (the improve-15 row-cottage lib flip), and zero
+OPEN IMPROVE-PLAN rows route to nx-artwalk-*; improve-13/15 records only
+NAME artwalk riders inside foreign keep-out contracts. Eye-gate packet
+48bea194 unchanged, zero Bill verdict markers; register 0 artwalk items;
+no Phase F commission, no queue widening. Hold verification: fleet
+reconcile ALL_RECONCILED exit 0 (259 census / 54 riders / 38 lights / 34
+placers / 33 host pins / 29 anchors exact, coverage held at artwalk-67
+post-fix levels, zero verbs, zero uploads). All five sibling commits since
+artwalk-71 are zero-mutation holds — no host lib flips, no reconciliation
+due. Zero world mutations, zero shared-budget use, no visual PASS claimed.
+Lane HOLDS for Bill's counting-series eye-gate verdicts
+(reviews/artwalk-counting-series-eye-gate.md), a Phase F fresh commission,
+or a queue widening.
