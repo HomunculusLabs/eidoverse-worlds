@@ -246,6 +246,25 @@ only when native is down that tick, disclosed.
   vision restored per improve-5v). Remove+spawn exact tuple, comp {}
   both sides, idempotent zero-verb rerun. R2 queue: R2-2 dyer next.
 
+- waysign-9 `nx-sign-dyer-001` R2-2 DONE (emblem-collapse fix): re-judgment
+  on exact live bytes 38416bae (18m, host-mounted true pose) CONFIRMED the
+  finding — two strips collapsed to one 2–3px dark stroke, no red
+  perceptible. Native vision down this tick (error 1210, 2 attempts) —
+  ZAI fallback all passes, recorded not claimed native. Judge catch: the
+  HOST's own hanging blue cloth reads at 18m (0.5×0.55m at 0x526a96) —
+  failure was scale, not the blue itself. Build v3..v5: glyph to board-
+  filling dip pair (0.294×0.262 vs 0.42×0.32 face), bone gap between
+  strips, madder→weld (madder unresolvable vs dark frame at distance);
+  v3b close-view catch: eave shadow crushes value — flax lifted to
+  0x6f96d6; pale weld ≈ bone luminance caught by PIXEL DECODE of the 18m
+  render (measured ΔL≈3 vs bone) — weld deepened to saturated ochre-gold
+  0xc98030 (final rendered ΔL≈−80/−105 for the two strips). Final judge
+  ACCEPT: both blocks on the board, blue unambiguous, ochre holds, gap
+  1–2px minor residual. sha 8ce2081f deterministic ×2, 7 nodes, envelope
+  x/z byte-identical (SAT-neutral re-place). Re-place remove+spawn exact
+  tuple, comp {} both sides, idempotent zero-verb rerun. R2 queue: R2-3
+  kiln next.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host

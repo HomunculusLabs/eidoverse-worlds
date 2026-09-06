@@ -13,6 +13,21 @@
 // torus at each board corner; glyph is TWO dipped strips (flax-blue +
 // madder-red — the real vat colors) on a thin line-bar with hard dip
 // boundaries, wide cloth, board-filling scale.
+// v3b (same tick, close-view catch + 18m pixel-decode): eave shadow crushes
+// value and pale weld ≈ bone luminance (measured ΔL≈3 at 18m) — flax lifted
+// 0x526a96→0x6f96d6 (measured ΔL≈37 vs bone, reads), weld deepened to
+// saturated ochre-gold 0xe6bc4e→0xc98030 (L≈140, predicted ΔL≈45 vs bone;
+// back toward the family dark-on-pale law while keeping gold hue).
+// exact live bytes 38416bae by native-law re-judgment, ZAI fallback this
+// tick, native provider error 1210): at 18m the two strips collapsed to one
+// 2–3px dark stroke — no red perceptible, emblem illegible. Root class =
+// emblem scale/contrast (same as R2-1 smithy). Fix per smithy 71%-of-face
+// precedent + judge's specific directions: strips board-filling (glyph
+// 0.30×0.24 ≈ 71/76% of the 0.42×0.32 face), a clear BONE GAP between the
+// strips (gap does more work than hue), madder → WELLD yellow 0xc9a44a
+// (the real third vat color; value-separated from blue where madder was
+// not), flax lifted 0x526a96→0x5e7cb4 for distance margin. Dip semantic
+// kept: small bone header above the dye line, colored body = the majority.
 // tex-44 METAL V law: bracket/arms/chains in the forge iron; board flat
 // wood; faces bone; the dipped cloth is the message, not the construction.
 // Static, no comps, no lights (the dyehouse work lantern owns the night
@@ -26,7 +41,7 @@ import { writeFileSync } from "node:fs";
 const g = new THREE.Group();
 const ironTex = texMat("iron", [0x5c5c60, 0x54545a], { rough: 0.4, metal: 0.55, scale: 2, stripe: 2, weights: [2, 1] });
 const boneTex = texMat("sign_bone", [0xe4e4c2, 0xd8d8b8], { rough: 0.9, scale: 2, weights: [3, 1] });
-const FLAX = 0x526a96, MADDER = 0x7e4426, BONE = 0xe4e4c2;
+const FLAX = 0x6f96d6, WELLD = 0xc98030, BONE = 0xe4e4c2;
 
 const texBox = (name: string, w: number, h: number, d: number, x: number, y: number, z: number, m: THREE.Material) => {
     const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m);
@@ -61,18 +76,18 @@ box(g, "sg_board", 0.5, 0.4, 0.05, 0, -0.45, 0.19, 0x7c6832);
 // bone faces both sides (nvp-14 family law: blade signs are two-way)
 texBox("sg_face", 0.42, 0.32, 0.04, 0, -0.45, 0.235, boneTex);
 texBox("sg_face_back", 0.42, 0.32, 0.04, 0, -0.45, 0.145, boneTex);
-// v2 glyph: thin line-bar + TWO dipped strips (flax-blue, madder-red —
-// the real vat colors), wide cloth, hard dip boundaries, filling the face.
+// v3 glyph: board-filling DIP PAIR — thin dye-line bar, small bone headers
+// above it, two wide color bodies below (flax-blue left, weld-yellow right)
+// separated by a 0.035 BONE GAP (the gap reads where hue differences die).
+// Glyph box x[-0.15,0.15], y[-0.56,-0.32] ≈ 71/76% of the bone face.
 for (const [gi, gz] of [[0, 0.28], [1, 0.10]] as const) {
-    box(g, `glyph_line_${gi}`, 0.30, 0.015, 0.02, 0, -0.335, gz, 0xa09832);
-    // strip A — flax-blue dip, folded over the bar (flap above, body below)
-    box(g, `glyph_a_flap_${gi}`, 0.11, 0.03, 0.02, -0.075, -0.312, gz, BONE);
-    box(g, `glyph_a_top_${gi}`, 0.11, 0.07, 0.02, -0.075, -0.415, gz, BONE);
-    box(g, `glyph_a_dip_${gi}`, 0.11, 0.11, 0.02, -0.075, -0.505, gz, FLAX);
-    // strip B — madder-red dip, slightly shorter, right of center
-    box(g, `glyph_b_flap_${gi}`, 0.11, 0.03, 0.02, 0.075, -0.312, gz, BONE);
-    box(g, `glyph_b_top_${gi}`, 0.11, 0.06, 0.02, 0.075, -0.405, gz, BONE);
-    box(g, `glyph_b_dip_${gi}`, 0.11, 0.09, 0.02, 0.075, -0.480, gz, MADDER);
+    box(g, `glyph_line_${gi}`, 0.34, 0.02, 0.02, 0, -0.335, gz, 0x8a8030);
+    // strip A — flax-blue dip: bone header over the line, blue body below
+    box(g, `glyph_a_top_${gi}`, 0.13, 0.05, 0.02, -0.0825, -0.3625, gz, BONE);
+    box(g, `glyph_a_dip_${gi}`, 0.13, 0.20, 0.02, -0.0825, -0.4875, gz, FLAX);
+    // strip B — weld-yellow dip: same chassis, right of the bone gap
+    box(g, `glyph_b_top_${gi}`, 0.13, 0.05, 0.02, 0.0825, -0.3625, gz, BONE);
+    box(g, `glyph_b_dip_${gi}`, 0.13, 0.20, 0.02, 0.0825, -0.4875, gz, WELLD);
 }
 
 mergeByMaterial(g, "sgdyr");
