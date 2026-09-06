@@ -851,6 +851,33 @@ only when native is down that tick, disclosed.
   (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
   sign's build ahead of rotation.
 
+- waysign-35 HOLD (pipeline mode, 19th consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court brace closures); SHARD
+  section re-read at source post-improve-17: `nx-sign-*` remains the
+  routing law's own already-R2 example, open split struct/dress/
+  approach/improve-own only; improve-2's 7 sign findings are the
+  executed R2 historical record; item 7 stays parked on Bill's eye-gate.
+  Eye-gate packet md5 8b88b6b3 unchanged, zero Bill verdict markers.
+  Hold verification FRESH this tick: standing gate ALL PASS real exit 0
+  at HEAD 3cdc33a (ledger law 2370283 EXACT at gate time); live census
+  259 entities, exactly 8 `nx-sign-*` ids, no strays; all 8 riders
+  PIN_EXACT at ledgered libs AND world tuples (stable afee37dd
+  [40.9,0,0] yaw −π/2, dyer 8ce2081f, kiln ecbad903, potter 3a6c8fe7,
+  woodyard f46e12ae, mill 870256ce, bakery 49342c52 [14.023,0,−18.769]
+  yaw 2.234, smithy 3522e5ab [23.777,0,−10.831] yaw −0.9076; comp bags
+  empty 8/8); all 9 hosts LIB_STABLE incl stable 98f2d5b6 — rider
+  host-local anchor re-derived fresh from CURRENT census tuples =
+  exactly (0,0,2.1) R1 contract, waysign-19 re-validation stands — and
+  nx-forge 620120c4 exact (probe correction this tick: forge host id
+  is `nx-forge`, not `nx-town-forge`; and the R1 placer's HOST_LIB
+  constant 5beff62e is a stale epoch pin superseded by waysign-19 —
+  neither is live drift). waysign-34 orphan-entry repair by
+  town-1v/1w/1x verified honest (one real entry, line 4314). Interlane
+  md5 f6254cd0 steady. Zero world mutations, zero uploads, zero
+  shared-budget use, no visual PASS claimed. Lane HOLDS for Bill's
+  eye-gate verdicts (`reviews/waysign-eye-gate.md`); any visual
+  correction re-opens that sign's build ahead of rotation.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
