@@ -1686,3 +1686,34 @@ no visual PASS claimed.
   interlane md5 f6254cd0 unchanged.
 - Zero world mutations, zero uploads, zero shared-budget use, no visual
   PASS claimed. No un-shard clock running (shard empty, not idle).
+
+---
+## dress-48 (2026-09-06, pipeline tick 27) — HOLD
+
+- Shard: EMPTY at source vs the current working tree — the dirty
+  IMPROVE-PLAN.md diff (+27 foreign lines) contains zero nx-dress
+  mentions; nine Round-1 rows terminal (5/29/30/31 DROPPED native
+  rejudge, 32/33/34/37/38 EXECUTED reseats, 39 routes nx-town
+  improve-own, row 13 fountain DRESS-DOMAIN off-limits per Bill);
+  survey-12 family-class extensions route nx-wild/cultivation/temple/
+  craft, none dress. REPAIR-REGISTER: zero nx-dress lines.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh recount:
+  SW-quadrant r≥35 = exactly 3 live lights (nx-approach-sw-lamp-001-l
+  r39.7, -002-l r55.4, nx-mile-sw-013-l r64.0). Spend 0 of 3.
+- Verdicts: zero in ledger tail AND eye-gate packet fd677cae unchanged
+  (md5 verified, zero VERDICT lines).
+- Hold verification: standing gate ALL PASS real exit 0 at HEAD
+  2f2ccbf (my own dress-47); fresh live census 259 (HTTP 200 first
+  fetch), 11/11 district installs PIN_EXACT lib+tuple+yaw-radians with
+  comps empty — probe self-catch disclosed (4th consecutive
+  tick-class): first parse read 6/11 false-DRIFT because plan blocks
+  are ordered by district rotation, not chronology, so file-offset
+  last-block-wins picked pre-reseat libs for the five EXECUTED
+  reseats; resolving pins by max enclosing dress-N tick header with
+  (was-hex) supersession cross-check matches all 11 exactly. World
+  correct, probe wrong (dress-40/46/47 law re-hit).
+- 27 total nx-dress = 11 fleet + 16 legacy core intact by arithmetic;
+  census-wide lights 38; interlane md5 f6254cd0 steady.
+- Zero world mutations, zero uploads, zero shared-budget use, no
+  visual PASS claimed. No un-shard clock running (shard empty at
+  source, not idle).
