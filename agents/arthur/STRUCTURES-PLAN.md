@@ -4,6 +4,32 @@ Durable plan for the STRUCTURES LOOP. One authored structure per wakeup:
 concept contract → build → decode audit → review → siting → placement →
 ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 
+## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
+
+- [survey-1, 2026-09-06, NATIVE, 18m gameplay, live bytes] `nx-struct-angler`
+  CONFIRMED Sev 2 identity failure — no fisherman figure, no rod, nothing
+  legible as fishing; reads plain park bench (geometry itself grounded,
+  shadow attached). Evidence: `agents/arthur/reviews/survey1-sev2-slice/
+  nx-struct-angler/gameplay.png`. Improve-3 flag native-confirmed; queue row
+  10 already standing — no duplicate row created.
+- [survey-1, 2026-09-06, NATIVE, 18m gameplay, live bytes] `nx-struct-skene`
+  CONFIRMED Sev 2 — five near-black slats hover with sky gaps between and
+  ground gaps below, unsupported, read as voids; object reads colonnade/
+  gateway, not stage (no deck visible); finial hairline+speck. Evidence:
+  `agents/arthur/reviews/survey1-sev2-slice/nx-struct-skene/gameplay.png`.
+  Queue row 11 standing.
+- [survey-1, 2026-09-06, NATIVE, 18m gameplay, live bytes]
+  `nx-struct-skymirror` CONFIRMED Sev 2 identity failure — reflective face
+  flat matte dark, zero sky sheen; reads tire-stack/rock, not mirror. Edge
+  notches NOT observed at 18m (drop sub-finding). Evidence:
+  `agents/arthur/reviews/survey1-sev2-slice/nx-struct-skymirror/gameplay.png`.
+  Queue row 12 standing.
+- [survey-1, 2026-09-06, NATIVE, 18m gameplay, live bytes] `nx-struct-spiralfolly` CONFIRMED Sev 2
+  — treads detached blocks with see-through gaps, upper turns drift off the
+  core, gold ring floats unconnected, stairs stop short with no landing,
+  ragged wobble. Evidence: `agents/arthur/reviews/survey1-sev2-slice/
+  nx-struct-spiralfolly/gameplay.png`. Queue row 14 standing.
+
 ## Design queue
 
 1. [DONE struct-2] S-1 The Observatory — era-1 heritage reborn: ashlar drum

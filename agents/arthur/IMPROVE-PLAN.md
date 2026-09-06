@@ -237,23 +237,38 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
    Bill routes it here. Not improve's to execute. (guard: waysign-7 today)
 8. `nx-town-stable` — no entrance/identity on any face (reads chest/
    monument); squat proportions; corner wedge voids at roof overhang. Sev
-   2. (guard: none)
+   2. (guard: none) [NATIVE-CONFIRMED survey-1: no door/opening on any face,
+   featureless walls, black base strip void; silhouette PASS]
 9. `nx-town-kiln` — floating quad on cone flank; orphan rod; no flue/vent;
-   firebox dead void. Sev 2. (guard: none)
+   firebox dead void. Sev 2. (guard: none) [NATIVE-DROPPED survey-1: CLEAN
+   4/4 at 18m on exact live bytes 4d8ef8fc — flue stub, firebox mouth,
+   trough+poker, rocks all read; findings were ZAI probe artifacts]
 10. `nx-struct-angler` — reads as plain park bench; fisherman figure
     absent from render. Sev 2: identity failure. DECODE FIRST (possible
-    missing export). (guard: none)
+    missing export). (guard: none) [NATIVE-CONFIRMED survey-1: no figure,
+    no rod, nothing legible as fishing — plain bench; geometry itself
+    grounded/clean]
 11. `nx-struct-skene` — panels read as black voids/holes; hovering panels;
     detached side wings; sub-pixel finial. Sev 2. (guard: none)
+    [NATIVE-CONFIRMED survey-1: five near-black slats with sky gaps + ground
+    gaps, unsupported, read as voids; reads colonnade/gateway not stage —
+    no deck visible; finial hairline+speck]
 12. `nx-struct-skymirror` — no visible reflection (material suspect);
     ambiguous dark blob; notched top edge. Sev 2: identity. DECODE FIRST.
-    (guard: none)
+    (guard: none) [NATIVE-CONFIRMED survey-1: flat matte dark two-tier
+    disc, zero reflection/sheen, reads tire-stack/rock — identity failure
+    core confirmed; notched edge NOT observed at 18m — drop that sub-finding]
 13. `nx-struct-millrace` — pond black void (polish-281 dark-water class);
     hairline reeds; slit bands; floating finial. Sev 2. (guard: none)
 14. `nx-struct-spiralfolly` — floating gold ring; detached treads; gaps;
-    no top landing. Sev 2. (guard: none)
+    no top landing. Sev 2. (guard: none) [NATIVE-CONFIRMED survey-1:
+    treads detached blocks with gaps, upper turns drift off core, gold
+    ring floats unconnected, stairs stop short, ragged wobble]
 15. `nx-struct-shelltower` — gaps between treads; top turn near-black;
-    stairs never reach canopy. Sev 2. (guard: none)
+    stairs never reach canopy. Sev 2. (guard: none) [NATIVE-DROPPED survey-1:
+    CLEAN at 18m — treads read attached (dark notches = step shadow), top
+    tread meets canopy rim, silhouette solid; optional polish: rim-light
+    the upper turn]
 16. `nx-approach-sw-lane-003` — floating tan cubes off path edge read as
     debug debris. Sev 2. (guard: approach lane idle since Sep 3)
 17. `nx-town-shrine` — offering clumps illegible; torch flames 1-2px;
