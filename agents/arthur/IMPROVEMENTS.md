@@ -3791,4 +3791,6 @@ fixes ≈ 6 F.)
 
 - [nvp-148] ten-lane widening: waysign-N + mile-N loop files opened (WAYSIGN-LOOP.md/PLAN, MILESTONE-LOOP.md/PLAN) — core trade signage (unowned nvp-133..148 polish candidate) and approach-network milestones in the refine-295 idiom; interlane widened to ten lanes, HEAD-gate prefixes extended (waysign-/mile-) (D+4, E+2)
 
-**Running total: 2370080 / 2000000**
+- [nvp-149] overnight fleet: fleet-runner.sh — 6 concurrent lane subagents (waysign/mile/dress/sweep/night/artwalk), each tick a fresh bounded hermes one-shot (max-turns 100, 45-min budget, per-invocation --yolo consent), waves until epoch/STOP; fresh context per tick makes the compression stall structurally impossible (D+3, E+1)
+
+**Running total: 2370084 / 2000000**
