@@ -3909,4 +3909,6 @@ fixes ≈ 6 F.)
 
 - [improve-3] round-1 analysis tick phase 3 (final): struct (30) + approach (17) + mile (15) from fresh census 259, live store bytes 29/29 GLBs HTTP 200 (curl UA — urllib 403), 8 views each via DRACO chassis, judged 18m (ZAI fallback, native down 15th tick, disclosed) — struct 7 CLEAN / 16 defective (worst: echoarch arch span + leg INVISIBLE w/ orphan shadow, front-view confirmed, decode-first; crossing ford void; angler figure absent; skene black void panels; skymirror no-reflection), approach lamp×4 + NE lane CLEAN / SW lane floating-cube scatter Sev2 / NW lane Sev4, mile both CLEAN (guarded, moot); MERGED RANKED ROUND-1 EXECUTION QUEUE committed worst-first 38 entries incl. idle-guards per entry and sign packet routed to waysign; zero world mutations (D+0, E+0)
 
+- [sweep-23] full audit sweep at 259 live entities — CLEAN steady-state (twelfth quiet delta); census 259==259 raw snapshot byte-identical 71867B, overlap ALL CLEAR 221/229/0, walks tier-1 4/4 + tier-2 potter+market sixth cycle, pins 15/15, carousel comps 7, gate lamps 4/4, 38 lights, woodyard pin exact, interlane md5 stable, standing gate exit 0 at HEAD 1808dd6 (sibling improve-3 accepted by prefix gate); zero findings, zero world mutations (D+0, E+0)
+
 **Running total: 2370208 / 2000000**
