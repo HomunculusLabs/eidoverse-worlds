@@ -3883,4 +3883,6 @@ fixes ≈ 6 F.)
 
 - [sweep-14] full audit sweep at 259 live entities — CLEAN steady-state; census 259==259 vs sweep-13 snapshot (0 arrivals, 0 departed, 0 drift on all shared ids; third fully quiet delta of the wave), overlap ALL CLEAR (221 bbox non-light, 229 classified, 0 unclassified), walks tier-1 4/4 (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37) + tier-2 hall 0.360 + row-cottage 0.384 third cycle ALL PASS, pins 15/15, carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 36 -l lights standing (38 lights live), woodyard pin 1f2c6f592095b204 exact, ledger law exact, interlane md5 f7865b648dfa9dc4 stable, standing gate real exit 0 at HEAD c21a9ee; zero findings, zero world mutations (D+0, E+0)
 
+- [artwalk-47] hold tick with bookkeeping close — commit 42 stranded lane-owned review evidence dirs (artwalk-b1..b34 incl. sub-variants, artwalk-h2..h7; 8.4MB) since their placement ticks, per mile-8 stranded-evidence precedent; live census 259 entities with all 54 nx-artwalk-* ids present-tuple-exact vs sweep-14 steady state (zero missing/unexpected/drift); lane HOLDS for Bill's counting-series eye-gate verdicts (reviews/artwalk-counting-series-eye-gate.md) or a queue widening; zero world mutations, zero shared-budget use (D+0, E+0)
+
 **Running total: 2370204 / 2000000**
