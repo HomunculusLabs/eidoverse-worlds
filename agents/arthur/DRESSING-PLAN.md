@@ -66,6 +66,22 @@ remain idle-guarded until early 09-07 (next eligible ~00:12 EDT
 sw-gravel/bench line, worst remaining Sev 2 = sw-gravel). Zero world
 mutations this tick.
 
+**STATE AT dress-16 (2026-09-06 13:19, pipeline hold tick)**: lawful HOLD —
+every path closed this tick. Hold verification: standing gate ALL PASS real
+exit 0 at HEAD 1b34720; fresh census 259, all ELEVEN district installations
+tuple+lib EXACT vs this plan (dress-15 reseat lib `59031a0c` confirmed live
+at (58.70, 0.0076, −58.70) yaw −45°; ne-yard pin 191227da, sw-prayer
+5074600f both standing post-drop); 16 legacy core `nx-dress-*` untouched.
+Shard guard table (derived from actual commit times, not stale prose):
+row 31 ne-bench until 09-07 01:54 (dress-6), row 34 ne-woodstack until
+09-07 03:01 (dress-9), row 37 nw-skeps until 09-07 01:28 (dress-5), row 33
+nw-stile until 09-07 03:35 (dress-11), row 38 nw-hedge until 09-06 23:30
+(dress-1 09-05 23:30 — FIRST eligible). Un-shard clock: dress-13/14/15
+executed rows, so this is hold #1 of 3 on the oldest shard row (31) —
+guards expire well before the limit binds. SW lamps remain the only
+own-queue item anywhere, blocked on Bill's a/b/c policy (0 of 3 used).
+Zero world mutations.
+
 ## Siting log
 
 ### dress-15 — SE cairn reseat (shard row 32 EXECUTED, PLACED, LIVE)
