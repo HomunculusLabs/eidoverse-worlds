@@ -810,6 +810,27 @@ CURRENT hosts. Findings and actions:
   steady; zero uploads (store already held all libs); 2 verbs total
   (b26 remove+spawn).
 
+### [artwalk-51] STABLE HOST-PIN REFRESH, THIRD GENERATION (2026-09-06) — CLOSED
+Sibling improve-11/12 evolved `nx-town-stable` (5beff62e→98f2d5b6: road-side
+livery entrance, partition cut + stallrail removal, curb split, trough move).
+Reconciliation at source: local `village_stable3.glb` sha256 98f2d5b6… verified
+byte-equal to the live lib prefix; `artwalk51-stable-decode.ts` confirms the
+b8 rider band (host-local z −2.29..−2.03, y 2.0..2.65, x ±2.55) holds ZERO
+new-host verts — improve-12's edits are all road-side (west) and interior;
+the open-front wall `st3_1` still spans x ±2.7 to z −2.78 (rein flank mounts
+intact), roof `st3_8` starts y 2.64 above the band. Host pose (43,0,0)
+yaw −π/2 unchanged. Durable fix: placer `next-place-artwalk-b8.ts` HOST_LIB
+re-pinned 5beff62e→98f2d5b6 (a rerun had been dying on "stable host drift").
+Idempotent rerun after re-pin: zero verbs, PLACED_VERIFIED at the exact
+host-derived tuple (45.16,2.22,~0), fresh live SAT minGap 2.825m vs the new
+sibling `nx-dress-stablebench`. Exhaustive HOST_LIB sweep of all 10 pinned
+placers vs fresh census: b8 was the ONLY stale pin (b1/b2/b3/b4/b5/b9/b10/
+b11/b12 all match live). `artwalk49-recovery-audit.ts` rerun fresh: census
+259 / 54 riders all present / b7 tuple EXACT dy 0.0 / lights 38 steady.
+Zero world mutations, zero uploads, zero verbs; no visual PASS claimed.
+Lane still HOLDS for Bill's counting-series eye-gate verdicts
+(reviews/artwalk-counting-series-eye-gate.md) or a Phase F commission.
+
 ### [artwalk-50] CROSS-SIBLING FLEET HOLD VERIFICATION (2026-09-06) — CLOSED (hold, zero mutations)
 Pipeline-mode hold tick: three sibling lanes mutated the live world after
 artwalk-49 (waysign-12 mill-sign reseat on the b10 windmill host, approach-6
