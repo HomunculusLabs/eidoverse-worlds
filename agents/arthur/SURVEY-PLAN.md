@@ -480,3 +480,59 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   SURVEY CANDIDATES (hamlet/garden/lavender/seed/cairn/orchard final
   members; family census lock-out complete). All district-domain
   (improve's own surface), no other lane's plan touched this tick.
+
+## Judged index (survey-14)
+
+- survey-14 (2026-09-06, NATIVE 7/8 + ZAI fallback 1/8 disclosed, 18m
+  gameplay, fresh live store bytes 8/8 HTTP 200 curl UA on exact
+  census-14 libs; severity backlog drained — round-1 terminal,
+  7-13 candidates are intake not re-judge debt; defect-family census
+  lock-out complete per survey-13): CLEAN-FAMILY VARIANCE-PROBE slice
+  over the 18 remaining unjudged members — two for the least-covered
+  family (labyrinth, 1-of-4), two for the zero-native-coverage family
+  (wayside — both prior CLEANs were ZAI), one each
+  cloister/statuary/terrace/forest. Slice = labyrinth-0025,
+  labyrinth-0038, wayside-0045, wayside-0056, cloister-0029,
+  statuary-0039, terrace-0039, forest-0031. Native flap pattern: 1210
+  x2 + paced retry on cloister-0029 only (fallback there); three
+  other single-1210 flaps recovered by their paced retry. Verdicts:
+  ALL 8 CLEAN-with-margin, ZERO confirmed —
+  labyrinth-0025 (rings+goal read, continuous silhouette, grounded;
+  margins: passage legibility 2-6px at 18m, goal-orb 1-3px contact
+  ambiguity) → family CLEAN 3-of-4 (0004/0025/0038);
+  labyrinth-0038 (Troy-town silhouette canonical, entrance-notch
+  reads deliberate; margins: corridors occluded by outer wall,
+  left-arc no-shadow) — second member corroborates;
+  wayside-0045 NATIVE (shelter+roof+posts+lit lamp wayfind read;
+  margins: checker moire risk, dark slot x487-500 y388-425
+  recess-vs-void, 2-3px lamp pole alias) → family CLEAN 3-of-4 with
+  FIRST NATIVE coverage (0009/0030 ZAI, 0045 native);
+  wayside-0056 NATIVE (two-tier roof mass, lit lamp brightest point,
+  consistent shadows; margins: thin pole alias, ambiguous post-cap
+  blobs) → family CLEAN 4-of-4 — wayside closes as a CLEAN family
+  under native corroboration;
+  cloister-0029 ZAI fallback (arcade identity, column rhythm, double
+  beam band PASS; margins: lamp specks x316/x646 = survey-9/10 known
+  LOD artifact class, courtyard shadow mass near-black flirt x470-665)
+  → family CLEAN 3-of-5; statuary-0039 NATIVE (shrine-circle
+  identity, pawn silhouettes anchored by stone ring; margins:
+  charcoal head-orbs read-as-holes x5, faint ring-stone contact) →
+  family CLEAN 3-of-4; terrace-0039 NATIVE (tier breaks + right-side
+  sawtooth steps; margins: fortress-crenellation competing read,
+  tower-like proportions at level camera — design-intent note not
+  defect) → family CLEAN 4-of-5; forest-0031 NATIVE (grove identity
+  instant, canopy continuous, trunk contact square; margins: unlit
+  black cone spikes x5 base-line, left-flank-only cast shadow) →
+  family CLEAN 3-of-5. Remaining unjudged pool after this tick:
+  cloister 0042/0055, statuary 0052, terrace 0040/0049, forest
+  0044/0057, wayside 0058 (10 objects — next rotation covers these).
+  Routing: ZERO notes routed, ZERO candidate rows, ZERO ledger append
+  (loop law: append only when routing). Census 259 steady 0/0 vs
+  survey-13 snapshot; ONE domain-valid lib flip mid-tick:
+  nx-struct-soundmirror 5216db0a->f313e59a (struct-45 in flight).
+  Gate: ALL PASS real exit 0 first try at 7275966 (ledger law EXACT
+  2370302); HEAD advanced mid-tick to 2e4917c (sweep-42, foreign
+  files only; SURVEY-PLAN clean in tree at append; tag
+  grep-verified clean — only dress-51 prose mentions "survey-14").
+  Verdicts 0 confirmed / 8 clean-with-margin / 0 dropped. Zero world
+  mutations, zero uploads, zero shared-budget use.
