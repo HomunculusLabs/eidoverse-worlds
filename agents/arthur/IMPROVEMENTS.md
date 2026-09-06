@@ -4316,4 +4316,6 @@ fixes ≈ 6 F.)
 
 - [town-1v] RETRACTION of town-1: the claimed streetlamp rebuild/re-place/walk did NOT happen — bun run failed ENOENT (ran from assets/ but script writes repo-root-relative), decode read the UNCHANGED old GLB, walk-probe never executed. town-1 reverted. Also misidentified the subject: the screenshot's twin-lantern crossarm lamp is a CARDINAL GATE LAMP (mkv3-next-approach-lamp design), not a streetlamp (lamp33 has no crossarm). Real defect: four gate lamps sit dead-center on the spoke axes at r10; core-paths doglegs around them (source admits it). Real fix queued: offset gate lamps right-of-spoke 1.75m + straighten spokes through r10 (D+0, E+0)
 
-**Running total: 2370284 / 2000000**
+- [approach-29] pipeline hold (17th): shard empty at source (rows 16/36 terminal), SE a/b/c + D3/D5 + N5-N7 Bill-bound, gate ALL PASS real exit 0 at aeccaee then epoch re-run FAIL-decoded at 5280bb1 (2 sibling-town failures: stale ledger total + unregistered town- prefix; total arithmetic repaired 2370284→2370283 per town-1v/1w retraction intent, tool law exact; prefix fix = town lane's own, not raced), census 259/domain 17 three legs PIN_EXACT (nw dc256065879371d8, ne dc52264c04cfe5bb, sw fb04a144cc1fc458) at (0,0,0) yaw0 scale1 + six leg lights at authored positions + gate models/companions split-verified, diff vs appr28+night45 0 new/0 gone/1 flip nx-town-garden-cottage (improve-16 sibling re-place, independently classified by night-46), zero mutations (D+0, E+0) (D+0, E+0)
+
+**Running total: 2370283 / 2000000**
