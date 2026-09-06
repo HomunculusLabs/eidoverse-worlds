@@ -687,6 +687,25 @@ only when native is down that tick, disclosed.
   (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
   sign's build ahead of rotation.
 
+- waysign-27 HOLD (pipeline mode, 11th consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court brace closures); zero OPEN
+  IMPROVE-PLAN rows route to `nx-sign-*` (sharding open split read fresh
+  at source: struct/dress/approach/improve-own only; every nx-sign
+  mention historical). Eye-gate packet md5 8b88b6b3 unchanged, zero Bill
+  verdict markers. Cheap lawful hold verification: standing gate ALL PASS
+  real exit 0 at HEAD a3fa291 (own waysign-26 at tip); fresh live census
+  259 total, ALL 8 `nx-sign-*` riders PIN_EXACT 8/8 + TUPLE_EXACT 6/6
+  known tuples + bakery/smithy at exact ledgered court-wall tuples
+  (bakery [14.023,0,-18.769] yaw 2.234, smithy [23.777,0,-10.831] yaw
+  -0.9076), all 9 hosts LIB_STABLE (stable 98f2d5b6, court 59534b10,
+  windmill 0993836012d1b17d, woodyard 1f2c6f592095b204, dyehouse
+  888be3597d2f772f, kiln 4d8ef8fc, potter dad7c82e, forge
+  620120c4d6f0b4a0, inn 6e6ff2d08df9b3fb); no extra nx-sign ids in
+  census. Zero world mutations, zero uploads, zero shared-budget use, no
+  visual PASS claimed. Lane HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+  sign's build ahead of rotation.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
