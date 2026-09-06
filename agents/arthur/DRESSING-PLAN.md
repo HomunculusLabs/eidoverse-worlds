@@ -7,18 +7,16 @@ wakeup, districts rotating NW → NE → SE → SW. Loop file:
 ## Lamp budget ledger (plan §7)
 
 Per-district lamp budget, set by counting LIVE census lights per district at
-first wakeup. **PENDING**: the live census fetch has been approval-blocked
-for two consecutive wakeups (wakeup #1 composite, wakeup #2 direct curl) in
-this window. The ledger below is set to `?` until a census lands; no lit
-dressing piece may be placed before it is filled. Unlit pieces (hedges,
-benches, stones, paths) are unaffected — they spend no lamp budget.
+first wakeup. **FILLED 2026-09-05** (overnight fleet wave; census
+`next-live-census.ts` 227 entities, quadrant x/z sign, r ≥ 35, id/comps
+anchors lamp/light/glow/flame/fire/ember):
 
 | district   | live lights counted | lamp budget | used | notes |
 |------------|--------------------|-------------|------|-------|
-| NW cultivation | ? (census blocked) | ?       | 0    | fills at first successful census |
-| NE craft       | ? (census blocked) | ?       | 0    | |
-| SE wild        | ? (census blocked) | ?       | 0    | |
-| SW contemplative | ? (census blocked) | ?     | 0    | |
+| NW cultivation | 2 (approach-nw-lamp-001-l/002-l) | 2 | 0 | unlit dressing so far |
+| NE craft       | 2 (approach-ne-lamp-001-l/002-l) | 2 | 0 | |
+| SE wild        | 0 | 0 | 0 | unlit dressing only unless Bill widens |
+| SW contemplative | 2 (approach-sw-lamp-001-l/002-l) | 2 | 0 | |
 
 Counting rule: entities at r ≥ 35 from plaza center, quadrant by sign of
 (x, z); count entities whose id or comps carry lamp/light/glow/flame
@@ -38,7 +36,7 @@ Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
 
 ## Siting log
 
-### dress-1 — NW Cultivation hedgerow (BUILT, SITING PENDING)
+### dress-1 — NW Cultivation hedgerow (PLACED, LIVE)
 
 - **Concept contract**: a laid hedgerow edging the NW district's field
   plots, with a worker's gap (stone step through) where a spur meets the
@@ -56,19 +54,37 @@ Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
 - **Decode**: 6.6 × 1.99 × 1.835 m, bbox x −3.3..3.3, z −0.885..0.95,
   y 0..1.99; 5 nodes after merge (budget 3–25 ✓). No light anchors
   (KEEPTOK-free), empty comp bag by design.
-- **Siting**: PENDING live census (approval-blocked this window). Plan:
-  edge the NW field plots along their district-side approach, long axis
-  parallel to the plot edge, gap facing the spur. Requires: fresh census →
-  SAT/rim preflight vs live entities → arrival-cone check (nothing knee-high
-  in any work's 18m approach cone) → hash-gated placer file → upload/spawn
-  `nx-dress-nw-hedge-001` → post-place tuple verify + idempotent rerun.
-  No path, so no MCPL walk-test owed this tick.
+- **Siting (2026-09-05 fleet wave, census 227)**: first candidate — the
+  plaza-facing edge of lavender-0027 — was **proven occupied by source-true
+  decode**: the NW approach lane GLB's terminus bed physically reaches the
+  lavender corner (nearest lane vertex INSIDE the candidate footprint at
+  0m; the lane's census bbox is a fat compound OBB h2.61 whose overlap was
+  REAL here, not a fat-bbox artifact). Full-edge scans of lavender-0027
+  found no lawful site (lane bed s≈−3.4..terminus; orchard-0033 SAT + 18m
+  approach cone close off both ends). **Final site**: plaza-facing (local
+  +z) edge of `nx-cultivation-lavender-0040`, offset 2.5m, s=+2.5 along
+  the edge — center (−35.34, 62.14), yaw −2.36, py 0.04 (terrain flat,
+  Δ5mm across the 6.6m span). Gap faces local +x = NE, toward the
+  district's inter-plot path. SAT clear of every solid (min gap 7.0m vs
+  echoarch; no sub-1.4m adjacency); arrival-cone clear (nearest works
+  13m+, outside every plaza-ward 25° wedge); lane fat-bbox exempted by
+  NAMED exemption with source-true clearance 17.6m
+  (`dress-hedge1-lane-decode.ts`, sha-pinned); lamp-002 19.9m.
+- **Placement**: `nw-dress1-place.ts` — hash gate → live blocker-epoch
+  guard (lavender-0040, echoarch, orchard-0046, lane, lamp-002) → SAT
+  preflight vs FRESH census → upload (content-addressed) → spawn →
+  post-place tuple verify. **PLACED_VERIFIED**
+  `nx-dress-nw-hedge-001` @ lib `store/f595e862465c49e0.glb`,
+  pos (−35.34, 0.04, 62.14), yaw −2.36. Idempotent rerun: no verbs.
+  One honest wart: the first rerun re-spawned unconditionally before the
+  `!before[ID]` guard was added (identical bytes/tuple, empty comp bag —
+  no-op re-place); the guard is in the committed placer now.
 - **Eye-check for Bill** (after placement): does the hedge read as a laid
-  field boundary at walking pace, and does the gap read as a way through?
+  field boundary at walking pace on lavender-0040's plaza-facing edge, and
+  does the gap read as a way through (gap faces NE, toward the
+  inter-plot path)?
 
 ## Ledger
 
-- dress-1: BUILD COMPLETE (v2 accepted), placement pending census access.
-  No ledger append yet — entry lands with the placement (one entry covers
-  build+place per the one-installation-per-wakeup shape; if the next
-  wakeup can place, that entry records both).
+- dress-1: BUILT + PLACED + VERIFIED (2026-09-05 fleet wave). Entry in
+  IMPROVEMENTS.md covers build + siting proof + placement.
