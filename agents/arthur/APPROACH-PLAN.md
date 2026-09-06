@@ -934,3 +934,21 @@ pin compares by prefix. Zero world mutations, zero uploads, no shared-budget
 use; no visual PASS claimed. Standing eye-check pointer (delivered once each
 at approach-6/7/13): Bill at the NW/NE/SW gates at night for the three quiet
 bead cadences.
+
+### approach-34 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD 0365e18 (town-3 fork reunification
+absorbed); interlane md5 f6254cd0 steady; plan read fresh in full (936
+lines, clean at HEAD — no sibling dirt in this file). Shard routing
+verified at source: rows 16/36 terminal (EXECUTED approach-4/5), zero
+OPEN rows route to nx-approach-; no un-shard clock. Own queue unchanged:
+three legs PLACED_VERIFIED, SE a/b/c siting + D3 + D5-temple-grounds +
+N5-N7 all Bill-bound. Cheap lawful hold verification (census 259, domain
+17, kind=light 38): three leg libs PIN_EXACT (nw dc256065879371d8, ne
+dc52264c04cfe5bb, sw fb04a144cc1fc458) at (0,0,0) yaw 0; six leg -l
+lights at authored positions; gate lamps 4 models 18b69a6bb2 + 4
+companions settled. Census diff vs appr33: 0/0/0 — first fully-quiet diff
+since appr29. Probe self-catches: .glb suffix strip (approach-28 class);
+NW lamp pins re-checked vs standing tuples not plan-head concept values.
+Zero mutations, zero uploads, no shared-budget use, no visual PASS
+claimed. Eye-check pointer stands (delivered once at approach-6/7/13).
