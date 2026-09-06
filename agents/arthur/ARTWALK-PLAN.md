@@ -774,3 +774,20 @@ the host-pin refresh. Nearest non-host solid is now the Water Stair at 3.245m,
 and the full south↔north hall route remains 8/8 PASS, max arrival 0.360m. No
 world mutation and no visual PASS are claimed. Durable result: phase-B riders
 now explicitly reconcile host evolution before the next intervention.
+
+### [artwalk-48] CHARTER WALL HOST-PIN REFRESH, SECOND GENERATION (2026-09-06) — CLOSED
+Sibling improve-5 evolved `nx-town-hall` again (1306527a→c92c1f91: trueGableHalf
+D2 fix, solid ridge D3, N-door casing/header D1, 5-anchor warm light kit, 28
+nodes). Reconciliation at source: `village_hall3.glb` sha256 c92c1f91… verified
+byte-equal to the live lib prefix; decode confirms `wall_w` inner face x=−4.28
+unchanged (wall box −5.0..−4.5 + plaster return, per mkv3-ring.ts hall build).
+All improve-5 additions sit outside the rider band (host-local y 1.115–2.885,
+z ±1.4, x −4.32..−4.125): N header y 1.79–1.95 on the z-wall, gable/ridge/roof
+above 3.16, lamps on E/N/S surfaces. The banner-cloth + wheel + win_w overlap
+dance in the rider's band predates to nvp-17 (git log -S: no touches since) —
+it belongs to Bill's still-pending b1 eye-check, not to drift; no rider move
+was made. Durable fix: placer `next-place-artwalk-b1.ts` HOST_LIB re-pinned
+c5964bc8→c92c1f91 (a rerun had been dying on "hall host drift"). Idempotent
+rerun after re-pin: zero verbs, PLACED_VERIFIED, host-relative anchor
+(−4.28,1.1,0) exact, fresh live SAT minGap 3.245m vs `nx-struct-waterstair`.
+Zero world mutations, zero shared-budget use; no visual PASS claimed.
