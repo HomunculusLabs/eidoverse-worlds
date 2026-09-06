@@ -39,7 +39,8 @@ the then-current census — never reuse a stale queue.
 - improve-2: signs (8) + fleet dress pieces (11) — same treatment. DONE —
   findings below (merged into the execution queue at improve-3).
 - improve-3: struct + approach + mile families; commit the merged ranked
-  round-1 execution queue (worst first, each entry = id + defect + fix).
+  round-1 execution queue (worst first, each entry = id + defect + fix). DONE —
+  findings below; merged queue supersedes the core-only draft order.
 
 **improve-2 findings (signs + fleet dress, judged at 18m gameplay vantage,
 ZAI fallback vision — native down 14th consecutive tick, disclosed; isolation
@@ -88,6 +89,80 @@ notes only: shadow blob, dark end caps, sparse right end).
 - `nx-dress-nw-hedge-001` — passes as hedge; cleanup tier only (lone
   stub riser, stray cube, mid-gap hole). Sev 4.
 
+**improve-3 findings (struct + approach + mile, judged at 18m gameplay
+vantage from fresh live census 259 and live store bytes (29 unique GLBs,
+HTTP 200 ×29 via curl UA; urllib default-UA gets 403), ZAI fallback vision
+— native down 15th consecutive tick, disclosed; vision findings are probes
+ranked by 8m-walker severity, decode-at-source precedes any edit):**
+
+Struct (24 unique GLBs): CLEAN — halt/needlerest (shared, 2 entities),
+waystone (shared, 4), northneedle, orrery, orreryring, beacon, waterstair.
+Defective:
+- `nx-struct-echoarch` — ARCH SPAN AND ONE LEG DO NOT RENDER: only a single
+  post draws at 18m AND front view; the cast shadow proves the arch
+  geometry exists but is invisible (flipped normals / culled faces / hidden
+  material). Plus a small orange seam at the post-base joint. Sev 1:
+  namesake element invisible, orphan shadow.
+- `nx-struct-crossing` — reads as two clusters of utility poles on empty
+  grass; no water plane, banks, or stepping stones — the ford is a void;
+  posts within a cluster clip through each other; stub pegs read snapped;
+  plate feet + stretched detached shadows. Sev 1: identity failure.
+- `nx-struct-angler` — reads as a plain park bench; the fisherman figure
+  is absent from the render (possible missing export — decode at source
+  first). Sev 2: identity failure.
+- `nx-struct-skene` — five dark panels render as pure-black voids reading
+  as holes; panels hover just above ground; side wings read as detached
+  fragments; sub-pixel pole-and-ball finial. Sev 2.
+- `nx-struct-skymirror` — reflective face reads flat matte dark — no sky
+  reflection visible (material may not render); form collapses to an
+  ambiguous dark blob with jagged notched top edge. Sev 2: identity.
+- `nx-struct-millrace` — pond interior flat near-black void (dark-water-
+  reads-as-hole class, polish-281 law: check for faint same-hue emissive);
+  hairline reeds; dark bands between steps read as open slits; floating
+  ball finial confirmed on the sluice wall top. Sev 2.
+- `nx-struct-spiralfolly` — floating gold ring, detached treads with
+  see-through gaps, no top landing; muddy lowest turns. Sev 2.
+- `nx-struct-shelltower` — see-through gaps between spiral treads; topmost
+  turn near-black below canopy; stairs never connect to the canopy. Sev 2.
+- `nx-struct-hypar` — floating/dangling batten lower-left; right batten
+  ends hover above the deck; ragged silhouette from overshooting tips. Sev
+  2–3.
+- `nx-struct-mobius` — see-through slit near roof center; jagged canopy
+  top edge; canopy hovers over thin posts. Sev 3.
+- `nx-struct-amphi` — seating arcs broken into disconnected slabs with
+  gaps; no visible tiering (flat bowl); central pole reads telephone-pole. 
+  Sev 3.
+- `nx-struct-observatory` — dark trim band reads detached on the right;
+  see-through slits between wall top ring and dome. Sev 3.
+- `nx-struct-pendulum` — contact shadow renders as broken dashed stripes
+  (shadow-map acne); hairline strings; bob colors read inconsistent
+  (olive vs near-black). Sev 4 (frame itself solid; identity weak — reads
+  gallows-like "hanging-ball display", not pendulum wave). Note: struct-9
+  accessor decode already proved one clean sine period — numbers stand,
+  the VISUAL read is the defect.
+- `nx-struct-soundmirror` — identity failure: edge-on collapse reads
+  wedding-cake mound, not a dish; central cross 1-2px; dish interior pure
+  black. Sev 3. (struct-33 added a warm-emissive listening seat — defer
+  to that lane's recent work; re-analyze after dark view if needed.)
+
+Approach (5 unique GLBs): lamp (shared ×4) CLEAN. Lanes: NE lane-002
+CLEAN; NW lane-001 minor only — surface banding (possibly intended dirt
+decal), razor-thin taper at the end, raw-box marker stones, lamp no base
+(Sev 4); SW lane-003 — scattered floating tan cubes jittering off the path
+edge reading as debug debris (Sev 2, the worst approach finding), thin
+plane seam, detached lamp shadow.
+
+Mile (2 unique GLBs ×6 each): both CLEAN at 18m (marker silhouette, cap,
+grounded contact shadow hold; 0521 variant's side plate borderline
+legible — note only). Mile lane idle-guarded until 2026-09-07 04:14
+(mile-8 today); moot for the queue (CLEAN).
+
+Idle-guard ledger at improve-3 (2026-09-06): waysign signs guarded until
+09-07 02:12 (waysign-7 today); mile CLEAN and guarded until 09-07 04:14
+(moot); struct lane clear (struct-35 Aug 31); approach lane clear
+(approach-3 Sep 3); dress subjects woodstack/logpile/stile guarded until
+09-07 (dress-9/10/11 <24h at improve-2, aging out through the morning).
+
 **Seeded defects (enter the ranked queue regardless of sweep):**
 - `nx-town-inn` porch emblem reads "wheel, not tankard" (waysign-7 flag) —
   host defect, waysign folded the inn sign over it.
@@ -95,10 +170,114 @@ notes only: shadow blob, dark end caps, sparse right end).
   any improvement derives from the LIVE store copy, never a source rebuild
   (disputed-bytes law).
 
-**Round-1 execution queue:** (committed at improve-1, worst-first; every entry
-decodes at source before editing — vision findings are probes ranked by
-8m-walker severity, not verdicts. Seeded entries: inn emblem, woodyard
-live-freeze. Idle-guard: any object another lane touched within 24h defers.)
+**MERGED ROUND-1 EXECUTION QUEUE (committed at improve-3 — this is the
+CURRENT round queue; the improve-1 core-only draft below is historical. Worst-first across all families; every entry decodes at source
+before editing — vision findings are probes ranked by 8m-walker severity,
+not verdicts. Seeded entries: inn emblem, woodyard live-freeze. Idle-guard:
+any object another lane touched within 24h defers. Sign re-places route as
+a cross-lane packet to waysign — improve never re-places a waysign-owned
+`nx-sign-*` rider):**
+
+1. `nx-town-hall` — see-through hole: sky visible through porch opening (no
+   door/backstop); eave sliver top-right; ridge dashes. Sev 1: reads as
+   unfinished mesh. (guard: none)
+2. `nx-struct-echoarch` — arch span + one leg invisible (renders as single
+   post; orphan shadow proves hidden geometry — suspect flipped normals /
+   culled faces); orange seam at post-base joint. Sev 1: namesake absent.
+   DECODE FIRST. (guard: none — struct lane idle since Aug 31)
+3. `nx-town-inn` — two floating diagonal planes at roof corners; dead
+   unattached ridge box; porch emblem reads wheel-not-tankard (seeded,
+   waysign-7); off-center entrance recess. Sev 1: floating geometry.
+   (guard: none)
+4. `nx-town-windmill` — gallery ring floats with zero attachment; stray pole
+   clips lit window; sail cross lopsided (one arm bare). Sev 1: floating
+   geometry + weak identity. (guard: interior-20 Sep 1 interior only —
+   treat exterior as clear; re-check lane tail at execution)
+5. `nx-struct-crossing` — reads as utility-pole clusters; no water/banks/
+   stones — ford is a void; clipping posts, snapped stub pegs. Sev 1:
+   identity failure. DECODE FIRST. (guard: none)
+5. `nx-dress-sw-prayer-001` — reads as rock pile; ZERO fabric/pole read —
+   namesake absent. Sev 2: identity failure (worst dress finding).
+   (guard: dress-8 placed it — idle-guarded until 09-06 18:15)
+6. `nx-town-tower-house` — front stilts emerge from pure-black underside
+   (floating read); balcony door ~4m with no stair/ladder; broken railing. 
+   Sev 1–2. (guard: none)
+7. `nx-sign-*` packet (7 signs, emblem-scale collapse class) — CROSS-LANE:
+   re-places belong to waysign; improve drafts the build spec for the
+   packet. Routing: parked until waysign's queue/eye-gate resolves OR
+   Bill routes it here. Not improve's to execute. (guard: waysign-7 today)
+8. `nx-town-stable` — no entrance/identity on any face (reads chest/
+   monument); squat proportions; corner wedge voids at roof overhang. Sev
+   2. (guard: none)
+9. `nx-town-kiln` — floating quad on cone flank; orphan rod; no flue/vent;
+   firebox dead void. Sev 2. (guard: none)
+10. `nx-struct-angler` — reads as plain park bench; fisherman figure
+    absent from render. Sev 2: identity failure. DECODE FIRST (possible
+    missing export). (guard: none)
+11. `nx-struct-skene` — panels read as black voids/holes; hovering panels;
+    detached side wings; sub-pixel finial. Sev 2. (guard: none)
+12. `nx-struct-skymirror` — no visible reflection (material suspect);
+    ambiguous dark blob; notched top edge. Sev 2: identity. DECODE FIRST.
+    (guard: none)
+13. `nx-struct-millrace` — pond black void (polish-281 dark-water class);
+    hairline reeds; slit bands; floating finial. Sev 2. (guard: none)
+14. `nx-struct-spiralfolly` — floating gold ring; detached treads; gaps;
+    no top landing. Sev 2. (guard: none)
+15. `nx-struct-shelltower` — gaps between treads; top turn near-black;
+    stairs never reach canopy. Sev 2. (guard: none)
+16. `nx-approach-sw-lane-003` — floating tan cubes off path edge read as
+    debug debris. Sev 2. (guard: approach lane idle since Sep 3)
+17. `nx-town-shrine` — offering clumps illegible; torch flames 1-2px;
+    asymmetric base plate; dead side faces. Sev 2. (guard: none)
+18. `nx-town-row-cottage` — left door jamb bare; lamp dot no fixture;
+    ridge tabs; dormer seam. Sev 2. (guard: none)
+19. `nx-town-bunkhouse` — facade value crush; stray diagonal face right
+    wall; ridge tabs. Sev 2. (guard: re-check interior lane tail at
+    execution; interior-20 last Sep 1)
+20. `nx-town-garden-cottage` — front face zero info; extension fuses with
+    main volume. Sev 2. (guard: re-check interior lane tail at execution)
+21. `nx-town-belltower` — ladder rungs float (no stringers); rope
+    unanchored mid-air; muddy belfry corner. Sev 3. (guard: none)
+22. `nx-struct-hypar` — dangling batten; hovering batten ends; ragged
+    tips. Sev 2–3. (guard: none)
+23. `nx-struct-mobius` — center slit; jagged canopy edge; hovering
+    canopy. Sev 3. (guard: none)
+24. `nx-struct-amphi` — disconnected seating slabs; flat bowl; telephone
+    pole. Sev 3. (nx-struct-amphi is a struct lane work — struct lane
+    idle since Aug 31; approach shared structures: none)
+25. `nx-struct-observatory` — detached trim band; dome-to-wall slits. Sev
+    3. (guard: none)
+26. `nx-struct-soundmirror` — identity failure at edge-on (reads mound);
+    black dish interior. Sev 3. (guard: struct-33 warm-seat refine Aug 31
+    — lane idle since; re-verify night read at execution)
+27. `nx-town-mapboard` — map face dirt smudges; side edge fragments. Sev
+    3. (guard: none)
+28. `nx-town-monument` — pinhole at ring intersection; pedestal face
+    crushed. Sev 3. (guard: none)
+29. `nx-dress-ne-yard-001` — rubble read; floating rail ends; uniform
+    near-black. Sev 2. (guard: dress-4 <24h at improve-2 — re-check
+    dress tail at execution)
+30. `nx-dress-sw-gravel-001` — collapses to 1-2px line, reads artifact.
+    Sev 2. (guard: dress-7 <24h at improve-2 — re-check at execution)
+31. `nx-dress-ne-bench-001` — scattered tables read; misaligned blob
+    shadows. Sev 3. (guard: dress-6 <24h — re-check at execution)
+32. `nx-dress-se-cairn-001` — spindly totem; top stones dissolve. Sev 3.
+    (guard: none — dress-7 Sep 3 placed se-cairn; re-check tail)
+33. `nx-dress-nw-stile-001` — reads fence not crossing; step stones
+    illegible. Sev 3. (guard: dress-11 today 02:00 — until 09-07 02:00)
+34. `nx-dress-ne-woodstack-001` — burnt right post; see-through gaps;
+    detached left post. Sev 3. (guard: dress-9 today — until 09-07)
+35. `nx-struct-pendulum` — dashed shadow acne; hairline strings; weak
+    identity read. Sev 4. (guard: none)
+36. `nx-approach-nw-lane-001` — banding/taper/raw boxes/lamp base. Sev 4.
+    (guard: approach idle since Sep 3)
+37. `nx-dress-nw-skeps-001` — stray plank; rock swallows 2nd skep. Sev 4.
+    (guard: dress-10 yesterday — re-check at execution)
+38. `nx-dress-nw-hedge-001` — cleanup tier (stub riser, stray cube, hole).
+    Sev 4. (guard: re-check dress tail at execution)
+
+**Historical improve-1 core-family draft (superseded by the merged queue
+above):**
 
 1. `nx-town-hall` — see-through hole: sky visible through porch opening (no
    door/backstop); eave sliver top-right; ridge dashes. Sev 1: reads as
@@ -156,6 +335,24 @@ LIVE store copy, never a source rebuild).
   above; merged ranked queue deferred to improve-3 per round structure.
   Zero world mutations. Review evidence:
   agents/arthur/reviews/improve2-signs-dress/.
+- improve-3: analysis tick (round 1, phase 3 — final analysis phase).
+  Struct (30) + approach (17) + mile (15) from fresh live census (259),
+  live store bytes fetched (29 unique GLBs, HTTP 200 ×29 — curl UA
+  required, urllib default UA gets 403), 8 views each rendered via the
+  DRACO chassis, judged at 18m (ZAI fallback — native down 15th
+  consecutive tick, disclosed; native retested once at tick start, still
+  error 1210). Struct: 7 CLEAN (halt/needlerest, waystone ×4, northneedle,
+  orrery, orreryring, beacon, waterstair) / 16 defective — worst
+  echoarch (arch span + one leg INVISIBLE, orphan shadow, front view
+  confirms — decode-first flag), crossing (ford a void — identity
+  failure), angler (figure absent — possible missing export), skene
+  (black void panels), skymirror (no reflection reads). Approach: lamp ×4
+  + NE lane CLEAN; NW lane Sev 4; SW lane floating cube scatter Sev 2.
+  Mile: both GLBs CLEAN (idle-guarded, moot). MERGED RANKED ROUND-1
+  EXECUTION QUEUE committed worst-first (38 entries; signs routed as
+  cross-lane packet to waysign per domain law; idle-guards recorded
+  per-entry). Zero world mutations. Review evidence:
+  agents/arthur/reviews/improve3-struct-approach-mile/.
 
 ## Carried laws
 
