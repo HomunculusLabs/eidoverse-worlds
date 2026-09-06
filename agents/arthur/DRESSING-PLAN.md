@@ -1232,3 +1232,32 @@ fd21de9f, sw-prayer 5074600f); 16 legacy intact; interlane f6254cd0.
 Mid-tick staged-flag race on plan+ledger (M/MM) resolved to ZERO
 content diff — no sibling dress-31 exists; one live fleet dress process
 is the pipeline itself. Zero mutations/uploads.
+
+**STATE AT dress-32 (2026-09-06, pipeline hold tick — 11th consecutive)**:
+lawful HOLD — every path closed this tick. Shard queue re-verified EMPTY
+at source by full-row read of all nine `nx-dress-*` Round-1 rows: 5/29/
+30/31 DROPPED (native rejudge), 32/33/34/37/38 EXECUTED (reseats live);
+row 39 kit-debt routes nx-town to improve; survey-7/8 rounds route
+outside the prefix. NEW since dress-31, classified NOT shard work: the
+survey-8 row `nx-dress-fountain` (Sev 4, whole asset one material
+#14242f, no rim/water separation by construction) carries its own header
+marking it DRESS-DOMAIN but LEGACY-CORE OFF-LIMITS — "ownership is
+Bill's call, not dress rotation" per the row and this plan's SURVEY
+INTAKE; the domain law in DRESSING-LOOP.md forbids touching existing
+entities, and the 16-entity off-limits set includes it. It un-blocks
+only on Bill. Own queue: SW lamps only, Bill a/b/c bound (fresh token
+recount: 2 approach leg lamps r39.7/r55.4 + 1 mile lantern r64.0 = 3,
+spend 0 of 3); zero verdict markers in ledger tail and in the
+dress-districts eye-gate packet (delivered once at dress-12). Hold
+verification: standing gate ALL PASS real exit 0 at HEAD 764ac48
+(absorbing sibling artwalk-75, approach-23, waysign-28); fresh live
+census 259, ALL ELEVEN district installations PIN_EXACT
+lib+tuple+yaw-radians, comps empty across the set (hedge 3d5c7d44,
+skeps 87d2dd16, stile 5e9d301d, logpile cac71bff, ne-yard 191227da,
+ne-bench 46f3b6b1, woodstack 692bc54e, cairn 59031a0c, se-stones
+8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f); 27 total
+`nx-dress-*` = 11 district + 16 legacy core (off-limits set intact by
+arithmetic); 38 lights census-wide; interlane md5 f6254cd0 unchanged.
+Foreign mid-tick IMPROVE-PLAN edit (improve-16 garden-cottage contract,
+keep-out correction) left unstaged. Zero world mutations, zero uploads,
+zero shared-budget use.
