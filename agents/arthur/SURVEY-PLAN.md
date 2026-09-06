@@ -184,3 +184,60 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   carrying night read) NOT routed: village_tower3.glb dirty in a
   sibling's working tree (tower work in flight — note would be
   stale-on-arrival; re-slice after that work lands).
+
+- survey-8 (2026-09-06, NATIVE 2/9 + ZAI fallback 7/9 disclosed, 18m
+  gameplay, fresh live store bytes 9/9 fetched curl UA from
+  /library/store/ on exact census libs): severity backlog still DRAINED
+  (round-1 rows 1-39 terminal; survey-7 candidates are intake rows, not
+  re-judge debt) → district/core pass over queue-free objects. Slice =
+  core four with NO round-1 entry (court, forge, cistern, fountain) +
+  rotation five (shutters, streetlamps, wild-wayside-0009,
+  temple-seed-0003, cultivation-garden-0011). Native up for the first
+  two (court, cistern), then 3 consecutive 1210s — paced retry burned,
+  ZAI fallback for the remaining seven, disclosed. COURT NATIVE
+  CONFIRM Sev 3 (identity fail: two-hut read, pure-black void fronts,
+  orphan plank, roof stub, floating lamp dot; front-view cross-check
+  confirms voids). FORGE ZAI Sev 4 identity-marginal (furnace-hut read;
+  anvil/hood illegible; black void hearth; floating plate). CISTERN
+  ZAI+decode Sev 4 (no water read; decode: water plane EXISTS, mat
+  #14242f darker than falsified #303840; chassis-no-envmap overstates
+  but live hue in fails band). FOUNTAIN ZAI+decode Sev 4 (decode:
+  ENTIRE asset one material #14242f — no rim/water separation by
+  construction; polish-273/274 baseline was #506a78; legacy-core
+  off-limits member — probe only, Bill's call). SHUTTERS ZAI CLEAN
+  (paired panels legible, silhouettes clean; minor asymmetric shadow
+  watch item only). STREETLAMPS ZAI CLEAN 6/6 (identity instant,
+  grounded, no floats; emissive-side verification flagged as engine
+  check, not render defect; background-head compression expected at
+  distance). WILD-WAYSIDE-0009 ZAI CLEAN-with-margin (identity lands,
+  roof hero read works; 3 suspected 2-4px post-cap floats + canted
+  front block flagged verify-tier — sub-threshold, logged in row only
+  via evidence path). TEMPLE-SEED-0003 ZAI Sev 4 (flat rubble/mosaic
+  read from BOTH gameplay and top views; no seed core/vertical; 4-member
+  family shares one sha). CULTIVATION-GARDEN-0011 ZAI Sev 3 (no
+  cultivation grammar — spheres read bushes, sticks read weeds, no
+  beds/rows/fence; floating-over-shadow reads; 5-member family). Census
+  259 steady 0/0 vs survey-7 (three lib turnovers classified during the
+  tick: shrine→948d5c49 improve-14 committed, hedge→3d5c7d44 dress-21
+  committed line, stable→98f2d5b6 improve-11/12). GATE NOTE: first gate
+  run hit artwalk-67's shared-ledger append window (ledger law
+  2370270==2370269 FAIL — sibling's entry staged, total update in
+  flight); resolved by interleaving (artwalk commit f6e0a24 landed,
+  ledger EXACT), re-gated ALL PASS exit 0 at fe07f48, HEAD then
+  advanced to a3fa291 pre-append with all three target plans clean in
+  tree. Stacked-window check: 'survey-8' string in ledger = dress-28
+  prose quoting this slice dir (their commit d7b3b47 observed it
+  forming); NO survey-8 ledger entry existed — tag clean, no suffix.
+  Verdicts 6 confirmed / 3 clean (wayside clean-with-margin) / 0
+  dropped. Candidate rows +6 to
+  IMPROVE-PLAN SURVEY CANDIDATES; DRESSING-PLAN intake +1 (fountain);
+  IMPROVE-PLAN rows carried the other five (improve-own/district
+  domains). Zero world mutations, zero uploads, zero shared-budget use.
+
+## Routed notes (survey-8)
+
+- survey-8: `nx-court` + `nx-forge` + `nx-cistern` + `nx-dress-fountain`
+  + `nx-temple-seed-0003` + `nx-cultivation-garden-0011` — candidate
+  rows under IMPROVE-PLAN SURVEY CANDIDATES (round-2 intake);
+  `nx-dress-fountain` additionally routed to DRESSING-PLAN SURVEY
+  INTAKE (legacy-core off-limits set named — Bill's ownership call).

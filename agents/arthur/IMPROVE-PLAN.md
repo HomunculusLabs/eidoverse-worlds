@@ -1512,6 +1512,64 @@ open duplicate notes for these objects.
   Craft-station read holds; potter-specific read rests on sub-pixel
   cues. Related: nx-sign-potter-001 emblem fix is waysign R2 work.
   Evidence: reviews/survey7-slice/nx-town-potter/gameplay.png
+- `nx-court` — Sev 3 (survey-8, 2026-09-06, native gameplay + front
+  cross-check): court identity fails at 18m — reads two dark workshop
+  huts, zero court vocabulary (no bench row, posts, banner, or dais);
+  both open fronts read pure-black voids with interior props floating
+  in blackness (L x210-350 y295-435, R x608-752 y295-430); orphaned
+  plank between structures x455-500 y428-444; left-roof stub
+  x440-465 y265-305; floating wall-lamp dot x196-206 y284-292.
+  Interleave note: next-place-court-ensemble.ts dirty in tree = sha
+  re-pin to LIVE lib 59534b10 (landed re-place bookkeeping, GLB clean,
+  judged bytes current). Evidence:
+  reviews/survey8-slice/nx-court/{gameplay,front}.png
+- `nx-forge` — Sev 4 identity-marginal (survey-8, ZAI fallback): reads
+  furnace/oven-hut, not forge — anvil illegible (flat plate x532 y380,
+  no horn/waist/stump), no hood over hearth, left appendage
+  x412-432 y343-392 pure dark blob; hearth opening x435-497 y358-400
+  black void w/ blobby glow; floating right plate x532 y379 (gap
+  x522-528 y378-386); quench barrel marginal (no contact shadow
+  x510-530 y402). Glow alone carries identity. Evidence:
+  reviews/survey8-slice/nx-forge/gameplay.png
+- `nx-cistern` — Sev 4 identity-marginal (survey-8, ZAI + decode):
+  no water read at 18m; reads dark box + leaning plank; no tiering;
+  stone too dark. DECODE (live store bytes): water plane EXISTS — mat
+  `glow1` base #14242f met .5 rough .25 emissive #03070b — DARKER than
+  the polish-271-falsified #303840 (palette law: #506a78); survey
+  chassis has no envmap (metalness-.5 water renders near-black there),
+  so the render read overstates — but the live hue itself sits in the
+  known-fails band; rim-vs-water value separation likely absent
+  in-world too. Strut hairline contacts x483→520. Evidence:
+  reviews/survey8-slice/nx-cistern/gameplay.png
+- `nx-dress-fountain` — Sev 4 (survey-8, ZAI + decode; DRESS-DOMAIN,
+  legacy-core off-limits set — ownership is Bill's call, not dress
+  rotation): water fails at 18m. DECODE: ENTIRE asset is ONE material
+  `glow0` base #14242f met .5 rough .25 em #03090d — stone and water
+  share a single material, so no rim/water separation exists by
+  construction; basin interior x405-555 y376-396 reads black void.
+  Baseline-vs-law flag: polish-273/274 validated this fountain with
+  water #506a78 + emissive #2e4a58 — live bytes decode #14242f/#03090d
+  (darker than the falsified #303840). Stem 3-4px shimmer x479-483
+  y291-313. Note routed to DRESSING-PLAN SURVEY INTAKE. Evidence:
+  reviews/survey8-slice/nx-dress-fountain/gameplay.png
+- `nx-temple-seed-0003` — Sev 4 (survey-8, ZAI gameplay + top): flat
+  rubble/mosaic read confirmed from BOTH angles — flower-of-life disc
+  at constant height, no central seed core or vertical form (uniform
+  shallow shadows prove no raised mass); reads crop-circle/paving, not
+  seed; no ground contact shadow at gameplay (x310-655 y412-418).
+  Design caveat: 4-seed family shares ONE sha — if confirmed at
+  decode, the fix is family-wide (0003/0013/0022/0047-class).
+  Evidence: reviews/survey8-slice/nx-temple-seed-0003/{gameplay,top}.png
+- `nx-cultivation-garden-0011` — Sev 3 (survey-8, ZAI): cultivation
+  grammar absent at 18m — no bed geometry, no crop rows, no fence;
+  spheres read bushes/boulders (uniform near-black green, zero size
+  variation, ~25 stamps); sticks read saplings/weeds (lollipop
+  silhouettes, no row rhythm); front-row spheres read floating over
+  offset shadow voids (x330-365, x415-445, x500-540, x600-645,
+  y420-436); stray edge sticks x160-235, x740-785. Family note:
+  5 gardens share the pattern (0011/0019/0032/0045/0058 — verify
+  before fleet-wide work). Evidence:
+  reviews/survey8-slice/nx-cultivation-garden-0011/gameplay.png
 
 ## Carried laws
 

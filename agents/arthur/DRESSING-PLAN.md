@@ -14,6 +14,17 @@
   skeps 09-06, hedge itself untouched since dress-1). Evidence:
   agents/arthur/reviews/survey6-slice/nx-dress-nw-hedge-001/gameplay.png
 
+- [survey-8, 2026-09-06, ZAI fallback + decode, 18m gameplay, live store
+  bytes lib 72f07c2a fetched fresh] `nx-dress-fountain` CONFIRMED Sev 4 —
+  water does not read; decode of live bytes shows the ENTIRE asset is one
+  material (`glow0` base #14242f met .5 rough .25 em #03090d): stone and
+  water share it, so rim/water separation is absent by construction. The
+  polish-273/274 baseline for this fountain was water #506a78 + emissive
+  #2e4a58; live hue is DARKER than the polish-271-falsified #303840.
+  LEGACY-CORE member (off-limits set) — probe only, ownership/Bill's
+  call; full row stands in IMPROVE-PLAN SURVEY CANDIDATES. Evidence:
+  agents/arthur/reviews/survey8-slice/nx-dress-fountain/gameplay.png
+
 Lane: district dressing for commons-next. One authored installation per
 wakeup, districts rotating NW → NE → SE → SW. Loop file:
 `DRESSING-LOOP.md`. Interlane: `INTERLANE-PROTOCOL.md` (six lanes).
