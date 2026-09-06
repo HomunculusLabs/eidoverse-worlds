@@ -59,7 +59,63 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 
 ||| sweep-37 | 2026-09-06 | 259==259 fully steady (221 thing + 38 light; 0 arrivals, 0 departures, 0 drift on id+pos+yaw+lib vs BOTH the committed sweep-36 snapshot and the /tmp capture — first fully-quiet delta since sweep-24 (sweeps 25–36 each carried ≥1 classified lib change); no snapshot rewrite needed) | ALL CLEAR 221/230/0 exit 0 | tier-1 4/4 ALL_PASS (core 64/64 ok max-arr 0.38; NW 5 @ 0.38; NE 7 @ 0.38; SW 5 @ 0.37, legs run individually, verdicts content-anchored on status strings + per-leg ok counts) + tier-2 fifteenth cycle potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL_PASS | pins 14/15 + angler classified (live b3dfb28a unchanged, quarantined sibling improve draft, sweep-28..36 class, racing law), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, standing gate real exit 0 at ab7eb39, ledger law exact (base 2370285 at append — sibling holds appended mid-tick, absorbed) | CLEAN SWEEP |
 
+| sweep-38 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, SEVEN documented lib/pos changes all classified domain-valid vs authored sources: gate lamps x4 pos+lib (town-1 off-axis placer next-place-gate-lamps-offaxis.ts, uncommitted) + companions x4 follow; nx-core-paths 9ce1378d->c31b6e3f (town straight-paths replace next-replace-core-paths-straight.ts, uncommitted); nx-struct-amphi ->95a98c74 (committed struct-43 @ 4d9d061); nx-town-garden-cottage ->cee52aca (committed improve-16, classified by 3 sibling lanes); 0 drift on other shared ids) | COVERAGE HOLE exit 4 (217 bbox non-light — 4 lamps bbox:null on truncated lib, R-120; pair-set 215 classified 0 unclassified; source-true decode finds lamp-n x mapboard 9mm head-band kiss R-121) | tier-1 4/4 ALL_PASS (core 64/64 ok max-arr 0.38 against NEW core-paths bytes; NW 5/5 @ 0.38; NE 7/7 @ 0.38; SW 5/5 @ 0.37) + tier-2 sixteenth cycle inn 6/6 @ 0.364 + stable 5/5 @ 0.396 | pins 14/15 + angler classified (racing law), carousel comps exact 7 + lib ce3633992d07055e, gate lamps 4/4 at authored off-axis tuples BUT bbox:null (R-120), windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, standing gate real exit 0 at c13c022 | FINDINGS — R-120 Sev 1 + R-121 Sev 2 (both town lane, both routed REPAIR-REGISTER) |
+
 ## Findings register
+
+sweep-38: TWO findings, both routed to the repair register (no town plan/loop
+file exists to receive a plan note — register is the lawful fallback):
+
+R-120 (Sev 1, town) GATE LAMPS UNRESOLVABLE LIB. All four cardinal gate lamps
+(nx-approach-lamp-e/n/s/w) live on lib `store/18b69a6bb2.glb` — a 10-hex
+TRUNCATED store path written by the uncommitted town-1 placer
+next-place-gate-lamps-offaxis.ts (PINNED_SHA is 10-hex). GET
+/library/store/18b69a6bb2.glb -> 404; the 16-hex path -> 200 (7648B). The
+client resolves lib via direct fetch of /library/<lib> with no fallback
+(client/lib/assets.js:481). Consequences: (a) the four plaza gate landmarks
+cannot download — INVISIBLE in world (companions -l still shine as floating
+lights); (b) /geom returns bbox:null for exactly those four — they silently
+left the SAT collision set (221 -> 217). The placer's own post-verify passed
+because its lib check is prefix-INCLUDES (line 106) and it never checks bbox.
+Independently flagged by artwalk-83 @ 0efff67 ("truncated 10-hex lib x4
+bbox-lost"). Fix is town-lane: re-spawn with full 16-hex lib (bytes already
+in store, no upload), verify bbox non-null.
+
+R-121 (Sev 2, town) LAMP-N x MAPBOARD 9mm KISS. Translation-aware decode of
+both live libs at live tuples (mapboard 1f1a10f4dce71a0e == local
+village_mapboard3.glb; lamp 18b69a6bb2f5862f == local village_approach_lamp.glb
+— extents match census bboxes, decoder asserted sane): min 3D 0.0251m; y
+1.4-2.6 band min horizontal 0.009m (lamp head 9mm from board face); base
+band 0.118m. Pre-move clearance +0.857m — the off-axis move CREATED the
+contact. No exemption for this pair; invisible to the standing SAT for the
+R-120 reason. Independently flagged by artwalk-83 (0.025m). Fix is
+town-lane: adjust lamp-n pose when re-spawning per R-120 and re-derive true
+clearance from decoded libs, aim >= 0.5m head-band; re-walk N spoke.
+
+Tooling hardening (this lane's own, committed this tick): sweep-sat-next.ts
+now fails loud (exit 4, "SWEEP COVERAGE HOLE") on any lib-bearing thing with
+bbox:null — proven RED on the live defect (4 lamps) before this verdict;
+the prior ALL CLEAR over 217 entities was a pitfall-12-class vacuous pass
+that this sweep caught only because census bbox accounting flagged the set
+shrink. Probes this tick: one tool-layer bounce (mapboard/lamp decoder
+first draft had translation-compose garbage — extents assert caught it,
+corrected decode produced extents matching census bboxes before any
+verdict); one invented-URL probe (/store/<hash>.glb 404s even for known-good
+libs — discarded, not evidence). Census 259==259 (0 arrivals, 0 departures)
+with SEVEN documented lib/pos changes each classified against its authored
+source (town-1 uncommitted placer x4 lamps + companions, town straight-paths
+replace, struct-43 committed, improve-16 committed). Tier-1 4/4 + tier-2
+inn+stable sixteenth cycle green over the new core-paths bytes. Pins 14/15 +
+angler classified (quarantined sibling draft, racing law). Interlane md5
+f6254cd0 stable. Standing gate real exit 0 at tick-start HEAD c13c022;
+ledger base absorbed mid-tick sibling appends (2370285 -> 2370292+ at
+write). Next tier-2 pair (sweep-39): potter + market (seventeenth cycle).
+Standing note for Bill unchanged: with the town lane's Sev-1 (R-120) open,
+expect gate-lamp bbox coverage to stay at 217 until the town lane re-spawns
+the four lamps on the full 16-hex lib; the hardened SAT tool will keep
+reporting exit 4 until then — that is the correct loud state, not a tool
+defect.
+
 
 sweep-37: none. Census 259==259, the first fully-quiet delta since sweep-36
 (0 arrivals, 0 departures, 0 drift on id+pos+yaw+lib against BOTH the

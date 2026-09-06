@@ -53,6 +53,15 @@ const ALLOWED = new Set<string>([
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });
 if (!r.ok) throw new Error(`GET -> HTTP ${r.status}`);
 const data: any = await r.json();
+// sweep-38 coverage law (pitfall-12 class): a lib-bearing THING without a
+// bbox is an entity the server could not classify — silently dropping it
+// from the SAT set is a vacuous pass. Fail loud instead: every such entity
+// is a finding candidate (sweep-38: the four re-spawned gate lamps came
+// back bbox:null on a truncated store lib and left the collision set).
+const allThings = (data.entities ?? []).filter((e: any) => e.kind !== "light");
+const noBbox = allThings.filter(
+  (e: any) => !e.bbox && (e.lib !== undefined && e.lib !== null)
+);
 const ents: Ent[] = (data.entities ?? []).filter(
   (e: any) => e.kind !== "light" && e.bbox && e.lib
 );
@@ -105,6 +114,20 @@ for (let i = 0; i < boxes.length; i++) {
 console.log(`entities(with bbox, non-light): ${boxes.length}`);
 console.log(`exempt-classified contacts: ${classified}`);
 console.log(`unclassified overlaps: ${unclassified}`);
+if (noBbox.length > 0) {
+  // Coverage finding, not an overlap finding: these entities are OUTSIDE the
+  // SAT set entirely. Report them and fail the sweep (exit 4) so no future
+  // tick can call ALL CLEAR over an invisible-entity hole.
+  console.log(`NO-BBOX COVERAGE HOLE: ${noBbox.length} lib-bearing thing(s) absent from the SAT set:`);
+  for (const e of noBbox) console.log(`  NO_BBOX ${e.id} lib=${e.lib}`);
+}
 for (const row of rows) console.log(row);
-console.log(unclassified === 0 ? "SWEEP ALL CLEAR" : "SWEEP HAS FINDINGS");
-process.exit(unclassified === 0 ? 0 : 3);
+const coverageHole = noBbox.length > 0;
+console.log(
+  unclassified === 0 && !coverageHole
+    ? "SWEEP ALL CLEAR"
+    : coverageHole
+      ? "SWEEP COVERAGE HOLE (exit 4)"
+      : "SWEEP HAS FINDINGS"
+);
+process.exit(unclassified === 0 && !coverageHole ? 0 : coverageHole ? 4 : 3);
