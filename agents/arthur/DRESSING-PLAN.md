@@ -1641,3 +1641,26 @@ no visual PASS claimed.
   legacy intact; lights 38; interlane md5 f6254cd0 unchanged.
 - Zero world mutations, zero uploads, zero shared-budget use, no visual
   PASS claimed. No un-shard clock running (shard empty, not idle).
+
+---
+## dress-46 (2026-09-06, pipeline tick 25) — HOLD
+
+- Shard: re-verified EMPTY at source, full-row-window scan (11 rows mention
+  nx-dress: 5/29/30/31 DROPPED, 32/33/34/37/38 EXECUTED, 39 routes nx-town
+  improve-own, row 13 fountain DRESS-DOMAIN off-limits). OPEN: NONE.
+  REPAIR-REGISTER: zero nx-dress lines.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh recount: SW-quadrant
+  r>=35 = exactly 3 live lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0 kind=light). Spend 0 of 3.
+- Verdicts: zero in ledger tail AND eye-gate packet fd677cae unchanged,
+  zero VERDICT lines.
+- Hold verification: standing gate ALL PASS real exit 0 at HEAD 3968130
+  (ledger law 2370298 EXACT); fresh live census 259 (HTTP 200 first fetch),
+  11/11 district installs PIN_EXACT lib+tuple+yaw (probe self-catch: first
+  compare read 0/11 false-DRIFT on two probe bugs — store/-prefixed lib
+  sliced raw and live-radians yaw double-converted; regex hex8 + raw yaw
+  compare match all 11 exactly — dress-40 law re-hit, world correct,
+  probe wrong); 27 nx-dress = 11 fleet + 16 legacy intact; lights 38;
+  interlane md5 f6254cd0 unchanged.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock running (shard empty, not idle).
