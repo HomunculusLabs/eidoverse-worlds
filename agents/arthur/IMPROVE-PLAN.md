@@ -176,11 +176,21 @@ before editing — vision findings are probes ranked by 8m-walker severity,
 not verdicts. Seeded entries: inn emblem, woodyard live-freeze. Idle-guard:
 any object another lane touched within 24h defers. Sign re-places route as
 a cross-lane packet to waysign — improve never re-places a waysign-owned
-`nx-sign-*` rider):**
+`nx-sign-*` rider. Native vision RESTORED 2026-09-06 (~08:40, Bill set
+glm-5.3-flash for the lane vision model; falsified on a live frame before
+this note): the merged queue below items already executed was ranked under
+ZAI fallback (improve-1..3, native down ticks 13-16). Items not yet executed
+MUST be re-judged under native vision (render 8 views at 18m, judge the
+exact live bytes) BEFORE execution; confirm-or-drop each finding, and
+re-rank worst-first if confirmations move severities. Entries that fail
+native confirmation drop out of the round queue with a one-line note here.
+Executed entries keep their record regardless — re-judgment is forward-only):**
 
 1. `nx-town-hall` — see-through hole: sky visible through porch opening (no
    door/backstop); eave sliver top-right; ridge dashes. Sev 1: reads as
-   unfinished mesh. (guard: none)
+   unfinished mesh. (guard: none) [EXECUTED improve-5: cased 1.4 N door,
+   recessed header, 5-anchor warm kit, trueGableHalf ridge; D1 residual
+   lit-doorway patch routed to round-1 eye-gate]
 2. `nx-struct-echoarch` — arch span + one leg invisible (renders as single
    post; orphan shadow proves hidden geometry — suspect flipped normals /
    culled faces); orange seam at post-base joint. Sev 1: namesake absent.
