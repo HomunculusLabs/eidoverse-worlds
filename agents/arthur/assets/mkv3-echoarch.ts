@@ -41,21 +41,28 @@ const D = 0.34;         // fin thickness
     g.add(slab);
 }
 
-// one fin: parabola z(y) = y²/(4F), extruded as tangent boxes
+// one fin: parabola z(x) = x²/(4F), extruded as tangent boxes turning IN
+// PLAN (rotation.y) — improve-6: the original build computed the profile
+// but never applied the transverse coordinate (segments all at x=0 with
+// rotation.x louver tilt), so both fins collapsed into a 0.34m column of
+// tilted panels. The whisper fins physically did not exist in the mesh.
 function fin(name: string, mirror: boolean) {
     const sign = mirror ? -1 : 1;
     const baseZ = mirror ? SEP : 0;
     const segW = (2 * HALF) / SEG;
     for (let i = 0; i < SEG; i++) {
-        const y = -HALF + (i + 0.5) * segW;
-        const z = (y * y) / (4 * F);          // local profile
-        const dzdy = y / (2 * F);             // slope
-        const ang = Math.atan(dzdy);
+        const x = -HALF + (i + 0.5) * segW;
+        const z = (x * x) / (4 * F);          // local profile
+        const dzdx = x / (2 * F);             // plan slope
+        const ang = Math.atan(dzdx);
         const len = segW / Math.cos(ang) + 0.03;
-        const seg = new THREE.Mesh(new THREE.BoxGeometry(D, H, len), ash);
+        const seg = new THREE.Mesh(new THREE.BoxGeometry(len, H, D), ash);
         seg.name = `${name}_s${i}`;
-        seg.position.set(0, H / 2 + 0.12, baseZ + sign * z);
-        seg.rotation.x = mirror ? -ang : ang;
+        seg.position.set(x, H / 2 + 0.12, baseZ + sign * z);
+        // local +x must align with the plan tangent (1, ±dzdx); rotation.y=θ
+        // maps +x → (cosθ, −sinθ) ⇒ finA (tangent (1, +dzdx)) takes −ang,
+        // mirrored finB (tangent (1, −dzdx)) takes +ang.
+        seg.rotation.y = mirror ? ang : -ang;
         g.add(seg);
     }
 }

@@ -449,6 +449,69 @@ Next queue item (improve-6): `nx-struct-echoarch` (Sev 1, decode-first
 flag — arch span + one leg invisible; struct lane idle since Aug 31,
 idle-guard clear).
 
+- improve-6 (EXECUTION, queue item 2 `nx-struct-echoarch`): contract
+  committed BEFORE editing. Vision re-judgment law (improve-5v) attempted
+  NATIVE first: `vision_analyze` errored 1210 — the improve-5v "restored"
+  note does NOT hold for this session's tool path (17th consecutive down
+  tick, disclosed); ZAI fallback used instead, CONFIRMED the Sev 1 finding
+  ("arch identity absent, completely; reads slab + single post" at 18m
+  gameplay). ZAI's causal read (edge-on occlusion) was then OUTRANKED by
+  source decode — the real defect is mechanical:
+  - D1 fins absent from the mesh (Sev 1, root cause by decode): `fin()` at
+    mkv3-echoarch.ts:45-61 computes the parabola profile z=y²/4F from the
+    transverse parameter y but positions every segment at x=0 with
+    `rotation.x` (vertical louver tilt) — the transverse coordinate never
+    reaches world x. Both fins collapse into a 0.34m column of tilted
+    panels in a 2.25m z-band at each end. Census cross-check: 444 tris =
+    28×12 panels + 12 slab + 96 pins, bbox x-extent ±4.1 comes from the
+    slab ALONE. Not flipped normals / culled faces (the improve-3 probe
+    guess — wrong mechanism, right severity).
+  - FIX: rewrite fin() to place each tangent segment at
+    `(x=y_c, z=baseZ+sign·z(y_c))` with `rotation.y = atan2(1, dzdy)`
+    (plan turn — the source's own "curve by turning, never applied"
+    language). Box dims, slab, and brass focus pins unchanged — the pins
+    already sit at the TRUE parabola foci (0,1)/(0,7) once the fins exist.
+  - Falsification: after renders (gameplay+front, identical camera) show
+    TWO wide curved fins facing each other with an open gap between —
+    arch/whisper identity present at 18m; decode audit shows segment
+    centers spanning x∈[−3,3]; bbox unchanged (SAT-neutral same-tuple
+    re-place); census tris 444 again.
+  - Revert: revert the fin() edit, rebuild → hash returns to live pin
+    f38d01bb.
+  - Baseline: local rebuild ×2 deterministic, sha f38d01bb… == live lib
+    prefix (no disputed bytes). Comp bag {} (census-fresh). Idle-guard
+    clear (struct-35 Aug 31).
+
+  improve-6 EXECUTION COMPLETE: fin() rewritten (position x=y_c, plan
+  rotation.y with derived signs — finA −ang, finB +ang; BoxGeometry
+  (len,H,D)). Rebuild ×2 deterministic sha baf4c994…; decode audit:
+  x-bin z-envelope tracks x²/4F exactly (tips x=±3 → z 2.15–5.85,
+  vertices z≈0/8), footprint bbox identical (8.2×12.2), height
+  3.335→3.320 (old louver tilt artifact gone), 444 tris. Before/after
+  identical-camera: BEFORE right = fan of tilted plates, sawtooth, no
+  parabola (plus gameplay/front = single post/slab — Sev 1 confirmed);
+  AFTER right = two wide curved fins facing each other with open
+  channel, background shows through; AFTER top = two opposing parabola
+  arcs, lens-shaped open channel, brass pins at the foci. Rig-note: the
+  chassis's gameplay/front cameras are AXIAL (down the throat) — from
+  the channel axis one curved wall is the CORRECT read (near fin
+  occludes); identity views for this form are broadside+top (per-family
+  judge-axis law, ground-decal precedent). ZAI fallback vision (native
+  down 17th tick, 1210 retested, disclosed). Re-place remove+spawn at
+  the exact standing tuple (−18.5, 0.0515, 57.1) yaw 5.027, lib
+  f38d01bb→baf4c994, comp bag {} before and after. Post-place tuple
+  deep-verified; idempotent rerun ALREADY_LIVE_NO_VERBS. Two-way 8-leg
+  MCPL throat walk ALL_PASS max arrival 0.40m. Placer:
+  next-place-improve6-echoarch.ts; walk: improve6-walk-echoarch.ts.
+  Review evidence: agents/arthur/reviews/improve6-echoarch/{before,after}/.
+
+Next queue item (improve-7): `nx-town-inn` (Sev 1 — floating diagonal
+planes at roof corners, dead ridge box, wheel-not-tankard emblem,
+off-center recess; guard none. NOTE improve-5v law: re-judge under
+native vision at execution; re-check interior lane tail — interior-20
+touched the inn Sep 1, idle-guard expires 09-02, clear unless new
+commits land).
+
 ## Carried laws
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
