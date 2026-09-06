@@ -3889,4 +3889,6 @@ fixes ≈ 6 F.)
 
 - [sweep-16] full audit sweep at 259 live entities — CLEAN steady-state; census 259==259 vs sweep-15 snapshot (0 arrivals, 0 departed, 0 drift on all shared ids; fifth fully quiet delta of the wave), overlap ALL CLEAR (221 bbox non-light, 229 classified, 0 unclassified), walks tier-1 4/4 (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37) + tier-2 stable 0.396 + observatory circuit third cycle ALL PASS, pins 15/15, carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 + -l lights standing (38 lights live), woodyard pin 1f2c6f592095b204 exact, ledger law exact, interlane md5 f7865b648dfa9dc4 stable, standing gate real exit 0 at HEAD 68ff9a3; zero findings, zero defect notes, zero world mutations (D+0, E+0)
 
+- [sweep-17] full audit sweep at 259 live entities — CLEAN steady-state; census 259==259 vs sweep-16 snapshot (sixth fully quiet delta), overlap ALL CLEAR (221 bbox, 229 classified, 0 unclassified), walks tier-1 4/4 + tier-2 bunkhouse 0.380 + garden-cottage 0.355 fourth cycle ALL PASS, pins 15/15, carousel comps 7 + lib pinned, gate lamps 4/4, 38 lights, woodyard pin exact, interlane md5 stable; zero findings, zero world mutations (D+0, E+0)
+
 **Running total: 2370204 / 2000000**
