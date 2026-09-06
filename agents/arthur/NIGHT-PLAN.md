@@ -113,7 +113,7 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 |----|---------|----------|-----------|-----------|-------|
 | night-1/D1 | NW leg unlit dead stretches (2 lamps / 47m) | 2 | approach-N | APPROACH-PLAN `### night-1 defect note` | CLOSED 2026-09-06 by approach-6 (owning lane): in-budget lane re-dress — zero new light entities (census kind=light 38 steady), 4 bone pillars each capped with one faint warm emissive bead (`flame_beads_nw`, intensity 1.15, polish-274/278 moonlit law) between the two lamps; live lib `dc25606587` confirmed in census-14; owning-lane night judgment PASS-borderline (ZAI fallback, disclosed there). Observer lane has NOT re-judged the live night read — closure is the owner's, no visual PASS claimed by this lane; a second-rotation NW night pass would verify the read (not taken — lane holds on Bill) |
 | night-1/N1 | lamp-head emissive consistency question | 4 (informational) | approach-N | same note | noted, no re-open |
-| night-2/D2 | NE leg unlit dead stretches: gate-edge(r~20)→lamp-001 33.5m, lamp-001→002 24.1m, lamp-002→first lit interior 28.1m (all census-verified; worse than NW) | 2 | approach-N | APPROACH-PLAN `### night-2 defect note` | OPEN, budget-bound (NE budget=2, spent by the same two lamps) |
+| night-2/D2 | NE leg unlit dead stretches: gate-edge(r~20)→lamp-001 33.5m, lamp-001→002 24.1m, lamp-002→first lit interior 28.1m (all census-verified; worse than NW) | 2 | approach-N | APPROACH-PLAN `### night-2 defect note` | CLOSED 2026-09-06 by approach-7 (owning lane, commit 873a138): in-budget lane re-dress — zero new light entities (census kind=light 38 steady across census-25→26), gray-bone verge re-dress + 8 bone pillars (~9.2m, alternating sides) each capped with one faint warm emissive bead (`flame_beads_ne`, intensity 1.15, polish-274/278 moonlit law), beads world r28.6→r68.3 covering all three D2 dead stretches (gate-edge, lamp1→lamp2, lamp2→district); live lib `dc52264c04` confirmed in census-26; owning-lane night judgment outbound-vantage PASS (ZAI fallback, disclosed there; three FAIL verdicts falsified at pixel+projection ground truth). Observer lane has NOT re-judged the live night read — closure is the owner's, no visual PASS claimed by this lane; a second-rotation NE pass would verify the read (deferred — lane holds on Bill) |
 | night-2/N2 | lamps cast weak/no ground pools at range-10 — lights read as points pasted on darkness, not fixtures in space (recurring night-1/N1 class, now judged in 3 views) | 3 (informational→design) | approach-N (contract is live-client) | same note | noted; likely ambient/sky-budget question for the final packet |
 | night-2/N3 | DRESSING-PLAN lamp-budget table rows (NE=2, SE=0) contradict the census light count (NE=10, SE=9 at r≥35 — night-1 note says SE=8; +1 is sibling work) | 3 | dress-N | DRESSING-PLAN `### night-2 defect note` | CLOSED 2026-09-06 by dress-3 (owning lane): table recounted per the plan's own token-anchor rule → NW 2 / NE 10 / SE 8 / SW 3 (DRESSING-PLAN lamp-budget header, "closing night-2/N3"); night-7 later pinned the token-vs-kind=light law. Register row reconciled at night-8 |
 | night-3/D3 | SE corridor az315 ZERO lamps; path fades to black within a third of frame; last-stone→wild-margin link implied but unlit | 3 | approach-N | APPROACH-PLAN `### night-3 defect note` | OPEN, budget-bound (SE budget 8/8 spent on interior anchors) |
@@ -681,3 +681,37 @@ STUDY COMPLETE (all facets judged; packet assembled).
   lamp-budget policy D2–D5+N6, N5 detached-orb, N7 hierarchy inversion.
   Second-rotation NW pass remains the D1 verify path, deferred while the
   lane holds. Zero world mutations, zero renders judged, no PASS claimed.
+- night-26 (2026-09-06, pipeline-mode hold tick + register reconciliation
+  — second disposition change, night-14/D1 class): **night-2/D2 flipped
+  OPEN→CLOSED.** The owning approach lane's approach-7 (commit 873a138,
+  HEAD at survey) closed D2 on the same in-budget path as approach-6's
+  D1 closure: zero new light entities, gray-bone verge re-dress + 8 bone
+  pillars each capped with one faint warm emissive bead (`flame_beads_ne`,
+  intensity 1.15, polish-274/278 moonlit law), beads world r28.6→r68.3
+  covering all three D2 dead stretches. Verified fresh this tick:
+  APPROACH-PLAN §approach-7 at HEAD 873a138; live lib `dc52264c04` on
+  `nx-approach-ne-lane-002` in census-26; kind=light count 38 steady
+  (= zero budget movement). Closure is the OWNING lane's judgment (ZAI
+  fallback, disclosed there); this lane claims no visual PASS and has NOT
+  re-judged the live night read — a second-rotation NE pass is the verify
+  path when the lane next rotates (joins NW). PACKET STALENESS DISCLOSED
+  (extends night-14's): the decision packet (md5 cdc435a2, unchanged,
+  assembled-exactly-once law) asks Bill to rule on "D1/D2/D3/D4" as
+  all-OPEN; D1 AND D2 are now closed — Bill's lamp-budget ruling is now
+  needed for D3/D4/D5 only. D3–D5 and N1/N2/N4–N7 verified UNCHANGED
+  fresh (APPROACH-PLAN note sections stand; §approach-7 only ADDS its
+  record + closes D2). Standing gate ALL PASS real exit 0, absorbing one
+  sibling HEAD advance mid-tick (873a138 → ef48090 waysign-14, itself
+  zero-upload bookkeeping: build banked, placement deferred, no lights).
+  Census-26: 259 entities / 38 lights / zero night-prefixed, FULLY
+  steady vs census-25 (0 new, 0 gone, 0 pos/yaw/lib changed — approach-7
+  settled exactly as night-25 predicted; capture /tmp/night-census-26.json).
+  D1 pin nx-approach-nw-lane-001 lib dc256065879371d8 exact steady.
+  Interlane md5 f6254cd0 steady. Zero actionable night- shard rows in
+  IMPROVE-PLAN (night- is an observer). DRESSING-PLAN lamp ledger
+  re-read: SW lamps still 0 of 3, blocked on Bill a/b/c. Lane HOLDS on
+  Bill's verdict classes, now: sky facet-5, lamp-budget policy D3–D5+N6
+  (D1+D2 closed), N5 detached-orb, N7 hierarchy inversion. Second-
+  rotation NW+NE passes remain the D1/D2 verify paths, deferred while
+  the lane holds. Zero world mutations, zero renders judged, no PASS
+  claimed.
