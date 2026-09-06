@@ -36,7 +36,27 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 
 | sweep-23 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-22 snapshot — twelfth fully quiet delta of the wave; raw /geom snapshot byte-identical 71867B, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs max-arr 0.38; NW 0.38 / NE 0.38 / SW 0.37, legs run individually, all real exit 0) + tier-2 potter 0.366 + market 0.389 ALL PASS (sixth cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, woodyard 1f2c6f592095b204 exact, ledger law exact (2370208 at entry, 2370208 after D+0/E+0 append), interlane md5 1b933f3454e52504 stable, standing gate real exit 0 at HEAD 1808dd6 (sibling improve-3 analysis-only accepted by prefix gate) | CLEAN SWEEP |
 
+|| sweep-24 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-23 snapshot — thirteenth fully quiet delta of the wave; raw /geom snapshot sha-identical 6bc53d31c388710a, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs max-arr 0.38; NW 0.38 / NE 0.38 / SW 0.37, all real exit 0, verdicts content-anchored) + tier-2 inn 0.364 + stable 0.396 ALL PASS (sixth cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, woodyard 1f2c6f592095b204 exact, ledger law exact (2370208 at entry, 2370208 after D+0/E+0 append), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD 4100aad (sibling improve-4 decode+plan tick, zero world mutations per its message, accepted by prefix gate) | CLEAN SWEEP |
+
 ## Findings register
+
+sweep-24: none. Steady-state census (259==259 vs the committed sweep-23
+snapshot — 0 arrivals, 0 departures, 0 drift on all shared ids; thirteenth
+fully quiet delta of the wave; raw /geom snapshot sha-identical
+6bc53d31c388710a so no rewrite was needed). New sibling commit since
+sweep-23: improve-4 @ HEAD 4100aad (round-1 execution item 1 nx-town-hall
+decode+plan tick — analysis + housekit.ts opt-in commit only, zero world
+mutations per its message, accepted by the prefix gate); interlane md5
+1b933f3454e52504d89ff0c167c4e7dc stable. All five phases verified fresh this
+wakeup with zero failing checks (tier-1 legs run individually per sweep-18
+timeout lesson, all real exit 0 with status strings anchored; tier-2 sixth
+cycle: inn 0.364 + stable 0.396). Foreign-seam abstentions in walk stderr
+are the known normalized diagnostic set (cultivation gardens), unchanged.
+No defect notes written. Next tier-2 pair (sweep-25): hall + row-cottage
+(seventh cycle). Standing note for Bill unchanged: improve-1..3 committed a
+38-entry ranked execution queue in IMPROVE-PLAN.md, so sweeps 25+ should
+expect improve-N domain activity in the census diff once execution ticks
+begin mutating (improve-4 was decode+plan only, still zero mutations).
 
 sweep-23: none. Steady-state census (259==259 vs the committed sweep-22
 snapshot — 0 arrivals, 0 departures, 0 drift on all shared ids; twelfth
