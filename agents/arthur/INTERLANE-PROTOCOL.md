@@ -8,7 +8,10 @@ never re-places existing buildings), `dress-N` (NEW
 (NEW `nx-approach-<dir>-<kind>-<NNN>` district legs only), `waysign-N` (NEW
 `nx-sign-<trade>-<NNN>` trade-sign riders on core buildings only — never
 re-place a host), `mile-N` (NEW `nx-mile-<dir>-<NNN>` approach-milestone
-pairs only — never touch a leg or its lamps). Two observer
+pairs only — never touch a leg or its lamps), `improve-N` (objects named
+in the CURRENT committed round queue in IMPROVE-PLAN.md — the refinement
+era's primary lane; idle-guard: defers on any object another lane touched
+within 24h). Two observer
 lanes run beside them: `night-N` (ZERO world mutation — night-read audit,
 defects routed to owners) and `sweep-N` (ZERO world mutation — integrator
 audit; census/overlap/walk/integrity). Observer lanes write only their own
