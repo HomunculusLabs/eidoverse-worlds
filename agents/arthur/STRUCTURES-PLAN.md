@@ -140,22 +140,23 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    derived gaps filled; both build lanes wait on Bill's eye-gate verdicts.
    Refine pool remaining: Observatory dome-shadow (source-judged, low).**
 
-## LANE STATE: SHARD EXECUTION (struct-38, 2026-09-06)
+## LANE STATE: SHARD EXECUTION (struct-39, 2026-09-06)
 
 Commissioned queues exhausted (Rounds 1–3 complete, refine pool empty);
 per Bill's improve-5y 5-10x directive this lane now executes OPEN
 improve round-1 rows matching `nx-struct-` worst-first. struct-36 = row 11
 skene (EXECUTED, live). struct-37 = row 12 skymirror (EXECUTED, live —
 recovered the dead sibling window whose uncommitted draft sat in the tree
-since 12:54). struct-38 = row 13 millrace (EXECUTED, live — materials
-root-caused at glbwrite decode: plain mat() buckets exported with NO glTF
-material; water/reeds/pin rendered COLOR_0 × loader-default metal-1 =
-near-black sheenless. Fix: canon water material via the emissive lane,
-launder flume + chute + pour for millrace identity, stemmed gold bead,
-clumped reeds. Lib d2f46768→6e82dd2e at the exact standing tuple).
-Oldest OPEN uncontested rows after struct-38: row 14 spiralfolly (Sev 2,
-survey-1 NATIVE-CONFIRMED — intake note in SURVEY INTAKE above). Row 10
-angler: in-flight sibling improve window (uncommitted draft 8c1a5047 +
+since 12:54). struct-38 = row 13 millrace (EXECUTED, live). struct-39 =
+row 14 spiralfolly (EXECUTED, live — N%3==0 refine-cadence tick; form
+honestly rebuilt: solid socketed steps, tapering core, landing platform,
+compact strut-carried ring, curb-owned continuous silhouette; ALL
+materials texMat lane per struct-38 law; sha 20c515a0→b85ce018 at the
+exact standing tuple, circuit walk 5/5).
+Oldest OPEN uncontested rows after struct-39: row 22 hypar (Sev 2,
+survey-3 ZAI, native re-judge owed), then row 23 mobius (Sev 3), row 24
+amphi (Sev 2-3), row 25 observatory (Sev 3), row 26 soundmirror (Sev 3).
+Row 10 angler: in-flight sibling improve window (uncommitted draft +
 reviews/improve10-struct-angler/ 12:04) — do NOT touch until it lands or
 the un-shard rule fires. Open with Bill: R2-3 relocation options
 (struct-22).
@@ -200,6 +201,7 @@ the un-shard rule fires. Open with Bill: R2-3 relocation options
 | struct-36 | SHARD ROW 11: skene wall-body fix | exact standing tuple (−23.32, 0.0447, 48.05) | — | π | LIVE, lib 3a62ee83→df7f7c43, walk 4/4 re-verified |
 | struct-37 | SHARD ROW 12: skymirror open-cup rebirth | exact standing tuple (24, −0.05395918, −35.5) | 0 | 0 | LIVE, lib 8331ba88→782eb864, circuit re-verifiable (folly, non-enterable) |
 | struct-38 | SHARD ROW 13: millrace material+identity fix | exact standing tuple (−37.59, −0.04526, −13.68) yaw −π/2 | — | — | LIVE, lib d2f46768→6e82dd2e, bank walk 5/5 |
+| struct-39 | SHARD ROW 14: spiralfolly honest-carriage rebuild | exact standing tuple (46.11, −0.0372, 33.50) yaw 0 | 0 | — | LIVE, lib 20c515a0→b85ce018, circuit walk 5/5 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 

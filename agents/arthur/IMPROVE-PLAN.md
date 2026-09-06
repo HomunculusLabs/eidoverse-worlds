@@ -315,6 +315,17 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     no top landing. Sev 2. (guard: none) [NATIVE-CONFIRMED survey-1:
     treads detached blocks with gaps, upper turns drift off core, gold
     ring floats unconnected, stairs stop short, ragged wobble]
+    [EXECUTED struct-39: all findings source-true (0.06 treads on 0.14
+    rail; 0.18m stick spine; ring TOP+0.5 nothing under it; no landing;
+    chord scallop) — honest-carriage rebuild: 52 solid socketed bone
+    steps, tapering corbelled core (0.72× envelope), landing platform
+    r2.25, compact ring on 3 brass struts (exact contact), outer curb
+    owns the silhouette; ALL materials to texMat lane (struct-38 law);
+    3-iteration loop w/ 18m falsification (v1 dashed+float, v2 ring PASS
+    band FAIL, v3 PASS — one continuous ribbon, ZAI fallback disclosed);
+    sha 20c515a0→b85ce018 x2, 4 nodes, bbox ±3.3 x/z unchanged;
+    remove+spawn exact tuple comp {}, idempotent rerun, 5-leg circuit
+    walk ALL_PASS 0.376m]
 15. `nx-struct-shelltower` — gaps between treads; top turn near-black;
     stairs never reach canopy. Sev 2. (guard: none) [NATIVE-DROPPED survey-1:
     CLEAN at 18m — treads read attached (dark notches = step shadow), top
@@ -1217,6 +1228,19 @@ rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
 
 
 ## Carried laws
+
+- improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):
+  - D1 facade value crush (Sev 2 core): walls flat untextured C.STONE, roof flat C.MID — near-identical luma, no plinth course; every opening a near-black void with zero casing; only the door void reads at 18m. Kit has proven cures: tex-4 ashlar stone plinths (tex-28 law class), plaster gables (already via gableRoof).
+  - D2 thin lighter diagonal streak through right window area (stray face/seam class) — verify at decode; remove if stray.
+  - D3 ridge notch/bump artifacts = the gableRoof 0.92-factor ±0.03-yaw staggered cap (identical class to hall D3 / inn D2; proven kit opt-in cure).
+  FIX (all in mkbunk.ts, no housekit change):
+  - D1a ashlar plinth ring (texMat stone [0x56503c,0x5c5a44,0x4c4836] rough .95 scale 2 weights [2,1,1] cell 32), 0.9h course under S/N/E/W walls.
+  - D1b bone window casings/sills proud of the wall face on all six windows.
+  - D1c door dignity: threshold stone + two timber door posts flanking the wide entry (lintel exists).
+  - D2 verified at decode: stray-face hunted in win_se shutter/lintel region; remove if stray.
+  - D3 roof opts into solidRidge=true, trueGableHalf=(D+0.9)/2=2.45.
+  - D4 (night clause): entry lantern bead already emissive; verify night.png warm bead; no new light entities (Bill-only).
+  Falsification: after gameplay@18m facade reads layered (plinth + stone walls + plaster gable + cased openings), door reads DOOR (posts+threshold+lintel) not void; ridge continuous front/top; decode plinth band y 0.26..1.16, zero new verts in b20 keep-out, bbox unchanged (SAT-neutral same-tuple re-place); night warm bead visible. Revert: revert mkbunk.ts → rebuild returns 49f5acc4 (baseline ×2 proven this tick). SAT preflight vs fresh live census; nearest neighbor nx-town-dyehouse well clear.
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
   one append per tick, stage only lane-owned paths, never push.

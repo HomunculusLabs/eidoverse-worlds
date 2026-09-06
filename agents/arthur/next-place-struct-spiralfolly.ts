@@ -1,8 +1,11 @@
-// next-place-struct-spiralfolly.ts — struct-20: R2-2 SPIRAL STAIR FOLLY.
-// commons-next only. NEW entity nx-struct-spiralfolly (structures lane).
-// Enterable room-gate structure (38.5m², 10.55m tall → real trimesh);
-// interior walkable, ramp honestly NOT standable (engine class, struct-3).
-// Full OBB SAT >= 1.4m vs every live solid; no exceptions. No comps.
+// next-place-struct-spiralfolly.ts — struct-20 → struct-27 → struct-39.
+// commons-next only. Entity nx-struct-spiralfolly (structures lane).
+// struct-39 (shard row 14): honest-carriage rebuild — solid socketed stair,
+// tapering core, landing platform, compact integral crown ring; materials
+// on the texMat lane (struct-38 law). Replaces live lib 20c515a0 at the
+// exact standing tuple. Footprint ±3.3 unchanged (SAT holds by prior
+// verification; this reseat is a material/form refresh at the same pose).
+// Enterable class unchanged (real trimesh, 43.6m²); no comps.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 const ROOT = "/Users/t3rpz/projects/eidoverse-worlds", WORLD = "commons-next";
@@ -12,9 +15,9 @@ const YAW = 0; // rotationally symmetric climb; approach from the path side
 const m = {
     id: "nx-struct-spiralfolly",
     file: "village_spiralfolly3.glb",
-    sha: "20c515a0e28a3c96f3d50b99debd91c105ad318155b26a97fc0bd9db3bbbc566",
-    prevSha: "655e9ec6d14beb85a1e9e59a7c3d6238228c5a2238ac71dc09dc27b4aafbbe0c", // struct-20 baseline
-    bbox: { min: [-3.3, 0, -3.3], max: [3.3, 10.56, 3.3] },
+    sha: "b85ce018f1e7678e90dacd4c39743397a0a474bf3651504c28ed21365155a89f",
+    prevSha: "20c515a0e28a3c96f3d50b99debd91c105ad318155b26a97fc0bd9db3bbbc566", // struct-27 baseline (live)
+    bbox: { min: [-3.3, 0, -3.3], max: [3.3, 10.36, 3.3] },
     comp: {},
 } as const;
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
@@ -72,7 +75,7 @@ const needComps = !exist || !eq(exist.comp ?? {}, m.comp);
 if (!exist || (exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`)) {
     const u = new URL(`${base}/upload`);
     u.searchParams.set("token", cfg.agentToken);
-    u.searchParams.set("name", `commons-next ${m.id} struct-27`);
+    u.searchParams.set("name", `commons-next ${m.id} struct-39`);
     u.searchParams.set("by", cfg.id);
     let lib = "";
     for (let a = 1; a <= 5; a++) {
@@ -82,7 +85,7 @@ if (!exist || (exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`)) {
         die(`${m.id} upload ${r.status}`);
     }
     if (lib !== `store/${m.sha.slice(0, 16)}.glb`) die(`${m.id} upload path ${lib}`);
-    verbs = [["spawn", { id: m.id, lib: `store/${m.sha.slice(0, 16)}.glb`, pos: POS, yaw: YAW, scale: 1 }]];
+    verbs.push(["spawn", { id: m.id, lib: `store/${m.sha.slice(0, 16)}.glb`, pos: POS, yaw: YAW, scale: 1 }]);
 }
 if (needComps) for (const [type, data] of Object.entries(m.comp)) verbs.push(["comp", { id: m.id, type, data }]);
 if (verbs.length) await new Promise<void>((resolve, reject) => {
