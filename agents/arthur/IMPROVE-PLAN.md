@@ -355,18 +355,67 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
    covering the run band (bottom -0.1 to landing lip) in the same tick;
    W/S climbs, Space hops off, top-out steps onto the belfry floor]
     unanchored mid-air; muddy belfry corner. Sev 3. (guard: none)
+    [ZAI-PARTIAL survey-3 (native 1210 x2, one paced retry, ZAI fallback — native re-judge owed): rungs DROP —
+    stringers + attached rungs resolve at 18m (contrast flicker only where
+    the X-brace crosses the rail); rope CONFIRMED — lower terminus floats
+    ~1m mid-air with knot-tick and no beam/floor beneath (x484-496,
+    y440-465 class) + mid-shaft fusion with brace; belfry corner PARTIAL —
+    left junction clean, right lamp fuses with post/beam junction (move
+    lamp inboard). Scope narrowed, Sev 3 stands. Evidence:
+    reviews/survey3-slice/beltower/gameplay.png]
+
 22. `nx-struct-hypar` — dangling batten; hovering batten ends; ragged
     tips. Sev 2–3. (guard: none)
+    [ZAI-CONFIRMED survey-3 (native 1210 x2, one paced retry, ZAI fallback — native re-judge owed):
+    dangling tips, hovering fan ends, ragged margins all re-confirmed at
+    18m; INTENSIFIED — central sky-through gap splits the canopy into two
+    fans (open sky ~70% of center span), daylight band between canopy and
+    deck with no hangers, 9px finial specks, edge beams sub-legible so the
+    ruled-surface read fails. Sev 2. Evidence:
+    reviews/survey3-slice/hypar/gameplay.png]
+
 23. `nx-struct-mobius` — center slit; jagged canopy edge; hovering
     canopy. Sev 3. (guard: none)
+    [ZAI-PARTIAL survey-3 (native 1210 x2, one paced retry, ZAI fallback — native re-judge owed): jagged canopy
+    edge CONFIRMED — asymmetric half-loop sawtooth (x≈495-740) reads
+    damage, not crenellation; facet seams read venetian panels; center
+    slit DROPPED (falsifiable negative: zero sky pixels inside band
+    faces); hovering DROPPED-ambiguous (under-edge strip reads as the
+    shaded far side of the loop). Sev 3 stands. Evidence:
+    reviews/survey3-slice/mobius/gameplay.png]
+
 24. `nx-struct-amphi` — disconnected seating slabs; flat bowl; telephone
     pole. Sev 3. (nx-struct-amphi is a struct lane work — struct lane
     idle since Aug 31; approach shared structures: none)
+    [ZAI-CONFIRMED survey-3 (native 1210 x2, one paced retry, ZAI fallback — native re-judge owed):
+    disconnected slabs CONFIRMED (three ground-through gaps, zero readable
+    curvature — flat sagitta over 360px run; tiers read coplanar);
+    telephone pole CONFIRMED dead-center (T-crossarm silhouette, ~7x row
+    height, composition focal); flat bowl CONFIRMED; NEW: seating wraps
+    <180deg — single bank flanking bare ground. Sev 2-3, pole worst.
+    Evidence: reviews/survey3-slice/amphi/gameplay.png]
+
 25. `nx-struct-observatory` — detached trim band; dome-to-wall slits. Sev
     3. (guard: none)
+    [ZAI-CONFIRMED survey-3 (native 1210 x2, one paced retry, ZAI fallback — native re-judge owed): trim band
+    reads detached — three pieces at mismatched heights (left tab ~20px
+    high with wall-colored gap below; right stroke separated from the dome
+    by a light gap; only the door lintel attaches); dome-to-wall slits
+    CONFIRMED — two symmetric light strips flanking the lintel read seam
+    artifact, not shutter; band-end whisker stubs. Sev 3 stands. Evidence:
+    reviews/survey3-slice/observatory/gameplay.png]
+
 26. `nx-struct-soundmirror` — identity failure at edge-on (reads mound);
     black dish interior. Sev 3. (guard: struct-33 warm-seat refine Aug 31
     — lane idle since; re-verify night read at execution)
+    [ZAI-CONFIRMED survey-3 (native 1210 x2, one paced retry, ZAI fallback — native re-judge owed): edge-on
+    identity failure CONFIRMED (three stacked tiers read ziggurat/tire
+    stack; dish tilt imperceptible from gameplay angles); black dish
+    interior CONFIRMED (delta-L 8-10, no curvature or specular cue); NEW:
+    the gold cross reads developer gizmo/grave cross — highest-contrast
+    element, no strut/receiver geometry. Sev 3 stands. Evidence:
+    reviews/survey3-slice/soundmirror/gameplay.png]
+
 27. `nx-town-mapboard` — map face dirt smudges; side edge fragments. Sev
     3. (guard: none)
 28. `nx-town-monument` — pinhole at ring intersection; pedestal face

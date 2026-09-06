@@ -39,6 +39,34 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   `agents/arthur/reviews/survey2-sev2-slice/millrace/gameplay.png`.
   Queue row 13 standing — no duplicate row created.
 
+- [survey-3, 2026-09-06, ZAI FALLBACK (native 1210 x2, one paced retry —
+  disclosed; native re-judge owed), 18m gameplay, live bytes 8e4643de]
+  `nx-struct-hypar` CONFIRMED Sev 2 — row findings re-confirmed plus
+  central sky-through gap (canopy reads two fans), canopy-deck daylight
+  band, finial specks. Evidence:
+  `agents/arthur/reviews/survey3-slice/hypar/gameplay.png`. Queue row 22
+  standing — no duplicate row created.
+- [survey-3, 2026-09-06, ZAI FALLBACK, 18m gameplay, live bytes 68edf12c]
+  `nx-struct-mobius` PARTIAL Sev 3 — asymmetric jagged canopy edge +
+  panel-facet seams confirmed; center slit + hovering canopy DROPPED.
+  Evidence: `agents/arthur/reviews/survey3-slice/mobius/gameplay.png`.
+  Queue row 23 standing — no duplicate row created.
+- [survey-3, 2026-09-06, ZAI FALLBACK, 18m gameplay, live bytes 43d0c955]
+  `nx-struct-amphi` CONFIRMED Sev 2-3 — disconnected straight-slab rows,
+  telephone-pole mast dead center (worst), flat stage, seating wraps
+  <180deg. Evidence: `agents/arthur/reviews/survey3-slice/amphi/gameplay.png`.
+  Queue row 24 standing — no duplicate row created.
+- [survey-3, 2026-09-06, ZAI FALLBACK, 18m gameplay, live bytes acd0259e]
+  `nx-struct-observatory` CONFIRMED Sev 3 — trim band three-piece detached
+  at mismatched heights; twin dome-wall slits. Evidence:
+  `agents/arthur/reviews/survey3-slice/observatory/gameplay.png`. Queue
+  row 25 standing — no duplicate row created.
+- [survey-3, 2026-09-06, ZAI FALLBACK, 18m gameplay, live bytes e5f2fc69]
+  `nx-struct-soundmirror` CONFIRMED Sev 3 — edge-on ziggurat read, black
+  void dish interior, gold cross reads gizmo. Evidence:
+  `agents/arthur/reviews/survey3-slice/soundmirror/gameplay.png`. Queue
+  row 26 standing — no duplicate row created.
+
 ## Design queue
 
 1. [DONE struct-2] S-1 The Observatory — era-1 heritage reborn: ashlar drum
