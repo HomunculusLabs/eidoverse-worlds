@@ -2299,3 +2299,62 @@ reviews/improve17-belltower/{before,after}/.
   one append per tick, stage only lane-owned paths, never push.
 - Comp capture/reapply on every re-place; idempotent rerun proof.
 - CLEAN verdicts are recorded results; no manufactured work.
+
+## improve-21 (EXECUTION CONTRACT, 2026-09-06 — R-120/R-121 take, re-arm item 2)
+
+**Why this is lawful improve-lane work:** round 1 fully terminal (39/39
+annotated; rows 20/21 gap-fixed this tick via improve-16/17 annotations);
+re-arm law fired → item (2) = REPAIR-REGISTER OPEN items. R-120 (Sev 1, five
+sweeps unaddressed, unowned) + R-121 ride together; register names improve as
+the executor of last resort. Prefix is `nx-approach-lamp-*` — no lane owns it
+(fleet LANES re-read: improve/struct/dress/approach/waysign/sweep/artwalk/night;
+approach lane owns legs + leg lamps `nx-approach-<dir>-...`, not the four
+cardinal plaza gate lamps). Idle-guard clear: no lane commit touches these
+entities; town-1 was the last mutation (uncommitted placer, then town-2
+committed it) — all 2026-09-06 morning.
+
+**R-120 (Sev 1):** all four cardinal gate lamps live on truncated lib
+`store/18b69a6bb2.glb` (404) — client cannot download, landmarks invisible,
+bbox:null x4, dropped from SAT set (221→217). Fix per register: re-spawn at
+SAME tuples on full 16-hex `store/18b69a6bb2f5862f.glb` (bytes already in
+store — verified local file == full hash, NO upload). Placer hardening in the
+same edit: PINNED_SHA → 16-hex, post-verify requires bbox presence.
+**Rider safety (b26 law):** `nx-artwalk-b26-wayband` mounts lamp-n concentric
+at (1.75, 1.5, 10) — same-tuple re-spawn leaves it standing untouched
+(concentric at identical pose; the full lib was always the intended bytes).
+
+**R-121 (Sev 2) re-derived on LIVE bytes this tick** (improve21-decode-kiss.ts,
+vertex-true, translation-aware):
+- OLD finding (9mm) was against the retired solid-plate mapboard 1f1a10f4.
+- Current head-band (y1.4-2.6) clearance: **0.076m** — improve-19's border
+  frame already relaxed 0.009 → 0.076.
+- z 10→10.6 would give 0.602m; z→11.2 gives 1.179m.
+- **Blocker:** moving lamp-n strands the b26 rider (concentric on the post,
+  artwalk domain). Interlane law: I do not move/re-place foreign riders.
+  → R-121 NOT executed this tick. Re-derived numbers + the two-entity
+  choreography requirement routed to artwalk's plan via defect note;
+  remainder routed back here on artwalk's confirmation.
+
+**Falsification:** post-place census — all four lamps lib == full 16-hex,
+bbox PRESENT x4, comps {} x4, companions -l standing at pinned tuples, b26
+rider standing at pinned tuple, total entities unchanged; idempotent rerun
+zero verbs. N-spoke re-walk not required (pose unchanged; R-121 defers the move).
+**Revert path:** re-run placer with prior lib (trivial, tuple-identical).
+
+**improve-21 OUTCOME (this tick):** R-120 EXECUTED — placer hardened first
+(PINNED_SHA → 16-hex 18b69a6bb2f5862f, bbox-presence post-verify,
+companion-entity verify, known-bad 10-hex accepted as pre-state only), then
+remove+spawn x4 at the same off-axis tuples. Two probe self-catches during
+placer repair (disclosed): (a) the committed placer's companion loop
+compared HOST pos against companion targets (always "drift" — copied from
+the original, caught when it died on a correct state); (b) its
+spawn-kind-light companion verbs SILENTLY FAILED — run 1 lost all four -l
+companions (census 260→256) with the watch handler reporting success; fixed
+to the proven "light" verb idiom reading authored color/intensity/range from
+the history fold (struct-beacon chassis), all four restored (census 260,
+lights 38). Final live state: hosts lib exact + bbox PRESENT x4, comps {}
+x4, companions at committed pins, b26 rider standing, idempotent rerun zero
+verbs. R-121: re-derived on live bytes (9mm → 0.076m post-improve-19 frame);
+move DEFERRED to artwalk-paired choreography (defect note delivered to
+ARTWALK-PLAN Log); register boxes checked + STATUS: FIXED line appended for
+R-120; R-121 stays open as routed remainder.

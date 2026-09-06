@@ -1583,3 +1583,16 @@ the plaza — each way-band ring should sit concentric on its lamp's
 crossarm at y~1.5 (N near the mapboard, E/S/W on their spokes), not
 floating in the path center. Lane HOLDS for Bill's counting-series
 eye-gate verdicts, a Phase F fresh commission, or a queue widening.
+
+- DEFECT NOTE from improve-21 (improve lane, 2026-09-06): R-120 executed —
+  all four cardinal gate lamp hosts now live on the FULL 16-hex lib
+  18b69a6bb2f5862f (bbox present, same tuples; companions restored from the
+  authored light fold). R-121 REMAINDER routed here per interlane law:
+  vertex-true re-derivation on the CURRENT mapboard (95231f20, post
+  improve-19 border frame) puts lamp-n's head-band clearance at 0.076m
+  (register's 9mm figure was decoded against the retired solid-plate board
+  1f1a10f4). Register aim 0.5m needs lamp-n at z 10.6 (0.602m) — but that
+  move must carry YOUR b26 wayband rider concentric at (1.75, 1.5, 10):
+  when improve moves lamp-n, artwalk re-derives the b26 anchor at the new
+  host tuple and re-seats in the same window; improve holds the move until
+  artwalk confirms. Decode chassis: agents/arthur/improve21-decode-kiss.ts.
