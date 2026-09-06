@@ -33,7 +33,7 @@ Rotation NW → NE → SW (→ SE if Bill opens a corridor).
 | # | Leg | Boundary | Verge side | Status |
 |---|-----|----------|-----------|--------|
 | 1 | NW | bend r58 (az306→315) | outer | **PLACED mile-1** |
-| 2 | NE | jink pivot r48 | outer | pending |
+| 2 | NE | jink pivot r48 | outer | **PLACED mile-2** |
 | 3 | SW | midpoint r47 | outer | pending |
 | 4 | NW | district arrival r71 | inner (district-facing) | pending |
 | 5 | NE | district arrival r72 | inner | pending |
@@ -74,6 +74,25 @@ live leg decode shows a better verge shoulder.
   (no solid within 15m), single upload (content-addressed), 2 spawn verbs,
   post-place tuple verify, idempotent rerun zero verbs. Verdict: PLACED_VERIFIED.
   NEXT: mile-2 NE jink pivot r48.
+
+- **mile-2 (2026-09-06, overnight fleet)** — NE jink milestone pair. Boundary:
+  the NE leg's jink pivot P1 = pol(48,54) = (38.833, 28.216) from the
+  committed polyline (mkv3-ne-approach2.ts). Posts on the corner bisector
+  (run az54 → jink az9.3, bis az31.66) at ±2.3m: `nx-mile-ne-003` village-side
+  (36.875, −0.0328, 29.421) and `nx-mile-ne-004` district-side (40.791,
+  −0.0255, 27.011). 2.13m clearance to BOTH segment centerlines (paver
+  0.46 + hem 1.35 law satisfied on both arms). Same proven GLB as mile-1
+  (village_mile_nw.glb, sha `9459eaa3…` — degenerate-fleet + deterministic
+  hold-shortcut: byte-identical bytes carry the accepted visual verdict;
+  anchors: mile-1 entry + reviews/mile-nw-001/). Placement: hash-gated placer
+  `mile-ne-place.ts` — fresh-census SAT clean (min solid gaps 2.20m vs
+  nx-dress-charcoal / 3.50m vs nx-struct-spiralfolly, both >1.4 pinch law),
+  NO upload (lib already live on sibling nx-mile-nw-001 — no-upload law),
+  2 spawn verbs @800ms, post-place tuple verify, idempotent rerun zero verbs.
+  Terrain: fresh preflight next-terrain-mile-ne.ts (pivot −0.030, posts
+  −0.033/−0.026). Unlit stone — NE lamp budget 0 spent (pivot flanked by the
+  leg's own lamp rhythm). Verdict: PLACED_VERIFIED.
+  NEXT: mile-3 SW midpoint r47.
 
 ## Carried laws
 
