@@ -406,6 +406,28 @@ zero uploads; no visual PASS claimed. Standing eye-check pointer (delivered
 once each at approach-6/7/13): Bill at the NW/NE/SW gates at night for the
 three quiet bead cadences.
 
+### approach-17 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD fae4b7e (own approach-16, still HEAD at
+survey); interlane md5 f6254cd0 steady. Shard routing verified at source:
+IMPROVE-PLAN rows 16 (sw-lane-003) and 36 (nw-lane-001) both EXECUTED
+(approach-4/5); zero OPEN rows route to nx-approach- (Round-1 OPEN queue
+read by rows); no new night-N/survey-N defect notes appended to this plan
+since approach-16 — night-5/D5+N6+N7 remain the last, all Bill-bound. Own
+queue: three legs stand PLACED_VERIFIED, D1/D2/D4-leg closed in-budget; SE
+leg awaits Bill's a/b/c siting call (his alone); D3/D5-temple-grounds +
+N5-N7 remain Bill budget/verdict classes. Cheap lawful hold verification
+(fresh live census 259, approach domain 17, ten `-l` lights = 4 gate
+companions + 6 leg): all three leg libs PIN_EXACT (nw dc256065879371d8,
+ne dc52264c04cfe5bb, sw fb04a144cc1fc458) at the exact standing tuple
+(0,0,0) yaw 0 scale 1; six leg `-l` lights at authored positions; four
+gate lamps + companions untouched (18b69a6bb2f5862f). Census diff vs the
+approach-16 capture: 0 new / 0 gone (prior capture is the mounts-variant
+shape; sets diffed by entity id, both 259). Probe bug caught in-tick: the
+leg-light assertion counted 6 `-l` entities but the 4 gate companions also
+end in `-l` — expected 10; the world was correct, the probe was wrong
+(suspect-the-probe law). Zero world mutations; no visual PASS claimed.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.
