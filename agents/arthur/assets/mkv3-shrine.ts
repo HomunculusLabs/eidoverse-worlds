@@ -86,7 +86,10 @@ for (const [vi, vx] of [[0, -0.28], [1, 0], [2, 0.28]] as const) {
     g.add(candle);
     const vGrp = new THREE.Group();
     vGrp.name = `flame_v${vi}`;
-    const flame = new THREE.Mesh(new THREE.IcosahedronGeometry(0.038, 0), new THREE.MeshStandardMaterial({ color: 0xffc98a, emissive: new THREE.Color(0xffc98a), emissiveIntensity: 1.0, roughness: 0.4 }));
+    // improve-14 F1: flames at ~2px specks at 18m (survey-2 threshold note)
+    // — r 0.038→0.055 + intensity 1.0→1.25 (improve-9 proven recipe): clear
+    // warm points without blob noise (stone embers 0.045 stay the quiet tier).
+    const flame = new THREE.Mesh(new THREE.IcosahedronGeometry(0.055, 0), new THREE.MeshStandardMaterial({ color: 0xffc98a, emissive: new THREE.Color(0xffc98a), emissiveIntensity: 1.25, roughness: 0.4 }));
     flame.name = `votive_${vi}`;
     flame.position.set(vx, 0.64, 0.12);
     vGrp.add(flame);
@@ -97,6 +100,24 @@ const bowl = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.08, 0.09, 8), mat
 bowl.name = "obowl";
 bowl.position.set(0, 0.5, -0.18);
 g.add(bowl);
+// improve-14 F2: pale offering row on the altar top's front (bench-facing)
+// edge — reads deliberate laid offerings at 18m. v1/v2 DOMED mounds FAILED
+// native judgment twice: from the 18m vantage the altar top is seen at
+// ~3.75° depression, so dome RELIEF projects ~0.35px — width-only smears
+// that merge into the edge highlight. v3 switches idiom to UPRIGHT loaves
+// (0.16m tall pale rounds, slightly varied yaw — bread/fruit laid standing
+// for the shrine): full height silhouettes ~7.6px against the dark top,
+// countable verticals (milestone-idiom), same scale tier as the candles.
+for (const [oi, ox] of [[0, -0.30], [1, 0], [2, 0.30]] as const) {
+    const loaf = new THREE.Mesh(new THREE.CylinderGeometry(0.048, 0.055, 0.13, 7), mat(0xdcdcba, 0.85, 0));
+    loaf.name = `offering_${oi}`;
+    loaf.position.set(ox, 0.47 + 0.065, 0.26);
+    loaf.rotation.y = oi * 0.5 - 0.4;
+    const loafDome = new THREE.Mesh(new THREE.SphereGeometry(0.048, 7, 5), mat(0xdcdcba, 0.85, 0));
+    loafDome.name = `offering_dome_${oi}`;
+    loafDome.position.set(ox, 0.47 + 0.13, 0.26);
+    g.add(loaf); g.add(loafDome);
+}
 // stone bench S of the circle (for the devout)
 {
     const benchTop = new THREE.Mesh(new THREE.BoxGeometry(1.3, 0.09, 0.4), stoneTex);

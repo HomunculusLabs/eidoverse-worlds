@@ -248,6 +248,13 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
 6. `nx-town-tower-house` — front stilts emerge from pure-black underside
    (floating read); balcony door ~4m with no stair/ladder; broken railing. 
    Sev 1–2. (guard: none)
+   [EXECUTED improve-9/improve-10: rail rebuilt in deck convention +
+   corbels + fascia + swallowtail pennant + balcony door + grounded
+   ladder + emissive flames; sha bd1badd2→11b31000; decode-bug fixes
+   (flat pennant, buried door, floating ladder); native 5/5+night;
+   PLACED_VERIFIED + idempotent; 6-leg walk ALL_PASS 0.377m — row
+   annotation repaired improve-14 (execution log had the record; the
+   row lacked its bracket tag)]
 7. `nx-sign-*` packet (7 signs, emblem-scale collapse class) — CROSS-LANE:
    re-places belong to waysign; improve drafts the build spec for the
    packet. Routing: parked until waysign's queue/eye-gate resolves OR
@@ -256,6 +263,14 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
    monument); squat proportions; corner wedge voids at roof overhang. Sev
    2. (guard: none) [NATIVE-CONFIRMED survey-1: no door/opening on any face,
    featureless walls, black base strip void; silhouette PASS]
+   [EXECUTED improve-11/improve-12: road-side livery entrance (hand-built
+   off-center door + posts + lintel + stoop, open leaf parked inside),
+   stallrails relocated to open front, stone curb ring, proud lit window
+   + entrance lantern bead (improve-11 build failed its own night
+   falsification — buried pane class; improve-12 re-seated pane proud +
+   lintel bead); sha 5beff62e→98f2d5b6; PLACED_VERIFIED + idempotent;
+   6-leg walk ALL_PASS 0.325m — row annotation repaired improve-14
+   (execution log had the record; the row lacked its bracket tag)]
 9. `nx-town-kiln` — floating quad on cone flank; orphan rod; no flue/vent;
    firebox dead void. Sev 2. (guard: none) [NATIVE-DROPPED survey-1: CLEAN
    4/4 at 18m on exact live bytes 4d8ef8fc — flue stub, firebox mouth,
@@ -372,6 +387,20 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     smudges); base reads SYMMETRIC (drop); side faces alive — pillars
     show mottled taper (drop); identity legible. Re-ranked Sev 3.
     Evidence: reviews/survey2-sev2-slice/shrine/gameplay.png]
+    [EXECUTED improve-14: F1 flames r 0.038→0.055 + emissive 1.0→1.25
+    (improve-9 recipe — night CCL 3 distinct flame components, 18→28-29px,
+    +23% warm px); F2 via 3-iteration closed loop — v1 domed r0.06 and
+    v2 domed r0.09 mounds both FAILED native 18m judgment (dome RELIEF
+    projects ~0.35px at 3.75° depression — grazing kills height, width
+    merges into edge highlight; MECHANISM recorded, not taste), v3 UPRIGHT
+    pale loaves (cyl 0.048/0.055×0.13 + dome cap, 0.16m tall ≈ 7.6px
+    verticals, milestone-idiom) PASSED native 3/3 (countable, deliberate,
+    in scale). sha 53709062→948d5c49 ×2 deterministic; decode bbox exact
+    unchanged; b7 keep-out DIFFERENTIAL clean (zone verts identical 3==3,
+    zero new/gone); remove+spawn exact tuple (−25, −0.00126, −4) yaw
+    1.411812, comp {} both sides, PLACED_VERIFIED 2 verbs + idempotent
+    zero-verb rerun; 8-leg two-way MCPL approach walk ALL_PASS 0.360m;
+    rider b7 + light companion untouched]
 18. `nx-town-row-cottage` — left door jamb bare; lamp dot no fixture;
     ridge tabs; dormer seam. Sev 2. (guard: none)
     [NATIVE-PARTIAL survey-2: lamp reads BARE DOT, zero fixture geometry
@@ -728,6 +757,19 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     swing-set frame, NOT gallows (gallows silhouette absent — improve-3
     weak-identity note softens). Sev 4 stands on shadow acne + hairline
     strings. Evidence: reviews/survey6-slice/nx-struct-pendulum/gameplay.png]
+    [EXECUTED struct-41: rod cross-section 0.028→0.065 (one number, both
+    findings) — strings now solid-continuous at 18m, rod shadows lifted
+    2px→4-5px off the raster floor (+44% coverage 9.9→14.1%); decode
+    falsified the "acne" premise: dash centers align exactly with the nine
+    rod x-positions, the band IS nine discrete rod shadows at physically
+    correct positions; envelope 8.295×3.585×2.732 unchanged; sha
+    0a3120b2→c32a35a8 ×2 deterministic, exact standing tuple re-place, 1
+    verb, idempotent 0-verb rerun, circuit walk 5/5 maxArrival 0.34m.
+    Before-frame judged NATIVE (defect confirmed), after-frame judged ZAI
+    fallback (native 1210 ×2 disclosed) — fixed-bytes native re-judge owed
+    when provider returns; residual discloses as correct-physics nine-line
+    shadow, not consolidated band. Evidence:
+    reviews/struct41-pendulum/{before,after}/gameplay.png]
 36. `nx-approach-nw-lane-001` — banding/taper/raw boxes/lamp base. Sev 4.
     (guard: approach idle since Sep 3)
     [EXECUTED approach-5: native re-judgment on hash-bound renders of
