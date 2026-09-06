@@ -280,6 +280,32 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     missing export). (guard: none) [NATIVE-CONFIRMED survey-1: no figure,
     no rod, nothing legible as fishing — plain bench; geometry itself
     grounded/clean]
+    [EXECUTED struct-46: interrupted-sibling-window recovery — improve's
+    pre-sharding draft (11:56-12:04, candidate 8c1a5047: rod-at-rest +
+    reel + line + bobber) was 6h dead, live UNTOUCHED at struct-13 bytes
+    b3dfb28a; sharding routed nx-struct-* to struct lane, row taken per
+    recovery law. Execution added: (a) struct-38 material law — plain
+    mat() dark/brass buckets exported NO glTF material (loader-default
+    near-black in-game: the survey's "no rod" was partly THIS) -> dark =
+    texMat angler_iron (hypar_iron tones), brass = emissive brass
+    0x8a5a20@0.55 (bobber = night water-marker); (b) bobber RE-AIMED —
+    sibling target (2.6,0.28,-1.9) decoded AGAINST THE POOL SOURCE:
+    lands on the BANK 1.6m short of water (water ellipse semi-axes
+    4.5/3.0); new target (2.8,0.144,-4.92) = pool-local (2.8,1.6),
+    normalized water radius 0.82, half-submerged at the disc top, 0.6m
+    east of the bridge deck, >=0.75m from reeds. Native before-judge
+    CONFIRMED all survey findings (plain bench, zero fishing cue);
+    native after-judge (v2) PASS: rod propped tip-up reads, line+bobber
+    at water height, deliberate+attached, no floating geometry, no
+    clipping. SAT: sw-lane class-0b network-bbox block disproven at
+    source (centerline arithmetic; rod tip perp 4.09m, true clearance
+    2.19m; old solids 2.54m standing); gap-bounded exemption + live
+    re-proof bounds in placer. sha b3dfb28a->6bf06a35 x2 deterministic;
+    remove+spawn exact tuple (-23.6,-0.0479815,-38.37) yaw -pi/2 comp {}
+    both sides, PLACED_VERIFIED 2 verbs + idempotent zero-verb rerun;
+    4-leg bank/deck/bench/rail walk ALL_PASS 0.397m; bbox 3.4x1.45x2.2
+    -> 4.56x2.79x6.08 crosses room gates honestly (real rod geometry —
+    collider now exact trimesh)]
 11. `nx-struct-skene` — panels read as black voids/holes; hovering panels;
     detached side wings; sub-pixel finial. Sev 2. (guard: none)
     [NATIVE-CONFIRMED survey-1: five near-black slats with sky gaps + ground

@@ -268,10 +268,11 @@ setting with beaded tips) — disclosed; native down for the after-frame
 (1210 ×2, paced retry spent), native re-judge owed on return; sha
 5216db0a→f313e59a ×2 deterministic at the exact standing tuple, 1
 verb, idempotent 0-verb rerun, 6-leg circuit walk ALL_PASS 0.354m).
-Oldest OPEN uncontested rows after struct-45: row 10 angler (sibling
-in-flight, un-shard clock applies) — no other OPEN nx-struct- rows at
-source; next own-queue work awaits the sibling angler window resolving
-or a Bill verdict.
+After struct-46: row 10 angler EXECUTED (contested sibling window
+resolved — 6h-dead draft recovered per struct-9 class) — the nx-struct-
+shard is now EMPTY (all 13 routed rows terminal). Next cadence tick:
+own commission queue (Round 3 scoreboard complete; Round 4 concept due)
+or re-arm rows routed in by improve's next sweep.
 Open with Bill: R2-3 relocation options (struct-22).
 
 ## Siting log
@@ -1134,6 +1135,66 @@ the only dark one at dusk — needle (NW), folly crown (NE), and beacon
 
 **Bill should eye-check (dusk)**: from the theater walk SE — two faint
 warm points marking the whisper seats between the fins.
+
+## struct-46 — SHARD ROW 10: ANGLER'S REST IDENTITY FIX (improve round-1)
+
+Build-tick (46%3=1) superseded by shard priority — row 10 was the LAST
+OPEN nx-struct- row. Contested-window resolution: sibling improve lane's
+pre-sharding draft (candidate 8c1a5047, 11:56-12:04) sat 6h dead with
+live UNTOUCHED at struct-13 bytes while their ledger moved to nx-town-*
+rows; sharding routes this id here, un-shard clock burned -> recovered,
+not redone (struct-9 class named).
+
+- Sibling draft content (kept): rod at rest leaning on the E rail post,
+  tip up over the water; brass reel ring; tight line to a bobber — the
+  identity anchor survey-1 demanded.
+- struct-38 law fix (found by decode): draft's dark+brass buckets
+  carried NO glTF material (plain mat() exports none) — loader-default
+  near-black in-game; the survey's "no rod visible" was partly this
+  exact class. dark -> texMat("angler_iron"), brass -> emissive brass
+  (0x8a5a20 @ 0.55; bobber doubles as the quiet night water-marker).
+- Bobber re-aim (decode against mkv3-reedpool.ts source): draft target
+  (2.6,0.28,-1.9) lands on the BANK 1.6m short of water; water ellipse
+  semi-axes 4.5/3.0 (pool-local), top y 0.096 world. New target
+  (2.8,0.144,-4.92) = pool-local (2.8,1.6): normalized radius 0.82
+  (inside water), 0.6m east of the bridge deck edge, >=0.75m from reeds,
+  0.78m radial from rim stones, bobber half-submerged at the disc top.
+- Judged NATIVE both frames (provider up): before CONFIRMED survey
+  findings word-for-word (plain municipal bench, zero fishing cue);
+  after v2 PASS — rod propped tip-up reads, line descends tip->bobber
+  low-right, gear deliberate+attached, no floating geometry, no
+  clipping. Polish notes (bobber size, line contrast, line sag)
+  disclosed as near-view distance-residuals: the concept promises the
+  rod silhouette at 18m (confirmed carrier) and gear detail at sitting
+  distance; the sag language already belongs to the rail chain.
+- SAT: placer initially died on nx-approach-sw-lane-003 (fat network
+  bbox, class-0b artifact). Disproven at source: lane centerline az
+  217.25 r24->71, all angler-side solids <=1.70m from centerline and
+  ground-class; rod tip perp 4.09m (true clearance 2.19m), bobber
+  6.67m, old solids 2.54m standing (approach-3's proven 2.50m).
+  Gap-bounded exemption + live re-proof (new-geometry perps >=3.10m,
+  old-corner perp in [2.2,2.9]) embedded in the placer.
+- Placement: sha b3dfb28a->6bf06a35 x2 deterministic; remove+spawn at
+  the exact standing tuple (-23.6,-0.0479815,-38.37) yaw -pi/2, comp {}
+  both sides, PLACED_VERIFIED 2 verbs; idempotent rerun 0 verbs; 4-leg
+  bank->deck->bench->rail walk ALL_PASS 0.397m. Live bbox 3.4x1.45x2.2
+  -> 4.56x2.79x6.08 — crosses both room gates honestly (real rod
+  geometry; collider now exact trimesh, walk-referenced).
+- Probe self-catches this tick: (a) store-path 404s — correct endpoint
+  is /library/store/<16hex>.glb; (b) my first decode probe read
+  material "?" as "missing" — partially true (plain mat() exports none)
+  but the vertex-zone counters were vacuous (matched material names
+  that don't exist in the file); bucket bboxes were the real evidence;
+  (c) Bun cannot load three.js DRACO headlessly (file:// wasm fetch
+  garbles; ProgressEvent undefined) — use the playwright rig or source
+  arithmetic instead.
+
+**Bill should eye-check**: from the SW approach lane at the Reed Pool's
+west bank — the seat should now read as a fishing spot: iron rod
+leaning on the rail post with its tip up over the water, a taut line
+down to a small brass bobber floating ON the pool surface (just east of
+the footbridge). At night the bobber is a single quiet warm dot on the
+dark water.
 
 ## ROUND 3 STATUS (struct-30)
 
