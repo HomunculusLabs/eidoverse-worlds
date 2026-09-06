@@ -587,6 +587,33 @@ claimed. Standing eye-check pointer (delivered once each at
 approach-6/7/13): Bill at the NW/NE/SW gates at night for the three quiet
 bead cadences.
 
+### approach-25 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD bff075c (dress-33 at tip); interlane md5
+f6254cd0 steady; APPROACH-PLAN read fresh in full (697 lines, md5 12126a38 at
+turn start). Shard routing verified at source by numbered rows: IMPROVE-PLAN
+rows 16 (sw-lane-003) and 36 (nw-lane-001) both terminal (EXECUTED
+approach-4/5); zero OPEN rows route to `nx-approach-` across the working-tree
+read incl. round-2 candidates (they route to town/welcome/potter/court/
+forge/cistern/fountain/temple/cultivation — improve-own or foreign domains);
+no un-shard clock. The working tree still carries the improve-lane in-flight
+IMPROVE-PLAN edit (garden-cottage row, `nx-town-` domain) plus struct-lane
+dirt (tower3, court placer, terrain probes, fleet watcher) — all foreign,
+left untouched. Own queue: three legs stand PLACED_VERIFIED, D1/D2/D4-leg
+closed in-budget; SE leg awaits Bill's a/b/c siting call (his alone); D3/
+D5 + N5–N7 remain Bill budget/verdict classes (night-1..5 notes stand
+verbatim, none new since approach-19). Cheap lawful hold verification (fresh
+live census 259, approach domain 17, kind=light 38): all three leg libs
+PIN_EXACT (nw dc256065879371d8, ne dc52264c04cfe5bb, sw fb04a144cc1fc458)
+at the exact standing tuple (0,0,0) yaw 0 scale 1; six leg `-l` lights
+standing at authored positions (nw −39.09/30.26 + −47.96/46.71, ne
+39.71/27.0 + 32.89/50.15, sw −25.20/−30.67 + −34.69/−43.14); four gate
+lamp models untouched (18b69a6bb2f5862f) with their four `-l` companions.
+Census diff vs the appr24 capture: 0 new / 0 gone, 0 lib/pos/yaw flips
+anywhere. Zero world mutations, zero uploads, no visual PASS claimed.
+Standing eye-check pointer (delivered once each at approach-6/7/13): Bill
+at the NW/NE/SW gates at night for the three quiet bead cadences.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.

@@ -4267,4 +4267,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-77] PIPELINE HOLD (16th consecutive) — shard routing terminal at source (no SHARD EXECUTION section; zero OPEN IMPROVE-PLAN rows route nx-artwalk-; ownership row 25 = this lane's standing reconcile duty, executed this tick). Fleet reconcile ALL_RECONCILED exit 0: 259 census / 54 riders / 38 lights / 34 placers / 33 host pins / 29 anchors, zero verbs zero uploads, no host lib flips since artwalk-76. Gate ALL PASS exit 0 at bff075c. Eye-gate packet 48bea194 zero verdicts. Zero mutations. (D+0, E+0)
 
+- [approach-25] pipeline hold (13th) — shard empty at source (rows 16/36 terminal, round-2 candidates route improve-own/foreign), foreign improve+struct dirt untouched, SE a/b/c + D3/D5 + N5-N7 Bill-bound, gate ALL PASS exit 0 at bff075c, census 259/domain 17 three legs PIN_EXACT + 6 leg lights at authored positions + gate lamps untouched, diff 0/0/0 flips, zero mutations (D+0, E+0)
+
 **Running total: 2370273 / 2000000**
