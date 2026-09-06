@@ -219,6 +219,15 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
 5. `nx-dress-sw-prayer-001` — reads as rock pile; ZERO fabric/pole read —
    namesake absent. Sev 2: identity failure (worst dress finding).
    (guard: dress-8 placed it — idle-guarded until 09-06 18:15)
+   [DROPPED dress-13: native re-judgment on exact live bytes (pin
+   5074600f, 8-view rejudge rig) — piece reads FIRST as a deliberate
+   devotional mound, not rubble: size-sorted stacking, pale crown
+   stones, flat bowing slab (vocabulary break), sparse kicked strays
+   all legible at 18m; verdict "pass — quiet, correct". The
+   fabric/pole expectation was the fallback judge's invention (the
+   dress-8 concept contract is a stone mound by design); dress-8's
+   standing slab-marginal note resolved to CONFIRMED-LEGIBLE. No edit,
+   no world mutation.]
 6. `nx-town-tower-house` — front stilts emerge from pure-black underside
    (floating read); balcony door ~4m with no stair/ladder; broken railing. 
    Sev 1–2. (guard: none)

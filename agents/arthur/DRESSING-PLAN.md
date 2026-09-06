@@ -47,14 +47,19 @@ on Bill's lamp-budget policy (0 of 3 used). Chassis note: placer uploads
 before the already-live check, so idempotent reruns spend one deduped
 upload slot of the shared 4/min budget — acceptable, known wart.
 
-**STATE AT dress-12 (2026-09-06)**: all four district queues COMPLETE
-(NW 4, NE 3, SE 3, SW 2 — eleven installations live). The four-district
-eye-gate packet was delivered ONCE at dress-12
-(`reviews/dress-districts-eye-gate.md`), folding in the SW lamp policy
-question (options a/b/c). The lane now HOLDS for verdicts: no new
-installation until Bill answers the packet or corrects a piece (a
-correction re-opens that district ahead of rotation). Sweep-8's routed
-doc defect (dress-7 clearance figure) corrected in place this tick.
+**STATE AT dress-13 (2026-09-06, pipeline shard tick)**: all four district
+queues remain COMPLETE (11 installations live); eye-gate packet delivered
+ONCE at dress-12 — still awaiting Bill. Shard work: improve queue row 5
+`nx-dress-sw-prayer-001` re-judged under NATIVE vision on exact live bytes
+(pin 5074600f, reviews/dress13-sw-prayer-rejudge/ 8 views) — DROPPED:
+reads as deliberate devotional mound (size-sorted stack, pale crown,
+bowing slab, sparse strays; "pass — quiet, correct"); fabric/pole was
+fallback-judge invention vs the stone-mound concept contract. dress-8's
+slab-marginal note resolved CONFIRMED-LEGIBLE at 18m — the eye-gate
+packet's prayer-stones slab judgment is now answerable from this record
+without action. Remaining dress shard rows all idle-guarded until early
+09-07; SW lamps remain the only own-queue item, blocked on Bill's policy
+call. Zero world mutations this tick.
 
 ## Siting log
 
