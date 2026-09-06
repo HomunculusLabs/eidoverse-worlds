@@ -1015,3 +1015,28 @@ STUDY COMPLETE (all facets judged; packet assembled).
   detached-orb, N7 hierarchy inversion. Second-rotation NW+NE+SW
   passes remain the verify paths, deferred while the lane holds.
   Zero world mutations, zero renders judged, no PASS claimed.
+
+- night-37 (2026-09-06, pipeline-mode hold tick): twenty-seventh
+  consecutive hold with NO disposition change. Standing gate ALL PASS
+  real exit 0 at HEAD e8a9eb0 (approach-18 — itself a zero-mutation
+  hold tick; one sibling HEAD advance since night-36). Fresh census-37:
+  259 entities / 38 lights / zero night-prefixed, FULLY steady vs
+  census-36 (0 new, 0 gone, 0 pos/yaw/lib changed; capture
+  /tmp/night-census-37.json). D1 pin nx-approach-nw-lane-001
+  dc256065879371d8, D2 pin nx-approach-ne-lane-002
+  dc52264c04cfe5bb, D4-leg pin nx-approach-sw-lane-003
+  fb04a144cc1fc458 — all THREE exact (TWELFTH consecutive
+  all-pins-steady tick). SW quadrant kind=light r>=35 census-verified:
+  2 approach leg lamps + 1 mile lantern — zero budget movement, SW
+  lamps still 0 of 3 on Bill's a/b/c. Packet md5 cdc435a2 unchanged
+  since night-7, zero verdict markers; interlane md5 f6254cd0 steady;
+  zero actionable night- shard rows in IMPROVE-PLAN (night- is an
+  observer). APPROACH-PLAN last touched e8a9eb0 (approach-18 hold
+  record only; five night-N defect-note sections stand verbatim at
+  lines 463/483/502/520/539 — D3/D4-temple-grounds/D5+N6 budget-bound,
+  N1/N2/N4-N7 informational). Same four verdict classes outstanding:
+  sky facet-5, lamp-budget policy D3 + D4-temple-grounds + D5 + N6
+  (D1+D2 closed, D4 leg-closed), N5 detached-orb, N7 hierarchy
+  inversion. Second-rotation NW+NE+SW passes remain the verify paths,
+  deferred while the lane holds. Zero world mutations, zero renders
+  judged, no PASS claimed.
