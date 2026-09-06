@@ -1590,6 +1590,13 @@ open duplicate notes for these objects.
   5 gardens share the pattern (0011/0019/0032/0045/0058 — verify
   before fleet-wide work). Evidence:
   reviews/survey8-slice/nx-cultivation-garden-0011/gameplay.png
+  [survey-10 annotation, 2026-09-06]: garden-0019 (NATIVE, 18m
+  gameplay, live store bytes d916f373) — IDENTICAL class confirmed:
+  sphere mass reads hedge/shrubbery not crops, rows merge into one
+  mass x300-560 y360-425, no bed/fence geometry, 3-4px stalk heads
+  on 1px stems fragile. Geometry integrity clean (all grounded).
+  Family class now CONFIRMED at 2-of-5 (0011/0019). Evidence:
+  reviews/survey10-slice/nx-cultivation-garden-0019/gameplay.png
 - `nx-craft-hamlet-0007` — Sev 2 (survey-9, 2026-09-06, ZAI + native
   UNANIMOUS): hamlet identity FAILS at 18m — reads abstract blocky
   tower/ruin; both flanking upper masses hover with open sky beneath,
@@ -1601,6 +1608,14 @@ open duplicate notes for these objects.
   (0007/0015/0028/0041/0054) each carry DISTINCT shas — confirm at
   decode whether the float/hole class is shared before fleet work.
   Evidence: reviews/survey9-slice/nx-craft-hamlet-0007/gameplay.png
+  [survey-10 annotation, 2026-09-06]: hamlet-0015 (distinct sha
+  353dd6fb, NATIVE, 18m gameplay) exhibits the IDENTICAL class —
+  see-through tower hole x418-512 y428-497, detached stair string
+  x555-685 y220-300, free-floating dash slabs, orphaned upper-left
+  slab cluster, hovering upper masses w/ sky beneath. Family class
+  now CONFIRMED at 2-of-5 (0007/0015) — executing lane should treat
+  as family-wide unless decode says otherwise. Evidence:
+  reviews/survey10-slice/nx-craft-hamlet-0015/gameplay.png
 - `nx-gallery-mosaic-0036` — Sev 3 (survey-9, 2026-09-06, ZAI + native
   UNANIMOUS): mosaic-panel identity FAILS at 18m — hundreds of loose
   tiles flat on grass read as scattered paving/confetti scatter, not
@@ -1610,6 +1625,13 @@ open duplicate notes for these objects.
   (texture-family pipeline candidate). Family note: 4 mosaics
   (0036/0048/0052/0059) distinct shas — verify pattern spread.
   Evidence: reviews/survey9-slice/nx-gallery-mosaic-0036/gameplay.png
+  [survey-10 annotation, 2026-09-06]: mosaic-0048 (distinct sha
+  b6491515, NATIVE, 18m gameplay) — IDENTICAL class confirmed: flat
+  scatter w/ ~50-60% ground show-through, no frame/backing at any
+  rim, far edge aliases into horizon, ragged orphan-tile front edge,
+  no pictorial pattern (random tan/gray/gold). Family class now
+  CONFIRMED at 2-of-4 (0036/0048). Evidence:
+  reviews/survey10-slice/nx-gallery-mosaic-0048/gameplay.png
 - `nx-wild-cairn-0022` — Sev 3 (survey-9, 2026-09-06, ZAI + native
   UNANIMOUS): stacked-stone identity passes but TRUE FLOATERS —
   numerous small pebble spheres hover isolated against the sky above
@@ -1619,6 +1641,28 @@ open duplicate notes for these objects.
   Family note: 5 cairns (0022/0043/0047/0048/0050) distinct shas —
   verify the floater class spread before fleet work.
   Evidence: reviews/survey9-slice/nx-wild-cairn-0022/gameplay.png
+- `nx-cultivation-lavender-0006` — Sev 3 (survey-10, 2026-09-06, NATIVE,
+  18m gameplay, live store bytes 26f0eed9 HTTP 206): lavender identity
+  FAILS — desaturated purple-charcoal (~#4a4044) canopy reads dead
+  crop/winter scrub, not lavender (identity at gameplay distance is
+  ~90% hue; mid-value violet needed); discrete-blob front row with
+  gaps reads potted-plant grid, not continuous hedgerow strips; rows
+  illegible past ~3 deep (zero soil/furrow contrast); ambiguous
+  central-aisle void x430-545; suspected stray scatter specks above
+  canopy (x65-95/x348-368/x865-885, verify-tier). Family note:
+  4 lavenders (0006 first judged) — family spread unverified.
+  Evidence: reviews/survey10-slice/nx-cultivation-lavender-0006/gameplay.png
+- `nx-cultivation-orchard-0012` — Sev 3 (survey-10, 2026-09-06, NATIVE,
+  18m gameplay, live store bytes dc4d7059 HTTP 206): orchard identity
+  FAILS — irregular organic spacing + merged crowns read forest-edge
+  tree line, not orchard (no regular planting pitch, no legible
+  alleys); right-half value collapse to near-black void under single
+  key light (x540-960 worst at far-right tree); detached blob-shadow
+  ellipses offset from trunks misaligned with light (x520-565/x690-735
+  y462-500); fruit sub-pixel noise (~2-3px dots). Trunk grounding
+  PASS (all bases contact). Family note: 5 orchards (0012 first
+  judged) — family spread unverified.
+  Evidence: reviews/survey10-slice/nx-cultivation-orchard-0012/gameplay.png
 
 ## Carried laws
 

@@ -293,3 +293,65 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   rows under IMPROVE-PLAN SURVEY CANDIDATES (round-2 intake);
   `nx-dress-fountain` additionally routed to DRESSING-PLAN SURVEY
   INTAKE (legacy-core off-limits set named — Bill's ownership call).
+
+## Judged index (survey-10)
+
+- survey-10 (2026-09-06, NATIVE 7/8 + ZAI fallback 1/8 disclosed, 18m
+  gameplay, fresh live store bytes 8/8 HTTP 206 curl UA on exact
+  census-10 libs; severity backlog drained — round-1 rows terminal,
+  survey-7/8/9 candidates are intake not re-judge debt): rotating
+  district pass, worst-blind-spot-first = the two NEVER-judged
+  families (lavender 0/4, orchard 0/5) + first-unjudged members of
+  five more, three of them family-spread probes on standing
+  candidates. Slice = lavender-0006, orchard-0012, cloister-0016,
+  hamlet-0015, statuary-0026, garden-0019, mosaic-0048, wayside-0030.
+  Verdicts: LAVENDER-0006 CONFIRM Sev 3 NATIVE (identity fail —
+  charcoal-purple reads dead crop; discrete-blob front row; rows
+  illegible past 3 deep; central-aisle void; stray specks
+  verify-tier). ORCHARD-0012 CONFIRM Sev 3 NATIVE (identity fail —
+  irregular spacing + merged crowns read forest edge; right-half
+  value collapse; detached blob-shadows; fruit sub-pixel). HAMLET-0015
+  CONFIRM Sev 2 NATIVE — IDENTICAL class to survey-9's 0007 on a
+  distinct sha (see-through tower hole x418-512 y428-497; detached
+  stair string x555-685; dash slabs; orphaned upper-left cluster;
+  hovering upper masses) → family class CONFIRMED 2-of-5.
+  GARDEN-0019 CONFIRM Sev 3 NATIVE — IDENTICAL class to survey-8's
+  0011 (hedge-read sphere mass, merged rows, no bed/fence grammar;
+  geometry integrity clean) → family class CONFIRMED 2-of-5.
+  MOSAIC-0048 CONFIRM Sev 3 NATIVE — IDENTICAL class to survey-9's
+  0036 on a distinct sha (flat scatter ~50-60% ground show-through,
+  no frame/backing, dissolving silhouette) → family class CONFIRMED
+  2-of-4. CLOISTER-0016 CLEAN-with-margin NATIVE (pergola identity,
+  column rhythm, grounding all PASS; two lamp-head orbs flagged =
+  survey-9's 0008 FLIP class — thin mounts sub-visible in chassis
+  renders, artifact not defect; margin-tier only). STATUARY-0026
+  CLEAN NATIVE (shrine-circle identity, dark-head value accents;
+  margin: 1-2px rods shimmer-tier, neck-orb z-fight verify-flag).
+  WAYSIDE-0030 CLEAN (ZAI fallback — native 1210 x2, paced retry
+  burned; shelter+lamp+posts wayfind read, all grounded, roof hero
+  PASS; margin: wall-checker shimmer at 30m+, front post near door
+  axis, thin clutter z-fight flag). Native flap pattern this tick:
+  1210s on cloister/statuary/wayside first calls; single paced retry
+  recovered cloister+statuary native. Routing: +2 candidate rows
+  IMPROVE-PLAN SURVEY CANDIDATES (lavender-0006, orchard-0012 —
+  district-domain, improve's own surface); +3 family-class
+  annotations on standing candidate rows (hamlet-0007, garden-0011,
+  mosaic-0036); zero notes to other lanes' plans this tick; all
+  district-domain. Grep-verified zero open duplicates pre-append.
+  Census 259 steady 0/0 vs survey-9 snapshot; ONE domain-valid lib
+  flip: nx-town-garden-cottage 872aec35→cee52aca = improve-16's
+  committed re-place (nx-town domain, POS_SAME — annotated at source
+  in IMPROVE-PLAN improve-16 record). Gate note: ALL PASS exit 0 at
+  aeccaee (night-46 at tip; waysign-34 sibling ledger entry landed
+  mid-tick after my gate — normal interleaving, plan files clean in
+  tree at my read). Verdicts 5 confirmed / 2 clean (1 clean-with-
+  margin) / 0 dropped. Zero world mutations, zero uploads, zero
+  shared-budget use.
+
+## Routed notes (survey-10)
+
+- survey-10: `nx-cultivation-lavender-0006` + `nx-cultivation-orchard-0012`
+  — candidate rows under IMPROVE-PLAN SURVEY CANDIDATES (round-2
+  intake); family-class annotations on standing rows for hamlet /
+  garden / mosaic families. All district-domain (improve's own
+  surface), no other lane's plan touched this tick.
