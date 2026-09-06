@@ -276,6 +276,16 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     (guard: none) [NATIVE-CONFIRMED survey-1: flat matte dark two-tier
     disc, zero reflection/sheen, reads tire-stack/rock — identity failure
     core confirmed; notched edge NOT observed at 18m — drop that sub-finding]
+    [EXECUTED struct-37: recovered dead sibling window (artwalk-32 pre-place
+    class, named), 4-iteration closed loop — v2 open hex cup + recessed
+    water (0.45 emissive → 0.7 → 1.0, grazing 2px physics), v5 water
+    lightened 0x506a78→0x8fb6c8 sky-catching + bead to textured-gold
+    0xa09832 family (improve-8 law); ZAI near-view 3/3 PASS (native 1210,
+    disclosed), 18m residual = grazing physics (open-cup identity carries
+    far read — ZAI's own disposition), night 25.9k blue px verified; sha
+    8331ba88→782eb864 deterministic x2; remove+spawn exact tuple (24,
+    -0.05395918022037476, -35.5) yaw 0, comp {} both sides,
+    PLACED_VERIFIED + idempotent 0-verb rerun, live pin re-read]
 13. `nx-struct-millrace` — pond black void (polish-281 dark-water class);
     hairline reeds; slit bands; floating finial. Sev 2. (guard: none)
     [NATIVE-CONFIRMED survey-2: inter-tread bands read as OPEN SLITS
@@ -975,6 +985,61 @@ queue item 7 `nx-sign-*` packet stays waysign's; next eligible:
 
 Next queue item (improve-11): windmill idle-guard re-check (waysign-6
 rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
+
+- improve-11 (EXECUTION, queue item 8 `nx-town-stable` — windmill guard
+  STILL LIVE at 12:53 EDT (rider 01:57, 11h < 24h), stable taken next):
+  contract committed BEFORE editing. Idle-guard clear (source last touched
+  interior-16; no lane commit touches this entity in 24h). Survey-1 native
+  CONFIRM stands as the restore-law re-judgment (exact live bytes, Sev 2).
+  Live tuple (43,0,0) yaw −1.5707963267948966, lib 5beff62e == local build
+  ×2 deterministic (proven this tick; no disputed bytes). Comp bag {}
+  (census-fresh). Mechanism decoded at source:
+  - D1 "no entrance on any face" → CONFIRMED by transform math: yaw −π/2
+    maps local −z (open front, stalls, trough, b8 reins) to world EAST
+    (empty lawn); local +z (SOLID back wall) faces WEST where the inn road
+    dead-ends at the stable. The walker's arrival face is 5.4m of blank
+    timber with the livery sign on it. The mk comment "facing the village"
+    is inverted by the standing yaw. Rotation is FORBIDDEN (would strand
+    sign rider local (0,2.02..2.7,z 1.94..2.26) and b8 reins local
+    (x±2.45, y 2.22..2.64, z −2.16) — domain law).
+  - D2 "black base strip" → the C.DARK floor slab's 0.4m bare edge at the
+    open front (no wall, no plinth) reads as a void band; walled sides
+    carry plinths already.
+  FIX (all in mkv3-stable.ts, no housekit change):
+  - Real livery entrance on the ROAD-side (local +z) wall, OFF-CENTER at
+    x∈[−2.05,−0.65] (1.4 clear, 2.2 tall) — centered is impossible: the
+    sign rider occupies wall-center y 2.02..2.7, any centered head
+    structure intersects it. Hand-built (doorGapWall only does centered
+    gaps): flank E x∈[−0.65,2.7] via wallSpan (carries sign + new
+    windowFrame at x=1.8), flank W x∈[−2.7,−2.05], timber lintel beam
+    y 2.4..2.56 x∈[−2.15,−0.55] (clear of sign x by 0.3), timber door
+    posts ±(0.14×2.2×0.34) proud, threshold (C.MID, kit semantics) +
+    stoop (C.STONE 0.21) at grade, door leaf parked OPEN flat against
+    inner flank E face (x −0.545..−0.495, z 0.6..1.88 — zero aisle
+    intrusion).
+  - Interior circulation: partition cut aligned to door (spans
+    x∈[−0.65,1.9] now, 2.55 long — still the stall divider); mangers
+    unchanged (x=0, off the aisle by ≥0.1 + z-band disjoint from posts);
+    stallrails MOVED z −1.05 → −1.85 (their semantic home at the open
+    front as stall half-doors; clears the entire mid-bay for the door
+    aisle; center 1.0m yard gap preserved).
+  - D2 fix: stone curb ring at grade (0.24 tall, texMat stone recipe —
+    same params as wallSpan plinths → merges) around the footprint,
+    split at the door for the stoop; trough shifted z −2.45 → −2.55
+    (clears curb by 0.145 and b8 z-band by 0.09).
+  - Warm read: windowFrame lit pane (emissive) on flank E + interior
+    light companion nx-town-stable-l at local (1.8,1.9,0) unchanged —
+    door shows warm interior at dusk.
+  Falsification: (1) native judge after-renders at 18m road-side reads
+  an ENTRANCE (opening+posts+beam+stoop+lit window), not blank wall;
+  (2) decode audit — door lane x∈[−2.0,−0.7] y∈[0.5,1.9] zero blocking
+  verts across wall plane; sign keep-out (x±0.32,y 1.96..2.76,z 1.88..
+  2.32) zero NEW verts; b8 band (z −2.28..−2.04, y>2.1) zero new verts;
+  partition gap clear x∈[−2.0,−0.7]; (3) MCPL two-way 5-waypoint walk
+  through the door (world line x 40.1→43.9 at z −1.35) arrivals ≤0.55m;
+  (4) bbox growth recorded (+x 0.15, +z 0.22, −z 0.675 trough) — SAT
+  checked vs bench/sign/b8; (5) night.png shows warm door + window.
+  Revert: revert mkv3-stable.ts edits → rebuild returns 5beff62e.
 
 
 ## Carried laws
