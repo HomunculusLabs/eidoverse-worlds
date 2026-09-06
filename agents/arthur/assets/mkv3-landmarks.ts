@@ -68,10 +68,18 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
             }
         }
     }
-    // access ladder up one pier (rungs between two rails)
-    for (let lr = 0; lr < 9; lr++) texBox(g, `blrung_${lr}`, 0.5, 0.05, 0.05, -PS / 2 + 0.3, 0.75 + lr * 0.42, -PS / 2 - 0.06, timberTex);
-    texBox(g, "blrail_a", 0.06, 4.0, 0.06, -PS / 2 + 0.3, 2.4, -PS / 2 - 0.06, timberTex);
-    texBox(g, "blrail_b", 0.06, 4.0, 0.06, -PS / 2 - 0.02, 2.4, -PS / 2 - 0.06, timberTex);
+    // access ladder (improve-17): REBUILT on the OUTER S face of the SW
+    // pier, climb plane z 1.10 — OUTSIDE the belfry-floor edge (±1.05) so
+    // the climb clears the deck slab; top rung 4.95 sits ABOVE the floor
+    // top (4.82) = real top-out (climber steps inward onto the deck
+    // corner). Two stand-off arms tie the stringers to the pier face.
+    // The old embedded ladder (rail spearing the rung band, second rail
+    // buried inside the pier — floating-rung defect) is REMOVED.
+    texBox(g, "ladder_rail_w", 0.06, 4.7, 0.06, -0.87, 2.65, 1.1, timberTex);
+    texBox(g, "ladder_rail_e", 0.06, 4.7, 0.06, -0.63, 2.65, 1.1, timberTex);
+    for (let lr = 0; lr < 11; lr++) texBox(g, `lrung_${lr}`, 0.3, 0.05, 0.05, -0.75, 0.75 + lr * 0.42, 1.1, timberTex);
+    texBox(g, "ladder_standoff_lo", 0.04, 0.04, 0.16, -0.75, 1.5, 1.03, timberTex);
+    texBox(g, "ladder_standoff_hi", 0.04, 0.04, 0.16, -0.75, 3.5, 1.03, timberTex);
     // belfry floor + arch beams + pyramid cap
     texBox(g, "belfry_floor", 2.1, 0.12, 2.1, 0, PH + 0.36, 0, timberTex);
     for (const [dx, dz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]] as const)
@@ -105,29 +113,70 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     // posts: a corner position clears the bell (r 0.42) and reads from every
     // approach; the tower gains its warm night signal.
     glow(g, "lamp", 0.75, 5.6, 0.75);
+    // improve-17 R3: lantern housing around the lamp bead — the bead
+    // reads as a fused dot at the post/beam convergence without a mount.
+    // Four iron corner posts + pyramid hood ABOVE the bead (hood base
+    // 5.68 > bead top 5.67, sightline preserved) + diagonal iron mount
+    // arm from the arch-post inner corner. Bead KEEP-named `lamp`,
+    // position unchanged (night signal + comp anchors preserved).
+    {
+        const ironMat = mat(0x3a3a42, 0.7, 0.4);
+        for (const [px, pz] of [[0.67, 0.67], [0.83, 0.67], [0.67, 0.83], [0.83, 0.83]] as const) {
+            const post = new THREE.Mesh(new THREE.BoxGeometry(0.025, 0.16, 0.025), ironMat);
+            post.name = `lnt_post_${px}${pz}`;
+            post.position.set(px, 5.62, pz);
+            g.add(post);
+    }
+        const hood = new THREE.Mesh(new THREE.ConeGeometry(0.1, 0.08, 4), ironMat);
+        hood.name = "lnt_hood";
+        hood.position.set(0.75, 5.72, 0.75);
+        hood.rotation.y = Math.PI / 4;
+        g.add(hood);
+        const arm = new THREE.Mesh(new THREE.BoxGeometry(0.24, 0.035, 0.035), ironMat);
+        arm.name = "lnt_arm";
+        arm.position.set(0.82, 5.62, 0.82);
+        arm.rotation.y = -Math.PI / 4;
+        g.add(arm);
+    }
     // THE BELL ROPE (loop #75): a hemp rope drops from the clap level to a
     // hand-height cleat on the S pier — anchored STATIC (the bell swings;
     // the rope hangs free beside it, tied off at the bottom). Segmented
     // with a slight sag between tie points, era-2 heritage.
+    // improve-17 R2: the cleat floated in open air (no block beneath).
+    // Now: timber mounting block on the slab + cleat on the block + tail
+    // knot on the block; rope z 0.62→0.58 clears the z-face brace plane;
+    // brass guide ring where the rope threads the belfry floor (reads
+    // threaded, not through-solid).
     {
         const rr = new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, PH - 0.35, 5), mat(0xd4da82, 0.95, 0));
         rr.name = "bellrope";
-        rr.position.set(0.12, (PH + 0.35) / 2 + 0.2, 0.62);
+        rr.position.set(0.12, (PH + 0.35) / 2 + 0.2, 0.58);
         g.add(rr);
-        // the sag: a small knot bulge mid-rope + cleat at hand height
+        // the guide ring at the belfry-floor penetration (brass, horizontal)
+        const guide = new THREE.Mesh(new THREE.TorusGeometry(0.06, 0.014, 5, 10), mat(0xa09832, 0.85, 0.35));
+        guide.name = "rope_guide";
+        guide.rotation.x = Math.PI / 2;
+        guide.position.set(0.12, PH + 0.28, 0.58);
+        g.add(guide);
+        // the sag: a small knot bulge mid-rope + cleat on the mounting block
         const knot = new THREE.Mesh(new THREE.SphereGeometry(0.035, 5, 4), mat(0xd4da82, 0.95, 0));
         knot.name = "rope_knot";
-        knot.position.set(0.12, 1.35, 0.62);
+        knot.position.set(0.12, 1.35, 0.58);
         g.add(knot);
+        // mounting block (timber) on the base slab — the cleat's anchor
+        const block = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.25, 0.16), timberTex);
+        block.name = "rope_block";
+        block.position.set(0.12, 0.425, 0.58);
+        g.add(block);
         const cleat = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.16, 5), mat(0xa09832, 0.9, 0));
         cleat.name = "rope_cleat";
         cleat.rotation.z = Math.PI / 2;
-        cleat.position.set(0.12, 1.05, 0.62);
+        cleat.position.set(0.12, 0.62, 0.58);
         g.add(cleat);
-        // hanging bell-end tail (a short free end below the cleat)
+        // hanging bell-end tail (a short free end below the cleat, ON the block)
         const tail = new THREE.Mesh(new THREE.CylinderGeometry(0.014, 0.014, 0.3, 5), mat(0xd4da82, 0.95, 0));
         tail.name = "rope_tail";
-        tail.position.set(0.12, 0.88, 0.62);
+        tail.position.set(0.12, 0.44, 0.58);
         g.add(tail);
     }
     mergeByMaterial(g, "bt3");

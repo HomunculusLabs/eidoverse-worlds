@@ -1845,9 +1845,55 @@ class except seed (ZAI-native stack 0003+0013).
   OLD sha — flagged to interior lane for re-pin (artwalk-58 class, not
   touched by this lane).
 
-Next queue item (improve-17): row 21 `nx-town-belltower` (Sev 3, survey-5
-native triple-confirmed; engine-1 ladder-comp routing rides the row).
-Windmill guard still live (expires 09-07 01:57).
+Next queue item (improve-18): windmill guard re-check (rider placed 09-06
+01:57 — expires 09-07 01:57; if clear, row 4 Sev 1 native-confirmed; else
+row 27 `nx-town-mapboard` Sev 3, native-cleared survey-5).
+
+improve-17 EXECUTION COMPLETE (this tick — interrupted-window recovery,
+artwalk-32 pre-place class): the prior window died after writing this
+contract + landing the full source edit + rebuild (17:26) + before-renders
+(17:11) but BEFORE any world mutation (fresh census proved live still at
+baseline 30407b95, comp {}). This tick recovered forward, nothing re-done
+from scratch: baseline reproduction proof FIRST (HEAD-source rebuild →
+30407b959aa14962 == live census pin exactly — no disputed bytes, edit
+lineage is the true live source), edited rebuild 2419fbc5 ×2 deterministic,
+siblings byte-identical (inn 6e6ff2d0 + windmill 09938360 both == live
+pins). Decode audit 17/17 ALL PASS after three HONEST probe fixes (tool
+fixed, not evidence waved): A6 was an absolute-zero check over a zone that
+legitimately contains 6 pre-existing z-face brace verts → differential
+(baseline 78 verts incl. the 72 old-ladder verts → edited 6 brace-only);
+C3 was a placeholder `ck()` with no condition → real check (lamp KEEP node
+present at exact (0.75, 5.6, 0.75) — read via traverse, name survives
+merge); D1 was VACUOUS (0==0 — the exact rider volume is air on the host
+side, and the first wider zone hit pitfall 2: exclusive y>0.3 excluded the
+plinth band sitting AT 0.3) → wider zone with INCLUSIVE bound, 83-char
+nonempty differential identical, vacuous-guard added. Night falsification
+PASS: warm px 2→5 at the same centroid (520, 211-212) — hood edges catch
+bead light, no occlusion. Visual: ZAI fallback 3/3 PASS on after-gameplay
+(stringers x426-445, rungs terminate ON rails, feet planted within 1-3px,
+rope → cleat block seated x480-495 y467-488 with tail, lantern two-tone
+hood x512-525) + left-view corroboration (rail continuous y115-675, rungs
+die into rail, feet contact-shadow not gap) + front-view full corroboration
+(rope continuous x489-494 into cleat with wrapped tail, guide ring ellipse
+x484-500 y145-154 at the floor penetration, BOTH rails continuous
+x355-366/x388-398, zero floating anywhere) — native 1210 ×2, paced retry,
+DISCLOSED, native re-judge owed. Gate ALL PASS real exit 0 at bb900f9
+(survey-11 absorbed). Re-place remove+spawn+comp 3 verbs at the exact
+standing tuple (6.5, 0, 6.5) yaw −2.356194490192345, lib 30407b95→2419fbc5;
+engine-1 ladder comp LIVE in the bag {min:[−0.98,0.30,0.98],
+max:[−0.52,5.15,1.22]} entity-local over the climb plane z 1.10 — derived
+from decode, NOT the stale contract box z 0.93..1.05; climb itself is
+client-side and ships with deploy = Bill's lane). PLACED_VERIFIED +
+idempotent zero-verb rerun with comp-pin gate. 2-leg two-way MCPL approach
+walk ALL_PASS maxArrival 0.40m (ladder foot world (6.253, 5.192), walker
+clean to the slab edge). Rider nx-artwalk-b5-belltower-rings untouched
+standing at pinned tuple; census 259 steady. Residuals disclosed to the
+round-1 eye-gate: ladder-top merge into the corner post (reads as deck
+termination); bracket arm sub-pixel at 18m (lantern reads eave-mounted);
+bare lower rail below first rung = designed reach-height start.
+Placer: next-place-improve17-belltower.ts; decode:
+improve17-decode-belltower.ts; walk: improve17-walk-belltower.ts; evidence:
+reviews/improve17-belltower/{before,after}/.
 
 - improve-17 (EXECUTION CONTRACT, row 21 `nx-town-belltower`): idle-guard
   clear (last host mutation polish-263 era; survey-3/engine-1 touches are
