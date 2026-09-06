@@ -1530,3 +1530,56 @@ shared-budget use, no visual PASS claimed. Lane HOLDS for Bill's
 counting-series eye-gate verdicts
 (reviews/artwalk-counting-series-eye-gate.md), a Phase F fresh
 commission, or a queue widening.
+
+### [artwalk-83] ROW-25 DUTY — four way-band rider reseat after town-1's gate-lamp move (2026-09-06)
+
+Not a passive hold. The standing fleet reconcile DRIFTed on exactly five
+anchor rows: b26 + b34-wayband-{e,s,w} dev 1.75 from their lamp hosts.
+Cause (foreign, domain-valid): town-1 executed Bill's screenshot
+correction ("get the lamp out of the path") by translating the four
+cardinal gate lamps 1.75m off-axis via remove+spawn; my concentric
+riders stayed at the OLD on-axis positions — orphaned mid-walk-lane at
+host-local (0,1.5,+1.75), exactly the lanes Bill had cleared.
+artwalk-39 continuity law applied: anchors re-derived from CURRENT live
+host tuples; companion lights verified already moved by the sibling;
+rider yaws already matched (pure translation case).
+
+SAT gate work (law-0b compound-bbox class, decode at source): the b26
+target at (1.75,1.5,10) is enveloped by nx-town-mapboard's 2.805x2.63
+compound bbox (proxy gap -0.86m) and kissed by my own b22 compass card
+proxy (-0.0039m). Full world-vertex decode of BOTH GLBs (store
+1f1a10f4dce71a0e @ (2.5,0,9.5) yaw -2.944197; rider 7594436a996e8ded):
+rider-band vs mapboard min vert-vert +0.072m; vs b22 +0.324m — clear.
+Two BOUND exemptions landed in artwalk83-wayband-reseat.ts + the b26
+standing placer (die if the mapboard/b22 live tuples drift from decode
+inputs). Own probe error caught by the bound itself: first MB_PIN was
+2D, live pos is 3D — fixed, bound then passed.
+
+Reseat executed: 8 verbs (remove+spawn x4, paced 700ms), post-verify
+EXACT, idempotent rerun ALREADY_EXACT 0 verbs. Fleet reconcile
+ALL_RECONCILED exit 0 (259/54/38/34/33/29, coverage held). Standing
+b26/b34 placers re-verified green 0 verbs (host pins made
+prefix-tolerant for town-1's truncated store name — see foreign note).
+Post census: 259, all four riders concentric, comps 0, exactly 4 riders
+moved; sibling flips nx-core-paths + nx-struct-observatory in flight
+(foreign, untouched).
+
+FOREIGN (said once, not touched — town domain): (1) town-1's off-axis
+placer spawned the four lamps under a TRUNCATED store name
+(store/18b69a6bb2.glb, 10-hex vs the 16-hex convention of the other 217
+libs) — all four lost bbox in census, likely geometry-less/invisible
+live, and the placer's already-guard substring-matches so rerun won't
+self-heal; fix = re-spawn with full 16-hex lib. (2) the moved HOST
+lamp-n itself kisses the mapboard: source-true world-vertex min
+distance 0.025m at y~2.0 (was 1.162m clear on-axis) — town's placer has
+no SAT gate. (3) night-lane review-night-core.ts pins both lamps and
+waybands at the OLD on-axis tuples (owner re-pin expected, artwalk-58
+class).
+
+Gate ALL PASS real exit 0 at 914f7a5 pre-work. Eye-gate packet 48bea194
+unchanged; no Phase F, no widening. Zero uploads (shared budget unused);
+8 verbs total. Bill eye-check: the four cardinal gate lamps at r10 from
+the plaza — each way-band ring should sit concentric on its lamp's
+crossarm at y~1.5 (N near the mapboard, E/S/W on their spokes), not
+floating in the path center. Lane HOLDS for Bill's counting-series
+eye-gate verdicts, a Phase F fresh commission, or a queue widening.

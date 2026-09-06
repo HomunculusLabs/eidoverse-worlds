@@ -648,6 +648,13 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     height-mismatch corroborated (trim line steps at entrance).
     Sev 3 stands (slits in the door-facing bay). Evidence:
     reviews/survey5-slice/struct-observatory/gameplay.png]
+    [EXECUTED struct-44: front-bay closure — decode-first root cause (door
+    gap ran full wall height; above lintel y2.62 the bay was open sky, the
+    y3.15 course crossed sky); one source change: gapped lower band +
+    full-ring drum_head 2.62→3.4; raycast RED→GREEN (head ray 13.2→6.8m,
+    door ray open both), native after-render PASS (continuous stone
+    lintel→dome, bands flush, zero light leaks), walk 5/5 max 0.389m; sha
+    3d9d6ae17804c83d live at exact tuple]
 
 26. `nx-struct-soundmirror` — identity failure at edge-on (reads mound);
     black dish interior. Sev 3. (guard: struct-33 warm-seat refine Aug 31
@@ -1777,9 +1784,69 @@ open duplicate notes for these objects.
   OLD sha — flagged to interior lane for re-pin (artwalk-58 class, not
   touched by this lane).
 
-Next queue item (improve-16): windmill idle-guard re-check (rider placed
-09-06 01:57 — expires 09-07 01:57; if clear, queue item 4 Sev 1 native-
-confirmed; else row 20 `nx-town-garden-cottage` Sev 3).
+Next queue item (improve-17): row 21 `nx-town-belltower` (Sev 3, survey-5
+native triple-confirmed; engine-1 ladder-comp routing rides the row).
+Windmill guard still live (expires 09-07 01:57).
+
+- improve-17 (EXECUTION CONTRACT, row 21 `nx-town-belltower`): idle-guard
+  clear (last host mutation polish-263 era; survey-3/engine-1 touches are
+  read-only/client-side). Live tuple (6.5, 0, 6.5) yaw −2.356194490192345,
+  lib 30407b959aa14962 == local rebuild deterministic THIS TICK (no
+  disputed bytes; live store fetch sha 29f28b53 == survey-5 pin). Comp bag
+  {} (census-fresh 259). NO light companion entity (census: only host +
+  rider). Rider nx-artwalk-b5-belltower-rings host-local KEEP-OUT
+  x∈[0.433,1.077], y∈[0.65,2.07], z∈[0.952,1.092] (placer LOCAL
+  [0.75,0.65,0.99] + rider bbox; east/plaza-facing pier outer S face).
+  Native re-judgment THIS TICK (restored after one 1210 paced retry,
+  disclosed): all three findings CONFIRMED with pixel evidence + two scope
+  extensions — (a) ladder accesses nothing at either end (top ~19px short
+  of belfry floor, no landing; bottom floats ~20px above slab), (b) rope
+  passes through the belfry floor beam with no guide. Mechanisms decoded
+  at source (mkv3-landmarks.ts belltower block):
+  - R1 rungs float: `blrail_a` (x −0.45) spears the rung band CENTER;
+    `blrail_b` (x −0.77) is buried INSIDE the NW pier column and misses
+    the rung ends by 40mm — right rung-ends terminate in open air (the
+    rungs' left ends merely embed in the pier).
+  - R2 rope terminus floats: cleat at y 1.05 in open air (no block, no
+    floor anchor); visible terminus = knot y 1.35 with ~1.05m air below.
+  - R3 lamp bare dot: glow bead (0.75, 5.6, 0.75) embedded at the
+    cap-ring/arch-post convergence, zero mount geometry (improve-15
+    bare-dot class).
+  FIX (mkv3-landmarks.ts belltower block only, no housekit change):
+  - R1+extensions: ladder REBUILT on the OUTER S face of the SW pier
+    (plaza-facing, rider-disjoint): 2 stringers x −0.87/−0.63, z 0.99,
+    y 0.30..5.00 seated on the base slab; 11 rungs x −0.90..−0.60, y
+    0.75+0.42k → top rung 4.95 ABOVE belfry floor top (4.82) — climber
+    steps inward onto the deck corner (real top-out). Old embedded
+    rungs/rails REMOVED. PLUS the engine-1 `ladder` comp in the same
+    tick: {type:'ladder', min:[-0.95,0.2,0.93], max:[-0.55,5.05,1.05]}
+    (entity-local, yaw applied client-side; climb is client-side —
+    CLIENT NOT DEPLOYED, deploy is Bill's lane; comp folds blindly
+    server-side per engine-1).
+  - R2: cleat seated on a timber mounting block (0.16×0.25×0.16 at
+    (0.12, 0.425, 0.58) on slab top) with brass cleat y 0.5 + tail knot
+    y 0.36 on the block; rope z 0.62→0.58 (clears the z-face brace
+    plane by 0.08); brass guide ring (horizontal torus r 0.06) at the
+    belfry floor penetration (0.12, 4.76, 0.58) — rope reads threaded,
+    not through-solid.
+  - R3: lantern housing around the KEEP-named lamp bead — 4 iron corner
+    posts (0.025 sq × 0.16) + 4-side pyramid hood (cone r 0.10 h 0.08 at
+    y 5.72) + diagonal iron mount arm from the arch post inner corner
+    (0.90,5.6,0.90)→(0.72,5.6,0.72). Bead position/name unchanged.
+  Falsification: (1) after gameplay@18m rung ends BOTH terminate on
+    visible stringers, ladder reads planted on the slab and REACHES the
+    belfry deck; (2) rope terminates at a visible block-mounted cleat,
+    guide ring at the floor; (3) lamp reads hooded lantern on a bracket,
+    not fused dot; (4) night.png warm px retained (hood must not occlude
+    — bead at 5.6, hood base 5.68); (5) decode audit — bbox unchanged
+    ±1.7 (SAT-neutral same-tuple re-place), zero NEW verts in b5
+    keep-out, stringers seated y 0.30, top rung 4.95; (6) live comp bag
+    readback shows the ladder box after the comp verb; (7) 2-leg MCPL
+    approach walk to the ladder foot ALL_PASS; (8) native judge on after
+    renders; (9) siblings (carousel/inn/windmill) byte-identical.
+  Revert: revert the belltower block edits → rebuild returns
+  30407b959aa14962 (baseline ×2 proven this tick); comp removal = one
+  verb if ever needed.
 
 - improve-16 (EXECUTION CONTRACT, row 20 `nx-town-garden-cottage`): windmill
   guard STILL LIVE at 16:22 EDT (rider 09-06 01:57, ~14.5h < 24h) — row 20

@@ -51,6 +51,10 @@ const okOf = (e: any, w: any) => !!e && e.lib === w.lib && e.pos.every((n: numbe
 const todo: Array<{ id: string; want: any }> = [];
 for (const s of SLOTS) {
   const h = b[s.host];
+  // artwalk-83: hosts live under a TRUNCATED store name after town-1's
+  // off-axis move (store/18b69a6bb2.glb); positions identical either way.
+  // artwalk-83 reseat: riders now track the moved hosts (this placer's
+  // wantOf() derives live-concentric, so it stays correct by construction).
   if (!h || h.scale !== 1) die(`host drift ${s.host}`);
   const want = wantOf(h);
   if (b[s.id] && !okOf(b[s.id], want)) die(`drift ${s.id}`);
