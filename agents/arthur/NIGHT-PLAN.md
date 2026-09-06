@@ -1262,3 +1262,30 @@ STUDY COMPLETE (all facets judged; packet assembled).
   detached-orb, N7 hierarchy inversion. Second-rotation NW+NE+SW
   passes remain the verify paths, deferred while the lane holds.
   Zero world mutations, zero renders judged, no PASS claimed.
+
+- night-46 (2026-09-06, pipeline-mode hold tick): thirty-sixth
+  consecutive hold, NO disposition change. Standing gate ALL PASS
+  real exit 0 at HEAD 79e7d4d (waysign-33; two sibling advances
+  absorbed since night-45: 326c735 approach-28, 79e7d4d waysign-33).
+  Fresh census-46 (capture /tmp/night-census-46-raw.json): 259
+  entities / 38 lights / zero night-prefixed. Diff vs census-45:
+  0 new, 0 gone, 1 lib flip — nx-town-garden-cottage 872aec ->
+  cee52aca, classified improve-16 sibling re-place in flight
+  (nx-town domain: untracked improve16-decode/next-place scripts +
+  modified IMPROVE-PLAN in status; not night's). Closure pins EXACT
+  (22nd steady observation, 21st re-verified consecutive hold chain):
+  D1 nx-approach-nw-lane-001 dc256065879371d8, D2
+  nx-approach-ne-lane-002 dc52264c04cfe5bb, D4-leg
+  nx-approach-sw-lane-003 fb04a144cc1fc458. SW kind=light by id:
+  nx-approach-sw-lamp-001-l (-25.2,1.96,-30.67 r39.7) +
+  nx-approach-sw-lamp-002-l (-34.69,1.96,-43.14 r55.4) +
+  nx-mile-sw-013-l (-37.09,0.608,-52.20 r64.0), zero movement, SW
+  lamps still 0 of 3 on Bill's a/b/c. EXECUTION SHARDING re-read at
+  source: routing by entity prefix, night owns no prefix, zero rows
+  route to night. Packet md5 cdc435a2 unchanged since night-7, zero
+  verdict markers; interlane md5 f6254cd0 steady. Same four verdict
+  classes outstanding: sky facet-5, lamp-budget policy D3 +
+  D4-temple-grounds + D5 + N6, N5 detached-orb, N7 hierarchy
+  inversion. Second-rotation NW+NE+SW passes remain the verify
+  paths, deferred while the lane holds. Zero world mutations,
+  zero renders judged, no PASS claimed.
