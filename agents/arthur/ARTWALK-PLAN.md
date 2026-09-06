@@ -1485,3 +1485,29 @@ Phase F commission, no widening. Zero world mutations, zero shared-budget
 use, no visual PASS claimed. Lane HOLDS for Bill's counting-series
 eye-gate verdicts (reviews/artwalk-counting-series-eye-gate.md), a Phase
 F fresh commission, or a queue widening.
+
+### [artwalk-81] PIPELINE DUTY — row-25 host-pin reconciliation (2026-09-06)
+
+Not a passive hold: the standing fleet reconcile DRIFTed on exactly one
+pin — next-place-artwalk-b17.ts pinned host nx-town-garden-cottage at
+store/872aec35e3aa43b3.glb while live reads cee52aca (improve-16 sibling
+re-place, ledger 4310, tuple identical; night-46 independently classified
+the census flip domain-valid). artwalk-39 continuity law applied:
+independent rotation-aware TRS keep-out differential on the sibling's
+banked before bytes (reviews/improve16-garden/before) vs the new build
+(local asset sha == live cee52aca) in a zone derived from the b17 placer
+contract WIDER than the sibling's band (x ±0.82, y 2.00..2.62, z
+1.68..1.98): 10==10 zone verts, zero gone, zero new; live rider tuple
+EXACT (lib 241db645, yaw matches host, comps 0); all 54 anchors OK —
+re-place compatible, rider untouched. Fix: re-pinned HL to cee52aca in
+the b17 placer; reconcile then ALL_RECONCILED exit 0 — 259 census / 54
+riders / 38 lights / 34 placers / 33 host pins / 29 anchors, coverage
+held. Census diff vs artwalk-80: 0 new, 0 gone, one domain-valid
+garden-cottage lib flip. Foreign residue noted once (not touched):
+review-night-core.ts:41 and interior verify-interior6 +
+interior-place-garden-cottage still pin 872aec35 (owner re-pin
+expected, improve-15 artwalk-58 class). Gate ALL PASS real exit 0
+pre-work at 79e7d4d; packet 48bea194 zero verdicts; no Phase F, no
+widening. Zero world mutations, zero shared-budget use, no visual PASS
+claimed. Lane HOLDS for Bill's counting-series eye-gate verdicts, a
+Phase F fresh commission, or a queue widening.
