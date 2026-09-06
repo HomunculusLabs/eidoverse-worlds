@@ -641,6 +641,28 @@ only when native is down that tick, disclosed.
   (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
   sign's build ahead of rotation.
 
+
+- waysign-26 HOLD (pipeline mode, 10th consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court-sign brace closures); zero
+  OPEN IMPROVE-PLAN rows route to `nx-sign-*` (sharding open split read
+  fresh at source: struct/dress/approach/improve-own only; row 7 packet
+  parked for this lane's eye-gate; survey-7 candidates route outside
+  prefix). Eye-gate packet md5 8b88b6b3 unchanged, zero Bill verdict
+  markers. Cheap lawful hold verification: standing gate ALL PASS real
+  exit 0 at HEAD bbf76df (approach-20 absorbed at tip); fresh live census
+  259 total, ALL 8 `nx-sign-*` riders PIN_EXACT 8/8 (prefix compare; the
+  probe printed raw 16-char basenames — afee37dd9a5b5d67, 8ce2081f7d2c6858,
+  ecbad90311fc9bff, 3a6c8fe79dc41406, f46e12aeeea8af74, 870256ce4a0bea37,
+  49342c523aee4d41, 3522e5ab0c3a5100) + TUPLE_EXACT 7/7 known tuples
+  + smithy at exact court-east mirror delta; all 9 hosts LIB_STABLE
+  (stable 98f2d5b6, court 59534b10, windmill 0993836012d1b17d, woodyard
+  1f2c6f592095b204, dyehouse 888be3597d2f772f, kiln 4d8ef8fc, potter
+  dad7c82e, forge 620120c4d6f0b4a0, inn 6e6ff2d08df9b3fb). Zero world
+  mutations, zero uploads, zero shared-budget use, no visual PASS
+  claimed. Lane HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+  sign's build ahead of rotation.
+
 - waysign-25 HOLD (pipeline mode, 9th consecutive) — queue complete
   (8/8 R1, R2 emblem-collapse 7/7, both court-sign brace closures); zero
   OPEN IMPROVE-PLAN rows route to `nx-sign-*` (row 7 packet PARKED for
