@@ -334,3 +334,15 @@ STUDY COMPLETE (all facets judged; packet assembled).
   (night-ne*, night-sw*, night-core*; 45 PNGs) were untracked working-tree
   residue; committed so the packet's cited evidence survives clean/clone.
   No re-judgment, no new findings, zero world mutations.
+- night-7 (2026-09-06, pipeline-mode hold tick): budget-arithmetic
+  verification — a strict `kind=light` r≥35 recount (NE 6 / SW 4 / NW 3 vs
+  the dress-3 table's 10/3/2) is NOT drift: the table's rule counts token
+  anchors (the 5 NE hamlets carry `embers` comps = the "hamlet ×5" row), and
+  live growth since the table epoch is exactly the mile-lane lanterns
+  (night-2 census re-read proves NE kind=light was 5 then, 6 now = mile-ne).
+  LAW for future ticks: never compare a kind=light filter against the
+  DRESSING-PLAN table without applying their token rule (census field is
+  `comp`, singular — not `comps`). Standing gate exit 0 at HEAD 4499dc2,
+  census 259 steady / 38 lights / zero night-prefixed entities; D1–D5 +
+  N1–N7 disposition unchanged; packet unchanged; lane still HOLDS on Bill's
+  verdicts. Zero world mutations.
