@@ -3905,4 +3905,6 @@ fixes ≈ 6 F.)
 
 - [improve-2] analysis tick (round 1, phase 2): signs (8) + fleet dress (11) judged at 18m from live store bytes, fresh census 259 — signs 1 CLEAN / 7 defective (shared root: emblem scale/contrast collapse at 18m; dyer flax-blue-black flag confirmed), dress 2 CLEAN / 9 defective (worst: ne-yard rubble read, sw-gravel 1-2px artifact line, sw-prayer namesake fabric absent); idle-guard noted on woodstack/logpile/stile; findings committed to IMPROVE-PLAN.md, merged ranked queue deferred to improve-3; ZAI fallback vision — native down 14th consecutive tick, disclosed; zero world mutations (D+0, E+0)
 
+- [sweep-22] full audit sweep at 259 live entities — CLEAN steady-state (eleventh quiet delta); census 259==259 raw snapshot byte-identical 71867B, overlap ALL CLEAR 221/229/0, walks tier-1 4/4 + tier-2 hall+row-cottage sixth cycle, pins 15/15, carousel comps 7, gate lamps 4/4, 38 lights, woodyard pin exact, interlane md5 stable; zero findings, zero world mutations (D+0, E+0)
+
 **Running total: 2370208 / 2000000**

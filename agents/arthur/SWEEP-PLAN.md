@@ -32,7 +32,21 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 
 | sweep-21 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-20 snapshot — tenth fully quiet delta of the wave; raw /geom snapshot byte-identical 71867B, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37) + tier-2 inn 0.364 + stable 0.396 ALL PASS (fifth cycle, all real exit 0) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 38 lights standing, woodyard 1f2c6f592095b204 exact, ledger law exact (2370208), interlane md5 1b933f3454e52504 stable, standing gate real exit 0 at HEAD c5ff981 (sibling improve-1 accepted by prefix gate) | CLEAN SWEEP |
 
+| sweep-22 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-21 snapshot — eleventh fully quiet delta of the wave; raw /geom snapshot byte-identical 71867B, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 0.38; NW 0.38 / NE 0.38 / SW 0.37; verdicts content-anchored) + tier-2 hall 0.360 + row-cottage 0.384 ALL PASS (sixth cycle, all real exit 0) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + -l lights standing (38 lights live), woodyard 1f2c6f592095b204 exact, ledger law exact (2370208), interlane md5 1b933f3454e52504 stable, standing gate real exit 0 at HEAD 38482e2 (sibling improve-2 accepted by prefix gate) | CLEAN SWEEP |
+
 ## Findings register
+
+sweep-22: none. Steady-state census (259==259 vs the committed sweep-21
+snapshot — 0 arrivals, 0 departures, 0 drift on all shared ids; eleventh
+fully quiet delta of the wave; raw /geom snapshot byte-identical 71867B so no
+rewrite was needed). New sibling commit since sweep-21: improve-2 @ HEAD
+38482e2 (round-1 analysis phase 2, zero world mutations per its message,
+accepted by the prefix gate); interlane md5 1b933f3454e52504 stable. All four
+phases verified fresh this wakeup with zero failing checks (tier-2 sixth
+cycle: hall 0.360 + row-cottage 0.384 walked ALL PASS, all real exit 0; tier-1
+legs run individually after core/NW verdict strings were truncated by output
+filtering — verdicts re-anchored on content, not exit codes alone). No defect
+notes written. Next tier-2 pair (sweep-23): potter + market (sixth cycle).
 
 sweep-21: none. Steady-state census (259==259 vs the committed sweep-20
 snapshot — 0 arrivals, 0 departures, 0 drift on all shared ids; tenth fully
