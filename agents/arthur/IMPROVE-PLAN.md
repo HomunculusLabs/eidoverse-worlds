@@ -271,6 +271,9 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     the upper turn]
 16. `nx-approach-sw-lane-003` — floating tan cubes off path edge read as
     debug debris. Sev 2. (guard: approach lane idle since Sep 3)
+    [EXECUTED approach-4: verge re-dressed as cool gray-bone stone clusters
+    in a tightened 1.22-1.45m band, companions offset along the walk; sha
+    43817a4f reseat, walk ALL_PASS 0.37, row closed]
 17. `nx-town-shrine` — offering clumps illegible; torch flames 1-2px;
     asymmetric base plate; dead side faces. Sev 2. (guard: none)
 18. `nx-town-row-cottage` — left door jamb bare; lamp dot no fixture;

@@ -135,6 +135,21 @@ Running lamp count per district is recorded per leg below.
 - **Verdict**: leg 3 (SW) stands; SE deferred on proof. One leg remains
   (SE, pending Bill's option call above).
 
+### approach-4 (2026-09-06): shard row 16 — SW verge re-dress
+
+Interrupted-window recovery (artwalk-32 class: build+reviews on disk, live
+untouched, ledger ignorant) folded into the shard fix. Candidate 2 (the
+interrupted tick's) REJECTED by native judgment — companion offsets read
+lateral, stones detached (band 2.23m). Candidate 3 landed: cool gray-bone
+stone family, band 1.22–1.45m, companions offset ALONG the walk, generalized
+1.3m angler keep-out (3.32m clear). Sha `43817a4fcdd06a15` ×2 deterministic,
+7 nodes, pavers/lamps byte-stable. Judged PASS via ZAI fallback (native 1210
+×2, disclosed). Remove+spawn reseat at the exact standing tuple, comp `{}`,
+PLACED_VERIFIED + idempotent zero-verb rerun. Two-way MCPL walk ALL_PASS
+(5 legs, max 0.37m). Bill eye-check: from the SW gate, at 8–18m the path
+verge should read as deliberate gray-bone stone dressing flanking the walk,
+not scattered cubes.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.

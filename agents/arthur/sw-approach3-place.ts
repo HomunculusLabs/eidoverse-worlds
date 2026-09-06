@@ -1,5 +1,7 @@
-// sw-approach3-place.ts — approach-3 hash-gated placer for the SW straight.
+// sw-approach3-place.ts — approach lane shard-fix placer (approach-4).
 // One entity (nx-approach-sw-lane-003) + two budgeted lights. Idempotent.
+// approach-4 (shard row 16): verge re-dress fix — live entity reseats from the
+// approach-3 lib to the new build at the SAME tuple (remove+spawn, comp {}).
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 
@@ -7,8 +9,10 @@ const ROOT = "/Users/t3rpz/projects/eidoverse-worlds";
 const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
 const WORLD = "commons-next";
 const FILE = `${ROOT}/agents/arthur/assets/village_sw_approach3.glb`;
-const SHA = "56b35877ecda923d944561d400f8fd146517664331dfa1d2f74cce045828d495";
+const SHA = "43817a4fcdd06a15b165d93bb93eab3328c4088f423bf315036dd2a6e7f3bc6f";
 const LIB = `store/${SHA.slice(0, 16)}.glb`;
+// the approach-3 accepted lib — the only lib authorized for reseat
+const PRIOR = "store/56b35877ecda923d.glb";
 const ID = "nx-approach-sw-lane-003";
 const POS = [0, 0, 0], YAW = 0;
 const LIGHTS = [
@@ -61,7 +65,12 @@ const beforeLights = await lightFold();
 const BLOCKERS = ["nx-struct-angler", "nx-struct-reedpool", "nx-town-dyehouse", "nx-town-bunkhouse", "nx-temple-seed-0021"];
 for (const b of BLOCKERS) if (!before[b]) die(`siting blocker ${b} missing from live census — census epoch changed, re-derive`);
 const e = before[ID];
-if (e && !(e.lib === LIB && vec(e.pos, POS) && near(e.yaw ?? 0, YAW) && (e.scale ?? 1) === 1)) die(`${ID} collision/drift`);
+let reseat = false;
+if (e) {
+  if (!(vec(e.pos, POS) && near(e.yaw ?? 0, YAW) && (e.scale ?? 1) === 1)) die(`${ID} tuple drift: ${JSON.stringify(e)}`);
+  if (e.lib === PRIOR) reseat = true;           // authorized lib refresh at exact tuple
+  else if (e.lib !== LIB) die(`${ID} unexpected lib ${e.lib}`); // disputed bytes — hard stop
+}
 for (const l of LIGHTS) {
   const le = before[l.id], authored = beforeLights[l.id];
   if (le && !(le.kind === "light" && vec(le.pos, l.pos))) die(`${l.id} collision/drift`);
@@ -82,7 +91,8 @@ for (let attempt = 1; attempt <= 6; attempt++) {
 if (uploaded !== LIB) die(`upload returned ${uploaded}, expected ${LIB}`);
 
 const verbs: Array<[string, any]> = [];
-if (!before[ID]) verbs.push(["spawn", { id: ID, lib: LIB, pos: POS, yaw: YAW, scale: 1 }]);
+if (reseat) verbs.push(["remove", { id: ID }]);  // spawn never moves a standing entity
+if (!before[ID] || reseat) verbs.push(["spawn", { id: ID, lib: LIB, pos: POS, yaw: YAW, scale: 1 }]);
 for (const l of LIGHTS) if (!before[l.id]) verbs.push(["light", { id: l.id, pos: l.pos, color: COLOR, intensity: INTENSITY, range: RANGE }]);
 if (verbs.length) {
   await new Promise<void>((resolve, reject) => {
