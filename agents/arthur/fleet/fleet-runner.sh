@@ -50,7 +50,7 @@ plan, and INTERLANE-PROTOCOL.md fresh; verify CURRENT state (never assume
 earlier iterations hold). Execute exactly ONE wakeup: full house discipline —
 standing gate real exit 0 before any live mutation, tags derived from ledger
 max, one ledger append, stage ONLY lane-owned paths by explicit name, commit
-under your lane prefix, never push. Five sibling lanes run in this same wave:
+under your lane prefix, never push. Six sibling lanes run in this same wave:
 shared upload budget 4/min/IP (pace 20s+, backoff on 429), verbs 500ms+, and
 every SAT/census preflight fetches the live set fresh. If your queue item is
 exhausted or blocked on Bill, perform ONE cheap lawful hold verification and
