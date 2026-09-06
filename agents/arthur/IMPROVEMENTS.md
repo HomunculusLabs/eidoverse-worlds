@@ -4173,4 +4173,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-68] pipeline-mode hold tick (8th steady) — gate ALL PASS exit 0 at fe07f48; zero OPEN nx-artwalk shard rows (routing re-proven at source); fleet reconcile ALL_RECONCILED exit 0 on quote-agnostic regexes (259/54/38/34/33 pins/29 anchors, coverage held at post-fix levels, zero verbs/uploads); census-diff 259/259 0/0 0 rider drift; eye-gate packet 48bea194 unchanged; holds for Bill verdicts / Phase F / widening; zero mutations (D+0, E+0)
 
+- [waysign-21] pipeline-mode hold tick (5th) — queue complete (8/8 R1, R2 7/7, both court brace closures); zero OPEN IMPROVE-PLAN rows route to nx-sign-* (sharding read fresh at source); eye-gate packet 8b88b6b3 zero verdicts; gate ALL PASS exit 0 at eb49d8a; census 259 ALL 8 nx-sign riders PIN_EXACT (basename-prefix compare; a mid-string tail-slice probe first read 0/8 false-DRIFT — world right, probe wrong, waysign-18 law applied) + all 8 hosts LIB_STABLE (stable 98f2d5b6, court 59534b10); before-baselines re-hash-verified (bakery 599194ee, smithy 62a8c7fc); zero mutations/uploads (D+0, E+0)
+
 **Running total: 2370269 / 2000000**

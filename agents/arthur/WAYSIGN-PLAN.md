@@ -562,8 +562,30 @@ only when native is down that tick, disclosed.
   completed waysign-18's cut sentence — bookkeeping, no work affected.
   Zero world mutations, zero uploads, zero shared-budget use, no visual
   PASS claimed. Lane HOLDS for Bill's eye-gate verdicts
-  (`reviews/waysign-eye-gate.md`); any correction re-opens ahead of
-  rotation.
+  (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+  sign's build ahead of rotation.
+
+- waysign-21 HOLD (pipeline mode, 5th consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court-sign brace closures); zero
+  OPEN IMPROVE-PLAN rows route to `nx-sign-*` (sharding section read
+  fresh at source lines 849+; every nx-sign reference is a historical
+  executed/dropped record); eye-gate packet md5 8b88b6b3 unchanged,
+  zero Bill verdict markers. Cheap lawful hold verification: standing
+  gate ALL PASS real exit 0 at HEAD eb49d8a (dress-25 absorbed at tip);
+  fresh live census 259 total, ALL 8 `nx-sign-*` riders PIN_EXACT 8/8
+  at ledgered tuples (stable afee37dd, dyer 8ce2081f, kiln ecbad903,
+  potter 3a6c8fe7, woodyard f46e12ae, mill 870256ce, bakery 49342c52,
+  smithy 3522e5ab) AND all 8 hosts LIB_STABLE incl. stable 98f2d5b6
+  (waysign-19 re-validation stands) and court 59534b10. Durable review
+  evidence intact: bakery before-baseline 599194ee, smithy
+  62a8c7fc re-hash-verified this tick. Probe self-catch: first rider
+  comparison used a mid-string tail slice and read 0/8 "DRIFT" —
+  re-run with basename-prefix comparison (waysign-18 law) proved
+  8/8 PIN_EXACT; the world was right, the probe was wrong. Zero world
+  mutations, zero uploads, zero shared-budget use, no visual PASS
+  claimed. Lane HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+  sign's build ahead of rotation.
 
 ## Carried laws
 
