@@ -4291,4 +4291,6 @@ fixes ≈ 6 F.)
 
 - [approach-27] pipeline hold (15th) — shard empty at source (rows 16/36 terminal), SE a/b/c + D3/D5 + N5-N7 Bill-bound, gate ALL PASS exit 0 at 73f6ffb, fresh census 259/domain 17 three legs PIN_EXACT (nw dc256065879371d8, ne dc52264c04cfe5bb, sw fb04a144cc1fc458) + six leg lights + gate lamps untouched, diff vs night-44 AND approach-26 0/0/0, zero mutations (D+0, E+0)
 
+- [waysign-32] pipeline hold (16th): queue complete 8/8 R1 + 7/7 R2 emblem-collapse + both court brace closures; zero OPEN IMPROVE-PLAN rows route to nx-sign (item-7 packet IS executed R2 waysign-8..16); eye-gate packet 8b88b6b3 zero verdicts; gate ALL PASS exit 0 at 3d42026; census 259, 8/8 riders PIN_EXACT, 9/9 hosts LIB_STABLE (court under census id nx-court); interlane f6254cd0 steady; zero mutations (D+0, E+0)
+
 **Running total: 2370274 / 2000000**
