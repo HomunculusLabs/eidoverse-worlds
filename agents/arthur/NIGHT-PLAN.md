@@ -1128,3 +1128,30 @@ STUDY COMPLETE (all facets judged; packet assembled).
   N5 detached-orb, N7 hierarchy inversion. Second-rotation NW+NE+SW
   passes remain the verify paths, deferred while the lane holds.
   Zero world mutations, zero renders judged, no PASS claimed.
+- night-41 (2026-09-06, pipeline-mode hold tick): thirty-first
+  consecutive hold with NO disposition change. Standing gate ALL PASS
+  real exit 0 at HEAD 764ac48 (waysign-28 — itself a zero-mutation
+  hold tick, landed between survey and append; its ledger entry was
+  the working-tree diff seen pre-commit, normal interleaving). Fresh
+  census-41: 259 entities / 38 lights / zero night-prefixed, FULLY
+  steady vs census-40 (0 new, 0 gone, 0 pos/yaw/lib changed; capture
+  /tmp/night-census-41.json). D1 pin nx-approach-nw-lane-001
+  dc256065879371d8, D2 pin nx-approach-ne-lane-002 dc52264c04cfe5bb,
+  D4-leg pin nx-approach-sw-lane-003 fb04a144cc1fc458 — all THREE
+  exact (SIXTEENTH consecutive all-pins-steady tick; first probe pass
+  printed false DRIFT by not stripping the census lib field's store/
+  prefix — corrected probe exact, suspect-the-probe law held). SW
+  quadrant kind=light r>=35 census-verified by id:
+  nx-approach-sw-lamp-001-l + nx-approach-sw-lamp-002-l +
+  nx-mile-sw-013-l = 2 leg lamps + 1 mile lantern, zero budget
+  movement, SW lamps still 0 of 3 on Bill's a/b/c. APPROACH-PLAN five
+  night-N defect-note sections stand verbatim (lines 578/598/617/635/
+  654 — D3 + D4-temple-grounds + D5+N6 budget-bound, N1/N2/N4-N7
+  informational). Packet md5 cdc435a2 unchanged since night-7, zero
+  verdict markers; interlane md5 f6254cd0 steady; zero actionable
+  night- shard rows in IMPROVE-PLAN (night- is an observer). Same four
+  verdict classes outstanding: sky facet-5, lamp-budget policy D3 +
+  D4-temple-grounds + D5 + N6, N5 detached-orb, N7 hierarchy
+  inversion. Second-rotation NW+NE+SW passes remain the verify paths,
+  deferred while the lane holds. Zero world mutations, zero renders
+  judged, no PASS claimed.
