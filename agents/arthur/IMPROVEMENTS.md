@@ -3823,4 +3823,6 @@ fixes ≈ 6 F.)
 
 - [mile-4] SW midpoint pair CORRECTIVE RESEAT (mile-3 defect found this tick): placer had derived the 'perpendicular' as N=(cos(pa),-sin(pa)) which is the negated leg direction — posts were ON the pavers (centerline r44.7/r49.3); fix dir(az)=(sin,cos), remove->spawn over one WS (mile-swfix-place.ts): nx-mile-sw-005 (-26.618,-0.047,-38.804) + nx-mile-sw-006 (-30.280,-0.053,-36.020), true perp 2.30m both (verge clear 1.40m), SAT 1.62m/5.29m vs nx-struct-angler, centerline check now in code, no upload (shared 9459eaa3 lib), terrain fresh, idempotent zero-verb rerun; mile-1/2 re-verified correct from committed sources (D+4, E+2)
 
-**Running total: 2370160 / 2000000**
+- [sweep-4] full audit sweep at 239 live entities — CLEAN; census 235→239 (+4 domain-valid: dress-3 stones, mile-3 SW pair, waysign-3 kiln sign; 0 departures, 0 drift); overlap ALL CLEAR (204 bbox ents, 214 classified, 0 unclassified); tier-1 walks 4/4 ALL PASS (0.38/0.38/0.38/0.37) + tier-2 hall 0.360 + row-cottage 0.384 ALL PASS; pins 15/15, carousel compKeys exact 7, gate lamps + -l lights standing, woodyard 1f2c6f592095b204 exact, interlane md5 stable, gate exit 0; zero world mutations (D+4, E+0)
+
+**Running total: 2370164 / 2000000**
