@@ -223,10 +223,12 @@ not tankard" — host redesign belongs to the owner lane (improve queue
 item, not waysign's), recorded here so it isn't lost.
 
 Rotation: R2-1 → R2-7 (worst-first provisional; re-rank after native
-re-judgment). Each item: full chassis — host anchor re-derived from
-CURRENT tuple per host-rider law, rider-only SAT + exemption ladder,
-unlit by default, 8m gate. Native vision is primary judge; ZAI fallback
-only when native is down that tick, disclosed.
+re-judgment). NEXT OPEN: R2-3 (kiln) — R2-1 DONE waysign-8 (smithy live
+62a8c7fc, court-wall host truth corrected), R2-2 DONE waysign-9 (dyer
+live 8ce2081f, scale-not-hue root class). Each item: full chassis — host
+anchor re-derived from CURRENT tuple per host-rider law, rider-only SAT +
+exemption ladder, unlit by default, 8m gate. Native vision is primary
+judge; ZAI fallback only when native is down that tick, disclosed.
 
 ## ROUND 2 execution log
 

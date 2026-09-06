@@ -195,6 +195,7 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
    post; orphan shadow proves hidden geometry — suspect flipped normals /
    culled faces); orange seam at post-base joint. Sev 1: namesake absent.
    DECODE FIRST. (guard: none — struct lane idle since Aug 31)
+   [EXECUTED improve-6: fins-absent root-caused at decode; fixed, re-placed]
 3. `nx-town-inn` — two floating diagonal planes at roof corners; dead
    unattached ridge box; porch emblem reads wheel-not-tankard (seeded,
    waysign-7); off-center entrance recess. Sev 1: floating geometry.
@@ -208,6 +209,10 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
    clips lit window; sail cross lopsided (one arm bare). Sev 1: floating
    geometry + weak identity. (guard: interior-20 Sep 1 interior only —
    treat exterior as clear; re-check lane tail at execution)
+   [DEFERRED improve-8: idle-guard FIRED — waysign-6 hung nx-sign-mill-001
+   rider live on the windmill 09-06 01:57 (<24h); a host re-place would
+   also strand the rider's fresh anchor against changed host bytes.
+   Re-check waysign tail when this item returns.]
 5. `nx-struct-crossing` — reads as utility-pole clusters; no water/banks/
    stones — ford is a void; clipping posts, snapped stub pegs. Sev 1:
    identity failure. DECODE FIRST. (guard: none)
@@ -290,6 +295,31 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     (guard: dress-10 yesterday — re-check at execution)
 38. `nx-dress-nw-hedge-001` — cleanup tier (stub riser, stray cube, hole).
     Sev 4. (guard: re-check dress tail at execution)
+
+**ROUND-1 KIT-DEBT APPEND (2026-09-06, staged at improve-5x — perpetual-
+motion law): entry 39 seeds round 2. Cure proven at hall+inn (improve-5
+/7): gableRoof hw=w/2 bug horns plaster past the roof plane on every
+rectangular gabled building; opt-ins solidRidge+trueGableHalf fix it
+default-byte-identical. Decode-proven defects whose visual verdicts said
+CLEAN only because probes read the horn as fascia enter the queue as
+work, not re-analysis. (mapboard/monument emblem items already queue at
+27/28 — no duplicates created here):**
+
+39. `nx-town-longhouse` — 1.5m gable horn each end (decode-proven kit
+    bug; probe-CLEAN verdicts stand as visual verdicts, horn is real
+    work). Fix = same opt-ins, rebuild ×2, sibling-equality proof,
+    remove+spawn re-place at exact tuple. Sev 2 (structural credibility).
+
+**ROUND RE-ARM LAW (perpetual motion, 2026-09-06, Bill-directed):** when
+the round queue's last entry is annotated EXECUTED (or DROPPED with
+cause), the next wakeup does NOT hold — it arms round N+1: (1) sweep's
+latest CLEAN census + defect notes scanned for un-routed findings; (2)
+kit-debt, REPAIR-REGISTER OPEN items, and any decode-proven class with a
+proven cure enter as entries; (3) ONE native-vision sweep of the 18m
+worst-read objects not re-judged this round seeds candidates
+(confirm-or-drop each); (4) nothing eligible remains → the lane reports
+HOLD once with the evidence, per the no-manufactured-work law. This law
+never overrides idle-guard, domain law, or the eye-gate verdict routing.
 
 **Historical improve-1 core-family draft (superseded by the merged queue
 above):**
@@ -605,6 +635,67 @@ Next queue item (improve-8): `nx-town-windmill` (Sev 1 — floating
 gallery ring, stray pole clipping lit window, lopsided sail cross;
 guard: interior-20 Sep 1 touched the windmill INTERIOR only — treat
 exterior as clear; re-check lane tail at execution).
+
+## Round 1 execution log
+
+- improve-8 (EXECUTION, queue item 5 `nx-struct-crossing` — windmill
+  DEFERRED first): idle-guard fired on the windmill (waysign-6 live rider
+  nx-sign-mill-001 hung 09-06 01:57, <24h; annotation on queue item 4).
+  Crossing taken next-worst Sev 1. Idle-guard clear (struct-35 Aug 31).
+  Baseline rebuild ×2 deterministic sha a5da939d… == live lib prefix
+  (no disputed bytes). Live tuple (3.6,−0.005,−3.6) yaw 0, comp bag {}
+  (census-fresh), bbox 3.19×2.40×3.28. Native re-judgment FIRST
+  (improve-5v law): 2/3 calls succeeded (one 1210, one paced retry —
+  disclosed); gameplay@18m + front near-view judged.
+  Re-judgment results (confirm-or-drop):
+  - D1 "utility poles / fence posts" → CONFIRMED (native, both views):
+    reads wooden utility/hitching posts, not hewn stone; monument intent
+    absent at 18m; "signposts missing their signs" (stub read).
+  - D1b brass head-rings invisible at 18m → CONFIRMED (native gameplay:
+    "no metallic highlight, no rim contrast, no resolvable ring shape").
+  - D2 "posts clip through each other" → DROPPED (decode + native front:
+    stones 2.6m apart on diagonals, no shared volume; the "second darker
+    element" is the far pair seen through the gap, perspective-correct
+    with own pads and own shadows).
+  - D3 "plate feet / stretched detached shadows" → DROPPED (native front:
+    every shadow anchors at its pad, ring shadows confirm circular rings;
+    long thin shadows are the real sun angle, not detachment).
+  - D4 "ford is a void / no water/banks/stones" → DROPPED as FABRICATED
+    IDENTITY: source decode proves the commission is struct-34's
+    CROSSING MARK (four leaning stones binding the plaza crossroads,
+    brass head-rings, foot pads — mkv3-crossing.ts:1-12). No water, no
+    ford, no stepping stones exist anywhere in the build. The improve-3
+    probe judged the object against an identity it never had.
+  - D1 root cause by decode: the only "leaning stones" in the village
+    built as smooth untextured tapered cylinders (CylinderGeometry
+    r0.11→0.16 h2.35, flat mat 0x56503c, no stoneTex), h/d ~15:1 slender,
+    plus the utility-idiom silhouette (smooth shaft + plinth). Sibling
+    precedent judged CLEAN at 18m: waystone ring (mkv3-waystone41.ts:34-
+    43) — BoxGeometry hewn slabs + village stone texMat + varied lean
+    (tex-28 STONE X law: leaning stones take the village stone tile).
+  FIX (idiom correction, monument identity restored):
+  - stones: BoxGeometry hewn slabs 0.34×2.35×0.26 (aspect 7:1 stone,
+    replaces 15:1 pole), each with a CHISELED HEAD (two bevel cuts on the
+    outer top edge, 10°+25°), varied heights 2.35/2.45/2.2/2.5, varied
+    lean 6–10° outward, varied slight yaw.
+  - material: flat 0x56503c → village stone texMat (tex-28 law, same
+    recipe as waystone ring: [0x56503c,0x5c5a44,0x4c4836] rough 0.95
+    scale 2 weights [2,1,1] cell 32).
+  - brass head-rings: enlarged for 18m legibility, r 0.145→0.19, tube
+    0.022→0.045, re-positioned ON the chiseled head bevels.
+  - pads: hex plinths → rough ashlar pads (BoxGeometry 0.62×0.14×0.62,
+    stoneTex), seated to ground.
+  - Falsification: gameplay.png@18m reads leaning hewn stones (wood-post
+    read GONE); rings still illegible at 18m (acceptable — ring shadows
+    carry the brass at gameplay distance per native front-view evidence)
+    but visible on near/front views; top.png shows four varied heads with
+    differing head-tilts; decode audit: 3 buckets again, bbox within
+    ±0.1m of 3.19×2.40×3.28, chisel-cut vertex bands present on outer
+    top corners. Revert: revert the stone/ring/pad block to the original
+    cylinder composition → rebuild returns to live pin a5da939d.
+  - Rider safety: nx-artwalk-b24-well-depth 3.3m+ clear of the nearest
+    stone (position math on fresh census); footprint slightly SHRINKS
+    (0.62 pads vs 0.68 hex pads).
 
 ## Carried laws
 
