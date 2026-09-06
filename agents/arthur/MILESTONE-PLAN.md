@@ -35,7 +35,7 @@ Rotation NW → NE → SW (→ SE if Bill opens a corridor).
 | 1 | NW | bend r58 (az306→315) | outer | **PLACED mile-1** |
 | 2 | NE | jink pivot r48 | outer | **PLACED mile-2** |
 | 3 | SW | midpoint r47 | outer | **PLACED mile-3** |
-| 4 | NW | district arrival r71 | inner (district-facing) | pending |
+| 4 | NW | district arrival r71 | inner (district-facing) | **PLACED mile-5** (resite −1.5m, see log) |
 | 5 | NE | district arrival r72 | inner | pending |
 | 6 | SW | district arrival r71 | inner | pending |
 | 7+ | SE | per Bill's siting call | TBD | held |
@@ -48,7 +48,7 @@ live leg decode shows a better verge shoulder.
 
 | district | live lights | budget | used | notes |
 |----------|-------------|--------|------|-------|
-| NW | 5 (market, garden-cottage, tower-house, approach-lamp-001/002) | lamp only if a marker lands past every light | 0 | bend marker sits between the leg's own lamps — unlit |
+| NW | 5 (market, garden-cottage, tower-house, approach-lamp-001/002) | lamp only if a marker lands past every light | 1 | mile-5 arrival pair LIT (last leg light r66.9 < marker r71); bend marker unlit |
 | NE | 6 | same law | 0 | counted mile-1 |
 | SW | 6 | same law | 0 | counted mile-1 |
 | SE | — (no leg) | — | — | holds with the SE call |
@@ -126,6 +126,34 @@ live leg decode shows a better verge shoulder.
   in the placer. mile-1 (2.29m) and mile-2 (2.13m) re-verified this tick
   from committed sources — correct, only mile-3 was affected.
   NEXT: mile-5 NW district arrival r71 (inner, district-facing verge).
+
+- **mile-5 (2026-09-06, overnight fleet)** — NW district ARRIVAL milestone
+  pair, first LIT variant. Boundary: the NW leg's arrival A = pol(71,315),
+  end of the committed az315 home straight (mkv3-nw-approach1.ts P2).
+  RESITE: the live SAT gate caught a 1.37m pinch vs sibling
+  nx-dress-nw-skeps-001 (dress lane landed at r76.4 az315.5 mid-tick) —
+  pair pulled 1.5m inward along the leg: M = A − 1.5·dir(315) =
+  (−49.1439, 49.1439), posts still exactly 2.30m off the az315 radial
+  (in-code centerline check), SAT now 2.87m both posts. Posts:
+  `nx-mile-nw-007` village-side (−47.518, 0.028, 50.770) yaw 135° LIT and
+  `nx-mile-nw-008` district-side (−50.770, 0.039, 47.518) yaw −45° unlit —
+  each arm aims at the lane centerline. Build: `assets/mkv3-mile-nw2.ts` →
+  `village_mile_nw2.glb` v3, sha
+  `052120d7646f5f746fd3559f7274d4d57d30e0d81ce97b4a741f469162bc9145`,
+  deterministic ×2. Decode: 5 nodes (2 material buckets + KEEP "lamp"
+  cage group), 136 verts, top 0.91m ≤ 1.1 law, footprint x [−0.21, 0.325]
+  (asymmetric arm — SAT used the target-bbox-center transform). Review:
+  v1 rejected (arm read as a nub — no suspension), v2 accepted-in-structure
+  with micro-pass, v3 ACCEPT via zai-vision fallback (native vision down,
+  5th consecutive tick; disclosed) — hanging-lantern read, plinth+cap marker
+  read, no new defects. Lamp: marker provably past every NW light (last leg
+  light r66.9) → ONE refine-198 milestone-lamp on the village-side post,
+  `nx-mile-nw-007-l` at cage center (−47.680, 0.678, 50.608), warm
+  0xffb066, intensity 1.2, range 8, verified via light history fold.
+  NW lamp budget: 1 used. Placement: hash-gated placer `mile-nw2-place.ts`
+  — single upload, 3 verbs @800ms (2 spawn + 1 light), post-place tuple +
+  light verify, idempotent zero-verb rerun. Verdict: PLACED_VERIFIED.
+  NEXT: mile-6 NE district arrival r72 (inner).
 
 ## Lesson (mile-3 defect, class-level)
 
