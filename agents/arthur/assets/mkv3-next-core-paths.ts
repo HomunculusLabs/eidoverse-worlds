@@ -22,21 +22,25 @@ function segment(a:[number,number],b:[number,number],start=true,step=.92){
  for(let i=start?0:1;i<=n;i++){const t=i/n,px=a[0]+dx*t,pz=a[1]+dz*t;stone(px,pz,yaw)}
 }
 function route(points:Array<[number,number]>,step=.92,includeStart=true){for(let i=0;i<points.length-1;i++)segment(points[i],points[i+1],i===0?includeStart:false,step)}
-// Four short plaza spokes terminate before the reviewed cardinal lamps.
-route([[4.8,0],[8.9,0]],.86);route([[-4.8,0],[-8.9,0]],.86);route([[0,4.8],[0,8.9]],.86);route([[0,-4.8],[0,-8.9]],.86);
-// NE tower: bypass the north lamp on its east side, then bend toward the door.
-// nvp-20 visual gate: the first draft stopped/restarted across a 2m grass gap
-// at each lamp and read as disconnected debris rather than one path network.
-route([[0,8.9],[1.0,9.4],[1.0,10.6],[0,10.9],[4.2,10.9],[8.0,11.8],[11.271765011973791,13.529378862508514]],.92,false);
+// town-1 (Bill's 2026-09-06 screenshot correction): the four cardinal lamps
+// moved OFF-axis (1.75m right of each spoke); spokes now run STRAIGHT through
+// r10 to the ring join — no more doglegs laid around lamp posts.
+route([[4.8,0],[10.9,0]],.86);route([[-4.8,0],[-10.9,0]],.86);route([[0,4.8],[0,10.9]],.86);route([[0,-4.8],[0,-10.9]],.86);
+// NE tower: spoke straight through r10 (lamp off-axis at x=1.75). The leg
+// then sweeps NORTH of the mapboard (its OBB reaches z~11.34 at x 0.6-4.4) —
+// a solid civic structure worth routing around, unlike the old lamp doglegs.
+route([[0,10.9],[0.7,11.85],[7.6,11.85],[8.0,11.8],[11.271765011973791,13.529378862508514]],.92,false);
 // SE work court: one trunk from the east approach, then a deliberate fork to
 // each open shed. Endpoints are exact exterior-apron edges, never thresholds.
 const fork:[number,number]=[12.6,-6.8];
-// East lamp bypass stays on the court/south side.
-route([[8.9,0],[9.4,-1.0],[10.6,-1.0],[10.9,0],[11.2,-3.7],fork],.92,false);
+// East court fork: spoke straight through r10 (lamp off-axis at z=1.75);
+// fork departs from the spoke end.
+route([[10.9,0],[11.2,-3.7],fork],.92,false);
 route([fork,[15.0,-8.0],[17.447261721904905,-9.350270511726542]],.88);
 route([fork,[12.45,-10.1],[12.75,-12.7],[13.260703615912785,-14.70869670093095]],.88);
-// NW carousel: bypass the west lamp on its north side; no path enters SW meadow.
-route([[-8.9,0],[-9.4,1.0],[-10.6,1.0],[-10.9,0],[-10.8,4.7],[-12.1,8.8],[-14.2,12.2]],.96,false);
+// NW carousel: west spoke straight through r10 (lamp off-axis at z=-1.75);
+// no path enters SW meadow.
+route([[-10.9,0],[-10.8,4.7],[-12.1,8.8],[-14.2,12.2]],.96,false);
 mergeByMaterial(g,"npath");
 writeFileSync("agents/arthur/assets/village_next_core_paths.glb",toGLB(g));
 writeFileSync("agents/arthur/assets/village_next_core_paths.review.json",JSON.stringify({seed:8128,pavers:reviewManifest},null,2)+"\n");
