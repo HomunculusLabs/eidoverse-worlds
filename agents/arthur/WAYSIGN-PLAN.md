@@ -890,6 +890,46 @@ only when native is down that tick, disclosed.
   Bill's eye-gate verdicts (`reviews/waysign-eye-gate.md`); any visual
   correction re-opens that sign's build ahead of rotation.
 
+- waysign-37 HOLD (pipeline mode, 21st consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court brace closures); SHARD
+  routing re-read at source: open split struct/dress/approach/
+  improve-own only, item 7 parked on Bill's eye-gate per its routing
+  note; packet 8b88b6b3 unchanged, verdict line still empty. Hold
+  verification FRESH: standing gate ALL PASS real exit 0 at HEAD
+  c13c022 (sibling survey-10 at tip); census 259, exactly 8 nx-sign
+  ids no strays, all 8 riders PIN_EXACT at ledgered libs AND tuples
+  (stable afee37dd [40.9,0,0] yaw −π/2, dyer 8ce2081f, kiln ecbad903,
+  potter 3a6c8fe7, woodyard f46e12ae, mill 870256ce, bakery 49342c52
+  [14.023,0,−18.769] yaw 2.234, smithy 3522e5ab [23.777,0,−10.831]
+  yaw −0.9076), comp bags empty 8/8; all 9 hosts LIB_STABLE (inn 6e,
+  stable 98f2d5b6, dyehouse 88, kiln 4d, potter dad7c82e, woodyard 1f,
+  windmill 09938360, forge 620120c4, court 59534b10); interlane md5
+  f6254cd0 steady. Zero mutations, zero uploads, zero shared-budget
+  use. HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any visual correction re-opens
+  that sign's build ahead of rotation.
+
+- waysign-38 HOLD (pipeline mode, 22nd consecutive) — queue complete
+  (8/8 R1, R2 7/7, both court brace closures); SHARD routing re-read at
+  source: open split struct/dress/approach/improve-own only, zero OPEN
+  rows route to nx-sign-*; packet 8b88b6b3 unchanged, verdict line empty.
+  MERGE-CHURN RECOVERY (approach-15 pattern): waysign-37's ledger entry
+  verified at HEAD (carried by sibling dress-41 7bdf230, artwalk-34
+  interleaving law — exactly 1x, not lost) but its plan block stayed
+  uncommitted lane-owned dirt through a UU unmerged state resolved
+  mid-flight by town-3's -s ours reunify merge 0365e18; this tick
+  commits it together with waysign-38's records. Hold verification
+  FRESH: standing gate ALL PASS real exit 0 at HEAD 0365e18; live
+  census 259 (dict-shape probe artifact corrected — entities key);
+  exactly 8 nx-sign ids no strays, all 8 riders PIN_EXACT at ledgered
+  libs AND tuples, comp bags empty 8/8; all 9 hosts LIB_STABLE (inn 6e,
+  stable 98f2d5b6, dyehouse 88, kiln 4d, potter dad7c82e, woodyard 1f,
+  windmill 09938360, forge 620120c4, court 59534b10); interlane md5
+  f6254cd0 steady. Zero world mutations, zero uploads, zero
+  shared-budget use, no visual PASS claimed. Lane HOLDS for Bill's
+  eye-gate verdicts (`reviews/waysign-eye-gate.md`); any visual
+  correction re-opens that sign's build ahead of rotation.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
