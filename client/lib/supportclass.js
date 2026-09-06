@@ -18,10 +18,25 @@
 export const TOPGRID_VERSION = 1;
 export const LIE_GRID = 24;              // cells per side
 export const SPARSE_MIN_CELLS = 8;       // a 4-corner quad covers 4: too sparse to accuse
-export const ROOM_MIN_AREA = 16;         // m² (scaled) — decide()'s room-scale gate
+export const ROOM_MIN_AREA = 8;          // m² (scaled) — decide()'s room-scale gate
+                                         // (was 16 — sealed every real walk-in under
+                                         // 16m²: halt, needlerest, woodyard, kiln,
+                                         // fountain... solid boxes you could not
+                                         // enter. 8 admits them as exact trimesh;
+                                         // BVH cost is per-lib cached, ~10 more
+                                         // across the village. 2026-09-06, Bill's
+                                         // "can't walk into a building" report.)
 export const ROOM_MIN_H = 2.2;           // m (scaled)
 export const FLOOR_MIN_AREA = 2;         // m² (scaled) — smaller and nobody walks on it
-export const FLOOR_MAX_H = 1.0;          // m (scaled) — decide()'s one movable line
+export const FLOOR_MAX_H = 2.2;          // m (scaled) — the lie probe's height band.
+                                         // (was 1.0 — left the whole 1.0–2.2m band
+                                         // on its lying bbox-max top: woodstacks,
+                                         // stiles, hedgerows, carts — a body stood
+                                         // on the tallest protrusion's height
+                                         // across the ENTIRE footprint. 2026-09-06,
+                                         // Bill's "space above them / float in the
+                                         // air" report. Meets ROOM_MIN_H so the
+                                         // two gates tile the height axis cleanly.)
 export const UNEVEN_MIN_LIE = 0.10;      // m (scaled) — below this a box is honest enough
 export const TOPGRID_MAX_JSON = 8192;    // hard cap on the serialized payload
 /** Per-cell certification (#94 review B1): a cell may be OFFERED as support

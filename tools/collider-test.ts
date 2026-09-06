@@ -218,7 +218,7 @@ console.log('\nfloor-shaped things with lying tops (the blanket rule, issue #11)
   C.clearColliders();
   check('an honest flat slab stays a box (lie gate)', !auto('slab', 3, 0.3, 3).exact);
   C.clearColliders();
-  check('a car-height hump stays a box (height gate)', !auto('car', 3, 0.9, 2.5, 0.36).exact);
+  check('a car-height hump goes exact now (the 1.0-2.2m band fix, 2026-09-06): stand on the cabin, not the hood-float', auto('car', 3, 0.9, 2.5, 0.36).exact);
   C.clearColliders();
   // The probe's known blind spot, pinned as DELIBERATE: a corner-only
   // low-poly mesh gives the probe nothing to see between its corners, so it

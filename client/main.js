@@ -14,6 +14,7 @@ import { contributeThumbnail, makeAvatar, EMOTE_ORDER } from './lib/avatar.js';
 import { updateSky, updateAutoSystems, skyArgs, setCloudQuality } from './lib/sky.js';
 import { setSkyArgsSource, entities, buildsPending, avatarMounts } from './lib/world.js';
 import { foldParity } from './lib/parity.js';
+import { foldLadders } from './lib/ladder.js';   // climb volumes from ladder comps
 import { initModelsRealizer, reconcileModels, residencyDebug, setResidencyFocus, drainPromoteTail } from './lib/realize/models.js';
 import { initEnvironmentRealizer } from './lib/realize/environment.js';
 import { initSocialRealizer } from './lib/realize/social.js';
@@ -307,7 +308,7 @@ function people() {
 // instantaneous and looked broken.
 
 let hydrated = false;
-bus.on('hydrated', () => { hydrated = true; checkReady(); });
+bus.on('hydrated', () => { hydrated = true; checkReady(); foldLadders(); });
 
 // An empty world is indistinguishable from a broken one: no ground, no sky,
 // no objects, no explanation. That is what a mistyped world name gets you,

@@ -9,6 +9,7 @@
 import { THREE, camera, canvas, CONFIG, angleDelta, bus } from './core.js';
 import { heightAt } from './terrain.js';
 import { resolveColliders, lastBlockedTop, findSeat, raySegment } from './colliders.js';
+import { ladderAt } from './ladder.js';
 import { chat } from './chat.js';
 import { isOverlayOpen, flashHint } from './ui.js';
 import { resolveFirstPersonAnchor, FP_FORWARD, FP_GAZE_AHEAD, FP_GAZE_DROP } from './fp_view.js';
@@ -27,6 +28,8 @@ export const myState = {
 export const keys = new Set();
 let posture = null;              // 'sit' | 'lie' | null
 let vy = 0, grounded = true, mantle = null, airborneFor = 0;
+let climbing = null;   // { ladder, box } while on a ladder run band
+let spaceLatch = false; // Space must be RELEASED before a ladder re-grab (hop-off would otherwise be undone next frame)
 
 // camera
 export let camYaw = 0, camPitch = 0.32, camDist = 4.2;
@@ -58,7 +61,7 @@ addEventListener('keydown', (e) => {
   keys.add(e.code);
   bus.emit('key', e);
 });
-addEventListener('keyup', (e) => keys.delete(e.code));
+addEventListener('keyup', (e) => { keys.delete(e.code); if (e.code === 'Space') spaceLatch = false; });
 // A held key with the window unfocused stays "down" forever — clear on blur.
 addEventListener('blur', () => keys.clear());
 
@@ -292,6 +295,50 @@ export function updateMe(dt, me) {
   // ---- vertical
   const ground = resolveColliders(myState.pos, heightAt);
   const blockedTop = lastBlockedTop();
+
+  // ---- ladders (comp-driven climb volumes; peers of mantle)
+  // W/S climbs or descends the run band; Space jumps off; walking out the
+  // sides releases. Entering is proximity: stand at the base (or fall past
+  // the volume) and push forward into it — same feel as the mantle grab.
+  const lad = spaceLatch ? null : ladderAt(myState.pos);
+  if (lad && !mantle) {
+    if (!climbing) {
+      climbing = lad;
+      vy = 0; grounded = false;
+      posture = null; myState.seat = null;
+    } else climbing = lad;   // refresh the volume as we move
+    const climbDir = fwd;    // +1 W / -1 S in the band
+    const CLIMB_SPEED = 1.6; // deliberate — a ladder is not a fire pole
+    if (climbDir !== 0) {
+      myState.pos.y += climbDir * CLIMB_SPEED * dt;
+      myState.pos.y = THREE.MathUtils.clamp(myState.pos.y, lad.box.bottom - 0.1, lad.box.top);
+    }
+    if (keys.has('Space') && !spaceLatch) {   // hop off the ladder
+      climbing = null; grounded = false; vy = 3.0; spaceLatch = true;
+    }
+    // pin loosely to the ladder's horizontal centre so climbing reads as
+    // holding the rungs, not skating on air beside them
+    const cx = (lad.box.minX + lad.box.maxX) / 2, cz = (lad.box.minZ + lad.box.maxZ) / 2;
+    myState.pos.x = THREE.MathUtils.lerp(myState.pos.x, cx, 1 - Math.exp(-6 * dt));
+    myState.pos.z = THREE.MathUtils.lerp(myState.pos.z, cz, 1 - Math.exp(-6 * dt));
+    // top-out: reach the top lip above solid standing ground -> step off
+    // forward onto it (the ladder comp's max-y IS the landing lip)
+    if (myState.pos.y >= lad.box.top - 0.15 && climbDir > 0) {
+      _facing.set(Math.sin(myState.yaw), 0, Math.cos(myState.yaw));
+      myState.pos.addScaledVector(_facing, 0.55);
+      myState.pos.y = lad.box.top;
+      climbing = null; grounded = true; vy = 0;
+    } else if (climbDir < 0 && myState.pos.y <= lad.box.bottom + 0.05) {
+      climbing = null; grounded = true; vy = 0;
+    }
+    // feet find the ladder's own geometry as ground while climbing (a rail
+    // underfoot), else hover-in-band is fine — gravity is suspended here
+  } else if (climbing && !lad) {
+    climbing = null;   // walked out the side or the comp went away
+    grounded = false;
+  }
+  if (climbing) grounded = false;   // gravity is suspended on the rungs
+
   if (mantle) {
     mantle.t += dt / 0.55;
     const k = Math.min(1, mantle.t), e = k * k * (3 - 2 * k);
@@ -309,7 +356,7 @@ export function updateMe(dt, me) {
         grounded = false;
       } else { vy = 5.6; grounded = false; }
     }
-    if (!mantle) {
+    if (!mantle && !climbing) {
       if (!grounded || myState.pos.y > ground + 0.02) {
         grounded = false;
         vy -= 16 * dt;
@@ -328,7 +375,7 @@ export function updateMe(dt, me) {
   }
 
   const seatedClip = myState.seat?.chair ? 'sitchair' : 'sit';
-  myState.clip = mantle ? 'climb'
+  myState.clip = mantle || climbing ? 'climb'
     : airborneFor > 0.09 ? 'jump'
       : myState.speed >= 0.05 ? (myState.speed < 2.6 ? 'walk' : 'run')
         : posture === 'sit' ? seatedClip

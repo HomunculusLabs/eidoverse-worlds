@@ -46,7 +46,7 @@ console.log("\n━━ the decision gates, at their boundaries ━━");
   check("a crate's 5cm lie is honest enough", !c(2, 1.5, 0.9, 0.05).uneven);
   check("lie gate is strict: 0.10 exactly is not an accusation", !c(2, 1.5, 0.9, 0.10).uneven && c(2, 1.5, 0.9, 0.101).uneven);
   check("area gate: below 2m² nobody walks on it", !c(1.4, 1.4, 0.3, 0.5).floorShaped && c(1.5, 1.5, 0.3, 0.5).floorShaped);
-  check("height gate: decide()'s one movable line at 1.0", c(2, 2, 1.0, 0.5).floorShaped && !c(2, 2, 1.01, 0.5).floorShaped);
+  check("height gate: the lie band now tiles up to the room gate (2026-09-06 float fix)", c(2, 2, 2.19, 0.5).floorShaped && !c(2, 2, 2.21, 0.5).floorShaped);
   check("room-scale is neither floor-shaped nor uneven", (() => { const r = c(5, 5, 3, 9); return r.roomScale && !r.floorShaped && !r.uneven; })());
   check("scale enters through the caller: same asset, s=2 doubles lie", !c(1.2, 1.2, 0.4, 0.08).uneven && c(2.4, 2.4, 0.8, 0.16).uneven);
 }
