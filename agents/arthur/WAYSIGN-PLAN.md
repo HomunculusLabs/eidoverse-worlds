@@ -28,7 +28,7 @@ Rotation: working edge outward from the E road, then craft edge.
 | 4 | `nx-town-kiln` | kiln | flame over chamber | DONE waysign-3 |
 | 5 | `nx-town-potter` | potter | wheel in profile | DONE waysign-4 |
 | 6 | woodyard host (id from census) | woodyard | saw-buck | DONE waysign-5 (`nx-town-woodyard`) |
-| 7 | `nx-town-windmill` (or nx-windmill) | mill | four-sail cross | pending |
+| 7 | `nx-town-windmill` (or nx-windmill) | mill | four-sail cross | DONE waysign-6 |
 | 8 | `nx-town-forge` / `nx-forge` | smithy | hammer (heritage) | pending |
 
 Every host's road-facing face is confirmed in the host build-source decode
@@ -60,6 +60,16 @@ the census + decode are truth.
   z≈1.146 y≈2.08); TRUE hanging idiom, board in open air 0.15m proud.
   Sibling artwalk rider nx-artwalk-b9-…-crossing-loom sits on the BACK
   wall (host-local z −0.77) — no contact, verified in census.
+
+- waysign-6 `nx-town-windmill` (lib 0993836012d1b17d, local source
+  hash-matches live — anchor from source + live tuple): tower mill with
+  a full mill-room base; door face host-local +z (world +x toward the
+  plaza/W road at host yaw +π/2). Flat ceiling slab `rceil` overhangs
+  the front wall (front edge z 2.6, underside y 2.8). Sibling artwalk
+  b10 `four-wind-crown` owns the wall CENTER (live bbox local x ±1.125,
+  y 2.22..2.87); door lane |x|<0.7; struct-lane millrace south. Sign
+  sited host-local [−1.6, 2.78, 2.5] — north of the crown, bracket flush
+  under the rceil front edge, board proud of the wall face z 2.4.
 
 ## Siting + build log (filled per sign)
 
@@ -151,6 +161,27 @@ the census + decode are truth.
   exact). Bill eye-check: from the plaza working-edge path, the
   saw-buck board should read under the woodyard's open front eave as
   you approach the cordwood, X trestles + log one clean glyph.
+
+- waysign-6 `nx-sign-mill-001` mill: mkv3-sign-mill.ts, deterministic
+  ×2, sha 5b6a55bdea1c2316…, 6 nodes, no comps no lights. Glyph took
+  FIVE versions: v1 hub-invisible/links-as-dots/arms-column;
+  v2 tips-still-faint; v3 REJECT tonal inversion (pale cloth dissolved
+  into pale bone field); v4 ACCEPT — DARK four-blade silhouette
+  (family law: every accepted glyph is dark-on-pale), tapering blades,
+  two pale lattice slits each, bright brass hub; v5 hub +30% (judge
+  margin note). zai-vision ACCEPT + 8m gate PASS (far-LOD degrades to
+  "a sign" — consistent with waysign-1..4). Native vision provider down
+  6th consecutive tick (error 1210) — fallback, recorded not claimed
+  native. Placer waysign-place-mill-1.ts: rider-only SAT, host exemption
+  explicit, EXACT (unpadded) rider extents so the b10 adjacency gates
+  truthfully (padding false-fails at −0.025), minGap +0.339 vs
+  nx-artwalk-b10-windmill-four-wind-crown (expected +0.203 by 1D
+  extents; axis-separated), PLACED_VERIFIED 1 verb, idempotent rerun
+  zero verbs, live tuple [−37.5, 2.78, 1.6] yaw +π/2 (host-relative
+  [−1.6, 2.78, 2.5] exact). Bill eye-check: walk the W road from the
+  ring toward the windmill — the four-blade mill board should read on
+  the mill-room's door face left of the artwalk crown, brass hub clear
+  at 8m, clear of the door lane and the millrace side.
 
 ## Carried laws
 
