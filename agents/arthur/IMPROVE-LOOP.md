@@ -6,6 +6,15 @@ additive build-out is complete (sweep-19 CLEAN at 259 entities); this lane
 makes the objects we already placed BETTER. One object per wakeup, full
 cycle: analyze → evaluate → plan → execute.
 
+**Shard skip-law (improve-5y):** rows whose entity prefix is a LIVE shard
+domain (`nx-struct-`→struct lane, `nx-dress-`→dress lane, `nx-approach-`→
+approach lane) are NOT yours — skip them; the owning lane executes them
+per its SHARD EXECUTION section. Your work: `nx-town-*`, `nx-sign-*`
+(analysis only — re-places route to waysign), and any row the owning lane
+explicitly un-shards back to you. A shard lane's 24h idle-guard on an
+object you need does NOT transfer to you — route via the un-shard law in
+IMPROVE-PLAN instead of racing it.
+
 ---8<--- LOOP PROMPT ---8<---
 
 EIDOVERSE OBJECT IMPROVEMENT LOOP — one wakeup (improve-N).

@@ -14,7 +14,7 @@ era's primary lane; idle-guard: defers on any object another lane touched
 within 24h). Two observer
 lanes run beside them: `night-N` (ZERO world mutation — night-read audit,
 defects routed to owners) and `sweep-N` (ZERO world mutation — integrator
-audit; census/overlap/walk/integrity). Observer lanes write only their own
+audit; census/overlap/walk/integrity) and `survey-N` (read-only intake observer — continuous 18m native-vision read-quality judging; routes defect notes to owning plans + candidate rows to IMPROVE-PLAN; never mutates). Observer lanes write only their own
 plans, registers, packets, and defect notes in owning lanes' plan files.
 Read this file fresh every wakeup alongside your own loop file.
 

@@ -329,3 +329,8 @@ STUDY COMPLETE (all facets judged; packet assembled).
   until Bill's verdicts.** Loop continues (Bill alone may stop it); further
   wakeups are read-only hold ticks: fresh gate + census + one cheap lawful
   verification, HOLD report.
+- night-6 (2026-09-06, pipeline-mode hold tick): evidence-durability repair —
+  the night-2/4/5 render dirs and the packet-cited facet overlays
+  (night-ne*, night-sw*, night-core*; 45 PNGs) were untracked working-tree
+  residue; committed so the packet's cited evidence survives clean/clone.
+  No re-judgment, no new findings, zero world mutations.
