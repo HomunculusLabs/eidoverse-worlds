@@ -641,6 +641,30 @@ only when native is down that tick, disclosed.
   (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
   sign's build ahead of rotation.
 
+- waysign-25 HOLD (pipeline mode, 9th consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court-sign brace closures); zero
+  OPEN IMPROVE-PLAN rows route to `nx-sign-*` (row 7 packet PARKED for
+  this lane's eye-gate resolution, R2 executed waysign-8..16; sharding
+  open split struct/dress/approach/improve-own only; survey-7 round-2
+  candidates route nx-town-woodyard / nx-welcome / nx-town-potter —
+  outside prefix). Eye-gate packet md5 8b88b6b3 unchanged, zero Bill
+  verdict markers. Cheap lawful hold verification: standing gate ALL
+  PASS real exit 0 at HEAD 87bfdb3 (artwalk-71 absorbed at tip); fresh
+  live census 259 total, ALL 8 `nx-sign-*` riders PIN_EXACT 8/8 at
+  ledgered tuples (stable afee37dd, dyer 8ce2081f, kiln ecbad903,
+  potter 3a6c8fe7, woodyard f46e12ae, mill 870256ce, bakery 49342c52,
+  smithy 3522e5ab) AND all 9 hosts LIB_STABLE (stable 98f2d5b6
+  waysign-19 re-validation stands, court 59534b10, windmill
+  0993836012d1b17d, woodyard 1f2c6f592095b204, dyehouse
+  888be3597d2f772f, kiln 4d8ef8fc, potter dad7c82e, forge
+  620120c4d6f0b4a0, inn 6e6ff2d08df9b3fb). Sibling dirt
+  (village_tower3.glb, next-place-court-ensemble.ts, struct terrain
+  probes — untracked/modified, nothing staged) left untouched. Zero
+  world mutations, zero uploads, zero shared-budget use, no visual PASS
+  claimed. Lane HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+  sign's build ahead of rotation.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
