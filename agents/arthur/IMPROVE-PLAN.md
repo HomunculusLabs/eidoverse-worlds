@@ -354,6 +354,52 @@ LIVE store copy, never a source rebuild).
   per-entry). Zero world mutations. Review evidence:
   agents/arthur/reviews/improve3-struct-approach-mile/.
 
+## Round 1 execution log
+
+- improve-4 (EXECUTION, queue item 1 `nx-town-hall`): contract committed
+  BEFORE editing. Defects decoded at source (decode outranked both the
+  improve-1 probe and my own source reading — the gable-triangle extent
+  came only from accessor decode):
+  - D1 sky-through-porch (Sev 1): S gap 1.8w × 2.4h directly faces N gap
+    1.6w × 2.3h on the shared x=0 aisle — level rays through both = the
+    sky rectangle. Interior walk law (interior-1, eight-leg two-door flow,
+    0.36m max arrival) forbids any backstop on the aisle. FIX: wattle
+    draft screen INSIDE the N door was REJECTED at walker-decode stage: MCPL
+ walkTo steers STRAIGHT (agent.ts:1191-1204, no avoidance), so a solid
+ screen would false-pass the headless probe while blocking real
+ avatars (align-3/R-113 class) — and interior-1/-11's standing
+ contract keeps the x=0 door-to-door aisle untouched. AMENDED FIX
+ (no aisle obstruction): N gap narrowed 1.6→1.4 with proud bone casing
+ (existing doorFrame) so the far opening reads as a DOOR not a hole;
+ deep timber header inside the N opening (visible recess depth); warm
+ sconce glows flanking the N door inside (lit-doorway read replaces
+ sky-void read, polish-273/274 emissive law); hanging porch lamp over
+ the S threshold + lantern glows flanking the S door (village glow
+ pattern). Falsification: front.png no longer shows an unframed
+ sky-colored rectangle (warm-lit, cased far doorway instead); interior
+ walk all 8 legs ≤0.55m arrival (unchanged or better).
+  - D2 eave sliver → KIT BUG (Sev 1, kit-level): gableRoof builds gable
+    triangles with half-width w/2 (ridge length, 4.5) instead of d/2
+    (depth, 3.3) — on the 9×6 hall the plaster triangle horns 1.3m past
+    the roof plane on each gable end. Present on every rectangular gabled
+    building (longhouse 1.5m horn — read as fascia by probes, CLEAN
+    verdicts stand as visual verdicts; horn now recorded as kit debt).
+    FIX: opt-in params to gableRoof (solidCaps + fixed triangle extent),
+    default keeps siblings byte-identical; hall opts in. Sibling byte
+    equality proven by shasum after rebuild. Revert: revert the two param
+    additions, rebuild, hashes return to the live pins.
+  - D3 ridge dashes: cap factor 0.92 + ±0.03 yaw stagger reads dashed at
+    18m; opt-in solid ridge cap (factor 1.0, no stagger) via the same
+    gableRoof params. Falsification: ridge line continuous in
+    front/back/top renders.
+  Source: mkv3-ring.ts:594-692 (hall block), housekit.ts:95-155
+  (gableRoof). Live pin 1306527acac5784b == local build (no disputed
+  bytes). Comp bag EMPTY ({}), light companion nx-town-hall-l at
+  (9,2.5,−26) untouched. Idle-guard clear (hall untouched since
+  interior-11, Aug 31). Execution next: edit → rebuild ×2 → decode
+  audit → renders → accept/revert → remove+spawn re-place → walk →
+  ledger improve-4 + commit.
+
 ## Carried laws
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
