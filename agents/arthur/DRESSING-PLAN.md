@@ -82,6 +82,30 @@ guards expire well before the limit binds. SW lamps remain the only
 own-queue item anywhere, blocked on Bill's a/b/c policy (0 of 3 used).
 Zero world mutations.
 
+**STATE AT dress-17 (2026-09-06 13:5x, pipeline shard tick)**: shard row
+31 `nx-dress-ne-bench-001` (Sev 3, worst open dress row) EXECUTED.
+Native re-judgment on exact live bytes (pin: live lib
+`store/46f3b6b14ada6d8b.glb` == local build sha `46f3b6b1…` prefix,
+census 259, pos (14.23, 0, 73.13) yaw 11°, empty comp bag; live store
+bytes fetched and rendered via the DRACO chassis — rig
+`reviews/dress17-ne-bench-rejudge/`, 8 views; native vision flapped once
+error 1210 then succeeded on one paced retry, disclosed) — **BOTH
+findings DROP**: 18m gameplay reads a deliberate rest cluster (two
+matching pedestal benches flanking ONE distinct taller two-legged
+table), soft aligned contact shadows under every piece, zero floating.
+Margin note only: pebble props read speck-small at 18m, below
+threshold. Zero world mutations.
+**Precedent (recorded, supersedes the dress-16 guard-table reading)**:
+dress-13/14/15/17 all executed shard rows INSIDE the 24h-from-placement
+window — the improve idle-guard is a CROSS-lane rule (improve defers on
+objects another lane touched within 24h); the DRESS lane IS the owning
+lane of `nx-dress-*`, and the shard routes rows to the owner precisely
+because the owner cannot race itself. Own-domain rows execute
+worst-first on any tick; the guard column matters only to improve when
+it considers un-sharded work. Remaining open dress rows: 33 nw-stile
+(Sev 3), 34 ne-woodstack (Sev 3), 37 nw-skeps (Sev 4), 38 nw-hedge
+(Sev 4).
+
 ## Siting log
 
 ### dress-15 — SE cairn reseat (shard row 32 EXECUTED, PLACED, LIVE)

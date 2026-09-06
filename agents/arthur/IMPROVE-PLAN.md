@@ -441,6 +441,14 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     margin note only: discrete-stone separation weak at 18m.]
 31. `nx-dress-ne-bench-001` — scattered tables read; misaligned blob
     shadows. Sev 3. (guard: dress-6 <24h — re-check at execution)
+    [DROPPED dress-17: native re-judgment on exact live bytes (live lib
+    store/46f3b6b14ada6d8b == local build sha prefix 46f3b6b1, census
+    259, pos 14.23/0/73.13 yaw 11, empty comp bag; DRACO rejudge rig
+    reviews/dress17-ne-bench-rejudge/) — 18m gameplay reads deliberate
+    rest cluster: two matching pedestal benches flank ONE distinct taller
+    two-legged table; soft aligned contact shadows, zero floating, zero
+    misaligned blobs — both findings drop. Margin note only: pebble
+    props read speck-small at 18m, below threshold]
 32. `nx-dress-se-cairn-001` — spindly totem; top stones dissolve. Sev 3.
     (guard: none — dress-7 Sep 3 placed se-cairn; re-check tail)
     [EXECUTED dress-15: native re-judgment CONFIRMED (2:1 tall:wide totem
