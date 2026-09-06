@@ -15,10 +15,10 @@ import { mergeByMaterial } from "./mergekit.ts";
 
 const g = new THREE.Group();
 const STRAW = mat(0xc9a35c, .9, 0);       // woven straw
-const STRAW_DK = mat(0xa8834a, .9, 0);    // straw shadow rings / spill
-const ROCK = mat(0x8c887e, .95, 0);       // palette rock
-const ROCK_LT = mat(0xb4b0a4, .95, 0);    // v3: plinths clearly light stone
-const STRAW_LT = mat(0xd9bd7f, .9, 0);    // v3: pale straw scatter (lightest value)
+const STRAW_DK = mat(0xa8834a, .9, 0);    // straw shadow rings
+// v5: ROCK (0x8c887e) and STRAW_LT removed — wind-break moved to plinth
+// stone (ROCK_LT) and the spill clumps deleted outright.
+const ROCK_LT = mat(0xb4b0a4, .95, 0);    // plinths + wind-break (light stone)
 
 // one skep = plinth + bell body of 5 shrinking corrugated rings + hole
 function skep(x: number, z: number, s: number) {
@@ -58,28 +58,22 @@ skep(-0.6, 0.15, 1);
 skep(0.7, -0.1, 1);
 skep(2.0, 0.05, 1);
 
-// wind-break boulder behind the row (v3: deeper back at z -1.7 and r 0.66 so
-// it separates from every skep silhouette at gameplay distance)
-const wb = new THREE.Mesh(new THREE.DodecahedronGeometry(0.66, 0), ROCK);
+// v6 (dress-20): lateral fix — at 18m a 1.95m depth offset gives ~no
+// parallax, so an in-gap x still projects INTO the row (native v5 FAIL).
+// Moved clear of the row's left end (x -2.75 vs row left edge -2.22 →
+// ~0.5m projected clearance) and lowered (r 0.36, top ~0.57, below straw
+// mid-body). Reads as a low wind-shelter stone past the row's end.
+const wb = new THREE.Mesh(new THREE.DodecahedronGeometry(0.36, 0), ROCK_LT);
 wb.name = "windbreak_rock";
-wb.position.set(-1.3, 0.4, -1.7);
+wb.position.set(-2.75, 0.21, -1.85);
 wb.rotation.set(0.3, 0.7, 0.1);
 g.add(wb);
 
-// v3: spilled worked-straw beside the end plinth — a low irregular scatter
-// of pale clumps (broken silhouette, no circular shapes, lightest value),
-// replacing v2's mallet-read shaft+ring
-const clumps: [number, number, number, number, number, number][] = [
-  // [w, h, d, x, z, yaw]
-  [0.55, 0.07, 0.4, 2.75, 0.5, 0.5],
-  [0.4, 0.06, 0.3, 3.1, 0.75, -0.3],
-  [0.3, 0.05, 0.25, 3.35, 0.55, 0.9],
-  [0.35, 0.05, 0.28, 2.9, 0.95, 0.2],
-];
-clumps.forEach(([w, h, d, x, z, yaw], i) => {
-  const c = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), STRAW_LT);
-  c.name = `straw_clump${i}`; c.position.set(x, 0.035 + i * 0.002, z); c.rotation.y = yaw; g.add(c);
-});
+// v5 (dress-20 shard row 37): spill clumps REMOVED — flat STRAW_LT boxes
+// read as dropped lumber/debris at 18m (native rejudge finding). Second
+// failed accent on this slot (v2 mallet-read, v4 lumber-read); minimalism
+// law — a failing speculative accent comes OUT, not up. The row's ground
+// interest is now the plinth slabs + shadow rhythm alone.
 
 mergeByMaterial(g, "dress_nw_skeps1");
 writeFileSync("agents/arthur/assets/village_dress_nw_skeps1.glb", toGLB(g));

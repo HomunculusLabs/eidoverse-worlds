@@ -694,6 +694,13 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     mutations]
 37. `nx-dress-nw-skeps-001` — stray plank; rock swallows 2nd skep. Sev 4.
     (guard: dress-10 yesterday — re-check at execution)
+    [EXECUTED dress-20: native rejudge on exact live bytes (lib 806f2c4e)
+    CONFIRMED plank-debris read + boulder-intruder (swallow narrowed: skep 2
+    survives; near-black r0.66 boulder on row line, tallest+darkest, value-
+    fuses with skep 2). v6 = spill clumps REMOVED (minimalism law, 2nd
+    failed accent) + boulder past row's left end / r0.36 sunk / plinth-
+    family stone; native 4/4 gameplay, sha 87d2dd16, reseat at exact
+    unchanged tuple, PLACED_VERIFIED + idempotent]
 38. `nx-dress-nw-hedge-001` — cleanup tier (stub riser, stray cube, hole).
     Sev 4. (guard: re-check dress tail at execution)
 

@@ -144,7 +144,57 @@ live (details in the dress-19 siting-log entry below). Remaining open
 dress rows: 37 nw-skeps (Sev 4), 38 nw-hedge (Sev 4). SW lamps still the
 only own-queue item, blocked on Bill's a/b/c policy (0 of 3).
 
+**STATE AT dress-20 (2026-09-06, pipeline shard tick)**: shard row 37
+`nx-dress-nw-skeps-001` (Sev 4, oldest open dress row) EXECUTED live —
+details in the siting-log entry below. Row 38 nw-hedge (Sev 4) is now
+the ONLY open dress row. SW lamps still blocked on Bill's a/b/c (0 of
+3). Native vision flapped 1210 ×2 on the close rejudge view (ZAI
+fallback, disclosed); native succeeded on both v6 judgment views (one
+paced retry on gameplay).
+
 ## Siting log
+
+### dress-20 — NW skeps reseat (shard row 37 EXECUTED, PLACED, LIVE)
+
+- **Row 37 findings (native CONFIRMED on live v4 bytes, pin 806f2c4e ==
+  local sha prefix, census 259, pos (−53.566, 0.038, 54.5) yaw 2.3562
+  literal, comp {})**: (1) plank-debris read CONFIRMED — the v3 "straw
+  spill" clumps (4 flat STRAW_LT boxes) read dropped lumber at 18m;
+  (2) rock-swallow NARROWED to intruder read — skep 2 survives (cone/
+  banding/plinth all visible) but the near-black r0.66 boulder sits ON
+  the row line in the skep1↔2 gap, tallest + darkest object, value-fuses
+  with skep 2. ZAI fallback close view (native 1210 ×2, disclosed).
+- **Root cause**: v5 kept the in-gap x −1.3 — at 18m, 1.95m of depth
+  gives ~no parallax, so depth-only retreat can never fix the projection.
+- **v6 ACCEPTED** (sha
+  `87d2dd169f2164147c679a7dc7eebc8d30e3024ef52d1aaa694608d15218e972`,
+  double-rebuild byte-identical): spill clumps REMOVED (2nd failed accent
+  on this slot: v2 mallet, v4 lumber — minimalism law, out not up);
+  boulder moved LATERALLY past the row's left end (x −2.75 vs row edge
+  −2.22), r 0.36, sunk (top ~0.57 < skep tops ~0.81), ROCK → plinth
+  ROCK_LT. Native judged: gameplay 4/4 PASS (margin: boulder gap snug,
+  below threshold); close 2/3 — "boulder hovering" flag FALSIFIED at
+  decode: rig re-grounds at single lowest vertex (rotated dodeca vertex
+  y −0.14); in-world at unchanged py 0.038 the rock buries 0.10m into
+  terrain — planted. 4 nodes (budget 3–25 ✓), no light anchors, comp {}.
+- **Placement**: `nw-dress20-place.ts` — hash gate → blocker-epoch guard
+  (orchard-0033 live id corrected, hedge, approach lane) → migration gate
+  (exact OLD dress-5 tuple incl. literal yaw 2.3562, or NEW; caught my
+  own 3π/4 transcription — drift gate works) → fresh-census SAT/rim
+  preflight (rim 75.88..78.70 ∈ [66,108]; SAT clear, no sub-1.4m
+  adjacency; lavender-0027 thin-film auto-exempt; orchard fat-canopy
+  host exemption, standing dress-5 precedent) → upload → remove+spawn
+  over one WS (2 verbs, 1000ms). **PLACED_VERIFIED**
+  `nx-dress-nw-skeps-001` @ lib `store/87d2dd169f216414.glb` (was
+  `806f2c4e02e1d29e`), pos (−53.566, 0.038, 54.5) yaw 2.3562 — UNCHANGED
+  pose, lib swap at the exact tuple. Idempotent rerun: 0 verbs, one
+  deduped upload (chassis wart). NW lamp spend unchanged 0 of 2.
+- **Eye-check for Bill**: the NW skep row past the stile — no more pale
+  plank-debris by the end plinth (removed), and the dark boulder no
+  longer looms mid-row; a small light stone now sits low past the row's
+  left end. Four skeps on grey slabs should read as the whole story.
+- **Remaining open dress rows: 38 nw-hedge (Sev 4) — last one.** SW
+  lamps still blocked on Bill's a/b/c (0 of 3).
 
 ### dress-19 — NE woodstack reseat (shard row 34 EXECUTED, PLACED, LIVE)
 
