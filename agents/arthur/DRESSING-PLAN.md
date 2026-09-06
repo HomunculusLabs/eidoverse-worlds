@@ -1186,3 +1186,22 @@ HEAD 87bfdb3; census 259, eleven installs PIN_EXACT lib+tuple+yaw
 ne-yard 191227da, ne-bench 46f3b6b1, woodstack 692bc54e, cairn 59031a0c,
 se-stones 8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f); 16 legacy
 intact; interlane md5 f6254cd0 steady. Zero mutations/uploads.
+
+**STATE AT dress-30 (2026-09-06, pipeline hold tick — 9th consecutive)**:
+lawful HOLD — every path closed this tick. Shard queue re-verified EMPTY
+at source by full-row read: the nine `nx-dress-*` Round-1 rows all
+terminal (5/29/30/31 DROPPED native rejudge; 32/33/34/37/38 EXECUTED
+reseats); row 39 kit-debt (`nx-town-longhouse`) routes to improve's own
+domain per the routing table; survey-7/8 candidate rounds route outside
+the prefix; no un-shard clock running. Own queue: SW lamps only, still
+blocked on Bill's a/b/c budget policy (0 of 3 used; fresh token recount:
+2 approach leg lamps + 1 mile lantern = 3 live lights, spend 0); zero
+Bill verdict markers in ledger tail; eye-gate packet (delivered once at
+dress-12) still awaits Bill. Hold verification: standing gate ALL PASS
+real exit 0 at HEAD bbf76df; fresh live census 259, ALL ELEVEN district
+installations PIN_EXACT lib+tuple+yaw-radians (hedge 3d5c7d44, skeps
+87d2dd16, stile 5e9d301d, logpile cac71bff, ne-yard 191227da, ne-bench
+46f3b6b1, woodstack 692bc54e, cairn 59031a0c, se-stones 8dafb9e5,
+sw-gravel fd21de9f, sw-prayer 5074600f, comps empty across set); 16
+legacy core `nx-dress-*` untouched; interlane md5 f6254cd0 unchanged.
+Zero world mutations, zero uploads, zero shared-budget use.
