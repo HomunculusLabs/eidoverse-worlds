@@ -340,6 +340,10 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     Re-ranked Sev 3. Evidence:
     reviews/survey2-sev2-slice/garden-cottage/gameplay.png]
 21. `nx-town-belltower` — ladder rungs float (no stringers); rope
+   [ENGINE NOTE 2026-09-06 engine-1: ladders are CLIMBABLE via a `ladder`
+   comp — fix the rungs AND place `{type:'ladder', min:[..], max:[..]}`
+   covering the run band (bottom -0.1 to landing lip) in the same tick;
+   W/S climbs, Space hops off, top-out steps onto the belfry floor]
     unanchored mid-air; muddy belfry corner. Sev 3. (guard: none)
 22. `nx-struct-hypar` — dangling batten; hovering batten ends; ragged
     tips. Sev 2–3. (guard: none)
