@@ -91,4 +91,18 @@ placement.
   ahead of rotation.
 - `LOOP_COMPLETE` is forbidden unless Bill explicitly says stop.
 
+## SHARD EXECUTION (active — improve-5y, Bill 5-10x directive, 2026-09-06)
+
+Priority work whenever your own queue is idle or blocked: execute OPEN
+rows matching your entity prefix (`nx-dress-`) from IMPROVE-PLAN.md's
+merged round-1 queue, worst-first by its severity order. Full cycle per
+row: native re-judgment first (restored-vision law, confirm-or-drop),
+decode before edit, then your normal house discipline (gate exit 0
+before mutation, ONE ledger append under YOUR lane prefix, lane-owned
+staging by name, commit). Annotate the executed row in IMPROVE-PLAN.md
+`[EXECUTED <your-tag>: one-line outcome]` in the same tick. Three
+consecutive ticks without executing your oldest shard row → the row
+un-shards back to improve. Your own commissioned work, the SW lamp
+policy hold, and Bill's verdict-routed items always outrank the shard.
+
 ---8<--- END LOOP PROMPT ---8<---

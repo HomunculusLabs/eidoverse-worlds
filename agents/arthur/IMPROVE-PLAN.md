@@ -321,6 +321,27 @@ worst-read objects not re-judged this round seeds candidates
 HOLD once with the evidence, per the no-manufactured-work law. This law
 never overrides idle-guard, domain law, or the eye-gate verdict routing.
 
+**EXECUTION SHARDING (2026-09-06 — Bill's 5-10x directive, improve-5y).**
+The improve queue is ONE serial lane but its items span five entity
+domains, and each domain has an idle owning lane. Sharding rule — route
+by entity id prefix, ALWAYS: `nx-struct-` → struct lane; `nx-dress-` →
+dress lane; `nx-approach-` → approach lane; `nx-sign-*` → waysign
+(already R2); `nx-town-*` stays improve's (including kit-debt 39+).
+Executed rows keep their improve-N ledger tags. A sharded item un-shards
+back into improve's own queue if the owning lane is mid-rebuild of the
+same id or fails to execute it within 3 of its own ticks. Native
+re-judgment before execution (restored-vision law) applies to sharded
+items identically.
+
+Current open split by prefix (verify against rows above at routing
+time): struct ≈13 rows (crossing, angler, skene, skymirror, millrace,
+spiralfolly, shelltower, hypar, mobius, amphi, observatory, soundmirror,
+pendulum); dress ≈9 (sw-prayer, ne-yard, sw-gravel, ne-bench, se-cairn,
+nw-stile, ne-woodstack, nw-skeps, nw-hedge); approach 2 (sw-lane-003,
+nw-lane-001); improve-own ≈11 (windmill, stable, kiln, shrine,
+row-cottage, bunkhouse, garden-cottage, beltower, mapboard, monument,
+longhouse-39).
+
 **Historical improve-1 core-family draft (superseded by the merged queue
 above):**
 
