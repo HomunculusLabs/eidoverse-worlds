@@ -213,6 +213,12 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
    rider live on the windmill 09-06 01:57 (<24h); a host re-place would
    also strand the rider's fresh anchor against changed host bytes.
    Re-check waysign tail when this item returns.]
+   [NATIVE-CONFIRMED survey-2: gallery ring floats with NO deck/brackets
+   (halo read); sail cross is an upright "+" — DOWN arm absent entirely,
+   right arm bare rails, up-arm reads banner not sail; thin vertical rod
+   drops from hub and clips the lit window slot; identity reads
+   watchtower/lighthouse hybrid, not instant windmill. Sev 1 stands.
+   Evidence: reviews/survey2-sev2-slice/windmill/gameplay.png]
 5. `nx-struct-crossing` — reads as utility-pole clusters; no water/banks/
    stones — ford is a void; clipping posts, snapped stub pegs. Sev 1:
    identity failure. DECODE FIRST. (guard: none)
@@ -260,6 +266,14 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     core confirmed; notched edge NOT observed at 18m — drop that sub-finding]
 13. `nx-struct-millrace` — pond black void (polish-281 dark-water class);
     hairline reeds; slit bands; floating finial. Sev 2. (guard: none)
+    [NATIVE-CONFIRMED survey-2: inter-tread bands read as OPEN SLITS
+    (pure black full-width gaps — slatted read, not shadowed risers);
+    ball finial a 1-2px speck floating above cap with no visible stem;
+    pond water flat near-black no-sheen (borderline basin, rim saves it
+    from hole-read); reeds hairline; identity reads generic ornamental
+    fountain, millrace function absent. Sev 2 stands. Evidence:
+    reviews/survey2-sev2-slice/millrace/gameplay.png; intake note
+    STRUCTURES-PLAN SURVEY INTAKE]
 14. `nx-struct-spiralfolly` — floating gold ring; detached treads; gaps;
     no top landing. Sev 2. (guard: none) [NATIVE-CONFIRMED survey-1:
     treads detached blocks with gaps, upper turns drift off core, gold
@@ -271,18 +285,48 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     the upper turn]
 16. `nx-approach-sw-lane-003` — floating tan cubes off path edge read as
     debug debris. Sev 2. (guard: approach lane idle since Sep 3)
+    [SUPERSEDED survey-2: judged pre-fix bytes 56b35877 (fetched 12:26,
+    confirmed debug-cube read — sub-finding corrected: cubes grounded,
+    not floating; seam + blob shadows confirmed) — sibling approach-4
+    re-placed the lane at 12:32 (live lib 43817a4f, verge re-dressed,
+    walk ALL_PASS). Row closed by owner; no note routed. Survey re-judge
+    of the fixed bytes deferred to a later slice; approach-4's own
+    PASS was ZAI-judged (native 1210 x2) — a native pass/judge of
+    43817a4f at 18m is a candidate for the next survey slice.]
     [EXECUTED approach-4: verge re-dressed as cool gray-bone stone clusters
     in a tightened 1.22-1.45m band, companions offset along the walk; sha
     43817a4f reseat, walk ALL_PASS 0.37, row closed]
 17. `nx-town-shrine` — offering clumps illegible; torch flames 1-2px;
     asymmetric base plate; dead side faces. Sev 2. (guard: none)
+    [NATIVE-PARTIAL survey-2: flames readable but at threshold (~2px
+    orange specks); offerings borderline-legible pale speck row (not
+    smudges); base reads SYMMETRIC (drop); side faces alive — pillars
+    show mottled taper (drop); identity legible. Re-ranked Sev 3.
+    Evidence: reviews/survey2-sev2-slice/shrine/gameplay.png]
 18. `nx-town-row-cottage` — left door jamb bare; lamp dot no fixture;
     ridge tabs; dormer seam. Sev 2. (guard: none)
+    [NATIVE-PARTIAL survey-2: lamp reads BARE DOT, zero fixture geometry
+    (CONFIRMED); small ridge tab just left of dormer + minor ridge
+    bumpiness (CONFIRMED, minor); door jambs read COMPLETE both sides
+    (DROP); dormer clean, no seam (DROP). Re-ranked Sev 3. Evidence:
+    reviews/survey2-sev2-slice/row-cottage/gameplay.png]
 19. `nx-town-bunkhouse` — facade value crush; stray diagonal face right
     wall; ridge tabs. Sev 2. (guard: re-check interior lane tail at
-    execution; interior-20 last Sep 1)
+   execution; interior-20 last Sep 1)
+   [NATIVE-CONFIRMED survey-2: facade crushes to one dark value — only
+   the pure-black doorway void reads, door/window faint tonal ghosts;
+   thin lighter diagonal streak through right window area (stray face/
+   seam class); evenly spaced ridge notch/bump artifacts. Identity
+   carried by silhouette alone. Sev 2 stands. Evidence:
+   reviews/survey2-sev2-slice/bunkhouse/gameplay.png]
 20. `nx-town-garden-cottage` — front face zero info; extension fuses with
     main volume. Sev 2. (guard: re-check interior lane tail at execution)
+    [NATIVE-PARTIAL survey-2: front face near-featureless — windows
+    dark-on-dark do NOT read, only central door void faint (CONFIRMED);
+    extension reads DISTINCT mass with clean step-down silhouette (DROP
+    fuse finding); left garden fence illegible blob (new sub-finding).
+    Re-ranked Sev 3. Evidence:
+    reviews/survey2-sev2-slice/garden-cottage/gameplay.png]
 21. `nx-town-belltower` — ladder rungs float (no stringers); rope
     unanchored mid-air; muddy belfry corner. Sev 3. (guard: none)
 22. `nx-struct-hypar` — dangling batten; hovering batten ends; ragged
@@ -314,6 +358,12 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
    18m = margin note only, not Sev 2]
 30. `nx-dress-sw-gravel-001` — collapses to 1-2px line, reads artifact.
     Sev 2. (guard: dress-7 <24h at improve-2 — re-check at execution)
+    [NATIVE-DROPPED survey-2: reads deliberate path-edge gravel BAND —
+    ~4-8px stone height, alternating cream/dark tones, raised central
+    rock, unified footprint + contact shadow; borderline (dark stones
+    merge into ribbon stretches) but NOT a 1-2px artifact line. The
+    improve-3 finding was fallback-judge exaggeration. No edit needed;
+    margin note only: discrete-stone separation weak at 18m.]
 31. `nx-dress-ne-bench-001` — scattered tables read; misaligned blob
     shadows. Sev 3. (guard: dress-6 <24h — re-check at execution)
 32. `nx-dress-se-cairn-001` — spindly totem; top stones dissolve. Sev 3.
@@ -868,6 +918,31 @@ railing; guard: none).
 Next queue item (improve-10): FINISH improve-9 execution (above), then
 queue item 7 `nx-sign-*` packet stays waysign's; next eligible:
 `nx-town-stable` (Sev 2, guard none).
+
+- improve-10 (EXECUTION COMPLETE + 3 decode-bug fixes): improve-9 candidate
+  34fb63fd failed its own decode audit — (a) pennant rotation.x=-pi/2 laid
+  the cloth FLAT (fin at y2.91, vertex-proven corners (-0.17,2.91,2.38));
+  (b) balcony door slab z 2.46..2.56 buried INSIDE wall band (outer face
+  2.60), zero verts proud — invisible; (c) ladder stringers spanned y
+  1.55..4.85 — floating 1.5m (the exact class this lane kills). Fixed in
+  towerHouse(): pennant vertical (no rotation, z R+0.73, y 2.96..3.88 under
+  widened centered hoist bar), door proud at z 2.57..2.67 with frame+
+  handle, ladder grounded y 0.03..3.88 vertical at theta -60 (clear of
+  door arc +-16 and b21 keep-out; 60 keep-out-zone verts = original lintel,
+  predates rider, no NEW geometry in zone). Final sha 11b31000 x2
+  deterministic, siblings byte-identical, bbox z +0.03 (SAT-neutral).
+  Native judge (all calls up, no fallback): gameplay 5/5 PASS (rail
+  continuous, corbels/fascia read, pennant cloth+V-notch, timber door,
+  grounded ladder), night PASS (warm study-candle point in door bay —
+  replaces the black void), front PASS x3. Re-place remove+spawn exact
+  tuple (-9,0,26) yaw 2.828368, lib bd1badd218->11b31000, comp {} both
+  sides; PLACED_VERIFIED + idempotent zero-verb rerun; two-way 6-leg MCPL
+  walk ALL_PASS 0.377m; rider b21 + light -l intact, census 259. Placer:
+  next-place-improve10-towerhouse.ts. Evidence:
+  reviews/improve9-towerhouse/{before,after}/.
+
+Next queue item (improve-11): windmill idle-guard re-check (waysign-6
+rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
 
 
 ## Carried laws

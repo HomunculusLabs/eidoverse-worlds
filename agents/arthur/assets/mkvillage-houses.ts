@@ -84,22 +84,22 @@ function towerHouse() {
     {
         const lad = new THREE.Group();
         for (const s of [-1, 1]) {
-            const st = new THREE.Mesh(new THREE.BoxGeometry(0.09, 3.3, 0.09), mat(C.DARK, 0.9, 0));
+            const st = new THREE.Mesh(new THREE.BoxGeometry(0.09, 3.85, 0.09), mat(C.DARK, 0.9, 0));
             st.name = `tower_ladside_${s < 0 ? "a" : "b"}`;
-            st.position.set(s * 0.28, 1.65, 0);
+            st.position.set(s * 0.28, 1.925, 0);
             lad.add(st);
         }
-        for (let lr = 0; lr < 9; lr++) {
+        for (let lr = 0; lr < 11; lr++) {
             const rung = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 0.55, 5), mat(C.MID, 0.9, 0));
             rung.rotation.z = Math.PI / 2;
-            rung.position.set(0, 0.35 + lr * 0.33, 0);
+            rung.position.set(0, 0.38 + lr * 0.345, 0);
             rung.name = `tower_lrung_${lr}`;
             lad.add(rung);
         }
         lad.rotation.order = "YXZ";
         lad.rotation.y = -Math.PI / 3;
-        lad.rotation.x = 0.11;
-        lad.position.set(Math.sin(-Math.PI / 3) * 3.04, 1.55, Math.cos(-Math.PI / 3) * 3.04);
+        lad.rotation.x = 0;
+        lad.position.set(Math.sin(-Math.PI / 3) * 3.04, 0.03, Math.cos(-Math.PI / 3) * 3.04);
         g.add(lad);
     }
     // windows (upper, 3 around)
@@ -219,17 +219,22 @@ function towerHouse() {
             new THREE.MeshStandardMaterial({ color: 0xa06c32, roughness: 0.95, metalness: 0, side: THREE.DoubleSide }),
         );
         pen.name = "tw_pennant";
-        pen.rotation.x = -Math.PI / 2;
-        pen.position.set(-0.17, 2.91, R + 0.68 + 0.02);
+        // improve-10 decode fix: NO rotation.x — the XY shape already hangs
+        // vertical; the old -pi/2 laid it flat as a fin under the deck.
+        pen.position.set(-0.17, 2.96, R + 0.73);
         g.add(pen);
         // hoist bar on the rail: y 3.88, spans the pennant's 0.34 width
-        box(g, "tw_penbar", 0.38, 0.05, 0.05, -0.17, 3.88, R + 0.68, C.DARK);
+        // (improve-10: centered on the cloth, was offset -0.17)
+        box(g, "tw_penbar", 0.42, 0.05, 0.05, 0, 3.88, R + 0.7, C.DARK);
     }
     // improve-9 D2b: real balcony door on the drum above the deck — timber
     // slab + frame + brass handle (front face has no window: clean zone).
-    box(g, "tw_bdoor", 0.95, 1.25, 0.1, 0, 3.62, R - 0.09, 0x5c4a30);
-    doorFrame(g, "tw_bdoorframe", 0, 3.62, R - 0.09, 0.95, 1.25, "z");
-    box(g, "tw_bdoorhandle", 0.07, 0.07, 0.05, 0.32, 3.55, R - 0.03, C.BRASS);
+    // improve-10 decode fix: slab mounted PROUD of the wall face (outer z
+    // 2.60) — the old center z=2.51 buried it inside the wall band (2.38..
+    // 2.60), invisible from outside.
+    box(g, "tw_bdoor", 0.95, 1.25, 0.1, 0, 3.62, R + 0.02, 0x5c4a30);
+    doorFrame(g, "tw_bdoorframe", 0, 3.62, R + 0.02, 0.95, 1.25, "z");
+    box(g, "tw_bdoorhandle", 0.07, 0.07, 0.05, 0.32, 3.55, R + 0.08, C.BRASS);
     // interior-7: target-only merge brings this legacy room under the current
     // draw-call law while leaving the sibling house outputs untouched.
     mergeByMaterial(g, "twi3");
