@@ -36,9 +36,57 @@ the then-current census — never reuse a stale queue.
 **Analysis ticks:**
 - improve-1: render+judge the 36 core nx-town buildings at gameplay
   distance (2 views each, existing review chassis), defect list, ranked.
-- improve-2: signs (8) + fleet dress pieces (11) — same treatment.
+- improve-2: signs (8) + fleet dress pieces (11) — same treatment. DONE —
+  findings below (merged into the execution queue at improve-3).
 - improve-3: struct + approach + mile families; commit the merged ranked
   round-1 execution queue (worst first, each entry = id + defect + fix).
+
+**improve-2 findings (signs + fleet dress, judged at 18m gameplay vantage,
+ZAI fallback vision — native down 14th consecutive tick, disclosed; isolation
+renders, so host-mount/absent-host-wall reads were filtered as non-defects
+per host-rider law):**
+
+Signs (8): `nx-sign-stable-001` CLEAN (dark horseshoe on cream holds).
+The other 7 share one root failure class — emblem collapses at 18m
+(motif <~1/3 of board face, low contrast, shape ambiguity):
+- `nx-sign-smithy` — horseshoe a dark smudge, no U-shape; stray detached
+  fragment left of board; bracket hairline-thin. Sev 2 (heritage sign).
+- `nx-sign-dyer-001` — flax-blue bolt reads near-black at 18m, fuses with
+  dark frame (known waysign flag CONFIRMED). Sev 2.
+- `nx-sign-kiln-001` — flame collapses to orange blob; chains hairline.
+  Sev 2.
+- `nx-sign-woodyard-001` — saw-buck reads chevron; black header slab a
+  content-free void; no mount silhouette. Sev 2.
+- `nx-sign-mill-001` — sails read as generic X, indistinguishable from
+  crossed-tools; header an unresolvable clump. Sev 2.
+- `nx-sign-potter-001` — wheel reads, pot a smudge; emblem ~1/3 of panel.
+  Sev 3 (closest to passing).
+- `nx-sign-bakery` — emblem gold-on-cream blob ~6px. Sev 3.
+(Note: waysign lane owns `nx-sign-*` re-places; execution entries route as
+a cross-lane packet to waysign or wait for idle-guard to lapse — improve-3
+resolves routing before any sign execution.)
+
+Fleet dress (11): `nx-dress-se-stones-001` CLEAN (rock clusters read),
+`nx-dress-nw-logpile-001` effectively CLEAN at 18m (minor close-range
+notes only: shadow blob, dark end caps, sparse right end).
+- `nx-dress-ne-yard-001` — reads rubble-pile not farmyard; floating rail
+  ends; uniform near-black value. Sev 2.
+- `nx-dress-sw-gravel-001` — collapses to a 1–2px dark line at 18m;
+  reads as render artifact. Sev 2.
+- `nx-dress-ne-bench-001` — reads as scattered tables not a bench; hard
+  misaligned blob shadows. Sev 3.
+- `nx-dress-se-cairn-001` — spindly totem not squat cairn; top stones
+  dissolve; no per-stone value variation. Sev 3.
+- `nx-dress-sw-prayer-001` — reads as rock pile; ZERO fabric/pole read —
+  the namesake element is absent. Sev 2 (identity failure).
+- `nx-dress-nw-skeps-001` — borderline pass; stray plank reads noise;
+  rock swallows 2nd skep. Sev 4.
+- `nx-dress-nw-stile-001` — reads as fence not crossing; step stones
+  illegible. Sev 3. (dress-11 placed <24h — idle-guarded.)
+- `nx-dress-ne-woodstack-001` — right post near-black/burnt read; gaps
+  see-through mid rows; left post detached. Sev 3. (idle-guarded.)
+- `nx-dress-nw-hedge-001` — passes as hedge; cleanup tier only (lone
+  stub riser, stray cube, mid-gap hole). Sev 4.
 
 **Seeded defects (enter the ranked queue regardless of sweep):**
 - `nx-town-inn` porch emblem reads "wheel, not tankard" (waysign-7 flag) —
@@ -97,6 +145,17 @@ LIVE store copy, never a source rebuild).
   consecutive tick, disclosed). 6 models CLEAN / 12 unique models defective;
   ranked queue committed above. Zero world mutations. Review evidence:
   agents/arthur/reviews/improve1-core/.
+- improve-2: analysis tick. Signs (8) + fleet dress (11) from fresh live
+  census (259 entities), live store bytes fetched (19/19 HTTP 200), 8 views
+  each rendered, judged at 18m (ZAI fallback — native down 14th tick,
+  disclosed). Signs: 1 CLEAN / 7 defective, one shared root class (emblem
+  scale/contrast collapse at 18m); dyer flax-blue flag confirmed. Dress:
+  2 CLEAN / 9 defective (worst: ne-yard rubble read, sw-gravel artifact
+  line, sw-prayer identity failure — namesake fabric absent). Idle-guard
+  noted on woodstack/logpile/stile (dress-9/10/11 <24h). Findings committed
+  above; merged ranked queue deferred to improve-3 per round structure.
+  Zero world mutations. Review evidence:
+  agents/arthur/reviews/improve2-signs-dress/.
 
 ## Carried laws
 
