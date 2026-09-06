@@ -25,8 +25,8 @@ anchors. Budget = live count (never exceed existing density).
 
 ## District queues (NEW-VILLAGE-PLAN §4 families)
 
-- **NW — CULTIVATION**: hedgerow (dress-1, built), bee skeps, field-edge
-  log pile, gate stile
+- **NW — CULTIVATION**: hedgerow (dress-1, built), bee skeps (dress-5,
+  placed), field-edge log pile, gate stile
 - **NE — CRAFT**: work yard (shaving horse / bench cluster), stone benches,
   woodstack
 - **SE — WILD**: path spurs (walk-tested), border stones, cairn marker
@@ -34,7 +34,8 @@ anchors. Budget = live count (never exceed existing density).
   lamps (budget-bound), prayer stones
 
 Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
-(dress-1..4 complete — first full rotation 2026-09-06; next: NW round 2)
+(dress-1..4 complete — first full rotation 2026-09-06; dress-5 = NW round 2,
+skeps DONE 2026-09-06; NW round 2 remaining: field-edge log pile, gate stile)
 
 ## Siting log
 
@@ -180,6 +181,58 @@ Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
   gravel value reads too dark in context, it re-colors (one pass).
 
 ## Ledger
+
+- dress-5: BUILT + PLACED + VERIFIED (2026-09-06 overnight fleet wave).
+  Entry covers the three-version iteration (plinths/boulder/spill), siting
+  math, and placement. See siting log below.
+
+### dress-5 — NW Cultivation bee skeps (PLACED, LIVE)
+
+- **Concept contract**: skeps live AT the crop they serve — a row of
+  woven-straw hives on stone plinths on the sunny SE-facing (plaza-ward)
+  edge of the district's mid orchard (orchard-0033), where the bees work
+  the blossom. Wind-break boulder behind the row, spilled worked-straw
+  scatter beside the end plinth. Static, unlit — spends no lamp budget.
+- **Build**: `assets/mkv3-dress-nw-skeps1.ts` →
+  `assets/village_dress_nw_skeps1.glb`. Three-version iteration (ZAI
+  fallback vision — native provider-down error 1210, 6th consecutive tick;
+  disclosed):
+  - v1 (`b3a9df0a…`): skeps + row read well at 18m, but boulder swallowed
+    skep-2's silhouette, plinths read as dark shadow blocks, spill read as
+    a stray stick.
+  - v2 (`b857cca2…`): partial — plinths still dark, spill+ring read as a
+    mallet, boulder still tangent to skep shoulders.
+  - v3 (sha `806f2c4e02e1d29ea7b6db02c41e6d3b533117dc6c0602b1ea8ffa191b419503`,
+    double-rebuild byte-identical) **ACCEPTED** at gameplay distance AND
+    close front: light stone plinths (0xb4b0a4), boulder pushed to z −1.7
+    r0.66 (silhouette separates, peak breaks the roofline), spill replaced
+    by 4 pale straw clumps (lightest value, no circular shapes). Judge
+    verdicts: 4/4 PASS gameplay, 2/2 PASS close.
+- **Decode (final)**: 5.76 × 1.28 × 3.46 m, bbox x −2.22..3.541,
+  z −2.336..1.122, y −0.24..1.04 (boulder intentionally half-set); 5 nodes
+  (budget 3–25 ✓). No light anchors, empty comp bag by design.
+- **Siting (census 241, +2 sibling arrivals outside domain)**: row center
+  asset-bbox-center placed at orchard-0033-local (0, 10.48) — orchard local
+  z max 7.25 + half-depth 1.73 + 1.5m SAT clearance. World POS
+  (−53.566, 54.50), yaw 2.3562 (row parallel to the orchard edge).
+  Terrain preflight: py 0.038, Δ6mm across the row. SAT: no overlaps, no
+  sub-1.4m solid adjacency (min host gap 1.5m by construction). Rim
+  corners 75.35–78.80 ∈ [66,108] ✓. Nearest non-host solid 18.2m
+  (garden-0058) — all arrival cones clear. No fat-bbox exemptions needed
+  (approach lane compound OBB cleared with margin).
+- **Placement**: `nw-dress5-place.ts` — hash gate → blocker-epoch guard
+  (orchard-0033, garden-0058, hedge-001, mile-nw-001/002, approach lane) →
+  fresh-census SAT preflight → upload (content-addressed) → spawn →
+  post-place tuple verify. **PLACED_VERIFIED**
+  `nx-dress-nw-skeps-001` @ lib `store/806f2c4e02e1d29e.glb`,
+  pos (−53.566, 0.038, 54.50), yaw 2.3562. Idempotent rerun: 0 verbs.
+  NW lamp budget used 0 of 2.
+- **Eye-check for Bill**: from the plaza-facing side of the mid orchard
+  (walk the NW leg toward the orchard ring): four straw skeps on light
+  stone plinths should read as a tended apiary row — bell silhouettes with
+  coil banding, boulder a separate windbreak behind, pale straw scatter at
+  the right end. If the skeps read as "rocks in a row" at distance or the
+  plinths sink into shadow, it re-colors (one pass).
 
 - dress-1: BUILT + PLACED + VERIFIED (2026-09-05 fleet wave). Entry in
   IMPROVEMENTS.md covers build + siting proof + placement.
