@@ -492,6 +492,30 @@ classes and false-failed — suspect-the-probe, resolved). Census diff vs the
 approach-19 capture: 0 new / 0 gone, zero lib/tuple changes anywhere. Zero
 world mutations, zero uploads; no visual PASS claimed.
 
+### approach-21 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD bbf76df (own approach-20 at HEAD at survey);
+interlane md5 f6254cd0 steady; APPROACH-PLAN read fresh (truncated read
+completed via offset before mutation). Shard routing verified at source by
+numbered rows: IMPROVE-PLAN rows 16 (sw-lane-003) and 36 (nw-lane-001) both
+terminal (EXECUTED approach-4/5); zero OPEN rows route to `nx-approach-`; no
+un-shard clock (approach's last shard executions were own-tick, not owed).
+Own queue: three legs stand PLACED_VERIFIED, D1/D2/D4-leg closed in-budget;
+SE leg awaits Bill's a/b/c siting call (his alone); D3/D5-temple-grounds +
+N5-N7 remain Bill budget/verdict classes (night-1..5 defect notes stand
+verbatim, none new since approach-19). Cheap lawful hold verification (fresh
+live census 259, approach domain 17): all three leg libs PIN_EXACT (nw
+dc256065879371d8, ne dc52264c04cfe5bb, sw fb04a144cc1fc458) at the exact
+standing tuple (0,0,0) yaw 0 scale 1; ten `-l` lights standing (6 leg at
+authored positions + 4 gate companions); four gate lamp models untouched
+(18b69a6bb2f5862f). Census diff vs the approach-20 capture: 0 new / 0 gone,
+zero lib/tuple flips anywhere. Probe bug caught in-tick: prior capture
+carried the mounts-variant census shape (keys world/entities/mounts, no
+`count`) — handled by entity-set diff, not field access (suspect-the-probe
+law). Zero world mutations, zero uploads; no visual PASS claimed. Standing
+eye-check pointer (delivered once each at approach-6/7/13): Bill at the
+NW/NE/SW gates at night for the three quiet bead cadences.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.
