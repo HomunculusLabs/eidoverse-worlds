@@ -36,7 +36,7 @@ Rotation NW → NE → SW (→ SE if Bill opens a corridor).
 | 2 | NE | jink pivot r48 | outer | **PLACED mile-2** |
 | 3 | SW | midpoint r47 | outer | **PLACED mile-3** |
 | 4 | NW | district arrival r71 | inner (district-facing) | **PLACED mile-5** (resite −1.5m, see log) |
-| 5 | NE | district arrival r72 | inner | pending |
+| 5 | NE | district arrival r72 | inner | **PLACED mile-6** |
 | 6 | SW | district arrival r71 | inner | pending |
 | 7+ | SE | per Bill's siting call | TBD | held |
 
@@ -49,7 +49,7 @@ live leg decode shows a better verge shoulder.
 | district | live lights | budget | used | notes |
 |----------|-------------|--------|------|-------|
 | NW | 5 (market, garden-cottage, tower-house, approach-lamp-001/002) | lamp only if a marker lands past every light | 1 | mile-5 arrival pair LIT (last leg light r66.9 < marker r71); bend marker unlit |
-| NE | 6 | same law | 0 | counted mile-1 |
+| NE | 6 | same law | 1 | mile-6 arrival pair LIT (last leg light nx-approach-ne-lamp-002-l r60.0 < r72); jink marker unlit |
 | SW | 6 | same law | 0 | counted mile-1 |
 | SE | — (no leg) | — | — | holds with the SE call |
 
@@ -154,6 +154,31 @@ live leg decode shows a better verge shoulder.
   — single upload, 3 verbs @800ms (2 spawn + 1 light), post-place tuple +
   light verify, idempotent zero-verb rerun. Verdict: PLACED_VERIFIED.
   NEXT: mile-6 NE district arrival r72 (inner).
+
+- **mile-6 (2026-09-06, overnight fleet)** — NE district ARRIVAL milestone
+  pair, second LIT variant. Boundary: the NE leg's arrival P3 = pol(72,15) =
+  (18.6346, 69.5467), end of the committed home straight P2=pol(54,48) → P3
+  (mkv3-ne-approach2.ts). Posts on the segment's verge at exactly 2.30m:
+  `nx-mile-ne-009` village-side LIT (16.701, 0.002, 68.302) yaw 327.2° and
+  `nx-mile-ne-010` district-side unlit (20.569, −0.001, 70.791) yaw 147.2° —
+  each arm aims at the lane centerline (yaw = az(post→A) − 90; village-side
+  = A − 2.3·N with origin proven on the −N side by an in-code side assert
+  that CAUGHT a sign flip in the side formula pre-mutation — the placer died
+  before any verb, was corrected, and only then placed). Build: proven GLB
+  reuse `village_mile_nw2.glb` sha `052120d7…` (degenerate-fleet + accepted
+  verdict carry; anchors MILESTONE-PLAN mile-5 + reviews/mile-nw-007/) — NO
+  upload (lib already live on sibling nx-mile-nw-007, content-addressed
+  no-upload law; disputed-bytes guard asserts the sibling exists). SAT:
+  009 none within 15m; 010 min 4.33m vs nx-craft-hamlet-0054 (> 1.4 pinch
+  law). Terrain: fresh preflight next-terrain-mile-ne2.ts (M 0.0007, posts
+  0.0016 / −0.0006 — flat). Lamp: marker provably past every NE light (last
+  nx-approach-ne-lamp-002-l r60.0 < r72) → ONE refine-198 milestone-lamp on
+  the village-side post, `nx-mile-ne-009-l` at cage center (16.894, 0.652,
+  68.427), warm 0xffb066, intensity 1.2, range 8, verified via light history
+  fold. NE lamp budget: 1 used. Placement: hash-gated placer
+  `mile-ne2-place.ts` — 3 verbs @800ms (2 spawn + 1 light), post-place tuple
+  + light verify, idempotent zero-verb rerun. Verdict: PLACED_VERIFIED.
+  NEXT: mile-7 SW district arrival r71 (inner).
 
 ## Lesson (mile-3 defect, class-level)
 
