@@ -450,8 +450,22 @@ export function hyparShell(
         const tMin = Math.max(-a, -a - c), tMax = Math.min(a, a - c);
         if (tMax - tMin < 0.3) continue;
         const z = (x: number, y: number) => k * (x * x - y * y);
-        // extend by `over` beyond the square along the line direction
-        const t0 = tMin - over / Math.SQRT2, t1 = tMax + over / Math.SQRT2;
+        // Overhang budget law (struct-40): along a ruling z is LINEAR in t
+        // with slope 2k|c| (up to 2k·2a per slat). A FIXED t-space overhang
+        // extrapolates steep rulings far past the boundary beams — tips at
+        // grade (dangling read) and 0.6m above the crest (ragged margin).
+        // Budget the extension so its rise/dip never exceeds 0.15m (a kiss,
+        // sub-perceptible at 18m): flat centre slats keep the full sweep;
+        // steep slats end at the rim, leaving the parabolic edge beams
+        // owning the silhouette. Decode-verified extremes before: y −0.02…6.41.
+        const slope = 2 * k * Math.abs(c); // |dz/dt| along this ruling
+        // Budget BOTH the vertical rise/dip (0.15m) and the 3D extension
+        // length (0.30m — rafter-tail scale, not spears) so no ruling can
+        // overshoot the boundary beams in ANY direction.
+        const zBudget = 0.15, lenBudget = 0.30;
+        const maxT = Math.min(lenBudget / Math.sqrt(2 + slope * slope), slope > 1e-6 ? zBudget / slope : over);
+        const budget = Math.min(over / Math.SQRT2, maxT);
+        const t0 = tMin - budget, t1 = tMax + budget;
         const p0 = (t: number) => [t, t + c, z(t, t + c)] as [number, number, number];
         const [x0, y0, z0] = p0(t0), [x1, y1, z1] = p0(t1);
         start.set(x0, baseY + z0, y0); end.set(x1, baseY + z1, y1);

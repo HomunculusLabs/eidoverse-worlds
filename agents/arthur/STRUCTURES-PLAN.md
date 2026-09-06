@@ -168,7 +168,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    derived gaps filled; both build lanes wait on Bill's eye-gate verdicts.
    Refine pool remaining: Observatory dome-shadow (source-judged, low).**
 
-## LANE STATE: SHARD EXECUTION (struct-39, 2026-09-06)
+## LANE STATE: SHARD EXECUTION (struct-40, 2026-09-06)
 
 Commissioned queues exhausted (Rounds 1–3 complete, refine pool empty);
 per Bill's improve-5y 5-10x directive this lane now executes OPEN
@@ -181,10 +181,18 @@ honestly rebuilt: solid socketed steps, tapering core, landing platform,
 compact strut-carried ring, curb-owned continuous silhouette; ALL
 materials texMat lane per struct-38 law; sha 20c515a0→b85ce018 at the
 exact standing tuple, circuit walk 5/5).
-Oldest OPEN uncontested rows after struct-39: row 22 hypar (Sev 2,
-survey-3 ZAI, native re-judge owed), then row 23 mobius (Sev 3), row 24
-amphi (Sev 2-3), row 25 observatory (Sev 3), row 26 soundmirror (Sev 3).
-Row 10 angler: in-flight sibling improve window (uncommitted draft +
+struct-40 = row 22 hypar (EXECUTED, live — decode-first resolution of the
+survey-3/4 ZAI contradiction: source-math + vertex decode proved the
+carriage defect class TRUE (overhung corner rulings at grade/6.41m) and
+resolved it WITHOUT a native judge via the probe-discipline law; housekit
+hyparShell gained the overhang-budget law; call-site over=0 flush rim;
+posts/pins texMat per struct-38; sha ce246def→750f82ee at the exact
+standing tuple, deck walk 5/5; v3 judged ZAI fallback — native re-judge
+owed when provider returns; sole disclosed residual: designed saddle-dip
+reveal ~0.1m at mid-span).
+Oldest OPEN uncontested rows after struct-40: row 23 mobius (Sev 3), row
+24 amphi (Sev 2-3), row 25 observatory (Sev 3), row 26 soundmirror (Sev
+3). Row 10 angler: in-flight sibling improve window (uncommitted draft +
 reviews/improve10-struct-angler/ 12:04) — do NOT touch until it lands or
 the un-shard rule fires. Open with Bill: R2-3 relocation options
 (struct-22).
@@ -230,6 +238,7 @@ the un-shard rule fires. Open with Bill: R2-3 relocation options
 | struct-37 | SHARD ROW 12: skymirror open-cup rebirth | exact standing tuple (24, −0.05395918, −35.5) | 0 | 0 | LIVE, lib 8331ba88→782eb864, circuit re-verifiable (folly, non-enterable) |
 | struct-38 | SHARD ROW 13: millrace material+identity fix | exact standing tuple (−37.59, −0.04526, −13.68) yaw −π/2 | — | — | LIVE, lib d2f46768→6e82dd2e, bank walk 5/5 |
 | struct-39 | SHARD ROW 14: spiralfolly honest-carriage rebuild | exact standing tuple (46.11, −0.0372, 33.50) yaw 0 | 0 | — | LIVE, lib 20c515a0→b85ce018, circuit walk 5/5 |
+| struct-40 | SHARD ROW 22: hypar flush-rim carriage fix | exact standing tuple (−27.57, −0.0053, 4.86) yaw π/2 | π/2 | — | LIVE, lib ce246def→750f82ee, deck walk 5/5 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -1252,3 +1261,54 @@ raised timber flume now feeds the head box from the mill side (the
 millrace read), water stepping down weir-pools to the basin; at dusk the
 whole watercourse should read faintly moonlit blue with one warm gold
 bead at the sluice.
+
+## struct-40 — SHARD ROW 22: HYPAR FLUSH-RIM CARRIAGE FIX (improve round-1)
+
+Row 22 carried an irreconcilable ZAI contradiction (survey-3 Sev 2 vs
+survey-4 5/5 CLEAN on byte-identical live bytes, row annotated MUST-hold
+for native). Native vision flapped 1210 all tick (x2 + paced retry, plus
+one more x2 on the rebuilds — disclosed). Resolution path was lawful
+without a judge: probe-discipline law #11 — quantitative geometric claims
+are adjudicated by source math + accessor decode, which outranks both
+flip-flopping fallback judges.
+
+- Decode of the standing bytes (ce246def): slat bucket y −0.11…6.41;
+  156 verts above y=5.8 (max 6.41 = crest beam 5.78 + 0.63m SPEAR) and
+  300 verts below y=1.0 (low tips at GRADE −0.024, z −5.06, 0.5m below
+  the dip beams). Root: hyparShell applied a FIXED t-space overhang
+  (0.7/√2 ≈ 0.495t) while slope |dz/dt| = 2k|c| reaches 2.24 m/t at the
+  corners — extrapolating steep rulings ~1.1m past the rim in z. One
+  cause, three findings (dangling read, ragged margin, hovering tips).
+- Material root (same class as struct-38): posts/pins were plain mat() →
+  primitive.material undefined → rendered COLOR_0 × loader default,
+  near-black — the "finial specks" finding.
+- Fix: (1) housekit hyparShell overhang-budget law — extension now capped
+  by BOTH a 0.15m z-budget and a 0.30m 3D-length budget; (2) call-site
+  over=0 — FLUSH rim, the parabolic edge beams own the silhouette (Judd
+  margin; v1 0.7m tails and v2 0.30m tails both judged as spears); (3)
+  posts → hypar_iron, pins → hypar_gold texMat lanes (waysign gold
+  family 0xa09832/0x887c2a).
+- Iterations: v1 a3410917 (budget only) → v2 f4cfcade (length cap) →
+  v3 750f82ee (flush). v3 decode: slat bucket y [0.48, 5.82] — tips
+  terminate exactly at dip-beam height and crest-beam top; x-extent
+  4.564 inside the beam face 4.633. 4 nodes; materials stone/timber/
+  hypar_iron/hypar_gold all real.
+- Judged: v1 NATIVE (provider up briefly — flap law paid): dangling
+  PRESENT, ragged PRESENT (drove v2); v3 ZAI fallback (native 1210 x2,
+  disclosed): dangling NOT-PRESENT, ragged NOT-PRESENT, pins PRESENT
+  gold, twist PRESENT; sole residual = hairline daylight under the
+  mid-span dip (~0.1m) — the DESIGNED saddle-dip reveal (dip beam bottom
+  0.485 vs deck top 0.22), disclosed to Bill's eye-gate, not a defect.
+  Native re-judge of v3 owed when the provider returns.
+- Placement: fresh census, SAT preflight clean (conservative old-shape
+  envelope), upload (shared budget, 1 call), remove+spawn 2 verbs at the
+  exact standing tuple (−27.57, −0.0053, 4.86) yaw π/2, comp {} both
+  sides, PLACED_VERIFIED; idempotent rerun zero verbs; 5-leg deck walk
+  ALL_PASS on the new bytes.
+- Row 22 annotated [EXECUTED struct-40] in IMPROVE-PLAN.md same tick.
+
+**Bill should eye-check**: from the W gate road — the saddle silhouette
+should now read as ONE clean form: parabolic rim beams with slats ending
+flush on them, gold pin pair at the two crests, no spears, no dangling
+ends, no daylight band except the designed low-arch reveal where the
+saddle dips toward the deck.

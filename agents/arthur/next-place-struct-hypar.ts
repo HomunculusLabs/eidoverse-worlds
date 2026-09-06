@@ -1,10 +1,11 @@
-// next-place-struct-hypar.ts — struct-4: S-3 HYPAR PAVILION placement.
-// commons-next only. NEW entity nx-struct-hypar (structures lane).
+// next-place-struct-hypar.ts — struct-4/40: S-3 HYPAR PAVILION placement.
+// commons-next only. Entity nx-struct-hypar (structures lane).
 // Two-pass chassis: hash gate -> fresh live SAT w/ exemptions -> upload with
-// 429 pacing -> spawn verb -> post-place tuple verify -> idempotent rerun.
+// 429 pacing -> remove+spawn reseat -> post-place tuple verify -> idempotent.
 // Site: 170deg/r28 (-27.57,4.86) off the W gate approach, crest axis along
 // the road (yaw pi/2 puts local +X — the crest axis — along world Z road).
-// Empty comp bag.
+// struct-40 reseat: flush-rim rebuild at the exact standing tuple.
+// Empty comp bag both sides.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 const ROOT = "/Users/t3rpz/projects/eidoverse-worlds", WORLD = "commons-next";
@@ -14,7 +15,7 @@ const YAW = Math.PI / 2; // crest axis (local +X) along the road (world Z)
 const m = {
     id: "nx-struct-hypar",
     file: "village_hypar3.glb",
-    sha: "ce246defccc75bffac906a165368ccc9bd9ede20db89b29f334c5bb30fc1546a",
+    sha: "750f82eeb03512f6c6f62f44bad5feaf8e44f59577c737bac4d40fcdbeb43c04",
     bbox: { min: [-5.06, -0.11, -5.06], max: [5.06, 6.41, 5.06] },
     comp: {},
 } as const;
@@ -63,13 +64,14 @@ for (const e of Object.values(before)) {
 }
 if (collisions.length) die(`hypar seat blocked (<1.4m clear): ${collisions}`);
 const exist = before[m.id];
-if (exist && !(exist.lib === `store/${m.sha.slice(0, 16)}.glb` && exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1 && eq(exist.comp ?? {}, m.comp))) die(`${m.id} live collision/drift`);
+if (exist && !(exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1 && eq(exist.comp ?? {}, m.comp))) die(`${m.id} live tuple drift (reseat refuses to move)`);
+const wantLib = `store/${m.sha.slice(0, 16)}.glb`;
 
 let verbs: Array<[string, any]> = [];
-if (!exist) {
+if (!exist || exist.lib !== wantLib) {
     const u = new URL(`${base}/upload`);
     u.searchParams.set("token", cfg.agentToken);
-    u.searchParams.set("name", `commons-next ${m.id} struct-4`);
+    u.searchParams.set("name", `commons-next ${m.id} struct-40`);
     u.searchParams.set("by", cfg.id);
     let lib = "";
     for (let a = 1; a <= 5; a++) {
@@ -78,8 +80,11 @@ if (!exist) {
         if (r.status === 429 && a < 5) { await sleep(25_000); continue; }
         die(`${m.id} upload ${r.status}`);
     }
-    if (lib !== `store/${m.sha.slice(0, 16)}.glb`) die(`${m.id} upload path ${lib}`);
-    verbs = [["spawn", { id: m.id, lib: `store/${m.sha.slice(0, 16)}.glb`, pos: POS, yaw: YAW, scale: 1 }]];
+    if (lib !== wantLib) die(`${m.id} upload path ${lib}`);
+    // reseat law: spawn alone does not replace bytes on a standing id — remove, then spawn
+    verbs = exist
+        ? [["remove", { id: m.id }], ["spawn", { id: m.id, lib: wantLib, pos: POS, yaw: YAW, scale: 1 }]]
+        : [["spawn", { id: m.id, lib: wantLib, pos: POS, yaw: YAW, scale: 1 }]];
 }
 if (verbs.length) await new Promise<void>((resolve, reject) => {
     const ws = new WebSocket(cfg.url);

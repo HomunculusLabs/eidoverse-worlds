@@ -445,6 +445,23 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     legible, ruled-surface twist reads. Irreconcilable with survey-3
     Sev 2; row MUST hold for NATIVE re-judge before any execution.
     Evidence: reviews/survey4-slice/struct-hypar/gameplay.png]
+    [EXECUTED struct-40: decode-first resolution — survey-3 findings
+    SOURCE-TRUE (hyparShell fixed t-space overhang extrapolated steep corner
+    rulings: 156 verts y>5.8 max 6.41 spearing 0.63m ABOVE crest beam, 300
+    verts y<1.0 low tips at GRADE −0.02 — dangling+ragged+hover one cause;
+    survey-4's 5/5 CLEAN was the probe artifact), material root confirmed
+    (posts/pins plain mat() → material:undefined → near-black — the specks
+    finding); FIX: hyparShell overhang-budget law in housekit (z-budget
+    0.15m + 3D-length budget 0.30m caps) + call-site over=0 FLUSH rim
+    (beams own the silhouette) + posts→hypar_iron pins→hypar_gold texMat;
+    3-iteration judge loop v1 tails→v2 trim→v3 flush: dangling/hover/ragged
+    NOT-PRESENT, pins PRESENT gold, twist PRESENT (v1 native 1/3 flips
+    disclosed, v3 ZAI fallback, native 1210 x2 disclosed); sole residual =
+    designed saddle-dip reveal ~0.1m at mid-span (disclosed to eye-gate);
+    sha ce246def→750f82ee x2 deterministic, 4 nodes, slat bucket y
+    [0.48,5.82] flush on beams; remove+spawn exact tuple (−27.57,−0.0053,4.86)
+    yaw π/2 comp {} both sides, PLACED_VERIFIED 2 verbs, idempotent 0-verb
+    rerun, 5-leg deck walk ALL_PASS]
     [survey-5 (ZAI fallback AGAIN, native 1210 x2 burned its paced retry,
     disclosed — native STILL owed; flap law recorded): resolves the
     contradiction toward the DEFECT side — upper batten ends anchored at
