@@ -150,6 +150,24 @@ PLACED_VERIFIED + idempotent zero-verb rerun. Two-way MCPL walk ALL_PASS
 verge should read as deliberate gray-bone stone dressing flanking the walk,
 not scattered cubes.
 
+### approach-5 (2026-09-06): shard row 36 — NW lane re-judgment, no edit
+
+Restored-vision law applied to the last open approach shard row. Native
+judgment on hash-bound renders of the exact live bytes (d46a60fb,
+before.glb captured pre-work, hash equals live lib prefix): all four
+Sev-4 findings falsified — banding (uniform run, no stripe cycle),
+taper (perspective foreshortening; decode heights .054-.057 constant),
+raw boxes (composed-lane read at 18m; aerial dashed read IS the shared
+0.92m stepping-stone idiom), lamp base (plinth reads planted; foot
+discs decode complete). Decode audit: film y -.05..+.17, 34 nodes, 4
+soil buckets + 2 lamp keep-trees, flames KEEP-named, lamp light
+midpoints match the live -l entities. Row CLOSED by drop; zero world
+mutations. Margin note carried: verge hem reads weak at aerial range
+only — sub-threshold at 18m, recorded for a future pass if a verge
+re-dress of the NW leg is ever commissioned (SW-style gray-bone
+contrast would be the idiom). Lane state: 3 of 4 legs stand; SE awaits
+Bill's a/b/c siting call; D1-D5 lamp-budget notes unchanged.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.

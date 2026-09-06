@@ -388,6 +388,16 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     identity read. Sev 4. (guard: none)
 36. `nx-approach-nw-lane-001` — banding/taper/raw boxes/lamp base. Sev 4.
     (guard: approach idle since Sep 3)
+    [EXECUTED approach-5: native re-judgment on hash-bound renders of
+    exact live bytes d46a60fb — ALL FOUR findings DROP (banding: uniform
+    tan run, no stripe cycle, gameplay+aerial agree; taper: perspective
+    foreshortening, decode shows constant paver heights .054-.057; raw
+    boxes: reads deliberate composed lane at 18m, aerial dashed-read is
+    the standing 0.92m stepping-stone idiom shared with NE/SW/core;
+    lamp base: plinth reads planted, decode iron foot disc r .20-.23
+    both lamps). Margin note only: verge hem weak at aerial range —
+    below threshold at the 18m judging distance. Row CLOSED; zero
+    mutations]
 37. `nx-dress-nw-skeps-001` — stray plank; rock swallows 2nd skep. Sev 4.
     (guard: dress-10 yesterday — re-check at execution)
 38. `nx-dress-nw-hedge-001` — cleanup tier (stub riser, stray cube, hole).
