@@ -1619,3 +1619,25 @@ landmarks, core-paths glb+review, tower3, court placer, review-night
 files, struct terrain probes, fleet watcher, untracked reviews) left
 untouched. Zero world mutations, zero uploads, zero shared-budget use,
 no visual PASS claimed.
+
+---
+## dress-45 (2026-09-06, pipeline tick 24) — HOLD
+
+- Shard: re-verified EMPTY at source, full-row-window scan. Nine nx-dress
+  Round-1 rows terminal (5/29/30/31 DROPPED native rejudge; 32/33/34/37/38
+  EXECUTED reseats). Row 37 re-read with a widened block window this tick —
+  dual annotations [survey-6 interleave] + [EXECUTED dress-20] both present;
+  a 3-line window had falsely shown it OPEN. Row 39 routes nx-town →
+  improve-own. survey-8 fountain = DRESS-DOMAIN legacy-core off-limits per
+  Bill's call; survey-9/10/11 route outside the prefix.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh recount: SW-quadrant
+  r>=35 = exactly 3 live lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0 kind=light). Spend 0 of 3.
+- Verdicts: zero in ledger tail AND eye-gate packet fd677cae unchanged
+  (delivered once at dress-12, zero VERDICT lines).
+- Hold verification: standing gate ALL PASS real exit 0 at tick-start HEAD
+  b40e7d3; fresh live census 259 (HTTP 200 first fetch), 11/11 district
+  installs PIN_EXACT lib+tuple+comps-empty; 27 nx-dress = 11 fleet + 16
+  legacy intact; lights 38; interlane md5 f6254cd0 unchanged.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock running (shard empty, not idle).
