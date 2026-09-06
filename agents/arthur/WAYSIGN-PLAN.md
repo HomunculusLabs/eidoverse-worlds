@@ -223,19 +223,47 @@ not tankard" — host redesign belongs to the owner lane (improve queue
 item, not waysign's), recorded here so it isn't lost.
 
 Rotation: R2-1 → R2-7 (worst-first provisional; re-rank after native
-re-judgment). NEXT OPEN: R2-6 (potter) — R2-1 DONE waysign-8 (smithy live
-62a8c7fc, court-wall host truth corrected), R2-2 DONE waysign-9 (dyer
-live 8ce2081f, scale-not-hue root class), R2-3 DONE waysign-10 (kiln
-live ecbad903, dominant-tongue scale fix + bone lift), R2-4 DONE
-waysign-11 (woodyard live f46e12ae, pre-place-interrupted sibling window
-recovered, fat-stroke X trestles), R2-5 DONE waysign-12 (mill live
-870256ce, orthogonal + hub-hole structural fix). Each item: full
-chassis — host anchor re-derived from CURRENT tuple per host-rider law,
-rider-only SAT + exemption ladder, unlit by default, 8m gate. Native
-vision is primary judge; ZAI fallback only when native is down that tick,
-disclosed.
+re-judgment). NEXT OPEN: R2-7 (bakery, heritage sev 3) — R2-1 DONE
+waysign-8 (smithy live 62a8c7fc, court-wall host truth corrected), R2-2
+DONE waysign-9 (dyer live 8ce2081f, scale-not-hue root class), R2-3 DONE
+waysign-10 (kiln live ecbad903, dominant-tongue scale fix + bone lift),
+R2-4 DONE waysign-11 (woodyard live f46e12ae, pre-place-interrupted
+sibling window recovered, fat-stroke X trestles), R2-5 DONE waysign-12
+(mill live 870256ce, orthogonal + hub-hole structural fix), R2-6 DONE
+waysign-13 (potter live 3a6c8fe7, one-dominant stacked pot-on-wheel-bar
+glyph + bone lift). Each item: full chassis — host anchor re-derived from
+CURRENT tuple per host-rider law, rider-only SAT + exemption ladder,
+unlit by default, 8m gate. Native vision is primary judge; ZAI fallback
+only when native is down that tick, disclosed.
 
 ## ROUND 2 execution log
+
+- waysign-13 `nx-sign-potter-001` R2-6 DONE (emblem-collapse fix): re-judgment
+  on exact live bytes bc05a4f3 (18m true host-mounted pose, rig
+  review-waysign13-potter.ts; native down 1210 x3, ZAI fallback disclosed)
+  CONFIRMED — pot an unresolved blob, wheel a dot, near-merged cluster.
+  Pixel decode ground truth: bone face shadow-crushed mid-tone under the b3
+  pavilion, glyph pot 4px / wheel 6px / gap 6px. Fix v7 (R2 SCALE root
+  class, kiln/dyer law): ONE DOMINANT stacked glyph — bold lathe amphora
+  (0.26 tall terracotta, exaggerated rim/belly/foot) standing ON a wide
+  dark wheel-head bar 0.30x0.045 (stacked+touching, two colors, orthogonal
+  extents — cannot merge); bone lifted 0xe4e4c2->0xefeccf. Post-fix
+  decodes: 18m silhouette resolved (dL~185 vs bone), 10m full
+  articulation. ZAI battery: 18m PASS, 10m 4/4, iso 5/5, isolated 4/4,
+  night 3/3 (unlit, area light owns read); oblique interference-FAIL
+  DISPROVEN at pixel decode + projection math (judge misread the sign's
+  OWN mount post as the pavilion post; board field pixel-clean). sha
+  3a6c8fe7 x2 deterministic, 5 nodes, envelope x identical / z +37mm
+  plaza-ward (SAT re-derived from true extents). Reseat
+  waysign-place-potter-2.ts remove+spawn one WS: host dad7c82e = local,
+  LOCAL [1.5,0,3.1] EXACT (a rounded-yaw hand-math 1.494 false-alarm was
+  rightly refused by the gate first), comp {} both sides, minGap +0.761 vs
+  b3 porch, PLACED_VERIFIED 2 verbs, idempotent zero-verb rerun. Bill
+  eye-check: walk the plaza-to-craft edge to the potter's stand — the
+  board between the porch posts should now read ONE bold terracotta pot
+  standing on a dark wheel bar (not a two-mark cluster); from the plaza
+  path at 18m it reads as a clean stacked silhouette. R2 queue: R2-7
+  bakery (heritage, sev 3) LAST.
 
 - waysign-8 `nx-sign-smithy` R2-1 DONE (emblem-collapse fix): native
   re-judgment on exact live bytes d8df9400 CONFIRMED the smudge class,
