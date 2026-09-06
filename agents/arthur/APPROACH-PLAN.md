@@ -202,3 +202,22 @@ straight-line attempts before the sector sweep found the winding lane.
   read as detached points, not fixtures (no ground pool/spill at range-10);
   one globe reads as a bare emissive ball with no visible mount. Same live
   client contract as N1/N2 — final decision packet question. No re-open.
+
+
+### night-4 defect note (observer lane, 2026-09-06 — treat as Bill-correction class; re-opens ahead of rotation)
+
+- **D4 (severity 2): SW corridor + grounds unlit.** Leg dead stretches as the
+  NW/NE class (gate-edge ~r20 → lamp-001 r39.7 ≈ 20m; lamp-001→002 15.8m;
+  lamp-002 r55.4 → gravel gate r74.7 ≈ 19m), then the entire temple grounds
+  (terraces/seeds/labyrinths, r71–98) carry zero lights — judged from 6
+  hash-bound night renders (`reviews/night-sw/`): arrival reads as an unlit
+  scene, not a night scene. Budget-bound: SW table budget 3, live in-quadrant
+  count 2 (the table's third "inn" anchor sits core-side, outside the r≥35
+  rule). Any grounds lighting needs Bill or budget policy.
+- **N5 (severity 3, informational→design): detached-orb lamp class, now
+  census-corroborated.** SW + NW leg lamps are kind=light entities with NO
+  fixture model entity in the world; judges in all four districts read them
+  as floating orbs/points pasted on darkness. Whether the live client renders
+  a post for kind=light is unverified (rig bead stands in for the head).
+  mile-5's hanging-lantern idiom (nx-mile-nw-007/-008) is the in-world
+  precedent for a lit fixture with visible geometry. Final packet question.

@@ -32,6 +32,7 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 | 1 | NW Cultivation | 2026-09-05 | FAIL / PARTIAL / PASS(1 minor) | 2 lamps over 47m leg; dead stretches r24–49 and r50–67; fields wash past lamplight; emissive disciplined |
 | 2 | NE Craft | 2026-09-05 | FAIL / PARTIAL / PASS(2 minor) | gate-edge→lamp-001 33.5m unlit, lamp gaps 24.1/28.1m; only lamp pools + E-road glow keep material at depth; kiln night read UNJUDGED (no view covered the mouth) |
 | 3 | SE Wild | 2026-09-06 | FAIL / PARTIAL / PASS(2 minor) | corridor az315 has ZERO lamps (8/8 budget spent on interior anchors); path readable by stone silhouette then black; core arrival cluster coherent but satellites orphaned; facet-3 moonlift rescues mid-ground material (win) |
+| 4 | SW Contemplative | 2026-09-06 | FAIL / PARTIAL / PASS(2 minor) | leg dead stretches as NW/NE class + ENTIRE temple grounds zero lights (gravest in fleet); stone terraces pure silhouette, gravel rings barely read; detached-orb lamp class now census-corroborated (light-kind entities, no fixture geometry in world); facet-4 compound (moonlift+stars) reads better than baseline — new packet co-leader |
 
 ### night-1 — NW Cultivation detail (renders: `reviews/night-nw/`, 5 views, all judged)
 
@@ -68,6 +69,8 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 | night-2/N3 | DRESSING-PLAN lamp-budget table rows (NE=2, SE=0) contradict the census light count (NE=10, SE=9 at r≥35 — night-1 note says SE=8; +1 is sibling work) | 3 | dress-N | DRESSING-PLAN `### night-2 defect note` | OPEN for dress lane reconciliation |
 | night-3/D3 | SE corridor az315 ZERO lamps; path fades to black within a third of frame; last-stone→wild-margin link implied but unlit | 3 | approach-N | APPROACH-PLAN `### night-3 defect note` | OPEN, budget-bound (SE budget 8/8 spent on interior anchors) |
 | night-3/N4 | pavilion lamps read as detached points not fixtures (no ground pool/spill); one bare-emissive globe with no visible mount | 4 (informational) | approach-N (contract is live-client) | same note | noted; final packet question |
+| night-4/D4 | SW corridor dead stretches: gate-edge(~r20)→lamp-001(r39.7) ~20m unlit, lamp-001→002 15.8m, lamp-002(r55.4)→gravel gate(r74.7) ~19m; then the ENTIRE temple grounds (terraces/seeds/labyrinths, r71–98) carry ZERO lights of any kind — worst-in-class dead district after dark | 2 | approach-N | APPROACH-PLAN `### night-4 defect note` | OPEN, budget-bound (SW budget 3 per table; live in-quadrant count = 2 — table's third 'inn' anchor sits core-side, outside the r≥35 rule; census note recorded) |
+| night-4/N5 | detached-orb lamp class now census-corroborated: SW + NW leg lamps are light-kind entities with NO fixture model entity in the world — judges in all four districts read them as floating orbs; whether the live client renders a post for kind=light is UNVERIFIED (rig bead stands in for the head, disclosed) | 3 (informational→design) | approach-N (contract is live-client) | same note | noted; final packet question + client-contract check |
 
 ### night-2 — NE Craft detail (renders: `reviews/night-ne/`, 6 views, all judged; rig `review-night-ne.ts`)
 
@@ -146,6 +149,47 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
   live world lights included for rig-true horizon glow; light-anchor
   entities (lib='') render as lamps only.
 
+### night-4 — SW Contemplative detail (renders: `reviews/night-sw/`, 6 views, all judged via ZAI fallback; rig `review-night-sw.ts`)
+
+- Census: 241 entities (fresh 2026-09-06, +2 sibling arrivals vs sweep-4's 239 —
+  outside this lane's concern). SW subject set = 23 entities r≥35 (5 terraces,
+  4 seeds, 4 labyrinths, 4 struct, 1 mosaic, 2 mile posts, gravel path, 2
+  approach lamps); 21 GLB subjects hash-mapped LOCALLY (assets/ + glb-retex/,
+  zero store-scope caveat this district), 2 light-anchor entities rendered as
+  lamps. Rig subject table census-generated, zero hand-transcription; ALL 40
+  live world lights in rig.
+- **Wayfinding FAIL (severity 2 → D4, routed to approach-N)**: same leg class
+  as NW/NE (dead stretches between the two leg lamps and beyond lamp-002),
+  then worse — the temple grounds themselves are entirely unlit. Inbound view:
+  eye jumps from foreground pool to plaza band, nothing in between. Outbound:
+  route dies at the gravel oval's graze-lit edge; terrace stones read as
+  "fence teeth". Center-outward: pure void. Arrival: composition reads
+  (terrace procession, post cadence) but as an UNLIT scene, not a night scene
+  — zero emissive anchors anywhere in the district. Aerial: coherent
+  double-arc composition legible just above crush-to-black; district has no
+  light tier of its own (plaza is the only warm point in frame).
+- **Material truth PARTIAL (severity 3, design observation, no owning lane)**:
+  harshest district yet for the recurring law — gravel is the ONLY material
+  that reads at depth (rake rings, and only where grazed); timber post of the
+  leg reads in its lamp pool; stone terraces (the district's primary
+  material, meant for contemplation) are flat silhouettes at every distance
+  past one lamp-range. Goes to the final decision packet.
+- **Emissive discipline PASS, 2 minor**: no bloom, no bleed-through in any
+  view. (a) Detached-orb class → N5: census shows the SW/NW leg lamps are
+  kind=light entities with NO fixture model in the world; the mile-post
+  silhouette near lamp-001 is unlit stone BY DESIGN (judge misread it as a
+  failed second lamp — probe discipline: verified against census before
+  routing). Whether the live client renders a post is unverified. (b) pale
+  speckle at the gravel's grazed edge — texture/moonlight interplay, below
+  threshold, informational.
+- Judge channel disclosure: native vision_analyze provider down (error 1210,
+  2 attempts) — judged via ZAI fallback (GLM-4.6V), same as night-2/3.
+- Rig engineering notes: generator script had a dir-mapping bug (retex-only
+  files labeled ASSETS — hash gate caught both instances before render);
+  facet-4 star dome initially fogged to invisibility (Fog 60–260 kills r=500
+  stars — matches facet-2's "stars underpowered" finding); fixed with
+  `fog:false` on star materials and re-rendered BEFORE judging facet 4.
+
 ## Sky-palette study log (render-only overlays, NEVER applied)
 
 Facet rotation: 1=cool-vs-warm base hue, 2=horizon gradient+stars, next:
@@ -170,6 +214,24 @@ moonlight ambient lift, then one free facet.
   separates those buildings is their own warm windows, not the sky. Verdict:
   gradient natural, stars underpowered; if adopted, push the brightest 10–15%
   of stars 1–2 stops so a few register. Recommendation deferred (loop law).
+- **Facet 4 (night-4, free facet): standing baseline vs the COMPOUND of every
+  facet winner so far** — moonlight ambient lift (hemi 0.9, moon 1.1, sky
+  `#0e1626`) + pushed star dome (420 stars, top ~15% pushed 1–2 stops white
+  and 2.4× size, per facet-2's fix; `fog:false` after the fog-kill was caught
+  pre-judgment) (variant in `reviews/night-sw-skyvar-facet4/`; rig env
+  `NIGHT_STARS=1 NIGHT_MOON=1`). Judge verdict: **better than baseline, new
+  packet co-leader with facet 3**. WIN: unfogged stars sell the dome — the
+  field terminates at the horizon, so sky reads as a vault, not a backdrop;
+  size/brightness variation adds depth; ground keeps a legible luminance
+  gradient and path-tile read; silhouettes stay clean against the lifted
+  horizon band; lamp salience survives (the near lamp still wins its frame).
+  COST: star distribution is uniform — no zenith concentration, no pole-star
+  vertical anchor (the only up-axis is incidental, under the bright orb);
+  warm dots hugging the horizon can masquerade as distant waypoints
+  (false-positive clutter); ground olive cast reads slightly stylized vs
+  neutral moonlight. If adopted: concentrate ~20% of stars toward zenith and
+  clear a low-altitude band near approach corridors. Recommendation deferred
+  (loop law: core pass + reserve facet remain).
 - **Facet 3 (night-3): standing ambient (hemi 0.5, moon 0.55) vs moonlight
   ambient lift (hemi 0.9, moon 1.1, sky `#0e1626`)** (variant in
   `reviews/night-se-skyvar-moon/`; rig env `NIGHT_MOON=1`). Judge verdict:
@@ -187,6 +249,7 @@ moonlight ambient lift, then one free facet.
 
 ## Rotation state
 
-- [x] NW (night-1) — [x] NE (night-2) — [x] SE (night-3) — [ ] SW — [ ] core
-- Sky study: facets 1–3 done (2 remain: one free facet, then reserve). Decision
-  packet: NOT assembled (loop law: only after all districts + study complete).
+- [x] NW (night-1) — [x] NE (night-2) — [x] SE (night-3) — [x] SW (night-4) — [ ] core
+- Sky study: facets 1–4 done (1 remains: reserve). Decision packet: NOT
+  assembled (loop law: only after all districts + study complete — core pass
+  + reserve facet left).
