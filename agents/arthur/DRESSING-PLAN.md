@@ -389,6 +389,29 @@ Census 260 HTTP-200 (curl after one urllib 403, client-classified),
 id-diff vs dress-61 0/0, lights 38, interlane f6254cd0. Gate ALL PASS
 real exit 0 at 57d9233. Zero world mutations, zero uploads.
 
+**STATE AT dress-64 (2026-09-06, pipeline hold tick — 44th consecutive)**:
+lawful HOLD — every path closed fresh. Shard queue EMPTY at source
+(IMPROVE-PLAN.md byte-identical to dress-63's verification — git status
+shows it unmodified since; 9/9 `nx-dress-*` Round-1 rows terminal;
+round-2 candidates carry ONLY `nx-dress-fountain`, which is DRESS-domain
+by routing but explicitly "ownership is Bill's call" — legacy-core
+off-limits set, DOMAIN LAW forbids touching it without his verdict).
+SW lamps Bill a/b/c bound, spend 0 of 3 — fresh kind-law recount
+(`kind=='light'`, the census schema's authoritative class): exactly 3
+live SW r≥35 lights (approach-sw-lamp-001-l r39.7, -002-l r55.4,
+nx-mile-sw-013-l r64.0). Probe self-catch 12th class disclosed: first
+recount matched id/comp TOKENS only and returned 2/3 — nx-mile-sw-013-l
+carries no lamp/light token in its id (the `-l` companion suffix alone
+marks it); kind-law is the counter, token-law undercounts companion
+lights. Probe wrong, world right, waysign-18 law. Eye-gate packet
+fd677cae md5-verified zero VERDICT lines. 11/11 district installs
+PIN_EXACT lib+tuple+yaw-radians+comps-empty (programmatic compare vs
+the dress-22 authoritative table on this tick's fresh census); 27
+nx-dress = 11 fleet + 16 legacy core off-limits set intact; census 260
+== 260, lights 38 == 38, domain unchanged; interlane f6254cd0 steady.
+Gate ALL PASS real exit 0 at HEAD 5d88242 (own dress-63 commit). Zero
+world mutations, zero uploads, zero shared-budget use.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
