@@ -1937,3 +1937,31 @@ Bill-ruled). REPAIR-REGISTER zero nx-dress.
   correct, probe wrong (10th tick-class caught at run time).
 - Zero world mutations, zero uploads, zero shared-budget use, no visual
   PASS claimed. No un-shard clock (shard empty at source, not idle).
+
+---
+## dress-56 (2026-09-06, pipeline tick 35) — HOLD
+
+- Shard: re-verified EMPTY at source by full-row-window scan (dress-39
+  regex law): 56 numbered rows, 0 unannotated nx-dress windows; struct-46's
+  c87d502 delta touched zero dress rows. Nine Round-1 rows terminal;
+  round-2 intake zero dress routing; REPAIR-REGISTER zero nx-dress.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh kind-law recount:
+  exactly 3 live SW r>=35 lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0). Spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae unchanged, zero VERDICT lines.
+- Hold verification: standing gate ALL PASS real exit 0 at tick-start
+  HEAD b3351b7; post-sibling HEAD c87d502 (struct-46 angler, foreign
+  files only); census 259 HTTP-200 first fetch, 11/11 district installs
+  PIN_EXACT lib+pos+yaw+comp vs the authoritative dress-43/44 table
+  (yaw via restated values + stability vs verified dress-50 capture);
+  27 nx-dress = 11 fleet + 16 legacy intact; lights 38 (kind histogram
+  thing 221 / light 38); id-diff vs dress-50 capture: 0/0, one
+  full-census drift = nx-struct-angler (struct-46's committed fix this
+  window, classified sibling work); interlane md5 f6254cd0 steady.
+- Probe self-catch disclosed (11th tick-class): first pin pass keyed
+  bare 8-hex lib prefix without the store/ path segment AND invented
+  yaw=0 defaults where the authoritative table restates no yaw — 11
+  uniform lib+yaw failures from the probe, not the world. Corrected:
+  store/<hash> comparison + restated-yaw/stability hybrid.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock (shard empty at source, not idle).
