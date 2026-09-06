@@ -64,6 +64,11 @@ full closed loop — the hero-asset discipline generalized to the whole pool:
 - One object per wakeup. Batch autonomy applies on terse directives
   ("run it", "keep moving") — scoreboard close, per-item narration to the
   ledger.
+- **Annotation law (improve-5x):** the moment an object is EXECUTED or
+  DROPPED, its queue row in IMPROVE-PLAN.md gets the `[EXECUTED <tag>: …]`
+  / `[DROPPED <tag>: …]` annotation IN THE SAME COMMIT as its ledger
+  entry. A row without an annotation is OPEN work — un-annotated done-work
+  reads as backlog and starves the re-arm law's inputs.
 - An object that analyzes CLEAN is a recorded result, not a wasted tick.
 - Bill's visual correction on any object re-opens it ahead of the queue.
 - Round close = ONE eye-gate circuit for the round's changed objects,
