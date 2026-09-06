@@ -1119,3 +1119,15 @@ Hold verification: fleet reconcile ALL_RECONCILED exit 0 (259/54/38/34/32/24,
 zero verbs, zero uploads); census-diff vs artwalk-62 capture 259/259, 0 new,
 0 gone, 0 rider drift. Lane holds for Bill's counting-series eye-gate
 verdicts, a Phase F fresh commission, or a queue widening.
+
+### [artwalk-64] PIPELINE HOLD (2026-09-06) — CLOSED (hold, zero mutations)
+
+Fifth consecutive steady hold tick. Gate ALL PASS real exit 0 at HEAD
+ccc315c. Shard routing re-checked at source: zero OPEN IMPROVE-PLAN rows
+route to nx-artwalk-* (row 25 remains EXECUTED at artwalk-52); register
+carries zero artwalk items; no Phase F commission received. Eye-gate packet
+48bea194 unchanged, zero verdict markers. Hold verification: fleet reconcile
+ALL_RECONCILED exit 0 (259/54/38/34/32/24, zero verbs, zero uploads);
+census-diff vs artwalk-63 capture 259/259, 0 new, 0 gone, 0 rider drift.
+Lane holds for Bill's counting-series eye-gate verdicts, a Phase F fresh
+commission, or a queue widening.
