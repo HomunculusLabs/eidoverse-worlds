@@ -1732,6 +1732,64 @@ class except seed (ZAI-native stack 0003+0013).
   2-of-4. Evidence:
   reviews/survey11-slice/nx-temple-seed-0013/gameplay.png
 
+### survey-12 family-class extensions (2026-09-06)
+
+Third-family members judged on distinct shas; MAJORITY LOCKED for
+cairn/lavender/orchard/seed (3-of-5, 3-of-5, 3-of-5, 3-of-4) —
+family-wide remediation is now probe-backed, confirm-or-drop stays
+with the executing lane. NATIVE 8/8 (one 1210 flap on orchard first
+call, single paced retry recovered; zero ZAI fallback this tick).
+
+- `nx-wild-cairn-0047` — Sev 3 (survey-12, NATIVE): IDENTICAL to
+  cairn-0022 class — floating pebbles detached against sky above
+  stack tops in five regions (x230-242 y296-324, x348-390 y296-310,
+  x480-532 y293-306, x555-580 y292-306, x655-712 y290-325); stacked
+  stone identity + values PASS — family 3-of-5 MAJORITY. Evidence:
+  reviews/survey12-slice/nx-cairn-0047/gameplay.png
+- `nx-cultivation-lavender-0040` — Sev 3 (survey-12, NATIVE):
+  IDENTICAL to lavender-0006 class — charcoal-mauve dead-crop read
+  (no bloom-tip brightness anywhere), discrete front-row blobs with
+  ground gaps (y395-435), stray 1-3px specks above canopy (x228/390/
+  652/692/862 y355-366); rows countable = PASS — family 3-of-5
+  MAJORITY. Evidence:
+  reviews/survey12-slice/nx-cultivation-lavender-0040/gameplay.png
+- `nx-cultivation-orchard-0033` — Sev 3 (survey-12, NATIVE):
+  IDENTICAL to orchard-0012 class — crown walls merge into continuous
+  hedgerow bands (L x0-420, R x535-960, zero sky gaps), fruit reads
+  ZERO at 18m (single ~20px orange dot x553-578 y298-322 beside gate
+  post is the only crop indicator); trunk rhythm/shadows PASS —
+  family 3-of-5 MAJORITY. Evidence:
+  reviews/survey12-slice/nx-cultivation-orchard-0033/gameplay.png
+- `nx-temple-seed-0021` — Sev 4 (survey-12, NATIVE): IDENTICAL to
+  seed-0003 class — flat block-mosaic disc x300-660 y376-414
+  (~360px wide, ~12px tall, 30:1), no seed core, no vertical element,
+  no contact shadow (reads pasted-on); rim bumps attached = no float
+  — family 3-of-4 MAJORITY. Evidence:
+  reviews/survey12-slice/nx-temple-seed-0021/gameplay.png
+- `nx-craft-hamlet-0041` — Sev 2 (survey-12, NATIVE): IDENTICAL to
+  hamlet-0007/0015/0028 class — flanking mega-masses hover with open
+  sky beneath (L x95-460 y0-215, R x565-960 y0-260, own ground
+  shadows prove the gap), true see-through hole in tower midsection
+  x400-552 y405-492 (sky-tone fill), detached stair-cube run
+  x565-685 y195-265 + floating slab rows x0-170 y55-130 and
+  x568-668 y272-296, underside value crush x95-460 y140-215 —
+  family 4-of-5. Evidence:
+  reviews/survey12-slice/nx-craft-hamlet-0041/gameplay.png
+- `nx-cultivation-garden-0045` — Sev 3 (survey-12, NATIVE):
+  IDENTICAL to garden-0011/0019 class — sphere-mass bush read with
+  scattered stick weeds, zero bed/row/fence grammar, one shapeless
+  clump x225-745; minor stem-above-shadow-dot floats (flank groups
+  x165-235 / x735-790); geometry solid — family 4-of-5. Evidence:
+  reviews/survey12-slice/nx-cultivation-garden-0045/gameplay.png
+- `nx-gallery-mosaic-0059` — Sev 4 (survey-12, NATIVE): IDENTICAL to
+  mosaic-0036/0048/0052 class — no frame/backing/plinth, loose
+  ground-scatter tile field with ragged dissolving perimeter
+  (outlier trails both margins + far arc), 60-70% ground show-through
+  mid/outer rings, low contrast on ground — family 4-of-4 UNANIMOUS.
+  (Sev raised 3→4 at family-unanimous: zero members carry the
+  gallery-art identity.) Evidence:
+  reviews/survey12-slice/nx-mosaic-0059/gameplay.png
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):

@@ -391,3 +391,56 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   commit 0878ab4, ALL PASS exit 0 (interleaving recovery, not racing).
   Verdicts 7 confirmed / 1 clean-with-margin / 0 dropped. Zero world
   mutations, zero uploads, zero shared-budget use.
+
+## Judged index (survey-12)
+
+- survey-12 (2026-09-06, NATIVE 8/8 — one 1210 flap on orchard first
+  call, single paced retry recovered, ZERO ZAI fallback; 18m gameplay,
+  fresh live store bytes 8/8 HTTP 200 curl UA on exact census-12 libs;
+  severity backlog drained — round-1 terminal, 7/8/9/10/11 candidates
+  are intake not re-judge debt): majority-lock slice — one unjudged
+  member of each 2-confirmed family (cairn/lavender/orchard/seed) +
+  spread probes on 3-confirmed families (hamlet/garden/mosaic) + one
+  clean-family variance probe (forest). Slice = cairn-0047,
+  lavender-0040, orchard-0033, seed-0021, hamlet-0041, garden-0045,
+  mosaic-0059, forest-0018. Verdicts: CAIRN-0047 CONFIRM Sev 3 NATIVE
+  (floating pebbles above stack tops x5 regions — family 3-of-5
+  MAJORITY LOCKED), LAVENDER-0040 CONFIRM Sev 3 NATIVE (charcoal
+  dead-crop read, discrete front-row blobs, stray specks — family
+  3-of-5 MAJORITY LOCKED), ORCHARD-0033 CONFIRM Sev 3 NATIVE (merged
+  crown walls zero sky gaps, fruit reads ZERO at 18m — family 3-of-5
+  MAJORITY LOCKED), SEED-0021 CONFIRM Sev 4 NATIVE (flat 30:1 mosaic
+  disc, no vertical, no contact shadow — family 3-of-4 MAJORITY
+  LOCKED), HAMLET-0041 CONFIRM Sev 2 NATIVE (hovering mega-masses
+  with open sky beneath, see-through tower hole, detached stair run,
+  value crush — family 4-of-5), GARDEN-0045 CONFIRM Sev 3 NATIVE
+  (sphere-mass bush read, zero bed/row/fence grammar — family
+  4-of-5), MOSAIC-0059 CONFIRM Sev 4 NATIVE (no frame/backing,
+  60-70% ground show-through, dissolving perimeter — family 4-of-4
+  UNANIMOUS, Sev raised 3→4), FOREST-0018 CLEAN NATIVE (grove
+  identity instant, grounded, continuous silhouette; canopy-underside
+  darkness shading-note only — family variance probe corroborates
+  0010's CLEAN). Routing: family-class extension block in IMPROVE-PLAN
+  SURVEY CANDIDATES (all district-domain — improve's own intake
+  surface; zero notes to other lanes' plans this tick). Grep-verified
+  zero open duplicates pre-append. Census 259 steady 0/0 vs survey-11
+  snapshot; 6 flips all foreign-domain, all matching ledgered sibling
+  work: 4 artwalk wayband off-axis translations (Bill's lamp
+  correction follow-through, artwalk-83), observatory lib eb3c9b15→
+  3d9d6ae1 (struct-44), beltower lib 30407b95→2419fbc5 (improve-17,
+  HEAD at gate). Gate: ALL PASS real exit 0 first try at 30dec29,
+  ledger law EXACT 2370298. Verdicts 7 confirmed / 1 clean / 0
+  dropped. Zero world mutations, zero uploads, zero shared-budget
+  use.
+
+## Routed notes (survey-12)
+
+- survey-12: `nx-wild-cairn-0047` + `nx-cultivation-lavender-0040` +
+  `nx-cultivation-orchard-0033` + `nx-temple-seed-0021` +
+  `nx-craft-hamlet-0041` + `nx-cultivation-garden-0045` +
+  `nx-gallery-mosaic-0059` — family-class extension annotations on
+  standing candidate rows in IMPROVE-PLAN SURVEY CANDIDATES (cairn/
+  lavender/orchard/seed MAJORITY LOCKED at 3-of-N; hamlet 4-of-5,
+  garden 4-of-5, mosaic 4-of-4 unanimous + Sev raised). All
+  district-domain (improve's own surface), no other lane's plan
+  touched this tick.
