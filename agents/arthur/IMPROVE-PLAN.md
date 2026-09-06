@@ -532,6 +532,15 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     FAR range — silhouette carries the read beyond 18m]
 33. `nx-dress-nw-stile-001` — reads fence not crossing; step stones
     illegible. Sev 3. (guard: dress-11 today 02:00 — until 09-07 02:00)
+    [EXECUTED dress-18: interrupted-window recovery (struct-9 class —
+    prior window reseated live then died pre-bookkeeping); native
+    CONFIRMED both findings on v4, v6 fix ACCEPTED 4/4 gameplay + 4/4
+    close (ZAI fallback, native 1210 ×2 disclosed) — 0.95m pale-flagged
+    gap in split lower rail, full-span upper bar, two worn flags
+    aligned through; remove+spawn reseat at exact unchanged tuple, lib
+    5a8de30d -> 5e9d301d x2 deterministic, PLACED_VERIFIED + idempotent
+    zero-verb rerun this tick; margin note: pale end blocks at lower
+    bound of 18m legibility]
 34. `nx-dress-ne-woodstack-001` — burnt right post; see-through gaps;
     detached left post. Sev 3. (guard: dress-9 today — until 09-07)
 35. `nx-struct-pendulum` — dashed shadow acne; hairline strings; weak

@@ -106,7 +106,73 @@ it considers un-sharded work. Remaining open dress rows: 33 nw-stile
 (Sev 3), 34 ne-woodstack (Sev 3), 37 nw-skeps (Sev 4), 38 nw-hedge
 (Sev 4).
 
+**STATE AT dress-18 (2026-09-06 14:1x, pipeline shard tick —
+INTERRUPTED-WINDOW RECOVERY, struct-9 class, named)**: shard row 33
+`nx-dress-nw-stile-001` (Sev 3) EXECUTED live. A prior dress-18 window
+died mid-flight: it had native-rejudged row 33 CONFIRMED on the old v4
+bytes (rejudge rig `reviews/dress18-nw-stile-rejudge/`), iterated
+v5 → v6, edited the mk source, built v6, authored the placer, and
+RESEATED the live entity (night-16's census observed the lib change in
+flight) — then died before ledger/plan/row-annotation/commit and before
+any recorded v6 judgment. No dress process alive at this tick's survey.
+Recovery per the standing law: (a) idempotent placer rerun →
+`PLACED_VERIFIED`, ZERO verbs (all gates green: blockers live, rim
+69.66..71.89 ∈ [66,108], SAT clear no sub-1.4m adjacency, migration
+tuple exact, comp bag empty both sides) — the standing placement IS the
+intended contract; (b) deterministic rebuild ×2 byte-identical sha
+`5e9d301d…` == live lib prefix — local source provably produces the
+standing bytes; (c) deferred verification: v6 renders of the
+byte-identical build judged — gameplay 18m **4/4 PASS** + close **4/4
+PASS** (ZAI fallback both views; native vision down 1210 ×2, one paced
+retry, disclosed) — the gap reads "crossing under a beam" not a closed
+panel, pale CUT blocks bracket the opening, the two worn flags read an
+aligned run; (d) bookkeeping closed in this one entry. Rows 34/37/38
+remain open (worst next: 34 ne-woodstack Sev 3). SW lamps still the
+only own-queue item, blocked on Bill's a/b/c (0 of 3). One deduped
+upload slot spent on the idempotent rerun (known chassis wart above).
+
 ## Siting log
+
+### dress-18 — NW stile reseat (shard row 33 EXECUTED, PLACED, LIVE —
+### interrupted-window recovery)
+
+- **Row 33 findings (native CONFIRMED on old v4 bytes)**: v4's twin
+  full-span rails + diagonal brace read as a closed fence panel at 18m
+  (no aperture); the small dark stones read as debris.
+- **v5** (`reviews/dress18-nw-stile-v5/`): lower rail split with a
+  0.72m center gap + pale CUT end blocks; stones enlarged + aligned.
+- **v6 ACCEPTED** (sha
+  `5e9d301d46d4dcafb631a020f969091db4dda5cc3642b21257544f5a45d53411`,
+  double-rebuild byte-identical): gap widened 0.72 → **0.95m** (v5 read
+  "fence with a notch"); upper rail kept FULL-SPAN (the boundary bar);
+  half-rails shortened, oversized pale CUT end blocks (~2.3× v4's) face
+  the gap — the opening's flag, same value family as the post caps;
+  step stones cut to TWO well-separated worn flags on the crossing
+  axis (three merged into one boxy slab at 18m); diagonal brace and
+  kicked stray REMOVED (debris reads). Judged: gameplay 4/4 + close 4/4
+  (ZAI fallback, native 1210 ×2 disclosed). Margin notes carried: pale
+  end blocks at the lower bound of 18m legibility (bump ~10–15% if
+  ever reworked); two-layer center stone is deliberate 1cm
+  interpenetration, no coplanar faces.
+- **Decode (v6)**: 6 nodes (budget 3–25 ✓); bbox x −1.204..1.232
+  (center +0.014, half 1.218), z −0.978..1.037 (center +0.030, half
+  1.008), y −0.007..1.251. No light anchors, empty comp bag (static
+  unlit family). Fatter local-z footprint re-derived SAT fresh vs the
+  live set: clear, no sub-1.4m solid adjacency.
+- **Placement**: `nw-dress18-place.ts` — hash gate → blocker-epoch
+  guard (8 blockers) → migration gate (accepts ONLY the dress-11 old
+  tuple or the new idempotent tuple; anything else = drift) → SAT/rim/
+  arrival-cone preflight → upload → remove+spawn reseat over one join
+  WS (paced 1000ms). **PLACED_VERIFIED** `nx-dress-nw-stile-001` @ lib
+  `store/5e9d301d46d4dcaf.glb` (was `5a8de30d1d7088bb`), pos
+  (−45.25, 0.046, 54.45) yaw 135° — UNCHANGED pose, a lib swap at the
+  exact tuple, NOT a re-site. Idempotent rerun this tick: 0 verbs, one
+  deduped upload (chassis wart). NW lamp spend unchanged 0 of 2.
+- **Eye-check for Bill**: the NW corridor stile past the milestone
+  pair should now read "crossing under a boundary bar" — a wide pale-
+  flagged gap in the low rail you step through, worn flags on the
+  line — not a fence panel. If the pale blocks still don't pop at
+  distance, one 10–15% enlargement pass is the standing fix.
 
 ### dress-15 — SE cairn reseat (shard row 32 EXECUTED, PLACED, LIVE)
 
