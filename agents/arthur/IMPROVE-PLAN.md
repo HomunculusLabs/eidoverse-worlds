@@ -966,6 +966,23 @@ work, not re-analysis. (mapboard/monument emblem items already queue at
     bug; probe-CLEAN verdicts stand as visual verdicts, horn is real
     work). Fix = same opt-ins, rebuild ×2, sibling-equality proof,
     remove+spawn re-place at exact tuple. Sev 2 (structural credibility).
+    [EXECUTED improve-20: opt-ins per the proven hall idiom (improve-4
+    D2/D3) — gableRoof(g,"roof",W,D,1.7,FY+H,0.4,C.MID,true,D/2+0.4) at
+    mkv3-ring.ts block 1; accessor decode on exact live bytes f2344409
+    proved the horn (plaster bucket z ±4.250 vs roof slabs ±2.923 = 1.35m
+    floating fin each end, back horn WAS the live bbox z-min −4.25);
+    native before-judge CONFIRMED both ends (plaster fin cantilevered
+    past the roof plane, floating unsupported); fix: plaster z ±2.900
+    seated at the roof plane, bbox z-min −4.25→−2.923 (strict subset,
+    no new overlap possible); rider b19 keep-out differential 0==0 verts
+    at host-local (0,2.22,4.32) porch-roof edge; sha f2344409→e3adcd3d
+    ×2 deterministic, 6 ring siblings byte-identical (dirty tower3
+    snapshot law, foreign lane state untouched); native after-judges:
+    back view CLEAN both ends + left gable view flush/no regression;
+    PLACED_VERIFIED remove+spawn exact tuple (9,0,26) yaw −2.828368,
+    comp {} both sides, live bbox z-extent 8.551→7.224; idempotent
+    rerun ALREADY_LIVE_NO_VERBS 0 verbs; 6-leg MCPL b19 approach walk
+    ALL_PASS 0.370m; rider b19 + light companion verified standing]
 
 **ROUND RE-ARM LAW (perpetual motion, 2026-09-06, Bill-directed):** when
 the round queue's last entry is annotated EXECUTED (or DROPPED with

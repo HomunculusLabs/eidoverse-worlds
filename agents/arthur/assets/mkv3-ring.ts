@@ -80,7 +80,13 @@ const out: Built[] = [];
     doorGapWall(g, "front", W, H, T, 0, FY, D / 2 - T / 2, "z"); // door +Z center
     windowFrame(g, "win_n1", -2.4, 1.7, -(D / 2 - T / 2), 0.8, 0.8, "z");
     windowFrame(g, "win_n2", 2.4, 1.7, -(D / 2 - T / 2), 0.8, 0.8, "z");
-    gableRoof(g, "roof", W, D, 1.7, FY + H, 0.4);
+    // improve-20 (row 39 kit-debt): cure the 1.5m gable horn — the plaster
+    // triangle was authored w/2=4.25 on a roof half-extent of 2.9 (decode:
+    // plaster bucket z ±4.250 vs roof ±2.923, floating fin native-confirmed
+    // both ends). Same opt-ins the hall proved at improve-4 D2/D3:
+    // trueGableHalf = roof's true depth half-extent D/2+over, solidRidge
+    // (staggered 0.92-cap read DASHED at 18m).
+    gableRoof(g, "roof", W, D, 1.7, FY + H, 0.4, C.MID, true, D / 2 + 0.4);
     chimney(g, "chim", -2.0, 0, FY + H + 1.1, FY + H + 2.2);
     // FRONT PORCH (beyond the 1.5m apron): the kit's porch() finally earns
     // its keep — deck + 4 posts + shed roof on the door face
