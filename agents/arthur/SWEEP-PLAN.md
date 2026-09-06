@@ -125,6 +125,13 @@ tier-2 leg is never claimed without its run that wakeup.
 
 ## Census snapshot discipline
 
+NOTE (sweep-9): the snapshot file switched from a post-processed payload
+(computed compKeys, local bboxes, pretty-printed) to the RAW /geom response
+(compact, `comp` field, world bboxes, `parent`/`tris`). Id set, pos, yaw, and
+lib verified identical across the switch (0 drift); sweep-10+ diffs compare
+like-for-like raw snapshots. Drift checks key on id/pos/yaw/lib, never on
+payload schema.
+
 Each sweep diffs live census against the PREVIOUS sweep's snapshot (not this
 baseline); snapshot file updated in-place each sweep. Prefix-domain map per
 INTERLANE-PROTOCOL.md (ten lanes). Sibling placements landing mid-tick are
