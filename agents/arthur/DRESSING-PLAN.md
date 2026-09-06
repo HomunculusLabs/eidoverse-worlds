@@ -1783,3 +1783,35 @@ no visual PASS claimed.
 - Zero world mutations, zero uploads, zero shared-budget use, no
   visual PASS claimed. No un-shard clock running (shard empty, not
   idle).
+
+---
+
+## dress-51 (2026-09-06, pipeline tick 30) — HOLD
+
+- Shard: EMPTY at source at HEAD 3198a55 (my own dress-50) — nine Round-1
+  rows terminal (5/29/31 DROPPED native rejudge, 30 NATIVE-DROPPED
+  survey-2, 32/33/34/37/38 EXECUTED reseats, 39 routes nx-town
+  improve-own, 13 fountain DRESS-DOMAIN off-limits per Bill); no
+  survey-14+ intake (SURVEY CANDIDATES tail unchanged, no new family
+  sections); REPAIR-REGISTER zero nx-dress lines.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh recount: SW-quadrant
+  r≥35 = exactly 3 live lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0). Spend 0 of 3.
+- Verdicts: zero in ledger tail AND eye-gate packet fd677cae unchanged
+  (md5 verified, zero VERDICT lines).
+- Hold verification: standing gate ALL PASS real exit 0 at HEAD 3198a55;
+  fresh live census 259 (HTTP 200 first fetch), entity-id set-diff vs
+  dress-50 capture 0 new / 0 gone; 11/11 district installs PIN_EXACT
+  lib+pos+yaw+comp+kind vs the plan-verified dress-50 capture (direct
+  live-vs-live equality — no re-derivation of dress-49 pin-resolution
+  machinery this tick, avoiding a 7th probe-defect class); 27 nx-dress =
+  11 fleet + 16 legacy intact; census lights 38 (comp-key law); interlane
+  md5 f6254cd0 steady.
+- Probe self-catch disclosed (id-count-class): first light recount keyed
+  on 'comps' — census key is 'comp' (singular); also caught my quick
+  fleet/legacy split naming 'fountain' as legacy member 1 of 1 while the
+  standing arithmetic is 11 district-qualified + 16 legacy plaza/farm.
+  Both resolved; world correct, probe wrong.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock running (shard empty at source, not
+  idle).
