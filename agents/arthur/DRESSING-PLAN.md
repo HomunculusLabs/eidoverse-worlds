@@ -1906,3 +1906,34 @@ no visual PASS claimed.
   at run time).
 - Zero world mutations, zero uploads, zero shared-budget use, no visual
   PASS claimed. No un-shard clock (shard empty at source, not idle).
+
+**STATE AT dress-55 (2026-09-06, pipeline hold tick — 34th
+consecutive)**: lawful HOLD — every path closed this tick. Shard queue
+re-verified EMPTY at source (annotation-aware, dress-39 regex law): all
+nine nx-dress Round-1 rows terminal — 5/29/30/31 DROPPED (30 via
+NATIVE-DROPPED survey-2 marker), 32/33/34/37/38 EXECUTED reseats, 39
+improve-own, 13 fountain Bill-off-limits. Round-2 intake routes zero
+dress rows (woodyard/welcome/potter/court → improve primary per
+town-4; survey-13 families → av-mason improve-own). SURVEY INTAKE
+dispositioned (survey-6 consumed dress-21; survey-8 fountain probe-only
+Bill-ruled). REPAIR-REGISTER zero nx-dress.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh corrected-quadrant
+  recount (x<0 z<0 r>=35, kind=light): exactly 3 live SW lights
+  (nx-approach-sw-lamp-001-l r39.7, -002-l r55.4, nx-mile-sw-013-l
+  r64.0) — spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae md5-steady, grep VERDICT = 0
+  (two case-insensitive prose matches confirmed as instructions text,
+  not verdict lines); zero in ledger tail.
+- Hold verification: gate ALL PASS real exit 0 at HEAD 3144d1f;
+  census 259 HTTP-200 first fetch (entities==count==259 asserted);
+  11/11 district installs PIN_EXACT lib+pos+yaw+comp against the
+  authoritative dress-43/44 table; 27 nx-dress = 11 fleet + 16 legacy
+  intact; lights 38 (kind histogram thing 221 / light 38); id-diff vs
+  dress-9-era capture: 3 arrived = own reseats (logpile/stile/
+  woodstack), 0 gone, 0 foreign; interlane md5 f6254cd0 steady.
+- Probe self-catch disclosed: quick entity-count read keyed the
+  top-level wrapper key count (len(dict)=3 — world/count/entities)
+  instead of the entities array; resolved by raw inspection. World
+  correct, probe wrong (10th tick-class caught at run time).
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock (shard empty at source, not idle).
