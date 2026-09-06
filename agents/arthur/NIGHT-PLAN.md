@@ -1211,3 +1211,28 @@ STUDY COMPLETE (all facets judged; packet assembled).
   inversion. Second-rotation NW+NE+SW passes remain the verify
   paths, deferred while the lane holds. Zero world mutations,
   zero renders judged, no PASS claimed.
+- night-44 (2026-09-06, pipeline-mode hold tick): thirty-fourth
+  consecutive hold with NO disposition change. Standing gate ALL PASS
+  real exit 0 at HEAD 73f6ffb (waysign-31; siblings landing between
+  night-43 and night-44: 73f6ffb waysign-31 and artwalk-79 (commit
+  visible in ledger tail at base 2370274)). Fresh
+  census-44: 259 entities / 38 lights / zero night-prefixed, FULLY
+  steady vs census-43 (0 new, 0 gone, 0 pos/yaw/lib changed; capture
+  /tmp/night-census-44-raw.json). D1 pin nx-approach-nw-lane-001
+  dc256065879371d8, D2 pin nx-approach-ne-lane-002
+  dc52264c04cfe5bb, D4-leg pin nx-approach-sw-lane-003
+  fb04a144cc1fc458 — all THREE exact (NINETEENTH consecutive
+  all-pins-steady tick). SW quadrant kind=light budget by id:
+  nx-approach-sw-lamp-001-l + nx-approach-sw-lamp-002-l +
+  nx-mile-sw-013-l, zero movement, SW lamps still 0 of 3 on Bill's
+  a/b/c. APPROACH-PLAN five night-N defect-note sections stand
+  verbatim. Packet md5 cdc435a2 unchanged since night-7, zero verdict
+  markers; interlane md5 f6254cd0 steady. EXECUTION SHARDING section
+  re-read at source (IMPROVE-PLAN line 878): routing is by entity
+  prefix (nx-struct-/nx-dress-/nx-approach-/nx-sign-*/nx-town-*),
+  night owns no entity prefix, zero rows route to night. Same four
+  verdict classes outstanding: sky facet-5, lamp-budget policy D3 +
+  D4-temple-grounds + D5 + N6, N5 detached-orb, N7 hierarchy
+  inversion. Second-rotation NW+NE+SW passes remain the verify paths,
+  deferred while the lane holds. Zero world mutations, zero renders
+  judged, no PASS claimed.
