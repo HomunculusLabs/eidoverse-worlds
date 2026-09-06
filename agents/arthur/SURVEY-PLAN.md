@@ -355,3 +355,39 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   intake); family-class annotations on standing rows for hamlet /
   garden / mosaic families. All district-domain (improve's own
   surface), no other lane's plan touched this tick.
+
+## Judged index (survey-11)
+
+- survey-11 (2026-09-06, NATIVE 2/8 + ZAI fallback 6/8 disclosed, 18m
+  gameplay, fresh live store bytes 8/8 HTTP 206 curl UA on exact
+  census-11 libs; severity backlog drained — round-1 terminal, 7/8/9/10
+  candidates are intake not re-judge debt): rotating district pass,
+  family-spread probes = second unjudged member of every standing
+  CONFIRMED family + one clean-family variance probe (terrace). Slice =
+  hamlet-0028, garden-0032, lavender-0027, orchard-0020, mosaic-0052,
+  cairn-0043, terrace-0037, seed-0013. Native up for garden + lavender
+  first calls; then hard flap (5 consecutive 1210s across distinct
+  objects, hamlet + orchard burned paced retries) — remaining six ZAI
+  fallback, disclosed. Every fallback verdict corroborates an
+  already-NATIVE family class (hamlet 0007, mosaic 0036, cairn 0022 all
+  native-confirmed prior); seed family stack is ZAI+native (0003
+  ZAI/native split, 0013 ZAI). Verdicts: HAMLET-0028 CONFIRM Sev 2
+  (family 3-of-5), GARDEN-0032 CONFIRM Sev 3 (family 3-of-5),
+  LAVENDER-0027 CONFIRM Sev 3 (family 2-of-5), ORCHARD-0020 CONFIRM
+  Sev 3 (family 2-of-5), MOSAIC-0052 CONFIRM Sev 3 (family 3-of-4),
+  CAIRN-0043 CONFIRM Sev 3 (family 2-of-5), TERRACE-0037 CLEAN-with-
+  margin (minor flags: left-silhouette non-monotonic setback x326-342
+  y326-340, partial balustrade intent-flag, thin cap-crush margin x578-
+  628 y196-232 — none confirmed-defect tier), SEED-0013 CONFIRM Sev 4
+  (family 2-of-4). Routing: family-class extension block in IMPROVE-PLAN
+  SURVEY CANDIDATES (all district-domain — improve's own intake surface;
+  zero notes to other lanes' plans). Grep-verified zero open
+  duplicates. Census 259 steady 0/0 vs survey-10 snapshot; 10 flips all
+  foreign-domain: 8 entity moves = town-2's gate-lamp off-axis reseat
+  (Bill's correction, committed), 2 lib turnovers = nx-struct-amphi
+  (struct-43) + nx-core-paths (town-2). Gate note: first gate run hit
+  town-2's HEAD landing (ledger law EXACT but prefix regex missing
+  town-) — one paced re-gate at 7bdf230 after town's own widening
+  commit 0878ab4, ALL PASS exit 0 (interleaving recovery, not racing).
+  Verdicts 7 confirmed / 1 clean-with-margin / 0 dropped. Zero world
+  mutations, zero uploads, zero shared-budget use.

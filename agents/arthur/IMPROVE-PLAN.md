@@ -1679,6 +1679,59 @@ open duplicate notes for these objects.
   judged) — family spread unverified.
   Evidence: reviews/survey10-slice/nx-cultivation-orchard-0012/gameplay.png
 
+### survey-11 family-class extensions (2026-09-06)
+
+Second members judged on distinct shas; extend the standing family
+classes family-wide unless decode dissents (confirm-or-drop stays with
+the executing lane). NATIVE 2/8 + ZAI fallback 6/8 disclosed — native
+flapped mid-slice; every verdict corroborates an already-NATIVE family
+class except seed (ZAI-native stack 0003+0013).
+
+- `nx-craft-hamlet-0028` — Sev 2 (survey-11, ZAI): IDENTICAL to
+  hamlet-0007/0015 class — flanking masses L x95-390 / R x545-870
+  float with open sky beneath (undersides y125-215), see-through hole
+  x655-795 y80-120, detached stair slabs x0-135 y58-135 + two airborne
+  slab rows x545-670 y225-298, broken bridge planks x395-545 y26-46 —
+  family 3-of-5. Evidence:
+  reviews/survey11-slice/nx-craft-hamlet-0028/gameplay.png
+- `nx-cultivation-garden-0032` — Sev 3 (survey-11, NATIVE): IDENTICAL
+  to garden-0011/0019 class — rows merge into continuous hedgerow
+  x240-755 (two short gaps only), tan sprouts interspersed = weed
+  grammar, no bed substrate/border/fence; fringes dissolve x160-235 /
+  x745-800; geometry grounded — family 3-of-5. Evidence:
+  reviews/survey11-slice/nx-cultivation-garden-0032/gameplay.png
+- `nx-cultivation-lavender-0027` — Sev 3 (survey-11, NATIVE):
+  IDENTICAL to lavender-0006 class — plant luminance ~22% vs ground
+  ~68% (charcoal-purple dead read, darkest element in frame), hue
+  near-neutral at 18m, rows fused past ~2 deep, stray 2-4px speck
+  clusters along band top y350-364 (x95-235 / x455-545 / x600-880) —
+  family 2-of-5. Evidence:
+  reviews/survey11-slice/nx-cultivation-lavender-0027/gameplay.png
+- `nx-cultivation-orchard-0020` — Sev 3 (survey-11, ZAI): IDENTICAL to
+  orchard-0012 class — crown band x0-960 reads continuous forest edge
+  (sky gaps slot-scale), right-cluster value collapse x680-960 (worst
+  x918-960 y140-235), z-fight banding x695-800 y318-378; trunk rhythm
+  + fruit litter PASS — family 2-of-5. Evidence:
+  reviews/survey11-slice/nx-cultivation-orchard-0020/gameplay.png
+- `nx-gallery-mosaic-0052` — Sev 3 (survey-11, ZAI): IDENTICAL to
+  mosaic-0036/0048 class — no frame/backing, field runs off both
+  lateral edges, ground show-through throughout, far-field dissolve
+  band y345-392 (tiles unresolvable ~40px); geometry clean — family
+  3-of-4. Evidence:
+  reviews/survey11-slice/nx-gallery-mosaic-0052/gameplay.png
+- `nx-wild-cairn-0043` — Sev 3 (survey-11, ZAI): IDENTICAL to
+  cairn-0022 class — floating pebbles isolated against sky above stack
+  tops, six regions (densest x455-555 y290-320, ~8-10 specks), top
+  edge dissolves to speck halo; stacked-stone identity itself PASS —
+  family 2-of-5. Evidence:
+  reviews/survey11-slice/nx-wild-cairn-0043/gameplay.png
+- `nx-temple-seed-0013` — Sev 4 (survey-11, ZAI): IDENTICAL to
+  seed-0003 class — zero vertical presence (10:1 footprint-to-height
+  ellipse x300-655 y377-412, never breaks skyline y346), no seed core
+  at center x440-520, reads ground decal/rubble; grounded — family
+  2-of-4. Evidence:
+  reviews/survey11-slice/nx-temple-seed-0013/gameplay.png
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):
