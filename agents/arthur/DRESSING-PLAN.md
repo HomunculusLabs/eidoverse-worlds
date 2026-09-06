@@ -2026,3 +2026,39 @@ Bill-ruled). REPAIR-REGISTER zero nx-dress.
 - Standing unblock paths (say-once): Bill's SW lamp a/b/c policy call,
   or verdicts on the four-district eye-gate circuit
   (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+--- dress-59 (2026-09-06, pipeline tick 38) — HOLD
+
+- Shard: re-verified EMPTY at source by full-row-window scan (dress-39
+  law) on current bytes. All nine nx-dress Round-1 rows terminal
+  (5/29/30/31 DROPPED — 30 via NATIVE-DROPPED survey-2 marker;
+  32/33/34/37/38 EXECUTED; row 39 routes nx-town improve-own). Probe
+  self-catch disclosed (14th tick-class): the window-scan annotation
+  regex counted only "[DROPPED", silently missing row 30's
+  "[NATIVE-DROPPED survey-2" marker — fixed probe prints 0 open. Probe
+  wrong, world right. NEW survey round-2 intake heads (rows 11
+  belltower / 12 mapboard / 13 monument) are all nx-town-* → improve's
+  own domain, zero dress rows. Fountain Sev-4 intake unchanged:
+  Bill-off-limits, his call, not shard work.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh kind-law recount:
+  exactly 3 live SW r>=35 lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0, kind=light). Spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae unchanged, zero VERDICT lines
+  (grep exit 1 fresh this tick).
+- Hold verification: standing gate ALL PASS real exit 0 at tick-start
+  HEAD c9c3d21 (own dress-58 commit; no sibling commits absorbed this
+  window). Fresh census 259 HTTP-200 first fetch; 11/11 district
+  installs PIN_EXACT store/-aware lib compare (split('/')[-1] idiom)
+  vs the authoritative dress-43 table, comps empty across the set;
+  27 nx-dress = 11 fleet + 16 legacy intact by arithmetic; lights 38
+  (kind histogram thing 221 / light 38 — first probe pass's truthy-kind
+  "lights: 259" line discarded, Counter recount is the idiom).
+  Interlane md5 f6254cd0 steady. Foreign dirt (REPAIR-REGISTER,
+  SWEEP-PLAN, core-paths glb+review, tower3, court placer, census
+  baseline, sweep-sat, fleet watcher, struct terrain probes,
+  review-improve19-pixels, untracked reviews) left untouched.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock (shard empty at source, not idle).
+- Standing unblock paths (say-once): Bill's SW lamp a/b/c policy call,
+  or verdicts on the four-district eye-gate circuit
+  (agents/arthur/reviews/dress-districts-eye-gate.md).
