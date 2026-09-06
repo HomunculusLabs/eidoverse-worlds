@@ -810,6 +810,27 @@ CURRENT hosts. Findings and actions:
   steady; zero uploads (store already held all libs); 2 verbs total
   (b26 remove+spawn).
 
+### [artwalk-61] PIPELINE-MODE HOLD TICK (2026-09-06) — CLOSED (hold, zero mutations)
+Fleet-tick wakeup, full house discipline. Gate ALL PASS real exit 0 at HEAD
+08da3ac (waysign-15 sibling) pre-work. Fresh reads: ARTWALK-PLAN (H 7/7 +
+B-1..B-34 all DONE, counting series closed at artwalk-46), INTERLANE-PROTOCOL
+(f6254cd0 steady), IMPROVE-PLAN shard routing verified at source — zero OPEN
+rows route to nx-artwalk-* (routing row 25 EXECUTED at artwalk-52; worktree
+diff greps zero artwalk rows). Eye-gate packet md5 48bea194 unchanged, zero
+Bill verdict markers. Register 0 artwalk OPEN. Ledger max artwalk-60 → this
+tag. Fresh census 259 / 54 riders, 0 new / 0 gone vs census-29. Cheap lawful
+hold verification: artwalk52-fleet-anchor-reconcile.ts fresh live run
+ALL_RECONCILED exit 0 — 259 census / 54 riders / 38 lights / 34 placers /
+32 host pins / 24 anchors exact; zero verbs, zero uploads, zero
+shared-budget use. The rider fleet absorbed waysign-15's bakery-sign reseat
+with zero drift (sign is a separate nx-sign- entity; all host pins still
+exact, including the b28 court pin). Zero world mutations, no visual PASS
+claimed. Lane HOLDS for Bill on the three unblock paths: counting-series
+eye-gate verdicts (one-line markers in the packet), a Phase F fresh
+commission, or a queue widening. Standing recommendation unchanged: /loop
+stop or a no-LLM monitor if the blockers take a while — the lane resumes
+instantly on any of the three.
+
 ### [artwalk-60] PIPELINE-MODE HOLD TICK (2026-09-06) — CLOSED (hold, zero mutations)
 Fleet-tick wakeup, full house discipline. Gate ALL PASS real exit 0 at HEAD
 6f0c2a0 (sweep-33) pre-work. Fresh reads: ARTWALK-PLAN (H 7/7 + B-1..B-34
