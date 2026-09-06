@@ -196,6 +196,21 @@ legacy core `nx-dress-*` untouched (off-limits set intact). SURVEY INTAKE
 holds only survey-6 (consumed by dress-21). Zero world mutations, zero
 uploads, zero shared-budget use.
 
+**STATE AT dress-23 (2026-09-06, pipeline hold tick — 2nd consecutive)**:
+lawful HOLD — every path closed this tick. Shard queue re-verified EMPTY
+at source: the same nine `nx-dress-*` rows all terminal, zero OPEN rows
+route to the prefix, no un-shard clock running. Own queue: SW lamps only,
+still blocked on Bill's a/b/c budget policy (0 of 3 used); no Bill
+verdict markers in ledger tail or plan; SURVEY INTAKE unchanged (survey-6
+consumed). Hold verification: standing gate ALL PASS real exit 0 at HEAD
+8566495 (own dress-22 commit; no sibling commits absorbed this window);
+fresh live census 259, ALL ELEVEN district installations tuple+lib EXACT
+vs this plan (hedge 3d5c7d44, skeps 87d2dd16, stile 5e9d301d, logpile
+cac71bff, ne-yard 191227da, ne-bench 46f3b6b1, woodstack 692bc54e, cairn
+59031a0c, se-stones 8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f);
+16 legacy core `nx-dress-*` untouched. Zero world mutations, zero
+uploads, zero shared-budget use.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
