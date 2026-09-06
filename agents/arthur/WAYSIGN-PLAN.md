@@ -25,7 +25,7 @@ Rotation: working edge outward from the E road, then craft edge.
 | 1 | `nx-town-inn` | inn | tankard + key | folded out — inn carries a BUILT-IN porch hanging sign (sign_board + brass wheel emblem + flanking lamps, mkv3-landmarks.ts:522-540); a second sign would duplicate the idiom. Defect note for Bill: the built-in emblem reads "wheel", not "tankard" — host redesign belongs to the owner lane, not waysign. |
 | 2 | `nx-town-stable` | livery | drawn horseshoe | DONE waysign-1 |
 | 3 | `nx-town-dyehouse` | dyer | dyed cloth bolt (flax-blue) | DONE waysign-2 |
-| 4 | `nx-town-kiln` | kiln | flame over chamber | pending |
+| 4 | `nx-town-kiln` | kiln | flame over chamber | DONE waysign-3 |
 | 5 | `nx-town-potter` | potter | wheel in profile | pending |
 | 6 | woodyard host (id from census) | woodyard | saw-buck | pending |
 | 7 | `nx-town-windmill` (or nx-windmill) | mill | four-sail cross | pending |
@@ -84,6 +84,25 @@ the census + decode are truth.
   anchor [0, 2.05, 1.13] exact). Distance note: flax-blue darkens toward
   black past ~15m — heritage family color kept; flagged for Bill's
   eye-check.
+
+- waysign-3 `nx-sign-kiln-001` kiln: mkv3-sign-kiln.ts, deterministic ×2,
+  sha be3d85045b335101…, 7 nodes, no comps no lights. Host is a DRUM — front
+  face occupied (sibling b12 film + burn ledger), so PROJECTED-ARM idiom:
+  straps sized to decoded taper circle the upper drum, arms project over
+  the board, board hangs beyond+above the film (3D clear; no occlusion).
+  TWO decode catches pre-placement: v1 arms/board inside the drum (never
+  uploaded); v3 glyph zai-REJECTED (posts/chimneys read) → v4 stepped
+  tapers, opposing leans, flicked hot tips — ACCEPT + 8m PASS. Native
+  vision provider down 3rd consecutive tick (error 1210) — zai-vision
+  fallback, recorded not claimed as native PASS. Placer
+  waysign-place-kiln-1.ts: rider-only SAT, host exemption explicit, b12
+  GAP-BOUNDED exemption (2D measured −0.380 = decoded −0.380; first pin
+  −0.813 was stale hand-math — the gate refused until re-derived from the
+  raised bbox), minGap +2.268 vs nx-town-potter, PLACED_VERIFIED 1 verb,
+  idempotent rerun zero verbs, live tuple [30.471, 2.45, 38.322] yaw
+  −2.4785 (host-relative anchor [0, 2.45, 0.86] exact). Bill eye-check:
+  from the E ring track, the flame-over-chamber board should read on the
+  kiln's mouth face above the heat-contours band, straps hugging the drum.
 
 ## Carried laws
 
