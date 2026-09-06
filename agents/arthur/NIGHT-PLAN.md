@@ -398,3 +398,18 @@ STUDY COMPLETE (all facets judged; packet assembled).
   four verdict classes: sky facet-5, lamp-budget policy D1–D5+N6, N5
   detached-orb, N7 hierarchy inversion. Zero world mutations, zero renders
   judged, no PASS claimed.
+- night-12 (2026-09-06, pipeline-mode hold tick): sixth consecutive hold
+  with NO disposition change. Standing gate ALL PASS real exit 0 at HEAD
+  1b34720 — night-11's own commit, zero commits since, and this tick began
+  by discovering the night-11 sibling window stacked into this same lane
+  (stacked-wakeup class): tag derived fresh from ledger max AFTER its entry
+  landed, so this tick is night-12 with no collision (ledger law honored).
+  Fresh census 259 entities / 38 lights / zero night-prefixed entities
+  (steady vs night-7/8/9/10/11; capture saved /tmp/night-census-12.json).
+  Packet md5 cdc435a2 unchanged since night-7. APPROACH-PLAN last touched
+  5d54edd (pre-night-10), so the five defect-note sections stand as verified
+  (D1–D5 budget-bound, N1/N2/N4–N7 informational). Interlane md5 f6254cd0
+  matches the sweep-28 baseline. Zero actionable night- shard rows in
+  IMPROVE-PLAN. Same four verdict classes outstanding: sky facet-5,
+  lamp-budget policy D1–D5+N6, N5 detached-orb, N7 hierarchy inversion.
+  Zero world mutations, zero renders judged, no PASS claimed.
