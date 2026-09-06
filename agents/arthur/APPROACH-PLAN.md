@@ -448,6 +448,30 @@ sibling lib advance (nx-town-row-cottage bd88cd38→add42aea = improve lane's
 row-18 execution in its own nx-town domain). Zero world mutations, zero
 uploads; no visual PASS claimed.
 
+### approach-19 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD 407da03 (improve-15 row-cottage execution
+absorbed; one later sibling waysign-24 landed by append time — normal
+interleave); interlane md5 f6254cd0 steady; APPROACH-PLAN read fresh (md5
+5535d03b at turn start). Shard routing verified at source by numbered rows:
+IMPROVE-PLAN rows 16 (sw-lane-003) and 36 (nw-lane-001) both terminal — row
+16 EXECUTED approach-4 + superseded by two CLEAN survey re-judges of the fixed
+bytes, row 36 EXECUTED approach-5 native all-four-drop close; zero OPEN rows
+route to nx-approach-, no un-shard clock. Own queue: three legs PLACED_VERIFIED,
+D1/D2/D4-leg closed in-budget; SE leg awaits Bill's a/b/c siting call (his
+alone); D3/D5 + N5-N7 remain Bill budget/verdict classes (night-4/5 defect
+notes stand verbatim, re-read this tick). Cheap lawful hold verification (fresh
+live census 259, approach domain 17): all three leg libs PIN_EXACT (nw
+dc256065879371d8, ne dc52264c04cfe5bb, sw fb04a144cc1fc458) at the exact
+standing tuple (0,0,0) yaw 0 scale 1; ten `-l` lights standing (6 leg at
+authored positions + 4 gate companions); four gate lamps untouched
+(18b69a6bb2f5862f). Census diff vs the prior approach capture: 0 new / 0
+gone; all lib flips on shared ids match already-ledgered sibling advances
+(sweep-34/improve-15 classifications). In-tick probe bug caught: leg-light
+assertion assumed non-null lib on kind=light entities (None lib is legal);
+world right, probe wrong. Zero world mutations, zero uploads; no visual PASS
+claimed.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.
