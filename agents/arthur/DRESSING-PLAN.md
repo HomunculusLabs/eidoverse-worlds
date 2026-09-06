@@ -1584,3 +1584,38 @@ thing 221 / light 38); interlane md5 f6254cd0 unchanged. Foreign dirt
 tower3, court placer, review-night files, struct terrain probes, fleet
 watcher, untracked reviews) left untouched. Zero world mutations, zero
 uploads, zero shared-budget use, no visual PASS claimed.
+
+**STATE AT dress-44 (2026-09-06 18:02 EDT, pipeline hold tick — 23rd
+consecutive)**: lawful HOLD — every path closed this tick. Shard queue
+re-verified EMPTY at source by full-row-window scan (dress-39 regex law:
+annotation window runs to the NEXT numbered row): all nine nx-dress
+Round-1 rows terminal — 5/29/30/31 DROPPED native rejudge (30 via the
+survey-2 NATIV-DROPPED marker mid-block), 32/33/34/37/38 EXECUTED
+reseats; row 39 routes nx-town to improve-own; survey-8 nx-dress-fountain
+DRESS-DOMAIN legacy-core off-limits, Bill's call — NOT shard work;
+survey-9/10/11 rounds route outside the prefix (zero OPEN nx-dress rows).
+Own queue: SW lamps only, still blocked on Bill's a/b/c budget policy
+(fresh recount: SW-quadrant r>=35 = exactly 3 live lights — 2 approach
+leg lamps (nx-approach-sw-lamp-001-l r39.7 / -002-l r55.4) + 1 mile
+lantern (nx-mile-sw-013-l r64.0, kind=light, dress-38 convention) =
+spend 0 of 3). Zero Bill verdict markers in ledger tail AND
+dress-districts eye-gate packet fd677cae unchanged (delivered once at
+dress-12, zero VERDICT lines). Hold verification: standing gate ALL PASS
+real exit 0 at tick-start HEAD 30dec29 (ledger law 2370298 EXACT); fresh
+live census 259, ALL ELEVEN district installs PIN_EXACT
+lib+tuple+yaw-radians (hedge 3d5c7d44 (-35.34,0.04,62.14), skeps 87d2dd16
+(-53.57,0.04,54.5), stile 5e9d301d (-45.25,0.05,54.45), logpile cac71bff
+(-66.8,0.03,51.2), ne-yard 191227da (55.91,-0.03,87.1) yaw 2.57087,
+ne-bench 46f3b6b1 (14.23,0,73.13), woodstack 692bc54e (59.71,-0.03,51.78),
+cairn 59031a0c (58.7,0.01,-58.7), se-stones 8dafb9e5 (52.61,-0.01,-47.8),
+sw-gravel fd21de9f (-45.22,-0.05,-59.46), sw-prayer 5074600f
+(-52.26,-0.03,-64.53) — comps empty across the set); 27 total nx-dress-*
+= 11 district + 16 legacy core intact by arithmetic; census-wide lights
+38 (kind histogram thing 221 / light 38); interlane md5 f6254cd0
+unchanged. Probe note: first census fetch 403'd on urllib (no UA) — one
+paced retry via the curl UA chassis succeeded; gateway-side noise, no
+evidence lost. Foreign dirt (IMPROVE-PLAN improve-17 edit at tip, mkv3-
+landmarks, core-paths glb+review, tower3, court placer, review-night
+files, struct terrain probes, fleet watcher, untracked reviews) left
+untouched. Zero world mutations, zero uploads, zero shared-budget use,
+no visual PASS claimed.
