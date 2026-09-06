@@ -64,6 +64,44 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 
 ## Findings register
 
+|| sweep-40 | 2026-09-06 | 259==259 fully quiet (221 thing + 38 light; 0 arrivals, 0 departures, 0 drift on id+pos+yaw+lib vs the committed sweep-39 baseline — second fully-quiet delta since sweep-37; no snapshot rewrite, committed file already exact) | exit 4 SWEEP COVERAGE HOLE on exactly the four bbox:null lamps (217 bbox non-light, 215 classified, 0 unclassified — correct loud state per R-120) | tier-1 4/4 per-leg verified (core 64/64 ok ALL_PASS, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 eighteenth cycle inn 6/6 + stable 5/5 ALL PASS | pins 14/15 + angler classified (racing law), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 bbox:null (R-120) + 4 companions live @ 1.96m, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, ledger law exact 2370298 at gate | FINDINGS — R-120 note 3 appended (escalation law) |
+
+sweep-40: THIRD-ESCALATION sweep, no new findings. R-120 (Sev 1) re-proven
+independently with fresh evidence (truncated lib 404, full 16-hex 200 with
+7648B, bbox:null x4 at off-axis tuples, SAT exit 4 on exactly those four,
+companions live) — now UNADDRESSED a THIRD consecutive sweep; note 3
+appended to REPAIR-REGISTER per the escalation law and named for Bill.
+NEW evidence in note 3: night-49 @ 6802c85's "town-lane reseat stable end
+state" covers only the four -l companion lights it re-pinned; the lamp
+meshes remain on the truncated lib; town-3 and town-4 ran after sweep-39
+with zero register action; no town plan/loop exists (re-checked this
+sweep). R-121 (Sev 2) unchanged; fix travels with the R-120 re-spawn.
+Census 259==259 SECOND fully-quiet delta since sweep-37 (0/0/0 on
+id+pos+yaw+lib vs the committed sweep-39 snapshot; no rewrite needed).
+Overlap: exit 4 loud on exactly the four R-120 lamps (215 classified, 0
+unclassified). Tier-1 4/4 per-leg verified 81/81: core 64/64 ok max 0.38
+ALL_PASS, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37. Tier-2 eighteenth
+cycle: inn 6/6 + stable 5/5 ALL PASS. Integrity: pins 14/15 + angler
+classified (quarantined sibling draft, racing law); carousel comp bag
+exact 7 + lib ce3633992d07055e (probe self-catch: field is `comp` not
+`comps` — first read showed {}, corrected, world correct); windmill
+0993836012d1b17d + woodyard 1f2c6f592095b204 exact; 38 lights; interlane
+md5 f6254cd0 stable; ledger law exact 2370298 at gate (tail later moved
+to 2370302 via sibling dress-48 mid-tick — base will be re-read at
+append). Probes this tick: SAT exit printed 0 after `tail` (tail's exit,
+not bun's — content-anchored on the SWEEP COVERAGE HOLE line + four
+NO_BBOX ids, known class); core max-arr extractor keyed wrong field
+names, verdict anchored on ok-count + ALL_PASS status + real exit 0;
+register first-draft attributed 541c42e to town-4 — caught and corrected
+pre-commit (approach-34's hash; town-4 is 3be2573). Foreign working-tree
+dirt (IMPROVE-PLAN, soundmirror mk, core-paths GLB/review, tower3, court
+placer, fleet watcher, terrain probes, improve18 mapboard decode/review)
+is sibling work-in-flight, untouched per interlane law. Next tier-2 pair
+(sweep-41): potter + market (nineteenth cycle). Standing note for Bill:
+with R-120 open expect exit 4 to persist until the town lane re-spawns
+the four lamps on the full 16-hex lib — correct loud state, not a tool
+defect; the four gate landmarks remain invisible meanwhile.
+
 sweep-39: ESCALATION sweep, no new findings. R-120 (Sev 1) re-proven live
 with fresh evidence (truncated lib 404 / full 200 unchanged, bbox:null x4
 at identical tuples, hardened SAT exit 4 on exactly those four) and now
