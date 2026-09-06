@@ -60,6 +60,10 @@ const tupleOK = (entity: any) => !!entity
   && entity.scale === 1
   && Object.keys(entity.comp ?? {}).length === 0;
 if (before[ID] && !tupleOK(before[ID])) die("existing B-11 entity drift");
+// Idempotent path before SAT (struct-36 class): when the rider already stands
+// exact, pre-mutation SAT against LATER-placed fat-bbox neighbors (approach
+// lanes, waysigns) must not veto a standing verified placement.
+if (before[ID] && tupleOK(before[ID])) { console.log(JSON.stringify({ status: "PLACED_VERIFIED", id: ID, ...want, emittedVerbs: 0, idempotentShortCircuit: true })); process.exit(0); }
 
 const fromEntity = (entity: any): OBB => {
   const y = entity.yaw ?? 0, co = Math.cos(y), si = Math.sin(y);

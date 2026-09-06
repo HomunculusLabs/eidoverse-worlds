@@ -7,7 +7,7 @@ const ROOT = "/Users/t3rpz/projects/eidoverse-worlds";
 const WORLD = "commons-next";
 const ID = "nx-artwalk-b9-dyehouse-crossing-loom";
 const HOST = "nx-town-dyehouse";
-const HOST_LIB = "store/8d750d7826584d9d.glb";
+const HOST_LIB = "store/888be3597d2f772f.glb";
 const SHA = "6c3c85dee69191cf83802dc76fe15150a217e10f20fc5a5b2491aa06a070658e";
 const LOCAL: [number, number, number] = [0, 0.48, -0.77];
 const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
@@ -60,6 +60,8 @@ const tupleOK = (entity: any) => !!entity
   && entity.scale === 1
   && Object.keys(entity.comp ?? {}).length === 0;
 if (before[ID] && !tupleOK(before[ID])) die("existing B-9 entity drift");
+// Idempotent path before SAT (struct-36 class) — see b11 note.
+if (before[ID] && tupleOK(before[ID])) { console.log(JSON.stringify({ status: "PLACED_VERIFIED", id: ID, ...want, emittedVerbs: 0, idempotentShortCircuit: true })); process.exit(0); }
 
 const fromEntity = (entity: any): OBB => {
   const y = entity.yaw ?? 0, co = Math.cos(y), si = Math.sin(y);

@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 const R = "/Users/t3rpz/projects/eidoverse-worlds", W = "commons-next",
   ID = "nx-artwalk-b26-wayband",
-  HOST = "nx-approach-lamp-n", HL = "store/409084706b801f8d.glb",
+  HOST = "nx-approach-lamp-n", HL = "store/18b69a6bb2f5862f.glb",
   SHA = "7594436a996e8ded58458521253b01b70cc2e65ea7b9a20857ecb67f699a02c3",
   L: [number, number, number] = [0, 1.5, 0],
   cfg = JSON.parse(readFileSync(`${R}/agents/arthur/config.json`, "utf8")),

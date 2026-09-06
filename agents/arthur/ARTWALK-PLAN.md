@@ -775,6 +775,41 @@ and the full south↔north hall route remains 8/8 PASS, max arrival 0.360m. No
 world mutation and no visual PASS are claimed. Durable result: phase-B riders
 now explicitly reconcile host evolution before the next intervention.
 
+### [artwalk-49] INTERRUPTED-WINDOW RECOVERY + FLEET RECONCILIATION (2026-09-06) — CLOSED
+The interrupted artwalk-49 window (struct-9 class: b7 micro-reseat executed live,
+ledger/plan/commit missing) is closed, and the whole rider fleet re-verified against
+CURRENT hosts. Findings and actions:
+- b7 shrine-stars: reseat ALREADY_EXACT vs current host 53709062 (dy 0.0,
+  zero-verb idempotent rerun) — the interrupted window's mutation stands as
+  the intended contract; no re-place.
+- 17 placer HOST_LIB re-pins (inn 6e6ff2d0, windmill 09938360, kiln 4d8ef8fc,
+  market 8c16ea9a, stable 5beff62e, dyehouse 888be359, potter dad7c82e,
+  tower-house 11b31000, longhouse f2344409, shrine 53709062, gate-s hl
+  d1b90d6f) verified against live census — all match current host libs.
+- 34/34 B-series placers now PLACED_VERIFIED, zero verbs: five had the
+  struct-36 idempotency-check-order bug (SAT ran before the already-live
+  check, so later-placed fat-bbox approach lanes and waysigns vetoed
+  standing verified riders). Short-circuit added to b9/b11/b12/b32/b33.
+- ONE REAL DEFECT FIXED LIVE: b26 way-band kept absolute yaw pi after
+  polish-280 rotated its approach-lamp host to -pi/2 — a 90° misalignment
+  of the band's brass datum vs the host crossarm. Reseated remove+spawn at
+  the exact host-derived tuple (0,1.5,10) yaw -1.5707963267948966, lib
+  7594436a unchanged, comp {} both sides, RESEATED_VERIFIED + zero-verb
+  idempotent rerun. The e/s/w b34 siblings (placed after the rotation)
+  were already correct — only b26 needed the artwalk-39 law applied.
+- Band-level audit of seven evolved hosts: b2 inn gable lip y-min 3.04
+  unchanged (predates, benign); b3 potter ramp extended at -x away from
+  porch posts (benign); TWO interior-rider co-habitations routed to
+  INTERIOR-PLAN (b9 loom vs interior-17 dyer tally board; b10 crown vs
+  interior-20 grist ledger east edge) — interior-lane riders, artwalk
+  reports, does not touch (interlane entity-domain law).
+- New scripts (durable, lane-owned): artwalk49-b7-reseat.ts,
+  artwalk49-b26-reseat.ts, artwalk49-recovery-audit.ts,
+  artwalk49-band-identify.ts (+ the interrupted window's band/mount
+  decode tools). Gate ALL PASS real exit 0 pre-mutation; census 259
+  steady; zero uploads (store already held all libs); 2 verbs total
+  (b26 remove+spawn).
+
 ### [artwalk-48] CHARTER WALL HOST-PIN REFRESH, SECOND GENERATION (2026-09-06) — CLOSED
 Sibling improve-5 evolved `nx-town-hall` again (1306527a→c92c1f91: trueGableHalf
 D2 fix, solid ridge D3, N-door casing/header D1, 5-anchor warm light kit, 28

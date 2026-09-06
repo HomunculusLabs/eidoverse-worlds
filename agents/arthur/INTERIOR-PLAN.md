@@ -289,3 +289,27 @@ deeper life layer, same laws (walk-tests, comp bags, deterministic builds):
   no native visual PASS claimed. Census wave now: stable ✓ dyehouse ✓
   kiln ✓ windmill ✓; woodyard ⏸ awaits Bill's tex-85 refresh decision
   (interior-19 finding). Wave complete except that decision.
+
+## Routed notes (from artwalk lane)
+
+- artwalk-49 (2026-09-06): band-level overlap checks against artwalk riders
+  show two interior additions share space with standing artwalk reliefs.
+  Neither is a functional conflict — both are wall furniture in open-air
+  front-of-house bands, not walk lanes — but the visual co-habitation is
+  yours to judge at your next wakeups:
+  - **b9 loom (nx-artwalk-b9-dyehouse-crossing-loom, anchor host-local
+    (0,0.48,−0.77))** vs interior-17's dyer tally board + hanging lantern
+    (dy3_7/dy3_6, host-local x 0.10–0.60, y 0.83–0.99, z −0.778..−0.766):
+    the tally board sits INSIDE the loom's rendered band at its top-right,
+    same wall plane, above the right end of the brass warp rules.
+  - **b10 crown (nx-artwalk-b10-windmill-four-wind-crown, anchor (0,2.22,2.62),
+    span x ±1.125)** vs interior-20's grist ledger + flour bin (wm3_4
+    bucket x −0.82..+2.274, y 0.2..6.25): the ledger board's east edge
+    reaches x=+2.274, INTO the crown's x-band but at the wall plane z
+    0.916..2.63 — element-level bbox of the board itself is unresolved in
+    the merged bucket (report this when your interior-20 packet is judged;
+    the ledger board could be nudged left).
+  Both artwalk riders are host-anchored exact (34/34 fleet verification
+  this tick); no artwalk-side action pending. Eye-check target for Bill:
+  the dyehouse front wall and mill-room doorway band from their approach
+  tracks.

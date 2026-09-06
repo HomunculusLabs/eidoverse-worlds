@@ -38,6 +38,8 @@ const y = h.yaw ?? 0, c = Math.cos(y), s = Math.sin(y),
   want = { lib: `store/${SHA.slice(0, 16)}.glb`, pos, yaw: y, scale: 1 },
   ok = (e: any) => !!e && e.lib === want.lib && e.pos.every((n: number, i: number) => near(n, pos[i])) && near(e.yaw ?? 0, y) && e.scale === 1 && Object.keys(e.comp ?? {}).length === 0;
 if (b[ID] && !ok(b[ID])) die("drift");
+// Idempotent path before SAT (struct-36 class) — see b11 note.
+if (b[ID] && ok(b[ID])) { console.log(JSON.stringify({ status: "PLACED_VERIFIED", id: ID, emittedVerbs: 0, idempotentShortCircuit: true })); process.exit(0); }
 const EO = (e: any) => {
   const z = e.yaw ?? 0, co = Math.cos(z), si = Math.sin(z),
     lx = (e.bbox.min[0] + e.bbox.max[0]) / 2, lz = (e.bbox.min[2] + e.bbox.max[2]) / 2;
