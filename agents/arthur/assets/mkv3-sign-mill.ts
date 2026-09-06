@@ -65,35 +65,53 @@ box(g, "sg_board", 0.5, 0.4, 0.05, 0, -0.45, 0.19, 0x7c6832);
 texBox("sg_face", 0.42, 0.32, 0.04, 0, -0.45, 0.235, boneTex);
 texBox("sg_face_back", 0.42, 0.32, 0.04, 0, -0.45, 0.145, boneTex);
 
-// ---- GLYPH: FOUR-SAIL CROSS (both faces) ----
-// Brass hub at the board center; four timber shafts on the diagonals
-// (±45°), each with a pale cloth tip panel on the outer half (the mill's
-// reefed sails). Board-filling scale per waysign-2 v2 law.
+// ---- GLYPH: FOUR-SAIL PINWHEEL (both faces) ----
+// v6 (R2-5 emblem-collapse fix, waysign-12): PINWHEEL read — small solid
+// brass hub DISC + clear bone annulus + four separate WEDGE sails (narrow
+// root bar, wide tip = stepped taper, kiln waysign-10 law), one wide bone
+// slit per sail. Kills the generic-X/crossed-tools read: v5's hub 0.115
+// square + roots at r 0.048 MERGED the center into one clump (confirmed
+// defect, native 18m re-judgment this tick); separation now carries the
+// windmill identity at distance. Hub is a DISC not a ring — the potter
+// sign owns the ring read. Envelope law: mount/chains untouched, glyph
+// stays within the face planes (max |x| 0.158 < face 0.21) — decoded
+// bbox x/z byte-identical to v5, SAT-neutral re-place.
 const M = new THREE.MeshStandardMaterial({ color: TIMBER, roughness: 0.9 });
 const C = new THREE.MeshStandardMaterial({ color: TIPCLOTH, roughness: 0.85 });
-const B = new THREE.MeshStandardMaterial({ color: 0xd0aa50, roughness: 0.3, metalness: 0.6 });
+// v8: metalness 0.6→0.2, roughness 0.45 — PIXEL DECODE of the 10m render
+// proved the hub rendered (111,79,31) dark-brown (metal reflects the
+// rig's black void, no env map) instead of bright brass; judge + decode
+// agree the center anchor was missing. Direct+hemi light now reaches it.
+const B = new THREE.MeshStandardMaterial({ color: 0xe8c36a, roughness: 0.45, metalness: 0.2 });
 const S = new THREE.MeshStandardMaterial({ color: 0xeae6c8, roughness: 0.85 });
 for (const [gi, gz] of [[0, 0.28], [1, 0.10]] as const) {
     for (let di = 0; di < 4; di++) {
-        const ang = Math.PI / 4 + (di / 4) * Math.PI * 2; // diagonals
+        // v9: ORTHOGONAL arms (di·90°) — the mill's real sails are an
+        // upright "+" (survey-2 native finding), and crossed-TOOLS read on
+        // the DIAGONAL; the axis switch alone kills the R2-5 ambiguity.
+        // The rig matprobe proved brass renders (201,165,85) lit but the
+        // board sits in the eave-shadow band (~0.45×) — a colored hub can
+        // never anchor the center on this face. Instead the HUB IS A HOLE
+        // (potter v5 "wheel reads by its hole" law): arm roots start at
+        // r 0.09, bounding a board-value disc that IS the pale hub.
+        const ang = (di / 4) * Math.PI * 2; // orthogonal + cross
         const dx = Math.cos(ang), dy = Math.sin(ang);
-        // v4: DARK blade silhouette (family law — every accepted waysign
-        // glyph is dark-on-pale; v1..v3's pale cloth dissolved into the
-        // bone field). Blade = dark trapezoid approximated by inner narrow
-        // + outer wide segments, tapering outward like a mill sail.
-        texBox(`glyph_in_${gi}_${di}`, 0.075, 0.034, 0.020, dx * 0.048, -0.45 + dy * 0.048, gz, M, ang);
-        texBox(`glyph_out_${gi}_${di}`, 0.115, 0.058, 0.020, dx * 0.145, -0.45 + dy * 0.145, gz, M, ang);
-        // pale lattice slits inside each blade (the reefed-lattice sail
-        // cue — small bone squares proud of the dark blade)
-        for (let li = 0; li < 2; li++) {
-            const t = 0.115 + li * 0.075;
-            texBox(`glyph_slit_${gi}_${di}_${li}`, 0.030, 0.032, 0.023, dx * t, -0.45 + dy * t, gz, S, ang);
-        }
+        // root segment r 0.09..0.135 (across 0.065); tip r 0.135..0.185
+        // (across 0.100) — ~1.5× flare survives 10m; max corner radius
+        // 0.1916 < face half 0.21 — envelope law holds.
+        texBox(`glyph_root_${gi}_${di}`, 0.045, 0.065, 0.020, dx * 0.1125, -0.45 + dy * 0.1125, gz, M, ang);
+        texBox(`glyph_tip_${gi}_${di}`, 0.050, 0.100, 0.020, dx * 0.160, -0.45 + dy * 0.160, gz, M, ang);
+        // one wide bone slit mid-sail (the reefed-lattice cue, close read)
+        texBox(`glyph_slit_${gi}_${di}`, 0.032, 0.040, 0.023, dx * 0.160, -0.45 + dy * 0.160, gz, S, ang);
     }
-    // hub: bright saturated brass disc over the blade root (v5: judge
-    // ACCEPT with a margin note — hub near minimum size, bumped 0.09→0.115
-    // to secure the mill read at adverse angles/low light)
-    texBox(`glyph_hub_${gi}`, 0.115, 0.115, 0.024, 0, -0.45, gz, B);
+    // hub: small brass dot r 0.032 inside the bone hole — a warm close-
+    // range accent only (renders dark-warm in the shadow band; the HOLE
+    // carries the distance read, not this disc)
+    const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.032, 0.032, 0.024, 12), B);
+    hub.name = `glyph_hub_${gi}`;
+    hub.rotation.x = Math.PI / 2;
+    hub.position.set(0, -0.45, gz);
+    g.add(hub);
 }
 
 mergeByMaterial(g, "sgmil");

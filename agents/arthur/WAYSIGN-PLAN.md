@@ -223,12 +223,13 @@ not tankard" — host redesign belongs to the owner lane (improve queue
 item, not waysign's), recorded here so it isn't lost.
 
 Rotation: R2-1 → R2-7 (worst-first provisional; re-rank after native
-re-judgment). NEXT OPEN: R2-5 (mill) — R2-1 DONE waysign-8 (smithy live
+re-judgment). NEXT OPEN: R2-6 (potter) — R2-1 DONE waysign-8 (smithy live
 62a8c7fc, court-wall host truth corrected), R2-2 DONE waysign-9 (dyer
 live 8ce2081f, scale-not-hue root class), R2-3 DONE waysign-10 (kiln
 live ecbad903, dominant-tongue scale fix + bone lift), R2-4 DONE
 waysign-11 (woodyard live f46e12ae, pre-place-interrupted sibling window
-recovered, fat-stroke X trestles). Each item: full
+recovered, fat-stroke X trestles), R2-5 DONE waysign-12 (mill live
+870256ce, orthogonal + hub-hole structural fix). Each item: full
 chassis — host anchor re-derived from CURRENT tuple per host-rider law,
 rider-only SAT + exemption ladder, unlit by default, 8m gate. Native
 vision is primary judge; ZAI fallback only when native is down that tick,
@@ -315,7 +316,43 @@ disclosed.
   deterministic ×2, 6 nodes, envelope x/z byte-identical (SAT-neutral);
   reseat remove+spawn exact tuple 58f5cbe3→f46e12ae, comp {} both sides,
   idempotent zero-verb rerun; host truth re-verified (1f2c6f59 live).
-  R2 queue: R2-5 mill next.
+- waysign-12 `nx-sign-mill-001` R2-5 DONE (emblem-collapse fix, STRUCTURAL):
+  native re-judgment on exact live bytes 5b6a55bd (18m oblique, host+b10
+  crown at live census poses; first native call error 1210, retry
+  succeeded — intermittent flap) CONFIRMED the finding: emblem reads
+  generic X / "four dots around a center", no sail structure resolvable.
+  Root cause TWO-fold: (a) v5's hub 0.115 square merged the blade roots
+  into one center clump; (b) MATPROBE on the rig's exact lighting proved
+  brass metal .6/.3 renders (146,119,59) dark and even de-metaled .2/.45
+  brass (201,165,85 lit) sits in the eave-shadow band (~0.45x) — a
+  colored hub can NEVER anchor the center on this face; PIXEL DECODE of
+  the v8 10m render confirmed hub rendered (107,76,29) timber-dark.
+  Fix v9 (STRUCTURAL, not color): arms rotated to ORTHOGONAL + (the
+  mill's real sails are an upright "+", survey-2 native finding;
+  crossed-TOOLS read on the diagonal — the axis switch alone kills the
+  R2-5 ambiguity), HUB IS A HOLE (potter v5 "wheel reads by its hole"
+  law): arm roots start r 0.09 bounding a board-value pale disc —
+  rig-bright by construction; flared tips (root across 0.065 -> tip
+  0.100), brass demoted to r 0.032 close-range accent dot. Judge battery
+  (ZAI fallback — native down error 1210 x2 at judge time, disclosed,
+  not claimed native): 10m crop ACCEPT 5/5 (orthogonal flared sails,
+  pale hub hole, windmill read, balanced margins; minor: vertical
+  margins 1-2px tighter than horizontal, sub-gating), 18m ensemble
+  ACCEPT 4/4 (marginal orthogonal read at 18m closed by the 2.25x 10m
+  crop; clean separation from b10 crown; graceful far-LOD), isolated
+  ACCEPT 4/4 (polish-282; construction/chains/symmetry clean, rear face
+  occlusion-verified), oblique ACCEPT 3/3. sha 870256ce deterministic
+  x2, 6 nodes, envelope x/z byte-identical to v5 (x +/-0.272, z
+  -0.03..0.292 — decode-verified) = SAT-neutral. Reseat placer
+  waysign-place-mill-2.ts (remove+spawn one WS, timer-paced): host truth
+  09938360 = local bytes, anchor [-1.6,2.78,2.5] exact, comp {} both
+  sides, minGap +0.339 vs b10 crown, PLACED_VERIFIED 2 verbs,
+  idempotent zero-verb rerun. Bill eye-check: walk the W road from the
+  ring toward the windmill — the mill board left of the artwalk crown
+  should now read an UPRIGHT four-arm cross with flared sail tips and a
+  pale hole at its hub, clearly not a diagonal X; at 8-10m the flares
+  and hole resolve; the building's own sails confirm the trade.
+
 
 ## Carried laws
 
