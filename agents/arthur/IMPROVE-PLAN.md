@@ -731,6 +731,14 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     idempotent rerun; census bbox z-extent ~0.5; siblings byte-identical.
     REVERT: checkout mk source, rebuild (byte-repro proven this tick),
     re-place old sha 1f1a10f4dce71a0e at same tuple.]
+    [STATE improve-18 (build+audit landed, world untouched — run budget):
+    sha 383c6ad3 ×2 deterministic, 24 nodes ==24, 48 elements; AUDIT ALL
+    PASS 16/16 (manifest-driven, RED ×8 on baseline); three seating defects
+    caught by decode PRE-PLACE (FACE g-vs-mapG frame error; torus hd; pin
+    hd) — none shipped; post/plate composite decoded NOT a defect (0.183m
+    stand-off). REMAINS next wakeup: renders day/night both faces + judged,
+    remove+spawn re-place exact tuple + idempotent + census. Live still
+    1f1a10f4; zero uploads/verbs this tick.]
 
 28. `nx-town-monument` — pinhole at ring intersection; pedestal face
     crushed. Sev 3. (guard: none)
