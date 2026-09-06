@@ -372,3 +372,14 @@ STUDY COMPLETE (all facets judged; packet assembled).
   nothing to execute). Lane still HOLDS on Bill's four verdict classes:
   sky facet-5, lamp-budget policy D1–D5+N6, N5 detached-orb, N7 hierarchy
   inversion. Zero world mutations, zero renders judged, no PASS claimed.
+- night-10 (2026-09-06, pipeline-mode hold tick): fourth consecutive hold
+  with NO disposition change. Standing gate ALL PASS real exit 0 at HEAD
+  1f80312 (night-9's own commit — zero sibling commits since). Fresh census
+  259 entities / 38 lights / zero night-prefixed entities (steady vs
+  night-7/8/9). Packet md5 cdc435a2 unchanged since night-7. APPROACH-PLAN
+  clean at HEAD with zero commits since night-9's verbatim verification —
+  the five defect-note sections stand as verified (D1–D5 budget-bound,
+  N1/N2/N4–N7 informational). Zero night- shard rows in IMPROVE-PLAN.
+  Same four verdict classes outstanding: sky facet-5, lamp-budget policy
+  D1–D5+N6, N5 detached-orb, N7 hierarchy inversion. Zero world mutations,
+  zero renders judged, no PASS claimed.
