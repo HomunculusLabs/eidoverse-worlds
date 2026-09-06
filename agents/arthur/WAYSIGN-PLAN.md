@@ -820,8 +820,34 @@ only when native is down that tick, disclosed.
   0993836012d1b17d, woodyard 1f2c6f592095b204, dyehouse
   888be3597d2f772f, kiln 4d8ef8fc, potter dad7c82e, forge
   620120c4d6f0b4a0, inn 6e6ff2d08df9b3fb); interlane md5 f6254cd0
-  steady. Zero world mutations, zero uploads, zero shared-budget use,
-  no visual PASS claimed. Lane HOLDS for Bill's eye-gate verdicts
+  steady. Zero world mutations, zero uploads, zero shared-budget use, no
+  visual PASS claimed. Lane HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+  sign's build ahead of rotation.
+
+- waysign-33 HOLD (pipeline mode, 17th consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court brace closures); zero OPEN
+  IMPROVE-PLAN rows route to `nx-sign-*` (sharding section read fresh at
+  source line 878: `nx-sign-*` is the routing-law's own "already R2"
+  example, open split struct/dress/approach/improve-own only; every other
+  nx-sign mention inspected this tick is a historical executed record);
+  eye-gate packet md5 8b88b6b3 unchanged, zero Bill verdict markers.
+  Cheap lawful hold verification: standing gate ALL PASS real exit 0 at
+  HEAD 9f13b40 (night-45 at tip); fresh live census 259 total, exactly 8
+  `nx-sign-*` ids (no strays), ALL 8 riders PIN_EXACT 8/8 at ledgered
+  tuples AND libs (stable afee37dd [40.9,0,0] yaw −π/2, dyer 8ce2081f,
+  kiln ecbad903, potter 3a6c8fe7, woodyard f46e12ae, mill 870256ce,
+  bakery 49342c52 [14.023,0,−18.769] yaw 2.234, smithy 3522e5ab
+  [23.777,0,−10.831] yaw −0.9076) + all 9 hosts LIB_STABLE (stable
+  98f2d5b6 waysign-19 re-validation stands, court 59534b10, windmill
+  0993836012d1b17d, woodyard 1f2c6f592095b204, dyehouse
+  888be3597d2f772f, kiln 4d8ef8fc, potter dad7c82e, forge
+  620120c4d6f0b4a0, inn 6e6ff2d08df9b3fb); interlane md5 f6254cd0
+  steady. Sibling dirt in the working tree (IMPROVE-PLAN.md rows,
+  mkvillage-houses.ts, tower3, court placer, review dirs — improve/struct
+  lanes in flight) left untouched, nothing foreign staged. Zero world
+  mutations, zero uploads, zero shared-budget use, no visual PASS
+  claimed. Lane HOLDS for Bill's eye-gate verdicts
   (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
   sign's build ahead of rotation.
 

@@ -234,6 +234,58 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   IMPROVE-PLAN rows carried the other five (improve-own/district
   domains). Zero world mutations, zero uploads, zero shared-budget use.
 
+- survey-9 (2026-09-06, NATIVE 8/8 after one 1210 flap — single paced
+  retry recovered, then ZAI fallback was used for SIX first-pass
+  judgments while native was flapping, ALL SIX subsequently RE-JUDGED
+  NATIVE same tick per the judge-availability opportunistic law; every
+  verdict below carries its final judge, disclosed, 18m gameplay,
+  fresh live store bytes 8/8 HTTP 206 curl UA from /library/store/ on
+  exact census-9 libs): rotating district pass over never-judged
+  families (severity backlog still drained; survey-7/8 candidates are
+  intake rows not re-judge debt). Slice = one object per family:
+  temple-terrace-0035, temple-labyrinth-0004, craft-cloister-0008,
+  craft-hamlet-0007, craft-statuary-0005, gallery-mosaic-0036,
+  wild-forest-0010, wild-cairn-0022 (real slot ids — NOT -0001; first
+  fetch attempt on invented -0001 hashes failed closed 404 and was
+  re-derived verbatim from the fresh census). Verdicts: HAMLET-0007
+  CONFIRM Sev 2 UNANIMOUS ZAI+native (identity fail — abstract blocky
+  tower/ruin; both flanking upper masses hover with open sky beneath,
+  black undersides, zero support; detached stair-slab runs left+right;
+  true see-through hole in mid-tower column; value crush). MOSAIC-0036
+  CONFIRM Sev 3 UNANIMOUS (loose flat tiles read paving scatter not
+  artwork; no frame/backing; silhouette dissolves; no floats). CAIRN-
+  0022 CONFIRM Sev 3 UNANIMOUS (true floating pebble spheres isolated
+  against sky above stack tops, both judges; blob-heap flirt margin).
+  TERRACE-0035 CLEAN (stepped ziggurat reads; weak temple nuance =
+  margin note only). LABYRINTH-0004 CLEAN native re-judge (concentric
+  rings + center orb read; low-profile identity depends on wall-top
+  pattern; raised-center/entrance-notch = margin tier). CLOISTER-0008
+  CLEAN native strict re-judge — FLIPPED from ZAI's two-floating-orbs
+  finding (orbs are lamp heads on thin mounts, LOD artifact not
+  detached geometry); pergola rhythm clean. STATUARY-0005 CLEAN
+  (shrine/stone-circle read; near-black orb caps + thin arms =
+  verify-tier margin). FOREST-0010 CLEAN (grove identity instant,
+  grounded; canopy-underside darkness = shading note not geometry).
+  Routing: +3 candidate rows IMPROVE-PLAN SURVEY CANDIDATES (all
+  district-domain — improve's own intake surface per survey-8
+  precedent; zero notes to other lanes' plan files). Grep-verified no
+  open duplicates (only placement-context prose mentions exist).
+  Census 259 steady 0/0 vs survey-8 snapshot; 2 domain-valid lib
+  flips: mobius 04d088e1→5617f376 (struct-42 committed), row-cottage
+  bd88cd38→add42aea (improve-15 in flight, POS_SAME). Sibling index
+  discipline: IMPROVE-PLAN.md carried improve-16's in-flight garden-
+  cottage hunks this tick — staged ONLY the survey-9 hunk via filtered
+  patch (git apply --cached), foreign hunks left unstaged. Verdicts 3
+  confirmed / 5 clean / 0 dropped. Zero world mutations, zero
+  uploads, zero shared-budget use.
+
+## Routed notes (survey-9)
+
+- survey-9: `nx-craft-hamlet-0007` + `nx-gallery-mosaic-0036` +
+  `nx-wild-cairn-0022` — candidate rows under IMPROVE-PLAN SURVEY
+  CANDIDATES (round-2 intake); all district-domain (improve's own
+  surface), no other lane's plan touched this tick.
+
 ## Routed notes (survey-8)
 
 - survey-8: `nx-court` + `nx-forge` + `nx-cistern` + `nx-dress-fountain`

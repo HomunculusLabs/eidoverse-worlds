@@ -1586,6 +1586,35 @@ open duplicate notes for these objects.
   5 gardens share the pattern (0011/0019/0032/0045/0058 — verify
   before fleet-wide work). Evidence:
   reviews/survey8-slice/nx-cultivation-garden-0011/gameplay.png
+- `nx-craft-hamlet-0007` — Sev 2 (survey-9, 2026-09-06, ZAI + native
+  UNANIMOUS): hamlet identity FAILS at 18m — reads abstract blocky
+  tower/ruin; both flanking upper masses hover with open sky beneath,
+  exposed near-black undersides, zero support to ground; stair-slab
+  runs float detached left and right; a true see-through hole in the
+  mid-tower column shows sky THROUGH the geometry; dwelling cues
+  confined to a tiny central gable. Value crush across the whole mass
+  (roofs/walls/undersides near-identical luma). Family note: 5 hamlets
+  (0007/0015/0028/0041/0054) each carry DISTINCT shas — confirm at
+  decode whether the float/hole class is shared before fleet work.
+  Evidence: reviews/survey9-slice/nx-craft-hamlet-0007/gameplay.png
+- `nx-gallery-mosaic-0036` — Sev 3 (survey-9, 2026-09-06, ZAI + native
+  UNANIMOUS): mosaic-panel identity FAILS at 18m — hundreds of loose
+  tiles flat on grass read as scattered paving/confetti scatter, not
+  an artwork; no frame, no backing, no coherent panel outline survives
+  distance; silhouette dissolves into noise. No floats/voids (tiles
+  flush, closed boxes). Fix class: merge/frame into one legible panel
+  (texture-family pipeline candidate). Family note: 4 mosaics
+  (0036/0048/0052/0059) distinct shas — verify pattern spread.
+  Evidence: reviews/survey9-slice/nx-gallery-mosaic-0036/gameplay.png
+- `nx-wild-cairn-0022` — Sev 3 (survey-9, 2026-09-06, ZAI + native
+  UNANIMOUS): stacked-stone identity passes but TRUE FLOATERS —
+  numerous small pebble spheres hover isolated against the sky above
+  the stack tops (both judges: detached, touching nothing); shreds the
+  row's top silhouette; secondary: smooth spheroid stacking flirts
+  with blob-heap read. Fix class: drop/snap floaters onto surfaces.
+  Family note: 5 cairns (0022/0043/0047/0048/0050) distinct shas —
+  verify the floater class spread before fleet work.
+  Evidence: reviews/survey9-slice/nx-wild-cairn-0022/gameplay.png
 
 ## Carried laws
 
