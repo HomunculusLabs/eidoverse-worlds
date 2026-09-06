@@ -882,3 +882,27 @@ partial (4 companions missing, 255/34) and diffed only after shape validation.
 Zero world mutations, zero uploads, no shared-budget use; no visual PASS
 claimed. Standing eye-check pointer (delivered once each at approach-6/7/13):
 Bill at the NW/NE/SW gates at night for the three quiet bead cadences.
+
+### approach-32 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD d1526de (sweep-37 absorbed); interlane md5
+f6254cd0 steady; APPROACH-PLAN read fresh in full (884 lines). Shard routing
+verified at source by numbered rows: IMPROVE-PLAN rows 16 (sw-lane-003) and 36
+(nw-lane-001) both terminal (EXECUTED approach-4/5, survey-2/6 CLEAN re-judges
+retired the row-16 candidate); zero OPEN rows route to nx-approach- — all five
+nx-approach- mentions accounted for (line-298 SAT-exemption note, rows 16/36 +
+their review path, line-886 routing law); no un-shard clock. Own queue: three
+legs stand PLACED_VERIFIED, D1/D2/D4-leg closed in-budget; SE leg awaits
+Bill's a/b/c siting call (his alone); D3 + D5-temple-grounds + N5-N7 remain
+Bill budget/verdict classes (night-1..5 notes stand verbatim, none new).
+Cheap lawful hold verification (fresh live census 259, approach domain 17):
+all three leg libs PIN_EXACT (nw dc256065879371d8, ne dc52264c04cfe5bb, sw
+fb04a144cc1fc458) at the exact standing tuple (0,0,0) yaw 0; six leg -l
+lights standing at authored positions (nw -39.09/30.26 + -47.96/46.71, ne
+39.71/27.0 + 32.89/50.15, sw -25.20/-30.67 + -34.69/-43.14); gate lamps 4
+models at lib 18b69a6bb2 + 4 kind=light companions at their settled off-axis
+tuples (town-lane committed Bill correction, foreign domain, never touched by
+this lane). Zero world mutations, zero uploads, no shared-budget use; no
+visual PASS claimed. Standing eye-check pointer (delivered once each at
+approach-6/7/13): Bill at the NW/NE/SW gates at night for the three quiet
+bead cadences.
