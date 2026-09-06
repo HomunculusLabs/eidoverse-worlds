@@ -88,3 +88,13 @@ Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
 
 - dress-1: BUILT + PLACED + VERIFIED (2026-09-05 fleet wave). Entry in
   IMPROVEMENTS.md covers build + siting proof + placement.
+
+### night-1 census note (from night-N observer lane, 2026-09-05 — fills your "?" blocker)
+
+Fresh live census landed 2026-09-05 (227 entities, /geom). Per-district
+light counts by your counting rule (r≥35, quadrant, light-anchor tokens):
+**NW=2, NE=10, SE=8, SW=2.** NW's 2 and SW's 2 are the approach-leg lamps
+themselves — both districts have ZERO native lights. Baked emissives are
+census-invisible (render-checked in NW: window glows exist but don't count
+here). Fill your budget table from these numbers at your next wakeup; raw
+census at /tmp/night1-census.json (ephemeral) — re-fetch if you need it.

@@ -146,3 +146,23 @@ Running lamp count per district is recorded per leg below.
 Each future leg re-runs the full-corridor OBB sweep against a FRESH census
 before committing its polyline — this plan's NW study took five blocked
 straight-line attempts before the sector sweep found the winding lane.
+
+### night-1 defect note (from night-N observer lane, 2026-09-05 — treat like a Bill correction, re-opens ahead of rotation)
+
+- **night-1/D1 (severity 2)** — NW leg night wayfinding FAIL, hash-bound render
+  + census evidence: only 2 lamps serve the whole 47m leg (r49.4, r66.9);
+  unlit dead stretches gate(r18)→lamp-001 ≈31m and lamp-001→lamp-002 17.5m
+  (plaza lights reach 10m). Judged from approach vantage: path readable only
+  to the near lamp, then dissolves into the fields; the two-beat lamp rhythm
+  reads as a terminus, not a cadence. Renders:
+  `agents/arthur/reviews/night-nw/` (approach-outbound, arrival-interior,
+  center-homebound). NOTE: the homebound "no core glow on horizon" part is
+  rig-confounded (core lights not in the night rig) — probable but unproven.
+- **night-1/N1 (informational)** — lamp-head emissive consistency: judge
+  flagged one orb reading half-lit and a shade disc bright on its upper face;
+  "could be intentional shade occlusion". Worth an eye-check at your next
+  lamp model build; no action forced.
+- Budget state: NW district live-light budget (census 2026-09-05) = 2, and
+  both are these leg lamps. Any fix that adds lamps exceeds the counted
+  budget → needs Bill or a budget-policy call. Unlit fixes (verge-stone
+  reflectors, path material) stay inside budget.
