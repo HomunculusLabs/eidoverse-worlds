@@ -378,6 +378,14 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     left junction clean, right lamp fuses with post/beam junction (move
     lamp inboard). Scope narrowed, Sev 3 stands. Evidence:
     reviews/survey3-slice/beltower/gameplay.png]
+    [ZAI-survey-4 re-judge (fallback, native 1210 x2 + paced retry,
+    disclosed): rope float re-CONFIRMED (~20-25px empty gap under the
+    handle, x480-492 y448-462, no cleat/beam); lamp-fuse re-CONFIRMED
+    (orange blob merges into corner post/beam junction, x505-545
+    y195-235, no mount separation); rungs FLIP back to floating-read
+    (no resolvable stringers, ticks-over-X-brace) — fallback flip-flop
+    vs the survey-3 drop, native re-judge owed. Evidence:
+    reviews/survey4-slice/town-belltower/gameplay.png]
 
 22. `nx-struct-hypar` — dangling batten; hovering batten ends; ragged
     tips. Sev 2–3. (guard: none)
@@ -388,6 +396,14 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     deck with no hangers, 9px finial specks, edge beams sub-legible so the
     ruled-surface read fails. Sev 2. Evidence:
     reviews/survey3-slice/hypar/gameplay.png]
+    [ZAI-survey-4 CONTRADICTION (fallback, native 1210 x2 + paced retry,
+    disclosed): the SAME fallback judge on byte-identical live bytes
+    8e4643de (fetched fresh, == survey-3 pin) now reads 5/5 CLEAN —
+    battens anchored at fan pivots, fans interlock across centerline
+    (no split), tips bear on deck with contact shadows, finials ~10px
+    legible, ruled-surface twist reads. Irreconcilable with survey-3
+    Sev 2; row MUST hold for NATIVE re-judge before any execution.
+    Evidence: reviews/survey4-slice/struct-hypar/gameplay.png]
 
 23. `nx-struct-mobius` — center slit; jagged canopy edge; hovering
     canopy. Sev 3. (guard: none)
@@ -398,6 +414,13 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     faces); hovering DROPPED-ambiguous (under-edge strip reads as the
     shaded far side of the loop). Sev 3 stands. Evidence:
     reviews/survey3-slice/mobius/gameplay.png]
+    [ZAI-survey-4 re-judge (fallback, disclosed): jagged edge CONFIRMED
+    (6+ irregular V-notches, shredded right tip, ragged left tail);
+    center slit RE-OPENED as right-half only (~14px sky strip x445-710
+    y270-288 broken only by the center post; left half solid);
+    hover stays DROPPED; NEW identity-invisible — no twist/crossover
+    cue at 18m, reads "pavilion with damaged roof". Sev 3 stands.
+    Evidence: reviews/survey4-slice/struct-mobius/gameplay.png]
 
 24. `nx-struct-amphi` — disconnected seating slabs; flat bowl; telephone
     pole. Sev 3. (nx-struct-amphi is a struct lane work — struct lane
@@ -409,6 +432,13 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     height, composition focal); flat bowl CONFIRMED; NEW: seating wraps
     <180deg — single bank flanking bare ground. Sev 2-3, pole worst.
     Evidence: reviews/survey3-slice/amphi/gameplay.png]
+    [ZAI-survey-4 re-judge (fallback, disclosed): 4/4 CONFIRMED —
+    straight-slab rows with 5+ ground-through gaps (widest channel
+    x448-495 under the pole); telephone-pole silhouette unambiguous
+    (shaft+T-crossarm+insulator, x420-487); bowl flat (row offset
+    ~10-15px, perspective-attributable, no risers); wrap ~40-45%.
+    Sev 2-3 stands, pole worst. Evidence:
+    reviews/survey4-slice/struct-amphi/gameplay.png]
 
 25. `nx-struct-observatory` — detached trim band; dome-to-wall slits. Sev
     3. (guard: none)
@@ -419,6 +449,13 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     CONFIRMED — two symmetric light strips flanking the lintel read seam
     artifact, not shutter; band-end whisker stubs. Sev 3 stands. Evidence:
     reviews/survey3-slice/observatory/gameplay.png]
+    [ZAI-survey-4 re-judge (fallback, disclosed): trim detach CONFIRMED
+    (twin offset arcs left+right, orphan chips past silhouette x300-312
+    and x645-660, band terminates at door reveals); slits CONFIRMED
+    (2-3 sky slivers above the lintel x412-556 y263-301); NEW lintel
+    height-mismatch sub-finding (trim line steps down at entrance);
+    dome itself reads curved+coherent. Sev 3 stands. Evidence:
+    reviews/survey4-slice/struct-observatory/gameplay.png]
 
 26. `nx-struct-soundmirror` — identity failure at edge-on (reads mound);
     black dish interior. Sev 3. (guard: struct-33 warm-seat refine Aug 31
@@ -430,11 +467,32 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     the gold cross reads developer gizmo/grave cross — highest-contrast
     element, no strut/receiver geometry. Sev 3 stands. Evidence:
     reviews/survey3-slice/soundmirror/gameplay.png]
+    [ZAI-survey-4 re-judge (fallback, disclosed): ziggurat read, black
+    void interior (no concavity/specular cue), gizmo cross all
+    re-CONFIRMED; NEW: failure is angle-dependent — the identity lives
+    in the concave dish face, which is edge-on/occluded at the 18m
+    gameplay angle; silhouette fix alone cannot carry identity.
+    Sev 3 stands. Evidence:
+    reviews/survey4-slice/struct-soundmirror/gameplay.png]
 
 27. `nx-town-mapboard` — map face dirt smudges; side edge fragments. Sev
     3. (guard: none)
+    [ZAI-survey-4 CONFIRM (fallback, native 1210 x2 + paced retry,
+    disclosed): face reads noise/scratches — dark sub-2px strokes on a
+    dark olive face, no road/block/label semantics, no paper panel
+    (x418-545 y290-370); stray side fragments BOTH edges (x404-417 and
+    x544-557, floating past the body); identity reads generic dark
+    kiosk/lectern, not map board. Sev 3 stands. Evidence:
+    reviews/survey4-slice/town-mapboard/gameplay.png]
 28. `nx-town-monument` — pinhole at ring intersection; pedestal face
     crushed. Sev 3. (guard: none)
+    [ZAI-survey-4 PARTIAL (fallback, disclosed): pinhole CONFIRMED minor
+    (3-5px seam gap x511-517 y283-289, the only affected crossing);
+    pedestal crush DROPPED — inset plaque with 3-4 score lines reads
+    crafted (x452-493 y391-412); identity CONFIRM (interlocking-loop
+    silhouette + centered approach stair = commemorative grammar).
+    Re-rank Sev 4. Evidence:
+    reviews/survey4-slice/town-monument/gameplay.png]
 29. `nx-dress-ne-yard-001` — rubble read; floating rail ends; uniform
    near-black. Sev 2. (guard: dress-4 <24h at improve-2 — re-check
    dress tail at execution) [DROPPED dress-14: native re-judgment on

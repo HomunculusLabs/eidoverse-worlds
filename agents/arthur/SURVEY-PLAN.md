@@ -30,6 +30,14 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   blocks, lamps read. Margin note only: edge blocks read gray prisms
   (texture-variation candidate, sub-threshold at 18m); block-shadow
   absence unproven from the flat-plane review chassis.
+- survey-4 (2026-09-06, ZAI fallback, 18m gameplay, live bytes): tower-
+  house CLEAN 4/4 on POST-FIX bytes 11b31000 (improve-10 executed
+  mid-queue; corroboration of its native PASS — grounded posts+shadow,
+  ladder stringers+12 rungs, continuous rail, instant read); monument
+  PARTIAL (pinhole 3-5px only; pedestal crafted — Sev 4 candidate);
+  amphi/observatory/soundmirror/mapboard re-CONFIRMED; mobius slit
+  re-opened (right-half); beltower rope/lamp re-confirmed, rungs FLIP;
+  hypar fallback CONTRADICTION (clean vs survey-3 Sev 2 — native owed).
 
 ## Routed notes
 
@@ -62,3 +70,8 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   — ZAI verdicts, see STRUCTURES-PLAN SURVEY INTAKE + IMPROVE-PLAN rows
   22-26 annotations. `nx-town-belltower` (improve-own) — ZAI-partial
   annotation on IMPROVE-plan row 21 (rope confirmed, rungs dropped).
+- survey-4: struct rows 22-26 re-judge annotations in IMPROVE-PLAN +
+  intake lines in STRUCTURES-PLAN (see above); improve-own rows 21/27/28
+  annotated in IMPROVE-PLAN (beltower flip, mapboard confirm, monument
+  partial). All fallback-judged; native re-judge owed on beltower/hypar
+  flips + the standing survey-3 ZAI rows before execution.

@@ -67,6 +67,20 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   `agents/arthur/reviews/survey3-slice/soundmirror/gameplay.png`. Queue
   row 26 standing — no duplicate row created.
 
+- [survey-4, 2026-09-06, ZAI FALLBACK (native 1210 x2 + paced retry,
+  disclosed), 18m gameplay, live bytes re-fetched — hypar/mobius/amphi/
+  observatory/soundmirror byte-identical to survey-3 pins] re-judge pass:
+  `nx-struct-amphi` 4/4 re-CONFIRMED (worst: telephone pole dead center);
+  `nx-struct-observatory` re-CONFIRMED + NEW lintel height-mismatch;
+  `nx-struct-soundmirror` re-CONFIRMED + NEW angle-dependence (concave
+  face edge-on at 18m gameplay angle — silhouette fix alone cannot
+  restore identity); `nx-struct-mobius` jagged CONFIRM + right-half
+  sky slit RE-OPENED + identity-invisible NEW; `nx-struct-hypar`
+  CONTRADICTION — the same fallback judge reads byte-identical bytes
+  5/5 CLEAN vs survey-3 Sev 2; row 22 MUST hold for NATIVE re-judge
+  before any execution. Evidence: reviews/survey4-slice/struct-*/
+  gameplay.png. Queue rows 22-26 standing — no duplicate rows created.
+
 ## Design queue
 
 1. [DONE struct-2] S-1 The Observatory — era-1 heritage reborn: ashlar drum
