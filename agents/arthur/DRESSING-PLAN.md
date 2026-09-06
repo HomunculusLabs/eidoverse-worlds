@@ -1965,3 +1965,31 @@ Bill-ruled). REPAIR-REGISTER zero nx-dress.
   store/<hash> comparison + restated-yaw/stability hybrid.
 - Zero world mutations, zero uploads, zero shared-budget use, no visual
   PASS claimed. No un-shard clock (shard empty at source, not idle).
+
+---
+## dress-57 (2026-09-06, pipeline tick 36) — HOLD
+
+- Shard: re-verified EMPTY at source by full-row-window scan (dress-39
+  law, window runs to the NEXT numbered row): 53 numbered rows, all nine
+  nx-dress rows terminal (annotation-verified by reading each row's full
+  window). Probe self-catch disclosed (12th tick-class): initial scan
+  used a fixed 8-line annotation lookahead — row 37's [EXECUTED
+  dress-20] sits 12 lines below its head and was false-flagged OPEN;
+  full-window read resolves it. Probe wrong, world right.
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh kind-law recount:
+  exactly 3 live SW r>=35 lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0). Spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae unchanged, zero VERDICT lines
+  (grep exit 1 fresh this tick).
+- Hold verification: standing gate ALL PASS real exit 0 at HEAD 3a22dad;
+  fresh census 259 HTTP-200 first fetch; id-diff vs dress-56 capture:
+  0 arrived / 0 gone / 0 tuple-lib drift on shared ids; 11/11 district
+  installs PIN_EXACT lib+pos (comps empty across the set) vs the
+  authoritative dress-43/44 table; 27 nx-dress = 11 fleet + 16 legacy
+  intact; lights 38 (kind histogram thing 221 / light 38); interlane
+  md5 f6254cd0 steady.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock (shard empty at source, not idle).
+- Standing unblock paths (say-once): Bill's SW lamp a/b/c policy call,
+  or verdicts on the four-district eye-gate circuit
+  (agents/arthur/reviews/dress-districts-eye-gate.md).
