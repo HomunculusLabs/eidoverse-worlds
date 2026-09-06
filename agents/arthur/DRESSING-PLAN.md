@@ -84,10 +84,59 @@ Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
   does the gap read as a way through (gap faces NE, toward the
   inter-plot path)?
 
+### dress-2 — NE Craft shared work yard (PLACED, LIVE)
+
+- **Concept contract**: the NE craft workshops back onto a shared staging
+  yard where timber arrives and sawn stock leaves — log rack (two posts,
+  strap rail, one full-length round overhanging both posts), sawbench
+  (thick plank on bark bearers and rock pads), two A-frame sawhorses each
+  carrying a log in use, pyramid cordwood stack with pale end-grain discs,
+  shavings spill, loose rounds. Grounds use: craft districts keep their
+  messy useful back-of-shop strip. Static, unlit — spends no lamp budget.
+- **Build**: `assets/mkv3-dress-ne-yard1.ts` →
+  `assets/village_dress_ne_yard1.glb`
+  - v1 (sha `bd8a81b3…`) REJECTED: cordwood read as crates, bench top a
+    hairline, sawhorse legs invisible, mid-stack cantilever (ZAI fallback
+    vision — native vision provider-down, error 1210 both attempts).
+  - v2 (sha `cb4fa755…`) rejected: end caps value-identical to bark,
+    rack load floating between posts.
+  - v3 (sha `6893f453…`) rejected at gameplay distance: rack log a thin
+    stick on the horizon; close view showed caps still too subtle.
+  - v5/v4 line (sha `191227da…`, double-rebuild byte-identical) ACCEPTED
+    at both distances: pale straw end discs read as cut log ends; rack log
+    (r0.2) reads heavy and cradled by posts; sawhorses read in use.
+- **Decode (final)**: 4.80 × 1.32 × 3.49 m, bbox x −2.4..2.4,
+  z −2.215..1.275, y −0.03..1.29 (center z −0.47); 5 nodes (budget ✓).
+  No light anchors, empty comp bag by design.
+- **Siting (census 231)**: seam BEHIND the cloister row between
+  cloister-0029 and cloister-0042, r 103.5 az 57.3° — a systematic NE
+  scan found no legal front-of-work site anywhere in the band (the
+  inter-work seams at az 53-60 are physically occupied: hamlet/cloister
+  fat bboxes SAT-overlap −0.65..−4.96m). The back-of-shop strip is the
+  honest grounding: yard backs to the cloisters (stack side inward),
+  faces the district interior. Center (55.91, 87.10), yaw 147.3°.
+  SAT re-verified on final footprint: min gap 5.05m vs cloister-0042,
+  no sub-1.4m adjacency; rim corner 106.61; arrival cones clear (nearest
+  works 13.7m+, outside every plaza-ward wedge); lane footprint cleared
+  by >15m both axes (fat-bbox exemption documented in placer header);
+  lamp-002 33m. Terrain flat (py −0.034, Δ5mm across 3.5m span).
+- **Placement**: `ne-dress2-place.ts` — hash gate → blocker-epoch guard →
+  fresh-census SAT preflight → upload → spawn → post-place tuple verify.
+  **PLACED_VERIFIED** `nx-dress-ne-yard-001` @ lib
+  `store/191227dafd0d05dc.glb`, pos (55.91, −0.034, 87.10), yaw 147.3°.
+  Idempotent rerun: no verbs. NE lamp budget used 0 of 2.
+- **Eye-check for Bill**: from the district interior between the shops,
+  the yard should read as a shared back-of-shop staging strip — rack log
+  silhouetted against the sky, stack discs catching light. If it reads
+  "stray clutter" from the approach lane instead, say so and it re-sites.
+
 ## Ledger
 
 - dress-1: BUILT + PLACED + VERIFIED (2026-09-05 fleet wave). Entry in
   IMPROVEMENTS.md covers build + siting proof + placement.
+- dress-2: BUILT + PLACED + VERIFIED (2026-09-05 overnight fleet wave).
+  Entry in IMPROVEMENTS.md covers the 3-version visual iteration, siting
+  proof, and placement.
 
 ### night-1 census note (from night-N observer lane, 2026-09-05 — fills your "?" blocker)
 
