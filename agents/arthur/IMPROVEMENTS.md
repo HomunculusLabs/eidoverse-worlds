@@ -4275,4 +4275,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-78] pipeline hold (17th) — shard routing terminal at source on improve's fresh EXECUTION SHARDING section (zero rows route nx-artwalk-; row 25 = own standing duty, artwalk-52), fleet reconcile ALL_RECONCILED 259/54/38/34 exit 0 coverage 33 pins/29 anchors held, census diff vs artwalk-70: 0 new/0 gone, two flips both committed sibling executions at identical tuples (mobius struct-42 5617f376, row-cottage improve-15 add42aea with b18 re-pin artwalk-71), packet 48bea194 zero verdicts, gate ALL PASS exit 0 at 606a961, zero mutations (D+0, E+0)
 
-**Running total: 2370273 / 2000000**
+- [night-43] pipeline-mode hold tick (33rd) — gate ALL PASS real exit 0 at HEAD 606a961 (waysign-30 hold absorbed), census-43 259/38 fully steady vs 42 (0/0/0; capture /tmp/night-census-43.json), all closure pins EXACT 18th consecutive (D1 nw-lane dc256065879371d8, D2 ne-lane-002 dc52264c04cfe5bb, D4-leg sw-lane-003 fb04a144cc1fc458), SW kind=light r>=35 = 2 leg lamps + 1 mile lantern 0-of-3 Bill-bound, five APPROACH-PLAN night-note sections stand (D3+D4-temple+D5+N6 Bill-bound, N1/N2/N4-N7 informational), packet cdc435a2 unchanged zero verdicts, interlane f6254cd0 steady, zero actionable night- shard rows (observer), holds on Bill: sky facet-5, lamp-budget D3+D4-temple+D5+N6, N5 detached-orb, N7 hierarchy inversion; zero world mutations, zero renders judged, no PASS claimed (D+1, E+0)
+
+**Running total: 2370274 / 2000000**
