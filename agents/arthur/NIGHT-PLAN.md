@@ -1324,3 +1324,42 @@ STUDY COMPLETE (all facets judged; packet assembled).
   inversion. Second-rotation NW+NE+SW passes remain the verify
   paths, deferred while the lane holds. Zero world mutations,
   zero renders judged, no PASS claimed.
+
+- night-48 (2026-09-06, pipeline-mode hold tick): thirty-eighth
+  consecutive hold, NO disposition change — but the FIRST live
+  light-topology movement since the hold chain began. Standing gate
+  ALL PASS real exit 0 at HEAD 154c735 (approach-30). Fresh
+  census-48 (/tmp/night-census-48.json): 255 entities / 34 lights /
+  zero night-prefixed. Diff vs census-47: 0 new, 4 GONE, 5 flips —
+  the four CORE gate-lamp light entities
+  (nx-approach-lamp-{e,n,s,w}-l, r10) are ABSENT from the live set,
+  and their four model entities moved 1.75m off-axis each (lib
+  steady 18b69a6b; E (10,0,0)->(10,0,1.75), N (0,0,10)->(1.75,0,10),
+  W (-10,0,0)->(-10,0,-1.75), S (0,0,-10)->(-1.75,0,-10)). Fifth
+  flip = nx-struct-amphi 0904c5da->95a98c74, LEDGERED in-flight by
+  its owning lane (struct-43 stepped-bowl rebuild entry in the
+  working-tree ledger, PLACED_VERIFIED, own domain — not night's).
+  Gate-lamp movement classified APPROACH-LANE WORK IN FLIGHT:
+  untracked next-place-gate-lamps-offaxis.ts at HEAD, no approach-31
+  ledger entry yet (census-before-commit class, artwalk-65/66 law).
+  It touches the PREMISES of D5 (gate lamp pairs are one anchor tier
+  of the core middle-third finding), N5 (detached-orb), and N7
+  (aerial hierarchy) — NO re-classification this tick;
+  reconciliation due next tick once the owning lane lands its entry.
+  Census-48 capture is the diff baseline for that reconciliation.
+  Closure pins EXACT (24th consecutive hold chain): D1
+  nx-approach-nw-lane-001 dc256065879371d8, D2 nx-approach-ne-lane-002
+  dc52264c04cfe5bb, D4-leg nx-approach-sw-lane-003 fb04a144cc1fc458.
+  SW quadrant kind=light r>=35 by id: nx-approach-sw-lamp-001-l
+  r39.7, -002-l r55.4, nx-mile-sw-013-l r64.0 — zero movement, SW
+  lamps still 0 of 3 on Bill's a/b/c. APPROACH-PLAN five night-N
+  defect-note sections verified fresh (headings at 629/649/668/686/
+  705). DRESSING-PLAN lamp-budget table re-read fresh (SW 3 live /
+  0 used, Bill-bound). Packet md5 cdc435a2 unchanged since night-7,
+  zero verdict markers; interlane md5 f6254cd0 steady. EXECUTION
+  SHARDING re-read at source: night owns no entity prefix, zero
+  rows route to night. Same four verdict classes outstanding: sky
+  facet-5, lamp-budget policy D3 + D4-temple-grounds + D5 + N6, N5
+  detached-orb, N7 hierarchy inversion. Second-rotation NW+NE+SW
+  passes remain the verify paths, deferred while the lane holds.
+  Zero world mutations, zero renders judged, no PASS claimed.

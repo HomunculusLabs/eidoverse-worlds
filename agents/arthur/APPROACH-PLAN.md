@@ -850,3 +850,35 @@ world right, probe wrong. Zero world mutations, zero uploads, no
 shared-budget use; no visual PASS claimed. Standing eye-check pointer
 (delivered once each at approach-6/7/13): Bill at the NW/NE/SW gates at
 night for the three quiet bead cadences.
+
+### approach-31 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD 914f7a5 (waysign-35 absorbed; waysign-36
+ledger entry interleaved ahead of my append); interlane md5 f6254cd0 steady;
+APPROACH-PLAN read fresh in full (852 lines). Shard routing verified at source
+by numbered rows: IMPROVE-PLAN rows 16 (sw-lane-003) and 36 (nw-lane-001) both
+terminal (EXECUTED approach-4/5, survey-2/6 CLEAN re-judges retired the row-16
+candidate); zero OPEN rows route to nx-approach- (line-23 prose is routing
+metadata for Bill-bound budget calls); row 39 is improve-own; no un-shard
+clock. Own queue: three legs stand PLACED_VERIFIED, D1/D2/D4-leg closed
+in-budget; SE leg awaits Bill's a/b/c siting call (his alone); D3 +
+D5-temple-grounds + N5-N7 remain Bill budget/verdict classes (night-1..5
+notes stand verbatim, none new). Cheap lawful hold verification (fresh live
+census 259, approach domain 17, kind=light 38): all three leg libs PIN_EXACT
+(nw dc256065879371d8, ne dc52264c04cfe5bb, sw fb04a144cc1fc458) at the exact
+standing tuple (0,0,0) yaw 0 scale 1; six leg -l lights standing at authored
+positions; gate lamps pinned (18b69a6bb2f5862f prefix) with their four kind=light
+companions split-verified. Census diff vs night-47: 0 new / 0 gone, 9 flips all
+FOREIGN — struct-43 amphi 0904c5da->95a98c74 (committed, domain-valid) plus
+the four gate lamps + companions moved 1.75m off-axis = the town lane executing
+Bill's screenshot correction ("get the lamp out of the path", untracked
+next-place-gate-lamps-offaxis.ts; live tuples match its SLOTS table exactly,
+lib prefix unchanged, night-48's partial 17:09 capture caught the remove+spawn
+mid-flight). Gate lamps are reference idiom, never touched by this lane —
+foreign work-in-flight in the town domain, left untouched. In-tick probe
+self-catches: first census fetch used a wrong endpoint (404, empty body) —
+switched to the proven next-live-census.ts; night-48's capture itself was
+partial (4 companions missing, 255/34) and diffed only after shape validation.
+Zero world mutations, zero uploads, no shared-budget use; no visual PASS
+claimed. Standing eye-check pointer (delivered once each at approach-6/7/13):
+Bill at the NW/NE/SW gates at night for the three quiet bead cadences.
