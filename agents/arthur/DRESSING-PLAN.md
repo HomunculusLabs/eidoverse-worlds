@@ -30,10 +30,11 @@ anchors. Budget = live count (never exceed existing density).
 - **NE — CRAFT**: work yard (shaving horse / bench cluster), stone benches,
   woodstack
 - **SE — WILD**: path spurs (walk-tested), border stones, cairn marker
-- **SW — CONTEMPLATIVE**: gravel paths (walk-tested), lamps (budget-bound),
-  prayer stones
+- **SW — CONTEMPLATIVE**: ~~gravel paths~~ (dress-4, walk-tested 7/7),
+  lamps (budget-bound), prayer stones
 
 Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
+(dress-1..4 complete — first full rotation 2026-09-06; next: NW round 2)
 
 ## Siting log
 
@@ -131,6 +132,53 @@ Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
   silhouetted against the sky, stack discs catching light. If it reads
   "stray clutter" from the approach lane instead, say so and it re-sites.
 
+### dress-4 — SW Contemplative raked gravel path (PLACED, LIVE)
+
+- **Concept contract**: the SW approach's civic pavers end at the seed ring
+  (r71, az 217.25). Where the town's stone gives out, a raked gravel path
+  carries the walker through the threshold into the temple grounds — the
+  first act of contemplation is walking on raked ground. Grounds USE: the
+  district's own surface idiom. Static, unlit — spends no lamp budget
+  (SW budget 3, used 0).
+- **Build**: `assets/mkv3-dress-sw-gravel1.ts` →
+  `assets/village_dress_sw_gravel1.glb`. Six-version iteration (ZAI
+  fallback vision throughout — native provider-down error 1210, 5th
+  consecutive tick; disclosed):
+  - v1 (`a9ec1a13…`) plank-with-pebbles; v2 (`55bed476…`) tonal inversion
+    (railroad tie); v3 (`cb1f0e3e…`/`723bf02b…`) value structure fixed,
+    straight-edge plank silhouette; v4 (`ec6343f5…`) rim still read as
+    continuous cut outline; v5 (`07d4c70f…`) gapped floor + bow —
+    gameplay verdict: passes as tended path, raking close-range;
+  - v7 (sha `fd21de9ff797e249974481dbce662955a6fd3330846ddece243792d79abb8be5`,
+    double-rebuild byte-identical) **ACCEPTED** at the top-view placement
+    gate: pale-ridge/dark-groove raking with groove ratio ~38%, torus
+    ripple-arc bullseye around the tall anchor stone, secondary ripple at
+    the medium stone, broken gapped floor (terrain shows through), kerb +
+    threshold stones, spill pebbles.
+- **Decode (final)**: 6 nodes; bbox x −3.623..3.64, z −1.184..1.309,
+  y −0.1..0.372 — ground-film class (h≤0.5). No light anchors, empty comp
+  bag by design.
+- **Siting (census 239)**: continues the leg radially outward — center
+  pol(74.7, 217.25) = (−45.22, −59.46), yaw 127.25° (local +x = outward
+  walking direction). Rim corners 71.0..78.5 in [66,108]. SAT min real gap
+  2.62m (temple-terrace-0049), no sub-1.4m solid adjacency. NAMED fat-bbox
+  exemption for `nx-approach-sw-lane-003` (world-coords GLB; source-true
+  collinear end-to-end junction at the r71 threshold, both walking
+  surfaces; same dress-1 precedent). seed-0021 3.39m off centerline
+  (ground-film-vs-wall class, lawful). Terrain flat (py −0.05, Δ14mm).
+- **Placement**: `sw-dress4-place.ts` — hash gate → blocker-epoch guard
+  (approach lane, seed-0021, terrace-0049) → fresh-census SAT + rim-corner
+  + arrival-cone gates → upload → spawn → post-place tuple verify.
+  **PLACED_VERIFIED** `nx-dress-sw-gravel-001` @ lib
+  `store/fd21de9ff797e249.glb`, pos (−45.22, −0.05, −59.46), yaw 127.25°.
+  Idempotent rerun: no verbs. SW lamp budget used 0 of 3.
+- **Walk-test**: two-way MCPL through the real surface 7/7 ALL_PASS (leg
+  r66 → path-center r74 → path-far r78 and back; max arrival 0.37m).
+- **Eye-check for Bill**: walk the SW leg out past the seed ring — the
+  path should read as tended raked gravel with a ripple bullseye around
+  the tall dark stone, not decking or a painted crossing. If the dark
+  gravel value reads too dark in context, it re-colors (one pass).
+
 ## Ledger
 
 - dress-1: BUILT + PLACED + VERIFIED (2026-09-05 fleet wave). Entry in
@@ -142,6 +190,10 @@ Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
   Entry covers the v1-reject/v2-accept iteration, rim-law catch (0.45m
   inside the 66m floor, shifted +1.0m radially), and placement. Also
   closed night-2/N3 by reconciling the lamp-budget table (see above).
+- dress-4: BUILT + PLACED + VERIFIED (2026-09-06 overnight fleet wave).
+  Entry covers the six-version iteration (plank → tie → silhouette →
+  gapped-floor → relief → gate-pass), the fat-bbox lane exemption, and
+  the 7/7 walk-test.
 
 ### dress-3 — SE Wild border stones (PLACED, LIVE)
 
