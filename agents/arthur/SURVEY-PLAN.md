@@ -536,3 +536,59 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   grep-verified clean — only dress-51 prose mentions "survey-14").
   Verdicts 0 confirmed / 8 clean-with-margin / 0 dropped. Zero world
   mutations, zero uploads, zero shared-budget use.
+
+
+## Judged index (survey-15)
+
+- survey-15 (2026-09-06, ZAI fallback 7/8 + NATIVE 1/8 disclosed — native hard
+  flap (7x 1210 first-pass, paced retry burned on cloister-0042; ONE native
+  call landed: terrace-0049 cross-check); 18m gameplay, fresh live store
+  bytes 8/8 HTTP 206 curl UA on exact census-15 libs; terrace-0040/0049
+  byte-identical degenerate pair 21572B — ONE model judgment covers both):
+  CLEAN-FAMILY CLOSURE slice — the survey-14 remaining pool (final unjudged
+  members of every clean family). Slice = cloister-0042, cloister-0055,
+  statuary-0052, terrace-0040, terrace-0049, forest-0044, forest-0057,
+  wayside-0058. Verdicts: ALL 8 CLEAN-with-margin, ZERO confirmed —
+  cloister-0042 (arcade identity strong; ZAI's "floating orbs" at
+  (316,258)/(643,258) = the KNOWN lamp-head LOD artifact class, same class
+  survey-9/10/14 flipped NATIVE-clean; tree-canopy contact verify-tier
+  only) -> family CLEAN 4-of-5 COMPLETE; cloister-0055 (ZAI outright PASS
+  with the artifact excluded in-prompt) -> family CLEAN 5-of-5 COMPLETE;
+  statuary-0052 (shrine-circle instant, figures plinth-grounded, dark head
+  orbs read alternate-material not detached; margins: left-arc rubble
+  variance, mid-cluster merge) -> family CLEAN 4-of-4 COMPLETE;
+  terrace-0040 + terrace-0049 (tier identity PASS, monotonic setbacks
+  verified x-coord monotone both flanks, stepped cast shadow corroborates
+  genuine geometry; margins: shallow 4-8px setbacks lighting-dependent,
+  asymmetric post run, right mid-height notch verify-tier — the native
+  cross-check independently flagged the same four subtle items as
+  "subtle/low-contrast, easily missed" = margin tier, not defect) ->
+  family CLEAN 5-of-5 COMPLETE; forest-0044 (grove instant, all trunks
+  grounded, silhouette continuous; near-black unlit ground cones = known
+  shading class, logged survey-14 0031) -> family CLEAN 4-of-5 COMPLETE;
+  forest-0057 (3/3 PASS; same unlit-cone shading class + central unlit
+  mass hole-flirt, geometry verified connected) -> family CLEAN 5-of-5
+  COMPLETE; wayside-0058 (shelter identity instant, lamp lit and legible
+  at (367,321); margins: lying element x545-612 reads bench-or-debris
+  verify-tier, one-lit-of-four lamp heads, capless right block) -> family
+  CLEAN 5-of-5 COMPLETE — wayside, terrace, cloister, forest, statuary ALL
+  close as CLEAN families. Family census after this tick: 12-of-13
+  district families COMPLETE (labyrinth 3-of-4 — survey-14's pool list
+  missed labyrinth-0051, next tick's first candidate); mile-* and sign-*
+  sets are lane-owned with their own review cadence, outside survey
+  scope. Routing: ZERO notes routed, ZERO candidate rows, ZERO ledger
+ append (loop law: append only when routing). Census 259 steady 0/0 at
+ judging time vs survey-14 snapshot; LATE-TICK re-census (post-gate2,
+ triggered by dress-63's ledger line reporting 260): 259->260 — ONE
+ arrival nx-struct-meridianstair (5.7,-54.7) lib dec58a3b bbox PRESENT =
+ struct-domain work-in-flight, classified; AND R-120 RESOLVED LIVE
+ mid-tick: all four nx-approach-lamp-{e,n,s,w} libs flipped truncated
+ 18b69a6bb2.glb -> FULL 18b69a6bb2f5862f.glb, all bboxes PRESENT (the
+ five-sweep-escalated Sev 1 now closed by a sibling — register
+ reconciliation is sweep's lane); one more domain-valid flip
+ nx-town-longhouse f2344409 -> e3adcd3d (town domain). Snapshot baseline
+ refreshed to 260 (/tmp/survey15-census-snapshot.json). Gate: ALL PASS
+ real exit 0 first try at 22ea039; HEAD advanced mid-tick to 5d88242 —
+ gate re-run at new HEAD before commit, ALL PASS exit 0 (polish-270
+ epoch law). Verdicts 0 confirmed / 8 clean-with-margin /
+ 0 dropped. Zero world mutations, zero uploads, zero shared-budget use.
