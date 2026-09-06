@@ -222,6 +222,17 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
 5. `nx-struct-crossing` — reads as utility-pole clusters; no water/banks/
    stones — ford is a void; clipping posts, snapped stub pegs. Sev 1:
    identity failure. DECODE FIRST. (guard: none)
+   [NATIVE-survey-6 CLEAN (restored native, 18m, fresh live bytes, lib
+   216c4bd4): resolves the survey-3 ZAI dissent toward improve-8's
+   native acceptance — shafts read HEWN STONE (mottled chisel texture,
+   stubby monolith proportions, varied lean, chiseled cap slabs, zero
+   crossarms/insulators/wires); gold collar bands CLEARLY VISIBLE and
+   highest-contrast (left x371-436 y297-320, right x523-585 y314-330);
+   pads seat wider than shafts; identity DELIBERATE MONUMENT MARKER.
+   Margin notes only: four stones resolve as two paired clusters at 18m
+   (rear pair occluded); crossroads context lives in the live world, not
+   the isolation rig. Row stays EXECUTED/closed. Evidence:
+   reviews/survey6-slice/nx-struct-crossing/gameplay.png]
 5. `nx-dress-sw-prayer-001` — reads as rock pile; ZERO fabric/pole read —
    namesake absent. Sev 2: identity failure (worst dress finding).
    (guard: dress-8 placed it — idle-guarded until 09-06 18:15)
@@ -341,6 +352,16 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     of the fixed bytes deferred to a later slice; approach-4's own
     PASS was ZAI-judged (native 1210 x2) — a native pass/judge of
     43817a4f at 18m is a candidate for the next survey slice.]
+    [survey-6 (ZAI fallback, native 1210 x2 + paced retry, disclosed; 18m,
+    fresh live bytes, lib 43817a4f): second CLEAN vote on the fixed bytes —
+    zero floating cubes/debug debris (improve-3 finding class GONE), verge
+    reads composed cadenced dressing (near/far alternating rows, perspective-
+    consistent spacing), lamps fully legible (post/pan/flame incl. far lamp
+    6px globes), ribbon continuous+grounded, no seam. Native re-judge still
+    owed (1210 this tick) but 2 fallback CLEAN votes now stand on fixed
+    bytes vs the original defect read on pre-fix bytes; retire the survey
+    queue candidate — corroborative value only. Evidence:
+    reviews/survey6-slice/nx-approach-sw-lane-003/gameplay.png]
     [EXECUTED approach-4: verge re-dressed as cool gray-bone stone clusters
     in a tightened 1.22-1.45m band, companions offset along the walk; sha
     43817a4f reseat, walk ALL_PASS 0.37, row closed]
@@ -697,6 +718,16 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     idempotent, comp {} both sides]
 35. `nx-struct-pendulum` — dashed shadow acne; hairline strings; weak
     identity read. Sev 4. (guard: none)
+    [NATIVE-survey-6 (restored native, 18m, live bytes lib 0a3120b2
+    unchanged pre/post tick): dashed-shadow acne CONFIRMED NATIVE — band
+    y419-433 fragmented into ~12-15 discrete dashes (gaps x≈355/415/480/
+    585), only the A-frame leg shadows solid; strings hairline 1px CONFIRMED
+    (continuous, attached, but alias/shimmer risk at in-game resolution);
+    bob colors CONSISTENT (uniform olive, specular variation only — improve-3
+    inconsistent-colors finding drops); identity reads PENDULUM WAVE on a
+    swing-set frame, NOT gallows (gallows silhouette absent — improve-3
+    weak-identity note softens). Sev 4 stands on shadow acne + hairline
+    strings. Evidence: reviews/survey6-slice/nx-struct-pendulum/gameplay.png]
 36. `nx-approach-nw-lane-001` — banding/taper/raw boxes/lamp base. Sev 4.
     (guard: approach idle since Sep 3)
     [EXECUTED approach-5: native re-judgment on hash-bound renders of
@@ -711,6 +742,16 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     mutations]
 37. `nx-dress-nw-skeps-001` — stray plank; rock swallows 2nd skep. Sev 4.
     (guard: dress-10 yesterday — re-check at execution)
+    [survey-6 interleave (NATIVE, 18m, judged pre-fix bytes lib 806f2c4e):
+    plank-debris + boulder findings corroborated — stray plank reads
+    debris/noise x577-640 y381-390 breaking the row rhythm; boulder
+    zero-clearance overlap occludes skep 2's left third (swallow NARROWED:
+    all four skeps countable; not a full hide); identity reads clean apiary
+    row, zero floating. dress-20 executed v6 LIVE mid-tick (spill clumps
+    removed, boulder past row's left end, sha 87d2dd16) — pre-fix judgment
+    stands as corroboration of the owning lane's own native CONFIRM; no
+    note routed, no reopening. Evidence:
+    reviews/survey6-slice/nx-dress-nw-skeps-001/gameplay.png]
     [EXECUTED dress-20: native rejudge on exact live bytes (lib 806f2c4e)
     CONFIRMED plank-debris read + boulder-intruder (swallow narrowed: skep 2
     survives; near-black r0.66 boulder on row line, tallest+darkest, value-
@@ -720,6 +761,15 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     unchanged tuple, PLACED_VERIFIED + idempotent]
 38. `nx-dress-nw-hedge-001` — cleanup tier (stub riser, stray cube, hole).
     Sev 4. (guard: re-check dress tail at execution)
+    [NATIVE-survey-6 CONFIRM (restored native, 18m, live bytes lib f595e862
+    unchanged post-tick): all three cleanup findings confirmed — mid-gap
+    hole x505-556 y345-388 (~50px break, dark base exposed); lone stub
+    riser x384-397 y293-322 jutting ~30px above roofline; stray warm-gray
+    cube x298-337 y376-404 off-material, laterally detached from the hedge
+    line; massing otherwise deliberate (common base, stepped height rhythm).
+    Zero floating. Sev 4 cleanup tier stands — routed to DRESSING-PLAN
+    SURVEY INTAKE (first dress-domain note routed under the new section).
+    Evidence: reviews/survey6-slice/nx-dress-nw-hedge-001/gameplay.png]
 
 **ROUND-1 KIT-DEBT APPEND (2026-09-06, staged at improve-5x — perpetual-
 motion law): entry 39 seeds round 2. Cure proven at hall+inn (improve-5
@@ -1413,6 +1463,44 @@ rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
   improve13-walk-bunk.ts; decode: improve13-decode-bunk.ts; renders:
   reviews/improve13-bunkhouse/{before,after}/. Next: windmill guard expires
   09-07 01:57, then queue item 4; then shrine (17, re-ranked Sev 3).
+
+- improve-14 (EXECUTION CONTRACT, queue item 17 `nx-town-shrine`): windmill
+  guard still live at 15:2x EDT (rider 09-06 01:57, <24h); row 17 taken by
+  the plan's own next-pointer (re-ranked Sev 3). Survey-2 NATIVE-PARTIAL
+  stands as the restored-vision re-judgment (bunkhouse precedent; survey-2
+  final judgments all-native per a777dc1). Idle-guard clear (last shrine
+  mutation polish-278 Aug 31; tex-58/tex-13 earlier; survey reads are
+  read-only). Live tuple (−25, −0.0012609260510534298, −4) yaw
+  1.4118119548622732, lib 53709062d3095dcc == local rebuild ×2
+  deterministic THIS TICK (no disputed bytes; foreign working-tree housekit
+  dirt proven non-contaminating — struct-40's hyparShell-only edit, region
+  untouched by this build's imports). Comp bag {} (census-fresh). Rider
+  nx-artwalk-b7-shrine-stars inverse-transformed host-local ≈ (−0.9497,
+  0.2487, −1.1603) at host yaw → KEEP-OUT x∈[−1.55,−0.35], y∈[0.24,1.45],
+  z∈[−1.20,−1.03]; all edits at |x|≤0.35, z∈[−0.2,+0.36] — disjoint by
+  construction. Findings (survey-2 native-PARTIAL on exact live bytes):
+  - F1 votive flames at legibility threshold (~2px warm specks at 18m).
+  - F2 offering row borderline-legible pale speck row (improve-1 "clumps
+    illegible" downgraded but still below clean).
+  - DROPPED (survey-2 native): asymmetric base plate (reads symmetric);
+    dead side faces (mottled taper alive).
+  FIX (mkv3-shrine.ts only, no housekit change):
+  - F1: votive flame radius 0.038→0.055 + emissiveIntensity 1.0→1.25
+    (improve-9 proven recipe) — clear warm points at 18m without blob
+    noise (stone embers at 0.045 are accepted quiet points; flames sit
+    modestly above).
+  - F2: pale offering row on the altar top front (bench-facing) edge:
+    three rounded mounds (IcosahedronGeometry r 0.06, y-scale 0.6,
+    mat 0xdcdcba = candle bucket) at x −0.30/0/+0.30, y 0.505, z 0.24 —
+    each ~5.7px at 18m, 0.6m spacing: reads deliberate offerings, not
+    smudge.
+  Falsification: (1) night-front.png shows ≥3 distinct clear warm points
+  (pixel-probe warm-px count materially up vs before); (2) gameplay@18m
+  pale offering row legible on the altar; (3) decode bbox unchanged
+  (SAT-neutral same-tuple re-place); (4) b7 keep-out zero NEW verts;
+  (5) 4-leg approach MCPL walk ALL_PASS; (6) native judge on after
+  renders. Revert: revert the two mkv3-shrine.ts edits → rebuild returns
+  53709062d3095dcc (baseline ×2 proven this tick).
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
   one append per tick, stage only lane-owned paths, never push.

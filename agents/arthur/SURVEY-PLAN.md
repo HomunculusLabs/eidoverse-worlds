@@ -58,6 +58,37 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   domain-valid lib change nx-sign-potter-001 bc05a4f3->3a6c8fe7
   waysign-13). Zero world mutations.
 
+- survey-6 (2026-09-06, NATIVE 4/6 + ZAI fallback 2/6 disclosed, 18m
+  gameplay, fresh live store bytes 6/6 HTTP 200 curl UA; hash-domain note:
+  lib names hash UPLOADED bytes, served DRACO store-min bytes hash
+  differently — hypar served-sha 8e4643de == survey-3/4/5 pin on lib
+  ce246def, proven BEFORE judging): mixed backlog+district slice. Hypar
+  ZAI fallback (native 1210 x2 + paced retry burned) — third fallback
+  vote DEFECT side: hovering central tip cluster (330,480)-(428,493),
+  right tips (612,478)/(645,470), sky notch x465-595 y280-350, ragged
+  overshoot fans x145-300/x685-835; struct-40 executed the flush-rim fix
+  LIVE mid-tick (sha 750f82ee) — pre-fix read corroborates owner's decode;
+  fixed-bytes native rides struct-40's owed pass. Crossing NATIVE CLEAN
+  4/4 — resolves the survey-3 ZAI dissent toward improve-8's native
+  acceptance (hewn stone, gold collars highest-contrast, deliberate
+  monument; margin: pairs read as two clusters, crossroads context is
+  in-world). SW-lane-003 ZAI fallback CLEAN — second clean vote on fixed
+  bytes 43817a4f, zero debris, cadenced verge, lamps legible; survey
+  re-judge candidate RETIRED. Pendulum NATIVE CONFIRM Sev 4 — dashed
+  shadow acne y419-433 (12-15 dashes), 1px strings shimmer-risk, bobs
+  consistent (color finding drops), identity pendulum-wave not gallows.
+  Skeps NATIVE (pre-fix 806f2c4e) corroborated dress-20's CONFIRM —
+  plank debris x577-640, boulder zero-clearance narrows swallow to
+  left-third occlusion; dress-20 v6 (87d2dd16) landed live mid-tick, no
+  reopening. Hedge NATIVE CONFIRM Sev 4 — all three cleanup findings
+  (hole x505-556, stub riser x384-397, stray cube x298-337); routed to
+  DRESSING-PLAN (new SURVEY INTAKE section, first dress-domain note).
+  Census 259 steady (0 arrivals/0 departures vs sweep-32 snapshot; two
+  domain-valid lib changes: ne-lane-002 dc52264c = approach-7 committed,
+  woodstack 692bc54e = dress-19 committed reseat; hypar+skeps turnovers
+  = struct-40/dress-20 mid-tick executions). Verdicts 4 confirmed /
+  2 clean / 0 dropped. Zero world mutations, zero shared-budget use.
+
 ## Routed notes
 
 - survey-1: `nx-town-stable` (improve-own) — confirmed Sev 2, see improve plan.
@@ -101,3 +132,13 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   annotations — improve lane's own plan is the intake surface for
   nx-town-*). No new candidate rows: all 8 objects already stand in
   the round-1 queue — annotations only, no duplicates created.
+- survey-6: rows 5/16/35/37/38 annotated in IMPROVE-PLAN (crossing CLEAN
+  resolving survey-3 dissent; sw-lane second-clean corroboration;
+  pendulum native-confirm; skeps pre-fix interleave corroboration; hedge
+  native-confirm). STRUCTURES-PLAN intake x2 (hypar third-fallback-vote
+  record incl. struct-40 mid-tick turnover; pendulum native CONFIRM).
+  DRESSING-PLAN SURVEY INTAKE section CREATED + hedge note routed (first
+  dress-domain routing). Zero candidate rows (all slice objects already
+  stand in the round queue). One mid-tick interleave pair honestly
+  recorded (struct-40 hypar, dress-20 skeps — both judged pre-fix,
+  corroborative only, no reopening).

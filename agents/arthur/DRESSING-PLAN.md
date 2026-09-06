@@ -1,5 +1,19 @@
 # DRESSING-PLAN — dress-N lane durable state
 
+## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
+
+- [survey-6, 2026-09-06, NATIVE (restored), 18m gameplay, live bytes lib
+  f595e862 verified unchanged post-tick] `nx-dress-nw-hedge-001` CONFIRMED
+  Sev 4 cleanup tier — all three improve-2 findings native-confirmed: mid-gap
+  hole x505-556 y345-388 (~50px break, dark base strip exposed); lone stub
+  riser x384-397 y293-322 (~30px above roofline, reads fence-post remnant);
+  stray warm-gray cube x298-337 y376-404 (off-material, laterally detached
+  from the line). Massing otherwise deliberate (common base, stepped height
+  rhythm, coherent material); zero floating. Queue row 38 standing (shard:
+  dress lane owns nx-dress-*; re-check dress tail at execution — dress-20
+  skeps 09-06, hedge itself untouched since dress-1). Evidence:
+  agents/arthur/reviews/survey6-slice/nx-dress-nw-hedge-001/gameplay.png
+
 Lane: district dressing for commons-next. One authored installation per
 wakeup, districts rotating NW → NE → SE → SW. Loop file:
 `DRESSING-LOOP.md`. Interlane: `INTERLANE-PROTOCOL.md` (six lanes).

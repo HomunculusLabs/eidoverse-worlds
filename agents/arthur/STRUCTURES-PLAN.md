@@ -107,6 +107,25 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   — fallback resolves the survey-3/4 contradiction toward DEFECT
   (hovering lower tips 20-45px, center sky-notch 130x70px); native
   re-judge STILL OWED (flap law recorded). Queue row 22 standing.
+- [survey-6, 2026-09-06, ZAI FALLBACK (native 1210 x2 + paced retry,
+  disclosed; judged PRE-FIX live bytes 8e4643de pre-turnover) `nx-struct-
+  hypar` third fallback vote, defect side, consistent with survey-5 —
+  hovering central tip cluster (330,480)-(428,493) + right tips (612,478)/
+  (645,470) with 3-8px air slivers; top-center sky notch x465-595 y280-350
+  (notch, not full split); ragged overshoot fans past both edge-beam
+  peaks (left x145-300, right x685-835, 20-70px); batten deck shadows
+  promise contact the geometry doesn't deliver. struct-40 executed the
+  flush-rim fix LIVE mid-tick (sha 750f82ee) — probe classes resolved
+  decode-first by owner (probe law 11); PRE-FIX read corroborates their
+  fix rationale. No note routed beyond this record; fixed-bytes native
+  re-judge rides struct-40's own owed native pass.]
+- [survey-6, 2026-09-06, NATIVE (restored), 18m gameplay, live bytes
+  0a3120b2 (unchanged pre/post tick)] `nx-struct-pendulum` CONFIRMED Sev 4
+  — dashed-shadow acne band y419-433 (~12-15 discrete dashes, gaps x≈355/
+  415/480/585; only A-frame leg shadows solid); strings hairline 1px
+  (attached but shimmer-risk at in-game resolution); bobs consistent;
+  identity reads pendulum wave (gallows read absent). Queue row 35
+  standing — oldest native-confirmed OPEN struct row after struct-40.
 
 ## Design queue
 
