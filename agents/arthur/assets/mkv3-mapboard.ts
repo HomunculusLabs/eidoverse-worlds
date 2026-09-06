@@ -32,12 +32,30 @@ board.name = "map_board";
 board.position.set(0, 1.55, -0.06);
 board.rotation.x = -0.21;
 g.add(board);
-// frame around the board (bone trim)
-const frame = new THREE.Mesh(new THREE.BoxGeometry(2.44, 1.64, 0.05), mat(C.BONE, 0.85, 0));
-frame.name = "map_frame";
-frame.position.set(0, 1.55, -0.075);
-frame.rotation.x = -0.21;
-g.add(frame);
+// frame around the board (bone trim) — improve-19: a real BORDER, not a
+// solid plate. The era-2 frame was one solid 2.44x1.64x0.05 overlay whose
+// map-side face (off −0.0392) sat 3–33mm OUTSIDE every painted chip front
+// (−0.036..−0.006), permanently burying the whole map (model-local ray:
+// mb3_1 hit FIRST from −z; the visible "ring" was the torus tube punching
+// through the plate). Four bars, same plane/tilt/material/footprint — direct
+// g-children (merge law; a nested group would ship unmerged): the interior
+// opens, the timber slab face + paint read recessed inside a bone rim. No
+// map-side movement (bars' outer face stays off −0.0392; torus −0.066
+// remains the extreme — R-121 lamp-n kiss untouched).
+const frameBar = (name: string, w: number, h: number, fx: number, fy: number) => {
+    const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.05), mat(C.BONE, 0.85, 0));
+    mesh.name = name;
+    // frameG-local (fx, fy, 0) tilted −0.21 about x, centered (0,1.55,−0.075):
+    // g-pos = (fx, 1.55 + fy·cos(−0.21), −0.075 + fy·sin(−0.21))
+    mesh.position.set(fx, 1.55 + fy * 0.97803, -0.075 + fy * -0.20846);
+    mesh.rotation.x = -0.21;
+    g.add(mesh);
+    return mesh;
+};
+frameBar("map_frame_top", 2.44, 0.09, 0, 0.775);
+frameBar("map_frame_bottom", 2.44, 0.09, 0, -0.775);
+frameBar("map_frame_left", 0.08, 1.46, -1.18, 0);
+frameBar("map_frame_right", 0.08, 1.46, 1.18, 0);
 // cap board (little roof over the map)
 const cap = new THREE.Mesh(new THREE.BoxGeometry(2.5, 0.09, 0.5), timberTex);
 cap.name = "map_cap";
@@ -85,7 +103,11 @@ const onBoard = (mesh: THREE.Mesh, ax: number, az: number, hd: number) => {
 const chip = (name: string, x: number, z: number, w: number, d: number, c: number, h = 0.022) => {
   // authored w = east-west extent, d = north-south extent; on the XY face
   // plane they become mapG x and y; relief h rides along z (unscaled paint)
-  const m = new THREE.Mesh(new THREE.BoxGeometry(w * S, d * S, h), mat(c, 0.8, 0));
+  // improve-19: faint same-hue emissive on painted chips (polish-274 law —
+  // the face points away from every light source; without it the whole map
+  // reads unlit timber from the reading side)
+  const m = new THREE.Mesh(new THREE.BoxGeometry(w * S, d * S, h),
+    new THREE.MeshStandardMaterial({ color: c, roughness: 0.8, metalness: 0, emissive: new THREE.Color(c), emissiveIntensity: 0.5 }));
   m.name = name;
   return onBoard(m, x, z, h);
 };
@@ -100,15 +122,16 @@ onBoard(hearth, 0, 0, 0.03);
 // Torus seated hd=0 (center AT FACE): front z_m -0.006, back -0.066 — v1
 // seated it hd=0.06 which put its front at +0.024, past the mid-plane
 // toward the b22 rider's plate; decode caught it before placement.
-const ringN = new THREE.Mesh(new THREE.TorusGeometry(0.83 * S, 0.03, 5, 32), mat(C.BONE, 0.8, 0));
+const boneMat = () => new THREE.MeshStandardMaterial({ color: C.BONE, roughness: 0.8, metalness: 0, emissive: new THREE.Color(C.BONE), emissiveIntensity: 0.35 });
+const ringN = new THREE.Mesh(new THREE.TorusGeometry(0.83 * S, 0.03, 5, 32), boneMat());
 ringN.name = "map_ring2";
 onBoard(ringN, 0, 0, 0);
 chip("map_ring", 0, 0, 1.66, 0.10, C.BONE, 0.014); // ring road E-W bar (width floored 0.05)
 // 4 spokes — radial bars hearth->ring so roads CONNECT on the face (the old
 // field's bars floated free, offset off-axis): inner r 0.06, outer ring r
-for (const [si, ang] of [[0, 0], [1, Math.PI / 2], [2, Math.PI], [3, -Math.PI / 2]] as const) {
+for (const [si, ang] of [[0, 0], [1, Math.PI / 2], [2, Math.PI], [3, -Math.PI / 2], [4, Math.PI / 4], [5, 3 * Math.PI / 4], [6, 5 * Math.PI / 4], [7, 7 * Math.PI / 4]] as const) {
     const outer = 0.83 * S, inner = 0.06;
-    const sp = new THREE.Mesh(new THREE.BoxGeometry(outer - inner, 0.05, 0.014), mat(C.BONE, 0.8, 0));
+    const sp = new THREE.Mesh(new THREE.BoxGeometry(outer - inner, 0.05, 0.014), boneMat());
     sp.name = `map_spoke_${si}`;
     sp.rotation.z = -ang;   // authored (cos a, sin a) -> mapG (cos a, -sin a)
     onBoard(sp, Math.cos(ang) * (outer + inner) / 2, Math.sin(ang) * (outer + inner) / 2, 0.014);
@@ -116,13 +139,17 @@ for (const [si, ang] of [[0, 0], [1, Math.PI / 2], [2, Math.PI], [3, -Math.PI / 
 // 8 ring buildings at their angles (dark chips — lifted to readable umber)
 for (const aDeg of [36, 72, 108, 144, 216, 252, 288, 324]) {
     const a = (aDeg * Math.PI) / 180;
-    chip(`map_bldg_${aDeg}`, Math.cos(a) * 0.68, Math.sin(a) * 0.68, 0.14, 0.12, 0x8c7a3e);
+    // improve-19 v4: blocks at legible scale (~6-7% board height rendered)
+    // + long axis tangent to the ring road (buildings face the road — true
+    // orientation, and it breaks the axis-aligned crosshair read)
+    const b = chip(`map_bldg_${aDeg}`, Math.cos(a) * 0.74, Math.sin(a) * 0.74, 0.19, 0.16, 0x8c7a3e);
+    b.rotation.z = -(a + Math.PI / 2);
 }
 // landmarks: inn (N far), windmill (W far), carousel (SE), belltower (NE near)
-chip("map_inn", 0, -0.98, 0.16, 0.13, 0xa06c32);
-chip("map_windmill", -1.0, 0, 0.16, 0.13, 0xa06c32);
-chip("map_carousel", 0.72, 0.72, 0.15, 0.13, 0xa06c32);
-chip("map_belltower", 0.4, -0.4, 0.12, 0.12, 0xa06c32);
+chip("map_inn", 0, -0.98, 0.20, 0.17, 0xa06c32);
+chip("map_windmill", -1.0, 0, 0.20, 0.17, 0xa06c32);
+chip("map_carousel", 0.72, 0.72, 0.19, 0.17, 0xa06c32);
+chip("map_belltower", 0.4, -0.4, 0.16, 0.16, 0xa06c32);
 // loop #82 — the map catches up with the village: the seven builds since
 // the board was painted get their chips (positions = village r/40 scaled):
 // stable (r40 N, behind the inn), market (NW plaza-near), shrine (W r24),

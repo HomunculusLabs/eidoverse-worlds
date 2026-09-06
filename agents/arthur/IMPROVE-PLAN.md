@@ -765,6 +765,36 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     stand-off). REMAINS next wakeup: renders day/night both faces + judged,
     remove+spawn re-place exact tuple + idempotent + census. Live still
     1f1a10f4; zero uploads/verbs this tick.]
+    [EXECUTED improve-19: carryover closed + OCCLUSION ROOT CAUSE found
+    during render verification — the bone frame was a SOLID 2.44×1.64
+    plate over the whole face whose map-side surface (off −0.0392) sat
+    OUTSIDE every chip front (−0.036..−0.006), permanently burying the
+    improve-18 flush map (model-local ray: frame hit FIRST from −z; the
+    visible "ring" was the torus tube punching through the plate; the
+    emissive hearth showed only because it's emissive). Fixes this tick:
+    (1) frame → 4-bar border, same plane/tilt/material/footprint (interior
+    opens; map-side extremes unchanged — torus −0.066 still the extreme,
+    R-121 lamp-n kiss untouched); (2) polish-274 law: the map face points
+    away from every light source, so chips+ring+spokes+landmarks carry
+    faint same-hue emissive 0.5 (sun-flip experiment proved the mechanism:
+    bone content 0→17,946 px); (3) four diagonal district spokes added
+    (8-road radial — TRUE: four districts at 45°); (4) ring bldgs r0.68→
+    0.74 (house-ring-true) size 0.19/0.16, tangent-rotated (buildings face
+    roads). Native judges: noise read SOLVED ("unmistakably intentional
+    cartography"), fragments PASS, flush PASS, front face no regression.
+    RESIDUAL disclosed (Bill's call, not falsified away): at 8m the ink
+    budget still leans emblem over map — judge's proposed fixes (delete
+    hub-converging spokes, cartoon road casing, 8× buildings) would
+    FALSIFY the village's true radial geometry; struct-45 law applied:
+    true form kept, distance-residual disclosed. Probe self-catches this
+    tick (disclosed): (a) vision judge read the disc as empty — decode +
+    COLOR_0 + raycasts outranked it; (b) first pixel probe classified sky
+    as bone (threshold bug); (c) one replace-without-assert re-ran the
+    canonical rig (no evidence lost). sha chain 383c6ad3→a4d58880→
+    c94749f2→95231f20, each ×2 deterministic; AUDIT ALL PASS 16/16 at
+    every step; PLACED_VERIFIED remove+spawn exact tuple (2.5,0,9.5) yaw
+    −2.944197, empty comp bag; idempotent rerun ALREADY_LIVE_NO_VERBS;
+    census 259, z-extent 2.63→0.543; b22 rider untouched at its pin.]
 
 28. `nx-town-monument` — pinhole at ring intersection; pedestal face
     crushed. Sev 3. (guard: none)
