@@ -4133,4 +4133,6 @@ fixes ≈ 6 F.)
 
 - [artwalk-65] pipeline-mode hold tick (6th steady) — gate exit 0 at bf92404; zero OPEN nx-artwalk shard rows (Round 1 routes core/signs/dress/struct/approach); fleet reconcile ALL_RECONCILED (259/54/38/34/32/24, zero verbs) + census-diff 259/259 0/0 0 rider drift; packet 48bea194 unchanged; holds for Bill verdicts / Phase F / widening; zero mutations (D+0, E+0)
 
+- [waysign-17] pipeline-mode hold tick: standing gate ALL PASS real exit 0 (absorbed artwalk-65 at a058d15); zero OPEN IMPROVE-PLAN rows route to nx-sign-* (sharding open split = struct/dress/approach/improve-own only; R2 packet 7/7 executed waysign-8..15 + brace closures waysign-16); eye-gate packet 8b88b6b3 unchanged, zero Bill verdict markers. Cheap lawful hold verification: fresh live census 259 total, ALL 8 nx-sign-* riders PIN_EXACT at ledgered tuples (stable afee37dd, dyer 8ce2081f, kiln ecbad903, potter 3a6c8fe7, woodyard f46e12ae, mill 870256ce, bakery 49342c52, smithy 3522e5ab). Zero world mutations, zero uploads, zero shared-budget use, no visual PASS claimed; lane HOLDS for Bill eye-gate verdicts (reviews/waysign-eye-gate.md), any correction re-opens ahead of rotation (D+0, E+0)
+
 **Running total: 2370265 / 2000000**

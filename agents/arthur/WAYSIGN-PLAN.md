@@ -489,6 +489,19 @@ only when native is down that tick, disclosed.
   and hole resolve; the building's own sails confirm the trade.
 
 
+- waysign-17 HOLD (pipeline mode): queue complete (8/8 round 1, R2 7/7,
+  both court-sign brace closures); zero OPEN IMPROVE-PLAN rows route to
+  `nx-sign-*` (sharding section's open split lists struct/dress/approach/
+  improve-own only); eye-gate packet md5 8b88b6b3 with zero Bill verdict
+  markers. Cheap lawful hold verification: standing gate ALL PASS real
+  exit 0 (absorbed artwalk-65 at a058d15); fresh live census 259 total,
+  ALL 8 `nx-sign-*` riders PIN_EXACT at their ledgered tuples (stable
+  afee37dd, dyer 8ce2081f, kiln ecbad903, potter 3a6c8fe7, woodyard
+  f46e12ae, mill 870256ce, bakery 49342c52, smithy 3522e5ab). Zero world
+  mutations, zero uploads, zero shared-budget use. Lane HOLDS for Bill's
+  eye-gate verdicts (`reviews/waysign-eye-gate.md`); any visual
+  correction re-opens that sign's build ahead of rotation.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
