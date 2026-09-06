@@ -228,6 +228,23 @@ se-stones 8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f); 16 legacy
 core `nx-dress-*` untouched. Interlane f6254cd0 unchanged. Zero world
 mutations, zero uploads, zero shared-budget use.
 
+**STATE AT dress-25 (2026-09-06, pipeline hold tick — 4th consecutive)**:
+lawful HOLD — every path closed this tick. Shard queue re-verified EMPTY
+at source: the nine `nx-dress-*` rows all terminal (5/29/30/31 DROPPED
+native rejudge; 32/33/34/37/38 EXECUTED reseats); round-2 SURVEY
+CANDIDATES route to `nx-town-woodyard`/`nx-welcome`/`nx-town-potter` —
+none to `nx-dress-*`. Own queue: SW lamps only, still blocked on Bill's
+a/b/c budget policy (0 of 3 used); no Bill verdict markers in ledger
+tail or plan; SURVEY INTAKE unchanged (survey-6 consumed). Hold
+verification: standing gate ALL PASS real exit 0 at HEAD fe07f48
+(absorbing waysign-20, artwalk-67, night-35, approach-15); fresh live
+census 259, ALL ELEVEN district installations tuple+lib EXACT vs this
+plan (hedge 3d5c7d44, skeps 87d2dd16, stile 5e9d301d, logpile cac71bff,
+ne-yard 191227da, ne-bench 46f3b6b1, woodstack 692bc54e, cairn 59031a0c,
+se-stones 8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f); 16 legacy
+core `nx-dress-*` untouched. Zero world mutations, zero uploads, zero
+shared-budget use.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
