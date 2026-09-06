@@ -1216,3 +1216,19 @@ installations PIN_EXACT lib+tuple+yaw-radians (hedge 3d5c7d44, skeps
 sw-gravel fd21de9f, sw-prayer 5074600f, comps empty across set); 16
 legacy core `nx-dress-*` untouched; interlane md5 f6254cd0 unchanged.
 Zero world mutations, zero uploads, zero shared-budget use.
+
+**STATE AT dress-31 (2026-09-06, pipeline hold tick — 10th consecutive)**:
+lawful HOLD — every path closed this tick. Shard queue re-verified EMPTY
+at source by full-row read (nine `nx-dress-*` rows terminal; row 39
+kit-debt routes nx-town to improve; survey-7/8 outside prefix). Own
+queue: SW lamps only, Bill a/b/c bound (fresh recount 2 approach leg
+lamps + 1 mile lantern = 3, spend 0 of 3); zero verdict markers. Hold
+verification: gate ALL PASS real exit 0 at HEAD d408bb5 (absorbed
+sibling artwalk-74/approach-22/waysign-26); census 259, ELEVEN installs
+PIN_EXACT lib+tuple+yaw-radians (hedge 3d5c7d44, skeps 87d2dd16, stile
+5e9d301d, logpile cac71bff, ne-yard 191227da, ne-bench 46f3b6b1,
+woodstack 692bc54e, cairn 59031a0c, se-stones 8dafb9e5, sw-gravel
+fd21de9f, sw-prayer 5074600f); 16 legacy intact; interlane f6254cd0.
+Mid-tick staged-flag race on plan+ledger (M/MM) resolved to ZERO
+content diff — no sibling dress-31 exists; one live fleet dress process
+is the pipeline itself. Zero mutations/uploads.
