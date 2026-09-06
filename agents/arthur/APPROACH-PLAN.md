@@ -196,6 +196,35 @@ note for survey, not a leg defect; walk arrival 0.28/0.30 PASS.
 Bill eye-check: NW gate at night — the lane should now carry a quiet line of
 warm bead markers between the lamps, verge reading as gray-bone hem by day.
 
+### approach-7 (2026-09-06): D2 unlit night-wayfinding fix — NE lane re-dress + bead cadence
+
+Interrupted-window recovery (artwalk-32 pre-place class: 13:38 before-capture →
+14:02 build → 14:06 renders → dead before placer/ledger/plan; live untouched,
+named). D2 (night-2, Sev 2, Bill-correction class) closed in-budget: zero new
+light entities, NE budget stays 4+2, both lamps standing at authored params.
+Two changes to `nx-approach-ne-lane-002` (pavers/polyline/lamps byte-stable):
+(a) verge re-dressed SW gray-bone idiom (per-stone keep-outs from a fresh
+corridor sweep — 2 of 39 verge stones skipped vs goats/milestones); (b) 8 bone
+pillars (~9.2m, alternating sides, 1.32–1.44m out) each capped with one faint
+warm emissive bead (1.15, polish-274/278 moonlit law), KEEP group
+`flame_beads_ne`. Sha `a27bc9a2→dc52264c…` ×2 deterministic; decode 8 draw
+nodes/9 mats, film y≤0.20, beads world r28.6→r68.3 covering all three D2 dead
+stretches (gate-edge, lamp1→lamp2, lamp2→district). Judged (ZAI fallback,
+native 1210 ×4, disclosed): outbound vantage PASS (quiet cadence, end-to-end
+traceable, planted markers); three FAIL verdicts falsified at pixel+projection
+ground truth — the "bare bulb lamp" bottom-center in mid-stretch frame WAS
+bead 5 at its projected pixel, the outbound-tail frame stood ON bead 7, and b6
+is pendulum-occluded from the gate eye only. Review rig law learned: when a
+sibling lane's UNCOMMITTED rebuild drifts a local assets/ context model, re-pin
+the rig to the LIVE store bytes (fetch `/library/store/<hash16>.glb`, hash the
+fetched bytes) — never adapt to the sibling's uncommitted file. Remove+spawn
+reseat exact tuple, 2 verbs, PLACED_VERIFIED + idempotent zero-verb rerun.
+Two-way MCPL ALL_PASS 7 legs max 0.38m. Read18: statuary-0052 clean;
+hamlet-0054 center-ray intersected by sibling `nx-mile-ne-010` (0.25m
+perpendicular, 3D ray passes over the 0.91m stone — foreign-lane margin note).
+Bill eye-check: NE gate at night — the gallery lane should now carry a quiet
+bead line between the lamps; by day the verge reads gray-bone hem.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.
