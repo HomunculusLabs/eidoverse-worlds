@@ -32,15 +32,70 @@ anchors. Budget = live count (never exceed existing density).
 - **SE — WILD**: path spurs (walk-tested), border stones (dress-3, placed),
   ~~cairn marker~~ (dress-7, placed — SE queue COMPLETE)
 - **SW — CONTEMPLATIVE**: ~~gravel paths~~ (dress-4, walk-tested 7/7),
-  lamps (budget-bound), prayer stones
+  ~~prayer stones~~ (dress-8, placed 2026-09-06), lamps (budget-bound —
+  the only open item; 0 of 3 used)
 
 Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
 (dress-1..4 complete — first full rotation 2026-09-06; dress-5 = NW round 2,
 skeps DONE 2026-09-06; dress-6 = NE round 2, benches DONE 2026-09-06;
-dress-7 = SE round 2, cairn DONE 2026-09-06 — SE queue complete; next up:
-SW round 2 = prayer stones, then NE woodstack, NW log pile/stile)
+dress-7 = SE round 2, cairn DONE 2026-09-06 — SE queue complete; dress-8 =
+SW round 2, prayer stones DONE 2026-09-06 — only SW lamps remain, and
+those are budget-bound pending Bill's lamp-budget policy; next up in
+rotation: NE woodstack, NW log pile/stile — both go even if SW lamps hold)
 
 ## Siting log
+
+### dress-8 — SW Contemplative prayer stones (PLACED, LIVE)
+
+- **Concept contract**: on the az-232.725 SW corridor past the raked gravel
+  path (dress-4, ends r78.5), a devotional prayer-stone pile at the edge of
+  the open walking line — pause place before the labyrinth ring. Broad LOW
+  dome of many water-smoothed stones accumulated by many hands (3 shrinking
+  rings + crown), pale "recently added" crown stones, kicked strays, one
+  flat bowing stone at the foot facing the path. Distinct from dress-7's SE
+  cairn waymark (one tall deliberate column + quartz token): broad, low,
+  accumulative, river-smooth — the contemplative idiom. Static, unlit —
+  spends no lamp budget (SW budget 3, used 0).
+- **Build**: `assets/mkv3-dress-sw-prayer1.ts` →
+  `assets/village_dress_sw_prayer1.glb`. Three-version iteration (ZAI
+  fallback vision — native provider-down error 1210, 9th consecutive tick;
+  disclosed):
+  - v1 (`b214ced4…`): gameplay 4/4 PASS but close view flagged angular
+    detail-0 stones, second stray buried in the dome silhouette, second
+    crown stone only marginally pale.
+  - v2 (`cbe0662f…`): subdivision-1 roundness PASS, crown brightened to
+    the accepted cairn-quartz value — but the second stray (local z −0.78)
+    stayed dome-occluded from every path-side view.
+  - v3 (sha `5074600fc869789d23c08fc1f0bfc5529b66b7a46d43ec7494eab0198442ae7a`,
+    double-rebuild byte-identical) **ACCEPTED** 3/3 gameplay PASS + close
+    4/4 PASS. Second stray moved to the right-front flank (balanced L/R of
+    the walking line); bowing slab nudged forward and widened. Standing
+    margin note: the slab reads marginal at 18m (clean at approach
+    distance) — flagged for Bill's eye-check, do NOT shrink or remove.
+- **Decode (final)**: bbox x −1.41..1.186, z −1.082..1.602, y −0.058..1.251
+  (solid, h 1.31 — NOT a ground film); 3 nodes (budget 3–25 ✓). No light
+  anchors, empty comp bag by design.
+- **Siting (census 255)**: entity origin (−52.26, −64.53), yaw 127.25°
+  (local +z faces the path), r83 off −2.5 CW side. Systematic scan: the
+  lawful band is entirely the local −z side (r79–89 off −1.5..−3.5 clean;
+  the +z side dies on terrace-0049 SAT and labyrinth-0038 arrival cones).
+  Exact v3-footprint verify: min gap +4.218m vs `nx-temple-terrace-0049`,
+  no sub-1.4m solid adjacency, cones clear, rim corners 81.59..84.26 ∈
+  [66,108] ✓. Approach-lane pavers source-decoded to end at r71.6 — no
+  lane contact with this pose (fat-bbox exemption guard retained in
+  placer). Terrain preflight flat: py −0.032, Δ3mm across OBB corners.
+- **Placement**: `sw-dress8-place.ts` — hash gate → blocker-epoch guard
+  (approach lane, gravel-001, terrace-0049, labyrinth-0038) → fresh-census
+  SAT + rim + arrival-cone gates → upload (content-addressed) → spawn →
+  post-place tuple verify. **PLACED_VERIFIED** `nx-dress-sw-prayer-001` @
+  lib `store/5074600fc869789d.glb`, pos (−52.26, −0.032, −64.53), yaw
+  127.25°. Idempotent rerun: 0 verbs. SW lamp budget used 0 of 3.
+- **Eye-check for Bill**: walk the SW leg past the gravel path — at the
+  edge of the open line, the pile should read as an accumulated devotional
+  mound (broad, low, river-smooth, pale recent additions on the crown,
+  flat bowing stone facing the path), not a boulder, cairn, or rubble. The
+  bowing slab is deliberately subtle at distance; if it should read louder,
+  it gets one widening/brightening pass.
 
 ### dress-1 — NW Cultivation hedgerow (PLACED, LIVE)
 
