@@ -1826,6 +1826,72 @@ call, single paced retry recovered; zero ZAI fallback this tick).
   gallery-art identity.) Evidence:
   reviews/survey12-slice/nx-mosaic-0059/gameplay.png
 
+### survey-13 family-class extensions — LOCK-OUT COMPLETE (2026-09-06)
+
+Final unjudged members of every confirmed family judged on distinct
+shas; families now FULLY censused (every live member judged, all
+confirmed). ZAI fallback 7/8 + NATIVE 1/8 disclosed — native flapped
+(1210 x2 on first call, paced retry burned); one mid-tick native
+recovery re-judged garden-0058 natively (dual-judged, corroborates);
+hamlet native re-judge retry burned after. Confirm-or-drop stays with
+the executing lane. Grep-verified: no open duplicate notes.
+
+- `nx-craft-hamlet-0054` — Sev 2 (survey-13, ZAI): IDENTICAL to
+  hamlet-0007 class — see-through tower shaft hole x400-556 y396-502,
+  flanking mega-masses hover with open sky beneath (L x100-390,
+  R x620-860, undersides y235-495), detached stair runs x0-134
+  y38-106 + x563-688 y196-266, orphan slab row x575-680 y268-296,
+  right-facade value crush x575-860 y0-170 — family 5-of-5
+  UNANIMOUS. Evidence: reviews/survey13-slice/hamlet-0054/gameplay.png
+- `nx-cultivation-garden-0058` — Sev 3 (survey-13, NATIVE re-judge
+  corroborating ZAI first-pass): IDENTICAL to garden-0011 class —
+  zero bed/soil/fence grammar, back rank merges to one continuous
+  dark hedgerow x245-735, tan sprouts shadowless read weeds, back
+  rank shadowless reads airborne — family 5-of-5 UNANIMOUS.
+  Evidence: reviews/survey13-slice/garden-0058/gameplay.png
+- `nx-cultivation-lavender-0053` — Sev 3 (survey-13, ZAI): IDENTICAL
+  to lavender-0006 class — charcoal-mauve dead-crop value (~20-25%
+  luma, zero purple chroma at 18m), no tilled strips, discrete
+  front-row blobs with ground gaps, stray stem spikes above canopy
+  (9 regions x60-850) — family 4-of-4 UNANIMOUS. Evidence:
+  reviews/survey13-slice/lavender-0053/gameplay.png
+- `nx-temple-seed-0034` — Sev 4 (survey-13, ZAI): IDENTICAL to
+  seed-0003 class — flat ~32:1 block-mosaic disc (355px wide x ~11px
+  true extrusion), no seed core x400-570, no vertical element, soft
+  single-smear shadow with 3-4px detach gap y421-424 — family 4-of-4
+  UNANIMOUS. Evidence: reviews/survey13-slice/seed-0034/gameplay.png
+- `nx-wild-cairn-0048` — Sev 3 (survey-13, ZAI): IDENTICAL to
+  cairn-0022 class — floating pebbles detached against sky above
+  stack tops, ten regions x160-760 y292-323 (~20-25 specks, worst
+  cluster x438-522), central stacks merge to rubble mound x270-560;
+  flanking stacks + grounding PASS — family 4-of-5. Evidence:
+  reviews/survey13-slice/cairn-0048/gameplay.png
+- `nx-wild-cairn-0050` — Sev 3 (survey-13, ZAI): IDENTICAL to
+  cairn-0022 class — ~19 floating pebbles in six regions A1-A6
+  (worst: even row A3 x395-492 y293-305), central blob zone
+  x335-565; discrete stacks + grounding PASS — family 5-of-5
+  UNANIMOUS. Evidence: reviews/survey13-slice/cairn-0050/gameplay.png
+- `nx-cultivation-orchard-0046` — Sev 3 (survey-13, ZAI): IDENTICAL
+  to orchard-0012 class — forest-edge read (crown height variance
+  30-40%, irregular trunk deltas 58-117px), fruit ZERO at 18m (no
+  in-canopy break; ground spheres read debris), right-edge tree
+  crushed-black x922-960 y222-500, understory clutter — family
+  4-of-5. Evidence: reviews/survey13-slice/orchard-0046/gameplay.png
+- `nx-cultivation-orchard-0059` — Sev 3 (survey-13, ZAI): IDENTICAL
+  to orchard-0012 class — forest-edge read, major central skyline
+  break x440-500 y290-390, fruit ZERO, value collapse zones A-C
+  (worst x555-790 y325-400), broken rank rhythm (gaps x385-480,
+  x838-895) — family 5-of-5 UNANIMOUS. Evidence:
+  reviews/survey13-slice/orchard-0059/gameplay.png
+
+FAMILY CENSUS CLOSED (confirmed district families): hamlet 5/5,
+garden 5/5, cairn 5/5, orchard 5/5, lavender 4/4, seed 4/4, mosaic
+4/4 — every confirmed family fully judged with unanimous or
+majority lock; family-wide remediation is probe-backed end to end.
+Remaining unjudged universe: clean-family members (cloister/
+statuary/labyrinth/terrace/forest/wayside partial coverage) + town
+core rotation.
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):

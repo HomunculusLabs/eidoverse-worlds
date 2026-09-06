@@ -444,3 +444,39 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   garden 4-of-5, mosaic 4-of-4 unanimous + Sev raised). All
   district-domain (improve's own surface), no other lane's plan
   touched this tick.
+
+## Judged index (survey-13)
+
+- survey-13 (2026-09-06, ZAI fallback 7/8 + NATIVE 1/8 disclosed —
+  native 1210 x2 on first call, paced retry burned; one mid-tick
+  native recovery re-judged garden-0058 NATIVE (dual-judge
+  corroborates ZAI), hamlet native re-judge retry burned after; 18m
+  gameplay, fresh live store bytes 8/8 HTTP 200 curl UA on exact
+  census-13 libs): LOCK-OUT slice — final unjudged members of every
+  standing CONFIRMED family. Slice = hamlet-0054, garden-0058,
+  lavender-0053, seed-0034, cairn-0048, cairn-0050, orchard-0046,
+  orchard-0059 (severity backlog drained — round-1 terminal,
+  7-12 candidates are intake not re-judge debt). Verdicts: ALL 8
+  CONFIRMED — hamlet-0054 Sev 2 (family 5-of-5 UNANIMOUS),
+  garden-0058 Sev 3 (5-of-5 UNANIMOUS, native+ZAI dual-judged),
+  lavender-0053 Sev 3 (4-of-4 UNANIMOUS), seed-0034 Sev 4 (4-of-4
+  UNANIMOUS), cairn-0048 Sev 3 (4-of-5), cairn-0050 Sev 3 (5-of-5
+  UNANIMOUS), orchard-0046 Sev 3 (4-of-5), orchard-0059 Sev 3
+  (5-of-5 UNANIMOUS). Every defect-confirmed family now FULLY
+  censused. Routing: family-class extension block in IMPROVE-PLAN
+  SURVEY CANDIDATES (all district-domain — improve's own intake
+  surface; zero notes to other lanes' plans this tick).
+  Grep-verified zero open duplicates pre-append. Census 259 steady
+  0/0 vs survey-12 snapshot, ZERO flips (quiet window), lights 38.
+  Gate: ALL PASS real exit 0 first try at 24d5632 (ledger law EXACT
+  2370298). Sibling HEAD advanced mid-tick 24d5632 -> aeb2d1d
+  (foreign files only; IMPROVE-PLAN clean in tree at read + append).
+  Verdicts 8 confirmed / 0 clean / 0 dropped. Zero world mutations,
+  zero uploads, zero shared-budget use.
+
+## Routed notes (survey-13)
+
+- survey-13: family-class extension block appended under IMPROVE-PLAN
+  SURVEY CANDIDATES (hamlet/garden/lavender/seed/cairn/orchard final
+  members; family census lock-out complete). All district-domain
+  (improve's own surface), no other lane's plan touched this tick.
