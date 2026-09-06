@@ -1421,3 +1421,38 @@ arithmetic. Interlane md5 f6254cd0 unchanged. Foreign dirt (APPROACH-PLAN
 edit, tower3, artwalk b17 placer, court placer, struct terrain probes,
 fleet watcher) left untouched. Zero world mutations, zero uploads, zero
 shared-budget use.
+
+
+**STATE AT dress-39 (2026-09-06 ~18:1x EDT, pipeline hold tick — 18th
+consecutive)**: lawful HOLD — every path closed this tick. Shard queue
+re-verified EMPTY at source with a full-row-window scan (each row's
+annotation window runs to the NEXT numbered row, not a fixed 500 chars —
+regex lesson: row 30's `[NATIVE-DROPPED survey-2: ...]` marker sits mid-block
+and a short window reads the row OPEN; all nine nx-dress Round-1 rows
+terminal: 5/29/30/31 DROPPED native rejudge [30 via survey-2], 32/33/34/37/38
+EXECUTED reseats; row 39 routes nx-town to improve-own; survey-8
+nx-dress-fountain DRESS-DOMAIN legacy-core off-limits, Bill's call — NOT
+shard work). Own queue: SW lamps only, a/b/c budget policy Bill-bound (fresh
+census: SW-quadrant r>=35 light tokens exactly 2 approach leg lamps
+(nx-approach-sw-lamp-001-l r39.7 / -002-l r55.4) + 1 mile lantern
+(nx-mile-sw-013-l r64.0) = 3 live, spend 0 of 3). Zero Bill verdict markers
+in ledger tail AND dress-districts eye-gate packet fd677cae unchanged
+(delivered once at dress-12). Hold verification: gate ALL PASS real exit 0
+at tick-start HEAD 154c735; epoch advanced mid-tick (struct-43 + waysign-35
+committed their in-flight IMPROVEMENTS/IMPROVE-PLAN edits — normal pipeline
+interleaving, not raced), gate RE-RUN ALL PASS real exit 0 at final HEAD
+914f7a5. Fresh live census 258 at capture moment (mid sibling approach-lane
+gate-lamp restoration: +3 offaxis gate lamp lights n/s/w vs night-48's 255,
+0 gone; census-wide lights 37 with lamp-e transiently absent — sibling
+domain, dress-domain delta ZERO): ALL ELEVEN district installs PIN_EXACT
+lib+tuple+yaw (hedge 3d5c7d44 (-35.34,0.04,62.14), skeps 87d2dd16
+(-53.57,0.04,54.5), stile 5e9d301d (-45.25,0.05,54.45), logpile cac71bff
+(-66.8,0.03,51.2), ne-yard 191227da (55.91,-0.03,87.1) yaw 2.57087,
+ne-bench 46f3b6b1 (14.23,0,73.13), woodstack 692bc54e (59.71,-0.03,51.78),
+cairn 59031a0c (58.7,0.01,-58.7), se-stones 8dafb9e5 (52.61,-0.01,-47.8),
+sw-gravel fd21de9f (-45.22,-0.05,-59.46), sw-prayer 5074600f
+(-52.26,-0.03,-64.53)); 27 total nx-dress-* = 11 district + 16 legacy core,
+off-limits set intact by arithmetic; interlane md5 f6254cd0 unchanged.
+Foreign dirt (tower3, court placer, struct terrain probes, fleet watcher,
+next-fix-gate-lamp-companions) left untouched. Zero world mutations, zero
+uploads, zero shared-budget use.
