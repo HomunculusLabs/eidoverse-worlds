@@ -3789,4 +3789,6 @@ fixes ≈ 6 F.)
 
 - [nvp-147] eight-lane widening: night-N + sweep-N loop files opened (NIGHT-LOOP.md, SWEEP-LOOP.md) — zero-mutation observer lanes for the §7 night pass and §8 continuous end-to-end audit; interlane widened to eight lanes, HEAD-gate prefixes extended (night-/sweep-) (D+2, E+2)
 
-**Running total: 2370074 / 2000000**
+- [nvp-148] ten-lane widening: waysign-N + mile-N loop files opened (WAYSIGN-LOOP.md/PLAN, MILESTONE-LOOP.md/PLAN) — core trade signage (unowned nvp-133..148 polish candidate) and approach-network milestones in the refine-295 idiom; interlane widened to ten lanes, HEAD-gate prefixes extended (waysign-/mile-) (D+4, E+2)
+
+**Running total: 2370080 / 2000000**

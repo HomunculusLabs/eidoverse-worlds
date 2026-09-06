@@ -5,7 +5,10 @@ Active lanes: `polish-N` (hero-asset, entity `nx-carousel` only),
 per tick, never `nx-carousel`), `struct-N` (NEW `nx-struct-*` entities only,
 never re-places existing buildings), `dress-N` (NEW
 `nx-dress-<district>-<kind>-<NNN>` district dressing only), `approach-N`
-(NEW `nx-approach-<dir>-<kind>-<NNN>` district legs only). Two observer
+(NEW `nx-approach-<dir>-<kind>-<NNN>` district legs only), `waysign-N` (NEW
+`nx-sign-<trade>-<NNN>` trade-sign riders on core buildings only — never
+re-place a host), `mile-N` (NEW `nx-mile-<dir>-<NNN>` approach-milestone
+pairs only — never touch a leg or its lamps). Two observer
 lanes run beside them: `night-N` (ZERO world mutation — night-read audit,
 defects routed to owners) and `sweep-N` (ZERO world mutation — integrator
 audit; census/overlap/walk/integrity). Observer lanes write only their own
