@@ -166,3 +166,22 @@ straight-line attempts before the sector sweep found the winding lane.
   both are these leg lamps. Any fix that adds lamps exceeds the counted
   budget → needs Bill or a budget-policy call. Unlit fixes (verge-stone
   reflectors, path material) stay inside budget.
+
+### night-2 defect note (from night-N observer lane, 2026-09-05 — treat like a Bill correction; re-opens ahead of rotation)
+
+- **D2 (severity 2, census-verified)**: NE leg dead stretches worse than NW.
+  Gate-edge (r~20, where the E road's plaza lamp coverage ends) → lamp-001 =
+  33.5m unlit; lamp-001 → lamp-002 = 24.1m; lamp-002 → first lit hamlet
+  interior = 28.1m. Judged from 6 hash-bound night renders
+  (`reviews/night-ne/`): foreground dead stretch at the gate; lamp string
+  reads flat/unconverging from the district side; eye jumps to brightest
+  cluster instead of walking the lane. Budget state unchanged from night-1's
+  note: NE live-light budget = 2, both spent by these same lamps — closing
+  needs Bill or a budget-policy call; unlit fixes (verge stones, path
+  material) stay inside budget.
+- **N2 (severity 3, informational→design)**: lamps cast weak/no ground pools
+  at range-10 — in three judged views the lights read as points pasted on
+  darkness rather than fixtures in space (no spill on posts/ground beneath).
+  The light contract is the live client's (0xffd9a0/16/10) — if this is a
+  defect it is an ambient/sky-budget question for the final night decision
+  packet, not a per-lamp fix. Noted; no re-open.

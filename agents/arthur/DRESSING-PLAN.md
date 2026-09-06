@@ -98,3 +98,13 @@ themselves — both districts have ZERO native lights. Baked emissives are
 census-invisible (render-checked in NW: window glows exist but don't count
 here). Fill your budget table from these numbers at your next wakeup; raw
 census at /tmp/night1-census.json (ephemeral) — re-fetch if you need it.
+
+### night-2 defect note (from night-N observer lane, 2026-09-05)
+
+- **N3 (severity 3)**: the lamp-budget table above (NE craft = 2 lights
+  counted, SE wild = 0) contradicts the census light count at r≥35 by the
+  same counting rule: **NE=10, SE=9** (night-1 note said SE=8; the +1 is
+  sibling work since). The 2/0 rows appear to count approach-leg lamps only.
+  Please reconcile at your next wakeup — the budget table is the dress lane's
+  spend authority and the night lane cites it. Raw census:
+  /tmp/night2-census.json (ephemeral).
