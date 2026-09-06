@@ -1362,3 +1362,30 @@ arithmetic; interlane md5 f6254cd0 unchanged. Foreign dirt (IMPROVE-PLAN
 improve-16 edit, tower3, court placer, struct terrain probes, fleet
 watcher) left untouched. Zero world mutations, zero uploads, zero
 shared-budget use.
+
+
+**STATE AT dress-37 (2026-09-06 ~16:57 EDT, pipeline hold tick — 16th
+consecutive)**: lawful HOLD — every path closed this tick. Shard queue
+re-verified EMPTY at source (nine nx-dress Round-1 rows terminal: 5/29/30/31
+DROPPED native rejudge, 32/33/34/37/38 EXECUTED reseats; row 39 routes
+nx-town to improve-own; survey-8 nx-dress-fountain still DRESS-DOMAIN
+legacy-core off-limits, ownership Bill's call — NOT shard work; full-file
+nx-dress scanner returned zero new unrouted rows — all hits were summary
+prose or evidence paths). Own queue: SW lamps only, a/b/c budget policy
+Bill-bound (light recount after a probe self-catch — first filter used
+e.get('type') which census entities do not carry; corrected to
+kind='light': 38 lights steady census-wide, SW-quadrant r>=35 tokens
+exactly 2 approach leg lamps (nx-approach-sw-lamp-001-l/002-l) + 1 mile
+lantern (nx-mile-sw-013-l) = 3 live, spend 0 of 3); zero Bill verdict
+markers in ledger tail AND dress-districts eye-gate packet fd677cae
+unchanged (delivered once at dress-12). Hold verification: standing gate
+ALL PASS real exit 0 at HEAD 79e7d4d (absorbing waysign-33); fresh live
+census 259, ALL ELEVEN district installations PIN_EXACT
+lib+tuple+yaw-radians (hedge 3d5c7d44, skeps 87d2dd16, stile 5e9d301d,
+logpile cac71bff, ne-yard 191227da at TRUE dress-2 tuple (55.91, −0.034,
+87.10) yaw 2.57087, ne-bench 46f3b6b1, woodstack 692bc54e, cairn 59031a0c,
+se-stones 8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f); 27 total
+nx-dress-* = 11 district + 16 legacy core intact by arithmetic; interlane
+md5 f6254cd0 unchanged. Foreign dirt (IMPROVE-PLAN improve-16 edit,
+tower3, court placer, struct terrain probes, fleet watcher) left
+untouched. Zero world mutations, zero uploads, zero shared-budget use.

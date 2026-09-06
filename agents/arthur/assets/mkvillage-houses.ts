@@ -242,7 +242,7 @@ function towerHouse() {
 }
 
 // mat import needed locally (tower used windowFrameMat placeholder)
-import { mat } from "./glbwrite.ts";
+import { mat, texMat } from "./glbwrite.ts";
 const windowFrameMat = null;
 
 // ============ 2. LONGHOUSE (10,-8) — steep gable, porch posts ============
@@ -374,26 +374,74 @@ function gardenCottage() {
     box(g, "gc_wall_sw", (MW - 1.0) / 2, H, T, -(0.5 + (MW - 1.0) / 4), H / 2 + 0.13, sZ, C.STONE);
     box(g, "gc_wall_se", (MW - 1.0) / 2, H, T, (0.5 + (MW - 1.0) / 4), H / 2 + 0.13, sZ, C.STONE);
     box(g, "gc_lintel", 1.0, H - 2.05, T, 0, 2.05 + (H - 2.05) / 2 + 0.13, sZ, C.BONE);
+    // improve-16 F2: door dignity — the b17 seed lattice above the opening IS
+    // the crown (host-local z 1.80..1.94, y 2.08+); the door FRAME stays at
+    // its original z 1.7 (a proud move would penetrate the lattice band) and
+    // dignity comes from the walk threshold + two-rise stoop instead.
     doorFrame(g, "gc_door", 0, 1.0, sZ, 0.95, 2.05, "z");
+    box(g, "gc_threshold", 1.05, 0.12, T * 1.6, 0, 0.13 + 0.06, MD / 2 + 0.06, C.MID);
+    box(g, "gc_stoop", 1.2, 0.19, 0.6, 0, 0.19 / 2, MD / 2 + 0.40, C.STONE);
     box(g, "gc_wall_w", T, H, MD, -(MW / 2 - T / 2), H / 2 + 0.13, 0, C.STONE);
     // east wall with window
     box(g, "gc_wall_e", T, H, MD, MW / 2 - T / 2, H / 2 + 0.13, 0, C.STONE);
-    windowFrame(g, "gc_win_e", MW / 2 - T / 2, 1.5, 0, 0.7, 0.9, "x");
-    windowFrame(g, "gc_win_n", -1.2, 1.5, -(MD / 2 - T / 2), 0.7, 0.9, "z");
+    // improve-16 F1: window was called at the wall CENTERLINE (x 2.1) —
+    // frame (d 0.14 → 2.03..2.17) and pane buried inside the wall (2.0..2.2),
+    // the improve-12 buried-pane class. Re-seated PROUD by the improve-12
+    // arithmetic (center = wall center + 0.09): frame 2.12..2.26, 0.06 past
+    // the outer face, shutters flare from 2.31.
+    windowFrame(g, "gc_win_e", MW / 2 - T / 2 + 0.09, 1.5, 0, 0.7, 0.9, "x");
+    // improve-16 F1b: same buried-pane class on the back window — proud seat.
+    windowFrame(g, "gc_win_n", -1.2, 1.5, -(MD / 2 - T / 2) - 0.09, 0.7, 0.9, "z");
+    // improve-16 F1c: NEW front window on the door wall's W flank — the
+    // approach face (local +Z faces the plaza) carried only the door + b17
+    // crown; a second readable element (cased lit window) kills the
+    // near-featureless read. w narrowed 1.02→0.8 at edit time so both
+    // shutter tips clear the door opening (x −0.5) and the wall corner
+    // (x −2.2) — 0.074m margins each side. Disjoint from the b17 band
+    // (window y ≤1.545 < 2.08; x ≤ −0.95 < −0.75).
+    windowFrame(g, "gc_win_s", -1.35, 1.05, sZ + 0.09, 0.8, 0.9, "z");
     // wing: 2.2 × 2.4 attached on +X (lower)
     const WX = MW / 2 + 1.1, WH = 2.0;
     box(g, "gc_wing_wall_n", 2.2, WH, T, WX, WH / 2 + 0.13, -1.0, C.STONE);
     box(g, "gc_wing_wall_s", 2.2, WH, T, WX, WH / 2 + 0.13, 1.4 - T / 2 + 0.6, C.STONE);
     box(g, "gc_wing_wall_e", T, WH, 2.4, WX + 1.1 - T / 2, WH / 2 + 0.13, 0.2, C.STONE);
     // wing roof (lower gable)
-    gableRoof(g, "gc_roof", MW, MD, 1.5, H + 0.13, 0.35);
-    gableRoof(g, "gc_wing_roof", 2.2, 2.4, 1.0, WH + 0.13, 0.25);
+    gableRoof(g, "gc_roof", MW, MD, 1.5, H + 0.13, 0.35, C.MID, true, 2.15);
+    gableRoof(g, "gc_wing_roof", 2.2, 2.4, 1.0, WH + 0.13, 0.25, C.MID, true);
     // big chimney on main
     chimney(g, "gc_chimney", -1.4, -0.8, H + 1.4, H + 2.6);
     // garden wall: low ring on the -Z/-X side with a gap
+    // improve-16 F3: bare 0.14 C.STONE ribbons merged into one dark value at
+    // 18m — tone-lifted boards (one shared texMat) + posts on a ~0.85m
+    // rhythm + pale BONE caps give the fence reads-as-wall rhythm (dress-11
+    // pale-cap idiom). Posts/caps ride the existing dark/bone buckets.
     const GW = 0.14, GH = 0.7;
-    box(g, "gc_garden_w", GW, GH, 5.2, -(MW / 2 + 1.6), GH / 2, -1.2, C.STONE);
-    box(g, "gc_garden_n", 4.4, GH, GW, -MW / 2 - 0.6, GH / 2, -3.6, C.STONE);
+    const gwallMat = texMat("gcwall", [0x5e5c48, 0x56503c, 0x504c38], { rough: 0.95, scale: 2, weights: [2, 1, 1] });
+    for (const [fi, fx, fz, along] of [[0, -(MW / 2 + 1.6), -1.2, "z"], [1, -MW / 2 - 0.6, -3.6, "x"]] as const) {
+        const len = fi === 0 ? 5.2 : 4.4;
+        const board = new THREE.Mesh(
+            along === "z" ? new THREE.BoxGeometry(GW, GH, len) : new THREE.BoxGeometry(len, GH, GW),
+            gwallMat,
+        );
+        board.name = `gc_garden_${fi === 0 ? "w" : "n"}`;
+        board.position.set(fx, GH / 2, fz);
+        g.add(board);
+        const cap = new THREE.Mesh(
+            along === "z" ? new THREE.BoxGeometry(0.2, 0.06, len) : new THREE.BoxGeometry(len, 0.06, 0.2),
+            mat(C.BONE, 0.85, 0),
+        );
+        cap.name = `gc_gcap_${fi}`;
+        cap.position.set(fx, GH + 0.03, fz);
+        g.add(cap);
+        const nPosts = Math.floor(len / 0.85);
+        for (let p = 0; p <= nPosts; p++) {
+            const d = -len / 2 + (p * len) / nPosts;
+            const px = along === "z" ? fx : fx + d;
+            const pz = along === "z" ? fz + d : fz;
+            box(g, `gc_gpost_${fi}_${p}`, 0.16, GH + 0.1, 0.16, px, (GH + 0.1) / 2, pz, C.DARK);
+            box(g, `gc_gpcap_${fi}_${p}`, 0.21, 0.05, 0.21, px, GH + 0.1 + 0.025, pz, C.BONE);
+        }
+    }
     // planters inside garden (2 low boxes)
     box(g, "gc_planter_a", 1.1, 0.32, 0.5, -(MW / 2 + 1.2), 0.16, -2.6, C.MID);
     box(g, "gc_planter_b", 0.6, 0.26, 0.5, -(MW / 2 + 1.4), 0.13, -1.6, C.MID);

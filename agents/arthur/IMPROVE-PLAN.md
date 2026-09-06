@@ -1746,10 +1746,16 @@ confirmed; else row 20 `nx-town-garden-cottage` Sev 3).
   Live tuple (−26, 0.0009494488404761625, 19) yaw 2.2004415094410525, comp
   bag {} (census-fresh 259), light companion nx-town-garden-cottage-l at
   (−25.758, 2.101, 18.823) — untouched, separate entity. Rider
-  nx-artwalk-b17-garden-seed-lattice inverse-transformed host-local ≈
-  (−0.9497, 2.0809, −1.1603) at host yaw — KEEP-OUT x∈[−1.35, −0.55],
-  y∈[1.9, 2.3], z∈[−1.35, −0.97]; the windows/door/front-apron edits sit on
-  +Z/+X faces, disjoint by construction. Sibling outputs of this builder:
+  nx-artwalk-b17-garden-seed-lattice inverse-transform verified against the
+  ledger's own host-local record (artwalk-27: exact host-local (0, 2.08,
+  1.8325), rider yaw == host yaw, rider bbox ±0.75 x / 0.46 y / 0.136 z) —
+  CORRECTED KEEP-OUT (contract amendment pre-edit; the first derivation in
+  this tick's draft was wrong): x∈[−0.75, 0.75], y∈[2.08, 2.54], z∈[1.75,
+  1.92] — the rider CROWNS THE DOOR. Consequence: NO new geometry above the
+  door head (no header course, no raised lintel) — the seed lattice is the
+  door's crown; door dignity stays below y 2.03. The windows/front edits sit
+  on the N face and front flanks, disjoint by construction (front window
+  x-band −1.86..−0.84 y ≤1.98, rider x ≥−0.75 y ≥2.08 — double-disjoint). Sibling outputs of this builder:
   village_tower_house (LIVE 11b31000 — improve-9/10 pin), village_longhouse +
   village_row_cottage (legacy non-live, still byte-compared for safety).
   Findings (survey-2 native on exact live bytes):
@@ -1769,17 +1775,21 @@ confirmed; else row 20 `nx-town-garden-cottage` Sev 3).
     solidRidge (0.92/±0.03 staggered cap — hall D3/inn D2/bunk D3/row F2
     class) and main roof horn 0.05m (W/2 2.2 > trueGableHalf 2.15).
   FIX (mkvillage-houses.ts gardenCottage() only, no housekit change):
-  - F1: windowFrame seats proud — set pane+frame past the outer wall face
-    (translate +0.09 outward on each: win_e +x, win_n −z), shutters flare
-    from the proud face; BOTH windows get lit panes that can actually render
-    at night (improve-12 night clause). No new light entities (Bill-only).
-  - F2: door dignity — doorFrame seated proud (+z), threshold stone (C.MID
-    kit semantics), stoop stone at grade (doorGapWall stoop law), timber
-    lintel-board proud above the opening.
-  - F3: fence rhythm — posts every ~0.85m along both runs, pale CUT caps
-    (dress-11 idiom), board face gets village stone texMat recipe (0x56503c
-    2:1:1, rough .95, scale 2) so the fence reads as a low garden wall, not
-    a ribbon.
+  - F1: NEW FRONT WINDOW on the door wall W flank (x −1.35, y 1.05, w 1.02,
+    h 0.93) with the improve-12 proud-seat cure baked in: frame + lit pane
+    past the wall's outer face (z 2.21..2.35), shutters flanking on the
+    face. E wall window gc_win_e re-seated proud (x 2.19→2.30, shutters
+    re-flared +x). N wall window gc_win_n stays at −1.7 (its shutters already
+    read on the face) but gets a lit pane added at the outer face z −1.81.
+    No new light entities (Bill-only).
+  - F2: door dignity — doorFrame seated proud (z 1.68..1.86, 0.06 proud of
+    the 1.8 face — improve-12 seat arithmetic, NOT a floating offset),
+    threshold stone (C.MID, kit semantics), stoop stone at grade
+    (doorGapWall stoop law); NO raised lintel/header above the opening —
+    the b17 seed lattice IS the door's crown (keep-out above y 2.03).
+  - F3: fence posts (7, ~0.85m rhythm) + pale CUT caps + tone-lifted boards
+    (plain C.STONE 0x56503c→0x5e5c48 tint mix — legacy builder has no texMat
+    infra; a 2-tone board mix gives the rhythm without new infra).
   - KIT: gableRoof opts in solidRidge=true; trueGableHalf=2.15 on the main
     roof (kill 0.05m horn); wing roof solidRidge only (horn-free by shape).
   Falsification: (1) after gameplay@18m reads layered front — cased lit
@@ -1794,6 +1804,41 @@ confirmed; else row 20 `nx-town-garden-cottage` Sev 3).
     grows only by fence caps/posts within the fenced plot, re-check corner
     clearance vs carousel 1.061m historical pin — budget for SAT preflight
     before upload).
+
+  improve-16 EXECUTION COMPLETE (this tick): all fixes landed in
+  `mkvillage-houses.ts` gardenCottage(); rebuild ×2 deterministic sha
+  cee52aca03429a62; siblings byte-identical (tower_house 11b31000 = live
+  improve-9/10 pin, longhouse b4ac2df4, row_cottage 30bc8ec3). Decode audit
+  10/10 ALL PASS: b17 keep-out differential IDENTICAL 12==12 (zero new/gone
+  verts — the crown untouched), win_e pane proud 2.205 (5mm past the x 2.2
+  face, improve-12 posture), win_s pane proud z 1.805, win_n pane proud
+  z −1.805, gcwall texMat present, bbox growth = fence post-cap extent only
+  (x −5.105, z −3.905 — toward open ground, carousel binding face +z
+  UNCHANGED). Night falsification PASS: warm px 0→1702 (three lit panes
+  render; before: zero — the panes were buried). After-judge ZAI fallback
+  PASS with residual (native 1210 ×2, paced retry, disclosed — native
+  re-judge owed): F1 "lit two-pane window left of door — strongest feature,
+  excellent contrast"; F2 door reads DOOR via stoop ("stoop anchors the
+  door"; dark-on-dark residual is isolation-render worst-case side lighting
+  + host-rider law — live, the b17 brass/bone lattice crowns the door);
+  F3 fence grounded with cast shadow, zero floating geometry. Pre-existing
+  margin notes (byte-unchanged regions, attention artifacts probe law 5):
+  prop cluster near W wall merges at zero clearance; annex floor edge. Two
+  placer lessons hit and fixed IN TICK: (a) square-proxy SAT on the round
+  carousel = struct-19 inflation artifact (read gap 0) — replaced with exact
+  disc-vs-OBB: standing clearance 1.065m vs artwalk-27's 1.061 pin (4mm
+  agree), ALLOWED_ADJACENT, binding face unchanged, gate = regression only;
+  (b) my WS verb block never sent the JOIN frame — two 30s timeouts with
+  ZERO verbs landing (fresh census proved live untouched, artwalk-32
+  pre-place interruption class); fixed to the proven improve-15 chassis
+  (join → snapshot → setInterval-paced verbs). Re-place remove+spawn at the
+  exact standing tuple (−26, 0.000949, 19) yaw 2.2004415, lib
+  872aec35→cee52aca, comp {} both sides, PLACED_VERIFIED 2 verbs + idempotent
+  rerun ALREADY_LIVE_NO_VERBS; rider b17 + light companion verified standing
+  post-place. Standing interior-6 walk route re-run: 6-leg MCPL ALL_PASS
+  maxArrival 0.355m (historical value, unchanged). Placer:
+  next-place-improve16-garden.ts; decode: improve16-decode-garden.ts;
+  evidence: reviews/improve16-garden/{before,after}/.
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
   one append per tick, stage only lane-owned paths, never push.
