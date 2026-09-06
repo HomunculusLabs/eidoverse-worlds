@@ -1511,3 +1511,22 @@ pre-work at 79e7d4d; packet 48bea194 zero verdicts; no Phase F, no
 widening. Zero world mutations, zero shared-budget use, no visual PASS
 claimed. Lane HOLDS for Bill's counting-series eye-gate verdicts, a
 Phase F fresh commission, or a queue widening.
+
+### [artwalk-82] PIPELINE HOLD (2026-09-06)
+
+19th pipeline-mode hold tick. Shard verified at source: routing table maps
+nx-struct/nx-dress/nx-approach/nx-sign/nx-town only — zero rows route
+nx-artwalk-* (the 8 plan mentions are ownership prose; row 25 host-anchor
+duty is this lane's standing obligation). Phase H 7/7 + B-1..B-34 DONE;
+counting series closed since artwalk-46. No host re-place since the
+artwalk-81 garden-cottage reconciliation (commits since 3cdc33a are
+night-47 and dress-38 holds only). Hold verification: fleet anchor
+reconcile ALL_RECONCILED exit 0 — 259 census / 54 riders / 38 lights /
+34 placers / 33 host pins / 29 anchors, coverage held at artwalk-67
+post-fix levels, zero verbs, zero uploads. Standing gate ALL PASS real
+exit 0 at 347fa8d. Eye-gate packet 48bea194 unchanged, zero verdict
+markers; no Phase F commission, no widening. Zero world mutations, zero
+shared-budget use, no visual PASS claimed. Lane HOLDS for Bill's
+counting-series eye-gate verdicts
+(reviews/artwalk-counting-series-eye-gate.md), a Phase F fresh
+commission, or a queue widening.
