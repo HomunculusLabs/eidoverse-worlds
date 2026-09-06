@@ -810,6 +810,26 @@ CURRENT hosts. Findings and actions:
   steady; zero uploads (store already held all libs); 2 verbs total
   (b26 remove+spawn).
 
+### [artwalk-50] CROSS-SIBLING FLEET HOLD VERIFICATION (2026-09-06) — CLOSED (hold, zero mutations)
+Pipeline-mode hold tick: three sibling lanes mutated the live world after
+artwalk-49 (waysign-12 mill-sign reseat on the b10 windmill host, approach-6
+SW/NW solids + flame_beads_nw, struct-37 skymirror). Every host-rider
+continuity risk they could create re-verified fresh, all green:
+- `artwalk49-recovery-audit.ts` rerun: census 259 / 54 riders all present;
+  b7 host-derived tuple EXACT (dy 0.0, shrine 53709062); comps only h6/h7
+  motion bags as designed.
+- Full 11-host re-pin table re-checked live ok, including tower-house
+  11b31000 (improve-9's bd1badd218 record predates artwalk-49's re-pin —
+  live is 11b31000, no second host evolution). b21 placer pin matches live.
+- b26 + b34 way-bands: all four dYaw 0.0000 vs their approach-lamp hosts
+  (artwalk-49's b26 fix holding; approach-6's NW work did not rotate lamp
+  hosts).
+- No IMPROVE-PLAN rows route to nx-artwalk-* (the 54-rider note is the
+  reconciliation this lane executed at artwalk-49 and just re-verified).
+Lane HOLDS for Bill's counting-series eye-gate verdicts or a Phase F
+commission / queue widening. Zero world mutations, zero uploads, zero
+verbs. Gate ALL PASS real exit 0 at HEAD ab6a916.
+
 ### [artwalk-48] CHARTER WALL HOST-PIN REFRESH, SECOND GENERATION (2026-09-06) — CLOSED
 Sibling improve-5 evolved `nx-town-hall` again (1306527a→c92c1f91: trueGableHalf
 D2 fix, solid ridge D3, N-door casing/header D1, 5-anchor warm light kit, 28
