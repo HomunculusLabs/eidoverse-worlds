@@ -1993,3 +1993,36 @@ Bill-ruled). REPAIR-REGISTER zero nx-dress.
 - Standing unblock paths (say-once): Bill's SW lamp a/b/c policy call,
   or verdicts on the four-district eye-gate circuit
   (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+--- dress-58 (2026-09-06, pipeline tick 37) — HOLD
+
+- Shard: re-verified EMPTY at source by full-row-window scan (dress-39
+  law) on CURRENT bytes — sibling improve-19 committed mid-tick
+  (46044e4 -> 7b9fec9, nx-town-mapboard; zero dress rows touched, worktree
+  == HEAD on shared files after absorption). All nine nx-dress rows
+  terminal (5/29/30/31/32/33/34/37/38). Probe self-catch disclosed (13th
+  tick-class): first window-scan indexed row_heads[idx+1] on the FULL
+  head list while iterating the FILTERED dress list — windows after the
+  first were empty slices, false-flagging all nine OPEN; corrected probe
+  prints 0 open. Probe wrong, world right.
+- Second probe self-catch (REPEAT of dress-56 class): first pin pass
+  keyed lib.startswith(bare-8-hex) against live "store/<hash>" — 0/11
+  false-fail; store/-aware comparison gives 11/11 PIN_EXACT lib+pos vs
+  the authoritative dress-43 table. Idiom now: always split('/')[-1].
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh kind-law recount:
+  exactly 3 live SW r>=35 lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0). Spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae unchanged, zero VERDICT lines
+  (grep exit 1 fresh this tick).
+- Hold verification: standing gate ALL PASS real exit 0 at sibling HEAD
+  7b9fec9 (epoch advanced once mid-tick; gate re-anchored after
+  absorption). Fresh census 259 HTTP-200 first fetch; 27 nx-dress =
+  11 fleet + 16 legacy intact; lights 38 (thing 221 / light 38).
+  Prior /tmp census capture absent (session cleanup) — id-diff
+  unavailable this tick, fresh baseline written; 11/11 pin check stands
+  as the drift gate. Interlane md5 f6254cd0 steady.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock (shard empty at source, not idle).
+- Standing unblock paths (say-once): Bill's SW lamp a/b/c policy call,
+  or verdicts on the four-district eye-gate circuit
+  (agents/arthur/reviews/dress-districts-eye-gate.md).
