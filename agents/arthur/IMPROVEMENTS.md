@@ -4091,4 +4091,6 @@ fixes ≈ 6 F.)
 
 - [night-28] pipeline-mode hold tick (twentieth, no disposition change) — gate ALL PASS real exit 0, absorbing sibling HEAD advances 657539a->dfaa0c2 (approach-9 zero-verb hold; improve-13 bunkhouse execution, the census-27 in-flight lib change settled exactly as predicted; artwalk-58 host-pin re-pin, zero verbs); census-28 259/38/zero-night-prefixed FULLY steady vs census-27 (0 new, 0 gone, 0 pos/yaw/lib/scale); D1 pin nx-approach-nw-lane-001 dc256065879371d8 + D2 pin nx-approach-ne-lane-002 dc52264c04cfe5bb both exact; packet cdc435a2 unchanged since night-7; APPROACH-PLAN diff b1195ef->e0e7033 append-only, five night-N defect-note sections stand verbatim (D1+D2 CLOSED by owner, D3-D5 budget-bound, N1/N2/N4-N7 informational); interlane md5 f6254cd0 steady; zero actionable night- shard rows (observer lane); SW lamps still 0-of-3 on Bill a/b/c; holds on sky facet-5, lamp-budget D3-D5+N6, N5 detached-orb, N7 hierarchy inversion; zero world mutations (D+0, E+0)
 
+- [approach-10] pipeline hold tick: gate ALL PASS exit 0 at dfaa0c2; shard rows 16/36 EXECUTED, zero OPEN rows route nx-approach; fresh census 259 steady, approach domain 17, three leg libs PIN_EXACT, six leg -l lights standing, gate lamps untouched; SE a/b/c + D3-D5 budget + N5-N7 remain Bill-bound; zero mutations (D+0, E+0)
+
 **Running total: 2370261 / 2000000**

@@ -262,6 +262,23 @@ bunkhouse lib advance (49f5acc4→c8636968 at identical tuple) = improve-13
 landing in its own nx-town domain, domain-valid. Zero world mutations; no
 visual PASS claimed.
 
+### approach-10 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD dfaa0c2; interlane md5 f6254cd0 steady.
+Shard routing verified at source: IMPROVE-PLAN rows 16 (sw-lane-003) and 36
+(nw-lane-001) both EXECUTED (approach-4/5); zero OPEN rows route to
+nx-approach- (the "approach 2" prose count remains stale; routing read from
+rows). Re-arm law seeds improve-own round-2 candidates, not approach rows.
+Own queue: three legs stand PLACED_VERIFIED, D1/D2 closed in-budget; SE leg
+awaits Bill's a/b/c siting call; D3-D5 + N5-N7 remain Bill budget/verdict
+classes. Cheap lawful hold verification (fresh live census 259, approach
+domain 17, lights 38): all three leg libs PIN_EXACT (nw dc256065879371d8,
+ne dc52264c04cfe5bb, sw 43817a4fcdd06a15), six leg `-l` lights standing at
+authored positions, four gate lamps untouched (18b69a6bb2f5862f). Census diff
+vs the stale pre-fleet capture showed 32 dress/mile/sign sibling landings
+(domain-valid, absorbed by the steady 259 total), 0 gone; nothing
+approach-owned changed. Zero world mutations; no visual PASS claimed.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.
