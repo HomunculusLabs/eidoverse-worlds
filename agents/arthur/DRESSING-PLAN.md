@@ -1847,3 +1847,29 @@ no visual PASS claimed.
 - Zero world mutations, zero uploads, zero shared-budget use, no visual
   PASS claimed. No un-shard clock running (shard empty at source, not
   idle).
+
+## dress-53 (2026-09-06, pipeline tick 32) — HOLD
+
+- Shard: EMPTY at source at HEAD d1cab23 (survey-13 landed atop dress-52;
+  nine Round-1 nx-dress rows terminal, survey-13's cairn/garden/hamlet/
+  lavender/orchard/seed families are av-mason improve-own surface, zero
+  dress; round-2 intake scanned fresh at this HEAD — woodyard/welcome/
+  potter/court route IMPROVE primary per town-4).
+- Own queue: SW lamps only, Bill a/b/c bound. Recount via the PROVEN
+  dress-41 hold script (kind=light law): exactly 3 live r>=35 SW lights
+  (approach-sw-lamp-001-l r39.7, -002-l r55.4, nx-mile-sw-013-l r64.0),
+  spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae md5 re-verified fresh, zero VERDICT
+  lines; zero in ledger tail.
+- Hold verification: gate ALL PASS real exit 0 at HEAD d1cab23; fresh
+  census 259 HTTP-200 first fetch, id-set diff vs dress-52 capture
+  0 new / 0 gone; 11/11 district pins PIN_EXACT lib+pos+yaw; 27 nx-dress
+  = 11 fleet + 16 legacy intact; census lights 38 (kind=light law);
+  interlane md5 f6254cd0 steady.
+- Probe self-catch disclosed (8th class avoided at run time): first
+  ad-hoc light recount keyed comp/id TOKENS against /geom (comps null in
+  that view) and read 16; the established law is kind=="light" — running
+  the proven dress-41 script verbatim returned 38 and the exact SW trio.
+  World correct, probe wrong.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock (shard empty at source, not idle).
