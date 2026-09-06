@@ -408,6 +408,19 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     bumpiness (CONFIRMED, minor); door jambs read COMPLETE both sides
     (DROP); dormer clean, no seam (DROP). Re-ranked Sev 3. Evidence:
     reviews/survey2-sev2-slice/row-cottage/gameplay.png]
+    [EXECUTED improve-15: source-of-truth traced to mkv3-ring.ts block 4
+    (mkvillage-houses rowCottage LEGACY, not live; live pin bd88cd38 ==
+    local village_row3.glb == ring rebuild, no disputed bytes); both
+    findings re-confirmed NATIVE this tick then fixed — F1 lamp mounted
+    as wall lantern (iron plate+arm+hook+hood, KEEP bead under hood,
+    +118 verts); F2 solidRidge=true continuous cap; ring siblings 6/6
+    byte-identical; sha add42aea x2; decode keep-out 132==132 identical,
+    bbox unchanged; night warm dot retained; ZAI after-judge 2/2 PASS
+    (native 1210 x2, disclosed, re-judge owed); remove+spawn exact tuple
+    comp {} PLACED_VERIFIED + idempotent; 6-leg walk ALL_PASS 0.3838m
+    unchanged; rider b18 + light companion untouched, census 259.
+    Note: interior-8 focused-gate sha pin staled by design — owner lane
+    re-pins (artwalk-58 class); flag reported to interior lane]
 19. `nx-town-bunkhouse` — facade value crush; stray diagonal face right
     wall; ridge tabs. Sev 2. (guard: re-check interior lane tail at
    execution; interior-20 last Sep 1)
@@ -1576,6 +1589,46 @@ open duplicate notes for these objects.
   (5) 4-leg approach MCPL walk ALL_PASS; (6) native judge on after
   renders. Revert: revert the two mkv3-shrine.ts edits → rebuild returns
   53709062d3095dcc (baseline ×2 proven this tick).
+
+- improve-15 (EXECUTION CONTRACT, queue item 18 `nx-town-row-cottage`): windmill guard still live (expires 09-07 01:57); row 18 taken by queue order (survey-2 NATIVE-PARTIAL stands as the restored-vision re-judgment, improve-13/14 precedent — re-confirmed NATIVE this tick on the exact live bytes before editing). Idle-guard clear (last mutation interior-8 lineage; sweep tier-2 walks read-only). Live tuple (−23, 0, −17) yaw 0.9411511441487406, lib bd88cd386aec2a89… == local `village_row3.glb` == `mkv3-ring.ts` block 4 rebuild (source-of-truth traced through interior-8/artwalk-28 lineage; mkvillage-houses.ts rowCottage() is a LEGACY builder, NOT live). Comp bag {} (census-fresh 259); light companion nx-town-row-cottage-l at host-local (0, 2.1, 0.40) — untouched, separate entity. Rider nx-artwalk-b18-row-warp-count host-local (0, 2.22, 2.2825) door-crown band — KEEP-OUT x∈[−0.85, 0.85], y 2.0..2.7, z 2.0..2.6; all edits at x=−1.7 or the ridge, disjoint by construction. Native confirm (this tick, gameplay.png @18m):
+  - F1 lamp bare dot (CONFIRMED NATIVE): 3–4px emissive core at (368–388, 300–320), zero bracket/housing/mount — decode: node `lamp` bead r 0.06 at (−1.7, 2.35, 2.6), floating 0.35m proud of the front wall face (z 2.25), no fixture geometry anywhere in the build.
+  - F2 ridge tab/bumpiness (CONFIRMED NATIVE): bump right of dormer at (596–614, 204–214) + seam notches — the gableRoof 0.92-factor ±0.03-yaw staggered cap class (identical to hall D3 / inn D2 / bunkhouse D3; proven kit opt-in cure).
+  - DROPPED (survey-2 native, standing): door jambs complete both sides; dormer clean no seam.
+  FIX (mkv3-ring.ts block 4 only, no housekit change):
+  - F1: wall lantern fixture around the existing bead — iron wall plate on the front wall face, horizontal arm, drop hook, hood cap above the bead (C.DARK iron family, polish-273/278 mount law: no naked glow dot without visible mount); bead stays KEEP-named `lamp` at its position.
+  - F2: roof call opts into `solidRidge=true` (continuous cap, no stagger). No trueGableHalf needed — W 5 < D+2·over 5.3, the gable triangle (±2.5) sits INSIDE the slab edge (±2.65), no horn on this plan.
+  Falsification: (1) after gameplay@18m reads a mounted lantern (dark bracket/hood silhouette + warm dot), not a bare dot; (2) after front/top ridge continuous edge-to-edge, no tab right of the dormer; (3) decode audit — fixture verts present at x≈−1.7 z 2.25..2.6 y 2.26..2.57, b18 keep-out zero NEW verts, bbox unchanged (SAT-neutral same-tuple re-place); (4) night.png warm dot retained under hood; (5) MCPL door walk ALL_PASS (fixture above head height, outside door lane); (6) native judge on after renders; (7) 6 ring siblings byte-identical (ring-safety: snapshot → rebuild → restore six, village_tower3.glb carries sibling dirt).
+  Revert: revert the two block-4 edits → rebuild returns bd88cd386aec2a89 (baseline == live pin, proven this tick).
+
+  improve-15 EXECUTION COMPLETE (this tick): both fixes landed in mkv3-ring.ts
+  block 4; rebuild ×2 deterministic sha add42aeacca2ecc8…; ring-safety
+  siblings 6/6 byte-identical (village_tower3 sibling dirt reproduced
+  exactly — a989bdc3 both sides); decode audit ALL PASS (fixture nodes
+  lamp_plate/lamp_arm/lamp_hook/lamp_hood at x≈−1.7 z 2.20..2.72, KEEP lamp
+  bead under hood; b18 keep-out differential 132==132 identical, zero new;
+  bbox unchanged 5.9×4.695×5.346 = SAT-neutral; ridge caps staggered →
+  uniform −0.12 continuous); night falsification PASS (warm cluster 8px
+  peak R 251 under hood, dormer window 36px unchanged); after-judge ZAI
+  fallback 2/2 PASS with pixel evidence (hood silhouette + cast shadow
+  mount the dot; ridge continuous, tab gone; native 1210 ×2 with paced
+  retry — disclosed, native re-judge owed when provider returns);
+  re-place remove+spawn at the exact standing tuple (−23, 0, −17) yaw
+  0.9411511441487406, lib bd88cd38→add42aeac, comp {} both sides;
+  PLACED_VERIFIED 2 verbs + idempotent rerun ALREADY_LIVE_NO_VERBS; 6-leg
+  MCPL door walk ALL_PASS maxArrival 0.3838m (historical value unchanged);
+  rider b18 + light companion nx-town-row-cottage-l untouched, census 259.
+  Placer: next-place-improve15-rowcottage.ts. Review evidence:
+  reviews/improve15-rowcottage/{before,after}/. Residual (routed to
+  round-1 eye-gate): ZAI noted the bracket arm is 1-2px thin at render
+  scale — the mounted read currently carries on hood+shadow; if Bill's
+  eye-check finds the mount weak at gameplay distance, one widening pass
+  (arm 0.05→0.07) is the standing fix. Interior-8 focused gate pins the
+  OLD sha — flagged to interior lane for re-pin (artwalk-58 class, not
+  touched by this lane).
+
+Next queue item (improve-16): windmill idle-guard re-check (rider placed
+09-06 01:57 — expires 09-07 01:57; if clear, queue item 4 Sev 1 native-
+confirmed; else row 20 `nx-town-garden-cottage` Sev 3).
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
   one append per tick, stage only lane-owned paths, never push.

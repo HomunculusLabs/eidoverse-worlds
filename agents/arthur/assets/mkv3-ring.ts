@@ -431,7 +431,11 @@ const out: Built[] = [];
     wallSpan(g, "wall_e", D - 2 * T, H, T, W / 2 - T / 2, FY, 0, "z");
     doorGapWall(g, "front", W, H, T, 0, FY, D / 2 - T / 2, "z");
     windowFrame(g, "win_w", -(W / 2 - T / 2), 1.7, -0.7, 0.65, 0.8, "x");
-    gableRoof(g, "roof", W, D, 1.6, FY + H, 0.4);
+    // improve-15 F2: solid ridge — the staggered hand-laid cap reads as
+    // tabs/notches at 18m (hall D3 / inn D2 / bunkhouse D3 class); opt into
+    // the proven continuous cap run. No trueGableHalf needed: W 5 < D+2·over
+    // 5.3, the gable triangle sits inside the slab edge on this plan.
+    gableRoof(g, "roof", W, D, 1.6, FY + H, 0.4, C.MID, true);
     // dormer on E slope — a REAL dormer: cheek walls meeting the roof slope,
     // lit window facing +Z, and its own tiny gable roof
     const dx = 1.35, dy = FY + H + 0.75;
@@ -495,6 +499,33 @@ const out: Built[] = [];
         g.add(bundle);
     }
     glow(g, "flame", W / 2 - 0.75, FY + 0.94, 0.8, 0xffc98a, 0.045);
+    // improve-15 F1: the front-wall lamp was a bare glow dot floating proud
+    // of the wall (survey-2 + native-confirmed) — mount it as a real wall
+    // lantern: iron plate on the wall face, arm, drop hook, hood cap. The
+    // KEEP-named `lamp` bead stays at its position, under the hood.
+    {
+        const LX = -1.7, LY = FY + 2.15; // bead center x/y
+        // iron mounting plate on the wall face (z 2.25)
+        const plate = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.22, 0.05), mat(C.DARK, 0.9, 0));
+        plate.name = "lamp_plate";
+        plate.position.set(LX, LY + 0.13, D / 2 - 0.025);
+        g.add(plate);
+        // horizontal arm out from the plate to over the bead
+        const arm = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 0.42), mat(C.DARK, 0.9, 0));
+        arm.name = "lamp_arm";
+        arm.position.set(LX, LY + 0.26, D / 2 + 0.13);
+        g.add(arm);
+        // drop hook from the arm down toward the hood
+        const hook = new THREE.Mesh(new THREE.BoxGeometry(0.04, 0.12, 0.04), mat(C.DARK, 0.9, 0));
+        hook.name = "lamp_hook";
+        hook.position.set(LX, LY + 0.175, D / 2 + 0.32);
+        g.add(hook);
+        // hood cap above the bead (reads as a dark silhouette at 18m)
+        const hood = new THREE.Mesh(new THREE.CylinderGeometry(0.085, 0.12, 0.07, 7), mat(C.DARK, 0.9, 0));
+        hood.name = "lamp_hood";
+        hood.position.set(LX, LY + 0.12, D / 2 + 0.35);
+        g.add(hood);
+    }
     glow(g, "lamp", -1.7, FY + 2.15, D / 2 + 0.35);
         // ---- TIE BEAMS (loop #94): the beam language reaches the cottages ----
     for (const [bi, bz] of [[0, -1.4], [1, 1.4]] as const) {
