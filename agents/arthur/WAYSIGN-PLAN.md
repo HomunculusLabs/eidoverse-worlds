@@ -706,6 +706,29 @@ only when native is down that tick, disclosed.
   (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
   sign's build ahead of rotation.
 
+- waysign-28 HOLD (pipeline mode, 12th consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court brace closures); zero OPEN
+  IMPROVE-PLAN rows route to `nx-sign-*` (sharding open split read fresh
+  at source lines 878+: struct ≈13 / dress ≈9 / approach 2 / improve-own
+  ≈11 — nx-sign listed only as the already-R2 routing example; every
+  nx-sign mention elsewhere historical). Eye-gate packet md5 8b88b6b3
+  unchanged, zero Bill verdict markers. Cheap lawful hold verification:
+  standing gate ALL PASS real exit 0 at HEAD 45a01b5 (dress-31 absorbed);
+  fresh live census 259 total, PIN check 15/15 — ALL 8 `nx-sign-*`
+  riders PIN_EXACT (stable afee37dd, dyer 8ce2081f, kiln ecbad903,
+  potter 3a6c8fe7, woodyard f46e12ae, mill 870256ce, bakery 49342c52,
+  smithy 3522e5ab) + 7 signed hosts LIB_STABLE (stable 98f2d5b6, court
+  59534b10, windmill 0993836012d1b17d, woodyard 1f2c6f592095b204,
+  dyehouse 888be3597d2f772f, kiln 4d8ef8fc, potter dad7c82e); all rider
+  tuples read exact vs ledger (stable [40.9,0,~0] yaw −π/2, dyer, kiln,
+  potter, woodyard, mill, bakery, smithy all matching). First census
+  compare printed 0/15 — probe artifact (lib prefix sliced against the
+  full `store/` path), corrected compare against the path suffix; pins
+  law-verified. Zero world mutations, zero uploads, zero shared-budget
+  use, no visual PASS claimed. Lane HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+  sign's build ahead of rotation.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
