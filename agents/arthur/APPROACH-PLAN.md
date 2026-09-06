@@ -168,6 +168,34 @@ re-dress of the NW leg is ever commissioned (SW-style gray-bone
 contrast would be the idiom). Lane state: 3 of 4 legs stand; SE awaits
 Bill's a/b/c siting call; D1-D5 lamp-budget notes unchanged.
 
+### approach-6 (2026-09-06): D1 unlit night-wayfinding fix — NW lane re-dress + bead cadence
+
+D1 (Sev 2, night-correction class) closed on its named in-budget path: zero new
+light entities, lamp budget untouched (NW stays 2+2). Two changes to
+`nx-approach-nw-lane-001` (pavers/polyline/lamps byte-stable): (a) verge
+re-dressed in the SW gray-bone idiom (approach-4 candidate-3 law — organic
+jitter, 1.22-1.45m band, along-walk companions), also the approach-5 margin
+note's named cure; (b) night cadence: 4 bone pillars (~9.2m, alternating sides,
+1.32-1.44m out) each capped with one faint warm emissive bead (intensity 1.15
+after one judge iteration from 0.5, r .058; polish-274/278 moonlit law — quiet
+points at night, unlit warm stone by day). Build sha `dc256065…` ×2
+deterministic; PRIOR `d46a60fb` captured to reviews/nw-approach6/before/.
+Decode: 8 draw nodes, 9 materials, pillar KEEP group `flame_beads_nw` = 4
+bodies + 4 beads at world (-33.0,25.6) (-40.7,31.3) (-46.6,39.1) (-48.4,48.6);
+lamp trees byte-identical, translations match live -l lights exactly.
+Judged (ZAI fallback, native 1210 ×2, disclosed): night PASS-borderline (quiet
+quality achieved, cadence reads, lane traceable); gameplay + aerial verge reads
+cross-checked against the ACCEPTED live SW sibling in the same rig — identical
+reads (family/rig characteristic per probe law #5, not a candidate defect;
+pillar-clips-pavers impression falsified by decode, ≥0.86m clear). Remove+
+spawn reseat at exact tuple, 2 verbs, PLACED_VERIFIED + idempotent zero-verb
+rerun. Two-way MCPL ALL_PASS 5 legs max 0.38m (baseline-identical). Read18:
+lavender clean; orchard-0033's 18m sightline now intersected by sibling
+`nx-dress-nw-skeps-001` bbox (foreign-lane, standing since dress-10) — margin
+note for survey, not a leg defect; walk arrival 0.28/0.30 PASS.
+Bill eye-check: NW gate at night — the lane should now carry a quiet line of
+warm bead markers between the lamps, verge reading as gray-bone hem by day.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.
