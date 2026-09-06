@@ -39,34 +39,35 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 || sweep-24 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, 0 drift on all shared ids vs the committed sweep-23 snapshot — thirteenth fully quiet delta of the wave; raw /geom snapshot sha-identical 6bc53d31c388710a, no rewrite) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs max-arr 0.38; NW 0.38 / NE 0.38 / SW 0.37, all real exit 0, verdicts content-anchored) + tier-2 inn 0.364 + stable 0.396 ALL PASS (sixth cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, woodyard 1f2c6f592095b204 exact, ledger law exact (2370208 at entry, 2370208 after D+0/E+0 append), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD 4100aad (sibling improve-4 decode+plan tick, zero world mutations per its message, accepted by prefix gate) | CLEAN SWEEP |
 
 || sweep-25 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented lib change: nx-town-hall 1306527a→c92c1f91 at identical tuple (9,0,-26) yaw −0.313 — matches the improve-5 re-place ledger @ c455327 exactly, domain-valid, not drift; snapshot rewritten, raw sha 017e7d27a3b5b0b8) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, all real exit 0) + tier-2 hall 0.360 + row-cottage 0.384 ALL PASS (seventh cycle; hall walked against the new improve-5 bytes — interior door-lane contract intact post re-place) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, woodyard 1f2c6f592095b204 exact, ledger law exact (2370209 at entry, 2370209 after D+0/E+0 append), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD f26b224 (sibling improve-5v plan-steer accepted by prefix gate) | CLEAN SWEEP |
-|| sweep-26 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, THREE documented lib changes at identical tuples: nx-sign-smithy d8df9400→62a8cfc (waysign-8 @ 66ebbf9), nx-struct-echoarch f38d01bb→baf4c994 (improve-6 @ 2ce5561), nx-town-inn c180c26f→6e6ff2d0 (improve-7 @ aca7c6b) — all match their lane ledgers line-for-line, domain-valid re-places, not drift; snapshot rewritten raw sha f769b09b7fd562c7) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, all real exit 0) + tier-2 potter 0.366 + market 0.389 ALL PASS (seventh cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, woodyard 1f2c6f592095b204 exact, ledger law exact (2370215), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD aeced05 | CLEAN SWEEP |
+||| sweep-26 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, THREE documented lib changes at identical tuples: nx-sign-smithy d8df9400→62a8cfc (waysign-8 @ 66ebbf9), nx-struct-echoarch f38d01bb→baf4c994 (improve-6 @ 2ce5561), nx-town-inn c180c26f→6e6ff2d0 (improve-7 @ aca7c6b) — all match their lane ledgers line-for-line, domain-valid re-places, not drift; snapshot rewritten raw sha f769b09b7fd562c7) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, all real exit 0) + tier-2 potter 0.366 + market 0.389 ALL PASS (seventh cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, woodyard 1f2c6f592095b204 exact, ledger law exact (2370215), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD aeced05 | CLEAN SWEEP |
+
+|| sweep-27 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, TWO documented lib changes at identical tuples: nx-sign-dyer-001 38416bae→8ce2081f (waysign-9 @ 27595e4), nx-struct-crossing a5da939d→216c4bd4 (improve-8 @ 1fa1e19) — both match their lane ledger tails line-for-line, domain-valid re-places, not drift; snapshot rewritten raw sha 36c17c7278f5ed5b) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, legs run individually, verdicts content-anchored) + tier-2 inn 0.364 + stable 0.396 ALL PASS (seventh cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + companions live, 38 lights standing, woodyard 1f2c6f592095b204 exact, ledger law exact (2370218), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD 1fa1e19 | CLEAN SWEEP |
 
 ## Findings register
 
-sweep-26: none. Census 259==259 (0 arrivals, 0 departures, 0 unexplained
-drift). Three documented lib changes at identical tuples, each classified as
-expected sibling work, not drift: nx-sign-smithy d8df9400→62a8c7fc (waysign-8
-smithy emblem fix @ 66ebbf9), nx-struct-echoarch f38d01bb→baf4c994 (improve-6
-fins rebuild @ 2ce5561), nx-town-inn c180c26f→6e6ff2d0 (improve-7 chimney
-reseat + ridge fix @ aca7c6b) — all three match their lane ledger tails
-line-for-line, each with the improve/waysign lane's own walk re-proof plus
-THIS sweep's tier-1/tier-2 legs over the same live bytes. New sibling commits
-since sweep-25: improve-5 c455327 (counted last sweep), improve-5v f26b224,
-improve-6 2ce5561, artwalk-48 5af2f1b, improve-5w 6780e4d + 133b5e3, dress-12
-11bb8b8, waysign-8 66ebbf9 + d7fb3f5, improve-7 aca7c6b + aeced05 — all
-accepted by the prefix gate; interlane md5 1b933f3454e52504d89ff0c167c4e7dc
-stable. All five phases verified fresh this wakeup with zero failing checks
-(tier-1 legs run individually per the sweep-18 timeout lesson; tier-2 seventh
-cycle: potter 0.366 + market 0.389). Foreign-seam abstentions in walk stderr
-(cultivation gardens) are the known normalized diagnostic set, unchanged.
-Snapshot rewritten this sweep (raw sha f769b09b7fd562c7 — three lib fields
-changed, so no-rewrite was not available). No defect notes written. Next
-tier-2 pair (sweep-27): inn + stable (seventh cycle).
-Standing note for Bill: the improve lane continues EXECUTING its round-1
-queue (hall=1, echoarch=2, inn=3 complete; each re-place is a same-tuple lib
-change classifiable against that tick's ledger tail) and waysign has begun
-R2 emblem fixes (smithy=1 of 7 live) — expect further improve/waysign-domain
-lib changes in coming census diffs.
+sweep-27: none. Census 259==259 (0 arrivals, 0 departures, 0 unexplained
+drift). Two documented lib changes at identical tuples, each classified as
+expected sibling work, not drift: nx-sign-dyer-001 38416bae→8ce2081f at
+(-22.087, 2.05, -22.334) yaw 0.941 (waysign-9 dyer emblem fix @ 27595e4)
+and nx-struct-crossing a5da939d→216c4bd4 at (3.6, -0.005, -3.6) yaw 0
+(improve-8 monolith rebuild @ 1fa1e19) — both match their lane ledger tails
+line-for-line, each with its own lane's walk/idempotency re-proof, plus THIS
+sweep's tier-1/tier-2 legs over the same live bytes. New sibling commits
+since sweep-26: improve-8 1fa1e19 (crossing re-place, world-mutating),
+waysign-9 27595e4 (dyer sign re-place, world-mutating), improve-5x 622265f
+(perpetual-motion law, plan-only) — all accepted by the prefix gate; interlane
+md5 1b933f3454e52504d89ff0c167c4e7dc stable. All five phases verified fresh
+this wakeup with zero failing checks (tier-1 legs run individually per the
+sweep-18 timeout lesson; tier-2 seventh cycle: inn 0.364 + stable 0.396).
+NE walk foreign-seam abstentions (cultivation gardens + dress-se-stones)
+are the known normalized diagnostic set, unchanged. Snapshot rewritten this
+sweep (raw sha 36c17c7278f5ed5b — two lib fields changed, so no-rewrite was
+not available). No defect notes written. Next tier-2 pair (sweep-28):
+potter + market (eighth cycle). Standing note for Bill: the improve lane
+continues executing its round-1 queue (hall 1, echoarch 2, inn 3, crossing 4
+complete; windmill deferred by idle-guard) and waysign is 3 of 7 through the
+R2 emblem packet — expect further improve/waysign-domain lib changes in
+coming census diffs.
 
 sweep-25: none. Census 259==259 (0 arrivals, 0 departures, 0 unexplained
 drift). One documented lib change classified as expected sibling work, not
