@@ -245,6 +245,30 @@ se-stones 8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f); 16 legacy
 core `nx-dress-*` untouched. Zero world mutations, zero uploads, zero
 shared-budget use.
 
+**STATE AT dress-26 (2026-09-06, pipeline hold tick — 5th consecutive)**:
+lawful HOLD — every path closed this tick. Shard queue re-verified EMPTY
+at source: the nine `nx-dress-*` rows all terminal (5/29/30/31 DROPPED
+native rejudge; 32/33/34/37/38 EXECUTED reseats); round-2 SURVEY
+CANDIDATES route to `nx-town-woodyard`/`nx-welcome`/`nx-town-potter` —
+none to `nx-dress-*`; SURVEY INTAKE unchanged (survey-6 consumed). Own
+queue: SW lamps only, still blocked on Bill's a/b/c budget policy (0 of
+3 used); no Bill verdict markers in ledger tail or plan. Hold
+verification: standing gate ALL PASS real exit 0 at HEAD fae4b7e
+(absorbing waysign-21, approach-16, night/sweep ticks); fresh live
+census 259, ALL ELEVEN district installations PIN_EXACT lib+tuple+yaw
+(hedge 3d5c7d44, skeps 87d2dd16, stile 5e9d301d, logpile cac71bff,
+ne-yard 191227da, ne-bench 46f3b6b1, woodstack 692bc54e, cairn 59031a0c,
+se-stones 8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f — comps empty
+across the set). **Probe lesson (yaw units): world yaw is RADIANS; a
+degrees-based tuple compare read 7/11 false-DRIFT at identical live
+values (2.35619 rad == 135°, 0.19199 == 11°, 2.22093 == 127.25°) —
+world right, probe wrong, waysign-18 law. Convert plan-degreed yaws to
+radians before comparing.** SW lamp budget reconciled fresh: 3 live
+lights (approach ×2 + `nx-town-inn-l` at r=36 boundary), dress spend 0.
+16 legacy core `nx-dress-*` untouched. Foreign mid-tick edit to
+IMPROVE-PLAN.md (improve-15 contract, `nx-town-row-cottage`) left
+untouched. Zero world mutations, zero uploads, zero shared-budget use.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
