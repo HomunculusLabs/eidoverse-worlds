@@ -14,7 +14,7 @@ lamp/light/glow/flame/fire/ember) on the 235-entity dress-3 census:
 
 | district   | live lights counted | lamp budget | used | notes |
 |------------|--------------------|-------------|------|-------|
-| NW cultivation | 2 (approach lamps only) | 2 | 0 | zero native lights |
+| NW cultivation | 2 (approach lamps only) | 2 | 1 | mile-5 lantern (refine-198); zero native lights |
 | NE craft       | 10 (approach ×2, hamlet ×5, kiln/potter/stable) | 10 | 0 | |
 | SE wild        | 8 (artwalk h-lights ×6, struct beacons ×3… recount: 8 anchors) | 8 | 0 | unlit dressing only unless Bill widens |
 | SW contemplative | 3 (approach ×2, inn) | 3 | 0 | |
@@ -27,15 +27,17 @@ anchors. Budget = live count (never exceed existing density).
 
 - **NW — CULTIVATION**: hedgerow (dress-1, built), bee skeps (dress-5,
   placed), field-edge log pile, gate stile
-- **NE — CRAFT**: work yard (shaving horse / bench cluster), stone benches,
-  woodstack
-- **SE — WILD**: path spurs (walk-tested), border stones, cairn marker
+- **NE — CRAFT**: work yard (dress-2, placed), ~~stone benches~~ (dress-6,
+  placed), woodstack
+- **SE — WILD**: path spurs (walk-tested), border stones (dress-3, placed),
+  cairn marker
 - **SW — CONTEMPLATIVE**: ~~gravel paths~~ (dress-4, walk-tested 7/7),
   lamps (budget-bound), prayer stones
 
 Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
 (dress-1..4 complete — first full rotation 2026-09-06; dress-5 = NW round 2,
-skeps DONE 2026-09-06; NW round 2 remaining: field-edge log pile, gate stile)
+skeps DONE 2026-09-06; dress-6 = NE round 2, benches DONE 2026-09-06;
+NE round 2 remaining: woodstack)
 
 ## Siting log
 
@@ -181,6 +183,59 @@ skeps DONE 2026-09-06; NW round 2 remaining: field-edge log pile, gate stile)
   gravel value reads too dark in context, it re-colors (one pass).
 
 ## Ledger
+
+- dress-6: BUILT + PLACED + VERIFIED (2026-09-06 overnight fleet wave).
+  Entry covers the four-version iteration (bench-2 parallelization, support
+  brightness, table raise) and the lane-terminus hand-off siting. See siting
+  log below.
+
+### dress-6 — NE Craft stone benches (PLACED, LIVE)
+
+- **Concept contract**: the NE approach lane ends where its pavers give way
+  to the art field (lane terminus vertex 18.62, 70.02 — decoded from the
+  lane GLB source, az 75 r72.4). Just past that hand-off, on the plaza-ward
+  side of the walker's line, a cluster of split-stone benches and a low
+  table stone grounds the craft district's use: craftspeople rest between
+  tasks, set down tea and tools, before walking the field. Static, unlit —
+  spends no lamp budget (NE budget 10, used 0).
+- **Build**: `assets/mkv3-dress-ne-bench1.ts` →
+  `assets/village_dress_ne_bench1.glb`. Four-version iteration (ZAI fallback
+  vision — native provider-down error 1210, 7th consecutive tick;
+  disclosed):
+  - v1 (`30eb02d2…`): bench-2's oblique (−75°) yaw hid its supports at
+    gameplay distance — read "broken slab"; also seat tilt jitter read
+    "fallen".
+  - v2 (`f3e2631d…`): parallel mirror benches, flat seats — but supports
+    (0xb4b0a4) merged into one dark mass at 14m.
+  - v3 (`257ed098…`): brightened supports 0xc6c2b6 + narrower (0.26 deep)
+    so slabs overhang — benches PASS, but the table read as a third bench.
+  - v4 (sha `46f3b6b14ada6d8b6b2bffad1ec4c6ad11facb86345288dfda8a129bc68f8618`,
+    double-rebuild byte-identical) **ACCEPTED** 4/4 gameplay PASS (rest
+    cluster / both benches / distinct table / no float) + close-view
+    construction PASS. Table raised to top 0.58m and widened 1.05 × 0.68.
+- **Decode (final)**: bbox x −1.380..1.961 (center +0.291, half 1.671),
+  z −1.05..1.05, y −0.046..0.612; 11 nodes (budget 3–25 ✓). No light
+  anchors, empty comp bag by design.
+- **Siting (census 246, +5 sibling arrivals outside domain)**: r 74.5,
+  az 79 → center (14.23, 73.13), yaw 11° (local +z faces az 79 outward;
+  seats face the plaza side). 5.4m off the lane terminus. Source-true lane
+  clearance via vertex-cloud decode (`dress6-bench-lane-decode.ts`, lane
+  sha a27bc9a2… reproduced = live lib prefix): min lane-vert clearance
+  ≥ 2.4m measured against a scan box strictly larger than the final
+  footprint; lamp-002 4.4m. SAT preflight vs fresh census: clear, no
+  sub-1.4m solid adjacency (nearest statuary-0039 12.4m). Rim corners
+  73.46..75.57 ∈ [66,108] ✓. Terrain flat (py 0.0, Δ3mm across corners).
+- **Placement**: `ne-dress6-place.ts` — hash gate → blocker-epoch guard
+  (approach lane, lamp-002-l, hamlet-0054, statuary-0039) → fresh-census SAT
+  preflight → upload (content-addressed) → spawn → post-place tuple verify.
+  **PLACED_VERIFIED** `nx-dress-ne-bench-001` @ lib
+  `store/46f3b6b14ada6d8b.glb`, pos (14.23, 0.0, 73.13), yaw 11°.
+  Idempotent rerun: 0 verbs. NE lamp budget used 0 of 10.
+- **Eye-check for Bill**: walk the NE lane to its end, where the pavers run
+  out into the art field — the cluster should read as a rest spot (two
+  benches flanking a taller table stone) on the plaza side of the path, not
+  rubble, crates, or a wall. If the table still reads bench-like at
+  distance, it re-shapes (one pass).
 
 - dress-5: BUILT + PLACED + VERIFIED (2026-09-06 overnight fleet wave).
   Entry covers the three-version iteration (plinths/boulder/spill), siting
