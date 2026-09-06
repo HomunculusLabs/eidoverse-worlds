@@ -269,6 +269,26 @@ lights (approach ×2 + `nx-town-inn-l` at r=36 boundary), dress spend 0.
 IMPROVE-PLAN.md (improve-15 contract, `nx-town-row-cottage`) left
 untouched. Zero world mutations, zero uploads, zero shared-budget use.
 
+**STATE AT dress-27 (2026-09-06, pipeline hold tick — 6th consecutive)**:
+lawful HOLD — every path closed this tick. Shard queue re-verified EMPTY
+at source: the nine `nx-dress-*` rows all terminal (5/29/30/31 DROPPED
+native rejudge; 32/33/34/37/38 EXECUTED reseats); round-2 SURVEY
+CANDIDATES (survey-7) route to `nx-town-woodyard`/`nx-welcome`/
+`nx-town-potter` — none to `nx-dress-*`; no un-shard clock running.
+Own queue: SW lamps only, still blocked on Bill's a/b/c budget policy
+(0 of 3 used); zero Bill verdict markers in ledger tail; SURVEY INTAKE
+unchanged (survey-6 consumed by dress-21). Hold verification: standing
+gate ALL PASS real exit 0 at HEAD 9250042 (absorbing sweep-34,
+night-36, approach-17, artwalk-69); fresh live census 259, ALL ELEVEN
+district installations PIN_EXACT lib+tuple+yaw-radians (hedge 3d5c7d44,
+skeps 87d2dd16, stile 5e9d301d, logpile cac71bff, ne-yard 191227da,
+ne-bench 46f3b6b1, woodstack 692bc54e, cairn 59031a0c, se-stones
+8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f — comps empty across
+the set); 16 legacy core `nx-dress-*` untouched; interlane md5
+f6254cd0 unchanged; foreign mid-tick IMPROVE-PLAN edit (improve-15
+row-cottage contract) left unstaged. Zero world mutations, zero
+uploads, zero shared-budget use.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
