@@ -111,7 +111,29 @@ live leg decode shows a better verge shoulder.
   fresh preflight next-terrain-mile-sw.ts (M −0.050, posts −0.052/−0.046).
   Unlit stone — SW lamp budget 0 spent (midpoint between the leg's own lamps
   at r≈39.7/r≈55.4, 7.5m/8.5m away). Verdict: PLACED_VERIFIED.
-  NEXT: mile-4 NW district arrival r71 (inner, district-facing verge).
+  **CORRECTED mile-4 (2026-09-06, overnight fleet)** — the pair was ON the
+  pavers: the placer derived the "perpendicular" as N=(cos(pa),-sin(pa)),
+  pa=az+90, which is the direction of azimuth pa+90 = the NEGATED leg travel
+  direction, not a perpendicular. Live evidence: posts sat on the centerline
+  at r44.7/r49.3. The logged 1.84m clearance was hand-derived from the same
+  wrong formula; no code check had measured centerline distance. Fix: dir(az)
+  =(sin,cos) (matches pol()); corrective reseat remove→spawn over one WS
+  (`mile-swfix-place.ts`, terrain fresh via next-terrain-mile-swfix.ts
+  −0.047/−0.053): nx-mile-sw-005 (−26.618, −0.047, −38.804) and
+  nx-mile-sw-006 (−30.280, −0.053, −36.020), true perp 2.30m both posts
+  (verge clear 1.40m past paver half). SAT at corrected tuples: 1.62m /
+  5.29m vs nx-struct-angler (>1.4 pinch). A centerline check is now IN CODE
+  in the placer. mile-1 (2.29m) and mile-2 (2.13m) re-verified this tick
+  from committed sources — correct, only mile-3 was affected.
+  NEXT: mile-5 NW district arrival r71 (inner, district-facing verge).
+
+## Lesson (mile-3 defect, class-level)
+
+Perpendicular = 90° from the leg's travel direction dir(az)=(sin,cos) — the
+same convention as pol(). Never derive offsets with N=(cos(pa),−sin(pa)):
+that compound is the direction of azimuth pa+90 and for pa=az+90 collapses
+to the negated travel direction. Any logged clearance claim must be computed
+by code, not hand-derived from the siting formula.
 
 ## Carried laws
 
