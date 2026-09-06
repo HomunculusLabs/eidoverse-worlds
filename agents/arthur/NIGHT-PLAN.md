@@ -595,3 +595,24 @@ STUDY COMPLETE (all facets judged; packet assembled).
   inversion. Second-rotation NW pass remains the D1 verify path, deferred
   while the lane holds. Zero world mutations, zero renders judged, no
   PASS claimed.
+- night-22 (2026-09-06, pipeline-mode hold tick): fifteenth consecutive
+  hold with NO disposition change. Standing gate ALL PASS real exit 0 at
+  HEAD df5a390 (sweep-31 correction, plan-only; sweep-31 itself a zero-
+  mutation audit). Fresh census-22: 259 entities / 38 lights / zero
+  night-prefixed, set-steady vs census-21 (0 new, 0 gone) with ONE
+  domain-valid sibling lib change at identical tuple: nx-struct-spiralfolly
+  20c515a0 -> b85ce018 (struct-lane work in flight; placer/mk sources sit
+  dirty in the working tree under struct ownership; ZERO lights touched,
+  zero citations in this register or the packet, no disposition change;
+  capture /tmp/night-census-22.json). D1 pin nx-approach-nw-lane-001 lib
+  dc256065879371d8 exact steady. Packet md5 cdc435a2 unchanged since
+  night-7. APPROACH-PLAN still last touched b1195ef, five defect-note
+  sections stand (D1 CLOSED by owner; D2-D5 budget-bound; N1/N2/N4-N7
+  informational). Interlane md5 f6254cd0 steady. Zero actionable night-
+  shard rows in IMPROVE-PLAN (night- is an observer; grep hits are other
+  lanes' row prose). DRESSING-PLAN lamp ledger re-read: SW lamps still
+  0 of 3, blocked on Bill a/b/c. Same four verdict classes outstanding:
+  sky facet-5, lamp-budget policy D2-D5+N6, N5 detached-orb, N7 hierarchy
+  inversion. Second-rotation NW pass remains the D1 verify path, deferred
+  while the lane holds. Zero world mutations, zero renders judged, no
+  PASS claimed.
