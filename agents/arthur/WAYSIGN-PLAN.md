@@ -587,6 +587,23 @@ only when native is down that tick, disclosed.
   (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
   sign's build ahead of rotation.
 
+- waysign-22 HOLD (pipeline mode, 6th consecutive) — queue complete
+  (8/8 R1, R2 7/7, both court-sign brace closures); zero OPEN
+  IMPROVE-PLAN rows route to `nx-sign-*` (sharding section read fresh
+  at source: open split struct/dress/approach/improve-own only; all
+  nx-sign mentions inspected, all historical executed records); eye-gate
+  packet 8b88b6b3 unchanged, zero Bill verdict markers. Cheap lawful
+  hold verification: standing gate ALL PASS real exit 0 at HEAD fae4b7e
+  (approach-16 absorbed at tip); fresh live census 259, ALL 8
+  `nx-sign-*` riders PIN_EXACT 8/8 (stable afee37dd, dyer 8ce2081f,
+  kiln ecbad903, potter 3a6c8fe7, woodyard f46e12ae, mill 870256ce,
+  bakery 49342c52, smithy 3522e5ab) AND all 8 hosts at known pins
+  (stable 98f2d5b6 waysign-19 re-validation stands, court 59534b10).
+  Standing recommendation surfaced ONCE at 6 identical holds: /loop
+  stop or no-LLM monitor until Bill's eye-gate verdicts; lane resumes
+  instantly on any verdict or visual correction. Zero world mutations,
+  zero uploads, zero shared-budget use, no visual PASS claimed.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host

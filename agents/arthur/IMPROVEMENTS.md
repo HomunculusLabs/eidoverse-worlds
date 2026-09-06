@@ -4177,4 +4177,8 @@ fixes ≈ 6 F.)
 
 - [approach-16] pipeline-mode hold tick (4th) — gate ALL PASS real exit 0 at eb49d8a; shard routing verified at source (rows 16/36 EXECUTED approach-4/5, zero OPEN rows route to nx-approach-); census 259/domain 17 all three leg libs PIN_EXACT (nw dc2560658, ne dc52264c0, sw fb04a144) + 6 leg lights + 4 gate lamps untouched; census-diff 0/0; SE leg + D3/D5 + N5-N7 Bill-bound; zero mutations/uploads (D+0, E+0)
 
+- [waysign-22] pipeline-mode hold tick (6th consecutive) — queue complete (8/8 R1, R2 7/7, both court brace closures); zero OPEN IMPROVE-PLAN rows route to nx-sign-* (sharding read fresh at source); eye-gate packet 8b88b6b3 zero verdicts; gate ALL PASS exit 0 at fae4b7e; census 259 ALL 8 nx-sign riders PIN_EXACT (basename-prefix compare) + all 8 hosts at known pins (stable 98f2d5b6, court 59534b10); standing recommendation surfaced once: /loop stop or no-LLM monitor until Bill verdicts, lane resumes instantly on any verdict/correction; zero mutations/uploads (D+0, E+0)
+
+- [dress-26] pipeline-mode hold tick (5th) — shard queue empty at source (nine nx-dress rows terminal: 5/29/30/31 dropped native rejudge, 32/33/34/37/38 executed; round-2 candidates route elsewhere, no un-shard clock); SW lamps only own-queue item, Bill a/b/c 0 of 3; gate ALL PASS exit 0 at fae4b7e; census 259, eleven district installs PIN_EXACT lib+tuple+yaw (probe fix: world yaw is radians, degrees compare read 7/11 false-DRIFT — world right, probe wrong); 16 legacy off-limits intact; zero mutations/uploads (D+0, E+0)
+
 **Running total: 2370269 / 2000000**
