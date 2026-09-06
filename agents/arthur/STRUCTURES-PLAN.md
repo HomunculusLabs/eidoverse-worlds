@@ -98,19 +98,20 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    derived gaps filled; both build lanes wait on Bill's eye-gate verdicts.
    Refine pool remaining: Observatory dome-shadow (source-judged, low).**
 
-## LANE STATE: SHARD EXECUTION (struct-36, 2026-09-06)
+## LANE STATE: SHARD EXECUTION (struct-37, 2026-09-06)
 
 Commissioned queues exhausted (Rounds 1–3 complete, refine pool empty);
 per Bill's improve-5y 5-10x directive this lane now executes OPEN
-improve round-1 rows matching `nx-struct-` worst-first. struct-36 =
-row 11 skene wall-body fix (EXECUTED, live). Oldest OPEN uncontested
-rows after struct-36: row 12 skymirror (Sev 2, DECODE FIRST, survey-1
-NATIVE-CONFIRMED zero-reflection), row 13 millrace (Sev 2, survey-2
-NATIVE-CONFIRMED — intake note in SURVEY INTAKE section below), row 15
-shelltower DROPPED-clean by survey-1. Row 10 angler: in-flight sibling
-improve window (uncommitted draft 8c1a5047 + reviews/improve10-struct-angler/
-12:04) — do NOT touch until it lands or the un-shard rule fires. Open with
-Bill: R2-3 relocation options (struct-22).
+improve round-1 rows matching `nx-struct-` worst-first. struct-36 = row 11
+skene (EXECUTED, live). struct-37 = row 12 skymirror (EXECUTED, live —
+recovered the dead sibling window whose uncommitted draft sat in the tree
+since 12:54). Oldest OPEN uncontested rows after struct-37: row 13
+millrace (Sev 2, survey-2 NATIVE-CONFIRMED — intake note in SURVEY INTAKE
+above), row 14 spiralfolly (Sev 2, survey-1 NATIVE-CONFIRMED). Row 10
+angler: in-flight sibling improve window (uncommitted draft 8c1a5047 +
+reviews/improve10-struct-angler/ 12:04) — do NOT touch until it lands or
+the un-shard rule fires. Open with Bill: R2-3 relocation options
+(struct-22).
 
 ## Siting log
 
@@ -150,6 +151,7 @@ Bill: R2-3 relocation options (struct-22).
 | struct-34 | R3-7 Crossing Mark | plaza crossing NE corner | (3.6, −0.005, −3.6) | 0 (4-fold symmetric) | LIVE, corner circuit 7/7 |
 | struct-35 | ROUND 3 CLOSE | fleet pin check | — | — | 26/26 pins exact, 0 drift, gate ALL PASS |
 | struct-36 | SHARD ROW 11: skene wall-body fix | exact standing tuple (−23.32, 0.0447, 48.05) | — | π | LIVE, lib 3a62ee83→df7f7c43, walk 4/4 re-verified |
+| struct-37 | SHARD ROW 12: skymirror open-cup rebirth | exact standing tuple (24, −0.05395918, −35.5) | 0 | 0 | LIVE, lib 8331ba88→782eb864, circuit re-verifiable (folly, non-enterable) |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
