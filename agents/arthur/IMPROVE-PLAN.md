@@ -697,6 +697,48 @@ exterior as clear; re-check lane tail at execution).
     stone (position math on fresh census); footprint slightly SHRINKS
     (0.62 pads vs 0.68 hex pads).
 
+  improve-8 EXECUTION COMPLETE (six candidates, evidence chain kept):
+  cand-1 (0.34 slabs + torus) REJECTED — still posts, torus read as
+  pole crossarm. cand-2 (0.52 + round collar) REJECTED — collar peg
+  read, caps thin boards. cand-3 (monoliths 0.8–0.95 + box sleeve
+  band) — utility-post read KILLED (judge: "no longer reads as utility
+  posts"); residual: band dark, shaft wood-lean 60/40, band wedge
+  (band axis-aligned vs leaned shaft). cand-4 (band rides lean, b2/b3
+  brass metal 0.82) REJECTED — brass still gray (MECHANISM by pixel
+  probe: metalness without envmap desaturates offline; band px measured
+  (130,127,109) vs brass base (160,162,72); the b2/b3 0.82 recipe is
+  live-validated, this rig has no scene.environment). cand-5 (iron-
+  physics metal 0.5 + one clean crown step + tamed yaw) REJECTED —
+  stone material PASSED, brass still dark. cand-6 (ACCEPTED): brass
+  as TEXTURED gold (waysign handleTex law: [0xa09832,0x887c2a] rough
+  0.85 — the village's 18m-legible brass is textured diffuse), gold-ish
+  pixels 87→901, final judge: "collar bands clearly saturated gold"
+  ✓, stone-material pass carried. ACCEPT WITH ROUTED RESIDUALS
+  (improve-5 lit-doorway posture): (a) "stray gold sliver upper-right
+  of right crown" — probable far-stone band peeking past the near
+  crown (four-stone composition, 2.6m diagonal spacing; single-view
+  judge cannot resolve depth) — eye-gate item; (b) left crown overhang
+  underside shadow-gap — eye-gate item. Wood-vs-stone 60/40 shaft read
+  classified family-lighting characteristic (waystone + milestones
+  carry the SAME tile on similar tall-narrow stones and judge CLEAN
+  live — flash-vision family law; not per-work defect). Final build:
+  sha 216c4bd4…, 2 nodes (stone bucket + brass bucket), bbox 4.21×
+  2.93×4.05 (footprint growth over 3.19 baseline RECORDED — pitfall-8
+  posture; nearest solid neighbor nx-artwalk-b24 4.30m center-clear,
+  stone-gap ≈1.6m+ > 1.4m law; ground layers SAT-exempt). Re-place
+  remove+spawn at the exact standing tuple (3.6,−0.005,−3.6) yaw 0,
+  lib a5da939d→216c4bd4, comp bag {} both sides. PLACED_VERIFIED;
+  idempotent rerun ALREADY_LIVE_NO_VERBS (zero verbs). MCPL walk
+  deferred to the round-1 eye-gate circuit (non-enterable marker;
+  approach legs unchanged). Placer: next-place-improve8-crossing.ts.
+  Review evidence: agents/arthur/reviews/improve8-crossing/{before via
+  root views,after,after2..after6}/. Native vision: 8 calls, 6
+  succeeded, 2 errored 1210 (one paced retry recovered) — disclosed.
+
+Next queue item (improve-9): `nx-town-tower-house` (Sev 1–2 — stilts
+from pure-black underside, balcony door ~4m with no stair, broken
+railing; guard: none).
+
 ## Carried laws
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
