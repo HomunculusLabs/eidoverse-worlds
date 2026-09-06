@@ -223,10 +223,12 @@ not tankard" — host redesign belongs to the owner lane (improve queue
 item, not waysign's), recorded here so it isn't lost.
 
 Rotation: R2-1 → R2-7 (worst-first provisional; re-rank after native
-re-judgment). NEXT OPEN: R2-4 (woodyard) — R2-1 DONE waysign-8 (smithy live
+re-judgment). NEXT OPEN: R2-5 (mill) — R2-1 DONE waysign-8 (smithy live
 62a8c7fc, court-wall host truth corrected), R2-2 DONE waysign-9 (dyer
 live 8ce2081f, scale-not-hue root class), R2-3 DONE waysign-10 (kiln
-live ecbad903, dominant-tongue scale fix + bone lift). Each item: full
+live ecbad903, dominant-tongue scale fix + bone lift), R2-4 DONE
+waysign-11 (woodyard live f46e12ae, pre-place-interrupted sibling window
+recovered, fat-stroke X trestles). Each item: full
 chassis — host anchor re-derived from CURRENT tuple per host-rider law,
 rider-only SAT + exemption ladder, unlit by default, 8m gate. Native
 vision is primary judge; ZAI fallback only when native is down that tick,
@@ -294,6 +296,26 @@ disclosed.
   (SAT-neutral); re-place remove+spawn exact tuple be3d8504→ecbad903,
   comp {} both sides, idempotent zero-verb rerun; host truth re-verified
   (kiln 4d8ef8fc = local bytes). R2 queue: R2-4 woodyard next.
+
+- waysign-11 `nx-sign-woodyard-001` R2-4 DONE (emblem-collapse fix; PRE-PLACE
+  INTERRUPTED SIBLING WINDOW RECOVERED — named honestly): a stacked waysign
+  window built at 12:17 (mk edit + review rig + rejudge renders, baseline
+  captured per before-bytes law) and died before judging/placing — no live
+  mutations, no ledger/plan record. Recovery class artwalk-32: baseline hash
+  verified = live 58f5cbe3, current build regenerated fresh (deterministic),
+  both render sets re-shot from exact bytes, full judgment chain run this
+  tick. Native re-judgment on baseline CONFIRMED emblem-collapse (dark
+  smudge at 18m); DROPPED black-header-void (iron strap above board) and
+  no-mount-silhouette (strap+chain visible). v1 judged 3/4 (crossed-legs
+  FAIL — thin diagonals merge); v2: legs 0.034→0.052, ±0.72 rad, trestle
+  spread 0.125 with inter-X bone gap, ties dropped, log raised to crotch
+  line −0.452, discs 0xf2e3b0 — ZAI 4/4 18m + 3/3 8m + 3/3 isolated + 3/3
+  oblique (native down error 1210 ×2, fallback disclosed; chain-asymmetry
+  flag disproven at source — per-side loop byte-identical). sha f46e12ae
+  deterministic ×2, 6 nodes, envelope x/z byte-identical (SAT-neutral);
+  reseat remove+spawn exact tuple 58f5cbe3→f46e12ae, comp {} both sides,
+  idempotent zero-verb rerun; host truth re-verified (1f2c6f59 live).
+  R2 queue: R2-5 mill next.
 
 ## Carried laws
 

@@ -25,7 +25,14 @@ import { writeFileSync } from "node:fs";
 
 const g = new THREE.Group();
 const ironTex = texMat("iron", [0x5c5c60, 0x54545a], { rough: 0.4, metal: 0.55, scale: 2, stripe: 2, weights: [2, 1] });
-const boneTex = texMat("sign_bone", [0xe4e4c2, 0xd8d8b8], { rough: 0.9, scale: 2, weights: [3, 1] });
+// waysign-11 R2-4: bone lifted 0xe4e4c2 -> 0xefeccf (kiln waysign-10
+// precedent — eave-shadow value crush); plate slimmed 0.26 -> 0.09 tall
+// (native 18m re-judge: fat plate + gap read as a black content-free
+// header band occupying the top quarter of the board); glyph scaled to
+// face-filling (R2 root class: was ~60% width lower half per oblique
+// judge, decode 76% w discs — now 85% width incl. discs / 62% height,
+// kiln 73% / dyer 71-82% family).
+const boneTex = texMat("sign_bone", [0xefeccf, 0xdfdcbf], { rough: 0.9, scale: 2, weights: [3, 1] });
 const SPLIT = 0xa09832, BARK = 0x6a6030;
 
 const texBox = (name: string, w: number, h: number, d: number, x: number, y: number, z: number, m: THREE.Material, rz = 0) => {
@@ -43,45 +50,57 @@ const ring = (name: string, r: number, t: number, x: number, y: number, z: numbe
     g.add(m);
 };
 
-// bracket plate under the eave (plate top = anchor y 2.05, flush contact
-// with the tilted roof underside ~2.08-2.10 at z 1.25)
-texBox("sg_plate", 0.24, 0.26, 0.06, 0, -0.13, 0, ironTex);
+// bracket strap under the eave (waysign-11 R2-4: slim strap 0.24x0.09,
+// center y -0.045 → plate spans -0.09..0, board top now -0.27 — clear
+// 0.18m lit gap; a FAT plate at board-top reads as a black header void)
+texBox("sg_plate", 0.24, 0.09, 0.06, 0, -0.045, 0, ironTex);
 // arms reach out over the board CORNERS (board corners at x ±0.22)
 for (const [ai, ax] of [[0, -0.22], [1, 0.22]] as const) {
-    texBox(`sg_arm_${ai}`, 0.24, 0.05, 0.05, ax * 0.55, 0.0, 0.085, ironTex);
+    texBox(`sg_arm_${ai}`, 0.24, 0.05, 0.05, ax * 0.55, -0.025, 0.085, ironTex);
     // chain: three BIG alternating links (waysign-2 v2 law: ~2cm visible
     // air between links), first off the arm tip, last hooks the board
-    ring(`sg_link_${ai}_0`, 0.032, 0.010, ax, -0.065, 0.19, false);
-    ring(`sg_link_${ai}_1`, 0.032, 0.010, ax, -0.150, 0.19, true);
-    ring(`sg_link_${ai}_2`, 0.032, 0.010, ax, -0.235, 0.19, false);
-    ring(`sg_hook_${ai}`, 0.020, 0.008, ax, -0.255, 0.19, false);
+    ring(`sg_link_${ai}_0`, 0.032, 0.010, ax, -0.085, 0.19, false);
+    ring(`sg_link_${ai}_1`, 0.032, 0.010, ax, -0.168, 0.19, true);
+    ring(`sg_link_${ai}_2`, 0.032, 0.010, ax, -0.251, 0.19, false);
+    ring(`sg_hook_${ai}`, 0.020, 0.008, ax, -0.271, 0.19, false);
 }
 // board hangs from the corner hooks, 0.15m proud of the eave plane
-box(g, "sg_board", 0.5, 0.4, 0.05, 0, -0.45, 0.19, 0x7c6832);
+// (waysign-11: dropped 0.45 -> 0.52 for lit separation from the strap)
+box(g, "sg_board", 0.5, 0.4, 0.05, 0, -0.52, 0.19, 0x7c6832);
 // bone faces both sides (nvp-14 family law: blade signs are two-way)
-texBox("sg_face", 0.42, 0.32, 0.04, 0, -0.45, 0.235, boneTex);
-texBox("sg_face_back", 0.42, 0.32, 0.04, 0, -0.45, 0.145, boneTex);
+texBox("sg_face", 0.42, 0.32, 0.04, 0, -0.52, 0.235, boneTex);
+texBox("sg_face_back", 0.42, 0.32, 0.04, 0, -0.52, 0.145, boneTex);
 
 // ---- GLYPH: SAW-BUCK (both faces) ----
 // Two X trestles (bark-dark legs, hard crossing) + one lying log
 // (split-face light, proud of the trestles) resting in the crotches.
-// Board-filling scale per waysign-2 v2 law.
+// waysign-11 R2-4: scaled to face-filling about the new face center
+// (y -0.52): height 48% -> 62% of face, width 76% -> 85% (the saw-buck
+// is intrinsically wide; margins 0.031 each side), strokes thickened
+// for distance (legs 0.028 -> 0.034, log h 0.052 -> 0.062).
+// v2 (judge fix): 18m FAIL — thin dark diagonals anti-alias to ~1px and
+// the two X's merge; family's dark-on-pale law says widen the DARK
+// strokes. Legs 0.034 -> 0.052 wide, trestles spread tx 0.102 -> 0.125
+// for a clear inter-X bone gap (>= 2px at 18m), ties dropped (the X's
+// own crossing reads the trestle; a cap bar adds a third dark stroke
+// that re-merges), leg length trimmed 0.24 -> 0.21 to keep the X inside
+// the board after widening.
 for (const [gi, gz] of [[0, 0.28], [1, 0.10]] as const) {
-    for (const [ti, tx] of [[0, -0.09], [1, 0.09]] as const) {
-        // X trestle: two crossed legs ±0.62 rad, leg 0.19 long
-        texBox(`glyph_leg_${gi}_${ti}a`, 0.028, 0.19, 0.02, tx, -0.415, gz, new THREE.MeshStandardMaterial({ color: BARK, roughness: 0.95 }), 0.62);
-        texBox(`glyph_leg_${gi}_${ti}b`, 0.028, 0.19, 0.02, tx, -0.415, gz, new THREE.MeshStandardMaterial({ color: BARK, roughness: 0.95 }), -0.62);
-        // crotch cap: short horizontal tie at the top of each X
-        texBox(`glyph_tie_${gi}_${ti}`, 0.055, 0.020, 0.02, tx, -0.345, gz, new THREE.MeshStandardMaterial({ color: BARK, roughness: 0.95 }));
+    for (const [ti, tx] of [[0, -0.125], [1, 0.125]] as const) {
+        // X trestle: two crossed legs ±0.72 rad (steeper crossing = wider
+        // X spread at the same height), leg 0.21 long, FAT 0.052 stroke
+        texBox(`glyph_leg_${gi}_${ti}a`, 0.052, 0.21, 0.02, tx, -0.525, gz, new THREE.MeshStandardMaterial({ color: BARK, roughness: 0.95 }), 0.72);
+        texBox(`glyph_leg_${gi}_${ti}b`, 0.052, 0.21, 0.02, tx, -0.525, gz, new THREE.MeshStandardMaterial({ color: BARK, roughness: 0.95 }), -0.72);
     }
     // lying log spanning both trestles, split-face light w/ BIG cut-face
-    // end discs (v2: vision said end-grain invisible at size — discs now
-    // 2.4x taller, brighter, log shortened for frame margin)
-    texBox(`glyph_log_${gi}`, 0.30, 0.052, 0.024, 0, -0.375, gz, new THREE.MeshStandardMaterial({ color: 0xc0a04e, roughness: 0.9 }));
-    texBox(`glyph_logend_l_${gi}`, 0.014, 0.064, 0.028, -0.152, -0.375, gz, new THREE.MeshStandardMaterial({ color: 0xead9a2, roughness: 0.9 }));
-    texBox(`glyph_logend_r_${gi}`, 0.014, 0.064, 0.028, 0.152, -0.375, gz, new THREE.MeshStandardMaterial({ color: 0xead9a2, roughness: 0.9 }));
+    // end discs (v2: vision said end-grain invisible at size; waysign-11
+    // grows them again for the 18m read). Log RAISED into the X crotches
+    // (y -0.452) so the X's stay visible below it; discs brightened.
+    texBox(`glyph_log_${gi}`, 0.34, 0.062, 0.024, 0, -0.452, gz, new THREE.MeshStandardMaterial({ color: 0xc0a04e, roughness: 0.9 }));
+    texBox(`glyph_logend_l_${gi}`, 0.020, 0.086, 0.028, -0.170, -0.452, gz, new THREE.MeshStandardMaterial({ color: 0xf2e3b0, roughness: 0.9 }));
+    texBox(`glyph_logend_r_${gi}`, 0.020, 0.086, 0.028, 0.170, -0.452, gz, new THREE.MeshStandardMaterial({ color: 0xf2e3b0, roughness: 0.9 }));
     // bark stripe under the log (one dark underscore = round read)
-    texBox(`glyph_bark_${gi}`, 0.30, 0.018, 0.020, 0, -0.405, gz, new THREE.MeshStandardMaterial({ color: BARK, roughness: 0.95 }));
+    texBox(`glyph_bark_${gi}`, 0.34, 0.022, 0.020, 0, -0.492, gz, new THREE.MeshStandardMaterial({ color: BARK, roughness: 0.95 }));
 }
 
 mergeByMaterial(g, "sgwod");
