@@ -384,6 +384,12 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     shadows. Sev 3. (guard: dress-6 <24h — re-check at execution)
 32. `nx-dress-se-cairn-001` — spindly totem; top stones dissolve. Sev 3.
     (guard: none — dress-7 Sep 3 placed se-cairn; re-check tail)
+    [EXECUTED dress-15: native re-judgment CONFIRMED (2:1 tall:wide totem
+    read, cap marginal at 18m) → v4 squat rebalance + per-course banding +
+    base skirt ACCEPTED 5/5+4/4 native; remove+spawn reseat at exact tuple,
+    lib bc601ed2->59031a0c, clearance re-derived 2.427m; PLACED_VERIFIED +
+    idempotent; margin note only: cap + accent courses understated from
+    FAR range — silhouette carries the read beyond 18m]
 33. `nx-dress-nw-stile-001` — reads fence not crossing; step stones
     illegible. Sev 3. (guard: dress-11 today 02:00 — until 09-07 02:00)
 34. `nx-dress-ne-woodstack-001` — burnt right post; see-through gaps;

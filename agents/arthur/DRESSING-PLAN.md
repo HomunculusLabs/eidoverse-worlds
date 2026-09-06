@@ -68,6 +68,58 @@ mutations this tick.
 
 ## Siting log
 
+### dress-15 — SE cairn reseat (shard row 32 EXECUTED, PLACED, LIVE)
+
+- **Interrupted-window recovery (artwalk-32 class, named)**: a prior
+  dress-15 window died mid-flight — mk source carried coherent v2 edits,
+  v2 build + 8-view review renders on disk (12:41), row 32 unannotated, no
+  ledger entry, zero live mutations. Recovery: deterministic rebuild ×2
+  from repo root reproduced sha 9665c6ad byte-identical → judged the exact
+  on-disk bytes → rejected → continued iteration. Build-law note for THIS
+  asset: mk scripts write repo-relative paths — `bun` must run from repo
+  root; running from `assets/` throws ENOENT and silently skips the write.
+- **Native re-judgment (v2)**: CONFIRMED both row-32 findings at 18m —
+  silhouette still 2:1 tall:wide ("spindly totem, thin upper stack
+  dominates"), cap attached but marginal; front view: dark courses merge,
+  banding carried only by moss + warm accents.
+- **v3** (`99a324a5…`): wide rebalance (radii 0.62→0.36, tighter y), cap
+  r 0.26, TWO pale strap stones on shoulders, base skirt of 3 flat ground
+  stones. Judged: silhouette FIXED (~1.3:1 squat cairn), dry-stack +
+  cleanliness PASS — but straps invisible at 18m, ambiguous sunlit-facet
+  at close range. **REJECTED ornament removed**: v4 = v3 minus straps
+  (minimalism law — failing speculative accent comes out, not up).
+- **v4 ACCEPTED** (sha `59031a0cf3e396f9b9e21ee5413112ebcf5d589f4361264a5fbf9fe0f0fb4221`,
+  double-rebuild byte-identical): 5/5 gameplay PASS (squat ~1.3:1, accents
+  readable, cap attached, zero floating, trustworthy waymark) + 4/4 close
+  PASS (banding reads via moss + warm courses, hand-stacked offset/overhang
+  visible, cap lightest + deliberate, no artifacts — one nub noted, not a
+  defect). Both judgments NATIVE (close judge first attempt errored 1210,
+  one paced retry succeeded — flapping provider, disclosed).
+- **Decode (v4)**: 5 nodes/5 buckets (budget 3–25 ✓); bbox x −0.835..0.987,
+  z −0.828..0.664 (center +0.076, −0.082), y −0.071..2.307; w×d×h
+  1.822×1.493×2.378 (was 1.63×1.26 — footprint grew ~0.3m reach). No light
+  anchors, empty comp bag (static unlit family).
+- **Clearance re-derivation (fatter footprint)**: `dress15-cairn-clearance.ts`
+  — live forest-0044 lib re-pinned (43e4c8c3 == local retex bytes), 130
+  occupied cells re-decoded from live tuple. v4 OBB clearance to nearest
+  occupied cell: **2.427m** ≥ 1.4m pinch law (was 2.58m for the thin
+  footprint — honest shrink, still lawful). First run printed 51.763m —
+  own EP[1]/EP[2] index bug (y vs z), caught by probe discipline (suspect
+  the probe first: number contradicted dress-7's 2.58m at the same pose);
+  fixed, honest number recorded. Rim corners 82.35..83.85 ∈ [66,108] ✓.
+- **Placement**: `se-dress15-place.ts` — hash gate → blocker-epoch guard →
+  migration gate (exact OLD dress-7 tuple or NEW, comp bag empty asserted
+  pre-verb) → fresh-census SAT/rim/cone preflight (v4 footprint) → upload
+  (content-addressed) → remove+spawn over one WS (2 verbs, 1000ms apart)
+  → post-place tuple + empty-bag verify. **PLACED_VERIFIED**
+  `nx-dress-se-cairn-001` @ lib `store/59031a0cf3e396f9.glb`,
+  pos (58.70, 0.0076, −58.70), yaw −45°. Idempotent rerun: 0 verbs.
+  Census 259, live lib confirmed.
+- **Eye-check for Bill**: walk the SE corridor to the far threshold — the
+  cairn should now read SQUAT and deliberate (mass low, wide courses, pale
+  cap, moss + warm accent courses), not a thin totem column. From very far
+  out the accents go quiet and silhouette carries the read — deliberate.
+
 ### dress-11 — NW Cultivation gate stile (PLACED, LIVE)
 
 - **Concept contract**: where the az-45 corridor crosses from the approach's

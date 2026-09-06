@@ -3,8 +3,10 @@
 // stones, a single deliberately-stacked dry-stone cairn at the threshold where
 // the tended edge gives way to the forest belt — the walker-built trail marker
 // that says "the path continues here". Distinct from dress-3's field-clearing
-// piles (low, plural, messy): ONE tall tapered column, 5 stones + a 6th pale
-// quartz token cap (the "added by the last walker" human mark that reads at
+// piles (low, plural, messy): ONE squat stacked column reading wider-than-
+// tall mass (dress-15: row-32 native re-judgment corrected the original
+// "tall tapered" intent — a 2:1 tall:thin read is a totem, not a cairn),
+// 5 stones + a 6th pale quartz token cap (the "added by the last walker" human mark that reads at
 // distance), seated on a wide rough base slab, one moss-flecked course, a
 // couple of kicked stray stones at the foot (the ground's own stone cleared
 // aside). Grounds USE: wayfinding at the wild margin. Static, unlit — spends
@@ -15,9 +17,14 @@ import { toGLB, mat } from "./glbwrite.ts";
 import { mergeByMaterial } from "./mergekit.ts";
 
 const g = new THREE.Group();
-const ROCK = mat(0x8c887e, .95, 0);   // palette rock
-const MOSS = mat(0x6a7a4a, .95, 0);   // palette moss/lichen fleck
-const QUARTZ = mat(0xe8e5de, .55, .05); // pale quartz token — smooth, slightly glossy
+// dress-15 (improve shard row 32): per-stone value banding — the fallback
+// judge's "uniform near-black" was REAL (pixel histogram: subject 90%+ below
+// lum 72 at 18m; 5 of 7 stones shared one material). Per-course materials:
+const ROCK = mat(0x8c887e, .95, 0);   // palette rock (base + courses 1,5)
+const ROCK2 = mat(0x6f6a60, .95, 0);  // mid-dark course 2 — the value step
+const ROCK3 = mat(0xa39f93, .95, 0);  // warm lighter course 4 — second step
+const QUARTZ = mat(0xf4f1e8, .55, .05); // pale quartz token — brighter, reads against sky
+const MOSS = mat(0x6a7a4a, .95, 0);   // palette moss/lichen fleck (course 3)
 
 const jit = (n: number) => ((Math.sin(n * 127.1) * 43758.5453) % 1 + 1) % 1 - 0.5;
 
@@ -36,16 +43,37 @@ stone(0.62, jit(3) * 0.06, 0.26, jit(7) * 0.06, 11, ROCK);
 // five stacked courses, tapering. Each stone's center sits so it VISIBLY
 // overhangs the course below on one side (dry-stacked read): course radius
 // shrinks 0.52 -> 0.20; offset each course a deterministic ~0.07m drift.
-const radii = [0.52, 0.44, 0.36, 0.28, 0.20];
-const cy = [0.62, 1.02, 1.37, 1.67, 1.93];
+// dress-15: squat rebalance — mass along the height, not top-heavy-thin.
+// Old: radii 0.52->0.20 at y 0.62->1.93 (aggressive taper; native re-judgment:
+// upper 2/3 read 3-4x taller than wide at 18m = totem, not cairn). New:
+// wider upper courses + tighter y stacking; total height ~2.32 unchanged so
+// the placed pose/tuple contract needs no re-siting on re-place.
+const radii = [0.62, 0.56, 0.50, 0.42, 0.36];
+const cy = [0.52, 0.90, 1.28, 1.64, 2.02];
+const courseMat = [ROCK, ROCK2, MOSS, ROCK3, ROCK];
+// dress-15 v3: SQUAT law — v2's 5-stone column still read 2:1 tall:wide at
+// 18m (native re-judgment: "spindly totem, thin upper stack dominates").
+// Real cairn proportions: mass near the ground, upper courses STEP IN
+// HORIZONTALLY less aggressively so the silhouette carries width
+// height-long, taper only at the cap. Width growth ~+0.06m per course
+// keeps the seam reads intact while the whole becomes wider feeling.
 for (let i = 0; i < 5; i++) {
     const drift = jit(101 + i * 31) * 0.14; // deliberate cant/offset per course
     stone(radii[i], drift * (1 - i * 0.12), cy[i], jit(103 + i * 17) * 0.1,
-        17 + i * 13, i === 2 ? MOSS : ROCK); // course 3 moss-flecked for age
+        17 + i * 13, courseMat[i]); // per-course value banding; course 3 moss
 }
-// 6th pale quartz token cap — the human "I was here" mark
-// (r bumped 0.14->0.17, one value whiter: both judges' margin note, waysign-6 v5 precedent)
-stone(0.17, jit(107) * 0.1, 2.24, jit(109) * 0.1, 91, QUARTZ);
+// 6th pale quartz token cap — the human "I was here" mark.
+// dress-15 v4: cap r 0.26 seated tight ON the crown. The v3 strap stones
+// were REMOVED — invisible at 18m, ambiguous sunlit-facet read at close
+// range (native judgment both distances); the moss + warm-light courses
+// already carry mid-height tonal interest. Quiet cairn, one pale mark.
+stone(0.26, jit(107) * 0.1, 2.18, jit(109) * 0.1, 91, QUARTZ);
+// dress-15 v3: base skirt — three flat half-set ground stones ringing the
+// foot. Reads "stacked on prepared ground" at distance, adds squat mass
+// low, and makes the two walked-past strays read as part of the same act.
+stone(0.30, 0.62, 0.10, 0.30, 41, ROCK);
+stone(0.26, -0.66, 0.08, 0.24, 43, ROCK);
+stone(0.24, 0.05, 0.07, -0.64, 46, ROCK);
 
 // two kicked stray stones at the foot (walked-past read, asymmetric side)
 stone(0.17, 0.85, 0.08, -0.42 + jit(113) * 0.15, 57, ROCK);
