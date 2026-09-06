@@ -520,6 +520,7 @@ only when native is down that tick, disclosed.
   world mutations, zero uploads, zero shared-budget use, no visual PASS
   claimed. Lane HOLDS for Bill's eye-gate verdicts
   (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+  sign's build ahead of rotation.
 
 - waysign-19 HOLD (pipeline mode, 3rd consecutive) — queue complete
   (8/8 R1, R2 7/7, both court brace closures); zero OPEN shard rows route
@@ -543,7 +544,26 @@ only when native is down that tick, disclosed.
   PASS claimed. Lane HOLDS for Bill's eye-gate verdicts
   (`reviews/waysign-eye-gate.md`); any correction re-opens ahead of
   rotation.
-  sign's build ahead of rotation.
+
+- waysign-20 HOLD (pipeline mode, 4th consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court-sign brace closures); zero
+  OPEN IMPROVE-PLAN rows route to `nx-sign-*` (R2 intake scanned fresh;
+  all nx-sign references are historical executed records); eye-gate
+  packet md5 8b88b6b3 unchanged, zero Bill verdict markers. Cheap lawful
+  hold verification: standing gate ALL PASS real exit 0 (absorbed
+  dress-24 at 6ba397d mid-tick); fresh live census 259 total, ALL 8
+  `nx-sign-*` riders PIN_EXACT 8/8 at ledgered tuples (stable afee37dd,
+  dyer 8ce2081f, kiln ecbad903, potter 3a6c8fe7, woodyard f46e12ae,
+  mill 870256ce, bakery 49342c52, smithy 3522e5ab); all 9 hosts at
+  known pins (stable still 98f2d5b6, anchor re-validated waysign-19;
+  others lib-stable). PLAN REPAIR this tick: removed the stranded
+  duplicate fragment `sign's build ahead of rotation.` (line 546, tail
+  of waysign-18's sentence orphaned by the waysign-19 insertion) and
+  completed waysign-18's cut sentence — bookkeeping, no work affected.
+  Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. Lane HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any correction re-opens ahead of
+  rotation.
 
 ## Carried laws
 
