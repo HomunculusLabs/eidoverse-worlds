@@ -50,9 +50,49 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 
 ||| sweep-31 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented lib change at identical tuple: nx-sign-potter-001 bc05a4f3→3a6c8fe7 (waysign-13 R2-6 emblem-collapse reseat @ 038ac45, waysign-place-potter-2.ts pins the same sha) — domain-valid, not drift; snapshot rewritten raw sha f901ff3787755b37) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified, exit 0) | tier-1 4/4 ALL PASS (core / NW / NE / SW, legs run individually, verdicts content-anchored) + tier-2 inn + stable ALL PASS (ninth cycle, stable walked against improve-12 new bytes 98f2d5b6) | pins 14/15 + 1 classified (angler live b3dfb28a UNCHANGED; local 8c1a5047 = known quarantined sibling improve draft, racing law), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, 38 lights standing, woodyard 1f2c6f592095b204 exact, ledger law exact (2370250 after D+0/E+0 append), interlane md5 f6254cd02cbcbee79e54104669be6981 stable, standing gate real exit 0 absorbing mid-tick HEAD advances (038ac45 waysign-13, dfecce4 improve-12, 6cafc64 dress-18, 3ec60da artwalk-52, night-20) | CLEAN SWEEP |
 
-|| sweep-32 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented lib change at identical tuple: nx-struct-spiralfolly 20c515a0→b85ce018 (struct-39 shard row 14 honest-carriage rebuild, uncommitted at this tick — placer next-place-struct-spiralfolly.ts + mkv3-spiralfolly.ts modified in tree, ledger entry [struct-39] present uncommitted, PLACED_VERIFIED + idempotent per its own prose) — domain-valid sibling work-in-flight, not drift; snapshot rewritten raw sha 65184df6bfe4bcd5, 1-line diff, post-rewrite drift vs live ZERO) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified, exit 0 — live set includes the new spiralfolly bytes) | tier-1 4/4 ALL PASS (core 64 legs ALL_PASS; NW / NE / SW legs run individually, real exit 0, verdicts content-anchored; SW stderr abstentions = known normalized set, unchanged) + tier-2 hall + row-cottage ALL PASS (tenth cycle) | pins 14/15 + 1 classified (angler live b3dfb28a UNCHANGED; local 8c1a5047 = known quarantined sibling improve draft, same class as sweep-28..31; racing law), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4, windmill standing 0993836012d1b17d, woodyard 1f2c6f592095b204 exact, 38 lights, ledger law exact (2370258 at gate; artwalk-53..56 sibling holds appended mid-tick, prefix-disjoint), interlane md5 f6254cd02cbcbee79e54104669be6981 stable, standing gate real exit 0 at HEAD 2003491 (artwalk-53, zero-mutation hold) | CLEAN SWEEP |
+|||| sweep-33 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, FOUR documented lib changes at identical tuples: nx-approach-ne-lane-002 a27bc9a2→dc52264c (approach-7 D2 night-correction @ HEAD 873a138), nx-dress-ne-woodstack-001 c832da5d→692bc54e (dress-19 committed reseat @ e06f69c), nx-dress-nw-skeps-001 806f2c4e→87d2dd16 (dress-20 rejudge, mid-tick arrival, re-captured per sweep-8/10 precedent), nx-town-bunkhouse 49f5acc4→c8636968 (improve-13 decode-bunk, mid-tick arrival, re-captured) — all domain-valid, not drift; snapshot rewritten raw sha 0f9955a3f47345f3, post-rewrite drift vs live ZERO) | ALL CLEAR at 259 (221 bbox non-light, 230 classified, 0 unclassified, exit 0 — SAT re-run post skeps+bunkhouse arrivals) | tier-1 4/4 ALL PASS (core 64 legs; NW 5 / NE 7 / SW 5 legs run individually, real exit 0, verdicts content-anchored — NE walked against the new approach-7 bytes) + tier-2 potter + market ALL PASS (eleventh cycle) | pins 13 ok / 2 classified (angler live b3dfb28a UNCHANGED, quarantined sibling improve draft, racing law; hypar live ce246def UNCHANGED, local f4cfcade→750f82ee across two reads = struct-40 actively rebuilding mid-tick 15:11, live verified fresh via curl UA, same racing-law class), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4, windmill standing 0993836012d1b17d, woodyard 1f2c6f592095b204 exact, 38 lights, ledger law exact (2370260 at gate), interlane md5 f6254cd02cbcbee79e54104669be6981 stable, standing gate real exit 0 at HEAD 873a138 (approach-7) | CLEAN SWEEP |
+| sweep-32 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented lib change at identical tuple: nx-struct-spiralfolly 20c515a0→b85ce018 (struct-39 shard row 14 honest-carriage rebuild, uncommitted at this tick — placer next-place-struct-spiralfolly.ts + mkv3-spiralfolly.ts modified in tree, ledger entry [struct-39] present uncommitted, PLACED_VERIFIED + idempotent per its own prose) — domain-valid sibling work-in-flight, not drift; snapshot rewritten raw sha 65184df6bfe4bcd5, 1-line diff, post-rewrite drift vs live ZERO) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified, exit 0 — live set includes the new spiralfolly bytes) | tier-1 4/4 ALL PASS (core 64 legs ALL_PASS; NW / NE / SW legs run individually, real exit 0, verdicts content-anchored; SW stderr abstentions = known normalized set, unchanged) + tier-2 hall + row-cottage ALL PASS (tenth cycle) | pins 14/15 + 1 classified (angler live b3dfb28a UNCHANGED; local 8c1a5047 = known quarantined sibling improve draft, same class as sweep-28..31; racing law), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4, windmill standing 0993836012d1b17d, woodyard 1f2c6f592095b204 exact, 38 lights, ledger law exact (2370258 at gate; artwalk-53..56 sibling holds appended mid-tick, prefix-disjoint), interlane md5 f6254cd02cbcbee79e54104669be6981 stable, standing gate real exit 0 at HEAD 2003491 (artwalk-53, zero-mutation hold) | CLEAN SWEEP |
 
 ## Findings register
+
+sweep-33: none. Census 259==259 (0 arrivals, 0 departures, 0 unexplained
+drift), FOUR documented lib changes at identical tuples, all classified
+domain-valid against lane ledger tails / uncommitted in-tree evidence:
+nx-approach-ne-lane-002 a27bc9a2→dc52264c (approach-7 D2 night-correction
+@ HEAD 873a138, "sha a27bc9a2->dc52264c x2 deterministic"), nx-dress-ne-
+woodstack-001 c832da5d→692bc54e (dress-19 committed reseat @ e06f69c,
+"sha 692bc54e x2"), nx-dress-nw-skeps-001 806f2c4e→87d2dd16 (dress-20
+skeps rejudge, mid-tick arrival AFTER this sweep's first census — review
+rig dress20-skeps-rejudge/ in tree, per the sweep-8/sweep-10 mid-tick
+precedent; re-captured, tuple unchanged), nx-town-bunkhouse
+49f5acc4→c8636968 (improve-13 decode-bunk, mid-tick arrival, review rig
+review-improve13-bunk/ in tree; re-captured, tuple unchanged) — SAT re-run
+post both arrivals, ALL CLEAR 221/230/0 exit 0. Integrity classification,
+not a finding: struct fleet pins 13 ok / 2 classified — nx-struct-angler
+live b3dfb28a UNCHANGED (known quarantined sibling improve draft, sweep-28
+class, racing law) and NEW this sweep nx-struct-hypar live ce246def
+UNCHANGED in the drift set (local f4cfcade then 750f82ee across two reads
+= struct-40 actively rebuilding the GLB mid-tick at 15:11, untracked
+reviews struct-40-hypar/ + -v2/ in tree; live world unaffected — verified
+fresh via curl UA after one 403 on the default urllib UA; same racing-law
+class, do not touch). All five phases verified fresh this wakeup with
+zero failing checks (tier-1 legs run individually per sweep-18 timeout
+lesson, verdicts content-anchored on ALL_PASS status strings — core 64
+legs, NW 5, NE 7 walked against the new approach-7 bytes, SW 5; tier-2
+eleventh cycle: potter 6/6 + market 6/6 ALL PASS; foreign-seam
+abstentions on cultivation gardens/temple-labyrinth/dress-nw-logpile =
+known normalized diagnostic set, unchanged class). Foreign working-tree
+dirt (hypar + tower3 + potter sign + stile + signs11 mk scripts,
+approach7 corridor/decode/review, millrace/orrery terrain probes, fleet
+watcher, court-ensemble placer, improve13-bunk + waysign14 review rigs)
+is sibling work-in-flight, untouched per interlane law. Snapshot
+rewritten this sweep (raw sha 0f9955a3f47345f3 from the post-arrival
+re-capture; post-rewrite drift vs live ZERO). No defect notes written.
+Next tier-2 pair (sweep-34): inn + stable (twelfth cycle). Standing note
+for Bill unchanged: improve/waysign/struct/dress/approach lanes continue
+active re-place queues — expect further domain lib changes in coming
+census diffs, each classifiable only against that tick's ledger tail or
+uncommitted placer.
 
 sweep-32: none. Census 259==259 (0 arrivals, 0 departures, 0 unexplained
 drift). ONE documented lib change at identical tuple, classified as
