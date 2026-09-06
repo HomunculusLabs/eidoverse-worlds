@@ -37,7 +37,7 @@ Rotation NW → NE → SW (→ SE if Bill opens a corridor).
 | 3 | SW | midpoint r47 | outer | **PLACED mile-3** |
 | 4 | NW | district arrival r71 | inner (district-facing) | **PLACED mile-5** (resite −1.5m, see log) |
 | 5 | NE | district arrival r72 | inner | **PLACED mile-6** |
-| 6 | SW | district arrival r71 | inner | pending |
+| 6 | SW | district arrival r71 → **r64 (SAT resite)** | LIT village-side at −N post | **PLACED mile-7** (resite, see log) |
 | 7+ | SE | per Bill's siting call | TBD | held |
 
 "Outer" = village-facing side of the lane (walking outward, the left-hand
@@ -50,7 +50,7 @@ live leg decode shows a better verge shoulder.
 |----------|-------------|--------|------|-------|
 | NW | 5 (market, garden-cottage, tower-house, approach-lamp-001/002) | lamp only if a marker lands past every light | 1 | mile-5 arrival pair LIT (last leg light r66.9 < marker r71); bend marker unlit |
 | NE | 6 | same law | 1 | mile-6 arrival pair LIT (last leg light nx-approach-ne-lamp-002-l r60.0 < r72); jink marker unlit |
-| SW | 6 | same law | 0 | counted mile-1 |
+| SW | 6 | same law | 1 | mile-7 arrival pair LIT at r64 (nearest leg light r55.4 < r64; midpoint marker unlit) |
 | SE | — (no leg) | — | — | holds with the SE call |
 
 ## Siting + build log (filled per marker)
@@ -179,6 +179,38 @@ live leg decode shows a better verge shoulder.
   `mile-ne2-place.ts` — 3 verbs @800ms (2 spawn + 1 light), post-place tuple
   + light verify, idempotent zero-verb rerun. Verdict: PLACED_VERIFIED.
   NEXT: mile-7 SW district arrival r71 (inner).
+
+- **mile-7 (2026-09-06, overnight fleet)** — SW district ARRIVAL milestone
+  pair, third LIT variant, RESITED by the SAT gate. First candidate: the
+  radial's end A = pol(71, 217.25) = (−42.9759, −56.5161). The placer's SAT
+  gate DIED pre-mutation: the village-side (−N) verge at r71 sits INSIDE
+  temple terrace-0049's platform — signed perp of the terrace's nearest
+  corner (−46.46, −61.36) is −0.16 from the lane; gap −4.04m. Numeric sweep
+  of the census over stations r58–71 found r64 the NEAREST station where
+  BOTH posts clear the 1.4m law (V +2.07 / D +7.21 vs terrace-0049). Note
+  the r61–62 band fails against the lane's own fat compound bbox — handled
+  by the dress-6-class SOURCE-TRUE exemption (52 pavers of half-width 0.46
+  on the centerline; real clearance 2.30 − 0.46 = 1.84m). Also caught by the
+  code this tick: the SW radial passes EXACTLY through the origin (P0, P1
+  both multiples of dir(az)) — the side-assert fired on the inherited
+  chassis, was re-derived as a radial-degeneracy proof, and village/district
+  labels became a free choice (LIT on the −N post). Placed at r64:
+  `nx-mile-sw-013` village-side LIT (−36.9080, −0.0420, −52.3363) yaw
+  3.792rad and `nx-mile-sw-014` district-side unlit (−40.5696, −0.0499,
+  −49.5520) yaw 0.650rad — centerline perp exactly 2.300m, proj 40.00/47.00m
+  on P0→P1 (in-code check). Terrain preflight fresh at r64: −0.0420 /
+  −0.0499 (flat, Δ8mm). Build: proven GLB reuse `village_mile_nw2.glb` sha
+  `052120d7…` — NO upload (lib live on 4 siblings nw-007/008, ne-009/010;
+  disputed-bytes guard asserts). Lamp: `nx-mile-sw-013-l` at cage center
+  (−37.091, 0.608, −52.197), warm 0xffb066, intensity 1.2, range 8 — marker
+  r64 provably past every SW light (nearest leg lamp r55.4, district lights
+  r≤32.3); verified via light history fold + census. Placement: hash-gated
+  placer `mile-sw2-place.ts` — 3 verbs @800ms, post-place tuple + light
+  verify, idempotent zero-verb rerun. SW lamp budget: 1 used. Verdict:
+  PLACED_VERIFIED. QUEUE COMPLETE (6/6 unblocked boundaries); eye-gate
+  circuit delivered at `reviews/mile-eye-gate.md`; SE holds on Bill's siting
+  call (APPROACH-PLAN options a/b/c). NEXT: hold for Bill's eye-gate
+  verdicts + SE call.
 
 ## Lesson (mile-3 defect, class-level)
 

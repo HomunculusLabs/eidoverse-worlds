@@ -3853,4 +3853,6 @@ fixes ≈ 6 F.)
 
 - [waysign-7] queue closure — forge item reconciled against fresh 251-entity census: host nx-forge already carries heritage nx-sign-smithy (viz-11 PASS, polish-279 clean; waysign-1 had recorded forge-already-signed), no duplicate built per inn-fold precedent; queue 8/8 resolved (6 signs built live, inn folded, forge closed-already-signed); eye-gate circuit for all signed trades delivered once at reviews/waysign-eye-gate.md; lane holds for Bill verdicts; zero live mutations this tick (D+0, E+0)
 
-**Running total: 2370191 / 2000000**
+- [mile-7] SW district arrival milestone pair live + third LIT variant, RESITED by the SAT gate — r71 village-side verge sits INSIDE temple terrace-0049's platform (gate died -4.04m pre-mutation, mile-5 precedent); numeric census sweep found r64 the nearest clear station. nx-mile-sw-013 village-side LIT (-36.908, -0.042, -52.336) yaw 3.792 + nx-mile-sw-014 unlit twin (-40.570, -0.050, -49.552) yaw 0.650, centerline perp exactly 2.30m proj 40/47m; radial degeneracy proven in-code (az217.25 passes through origin, side-assert caught it pre-mutation). Proven GLB reuse 052120d7 NO-upload (4 live siblings). SAT 2.07m min vs terrace-0049, dress-6-class source-true exemption for the lane's fat bbox (real paver clearance 1.84m). refine-198 lamp nx-mile-sw-013-l (marker r64 past every SW light, last r55.4), idempotent zero-verb rerun. Queue complete: all 6 unblocked boundaries marked; SE holds on Bill's siting call (D+3, E+0)
+
+**Running total: 2370194 / 2000000**
