@@ -231,7 +231,11 @@ R2-4 DONE waysign-11 (woodyard live f46e12ae, pre-place-interrupted
 sibling window recovered, fat-stroke X trestles), R2-5 DONE waysign-12
 (mill live 870256ce, orthogonal + hub-hole structural fix), R2-6 DONE
 waysign-13 (potter live 3a6c8fe7, one-dominant stacked pot-on-wheel-bar
-glyph + bone lift). Each item: full chassis — host anchor re-derived from
+glyph + bone lift), R2-7 IN PROGRESS waysign-14 (v5 a8fd49bc built
+deterministic x2 + sibling-identical, 18m/10m judged on v3/v4 PASS-at-
+gate with both refinement notes implemented in v5; v5 final battery +
+placement DEFERRED to next wakeup — native judge 1210 at final call,
+budget closed, no unjudged bytes uploaded). Each item: full chassis — host anchor re-derived from
 CURRENT tuple per host-rider law, rider-only SAT + exemption ladder,
 unlit by default, 8m gate. Native vision is primary judge; ZAI fallback
 only when native is down that tick, disclosed.
@@ -344,6 +348,37 @@ only when native is down that tick, disclosed.
   deterministic ×2, 6 nodes, envelope x/z byte-identical (SAT-neutral);
   reseat remove+spawn exact tuple 58f5cbe3→f46e12ae, comp {} both sides,
   idempotent zero-verb rerun; host truth re-verified (1f2c6f59 live).
+- waysign-14 `nx-sign-bakery` R2-7 IN PROGRESS (heritage emblem-collapse
+  fix; local work banked, placement deferred): native re-judgment on exact
+  live bytes 599194ee (18m true host-mounted pose on the COURT WEST END
+  WALL — census truth: sign [14.023,0,-18.769] yaw 2.234 decomposes to
+  court-local (-6.130,+1.399) rel-yaw pi, mirror of smithy's east slot;
+  rig review-waysign14-bakery.ts, host 59534b10 = local bytes) CONFIRMED
+  R2-7: gold loaf a 10x6px yellow-green VALUE collapse (ΔL≈3 hue-only
+  contrast), chain rods invisible, arm hairline. DROPPED at source:
+  "curved fragment"/"ridge tabs" = host court west arch + roof cresting
+  (polish-282); missing sign shadow = rig sun off the west face; "floating
+  rings / flat iron / paper board" = accepted-smithy control shows the
+  identical profile (law 5 — family traits, not defects). Build v2..v5 in
+  mkv3-signs11.ts (bakery block self-contained; smithy/weaver/livery
+  byte-identical through every rebuild — proven each pass): smithy v2
+  chassis (brace + alternating chain links) + ONE DOMINANT dark-crust
+  boule — v2 0x5e4526 lathe 0.30w (ZAI iso: "near-black rock", too dark);
+  v3 0x7d5024 crust, 20-seg symmetric dome, slashes spread+dropped; v4
+  +20% emblem (0.36w = 86% face) + bold slashes 0.022 (native 10m: loaf
+  CONDITIONAL PASS — flat base faint, slashes thin; both notes taken);
+  v5 flat chord lengthened (0.075→0.150 nearly-level base) + slashes 0.028
+  thick (7.8% of loaf width, judge's 8-10% band) + 0.13 long. 18m native
+  on v3: emblem PASS (dark oval silhouette, "not a smudge"), hung-read
+  PASS, slashes sub-threshold at 18m (expected — 8m is the articulation
+  gate; family far-LOD). v5 sha a8fd49bc deterministic ×2, 4 nodes. V5
+  FINAL BATTERY NOT RUN — native 1210 at the final gate call, tick budget
+  closed; NO upload/live mutation on unjudged bytes. NEXT WAKEUP: rerun
+  rig (renders already fresh for a8fd49bc), judge 10m+iso+alone+night,
+  then write placer (chassis = waysign-place-* reseat: remove+spawn, comp
+  {} both sides — live has no comps, idempotent rerun) and seat v5.
+  Baseline bytes: reviews/waysign14-bakery/before/ (599194ee).
+
 - waysign-12 `nx-sign-mill-001` R2-5 DONE (emblem-collapse fix, STRUCTURAL):
   native re-judgment on exact live bytes 5b6a55bd (18m oblique, host+b10
   crown at live census poses; first native call error 1210, retry

@@ -29,7 +29,10 @@ import { writeFileSync } from "node:fs";
 
 const g = new THREE.Group();
 const ironTex = texMat("iron", [0x5c5c60, 0x54545a], { rough: 0.4, metal: 0.55, scale: 2, stripe: 2, weights: [2, 1] });
-const boneTex = texMat("sign_bone", [0xe4e4c2, 0xd8d8b8], { rough: 0.9, scale: 2, weights: [3, 1] });
+// v7 (waysign-13 R2-6): bone LIFTED 0xe4e4c2 -> 0xefeccf — pixel decode of
+// the 18m render showed the face shadow-crushed to mid-tone under the b3
+// pavilion (kiln ecbad903 precedent, drum/eave value crush).
+const boneTex = texMat("sign_bone", [0xefeccf, 0xe0e0c0], { rough: 0.9, scale: 2, weights: [3, 1] });
 const TIMBER_DARK = 0x4a4632, CLAY = 0xbaae60, WARE = 0xdada70;
 
 const texBox = (name: string, w: number, h: number, d: number, x: number, y: number, z: number, m: THREE.Material) => {
@@ -82,40 +85,32 @@ box(g, "sp_board", 0.5, 0.4, 0.05, 0, 1.89, 0.555, 0x7c6832);
 texBox("sp_face", 0.42, 0.32, 0.04, 0, 1.89, 0.600, boneTex);
 texBox("sp_face_back", 0.42, 0.32, 0.04, 0, 1.89, 0.510, boneTex);
 
-// --- GLYPH v5 (v1 merged; v2 hierarchy; v3 "!" mark; v4 zai-rejected:
-// composed face-on pot parts illegible at distance — "magnifying glass"):
-// HORIZONTAL layout on the board's strong axis, single-silhouette pot.
-// LEFT: pot IN PROFILE — one LatheGeometry amphora (foot, round belly,
-// shoulder, narrow neck, flared rim) — the heritage bakery-loaf idiom:
-// a profile outline survives distance where composed parts merge.
-// RIGHT: WHEEL RING (torus, hole reads as wheel) + small proud hub
-// (hub ≤ 40% of ring outer dia so the hole stays open at mip range).
-// Pot CLAY terracotta vs dark wheel — color splits the two symbols.
-// Pot 0.16 tall / 0.11 wide at x −0.095; wheel outer dia 0.158 at
-// x +0.105; horizontal gap 66mm. Face spans y 1.73..2.05, x −0.21..0.21.
-// --- GLYPH v6 = ACCEPTED v5 + ZAI polish: scale +15% (distance
-// legibility) and terracotta hue (the olive CLAY reads khaki on bone;
-// 0xb96a45 is family-adjacent but unmistakably fired clay against cream).
-// Pot half-width 0.063 at x −0.11 → left edge −0.173; wheel outer
-// 0.181 at x +0.115 → right edge 0.206; 70mm glyph gap. Face x ±0.21.
+// --- GLYPH v7 (waysign-13, R2-6 emblem-collapse fix; R2 family root
+// class = SCALE, kiln/dyer precedent): v5/v6 two-glyph layout merged to
+// one dark cluster at 18m (pixel decode: pot 4px, wheel 6px, gap 6px,
+// terracotta unresolvable). ONE DOMINANT GLYPH law (kiln v5): the pot,
+// BOLD and board-filling — lathe amphora with exaggerated wide belly /
+// narrow neck / flared hollow rim (0.26 tall, 0.20 wide terracotta), its
+// foot standing ON the potter's wheel: a wide dark timber bar (0.30 x
+// 0.045, the wheel head in profile) directly beneath. Stacked + touching,
+// two colors, orthogonal extents — cannot merge into one ambiguous mark;
+// reads "vessel on a wheel" = POTTER at 8m and holds a silhouette at 18m.
+// Terracotta 0xb96a45 on lifted bone = measured ΔL≈-80 family contrast.
+// Face spans y 1.73..2.05, x -0.21..0.21 — glyph fills ~71% width, ~98%
+// height.
 const TERRA = 0xb96a45;
 for (const [fi, gz] of [[0, 0.635], [1, 0.475]] as const) {
-    // pot in profile — lathe amphora silhouette, one piece (×1.15)
+    // potter's wheel head — wide dark bar in profile, glyph base
+    texBox(`glyph_wheel_${fi}`, 0.30, 0.045, 0.05, 0, 1.7675, gz, mat(TIMBER_DARK, 0.9, 0));
+    // pot in profile — bold lathe amphora, foot standing on the wheel bar
     const prof = [
-        [0.020, 0.000], [0.032, 0.010], [0.055, 0.055], [0.050, 0.100],
-        [0.021, 0.135], [0.031, 0.152], [0.026, 0.160], [0.000, 0.160],
-    ].map(([x, y]) => new THREE.Vector2(x * 1.15, y * 1.15));
-    const pot = new THREE.Mesh(new THREE.LatheGeometry(prof, 12), mat(TERRA, 0.95, 0));
+        [0.040, 0.000], [0.055, 0.012], [0.100, 0.070], [0.100, 0.125],
+        [0.060, 0.180], [0.042, 0.210], [0.048, 0.232], [0.062, 0.246], [0.062, 0.262],
+    ].map(([x, y]) => new THREE.Vector2(x, y));
+    const pot = new THREE.Mesh(new THREE.LatheGeometry(prof, 14), mat(TERRA, 0.95, 0));
     pot.name = `glyph_pot_${fi}`;
-    pot.position.set(-0.11, 1.795, gz);
+    pot.position.set(0, 1.79, gz);
     g.add(pot);
-    // wheel — TORUS RING in xy plane (hole along z, reads face-on)
-    const wheel = new THREE.Mesh(new THREE.TorusGeometry(0.075, 0.016, 6, 18), mat(TIMBER_DARK, 0.9, 0));
-    wheel.name = `glyph_wheel_${fi}`;
-    wheel.position.set(0.115, 1.890, gz);
-    g.add(wheel);
-    // small proud hub — the axle
-    disc(`glyph_hub_${fi}`, 0.014, 0.115, 1.890, gz, 0x3a352c, 0.030);
 }
 
 mergeByMaterial(g, "sgpot");
