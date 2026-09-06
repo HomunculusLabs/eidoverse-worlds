@@ -1341,3 +1341,27 @@ unchanged, zero verdict markers; register 0 artwalk items; no Phase F
 commission, no widening. Zero world mutations, zero shared-budget use, no
 visual PASS claimed. Lane HOLDS for Bill's counting-series eye-gate
 verdicts, a Phase F fresh commission, or a queue widening.
+
+### [artwalk-75] PIPELINE HOLD (2026-09-06, 14th consecutive)
+
+Gate ALL PASS real exit 0 at 45a01b5 (dress-31 at tip) pre-work. Fresh
+reads: loop file, ARTWALK-PLAN, INTERLANE-PROTOCOL; ledger max re-derived
+immediately before append (artwalk-74 -> this tag). SHARD EXECUTION
+verified at source: routing row 25 terminal (executed artwalk-52,
+re-proven artwalk-71); zero OPEN IMPROVE-PLAN rows route nx-artwalk-* —
+defect rows 1..39 remain town/struct/dress/approach/sign domains; the NEW
+survey-7/8 SURVEY CANDIDATES rows (woodyard, welcome, potter, court,
+fountain, temple-seed, cultivation-garden) all route nx-town/nx-welcome =
+improve-own or legacy-core Bill's-call, none to this prefix; improve-13/15
+only NAME artwalk riders inside foreign keep-out contracts. Two sibling
+commits since artwalk-74: struct-42 (mobius continuous-band EXECUTED
+re-place, new lib) and dress-31 (zero-mutation hold). Hold verification:
+fleet reconcile ALL_RECONCILED exit 0 — 259 census / 54 riders / 38
+lights / 34 placers / 33 host pins / 29 anchors, zero verbs, zero
+uploads; the pass re-proves every host pin against the fresh live census
+and absorbed struct-42's mobius lib flip with no rider host affected, no
+reconciliation due. Eye-gate packet 48bea194 unchanged, zero verdict
+markers; register 0 artwalk items (R-107 expected); no Phase F
+commission, no widening. Zero world mutations, zero shared-budget use, no
+visual PASS claimed. Lane HOLDS for Bill's counting-series eye-gate
+verdicts, a Phase F fresh commission, or a queue widening.
