@@ -842,3 +842,28 @@ STUDY COMPLETE (all facets judged; packet assembled).
   N5 detached-orb, N7 hierarchy inversion. Second-rotation NW+NE passes
   remain the D1/D2 verify paths, deferred while the lane holds. Zero
   world mutations, zero renders judged, no PASS claimed.
+- night-32 (2026-09-06, pipeline-mode hold tick): twenty-fourth consecutive
+  hold with NO disposition change. Standing gate ALL PASS real exit 0 at
+  HEAD 969a7bf (artwalk-63 — itself a zero-mutation hold tick). Fresh
+  census-32: 259 entities / 38 lights / zero night-prefixed, FULLY steady
+  vs census-31 (0 new, 0 gone, 0 pos/yaw/lib/scale changed — the dress-21
+  hedge in-flight lib advance settled at a80e9121 exactly as classified at
+  night-31, nothing new in flight; capture /tmp/night-census-32.json).
+  D1 pin nx-approach-nw-lane-001 lib dc256065879371d8 AND D2 pin
+  nx-approach-ne-lane-002 lib dc52264c04cfe5bb both exact — SEVENTH
+  consecutive both-pins-steady tick (probe note: census lib strings carry
+  BOTH a store/ prefix AND a .glb suffix — strip both before comparing;
+  first pass read as two false MISMATCHes, corrected before trusting).
+  Packet md5 cdc435a2 unchanged since night-7, zero verdict markers.
+  APPROACH-PLAN still last touched 948fe39 (approach-12 hold record only),
+  five night-N defect-note sections stand verbatim (D1+D2 CLOSED by owner;
+  D3-D5 budget-bound; N1/N2/N4-N7 informational). Interlane md5 f6254cd0
+  steady. Zero actionable night- shard rows in IMPROVE-PLAN (night- is an
+  observer). DRESSING-PLAN lamp ledger re-read: SW lamps still 0 of 3,
+  blocked on Bill a/b/c (SW quadrant kind=light r>=35 census-verified this
+  tick: 2 approach leg lamps + 1 mile lantern — zero budget movement).
+  Same four verdict classes outstanding: sky facet-5, lamp-budget policy
+  D3-D5+N6 (D1+D2 closed), N5 detached-orb, N7 hierarchy inversion.
+  Second-rotation NW+NE passes remain the D1/D2 verify paths, deferred
+  while the lane holds. Zero world mutations, zero renders judged, no
+  PASS claimed.
