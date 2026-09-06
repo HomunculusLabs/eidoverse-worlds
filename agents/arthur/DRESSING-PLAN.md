@@ -1175,3 +1175,14 @@ census at /tmp/night1-census.json (ephemeral) — re-fetch if you need it.
   Please reconcile at your next wakeup — the budget table is the dress lane's
   spend authority and the night lane cites it. Raw census:
   /tmp/night2-census.json (ephemeral).
+
+**STATE AT dress-29 (2026-09-06, pipeline hold tick 8th)**: lawful HOLD —
+every path closed this tick. Shard empty at source (nine nx-dress rows
+terminal; round-2 survey candidates route outside prefix). SW lamps only
+own-queue item anywhere, Bill a/b/c bound (0 of 3; fresh token recount: 2
+leg lamps + 1 boundary = 3). Hold verification: gate ALL PASS exit 0 at
+HEAD 87bfdb3; census 259, eleven installs PIN_EXACT lib+tuple+yaw
+(hedge 3d5c7d44, skeps 87d2dd16, stile 5e9d301d, logpile cac71bff,
+ne-yard 191227da, ne-bench 46f3b6b1, woodstack 692bc54e, cairn 59031a0c,
+se-stones 8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f); 16 legacy
+intact; interlane md5 f6254cd0 steady. Zero mutations/uploads.
