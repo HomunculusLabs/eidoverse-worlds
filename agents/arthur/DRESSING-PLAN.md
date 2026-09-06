@@ -325,6 +325,28 @@ convention same count) = 3, dress spend 0. 16 legacy core `nx-dress-*`
 untouched; interlane md5 f6254cd0 unchanged. Zero world mutations,
 zero uploads, zero shared-budget use.
 
+**STATE AT dress-47 (2026-09-06, pipeline hold tick — 26th consecutive)**:
+lawful HOLD — every path closed this tick, verified fresh at source.
+Shard queue re-verified EMPTY against the CURRENT working tree (post
+survey-12): all nine `nx-dress-*` Round-1 rows terminal by full-row
+window (5/29/30/31 DROPPED native rejudge; 32/33/34/37/38 EXECUTED
+reseats); survey-12's new family-class extensions route to
+nx-wild/nx-cultivation/nx-temple/nx-craft — zero `nx-dress-*`; the
+improve-18 mapboard CONTRACT sits in `nx-town-*` (foreign, in flight,
+untouched). Own queue: SW lamps only, still blocked on Bill's a/b/c
+budget policy (0 of 3 used); eye-gate packet fd677cae still zero
+VERDICT lines. Hold verification: standing gate ALL PASS real exit 0 at
+HEAD 24d5632; fresh live census 259 (HTTP 200), ALL ELEVEN district
+installations PIN_EXACT lib+tuple+yaw-radians vs this plan's
+PLACED_VERIFIED blocks — pins derived programmatically from the plan
+(siting-log newest-first, first-block-per-id = live contract; probe
+self-catches this tick: Unicode −/° normalization, reseat "(was …)"
+lazy-gap, trailing-period yaws — three probe bugs, world correct every
+time); 16 legacy core `nx-dress-*` untouched; interlane f6254cd0
+unchanged; SW lamp budget re-reconciled fresh: 3 live r≥35 SW lights
+(approach ×2 + mile lantern), spend 0 of 3. Zero world mutations, zero
+uploads, zero shared-budget use.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
