@@ -228,6 +228,24 @@ CURRENT tuple per host-rider law, rider-only SAT + exemption ladder,
 unlit by default, 8m gate. Native vision is primary judge; ZAI fallback
 only when native is down that tick, disclosed.
 
+## ROUND 2 execution log
+
+- waysign-8 `nx-sign-smithy` R2-1 DONE (emblem-collapse fix): native
+  re-judgment on exact live bytes d8df9400 CONFIRMED the smudge class,
+  DROPPED two sub-findings at source decode (glyph is a HAMMER not
+  horseshoe — identity kept; "stray fragment" was the flush wall plate,
+  polish-282 artifact). HOST TRUTH CORRECTED: the sign hangs on the
+  `nx-court` END WALL (court-local (6.131,−1.399), plate flush on wall
+  face x=6.10, timber band y<2.915 — verified in CURRENT host decode
+  59534b10 = live), NOT the forge as earlier plan prose implied. Build:
+  head 0.16→0.30 (71% of face), handle 0.03→0.055, diagonal brace,
+  hairline rods → dyer-idiom alternating chain links; sha 62a8c7fc,
+  4 nodes, siblings byte-identical; plan envelope x/z identical
+  (SAT-neutral), y 2.45→2.561. Native ACCEPT isolated 5/5 + 18m PASS +
+  ensemble PASS 4/4 + oblique PASS — ALL NATIVE this tick (no fallback;
+  vision restored per improve-5v). Remove+spawn exact tuple, comp {}
+  both sides, idempotent zero-verb rerun. R2 queue: R2-2 dyer next.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
