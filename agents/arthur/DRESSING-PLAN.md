@@ -28,7 +28,7 @@ anchors. Budget = live count (never exceed existing density).
 - **NW — CULTIVATION**: hedgerow (dress-1, built), bee skeps (dress-5,
   placed), field-edge log pile, gate stile
 - **NE — CRAFT**: work yard (dress-2, placed), ~~stone benches~~ (dress-6,
-  placed), woodstack
+  placed), ~~woodstack~~ (dress-9, placed 2026-09-06 — NE queue COMPLETE)
 - **SE — WILD**: path spurs (walk-tested), border stones (dress-3, placed),
   ~~cairn marker~~ (dress-7, placed — SE queue COMPLETE)
 - **SW — CONTEMPLATIVE**: ~~gravel paths~~ (dress-4, walk-tested 7/7),
@@ -41,9 +41,69 @@ skeps DONE 2026-09-06; dress-6 = NE round 2, benches DONE 2026-09-06;
 dress-7 = SE round 2, cairn DONE 2026-09-06 — SE queue complete; dress-8 =
 SW round 2, prayer stones DONE 2026-09-06 — only SW lamps remain, and
 those are budget-bound pending Bill's lamp-budget policy; next up in
-rotation: NE woodstack, NW log pile/stile — both go even if SW lamps hold)
+rotation: NE woodstack DONE (dress-9, 2026-09-06) — NE queue complete;
+next up in rotation: NW log pile/stile, then SW lamps if Bill's lamp-budget
+policy ever lands — SW lamps remain the only district-queue item blocked)
 
 ## Siting log
+
+### dress-9 — NE Craft firewood woodstack (PLACED, LIVE)
+
+- **Concept contract**: firewood laid in against the plaza-ward flank of
+  craft-hamlet-0028 — winter prep, the domestic answer to dress-2's shared
+  back-of-shop staging yard. Stove-length logs in 3 courses between two
+  cradle posts on rock pads, log lengths running out from the wall so the
+  PALE cut end-grain discs face the approach (the 18m distance tell,
+  dress-2 cordwood law). Ends staggered, one protruding top log, 3 leaners
+  at the flank, pale-ended spill rounds + bark wedges at the base, small
+  moss patches on the top course (older stack). Grounds USE: heat and
+  hearth. Static, unlit — spends no lamp budget (NE budget 10, used 0).
+- **Build**: `assets/mkv3-dress-ne-woodstack1.ts` →
+  `assets/village_dress_ne_woodstack1.glb`. Five-version iteration (ZAI
+  fallback vision — native provider-down error 1210, 10th consecutive
+  tick; disclosed):
+  - v1 (`e8f3c973…`): end strips faced sideways (invisible at 18m),
+    silhouette sparse — read post + tilted slab + blob. FAIL.
+  - v2 (`435c7354…`): massed courses read, but caps faced local +x while
+    the rig (and the plaza approach) look down +z — judge saw log SIDES,
+    no pale discs. FAIL.
+  - v3 (`abe990d8…`): frame corrected (logs run z, caps face +z),
+    gameplay PASS with margin notes (disc value, subtle protrusion).
+  - v4 (`8058ad6c…`): value +2 steps + protrusion raised — still FAIL:
+    cap radius was INSET (r−0.012) inside each bark cylinder, so bark rims
+    dominated the discs; top moss read as a fence rail.
+  - v5 (sha `c832da5d691befe24b2e4b8adf098b0b486262f6b9604df99059322ec29a7d7b`,
+    double-rebuild byte-identical) **ACCEPTED** — flush cap radius,
+    brighter alternating values (0xede9c4 / 0xdfe3b0), small moss
+    patches. Gameplay + close both PASS.
+- **Decode (final)**: bbox x −1.5..1.5, z −0.75..1.32 (center +0.285),
+  y −0.092..1.145; 5 nodes (budget 3–25 ✓). No light anchors, empty comp
+  bag by design.
+- **Siting (census 256)**: host source decode
+  (`mason/glb-retex/work_1648_hamlet.glb`, sha 032b6e24f4c4a142… == live
+  lib prefix) corrected the frame — the hamlet plan is 14m along local x,
+  so the plaza-ward flank is the LONG wall at local z = +6.51. Final pose:
+  hamlet-local (−1.0, +9.045) → world (59.708, 51.781), yaw −135° (asset
+  local +z = plaza-ward, caps face the approach). 1.5m real wall gap,
+  stack fully outside the plan footprint (back-to-wall host exemption,
+  numbers in placer header). Exact disc-vs-OBB vs the two nearest
+  statuaries (struct-19 law — census square bboxes are fat proxies,
+  source-true discs r5.92): +3.98m vs 0026, +2.96m vs 0039; next SAT
+  +11.6m (cloister-0016). No sub-1.4m adjacency. Rim corners
+  77.91..80.18 ∈ [66,108] ✓. Terrain flat (py −0.032, Δ2mm).
+- **Placement**: `ne-dress9-place.ts` — hash gate → blocker-epoch guard
+  (hamlet-0028, statuary-0026/0039, cloister-0016) → fresh-census SAT +
+  disc gates → upload (content-addressed) → spawn → post-place tuple
+  verify. **PLACED_VERIFIED** `nx-dress-ne-woodstack-001` @ lib
+  `store/c832da5d691befe2.glb`, pos (59.708, −0.032, 51.781), yaw −135°.
+  Idempotent rerun: 0 verbs. NE lamp budget used 0 of 10.
+- **Eye-check for Bill**: walk toward the NE hamlets from the plaza —
+  against the long flank wall of the second hamlet (the one nearest the
+  statuary ring), a woodstack should read at walking pace: dark bark
+  courses between two posts, PALE cut log-ends facing you, a messy top
+  log, a few rounds on the ground. It should read "someone here splits
+  firewood", not crates or a fence. If the discs still don't pop at
+  distance, they brighten one more step (one pass).
 
 ### dress-8 — SW Contemplative prayer stones (PLACED, LIVE)
 
@@ -282,7 +342,9 @@ rotation: NE woodstack, NW log pile/stile — both go even if SW lamps hold)
   `dress7-forest44-occupancy.ts`. **Final pose**: (58.70, 0.0076, −58.70),
   yaw −45°, r83 on-axis; source-true cell clearance 3.37m ≥ 1.4m; cones clean
   (0043 35.1° at 12.6m, wayside-0045 far, cairn-0048 far); rim corners
-  82.1..83.9 ∈ [66,108] ✓; terrain flat (Δ2mm).
+  82.1..83.9 ∈ [66,108] ✓; terrain flat (Δ2mm). (CORRECTED 2026-09-06,
+  dress-9, per sweep-8 defect note: the placed R83 OFF0 tuple's effective
+  cell clearance is 2.58m, not 3.37m — lawful, ≥ the 1.4m pinch law.)
 - **Placement**: `se-dress7-place.ts` — hash gate → blocker-epoch guard
   (forest-0044, dress-3 stones, cairn-0043/0048, forest-0057) → fresh-census
   SAT + rim + arrival-cone gates (NAMED source-true exemption for
