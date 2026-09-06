@@ -815,3 +815,30 @@ STUDY COMPLETE (all facets judged; packet assembled).
   hierarchy inversion. Second-rotation NW+NE passes remain the D1/D2
   verify paths, deferred while the lane holds. Zero world mutations,
   zero renders judged, no PASS claimed.
+- night-31 (2026-09-06, pipeline-mode hold tick): twenty-third consecutive
+  hold with NO disposition change. Standing gate ALL PASS real exit 0 at
+  HEAD 95295dc (artwalk-62 — itself a zero-mutation fleet-reconcile hold
+  tick; survey-6 e86a2f5 between ticks likewise read-only). Fresh
+  census-31: 259 entities / 38 lights / zero night-prefixed, 0 new /
+  0 gone vs census-30 with exactly ONE domain-valid sibling lib change at
+  identical pos/yaw/scale: nx-dress-nw-hedge-001 f595e862 -> a80e9121
+  (dress-21 work in flight — DRESSING-PLAN + mkv3-dress-nw-hedge1.ts sit
+  dirty under dress ownership; kind=thing, comp {}, zero lights touched,
+  nothing in this register or the decision packet cites the hedge;
+  capture /tmp/night-census-31.json). D1 pin nx-approach-nw-lane-001 lib
+  dc256065879371d8 AND D2 pin nx-approach-ne-lane-002 lib
+  dc52264c04cfe5bb both exact — SIXTH consecutive both-pins-steady tick
+  (probe note: census lib strings carry a store/ prefix — strip before
+  comparing, first pass read as false MISMATCH). Packet md5 cdc435a2
+  unchanged since night-7, zero verdict markers. APPROACH-PLAN last
+  touched 948fe39 (approach-12 hold record only), five night-N
+  defect-note sections stand verbatim (D1+D2 CLOSED by owner; D3-D5
+  budget-bound; N1/N2/N4-N7 informational). Interlane md5 f6254cd0
+  steady. Zero actionable night- shard rows in IMPROVE-PLAN (night- is
+  an observer; the two grep hits at lines 969/971 are improve-11 row
+  prose, not night-lane rows). DRESSING-PLAN lamp ledger re-read: SW
+  lamps still 0 of 3, blocked on Bill a/b/c. Same four verdict classes
+  outstanding: sky facet-5, lamp-budget policy D3-D5+N6 (D1+D2 closed),
+  N5 detached-orb, N7 hierarchy inversion. Second-rotation NW+NE passes
+  remain the D1/D2 verify paths, deferred while the lane holds. Zero
+  world mutations, zero renders judged, no PASS claimed.
