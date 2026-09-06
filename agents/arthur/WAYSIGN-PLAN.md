@@ -22,8 +22,8 @@ Rotation: working edge outward from the E road, then craft edge.
 
 | # | Host (expected id) | Trade | Pictogram | Status |
 |---|--------------------|-------|-----------|--------|
-| 1 | `nx-town-inn` | inn | tankard + key | pending |
-| 2 | `nx-town-stable` | livery | drawn horseshoe | pending |
+| 1 | `nx-town-inn` | inn | tankard + key | folded out — inn carries a BUILT-IN porch hanging sign (sign_board + brass wheel emblem + flanking lamps, mkv3-landmarks.ts:522-540); a second sign would duplicate the idiom. Defect note for Bill: the built-in emblem reads "wheel", not "tankard" — host redesign belongs to the owner lane, not waysign. |
+| 2 | `nx-town-stable` | livery | drawn horseshoe | DONE waysign-1 |
 | 3 | `nx-town-dyehouse` | dyer | dyed cloth bolt (flax-blue) | pending |
 | 4 | `nx-town-kiln` | kiln | flame over chamber | pending |
 | 5 | `nx-town-potter` | potter | wheel in profile | pending |
@@ -37,11 +37,26 @@ the census + decode are truth.
 
 ## Host anchor log (filled per sign; re-derive after host re-places)
 
-- (empty — first entries land at waysign-1)
+- waysign-1 `nx-town-stable` (lib 5beff62ed41ca6cf, local source hash-matches
+  live): road-facing face = the back wall (host local z=+2.1) — the E road
+  terminates at the stable, so visitors meet this wall head-on; open stalls
+  face away. Anchor host-local [0, 0, 2.1], sign yaw = host yaw −0 (i.e.
+  −π/2), plate flush on the wall face, glyph +z pointing down the road.
 
 ## Siting + build log (filled per sign)
 
-- (empty — first entries land at waysign-1)
+- waysign-1 `nx-sign-stable-001` livery: mkv3-sign-stable.ts, deterministic
+  ×2, sha afee37dd9a5b5d67…, 3 nodes, iron + sign_bone materials, no comps
+  no lights. v1 REJECTED on vision review (arms decorative stubs, no visible
+  chain drop, stacked-slab read); v2 arms reach to board corners ±0.22 with
+  2-link chain drop each side — ACCEPT on zai-vision (native vision provider
+  returned 400 on image content both attempts this tick — recorded, not a
+  PASS claim from native). Placer waysign-place-stable-1.ts: rider-only SAT,
+  host-pair exemption explicit, minGap 0.576 vs nx-town-inn (no other solid
+  near), PLACED_VERIFIED 1 verb, idempotent rerun zero verbs, live tuple
+  [40.9, 0, ~0] yaw −π/2. Bill eye-check: walk the E road from the inn —
+  the livery horseshoe should read on the stable's gable-end wall before
+  you reach the stalls.
 
 ## Carried laws
 
