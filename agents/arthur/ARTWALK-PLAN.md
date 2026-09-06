@@ -1365,3 +1365,28 @@ markers; register 0 artwalk items (R-107 expected); no Phase F
 commission, no widening. Zero world mutations, zero shared-budget use, no
 visual PASS claimed. Lane HOLDS for Bill's counting-series eye-gate
 verdicts, a Phase F fresh commission, or a queue widening.
+
+### [artwalk-76] PIPELINE HOLD (2026-09-06, 15th consecutive)
+
+Gate ALL PASS real exit 0 at 9bc7d6f (night-41 at tip) pre-work, re-proven
+ALL PASS exit 0 at ece31e4 after dress-32 landed mid-tick (normal pipeline
+interleaving, epoch law honored). Fresh reads: loop file, ARTWALK-PLAN,
+INTERLANE-PROTOCOL; ledger max re-derived immediately before append
+(artwalk-75 -> this tag). SHARD routing verified at source: the current
+1782-line IMPROVE-PLAN carries no SHARD EXECUTION section (consumed rows);
+zero OPEN rows route nx-artwalk-* — the only nx-artwalk mentions are the
+ownership table's row 25 (host-anchor reconciliation = this lane's own
+standing duty, executed below) and improve-13/15/16 execution contracts
+that NAME artwalk riders inside foreign keep-outs (b20/b18/b17), all
+foreign improve domain. Foreign dirt left untouched: IMPROVE-PLAN
+(improve-16 gardenCottage planning), tower3.glb + next-place-court-ensemble
+(improve lane in flight). Hold verification: fleet anchor reconcile
+ALL_RECONCILED exit 0 — 259 census / 54 riders / 38 lights / 34 placers /
+33 host pins / 29 anchors, zero verbs, zero uploads; the pass absorbed
+improve-15's row-cottage host lib flip (bd88cd38->add42aea, sweep-35
+domain-valid classification) with zero rider-host impact. Eye-gate packet
+48bea194 unchanged, zero verdict markers; register 0 artwalk items (R-107
+expected); no Phase F commission, no widening. Zero world mutations, zero
+shared-budget use, no visual PASS claimed. Lane HOLDS for Bill's
+counting-series eye-gate verdicts, a Phase F fresh commission, or a queue
+widening.
