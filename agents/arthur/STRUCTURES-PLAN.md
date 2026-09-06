@@ -29,6 +29,15 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   core, gold ring floats unconnected, stairs stop short with no landing,
   ragged wobble. Evidence: `agents/arthur/reviews/survey1-sev2-slice/
   nx-struct-spiralfolly/gameplay.png`. Queue row 14 standing.
+- [survey-2, 2026-09-06, NATIVE, 18m gameplay, live bytes d2f46768]
+  `nx-struct-millrace` CONFIRMED Sev 2 — inter-tread bands read as OPEN
+  slits (pure black full-width gaps, slatted read, not shadowed risers);
+  ball finial a 1-2px speck floating above cap with no visible stem; pond
+  water flat near-black no-sheen (rim frames it as basin, borderline —
+  polish-281 faint same-hue emissive candidate); reeds hairline; identity
+  reads generic ornamental fountain, millrace function absent. Evidence:
+  `agents/arthur/reviews/survey2-sev2-slice/millrace/gameplay.png`.
+  Queue row 13 standing — no duplicate row created.
 
 ## Design queue
 
