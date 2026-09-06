@@ -470,3 +470,27 @@ STUDY COMPLETE (all facets judged; packet assembled).
   remains the D1 verify path, deferred while the lane holds
   (rotation-state law set at night-5, reaffirmed night-14). Zero world
   mutations, zero renders judged, no PASS claimed.
+- night-16 (2026-09-06, pipeline-mode hold tick): ninth consecutive hold
+  with NO disposition change. Standing gate ALL PASS real exit 0 at HEAD
+  81578b4 (sweep-29 — itself a zero-mutation audit tick). Fresh census-16:
+  259 entities / 38 lights / zero night-prefixed, set-steady vs census-15
+  (0 new, 0 gone) with THREE domain-valid sibling lib changes in flight,
+  first live-set movement since census-14: nx-dress-nw-stile-001
+  (dress-18 working-tree `mkv3-dress-nw-stile1.ts` modified + dress18
+  review dirs), nx-struct-millrace (struct-38 files untracked),
+  nx-town-stable (improve-12 executing improve-11's contract —
+  `mkv3-stable.ts` modified). All three verified kind=thing comp={} —
+  ZERO lights touched, so D1–D5/N-findings all stand; none is cited by
+  any register finding (no disposition change). D1 closure pin re-exact:
+  nx-approach-nw-lane-001 lib `dc256065879371d8` steady (pos [0,0,0] is
+  the multi-segment lane-entity convention; bbox center −40.5,35.8 = the
+  NW leg). Packet md5 cdc435a2 unchanged since night-7. APPROACH-PLAN
+  still last touched b1195ef, five defect-note sections stand. Interlane
+  md5 f6254cd0 steady. Zero actionable night- shard rows in IMPROVE-PLAN
+  (grep hits at lines 673/675 are dress-15 row prose; shard routing
+  covers struct/dress/approach/sign/town only — night- is an observer).
+  DRESSING-PLAN lamp ledger re-read: SW lamps still 0 of 3, blocked on
+  Bill a/b/c. Same four verdict classes outstanding: sky facet-5,
+  lamp-budget policy D2–D5+N6, N5 detached-orb, N7 hierarchy inversion.
+  Second-rotation NW pass remains the D1 verify path, deferred while the
+  lane holds. Zero world mutations, zero renders judged, no PASS claimed.
