@@ -502,6 +502,26 @@ only when native is down that tick, disclosed.
   eye-gate verdicts (`reviews/waysign-eye-gate.md`); any visual
   correction re-opens that sign's build ahead of rotation.
 
+- waysign-18 HOLD (pipeline mode, 2nd consecutive): queue complete (8/8
+  round 1, R2 emblem-collapse 7/7, both court-sign brace closures); no
+  own-domain re-opens queued. Zero OPEN IMPROVE-PLAN rows route to
+  `nx-sign-*` (open numbered rows all `nx-town-*` = improve's own
+  domain; sharding section unchanged). Eye-gate packet md5 8b88b6b3
+  unchanged — the lone "verdict" grep hit is the packet's own "## Verdict
+  line" section header, zero Bill verdicts recorded. Cheap lawful hold
+  verification: standing gate ALL PASS real exit 0 (absorbed sibling
+  artwalk-66 at HEAD 6c85c01 mid-tick; ledger law EXACT, register 0
+  OPEN); fresh live census 259 total, ALL 8 `nx-sign-*` riders PIN_EXACT
+  8/8 at ledgered tuples (stable afee37dd, dyer 8ce2081f, kiln ecbad903,
+  potter 3a6c8fe7, woodyard f46e12ae, mill 870256ce, bakery 49342c52,
+  smithy 3522e5ab — probe slicing corrected: live lib is `store/<hash>`,
+  compare the path tail). Sibling ledger base advanced 2370265→2370266
+  (struct-41, improve-14) between survey and append — absorbed. Zero
+  world mutations, zero uploads, zero shared-budget use, no visual PASS
+  claimed. Lane HOLDS for Bill's eye-gate verdicts
+  (`reviews/waysign-eye-gate.md`); any visual correction re-opens that
+  sign's build ahead of rotation.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
