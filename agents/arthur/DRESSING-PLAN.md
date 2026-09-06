@@ -374,6 +374,21 @@ false-DRIFT, all pre-reseat hexes). World correct, probe wrong — both
 resolved at source this tick. Zero world mutations, zero uploads, zero
 shared-budget use.
 
+**STATE AT dress-63 (2026-09-06, pipeline hold tick — 43rd consecutive)**:
+lawful HOLD — every path closed fresh. Shard queue EMPTY at source (9/9
+`nx-dress-*` Round-1 rows terminal: 5/29/30/31 DROPPED native rejudge,
+32/33/34/37/38 EXECUTED, row 39 foreign improve-20; zero OPEN contexts,
+register zero nx-dress). SW lamps Bill a/b/c bound, spend 0 of 3 (fresh
+kind-law recount: approach-sw-lamp-001-l r39.7, -002-l r55.4,
+nx-mile-sw-013-l r64.0). Eye-gate fd677cae zero VERDICT lines. 11/11
+district installs PIN_EXACT lib+tuple+yaw-radians+comps-empty vs the
+dress-22 authoritative table, PLUS 27/27 live-vs-live deep-equal vs the
+plan-verified dress-61 capture (probe self-catch: PLACED_VERIFIED regex
+3/11 on multiline formats — table+deep-compare resolved; world correct).
+Census 260 HTTP-200 (curl after one urllib 403, client-classified),
+id-diff vs dress-61 0/0, lights 38, interlane f6254cd0. Gate ALL PASS
+real exit 0 at 57d9233. Zero world mutations, zero uploads.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
