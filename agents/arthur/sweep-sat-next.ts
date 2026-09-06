@@ -48,6 +48,14 @@ const ALLOWED = new Set<string>([
   // law. SAT gap -0.105 is dead bbox corner, no solid contact. NAMED
   // exemption also carried in se-dress7-place.ts placer header.
   "nx-dress-se-cairn-001|nx-wild-forest-0044",
+  // sweep-42: struct-46 angler re-place (b3dfb28a->6bf06a35, committed
+  // c87d502) seats the angler ON the pool's W bank with bobber re-aimed
+  // into the water — DESIGNED contact, named in the placer
+  // (next-place-struct46-angler.ts:68) and re-proven this sweep: fresh
+  // 4-leg MCPL circuit ALL_PASS max 0.397m; pool compound bbox (h2.65,
+  // reeds) defeats the auto film exemption, so standing-precedent tier
+  // applies (same class as hearth|struct-crossing).
+  "nx-struct-angler|nx-struct-reedpool",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });

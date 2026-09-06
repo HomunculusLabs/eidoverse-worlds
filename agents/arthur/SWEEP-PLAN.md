@@ -68,6 +68,61 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 
 || sweep-41 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented lib change at identical tuple: nx-struct-soundmirror 5216db0a->f313e59a — committed struct-45 true-bowl rebuild @ 14fc884, PLACED_VERIFIED + idempotent + 6-leg walk 0.354m by its own lane — domain-valid, not drift; snapshot rewritten normalized sha 11a86e0cf7714cea, post-rewrite drift ZERO) | exit 4 SWEEP COVERAGE HOLE on exactly the four bbox:null lamps (217 bbox non-light, 215 classified, 0 unclassified — correct loud state per R-120) | tier-1 4/4 per-leg verified (core 64/64 ok ALL_PASS 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37 — 81/81 legs) + tier-2 nineteenth cycle potter 6/6 + market 6/6 ALL PASS | pins 14/15 + angler classified (racing law), carousel comp bag exact 7 + lib ce3633992d07055e, belltower 2419fbc5 + ladder comp live in bag (corroborates improve-17), gate lamps 4/4 bbox:null (R-120) + 4 companions live @ 1.96m, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, ledger law exact 2370302 at gate | ESCALATION — R-120 note 4 appended (escalation law): placer now committed but pins the truncated prefix; no lane owns the fix (no town lane in fleet, no improve row) |
 
+| sweep-42 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, TWO documented lib changes at identical tuples landed mid-tick and epoch-verified: nx-struct-angler b3dfb28a->6bf06a35 (committed struct-46 @ c87d502, DESIGNED bank seat, fresh 4-leg circuit 0.397m), nx-town-mapboard 1f1a10f4->95231f20 (improve-19 @ 7b9fec9, live-verified post-arrival); snapshot rewritten normalized sha ee99e7cf36a972ac, post-rewrite drift ZERO) | exit 4 SWEEP COVERAGE HOLE on exactly the four bbox:null lamps (217 bbox non-light, 215 classified, 0 unclassified — correct loud state per R-120) | tier-1 4/4 per-leg verified (core 64/64 ok ALL_PASS max-arr 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37 — 81/81 legs) + tier-2 twentieth cycle inn 6/6 @ 0.364 + stable 5/5 @ 0.396 ALL PASS | pins 15/15 ALL_PINS_OK (angler RESOLVED — struct-46 committed the draft re-pin, live b3dfb28a == local; first clean 15/15 since sweep-27), carousel comp bag EXACT 7 + lib ce3633992d07055e (probe self-catch: compKeys field again read [] — comp is the census key, sweep-40 class), belltower 2419fbc5 + ladder comp live, gate lamps 4/4 bbox:null (R-120) + 4 companions live @ 1.96m, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, ledger law exact 2370302 at gate | ESCALATION — R-120 note 5 appended (fifth consecutive sweep unaddressed; ownership re-checked this sweep: no town lane, no improve row, no town plan) |
+
+
+sweep-42: FIFTH-ESCALATION sweep. R-120 (Sev 1) re-proven with fresh
+evidence (truncated lib 404 / full 16-hex 18b69a6bb2f5862f 200 with
+7648B, /geom bbox:null x4 at the unchanged off-axis tuples, hardened SAT
+exit 4 on exactly those four, companions -l all live at 1.96m) —
+UNADDRESSED a FIFTH consecutive sweep; note 5 appended to
+REPAIR-REGISTER per the escalation law and named for Bill. Ownership
+re-checked fresh this sweep: fleet-pipeline.sh LANES carries no town
+lane, IMPROVE-PLAN.md has no nx-approach-lamp row, no TOWN plan or loop
+file exists — the defect remains unowned. R-121 (Sev 2) unchanged
+(lamp-n tuple identical); fix travels with the R-120 re-spawn. Census
+259==259 with TWO mid-tick lib changes epoch-verified (see row). This
+tick is itself an EPOCH CORRECTION case (polish-270 law): first census
+and records were taken at HEAD d833f3e; ledger base read 2370302;
+struct-46 (c87d502), improve-19 (7b9fec9), and dress-55..58 holds then
+landed while the sweep ran — angler + mapboard re-placed live — so ALL
+affected evidence was re-taken fresh before commit: second census
+captured (259, 0/0 vs first, 2 drift fields), snapshot rewritten
+normalized (ee99e7cf36a972ac, post-rewrite drift ZERO), SAT re-run
+twice, pins 15/15 re-run ALL_PINS_OK at the new lib, gate re-run ALL
+PASS exit 0 at c9c3d21, core walk re-walked against the new mapboard
+bytes ALL_PASS 64/64 0.38. The angler|reedpool pair surfaced as 1
+UNCLASSIFIED on the new SAT state — decoded/verified at source: the
+committed struct-46 placer names it DESIGNED (next-place-struct46-angler
+.ts:68, commissioned bank seat per struct-13); standing-precedent E4
+entry added to sweep-sat-next.ts with evidence (fresh 4-leg MCPL circuit
+ALL_PASS 0.397m; pool compound bbox h2.65 defeats the auto film
+exemption) — RED->GREEN discipline: the un-classified state was observed
+before the entry (216 classified / 0 unclassified after). Overlap final:
+exit 4 loud on exactly the four R-120 lamps, 216 classified, 0
+unclassified. Tier-1 4/4 per-leg verified 81/81: core 64/64 0.38
+(re-walked post-mapboard), NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37.
+Tier-2 twentieth cycle: inn 6/6 @ 0/364 + stable 5/5 @ 0.396 ALL PASS.
+Integrity: pins 15/15 ALL_PINS_OK — angler RESOLVED (struct-46 committed
+the draft re-pin, live 6bf06a35; first clean 15/15 since sweep-27);
+carousel comp bag EXACT 7 + lib ce3633992d07055e (probe self-catch:
+compKeys field again read [] — comp is the census key, sweep-40 class,
+world correct); belltower 2419fbc5 + ladder comp live; gate lamps 4/4
+bbox:null (R-120) + 4 companions @ 1.96m; windmill 0993836012d1b17d +
+woodyard 1f2c6f592095b204 exact; 38 lights; interlane md5
+f6254cd0 stable; ledger law exact (base moved 2370302->2370306 mid-tick
+via uncommitted sibling appends, disclosed; re-read at append). Probes
+this tick: two schema-guess extracts on walk JSON missed (space-after-
+colon status regex; physics banner before JSON) — re-anchored on
+banner-stripped parse; anchor collision on register note 5 (notes 3+4
+share a tail — re-anchored on the unique note-4 header line). Foreign
+working-tree dirt is sibling work-in-flight, untouched per interlane
+law. Next tier-2 pair (sweep-43): hall + row-cottage (twenty-first
+cycle). Standing note for Bill unchanged: with R-120 open expect exit 4
+to persist until a town-style wakeup re-spawns the four lamps on the
+full 18b69a6bb2f5862f lib — correct loud state, not a tool defect; the
+four gate landmarks remain invisible meanwhile.
+
 sweep-41: FOURTH-ESCALATION sweep, no new findings. R-120 (Sev 1)
 re-proven independently with fresh evidence (truncated lib
 store/18b69a6bb2.glb 404 / full 16-hex 18b69a6bb2f5862f 200 with
