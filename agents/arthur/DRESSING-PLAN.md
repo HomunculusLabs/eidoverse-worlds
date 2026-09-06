@@ -1456,3 +1456,33 @@ off-limits set intact by arithmetic; interlane md5 f6254cd0 unchanged.
 Foreign dirt (tower3, court placer, struct terrain probes, fleet watcher,
 next-fix-gate-lamp-companions) left untouched. Zero world mutations, zero
 uploads, zero shared-budget use.
+
+**STATE AT dress-40 (2026-09-06 ~19:5x EDT, pipeline hold tick — 19th
+consecutive)**: lawful HOLD — every path closed this tick. Shard queue
+re-verified EMPTY at source: nine nx-dress Round-1 rows terminal (5/29/30/31
+DROPPED native rejudge, 32/33/34/37/38 EXECUTED reseats; row 39 routes
+nx-town to improve-own); NEW survey-9 rows route nx-craft-hamlet-0007 /
+nx-gallery-mosaic-0036 / nx-wild-cairn-0022 and the on-disk survey-10 slice
+carries ZERO nx-dress targets (cloister/hamlet/statuary/garden/lavender/
+orchard/mosaic/wayside) — no unrouted prefix work exists; survey-8
+nx-dress-fountain DRESS-DOMAIN legacy-core off-limits, Bill's call. Own
+queue: SW lamps only, still blocked on Bill's a/b/c budget policy (fresh
+census: SW-quadrant r>=35 tokens exactly 2 approach leg lamps
+(nx-approach-sw-lamp-001-l r39.7 / -002-l r55.4) + 1 mile lantern
+(nx-mile-sw-013-l r64.0) = 3 live, spend 0 of 3). Zero Bill verdict markers
+in ledger tail AND dress-districts eye-gate packet fd677cae unchanged
+(delivered once at dress-12). Hold verification: standing gate ALL PASS real
+exit 0 at tick-start HEAD 8fd9b55 (ledger law 2370285 EXACT); fresh live
+census 259, ALL ELEVEN district installs PIN_EXACT lib+tuple+yaw-radians
+(hedge 3d5c7d44, skeps 87d2dd16, stile 5e9d301d, logpile cac71bff, ne-yard
+191227da, ne-bench 46f3b6b1, woodstack 692bc54e, cairn 59031a0c, se-stones
+8dafb9e5, sw-gravel fd21de9f, sw-prayer 5074600f — comps empty across the
+set); 27 nx-dress total = 11 district + 16 legacy intact by arithmetic;
+census-wide lights 38; interlane md5 f6254cd0 unchanged. **Probe lesson
+(yaw units, dress-26 law re-hit)**: first tuple-compare read 9/11
+false-DRIFT — hedge plan yaw −2.36 and skeps 2.3562 are RADIANS (|yaw| <= pi
+should auto-switch the compare; live −135.22° = −2.3599 rad and 135.00° =
+2.3562 rad match exactly). World correct, probe wrong. Foreign dirt
+(IMPROVEMENTS.md mid-flight, SWEEP-PLAN, tower3, court placer, struct
+terrain probes, fleet watcher) left untouched. Zero world mutations, zero
+uploads, zero shared-budget use.
