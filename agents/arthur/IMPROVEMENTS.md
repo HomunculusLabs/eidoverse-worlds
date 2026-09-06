@@ -3891,4 +3891,6 @@ fixes ≈ 6 F.)
 
 - [sweep-17] full audit sweep at 259 live entities — CLEAN steady-state; census 259==259 vs sweep-16 snapshot (sixth fully quiet delta), overlap ALL CLEAR (221 bbox, 229 classified, 0 unclassified), walks tier-1 4/4 + tier-2 bunkhouse 0.380 + garden-cottage 0.355 fourth cycle ALL PASS, pins 15/15, carousel comps 7 + lib pinned, gate lamps 4/4, 38 lights, woodyard pin exact, interlane md5 stable; zero findings, zero world mutations (D+0, E+0)
 
+- [sweep-18] full audit sweep at 259 live entities — CLEAN steady-state; census 259==259 vs sweep-17 snapshot (seventh fully quiet delta, snapshot byte-identical), overlap ALL CLEAR (221 bbox, 229 classified, 0 unclassified), walks tier-1 4/4 (core 64 legs + NW + NE + SW approach legs) + tier-2 inn + stable fourth cycle ALL PASS, pins 15/15, carousel comps exact 7 + lib pinned, gate lamps 4/4, 38 lights, woodyard pin exact, interlane md5 stable; zero findings, zero world mutations (D+0, E+0)
+
 **Running total: 2370204 / 2000000**
