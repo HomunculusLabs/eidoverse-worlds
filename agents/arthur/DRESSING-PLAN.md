@@ -6,17 +6,18 @@ wakeup, districts rotating NW → NE → SE → SW. Loop file:
 
 ## Lamp budget ledger (plan §7)
 
-Per-district lamp budget, set by counting LIVE census lights per district at
-first wakeup. **FILLED 2026-09-05** (overnight fleet wave; census
-`next-live-census.ts` 227 entities, quadrant x/z sign, r ≥ 35, id/comps
-anchors lamp/light/glow/flame/fire/ember):
+Per-district lamp budget, set by counting LIVE census lights per district.
+**FILLED 2026-09-05, RECONCILED 2026-09-06 (dress-3, closing night-2/N3)**:
+the original fill had counted approach-leg lamps only; recounted by the
+plan's own counting rule (r ≥ 35, quadrant, id/kind/comp anchor tokens
+lamp/light/glow/flame/fire/ember) on the 235-entity dress-3 census:
 
 | district   | live lights counted | lamp budget | used | notes |
 |------------|--------------------|-------------|------|-------|
-| NW cultivation | 2 (approach-nw-lamp-001-l/002-l) | 2 | 0 | unlit dressing so far |
-| NE craft       | 2 (approach-ne-lamp-001-l/002-l) | 2 | 0 | |
-| SE wild        | 0 | 0 | 0 | unlit dressing only unless Bill widens |
-| SW contemplative | 2 (approach-sw-lamp-001-l/002-l) | 2 | 0 | |
+| NW cultivation | 2 (approach lamps only) | 2 | 0 | zero native lights |
+| NE craft       | 10 (approach ×2, hamlet ×5, kiln/potter/stable) | 10 | 0 | |
+| SE wild        | 8 (artwalk h-lights ×6, struct beacons ×3… recount: 8 anchors) | 8 | 0 | unlit dressing only unless Bill widens |
+| SW contemplative | 3 (approach ×2, inn) | 3 | 0 | |
 
 Counting rule: entities at r ≥ 35 from plaza center, quadrant by sign of
 (x, z); count entities whose id or comps carry lamp/light/glow/flame
@@ -137,6 +138,46 @@ Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
 - dress-2: BUILT + PLACED + VERIFIED (2026-09-05 overnight fleet wave).
   Entry in IMPROVEMENTS.md covers the 3-version visual iteration, siting
   proof, and placement.
+- dress-3: BUILT + PLACED + VERIFIED (2026-09-06 overnight fleet wave).
+  Entry covers the v1-reject/v2-accept iteration, rim-law catch (0.45m
+  inside the 66m floor, shifted +1.0m radially), and placement. Also
+  closed night-2/N3 by reconciling the lamp-budget table (see above).
+
+### dress-3 — SE Wild border stones (PLACED, LIVE)
+
+- **Concept contract**: the SE visitor corridor (az 315, the h2→h3→h6
+  artwalk axis) runs out past the last art work into the forest belt. Where
+  the tended edge gives way to deep wild, the walker finds stones cleared
+  from the path and stacked in small piles at its edge — the district is
+  tended at its margins, wild at its core. Grounds USE: path maintenance,
+  boundary marking. Static, unlit — spends no lamp budget.
+- **Build**: `assets/mkv3-dress-se-stones1.ts` →
+  `assets/village_dress_se_stones1.glb`
+  - v1 (sha `bc491b91…`) REJECTED on review: uniform rhythm read as placed
+    fence-of-stones, center pile compact (ZAI fallback vision — native
+    provider-down, error 1210; disclosed).
+  - v2 (sha `8dafb9e58f8354f16a263ac340d602ac94045bde54c0a1561e6574e40a854cf2`,
+    double-rebuild byte-identical) **ACCEPTED**: spacing jitter ±0.22m,
+    tall landmark pile (second capstone) at the forest end, moss caps on
+    three piles, wider center base, kicked loose stones.
+- **Decode (final)**: footprint x −4.54..4.53, z −0.56..0.58, y −0.02..0.58
+  (knee-height); 2 nodes (budget ✓). No light anchors, empty comp bag.
+- **Siting (census 235)**: run along the az-315 corridor at r≈70, offset
+  3.4m off-axis (SW side). **Rim law caught the first pose** — corners at
+  r 65.52/65.58, 0.45m inside the 66m floor — shifted 1.0m radially
+  outward; final corners 66.52..75.64. SAT min gap 2.85m vs
+  nx-wild-forest-0044, no sub-1.4m adjacency; arrival cones clear (stones
+  knee-height, nearest work 10m+). Terrain flat (py −0.011, Δ16mm).
+- **Placement**: `se-dress3-place.ts` — hash gate → blocker-epoch guard
+  (forest-0044/0057, h6/h7, northneedle) → fresh-census SAT + rim-corner +
+  arrival-cone gates → upload → spawn → post-place tuple verify.
+  **PLACED_VERIFIED** `nx-dress-se-stones-001` @ lib
+  `store/8dafb9e58f8354f1.glb`, pos (52.61, −0.011, −47.80), yaw 45°.
+  Idempotent rerun: no verbs. SE lamp budget used 0 of 8 (recounted).
+- **Eye-check for Bill**: walk the SE corridor past the last art work
+  toward the forest — the five stone piles should read as field-clearing
+  at the wild margin (one taller pile at the forest end), not as scattered
+  rubble or a fence.
 
 ### night-1 census note (from night-N observer lane, 2026-09-05 — fills your "?" blocker)
 
