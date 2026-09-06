@@ -26,7 +26,7 @@ anchors. Budget = live count (never exceed existing density).
 ## District queues (NEW-VILLAGE-PLAN §4 families)
 
 - **NW — CULTIVATION**: hedgerow (dress-1, built), bee skeps (dress-5,
-  placed), field-edge log pile, gate stile
+  placed), ~~field-edge log pile~~ (dress-10, placed 2026-09-06), gate stile
 - **NE — CRAFT**: work yard (dress-2, placed), ~~stone benches~~ (dress-6,
   placed), ~~woodstack~~ (dress-9, placed 2026-09-06 — NE queue COMPLETE)
 - **SE — WILD**: path spurs (walk-tested), border stones (dress-3, placed),
@@ -42,10 +42,70 @@ dress-7 = SE round 2, cairn DONE 2026-09-06 — SE queue complete; dress-8 =
 SW round 2, prayer stones DONE 2026-09-06 — only SW lamps remain, and
 those are budget-bound pending Bill's lamp-budget policy; next up in
 rotation: NE woodstack DONE (dress-9, 2026-09-06) — NE queue complete;
-next up in rotation: NW log pile/stile, then SW lamps if Bill's lamp-budget
+next up in rotation: NW log pile DONE (dress-10, 2026-09-06 — NW gate
+stile remains the only NW item); then SW lamps if Bill's lamp-budget
 policy ever lands — SW lamps remain the only district-queue item blocked)
 
 ## Siting log
+
+### dress-10 — NW Cultivation field-edge log pile (PLACED, LIVE)
+
+- **Concept contract**: prunings dragged to the field-edge seam between
+  orchard-0020 and orchard-0033 and stacked in a rough crisscross pile —
+  the NW district's own wood idiom, distinct from NE's dress-9 woodstack
+  (sawn stove-length cordwood in courses against a wall) and dress-2's
+  yard (sawn staging): whole branchy lengths, two crossing layers + a
+  loose third, oversized pale cut discs (r×1.6, flush — woodstack v5 law)
+  with two "audience logs" running toward the corridor so big discs FACE
+  the walker, a fanned brush tail of 7 thick twigs, two bark-only leaners,
+  cut stubs on the ground. Grounds USE: winter pruning + stove fuel.
+  Static, unlit — spends no lamp budget (NW budget 2, used 1).
+- **Build**: `assets/mkv3-dress-nw-logpile1.ts` →
+  `assets/village_dress_nw_logpile1.glb`. Four-version iteration (ZAI
+  fallback vision — native provider-down error 1210, 11th consecutive
+  tick; disclosed). Build-law note: mergeByMaterial only merges DIRECT
+  mesh children — wrapper Groups survived unmerged (50 nodes); fixed by
+  flattening to world-baked direct meshes before merge (6 nodes).
+  - v1: pruningZ bodies ran vertical (missing x-rotation) — caught by
+    bbox decode (y ±1.3) before any judging.
+  - v2 (`86e77504…`): brighter caps + second bottom row + canted
+    crossers + thickened tail — judge 2/4: cut faces STILL invisible at
+    18m, one "floating pale speck".
+  - v3 (`3f3fbb45…`): oversized flush discs (r×1.6) + audience logs —
+    3/4, speck persisted.
+  - v4 (sha `cac71bff63242766b038ea820266e8d9dddeaa1b078550682c742723a28b72f8`,
+    double-rebuild byte-identical) **ACCEPTED 4/4** — speck root-caused
+    as the thin canted leaner's pale cap (body invisible at 18m, cap
+    detached); leaners now bark-only.
+- **Decode (final)**: bbox x −2.079..2.236, z −1.204..1.624, y
+  −0.117..0.959; 6 nodes (budget 3–25 ✓). No light anchors, empty comp
+  bag by design.
+- **Siting (census 257, +1 self since sweep-9)**: first candidate —
+  orchard-0020's plaza-facing corner 2.75m out — died at SAT (−2.48m,
+  own half-extent reaches into the corner). Systematic grid scan of the
+  0020/0033 seam wedge found the lawful band: final pose center
+  (−66.8, 51.2), yaw −45° (local +z faces the az-45 walking corridor
+  11m away — dressing lines the edge, not the path). SAT min gaps
+  +2.34m vs orchard-0020, +2.18m vs orchard-0033 (both fat canopy
+  proxies — real trunks farther), +6.53m skeps-001; no sub-1.4m
+  adjacency; rim corners 82.70..86.07 ∈ [66,108] ✓; terrain flat
+  (py 0.029, Δ4mm across OBB corners).
+- **Placement**: `nw-dress10-place.ts` — hash gate → blocker-epoch guard
+  (orchard-0020/0033, skeps-001, garden-0011, mile-nw-008) → fresh-census
+  SAT + rim gates → upload (content-addressed) → spawn → post-place tuple
+  verify. **PLACED_VERIFIED** `nx-dress-nw-logpile-001` @ lib
+  `store/cac71bff63242766.glb`, pos (−66.8, 0.029, 51.2), yaw −45°.
+  Idempotent rerun: 0 verbs. NW lamp budget used 0 of 2 (1 = mile-5
+  lantern, not a dress spend).
+- **Eye-check for Bill**: from milestone-008 looking back toward the
+  orchard seam (or walking the az-45 corridor out past the milestone
+  pair), a rough branchy pile should read against the field edge — pale
+  cut discs facing the walk line, brush tail spilling toward you, two
+  dark lengths leaning into the mouth. It should read "someone prunes
+  these orchards", not cordwood crates or a fence. Judge margin note
+  carried: the pale discs are at the lower bound of clarity at 18m — do
+  NOT shrink or darken them further; if they still don't pop in world
+  lighting, they get one more size step.
 
 ### dress-9 — NE Craft firewood woodstack (PLACED, LIVE)
 
