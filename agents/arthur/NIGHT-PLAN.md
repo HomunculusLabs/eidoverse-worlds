@@ -111,7 +111,7 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 
 | id | finding | severity | owner lane | routed to | state |
 |----|---------|----------|-----------|-----------|-------|
-| night-1/D1 | NW leg unlit dead stretches (2 lamps / 47m) | 2 | approach-N | APPROACH-PLAN `### night-1 defect note` | OPEN, budget-bound (NW budget=2, already spent by these same lamps — closing needs Bill or budget policy) |
+| night-1/D1 | NW leg unlit dead stretches (2 lamps / 47m) | 2 | approach-N | APPROACH-PLAN `### night-1 defect note` | CLOSED 2026-09-06 by approach-6 (owning lane): in-budget lane re-dress — zero new light entities (census kind=light 38 steady), 4 bone pillars each capped with one faint warm emissive bead (`flame_beads_nw`, intensity 1.15, polish-274/278 moonlit law) between the two lamps; live lib `dc25606587` confirmed in census-14; owning-lane night judgment PASS-borderline (ZAI fallback, disclosed there). Observer lane has NOT re-judged the live night read — closure is the owner's, no visual PASS claimed by this lane; a second-rotation NW night pass would verify the read (not taken — lane holds on Bill) |
 | night-1/N1 | lamp-head emissive consistency question | 4 (informational) | approach-N | same note | noted, no re-open |
 | night-2/D2 | NE leg unlit dead stretches: gate-edge(r~20)→lamp-001 33.5m, lamp-001→002 24.1m, lamp-002→first lit interior 28.1m (all census-verified; worse than NW) | 2 | approach-N | APPROACH-PLAN `### night-2 defect note` | OPEN, budget-bound (NE budget=2, spent by the same two lamps) |
 | night-2/N2 | lamps cast weak/no ground pools at range-10 — lights read as points pasted on darkness, not fixtures in space (recurring night-1/N1 class, now judged in 3 views) | 3 (informational→design) | approach-N (contract is live-client) | same note | noted; likely ambient/sky-budget question for the final packet |
@@ -425,3 +425,30 @@ STUDY COMPLETE (all facets judged; packet assembled).
   outstanding: sky facet-5, lamp-budget policy D1–D5+N6, N5 detached-orb,
   N7 hierarchy inversion. Zero world mutations, zero renders judged, no
   PASS claimed.
+- night-14 (2026-09-06, pipeline-mode hold tick + register reconciliation —
+  first disposition change since night-8): **night-1/D1 flipped OPEN→CLOSED.**
+  The owning approach lane's approach-6 (commit b1195ef, re-landed after the
+  night-13 index race) closed D1 on its named in-budget path: zero new light
+  entities, 4 gray-bone pillars each capped with one faint warm emissive bead
+  (`flame_beads_nw`, intensity 1.15) between the two NW leg lamps — exactly
+  the "inside budget: reflectors, path material" option night-1's note named.
+  Verified fresh this tick: APPROACH-PLAN §approach-6 at HEAD, live lib
+  `dc25606587` on `nx-approach-nw-lane-001` in census-14, kind=light count
+  38 steady (= zero budget movement). Closure is the OWNING lane's judgment
+  (ZAI fallback, disclosed there); this lane claims no visual PASS and has
+  NOT re-judged the live night read — a second-rotation NW pass is the
+  verify path when the lane next rotates. PACKET STALENESS DISCLOSED: the
+  decision packet (md5 cdc435a2, unchanged, assembled-exactly-once law) asks
+  Bill to rule on "D1/D2/D3/D4" as all-OPEN; D1 is now closed — Bill's
+  lamp-budget ruling is now needed for D2/D3/D4/D5 only. D2–D5 and
+  N1/N2/N4–N7 verified UNCHANGED fresh (APPROACH-PLAN last touched b1195ef,
+  which only ADDS approach-6 + closes D1; the five night-N note sections
+  stand). Standing gate ALL PASS real exit 0 at HEAD 5be2fcd (artwalk-49,
+  observer-compatible). Census-14: 259 entities / 38 lights / zero
+  night-prefixed, steady vs night-7..13; two sibling lib changes at identical
+  tuples (nx-sign-mill-001 waysign draft, nx-struct-skymirror struct-37
+  reconciled placement) — no lights touched, outside this lane's domain.
+  Interlane md5 f6254cd0 steady. Zero actionable night- shard rows in
+  IMPROVE-PLAN. Lane HOLDS on Bill's verdict classes, now: sky facet-5,
+  lamp-budget policy D2–D5+N6 (D1 closed), N5 detached-orb, N7 hierarchy
+  inversion. Zero world mutations, zero renders judged, no PASS claimed.
