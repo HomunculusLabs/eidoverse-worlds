@@ -166,7 +166,91 @@ the ONLY open dress row. SW lamps still blocked on Bill's a/b/c (0 of
 fallback, disclosed); native succeeded on both v6 judgment views (one
 paced retry on gameplay).
 
+**STATE AT dress-21 (2026-09-06, pipeline shard tick)**: shard row 38
+`nx-dress-nw-hedge-001` (Sev 4, the LAST open dress row) EXECUTED live —
+details in the siting-log entry below; two reseats in one tick (v3 brief,
+v4 final, same tuple) after the unprompted-look re-review. **Dress shard
+queue is now EMPTY** (all nine routed rows executed or dropped: 5/29/31/
+32/33/34/37/38 executed reseats, 13-dropped sw-prayer, 14-dropped
+ne-yard). SW lamps remain the only own-queue item, blocked on Bill's
+a/b/c budget policy (0 of 3 used). Native vision judged the rejudge +
+both v4 gameplay/gap views; the v4 close view fell to ZAI fallback
+(native 1210 ×2 after one paced retry, disclosed).
+
 ## Siting log
+
+### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
+
+- **Row 38 findings (native, TWO independent looks)**: rejudge on exact
+  live v2 bytes (pin: live lib `store/f595e862465c49e0.glb` == local sha
+  prefix `f595e862…`, census 259, pos (−35.34, 0.04, 62.14) yaw −2.36,
+  comp {}; rig `reviews/dress21-nw-hedge-rejudge/`) CONFIRMED (1) stub
+  riser and (2) stray cube; survey-6's independent native confirm
+  (routed to this plan's SURVEY INTAKE) confirmed ALL THREE including
+  the mid-gap hole. My rejudge's hole-DROP was a leading-prompt
+  artifact — an unprompted zoomed native look on the v3 render read the
+  break decisively as MISSING MASS (zero aperture furniture legible:
+  mid-gray kerbs value-fuse with the dark bank and read as residual
+  stumps, the 0.18m step is invisible, hedge ends are plain cut-offs).
+  All three findings stand CONFIRMED. **Lesson carried: a
+  "confirm-or-drop" question that names the intended read primes the
+  judge — discriminating gap-reads need unprompted description first.**
+- **Source root causes**: stub = `hazel_stub` (0.18m BARK box, top
+  1.99m, 0.4m above the mass — at 18m only the dark vertical survives =
+  isolated post/snag); stray cube = `stone_a` (ROCK 0.55×0.4×0.5) at
+  z 0.7, 0.4m clear of the bank face off the left end (stone_b equally
+  detached, merely camera-occluded); hole = the gap carried no
+  distance-legible aperture furniture.
+- **v3** (`a80e9121…`, judged 3/3 + 3/3): stub+nubs REMOVED (minimalism
+  law — failing accent out, dress-15/dress-20 precedent; BARK material
+  retired), both foot stones tucked flush (z 0.7→0.3, −0.66→−0.3), but
+  the gap defect UNFIXED — briefly placed live this tick, then
+  superseded by v4 in the same tick after the unprompted look.
+- **v4 ACCEPTED** (sha
+  `3d5c7d44351e5076ddbe7ac785a1d904633c16f5d70eb5bb118c03ce31c713ce`,
+  double-rebuild byte-identical): v3's removals PLUS the gap re-dressed
+  in the lane's proven aperture-tell idiom (pale = worked cut =
+  intentional; dress-11 stile caps, dress-18 gap flags, dress-19 post
+  caps): pale CUTWOOD cut-pleacher end plates PROUD of both hedge end
+  faces (0.14m thick, standing on the bank), kerbs re-valued PALE_STONE
+  (dress-5 plinth value 0xb4b0a4, proven at 18m) and chunked, staggered
+  fore/aft (dogleg — stock can't bolt a straight real hedgerow gap),
+  step re-valued pale. Judged: unprompted zoomed gap read FLIPPED to
+  "(a) intentional passage — an erected post stands in the opening, the
+  block at the base functions as a step" (NATIVE); gameplay 4/4 (NATIVE;
+  margin note: the left cut plate's 0.26m proud-of-neighbor projection
+  is the secondary "gatepost" read — deliberate, below the row
+  roofline); close 3/3 (ZAI fallback — native 1210 ×2 after one paced
+  retry, disclosed): laid construction, no z-fighting at the plate/green
+  interfaces, everything grounded.
+- **Decode (v4)**: 6 nodes = 6 material buckets (soil / canopy /
+  canopy-dk / rock / pale_stone / cutwood; budget 3–25 ✓); bbox x
+  −3.3..3.3 (center 0, half 3.3), z −0.55..0.55 (center 0, half 0.55),
+  y 0..1.51 — IDENTICAL to v3's decode, strictly contained in the v2
+  footprint, so every dress-1 siting relationship holds a fortiori. No
+  light anchors, empty comp bag (static unlit family).
+- **Placement**: `nw-dress21-place.ts` (dress-20 chassis) — hash gate →
+  blocker-epoch guard (lavender-0040, echoarch, orchard-0046, approach
+  lane + lamp-002-l all live) → migration gate (known-old lib chain
+  f595e862 / a80e9121 at the exact dress-1 tuple incl. literal yaw
+  −2.36, or NEW) → fresh-census SAT/rim preflight (rim 68.16..74.81 ∈
+  [66,108]; SAT clear, no sub-1.4m adjacency; tier-b named exemption
+  for the approach lane fat compound bbox, 17.6m source-true clearance
+  pinned in dress-hedge1-lane-decode.ts) → upload (content-addressed)
+  → remove+spawn reseat over one WS (2 verbs, paced 1000ms).
+  **PLACED_VERIFIED** `nx-dress-nw-hedge-001` @ lib
+  `store/3d5c7d44351e5076.glb` (was `f595e862…` at tick start), pos
+  (−35.34, 0.04, 62.14) yaw −2.36 — UNCHANGED pose across both reseats,
+  a lib swap at the exact tuple. Idempotent rerun: 0 verbs, one deduped
+  upload (known chassis wart). Post-place census 259, live lib + empty
+  comp bag confirmed. NW lamp spend unchanged 0 of 2.
+- **Eye-check for Bill**: the hedgerow along lavender-0040's
+  plaza-facing edge — the lone dark snag above the green mass is gone,
+  the end stone sits AT the bank's foot, and the step-through gap now
+  reads WORKED: pale cut-pleacher end faces and pale stones marking the
+  opening, like the stile's sawn tops. If the pale cut ends still don't
+  pop in world lighting, one 10–15% enlargement pass is the standing
+  fix (dress-18 law).
 
 ### dress-20 — NW skeps reseat (shard row 37 EXECUTED, PLACED, LIVE)
 

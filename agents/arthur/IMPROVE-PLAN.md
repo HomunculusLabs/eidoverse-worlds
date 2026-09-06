@@ -760,7 +760,15 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     family stone; native 4/4 gameplay, sha 87d2dd16, reseat at exact
     unchanged tuple, PLACED_VERIFIED + idempotent]
 38. `nx-dress-nw-hedge-001` — cleanup tier (stub riser, stray cube, hole).
-    Sev 4. (guard: re-check dress tail at execution)
+    Sev 4. (guard: re-check dress tail at execution) [EXECUTED dress-21:
+    ALL THREE findings confirmed (survey-6 native + lane rejudge; the
+    rejudge's hole-DROP was a leading-prompt artifact, corrected by an
+    unprompted zoomed native read = missing mass); v4 = stub/nubs REMOVED
+    + foot stones tucked flush + gap re-dressed in the pale aperture-tell
+    idiom (CUTWOOD end plates, PALE_STONE kerbs, dogleg); zoomed gap read
+    FLIPPED to intentional-passage, gameplay 4/4 native, close 3/3 ZAI
+    (native 1210 ×2 disclosed); sha 3d5c7d44, reseat at exact unchanged
+    tuple, PLACED_VERIFIED + idempotent — dress shard queue now EMPTY]
     [NATIVE-survey-6 CONFIRM (restored native, 18m, live bytes lib f595e862
     unchanged post-tick): all three cleanup findings confirmed — mid-gap
     hole x505-556 y345-388 (~50px break, dark base exposed); lone stub

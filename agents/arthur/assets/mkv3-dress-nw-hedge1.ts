@@ -17,7 +17,9 @@ const SOIL = mat(0x44402e, .95, 0);            // dark soil bank
 const CANOPY = mat(0x728e5a, .95, 0);          // palette canopy
 const CANOPY_DK = mat(0x5c7648, .95, 0);       // palette canopy-dk
 const ROCK = mat(0x8c887e, .95, 0);            // palette rock
-const BARK = mat(0x6a6030, .95, 0);            // palette bark/trunk
+const PALE_STONE = mat(0xb4b0a4, .95, 0);      // dress-5 plinth stone — proven at 18m
+const CUTWOOD = mat(0xf2eed0, .95, 0);         // pale cut wood — stile/woodstack distance tell
+// (v3: BARK removed with the hazel stub — no wooden element remains)
 
 // v2 after native-view rejection: v1's two plain slabs read as boxes, not a
 // laid hedge. A hedge is MASS: overlapping irregular segments in both
@@ -37,22 +39,47 @@ box("hedge_l4", 0.7, 1.18, 0.8, -0.45, 0.24 + 0.57, -0.03, CANOPY_DK);
 box("hedge_l5", 0.5, 0.80, 0.7, -0.05, 0.24 + 0.38, 0.04, CANOPY);
 
 // gap: x 0.2..1.6 (1.4m clear), stone step + flanking kerb stones (readable)
-box("gap_step", 1.0, 0.18, 0.9, 0.9, 0.09, 0, ROCK);
-box("kerb_a", 0.5, 0.45, 0.45, 0.22, 0.24 + 0.1, 0, ROCK);
-box("kerb_b", 0.45, 0.38, 0.4, 1.62, 0.24 + 0.08, 0.05, ROCK);
+// (v4: aperture furniture re-valued to read at 18m — pale = intentional cut)
+box("gap_step", 1.0, 0.18, 0.9, 0.9, 0.09, 0, PALE_STONE);
+box("kerb_a", 0.5, 0.45, 0.45, 0.22, 0.24 + 0.1, 0.18, PALE_STONE);
+box("kerb_b", 0.45, 0.38, 0.4, 1.62, 0.24 + 0.08, -0.14, PALE_STONE);
+
+// v4 aperture tells: pale cut-pleacher end plates, PROUD of both hedge end
+// faces (the worked cut that made the gap). Not coplanar with any green.
+box("cutend_l", 0.14, 1.05, 0.78, 0.28, 0.24 + 0.51, 0, CUTWOOD);
+box("cutend_r", 0.14, 0.84, 0.70, 1.56, 0.24 + 0.40, 0, CUTWOOD);
 
 // short segment massed (canopy-dk dominant)
 box("hedge_s1", 1.2, 0.90, 0.8, 2.25, 0.24 + 0.43, 0, CANOPY_DK);
 box("hedge_s2", 0.9, 1.10, 0.85, 2.85, 0.24 + 0.53, -0.04, CANOPY);
 
-// hazel stub with two branch nubs (reads as cut pleacher, not a post)
-box("hazel_stub", 0.18, 1.7, 0.18, -1.65, 0.24 + 0.82, 0.05, BARK);
-box("hazel_br1", 0.5, 0.12, 0.12, -1.42, 0.24 + 1.28, 0.05, BARK);
-box("hazel_br2", 0.12, 0.4, 0.12, -1.78, 0.24 + 1.55, 0.02, BARK);
+// v3 (dress-21, shard row 38): native rejudge on live v2 CONFIRMED the lone
+// hazel stub reads as an isolated fence-post/snag (0.18m wide, 0.4m above the
+// mass — at 18m only the dark vertical survives) and stone_a reads as a
+// stray/dropped cube (z 0.7 = 0.4m clear of the bank face, off the left
+// end). Mid-gap hole finding DROPPED (reads as the deliberate step-through).
+// Fix per minimalism law: stub+nubs REMOVED (failing accent out, not up —
+// dress-15 straps / dress-20 spill precedent); BOTH foot stones tucked flush
+// to their bank faces (stone_a z 0.7→0.3 camera side, stone_b −0.66→−0.3 —
+// sibling fix of the same class, the far-side stone was equally detached,
+// merely camera-occluded). Species honesty now carried by the ragged two-
+// green mass alone.
+// v4 (same tick): the mid-gap DROP was WRONG — an unprompted zoomed native
+// look + survey-6's independent native confirm both read the break as
+// MISSING MASS (zero aperture furniture legible at 18m: mid-gray kerbs
+// value-fuse with the dark bank and read as residual stumps; the 0.18m
+// step is invisible; hedge end faces are plain cut-offs reading snapped).
+// Fix in the lane's proven aperture-tell idiom (pale = worked/cut =
+// intentional; dress-11 stile caps, dress-18 gap flags, dress-19 post
+// caps): CUTWOOD pale plates proud on both hedge end faces (the cut
+// pleacher ends), kerbs re-valued PALE_STONE (dress-5 plinth value,
+// proven at 18m) and chunked, staggered fore/aft (dogleg — stock can't
+// bolt a real hedgerow gap), step re-valued pale. Same footprints.
 
 // field stones at the bank foot — sized to read at distance
-box("stone_a", 0.55, 0.4, 0.5, -3.0, 0.2, 0.7, ROCK);
-box("stone_b", 0.45, 0.32, 0.45, 3.0, 0.16, -0.66, ROCK);
+// (v3: tucked FLUSH to the bank faces — detached stones read as stray cubes)
+box("stone_a", 0.55, 0.4, 0.5, -3.0, 0.2, 0.3, ROCK);
+box("stone_b", 0.45, 0.32, 0.45, 3.0, 0.16, -0.3, ROCK);
 
 mergeByMaterial(g, "dress_nw_hedge1");
 writeFileSync("agents/arthur/assets/village_dress_nw_hedge1.glb", toGLB(g));
