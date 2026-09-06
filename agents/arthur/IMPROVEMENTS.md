@@ -3793,4 +3793,6 @@ fixes ≈ 6 F.)
 
 - [nvp-149] overnight fleet: fleet-runner.sh — 6 concurrent lane subagents (waysign/mile/dress/sweep/night/artwalk), each tick a fresh bounded hermes one-shot (max-turns 100, 45-min budget, per-invocation --yolo consent), waves until epoch/STOP; fresh context per tick makes the compression stall structurally impossible (D+3, E+1)
 
-**Running total: 2370084 / 2000000**
+- [mile-1] NW bend milestone pair live: nx-mile-nw-001/-002 on the NW leg's bend bisector (az310.5, ±2.3m off B(-46.923,34.092)), one shared GLB village_mile_nw.glb sha 9459eaa3… (refine-295 idiom, waymarker 1.04m, unlit stone + iron ferrule, 2 nodes) — fresh-census SAT clean, single upload, 2 verbs, tuple-verified, idempotent zero-verb rerun; lamp budget NW 0/5 spent (marker between the leg's own lamps); review judged via zai-vision fallback with pitfall-5 sibling cross-check (D+4, E+2)
+
+**Running total: 2370090 / 2000000**
