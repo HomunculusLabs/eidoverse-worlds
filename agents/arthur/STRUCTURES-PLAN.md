@@ -234,10 +234,23 @@ crown parapet carries the collider lift, mast DELETED; texMat lanes
 maxArrival 0.396m incl. full stair circuit; sha 0904c5da→95a98c74 ×2
 deterministic at the exact standing tuple, 1 verb, idempotent 0-verb
 rerun).
-Oldest OPEN uncontested rows after struct-43: row 25 observatory
-(Sev 3), row 26 soundmirror (Sev 3), row 10 angler (sibling in-flight,
-un-shard clock applies). Open with Bill: R2-3 relocation options
-(struct-22).
+struct-44 = row 25 observatory (EXECUTED, live — decode-first root cause:
+the drum's door gap ran the FULL wall height while the lintel closed the
+bay only to y2.62, so above the door the front bay was open sky and the
+y3.15 course torus crossed it — the floating trim fragments + both
+exact-sky slits (lintel-top ↔ trim, trim ↔ dome-underside); ONE source
+change: wall split into gapped lower band 0→2.62 + full-ring drum_head
+band 2.62→3.4, same ashlar bucket, 12 nodes and envelope unchanged,
+lamp_slit_e/w KEEP preserved; raycast decode RED→GREEN (head ray
+13.2m open → 6.8m closed, door ray 13.2m both = lane open, flank
+control true); native before-render confirms defect, native after-render
+PASS (continuous stone lintel→dome, bands flush, zero light leaks);
+sha eb3c9b15→3d9d6ae1 ×2 deterministic at the exact standing tuple,
+1 verb, idempotent 0-verb rerun, companion light standing, door walk
+5/5 ALL_PASS max 0.389m).
+Oldest OPEN uncontested rows after struct-44: row 26 soundmirror
+(Sev 3), row 10 angler (sibling in-flight, un-shard clock applies).
+Open with Bill: R2-3 relocation options (struct-22).
 
 ## Siting log
 
@@ -283,6 +296,7 @@ un-shard clock applies). Open with Bill: R2-3 relocation options
 | struct-40 | SHARD ROW 22: hypar flush-rim carriage fix | exact standing tuple (−27.57, −0.0053, 4.86) yaw π/2 | π/2 | — | LIVE, lib ce246def→750f82ee, deck walk 5/5 |
 | struct-41 | SHARD ROW 35: pendulum rod carriage fix | exact standing tuple (25.01, −0.04056606885178893, 25.9) yaw 0 | 0 | — | LIVE, lib 0a3120b2→c32a35a8, circuit walk 5/5 |
 | struct-43 | SHARD ROW 24: amphi stepped-bowl rebuild | exact standing tuple (−23.32, 0.03982105168676789, 37.31) yaw 0 | 0 | — | LIVE, lib 0904c5da→95a98c74, circuit walk 10/10 |
+| struct-44 | SHARD ROW 25: observatory front-bay closure | exact standing tuple (16.48, −0.05244011, −40.8) yaw −0.3839 | — | — | LIVE, lib eb3c9b15→3d9d6ae1, door walk 5/5 |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
