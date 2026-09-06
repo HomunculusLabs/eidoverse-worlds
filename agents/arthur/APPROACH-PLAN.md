@@ -185,3 +185,20 @@ straight-line attempts before the sector sweep found the winding lane.
   The light contract is the live client's (0xffd9a0/16/10) — if this is a
   defect it is an ambient/sky-budget question for the final night decision
   packet, not a per-lamp fix. Noted; no re-open.
+
+### night-3 defect note (from night-N observer lane, 2026-09-06 — treat like a Bill correction; re-opens ahead of rotation)
+
+- **D3 (severity 3, judged from 6 hash-bound night renders, `reviews/night-se/`)**:
+  SE wild corridor (az 315 visitor corridor) has NO corridor lamps at all —
+  judged reads show the path readable only via stepping-stone silhouettes,
+  fading to black within ~one-third of frame from the district edge; between
+  the last readable path stone and the wild margin, the link is implied but
+  unlit. The district's 8 budget lights are all spent on interior anchors
+  (artwalk h-lights ×5, struct beacon/needle/observatory ×3) — SE budget = 8,
+  used 8. Any corridor lamp is therefore OVER budget: closing needs Bill or a
+  budget-policy call. Unlit corridor fixes (stone rhythm, verge contrast) stay
+  inside budget.
+- **N4 (severity 4, informational)**: recurring class — SE pavilion lamps
+  read as detached points, not fixtures (no ground pool/spill at range-10);
+  one globe reads as a bare emissive ball with no visible mount. Same live
+  client contract as N1/N2 — final decision packet question. No re-open.

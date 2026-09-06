@@ -3825,4 +3825,6 @@ fixes ≈ 6 F.)
 
 - [sweep-4] full audit sweep at 239 live entities — CLEAN; census 235→239 (+4 domain-valid: dress-3 stones, mile-3 SW pair, waysign-3 kiln sign; 0 departures, 0 drift); overlap ALL CLEAR (204 bbox ents, 214 classified, 0 unclassified); tier-1 walks 4/4 ALL PASS (0.38/0.38/0.38/0.37) + tier-2 hall 0.360 + row-cottage 0.384 ALL PASS; pins 15/15, carousel compKeys exact 7, gate lamps + -l lights standing, woodyard 1f2c6f592095b204 exact, interlane md5 stable, gate exit 0; zero world mutations (D+4, E+0)
 
+- [night-3] SE Wild night pass — census 239, SE budget 8/8 confirmed (interior anchors only); census-generated rig (31 GLB subjects hash-bound + 8 light anchors), 6 judged views, corridor wayfinding FAIL routed to approach lane (az315 zero corridor lamps, budget-bound), material PARTIAL (packet), emissive PASS 2 minor; sky facet 3: moonlight ambient lift partially rescues mid-ground material identity without flat wash — strongest packet candidate yet; zero world mutations (D+0, E+0)
+
 **Running total: 2370164 / 2000000**

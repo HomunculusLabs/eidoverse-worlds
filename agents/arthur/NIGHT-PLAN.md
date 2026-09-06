@@ -31,6 +31,7 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 |---|----------|------|------------------------------------------|-----------------|
 | 1 | NW Cultivation | 2026-09-05 | FAIL / PARTIAL / PASS(1 minor) | 2 lamps over 47m leg; dead stretches r24–49 and r50–67; fields wash past lamplight; emissive disciplined |
 | 2 | NE Craft | 2026-09-05 | FAIL / PARTIAL / PASS(2 minor) | gate-edge→lamp-001 33.5m unlit, lamp gaps 24.1/28.1m; only lamp pools + E-road glow keep material at depth; kiln night read UNJUDGED (no view covered the mouth) |
+| 3 | SE Wild | 2026-09-06 | FAIL / PARTIAL / PASS(2 minor) | corridor az315 has ZERO lamps (8/8 budget spent on interior anchors); path readable by stone silhouette then black; core arrival cluster coherent but satellites orphaned; facet-3 moonlift rescues mid-ground material (win) |
 
 ### night-1 — NW Cultivation detail (renders: `reviews/night-nw/`, 5 views, all judged)
 
@@ -65,6 +66,8 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 | night-2/D2 | NE leg unlit dead stretches: gate-edge(r~20)→lamp-001 33.5m, lamp-001→002 24.1m, lamp-002→first lit interior 28.1m (all census-verified; worse than NW) | 2 | approach-N | APPROACH-PLAN `### night-2 defect note` | OPEN, budget-bound (NE budget=2, spent by the same two lamps) |
 | night-2/N2 | lamps cast weak/no ground pools at range-10 — lights read as points pasted on darkness, not fixtures in space (recurring night-1/N1 class, now judged in 3 views) | 3 (informational→design) | approach-N (contract is live-client) | same note | noted; likely ambient/sky-budget question for the final packet |
 | night-2/N3 | DRESSING-PLAN lamp-budget table rows (NE=2, SE=0) contradict the census light count (NE=10, SE=9 at r≥35 — night-1 note says SE=8; +1 is sibling work) | 3 | dress-N | DRESSING-PLAN `### night-2 defect note` | OPEN for dress lane reconciliation |
+| night-3/D3 | SE corridor az315 ZERO lamps; path fades to black within a third of frame; last-stone→wild-margin link implied but unlit | 3 | approach-N | APPROACH-PLAN `### night-3 defect note` | OPEN, budget-bound (SE budget 8/8 spent on interior anchors) |
+| night-3/N4 | pavilion lamps read as detached points not fixtures (no ground pool/spill); one bare-emissive globe with no visible mount | 4 (informational) | approach-N (contract is live-client) | same note | noted; final packet question |
 
 ### night-2 — NE Craft detail (renders: `reviews/night-ne/`, 6 views, all judged; rig `review-night-ne.ts`)
 
@@ -103,6 +106,46 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
   recorded as a scope note); DRACOLoader wired (first run failed without it);
   all 33 live `-l` lights included, fixing night-1's horizon-glow confound.
 
+### night-3 — SE Wild detail (renders: `reviews/night-se/`, 6 views, all judged via ZAI fallback; rig `review-night-se.ts`)
+
+- Census: 239 entities (fresh 2026-09-06, up from 235 at sweep-3 — sibling
+  arrivals are outside this lane's concern; SE subject set = 39 entities
+  r≥35, of which 31 GLB subjects hash-mapped locally + 8 light-anchor
+  entities with lib='' rendered as lamps). SE lamp budget per DRESSING-PLAN
+  recount: 8 live, all interior (artwalk h-lights ×5, struct
+  beacon/northneedle/observatory ×3). Used 8 of 8 — matches.
+- **Wayfinding FAIL (severity 3 → D3, routed to approach-N)**: the az-315
+  visitor corridor has ZERO corridor lamps. Inbound view: one beacon
+  (chime pavilion orb on the vanishing point) pulls the eye, but no rhythm —
+  mid-corridor stretch dead both flanks. Outbound view: path stones fade to
+  pure black by bottom third of frame; the player's own footing is
+  unreadable; last readable stone → cairn cluster link implied but unlit.
+  Arrival view: core cluster (plinths + pergola lamp + on-axis orb) reads as
+  destination, but satellites orphaned — needle beacon high and off-axis,
+  platform lamp floats with no intermediate cue. Aerial: no secondary light
+  tier; forest belt a hard dead zone. Budget-bound: any corridor lamp needs
+  Bill or budget policy.
+- **Material truth PARTIAL (severity 3, design observation, no owning lane)**:
+  same law as NW/NE — inside a lamp pool or the pavilion glow, material reads
+  (timber lattice slat undersides, stone plinth texture, metal specular on
+  chime tubes/helix); past one lamp-range everything silhouettes. Needle
+  tower pure black except beacon tip. Forest belt reads as faceted masses
+  (barely, at the horizon luminance band). Goes to the final decision packet
+  (ambient/moonlight-lift question).
+- **Emissive discipline PASS, 2 minor**: no bloom blowouts, no bleed-through
+  in any view. (a) center orb's halo cuts into the dark disc silhouette —
+  reads as intentional moon-behind-gong, flagged informational; (b) one loose
+  ground sphere reads as a bare emissive ball with no visible fixture
+  (recurring N1/N2/N4 class — rig bead artifact possible, disclosed); (c)
+  aerial view: one stray dot beside an unlit structure at far right of the
+  lit cluster — source unknown, below action threshold, informational.
+- Judge channel disclosure: native vision_analyze provider down (error 1210,
+  two attempts) — judged via ZAI fallback (GLM-4.6V), same as night-2.
+- Rig engineering notes: subject table generated programmatically from the
+  census + local hash map (31 GLB subjects, zero hand-transcription); ALL 38
+  live world lights included for rig-true horizon glow; light-anchor
+  entities (lib='') render as lamps only.
+
 ## Sky-palette study log (render-only overlays, NEVER applied)
 
 Facet rotation: 1=cool-vs-warm base hue, 2=horizon gradient+stars, next:
@@ -127,9 +170,23 @@ moonlight ambient lift, then one free facet.
   separates those buildings is their own warm windows, not the sky. Verdict:
   gradient natural, stars underpowered; if adopted, push the brightest 10–15%
   of stars 1–2 stops so a few register. Recommendation deferred (loop law).
+- **Facet 3 (night-3): standing ambient (hemi 0.5, moon 0.55) vs moonlight
+  ambient lift (hemi 0.9, moon 1.1, sky `#0e1626`)** (variant in
+  `reviews/night-se-skyvar-moon/`; rig env `NIGHT_MOON=1`). Judge verdict:
+  **partial rescue — worth the lift, but not full material recovery**. WIN:
+  mid-distance material identity returns (path slabs read unambiguously as
+  stone — individual tiles, tonal edge separation; chime tubes as metal via
+  warm-specular-vs-dark-flank; trellis slats separate as timber lattice);
+  crucially NOT a flat blue-gray wash — ground reads green-gray, sky stays
+  deep navy, warm pools stay localized, so night mood survives. COST:
+  periphery stays shape-only (far structures near-silhouette); lamp pop
+  softens but survives because separation becomes temperature contrast
+  (warm vs cool) rather than brightness. This is the first candidate that
+  directly answers the recurring "material truth PARTIAL" observation in
+  all three districts. Recommendation deferred until SW + core passes.
 
 ## Rotation state
 
-- [x] NW (night-1) — [x] NE (night-2) — [ ] SE — [ ] SW — [ ] core
-- Sky study: facets 1–2 done (3 remain). Decision packet: NOT assembled (loop
-  law: only after all districts + study complete).
+- [x] NW (night-1) — [x] NE (night-2) — [x] SE (night-3) — [ ] SW — [ ] core
+- Sky study: facets 1–3 done (2 remain: one free facet, then reserve). Decision
+  packet: NOT assembled (loop law: only after all districts + study complete).
