@@ -952,3 +952,34 @@ since appr29. Probe self-catches: .glb suffix strip (approach-28 class);
 NW lamp pins re-checked vs standing tuples not plan-head concept values.
 Zero mutations, zero uploads, no shared-budget use, no visual PASS
 claimed. Eye-check pointer stands (delivered once at approach-6/7/13).
+
+### approach-35 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD 0125088 (artwalk-83 absorbed); interlane
+md5 f6254cd0 steady; APPROACH-PLAN read fresh in full (954 lines, clean at
+HEAD — no sibling dirt in this file). Shard routing verified at source by
+numbered rows: IMPROVE-PLAN rows 16 (sw-lane-003) and 36 (nw-lane-001) both
+terminal (EXECUTED approach-4/5, survey-2/6 CLEAN re-judges retired the
+row-16 candidate); zero OPEN rows route to nx-approach- (all five mentions
+accounted for: line-23 routing metadata, line-298 SAT-exemption note, rows
+16/36 + review paths, line-893 routing law); no un-shard clock. Own queue:
+three legs stand PLACED_VERIFIED, D1/D2/D4-leg closed in-budget; SE leg
+awaits Bill's a/b/c siting call (his alone); D3 + D5-temple-grounds + N5-N7
+remain Bill budget/verdict classes (night-1..5 notes stand verbatim, none
+new). Cheap lawful hold verification (fresh live census 259, approach
+domain 17, kind=light 38): all three leg libs PIN_EXACT (nw
+dc256065879371d8, ne dc52264c04cfe5bb, sw fb04a144cc1fc458) at the exact
+standing tuple (0,0,0) yaw 0; six leg -l lights standing at authored
+positions, dev 0.000 all six (nw -39.09/30.26 + -47.96/46.71, ne
+39.71/27.0 + 32.89/50.15, sw -25.20/-30.67 + -34.69/-43.14); gate lamps 4
+models lib prefix 18b69a6bb2 + 4 kind=light companions at their settled
+off-axis tuples (foreign town domain, never touched). Census diff vs
+appr34: 0 new / 0 gone / 5 flips, all FOREIGN and all matching
+already-ledgered sibling work (nx-struct-observatory eb3c9b15->3d9d6ae1 at
+identical tuple = struct-44 refine; four nx-artwalk wayband translations to
+the off-axis gate-lamp tuples = artwalk-83 reseat) — domain-valid, not
+approach drift. Probe run from a file (one-liners have failed repeatedly
+in past ticks). Zero world mutations, zero uploads, no shared-budget use;
+no visual PASS claimed. Standing eye-check pointer (delivered once each at
+approach-6/7/13): Bill at the NW/NE/SW gates at night for the three quiet
+bead cadences.
