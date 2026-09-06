@@ -231,11 +231,11 @@ R2-4 DONE waysign-11 (woodyard live f46e12ae, pre-place-interrupted
 sibling window recovered, fat-stroke X trestles), R2-5 DONE waysign-12
 (mill live 870256ce, orthogonal + hub-hole structural fix), R2-6 DONE
 waysign-13 (potter live 3a6c8fe7, one-dominant stacked pot-on-wheel-bar
-glyph + bone lift), R2-7 IN PROGRESS waysign-14 (v5 a8fd49bc built
-deterministic x2 + sibling-identical, 18m/10m judged on v3/v4 PASS-at-
-gate with both refinement notes implemented in v5; v5 final battery +
-placement DEFERRED to next wakeup — native judge 1210 at final call,
-budget closed, no unjudged bytes uploaded). Each item: full chassis — host anchor re-derived from
+glyph + bone lift), R2-7 DONE
+waysign-15 (bakery live 49342c52, v6: dominant dark-crust boule + v6
+brace fix). NEXT OPEN: none — R2 queue COMPLETE (7/7). Also queued (own
+domain): live smithy 62a8c7fc carries the same v2 floating brace —
+re-open next wakeup. Each item: full chassis — host anchor re-derived from
 CURRENT tuple per host-rider law, rider-only SAT + exemption ladder,
 unlit by default, 8m gate. Native vision is primary judge; ZAI fallback
 only when native is down that tick, disclosed.
@@ -378,6 +378,39 @@ only when native is down that tick, disclosed.
   then write placer (chassis = waysign-place-* reseat: remove+spawn, comp
   {} both sides — live has no comps, idempotent rerun) and seat v5.
   Baseline bytes: reviews/waysign14-bakery/before/ (599194ee).
+
+- waysign-15 `nx-sign-bakery` R2-7 DONE (heritage emblem-collapse fix +
+  construction defect caught and fixed in-tick): v5 a8fd49bc re-proven
+  deterministic ×2 fresh + renders re-shot from exact on-disk bytes, then
+  the deferred final battery ran ALL NATIVE (vision up this tick; one 1210
+  flap, retry succeeded). 18m 3/3 PASS (loaf + slashes + hung read — the
+  R2-7 finding itself fixed), 10m 5/5 PASS (v4 notes both resolved: flat
+  chord base + slashes bold). iso3 caught a REAL construction defect,
+  math-verified at decode (probe pitfall: first decode pass skipped mesh
+  index 0 — `!n.mesh` treats mesh 0 as falsy; always test `n.mesh ===
+  undefined`): the v2-chassis brace was rotated ~85° off intent — long
+  axis up-LEFT, top tip floating 0.10m above the plate, bottom tip
+  stabbing the board's top edge, never touching either member. v6 brace:
+  length 0.53→0.34, rooted on the plate face (0.03,2.20) rising under the
+  arm mid-span (0.30,2.41); envelope y-max SHRINKS 2.561→2.45 (SAT-safe).
+  Post-fix iso3: closed structural triangle PASS, no defects. Night 3/3
+  PASS (unlit, value contrast carries). Aerial FAIL decoded as RIG VANTAGE
+  bug, not model: aerial cam at court-local x −4.0 is above the building's
+  own roof — the sign is occluded by construction; roof clearance proven
+  by decode instead (iron top 2.45 vs wall-top 2.915 = 0.46m clear).
+  DROPPED "chains read as rods" via law-5 control: the accepted live
+  smithy front.png judged RODS identically — family trait at range, not a
+  defect. sha 49342c52 deterministic ×2, 4 nodes, siblings smithy/weaver/
+  livery byte-identical through every rebuild. Reseat placer
+  waysign-place-bakery-2.ts: host truth re-verified fresh (59534b10 =
+  local), baseline pin 599194ee at exact tuple, comp {} both sides,
+  PLACED_VERIFIED 2 verbs (remove+spawn), idempotent zero-verb rerun.
+  NOTE: live smithy 62a8c7fc carries the SAME v2 floating brace (chassis
+  was cloned from it) — own-domain re-open queued next wakeup. Bill
+  eye-check: from the bakery court path south of the court, the west end
+  wall sign should read a dark scored boule on a pale board at 18m, and
+  up close the bracket should read as a closed forged triangle (plate +
+  arm + brace), chains linking arm to board.
 
 - waysign-12 `nx-sign-mill-001` R2-5 DONE (emblem-collapse fix, STRUCTURAL):
   native re-judgment on exact live bytes 5b6a55bd (18m oblique, host+b10
