@@ -221,3 +221,25 @@ straight-line attempts before the sector sweep found the winding lane.
   a post for kind=light is unverified (rig bead stands in for the head).
   mile-5's hanging-lantern idiom (nx-mile-nw-007/-008) is the in-world
   precedent for a lit fixture with visible geometry. Final packet question.
+
+
+### night-5 defect note (observer lane, 2026-09-06 — treat as Bill-correction class; re-opens ahead of rotation)
+
+- **D5 (severity 2): CORE gate→plaza middle third carries ZERO active lights
+  on all four spokes.** Gate lamp pairs sit at r10, plaza sources at r~0–9,
+  nothing between — the spoke path reads by paver albedo contrast alone, and
+  judges flagged the identical dead stretch in road-e-long, gate-inbound-n,
+  AND plaza-eye (arrival from the sides is unguided; the N-spoke mapboard, a
+  literal wayfinding object, is an unlit black slab at night). Budget-bound:
+  the core approach budget is spent on the four gate lamp pairs; closing D5
+  needs Bill or budget policy.
+- **N6 (severity 3, informational→design): plaza street level leans on ONE
+  central source.** nx-plaza-l (0,1.2,0) is the only plaza light; hearth fire
+  emissive + benches/stones within its r10, but plaza-edge paving reads gray
+  and the plaza reads "destination without lit street level". Mapboard unlit
+  (see D5). Final packet question (also touches plaza/dress surface).
+- **N7 (severity 3, informational→design): aerial hierarchy inversion.**
+  Edge/leg lamps match plaza-core peak brightness (halo parity at pixel
+  level); the house ring (r18–28) carries no light tier of its own; the E
+  road's lamp fan scatters into orphaned dots at range; SW quadrant darkest
+  in the core. Final packet question.

@@ -33,6 +33,7 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 | 2 | NE Craft | 2026-09-05 | FAIL / PARTIAL / PASS(2 minor) | gate-edge→lamp-001 33.5m unlit, lamp gaps 24.1/28.1m; only lamp pools + E-road glow keep material at depth; kiln night read UNJUDGED (no view covered the mouth) |
 | 3 | SE Wild | 2026-09-06 | FAIL / PARTIAL / PASS(2 minor) | corridor az315 has ZERO lamps (8/8 budget spent on interior anchors); path readable by stone silhouette then black; core arrival cluster coherent but satellites orphaned; facet-3 moonlift rescues mid-ground material (win) |
 | 4 | SW Contemplative | 2026-09-06 | FAIL / PARTIAL / PASS(2 minor) | leg dead stretches as NW/NE class + ENTIRE temple grounds zero lights (gravest in fleet); stone terraces pure silhouette, gravel rings barely read; detached-orb lamp class now census-corroborated (light-kind entities, no fixture geometry in world); facet-4 compound (moonlift+stars) reads better than baseline — new packet co-leader |
+| 5 | CORE | 2026-09-06 | PARTIAL-FAIL / PARTIAL / PASS(2 minor) | gate-to-plaza middle third has zero active lights (D5, budget-bound); plaza ring coherent, market stall the success case for material; plaster/monument-gold/warm-lit timber read inside pools; hearth IS lit (judge claims falsified at source); cyan fountain = intended moonlit-water emissive; aerial: ring tier carries no light of its own, E fan scatters, SW quadrant darkest; facet 5 wins head-to-head vs facet 4 — study COMPLETE, packet assembled |
 
 ### night-1 — NW Cultivation detail (renders: `reviews/night-nw/`, 5 views, all judged)
 
@@ -58,6 +59,54 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
   rejects `0x…` strings → first pass had a white sky (caught by pixel probe);
   one hand-transcribed hash typo caught by the rig's own hash gate.
 
+### night-5 — CORE detail (renders: `reviews/night-core/`, 7 views, all judged via ZAI fallback; rig `review-night-core.ts`)
+
+- Census: 246 entities (fresh 2026-09-06, +5 sibling arrivals vs sweep-5's 241 —
+  outside this lane's concern). Core subject set = 90 GLB entities r<35 (89
+  hash-mapped locally + woodyard from the LIVE at-rest store copy, scope-noted).
+  Rig table census-generated, zero hand-transcription; ALL 36 live lights in
+  rig (correcting night-4's 40-row table which carried stale rows — fresh
+  census is always the truth; the rig renders only what the census lists).
+- **Wayfinding PARTIAL-FAIL (severity 2 → D5, routed to approach-N)**: the
+  gate→plaza middle third carries ZERO active lights on all four spokes —
+  gate lamp pairs at r10, plaza sources at r~0-9, nothing between; the path
+  reads by paver albedo contrast alone. Judges flagged the same middle-third
+  dead stretch in road-e-long, gate-inbound-n, AND plaza-eye (arriving from
+  the sides is unguided). Also: the N-spoke mapboard — a literal wayfinding
+  object — is an unlit black slab at night. Budget-bound: the core approach
+  budget is spent on the four gate lamp pairs; closing D5 needs Bill or
+  budget policy.
+- **Material truth PARTIAL (severity 3, design observation, no owning lane)**:
+  the success case is the market stall (interior spill recovers counter,
+  goods, post structure — timber AND cloth read); plaster cottage walls,
+  monument gold, and warm-lit timber inside pools all read. Past lamp range
+  the recurring law holds for the fifth time: timber frames, thatch roofs,
+  stone paving wash to flat silhouette. Five districts now confirm — this is
+  THE material-truth finding for the packet: the village has exactly one
+  night material register (warm pool) and no second register at depth.
+- **Emissive discipline PASS, 2 minor**: no bleed-through anywhere (fire
+  occludes behind gate posts; window light stays on faces; rooflines clean).
+  Three judge claims were falsified at source/census before routing:
+  (a) "unlit hearth / fire reads as glowing solid" — WRONG, the hearth GLB
+  carries an emissive `fire` node AND nx-plaza-l sits 1.2m away (range 10);
+  the fire IS lit; the judge misread the rig's bead+glow contract — though
+  the observation that the plaza relies on ONE central source for street
+  level is real (→ N6). (b) "cool cyan fountain outlier" — intended
+  polish-274 moonlit-water emissive (fountain sits 5.16m inside
+  approach-lamp-e's warm range; the cyan is the deliberate moonlit read,
+  same family as the SE fountain validation). (c) "white-hot orb behind the
+  gate lantern" — nx-approach-lamp-n-l at 24m on-axis, a real live light in
+  the rig; detached-orb N5 class, not a stray. Two real minors: lamp-head
+  bloom (rig bead artifact, disclosed, N1 class); aerial halo-size parity
+  between edge lamps and plaza core (→ N7 hierarchy inversion).
+- **Judge channel disclosure**: native vision_analyze provider down (error
+  1210, two attempts) — judged via ZAI fallback (GLM-4.6V), same as
+  night-2/3/4. 6th consecutive tick.
+- Rig engineering notes: generator + rig assembled in one pass; the store
+  download ran read-only via the library route (night-2 precedent); facet-5
+  star extinction logic clears a ~12.5° low band along the four approach
+  corridor azimuths (45/135/225/315°) only — non-corridor low stars remain.
+
 ## Defect log (routed)
 
 | id | finding | severity | owner lane | routed to | state |
@@ -71,6 +120,9 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 | night-3/N4 | pavilion lamps read as detached points not fixtures (no ground pool/spill); one bare-emissive globe with no visible mount | 4 (informational) | approach-N (contract is live-client) | same note | noted; final packet question |
 | night-4/D4 | SW corridor dead stretches: gate-edge(~r20)→lamp-001(r39.7) ~20m unlit, lamp-001→002 15.8m, lamp-002(r55.4)→gravel gate(r74.7) ~19m; then the ENTIRE temple grounds (terraces/seeds/labyrinths, r71–98) carry ZERO lights of any kind — worst-in-class dead district after dark | 2 | approach-N | APPROACH-PLAN `### night-4 defect note` | OPEN, budget-bound (SW budget 3 per table; live in-quadrant count = 2 — table's third 'inn' anchor sits core-side, outside the r≥35 rule; census note recorded) |
 | night-4/N5 | detached-orb lamp class now census-corroborated: SW + NW leg lamps are light-kind entities with NO fixture model entity in the world — judges in all four districts read them as floating orbs; whether the live client renders a post for kind=light is UNVERIFIED (rig bead stands in for the head, disclosed) | 3 (informational→design) | approach-N (contract is live-client) | same note | noted; final packet question + client-contract check |
+| night-5/D5 | CORE gate-to-plaza middle third (gate lamps r10 → plaza ring) carries ZERO active lights on all four spokes — path read by paver albedo only; off-axis approach loses the line entirely (judged in road-e-long, gate-inbound-n, plaza-eye) | 2 | approach-N | APPROACH-PLAN `### night-5 defect note` | OPEN, budget-bound (core approach budget spent on the four gate lamp pairs; closing needs Bill or budget policy) |
+| night-5/N6 | plaza night rhythm relies on a SINGLE central source (nx-plaza-l): hearth fire + emissive pool within range 10, but plaza-edge benches/stones/paving read gray — plaza reads destination without lit STREET level; plus mapboard (a wayfinding object on the N spoke) is an unlit black slab at night | 3 | approach-N (light placement) + plaza lane question | APPROACH-PLAN note | OPEN, informational→design |
+| night-5/N7 | aerial hierarchy inversion: edge/leg lamps match plaza-core peak brightness (halo size parity); ring tier (r18–28) carries no light of its own; E-road lamp fan scatters into orphaned dots at range; SW quadrant darkest in core | 3 | approach-N | same note | OPEN, informational→design, feeds final packet |
 
 ### night-2 — NE Craft detail (renders: `reviews/night-ne/`, 6 views, all judged; rig `review-night-ne.ts`)
 
@@ -192,8 +244,30 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 
 ## Sky-palette study log (render-only overlays, NEVER applied)
 
-Facet rotation: 1=cool-vs-warm base hue, 2=horizon gradient+stars, next:
-moonlight ambient lift, then one free facet.
+Facet rotation: 1=cool-vs-warm base hue, 2=horizon gradient+stars, 3=moonlight
+ambient lift, 4=free compound, 5=compound refinement (zenith+extinction).
+STUDY COMPLETE (all facets judged; packet assembled).
+
+- **Facet 5 (night-5, reserve/compound successor): facet-4 compound vs facet-5
+  refinement on the SAME core rig** — facet 5 = moonlift + facet-4 star field
+  with ~20% of stars pulled toward zenith + cleared low-altitude band (~12.5°)
+  along the four approach corridors (variant `reviews/night-core-skyvar-facet5/`;
+  facet-4 reference `reviews/night-core-skyvar-facet4ref/`; rig env
+  `NIGHT_STARS=2 NIGHT_MOON=1`). Judge verdict: **facet 5 WINS head-to-head**.
+  WIN: the clean horizon band is the strongest single win of the study —
+  15–20% of frame height (~5–8°) star-free hugging the village, so approach
+  sightlines carry no false waypoint dots; zenith gradient reads as a credible
+  "denser overhead" vault cue, not lopsided (peak upper-center/right, lone
+  bright anchor star compensates); primary silhouettes read cleanly against
+  the lifted horizon navy. COST (residual): dome read is gradient-not-vault in
+  a single still (true dome would confirm in motion); secondary far-left
+  masses partially dissolve; foreground plaza field flattest surface under
+  moonlift. Convergent validation: the facet-4 reference judge INDEPENDENTLY
+  recommended "add zenith density bias + extinction fade below ~5°" —
+  exactly what facet 5 implements; two independent judgments converge on the
+  same refinement. **FACET 5 IS THE SKY RECOMMENDATION** (with residual
+  option: steepen top-10% gradient / faint galactic band at true zenith if
+  Bill wants a stronger dome read in stills).
 
 - **Facet 1 (night-1): standing cool blue-black `#0a0d18` vs warm dark
   `#171310`** (same geometry/lights/camera; variant in
@@ -249,7 +323,9 @@ moonlight ambient lift, then one free facet.
 
 ## Rotation state
 
-- [x] NW (night-1) — [x] NE (night-2) — [x] SE (night-3) — [x] SW (night-4) — [ ] core
-- Sky study: facets 1–4 done (1 remains: reserve). Decision packet: NOT
-  assembled (loop law: only after all districts + study complete — core pass
-  + reserve facet left).
+- [x] NW (night-1) — [x] NE (night-2) — [x] SE (night-3) — [x] SW (night-4) — [x] core (night-5)
+- Sky study: facets 1–5 COMPLETE. **Decision packet assembled exactly once:
+  `agents/arthur/reviews/night-decision-packet.md` (night-5). Lane now HOLDS
+  until Bill's verdicts.** Loop continues (Bill alone may stop it); further
+  wakeups are read-only hold ticks: fresh gate + census + one cheap lawful
+  verification, HOLD report.
