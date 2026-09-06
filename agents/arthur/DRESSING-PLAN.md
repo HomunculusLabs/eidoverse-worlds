@@ -2100,3 +2100,34 @@ Bill-ruled). REPAIR-REGISTER zero nx-dress.
 - Standing unblock paths (say-once, unchanged): Bill SW lamp a/b/c
   policy call, or verdicts on the four-district eye-gate circuit
   (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+---
+
+## dress-61 (2026-09-06, pipeline tick 41) — HOLD
+
+- Shard: re-verified EMPTY at source fresh this tick (full-row-window scan
+  of IMPROVE-PLAN rows 29-38 window on current bytes): all nine nx-dress
+  Round-1 rows terminal (5/29/30/31 DROPPED native rejudge; 32/33/34/37/38
+  EXECUTED reseats). Row 39 foreign (nx-town-longhouse, improve-20).
+  Fountain Bill-off-limits, his call. No un-shard clock (empty at source).
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh kind-law recount:
+  exactly 3 live SW r>=35 lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0, kind=light). Spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae unchanged (mtime 09:42, zero VERDICT
+  lines, grep fresh).
+- Hold verification: standing gate ALL PASS real exit 0 at tick-start HEAD
+  bc192bc. Fresh live census 260 (was 259; the +1 arrival IDENTIFIED as
+  sibling struct-47's nx-struct-meridianstair, cross-checked against the
+  struct-47 ledger entry — dress-domain unchanged). 11/11 district installs
+  PIN_EXACT by programmatic compare (lib prefix, pos<0.02/0.03, yaw
+  radians where pinned, comps empty) vs the dress-43 table. 27 nx-dress =
+  11 fleet + 16 legacy intact by arithmetic; census-wide lights 38 (kind
+  histogram thing 222 / light 38). Interlane md5 f6254cd0 steady.
+  Foreign dirt (core-paths glb+review, tower3, court placer, fleet
+  watcher, struct terrain probes, review-improve19-pixels, untracked
+  reviews) left untouched.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed.
+- Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
+  policy call, or verdicts on the four-district eye-gate circuit
+  (agents/arthur/reviews/dress-districts-eye-gate.md).
