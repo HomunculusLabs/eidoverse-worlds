@@ -42,8 +42,42 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 ||| sweep-26 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, THREE documented lib changes at identical tuples: nx-sign-smithy d8df9400→62a8cfc (waysign-8 @ 66ebbf9), nx-struct-echoarch f38d01bb→baf4c994 (improve-6 @ 2ce5561), nx-town-inn c180c26f→6e6ff2d0 (improve-7 @ aca7c6b) — all match their lane ledgers line-for-line, domain-valid re-places, not drift; snapshot rewritten raw sha f769b09b7fd562c7) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, all real exit 0) + tier-2 potter 0.366 + market 0.389 ALL PASS (seventh cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, woodyard 1f2c6f592095b204 exact, ledger law exact (2370215), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD aeced05 | CLEAN SWEEP |
 
 || sweep-27 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, TWO documented lib changes at identical tuples: nx-sign-dyer-001 38416bae→8ce2081f (waysign-9 @ 27595e4), nx-struct-crossing a5da939d→216c4bd4 (improve-8 @ 1fa1e19) — both match their lane ledger tails line-for-line, domain-valid re-places, not drift; snapshot rewritten raw sha 36c17c7278f5ed5b) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, legs run individually, verdicts content-anchored) + tier-2 inn 0.364 + stable 0.396 ALL PASS (seventh cycle) | pins 15/15 ALL_PINS_OK (bad: []), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 + companions live, 38 lights standing, woodyard 1f2c6f592095b204 exact, ledger law exact (2370218), interlane md5 1b933f3454e52504d89ff0c167c4e7dc stable, standing gate real exit 0 at HEAD 1fa1e19 | CLEAN SWEEP |
+| sweep-28 | 2026-09-06 | 259==259 steady state (221 thing + 38 light; 0 arrivals, 0 departed, FIVE documented lib changes at identical tuples: nx-approach-sw-lane-003 56b35877→43817a4f (approach-4 @ 4ec8a2f), nx-sign-kiln-001 be3d8504→ecbad903 (waysign-10), nx-sign-woodyard-001 58f5cbe3→f46e12ae (waysign-11 @ 61afd73), nx-struct-skene 3a62ee83→df7f7c43 (struct-36 @ 9459238), nx-town-tower-house bd1badd2→11b31000 (improve-10 @ 8be70ed) — all match lane ledger tails line-for-line, domain-valid re-places, not drift; snapshot rewritten raw sha 478fc9d52e36101e) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified, exit 0) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, legs run individually, verdicts content-anchored) + tier-2 potter 0.366 + market 0.389 ALL PASS (eighth cycle) | pins 14/15 + 1 classified (angler live b3dfb28a UNCHANGED; local 8c1a5047 = known quarantined in-flight sibling improve draft, STRUCTURES-PLAN 110/1088, live world unaffected), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, 38 lights standing, woodyard 1f2c6f592095b204 exact, ledger law exact (2370226), interlane md5 f6254cd02cbcbee79e54104669be6981 NEW BASELINE (improve-5z SURVEY widen-only diff verified line-by-line), standing gate real exit 0 at HEAD 61afd73 | CLEAN SWEEP |
 
 ## Findings register
+
+sweep-28: none. Census 259==259 (0 arrivals, 0 departures, 0
+unexplained drift). Five documented lib changes at identical tuples, each
+classified as expected sibling work, not drift: nx-approach-sw-lane-003
+56b35877→43817a4f (approach-4 verge fix @ 4ec8a2f), nx-sign-kiln-001
+be3d8504→ecbad903 (waysign-10 R2-3), nx-sign-woodyard-001
+58f5cbe3→f46e12ae (waysign-11 @ HEAD 61afd73), nx-struct-skene
+3a62ee83→df7f7c43 (struct-36 wall-body fix @ 9459238),
+nx-town-tower-house bd1badd2→11b31000 (improve-10 @ 8be70ed) — all
+match their lane ledger tails line-for-line. Integrity classification,
+not a finding: struct18-fleet-pin-check now lists nx-struct-angler as bad
+(live=store/b3dfb28a…, local=8c1a5047…) — the live lib is UNCHANGED
+in this sweep's drift set; the mismatch is the known quarantined
+in-flight sibling improve draft sitting uncommitted in the working tree
+(STRUCTURES-PLAN lines 110-111/1088-1089; racing law — do not touch;
+mkv3-skymirror.ts carries the same sibling-draft class). Live world
+unaffected; no defect note routed. Interlane md5 changed
+1b933f3454e52504d89ff0c167c4e7dc → f6254cd02cbcbee79e54104669be6981
+via sibling improve-5z (SURVEY lane registration); diff read
+line-by-line, widen-only, no rule change touching this lane; new
+baseline recorded in the integrity pins section. All five phases
+verified fresh this wakeup with zero failing checks (tier-1 legs run
+individually per sweep-18 timeout lesson; tier-2 eighth cycle: potter
+0.366 + market 0.389). Foreign-seam abstentions (cultivation gardens,
+dress skeps/stones) are the known normalized diagnostic set, unchanged.
+Snapshot rewritten this sweep (raw sha 478fc9d52e36101e — five lib
+fields changed, so no-rewrite was not available). No defect notes
+written. Next tier-2 pair (sweep-29): inn + stable (eighth cycle).
+Standing note for Bill: the improve lane continues executing its
+round-1 queue (tower-house complete at improve-10; skene fixed by
+struct-36) and waysign is 5 of 7 through the R2 emblem packet — expect
+further improve/waysign/struct-domain lib changes in coming census
+diffs, each classifiable only against that tick's ledger tail.
 
 sweep-27: none. Census 259==259 (0 arrivals, 0 departures, 0 unexplained
 drift). Two documented lib changes at identical tuples, each classified as
@@ -335,9 +369,10 @@ tier-2 leg is never claimed without its run that wakeup.
 - woodyard: nx-town-woodyard lib 1f2c6f592095b204 (deterministic pin).
 - standing gate: bun agents/arthur/verify-repairs.ts real exit 0.
 - ledger law EXACT; interlane md5 baseline
-  1b933f3454e52504d89ff0c167c4e7dc (INTERLANE-PROTOCOL.md @ bc843e5;
-  prior baseline f7865b648dfa9dc4 @ 0b860e4 — sweep-20 verified the
-  nvp-150 widen-only diff line-by-line before adopting).
+  f6254cd02cbcbee79e54104669be6981 (INTERLANE-PROTOCOL.md @ 4a7db63;
+  prior baseline 1b933f3454e52504d89ff0c167c4e7dc @ bc843e5 — sweep-28
+  verified the improve-5z SURVEY widen-only diff line-by-line before
+  adopting; earliest baseline f7865b648dfa9dc4 @ 0b860e4).
 
 ## Census snapshot discipline
 
