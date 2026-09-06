@@ -34,6 +34,7 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 | 3 | SE Wild | 2026-09-06 | FAIL / PARTIAL / PASS(2 minor) | corridor az315 has ZERO lamps (8/8 budget spent on interior anchors); path readable by stone silhouette then black; core arrival cluster coherent but satellites orphaned; facet-3 moonlift rescues mid-ground material (win) |
 | 4 | SW Contemplative | 2026-09-06 | FAIL / PARTIAL / PASS(2 minor) | leg dead stretches as NW/NE class + ENTIRE temple grounds zero lights (gravest in fleet); stone terraces pure silhouette, gravel rings barely read; detached-orb lamp class now census-corroborated (light-kind entities, no fixture geometry in world); facet-4 compound (moonlift+stars) reads better than baseline — new packet co-leader |
 | 5 | CORE | 2026-09-06 | PARTIAL-FAIL / PARTIAL / PASS(2 minor) | gate-to-plaza middle third has zero active lights (D5, budget-bound); plaza ring coherent, market stall the success case for material; plaster/monument-gold/warm-lit timber read inside pools; hearth IS lit (judge claims falsified at source); cyan fountain = intended moonlit-water emissive; aerial: ring tier carries no light of its own, E fan scatters, SW quadrant darkest; facet 5 wins head-to-head vs facet 4 — study COMPLETE, packet assembled |
+| 6 | NW (2nd rotation) | 2026-09-06 | D1-VERIFY PASS (outbound) / PARTIAL (design) / PASS (1 flag=N5 class) | second-rotation verify pass: D1 closure CONFIRMED from outbound vantage; homebound adds design-class N8; renders reviews/night-nw-r2, judge NATIVE |
 
 ### night-1 — NW Cultivation detail (renders: `reviews/night-nw/`, 5 views, all judged)
 
@@ -111,7 +112,7 @@ Rotation: NW → NE → SE → SW → core. One district per wakeup.
 
 | id | finding | severity | owner lane | routed to | state |
 |----|---------|----------|-----------|-----------|-------|
-| night-1/D1 | NW leg unlit dead stretches (2 lamps / 47m) | 2 | approach-N | APPROACH-PLAN `### night-1 defect note` | CLOSED 2026-09-06 by approach-6 (owning lane): in-budget lane re-dress — zero new light entities (census kind=light 38 steady), 4 bone pillars each capped with one faint warm emissive bead (`flame_beads_nw`, intensity 1.15, polish-274/278 moonlit law) between the two lamps; live lib `dc25606587` confirmed in census-14; owning-lane night judgment PASS-borderline (ZAI fallback, disclosed there). Observer lane has NOT re-judged the live night read — closure is the owner's, no visual PASS claimed by this lane; a second-rotation NW night pass would verify the read (not taken — lane holds on Bill) |
+| night-1/D1 | NW leg unlit dead stretches (2 lamps / 47m) | 2 | approach-N | APPROACH-PLAN `### night-1 defect note` | CLOSED 2026-09-06 by approach-6 (owning lane): in-budget lane re-dress — zero new light entities (census kind=light 38 steady), 4 bone pillars each capped with one faint warm emissive bead (`flame_beads_nw`, intensity 1.15, polish-274/278 moonlit law) between the two lamps; live lib `dc25606587` confirmed in census-14; owning-lane night judgment PASS-borderline (ZAI fallback, disclosed there). Observer lane has NOT re-judged the live night read — closure is the owner's, no visual PASS claimed by this lane; a second-rotation NW night pass would verify the read (not taken — lane holds on Bill). VERIFIED night-49 (2026-09-06): second-rotation NW pass executed from live census-49 tuples + re-dressed lane model dc256065 (rig re-pinned); NATIVE judge, outbound vantage — no dead stretch, bead rhythm hands the eye lamp-to-lamp, beads read as structured pillars with ground pools, far plaza glow visible as anchor (weak-but-present). D1 closure CONFIRMED by observer; remaining homebound observation is design-class N8, not D1 |
 | night-1/N1 | lamp-head emissive consistency question | 4 (informational) | approach-N | same note | noted, no re-open |
 | night-2/D2 | NE leg unlit dead stretches: gate-edge(r~20)→lamp-001 33.5m, lamp-001→002 24.1m, lamp-002→first lit interior 28.1m (all census-verified; worse than NW) | 2 | approach-N | APPROACH-PLAN `### night-2 defect note` | CLOSED 2026-09-06 by approach-7 (owning lane, commit 873a138): in-budget lane re-dress — zero new light entities (census kind=light 38 steady across census-25→26), gray-bone verge re-dress + 8 bone pillars (~9.2m, alternating sides) each capped with one faint warm emissive bead (`flame_beads_ne`, intensity 1.15, polish-274/278 moonlit law), beads world r28.6→r68.3 covering all three D2 dead stretches (gate-edge, lamp1→lamp2, lamp2→district); live lib `dc52264c04` confirmed in census-26; owning-lane night judgment outbound-vantage PASS (ZAI fallback, disclosed there; three FAIL verdicts falsified at pixel+projection ground truth). Observer lane has NOT re-judged the live night read — closure is the owner's, no visual PASS claimed by this lane; a second-rotation NE pass would verify the read (deferred — lane holds on Bill) |
 | night-2/N2 | lamps cast weak/no ground pools at range-10 — lights read as points pasted on darkness, not fixtures in space (recurring night-1/N1 class, now judged in 3 views) | 3 (informational→design) | approach-N (contract is live-client) | same note | noted; likely ambient/sky-budget question for the final packet |
@@ -1363,3 +1364,47 @@ STUDY COMPLETE (all facets judged; packet assembled).
   detached-orb, N7 hierarchy inversion. Second-rotation NW+NE+SW
   passes remain the verify paths, deferred while the lane holds.
   Zero world mutations, zero renders judged, no PASS claimed.
+
+- night-49 (2026-09-06, pipeline tick — RECONCILIATION + second-rotation NW
+  verify pass): night-48's deferred gate-lamp reconciliation CLOSED. Fresh
+  census-49 (/tmp/night-census-49.json): 259 entities / 38 lights / 0
+  night-prefixed. Diff vs census-48: 0 gone, 0 flips, +4 arrivals = the four
+  gate-lamp light companions (nx-approach-lamp-{e,n,s,w}-l) RESTORED at
+  off-axis lamp-head positions (e.g. e-l [9.9,1.96,1.75]) — the town-lane
+  off-axis reseat (Bill's obstruction correction) reached its stable end
+  state: models ±1.75m off-axis at r10, yaws unchanged, lib 18b69a6 steady,
+  companions live. D5/N5/N7 PREMISES substance unchanged (gate pairs remain
+  the middle-third anchor tier; N5 stand-in rendering still rig-side; aerial
+  hierarchy unchanged) — no disposition change beyond reconciliation.
+  LANE-OWNED RIG MAINTENANCE (file writes, zero world mutations):
+  review-night-core.ts — 4 gate-lamp spec tuples re-pinned to off-axis live
+  tuples, 4 LAMPS rows ditto, nx-town-row-cottage sha bd88cd38→add42aea
+  (improve-lane rebuild; local==live verified), nx-artwalk-b26-wayband yaw
+  π→−π/2 (census-49 exact), +2 r64 mile lanterns to LAMPS (36→38,
+  world-wide law). review-night-nw.ts — amphi/skene/echoarch/mobius shas
+  re-pinned to struct-lane rebuilds (95a98c74/df7f7c43/baf4c994/5617f376;
+  local==live verified per file), nw-lane sha d46a60fb→dc256065 (re-dressed
+  D1 model), +2 NW LAMPS (4 total; one lights lavender-0027 at 6.7m —
+  material, inside range-10). Population-verified: 90/core rows + 21/21 NW
+  rows live-exact (woodyard = documented at-rest freeze exemption). Both
+  rigs bun-build clean. SECOND-ROTATION NW PASS EXECUTED (the D1 verify
+  path): renders → reviews/night-nw-r2/ (NIGHT_OUT override; r1 evidence
+  byte-intact, md5s re-checked). Judge NATIVE (vision restored; first call
+  400'd once, single paced retry OK — judge availability flap within the
+  tick, disclosed). Judgments: (a) approach-outbound — D1 VERIFY PASS: no
+  dead stretch, 5 warm points with handoff rhythm, 4/5 read as structured
+  fixtures with ground pools, plaza glow present as anchor (weak-but-
+  present noted); the one floating orb = NW field -l entity rendered as
+  stand-in bead = known N5 class, not a new defect. (b) center-homebound —
+  wayfinding: destination anchor STRONG (plaza cluster unambiguous), but
+  near-stretch void camera→gate + unlit gate silhouette = NEW note N8
+  (severity 4, informational→design, packet-class single-register family,
+  no owning lane); material truth PARTIAL (crops/indigo rows best
+  performer, path weakest — same law); emissive discipline PASS with one
+  flag = orphaned field bead (N5 stand-in class again). N8 joins the packet
+  addendum notes; packet itself untouched (assembled-exactly-once law,
+  staleness disclosed here instead). Standing blockers unchanged: sky
+  facet-5 ruling, lamp-budget policy D3 + D4-temple-grounds + D5 + N6, N5
+  detached-orb, N7 hierarchy inversion — all Bill-bound. Second-rotation
+  NE pass is next when the lane next rotates. Zero world mutations, zero
+  uploads, zero shared-budget use.

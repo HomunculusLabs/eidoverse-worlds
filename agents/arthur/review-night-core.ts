@@ -18,10 +18,10 @@ const specs=[
  ["nx-hearth","village_plaza3.glb",ASSETS,"027f6f019f9981bf",0.0,0.0,0.0,0.0],
  ["nx-welcome","village_welcome3.glb",ASSETS,"362c5be14cb9a245",-3.0,0.0,-4.3,0.6092],
  ["nx-carousel","village_carousel3.glb",ASSETS,"ce3633992d07055e",-18.0,0.00015,18.0,2.35619],
- ["nx-approach-lamp-e","village_approach_lamp.glb",ASSETS,"18b69a6bb2f5862f",10.0,0.0,0.0,3.141593],
- ["nx-approach-lamp-n","village_approach_lamp.glb",ASSETS,"18b69a6bb2f5862f",0.0,0.0,10.0,-1.570796],
- ["nx-approach-lamp-w","village_approach_lamp.glb",ASSETS,"18b69a6bb2f5862f",-10.0,0.0,0.0,0.0],
- ["nx-approach-lamp-s","village_approach_lamp.glb",ASSETS,"18b69a6bb2f5862f",0.0,0.0,-10.0,1.570796],
+ ["nx-approach-lamp-e","village_approach_lamp.glb",ASSETS,"18b69a6bb2f5862f",10.0,0.0,1.75,3.141593],
+ ["nx-approach-lamp-n","village_approach_lamp.glb",ASSETS,"18b69a6bb2f5862f",1.75,0.0,10.0,-1.570796],
+ ["nx-approach-lamp-w","village_approach_lamp.glb",ASSETS,"18b69a6bb2f5862f",-10.0,0.0,-1.75,0.0],
+ ["nx-approach-lamp-s","village_approach_lamp.glb",ASSETS,"18b69a6bb2f5862f",-1.75,0.0,-10.0,1.570796],
  ["nx-court","village_court3.glb",ASSETS,"59534b10122e6b47",18.9,-0.0,-14.8,-0.90756],
  ["nx-forge","village_forge3.glb",ASSETS,"620120c4d6f0b4a0",22.117855,0.0,-7.957568,-0.90756],
  ["nx-cistern","village_bcistern3.glb",ASSETS,"d3d3ad75932cb3da",15.703583,0.0,-14.586881,-0.90756],
@@ -37,7 +37,7 @@ const specs=[
  ["nx-town-longhouse","village_longhouse3.glb",ASSETS,"f2344409ac67fd77",9.0,0.0,26.0,-2.828368],
  ["nx-town-tower-house","village_tower_house.glb",ASSETS,"11b31000ff639083",-9.0,0.0,26.0,2.828368],
  ["nx-town-bunkhouse","village_bunkhouse.glb",ASSETS,"c8636968968672af",-9.0,0.0,-26.0,0.313225],
- ["nx-town-row-cottage","village_row3.glb",ASSETS,"bd88cd386aec2a89",-23.0,0.0,-17.0,0.941151],
+ ["nx-town-row-cottage","village_row3.glb",ASSETS,"add42aeacca2ecc8",-23.0,0.0,-17.0,0.941151],
  ["nx-town-garden-cottage","village_garden_cottage.glb",ASSETS,"cee52aca03429a62",-26.0,0.000949,19.0,2.200442], // night-47: re-pinned 872aec35→cee52aca (improve-16 sibling re-place; local file hash == live lib verified, pose exact)
  ["nx-town-woodyard","woodyard.glb",STORE,"80c2e14291308533",16.0,0.0,31.0,-2.669815],
  ["nx-town-dyehouse","village_dyehouse3.glb",ASSETS,"888be3597d2f772f",-23.0,0.0,-23.0,0.941],
@@ -85,7 +85,7 @@ const specs=[
  ["nx-artwalk-b23-cistern-rain-count","village_artwalk_b23.glb",ASSETS,"8d9419e5c2d9e3e7",15.443542,0.31,-14.383709,-0.90756],
  ["nx-artwalk-b24-well-depth","village_artwalk_b24.glb",ASSETS,"1935752ba39b674e",3.4,0.375,0.7,0.0],
  ["nx-artwalk-b25-welcome-village-mark","village_artwalk_b25.glb",ASSETS,"173352aa2df4450f",-3.030327,1.35,-4.343466,0.6092],
- ["nx-artwalk-b26-wayband","village_artwalk_b26.glb",ASSETS,"7594436a996e8ded",0.0,1.5,10.0,3.141593],
+ ["nx-artwalk-b26-wayband","village_artwalk_b26.glb",ASSETS,"7594436a996e8ded",0.0,1.5,10.0,-1.570796], // night-49: yaw re-pinned π→−π/2 (census-49 exact live tuple)
  ["nx-artwalk-b27-waterline","village_artwalk_b27.glb",ASSETS,"580706ad8e46212c",30.0,0.0,-4.5,0.0],
  ["nx-artwalk-b28-bake-count","village_artwalk_b28.glb",ASSETS,"18c1bb5da4328ae7",18.593537,-0.0,-18.367647,-0.90756],
  ["nx-artwalk-b29-strike-count","village_artwalk_b29.glb",ASSETS,"a7df548e06d1412d",22.347652,-0.0,-13.43277,-0.90756],
@@ -108,8 +108,9 @@ const specs=[
 ] as const;
 const files=new Map<string,Buffer>();
 for(const[n,f,d,h]of specs){const b=readFileSync(join(d as string,f as string));const got=createHash("sha256").update(b).digest("hex").slice(0,16);if(got!==(h as string))throw Error(`${n} hash drift: ${got} != ${h}`);files.set(n,b);}
-// ALL 38 live light entities (census-exact, world-wide for rig-true horizon glow)
-const LAMPS=[[0,1.2,0],[-3,2.2,-4.3],[9.9,1.96,0],[0,1.96,9.9],[-9.9,1.96,0],[0,1.96,-9.9],[27,1.145,-27],[36,2.35,0],[9,2.5,-26],[32.527,2.449,-32.527],[21.606,1.5,-7.557],[35.511,2.298,-23.886],[8.815,2.2,25.429],[17.883,0.604,-25.449],[21.206,0.604,-22.125],[-6.217,1.75,6.217],[38.361,2.422,-38.361],[25.682,1.4,39.991],[30.476,2.283,-41.79],[-25.758,2.101,18.823],[-8.877,2.1,25.619],[40.8,7.3,-16.48],[16.48,1.5,-40.8],[-22.677,2.1,-16.764],[-8.877,2.1,-25.619],[47.96,12.9,-31.9],[43,1.9,1.8],[-23.625,1.62,-21.971],[30.5,1.1,40.4],[-39.09,1.96,30.26],[-47.96,1.96,46.71],[39.71,1.96,27],[32.89,1.96,50.15],[-25.2,1.96,-30.67],[-34.69,1.96,-43.14],[-47.68,0.678,50.608]] as const;
+// 38 live light positions (census-49 exact, world-wide incl. 2 r64 mile lanterns for horizon glow). See LAMPS note below for scope history.
+// LAMPS = live kind=light positions. 2026-09-06 gate-lamp reseat (town-lane, Bill's obstruction correction): models+lights moved 1.75m off-axis — re-pinned from census-49.
+const LAMPS=[[0,1.2,0],[-3,2.2,-4.3],[9.9,1.96,1.75],[1.75,1.96,9.9],[-9.9,1.96,-1.75],[-1.75,1.96,-9.9],[27,1.145,-27],[36,2.35,0],[9,2.5,-26],[32.527,2.449,-32.527],[21.606,1.5,-7.557],[35.511,2.298,-23.886],[8.815,2.2,25.429],[17.883,0.604,-25.449],[21.206,0.604,-22.125],[-6.217,1.75,6.217],[38.361,2.422,-38.361],[25.682,1.4,39.991],[30.476,2.283,-41.79],[-25.758,2.101,18.823],[-8.877,2.1,25.619],[40.8,7.3,-16.48],[16.48,1.5,-40.8],[-22.677,2.1,-16.764],[-8.877,2.1,-25.619],[47.96,12.9,-31.9],[43,1.9,1.8],[-23.625,1.62,-21.971],[30.5,1.1,40.4],[-39.09,1.96,30.26],[-47.96,1.96,46.71],[39.71,1.96,27],[32.89,1.96,50.15],[-25.2,1.96,-30.67],[-34.69,1.96,-43.14],[-47.68,0.678,50.608],[16.894,0.652,68.427],[-37.091,0.608,-52.197]] as const;
 const THREE_ROOT=join(ROOT,"node_modules/three"),threeModule=join(THREE_ROOT,"build/three.module.js");
 const MOON=process.env.NIGHT_MOON==="1";const STARS=process.env.NIGHT_STARS==="1"?1:(process.env.NIGHT_STARS==="2"?2:0);
 const html=()=>`<!doctype html><style>html,body{margin:0;overflow:hidden}canvas{display:block}</style><script type="module">

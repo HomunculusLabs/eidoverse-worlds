@@ -23,17 +23,17 @@ const specs=[
  ["orchard-0046","work_1666_orchard.glb",RETEX,"ec93dc09acc0ddfa",-43.21,0.04,82.19,2.35619449],
  ["orchard-0059","work_1679_orchard.glb",RETEX,"8d3959f01e32c335",-30.84,-0.00,91.62,2.35619449],
  ["mosaic-0052","work_1669_mosaic.glb",RETEX,"83c4817f73507493",-38.97,0.01,22.50,-2.35619449],
- ["amphi","village_amphi3.glb",ASSETS,"0904c5da232cea1b",-23.32,0.04,37.31,0],
- ["skene","village_skene3.glb",ASSETS,"3a62ee83d559b3fa",-23.32,0.04,48.05,3.141592653589793],
- ["echoarch","village_echoarch3.glb",ASSETS,"f38d01bb0ce1e9bf",-18.50,0.05,57.10,5.027],
- ["mobius","village_mobius3.glb",ASSETS,"04d088e12a009993",-4.18,0.00,39.78,0],
+ ["amphi","village_amphi3.glb",ASSETS,"95a98c748df77020",-23.32,0.04,37.31,0],
+ ["skene","village_skene3.glb",ASSETS,"df7f7c434c0b87b2",-23.32,0.04,48.05,3.141592653589793],
+ ["echoarch","village_echoarch3.glb",ASSETS,"baf4c9945679fc15",-18.50,0.05,57.10,5.027],
+ ["mobius","village_mobius3.glb",ASSETS,"5617f376b39535f8",-4.18,0.00,39.78,0],
  ["windmill","village_windmill3.glb",ASSETS,"0993836012d1b17d",-40.00,0.00,0.00,1.5707963267948966],
- ["nw-lane","village_nw_approach1.glb",ASSETS,"d46a60fb3ad301e3",0,0,0,0],
+ ["nw-lane","village_nw_approach1.glb",ASSETS,"dc256065879371d8",0,0,0,0],
 ] as const;
 const files=new Map<string,Buffer>();
 for(const[n,f,dir,h]of specs){const b=readFileSync(join(dir as string,f as string));const got=createHash("sha256").update(b).digest("hex").slice(0,16);if(got!==(h as string))throw Error(`${n} hash drift: ${got} != ${h}`);files.set(n,b);}
 // live -l light entities on the NW leg (exact census positions)
-const LAMPS=[[-39.09,1.96,30.26],[-47.96,1.96,46.71]] as const;
+const LAMPS=[[-39.09,1.96,30.26],[-47.96,1.96,46.71],[-47.68,0.678,50.608],[-25.758,2.101,18.823]] as const;
 const THREE_ROOT=join(ROOT,"node_modules/three"),threeModule=join(THREE_ROOT,"build/three.module.js");
 const html=(sky:string,fogc:string,fogn:number,fogf:number)=>`<!doctype html><style>html,body{margin:0;overflow:hidden}canvas{display:block}</style><script type="module">
 import * as THREE from '/three.module.js';import{GLTFLoader}from'/examples/jsm/loaders/GLTFLoader.js';
