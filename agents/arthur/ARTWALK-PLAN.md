@@ -810,6 +810,32 @@ CURRENT hosts. Findings and actions:
   steady; zero uploads (store already held all libs); 2 verbs total
   (b26 remove+spawn).
 
+### [artwalk-52] FULL-FLEET ANCHOR RECONCILIATION — SHARD ROW EXECUTED (2026-09-06) — CLOSED (verification, zero mutations)
+Executed the IMPROVE-PLAN shard row ("nx-artwalk riders | 54 | host-anchor
+reconciliation stays artwalk's own") as priority work per the fleet-tick
+directive. New durable lane-owned verifier `artwalk52-fleet-anchor-reconcile.ts`
+(read-only, zero verbs/uploads) runs the complete artwalk-39 continuity law
+across the whole fleet from one fresh census:
+- 259 census / 54 riders present / 38 lights; comps only h6/h7 motion bags.
+- Host pins: all 34 b-series placers' HOST/HL pins match live host libs
+  (strict + loose + multi-rider forms); zero stale, zero gone — artwalk-51's
+  b8 re-pin and artwalk-49's 17-placer re-pin both holding.
+- Host-derived anchors: every single-rider rider's live pos inverse-transformed
+  into its host's local frame and compared to the placer's pinned L — b13
+  IDS/LOC pair (rider yaw = host yaw + π), b4 three-spec gate set, b34/b26
+  four lamp way-bands (concentric, dYaw 0), b7 shrine stars exact host-derived
+  tuple. All within 1e-4.
+- Static h-series tuples (6 models) and all 7 `-l` light companions verified
+  exact against placer pins (h3 carries an OLD_LIGHT_POS migration constant;
+  live matches the CURRENT pin).
+First run reported false DRIFT on 19 pins and the b13 pair — both comparison
+bugs (store/ prefix not stripped before startsWith; −π vs +π same-angle), fixed
+in the same tick; world state was never wrong. Final: ALL_RECONCILED exit 0.
+Zero world mutations, zero uploads, zero verbs, no shared-budget use; no
+visual PASS claimed. Lane still HOLDS for Bill's counting-series eye-gate
+verdicts (reviews/artwalk-counting-series-eye-gate.md) or a Phase F
+commission; this verifier is now the cheap lawful hold check for future ticks.
+
 ### [artwalk-51] STABLE HOST-PIN REFRESH, THIRD GENERATION (2026-09-06) — CLOSED
 Sibling improve-11/12 evolved `nx-town-stable` (5beff62e→98f2d5b6: road-side
 livery entrance, partition cut + stallrail removal, curb split, trough move).
