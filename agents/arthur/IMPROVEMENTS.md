@@ -4175,4 +4175,6 @@ fixes ≈ 6 F.)
 
 - [waysign-21] pipeline-mode hold tick (5th) — queue complete (8/8 R1, R2 7/7, both court brace closures); zero OPEN IMPROVE-PLAN rows route to nx-sign-* (sharding read fresh at source); eye-gate packet 8b88b6b3 zero verdicts; gate ALL PASS exit 0 at eb49d8a; census 259 ALL 8 nx-sign riders PIN_EXACT (basename-prefix compare; a mid-string tail-slice probe first read 0/8 false-DRIFT — world right, probe wrong, waysign-18 law applied) + all 8 hosts LIB_STABLE (stable 98f2d5b6, court 59534b10); before-baselines re-hash-verified (bakery 599194ee, smithy 62a8c7fc); zero mutations/uploads (D+0, E+0)
 
+- [approach-16] pipeline-mode hold tick (4th) — gate ALL PASS real exit 0 at eb49d8a; shard routing verified at source (rows 16/36 EXECUTED approach-4/5, zero OPEN rows route to nx-approach-); census 259/domain 17 all three leg libs PIN_EXACT (nw dc2560658, ne dc52264c0, sw fb04a144) + 6 leg lights + 4 gate lamps untouched; census-diff 0/0; SE leg + D3/D5 + N5-N7 Bill-bound; zero mutations/uploads (D+0, E+0)
+
 **Running total: 2370269 / 2000000**
