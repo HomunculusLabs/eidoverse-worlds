@@ -1110,3 +1110,12 @@ c5964bc8→c92c1f91 (a rerun had been dying on "hall host drift"). Idempotent
 rerun after re-pin: zero verbs, PLACED_VERIFIED, host-relative anchor
 (−4.28,1.1,0) exact, fresh live SAT minGap 3.245m vs `nx-struct-waterstair`.
 Zero world mutations, zero shared-budget use; no visual PASS claimed.
+
+### [artwalk-63] PIPELINE HOLD (2026-09-06) — CLOSED (hold, zero mutations)
+Fourth consecutive steady hold tick. Gate ALL PASS real exit 0 at HEAD
+3914a3b. Shard routing checked at source: zero OPEN IMPROVE-PLAN rows route
+to nx-artwalk-*. Eye-gate packet 48bea194 unchanged, zero verdict markers.
+Hold verification: fleet reconcile ALL_RECONCILED exit 0 (259/54/38/34/32/24,
+zero verbs, zero uploads); census-diff vs artwalk-62 capture 259/259, 0 new,
+0 gone, 0 rider drift. Lane holds for Bill's counting-series eye-gate
+verdicts, a Phase F fresh commission, or a queue widening.
