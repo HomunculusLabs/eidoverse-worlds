@@ -30,14 +30,15 @@ anchors. Budget = live count (never exceed existing density).
 - **NE — CRAFT**: work yard (dress-2, placed), ~~stone benches~~ (dress-6,
   placed), woodstack
 - **SE — WILD**: path spurs (walk-tested), border stones (dress-3, placed),
-  cairn marker
+  ~~cairn marker~~ (dress-7, placed — SE queue COMPLETE)
 - **SW — CONTEMPLATIVE**: ~~gravel paths~~ (dress-4, walk-tested 7/7),
   lamps (budget-bound), prayer stones
 
 Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
 (dress-1..4 complete — first full rotation 2026-09-06; dress-5 = NW round 2,
 skeps DONE 2026-09-06; dress-6 = NE round 2, benches DONE 2026-09-06;
-NE round 2 remaining: woodstack)
+dress-7 = SE round 2, cairn DONE 2026-09-06 — SE queue complete; next up:
+SW round 2 = prayer stones, then NE woodstack, NW log pile/stile)
 
 ## Siting log
 
@@ -183,6 +184,63 @@ NE round 2 remaining: woodstack)
   gravel value reads too dark in context, it re-colors (one pass).
 
 ## Ledger
+
+- dress-7: BUILT + PLACED + VERIFIED (2026-09-06 overnight fleet wave).
+  Entry covers the two-version iteration and the hard siting fight (two
+  arrival-cone gate catches, walking-band occupancy decode, NAMED exemption).
+  See siting log below.
+
+### dress-7 — SE Wild cairn waymark (PLACED, LIVE)
+
+- **Concept contract**: on the az-315 visitor corridor, PAST the forest-0044
+  wall and dress-3's border stones, one tall deliberately-stacked dry-stone
+  cairn stands ON-axis at the wild threshold — the walker-built trail marker
+  that says "the path continues here" when the ground turns fully wild.
+  Distinct from dress-3's field-clearing piles (low, plural, messy) and from
+  the r93 wild-cairnfield WORKS (art scale): corridor scale, one column,
+  5 tapering courses + pale quartz token cap (the "added by the last walker"
+  human mark), wide rough base slab, one moss-flecked course, two kicked
+  strays. Grounds USE: wayfinding. Static, unlit — spends no lamp budget
+  (SE budget 8, used 0).
+- **Build**: `assets/mkv3-dress-se-cairn1.ts` →
+  `assets/village_dress_se_cairn1.glb`. Two-version iteration (ZAI fallback
+  vision — native provider-down error 1210, 8th consecutive tick; disclosed):
+  - v1 (`e428b2fc…`): PASS 3/3 gameplay + 3/3 close, but both judges left a
+    convergent margin note (cap token small/marginal) — taken in one pass
+    per the waysign-6 v5 precedent.
+  - v2 (sha `bc601ed2dfc33fa04ba06cee893a1225473a153a000e44bfb48cf813a0fa2c99`,
+    double-rebuild byte-identical) **ACCEPTED** 3/3 gameplay PASS. Cap
+    enlarged 0.14→0.17 and brightened 0xd9d6cf→0xe8e5de. Standing margin
+    note: do NOT shrink the cap further; upper-stack slenderness flagged for
+    Bill's eye-check.
+- **Decode (final)**: 3 nodes (budget 3–25 ✓); bbox x −0.641..0.987
+  (center +0.173, half 0.814), z −0.599..0.664 (center +0.033, half 0.632),
+  y −0.071..2.323. No light anchors, empty comp bag by design.
+- **Siting (census 251)**: the gates caught two bad candidates before any
+  mutation — (a) r78 NE-side: 17° inside nx-wild-cairn-0043's plaza-ward
+  cone at 15.8m (a waymark that close to a cairnfield work confuses the
+  read); (b) r84 on-axis: 14.4° inside nx-wild-wayside-0045's cone at 17.5m.
+  Corridor r70–82 all fail source-true walking-band clearance or sit on the
+  dress-3 run. Resolved by a WALKING-BAND OCCUPANCY DECODE of forest-0044's
+  live bytes (retex copy sha 43e4c8c3… verified == live lib): one connected
+  130-cell (1m grid, y<2.5m) cluster, world center (48.50, −58.22) —
+  `dress7-forest44-occupancy.ts`. **Final pose**: (58.70, 0.0076, −58.70),
+  yaw −45°, r83 on-axis; source-true cell clearance 3.37m ≥ 1.4m; cones clean
+  (0043 35.1° at 12.6m, wayside-0045 far, cairn-0048 far); rim corners
+  82.1..83.9 ∈ [66,108] ✓; terrain flat (Δ2mm).
+- **Placement**: `se-dress7-place.ts` — hash gate → blocker-epoch guard
+  (forest-0044, dress-3 stones, cairn-0043/0048, forest-0057) → fresh-census
+  SAT + rim + arrival-cone gates (NAMED source-true exemption for
+  forest-0044's fat compound bbox, numbers in placer header) → upload
+  (content-addressed) → spawn → post-place tuple verify. **PLACED_VERIFIED**
+  `nx-dress-se-cairn-001` @ lib `store/bc601ed2dfc33fa0.glb`,
+  pos (58.70, 0.0076, −58.70), yaw −45°. Idempotent rerun: 0 verbs.
+- **Eye-check for Bill**: walk the SE corridor out past the border stones
+  and through the forest gap — at the far edge, one tall stacked-stone
+  column with a pale cap should stand clear on the walking line, reading
+  "path continues" (not rubble, not a duplicate of the big cairnfield art
+  works to the sides). If the upper stack reads post-like/slender at an
+  angle, it thickens in one pass.
 
 - dress-6: BUILT + PLACED + VERIFIED (2026-09-06 overnight fleet wave).
   Entry covers the four-version iteration (bench-2 parallelization, support
