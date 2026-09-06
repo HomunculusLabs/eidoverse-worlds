@@ -9,11 +9,16 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 | tag | date | census | overlap | walks | integrity | verdict |
 |-----|------|--------|---------|-------|-----------|---------|
 | sweep-1 | 2026-09-05 | 227→229 (+2 mile-nw pair, mid-tick, domain-valid) | ALL CLEAR (194 bbox ents, 202 classified, 0 unclassified) | tier-1 4/4 ALL PASS | pins 15/15, carousel comps 7/7, lamps standing, woodyard lib 1f2c6f592095b204 exact, ledger law exact, gate exit 0 | CLEAN SWEEP |
+| sweep-2 | 2026-09-06 | 229→234 (+5 mid-tick siblings: dress-1 hedge, waysign-1 stable sign, mile-2 NE pair, waysign-2 dyer sign — all domain-valid, tuples match ledgers, 0 departures) | ALL CLEAR at 234 (196 bbox ents, 209 classified, 0 unclassified, re-run post-arrival) | tier-1 4/4 ALL PASS (0.38/0.38/0.37; NE re-walked post-arrival) + tier-2 inn 0.364 / stable 0.396 ALL PASS | pins 15/15, carousel comps 7/7, gate lamps + -l lights standing, woodyard 1f2c6f592095b204 exact, ledger law exact, interlane md5 stable, gate exit 0 | CLEAN SWEEP |
 
 ## Findings register
 
 sweep-1: none. All 89 raw overlap hits classified into standing classes with
 named precedent (below). No defect notes written to any owning lane.
+
+sweep-2: none. Mid-tick sibling arrivals observed and classified in-flight
+(expected fleet behavior); overlap re-run after their landing stayed ALL CLEAR.
+No defect notes written. Next tier-2 pair (sweep-3): longhouse + tower-house.
 
 ## Overlap exemption classes (frozen in sweep-sat-next.ts)
 
