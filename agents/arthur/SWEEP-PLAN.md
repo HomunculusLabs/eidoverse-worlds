@@ -54,8 +54,38 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 | sweep-32 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented lib change at identical tuple: nx-struct-spiralfolly 20c515a0→b85ce018 (struct-39 shard row 14 honest-carriage rebuild, uncommitted at this tick — placer next-place-struct-spiralfolly.ts + mkv3-spiralfolly.ts modified in tree, ledger entry [struct-39] present uncommitted, PLACED_VERIFIED + idempotent per its own prose) — domain-valid sibling work-in-flight, not drift; snapshot rewritten raw sha 65184df6bfe4bcd5, 1-line diff, post-rewrite drift vs live ZERO) | ALL CLEAR at 259 (221 bbox non-light, 229 classified, 0 unclassified, exit 0 — live set includes the new spiralfolly bytes) | tier-1 4/4 ALL PASS (core 64 legs ALL_PASS; NW / NE / SW legs run individually, real exit 0, verdicts content-anchored; SW stderr abstentions = known normalized set, unchanged) + tier-2 hall + row-cottage ALL PASS (tenth cycle) | pins 14/15 + 1 classified (angler live b3dfb28a UNCHANGED; local 8c1a5047 = known quarantined sibling improve draft, same class as sweep-28..31; racing law), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4, windmill standing 0993836012d1b17d, woodyard 1f2c6f592095b204 exact, 38 lights, ledger law exact (2370258 at gate; artwalk-53..56 sibling holds appended mid-tick, prefix-disjoint), interlane md5 f6254cd02cbcbee79e54104669be6981 stable, standing gate real exit 0 at HEAD 2003491 (artwalk-53, zero-mutation hold) | CLEAN SWEEP |
 
 | sweep-34 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, EIGHT documented domain-valid lib changes at identical tuples across two live reads: sign-bakery→waysign-15, hypar→struct-40, hedge→dress-21/24, shrine→improve-14, smithy→waysign-16, pendulum→struct-41, sw-lane→approach-13 D4 — all match committed ledgers/in-tree placers) | ALL CLEAR 221/230/0 exit 0 (SAT re-run twice) | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37 re-walked post-D4) + tier-2 twelfth cycle inn 0.36 + stable 0.325 ALL PASS | pins 14/15 + angler classified (hypar resolved), carousel comps exact 7, gate lamps 4/4, windmill+woodyard pins exact, 38 lights, ledger law exact, interlane md5 f6254cd0 stable, standing gate real exit 0 at 969a7bf, snapshot rewritten final sha e2012f709effaab3 drift ZERO | CLEAN SWEEP |
+| sweep-35 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, ONE documented domain-valid lib change at identical tuple: nx-town-row-cottage bd88cd38→add42aea — committed improve-15 execution, remove+spawn exact tuple, sha ×2 deterministic, door walk re-proven by its own lane; live bbox z max 2.673→2.72 cosmetic ridge-cap consequence, walk/SAT green; server /geom payload now also emits tris+parent — normalized out of the snapshot like-for-like per sweep-9 discipline) | ALL CLEAR 221/230/0 exit 0 | tier-1 4/4 ALL PASS (core 64 legs 0.38; NW 0.38 / NE 0.38 / SW 0.37, verdicts content-anchored, `[physics]` banner parse handled) + tier-2 thirteenth cycle potter 0.366 + market 0.389 ALL PASS | pins 14/15 + angler classified (live b3dfb28a UNCHANGED, quarantined sibling draft, racing law), carousel comps exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, ledger law exact (2370273), interlane md5 f6254cd0 stable, standing gate real exit 0 at e8a9eb0, snapshot rewritten normalized sha 06765b248775d8a3 drift ZERO post-rewrite | CLEAN SWEEP |
 
 ## Findings register
+
+sweep-35: none. Census 259==259 (0 arrivals, 0 departures). ONE documented
+lib change at identical tuple, classified domain-valid against the COMMITTED
+improve-15 ledger entry: nx-town-row-cottage bd88cd38→add42aea at
+(-23, 0, -17) yaw 0.9411511 — remove+spawn exact tuple, sha add42aea ×2
+deterministic, comp {} both sides, 6-leg MCPL door walk ALL_PASS 0.3838
+re-proven by the improve lane itself, and this sweep's tier-1 core walk +
+SAT both green over the same live bytes. Live bbox z max 2.673→2.72
+(+4.7cm, the solidRidge cap consequence documented in the improve-15 entry:
+"bbox unchanged 5.9x4.695x5.346" refers to x/y; the z envelope grew by the
+cap depth — cosmetic, no overlap consequence, SAT ALL CLEAR includes the
+new bbox). Server payload observation, not a finding: /geom now emits tris
+and parent fields the baseline shape never carried; the snapshot rewrite
+normalizes them out per the sweep-9 like-for-like discipline (drift keys on
+id/pos/yaw/lib only; post-rewrite drift vs live ZERO on those keys).
+Integrity classification, not a finding: struct fleet pins 14/15 + angler
+classified (live b3dfb28a UNCHANGED; local 8c1a5047 = known quarantined
+sibling improve draft, sweep-28..34 class, racing law — do not touch).
+Probes: two of my own in-tick probes were wrong and corrected before any
+verdict (tail-3 swallow → status-string content-anchoring; a python syntax
+error and a workdir miss, both re-run clean) — probe discipline, village
+unaffected. Foreign working-tree dirt (mkv3-ring.ts, village_tower3.glb,
+court-ensemble placer, fleet watcher, review rigs, IMPROVE-PLAN/IMPROVEMENTS
+modified) is sibling work-in-flight, untouched per interlane law. No defect
+notes written. Next tier-2 pair (sweep-36): inn + stable (fourteenth cycle).
+Standing note for Bill unchanged: improve/waysign/struct/dress/approach
+lanes continue active re-place queues — expect further domain lib changes
+in coming census diffs, each classifiable only against that tick's ledger
+tail or uncommitted placer.
 
 sweep-34: none. Census 259==259 across two live reads (0 arrivals, 0
 departures). EIGHT documented lib changes at identical tuples across the two
