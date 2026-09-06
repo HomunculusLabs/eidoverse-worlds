@@ -35,6 +35,7 @@ lane_loopfile() {
     artwalk) echo ARTWALK ;;
     struct)  echo STRUCTURES ;;
     approach) echo APPROACH ;;
+    survey)  echo SURVEY ;;
     *)       echo "" ;;
   esac
 }
