@@ -667,7 +667,7 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     element, no strut/receiver geometry. Sev 3 stands. Evidence:
     reviews/survey3-slice/soundmirror/gameplay.png]
     [ZAI-survey-4 re-judge (fallback, disclosed): ziggurat read, black
-    void interior (no concavity/specular cue), gizmo cross all
+    ziggurat read, black void interior (no concavity/specular cue), gizmo cross all
     re-CONFIRMED; NEW: failure is angle-dependent — the identity lives
     in the concave dish face, which is edge-on/occluded at the 18m
     gameplay angle; silhouette fix alone cannot carry identity.
@@ -684,6 +684,7 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     corroborated (survey-4 NEW finding stands). 2 native + 2 fallback
     unanimous across all four rounds. Sev 3 stands. Evidence:
     reviews/survey5-slice/struct-soundmirror/gameplay.png]
+    [EXECUTED struct-45: root cause DECODED AT SOURCE — the build's zW = H − r²/(4F) INVERTED the parabola (center high, rim low): the "dish" was a convex 3-plateau mound. Fixed: 5 rings centered on the true conic z = r²/(4F) (concave bowl, floor at plinth, rim 0.98m), stand from bowl floor to true focus (1.26m) ending in a 3-prong beaded crown holding the enlarged brass ring, ashlar to family stone texMat lane (struct-38 law — the curvature cue); brass night emissive retained (struct-33). Native before-judge confirmed all 3 findings; ZAI after-judge (native down, disclosed): concave parabolic stepped dish reads "very successfully", fountain identity, no voids/regressions; 18m crown-vs-bar unresolvable at any geometry per ZAI's own framing note (close view: jeweled setting + beaded tips read); sha 5216db0a→f313e59a ×2 deterministic; re-place exact tuple (28.7, −0.026087, −18) yaw 0 comp {}, PLACED_VERIFIED + idempotent rerun, 6-leg circuit walk ALL_PASS 0.354m]
 
 27. `nx-town-mapboard` — map face dirt smudges; side edge fragments. Sev
     3. (guard: none)
@@ -704,6 +705,33 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     PASSES (cap+panel+two legs+shadow reads kiosk/board) — structure
     passable, map FUNCTION failed. Sev 3 stands, native-cleared for
     execution. Evidence: reviews/survey5-slice/town-mapboard/gameplay.png]
+    [CONTRACT improve-18 (this): ROOT CAUSE decode-proven at source —
+    onBoard() tilts chips −0.21 from HORIZONTAL while the slab is −0.21 from
+    VERTICAL, so the chip field is a near-horizontal tray PERPENDICULAR to
+    the face (plane-normal dot ≈ 0), smearing ±0.6 fore-aft through BOTH
+    faces (36 verts stab through the b22 compass rider on the plaza side —
+    the survey's "noise"); authored map spans 2.79×2.76 vs the 2.44×1.64
+    bone plate (maxChipX 1.405 vs plate 1.22 — the "stray fragments both
+    edges"); census z-extent 2.63 for a ~0.5-deep board. FIX: rebuild the
+    map block into a board-local mapG (slab's own tilt+center), chips ride
+    the −z face at board-local z −0.115; uniform S=0.55 fits the round map
+    (content rim 1.43·0.55=0.787 ≤ plate half-width 1.22; 1.4·0.55=0.77 ≤
+    half-height 0.82); skeleton absolute floors preserved (torus tube 0.03,
+    spoke width 0.05, hearth r≥0.06 emissive 1.5) so ring+spokes+blocks
+    read at 18m; spokes extended hearth→ring (connectivity semantics);
+    flatten-to-world-bake before merge (dress-10 direct-children law).
+    NOT in scope, recorded residuals: chip layout data stays era-2
+    heritage (commons-next cartography needs a scale decision — round-2
+    candidate); board orientation + b22 rider untouched (compass = plaza
+    face, map = far face, artwalk's committed design; host tuple EXACT).
+    FALSIFY: decode audit RED(x8 on baseline)→GREEN; identical-camera
+    renders both faces day+night, before vs after; judge confirms face
+    reads cartography (ring/spoke/block structure) not noise, zero
+    fragments outside silhouette; re-place remove+spawn exact tuple +
+    idempotent rerun; census bbox z-extent ~0.5; siblings byte-identical.
+    REVERT: checkout mk source, rebuild (byte-repro proven this tick),
+    re-place old sha 1f1a10f4dce71a0e at same tuple.]
+
 28. `nx-town-monument` — pinhole at ring intersection; pedestal face
     crushed. Sev 3. (guard: none)
     [ZAI-survey-4 PARTIAL (fallback, disclosed): pinhole CONFIRMED minor

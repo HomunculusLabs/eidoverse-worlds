@@ -1,7 +1,7 @@
-// next-place-struct-soundmirror.ts — struct-31: R3-5 THE SOUND MIRROR.
-// commons-next only. NEW entity nx-struct-soundmirror (structures lane).
-// Seat (27.5, -20) yaw 0 on the NW flank between hall and h2, 1.48m min
-// gap. Furniture-solid collider correct (fixed instrument). No comps.
+// next-place-struct-soundmirror.ts — struct-45: SHARD ROW 26 soundmirror
+// true-bowl rebuild. commons-next only. Existing entity nx-struct-soundmirror
+// (structures lane), re-placed at its EXACT standing tuple (lib swap in
+// place via remove-gated spawn-replace — struct-33 chassis). No comps.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 const ROOT = "/Users/t3rpz/projects/eidoverse-worlds", WORLD = "commons-next";
@@ -11,9 +11,9 @@ const YAW = 0;
 const m = {
     id: "nx-struct-soundmirror",
     file: "village_soundmirror3.glb",
-    sha: "5216db0a22ea8b2158bbb144c1bc481673dde42b10dd7ea3d0edffa405b2d79a",
-    prevSha: "77913d8a3508a426698c2eee0573cab5f3b8998a58a23fd32be46690b349e66c", // struct-31 baseline
-    bbox: { min: [-2.35, 0, -2.35], max: [2.35, 1.45, 2.35] },
+    sha: "f313e59a69bff540c95769561c7978f9c8c9443bfa9e4ce2e55a0ec7519dcaf7", // struct-45 true-bowl + crown
+    prevSha: "5216db0a22ea8b2158bbb144c1bc481673dde42b10dd7ea3d0edffa405b2d79a", // struct-33 baseline (standing)
+    bbox: { min: [-2.35, 0, -2.35], max: [2.35, 1.4, 2.35] }, // true-bowl envelope: rim 0.98, crown bead ~1.32 (center region floor −0.03)
     comp: {},
 } as const;
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
@@ -71,7 +71,7 @@ const needComps = !exist || !eq(exist.comp ?? {}, m.comp);
 if (!exist || (exist && exist.lib === `store/${m.prevSha.slice(0, 16)}.glb`)) {
     const u = new URL(`${base}/upload`);
     u.searchParams.set("token", cfg.agentToken);
-    u.searchParams.set("name", `commons-next ${m.id} struct-33`);
+    u.searchParams.set("name", `commons-next ${m.id} struct-45`);
     u.searchParams.set("by", cfg.id);
     let lib = "";
     for (let a = 1; a <= 5; a++) {

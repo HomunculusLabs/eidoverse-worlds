@@ -248,8 +248,30 @@ PASS (continuous stone lintel→dome, bands flush, zero light leaks);
 sha eb3c9b15→3d9d6ae1 ×2 deterministic at the exact standing tuple,
 1 verb, idempotent 0-verb rerun, companion light standing, door walk
 5/5 ALL_PASS max 0.389m).
-Oldest OPEN uncontested rows after struct-44: row 26 soundmirror
-(Sev 3), row 10 angler (sibling in-flight, un-shard clock applies).
+struct-45 = row 26 soundmirror (EXECUTED, live — N%3==0 refine-cadence
+tick; all four survey rounds' Sev-3 findings (ziggurat/mound, flat
+near-black top, gold gizmo cross) one cause-family DECODED AT SOURCE:
+zW = H − r²/(4F) INVERTED the parabola — the "dish" was a convex
+3-plateau mound; TRUE FORM restored: 5 rings centered on the conic
+z = r²/(4F) (concave bowl, floor at plinth, rim top 0.98m), stand from
+the bowl floor to the true focus (1.26m) terminating in a 3-prong
+beaded crown holding the enlarged brass ring (r0.36 — receiver
+geometry, survey-3's ask), ashlar to family stone texMat lane
+(struct-38 law — the mottled coursing is the curvature cue the plain
+mat() interior lacked), brass warm emissive retained (struct-33 dusk
+lineage judged intact: warm marker pops, stepped silhouette reads,
+interior borderline-dark disclosed polish-class); ZAI after-judge:
+concave parabolic stepped dish reads "very successfully", fountain
+identity, zero voids/regressions; 18m crown-vs-bar unresolvable at any
+geometry per ZAI's own framing analysis (close view reads jeweled
+setting with beaded tips) — disclosed; native down for the after-frame
+(1210 ×2, paced retry spent), native re-judge owed on return; sha
+5216db0a→f313e59a ×2 deterministic at the exact standing tuple, 1
+verb, idempotent 0-verb rerun, 6-leg circuit walk ALL_PASS 0.354m).
+Oldest OPEN uncontested rows after struct-45: row 10 angler (sibling
+in-flight, un-shard clock applies) — no other OPEN nx-struct- rows at
+source; next own-queue work awaits the sibling angler window resolving
+or a Bill verdict.
 Open with Bill: R2-3 relocation options (struct-22).
 
 ## Siting log
@@ -297,6 +319,7 @@ Open with Bill: R2-3 relocation options (struct-22).
 | struct-41 | SHARD ROW 35: pendulum rod carriage fix | exact standing tuple (25.01, −0.04056606885178893, 25.9) yaw 0 | 0 | — | LIVE, lib 0a3120b2→c32a35a8, circuit walk 5/5 |
 | struct-43 | SHARD ROW 24: amphi stepped-bowl rebuild | exact standing tuple (−23.32, 0.03982105168676789, 37.31) yaw 0 | 0 | — | LIVE, lib 0904c5da→95a98c74, circuit walk 10/10 |
 | struct-44 | SHARD ROW 25: observatory front-bay closure | exact standing tuple (16.48, −0.05244011, −40.8) yaw −0.3839 | — | — | LIVE, lib eb3c9b15→3d9d6ae1, door walk 5/5 |
+| struct-45 | SHARD ROW 26: soundmirror true-bowl rebuild | exact standing tuple (28.7, −0.02608747, −18) yaw 0 | 0 | — | LIVE, lib 5216db0a→f313e59a, circuit walk 6/6 0.354m |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
