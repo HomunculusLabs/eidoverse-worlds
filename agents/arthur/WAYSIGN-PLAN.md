@@ -878,6 +878,18 @@ only when native is down that tick, disclosed.
   eye-gate verdicts (`reviews/waysign-eye-gate.md`); any visual
   correction re-opens that sign's build ahead of rotation.
 
+- waysign-36 HOLD (pipeline mode, 20th consecutive) — queue complete
+  (8/8 R1, R2 emblem-collapse 7/7, both court brace closures); SHARD
+  routing law re-read at source: nx-sign-* already-R2, open split
+  struct/dress/approach/improve-own only; packet 8b88b6b3 zero verdicts.
+  Hold verification FRESH: standing gate ALL PASS real exit 0 at HEAD
+  914f7a5; census 259, exactly 8 nx-sign ids no strays, all 8 riders
+  PIN_EXACT at ledgered libs AND tuples, comp bags empty 8/8; all 9
+  hosts LIB_STABLE; stable anchor re-derived fresh = (0,0,2.1) exact;
+  interlane f6254cd0 steady. Zero mutations, zero uploads. HOLDS for
+  Bill's eye-gate verdicts (`reviews/waysign-eye-gate.md`); any visual
+  correction re-opens that sign's build ahead of rotation.
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
