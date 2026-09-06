@@ -38,7 +38,6 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   reads generic ornamental fountain, millrace function absent. Evidence:
   `agents/arthur/reviews/survey2-sev2-slice/millrace/gameplay.png`.
   Queue row 13 standing — no duplicate row created.
-
 - [survey-3, 2026-09-06, ZAI FALLBACK (native 1210 x2, one paced retry —
   disclosed; native re-judge owed), 18m gameplay, live bytes 8e4643de]
   `nx-struct-hypar` CONFIRMED Sev 2 — row findings re-confirmed plus
@@ -81,6 +80,34 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   before any execution. Evidence: reviews/survey4-slice/struct-*/
   gameplay.png. Queue rows 22-26 standing — no duplicate rows created.
 
+- [survey-5, 2026-09-06, NATIVE, 18m gameplay, live bytes 68edf12c]
+  `nx-struct-mobius` Sev 3 — jagged edge + right-half slit CONFIRMED
+  NATIVE (slit x512-573 y268-280 ~55-60px wide, right of the center
+  post; V-notch steps at panel seams); identity upgraded to CLEAN at
+  native (reads deliberate mathematical pavilion). Rows 22-26
+  annotations applied in IMPROVE-PLAN this tick; queue row 23 standing.
+- [survey-5, 2026-09-06, NATIVE, 18m gameplay, live bytes 43d0c955]
+  `nx-struct-amphi` Sev 2-3 ALL FOUR native-confirmed — disconnected
+  straight slabs with gaps + central aisle x332-490; telephone-pole
+  silhouette (shaft+T-crossarm+insulator knobs+ball finial) reads
+  telecom infrastructure; bowl flat (checkerboard disc, no tiers);
+  wrap ~120-150deg single bank. Queue row 24 standing.
+- [survey-5, 2026-09-06, NATIVE after one paced retry, 18m gameplay,
+  live bytes acd0259e] `nx-struct-observatory` Sev 3 scope NARROWED —
+  flanks attached, defect localized to front-center bay x425-545
+  y255-300: floating trim fragments + two exact-sky slits (y255-268,
+  y285-298); dome clean and coherent. Queue row 25 standing.
+- [survey-5, 2026-09-06, NATIVE after one paced retry, 18m gameplay,
+  live bytes e5f2fc69] `nx-struct-soundmirror` Sev 3 unanimous across
+  four rounds — ziggurat silhouette (zero tilt/rim-lip), black-void
+  interior (no specular/gradient), gizmo cross (2-7px unshaded gold,
+  no shadow). Queue row 26 standing.
+- [survey-5, 2026-09-06, ZAI FALLBACK (native 1210 x2, paced retry
+  burned), 18m gameplay, live bytes 8e4643de] `nx-struct-hypar` Sev 2-3
+  — fallback resolves the survey-3/4 contradiction toward DEFECT
+  (hovering lower tips 20-45px, center sky-notch 130x70px); native
+  re-judge STILL OWED (flap law recorded). Queue row 22 standing.
+
 ## Design queue
 
 1. [DONE struct-2] S-1 The Observatory — era-1 heritage reborn: ashlar drum
@@ -110,6 +137,7 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    the Observatory on the NW walk.
 2. **T-2 Millrace Cascade** — [DONE struct-8] harmonic seven-step water
    descent west of the windmill; head-race + sluice + basin.
+
 3. **T-3 Pendulum Wave** — [DONE struct-9] nine pendulums frozen at
    maximum coherence, bobs tracing one sine curve; NE path past the
    woodyard. Static by honest design (spin vocabulary can't express

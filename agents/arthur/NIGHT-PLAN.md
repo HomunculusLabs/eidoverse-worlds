@@ -637,3 +637,24 @@ STUDY COMPLETE (all facets judged; packet assembled).
   tick via the census kind field (kind==light = 38; token-grep
   heuristics overcount at 45 and are not the standing rule). Zero world
   mutations, zero renders judged, no PASS claimed.
+- night-24 (2026-09-06, pipeline-mode hold tick): seventeenth consecutive
+  hold with NO disposition change. Standing gate ALL PASS real exit 0 at
+  HEAD e06f69c (dress-19). Fresh census-24: 259 entities / 38 lights /
+  zero night-prefixed, 0 new / 0 gone vs census-23 with ONE domain-valid
+  sibling lib change at identical tuple: nx-dress-ne-woodstack-001
+  c832da5d -> 692bc54e = dress-19's committed reseat landing after the
+  census-23 capture (kind=thing, comp {}, zero lights touched, nothing in
+  this register or the packet cites it; capture /tmp/night-census-24.json).
+  Method note: census wrapper is {world, entities, mounts} — diff must key
+  on ['entities'] (shape trap recurred, corrected before trusting). D1 pin
+  nx-approach-nw-lane-001 lib dc256065879371d8 exact steady. Packet md5
+  cdc435a2 unchanged since night-7. APPROACH-PLAN still last touched
+  b1195ef, five defect-note sections stand (D1 CLOSED by owner; D2-D5
+  budget-bound; N1/N2/N4-N7 informational). Interlane md5 f6254cd0 steady.
+  Zero actionable night- shard rows in IMPROVE-PLAN (night- is an
+  observer). DRESSING-PLAN lamp ledger re-read: SW lamps still 0 of 3,
+  blocked on Bill a/b/c. Same four verdict classes outstanding: sky
+  facet-5, lamp-budget policy D2-D5+N6, N5 detached-orb, N7 hierarchy
+  inversion. Second-rotation NW pass remains the D1 verify path, deferred
+  while the lane holds. Zero world mutations, zero renders judged, no
+  PASS claimed.

@@ -38,6 +38,25 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   amphi/observatory/soundmirror/mapboard re-CONFIRMED; mobius slit
   re-opened (right-half); beltower rope/lamp re-confirmed, rungs FLIP;
   hypar fallback CONTRADICTION (clean vs survey-3 Sev 2 — native owed).
+- survey-5 (2026-09-06, NATIVE 7/8 + ZAI fallback 1/8 disclosed, 18m
+  gameplay, live store bytes all 8/8 byte-identical to survey-4
+  evidence pins): native-owed backlog slice (rows 21-28). Beltower 3/3
+  re-CONFIRMED NATIVE (rope float knob y448-462 ~25-30px air; lamp
+  fused at beam/post convergence x516-523 y208-215; rungs float — one
+  faint stringer only, right ends in open air — resolves the fallback
+  flip-flop). Mobius slit+jag CONFIRMED NATIVE, identity UPGRADED to
+  deliberate pavilion. Amphi 4/4 CONFIRMED NATIVE (unanimous). 
+  Observatory scope NARROWED to central-bay slits (flanks attached).
+  Soundmirror 3/3 CONFIRMED NATIVE (unanimous across four rounds).
+  Mapboard FULL CONFIRM NATIVE (silhouette passes, map function
+  failed) — native-cleared for execution. Monument pinhole
+  re-CONFIRMED NATIVE at same spot, pedestal crafted; Sev 4 stands.
+  Hypar: ZAI fallback (native 1210 x2, retry burned) resolves the
+  survey-3/4 contradiction toward DEFECT — hovering tips 20-45px,
+  center sky-notch 130x70px; native re-judge STILL OWED. Census 259
+  steady vs sweep-30 snapshot (0 arrivals, 0 departures; one
+  domain-valid lib change nx-sign-potter-001 bc05a4f3->3a6c8fe7
+  waysign-13). Zero world mutations.
 
 ## Routed notes
 
@@ -70,8 +89,15 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   — ZAI verdicts, see STRUCTURES-PLAN SURVEY INTAKE + IMPROVE-PLAN rows
   22-26 annotations. `nx-town-belltower` (improve-own) — ZAI-partial
   annotation on IMPROVE-plan row 21 (rope confirmed, rungs dropped).
-- survey-4: struct rows 22-26 re-judge annotations in IMPROVE-PLAN +
+- survey-4: struct rows 22-26 re-judge annotations in IMPROVE-PLAN + 
   intake lines in STRUCTURES-PLAN (see above); improve-own rows 21/27/28
-  annotated in IMPROVE-PLAN (beltower flip, mapboard confirm, monument
+  annotated in IMPROVE-PLAN (beltower flip, mapboard confirm, monument 
   partial). All fallback-judged; native re-judge owed on beltower/hypar
   flips + the standing survey-3 ZAI rows before execution.
+- survey-5: rows 21-28 ALL annotated in IMPROVE-PLAN (7 native, 1
+  fallback); struct intake x5 + improve-own intake x3 in owning plans
+  (STRUCTURES-PLAN SURVEY INTAKE for mobius/amphi/observatory/
+  soundmirror/hypar; IMPROVE-PLAN rows 21/27/28 carry their own
+  annotations — improve lane's own plan is the intake surface for
+  nx-town-*). No new candidate rows: all 8 objects already stand in
+  the round-1 queue — annotations only, no duplicates created.

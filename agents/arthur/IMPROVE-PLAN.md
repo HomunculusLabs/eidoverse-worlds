@@ -397,6 +397,18 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     (no resolvable stringers, ticks-over-X-brace) — fallback flip-flop
     vs the survey-3 drop, native re-judge owed. Evidence:
     reviews/survey4-slice/town-belltower/gameplay.png]
+    [NATIVE-survey-5 re-judge (restored native, 18m, exact live bytes
+    29f28b53 == survey-4 pin): rope float re-CONFIRMED NATIVE — terminus
+    knob/handle at x481-495 y448-462, ~25-30px of empty air below, zero
+    cleat/beam/floor anchor; lamp-fuse re-CONFIRMED NATIVE — single warm
+    dot x516-523 y208-215 embedded exactly at the eave/belfry-beam/post
+    convergence, no bracket/housing/mount separation; rungs re-CONFIRMED
+    FLOATING NATIVE (resolves the fallback flip-flop toward float): ~10
+    discrete bars x455-471 y283-470 at 20px pitch, at most ONE faint
+    stringer line hugging the left leg, right rung-ends terminate in
+    open air between the legs. All three sub-findings now native-confirmed;
+    Sev 3 stands (engine-1 ladder-comp note rides the row). Evidence:
+    reviews/survey5-slice/town-belltower/gameplay.png]
 
 22. `nx-struct-hypar` — dangling batten; hovering batten ends; ragged
     tips. Sev 2–3. (guard: none)
@@ -415,6 +427,19 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     legible, ruled-surface twist reads. Irreconcilable with survey-3
     Sev 2; row MUST hold for NATIVE re-judge before any execution.
     Evidence: reviews/survey4-slice/struct-hypar/gameplay.png]
+    [survey-5 (ZAI fallback AGAIN, native 1210 x2 burned its paced retry,
+    disclosed — native STILL owed; flap law recorded): resolves the
+    contradiction toward the DEFECT side — upper batten ends anchored at
+    the arc-rail pivots (ball finials ~(250,173)/(712,172)) BUT lower
+    ends hover ~20-45px above the deck (left tips (243,418)/(280,432)/
+    (318,446), right (688,412)/(652,428)/(615,442); batten shadows on
+    the deck prove elevation); top-center sky-through notch x455-585
+    y282-352 (~130x70px) splits the silhouette into two wing-halves
+    though an X-lattice interlace below (x360-600 y310-435) keeps them
+    one structure; twist reads at the wings, muddles at center (no
+    inter-member depth shading). 2 fallback votes vs 1 clean — row stays
+    Sev 2-3 pending the owed native pass. Evidence:
+    reviews/survey5-slice/struct-hypar/gameplay.png]
 
 23. `nx-struct-mobius` — center slit; jagged canopy edge; hovering
     canopy. Sev 3. (guard: none)
@@ -432,6 +457,19 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     hover stays DROPPED; NEW identity-invisible — no twist/crossover
     cue at 18m, reads "pavilion with damaged roof". Sev 3 stands.
     Evidence: reviews/survey4-slice/struct-mobius/gameplay.png]
+    [NATIVE-survey-5 re-judge (restored native, 18m, exact live bytes
+    68edf12c == survey-4 pin): jagged edge CONFIRMED NATIVE — V-notch
+    steps at panel seams ~(345,118-130)/(510,110-130)/(570,112-125)/
+    (700,126-140)/(780,150-165) plus adjacent-panel height offsets;
+    right-half slit CONFIRMED NATIVE (matches survey-4) — sky gap
+    x512-573 y268-280, ~55-60px wide x 8-12px tall, immediately right
+    of the center post which penetrates the band; identity holds
+    DELIBERATE PAVILION at native (upgrades survey-4's
+    identity-invisible) — looping band twist + 5 even columns + formal
+    radial-plank deck read designed; serration reads panelization, not
+    damage. Net: 2 defect sub-findings native-confirmed, identity
+    sub-finding DOWNGRADED to clean; Sev 3 stands on the slit+jag.
+    Evidence: reviews/survey5-slice/struct-mobius/gameplay.png]
 
 24. `nx-struct-amphi` — disconnected seating slabs; flat bowl; telephone
     pole. Sev 3. (nx-struct-amphi is a struct lane work — struct lane
@@ -450,6 +488,18 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     ~10-15px, perspective-attributable, no risers); wrap ~40-45%.
     Sev 2-3 stands, pole worst. Evidence:
     reviews/survey4-slice/struct-amphi/gameplay.png]
+    [NATIVE-survey-5 re-judge (restored native, 18m, exact live bytes
+    43d0c955 == survey-4 pin): ALL FOUR native-confirmed — rows are
+    axis-aligned rectangles (left x70-262/x140-332, right x490-680/
+    x630-885) fragmented into 2-3 slabs each with gaps (~x160, x262-285,
+    x545, x680) and a wide central aisle x332-490; zero curvature;
+    telephone-pole silhouette unmistakable (shaft x451-459 y290-388 +
+    T-crossarm x420-487 y298-305 + insulator knobs + ball finial) —
+    reads telecom infrastructure, not sculpture; bowl flat — checkerboard
+    disc x208-642 y418-492, 2-3 thin rim layers, no concavity or tiers;
+    wrap ~120-150deg single rear bank, front 180deg empty. Sev 2-3
+    stands, pole worst (2 native + 2 fallback unanimous). Evidence:
+    reviews/survey5-slice/struct-amphi/gameplay.png]
 
 25. `nx-struct-observatory` — detached trim band; dome-to-wall slits. Sev
     3. (guard: none)
@@ -467,6 +517,19 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     height-mismatch sub-finding (trim line steps down at entrance);
     dome itself reads curved+coherent. Sev 3 stands. Evidence:
     reviews/survey4-slice/struct-observatory/gameplay.png]
+    [NATIVE-survey-5 re-judge (restored native after one paced retry,
+    18m, exact live bytes acd0259e == survey-4 pin): scope NARROWED —
+    left AND right flanks read ATTACHED (trim flush against wall top
+    x305-432 and x538-655, no sky behind); defect is LOCALIZED to the
+    front-center bay x425-545 y255-300 — trim splits into floating
+    fragments with two exact-sky-match see-through slits (upper y255-268
+    between dome underside and trim; lower y285-298 between trim and
+    lintel top). Dome clean, curved, coherent (smooth arc to apex
+    ~(470,205), no tears). Survey-3/4's "three detached pieces +
+    orphan chips" scope corrects to central-bay-only; lintel
+    height-mismatch corroborated (trim line steps at entrance).
+    Sev 3 stands (slits in the door-facing bay). Evidence:
+    reviews/survey5-slice/struct-observatory/gameplay.png]
 
 26. `nx-struct-soundmirror` — identity failure at edge-on (reads mound);
     black dish interior. Sev 3. (guard: struct-33 warm-seat refine Aug 31
@@ -485,6 +548,17 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     gameplay angle; silhouette fix alone cannot carry identity.
     Sev 3 stands. Evidence:
     reviews/survey4-slice/struct-soundmirror/gameplay.png]
+    [NATIVE-survey-5 re-judge (restored native after one paced retry,
+    18m, exact live bytes e5f2fc69 == survey-4 pin): ziggurat read
+    CONFIRMED NATIVE — three stacked plumb centered disks (base x356-600,
+    mid x400-562, top x428-532), zero tilt/rim-lip/bowl-mouth in the
+    silhouette; black void CONFIRMED NATIVE — top face x428-532 y344-364
+    uniform near-black, no specular, no radial rim-to-center gradient;
+    gizmo cross CONFIRMED NATIVE — 2-7px flat unshaded gold, no cast
+    shadow, dead-center vertical, no thickness cue. Angle-dependence
+    corroborated (survey-4 NEW finding stands). 2 native + 2 fallback
+    unanimous across all four rounds. Sev 3 stands. Evidence:
+    reviews/survey5-slice/struct-soundmirror/gameplay.png]
 
 27. `nx-town-mapboard` — map face dirt smudges; side edge fragments. Sev
     3. (guard: none)
@@ -495,6 +569,16 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     x544-557, floating past the body); identity reads generic dark
     kiosk/lectern, not map board. Sev 3 stands. Evidence:
     reviews/survey4-slice/town-mapboard/gameplay.png]
+    [NATIVE-survey-5 re-judge (restored native, 18m, exact live bytes
+    e6d02dd8 == survey-4 pin): FULL CONFIRM — face reads noise, not
+    cartography (isolated specks/dashes x440-535 y308-365, no road/
+    block/label semantics, no connectivity/hierarchy; single orange
+    dot x479-483 y320-324 the only chromatic hint, orphaned); stray
+    fragments BOTH edges re-CONFIRMED NATIVE (left x405-420 y320-352,
+    right x545-562 y308-322, outside the silhouette); silhouette itself
+    PASSES (cap+panel+two legs+shadow reads kiosk/board) — structure
+    passable, map FUNCTION failed. Sev 3 stands, native-cleared for
+    execution. Evidence: reviews/survey5-slice/town-mapboard/gameplay.png]
 28. `nx-town-monument` — pinhole at ring intersection; pedestal face
     crushed. Sev 3. (guard: none)
     [ZAI-survey-4 PARTIAL (fallback, disclosed): pinhole CONFIRMED minor
@@ -504,6 +588,19 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     silhouette + centered approach stair = commemorative grammar).
     Re-rank Sev 4. Evidence:
     reviews/survey4-slice/town-monument/gameplay.png]
+    [NATIVE-survey-5 re-judge (restored native after one paced retry,
+    18m, exact live bytes 8ab30593 == survey-4 pin): pinhole
+    re-CONFIRMED NATIVE at the same spot — isolated dark pinpoint
+    ~(511-515, 321-325) on the right limb where two rings abut, exposing
+    shadowed interior (not a legitimate open loop like the cluster
+    center x455-505 y285-340); pedestal CRAFTED re-CONFIRMED NATIVE
+    (three tonal groups: mid-brown tiers, near-black plaque insets
+    x460-492 y393-410, darker course seams y375-390 — margin note only:
+    plaque insets 8-15px register as dark recessed panel, one value
+    step more contrast would help); identity CONFIRMED — central
+    sculpture + stepped plinth + approach stair (x450-500 y417-446)
+    reads commemorative clearly. Sev 4 stands (pinhole minor).
+    Evidence: reviews/survey5-slice/town-monument/gameplay.png]
 29. `nx-dress-ne-yard-001` — rubble read; floating rail ends; uniform
    near-black. Sev 2. (guard: dress-4 <24h at improve-2 — re-check
    dress tail at execution) [DROPPED dress-14: native re-judgment on
