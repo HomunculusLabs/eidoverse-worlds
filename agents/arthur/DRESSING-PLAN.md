@@ -1389,3 +1389,35 @@ nx-dress-* = 11 district + 16 legacy core intact by arithmetic; interlane
 md5 f6254cd0 unchanged. Foreign dirt (IMPROVE-PLAN improve-16 edit,
 tower3, court placer, struct terrain probes, fleet watcher) left
 untouched. Zero world mutations, zero uploads, zero shared-budget use.
+
+
+**STATE AT dress-38 (2026-09-06 ~17:4x EDT, pipeline hold tick — 17th
+consecutive)**: lawful HOLD — every path closed this tick. Shard queue
+re-verified EMPTY at source (nine nx-dress Round-1 rows terminal: 5/29/30/31
+DROPPED native rejudge, 32/33/34/37/38 EXECUTED reseats; row 39 routes
+nx-town to improve-own; survey-8 nx-dress-fountain DRESS-DOMAIN
+legacy-core off-limits, Bill's call — NOT shard work). Own queue: SW lamps
+only, a/b/c budget policy Bill-bound (fresh census kind=light: 38 lights
+census-wide steady; SW-quadrant r>=35 tokens exactly 2 approach leg lamps
+(nx-approach-sw-lamp-001-l r39.7 / -002-l r55.4) + 1 mile lantern
+(nx-mile-sw-013-l r64.0) = 3 live, spend 0 of 3); zero Bill verdict
+markers in ledger tail and dress-districts eye-gate packet fd677cae
+unchanged (delivered once at dress-12). Hold verification: standing gate
+came up RED at tick start — decoded foreign, NOT dress-domain: both FAILs
+were town-saga residue (HEAD `town-1x` not in the gate's prefix
+allowlist; ledger total 2370284 vs computed 2370283, exactly the
+retracted fabricated town-1 E+1); town lane was actively committing
+(3 commits in minutes), so no race per interlane law. Epoch re-check:
+sibling approach-29 repaired the total 2370284→2370283 (per town-1v/1w
+retraction intent, tool law exact) and artwalk-81 landed; gate re-run
+ALL PASS real exit 0 at HEAD 3cdc33a. Fresh live census 259, ALL ELEVEN
+district installs PIN_EXACT lib+tuple+yaw-radians (hedge 3d5c7d44, skeps
+87d2dd16, stile 5e9d301d, logpile cac71bff, ne-yard 191227da at TRUE
+dress-2 tuple (55.91, −0.034, 87.10) yaw 2.57087, ne-bench 46f3b6b1,
+woodstack 692bc54e, cairn 59031a0c, se-stones 8dafb9e5, sw-gravel
+fd21de9f, sw-prayer 5074600f — comps empty across the set); 27 total
+nx-dress-* = 11 district + 16 legacy core, off-limits set intact by
+arithmetic. Interlane md5 f6254cd0 unchanged. Foreign dirt (APPROACH-PLAN
+edit, tower3, artwalk b17 placer, court placer, struct terrain probes,
+fleet watcher) left untouched. Zero world mutations, zero uploads, zero
+shared-budget use.
