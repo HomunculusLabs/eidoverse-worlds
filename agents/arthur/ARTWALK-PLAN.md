@@ -810,6 +810,34 @@ CURRENT hosts. Findings and actions:
   steady; zero uploads (store already held all libs); 2 verbs total
   (b26 remove+spawn).
 
+### [artwalk-58] HOST-RIDER CONTINUITY RE-PIN (2026-09-06) — CLOSED (pin maintenance, zero world mutations)
+Fleet-tick wakeup, full house discipline. Gate ALL PASS real exit 0 at HEAD
+8d521d5 pre-work; absorbed sibling interleaving approach-8 (6d4a60e) mid-survey.
+Ledger max artwalk-57 → this tag; interlane md5 f6254cd0 steady; eye-gate packet
+48bea194 unchanged, zero Bill verdict markers; register 0 OPEN; zero open shard
+rows route to nx-artwalk-*. The lane's cheap lawful hold verification surfaced
+REAL new evidence, not a hold: artwalk52-fleet-anchor-reconcile.ts first fresh
+run returned DRIFT exit 1 — next-place-artwalk-b20.ts STALE host pin
+(nx-town-bunkhouse store/49f5acc4d91c4d45 vs live c8636968968672af). Root cause:
+improve-13's in-flight bunkhouse upgrade (interrupted-after-placement window,
+struct-9 class — uncommitted placer/decode/walk on disk, live already reseated)
+re-seated the host at the EXACT same tuple (-9,0,-26) yaw 0.31322457 with a
+fixed lib (plinth band + proud window panes). Rider b20 itself UNTOUCHED and
+live-exact against the new host transform (tuple = host∘L(-2.2,1.05,2.0325),
+lib 152684b8, empty comp bag) — no reseat, no verbs. artwalk-39 host-rider
+continuity law executed: anchor existence re-verified in the NEW host decode
+from hash-gated local bytes (sha256 c8636968968672af60a0… == live lib prefix;
+content-addressed store makes local IS live — direct store GET returned 403
+without a browser token, disclosed): wall plane z 1.93..2.05 present through
+the anchor band (x −2.52..−2.41, y 0.72..0.90, 15 verts, ANCHOR_EXISTS TRUE);
+improve-13's committed-contract decode independently proved ZERO new verts in
+the b20 KEEP-OUT x[−2.6,−1.8] y[0.8,1.3] z[1.7,2.4]. Placer re-pinned
+(49f5acc4 → c8636968); reconciler rerun ALL_RECONCILED exit 0: 259 census /
+54 riders / 38 lights / 34 placers / 32 host pins / 24 anchors exact, zero
+verbs, zero uploads, zero shared-budget use. Ledger artwalk-58 law exact.
+Lane still HOLDS for Bill on the three unblock paths: counting-series
+eye-gate verdicts, a Phase F fresh commission, or a queue widening.
+
 ### [artwalk-57] PIPELINE-MODE HOLD TICK (2026-09-06) — CLOSED (hold, zero mutations)
 Fleet-tick wakeup, full house discipline. State re-derived fresh: ledger
 max artwalk-56 → this tag; interlane md5 f6254cd0 steady; plan re-read
