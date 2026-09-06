@@ -98,21 +98,19 @@ order (re-rank at each tick against the live census and Bill's eye-checks):
    derived gaps filled; both build lanes wait on Bill's eye-gate verdicts.
    Refine pool remaining: Observatory dome-shadow (source-judged, low).**
 
-## LANE STATE: HOLD (struct-18)
+## LANE STATE: SHARD EXECUTION (struct-36, 2026-09-06)
 
-Both queues exhausted. Build: every census-derived gap filled (13
-structures). Refine: pool empty (dome-shadow judged a lighting-read
-issue, not honest geometry work; night read already handled at struct-12).
-struct-18 = hold tick: fleet-wide pin check 15/15 byte-exact, zero
-drift. Gate ALL PASS.
-
-This loop produces nothing further until: Bill's eye-gate verdicts
-(re-opens refines at top priority), a new census gap, or a stop. The
-sibling polish lane holds the same posture (its hold tick 3 recommends
-a /loop stop). Recommended: one guided circuit (plaza → NW orrery/
-observatory → N shell tower/water stair → W hypar/reed pool/angler/
-millrace → S bandstand/theater/skene → E beacon → NE pendulum) or
-stop the /loop.
+Commissioned queues exhausted (Rounds 1–3 complete, refine pool empty);
+per Bill's improve-5y 5-10x directive this lane now executes OPEN
+improve round-1 rows matching `nx-struct-` worst-first. struct-36 =
+row 11 skene wall-body fix (EXECUTED, live). Oldest OPEN uncontested
+rows after struct-36: row 12 skymirror (Sev 2, DECODE FIRST, survey-1
+NATIVE-CONFIRMED zero-reflection), row 13 millrace (Sev 2, survey-2
+NATIVE-CONFIRMED — intake note in SURVEY INTAKE section below), row 15
+shelltower DROPPED-clean by survey-1. Row 10 angler: in-flight sibling
+improve window (uncommitted draft 8c1a5047 + reviews/improve10-struct-angler/
+12:04) — do NOT touch until it lands or the un-shard rule fires. Open with
+Bill: R2-3 relocation options (struct-22).
 
 ## Siting log
 
@@ -151,6 +149,7 @@ stop the /loop.
 | struct-33 | REFINE: Sound Mirror ring night read | — | exact standing tuple (28.7, −0.026, −18.0) | — | LIVE, warm focus ring, walk 7/7 re-verified |
 | struct-34 | R3-7 Crossing Mark | plaza crossing NE corner | (3.6, −0.005, −3.6) | 0 (4-fold symmetric) | LIVE, corner circuit 7/7 |
 | struct-35 | ROUND 3 CLOSE | fleet pin check | — | — | 26/26 pins exact, 0 drift, gate ALL PASS |
+| struct-36 | SHARD ROW 11: skene wall-body fix | exact standing tuple (−23.32, 0.0447, 48.05) | — | π | LIVE, lib 3a62ee83→df7f7c43, walk 4/4 re-verified |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -1082,3 +1081,46 @@ is invented; this tick is the fleet verification and round close.
 | R3-7 | Crossing Mark | struct-34 | ✓ live |
 | — | Folly crown night | struct-27 | ✓ refine |
 | — | Orrery ring night | struct-21 | ✓ refine |
+
+## struct-36 — SHARD ROW 11: SKENE WALL-BODY FIX (improve round-1)
+
+Refine-tick cadence (36%3==0) + shard priority: oldest OPEN uncontested
+nx-struct- row. Row 10 angler contested (in-flight sibling improve
+window, uncommitted draft 8c1a5047 + reviews/improve10-struct-angler/
+12:04 — not touched). Row 11 skene: live pin 3a62ee83 == local bytes,
+source idle since Aug 30, comp bag {} — clean to take.
+
+- Native re-judgment on exact live bytes (8-view DRACO rejudge rig):
+  CONFIRMED Sev 2 — sky bleeds between/around/under five floating dark
+  slabs (individual ground shadows betray airborne boards); finial
+  reads dark speck, not brass. DROPPED detached-wings (cheeks read
+  attached, hard butt joints). Survey-1 and survey-2 had independently
+  natively confirmed the same row.
+- Root cause (source decode): NO WALL BODY — the struct-14 build loop
+  created piers + floating dark insets + lintels with NOTHING between
+  them; bays were negative gaps, not recesses.
+- Fix (envelope-neutral): solid stone back body (LEN-1.2 x H x T*0.55,
+  z -0.12 behind niches), 0.16m sill course, four golden-division
+  mullions (0.14m), niches re-cut full-bay (w*0.62 -> w-0.12) recessed
+  at z -0.05 seated on the sill, finial re-materialized waysign
+  textured-gold 0xa09832 family with bead 0.07 -> 0.11.
+- Build: sha 3a62ee83d559b3fa -> df7f7c434c0b87b2 deterministic x2;
+  x/z bbox byte-identical (9.6604 / 1.2761), y 2.03 -> 2.07 (finial
+  bead); 3 merged nodes.
+- Candidate judged (ZAI fallback — native 1210, 12th consecutive tick,
+  one paced retry, disclosed): solid wall PASS, recessed-niche read
+  PASS, gold finial PASS, intentional proscenium PASS (4/4). Pixel
+  falsification: 0 sky-bleed px inside silhouette, all 5 dark niches
+  flanked by stone jambs, 44 warm gold px at the finial.
+- Placement: standing fat-bbox SAT exemption named (nx-approach-nw-lane-001
+  true nearest vertex 19.37m — struct-26 roads class, empty AABB corner);
+  remove+spawn exact standing tuple (-23.32, 0.0447, 48.05) yaw pi, comp {}
+  both sides; PLACED_VERIFIED; idempotent rerun ALREADY_LIVE_NO_VERBS
+  (placer idempotency-check order bug caught+fixed post-verify);
+  standing 4-leg MCPL wall-circuit walk re-run ALL_PASS max arrival 0.398m.
+- Row annotated [EXECUTED struct-36] in IMPROVE-PLAN.md same tick.
+
+**Bill should eye-check**: stand on the Theater's performance disc and
+face the wall — the niches should now read as deep recesses in solid
+stone (no sky through bays), the gold bead at the crown center; the
+mullion rhythm across the span at an angle.

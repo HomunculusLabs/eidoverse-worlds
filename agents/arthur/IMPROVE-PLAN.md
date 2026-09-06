@@ -259,6 +259,18 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     [NATIVE-CONFIRMED survey-1: five near-black slats with sky gaps + ground
     gaps, unsupported, read as voids; reads colonnade/gateway not stage —
     no deck visible; finial hairline+speck]
+    [EXECUTED struct-36: root cause = NO WALL BODY (piers + floating dark
+    insets + lintels, nothing between — sky through every bay); fix = solid
+    stone back body + sill course + 4 golden-division mullions + niches
+    recessed on 0.16m sill (proud surround), finial re-materialized waysign
+    textured-gold 0xa09832 family bead 0.07→0.11; sha 3a62ee83→df7f7c43 x2
+    deterministic, x/z bbox identical, y 2.03→2.07; native re-judgment on
+    exact live bytes CONFIRMED first (ZAI candidate PASS 4/4 — native 1210
+    12th tick, disclosed), pixel falsification 0 sky-bleed/5 niches flanked/
+    44 gold px; remove+spawn exact tuple, comp {} both sides, idempotent
+    zero-verb rerun, 4-leg walk ALL_PASS 0.398m; standing fat-bbox SAT
+    exemption named nx-approach-nw-lane-001 (true vertex 19.37m, struct-26
+    class); dropped: detached-wings (cheeks read attached)]
 12. `nx-struct-skymirror` — no visible reflection (material suspect);
     ambiguous dark blob; notched top edge. Sev 2: identity. DECODE FIRST.
     (guard: none) [NATIVE-CONFIRMED survey-1: flat matte dark two-tier
