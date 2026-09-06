@@ -312,6 +312,33 @@ untouched (18b69a6bb2f5862f). Census diff vs sweep-34 sibling capture
 (landed mid-tick, absorbed by the gate run): 0 new / 0 gone, nothing
 approach-owned changed. Zero world mutations; no visual PASS claimed.
 
+### approach-13 (2026-09-06): D4 leg-dead-stretch component — SW night cadence
+
+The night-4 note's own text splits D4 in two: "Leg dead stretches as the
+NW/NE class" (= the D1/D2 in-budget bead-cadence class approach-6/7 closed on
+two legs with zero new light entities) and "grounds lighting needs Bill"
+(temple grounds r71-98 — not a lane entity). Executed the former; the
+temple-grounds component and the three lamp a/b/c items stay Bill-bound.
+
+`nx-approach-sw-lane-003` re-dressed with the approach-6/7 cadence: 5 bone
+pillars (~9.2m alternating, 1.32-1.44m out) each capped with one faint warm
+emissive bead (1.15, polish-274/278 moonlit law). Pavers, polyline, and both
+lamp trees byte-stable; decode: pillar group the ONLY delta vs live 43817a4f
+bytes. Sha `fb04a144cc1fc458` ×2 deterministic; PRIOR captured to
+reviews/sw-approach13/before/. Judged NATIVE this tick (restored-vision law):
+night quiet-marker PASS + no floating; the cadence-compression and day
+rhythm-weakness reads were falsified — construction arithmetic (beads
+r28.6/37.9/47.1/56.3/65.5 + lamps r39.7/55.4 → max warm-point gap 9.3m over
+the 47m walk, vs D4's 15.8-20m dead stretches) and a probe-law-5 control vs
+the ACCEPTED NW sibling gameplay render (identical "weak rhythm" read, same
+rig — family characteristic, not a defect). Remove+spawn reseat at the exact
+standing tuple, 2 verbs, PLACED_VERIFIED + idempotent zero-verb rerun.
+Two-way MCPL ALL_PASS (5 legs, max 0.37, baseline-identical). Read18 PASS
+(seed-0021/terrace-0049, arrivals 0.33/0.25). SW budget 3+2 unchanged; both
+`-l` lights verified standing at authored params on both sides. Bill
+eye-check: SW gate at night — quiet warm bead line between the lamps; by day
+the pale pillars read as path-edge markers.
+
 ## Leg map (all four)
 
 - NW: **winding lane** (this leg) — az306 r37→58, bend, az315 r58→71.

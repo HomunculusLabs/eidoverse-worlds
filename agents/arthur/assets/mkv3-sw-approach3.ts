@@ -15,6 +15,13 @@ import { writeFileSync } from "node:fs";
 import { toGLB, texMat } from "./glbwrite.ts";
 import { mergeByMaterial } from "./mergekit.ts";
 
+// approach-13 (D4 night-correction, in-budget class — the note's own split:
+// "leg dead stretches as the NW/NE class" is the D1/D2 bead-cadence class;
+// temple-grounds lighting is a separate Bill-bound budget item): SW gets the
+// same night wayfinding cadence approach-6/7 landed on NW/NE. Pavers,
+// polyline, and both lamp trees untouched (byte-stable below). Zero new
+// light entities; SW lamp budget stays 3+2.
+
 const d2r = (d: number) => (d * Math.PI) / 180;
 const AZ = 217.25, R0 = 24, R1 = 71;
 const a0 = d2r(AZ);
@@ -35,9 +42,34 @@ const brass = new THREE.MeshStandardMaterial({ color: 0xa0a248, roughness: 0.4, 
 // sage grass, chunkier mottle (scale 2.0), and companions offset ALONG the
 // path so the whole dressing holds the 1.2-1.55m band.
 const stoneMat = texMat("sw-verge", [0x7f8285, 0x6e7174, 0x5f6265], { rough: .95, scale: 2.0, weights: [2, 2, 1], seed: 9113 });
+// approach-13 D4 materials — bone pillars + faint warm beads, the approach-6/7
+// cadence law (polish-274/278 moonlit read: quiet points at night, unlit warm
+// stone by day, never a bulb; NO new light entities — budget untouched).
+const boneMat = texMat("sw-pillar", [0xa8a396, 0x99947f], { rough: .9, scale: 1.4, weights: [2, 1], seed: 6203 });
+const beadMat = new THREE.MeshStandardMaterial({ color: 0xd9b484, emissive: new THREE.Color(0xff9d5c), emissiveIntensity: 1.15, roughness: 0.6 });
 
 let serial = 0;
 const lampAnchors: Array<{ x: number; z: number; yaw: number }> = [];
+// night cadence (approach-13, D4 leg-dead-stretch class): one bone pillar
+// every 10th paver (~9.2m) alternating sides, 1.32m out — the same beat that
+// carries NW/NE through their dead stretches (D1/D2). Pillars + beads named
+// flame* so they fold into ONE emissive KEEP node (mergekit KEEP law).
+const pillarGroup = new THREE.Group();
+pillarGroup.name = "flame_beads_sw";
+g.add(pillarGroup);
+const addPillar = (x: number, z: number, yaw: number, i: number) => {
+  const v = vergeRand(i * 13 + 5);
+  const w = .17 + v * .05, h = .42 + v * .22;
+  const pm = new THREE.Mesh(new THREE.BoxGeometry(w, h, w * .82), boneMat);
+  pm.name = "npillar_body";
+  pm.position.set(x, .05 + h / 2, z);
+  pm.rotation.y = yaw + (v - .5) * .5;
+  pillarGroup.add(pm);
+  const bead = new THREE.Mesh(new THREE.SphereGeometry(.058, 8, 6), beadMat);
+  bead.name = "flame";
+  bead.position.set(x, .05 + h + .038, z);
+  pillarGroup.add(bead);
+};
 // per-stone neighbor law, GENERALIZED (approach-4): no verge stone within 1.3m
 // of the struct angler's seat — supersedes the old fixed SKIP_VERGE paver-22
 // (the angler stands at (-23.6, -38.37), from the live census 2026-09-06).
@@ -73,6 +105,15 @@ const n = Math.max(1, Math.floor(L / step));
 for (let i = 0; i <= n; i++) {
   const t = i / n, px = P0[0] + dx * t, pz = P0[1] + dz * t;
   paver(px, pz, yaw);
+  // night wayfinding cadence (D4 leg class, approach-13): bone pillar +
+  // faint warm bead every 10th paver, alternating sides, 1.32m out — quiet
+  // lit marker line through the dead stretches; NOT a lamp (polish-278
+  // ember-marker idiom)
+  if (i % 10 === 5) {
+    const pside = ((i / 5) | 0) % 2 === 0 ? 1 : -1;
+    const po = 1.32 + vergeRand(i) * .12;
+    addPillar(px + (-dz / L) * pside * po, pz + (dx / L) * pside * po, yaw, i);
+  }
   if (i % 2 === 1) {
     const side = ((i / 2) | 0) % 2 === 0 ? 1 : -1;
     const v = vergeRand(i * 3 + 1);
