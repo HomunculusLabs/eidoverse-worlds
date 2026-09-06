@@ -60,8 +60,41 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 ||| sweep-37 | 2026-09-06 | 259==259 fully steady (221 thing + 38 light; 0 arrivals, 0 departures, 0 drift on id+pos+yaw+lib vs BOTH the committed sweep-36 snapshot and the /tmp capture — first fully-quiet delta since sweep-24 (sweeps 25–36 each carried ≥1 classified lib change); no snapshot rewrite needed) | ALL CLEAR 221/230/0 exit 0 | tier-1 4/4 ALL_PASS (core 64/64 ok max-arr 0.38; NW 5 @ 0.38; NE 7 @ 0.38; SW 5 @ 0.37, legs run individually, verdicts content-anchored on status strings + per-leg ok counts) + tier-2 fifteenth cycle potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL_PASS | pins 14/15 + angler classified (live b3dfb28a unchanged, quarantined sibling improve draft, sweep-28..36 class, racing law), carousel compKeys exact 7 + lib ce3633992d07055e, gate lamps 4/4 + 4 -l companions live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, standing gate real exit 0 at ab7eb39, ledger law exact (base 2370285 at append — sibling holds appended mid-tick, absorbed) | CLEAN SWEEP |
 
 | sweep-38 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, SEVEN documented lib/pos changes all classified domain-valid vs authored sources: gate lamps x4 pos+lib (town-1 off-axis placer next-place-gate-lamps-offaxis.ts, uncommitted) + companions x4 follow; nx-core-paths 9ce1378d->c31b6e3f (town straight-paths replace next-replace-core-paths-straight.ts, uncommitted); nx-struct-amphi ->95a98c74 (committed struct-43 @ 4d9d061); nx-town-garden-cottage ->cee52aca (committed improve-16, classified by 3 sibling lanes); 0 drift on other shared ids) | COVERAGE HOLE exit 4 (217 bbox non-light — 4 lamps bbox:null on truncated lib, R-120; pair-set 215 classified 0 unclassified; source-true decode finds lamp-n x mapboard 9mm head-band kiss R-121) | tier-1 4/4 ALL_PASS (core 64/64 ok max-arr 0.38 against NEW core-paths bytes; NW 5/5 @ 0.38; NE 7/7 @ 0.38; SW 5/5 @ 0.37) + tier-2 sixteenth cycle inn 6/6 @ 0.364 + stable 5/5 @ 0.396 | pins 14/15 + angler classified (racing law), carousel comps exact 7 + lib ce3633992d07055e, gate lamps 4/4 at authored off-axis tuples BUT bbox:null (R-120), windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, standing gate real exit 0 at c13c022 | FINDINGS — R-120 Sev 1 + R-121 Sev 2 (both town lane, both routed REPAIR-REGISTER) |
+| sweep-39 | 2026-09-06 | 259==259 (221 thing + 38 light; 0 arrivals, 0 departures, SIX drift fields classified domain-valid: nx-town-belltower 30407b95->2419fbc5 improve-17 @ HEAD 30dec29 (exact HEAD commit), nx-struct-observatory eb3c9b15->3d9d6ae1 struct-44 @ 537903a, nx-artwalk-b26/b34-wayband-e/s/w pos +1.75m artwalk-83 reseats @ 0efff67 — all match lane ledgers line-for-line; snapshot rewritten normalized sha 4cf99855f200008d, post-rewrite drift ZERO) | exit 4 SWEEP COVERAGE HOLE on exactly the four bbox:null lamps (217 bbox non-light, 215 classified, 0 unclassified pairs — correct loud state per sweep-38 hardening; R-120 unaddressed second sweep) | tier-1 4/4 ALL_PASS per-leg verified (core 64/64 ok 0.38, NW 5/5, NE 7/7, SW 5/5 — 81/81 legs; NW/NE/SW dist fields per-route) + tier-2 seventeenth cycle potter 6/6 @ 0.366 + market 6/6 @ 0.389 | pins 14/15 + angler classified (racing law), carousel compKeys exact 7 + lib ce3633992d07055e, belltower ladder comp live in bag corroborates improve-17, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane md5 f6254cd0 stable, standing gate real exit 0 at 30dec29 + re-run ALL PASS at mid-tick HEAD 24d5632 pre-commit, ledger law exact 2370298 | ESCALATION — R-120 second register note appended (escalation law), named for Bill; R-121 unchanged, fix travels with R-120 |
 
 ## Findings register
+
+sweep-39: ESCALATION sweep, no new findings. R-120 (Sev 1) re-proven live
+with fresh evidence (truncated lib 404 / full 200 unchanged, bbox:null x4
+at identical tuples, hardened SAT exit 4 on exactly those four) and now
+UNADDRESSED for a second consecutive sweep — second register note appended
+to REPAIR-REGISTER per the escalation law and named for Bill in this
+report. R-121 (Sev 2) geometry unchanged (lamp-n tuple identical to
+sweep-38's decode); its fix travels with the R-120 re-spawn. Census
+259==259 (0 arrivals, 0 departures) with SIX drift fields, all classified
+domain-valid against committed sibling work (improve-17 belltower @ the
+tick-start HEAD itself, struct-44 observatory, artwalk-83 wayband reseats
+x4). Tier-1 4/4 per-leg verified 81/81 (core 64/64 @ 0.38, NW 5/5, NE 7/7,
+SW 5/5). Tier-2 seventeenth cycle: potter 6/6 @ 0.366 + market 6/6 @
+0.389. Integrity: pins 14/15 + angler classified (quarantined sibling
+draft, racing law — do not touch); carousel comp bag exact 7 + lib
+ce3633992d07055e; belltower ladder comp live in bag (corroborates
+improve-17's claim); windmill + woodyard pins exact; 38 lights; interlane
+md5 f6254cd0 stable; ledger law exact 2370298 (base absorbed mid-tick
+sibling appends dress-46/survey-12). Standing gate real exit 0 at
+tick-start HEAD 30dec29; sibling survey-12 landed mid-tick (24d5632) and
+the gate re-ran ALL PASS at the new HEAD before this commit. Probe
+discipline this tick: walk-JSON parse hit the `[physics]` banner twice
+(known class, sweep-29) — resolved by anchoring on `{`; my first
+schema-guess read 0 legs from files that actually carried 64/5/7/5 — the
+per-leg ok-count law caught it before any verdict was drawn. Foreign
+working-tree dirt (core-paths GLB/review, tower3, court placer, fleet
+watcher, terrain probes, review rigs) is sibling work-in-flight, untouched
+per interlane law. Next tier-2 pair (sweep-40): inn + stable (eighteenth
+cycle). Standing note for Bill: with R-120 open, expect the SAT tool to
+keep reporting exit 4 until the town lane re-spawns the four lamps on the
+full 16-hex lib — that is the correct loud state, not a tool defect; the
+four gate landmarks remain invisible in the live world meanwhile.
 
 sweep-38: TWO findings, both routed to the repair register (no town plan/loop
 file exists to receive a plan note — register is the lawful fallback):
