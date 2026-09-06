@@ -4299,4 +4299,6 @@ fixes ≈ 6 F.)
 
 - [night-45] pipeline hold (35th) — gate ALL PASS exit 0 at HEAD ab7eb39 absorbing four sibling advances (dd355a0 night-44 -> 3d42026 sweep-36 -> 0933c41 approach-27 -> 91d8c6e waysign-32 -> ab7eb39 artwalk-80), census-45 259/38 fully steady vs 44 (0/0/0), closure pins EXACT 20th (D1 dc256065879371d8, D2 dc52264c04cfe5bb, D4-leg fb04a144cc1fc458), SW kind=light by id approach-sw-lamp-001-l/-002-l + mile-sw-013-l zero movement 0-of-3 Bill-bound on a/b/c, packet cdc435a2 zero verdicts since night-7, interlane f6254cd0 steady, EXECUTION SHARDING re-read at source zero rows route to night (observer owns no entity prefix), zero mutations zero renders no PASS claimed (D+0, E+0)
 
+- [approach-28] pipeline hold (16th): shard empty at source (rows 16/36 terminal), SE a/b/c + D3/D5 + N5-N7 Bill-bound, gate ALL PASS exit 0 at 9f13b40, census 259/domain 17 three legs PIN_EXACT + 6 leg lights + gate lamps split-verified, diff vs night-45 0/0/0, zero mutations (D+0, E+0)
+
 **Running total: 2370274 / 2000000**

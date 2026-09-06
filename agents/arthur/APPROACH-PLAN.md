@@ -765,3 +765,30 @@ BOTH night-44 and approach-26 captures: 0 new / 0 gone / 0 lib-pos-yaw
 flips. In-tick probe bug caught (isinstance typo crashed the diff one-liner;
 world right, probe wrong — suspect-the-probe law). Zero world mutations,
 zero uploads; no visual PASS claimed.
+
+### approach-28 (2026-09-06): pipeline-mode hold tick — pins exact, queue Bill-bound
+
+Gate ALL PASS real exit 0 at HEAD 9f13b40 (night-45 absorbed; dress-36 at
+tip by survey time — normal interleave); interlane md5 f6254cd0 steady;
+APPROACH-PLAN read fresh in full (767 lines). Shard routing verified at
+source by numbered rows: IMPROVE-PLAN rows 16 (sw-lane-003) and 36
+(nw-lane-001) both terminal (EXECUTED approach-4/5, survey-2/6 CLEAN
+re-judges retired the row-16 candidate); zero OPEN rows route to
+`nx-approach-` (line-23 prose "lamp-gap D-notes" is routing metadata for
+Bill-bound budget calls, not shard rows); no un-shard clock. Own queue:
+three legs stand PLACED_VERIFIED, D1/D2/D4-leg closed in-budget; SE leg
+awaits Bill's a/b/c siting call (his alone); D3 + D5-temple-grounds +
+N5–N7 remain Bill budget/verdict classes (night-1..5 notes stand verbatim,
+none new since approach-19). Cheap lawful hold verification (fresh live
+census 259, approach domain 17, kind=light 38, night-prefixed 0): all
+three leg libs PIN_EXACT (nw dc256065879371d8, ne dc52264c04cfe5bb, sw
+fb04a144cc1fc458) at the exact standing tuple (0,0,0) yaw 0 scale 1; six
+leg `-l` lights standing at authored positions; four gate lamp models
+untouched (18b69a6bb2f5862f) with their four kind=light companions
+split-verified. Census diff vs night-45 capture: 0 new / 0 gone / 0
+lib-pos-yaw flips anywhere. In-tick probe bug caught (companion check
+required non-null lib before the split-verify class test — same
+approach-19/20 class; world right, probe wrong). Zero world mutations,
+zero uploads, no shared-budget use; no visual PASS claimed. Standing
+eye-check pointer (delivered once each at approach-6/7/13): Bill at the
+NW/NE/SW gates at night for the three quiet bead cadences.
