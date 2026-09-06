@@ -1345,3 +1345,52 @@ should now read as ONE clean form: parabolic rim beams with slats ending
 flush on them, gold pin pair at the two crests, no spears, no dangling
 ends, no daylight band except the designed low-arch reveal where the
 saddle dips toward the deck.
+
+
+## struct-42 — SHARD ROW 23: MOBIUS CONTINUOUS-BAND REBUILD (improve round-1)
+
+Refine-tick cadence (42%3==0) + shard priority. Row 23 mobius: live pin
+04d088e1 == local build (struct-5), source idle, comp bag {} — clean.
+
+- Native re-judgment on exact live bytes (after one 1210 flap + paced
+  retry): BOTH findings CONFIRMED — V-notches 4-22px at seams (worst
+  x755-838, mid-right 4-9px at x592/645/700), sky slit x505-570 y271-284
+  right of center post; identity deliberate-mathematical-pavilion CLEAN.
+- Root cause (source decode): 36 DISCRETE pitched boxes — pitch steps
+  5deg/joint so the rim staircases ~9cm at every seam AND flat end-faces
+  at mismatched pitch open wedge gaps. One cause, both findings.
+- Fix: ONE continuous 144-segment swept band (2.5deg steps, 1.3mm chord
+  sagitta), WELDED Mobius join (ring N reuses ring 0 verts with corner
+  map j->(j+2)%4 — closed orientable tube, watertight by decode: 576
+  band verts, 0 dups, 0 non-unit normals, radial envelope 4.499-6.501 ==
+  analytic to 0.0001); materials to texMat lanes (mobius_band/iron/gold
+  + stone) per struct-38/39/40 family law.
+- Build: sha 04d088e1 -> 5617f376 deterministic x2 (91.5KB, 4 nodes).
+  Whole-file bbox INSIDE the old envelope (6.2475<6.2876) so standing
+  SAT clearance holds by the inside-envelope refinement law.
+- Judged: ZAI fallback (native 1210 x2, paced retry spent, disclosed):
+  top edge FIXED (smooth arc, 1-2px local dev), form PASSES (half-twist
+  reads, normals correct across the twist, no missing faces). ZAI's
+  "slit persists" claim DECODE+FALSIFIED per probe law 11: ray-trace of
+  the review camera through the reported region against the decoded
+  576-quad mesh — rows y262-270 HIT the near face (t 12.5m), miss row
+  y274 threads BETWEEN near/far sections (the ring's designed open
+  aperture, sky through an open bandstand); 0 rays through any face;
+  identical miss pattern on the BEFORE bytes (the old x1.06 overlap
+  partially masked the aperture). Serration quantified: residual at
+  native-cited seams 0px; worst sector max residual 17->10px, and ALL
+  residual>3px columns are the post tips (designed structure). Native
+  re-judge of the after-frame owed when the provider returns.
+- Placement: hash-gate caught a wrong full-sha transcription in the
+  placer BEFORE any network call (gate worked, zero world impact);
+  lib-swap re-place at exact standing tuple (-4.18, 0.0020370, 39.78)
+  yaw 0, comp {} both sides, PLACED_VERIFIED 1 verb; idempotent
+  rerun zero verbs; 5-leg MCPL walk ALL_PASS maxArrival 0.37m.
+- Row 23 annotated [EXECUTED struct-42] in IMPROVE-PLAN.md same tick.
+
+**Bill should eye-check**: from the S approach past the stage — the
+band's top edge should now be ONE smooth continuous wave (no sawtooth
+steps at panel seams, right side included); through the ring's opening
+just right of the center post a thin sky sliver remains BY DESIGN (the
+open bandstand aperture) — rays pass between the twisting sections,
+never through the band.

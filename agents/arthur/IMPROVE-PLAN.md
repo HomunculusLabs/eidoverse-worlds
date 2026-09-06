@@ -568,6 +568,22 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     damage. Net: 2 defect sub-findings native-confirmed, identity
     sub-finding DOWNGRADED to clean; Sev 3 stands on the slit+jag.
     Evidence: reviews/survey5-slice/struct-mobius/gameplay.png]
+    [EXECUTED struct-42: native re-judge CONFIRMED both findings on exact
+    live bytes 04d088e1 (V-notches 4-22px at seams, worst x755-838; slit
+    x505-570); root cause = 36 DISCRETE pitched boxes (pitch steps 5deg
+    per joint — rim staircases, flat end-faces at mismatched pitch open
+    wedge see-throughs); fix = ONE continuous 144-segment swept band,
+    welded Mobius join, texMat lanes (struct-38 law); sha
+    04d088e1->5617f376 x2
+    deterministic, 4 nodes, bbox inside old envelope (6.2475<6.2876);
+    serration quantified GONE (residual at native-cited seams 0px; worst
+    sector max 17->10px = post tips, designed); survey-5 'slit'
+    DECODE+FALSIFIED as the ring's designed open aperture (ray-trace:
+    y262-270 HIT near face t12.5m, miss row y274 threads BETWEEN
+    sections — 0 rays through any face; identical miss pattern on before
+    bytes) — disclosed to eye-gate; lib-swap re-place exact tuple, comp
+    {} both sides, PLACED_VERIFIED 1 verb + idempotent 0-verb rerun;
+    5-leg MCPL walk ALL_PASS 0.37m]
 
 24. `nx-struct-amphi` — disconnected seating slabs; flat bowl; telephone
     pole. Sev 3. (nx-struct-amphi is a struct lane work — struct lane
@@ -1687,6 +1703,68 @@ open duplicate notes for these objects.
 Next queue item (improve-16): windmill idle-guard re-check (rider placed
 09-06 01:57 — expires 09-07 01:57; if clear, queue item 4 Sev 1 native-
 confirmed; else row 20 `nx-town-garden-cottage` Sev 3).
+
+- improve-16 (EXECUTION CONTRACT, row 20 `nx-town-garden-cottage`): windmill
+  guard STILL LIVE at 16:22 EDT (rider 09-06 01:57, ~14.5h < 24h) — row 20
+  taken by the plan's own next-pointer. Survey-2 NATIVE-PARTIAL stands as the
+  restored-vision re-judgment (bunkhouse precedent, a777dc1; re-confirmed
+  NATIVE survey-7 slice flow). Idle-guard clear (last host mutation interior-6
+  Aug 30; artwalk-27 rider Aug 30; no lane commit touches this entity in 24h).
+  SOURCE-OF-TRUTH traced: live lib 872aec35e3aa43b3 == `mkvillage-houses.ts`
+  gardenCottage() rebuild ×2 deterministic THIS TICK (interior-6 lineage;
+  `mkv3-ring.ts` block 3 `village_garden3` is a SIBLING non-live build —
+  improve-15 trap inverted, caught by baseline hash mismatch e0a6a7c4≠live).
+  Live tuple (−26, 0.0009494488404761625, 19) yaw 2.2004415094410525, comp
+  bag {} (census-fresh 259), light companion nx-town-garden-cottage-l at
+  (−25.758, 2.101, 18.823) — untouched, separate entity. Rider
+  nx-artwalk-b17-garden-seed-lattice inverse-transformed host-local ≈
+  (−0.9497, 2.0809, −1.1603) at host yaw — KEEP-OUT x∈[−1.35, −0.55],
+  y∈[1.9, 2.3], z∈[−1.35, −0.97]; the windows/door/front-apron edits sit on
+  +Z/+X faces, disjoint by construction. Sibling outputs of this builder:
+  village_tower_house (LIVE 11b31000 — improve-9/10 pin), village_longhouse +
+  village_row_cottage (legacy non-live, still byte-compared for safety).
+  Findings (survey-2 native on exact live bytes):
+  - F1 front face near-featureless — windows dark-on-dark, only central door
+    void faint (CONFIRMED). Mechanism by source decode: gc_win_e at x=2.1 is
+    the WALL CENTERLINE (wall spans 2.0..2.2) — emissive pane (0.03 thick →
+    2.04..2.06) and bone frame (d 0.14 → 2.03..2.17) sit INSIDE the wall;
+    the lit pane can never render (improve-12 buried-pane class, stable cure
+    proven: seat proud +0.09 → pane/frame past the outer face). Same class
+    on gc_win_n (z −1.7 in wall −1.8..−1.6). Doors/frames stay shy of faces.
+  - F2 door void faint (CONFIRMED minor): door frame at wall center, 10mm shy
+    of the face; no threshold/stoop; opening reads as a hole not a DOOR.
+  - F3 garden fence illegible blob (survey-2 NEW sub-finding, CONFIRMED):
+    0.14-thin flat C.STONE ribbons at 0.7 grade — no posts, no caps, no
+    rhythm; merge into one dark value at 18m.
+  - KIT-DEBT present (round-1 append law): gableRoof calls carry NO
+    solidRidge (0.92/±0.03 staggered cap — hall D3/inn D2/bunk D3/row F2
+    class) and main roof horn 0.05m (W/2 2.2 > trueGableHalf 2.15).
+  FIX (mkvillage-houses.ts gardenCottage() only, no housekit change):
+  - F1: windowFrame seats proud — set pane+frame past the outer wall face
+    (translate +0.09 outward on each: win_e +x, win_n −z), shutters flare
+    from the proud face; BOTH windows get lit panes that can actually render
+    at night (improve-12 night clause). No new light entities (Bill-only).
+  - F2: door dignity — doorFrame seated proud (+z), threshold stone (C.MID
+    kit semantics), stoop stone at grade (doorGapWall stoop law), timber
+    lintel-board proud above the opening.
+  - F3: fence rhythm — posts every ~0.85m along both runs, pale CUT caps
+    (dress-11 idiom), board face gets village stone texMat recipe (0x56503c
+    2:1:1, rough .95, scale 2) so the fence reads as a low garden wall, not
+    a ribbon.
+  - KIT: gableRoof opts in solidRidge=true; trueGableHalf=2.15 on the main
+    roof (kill 0.05m horn); wing roof solidRidge only (horn-free by shape).
+  Falsification: (1) after gameplay@18m reads layered front — cased lit
+    windows, cased door with threshold+stoop, plinth reads; (2) night.png
+    shows warm panes (F1 buried-pane cure); (3) fence reads posted wall with
+    cap rhythm, not blob; (4) decode audit — b17 keep-out zero NEW verts,
+    bbox unchanged ±(5.0/2.5+... re-derive), siblings byte-identical (tower
+    11b11000, longhouse+row legacy outputs byte-compared); (5) 6-leg MCPL
+    door walk ALL_PASS; (6) native judge on after renders. Revert: revert
+    the gardenCottage() edits → rebuild returns 872aec35e3aa43b3 (baseline
+    ×2 proven this tick). SAT preflight vs fresh live census (footprint
+    grows only by fence caps/posts within the fenced plot, re-check corner
+    clearance vs carousel 1.061m historical pin — budget for SAT preflight
+    before upload).
 
 - Full house discipline: gate exit 0 before mutation, ledger law EXACT,
   one append per tick, stage only lane-owned paths, never push.
