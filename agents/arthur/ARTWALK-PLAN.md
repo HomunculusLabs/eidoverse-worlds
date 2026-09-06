@@ -1132,6 +1132,27 @@ census-diff vs artwalk-63 capture 259/259, 0 new, 0 gone, 0 rider drift.
 Lane holds for Bill's counting-series eye-gate verdicts, a Phase F fresh
 commission, or a queue widening.
 
+### [artwalk-66] PIPELINE HOLD (2026-09-06) — CLOSED (hold, zero mutations)
+
+Seventh consecutive steady hold tick. Gate ALL PASS real exit 0 at HEAD
+ceea84d (waysign-17 sibling absorbed). Shard routing re-checked at source:
+pool row 25 is the standing "host-anchor reconciliation stays artwalk's own"
+note — EXECUTED at artwalk-52 and re-proven fresh this tick; zero OPEN
+execution rows target nx-artwalk-*; register carries zero artwalk items; no
+Phase F commission received. Eye-gate packet 48bea194 unchanged, zero
+verdict markers. WORKING-TREE WATCH (new this tick): improve-14's shrine
+build is mid-window on disk — the reconciler proves the live shrine still
+matches b7's pinned host lib 53709062 (32/32 pins exact), so no
+reconciliation is due YET; the first artwalk tick after improve-14's shrine
+re-place lands live must re-run the b7 host-pin check (artwalk-58 class).
+Hold verification: fleet reconcile ALL_RECONCILED exit 0 (259 census / 54
+riders / 38 lights / 34 placers / 32 host pins / 24 anchors exact, zero
+verbs, zero uploads); fresh census-diff vs artwalk-65 capture 259/259,
+0 new, 0 gone, 0 rider drift, three domain-valid sibling lib changes
+classified (approach-sw-lane-003, struct-pendulum, dress-nw-hedge-001 —
+none an artwalk host). Lane holds for Bill's counting-series eye-gate
+verdicts, a Phase F fresh commission, or a queue widening.
+
 ### [artwalk-65] PIPELINE HOLD (2026-09-06) — CLOSED (hold, zero mutations)
 
 Sixth consecutive steady hold tick. Gate ALL PASS real exit 0 at HEAD
