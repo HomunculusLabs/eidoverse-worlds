@@ -950,3 +950,34 @@ STUDY COMPLETE (all facets judged; packet assembled).
   Second-rotation NW+NE+SW passes remain the verify paths, deferred
   while the lane holds. Zero world mutations, zero renders judged, no
   PASS claimed.
+- night-35 (2026-09-06, pipeline-mode hold tick): twenty-sixth
+  consecutive hold with NO disposition change. Standing gate ALL PASS
+  real exit 0, absorbing one sibling HEAD advance mid-survey (a7949d0
+  waysign-19 → 5984e9f survey-7; gate line names the newer HEAD,
+  register 0 OPEN). Fresh census-35: 259 entities / 38 lights / zero
+  night-prefixed, FULLY steady vs census-34b (0 new, 0 gone, 0
+  pos/yaw/lib changed per-entity; capture /tmp/night-census-35.json).
+  D1 pin nx-approach-nw-lane-001 dc256065879371d8, D2 pin
+  nx-approach-ne-lane-002 dc52264c04cfe5bb, D4-leg pin
+  nx-approach-sw-lane-003 fb04a144cc1fc458 — all THREE exact (TENTH
+  consecutive all-pins-steady tick). SW quadrant kind=light r≥35
+  census-verified: 2 approach leg lamps + 1 mile lantern — zero budget
+  movement, SW lamps still 0 of 3 on Bill's a/b/c. Packet md5
+  cdc435a2 unchanged since night-7, zero verdict markers; interlane
+  md5 f6254cd0 steady; zero actionable night- shard rows in
+  IMPROVE-PLAN (3 grep hits classified as improve/dress row prose;
+  night- is an observer). Sibling classification since night-34:
+  dress-23 + waysign-19 zero-mutation holds; survey-7 read-only core
+  intake (3 confirmed core defects routed to IMPROVE-PLAN round-2
+  rows under improve ownership — none touches a light entity or a
+  register finding; woodyard/welcome/potter, kind=thing class).
+  APPROACH-PLAN working-tree dirt read-only-classified as the approach
+  lane's own hold/interruption-recovery record (restates D1/D2/D4-leg
+  closed, SE a/b/c + D3/D5 + N5–N7 Bill-bound) — confirms standing
+  state, no disposition change; foreign dirt untouched. Same four
+  verdict classes outstanding: sky facet-5, lamp-budget policy D3 +
+  D4-temple-grounds + D5 + N6 (D1+D2 closed, D4 leg-closed), N5
+  detached-orb, N7 hierarchy inversion. Second-rotation NW+NE+SW
+  passes remain the D1/D2/D4-leg verify paths, deferred while the
+  lane holds. Zero world mutations, zero renders judged, no PASS
+  claimed.
