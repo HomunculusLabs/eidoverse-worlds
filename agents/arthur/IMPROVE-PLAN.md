@@ -299,8 +299,16 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
 28. `nx-town-monument` — pinhole at ring intersection; pedestal face
     crushed. Sev 3. (guard: none)
 29. `nx-dress-ne-yard-001` — rubble read; floating rail ends; uniform
-    near-black. Sev 2. (guard: dress-4 <24h at improve-2 — re-check
-    dress tail at execution)
+   near-black. Sev 2. (guard: dress-4 <24h at improve-2 — re-check
+   dress tail at execution) [DROPPED dress-14: native re-judgment on
+   exact live bytes (sha 191227da == live lib pin, census 259) — 10-view
+   rejudge rig reviews/dress14-ne-yard-rejudge/: 18m gameplay reads
+   DELIBERATE work yard not rubble (low-wide stratified, symmetric rail
+   arms, rack-with-crossbeam); ZERO floating elements (side rails end in
+   grounded posts, legs touch down, contact shadows under all casters);
+   front face shows pale cut-end discs reading CLEARLY on cordwood
+   pyramid/bench logs/sawhorse logs; value contrast weak-but-present at
+   18m = margin note only, not Sev 2]
 30. `nx-dress-sw-gravel-001` — collapses to 1-2px line, reads artifact.
     Sev 2. (guard: dress-7 <24h at improve-2 — re-check at execution)
 31. `nx-dress-ne-bench-001` — scattered tables read; misaligned blob

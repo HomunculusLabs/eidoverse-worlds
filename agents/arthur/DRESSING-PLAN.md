@@ -47,19 +47,24 @@ on Bill's lamp-budget policy (0 of 3 used). Chassis note: placer uploads
 before the already-live check, so idempotent reruns spend one deduped
 upload slot of the shared 4/min budget — acceptable, known wart.
 
-**STATE AT dress-13 (2026-09-06, pipeline shard tick)**: all four district
+**STATE AT dress-14 (2026-09-06, pipeline shard tick)**: all four district
 queues remain COMPLETE (11 installations live); eye-gate packet delivered
-ONCE at dress-12 — still awaiting Bill. Shard work: improve queue row 5
-`nx-dress-sw-prayer-001` re-judged under NATIVE vision on exact live bytes
-(pin 5074600f, reviews/dress13-sw-prayer-rejudge/ 8 views) — DROPPED:
-reads as deliberate devotional mound (size-sorted stack, pale crown,
-bowing slab, sparse strays; "pass — quiet, correct"); fabric/pole was
-fallback-judge invention vs the stone-mound concept contract. dress-8's
-slab-marginal note resolved CONFIRMED-LEGIBLE at 18m — the eye-gate
-packet's prayer-stones slab judgment is now answerable from this record
-without action. Remaining dress shard rows all idle-guarded until early
-09-07; SW lamps remain the only own-queue item, blocked on Bill's policy
-call. Zero world mutations this tick.
+ONCE at dress-12 — still awaiting Bill; SW lamps remain the only own-queue
+item, blocked on Bill's a/b/c policy call (0 of 3 used). Shard work this
+tick: queue row 29 `nx-dress-ne-yard-001` (Sev 2) re-judged under NATIVE
+vision on exact live bytes (census 259, live pin `store/191227dafd0d05dc`
+== local sha `191227da…`; 10-view rejudge rig
+`reviews/dress14-ne-yard-rejudge/`) — **DROPPED**: 18m gameplay reads a
+deliberate work yard (low-wide stratified, symmetric rail arms,
+rack-with-crossbeam), zero floating elements (rails end in grounded posts,
+all legs touch down), pale cut-end discs read clearly on the front face
+(cordwood pyramid strongest). Survives only as a margin note: 18m disc
+contrast at the lower bound — do NOT darken or shrink the discs further.
+Shard ledger: row 5 sw-prayer DROPPED dress-13 (native, pin 5074600f);
+row 29 ne-yard DROPPED dress-14 (native, pin 191227da). Rows 30–38
+remain idle-guarded until early 09-07 (next eligible ~00:12 EDT
+sw-gravel/bench line, worst remaining Sev 2 = sw-gravel). Zero world
+mutations this tick.
 
 ## Siting log
 
