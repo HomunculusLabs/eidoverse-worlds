@@ -39,14 +39,59 @@ Rotation: dress-1 = NW, dress-2 = NE, dress-3 = SE, dress-4 = SW, …
 (dress-1..4 complete — first full rotation 2026-09-06; dress-5 = NW round 2,
 skeps DONE 2026-09-06; dress-6 = NE round 2, benches DONE 2026-09-06;
 dress-7 = SE round 2, cairn DONE 2026-09-06 — SE queue complete; dress-8 =
-SW round 2, prayer stones DONE 2026-09-06 — only SW lamps remain, and
-those are budget-bound pending Bill's lamp-budget policy; next up in
-rotation: NE woodstack DONE (dress-9, 2026-09-06) — NE queue complete;
-next up in rotation: NW log pile DONE (dress-10, 2026-09-06 — NW gate
-stile remains the only NW item); then SW lamps if Bill's lamp-budget
-policy ever lands — SW lamps remain the only district-queue item blocked)
+SW round 2, prayer stones DONE 2026-09-06; dress-9 = NE round 3 woodstack
+DONE — NE queue complete; dress-10 = NW round 3 log pile DONE; dress-11 = NW
+round 4 gate stile DONE 2026-09-06 — NW QUEUE COMPLETE (all four NW items
+live). Remaining open item in ALL district queues: SW lamps only, blocked
+on Bill's lamp-budget policy (0 of 3 used). Chassis note: placer uploads
+before the already-live check, so idempotent reruns spend one deduped
+upload slot of the shared 4/min budget — acceptable, known wart.)
 
 ## Siting log
+
+### dress-11 — NW Cultivation gate stile (PLACED, LIVE)
+
+- **Concept contract**: where the az-45 corridor crosses from the approach's
+  dressed pavers into the cultivated plots (just past the milestone-007/008
+  pair, r70.5), the field's own timber gate-stile stands at the plot edge
+  BESIDE the walking line (furniture-scale solid collider — never on the
+  line): two leaning posts, twin cross rails, diagonal brace, splayed worn
+  step-through stones, rock foot pads, one kicked stray. Distinct from
+  dress-1's laid hedgerow gap (green mass, worker's step): standing timber
+  joinery — the kept gate of a tended boundary. Pale sawn post-tops = the
+  distance tell. Grounds USE: stock control at the field gate. Static,
+  unlit — spends no lamp budget (NW budget 2, dress-spend 0; 1 used = mile-5).
+- **Build**: `assets/mkv3-dress-nw-stile1.ts` →
+  `assets/village_dress_nw_stile1.glb`. Four-version iteration (ZAI fallback
+  vision — native provider-down error 1210, 12th consecutive tick;
+  disclosed): v1 cap r0.085 invisible at 18m (3/4); v2 cap r0.155 read
+  mushroom-close (gameplay 4/4 but close 2/3); v3 cap r0.11 lost the 18m
+  sawn read again (3/4); v4 cap r0.13/h0.09 midpoint **ACCEPTED** — gameplay
+  4/4 PASS + close 3/3 PASS.
+- **Decode (final, v4)**: bbox x −1.204..1.600 (center +0.198, half 1.402),
+  z −0.708..0.748 (center +0.020, half 0.728), y −0.005..1.251; 6 nodes
+  (budget 3–25 ✓). No light anchors, empty comp bag by design.
+- **Siting (census 258, exact sweep-10 baseline, zero drift)**: systematic
+  az-45 band scan (r 68–88, both sides, ≥2m off-line); chosen pose r70.5
+  off +6.5 NE side — center (−45.25, 54.45), yaw 135° (local +z
+  plaza-ward/corridor-facing, axis along the boundary). Exact-footprint SAT:
+  min gap 2.12m vs `nx-approach-nw-lane-001` fat compound proxy (lane
+  walking surface ends ~r64 — real pavers far); no sub-1.4m solid adjacency;
+  rim corners 69.92..71.62 ∈ [66,108] ✓; terrain flat (py 0.0462, preflight
+  `next-terrain-dress11.ts`).
+- **Placement**: `nw-dress11-place.ts` — hash gate → blocker-epoch guard
+  (lane, mile-007/008, hedge, skeps, logpile, lavender-0027, orchard-0033) →
+  fresh-census SAT + rim gates → upload (content-addressed) → spawn →
+  post-place tuple verify. **PLACED_VERIFIED** `nx-dress-nw-stile-001` @ lib
+  `store/5a8de30d1d7088bb.glb`, pos (−45.25, 0.046, 54.45), yaw 135°.
+  Idempotent rerun: 0 verbs (one deduped upload re-sent — chassis wart
+  above). NW lamp budget dress-spend 0 of 2.
+- **Eye-check for Bill**: walk the NW corridor out past the milestone pair —
+  on the right (NE side) of the walking line, a small timber gate-stile
+  should read at the plot edge: two pale-topped posts, twin rails, one
+  diagonal brace, worn step stones through the gap. It should read "the
+  field's gate, kept", not a fence section or debris. If the pale tops still
+  don't pop in world lighting, they brighten one more step (one pass).
 
 ### dress-10 — NW Cultivation field-edge log pile (PLACED, LIVE)
 
