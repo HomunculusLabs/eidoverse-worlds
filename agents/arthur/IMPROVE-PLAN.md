@@ -1516,6 +1516,14 @@ rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
 
 ## SURVEY CANDIDATES (round-2 intake)
 
+**ROUTING (town-4, 2026-09-06, Bill 24h-usefulness directive):** candidates
+with no live shard prefix (`nx-welcome`, `nx-court`, `nx-forge`, `nx-cistern`,
+`nx-temple-*`, `nx-cultivation-*`, `nx-craft-*`, `nx-gallery-*`, `nx-wild-*`)
+default to the IMPROVE lane as primary refinement executor — they are
+committed queue rows, so domain law is satisfied. Exception per Bill's
+survey-8 call: `nx-dress-fountain` stays DRESS-domain.
+
+
 Confirmed under NATIVE vision at 18m from fresh live store bytes
 (survey-7, 2026-09-06). Findings are probes — confirm-or-drop and
 decode-at-source law stays with the executing lane. Grep-verified: no
