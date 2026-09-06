@@ -3833,4 +3833,6 @@ fixes ≈ 6 F.)
 
 - [dress-5] NW bee skeps placed live — nx-dress-nw-skeps-001 on the plaza-facing SE edge of orchard-0033, row 3.2m outside the plot edge; three-version iteration (plinth value, boulder separation, mallet-read spill kill -> pale clump scatter) via ZAI fallback (native vision down 6th tick); SAT clear no sub-1.4m adjacency, rim 75.3-78.8, idempotent verified; NW lamp budget 0 of 2 (D+1, E+1)
 
-**Running total: 2370173 / 2000000**
+- [waysign-5] woodyard sign hung live under nx-town-woodyard front eave (nx-sign-woodyard-001) — TRUE HANGING idiom on the dyer chassis (open-front shed): bracket flush at host-local [0,2.05,1.25], 3-link chains, bone board 2 faces, saw-buck glyph (2 X trestles + lying log) in woodyard source colors; host lib 1f2c6f592095b204 is an intentional old-gen tex-85 freeze (interior-19 finding) so anchor derived from LIVE bbox not local rebuild; v1 log end-grain invisible + edge-to-edge (zai fallback, native down 5th tick) → v2 bright cut-face end discs + warmer log + frame margin, ACCEPT + 8m gate PASS; SAT minGap +1.156 vs longhouse, ground-layer exemptions per precedent; PLACED_VERIFIED 1 verb, idempotent rerun zero verbs, live tuple [15.432,2.05,29.887] yaw -2.6698 host-relative exact (D+0, E+1)
+
+**Running total: 2370174 / 2000000**

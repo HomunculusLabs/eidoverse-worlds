@@ -27,7 +27,7 @@ Rotation: working edge outward from the E road, then craft edge.
 | 3 | `nx-town-dyehouse` | dyer | dyed cloth bolt (flax-blue) | DONE waysign-2 |
 | 4 | `nx-town-kiln` | kiln | flame over chamber | DONE waysign-3 |
 | 5 | `nx-town-potter` | potter | wheel in profile | DONE waysign-4 |
-| 6 | woodyard host (id from census) | woodyard | saw-buck | pending |
+| 6 | woodyard host (id from census) | woodyard | saw-buck | DONE waysign-5 (`nx-town-woodyard`) |
 | 7 | `nx-town-windmill` (or nx-windmill) | mill | four-sail cross | pending |
 | 8 | `nx-town-forge` / `nx-forge` | smithy | hammer (heritage) | pending |
 
@@ -36,6 +36,16 @@ before the anchor is chosen — the roster above is expectation, not truth;
 the census + decode are truth.
 
 ## Host anchor log (filled per sign; re-derive after host re-places)
+
+- waysign-5 `nx-town-woodyard` (lib 1f2c6f592095b204 — INTENTIONAL
+  old-gen tex-85 freeze, interior-19 finding; local mkv3-woodyard27
+  rebuild hashes 5ad78870 ≠ live, so anchors derive from the LIVE bbox
+  law, never a local rebuild): open-front 3-sided shed, road-facing
+  face = the OPEN FRONT (host-local +z, world dir (−0.457,−0.889)
+  toward plaza). TRUE HANGING idiom (dyer precedent): bracket flush
+  under the front eave at host-local [0, 2.05, 1.25] (live bbox roof
+  front edge ≈ z1.29 y2.14 top / ~2.10 underside). Sibling artwalk b11
+  rider on the BACK wall (host-local z −0.80) — no contact.
 
 - waysign-1 `nx-town-stable` (lib 5beff62ed41ca6cf, local source hash-matches
   live): road-facing face = the back wall (host local z=+2.1) — the E road
@@ -124,6 +134,23 @@ the census + decode are truth.
   plaza-to-craft edge — the pot + wheel board should read between the
   porch posts at the stand's approach, terracotta pot distinct from
   the dark wheel at 8m.
+
+- waysign-5 `nx-sign-woodyard-001` woodyard: mkv3-sign-woodyard.ts,
+  deterministic ×2, sha 58f5cbe3272aa7a8…, 6 nodes, no comps no lights.
+  v1 zai-REJECTED (log end-grain invisible at size, log edge-to-edge
+  with frame) → v2: brighter/bigger cut-face end discs, warmer log
+  0xc0a04e, log shortened 0.34→0.30 for frame margin — ACCEPT
+  (isolated) + 8m front gate PASS; far-LOD degrades gracefully to
+  "a sign" (consistent with waysign-1..4). Native vision provider down
+  5th consecutive tick (error 1210) — zai-vision fallback, recorded
+  not claimed as native PASS. Placer waysign-place-woodyard-1.ts:
+  rider-only SAT, host exemption explicit, ground-layer exemptions
+  (paths/roads/approach lanes), minGap +1.156 vs nx-town-longhouse,
+  PLACED_VERIFIED 1 verb, idempotent rerun zero verbs, live tuple
+  [15.432, 2.05, 29.887] yaw −2.6698 (host-relative [0, 2.05, 1.25]
+  exact). Bill eye-check: from the plaza working-edge path, the
+  saw-buck board should read under the woodyard's open front eave as
+  you approach the cordwood, X trestles + log one clean glyph.
 
 ## Carried laws
 
