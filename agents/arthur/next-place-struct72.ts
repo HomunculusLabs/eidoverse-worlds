@@ -1,0 +1,89 @@
+// next-place-struct72.ts — struct-72: CATENARY GATE first placement
+// (executes struct-69's deferred contract; v5 NATIVE-judged 18m PASS +
+// NIGHT PASS in struct-69, exact bytes 0e3b5e5b x2 deterministic).
+// NEW entity (census-verified absent this tick, 277 entities): one spawn.
+// Hash gate: 0e3b5e5b (v5 — face-mounted chain: v3 crest + v4 enlarged
+// both judged invisible at 18m native; face line 0.06 proud, beads r0.14,
+// crown brass r0.17).
+// TRUE decoded envelope (local): x -4.52..4.52, z -0.87..1.026
+// (half 0.948, center offset z +0.078), y 0..5.798.
+// SAT preflight (fresh 277 census this tick, conservative rotation-grown
+// world AABBs both sides): CLEAR — worst solid nx-struct-ellipsecourt
+// +1.754m, nx-struct-meridianstair +1.855m, both >= 1.4 law (conservative
+// understates true gaps).
+// Terrain: 7pt spread 6.8mm, PY -0.0274 at center.
+// Two-pass chassis: hash gate -> live absence check -> upload (429 pacing,
+// shared 4/min fleet budget) -> spawn -> post-place tuple verify ->
+// idempotent rerun (zero verbs).
+import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+const ROOT = "/Users/t3rpz/projects/eidoverse-worlds", WORLD = "commons-next";
+const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
+const POS = [0, -0.0274, -60.5] as const;
+const YAW = 0;
+const m = {
+    id: "nx-struct-catenarygate",
+    file: "village_catenarygate3.glb",
+    sha: "0e3b5e5b4d7086ab6776c2476c9cf04c24df6ad3f1d247ffd32c7f800b536c32",
+    comp: {},
+} as const;
+const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
+const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
+const die = (msg: string): never => { throw Error(msg); };
+const near = (a: number, b: number) => Math.abs(a - b) < 1e-6;
+function canon(v: any): any { return Array.isArray(v) ? v.map(canon) : v && typeof v == "object" ? Object.fromEntries(Object.keys(v).sort().map(k => [k, canon(v[k])])) : v; }
+const eq = (a: any, b: any) => JSON.stringify(canon(a)) === JSON.stringify(canon(b));
+async function geom(world = WORLD) {
+    const r = await fetch(`${base}/geom?world=${world}`);
+    if (!r.ok) die(`geom ${world} ${r.status}`);
+    const d: any = await r.json();
+    return Object.fromEntries((d.entities ?? []).map((e: any) => [e.id, e])) as Record<string, any>;
+}
+const bytes = new Uint8Array(readFileSync(`${ROOT}/agents/arthur/assets/${m.file}`));
+const h = createHash("sha256").update(bytes).digest("hex");
+if (h !== m.sha) die(`${m.id} reviewed hash drift ${h}`);
+const wantLib = () => `store/${m.sha.slice(0, 16)}.glb`;
+const before = await geom();
+const exist = before[m.id];
+if (exist && !(exist.pos.every((n: number, i: number) => near(n, POS[i])) && near(exist.yaw, YAW) && exist.scale === 1 && eq(exist.comp ?? {}, m.comp) && exist.lib === wantLib())) die(`${m.id} live tuple drift (expected absent)`);
+let verbs: Array<[string, any]> = [];
+if (!exist || exist.lib !== wantLib()) {
+    const u = new URL(`${base}/upload`);
+    u.searchParams.set("token", cfg.agentToken);
+    u.searchParams.set("name", `commons-next ${m.id} struct-72`);
+    u.searchParams.set("by", cfg.id);
+    let lib = "";
+    for (let a = 1; a <= 5; a++) {
+        const r = await fetch(u, { method: "POST", body: bytes });
+        if (r.ok) { lib = (await r.json()).path; break; }
+        if (r.status === 429 && a < 5) { await sleep(25_000); continue; }
+        die(`${m.id} upload ${r.status}`);
+    }
+    if (lib !== wantLib()) die(`${m.id} upload path ${lib}`);
+    verbs = exist
+        ? [["remove", { id: m.id }], ["spawn", { id: m.id, lib: wantLib(), pos: POS, yaw: YAW, scale: 1 }]]
+        : [["spawn", { id: m.id, lib: wantLib(), pos: POS, yaw: YAW, scale: 1 }]];
+} else console.log(`${m.id} already live at target lib — no verbs`);
+if (verbs.length) await new Promise<void>((resolve, reject) => {
+    const ws = new WebSocket(cfg.url);
+    let joined = false, i = 0;
+    const timer = setTimeout(() => reject(Error("verb timeout")), 90_000);
+    const paced = setInterval(() => {
+        if (!joined || i >= verbs.length) return;
+        const [verb, args] = verbs[i++];
+        ws.send(JSON.stringify({ type: "verb", verb, args }));
+        if (i === verbs.length) setTimeout(() => { clearInterval(paced); clearTimeout(timer); ws.close(); resolve(); }, 1600);
+    }, 650);
+    ws.onopen = () => ws.send(JSON.stringify({ type: "join", world: WORLD, id: "arthur-struct72-gate", avatar: cfg.avatar, token: cfg.joinToken }));
+    ws.onerror = () => reject(Error("websocket error"));
+    ws.onmessage = (ev: any) => {
+        const x = JSON.parse(ev.data);
+        if (x.type === "error") reject(Error(`server ${x.error}`));
+        else if (x.type === "snapshot") joined = true;
+    };
+});
+else console.log(`${m.id} already live — no verbs`);
+const after = await geom();
+const e = after[m.id];
+if (!(e?.lib === wantLib() && e.pos.every((n: number, i: number) => near(n, POS[i])) && near(e.yaw, YAW) && e.scale === 1 && eq(e.comp ?? {}, m.comp))) die(`${m.id} post-place failed`);
+console.log(JSON.stringify({ status: "PLACED_VERIFIED", id: m.id, lib: wantLib(), pos: POS, yaw: YAW, verbs: verbs.length }));

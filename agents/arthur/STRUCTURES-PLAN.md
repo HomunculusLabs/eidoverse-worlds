@@ -3351,3 +3351,51 @@ deferred catenarygate placement (struct-69 v5, judged PASS, queued N
 meridian threshold) is the standing build-tick work, CITY-PLAN register
 rows now city-lane-owned.
 
+## struct-72 (2026-09-07): R6-1 CATENARY GATE PLACED_VERIFIED —
+## struct-69's deferred contract executed in full
+
+Cadence 72%3==0 refine tick; pool verified EMPTY fresh (no Bill verdict, no
+open routed note; CITY-PLAN register rows now city-lane-owned — wave-1 row 1
+already EXECUTED struct-71). Standing build-tick work = the deferred
+placement. Gate ALL PASS real exit 0 at b50d1eb6 at tick start AND re-run
+exit 0 immediately pre-mutation (no interleaves between).
+
+BYTES: disk re-proven 0e3b5e5b... == struct-69 v5 pin (sha256 x1 this tick;
+struct-69 proved x2 deterministic). Native 18m PASS + NIGHT PASS already
+carried from struct-69 on the exact bytes — no re-judge owed (flap law
+satisfied: verdict was native on these exact bytes).
+
+PREFLIGHT (all fresh this tick, census 277, target absent):
+- SAT struct72-sat-catenarygate.ts: conservative rotation-grown world AABBs
+  BOTH sides (struct-70 law — census bbox min/max are LOCAL). CLEAR — worst
+  solid ellipsecourt +1.754m, meridianstair +1.855m, wild-forest-0010
+  +3.945m, temple-terrace-0039 +7.511m, all >= 1.4 law; conservative
+  understates true gaps. Nearest exempt films 19.9m+ (orreryring) — no
+  network contacts at all.
+- Terrain next-terrain-struct72.ts 7pt on the TRUE envelope (x half 4.52,
+  z half 0.95, center offset z +0.078): spread 6.8mm, PY -0.0274 —
+  the flattest seat of the lane's recent placements.
+
+PLACEMENT: next-place-struct72.ts (struct-68 first-placement chassis): hash
+gate -> absence -> 1 upload (no 429) -> 1 spawn verb at exact tuple
+(0, -0.0274, -60.5) yaw 0, lib store/0e3b5e5b4d7086ab.glb.
+PLACED_VERIFIED; idempotent rerun 0 verbs. Comp bag empty by design (no
+comps — the chain is geometry, the beads are emissive).
+
+WALK: struct72-walk-catenarygate.ts 12/12 ALL_PASS worst 0.39m (reproduced
+twice): S approach on the meridian -> through the 7m opening N -> clear ->
+back through the same opening S (two-way proof) -> E shoulder -> N span ->
+W shoulder -> return to S approach line. The walker threads the true
+opening; honest room gates (14.2m2 + 5.8m -> exact trimesh).
+
+STANDING STATE: Round 6 R6-1 seated. The N meridian walk now reads
+waystone -> waterstair -> dial -> court -> meridianstair -> GATE at the
+threshold; the cardinal-set latitudes complete (windmill r40 W, stillwind
+r52 W, ruledtower ~r58 E, ninesbridge ~r62 S, catenarygate r60.5 N).
+BILL EYE-CHECK PACKET: walk N on the meridian past the dial and court to
+the threshold — a stone gate whose arch is a true hanging chain (fuller
+flanks than a round arch), iron bead necklace on the face, five brass
+beads (crown + quarters + ends) glowing quietly at dusk. Frames:
+reviews/struct69-catenarygate-v5/ (gameplay 18m contract frame + night).
+Next tick: 73%3==1 -> build tick (R6-2 concept or city-lane/Shard re-arm
+scan).
