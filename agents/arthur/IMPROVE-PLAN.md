@@ -222,6 +222,14 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
 5. `nx-struct-crossing` — reads as utility-pole clusters; no water/banks/
    stones — ford is a void; clipping posts, snapped stub pegs. Sev 1:
    identity failure. DECODE FIRST. (guard: none)
+   [EXECUTED improve-8 (annotation repaired improve-29 — the original
+   same-commit annotation was never committed; execution itself landed
+   2026-09-06, ledger improve-8, live lib 216c4bd4): monolith re-carve
+   2-3:1 village stone tile + crown step + textured-gold sleeve collars
+   (brass metal-mat desaturation root-caused offline); ford-is-void
+   finding DROPPED as fabricated identity (commission = 4 leaning
+   stones, no water); remove+spawn exact tuple PLACED_VERIFIED +
+   idempotent; survey-6 native CLEAN on fixed bytes]
    [NATIVE-survey-6 CLEAN (restored native, 18m, fresh live bytes, lib
    216c4bd4): resolves the survey-3 ZAI dissent toward improve-8's
    native acceptance — shafts read HEWN STONE (mottled chisel texture,
@@ -482,6 +490,15 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     fuse finding); left garden fence illegible blob (new sub-finding).
     Re-ranked Sev 3. Evidence:
     reviews/survey2-sev2-slice/garden-cottage/gameplay.png]
+    [EXECUTED improve-16 (annotation repaired improve-29 — improve-21
+    claimed this annotation landed but it was never committed; execution
+    itself landed 2026-09-06, ledger improve-16, live lib cee52aca ==
+    source rebuild): F1 buried-window class cured (win_e/win_n proud
+    +0.09, NEW cased lit gc_win_s), F2 door dignity (threshold + stoop,
+    b17 seed-lattice crown keep-out honored), F3 fence rhythm (13 posts
+    pale caps), kit solidRidge+trueGableHalf 2.15 horn killed; sha
+    872aec35->cee52aca x2; night warm px 0->1702; PLACED_VERIFIED exact
+    tuple + idempotent; ZAI after-judge PASS w/ routed residual]
 21. `nx-town-belltower` — ladder rungs float (no stringers); rope
    [ENGINE NOTE 2026-09-06 engine-1: ladders are CLIMBABLE via a `ladder`
    comp — fix the rungs AND place `{type:'ladder', min:[..], max:[..]}`
@@ -516,6 +533,13 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     open air between the legs. All three sub-findings now native-confirmed;
     Sev 3 stands (engine-1 ladder-comp note rides the row). Evidence:
     reviews/survey5-slice/town-belltower/gameplay.png]
+    [EXECUTED improve-17 (annotation repaired improve-29 — improve-21
+    claimed this annotation landed but it was never committed; execution
+    itself landed 2026-09-06, ledger improve-17, live lib 2419fbc5):
+    interrupted-window recovery; stringers+attached rungs, rope anchored
+    to beam/cleat, lamp moved inboard off the junction; ENGINE-1 ladder
+    comp live over climb plane; PLACED_VERIFIED exact tuple + idempotent;
+    2-leg walk ALL_PASS; residuals disclosed to round-1 eye-gate]
 
 22. `nx-struct-hypar` — dangling batten; hovering batten ends; ragged
     tips. Sev 2–3. (guard: none)
@@ -1354,7 +1378,7 @@ gallery ring, stray pole clipping lit window, lopsided sail cross;
 guard: interior-20 Sep 1 touched the windmill INTERIOR only — treat
 exterior as clear; re-check lane tail at execution).
 
-## Round 1 execution log
+## Round 1 execution log (continued — duplicate header retitled improve-29; single non-overlapping sequence improve-4..7 above, improve-8+ below)
 
 - improve-8 (EXECUTION, queue item 5 `nx-struct-crossing` — windmill
   DEFERRED first): idle-guard fired on the windmill (waysign-6 live rider
@@ -1673,6 +1697,25 @@ open duplicate notes for these objects.
   post (~5px sky gap x466-470 y341-345); welcome text dark-on-dark
   illegible at 18m (board holds sign-identity, welcome semantic fails).
   Evidence: reviews/survey7-slice/nx-welcome/gameplay.png
+  [EXECUTED improve-29, 2026-09-07: both findings CONFIRMED at source +
+  ZAI before-judge on exact live bytes (native 1210 x2, disclosed, debt
+  owed); ROOT = arms centered at ax*0.8 stop 0.11-0.19m short of the
+  post AND rotation.y swings inner ends 0.07-0.15m sideways — 4-iteration
+  decode-driven loop: v1 local-x embedding FAILED its own audit (yaw
+  swing), v2 uniform-w pivot distorted reach, v3 sign error, v4 ACCEPTED
+  — each arm RADIATES from the post toward its original far tip (tips
+  preserved, envelope strict-subset live bbox, inner ends 0.031-0.036
+  all rows); F2 name-bar idiom (monument/mapboard lineage): dark band
+  0.92x0.25 + pale carved glyphs enlarged to cw0.036/ch0.042 (bar covers
+  full 5-row band, 0 glyph verts outside); sha 362c5be1->7d1bd0c9 x2
+  deterministic; AUDIT ALL PASS (envelope/below-grade/bar-coverage);
+  ZAI after-judge 3/3 PASS (arms attached, inscription reads as text,
+  zero floats); reseat remove+spawn 2 verbs exact tuple comp {} both
+  sides, PLACED_VERIFIED + rider b25 + light companion standing + 
+  idempotent zero-verb rerun; walk 3/3 ALL_PASS 0.000/0.280/0.389.
+  Residual disclosed: native after-judge owed (1210 this tick); the
+  welcome WORD itself stays sub-legible at 18m by geometry (band reads
+  as inscription, per the contract's stated 18m expectation).]
 - `nx-town-potter` — Sev 4 identity-marginal (native survey-7): wheel
   disc reads generic flat ellipse (could read table/press), pot on ~1px
   spindle reads floating (x470 y352-360); shelf pots sub-pixel texture.
@@ -2598,7 +2641,10 @@ ALL_PASS (4 rays two-way, max arrival 0.38m — improve23-walk-hamlet.ts);
 ## improve-21 (EXECUTION CONTRACT, 2026-09-06 — R-120/R-121 take, re-arm item 2)
 
 **Why this is lawful improve-lane work:** round 1 fully terminal (39/39
-annotated; rows 20/21 gap-fixed this tick via improve-16/17 annotations);
+annotated; rows 20/21 gap-fixed this tick via improve-16/17 annotations —
+CLAIM CORRECTED improve-29: that annotation text was never committed
+(git log -S empty on both strings); the gap was real and starved the
+re-arm inputs for 12 ticks; repaired this tick with sourced annotations);
 re-arm law fired → item (2) = REPAIR-REGISTER OPEN items. R-120 (Sev 1, five
 sweeps unaddressed, unowned) + R-121 ride together; register names improve as
 the executor of last resort. Prefix is `nx-approach-lamp-*` — no lane owns it
@@ -2653,3 +2699,49 @@ verbs. R-121: re-derived on live bytes (9mm → 0.076m post-improve-19 frame);
 move DEFERRED to artwalk-paired choreography (defect note delivered to
 ARTWALK-PLAN Log); register boxes checked + STATUS: FIXED line appended for
 R-120; R-121 stays open as routed remainder.
+
+## improve-29 (EXECUTION CONTRACT — EXECUTED same tick, 2026-09-06 23:2x — plan-repair tick +
+`nx-welcome`, SURVEY CANDIDATES row Sev 3 native survey-7, town-4 routing
+no-shard default improve; worst improve-own take after rows 20/21/5 found
+EXECUTED-but-unannotated — annotation repair executed this tick)
+
+Why lawful: rows 20/21 (next improve-own Sev 3) proved executed at ledger
+improve-16/17 with live libs matching; taking them would duplicate cured
+work — repaired instead (annotation law). Row 4 windmill idle-guarded
+(waysign rider <24h until 09-07 01:57). Next worst: `nx-welcome` Sev 3.
+Idle-guard clear (zero lane commits touch welcome in 24h; survey-7 read
+only). Live tuple (-3, 0, -4.3) yaw 0.6092, lib 362c5be1 == local
+village_welcome3.glb == rebuild x2 THIS TICK (no disputed bytes). Comp {}
+both sides by census. Riders: b25 mark at local (0,1.35,-0.043) -z face
++ `-l` warm light companion (0,2.2,0) — both outside the edit zone.
+
+ROOT CAUSE (decode at source, mkv3-welcome59.ts):
+- F1 arm detachment SOURCE-TRUE: all five pointer arms are 0.34-long
+  slats centered at ax*0.8 — inner ends stop 0.11-0.19m short of the
+  post surface (r 0.06-0.08). Arms 1/2 (y 1.16) hide their gap behind
+  the board (board bottom 1.14); arms 3/4/5 (y 1.05/0.94) float in the
+  open — the survey-7 native ~5px sky gap.
+- F2 text illegibility SOURCE-TRUE: COMMONS glyphs are 3x5 pixel fonts
+  cw 0.0333 ch 0.052 fill 0.82, dark 0x4a432e proud only 0.011 on the
+  bone board — ~6px letters at 18m, smear below legibility.
+
+FIX (single element each, outer envelope preserved):
+- F1: re-derive per-arm geometry so inner end = 0.045 (0.025 embedded
+  past post surface r 0.07): w = outer - 0.045, cx = (0.045+outer)/2 —
+  outer extents preserved by construction (SAT-neutral same-tuple),
+  uniform law all five arms (class fix incl. occluded 1/2).
+- F2: name-bar idiom (monument plaque / mapboard ink lineage): dark
+  bar 0.92x0.15 at the inscription row + glyphs enlarged (cw 0.038
+  ch 0.060 gap 0.018 fill 0.92) recolored pale carved 0xd8d2ae proud
+  of the bar — dark band + pale letters reads as painted inscription
+  at 18m even sub-legible. Board/post/foot/lamp untouched.
+
+FALSIFICATION: (a) decode — every arm inner end within [-0.05,0.05] x
+at its y/z row (embedded); b25 keep-out zone verts identical 0 new/gone;
+bbox x-extent change <= 0.01. (b) identical-camera before/after renders
+(18m gameplay + front near + night): native judge confirms arms attached
+(zero sky gaps), name band reads as inscription, no new floating. (c)
+rebuild x2 deterministic. (d) re-place remove+spawn exact tuple, comp {}
+both sides, riders standing, idempotent zero-verb rerun. (e) 2-leg
+two-way approach walk ALL_PASS. REVERT: git checkout mkv3-welcome59.ts,
+rebuild (byte-repro 362c5be1 proven this tick), re-place.
