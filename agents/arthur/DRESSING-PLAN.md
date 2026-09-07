@@ -1,6 +1,36 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-122 — lawful HOLD (13th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD 174319df (city-66); interlane md5
+  f6254cd0 pin-exact. Fresh census 292 steady vs the dress-121 epoch —
+  29 fleet district-qualified (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy
+  core intact; zero new arrivals or departures (nx-struct-conoidfan the
+  sole and already-recorded prior sibling arrival); ZERO dress-domain
+  drift. Round-3 closers PINS_EXACT 4/4 vs live by full-lib lookup:
+  foxden 856deec5 (73.0, −0.0532, −10.5) yaw 4.7124, lanternhook
+  639c5480 (−57.0, −0.0306, −70.0) yaw 4.9277, seats cb34bd36 (−57.0,
+  −0.0263, −72.5) yaw 2.7349, streamstones aabbc23d (75.05, −0.0249,
+  −46.90) yaw −0.7854 (radian law). Probe self-catch: first census
+  parse died on trailing summary lines after the JSON array
+  (json.loads "Extra data") — corrected at source with raw_decode from
+  the array start; disclosed.
+- **Shard routing re-verified at source this tick**: all nine Round-1
+  `nx-dress-*` row blocks terminal (5/29/30/31 DROPPED or
+  NATIVE-DROPPED, 32/33/34/37/38 EXECUTED, row 38 declares queue
+  EMPTY); round-2 routes to legacy-core off-limits only; no round-4
+  section (grep 0); no survey-56+ intake tags in IMPROVE-PLAN (grep 0).
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the log trail.
+- **Blocked on Bill (standing, said once)**: bellows siting a/b/c
+  (dress-103/104, v8 accepted), SW lamp policy a/b/c (0 of 3 spent,
+  hooks empty by design). Cheapest unblock stays the two one-line
+  rulings in `reviews/dress-round3-eye-gate.md`.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use this tick (D+0, E+0).**
+
 ### dress-121 — lawful HOLD (12th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS

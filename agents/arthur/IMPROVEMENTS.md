@@ -5024,4 +5024,6 @@ fixes ≈ 6 F.)
 
 - [city-66] 24th lawful HOLD — gate ALL PASS real exit 0 at f34f8168 (city-65); register fresh-read 13/13 movable EXECUTED, remainder HOLD-for-Bill (amphi a/b/c, wave-2 mosaic blessing, rider eye-gates b31-b33); fresh census 292 quiet vs city-65 capture: +1 arrival nx-struct-conoidfan (25.82,-0.015,48.56) r55.0 = struct-87 owed placement landing, sibling work-in-flight, 0 gone 0 moved; pins 20/20 exact worst 0.0005m (beacon server-rounding class); rider hosts unmoved riders co-located; wave-2 subjects parked (mosaics r45.00, miles r47.06-48.92); amphi HOLD-site intact; band scan flags all known-standing residents, zero unregistered arrivals; shard zero OPEN city-prefix rows; zero uploads, zero verbs, zero live-world mutations (D+0, E+0)
 
+- [dress-122] 13th lawful HOLD post-close — gate ALL PASS real exit 0 (tick-start 174319df); census 292 steady (29 fleet NE6/NW9/SE7/SW7 + 16 legacy, zero drift, conoidfan prior-recorded arrival); closers PINS_EXACT 4/4 full-lib lookup; shard terminal at source, no round-4, no survey-56+ intake; eye-gate file untouched (17:07:57, md5 12cec3fa); blocked on Bill standing (bellows a/b/c, SW lamp a/b/c); probe self-catch: census raw_decode fix; zero mutations (D+0 E+0) (D+0, E+0)
+
 **Running total: 2370724 / 2000000**
