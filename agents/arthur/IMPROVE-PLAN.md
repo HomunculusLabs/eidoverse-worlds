@@ -2680,6 +2680,18 @@ open duplicate notes for these objects.
   (0007/0015/0028/0041/0054) each carry DISTINCT shas — confirm at
   decode whether the float/hole class is shared before fleet work.
   Evidence: reviews/survey9-slice/nx-craft-hamlet-0007/gameplay.png
+  [survey-54 annotation, 2026-09-07, first independent read of CURED bytes
+   edd3da3e (improve-23)]: cure CONFIRMED for tower hole / stair detachment /
+   mass grounding — but two judges (native gameplay + ZAI face cross-check,
+   converging pixel regions) flag a RESIDUAL: middle cottage roof slab floats
+   ~8-12px pale sky band ALONG the wall face at the roof-wall junction
+   (ZAI face x412-538 y286-304; native gameplay corroborates same element +
+   its chimney cap x425-500 y272-298); plus small debris cluster between
+   middle/right cottages x548-590 y460-500 (both judges). Probe not verdict
+   — decode owed (small-cottage roofY in composeHamlet; may be one-off vs
+   family-wide). Sev 3 class residual post-cure. Left/right cottage roofs
+   read ATTACHED under the eave-vs-junction discriminator. Evidence:
+   reviews/survey54-slice/hamlet7/{gameplay,face}.png
   [survey-10 annotation, 2026-09-06]: hamlet-0015 (distinct sha
   353dd6fb, NATIVE, 18m gameplay) exhibits the IDENTICAL class —
   see-through tower hole x418-512 y428-497, detached stair string

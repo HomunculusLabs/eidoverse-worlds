@@ -3100,3 +3100,68 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
  judged index entry. Verdicts 0 confirmed / 6 clean (5
  clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
  zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-54)
+
+ - survey-54 (2026-09-07, NATIVE 6/8 + ZAI fallback 2/8 disclosed —
+   flap pattern: chainvault gameplay + hamlet7 face each burned 1210 x2
+   with paced retries; native RECOVERED between calls for chainvault night
+   and hamlet7 gameplay; orchard12 unjudged at budget close (next-tick
+   first candidate, survey-51 b22/b25 precedent). Slice = 2 new-arrival
+   first independent reads (lanternhook=dress-109 v5, chainvault=struct-85
+   v2) + 6 post-cure corroboration reads at the finding-source members
+   (survey-53 townhall precedent; mosaic EXCLUDED — improve-41 Bill-blocked,
+   re-judging a standing blocked row is not lawful intake). Served-shas
+   pinned 758c5cb6a567f799 (lanternhook) / ad4f2abbb98fd0ad (chainvault) /
+   00f1b9426c1ae0e0 (hamlet7) / 26c785a732ca0477 (garden11) /
+   7fe7817e0095fcb3 (seed3) / 6bb98abaffd3441a (cairn22) /
+   9c70cdff65948986 (lavender6) / 0a59493b6ee00f23 (orchard12), all
+   fetched HTTP 200 curl UA from /library/store/ on exact census-54 libs.
+   VERDICTS: LANTERNHOOK NATIVE CLEAN-with-margin — 3 distinct hook posts
+   read instantly, per-post course variation 4/3/5 confirmed NOT clones,
+   all grounded with contact shadows; judge 3-vs-4-post count flag
+   DISCARDED as my own prompt artifact (I wrote 4 posts; dress-109 record
+   names 3 posts — closewide 3-post confirm stands); margins: hook loops
+   at legibility floor, faint one-sided shadows. CHAINVAULT ZAI gameplay
+   PASS + NATIVE night PASS — catenary gallery reads instantly, ribs
+   grounded, no holes; night exactly ONE quiet warm crown bead
+   (476-482,313-319) zero bloom/spill; margins: crown bead sub-pixel day
+   (night carry), far-mouth camera-occluded (struct-85 walk debt
+   disclosed), rib moire-in-motion note. HAMLET-0007 CONFIRM Sev 3
+   residual post-cure (native gameplay + ZAI face converge: middle
+   cottage roof float ~8-12px pale band along wall face x412-538
+   y286-304 + chimney cap x425-500 y272-298 + debris cluster
+   x548-590 y460-500; tower hole / stair detachment / mass grounding
+   all CURED; left/right roofs attached under eave-vs-junction
+   discriminator; native all-three-hover gameplay claim narrowed by
+   face cross-check — oblique eave misread class). GARDEN-0011 NATIVE
+   CLEAN — kitchen-garden grammar lands (parallel cabbage rows + orange
+   crop dots + fence w/ posts; left bed clumps margin, rail-seam cosmetic).
+   SEED-0003 NATIVE CLEAN — stupa-form seed monument reads, centered
+   within 1-2px, grounded, zero floats/holes (apex speck = capstone
+   accent class). CAIRN-0022 NATIVE CLEAN — floating-pebble class ABSENT,
+   all cap pebbles seated, base scatter anchored (center-cluster merge
+   spacing margin). LAVENDER-0006 NATIVE CLEAN — violet-topped
+   continuous rows + tan furrows, violet 30-40 pct clearly legible
+   (deeper than improve-45 own ~62/38 read but same passing class),
+   specks embedded not airborne. ORCHARD-0012 fetched+rendered,
+   UNJUDGED at run-budget close — next-tick first candidate.
+   CURE CORROBORATION SCORE: improve-42 garden / improve-39 seed /
+   improve-43 cairn / improve-45 lavender CONFIRMED CLEAN 4/4 judged;
+   improve-23 hamlet cures confirmed but residual routed (note in
+   IMPROVE-PLAN on the standing hamlet-0007 row, grep-verified unique,
+   no candidate row — row already stands, post-cure residual class).
+   Routing: ONE defect note (hamlet residual) to IMPROVE-PLAN row
+   annotation (improve own domain), ZERO notes to other lanes plans,
+   ONE ledger append survey-54 (loop law 4: note routed). Census
+   291 vs survey-53 snapshot: +2 arrivals BOTH ledger-matched sibling
+   work-in-flight (nx-dress-sw-lanternhook-001 = dress-109, nx-struct-
+   chainvault = struct-85), 0 departures, 0 TRUE lib flips, 0 pos
+   moves — first diff self-catch: 289 false flips were my own snapshot
+   format artifact (survey-53 stored store/-prefixed paths, survey-48
+   class), repaired by normalizing both sides before comparison.
+   Gate: ALL PASS real exit 0 first try at f400b87c (ledger law EXACT
+   2370723); interlane md5 f6254cd0 stable read fresh. Verdicts 1
+   confirmed / 6 clean (5 clean-with-margin) / 0 dropped. Zero world
+   mutations, zero uploads, zero verbs, zero comp edits, zero
+   shared-budget use.
