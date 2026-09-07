@@ -2662,3 +2662,73 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   2370704). Verdicts 2 confirmed / 2 clean (2 clean-with-margin) /
   0 dropped. Zero world mutations, zero uploads, zero comp edits,
   zero shared-budget use.
+## Judged index (survey-48)
+
+- survey-48 (2026-09-07, ZAI fallback 6/6 — NATIVE DOWN ALL TICK (1210 on
+  every screwwell attempt x2, paced retry burned before fallback; disclosed),
+  18m gameplay primary + night for the two water structures + face/right for
+  dressing per survey-31 series law; fresh live store bytes 6/6 HTTP 200
+  curl UA on exact census-48 libs, served-shas pinned 7ef1c6cde79d2b0f
+  (screwwell) / ee172af1eaa03053 (streamstones) / b206c387adfc83e0
+  (reedpool-cured) / 0f5922fdc80750ed (logpile) / 21f436472ac97cbd (cairn)
+  / 46e9e24c278d6277 (yard)): NEW-SEAT + NEVER-JUDGED slice (severity
+  backlog + native debts drained fresh at plan tail; never-judged pool =
+  carousel only, standing polish-hero exclusion). Slice = 2 new-seat
+  structures + 1 cured-bytes re-read + 3 never-judged dressing. VERDICTS:
+  SCREWWELL ZAI CLEAN (first independent read of struct-80's arrival) —
+  Archimedes-screw identity PASS 5/5 (staggered fins break the tube
+  silhouette, crank/ladder/sump/head props lock the machine read, teal
+  discharge arc strongest storyteller), grounding with foot pads + shadow,
+  voids PASS (clearances deliberate), teal-vs-timber PASS (shadow-side
+  luminance near-collision = margin only). Night: ~6 faint teal glints,
+  tip anchor legible, zero glare — solo-chassis understatement class
+  (survey-42/46 bytes-only law; live well_screw motion + emissive idiom
+  carried by owner evidence), plan-only margin, Bill's call on any emissive
+  boost. STREAMSTONES ZAI CLEAN-with-margin (first independent read of
+  dress-105's arrival) — identity PASS (continuous deliberate ribbon +
+  sediment bed, not scatter), grounding PASS with contact band, contrast
+  PASS marginal (x425-525 stone/bed smear zone); judge's "meander does not
+  resolve" = the dress-105 banked vantage law (plan-view S-meander cannot
+  read from grazing 18m; endon cross-check confirms chassis renders at
+  identity orientation — long axis parallel to horizon, curve class
+  unjudgeable in rig), owner's accepted native walker-18m 4/4 PASS carries;
+  tail-gap stones x693-716 = margin watch (stray-pebble flirt). REEDPOOL
+  ZAI CLEAN (struct-81 cure corroborated on served bytes 7d770620) —
+  water reads blue steel not void 4/4 (two lobes + tan rim + reeds rooted
+  + contact shadow), night teal idiom WORKS (~7-8k lit px, two-temperature
+  hierarchy with amber lamps, zero glare; saturation-bump suggestion =
+  margin only). LOGPILE ZAI CLEAN-with-margin (first read, dress-83-era) —
+  log-pile identity unambiguous, 4-5 end-grain discs carry it, protruding
+  logs resolve, grounded with contact band; margins: central core merges
+  (425-545,355-395), single-point-of-failure on end discs (bark-value
+  jitter suggestion = polish tier, not defect). CAIRN-001 ZAI CLEAN 4/4
+  (first read, dress-57-era) — canonical trail-marker cairn (~6 stones,
+  taper, tan capstone accent, moss facet), zero defect regions. NE-YARD-001
+  ZAI CLEAN-with-margin (first read, dress-89-era) — yard vocabulary PASS
+  (trestle + crates + rack beam + right table = not random props), prop
+  coherence + silhouette + grounding PASS; identity marginal-dominant read
+  "lumber storage" over "active craft yard" (thin beam posts flirt with
+  floating-log read, khaki lumps unresolvable, no tool element) = margin
+  tier, solo-rig conservatism disclosed (district context improves read).
+  Routing: ZERO notes (zero confirmed defects), zero candidate rows, ZERO
+  ledger append (read-only tick, loop law 4). Census 284->286 vs survey-47
+  snapshot: +2 arrivals both ledger-matched sibling placements
+  (nx-struct-screwwell = struct-80, nx-dress-se-streamstones-001 =
+  dress-105), 0 departures, 2 flips both ledger-matched (ogeegate YAW
+  -32.68->-0.5704 = struct-80b radians repair; reedpool lib d3a81b79->
+  7d770620 = struct-81 cure), 0 unexplained drift. Diff self-catch
+  disclosed: first diff run reported 246 flips — 244 were my own
+  snapshot-format artifact (survey-47 stored store/-prefixed lib paths;
+  fresh fetch normalizes to bare hash16), repaired by normalizing both
+  sides before the lib comparison, true flips = 2. Chassis self-catch:
+  render pins must be SERVED-shas (DRACO store-min bytes hash differently
+  from upload-sha, survey-6 law) — hash gate failed closed on first run
+  and pins were re-derived from the fetch output, exactly the gate doing
+  its job. Gate: ALL PASS real exit 0 first try at 5cd72742; sibling
+  HEAD advanced mid-tick (struct-81 reedpool, sweep-83/84/85, city-21/22);
+  re-gated fresh at final HEAD 9743afe2 ALL PASS real exit 0, ledger law
+  EXACT 2370708. Native debt carried: none (native down ALL TICK
+  was disclosed flap, not pending verdicts — all 6 verdicts final ZAI
+  with margins classified probe-resolution inputs only). Verdicts 0
+  confirmed / 6 clean (4 clean-with-margin) / 0 dropped. Zero world
+  mutations, zero uploads, zero comp edits, zero shared-budget use.
