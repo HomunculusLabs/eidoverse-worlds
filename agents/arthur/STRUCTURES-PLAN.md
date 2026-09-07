@@ -2339,3 +2339,64 @@ survey-23 native CLEAN on fixed bytes). Remaining intake: meridianstair
 verify cluster (3-2 toward defect, native tie-break owed; Gate-1 pin
 likely genuine), waterstair gameplay-view dissent (native-backed,
 contract question for owner), orreryring margin-only.
+
+## struct-57 (2026-09-07): waterstair CONCEPT RE-AUTHOR — the dissent was
+## right, the shelf was never sunk
+
+Cadence: 57 % 3 == 0 → refinement tick. Subject by intake ranking:
+waterstair — the only native-backed standing dissent (survey-21 ZAI +
+survey-22 NATIVE on identical fixed bytes 4acda521: water does not read at
+18m; teal = one 4-8px top band; identity reads dry timber floodgate).
+Contract resolved in-favor-of-the-survey by the lane's own design law
+(silhouette-first: "must read as its idea at gameplay distance"): the 18m
+gameplay read IS the contract.
+
+**Decode (before any edit)**: v1's shelf formula `TREADS*RISE - 0.9 +
+0.25` evaluated to +0.25 — the "reflecting shelf" was a RAISED TANK at y
+0..0.56 walling off the descent, while treads 1-4 descended BELOW live
+terrain grade (visible only in the review chassis, which re-grounds min.y
+to 0 — the live world buried them). Water = one edge-on 6px sliver at the
+tank rim. Concept ("steps descending INTO a reflecting shelf") and bytes
+contradicted — sign-class error, same family as struct-56's pivot
+self-catch; struct-53's materials-only fix could not see it.
+
+**v2 → v3 (one closed loop)**: v2 raised a cascade (header pool + riser
+films + foot pool) but kept flat full-height cheeks + high back wall —
+the 18m after-judge FAILED it: post-and-lintel gate read, navy-not-teal
+films, edge-on pool invisible. v3 fixes all three: (a) cheek tops STEP
+DOWN with the stair (5 segments, tops 0.62/0.50/0.38/0.26/0.17 — the
+silhouette itself is a descending terrace; gate frame gone); (b) back
+wall dropped to a low rim (0.66); (c) water brightened within its hue
+family (base 0x5f8698, emissive 0x41708a @0.65 — 200-deg hue family of
+the canon 0x506a78; palette-legibility shift disclosed); (d) foot pool
+brims 0.13 over its curb (0.09) on a grounded stone base (y -0.33..0.08).
+Films are VERTICAL z-facing planes 0.015 proud of each riser (struct-52
+law: never recess water/emissive) — unforeshortened at the 1.5-deg
+approach down-angle.
+
+**Evidence**: sha 4acda521 → 2b418077 ×2 deterministic. 3 nodes, 3
+materials (stone texMat / glow1 water / ws_gold). Envelope x/z EXACT,
+y strict subset [-0.33, 0.78] vs standing [-0.90, 0.795] →
+SAT/collider-neutral reseat. After-judge gameplay (18m): PASS all four —
+water reads (4 stacked teal bands + lighter pool band), silhouette
+terraced NOT gate, pool visible, grounded; margins named (top line
+nearly level dead-on; pool thin ~10px; one-sided chassis shadow — rig
+lighting, not geometry). Night judge: PASS — quiet moonlit-teal, zero
+bloom/artifacts (cosmetic margins: teal-grey saturation, faint bounce
+absence). Pixel falsification: teal px 666 → 4453 gameplay (4 discrete
+row-bands y346-380 vs ONE 4px sliver before), 4495 night.
+
+**Placed**: remove+spawn reseat exact tuple (0, -0.03222645164101495,
+-32) yaw 0, comp null → null. lib store/2b418077f82ebbf1.glb.
+PLACED_VERIFIED 2 verbs; idempotent rerun zero verbs. Circumnavigation
+walk 4/4 ALL_PASS worst 0.308m.
+
+**Bill should eye-check**: from the N gate walking south — the water
+stair should now read as a stepped cascade descending toward you: a
+brimming pool at the top, teal water sheeting each riser face, quiet
+collecting pool at the foot; the cheek walls step down with the stair.
+It should NOT read as a gate or weir anymore.
+
+**SURVEY INTAKE status**: waterstair dissent row EXECUTED this tick.
+Remaining intake: meridianstair verify cluster (split 2-2, native
+tie-break owed), orreryring margin-only.
