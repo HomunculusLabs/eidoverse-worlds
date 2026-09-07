@@ -3952,3 +3952,102 @@ tips as warm points. It should not read as a dark pit anymore. Survey-40
 row CLOSED by this tick.
 
 Next tick: 82%3==1 -> build tick (R7-2 commission or shard re-arm scan).
+
+## struct-82 (2026-09-07): R7-2 THE WHISPER HORN — concept contract
+## (written BEFORE build, per procedure)
+
+Cadence 82%3==1 build tick; refine pool EMPTY fresh (survey-40 reedpool
+closed struct-81; meridianstair cluster closed CLEAN struct-58; angler
+bobber note explicitly city's call). Round-1 shard re-verified EMPTY this
+tick (14 nx-struct execution-queue rows, all terminal). Gate ALL PASS
+real exit 0 at d8ae1295. Census 286 fresh.
+
+CONCEPT (one idea, Judd): THE PSEUDOSPHERE — Beltrami's trumpet, the
+surface of constant NEGATIVE curvature, the one curvature class the
+village does not own (domes/orbs positive, drums/towers zero). Profile =
+tractrix revolved: rim radius 1.5m flaring flat at the lip (the cuspidal
+edge), monotone narrowing to a 0.33m throat planted in a stone drum.
+Vertical, bell up: rotationally symmetric = the silhouette reads from
+EVERY azimuth, no edge-on collapse mode (the soundmirror's weakness
+class). The acoustic family's second member: the dish listens, the horn
+answers — both revolution surfaces, SE wild pairing preferred seat.
+Silhouette at 18m: a stone trumpet-lily on a two-step dais. Night
+accent: ONE quiet brass lip ring at the rim (catenary/moongate amber
+idiom). Folly: no door lane; dais footprint honestly ≥8m² (r1.65 steps)
++ height ~4.35 → exact trimesh, steps walkable, circuit MCPL walk.
+Folly stays solid at the drum — nothing enterable advertised. No motion
+(SLOW/CALM by stillness). No comps (brass is material, not comp).
+
+## struct-82 (2026-09-07): R7-2 THE WHISPER HORN — authored v3, judged
+## NATIVE PASS, PLACED_VERIFIED (SW contemplative, skymirror companion)
+
+BUILD tick (82%3==1). Shard EMPTY (14 nx-struct execution-queue rows all
+terminal, re-verified fresh this tick — the raw intake list at plan:101
+never carries annotations; scope the parser to the numbered queue).
+Refine pool EMPTY (reedpool closed struct-81; meridianstair cluster
+closed CLEAN struct-58; angler bobber = city's call). Gate ALL PASS
+real exit 0 at d8ae1295 tick-start AND re-run exit 0 at 7c6b2889
+immediately pre-mutation (city-24 interleaved between).
+
+CONCEPT (R7-2, derived fresh — no pre-authored round-7 list): the
+PSEUDOSPHERE, Beltrami's trumpet — the surface of constant NEGATIVE
+curvature, the one curvature class the village does not own. Bell-up
+stone trumpet; acoustic family's second member (soundmirror listens,
+horn answers). Full contract at the concept section above (struct-82
+CONCEPT, this file).
+
+BUILD (mkv3-whisperhorn.ts; v1 a4b34877 -> v2 7226ecd9 -> v3
+b6e48e46 x2 deterministic):
+- v1 NATIVE judge gameplay: FAIL — "open lattice, sky through every
+  slat". DECODE-FIRST root cause (not a rendering artifact): the
+  arc-march had TWO bugs — loop bound `ti < T_END` compared a course
+  INDEX to a t-value (exited after 3 courses; silent T_END fill piled
+  23/26 courses at the drum r 0.233) AND the threshold ladder used
+  R_LIP·ln(cosh(T_END)) = 2.787 — a y-like quantity, not the true
+  tractrix arc R_LIP·atan(sinh(T_END)) = 2.119 — so tail thresholds
+  never fired. Fixed both; added course-ladder monotonicity + bell-span
+  assertions; the fallback fill is now a hard error. (Lesson banked:
+  an assertion that tests the LADDER, not just the profile, is what
+  catches parametrization pile-ups; the y-histogram decode showed it
+  plainly — 6810 verts at y 0.3, none between 0.5 and 2.6.)
+- v2 ladder spans the full bell (equal-arc, rim-dense as the tractrix
+  demands): native gameplay 4/4 PASS — concave trumpet identity, clean
+  monotonic rim, brass lip attached, zero see-through.
+- v3 + bore-shadow disc (dark disc r 1.38 inset 0.10 below the rim —
+  hidden from level sightlines by the near wall, reads as the open
+  mouth from above/slope vantages; the judge's capped-mouth minor):
+  native gameplay 4/4 CONFIRM + night 3/3 PASS (exactly one quiet
+  amber ring at the lip, silhouette legible, no artifacts).
+
+MERGEKIT LESSON (banked for the family): bucket keys are
+color:roughness:metalness — emissive does NOT survive mergeByMaterial.
+The brass lip must be a KEEP-anchor mesh; the regex is ^-anchored, so
+the name must START with a KEEP token (glow_whlip, not wh_glow).
+
+SITING: SE soundmirror pair-band (dSM 12-20, r 66-85) proven SATURATED
+— nearest rim-legal seat dSM 37.1 at r 103 (dress/artwalk/forest fill
+the band; nearest solids: funguslogs 8.6, artwalk-h7 13.0, forest-0044
+13.6). Full-ring scan r[66,90]: seat LOCKED (-64.02, -0.028, -61.82)
+yaw 0 az -136 r 89 — the SKYMIRROR COMPANION (mirror watches the sky,
+horn answers it; both skyward instruments, 6.2m apart, exact disc-vs-
+AABB gap +2.36) AND on the moongate's outbound axis (3.3deg off at
+27m — the horn crowns the view through the SW ring gate). Azimuthally
+symmetric, yaw no read dependence. Terrain 9pt spread 4.3mm.
+
+PLACE: upload store/b6e48e4622f10108.glb (1 paced upload; first run
+hit a placer bug — upload response field is .path not .lib, WS needs
+the join/snapshot handshake — fixed to the struct-80 chassis shape,
+re-run clean), 1 spawn verb, PLACED_VERIFIED exact tuple, idempotent
+rerun 0 verbs. Census 286->287. Comps {} both sides (brass is
+material, not comp — empty bag by design; comp-wipe law trivial).
+
+WALK: circuit MCPL 6/6 ALL_PASS max arrival 0.397m at 4.0m standoff.
+(Foreign support-seam abstentions on labyrinth/streamstones entities —
+engine diagnostics, not lane defects.)
+
+BILL EYE-CHECK (one): SW spoke — walk OUT through the moongate: at
+~27m the horn crowns the view on the gate's axis, brass ring at the
+lip; the skymirror stands just off-axis at 6.2m from it. Judgment
+asked: does the trumpet read as ANSWERING the dish?
+
+NEXT: 83%3==2 -> build tick (R8 commission or shard re-arm scan).
