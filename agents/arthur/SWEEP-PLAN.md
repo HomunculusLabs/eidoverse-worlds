@@ -2624,3 +2624,61 @@ zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
 @79 row-cottage/observatory, @78 potter/market, @77 hall/forge, @76
 inn/stable, @75 garden-cottage/tower-house; bunkhouse/longhouse last walked
 sweep-74, now the stalest pair).
+| sweep-80 | 2026-09-07 | 282->284 epoch-corrected across three epochs vs committed sweep-79 baseline sha16 e7aef5dc9b7564d5: epoch A +1 arrival nx-struct-ogeegate (22.71,-0.0025,65.75) yaw -32.68 lib 32039b5a = struct-77 @ 35da3cb6 ledger-matched line-for-line + 2 drift fields nx-struct-angler lib+bbox at identical tuple (6bf06a35->6ee5b4b0 bobber re-aim) = city-11 @ 83128fd5 ledger-matched; epoch B caught dress-102 +1 arrival nx-dress-nw-fieldcross-001 (-17.845,-0.0023,84.294) yaw -2.356 lib 7750e9b7 ledger-matched + city-12 in-flight nx-dress-charcoal pos (34.5,0,34)->(22.724,-0.04164,27.274) same lib 1d9a1c2d content-addressed (register row ledger-matched); epoch C 20s-paced settled 0/0/0; 0 departures 0 unexplained drift; SELF-CATCH: diff's 284 comp-field lines were baseline-projection artifact (committed snapshot carries no comp field; live emits comp:{...}), canonical 6-field diff is the verdict; snapshot rewritten 114028B/284/sha16 b55bd10c9ecdbe5c, pre-write assertion arrivals exactly [ogeegate, fieldcross] + diff exactly [angler lib+bbox, charcoal pos], post-rewrite drift ZERO | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 36th sweep since routing, no escalation due — law keys Sev-1); SAT epoch A 245 bbox/230 classified/0 holes + epoch B re-run 246/230/0 — ZERO new contacts at ogeegate/fieldcross/charcoal seats (corroborates struct-77 lane-002 straddle, dress-102 host-flush -0.002 designed, city-12 rect-SAT worst 2.644) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38 epoch A over the ogeegate bytes + epoch B re-run 7/7 @ 0.38 after charcoal moved 8.19m off its bead polyline — inside the re-verify band, re-walked not argued, SW 5/5 @ 0.37; fieldcross 47m from nearest walked point, stands by construction) + tier-2 58th cycle per committed LRU pointer bunkhouse 6/6 @ 0.38 + longhouse 6/6 @ 0.346 epoch A + epoch B re-run 6/6 @ 0.346 (charcoal 13.8m off longhouse, inside band) | pins 15/15 ALL_PINS_OK 35th consecutive (struct18 real exit 0) + battery ALL_PASS 17/17 epoch A + core fields re-verified epoch B (38 lights, 16 comp-bearing, 7 pins incl carousel comps 7 + ce363399, gate lamps 4/4 bbox PRESENT, belltower ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, beacon 03d278be + beacon-l, hamlet embers 5-of-5, court smoke, ogeegate tuple exact, angler flip exact); interlane f6254cd0 stable; ledger law EXACT 2370704 tool-form (probe self-catch: first regex too loose, sweep-36 class, re-derived from ledger-append.py law()); standing gate ALL PASS real exit 0 at tick-start 35da3cb6; zero mutations/uploads/verbs/comp edits/defect notes (D+0, E+0) | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+sweep-80: CLEAN SWEEP, epoch-corrected tick (two sibling arcs absorbed:
+struct-77's ogee gate arrival, then a dress-102 + city-12 window). Census
+epoch A vs the committed sweep-79 baseline: +1 arrival nx-struct-ogeegate at
+the exact struct-77 ledger tuple (22.71,-0.0025,65.75) yaw -32.68, lib
+32039b5a, straddling lane-002 beyond bead b14 — plus TWO drift fields on
+nx-struct-angler at an identical tuple: lib 6bf06a35->6ee5b4b0 + bbox, the
+city-11 bobber re-aim byte-swap, ledger-matched. The paced epoch-B re-read
+then caught the dress/city window in flight: nx-dress-nw-fieldcross-001
+arrived at the exact dress-102 tuple (-17.845,-0.0023,84.294) yaw -2.356
+lib 7750e9b7, and nx-dress-charcoal moved (34.5,0,34) -> (22.724,-0.04164,
+27.274) same-lib content-addressed = city-12 wave-3, register-matched.
+Epoch C 20s-paced: 0/0/0, settled at 284 — final epoch pinned. Per the
+polish-270 epoch law all affected evidence was re-taken fresh before
+verdicts: SAT re-run at epoch B, NE approach leg re-walked at epoch B (the
+charcoal's new seat sits 8.19m from the lane-002 bead polyline and 13.8m
+from the longhouse tier-2 target — both inside the re-verify band, so the
+affected walks were RE-RUN, not argued by construction), longhouse re-walked
+at epoch B. The fieldcross seat is 47m from the nearest walked NW point —
+stands by construction (sweep-53 precedent). Overlap: SAT epoch A 245 bbox
+non-light / 230 classified / 0 coverage holes; epoch B 246/230/0 — exit 3 on
+exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard -0.407, known Sev
+2 routed to artwalk b26 choreography @ sweep-43, thirty-sixth sweep since
+routing, NOT new, no escalation due (the law keys on severity-1). ZERO new
+contacts at any changed seat — sweep-side corroboration of struct-77's
+lane-002 straddle, dress-102's host-flush -0.002 designed contact, and
+city-12's rect-SAT worst 2.644 vs woodyard. Tier-1 4/4 per-leg verified
+81/81 ALL_PASS, every leg real exit 0: core 64/64 @ 0.38, NW 5/5 @ 0.38,
+NE 7/7 @ 0.38 (epoch A over the ogeegate bytes + epoch B re-run), SW 5/5 @
+0.37. Tier-2 58th cycle per the committed LRU pointer: bunkhouse 6/6 @ 0.38
++ longhouse 6/6 @ 0.346 (epoch A + epoch B re-run). Integrity: pins 15/15
+ALL_PINS_OK (35th consecutive clean, struct18-fleet-pin-check real exit 0) +
+battery ALL_PASS 17/17 on epoch A with core fields re-verified on epoch B
+(38 lights, 16 comp-bearing, carousel exact 7 + ce3633992d07055e, gate lamps
+4/4 full-lib 18b69a6bb2f5862f bbox PRESENT + companions, belltower
+2419fbc53a1d65e1 + ladder comp live, windmill 369c572480b0e786, woodyard
+01b78fdd00f090a7, welcome 7d1bd0c9545c44fb + welcome-l, cistern
+156b4fc8c7287a9d, beacon 03d278be + beacon-l, hamlet embers 5-of-5 full
+payloads, court smoke live) + this tick's two classification checks (ogeegate
+tuple exact, angler flip exact). TWO self-catches repaired pre-verdict and
+disclosed: (a) census-diff comp-field artifact — my first diff keyed 'comp'
+as a 7th tracked field and printed 284 drift lines, all of them the
+projection artifact of comparing live comp:{} payloads against a committed
+baseline that omits the field entirely; canonical 6-field diff re-run, true
+delta = 1 arrival + 3 fields, all classified; (b) ledger-law probe regex too
+loose (matched '(D+n, E+n)' beyond the ledger's own pair format, sweep-36
+class) — re-derived from ledger-append.py's law() verbatim, EXACT 2370704.
+Interlane md5 f6254cd0 stable. Ledger law EXACT 2370704 at append. Snapshot
+rewritten like-for-like with pre-write assertion: 114028B / 284 entities /
+sha16 b55bd10c9ecdbe5c, post-rewrite drift vs live ZERO. Standing gate ALL
+PASS real exit 0 at tick-start 35da3cb6 (struct-77, foreign domain). Zero
+world mutations, zero defect notes, zero uploads, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-81): hall + forge
+(59th cycle — LRU by latest-walk chain: @80 bunkhouse/longhouse, @79
+row-cottage/observatory, @78 potter/market, @76 inn/stable, @75
+garden-cottage/tower-house; hall/forge last walked sweep-77, now the
+stalest pair).
