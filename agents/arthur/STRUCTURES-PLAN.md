@@ -484,6 +484,7 @@ prior eye-check pointers unchanged.
 | struct-47 | R4-1 Meridian Stair (portal) | th276/R55 NW wedge | (5.7, −0.0378, −54.7) | 3.037 (lane radial, near face to village) | LIVE, 6-leg two-way walk 6/6 0.37m |
 | struct-48 | REFINE: native re-judge clearance | mobius + pendulum exact standing tuples (no placement) | — | — | 2/4 native debts CLEARED (mobius PASS, pendulum PASS); hypar + soundmirror still owed |
 | struct-49 | R4-2 Bridge of Nines | S-axis spoke, center (-7.28, 69.62) yaw -1.67552, span along axis | (-7.28, 0.0276, 69.62) | -1.67552 | LIVE, walk 9/9 max 0.396m, idempotent |
+| struct-50 | R4-3 Ruled Tower (hyperboloid lattice) | E-axis spoke dead on cardinal (58, 0) yaw 0 | (58, -0.0426, 0) | 0 | LIVE, walk 16/16 incl. interior circuit, idempotent |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -1722,3 +1723,59 @@ after spiralRamp and hyparShell).
 arcade silhouette against the sky; climb the south stair, cross the deck
 north, and look back at the village across nine arches; at dusk, the nine
 brass crown beads per side.
+
+
+## struct-50 — R4-3 THE RULED TOWER (concept contract + record)
+
+**Concept**: the fourth form family made monumental. One idea:
+STRAIGHTNESS THAT CURVES. A one-sheet hyperboloid expressed entirely as
+its own straight rulings — 32 iron generators (16 per family, base-to-
+crown rotation ±112.5°, ten grid steps on the 16-ring so the families
+cross in true Xs exactly at the waist), crown and base iron bands
+binding the shared endpoints, a 3-step square ashlar plinth (9.0/8.4/
+7.8m, tholos square-to-circle), 8 brass beads seated on the crown band.
+First consumer of the housekit `hyperboloidCage` primitive — the loop
+charter's fourth named form family after spiralRamp, hyparShell, and
+arcColonnade. Silhouette: hourglass. Reads "woven tower" at 18m.
+
+- Build: mkv3-ruledtower.ts → village_ruledtower3.glb. v1 sha
+  399c0fe5… (ZAI-judged form PASS with one real defect: strut end
+  corners r2.599 read past the zero-thickness bands); fixed v2 by
+  widening crown+base bands to r2.61/h0.26 — every strut end lands
+  inside the band, flush. v2 sha
+  4070ecc4d8f1d0e6e274c4a3070d8443e6decf504615a270890ad339fd96c303
+  deterministic ×2; 3 merged nodes (stone/iron/glow2), bbox
+  9.0×7.23×9.0, 0 verts below grade. texMat lanes (struct-38 law);
+  empty comp bag.
+- Decode audit (struct50-decode-ruledtower.ts): endpoint-grid proof —
+  16/16 azimuth clusters bottom and top, circular means 0.000° on the
+  22.5° rays, same-k bottom→top rotation exactly 112.50°. Straight-
+  member law honored: the waist has no decoded verts; pinch 1.3889 =
+  r0·cos56.25° follows by linearity on verified endpoints.
+- Judged: ZAI fallback both passes (native 1210 ×2 + paced retry,
+  disclosed; native re-judge owed on return). v1: form PASSES — waist
+  reads, weave reads as 3D woven shell, deliberate folly, plinth
+  grounds it. v2 after-judge 3/3 PASS — struts flush both bands, beads
+  seated, no new defects ("approve the fix"). Frames banked
+  reviews/struct50-ruledtower/ and -v2/.
+- Siting: E-axis spoke, center (58, 0), yaw 0. The one cardinal without
+  a folly-band terminus — plaza → E gate → stable → tower; answers the
+  East Beacon (r44 NE-of-axis) on-axis. Fresh-census (262) analytic SAT
+  0 blocked, min gap 7.72m (nx-town-stable); terrain 5-point 13mm.
+- Placement: PLACED_VERIFIED 1 verb (plain spawn), idempotent rerun
+  zero verbs, lib store/4070ecc4d8f1d0e6.glb.
+- Walk (16/16 ALL_PASS max 0.376m): grade perimeter circuit (approach →
+  8 compass legs → full close) + PROBE FINDING: the 0.5m plinth steps
+  are mountable, so the plinth top IS standable — interior circuit at
+  r1.9 INSIDE the weave, entered and exited through the true strut gap
+  at azimuth 11.25° (clear chord 0.84m between base endpoints). The
+  tower is enterable by honest geometry; recorded as found, not
+  designed. No false enterability claimed: the waist ring has no
+  geometry (dropped in design — untied ring would be the spears
+  defect class).
+
+**Bill should eye-check**: from the E gate past the stable — the
+hourglass silhouette dead on the cardinal axis; climb onto the plinth
+and stand at the center looking up through the crossing weave (the
+32-strut X-lattice converging overhead); at dusk, the 8 brass crown
+beads ringing the crown band.

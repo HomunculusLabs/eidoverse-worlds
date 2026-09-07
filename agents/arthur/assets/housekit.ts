@@ -548,3 +548,46 @@ export function arcColonnade(
     return crowns;
 }
 
+/** STRUCTURES LANE primitive (struct-50): one-sheet hyperboloid as its
+ * own straight rulings — the loop charter's fourth named form family
+ * (after spiralRamp, hyparShell, arcColonnade). The hyperboloid
+ * x² + z² = r0²·cos²(Δ/2) + 4·r0²·sin²(Δ/2)·(u/h)² (u = y − h/2) is DOUBLY
+ * RULED: two families of straight lines (rotation ±Δ between base and
+ * crown rings) whose ensemble weaves the waist. Every strut is a true
+ * generator — straight iron, zero curved geometry; the curve is the
+ * family, not any
+ * member (Judd discipline: the idea IS the aggregation).
+ * For clean endpoint sharing on an N-strut ring grid (22.5° for N=16),
+ * 2Δ must be a multiple of the grid step — Δ=90° (180°) and Δ=112.5°
+ * (225°) both close; at ±Δ the two families CROSS exactly at the waist
+ * (one X per strut pair, Shukhov-lattice signature).
+ * `struts` counts ONE family; total struts emitted = 2 × struts. Returns
+ * the waist radius (analytic minimum, at y = (y0+y1)/2) so callers can
+ * assert the silhouette in decode audits.
+ * Capped by caller: lintel ring, plinth, beads — this emits rulings only. */
+export function hyperboloidCage(
+    g: THREE.Group, name: string,
+    r0: number, y0: number, y1: number, delta: number, struts: number,
+    strutW: number, strutD: number, strutMat: THREE.Material,
+): number {
+    const h = y1 - y0;
+    const start = new THREE.Vector3(), end = new THREE.Vector3();
+    for (let fam = 0; fam < 2; fam++) {
+        const sgn = fam === 0 ? 1 : -1;
+        for (let i = 0; i < struts; i++) {
+            const a0 = (i / struts) * Math.PI * 2;
+            const a1 = a0 + sgn * delta; // endpoint rotated ±Δ at crown
+            start.set(r0 * Math.sin(a0), y0, r0 * Math.cos(a0));
+            end.set(r0 * Math.sin(a1), y1, r0 * Math.cos(a1));
+            const mid = start.clone().add(end).multiplyScalar(0.5);
+            const len = start.distanceTo(end);
+            const strut = new THREE.Mesh(new THREE.BoxGeometry(strutW, strutD, len), strutMat);
+            strut.name = `${name}_${sgn > 0 ? "p" : "m"}${i}`;
+            strut.position.copy(mid);
+            strut.lookAt(end); // +z axis of the box runs along the ruling
+            g.add(strut);
+        }
+    }
+    return r0 * Math.cos(delta / 2); // waist radius at y = (y0+y1)/2
+}
+
