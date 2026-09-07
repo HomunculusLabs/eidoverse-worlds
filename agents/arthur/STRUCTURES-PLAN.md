@@ -2915,3 +2915,5 @@ the foci you walk between; enter through either long-axis end.
 Frames: reviews/struct63-ellipsecourt/ (gameplay.png = 18m contract
 frame, judged this tick). Next tick: 65%3=2 → own commission (R5-2) or
 shard re-arm; refine pool empty.
+
+- DEFECT NOTE (sweep-66, 2026-09-07): R-122 Sev 2 — nx-struct-ellipsecourt sits at sub-law gaps to shelltower (0.085m true) and meridianstair (0.472m true); placement preflight was center-distance, not source-true SAT (pitfall 10). Treat as a Bill-correction-class priority for the next struct wakeup: translate court 2.5-3m south or re-site neighbors; re-derive with vertex-cloud/corner-radius SAT; re-prove the 11-leg court walk after any move. Full evidence in REPAIR-REGISTER R-122.
