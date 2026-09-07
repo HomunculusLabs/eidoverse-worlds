@@ -3,7 +3,7 @@
 // aware), place, append ledger, sleep, repeat. Stops when mason/stop exists.
 import * as THREE from "three";
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
-import { toGLB, mat } from "./glbwrite.ts";
+import { toGLB, mat, texMat } from "./glbwrite.ts";
 import { C, box, gableRoof, doorFrame, windowFrame } from "./housekit.ts";
 import { mergeByMaterial } from "./mergekit.ts";
 
@@ -568,8 +568,47 @@ function composeSeedOfLife(g: THREE.Group, r: () => number): string {
             n++;
         }
     }
+    // improve-38: SEED CORE — the flat disc read (survey-8/11/12/13, family
+    // 4/4 unanimous) fails because the construction is border stones only;
+    // the center circle is empty and nothing rises above y 0.12. A central
+    // stone monolith fills the void: plinth + tapered shaft + ovoid cap,
+    // total 2.45m — clears ROOM_MIN_H 2.2 so the collider gives the whole
+    // entity exact trimesh (honest, disc stays walkable), avoiding the
+    // 0.22–2.2m uneven-lie band entirely. One quiet brass bead (lamp KEEP
+    // anchor) crowns the cap: night identity per polish-278, day reads as
+    // unlit warm stone. Materials are REAL texMats/emissive constructed
+    // here (improve-32 deviation class: familyPass walks only top-level
+    // children — a nested group's plain mat() would export material-less
+    // and render loader-default near-black in-game).
+    const ashlar = texMat("stone", [0x56503c, 0x5c5a44, 0x4c4836], { rough: 0.95, scale: 2, weights: [2, 1, 1], cell: 32 });
+    const core = new THREE.Group();
+    core.name = "sol_core";
+    const plinth = new THREE.Mesh(new THREE.CylinderGeometry(0.52, 0.56, 0.55, 10), ashlar);
+    plinth.name = "sol_core_plinth";
+    plinth.position.set(0, 0.275, 0);
+    core.add(plinth);
+    const shaft = new THREE.Mesh(new THREE.CylinderGeometry(0.30, 0.54, 1.15, 10), ashlar);
+    shaft.name = "sol_core_shaft";
+    shaft.position.set(0, 0.55 + 0.575, 0);
+    core.add(shaft);
+    const cap = new THREE.Mesh(new THREE.IcosahedronGeometry(0.30, 1), ashlar);
+    cap.name = "sol_core_cap";
+    cap.scale.set(1, 1.6, 1);
+    cap.position.set(0, 1.70 + 0.30, 0);
+    core.add(cap);
+    const bead = new THREE.Mesh(new THREE.SphereGeometry(0.045, 10, 8), new THREE.MeshStandardMaterial({ color: 0xffc98a, emissive: 0xffa45f, emissiveIntensity: 1.25, roughness: 0.4 }));
+    bead.name = "lamp";
+    // v3 (native FAIL on v2's 2.50): the cap is a 45° cone from its apex
+    // vertex — vertex-embed arithmetic alone leaves a resolvable sky wedge
+    // at the bead flanks. Center 2.44 puts the lower hemisphere fully
+    // inside the cone (apex point 0.04 < r 0.045 from bead center = the
+    // ball swallows the tip; lower flank below cone surface r<=0.043) —
+    // no sky can appear between bead and stone; ball reads nestled-on-cap.
+    bead.position.set(0, 2.44, 0);
+    core.add(bead);
+    g.add(core);
     void r;
-    return `seed of life, ${n} stones`;
+    return `seed of life, ${n} stones + seed core monolith`;
 }
 
 export const THEMES = [

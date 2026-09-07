@@ -2477,13 +2477,122 @@ open duplicate notes for these objects.
   stays Bill's call.
   (legacy-core off-limits set unchanged).
 - `nx-temple-seed-0003` — Sev 4 (survey-8, ZAI gameplay + top): flat
-  rubble/mosaic read confirmed from BOTH angles — flower-of-life disc
-  at constant height, no central seed core or vertical form (uniform
+  rubble/mosaic read confirmed from BOTH angles — flower-of-life disc at
+  constant height, no central seed core or vertical form (uniform
   shallow shadows prove no raised mass); reads crop-circle/paving, not
   seed; no ground contact shadow at gameplay (x310-655 y412-418).
   Design caveat: 4-seed family shares ONE sha — if confirmed at
   decode, the fix is family-wide (0003/0013/0022/0047-class).
   Evidence: reviews/survey8-slice/nx-temple-seed-0003/{gameplay,top}.png
+  [improve-38 CONTRACT (2026-09-07, this tick — BEFORE edit): round-2
+  re-arm take 3, worst-first OPEN improve-own row (Sev 4, family 4/4
+  UNANIMOUS: survey-8 ZAI 0003, survey-11 ZAI 0013, survey-12 NATIVE
+  0021, survey-13 ZAI 0034 — flat ~30:1 disc, no seed core, no vertical
+  element, pasted-on shadow). town-4 routing (no shard prefix; temple
+  district = improve's own surface). Idle-guard clear (git tail 36h: no
+  lane commit touches any seed; last mutations nvp-era placements;
+  survey-8/11/12/13 reads only). FAMILY DEGENERATE-CONFIRMED fresh this
+  tick: census 271 — all four ids (0003/0013/0021/0034) share ONE live
+  lib store/710ec3e5c66a0378.glb at yaw -2.35619449, comps {} x4,
+  nearest neighbors >=5.09m (gravel path 5.09, mile marker 7.01, no
+  riders, no light companions), live bbox 6.55x0.12x6.55. Baseline
+  NO-DISPUTED-BYTES proof: agents/arthur/mason/glb-retex/
+  work_1644_seed.glb sha256 710ec3e5c66a0378c08eea518a597c43445ae3f15
+  dd6249dfd5c26b41a534425 == live pin exactly; before-bytes banked
+  reviews/improve38-seed/before/ (9 views rendered on exact bytes).
+  BUILD CHAIN: mason.ts composeSeedOfLife (THEMES idx 6; works 1644/
+  1657/1670/1683; composer voids its rng -> one shared sha) ->
+  mergeByMaterial -> toGLB -> glb-retex/work_NNNN_seed.glb. 60-work
+  sibling hash snapshot banked /tmp/improve38-retex-before.txt.
+  DECODE GROUND TRUTH (review-model-grade on baseline: 3 nodes, 2
+  buckets plaster+timber (familyPass mapped C.BONE->plaster,
+  C.MID->timber), stone borders = 19 circles of 32 segs each (608
+  segs), all at y 0.06, stone size 0.16x0.12x0.10, ring radii R=1.1
+  and 2R=2.2). ROOT CAUSE: the classic construction is drawn purely
+  as FLAT border stones — the center circle has NO core, and nothing
+  rises above y 0.12; at 18m the whole reads as a flat mosaic disc
+  (the survey-8 "crop-circle/paving" identity failure).
+  FIX (mason.ts composeSeedOfLife only; family-wide by construction —
+  same composer builds all four works):
+  F1 SEED CORE (identity): central monolith group (ashlar texMat by
+  familyPass C.STONE mapping) — base plinth cylinder r 0.52 h 0.55 +
+  tapered shaft r 0.52->0.30 h 1.15 + ovoid cap icosahedron r 0.30
+  scaled y 1.6 at top, total height 2.45m, all centered (0, *, 0)
+  INSIDE the disc's empty center (ring 1 stones at r 1.1, core fills
+  the void). COLLIDER LAW CHECK: height 2.45 > 2.2 AND footprint
+  42.9m² >= 8m² => roomScale=true => exact trimesh, honest collision,
+  disc stays walkable; the 0.22–2.2m uneven band is avoided by design.
+  F2 SEED WORD (night identity): one brass bead (iron family
+  C.BRASS->iron, emissive) named `lamp` (KEEP anchor) r 0.045 at
+  (0, 2.58, 0) atop the cap — a quiet warm point marking the temple
+  marker at night; day reads as unlit warm stone (polish-278 class).
+  F3 GROUNDING: contact shadow comes free via the renderer's sun
+  castShadow (all meshes cast) — the monolith's shadow proves raised
+  mass to the gameplay view.
+  ENVELOPE: monolith + bead ⊆ disc footprint (r 0.52 << 3.275
+  half-extent; y 2.58 total vs 0.12 baseline — height growth is the
+  POINT of the fix (vertical presence), footprint byte-stable at the
+  same tuple; SAT-neutral (no horizontal growth).
+  FALSIFICATION: (1) rebuild ×2 deterministic (same output sha both
+  runs); (2) 56 sibling works byte-identical (only 4 seed files
+  change; compare against /tmp/improve38-retex-only-seeds.sh
+  snapshot); (2b re-run outputs compared byte-for-byte); (3)
+  decode audit — node census (3->4: plaster/timber buckets + lamp
+  bead + no stray), y-extent 0..2.58, core on-center (unique-vertex
+  min/max symmetry), zero verts below grade; (4) identical-camera
+  before/after renders — after gameplay@18m reads vertical seed
+  marker (monolith silhouette over disc), night shows quiet warm
+  point; (5) native judge preferred, ZAI fallback disclosed; (6)
+  upload (429 pacing, shared budget) + remove+spawn exact tuple for
+  ALL FOUR seeds (family set-completion: one upload, 4 spawns, one
+  ledger entry, artwalk-d class) — placer gates on baseline lib
+  710ec3e5 at each exact tuple, accepts new pin; (7) post-place
+  census: 4 seeds at new lib, comps {} x4, 271 steady; (8)
+  idempotent rerun zero verbs; (9) NO walk required — non-enterable
+  open ground (floor-shaped disc now room-scale trimesh; walk legs
+  unnecessary; walk gates already standing from SW batch placer era).
+  REVERT: re-run placer with prior lib 710ec3e5 (tuple-identical);
+  source revert = git checkout mason.ts -> rebuild returns 710ec3e5
+  (proven this tick).]
+  [STATE improve-38 (build+audit landed, placement DEFERRED fail-closed
+  on judge flap — improve-31/dress-85/struct-61 class): 3-version
+  source arc, all in mason.ts composeSeedOfLife — v1 3c233f78 caught
+  PRE-render by gate reading (monolith used plain mat() inside the
+  sol_core group; familyPass walks top-level children only -> nested
+  plain mats export MATERIAL-LESS = improve-32 deviation class,
+  loader-default near-black in-game) -> v2 f9d00690 real texMat stone
+  + emissive bead (tw_flame idiom 0xffc98a/0xffa45f/1.25); NATIVE
+  after-judge v2 gameplay@18m: IDENTITY PASS (156px vertical
+  silhouette breaks horizon, shrine/obelisk grammar), MONOLITH PASS
+  (taper 58->22px, cap 32px ovoid, plinth step, block courses
+  resolvable), GROUNDING PASS (AO band 305-650x424-437 + disc rim
+  thickness), DEFECTS FAIL — bead floated ~0.1m: judge read a 6-8px
+  sky wedge at the bead flanks (~480,282-287); root cause GEOMETRIC
+  (cap is a 45-deg cone from its apex vertex — vertex-embed
+  arithmetic leaves flank sky even with the apex inside the ball)
+  -> v3 e35efe72 bead nestled to center y 2.44 (lower hemisphere
+  fully inside the cone; apex 0.04 < r 0.045 = ball swallows the
+  tip). Rebuild ×2 deterministic (dedicated improve38-rebuild-seed.ts,
+  masonretex chassis, --again determinism mode; baseline restored
+  from banked before/ between runs); FAMILY_ONE_SHA x4 (1644/1657/
+  1670/1683 all e35efe724cd998e6); sibling diff EXACTLY 4 lines (56
+  works byte-identical vs /tmp snapshot). DECODE AUDIT ALL PASS: 7
+  nodes (2 flat buckets + sol_core group + 3 core meshes + lamp KEEP
+  bead), real materials (stone texMat + glow3 emissive [1.25,0.464,
+  0.143]), footprint ±3.275 BYTE-IDENTICAL (SAT-neutral), 0 below
+  grade, y 0..2.545. Renders banked reviews/improve38-seed/{before,
+  after,after-v3}/. v3 after-judge: native 1210 ×2 + paced retry
+  burned (flap law) -> NO placement under the standing waiver (bead-
+  attach is the one unjudged contract criterion; the v2->v3 change
+  is documented geometric arithmetic, not a judged PASS). Live world
+  unchanged: all four seeds still at 710ec3e5, census 271. REMAINS
+  next wakeup: (1) v3 after-judge native-first (bead attached, no
+  sky gap = the flip criterion); (2) on PASS: upload ONE lib
+  (429 pacing, shared budget) + remove+spawn x4 exact tuples +
+  post-place census (4 seeds @ e35efe72, comps {} x4, 271 steady) +
+  idempotent rerun; (3) annotate EXECUTED. Revert: baseline banked
+  reviews/improve38-seed/before/baseline-710ec3e5.glb; source revert
+  = git checkout mason.ts + rebuild returns 710ec3e5 (proven).]
 - `nx-cultivation-garden-0011` — Sev 3 (survey-8, ZAI): cultivation
   grammar absent at 18m — no bed geometry, no crop rows, no fence;
   spheres read bushes/boulders (uniform near-black green, zero size
