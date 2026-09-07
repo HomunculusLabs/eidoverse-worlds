@@ -2824,3 +2824,77 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   upgrades of standing findings) / 6 clean (3 clean-with-margin) / 0
   dropped. Zero world mutations, zero uploads, zero comp edits, zero
   shared-budget use.
+
+## Judged index (survey-50)
+
+- survey-50 (2026-09-07, NATIVE 11/11 frames — zero 1210 flaps all tick,
+  disclosed; 18m frames per survey-31 series law — gameplay primary, night
+  for emissive-carriers + top for the sky-facing form + front cross-check
+  where a first-pass claim needed discrimination; fresh live store bytes
+  6/6 HTTP 200 curl UA on exact census-50 libs, served-shas pinned
+  80838784b79b26aa (whisperhorn) / 6752b7a4b57bc392 (spiralfolly) /
+  93ee3f01223c31f6 (h2) / b30995b375b59b9a (h4) / 8c642f0f897d47bd (h6) /
+  71201d71774c82c9 (h7)): NEW-ARRIVAL + STANDING-BYTES-DEBT slice
+  (severity backlog + native debts drained at survey-49; never-judged pool
+  = carousel only, standing 10-tick polish-hero exclusion holds). Slice =
+  whisperhorn (survey-49-epoch arrival, struct-82, first independent
+  read) + spiralfolly (survey-1 intake note only, never re-read on
+  standing bytes) + artwalk h2/h4/h6/h7 (never-judged h-series statics;
+  h3/h5 judged survey-32). VERDICTS: WHISPERHORN NATIVE
+  CLEAN-with-margin — clean-slate front read: deliberate coherent
+  hierarchy (cap disc -> flared tractrix sweep -> collar -> stepped
+  plinth), grounded with contact shadow, zero floats/holes/seams; top
+  view: bore cavity reads STRONGLY (near-black bore-shadow disc ~75% of
+  rim diameter + lit throat annulus + continuous 360deg amber lip ring)
+  disproving first-pass "solid-capped bell" suspicion; night: quiet amber
+  lip ring PASS (mid-amber band x398-562 y263-277, zero glare/no bloom
+  spill, silhouette legible incl. stem trace); margins: ground-level horn
+  gestalt reserved (bell faces skyward — bore unseeable from eye height
+  by geometry; abstract-monument/table read dominant, struct-45
+  distance-fragility class), bore-edge faceting + slight bore eccentricity
+  cosmetic. PROMPT-ARTIFACT disclosed: first gameplay call injected a
+  bell-low description from my assumption; D2 orientation complaint
+  discarded against design (skymirror companion, bell-up). SPIRALFOLLY
+  NATIVE CLEAN — first independent read of standing bytes b85ce018
+  (survey-1's ZAI Sev 1-2 note predates every cure): folly identity PASS
+  5/5 (battered coursed-masonry shaft + external helical stair 3-3.5
+  turns + overhanging cap disc, one material logic one axis), silhouette
+  continuous with rhythmic deliberate sawtooth stair protrusions,
+  grounded via plinth + stair-base landing + cast shadow, scale-coherent;
+  margins: stair-cap junction tuck ambiguous x355-470 y20-85, no top
+  doorway (functional nitpick), frame softness = chassis class. H2
+  NATIVE CLEAN-with-margin — plinth-mounted sculpture PAIR (helical coil
+  + woven torus-knot) with central steps, deliberate gallery-court read;
+  front cross-check DISPROVED first-pass "debris scatter" claim (marks =
+  flat cast shadow + contact shading flowing into helix shadow, no lit
+  faces, no free fragments); posts visible both mounts, bodies zero
+  seams/holes; night: lamp bead = focal warm accent (brightest warm
+  cluster, fixture-height placement); margins: lamp bead 7-9px
+  unanchored at day 18m (survey-32 h3 pendant-speck class), posts 1-3px
+  sub-resolution hover-flirt. H4 NATIVE CLEAN-with-margin — twin framed
+  panels (spiral motif vs wave-lines) + threshold step + lamp bar over
+  the gap, gallery-gate read strong, motifs distinguishable at 18m;
+  margin: lamp mount bar near-float over gap x458-502 y264-305 (one
+  hanger rod would resolve). H6 NATIVE CLEAN — wind-chime gateway reads
+  instantly (posts + yoke + top disc + 4-5 tubes + clacker disc + cord
+  sail + plank mat), footings grounded with shadows; nitpicks negligible
+  (sub-pixel suspension cord, tube count soft = 18m resolution). H7
+  NATIVE CLEAN — viewing platform/deck reads instantly (deck slab, 6
+  posts landing on ground, 7-8 treads with stringer shading, rail runs,
+  telescope + bench props); below-threshold notes: yellow lamp dot
+  6px unmounted flirt (same family bead class), 1-2px railing shimmer
+  risk. FAMILY NOTE (margin tier, NOT routed): h-series lamp beads
+  (h2/h7 day-dot, h4 bar-float, h3 speck survey-32) form a consistent
+  quiet class — artwalk's own polish call, no action owed by survey law.
+  Routing: ZERO notes routed (zero confirmed defects), zero candidate
+  rows, ZERO ledger append (read-only tick, loop law 4). Census
+  286->287 vs survey-49 snapshot: +1 arrival nx-struct-whisperhorn
+  (-64.02,-0.028,-61.82) ledger-matched to struct-82 (foreign SW
+  district seat, skymirror companion axis — lawful band-law class), 0
+  departures, 0 flips, 0 unexplained drift — quiet epoch otherwise.
+  Fetch chassis: bash-3.2-safe explicit-line script, full 16-hex lib
+  paths from fresh census (survey-49 self-catch law applied). Gate: ALL
+  PASS real exit 0 first try at ee59b113 (ledger law EXACT 2370709);
+  interlane md5 f6254cd0 stable. Verdicts 0 confirmed / 6 clean
+  (4 clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
+  zero comp edits, zero shared-budget use.
