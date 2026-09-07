@@ -1631,3 +1631,57 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
 - survey-32: `nx-artwalk-b27-waterline` brass-read finding (Sev 4-5, quiet
   close-read rider) — note appended to ARTWALK-PLAN (artwalk's own surface).
   Zero other lane files touched this tick.
+
+## Judged index (survey-33)
+
+- survey-33 (2026-09-07, NATIVE 6/7 + ZAI fallback 1/7 disclosed — native flap
+  mid-slice: 1210 x2 + paced retry burned on b13 first call only; every other
+  first call landed native; 18m gameplay frame + close-view primary for flat
+  riders per survey-31 series law, fresh live store bytes 7/7 HTTP 200 curl
+  UA on exact census-33 libs, served-shas pinned d8d6c7ab / b59d76d7 /
+  851e4027 / 937dae4e / d3e98697 / 3d692a75 / b07d992e): NEVER-JUDGED RIDER
+  TAIL slice — the remaining artwalk b-series riders with no prior survey
+  record (severity backlog drained; round-1 terminal; gate family excluded —
+  degenerate one-sha x4 with gate-n CLEAN 4/4 at survey-7). Slice covers 13
+  entities via degenerate-fleet law: b4-golden-threshold, b4-golden-top,
+  b2-inn-lintel, b2-inn-threshold, b34-wayband-e (rep x3), b6-market-lissa-left
+  (rep x2), b13-south-tide-east (rep x2). VERDICTS: B4-GOLDEN-THRESHOLD +
+  B4-GOLDEN-TOP NATIVE CLEAN-with-margin — geometry clean (zero
+  floats/specks/z-fight), end-tab/rule detail deliberate, contact anchored;
+  ONE material-read finding: both read dark olive/khaki not brass (hue
+  ~15-20° green-shifted, value 40-43% vs brass 65-80%) — SAME standing
+  BRASS=mat(0xa0a248,.35,.82) as b27's survey-32 finding, routed as EXTENSION
+  of the open ARTWALK-PLAN note (family now 4 data points, one material edit
+  covers all). Chassis caveat disclosed: no envmap = no speculars possible in
+  rig; the albedo hue/value read survives it. B2-INN-LINTEL NATIVE
+  CLEAN-with-margin — beam+relief-tile grammar reads worked, geometry 10/10;
+  glyph legibility framing-limited (tiles 8-10px, sub-glyph). B2-INN-THRESHOLD
+  NATIVE CLEAN-with-margin — 5-stud fixing row reads deliberate, grounded;
+  solo scale ambiguity is context-class not defect. B34-WAYBAND-E NATIVE
+  CLEAN-with-margin — dark band + ochre accent reads deliberate, contact
+  shadow contiguous; mark legibility framing-limited. B6-MARKET-LISSA NATIVE
+  CLEAN-with-margin — 24 discrete cubes on the TRUE 3:2 lissajous sample law
+  (x=sin3t·.56, y=.25+sin2t·.17, bone every 4th) per mkv3-artwalk-b6.ts
+  source law; judge's "no continuous curve" finding DISCARDED as chess-class
+  prompt artifact (I injected a 'continuous woven curve' expectation the
+  asset never carried — commission is discrete-sample counter idiom, and the
+  judge's blind 'abacus/dot-matrix' read is the identity landing); geometry
+  integrity 10/10. B13-SOUTH-TIDE-E ZAI fallback (native 1210 x2, paced
+  retry burned) CLEAN-with-margin — vertical-marker identity holds at 18m,
+  scale sanity exact (1.27°×5.15° predicted, observed within tolerance);
+  "5-6 uniform bands" count claim DISCARDED per pitfall-11 source law: 7
+  source-true tide marks (varied widths .19-.31, alternating sides, bone/
+  brass alternation) + brass datum bar — the "base hairline artifact" IS the
+  deliberate datum bar (y=.08, .32m, BRASS); marks ~2.2px at 18m =
+  framing-limited count (pitfall-13). Routing: ONE note routed — EXTENSION of
+  the open survey-32 b27 note in ARTWALK-PLAN (grep-verified no duplicate;
+  same material class, not a new note); zero candidate rows (no confirmed
+  defects; material-read finding stays a probe, artwalk's own call). Census
+  274==274 vs survey-32 snapshot: 0 arrivals, 0 departures, 1 lib flip =
+  nx-dress-sw-bellpost-001 1ea38f61->fe68269 POS_SAME = dress-91's committed
+  v6 structural cure (50cb353, ledger-matched, domain-valid). Gate: ALL PASS
+  real exit 0 first try at c75a96b (ledger law EXACT 2370660; sweep-70 at
+  tip). Verdicts 0 confirmed / 7 clean (7 clean-with-margin) / 0 dropped + 2
+  judge quantitative claims discarded via source law (b6 continuous-curve
+  expectation, b13 band count). Zero world mutations, zero uploads, zero
+  comp edits, zero shared-budget use.

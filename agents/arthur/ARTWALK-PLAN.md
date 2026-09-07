@@ -1608,3 +1608,15 @@ eye-gate verdicts, a Phase F fresh commission, or a queue widening.
   (quiet close-read rider; artwalk's own polish call, no action owed). Lower-
   left "smudge" = ring terminus + self-shadow overlap, NOT a defect. Evidence:
   agents/arthur/reviews/survey32-slice/artwalk-b27-waterline/ (gameplay+front).
+- EXTENSION from survey-33 (survey lane, 2026-09-07): the khaki-brass read is
+  now a FAMILY observation, 3rd and 4th independent data points —
+  `nx-artwalk-b4-golden-top` + `nx-artwalk-b4-golden-threshold` (first
+  independent reads, NATIVE judge, live store bytes pinned d8d6c7ab /
+  b59d76d7) both read dark olive/khaki, not brass (hue shifted ~15-20° toward
+  green, value ~40-43% vs brass reference 65-80%). ALL THREE pieces carry the
+  SAME standing material `BRASS=mat(0xa0a248,.35,.82)` — if you take the b27
+  polish call, one material edit covers the family. Geometry clean on both
+  (zero floats/specks/glitches). Evidence:
+  agents/arthur/reviews/survey33-slice/ (b4-golden-top, b4-golden-threshold).
+  B2-inn-lintel/threshold, b34-wayband, b6-lissa, b13-tides all read CLEAN
+  this slice (records in SURVEY-PLAN judged index).
