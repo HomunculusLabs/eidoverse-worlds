@@ -2873,3 +2873,45 @@ walk-through-the-foci entrance; the court's consic-family siblings
 (observatory/orrery/meridianstair) all live on that diagonal.
 
 Frames: reviews/struct63-ellipsecourt/ (10 views, final bytes).
+
+## struct-64 (2026-09-07): ELLIPSE COURT v2 PLACED_VERIFIED — deferred
+## contract executed in full
+
+Cadence 64%3=1 → execute tick. Shard EMPTY fresh (14/14 nx-struct- rows
+terminal, re-verified). Gate ALL PASS real exit 0 at 5cdef84 pre-mutation.
+
+**Step 1 — judge (final bytes)**: native 1210 ×2 + one paced retry — hard
+down; ZAI fallback on reviews/struct63-ellipsecourt/gameplay.png (render of
+the exact 2aa37e9d bytes, byte-identity re-proven from disk this tick):
+5/5 PASS — colonnade-room read (13 shafts resolved + 14th occluded
+on-axis behind front-center, consistent with 14), both long-axis end bays
+open (narrow slivers ≈x125–132 / ≈x838–845), every footing grounded with
+attached shadows, foci pins at (186,408)/(766,407) symmetric (matches
+projected foci ±277px calibration), ring continuous tip-to-tip + secondary
+far-side band continuous, zero defects (no voids/floats/strays/z-fighting).
+Judge's re-raised "wood-grain" texture flag INVALIDATED — struct-63's
+pitfall-5 calibration vs accepted ninesbridge (byte-identical lanes) stands.
+Provenance: ZAI fallback, native down disclosed.
+
+**Step 2 — preflights**: terrain 7-point (center, ends ±6.97, foci ±5.6,
+minor ±4.475): spread 16.4mm, PY −0.0476. Fresh 271-entity census, target
+absent; SAT at TRUE decoded envelope on conservative full-ellipse rotated
+OBB: ZERO entities within 8m — clear without any exemption ladder.
+
+**Step 3 — placement**: next-place-struct64.ts (struct60 chassis), seat
+(0, −0.0476, −47) yaw π/2 — major axis on world Z so the entrance bays
+face the N walk, foci at (0,−47±5.6). Upload + spawn 1 verb, lib
+store/2aa37e9d29ba43f2.glb, PLACED_VERIFIED exact tuple, idempotent rerun
+zero verbs. No comps (empty bag by design).
+
+**Step 4 — walk**: struct64-walk-ellipsecourt.ts, 11/11 ALL_PASS worst
+0.382m — S apron → S bay → foci line (both pins) → center → N bay → N
+apron, reverse full through-axis, interior E–W circuit.
+
+**Standing state**: Round 5 R5-1 seated. Bill eye-check (one packet):
+on the N walk beyond the water stair, a colonnade court — fourteen stone
+piers on a true ellipse, chord-ring entablature, two brass pins marking
+the foci you walk between; enter through either long-axis end.
+Frames: reviews/struct63-ellipsecourt/ (gameplay.png = 18m contract
+frame, judged this tick). Next tick: 65%3=2 → own commission (R5-2) or
+shard re-arm; refine pool empty.
