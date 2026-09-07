@@ -1,26 +1,33 @@
-// mkv3-waterstair.ts — STRUCTURES LANE struct-16 / 53 / 57 / 61.
+// mkv3-waterstair.ts — STRUCTURES LANE struct-16 / 53 / 57 / 61 / 62.
 // struct-61 (survey-25 native dissent; v4 after-judge FAILED, kept as
 // evidence): v3/v4 descend in DEPTH (z) — from the dead-on N approach a
 // z-descent compresses to near-zero image separation, so the object can
 // only ever read as a flat striped panel in a frame (box/gate), and the
 // near-horizontal well reads as the panel's bottom band. Geometric law: a
 // descent reads in silhouette from dead-on only if it is LATERAL.
-// v5 re-authors the cascade DIAGONALLY inside the STANDING envelope
+// v5 re-authored the cascade DIAGONALLY inside the STANDING envelope
 // (x exactly +/-1.70, y subset, z subset — SAT/collider-neutral reseat):
-//   - THREE deep treads, 0.24m falls (~14px each at 18m) stepping down
+//   - THREE deep treads, 0.24m falls (~14px each at 3.9m) stepping down
 //     left-to-right as they near the viewer: the union outline IS a
 //     descending staircase silhouette from the approach;
-//   - header tank high at the back-left feeds the first fall (source
-//     pool strip brimming at its front inner edge);
+//   - header tank high at the back-left feeds the first fall;
 //   - every fall face is a teal FILM 0.03 proud (struct-52 law) crowned
-//     by a bright FOAM bead; each tread top carries a brimming sheet;
-//   - the receiving WELL sits at the low front-right corner: proud
-//     vertical water face + curb stubs + foam splash at the waterline;
-//   - finials and gold GONE (v4 judge read them as gate posts); three
-//     material buckets only (stone / water / foam). One idea: the
-//     village steps down to touch its water — and you can SEE it.
-// Palette: canon 0x506a78 family (survey flagged v3's azure off-spec);
-// legibility is carried by foam/water value alternation, not brightness.
+//     by bright FOAM; each tread top carries a brimming sheet;
+//   - the receiving WELL sits at the low front-right corner;
+//   - finials and gold GONE; three material buckets (stone/water/foam).
+// v6 (struct-62): v5's native 18m after-judge FAILED water identity —
+// bands read NAVY #33506e (slate-canon 0x506a78 renders near-black under
+// the review chassis; survey-2 millrace + survey-25 v3 both evidence this),
+// foam read CONTINUOUS STRIPS not beads, and the cascade dead-ended with
+// no legible terminus. ONE mechanism, in-family fixes (struct-57 v3's
+// 0x5f8698 + 0x41708a@0.65 is the proven-legible lineage — survey-25:
+// "sole saturated hue, unambiguous water" at 18m on live bytes):
+//   1. water -> 0x5f8698, emissive 0x41708a @ 0.65 (v3 lineage);
+//   2. foam strips -> DISCRETE BEAD ROWS per lip (11-13 beads, spaced
+//      rhythm) — "lines not beads" was the judge's exact distinction;
+//   3. receiving well WIDENED to the full corner + bright terminus step;
+//   4. brim bead row on the well's proud face (terminus signature).
+// Envelope: x +/-1.70 exact, y <= 0.795, z [-0.2,3.6] — unchanged.
 // Solid furniture class unchanged (footprint <16m2, height <1.0m).
 // Local +Z = approach.
 import * as THREE from "three";
@@ -30,9 +37,20 @@ import { writeFileSync } from "node:fs";
 
 const g = new THREE.Group();
 const stoneTex = texMat("stone", [0x56503c, 0x5c5a44, 0x4c4836], { rough: 0.95, scale: 2, weights: [2, 1, 1], cell: 32 });
-const water = mat(0x506a78, 0.22, 0.45);
-(water as any).emissive = new THREE.Color(0x3d5c70);
-(water as any).emissiveIntensity = 0.5;
+// v7 terminus rim: the v6 18m judge read the well as "just another tread"
+// dead-ending on grass, while the accepted-family calibration (millrace,
+// same rig) shows an 18m pool reads ONLY via a LIGHT rolled rim's contrast
+// vs the dark water and the ground — silhouette grammar, not water hue
+// (family water reads slate #2f332b at 18m even when accepted; v6's hue
+// "fail" is calibration-invalidated, material == live 2b418077 lineage).
+const rimTex = texMat("lightstone", [0x8a846e, 0x908a72, 0x7f7a64], { rough: 0.92, scale: 2, weights: [2, 1, 1], cell: 24 });
+// v6 law: 0x506a78 slate renders near-black under the review chassis AND
+// at 18m in-world (survey-2 millrace, survey-25 v5); 0x5f8698 is the
+// family's proven-legible read (struct-57 v3 — survey-25 "unambiguous
+// water" on live bytes at 18m). Emissive 0x41708a@0.65 = moonlit read.
+const water = mat(0x5f8698, 0.22, 0.45);
+(water as any).emissive = new THREE.Color(0x41708a);
+(water as any).emissiveIntensity = 0.65;
 const foam = mat(0xd6edf2, 0.6, 0.0);
 (foam as any).emissive = new THREE.Color(0xa8ccd6);
 (foam as any).emissiveIntensity = 0.85;
@@ -71,31 +89,43 @@ for (const [i, t] of treads.entries()) {
     ck(`tread_${i}`, t.x0, t.x1, -0.12, t.top + 0.025, t.z0, t.z1);
 }
 
-// ---- falls: teal film on each tread's +Z face (0.03 proud) + foam bead at the lip
-// film i spans from THIS tread's top down to the NEXT tread's top (0.24 = the fall)
+// ---- falls: teal film on each tread's +Z face (0.03 proud) + FOAM BEAD
+// ROW at the lip (v6: v5's continuous strip read as a rail; the judge's
+// exact distinction was "lines not beads" — one bead per ~0.155m pitch)
 const falls = [
     { x0: -1.70, x1: 0.50, z: 1.40, yLo: 0.38, yHi: 0.62 },   // tread 1 -> tread 2
     { x0: -1.15, x1: 1.05, z: 2.30, yLo: 0.14, yHi: 0.38 },   // tread 2 -> tread 3
     { x0: -0.60, x1: 1.60, z: 3.20, yLo: 0.02, yHi: 0.14 },   // tread 3 -> well
 ] as const;
+function foamBeads(tag: string, x0: number, x1: number, y: number, z: number) {
+    const n = Math.max(2, Math.floor((x1 - x0) / 0.155));
+    const pitch = (x1 - x0 - 0.09) / (n - 1);
+    for (let j = 0; j < n; j++) {
+        const bx = x0 + 0.045 + j * pitch;
+        box(`fb_${tag}_${j}`, 0.09, 0.055, 0.07, bx, y, z, foam);
+    }
+}
 for (const [i, f] of falls.entries()) {
     box(`film_${i}`, f.x1 - f.x0, f.yHi - f.yLo, 0.04, (f.x0 + f.x1) / 2, (f.yHi + f.yLo) / 2, f.z + 0.035, water);
-    box(`foam_${i}`, f.x1 - f.x0, 0.05, 0.07, (f.x0 + f.x1) / 2, f.yHi - 0.025, f.z + 0.045, foam);
+    foamBeads(String(i), f.x0, f.x1, f.yHi - 0.0275, f.z + 0.045);
     ck(`film_${i}`, f.x0, f.x1, f.yLo, f.yHi + 0.05, f.z, f.z + 0.1);
 }
 // header fall (0.72 -> 0.62) on the tank's front face
 box("film_h", 1.80, 0.10, 0.04, -0.80, 0.67, 0.535, water);
-box("foam_h", 1.80, 0.05, 0.07, -0.80, 0.695, 0.545, foam);
+foamBeads("h", -1.70, 0.10, 0.6975, 0.545);
 ck("film_h", -1.70, 0.10, 0.62, 0.745, 0.5, 0.6);
 
-// ---- receiving well at the low front-right corner: stone basin, brimming
-// proud vertical water face, curb stubs, foam splash at the waterline
-box("basin_stone", 1.50, 0.22, 0.37, 0.95, -0.01, 3.385, stoneTex);  // x 0.20..1.70, z 3.20..3.57, top 0.10
-box("basin_water", 1.30, 0.16, 0.39, 0.95, 0.08, 3.395, water);      // y 0.0..0.16, front face z 3.59 proud
-box("curb_w", 0.28, 0.28, 0.12, 0.34, 0.02, 3.53, stoneTex);
-box("curb_e", 0.28, 0.28, 0.12, 1.56, 0.02, 3.53, stoneTex);
-box("foam_splash", 1.00, 0.06, 0.12, 1.10, 0.19, 3.26, foam);          // y 0.16..0.22 at t3->well waterline
-ck("well", 0.20, 1.70, -0.12, 0.22, 3.2, 3.6);
+// ---- receiving well at the low front-right corner (v7: LIGHT ROLLED RIM
+// carries the pool's 18m identity — the accepted-family calibration's
+// proven mechanism; well stone LIGHTER than treads to break the tread
+// grammar at the terminus; well water DEEPER than tread sheets (0.24 vs
+// 0.025) so the pool is a true basin, not another sheet)
+box("basin_stone", 1.80, 0.22, 0.37, 0.80, -0.01, 3.385, rimTex);     // x -0.10..1.70, top 0.10
+box("basin_water", 1.60, 0.24, 0.39, 0.80, 0.12, 3.395, water);       // y 0.0..0.24, front z 3.59 proud, brim near basin top
+box("curb_w", 0.28, 0.28, 0.12, 0.04, 0.02, 3.51, rimTex);             // x -0.10..0.18, front 3.57
+box("curb_e", 0.28, 0.28, 0.12, 1.56, 0.02, 3.51, rimTex);             // x 1.42..1.70, front 3.57
+foamBeads("well", 0.00, 1.60, 0.2675, 3.545);                          // brim row on the proud face crown
+ck("well", -0.10, 1.70, -0.12, 0.295, 3.2, 3.6);
 
 const merged = mergeByMaterial(g, "waterstair");
 writeFileSync("agents/arthur/assets/village_waterstair3.glb", toGLB(merged));

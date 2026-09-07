@@ -1,8 +1,9 @@
-// next-place-struct57.ts — struct-57: waterstair concept re-author re-place.
-// Same entity, same exact pose as struct-16/53: remove+spawn reseat (census
-// shows no comps — comp null both sides, comp-wipe law n/a). Hash gate:
-// 2b418077 (was 4acda521). Envelope proven x/z EXACT + y strict-subset vs
-// the standing bbox (SAT/collider-neutral reseat; same collision set).
+// next-place-struct62.ts — struct-62: waterstair v7 re-author re-place.
+// Same entity, same exact pose as struct-16/53/57/61: remove+spawn reseat
+// (census shows no comps — comp null both sides, comp-wipe law n/a). Hash
+// gate: 46c39401 (was 2b418077 = struct-57 v3). Envelope proven x/z EXACT +
+// y strict-subset vs the standing bbox (SAT/collider-neutral reseat; same
+// collision set).
 // Two-pass chassis: hash gate -> live tuple drift check -> upload with 429
 // pacing -> remove+spawn -> post-place tuple verify -> idempotent rerun.
 import { readFileSync } from "node:fs";
@@ -14,7 +15,7 @@ const YAW = 0;
 const m = {
     id: "nx-struct-waterstair",
     file: "village_waterstair3.glb",
-    sha: "2b418077f82ebbf1fdc87191373e8053eec9dd75dd4009bc5a0a1bedf5a11efc",
+    sha: "46c39401e07870f31a283301b9d833231f86912d65ccf2ec8700edb1fd44570c",
     comp: {},
 } as const;
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
@@ -41,7 +42,7 @@ let verbs: Array<[string, any]> = [];
 if (!exist || exist.lib !== wantLib()) {
     const u = new URL(`${base}/upload`);
     u.searchParams.set("token", cfg.agentToken);
-    u.searchParams.set("name", `commons-next ${m.id} struct-57`);
+    u.searchParams.set("name", `commons-next ${m.id} struct-62`);
     u.searchParams.set("by", cfg.id);
     let lib = "";
     for (let a = 1; a <= 5; a++) {
@@ -65,7 +66,7 @@ if (verbs.length) await new Promise<void>((resolve, reject) => {
         ws.send(JSON.stringify({ type: "verb", verb, args }));
         if (i === verbs.length) setTimeout(() => { clearInterval(paced); clearTimeout(timer); ws.close(); resolve(); }, 1600);
     }, 650);
-    ws.onopen = () => ws.send(JSON.stringify({ type: "join", world: WORLD, id: "arthur-struct57-waterstair", avatar: cfg.avatar, token: cfg.joinToken }));
+    ws.onopen = () => ws.send(JSON.stringify({ type: "join", world: WORLD, id: "arthur-struct62-waterstair", avatar: cfg.avatar, token: cfg.joinToken }));
     ws.onerror = () => reject(Error("websocket error"));
     ws.onmessage = (ev: any) => {
         const x = JSON.parse(ev.data);

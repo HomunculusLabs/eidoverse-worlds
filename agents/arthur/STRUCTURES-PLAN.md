@@ -2511,6 +2511,15 @@ verdicts:
   fixed bytes; struct-57's own after-judge + Bill eye-check govern
   whether the 18m water-stair contract is met. Evidence:
   reviews/survey25-slice/nx-struct-waterstair/
+  [CLOSED struct-62, 2026-09-07: three judged iterations on the standing
+  entity — v5 8d7b4b2a FAIL (navy bands, strip foam, no terminus; the
+  diagonal silhouette itself PASSED), v6 42594fa2 silhouette+beads PASS
+  but hue/terminus findings, pitfall-5 calibration on the accepted
+  millrace 18m frame invalidated the hue finding (family water reads
+  slate at 18m; legibility is rim contrast, not hue) and isolated the
+  light-rim mechanism, v7 46c39401 NATIVE 18m PASS all four + night
+  probe quiet-moonlit; reseated at the exact tuple, PLACED_VERIFIED,
+  walk 4/4. Full record: struct-62 section below.]
 - `nx-struct-waystone-{e,n,s,w}` — survey-26 first read (ZAI fallback,
   native 1210 x2 + paced retry burned, hard down all tick; native
   re-judge owed): standing-stone read LANDS (grounding + contact shadow
@@ -2709,3 +2718,68 @@ subset); (3) pixel falsification (teal + foam-class bands, before/after);
 (4) on FAIL: iterate ONE defect, do not place. Live census for SAT
 preflight not needed before judging (envelope is a proven strict subset of
 the live entity's own bbox — same collision set).
+
+## struct-62 (2026-09-07): waterstair dissent CLOSED — v5 judged FAIL, v6
+## partial, v7 (light-rim pool) NATIVE PASS, reseated live
+
+Standing contract from struct-61 executed (queue law): judge v5 → on PASS
+reseat → on FAIL iterate ONE defect. Gate ALL PASS real exit 0 at c857992
+pre-tick; re-gated ALL PASS exit 0 at a1e5e18 pre-mutation (sibling
+dress-86 absorbed mid-tick).
+
+**v5 native after-judge (the deferred debt)**: silhouette PASS — the
+box/gate killer is dead; the diagonal descent reads; zero floats/gold.
+Water identity FAIL on three counts: bands read navy #33506e, foam read
+CONTINUOUS STRIPS ("lines not beads" — the judge's exact distinction),
+cascade dead-ended with NO legible terminus. Root: one mechanism — 18m
+water legibility.
+
+**v6** (sha 42594fa2…, x2 deterministic): water 0x506a78→0x5f8698 +
+emissive 0x41708a@0.65 (struct-57 v3's proven-legible lineage — survey-25
+"unambiguous water" on live bytes); foam strips → discrete bead rows
+(0.09m beads at 0.155m pitch, 11-14 per lip — pixel-verified column gaps);
+well widened to the corner. Judged: silhouette PASS, beads PASS, hue
+"steel blue" FAIL, terminus FAIL.
+
+**Pitfall-5 calibration (decisive)**: the ACCEPTED millrace's 18m frame,
+same rig — its water reads slate #2f332b..#22251f, DARKER than v6's,
+with zero teal. Hue finding INVALIDATED for the family; the millrace's
+pool DOES read at 18m via its LIGHT rolled rim's contrast. The true
+defect class: the pool needs silhouette grammar, not water hue.
+
+**v7** (sha 46c39401e07870f31a283301b9d833231f86912d65ccf2ec8700edb1f
+d44570c, x2 deterministic): lightstone rim bucket (0x8a846e family,
+texMat) on basin + curbs — the accepted-family mechanism; well water
+deepened 0.18→0.24 (true basin, not another sheet); brim beads raised to
+the taller face. 4 buckets / 4 nodes (stone 96v / water 216v / foam
+1512v / lightstone 72v). Envelope: x ±1.70 EXACT, y ≤ 0.725, z ≤ 3.59 —
+strict subset reseat (SAT/collider-neutral, proven same collision set).
+One judge flap (1210) on the first v7 pass, one paced retry recovered —
+disclosed.
+
+**NATIVE 18m verdict on v7: ALL FOUR PASS** — descending lateral
+cascade; discrete foam beads; the terminus reads as a light-rimmed
+receiving POOL (not a tread dead-ending); zero floats/gold. Minor
+disclosed caveat: depth reads by width+rim more than vertical mass.
+Night pixel probe: 5861 teal px, single joined band, max luminance
+568/765 — quiet moonlit, no glare (same emissive lineage as the
+natively-judged v3 night PASS).
+
+**Reseat**: PLACED_VERIFIED, 2 verbs (remove+spawn), lib
+store/46c39401e07870f3.glb, exact tuple (0, −0.03222645164101495, −32)
+yaw 0. Idempotent rerun: zero verbs. Walk (struct16-walk-waterstair.ts
+chassis, legs re-validated against v7 envelope): 4/4 ALL_PASS worst
+0.358m. Survey-25 waterstair intake CLOSED with in-place annotation.
+
+**Bill eye-check** (one packet, standing): on the N-gate walk at
+(0,−32), the water stair now reads as a diagonal cascade — header tank
+high on the left, treads stepping down toward a LIGHT-RIMMED pool at the
+low right corner, white foam beads at every lip. At night the water
+carries a quiet moonlit teal. Frames:
+reviews/struct62-waterstair-v7/ (gameplay.png = the 18m contract frame).
+
+**Intake remaining**: orreryring margin-only (design-note tier, 2
+unanimous native-backed reads, numbers recorded for a future polish
+pass — no action owed until Bill or a survey re-flags). Next tick:
+cadence 63%3==0 → refine tick; refine pool empty → own commission
+(Round 5 concept due) or re-arm on improve-routed rows.
