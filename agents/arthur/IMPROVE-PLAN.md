@@ -1763,6 +1763,11 @@ open duplicate notes for these objects.
   now CONFIRMED at 2-of-5 (0007/0015) — executing lane should treat
   as family-wide unless decode says otherwise. Evidence:
   reviews/survey10-slice/nx-craft-hamlet-0015/gameplay.png
+  [EXECUTED improve-23, 2026-09-06: 0007 cured at source (composeHamlet
+  slot fix, improve-22) and RESEATED live — lib e2f134cf → edd3da3e,
+  tuple unchanged, embers restored, walk 8/8 ALL_PASS, ZAI after-judge
+  4/4 PASS. Siblings 0015/0028/0041/0054 confirmed byte-stable = still
+  corrupted, queued next ticks. Native re-judge debt disclosed.]
 - `nx-gallery-mosaic-0036` — Sev 3 (survey-9, 2026-09-06, ZAI + native
   UNANIMOUS): mosaic-panel identity FAILS at 18m — hundreds of loose
   tiles flat on grass read as scattered paving/confetti scatter, not
@@ -2385,6 +2390,21 @@ post-place verify + idempotent rerun; (5) annotate the SURVEY CANDIDATES
 row [EXECUTED improve-22]; (6) siblings 0015/0028/0041/0054 same-class
 cures on their own ticks (rebuilds change bytes by design — family-wide
 remediation law).
+
+improve-23 RECOVERY COMPLETE (2026-09-06): (1) on-disk sha re-verified
+edd3da3e + rebuild ×2 fresh determinism proof this tick; (2) after-judge
+obtained via ZAI (contract names "ZAI then native when it returns") —
+4/4 PASS: three grounded cottages, zero sky-through holes, zero floating
+runs (one exposed-rafter borderline judged attached into the upper slab),
+coherent silhouettes; native 1210 ×2 persists — native re-judge debt
+disclosed. (3) reseat placer next-reseat-craft-hamlet-0007.ts: disputed-
+bytes gate (old-pin/new-pin only), fresh-census rim/SAT preflight
+(inner 78.65 / outer 97.48 legal, minGap +3.63 vs cloister-0008),
+upload → store/edd3da3ef7737bef.glb, remove+spawn + embers re-apply,
+post-place PLACED_VERIFIED (lib/pos/yaw/scale/comp exact, bbox y-span
+4.622), idempotent rerun ALREADY_SEATED zero verbs; (4) walk 8/8
+ALL_PASS (4 rays two-way, max arrival 0.38m — improve23-walk-hamlet.ts);
+(5) row annotated [EXECUTED improve-23]; (6) siblings remain.
 
 ## improve-21 (EXECUTION CONTRACT, 2026-09-06 — R-120/R-121 take, re-arm item 2)
 

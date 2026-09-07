@@ -1,9 +1,13 @@
 // next-place-craft-hamlet-0007.ts — nvp-63 exact reviewed placement.
+// improve-23: PINNED_SHA refreshed e2f134cf → edd3da3e (composeHamlet slot
+// fix); tuple/comp contract unchanged. Superseded for reseat mechanics by
+// next-reseat-craft-hamlet-0007.ts (remove+spawn); this file remains the
+// idempotent standing verifier for the live pin.
 // commons-next only; fail-closed hash/tuple/SAT/rim gates; MANDATORY embers
 // comp restore after spawn (re-place wipes comps). No GUI dependency.
 import {readFileSync}from"node:fs";import{createHash}from"node:crypto";
 const ROOT="/Users/t3rpz/projects/eidoverse-worlds",WORLD="commons-next",ID="nx-craft-hamlet-0007",
-SHA="e2f134cfba7f9e86c4068eeca6bcdf4a9476182973e850dd813a85c375daaa0f",
+SHA="edd3da3ef7737befccd1cb5af0030ce227b3a1976828ed64b1a804a7390104e5",
 PX=86.671814,PY=-0.01918958686956854,PZ=15.480445,YAW=-2.35619449,
 BW=13.853902339935303,BD=13.293009757995605;
 // comp contract bound by nvp-62 review

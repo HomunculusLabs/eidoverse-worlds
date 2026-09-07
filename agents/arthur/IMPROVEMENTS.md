@@ -4484,4 +4484,6 @@ fixes ≈ 6 F.)
 
 - [dress-73] SCOPE WIDENED per Bill ('expand scope hella'): ROUND 3 authored — 19 new installations across 4 districts (NW cultivation: espalier rows/compost/drying racks/rain barrel/field-cross; NE craft: anvil pad/timber yard/glazier rack/bellows; SE wild: fungus logs/dead snag/moss bowls/stream stones/fox den; SW contemplative: incense stand/bell post/seats/offering niche/lantern hooks) — all prior laws carry (ids disjoint, budgets, SAT, walk-tests, 18m law); quality bar not lowered, weak families get DROPPED not filled; fleet relaunch chained with dress re-included (D+0, E+0)
 
-**Running total: 2370311 / 2000000**
+- [improve-23] nx-craft-hamlet-0007 recovery contract EXECUTED (improve-22 PARTIAL closed): rebuild x2 fresh determinism edd3da3e re-proven, ZAI after-judge 4/4 PASS on contract criteria (grounded cottages / zero sky-through / zero floating runs / coherent silhouettes; one exposed-rafter borderline judged attached; native 1210 x2 persists — native re-judge debt disclosed), reseat placer with disputed-bytes gate + fresh-census rim/SAT (inner 78.65 outer 97.48, minGap +3.63 cloister-0008), upload store/edd3da3ef7737bef.glb, remove+spawn + embers comp re-apply, PLACED_VERIFIED lib/pos/yaw/scale/comp exact, live bbox y-span 13.08 -> 4.622, idempotent rerun zero verbs x2 (reseat + re-pinned standing verifier), walk 8/8 ALL_PASS max arrival 0.38m, SURVEY row annotated [EXECUTED improve-23], siblings 0015/0028/0041/0054 byte-stable-confirmed still corrupted queued next ticks (D+1, E+0)
+
+**Running total: 2370312 / 2000000**
