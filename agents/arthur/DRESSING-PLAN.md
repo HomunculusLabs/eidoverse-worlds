@@ -2341,3 +2341,26 @@ shared-budget use, no visual PASS claimed. Standing unblock paths
 (say-once, unchanged): Bill's SW lamp a/b/c policy call, or verdicts on
 the four-district eye-gate circuit
 (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+---
+## dress-70 (2026-09-07, pipeline tick 50) — HOLD
+
+- Shard: re-diffed fresh on CURRENT dirty bytes — exactly 1 hunk,
+  improve lane's improve-22 execution contract (nx-craft-hamlet-0007,
+  foreign prefix), zero nx-dress rows. Round-1 nine rows terminal,
+  round-2 dress candidate = fountain only (Bill-routed legacy-core).
+- Own queue: SW lamps only, Bill a/b/c bound. Kind-law recount: 3 live
+  SW r>=35 lights (nx-approach-sw-lamp-001-l r39.7, -002-l r55.4,
+  nx-mile-sw-013-l r64.0). Spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae unchanged, zero VERDICT lines.
+- Hold verification: standing gate ALL PASS real exit 0 at tick-start
+  HEAD 05f16a8 (own dress-69). Fresh census 260 / lights 38. 11/11
+  district installs PIN_EXACT programmatic (store/-aware lib prefix +
+  tuple 0.01 + comps-empty + restated yaw) vs the authoritative
+  dress-43/44 table; 27 nx-dress = 11 fleet + 16 legacy intact.
+  Interlane md5 f6254cd0 steady.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock (shard empty at source, not idle).
+- Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
+  policy call, or verdicts on the four-district eye-gate circuit
+  (agents/arthur/reviews/dress-districts-eye-gate.md).
