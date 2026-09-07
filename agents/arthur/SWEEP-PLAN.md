@@ -2221,3 +2221,22 @@ zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-73): potter +
 market (51st cycle — LRU by latest-walk chain: @72 row-cottage/observatory,
 @71 potter/market, @70 hall/forge, @69 inn/stable, @68 bunkhouse/longhouse;
 potter+market last walked sweep-71, now stalest).
+
+EPOCH-C CORRECTION (disclosed, correction-of-record class — improve-44
+orchard family cure landed at 59b2b575 + d79ab891 AFTER this sweep's ledger
+append, sweeping the shared index and carrying my three staged files along
+(artwalk-34 interleave class; verified: [sweep-72] entry + prose present
+exactly once at HEAD via that commit — never re-appended). Census-C 276==276
+with exactly FIVE additional classified drift field-sets = the orchard family
+nx-cultivation-orchard-{0012,0020,0033,0046,0059} lib flips to improve-44's
+ledgered cure shas (a5da671d/a0ed327d/55fdc827/53a54111/369f5b03 — 0033
+matches its artifact commit d79ab891 exactly) at identical tuples, lib+bbox
+only, domain-valid not drift. All affected evidence re-taken fresh before
+this correction commit: SAT re-run at epoch C (238 bbox non-light / 233
+classified / 0 coverage holes, exit 3 on exactly the same three known
+unclassified — the orchard cures introduced NO new contacts), snapshot
+rewritten to epoch C with pre-write assertion (diff exactly 5x orchard
+lib+bbox, nothing else) 110571B / 276 entities / sha16 1f23988720b4cf5a,
+post-rewrite drift ZERO. The committed ledger entry (sweep-72, D+0/E+0, law
+exact 2370680) is epoch-B-true; this block is the correction of record.
+Baseline for sweep-73 = epoch C.
