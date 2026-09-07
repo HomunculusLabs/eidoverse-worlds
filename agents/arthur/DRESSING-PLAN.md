@@ -1,6 +1,30 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-106 — SE fox den (round-3 item 14, IN FLIGHT — v15 built, placement pending)
+
+- **Interrupted-window recovery (artwalk-32 class)**: prior window died
+  post-build/pre-spawn — v10 `d7875544` + scans on disk, zero ledger/plan,
+  census 286 with zero foxden hits. Named; no live residue to reconcile.
+- **This tick**: v10 fresh native re-judge FAILED 4/4 → v11 pale values +
+  side-thrown fan (probe-disproven ZAI value claims) → v12–v14 isolation
+  probe proved the RIG's studio grass (renders 1.18× albedo) could never
+  be beaten by plain-mat props (loader-default metal-1, 0.53–0.70×; struct-38
+  class) → **rig ground recalibrated 0x7f8d70 → 0x3d3a29** (live meadow
+  rgb(60,57,41), measured off dress-105's accepted live-seat frame).
+- **v14 `9f5bff6b`**: approach18 NATIVE PASS 4/4. close4 3/4 (cap = floating
+  tabletop lid, polish-272 class). **v15 `12f9a479`** (deterministic ×2,
+  decode ALL PASS, 8 nodes, dims 4.758×0.799×5.118, center (0.675, 0.148)):
+  cap shrunk/lowered/draped — UNJUDGED at budget close (native 1210).
+- **Next wakeup contract**: (1) judge v15 close4 (+ approach18 if close
+  passes); (2) re-run `dress106-foxden-scan.ts` + `dress106-foxden-forest-scan.ts`
+  with TRUE v15 decode constants — the committed scan files still carry v10's
+  HALF/CLOCAL (STALE); (3) terrain preflight at winner → hash-gated placer →
+  upload/spawn `nx-dress-se-foxden-001` → tuple verify + idempotent rerun →
+  ledger close. SE lamp 0 of 8 (static, unlit). Review dirs: v10–v15 + probe
+  under `reviews/dress106-foxden-*`.
+
+
 ### dress-97 — SW contemplative seats (round-3 item 17, PLACED, LIVE)
 
 - **Concept contract**: the devotional line's WATCHING place — the line
