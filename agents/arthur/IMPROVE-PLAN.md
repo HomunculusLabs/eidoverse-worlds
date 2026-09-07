@@ -2593,6 +2593,29 @@ open duplicate notes for these objects.
   idempotent rerun; (3) annotate EXECUTED. Revert: baseline banked
   reviews/improve38-seed/before/baseline-710ec3e5.glb; source revert
   = git checkout mason.ts + rebuild returns 710ec3e5 (proven).]
+  [EXECUTED improve-39 (2026-09-07, this tick — family 4/4 PLACED_VERIFIED):
+   v3 after-judge NATIVE FAILED honestly — bead-float TRUE and one level
+   deeper: export pipeline DROPS mesh .scale (cap exported bare ±0.30
+   sphere, top 2.30; v3's nestle arithmetic targeted a phantom 2.48 ovoid
+   top — gap 0.095m = the judged 5px sky wedge, pixels+accessors agree).
+   Judge's "no contact shadow" claim FALSIFIED by before/after pixel-diff
+   (0 px changed outside the monolith column; v2 grounding PASS stands).
+   v4: ovoid baked into geometry (cap.geometry.scale(1,1.6,1) — pitfall-4
+   transform-survival class) + bead re-derived against the TRUE surface
+   (center 2.465; bottom 2.42 buried 0.06m into the 0.145-wide crown
+   shoulder; 2/3 ball proud; zero sky by construction). 699387ab ×2
+   deterministic, FAMILY_ONE_SHA ×4, 56 siblings byte-identical, decode
+   ALL PASS (cap y 1.520–2.480, bead 2.420–2.510, footprint ±3.275
+   byte-identical SAT-neutral, 0 below grade). Pixel probe pre-judge: 0
+   sky px in flank box. NATIVE after-judge 4/4 PASS (bead flush at seam
+   y280–283, obelisk read 15:1, AO-grounded, zero floaters). ONE upload
+   + remove+spawn ×4 exact tuples (8 verbs) → all four ids at store/
+   699387abdef0b16f.glb, census 273 steady, idempotent 0-verb rerun.
+   Night probe: exactly 12 warm px at the bead, 0 in baseline — quiet
+   warm point (polish-278 class). Banked: reviews/improve38-seed/
+   {before,after-v3,after-v4}. New export law banked: never trust
+   mesh.scale to survive toGLB — bake non-unit scales into geometry.
+   Source revert = git checkout mason.ts + baseline-710ec3e5.glb.]
 - `nx-cultivation-garden-0011` — Sev 3 (survey-8, ZAI): cultivation
   grammar absent at 18m — no bed geometry, no crop rows, no fence;
   spheres read bushes/boulders (uniform near-black green, zero size

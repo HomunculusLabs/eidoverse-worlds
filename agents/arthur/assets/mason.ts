@@ -593,18 +593,24 @@ function composeSeedOfLife(g: THREE.Group, r: () => number): string {
     core.add(shaft);
     const cap = new THREE.Mesh(new THREE.IcosahedronGeometry(0.30, 1), ashlar);
     cap.name = "sol_core_cap";
-    cap.scale.set(1, 1.6, 1);
+    // v4: bake the 1.6 ovoid stretch into GEOMETRY — the export pipeline
+    // drops mesh .scale (proven this tick: v3's cap exported a bare ±0.30
+    // sphere, top 2.30, while the source read 2.48; the bead nestle was
+    // computed against the phantom top and floated 0.095m = the judged
+    // 5px sky wedge). geometry.scale survives export into vertices.
+    cap.geometry.scale(1, 1.6, 1);
     cap.position.set(0, 1.70 + 0.30, 0);
     core.add(cap);
     const bead = new THREE.Mesh(new THREE.SphereGeometry(0.045, 10, 8), new THREE.MeshStandardMaterial({ color: 0xffc98a, emissive: 0xffa45f, emissiveIntensity: 1.25, roughness: 0.4 }));
     bead.name = "lamp";
-    // v3 (native FAIL on v2's 2.50): the cap is a 45° cone from its apex
-    // vertex — vertex-embed arithmetic alone leaves a resolvable sky wedge
-    // at the bead flanks. Center 2.44 puts the lower hemisphere fully
-    // inside the cone (apex point 0.04 < r 0.045 from bead center = the
-    // ball swallows the tip; lower flank below cone surface r<=0.043) —
-    // no sky can appear between bead and stone; ball reads nestled-on-cap.
-    bead.position.set(0, 2.44, 0);
+    // v4 (v3 judged FAIL — export dropped the cap's mesh .scale): the cap
+    // now bakes its 1.6 ovoid into geometry — TRUE surface: semi-axes
+    // a=0.30 x/z, b=0.48 y, center (0,2.0,0), top 2.48. Bead center 2.465:
+    // bottom 2.42 sits where the ovoid's half-width is 0.145 (the ball's
+    // 0.045 flank is buried in stone); ball center height 2.465 gives
+    // protrusion 2.51−2.48 = 0.03 = 2/3 of the ball proud of the top —
+    // no sky can appear between bead and stone by construction.
+    bead.position.set(0, 2.465, 0);
     core.add(bead);
     g.add(core);
     void r;

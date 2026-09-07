@@ -69,7 +69,7 @@ const LIVE_SHA = "710ec3e5c66a0378";
 // --again, which skips the baseline gate and asserts hash equality
 // instead). v1 material-less build (3c233f78) caught + superseded.
 const AGAIN = process.argv.includes("--again");
-const PIN = "e35efe724cd998e6"; // v3 (bead nestled 2.44); v1 3c233f78 material-less, v2 f9d00690 floating bead — both superseded
+const PIN = "699387abdef0b16f"; // v4 (ovoid baked into geometry, bead 2.465); v3 e35efe72 sphere-cap float caught by native+pixels, v2 f9d00690, v1 3c233f78 — superseded
 const baseline = readFileSync(`${OUT}/work_1644_seed.glb`);
 const baseHash = createHash("sha256").update(baseline).digest("hex").slice(0, 16);
 if (!AGAIN && baseHash !== LIVE_SHA) throw Error(`baseline drift: ${baseHash}`);
