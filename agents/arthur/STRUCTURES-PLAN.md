@@ -2456,3 +2456,31 @@ pre-tick; zero world mutations, zero uploads, zero shared-budget use
 this tick (struct-58). Remaining intake: orreryring margin-only
 (ea4f2317, margin-tier; next-worst is now second-commission work or the
 margin probe).
+
+**SURVEY INTAKE (survey-24, 2026-09-07)** — read-only probe notes, not
+verdicts:
+
+- `nx-struct-meridianstair` — SIXTH vote (ZAI fallback, native 1210 x2 +
+  paced retry burned): base-read flag NOT reproduced, strongest evidence
+  yet — the flagged coordinates (x615-630 y434-438) contain NO post base
+  at all (open ground between the right portal's posts); rear-post bases
+  sit ~24px higher in frame by correct linear perspective, each with
+  cast-shadow contact directly beneath. Corroborates struct-58's decode
+  closure (all 8 bases y=0.0000; slat-shadow banding = the misread).
+  Pins 1-of-3 sixth vote, consistent with decode's both-pins-proven
+  (second pin occluded by converging slats at this azimuth). Cluster
+  stands closed CLEAN; no action, no new row. Evidence:
+  reviews/survey24-slice/nx-struct-meridianstair/
+- `nx-struct-orreryring` — second read on standing margin-tier debt
+  (served ea4f2317): sparse rhythm CONFIRMED concretely — 4 stones
+  total, entire near arc empty (~half circumference, x571,425 through
+  bottom-center to x307,430), spacing arbitrary not patterned. Off-band
+  finding REFRAMED: not color — mixed placement STYLES (stones A/B bare
+  on the rim, C/D mounded inset at the second circle) reads
+  unintentional. Ring itself deliberate (4 concentric inscribed circles
+  carry the composition), disc continuous, zero floats, zero gaps.
+  Stays margin-tier per survey-17; candidate numbers for a future
+  polish pass: 4-8 more stones prioritizing the near arc + unify
+  placement band/style. Evidence:
+  reviews/survey24-slice/nx-struct-orreryring/
+

@@ -1707,6 +1707,24 @@ verdict names its judge):**
   dress/improve decision). Evidence:
   reviews/survey23-slice/nx-dress-charcoal/
 
+**survey-24 sub-section (2026-09-07, ZAI fallback — native 1210 x2 +
+paced retry burned, hard down all tick; decode cross-check on served
+bytes):**
+
+- `nx-town-longhouse` — Sev 4 identity-marginal candidate (improve-own
+  domain; native re-judge owed before execution): at 18m reads generic
+  dark shed, not longhouse — facade flanks featureless near-black in
+  BOTH gameplay (x240-350, x527-585) and front (x250-355, x520-585)
+  views, zero plank/frame detail legible; no stone-footing read at the
+  wall foot (y~465-470 both views); chimney (x365-400 y183-232) reads
+  modern metal flue with rain cap. VOID RULED OUT by cross-check: cast
+  ground shadow uninterrupted, nothing shows through — unlit surfaces,
+  not holes. DECODE CAVEAT: served bytes carry the FULL village texMat
+  family (timber/stone/plaster/iron TEX + 3 warm glows) — the crush is
+  chassis-no-ambient aggravated; probe only, confirm-or-drop + decode
+  law stays with improve lane. Evidence:
+  reviews/survey24-slice/nx-town-longhouse/
+
 **ROUTING (town-4, 2026-09-06, Bill 24h-usefulness directive):** candidates
 with no live shard prefix (`nx-welcome`, `nx-court`, `nx-forge`, `nx-cistern`,
 `nx-temple-*`, `nx-cultivation-*`, `nx-craft-*`, `nx-gallery-*`, `nx-wild-*`)

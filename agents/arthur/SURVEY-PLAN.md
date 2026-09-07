@@ -1097,3 +1097,67 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   and the three off-limits rows). Zero world mutations, zero
   uploads, zero comp edits, zero shared-budget use. One ledger
   append (routing).
+## Judged index (survey-24)
+
+- survey-24 (2026-09-07, ZAI FALLBACK 7/7 disclosed — native 1210 x2 on
+  meridianstair first call + paced retry burned, hard down all tick, zero
+  native verdicts; 18m gameplay, fresh live store bytes 7/7 HTTP 200 curl
+  UA on exact census-24 libs, served-shas pinned): DEBT-CORROBORATION +
+  FIRST-READS slice (severity backlog drained; district family census
+  13-of-13 closed; waterstair/woodyard/tower EXCLUDED — in-flight sibling
+  work visible in dirty tree at selection). Slice = meridianstair (verify
+  cluster sixth vote), orreryring (margin debt), compost-001 (dress-80
+  arrival), four never-judged core dwellings (longhouse, hall, tower-house,
+  inn). MERIDIANSTAIR sixth vote (ZAI) — base-read flag NOT reproduced,
+  strongest evidence yet: flagged coords x615-630 y434-438 contain NO post
+  base at all (open ground between the right portal's posts); rear-post
+  bases sit ~24px higher in frame by correct linear perspective, each with
+  cast-shadow contact. Cluster closed CLEAN by struct-58 MID-TICK (decode
+  law 11: all 8 bases y=0.0000, 2 summit pins by design); this vote
+  recorded as adjacent corroboration, no new row. Pins 1-of-3 sixth vote
+  (occlusion consistent with decode's both-pins-proven). ORRERYRING margin
+  debt sharpened — sparse rhythm CONFIRMED concretely (4 stones, near arc
+  empty ~half circumference x307..x571), off-band reframed as mixed
+  placement styles (A/B bare-on-rim vs C/D mounded-inset); ring itself
+  deliberate (4 concentric inscribed circles carry composition), zero
+  floats, zero gaps; stays margin-tier per survey-17. COMPOST-001
+  CLEAN-with-margin (first independent read, concurs dress-80 native
+  PASS: identity via green clippings + posts-above-rail, 3 bays legible
+  upper half, cast shadow grounds; margins: dark bottom stratum merges
+  timber, straw band absent bay 3, right spill ambiguous blob).
+  LONGHOUSE first read CONFIRM Sev 4 identity-marginal (ZAI + decode
+  cross-check): at 18m reads generic dark shed — facade flanks
+  featureless near-black BOTH views (gameplay x240-350 / front x250-355
+  + x520-585), no stone-footing read at wall foot, chimney flue-cap
+  reads modern. VOID RULED OUT: ground shadow uninterrupted, nothing
+  shows through = unlit surfaces not holes. DECODE CAVEAT: served bytes
+  carry FULL texMat family (timber/stone/plaster/iron TEX + 3 warm
+  glows) — crush is chassis-no-ambient aggravated; native re-judge owed
+  before execution. Candidate row IMPROVE-PLAN survey-24 sub-section.
+  HALL CLEAN-with-margin (hall identity + strong window + 5 warm lamp
+  points read; margins: stone-base band illegible (same class), door
+  illegible in porch shadow mass, one bench-support verify flag; roof
+  reads hipped from front = info note only). TOWER-HOUSE CLEAN 4/4
+  CORROBORATED on unchanged bytes 11b31000 (survey-4 CLEAN was on these
+  exact bytes — 5th vote; selection self-caught from hyphen-split plan
+  text, corroboration-framed not re-judged). INN CLEAN-with-margin
+  (shadow test zero holes zero floats, silhouette strong, identity
+  leans inn via props — lamps/sign/porch/chimneys; margins: window
+  rhythm + half-timber illegible at 18m chassis light, plain main
+  chimney box vs capped left one, raised roof-end fins + left tip
+  notch verify flags; texMat decode same full-family caveat).
+  Routing: +1 candidate row (longhouse); STRUCTURES-PLAN intake
+  (meridianstair closure corroboration + orreryring second read); zero
+  DRESSING-PLAN notes (compost CLEAN). Grep-verified zero open
+  duplicates pre-append. Census 267 vs 266: +1 arrival
+  nx-dress-nw-compost-001 (dress-80 @ 275e69b, tuple-exact); 2 POS_SAME
+  lib flips classified (court improve-30, cellardoor struct-56); 0
+  departures; lights 38. Census window predates struct-57's waterstair
+  verbs (2b418077 flip landed mid-tick @ 334c7c2; sweep-57 epoch-B
+  classified it). Gate: ALL PASS exit 0 first try at 1fb78dd; HEAD
+  advanced mid-tick to fd0fa73 (struct-57/improve-31/sweep-57/
+  dress-81/struct-58, all foreign files) — re-gated ALL PASS exit 0
+  (ledger law EXACT 2370601); improve-32 append in-flight at commit
+  (filtered staging, artwalk-34 class). Verdicts 1 confirmed / 4 clean
+  (3 with margins) / 2 debt-corroborations / 0 dropped. Zero world
+  mutations, zero uploads, zero comp edits, zero shared-budget use.
