@@ -1,6 +1,71 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-97 — SW contemplative seats (round-3 item 17, PLACED, LIVE)
+
+- **Concept contract**: the devotional line's WATCHING place — the line
+  (gravel r74.7 → censer r82.4 → prayer mound r83 → bell post r88.2 →
+  labyrinth r98) serves the walking ritual; the seats are where you rest
+  AFTER the bell and face the maze before entering. Two staggered
+  water-worn SLAB benches in the prayer-stone river idiom (RIVER
+  0x9a968c / DARK 0x7d7a72 / PALE 0xe8e5de — the accepted dress-8 family),
+  deliberately NOT dress-6's matched mason-pedestal NE benches: worn slab
+  tops on fragment footings, staggered/turned, one pale rounded river-stone
+  cushion on the primary seat (the in-use tell — pail/ember precedent),
+  kicked fragments at the foot. Sitting height 0.43 (polish-276 law).
+  Static, unlit — SW lamp spend 0 of 3.
+- **Build**: `assets/mkv3-dress-sw-seats1.ts` →
+  `assets/village_dress_sw_seats1.glb`. 4-version native judge arc (two
+  1210 flaps paced-retried, recovered, disclosed):
+  - v1 `f3095888`: decode-caught — slab A bottom 0.355 vs footing tops
+    0.288 = 0.07m floating gap; footings raised to embed.
+  - v2 `eda228eb`: close FAIL — slabs read "cut masonry beams" (index
+    jitter too subtle), stones "stamped sphere primitives".
+  - v3 `2c9c56ad`: close FAIL — edge-bevel term still zeroed at slab
+    center; razor-straight mid-edges survived. Stones fixed (topology
+    mixing accepted by judge but slabs still failed).
+  - v4 **`cb34bd36…` ACCEPTED** (deterministic ×2): full water-worn
+    treatment — RIM-RING DROP (every top/bottom rim vert pulls toward
+    center 3.6cm, corners +2cm more), CENTERLINE CROWN (+3cm barrel dome,
+    mirrored under), SIN LENGTH-UNDULATION (thickness varies end-to-end —
+    no straight parallel edges survive), mixed dodeca/icosa stone topology
+    + 30% position-hash radial bump. Native: 18m **4/4 PASS** (reads
+    SEATS at sitting height, deliberate stagger, zero defects; margin:
+    pale cushion carries the distance read) + close **4/4 PASS**
+    (water-worn natural slabs, varied non-clone rocks, footings embedded,
+    cushion seated; margin: companion slab's upturned left tip reads
+    flake-like, natural). **Worn-slab law banked**: cut-masonry reads die
+    to rim-drop + crown + undulation TOGETHER — a bevel alone (v3) leaves
+    razor mid-edges; the judge sees the silhouette, not the bevel.
+- **Decode (v4)**: 3 nodes (budget 3–25 ✓); envelope x −1.123..2.261,
+  z −0.312..1.281 (center (0.569, 0.484), half 1.692×0.797 — asymmetric,
+  center-offset transform honored in SAT), y −0.028..0.686 grounded;
+  vertex-level contact proof: footing tops 0.398/0.324/0.300 embed past
+  slab undersides 0.355/0.31. No light anchors, empty comp bag by design.
+- **Siting (fresh census 280, `dress97-scan.ts`)**: 1516 legal poses in
+  the bellpost–labyrinth pocket; winner **(−57.0, −72.5) yaw 156.70°**
+  (local +z → the labyrinth: the watching orientation, bearing verified
+  157.2° ≈ yaw). SAT min +2.189m vs bellpost (worst), no sub-1.4m
+  adjacency, no exemption ladder; walking-line clearance 7.22m (min of
+  both segments); approach cones CLEAR (labyrinth judged vs the
+  devotional corridor axis az 12.3°, dress-90 law); rim corners
+  91.1..94.8 ∈ [66,108] — **CITY-PLAN district band r70–100 honored**
+  (cite: CITY-PLAN law 1). Terrain (dress97-terrain.ts): −0.0214..−0.0263
+  (5mm spread) → py −0.0263 worst corner.
+- **Placement**: `sw-dress97-place.ts` (dress-86/91 chassis) — hash gate →
+  blocker-epoch guard (bellpost, labyrinth-0038, prayer, gravel, incense)
+  → fresh-census SAT/rim/cone preflight (clear) → upload (no 429) → 1
+  spawn verb → post-place tuple verify. **PLACED_VERIFIED**
+  `nx-dress-sw-seats-001` @ `store/cb34bd36bf9ce02d.glb`, (−57.0,
+  −0.0263, −72.5) yaw 156.70°. Idempotent rerun: 0 verbs. Census 281,
+  comps empty.
+- **Eye-check for Bill**: past the bell post toward the labyrinth, two
+  worn stone slab benches staggered off the path's CW side, facing the
+  maze — sit, and the labyrinth fills the view; the pale cushion stone
+  marks the used seat. If the stagger reads too quiet at distance, one
+  brightening pass on the cushion is the standing fix.
+
+
 ## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
 - survey-29 (2026-09-07, NATIVE, live bytes 1ea38f61 gameplay+night, reviews/survey29-slice/bellpost/): day-frame identity dissent on dress-86 bellpost — reads LAMP/torch-first ~75-80% (saturated orange + straight-sided cone + on-axis mount; no bronze value/crown/lip/hanging offset); night frame PASSES (zero emissive/bloom — inert bronze read, correct). Probe: value/mount, not mesh. Margin: detached ground squiggle left of base ~40-50px (hairline artifact class). **CLOSED by dress-91: native re-judge CONFIRMED the dissent on exact live bytes, v6 cure reseeded live (see dress-91 entry below).**
 
@@ -3494,6 +3559,17 @@ cost. Rotation next: SW round-3 (verdict-routed items and SW lamp policy
 hold still outrank). Eye-check for Bill: NW lane past the skep row's open
 end — dark coopered barrel on a plank stand, iron tap + pail; at ~2.6m the
 pail shows teal water inside its open rim.
+
+**STATE AT dress-97 (2026-09-07, pipeline install tick)**: SW round-3 item
+17 EXECUTED live — `nx-dress-sw-seats-001` PLACED_VERIFIED (details in the
+dress-97 siting-log entry below; 4-version native arc, v4 `cb34bd36` 18m
++ close PASS; 1516-pose scan pocket between bellpost and labyrinth; rim
+91.1–94.8 in the CITY-PLAN district band). Census 281. SW lamp spend 0 of
+3. Rotation next: SW round-3 item 18 (offering niche) — 15 of 19 done.
+Shard queue: no OPEN `nx-dress-*` rows (nine Round-1 terminal; round-2
+only the legacy-core fountain — off-limits, Bill's call). SW lamps still
+blocked on Bill's a/b/c (0 of 3). Sibling interleaves absorbed: struct-73
+moon gate (SW threshold, domain-valid), city-3 pendulum relocation.
 
 ### dress-75 — NE anvil pad (round-3 item 6, IN FLIGHT — built, judged, NOT placed)
 
