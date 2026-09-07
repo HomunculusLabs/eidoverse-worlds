@@ -96,6 +96,25 @@ const ALLOWED = new Set<string>([
   // auto film exemption, so standing-precedent tier applies (angler|reedpool
   // sweep-42 / welcome|monument R-114 class). Evidence: SWEEP-PLAN sweep-76.
   "nx-dress-sw-offering-001|nx-temple-labyrinth-0038",
+  // sweep-86 (decode-of-record): struct-82 whisperhorn SW r89 vs temple
+  // terrace-0040's elevated deck. The terrace census bbox carries local
+  // center offset (0,2.175,5.805) at yaw -3pi/4, so its y3-4 deck
+  // overhangs its own ground footprint ~4.1m toward the horn's seat —
+  // the OBB -1.514 is the elevated-deck envelope artifact (pitfall-0b
+  // class, kin to struct-19's disc-vs-square). Source-true decode of the
+  // EXACT live bytes (work_1641_terrace.glb sha e8417696 prefix-verified
+  // == live; whisperhorn lib b6e48e46 == live): nearest terrace vertex
+  // to the horn axis 2.254m at y4.00 (ABOVE the horn's 2.755 top), ZERO
+  // verts inside the dais disc r2.05, ZERO plan-view triangles covering
+  // the horn axis, MIN 3D distance horn-axis-segment to terrace surface
+  // 2.376m => dais-edge clearance +0.326m conservative, walk-band
+  // (y<=2.755) dais-edge gap 2.332m >= 1.4m pinch law. Decode chassis
+  // validated against struct-82's committed disc-vs-skymirror +2.36.
+  // Evidence: SWEEP-PLAN sweep-86 row. Any pos/lib drift on either id
+  // re-surfaces as census drift at 16-hex precision and re-derives this
+  // class. Horn bbox height 2.755 defeats the auto film exemption, so
+  // standing-precedent tier applies (angler|reedpool sweep-42 class).
+  "nx-struct-whisperhorn|nx-temple-terrace-0040",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });

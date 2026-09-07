@@ -2773,3 +2773,50 @@ longhouse (64th cycle — LRU by corrected chain: @85 row-cottage/observatory,
 hall/forge, @80 bunkhouse/longhouse now the stalest pair).
 
 sweep-86: CLEAN SWEEP, arrival-absorption tick (struct-82 whisper horn absorbed). Census epochs A/B fully quiet vs the committed sweep-85 baseline (sha16 7d67fe32fe2ca3dd): 0/0/0 both. Epoch C caught sibling struct-82 in flight: exactly ONE arrival, nx-struct-whisperhorn at (-64.02,-0.028,-61.82) yaw 0, lib b6e48e4622f10108, comp [], bbox 4.1x2.755x4.1 — ledger-matched line-for-line to struct-82 @ 36fe1ff6 (the Beltrami trumpet, SW contemplative r89 skymirror companion; city-26 independently observed the same tuple). Epoch D settled 0/0/0. Per the polish-270 epoch law all affected evidence was re-taken fresh before verdicts: SAT re-fetched and re-run over the 287-set, batteries re-run on epoch-C bytes, standing gate re-run post-interleave. Overlap: epoch A exit 3 on ONLY the known R-121 lamp-n|nx-town-mapboard -0.407 (42nd sweep since routing, no escalation due). The epoch-C re-run surfaced ONE NEW unclassified — whisperhorn|nx-temple-terrace-0040 OBB gap -1.514 — decoded at source read-only and classified NO REAL CONTACT (elevated-deck envelope artifact): the terrace's census bbox carries local center offset (0,2.175,5.805) at yaw -3pi/4, so its y3-4 deck overhangs its own ground footprint ~4.1m toward the horn's seat. Decode of the terrace GLB (work_1641_terrace.glb, sha e8417696 prefix-verified == live): nearest vertex to the horn axis 2.254m at y4.00 (above the horn's 2.755 top), ZERO vertices inside the dais disc r2.05, ZERO plan-view triangles covering the horn axis, MIN 3D distance from the horn's axis segment to the terrace surface 2.376m — dais-edge clearance +0.326m conservative, walk-band dais-edge gap 2.332m >= the 1.4m pinch law. Independent re-derivation of disc-vs-skymirror exact +2.361 matches struct-82's committed +2.36 (decode chassis validated against a proven value). One scan-chassis observation recorded Sev 3 in the findings register (sweep plan only, no foreign-file edit): struct-82's SAT preflight built neighbor AABBs pos-centered WITHOUT the census bbox center offset — the H-3 origin-centered class; the world landed clear anyway per decode, so this is a tooling-flaw note for the struct lane's future placements, not a world defect. Tier-1 81/81 ALL_PASS every leg real exit 0: core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37 — whisperhorn seat r89 az -134deg sits 21.7m from the SW route END (constants parsed fresh from sw-approach3-walk.ts), outside the 15m re-verify band, walks stand by construction. PLUS independent sweep-side horn circuit 6/6 @ 0.397 real exit 0 (sweep-62 precedent, cross-lane gap closed read-only). Tier-2 64th cycle per the committed pointer: bunkhouse 6/6 @ 0.333 (post-verdict dwell disclosed) + longhouse 6/6 @ 0.346. Integrity: pins 15/15 ALL_PINS_OK (40th consecutive, struct18 real exit 0) + battery 20/20 + extended 7/7 on epoch-C bytes. ONE self-catch repaired pre-verdict (3dp-rounded pos pins in the extension battery vs full-precision live values — tolerance widened to 1e-3, world correct throughout). Interlane md5 f6254cd0 stable. Snapshot rewritten like-for-like with pre-write assertion (arrivals exactly [whisperhorn], zero drift): 115424B / 287 entities / sha16 96d232cbedbe6742, post-rewrite drift ZERO. Zero world mutations, zero uploads, zero verbs, zero comp edits, zero shared-budget use. Erratum disclosed: none this tick. Next tier-2 pair (sweep-87): hall + forge (65th cycle — corrected LRU chain: @86 bunkhouse/longhouse, @85 row-cottage/observatory, @84 inn/market, @83 stable/observatory, @82 garden-cottage/tower-house, @81 hall/forge now the stalest standing pair at 5 sweeps).
+
+
+| sweep-87 | 2026-09-07 | 287==287 triple-quiet steady vs committed sweep-86 baseline sha16 96d232cbedbe6742 — epochs A/B/C all 0/0/0 (0 arrivals, 0 departures, 0 drift on id+pos+yaw+scale+lib+kind+bbox); no sibling mutation landed live this window (survey-50 read-only + city-33/34 holds interleaved, zero mutations per their entries); no snapshot rewrite needed, committed baseline exact vs live | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 43rd sweep since routing, no escalation due — law keys Sev-1); 249 bbox non-light / 231 classified / 0 coverage holes; whisperhorn\|nx-temple-terrace-0040 moved to NAMED E4 exemption in sweep-sat-next.ts this tick per the sweep-86 decode-of-record (same bytes, zero census drift on both ids; full source-true numbers in the tool comment; any drift re-surfaces at 16-hex and re-derives) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 max-arr, NW 5/5, NE 7/7, SW 5/5) + tier-2 65th cycle per committed pointer hall 8/8 @ 0.360 + forge 6/6 @ 0.375 ALL PASS | pins 15/15 ALL_PINS_OK 41st consecutive (struct18 real exit 0) + battery 23/23 ALL PASS on freshest epoch bytes (carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib 18b69a6bb2f5862f bbox PRESENT + companions, belltower 2419fbc53a1d65e1 + ladder live, windmill 369c572480b0e786, woodyard 01b78fdd00f090a7, welcome 7d1bd0c9545c44fb + welcome-l, cistern 156b4fc8c7287a9d, beacon 03d278be72677877 + beacon-l, angler 6ee5b4b06bc07d5e, hamlet embers 5-of-5, court smoke, 38 lights, 17 comp-bearing); ONE probe self-catch repaired pre-verdict (loose 'belltower' substring filter matched artwalk rider b5-belltower-rings 48aed5da — true nx-town-belltower re-derived exact from census, world correct); interlane f6254cd0 stable; ledger law canonical EXACT 2370709; gate ALL PASS real exit 0 at tick-start ac728ee9 + re-run ec468568 post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+
+sweep-87: CLEAN SWEEP, triple-quiet steady tick. Census 287==287 vs the
+committed sweep-86 baseline (sha16 96d232cbedbe6742) at epochs A, B, and C —
+all three 0/0/0 on the canonical 6-field diff. No sibling mutation landed
+live this window: the mid-tick HEAD advances (survey-50 read-only observer,
+city-33/city-34 holds) each carried zero world mutations per their own
+ledger prose, corroborated by the census. No snapshot rewrite was needed —
+the committed baseline is exact against live. Overlap: 249 bbox non-light /
+231 classified / 0 coverage holes, exit 3 on exactly ONE unclassified =
+R-121 lamp-n | nx-town-mapboard -0.407, known Sev 2 routed to artwalk b26
+choreography @ sweep-43, forty-third sweep since routing, NOT new, no
+escalation due (the law keys on severity-1). Tooling action this tick
+(sweep-8 precedent, disclosed): the whisperhorn | nx-temple-terrace-0040
+pair — decoded at source in sweep-86 and classified NO REAL CONTACT
+(elevated-deck envelope artifact, OBB -1.514 vs true walk-band gap 2.332m
+>= the 1.4m pinch law) — moved from the unclassified set to a NAMED E4
+exemption in sweep-sat-next.ts with the full source-true numbers in the
+comment. Same bytes on both ids this tick (zero census drift), so the
+decode-of-record transfers exactly; any future pos/lib drift on either id
+re-surfaces as census drift at 16-hex precision and re-derives the class.
+Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0: core
+64/64 @ 0.38 max-arr, NW 5/5, NE 7/7, SW 5/5. Tier-2 65th cycle per the
+committed pointer: hall 8/8 @ 0.360 + forge 6/6 @ 0.375, both real exit 0.
+Integrity: pins 15/15 ALL_PINS_OK (41st consecutive clean,
+struct18-fleet-pin-check real exit 0) + battery 23/23 ALL_PASS on the
+freshest epoch bytes. ONE probe self-catch repaired pre-verdict and
+disclosed (world correct throughout): a loose 'belltower' substring filter
+matched the artwalk rider nx-artwalk-b5-belltower-rings (lib 48aed5da) and
+fabricated an apparent belltower pin break — the true nx-town-belltower
+re-derived exact from the census (2419fbc53a1d65e1 + ladder comp live);
+derive entity ids exactly, never by substring (sweep-51 guessed-id class).
+Ledger prose self-catch repaired before commit (sweep-55 corrupted-insert
+class): the first sweep-87 append landed with a mangled battery-enumeration
+tail; anchor-asserted wholesale repair (sweep87-ledger-fix.py), law re-EXACT
+2370709, entry count 1. Interlane md5 f6254cd0 stable. Standing gate ALL
+PASS real exit 0 at tick-start ac728ee9, re-run ALL PASS real exit 0 at
+ec468568 after the mid-tick HEAD advances (survey-50, city-34). Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-88): inn +
+stable (66th cycle — corrected LRU chain: @87 hall/forge, @86
+bunkhouse/longhouse, @85 row-cottage/observatory, @84 inn/market (inn),
+@83 stable/observatory (stable), @82 garden-cottage/tower-house; inn last
+walked sweep-84 and stable sweep-83, together the stalest standing pair).
