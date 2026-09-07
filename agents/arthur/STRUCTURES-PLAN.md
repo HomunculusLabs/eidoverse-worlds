@@ -294,6 +294,10 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   with struct lane (waiver-era placement had no independent visual
   read). Evidence: `agents/arthur/reviews/survey20-slice/
   echoarch-gameplay.png`.
+  [EXECUTED struct-55: cure live 103be93e; survey-23 native CLEAN on the
+  fixed bytes — row CLOSED. Annotation added struct-87 (improve-29 class
+  repair; the stale OPEN read of this row misled the struct-83/85/86 slid-
+  refine pointers).]
 - [survey-20, 2026-09-07, ZAI fallback (native 1210 x2, paced retry
   burned — native re-judge owed), 18m gameplay, live bytes served-sha
   78f0cbad, byte-identical to survey-19 pin] `nx-struct-ninesbridge`
@@ -4281,3 +4285,117 @@ slid refine tick (echoarch Sev 3) unless Bill re-opens another subject.
 NEXT-87 CLARIFICATION (this tick): the slid refine slot IS 87 — if a
 commission/build lands at 87 instead (queue-law escalation), the refine
 slot slides to 90 (next N%3==0).
+
+## struct-87 (2026-09-07): R8-3 THE CONOID FAN — concept contract
+## (written BEFORE build, per procedure)
+
+BUILD tick. Cadence arithmetic: 87%3==0 is the slid refine slot, but its
+named subject (survey-20 echoarch Sev 3) is DEAD — struct-55 executed the
+cure and survey-23 independently native-judged echoarch CLEAN on the exact
+live bytes 103be93e (census-verified fresh this tick). The pointer survived
+because the survey-20 intake rows (STRUCTURES-PLAN intake + IMPROVE-PLAN
+round-2 candidates) were never annotated EXECUTED — improve-29 class,
+repaired this tick. Refine pool verified EMPTY fresh (reedpool closed
+struct-81; meridianstair cluster closed struct-58; waterstair v5 placed
+struct-62; orreryring margin-tier design-note only; angler = city's call).
+Per loop law: empty pool at a refine slot -> BUILD. R8-3.
+
+CONCEPT (one idea, Judd): the ruled-surface ledger's missing member — the
+CONOID. The village holds the hypar (meridianstair, hypar pavilion), the
+hyperboloid (ruledtower), the helicoid (screwwell); no conoid stands.
+ONE IDEA: MANY STRAIGHT LINES, ONE LAW — every timber rib of the canopy is
+a STRAIGHT horizontal beam, and all of them pass through one vertical mast;
+their far ends trace a true parabola standing in a vertical plane. The
+curved silhouette (the parabola fan) is nothing but the envelope of
+straight rulings — the conoid's theorem, walkable under.
+
+GEOMETRY (entity local; mast at origin; ribs sweep toward +x):
+- Ribs: 25 horizontal straight beams, rib i at parameter t_i uniform over
+  [-3.2, +3.2], at height y(t) = A - k t^2, A = 4.35, k = 2/10.24 exactly
+  (y(±3.2) = 2.35). Ruling direction (D, 0, t)/|.|, D = 5.2. Section
+  0.11 w x 0.16 h. The horizontal-ruling law is the conoid's definition
+  (all rulings parallel to one plane — the ground — and piercing one axis
+  line — the mast): decode asserts horizontality per rib.
+- Mast: timber column r 0.15, plinth top 0.28 to 4.62; ribs pierce it.
+- Post row: 5 posts at t = ±3.2, ±1.6, 0, x = 5.2, tops embedded into
+  their ribs; post heights themselves trace the parabola (the vertical
+  rhythm doubles the curve at walking scale). Post clear gaps 1.45m ≥ 1.4.
+- Iron rail: one bent rod r 0.034 threading all 25 rib tips — the parabola
+  drawn in iron at the canopy edge (the curve the straight lines make).
+- Stone: plinth disc r 0.75 under the mast + curb strip under the posts.
+- Night: ONE brass bead at the mast head (glow_cf KEEP; dusk lineage —
+  chainvault crown, rotor studs). No other glow. No motion (calm by
+  stillness). 4 nodes after merge.
+
+HONEST GATES: footprint ~6.3 x 7.0 = 44 m^2 ≥ 16; height 4.75 ≥ 2.2 →
+exact trimesh; lowest rib underside 2.27m (real headroom everywhere);
+enterable from both open sides and both open ends; MCPL walk owed at
+placement. Folly-pavilion class (no walls).
+
+SIGHTLINE CHECK: the fan's identity is the parabola-edge + rib twist from
+3/4 oblique; the mast side reads as a clean fan springing. No standing
+motif competes: echoarch's parabola is a GROUND-plan stepping (plan
+curvature), this one is the parabola in ELEVATION traced by straight
+rulings — different figure, different register.
+
+SITING (derive fresh at placement): NE arc gap az~35-45 r~60 — between
+ogeegate (az19 r69.6) and mile-ne-003 (az51 r47.2), off the NE approach
+walking line (lamp-001 az56 r48 → lamp-002 az33 r60) by ~6m. Bill's
+beside-the-line law respected. Final yaw from bearing math at placement.
+
+## struct-87 (2026-09-07): R8-3 THE CONOID FAN — authored v3, judged
+## PASS (ZAI fallback, native 1210 hard down after paced retry —
+## disclosed), placement DEFERRED next tick (queue-law FIRST; run budget)
+
+BUILD-ONLY close-out (struct-78/83 precedent). Gate ALL PASS real exit 0
+at 7cfec924 tick-start AND re-run exit 0 pre-judging. Interlane f6254cd0.
+Census 291 fresh; echoarch live 103be93e verified (= struct-55 cure).
+
+CONCEPT: see the concept contract above (the ruled-ledger's missing
+CONOID: many straight horizontal ribs through one mast, tips on the plane
+x=D tracing a true parabola, iron rod drawing the curve at the edge).
+
+BUILD ARC (one-defect loop, both hashes ledgered):
+- v1/v2 8216c629ea2362a66f88262fc6c0a189cc9ff1600d46a404c70afbe7382efa44:
+  self-caught BEFORE render — (a) fixed-length ribs put tips on a
+  CYLINDER not the contract's vertical plane (source-fixed: length
+  hypot(D,t) per rib); (b) 25 ribs at 166.7mm pitch with 160mm depth =
+  6.7mm sky gaps, sub-pixel at 18m. v2 kept (b).
+- v3 c75f8dfbbe2cf9f6b367eedb957e816b74958ffb87e262dd4a5d3965e39f0c1f
+  x2 deterministic: 9 levels / 17 ribs (8 pairs + crown), rib depth 0.13
+  -> 120mm sky gaps ~= 8px at 18m; rail r 0.04. Assertions OK: bbox
+  6.25x4.73x6.74, drop 2.000 exact, low underside 2.285, tips 17 on the
+  plane parabola. Decode ALL PASS: 4 nodes, all meshes material'd, glow_cf
+  KEEP with emissive, rail x 5.166..5.234 exactly at the tip plane.
+- JUDGED v3: v2 judged FIRST (native) FAIL 4/4 — solid-shell read at 18m
+  (fan proven only by its cast shadows); that verdict drove the v3
+  spacing fix. v3 ZAI 3/3 PASS: gameplay 4/4 PASS (sky gaps read,
+  discrete radiating shadow fan, parabola tip edge legible with rod,
+  five stepped posts, no crush; marginal: rightmost 1.5m tip-cluster
+  density = expected foreshortening, disclosed); night PASS (fan
+  silhouette legible, EXACTLY one quiet amber point at the mast head,
+  zero glow noise); right broadside 3/3 PASS (stacked lines with sky,
+  continuous parabola edge, posts grounded; the judge's own post-count
+  caveat resolves at source: five posts at t=0,+-1.6,+-3.2, center post
+  stands behind the mast in that projection). ACCEPTED v3.
+
+SITE (derived analytic, fresh 291 census): NE interstice az28 r55
+(25.82, 48.56) — between statuary-0052 (az27 r74, 19m clear) and the
+town edge, 7.25m off the NE approach walking line (lamp-002 az33 r60 the
+nearest lamp 7.25m) — beside-the-line law held. Scan: legal seats 4 of
+96 candidates (gap>=1.4 AND walk>=6); best az28 r55 gap +4.66 worst-nb
+statuary-0052. Yaw +1.0821 rad (beam axis radial outward, mast side
+facing the walk/plaza). Terrain preflight script written
+(next-terrain-struct87.ts) — NOT yet run (budget). OWED NEXT TICK
+(queue-law FIRST): terrain -> hash-gated placer (chassis struct-85
+two-pass) -> upload/spawn nx-struct-conoidfan -> comps {} -> post-place
+tuple verify + idempotent rerun -> two-way MCPL walk (enterable
+pavilion) -> Bill eye-gate packet once.
+
+BILL EYE-CHECK (one, standing): on the NE walk past the last farm
+buildings, a timber fan ~6m off the path — many straight beams flying
+from one mast, their tips riding one iron-drawn parabola; at dusk a
+single amber bead at the mast head.
+
+NEXT: 88%3==1 -> place the conoid fan FIRST (queue law), then R9 arc
+begins or shard re-arm scan.

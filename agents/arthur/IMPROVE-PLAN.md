@@ -3624,6 +3624,8 @@ pinned.
   convex top arc, slab-flush contact, shadow anchored). struct-lane
   commission (not round-queue); note routed to STRUCTURES-PLAN SURVEY
   INTAKE. Evidence: reviews/survey20-slice/echoarch-gameplay.png
+  [EXECUTED struct-55: cure live 103be93e; survey-23 native CLEAN on
+  fixed bytes — CLOSED. Annotation added struct-87 (improve-29 repair).]
 - `nx-dress-hutch` — Sev 4 identity-marginal (survey-20, NATIVE,
   served-sha 75381ffb): hutch structure CLEAN (box+stilts+ramp grounded,
   silhouette closed, mesh-door interiors framed); the RABBIT figures read
