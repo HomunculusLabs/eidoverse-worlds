@@ -3664,3 +3664,53 @@ threshold scan az~135 r62-72 fresh census (approach-ne-lamp-002
 AABBs (struct-70 law); 4) terrain 7pt TRUE envelope (half-x 2.93, half-z
 0.82); 5) upload + spawn nx-struct-ogeegate PLACED_VERIFIED + idempotent;
 6) two-way MCPL walk 4.4m opening; 7) Bill eye-check packet.
+
+## struct-77 (2026-09-07): R6-3 OGEE GATE v4 kalasha — PLACED at NE craft
+## threshold (22.71,-0.0025,65.75) yaw -32.68, walk ALL_PASS
+
+Cadence 77%3==2 build tick; queue law FIRST: struct-76 deferred judge
+executed. Gate ALL PASS real exit 0 at 544e5388 tick-start. No SHARD
+section (grep exit 1, skip-law). Census 282 fresh, ogeegate absent at start.
+
+NATIVE v3 judge: gameplay 4/5 — S-SILHOUETTE PASS (v1/v2 horseshoe dead),
+battered/rhythm/clean PASS; KEYSTONE FAIL "diamond protrudes above and in
+front of a complete point" (applied tab — violates geometry-as-ornament
+law). Night 3/3 PASS (profile + one quiet warm point).
+
+v4 KALASHA (sha 32039b5a7fb9da30, x2 deterministic): stone crown closes
+FLAT between keel corner peaks (V-notch deleted); brass diamond widest
+EXACTLY on the peaks (±0.241), apex at ridge continuation ke.x/tan35,
+base sunk 0.24 into stone — the keel point cannot exist without the brass.
+Decode: 3 nodes, brass 36 verts y 5.505..6.089, stone max 5.745. TRUE
+envelope unchanged 5.86x6.09x1.64.
+
+v4 JUDGE: NATIVE night 3/3 ("embedded terminal stone of the ridge, not a
+hovering decal"); native gameplay 1210 x3 (flap disclosed) -> ZAI fallback
+gameplay 4/5 with criterion-4 FAIL ("perched atop a complete point") —
+CONTRADICTED by ZAI's own close-frame control on the same bytes: EMBEDDED
+verdict, "stone never closes to a complete point, ruling out perched
+outright". Resolution (pitfall 13 law): stone flat crown 0.48m = 1.6px at
+18m, below the ~2%-frame legibility floor — the 18m complaint is
+resolution-limited, not geometry-limited. ACCEPTED with 18m residual
+disclosed (Bill's eye-check will resolve).
+
+SITING: fresh census decode of live lane-002 bytes (dc52264c fetched,
+beads b11-b14 az 46.4->69.6 — path curves outward, NOT the az-45 ray);
+threshold crossing is beyond b14 (23.79,64.07) r68.3. Rim law on ALL
+corners forces center r>=69.1 -> seat center 2.0m beyond b14 on the path
+tangent t=(-0.5399,0.8417): (22.71,65.75) r69.56, yaw -32.68, rim
+[66.77,72.38]. b14 local z=-2.0 clear of the 1.5m depth. Composition: bead
+cadence ends at b14 — the brass kalasha is the warm terminus of the night
+approach line. Terrain 7pt spread 7mm (PY -0.0025).
+
+PLACE: upload store/32039b5a7fb9da30.glb, 1 verb spawn, PLACED_VERIFIED
+exact tuple; idempotent rerun zero verbs. Two-way MCPL through the 4.4m
+opening ALL_PASS (2 legs, max arrival 0.32m). World count 282->283.
+
+BILL EYE-CHECK: NE approach beyond the second lamp — walk the lane out:
+the S-curved gate straddles the path at the district threshold; by night,
+one quiet brass point crowns the arch exactly where the warm bead line
+ends. Judgment asked: does the brass crown read as the arch's terminal
+stone (embedded, completing the point) at your approach distance?
+
+NEXT: R7 commission (queue round 7) or Bill verdicts.
