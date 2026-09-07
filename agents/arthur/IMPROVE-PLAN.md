@@ -2693,6 +2693,142 @@ open duplicate notes for these objects.
   no pictorial pattern (random tan/gray/gold). Family class now
   CONFIRMED at 2-of-4 (0036/0048). Evidence:
   reviews/survey10-slice/nx-gallery-mosaic-0048/gameplay.png
+  [improve-40 CONTRACT (2026-09-07, this tick — BEFORE edit): round-2
+   re-arm take 4, worst-first OPEN improve-own row = MOSAIC family
+   (Sev 4, 4/4 UNANIMOUS: survey-9 ZAI+native 0036, survey-10 NATIVE
+   0048, survey-11 ZAI 0052, survey-12 NATIVE 0059 — panel identity
+   fails at 18m on every member; distinct shas). town-4 routing (no
+   shard prefix; gallery district = improve's own surface). Idle-guard
+   clear (git tail 36h: zero nx-gallery-mosaic mutations since the
+   nvp-era placements; survey reads only). NATIVE before-judge PAID
+   this tick on exact live bytes work_1643 (reviews/improve40-mosaic/
+   before/): confirms ALL classes — reads scattered paving/confetti
+   not artwork, zero frame/backing/outline, ~65-75% ground
+   show-through, edges dissolve all four sides, far field aliases to
+   detached 1-4px dash noise. Live pins census-fresh (273): 0036
+   (38.971143,-0.023303,22.5) / 0048 (0,0.001575,45) / 0052
+   (-38.971143,0.012804,22.5) / 0059 (-38.971143,-0.040735,-22.5),
+   all yaw -2.35619449 scale 1, comps {} x4, libs ==
+   store/{1655ae80,b6491515,83c4817f,505bec0b}.glb, bbox 21x0.05x21
+   each, no riders, no light companions. BASELINE NO-DISPUTED-BYTES:
+   improve40-rebuild-mosaic.ts (masonretex chassis, no-write mode)
+   reproduces ALL FOUR live pins byte-identically this tick; local
+   glb-retex outputs == live libs; before-bytes + 10-view renders
+   banked reviews/improve40-mosaic/before/. Build chain: mason.ts
+   composeMosaic (THEMES idx 5; works 1643/1656/1669/1682; rng(i+1)
+   per work -> 4 distinct shas) -> familyPass -> mergeByMaterial ->
+   toGLB -> glb-retex/work_NNNN_mosaic.glb. 60-work sibling snapshot
+   banked /tmp/improve40-retex-before.txt.
+   DECODE GROUND TRUTH (improve40-decode-mosaic.ts on work_1643):
+   658 tesserae, rings 0..13, rad 0.6..10.35, ALL y 0..0.05; 5 merged
+   buckets = plaster 3816v / stone 3216v / timber 3000v / iron 2760v /
+   MATERIAL-LESS 3000v (=125 gold 0xdec64e tiles: familyPass maps only
+   the five C tones, gold accents keep plain mat() -> export NO glTF
+   material -> loader-default near-black = struct-38 class INSIDE this
+   asset); ring pitch 0.75 vs tile 0.3 -> ~60-70% ground show-through
+   source-true; zero frame/backing/medallion.
+   ROOT CAUSES: (R1) loose-tile scatter — no frame, no backing, grass
+   reads through every ring, edges dissolve (survey class); (R2) the
+   gold accent lane renders near-black (material-less) — the one
+   pigment that would organize the pattern is a void; (R3) no center
+   anchor — the radial read has no focal element and far rings alias
+   to detached dash noise.
+   FIX (mason.ts composeMosaic only; family-wide by construction —
+   same composer builds all four works; rng voided for the authored
+   geometry, kept for jitter):
+   F1 BACKING: three ring-annulus slabs (radEnd 2.25 / 5.75 / 9.0 =
+   interior extent +0.15 overhang), h 0.045/0.045/0.06, radius-jittered
+   ±3%, REAL texMats mos_dark [0x4a4636,0x504a3c,0x423e30] r.92 s2.2
+   and mos_mid [0x787250,0x807c58,0x6c6846] r.92 s2.2 — kills ground
+   show-through; the artwork becomes one coherent slightly-raised
+   panel mass.
+   F2 FIELD: interior rings rad 0.6..8.85, tessera count
+   ceil(2π·rad/0.42) ARC-PITCHED (tangential gaps ~0.12 max), tessera
+   size 0.36 falling to 0.30 by ring, NO arc jitter (set-tile read),
+   radial jitter ±0.03 kept; palette C.BONE/C.MID/C.STONE weights
+   [2,1,1] + 5% gold; RING AT rad 2.85 = FULL GOLD RING in mos_gold.
+   F3 GOLD LANE: new texMat mos_gold [0xd4a43c,0xc2942e,0xb8862a]
+   rough .6 metal .35 scale 1.2 — real material, art-glass gold,
+   brighter than the iron-lane C.BRASS map (golds are the artwork's
+   pigment, not hardware).
+   F4 BORDER: dark course ring rad 9.55 (C.DARK 0.44x0.07x0.30) +
+   pale cap ring rad 10.20 (C.BONE 0.46x0.055x0.34, alternating +0.02
+   proud) — the panel outline survives 18m; outer vertex radius
+   <= 10.49 vs baseline 10.50 (footprint subset, SAT-neutral).
+   F5 MEDALLION (center anchor, group survives merge like sol_core):
+   pier-textured base cyl r0.95 h0.10 (mos_dark family) + ashlar
+   plinth r0.62 h0.30 + shaft r0.22 h1.90 + gold disc r0.42 h0.10
+   (mos_gold) + emissive brass finial sphere r0.10 (mat C.BRASS r.55
+   emissive 0x9a6a28 @0.65 — ninesbridge bead verbatim), top y 2.60.
+   HEIGHT LAW: total 2.60 >= ROOM_MIN_H 2.2 and footprint 441m² >= 8
+   -> roomScale -> exact trimesh, honest collision, mosaic floor
+   stays walkable around the medallion; a 2.0m medallion would land
+   in the 0.22-2.2 uneven-lie band and float the whole 21x21 floor
+   at top-protrusion height (improve-38 law, Bill's own report
+   class). Ashlar tones verbatim [0x56503c,0x5c5a44,0x4c4836]
+   r.95 s2 w[2,1,1] cell 32.
+   F6 NIGHT: the emissive finial = one quiet warm point (polish-278
+   class); no new light entities.
+   ENVELOPE: footprint strict-subset (border 10.49 < 10.50 baseline;
+   backing 9.0; medallion r0.95) -> SAT-neutral exact-tuple re-place
+   x4; y 0..2.60 (vertical presence is the point of F5).
+   FALSIFY: (1) rebuild x2 deterministic (--write then --again);
+   (2) 56 sibling works byte-identical vs /tmp snapshot; (3) decode
+   audit — zero MATERIAL-LESS buckets, gold bucket carries
+   TEXCOORD_0, medallion element heights (0.10/0.40/2.30/2.40/2.60),
+   border outer radius <= 10.49, envelope x/z subset vs before-bytes;
+   (4) identical-camera before/after renders, native after-judge 18m:
+   panel reads FRAMED MOSAIC ARTWORK (border outline visible,
+   continuous field, gold ring resolves, medallion anchors center,
+   zero dissolve/confetti), night shows one quiet warm point; (5) on
+   PASS: FOUR uploads (paced 20s+, shared 4/min budget, 429 backoff)
+   + remove+spawn x4 exact tuples + comp {} x4 + post-place census
+   (273 steady, all four libs flipped) + idempotent 0-verb rerun;
+   (6) NO walk — floor-shaped artwork on open ground, roomScale
+   trimesh keeps it honestly walkable; approach legs stand unchanged.
+   REVERT: git checkout mason.ts -> rebuild reproduces the four live
+   pins (proven this tick) -> re-run placer with prior libs;
+   before-bytes banked reviews/improve40-mosaic/before/.]
+  [STATE improve-40 (2026-09-07, this tick — BUILD+AUDIT complete, placement
+   DEFERRED fail-closed on placer neighbor gate): source edit =
+   mason.ts composeMosaic full cure; self-catch in-tick: palette divisor
+   4.75 -> 4.2 (committed 5% gold accents, was shipping 15.8%). Rebuild
+   x2 deterministic FOUR_NEW_SHAS 1643 f2faa018 / 1656 751485c7 / 1669
+   68be6c5a / 1682 c237715d; 56 siblings byte-identical vs
+   /tmp/improve40-retex-before.txt (exactly 4 lines diff). Decode AUDIT
+   ALL PASS: zero MATERIAL-LESS buckets, mos_gold 3100v TEXCOORD_0,
+   medallion heights exact (base .14-.24 / plinth .24-.54 / shaft .54-2.44
+   / disc 2.44-2.54 / finial 2.40-2.60), outerR 10.490 <= 10.49, y
+   0..2.60, 13 nodes. After-renders banked reviews/improve40-mosaic/
+   after/ (10 views). JUDGE: native 1210 x2 + paced retry HARD DOWN —
+   ZAI fallback 6/6 PASS disclosed (framed mosaic artwork, continuous
+   pale-cap + dark-course border, ZERO grass show-through, gold ring +
+   disc read gold, medallion grounded focal anchor, zero floats/
+   artifacts; margins: interior rings soft at 18m, gold ring arcs
+   broken by plinth = designed foreground). Night probe: exactly 8 warm
+   px at night ALL in the finial box vs 58870 day = one quiet warm
+   point PASS. PLACEMENT BLOCKED FAIL-CLOSED (next-place-improve40-
+   mosaics.ts neighbor gate, census 274): nx-dress-goats pen (pos 34,13
+   yaw -1.2, bbox 14.21x6.5 LOCAL fat-network class pitfall-0b) has
+   its true long-axis corner region INSIDE mosaic-0036's disc footprint
+   (nearest rotated corner (40.53,20.82) = 2.29m from disc center
+   (38.97,22.5); disc R 10.49) — standing world coexists because live
+   tiles are sparse rings, but the SOLID bed_base disc would bury pen
+   posts 5cm (new defect class). NOT exempted blind (0b law: decode
+   actual goat-pen vertices before any exemption or redesign). REMAINS
+   next wakeup: (1) decode goats true solids (store/c47861e4) in
+   mosaic-0036 local frame; (2) redesign backing per decode — leading
+   option: bed_base stays full disc ONLY if pen solids prove outside
+   r10.49; else clip the 0036-family backing to terraced ring annuli
+   that clear the pen sector (border ring r9.55/10.2 at the rim is far
+   from the pen crossing and stays) — family note: 0048/0052/0059
+   neighbor-clear, only 0036 carries the pen overlap, but ONE composer
+   builds all four — a sector-clip needs a per-work param or the
+   overlap resolved geometrically; (3) re-judge if geometry changes;
+   (4) run placer (idempotent chassis stands ready). Live world
+   UNCHANGED: all four mosaics still at baseline libs, census 274
+   (absorbed sibling struct-65 wavepergola arrival). Zero uploads, zero
+   verbs this tick.]
 - `nx-wild-cairn-0022` — Sev 3 (survey-9, 2026-09-06, ZAI + native
   UNANIMOUS): stacked-stone identity passes but TRUE FLOATERS —
   numerous small pebble spheres hover isolated against the sky above

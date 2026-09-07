@@ -525,22 +525,118 @@ function composeCairnfield(g: THREE.Group, r: () => number): string {
 }
 
 function composeMosaic(g: THREE.Group, r: () => number): string {
-    // radial mosaic floor: rings of tesserae in palette
-    const pal = [0xdcdcba, 0xa0a248, 0x787250, 0x56503c, 0xdec64e];
+    // improve-40: PANEL CURE (survey-9/10/11/12, family 4/4 unanimous —
+    // loose-tile scatter read, no frame/backing, ~60-70% ground
+    // show-through, edges dissolve). Root causes at decode: rings of
+    // free tiles at pitch 0.75 vs tile 0.3; gold accents plain-mat
+    // material-less (struct-38 class inside this asset); no center
+    // anchor. Cure: terraced stone beds (one coherent raised panel),
+    // arc-pitched set-tile field with tonal ladder + one full gold
+    // ring, dark course + pale cap border (the frame), and a center
+    // medallion (height 2.60 >= ROOM_MIN_H -> whole entity roomScale
+    // exact trimesh, mosaic floor stays honestly walkable — improve-38
+    // law; a 2.0m medallion would float the floor in the uneven band).
+    // Materials are REAL texMats constructed here (improve-32/38 law —
+    // familyPass maps only the five C tones; plain accents export
+    // material-less and render loader-default near-black).
+    const mos_dark = texMat("mos_dark", [0x4a4638, 0x504a3c, 0x423e30], { rough: 0.92, scale: 2.2 });
+    const mos_mid = texMat("mos_mid", [0x787250, 0x807c58, 0x6c6846], { rough: 0.92, scale: 2.2 });
+    const field_pale = texMat("mos_field_pale", [0xd8d4c0, 0xcec9b2, 0xc2bda6], { rough: 0.88, scale: 1.6 });
+    const field_mid = texMat("mos_field_mid", [0x9a9270, 0x8e876a, 0x827c60], { rough: 0.88, scale: 1.6 });
+    const field_dark = texMat("mos_field_dark", [0x5a5644, 0x504c3c, 0x464234], { rough: 0.9, scale: 1.6 });
+    const mos_gold = texMat("mos_gold", [0xd4a43c, 0xc2942e, 0xb8862a], { rough: 0.6, metal: 0.35, scale: 1.2 });
+    const ashlar = texMat("stone", [0x56503c, 0x5c5a44, 0x4c4836], { rough: 0.95, scale: 2, weights: [2, 1, 1], cell: 32 });
+    // F6 night: one quiet warm point (ninesbridge brass bead verbatim)
+    const finialMat = mat(C.BRASS, 0.55, 0);
+    finialMat.emissive = new THREE.Color(0x9a6a28);
+    finialMat.emissiveIntensity = 0.65;
+
+    // F1 BACKING — three terraced solid beds (cylinders with caps; a
+    // zero-thickness ring plane would vanish at the 18m grazing angle).
+    // Base extends under the border to r 10.49 (panel rim; baseline
+    // outer vertex was 10.50 -> footprint strict subset, SAT-neutral).
+    const bed = (name: string, rad: number, h: number, y0: number, m: THREE.Material) => {
+        const c = new THREE.Mesh(new THREE.CylinderGeometry(rad, rad, h, 96), m);
+        c.name = name;
+        c.position.set(0, y0 + h / 2, 0);
+        g.add(c);
+    };
+    bed("mos_bed_base", 10.49, 0.05, 0, mos_dark);   // top 0.05
+    bed("mos_bed_mid", 5.75, 0.045, 0.05, mos_mid);  // top 0.095
+    bed("mos_bed_inner", 2.25, 0.045, 0.095, mos_dark); // top 0.14
+
+    // F2 FIELD — set tiles, arc-pitched (tangential gap <= ~0.12), on
+    // their bed's terrace; palette tonal ladder pale/mid/dark [2,1,1]
+    // + 5% gold accents; ring k=6 (rad 2.85) is the FULL GOLD RING.
+    const bedTop = (rad: number) => (rad <= 2.25 ? 0.14 : rad <= 5.75 ? 0.095 : 0.05);
     let n = 0;
-    for (let ring = 0; ring < 14; ring++) {
-        const rad = 0.6 + ring * 0.75, cnt = 8 + ring * 6;
+    for (let k = 0; k <= 22; k++) {
+        const rad = 0.6 + k * 0.375;
+        const cnt = Math.ceil((Math.PI * 2 * rad) / 0.42);
+        const w = 0.36 - k * (0.06 / 22); // falls 0.36 -> 0.30
         for (let i = 0; i < cnt; i++) {
-            const a = (i / cnt) * Math.PI * 2 + ring * 0.3;
-            const t = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.05, 0.3), mat(pal[Math.floor(r() * pal.length)], 0.9, 0));
-            t.name = `mos_r${ring}_${i}`;
-            t.position.set(Math.cos(a) * rad, 0.025, Math.sin(a) * rad);
-            t.rotation.y = -a + (r() - 0.5) * 0.2;
+            const a = (i / cnt) * Math.PI * 2;
+            const rj = rad + (r() - 0.5) * 0.06; // radial jitter only — set-tile read
+            const t = new THREE.Mesh(new THREE.BoxGeometry(w, 0.055, w * 0.86),
+                k === 6 ? mos_gold
+                : (() => { const p = r() * 4.2; return p < 2 ? field_pale : p < 3 ? field_mid : p < 4 ? field_dark : mos_gold; })());
+            t.name = `mos_r${k}_${i}`;
+            t.position.set(Math.cos(a) * rj, bedTop(rad) + 0.0275, Math.sin(a) * rj);
+            t.rotation.y = -a;
             g.add(t);
             n++;
         }
     }
-    return `radial mosaic, ${n} tesserae`;
+
+    // F4 BORDER — dark course ring + pale cap ring seated on the base
+    // bed (top 0.05): the panel outline that survives 18m.
+    const cn = Math.ceil((Math.PI * 2 * 9.55) / 0.5);
+    for (let i = 0; i < cn; i++) {
+        const a = (i / cn) * Math.PI * 2;
+        const c = new THREE.Mesh(new THREE.BoxGeometry(0.44, 0.07, 0.3), field_dark);
+        c.name = `mos_course_${i}`;
+        c.position.set(Math.cos(a) * 9.55, 0.085, Math.sin(a) * 9.55);
+        c.rotation.y = -a;
+        g.add(c);
+    }
+    const kn = Math.ceil((Math.PI * 2 * 10.2) / 0.52);
+    for (let i = 0; i < kn; i++) {
+        const a = (i / kn) * Math.PI * 2;
+        const proud = i % 2 ? 0.02 : 0;
+        const c = new THREE.Mesh(new THREE.BoxGeometry(0.46, 0.055, 0.34), field_pale);
+        c.name = `mos_cap_${i}`;
+        c.position.set(Math.cos(a) * 10.2, 0.0775 + proud, Math.sin(a) * 10.2);
+        c.rotation.y = -a;
+        g.add(c);
+    }
+
+    // F5 MEDALLION — center anchor (group survives mergeByMaterial like
+    // sol_core; familyPass walks top-level children only, so the real
+    // materials constructed above export intact).
+    const med = new THREE.Group();
+    med.name = "mos_medallion";
+    const mBase = new THREE.Mesh(new THREE.CylinderGeometry(0.95, 1.0, 0.1, 24), mos_dark);
+    mBase.name = "mos_med_base";
+    mBase.position.set(0, 0.19, 0); // 0.14..0.24
+    med.add(mBase);
+    const mPlinth = new THREE.Mesh(new THREE.CylinderGeometry(0.62, 0.66, 0.3, 12), ashlar);
+    mPlinth.name = "mos_med_plinth";
+    mPlinth.position.set(0, 0.39, 0); // 0.24..0.54
+    med.add(mPlinth);
+    const mShaft = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.3, 1.9, 10), ashlar);
+    mShaft.name = "mos_med_shaft";
+    mShaft.position.set(0, 1.49, 0); // 0.54..2.44
+    med.add(mShaft);
+    const mDisc = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 0.1, 24), mos_gold);
+    mDisc.name = "mos_med_disc";
+    mDisc.position.set(0, 2.49, 0); // 2.44..2.54
+    med.add(mDisc);
+    const mFin = new THREE.Mesh(new THREE.SphereGeometry(0.1, 10, 8), finialMat);
+    mFin.name = "lamp"; // KEEP anchor
+    mFin.position.set(0, 2.5, 0); // 2.40..2.60 — nestled 0.04 into the disc
+    med.add(mFin);
+    g.add(med);
+    return `framed radial mosaic, ${n} tesserae + medallion`;
 }
 
 function composeSeedOfLife(g: THREE.Group, r: () => number): string {
