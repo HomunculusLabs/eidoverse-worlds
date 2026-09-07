@@ -79,7 +79,14 @@ plan's register. Eye-gate packet to Bill after each wave.
 
 ## SWEEP DEFECT NOTES (routed here by sweep-N; treat exactly like a Bill correction)
 
-- SWEEP-77 (Sev 3, cross-lane bookkeeping): city-7 (beacon) and city-8
+- SWEEP-77 (Sev 3, cross-lane bookkeeping): RESOLVED city-9 (2026-09-07)
+  [city-9]: struct2-walk-observatory.ts + struct11-walk-beacon.ts re-pinned
+  from the vacated seats to the live tuples (obs (-39.811,-87.356) yaw
+  +0.42761, beacon (60.911,-66.764) yaw -30deg), both proven live — obs 5/5
+  ALL_PASS door circuit, beacon 4/4 ALL_PASS. Headers carry "RE-PINNED
+  city-9". Re-verified city-15 hold tick (fresh census, both tuples exact).
+  Original note preserved below for provenance.
+  city-7 (beacon) and city-8
   (observatory) relocations left TWO standing walk tools pinned to the
   VACATED seats: `agents/arthur/struct2-walk-observatory.ts` (line 8:
   `PX = 16.48, PZ = -40.8, YAW = -0.3838824615170976` — old seat; live is
