@@ -2626,6 +2626,7 @@ open duplicate notes for these objects.
   5 gardens share the pattern (0011/0019/0032/0045/0058 — verify
   before fleet-wide work). Evidence:
   reviews/survey8-slice/nx-cultivation-garden-0011/gameplay.png
+  [Family cured by improve-42 (kitchen-garden rebuild, family-wide composer); all five members including this one reseated live at new libs.]
   [survey-10 annotation, 2026-09-06]: garden-0019 (NATIVE, 18m
   gameplay, live store bytes d916f373) — IDENTICAL class confirmed:
   sphere mass reads hedge/shrubbery not crops, rows merge into one
@@ -2943,6 +2944,7 @@ class except seed (ZAI-native stack 0003+0013).
   grammar, no bed substrate/border/fence; fringes dissolve x160-235 /
   x745-800; geometry grounded — family 3-of-5. Evidence:
   reviews/survey11-slice/nx-cultivation-garden-0032/gameplay.png
+  [Family cured by improve-42 (kitchen-garden rebuild, family-wide composer); all five members including this one reseated live at new libs.]
 - `nx-cultivation-lavender-0027` — Sev 3 (survey-11, NATIVE):
   IDENTICAL to lavender-0006 class — plant luminance ~22% vs ground
   ~68% (charcoal-purple dead read, darkest element in frame), hue
@@ -3071,6 +3073,7 @@ the executing lane. Grep-verified: no open duplicate notes.
   y38-106 + x563-688 y196-266, orphan slab row x575-680 y268-296,
   right-facade value crush x575-860 y0-170 — family 5-of-5
   UNANIMOUS. Evidence: reviews/survey13-slice/hamlet-0054/gameplay.png
+  [Family cured by improve-42; this member reseated live at new lib.]
   [EXECUTED improve-27, 2026-09-07: 0054 cured by the committed family
   fix (improve-22 composeHamlet cure in mason.ts HEAD, work index 1674)
   and RESEATED live — lib 76699206 -> 43f4b4ac x2 deterministic, tuple
@@ -3097,6 +3100,114 @@ the executing lane. Grep-verified: no open duplicate notes.
   dark hedgerow x245-735, tan sprouts shadowless read weeds, back
   rank shadowless reads airborne — family 5-of-5 UNANIMOUS.
   Evidence: reviews/survey13-slice/garden-0058/gameplay.png
+  [improve-42 CONTRACT (2026-09-07, this tick — BEFORE edit): round-2
+   re-arm take 5, worst-first OPEN improve-own row = GARDEN family
+   (Sev 3, 5/5 UNANIMOUS: survey-8 ZAI 0011, survey-10 NATIVE 0019,
+   survey-11 NATIVE 0032, survey-12 NATIVE 0045, survey-13 NATIVE
+   0058 — identity fails at 18m on every member; distinct shas).
+   town-4 routing (no shard prefix; cultivation district = improve's
+   own surface). Idle-guard clear (git tail 36h: zero
+   nx-cultivation-garden mutations since nvp-era placements; survey
+   reads only). Family pins census-fresh this tick (274): 0011
+   (-86.104625929, 0.0456712809132166, 52.696406703) lib
+   store/01a4e80c02f03de7 = work_1691; 0019 (-79.354255867,
+   0.03701553556368211, 63.545330212) lib store/d916f37355701255 =
+   work_1639; 0032 (-70.894119993, 0.0276505409363984, 72.469434032)
+   lib store/38e4718c5efd1374 = work_1652; 0045 (-61.502777956,
+   0.027529785945452547, 80.922243372) lib store/856d56746e3a42a3 =
+   work_1665; 0058 (-53.224217316, 0.03137989008033212,
+   72.691689056) lib store/e54ee386f08a7c21 = work_1678; all yaw
+   2.35619449 scale 1 comps {} x5, no riders, no light companions.
+   BASELINE NO-DISPUTED-BYTES: local glb-retex sha16 x5 == live lib
+   names exactly (verified this tick); baseline reproduction gate =
+   improve42-rebuild-gardens.ts no-write mode must regenerate all
+   five live pins byte-identically BEFORE the edit.
+   BUILD CHAIN: mason.ts composeGarden (THEMES idx 1; works 1639/
+   1652/1665/1678/1691; rng(i+1) per work -> 5 distinct shas) ->
+   familyPass -> mergeByMaterial -> toGLB -> glb-retex/
+   work_NNNN_garden.glb. 60-work sibling snapshot
+   /tmp/improve42-retex-before.txt.
+   DECODE GROUND TRUTH (source-read this tick, accessor audit after
+   build): composeGarden builds 3 hedge-ball rings (r 1.6/3.1/4.6,
+   10/16/22 icosahedron r0.32 balls, plain mat 0x528638) + 240-340
+   flower stems r0.012-0.016 + heads r0.05 + buds r0.03 (plain mat
+   0x446632 / 0xdec64e / 0xe6e6b4 / 0xc4b42c). ALL colors outside
+   the five familyPass C tones -> familyPass swaps NOTHING, toGLB
+   exports zero glTF materials (glbwrite.ts:266-283 non-emissive
+   plain-mat branch) -> loader-default near-black mass (struct-38
+   class, family-wide).
+   ROOT CAUSES: (R1) MATERIAL: entire garden material-less ->
+   near-black value crush at 18m (the "uniform near-black green"
+   finding). (R2) GRAMMAR: no bed/soil substrate, no edging, no
+   row rhythm — 300 sub-pixel flowers + 3 ball rings read bush
+   scatter/weeds, not a planted garden (the "no bed/fence/rows"
+   finding). R1+R2 together = identity failure.
+   FIX (mason.ts composeGarden only; family-wide by construction —
+   same composer builds all five works; rng kept for jitter):
+   F1 KITCHEN GARDEN BEDS (identity): two 4.5x2.4 raised beds
+   (soil texMat inlay + timber frame boxes, h 0.24) on a ±5.1
+   ground plan, plus a central path strip (soil) between them.
+   F2 ROW CROPS (grammar): per bed, 3 crop rows of cabbage clusters
+   (bone/pale weave tones, r 0.10-0.14 heads on short stems) with
+   REGULAR 0.45 pitch — row rhythm legible at 18m; a few gold
+   flower accents (mos_gold family, small) as companion planting.
+   F3 EDGE: low timber edge boards + corner posts around the plot
+   (C.MID -> timber via familyPass, plus 2-3 pale stone step
+   stones at the path mouth (C.STONE -> ashlar).
+   F4 KEEP NAMED ANCHOR: none required (no comps on any garden,
+   census-proven {} x5) — but keep node count low (merge statics).
+   ENVELOPE: all additions inside live bbox footprint ±5.1 (beds
+   at |x|<=2.4, |z|<=1.35, path strip, edge boards at the ±5.1
+   rim); height <= 1.0 (raised beds 0.24, crops ~0.55, corner
+   posts 0.7). NOTE: baseline hedge rings reach r 4.6+0.32 ~ 4.92
+   and flowers scatter to rad 5.8 — new footprint must stay
+   within ±6.0 square (strict subset of baseline scatter extent);
+   verify at decode (min/max x/z vs before-bytes).
+   FALSIFICATION: (1) rebuild x2 deterministic (improve42 rebuild
+   tool --write then --again); (2) 55 sibling works byte-identical
+   vs /tmp snapshot (exactly 5 garden lines diff); (3) decode
+   audit — real materials present (soil/timber texMat buckets),
+   zero MATERIAL-LESS buckets, row-pitch regularity (crop cluster
+   centers at ~0.45 pitch), envelope subset; (4) identical-camera
+   before/after renders (review-model-draco chassis, local bytes),
+   native after-judge at 18m gameplay: reads KITCHEN GARDEN (beds,
+   rows, path), NOT bush scatter; night view quiet (no new lights);
+   (5) on PASS: FIVE uploads (paced 20s+, shared 4/min budget, 429
+   backoff) + remove+spawn x5 exact tuples + post-place census
+   (274 steady, all five libs flipped) + idempotent 0-verb rerun;
+   (6) NO walk — ground-level planting on open ground, walkable
+   (below all collider gates; no room scale).
+   REVERT: git checkout mason.ts -> rebuild reproduces the five
+   live pins (proven by baseline gate) -> re-run placer with prior
+   libs; before-bytes banked reviews/improve42-garden/before/.]
+  [EXECUTED improve-42 (2026-09-07, same tick — family 5/5
+   PLACED_VERIFIED): contract executed in full + one self-caught
+   build defect repaired in tick. BUILD: mason.ts composeGarden
+   rebuilt as kitchen garden (2 timber raised beds L7.2xW2.2xH0.26
+   w/ soil inlay flanking a soil path, 8 cabbage rows/104 heads in
+   two crop texMats with baked y-scale, marigold gold borders,
+   segmented leaf hedge + 4 corner posts, step stones); v1 defect
+   SELF-CAUGHT at decode — rows ran along X, crops spilled past
+   the frames to x ±5.41 (baseline breach −5.32) — axis-fixed v3:
+   rows along Z, crops x ±3.0 z ±3.25 INSIDE frames. Rebuild x2
+   deterministic, FIVE new shas (1639 f4b36cb3 / 1652 54590f7e /
+   1665 7610a674 / 1678 45a88727 / 1691 185a2218), 55 siblings
+   byte-identical. DECODE AUDIT ALL PASS x5: 0 material-less
+   primitives, 7 real texMat materials (gd_soil/timber/crop_pale/
+   crop_mid/gold/leaf/step), envelope strict-subset every axis
+   (x ±5.0, z ±5.22, y 0..0.78 vs baseline x 5.32/5.64 z 5.74/5.72
+   y 0.62), 0 below grade. JUDGED: native before-judge CONFIRMS
+   family class ("bush cluster / scrub patch", zero structure);
+   native after-judge 4/4 PASS — kitchen garden unmistakable,
+   beds framed+grounded, regular row rhythm legible at 18m, zero
+   floats; identity "a tidy hedged cottage kitchen garden with rows
+   of cabbages"; night 0 warm px (quiet). RESEAT: 5 uploads paced
+   21s (no 429) + remove+spawn x5 exact tuples (10 verbs) +
+   PLACED_VERIFIED + census 274 steady + idempotent 0-verb rerun.
+   Family rows 0011/0019/0032/0045 close with this entry; garden
+   family 5-of-5 CURED — district family census now: hamlet 5/5,
+   seed 4/4, garden 5/5 cured; mosaic 4/4 built/Bill-blocked;
+   cairn 5/5, orchard 5/5, lavender 4/4 remain OPEN.]
 - `nx-cultivation-lavender-0053` — Sev 3 (survey-13, ZAI): IDENTICAL
   to lavender-0006 class — charcoal-mauve dead-crop value (~20-25%
   luma, zero purple chroma at 18m), no tilled strips, discrete

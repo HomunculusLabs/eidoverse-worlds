@@ -58,35 +58,121 @@ function composeForest(g: THREE.Group, r: () => number): string {
 }
 
 function composeGarden(g: THREE.Group, r: () => number): string {
-    for (let ring = 0; ring < 3; ring++) {
-        const rad = 1.6 + ring * 1.5, cnt = 10 + ring * 6;
-        for (let i = 0; i < cnt; i++) {
-            const a = (i / cnt) * Math.PI * 2;
-            const b = new THREE.Mesh(new THREE.IcosahedronGeometry(0.32, 1), mat(0x528638, 0.95, 0));
-            b.name = `hedge_r${ring}_${i}`;
-            b.position.set(Math.cos(a) * rad, 0.3, Math.sin(a) * rad);
-            g.add(b);
+    // improve-42 cure: the baseline parterre exported ENTIRELY material-less
+    // (every plain-mat color sits outside the five familyPass C tones ->
+    // toGLB emits no glTF material -> loader-default near-black; struct-38
+    // class, 5/5 family) and carried zero garden grammar (hedge-ball rings +
+    // sub-pixel flowers read bush scatter/weeds at 18m). Rebuilt as a
+    // KITCHEN GARDEN: two timber raised beds with soil inlay and REGULAR
+    // cabbage rows flanking a central path, marigold path borders, low
+    // hedge perimeter with corner posts, step stones at the path mouths.
+    // Every material is a real texMat (exports with glTF material); tones
+    // copied verbatim from standing families (familymap soil/timber,
+    // mos_gold) or authored per the improve-40 new-family precedent.
+    // Envelope strict-subset of the baseline bbox x[-5.32,5.64] z[-5.74,5.72]
+    // (SAT-neutral same-tuple re-place); height <= 0.78 (floor class —
+    // below every collider gate, plot stays honestly walkable).
+    const soil = texMat("gd_soil", [0x787250, 0x807c58, 0x6c6846], { rough: 0.97, scale: 3, weights: [2, 1, 1] });
+    const timber = texMat("gd_timber", [0x56503c, 0x605c40, 0x4a4632], { rough: 0.9, scale: 3, weights: [2, 1, 1] });
+    const leaf = texMat("gd_leaf", [0x5a7a42, 0x527448, 0x466a3c], { rough: 0.95, scale: 2.4 });
+    const cropPale = texMat("gd_crop_pale", [0xa8b088, 0x9aa878, 0x8a9a68], { rough: 0.9, scale: 1.4 });
+    const cropMid = texMat("gd_crop_mid", [0x87986a, 0x7a8c5e, 0x6e7e54], { rough: 0.9, scale: 1.4 });
+    const gold = texMat("gd_gold", [0xd4a43c, 0xc2942e, 0xb8862a], { rough: 0.6, metal: 0.35, scale: 1.2 });
+    const slab = texMat("gd_step", [0x9a9270, 0x8e876a, 0x827c60], { rough: 0.88, scale: 1.6 });
+
+    // central path: compacted-earth strip between the beds (real box — a
+    // zero-thickness plane vanishes at the 18m grazing angle)
+    const path = new THREE.Mesh(new THREE.BoxGeometry(1.7, 0.04, 10.0), soil);
+    path.name = "gd_path";
+    path.position.set(0, 0.02, 0);
+    g.add(path);
+
+    // two raised beds flanking the path
+    const L = 7.2, W = 2.2, H = 0.26;
+    let cabbages = 0;
+    for (const sgn of [-1, 1] as const) {
+        const tag = sgn < 0 ? "w" : "e";
+        const cx = sgn * 2.2;
+        const inner = new THREE.Mesh(new THREE.BoxGeometry(W - 0.28, H - 0.05, L - 0.28), soil);
+        inner.name = `gd_bed_${tag}_soil`;
+        inner.position.set(cx, (H - 0.05) / 2 + 0.02, 0);
+        g.add(inner);
+        for (const side of [-1, 1] as const) {
+            const rail = new THREE.Mesh(new THREE.BoxGeometry(0.14, H, L), timber);
+            rail.name = `gd_bed_${tag}_rail_${side < 0 ? "n" : "s"}`;
+            rail.position.set(cx + side * (W / 2 - 0.07), H / 2, 0);
+            g.add(rail);
+            const end = new THREE.Mesh(new THREE.BoxGeometry(W, H, 0.14), timber);
+            end.name = `gd_bed_${tag}_end_${side < 0 ? "n" : "s"}`;
+            end.position.set(cx, H / 2, side * (L / 2 - 0.07));
+            g.add(end);
+        }
+        // REGULAR crop rows — the row rhythm is the 18m identity cue.
+        // Rows run ACROSS the bed width (x), plants spaced ALONG its
+        // length (z) — crops stay inside the timber frame.
+        const rows = 4, perRow = 13;
+        for (let row = 0; row < rows; row++) {
+            const rx = -W / 2 + 0.42 + (row * (W - 0.84)) / (rows - 1);
+            for (let i = 0; i < perRow; i++) {
+                const pz = -L / 2 + 0.5 + (i * (L - 1.0)) / (perRow - 1);
+                const rad = 0.10 + r() * 0.045;
+                const pick = r();
+                const jit = (r() - 0.5) * 0.08;
+                // improve-39 law: bake non-unit scales into geometry —
+                // mesh.scale does not survive export
+                const geo = new THREE.IcosahedronGeometry(rad, 0);
+                geo.scale(1, 0.72, 1);
+                const head = new THREE.Mesh(geo, pick > 0.35 ? cropPale : cropMid);
+                head.name = `gd_cabbage_${tag}_${row}_${i}`;
+                head.position.set(cx + rx, H + rad * 0.5, pz + jit);
+                g.add(head);
+                cabbages++;
+            }
+        }
+        // marigold border along the path edge of each bed
+        for (let i = 0; i < 5; i++) {
+            const mz = -L / 2 + 0.9 + (i * (L - 1.8)) / 4;
+            const geo = new THREE.IcosahedronGeometry(0.055 + r() * 0.02, 0);
+            const bloom = new THREE.Mesh(geo, gold);
+            bloom.name = `gd_marigold_${tag}_${i}`;
+            bloom.position.set(cx - sgn * (W / 2 + 0.18), 0.16, mz);
+            g.add(bloom);
         }
     }
-    const nFl = 240 + Math.floor(r() * 100);
-    for (let i = 0; i < nFl; i++) {
-        const a = r() * Math.PI * 2, rad = 0.4 + r() * 5.4;
-        const st = new THREE.Mesh(new THREE.CylinderGeometry(0.012, 0.016, 0.2, 4), mat(0x446632, 0.95, 0));
-        st.name = `flower_${i}_stem`;
-        st.position.set(Math.cos(a) * rad, 0.2, Math.sin(a) * rad);
-        g.add(st);
-        const hd = new THREE.Mesh(new THREE.IcosahedronGeometry(0.05, 0), mat(r() > 0.5 ? 0xdec64e : 0xe6e6b4, 0.85, 0));
-        hd.name = `flower_${i}_head`;
-        hd.position.set(Math.cos(a) * rad, 0.36, Math.sin(a) * rad);
-        g.add(hd);
-        if (r() > 0.6) {
-            const bud = new THREE.Mesh(new THREE.IcosahedronGeometry(0.03, 0), mat(0xc4b42c, 0.85, 0));
-            bud.name = `flower_${i}_bud`;
-            bud.position.set(Math.cos(a) * rad + (r() - 0.5) * 0.2, 0.42, Math.sin(a) * rad + (r() - 0.5) * 0.2);
-            g.add(bud);
+
+    // low hedge perimeter, segmented for organic rhythm
+    const HX = 5.0, HZ = 5.2;
+    const hedgeSide = (name: string, x: number, z: number, w: number, d: number) => {
+        for (let s = 0; s < 3; s++) {
+            const h = 0.42 + r() * 0.14;
+            const seg = new THREE.Mesh(new THREE.BoxGeometry(w / 3 - 0.04, h, d), leaf);
+            seg.name = `${name}_${s}`;
+            seg.position.set(x - w / 2 + w / 6 + (s * w) / 3, h / 2, z + (r() - 0.5) * 0.05);
+            g.add(seg);
         }
+    };
+    hedgeSide("gd_hedge_n", 0, -HZ + 0.25, HX * 2 - 0.5, 0.5);
+    hedgeSide("gd_hedge_s", 0, HZ - 0.25, HX * 2 - 0.5, 0.5);
+    hedgeSide("gd_hedge_w", -HX + 0.25, 0, 0.5, HZ * 2 - 0.5);
+    hedgeSide("gd_hedge_e", HX - 0.25, 0, 0.5, HZ * 2 - 0.5);
+
+    // corner posts
+    for (const sx of [-1, 1] as const) for (const sz of [-1, 1] as const) {
+        const post = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.78, 0.16), timber);
+        post.name = `gd_post_${sx < 0 ? "w" : "e"}${sz < 0 ? "n" : "s"}`;
+        post.position.set(sx * (HX - 0.08), 0.39, sz * (HZ - 0.08));
+        g.add(post);
     }
-    return `parterre with ${nFl} flowers`;
+
+    // step stones at the path mouths
+    for (const sz of [-1, 1] as const) {
+        const step = new THREE.Mesh(new THREE.BoxGeometry(1.2, 0.06, 0.8), slab);
+        step.name = `gd_step_${sz < 0 ? "n" : "s"}`;
+        step.position.set(0, 0.03, sz * (HZ - 0.7));
+        g.add(step);
+    }
+
+    return `kitchen garden: 2 raised beds, ${cabbages} cabbages in rows, marigold path`;
 }
 
 function composeOrchard(g: THREE.Group, r: () => number): string {
