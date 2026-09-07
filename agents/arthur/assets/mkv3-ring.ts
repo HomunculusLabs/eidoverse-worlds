@@ -34,9 +34,9 @@ const texBox = (g: THREE.Group, name: string, w: number, h: number, d: number, x
 // walk (mergeByMaterial applies world matrices to loose meshes) folds them
 // into the material buckets exactly as before. No signature change to the
 // shared kit — the other six ring houses keep their centered calls.
-const addRoofAt = (g: THREE.Group, name: string, w: number, d: number, h: number, baseY: number, over: number, x: number) => {
+const addRoofAt = (g: THREE.Group, name: string, w: number, d: number, h: number, baseY: number, over: number, x: number, solidRidge = false, trueGableHalf: number | null = null) => {
     const scratch = new THREE.Group();
-    gableRoof(scratch, name, w, d, h, baseY, over);
+    gableRoof(scratch, name, w, d, h, baseY, over, C.MID, solidRidge, trueGableHalf);
     for (const child of [...scratch.children]) {
         child.position.x += x;
         g.add(child);
@@ -779,7 +779,7 @@ const out: Built[] = [];
     // "doesn't cover both units"). addRoofAt bakes the shed's own x into the
     // roof parts before they join the merge walk — each unit now carries its
     // own roof, and the court reads as two sibling sheds of one build.
-    addRoofAt(g, "bk_roof", BW, BD, 1.2, FY + H, 0.35, -3.4);
+    addRoofAt(g, "bk_roof", BW, BD, 1.2, FY + H, 0.35, -3.4, true, (BD + 2 * 0.35) / 2); // improve-30 F4: solid ridge + true gable half — 0.25m plaster horn killed
     // THE OVEN: domed beehive with a glowing mouth (fired every morning)
     const ovenDome = new THREE.Mesh(new THREE.SphereGeometry(0.72, 10, 8, 0, Math.PI * 2, 0, Math.PI / 2), mat(C.MID, 0.97, 0));
     ovenDome.name = "oven_dome";
@@ -852,7 +852,7 @@ const out: Built[] = [];
     wallSpan(g, "ws_wall_w", WD - 2 * T, H, T, 3.4 - WW / 2 + T / 2, FY, 0, "z");
     wallSpan(g, "ws_wall_e", WD - 2 * T, H, T, 3.4 + WW / 2 - T / 2, FY, 0, "z");
     doorGapWall(g, "ws_front", WW, H, T, 3.4, FY, WD / 2 - T / 2, "z", C.STONE, 2.2, 2.3);
-    addRoofAt(g, "ws_roof", WW, WD, 1.2, FY + H, 0.35, 3.4); // lift-1: roof over its own shed
+    addRoofAt(g, "ws_roof", WW, WD, 1.2, FY + H, 0.35, 3.4, true, (WD + 2 * 0.35) / 2); // lift-1: roof over its own shed; improve-30 F4 same opts
     texBox(g, "forge", 0.9, 0.75, 0.9, 4.7, FY + 0.37, -0.8, stoneTex);
     // forge hood + tue-iron glow (the smith's fire)
     const hood = new THREE.Mesh(new THREE.ConeGeometry(0.5, 0.5, 8), ironTex);
@@ -930,8 +930,62 @@ const out: Built[] = [];
         box(g, `ironstock_${bi}`, 0.9, 0.05, 0.05, 4.7, FY + by, -(WD / 2 - 0.16), 0x5c5c60);
     }
     texBox(g, "stockshelf", 1.0, 0.05, 0.12, 4.7, FY + 0.95, -(WD / 2 - 0.16), timberTex);
-    // shared yard pavers between the sheds (laid stone — walked-surface chain)
-    for (let pv = 0; pv < 6; pv++) texBox(g, `paver_${pv}`, 0.85, 0.06, 0.62, -1.5 + (pv % 3) * 1.5, 0.03, -0.6 + Math.floor(pv / 3) * 1.3, stoneTex);
+    // ---- improve-30: THE COURT'S OWN FURNITURE (survey-8 Sev 3 identity fix) ----
+    // The yard read as two unrelated workshop sheds. A shared bench INSIDE the
+    // gap + a justice beam spanning both fronts + the weighing-scale beads make
+    // the space between the sheds read as one court where disputes are heard.
+    // (F1a) BENCH: U-shaped court seating INSIDE the yard gap — two long
+    // benches flanking the gap's E/W sides (long axis z) + one cross bench
+    // at the N end; seats face the yard's S opening. All inside the court's
+    // existing footprint.
+    const cbench = (cbi: number, cbx: number, cbz: number, rot: boolean) => {
+        const seg = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.07, 0.34), timberTex);
+        seg.name = `cbench_${cbi}`;
+        seg.position.set(cbx, 0.495, cbz);
+        seg.rotation.y = rot ? Math.PI / 2 : 0;
+        g.add(seg);
+        for (const cl of [-1, 1]) {
+            const leg = new THREE.Mesh(new THREE.BoxGeometry(0.08, 0.42, 0.08), ironTex);
+            leg.name = `cbleg_${cbi}_${cl < 0 ? "n" : "p"}`;
+            if (rot) leg.position.set(cbx, 0.25, cbz + cl * 0.6);
+            else leg.position.set(cbx + cl * 0.6, 0.25, cbz);
+            g.add(leg);
+        }
+    };
+    cbench(0, -0.55, 0.0, true);  // W flank, long axis z
+    cbench(1, 0.55, 0.0, true);   // E flank, long axis z
+    cbench(2, 0.0, -0.9, false);  // N cross bench, long axis x
+    // (F3) FLAGSTONES under the bench — replaces the 6-paver strip that read
+    // as an orphaned plank through the yard gap; 2 flush stones now ground
+    // the bench as deliberate furnishing.
+    texBox(g, "cflag_0", 0.75, 0.06, 0.6, -0.4, 0.03, 0, stoneTex);
+    texBox(g, "cflag_1", 0.75, 0.0601, 0.6, 0.4, 0.03, 0, stoneTex);
+    // (F1b) JUSTICE BEAM: spans both shed fronts at lintel height — the
+    // shared lintel makes the two openings read as one court's threshold.
+    // x -2.9..2.7, clear of all rider keep-outs (b28 x -3.0, b29 x 3.2 by
+    // 0.3+); z 1.75 rides just inside the front plane z 1.99, proud-facing.
+    texBox(g, "tiebeam_court", 5.6, 0.16, 0.14, -0.1, 2.62, 1.75, timberTex);
+    // brass scale-bead pair on the beam (the balance motif): emissive brass
+    // beads hanging under the beam at the YARD-GAP thirds (x ±0.45 — the
+    // only span where the beam is exposed to view between the sheds).
+    // KEEP-prefix named (lamp_) so the emissive survives mergeByMaterial —
+    // merged buckets key on color/rough/metal only and drop emissive.
+    for (const [si, sx] of [[0, -0.45], [1, 0.45]] as const) {
+        const bead = new THREE.Mesh(new THREE.IcosahedronGeometry(0.07, 0), new THREE.MeshStandardMaterial({ color: 0xa09832, emissive: new THREE.Color(0x604c14), emissiveIntensity: 0.8, roughness: 0.5 }));
+        bead.name = `lamp_scale_${si}`;
+        bead.position.set(sx, 2.49, 1.75);
+        g.add(bead);
+    }
+    // (F2) KEEP-OPEN WARM: sconce beads on the JAMB faces of each open front
+    // — the gap-side reveals of the flanking wall segments, proud 0.05 into
+    // the opening at the front plane (z 1.99). First attempt sat at z 1.7
+    // behind the front wall: fully occluded from every exterior view (struct-52
+    // containment class, caught at pixel falsification — 0 new night warm px).
+    // On the jambs they frame each threshold as warm points visible at 18m.
+    glow(g, "flame_sconce_bk_l", -4.45, 1.85, 1.99, 0xffc98a, 0.05);
+    glow(g, "flame_sconce_bk_r", -2.35, 1.85, 1.99, 0xffc98a, 0.05);
+    glow(g, "flame_sconce_ws_l", 2.35, 1.85, 1.99, 0xffc98a, 0.05);
+    glow(g, "flame_sconce_ws_r", 4.45, 1.85, 1.99, 0xffc98a, 0.05);
     // ---- THE WORKING YARD (between the sheds, out of both door lanes) ----
     // flour cart: 2 big wheels + tray + handles, parked at the yard's N
     const cartWheel = (cx: number, cz: number) => {
@@ -968,8 +1022,27 @@ const out: Built[] = [];
     texBox(g, "wbtop", 1.3, 0.08, 0.5, -5.2, 0.92, 2.75, timberTex);
     for (const lx of [-5.75, -4.65]) texBox(g, `wbleg_${lx}`, 0.08, 0.86, 0.08, lx, 0.45, 2.75, timberTex);
     texBox(g, "wvice", 0.16, 0.14, 0.2, -4.65, 1.03, 2.75, ironTex);
-    // yard lamp on a post at the yard's W edge — off both shed door lanes
-    glow(g, "lamp", -4.6, FY + 2.4, 2.6);
+    // yard lamp at the yard's W edge — off both shed door lanes.
+    // improve-30 F5: the comment always promised "lamp on a post" but no post
+    // was ever built — the bead floated as a warm dot in black space (survey-8
+    // native finding; improve-15 bare-dot class). Iron post GROUNDED at grade
+    // with a stone foot (polish-280 planted-read law), sited at z 2.2 — clear
+    // of the workbench (z 2.5..3.0) and west of the bakery apron (x -4.5);
+    // arm reaches EAST into the yard, collar + KEEP-named bead at its end.
+    texBox(g, "lamp_foot", 0.24, 0.12, 0.24, -4.6, 0.06, 2.2, stoneTex);
+    const lpost = new THREE.Mesh(new THREE.BoxGeometry(0.07, 2.35, 0.07), ironTex);
+    lpost.name = "lamp_post";
+    lpost.position.set(-4.6, 0.12 + 2.35 / 2, 2.2);
+    g.add(lpost);
+    const larm = new THREE.Mesh(new THREE.BoxGeometry(0.26, 0.05, 0.05), ironTex);
+    larm.name = "lamp_arm";
+    larm.position.set(-4.6 + 0.13, 2.47, 2.2);
+    g.add(larm);
+    const lcollar = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.075, 0.07, 8), ironTex);
+    lcollar.name = "lamp_collar";
+    lcollar.position.set(-4.6 + 0.24, 2.44, 2.2);
+    g.add(lcollar);
+    glow(g, "lamp", -4.6 + 0.24, 2.52, 2.2);
         // ---- TIE BEAMS (loop #94): one oak beam per shed span ----
     for (const [bi, bz] of [[0, 0]] as const) {
         const beamB = new THREE.Mesh(new THREE.BoxGeometry(BW - 0.4, 0.13, 0.15), timberTex);

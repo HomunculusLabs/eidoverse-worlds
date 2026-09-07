@@ -1733,6 +1733,86 @@ open duplicate notes for these objects.
   re-pin to LIVE lib 59534b10 (landed re-place bookkeeping, GLB clean,
   judged bytes current). Evidence:
   reviews/survey8-slice/nx-court/{gameplay,front}.png
+  [improve-30 CONTRACT (2026-09-06, this tick — BEFORE edit): take order:
+  windmill row 4 idle-guarded until 09-07 01:57 (waysign-6 rider 09-06
+  01:57, <24h at 23:48 tick start); court is next-worst Sev 3. Standing
+  re-judgment = survey-8 NATIVE on exact live bytes 59534b10 (improve-13/14
+  precedent) + fresh census this tick lib 59534b10 UNCHANGED; native vision
+  down this tick (1210), findings re-root-caused at source + pixel-probed
+  on banked survey-8 frames. Idle-guard clear (court LIB_STABLE across
+  waysign-38/39/52/55 holds; 19:28 local GLB = sibling baseline rebuild
+  only, live untouched). Live tuple (18.9, −1.59e-08, −14.8) yaw −0.90756,
+  comp bag particles:smoke {origin:[-4.9,3.2,-0.8]} (capture + RE-APPLY via
+  own placer). Baseline: local 59534b10 == live == rebuild (verify ×2 this
+  tick). Keep-outs (census inverse-transform fresh): b28 bake-count
+  (−3.0, −1.955), b29 strike-count (3.2, −1.875) — pad 0.3m.
+  SOURCE-TRUE mechanisms (mkv3-ring.ts block 7, screen-projection match):
+  F1 no-court-grammar: no bench/banner/beam exists anywhere in the yard
+  (source grep). F2 black voids: open fronts show unlit C.DARK floors.
+  F3 orphaned plank = 6-paver strip (−1.5..1.5, z −0.6..0.7) seen through
+  the yard gap — projects exactly to survey x455-500 y428-444 (px probe:
+  plank-green (113,126,100)+timber (76,72,53) on grass). F4 left-roof
+  stub = gable triangle hw=w/2=2.7 > roof half-depth (BD+2over)/2=2.45 →
+  0.25m plaster horn into the yard gap (proven trueGableHalf kit debt,
+  addRoofAt carries no opts; px probe: dark protrusion at x440-465 vs
+  clean sky right). F5 floating lamp = glow("lamp",−4.6,2.6,2.6) — comment
+  promises "lamp on a post", NO post built (improve-15 bare-dot class; px
+  probe: warm dot (255,232,144) in pure black).
+  FIX (mkv3-ring.ts block 7 only, no housekit change):
+  F1a court bench INSIDE the yard gap as the bridging member: 3 seat
+  slabs 1.6×0.07×0.34 + legs, y 0.46..0.53, z −0.78..0.78 at x ±0.55 —
+  the gap reads as shared furnishing, not missing building. F1b justice
+  beam across both shed fronts: tiebeam_court 5.6 long at y 2.62,
+  x −0.1 (fronts at z 1.99) + brass scale-bead pair on the beam
+  (keep-out z ≤1.6). F2 keep-open warm: 2 sconce beads flanking each
+  front inside (bakery x −4.4/−2.4, workshop x 2.4/4.4, y 1.85,
+  z 1.7, r 0.05). F3 pavers → 2 flagstones flush under the bench
+  (x −0.4/0.4, z 0, 0.75×0.06×0.6, stoneTex). F4 addRoofAt gains
+  solidRidge/trueGableHalf opts (default = old behavior, siblings
+  byte-identical); court opts in trueGableHalf=(D+2*over)/2, horn 0.25m
+  killed, strict-subset bbox. F5 iron post under the bead: 0.07 sq ×
+  2.32 (y 0.15..2.47) + arm + collar, bead recentered (−4.6, 2.55, 2.6).
+  FALSIFY: (a) decode — horn verts gone (gable z ±2.45), post verts at
+  x −4.6±0.04, bench/beam z-extents, b28/b29 keep-out 0 new verts,
+  envelope strict-subset; (b) rebuild ×2 deterministic; (c) 6 ring
+  siblings byte-identical; (d) identical-camera before/after renders:
+  horn gone, lamp post visible, bench/beam read, night warm beads; (e)
+  remove+spawn exact tuple + smoke comp re-apply + PLACED_VERIFIED +
+  idempotent zero-verb rerun; (f) next-walk-court.ts 4 legs ALL_PASS.
+  REVERT: git checkout mkv3-ring.ts, rebuild → 59534b10, re-place + comp.]
+  [EXECUTED improve-30, 2026-09-07: all five findings landed in one pass;
+  RED→GREEN proven on true baseline bytes (HEAD-source rebuild 59534b10 ==
+  live pin exactly — audit FAILs ×8 on baseline: horn |z| 2.700, zero
+  bench/beam/flags/beads; edited build passes ALL). Build chain: v1
+  b1a4a65f — audit caught merged-statics blindspot (renamed emissives to
+  KEEP prefixes lamp_scale_/flame_sconce_, mergekit regex verified) and
+  pixel falsification caught sconces OCCLUDED at z 1.7 behind the front
+  wall (struct-52 containment class) → v2 77cab2c3 jamb-mounted at the
+  front plane z 1.99; night warm px 307→360 (new clusters both
+  thresholds), gameplay 442→510, front 147→177; bench/beam read in the
+  yard-gap band (dark 86,91,70 → timber 113,126,100). NATIVE after-judge
+  6/6 PASS (glm-5.3-flash recovered mid-tick — first call 1210, retried):
+  "reads as a shared COURT" (beam+bench+furnishing carry the read, judge's
+  own decomposition), horn gone "nothing juts above the roofline", lamp
+  post reads, warm-lit thresholds not dead voids. Rebuild ×2 deterministic
+  77cab2c3; 6 ring siblings byte-identical (longhouse e3adcd3d, tower3
+  a989bdc3 known-snapshot value, garden e0a6a7c4, row add42aea, hall
+  c92c1f91, bunk3 e4c0651d non-live file — live bunkhouse is
+  village_bunkhouse.glb c8636968). Envelope decode strict-subset (x ±6.5,
+  y −0.2..4.169, z ±2.94/3.0 — byte-identical mins/maxes); horn
+  roof-band |z| 2.700→2.470 (rake-corner bound 2.48); post grounded
+  y 0.12..2.47 at (−4.6, 2.2) + stone foot 39 verts at grade; bench 144+
+  168 verts, beam 59, flags 24, scale beads 120, sconces 240; b28/b29
+  keep-outs 0 new verts; KEEP lamp/fire/fire2/flame survive. Re-seat
+  remove+spawn+comp 3 verbs at exact tuple (18.9, −1.59e-08, −14.8) yaw
+  −0.90756, lib 59534b10→77cab2c3, smoke comp
+  {origin:[−4.9,3.2,−0.8]} re-applied, PLACED_VERIFIED + idempotent
+  zero-verb rerun; riders b23/b28/b29 verified standing post-place;
+  two-way 4-leg court walk ALL_PASS 0.340m; census 265 steady. Residual
+  disclosed: justice beam meets the shed fronts at the very top of the
+  openings (y 2.62 vs 2.3 header) — reads as roofline tie in the native
+  judge's read, routed to round-1 eye-gate with this row. Evidence:
+  reviews/improve30-court/{before,after}/.]
 - `nx-forge` — Sev 4 identity-marginal (survey-8, ZAI fallback): reads
   furnace/oven-hut, not forge — anvil illegible (flat plate x532 y380,
   no horn/waist/stump), no hood over hearth, left appendage
