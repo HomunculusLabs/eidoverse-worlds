@@ -29,7 +29,7 @@ const SPOIL2 = mat(0xdcc79a, .98, 0); // freshest spoil crest (brightest earth)
 const MOUTH  = mat(0x100b07, 1.0, 0); // den interior — darkest value = "hole"
 const STONE  = mat(0x7d7a72, .98, 0); // one anchor stone beside the mouth
 const TROD   = mat(0x71624c, .98, 0); // worn trodden earth (path pad)
-const TROD_DARK = mat(0x4e4433, .98, 0); // darkest trodden earth — entry threshold
+const TROD_DARK2 = mat(0x33291d, .98, 0); // v17: darkest worn threshold — reads as entry-floor shadow, not a separate gray blob
 
 const jit = (n: number) => {
   const v = (Math.sin(n * 9026.6) + Math.sin(n * 522.5) * 0.63) / 1.63 / 2;
@@ -75,17 +75,15 @@ g.add(bankA, bankB, bankC);
 // needs integration, not just contact). Fix: smaller + lower + rim draped
 // with earth chunks breaking the ellipse, edges tucked INSIDE the bank
 // silhouette.
-const turf = dome(-0.55, 0.35, 0.74, 1.10, 0.15, 11, TURF);
-turf.position.y = 0.55;
-g.add(turf);
-// rim drape: earth chunks riding the cap's edge (green drapes onto brown)
-for (const [dx, dz, seed] of [[-0.35, 1.15, 61], [0.1, -0.9, 62], [-0.75, -0.35, 63], [0.45, 0.95, 64]] as const) {
-  const t = new THREE.Mesh(new THREE.DodecahedronGeometry(0.11 + Math.abs(jit(seed)) * 0.04, 0), seed % 2 ? TURF : EARTH2);
-  t.scale.set(1.35, 0.6, 0.95);
-  t.rotation.set(jit(seed + 2), jit(seed + 4) * 3, jit(seed + 6) * 0.4);
-  t.position.set(dx, 0.52 + jit(seed + 1) * 0.05, dz);
-  g.add(t);
-}
+// v16 — the v15 cap STILL read as a floating tabletop (native close4 FAIL:
+// rim overhang + shadow gap under the lip; polish-272 crown law — attachment
+// needs silhouette integration, not just contact). Root fix: NO separate cap.
+// The turf is a taller NARROWER dome CONCENTRIC with bank A: it emerges from
+// the bank's own shoulder (~y 0.69) and forms the mound's true crest. The two
+// surfaces cross transversally — there is no rim to overhang and no underside
+// to shadow; the green boundary is the bank's shoulder contour itself.
+const crown = dome(-0.70, 0.60, 0.78, 1.15, 0.80, 11, TURF);
+g.add(crown);
 
 // ---- den mouth: dark arch punched into the bank's +x face ----
 // dress-84 hollow-knot chassis: a dark squashed sphere embedded in the face
@@ -114,9 +112,12 @@ g.add(arch);
 // dark entry threshold: trodden dark-earth pad at the arch base — the
 // "worn entry" read that separates den mouth from shadow-under-overhang
 // (v3 judge: mouth merged into brow shadow; threshold anchors it)
-const thresh = new THREE.Mesh(new THREE.SphereGeometry(0.30, 9, 7), TROD_DARK);
+const thresh = new THREE.Mesh(new THREE.SphereGeometry(0.30, 9, 7), TROD_DARK2);
 flattenBase(thresh.geometry);
-thresh.scale.set(0.95, 0.22, 1.25);
+// v16: z-scale 1.25 -> 0.85 — the v15 threshold's z-half (0.375) poked past
+// BOTH the arch base (0.30) and the bank face (~0.285) at z ±0.35: a detached
+// dark lobe beside the mouth, read by the judge as a stray second hole.
+thresh.scale.set(0.95, 0.22, 0.85);
 thresh.position.set(0.40, 0.055, 0.0);
 g.add(thresh);
 
@@ -134,16 +135,21 @@ g.add(throat);
 // made RAGGED — the cap no longer casts a hard full-width lip shadow over
 // the arch; jagged end-chunks break the slab edge. Judge v10: cap read as
 // a decal slab with a seam.
-const brow = new THREE.Mesh(new THREE.SphereGeometry(0.30, 9, 7), TURF);
-flattenBase(brow.geometry);
-brow.scale.set(0.72, 0.34, 1.30);
-brow.position.set(0.28, 0.31, 0.0);
-g.add(brow);
-for (const [dz, seed] of [[0.42, 71], [-0.46, 72], [0.18, 73]] as const) {
-  const c = new THREE.Mesh(new THREE.DodecahedronGeometry(0.06 + Math.abs(jit(seed)) * 0.04, 0), TURF);
-  c.scale.set(1.1, 0.55, 0.8);
+// v17: NO brow disc at all — the crown is 4 ragged TURF chunks straddling
+// the arch's own top (interpenetrating the dark sphere's crown): root-crust
+// holding the crust over the hole. Decode proof the disc could never work:
+// at the brow's x (~0.3) the bank face is at GRADE (bank A toe), so ANY disc
+// there hovers with a visible underside (v15 low = "no brow"; v16 raised =
+// tabletop canopy — polish-272 class, killed by deletion). Chunks seated
+// y 0.44-0.48 where the arch surface (top 0.577 at x 0.34, dipping to ~0.42
+// at its z edges) physically supports them — contact by interpenetration,
+// no gap, no overhang.
+for (const [dz, seed] of [[0.10, 71], [-0.12, 72], [0.28, 73], [-0.30, 74]] as const) {
+  const c = new THREE.Mesh(new THREE.DodecahedronGeometry(0.085 + Math.abs(jit(seed)) * 0.045, 0), TURF);
+  c.scale.set(1.25, 0.6, 1.0);
   c.rotation.set(jit(seed + 3), jit(seed + 4) * 3, jit(seed + 5) * 0.5);
-  c.position.set(0.26 + jit(seed + 1) * 0.08, 0.30 + jit(seed + 2) * 0.04, dz);
+  const edge = Math.abs(dz) > 0.2 ? 0.44 : 0.48;
+  c.position.set(0.33 + jit(seed + 1) * 0.06, edge + jit(seed + 2) * 0.03, dz);
   g.add(c);
 }
 

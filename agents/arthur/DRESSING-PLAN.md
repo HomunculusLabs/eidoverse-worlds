@@ -1,28 +1,52 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
-### dress-106 — SE fox den (round-3 item 14, IN FLIGHT — v15 built, placement pending)
+### dress-107 — SE fox den (round-3 item 14, PLACED, LIVE)
 
-- **Interrupted-window recovery (artwalk-32 class)**: prior window died
-  post-build/pre-spawn — v10 `d7875544` + scans on disk, zero ledger/plan,
-  census 286 with zero foxden hits. Named; no live residue to reconcile.
-- **This tick**: v10 fresh native re-judge FAILED 4/4 → v11 pale values +
-  side-thrown fan (probe-disproven ZAI value claims) → v12–v14 isolation
-  probe proved the RIG's studio grass (renders 1.18× albedo) could never
-  be beaten by plain-mat props (loader-default metal-1, 0.53–0.70×; struct-38
-  class) → **rig ground recalibrated 0x7f8d70 → 0x3d3a29** (live meadow
-  rgb(60,57,41), measured off dress-105's accepted live-seat frame).
-- **v14 `9f5bff6b`**: approach18 NATIVE PASS 4/4. close4 3/4 (cap = floating
-  tabletop lid, polish-272 class). **v15 `12f9a479`** (deterministic ×2,
-  decode ALL PASS, 8 nodes, dims 4.758×0.799×5.118, center (0.675, 0.148)):
-  cap shrunk/lowered/draped — UNJUDGED at budget close (native 1210).
-- **Next wakeup contract**: (1) judge v15 close4 (+ approach18 if close
-  passes); (2) re-run `dress106-foxden-scan.ts` + `dress106-foxden-forest-scan.ts`
-  with TRUE v15 decode constants — the committed scan files still carry v10's
-  HALF/CLOCAL (STALE); (3) terrain preflight at winner → hash-gated placer →
-  upload/spawn `nx-dress-se-foxden-001` → tuple verify + idempotent rerun →
-  ledger close. SE lamp 0 of 8 (static, unlit). Review dirs: v10–v15 + probe
-  under `reviews/dress106-foxden-*`.
+- **Interrupted-window recovery arc closed**: prior window died post-build/
+  pre-spawn (v10); dress-106 recovered with re-judge arc + rig ground
+  recalibration (live-meadow 0x3d3a29) + v15 built-unjudged. This tick:
+  v15 12f9a479 close4 NATIVE FAIL (cap still tabletop — now green; airborne
+  rim-drape chunks decode-confirmed over near-grade bank); v16 508b10b7
+  close4 FAIL (whack-a-mole: raising the brow disc relocated the lid over
+  the mouth at bank-toe grade; the summit concentric crown PASSED); v17
+  856deec5 ACCEPTED — **lid class killed by DELETION**: concentric TURF
+  crown dome (surfaces cross transversally, no rim to overhang, no
+  underside to shadow), brow disc replaced by 4 ragged arch-root crust
+  chunks interpenetrating the arch top, threshold darkened (0x33291d) +
+  z-tucked 1.25→0.85 (stray second-hole lobe). Deterministic ×2, 8 nodes,
+  decode ALL PASS (dims 4.758×0.864×5.118, center (0.675, 0.148), mouth
+  y 0.048..0.577, bank peak 0.800). NATIVE close4 4/4 + approach18 4/4
+  (no flap this tick): arch reads with crust crown, spoil connected at the
+  mouth, zero floaters, 18m identity = dark hole + pale fan.
+- **Siting**: open-ring scan 0 legal with TRUE constants (cone law killed
+  6407 — wide piece); forest-scan re-run with TRUE v17 HALF/CLOCAL + NEW
+  **fat-forest SAT gate added to the chassis** (source-true trunk cells
+  alone leave the placer's hard fat-bbox gate unsatisfiable near any
+  forest — first winner (65.0,−34.5) fat SAT −2.39 declined; NO exemption
+  sought: no dress placer has entered a forest fat margin, dress-94
+  precedent chose fat-clean). Winner among 1135 fat-clean poses:
+  **(73.0, −10.5) yaw 270°** — bank (local −x) az −90 rises into tree
+  line vs forest-0031 az −93 (3° off-exact, 13.0m), mouth (local +x)
+  opens az +90 across open ring meadow. Gates: fat-forest SAT +1.68,
+  minSAT +7.79 (ruledtower), trunk cells 5.49m, spokeOff 44.2m, rim
+  70.7..76.4 ∈ [70,100] (CITY-PLAN law 1), cone clean (h 0.864 > knee
+  binds). Terrain 6-pt −0.0390..−0.0532 (14mm) → py −0.0532 worst corner.
+- **Placement**: `se-dress107-foxden-place.ts` (dress-84/94 chassis) —
+  SHA gate → blocker-epoch guard (forest-0031, ruledtower, cairn-0050) →
+  fresh-census SAT/rim preflight (clear) → upload (no 429) → 1 spawn verb
+  → post-place tuple verify. **PLACED_VERIFIED**
+  `nx-dress-se-foxden-001` @ `store/856deec51857c60a.glb`,
+  (73.0, −0.0532, −10.5) yaw 270°/4.7124 rad. Idempotent rerun: 0 verbs.
+  Census 288, comps empty by design. SE lamp spend 0 of 8 (static,
+  unlit). Rotation next: SW round-3 item 18.
+- **Eye-check for Bill**: SE wild past the ruled tower at the south tree
+  line — an earth bank rising into the trees, black arch mouth opening to
+  the meadow, pale dig-spoil fanned on its flank.
+- **Probe lesson banked**: initial seat orientation used (cos,sin) mouth
+  mapping; align-1 law (local +x → (cos,−sin)) re-derived BEFORE writing
+  the placer — first fat-clean zone read "mouth wrong way" only under the
+  wrong convention; the corrected convention found yaw270 concept-exact.
 
 
 ### dress-97 — SW contemplative seats (round-3 item 17, PLACED, LIVE)

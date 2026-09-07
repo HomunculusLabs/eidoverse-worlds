@@ -1,7 +1,7 @@
 // dress106-foxden-scan.ts — siting scan for nx-dress-se-foxden-001
 // (v10, sha d7875544). Chassis: dress105-streamstones-scan. Fresh census →
 // candidate poses across the SE district ring (CITY-PLAN law: r70-100):
-//   - OBB (TRUE v10 decode HALF {x 2.295, z 2.404}, CLOCAL {x 0.590, z 0.047})
+//   - OBB (TRUE v17 decode HALF {x 2.379, z 2.559}, CLOCAL {x 0.675, z 0.148})
 //   - rim corners ∈ [70, 100]
 //   - SAT vs ALL census solids (bb height > 0.5), hard min gap ≥ 1.4m
 //   - piece h 0.682 > knee (0.45): approach-cone law BINDS — reject cone clash
@@ -17,7 +17,7 @@ const ROOT = "/Users/t3rpz/projects/eidoverse-worlds";
 const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
 const WORLD = "commons-next";
-const HALF = { x: 2.295, z: 2.404 }, CLOCAL = { x: 0.590, z: 0.047 };
+const HALF = { x: 2.379, z: 2.559 }, CLOCAL = { x: 0.675, z: 0.148 };
 
 type OBB = { cx: number, cz: number, ux: number[], uz: number[], hu: number[] };
 function obb(pos: number[], yaw: number, half: { x: number, z: number }, c: { x: number, z: number }): OBB {

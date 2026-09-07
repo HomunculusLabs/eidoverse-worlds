@@ -78,9 +78,20 @@ const satgap = (a: OBB, b: OBB) => {
 };
 const others: [string, OBB][] = [];
 const cones: [string, number, number][] = [];
+const fatForests: [string, OBB][] = [];
 for (const e of ents) {
   if (!e.lib || !e.pos) continue;
-  if (/nx-wild-forest-/.test(e.id)) continue; // source-true below
+  if (/nx-wild-forest-/.test(e.id)) {
+    // fat forest bboxes: kept SEPARATE — they envelope their own empty
+    // margin (dress-77/84/92/94 class). Cell clearance proves the real
+    // trunks; the placer's hard SAT needs the fat gap too, so poses are
+    // gated here by fat SAT >= 1.4 and ranked by it when concept-tied.
+    const bb = e.bbox;
+    if (bb?.size) fatForests.push([e.id, obb(e.pos, e.yaw ?? 0, bb.size[0] / 2, bb.size[2] / 2, (bb.min[0] + bb.max[0]) / 2, (bb.min[2] + bb.max[2]) / 2)]);
+    const L = Math.hypot(e.pos[0], e.pos[2]);
+    if (L >= 35) cones.push([e.id, e.pos[0], e.pos[2]]);
+    continue;
+  }
   const bb = e.bbox;
   if (!bb || !bb.size) continue;
   if (bb.max[1] - bb.min[1] <= 0.5) continue;
@@ -89,8 +100,8 @@ for (const e of ents) {
   if (L >= 35) cones.push([e.id, e.pos[0], e.pos[2]]);
 }
 
-// fox den v10 TRUE decode: half x 2.295 z 2.404, center (+0.590, +0.047)
-const MY = { hx: 2.295, hz: 2.404, cx: 0.590, cz: 0.047 };
+// fox den v17 TRUE decode: half x 2.379 z 2.559, center (+0.675, +0.148)
+const MY = { hx: 2.379, hz: 2.559, cx: 0.675, cz: 0.148 };
 const u1 = Math.cos(-Math.PI / 4), u2 = Math.sin(-Math.PI / 4);
 
 const results: string[] = [];
@@ -127,11 +138,17 @@ const evalPose = (px: number, pz: number, yawDeg: number) => {
     if (g < worst) { worst = g; worstId = id; }
     if (g < 1.4) return;
   }
+  let fatGap = Infinity, fatId = "";
+  for (const [id, F] of fatForests) {
+    const g = satgap(A, F);
+    if (g < fatGap) { fatGap = g; fatId = id; }
+    if (g < 1.4) return;
+  }
   const nearestForest = forestCenters.reduce((best, fc) => {
     const d = Math.hypot(px - fc[0], pz - fc[1]);
     return d < best.d ? { d, id: FORESTS[forestCenters.indexOf(fc)].id } : best;
   }, { d: Infinity, id: "" });
-  results.push(`(${px.toFixed(1)},${pz.toFixed(1)}) yaw${yawDeg} | cell ${cellMin.toFixed(2)}m vs ${cellAt} | minSAT ${worst.toFixed(2)} vs ${worstId} | spokeOff ${spokeOff.toFixed(1)} | rim ${Math.min(...rim).toFixed(1)}-${Math.max(...rim).toFixed(1)} | r${Math.hypot(px, pz).toFixed(1)} | nearForest ${nearestForest.id} ${nearestForest.d.toFixed(1)}m`);
+  results.push(`(${px.toFixed(1)},${pz.toFixed(1)}) yaw${yawDeg} | cell ${cellMin.toFixed(2)}m vs ${cellAt} | minSAT ${worst.toFixed(2)} vs ${worstId} | fatForest ${fatGap.toFixed(2)} vs ${fatId} | spokeOff ${spokeOff.toFixed(1)} | rim ${Math.min(...rim).toFixed(1)}-${Math.max(...rim).toFixed(1)} | r${Math.hypot(px, pz).toFixed(1)} | nearForest ${nearestForest.id} ${nearestForest.d.toFixed(1)}m`);
 };
 
 for (let px = 5; px <= 78; px += 0.5) {
