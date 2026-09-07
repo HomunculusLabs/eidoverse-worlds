@@ -3399,3 +3399,79 @@ beads (crown + quarters + ends) glowing quietly at dusk. Frames:
 reviews/struct69-catenarygate-v5/ (gameplay 18m contract frame + night).
 Next tick: 73%3==1 -> build tick (R6-2 concept or city-lane/Shard re-arm
 scan).
+
+## struct-73 (2026-09-07): R6-2 THE MOON GATE — authored v3, judged NATIVE
+## 5/5 + NIGHT 3/3, PLACED_VERIFIED at (-43.84, -0.0533, -43.84) yaw 0
+
+Cadence 73%3==1 build tick. Shard verified EMPTY fresh (round-1 nx-struct
+rows terminal; echoarch intake note superseded — live lib 103be93e ==
+struct-55's cure, survey-23 NATIVE CLEAN closed it). Refine pool empty
+(no Bill verdict, no open routed note; waterstair/meridianstair clusters
+resolved). CITY-PLAN register rows city-lane-owned (wave-2 HOLD-for-Bill).
+Gate ALL PASS real exit 0 at f82edc25 tick-start AND re-run at 184fe179
+immediately pre-mutation (survey-38 interleave absorbed). Interlane md5
+f6254cd0 stable.
+
+CONCEPT (one idea, Judd; serial 36, LeWitt): the closed voussoir ring —
+THE ARCH THAT NEVER LANDS. The curve ledger needed its missing figure at
+walk-through scale: conics complete, catenary raised (struct-72); the
+closed arch is the one form left. East-Asian moon-gate reading = a window
+to the sky, completing the SW sky-instrument family (observatory models
+it, dial reads it, skymirror reflects it, the moon gate frames it).
+
+BUILD ARC (3 versions, all native-judged — native up this tick):
+- v1 (5e523bd8): 36 constant-width box voussoirs — NATIVE 4/5: identity/
+  rhythm/keystone/seating PASS, CLEANLINESS FAIL: box chord (0.506m at
+  R_out) vs BT 0.34 left ~0.12m of sky per joint — reads "suspended chain,
+  not compressed masonry". Judge's seating note = chassis artifact (review
+  rig re-roots min.y to ground; live seat buries 0.55m by construction).
+- v2 (e83aab08): exact zero-gap annular sectors — NATIVE 2/5 OVERCORRECTION:
+  joints vanished (fused monolith, cast-sculpture read), keystone still a
+  tab. 
+- v3 (3291fe15) WINNER: 36 annular-sector voussoirs 9.5° + dark mortar
+  sectors 0.5° between (full contact AND countable rhythm — true
+  compressed masonry) + keystone geometrically identical to neighbors,
+  flush with the arc (brass material + emissive alone carry the crown).
+  NATIVE 5/5 gameplay 18m ALL PASS (identity, rhythm countable ~10°
+  pitch, masonry contact, flush keystone, clean) + NIGHT 3/3 (one quiet
+  warm point at crown, no bleed, silhouette survives). Margins named:
+  joint faintness in worst-lit quadrant (cosmetic), mortar reads color
+  strip not recessed (resolution-honest), count ±1 at 18m.
+  sha 3291fe15600b4c52... x2 deterministic. Decode struct73-probe ALL
+  PASS: 36 sectors, clear passage, bbox 5.80 x 5.80 x 1.42 = 8.24m² +
+  5.80m — room gates honestly crossed; TH 1.42 chosen FOR the gate (a
+  thin ring classifies furniture-solid and seals the opening); ring
+  seated: inner circle kisses grade (0.55m buried), bottom voussoir =
+  flush threshold stone.
+
+SITING (CITY-PLAN law 1/4 — district ring, never r33-55): SW
+contemplative threshold. First candidate (-47,-47 az-135 r66.5) SAT FAIL
+0.139 vs temple-terrace-0040 (rotation-grown AABB — struct-70 conservative
+law caught what my center-distance estimate missed); scan struct73-scan
+az[-150,-125] r[62,70] on fresh 279 census: 68 lawful seats, winner
+(-43.84,-43.84) az -135 r62 ON-SPOKE, worst +3.299m vs terrace-0040.
+Terrain 7pt spread 2.8mm PY -0.0533 (flattest seat of the lane).
+
+PLACEMENT: next-place-struct73.ts (struct-72 first-placement chassis):
+hash gate -> absence -> 1 upload (no 429) -> 1 spawn verb at exact tuple
+(-43.84, -0.0533, -43.84) yaw 0, lib store/3291fe15600b4c52.glb.
+PLACED_VERIFIED; idempotent rerun 0 verbs. Comps empty by design (the
+keystone glow is mesh emissive).
+
+WALK: struct73-walk-moongate.ts 12/12 ALL_PASS worst 0.40m — N approach
+on the az-135 spoke -> through the 4.7m opening -> clear S -> back
+through N (two-way) -> outer circuit both flanks.
+
+STANDING STATE: Round 6 R6-2 seated. The SW spoke now reads waystone-w
+-> shrine -> hypar -> mill sign -> windmill -> stillwind -> MOON GATE at
+the district threshold; walking SW, the ring frames the temple seeds.
+BILL EYE-CHECK PACKET: walk SW on the az-135 spoke past the waystone — a
+stone ring rising from the earth, 36 voussoirs in dark-mortar rhythm,
+one brass keystone at the crown; step through it and the circle frames
+the temple seeds beyond; at dusk a single warm point marks the crown.
+Frames: reviews/struct73-moongate-v3/ (gameplay 18m contract frame +
+night). Ledger struct-73 D+1/E+0 law EXACT 2370691 (h-1-class trailing
+pair self-caught and repaired in-tick: doubled pair from prose+tool,
+reduced to one). Census 279 -> 280.
+Next tick: 74%3==2 -> build tick (R6-3 concept or city-lane/Shard re-arm
+scan).
