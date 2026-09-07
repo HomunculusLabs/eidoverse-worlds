@@ -335,6 +335,21 @@ local sha256), this-tick review-model.ts renders into struct48-*-rejudge.
 - Provider PARTIAL this tick: pendulum + mobius frames judged NATIVE;
   hypar + soundmirror 1210 x2 + one paced retry each — debts REMAIN
   OWED (flap law; frames banked as next-tick substrate).
+  survey-16 (read-only observer, live served bytes
+  reviews/survey16-slice/): BOTH remaining debts CLEARED natively —
+  hypar PASS on struct-40 fixed bytes (served 4c4ed56b / lib
+  750f82ee: deliberate twin-peak ruled saddle, zero floats, uniform
+  lattice apertures, clean silhouette; survey-3/5/6 defect chain
+  closes), soundmirror PASS on struct-45 rebuilt bytes (served
+  413bdeed / lib f313e59a: true dish read, overhanging rim over
+  dark recessed interior = legible concavity, both prior defect
+  classes — ziggurat read + illegible concavity — resolved).
+  Struct-lane debt board now 4/4 CLEARED. Also: meridianstair
+  first independent visual read = ZAI-fallback CLEAN-with-margin
+  (portal sequence grounded, no floats/rips; margin: lower-panel
+  summit pins below 18m legibility in review lighting — engine
+  dusk check, not render defect). Probe, not verdict; struct-47's
+  waiver-grounded claim stands until the lane judges natively.
 - **PENDULUM native PASS** — strings solid-continuous all nine (struct-41
   fix confirmed), dash-band = decode-proven correct-physics nine-rod
   shadow, bobs one family, identity reads pendulum wave.

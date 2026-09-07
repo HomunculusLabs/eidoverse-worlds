@@ -1698,6 +1698,13 @@ open duplicate notes for these objects.
   x522-528 y378-386); quench barrel marginal (no contact shadow
   x510-530 y402). Glow alone carries identity. Evidence:
   reviews/survey8-slice/nx-forge/gameplay.png
+  survey-16 NATIVE re-judge (live bytes served 783c3bb2,
+  reviews/survey16-slice/forge-views/): CLEAN 4/4 — furnace +
+  stacked chimney + side hood + anvil-on-stump all read, firebox
+  emissive glow anchors identity instantly, contact shadows ground
+  everything, zero voids (survey-8 "floating plate" reads as
+  tool/stock sliver, attached); row may close (ZAI Sev 4 was
+  identity-marginal; native upgrades to clean, margin only).
 - `nx-cistern` — Sev 4 identity-marginal (survey-8, ZAI + decode):
   no water read at 18m; reads dark box + leaning plank; no tiering;
   stone too dark. DECODE (live store bytes): water plane EXISTS — mat
@@ -1708,6 +1715,15 @@ open duplicate notes for these objects.
   known-fails band; rim-vs-water value separation likely absent
   in-world too. Strut hairline contacts x483→520. Evidence:
   reviews/survey8-slice/nx-cistern/gameplay.png
+  survey-16 NATIVE re-judge (served 39e513dd,
+  reviews/survey16-slice/cistern-views/): CONFIRM, Sev raised
+  4→2 — 18m gameplay read = closed dry crate, zero basin/water
+  cues, identity weak-fail; TOP cross-check: water plane EXISTS
+  and reads navy-still inside the OPEN LEFT HALF (recessed rim
+  legible) but the right half is a flush closed panel — polish-281
+  shadowed-interior sibling class; fix lane per polish-271/281
+  lineage: palette #506a78 + same-hue emissive + widen/recess the
+  basin opening so the tank read survives 18m.
 - `nx-dress-fountain` — Sev 4 (survey-8, ZAI + decode; DRESS-DOMAIN,
   legacy-core off-limits set — ownership is Bill's call, not dress
   rotation): water fails at 18m. DECODE: ENTIRE asset is ONE material
@@ -1719,6 +1735,15 @@ open duplicate notes for these objects.
   (darker than the falsified #303840). Stem 3-4px shimmer x479-483
   y291-313. Note routed to DRESSING-PLAN SURVEY INTAKE. Evidence:
   reviews/survey8-slice/nx-dress-fountain/gameplay.png
+  survey-16 ZAI-fallback corroboration (served f4fcc0ac,
+  reviews/survey16-slice/fountain-views/): re-CONFIRM, Sev
+  reconciled 4→3 — shape identity PASSES both views (canonical
+  basin→pedestal→bowl→finial stack, no floats, clean silhouette)
+  but main-basin water-read FAILS at 18m AND aerial (dry matte
+  brown interior, no blue/gloss/jets; the small upper tier alone
+  shows the correct teal-blue treatment — the fix template is
+  already in the asset). Row stands; ownership stays Bill's call
+  (legacy-core off-limits set unchanged).
 - `nx-temple-seed-0003` — Sev 4 (survey-8, ZAI gameplay + top): flat
   rubble/mosaic read confirmed from BOTH angles — flower-of-life disc
   at constant height, no central seed core or vertical form (uniform

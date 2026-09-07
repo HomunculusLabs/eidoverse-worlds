@@ -577,18 +577,68 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   missed labyrinth-0051, next tick's first candidate); mile-* and sign-*
   sets are lane-owned with their own review cadence, outside survey
   scope. Routing: ZERO notes routed, ZERO candidate rows, ZERO ledger
- append (loop law: append only when routing). Census 259 steady 0/0 at
- judging time vs survey-14 snapshot; LATE-TICK re-census (post-gate2,
- triggered by dress-63's ledger line reporting 260): 259->260 — ONE
- arrival nx-struct-meridianstair (5.7,-54.7) lib dec58a3b bbox PRESENT =
- struct-domain work-in-flight, classified; AND R-120 RESOLVED LIVE
- mid-tick: all four nx-approach-lamp-{e,n,s,w} libs flipped truncated
- 18b69a6bb2.glb -> FULL 18b69a6bb2f5862f.glb, all bboxes PRESENT (the
- five-sweep-escalated Sev 1 now closed by a sibling — register
- reconciliation is sweep's lane); one more domain-valid flip
- nx-town-longhouse f2344409 -> e3adcd3d (town domain). Snapshot baseline
- refreshed to 260 (/tmp/survey15-census-snapshot.json). Gate: ALL PASS
- real exit 0 first try at 22ea039; HEAD advanced mid-tick to 5d88242 —
- gate re-run at new HEAD before commit, ALL PASS exit 0 (polish-270
- epoch law). Verdicts 0 confirmed / 8 clean-with-margin /
- 0 dropped. Zero world mutations, zero uploads, zero shared-budget use.
+  append (loop law: append only when routing). Census 259 steady 0/0 at
+  judging time vs survey-14 snapshot; LATE-TICK re-census (post-gate2,
+  triggered by dress-63's ledger line reporting 260): 259->260 — ONE
+  arrival nx-struct-meridianstair (5.7,-54.7) lib dec58a3b bbox PRESENT =
+  struct-domain work-in-flight, classified; AND R-120 RESOLVED LIVE
+  mid-tick: all four nx-approach-lamp-{e,n,s,w} libs flipped truncated
+  18b69a6bb2.glb -> FULL 18b69a6bb2f5862f.glb, all bboxes PRESENT (the
+  five-sweep-escalated Sev 1 now closed by a sibling — register
+  reconciliation is sweep's lane); one more domain-valid flip
+  nx-town-longhouse f2344409 -> e3adcd3d (town domain). Snapshot baseline
+  refreshed to 260 (/tmp/survey15-census-snapshot.json). Gate: ALL PASS
+  real exit 0 first try at 22ea039; HEAD advanced mid-tick to 5d88242 —
+  gate re-run at new HEAD before commit, ALL PASS exit 0 (polish-270
+  epoch law). Verdicts 0 confirmed / 8 clean-with-margin /
+  0 dropped. Zero world mutations, zero uploads, zero shared-budget use.
+
+## Judged index (survey-16)
+
+- survey-16 (2026-09-06, NATIVE 5/7 + ZAI fallback 2/7 disclosed; 18m
+  gameplay, fresh live store bytes 7/7 HTTP 200 curl UA on exact
+  census-16 libs, served-shas pinned; native flap pattern: labyrinth
+  1210 x1 recovered by paced retry then judged natively
+  mid-tick — dual-judged; meridianstair 1210 x2 + paced retry
+  burned = ZAI-only): re-judge debt slice — hypar + soundmirror
+  (struct debt board) + ZAI-only round-2 rows (forge/cistern/
+  fountain) + labyrinth-0051 (final unjudged district member) +
+  meridianstair (survey-15 arrival, first independent read).
+  Verdicts: HYPAR NATIVE CLEAN on struct-40 fixed bytes (served
+  4c4ed56b / lib 750f82ee) — survey-5/6 native-owed debt CLOSED;
+  deliberate ruled-saddle arch, twin peaks, uniform lattice, zero
+  floats. SOUNDMIRROR NATIVE CLEAN on struct-45 rebuilt bytes
+  (served 413bdeed / lib f313e59a) — concavity legible via
+  overhanging-rim/dark-interior contrast; ziggurat + illegible-
+  concavity classes both resolved. Struct debt board 4/4 CLEARED.
+  FORGE NATIVE CLEAN 4/4 — survey-8 ZAI Sev 4 identity-marginal
+  upgrades to clean; furnace/chimney/hood/anvil read, glow anchors,
+  zero voids ("floating plate" = attached tool sliver); row may
+  close. CISTERN NATIVE CONFIRM, Sev 4→2 — 18m read = closed dry
+  crate; top cross-check: water EXISTS and reads navy inside the
+  open LEFT half, right half is a flush closed panel (polish-281
+  sibling class; fix lineage #506a78 + emissive + wider opening).
+  FOUNTAIN ZAI-fallback re-CONFIRM, Sev 4→3 — shape identity
+  passes both views, main-basin water-read fails both (upper tier
+  alone shows correct teal-blue = in-asset fix template); ownership
+  stays Bill's call. LABYRINTH-0051 CLEAN — dual-judged (ZAI +
+  recovered native, unanimous): Troy-town rings, center goal,
+  clean silhouette; margin: center-orb hover verify-tier,
+  entrance masked at angle; family closes 4-of-4 → DISTRICT
+  FAMILY CENSUS 13-of-13 COMPLETE (improve-2's whole-grid audit
+  of district families now fully surveyed). MERIDIANSTAIR ZAI
+  CLEAN-with-margin (first independent read after struct-47's
+  waiver-grounded claim): three-gate portal sequence, all posts
+  grounded, designed lattice; margin: lower-panel summit pins
+  below 18m legibility in review lighting (engine dusk check).
+  Routing: annotations on 3 standing IMPROVE-PLAN rows (forge
+  may-close, cistern Sev raise, fountain corroborate) + 1 note in
+  STRUCTURES-PLAN struct-48 debt record (2 debts cleared natively
+  + meridianstair probe); zero new candidate rows (every judged
+  object already stands in a queue or is clean); grep-verified
+  zero open duplicates. Census 260 steady 0/0 ZERO flips vs
+  survey-15 refreshed baseline; lights 38. Gate: ALL PASS real
+  exit 0 first try at 10591fb; HEAD advanced mid-read to 670793d
+  (dress-72, foreign files only; all four target plans clean in
+  tree at read). Verdicts 2 confirmed / 5 clean / 0 dropped.
+  Zero world mutations, zero uploads, zero shared-budget use.
