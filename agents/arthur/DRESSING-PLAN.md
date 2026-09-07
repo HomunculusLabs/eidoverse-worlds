@@ -1,5 +1,38 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
+### dress-129 — lawful HOLD (20th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 (observed HEAD b062c189 city-74 sibling interleave past
+  own d0e6a773, both named); interlane md5 f6254cd0 pin-exact. Fresh
+  census 293 = 292 + ONE arrival `nx-struct-lemniscateseat` (−60,
+  −0.0237, −7) — struct-domain sibling work-in-flight, ledger-matched
+  class, NOT dress intake; epoch diff vs dress-128 capture
+  +1/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-129.py` HOLD_VERIFY_PASS exit 0); dress
+  domain 45 = 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy.
+  Round-3 closers PINS_EXACT 4/4 vs live by lib-hash lookup: foxden
+  856deec5 (73, −0.0532, −10.5) yaw 4.7124 (= 3π/2 designed
+  landmark), lanternhook 639c5480 (−57, −0.03056, −70) yaw 4.9277,
+  seats cb34bd36 (−57, −0.0263, −72.5) yaw 2.7349, streamstones
+  aabbc23d (75.05, −0.0249, −46.9) yaw −0.7854 (radian law, no
+  yaw≤π guard).
+- **Shard/intake (standing, re-checked in-file)**: IMPROVE-PLAN rows
+  29–38 all terminal (DROPPED dress-13/14/17, NATIVE-DROPPED survey-2,
+  EXECUTED dress-15/18/19/20/21, CLOSED approach-5/survey folds); rows
+  39+ are `nx-town-*` (improve's domain per routing table line 1179);
+  no round-4 section (grep 0); survey intake max 54 — zero nx-dress
+  intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains
+  the two one-line rulings in `reviews/dress-round3-eye-gate.md`.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use (D+0, E+0).**
+
 ### dress-128 — lawful HOLD (19th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
