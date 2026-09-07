@@ -2526,7 +2526,14 @@ verdicts:
   is framing-limited; candidate numbers if re-confirmed natively:
   2-3px value accent (rune band or lighter cap) + 1-2deg lean, exactly
   the mkv3-waystone41 sibling idiom (varied lean) already judged CLEAN
-  at 18m. Probe, not a verdict. Evidence: reviews/survey26-slice/waystone/
+  at 18m.  Probe, not a verdict. Evidence: reviews/survey26-slice/waystone/
+  [survey-27 third vote (ZAI fallback, native 1210 x2 burned): Sev 4
+  CONFIRM side, cluster 2-1 toward defect (bollard-band identity:
+  cap=shaft value x468-492 y333-347, plumb symmetric taper, zero
+  glyph/accent resolvable in 14px shaft; grounding PASS; cheapest
+  fixes named: cap value break, 2-4deg lean, arm exaggeration).
+  Native tie-break STILL OWED. Evidence: reviews/survey27-slice/
+  struct-waystone/]
 
 
 ## struct-59 (2026-09-07): R4-4 THE STILLWIND WALL — v2 built + judged,

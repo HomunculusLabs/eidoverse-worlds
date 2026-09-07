@@ -1270,3 +1270,59 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   0 dropped. Zero world mutations, zero uploads, zero comp edits,
   zero shared-budget use. Native re-judge debt disclosed on all six
   ZAI verdicts (native down hard all tick).
+
+
+## Judged index (survey-27)
+
+- survey-27 (2026-09-07, NATIVE 3/7 + ZAI fallback 4/7 disclosed — native
+  flap pattern: single paced retry recovered well + charcoal + timberyard
+  native; waystone/bench-plaza/stillwind/stile burned both calls, ZAI
+  fallback; 18m gameplay, fresh live store bytes 7/7 curl UA on exact
+  census-27 libs, served-shas pinned): NATIVE-DEBT + NEW-ARRIVALS slice
+  (severity backlog drained; improve-34 longhouse + dress-84 snagdead
+  in-flight excluded at selection). Slice = well/bench-plaza/charcoal
+  (survey-23/26 rows, third votes) + waystone (tie-break attempt) +
+  stile (dissent) + stillwind + timberyard (never-judged arrivals).
+  WELL NATIVE CLEAN-with-margin — native-debt PAID, reads wishing-well
+  via roof+posts+rope+bucket formula, grounded; margins: 1-2px rope,
+  mouth sub-legible at 18m, dark-albedo polish tier. CHARCOAL NATIVE
+  CONFIRM Sev 2 — smoke dashes glitch-class x442-462 y310-341 + pile
+  void x508-596 y377-404 + no vent; 3rd vote unanimous, native-backed.
+  TIMBERYARD NATIVE CLEAN-with-margin — first independent read, concurs
+  dress-83 (trestle+workpiece+crib grammar lands, pale caps work;
+  margins: gate secondary-read available from silhouette alone, cant
+  hooks sub-resolving, base-cluster lowest contrast). WAYSTONE ZAI
+  Sev 4 — cluster 2-1 toward defect (bollard-band identity), native
+  tie-break still owed. BENCH-PLAZA ZAI third vote CLEAN-with-margin
+  consistent (3x ZAI cluster, no confirmed defect tier; motion-shimmer
+  Sev 5 named); native re-judge carries forward. STILWIND ZAI
+  CLEAN-with-margin — first independent read, concurs struct-60 (arch
+  apex + coping + one glow pin read; margins are angle-occlusion: arch
+  span blocked by near pier at this bearing, left pin occluded, ring
+  sub-pixel; frontal 18m frame named as follow-up by the judge). STILE
+  ZAI fallback NOT EXECUTED (run-time budget exhausted before fallback
+  pass) — dissent carries unchanged, native+ZAI tie-break owed next
+  tick. Id correction self-catch: 4 slice ids derived verbatim from
+  fresh census (nx-dress-well / nx-dress-bench-plaza / nx-dress-charcoal
+  / nx-struct-waystone-{e,n,s,w} fleet), not guessed. One bad ZAI call
+  construction (deadpath.png) fail-closed 404, re-issued correctly.
+  Census 269 vs survey-26 snapshot 267: +2 arrivals both ledger-matched
+  (stillwind struct-60 tuple-exact, timberyard dress-83 tuple-exact) +
+  1 lib flip windmill POS_SAME (improve-33, sweep-60-classified); 0
+  departures; lights 38 thing-side. Gate ALL PASS real exit 0 first
+  try at ba74502 (ledger law EXACT 2370613). Verdicts 1 confirmed
+  (charcoal) / 3 clean (well, timberyard, stillwind — all
+  clean-with-margin) / 1 third-vote dissent-side (waystone) / 1 third-
+  vote consistent (bench-plaza) / 1 not-executed (stile, carries).
+  Routing: 2 third-vote annotations IMPROVE-PLAN survey-26 rows (well
+  native-debt PAID, charcoal native confirm), 1 waystone vote update
+  STRUCTURES-PLAN intake, 1 bench-plaza annotation IMPROVE-PLAN.
+  Grep-verified zero open duplicates pre-append. Zero world mutations,
+  zero uploads, zero comp edits, zero shared-budget use.
+
+## Routed notes (survey-27)
+
+- survey-27: well/charcoal/bench-plaza third votes on standing
+  IMPROVE-PLAN survey-23/26 rows (annotations only, rows already stand);
+  waystone third vote on STRUCTURES-PLAN intake line. Zero new
+  candidate rows (no new defect classes; stillwind/timberyard CLEAN).

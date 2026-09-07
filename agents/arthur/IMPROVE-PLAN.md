@@ -1807,19 +1807,40 @@ verdict names its judge):**
   read still HOLDS via roof+posts+rope+bucket (silhouette hourglass
   PASS). Row corroborated 2x ZAI, native owed. Evidence:
   reviews/survey26-slice/well/]
+  [survey-27 third vote (NATIVE, provider recovered mid-tick):
+  CLEAN-with-margin at 18m/960x720 — wishing-well formula PASS (roof
+  x425-537 y281-315, posts, 1-2px rope x477-479 y318-343, bucket
+  x470-487 y343-358 strongest cue), grounded with contact shadow; margins:
+  rope 1-2px dies under resolution loss, well-mouth/hole sub-legible at
+  18m, monolithic dark albedo polish-tier. Native-debt PAID. Evidence:
+  reviews/survey27-slice/dress-well/]
   [survey-26 second ZAI vote: bench read MARGINAL 6/10 — arc bow ~4px
   sub-perceptual (reads straight rail), band only 13px tall, 7px legs
   at legibility floor, cantilevered ends +~20px add to rail read;
   3-of-4 joints readable as 1-2px seams; zero floats, zero holes,
   shadow contact solid. Rail/fence collapse risk = the standing row's
   core finding, second vote. Native owed. Evidence:
-  reviews/survey26-slice/bench-plaza/]
+  reviews/survey26-slice/bench-plaza/
+  [survey-27 third vote (ZAI fallback): CLEAN-with-margin consistent —
+  identity marginal-but-passes (bench vs rail second-guess persists,
+  arc bow 3-4px sub-perceptual as shape cue), grounding PASS, joint
+  gaps NOT reproduced this frame (<=1px notch jitter); motion-shimmer
+  risk on 3-4px legs/notches named Sev 5. Cluster stays 3x ZAI
+  consistent, native re-judge carries forward. Evidence:
+  reviews/survey27-slice/dress-bench-plaza/]]
   [survey-26 second ZAI vote: floating-dash islands RE-CONFIRMED on
   exact pixel regions — dash1 x444-460 y311-316, dash2 x448-462
   y323-328, dot x443-448 y336-340 with void bands between and 7px sky
   gap to the turf cap; dome still has no legible vent aperture; dark
   pile x515-595 y385-403 value-crushed featureless. Row corroborated
   2x ZAI, native owed. Evidence: reviews/survey26-slice/charcoal/]
+  [survey-27 third vote (NATIVE): CONFIRM Sev 2 headline — smoke reads
+  4 detached hard-edged near-black dashes x442-462 y310-341 in open sky
+  (glitch-class, exact survey-23/26 regions reproduced); dark pile
+  value-crushed to void x508-596 y377-404; NO vent (identity collapses
+  to mound); turf blobs; stick sliver ambiguous grounding x365-396
+  y331-403 Sev 4. Native-debt PAID, 3rd vote unanimous. Evidence:
+  reviews/survey27-slice/dress-charcoal/]
 
 **survey-24 sub-section (2026-09-07, ZAI fallback — native 1210 x2 +
 paced retry burned, hard down all tick; decode cross-check on served
