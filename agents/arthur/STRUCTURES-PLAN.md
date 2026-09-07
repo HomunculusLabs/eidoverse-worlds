@@ -2583,6 +2583,12 @@ verdicts:
   engine read may be fairer than chassis. Two-frame native finding
   (gameplay + top). Probe, not a verdict; decode/execute law stays
   with struct. Evidence: reviews/survey40-slice/reedpool/
+  [CLOSED struct-81, 2026-09-07: decode proved 4/6 meshes material:None
+  (plain mats, struct-38 class — the void WAS the honest read of the
+  bytes); water -> screwwell emissive idiom + brass tips -> amber accent,
+  materials-only, all six envelopes byte-identical; native 18m 4/4 +
+  night 3/3 PASS; reseated exact tuple, PLACED_VERIFIED + idempotent +
+  walk 10/10. Full record: struct-81 section below.]
 - `nx-struct-angler` — CONFIRMED at the city-5 seat by composed-pair
   arithmetic (native render dissent corroborated): bobber baked
   angler-local (2.8, 0.144, −4.92), engineered (struct-46) to hit
@@ -3880,3 +3886,69 @@ Bill eye-check packet (one): screw well on the W spoke — walk the W spoke
 from the millrace outward: the machine profile with spinning screw and
 teal pockets climbing; at night the pockets are the accent. Ogee gate now
 faces the NE lane tangent (was skewed ~40deg).
+
+## struct-81 (2026-09-07): survey-40 reedpool VOID-READ closed — materials
+## cure reseated at the exact city-5 seat (refine tick)
+
+Cadence 81%3==0 refine tick; refine pool top-deficit = survey-40 reedpool
+native WATER FAIL (void-read), the only open routed note in domain (angler
+companion note explicitly city's call). Round-1 shard EMPTY (re-verified:
+all nx-struct rows terminal). Gate ALL PASS real exit 0 at 321afa2c
+tick-start AND re-run exit 0 immediately pre-mutation. Interlane f6254cd0.
+
+DECODE-FIRST ROOT CAUSE (exact live bytes d3a81b79 fetched from
+/library/store/, local sha16 == live lib prefix): 4 of 6 meshes carried
+`material: None` — water, reeds, brass, mast all plain `mat()` with no
+emissive; glbwrite exports only texMat/emissive lanes (struct-38/55/56
+class). The water rendered COLOR_0 0x506a78 with zero material response —
+survey-40's "RGB≈(40,50,60), zero cues" void-read was the honest read of
+the bytes. Top-view pixel probe on the same rig confirmed: water-region
+meanRGB (34,45,45) — b==g, not blue-dominant at all.
+
+ONE-DEFECT FIX (materials only, reeds untouched — they PASSed native):
+water -> screwwell idiom mat(0x506a78, 0.25, 0.5) + emissive 0x2e4a58@0.45
+(polish-271/281 lineage, validated on fountain/cistern/screwwell); brass
+mast tips -> catenary/moongate amber accent 0x9a6a28@0.75 (same export
+class, advertised accent was dead).
+
+EVIDENCE: sha d3a81b79 -> 7d770620bb1b7bdcfef7000db14d8cb53be3647b9664ce9
+3374053745bc84af1 x2 deterministic (mtime verified, not just hash). Decode:
+water mesh now glow0 (emissive [0.0123,0.0308,0.0439] = linear 0x2e4a58@
+0.45 exact), tips glow3; ALL SIX mesh envelopes byte-identical (strict
+materials-only, same collider/SAT set). Pixel falsification (identical
+rig): gameplay teal 0 -> 2754 px, top 0 -> 40803, night 0 -> 147 teal +
+95 warm; water-region meanRGB (34,45,45) -> (37,61,73). NATIVE judge
+18m gameplay 4/4 PASS (water reads slate-blue liquid not void; no pits;
+fully quiet matte; pond-crossed-by-footbridge unambiguous) + night 3/3
+PASS (faint moonlit blue, two clean amber points, zero noise). Frames:
+reviews/struct81-reedpool/{before,after}/.
+
+SEAT: SAME exact tuple (9.723, -0.05907, -90.982) yaw 0 — city-5 SE
+S-edge seam seat. SAT preflight (fresh 286 census) worst honest neighbor
+nx-wild-forest-0010 +1.73. Placer carried a STANDING-PRECEDENT exemption
+for nx-struct-angler (tier-a: city-5 register row 44 DESIGNED companion,
+sweep-42 E4 precedent, sweep-83 battery classifies the pair accepted —
+its SAT exit names only R-121): standing contact measured before the
+exemption was written — square-proxy -1.807, TRUE ellipse(water+rim
+a=4.55 b=3.05)-vs-angler-AABB corner (-3.38,±1.53) INSIDE (the rod
+overhangs the west water tip by design — the angler fishes INTO the
+pool); reseat is envelope-identical so the standing contact cannot change.
+
+PLACE: 1 upload (paced, no 429) + remove+spawn 2 verbs, lib
+store/7d770620bb1b7bdc.glb, PLACED_VERIFIED exact tuple, comp {} both
+sides (empty bag by design, comp-wipe law trivial), idempotent rerun
+zero verbs. Census 286==286 (pure replace).
+
+WALK re-proof (city5-walk-reedpool.ts, same legs as city-5's proof):
+10/10 ALL_PASS worst 0.39m — S-axis transit both ways, 4-corner circuit,
+bridge crossing + recross, angler bench. (Three support-seam abstentions
+on labyrinth/streamstones entities printed — foreign diagnostics, not
+lane defects; normalized set unchanged from city-5's run class.)
+
+BILL EYE-CHECK: on the SE wild S-edge seat (walk south on the S axis
+past the S gate): the reed pool's water should now READ — slate-blue
+surface in both lobes, quiet moonlit at night with the two brass mast
+tips as warm points. It should not read as a dark pit anymore. Survey-40
+row CLOSED by this tick.
+
+Next tick: 82%3==1 -> build tick (R7-2 commission or shard re-arm scan).
