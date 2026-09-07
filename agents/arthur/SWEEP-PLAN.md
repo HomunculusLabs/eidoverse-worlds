@@ -3005,6 +3005,39 @@ hall/forge, @90 bunkhouse/longhouse, @89 potter/market, @88 inn/stable,
 garden-cottage + tower-house last walked sweep-82, now the stalest
 standing pair; both walk tools verified present).
 
+sweep-92: CLEAN SWEEP, fully steady tick. Census epoch A 291==291 fully
+quiet vs the committed sweep-91 baseline sha16 ba9884a8e1e91683 (0
+arrivals, 0 departures, 0 drift on the canonical 7-field diff); paced
+epoch-B re-read 20s later byte-identical (raw sha16 07bf89a9b741e53b at
+both epochs) — both prior arrivals sweep-91-absorbed and since committed
+(dress-109 @ 9800d2fe, struct-85 @ 1ba2d258), no snapshot rewrite needed
+(sweep-87 precedent). Overlap: SAT on its own fresh live fetch — 253 bbox
+non-light / 231 classified / 0 coverage holes, exit 3 on ONLY the known
+R-121 lamp-n|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43,
+48th sweep since routing, not new, no escalation due — the law keys on
+severity-1). Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real
+exit 0: core 64/64 @ 0.38 maxArrival, NW 5/5 ALL_PASS, NE 7/7 ALL_PASS,
+SW 5/5 ALL_PASS (stderr support-seam abstentions on foreign dress/temple
+entities = the known normalized set, unchanged). Tier-2 70th cycle per
+the committed pointer: garden-cottage 6/6 @ 0.355 + tower-house 6/6 @
+0.377, both real exit 0. Integrity: pins 15/15 ALL_PINS_OK (46th
+consecutive, struct18 real exit 0) + battery 28/28 ALL PASS on epoch-A
+bytes. Interlane md5 f6254cd0 stable. Ledger law verified fresh this
+tick by the standing gate's canonical check ("PASS ledger law EXACT |
+2370723 == 2370723", real exit 0 at 1ba2d258); my ad-hoc slice probe
+undercounted (1586 lines vs the canonical population — narrower filter,
+sweep-36 class) and was discarded before any verdict, disclosed here.
+Standing gate ALL PASS real exit 0 at tick-start 1ba2d258, re-run before
+commit. Foreign-lane dirt (SURVEY-PLAN.md, modified
+village_next_core_paths.glb + review json, terrain probes, fleet
+helpers) left untouched per interlane law. Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-93): row-cottage
++ inn (71st cycle — LRU chain: @70 garden-cottage/tower-house, @91
+hall/forge, @90 bunkhouse/longhouse, @89 potter/market, @88 inn/stable,
+@86 row-cottage/observatory — row-cottage stalest at 4 sweeps; both
+walk tools verified present).
+
 
 CORRECTION OF RECORD (sweep-91, index-race disclosure, artwalk-34
 adjacent class): commit 428a6e8e (sweep-91) swept FIVE foreign
