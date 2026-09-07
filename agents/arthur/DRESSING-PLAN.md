@@ -559,6 +559,19 @@ verify. SW lamp spend 0 of 3 (unchanged). Shard queue: no OPEN nx-dress
 rows (nine Round-1 terminal; round-2 only the legacy-core fountain —
 off-limits, Bill's call). SW lamps still blocked on Bill's a/b/c.
 
+**STATE AT dress-87 (2026-09-07, pipeline build tick — placement deferred
+to next tick on run budget, dress-82/85 class)**: two workstreams.
+(a) Stile survey-26 dissent: native tie-break ATTEMPTED on exact live
+bytes (rejudge rig reviews/dress87-stile-rejudge/; live lib 5e9d301d ==
+local v6 sha exact, served bytes 8c35a485 hashed) — native 1210 hard
+down x2 + paced retry; NOT ZAI-judged (both prior reads were ZAI — a
+third same-judge read is noise, not a tie-break). Row stays open, native
+tie-break still owed. (b) NW round-3 item 3 herb-drying racks BUILT AND
+NATIVE-ACCEPTED, NOT YET PLACED — details in the dress-87 siting-log
+entry below. Siting hand-derived vs census 271, MUST be re-verified
+fresh next tick. SW lamps still blocked on Bill's a/b/c (0 of 3). Shard
+queue: no OPEN nx-dress rows.
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
@@ -676,6 +689,54 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-87 — NW herb-drying racks (round-3 item 3, BUILT, NATIVE-ACCEPTED — placement pending next wakeup)
+
+- **Concept contract**: herb-drying racks at a lavender headland off the
+  az-45 walking corridor, PAST the stile gate (dress-11) — the worker is
+  inside the fields now. Commission said "near the dyer's yard edge";
+  the dyehouse itself is core SW (-23,-23), so the NW-native grounding
+  is the lavender plots (the dyer's crop). Two timber trestles carry one
+  drying pole; hung dye-plant bundles echo the dyer's vats (lavender
+  purple-grey, madder rust, weld yellow, one green herb); worked soil
+  patches, harvest basket with bundle heads, one dropped bundle — work
+  in progress, not abandoned. Distinct by HUNG COLOR DOTS ON A LINE (18m
+  identity); family grammar ties: pale CUT apex caps, bark timber.
+  Static unlit, NW lamp spend 0 of 2.
+- **Build**: `assets/mkv3-dress-nw-dryingracks1.ts` ->
+  `assets/village_dress_nw_dryingracks1.glb`.
+  - v1 (3eaa1766…) native 18m FAIL: read "clothesline/fence" — A-splay
+    was in local z ONLY (foreshortened to vertical bars dead-on,
+    dress-82 v4 axis-error class); single soil box rendered as a
+    continuous ground BEAM (textbook fence bottom-rail); bundle ties
+    sub-pixel (heads floated); pole overhang + drop read detached stick.
+    Praise kept: bundle color rhythm + basket = deliberate hang + genre.
+  - v2 **f0343efb6e7ab0fa3e20fdfca05126f9a57cab3e2841f8023545306fdad1ebff
+    ACCEPTED** (deterministic x2, 10 nodes): legs splay in PLAN (x AND
+    z) — native 18m judgment PASS: "herb/dye-plant drying rack",
+    splayed trestles clear (foot/apex width ratios falsify fence), soil
+    reads broken patches (gap falsifies rail), all 7 bundles tied to the
+    pole (no daylit gap), zero floaters (braces/tenons/nubs all
+    contact-verified). Close view ZAI fallback (native 1210 x3 on that
+    view, disclosed): holds as harvest vignette, joins clean, no
+    z-fighting confirmed; margins named — bundles smooth-ellipsoid up
+    close, basket reads plain vessel not weave, no lashing detail at
+    apexes. Margin class only; 18m identity governs and passed native.
+- **Decode (v2)**: 10 nodes (budget 3-25 ok); envelope x -2.244..2.032
+  (4.28m), y -0.033..1.666, z -0.724..0.731; local center (-0.106,
+  +0.003); footprint ~6.2m2 furniture-scale solid, h 1.67; min-y -0.033
+  grounded tolerance. No KEEP anchors, empty comp bag by design.
+- **Siting (HAND-DERIVED vs census 271 — MUST be re-verified fresh next
+  tick, dress-85/86 law)**: lavender-0040 (-39.58, 62.89, yaw 2.3562)
+  corridor-side (+z) edge near its SE end; candidate center ~(-36.5,
+  57.5), yaw 2.3562 (rack x parallel to field rows, local +z facing the
+  corridor). Checks owed next tick: fresh-census rotated-SAT vs ALL
+  solids (stile at (-45.25,54.45) r~4.5 away, lavender-0027/0040 discs,
+  hedge, milestone pairs), rim law (r corners ~[66,108]), approach
+  cones, 18m-cone check vs stile/lavender arrivals, terrain preflight
+  5-pt -> py, then hash-gated placer (dress-76/80/86 chassis, TRUE-dims
+  OBB with center offset) -> upload/spawn `nx-dress-nw-dryingracks-001`
+  -> post-place tuple verify + idempotent rerun -> ledger close.
 
 ### dress-86 — SW bell post placement (dress-85 build executed live, PLACED)
 
@@ -2964,6 +3025,11 @@ verdict:
   precedent does NOT apply (dress-18's acceptance was ZAI fallback).
   Probe, not a verdict; native re-judge is the tie-break.
   Evidence: reviews/survey26-slice/stile/
+  **dress-87 attempt**: rig reviews/dress87-stile-rejudge/ on exact
+  served bytes 8c35a485 (live lib 5e9d301d == local build, pin exact,
+  tuple (-45.25,0.046,54.45) yaw 2.3562) — native 1210 hard down x2 +
+  one paced retry; a third ZAI read adds no tie-break (both prior reads
+  were ZAI). Tie-break STILL OWED to native.
   [survey-28 native re-judge (NATIVE, survey-27's not-executed dissent
   paid): CONFIRMS the survey-26 dissent — identity FAIL at 18m in the
   isolated chassis: dominant read two-posts + double horizontal rail
