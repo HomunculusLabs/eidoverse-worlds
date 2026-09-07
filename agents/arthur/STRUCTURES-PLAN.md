@@ -177,6 +177,53 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   lintel-edge slivers x465-540 y292-300 flicker-risk. Evidence:
   `agents/arthur/reviews/survey17-slice/nx-struct-cellardoor/
   gameplay.png`.
+- [survey-18, 2026-09-06, NATIVE re-judge, 18m gameplay, live bytes
+  served-sha 6d490bab == survey-17 pin] `nx-struct-beacon` CONFIRMED
+  Sev 2 NATIVE — survey-17's ZAI finding now native-closed: three
+  pure-black void window-slits x468-496 (y240-302, y328-392, y414-470),
+  no frames/glow; beacon lantern read HOLDS (glowing pane x440-525
+  y135-185, hip cap, finial seated); grounded, zero floats. struct-51
+  names beacon void-rects next-worst after ninesbridge — this CONFIRM
+  is the native vote for that queue position.
+- [survey-18, 2026-09-06, NATIVE re-judge, live bytes served-sha
+  cd89a1ef == survey-17 pin] `nx-struct-waterstair` CONFIRMED Sev 3
+  NATIVE — native-closed: water unreadable; sole water = thin dark
+  teal trough band x408-575 y317-327 reading as shadow/opening; step
+  stack x410-550 y350-396 fully dry, zero flow cues; posts finials
+  grounded, geometry PASS. 0x506a78 palette-blue fix lineage applies.
+- [survey-18, 2026-09-06, NATIVE re-judge, live bytes served-sha
+  69ce6fc6 == survey-17 pin] `nx-struct-cellardoor` CONFIRMED Sev 3
+  NATIVE — native-closed: freestanding portal+void read (flat black
+  x428-534 y297-400, no center split/leaf thickness/hardware); no turf
+  berm (chassis flat-ground caveat stands); sill grounded + shadow
+  attached, no floats. Fix class: visible leaf split + interior depth.
+- [survey-18, 2026-09-06, NATIVE, live bytes served-sha 80f70423,
+  current live lib 4070ecc4] `nx-struct-ruledtower` (struct-50, this
+  tick) FIRST INDEPENDENT READ: NATIVE CLEAN — hyperboloid form reads
+  (straight generators crossing in Xs, pinch y260-310 x410-515, crown
+  + base flares), crown ring band + brass beads at vertices, 3-step
+  ashlar plinth grounds. Margin-tier only: base ring band thin vs
+  crown (thicken ~2x candidate), footing AO weak at y395-425, mid-
+  flank lattice sparsest zone. No defect note; struct-50's ZAI-judged
+  v2 PASS corroborated independently.
+- [survey-18, 2026-09-06, ZAI fallback corroboration, live bytes
+  served-sha 5d8e1782] `nx-struct-meridianstair` CLEAN corroborated —
+  three-gate sequence, all posts grounded, ruled lattice reads
+  designed. Verify-tier flags: adjacent gate posts merge at
+  x408-418/x538-548, gold summit pins — only ONE of three reads
+  (x665-680 atop gate 3; gates 1/2 pins occluded or missing — decode
+  check if spec'd three).
+- [survey-18, 2026-09-06, NATIVE, live bytes served-sha 5e04924e]
+  `nx-struct-northneedle` CLEAN-with-margin + NEW sub-findings (both
+  verify-tier, single-view): shaft lean ~3-4deg right (top centerline
+  x496 vs base x461 over 560px) and shaft mounted ~19px left of
+  plinth center (x461 vs x480). Summit/crown CLIPPED in both gameplay
+  and aerial chassis frames (13.4m object > chassis framing); tall-view
+  probe timed out twice and was deleted — ember-marker read UNPROVEN
+  this tick, survey-17's aerial-shows-crown claim not reproduced on
+  stock chassis. No new severity; lean sub-finding joins the standing
+  verify-intent flag.
+
 - [survey-17, 2026-09-06, ZAI FALLBACK, 18m gameplay, live bytes
   served-sha ea4f2317] `nx-struct-orreryring` MARGIN PROBE ONLY —
   fallback's primary finding ("center void ~x415-545 y388-396,

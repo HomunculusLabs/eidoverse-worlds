@@ -1742,7 +1742,14 @@ open duplicate notes for these objects.
   but main-basin water-read FAILS at 18m AND aerial (dry matte
   brown interior, no blue/gloss/jets; the small upper tier alone
   shows the correct teal-blue treatment — the fix template is
-  already in the asset). Row stands; ownership stays Bill's call
+  already in the asset).   survey-18 NATIVE corroboration (served f4fcc0ac,
+  reviews/survey18-slice/fountain-views/): shape 4/4 PASS
+  natively; main-basin water FAIL in BOTH gameplay and top
+  views (unanimous across all judges); upper-bowl water EXISTS
+  as #3D5F80 disc in top view but reads dark at gameplay
+  grazing angle — upper-tier fix template confirmed
+  CONDITIONAL (angle-dependent). Row stands Sev 3; ownership
+  stays Bill's call.
   (legacy-core off-limits set unchanged).
 - `nx-temple-seed-0003` — Sev 4 (survey-8, ZAI gameplay + top): flat
   rubble/mosaic read confirmed from BOTH angles — flower-of-life disc

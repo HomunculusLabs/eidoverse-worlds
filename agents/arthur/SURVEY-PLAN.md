@@ -707,3 +707,59 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   before append). Verdicts 4 confirmed / 5 clean (1 margin probe) /
   0 dropped. Zero world mutations, zero uploads, zero shared-budget
   use. Native re-judge debt on all four confirmed findings disclosed.
+
+## Judged index (survey-18)
+
+- survey-18 (2026-09-06, NATIVE 10/12 + ZAI fallback 2/12 disclosed, 18m
+  gameplay, fresh live store bytes 8/8 HTTP 200 curl UA on exact census-18
+  libs; the 5 re-judged objects byte-identical to survey-17 banked pins,
+  3 fresh fetches): NATIVE-DEBT slice — survey-17's four ZAI-CONFIRM
+  struct findings re-judged natively where native was up, struct-50's
+  ruledtower first independent read (placed this very tick, waiver-era),
+  meridianstair + northneedle ZAI-only reads, fountain ZAI-only round-2
+  row. Native flap: 1210 x2 on ninesbridge + meridianstair (paced retries
+  burned -> ZAI fallback); single-1210 recoveries on waterstair,
+  ruledtower, fountain. Verdicts: BEACON NATIVE CONFIRM Sev 2 — three
+  black void-rects x468-496 stacked y240-470 re-confirmed; beacon read
+  holds, lamp+finial attached, zero floats. WATERSTAIR NATIVE CONFIRM
+  Sev 3 — water unreadable; only water = thin teal trough band
+  x408-575 y317-327 reading shadow; cascade face x410-550 y350-396
+  fully dry; geometry clean. CELLARDOOR NATIVE CONFIRM Sev 3 — portal+
+  void read (flat black x428-534 y297-400), no leaf split/thickness/
+  hardware, no turf integration (chassis caveat stands); geometry
+  grounded, no floats. FOUNTAIN NATIVE CONFIRM Sev 3 — shape 4/4 PASS;
+  main-basin water FAIL both views (dry matte, no teal); upper-bowl
+  water EXISTS at top view (#3D5F80 disc) but dark at gameplay grazing
+  angle — survey-16's ZAI upper-tier claim corroborated ANGLE-DEPENDENT;
+  in-asset fix template confirmed conditional. NINESBRIDGE ZAI fallback
+  re-CONFIRM Sev 2 (byte-identical dca64ea9 to survey-17) — arcade clean,
+  9 lantern dots, zero mid-span faults; left sky-notch x55-90 + right
+  off-palette slab x815-878; BOTH approaches under-connect per judge.
+  NOTE: struct-51 EXECUTED the ninesbridge stair fix mid-tick (commit
+  4fedb7c, sha 8c5d9cce) — verdict recorded on pre-fix bytes; fix
+  acknowledged, no reopening. RULEDTOWER NATIVE CLEAN (first independent
+  read): hyperboloid form reads (straight generators, X crossings,
+  pinch y260-310 x410-515, both flares), crown band + brass beads,
+  3-step plinth; margins: base ring thin vs crown, footing AO weak,
+  mid-flank weave sparsest. MERIDIANSTAIR ZAI fallback CLEAN —
+  corroborates survey-16; three-gate sequence + grounding + ruled
+  lattice all read; flags: adjacent posts merge x408-418/x538-548,
+  slat pitch tight on gates 2-3, ONE gold pin reads of three (occluded
+  or missing — verify-tier). NORTHNEEDLE NATIVE CLEAN-with-margin —
+  taper 24px->8px reads, grounded; NEW sub-findings: shaft lean ~3-4deg
+  right (top x496 vs base x461 over 560px) + shaft mounted ~19px left
+  of plinth center; summit CLIPPED in both gameplay and aerial frames
+  (chassis tall-object framing limit — tall-view probe timed out x2,
+  deleted; ember-marker check unproven this tick). Routing: native
+  re-judge closures + beacon/waterstair/cellardoor CONFIRMs + ruledtower
+  CLEAN + northneedle sub-findings into STRUCTURES-PLAN SURVEY INTAKE;
+  fountain native annotation onto standing IMPROVE-PLAN row (row stands,
+  Bill's ownership call). Census 263 vs survey-16 snapshot 260: +3
+  arrivals all domain-valid (orchard-rows dress-74, ninesbridge
+  struct-49, ruledtower struct-50), 2 hamlet cure flips (improve-23/24,
+  POS_SAME), 0 departures, lights 38. Gate: ALL PASS real exit 0 first
+  try at 990ddeb (ledger law EXACT 2370319); HEAD advanced mid-tick to
+  4fedb7c then 122fc69 (struct-51 + improve-26, foreign only; all four
+  target plans clean in tree at append). Verdicts 5 confirmed / 3 clean
+  (2 clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
+  zero shared-budget use.
