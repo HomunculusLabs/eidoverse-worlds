@@ -1971,3 +1971,60 @@ next refine tick ahead of the intake ranking (53%3 != 0; the refine
 cadence law fires at struct-54, or the next work tick may take it if
 the intake is otherwise blocked — one structure per wakeup held).
 
+## struct-53 — WATERSTAIR WATER MATERIAL CURE (survey-17/18 Sev 3 intake)
+
+Work tick (53%3=2). Subject by intake ranking: waterstair — worst open
+native-CONFIRMED finding (survey-18: "water unreadable, dark band
+x408-575 y317-327 reads shadow/void, zero blue/gloss"). Shard audit
+this tick: all 14 `nx-struct-` improve round-1 rows carry closure
+brackets — shard fully executed, no un-shard pressure; commissioned
+queue still held on Bill's eye-gates; intake is the lawful queue.
+
+- **Root cause (decode, struct-38 class)**: `mat(0x506a78, 0.35, 0)`
+  exports NO glTF material — toGLB emits only texMat/emissive lanes, so
+  shelf_water (waterstair_1) and the finials (waterstair_2) drew with
+  the loader-default near-black material. Exactly the survey's void
+  band. Served-bytes check: /library/store/3ffa182c… returns cd89a1ef
+  — the survey pins stand on the exact served bytes (server
+  normalization pattern confirmed on beacon 03d278be -> 08e96615; lib
+  names keep upload-time content hashes).
+- **Fix (material lane only)**: canon water via emissive lane — base
+  0x506a78 rough 0.25 metal 0.5 (polish-271 palette) + faint same-hue
+  0x2e4a58 @0.45 (polish-281 shadowed-water law); finials textured gold
+  `ws_gold` (waysign handleTex law). sha 3ffa182c -> 4acda521 ×2
+  deterministic.
+- **SAT-neutral proof**: all three POSITION blobs byte-identical
+  (stone/water/finials); envelope strict subset of the standing bbox.
+  Decode self-catch: initial 7-byte "geometry diff" was my own parser
+  skipping the 8-byte BIN chunk header — probe-discipline
+  suspect-the-probe-first applied; corrected parser shows zero
+  geometry delta.
+- **Judged**: ZAI fallback (native 1210 ×2 + paced retry, disclosed —
+  native re-judge owed when provider returns): water READS as water,
+  "no longer negative space," hue distinct from stone, gold finials
+  "most successful element," zero artifacts. Margin named: 18m
+  first-glance reads "dark blue recessed band" — sun-glint strip
+  candidate queued IF native confirms the margin (not acted on under
+  fallback per one-defect law).
+- **Falsification**: before/after pixel diff isolates exactly the water
+  band + finials — gameplay 582 px (87% blue-class, 0 dark), front
+  3736 px (92%), aerial 33.9k px (99%), night moonlit-teal mean
+  (29.8, 48.4, 55.3) — not a void.
+- **Placed**: remove+spawn reseat exact tuple (0, -0.03222645164101495,
+  -32) yaw 0, comp null -> null. lib store/4acda52181875ffd.glb.
+  PLACED_VERIFIED 2 verbs; idempotent rerun zero verbs. Walk gate
+  (struct-16 pin): 4/4 ALL_PASS worst 0.358m.
+- Frames: reviews/struct53-waterstair/{before,after}/. Placer:
+  next-place-struct53.ts.
+
+**Bill should eye-check**: from the N gate walking south — the stair's
+reflecting shelf should now read as still blue water between the cheeks
+(not a dark slot), with the two gold finial dots on the cheek caps; at
+dusk the shelf keeps a quiet moonlit-teal read.
+
+**SURVEY INTAKE status**: waterstair row EXECUTED this tick. Remaining
+intake: cellardoor Sev 3 (void opening + missing leaf detail — next
+worst), orreryring margin-only. Observatory lamp_slit deferred row
+stands — queued for struct-54 refine tick (54%3==0) ahead of the
+intake ranking per the plan's own note.
+
