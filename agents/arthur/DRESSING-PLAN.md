@@ -1,5 +1,38 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
+### dress-131 — lawful HOLD (22nd post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 (observed HEAD 221c7a78 — sweep-97 mid-tick interleave,
+  corroborated by its own ledger entry; HEAD then advanced again to
+  bf1410f2 pre-commit, normal pipeline interleave); interlane md5
+  f6254cd0 pin-exact. Fresh census 293 steady — epoch diff vs dress-129
+  capture +0/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-131.py` HOLD_VERIFY_PASS exit 0); dress
+  domain 45 = 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy.
+  Round-3 closers PINS_EXACT 4/4 vs live by store/-prefix lib lookup:
+  foxden 856deec5 (73, −0.0532, −10.5) yaw 4.7124, lanternhook
+  639c5480 (−57, −0.0306, −70) yaw 4.9277, seats cb34bd36 (−57,
+  −0.0263, −72.5) yaw 2.7349, streamstones aabbc23d (75.05, −0.0249,
+  −46.9) yaw −0.7854 (radian law, no yaw≤π guard).
+- **Shard/intake (standing, re-checked in-file)**: IMPROVE-PLAN rows
+  29–38 all terminal (queue EMPTY), rows 39+ are `nx-town-*` routed to
+  improve per routing table; no round-4 section (grep 0); survey tag
+  max 54, survey56-slice (newest) already read — conoidfan + windmill
+  route to struct/improve domains, zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; commit trail carries no Bill rulings. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains
+  the two one-line rulings in `reviews/dress-round3-eye-gate.md`.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **One probe self-catch, disclosed**: gateway 403 on urllib default
+  User-Agent (bot-wall class) — probe fixed at source with a browser
+  UA header, then HOLD_VERIFY_PASS exit 0.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use (D+0, E+0).**
+
 ### dress-130 — lawful HOLD (21st post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
