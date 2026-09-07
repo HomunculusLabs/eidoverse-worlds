@@ -3207,3 +3207,50 @@ The sweep lane's epoch-B source-true decode of the exact live bytes (sweep71-dia
 Also recorded (no separate register item): dial|nx-town-hall closest pair 0.952m is a diagonal corner kiss; the actual E-W walking corridor is 1.834m (passes the 1.4m law) — no action needed unless the dial moves for R-123, in which case re-derive vs hall too.
 
 Treat as Bill-correction-class priority for the next struct wakeup: re-site the dial (N along the meridian clears the stair; re-derive with vertex-cloud SAT vs ALL standing neighbors incl. waterstair + hall, pitfall-10/struct-19 laws), re-prove the 12-leg dial walk incl. a true open S approach, and re-run the sweep SAT (exit 3 currently fires on this pair every sweep until then). Full evidence in SWEEP-PLAN findings register R-123.
+
+## struct-69 (2026-09-07): R6-1 THE CATENARY GATE — v5 built + judged PASS,
+## placement DEFERRED to next tick (run budget; improve-31/struct-59 class)
+
+BUILD-ONLY tick: world untouched, zero uploads/verbs. Gate ALL PASS exit 0 at
+fedc6d2d this tick (survey-33 interleave absorbed).
+
+ARC (5 versions, closed loop): v1 sha 842882ff — probe caught the INVERTED
+curve (F(cosh−1) hangs DOWN, minY −0.485) + 2 material-less prims (iron
+plain mat, struct-38 class). v2 re-authored intrados = SPRING_Y + C −
+f(cosh(x/f)−1) (springs 1.3m on shoulder faces — an arch springs from mass);
+sha d337a00d AUDIT PASS. v3 (v2-relabel after pin removal; probe y-law
+updated for true top 5.713) be827031: beads 0.085→0.14 after NATIVE judged
+the 18m chain INVISIBLE + spring pins "stray chips" (pins removed; chain's
+brass end beads anchor). v4 still FAIL — crest-mounted chain invisible from
+the 1.65m eye (crest is a foreshortened sliver at 5.6m height). v5 FACE-
+MOUNT: chain line 0.06 proud of the arch front face z=D/2+0.06, beads r0.14,
+crown bead r0.17 brass, tube rail same line. sha 0e3b5e5b4d7086ab
+6776c2476c9cf04c24df6ad3f1d247ffd32c7f800b536c32 ×2 deterministic.
+
+JUDGED (native, exact v5 bytes): 18m gameplay ALL PASS — chain VISIBLE
+countable on the face, 5 brass accents (crown+quarters+ends) unambiguous,
+"necklace draped over the arch" one clear idea, catenary reinforced by the
+bead line, zero floats/gaps; crown jewel hierarchy reads. NIGHT PASS — five
+quiet warm points (0x9a6a28@0.75 matte amber, no bloom/bleed/lantern-noise),
+iron chain survives as scalloped silhouette, no new light sources.
+
+DECODE AUDIT (struct69-probe-catenary.ts) ALL PASS: catenary truth (stone
+above intrados everywhere), clear-passage air stone-free |x|<3.30, copstone
+flush ≤0.23, iron rides the face line, emissive glow2 present, 4 nodes, 0
+material-less, envelope x±4.52 / y 0..5.798 / z −0.87..1.026 (face chain).
+
+CONTRACT NUMBERS: intrados y=1.3+3.92838−2(cosh(x/2)−1), crown soffit
+5.2284, extrados crown 5.6284, constant-normal V=0.40 voussoir, opening 7.0m
+at grade, footprint 8.9×1.6=14.2m² ≥8 + top 5.8 ≥2.2 → room gates honestly
+crossed → exact trimesh passage (constants read live in supportclass.js:
+ROOM_MIN_AREA 8, ROOM_MIN_H 2.2). 27 beads equal-ARC (chain law), arc 12.143.
+
+DEFERRED (next tick executes FIRST, queue law): 1) gate re-run exit 0;
+2) terrain preflight at (0, z≈−60.5) yaw 0 (N meridian threshold; gap to
+meridianstair edge ≈2.9m ≥1.4 law; verify vs fresh census incl. seed-0034
+at (−26.6,−65.8) and temple-terrace-0039 — SAT at TRUE envelope x±4.52,
+z±1.03, cy offsets trivial); 3) upload (429 pacing, shared budget) + spawn
+nx-struct-catenarygate; 4) post-place tuple verify + idempotent rerun;
+5) two-way MCPL passage walk through the 7m opening both directions;
+6) Bill eye-check packet. On judge FAIL: iterate, do not place (v5 already
+PASSes — contingency only).
