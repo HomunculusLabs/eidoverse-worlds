@@ -461,6 +461,17 @@ planned-dims scan under-gates by ~0.5m a side). Census 266. NW lamp spend
 `nx-dress-*` rows (nine Round-1 terminal; round-2 only the legacy-core
 fountain — off-limits, Bill's call). SW lamps still blocked on Bill's a/b/c.
 
+**STATE AT dress-81 (2026-09-07, pipeline cure tick)**: survey-23 intake
+`nx-dress-nw-orchard-rows-001` EXECUTED — native re-judge on exact live
+bytes CONFIRMED the 18m fence-read (close PASS / 18m FAIL split; 18m
+governs identity), cure iterated v3→v7 (native-judged; one 1210 flap
+window on v3 disclosed), v7 `962c5fb0` 18m PASS 75-80/20, reseat
+PLACED_VERIFIED at the unchanged tuple + idempotent 0 verbs (details in
+the dress-81 siting-log entry). Rotation next unchanged: NE round-3 item
+7 (timberyard). SW lamps still blocked on Bill's a/b/c (0 of 3). NW lamp
+spend 0 of 2. Legacy-core survey-23 candidates (well/bench-plaza/charcoal)
+remain Bill's-call probes, not shard work.
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
@@ -534,6 +545,57 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-81 — NW espalier rows fence-read cure (survey-23 intake EXECUTED, RESEATED, LIVE)
+
+- **Intake**: survey-23 ZAI probe (native 1210 x2, re-judge owed) — 18m read
+  "post-and-rail FENCE/TRELLIS, crenellation-like tabs, fruit specks read
+  artifacts". Native re-judge on exact live bytes (store DRACO bytes fetched
+  and pinned, rig `reviews/dress81-orchardrows-rejudge/`): 18m view CONFIRMS
+  all three counts (silhouette beats color — flat rectilinear arms, zero
+  canopy volume); close view PASSES (espalier grammar reads at 2.3m). Split
+  verdict, 18m governs identity. Pre-work pin: live `7359f025` == local v2,
+  tuple exact.
+- **Cure (v3→v7, native-iterated)**: v3 clump-run tiers + chunked trunks +
+  clustered trusses — close 7/10 with named fixes, plus own z-envelope
+  self-catch pre-placer (symmetric ±0.29 z would have dropped the
+  garden-0058 margin to ~1.31m < 1.4 pinch law); v4 7 clumps + tightened
+  trusses + front-biased z — 18m judge: canopy mass SOLVED ("no straight
+  rail survives"), still hedge-on-fence ~60/40; v5 plant gaps at posts +
+  tier bias + escaped shoot + face trusses — PASS w/ reservations 6.5/10,
+  picket-cadence keystone named; v6 trunk stagger/tilt + sign-varied per-
+  plant tier heights + thickness variance + second shoot + brighter warm
+  truss value — PASS 70/30; v7 trunk presence (1.5× thickness, warmer bark,
+  base flare — "trunks must WIN the vertical contest") + under-hang dangle
+  trusses — **PASS 75-80/20, "no further iteration required before
+  placement"**. Judge flaps disclosed: v3's two judgment calls hit native
+  1210 x2 (one paced retry; close view judged, 18m deferred to v4); v4-v7
+  all native.
+- **Build**: v7 sha
+  962c5fb041d19c634514836daf086c7390a90fce781a8a22e9de85f01a3da33e,
+  deterministic ×2. 8 meshes / 8 material buckets (budget 3-25 ✓). TRUE
+  envelope x −3.06..3.1265, z −0.15..0.3855, y 0..1.772 (uneven-top
+  honesty band → topGrid heightfield, same class as v2). Static unlit —
+  empty comp bag both sides (comp-wipe law trivial).
+- **Reseat**: `nw-dress81-reseat.ts` — SHA gate → old-pin migration gate
+  (`7359f025` exact) → NEW-pin idempotent short-circuit (added after the
+  first rerun correctly STOPPED at the migration gate against the new pin —
+  chassis lesson: a reseat placer's rerun must recognize its own new
+  contract, else every idempotency proof false-fails) → blocker-epoch guard
+  → fresh-census SAT at TRUE dims: clear, ZERO sub-1.4m solid adjacencies
+  (the 0.075m back-edge growth kept garden-0058 ≈1.445m ≥ 1.4) → rim
+  82.04..83.60 ∈ [66,108] → upload (one slot, shared budget) → remove+spawn
+  2 verbs at the UNCHANGED tuple (-48.062, 0.034, 67.530) yaw 2.3562.
+  **PLACED_VERIFIED** lib `store/962c5fb041d19c63.glb`. Idempotent rerun:
+  0 verbs, exit 0. Post census 267, lights 38.
+- **Lamp budget**: NW 0 of 2 — static unlit, no draw.
+- **Eye-check for Bill**: the espalier row on garden-0058's plaza-facing
+  boundary should now read trained-fruit at path distance — fat warm-barked
+  trunks with root flares BETWEEN the posts, lumpy two-tier green arms with
+  visible plant gaps, red truss clusters (some hanging UNDER the lower
+  arms), escaped shoots cresting the post caps. If it still reads
+  fence-first to your eye, say so — the judge chain says the vertical
+  rhythm (trunk thickness/flare) is the lever.
 
 ### dress-80 — NW three-bin compost frame (round-3 item 2, PLACED, LIVE)
 
@@ -2687,6 +2749,9 @@ verdict:
   intent? Row alignment / grounding PASS (posts grounded, one panel
   gap clean). Evidence:
   reviews/survey23-slice/nx-dress-nw-orchard-rows-001/
+  **CONSUMED dress-81**: native re-judge CONFIRMED the 18m fence-read
+  (close view PASS — split verdict, 18m governs identity); cure EXECUTED,
+  v7 962c5fb0 reseated at the unchanged tuple — see dress-81 siting log.
 
 district installs PIN_EXACT programmatic (store/-aware lib prefix, pos
 within 0.01, restated yaw, comps-empty, scale-1) vs the authoritative
