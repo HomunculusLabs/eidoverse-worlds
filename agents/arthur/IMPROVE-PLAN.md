@@ -2884,6 +2884,114 @@ open duplicate notes for these objects.
   Family note: 5 cairns (0022/0043/0047/0048/0050) distinct shas —
   verify the floater class spread before fleet work.
   Evidence: reviews/survey9-slice/nx-wild-cairn-0022/gameplay.png
+  [improve-43 CONTRACT (2026-09-07, this tick — BEFORE edit): round-2
+   re-arm take 6, worst-first OPEN improve-own row = WILD-CAIRN family
+   (Sev 3, 5/5 UNANIMOUS floaters: survey-9 ZAI+native 0022, survey-11
+   ZAI 0043, survey-12 NATIVE 0047, survey-13 ZAI 0048 + ZAI 0050).
+   town-4 routing: nx-wild-* wild district = improve's own surface.
+   Idle-guard clear (git tail 36h: zero nx-wild-cairn mutations since
+   nvp-era placements; survey reads only; mason.ts garden edit
+   improve-42 was composeGarden-only). Family pins census-fresh this
+   tick (276): 0022 (28.739,-0.074,-88.448) lib a4450b4094 = work
+   1642; 0048 (52.005,-0.035,-77.1) lib 09ed84ef = work 1655; 0043
+   (71.242,0.007,-59.779) lib 5d6c3edd = work 1668; 0047 (84.96,
+   -0.026,-37.827) lib 109e5bc5 = work 1681; 0050 (92.095,-0.029,
+   -12.943) lib efedd361 = work 1694; all yaw -2.35619449 scale 1
+   comps {} x5 (census-proven), no riders, no light companions.
+   BASELINE NO-DISPUTED-BYTES: local glb-retex sha16 x5 == live lib
+   prefixes exactly (verified this tick, 10-char census prefix of the
+   16-char local sha); before-bytes banked
+   reviews/improve43-cairn/before/ x5. Baseline reproduction gate =
+   improve43-rebuild-cairns.ts no-write mode must regenerate all five
+   live pins byte-identically BEFORE the edit.
+   BUILD CHAIN: mason.ts composeCairnfield (THEMES idx 4; works
+   1642/1655/1668/1681/1694 where i%13==4; rng(i+1) per work -> 5
+   distinct shas) -> familyPass -> mergeByMaterial (2 buckets,
+   stone+timber) -> toGLB -> glb-retex/work_NNNN_cairnfield.glb.
+   DECODE GROUND TRUTH (improve43-decode-cairn.ts, vertex-column
+   probe; meshes merge to 2 nodes so stone identity lives in vertex
+   columns): baseline stacking = fixed pitch y=0.2+s*0.3 with radius
+   0.28-0.05s -> consecutive spans OVERLAP s<=2, TOUCH s=3 (0.97 vs
+   0.98), GAP from s=4 (bottom 1.32 vs support top 1.23 = 0.09m) and
+   s=5 (bottom 1.67 vs 1.48 = 0.19m): every 5-6-stone cairn's top 1-2
+   pebbles float BY CONSTRUCTION = the surveyed sky-isolated floaters;
+   y-max exactly 1.73 all five works (the 6-stone tip). Materials PASS
+   (stone+timber real texMats, 0 material-less primitives — NOT a
+   struct-38 family). Scatter pebbles grounded (y 0.06, r 0.07-0.12,
+   bottoms at/below grade). Below-grade 846-937 verts = buried base
+   stones (grounded read, by design, unchanged).
+   ROOT CAUSE (single): STACKING-PITCH ARITHMETIC — fixed 0.3 pitch
+   outpaces the tapering radii, detaching the top 1-2 stones of every
+   tall cairn.
+   FIX (mason.ts composeCairnfield stone loop only; family-wide by
+   construction — same composer builds all five works):
+   F1 CONTACT LAW: y_s = y_{s-1} + r_{s-1} + r_s - 0.30*r_{s-1} (each
+   stone embeds 0.30 of the PREVIOUS stone's radius into its top;
+   embed >= 2.4x the worst-case support deficit ~0.126*r_prev =
+   icosahedron inradius deficit ~0.06 + lateral jitter drop ~0.066 at
+   the scaled jitter maximum) -> contact guaranteed by >= 0.17*r_prev
+   interpenetration at every joint; stones read nested, not hovering.
+   F2 RADIUS-SCALED JITTER: per-stone lateral jitter (r()-0.5)*0.1 *
+   (r_s/0.28) -> top pebbles stay inside the lower stone's silhouette;
+   rng CALL ORDER + COUNT preserved exactly (xjit, zjit, rx, ry, rz =
+   5 draws/stone, same order) -> cairn ring positions, scatter, and
+   rotations byte-aligned with baseline -> x/z envelope subset by
+   construction.
+   ENVELOPE: new max top (6-stone) 1.48 < baseline 1.73 strict subset;
+   x/z extents <= baseline (same ring rng, jitter same-at-base and
+   smaller-above, radii unchanged). SAT-neutral same-tuple re-place.
+   New stack reads: tapering contact-nested spire 1.48m, killing the
+   blob-heap secondary note too (varied embed depths at tapering radii).
+   FALSIFICATION: (1) baseline gate pre-edit (no-write mode
+   regenerates the five live pins); (2) --write x2 deterministic, 5
+   new shas, 55 sibling works byte-identical vs
+   /tmp/improve43-retex-before.txt; (3) decode audit x5 — ZERO floater
+   groups (vertex-column probe, gap>=0.04 above 0.15 with support
+   below), envelope subset per work every axis, 0 material-less,
+   below-grade class unchanged; (4) identical-camera before/after
+   renders, native after-judge at 18m gameplay: stacked-stone cairns
+   read with clean top silhouettes, ZERO sky-isolated pebbles,
+   identity holds (stacked stones, not rubble); (5) FIVE uploads paced
+   21s (shared 4/min budget, 429 backoff) + remove+spawn x5 exact
+   tuples + census total steady + idempotent 0-verb rerun; (6) NO walk
+   — open-ground dressing below every collider gate.
+   REVERT: git checkout mason.ts -> rebuild reproduces the five live
+   pins (baseline-gate-proven) -> re-run placer with prior libs;
+   before-bytes banked reviews/improve43-cairn/before/.]
+  [EXECUTED improve-43 (2026-09-07, same tick — family 5/5
+   PLACED_VERIFIED): contract executed in full + one self-caught build
+   defect repaired in tick (v1 seat used the CURRENT stone's radius in
+   the recursion — stacks TALLER at top 1.9 > baseline 1.73, caught by
+   the envelope decode BEFORE any placement; v2 corrected: center_s =
+   top_{s-1} + r_s - 0.30*r_{s-1}). Rebuild x2 deterministic, FIVE new
+   shas (1642 19edc830 / 1655 de186a14 / 1668 c7ea6ded / 1681
+   b5ed154a / 1694 594f5192), 55 siblings byte-identical. DECODE ALL
+   GREEN x5: bbox y -0.08..1.51 (strict subset of 1.73), x/z extents
+   byte-aligned (ring rng preserved), 0 material-less, below-grade
+   class unchanged (buried base stones by design). CONTACT AUDIT
+   (improve43-contact-audit.ts, pre-merge named-stone 3D test): 1238
+   consecutive stone pairs across 5 works, ZERO failing pairs, min
+   overlap margin +0.021m, max stack top 1.51. Probe self-catch
+   disclosed: the vertex-column floater probe over-detects on merged
+   buckets (cell-locality artifacts — single ring fragments whose
+   support sits in adjacent cells); the TRUE stone-level test is the
+   pre-merge contact audit, which is the evidence of record. NATIVE
+   JUDGE: before CONFIRMS family class (15-25 sky-isolated pebbles,
+   shredded top silhouette, identity holds); after 4/4 PASS gameplay
+   (zero floating, deliberate tapering markers, grounded, clean/tapering
+   tops) + left elevation 3/3 clean; nadir view findings dismissed as
+   framing-limited (pitfall-13: vertical axis foreshortens to zero
+   from directly overhead) with the shadow-gap note self-explained by
+   stones-on-stones spilling; margin: spherical waist-pinch contacts
+   (inherent to the icosa stone family). RESEAT: 5 uploads paced 21s
+   (no 429) + remove+spawn x5 exact tuples (10 verbs) PLACED_VERIFIED,
+   census 276 steady, idempotent 0-verb rerun, comps {} both sides.
+   Family rows 0022/0043/0047/0048/0050 all annotated EXECUTED; cairn
+   family 5-of-5 CURED — district family census now: hamlet 5/5,
+   seed 4/4, garden 5/5, cairn 5/5 cured; mosaic 4/4 built/Bill-blocked;
+   orchard 5/5, lavender 4/4 remain OPEN. Gate exit 0 at 66ded6b
+   (tick-start) + fe3d15b8 (final HEAD, city-1 new-lane gate widening
+   disclosed). Next worst-first OPEN improve-own family: ORCHARD.]
 - `nx-cultivation-lavender-0006` — Sev 3 (survey-10, 2026-09-06, NATIVE,
   18m gameplay, live store bytes 26f0eed9 HTTP 206): lavender identity
   FAILS — desaturated purple-charcoal (~#4a4044) canopy reads dead
@@ -2970,6 +3078,8 @@ class except seed (ZAI-native stack 0003+0013).
   edge dissolves to speck halo; stacked-stone identity itself PASS —
   family 2-of-5. Evidence:
   reviews/survey11-slice/nx-wild-cairn-0043/gameplay.png
+  [Family cured by improve-43 (contact-law stacking in composeCairnfield,
+  family-wide composer); this member reseated live at new lib.]
 - `nx-temple-seed-0013` — Sev 4 (survey-11, ZAI): IDENTICAL to
   seed-0003 class — zero vertical presence (10:1 footprint-to-height
   ellipse x300-655 y377-412, never breaks skyline y346), no seed core
@@ -2991,6 +3101,8 @@ call, single paced retry recovered; zero ZAI fallback this tick).
   x480-532 y293-306, x555-580 y292-306, x655-712 y290-325); stacked
   stone identity + values PASS — family 3-of-5 MAJORITY. Evidence:
   reviews/survey12-slice/nx-cairn-0047/gameplay.png
+  [Family cured by improve-43 (contact-law stacking in composeCairnfield,
+  family-wide composer); this member reseated live at new lib.]
 - `nx-cultivation-lavender-0040` — Sev 3 (survey-12, NATIVE):
   IDENTICAL to lavender-0006 class — charcoal-mauve dead-crop read
   (no bloom-tip brightness anywhere), discrete front-row blobs with
@@ -3225,11 +3337,15 @@ the executing lane. Grep-verified: no open duplicate notes.
   cluster x438-522), central stacks merge to rubble mound x270-560;
   flanking stacks + grounding PASS — family 4-of-5. Evidence:
   reviews/survey13-slice/cairn-0048/gameplay.png
+  [Family cured by improve-43 (contact-law stacking in composeCairnfield,
+  family-wide composer); this member reseated live at new lib.]
 - `nx-wild-cairn-0050` — Sev 3 (survey-13, ZAI): IDENTICAL to
   cairn-0022 class — ~19 floating pebbles in six regions A1-A6
   (worst: even row A3 x395-492 y293-305), central blob zone
   x335-565; discrete stacks + grounding PASS — family 5-of-5
   UNANIMOUS. Evidence: reviews/survey13-slice/cairn-0050/gameplay.png
+  [Family cured by improve-43 (contact-law stacking in composeCairnfield,
+  family-wide composer); this member reseated live at new lib.]
 - `nx-cultivation-orchard-0046` — Sev 3 (survey-13, ZAI): IDENTICAL
   to orchard-0012 class — forest-edge read (crown height variance
   30-40%, irregular trunk deltas 58-117px), fruit ZERO at 18m (no

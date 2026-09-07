@@ -590,13 +590,32 @@ function composeCairnfield(g: THREE.Group, r: () => number): string {
         const a = r() * Math.PI * 2, rad = r() * 6;
         const x = Math.cos(a) * rad, z = Math.sin(a) * rad;
         const stones = 3 + Math.floor(r() * 4);
+        // improve-43 contact law: the baseline fixed pitch y=0.2+s*0.3
+        // outpaced the tapering radii (0.28-0.05s) — from stone 4 the
+        // bottom sat ABOVE the stone below (0.09m at s=4, 0.19m at s=5),
+        // floating the top 1-2 pebbles of every 5-6-stone cairn against
+        // the sky (survey-9/11/12/13 unanimous family class). Each stone
+        // now SEATS on the previous stone's true top: center_s = top_{s-1}
+        // + r_s - 0.30*r_{s-1} (embed 0.30 of the PREVIOUS radius — >= 2.4x
+        // the worst-case support deficit ~0.126*r_prev = icosahedron
+        // inradius deficit + lateral jitter drop) -> contact guaranteed
+        // at every joint; stones read nested, not hovering. Self-caught
+        // v1 bug: seat computed with the CURRENT stone's radius made
+        // stacks TALLER (top 1.9 > baseline 1.73) — the seat must use
+        // prev stone's radius. rng draw count/order per stone unchanged
+        // (5 draws) so rings/scatter/rotations stay aligned.
+        let prevR = 0.28, prevTop = 0.48; // stone 0: center 0.2, r 0.28
         for (let s = 0; s < stones; s++) {
             const rad2 = 0.28 - s * 0.05;
+            const jit = (r() - 0.5) * 0.1 * (rad2 / 0.28); // radius-scaled: tops stay inside the stone below
             const st = new THREE.Mesh(new THREE.IcosahedronGeometry(rad2, 1), mat(s % 2 ? C.MID : C.STONE, 0.98, 0));
             st.name = `cairn_${i}_stone_${s}`;
-            st.position.set(x + (r() - 0.5) * 0.1, 0.2 + s * 0.3, z + (r() - 0.5) * 0.1);
+            const seat = s === 0 ? 0.2 : prevTop + rad2 - 0.30 * prevR;
+            st.position.set(x + jit, seat, z + (r() - 0.5) * 0.1 * (rad2 / 0.28));
             st.rotation.set(r() * 3, r() * 3, r() * 3);
             g.add(st);
+            prevTop = seat + rad2;
+            prevR = rad2;
         }
         // scatter around each cairn
         const sc = 2 + Math.floor(r() * 2);
