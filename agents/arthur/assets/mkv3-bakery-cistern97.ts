@@ -50,12 +50,18 @@ g.add(bottom);
 // (the interior walls are near-black in shadow). Housekit water blue + faint
 // same-hue emissive, matching the accepted fountain water (polish-271/274):
 // the surface now reads as water, not a dry hole.
+// improve-28: the water plane at 0.45 was RIM-OCCLUDED from every standing
+// vantage beyond 2.5m (sight-line from eye 1.65m to the water's back edge
+// crosses the near rim below its 0.62m top: 0.485m at 18m, 0.601m at 4m) —
+// the survey-16 "closed dry crate" read. Raised to 0.60 (17cm below rim):
+// sight-line clears the rim at all distances (0.631m@18m) and the basin
+// reads as open water from gameplay range. Same palette-law material.
 const water = new THREE.Mesh(new THREE.BoxGeometry(W - 2 * T - 0.02, 0.02, D - 2 * T - 0.02), new THREE.MeshStandardMaterial({
     color: 0x506a78, roughness: 0.25, metalness: 0.5,
-    emissive: new THREE.Color(0x2e4a58), emissiveIntensity: 0.45,
+    emissive: new THREE.Color(0x2e4a58), emissiveIntensity: 0.70,
 }));
 water.name = "bc_water";
-water.position.set(0, 0.45, 0);
+water.position.set(0, 0.60, 0);
 g.add(water);
 
 // ---- LID LEANING against the E side ----

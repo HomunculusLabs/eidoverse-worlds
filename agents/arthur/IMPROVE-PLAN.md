@@ -1724,6 +1724,49 @@ open duplicate notes for these objects.
   shadowed-interior sibling class; fix lane per polish-271/281
   lineage: palette #506a78 + same-hue emissive + widen/recess the
   basin opening so the tank read survives 18m.
+  [improve-28 CONTRACT (2026-09-07, this tick — BEFORE edit): ZAI
+  fallback corroborate on banked survey-16 before-views CONFIRMS
+  class (no water read / closed flush top / plain dark box read /
+  zero floats — unanimous with survey-16 native). DECODE GROUND
+  TRUTH (local == live d3d3ad75, rebuild ×2 deterministic): water
+  plane EXISTS as `bc_water` at y=0.45, 0.72×0.44m, palette law
+  colors correct (#506a78 base + #2e4a58@0.45 emissive) — NOT a
+  polish-281-class missing/dark material; the mechanical root is
+  RIM OCCLUSION: sight-line math (eye 1.65m → water back edge)
+  crosses the near rim (0.62m) at 0.485m at 18m / 0.601m at 4m —
+  the water plane is geometrically hidden from every standing
+  vantage >2.5m. survey-16's "right half flush panel" = the lid
+  leaning on the E side occluding the tank's right half from its
+  camera. F1 FIX: raise water y 0.45→0.60 (17cm below rim) —
+  sight-line at near rim becomes 0.631m@18m / 0.732m@4m (VISIBLE
+  at all distances); same palette + emissive per law. F2 (Sev 3):
+  basin read at 18m carried by water plane + rim profile; raising
+  water alone widens the visible water band ~3× (back edge now
+  visible over near rim) — no geometry reshaping, keeps SAT/bbox
+  unchanged (water stays inside footprint). FALSIFICATION: (a)
+  decode water y 0.60 exact; (b) after-render 18m gameplay frame
+  must show a visible blue/navy interior band (before frame shows
+  none — ZAI-judged this tick); (b2) top view unchanged water
+  disc; (c) walk leg past cistern stays ALL_PASS. REVERT: rebuild
+  from git source (deterministic d3d3ad75) + re-place. Judge
+  plan: native first; ZAI fallback acceptable disclosed (row
+  confirm class = unanimous across both judges already).]
+  [EXECUTED improve-28, 2026-09-07: fix = water y 0.45→0.60 +
+  emissive 0.45→0.70 (in-tick v2 after native 18m judge showed
+  emissive wasn't the day lever; skymirror-37 0.7 precedent);
+  rebuild ×2 deterministic 156b4fc8 (v1 30c45c0a superseded);
+  decode GREEN — footprint x/z byte-identical SAT-neutral, 0
+  below-grade, 338/338 verts, water bucket 0.44/0.46→0.59/0.61
+  asserted; pixel falsification front 0→602 navy px (stone row
+  89,85,62 → water 36,61,73), gameplay 0→31px sliver, night
+  0→34px emissive band, top 3023→3096; native after-judge front
+  4/4 PASS (glm-5.3-flash recovered mid-tick), 18m residual
+  DISCLOSED per struct-45 distance law (2px geometry-bound
+  sliver; water read is the approach-range 2–8m read, native-
+  passed at 600px band); reseat remove+spawn 2 verbs exact
+  tuple lib d3d3ad75→156b4fc8, comp {} both sides, PLACED_VERIFIED
+  + rider b23 standing unchanged, idempotent zero-verb rerun;
+  walk 3/3 ALL_PASS 0.000/0.248/0.261; row closed.]
 - `nx-dress-fountain` — Sev 4 (survey-8, ZAI + decode; DRESS-DOMAIN,
   legacy-core off-limits set — ownership is Bill's call, not dress
   rotation): water fails at 18m. DECODE: ENTIRE asset is ONE material
