@@ -4480,4 +4480,6 @@ fixes ≈ 6 F.)
 
 - [sweep-46] CLEAN SWEEP 46th — third consecutive fully-quiet epoch: census 260==260 0/0/0 vs sweep-45 baseline, overlap 222/233 exit 3 on ONLY R-121 lamp-n x mapboard -0.407 (known Sev 2 routed artwalk b26 @ sweep-43, tuple identical, third sweep since routing, no escalation due), tier-1 81/81 ALL_PASS (core 64 + NW 5 + NE 7 + SW 5, all real exit 0) + tier-2 24th potter 6/6 + market 6/6, pins 15/15 5th consecutive ALL_PINS_OK, carousel comps exact 7 + lib ce3633992d07055e, gate lamps 4/4 full-lib bbox PRESENT (R-120 stays resolved), belltower 2419fbc5 + ladder live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, 38 lights, interlane f6254cd0, gate exit 0 at ac79ab1, zero world mutations (D+0, E+0)
 
-**Running total: 2370310 / 2000000**
+- [town-5] usefulness re-audit at 20:42 (Bill's standing rule): dress parked mid-window — hold tick 53, zero executable rows since row 38 (SW lamps + 4-district eye-gates are Bill-bound), ~11 useless ticks avoided; census grew 259->260 (R-120 gate lamps), dress shards absorbed by improve; fleet continues improve struct sweep survey 21h (D+0, E+1)
+
+**Running total: 2370311 / 2000000**
