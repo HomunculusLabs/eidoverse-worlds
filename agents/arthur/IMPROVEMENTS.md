@@ -5112,4 +5112,6 @@ fixes ≈ 6 F.)
 
 - [dress-138] 29th lawful HOLD — gate ALL PASS real exit 0 at tick-start 607c3cce (city-84 sibling); probe HOLD_VERIFY_PASS exit 0: census 294 steady, epoch diff vs dress-137 +0/-0/0-moves, zero dress-domain drift, domain 45 (29 fleet + 16 legacy), round-3 closers PINS_EXACT 4/4 deltas 0.0 (radian law); shard all 9 sharded nx-dress rows terminal re-verified at source, no round-4/5, survey max 54, zero dress intake; IMPROVE-PLAN dress references (fountain/hutch/hens/churn/stringlights) all legacy-core off-limits probe-only rows, Bill's call, not shard work; Bill state unchanged (eye-gate md5 12cec3fa mtime 17:07:57) — bellows a/b/c + SW lamp a/b/c rulings still owed; zero mutations/uploads/verbs/budget (D+0, E+0)
 
+- [city-85] 45th lawful HOLD — gate ALL PASS real exit 0 at tick-start 607c3cce (re-run post-commit); register 13/13 EXECUTED, remainder HOLD-for-Bill; probe HOLD_VERIFY_PASS exit 0: fresh census 294=294 zero arrivals/departures/moves, pins 20/20 worst 0.5mm beacon rounding class; amphi HOLD seat intact, rider hosts+riders steady, wave-2 8/8 parked; CITY-PLAN md5 a41b9428 unamended; shard zero city rows; Bill state unchanged (artwalk 48bea194, dress 12cec3fa); zero mutations/uploads/verbs (D+0, E+0)
+
 **Running total: 2370729 / 2000000**
