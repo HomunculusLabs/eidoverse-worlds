@@ -5010,4 +5010,6 @@ fixes ≈ 6 F.)
 
 - [city-63] 22nd lawful HOLD — register 13/13 EXECUTED fresh-read (worst pos dev 0.5-0.6mm server-rounding), census 291 quiet epoch vs prior capture (0/0/0), city pins exact (amphi HOLD site intact, rotor struct-84 seat, rider hosts harvestcart/milkstand/churn unmoved b31/b32/b33 co-located 0.0mm, wave-2 mosaics + mile markers parked), shard routing zero OPEN zero city-prefix rows, blocked on Bill standing (amphi a/b/c, wave-2 mosaic blessing, rider eye-gates); zero mutations (D+0, E+0) (D+0, E+0)
 
+- [dress-119] 10th lawful HOLD post-close — gate ALL PASS real exit 0 at tick-start aff92396; interlane f6254cd0 pin-exact; fresh census 291 (29 fleet district-qualified + 16 legacy core intact); round-3 closers PINS_EXACT 4/4 by lib-prefix live lookup (store/-prefix matcher self-catch corrected at source); shard terminal at source (rows 5/29/30/31 DROPPED, 32/33/34/37/38 EXECUTED, zero OPEN dress-routable rows, no round-4 section, intake unchanged — survey-54 annotation routes hamlet/improve domain); eye-gate file untouched (mtime 09-07 17:07); blocked on Bill standing: bellows siting a/b/c + SW lamp policy a/b/c; zero world mutations, zero uploads, zero verbs, zero shared-budget use this tick (D+0, E+0)
+
 **Running total: 2370723 / 2000000**
