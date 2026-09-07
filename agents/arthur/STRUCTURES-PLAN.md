@@ -2989,3 +2989,45 @@ full period, two warm brass beads marking the crest at dusk.
 Frames: reviews/struct65-wavepergola/ (10 views).
 Next tick: 66%3==0 → refine tick (pool empty → re-verify, then R5-3 or
 shard re-arm).
+
+## struct-66 (2026-09-07): R-122 CLOSED — ellipsecourt reseated source-true,
+## sweep's south-only suggestion falsified
+
+Cadence 66%3==0 refine tick; R-122 (sweep-66, Sev 2) re-opened the refine
+pool as Bill-correction-class priority. Gate ALL PASS real exit 0 at b7a0b02
+pre-mutation. Shard EMPTY fresh.
+
+**Re-derivation (decode-first, sweep-66 vertex clouds re-verified against
+live census libs)**: world-transform of local clouds reproduced R-122's
+baselines EXACTLY (court-shelltower 0.0846 / court-meridianstair 0.4718 vs
+recorded 0.085/0.472). Sweep's suggested fix (translate 2.5-3m south)
+FALSIFIED source-true: dz=-2.5 drops court-meridianstair to 0.109m — the
+court is wedged (shelltower N, meridianstair's yawed stair foot S-SE); pure
+south trades one sub-law contact for another. Fine SW scan (0.25m grid):
+lawful zone is the SW diagonal. WINNER (-3.75,-3.75) with margins
+shelltower 1.835m / meridianstair 1.773m (>=1.4 law + margin). Full
+274-census cloud-vs-bbox conservative: nearest other neighbor 5.57m
+(nx-approach-sw-lane-003). Self-caught: first transform script had a
+view-aliasing bug (x read after mutation) producing garbage "legal" moves —
+caught by the baseline check not reproducing R-122's recorded numbers.
+
+**Terrain**: next-terrain-struct66.ts 7pt at new tuple — spread 17.3mm,
+PY -0.0403 (was -0.0476).
+
+**Placement**: next-place-struct66.ts — SAME bytes (sha 2aa37e9d, lib
+store/2aa37e9d29ba43f2.glb), NO upload (content-addressed reuse), pure
+remove+spawn reseat to (-3.75, -0.0403, -50.75) yaw π/2. PLACED_VERIFIED
+2 verbs; idempotent rerun 0 verbs (self-catch: placer initially only
+recognized the OLD tuple — dress-81 reseat law — fixed to accept either
+before the proof run). Comp bag empty by design (no comps to reapply).
+
+**Walk re-proof (R-122 demand)**: struct66-walk-ellipsecourt.ts — 11/11
+ALL_PASS worst 0.382m: through-axis both ways (both end bays, both foci,
+center) + interior E-W circuit, all at the new tuple.
+
+**Standing state**: court now sits SW of its first seat, clearing both
+neighbors at source-true margins; N-walk narrative intact (waterstair →
+court → meridianstair) with the entrance bays still on the world-Z axis.
+No Bill eye-check owed — same bytes, judged struct-64; this was a
+corrective translation only.
+Next tick: 67%3==1 → build tick (R5-3 commission or shard re-arm).
