@@ -1850,6 +1850,84 @@ bytes):**
   floating-read class, decode before executing. Native outranks the
   ZAI caveat; chassis-aggravation still expected part. Evidence:
   reviews/survey25-slice/nx-town-longhouse/]
+  [CONTRACT improve-34 (2026-09-07 — BEFORE edit; standing judgment = survey-25 NATIVE on exact live bytes e3adcd3d == local village_longhouse3.glb == current source rebuild, no disputed bytes; idle-guard clear — last host mutation = improve-20 own-lane, survey-25/24 read-only):
+   DECODE GROUND TRUTH (improve34-decode-longhouse.ts on e3adcd3d):
+   25 primitives, 17 MATERIAL-LESS (struct-38 class: roof slabs, porch
+   deck/posts/roof, window shutters, floor, chimney, feast props all
+   plain mat() → loader-default near-black in-game = the "generic dark
+   shed" crush); N-window PANES BURIED (pane z −2.485..−2.455 inside wall
+   −2.5..−2.3, improve-12 containment class — lit panes invisible by
+   construction); PORCH POSTS: kit porch() axis "z" collapses all 4 posts
+   to 2 coincident centerline posts (z 3.55, 96 verts) — deck outer edge
+   z 4.25 and roof tip z 4.30 (b19 anchor surface) ZERO support = the
+   native "cantilevers into daylight"; PLINTH EXISTS (0.22h × 0.04/side
+   proud, stoneTex) but stone tones ≈ timber tones → no value break at
+   the foot; CHIMNEY = kit narrow 0.42 stack + 0.58 cap + pot + torus
+   rim = rain-cowl gestalt. E/W end walls carry ZERO openings (flank
+   voids source-true).
+   FIX (mkv3-ring.ts block 1 only + one default-byte-identical wallSpan
+   opt-in in housekit.ts):
+   F1 porch posts: 2 outer posts 0.10×2.16×0.10 timberTex at (±1.72,
+   1.28, 3.75) — grade through deck into slab underside (2.304) —
+   canopy reads post-supported; kit center posts stay.
+   F2 footing: wallSpan gains optional plinth opts {h?, proud?, tones?}
+   (defaults 0.22/0.04/stoneMat = byte-identical, 6 ring siblings
+   proven); longhouse opts in h 0.30, proud 0.085/side, canon
+   ACCENTS.ROCK ladder [0x8c887e, 0x847f74, 0x77726a] texMat
+   "rockfoot" — visible value break wall-vs-foot.
+   F3 chimney: kit call REPLACED by hand-built masonry in-block — base
+   0.98sq×0.35 at roof plane, shaft 0.62sq to y 5.085, cap slab
+   0.80×0.11 top 5.195 (< old rim 5.34, strict y subset), stoneTex, NO
+   pot/rim — hearth-chimney read, rain-cowl killed.
+   F4 flank windows: win_w1 (x −4.28, z −1.2) + win_e1 (x +4.28, z
+   +1.2) axis "x", 0.8×0.8 — panes proud 0.045 outside wall faces,
+   emissive amber (lit windows carry the flank read); win_n1/n2 re-seat
+   z −2.4 → −2.34 (same buried-pane class cured, proud 0.055).
+   NOT in scope (disclosed): roof-slab re-material (material-less roof
+   is a village-wide kit class, not a longhouse decision — deferred to
+   round-2 kit-debt review); porch deck dark (shadow-floor read,
+   acceptable); feast/interior props untouched.
+   KEEP-OUTS (differential 0==0): b19 anchor band (|x|≤0.6, y 1.9..2.65,
+   z 3.9..4.7 — all new geometry |x|≥1.72 or z<2.5, none can enter);
+   b19 anchor SURFACE = porch roof slab UNTOUCHED (no slab edit); light
+   companion local (0, 2.2, 0.6) — no new geometry within 0.3m.
+   ENVELOPE: strict subset or equal every axis (|x| new max 4.44
+   shutter flare < roof 4.65 < floor 4.7; z −2.923..4.301 unchanged;
+   y max 5.195 < 5.369) → SAT-neutral exact-tuple re-place.
+   FALSIFY: (a) rebuild ×2 deterministic; (b) decode audit — 6 ring
+   siblings byte-identical (tower3 == known-snapshot a989bdc3), rockfoot
+   material present, panes proud of wall faces, posts at ±1.72/3.75
+   grade-to-slab, keep-outs 0==0, envelope subset; (c) identical-camera
+   before/after renders (baseline banked before/), native after-judge
+   at 18m: footing reads, chimney reads masonry hearth-chimney not
+   metal flue, flank windows read as lit windows, porch canopy reads
+   post-supported, no new floats; night view; (d) remove+spawn exact
+   tuple (9,0,26) yaw −2.828368 + comp {} + rider b19/light standing +
+   idempotent zero-verb rerun; (e) interior-walk-longhouse.ts 6-leg
+   two-way ALL_PASS ≤0.55m.
+   REVERT: git checkout housekit.ts mkv3-ring.ts → rebuild → e3adcd3d
+   → re-place old pin.]
+  [STATE improve-34 (build+audit landed, WORLD UNTOUCHED — run budget;
+   improve-31/dress-82/struct-59 deferred-placement class): edit =
+   housekit.ts wallSpan plinth opts (defaults byte-identical) + mkv3-ring.ts
+   block 1 (rockfoot footings, kit-chimney→masonry, 2 outer porch posts
+   grade-to-slab y0..2.36, win_n1/n2 re-seat proud z −2.54 (contract said
+   −2.34 — direction self-catch, back face is −z), NEW flank win_w1/win_e1).
+   sha e3adcd3d→c4aaa783 ×2 deterministic; AUDIT improve34-audit-longhouse.ts
+   ALL PASS (envelope strict subset y 5.245<5.369, x/z unchanged; outposts
+   24+24 verts; chimney 84 verts masonry, 0 above 5.20; b19 slab-band
+   0==0, door-lane 24==24); 6 ring siblings byte-identical; before/after
+   10-view renders banked reviews/improve34-longhouse/. NATIVE after-judge
+   (gameplay 18m): chimney masonry PASS, porch post-supported PASS, footing
+   judge-FAIL-vs-pixel-grid CONFLICT (grid shows base-band break
+   1e190e→34382b/484a35 at r13→r14; judge read unbroken — break exists but
+   modest), flank window reads dark at 18m, night frame zero warm px BOTH
+   before and after (rig emissive question unresolved — emissive probe
+   improve34-emissive-probe.ts authored but not run). REMAINS next wakeup:
+   (1) run emissive probe — if flank/N panes lack live emissive in the rig,
+   strengthen (bigger pane/emissive up) per improve-12/15 precedent;
+   (2) re-judge; (3) remove+spawn re-place exact tuple + idempotent +
+   walk; live still e3adcd3d; zero uploads/verbs this tick.]
 
 **ROUTING (town-4, 2026-09-06, Bill 24h-usefulness directive):** candidates
 with no live shard prefix (`nx-welcome`, `nx-court`, `nx-forge`, `nx-cistern`,

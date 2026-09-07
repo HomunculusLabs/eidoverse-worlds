@@ -74,12 +74,24 @@ const out: Built[] = [];
     const W = 8.5, D = 5, H = 2.6, T = 0.2, FY = 0.2;
     assertRoomScale(W, D, H, "longhouse-v3");
     box(g, "floor", W, 0.4, D, 0, 0, 0, C.DARK);
-    wallSpan(g, "wall_n", W, H, T, 0, FY, -(D / 2 - T / 2), "x");
-    wallSpan(g, "wall_w", D - 2 * T, H, T, -(W / 2 - T / 2), FY, 0, "z");
-    wallSpan(g, "wall_e", D - 2 * T, H, T, W / 2 - T / 2, FY, 0, "z");
+    // improve-34 F2: the footing a hall reads from 18m — canon ROCK ladder
+    // (loop-#86 canon 0x8c887e) 0.30h, 0.085/side proud: a real value break
+    // between timber wall and stone base (defaults in wallSpan unchanged).
+    const rockfootTex = texMat("rockfoot", [0x8c887e, 0x847f74, 0x77726a], { rough: 0.95, scale: 2, weights: [2, 1, 1], cell: 24 });
+    const foot = { h: 0.30, proud: 0.085, m: rockfootTex };
+    wallSpan(g, "wall_n", W, H, T, 0, FY, -(D / 2 - T / 2), "x", C.STONE, foot);
+    wallSpan(g, "wall_w", D - 2 * T, H, T, -(W / 2 - T / 2), FY, 0, "z", C.STONE, foot);
+    wallSpan(g, "wall_e", D - 2 * T, H, T, W / 2 - T / 2, FY, 0, "z", C.STONE, foot);
     doorGapWall(g, "front", W, H, T, 0, FY, D / 2 - T / 2, "z"); // door +Z center
-    windowFrame(g, "win_n1", -2.4, 1.7, -(D / 2 - T / 2), 0.8, 0.8, "z");
-    windowFrame(g, "win_n2", 2.4, 1.7, -(D / 2 - T / 2), 0.8, 0.8, "z");
+    // improve-34 F4: N windows re-seated PROUD of the back face (wall outer
+    // face z −2.5; old panes centered z −2.4 sat INSIDE the wall volume —
+    // improve-12 buried-pane class, invisible by construction).
+    windowFrame(g, "win_n1", -2.4, 1.7, -(D / 2) - 0.04, 0.8, 0.8, "z");
+    windowFrame(g, "win_n2", 2.4, 1.7, -(D / 2) - 0.04, 0.8, 0.8, "z");
+    // improve-34 F4: E/W flank windows — the end walls carried ZERO openings
+    // (survey-25 native "flanks featureless"); lit panes proud carry the read.
+    windowFrame(g, "win_w1", -(W / 2) - 0.04, 1.7, -1.2, 0.8, 0.8, "x");
+    windowFrame(g, "win_e1", W / 2 + 0.04, 1.7, 1.2, 0.8, 0.8, "x");
     // improve-20 (row 39 kit-debt): cure the 1.5m gable horn — the plaster
     // triangle was authored w/2=4.25 on a roof half-extent of 2.9 (decode:
     // plaster bucket z ±4.250 vs roof ±2.923, floating fin native-confirmed
@@ -87,10 +99,28 @@ const out: Built[] = [];
     // trueGableHalf = roof's true depth half-extent D/2+over, solidRidge
     // (staggered 0.92-cap read DASHED at 18m).
     gableRoof(g, "roof", W, D, 1.7, FY + H, 0.4, C.MID, true, D / 2 + 0.4);
-    chimney(g, "chim", -2.0, 0, FY + H + 1.1, FY + H + 2.2);
+    // improve-34 F3: kit chimney (spindly 0.42 stack + pot + torus rim)
+    // replaced by hand-built hearth masonry — a hall hearth chimney reads
+    // as bonded stone courses, not a modern rain-cowl flue (survey-25).
+    {
+        const chx = -2.0, roofPlaneY = FY + H + 1.1; // 3.9 — kit call's base
+        texBox(g, "chim_base", 0.98, 0.35, 0.98, chx, roofPlaneY + 0.175, 0, stoneTex);
+        texBox(g, "chim_shaft", 0.62, 0.885, 0.62, chx, roofPlaneY + 0.35 + 0.4425, 0, stoneTex);
+        // capping course: one wide slab, no pot/rim
+        texBox(g, "chim_cap", 0.80, 0.11, 0.80, chx, roofPlaneY + 1.235 + 0.055, 0, stoneTex);
+    }
     // FRONT PORCH (beyond the 1.5m apron): the kit's porch() finally earns
     // its keep — deck + 4 posts + shed roof on the door face
     porch(g, "porch", 0, D / 2 + 1.05, 3.6, 1.4, 0.2, 2.1, "z", 1);
+    // improve-34 F1: the kit's axis-"z" porch collapses its 4 posts to 2
+    // coincident centerline posts (pz=0) — the deck's outer edge and the
+    // roof tip cantilevered (survey-25 "postless"). Two OUTER posts, grade
+    // (y 0, outside the floor slab's z extent) through the deck into the
+    // tilted slab underside (~y 2.345 at z 3.75): the canopy now reads
+    // post-supported from every walkable vantage.
+    for (const sx of [-1.72, 1.72]) {
+        texBox(g, `porch_outpost_${sx > 0 ? "e" : "w"}`, 0.10, 2.36, 0.10, sx, 2.36 / 2, 3.75, timberTex);
+    }
     // interior: hearth W end, two trestle tables along the walls (lane center clear)
     texBox(g, "hearth", 0.6, 1.1, 1.6, -(W / 2 - 0.5), FY + 0.55, 0, timberTex);
     fireMesh(g, "fire", -(W / 2 - 0.55), FY + 0.62, 0);

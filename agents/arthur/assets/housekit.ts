@@ -351,12 +351,13 @@ export function doorGapWall(g: THREE.Group, name: string, len: number, H: number
  *  "z" → long in Z, thin in X (a west/east wall).
  *  (NOTE the opposite convention from doorGapWall, whose axis is the
  *  FACING axis — kept for era-1 call compatibility.) */
-export function wallSpan(g: THREE.Group, name: string, len: number, H: number, T: number, cx: number, floorY: number, cz: number, axis: "x" | "z", c = C.STONE) {
+export function wallSpan(g: THREE.Group, name: string, len: number, H: number, T: number, cx: number, floorY: number, cz: number, axis: "x" | "z", c = C.STONE, plinth?: { h?: number; proud?: number; m?: THREE.Material }) {
     // tex-2 TIMBER: wall panels carry a weathered-wood tile — 3 muted tones
     // anchored on the old flat STONE color (reads identical at distance).
     // ONE material instance for every wallSpan in every consumer (tile dedup
     // collapses them in glbwrite). Plinth stays plain STONE (grounding).
     const wallMat = texMat("timber", [0x56503c, 0x605c40, 0x4a4632], { rough: 0.9, scale: 3, weights: [2, 1, 1] });
+    const ph = plinth?.h ?? 0.22, pp = plinth?.proud ?? 0.04, pm = plinth?.m ?? stoneMat();
     const mk = (w: number, d: number) => {
         const m = new THREE.Mesh(new THREE.BoxGeometry(w, H, d), wallMat);
         m.name = name;
@@ -366,16 +367,18 @@ export function wallSpan(g: THREE.Group, name: string, len: number, H: number, T
     if (axis === "x") {
         mk(len, T);
         // BASE COURSE (loop #97): a wider plinth where the wall meets the
-        // ground — the footing every real stone building shows
-        const p = new THREE.Mesh(new THREE.BoxGeometry(len + 0.08, 0.22, T + 0.08), stoneMat());
+        // ground — the footing every real building shows. improve-34: plinth
+        // is caller-tunable (h/proud/material); defaults stay byte-identical
+        // so untouched consumers never change.
+        const p = new THREE.Mesh(new THREE.BoxGeometry(len + 2 * pp, ph, T + 2 * pp), pm);
         p.name = `${name}_plinth`;
-        p.position.set(cx, floorY + 0.11, cz);
+        p.position.set(cx, floorY + ph / 2, cz);
         g.add(p);
     } else {
         mk(T, len);
-        const p = new THREE.Mesh(new THREE.BoxGeometry(T + 0.08, 0.22, len + 0.08), stoneMat());
+        const p = new THREE.Mesh(new THREE.BoxGeometry(T + 2 * pp, ph, len + 2 * pp), pm);
         p.name = `${name}_plinth`;
-        p.position.set(cx, floorY + 0.11, cz);
+        p.position.set(cx, floorY + ph / 2, cz);
         g.add(p);
     }
 }
