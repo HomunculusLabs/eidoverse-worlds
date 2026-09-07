@@ -54,5 +54,16 @@ read as ANSWERING the skymirror's dish?
 W spoke, outbound of the millrace: screw lifts water (motion:well_screw
 −12°/s). Does the turning screw read inside the stone drum?
 
+## The Lemniscate Seat (struct-90, R9-1) — standing eye-check
+
+On the W walk between stillwind and the screwwell, the ∞ lies in the grass
+~3m S of the path (−60, −7; long axis N-S, face-on to you walking W). At 18m
+and again at 6m: does one stone ribbon at sitting height read as the whole
+INFINITY SIGN — both loops closed, brass bead at the crossing? Step over it,
+sit in either loop; at dusk exactly one quiet amber point at the node.
+Hash a6ae240606798330, renders reviews/struct90-lemniscateseat/ (native
+gameplay 7.8/10 PASS, front 3/3 PASS, night one-quiet-point PASS with
+disclosed marginal-silhouette note).
+
 Not gated on verdicts: the lane continues its cadence; re-opens are
 immediate on any correction.

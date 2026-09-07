@@ -4480,3 +4480,78 @@ Closed: staged the 5 stranded files by name + this note, committed under
 struct-89, one ledger append. NEXT: 90%3==0 -> REFINEMENT tick if pool
 non-empty (it was EMPTY at struct-87 — re-derive fresh), else R9 build
 (arc candidates: ruled-surface ledger gaps) or shard re-arm scan.
+## struct-90 (2026-09-07): R9-1 THE LEMNISCATE SEAT — authored, judged,
+## PLACED_VERIFIED
+
+Cadence 90%3==0 refine tick; refine pool re-derived EMPTY fresh (all hero-
+ready/DONE, meridianstair cluster closed struct-58, survey-24 sixth vote
+concurring; shard: zero OPEN nx-struct rows — row 15 shelltower
+NATIVE-DROPPED verified this tick by section read; orreryring stays
+margin-tier design-note per struct-59/69 precedent; angler bobber re-aim
+is city's domain, closed city-11). Per loop law: build tick → R9.
+
+CONCEPT (written before build): the form ledger's missing curve. Village
+holds parabola (soundmirror), ellipse (ellipsecourt), hyperbola (ruledtower),
+hypar (meridianstair/hypar), sine (stillwind), circle (amphi/bandstand),
+catenary (catenarygate/chainvault), helicoid (screwwell), Reuleaux (rotor),
+conoid (conoidfan), ogee (ogeegate), moon-disc (moongate) — NO lemniscate.
+ONE IDEA: ETERNITY AT BENCH HEIGHT. One ashlar ribbon (0.55w × 0.46h, 128
+equal-arc voussoirs, total arc 20.395m = 7.416a) traces the full Bernoulli
+lemniscate (x²+z²)² = a²(x²−z²), a=2.75, extremes ±3.889, loop half-height
+a/2=1.375 exact; SELF-CROSSING KEPT (node = the signature); ONE brass bead
+r0.09 at the node (glow_ln KEEP, dusk lineage). Steppable anywhere — honest
+floorShaped heightfield class (supportclass.js read live: footprint 16.4m²
+≥2, h 0.46 ≤ 2.2 → per-cell truthful tops, gaps pass-through; NOT
+roomScale). 2 nodes after merge (stone bucket + glow_ln).
+
+ARC: v1 assertions caught my own math twice — loop half-height is a/2=1.375
+exact (my 0.9-1.3 band was wrong), and the true perimeter is 20.39m not
+14.4m (θ-uniform sampling put 0.38m facets at the extremes). v2 = arc-
+length-uniform resample (dense 4000-pt cumulative arc → 128 equal segments,
+0.159m voussoirs, sagitta 2mm) — the chainvault equal-rhythm law. Build
+sha a6ae24060679833028d2e1c533a2d9283f799d38ad5e6bc9401c7ab89ae3efe5 ×2
+deterministic. Assertions ALL PASS: bbox 8.33×0.62×3.30, closed curve,
+node at origin ×2, extremes exact, bead proud.
+
+JUDGED (native vision, exact v2 bytes): gameplay 18m PASS 7.8/10 (both
+loops closed, bead legible by warm contrast; caveat disclosed: grazing
+angle flattens the crossing — inherent to any flat curve at eye height,
+the face-on approach view is the contract read). Front 3/3 PASS (∞ gestalt,
+pinched waist + bead at pinch, uniform rhythm, no gaps/floats/double
+shadows). Night PASS on the one-quiet-point law (exactly one crisp amber
+dot, zero bleed/noise; disclosed note: silhouette survives marginally,
+family-consistent quiet-moonlit idiom — top rims + loop voids carry it).
+
+SITE (derived from fresh 292 census + CITY-PLAN spoke law): W contemplative
+spoke mid-gap station between stillwind (az270 r52) and screwwell (az270
+r88) — az270 r60.4, the band's honest gap; 36m from either neighbor.
+SELF-CATCH at terrain preflight: first candidate (-60, 0) centered the ∞ ON
+the walking line (z=0) — Bill's beside-the-line law violated; shifted to
+(-60, -7): nearest ribbon point z=-2.83 (2.83m beside the line), E face
+still greets W-ward walkers. Yaw π/2 (long axis on world z — both lobes
+face the walker; radians-on-the-wire). Terrain 11pt: spread 9.5mm, corner-
+mean PY -0.0237 (E floats 5.4mm / W embeds 4.1mm — stillwind-class
+absorbed by the 0.46m section).
+
+PLACEMENT: two-pass chassis (struct-88 proven, stray-setInterval fixed):
+hash gate exact → SAT center-corrected fresh 292-set worst
+nx-temple-seed-0003 +2.60 (≥1.4 law; films exempt by height+id, lamps
+kept) → upload store/a6ae240606798330.glb (0 429s) → spawn
+nx-struct-lemniscateseat @ (-60, -0.0237, -7) yaw 1.5708 → PLACED_VERIFIED
+exact tuple, census 292→293 → idempotent rerun ZERO verbs ("already live
+with exact lib"). Comps {} (bead is emissive material). Gate re-run
+post-placement: ALL PASS real exit 0 (city-74 sibling HEAD absorbed).
+
+EYE-GATE: struct-r8 packet extended with the Lemniscate Seat stop —
+delivered once. Judge: on the W walk between stillwind and screwwell, the
+∞ in the grass ~3m S of the path; both loops closed, brass bead at the
+crossing, one quiet amber point at dusk. Renders
+reviews/struct90-lemniscateseat/ (10 views).
+
+NEXT: 91%3==1 -> build tick (R9-2 commission: form ledger now complete on
+curves; candidate space = surface/tessellation gaps or Bill's verdict
+routing). Refine pool expected EMPTY unless survey routes a note.
+
+BILL EYE-CHECK (one, standing): walking W past stillwind, an infinity sign
+of stone lying in the grass to your right, close enough to step over — sit
+inside either loop.
