@@ -1,0 +1,142 @@
+{
+ "b29-strike-count": {
+  "tree": [
+   "",
+   "b29_0",
+   "b29_1",
+   "b29_2"
+  ],
+  "meshes": [
+   {
+    "name": "b29_0",
+    "parent": "",
+    "verts": 24,
+    "tris": 12,
+    "min": [
+     2.4,
+     0.68,
+     -1.898
+    ],
+    "max": [
+     4,
+     0.98,
+     -1.852
+    ],
+    "distinctColors": 1,
+    "topColors": [
+     "#ffffff x24"
+    ]
+   },
+   {
+    "name": "b29_1",
+    "parent": "",
+    "verts": 120,
+    "tris": 60,
+    "min": [
+     2.496,
+     0.69,
+     -1.916
+    ],
+    "max": [
+     3.9,
+     0.803,
+     -1.888
+    ],
+    "distinctColors": 1,
+    "topColors": [
+     "#5a5c11 x120"
+    ]
+   },
+   {
+    "name": "b29_2",
+    "parent": "",
+    "verts": 72,
+    "tris": 36,
+    "min": [
+     2.75,
+     0.728,
+     -1.915
+    ],
+    "max": [
+     3.649,
+     0.803,
+     -1.889
+    ],
+    "distinctColors": 1,
+    "topColors": [
+     "#b7b77d x72"
+    ]
+   }
+  ]
+ },
+ "b30-market-tally": {
+  "tree": [
+   "",
+   "b30_0",
+   "b30_1",
+   "b30_2"
+  ],
+  "meshes": [
+   {
+    "name": "b30_0",
+    "parent": "",
+    "verts": 24,
+    "tris": 12,
+    "min": [
+     0.29,
+     0.49,
+     0.38
+    ],
+    "max": [
+     1.71,
+     0.75,
+     0.42
+    ],
+    "distinctColors": 1,
+    "topColors": [
+     "#ffffff x24"
+    ]
+   },
+   {
+    "name": "b30_1",
+    "parent": "",
+    "verts": 180,
+    "tris": 156,
+    "min": [
+     0.38,
+     0.502,
+     0.412
+    ],
+    "max": [
+     1.62,
+     0.643,
+     0.438
+    ],
+    "distinctColors": 1,
+    "topColors": [
+     "#5a5c11 x180"
+    ]
+   },
+   {
+    "name": "b30_2",
+    "parent": "",
+    "verts": 104,
+    "tris": 96,
+    "min": [
+     0.697,
+     0.557,
+     0.412
+    ],
+    "max": [
+     1.303,
+     0.643,
+     0.438
+    ],
+    "distinctColors": 1,
+    "topColors": [
+     "#b7b77d x104"
+    ]
+   }
+  ]
+ }
+}

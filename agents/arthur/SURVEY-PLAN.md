@@ -1502,3 +1502,62 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   DRESSING-PLAN SURVEY INTAKE (core-era off-limits set, ownership Bill's
   call) + candidate row IMPROVE-PLAN survey-30 sub-section. Zero other
   lane files touched this tick.
+
+## Judged index (survey-31)
+
+- survey-31 (2026-09-07, ZAI FALLBACK 8/8 + 3 discrimination probes
+  disclosed — native 1210 x2 + paced retry burned on BOTH ellipsecourt
+  and wavepergola first calls (4x 1210 total, hard down all tick,
+  survey-26 class); 18m gameplay, fresh live store bytes 8/8 HTTP 200
+  curl UA on exact census-31 libs, served-shas pinned fbf80b5c /
+  bec59f21 / 8720e8af / baa1f216 / b912719d / 6cf92435 / 946dc2ed /
+  2e329f90): STANDING-DEBT + ARRIVAL + NEVER-JUDGED-RIDER slice
+  (severity backlog drained; six artwalk counting-series riders = the
+  largest never-judged class, read-quality/emblem-legibility stakes per
+  series-design law). Slice = ellipsecourt (survey-30 native re-judge
+  debt) + wavepergola (struct-65 arrival, owner final judge ZAI
+  fallback) + b16-forge-seven-strikes / b19-longhouse-feast-count /
+  b29-strike-count / b30-market-tally / b31-sheaf-tally /
+  b33-milking-order. VERDICTS: ELLIPSECOURT ZAI CLEAN 4/4 — second
+  independent read corroborates survey-30 + struct-64 (colonnade
+  identity PASS, ring continuous x85-880, all plinths grounded, zero
+  glitch classes; count MARGIN 11-of-14 = tangency occlusion class,
+  back-arc piers lost behind front piers/entablature at this bearing —
+  framing, not geometry); margins: foci pins sub-threshold ~4-8px
+  specks, weathered-timber-not-stone material read, one laterally
+  detached cast shadow x50-95 y412-438. Native re-judge debt CARRIES.
+  WAVEPERGOLA ZAI CLEAN 4/4 — first independent read, concurs
+  struct-65's owner PASS (pergola identity unambiguous, near rail one
+  clean full period x60->900, posts grounded with base pads, zero
+  floaters); margins: far rail partial read (visible only near crest,
+  near-longitudinal viewing angle), patchy contact shadows, crest glow
+  beads at edge of legibility x678-690 y180-192. SIX RIDERS ALL
+  CLEAN-with-margin — 18m count-legibility FAILs are FRAMING-LIMITED
+  (quiet close-read rider contract, artwalk series law + struct-45
+  pitfall-13 class: riders occupy <0.3% of frame at 18m, no internal
+  structure can resolve at any geometry): b31 close-view probe resolves
+  4 strokes + probable 5th (source-true five sheaves), rhythm + common
+  baseline deliberate, contact shadow present; b29+b30 GLB DECODE
+  proves discrete source-true stroke geometry (b29 tally mesh 120v =
+  five 24-vert boxes + 3 accents; b30 180v stroke mesh + accents —
+  the 18m 'plain collapsed bar' read is resolution, not missing
+  geometry); b16 marks read as striation-texture at 18m (3-5 ambiguous
+  dashes, sub-5px) but host block + contact shadow clean; b19 reads
+  deliberate mounted strip with ~3 panels, individual ticks merge;
+  b33 single deliberate mark reads (contrast-carried), order content
+  sub-threshold. Zero floaters/detached specks across all six solo
+  renders (host absence = solo-rig artifact, dress-80 class, not
+  counted). Routing: ZERO notes (zero confirmed defects), zero new
+  candidate rows, zero ledger append (read-only tick, loop law 4).
+  Census 274 vs survey-30 snapshot 273: +1 arrival nx-struct-wavepergola
+  (struct-65 @ 63e0484, tuple-exact), 4 POS_SAME lib flips
+  nx-temple-seed-{0003,0013,0021,0034} 710ec3e5->699387ab (improve-39,
+  ledger-matched), 0 departures. Gate: ALL PASS real exit 0 first try
+  at 4b43ef9 (ledger law EXACT 2370651). HEAD advanced mid-tick to
+  c6af019 (sweep-68 pair, foreign files) — survey-31 files clean in
+  tree. Decode-probe residue: survey31-decode-riders.ts (improve31
+  chassis adaptation) run once, source deleted in-tick, decode
+  evidence preserved at reviews/survey31-slice/rider-decode.json.
+  Verdicts 0 confirmed / 8 clean (8 clean-with-margin) / 0 dropped.
+  Zero world mutations, zero uploads, zero comp edits, zero
+  shared-budget use.
