@@ -2198,10 +2198,43 @@ stepped profile (arms high, dipping toward the mouths), not a solid dark
 wall; the stone should read mottled ashlar; at dusk the two brass focus
 pins still glow at the whisper seats.
 
-**SURVEY INTAKE status**: echoarch row EXECUTED this tick. Remaining
-intake: cellardoor Sev 3 (void opening + missing leaf detail — next
-worst), meridianstair verify cluster (split 2-1, native tie-break owed;
-Gate-1 pin likely genuine), waterstair gameplay-view dissent (survey-21
-vs struct-53's front/aerial reads — contract question: is the 18m
+**SURVEY INTAKE (survey-22, 2026-09-07)** — read-only probe notes, not
+verdicts:
+
+- `nx-struct-waterstair` — SECOND independent read on FIXED bytes 4acda521,
+  judged NATIVE (glm-5.3-flash; the survey-21 "native re-judge owed" debt
+  is PAID by this read): water still does NOT read at 18m gameplay — teal
+  band x402-558 y322-327 (~6px, merges with the black recessed bay
+  y331-352 beneath it — reads shadow slot under the lintel); cascade
+  faces x412-552 y352-396 zero teal, dry matte browns, no wet sheen, no
+  emissive lane on any downward-facing water surface; overall read = dry
+  timber floodgate/weir ("wooden gate with stairs"). The dissent is now
+  NATIVE-BACKED (survey-21 ZAI + survey-22 native vs struct-53's
+  front/aerial pixel-falsification PASS) — no longer a judge-quality
+  question; it is a camera-angle/contract divergence for the owner: is
+  the 18m gameplay water-read a contract, or does the 2-8m approach band
+  close it? Fix direction offered by the probe: raise the water body to
+  the lintel (kill the black bay) + emissive lane onto cascade
+  treads/risers y352-396. Geometry clean (grounded, no floats).
+  Evidence: reviews/survey22-slice/nx-struct-waterstair/
+- `nx-struct-meridianstair` — FOURTH vote (ZAI fallback — native 1210 x2
+  + paced retry burned; native tie-break STILL owed): base-read flag NOT
+  reproduced again — all six post bases at contact line y452-462 with
+  contact shadows; ONE unresolved occlusion region named (P2-left /
+  P1-right post merge x405-425 y432-460 — a ≤15px gap could hide there;
+  recommends one close-up frame before sign-off). Verify cluster now
+  2-2 SPLIT (survey-19/20 ZAI saw the gap; survey-21/22 ZAI do not).
+  PINS fourth corroborating vote: 1-of-3 gold pins reads (P3 right post
+  cap x658-685 y206-228; possible P3-left second x538-552 unconfirmed);
+  if pin-per-gate is intent, P1+P2 pins fail the 18m read entirely.
+  Adjacent-read note: six posts read as four at 18m (P2-R/P3-L merge
+  x525-552). Evidence: reviews/survey22-slice/nx-struct-meridianstair/
+
+**SURVEY INTAKE status**: echoarch row EXECUTED this tick (struct-55).
+Remaining intake: cellardoor Sev 3 (void opening + missing leaf detail —
+next worst), meridianstair verify cluster (split 2-2, native tie-break
+owed; Gate-1 pin likely genuine), waterstair gameplay-view dissent (now
+2 independent survey reads vs struct-53's front/aerial — contract
+question: is the 18m
 gameplay water band enough, or does the cascade want per-step teal
 facings), orreryring margin-only.

@@ -951,3 +951,84 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   churn — both Sev 4 identity-marginal) / 5 clean-with-margin / 1
   ZAI-dissent probe (waterstair, routed not counted) / 0 dropped. Zero
   world mutations, zero uploads, zero shared-budget use, zero comp edits.
+
+
+## Judged index (survey-22)
+
+- survey-22 (2026-09-07, NATIVE 7/8 objects + ZAI fallback 1/8 disclosed —
+  native 1210 flap pattern: parallel batch 1 = observatory + waterstair
+  errored on first calls, paced retry recovered OBSERVATORY native after
+  which WATERSTAIR also landed native on its re-issued call;
+  meridianstair burned both (1210 x2 + paced retry) = the ONE ZAI
+  fallback object; 18m gameplay, fresh live store bytes 8/8 HTTP 200
+  curl UA on exact census-22 libs): NATIVE-DEBT CLOSURE + NEW-ARRIVAL
+  slice. Slice = welcome (improve-29 fixed bytes 7d1bd0c9, native
+  after-judge owed) + observatory (struct-54 fixed bytes 07d18163,
+  uncommitted-judge debt) + beacon (struct-52 fixed bytes 03d278be,
+  independent fixed-bytes read owed — survey-17/18 Sev 2 was pre-fix) +
+  cistern (improve-28 fixed bytes 156b4fc8, third read) + waterstair +
+  meridianstair (standing dissent/verify clusters) + 2 never-judged
+  arrivals (nx-dress-ne-anvilpad-001 dress-76, nx-dress-se-funguslogs-001
+  dress-77/78). Echoarch EXCLUDED (struct-55 in flight — dirty mk source
+  in tree; it executed + committed mid-tick, fixed bytes 103be93e = next
+  tick's candidate). Verdicts: WELCOME NATIVE CLEAN — improve-29 native
+  debt CLOSED (wayfinder instant; arms attached both sides, junction
+  x470-486 y338-345, no gaps; name-bar band + glyph row reads as
+  inscription; WELCOME word itself sub-legible at 18m by geometry —
+  improve-29's contract disclosed exactly this expectation; zero
+  floats). OBSERVATORY NATIVE CLEAN — struct-54 debt CLOSED (segmented
+  dome + instrument pier through the portal sell the read; both
+  lamp_slit panes flush/proud integrated, masonry continuous, cornice
+  band one continuous ring y272-285, zero detached three-piece bands,
+  zero floats; margin: slits read dark-not-lit in day exposure — night
+  is the contract and struct-54 already falsified 50 warm px night).
+  BEACON NATIVE CLEAN day+night — struct-52 debt CLOSED (day: all
+  three former void-rects x468-492 filled with warm panes seated proud,
+  zero black rectangles; night: 3 shaft windows flush-integrated +
+  single lantern crown signature, no floating offsets; margin: shaft
+  panes slightly desaturated vs lantern — warm-nudge polish tier).
+  CISTERN NATIVE third read — 18m gameplay water-read STILL FAILS
+  (zero teal/blue px in bbox 415-525 x 352-399; top slit 438-481
+  y358-366 reads dark umber; reads closed dry crate with leaning
+  plank); camera-angle divergence vs improve-28's front-view 602px
+  navy PASS named; annotation routed to the standing IMPROVE-PLAN row
+  — PROBE, executed state stands, contract question surfaced (18m
+  water-read contract vs 2-8m approach read). WATERSTAIR NATIVE
+  second read — dissent CONFIRMED on fixed bytes 4acda521 (teal = 6px
+  top band x402-558 y322-327 only, merges with black bay y331-352;
+  cascade y352-396 fully dry; reads timber floodgate) — dissent now
+  NATIVE-BACKED (survey-21 ZAI + survey-22 native vs struct-53's
+  front/aerial PASS); the survey-21 native-owed debt is PAID; routed
+  STRUCTURES-PLAN INTAKE with contract question. MERIDIANSTAIR ZAI
+  fallback (sole fallback object) — base-read flag NOT reproduced
+  (cluster now 2-2 SPLIT, native tie-break still owed); one
+  unresolved occlusion region named (P2-L/P1-R post merge x405-425
+  y432-460, a <=15px gap could hide there — recommends one close-up
+  frame); pins 1-of-3 fourth vote (P3 right post cap x658-685
+  y206-228; possible P3-left x538-552 unconfirmed; if pin-per-gate is
+  intent, P1+P2 fail the 18m read); six-posts-read-as-four merge
+  note; routed STRUCTURES-PLAN INTAKE. ANVILPAD NATIVE
+  CLEAN-with-margin — first independent read (anvil horn/head + stump
+  + ember accent x425-448 y383-390 sell forge workstation; tool rack
+  reads post-structure with tools illegible; mid-cluster low-contrast
+  x470-512; possible heel/pad seam verify-flag x465-492 — margin
+  tier). FUNGUSLOGS NATIVE CLEAN 4/4 — first independent read,
+  concurs dress-77's own 5/5 PASS (root-plate fan x308-428, prostrate
+  trunk, stubs; fungus clumps warm cream x468-500/532-568/594-622;
+  full-length contact shadow; zero floats). Routing: 1 annotation on
+  the standing IMPROVE-PLAN cistern row (probe); 2 intake lines
+  STRUCTURES-PLAN SURVEY INTAKE (waterstair native-backed dissent,
+  meridianstair fourth vote); grep-verified zero open duplicates
+  pre-append. Census 265 vs survey-21 snapshot 264: +1 arrival
+  nx-dress-se-funguslogs-001 (dress-78 committed 2e71c16, tuple-exact
+  vs plan); 1 lib flip nx-welcome 362c5be1->7d1bd0c9 (improve-29
+  committed 3dc4db4, exact tuple POS_SAME); 0 departures; lights 38; post-capture sibling
+ landings observed in ledger before commit: struct-55 echoarch
+ re-place (103be93e) + dress-79 SW censer (census 266 per its entry) —
+ next tick's diff classifies both. Gate: ALL PASS real
+  exit 0 first try at ee9786f (ledger law EXACT 2370329); re-check
+  HEAD + clean plan partition before commit. Verdicts 0 confirmed /
+  7 clean (anvilpad clean-with-margin; cistern/waterstair/meridianstair
+  are dissent/probe records on standing rows, not new confirms) / 0
+  dropped. Zero world mutations, zero uploads, zero comp edits, zero
+  shared-budget use.

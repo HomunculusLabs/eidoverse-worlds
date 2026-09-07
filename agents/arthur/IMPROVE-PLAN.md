@@ -1810,6 +1810,23 @@ open duplicate notes for these objects.
   tuple lib d3d3ad75→156b4fc8, comp {} both sides, PLACED_VERIFIED
   + rider b23 standing unchanged, idempotent zero-verb rerun;
   walk 3/3 ALL_PASS 0.000/0.248/0.261; row closed.]
+  [survey-22 annotation, 2026-09-07 — NATIVE 18m gameplay re-read on
+  post-fix bytes 156b4fc8 (fresh fetch, curl UA, byte-pinned this
+  tick): water-read at 18m gameplay STILL FAILS — zero teal/blue
+  px anywhere in the asset bbox (415-525 x 352-399); top slit
+  (438-481 x 358-366) reads dark umber, merging with the near-rim
+  interior wall, not water; overall read stays "closed dry crate
+  with leaning plank." Native calls improve-28's own after-judge
+  (front-view 602px navy band + approach-range contract,
+  struct-45 distance law) CAMERA-ANGLE-divergent from the survey
+  chassis's 18m gameplay view. PROBE, not a verdict — the row's
+  executed state stands; question for the next improve pass (or
+  Bill): is the 18m gameplay water-read a contract the cistern
+  must meet (fix direction: raise water to ≥0.75 tank height /
+  widen the rim opening / saturated cyan-teal + stronger
+  emissive), or does the 2–8m approach read close it? Evidence:
+  reviews/survey22-slice/nx-cistern/gameplay.png (judge = native
+  glm-5.3-flash, no fallback needed this object)]
 - `nx-dress-fountain` — Sev 4 (survey-8, ZAI + decode; DRESS-DOMAIN,
   legacy-core off-limits set — ownership is Bill's call, not dress
   rotation): water fails at 18m. DECODE: ENTIRE asset is ONE material
