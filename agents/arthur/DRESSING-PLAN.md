@@ -1,6 +1,36 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-139 — lawful HOLD (30th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD 022d9467 (city-85 sibling); interlane md5
+  f6254cd0 pin-exact. Fresh census **294 steady** — epoch diff vs
+  dress-138 capture +0/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-139.py` HOLD_VERIFY_PASS exit 0, fresh UA'd
+  fetch; capture saved /tmp/dress139-census.json for the dress-140
+  epoch); dress domain 45 = 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16
+  legacy. Round-3 closers PINS_EXACT 4/4, all deltas exactly 0.0:
+  foxden 856deec5, lanternhook 639c5480, seats cb34bd36, streamstones
+  aabbc23d (radian law, no yaw guard).
+- **Shard/intake (re-checked at source)**: IMPROVE-PLAN all 9 sharded
+  `nx-dress-` queue rows terminal (rows 29-34, 37, 38 + sw-prayer
+  DROP, re-read this tick); no round-4/5 section; zero STATE-OPEN rows.
+  Zero dress intake. Dress-named survey rows (fountain survey-8/16,
+  hutch survey-20, hens/churn survey-21, stringlights survey-30) all
+  legacy-core off-limits-set members — probe-only, Bill's call. Not
+  shard work.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains
+  the two one-line rulings in `reviews/dress-round3-eye-gate.md`;
+  either releases real placement work next tick.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-138 — lawful HOLD (29th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
