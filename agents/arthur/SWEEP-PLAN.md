@@ -2007,6 +2007,44 @@ longhouse, @67 garden-cottage/tower-house, @66 row-cottage/observatory;
 hall last walked sweep-64, forge sweep-59 coverage pair — both now
 stalest).
 
+sweep-70: CLEAN SWEEP, fully quiet single-epoch tick. Census 274==274
+vs the committed sweep-69 epoch-B baseline (sha16 86bc038404c6af69):
+0 arrivals, 0 departures, 0 drift on id+pos+yaw+scale+lib+bbox — the
+normalized live re-projection is BYTE-IDENTICAL to the committed
+snapshot (109824B, no rewrite needed, sweep-37 class). Overlap: exit 3
+on exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard −0.407
+(known Sev 2 routed to artwalk b26 @ sweep-43, tuple identical per
+zero-drift census, TWENTY-SEVENTH sweep since routing, NOT new, no
+escalation due — law keys severity-1); 236 bbox non-light, 233
+classified, 0 coverage holes. Tier-1 4/4 per-leg verified 81/81
+ALL_PASS every leg real exit 0: core 64/64 @ 0.38, NW 5/5 @ 0.38, NE
+7/7 @ 0.38, SW 5/5 @ 0.37. Tier-2 48th cycle per the committed pointer:
+hall 8/8 @ 0.36 + forge 6/6 @ 0.375 ALL PASS. Struct circuits re-walked
+fresh this tick (dated legacy coverage — struct suite never walked
+since ~sweep-46; recorded honestly as a coverage refresh, not a
+finding): tower 4/4 + court 4/4 + orchard 6/6 @ 0.365 ALL PASS.
+Integrity: pins 15/15 ALL_PINS_OK (25th consecutive clean), plus the
+extended live pin set re-verified from the census directly: carousel
+comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 on the full
+16-hex 18b69a6bb2f5862f with bbox PRESENT (R-120 resolved standing) +
+4 -l companions live, belltower 2419fbc53a1d65e1 + ladder comp live,
+windmill 369c5724, woodyard 01b78fdd00f090a7, welcome 7d1bd0c9 +
+welcome-l light live, cistern 156b4fc8, hamlet embers 5-of-5 full
+particles payloads (preset embers + origin/count/size/speed), 38
+lights, 16 comp-bearing entities census-matched, interlane md5
+f6254cd0 stable, ledger law EXACT at append. Zero world mutations,
+zero defect notes, zero uploads, zero comp edits, zero shared-budget
+use (D+0, E+0). Walk-parser self-catches: `legs` is a scalar count on
+the core route schema and absent on interior/struct walk schemas —
+per-leg ok tallies re-derived from `results` arrays before any verdict
+(two TypeError parse failures refused, not waved through); second
+self-catch: welcome/cistern pin ids are `nx-welcome`/`nx-cistern`
+(under-dashed guesses missed, re-derived from the census, survey-27
+class). Next tier-2 pair (sweep-71): potter + market (49th cycle —
+LRU: refreshed @70 hall/forge, @69 inn/stable, @68 bunkhouse/
+longhouse, @67 garden-cottage/tower-house, @66 row-cottage/observatory;
+potter+market last walked sweep-46, now stalest).
+
 ## Overlap exemption classes (frozen in sweep-sat-next.ts)
 
 - E1 lights (kind=light) — not geometry.
