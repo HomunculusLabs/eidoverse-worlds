@@ -1,6 +1,44 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-110 — round-3 cluster close-out (annotation repair + eye-gate packet, NO PLACEMENT)
+
+- **State verified fresh this tick** (gate ALL PASS exit 0 at HEAD
+  33574fe8, interlane md5 f6254cd0, census 291): all 18 placeable
+  round-3 installations are LIVE and tuple-exact against their closing
+  ledger/plan pins (programmatic compare of id/lib/pos/yaw; the
+  "NO-PIN-FOUND" reads were prose-format artifacts — every id resolves to
+  its closing entry: orchard-rows→dress-81 v7 962c5fb0, compost→dress-80,
+  rainbarrel→dress-96 re-derived 2a0d5be7, anvilpad→dress-76,
+  mossbowls→dress-94 v11, incense→dress-79, lanternhook→dress-109 v5
+  639c5480; bellpost live fe682869 == dress-91 v6 cure, the 1ea38f61
+  pin pre-dates it). 29 fleet nx-dress ids live; 16 legacy core
+  untouched.
+- **Annotation debt repaired (improve-29 class, 8 rows)**: queue rows 3
+  (dryingracks), 4 (rainbarrel — stale BUILD-ONLY note replaced), 11
+  (snagdead), 12 (mossbowls), 17 (seats), 18 (offering), 19
+  (lanternhook) now carry their DONE pins; row 9 (bellows) notes the
+  packet ask. Round-3 table now 18/19 DONE-annotated, 1 BLOCKED-on-Bill.
+- **Round-3 eye-gate packet delivered ONCE**:
+  `reviews/dress-round3-eye-gate.md` — 18 installations across the four
+  districts, four judgments asked (working-vs-wild idiom; quiet-wild
+  family "discovered not installed"; SW devotional line reads as one
+  sequence with empty hooks awaiting lanterns; two blocked one-line
+  rulings — bellows siting a/b/c, SW lamp a/b/c). Lane does NOT hold on
+  the packet.
+- **Blocked on Bill (said once, standing)**: bellows siting a/b/c
+  (dress-103/104), SW lamp policy a/b/c (0 of 3 spent; hooks empty by
+  policy). No other own-queue or shard work exists: Round-1 shard rows
+  terminal (5/29/30/31 DROPPED, 32/33/34/37/38 EXECUTED, 39 foreign);
+  round-2 candidates are legacy-core (off-limits, Bill's call); no
+  survey intake routed to dress since survey-42's milkstand dissent
+  (tie-break third vote still owed by survey lane, not dress).
+- **Rotation state**: round-3 complete 18/19. Next lawful install tick
+  requires a Bill ruling (either blocked item) or a new commission
+  (round-4 family list or queue widening). Zero world mutations, zero
+  uploads, zero verbs, zero shared-budget use this tick (D+0, E+0).
+
+
 ### dress-109 — SW lantern hook row (round-3 item 19, PLACED, LIVE)
 
 - **Interrupted-window recovery closed**: dress-108 was cut at the
@@ -1160,12 +1198,16 @@ identity intent. Rotation stays NW->NE->SE->SW.
    2026-09-07 — re-sited to the garden-0019 headland after garden-0058 proved
    hemmed; details in the dress-80 siting-log entry).**
 3. `nx-dress-nw-dryingracks-001` — herb-drying racks (A-frame pairs) near
-   the dyer's yard edge; hung swatches echo dye colors.
+   the dyer's yard edge; hung swatches echo dye colors. **DONE (dress-87
+   build + dress-88 PLACED 2026-09-07 — `f0343efb` @ (−59.0, 33.0) after
+   a third consecutive hand-pocket failure forced a full-NW-annulus
+   re-derivation; details in the dress-88 siting-log entry).**
 4. `nx-dress-nw-rainbarrel-001` — barrel + plank stand at the skep row end;
-   single authored piece, ties the apiculture corner together. **BUILD-ONLY
-   (dress-95, 2026-09-07 — v6 native-accepted, sited, terrain-pinned;
-   placement deferred on run budget, improve-31 class; the dress-96 tick
-   executes nw-dress95-place.ts).**
+   single authored piece, ties the apiculture corner together. **DONE
+   (dress-95 build + dress-96 PLACED 2026-09-07 — the committed v6 bytes
+   failed to reproduce at the hash gate and were re-derived in-tick;
+   live pin `2a0d5be7` @ (−59.7, 52.7); details in the dress-96
+   siting-log entry).**
 5. `nx-dress-nw-fieldcross-001` — one maintained field-crossing: two plank
    stiles + mown gap, mid-field, walk-tested both ways. **DONE (dress-102,
    PLACED 2026-09-07 — v7 `7750e9b7` seated at lavender-0053's W end,
@@ -1191,7 +1233,8 @@ identity intent. Rotation stays NW->NE->SE->SW.
    2026-09-07 — `43515fa7` decode ALL PASS 16/16, judge 5/5 PASS; the
    dress-73 commission anchors it at the core forge, but CITY-PLAN law 3
    (later ruling) closes the village ring — placement BLOCKED on Bill's
-   siting call a/b/c, see dress-103 entry).**
+   siting call a/b/c, see dress-103 entry). Round-3 eye-gate packet
+   (dress-110) carries the ask; ruling executes in one tick.**
 
 ### SE — WILD (round 3)
 10. `nx-dress-se-funguslogs-001` — felled-log cluster with bracket-fungus
@@ -1199,9 +1242,14 @@ identity intent. Rotation stays NW->NE->SE->SW.
     2026-09-07 — dress-77 in-flight item closed; see dress-78 siting-log
     entry).**
 11. `nx-dress-se-snagdead-001` — one standing dead snag with hollow (bird
-    habitat read); leans away from paths, SAT-checked.
+    habitat read); leans away from paths, SAT-checked. **DONE (dress-84,
+    PLACED 2026-09-07 — live pin `7ac83203` @ (60.6, −30.0); details in
+    the dress-84 siting-log entry).**
 12. `nx-dress-se-mossbowls-001` — moss-lined hollow stones at the forest
-    edge; quiet, low, contemplative-wild.
+    edge; quiet, low, contemplative-wild. **DONE (dress-93 build +
+    dress-94 PLACED 2026-09-07 — v11 after a decode-caught tongue-axis
+    bug; live pin `6d598bd5` @ (61.3, −55.2); details in the dress-94
+    siting-log entry).**
 13. `nx-dress-se-streamstones-001` — dry-stream stone run suggesting a
     seasonal waterline through the SE wild. **DONE (dress-105, PLACED
     2026-09-07 — v5 `aabbc23d` seated at the forest-0057 E flank,
@@ -1221,11 +1269,20 @@ identity intent. Rotation stays NW->NE->SE->SW.
     SAT killed the dress-85 hand pocket; details in the dress-86 siting-log
     entry).**
 17. `nx-dress-sw-seats-001` — paired facing seats at the terminus view;
-    one material, two orientations.
+    one material, two orientations. **DONE (dress-97, PLACED 2026-09-07 —
+    v4 `cb34bd36` @ (−57.0, −72.5) facing the labyrinth; worn-slab law
+    banked: rim-drop + crown + undulation together, a bevel alone leaves
+    razor mid-edges; details in the dress-97 siting-log entry).**
 18. `nx-dress-sw-offering-001` — offering shelf niche in the existing
-    boundary wall, small and specific.
+    boundary wall, small and specific. **DONE (dress-98 build + dress-99
+    PLACED 2026-09-07 — `b41efb63` @ (−45.0, −84.5); details in the
+    dress-99 siting-log entry).**
 19. `nx-dress-sw-lanternhook-001` — lantern hook row (hooks only, lanterns
-    pending Bill's lamp a/b/c policy — the hooks spend no budget).
+    pending Bill's lamp a/b/c policy — the hooks spend no budget). **DONE
+    (dress-108/109, PLACED 2026-09-07 — v5 `639c5480` @ (−57.0, −70.0)
+    yaw 282.34° after a native-confirm debt was paid and v4's factory-fresh
+    clone read falsified the earlier ZAI acceptance; hooks EMPTY by policy;
+    details in the dress-109 siting-log entry).**
 
 Laws: each installation gets its own authored build (no kit stamping),
 18m identity read + contact-path walk where relevant, per-piece eye-check
