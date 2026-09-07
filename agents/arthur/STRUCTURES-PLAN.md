@@ -3031,3 +3031,64 @@ court → meridianstair) with the entrance bays still on the world-Z axis.
 No Bill eye-check owed — same bytes, judged struct-64; this was a
 corrective translation only.
 Next tick: 67%3==1 → build tick (R5-3 commission or shard re-arm).
+
+## struct-67 (2026-09-07): R5-3 THE MERIDIAN DIAL authored (v3) — judged,
+## placement deferred (run budget)
+
+Cadence 67%3==1 → build tick. Shard EMPTY fresh (no OPEN nx-struct rows).
+Refine pool empty (R-122 closed struct-66). Gate ALL PASS real exit 0 at
+6e84646 pre-tick.
+
+**Concept (Round 5 commission, R5-3)**: the instrument family's missing
+figure. Observatory mirrors the sky, Orrery models its motion, meridianstair
+draws its line — nothing READS it. One idea: THE SHADOW IS THE INSTRUMENT.
+An ashlar gnomon blade whose style edge points at the pole at exactly φ=40°
+over an octagonal two-step court; the hour fan is mathematically TRUE
+(horizontal-dial law θ(H)=atan(sinφ·tan 15°(H−12)), φ=40°; 9h=32.7°,
+7h=67.4° textbook); you stand ON the face to read the shadow. 12 dark hour
+grooves (noon EXCEPTED — the noon line IS the meridian, one line, no
+z-fight), 11 pale hour stones 7h..17h, continuous dark meridian N+S of the
+blade, brass pole pin at the style apex + noon pin on the noon stone (glow
+dusk lineage, ZERO lamp draw). No comps, no motion — the shadow moves.
+
+**Build arc**: v1 caught pre-build (blade footprint covered the fan at
+R2.55); v2 sha 4f265832 — bone hour stones exported MATERIAL-LESS (glbwrite
+plain-mat lane, struct-38 class) → dialbone texMat; meridian S/N boxes
+built on the wrong axis (decoder caught: lay E-W across the face); v3
+layout defect caught by decode+judge cross-check: markers floated past the
+upper pad's FLATS (old assert used circumradius 3.4; true apothem 3.143) —
+stones r 3.25→2.95, grooves 2.60–2.80, meridian ends 3.06, + TRUE
+octagon-boundary law asserted per-hour. FINAL v3 sha
+7acc090a0420499eaa4d1721a7d35e5de81a88076c4a4491450f10f0ab6c2682
+deterministic ×2. 4 nodes (dialstone 128v / dialdark 388v / dialbone 264v
+/ glow 286v). Decode struct67-decode-meridiandial.ts ALL GREEN (hour law
+worst 0.79° box-end scatter; style 40.00°; apex (0,2.353,−2.375); pins
+exact; 11 stones on the fan; room gates 46.7m² + 2.51m honest → roomScale
+exact trimesh, standable face, solid blade).
+
+**Judging**: native 1210 hard down ALL tick (×2 + paced retry per judge
+call — disclosed). ZAI fallback 3/3 PASS on v3 bytes: TOP view — "reads
+unambiguously as a functional sundial face" (fan from one center YES,
+stones on lines YES, meridian continuous YES, zero overhangs, south half
+clean = correct dial logic); RIGHT view — blade "unambiguously a wedge,
+40-45°, not a vertical post", composition legible as sundial; GAMEPLAY 18m
+south — instrument read carried by stone arc + grooves + brass bead,
+"solid, coherent asset with no defects", hour stones at legibility floor
+(margin), noon stone correctly occluded by blade, two-step pad compresses
+to one band from S (foreshortening, struct-61 v4 class, physically
+correct). Native re-judge debt owed on return (flap law).
+
+**Siting (derived, not yet preflighted)**: village meridian x=0, N walk
+gap between waystone (0,−22.1) and waterstair (0,−32): center (0,−27),
+yaw 0 (local −z = world N). Neighbors ≥4.6m at disc r3.72; N approach
+lamp at r≈13 clear. Terrain + fresh-census SAT + preflight at placement.
+
+**DEFERRED (next tick executes FIRST)**: 1) native re-judge (or disclosed
+fallback) of reviews/struct67-meridiandial/{top,right,gameplay}.png vs
+contract; 2) terrain preflight 5pt at (0,−27); 3) fresh 274+census SAT at
+disc r3.72 (ground-layer + fat-network exemptions per law); 4) upload
+paced 20s+ + spawn nx-struct-meridiandial at (0,−terrainY,−27) yaw 0 via
+struct64 chassis; 5) post-place tuple verify + idempotent rerun; 6) MCPL
+walk: S approach → pad S edge → onto face → around blade both sides → N
+edge → off W/E (do NOT walk through the solid blade); 7) Bill eye-check
+packet + plan record. On judge FAIL: iterate ONE defect, do not place.
