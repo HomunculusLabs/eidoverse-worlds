@@ -2528,3 +2528,85 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   NONE. Verdicts 0 confirmed / 6 clean (3 debt-resolutions/new-seat
   natives, 1 fallback+decode, 2 with margins) / 0 dropped. Zero world
   mutations, zero uploads, zero comp edits, zero shared-budget use.
+
+## Judged index (survey-46)
+
+- survey-46 (2026-09-07, NATIVE 9/9 — zero 1210 flaps all tick; 18m
+  gameplay primary + top/night for solids, face/right for flat riders
+  per survey-31 series law; fresh live store bytes 5/5 HTTP 206 curl UA
+  on exact census-46 libs, served-shas pinned b2a415c8daeb62a1 (kiln) /
+  9e44d6b269516817 (sign-kiln) / 29e932d59cc9f57b (b12 rider) /
+  413bdeedc095ea99 (soundmirror) / c9ca1b859b0532ed (charcoal)):
+  NEW-SEAT RE-READ slice (severity backlog drained; native debts none
+  after survey-45; never-judged pool = carousel only, standing 8-tick
+  polish-hero exclusion holds). Slice = city-14 kiln cluster (4 objects:
+  nx-town-kiln + nx-sign-kiln-001 + b12-kiln-heat-contours rider +
+  kiln-l light presence-check) + struct-71 soundmirror SE-wild seat +
+  city-12 charcoal seat. VERDICTS: KILN NATIVE CLEAN 5/5 at the new
+  seat (identity by ground-level fire mouth, coursed-stone cone read,
+  stone pile + work stand props, all grounded on one contact band; no
+  torn seams from the move) — margins: flue not independently legible
+  at 18m (flat cap only weakly suggests it, kiln-1 CLEAN precedent),
+  no cast shadow = flat-ambient chassis class. KILN NIGHT: mesh
+  emissive not readable in solo chassis (0 warm px at fire mouth;
+  decode: glow2 fire-slab z1.125-1.275 + glow3 bead EXIST in bytes,
+  ~0.3m recessed behind +z face — occlusion-plus-faint-intensity
+  class) — live night identity comp+server-light carried (kiln-l
+  companion at 1.79m horizontal, census-verified; comps empty BOTH
+  baseline and fresh — no wipe, city-14 'empty both sides' claim
+  corroborated) — survey-42 mile-lamp BYTES-ONLY precedent class,
+  recorded plan-only, Bill's call on any emissive boost. SIGN-KILN-001
+  NATIVE CLEAN-with-margin (moved with host): double-rail orphan
+  claim DECODE-DISPROVEN — mesh 0 is ONE 2.37m welded bracket frame
+  (7 nodes all t=0, top+bottom rails are its members); host-side end
+  r=0.888 from kiln axis at sign height 2.45m — embedding into the
+  cone drum at the live seat, bracket-not-orphan (polish-282 solo-
+  render class); emblem 13x18px dark-on-amber reads vessel/kiln-
+  silhouette MARGINAL (series-law floor, sign-potter-001 read class);
+  zero glitch classes. B12-KILN-HEAT-CONTOURS NATIVE CLEAN (moved with
+  host): 3/3 concentric rings uniform stroke + 4/4 symmetric corner
+  studs + plinth attached, motif complete; margin: faint dashed ground
+  mark x405-438 y399-404 left of plinth (contact-shadow raster class,
+  cosmetic watch) — city-14's host-local rider pin corroborated by
+  read (survey-37 verdict carries at new seat). SOUNDMIRROR NATIVE
+  CLEAN-with-margin at struct-71 SE-wild seat: three-tier stack reads
+  deliberate monument, concavity via dark-interior-under-rim (10-13px
+  band, strong value separation), grounding PASS; margins: basin-on-
+  plinth profile (crown nearly as wide as base, muted ziggurat taper),
+  concavity shallow — will not survive more distance (same class as
+  survey-16 old-seat read, distance-fragility inherent), brass T-bar
+  focus element reads spigot at 18m = struct-45 known crown/legibility
+  residual, thin brass neck 2-4px watch at lower LODs. CHARCOAL NATIVE
+  CLEAN-with-margin at city-12 seat: gameplay frame identity PASS
+  (earth clamp + distinct near-black product heap = charcoal-camp
+  gestalt; top view DISCRIMINATES — 2x size contrast, tan-vs-black
+  value contrast, faceted-built vs loose-piled form contrast, coherent
+  layout); judge's "floating slab column" claim DECODE-DISPROVEN (all
+  6 nodes welded t=0; mesh 4 chimney base y1.03 embedded BELOW dome
+  apex y1.198 — no floating geometry exists); margins: night ember
+  read DEAD in solo chassis (0 warm px; ember bead mesh EXISTS at
+  crown with glow1 emissive [0.7,0.0716,0.0072] — faint-intensity
+  class, no server companion, comp bag empty) — Bill's call tier,
+  plan-only; survey-23's ZAI 'no vent, pile crushed to void' claims
+  decode-disproven on identical bytes (vent chimney + distinct heap
+  exist) — probe-resolution input for the owner's standing improve
+  row, not a survey finding. KILN-L light: presence-check PASS
+  (census-verified companion at new seat, no render — survey-43 law).
+  Routing: ZERO notes routed (zero confirmed defects), zero candidate
+  rows, ZERO ledger append (read-only tick, loop law 4). Census 284==284
+  vs sweep-82 committed baseline c8d3817982a7a9bb (via survey-44
+  snapshot /tmp/survey44-census.json, 284): 0 arrivals, 0 departures,
+  8 same-lib POS_MOVED flips = city-13 potter cluster x4 (classified
+  survey-45) + city-14 kiln cluster x4 (classified THIS TICK,
+  ledger-matched at 3110b42c), 0 unexplained drift. Comp-field
+  self-catch disclosed: first comps read keyed 'comps'/'components'
+  (both absent — census schema uses 'comp'/'compKeys'); false
+  'comp-wipe' hypothesis retracted BEFORE routing; baseline-vs-fresh
+  comparison on true schema proved comps empty both sides. Chassis
+  note: rider family frames = gameplay+face+right (survey-31 series
+  law); /tmp tsconfig lint noise on the renderer is the survey-43
+  artifact class (bun does not typecheck). Gate: ALL PASS real exit 0
+  first try at 91d0c7ec (ledger law EXACT 2370704). Verdicts 0
+  confirmed / 6 clean (5 clean, 3 with margins) / 0 dropped. Zero
+  world mutations, zero uploads, zero comp edits, zero shared-budget
+  use.
