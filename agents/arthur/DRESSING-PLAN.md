@@ -1,6 +1,35 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-125 — lawful HOLD (16th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD 93801e48 (struct-89); interlane md5
+  f6254cd0 pin-exact. Fresh census 292 steady — 29 fleet
+  district-qualified (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy core
+  intact; zero arrivals, zero departures, zero moves vs the dress-122
+  epoch; ZERO dress-domain drift. Round-3 closers PINS_EXACT 4/4 vs
+  live: foxden 856deec5 (73.0, -0.0532, -10.5) yaw 4.7124, lanternhook
+  639c5480 (-57.0, -0.0306, -70.0) yaw 4.9277, seats cb34bd36 (-57.0,
+  -0.0263, -72.5) yaw 2.7349, streamstones aabbc23d (75.05, -0.0249,
+  -46.90) yaw -0.7854.
+- **Shard/intake (standing)**: all nine Round-1 rows terminal, queue
+  EMPTY, no round-4 section, zero OPEN fleet-prefix rows — intake
+  unchanged.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the log trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock stays the
+  two one-line rulings in `reviews/dress-round3-eye-gate.md`.
+- **Two probe self-catches corrected at source, disclosed**: (1) probe
+  parsed the census response as a bare array — it is an OBJECT with an
+  `entities` key (recurrence of dress-124's class, 4th occurrence);
+  (2) seats closer transcribed from memory as `nx-dress-ne-yard5-seats`
+  — live set search by lib hash found it standing exact as
+  `nx-dress-sw-seats-001` (probe id fixed at source; kin to dress-121's
+  streamstones prefix error). Probe then HOLD_VERIFY_PASS exit 0.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use this tick (D+0, E+0).**
+
 ### dress-124 — lawful HOLD (15th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
