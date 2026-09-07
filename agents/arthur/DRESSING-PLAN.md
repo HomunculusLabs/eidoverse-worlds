@@ -1015,6 +1015,46 @@ expanded, the quality bar is not lowered.
 
 ## Siting log
 
+### dress-101 — NW fieldcross v7 (BUILD-ONLY — visual gate PAID, placement + terrain-PY + walk owed next tick)
+
+- **Tick class**: dress-100's deferred close-out became a build iterate —
+  the owed correct-decode re-gate caught TWO real defects in v4/v5 and the
+  native top-judge caught a third; v7 `7750e9b7` passes all gates.
+- **Self-catches (all disclosed)**: (a) dress100-decode.py read accessor
+  data at FILE offsets missing the GLB BIN-chunk header — its "ALL PASS
+  decode" was vacuous garbage-floats (pitfall-12 class); dress101-decode.py
+  is the corrected decoder (chunk-relative, self-test vs mk constants).
+  (b) With the correct decoder, v4/v5 flag tops measured 0.1575 — ABOVE
+  the 0.12 walk-line law (the vacuous decoder had masked it); v5 re-stack
+  body 0.075 + top 0.045 @ y 0.0375 = exactly 0.120. (c) v6 first organic
+  pass overshot the bed boundary +0.22 (SAT −0.222 vs host, violating
+  "piece ENDS at the boundary"); v7 clamps all three corridor loops to
+  z≤0 → host gap −0.002 = designed flush mount (dress-99 class).
+- **Judge arc (native flap disclosed)**: v4/5 18m solo FAIL DISCARDED as
+  non-diagnostic — accepted-sibling stile-001 control (live 2c7f1bbe,
+  same rig) shows every cited presentation class (tiny horizon clump,
+  empty plane, no leading line) = dress-80 solo-rig law re-proven. The
+  TOP-view FAIL was rig-independent and real: machine rectangles,
+  constant-width line, comb collars. v6 organic rebuild: 10 overlapping
+  varied-width segments, drifting/varied worn line, varied collars,
+  mottling (MOWN_L), edge stones, rotated flags — v6 top ZAI PASS, front
+  ZAI PASS (native 1210 ×2 paced). v7 top NATIVE PASS ("organically worn
+  path... flush bed-boundary far end"), v7 front NATIVE PASS (stepped
+  caps, grounded, value bands; nit: lower cap subtle).
+- **v7 TRUE dims (correct decode, deterministic x2)**: x −0.843..+1.310,
+  z −6.685..+0.004, y −0.001..0.416; dims 2.153×6.689; center (+0.2336,
+  −3.3405); 8 nodes, 1320 verts; walk-line tall verts 0; flag tops 0.120.
+- **Pregate vs fresh census 282** (dress101-pregate.py; pose −17.845,
+  84.294 yaw −135°): SAT all-clear except host flush −0.002 (designed);
+  rim 85.457..91.037 ∈ [66,108] AND CITY-PLAN band; ninesbridge cone
+  +70.1° @ 19.13m, echoarch +77.5° @ 29.86m — both clear of 18m/25° cone.
+- **PENDING NEXT TICK (in order)**: terrain preflight at corridor
+  footprint (next-terrain chassis) → PY pin → hash-gated placer
+  (nw-dress95-place.ts chassis, SHA 7750e9b7…, TRUE v7 dims/constants) →
+  upload/spawn `nx-dress-nw-fieldcross-001` → idempotent rerun → two-way
+  MCPL walk through corridor + bed trench → ledger close. Rotation after:
+  NE round-3 item 9 (bellows). NW lamp 0 of 2.
+
 ### dress-100 — NW fieldcross (round-3 item 5, BUILT v4 — judgment + placement deferred, dress-82/85/93 class)
 
 - **Concept contract**: the WORKERS' CROSSING into the dye-field — at
