@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 273,
+ "count": 274,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -6342,6 +6342,40 @@
      0,
      0.303,
      1.695
+    ]
+   }
+  },
+  {
+   "id": "nx-struct-wavepergola",
+   "kind": "thing",
+   "pos": [
+    51,
+    -0.0221,
+    9
+   ],
+   "yaw": 0,
+   "scale": 1,
+   "lib": "store/32dc2e7df1a8c76f.glb",
+   "bbox": {
+    "min": [
+     -7.088,
+     0,
+     -2.24
+    ],
+    "max": [
+     7.088,
+     4.645,
+     2.24
+    ],
+    "size": [
+     14.176,
+     4.645,
+     4.48
+    ],
+    "center": [
+     0,
+     2.322,
+     0
     ]
    }
   },
