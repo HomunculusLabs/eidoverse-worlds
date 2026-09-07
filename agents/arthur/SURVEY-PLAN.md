@@ -2961,3 +2961,66 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   Verdicts 0 confirmed / 6 clean (6 clean-with-margin) / 0 dropped.
   Zero world mutations, zero uploads, zero comp edits, zero shared-budget
   use.
+
+## Judged index (survey-52)
+
+- survey-52 (2026-09-07, NATIVE 6/6 zero fallback — one 1210 on b24,
+  single paced retry recovered native; 18m gameplay primary, flat-rider
+  survey-31 series law, fresh live store bytes 8/8 HTTP 200 curl UA from
+  /library/store/ on exact census-52 libs; served-shas pinned
+  61148de2bd3b9780 (b22) / 88dc644f10d9d5d2 (b25) / 1cb32012817cb1d9
+  (b23) / d337f36d88a563dc (b24) / d3e986971a543365 (b26 = b34-w =
+  b34-s, byte-identical degenerate wayband fleet — one judgment covers
+  all three ids, SW-territory degenerate-family law) / caee97d0ef878fab
+  (b28); hash-domain resolution: survey-51's b22/b25 pins match EXACTLY
+  this tick — census lib ids are content-address names, served DRACO
+  bytes hash differently, survey-43/46 served-sha law, no drift):
+  RIDER-TAIL slice completion (severity backlog + native debts drained
+  survey-49/50; b22/b25 were survey-51's fetched-unjudged next-tick
+  first candidates, judged first this tick per plan-tail pointer).
+  VERDICTS: B22-MAPBOARD-EIGHT-WAYS NATIVE CLEAN-with-margin —
+  compass-rose emblem (ring + horizontal cross-axis + radial ticks)
+  reads deliberate authored figure, tan-on-charcoal contrast strong,
+  ring circumference traceable closed, zero glitch classes; margins:
+  exact tick count soft sub-px at 18m, central dot unresolved.
+  B25-WELCOME-VILLAGE-MARK NATIVE CLEAN-with-margin — gate/lintel bar
+  with centered arched cutout reads authored village mark, ~4-5:1
+  contrast, silhouette continuous (arch is designed negative space,
+  not a tear); margin: arch detail ~13x7px at read threshold.
+  B23-CISTERN-RAIN-COUNT NATIVE CLEAN-with-margin — tally row of
+  distinct dashes with resolvable gaps, count-figure identity survives
+  the 18m read; margin: olive-yellow-on-charcoal contrast low, strokes
+  2-4px faint (cosmetic, separation holds).
+  B24-WELL-DEPTH NATIVE CLEAN-with-margin — compact stacked-depth
+  glyph on dark plate, plate separates from field and glyph from
+  plate, zero voids/strays; margin: count strokes 2-3px at resolution
+  edge (soft count, not melt).
+  B26-WAYBAND NATIVE CLEAN-with-margin (COVERS b34-w + b34-s,
+  byte-identical served bytes) — discrete crisp 12x13px emblem, one
+  connected region, strong figure-ground separation, zero glitch
+  classes; margin: internal band motif sub-resolution at 18m reads as
+  solid tick — framing-limited per struct-45 law (sub-2% frame), not
+  bytes; if band legibility is ever wanted it is a judge-at-closer-
+  distance question, not a defect.
+  B28-BAKE-COUNT NATIVE CLEAN-with-margin — 81x20px plaque, uniform
+  fill, crisp edges, no fragments/voids/strays (y~385 hairline =
+  host-absence shadow, chassis class); margins: loaf-tally motif
+  sub-resolution at range, hairline ~10px left-offset cosmetic.
+  Routing: ZERO notes routed (zero confirmed defects), zero candidate
+  rows, ZERO ledger append (read-only tick, loop law 4; ledger survey
+  tags therefore stop at survey-49, tick numbering carries from
+  survey-51 commit tag). Census 287->289 vs survey-50 snapshot
+  /tmp/survey50-census.json: 2 arrivals (nx-dress-se-foxden-001
+  ledger-matched dress-107 @ a93d4929; nx-struct-reuleauxrotor
+  ledger-matched struct-84) — both already absorbed by sweep-88/89,
+  classified sibling work-in-flight by lane domain, 0 departures,
+  0 flips, 0 position moves — quiet epoch for survey purposes.
+  Self-catches: initial fetch used /store/ (8x HTTP 404 fail-closed
+  9B bodies) — corrected to /library/store/ from SURVEY-PLAN history
+  (survey-45+ law); no bytes judged off wrong paths. Gate: ALL PASS
+  real exit 0 first try at d03267d9 (ledger law EXACT 2370715);
+  interlane md5 f6254cd0 stable. Never-judged pool after this tick:
+  riders b3 only + carousel (polish-hero exclusion holds); rider-tail
+  scan COMPLETE. Verdicts 0 confirmed / 8 clean by id (6 native
+  judgment calls) / 0 dropped. Zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero shared-budget use.
