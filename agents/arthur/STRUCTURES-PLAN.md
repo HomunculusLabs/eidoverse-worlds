@@ -2144,3 +2144,64 @@ verdicts:
   — likely genuine. New adjacent-read flag (not routed as defect): Gate 2
   right post and Gate 3 left post nearly coincide x528-555, reading as one
   thick column at 18m. Evidence: reviews/survey21-slice/nx-struct-meridianstair/
+
+## struct-55 — ECHOARCH IDENTITY CURE (survey-20 Sev 3 intake)
+
+Work tick (55%3=2). Subject by intake ranking: echoarch — the only
+native-CONFIRMED identity failure standing (survey-20: "reads as SOLID
+curved retaining wall, not arch/arcade; zero sky penetration; left-third
+value crush #0A0806"), ahead of cellardoor (Sev 3, native-confirmed
+survey-18) by arrival order.
+
+- **Root cause, TWO coupled defects, one cause-family (decode-proven)**:
+  (1) MATERIAL — `mat(0x56503c, 0.95, 0)` is a plain mat with no emissive;
+  toGLB exports only texMat/emissive lanes, so mesh 0 (the whole fin+slab
+  stone mass) carried `material: None` → loader-default near-black. Exactly
+  the struct-38 class; exactly the survey's #0A0806 crush. (2) ELEVATION —
+  constant-height H=3.2 fins: from any oblique azimuth (survey camera was
+  54° off the mouth axis) the near fin screens the chamber and the flat
+  parallel tops merge into one rectangle. The parabola lived only in plan.
+- **Fix**: stone → village texMat lane (coursed-ashlar cell, struct-38+
+  lineage); fin top edges step a parabolic rake h(x)=1.15+2.05(x/3)² per
+  segment block (arms 3.2m, waist 1.15m at the vertexes — the mouth now
+  opens in elevation, the two-fins-and-chamber gesture reads from oblique
+  approaches); pass 2 added boxUV per-face UV density (BoxGeometry UVs span
+  0..1 per face — pass-1 cells stretched 7:1 vertical on tall thin
+  segments, read timber; ZAI caught it, cell-aspect math confirmed) with
+  tile 3.0 = 0.375m square blocks everywhere incl. the deck.
+- sha baf4c994 → 103be93e19def0aae25b62d4bb6bb6bdce1bcfa608ac5c5df7a066d974e84aaa
+  ×2 deterministic. Envelope byte-identical [-4.1,0,-2.1]→[4.1,3.32,10.1]
+  == live census bbox — SAT-neutral exact-tuple reseat. 2 nodes, materials
+  now stone(texMat)+glow1(brass pins, emissive [0.1525,0.0613,0.0087]
+  author-exact, struct-30 lineage intact).
+- **Judged**: native 1210 ×2 + paced retry (hard down all tick — debt
+  owed). ZAI fallback after-judge v2 PASS: two-fins-with-gap unambiguous
+  (sky gap ~105px at broadside), stepped rhythm crisp, timber read GONE —
+  reads stone, deck monolithic, zero floats/gaps/artifacts. Margins named:
+  18m course joints read as mottle not legible courses (joint-contrast
+  polish candidate); apex plateau flat (waist 1.15m vs arms 3.2m by
+  contract — the "stepped parabola" lives in the outer half); ZAI's
+  rake-direction critique (peaks flank the gap) noted as the documented
+  contract, taste call deferred to native/Bill.
+- **Placed**: remove+spawn reseat exact tuple (-18.5, 0.05145038852924074,
+  57.1) yaw 5.027, comp null → null (empty bag both sides, comp-wipe law).
+  lib store/103be93e19def0aa.glb. PLACED_VERIFIED 2 verbs; idempotent
+  rerun zero verbs.
+- **Walk**: throat circuit 8/8 ALL_PASS worst 0.40m (outside N → focus0 →
+  mid → focus1 → outside S → return) — unchanged chassis, new bytes.
+- Frames: reviews/struct55-echoarch/{before,after,after2}/. Placer:
+  next-place-struct55-echoarch.ts. Walk: improve6-walk-echoarch.ts.
+
+**Bill should eye-check**: from the village approach NW of the theater —
+the echo arch should now read as TWO facing stone fins with a rising
+stepped profile (arms high, dipping toward the mouths), not a solid dark
+wall; the stone should read mottled ashlar; at dusk the two brass focus
+pins still glow at the whisper seats.
+
+**SURVEY INTAKE status**: echoarch row EXECUTED this tick. Remaining
+intake: cellardoor Sev 3 (void opening + missing leaf detail — next
+worst), meridianstair verify cluster (split 2-1, native tie-break owed;
+Gate-1 pin likely genuine), waterstair gameplay-view dissent (survey-21
+vs struct-53's front/aerial reads — contract question: is the 18m
+gameplay water band enough, or does the cascade want per-step teal
+facings), orreryring margin-only.
