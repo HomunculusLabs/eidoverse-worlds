@@ -1754,3 +1754,83 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   debts PAID this tick (meridiandial native, waterstair independent,
   stillwind frontal, wavepergola native). Zero world mutations, zero
   uploads, zero comp edits, zero shared-budget use.
+
+## Judged index (survey-35)
+
+- survey-35 (2026-09-07, NATIVE 2/8 + ZAI fallback 6/8 disclosed — native flap:
+  cairn-0022 + cairn-0050 first calls landed native, then HARD DOWN survey-26/31
+  class (6 consecutive 1210s: b14 x2 paced-retry-burned, b21 x2 paced-retry-
+  burned, h2 first call; h2/h4/sign-bakery/mile fallback-judged, disclosed);
+  18m gameplay frame primary (close/orthographic primary for flat riders per
+  survey-31 series law), fresh live store bytes 8/8 HTTP 200 curl UA on exact
+  census-35 libs, served-shas pinned 6bb98abaffd3441a / c83b0fb93e0e8b54 /
+  c4fa5e7c1cc04d8c / efac7b00bcec16e1 / 93ee3f01223c31f6 / b30995b375b59b9a /
+  dd5cc8ea899c7670 / bff9126f4422c3ed): POST-CURE CORROBORATION + NEVER-JUDGED
+  TAIL slice (severity backlog drained — round-1 terminal, survey-7..34
+  candidates are intake not re-judge debt; cairn CORROBORATION was excluded
+  survey-34 dirty-tree, now committed at 59046e7c). Slice = cairn-0022 +
+  cairn-0050 (improve-43 post-cure independent reads, family EXECUTED 5/5) +
+  b14-east-gate-dawn-fan + b21-tower-ascension-count (never-judged riders) +
+  h2 + h4 (never-judged h-statics; h3/h5 paid survey-32) + sign-bakery (first
+  trade-sign family read) + mile-ne-003 (never-judged plain-stone sha 9459eaa3,
+  degenerate-fleet law covers 6 entities: ne-003/004, nw-001/002, sw-005/006).
+  VERDICTS: CAIRN-0022 NATIVE CLEAN-with-margin — cure corroborated on live
+  post-fix bytes: zero floating stones (the survey-9/11/12/13 class), every
+  stack + scatter pebble grounded with contact shadows, tapering marker
+  silhouettes read deliberate; margins: umber spherical stones read
+  organic/mound-flirt at distance, mid-cluster stacks merge frontal, night
+  silhouette-only (owner improve-43's own margins concur). CAIRN-0050 NATIVE
+  CLEAN-with-margin — zero floats, ring/horseshoe arrangement reads, outlier
+  stacks + pebbles all shadowed; margins: stone-vs-ground albedo thin
+  (near-analogous hue), blobby ellipsoids vs flat-slab cairns, frontal merge
+  into one lobed mass. Improve-43 cure corroborated 2-for-2 this tick.
+  B14-DAWNFAN ZAI CLEAN-with-margin (native 1210 x2, retry burned) — geometry
+  proven TRUE via close front (8-10 rays radiating from low hub, proud relief,
+  no orphaned fragments) + aerial grazing survival; 18m count/motif collapse
+  framing-limited per series law; margins: back top-edge irregularity =
+  relief terminations verify-tier, night near-invisible (no emissive).
+  B21-ASCENSION ZAI CLEAN-with-margin (native 1210 x2, retry burned) —
+  discrete gold bars proven TRUE via edge-on hairline relief + aerial
+  separated-bars evidence; common-baseline register deliberate; 18m reads
+  gold-band accent, count framing-limited; margin: edge gold sliver
+  relief-vs-material-wrap indistinguishable at sheet resolution, verify-tier.
+  H2 ZAI CLEAN-with-margin — deliberate installation identity READS at 18m
+  (paired helix-coil + orbital-rings armillary on stepped plinths, stepping
+  stones + warm lantern point carry the curated-park grammar), coil continuous
+  no orphan segments, ring intersections read intentional armillary not
+  z-fight, plinth grounding + cast shadows weld it down; margins: rings piece
+  tonal-camouflage flirt vs olive ground at some angles, coil lower-termination
+  anchor-gap verify-tier, night carried by lantern point alone (bead class).
+  H4 ZAI CLEAN-with-margin — gateway composition reads deliberate (twin
+  monoliths framing a lit threshold, different motifs per panel sell authored
+  asymmetry), no floaters/z-fight, plinths + long cast shadow grounded,
+  stepping-stone gaps deliberate rhythm; margins: lamp bulb reads isolated
+  speck at 18m (sub-pixel cantilever arm, bead class), rear faces blank
+  (back-approach art-read drops), night = lamp point only, motifs at
+  legibility edge.
+  SIGN-BAKERY ZAI CLEAN-with-margin — first trade-sign family read: hanging-
+  sign grammar instant at 18m (bracket arm + suspended board silhouette),
+  bread-loaf emblem with scoring reads bakery at close range, DOUBLE-SIDED
+  emblem correct for projecting sign, chain links attached all views, clean
+  geometry; margins: emblem collapses to warm dot at 18m (border carries),
+  bread-vs-generic-food ambiguity 5-12m band, night invisible (no emissive).
+  MILE-NE-003 ZAI CLEAN-with-margin — clean geometry (no floaters, radially
+  symmetric, cap/shaft joins continuous), seated with contact shadows; margins
+  CLASSIFIED design-intent not defect: 18m reads generic post/bollard (no
+  plate/numeral — plain-stone design per MILESTONE-PLAN table), night zero
+  emissive BY DESIGN (no -l companion on the six plain stones; lantern pairs
+  007/008, 009/010, 013/014 are the lit idiom; N5 detached-orb lamp class +
+  mile-5 hanging-lantern precedent already live in APPROACH-PLAN night-4/5).
+  Night-identity and plain-vs-lantern tiering stays the standing Bill call.
+  Probe-law self-catch: native cairn-0022 "back view camera rolled" claim
+  DISCARDED — pixel horizon-slope check back 1.17 vs front 1.33 px/100px
+  (h2 1.41/1.67, sign-bakery 0.58/0.72 all match control): diagonal cast
+  shadow misread, chassis NOT regressed (probe law 11 class).
+  Routing: ZERO notes (zero confirmed defects), zero new candidate rows,
+  zero ledger append (read-only tick, loop law 4). Census 276==276 vs
+  survey-34 snapshot: 0 arrivals, 0 departures, 5 POS_SAME lib flips =
+  wild-cairn family 0022/0043/0047/0048/0050 -> improve-43's committed cure
+  shas (59046e7c, ledger-matched domain-valid). Gate: ALL PASS real exit 0
+  first try at 8fab04eb (ledger law EXACT 2370675). Verdicts 0 confirmed /
+  8 clean (8 clean-with-margin) / 0 dropped. Zero world mutations, zero
+  uploads, zero comp edits, zero shared-budget use.
