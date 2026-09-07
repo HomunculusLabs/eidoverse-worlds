@@ -3301,3 +3301,53 @@ struct-68; corrective translation only). Next tick: 71%3==2 → build tick
 relocation (soundmirror→SE first by worst off-spoke-ness) — city-plan
 relocations have priority per plan header ("PRIORITY above shard +
 re-arm").
+
+## struct-71 (2026-09-07): CITY-PLAN wave-1 row 1 EXECUTED — soundmirror
+## relocated to SE wild edge (35.46, −0.0331, −55.66)
+
+Cadence 71%3=2 execute tick. Tick-start plan header (pre-city-2) named
+wave-1 relocations as struct priority; MID-TICK STEER DISCLOSED: city-2
+(1cfd1a3d) landed after my tick-start reads re-pointing the register to
+the new city lane ("register owned by city lane, not struct") — my
+preflight was already deep (scanner+terrain written, gate re-run in
+flight) when it landed. The executed move is register row 1 EXACT (worst
+off-spoke-ness first, same lib, move-only); register row annotated
+EXECUTED in CITY-PLAN.md this tick so the city lane cannot double-move
+row 1. Outcome-equivalent to the city lane's own execution; race
+reconciled, not fought (artwalk-39 class).
+
+MOVE: nx-struct-soundmirror (28.7,−0.026,−18) yaw 0 [off-spoke r33.9,
+E-quadrant] → (35.46,−0.0331,−55.66) yaw 0 [az −57.5, r 66.0, SE wild
+edge]. Same bytes sha f313e59a (lib store/f313e59a69bff540.glb already
+live — content-addressed, ZERO uploads). remove+spawn reseat, 2 verbs,
+PLACED_VERIFIED, idempotent 0-verb rerun. Comp bag empty both sides.
+
+SITING PROOF (struct71-scan-soundmirror-relocate.ts, fresh 277 census):
+exact disc r2.30 (rings are FULL CIRCLES — bbox half-extent IS the true
+footprint; struct-19 law exact, no square proxy) vs rotation-grown world
+AABBs. The register-faithful window (az −65..−35, r 66..80) holds
+exactly ONE lawful seat: this one. Wider honest scan (az −75..−30,
+r 62..90): 124 seats, but the inner ones hug artwalk h6 (rider hosts
+HOLD-for-Bill, CITY-PLAN law 5) and aren't "edge". Chosen composition:
+8.6m clear before funguslogs on the same radial (threshold-instrument
+read), az −45 water corridor left free for the register's reedpool +
+angler SE arrivals. Post-place live worst-neighbor 1.51 vs
+nx-wild-forest-0044 (law 1.4 PASS; scanner self-audit: its cheap-reject
+prints gap=Infinity when no neighbor is BINDING — a reporting quirk, not
+a false pass; hand recheck on both censuses agrees 1.51).
+
+TERRAIN: next-terrain-struct71.ts 7pt spread 5.2mm, PY −0.0331 (local
+bbox min-y −0.032 keeps the standing seat's base-embed convention).
+WALK: no walking line within 3m (nearest ground network 62.8m) — no
+walk-test owed (CITY-LOOP law 4 analog).
+YAW: piece is azimuthally symmetric (bowl opens UP, central stand) —
+no read dependence; yaw 0 satisfies the preserve-yaw law trivially.
+
+GATE: ALL PASS real exit 0 at 1ec03fe0 (tick start) AND re-verified at
+426178de (improve-45 interleave absorbed) immediately before mutation.
+Census 277 → 277 (move, zero arrivals/departures).
+Next tick 72%3==0 → refine tick; refine pool empty → per loop law the
+deferred catenarygate placement (struct-69 v5, judged PASS, queued N
+meridian threshold) is the standing build-tick work, CITY-PLAN register
+rows now city-lane-owned.
+

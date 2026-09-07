@@ -33,7 +33,7 @@ and retirement must cite it. Bill alone may amend or dissolve this plan.
 
 | Work | From | To | District |
 |---|---|---|---|
-| nx-struct-soundmirror | r33.9 off-spoke | SE wild edge | SE |
+| nx-struct-soundmirror | r33.9 off-spoke | SE wild edge | SE | EXECUTED struct-71: moved (28.7,-18)→(35.46,-55.66) az-57.5 r66 yaw 0, same lib f313e59a (no upload), 2 verbs, PLACED_VERIFIED + idempotent; exact-disc r2.30 SAT, gap 1.51 vs forest-0044 (law 1.4); terrain 5.2mm |
 | nx-struct-pendulum | r36 | NW edge near meridian spoke | NW |
 | nx-struct-millrace | r40 | NW (pairs windmill theme) | NW |
 | nx-struct-reedpool | r42 | SE wild | SE |
