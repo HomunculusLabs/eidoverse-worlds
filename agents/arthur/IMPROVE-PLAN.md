@@ -1158,6 +1158,15 @@ worst-read objects not re-judged this round seeds candidates
 HOLD once with the evidence, per the no-manufactured-work law. This law
 never overrides idle-guard, domain law, or the eye-gate verdict routing.
 
+**ROUND-CLOSE EYE-GATE STATUS (improve-46, 2026-09-07):** the close-out
+circuit for rounds 1 AND 2 — never previously delivered — now stands at
+`reviews/improve-eye-gate.md` (one packet, 13 stops, every deferred residual
+named, all live pins census-verified). Delivered exactly once; the lane now
+HOLDS for Bill's verdicts on it (any correction re-opens that object ahead
+of queue) or new routing. Re-arm inputs re-checked same tick: zero OPEN
+register items in improve domain, zero un-routed sweep/survey findings,
+mosaic family stays Bill-blocked (improve-41 options on record).
+
 **EXECUTION SHARDING (2026-09-06 — Bill's 5-10x directive, improve-5y).**
 The improve queue is ONE serial lane but its items span five entity
 domains, and each domain has an idle owning lane. Sharding rule — route
