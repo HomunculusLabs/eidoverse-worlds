@@ -1,5 +1,30 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
+
+### dress-133 — lawful HOLD (24th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD c05c3ef6 (city-78 sibling); interlane
+  md5 f6254cd0 pin-exact. Fresh census 293 steady — epoch diff vs
+  dress-132 capture +0/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-133.py` HOLD_VERIFY_PASS exit 0); dress
+  domain 45 = 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy.
+  Round-3 closers PINS_EXACT 4/4 vs live, all deltas exactly 0.0:
+  foxden 856deec5, lanternhook 639c5480, seats cb34bd36,
+  streamstones aabbc23d (radian law, no yaw guard).
+- **Shard/intake (standing, re-checked at source)**: IMPROVE-PLAN zero
+  OPEN `nx-dress-` rows, no round-4 section (grep 0), survey56-slice
+  remains newest (no survey-57+ tags) — zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains
+  the two one-line rulings in `reviews/dress-round3-eye-gate.md`.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Zero probe self-catches this tick. Zero world mutations, zero
+  uploads, zero verbs, zero shared-budget use (D+0, E+0).**
+
 ### dress-132 — lawful HOLD (23rd post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
