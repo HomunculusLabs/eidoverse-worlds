@@ -449,6 +449,18 @@ Rotation next: NW round-3 item 2 (compost bins). Shard queue: no OPEN
 only the legacy-core fountain (off-limits, Bill's call). SW lamps remain
 blocked on Bill's a/b/c budget policy.
 
+**STATE AT dress-80 (2026-09-07, pipeline install tick)**: round-3 item 2
+EXECUTED live — `nx-dress-nw-compost-001` PLACED_VERIFIED (details in the
+dress-80 siting-log entry below; first siting choice garden-0058 was hemmed
+— back seam -1.64m vs garden-0045, front face carries the dress-74 rows at
+1.5m — a full NW scan re-sited to the garden-0019 plaza-facing headland).
+Siting-scan law recorded: run the footprint scan with TRUE post-build decode
+dims, not planned dims (4.05x1.80m actual vs 3.30x0.96 planned — the
+planned-dims scan under-gates by ~0.5m a side). Census 266. NW lamp spend
+0 of 2. Rotation next: NE round-3 item 7 (timberyard). Shard queue: no OPEN
+`nx-dress-*` rows (nine Round-1 terminal; round-2 only the legacy-core
+fountain — off-limits, Bill's call). SW lamps still blocked on Bill's a/b/c.
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
@@ -466,7 +478,9 @@ identity intent. Rotation stays NW->NE->SE->SW.
    fence line; low cordons, not trees (keeps sightlines open). **DONE
    (dress-74, PLACED 2026-09-07 — first round-3 installation live).**
 2. `nx-dress-nw-compost-001` — three-bin compost frame, plank-slatted,
-   reading as garden infrastructure at 18m.
+   reading as garden infrastructure at 18m. **DONE (dress-80, PLACED
+   2026-09-07 — re-sited to the garden-0019 headland after garden-0058 proved
+   hemmed; details in the dress-80 siting-log entry).**
 3. `nx-dress-nw-dryingracks-001` — herb-drying racks (A-frame pairs) near
    the dyer's yard edge; hung swatches echo dye colors.
 4. `nx-dress-nw-rainbarrel-001` — barrel + plank stand at the skep row end;
@@ -520,6 +534,79 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-80 — NW three-bin compost frame (round-3 item 2, PLACED, LIVE)
+
+- **Concept contract**: kitchen-garden compost station — the fill/cook/
+  finish cycle made visible: bay 1 fresh yellowed clippings + straw cap,
+  bay 2 straw-dominant turning strata, bay 3 darkest finished heap with
+  front spill + two staved buckets (one filled). Four timber posts with
+  pale sawn caps (district tell), four tidy slat rails per face
+  (crate/bin read, not fence), contents strictly behind the front slat
+  plane. Grounds USE: working garden infrastructure at the head of the
+  rows — where a plot meets its headland path. Static, unlit — no lamp
+  budget draw.
+- **Build**: `assets/mkv3-dress-nw-compost1.ts` ->
+  `assets/village_dress_nw_compost1.glb`. Six versions, all judged NATIVE
+  (no 1210 flaps this tick):
+  - v1 (0fa5fa41): 18m unprompted read "neglected fence + overgrowth" —
+    FAIL (smooth green dome read shrub; dark-on-dark bays; sagging slats).
+  - v2 (0af7eabf): "canvas-covered shelter/tarp" — FAIL (green mass still
+    canopy-class, cresting too cleanly).
+  - v3 (5ef4ffe9): "derelict fence" + close-view Rx (contents clip through
+    the slat plane; bays share one dark value; fork headless; leaning
+    plank reads derelict).
+  - v4 (22f5ebf8): contents pulled behind the plane, third loam value —
+    close PASS shaping, 18m still fence-family.
+  - v5 (568d42b3): STRATA redesign (layer bands, the dress-14 stratified
+    precedent) + 4 tidy rails + fork/plank deleted (sub-pixel = "broken
+    stub"). Close 4/4 PASS.
+  - v6 ACCEPTED (sha
+    330adcbcf015302640fcd3c09b9e83e5994fddb54cf649efc41ccc7df4c34c5f,
+    double-rebuild byte-identical): value pass — slats to post-adjacent
+    timber 0x94866c (frame separates from dark fills), clippings yellowed
+    0x8a9a4e (NOT the leaf-canopy value). 18m contract PASS all four
+    points (working infrastructure / tidy timber / three fill values /
+    zero floating); margins: pale caps + straw-timber separation resolve
+    only under 18m. ~8m oblique unprompted read: "actively-used compost
+    bin, work site someone stepped away from" — clean identity PASS.
+- **Solo-18m rig lesson (recorded)**: the unprompted solo 18m read FAILED
+  v6 exactly as it fails ACCEPTED village pieces — control frame: dress-2
+  ne-yard V5 (native-PASSED on live bytes) reads "abandoned cart chassis"
+  in the same solo rig. The review rig's empty plane/horizon straddle is
+  an artifact class (probe pitfall 5); the lane standard stays
+  close-view + contract 18m + in-world eye-gate.
+- **Decode (v6)**: 10 nodes (budget 3-25 ok); bbox x -1.77..2.02 (center
+  +0.125, half 1.895), z -0.63..0.81 (center +0.09, half 0.72), y
+  -0.02..1.00. Footprint 5.4m2 < 8 room gate, h 1.0 in the uneven-top
+  honesty band -> topGrid heightfield (the honest hedge/woodstack class).
+  No light anchors; empty comp bag (static unlit).
+- **Siting (fresh census 266; TRUE post-build dims)**: garden-0058 first
+  choice DEAD (back seam -1.641m vs garden-0045; front face carries the
+  dress-74 espalier rows 1.5m off — 0.274m pocket). Full NW scan
+  (perimeter of every cultivation plot, garden-family first) picked the
+  garden-0019 plaza-facing (+z) headland: **(-72.78, 57.68) yaw 2.35619**
+  (front faces the corridor/plaza side), lx -0.5 clr 2.6. SAT: orchard-0033
+  fat canopy proxy +1.68, orchard-0020 +1.87, garden-0019 +2.69,
+  garden-0032 +4.43 — no sub-1.4m adjacency. Rim 91.87..93.74. Corridor
+  clearance 7.6m (beside-path band, NOT on the line); stile 28m. Terrain
+  5-point preflight `next-terrain-dress80-compost.ts`: 0.031..0.042,
+  spread 11mm -> py 0.036.
+- **Placement**: `nw-dress80-place.ts` (dress-74 chassis, TRUE-dims OBB) —
+  hash gate -> blocker-epoch guard [garden-0019, orchard-0033,
+  orchard-0020, garden-0032] -> fresh-census SAT/rim -> upload (content-
+  addressed) -> spawn. **PLACED_VERIFIED** `nx-dress-nw-compost-001` @
+  lib `store/330adcbcf0153026.glb`, pos (-72.78, 0.036, 57.68) yaw
+  2.35619449. Idempotent rerun: 0 verbs (one deduped upload — chassis
+  wart). Post-place census 267, exact tuple, empty comp bag.
+- **Lamp budget**: NW spend 0 of 2 — static unlit, no comp, no budget draw.
+- **Eye-check for Bill**: from the NW corridor at the milestone pair, the
+  garden plot just past the stile crossing (garden-0019) now has a
+  three-bay timber compost station on its near headland — pale-capped
+  posts, pale-slatted frame, green-then-straw-then-dark bay progression,
+  two buckets at the finished end. Should read "kitchen garden, working"
+  at path distance; the pale caps and straw/wood separation are
+  sub-18m details (visible from the stile, ~28m, only as color bands).
 
 ### dress-74 — NW espalier fruit rows (round-3 item 1, PLACED, LIVE)
 
