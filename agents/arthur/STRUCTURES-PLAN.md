@@ -4196,3 +4196,62 @@ every side?
 NEXT: 85%3==2 -> build tick (R8-2 commission or shard re-arm scan). The
 slid refine slot: 87%3==0 — top subject = echoarch Sev 3 (survey-20 echo),
 unless Bill's correction re-opens another structure first.
+
+## struct-85 (2026-09-07): R8-2 THE CHAIN VAULT — concept + record
+
+BUILD tick (85%3==2). Shard EMPTY (0 [STATE OPEN] rows, grep fresh). Refine
+pool: single survey-20 echoarch Sev-3 note — slid refine slot remains 87.
+
+CONCEPT (R8-2, derived fresh): the village's first VAULT. The catenary
+lineage (catenarygate 2D portal, ninesbridge vault-arch rings) elevated to
+enclosure: 15 true-catenary ashlar ribs, each rib the inverted hanging
+chain, at 0.5m pitch over flank benches/piers, 5 iron purlins + 2 foot
+rods, one brass glow bead at the center rib crown. One idea: AS HANGS THE
+FLEXIBLE LINE, SO INVERTED WILL STAND THE ARCH (Hooke). Enterable both
+mouths, benches inside, no end walls.
+
+CONTRACT LAW (banked): the profile y = Ys + c(coshT - cosh t) is the ARCH;
+y = Ys + c(cosh t - 1) is the CHAIN. Rise-law + monotone assertions kill
+the inversion class by construction (whisperhorn precedent). Eye-height
+clear width 4.01m >> 1.4 law.
+
+BUILD (mkv3-chainvault.ts): v1 bed42469... — front-view native FAIL was
+end-on occlusion (correct); NIGHT FAIL real: keystone box occluded the
+bead completely (struct-52 law on my own build — 0 warm px). Fix: keystone
+DELETED (off-contract ornament anyway), bead seated proud of center rib
+front face (rotor-stud exposure class). v2 8fecf67df7d33970
+10766bfb7cd69358c40ce89d1b4a588f3be5c1dfb254c917 x2 deterministic,
+4 nodes, 3700 tris. JUDGED v2 native: side 5/5 (15 ribs counted, even
+pitch, clean landings), gameplay 18m PASS (ribbed vault silhouette, not a
+shed), night 4/4 (exactly one calm amber crown point), aerial 3/4 PASS
++1 benign ('stray orange voxel' = the intended bead). ACCEPTED v2.
+
+SITING: first candidate az102 r64 (62.6,-13.3) DIED at my own SAT gate —
+forest-0031 true grown bbox (fat-clump probe class: center-distance scan
+lies). Full analytic re-scan with grown-rect math: ESE arc lawful seats
+8, best az110 r56 (52.6,-19.2) margin snagdead +4.74 / forest-0031 +4.74;
+mouth yaw -1.2217 facing plaza dead-on (bearing verified exact). No
+approach legs in band (fresh). Terrain 9pt spread 8.1mm, PY -0.0478.
+
+PLACE: upload store/8fecf67df7d33970.glb (idempotent across the WS retry),
+spawn 1 verb, PLACED_VERIFIED exact tuple, census 289->291 (sibling
+interleave absorbed at fresh-fetch preflight — interlane law). Comps {}
+(empty bag by design; bead is emissive material).
+
+SELF-CATCHES (three, world untouched until the final clean run): (1)
+monotonicity assertion had the sign backwards — assertion fixed, geometry
+vindicated; (2) keystone occlusion — geometry fixed; (3) placer WS join
+used the struct-82 token/name form instead of struct-84's proven
+avatar/joinToken form — two 90s timeouts, then fixed and verified.
+
+OWED NEXT TICK (queue-law FIRST): (1) two-way MCPL walk through both
+mouths + bench approach; (2) idempotency rerun confirmation line (the
+shell timeout ate it — tuple since verified by direct census); (3) Bill
+eye-gate packet once walk lands.
+
+BILL EYE-CHECK (standing): from the plaza walk out east past the
+ruledtower — the vault stands on the left on the ESE threshold. Judge:
+nested catenary mouths end-on; at dusk the single amber bead at the crown.
+
+NEXT: 86%3==2 -> build tick (R8-3 commission or shard re-arm scan); 87 the
+slid refine tick (echoarch Sev 3) unless Bill re-opens another subject.
