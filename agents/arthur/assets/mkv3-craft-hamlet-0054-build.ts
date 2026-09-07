@@ -1,0 +1,54 @@
+// mkv3-craft-hamlet-0054-build.ts — improve-27 rebuild writer (deterministic).
+// Replicates the lift-99 masonretex pipeline for work index 1674 (hamlet =
+// nx-craft-hamlet-0054) with the committed improve-22 composeHamlet slot fix,
+// and WRITES the retex GLB (overwrites the corrupted baseline — before-bytes
+// banked at reviews/improve27-hamlet/before/ per polish-271 law).
+// Run twice; sha256 must be identical across runs (determinism proof).
+// Also prints cottage floor centers (pre-merge) for walk-ray derivation.
+// Chassis: mkv3-craft-hamlet-0041-build.ts (improve-26, proven).
+import * as THREE from "three";
+import { createHash } from "node:crypto";
+import { readFileSync, writeFileSync } from "node:fs";
+
+const A = `${import.meta.dir}/..`;
+const st = JSON.parse(readFileSync(`${A}/mason/state.json`, "utf8"));
+if ((st.idx as number) !== 1695) console.log(`note: state.idx=${st.idx} (window end differs from lift-99 snapshot 1695)`);
+const mason = await import("./mason.ts");
+const THEMES = (mason as any).THEMES as ReadonlyArray<readonly [string, (g: THREE.Group, r: () => number) => string]>;
+const { famMat } = await import("./familymap.ts");
+const { mergeByMaterial } = await import("./mergekit.ts");
+const { toGLB } = await import("./glbwrite.ts");
+
+function rng(seed: number) { let s = (seed >>> 0) || 1; return () => { s = (s * 16607) % 2147483647; return s / 2147483647; }; }
+function familyPass(g: THREE.Group) {
+    const FAM_BY_COLOR = new Map<number, THREE.MeshStandardMaterial>();
+    let swapped = 0, kept = 0;
+    for (const mesh of g.children as THREE.Mesh[]) {
+        const m = mesh.material as THREE.MeshStandardMaterial;
+        if (!m) continue;
+        const key = m.color ? m.color.getHex() : -1;
+        if (key === 0xffffff && !m.map) { kept++; continue; }
+        const fam = famMat(key);
+        if (fam) { let t = FAM_BY_COLOR.get(key); if (!t) { t = fam; FAM_BY_COLOR.set(key, t); } mesh.material = t; swapped++; }
+        else kept++;
+    }
+    return { swapped, kept };
+}
+const I = 1674;
+const [themeName, compose] = THEMES[I % THEMES.length];
+const g = new THREE.Group();
+const r = rng(I + 1);
+const desc = compose(g, r);
+const floors = (g.children as THREE.Mesh[]).filter(m => /^ham_\d+_floor$/.test(m.name)).map(m => ({ name: m.name, x: +m.position.x.toFixed(3), z: +m.position.z.toFixed(3) }));
+familyPass(g);
+const merged = mergeByMaterial(g, /_l$/);
+const glb = Buffer.from(toGLB(merged));
+const out = `${A}/mason/glb-retex/work_1674_hamlet.glb`;
+writeFileSync(out, glb);
+console.log(JSON.stringify({
+    index: I, theme: themeName, desc,
+    cottages: floors,
+    wrote: out,
+    sha256: createHash("sha256").update(glb).digest("hex"),
+    bytes: glb.length,
+}));

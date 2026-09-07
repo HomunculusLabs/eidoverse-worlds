@@ -2015,6 +2015,26 @@ the executing lane. Grep-verified: no open duplicate notes.
   y38-106 + x563-688 y196-266, orphan slab row x575-680 y268-296,
   right-facade value crush x575-860 y0-170 — family 5-of-5
   UNANIMOUS. Evidence: reviews/survey13-slice/hamlet-0054/gameplay.png
+  [EXECUTED improve-27, 2026-09-07: 0054 cured by the committed family
+  fix (improve-22 composeHamlet cure in mason.ts HEAD, work index 1674)
+  and RESEATED live — lib 76699206 -> 43f4b4ac x2 deterministic, tuple
+  unchanged (24.256087, 0.00605516, 84.591029) yaw -2.35619449, embers
+  restored, live bbox y-span 13.396 -> 4.45, footprint x/z
+  byte-identical (13.820 x 13.736, SAT-neutral same-tuple); rim
+  78.690/97.395 legal, minGap +2.890 vs cloister-0042, zero SAT
+  exemptions; native before-judge CONFIRMED all four family findings
+  on live-corrupt bytes (hover masses sky-beneath, through-hole
+  x400-560, detached stair runs, orphan slabs); native after-judge
+  4/4 PASS on cure criteria (grounded / no holes / no floating /
+  deliberate hamlet read) with one DROPPED probe finding — the
+  "flat-slab roofs not gables" FAIL fired IDENTICALLY on the accepted
+  live-standing 0041 sibling control (pitfall-5 family/rig
+  characteristic, gable geometry merges at 18m rig distance; source
+  decode confirms gableRoof ridges present at true heights); native
+  both judges this tick (no fallback debt); PLACED_VERIFIED + idempotent
+  zero-verb rerun; walk 8/8 ALL_PASS 0.381m; after-renders banked
+  reviews/improve27-hamlet/after/. HAMLET FAMILY 5-OF-5 CURED —
+  district family census closed.]
 - `nx-cultivation-garden-0058` — Sev 3 (survey-13, NATIVE re-judge
   corroborating ZAI first-pass): IDENTICAL to garden-0011 class —
   zero bed/soil/fence grammar, back rank merges to one continuous
