@@ -1871,6 +1871,13 @@ verdict names its judge):**
   execution (probe law). Cluster 4 votes: 3 clean-with-margin, 1
   defect-side with new finding. Native tie-break STILL owed. Probe,
   not a verdict. Evidence: reviews/survey28-slice/bench-plaza/]
+  [survey-29 (NATIVE) tie-break EXECUTED: CONFIRM — warped double-wave
+  plank native-confirmed on fresh live bytes (crests ~x405/x530
+  y363-364, valley ~x465 y370, 5-7px amplitude, slope REVERSES
+  mid-span = non-tangent joints) + seat-reads-low corroborated (h:l
+  ~0.145). Grounding PASS, identity PASS-but-damaged. Cluster CLOSED
+  defect-side, native-backed. Evidence: reviews/survey29-slice/
+  bench-plaza/]
   [survey-26 second ZAI vote: floating-dash islands RE-CONFIRMED on
   exact pixel regions — dash1 x444-460 y311-316, dash2 x448-462
   y323-328, dot x443-448 y336-340 with void bands between and 7px sky

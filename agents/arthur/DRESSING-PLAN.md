@@ -1,6 +1,7 @@
 # DRESSING-PLAN — dress-N lane durable state
 
 ## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
+- survey-29 (2026-09-07, NATIVE, live bytes 1ea38f61 gameplay+night, reviews/survey29-slice/bellpost/): day-frame identity dissent on dress-86 bellpost — reads LAMP/torch-first ~75-80% (saturated orange + straight-sided cone + on-axis mount; no bronze value/crown/lip/hanging offset); night frame PASSES (zero emissive/bloom — inert bronze read, correct). Probe: value/mount, not mesh. Margin: detached ground squiggle left of base ~40-50px (hairline artifact class).
 
 - [survey-6, 2026-09-06, NATIVE (restored), 18m gameplay, live bytes lib
   f595e862 verified unchanged post-tick] `nx-dress-nw-hedge-001` CONFIRMED

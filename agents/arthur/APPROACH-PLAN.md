@@ -983,3 +983,8 @@ in past ticks). Zero world mutations, zero uploads, no shared-budget use;
 no visual PASS claimed. Standing eye-check pointer (delivered once each at
 approach-6/7/13): Bill at the NW/NE/SW gates at night for the three quiet
 bead cadences.
+
+## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
+
+- survey-29 (2026-09-07, ZAI fallback — native hard down; nw-lane-001 live bytes dc256065, reviews/survey29-slice/nw-lane-001/): CONFIRM Sev 4 — edge markers read uniform identical gray prisms at irregular spacing (debug-cube-class read risk at 18m; corroborates survey-3/6 margin note on sw sibling) + path segment seams visible (left third, mid-frame). Fix class: block variance (shape/rotation/value) + seam alignment.
+- survey-29 (2026-09-07, ZAI fallback; ne-lane-002 live bytes dc52264c, reviews/survey29-slice/ne-lane-002/): CONFIRM Sev 4 — same identical-prism edge read + horizon stone row reads dotted noise band; margin tier: pair of detached gray cubes lower-center foreground (~5-10m off lane, debug-cube read — verify intentional vs stray), crossarm hanging fragment, slab-vs-gravel material read. Note: chassis renders carry no shadow pass — block grounding unjudgeable from these frames (flag, not confirmed).
