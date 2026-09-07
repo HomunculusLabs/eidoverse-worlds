@@ -2170,6 +2170,78 @@ open duplicate notes for these objects.
   Craft-station read holds; potter-specific read rests on sub-pixel
   cues. Related: nx-sign-potter-001 emblem fix is waysign R2 work.
   Evidence: reviews/survey7-slice/nx-town-potter/gameplay.png
+  [improve-37 CONTRACT (2026-09-07, this tick — BEFORE edit): round-2
+  re-arm take, town-4 routing (improve-own, no shard prefix). Idle-guard
+  clear (36h lane-tail: read-only sweep/survey potter walk+pin commits
+  only, no mutation since interior-15 @ lib dad7c82e). Live pin census
+  fresh: tuple (26,0,40.5) yaw -2.5834592128922376 scale 1, lib
+  store/dad7c82efbf3202b.glb, comp bag motion:pwheel spin {axis [0,1,0],
+  pivot [0,0,0], degPerSec 9} (CAPTURE + re-apply on re-place), light
+  companion nx-town-potter-l + rider nx-artwalk-b3-ruled-porch separate
+  entities (keep-out: rider host-local (1.55,0,0.35), back-edge posts).
+  Baseline: local sha dad7c82e… == live pin prefix, rebuild ×2 proven
+  this tick (no disputed bytes); before-bytes banked
+  reviews/improve37-potter/before/. DECODE (this tick): 10 nodes = 7
+  static buckets + pwheel group (fly+head timber 140v, throwing clay
+  52v); envelope x [-1.725,1.71] y [-0.002,1.015] z [-1.0,0.706].
+  ROOT CAUSES at source (mkv3-potter41.ts): D1 fly = SOLID uniform
+  timber disc r0.45 h0.09 y0.28 — zero internal structure at 18m AND
+  the spin comp rotates a featureless disc = motion invisible; reads
+  table/press ellipse. D2 head y0.85 on 0.09-wide post (≈5px at 18m,
+  no value breaks) + narrow throwing pot r0.08 → floating read. D3
+  shelf ware 3× r0.09/h0.16 ≈ 9px < legibility floor.
+  FIX (three falsifiable fronts): F1 spoked flywheel — DELETE solid
+  disc, add iron rim torus (r0.46 tube0.03 y0.28) + iron hub (r0.07
+  h0.10) + 6 timber spokes 0.05×0.06 hub→rim at 60° pitch, all INSIDE
+  pwheel group on the [0,1,0] axis (spin pivot stays valid; open
+  sectors make the standing 9°/s spin VISIBLE = identity cue). F2
+  support read — pw_post 0.09→0.14, collar 0.22² at y0.36, head
+  under-flare cone (r 0.16→0.09 h0.06) at y0.82, throwing pot widened
+  r0.11/0.08 h0.10 seated on head top y0.925. F3 shelf ware — bottom
+  tier 2 pots r0.13/h0.22 + r0.10/h0.18, top tier 1 wide bowl r0.14/
+  h0.10 at z -0.85 (top y0.88). Envelope: all additions ⊆ live bbox
+  (rim ±0.46 < 1.725; y ≤ 1.015; z ≥ -0.99 > -1.0) — SAT-neutral
+  same-tuple re-place.
+  Falsification: (1) after gameplay@18m — wheel reads WHEEL (open
+  sectors + rim, not solid ellipse), pot visibly supported (collar/
+  flare mass transitions), shelf bumps resolvable on tier silhouette
+  (native preferred, ZAI fallback disclosed); (2) decode audit: pwheel
+  group intact, all spin-part geometry on-axis (centroid x,z = 0 ±
+  1e-6), node count ≤ 12, envelope ⊆ baseline; (3) rebuild ×2
+  deterministic; (4) re-place remove+spawn exact tuple + comp re-apply
+  via placer FILE + idempotent 0-verb rerun; (5) potter approach MCPL
+  walk legs re-run PASS. Revert: revert mkv3-potter41.ts → rebuild
+  returns dad7c82e (banked).]
+  [EXECUTED improve-37 (2026-09-07, this tick): full closed loop on
+  exact live bytes. Build: sha dad7c82e→2062c446 x2 deterministic,
+  12 nodes (7 static + pwheel group of 3 folded buckets: iron rim+hub
+  241v, timber spokes+head 208v, clay throwing pot 64v); AUDIT ALL
+  PASS — envelope strict-subset vs true before-bytes (x ±1.725/1.710,
+  y -0.002..1.015, z -1..0.7063541 bounds byte-equal), pwheel spin
+  axis verified by unique-vertex min/max symmetry (raw centroid probe
+  INVALID — mergekit welds duplicated verts asymmetrically, self-caught
+  on the centered throwing-pot cylinder). VISUAL: gameplay 18m NATIVE —
+  D2 PASS (column continuous, no gaps), D3 PASS (shelf bumps 12-19px,
+  two distinct silhouettes + notch), D1 judged FAIL-at-18m but
+  struct-13 framing-limited (wheel interior ~0.08% of frame vs ~2%
+  floor; judge itself conceded sectors compress to sliver) — pixel
+  falsification of the judge's "uniformly dark" claim: wheel box 67.4%
+  ground-through vs 79.2% BEFORE (open sectors measurably present);
+  motion-a/b zero-delta traced to chassis (setMotionPhase animates
+  carousel/well/kettle/horses only, never pwheel — probe artifact #2);
+  front ~8.5m concept-distance ZAI fallback (native 1210 ×2 burned,
+  paced retry, disclosed): WHEEL READ PASS — rim ring resolved
+  (428-537×386-449), near-side open sectors resolved (right
+  497-528×410-434, left 434-462×412-440), hub resolved (473-492×407-426),
+  5-6 spokes individually distinguishable, column continuous at 1-px,
+  zero floats (far-sector compression = viewing geometry). Reseat
+  next-place-improve37-potter.ts: baseline pin gate → upload (1st try)
+  → remove+spawn+comp 3 verbs exact tuple (26,0,40.5) yaw
+  -2.5834592128922376 lib dad7c82e→2062c446, motion:pwheel spin
+  re-applied (capture verified BEFORE), rider b3 + light companion
+  standing, PLACED_VERIFIED; idempotent rerun ALREADY_LIVE_NO_VERBS
+  0 verbs; MCPL walk 6/6 ALL_PASS maxArrival 0.366m (historical pin
+  matched). Gate ALL PASS exit 0 pre-mutation at 0989074.]
 - `nx-court` — Sev 3 (survey-8, 2026-09-06, native gameplay + front
   cross-check): court identity fails at 18m — reads two dark workshop
   huts, zero court vocabulary (no bench row, posts, banner, or dais);

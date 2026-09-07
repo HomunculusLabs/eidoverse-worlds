@@ -27,10 +27,27 @@ const timberTex = texMat("timber", [0x56503c, 0x605c40, 0x4a4632], { rough: 0.9,
 // the wheel turns, slow, mid-throw.
 const pwGrp = new THREE.Group();
 pwGrp.name = "pwheel";
-const fly = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.45, 0.09, 12), timberTex);
-fly.name = "pw_flywheel";
-fly.position.set(0, 0.28, 0);
-pwGrp.add(fly);
+// improve-37 (D1): the solid disc read as a table/press ellipse and hid
+// the spin (a featureless disc rotating is invisible at any speed). A
+// true kick-wheel flywheel: iron rim + iron hub + six timber spokes —
+// the open sectors make the standing 9°/s spin itself the identity cue.
+const rim = new THREE.Mesh(new THREE.TorusGeometry(0.46, 0.03, 8, 20), mat(ACCENTS.IRON, 0.55, 0.3));
+rim.name = "pw_rim";
+rim.rotation.x = -Math.PI / 2;
+rim.position.set(0, 0.28, 0);
+pwGrp.add(rim);
+const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.07, 0.1, 8), mat(ACCENTS.IRON, 0.55, 0.3));
+hub.name = "pw_hub";
+hub.position.set(0, 0.28, 0);
+pwGrp.add(hub);
+for (let si = 0; si < 6; si++) {
+    const th = (si * Math.PI) / 3;
+    const spoke = new THREE.Mesh(new THREE.BoxGeometry(0.38, 0.06, 0.05), timberTex);
+    spoke.name = `pw_spoke_${si}`;
+    spoke.position.set(Math.cos(th) * 0.255, 0.28, Math.sin(th) * 0.255);
+    spoke.rotation.y = -th;
+    pwGrp.add(spoke);
+}
 g.add(pwGrp);
 // tex-65: the stand's remaining woodwork joins — kick-wheel post, the
 // wheel head, and both drying-rack posts take the timber (sawn posts
@@ -44,15 +61,25 @@ const texBox = (name: string, w: number, h: number, d: number, x: number, y: num
     g.add(mesh);
     return mesh;
 };
-texBox("pw_post", 0.09, 0.55, 0.09, 0, 0.55, 0, timberTex);
-const head = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 0.05, 10), timberTex);
+// improve-37 (D2): the 0.09-wide post + flat head gave the pot nothing
+// to stand on at 18m — a 5px spindle with zero value breaks reads as
+// floating. Visible support: thicker post, iron kick collar at the
+// waist, and an under-flared head so the eye carries mass up the column
+// from ground to clay.
+texBox("pw_post", 0.14, 0.55, 0.14, 0, 0.55, 0, timberTex);
+const collar = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.07, 0.22), mat(ACCENTS.IRON, 0.55, 0.3));
+collar.name = "pw_collar";
+collar.position.set(0, 0.36, 0);
+g.add(collar);
+const head = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.09, 0.06, 10), timberTex);
 head.name = "pw_head";
-head.position.set(0, 0.85, 0);
+head.position.set(0, 0.82, 0);
 pwGrp.add(head);
-// a pot mid-throw on the head
-const throwing = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.06, 0.12, 8), mat(CLAY, 0.95, 0));
+// a pot mid-throw on the head — improve-37 (D2): widened + seated on
+// the head top so the clay visibly rides the wheel column
+const throwing = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.08, 0.1, 10), mat(CLAY, 0.95, 0));
 throwing.name = "pw_throwing";
-throwing.position.set(0, 0.93, 0);
+throwing.position.set(0, 0.9, 0);
 pwGrp.add(throwing);
 // ---- WATER BUCKET ----
 const bucket = new THREE.Mesh(new THREE.CylinderGeometry(0.14, 0.11, 0.26, 8), timberTex);
@@ -113,10 +140,13 @@ for (const [si, sy] of [[0, 0.45], [1, 0.75]] as const)
     texBox(`pw_wareshelf_${si}`, 0.8, 0.06, 0.18, 1.25, sy, -0.86, timberTex);
 for (const sx of [0.88, 1.62])
     texBox(`pw_wareshelf_post_${sx}`, 0.05, 0.72, 0.08, sx, 0.36, -0.86, timberTex);
-for (const [wi, wx, wy] of [[0, 1.05, 0.54], [1, 1.42, 0.54], [2, 1.22, 0.84]] as const) {
-    const ware = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.065, 0.16, 8), mat(WARE, 0.9, 0));
+// improve-37 (D3): the three r0.09/h0.16 pots were ~9px at 18m —
+// below the legibility floor. Larger, more varied ware reads as
+// distinct bumps on the shelf-tier silhouette instead of texture.
+for (const [wi, wx, rt, rh, sy] of [[0, 1.05, 0.13, 0.22, 0.45], [1, 1.42, 0.1, 0.18, 0.45], [2, 1.22, 0.14, 0.1, 0.75]] as const) {
+    const ware = new THREE.Mesh(new THREE.CylinderGeometry(rt, rt * 0.72, rh, 10), mat(WARE, 0.9, 0));
     ware.name = `pw_shelfware_${wi}`;
-    ware.position.set(wx, wy, -0.86);
+    ware.position.set(wx, sy + 0.03 + rh / 2, -0.86);
     g.add(ware);
 }
 
