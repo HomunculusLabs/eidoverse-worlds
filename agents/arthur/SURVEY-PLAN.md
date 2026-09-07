@@ -2023,3 +2023,70 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   post-commit. Verdicts 0 confirmed / 6 clean (6 clean-with-margin) / 0
   dropped. Zero world mutations, zero uploads, zero comp edits, zero
   shared-budget use.
+
+## Judged index (survey-39)
+
+- survey-39 (2026-09-07, NATIVE 4/7 + ZAI fallback 3/7 disclosed — native flap
+  survey-38 class: 1210 x2 + paced retry burned on orchard-0033, millrace,
+  garden-0011 first calls, cairn-0043 first call (run budget closed before
+  fallback); recovered native on orchard-0012, seed-0003, moongate, garden-0011
+  retry; 18m gameplay primary, fresh live store bytes 8/8 HTTP 200 curl UA on
+  exact census-39 libs, served-shas pinned 0a59493b / f3064c4f / 7fe7817e x2 /
+  3c8c67d4 / 0169ad11 / 26c785a7 / 7b03a76f): POST-CURE CORROBORATION +
+  ARRIVAL/NEW-SEAT slice (severity backlog drained — round-1 terminal;
+  survey-7..38 candidates are intake not re-judge debt; rider tail complete
+  survey-38, never-judged pool = carousel only). Slice = orchard-0012 +
+  orchard-0033 (improve-44 cure, 0-of-5 survey reads — worst debt) + seed-0003
+  + seed-0013 (improve-39 cure, 0-of-4; byte-identical served shas =
+  degenerate family, one judgment covers both per fleet law) + moongate
+  (struct-73 arrival, first independent read) + millrace (city-4 new NW
+  W-shoulder seat) + garden-0011 (improve-42 corroboration 2-of-5) + cairn-0043
+  (improve-43 corroboration 3-of-5 — NOT EXECUTED, run budget). VERDICTS:
+  ORCHARD-0012 NATIVE CLEAN-with-margin — planned-orchard grammar PASS (even
+  trunk rhythm, distinct faceted crowns with sky channels x390-430/x530-565,
+  fruit studs 12-15 legible, fallen-fruit specks grounded); margins: left-
+  cluster crown tangency x230-400, shadowless fallen-fruit specks. ORCHARD-
+  0033 ZAI CLEAN-with-margin — bespoke sibling corroborates (two-post gate +
+  plank aisle focal strongest cue, fruit hue-contrast legible); margins: fruit
+  contrast-dependent beyond ~22-24m, plank-centerline dark markings ambiguous.
+  improve-44 corroborated 2-of-5 (rotation + bespoke both sub-sources read).
+  SEED-0003 NATIVE CLEAN-with-margin — vertical monument identity PASS, bead-
+  cap joint SEALED (zero sky pixels in seam band y315, bead intersects apex
+  4-8px = improve-39's baked-ovoid cure present on live bytes); margins:
+  contact-shadow absence = flat-ambient chassis class (owner native read
+  AO-grounded), joint overlap shallow. Degenerate family 4-of-4 closes survey
+  corroboration (one sha). MOONGATE NATIVE CLEAN-with-margin — first
+  independent read of struct-73: closed-ring identity instant, voussoir
+  cadence pixel-math consistent with 36 (27px/stone at r157), ZERO joint
+  sky-gaps (v1's chord-gap class absent), brass keystone legible 30x42px;
+  margins: keystone ~3-5deg off exact apex, "emerging from earth" intent
+  weakly expressed (tangent-seat read). MILLRACE ZAI split-read resolved —
+  gameplay frame alone read "stepped monument + oval pool + detached posts"
+  (Sev-4-class dissent) BUT top-view frame DISCRIMINATES: linear raised
+  launder on-axis (x462-512, y126-206) with displaced cast shadow proving
+  elevation, continuous single-axis water path channel->head->8 treads->
+  basin, 5:1 aspect = millrace not fountain; gameplay dissent = struct-38's
+  documented camera-sideness artifact (rig views basin side; launder aims
+  windmill side), "free posts" = struct-38's reed clumps; bytes UNCHANGED
+  (same lib 6e82dd2e since struct-38's native PASS) — fallback dissent does
+  not outrank owner native acceptance (survey-36 law). CLEAN-with-margin at
+  the new city-4 seat; margins: post/water value overlap sub-20% luminance,
+  head yellow accent at legibility edge. GARDEN-0011 NATIVE CLEAN-with-margin
+  — kitchen-garden grammar fully intact (hedge box + 4 corner posts, 2 timber
+  beds, ~3 cabbage rows/bed parallel to tan path axis, gold marigold accents
+  at bed ends); margins: hedge-ground ΔL≈10 AO-absence (chassis class), rear-
+  row compression fuses heads to 4-5px bands. improve-42 corroborated 2-of-5.
+  CAIRN-0043 NOT EXECUTED (run budget exhausted before fallback pass) —
+  carries; standing context survey-35 native CLEAN 2-of-5 (0022/0050) +
+  improve-43 family-wide decode contact audit (1238 stone pairs, zero
+  failing). Routing: ZERO notes (zero confirmed defects), zero new candidate
+  rows, zero ledger append (read-only tick, loop law 4). Census 280 vs
+  survey-38 snapshot 279: +1 arrival nx-struct-moongate (struct-73 @ ledger,
+  tuple-exact (-43.84,-0.0533,-43.84) yaw 0 lib 3291fe15), 1 POS_MOVED+YAW
+  flip nx-struct-millrace (city-4 @ 47177c0e, tuple-exact (-76.707,-0.0256,
+  6.711) yaw 1.7516), 0 departures — both ledger-matched sibling work.
+  Corroboration ledger: orchard 2-of-5, seed 4-of-4 COMPLETE, garden 2-of-5,
+  cairn 2-of-5 (+0043 owed). Gate: ALL PASS real exit 0 first try at 47177c0e
+  (ledger law EXACT 2370691). Verdicts 0 confirmed / 6 clean (6
+  clean-with-margin) / 0 dropped / 1 not-executed. Zero world mutations,
+  zero uploads, zero comp edits, zero shared-budget use.
