@@ -3611,3 +3611,56 @@ lamp-002 (32.9,50.1) and statuary-0005 (70.4,22.9) with conservative
 rotation-grown AABBs (struct-70 law), terrain 7pt on TRUE envelope (half-x
 3.54, half-z 0.82), upload + spawn nx-struct-ogeegate PLACED_VERIFIED +
 idempotent, two-way MCPL walk 4.4m opening, Bill eye-check packet.
+
+## struct-76 (2026-09-07): R6-3 OGEE GATE v3 — construction REPLACED
+## (accolade sweep), BUILD-ONLY — judge + placement deferred (run budget;
+## struct-61/improve-31 class; NO visual PASS claimed)
+
+Cadence 76%3==1 build tick; queue law FIRST: executed struct-75's deferred
+re-judge on pinned v2.1 bytes (946773f1 x2 re-verified deterministic).
+Gate ALL PASS real exit 0 at ada47a66 tick-start. Interlane f6254cd0 stable.
+No SHARD section (grep exit 1, skip-law). Census 282 fresh, ogeegate absent.
+
+NATIVE re-judge v2.1 (native UP after one paced 1210 retry — flap
+disclosed): gameplay 18m 3/5 — S-SILHOUETTE FAIL ("continuous circular
+arc... no inflection anywhere", horseshoe) + BATTERED SPRINGING FAIL
+(vertical prisms); joints/keystone/cleanliness PASS. NIGHT FAIL —
+horseshoe/keyhole profile + keystone "oversized glowing-brass plaque, not
+a quiet point". Both failures = the 18m contract verdict (pitfall 5: solo
+rig confirmed degrading, but the contract frame is the frame).
+
+ROOT CAUSE PROVEN AT SOURCE (tangent space, not tuning): v1/v2's
+tangent-continuous concave-crown cyma CANNOT reach a sharp keel — a
+narrowing concave arc turns its tangent back toward vertical, forcing the
+blunt dome both judges read (v2: crown 161deg of one 3.12m circle). The
+v2 "matched curvature" law was the wrong invariant; struct-74's
+pointed-variant rejection was wrong in kind (the keel changes the
+SILHOUETTE, not a detail — sub-pixel reasoning misapplied).
+
+v3 CONSTRUCTION (flamboyant accolade sweep, all-convex): spring tangent
+50deg (up-outboard), tight belly arc r1 1.2 to 115deg (junction past
+vertical), gentle shoulder arc r2 7.12 converging to keel tangent 145deg —
+monotone left turns. WAIST owned by the belly arc (flare 2.481 intrados,
+extrados 2.901 vs pier base 2.86 — the bump CRESTS the pier, silhouettes
+against sky); belly sag 0.281m ~ 11px at 18m (VISIBLE, vs v2's ~4cm);
+KEEL WEDGE 70deg (a real point); crown notch between mirrored extrados
+(+-0.24m) makes the KEYSTONE geometrically forced fill — one 7-point
+stone wedge, flush law, no applied tab; brass = ONE small diamond finial
+(night judge's quiet point); piers = honest battered frusta (0.66 -> 0.38
+outer face, ~18deg) with the 40deg tilted springing plane as the pier's
+top edge + projecting mortar impost band. keel y 5.40, bbox 5.86 x 6.08 x
+1.64, footprint 9.6m2 + 6.08m — room gates honest (exact trimesh). sha
+67afef2aac104985... x2 deterministic. Before-bytes pinned
+reviews/struct76-ogeegate-v3/before-v21.glb (946773f1). 10 frames
+rendered; v3 frames NOT judged this tick (budget) — judge rides next
+tick's queue law FIRST, iterate if FAIL, then scan/place.
+
+DEFERRED (next tick executes FIRST, queue law): 1) gate re-run exit 0;
+2) native judge v3 gameplay+night (5 criteria: S-silhouette with true keel
+point, battered springing, joint rhythm, single keystone wedge, clean;
+night: quiet single warm point at the diamond finial); 3) if PASS — NE
+threshold scan az~135 r62-72 fresh census (approach-ne-lamp-002
+(32.9,50.1) / statuary-0005 (70.4,22.9)), conservative rotation-grown
+AABBs (struct-70 law); 4) terrain 7pt TRUE envelope (half-x 2.93, half-z
+0.82); 5) upload + spawn nx-struct-ogeegate PLACED_VERIFIED + idempotent;
+6) two-way MCPL walk 4.4m opening; 7) Bill eye-check packet.
