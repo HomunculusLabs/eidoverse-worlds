@@ -89,14 +89,17 @@ for (const [ci, cx] of crowns.entries()) {
     }
 }
 
-// NINE-TREAD STAIR FLIGHTS at both ends — 9 × 0.2133 rise (≤0.25 law)
-// tops the treads exactly at the deck tread surface (native-judge lip fix:
-// stair tops at 1.85 vs deck surface 1.92 left a 7cm step), 0.45 deep,
-// solid blocks; the number carries through the whole piece.
+// NINE-TREAD STAIR FLIGHTS at both ends — 9 × 0.2133 rise (≤0.25 law).
+// struct-51 INVERSION FIX (decode-proven, survey-17 root cause): the old
+// `h = RISE*(i+1)` with i=0 nearest the deck put the SHORTEST step beside
+// the deck and the TALLEST (1.92m) at the far foot pad — the flight
+// climbed AWAY from the bridge, leaving a 1.7m sky notch at each
+// deck-stair junction (survey findings a/b/c, one number). Correct law:
+// tallest step adjacent to the deck, descending to grade at the foot.
 const RISE = (DECKY + 0.07) / 9;
 for (const s of [-1, 1]) {
     for (let i = 0; i < 9; i++) {
-        const h = RISE * (i + 1);
+        const h = RISE * (9 - i);
         const step = new THREE.Mesh(new THREE.BoxGeometry(0.45, h, 2.2), pier);
         step.name = `stair_${s > 0 ? "e" : "w"}_${i}`;
         step.position.set(s * (SPAN / 2 + 0.225 + 0.45 * i), h / 2, 0);

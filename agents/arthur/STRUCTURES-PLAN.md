@@ -1779,3 +1779,58 @@ hourglass silhouette dead on the cardinal axis; climb onto the plinth
 and stand at the center looking up through the crossing weave (the
 32-strut X-lattice converging overhead); at dusk, the 8 brass crown
 beads ringing the crown band.
+
+## struct-51 — REFINE TICK (ninesbridge stair-inversion fix)
+
+Cadence: 51 % 3 == 0 → refinement tick. Subject chosen by deficit
+ranking: survey-17's ninesbridge Sev 2 (worst open finding in the intake;
+my struct-49 placed under judge outage with native re-judge owed).
+
+**Root cause, decode-proven (one number)**: the stair loop put step
+`h = RISE*(i+1)` with i=0 NEAREST the deck — shortest step beside the
+deck (0.213m), tallest (1.92m) at the far foot pad. The flight climbed
+AWAY from the bridge. This single inversion explains all three survey-17
+end-local findings: (a) the pale diagonal stray read = sun-lit tops of
+the descending east flight (camera math: lit step-tops project exactly
+into x843-902 y328-408); (b) the left-junction sky-notch = the 1.7m open
+gap at the deck-stair junction (x=±7.0..7.225); (c) dock ambiguity =
+highest steps far from the deck line. The struct-49 walk passed anyway:
+MCPL height-snap rides the sawtooth, proving the horizontal lane, not
+riser climbability (align-3 class — probe ≠ player).
+
+- Fix: `h = RISE * (9 - i)` — tallest adjacent to deck, descending to
+  grade at the foot. sha 1e4e84e9 →
+  8c5d9ccea9cb4076dcca804792264f6bd34a234cbbabe907134693d876b1b6d3
+  deterministic ×2; vertex decode ladder 1.920/1.707/1.493/1.280/1.067/
+  0.853/0.640/0.427/0.213 descending outward, both flights; junction top
+  exactly deck surface (1.92); 5 merged nodes, bbox unchanged (24.3 ×
+  2.47 × 3.1 — SAT-neutral re-place).
+- Judged: native re-judge attempt failed 1210 ×2 + paced retry (hard
+  down, same as survey-17 — native re-judge debt rolls forward). Pixel
+  falsification: left-junction sky pixels 582 → 0; right-end region
+  darkened mean RGB (103,103,89) → (66,61,46); deck band 0 gap columns
+  before AND after (arc rhythm untouched); left/right/front views
+  0.0–0.5% changed (mid-span unchanged). ZAI fallback after-judge 5/5
+  PASS (stairs climb correctly, junctions closed, no strays, coherent
+  arcade, no new defects), disclosed.
+- Re-place: remove+spawn reseat at the exact standing tuple
+  (-7.28, 0.02764016019864407, 69.62) yaw -1.67552, comp null → null
+  (empty bag, nothing to reapply — comp-wipe law checked). lib
+  store/8c5d9ccea9cb4076.glb. PLACED_VERIFIED 2 verbs; idempotent rerun
+  zero verbs.
+- Walk (two-way, 9 legs ALL_PASS, worst arrival 0.396m — exactly the
+  struct-49 committed pin): approach → stair foot → deck mid → far
+  descent → re-cross → both flanks.
+- Frames: reviews/struct51-ninesbridge/{before,after}/. Probe:
+  struct51-decode-ninesbridge.ts. Placer: next-place-struct51.ts.
+
+**Bill should eye-check**: cross the bridge from the south stair — the
+climb should now visibly rise from the field to the deck with no notch
+where stair meets deck, and the far end should read as a descending
+stair, not a tall block. (The survey's "walk evidence outranks render"
+note stands: the crossing itself was always functional.)
+
+**SURVEY INTAKE status**: ninesbridge row EXECUTED this tick (defect
+notes consumed by the fix). Remaining intake: beacon Sev 2 (3 black
+window-rects — next-worst), waterstair Sev 3, cellardoor Sev 3,
+orreryring margin-only.
