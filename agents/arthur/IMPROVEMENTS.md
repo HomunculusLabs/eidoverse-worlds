@@ -4992,4 +4992,6 @@ fixes ≈ 6 F.)
 
 - [city-59] lawful HOLD 43rd — gate ALL PASS real exit 0 at e3437690 (sweep-93); register 13/13 EXECUTED live-fresh 14/14 pins exact worst 0.0005m rounding-class; amphi HOLD intact (-23.32,37.31) r44.0 lib 95a98c74; census 291==291 quiet vs city-58 (0/0/0, capture /tmp/city-census-59.json); riders b31/b32/b33 present zero-drift thematic pairing 0.0000m hosts unmoved (harvestcart 12,36 milkstand 22.5,33 churn 20,35); band r33-55 48 lib-bearing zero new off-spoke; shard routing no city prefix; interlane f6254cd0; blocked on Bill (amphi 3-option, nvp-105 blessing, eye-gates b31-b33); zero mutations (D+0, E+0) (D+0, E+0)
 
+- [dress-116] 7th lawful HOLD post-close — gate ALL PASS real exit 0 at e3437690; fresh census 291 quiet (29 fleet district-qualified + 16 legacy core intact); round-3 closers PINS_EXACT 4/4 (foxden 856deec5, lanternhook 639c5480, seats cb34bd36, streamstones aabbc23d, radian law); shard routing verified at source — nine Round-1 nx-dress rows terminal (5/29/30/31 DROPPED, 32/33/34/37/38 EXECUTED), round-2 legacy-core only, zero OPEN fleet-routed rows, no round-4, survey intake unchanged since survey-42 (milkstand tie-break owed by survey lane, off-limits set probe); interlane f6254cd0; blocked on Bill (bellows a/b/c, SW lamp a/b/c 0-of-3); zero mutations (D+0 E+0) (D+0, E+0)
+
 **Running total: 2370723 / 2000000**
