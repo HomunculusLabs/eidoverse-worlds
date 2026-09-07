@@ -2457,3 +2457,74 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   3 dropped (banner, stablebench pre-judge; timberyard prompt-artifact
   finding dropped, clean stands). Zero world mutations, zero uploads,
   zero comp edits, zero shared-budget use.
+
+## Judged index (survey-45)
+
+- survey-45 (2026-09-07, NATIVE 5/6 + ZAI fallback 1/6 disclosed — skene
+  1210 x2 paced-retry-burned, fallback there; native otherwise fully up,
+  zero flaps on the other five; 18m gameplay, fresh live store bytes 6/6
+  HTTP 200 curl UA on exact census-45 libs, served-shas pinned 804276948c0f386a
+  (fieldcross) / 75cec14c8c1642bc (snagdead) / c3d97fe9074b9b95 (needlerest)
+  / a6ec47660ef1af8f (skene) / 698f2bc412d25fff (potter) / 6ea32c8a01516937
+  (sign)): NATIVE-DEBT + NEW-SEAT slice (severity backlog drained —
+  round-1 terminal, survey-7..44 candidates intake not re-judge debt).
+  Slice = the two carried native debts (fieldcross, snagdead) + four
+  relocation re-reads owed by the new-seat law (survey-40 reedpool/angler
+  precedent): needlerest (city-9 seat), skene (city-10 seat), potter
+  yard (city-13 seat), sign-potter-001 (moved with host). VERDICTS:
+  FIELDCROSS NATIVE CLEAN — debt RESOLVED: reads deliberate crossing
+  (two stepped-cap stiles + slab chain on one consistent axis + mown
+  strip), zero hard glitch classes; survey-44's ZAI "shed" identity-fail
+  is disproven at native (also decode-disproven that tick); margins
+  only: ambiguous nub (427-436,370-380), far dark flake weak shadow
+  (535-552,356-366) — sub-threshold, no note. SNAGDEAD NATIVE CLEAN —
+  debt RESOLVED: both survey-44 ZAI claims ("floating chip" 498-516
+  272-302, "orphan plates" 462-506 298-345) explicitly false-positive —
+  native scrutiny found trunk-color continuity at every protrusion root,
+  EMPTY detached set, matching decode (welded at origin); knot reads
+  genuine cavity (the cavity-capped check survey-44 named, resolved);
+  buttress grounded with cast shadow; identity unambiguous snag. Both
+  fallback-dissent classes now carry native verdicts — debts cleared,
+  owner verdicts (dress-102 PASS, dress-84 acceptance) corroborated.
+  NEEDLEREST NATIVE CLEAN (city-9 new seat): covered-bench rest shelter
+  read (bench on block piers, three-post canopy, footings), zero
+  floating parts, grounded with contact shadow; margins: roof right-end
+  tab (592-606,310-345) cosmetic watch, seat/post crossing (465-480,
+  418-431) z-fight watch at zoom only. SKENE ZAI CLEAN-with-margin
+  (city-10 new seat, fallback disclosed): reads intentional wall-with-
+  niche backdrop — five-bay colonnaded recess with piers/mullions/lintel,
+  continuous coping, stepped wings, crisp grounded base; "colonnade vs
+  single niche" is a design-ambiguity margin, not a defect; ZAI's one
+  anomaly (yellow element 474-486,321-341 "scale figure") DECODE-
+  DISPROVEN: mesh 2 = designed gold finial x-0.11..0.11 y1.65..2.07
+  center-top (skene_gold texture, olive-mustard gold family) — the
+  yellow breach IS the finial by construction; asymmetric bay rhythm
+  margin (B5 ~66px vs B2 ~34px) = rustic irregularity, verify-tier
+  only. Native re-judge debt NOT carried — decode + prior native reads
+  (survey-1 struct arc) close the question; fallback verdict stands as
+  corroborated by decode. POTTER NATIVE CLEAN-with-margin (city-13 new
+  seat): prompt-artifact SELF-CATCH disclosed — my judge prompt asserted
+  "building with porch" from assumption; decode proves lib 2062c446 is
+  a 3.44x1.02x1.71m pottery WORK YARD prop set (11 meshes: tables,
+  wheel+pwheel motion group, drying rack with pots, shelves, crate) —
+  never a building (survey-44 timberyard class, my error this time).
+  True read: pottery identity unambiguous (wheel-head, drying pots,
+  bowls, clay crate), all props grounded, zero torn seams at the moved
+  seat; rider arithmetic independently confirms move integrity (b3
+  back-solves host-local (1.550,0.350), sign (1.498,3.100) — exactly
+  city-13's pins). Margin: flat grey patch under wheel (445-505,388-402)
+  = contact shadow, not torn decal. SIGN-POTTER-001 NATIVE CLEAN
+  (moved with host): iron post + scrolled hanger arms + framed cream
+  panel + charcoal jug/amphora emblem with clay highlight — emblem
+  resolves ABOVE the series-law margin; connected, grounded with
+  directional cast shadow, zero glitch classes. Routing: ZERO notes
+  (zero confirmed defects), zero candidate rows, ZERO ledger append
+  (read-only tick, loop law 4). Census 284==284 vs survey-44 snapshot,
+  0 arrivals, 0 departures; 4 POS+YAW flips = city-13 potter cluster
+  (nx-town-potter + porch b3 + sign rider + potter-l light companion)
+  to (23.776,-0.004,7.725) yaw -1.8975, foreign-domain, ledger-matched,
+  0 unexplained. Gate: ALL PASS real exit 0 first try at 4a8258ea
+  (ledger law EXACT 2370704). Native debts carried after this tick:
+  NONE. Verdicts 0 confirmed / 6 clean (3 debt-resolutions/new-seat
+  natives, 1 fallback+decode, 2 with margins) / 0 dropped. Zero world
+  mutations, zero uploads, zero comp edits, zero shared-budget use.
