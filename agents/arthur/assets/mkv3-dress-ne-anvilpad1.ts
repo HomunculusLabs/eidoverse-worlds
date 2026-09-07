@@ -39,6 +39,19 @@
 // trailing toward the anvil (connective tissue), second dropped;
 // (6) poker + loop dropped (sub-pixel — minimalism law, dress-19
 // precedent); (7) brass pegs brightened 0xc9a227 (the one warm note).
+// v3 (e66d0679…) PARTIAL FAIL (ZAI): anvil renders black at gameplay —
+// probe-proven GEOMETRY (dress-76 pixel cluster: the ONLY v213 neutral
+// pixels in frame are sky rows y216-336; no object pixel beats grass
+// v154 — the 0.035m cap sliver never projects and the horn points
+// tip-on at the vantage). Judge's "tan block out-values anvil" was a
+// misread (region = 90% grass); scorch "invisible" over-stated (measured
+// 3.2:1 on light stone) — but the substance stands.
+// v4 — the projection fix: (a) anvil ROTATED 90°, horn along −x toward
+// the forge — the iconic PROFILE reads from the plaza vantage; (b) NEW
+// bright worked side-face plate on +z (camera side) — physically true
+// (London-pattern worked edges stay bright), gives the vantage a real
+// bright band; (c) billet promoted STEEL_MID→STEEL (drop that bucket);
+// (d) heel swapped to +x. Scorch/plinth/barrel/rack unchanged from v3.
 import * as THREE from "three";
 import { writeFileSync } from "node:fs";
 import { toGLB, mat } from "./glbwrite.ts";
@@ -54,9 +67,11 @@ const CUTWOOD = mat(0xa09832, 0.95, 0);   // pale stump cut / handles
 const IRON = mat(0x4a4a50, 0.5, 0.15);    // anvil body / tools (metal low)
 const IRON_LT = mat(0x5f5f68, 0.5, 0.15); // barrel bands / heel
 const STEEL = mat(0xc8ccd0, 0.45, 0.1);   // POLISHED worked steel — bright
-const STEEL_MID = mat(0x8a9098, 0.5, 0.1);// billet (mid steel, bright enough)
 const WATER = mat(0x506a78, 0.25, 0.5);   // palette water (polish-271 law)
 const BRASS = mat(0xc9a227, 0.5, 0.3);    // rack pegs — the warm note
+const HOTIRON = mat(0xd9844a, 0.6, 0.1);  // v5: billet — hot working stock
+(HOTIRON as any).emissive = new THREE.Color(0x9a4a18);
+(HOTIRON as any).emissiveIntensity = 0.65;
 
 const add = (n: string, m: THREE.Mesh) => { m.name = n; g.add(m); };
 
@@ -85,7 +100,8 @@ const add = (n: string, m: THREE.Mesh) => { m.name = n; g.add(m); };
   add("scorch_3", s3);
 }
 
-// --- anvil on stump, center local (-0.55, +0.15); horn toward +z.
+// --- anvil on stump, center local (-0.55, +0.15); v4: horn along −x
+// (toward the forge), heel +x — the PROFILE reads from the +z vantage.
 // Working face lands at y 0.75 (polish-276 law).
 {
   const stump = new THREE.Mesh(new THREE.CylinderGeometry(0.24, 0.26, 0.32, 10), BARK);
@@ -94,23 +110,29 @@ const add = (n: string, m: THREE.Mesh) => { m.name = n; g.add(m); };
   const cut = new THREE.Mesh(new THREE.CylinderGeometry(0.24, 0.24, 0.03, 10), CUTWOOD);
   cut.position.set(-0.55, 0.475, 0.15);
   add("stump_cut", cut);
-  const base = new THREE.Mesh(new THREE.BoxGeometry(0.26, 0.10, 0.34), IRON);
+  const base = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.10, 0.26), IRON);
   base.position.set(-0.55, 0.53, 0.15);
   add("anvil_base", base);
-  const body = new THREE.Mesh(new THREE.BoxGeometry(0.24, 0.18, 0.62), IRON);
+  const body = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.18, 0.24), IRON);
   body.position.set(-0.55, 0.67, 0.15);
   add("anvil_body", body);
   // bright polished face plate — WIDER + LONGER than the body (cap band)
-  const face = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.035, 0.70), STEEL);
+  const face = new THREE.Mesh(new THREE.BoxGeometry(0.70, 0.035, 0.28), STEEL);
   face.position.set(-0.55, 0.7775, 0.15);
   add("anvil_face", face);
-  // horn: polished steel cone (worked surface), axis local z
-  const horn = new THREE.Mesh(new THREE.ConeGeometry(0.10, 0.36, 9), STEEL);
-  horn.rotation.x = Math.PI / 2;
-  horn.position.set(-0.55, 0.745, 0.15 + 0.35 + 0.18);
+  // v4: bright worked side plate on the +z (vantage) face — the projection fix
+  const side = new THREE.Mesh(new THREE.BoxGeometry(0.66, 0.12, 0.045), STEEL);
+  side.position.set(-0.55, 0.705, 0.15 + 0.12 + 0.0225);
+  add("anvil_side", side);
+  // horn: polished steel cone (worked surface), v4 axis −x (toward forge)
+  // v5: horn lengthened for the 18m silhouette (judge: 1-2px nub)
+  const horn = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.52, 9), STEEL);
+  horn.rotation.z = Math.PI / 2;
+  horn.position.set(-0.55 - 0.35 - 0.26, 0.745, 0.15);
   add("anvil_horn", horn);
-  const heel = new THREE.Mesh(new THREE.BoxGeometry(0.20, 0.11, 0.16), IRON_LT);
-  heel.position.set(-0.55, 0.655, 0.15 - 0.35 - 0.08);
+  // v4: heel swapped to +x
+  const heel = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.11, 0.20), IRON_LT);
+  heel.position.set(-0.55 + 0.35 + 0.08, 0.655, 0.15);
   add("anvil_heel", heel);
   // hammer resting across the face
   const hhead = new THREE.Mesh(new THREE.BoxGeometry(0.18, 0.10, 0.10), IRON);
@@ -128,6 +150,11 @@ const add = (n: string, m: THREE.Mesh) => { m.name = n; g.add(m); };
   const b = new THREE.Mesh(new THREE.CylinderGeometry(0.27, 0.25, 0.62, 12), TIMBER);
   b.position.set(-0.95, 0.46, -0.30);
   add("barrel", b);
+  // v5: rim band high (0.66) — top edge catches sun, separates barrel
+  // from the anvil shadow mass at 18m (judge: barrel dissolves)
+  const rim = new THREE.Mesh(new THREE.CylinderGeometry(0.278, 0.278, 0.045, 12), IRON_LT);
+  rim.position.set(-0.95, 0.66, -0.30);
+  add("barrel_rim", rim);
   for (const by of [0.23, 0.69]) {
     const band = new THREE.Mesh(new THREE.CylinderGeometry(0.278, 0.278, 0.05, 12), IRON_LT);
     band.position.set(-0.95, by, -0.30);
@@ -171,9 +198,10 @@ const add = (n: string, m: THREE.Mesh) => { m.name = n; g.add(m); };
   add("rack_hammer_handle", hhl);
 }
 
-// --- ONE bright billet on the slab, trailing toward the anvil
+// --- ONE hot billet on the slab, trailing toward the anvil
+// v5: emissive hot iron — the forge's heat cue the judge asked for
 {
-  const b1 = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.11, 0.11), STEEL_MID);
+  const b1 = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.11, 0.11), HOTIRON);
   b1.position.set(-0.95, 0.205, 0.42);
   b1.rotation.y = 0.45;
   add("billet_1", b1);

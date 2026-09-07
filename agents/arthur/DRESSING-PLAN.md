@@ -465,7 +465,8 @@ identity intent. Rotation stays NW->NE->SE->SW.
 
 ### NE — CRAFT (round 3)
 6. `nx-dress-ne-anvilpad-001` — forge-adjacent anvil pad: stone plinth,
-   tool rack, quench barrel in the bone-brass idiom.
+   tool rack, quench barrel in the bone-brass idiom. **DONE (dress-76,
+   PLACED 2026-09-07 — details in the dress-76 siting-log entry).**
 7. `nx-dress-ne-timberyard-001` — squared timber stacks + sawbuck pair,
    distinct from the NE woodstack by reading as WORKING stock.
 8. `nx-dress-ne-glazier-001` — glazier's rack: sheet-glass lean + crate,
@@ -2623,3 +2624,53 @@ a/b/c policy call, or verdicts on the four-district eye-gate circuit
   anvil ON the light step, scorch moved onto light stone, tools gap),
   then terrain preflight -> hash-gated placer -> place -> ledger close.
   Zero world mutations this tick; no uploads; no shared-budget use.
+
+### dress-76 — NE anvil pad (round-3 item 6, PLACED, LIVE — dress-75 item closed)
+
+- **Probe (the queued crop, run first)**: v3 gameplay bright-pixel cluster —
+  the ONLY v213 neutral pixels in the entire frame are sky rows y216-336;
+  below the sky band NO object pixel beats grass v154. The v3 anvil was
+  black at 18m as GEOMETRY: horn pointed tip-on at the vantage and the
+  0.035m cap never projects. The ZAI judge's "tan block out-values the
+  anvil" was a misread (its cited region is 90% grass); "scorch invisible"
+  was over-stated (measured 3.2:1 dark-on-light). Probe discipline held:
+  numbers over prose, both directions.
+- **v4 (01844173…)**: projection fix — anvil rotated 90° (horn −x toward
+  the forge, heel +x), NEW worked side plate on the camera face, billet
+  STEEL. Front view native PASS (steel anvil the brightest object mass,
+  silhouette unambiguous) but 18m gameplay still borderline: horn 1-2px,
+  barrel dissolves into the anvil shadow, billet reads cold grey.
+- **v5 (65d686b023348c9b1effcefeecca6fb0fa0f92cbab5df0a2ffac4d5825879cdf,
+  deterministic ×2)**: horn lengthened 0.36→0.52 r0.10→0.11; billet →
+  emissive hot iron (0xd9844a, em 0x9a4a18 @ 0.65) — the forge heat cue;
+  barrel rim band at 0.66. 12 buckets, bbox x −1.42..1.20 z ±0.80 y
+  0..1.19, 0 below grade. Native 18m judgment **PASS**: anvil readable,
+  billet lands as hot iron via color-context, composition reads ACTIVE
+  worked forge annex (not abandoned/clutter). Emissive falsified at 18m
+  (111 warm px at the billet) + night gate PASS (mesh-ember not glow-orb,
+  silhouette holds, no stray glow). Barrel flagged weakest element —
+  margin note only, not a walkthrough-killer. Judge flap: native 1210 ×3
+  this tick, one paced retry each, succeeded — no fallback used.
+- **Siting (fresh census 263 → 264 self)**: forge-local +x flank
+  (24.765, −4.570) yaw −0.90756 parallel to nx-forge, horn-side toward
+  the forge, bright side plate + billet facing the plaza quadrant.
+  Rotated corner-SAT (fresh live set): nx-forge +1.419m (the DESIGNED
+  working alley — 1.4m solid-solid law met at the boundary),
+  seven-strikes +2.51, roads +2.63, well +2.82, waterline +2.84 — no
+  sub-1.4 adjacency. CORE siting per commission (item 6 anchors at the
+  core forge; district rim law not applicable) r 23.83..26.46. Terrain
+  5-point preflight: max 0.0, spread 4.5mm → py 0.0.
+- **Placement**: `ne-dress76-place.ts` (dress-74 chassis, rim gate
+  replaced by core-siting record) — **PLACED_VERIFIED**
+  `nx-dress-ne-anvilpad-001` @ lib store/65d686b023348c9b.glb, pos
+  (24.765, 0, −4.570) yaw −0.90756. 1 verb; idempotent rerun 0 verbs
+  (one deduped upload slot, chassis wart). Comps empty (spawn-only
+  family). Post-place census 264, tuple exact.
+- **Lamp budget**: NE spend 0 of 10 — the billet is an in-asset emissive
+  MATERIAL, not a light entity; no comp, no budget draw.
+- **Eye-check for Bill**: at the core forge, the yard between forge and
+  well now carries a working anvil pad — dark anvil on stump with horn
+  toward the fire, ONE glowing orange billet on the slab (the heat cue),
+  tool rack standing on the far side. From the E corridor the pad sits
+  behind/right of the forge, low and quiet; at night the billet is a
+  single warm ember point in the pocket.
