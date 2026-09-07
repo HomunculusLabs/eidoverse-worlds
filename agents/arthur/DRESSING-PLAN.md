@@ -971,10 +971,9 @@ identity intent. Rotation stays NW->NE->SE->SW.
    placement deferred on run budget, improve-31 class; the dress-96 tick
    executes nw-dress95-place.ts).**
 5. `nx-dress-nw-fieldcross-001` — one maintained field-crossing: two plank
-   stiles + mown gap, mid-field, walk-tested both ways. **BUILD-ONLY
-   (dress-100, 2026-09-07 — v4 `41a86024` corridor form, lavender-0053 W-end
-   pose pinned pending TRUE-dims re-gate; native judgment + placement owed
-   next tick, dress-82/85/93 class).**
+   stiles + mown gap, mid-field, walk-tested both ways. **DONE (dress-102,
+   PLACED 2026-09-07 — v7 `7750e9b7` seated at lavender-0053's W end,
+   host-flush mount; details in the dress-102 siting-log entry).**
 
 ### NE — CRAFT (round 3)
 6. `nx-dress-ne-anvilpad-001` — forge-adjacent anvil pad: stone plinth,
@@ -1032,6 +1031,42 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-102 — NW fieldcross v7 (PLACED, LIVE — dress-101's deferred close-out)
+
+- **Tick class**: placement tick. dress-101 built v7 and paid the visual
+  gate; this tick executed the pending sequence in order and closed the
+  arc dress-100 → 101 → 102.
+- **Determinism**: rebuild ×2 THIS tick, sha `7750e9b7…` both runs ==
+  plan pin == live lib prefix.
+- **Pregate re-run vs FRESH 283-entity census** (struct-77's ogee gate
+  had arrived since dress-101's 282): identical pinned values — host
+  flush −0.002 (designed), rim 85.457..91.037 ∈ [66,108] + CITY-PLAN
+  band r70–100, ninesbridge cone +70.1° @ 19.13m / echoarch +77.5° @
+  29.86m both clear. No new neighbor entered the sub-3m band.
+- **Terrain preflight** (`next-terrain-dress102-fieldcross.ts`, fresh):
+  corners −0.0023..0.0106 (12.9mm spread) → PY pinned to worst corner
+  −0.0023; walk-line samples flat (0.0009..0.0053).
+- **Placement** (`nw-dress102-place.ts`, dress-95/96 chassis + ONE named
+  tier-b exemption): hash gate → blocker-epoch guard (lavender-0053,
+  ninesbridge, echoarch) → fresh-census SAT (host flush −0.002 pinned
+  ±0.01, exemption ladder comment naming dress-99 flush-mount class) →
+  rim+CITY-PLAN band → cone re-check on live tuples → upload (no 429) →
+  1 spawn verb → post-place tuple verify. **PLACED_VERIFIED**
+  `nx-dress-nw-fieldcross-001` @ `store/7750e9b717f2b39a.glb`,
+  (−17.845, −0.0023, 84.294) yaw −2.35619 (−135°). **Idempotent rerun:
+  0 verbs.** Post-census 284 (+1 = this arrival). NW lamp 0 of 2.
+- **Walk** (`dress102-walk-fieldcross.ts`): two-way MCPL through the
+  corridor AND through the flush face into the bed trench — 4/4 legs
+  ALL_PASS, max arrival 0.395m. The mown line → real trench continuity
+  is walk-proven, not just rendered.
+- **Eye-check for Bill**: from the field NW of lavender-0053, the mown
+  corridor should read as a workers' path running straight INTO the
+  lavender bed's real ridge trench — the worn line, the two stepped-cap
+  stiles (0.18/0.36) beside it, and the trench beyond should read as one
+  continuous way, with nothing on the walk line taller than ankle
+  height. Judgment asked: does the crossing read as maintained and
+  continuous at your approach distance?
 
 ### dress-101 — NW fieldcross v7 (BUILD-ONLY — visual gate PAID, placement + terrain-PY + walk owed next tick)
 
