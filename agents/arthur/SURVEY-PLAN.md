@@ -1957,3 +1957,69 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   law EXACT 2370688; dress-95 at tip). Verdicts 0 confirmed / 9 clean
   (9 clean-with-margin incl. 4 lavender clean) / 0 dropped. Zero world
   mutations, zero uploads, zero comp edits, zero shared-budget use.
+
+## Judged index (survey-38)
+
+- survey-38 (2026-09-07, NATIVE 4/6 + ZAI fallback 2/6 disclosed — native flap
+  survey-26/31/35/36 class: b7 1210 x2 paced-retry-burned (gameplay + 20s-paced
+  front retry), pendulum 1210 x2 paced-retry-burned (gameplay + front), both
+  ZAI fallback; b8/rainbarrel/catenarygate/b32 native recovered mid-slice after
+  each 20s pace; 18m gameplay primary, face/right frames for flat riders per
+  survey-31 series law, fresh live store bytes 6/6 HTTP 200 curl UA on exact
+  census-38 libs, served-shas pinned 32246cfbc476518d / 6c3091de20ed0575 /
+  c4595b001a6145d7 / 6bf72fef477375ac / 464631777f7726ad / 699c65420eb31fca):
+  ARRIVAL CORROBORATION + NEVER-JUDGED RIDER TAIL + PENDULUM POST-CURE READ
+  (severity backlog drained — round-1 terminal; survey-7..37 candidates are
+  intake not re-judge debt). B32-MORNING-MEASURE NATIVE CLEAN-with-margin —
+  18m sub-threshold speck (8x9px) AS PREDICTED by series law, BUT face frame
+  also sub-threshold (28x27px) and right edge-on (9x28px): zero glitch
+  classes in all frames, silhouette/placement consistent with a deliberate
+  mounted plaque; motif unverifiable at ANY chassis frame (framing-limited,
+  b1 edge-on class survey-37 — host ensemble carries the approach read,
+  host-rider polish-282 law; owners note: plaque reads ~5x smaller in frame
+  than b7/b8 siblings — verify-tier scale question, not a defect call).
+  B7-SHRINE-STARS ZAI CLEAN-with-margin — face frame carries: dark plaque +
+  star emblem top-center + 5-6 pins in banded rows + 3 struts ALL terminating
+  on pins (authored signature: no orphan segments), inset margins even, zero
+  glitch classes; margin: pin count 5-vs-6 at resolvability edge, star
+  point-count unresolvable. B8-STABLE-HARMONIC-REIN NATIVE CLEAN-with-margin —
+  face reads deliberate abacus/counting strip: 450px charcoal bar + continuous
+  bright top rail + ~25-30 evenly-pitched two-tone studs (systematic tan
+  accents at regular intervals = counted groups), level/centered/trim-line
+  coherent; margins: shadow under left third only (thin posts sub-pixel),
+  foreshortened face compresses motif. RAINBARREL NATIVE CLEAN-with-margin —
+  first independent read, corroborates dress-96's owner arc: coopered bulge
+  silhouette instant, plank stand + pail companion read, contact shadow
+  anchors, ZERO glitch classes; margins: spigot 1-2px sub-pixel at 18m, teal
+  pail water sub-resolves (dress-79 sub-rim-occlusion class, owner's own
+  close-PASS evidence carries), stave seams outline-only. CATENARYGATE NATIVE
+  CLEAN (strongest read this tick) — first independent read of struct-72's
+  placement: monumental gate identity instant, catenary PROVABLE from frame
+  (rise ~225px > half-span ~167px, near-vertical flanks, subtly pointed crown
+  — not a round-arch reskin), all five brass dusk beads symmetric and popping
+  (apex + mid-flank pair + base pair), iron bead necklace discrete with gaps,
+  threshold slab + piers grounded with coherent shadow, ZERO floats/voids/
+  glitches; margins: 27-bead count plausible (~30-32 resolved) but not
+  pixel-certifiable (crown merge + pier occlusion), beads read stylized
+  beaded chain not linked iron. PENDULUM ZAI CLEAN — first independent read
+  on CURED bytes c32a35a8 (struct-41 rod-carriage fix) at NEW city-3 seat:
+  9/9 rods continuous beam-to-bob (cure class ABSENT), graduated lengths
+  wave-like, A-frame grounded with coherent shadows, zero floats/voids;
+  margin: bob #8 (x~592) renders smaller/darker than siblings (cosmetic
+  verify-tier, not rod-carriage recurrence), wave profile not textbook sine
+  at read precision. Routing: ZERO notes (zero confirmed defects), zero new
+  candidate rows, zero ledger append (read-only tick, loop law 4). Census 279
+  vs survey-37 snapshot 277: +2 arrivals both ledger-matched
+  (nx-dress-nw-rainbarrel-001 = dress-96 @ 6e6abed0 tuple-exact
+  (-59.72,0.0311,52.73) yaw 2.3562; nx-struct-catenarygate = struct-72 @
+  f82edc25 tuple-exact (0,-0.0274,-60.5) yaw 0), 1 POS_MOVED same-lib flip
+  = nx-struct-pendulum city-3 register row EXECUTED @ 515f2490 (13.16,
+  -0.0479,-60.59) az282.25 r62, ledger-matched, 0 departures. Mid-tick HEAD
+  advances classified (city-3 515f2490, improve-47 abde146f, improve-48
+  16ace7fc) — gate epoch 6e6abed0, census epoch honest per survey-37
+  precedent. True never-judged pool after this tick: nx-carousel only
+  (polish hero, off-limits-adjacent) — rider tail COMPLETE. Gate: ALL PASS
+  real exit 0 first try at 6e6abed0 (ledger law EXACT 2370690), re-gated
+  post-commit. Verdicts 0 confirmed / 6 clean (6 clean-with-margin) / 0
+  dropped. Zero world mutations, zero uploads, zero comp edits, zero
+  shared-budget use.
