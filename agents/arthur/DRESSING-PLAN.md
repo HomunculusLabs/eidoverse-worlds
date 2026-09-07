@@ -686,6 +686,48 @@ lamps remain blocked on Bill's a/b/c budget policy (0 of 3).
 
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
+**STATE AT dress-93 (2026-09-07, pipeline build tick — placement deferred to
+next tick on run-budget, improve-31 class)**: SE round-3 item 12
+`nx-dress-se-mossbowls-001` BUILT AND NATIVE-JUDGED, NOT YET PLACED — v10
+`9a8db2fd…` (deterministic ×2), 10 nodes, decode ALL PASS (y base −0.016
+grounded, footprint 8.92m², h 0.407 → floorShaped heightfield class, no
+light anchors, empty comp bag by design). Concept: three water-worn basin
+boulders at the forest edge holding moss — the SE wild's quiet
+micro-habitat. Identity = MOSS CRADLED IN STONE (stone rims silhouette
+ABOVE the green; dark interior front-wall arc opens the hollow read), with
+a moss tongue overflowing the broken lip to the ground and a teal
+rain-runout pool. Static, unlit — SE lamp spend stays 0 of 8 (the v9+v10
+pool emissive is MESH emissive, not a light entity — dress-79 precedent).
+Judge arc (all NATIVE, one 1210 flap paced-retried on v5): v1 a05e546c
+decode-caught (cushions −0.155 below grade; water disc INSIDE floor sphere
+— struct-52 dead-pane class); v2 facf7375 18m FAIL (filled-to-brim domes =
+mossy rock clump, concavity invisible); v3 restructured 474fdb02
+decode-caught (cushion −0.054); v4 dfeac292 18m FAIL (crown cap dome read
+"hemisphere on plinth"; stone never above green); v5 8eaf987e 18m PASS
+narrow (stone crest above moss reads; value bands clean; spill/pool noted
+18m-sub-threshold); v6 592bc194 close FAIL (pool dead-by-occlusion under
+the spill's z-shadow — struct-52 THIRD instance this tick, decode-caught;
+spill a detached decal); v7 70fb8aeb close FAIL (13px tongue; pocket
+swallowed); v8 0e28cef0 close PASS-conditional — THE CRADLE FIX (cushion
+r 0.82→0.55 seated z +0.10 behind the new interior front wall; prior
+cushions' z-extent −0.93 physically swallowed the lip at 0.90 — no nudge
+could fix that) + DIAGONAL tongue (dress-82 axis law); v9 6d8e480f two
+fixes named (pool too small to read water; tongue apex hovered 0.015
+above patch); v10 9a8db2fd pool doubled r 0.32m teal-emissive 0x3d6272@0.85
++ tongue lengthened/apex lowered — close judge: water PASS on material
+(pool half-occluded behind the left bowl rim from the front view),
+tongue STILL stops 10–15px short of the landing patch (hard fail),
+floaters PASS. **v11 fix list (next dress tick executes)**: (a) tongue
+length/seat so the apex geometrically overlaps the landing patch disc;
+(b) pool nudged −x/−z onto fully open ground clear of the bowl rim;
+then re-judge close + 18m, terrain preflight, hash-gated placer, upload/
+spawn `nx-dress-se-mossbowls-001`, post-place verify + idempotent rerun.
+Siting intent: SE wild forest edge, approach face toward the az-315
+walker line — full fresh-census scan per dress-84/dress-92 chassis
+(TRUE-decode HALF {x 1.619, z 1.378}, CLOCAL {x 0.085, z 0.188}). Shard
+queue unchanged: no OPEN nx-dress rows. SW lamps still blocked on Bill's
+a/b/c (0 of 3). Rotation after placement: NW round-3 item 4 of 19.
+
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
 deepens each district along its OWN theme with new installation families.
 All prior laws carry: district-qualified ids (nx-dress-<quad>-<family>-NNN>),
