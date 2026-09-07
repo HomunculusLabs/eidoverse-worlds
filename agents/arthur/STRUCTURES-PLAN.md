@@ -4051,3 +4051,103 @@ lip; the skymirror stands just off-axis at 6.2m from it. Judgment
 asked: does the trumpet read as ANSWERING the dish?
 
 NEXT: 83%3==2 -> build tick (R8 commission or shard re-arm scan).
+
+## struct-83 (2026-09-07): R8-1 THE REULEAUX ROTOR — concept contract
+## (written BEFORE build, per procedure)
+
+BUILD tick (83%3==2). Shard EMPTY this tick (zero [STATE OPEN] rows
+fleet-wide, grep-verified). Refine pool: single routed note survey-20
+echoarch Sev 3 (native) — RESERVED as the 84%3==0 refine subject; this tick
+builds. Gate ALL PASS real exit 0 at 0f1f193a tick-start.
+
+CONCEPT (one idea, Judd): THE REULEAUX TRIANGLE AT WORK — the curve of
+constant width, the geometry class the village does not own (circles
+everywhere, no constant-width non-circle). A dark iron curved-triangle
+rotor, face-on vertical, spinning slowly inside a square ashlar aperture
+whose side equals the rotor's width — the rotor touches all four sides at
+every instant, vertices sweeping near the corners, and the inner square
+hole traces the 3-cusped hypocycloid hula of the classical drill. Not a
+drill (no mechanism): the form demonstrated as sculpture. Kinetic folly —
+village's second motion work (screwwell first), engine-native spin comp
+(motion:sails {type:"spin", axis:"z", degPerSec:-3}, SLOW/CALM). Night
+accent: three brass vertex studs on the rotor rim.
+
+MECHANICS (verified at source): rotor centered at square center, width w =
+side of square → contact on all four sides at every rotation angle; the
+square opening traces the classic square-hole mechanism. The aperture is
+an OPEN frame (corners not cut — the rotor vertex reaches within
+w(1-√3/2)≈0.402·w of each corner at the cusp sweep), read as a mason's
+scribed square. Silhouette at 18m: dark iron lens turning in a square
+stone frame on a plinth. Honest gates: footprint honest at ~8m² (frame
+2.9×2.9), height 2.9 ≥ 2.2 → exact trimesh, circuit walk (folly, nothing
+enterable).
+
+MATERIALS: rr_stone texMat lane (screwwell stone family — one quarry),
+rr_iron for the rotor (sw_iron palette). Brass studs emissive KEEP name
+glow_rrv (mergekit law: emissive dies in buckets — struct-82 lesson).
+
+SITING (derive fresh at placement): SE wild quadrant preferred — the
+kinetic family pair with screwwell (W) would split them; instead companion
+the NORTH NEEDLE on the N spoke (vertical-instrument reading), OR take a
+full-ring seat scan r[66,90] and rank by (a) spoke-adjacency (visible
+axis), (b) clearance margin. No watermark repetition — moongate/whisperhorn
+own the SW; reuleaux is azimuthally anchored by its square frame, yaw
+fixed at site derivation.
+
+NIGHT: studs only (three warm points riding the slow spin), frame rim
+stays dark stone. No other glow.
+
+Eye-check for Bill (one): stand on the frame's axis at 18m — does the iron
+triangle read as TURNING INSIDE ITS OWN SQUARE, touching every side?
+
+## struct-83 (2026-09-07): R8-1 THE REULEAUX ROTOR — authored v1, judged
+## NATIVE PASS 3/3 views, placement DEFERRED next tick (queue-law FIRST)
+
+BUILD tick (83%3==2). Shard EMPTY (zero [STATE OPEN] rows). Gate ALL PASS
+real exit 0 at 0f1f193a tick-start. World untouched (zero uploads/verbs).
+
+CONCEPT: the curve of constant width, at work — dark iron Reuleaux rotor
+W 2.20 turning face-on inside a square ashlar aperture (side 2.23, 15mm/
+edge running fit), one idea: WIDTH IDENTICAL FROM EVERY AZIMUTH.
+
+MECHANISM (falsified then proven at source): naive fixed-center spin was
+numerically FALSE (vertex radius w/sqrt3 breaches a width-equal square);
+support-function analysis proved the center path is a pure k=-3 deltoid
+(k=1 orbit term exactly 0.0000 — engine orbit comp CANNOT express it) and
+path(constant arc speed)+spin(constant rate) phase-lock to 0.6cm max,
+absorbed by the 15mm fit. Engine-native two-comp bag: motion:pwheel_rr
+{type:path, 240 pts exact deltoid, speed 0.022935 m/s, loop, face:false}
++ motion:sails {type:spin, axis:"z", degPerSec:+2.5} — both linear in the
+same server t, T=144s both; drift impossible by construction. Comp bag
+emitted as struct83-rotor-comp.json sidecar (no hand transcription).
+
+BUILD: mkv3-reuleauxrotor.ts. Self-catches during authoring: (1) support
+fn took max over ALL disks (trefoil, width 3W) — arc-span restriction is
+the law, width assert 1e-9 every 7deg; (2) polar-ray outline sweep is
+WRONG near vertices (vertex-support fan) — CCW arc concatenation in arc
+parametrization, junction vertices land exactly once; (3) decimation
+fidelity must measure point-to-SEGMENT (engine truth), not index-rounded
+vertex. sha 670e397cb6422ee20205a541389a64fa1cea982acdbc99f20ecdb3a6e262
+3038 x2 deterministic (mtime verified). Renderer-verified bounds 3.50 x
+3.29 x 3.50, nodes 10 / draw meshes 7 (budget law), materials
+rr_stone/rr_iron/glow2/plain-brass. Gates honest: slab 12.25 m^2, height
+3.29, folly.
+
+NATIVE JUDGE: front PASS (curved-triangle unmistakable, frame + near-
+contact read AS the mechanism, bore + hub legible; minor: pin reads dark
+at distance), gameplay 18m PASS (silhouette constant-width read crisp,
+grounded, one warm hub point; caution: spokes sub-visible at 18m — rotor
+reads self-suspended, bore/pin carry the machine read at approach),
+night PASS-with-caveat (two clean warm stud points no glare; third stud
+occluded behind top yoke at rest — TRUE kinematics: vertices sweep the
+corners, studs ride the perimeter cyclically; frame top rails low-
+contrast margin). Accepted v1.
+
+DEFERRED (next tick queue-law FIRST): 1) gate re-run exit 0; 2) fresh
+census + full-ring seat scan r[66,90] (rank: spoke-adjacency then margin;
+NE craft threshold candidate — kinematic works belong on working edges);
+3) terrain 9pt TRUE envelope (plinth 3.5x3.5); 4) hash-gated placer
+(struct-80/81/82 chassis) upload/spawn nx-struct-reuleauxrotor + BOTH
+comps from sidecar + PLACED_VERIFIED + idempotent; 5) circuit MCPL walk;
+6) Bill eye-check packet (stand on the frame axis: does the triangle read
+as TURNING INSIDE ITS OWN SQUARE?).
