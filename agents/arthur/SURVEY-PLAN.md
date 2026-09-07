@@ -2390,3 +2390,70 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   recorded plan-only) / 0 dropped. Zero world mutations, zero
   uploads, zero comp edits, zero shared-budget use.
 
+## Judged index (survey-44)
+
+- survey-44 (2026-09-07, ZAI fallback 7/7 executed — NATIVE DOWN ALL TICK
+  (1210 on every attempt: fieldcross x2 paced-retry-burned, timberyard x1
+  before conceding the flap window; disclosed), 18m gameplay, fresh live
+  store bytes 9/9 HTTP 200 curl UA on exact census-44 libs, served-shas
+  pinned 804276948c0f386a / 70fd3ea299bcadae / ac424d9226c42fd9 /
+  8749014582c34c44 / 75cec14c8c1642bc / e3abeb89b04de03c / 3b5554bb59aefce1
+  / 5b8702617ab578cc / e5ee7d0a9332a9ec): SELECTION SELF-CATCH x2 (slice
+  initially drawn from an under-matched pool — plan prose uses shorthand
+  names, so banner + stablebench carried 2x standing CLEAN verdicts already;
+  both DROPPED pre-judge as manufactured-corroboration class, replaced by
+  never-judged coop + wayside-0058 verified against ALL lane plans
+  case-insensitively). Slice = fieldcross (dress-102 arrival, first
+  independent read) + dryingracks + timberyard + orchard-rows + snagdead
+  + coop + wayside-0058. VERDICTS: FIELDCROSS ZAI identity-FAIL SOLO PROBE
+  — decode DISPROVES the "shed" element (all 8 buckets decode: 5 ground
+  films h<=0.08m + 2 stiles 0.36/0.42m + one plank 0.12m; NO shed-sized
+  mass exists) and shows zero floating geometry (all y-min <= 0.00);
+  owner dress-102's own native PASS + two-way walk proof stand; native
+  re-judge DEBT CARRIED (solo fallback vote, probe law). DRYINGRACKS ZAI
+  CLEAN 4/4 — third vote, concurs survey-30 NATIVE + dress-87 acceptance
+  (A-frame trestles, 7 dye-varied bundles, continuous rail, grounded);
+  margins: rightmost bundle hangs at rail's apparent end (verify-tier),
+  base-strip z-fight shimmer watch. TIMBERYARD finding DROPPED as PROMPT
+  ARTIFACT (survey-30 chess class) — judge prompt said "log rounds" but
+  asset is SQUARED timber stacks + sawbuck (DRESSING-PLAN concept);
+  identity-FAIL ("zero cylindrical silhouettes") faults geometry the asset
+  never carried; structural read ("authored rack/yard structure") +
+  survey-27 NATIVE CLEAN-with-margin (same lib 10b449fa) hold → CLEAN
+  corroborated; one verify-tier item survives the drop: thin dark sliver
+  at base x~383-420 (shadow vs stray face — owner verify, not routed).
+  ORCHARD-ROWS ZAI CLEAN-with-margin corroborated — identity PASS (crowns
+  discrete with sky gaps x428-442/x526-538, does NOT repeat the
+  nx-cultivation-orchard-* merged-crown family defect; espalier
+  trunk+stake verticals carry it); orphan-slab regions x400-412 y328-343
+  + x558-575 y338-352 = the ALREADY-RECORDED "two detached-sprout"
+  margin on the standing DRESSING-PLAN v8-tier note (line 3740) —
+  grep-verified open note, NO duplicate routed; fruit 2-4px specks
+  confirm the family sub-threshold class. SNAGDEAD fallback-vs-fallback
+  SPLIT — today ZAI silhouette/glitch FAIL (floating chip x498-516
+  y272-302, orphan plates x462-506 y298-345) vs survey-42 ZAI
+  CLEAN-with-margin on IDENTICAL bytes 7ac83203; decode: all 6 buckets
+  welded at origin (t=0), zero detached nodes, protrusions sit inside
+  trunk-column envelopes = the SAME staggered stubs survey-42 counted as
+  identity cues — no 3D-floating geometry exists at source; 1-1 fallback
+  split + decode → native TIE-BREAK DEBT CARRIED, no note routed (probe
+  law; cavity-capped check named for the eventual native read).
+  COOP ZAI CLEAN 4/4 — first read (black entrance hole renders depth not
+  see-through, stilt elevation, roof overhang, nesting box, grounded
+  feet-in-shadow; margin: single low run rail could read bench at 18m).
+  WAYSIDE-0058 ZAI CLEAN 4/4 — first read (gable+lit lamp+flanking post
+  clusters parse as wayside grammar; uniform shadow direction across all
+  ~10 elements; no leaks/striping/orphans; margin: mottled wall noise).
+  Routing: ZERO notes (no confirmed defect; orchard sprout margin already
+  open in owning plan — duplication law), zero candidate rows, ZERO
+  ledger append (read-only tick, loop law 4). Census 284 vs survey-43
+  snapshot 283: +1 arrival nx-dress-nw-fieldcross-001 (dress-102 @
+  0e1ff8b6, tuple-exact, judged this tick), 1 POS_MOVED nx-dress-charcoal
+  (34.5,0,34)→(22.724,-0.04164,27.274) = city-12 relocation
+  ledger-matched by sweep-80's own audit; 0 departures, 0 unexplained.
+  New snapshot baseline /tmp/survey44-census.json (284). Native debts
+  carried: fieldcross + snagdead (both queued for first native-up tick).
+  Verdicts 0 confirmed / 5 clean (2 first-reads, 3 corroborations) /
+  3 dropped (banner, stablebench pre-judge; timberyard prompt-artifact
+  finding dropped, clean stands). Zero world mutations, zero uploads,
+  zero comp edits, zero shared-budget use.
