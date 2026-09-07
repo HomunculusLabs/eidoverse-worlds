@@ -1,6 +1,35 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-134 — lawful HOLD (25th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD 9fa6cc0c (city-79 sibling); interlane
+  md5 f6254cd0 pin-exact. Fresh census 293 steady — epoch diff vs
+  dress-133 capture +0/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-134.py` HOLD_VERIFY_PASS exit 0); dress
+  domain 45 = 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy.
+  Round-3 closers PINS_EXACT 4/4, all deltas exactly 0.0: foxden
+  856deec5, lanternhook 639c5480, seats cb34bd36, streamstones
+  aabbc23d (radian law, no yaw guard).
+- **Shard/intake (standing, re-checked at source)**: IMPROVE-PLAN all 9
+  sharded `nx-dress-` queue rows terminal (programmatic row scan:
+  rows 29–38 + sw-prayer row 5 — DROPPED/CLOSED/EXECUTED; the routing
+  paragraph's "dress ≈9" is stale vs rows, verified at routing time
+  per its own instruction); no round-4 section (grep 0); survey tag
+  max 54; SURVEY INTAKE items (milkstand survey-42 tie-break, fountain
+  survey-8, stringlights survey-30) all legacy-core off-limits set —
+  probe-only, Bill's call, not dress rotation. Zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains
+  the two one-line rulings in `reviews/dress-round3-eye-gate.md`.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Zero probe self-catches this tick. Zero world mutations, zero
+  uploads, zero verbs, zero shared-budget use (D+0, E+0).**
+
 ### dress-133 — lawful HOLD (24th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
