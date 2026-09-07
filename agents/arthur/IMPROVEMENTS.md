@@ -5054,4 +5054,6 @@ fixes ≈ 6 F.)
 
 - [city-72] 30th lawful HOLD — gate real exit 0 at 2ed74807 (sweep-96; ALL PASS); register 13/13 movable EXECUTED fresh-read, remainder HOLD-for-Bill (amphi a/b/c disposition, wave-2 mosaic+mile nvp-105 blessing, farm-prop riders b31-b33 eye-gates); shard routing table read fresh line 1176, zero city-prefix rows; Bill state unchanged (artwalk md5 48bea194, dress md5 12cec3fa, no CITY-PLAN amendments since city-15); probe HOLD_VERIFY_PASS exit 0: census 292 diff +0/-0/0 moves vs city-71 capture, pins 13/13 worst 0.5mm rounding-class, amphi seat exact lib 95a98c74, rider hosts unmoved 0.0mm, wave-2 parked 8/8; zero mutations (D+0, E+0)
 
+- [dress-127] 18th lawful HOLD post-close — gate ALL PASS real exit 0 at tick-start HEAD a5a8f8c4 (city-72); census 292 steady epoch-diff ZERO arrivals/departures/moves vs dress-126 capture (probe HOLD_VERIFY_PASS exit 0); 29 fleet NE6/NW9/SE7/SW7 + 16 legacy, round-3 closers PINS_EXACT 4/4 (foxden 856deec5, lanternhook 639c5480, seats cb34bd36, streamstones aabbc23d, radian law); shard terminal queue EMPTY no round-4 intake unchanged; Bill state unchanged (eye-gate md5 12cec3fa mtime 17:07:57, no ruling commits) — blocked standing on bellows a/b/c + SW lamp a/b/c; zero probe self-catches; zero mutations, zero uploads, zero verbs, zero shared-budget use (D+0, E+0)
+
 **Running total: 2370727 / 2000000**
