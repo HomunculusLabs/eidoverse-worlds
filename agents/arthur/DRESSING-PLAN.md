@@ -476,7 +476,9 @@ identity intent. Rotation stays NW->NE->SE->SW.
 
 ### SE — WILD (round 3)
 10. `nx-dress-se-funguslogs-001` — felled-log cluster with bracket-fungus
-    shelves; wild decomposition, not arrangement.
+    shelves; wild decomposition, not arrangement. **IN FLIGHT (dress-77,
+    2026-09-07 — BUILT + NATIVE-JUDGED + SITED; placement pending next
+    wakeup; see dress-77 siting-log entry).**
 11. `nx-dress-se-snagdead-001` — one standing dead snag with hollow (bird
     habitat read); leans away from paths, SAT-checked.
 12. `nx-dress-se-mossbowls-001` — moss-lined hollow stones at the forest
@@ -2674,3 +2676,66 @@ a/b/c policy call, or verdicts on the four-district eye-gate circuit
   tool rack standing on the far side. From the E corridor the pad sits
   behind/right of the forge, low and quiet; at night the billet is a
   single warm ember point in the pocket.
+
+### dress-77 — SE fungus-log deadfall (round-3 item 10, IN FLIGHT — built, native-judged, sited; placement pending next wakeup)
+
+- **Concept contract**: on the west shoulder of the forest-0044 blob, a
+  storm-felled dead trunk — the forest's own tree — root plate lifted
+  toward the standing trees, trunk thrown outward into the open wild,
+  bearing dense clusters of warm cream bracket-fungus on the walker-facing
+  flank. THE ANTI-STACK: no sawn faces (logpile/woodstack own the tended
+  idiom), natural taper, broken jagged tip, draped secondary limb, moss,
+  irregular soil/bark chunks. Grounds USE: the SE wild is where nature is
+  left to itself — the deadfall is the district's slow clock
+  (decomposition, not arrangement). Static, unlit — spends no lamp budget
+  (SE budget 8, used 0).
+- **Build**: `assets/mkv3-dress-se-funguslogs1.ts` →
+  `assets/village_dress_se_funguslogs1.glb`. Six-version iteration, ALL
+  judged native (GLM 5.3-flash via native vision_analyze — no 1210 flaps
+  this tick):
+  - v1 (57c4b0b1…): decode audit caught below-grade dips (min y −0.775
+    limb tip, plate corner) — rejected before judging.
+  - v2 (c9dfd27e…): fixed limb drape + plate lift. Native judgment:
+    deadfall PASS, root plate PASS, fungus FAIL (dark stubs on shadowed
+    flank), plank-debris BORDERLINE.
+  - v3 (873b3dfb…): fungus to walker flank + brighter, dodeca debris.
+    Fungus still BORDERLINE (scattered dapples, not bands); spill box
+    read "clean rectangular block".
+  - v4 (7c979076…): three dense shelf clusters. Fungus STILL BORDERLINE —
+    root cause: 0.07m arc shelves paper-thin at 18m = flat stain class.
+  - v5 (f263d9a3…): fungus rebuilt as protruding ellipsoid pads (sphere
+    squash y0.5/z0.65). Fungus mass PASS; stubs FAIL (comb/T-post rhythm);
+    green sliver at plate junction ambiguous.
+  - v6 (sha fbc626eb3f016bd7…, deterministic ×2) **ACCEPTED — native
+    5/5 PASS**: deadfall read, root-plate silhouette, protruding warm
+    cream fungus masses, irregular stubs, zero floats. Margin notes:
+    cluster spacing still slightly even; draped-limb read ambiguous at
+    18m (reads as debris — acceptable); stub spacing could loosen further.
+- **Decode (v6)**: 8 nodes (budget 3–25 ✓); bbox x −2.329..4.187 (center
+  +0.929, half 3.258), z −1.272..0.758 (center −0.257, half 1.015), y
+  −0.058..1.793. Min-y −0.058 within the grounded half-set tolerance.
+  Collider class: 6.6m² < 8 room gate, h 1.79 ∈ [FLOOR band] → uneven-top
+  topGrid heightfield (the honest woodstack/hedge class). No light
+  anchors; empty comp bag by design.
+- **Siting (fresh census 264 this tick; pose re-gated on the v6 decode
+  footprint)**: source-true occupancy scan of forest-0044 live bytes
+  (local retex copy 43e4c8c3… == live lib prefix, verified)
+  `dress77-forest44-deadfall-siting.ts`. Final pose **(40.0, −63.0) yaw
+  210°**: occupied-cell clearance 2.05m (nearest cell (44.6, −62.5)),
+  rotated-SAT min gap +2.42 vs nx-wild-forest-0018's fat compound bbox,
+  cone-clean (no plaza-ward 25°/18m violation), corridor walking-line
+  clearance 14.4m (far off the az-315 line — a wild-margin piece, not a
+  path piece), rim corners 70.3..77.1 ∈ [66,108] ✓. Root fan east toward
+  the 0044 trunk mass (fdist ~9.6m), trunk thrown west into the open.
+  Rejected trials (lawful-but-wrong-design): root-aligned poses at
+  (40.5,−62.0)/(40.5,−63.0) died on adjusted cell clearance ≤1.5m;
+  (39.5,−63.0) had SAT margin 2.06 but weaker cell clearance.
+- **Pending next wakeup (the dress-75 pattern — placement contract fully
+  recorded)**: terrain preflight at (40.0, −63.0) → write the
+  hash-gated placer `se-dress77-place.ts` (dress-7 chassis: blocker-epoch
+  guard [forest-0044, forest-0018, dress-3 stones, cairn-001]; NAMED
+  source-true SAT exemption for forest-0044 fat compound bbox with the
+  2.05m cell-clearance numbers in the header; v6 decode OBB constants
+  half x 3.258 / half z 1.015 / center (+0.929, −0.257)) → upload/spawn
+  `nx-dress-se-funguslogs-001` → post-place tuple verify + idempotent
+  rerun → ledger + commit. Zero world mutations this tick.
