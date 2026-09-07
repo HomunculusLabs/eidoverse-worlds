@@ -2319,5 +2319,74 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   exit 0 first try at 5d289689 (own survey-41 at tip; ledger law
   EXACT 2370698 pre-append). Verdicts 0 confirmed / 5 clean (4
   clean-with-margin) / 0 dropped / 1 dissent-routed / 1
-  not-executed. Zero world mutations, zero uploads, zero comp
-  edits, zero shared-budget use.
+    not-executed. Zero world mutations, zero uploads, zero
+  comp edits, zero shared-budget use.
+
+## Judged index (survey-43)
+
+- survey-43 (2026-09-07, NATIVE 6/6 — zero 1210 flaps, native fully
+  up all tick; 18m gameplay primary + night frames, fresh live store
+  bytes 3/3 HTTP 200 curl UA on exact census-43 libs, served-shas
+  pinned 20c7645421409c41 / 9e1808dd873b5ea0 / 106823ae4aa5e6d2):
+  ARRIVAL + TWICE-CARRIED + FAMILY-FIRST slice (severity backlog
+  empty — re-verified fresh; every standing candidate row carries
+  its native verdict, off-limits core notes all routed). Slice = 6
+  objects over 3 libs: GIFTSHELF (3rd carry after survey-27/42 run
+  budgets — finally judged) + APPROACH-LAMP family (4 instances,
+  one shared lib 18b69a6b — family-shared-bytes law) + OGEEGATE
+  (struct-77 arrival, first independent read after the owner's own
+  gate). VERDICTS: GIFTSHELF NATIVE CLEAN-with-margin day (shelf
+  identity lands: two-post two-tier unit x453-503, votive blobs on
+  top shelf, grounded with contact shadow x424-462 y401-411, zero
+  glitch classes, scale ~1.0-1.4m honest; margin: offering-specific
+  read rests on generic dark blobs — could pass as stall frame/
+  drying rack at 18m, sub-threshold identity nuance) + night frame
+  DEAD (0 warm px at candle blobs — decode: single timber material,
+  ZERO emissive materials in bytes, and census shows NO server-light
+  companion on nx-dress-giftshelf; dead-by-construction BOTH prongs,
+  unlike survey-42's mile-lamps where 3-of-6 carried live
+  companions — survey-42 mile-lamp precedent class: night-tier,
+  off-limits legacy-core set, recorded plan-only, Bill's call, NO
+  row, NO routing). APPROACH-LAMP NATIVE CLEAN day (identity instant:
+  tapered iron post + finial + crossarm + TWO hanging lanterns with
+  warm amber panes reading lit even in daylight x456-500 y315-452,
+  silhouette continuous, grounded with cast shadow, zero glitch
+  classes) + night LIT (~50-60 warm px across both panes at
+  (464,347)/(495,347), emissive-only in chassis — decode: glow1
+  emissive [1.25,0.464,0.143] present; census shows ALL FOUR
+  instances carry live -l server-light companions, verified
+  fresh — mesh emissive + server light, family complete, no
+  findings). OGEEGATE NATIVE CLEAN (first independent 18m read of
+  struct-77's v4: identity PASS — walk-through arch reads
+  unambiguous, ogee S-curve profile LEGIBLE at 18m not just "any
+  arch" (pointed crown ~ (475,205), convex haunches, concave
+  reversal to springers), ~25-30 voussoirs per side continuous,
+  springers clean onto battered piers, plinth unbroken, contact
+  shadows present; brass diamond terminal READS at (474,155) as
+  strongest contrast point in daylight frame — the struct-77
+  applied-tab FAIL does not recur at 18m) + night frame PASS
+  (brass terminal ~350-400 warm px, single quiet accent, arch
+  silhouette traceable with left flank near legibility floor —
+  margin-tier shading note only, same class the owner disclosed
+  as 1.6px-crown pitfall-13 residual). Struct-77's own native
+  gates corroborated by independent read. Routing: ZERO notes
+  (zero confirmed defects; giftshelf night-read recorded plan-only
+  per survey-42 mile-lamp precedent — off-limits core set, Bill's
+  call), zero candidate rows, zero ledger append (read-only tick,
+  loop law 4). Census 283 vs survey-42 snapshot 282: +1 arrival
+  nx-struct-ogeegate (struct-77 @ 35da3cb6, tuple-exact (22.71,
+  -0.003, 65.75) yaw -32.68 lib 32039b5a, ledger-matched, judged
+  this tick), 3 POS_MOVED/lib flips = nx-struct-needlerest
+  (city-9, ledger-matched), nx-struct-skene (city-10, ledger-
+  matched), nx-struct-angler lib swap 6bf06a35->6ee5b4b0
+  (city-11 bobber re-aim, ledger-matched) — all foreign-domain,
+  all ledger-matched, 0 departures, 0 unexplained drift. Render
+  chassis self-catch disclosed: bun's cached playwright-core 1.63
+  wanted browser build 1243 (absent); pinned executablePath to the
+  standing chromium_headless_shell-1234 binary — chassis law
+  recorded here for the next survey tick. Gate: ALL PASS real exit
+  0 first try at 35da3cb6 (ledger law EXACT 2370702). Verdicts 0
+  confirmed / 6 clean (6 clean-with-margin day, 1 night-DEAD
+  recorded plan-only) / 0 dropped. Zero world mutations, zero
+  uploads, zero comp edits, zero shared-budget use.
+
