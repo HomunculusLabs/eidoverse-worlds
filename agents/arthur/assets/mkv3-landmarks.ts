@@ -646,6 +646,11 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     const TH = 7.5;
     const stoneTex = texMat("stone", [0x56503c, 0x5c5a44, 0x4c4836], { rough: 0.95, scale: 2, weights: [2, 1, 1], cell: 32 });
     const timberTex = texMat("timber", [0x56503c, 0x605c40, 0x4a4632], { rough: 0.9, scale: 3, weights: [2, 1, 1] });
+    // improve-33 R1: pale cloth + brass texMat families — the sail cloth/
+    // ribs/hub/sacks were plain mat() (material-less export class, the
+    // struct-38/improve-31 loader-default near-black root cause).
+    const clothTex = texMat("wm_cloth", [0xd8d4c4, 0xcac4b2, 0xe2ded0], { rough: 0.85, scale: 2, weights: [2, 1, 1] });
+    const brassTex = texMat("wm_brass", [0xa09832, 0x887c2a], { rough: 0.85, scale: 2, weights: [3, 1] });
     // MILL ROOM: 5.2 x 5.2 (27m² > 20 gate w/ margin), H 2.6, door on +Z
     const RW = 5.2, RH = 2.6, T = 0.2, FY = 0.2;
     assertRoomScale(RW, RW, RH, "windmill-room");
@@ -671,8 +676,12 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     }
     // windows on the tower face — REAL lit frames now (frames + emissive
     // panes, matching the village; the tower used to go dark at night)
-    windowFrame(g, "wwin1", 0, 4.7, 1.35, 0.55, 0.75, "z");
-    windowFrame(g, "wwin2", 0, 5.9, 1.1, 0.5, 0.7, "z");
+    // improve-33 F3: both windows re-seated proud of their tier faces and
+    // wholly inside ONE tier band (improve-12/struct-52 class — the old
+    // seats straddled tier setbacks so panes were half-buried behind the
+    // next tier's thicker front face; the "lit slot" was a sliver).
+    windowFrame(g, "wwin1", 0, 4.5, 1.47, 0.5, 0.6, "z");
+    windowFrame(g, "wwin2", 0, 6.1, 1.13, 0.5, 0.6, "z");
     // TAILPOLE: the great slanted beam out the mill's back — how the miller
     // walks the cap around to face the wind. Pole + crossbar + ground wheel.
     const tp = new THREE.Mesh(new THREE.BoxGeometry(0.12, 0.12, 4.6), timberTex);
@@ -703,7 +712,9 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     // drive shaft from runner up through the ceiling (visual)
     texBox(g, "mshaft", 0.12, RH - 0.4, 0.12, -(RW / 2 - 0.85), FY + (RH - 0.4) / 2 + 0.4, -0.9, timberTex);
     for (const [si, sx] of [[0, -(RW / 2 - 0.55)], [1, -(RW / 2 - 0.5)], [2, -(RW / 2 - 0.62)]] as const) {
-        const sack = new THREE.Mesh(new THREE.SphereGeometry(0.24, 8, 6), mat(0xdcdcba, 0.9, 0));
+        // improve-33 R1: sacks plain-mat → cloth texMat (material-less export
+        // class; see the windmill sail fix in this same block)
+        const sack = new THREE.Mesh(new THREE.SphereGeometry(0.24, 8, 6), clothTex);
         sack.name = `sack_${si}`;
         sack.scale.set(1, 1.25, 1);
         sack.position.set(sx, FY + 0.28, 1.55 + si * 0.06);
@@ -747,11 +758,40 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
     gal.rotation.x = Math.PI / 2;
     gal.position.y = 5.2;
     g.add(gal);
+    // ---- improve-33 F1: the gallery was a HALO (0 tower verts in the
+    // y[5.0,5.4] band — ring 0.59m off tier-2 with zero attachment). Give
+    // it a real deck: capped solid timber disc seating on tier-2, plus 8
+    // radial brackets whose inner ends embed INTO the tower wall. The
+    // existing torus stays as the handrail — ring reads rail-on-deck.
+    // Hidden disc/tower overlap is interior (no coplanar faces exported).
+    const galDeck = new THREE.Mesh(new THREE.CylinderGeometry(1.93, 1.93, 0.07, 24), timberTex);
+    galDeck.name = "galdeck";
+    galDeck.position.y = 5.12;
+    g.add(galDeck);
+    for (let b = 0; b < 8; b++) {
+        const ang = (b / 8) * Math.PI * 2 + Math.PI / 8;
+        const br = new THREE.Mesh(new THREE.BoxGeometry(1.0, 0.09, 0.12), timberTex);
+        br.name = `galbrk_${b}`;
+        br.position.set(Math.cos(ang) * 1.45, 5.06, Math.sin(ang) * 1.45);
+        br.rotation.y = -ang;
+        g.add(br);
+    }
     // THE SAILS: named group (motion:sails spin)
+    // ---- improve-33 F2: three coupled fixes —
+    // (a) MATERIAL CLASS (root cause, R1): cloth/ribs/hub were plain
+    //     mat() → exported NO glTF material → loader-default near-black —
+    //     the "down arm absent / bare rails" reads. Now the pale cloth +
+    //     brass texMat families declared atop the block (struct-46 class:
+    //     plain brass desaturates without envmap).
+    // (b) CANVAS EXTENT: cloth covered only the inner 35% of each 3.4m
+    //     whip — extended to the outer span (reefed tip only).
+    // (c) PLANE OFFSET: sail plane z 1.45 → 1.85 (0.4m+ clear of every
+    //     tier face; z-max still 2.825 = rfloor — envelope unchanged,
+    //     SAT-neutral exact-tuple re-place).
     const sails = new THREE.Group();
     sails.name = "sails";
-    sails.position.set(0, TH + 0.4, 1.45);
-    const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.18, 0.5, 8), mat(0xa0a248, 0.4, 0.5));
+    sails.position.set(0, TH + 0.4, 1.85);
+    const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.18, 0.5, 8), brassTex);
     hub.name = "hub";
     hub.rotation.x = Math.PI / 2;
     sails.add(hub);
@@ -771,20 +811,28 @@ const glow = (g: THREE.Group, name: string, x: number, y: number, z: number, c =
         // LATTICE: 6 cross-ribs shaft→spar (an open frame, not a slab —
         // wind passes through, the way real mills reef their sails)
         for (let rr = 0; rr < 6; rr++) {
-            const rib = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.05, 0.035), mat(0xdcdcba, 0.85, 0));
+            const rib = new THREE.Mesh(new THREE.BoxGeometry(0.5, 0.05, 0.035), clothTex);
             rib.name = `rib_${w}_${rr}`;
             rib.position.set(0.3, 0.85 + rr * 0.42, 0);
             arm.add(rib);
         }
-        // reefed cloth on the inner half (bone panel — sails working the wind)
-        const cloth = new THREE.Mesh(new THREE.BoxGeometry(0.46, 1.2, 0.03), mat(0xdcdcba, 0.8, 0));
+        // reefed cloth — improve-33: outer-span canvas (y_local 0.9..3.15
+        // of the 3.4 whip), width shaft→spar; reefed tip only
+        const cloth = new THREE.Mesh(new THREE.BoxGeometry(0.46, 2.25, 0.03), clothTex);
         cloth.name = `cloth_${w}`;
-        cloth.position.set(0.3, 1.35, 0.015);
+        cloth.position.set(0.3, 2.025, 0.015);
         arm.add(cloth);
         sails.add(arm);
     }
     g.add(sails);
-    glow(g, "lamp", 0, 2.6, 1.7);
+    // improve-33 F4 (night clause): the entrance lamp bead sat at z1.7 —
+    // INSIDE the mill room behind the solid wall above the door gap,
+    // invisible from outside at night (struct-52 buried class, since v3).
+    // Re-seat to the door-side wall face, PROUD (improve-12 entrance-bead
+    // law) and CLEAR of the b10 crown rider's host-local box (x±1.125,
+    // y2.22..2.87, z2.585..2.755 — first candidate (0,2.5,2.62) sat inside
+    // it; this seat clears by 0.45m in y): local (0.85, 1.7, 2.56).
+    glow(g, "lamp", 0.85, 1.7, 2.56);
     mergeByMaterial(g, "wm3");
     writeFileSync("agents/arthur/assets/village_windmill3.glb", toGLB(g));
     console.log("village_windmill3.glb —", g.children.length, "nodes");

@@ -219,6 +219,99 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
    drops from hub and clips the lit window slot; identity reads
    watchtower/lighthouse hybrid, not instant windmill. Sev 1 stands.
    Evidence: reviews/survey2-sev2-slice/windmill/gameplay.png]
+   [CONTRACT improve-33 (2026-09-07 01:4x — BEFORE edit; decode-first on
+   exact local bytes 09938360 == live lib full hash, proven == rebuild
+   source mkv3-landmarks.ts windmill block, no disputed bytes):
+   DECODE ROOT CAUSES (probe improve33-decode-windmill.ts):
+   (R1) MATERIAL CLASS, worst: GLB materials = timber/stone/glow2/glow3
+   ONLY — sail cloth+ribs (mat 0xdcdcba), hub (mat 0xa0a248 brass),
+   flour sacks/heap are PLAIN mat() → export NO glTF material →
+   loader-default near-black (struct-38/improve-31 class). The
+   "down-arm-absent / bare rails / banner" reads ARE the black cloth
+   vanishing dark-on-dark; canvas also covers only the inner 35% of each
+   3.4m whip (y_local 0.75..1.95), leaving the outer half open lattice.
+   (R2) GALLERY HALO geometrically true: 0 tower verts in the y[5.0,5.4]
+   band; torus r1.9/t0.07 at y5.2 vs tier-2 half-width 1.24 = 0.59m
+   standoff, zero brackets/deck — a floating ring.
+   (R3) wwin1 HALF-BURIED (improve-12/struct-52 class): y4.7 z1.35 pane
+   (z 1.335..1.365) sits BEHIND tier-1 front face (z1.42) for its lower
+   0.53m (window spans y4.325..5.075, tier1|tier2 boundary at y4.86) —
+   the lit "slot" is the top sliver poking into tier-2's setback; the
+   "stray pole" is the DOWN arm's 0.09 shaft at x≈0 crossing the window
+   band (sail plane z1.45 only ~0.03m clear of tier-1 face — a scrape).
+   FIXES (all in mkv3-landmarks.ts windmill block; kit untouched):
+   F1 gallery: timber deck annulus (RingGeometry inner 1.15 outer 1.95,
+   DoubleSide, y5.15) + 8 radial timber brackets (0.9×0.1×0.08, inner
+   ends embedded in tier-2 wall) under it; existing torus stays as the
+   handrail — ring reads as rail-on-deck, halo gone.
+   F2 sails: (a) cloth/ribs to a pale cloth texMat family (0xd8d4c4
+   tones, rough 0.85 — textured pale, NOT plain mat), hub to warm brass
+   texMat+low metal (plain brass = struct-46 desaturation class), sacks/
+   heap to the same cloth texMat; (b) canvas extended to the OUTER span
+   (y_local 0.9..3.15 of the 3.4 whip, width shaft→spar) — reefed tip
+   only; 4 big pale panels = unmistakable sail cross at 18m; (c) sail
+   plane z 1.45 → 1.85 (0.4m+ clearance off every tier face; z-max
+   stays 2.825 = rfloor extent, envelope x/y/z UNCHANGED → SAT-neutral
+   exact-tuple re-place; shaft-crossing-window becomes correct
+   rotating-sail mechanics once sails read as sails).
+   F3 windows: wwin1 re-seat y 4.7 → 4.5, h 0.75 → 0.6, w 0.55 → 0.5
+   (spans y4.2..4.8, wholly inside tier-1 band y3.98..4.86) and z
+   1.35 → 1.47 (frame 0.12 proud of the 1.42 face; emissive pane proud
+   per improve-12 law). wwin2 re-checked at contract time: ALSO
+   quarter-buried (y5.55..5.74 behind tier-2 face 1.24; only the
+   tier-3-band top half proud of 1.06) — re-seat y 5.9 → 6.1, z
+   1.1 → 1.13 (spans y5.8..6.4 wholly inside tier-3 band y5.74..6.62,
+   frame 0.14 proud of the 1.06 face).
+   KEEP-OUTS (decode-differential gate): b10 band (x±1.3, y2.4..2.8,
+   z1.64..2.63) = 216 verts, sign anchor band [-1.6,2.78,2.5]±0.6 = 0
+   verts, rceil front band (z≥2.45, y2.85..3.25) = 0 verts — after-build
+   must show identical counts (0 new/gone). Riders b10 + nx-sign-mill-001
+   are separate entities, untouched by the placer (verify standing
+   post-place). Sails group stays KEEP-named (motion:sails comp target
+   unchanged).
+   COMPS: live bag captured fresh pre-place in the placer and re-applied
+   verbatim post-spawn (comp-wipe law); census hint says a sails motion
+   comp may exist (av-windmill lineage) — the placer captures whatever
+   is live, re-applies, verifies after.
+   FALSIFY: (1) decode audit — cloth/brass buckets present with glTF
+   materials, gallery band gains deck+bracket verts, wwin1 pane proud of
+   tier-1 face, envelope element-equal, keep-outs 216==216 / 0==0 / 0==0,
+   sibling GLBs (belltower3 2419fbc5 / carousel3 0843da4e / inn3
+   6e6ff2d0) byte-identical, dirty foreign assets (village_tower3,
+   core_paths + review.json) byte-identical to pre-edit backups;
+   (2) identical-camera before/after renders, native after-judge at 18m
+   gameplay: 4-sail cross reads windmill instantly, gallery reads
+   deck+rail attached, lit windows read as windows (fallback ZAI
+   disclosed if native 1210); (3) remove+spawn exact tuple (-40,0,0)
+   yaw π/2 + comp re-apply + post-place tuple/comp/rider verify +
+   idempotent 0-verb rerun; (4) two-way MCPL door walk (enterable mill
+   room) ≤0.55m arrivals.
+   REVERT: revert the windmill block edits → rebuild returns to
+   09938360 → re-place old sha at same tuple.
+   GUARD READING (disclosed): host untouched since interior-20 (Sep 1,
+   interior-only); waysign's 09-06 touches (waysign-6 01:57, waysign-12
+   13:36) re-seated THEIR OWN rider entities against the SAME host pin
+   09938360 that stands live now — rider anchors derive against host
+   tuple + geometry keep-out bands, both preserved (differential 0), the
+   improve-14/15/20/32 proven pattern. Lane tails re-checked fresh at
+   execution.]
+   [EXECUTED improve-33: R1 material-less sails (cloth/ribs/hub/sacks
+   plain mat) + R2 halo gallery + R3 both windows half-buried + sail
+   plane scraping tier-1 — ALL fixed in mkv3-landmarks.ts windmill
+   block: wm_cloth/wm_brass texMats, canvas to outer span, sail plane
+   z1.85, gallery deck + 8 brackets, windows re-seated proud in single
+   tier bands (wwin1 4.5/0.6/1.47, wwin2 6.1/0.6/1.13); F4 night-clause
+   find: entrance lamp bead buried INSIDE the room since v3 (struct-52
+   class) — re-seated proud (0.85,1.7,2.56), first candidate at the
+   lintel decode-killed inside the b10 rider box (0.46m y-clear final).
+   sha 09938360->369c5724 x2; envelope EXACTLY unchanged (SAT-neutral);
+   keep-outs 216==216/0==0/0==0; siblings byte-identical; native
+   before-judge confirmed all survey reads on live bytes, native
+   after-judge 18m PASS all criteria + night PASS (one 1210 paced
+   retry); PLACED_VERIFIED 2 verbs exact tuple + comp {} both sides +
+   rider b10/sign standing + idempotent 0-verb rerun; 5-leg door walk
+   ALL_PASS 0.393m. Residuals to round-1 eye-gate: bracket stubs small
+   at rim extremes, bottom-sail tip crowds lower-window head.]
 5. `nx-struct-crossing` — reads as utility-pole clusters; no water/banks/
    stones — ford is a void; clipping posts, snapped stub pegs. Sev 1:
    identity failure. DECODE FIRST. (guard: none)
