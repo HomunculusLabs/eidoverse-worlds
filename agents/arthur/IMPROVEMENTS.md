@@ -4984,4 +4984,6 @@ fixes ≈ 6 F.)
 
 - [dress-114] 5th lawful HOLD post-close — gate ALL PASS real exit 0 at 0f445e94; fresh census 291 quiet (29 fleet + 16 legacy intact); round-3 closers tuple-exact (foxden 856deec5, lanternhook 639c5480, seats cb34bd36, streamstones aabbc23d, radian law); shard routing re-verified at source — Round-1 nx-dress rows all terminal, round-2 legacy-core off-limits only, plan-tail F1/F2 block is improve-29 nx-welcome no-shard default improve (not dress domain), zero OPEN rows route to fleet ids, no round-4 section; interlane f6254cd0; blocked on Bill standing (bellows a/b/c, SW lamp a/b/c 0-of-3); zero world mutations, zero uploads, zero verbs (D+0 E+0) (D+0, E+0)
 
+- [city-58] lawful HOLD 42nd — gate ALL PASS exit 0 at 3b4b2d04; register 13/13 EXECUTED live-fresh 13/13 pos-exact (worst 0.0006m potter rounding-class; libs 13/13 store/-prefix-verified: reedpool 7d770620, angler 6ee5b4b0); amphi HOLD intact r44.0 lib 95a98c74; census 291==291 quiet vs city-57 (0/0/0, capture /tmp/city-census-58.json); riders b31 0.0000m b32/b33 3.2016m anchor-offset class hosts unmoved; band r33-55 zero new off-spoke (quiet epoch, grandfathered set unchanged); shard routing no city prefix; interlane f6254cd0; blocked on Bill (amphi 3-option, nvp-105 blessing, eye-gates b31-b33); zero mutations (D+0 E+0) (D+0, E+0)
+
 **Running total: 2370723 / 2000000**
