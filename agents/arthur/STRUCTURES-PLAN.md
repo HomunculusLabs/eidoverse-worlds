@@ -2238,3 +2238,68 @@ owed; Gate-1 pin likely genuine), waterstair gameplay-view dissent (now
 question: is the 18m
 gameplay water band enough, or does the cascade want per-step teal
 facings), orreryring margin-only.
+
+## struct-56 (2026-09-07): cellardoor Sev 3 intake EXECUTED — the void
+is now a door
+
+Intake row (survey-17 ZAI + survey-18 NATIVE double-CONFIRM, Sev 3):
+freestanding dark portal frame with pitch-black rectangle opening, no
+leaf split/hardware/depth, thin lintel-edge slivers flicker-risk.
+
+**Decode (before any edit)**: all FOUR meshes carried `material:None`,
+zero materials in the GLB — every element was plain `mat()` and toGLB
+exports only texMat/emissive lanes (struct-38 loader-default class). The
+entire model rendered engine-default near-black: the "void" WAS the
+untextured door slab; hinges/ring were black-on-black invisible; ashlar
+read as flat dark mass. One cause, every finding.
+
+**Fix** (echoarch struct-55 / waterstair struct-53 / millrace lanes):
+1. Stone → village texMat + boxUV (tile 3.0 square cells).
+2. Real double door: two timber leaves ajar 28° — 3 horizontal planks
+   with shadow gaps, 2 iron battens, 2 bone hinge straps per leaf, gold
+   ring pull near the right leaf's free edge (survey-18 fix class:
+   "visible leaf split").
+3. Interior depth (survey-18 fix class, second half): two descending
+   stone steps to -0.24, timber back board, warm emissive lamp pane
+   (glow5 [0.5, 0.1616, 0.0342], KEEP anchor `lamp_cellar`) glowing
+   through the ajar slit — the cellar is lit from within.
+4. Sky-leak header (survey-17 "thin lintel-edge slivers" arithmetic-
+   confirmed: wave troughs top ~1.86 vs lintel bottom 2.02 → a 0.16m
+   sky band at trough azimuths): solid stone header 1.74..2.02 tucked
+   behind the wave face.
+
+**Decode self-catch**: v1 leaf pivot sign inverted — leaves hinged on
+the WRONG jambs and crossed past the frame (envelope x ±2.018 vs ±1.38
+legal). Caught by the envelope check BEFORE render; fixed; envelope x/z
+byte-stable → SAT-neutral reseat, y-min -0.24 = intended below-grade
+steps, top height 2.16 unchanged (collider class unchanged).
+
+**Evidence**: sha 5608e9f8 → fe755f78, deterministic ×2. 6 nodes, 5
+texMat + 1 emissive lane, `lamp_cellar` KEEP anchor. Before-judge
+(native): void/hole read, zero hardware, flat mass, sky-leak x450-527
+y288-300 confirmed. After-judge (native, 18m gameplay): double-door
+read PASSES — leaves + plank seams + iron straps resolve, central ajar
+seam carries the read; warm interior reads (pane + latch); stone reads
+rough blockwork (margin named: continuous horizontal coursing weak);
+ring pull ambiguous-at-size (named); sky-leak FIXED; cap gap FIXED.
+Night judge (native): warm slit x472-487, quiet + contained + exemplary
+per the judge, doorway holds at night, zero artifacts (margins: pane
+reads square-lamp vs thin slit — gap/pane geometry honest, pane sits
+0.64m behind leaves; "green latch dot" is the gold ring, slight
+cool-green read at size). Pixel falsification identical-camera:
+warm-px 0→249, sky-leak-px 402→0, void-px 9489→0. Reseat exact tuple
+(36, -0.04542721690550573, 5.55) yaw 0 — PLACED_VERIFIED 2 verbs +
+idempotent 0-verb rerun; live bbox [-1.38,-0.24,-0.75]..[1.38,2.16,0.95]
+== decode envelope exact.
+
+**Bill eye-check**: beside the inn S wall — the cellar now reads as a
+propped-open timber double door with a warm light glowing inside;
+approach from the plaza side should show the ajar gap + brass
+high-water pin at the right jamb base.
+
+**SURVEY INTAKE status**: cellardoor row EXECUTED this tick (struct-56).
+Remaining intake: meridianstair verify cluster (split 2-2, native
+tie-break owed; Gate-1 pin likely genuine), waterstair gameplay-view
+dissent (2 independent survey reads vs struct-53's front/aerial —
+contract question: 18m gameplay water band enough, or per-step teal
+facings wanted), orreryring margin-only.
