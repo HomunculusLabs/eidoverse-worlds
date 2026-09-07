@@ -1224,3 +1224,49 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   residuals (court) / 1 margin-debt third read unanimous (orreryring)
   / 0 dropped. Zero world mutations, zero uploads, zero comp edits,
   zero shared-budget use.
+
+## Judged index (survey-26)
+
+- survey-26 (2026-09-07, ZAI FALLBACK 6/6 disclosed — native 1210 x2 on
+  well first call + paced retry burned, hard down all tick, zero native
+  verdicts; one ZAI 300s timeout on bench-plaza first call, paced retry
+  landed; 18m gameplay, fresh live store bytes 6/6 HTTP 200 curl UA on
+  exact census-26 libs, served-shas pinned): NATIVE-DEBT SECOND-VOTES +
+  NEVER-JUDGED-ARRIVALS/FLEET slice (severity backlog drained — round-1
+  terminal, 7-25 candidates are intake not re-judge debt; district
+  family census closed 13-of-13; meridianstair cluster closed by
+  struct-58 decode; in-flight work excluded — windmill/tower/court
+  dirty-tree at selection (improve-33), timberyard unplaced). Slice =
+  well/bench-plaza/charcoal (survey-23 native-owed off-limits rows,
+  SECOND VOTES), waystone (4-entity degenerate fleet, shared lib
+  2f006e21 — one judgment covers all four), stile-001 (dress-18
+  post-execution), se-stones-001 (first survey read). Verdicts: WELL
+  2nd ZAI vote corroborates standing row (shaft value-crush sharper:
+  straight rim y369 zero lip/segmentation, posts dissolve into shaft,
+  no windlass axle; well read still holds via roof+posts+rope+bucket).
+  BENCH-PLAZA 2nd ZAI vote corroborates (6/10 marginal, arc bow ~4px
+  sub-perceptual, rail-collapse risk stands). CHARCOAL 2nd ZAI vote
+  re-confirms floating dashes on exact regions + no vent + pile crush.
+  WAYSTONE first read: standing-stone read lands but generic identity
+  (no accent/glyph/lean, cap=shaft value) — FIRST DISSENT vs improve-3
+  ZAI CLEAN, split 1-1, native tie-break owed; routed STRUCTURES-PLAN.
+  STILE post-execution dissent: gate-read without fence context (live
+  context verified: 12.5m from nearest hedge — context gap live-valid);
+  design-intent split disclosed (judge targets dress-18's accepted
+  flag-gap idiom); routed DRESSING-PLAN. SE-STONES CLEAN-with-margin
+  (deliberate row reads via strict horizontal alignment; margins: two
+  large gaps 1.2m/0.8m split the row into clumps, weak contact AO) —
+  corroborates the fleet CLEAN record, judged-index only. Routing: 1
+  intake line STRUCTURES-PLAN (waystone), 1 intake line DRESSING-PLAN
+  (stile dissent), 3 second-vote annotations on standing IMPROVE-PLAN
+  survey-23 rows (well/bench-plaza/charcoal — no new candidate rows,
+  rows already stand). Grep-verified zero open duplicates pre-append.
+  Census 267 steady 0/0/0 vs survey-25 snapshot (fully quiet window,
+  zero flips, lights 38). First census URL attempt hit /api/geom (404
+  "not found" 9B body, fail-closed) — corrected to the proven
+  next-live-census.ts chassis. Gate: ALL PASS real exit 0 first try at
+  de1b4e4 (ledger law EXACT 2370601). Verdicts 2 new dissents/flags
+  (waystone, stile) + 3 corroborations on standing rows + 1 clean /
+  0 dropped. Zero world mutations, zero uploads, zero comp edits,
+  zero shared-budget use. Native re-judge debt disclosed on all six
+  ZAI verdicts (native down hard all tick).

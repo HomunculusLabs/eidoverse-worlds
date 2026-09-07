@@ -2511,6 +2511,22 @@ verdicts:
   fixed bytes; struct-57's own after-judge + Bill eye-check govern
   whether the 18m water-stair contract is met. Evidence:
   reviews/survey25-slice/nx-struct-waterstair/
+- `nx-struct-waystone-{e,n,s,w}` — survey-26 first read (ZAI fallback,
+  native 1210 x2 + paced retry burned, hard down all tick; native
+  re-judge owed): standing-stone read LANDS (grounding + contact shadow
+  + silhouette PASS, zero floats/voids) but identity is generic —
+  "menhir/bollard/fence-post-blank" band: no glyph/glow/accent resolves
+  at 18m, cap block same value as shaft (faint seam y345-347 only
+  separation), no side-vs-front face value difference, symmetric
+  vertical taper with no lean or apex character. FIRST DISSENT vs
+  improve-3's ZAI CLEAN (fleet-level, shared sha 2f006e21 — 4 entities,
+  one judgment covers all); split 1-1, native tie-break owed before any
+  execution. 18m-honesty caveat (probe pitfall 13): a 1.2m marker at
+  18m is ~24px wide — the judge demanded sub-2% internal detail, which
+  is framing-limited; candidate numbers if re-confirmed natively:
+  2-3px value accent (rune band or lighter cap) + 1-2deg lean, exactly
+  the mkv3-waystone41 sibling idiom (varied lean) already judged CLEAN
+  at 18m. Probe, not a verdict. Evidence: reviews/survey26-slice/waystone/
 
 
 ## struct-59 (2026-09-07): R4-4 THE STILLWIND WALL — v2 built + judged,

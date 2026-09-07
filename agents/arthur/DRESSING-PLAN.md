@@ -2854,6 +2854,27 @@ verdict:
   staggered/tilted); left end gaps 8px vs right end overhangs 13px.
   Corroborates EXECUTED; no reopening. Evidence:
   reviews/survey25-slice/nx-dress-nw-orchard-rows-001/
+- `nx-dress-nw-stile-001` — survey-26 post-execution read on dress-18's
+  v6 bytes 5e9d301d (served 8c35a485d3f82a45; ZAI fallback, native
+  1210 x2 + paced retry burned, hard down all tick; native re-judge
+  owed): reads two-post GATE/fence frame, not a crossing — top rail
+  x428-533 dominates, no fence/hedge context beyond the posts (live
+  context checked: stile stands alone 12.5m from the nearest hedge,
+  so the context gap is live-valid, not chassis-invalidated), ledges
+  at SAME height both sides (x425-455 / x498-536, y364-372) read flat
+  cross-bars not steps, base box reads trough/planter; flags: right
+  mid-rail terminates mid-air x498 y364-372, detached diagonal sliver
+  x383-424 y389-395 reads artifact, no post contact shadows.
+  DESIGN-INTENT SPLIT disclosed: dress-18's accepted idiom IS the
+  split lower rail (0.95m pale-flagged gap) + full-span upper bar +
+  two worn flags aligned through — the judge's "gate read" and
+  "floating stub" target exactly the accepted geometry, so the
+  disagreement is about whether v6's flag-gap idiom carries the stile
+  read at 18m without fence context, not a geometry defect. Dissent
+  recorded against the EXECUTED row; improve-8's native-acceptance
+  precedent does NOT apply (dress-18's acceptance was ZAI fallback).
+  Probe, not a verdict; native re-judge is the tie-break.
+  Evidence: reviews/survey26-slice/stile/
 
 district installs PIN_EXACT programmatic (store/-aware lib prefix, pos
 within 0.01, restated yaw, comps-empty, scale-1) vs the authoritative

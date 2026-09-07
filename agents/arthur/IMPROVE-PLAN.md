@@ -1799,6 +1799,27 @@ verdict names its judge):**
   geometry dashes, not a comp; a light-valued vent-anchored plume is a
   dress/improve decision). Evidence:
   reviews/survey23-slice/nx-dress-charcoal/
+  [survey-26 second ZAI vote, native still down: CONFIRMS shaft crush
+  on sharper evidence — straight rim top edge y369±2 x430-532 with zero
+  rim lip/opening/stone segmentation, one-value ~#33241a block; posts
+  dissolve into shaft 6px at y366-372; no windlass axle in the post
+  span (rope anchor unresolved, "rope glued to roof"); overall well
+  read still HOLDS via roof+posts+rope+bucket (silhouette hourglass
+  PASS). Row corroborated 2x ZAI, native owed. Evidence:
+  reviews/survey26-slice/well/]
+  [survey-26 second ZAI vote: bench read MARGINAL 6/10 — arc bow ~4px
+  sub-perceptual (reads straight rail), band only 13px tall, 7px legs
+  at legibility floor, cantilevered ends +~20px add to rail read;
+  3-of-4 joints readable as 1-2px seams; zero floats, zero holes,
+  shadow contact solid. Rail/fence collapse risk = the standing row's
+  core finding, second vote. Native owed. Evidence:
+  reviews/survey26-slice/bench-plaza/]
+  [survey-26 second ZAI vote: floating-dash islands RE-CONFIRMED on
+  exact pixel regions — dash1 x444-460 y311-316, dash2 x448-462
+  y323-328, dot x443-448 y336-340 with void bands between and 7px sky
+  gap to the turf cap; dome still has no legible vent aperture; dark
+  pile x515-595 y385-403 value-crushed featureless. Row corroborated
+  2x ZAI, native owed. Evidence: reviews/survey26-slice/charcoal/]
 
 **survey-24 sub-section (2026-09-07, ZAI fallback — native 1210 x2 +
 paced retry burned, hard down all tick; decode cross-check on served
