@@ -2117,3 +2117,30 @@ slits read as cream glazing set into the ashlar, no dark frames left.
 **SURVEY INTAKE status**: Observatory deferred row EXECUTED this tick.
 Remaining intake: cellardoor Sev 3 (void opening + missing leaf detail —
 next worst, native-confirmed survey-18), orreryring margin-only.
+
+**SURVEY INTAKE (survey-21, 2026-09-07)** — read-only probe notes, not
+verdicts:
+
+- `nx-struct-waterstair` — ZAI on FIXED bytes 4acda521 (native 1210 x2 +
+  paced retry burned, native re-judge STILL owed): water does NOT read at
+  18m — only teal is a 4-8px top-trough band x392-556 y318-327 (~0.2% of
+  frame); cascade faces x408-548 y347-398 uniformly dry tan/brown; identity
+  reads timber gate/stepped altar. DISSENT vs struct-53's own ZAI "water
+  READS as water" — this is a camera-angle divergence (18m gameplay vs
+  front/aerial pixel-falsification views), not a byte dispute (same sha
+  verified). Geometry clean (zero floats/voids, grounded, finials attached).
+  Probe: consider whether the gameplay-view water band warrants a per-step
+  teal riser/tread facing (fix suggestion x408-548 y347-398), or whether
+  2-8m approach read (struct-53's tested band) is the contract. Evidence:
+  reviews/survey21-slice/nx-struct-waterstair/
+- `nx-struct-meridianstair` — ZAI third vote (native 1210 x2 + paced retry
+  burned): base-read flag NOT reproduced — middle-gate right post column
+  x528-548 traced continuous from crown to contact y453-458, no 18px gap at
+  the flagged band y437-455. Verify cluster now SPLIT 2-1 (survey-19 ZAI
+  saw the gap; survey-20 ZAI saw it; survey-21 ZAI does not) — native
+  tie-break owed. PINS third vote consistent: only 1-of-3 gold pins reads
+  (Gate 3 x666-678 y208-218); Gate 2 pin plausibly occluded by Gate 3's
+  left post x540-555; Gate 1 pin x405-430 y262-285 UNOCCLUDED and missing
+  — likely genuine. New adjacent-read flag (not routed as defect): Gate 2
+  right post and Gate 3 left post nearly coincide x528-555, reading as one
+  thick column at 18m. Evidence: reviews/survey21-slice/nx-struct-meridianstair/

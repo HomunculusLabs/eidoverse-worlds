@@ -2225,6 +2225,39 @@ pinned.
   flag 2nd vote (ZAI, adjacent evidence in STRUCTURES-PLAN) — no new row,
   verify cluster stands.
 
+### survey-21 new intake (2026-09-07)
+
+Second core-legacy-dressing sweep (`nx-dress-*` off-limits set, nvp-133..148
+core-town dressing pass; probe-only for the off-limits set, ownership Bill's
+call per fountain precedent). NATIVE 5/8 + ZAI fallback 3/8 disclosed (native
+1210 x2 + paced retries burned on waterstair + meridianstair; native landed
+goats/hens/coop/harvestcart/churn/giftshelf), 18m gameplay, fresh live store
+bytes 8/8 curl UA on exact census-21 libs, served-shas pinned.
+
+- `nx-dress-hens` — Sev 4 identity-marginal (survey-21, NATIVE, served-sha
+  5a6ec433): hens read as a 24x14px dark smudge cluster x466-492 y383-398 —
+  count indeterminate (dark left mass x466-480 + warm-ochre right mass
+  x480-490), zero head/body/tail silhouettes, no separable shadow; the
+  warm-yellow tint is the only hen-carrying cue. Off-limits set member —
+  probe only, Bill's call. Evidence: reviews/survey21-slice/nx-dress-hens/
+- `nx-dress-churn` — Sev 4 identity-marginal (survey-21, NATIVE,
+  served-sha 761baf15): reads as staved dairy vessel; the churn-specific
+  dasher/plunger is a 7px lid-knob stub x464-471 y352-361 — identity hinges
+  on a sub-threshold element (churn-vs-barrel ambiguous at 18m); hoops
+  low-contrast against ground-blended lower body. Off-limits set member —
+  probe only, Bill's call. Evidence: reviews/survey21-slice/nx-dress-churn/
+- CLEAN records (survey-21, judged index in SURVEY-PLAN): coop NATIVE PASS
+  (roof/body/legs/ramp stack, dark doorway, nest-box; ramp 1-2px thicken
+  margin), harvestcart NATIVE PASS (bed+load+wheels+hitch gestalt, contact
+  shadow; orphaned shadow speck x385-396 y390-399 + 1px hitch/spokes margins),
+  giftshelf NATIVE marginal-PASS (double-rail rack reads, top-shelf goods
+  x460-498 y320-337; mid shelf EMPTY x455-509 y344-352 = biggest identity
+  lever, Item B 1-3px hover verify-flag), goats NATIVE borderline (3
+  quadrupeds read as livestock-not-goats — no horns/head offset/horns; fence
+  pen reads; orphaned rail-less posts x645-928). Meridianstair base-read
+  flag NOT reproduced (ZAI third vote, split 2-1) + pins 1-of-3 third vote
+  — adjacent evidence in STRUCTURES-PLAN, native tie-break owed on both.
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):

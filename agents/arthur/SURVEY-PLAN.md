@@ -889,3 +889,65 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   stands at 2 votes, native owed).
 - survey-20: `nx-struct-ninesbridge` — NATIVE 4/4 PASS recorded in
   STRUCTURES-PLAN (survey-19 ZAI debt closed; no new row).
+
+## Judged index (survey-21)
+
+- survey-21 (2026-09-07, NATIVE 5/8 + ZAI fallback 3/8 disclosed — native
+  1210 x2 on waterstair + meridianstair first calls, both paced retries
+  burned = ZAI fallback there; native landed all six dress pieces, zero
+  flaps; 18m gameplay, fresh live store bytes 8/8 curl UA on exact
+  census-21 libs, served-shas pinned; one lib re-fetch correction: census
+  grep re-derived dec58a3b6bfcae4a for meridianstair after first fetch hit
+  404 on a miscopied hash — derive VERBATIM from census, never
+  hand-transcribe): NATIVE-DEBT + SECOND CORE-LEGACY-DRESSING slice
+  (severity backlog drained — round-1 terminal, 7-20 candidates are intake
+  not re-judge debt; district family census closed 13-of-13). Slice =
+  waterstair (post-struct-53 fixed bytes, owner-disclosed native debt) +
+  meridianstair (native-owed verify cluster) + 6 never-judged legacy-core
+  dress pieces (goats/hens/coop/harvestcart/churn/giftshelf — off-limits
+  set, probe-only). Observatory EXCLUDED from this tick (struct-54 in
+  flight — dirty mk source + placer in tree; census flip 3d9d6ae1->
+  07d18163 classified as sibling work, next tick's candidate). Verdicts:
+  WATERSTAIR ZAI-dissent probe on fixed bytes — water does not read at
+  18m (teal = 4-8px top band x392-556 y318-327 only; cascade faces dry;
+  reads timber gate/altar; geometry clean) — camera-angle divergence vs
+  struct-53's front/aerial pixel-falsification PASS, routed to
+  STRUCTURES-PLAN intake with the divergence named, native re-judge
+  remains owed. MERIDIANSTAIR ZAI — base-read flag NOT reproduced (third
+  vote, cluster SPLIT 2-1, native tie-break owed); pins 1-of-3 third vote
+  (Gate 1 pin unoccluded-missing = likely genuine); new adjacent-read
+  note (Gate2-right/Gate3-left post overlap x528-555). GOATS NATIVE
+  borderline-clean — 3 quadrupeds read as livestock-in-pen, NOT as goats
+  (no horns/head-offset signatures; 4th figure ambiguous behind fence;
+  per-animal shadows absent; orphaned rail-less posts x645-928). HENS
+  NATIVE CONFIRM Sev 4 identity-marginal — 24x14px smudge cluster
+  x466-492 y383-398, count indeterminate, zero silhouette separation,
+  warm-ochre tint only cue. COOP NATIVE CLEAN-with-margin (full
+  roof/body/legs/ramp stack + dark doorway + nest-box; ramp 1-2px
+  thicken margin). HARVESTCART NATIVE CLEAN-with-margin (bed+load+
+  wheels+hitch gestalt unambiguous, contact shadow; orphaned shadow speck
+  x385-396 y390-399 + 1px hitch/spokes margins). CHURN NATIVE CONFIRM
+  Sev 4 identity-marginal — reads staved dairy vessel; dasher is a 7px
+  lid-knob stub, churn-vs-barrel ambiguous; hoops low-contrast. GIFTSHELF
+  NATIVE CLEAN-with-margin (double-rail rack + top-shelf goods read; mid
+  shelf EMPTY x455-509 y344-352 is the identity lever; Item B 1-3px
+  hover verify-flag). Motion-comp check: goats/hens/coop/harvestcart/
+  churn/giftshelf comp bags ALL EMPTY in census-21 (16 comp-carrying
+  entities listed; none of this slice) — the static-chassis
+  under-representation caveat does NOT apply; verdicts stand as read.
+  Routing: +2 candidate rows (hens, churn) IMPROVE-PLAN SURVEY CANDIDATES
+  survey-21 sub-section; 3 intake lines STRUCTURES-PLAN SURVEY INTAKE
+  (waterstair dissent, meridianstair split+third-vote, motion-comp
+  clarification); grep-verified zero open duplicates pre-append. Census
+  264 steady 0/0 vs survey-20 snapshot at my capture; 2 domain-valid lib
+  flips classified (waterstair 4acda521 = struct-53 committed 932a756,
+  observatory 07d18163 = struct-54 IN FLIGHT at census time, committed
+  600f5c4 mid-tick); sweep-53's ledger (landed after my capture) reports
+  census 265 (+1 dress-78 funguslogs) — next tick's diff classifies.
+  Gate: ALL PASS real exit 0 first try at a943b18 (my own survey-20 at
+  tip; ledger law EXACT 2370328); HEAD advanced mid-tick a943b18 ->
+  1849af8 (improve-29 + dress-78 + struct-54 + sweep-53, all foreign
+  files; re-gate at new HEAD before commit). Verdicts 2 confirmed (hens,
+  churn — both Sev 4 identity-marginal) / 5 clean-with-margin / 1
+  ZAI-dissent probe (waterstair, routed not counted) / 0 dropped. Zero
+  world mutations, zero uploads, zero shared-budget use, zero comp edits.
