@@ -503,7 +503,19 @@ candidate sites (hamlet-0028 flank field side z<51.78 clear of
 woodstack; fallback ne-yard gaps), TRUE-dims fresh-census SAT/rim,
 placer from the dress-80 chassis, upload/spawn, idempotent rerun,
 ledger the placement. mk source
-assets/mkv3-dress-ne-timberyard1.ts staged with this commit.
+assets/mkv3-dress-ne-timberyard1.ts staged with that commit (dress-82).
+
+**STATE AT dress-83 (2026-09-07, pipeline install tick)**: dress-82's
+accepted timberyard EXECUTED live — `nx-dress-ne-timberyard-001`
+PLACED_VERIFIED at (76.7, -0.006, 69.4) yaw -2.35619 (details in the
+dress-83 siting-log entry below; the plan's PRIMARY band — hamlet-0028
+long-wall flank west of the woodstack — proved DEAD on fresh census:
+woodstack SAT overlap -1.39..-2.41 + wall kiss 0.91m, so the queued
+fallback full-NE scan re-sited to the cloister-0016<->hamlet-0028 field
+gap). Census 268. NE lamp spend 0 of 10. Rotation next: SE round-3 item
+11 (snagdead). Shard queue: no OPEN `nx-dress-*` rows (nine Round-1
+terminal; round-2 only the legacy-core fountain — off-limits, Bill's
+call). SW lamps still blocked on Bill's a/b/c.
 
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
@@ -516,6 +528,44 @@ lamp spends still budget-bound per the a/b/c policy hold, shared upload
 budget 4/min/IP with 20s+ pacing, SAT preflights, two-way MCPL walk-test for
 anything that touches a walking line, 18m readability law for anything with
 identity intent. Rotation stays NW->NE->SE->SW.
+
+### dress-83 — NE squared-timber working yard (round-3 item 7, dress-82 build, PLACED, LIVE)
+
+- **Tick class**: install — dress-82's NATIVE-accepted v5 placed this
+  tick; placement deferred there only on run budget (improve-31 class).
+- **Siting (fresh census 267; TRUE decode dims x -1.5..1.5, z -0.9..1.78,
+  local center +0.44z)**: the plan's PRIMARY band — hamlet-0028
+  plaza-ward long-wall flank, z<51.78 west of the woodstack — proved
+  DEAD on fresh-census evaluation: every pose in the band overlaps the
+  woodstack (SAT -1.39..-2.41m) and kisses the hamlet wall (0.91m). The
+  queued fallback (full NE scan, dress-80 law) evaluated four anchor
+  bands (hamlet-0028 N corner, cloister-0029 band, yard-001 env,
+  plank/woodstack W end — last infeasible) with statuaries as exact
+  discs (struct-19 law). Winner: the cloister-0016<->hamlet-0028 field
+  gap, **(76.7, 69.4) yaw -2.35619** (identity face +z toward the plaza
+  bisector, woodstack-parallel). SAT at survey: cloister-0016 +5.3,
+  hamlet-0028 +5.07, cloister-0029 +5.2, woodstack +7.6; nearest
+  statuary disc (0039) +27m; nothing sub-2.5m. Approach cones: no work's
+  18m x +/-30deg cone contains the piece (closest: cloister-0016 at
+  10.1m but 37.4deg off its open-face normal; hamlet-0028 21.9m;
+  cloister-0029 20.0m). Rim corners 101.59..104.42 in [66,108].
+  Terrain 5-pt preflight `next-terrain-dress83-timberyard.ts`:
+  -0.011..-0.001 (10mm spread) -> py -0.006.
+- **Placement**: `ne-dress83-place.ts` (dress-76/80 chassis, TRUE-dims
+  OBB) — hash gate -> blocker-epoch guard [cloister-0016, hamlet-0028,
+  cloister-0029] -> fresh-census SAT/rim -> upload (content-addressed)
+  -> spawn. **PLACED_VERIFIED** `nx-dress-ne-timberyard-001` @ lib
+  `store/10b449fa8338015e.glb`, pos (76.7, -0.006, 69.4) yaw
+  -2.356194490192345, 1 verb. Idempotent rerun: 0 verbs. Post-place
+  census 268, exact tuple, lights unchanged (static unlit).
+- **Lamp budget**: NE spend 0 of 10 — static unlit, no comps, no draw.
+- **Eye-check for Bill**: from the plaza walking the NE gallery lane,
+  past hamlet-0028's right-hand flank, the field gap between the cloister
+  arc and the hamlet now stages a squared-timber WORKING yard — dense
+  pale-capped crib courses with a long workpiece riding X-trestles
+  (sawbuck) above the stack line, offcuts clustered, cant hooks on the
+  posts. Should read "structural timber staged between jobs", distinct
+  from the domestic cordwood stack at the hamlet's other flank.
 
 ### NW — CULTIVATION (round 3)
 1. `nx-dress-nw-orchard-rows-001` — espaliered fruit rows along the garden
@@ -537,7 +587,10 @@ identity intent. Rotation stays NW->NE->SE->SW.
    tool rack, quench barrel in the bone-brass idiom. **DONE (dress-76,
    PLACED 2026-09-07 — details in the dress-76 siting-log entry).**
 7. `nx-dress-ne-timberyard-001` — squared timber stacks + sawbuck pair,
-   distinct from the NE woodstack by reading as WORKING stock.
+   distinct from the NE woodstack by reading as WORKING stock. **DONE
+   (dress-82 built + dress-83 PLACED 2026-09-07 — re-sited from the dead
+   hamlet-flank primary to the cloister-0016<->hamlet-0028 field gap;
+   details in the dress-83 siting-log entry).**
 8. `nx-dress-ne-glazier-001` — glazier's rack: sheet-glass lean + crate,
    near the gallery/mosaic edge (craft-to-art bridge).
 9. `nx-dress-ne-bellows-001` — great bellows on a cradle beside the forge
