@@ -1166,6 +1166,12 @@ HOLDS for Bill's verdicts on it (any correction re-opens that object ahead
 of queue) or new routing. Re-arm inputs re-checked same tick: zero OPEN
 register items in improve domain, zero un-routed sweep/survey findings,
 mosaic family stays Bill-blocked (improve-41 options on record).
+Annotation-debt repair improve-47 (2026-09-07, improve-29 class):
+seed 0013/0021/0034 + garden-0045 family-cure rows annotated from
+ledger (live libs verified fresh), forge closed clean (native re-read
+on exact live bytes, two-hash-domain law), mosaic-0052/0059
+Bill-blocked pointers added; rows verified ledger-backed before
+annotating. Open improve-own work remains NONE; HOLD stands.
 
 **EXECUTION SHARDING (2026-09-06 — Bill's 5-10x directive, improve-5y).**
 The improve queue is ONE serial lane but its items span five entity
@@ -2378,7 +2384,15 @@ open duplicate notes for these objects.
   emissive glow anchors identity instantly, contact shadows ground
   everything, zero voids (survey-8 "floating plate" reads as
   tool/stock sliver, attached); row may close (ZAI Sev 4 was
-  identity-marginal; native upgrades to clean, margin only).
+ identity-marginal; native upgrades to clean, margin only).
+ [DROPPED improve-47 (2026-09-07): closed clean — survey-16's
+ "783c3bb2" was the served-store sha256; the live store key
+ 620120c4d6f0b4a0 (interior-12 pin) IS those bytes (two hash domains,
+ improve-41 law — proven by byte-fetch + sha256 this tick). Native
+ re-read on exact live bytes this tick (reviews/improve47-forge/):
+ identity instant at 18m, chimney+hearth+firebox-glow grammar
+ legible, grounded contact shadows, zero floats; margin (anvil
+ sub-resolution at 18m) unchanged. No edit owed.]
 - `nx-cistern` — Sev 4 identity-marginal (survey-8, ZAI + decode):
   no water read at 18m; reads dark box + leaning plank; no tiering;
   stone too dark. DECODE (live store bytes): water plane EXISTS — mat
@@ -3237,6 +3251,10 @@ class except seed (ZAI-native stack 0003+0013).
   band y345-392 (tiles unresolvable ~40px); geometry clean — family
   3-of-4. Evidence:
   reviews/survey11-slice/nx-gallery-mosaic-0052/gameplay.png
+  [BUILD CURED improve-40 (family shas, native-accepted panel rebuild)
+  but PLACEMENT Bill-blocked improve-41 — family row-entangled across
+  three foreign domains, 4 siting options on record; see the
+  mosaic-0036 row. Live remains at baseline lib (improve-47).]
 - `nx-wild-cairn-0043` — Sev 3 (survey-11, ZAI): IDENTICAL to
   cairn-0022 class — floating pebbles isolated against sky above stack
   tops, six regions (densest x455-555 y290-320, ~8-10 specks), top
@@ -3251,6 +3269,10 @@ class except seed (ZAI-native stack 0003+0013).
   at center x440-520, reads ground decal/rubble; grounded — family
   2-of-4. Evidence:
   reviews/survey11-slice/nx-temple-seed-0013/gameplay.png
+  [Family cured by improve-39 (vertical seed-monolith rebuild,
+  FAMILY_ONE_SHA 699387abdef0b16f); live lib verified 699387ab this
+  tick (improve-47 annotation repair — improve-29 class: the sibling
+  rows never carried the family-cure annotation).]
 
 ### survey-12 family-class extensions (2026-09-06)
 
@@ -3294,6 +3316,8 @@ call, single paced retry recovered; zero ZAI fallback this tick).
   no contact shadow (reads pasted-on); rim bumps attached = no float
   — family 3-of-4 MAJORITY. Evidence:
   reviews/survey12-slice/nx-temple-seed-0021/gameplay.png
+  [Family cured by improve-39 (FAMILY_ONE_SHA 699387abdef0b16f); live
+  lib verified this tick (improve-47 annotation repair).]
 - `nx-craft-hamlet-0041` — Sev 2 (survey-12, NATIVE): IDENTICAL to
   hamlet-0007/0015/0028 class — flanking mega-masses hover with open
   sky beneath (L x95-460 y0-215, R x565-960 y0-260, own ground
@@ -3330,6 +3354,10 @@ call, single paced retry recovered; zero ZAI fallback this tick).
   clump x225-745; minor stem-above-shadow-dot floats (flank groups
   x165-235 / x735-790); geometry solid — family 4-of-5. Evidence:
   reviews/survey12-slice/nx-cultivation-garden-0045/gameplay.png
+  [Family cured by improve-42 (kitchen-garden rebuild, family-wide
+  composer); this member reseated live at 7610a674dea7659d (ledger sha
+  7610a674, verified live this tick — improve-47 annotation repair;
+  improve-42's "all five rows annotated" claim covered 0011 only).]
 - `nx-gallery-mosaic-0059` — Sev 4 (survey-12, NATIVE): IDENTICAL to
   mosaic-0036/0048/0052 class — no frame/backing/plinth, loose
   ground-scatter tile field with ragged dissolving perimeter
@@ -3338,6 +3366,9 @@ call, single paced retry recovered; zero ZAI fallback this tick).
   (Sev raised 3→4 at family-unanimous: zero members carry the
   gallery-art identity.) Evidence:
   reviews/survey12-slice/nx-mosaic-0059/gameplay.png
+  [BUILD CURED improve-40 but PLACEMENT Bill-blocked improve-41 (same
+  family); live remains at baseline lib 505bec0b — verified this tick
+  (improve-47 annotation repair).]
 
 ### survey-13 family-class extensions — LOCK-OUT COMPLETE (2026-09-06)
 
@@ -3505,6 +3536,8 @@ the executing lane. Grep-verified: no open duplicate notes.
   true extrusion), no seed core x400-570, no vertical element, soft
   single-smear shadow with 3-4px detach gap y421-424 — family 4-of-4
   UNANIMOUS. Evidence: reviews/survey13-slice/seed-0034/gameplay.png
+  [Family cured by improve-39 (FAMILY_ONE_SHA 699387abdef0b16f); live
+  lib verified this tick (improve-47 annotation repair).]
 - `nx-wild-cairn-0048` — Sev 3 (survey-13, ZAI): IDENTICAL to
   cairn-0022 class — floating pebbles detached against sky above
   stack tops, ten regions x160-760 y292-323 (~20-25 specks, worst
