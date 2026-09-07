@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 266,
+ "count": 267,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -46,8 +46,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-lamp-n",
@@ -93,8 +92,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-lamp-s",
@@ -140,8 +138,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-lamp-w",
@@ -187,8 +184,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-ne-lamp-001-l",
@@ -200,8 +196,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-ne-lamp-002-l",
@@ -213,8 +208,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-ne-lane-002",
@@ -260,8 +254,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-nw-lamp-002-l",
@@ -273,8 +266,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-nw-lane-001",
@@ -320,8 +312,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-sw-lamp-002-l",
@@ -333,8 +324,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-approach-sw-lane-003",
@@ -1808,8 +1798,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-artwalk-h3",
@@ -1855,8 +1844,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-artwalk-h4",
@@ -1902,8 +1890,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-artwalk-h5",
@@ -1949,8 +1936,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-artwalk-h5-l-right",
@@ -1962,8 +1948,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-artwalk-h6",
@@ -2009,8 +1994,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-artwalk-h7",
@@ -2056,8 +2040,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-carousel",
@@ -3726,6 +3709,40 @@
    }
   },
   {
+   "id": "nx-dress-nw-compost-001",
+   "kind": "thing",
+   "pos": [
+    -72.78,
+    0.036,
+    57.68
+   ],
+   "yaw": 2.35619449,
+   "scale": 1,
+   "lib": "store/330adcbcf0153026.glb",
+   "bbox": {
+    "min": [
+     -1.775,
+     -0.02,
+     -0.63
+    ],
+    "max": [
+     2.016,
+     1,
+     0.806
+    ],
+    "size": [
+     3.791,
+     1.02,
+     1.436
+    ],
+    "center": [
+     0.121,
+     0.49,
+     0.088
+    ]
+   }
+  },
+  {
    "id": "nx-dress-nw-hedge-001",
    "kind": "thing",
    "pos": [
@@ -4245,8 +4262,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-gallery-mosaic-0036",
@@ -4530,8 +4546,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-mile-ne-010",
@@ -4679,8 +4694,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-mile-nw-008",
@@ -4828,8 +4842,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-mile-sw-014",
@@ -4875,8 +4888,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-shutters",
@@ -5296,8 +5308,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-struct-cellardoor",
@@ -5683,8 +5694,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-struct-observatory",
@@ -5730,8 +5740,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-struct-orrery",
@@ -6083,26 +6092,26 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/4acda52181875ffd.glb",
+   "lib": "store/2b418077f82ebbf1.glb",
    "bbox": {
     "min": [
      -1.825,
-     -0.9,
+     -0.33,
      -0.2
     ],
     "max": [
      1.825,
-     0.795,
+     0.78,
      3.6
     ],
     "size": [
      3.65,
-     1.695,
+     1.11,
      3.8
     ],
     "center": [
      0,
-     -0.052,
+     0.225,
      1.7
     ]
    }
@@ -6797,8 +6806,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-dyehouse",
@@ -6844,8 +6852,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-garden-cottage",
@@ -6891,8 +6898,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-gate-e",
@@ -7074,8 +7080,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-inn",
@@ -7121,8 +7126,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-kiln",
@@ -7168,8 +7172,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-longhouse",
@@ -7215,8 +7218,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-mapboard",
@@ -7296,8 +7298,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-monument",
@@ -7377,8 +7378,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-roads",
@@ -7458,8 +7458,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-shrine",
@@ -7539,8 +7538,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-streetlamps",
@@ -7620,8 +7618,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-town-windmill",
@@ -7735,8 +7732,7 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
-   "bbox": null
+   "lib": null
   },
   {
    "id": "nx-wild-cairn-0022",
