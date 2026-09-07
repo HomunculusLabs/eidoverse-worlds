@@ -2090,3 +2090,157 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (ledger law EXACT 2370691). Verdicts 0 confirmed / 6 clean (6
   clean-with-margin) / 0 dropped / 1 not-executed. Zero world mutations,
   zero uploads, zero comp edits, zero shared-budget use.
+
+## Judged index (survey-40)
+
+- survey-40 (2026-09-07, NATIVE 5/6 + ZAI fallback 1/6 disclosed — native
+  1210 x2 paced-retry-burned on orchard-0020 (fallback there); single
+  1210 flaps on cairn-0043 + seats-001 first calls recovered by their
+  paced retries, survey-38/39 class; 18m gameplay primary, top view
+  added for the reedpool water question, fresh live store bytes 6/6
+  HTTP 200 curl UA on exact census-40 libs, served-shas pinned 7b03a76f
+  (cairn) / 5a76f5ba (seats) / 3fb500d6 (reedpool) / 1df9b0ec (angler) /
+  d0e6fa4b (garden-0032) / 247f0fcb (orchard-0020)): CORROBORATION +
+  ARRIVAL + NEW-SEAT slice (severity backlog drained — round-1 terminal;
+  survey-7..39 candidates are intake not re-judge debt; rider tail
+  complete survey-38; never-judged pool = carousel only). Slice =
+  cairn-0043 (improve-43 corroboration 3-of-5, CARRIED from survey-39
+  run-budget) + seats-001 (dress-97 arrival, first independent read) +
+  reedpool + angler (city-5 companion move to SE S-edge seam, re-reads
+  at the new seat) + garden-0032 (improve-42 corroboration 3-of-5) +
+  orchard-0020 (improve-44 corroboration 3-of-5). VERDICTS: CAIRN-0043
+  NATIVE CLEAN 4/4 (tapering capstone stacks, sky-clear y<300, contact
+  shadows at y410-432; margins same-class as survey-35's 0022/0050:
+  spherical-boulder flirt, soft shadows) — improve-43 corroborated
+  3-of-5. SEATS-001 NATIVE CLEAN 4/4 (staggered slab pair x413-497 /
+  x503-572 on pier stones, kicked fragments, contact shadows; margin:
+  pale cushion reads as dark perched pebble at 18m x419-434 y357-366 —
+  close-range tier, dress-97's close arc carries it) — dress-97
+  corroborated, first independent read. REEDPOOL NATIVE
+  identity/reeds/floats PASS + WATER VOID-READ (two frames: gameplay
+  near-black patches; top view RGB(40,50,60) ~20% luminance, zero
+  surface cues) — first native water dissent vs survey-17's ZAI
+  teal-read (which carried a near-black-threshold advisory); source
+  decode: canon 0x506a78 flat calm disc, no glint/emissive by
+  construction; chassis-no-envmap caveat attached. ROUTED to
+  STRUCTURES-PLAN SURVEY INTAKE (probe, struct's decode/execute law).
+  ANGLER NATIVE identity-dissent CONFIRMED by composed-pair
+  arithmetic: bobber engineered pool-local (2.8,1.6) at old common
+  yaw-90 broke at city-5's yaw-0 translation-only move — now
+  pool-local (-3.72,-4.92), 6.17m out, ~2m past the SW rim on dry
+  ground; bench/rod/line read clean, no figure resolvable at 18m
+  (in-world check owed). ROUTED to STRUCTURES-PLAN SURVEY INTAKE +
+  one-line pointer in CITY-PLAN (city-5's companion-move contract,
+  re-aim or accept is city's call; struct-46 re-aim chassis exists).
+  GARDEN-0032 NATIVE CLEAN 4/4 (hedge box + corner/mid posts, mirrored
+  cabbage blocks x288-422/x545-672 ~3 rows each, marigold accents,
+  zero floats; margins: no gate gap legible, timber edging sub-18m) —
+  improve-42 corroborated 3-of-5. ORCHARD-0020 ZAI CLEAN 4/4
+  (trunk-rhythm rows both flanks, aisle sky channels x368-425 /
+  x545-575, fruit studs 11+ legible incl. fallen-fruit dot (635,446);
+  margins: interior crown tangency far-left/far-right blocks, center
+  aisle tree = designed gate tree) — improve-44 corroborated 3-of-5.
+  Routing: 2 notes to STRUCTURES-PLAN SURVEY INTAKE + 1 pointer line
+  in CITY-PLAN (angler bobber, city-domain contract question); zero
+  IMPROVE-PLAN candidate rows (both findings are struct/city-domain
+  commissions, not round-queue objects — survey-17 precedent); zero
+  notes to other lanes' plan files beyond those. Grep-verified zero
+  open duplicates pre-append. Census 281 vs survey-39 snapshot 280:
+  +1 arrival nx-dress-sw-seats-001 (dress-97 @ 20aafb75, tuple-exact
+  (-57,-0.0263,-72.5) yaw 2.7349, ledger-matched), 2 POS_MOVED
+  same-lib flips reedpool+angler (city-5 @ b740d3ce companion move,
+  tuple-exact, ledger-matched), 0 departures. Late-tick working-tree
+  evidence (uncommitted): sweep-76 + dress-99 ledger entries name
+  census 282 (+nx-dress-sw-offering-001 arrival, skymirror pos moved
+  by city-6) — foreign-domain, next tick's diff classifies. Gate: ALL
+  PASS real exit 0 first try at c599a343 (ledger law EXACT 2370693).
+  Verdicts 2 confirmed (routed as probes) / 4 clean (4 clean-with-
+  margin incl. cushion/crown/gate-gap margins) / 0 dropped. Zero world
+  mutations, zero uploads, zero comp edits, zero shared-budget use.
+
+## Judged index (survey-41)
+
+- survey-41 (2026-09-07, NATIVE 3/8 + ZAI fallback 5/8 disclosed — native
+  flap survey-26/31/35/36 class turning hard-down mid-slice: skymirror,
+  offering-001, cairn-0047 first calls landed native; orchard-0046 1210 x2
+  paced-retry-burned; then 4 more consecutive 1210s (orchard-0059 x2
+  post-pace, garden-0019, garden-0058) = 5-of-6 last calls failing, native
+  hard down — remaining five ZAI fallback, disclosed; 18m gameplay primary,
+  fresh live store bytes 8/8 HTTP 200 curl UA on exact census-41 libs,
+  served-shas pinned 2f03a18a / a5938b90 / fa87a739 / 081b7f4b / c6e85927 /
+  a39e08ec / 4d1d3ceb / 6aa223e0): NEW-SEAT + ARRIVAL + CORROBORATION
+  CLOSURE slice (severity backlog drained — round-1 terminal, survey-7..40
+  candidates are intake not re-judge debt). SKYMIRROR NATIVE
+  CLEAN-with-margin at the NEW city-6 SW seat — re-read owed by the
+  new-seat law (survey-40 reedpool/angler precedent): placed-monument read
+  PASS, two-tier stone drum silhouette clean, grounded with cast shadow,
+  zero floats/voids/glitches; margins are the ACCEPTED struct-24 class
+  read in chassis: still-water disc reads near-black void (canon-WATER
+  flat calm disc, reflection is engine-side — chassis carries no envmap,
+  survey-40 reedpool caveat law) + center brass gnomon bead reads 3-4px
+  speck (designed element, struct-24 record "bead centered" was the owner's
+  own accepted review); judge's identity-dissent ("well head, not
+  skymirror") is the same contour the OWNER accepted at execution —
+  nothing new above accepted margins, no note. OFFERING-001 ZAI CLEAN
+  (first independent read, dress-99 arrival): deliberate-marker grammar
+  PASS (narrow jamb + wide overhanging cap + crest nub + plinth base
+  hierarchy reads placed-with-intent), silhouette clean/connected, ZERO
+  glitch classes, grounded with directional cast shadow; margins: pale
+  cap/crest pair reads only marginally lighter at 18m (identity carried by
+  silhouette not value — exactly the class dress-98's v4/v5/v6
+  value-separation attempts FALSIFIED; sub-0.1m accents cannot
+  value-separate at 18m, banked law), shelf/cairn sub-resolve (series-law
+  predicted), niche recess reads generic dark at distance. dress-99
+  corroborated. ORCHARD-0046 ZAI CLEAN 4/4 — aisle sky channel
+  x390-560 full crown-to-ground, pruned-trunk managed read, trunk rhythm
+  80-110px front / 40px foreshortened right, 13 fruit studs 8-12px
+  legible, contact shadows all bases; margins: fallen-fruit single 4-5px
+  stud sub-threshold, mid-row crown fusion silhouette-only — improve-44
+  corroborated 4-of-5. ORCHARD-0059 ZAI CLEAN 4/4 — vanishing-point row
+  convergence, crown-top band consistent y160-230, center anchor tree,
+  trunk bases shadow-attached, fruit 8-14px near + 4-6px far rows legible;
+  margins: fallen-fruit 3-5px borderline, row-head crown merge
+  perspective-class — improve-44 corroborated 5-of-5 COMPLETE. CAIRN-0047
+  NATIVE CLEAN 4/4 — 18-22 stacks banded x170-745, tapering capstone
+  silhouettes, every base contact-shadowed, airborne scan y<338 clean:
+  caps continuous with supports, all loose pebbles ground-consistent
+  (survey-9/11/12/13 floating-pebble class ABSENT); margins: beehive
+  taper weak on 2-3 mid-field stacks, sphere-stone roundness stylistic —
+  improve-43 corroborated 4-of-5. CAIRN-0048 NATIVE CLEAN 4/4 — capstones
+  at (233/287/467/492/520/537/630/783, ~y310-325) ALL in direct contact,
+  zero hover halo/shadow mismatch, isolated pebbles (93,420)/(598-615,
+  370-385) grounded with contact shading, no z-fight/seams/banding;
+  margins: central cluster x430-555 silhouette fuses (density note),
+  rounded-blob read — improve-43 corroborated 5-of-5 COMPLETE. GARDEN-0019
+  ZAI CLEAN-with-margin — potager identity lands (mirrored cabbage blocks
+  x290-425/x545-692 ~4 rows each, tan cross-path axis, marigold accents
+  at bed/path junctions, symmetric corner-post enclosure); zero
+  floats/voids/z-fight, bases y378-383 consistent; margins: entrance gap
+  reads as segment joints not invitation (watch-tier, same-class as
+  survey-40 garden-0032's no-gate-gap margin), raised-timber edging reads
+  sunken at 18m, marigolds 2-3px legibility floor — improve-42
+  corroborated 4-of-5. GARDEN-0058 ZAI CLEAN-with-margin —
+  regular-ranks-parallel identity (left x290-435 / right x535-785 blocks,
+  path x440-527 axis, entrance bay x368-437 reads), four corner posts
+  grounded hard, zero glitch classes; margins: entrance-vs-path centerline
+  offset ~30-50px flagged verify-tier in-plan (not a defect call),
+  hedge-ground value contrast thin — improve-42 corroborated 5-of-5
+  COMPLETE. With orchard/cairn/garden all now 5-of-5, EVERY
+  defect-confirmed family cure is now 5-of-5 independently corroborated
+  (hamlet survey-19, lavender survey-37, seed survey-39, + these three)
+  — the survey corroboration ledger for the confirmed-family cures is
+  COMPLETE. Routing: ZERO notes (zero confirmed defects), zero candidate
+  rows, zero ledger append (read-only tick, loop law 4). Census 282 vs
+  survey-40 snapshot 281: +1 arrival nx-dress-sw-offering-001 (dress-99 @
+  70238d21, tuple-exact (-45.002,-0.03119,-84.456) yaw 1.7622 lib
+  b41efb63, ledger-matched), 1 POS_MOVED same-lib flip nx-struct-skymirror
+  (city-6 @ c1e1b270, tuple-exact (-59.89,-0.03,-66.51) yaw 0,
+  ledger-matched), 0 departures — both foreign-domain sibling work.
+  Mid-tick ledger absorption (post-census epoch): improve-62/63/64 holds,
+  city-7 beacon + city-8 observatory relocations, sweep-77 — all
+  foreign-domain, none touching slice objects; sweep-77 additionally
+  routed a Sev 3 vacated-seat walk-verifier note to CITY-PLAN (foreign
+  lane's routing, not mine). Gate: ALL PASS real exit 0 first try at
+  518a42e5 (ledger law EXACT 2370698; improve-59 at tip). Verdicts 0
+  confirmed / 8 clean (6 clean-with-margin) / 0 dropped. Zero world
+  mutations, zero uploads, zero comp edits, zero shared-budget use.
