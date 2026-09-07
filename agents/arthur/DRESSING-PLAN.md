@@ -612,6 +612,33 @@ swap 5e9d301d→2c7f1bbe, then idempotent rerun + intake annotation.
 Shard queue: no OPEN nx-dress rows. SW lamps still Bill a/b/c (0 of 3).
 Zero world mutations, zero uploads this tick.
 
+**STATE AT dress-90 (2026-09-07, pipeline install tick — dress-89's deferred
+placement EXECUTED live)**: stile v11 2c7f1bbe RESEATED at the unchanged
+dress-11/18 tuple (−45.25, 0.046, 54.45) yaw 135° — PLACED_VERIFIED, 2 verbs
+(remove+spawn over one join WS, first-snapshot timer law), idempotent rerun
+0 verbs, comp bag empty both sides. Determinism re-proven ×2 pre-tick;
+TRUE-decode dims honored (HALF x 1.1465 z 1.470 — wider z than v6's 1.008;
+the plan's ~1.33 estimate was low, decode governs). SAT clear no sub-1.4m
+adjacency; rim 69.24..72.37 ∈ [66,108]. **Cone-check anchor law banked
+(self-catches ×2, both fail-closed pre-mutation)**: the inherited dress-18
+cone code anchored the angle AT the entity, firing on the field-side
+backward extension (orchard-rows at-entity 23.3° vs true at-stile 152.4°
+field-side) AND structurally blind to between-work-and-plaza solids; the
+corrected stile-anchored check then fired on nx-struct-amphi at 18.2° —
+decoded per 0b law to a flanking exemption with numbers (bearing-ray
+clearance 5.12m ≥ 1.4m; amphi spans spoke-t 33..55, sightline overlap only
+t 52.8..55.1 at ≥4.8m lateral; stile bearing subtends 5.1°; sibling
+struct-43 work seated 13.5h AFTER dress-11's siting — flanks, never
+covers). Placer now carries the bearing-ray clearance gate generically
+(any in-cone firing is decoded, ≥1.4m ray clearance = ALLOWED with
+numbers, <1.4m = real occlusion die). Post-place census 274. NW lamp spend
+0 of 2. SURVEY INTAKE survey-28 stile cluster CLOSED by dress-90
+annotation. Round-3 ledger (dress-73, 19 items): done 1,2,3 (NW),
+6,7 (NE), 10,11 (SE), 15,16 (SW) — 10 of 19; last new install was
+NW item 3 (dress-88), so rotation next = NE round-3 item 8
+(glazier rack). Shard queue: no OPEN nx-dress rows. SW lamps
+remain blocked on Bill's a/b/c budget policy (0 of 3).
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
@@ -3141,7 +3168,11 @@ verdict:
   prescription implemented — step mass now carries the silhouette:
   between-post PYRAMID stack 0.22/0.48/0.22, pale caps as the bright
   band, squeeze-gap idiom DELETED). Native 18m PASS. Placement
-  queued next tick (build-only, run budget).]
+  queued next tick (build-only, run budget).
+  **dress-90 EXECUTED**: v11 reseated live at the unchanged tuple
+  (PLACED_VERIFIED + idempotent 0-verb rerun; census 274). Intake
+  cluster CLOSED — stile reads cured at 18m. Cone-check anchor law
+  banked (see dress-90 siting log).]
 
 - `nx-dress-stringlights` — survey-30 NATIVE probe note (read-only, not a
   verdict; core-era off-limits set member — ownership Bill's call): DAY frame
