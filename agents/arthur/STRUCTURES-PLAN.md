@@ -3092,3 +3092,58 @@ struct64 chassis; 5) post-place tuple verify + idempotent rerun; 6) MCPL
 walk: S approach → pad S edge → onto face → around blade both sides → N
 edge → off W/E (do NOT walk through the solid blade); 7) Bill eye-check
 packet + plan record. On judge FAIL: iterate ONE defect, do not place.
+
+## struct-68 (2026-09-07): R5-3 MERIDIAN DIAL PLACED_VERIFIED —
+## struct-67's deferred contract executed in full, judge debt paid
+
+Gate ALL PASS real exit 0 at 74f2fb4 pre-mutation (re-checked after sibling
+interleaves improve-42/dress-92 landed; ledger worktree clean before append).
+Interlane md5 f6254cd0 stable. Cadence 68%3=2; deferred contract outranks.
+
+**Judge debt (paid before mutation)**: native 1210 hard down all tick
+(vision_analyze x3, per-frame — disclosed). ZAI fallback on the exact v3
+bytes (disk sha re-proven 7acc090a this tick):
+- TOP: PASS items 1-3 (fan stones-on-radials from one convergence center,
+  monotone compressing hour angles, meridian continuous N+S, edge-clear).
+  FAIL claim: "7h stone is an L-shaped double block at ~(304,258)".
+- DECODE REFUTATION (probe law 11): struct68-probe-hourstones.ts — bone
+  bucket 264 verts = 11 clusters, every stone 8 unique corners with local
+  dims exactly 0.140x0.240x0.140 (noon 0.170x0.340x0.170), span = clean box
+  diagonal, all five mirror pairs (7/17, 8/16, 9/15, 10/14, 11/13) at
+  delta 0.0000 — 7h is the exact mirror twin of 17h. Every base on the
+  face plane. The L-read is a probe artifact (dark groove + adjacent stone
+  read as one compound at that angle). Probe self-catches fixed pre-audit:
+  0.4m clustering cross-contaminated noon/h11 near-corners 0.355m apart
+  (tightened to centroid-re-anchored 0.30m); post-dedup box law is 8 corners
+  not 24 verts; noon carries its own dims/diagonal.
+RIGHT + GAMEPLAY judged PASS by ZAI in struct-67 (carried; same bytes).
+
+**Placement**: terrain next-terrain-struct68.ts 7pt spread 23.5mm, PY
+-0.0065 (N corner worst air 17mm — sub-visual, struct-63/66 acceptance
+class). SAT struct68-sat-meridiandial.ts — fresh 274 census, target absent,
+EXACT disc-vs-OBB r3.7 (struct-19 law, post-R-122): CLEAR, nearest anything
+nx-town-roads +2.67m (ground network, above 1.4 law even unexempted), zero
+solid neighbors within 8m. Placer next-place-struct68.ts (struct-65
+first-placement chassis): hash gate -> upload (paced, shared budget) ->
+1 spawn verb, lib store/7acc090a0420499e.glb at exact tuple (0,-0.0065,-27)
+yaw 0 — the village meridian, N-walk gap between waystone (0,-22.1) and
+waterstair (0,-32). PLACED_VERIFIED; idempotent rerun 0 verbs. Comp bag
+empty by design (no comps — the shadow moves, not the parts).
+
+**Walk**: struct68-walk-meridiandial.ts 12/12 ALL_PASS worst 0.39m — S
+approach on the meridian line -> pad S edge -> onto the face -> around the
+blade both E and W lanes -> noon stone/noon pin -> off W flat, re-enter
+SE -> off E flat. Never through the solid blade.
+
+**Standing state**: Round 5 R5-3 seated (court, pergola, dial). Bill
+eye-check packet (one packet, per hero-ready law): on the N walk between
+the waystone and the water stair, an octagonal stone face with a blade
+rising at 40 degrees — stand on it and the shadow reads the hour fan at
+your feet; brass bead at the style apex marks the pole. Frames:
+reviews/struct67-meridiandial/ (10 views; gameplay.png = 18m contract
+frame). Ledger struct-68 D+1/E+0, law exact 2370670. Census 274 -> 276
+mid-tick (dress-92 glazier arrival, ledger-matched; sibling interleaves
+disclosed).
+Next tick: 69%3==0 -> refine tick. Refine pool: EMPTY unless Bill's
+verdict or a routed note re-opens a subject; on empty pool per loop law
+build/re-arm (R6 concept or shard re-arm scan).
