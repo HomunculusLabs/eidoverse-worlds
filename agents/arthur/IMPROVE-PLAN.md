@@ -945,9 +945,32 @@ Executed entries keep their record regardless — re-judgment is forward-only):*
     x460-492 y393-410, darker course seams y375-390 — margin note only:
     plaque insets 8-15px register as dark recessed panel, one value
     step more contrast would help); identity CONFIRMED — central
-    sculpture + stepped plinth + approach stair (x450-500 y417-446)
-    reads commemorative clearly. Sev 4 stands (pinhole minor).
-    Evidence: reviews/survey5-slice/town-monument/gameplay.png]
+     sculpture + stepped plinth + approach stair (x450-500 y417-446)
+     reads commemorative clearly. Sev 4 stands (pinhole minor).
+     Evidence: reviews/survey5-slice/town-monument/gameplay.png]
+     [DROPPED improve-36 (2026-09-07): pinhole finding CLOSED as probe
+     artifact by decode-then-native re-judge on exact live bytes
+     d7d3b15c6391aa7e == local village_monument3.glb (no disputed bytes;
+     fresh census pin tuple (-7,0,-7) yaw 0.7853981633974483 comp {}).
+     DECODE (improve36-decode-monument.ts): the knot is ONE continuous
+     watertight tube on the (2,5) curve — TorusKnotGeometry(0.85,0.16,
+     140,18) exports 2679 verts = exactly (140+1)×(18+1); re-computing
+     the three.js curve at N=4000 samples finds ZERO near-tangent strand
+     junctions (global min non-adjacent center distance 0.4837 vs fuse
+     threshold 2×TUBE 0.320) — no pass ever gets closer than a 0.164m
+     SURFACE gap, so a crack/see-through pinhole is excluded by
+     construction; no overlapping passes either (0 fused pairs). NATIVE
+     re-judge on fresh-rendered exact live bytes (reviews/improve36-
+     monument/): the flagged ~(513,323) pinpoint EXISTS but is a narrow
+     window between strands onto the knot's shadowed interior — dark
+     umber = interior strands (a true pinhole would bleed sky/ground),
+     boundary = smooth tube silhouettes (not torn-triangle edges), and
+     the 0.164m clearance seen near-edge-on foreshortens to ~4-5px.
+     Knot reads deliberate interwoven sculpture, legitimate through-
+     openings, zero damage/artifact reads; walker at 8m: resolvable but
+     not salient (one more shadow gap in a busy weave). Row CLOSED
+     CLEAN — no edit, no mutation. Pedestal-crafted margin note (one
+     more value step on plaque insets) stands as round-2 polish tier.]
 29. `nx-dress-ne-yard-001` — rubble read; floating rail ends; uniform
    near-black. Sev 2. (guard: dress-4 <24h at improve-2 — re-check
    dress tail at execution) [DROPPED dress-14: native re-judgment on
