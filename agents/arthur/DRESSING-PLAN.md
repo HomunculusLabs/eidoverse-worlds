@@ -1,6 +1,40 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-121 — lawful HOLD (12th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD f34f8168 (city-65); interlane md5
+  f6254cd0 pin-exact. Fresh census 292 = 291 + ONE arrival
+  `nx-struct-conoidfan` — struct-87's owed placement landing (struct-88
+  placer visible untracked in status), sibling work-in-flight,
+  ledger-matched, ZERO dress-domain drift; fleet 29 district-qualified
+  (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy core intact. Round-3 closers
+  PINS_EXACT 4/4 vs live by store/-prefix lib lookup: foxden 856deec5
+  (73.0, −0.0532, −10.5) yaw 4.7124, lanternhook 639c5480 (−57.0,
+  −0.0306, −70.0) yaw 4.9277, seats cb34bd36 (−57.0, −0.0263, −72.5)
+  yaw 2.7349, streamstones aabbc23d (75.05, −0.0249, −46.90) yaw
+  −0.7854 (radian law). Two probe self-catches corrected at source:
+  first pin pass compared full-lib equality against 8-char prefixes
+  (dress-120's known class); streamstones probe used a SW id prefix
+  for an SE-domain entity — correct id `nx-dress-se-streamstones-001`
+  pinned exact.
+- **Shard routing re-verified at source this tick**: all nine Round-1
+  `nx-dress-*` row blocks terminal (5/29/30/31 DROPPED or
+  NATIVE-DROPPED, 32/33/34/37/38 EXECUTED, row 38 declares queue
+  EMPTY); round-2 routes to legacy-core off-limits only; no round-4
+  section (grep 0). survey-55 (NEW since dress-120, slice dir 17:51)
+  read: subjects all legacy-core improve-domain — intake unchanged,
+  zero notes route to dress.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07, md5
+  12cec3fa; no ruling commits in the log trail.
+- **Blocked on Bill (standing, said once)**: bellows siting a/b/c
+  (dress-103/104, v8 accepted), SW lamp policy a/b/c (0 of 3 spent,
+  hooks empty by design). Cheapest unblock stays the two one-line
+  rulings in `reviews/dress-round3-eye-gate.md`.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use this tick (D+0, E+0).**
+
 ### dress-120 — lawful HOLD (11th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
