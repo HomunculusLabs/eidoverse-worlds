@@ -1012,6 +1012,50 @@ expanded, the quality bar is not lowered.
 
 ## Siting log
 
+### dress-98 — SW offering niche (round-3 item 18, BUILT — v3 candidate `b41efb63`, placement deferred)
+
+- **Tick class**: build-only (dress-82/85/improve-31 class — run budget
+  exhausted mid-arc after the v6 read; placement + fresh confirm-or-drop
+  native re-judge owed next wakeup).
+- **Concept contract**: the devotional line's OFFERING place — the circling
+  walker's first touch of the maze boundary, at the ring-7 entrance-gap
+  flank (local 214°, the gap spans 146.76–210.57° measured on served
+  bytes). A single taller jamb stone (0.88m = 1.33× wall height) in the
+  source-true wall family (C.STONE 0x56503c, tangent long axis, masonry
+  jitter), capped by a WIDE pale capstone-dish (0.88×0.38, 30% overhang
+  per side, flat lit crown band, dish carved in), pale crest stone in the
+  dish, worn shelf at 0.72m reach, 2-stack mini-cairn with pale cap at the
+  foot. Mounted flush: jamb back face −0.13 embeds into the wall plane;
+  host untouched (host-rider class, artwalk-39 continuity law noted —
+  anchor re-derivation from fresh census at placement).
+- **6-version all-native arc** (rig reviews/dress98-offering1-v1..v6):
+  v1 `e913fdf0` 18m FAIL (dish collapses to 2–4px band, generic dark
+  post), v2 `d79c3092` FAIL (cap unbroken, tan vs pale sky), **v3
+  `b41efb63` PASS-marginal 18m** (stepped cap breaks silhouette; cairn
+  cap = brightest point; margin: crest/cairn sub-legible garnish), v4
+  `6e472b0a` FAIL-marginal (crest pale-on-pale merges), v5 `9fb15102`
+  FAIL (dark-on-pale collapses — cap band flattens mid-grey at 18m),
+  v6 `71de87d6` FAIL (crest dark-against-pale-sky inversion). **Law
+  banked (18m cap-separation): at this scale the only surviving contrast
+  instrument is the stepped silhouette itself; crest-vs-cap value play
+  (pale-on-pale, dark-on-pale, offset) all collapse — sub-0.1m accents
+  cannot value-separate at 18m, judge the composition by its cap
+  profile.** Final build = byte-exact v3 restored (deterministic ×2,
+  3 nodes, budget 3–25 ✓; decode: jamb y0–0.89 back-face −0.13 embed,
+  cap 0.88 wide, crest 1.015–1.08, chips grounded z +0.22..+0.42 outside
+  the wall face; envelope 0.88×1.09×0.64).
+- **Anchor (dress98-anchor.ts, fresh census 281, host epoch guard PASS)**:
+  host `nx-temple-labyrinth-0038` lib `2d3d2032d3e806f8` EXACT, pos
+  (−51.932, −83.109) yaw −2.35619. Niche seat local 214° r7.06 → world
+  (−45.00, −84.46) riderYaw 101.0° (outward radial), r 95.7 ∈ CITY-PLAN
+  band [70,100] ✓. Cones pre-checked: seats diff 98.3°, bellpost ~110°,
+  labyrinth corridor ~89° — all clear pending the placer's fresh-census
+  run. SAT preflight NOT yet run (placement tick owns it).
+- **Next wakeup**: fresh native re-judge on exact v3 bytes
+  (confirm-or-drop), then placer (dress-97 chassis + host-epoch blocker
+  `nx-temple-labyrinth-0038`), terrain pin, upload/spawn, idempotent
+  rerun, ledger, commit. Static unlit — SW lamp spend 0 of 3.
+
 ### dress-94 — SE moss bowls (round-3 item 12, PLACED, LIVE)
 
 - **Tick class**: deferred placement — dress-93's v11 fix list executed, then
