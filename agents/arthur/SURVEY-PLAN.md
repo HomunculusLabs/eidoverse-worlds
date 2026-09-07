@@ -2898,3 +2898,66 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   interlane md5 f6254cd0 stable. Verdicts 0 confirmed / 6 clean
   (4 clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
   zero comp edits, zero shared-budget use.
+
+## Judged index (survey-51)
+
+- survey-51 (2026-09-07, NATIVE 4/6 + ZAI fallback 2/6 disclosed — townhall
+  1210 x2 retry-burned then ZAI 3-frame arc; b10 1210 x2 retry-burned then ZAI;
+  b5/b9/b14/b17 native recovered clean; 18m gameplay primary (front for flat
+  riders per survey-31 series law; night for townhall interior nodes), fresh
+  live store bytes 6/6 HTTP 200 curl UA on exact census-51 libs, served-shas
+  pinned b36554d18d70bc5c (townhall) / 6c81c3877cf2f4cb (b5) / a8ff818d13b57799
+  (b9) / 543031130b3e7338 (b10) / c4fa5e7c1cc04d8c (b14) / b3acd7e32c7af331
+  (b17) / 61148de2bd3b9780 (b22, fetched unjudged) / 88dc644f10d9d5d2 (b25,
+  fetched unjudged)): NEVER-JUDGED + RIDER-TAIL slice (severity backlog +
+  native debts drained at survey-49/50; never-judged pool recomputed fresh —
+  town-hall is the last never-judged CORE model (improve-4/5 cured its round-1
+  porch see-through; post-cure bytes never independently read); b-series
+  rider-tail scan found 15 never-judged riders, 7 taken this tick).
+  VERDICTS: TOWN-HALL ZAI CLEAN-with-margin — first independent read of cure
+  bytes c92c1f91: geometry watertight (no sky-through gaps anywhere — round-1
+  see-through-hole class GONE; porch recess enclosed with visible floor step +
+  interior furniture silhouette = real depth, not void), grounding PASS
+  (contact + cast shadows), silhouette continuous, civic-hall identity lands
+  via roof+chimney+porch massing; margins (chassis-class, not bytes):
+  shadow-side facade crush in both day frames (single-key-light rig, judge's
+  own caveat), 1-2px lamp specks sub-resolution at 18m, night frame
+  bytes-only (no world lights in rig — live night identity carried by
+  nx-town-hall-l companion per survey-42/46 precedent; ZAI "cold doorway"
+  finding classified chassis-limited). B5-BELLTOWER-RINGS NATIVE
+  CLEAN-with-margin — trefoil of three interlocked rings + trim bars reads
+  deliberate authored emblem, materials disciplined, zero glitch classes;
+  margins: rings proud of face edges (visible relief, right 2x left), concentric-
+  vs-interlocked intent nitpick. B9-DYEHOUSE-LOOM NATIVE CLEAN-with-margin —
+  diamond-weave crossing lattice unambiguous, gold-on-charcoal contrast high,
+  zero tears/strays/holes; margins: 3-4 sub-pixel corner end-cap roughness.
+  B10-WINDMILL-CROWN ZAI CLEAN-with-margin — hub ring + radiating arms +
+  ticked bars reads authored directional emblem, strong mirror symmetry,
+  coherent palette, zero glitch classes; margins: hub top/bottom stubs
+  verify-tier (likely spindle), tick radial distances rough-measure unequal
+  (sub-3px confidence low), 4-vs-6 arm intent tension design-level.
+  B14-EAST-GATE-DAWN-FAN NATIVE CLEAN-with-margin — rising-sun glyph (hub +
+  7 rays + horizon bar) unmistakable at scale, zero strays/holes; margin:
+  ray tips pierce top edge 2-6px (reads "sun over lintel" deliberate
+  frame-break, kin to b5 relief). B17-GARDEN-SEED-LATTICE NATIVE
+  CLEAN-with-margin — zigzag trellis with ball-nodes rhythmic and deliberate,
+  pendant seed node anchors motif, palette tight, zero glitch classes;
+  margins: low olive-on-charcoal contrast, valleys 5-8px off bottom edge
+  (grounded-seedbed read), truss-vs-seedlattice identity hinges on pendant.
+  NOT EXECUTED: b22 (1210 x2 + retry burned at budget close; sha pinned,
+  next-tick first candidate), b25 (fetched, unjudged, next-tick). Slice-order
+  self-catches: two vision path typos (aridise/materials) fail-closed local
+  404s, one wrong-payload call, all re-issued correctly; slice-selection
+  regex over-counted never-judged (name-form mismatch, probe-artifact class)
+  — resolved by committed plan-tail statement + per-family grep verification.
+  Routing: ZERO notes routed (zero confirmed defects), zero candidate rows,
+  ZERO ledger append (read-only tick, loop law 4). Census 287==287 vs
+  survey-50 snapshot /tmp/survey50-census.json: 0 arrivals, 0 departures,
+  0 flips — quiet epoch, no sibling work-in-flight. Gate: ALL PASS real
+  exit 0 first try at ec468568 (ledger law EXACT 2370709); interlane md5
+  f6254cd0 stable. Never-judged pool after this tick: town-hall judged;
+  riders b3/b9-judged/b5-judged/b10-judged/b14-judged/b17-judged/b22/b25/
+  b23/b24/b26/b28/b34-w/b34-s + carousel (polish-hero exclusion holds).
+  Verdicts 0 confirmed / 6 clean (6 clean-with-margin) / 0 dropped.
+  Zero world mutations, zero uploads, zero comp edits, zero shared-budget
+  use.
