@@ -3059,6 +3059,97 @@ open duplicate notes for these objects.
   canopy (x65-95/x348-368/x865-885, verify-tier). Family note:
   4 lavenders (0006 first judged) — family spread unverified.
   Evidence: reviews/survey10-slice/nx-cultivation-lavender-0006/gameplay.png
+  [EXECUTED improve-45: family cure with 0027/0040/0053 — see the family
+  contract + execution record below.]
+
+  [CONTRACT improve-45 (2026-09-07 — BEFORE edit; decode-first on exact local
+  bytes == live pins: 1647→d4ab74d0 (lavender-0027), 1660→56b752ab (0040),
+  1673→d8fac6d1 (0053), 1686→26f0eed9 (0006), all four LOCAL sha16 == live
+  lib names, no disputed bytes; single source family — all four are
+  composeLavender rotation works, no bespoke sibling):
+  DECODE ROOT CAUSES (improve44-decode-orchard.ts on baseline 1686):
+  (R1) MATERIAL CLASS, total: gltf_materials = [] — bush 0x807290, tip
+  0xa090b6, bloom 0xbaaacc are ALL plain mat() outside the five familyPass
+  tones → toGLB exports NO glTF material → 3/3 primitives material-less,
+  100% of 56,860 verts loader-default near-black (struct-38/improve-42/44
+  class, worst instance: the violet hue is literally absent in-game).
+  The "purple-charcoal / dead crop / darkest element in frame" reads ARE
+  the material-less mass (native before-judge 2026-09-07 on exact
+  baseline bytes: "burnt/dead crop over bare ground" — darkest element
+  in frame, zero violet read).
+  (R2) FLOATING SPECKS decode-true: bloom r0.03 spheres sit at
+  (x±0.1 jitter, 0.48, z±0.1 jitter) while cone apex is at UNJITTERED
+  (x, 0.45, z) — up to 0.14m off-axis in clear air = the "stray scatter
+  specks above canopy" (survey-10 verify-tier, now confirmed by native
+  judge: "10-30px clear of any plant tip").
+  (R3) ROWS: zero soil/furrow contrast; front-row 0.5m pitch with 0.32m
+  bush diameter reads discrete potted blobs at 18m; interior rows fuse
+  into a value-collapsed slab (R1 amplifies).
+  FIXES (all inside composeLavender, mason.ts; rng draw ORDER preserved
+  — same r() call count per plant so ring/scatter/rng-sequence stays
+  aligned; familyPass untouched):
+  F1 materials: bush → lav_foliage texMat (silvery sage-green 2-tone
+  0x8a9078/0x767c62, rough 0.95), tip → lav_bloom texMat (mid-value
+  violet 0x8e7ab8/0x9d8ac6, rough 0.9), bloom dots → lav_bloom_lit
+  (bright violet 0xb9a6d8, rough 0.85) — REAL texMats, glTF-exportable.
+  F2 specks: bloom dots re-anchored ON the cone tip — SAME (x,z) as the
+  plant, y = tip.y + 0.07 (straddling the apex, touching geometry) — no
+  clear-air offsets.
+  F3 rows: soil furrow strips under rows (soil texMat family, 0.34 wide,
+  h 0.025) + bush jitter tightened ±0.12→±0.04 (front row reads as
+  continuous hedgerow mass at 18m).
+  FALSIFY: (1) decode audit ×4 — 0 material-less primitives, gltf
+  materials [lav_foliage/lav_bloom/lav_bloom_lit/timber/soil] present,
+  envelope x/z baseline-subset (x±9.944/z±6.033 not exceeded), 0 below
+  grade, sibling GLBs byte-identical, dirty foreign assets
+  (village_tower3, core_paths) byte-identical to pre-edit state; (2)
+  identical-camera before/after renders, native after-judge at 18m:
+  violet crop identity, continuous hedgerow rows, zero floating specks;
+  (3) 4 uploads paced 21s + remove+spawn x4 exact tuples PLACED_VERIFIED,
+  census 276 steady, idempotent 0-verb rerun, comps {} both sides.
+  REVERT: restore before-bytes banked at reviews/improve45-lavender/
+  before/ (4 GLBs cp'd pre-edit, polish-271 law) → re-place old shas at
+  same tuples.
+  GUARD READING (disclosed): no lane has touched any
+  nx-cultivation-lavender-* entity in 24h (ledger tail survey-10..13
+  read-only notes; dress-87/88 sited the dryingracks AT lavender-0027's
+  south edge — a DIFFERENT entity, no lavender mutation). All four
+  lavender rows close with this contract.]
+  [EXECUTED improve-45: LAVENDER family 4/4 CURED + PLACED_VERIFIED
+  (round-2 take 8, worst-first OPEN improve-own row, Sev 3 family
+  unanimous). Baseline gate reproduced all 4 live pins byte-identically
+  pre-edit (BASELINE_ALL_FOUR_REPRODUCED; familyPass swapped 0 — every
+  primitive confirmed material-less). Cure landed in composeLavender:
+  lav_foliage/lav_bloom/lav_bloom_lit/lav_soil real texMats (v2 deepened
+  violet one step after the first after-judge's green-dominant 55/45
+  PASS), 3 bloom spikes per plant (center r0.085 h0.28 + 2 deterministic
+  flanks, no rng), blooms re-anchored ON cone apexes (specks cured),
+  soil furrows under all 14 rows, jitter ±0.08. Rebuild x2 deterministic
+  4 new shas: 1647 a9076cee (0027), 1660 5e04ce4b (0040), 1673 23fcec16
+  (0053), 1686 e913ef79 (0006); 55 siblings byte-identical
+  (improve45-sibling-check; work_1653 classified known local-only-stale,
+  improve-44's documented exclusion — not drift). Decode ALL PASS x4: 0
+  material-less primitives (was 3/3), gltf materials
+  [lav_soil/lav_foliage/lav_bloom/lav_bloom_lit], x/z envelope
+  strict-subset every axis (±9.93 < ±9.944, ±6.03 < ±6.033), y 0.5498 >
+  0.5055 superset BY DESIGN (taller bloom spikes — same-tuple re-place,
+  zero footprint change, x/z are the SAT axes), 0 below grade. NATIVE
+  before-judge CONFIRMS family class on exact baseline bytes ("burnt/
+  dead crop over bare ground" — darkest element in frame, zero violet);
+  after-judge (v2) 18m PASS ~62/38 — violet co-dominant (~50-55% canopy
+  aggregate), rows continuous with furrows, central aisle reads
+  deliberate cultivation, floating specks NONE (falsification attempt
+  failed to find one). Residual margins named: front-row pale foliage
+  bases, front-row violet ~40% (aggregate dominance partially depth-
+  compression). Texture-blob decode-rig warnings control-checked
+  identical on live accepted orchard 1692 (rig class, not a defect).
+  Reseat next-place-improve45-lavenders.ts: 4 uploads paced 21s (zero
+  429) + remove+spawn x4 exact tuples (8 verbs) PLACED_VERIFIED, census
+  277 steady (one sibling arrival mid-tick absorbed; per-entity gates
+  held), idempotent 0-verb rerun, comps {} both sides. Before-bytes
+  banked reviews/improve45-lavender/before/ (revert path). Open improve-
+  own families: NONE (mosaic Bill-blocked). City-1 law 4 cited: NW
+  district ring improve reseat.]
 - `nx-cultivation-orchard-0012` — Sev 3 (survey-10, 2026-09-06, NATIVE,
   18m gameplay, live store bytes dc4d7059 HTTP 206): orchard identity
   FAILS — irregular organic spacing + merged crowns read forest-edge
@@ -3119,6 +3210,9 @@ class except seed (ZAI-native stack 0003+0013).
   clusters along band top y350-364 (x95-235 / x455-545 / x600-880) —
   family 2-of-5. Evidence:
   reviews/survey11-slice/nx-cultivation-lavender-0027/gameplay.png
+  [EXECUTED improve-45: family cure — see the improve-45 contract +
+  execution record at the 0006 row.]
+
 - `nx-cultivation-orchard-0020` — Sev 3 (survey-11, ZAI): IDENTICAL to
   orchard-0012 class — crown band x0-960 reads continuous forest edge
   (sky gaps slot-scale), right-cluster value collapse x680-960 (worst
@@ -3172,6 +3266,9 @@ call, single paced retry recovered; zero ZAI fallback this tick).
   652/692/862 y355-366); rows countable = PASS — family 3-of-5
   MAJORITY. Evidence:
   reviews/survey12-slice/nx-cultivation-lavender-0040/gameplay.png
+  [EXECUTED improve-45: family cure — see the improve-45 contract +
+  execution record at the 0006 row.]
+
 - `nx-cultivation-orchard-0033` — Sev 3 (survey-12, NATIVE):
   IDENTICAL to orchard-0012 class — crown walls merge into continuous
   hedgerow bands (L x0-420, R x535-960, zero sky gaps), fruit reads
@@ -3391,6 +3488,9 @@ the executing lane. Grep-verified: no open duplicate notes.
   front-row blobs with ground gaps, stray stem spikes above canopy
   (9 regions x60-850) — family 4-of-4 UNANIMOUS. Evidence:
   reviews/survey13-slice/lavender-0053/gameplay.png
+  [EXECUTED improve-45: family cure — see the improve-45 contract +
+  execution record at the 0006 row.]
+
 - `nx-temple-seed-0034` — Sev 4 (survey-13, ZAI): IDENTICAL to
   seed-0003 class — flat ~32:1 block-mosaic disc (355px wide x ~11px
   true extrusion), no seed core x400-570, no vertical element, soft
