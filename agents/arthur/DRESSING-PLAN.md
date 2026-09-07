@@ -1,6 +1,30 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-112 — lawful HOLD (3rd consecutive post-close, NO PLACEMENT)
+
+- **State verified fresh this tick** (gate ALL PASS real exit 0 at HEAD
+  37de18e6; interlane md5 f6254cd0; census 291 quiet): 29 fleet nx-dress
+  ids + 16 legacy core intact. Round-3 closers spot-checked live-fresh,
+  tuple-exact — foxden 856deec5 (73.0, −0.0532, −10.5) yaw 4.7124,
+  lanternhook 639c5480 (−57.0, −0.0306, −70.0) yaw 4.9277 (radian law,
+  dress-26).
+- **Shard routing re-verified at source, row blocks read in full**:
+  Round-1 `nx-dress-*` rows all terminal (5/29/30/31 DROPPED native
+  rejudge, 32/33/34/37/38 EXECUTED reseats); round-2 candidates route to
+  legacy-core only (`nx-dress-well`, `bench-plaza`, `charcoal`,
+  `fountain` Sev 3 — off-limits set, Bill's call; re-adjudicated this
+  tick). Zero candidates route to fleet `nx-dress-(nw|ne|se|sw)-` ids.
+  SURVEY INTAKE unchanged: survey-42 milkstand dissent stands, tie-break
+  third vote owed by survey lane, not dress.
+- **Blocked on Bill (standing, said once)**: bellows siting a/b/c
+  (dress-103/104, v8 accepted), SW lamp policy a/b/c (0 of 3 spent,
+  hooks empty by design). Next lawful install tick requires a Bill
+  ruling (either blocked item) or a new commission (round-4 family list
+  or queue widening). Rotation pointer: round-3 complete 18/19.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use this tick (D+0, E+0).**
+
 ### dress-111 — lawful HOLD (2nd consecutive post-close, NO PLACEMENT)
 
 - **State verified fresh this tick** (gate ALL PASS real exit 0 at HEAD
