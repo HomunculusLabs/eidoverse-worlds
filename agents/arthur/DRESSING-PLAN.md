@@ -2387,3 +2387,41 @@ the four-district eye-gate circuit
 - Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
   policy call, or verdicts on the four-district eye-gate circuit
   (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+---
+## dress-72 (2026-09-07, pipeline tick 52) — HOLD
+
+- Shard: re-diffed fresh on CURRENT dirty bytes — exactly 1 hunk,
+  improve lane's improve-22 execution contract (nx-craft-hamlet-0007,
+  foreign prefix), zero nx-dress rows (confirmed by full-row nx-dress
+  grep of IMPROVE-PLAN.md). Round-1 nine rows terminal; round-2's only
+  dress candidate = fountain (Bill-routed legacy-core, off-limits).
+- Own queue: SW lamps only, Bill a/b/c bound. Fresh kind-law recount:
+  exactly 3 live SW r>=35 lights (nx-approach-sw-lamp-001-l r39.7,
+  -002-l r55.4, nx-mile-sw-013-l r64.0). Spend 0 of 3.
+- Verdicts: eye-gate packet fd677cae unchanged, zero VERDICT lines
+  (grep exit 1 fresh; 2 case-insensitive prose matches are instruction
+  text, not verdicts — dress-55 class).
+- Hold verification: standing gate ALL PASS real exit 0 at tick-start
+  HEAD 10591fb (improve-22 sibling). Fresh census 260 / lights 38
+  (kind histogram thing 222 / light 38), HTTP 200 first fetch. 11/11
+  district installs PIN_EXACT programmatic (store/-aware lib prefix,
+  pos within 0.01, restated yaw 2.57087 ne-yard, comps-empty, scale-1)
+  vs the authoritative dress-43/44 table; 27 nx-dress = 11 fleet + 16
+  legacy intact. Id-diff vs dress-census-35 capture (37 ticks back):
+  1 arrival nx-struct-meridianstair (struct lane, worktree carries its
+  preflight), 0 gone, 21 tuple/lib drifts ALL foreign-domain sibling
+  work (struct reseats amphi/angler/observatory/soundmirror at
+  identical tuples; improve-19/20/21 mapboard/longhouse/garden-cottage
+  libs; artwalk b26/b34 wayband + approach gate-lamp 1.75m lateral
+  choreography = the R-121 fix; nx-core-paths lib swap) — zero nx-dress
+  touched. Interlane md5 f6254cd0 steady.
+- Probe self-catch disclosed (15th tick-class): first census read
+  asserted a top-level "count" field the raw /geom endpoint does not
+  carry (schema world/entities/mounts; the count line comes from the
+  census TOOL). KeyError caught at run time; fixed probe re-ran clean.
+- Zero world mutations, zero uploads, zero shared-budget use, no visual
+  PASS claimed. No un-shard clock (shard empty at source, not idle).
+- Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
+  policy call, or verdicts on the four-district eye-gate circuit
+  (agents/arthur/reviews/dress-districts-eye-gate.md).
