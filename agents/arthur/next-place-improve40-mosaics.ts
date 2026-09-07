@@ -14,12 +14,38 @@ import { createHash } from "node:crypto";
 const ROOT = "/Users/t3rpz/projects/eidoverse-worlds", WORLD = "commons-next";
 const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
 // work -> (entity id, new sha, baseline live sha)
-const SLOTS = [
-    { id: "nx-gallery-mosaic-0036", work: 1643, sha: "f2faa018fdc4ab88", prev: "1655ae806c3b8fe3" },
-    { id: "nx-gallery-mosaic-0048", work: 1656, sha: "751485c71195a8dc", prev: "b6491515b25ef439" },
-    { id: "nx-gallery-mosaic-0052", work: 1669, sha: "68be6c5a1958a733", prev: "83c4817f73507493" },
-    { id: "nx-gallery-mosaic-0059", work: 1682, sha: "c237715d0ae8ad12", prev: "505bec0b589f786f" },
+// improve-41: ALL FOUR mosaic slots DEFERRED by source-true decode
+// (improve41-decode-goats.ts + decode table in IMPROVE-PLAN improve-41
+// STATE). The improve-40 contract's "0048/0052/0059 neighbor-clear" premise
+// was census-bbox evidence; source-true decode falsifies it — the gallery
+// row is structure-entangled in every disc:
+//   0036 nx-dress-goats pen (dress domain): solids to r2.202, 584 verts
+//        inside bed r9.0, sectors 150..300deg incl. the approach bearing.
+//   0048 nx-struct-mobius (struct domain): stands ON the panel; nearest
+//        low vert (y<=2.6) r2.421 -> medallion clearance 1.471m (pinch law
+//        passes by 71mm); bed film meets its legs; gold ring r2.85 threads
+//        the leg cluster.
+//   0052 nx-approach-nw-lamp-001 post (approach domain, part of the
+//        ground-layer lane network): inside bed at r7.76.
+//   0059 nx-struct-millrace (struct domain): penetrates to r7.892, 967
+//        verts inside r10.49, y -0.00..2.00, bearing 79.9deg.
+// Family sits as a SET (nvp-105 row exception); mixed flipped/unflipped
+// states across a Bill-approved row await his siting decision. Options
+// recorded in IMPROVE-PLAN (resite row / partial place / per-slot clips /
+// revert). This placer is PARKED: SLOTS empty, all gates still run, zero
+// verbs by construction. Re-arm only on Bill's routing.
+const DEFERRED = [
+    { id: "nx-gallery-mosaic-0036", reason: "goats pen r2.202 (dress domain)", baseline: "1655ae806c3b8fe3" },
+    { id: "nx-gallery-mosaic-0048", reason: "mobius on-panel r2.421 low (struct domain)", baseline: "b6491515b25ef439" },
+    { id: "nx-gallery-mosaic-0052", reason: "approach lamp-001 post r7.76 (approach domain)", baseline: "83c4817f73507493" },
+    { id: "nx-gallery-mosaic-0059", reason: "millrace r7.892 967v (struct domain)", baseline: "505bec0b589f786f" },
 ];
+const SLOTS: Array<{ id: string; work: number; sha: string; prev: string; pos?: number[]; yaw?: number }> = [];
+// re-arm templates (validated bytes, parked until routing):
+//   { id: "nx-gallery-mosaic-0048", work: 1656, sha: "751485c71195a8dc", prev: "b6491515b25ef439" },
+//   { id: "nx-gallery-mosaic-0052", work: 1669, sha: "68be6c5a1958a733", prev: "83c4817f73507493" },
+//   { id: "nx-gallery-mosaic-0059", work: 1682, sha: "c237715d0ae8ad12", prev: "505bec0b589f786f" },
+//   { id: "nx-gallery-mosaic-0036", work: 1643, sha: "f2faa018fdc4ab88", prev: "1655ae806c3b8fe3" },
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 const die = (m: string): never => { throw Error(m); };
@@ -38,8 +64,18 @@ for (const s of SLOTS) {
     if (h !== s.sha) die(`work ${s.work} local bytes hash drift ${h}`);
     bytesByWork.set(s.work, bytes);
 }
-console.log(JSON.stringify({ local_hash_gate: "PASS x4" }));
+console.log(JSON.stringify({ local_hash_gate: SLOTS.length ? `PASS x${SLOTS.length}` : "n/a (parked)" }));
 const before = await geom();
+// gate 1b: EVERY deferred slot must still stand at its BASELINE lib
+// (deferral invariant — if anything flipped any of them, this placer stops)
+{
+    for (const d of DEFERRED) {
+        const e = before[d.id];
+        if (!e) die(`${d.id} not standing — deferral contract broken`);
+        if (e.lib !== `store/${d.baseline}.glb`) die(`${d.id} lib ${e.lib} != deferred baseline ${d.baseline} — routing may have landed, re-derive before any verb`);
+    }
+    console.log(JSON.stringify({ deferred_invariant: "PASS x4 at baselines", parked: DEFERRED.map(d => d.id) }));
+}
 const totalBefore = Object.keys(before).length;
 console.log(JSON.stringify({ census_before: totalBefore }));
 // gate 2: per-slot live pose + lib + comps; capture exact tuples; neighbor check
@@ -55,17 +91,17 @@ for (const s of SLOTS) {
     if (e.scale !== 1) die(`${s.id} scale ${e.scale}`);
     needWork.push(s);
 }
-// neighbor preflight: no other entity center within 15m of any slot center
+// neighbor preflight vs EVERY standing entity incl. mosaic siblings (not just placed slots)
 for (const s of SLOTS) {
+    if (!needWork.some(t => t.id === s.id)) continue;
     for (const [oid, oe] of Object.entries(before)) {
-        if (!SLOTS.some(t => t.id === oid)) {
-            const [ox, , oz] = oe.pos;
-            const d = Math.hypot(ox - s.pos[0], oz - s.pos[2]);
-            if (d < 15) die(`neighbor ${oid} within ${d.toFixed(2)}m of ${s.id}`);
-        }
+        if (SLOTS.some(t => t.id === oid)) continue;
+        const [ox, , oz] = oe.pos;
+        const d = Math.hypot(ox - s.pos![0], oz - s.pos![2]);
+        if (d < 15) die(`neighbor ${oid} within ${d.toFixed(2)}m of ${s.id}`);
     }
 }
-console.log(JSON.stringify({ neighbor_preflight: "clear >=15m", seats_needed: needWork.length }));
+console.log(JSON.stringify({ neighbor_preflight: "clear >=15m all-census", seats_needed: needWork.length }));
 if (needWork.length === 0) {
     console.log(JSON.stringify({ status: "ALREADY_LIVE_NO_VERBS", mosaics: SLOTS.length, verbs: 0 }));
     process.exit(0);
@@ -93,7 +129,7 @@ for (const s of needWork) {
 const verbs: Array<[string, any]> = [];
 for (const s of needWork) {
     verbs.push(["remove", { id: s.id }]);
-    verbs.push(["spawn", { id: s.id, lib: `store/${s.sha}.glb`, pos: s.pos, yaw: s.yaw, scale: 1 }]);
+    verbs.push(["spawn", { id: s.id, lib: `store/${s.sha}.glb`, pos: s.pos!, yaw: s.yaw!, scale: 1 }]);
 }
 const WebSocket = (await import("ws")).default;
 const ws = new WebSocket(cfg.url, { headers: { Authorization: `Bearer ${cfg.agentToken}` } });

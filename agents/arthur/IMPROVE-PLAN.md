@@ -2829,6 +2829,51 @@ open duplicate notes for these objects.
    UNCHANGED: all four mosaics still at baseline libs, census 274
    (absorbed sibling struct-65 wavepergola arrival). Zero uploads, zero
    verbs this tick.]
+  [STATE improve-41 (2026-09-07, this tick — DECODE-ONLY closure, family
+   placement DEFERRED to Bill, no mutation): committed step (1) decode
+   goats true solids executed and it CHANGED THE VERDICT SCOPE — improve-
+   40's "0048/0052/0059 neighbor-clear" premise was census-bbox evidence;
+   source-true decode of ALL standing neighbors (improve41-decode-goats.ts,
+   hash-domain law: local village_goats3/village_mobius3/village_millrace3
+   sha16 == live lib names; served /library/store bytes are DRACO store-min
+   and hash differently — store fetch is reachability-only) proves the
+   gallery row is structure-entangled in EVERY disc:
+   | slot | intruder (lane domain) | decode-truth |
+   | 0036 | nx-dress-goats (dress) | solids to r2.202, 584v in bed r9.0,
+     1000v in r10.49, sectors 150-300deg (plaza-facing incl. approach
+     bearing), pen y -0.00..1.28 |
+   | 0048 | nx-struct-mobius (struct) | stands ON panel: nearest low vert
+     (y<=2.6) r2.421 -> medallion clearance 1.471m (pinch law passes by
+     71mm), bed film meets legs, gold ring r2.85 threads leg cluster |
+   | 0052 | nx-approach-nw-lamp-001 post (approach, ground-layer lane
+     network) | inside bed at r7.76, light at y1.96; millrace 35.2m clear,
+     nearest pen solid 40.8m |
+   | 0059 | nx-struct-millrace (struct) | penetrates to r7.892, 967v
+     inside r10.49, y -0.00..2.00, bearing 79.9deg |
+   FAMILY LAW CONFLICT: the v2 cure's SOLID bed disc is lawful only over
+   clear ground; every disc carries a foreign-domain standing structure.
+   Per-slot sector clips would gut the panels (0036 penetration INSIDE
+   the r2.85 gold ring; 0048 mobius legs mid-field; 0059 millrace spans
+   the east half). The four discs sit as ONE Bill-approved gallery row
+   (nvp-105 exception class) — reseating any member is a row siting
+   decision crossing dress/struct/approach domains; no foreign lane may
+   be asked to move by this lane without routing. JUDGE DEBT PAID this
+   tick: native UP opportunistically, re-judged improve-40
+   after/gameplay.png — FRAMED YES / field CONTINUOUS / medallion reads
+   monument finial / zero floats / identity FRAMED MOSAIC ARTWORK
+   (margin: mid-radius gold ring reads as arcs broken by plinth =
+   designed foreground, pre-classified in contract). The v2 bytes stand
+   judged PASS by both judges. PLACER PARKED fail-closed (SLOTS emptied,
+   deferred-invariant gate x4 verified all four at baselines LIVE this
+   tick, re-arm templates commented in chassis). BILL'S CALL (row siting):
+   (a) RESITE the row to clear ground r~45 on a fresh bearing — my
+   recommendation: family whole + judged bytes as-built, 4 reseats, zero
+   redesign; (b) partial place 0048+0059 with per-slot accommodations
+   (mixed row state, clips needed); (c) keep row, revert to scattered
+   baseline (Sev 4 stands); (d) move the three intruders instead
+   (crosses three foreign lanes — heaviest). Live world UNCHANGED census
+   274, all four mosaics at baseline libs, zero uploads zero verbs zero
+   comp edits.]
 - `nx-wild-cairn-0022` — Sev 3 (survey-9, 2026-09-06, ZAI + native
   UNANIMOUS): stacked-stone identity passes but TRUE FLOATERS —
   numerous small pebble spheres hover isolated against the sky above
