@@ -9,16 +9,16 @@ const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8")
 const WORLD = "commons-next";
 const Y = -1.5946487083102603e-8;
 const members = [
-  { id: "nx-court", file: "village_court3.glb", sha: "38096b30b9131685be9d8ed829839767ded39dae26e54086dd6604f68cbb7b22", pos: [18.9,Y,-14.8], yaw: -0.90756, comp: {
+  { id: "nx-court", file: "village_court3.glb", sha: "77cab2c3cc3a39c7845da226d1686c41e45f8b5aaf13230dc44bf007a34ed6b4", pos: [18.9,Y,-14.8], yaw: -0.90756, comp: {
     "particles:smoke": { preset: "smoke", origin: [-4.9,3.2,-0.8], count: 50, size: 0.4, speed: 0.35 },
   }},
-  { id: "nx-forge", file: "village_forge3.glb", sha: "fcc66d79b76b109e8d826a1a1ad38e06fc09292a2b8c2da0d31f5702f8893596", pos: [22.11785473473295,0,-7.957568494595163], yaw: -0.90756, comp: {
+  { id: "nx-forge", file: "village_forge3.glb", sha: "620120c4d6f0b4a0e3ffc9ec39decac701be8d07b2ffeb7551700f20d7cef458", pos: [22.11785473473295,0,-7.957568494595163], yaw: -0.90756, comp: {
     "motion:fire_fg_coals": { type: "bob", axis: "y", amp: 0.014, period: 1.8 },
     "particles": { preset: "embers", origin: [0,0.45,0.42], count: 84 },
   }},
-  { id: "nx-cistern", file: "village_bcistern3.glb", sha: "85d956f6600f336d11666b59d53d8e5a889a793aa1b26cbce27b5d993f903f8d", pos: [15.703583236444484,0,-14.586880611718946], yaw: -0.90756, comp: {} },
-  { id: "nx-sign-bakery", file: "village_sign_bakery.glb", sha: "599194ee7f4efd810735f59b1e2d686797a2c29b65249fdc958913619f8ec85c", pos: [14.022735609615019,0,-18.768525175210893], yaw: 2.234032653589793, comp: {} },
-  { id: "nx-sign-smithy", file: "village_sign_smithy.glb", sha: "d8df94003084af390e4f6ef0e15f5d13ade33f8e98ad101b7b0408a9dda577e0", pos: [23.777264390384975,Y,-10.831474824789108], yaw: -0.90756, comp: {} },
+  { id: "nx-cistern", file: "village_bcistern3.glb", sha: "156b4fc8c7287a9d397f8992e7159ca0ce1412d567b12f3c1bfb3fa191df2d95", pos: [15.703583236444484,0,-14.586880611718946], yaw: -0.90756, comp: {} },
+  { id: "nx-sign-bakery", file: "village_sign_bakery.glb", sha: "49342c523aee4d412fb570d77fbe770c882685ef84de2e75df4894966296dbb1", pos: [14.022735609615019,0,-18.768525175210893], yaw: 2.234032653589793, comp: {} },
+  { id: "nx-sign-smithy", file: "village_sign_smithy.glb", sha: "3522e5ab0c3a5100bc2afadf0bf33126a9e8ecd905e542544e495fd7184d80a6", pos: [23.777264390384975,Y,-10.831474824789108], yaw: -0.90756, comp: {} },
 ] as const;
 const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));

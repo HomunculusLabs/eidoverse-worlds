@@ -2273,7 +2273,19 @@ open duplicate notes for these objects.
   x440-465 y265-305; floating wall-lamp dot x196-206 y284-292.
   Interleave note: next-place-court-ensemble.ts dirty in tree = sha
   re-pin to LIVE lib 59534b10 (landed re-place bookkeeping, GLB clean,
-  judged bytes current). Evidence:
+  judged bytes current).
+  [PIN-DEBT REPAIRED improve-48 (2026-09-07): the "landed" pin edit was
+  never committed (improve-29 class) and had gone stale twice over —
+  live moved 59534b10→77cab2c3 (improve-30 cure), and the dirty edit
+  still sat at the 59534b10 intermediate. Full-ensemble audit this tick
+  found ALL FIVE member pins stale vs live (forge pre-tex-86 fcc66d79,
+  cistern 85d956f6, sign-bakery 599194ee, sign-smithy pre-waysign-8
+  d8df9400). All five re-pinned to verified-live client-sha256 domain
+  (local file == live lib name per member; sign pos/yaw tuples match
+  live exactly). Cure GLB residue committed same tick: court3 77cab2c3
+  (live-exact), tower3 a989bdc3 (ring-sibling rebuild == live nx-tower).
+  Zero world mutations — the world was already correct; only the repo's
+  pin source was lying.] Evidence:
   reviews/survey8-slice/nx-court/{gameplay,front}.png
   [improve-30 CONTRACT (2026-09-06, this tick — BEFORE edit): take order:
   windmill row 4 idle-guarded until 09-07 01:57 (waysign-6 rider 09-06
