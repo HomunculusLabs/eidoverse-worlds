@@ -478,3 +478,73 @@ export function hyparShell(
         g.add(slat);
     }
 }
+
+/** STRUCTURES LANE primitive (struct-49): arcade as colonnade of true
+ * circular arches — the loop charter's third named form family (after
+ * spiralRamp and hyparShell). Emits, in one call:
+ *   - piers between the arch openings (pierMat), full deck width
+ *   - arch RINGS on both long faces (archMat — use the dark lane so the
+ *     openings read as void rhythm at 18m)
+ *   - a spandrel wall band between arch crowns and the deck (bandMat)
+ *   - a parapet cap band over the whole span (bandMat)
+ * Local frame: arcades run along +X, centered; openings face ±Z.
+ * Returns the arch CROWN x-positions (length = `arches`) so callers can
+ * mount beads/lamps on the rhythm. Segment counts kept coarse (boxes and
+ * 8-gon cylinders) for the merge budget; everything static merges. */
+export function arcColonnade(
+    g: THREE.Group, o: {
+        span: number, arches: number, radius: number,
+        deckW: number, deckY: number, bandH: number, parapetH: number,
+        archMat: THREE.Material, pierMat: THREE.Material, bandMat: THREE.Material,
+        name: string,
+    },
+): number[] {
+    const { span, arches, radius: R, deckW, deckY, bandH, parapetH, archMat, pierMat, bandMat, name } = o;
+    const pitch = span / arches;
+    const pierW = Math.max(0.28, pitch - 2 * R); // solid between openings
+    const springY = deckY - bandH - R;           // arch centers sit here
+    // piers: run full height spring->grade with footings, both faces carried
+    for (let i = 0; i <= arches; i++) {
+        const px = -span / 2 + pitch * i;
+        const pierMesh = new THREE.Mesh(new THREE.BoxGeometry(pierW, springY, deckW - 0.06), pierMat);
+        pierMesh.name = `${name}_pier_${i}`;
+        pierMesh.position.set(px, springY / 2, 0);
+        g.add(pierMesh);
+    }
+    // arch rings: TRUE half-tori standing in each long face (XY plane),
+    // springing at springY, crowning at springY+R — the visible arch
+    // silhouette. Dark iron lane so the openings read as void rhythm.
+    const crowns: number[] = [];
+    for (let i = 0; i < arches; i++) {
+        const cx = -span / 2 + pitch * (i + 0.5);
+        crowns.push(cx);
+        for (const sz of [-1, 1]) {
+            const face = (deckW - 0.06) / 2 * sz;
+            const ring = new THREE.Mesh(
+                new THREE.TorusGeometry(R, 0.09, 8, 14, Math.PI),
+                archMat,
+            );
+            ring.name = `${name}_arch_${i}_${sz > 0 ? "n" : "s"}`;
+            ring.position.set(cx, springY, face);
+            // torus lies in local XY plane by default: exactly the wall
+            // face plane for faces at ±Z. No rotation needed.
+            g.add(ring);
+        }
+    }
+    // spandrel band: fills crown->deck on both faces (the wall the arches
+    // punch through) — full-length slab with a solid top edge at deck level
+    const band = new THREE.Mesh(new THREE.BoxGeometry(span, bandH, deckW - 0.06), bandMat);
+    band.name = `${name}_band`;
+    band.position.set(0, deckY - bandH / 2, 0);
+    g.add(band);
+    // parapet cap: narrow bands at both deck edges, top exactly at
+    // deckY + parapetH (clean section math, no scale hacks)
+    for (const sz of [-1, 1]) {
+        const cap = new THREE.Mesh(new THREE.BoxGeometry(span, parapetH, 0.22), bandMat);
+        cap.name = `${name}_parapet_${sz > 0 ? "n" : "s"}`;
+        cap.position.set(0, deckY + parapetH / 2, (deckW / 2 - 0.11) * sz);
+        g.add(cap);
+    }
+    return crowns;
+}
+

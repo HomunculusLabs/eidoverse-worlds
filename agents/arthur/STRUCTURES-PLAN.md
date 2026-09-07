@@ -403,6 +403,7 @@ prior eye-check pointers unchanged.
 | struct-45 | SHARD ROW 26: soundmirror true-bowl rebuild | exact standing tuple (28.7, −0.02608747, −18) yaw 0 | 0 | — | LIVE, lib 5216db0a→f313e59a, circuit walk 6/6 0.354m |
 | struct-47 | R4-1 Meridian Stair (portal) | th276/R55 NW wedge | (5.7, −0.0378, −54.7) | 3.037 (lane radial, near face to village) | LIVE, 6-leg two-way walk 6/6 0.37m |
 | struct-48 | REFINE: native re-judge clearance | mobius + pendulum exact standing tuples (no placement) | — | — | 2/4 native debts CLEARED (mobius PASS, pendulum PASS); hypar + soundmirror still owed |
+| struct-49 | R4-2 Bridge of Nines | S-axis spoke, center (-7.28, 69.62) yaw -1.67552, span along axis | (-7.28, 0.0276, 69.62) | -1.67552 | LIVE, walk 9/9 max 0.396m, idempotent |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -1585,3 +1586,59 @@ steps at panel seams, right side included); through the ring's opening
 just right of the center post a thin sky sliver remains BY DESIGN (the
 open bandstand aperture) — rays pass between the twisting sections,
 never through the band.
+
+## struct-49 — R4-2 THE BRIDGE OF NINES (concept contract + record)
+
+**Interrupted-window recovery (artwalk-32 pre-place class):** mk script +
+GLB + review renders (v1 20:05, v2 20:11) landed on disk with live
+untouched and no ledger/plan/commit record; ledger max was struct-48 while
+`reviews/struct49-ninesbridge*` stood untracked. Recovered per law:
+verified on-disk GLB hash matches deterministic rebuild ×2, placed fresh
+this tick, interruption named here and in the ledger.
+
+**Concept**: the nine-idea lineage made walkable. The Pendulum Wave freezes
+nine swings; the Meridian Stair carries nine slats per panel; the Bridge of
+Nines CROSSES on nine. One idea: a low vaulted arcade — a 24.3m ashlar band
+of NINE true half-torus arch rings on both faces over a full-span iron
+spine (the skene void lesson: openings read as 0.7m dark recesses, not
+sky-through passages), flat timber deck on top, nine-tread stair flights at
+both ends, nine brass crown beads per parapet marking the arch crowns at
+dusk (beacon/meridian lineage, no new light entity). First consumer of the
+new housekit `arcColonnade` primitive (charter's third named form family
+after spiralRamp and hyparShell).
+
+- Gates honest: bbox 24.3×2.47×3.1 → 75.3m² ≥ 16 and 2.47 ≥ 2.2 — real
+  trimesh, deck genuinely walkable (walk-verified). Stair rises 0.2133
+  ≤ 0.25 threshold law; v1 lip defect (stair tops 7cm under deck surface)
+  caught by the interrupted window's native judge and fixed in-source
+  (RISE = (DECKY+0.07)/9 tops exactly at the deck tread surface).
+- Build: mkv3-ninesbridge.ts → village_ninesbridge3.glb, deterministic
+  ×2, sha256 1e4e84e98900d89c, 5 nodes after merge, texMat lanes
+  (struct-38 law), empty comp bag.
+- Siting: S-axis spoke, center (-7.28, 0.0276, 69.62), yaw -1.67552 —
+  span ALONG the plaza→S axis so the south stair meets the field-side
+  approach line and the crossing is made over the deck. Fresh-census SAT
+  dead-on-axis min gap 7.33m (echoarch); terrain 5-point true-pose spread
+  12mm over 29m (flat). NE milestone-walk line (P2→P3 home-straight)
+  surveyed first and honestly REJECTED: no candidate ≥1.4m clear of the
+  approach lane's compound network bbox + kiln/statuary clusters on either
+  side (0 passing across t10–40); beyond-P3 seats read as cloister-field
+  outliers, not crossings.
+- Probe self-catches this tick (two, world fine both times): (1) first
+  scan treated census bbox as world-space — the local-model truth is the
+  placer's pos+rotation transform (next-place-struct47.ts:44-46); (2)
+  terrain preflight v1 sampled on wrong span vectors — re-sampled on the
+  true final-pose axis.
+- Placement: PLACED_VERIFIED 1 verb, idempotent rerun zero verbs.
+- Walk: 9-leg two-way MCPL ALL_PASS max 0.396m — field approach → south
+  stair foot → up nine treads → deck mid → deck far → north descent →
+  re-cross → south + north flanks at grade.
+- Visual PASS NOT CLAIMED — both judges down all tick (native 1210 ×2 +
+  paced retry; ZAI fallback timeout ×2, 600s total), placement proceeded
+  source-grounded under Bill's standing visual-tool waiver; before/after
+  gameplay + night frames banked in reviews/struct49-ninesbridge-v2/.
+
+**Bill should eye-check**: from the S approach on-axis — the nine-arch
+arcade silhouette against the sky; climb the south stair, cross the deck
+north, and look back at the village across nine arches; at dusk, the nine
+brass crown beads per side.
