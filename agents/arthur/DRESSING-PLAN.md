@@ -1,6 +1,39 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-123 — lawful HOLD (14th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD 8c667cac (sweep-95, which disclosed and
+  repaired its own accidental staging sweep of 5 struct files); interlane
+  md5 f6254cd0 pin-exact. Fresh census 292 steady — 29 fleet
+  district-qualified (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy core
+  intact; zero arrivals or departures; ZERO dress-domain drift.
+  Round-3 closers PINS_EXACT 4/4 vs live: foxden 856deec5 (73.0,
+  −0.0532, −10.5) yaw 4.7124, lanternhook 639c5480 (−57.0, −0.0306,
+  −70.0) yaw 4.9277, seats cb34bd36 (−57.0, −0.0263, −72.5) yaw 2.7349,
+  streamstones aabbc23d (75.05, −0.0249, −46.90) yaw −0.7854.
+- **Shard routing terminal (standing)**: all nine Round-1 `nx-dress-*`
+  row blocks closed (5/29/30/31 DROPPED or NATIVE-DROPPED, 32/33/34/37/38
+  EXECUTED, row 38 declares queue EMPTY); round-2 routes to legacy-core
+  off-limits only; no round-4 section; intake unchanged since survey-42
+  (survey55-slice remains newest).
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07, md5
+  12cec3fa; no ruling commits in the log trail.
+- **Blocked on Bill (standing, said once)**: bellows siting a/b/c
+  (dress-103/104, v8 accepted), SW lamp policy a/b/c (0 of 3 spent).
+  Cheapest unblock stays the two one-line rulings in
+  `reviews/dress-round3-eye-gate.md`.
+- **Two probe self-catches corrected at source, disclosed**: (1) intake
+  grep `survey-5[6-9]` over-matched old single-digit `survey-6` tags —
+  line reads showed all 7 hits are historical annotations, intake
+  genuinely unchanged; (2) hold probe compared lib by full-string
+  equality against 8-char pins (dress-121's known class, hit again) and
+  carried a yaw ≤π guard that false-fails legitimate >π radians (3π/2
+  landmarks) — both fixed, probe then PASS 4/4.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use this tick (D+0, E+0).**
+
 ### dress-122 — lawful HOLD (13th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
