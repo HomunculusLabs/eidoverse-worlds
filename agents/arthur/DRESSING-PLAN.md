@@ -1107,7 +1107,10 @@ identity intent. Rotation stays NW->NE->SE->SW.
 12. `nx-dress-se-mossbowls-001` — moss-lined hollow stones at the forest
     edge; quiet, low, contemplative-wild.
 13. `nx-dress-se-streamstones-001` — dry-stream stone run suggesting a
-    seasonal waterline through the SE wild.
+    seasonal waterline through the SE wild. **DONE (dress-105, PLACED
+    2026-09-07 — v5 `aabbc23d` seated at the forest-0057 E flank,
+    moss-head toward the trees; details in the dress-105 siting-log
+    entry).**
 14. `nx-dress-se-foxden-001` — den mouth + spoil heap at the tree line;
     implies fauna without placing any.
 
@@ -1135,6 +1138,57 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-105 — SE dry-stream stone run (round-3 item 13, PLACED, LIVE)
+
+- **Concept contract**: the SE wild's hydrology made visible — a seasonal
+  drainage line remembered as a meandering ribbon of water-worn stones on
+  a dark sediment bed, mossy at the forest head, dissolving into field at
+  the tail. Distinct from se-stones (piles), cairns (waymarks),
+  mossbowls (basins): identity = ONE CONTINUOUS WANDERING RUN. Static,
+  unlit — SE spend 0 of 8.
+- **Build arc** (`assets/mkv3-dress-se-streamstones1.ts`): v1 `768633e6`
+  single-file line, native 18m straight-edging FAIL; v2 `629391e9`
+  2-row + width rhythm, still straight (perpendicular vantage collapsed
+  the meander); v3 `bd2f29ec` value raise — judge VALUE claims
+  DISPROVEN by pixel probe (lum bands 0–127, light band 410 px);
+  v4 `80867cc7` sediment bed ribbon added — three judges claimed
+  bed-absent, probe found 1998 bed px (disclosed; the bed renders, the
+  grazing 5° vantage hides it); v5 `aabbc23d` bend-following deposition
+  (secondaries sit INSIDE bends, drop at crossings — the v2–v4 strict
+  alternation read "angular zigzag," a real judge-caught defect) +
+  amplitude 1.5. Deterministic ×2; decode ALL PASS (5 nodes, envelope
+  x −4.155..4.531 / z ±2.127, h 0.287 below-knee, 15/15 continuity
+  slices, anchor density 721/764 vs median 346).
+- **Vantage law banked (dress-105)**: a plan-view S-meander CANNOT read
+  from a 5°-down grazing vantage at 18m — the oblique judge fails
+  (MEANDER/VALUE) on the same bytes an endon/plan judge passes (bed
+  present, stone mix present, bend offsets visible). Judge-by-vantage:
+  endon + aerial + live-seat walker render carry the verdict; pixel
+  probes settle judge-vs-source disputes in both directions.
+- **Siting** (`dress105-streamstones-scan.ts`, census 285): only 4 legal
+  poses in the whole SE ring (244 SAT deaths — the ring is saturated).
+  Concept-first pick **(75.05, −46.90) yaw −45°, az −32 r 88.5,
+  spokeOff 19.9m**: minGap 2.28 to nx-wild-forest-0057 itself (the moss
+  head's host, local +x end 6.7m from its trunk mass), wayside-0056
+  +2.37, cairn-0043 +3.31, no sub-1.4m adjacency. Rim corners
+  85.6..91.7 ∈ [70,100] (CITY-PLAN district band). h 0.287 < knee —
+  cone-exempt (231 cone-clash poses disclosed in scan, none binding).
+  Terrain 7pt spread 8.8mm → PY −0.0249 (worst corner).
+- **Placement** (`se-dress105-place.ts`, dress-94/102 chassis): hash
+  gate → blocker-epoch guard [forest-0057, wayside-0056, cairn-0047,
+  cairn-0043] → fresh SAT (clear) + rim (in-band) → upload (no 429) →
+  1 spawn verb → PLACED_VERIFIED @ store/aabbc23d5552b01c.glb →
+  idempotent 0-verb rerun. Post census 286, comps empty.
+- **Live-seat verification** (`dress105-live-seat-render.ts`, exact
+  seated tuple + forest host): walker 18m — 4/4 PASS (grounded at the
+  forest edge, wandering ribbon reads, stream-bed scale, zero defects);
+  aerial + 6m frames banked. Judge NATIVE throughout this tick (zero
+  1210 flaps).
+- **Eye-check for Bill**: SE spoke, ~89m out — where the walker's line
+  meets the eastern tree clump, a ribbon of stones on a dark bed flows
+  OUT of the forest and wanders into the open meadow, mossy where it
+  leaves the trees. Should read "dry stream," not "rock border."
 
 ### dress-102 — NW fieldcross v7 (PLACED, LIVE — dress-101's deferred close-out)
 
