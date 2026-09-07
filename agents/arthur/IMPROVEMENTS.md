@@ -4868,4 +4868,6 @@ fixes ≈ 6 F.)
 
 - [city-21] 6th hold — gate exit 0 at f9e48af7, register re-verified live-fresh on a NEW census (286==286, zero arrivals/departures): 13/13 EXECUTED tuples EXACT worst 0.0005m, amphi HOLD intact at original site (-23.32,37.31 lib 95a98c74), artwalk rider hosts harvestcart/milkstand/churn unmoved at (12,36)/(22.5,33)/(20,35); IMPROVE-PLAN shard checked fresh — zero [STATE OPEN] rows, none city-owned; remaining register rows all HOLD-for-Bill (amphi disposition 3 options, wave-2 mosaic/mile nvp-105 blessing, rider eye-gates b31/b32/b33); wave-1 packet stands delivered (city-16); zero mutations (D+0, E+0)
 
+- [city-22] 7th hold — register live-fresh on fresh census 286: 13/13 EXECUTED tuples EXACT worst 0.0005m, libs match incl. post-swap reedpool 7d770620 + angler 6ee5b4b0, amphi HOLD intact at original site 95a98c74, artwalk rider hosts harvestcart/milkstand/churn unmoved; IMPROVE-PLAN zero OPEN rows, none city-owned; remaining rows all HOLD-for-Bill (amphi disposition 3 options, wave-2 mosaic/mile nvp-105 blessing, rider eye-gates b31/b32/b33); wave-1 packet stands delivered city-16; zero mutations (D+0, E+0)
+
 **Running total: 2370708 / 2000000**
