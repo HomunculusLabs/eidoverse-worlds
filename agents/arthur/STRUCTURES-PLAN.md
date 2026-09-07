@@ -4255,3 +4255,29 @@ nested catenary mouths end-on; at dusk the single amber bead at the crown.
 
 NEXT: 86%3==2 -> build tick (R8-3 commission or shard re-arm scan); 87 the
 slid refine tick (echoarch Sev 3) unless Bill re-opens another subject.
+
+## struct-86 (2026-09-07): CHAIN VAULT queue-law FIRST debts PAID
+
+Debt tick (86%3==2 would be a build slot; the owed queue outranks it per
+struct-78/79/84 precedent — R8-3 commission slides to 88).
+
+1. IDEMPOTENCY RERUN: placer rerun — already live with exact lib, ZERO
+   verbs, PLACED_VERIFIED (52.6, -0.0478, -19.2) yaw -1.2217 lib
+   store/8fecf67df7d33970.glb comp {}, census 291. SAT re-verified fresh:
+   worst nx-dress-se-snagdead-001 +4.74 (grown AABB 4.70x4.81).
+2. TWO-WAY MCPL WALK (struct86-walk-chainvault.ts): 8/8 ALL_PASS
+   maxArrival 0.364 — through-passage mouth A -> center -> mouth B, then
+   reversed B -> center -> A (both mouths entered and exited in both
+   directions), PLUS full outside circuit CW at 6.5m standoff (N->E->S->W->N,
+   worst arrival 0.364). Enterable contract proven live.
+3. BILL EYE-GATE PACKET delivered ONCE:
+   reviews/struct-r8-eye-gate.md — Chain Vault primary judgment (nested
+   catenary mouths end-on; one amber crown bead at dusk) + standing
+   re-checks for rotor/whisperhorn/screwwell. Lane continues cadence; not
+   gated on verdicts.
+
+NEXT: 88%3==1 -> build tick (R8-3 commission or shard re-arm scan); 87 the
+slid refine tick (echoarch Sev 3) unless Bill re-opens another subject.
+NEXT-87 CLARIFICATION (this tick): the slid refine slot IS 87 — if a
+commission/build lands at 87 instead (queue-law escalation), the refine
+slot slides to 90 (next N%3==0).
