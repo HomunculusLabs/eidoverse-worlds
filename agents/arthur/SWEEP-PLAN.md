@@ -2506,3 +2506,61 @@ bunkhouse/longhouse, @73 potter/market... potter/market now the stalest at
 sweep-73). NOTE for sweep-78+: observatory circuit tool is UNPINNED pending
 the CITY-PLAN defect note disposition — do not run struct2-walk-observatory
 until re-pinned to (-39.811,-87.356) yaw 0.42761.
+| sweep-78 | 2026-09-07 | 282==282 epoch-corrected (epoch A 282==282 vs committed sweep-77 baseline sha16 bf91cfad0d394131: 0 arrivals, 0 departures, exactly TWO classified drift fields = nx-struct-needlerest pos (41.1,-0.0467,-23.8)->(10.273,0.0029,68.737) + yaw 7.33->2.993 (171.5deg az81.5 r69.5), same lib bb227fd6 content-addressed = sibling city-9 in-flight, CITY-PLAN register row 45 ledger-matched line-for-line, commit pending at this tick (untracked city9-scan/terrain/place tools corroborate; improve-67 independently classified it foreign in-flight); epoch C 20s-paced re-read 0/0/0 — relocation settled; snapshot rewritten 113149B/282 ents/sha16 589ca0e97de14ee4, pre-write assertion diff exactly [needlerest pos+yaw], post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 34th sweep since routing, no escalation due — law keys severity-1); 244 bbox non-light / 229 classified / 0 coverage holes, SAT run epoch A + re-run epoch B over the new-seat bytes — ZERO new contacts (sweep-side corroboration of city-9 rect-SAT worst 2.265 claim) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37 — walks stand by construction: new seat 34.9m clear of nearest NE waypoint, 32.3m clear of potter; sweep-77 vacated-walk-tool finding does NOT recur, grep finds no walk tool pinned to the old seat) + tier-2 56th cycle per committed LRU pointer potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL PASS (observatory circuit SKIPPED — unpinned, vacated seat per sweep-77 note) | pins 15/15 ALL_PINS_OK 33rd consecutive (struct18 real exit 0) + extended battery ALL_PASS 15 checks (carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib 18b69a6bb2f5862f bbox PRESENT + companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, beacon 03d278be at new city-7 seat, hamlet embers 5-of-5, court smoke, 38 lights, 16 comp-bearing census-matched); interlane f6254cd0 stable; ledger law EXACT 2370700 at append; standing gate ALL PASS real exit 0 at tick-start 921d123f + re-run at 31855312 post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+
+sweep-78: CLEAN SWEEP, epoch-corrected tick (one classified relocation
+absorbed). Census epoch A 282==282 vs the committed sweep-77 baseline
+(sha16 bf91cfad0d394131): 0 arrivals, 0 departures — then the paced epoch-B
+re-read caught sibling city-9 landing mid-tick: nx-struct-needlerest moved
+(41.1,-0.0467,-23.8) yaw 7.33 -> (10.273, 0.0029, 68.737) yaw 2.993
+(171.5deg, az81.5 r69.5), same lib bb227fd6 content-addressed zero-upload
+move, matching the CITY-PLAN register row 45 line-for-line (EXECUTED
+city-9, remove+spawn PLACED_VERIFIED + idempotent 0-verb rerun per its own
+register text). City-9's commit was still pending at this tick's close
+(untracked city9-scan/terrain/place tools corroborate the active window;
+improve-67 independently classified the same move as foreign in-flight).
+Per the polish-270 epoch law all affected evidence was re-taken fresh before
+verdicts: SAT re-run at epoch B (ZERO new contacts at the new seat —
+sweep-side corroboration of city-9's own rect-SAT worst 2.265 vs the NE
+bench claim), standing gate re-run ALL PASS real exit 0 at the advanced HEAD
+31855312. Epoch C 20s-paced re-read 0/0/0 — the relocation settled, final
+epoch pinned. Walk affectedness classified QUANTITATIVELY: the new seat sits
+34.9m clear of the nearest NE waypoint and 32.3m clear of the potter tier-2
+target — walks stand by construction (sweep-53 precedent). The sweep-77
+vacated-walk-tool finding does NOT recur for this relocation: grep finds no
+walk tool pinned to the old needlerest seat (only city-lane scan/place
+tools reference it). Overlap: exit 3 on exactly ONE unclassified = R-121
+lamp-n | nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26
+choreography @ sweep-43, thirty-fourth sweep since routing, NOT new, no
+escalation due (the law keys on severity-1). Tier-1 4/4 per-leg verified
+81/81 ALL_PASS, every leg real exit 0: core 64/64 @ 0.38, NW 5/5 @ 0.38,
+NE 7/7 @ 0.38, SW 5/5 @ 0.37. Tier-2 56th cycle per the committed LRU
+pointer: potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL PASS; observatory
+circuit correctly SKIPPED (unpinned to the vacated seat per the sweep-77
+note — do not run until city re-pins it). Integrity: pins 15/15 ALL_PINS_OK
+(33rd consecutive clean, struct18-fleet-pin-check real exit 0) + extended
+battery ALL_PASS 15 checks (carousel exact 7 + ce3633992d07055e, gate lamps
+4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT + 4 -l companions, belltower
+2419fbc53a1d65e1 + ladder comp live, windmill 369c572480b0e786, woodyard
+01b78fdd00f090a7, welcome 7d1bd0c9545c44fb + welcome-l companion live,
+cistern 156b4fc8c7287a9d, beacon 03d278be verified at the new city-7 seat,
+hamlet embers 5-of-5 full payloads, court smoke live, 38 lights, 16
+comp-bearing entities census-matched). Interlane md5 f6254cd0 stable.
+Ledger law EXACT 2370700 at append — probe self-catch repaired pre-verdict:
+my first law probe summed the whole file with base 2000000 (sweep-36 class);
+the canonical law is ledger-append.py's own law() (base 2336002, post-
+[audit-balance] slice), re-derived from the tool source and verified EXACT.
+Snapshot rewritten like-for-like with pre-write assertion (diff exactly
+[needlerest pos+yaw]): 113149B / 282 entities / sha16 589ca0e97de14ee4,
+post-rewrite drift vs live ZERO. Standing gate ALL PASS real exit 0 at
+tick-start 921d123f, re-run at 31855312 post-interleave. Zero world
+mutations, zero uploads, zero comp edits, zero defect notes, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-79): row-cottage +
+observatory is BLOCKED while observatory stays unpinned — substitute the
+next-stalest legal pair garden-cottage + tower-house (57th cycle — LRU by
+latest-walk chain: @78 potter/market, @77 hall/forge, @76 inn/stable, @75
+garden-cottage/tower-house... row-cottage last walked sweep-72 and is the
+single stalest member; if the city lane re-pins the observatory tool before
+sweep-79, honor the original row-cottage + observatory pairing instead).
+
