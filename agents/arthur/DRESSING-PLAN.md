@@ -67,6 +67,24 @@
 
 
 ## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
+- survey-42 (2026-09-07, NATIVE, live bytes bd2e613a gameplay,
+  reviews/survey42-slice/bd2e613a10b9762e/): `nx-dress-milkstand`
+  second-vote DISSENT vs survey-20's NATIVE CLEAN 4/4 — identity
+  borderline-FAIL at 18m: cluster reads as TWO DETACHED generic props
+  (bench x444-506 + rack x463-490 with 1-2px rails reading
+  ladder-back/fence/sign-frame-missing-board + churn x500-513 a 13px
+  dark blob readable as barrel/bucket/bollard); no can neck/lid
+  break, no pale metal tone anywhere, churn grounding sub-threshold
+  (no shadow mass under x500-513). Glitch classes CLEAN, bench
+  grounded, scale exact (60px = 1.2m). Same judge + same distance +
+  fresh live bytes as survey-20 — tie-break THIRD VOTE owed before
+  any cure talk; if confirmed, cheapest fixes per judge: churn
+  neck/lid break + lighter tone, tuck can against bench or hang one
+  from the rack (grouping), raise rack to break horizon. Off-limits
+  legacy-core set — probe only, Bill's call (fountain survey-8
+  routing shape). Zero open-duplicate verified (grep: no prior
+  milkstand note here).
+
 - survey-29 (2026-09-07, NATIVE, live bytes 1ea38f61 gameplay+night, reviews/survey29-slice/bellpost/): day-frame identity dissent on dress-86 bellpost — reads LAMP/torch-first ~75-80% (saturated orange + straight-sided cone + on-axis mount; no bronze value/crown/lip/hanging offset); night frame PASSES (zero emissive/bloom — inert bronze read, correct). Probe: value/mount, not mesh. Margin: detached ground squiggle left of base ~40-50px (hairline artifact class). **CLOSED by dress-91: native re-judge CONFIRMED the dissent on exact live bytes, v6 cure reseeded live (see dress-91 entry below).**
 
 - [survey-6, 2026-09-06, NATIVE (restored), 18m gameplay, live bytes lib

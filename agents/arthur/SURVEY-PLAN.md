@@ -2244,3 +2244,80 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   518a42e5 (ledger law EXACT 2370698; improve-59 at tip). Verdicts 0
   confirmed / 8 clean (6 clean-with-margin) / 0 dropped. Zero world
   mutations, zero uploads, zero comp edits, zero shared-budget use.
+
+## Judged index (survey-42)
+
+- survey-42 (2026-09-07, NATIVE 2/6 + ZAI fallback 3/6 + 1
+  not-executed (giftshelf, run budget — survey-27 precedent), native
+  flapping survey-26/31/35/36/41 class: mile-plain 9459 and milkstand
+  landed native; mile-lamp 1210 x3, harvestcart 1210 x2, snagdead 1210
+  x2 — one paced retry each, burned, ZAI fallback disclosed; 18m
+  gameplay primary, fresh live store bytes 6/6 HTTP 200 curl UA on
+  exact census-42 libs, served-shas pinned 9459eaa3 / 052120d7 /
+  c623cfa6 / ee30d670 / bd2e613a / 7ac83203): ROTATING DISTRICT PASS
+  over never-judged objects (severity backlog empty — survey-41
+  statement re-verified fresh: every standing candidate row carries
+  its native verdict, off-limits core notes all routed). Mile family
+  (12 stones, 2 shared libs — family-shared-bytes law: one judge per
+  lib covers 003/004, 001/002, 005/006, 007/008, 009/010, 013/014
+  across NE/NW/SW): MILE-PLAIN 9459eaa3 NATIVE CLEAN-with-margin —
+  canonical waymarker gestalt holds at 18m (cap-over-shaft x469-493
+  y340-397, crisp edges, directionally-correct contact shadow), zero
+  glitch classes; margins: no inscription/face plate resolves
+  (silhouette carries identity alone, could pass as boundary marker),
+  cap sits 3px below horizon (no free sky-contrast), right base half
+  lacks contact AO. Corroborates improve-3 ZAI CLEAN. MILE-LAMP
+  052120d7 day ZAI CLEAN-with-margin (cap+plinth+bracket monument
+  read, grounded, zero glitches; side-arm bracket reads dark fixture
+  at 18m) + night NATIVE: lamp bead function DEAD in mesh — zero
+  warm px, zero halo, zero ground pool (lamp head x485-497 y355-366
+  unlit; DECODE: both mile libs carry ZERO emissive materials, lamp
+  node = unlit iron — dead-by-construction in bytes,
+  stringlights/struct-52 class; 3 of 6 lamp-mile instances
+  (009/007/013) carry live server light companions -l per census
+  which the solo chassis cannot render — night-read verdict is
+  BYTES-ONLY for the bead itself; server-light identity on those
+  three verified by census presence, not render; the three
+  no-companion instances 010/008/014 read in the mile-plain class);
+  improve-3's "side plate borderline legible — note only" margin
+  matches. No row — legacy-core off-limits set, Bill's call.
+  HARVESTCART ZAI CLEAN-with-margin — laden-cart gestalt PASS (bed
+  x468-556, two spoked wheels with correct spoke transparency, cargo
+  mound, drawbar x407-470, pole x546-550), grounded with contact
+  shadow; margins: cargo reads "laden" not "harvest" (contents
+  sub-threshold), shadow terminates x530 short of right wheel x545
+  (~15px, perceived-float watch), pole-top tab offset reads
+  flag/whip ambiguous, 2-3px drawbar shimmer risk in motion.
+  MILKSTAND NATIVE second-vote DISSENT — identity borderline-FAIL:
+  cluster reads as TWO DETACHED generic props (bench x444-506 + rack
+  x463-490 1-2px rails + churn x500-513 a 13px dark blob that could
+  be barrel/bucket/bollard), no can neck/lid break, no pale metal
+  tone, churn grounding sub-threshold (no shadow mass under
+  x500-513), rack reads ladder-back/fence-segment/sign-frame-missing-
+  board; glitch classes CLEAN, bench grounded, scale exact (60px =
+  1.2m honest). DISSENTS survey-20's NATIVE CLEAN 4/4 on the same
+  judge+distance+live bytes — tie-break third vote owed, no defect
+  row yet (probe law). SNAGDEAD ZAI CLEAN-with-margin — dead-snag
+  identity PASS five-cue (flared buttress, twin snapped crown
+  spikes, three staggered stubs, hollow knot at correct 2.3m,
+  weathering break), grounding PASS (130px shadow continuous into
+  root flare + footprint ellipse), scale exact within 5%,
+  corroborates dress-84's placement; margins: upper-spike sky
+  contrast weak (first loss under fog/bloom), 1-3px stubs
+  sub-threshold individually, knot reads "dark mark" not "hollow"
+  beyond 12-15m, z-fight/alias motion flags cannot clear from still
+  (verify-tier only). GLOVESHELF not executed (run budget; carried
+  to next wakeup's pool). Routing: ONE note — milkstand second-vote
+  dissent routed to DRESSING-PLAN SURVEY INTAKE (off-limits
+  legacy-core set, probe-only, Bill's call; third-vote tie-break
+  named); zero IMPROVE-PLAN candidate rows (no confirmed defect);
+  grep-verified zero open duplicates pre-append. Census 282==282
+  zero churn vs survey-41 snapshot; 4 same-lib POS_MOVED flips =
+  city-7 beacon pair + city-8 observatory pair relocations, both
+  tuple-exact ledger-matched (596a6cf5 / 5e4529fc), foreign-domain;
+  new epoch baseline sha16 0d28bfddee1b0678. Gate: ALL PASS real
+  exit 0 first try at 5d289689 (own survey-41 at tip; ledger law
+  EXACT 2370698 pre-append). Verdicts 0 confirmed / 5 clean (4
+  clean-with-margin) / 0 dropped / 1 dissent-routed / 1
+  not-executed. Zero world mutations, zero uploads, zero comp
+  edits, zero shared-budget use.
