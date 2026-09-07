@@ -2543,6 +2543,24 @@ verdicts:
   fixes named: cap value break, 2-4deg lean, arm exaggeration).
   Native tie-break STILL OWED. Evidence: reviews/survey27-slice/
   struct-waystone/]
+  [survey-28 native tie-break (NATIVE, recovered after one paced retry):
+  cluster resolves toward CLEAN — identity PASSES (weak): stepped
+  plinth + tapered shaft + cap/finial all resolve at 18m, cap breaks
+  the skyline, h:w ~4.5:1 fits standing stone over stubby bollard;
+  grounding PASS (plinth flush y~394-395 + anchored contact shadow,
+  zero lean/floats); silhouette PASS (base ~20px -> shaft ~13px
+  taper). Margin-tier only: post-read ambiguity (shaft slenderness —
+  one notch more shaft/cap mass would remove it), glyph sub-pixel at
+  18m (close-range detail tier), cap reads bump-not-capstone (4-5px,
+  silhouette-only intent), dark albedo crush risk under engine/night
+  light, motion aliasing unverified (single frame). NO confirmed
+  defect. Cluster final: 2-1 defect-side votes were both ZAI
+  (survey-26/27) vs 1 ZAI improve-3 CLEAN; the NATIVE read lands on
+  the clean side — per the fleet's native-outranks-fallback law the
+  tie-break closes the row CLEAN-with-margin, idiom-level accents
+  (lean/value-break) remain an optional polish note exactly as the
+  caveat names. Probe, not a verdict; decode/execute law stays with
+  struct. Evidence: reviews/survey28-slice/waystone/]
 
 
 ## struct-59 (2026-09-07): R4-4 THE STILLWIND WALL — v2 built + judged,

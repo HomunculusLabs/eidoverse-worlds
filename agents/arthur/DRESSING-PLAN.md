@@ -2964,6 +2964,26 @@ verdict:
   precedent does NOT apply (dress-18's acceptance was ZAI fallback).
   Probe, not a verdict; native re-judge is the tie-break.
   Evidence: reviews/survey26-slice/stile/
+  [survey-28 native re-judge (NATIVE, survey-27's not-executed dissent
+  paid): CONFIRMS the survey-26 dissent — identity FAIL at 18m in the
+  isolated chassis: dominant read two-posts + double horizontal rail
+  band x432-528 y345-361 = gate/fence/hitching-rail, NOT a crossing;
+  step mass <20% of silhouette area and sub-resolution (base platform
+  reads low ground box x448-512 y383-397, no treads/risers/A-frame
+  rhythm; left attachment x424-447 y357-381 merges with post); the
+  accepted gap idiom does NOT read (4-6px separation x444-450
+  y370-390, vertically offset elements read disjointed clutter);
+  grounding PASS (posts + base flush, no confirmed float); silhouette
+  intact but wrong shape (identity-by-silhouette failure, not
+  breakage); one-sided contact shadow x385-418 y388-392 margin.
+  Cluster 2-0 (survey-26 ZAI + survey-28 native) against dress-18's
+  ZAI-only acceptance — native-backed dissent now stands on the
+  off-limits-adjacent executed row. Judge's named fix: step frames
+  need substantially more silhouette mass (higher/treaded A-frames +
+  legible gap) so the crossable-steps read beats the rail read at
+  distance. Probe, not a verdict; execute law stays with dress
+  lane + Bill's off-limits set call. Evidence:
+  reviews/survey28-slice/stile/]
 
 district installs PIN_EXACT programmatic (store/-aware lib prefix, pos
 within 0.01, restated yaw, comps-empty, scale-1) vs the authoritative

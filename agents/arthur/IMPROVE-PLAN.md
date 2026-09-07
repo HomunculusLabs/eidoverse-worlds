@@ -1848,9 +1848,29 @@ verdict names its judge):**
   identity marginal-but-passes (bench vs rail second-guess persists,
   arc bow 3-4px sub-perceptual as shape cue), grounding PASS, joint
   gaps NOT reproduced this frame (<=1px notch jitter); motion-shimmer
-  risk on 3-4px legs/notches named Sev 5. Cluster stays 3x ZAI
-  consistent, native re-judge carries forward. Evidence:
+  risk on 3-4px legs/notches named Sev 5. Cluster stays
+  3x ZAI consistent, native re-judge carries forward. Evidence:
   reviews/survey27-slice/dress-bench-plaza/]]
+  [survey-28 fourth vote (ZAI fallback, native 1210 x2 + paced retry
+  burned, one ZAI 300s timeout then paced retry landed): NEW
+  CONFIRMED-tier finding — seat segment rotation mismatch / warped
+  plank read: seat top edge kinks at (450,371) and (519,370),
+  silhouette waves ±3px about mean y370 (peaks y366 right end,
+  troughs y375 mid-left) — reads warped/broken plank, not intentional
+  arc; segments not meeting tangentially (same defect either way).
+  Identity weak-PASS (legs+shadow carry it, three evenly spaced legs
+  x~391/478/564, symmetric overhang, nothing structurally fence-like);
+  grounding PASS (shadow band x356-586 y399-405 contacts all three
+  feet); joints PASS at tolerance (<=1px AA seams, no through-gaps).
+  Margin: seat height reads LOW (L:H ~7:1 vs expected ~4.5-5.5:1,
+  seat resolves ~300-330mm equivalent — kerb/rail territory, the
+  primary identity risk corroborating the standing row); right foot
+  1-2px light gap (shadow-edge AA probable); D1-vs-arc-intent note:
+  prior votes called the bow sub-perceptual (3-4px), this read
+  resolves it as a KINK not an arc — decode at source before any
+  execution (probe law). Cluster 4 votes: 3 clean-with-margin, 1
+  defect-side with new finding. Native tie-break STILL owed. Probe,
+  not a verdict. Evidence: reviews/survey28-slice/bench-plaza/]
   [survey-26 second ZAI vote: floating-dash islands RE-CONFIRMED on
   exact pixel regions — dash1 x444-460 y311-316, dash2 x448-462
   y323-328, dot x443-448 y336-340 with void bands between and 7px sky

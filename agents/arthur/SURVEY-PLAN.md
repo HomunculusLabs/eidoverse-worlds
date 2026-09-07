@@ -1326,3 +1326,93 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   IMPROVE-PLAN survey-23/26 rows (annotations only, rows already stand);
   waystone third vote on STRUCTURES-PLAN intake line. Zero new
   candidate rows (no new defect classes; stillwind/timberyard CLEAN).
+
+## Judged index (survey-28)
+
+- survey-28 (2026-09-07, NATIVE 5/7 + ZAI fallback 1/7 disclosed —
+  native flap pattern: 1210 x2 + paced retry burned on bench-plaza
+  (ZAI fallback there, incl. one 300s ZAI timeout on its first call);
+  single-1210 paced recoveries on waterstair-pre and waterstair-v7;
+  waystone recovered native first call; 18m gameplay, fresh live store
+  bytes fetched curl UA on exact census-28 libs, served-shas pinned):
+  STANDING-DEBT + POST-CURE AFTER-JUDGE slice (severity backlog
+  drained; in-flight exclusions honored — tower/court/core-paths dirty
+  at selection). Slice = waystone (2-1 cluster native tie-break) +
+  stile (survey-27 not-executed dissent, native owed) + bench-plaza
+  (native-debt 4th vote) + longhouse (improve-35 cured bytes c4aaa783
+  first independent read) + waterstair + snagdead (dress-84 arrival
+  first read). VERDICTS: WAYSTONE NATIVE tie-break — CLEAN-with-margin
+  (identity weak-PASS: plinth+taper+cap resolve, cap breaks skyline,
+  h:w 4.5:1; grounding/silhouette PASS, zero confirmed defect;
+  margins: post-read ambiguity, glyph sub-pixel 18m, cap
+  bump-not-capstone, dark-albedo crush risk, motion aliasing
+  unverified). Cluster 2-1 defect-side votes were both ZAI; native
+  outranks fallback — row closes CLEAN, idiom accents optional polish.
+  STILE NATIVE CONFIRM — survey-26 dissent corroborated natively,
+  cluster 2-0: identity FAIL (gate/fence read dominates: double-rail
+  band x432-528 y345-361; step mass <20% of silhouette, sub-
+  resolution, no treads/A-frame rhythm; gap idiom unreadable 4-6px
+  x444-450 y370-390); grounding PASS, silhouette intact-but-wrong.
+  Routed DRESSING-PLAN. BENCH-PLAZA ZAI 4th vote — NEW confirmed-tier
+  finding: warped-plank kink read (top edge kinks at (450,371)/
+  (519,370), ±3px wave, segments non-tangent) + seat-reads-low margin
+  (L:H ~7:1); identity weak-PASS (legs+shadow), grounding PASS,
+  joints tolerance-PASS; native tie-break still owed; routed
+  IMPROVE-PLAN standing row. LONGHOUSE CLEAN — improve-35 cure
+  independently corroborated on live c4aaa783 bytes: back face two
+  N-windows CLEARLY LIT amber (panes x320-358 + x600-638 y355-400,
+  shutters flanking, side-face sliver x729-742) + stone footing band
+  DISTINCT (light grey x232-728 y448-468) + chimney masonry PASS +
+  zero floats; gameplay-front FAILs (panes/footings unreadable) are
+  solar-flattened — judge's own root-cause note + improve-35's camera
+  -geometry proof; margin: cabin-vs-longhouse proportion, porch posts
+  5-8px thin, right-flank fixture dark-on-dark. WATERSTAIR: first
+  read on pre-v7 bytes 2b418077 split the survey-25 dissent (identity
+  water-feature CONFIRMED, cascade teal reads) — then struct-62
+  landed mid-tick (v7 46c39401 + plan + ledger); re-fetched v7 live
+  bytes fresh, independent after-judge: NATIVE 5/5 PASS (descent
+  reads, terminus reads as receiving pool, discrete foam beads,
+  grounded) — struct-62's self-judged cure now independently
+  corroborated; margins: header-tank under-differentiated, light-rim
+  soft, stepped-building squint risk, risers merge with shadow.
+  Pre-v7 read recorded as superseded interleave. SNAGDEAD
+  CLEAN-with-margin — first independent read, concurs dress-84's own
+  native PASS: dead-snag identity unambiguous (irregular taper, ~7deg
+  lean, snapped apical spike, 4 varied-angle branch stubs, bark
+  jackets, flared root buttresses), crown jagged PASS, grounding PASS
+  (root flare + cast shadow); margins: hollow knot reads flat-dark
+  stain not recessed (no depth cue at 18m), bleached-trunk contrast
+  untested against pale chassis sky (live forest-seam backdrop is the
+  real condition — judge caveated), blocky stub geons, antenna-risk
+  on smooth spike mitigated by stubs. Routing: waystone tie-break
+  STRUCTURES-PLAN, stile confirm DRESSING-PLAN, bench-plaza 4th vote
+  IMPROVE-PLAN row, waterstair corroboration named in STRUCTURES-PLAN
+  struct-62 section record; ZERO new candidate rows (all judged
+  objects stand in queues or are clean). Grep-verified zero open
+  duplicates pre-append. Census 269 vs survey-27 snapshot 269: +1
+  arrival snagdead (dress-84 committed, tuple-exact) reclassified
+  from survey-27's late-tick ledger note, +1 POS_SAME lib flip
+  longhouse e3adcd3d->c4aaa783 (improve-35 committed); struct-62's
+  v7 waterstair reseat (2b418077->46c39401, same tuple) landed
+  mid-tick post-census — classified next tick; 0 departures. Gate:
+  ALL PASS real exit 0 first try at c857992 (ledger law EXACT
+  2370631); HEAD at f2711fe (struct-62) at routing time. Id
+  self-catch: stile lib initially fetched under the waystone hash
+  (census row carryover — 3124B vs true stile 6516B caught by size
+  mismatch + census re-grep); re-fetched verbatim 5e9d301d.
+  Fuzzy-patch self-catch: IMPROVE-PLAN bench-plaza anchor wrapped
+  mid-phrase ("3x ZAI" doubled) — caught on post-patch region re-read
+  (survey-25 class), repaired same tick. Verdicts 1 confirmed (stile)
+  / 5 clean (waystone, longhouse, waterstair-v7, snagdead,
+  bench-plaza weak-pass-with-new-finding) / 0 dropped. Zero world
+  mutations, zero uploads, zero comp edits, zero shared-budget use.
+
+## Routed notes (survey-28)
+
+- survey-28: waystone native tie-break (CLEAN-with-margin, cluster
+  closed) — STRUCTURES-PLAN waystone intake line; stile native
+  CONFIRM (cluster 2-0) — DRESSING-PLAN SURVEY INTAKE; bench-plaza
+  4th vote (new warped-joint finding) — IMPROVE-PLAN standing row.
+  Waterstair v7 corroboration recorded in SURVEY-PLAN only (struct-62
+  section already documents the closure; no reopen). Zero new
+  candidate rows.
