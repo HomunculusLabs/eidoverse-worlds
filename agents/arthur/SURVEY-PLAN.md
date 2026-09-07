@@ -1897,3 +1897,63 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   2370682). Verdicts 0 confirmed / 6 clean (6 clean-with-margin) / 0
   dropped. Zero world mutations, zero uploads, zero comp edits, zero
   shared-budget use.
+
+## Judged index (survey-37)
+
+- survey-37 (2026-09-07, NATIVE 9/9 — one 1210 flap on the b1 right-view
+  first call, single paced 20s retry recovered; one media-path typo
+  self-catch on b20 first call (file-not-found, not a judge failure);
+  ZERO ZAI fallback; 18m gameplay frame primary, right-view face frame
+  for b1 (side-plane board — gameplay/front both grazing, framing not
+  defect), fresh live store bytes 9/9 HTTP 200 curl UA on exact
+  census-37 libs, served-shas pinned 9c70cdff / a23f70b1 / 7ce349b5 /
+  ce437b5d / 53f77cb8 / 8615fefe / 29e932d5 / 1e2a09c8 / ed76ed3e):
+  POST-CURE CORROBORATION + NEVER-JUDGED RIDER TAIL slice (severity
+  backlog drained — round-1 terminal, survey-7..36 candidates are intake
+  not re-judge debt). LAVENDER CURE bytes landed live AFTER survey-36's
+  census basis (4 POS_SAME lib flips in fresh census-37 = improve-45
+  @ 426178de, ledger-matched) — first independent survey read on cure
+  bytes: LAVENDER-0006 NATIVE CLEAN (identity PASS — violet spikes on
+  silvery-green faceted mounds in rows, hue PRESENT and dominant band
+  y355-430, zero floats/voids/glitches; central aisle grounded ground
+  through = improve-45 contract's central path strip, design). LAVENDER-
+  0027 NATIVE CLEAN (two-plot + access-path read, row rhythm strict,
+  white tip specks ATTACHED at spike apexes = bloom tips by design, zero
+  floats; margin: rear-row sparsity cosmetic). LAVENDER-0040 NATIVE
+  CLEAN (7 rows + aisle, violet legible to farthest rows, apex specks
+  attached; margin: aisle x440-545 flagged intentional-vs-hole — resolved
+  design per contract). LAVENDER-0053 NATIVE CLEAN (violet band the only
+  strong chroma in frame, front-row 5-15px plant gaps read cultivation
+  spacing, dark front seam = shadow not void). Improve-45 cure
+  corroborated 4-for-4 this tick — family read closes CLEAN, survey-10/
+  11/12/13 defect classes (dead-crop read, off-axis bloom floaters, row
+  illegibility) all GONE on cure bytes. RIDER TAIL (5 never-judged,
+  true never-judged pool scan): B1-HALL-CHARTER NATIVE CLEAN-with-margin
+  — right view carries the face: 3 register rods + central spindle + 4-
+  slab tally group + 8-cube ring + ~15-16 counters = deliberate counting
+  inscription, zero glitch classes; margin: gameplay/front frames
+  edge-on (board plane parallel to camera axis — face-on framing not
+  guaranteed by chassis orbit for this mount orientation; host ensemble
+  carries the approach read, host-rider polish-282 law). B11-HEARTWOOD
+  NATIVE CLEAN-with-margin — dark plaque + 4-5 countable concentric
+  rings ECCENTRIC offset (naturalistic authored choice) + corner tally
+  ticks; zero glitches; margin: outer ring near plaque edge unclipped
+  positive clearance. B12-HEAT-CONTOURS NATIVE CLEAN-with-margin — 3
+  concentric rings uniform stroke + 4 symmetric corner studs, coherent
+  single-light shading; zero glitches. B15-DUSK-ARCS NATIVE CLEAN-with-
+  margin — frieze plaque + gold arc reading, endpoints terminate clean
+  at frame; margin: secondary band merges at 18m (resolution-predicted,
+  sub-threshold). B20-FOUR-ROOMS NATIVE CLEAN-with-margin — exactly 4
+  light squares, even 22-23px pitch, aligned midline row, even end
+  margins; zero glitches. True never-judged pool after this tick:
+  b32-morning-measure, b7-shrine-stars, b8-stable-harmonic-rein,
+  nx-carousel (polish hero, off-limits-adjacent). Routing: ZERO notes
+  (zero confirmed defects), zero new candidate rows, zero ledger append
+  (read-only tick, loop law 4). Census 277==277 vs survey-36 snapshot:
+  0 arrivals, 0 departures, 6 flips all ledger-matched sibling work —
+  4 POS_SAME lavender lib flips = improve-45 cure (426178de), meridiandial
+  + soundmirror POS_MOVED same-lib = struct-70/71 reseats (1ec03fe0 /
+  72ec50ed). Gate: ALL PASS real exit 0 first try at b50d1eb6 (ledger
+  law EXACT 2370688; dress-95 at tip). Verdicts 0 confirmed / 9 clean
+  (9 clean-with-margin incl. 4 lavender clean) / 0 dropped. Zero world
+  mutations, zero uploads, zero comp edits, zero shared-budget use.
