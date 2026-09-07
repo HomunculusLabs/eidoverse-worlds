@@ -34,7 +34,7 @@ and retirement must cite it. Bill alone may amend or dissolve this plan.
 | Work | From | To | District |
 |---|---|---|---|
 | nx-struct-soundmirror | r33.9 off-spoke | SE wild edge | SE | EXECUTED struct-71: moved (28.7,-18)→(35.46,-55.66) az-57.5 r66 yaw 0, same lib f313e59a (no upload), 2 verbs, PLACED_VERIFIED + idempotent; exact-disc r2.30 SAT, gap 1.51 vs forest-0044 (law 1.4); terrain 5.2mm |
-| nx-struct-pendulum | r36 | NW edge near meridian spoke | NW |
+| nx-struct-pendulum | r36 | NW edge near meridian spoke | NW | EXECUTED city-3: moved (25.01,-0.041,25.9) yaw 0 -> (13.16,-0.0479,-60.59) az282.25 r62 yaw -12.25deg, same lib c32a35a8 content-addressed (zero uploads), remove+spawn 2 verbs PLACED_VERIFIED + idempotent 0-verb rerun; exact rect-OBB SAT worst-neighbor gap 2.37 vs meridianstair (1.4 law) on fresh 278 census; row-ends 2.63m off az276 spoke ray + 9.1m off gate walking axis x=0, spoke-line walk 5/5 both directions (0.36m max arrival); terrain 7pt spread 12.4mm; DISCLOSED: register window r66-80 az279-318 holds ZERO lawful seats for the 8.3x2.7m rectangle (soundmirror's unique disc seat + forest-0010/0018 + district interior consume it) — threshold pocket beside meridianstair taken as the register-faithful "edge near meridian spoke" seat (row-1 dialect class: anchors resolved physically, district names run the +z=north dialect) |
 | nx-struct-millrace | r40 | NW (pairs windmill theme) | NW |
 | nx-struct-reedpool | r42 | SE wild | SE |
 | nx-struct-skymirror | r42.9 | SW contemplative | SW |
