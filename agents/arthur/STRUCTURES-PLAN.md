@@ -2801,3 +2801,75 @@ unanimous native-backed reads, numbers recorded for a future polish
 pass — no action owed until Bill or a survey re-flags). Next tick:
 cadence 63%3==0 → refine tick; refine pool empty → own commission
 (Round 5 concept due) or re-arm on improve-routed rows.
+
+## struct-63 (2026-09-07): R5-1 ELLIPSE COURT authored — v2 built, decode
+## green, v1 judged 5/5; placement DEFERRED fail-closed (judge unavailable
+## on final bytes)
+
+Cadence 63%3==0 refine tick; refine pool EMPTY (echoarch struct-55 closed,
+beacon struct-52, waterstair struct-62, orreryring margin-only); shard
+EMPTY (verified fresh: no OPEN nx-struct rows in IMPROVE-PLAN round-1 or
+newest survey sub-sections). Gate ALL PASS real exit 0 at f2711fe pre-tick.
+
+**Concept (Round 5 commission, R5-1)**: the conic family's missing figure.
+The village holds parabolas (soundmirror dish, echoarch fins), a hyperbola
+(ruledtower), hypars (meridianstair, hypar) — this adds the ELLIPSE at
+building scale. One idea: a closed room drawn in fourteen columns. 14 piers
+at TRUE equal-arc spacing on a=7.0/b=4.2 (foci ±5.6 exact, the 3:4:5);
+straight chord entablature (faceted ring, lapped 0.06); two brass focus
+pins on grade (glow2 dusk lineage, mesh-emissive, ZERO lamp draw); NO
+floor — land-art register (bandstand+amphi own stone circles). Enterable
+folly: bbox 13.94x8.95x3.09 exceeds both room gates honestly → exact
+trimesh; bays 2.074–2.168 uniform (asserted in-source).
+
+**Self-catch (v1→v2)**: 14 piers put one dead ON each major-axis end —
+blocking the walk-through entrance. v2 = half-bay offset: bays center on
+the major ends, entrance frames the foci line. Bay-on-axis asserted
+in-source (nearest pier to (A,0) ≤1.35).
+
+**Build**: mkv3-ellipsecourt.ts; v2 sha
+2aa37e9d29ba43f27d9f02f8872d9de4326d194860e45ef777172a4247c27bc1
+deterministic ×2. 3 merged nodes (courtstone 1008v / courtdark 336v /
+glow2 128v = 1472v). Decode struct63-decode-ellipsecourt.ts ALL GREEN
+(envelope x ±6.97 z ±4.475 y 3.09; pins merged-in-brass proven by bucket
+envelope ±5.67/0.26 — static pins are not KEEP tokens, decode expectation
+self-catch #2). Materials byte-identical lanes to ACCEPTED ninesbridge
+(courtstone==ash 0x56503c cell32; courtdark==iron cell24).
+
+**Judging**: v1 bytes judged 5/5 PASS (ZAI fallback after native 1210 ×2 +
+paced retry; all five contract checks incl. foci pins read at (178,402)/
+(760,402), ring continuous, 14-shaft count, grounded footings). v1's only
+non-contract flag (material "wood grain") INVALIDATED by pitfall-5
+calibration vs accepted ninesbridge (identical lanes). v2 re-judge
+ATTEMPTED: native 1210 (down), ZAI MCP timed out 300s — one retry burned.
+v2 differs from judged v1 ONLY by the half-bay pier offset (same
+geometry/materials/ring/pins) — but the waiver law is per-exact-bytes:
+v2's 18m contract is UNJUDGED → NO placement (struct-59/61 precedent).
+Live world unchanged. Judge provenance: v1 = ZAI fallback; v2 = none owed
+a debt.
+
+**Deferred placement contract (next tick, execute FIRST)**:
+1. Native (or disclosed ZAI fallback) 18m judge of
+   reviews/struct63-ellipsecourt/gameplay.png (final 2aa37e9d bytes) vs
+   contract: colonnade-room read, ring continuity, grounded, entrance bays
+   at long-axis ends, pins not contradicted.
+2. On PASS: terrain preflight (next-terrain chassis, 5 points at
+   (0,−47) ± walk-axis extents + foci), fresh-census SAT at TRUE decoded
+   envelope x ±6.97·(yaw-rotated) z ±4.475 with ground-layer + fat-network
+   exemptions (Bill 0b law: approach lane networks / roads carry compound
+   AABBs — exemption by lib-prefix list, commented), seat (0, −terrainY,
+   −47) yaw π/2 (local major X → world −Z: entrance bays face the N walk;
+   foci at (0,−47±5.6)), upload paced 20s+ (shared budget), spawn
+   nx-struct-ellipsecourt via struct60 fresh-seat chassis, post-place
+   tuple verify, idempotent 0-verb rerun.
+3. Walk: through-axis both ways (waystone side → entrance → foci line →
+   far entrance → meridianstair side) + interior circuit; door-lane law:
+   bays 2.07m ≥ 1.4 clear by construction (asserted).
+4. On FAIL: iterate ONE defect; do not place.
+Siting scan already run fresh this tick (271 census): N spoke clean ≥5.26m
+conservative circle-gap at r36–62; (0,−47) chosen to complete the N walk
+narrative (waystone → waterstair → [gap] → meridianstair) with the
+walk-through-the-foci entrance; the court's consic-family siblings
+(observatory/orrery/meridianstair) all live on that diagonal.
+
+Frames: reviews/struct63-ellipsecourt/ (10 views, final bytes).
