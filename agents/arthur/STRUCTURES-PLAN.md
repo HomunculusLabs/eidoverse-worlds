@@ -3254,3 +3254,53 @@ nx-struct-catenarygate; 4) post-place tuple verify + idempotent rerun;
 5) two-way MCPL passage walk through the 7m opening both directions;
 6) Bill eye-check packet. On judge FAIL: iterate, do not place (v5 already
 PASSes — contingency only).
+
+## struct-70 (2026-09-07): R-123 CLOSED — meridiandial RESEATED (6,·,−45),
+## pocket infeasibility proven, sweep pair separated
+
+Cadence 70%3=1 execute tick. R-123 (sweep-71 Sev 2 defect note = Bill-
+correction-class) outranked struct-69's deferred catenarygate placement
+(routed correction first). Gate ALL PASS real exit 0 at db05163c pre-mutation.
+
+**Proof (struct70-scan-dialreseat.ts, fresh 277 census)**: conservative
+disc r3.71 vs rotated world AABBs, accept >= 1.4m. Scanner self-caught ×1
+pre-trust: census bbox min/max are LOCAL — first run reported the CURRENT
+(0,-27) seat lawful at gap=Infinity (impossible with waterstair 5m S);
+fixed to pos ± (hx|c|+hz|s|) rotation-growth extents, then honest:
+- ZONE A (current pocket x[-7.5,7.5] z[-31,-21]): **0 lawful seats** — the
+  dial physically cannot sit anywhere in its original neighborhood: hall
+  east face / bunkhouse west face / waystone north / waterstair south box
+  it in below the 1.4m law. Hand check confirmed: waystone south face
+  (-22.31) to waterstair north rim (-28.41) = 6.10m free span vs 7.42m
+  octagon + 2.8m lanes = 10.22m needed. On-axis N along x=0 is blocked by
+  shelltower's world AABB (x -6.98..1.68, z -42.2..-33.6) crossing the
+  meridian corridor.
+- Winner (6,-45): conservative gap 1.43 vs shelltower — both conservatisms
+  (disc covers octagon, AABB covers yawed box) UNDERSTATE the true gap, so
+  true > 1.4 law. Cloud-vs-cloud exact vs waterstair + hall: clear. This is
+  the instrument cluster (orrery at (9.19,-36.87) — same family precedent),
+  on the N-spoke walk between waterstair and the shelltower/ellipsecourt
+  court; yaw stays 0 (gnomon keeps pointing polar N — astronomy, not
+  composition, fixes it).
+
+**CITY-PLAN amendment needed (Bill's call)**: the named N-spoke order
+"waystone-n → meridiandial → waterstair" is proven infeasible — no lawful
+seat exists in that segment. The dial now reads third on the walk
+(waystone → waterstair → dial beside orrery), which matches the walking
+order the village actually has. Recorded here; Bill alone amends CITY-PLAN.
+
+**Reseat**: next-place-struct70.ts (struct-66 chassis: accepts OLD or NEW
+tuple, same lib => no upload). 2 verbs (remove+spawn), PLACED_VERIFIED
+(6, -0.0438, -45) yaw 0, idempotent rerun 0 verbs. Comp bag empty.
+
+**Walk re-proof (R-123 demand)**: struct70-walk-meridiandial.ts 12/12
+ALL_PASS worst 0.32m — S approach (now a true open corridor, no fused
+seam) → pad → face → around blade both lanes → noon stone → off W/E.
+
+**Standing state**: sweep's exit-3 pair separated; dial seated lawful in
+the instrument cluster. No new Bill eye-check owed (same bytes, judged
+struct-68; corrective translation only). Next tick: 71%3==2 → build tick
+— struct-69's deferred catenarygate placement OR CITY-PLAN wave-1
+relocation (soundmirror→SE first by worst off-spoke-ness) — city-plan
+relocations have priority per plan header ("PRIORITY above shard +
+re-arm").
