@@ -3828,3 +3828,55 @@ c-1.0125, y 0..4.04); 4) hash-gated placer (struct-77 chassis) upload/spawn
 nx-struct-screwwell @ 6fbaede8 + motion comp {motion:well_screw spin y -12}
 + PLACED_VERIFIED + idempotent; 5) circuit MCPL walk; 6) Bill eye-check
 packet (walk around it: N face = machine profile, S face = cascade chain).
+
+## struct-80 (2026-09-07): R7-1 screw well PLACED (W spoke) + two probe-law
+## self-catches; deferred placement executed in full
+
+Queue-law FIRST: struct-79's deferred placement executed. Gate ALL PASS real
+exit 0 at 258617b0 tick-start. No SHARD section (grep 0, skip-law).
+
+SEAT: full-ring rotation-grown conservative scan vs fresh 284 census, both
+tangential and radial yaws per candidate, rim [66,108], pinch >=1.4.
+SELF-CATCH 1 (inherited scan-chassis bug, fixed before use): struct-77's
+grown() treated live bbox.center as WORLD — census bboxes are LOCAL-frame
+(unrotated): the buggy scan reported 50m+ gaps in an empty band (worst
+neighbor = roads bbox at world pos) — millrace sits 17m from one such
+"empty" seat. Fixed: rotate local bbox center by entity yaw (axis
+convention) before AABB growth. Corrected scan: 104 lawful seats.
+
+SEAT LOCKED: (-88, 0.017, 0) yaw π (180deg radial, W spoke) — the
+water-power procession: millrace (grinding machine, az 175 r 77) 11m
+inboard on the same spoke, screw well (lifting machine) outboard. Screw
+axis local +x; sump r 88 (plaza side), head r 94, cascade returns toward
+the millrace. Worst conservative neighbor terrace-0035 +7.89 (scan) /
+millrace +7.10 exact-SAT at placer preflight (fresh 284 set). Rim
+[87.9, 94.1]. Terrain 9pt TRUE-envelope spread 8.3mm, PY 0.017.
+
+SELF-CATCH 2 (ENGINE YAW LAW, applies fleet-wide): wire yaw is RADIANS,
+applied verbatim to rotation.y — three independent engine paths verified
+(models.js:77 ent.yaw -> rotation.y; shared/fold.js yaw-in-trig;
+scenegraph.js:221 the human UI converts deg->rad BEFORE send). Live census
+confirms: 33/40 nx-struct-* carry exact radian values (π/6, π/2, π).
+Victim found: nx-struct-ogeegate yaw -32.68 — struct-77's placer sent its
+DEGREE value raw (its own comment says "deg"); live effective 287.6deg vs
+designed 327.3deg (opening axis on NE lane-002 tangent). Full-census
+sweep: exactly ONE provable >π victim (nx-mile-* values are legit radians;
+echoarch 5.027=288deg, skene 3.2463=186deg legit).
+
+PLACED: nx-struct-screwwell @ 6fbaede8 (v3, judged accepted struct-79),
+(-88,0.017,0) yaw π, motion:well_screw {spin axis y degPerSec -12} (LOCAL
+frame of the tilted well_screw group — verified at source; pwheel spin
+class). PLACED_VERIFIED + idempotent rerun 0 verbs. Circuit MCPL walk 6/6
+ALL_PASS max arrival 0.389. Census 284->285.
+
+REPAIRED: nx-struct-ogeegate re-seated at SAME pos (-32.68 unit bug) ->
+yaw -0.5703736 rad = designed -32.68deg pose, same lib, comp {} both
+sides, remove+spawn (2 verbs), PLACED_VERIFIED + idempotent 0 verbs. The
+sweep battery's -32.68 pin (sweep82-integrity.py) is sweep-lane-owned;
+expected absorption path: next sweep census-diffs the flip, ledger-matches
+this entry, re-pins (city-13 potter class).
+
+Bill eye-check packet (one): screw well on the W spoke — walk the W spoke
+from the millrace outward: the machine profile with spinning screw and
+teal pockets climbing; at night the pockets are the accent. Ogee gate now
+faces the NE lane tangent (was skewed ~40deg).
