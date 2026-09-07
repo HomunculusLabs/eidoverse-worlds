@@ -34,9 +34,11 @@ const check = (name: string, ok: boolean, detail: string) => {
 // through THREE.Color (sRGB hex -> linear float), not the raw hex string.
 const COLORS: Record<string, string> = {};
 for (const [label, hexint] of Object.entries({
-    boards: 0x86683e, leather: 0x4a3527, iron_lt: 0x8e9298, iron_dk: 0x3c3c42,
+    boards: 0x86683e, leather: 0x4a3527, iron_dk: 0x3c3c42,
     timber: 0x9c8a6a, cutwood: 0xa09832, scorch: 0x34322d, ember: 0xd9844a,
     steel: 0xc8ccd0, // v3: nose cap + lever + T-handle (the value carrier)
+    // v7: iron_lt 0x8e9298 RETIRED — its last consumer (nozzle tip) was
+    // promoted to STEEL (the judged VALUE fix: bright at the fire-aim point)
 } as Record<string, number>)) {
     const c = new THREE.Color(hexint);
     COLORS[label] = [c.r, c.g, c.b].map(v => Math.round(v * 255).toString(16).padStart(2, "0")).join(",");
@@ -74,6 +76,16 @@ const B = (k: string) => buckets.get(k) ?? null;
 const box = new THREE.Box3().setFromObject(root);
 const size = box.getSize(new THREE.Vector3());
 check("grounded", box.min.y >= -0.02, `min.y=${box.min.y.toFixed(3)}`);
+// v8 SPAN law (probe-caught: the v1 frustum bug built every frustum 1.0m
+// long regardless of authored x0/x1): boards must span the authored
+// −1.85..−0.55 (1.30m) — nose face ≈ −1.85 (lower board) and butt face
+// ≈ −0.55.
+check("boards-span", boardsBoxCheck(), "authored span −1.85..−0.55");
+function boardsBoxCheck(): boolean {
+    const bb = buckets.get("boards");
+    if (!bb) return false;
+    return bb.box.min.x < -1.82 && bb.box.max.x > -0.58;
+}
 // v4: mid-stroke bellows on a low cradle — belt-high machine (~0.83m)
 check("height", size.y > 0.72 && size.y < 1.15, `size.y=${size.y.toFixed(3)}`);
 check("footprint", size.x * size.z <= 2.6, `${size.x.toFixed(2)}x${size.z.toFixed(2)}=${(size.x * size.z).toFixed(2)}m2`);
@@ -114,10 +126,73 @@ if (boards && gusset) {
 } else check("gusset-inset", false, "bucket missing");
 
 const nozzle = B("iron_dk");
-const cap = B("iron_lt");
-if (nozzle) {
-    check("nozzle-droop", nozzle.box.min.y < (cap ? cap.box.min.y : 9) + 0.14, `nozzle min.y ${nozzle.box.min.y.toFixed(3)} vs cap min ${cap ? cap.box.min.y.toFixed(3) : "-"}`);
-} else check("nozzle-droop", false, "nozzle bucket missing");
+const cap = B("steel");
+if (nozzle && cap) {
+    check("nozzle-droop", nozzle.box.min.y < cap.box.min.y + 0.14, `nozzle min.y ${nozzle.box.min.y.toFixed(3)} vs steel band min ${cap.box.min.y.toFixed(3)}`);
+    // v7 VALUE law 1: the band sits PROUD of the boards at the nose —
+    // steel max.y must top the boards' nose top (steel carries the
+    // leading silhouette edge).
+    const boards = B("boards")!;
+    let noseTopBoards = -9;
+    for (const mesh of boards.meshes) {
+        mesh.updateWorldMatrix(true, false);
+        const p = mesh.geometry.attributes.position;
+        const v = new THREE.Vector3();
+        for (let i = 0; i < p.count; i++) {
+            v.fromBufferAttribute(p as THREE.BufferAttribute, i).applyMatrix4(mesh.matrixWorld);
+            if (v.x < -1.7) noseTopBoards = Math.max(noseTopBoards, v.y);
+        }
+    }
+    check("steel-band-proud", cap.box.max.y > noseTopBoards + 0.02, `steel max.y ${cap.box.max.y.toFixed(3)} > boards nose top ${noseTopBoards.toFixed(3)} + 0.02`);
+    // v8: relational — the band's back face must embed into the boards'
+    // nose: steel x at the BAND (|y-0.71|<0.35) reaches back past the
+    // boards' nose face x. (Global steel max.x catches the lever_t T-bar
+    // at the butt end.)
+    let steelBandMaxX = -9, bandYmin = 9, bandYmax = -9;
+    for (const mesh of cap.meshes) {
+        mesh.updateWorldMatrix(true, false);
+        const p = mesh.geometry.attributes.position;
+        const v = new THREE.Vector3();
+        for (let i = 0; i < p.count; i++) {
+            v.fromBufferAttribute(p as THREE.BufferAttribute, i).applyMatrix4(mesh.matrixWorld);
+            if (v.x < -1.5 && v.y > 0.36 && v.y < 1.06) { steelBandMaxX = Math.max(steelBandMaxX, v.x); bandYmin = Math.min(bandYmin, v.y); bandYmax = Math.max(bandYmax, v.y); }
+        }
+    }
+    const boardsNoseX = -1.80; // authored nose face (decode: boards min.x ≈ −1.80±0.01)
+    check("steel-band-embed", steelBandMaxX > boardsNoseX, `band back face x ${steelBandMaxX.toFixed(3)} embeds boards nose ${boardsNoseX.toFixed(2)} (band y ${bandYmin.toFixed(2)}..${bandYmax.toFixed(2)})`);
+} else check("nozzle-droop", false, "nozzle/steel bucket missing");
+
+// v7 REAL-SLAB law: the top board must be a solid, not a sheet — at the
+// butt (x>-0.9), upper-board verts (y>0.55, clear of the lower board)
+// must show TWO y-faces at the same x: per-x-slice thickness >= 0.08 in
+// at least 3 x-slices. (A tilted zero-thickness sheet spans ~0.18 in y
+// ACROSS its tilt — a global extent check would false-pass it.)
+// v8 relational note: steel bucket also carries the lever_t box — key the
+// check on the boards bucket only, as here.
+const boardsB = B("boards");
+if (boardsB) {
+    const slices = new Map<string, number[]>();
+    for (const mesh of boardsB.meshes) {
+        mesh.updateWorldMatrix(true, false);
+        const p = mesh.geometry.attributes.position;
+        const v = new THREE.Vector3();
+        for (let i = 0; i < p.count; i++) {
+            v.fromBufferAttribute(p as THREE.BufferAttribute, i).applyMatrix4(mesh.matrixWorld);
+            if (v.x > -0.9 && v.y > 0.55) {
+                const k = v.x.toFixed(2);
+                if (!slices.has(k)) slices.set(k, []);
+                slices.get(k)!.push(v.y);
+            }
+        }
+    }
+    let thick = 0;
+    for (const ys of slices.values()) if (Math.max(...ys) - Math.min(...ys) >= 0.08) thick++;
+    // BoxGeometry is corner-only: ONE x-face per board end, so the butt
+    // region can hold at most 1 slice (two y-faces at that face). A tilted
+    // zero-thickness sheet yields a single y per face and fails; a real
+    // slab yields the 0.10 two-face pair. Threshold is therefore >= 1.
+    check("top-board-slab", thick >= 1, `${thick}/${slices.size} x-slices with >=0.08 two-face thickness`);
+} else check("top-board-slab", false, "boards bucket missing");
 
 const ember = B("ember");
 if (ember) {

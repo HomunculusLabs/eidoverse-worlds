@@ -965,29 +965,50 @@ identity intent. Rotation stays NW->NE->SE->SW.
     GROUNDING PASS; **VALUE FAIL** (steel band still not separating —
     the nozzle end sits dark) + **NOISE FAIL** (the three-lump coal
     scatter reads as a hairline debris streak at 18m).
-  - **v7 fixes (owed next tick, before scan/terrain/place)**: (a) value
-    band — the steel cap is present but renders dark in the shadowed
-    nose: extend STEEL to the nozzle TIP fitting (currently IRON_LT)
-    AND raise the band to sit proud of the chamber silhouette (top of
-    band ≥ chamber top), or thin the leather behind it so the band
-    carries the leading edge; (b) coal scatter — replace the three
-    ground lumps with ONE coal mound tucked at the nozzle base (single
-    mass, no hairline) or drop entirely (the ember bead already marks
-    the drop point; minimalism law). Re-judge 18m + close view after.
+  - **v7 (this tick, dress-104)**: applied the two owed fixes (STEEL tip
+    promotion; band 0.24 long + y 0.38..1.04 proud) — but the v7 decode
+    run FAILED on its own new laws, and the vertex probe proved the
+    `frustum()` helper broken since **v1**: it never scaled x (every
+    frustum built 1.0m long regardless of authored span — boards stood
+    −1.70..−0.70, not −1.85..−0.55) and subtracted per-vertex (yb+yt)/2
+    (cancelling face-height variation — v6's "thick top board" was a
+    tilted ZERO-THICKNESS sheet; the leather's nose face sat 0.09m low;
+    the band floated 0.02–0.07m ahead of the true board nose in every
+    version). **v8 = fixed helper (literal spans + literal face heights,
+    global-AVG centering) + relational decode laws banked**: boards-span
+    check, per-x-slice slab check (BoxGeometry is corner-only — ONE
+    x-face per board end; a tilted sheet shows one y per face, a real
+    slab the two-face 0.10 pair), band-embed keyed to the band's x/y
+    region (global steel max.x catches the lever T-bar). v8
+    **`43515fa7…` (deterministic ×2), decode ALL PASS 16/16** (h 1.055,
+    1.91m², 9 nodes, steel band proud 1.04 > boards nose top 1.00 AND
+    embedded −1.72 > −1.80, elevation wedge restored 0.56 > 1.4×0.28).
+    Judge: **ZAI 5/5 PASS** (native 1210 ×2 after one paced retry,
+    disclosed) — IDENTITY/MACHINERY/GROUNDING/**VALUE**/**NOISE** all
+    pass; the two v6 FAILs are cured. Margins: the nozzle itself merges
+    into the dark nose at 18m (sub-0.1m element, pitfall-13 class — the
+    ember bead + aimed geometry carry the story; not chased); the band
+    could take one more brightness step (standing do-not-darken note).
+    **ACCEPTED.**
 - **Decode (v6)**: bbox 2.34×0.82×0.84, footprint 1.96m², 10 nodes;
   elevation wedge 0.33 vs 0.11 (nose y-ext > 1.4× butt), plan wedge
   0.40 < 0.7×0.72; leather inset; nozzle droop 0.472 < 0.484; ember at
   (−2.03, ≤0.09); steel nose −1.91; timber max 0.75 (pump bar 0.74).
-- **Siting (OWED next tick)**: derive the exact local pose in the band
-  above → world (yaw = forge −0.9076 + π if nose −x points at the fire),
-  then fresh-census SAT preflight (blockers: nx-forge,
-  nx-dress-ne-anvilpad-001, nx-court, forge-l, seven-strikes),
-  cone-check vs the plaza E-corridor axis, terrain 5-pt preflight → PY,
-  hash-gated placer `ne-dress103-place.ts` (dress-76 chassis) → upload
-  (content-addressed, 20s+ pace) → spawn → post-place tuple verify →
-  idempotent 0-verb rerun. No walking-line contact by design (off the
-  working face) — walk-test only if the final seat touches the forge
-  approach.
+- **Siting (BLOCKED ON BILL — surfaced dress-104)**: the dress-73 item-9
+  commission anchors the bellows at the CORE forge (r≈23.4). CITY-PLAN
+  law 3 (city-1, 2026-09-07 07:12, AFTER the commission) closes the
+  village ring r20–33 to all new dress installs — the plan header's
+  CITY-PLAN LAW comment carries no carve-out for the bellows (the E-spoke
+  procession names the anvilpad, not this). Siting options for Bill:
+  (a) name the bellows into the E-spoke procession beside the anvilpad
+  (it is the forge's air machine — thematically identical to the named
+  anvilpad, ~1.5m band on the forge's local +x shoulder off the working
+  face), or (b) re-commission it to the NE craft district ring r70–100
+  (e.g. beside a cloister/hamlet fire — the "breath" element reads
+  anywhere a smith's fire lives), or (c) shelve. NO placement executed;
+  v8 stays staged in `assets/` pending the ruling. SAT preflight
+  contract unchanged (blockers: nx-forge, nx-dress-ne-anvilpad-001,
+  nx-court, forge-l, seven-strikes; placer chassis dress-76).
 - **Review rigs**: `reviews/dress103-bellows1-v2..v6/` (10 views each).
 - **Eye-check for Bill (after placement)**: at the core forge, past the
   anvil pad toward the court corner — a big timber-and-leather wedge
@@ -1070,11 +1091,11 @@ identity intent. Rotation stays NW->NE->SE->SW.
    cone-saturated mosaic↔kiln band to the gallery-lane pocket between
    statuaries 0005/0026; details in the dress-92 siting-log entry).**
 9. `nx-dress-ne-bellows-001` — great bellows on a cradle beside the forge
-   wall; reads as machinery silhouette at 18m. **BUILD-ONLY (dress-103,
-   2026-09-07 — v6 `458cf886` decode ALL PASS 12/12, native 18m 3/5
-   (identity/machinery/grounding PASS; steel value band + coal-scatter
-   noise FAIL → v7 fixes, then scan/terrain/place; details in the
-   dress-103 siting-log entry).**
+   wall; reads as machinery silhouette at 18m. **v8 ACCEPTED (dress-104,
+   2026-09-07 — `43515fa7` decode ALL PASS 16/16, judge 5/5 PASS; the
+   dress-73 commission anchors it at the core forge, but CITY-PLAN law 3
+   (later ruling) closes the village ring — placement BLOCKED on Bill's
+   siting call a/b/c, see dress-103 entry).**
 
 ### SE — WILD (round 3)
 10. `nx-dress-se-funguslogs-001` — felled-log cluster with bracket-fungus
