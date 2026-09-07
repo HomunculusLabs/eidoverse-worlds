@@ -386,6 +386,7 @@ parser keyed wrong result keys twice before reading the actual schema
 (re-anchored on per-leg fields, sweep-48 class). Zero world mutations,
 zero defect notes, zero uploads, zero shared-budget use. Next tier-2
 pair (sweep-59): stable + observatory circuit (37th cycle).
+| sweep-59 | 2026-09-07 | 267==267 (229 thing + 38 light; 0 arrivals, 0 departures, 0 drift on id/pos/yaw/lib/scale/kind/bbox vs sweep-58 epoch-C baseline sha16 cd9a07607226962e — single-read epoch, no mid-tick interleave, count stable across the whole tick) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, SIXTEENTH sweep since routing, no escalation due — law keys Sev 1); 229 bbox non-light / 233 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37); tier-2 37th cycle recorded pair stable 5/5 @ 0.396 + observatory 5/5 ALL PASS; coverage pair hall 8/8 @ 0.360 + forge 6/6 @ 0.375 (LRU rotation repair — stale sweep-58 pointer read bunkhouse+garden-cottage, the true LRU pair was hall/forge, both pairs walked and recorded this wakeup) | pins 15/15 ALL_PINS_OK 17th consecutive, carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib bbox PRESENT + 4 -l companions, belltower 2419fbc5 + ladder live, windmill 09938360, woodyard 01b78fdd exact, hamlet embers 5-of-5, welcome 7d1bd0c9 + welcome-l, 38 lights, 16 comp-bearing entities census-matched, interlane f6254cd0 stable, ledger law EXACT at append, gate ALL PASS exit 0 at afcc0c7 tick-start | CLEAN SWEEP — R-121 open, known, no escalation due |
 
 EPOCH-C CORRECTION (disclosed, correction-of-record class — improve-32
 woodyard cure landed at 82a49f2 AFTER this sweep's ledger append): census-C
@@ -406,6 +407,38 @@ Snapshot final epoch C: 106187B / 267 entities / sha16
 cd9a07607226962e (diff vs epoch-B baseline exactly [woodyard lib];
 vs sweep-57 committed baseline [orchard-rows lib+bbox, woodyard lib]).
 
+sweep-59: CLEAN SWEEP, single-epoch quiet tick. Census 267==267 (229 thing +
+38 light) vs the committed sweep-58 epoch-C baseline (sha16
+cd9a07607226962e): 0 arrivals, 0 departures, 0 drift on id/pos/yaw/lib/
+scale/kind/bbox — one read, no interleaves (HEAD afcc0c7 = own sweep-58
+close, no sibling commits since). Overlap: 229 bbox non-light, 233
+classified, 0 coverage holes, exit 3 on exactly ONE unclassified = R-121
+lamp-n | nx-town-mapboard -0.407 — known Sev 2 routed to artwalk @
+sweep-43, sixteenth sweep since routing, not new, no escalation due (law
+keys severity-1). Tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0
+each: core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37.
+Tier-2 37th cycle: recorded pair stable 5/5 @ 0.396 + observatory circuit
+5/5 ALL PASS; ADDITIONAL coverage pair hall 8/8 @ 0.360 + forge 6/6 @
+0.375. Rotation repair (disclosed, sweep-56 pointer-class): sweep-58's
+"next pair" pointer named stable+observatory, but coverage analysis shows
+bunkhouse+garden-cottage last walked sweep-56, making hall/forge the true
+LRU pair — BOTH pairs walked this wakeup, both recorded, pointer now
+corrected to the next LRU pair. Integrity: pins 15/15 ALL_PINS_OK (17th
+consecutive clean), carousel comp bag exact 7 + lib ce3633992d07055e,
+gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 resolved
+and standing) + 4 -l companions, belltower 2419fbc53a1d65e1 + ladder comp
+live, windmill 0993836012d1b17d, woodyard 01b78fdd00f090a7 exact
+(improve-32 pin, plan pin-line updated to match), hamlet embers 5-of-5
+live, welcome 7d1bd0c9 + welcome-l companion live, 38 lights, 16
+comp-bearing entities census-matched (5 hamlets, carousel, court, forge,
+hearth, tower, belltower, orrery, shelltower, artwalk h6/h7), interlane
+md5 f6254cd0 stable, standing gate ALL PASS real exit 0 at tick-start
+afcc0c7. Snapshot rewritten like-for-like (indent=1, sweep-56 formatting
+class self-caught and reverted before commit): 106833B / 267 entities /
+sha16 db344186b51caef8, pre-write assertions (old+new counts 267),
+post-rewrite drift vs live ZERO. Zero world mutations, zero defect notes,
+zero uploads, zero shared-budget use. Next tier-2 pair (sweep-60):
+row-cottage + market (38th cycle).
 
 ## Findings register
 
@@ -1484,7 +1517,7 @@ tier-2 leg is never claimed without its run that wakeup.
 - carousel comp bag: motion:carousel, horse_{0,2,4,6}, particles:smoke,
   sockets; lib pinned.
 - gate lamps: nx-approach-lamp-{e,n,s,w} + matched -l lights standing.
-- woodyard: nx-town-woodyard lib 01b78fdd00f090a7 (deterministic pin; 1f2c6f592095b204 @ improve-32 re-place, envelope byte-identical).
+- woodyard: nx-town-woodyard lib 01b78fdd00f090a7 (improve-32 re-place pin, envelope byte-identical; prior 1f2c6f592095b204).
 - standing gate: bun agents/arthur/verify-repairs.ts real exit 0.
 - ledger law EXACT; interlane md5 baseline
   f6254cd02cbcbee79e54104669be6981 (INTERLANE-PROTOCOL.md @ 4a7db63;
