@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 276,
+ "count": 277,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -4100,6 +4100,40 @@
    }
   },
   {
+   "id": "nx-dress-se-mossbowls-001",
+   "kind": "thing",
+   "pos": [
+    61.31,
+    0.0083,
+    -55.2
+   ],
+   "yaw": -0.7853981633974483,
+   "scale": 1,
+   "lib": "store/6d598bd526ba3929.glb",
+   "bbox": {
+    "min": [
+     -1.534,
+     -0.016,
+     -1.19
+    ],
+    "max": [
+     1.704,
+     0.396,
+     1.566
+    ],
+    "size": [
+     3.238,
+     0.412,
+     2.756
+    ],
+    "center": [
+     0.085,
+     0.19,
+     0.188
+    ]
+   }
+  },
+  {
    "id": "nx-dress-se-snagdead-001",
    "kind": "thing",
    "pos": [
@@ -5711,9 +5745,9 @@
    "id": "nx-struct-meridiandial",
    "kind": "thing",
    "pos": [
-    0,
-    -0.0065,
-    -27
+    6,
+    -0.0438,
+    -45
    ],
    "yaw": 0,
    "scale": 1,

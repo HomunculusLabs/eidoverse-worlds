@@ -886,7 +886,18 @@ falsified (waterstair center 5.00m away). Companion fact, no separate item:
 dial|hall closest 0.952m = diagonal corner kiss; true E-W corridor 1.834m PASSES
 the 1.4 law. Fix is struct-lane: re-site dial N on the meridian with
 vertex-cloud SAT vs all neighbors, re-prove the dial walk with an open S
-approach. Second sweep post-routing (sweep-72, unchanged tuple per zero-drift census); escalation law keys Sev 1.
+re-prove the dial walk with an open S approach. Second sweep post-routing
+(sweep-72, unchanged tuple per zero-drift census); escalation law keys Sev 1.
+
+CLOSED sweep-73 (2026-09-07, owner action struct-70 @ 1ec03fe0): dial reseated
+(0,-27) -> (6,-45) as an instrument cluster beside the orrery, same lib 7acc090a
+content-addressed, remove+spawn PLACED_VERIFIED + idempotent by its lane with a
+12/12 walk re-proof including the true open S approach. Sweep-side corroboration
+this tick: epoch-B SAT re-run over the new seat shows BOTH dial contacts gone —
+unclassified set collapsed 3 -> 1 (R-121 only); no new contact at (6,-45);
+walked-leg affectedness classified quantitatively (new seat min 31.5m from any
+tier-1/tier-2 leg point — epoch-A walks unaffected by construction). Register
+closed; R-123 no longer part of the standing unclassified set.
 
 | sweep-49 | 2026-09-07 | 262→263 (+1 domain-valid arrival nx-struct-ruledtower @ (58,−0.0426,0) yaw 0 lib 4070ecc4d8f1d0e6 comp {} = struct-50 @ 990ddeb, tuple matches its committed ledger line-for-line; ONE lib flip nx-craft-hamlet-0028 032b6e24→44d78463 at identical tuple with embers comp live (particles key verified in comp JSON) = improve-25 @ 6df80eb, EPOCH-CORRECTION class — landed after first census, all affected evidence re-taken fresh (census2, SAT re-run, NE re-walked 7/7, gate re-run ALL PASS exit 0 at 6df80eb); live bbox y-span 13.311→4.724 confirms the family-cure took; 0 departures, 0 unexplained drift; snapshot rewritten normalized sha16 55af543ec07eef46, diff exactly +1 entity block +1 lib flip +count, post-rewrite drift ZERO) | exit 3 on exactly ONE unclassified = R-121 lamp-n\\|nx-town-mapboard −0.407 (known Sev 2 routed artwalk b26 @ sweep-43, tuple identical per drift set, sixth sweep since routing, no escalation due — law keys Sev 1); 225 bbox non-light, 233 classified, 0 coverage holes | tier-1 81/81 ALL_PASS real exit 0 each (core 64/64 ok max-arr 0.38; NW 5/5; NE 7/7 epoch A + re-run 7/7 epoch B; SW 5/5) + tier-2 27th cycle bunkhouse 6/6 @ 0.380 + garden-cottage 6/6 @ 0.355 ALL PASS | pins 15/15 ALL_PINS_OK (8th consecutive clean), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + 4 -l companions, belltower 2419fbc53a1d65e1 + ladder comp live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet-0007/0015/0028 embers all live, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370320 at append, standing gate ALL PASS real exit 0 at tick-start a3344f1 + re-run at 6df80eb post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
 
@@ -2124,7 +2135,7 @@ expected fleet behavior — classify as sibling work-in-flight, verify domain
 prefix + scale sanity + SAT inclusion, never treat as drift.
 | sweep-71 | 2026-09-07 | 274→276 epoch-corrected (epoch A 274==274 fully quiet vs sweep-69/70 baseline sha16 86bc038404c6af69, byte-identical projection; mid-tick THREE siblings committed: improve-42 @ 66ded6b five-garden family cure, dress-92 @ a010c6c glazier arrival, struct-68 @ 3d3b315 meridiandial arrival — epoch B: +2 domain-valid arrivals (nx-dress-ne-glazier-001 (60.95,-0.0284,28.42) yaw -2.35619 lib 53b31cfd; nx-struct-meridiandial (0,-0.0065,-27) yaw 0 lib 7acc090a) + 5 garden lib flips to exactly improve-42's ledgered shas at identical tuples, envelopes strict-subset; 0 departures, 0 unexplained drift; survey-33 @ fedc6d2d analysis-only interleave; snapshot rewritten with pre-write assertions, post-rewrite id-set verified, final 276 ents) | exit 3 on THREE unclassified: known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 28th sweep, no escalation due) + TWO NEW meridiandial contacts (R-123 waterstair -2.008 square-SAT / 17.2mm TRUE 3D — Sev 2, REGISTERED + ROUTED STRUCTURES-PLAN this tick; hall -0.435 square-SAT / 0.952m true corner-kiss, E-W corridor 1.834m PASSES 1.4 law, recorded no-action); 238 bbox non-light / 233 classified / 0 coverage holes, SAT run epoch A + re-run epoch B | tier-1 81/81 ALL_PASS per-leg verified (core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5) + tier-2 49th cycle per committed pointer potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL PASS | pins 15/15 ALL_PINS_OK 26th consecutive + extended census-verified at epoch B (carousel exact 7 + ce363399, gate lamps 4/4 bbox-present + 4 -l companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched), interlane f6254cd0 stable, ledger law EXACT at append, gate ALL PASS exit 0 at c75a96b tick-start + re-run 3d3b315/fedc6d2d post-interleave | FINDINGS — R-123 new Sev 2 routed struct (first sweep); R-121 open, known, no escalation due |
 | sweep-72 | 2026-09-07 | 276==276 (238 thing + 38 light; 0 arrivals, 0 departures, exactly FIVE drift field-sets on one family = 5x nx-wild-cairn-{0022,0043,0047,0048,0050} lib flips a4450b40→19edc830 / 5d6c3edd→c7ea6ded / 109e5bc5→b5ed154a / 09ed84ef→de186a14 / efedd361→594f5192 at identical tuples, bbox y-max 1.73→1.51 contact-law stack shrink + mm-level size echoes = improve-43 @ 59046e7 committed PRE-tick, live landing postdates sweep-71's snapshot (known-epoch class), ledger-matched sha-for-sha; epoch B 20s-paced re-read 0/0/0 settled; single stable epoch; snapshot rewritten format-exact 110567B/276 ents/sha16 af358982e79adce8, pre-write assertion vs COMMITTED diff exactly 5x cairn lib+bbox, post-rewrite drift ZERO) | exit 3 on the THREE known unclassified: R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 29th sweep, no escalation due — law keys Sev 1) + R-123 dial\|waterstair −2.008 square-SAT / 17.2mm TRUE 3D (Sev 2 struct-routed @ sweep-71, 2nd sweep) + dial\|hall −0.435 square-SAT / 0.952m true corner-kiss (companion fact, corridor 1.834m PASSES 1.4 law, recorded no-action in R-123); 238 bbox non-light / 233 classified / 0 coverage holes, NO new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 — FIRST core walk over the dial bytes, sweep-71's walks predated the arrival; NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 50th cycle per committed pointer row-cottage 6/6 @ 0.384 + observatory circuit 5/5 ALL_PASS | pins 15/15 ALL_PINS_OK 27th consecutive (struct18-fleet-pin-check real exit 0) + extended census-verified on the true comp schema (carousel exact 7 + ce363399, gate lamps 4/4 full-lib bbox-present + 4 -l companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched), interlane f6254cd0 stable, ledger law EXACT at append, gate ALL PASS exit 0 at ebb16a35 tick-start + re-run db05163c post-interleave | CLEAN SWEEP — R-121 + R-123 open, known, no escalation due |
-
+| sweep-73 | 2026-09-07 | 276→277 epoch-corrected (epoch A 276==276 fully quiet vs committed sweep-72 epoch-C baseline sha16 1f23988720b4cf5a, 0 arrivals 0 departures 0 drift; mid-tick struct-70 @ 1ec03fe0 R-123 CLOSURE meridiandial reseat (0,-0.0065,-27)→(6,-0.0438,-45) same lib 7acc090a content-addressed + dress-94 @ 7f619934 mossbowls arrival — epoch B per polish-270 law: +1 domain-valid arrival nx-dress-se-mossbowls-001 (61.31,0.0083,-55.20) yaw -45° tuple matches dress-94 ledger line-for-line + exactly ONE drift field = meridiandial pos, lib unchanged; 0 departures, 0 unexplained drift; snapshot rewritten 111018B/277 ents/sha16 2a1aed39e14a4d69 with pre-write assertion diff exactly +1 arrival +1 dial pos, post-rewrite drift ZERO) | SAT epoch A 238 bbox/233 classified/0 holes exit 3 on exactly the three known unclassified; SAT epoch B re-run: 239 bbox non-light / 233 classified / exactly ONE unclassified = R-121 ONLY — BOTH dial contacts GONE, R-123 closure INDEPENDENTLY CORROBORATED in the overlap surface, no new contacts from arrival or reseat | tier-1 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5; epoch-A walks unaffected by construction — new dial seat min 31.5m, mossbowls min 63.1m from any walked leg point) + tier-2 51st cycle per committed pointer potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL PASS | pins 15/15 ALL_PINS_OK 28th consecutive (struct18-fleet-pin-check real exit 0) + extended census-verified (carousel exact 7 + ce363399, gate lamps 4/4 full-lib 18b69a6bb2f5862f bbox-present + 36 -l companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched), interlane f6254cd0 stable, ledger law EXACT at append (base re-read fresh), standing gate ALL PASS real exit 0 at tick-start 695f705b + re-run ALL PASS exit 0 at 1ec03fe0 post-interleave | CLEAN SWEEP — R-123 CLOSED by owner action corroborated sweep-side; R-121 open, known, 30th sweep, no escalation due |
 sweep-71: FINDINGS SWEEP, epoch-correction tick (R-123 born). Epoch A fully
 quiet — census 274==274, normalized projection byte-identical to the committed
 baseline (no rewrite at epoch A). Mid-tick, three siblings committed AFTER my
@@ -2240,3 +2251,41 @@ lib+bbox, nothing else) 110571B / 276 entities / sha16 1f23988720b4cf5a,
 post-rewrite drift ZERO. The committed ledger entry (sweep-72, D+0/E+0, law
 exact 2370680) is epoch-B-true; this block is the correction of record.
 Baseline for sweep-73 = epoch C.
+
+sweep-73: CLEAN SWEEP, epoch-correction + R-123-closure corroboration tick.
+Epoch A census fully quiet — 276==276 vs the committed sweep-72 epoch-C baseline
+(sha16 1f23988720b4cf5a): 0 arrivals, 0 departures, 0 drift on
+id/pos/yaw/lib/scale/kind. Mid-tick, struct-70 (@ 1ec03fe0) committed the R-123
+closure — meridiandial reseated (0,-27) -> (6,-45) as an instrument cluster
+beside the orrery, same lib 7acc090a content-addressed — and dress-94
+(@ 7f619934) landed nx-dress-se-mossbowls-001. Per the polish-270 epoch law all
+affected evidence was re-taken fresh: epoch-B census (277 = +1 arrival
+tuple-matched to dress-94's ledger + exactly one drift field = the dial pos;
+lib unchanged; 0 departures), SAT re-run at epoch B, standing gate re-run ALL
+PASS real exit 0 at 1ec03fe0. The epoch-B SAT is the sweep-side corroboration
+of the closure: unclassified set collapsed 3 -> 1 — BOTH dial contacts
+(waterstair −2.008, hall companion −0.435) are gone from the live collision
+surface, only R-121 remains, and no new contact appeared at the new (6,-45)
+seat. Walked-leg affectedness classified quantitatively: new dial seat min
+31.5m and mossbowls min 63.1m from any tier-1/tier-2 walked leg point —
+epoch-A walks unaffected by construction (sweep-53 precedent; the SAT re-run
+covers the collision surface). Tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0: core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5. Tier-2 51st
+cycle per the committed pointer: potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL
+PASS. Integrity: pins 15/15 ALL_PINS_OK (28th consecutive clean,
+struct18-fleet-pin-check real exit 0) + extended census-verified (carousel
+exact 7 + ce363399, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT +
+36 -l companions live, belltower 2419fbc5 + ladder comp, windmill 369c5724,
+woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet
+embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched).
+Interlane md5 f6254cd0 stable. Ledger law EXACT at append (base re-read fresh).
+Snapshot rewritten 111018B / 277 entities / sha16 2a1aed39e14a4d69 with
+pre-write assertion (committed diff exactly +1 arrival block + dial pos field,
+nothing else) and post-rewrite drift vs live ZERO. R-123 register CLOSED with
+the closure note above. R-121 open, known, 30th sweep since routing, no
+escalation due — law keys Sev 1. Zero world mutations, zero defect notes,
+zero uploads, zero comp edits, zero shared-budget use. Next tier-2 pair
+(sweep-74): bunkhouse + longhouse (52nd cycle — LRU by latest-walk chain
+derived from plan text: @73 potter/market, @72 row-cottage/observatory,
+@71 potter/market, @70 hall/forge, @69 inn/stable; bunkhouse last walked
+sweep-62, longhouse sweep-63, now the stalest pair).
