@@ -2266,3 +2266,26 @@ use, no visual PASS claimed.
 - Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
   policy call, or verdicts on the four-district eye-gate circuit
   (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+**STATE AT dress-67 (2026-09-06, pipeline hold tick — 47th consecutive)**:
+lawful HOLD — every path closed fresh. Shard queue EMPTY at source
+(IMPROVE-PLAN.md md5 a3bcf38c, byte-stable; all 9 `nx-dress-*` Round-1
+rows terminal — 29/30/31 DROPPED native rejudge, 32/33/34/37/38 EXECUTED
+reseats; round-2 intake carries ONLY `nx-dress-fountain`: DRESS-domain
+by survey-8 routing but legacy-core off-limits set, ownership is Bill's
+call). SW lamps Bill a/b/c bound, spend 0 of 3 — kind-law recount fixed
+this tick: light kind is a TOP-LEVEL census field, not comps.kind; the
+three live SW r>=35 lights stand (nx-approach-sw-lamp-001-l r39.7,
+-002-l r55.4, nx-mile-sw-013-l r64.0). Eye-gate fd677cae zero VERDICT
+lines (grep fresh). Hold verification: standing gate ALL PASS real exit
+0 at tick-start HEAD 0e6f52a (own dress-66); fresh live census 260,
+lights 38; 11/11 district installs PIN_EXACT (lib-prefix + tuple +
+comps-empty + scale-1) vs the dress-22 authoritative table; 27 nx-dress
+= 11 fleet + 16 legacy intact by district-qualified-id arithmetic.
+Two probe self-catches this tick (18th/19th tick-class): (1) SW-light
+filter keyed comps.kind only — top-level kind is the light classifier,
+world was right; (2) lib-pin compare used endswith(sha8) where the
+content-addressed lib law is store/<sha8-prefix+hex>.glb — prefix
+split is the correct predicate, world was right. Interlane f6254cd0
+steady. Foreign dirt untouched. Zero world mutations, zero uploads,
+zero shared-budget use, no visual PASS claimed.
