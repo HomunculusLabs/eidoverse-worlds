@@ -917,6 +917,85 @@ identity intent. Rotation stays NW->NE->SE->SW.
   madder rust, weld yellow) facing the path; reads "worker just came in
   from the rows", not a fence.
 
+### dress-103 — NE great bellows (round-3 item 9, BUILD-ONLY — v6 judged 3/5, v7 + placement owed next tick)
+
+- **Concept contract**: the forge's AIR MACHINE — the third element of the
+  smithy beside the anvil pad (strike) and the billet (heat). A
+  workshop-scale double-board bellows on a timber trestle cradle, nozzle
+  aimed at the forge firebox, depicted MID-STROKE: SOLID leather chamber
+  swelling tall toward the nose, thick top board riding it, steel
+  gathering band at the nose, pump bar framed between two GROUNDED posts
+  (the smith's lever). Host: CORE forge `nx-forge` (22.118, 0, −7.958)
+  yaw −0.9076, firebox mouth + coals on its local +z face (0, 0.45,
+  0.46). The local −x flank is court-annexed (R-105); local +x is the
+  anvil alley (dress-76, 1.4m law); so the seat band is forge-local
+  **(+0.6..+1.6, +1.6..+2.4)** — beside the forge wall off the working
+  face's shoulder, nozzle −x toward the coals. CORE siting by commission
+  (item 9 anchors at the core forge — rim law does not apply; r≈24-27
+  recorded). Static, no comps; ONE mesh-ember bead at the nozzle drop
+  (emissive MATERIAL, not a light entity) — NE lamp budget untouched
+  (0 of 10).
+- **Build** (`assets/mkv3-dress-ne-bellows1.ts`): six-version arc, every
+  version deterministically rebuilt ×2 and decode-audited first
+  (`dress103-decode-bellows.ts` — bucket-by-COLOR_0 decoder; GLTFLoader
+  maps COLOR_0 to `geometry.attributes.color` and glbwrite bakes LINEAR
+  bytes, so keys derive via THREE.Color, lessons banked in the decode
+  header):
+  - v1 `152e83b9` decode-CAUGHT shallow plan-wedge (taper 0.706 > 0.7).
+  - v2 `9c8afac5` decode ALL PASS; native 18m FAIL ×2 — thin rod lever
+    read as a CANNON BARREL; mid-grey iron merged into the wood. A
+    factual pixel probe of the frames CONFIRMED the judge before any
+    redesign (both directions, probe-discipline law).
+  - v3 `8efd31fa` steel promotions + lever shortened — STILL floating
+    past the body ([−0.54, +0.08] vs body edge −0.55). FAIL, correctly.
+  - v4/v5 `0dd00530` reversed anatomy (hinge thin at butt, chamber tall
+    at nose, raised board) — decode ALL PASS incl. new ELEVATION-wedge
+    law; native FAIL: lever-center math error (bar span [−0.47, +0.17],
+    0.72m past the body) + open gap under a 0.06 board reads as slab.
+  - v6 `458cf886` **ACCEPTED-PENDING-VALUE** — SOLID leather chamber
+    (mass over gap, dress-97 silhouette law), thick 0.10 top board,
+    lever = pump bar spanning hinge-post to a SECOND GROUNDED POST
+    (dress-14 ne-yard precedent: a horizontal member past a mass ends on
+    a grounded vertical), steel band widened 0.14 × full nose height.
+    Decode ALL PASS 12/12 (grounded 0.000, h 0.82, footprint 1.96m²,
+    10 nodes, plan+taper wedges, gusset inset, nozzle droop, ember at
+    nozzle, lever-low-pole 0.75, steel at nose −1.91). Native 18m:
+    **IDENTITY PASS** (wedge-on-stand bellows silhouette), **MACHINERY
+    PASS** (bar between two grounded posts reads lever frame), 
+    GROUNDING PASS; **VALUE FAIL** (steel band still not separating —
+    the nozzle end sits dark) + **NOISE FAIL** (the three-lump coal
+    scatter reads as a hairline debris streak at 18m).
+  - **v7 fixes (owed next tick, before scan/terrain/place)**: (a) value
+    band — the steel cap is present but renders dark in the shadowed
+    nose: extend STEEL to the nozzle TIP fitting (currently IRON_LT)
+    AND raise the band to sit proud of the chamber silhouette (top of
+    band ≥ chamber top), or thin the leather behind it so the band
+    carries the leading edge; (b) coal scatter — replace the three
+    ground lumps with ONE coal mound tucked at the nozzle base (single
+    mass, no hairline) or drop entirely (the ember bead already marks
+    the drop point; minimalism law). Re-judge 18m + close view after.
+- **Decode (v6)**: bbox 2.34×0.82×0.84, footprint 1.96m², 10 nodes;
+  elevation wedge 0.33 vs 0.11 (nose y-ext > 1.4× butt), plan wedge
+  0.40 < 0.7×0.72; leather inset; nozzle droop 0.472 < 0.484; ember at
+  (−2.03, ≤0.09); steel nose −1.91; timber max 0.75 (pump bar 0.74).
+- **Siting (OWED next tick)**: derive the exact local pose in the band
+  above → world (yaw = forge −0.9076 + π if nose −x points at the fire),
+  then fresh-census SAT preflight (blockers: nx-forge,
+  nx-dress-ne-anvilpad-001, nx-court, forge-l, seven-strikes),
+  cone-check vs the plaza E-corridor axis, terrain 5-pt preflight → PY,
+  hash-gated placer `ne-dress103-place.ts` (dress-76 chassis) → upload
+  (content-addressed, 20s+ pace) → spawn → post-place tuple verify →
+  idempotent 0-verb rerun. No walking-line contact by design (off the
+  working face) — walk-test only if the final seat touches the forge
+  approach.
+- **Review rigs**: `reviews/dress103-bellows1-v2..v6/` (10 views each).
+- **Eye-check for Bill (after placement)**: at the core forge, past the
+  anvil pad toward the court corner — a big timber-and-leather wedge
+  machine on skids, tall end at the fire with its iron pipe aimed at the
+  coals, pump bar on two posts at the tail. One warm ember point where
+  the pipe's shadow lands.
+- Zero world mutations this tick; zero uploads; zero shared-budget use.
+
 ### dress-83 — NE squared-timber working yard (round-3 item 7, dress-82 build, PLACED, LIVE)
 
 - **Tick class**: install — dress-82's NATIVE-accepted v5 placed this
@@ -991,7 +1070,11 @@ identity intent. Rotation stays NW->NE->SE->SW.
    cone-saturated mosaic↔kiln band to the gallery-lane pocket between
    statuaries 0005/0026; details in the dress-92 siting-log entry).**
 9. `nx-dress-ne-bellows-001` — great bellows on a cradle beside the forge
-   wall; reads as machinery silhouette at 18m.
+   wall; reads as machinery silhouette at 18m. **BUILD-ONLY (dress-103,
+   2026-09-07 — v6 `458cf886` decode ALL PASS 12/12, native 18m 3/5
+   (identity/machinery/grounding PASS; steel value band + coal-scatter
+   noise FAIL → v7 fixes, then scan/terrain/place; details in the
+   dress-103 siting-log entry).**
 
 ### SE — WILD (round 3)
 10. `nx-dress-se-funguslogs-001` — felled-log cluster with bracket-fungus
