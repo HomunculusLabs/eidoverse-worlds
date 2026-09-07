@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 288,
+ "count": 289,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -8993,6 +8993,40 @@
      0.675,
      0.368,
      0.148
+    ]
+   }
+  },
+  {
+   "id": "nx-struct-reuleauxrotor",
+   "kind": "thing",
+   "pos": [
+    -12,
+    -0.0373,
+    -64.5
+   ],
+   "yaw": 0,
+   "scale": 1,
+   "lib": "store/670e397cb6422ee2.glb",
+   "bbox": {
+    "min": [
+     -1.75,
+     0,
+     -1.75
+    ],
+    "max": [
+     1.75,
+     3.29,
+     1.75
+    ],
+    "size": [
+     3.5,
+     3.29,
+     3.5
+    ],
+    "center": [
+     0,
+     1.645,
+     0
     ]
    }
   }
