@@ -532,6 +532,8 @@ prior eye-check pointers unchanged.
 | struct-48 | REFINE: native re-judge clearance | mobius + pendulum exact standing tuples (no placement) | — | — | 2/4 native debts CLEARED (mobius PASS, pendulum PASS); hypar + soundmirror still owed |
 | struct-49 | R4-2 Bridge of Nines | S-axis spoke, center (-7.28, 69.62) yaw -1.67552, span along axis | (-7.28, 0.0276, 69.62) | -1.67552 | LIVE, walk 9/9 max 0.396m, idempotent |
 | struct-50 | R4-3 Ruled Tower (hyperboloid lattice) | E-axis spoke dead on cardinal (58, 0) yaw 0 | (58, -0.0426, 0) | 0 | LIVE, walk 16/16 incl. interior circuit, idempotent |
+| struct-51 | REFINE: ninesbridge stair-inversion fix | exact standing tuple | (-7.28, 0.0276, 69.62) | -1.67552 | LIVE, lib 1e4e84e9→8c5d9cce, walk 9/9 0.396m |
+| struct-52 | REFINE-class: beacon slit lit-window fix | exact standing tuple | (40.8, -0.04397, -16.48) | 0 | LIVE, lib f5076e00→03d278be, walk 4/4 0.371m |
 
 **First commission queue COMPLETE (5/5): all five structures live.**
 
@@ -1881,3 +1883,57 @@ note stands: the crossing itself was always functional.)
 notes consumed by the fix). Remaining intake: beacon Sev 2 (3 black
 window-rects — next-worst), waterstair Sev 3, cellardoor Sev 3,
 orreryring margin-only.
+
+## struct-52 — BEACON SLIT LIT-WINDOW FIX (survey-17 Sev 2 day finding)
+
+Work tick (52%3=1). Subject by deficit ranking: beacon — worst open
+intake finding after struct-51 consumed ninesbridge. Native re-judgment
+FIRST (restored-vision law): CONFIRM the fill class (near-pure-black,
+zero inner gradient — "could tip toward painted void"), DROP the
+severity (rhythm carries the read at 18m), DROP survey-17's identity
+complaint (struct-11's contract is a lit tower; native: "correct beacon
+vocabulary... unambiguous lighthouse/beacon signifier"). Native margin
+notes for future ranking: 2.3:1 proportions squat vs "slim" intent; cap
+hue olive-ish vs brass; checker tiling.
+
+- One defect, one cause-family: the 12 dark slit boxes (C.DARK, proud
+  of the wall) were the void read. v1 applied the struct-12
+  lit-window idiom (warm pane recessed behind the dark frame) — NATIVE
+  FAIL + pixel probe (0 warm px at night vs 3528 lantern control):
+  a solid frame box occludes a recessed pane from EVERY angle. CLASS
+  DEFECT: decode containment check on the live Observatory shows its
+  struct-12 lamp_slit panes have the same enclosure geometry — dead
+  panes on the E/W faces (unseen by chassis front/gameplay views).
+  Observatory queued for the next refine tick (one-structure law held).
+- v2 (placed): dark slits DELETED; 12 warm emissive panes (0xffd9a0 /
+  0xfeec78 @0.9 — lantern family) seated in the wall face, outer +0.04
+  proud, inner -0.02 embedded; stone is the frame. sha f5076e00 →
+  03d278be726778773541f77d47207ead58a56af88d22b274ac46ffcd132a04fb ×2
+  deterministic; 7 nodes (dark bucket out, glow1 in); envelope
+  byte-identical [-1.55,-0.1,-1.55]→[1.55,8.475,1.55] — SAT-neutral.
+- Judged: native after PASS (lit windows ~100% fill, one warm family
+  with the lantern, zero regressions). Night pixel probe 0→602/616/616
+  warm px — probe, not verdict, disclosed (survey-17 night was already
+  CLEAN 0/5).
+- Re-place: remove+spawn reseat at the exact standing tuple
+  (40.8, -0.04397324965628428, -16.48) yaw 0, comp null → null. lib
+  store/03d278be72677877.glb. PLACED_VERIFIED 2 verbs; idempotent rerun
+  zero verbs; companion light nx-struct-beacon-l verified standing
+  (separate entity, untouched by the reseat). Base-circuit walk 4/4
+  ALL_PASS worst 0.371m (struct-11 pin class).
+- Frames: reviews/struct52-beacon/{before,after,after2}/. Placer:
+  next-place-struct52.ts.
+
+**Bill should eye-check**: from the E approach by day — the three warm
+lit slits up the shaft reading as windows (not holes), matching the
+lantern above; at dusk the whole tower now reads as one lit family.
+
+**SURVEY INTAKE status**: beacon row EXECUTED this tick. Remaining
+intake: waterstair Sev 3 (water unreadable — palette-blue lineage
+applies), cellardoor Sev 3 (void opening + door detail), orreryring
+margin-only. NEW DEFERRED (own-lane class catch): Observatory
+struct-12 lamp_slit panes likely dead (containment geometry) — queued
+next refine tick ahead of the intake ranking (53%3 != 0; the refine
+cadence law fires at struct-54, or the next work tick may take it if
+the intake is otherwise blocked — one structure per wakeup held).
+
