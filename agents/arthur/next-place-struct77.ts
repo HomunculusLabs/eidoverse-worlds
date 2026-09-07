@@ -1,5 +1,11 @@
 // next-place-struct77.ts — struct-77: OGEE GATE first placement (R6-3, NE
 // craft threshold). NEW entity (census-verified absent, fresh 282 census).
+// UNIT BUG (found+repaired struct-80b, 2026-09-07): this placer sent yaw in
+// DEGREES but wire yaw is RADIANS (models.js:77 applies ent.yaw verbatim to
+// rotation.y) — the gate stood at effective 287.6deg instead of the designed
+// 327.3deg. LIVE ENTITY NOW AT yaw -0.5703735995517468 rad (struct-80b
+// placer). Do NOT re-run this file: its degree-unit YAW (-32.68) now fails
+// the drift gate by design; the correct placer is next-place-struct80b-ogeefix.
 // Seat: (22.71, -0.0025, 65.75) yaw -32.68deg — straddles the NE lane-002
 // path 2.0m beyond bead b14 (the lane's last bone pillar, local z=-2.0,
 // clear of the 1.5m passage depth); opening axis on the lane tangent
