@@ -1850,6 +1850,13 @@ bytes):**
   floating-read class, decode before executing. Native outranks the
   ZAI caveat; chassis-aggravation still expected part. Evidence:
   reviews/survey25-slice/nx-town-longhouse/]
+  [EXECUTED improve-35 (this lane, 2026-09-07): full cure via improve-34
+  build+audit (17 material-less prims → rockfoot footings/masonry
+  chimney/porch posts/proud lit panes incl. NEW flank win_w1+win_e1)
+  + this tick's emissive-probe resolution, native re-judge
+  (back/flank views: lit amber panes, distinct footing band, post-
+  supported porch, masonry chimney, zero floats) and PLACED_VERIFIED
+  reseat c4aaa783 exact tuple + idempotent + 6/6 walk. Row CLOSED.]
   [CONTRACT improve-34 (2026-09-07 — BEFORE edit; standing judgment = survey-25 NATIVE on exact live bytes e3adcd3d == local village_longhouse3.glb == current source rebuild, no disputed bytes; idle-guard clear — last host mutation = improve-20 own-lane, survey-25/24 read-only):
    DECODE GROUND TRUTH (improve34-decode-longhouse.ts on e3adcd3d):
    25 primitives, 17 MATERIAL-LESS (struct-38 class: roof slabs, porch
@@ -1928,6 +1935,24 @@ bytes):**
    strengthen (bigger pane/emissive up) per improve-12/15 precedent;
    (2) re-judge; (3) remove+spawn re-place exact tuple + idempotent +
    walk; live still e3adcd3d; zero uploads/verbs this tick.]
+  [EXECUTED improve-35 (2026-09-07, recovery tick — deferred placement
+   closed): (1) emissive probe RUN and RESOLVED — pane bucket lg3_6
+   (all 4 windows, glow2 amber ecdc6f int 1) + fire/flame/lamp KEEP
+   meshes carry LIVE emissive in bytes; the zero night warm px was CAMERA
+   GEOMETRY (front-elevation rig: N windows on the hidden back face,
+   flanks edge-on), NOT missing emissive — no strengthen needed.
+   (2) NATIVE re-judge on banked after-renders: back.png N-windows
+   CLEARLY LIT amber, footing band DISTINCT, zero floats; right.png
+   flank win_e1 CLEARLY LIT, footing DISTINCT, porch post-supported,
+   zero floats; gameplay 18m chimney masonry PASS + porch PASS; footing
+   pixel-grid break 1e190e→34382b judge-confirmed on back/right (the
+   gameplay-front angle was solar-flattened); one 1210 paced retry.
+   (3) Reseat next-place-improve34-longhouse.ts PLACED_VERIFIED 2 verbs
+   exact tuple (9,0,26) yaw −2.828368 lib e3adcd3d→c4aaa783, comp {}
+   both sides, rider b19 + light companion standing, idempotent 0-verb
+   rerun; interior walk 6/6 ALL_PASS maxArrival 0.346m. Rebuild ×2
+   fresh-deterministic re-proven; audit ALL PASS re-run; siblings
+   byte-identical. Row CLOSED.]
 
 **ROUTING (town-4, 2026-09-06, Bill 24h-usefulness directive):** candidates
 with no live shard prefix (`nx-welcome`, `nx-court`, `nx-forge`, `nx-cistern`,
