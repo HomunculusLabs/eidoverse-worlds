@@ -452,7 +452,8 @@ identity intent. Rotation stays NW->NE->SE->SW.
 
 ### NW — CULTIVATION (round 3)
 1. `nx-dress-nw-orchard-rows-001` — espaliered fruit rows along the garden
-   fence line; low cordons, not trees (keeps sightlines open).
+   fence line; low cordons, not trees (keeps sightlines open). **DONE
+   (dress-74, PLACED 2026-09-07 — first round-3 installation live).**
 2. `nx-dress-nw-compost-001` — three-bin compost frame, plank-slatted,
    reading as garden infrastructure at 18m.
 3. `nx-dress-nw-dryingracks-001` — herb-drying racks (A-frame pairs) near
@@ -503,6 +504,64 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-74 — NW espalier fruit rows (round-3 item 1, PLACED, LIVE)
+
+- **Concept contract**: kitchen-garden espalier — fruit cordons trained on a
+  post-and-wire frame along the SUNNY plaza-facing (+z, SW) boundary of the
+  district's mid garden (garden-0058), 1.5m off the plot edge. Grounds USE:
+  intensive fruit training lives at garden edges (warmth, tidy harvest);
+  distinct from orchards (free trees) and lavender (field crop). Garden
+  infrastructure: trained cordons, NOT trees — open between tiers so
+  sightlines stay clear (round-3 commission language). Idiom: 4 timber posts
+  with pale worked caps (district tell: stile tops, hedge cut ends), 3 plants
+  as double-tier horizontal cordons (espalier air-gap signature), trunk
+  rhythm, sparse deep-red fruit dots ON the green (attached accent, not
+  debris — dress-20 lesson). Wires implied by the trained arms themselves.
+  Static, unlit — spends no lamp budget.
+- **Build**: `assets/mkv3-dress-nw-orchardrows1.ts` →
+  `assets/village_dress_nw_orchardrows1.glb`. Judge-iterated under NATIVE
+  vision (both looks native this tick — no fallback needed, disclosed):
+  - v1 (`10ffac05…`): native gameplay — espalier signature PASS (post +
+    wire gestalt, two-tier air gap unmistakable) with 3 notes: lowest fruit
+    dot read ground-debris (seated at band bottom edge), fruit visible 2 of
+    3 bays (inconsistent), proud spurs flirted rickety-fence.
+  - v2 (sha `7359f025c59a0ef2af2a354d717e99e23d7bc7402a86a4533fba709ce4de0ce0`,
+    double-rebuild byte-identical) **ACCEPTED** — spurs hug the cordon
+    (0.09m proud), arms 0.2m tall for band read, fruit r0.10 seated
+    mid-band x±0.55 z 0.02 (1 per bay, tier-staggered low/high/low). Native
+    confirm: all dots ON green (zero ground-litter), intentional stagger,
+    tiers trained not rickety. VERDICT PASS.
+- **Decode (final)**: 6 material buckets (timber/cutwood/canopy/canopy-dk/
+  trunk/fruit; budget 3–25 ✓); bbox x −3.06..3.06 (center 0, half 3.06),
+  z −0.075..0.115 (half 0.095 — a training plane), y 0..1.51. No light
+  anchors, empty comp bag (static unlit family).
+- **Siting (census 261 → 262 self)**: garden-0058 local (0, 7.295) = +z face
+  (local z half 5.445) + own half 0.095 + 1.5m clearance + center offset →
+  world (−48.062, 67.530), yaw 2.3562 (row parallel to the garden edge,
+  green side facing the field). Terrain preflight `dress74-terrain.ts`
+  5-point: worst corner 0.0339, ~1mm spread → py 0.034. SAT (fresh census):
+  garden-0058 +1.52m, orchard-0033 fat canopy proxy +3.48m, hedge-001
+  +1.59m, stile-001 +6.16m, skeps-001 +8.0m — no sub-1.4m solid adjacency;
+  rim corners 82.32..83.52 ∈ [66,108] ✓. Arrival read: nearest stile
+  crossing 11m field-side (row BEHIND the stile from the corridor vantage —
+  no occlusion); corridor pavers 28.9m. **Probe self-catch**: my first
+  "13.8m to corridor" was distance to the corridor's infinite LINE — the
+  corridor terminates at r53.4, so the true paver clearance is 28.9m
+  (safer); named here per probe-discipline law.
+- **Placement**: `nw-dress74-place.ts` (dress-10 chassis) — hash gate →
+  blocker-epoch guard (garden-0058, orchard-0033, hedge-001, skeps-001) →
+  fresh-census SAT/rim preflight → upload (content-addressed) → spawn.
+  **PLACED_VERIFIED** `nx-dress-nw-orchard-rows-001` @ lib
+  `store/7359f025c59a0ef2.glb`, pos (−48.062, 0.034, 67.530) yaw 2.3562.
+  Idempotent rerun: 0 verbs (one deduped upload — chassis wart). Post-place
+  census 262, exact tuple, empty comp bag. NW lamp spend unchanged 0 of 2.
+- **Eye-check for Bill**: from the NW corridor past the milestone pair, the
+  mid garden plot's boundary now carries a low trained fruit line — pale
+  post caps, two green bands with air between them, tiny red fruit dots.
+  Should read "kitchen garden, tended", not a fence or hedge. If the fruit
+  dots vanish in world lighting, one size pass (r 0.10 → 0.12) is the
+  standing fix.
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
 
