@@ -130,15 +130,20 @@ const brass = mat(C.BRASS, 0.55, 0);
     reel.position.copy(butt.clone().addScaledVector(dir.clone().normalize(), 0.42));
     reel.quaternion.copy(rod.quaternion);
     g.add(reel);
-    // tight line: tip -> bobber floating ON the Reed Pool water (struct-46:
-    // sibling draft's (2.6,0.28,-1.9) landed on the BANK 1.6m short of the
-    // water — judge was live-true). Target angler-local (2.8,0.14,-4.92) =
-    // pool-local (2.8,1.6): normalized water radius 0.82, 0.6m east of the
-    // bridge deck edge (x 2.2), >=0.75m from reeds, 0.78m from rim stones;
-    // bobber center at the water disc top (angler-local y 0.144 == world
-    // 0.096 == pool -0.044+0.14) = half-submerged float. Night: quiet brass
-    // dot on dark water (emissive 0.55).
-    const bob = new THREE.Vector3(2.8, 0.144, -4.92);
+    // tight line: tip -> bobber floating ON the Reed Pool water. struct-46
+    // aimed angler-local (2.8,0.14,-4.92) = pool-local (2.8,1.6) at the old
+    // commons yaw-90 pair; city-5's companion reseat (translation-only, yaw
+    // -90->0 on both) rotated the pool into the angler's +x frame and left
+    // the baked bobber pool-local (-3.72,-4.92) on dry ground (survey-40
+    // confirmed). city-11 re-aim for the SE S-edge seat: angler-local
+    // (4.52,0.1156,-1.9) = pool-local (-2.0,-1.9): normalized water radius
+    // 0.774, 0.79m from rim stones (struct-46 class 0.78), 1.05m clear of
+    // the bridge deck edge (x -0.95), 2.45m off the deck overhang; bobber
+    // y 0.1156 == world 0.081 == pool -0.05907+0.14 = half-submerged float
+    // at the true water top (old 0.144 carried the old seat's 9.4mm-higher
+    // grade). Line 3.82m @ 44deg (struct-46: 4.79m @ 33deg — same
+    // tight-slant class). Night: quiet brass dot on dark water (0.55).
+    const bob = new THREE.Vector3(4.52, 0.1156, -1.9);
     const ldir = bob.clone().sub(tip);
     const line = new THREE.Mesh(new THREE.CylinderGeometry(0.012, 0.012, ldir.length(), 6), brass);
     line.name = "rod_line";
