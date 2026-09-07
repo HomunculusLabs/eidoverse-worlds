@@ -2567,3 +2567,64 @@ idempotent rerun, two-way gate walk (P-line legs: (−47.9,0)→(−52.2,−1.4)
 envelope (x −1.995..1.995 → world −53.99..−50.0; z −7.96..8.35; center
 offsets cx −0.176/+0.267 audited), then this plan's record row + Bill
 eye-check packet. Next tick executes placement FIRST before any new work.
+
+## struct-60 (2026-09-07): STILLWIND PLACED — v2 visual gate closed, R4
+## cardinal set complete
+
+Deferred contract from struct-59 executed FIRST (queue law). Gate ALL PASS
+real exit 0 at de1b4e4 pre-tick. Local GLB == v2 pin; rebuild ×2
+deterministic.
+
+**v2 visual gate (owed, paid this tick)**: fresh 10-view render of the
+exact v2 bytes (reviews/struct60-stillwind-v2/) + two one-off azimuth
+probes (az-east18/az-south18/az-east9, struct60-probe-views.ts — the
+village-side due-east approach the stock chassis cannot frame). NATIVE
+judging: gameplay 18m PASS (piers read as real buttresses; projecting
+ring + keystone legible; coping continuous into pier caps; grounded,
+zero floats); top view S-curve CONFIRMED one clean period (its "stray
+mid-left fragment" pixel claim decode-refuted — envelope scan shows all
+geometry inside the true curve); az-east18 BOTH brass beads read
+symmetric at the springs (461,332)/(538,331). The v1 "singleton bead"
+class: night/frame+gameplay read 1-of-2, decode proves both beads at
+exact source-derived pins, and struct60-raycast-beads.ts (same-chassis
+frame raycast) proves the along-gate cameras OCCLUDE bead N behind the
+south bow at z+7.7 — designed occlusion at oblique azimuths, not a
+defect; the due-east approach (the leg Bill walks) sees both. Verdict:
+v2 PASS, ship.
+
+**SHA corruption self-catch**: struct-59's plan-recorded v2 sha had lost
+one character to its own line-wrap (63 hex chars, "…d817e029…"); the
+placer hash gate fail-closed caught it before any mutation; true sha
+35eab2fbeebcf81170c111019c45dd6ac355b363968d817ce029f37c626c9796
+(re-derived from disk + double rebuild). Lesson: never hand-copy a sha
+out of a wrapped plan line — recompute from the artifact.
+
+**Placement**: fresh 268-entity census (sibling advance absorbed; no
+stillwind entity). SAT at TRUE decoded envelope (x −2.319..1.812,
+z −7.835..8.594 → world x −54.32..−50.19, z −7.84..8.59), rotated-OBB
+axes, +3m margin near-set = mosaic-0052/0059 only; separation to
+mosaic-0052 +7.26m on its b-axis — CLEAR (gallery rows were in
+struct-59's cleared terminal set). Upload (1, paced, no 429) + spawn
+= PLACED_VERIFIED, 1 verb, lib store/35eab2fbeebcf811.glb, exact tuple
+(−52, −0.031, 0) yaw 0. Idempotent rerun: zero verbs.
+
+**Walk**: struct60-walk-stillwind.ts — PASSAGE AXIS = source-truth
+nrm(0) = (0.830, 0.558): the gate turns you ~34° as you cross (the
+plan's deferred P-line ran along-z; placement-contract law prefers the
+source-derived axis). 10/10 ALL_PASS worst 0.39m: east apron → arch →
+west apron both ways + N-end → east-bow → S-end flank circuit.
+
+**Round 4 COMPLETE**: cardinal set NW (meridianstair) / S (ninesbridge)
+/ E (ruledtower) / W (stillwind) all standing.
+
+**Intake after this tick**: waterstair survey-25 NATIVE dissent OPEN
+(water reads top-pool only at 18m on 2b418077; struct-57's own contract
+vs native read conflict — next tick's refine-ranking subject, 61%3==0
+refine tick); orreryring margin-only (design-note tier); longhouse is
+improve-lane territory (survey-25 routed it there).
+
+**Bill eye-check**: from the W gate walking west past the windmill — a
+low serpentine wall should ripple across the spoke, swelling to a gated
+crest at center; cross through the arch (it turns you slightly); at
+dusk the two brass beads at the arch springs both glow. Frames:
+reviews/struct60-stillwind-v2/ (az-east18 = the honest approach).
