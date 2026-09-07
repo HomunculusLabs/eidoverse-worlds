@@ -886,7 +886,7 @@ falsified (waterstair center 5.00m away). Companion fact, no separate item:
 dial|hall closest 0.952m = diagonal corner kiss; true E-W corridor 1.834m PASSES
 the 1.4 law. Fix is struct-lane: re-site dial N on the meridian with
 vertex-cloud SAT vs all neighbors, re-prove the dial walk with an open S
-approach. First sweep post-routing (this one); escalation law keys Sev 1.
+approach. Second sweep post-routing (sweep-72, unchanged tuple per zero-drift census); escalation law keys Sev 1.
 
 | sweep-49 | 2026-09-07 | 262→263 (+1 domain-valid arrival nx-struct-ruledtower @ (58,−0.0426,0) yaw 0 lib 4070ecc4d8f1d0e6 comp {} = struct-50 @ 990ddeb, tuple matches its committed ledger line-for-line; ONE lib flip nx-craft-hamlet-0028 032b6e24→44d78463 at identical tuple with embers comp live (particles key verified in comp JSON) = improve-25 @ 6df80eb, EPOCH-CORRECTION class — landed after first census, all affected evidence re-taken fresh (census2, SAT re-run, NE re-walked 7/7, gate re-run ALL PASS exit 0 at 6df80eb); live bbox y-span 13.311→4.724 confirms the family-cure took; 0 departures, 0 unexplained drift; snapshot rewritten normalized sha16 55af543ec07eef46, diff exactly +1 entity block +1 lib flip +count, post-rewrite drift ZERO) | exit 3 on exactly ONE unclassified = R-121 lamp-n\\|nx-town-mapboard −0.407 (known Sev 2 routed artwalk b26 @ sweep-43, tuple identical per drift set, sixth sweep since routing, no escalation due — law keys Sev 1); 225 bbox non-light, 233 classified, 0 coverage holes | tier-1 81/81 ALL_PASS real exit 0 each (core 64/64 ok max-arr 0.38; NW 5/5; NE 7/7 epoch A + re-run 7/7 epoch B; SW 5/5) + tier-2 27th cycle bunkhouse 6/6 @ 0.380 + garden-cottage 6/6 @ 0.355 ALL PASS | pins 15/15 ALL_PINS_OK (8th consecutive clean), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + 4 -l companions, belltower 2419fbc53a1d65e1 + ladder comp live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet-0007/0015/0028 embers all live, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370320 at append, standing gate ALL PASS real exit 0 at tick-start a3344f1 + re-run at 6df80eb post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
 
@@ -2123,6 +2123,7 @@ INTERLANE-PROTOCOL.md (ten lanes). Sibling placements landing mid-tick are
 expected fleet behavior — classify as sibling work-in-flight, verify domain
 prefix + scale sanity + SAT inclusion, never treat as drift.
 | sweep-71 | 2026-09-07 | 274→276 epoch-corrected (epoch A 274==274 fully quiet vs sweep-69/70 baseline sha16 86bc038404c6af69, byte-identical projection; mid-tick THREE siblings committed: improve-42 @ 66ded6b five-garden family cure, dress-92 @ a010c6c glazier arrival, struct-68 @ 3d3b315 meridiandial arrival — epoch B: +2 domain-valid arrivals (nx-dress-ne-glazier-001 (60.95,-0.0284,28.42) yaw -2.35619 lib 53b31cfd; nx-struct-meridiandial (0,-0.0065,-27) yaw 0 lib 7acc090a) + 5 garden lib flips to exactly improve-42's ledgered shas at identical tuples, envelopes strict-subset; 0 departures, 0 unexplained drift; survey-33 @ fedc6d2d analysis-only interleave; snapshot rewritten with pre-write assertions, post-rewrite id-set verified, final 276 ents) | exit 3 on THREE unclassified: known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 28th sweep, no escalation due) + TWO NEW meridiandial contacts (R-123 waterstair -2.008 square-SAT / 17.2mm TRUE 3D — Sev 2, REGISTERED + ROUTED STRUCTURES-PLAN this tick; hall -0.435 square-SAT / 0.952m true corner-kiss, E-W corridor 1.834m PASSES 1.4 law, recorded no-action); 238 bbox non-light / 233 classified / 0 coverage holes, SAT run epoch A + re-run epoch B | tier-1 81/81 ALL_PASS per-leg verified (core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5) + tier-2 49th cycle per committed pointer potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL PASS | pins 15/15 ALL_PINS_OK 26th consecutive + extended census-verified at epoch B (carousel exact 7 + ce363399, gate lamps 4/4 bbox-present + 4 -l companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched), interlane f6254cd0 stable, ledger law EXACT at append, gate ALL PASS exit 0 at c75a96b tick-start + re-run 3d3b315/fedc6d2d post-interleave | FINDINGS — R-123 new Sev 2 routed struct (first sweep); R-121 open, known, no escalation due |
+| sweep-72 | 2026-09-07 | 276==276 (238 thing + 38 light; 0 arrivals, 0 departures, exactly FIVE drift field-sets on one family = 5x nx-wild-cairn-{0022,0043,0047,0048,0050} lib flips a4450b40→19edc830 / 5d6c3edd→c7ea6ded / 109e5bc5→b5ed154a / 09ed84ef→de186a14 / efedd361→594f5192 at identical tuples, bbox y-max 1.73→1.51 contact-law stack shrink + mm-level size echoes = improve-43 @ 59046e7 committed PRE-tick, live landing postdates sweep-71's snapshot (known-epoch class), ledger-matched sha-for-sha; epoch B 20s-paced re-read 0/0/0 settled; single stable epoch; snapshot rewritten format-exact 110567B/276 ents/sha16 af358982e79adce8, pre-write assertion vs COMMITTED diff exactly 5x cairn lib+bbox, post-rewrite drift ZERO) | exit 3 on the THREE known unclassified: R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 29th sweep, no escalation due — law keys Sev 1) + R-123 dial\|waterstair −2.008 square-SAT / 17.2mm TRUE 3D (Sev 2 struct-routed @ sweep-71, 2nd sweep) + dial\|hall −0.435 square-SAT / 0.952m true corner-kiss (companion fact, corridor 1.834m PASSES 1.4 law, recorded no-action in R-123); 238 bbox non-light / 233 classified / 0 coverage holes, NO new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 — FIRST core walk over the dial bytes, sweep-71's walks predated the arrival; NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 50th cycle per committed pointer row-cottage 6/6 @ 0.384 + observatory circuit 5/5 ALL_PASS | pins 15/15 ALL_PINS_OK 27th consecutive (struct18-fleet-pin-check real exit 0) + extended census-verified on the true comp schema (carousel exact 7 + ce363399, gate lamps 4/4 full-lib bbox-present + 4 -l companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched), interlane f6254cd0 stable, ledger law EXACT at append, gate ALL PASS exit 0 at ebb16a35 tick-start + re-run db05163c post-interleave | CLEAN SWEEP — R-121 + R-123 open, known, no escalation due |
 
 sweep-71: FINDINGS SWEEP, epoch-correction tick (R-123 born). Epoch A fully
 quiet — census 274==274, normalized projection byte-identical to the committed
@@ -2164,3 +2165,59 @@ edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-72): row-cotta
 (50th cycle — LRU by latest-walk chain: @71 potter/market, @70 hall/forge,
 @69 inn/stable, @68 bunkhouse/longhouse, @67 garden-cottage/tower-house;
 row-cottage+observatory last walked sweep-66, now stalest).
+
+sweep-72: CLEAN SWEEP, single-stable-epoch classified-drift tick. Census
+276==276 (238 thing + 38 light) vs the committed sweep-71 baseline (sha16
+fc6321443cb193ca): 0 arrivals, 0 departures, exactly FIVE drift field-sets,
+all one family — the five WILD-CAIRN cairns nx-wild-cairn-{0022,0047,0048,
+0043,0050} lib-flipped at identical tuples to exactly improve-43's ledgered
+cure shas (19edc830 / c7ea6ded / b5ed154a / de186a14 / 594f5192), with bbox
+y-max 1.73→1.51 (the contact-law shorter stacks) and mm-level size echoes.
+improve-43 committed PRE-tick @ 59046e7; the live landing postdates sweep-71's
+snapshot — known-epoch class, ledger-matched sha-for-sha, domain-valid, not
+drift. Epoch B (20s-paced re-read): 0/0/0 — single stable epoch, no sibling
+landed live this tick (struct-69 / dress-93 committed mid-tick but both
+BUILD-ONLY, zero world mutations by their own entries; live unaffected by
+construction). Overlap: exit 3 on exactly the THREE known unclassified —
+R-121 lamp-n | nx-town-mapboard −0.407 (29th sweep since routing, no
+escalation due — law keys Sev 1), R-123 dial | waterstair −2.008 square-SAT
+/ 17.2mm TRUE 3D (2nd sweep since routing to struct), and the dial | hall
+−0.435 square-SAT companion fact (0.952m true corner-kiss, E-W corridor
+1.834m PASSES the 1.4m law — recorded no-action inside R-123's register
+entry). 238 bbox non-light / 233 classified / 0 coverage holes — NO new
+contacts; the five cairn cures are envelope strict-subsets and introduced
+none. Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0:
+core 64/64 @ 0.38 — the FIRST core walk over the meridiandial bytes
+(sweep-71's core walk predated the dial's arrival; the dial sits on the
+plaza-adjacent meridian between mapboard-waystone legs, so this is fresh
+R-123-relevant evidence: the standing route set threads the dial's plaza
+leg without a failing leg), NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37.
+Tier-2 50th cycle per the committed pointer: row-cottage 6/6 @ 0.384 +
+observatory circuit 5/5 ALL_PASS. Integrity: pins 15/15 ALL_PINS_OK (27th
+consecutive clean), carousel comp bag exact 7 + lib ce3633992d07055e, gate
+lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 resolved and
+standing) + 4 -l companions, belltower 2419fbc53a1d65e1 + ladder comp live,
+windmill 369c5724, woodyard 01b78fdd00f090a7, welcome 7d1bd0c9545c44fb +
+welcome-l companion live, cistern 156b4fc8c7287a9d, hamlet embers 5-of-5
+full payloads, 38 lights, 16 comp-bearing census-matched. Probe self-catches
+pre-verdict (sweep-51/55 class, both repaired in-tick): (a) the first
+integrity battery keyed `comps` and unprefixed libs — false FAILs across
+the board; re-anchored on the census's true schema (`comp`/`compKeys`,
+`store/`-prefixed lib), then verified full payloads (hamlet embers preset
+'embers' count 40 origin present, carousel motion+smoke+sockets complete).
+(b) The first snapshot rewrite dropped the committed envelope ({world,
+count, entities} wrapper) — caught by the size delta (101922B vs 110567B),
+restored from git and rewritten format-exact; the second write's
+pre-write assertion compared against my own first rewrite instead of the
+committed baseline and failed-closed (empty drift) — re-anchored on
+`git show HEAD:` content, asserted the exact 5x cairn lib+bbox diff, final
+file 110567B / 276 entities / sha16 af358982e79adce8, git diff exactly 23
+insertions / 23 deletions all within the five cairn blocks, post-rewrite
+drift vs live ZERO. Interlane md5 f6254cd0 stable. Ledger law EXACT at
+append. Standing gate ALL PASS real exit 0 at tick-start ebb16a35, re-run
+ALL PASS real exit 0 at db05163c after the two BUILD-ONLY interleaves.
+Zero world mutations, zero defect notes, zero uploads, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-73): potter +
+market (51st cycle — LRU by latest-walk chain: @72 row-cottage/observatory,
+@71 potter/market, @70 hall/forge, @69 inn/stable, @68 bunkhouse/longhouse;
+potter+market last walked sweep-71, now stalest).

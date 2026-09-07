@@ -176,37 +176,66 @@ function composeGarden(g: THREE.Group, r: () => number): string {
 }
 
 function composeOrchard(g: THREE.Group, r: () => number): string {
-    let n = 0;
-    for (let gx = 0; gx < 9; gx++) for (let gz = 0; gz < 9; gz++) {
-        if ((gx + gz) % 2) continue;
+    // improve-44 cure: the baseline quincunx exported its crowns/tufts/fruit
+    // material-less (plain mat() outside the five familyPass tones -> no
+    // glTF material -> loader-default near-black; 3-of-4 primitives,
+    // struct-38/improve-42 class) and its 4-blob stacked crowns at 1.6m
+    // quincunx pitch merged into a continuous forest-edge wall with +44%
+    // height scatter and sub-pixel fruit (survey-10..13 unanimous, native
+    // before-judge confirmed: "natural forest edge, not a planned orchard").
+    // Rebuilt as a REGULAR ORCHARD: strict full 5x5 grid at 2.9m pitch,
+    // uniform trunk height, single distinct crowns with sky gaps between,
+    // visible fruit dots. Every material is a real texMat.
+    const oc_leaf = texMat("oc_leaf", [0x6e8a4a, 0x5f7c40, 0x7d9756], { rough: 0.95, scale: 2.2, weights: [2, 1, 1] });
+    const oc_leaf_dk = texMat("oc_leaf_dk", [0x50693c, 0x47613a, 0x5a7644], { rough: 0.95, scale: 2.2, weights: [2, 1, 1] });
+    const oc_fruit = texMat("oc_fruit", [0xd2a43c, 0xc2902e, 0xe0b44e], { rough: 0.7, scale: 1.2, weights: [2, 1, 1] });
+    const GRIDS = 5, PITCH = 2.9, H = 2.2 + r() * 0.15; // uniform height (+/-3%)
+    let n = 0, dots = 0;
+    for (let gx = 0; gx < GRIDS; gx++) for (let gz = 0; gz < GRIDS; gz++) {
+        const x = (gx - (GRIDS - 1) / 2) * PITCH + (r() - 0.5) * 0.08;
+        const z = (gz - (GRIDS - 1) / 2) * PITCH + (r() - 0.5) * 0.08;
+        const cr = 0.95 + r() * 0.15; // crown radius, mean 1.03
+        const crown = new THREE.Mesh(new THREE.IcosahedronGeometry(cr, 0), oc_leaf);
+        crown.name = `orch_${gx}_${gz}_crown`;
+        crown.position.set(x, H + 0.75 + cr * 0.35, z);
+        crown.scale.set(1, 0.9, 1);
+        g.add(crown);
+        const under = new THREE.Mesh(new THREE.IcosahedronGeometry(cr * 0.62, 0), oc_leaf_dk);
+        under.name = `orch_${gx}_${gz}_under`;
+        under.position.set(x + (r() - 0.5) * 0.12, H + 0.35, z + (r() - 0.5) * 0.12);
+        g.add(under);
+        const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.10, 0.15, H, 6), mat(C.DARK, 0.95, 0));
+        trunk.name = `orch_${gx}_${gz}_trunk`;
+        trunk.position.set(x, H / 2, z);
+        g.add(trunk);
+        // 3-5 visible fruit dots on the crown's top hemisphere (r 0.09-0.11)
+        const fd = 3 + Math.floor(r() * 3);
+        for (let k = 0; k < fd; k++) {
+            const a = r() * Math.PI * 2, e = 0.25 + r() * 0.55;
+            const rr = cr * 0.92;
+            const dot = new THREE.Mesh(new THREE.IcosahedronGeometry(0.09 + r() * 0.02, 0), oc_fruit);
+            dot.name = `orch_${gx}_${gz}_fruit_${k}`;
+            dot.position.set(x + Math.cos(a) * rr * Math.cos(e), H + 0.75 + cr * 0.35 + rr * Math.sin(e) * 0.9, z + Math.sin(a) * rr * Math.cos(e));
+            g.add(dot);
+            dots++;
+        }
         n++;
-        const x = (gx - 4) * 1.6 + (r() - 0.5) * 0.4, z = (gz - 4) * 1.6 + (r() - 0.5) * 0.4;
-        const h = 1.6 + r() * 0.8;
-        const tr = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.13, h, 5), mat(C.DARK, 0.95, 0));
-        tr.name = `orch_${gx}_${gz}_trunk`;
-        tr.position.set(x, h / 2, z);
-        g.add(tr);
-        for (let c = 0; c < 4; c++) {
-            const bl = new THREE.Mesh(new THREE.IcosahedronGeometry(0.42 + r() * 0.3, 0), mat(0xe6e6b4, 0.9, 0));
-            bl.name = `orch_${gx}_${gz}_blossom_${c}`;
-            bl.position.set(x + (r() - 0.5) * 0.7, h + 0.1 + c * 0.5, z + (r() - 0.5) * 0.7);
-            g.add(bl);
-        }
-        // grass tuft + fallen fruit at each tree
-        for (let k = 0; k < 3; k++) {
-            const t = new THREE.Mesh(new THREE.ConeGeometry(0.05, 0.2 + r() * 0.1, 4), mat(0x446632, 0.95, 0));
-            t.name = `orch_${gx}_${gz}_tuft_${k}`;
-            t.position.set(x + (r() - 0.5) * 1.2, 0.1, z + (r() - 0.5) * 1.2);
-            g.add(t);
-        }
-        if (r() > 0.4) {
-            const fr = new THREE.Mesh(new THREE.IcosahedronGeometry(0.06, 0), mat(0xdec64e, 0.9, 0));
-            fr.name = `orch_${gx}_${gz}_fruit`;
-            fr.position.set(x + (r() - 0.5) * 1.5, 0.05, z + (r() - 0.5) * 1.5);
-            g.add(fr);
-        }
     }
-    return `quincunx orchard, ${n} trees w/ understory`;
+    // grass skirt: sparse tufts at grade inside the grid, same leaf family
+    for (let k = 0; k < 18; k++) {
+        const t = new THREE.Mesh(new THREE.ConeGeometry(0.05, 0.2 + r() * 0.1, 4), oc_leaf_dk);
+        t.name = `orch_tuft_${k}`;
+        t.position.set((r() - 0.5) * (PITCH * GRIDS - 0.8), 0.1, (r() - 0.5) * (PITCH * GRIDS - 0.8));
+        g.add(t);
+    }
+    // 2 fallen-fruit litter dots at grade (visible scale, no longer sub-pixel)
+    for (let k = 0; k < 2; k++) {
+        const fr = new THREE.Mesh(new THREE.IcosahedronGeometry(0.08, 0), oc_fruit);
+        fr.name = `orch_litter_${k}`;
+        fr.position.set((r() - 0.5) * 6, 0.06, (r() - 0.5) * 6);
+        g.add(fr);
+    }
+    return `regular orchard: ${n} trees in 5x5 grid @${PITCH}m, ${dots} fruit dots`;
 }
 
 // ---------- v6 themes: architecture (the mandate asked for houses) ----------

@@ -2992,6 +2992,62 @@ open duplicate notes for these objects.
    orchard 5/5, lavender 4/4 remain OPEN. Gate exit 0 at 66ded6b
    (tick-start) + fe3d15b8 (final HEAD, city-1 new-lane gate widening
    disclosed). Next worst-first OPEN improve-own family: ORCHARD.]
+   [CONTRACT improve-44 (2026-09-07 — BEFORE edit; decode-first on exact
+   local bytes == live pins: 1640→24bcfc6a (orchard-0020), 1666→ec93dc09
+   (0046), 1679→8d3959f0 (0059), 1692→dc4d7059 (0012), all four LOCAL
+   sha16 == live lib names, no disputed bytes; work_1653_rotation local
+   7044745d is NOT live anywhere — 0033's live pin a3bb3487 is the bespoke
+   nvp-24 build mkv3-cultivation-orchard-0033.ts, family = two sources):
+   DECODE ROOT CAUSES (improve44-decode-orchard.ts):
+   (R1) MATERIAL CLASS (rotation x4): composeOrchard crowns 0xe6e6b4,
+   tufts 0x446632, fruit 0xdec64e are plain mat() OUTSIDE the five
+   familyPass tones → toGLB exports NO glTF material for them (3-of-4
+   primitives material-less, 13.4-13.7k of ~15k verts loader-default
+   near-black; struct-38/improve-42 class). The "forest wall / value
+   collapse / fruit ZERO" reads ARE the near-black canopy mass.
+   (R2) MERGED CANOPY: 4 stacked crown blobs (r 0.42-0.72) per tree with
+   ±0.35 scatter at 1.6m quincunx pitch (2.26m diagonal) — crowns touch
+   by construction (2×r_max 1.44 ≥ pitch 1.6 fails only on scatter, but
+   4-blob stacks read continuous); native judge: "half the stand fuses
+   into a wall".
+   (R3) HEIGHT VARIANCE: trunk h 1.6+r*0.8 (1.6-2.4, +44% spread) —
+   ragged skyline, "no regular planting pitch" per survey.
+   (R4) FRUIT SCALE: single r0.06 ground sphere per ~60% of trees —
+   sub-pixel at 18m; native: "fruit effectively zero".
+   (R5) 0033 BESPOKE: leaf 0x788e50/fruit 0xd2a84b plain mat() → 2-of-4
+   primitives material-less (5460 verts dark); crowns merged within
+   ranks (native-confirmed); fruit single r0.075 dot per tree — zero at
+   18m; gate lintel dies inside dark canopy.
+   FIXES (rotation — all inside composeOrchard, mason.ts; rng draw order
+   preserved where possible so ring/scatter stay aligned; familyPass
+   untouched):
+   F1 materials: crowns/tufts/fruit → REAL texMats (oc_leaf 2-tone
+   green, oc_fruit warm gold, tufts → oc_leaf family); trunks keep
+   familyPass timber.
+   F2 grid: strict 5×5 FULL grid at 2.9m pitch, no quincunx skip, no
+   trunk scatter (±0.04 align jitter only); crown single blob r 0.95-1.1
+   (distinct lollipop crowns, gap ≈ pitch − 2r ≈ 0.7m); envelope kept
+   inside baseline (±7.2 x/z from 2.9×2 = ±5.8 fits).
+   F3 height: uniform h 2.2 + r*0.15 (±3%, from ±44%).
+   F4 fruit: 3-5 r0.09-0.11 warm-gold texMat dots per crown top-hemisphere
+   + 1-2 ground litter dots — visible at 18m.
+   F5 0033: leaf/fruit → texMats same families; fruit 3 dots per crown;
+   no geometry/aisle/gate change (aisle+gate PASS natively).
+   FALSIFY: (1) decode audit ×6 — 0 material-less primitives rotation x4
+   (0033: ≤2 timber/soil only where designed), glTF materials present,
+   envelope x/z baseline-subset, 0 below grade; (2) identical-camera
+   before/after renders, native after-judge at 18m: planned orchard
+   identity, distinct crowns, fruit visible, alleys legible; (3) 5
+   uploads paced 21s + remove+spawn x5 exact tuples, PLACED_VERIFIED,
+   census 276 steady, idempotent 0-verb rerun, comps {} both sides.
+   REVERT: restore before-bytes banked at reviews/improve44-orchard/
+   before/ (5 GLBs cp'd pre-edit, polish-271 law) → re-place old shas
+   at same tuples.
+   GUARD READING (disclosed): no lane has touched any
+   nx-cultivation-orchard-* entity in 24h (ledger tail read-only
+   survey-10..13/31/34 + viz-era PASSes; dress-74/80/81 touched
+   nx-dress-nw-orchard-ROWS-001, a different entity). Sibling
+   verification of the bespoke 0033 is nvp-25's standing record.]
 - `nx-cultivation-lavender-0006` — Sev 3 (survey-10, 2026-09-06, NATIVE,
   18m gameplay, live store bytes 26f0eed9 HTTP 206): lavender identity
   FAILS — desaturated purple-charcoal (~#4a4044) canopy reads dead
@@ -3014,6 +3070,9 @@ open duplicate notes for these objects.
   PASS (all bases contact). Family note: 5 orchards (0012 first
   judged) — family spread unverified.
   Evidence: reviews/survey10-slice/nx-cultivation-orchard-0012/gameplay.png
+   [EXECUTED improve-44, 2026-09-07: family cured by the committed contract
+   (materials class + grid/crown/fruit rebuild in composeOrchard; this
+   member reseated live at new lib).]
 
 ### survey-11 family-class extensions (2026-09-06)
 
@@ -3066,6 +3125,9 @@ class except seed (ZAI-native stack 0003+0013).
   x918-960 y140-235), z-fight banding x695-800 y318-378; trunk rhythm
   + fruit litter PASS — family 2-of-5. Evidence:
   reviews/survey11-slice/nx-cultivation-orchard-0020/gameplay.png
+   [EXECUTED improve-44, 2026-09-07: family cured by the committed contract
+   (materials class + grid/crown/fruit rebuild in composeOrchard; this
+   member reseated live at new lib).]
 - `nx-gallery-mosaic-0052` — Sev 3 (survey-11, ZAI): IDENTICAL to
   mosaic-0036/0048 class — no frame/backing, field runs off both
   lateral edges, ground show-through throughout, far-field dissolve
@@ -3117,6 +3179,9 @@ call, single paced retry recovered; zero ZAI fallback this tick).
   post is the only crop indicator); trunk rhythm/shadows PASS —
   family 3-of-5 MAJORITY. Evidence:
   reviews/survey12-slice/nx-cultivation-orchard-0033/gameplay.png
+   [EXECUTED improve-44, 2026-09-07: family cured by the committed contract
+   (materials class + grid/crown/fruit rebuild in composeOrchard; this
+   member reseated live at new lib).]
 - `nx-temple-seed-0021` — Sev 4 (survey-12, NATIVE): IDENTICAL to
   seed-0003 class — flat block-mosaic disc x300-660 y376-414
   (~360px wide, ~12px tall, 30:1), no seed core, no vertical element,
@@ -3352,12 +3417,18 @@ the executing lane. Grep-verified: no open duplicate notes.
   in-canopy break; ground spheres read debris), right-edge tree
   crushed-black x922-960 y222-500, understory clutter — family
   4-of-5. Evidence: reviews/survey13-slice/orchard-0046/gameplay.png
+   [EXECUTED improve-44, 2026-09-07: family cured by the committed contract
+   (materials class + grid/crown/fruit rebuild in composeOrchard; this
+   member reseated live at new lib).]
 - `nx-cultivation-orchard-0059` — Sev 3 (survey-13, ZAI): IDENTICAL
   to orchard-0012 class — forest-edge read, major central skyline
   break x440-500 y290-390, fruit ZERO, value collapse zones A-C
   (worst x555-790 y325-400), broken rank rhythm (gaps x385-480,
   x838-895) — family 5-of-5 UNANIMOUS. Evidence:
   reviews/survey13-slice/orchard-0059/gameplay.png
+   [EXECUTED improve-44, 2026-09-07: family cured by the committed contract
+   (materials class + grid/crown/fruit rebuild in composeOrchard; this
+   member reseated live at new lib).]
 
 FAMILY CENSUS CLOSED (confirmed district families): hamlet 5/5,
 garden 5/5, cairn 5/5, orchard 5/5, lavender 4/4, seed 4/4, mosaic
