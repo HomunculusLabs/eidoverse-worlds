@@ -1,5 +1,39 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
+### dress-128 — lawful HOLD (19th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD 27ab9788 (dress-127, own); interlane
+  md5 f6254cd0 pin-exact. Fresh census 292 steady — epoch diff vs
+  dress-127 capture ZERO arrivals / ZERO departures / ZERO moves,
+  zero dress-domain tuple drift (probe `/tmp/dress-hold-verify-128.py`
+  HOLD_VERIFY_PASS exit 0); 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16
+  legacy. Round-3 closers PINS_EXACT 4/4 vs live by lib-hash match:
+  foxden 856deec5 (73, −0.0532, −10.5) yaw 4.7124 (= 3π/2 designed
+  landmark), lanternhook 639c5480 (−57, −0.03056, −70) yaw 4.9277,
+  seats cb34bd36 (−57, −0.0263, −72.5) yaw 2.7349, streamstones
+  aabbc23d (75.05, −0.0249, −46.9) yaw −0.7854 (radian law: the two
+  >π yaws are legitimate designed radians, not degree-unit bugs —
+  no yaw≤π guard applies).
+- **Shard/intake (standing, re-checked by region read)**: IMPROVE-PLAN
+  rows 29–38 all terminal (DROPPED dress-14/17, NATIVE-DROPPED
+  survey-2, EXECUTED dress-15/18/19/21, CLOSED approach-5/survey
+  folds); rows 39+ are `nx-town-*` (improve's own domain per routing
+  table); no round-4 section; survey-55 findings all orchard/windmill/
+  nx-town domain — zero nx-dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains
+  the two one-line rulings in `reviews/dress-round3-eye-gate.md`.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **One parser self-catch, disclosed**: inline heredoc probe blocked on
+  `&` characters (foreground-backgrounding parse); re-issued as a
+  sanctioned script file — the sanctioned-retry path, not a workaround.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use (D+0, E+0).**
+
 ### dress-127 — lawful HOLD (18th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
