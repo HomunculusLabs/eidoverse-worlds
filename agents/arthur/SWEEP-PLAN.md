@@ -68,6 +68,8 @@ Baseline census: `agents/arthur/reviews/sweep-census-baseline.json`.
 ||| sweep-52 | 2026-09-07 | 264==264 fully quiet vs sweep-51 baseline, then EPOCH-CORRECTION: improve-28 cistern reseat landed mid-tick; epoch-B census exactly ONE drift field nx-cistern lib d3d3ad75→156b4fc8 identical tuple (domain-valid, classified), 0 arrivals 0 departures; snapshot rewrite NOT needed (see register note: baseline pre-dates the flip and is now stale by exactly that one lib field — recorded here as the known epoch) | ALL CLEAR-equivalent: exit 3 on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard −0.407 (known Sev 2 artwalk-routed @ sweep-43, tuple identical per zero-drift census, ninth sweep since routing, no escalation due — law keys Sev 1); 226 bbox non-light, 233 classified, 0 coverage holes, SAT re-run at epoch B neutral | tier-1 81/81 ALL_PASS every leg real exit 0 (core 64/64 ok max 0.38 epoch A + re-run 64/64 @ 0.38 epoch B over new cistern bytes; NW 5/5; NE 7/7; SW 5/5) + tier-2 30th cycle potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL PASS | pins 14/15 + waterstair classified (live 3ffa182c UNCHANGED in census, local GLB rebuilt 23:03 tonight = in-flight sibling struct draft per survey-17 Sev 3 intake, racing law, live unaffected), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + companions live, belltower 2419fbc53a1d65e1 + ladder comp live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet embers 5-of-5, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370326 at append (improve-28 D+1 absorbed mid-tick, base re-read fresh), standing gate ALL PASS real exit 0 at tick-start 57c954c + re-run at 3cb1a6b post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
 |||| sweep-53 | 2026-09-07 | 264→265 across two live reads, EPOCH-CORRECTION tick: epoch A exactly the register's pre-write assertion (TWO domain-valid lib flips at identical tuples, bbox drift ZERO: nx-cistern d3d3ad75→156b4fc8 = improve-28 @ 3cb1a6b, nx-struct-waterstair 3ffa182c→4acda521 = struct-53 @ 932a756 = tick-start HEAD, both SAT-neutral material cures); then struct-54 @ 600f5c4 re-placed nx-struct-observatory 3d9d6ae1→07d18163 (envelope byte-identical, exact tuple) and dress-77/78 landed nx-dress-se-funguslogs-001 @ (40,−0.0349,−63) yaw 3.66519 lib fbc626eb comp {} (tuple matches committed DRESSING-PLAN contract line-for-line) — all affected evidence re-taken fresh: epoch-B census, SAT re-run (set 226→227, same single unclassified), gate re-run ALL PASS exit 0 at 2e71c16; snapshot rewritten final 105943B/265 entities with asserted diffs at both epochs, post-rewrite drift ZERO | exit 3 on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard −0.407 (known Sev 2 artwalk-routed, tenth sweep since routing, no escalation due — law keys Sev 1); 227 bbox non-light epoch B, 233 classified, 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each at epoch A (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37; both mid-tick changed entities >40m from every walked leg — observatory r43.7, funguslogs r74.5, tier-1 legs all r<20, no SE approach legs in the standing list — epoch-A walks unaffected by construction, SAT re-run covers the collision surface) + tier-2 31st cycle bunkhouse 6/6 @ 0.380 + garden-cottage 6/6 @ 0.355 ALL PASS | pins 15/15 ALL_PINS_OK (11th consecutive clean), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + companions live @ 1.96m, belltower 2419fbc5 + ladder comp live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet embers 5-of-5 live, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370327 at append (survey-20 + struct-54 interleaves absorbed via snapshot commits, entry at HEAD exactly once), standing gate ALL PASS real exit 0 at tick-start 932a756 + re-run at 2e71c16 | CLEAN SWEEP — R-121 open, known, no escalation due |
 
+|| sweep-54 | 2026-09-07 | 265==265 (227 thing + 38 light; 0 arrivals, 0 departures, ONE domain-valid lib flip at identical tuple: nx-welcome 362c5be1→7d1bd0c9 = improve-29 @ 3dc4db4, PRE-tick commit — not an epoch correction, sweep-53's final census predated the reseat verbs; bbox envelope strict-subset 1.176→1.17 x; rider b25 host-local anchor on-axis exact (lx 0.000, y 1.35, lz −0.053), welcome-l companion live; 0 unexplained drift) | exit 3 on exactly ONE unclassified = R-121 lamp-n\|nx-town-mapboard −0.407 (known Sev 2 routed artwalk b26 @ sweep-43, eleventh sweep since routing, no escalation due — law keys Sev 1); 227 bbox non-light, 233 classified, 0 coverage holes, SAT re-run fresh over the new welcome bytes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 32nd cycle hall 8/8 @ 0.36 + row-cottage 6/6 @ 0.384 ALL PASS | pins 15/15 ALL_PINS_OK (12th consecutive), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved), belltower 2419fbc5 + ladder live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet embers 5-of-5, welcome-l live, 38 lights, interlane f6254cd0 stable, ledger law EXACT 2370329 at append, standing gate real exit 0 at tick-start 1849af8 | CLEAN SWEEP — R-121 open, known, no escalation due |
+
 sweep-51: CLEAN SWEEP, triple-epoch-correction tick — the busiest
 interleave window this lane has absorbed: HEAD advanced three times
 mid-tick (improve-27 @ 71eb54b, struct-52 @ 1a275e1, dress-76 @ 2881ef6),
@@ -183,6 +185,38 @@ family); restored via asserted-unique-anchor python edit, header and both
 sections verified whole by grep after repair. Zero world mutations, zero
 defect notes, zero uploads, zero shared-budget use. Next tier-2 pair
 (sweep-54): hall + row-cottage (32nd cycle).
+
+sweep-54: CLEAN SWEEP, classified-drift tick (no epoch correction needed —
+the one live change predates this tick). Census 265==265 vs the committed
+sweep-53 baseline: 0 arrivals, 0 departures, exactly ONE drift field set =
+nx-welcome lib 362c5be1→7d1bd0c9 (+ cosmetic bbox shrink 1.176→1.17 x-width,
+envelope strict-subset) at identical tuple (−3,0,−4.3) yaw 0.6092 =
+improve-29 @ 3dc4db4, committed 23:43:11, BEFORE this tick's start (HEAD
+1849af8 already carried it — sweep-53's final census simply predated the
+reseat verbs). Classified domain-valid, not drift. SAT re-ran fresh over the
+new bytes: 227 bbox non-light, 233 classified, 0 coverage holes, exit 3 on
+exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard −0.407 (known
+Sev 2 routed artwalk b26 choreography @ sweep-43, tuple identical,
+ELEVENTH sweep since routing, NOT new, no escalation due — law keys
+severity-1). Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real
+exit 0: core 64/64 @ 0.38, NW 5/5 @ 0 drift on dist, NE 7/7 @ 0.38, SW
+5/5 @ 0.37. Tier-2 32nd cycle: hall 8/8 @ 0.36 + row-cottage 6/6 @ 0.384
+ALL PASS. Integrity: pins 15/15 ALL_PINS_OK (twelfth consecutive clean),
+carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 on full
+16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved), belltower
+2419fbc5 + ladder comp live, windmill 0993836012d1b17d + woodyard
+1f2c6f592095b204 exact, hamlet embers 5-of-5 live, welcome-l companion
+live, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370329
+at append (base re-read fresh immediately before writing — two sibling
+increments struct-54/survey-21 landed after sweep-53, absorbed normally).
+Snapshot rewritten with pre-write assertion (diff exactly [nx-welcome
+lib+bbox]) and post-rewrite drift ZERO: 265 entities, 105942B, sha16
+edc71d341c08640c. Probe self-catches before verdicts: guessed entity ids
+for windmill/woodyard/b25 rider (re-derived from census per sweep-51 law);
+core-walk extract keyed `distance` where schema uses `dist` (re-anchored
+on per-leg ok-counts, sweep-48 class). Zero world mutations, zero defect
+notes, zero uploads, zero shared-budget use. Next tier-2 pair (sweep-55):
+potter + market (33rd cycle).
 
 ## Findings register
 
