@@ -3022,5 +3022,81 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   interlane md5 f6254cd0 stable. Never-judged pool after this tick:
   riders b3 only + carousel (polish-hero exclusion holds); rider-tail
   scan COMPLETE. Verdicts 0 confirmed / 8 clean by id (6 native
-  judgment calls) / 0 dropped. Zero world mutations, zero uploads,
-  zero verbs, zero comp edits, zero shared-budget use.
+ judgment calls) / 0 dropped. Zero world mutations, zero uploads,
+
+## Judged index (survey-53)
+
+ - survey-53 (2026-09-07, NATIVE 11/11 judgment calls — three 1210 flaps
+ (b3-face, b10-gameplay, wayside9-gameplay) each recovered by a single
+ paced retry, ZERO ZAI fallback; 18m gameplay primary + face cross-checks
+ + night for the three emissive-carriers (rotor brass studs, townhall
+ interior, wayside lamp) per survey-31 series law; fresh live store bytes
+ 6/6 HTTP 200 curl UA from /library/store/ on exact census-53 libs;
+ served-shas pinned 232210c072caebe8 (b3) / 1f4e66dd260eea86 (foxden) /
+ 8fda3816e7c0653a (rotor) / b36554d18d70bc5c (townhall) /
+ 543031130b3e7338 (b10) / 78f0a02a7158b3e4 (wayside9); hash-domain law:
+ townhall + b10 served-shas match survey-51 pins EXACTLY, no drift):
+ LAST-NEVER-JUDGED + NEW-ARRIVAL + NATIVE-DEBT slice (severity backlog
+ drained — IMPROVE-PLAN 0 OPEN rows; native debts: survey-51 townhall +
+ b10 ZAI verdicts owed native confirm). Slice = b3-ruled-porch (last
+ never-judged rider; rider-tail CLOSES) + foxden-001 + reuleauxrotor
+ (first independent reads of the survey-52-epoch arrivals, survey-50
+ whisperhorn precedent) + townhall + b10 + wayside-0009 (survey-8's
+ oldest standing ZAI CLEAN, zero native coverage in family until
+ survey-14). VERDICTS: B3-RULED-PORCH NATIVE CLEAN — Ruled-Sky porch
+ contract honored: straight generatrices produce the hypar twist
+ deliberately, trellis voids are the art vocabulary, coherent wing
+ junction, four plumb posts with footings + finials, cast shadow
+ carries the lattice; zero tears/floats/damage. PROMPT-ARTIFACT
+ disclosed (survey-50 class): my gameplay first-pass injected a false
+ "flat emblem panel" assumption — discarded against the ARTWALK-PLAN
+ B-3 design contract, verdict rests on the corrected face re-judge;
+ margin: solo-rig shadow-side darkening (chassis class).
+ FOXDEN-001 NATIVE CLEAN-with-margin — first independent read of
+ dress-107 placed bytes 856deec5: den triad (dark bank -> near-black
+ mouth notch -> pale spoil fan) unambiguous at 18m, grounded via
+ contact shadow band, dome continuous; margins: sub-3px spoil-clump
+ micro-floats x530-565 y368-384 + stray-fleck ambiguity x540-560
+ (low-severity, motion-invisible), "missing trees" = solo-rig chassis
+ class (live seat backs onto forest-0031, dress-80 law). REULEAUXROTOR
+ NATIVE CLEAN-with-margin day+night — first independent read of
+ struct-84 placed bytes 670e397c: rotor-inside-square identity PASS
+ with all four sides contacted (apex 478,313; left 422,412; right
+ 548,412; bottom arc 455-505,434-441), clean silhouette, plinth
+ grounded; night: two quiet warm vertex studs exactly placed, zero
+ glare/bloom, spoke trace legible; margins = struct-83's own disclosed
+ residuals (apex stud occluded at rest = true kinematics, sub-res
+ studs, hairline spokes, iron/ashlar albedo conflation) — no NEW
+ findings. TOWNHALL NATIVE CLEAN-with-margin — first NATIVE read of
+ improve-4/5 cure bytes c92c1f91: IDENTITY/WATERTIGHT/GROUNDING/
+ SILHOUETTE all PASS, porch see-through hole confirmed CURED (recess
+ reads as closed interior with furniture silhouette, bright plane
+ 487-505,375-440 = lit interior face not sky-through); margins: four
+ sub-resolution lamp specks (same class survey-51 classified
+ chassis-limited), cottage-scale note. Survey-51 ZAI verdict
+ corroborated natively, native debt CLEARED. B10-WINDMILL-CROWN
+ NATIVE CLEAN-with-margin — hub ring + X-arm windrose + ticked bars
+ read deliberate authored directional emblem, brass-on-slate contrast
+ high, zero tears/floats/disconnects; first-pass left-base sliver flag
+ DISPROVED by face cross-check (soft contact shadow, plate boundary
+ clean); margins: tick detail sub-legible at 18m (striping read),
+ sub-3px radial-distance roughness. Survey-51 ZAI verdict corroborated
+ natively, native debt CLEARED. WAYSIDE-0009 NATIVE CLEAN — identity/
+ grounding/silhouette all PASS; prior survey-8 ZAI "suspected 2-4px
+ post-cap floats" REFUTED at native resolution (all four cap tops
+ seated, ≤1-2px AA seam = cap-overhang shading, background does not
+ show through); ground specks are anchored legit props. Family
+ native-coverage note: wayside family now 2 ZAI + 1 native CLEAN —
+ clean-family class stands. Routing: ZERO notes routed (zero confirmed
+ defects), zero candidate rows, ZERO ledger append (read-only tick,
+ loop law 4; ledger survey tags stop at survey-49, tick numbering
+ carries from commit tags). Census 289==289 vs survey-52 snapshot
+ /tmp/survey52-census.json: 0 arrivals, 0 departures, 0 flips, 0
+ position moves — quiet epoch, no sibling work-in-flight. Gate: ALL
+ PASS real exit 0 first try at 09416e77 (ledger law EXACT 2370715);
+ interlane md5 f6254cd0 stable (read fresh this tick). Never-judged
+ pool after this tick: carousel ONLY (standing polish-hero exclusion
+ holds) — the entire live model surface now carries at least one
+ judged index entry. Verdicts 0 confirmed / 6 clean (5
+ clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
+ zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
