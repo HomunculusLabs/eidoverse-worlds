@@ -1788,6 +1788,17 @@ open duplicate notes for these objects.
   now CONFIRMED at 2-of-5 (0007/0015) — executing lane should treat
   as family-wide unless decode says otherwise. Evidence:
   reviews/survey10-slice/nx-craft-hamlet-0015/gameplay.png
+  [EXECUTED improve-24, 2026-09-06: 0015 cured by the committed family
+  fix (improve-22 composeHamlet cure already in mason.ts HEAD — zero
+  source edits this tick; dead-window probe script pre-staged, I=1635
+  confirmed) and RESEATED live — lib 353dd6fb → b5a9de3d ×2
+  deterministic, tuple unchanged (79.285079, −0.019684, 38.519433) yaw
+  −2.35619449, embers restored, live bbox y-span 13.177 → 4.467,
+  footprint x/z byte-identical (SAT-neutral same-tuple), walk 8/8
+  ALL_PASS 0.381m; both judges down (native 1210 ×2, ZAI 300s ×2) —
+  source-grounded under standing waiver, visual PASS not claimed,
+  after-renders banked reviews/improve24-hamlet/after/. Siblings
+  0028/0041/0054 remain queued.]
   [EXECUTED improve-23, 2026-09-06: 0007 cured at source (composeHamlet
   slot fix, improve-22) and RESEATED live — lib e2f134cf → edd3da3e,
   tuple unchanged, embers restored, walk 8/8 ALL_PASS, ZAI after-judge
