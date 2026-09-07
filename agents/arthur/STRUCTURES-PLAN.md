@@ -1,3 +1,13 @@
+## CITY-PLAN RELOCATIONS (Bill B+A ruling 2026-09-07 — PRIORITY above shard + re-arm)
+
+CITY-PLAN.md is now composition law. Next N struct ticks = relocation wave 1,
+one authored move per tick (same lib, new district siting, SAT preflight,
+walk-test if near a path, eye-check pointer after each): soundmirror→SE,
+pendulum→NW, millrace→NW, reedpool→SE, skymirror→SW, amphi→NE, beacon→SE,
+observatory→SW, angler→SE, needlerest→NE, skene→NE. Order: worst
+off-spoke-ness first. No new R6 concepts until the wave completes.
+Off-spoke band r33-55 is CLOSED to new builds.
+
 # STRUCTURES PLAN — artistic-architecture lane (struct-N)
 
 Durable plan for the STRUCTURES LOOP. One authored structure per wakeup:
