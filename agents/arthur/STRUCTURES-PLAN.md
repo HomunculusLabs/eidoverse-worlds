@@ -238,6 +238,40 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   re-probe only if the owner wants ring-marker rhythm work.
   Evidence: `agents/arthur/reviews/survey17-slice/nx-struct-orreryring/
   gameplay.png`.
+- [survey-19, 2026-09-07, ZAI fallback, 18m gameplay, live bytes
+  served-sha 78f0cbad == struct-51 fix pin] `nx-struct-ninesbridge`
+  post-fix CORROBORATION — struct-51 stair-inversion fix independently
+  reads PASS: both stair-to-deck junctions flush (sky-notch class
+  GONE), flights visibly climb ground->deck, far end reads descending
+  stair not block, zero floats/voids, nine-arch rhythm + gold finials
+  clean. Cosmetic margins only (right-end cheek step chunky
+  x865-925 y303-345; ~4-steep-riser note) — no note routed beyond
+  this record. Native re-judge debt on this read disclosed.
+- [survey-19, 2026-09-07, ZAI fallback, 18m gameplay, live bytes
+  served-sha 5d8e1782] `nx-struct-meridianstair` NEW base-read flag
+  joining the standing verify cluster (not a dupe of the survey-18
+  pin/palette flags, adjacent evidence): middle-gate right post base
+  x545 y437-455 terminates ~18-20px above the ground-contact line
+  every other post meets (y~455-461) — either short/floating member
+  or shadow-swallowed contact; does not READ grounded at 18m. Pins
+  finding CORROBORATES survey-18/struct-47's standing verify flag
+  (one-of-three gold pins reads, x673 y218; gates 1/2 expected
+  ~(300,272)/(480,240) absent or sub-pixel). Sequence read + other
+  posts grounded PASS. Decode-at-source belongs to struct lane.
+  Evidence: `agents/arthur/reviews/survey19-slice/
+  nx-struct-meridianstair-views/gameplay.png`.
+- [survey-19, 2026-09-07, NATIVE 3/4 + ZAI 1/4, 18m gameplay, live
+  bytes fetched fresh census-19] hamlet family-cure native-debt
+  CLOSURE for struct/improve cross-lane record: 0007 edd3da3e NATIVE
+  4/4 PASS (zero defects, cure classes all gone), 0015 b5a9de3d
+  NATIVE 4/4 PASS (two verify-tier monitors: roof-plane shadow gap
+  x305-375 y225-290, roof specks x818-845 y278-295), 0041 caa851af
+  NATIVE 4/4 PASS (zero defects, eave-soffit darkness margin note),
+  0028 44d78463 ZAI PASS (one cosmetic margin: pole tip x428 y365
+  reads detached, sub-threshold). improve-23/24/25/26 native
+  re-judge debts CLOSED; 0054 cured this tick by improve-27. Family
+  verdict 5-of-5 CURED (0007/0015/0028/0041/0054), consistent with
+  sweep-51. Evidence: `agents/arthur/reviews/survey19-slice/`.
 
 ## Design queue
 

@@ -763,3 +763,52 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   target plans clean in tree at append). Verdicts 5 confirmed / 3 clean
   (2 clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
   zero shared-budget use.
+
+## Judged index (survey-19)
+
+- survey-19 (2026-09-07, NATIVE 4/6 + ZAI fallback 2/6 disclosed — native
+  flapped mid-slice: 4 lands, then 1210 x7 (ninesbridge x3 incl. paced
+  retry, hamlet-0028 x2, meridianstair x2 incl. paced retry); 18m
+  gameplay, fresh live store bytes 6/6 fetched curl UA from /library/
+  store/ on exact census-19 libs, served-shas pinned): NATIVE-DEBT
+  CLOSURE slice — ZAI-judged after-PASSes and fixed-byte re-judges owed
+  from survey-18's debt board, avoiding all in-flight subjects
+  (hamlet-0054 reseat, millrace/orrery probes). Slice = ninesbridge
+  (post-struct-51 fix 8c5d9cce), hamlet-0007/0015/0028/0041 (cure
+  libs edd3da3e/b5a9de3d/44d78463/caa851af), meridianstair (dec58a3b,
+  zero prior native coverage). Verdicts: NINESBRIDGE ZAI PASS —
+  struct-51's stair-inversion fix independently corroborated (junctions
+  flush, flights climb, far end descending stair, zero floats; cosmetic
+  margins: right-end cheek step chunky x865-925 y303-345, steep-riser
+  note). HAMLET-0007 NATIVE PASS 4/4 zero defects. HAMLET-0015 NATIVE
+  PASS 4/4 (verify-tier monitors: roof-plane shadow gap x305-375
+  y225-290, roof specks x818-845 y278-295). HAMLET-0041 NATIVE PASS 4/4
+  zero defects (eave-soffit darkness margin). HAMLET-0028 ZAI PASS
+  (native down — one cosmetic margin: pole tip x428 y365 reads detached,
+  sub-threshold). MERIDIANSTAIR ZAI clean-core + NEW base-read flag:
+  middle-gate right post base x545 y437-455 terminates ~18-20px above
+  the ground-contact line (y~455-461) — does not READ grounded at 18m;
+  pins finding CORROBORATES the standing survey-18/struct-47 verify
+  flag (one-of-three gold pins reads, x673 y218); sequence read PASS.
+  improve-23/24/26 native debts CLOSED natively, 0028 rolls (ZAI
+  second-vote PASS stands as after-judge corroboration), hamlet family
+  verdict 5-of-5 CURED consistent with improve-27 + sweep-51. Routing:
+  3 intake lines in STRUCTURES-PLAN (ninesbridge corroboration,
+  meridianstair new flag + pins corroborate, hamlet family closure
+  record) + 4 row annotations in IMPROVE-PLAN (native-debt closures on
+  the EXECUTED improve-23/24/25/26 blocks). Grep-verified zero open
+  duplicates pre-append. Census 263 steady 0/0 vs survey-18 snapshot
+  with 3 flips ALL matching committed sibling work at HEAD (hamlet-0028
+  improve-25, hamlet-0041 improve-26, ninesbridge struct-51); lights 38
+  by kind. LATE-TICK: ledger advanced to 2370325 (sweep-51) reporting
+  census 264 — +1 arrival nx-dress-ne-anvilpad-001 (dress-76 @ 2881ef6
+  committed) + hamlet-0054 cure flip (improve-27 @ 71eb54b) + beacon
+  lib flip (struct-52 @ 1a275e1) — all foreign-domain, none in this
+  slice; next tick's diff classifies. Gate: ALL PASS real exit 0 first
+  try at caeb34b (ledger law EXACT 2370322); HEAD advanced 122fc69 ->
+  57c954c during the tick (pipeline interleaving; IMPROVE-PLAN carries
+  sibling improve-28 in-flight hunk — staged ONLY survey hunks via
+  filtered git apply --cached, survey-9 precedent). One ledger append
+  (routing). Verdicts 0 confirmed / 5 clean / 1 flagged (meridianstair
+  base-read, verify-tier probe). Zero world mutations, zero uploads,
+  zero shared-budget use.

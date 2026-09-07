@@ -1806,11 +1806,20 @@ open duplicate notes for these objects.
   source-grounded under standing waiver, visual PASS not claimed,
   after-renders banked reviews/improve24-hamlet/after/. Siblings
   0028/0041/0054 remain queued.]
+  [survey-19 annotation, 2026-09-07, NATIVE 18m live bytes: 0015 native
+  debt CLOSED — 4/4 PASS (cured); verify-tier monitors only (roof-plane
+  shadow gap x305-375 y225-290, roof specks x818-845 y278-295 —
+  non-blocking). Evidence: reviews/survey19-slice/
+  nx-craft-hamlet-0015-views/]
   [EXECUTED improve-23, 2026-09-06: 0007 cured at source (composeHamlet
   slot fix, improve-22) and RESEATED live — lib e2f134cf → edd3da3e,
   tuple unchanged, embers restored, walk 8/8 ALL_PASS, ZAI after-judge
   4/4 PASS. Siblings 0015/0028/0041/0054 confirmed byte-stable = still
   corrupted, queued next ticks. Native re-judge debt disclosed.]
+  [survey-19 annotation, 2026-09-07, NATIVE 18m live bytes: 0007 native
+  debt CLOSED — 4/4 PASS, zero defects (grounding/sky-beneath/hole/
+  floats all cured); family verdict 5-of-5 CURED per improve-27's 0054.
+  Evidence: reviews/survey19-slice/nx-craft-hamlet-0007-views/]
 - `nx-gallery-mosaic-0036` — Sev 3 (survey-9, 2026-09-06, ZAI + native
   UNANIMOUS): mosaic-panel identity FAILS at 18m — hundreds of loose
   tiles flat on grass read as scattered paving/confetti scatter, not
@@ -1885,6 +1894,11 @@ class except seed (ZAI-native stack 0003+0013).
   3/3 PASS with pixel evidence (native 1210 down this tick, disclosed —
   native re-judge owed); after-renders banked
   reviews/improve25-hamlet/after/. Siblings 0041/0054 remain queued.]
+  [survey-19 annotation, 2026-09-07, ZAI 18m live bytes: 0028 debt
+  re-judged (native hard down after flap) — PASS, cure confirmed; one
+  cosmetic margin (pole tip x428 y365 reads detached, sub-threshold).
+  Native re-judge debt rolls to a future tick; evidence:
+  reviews/survey19-slice/nx-craft-hamlet-0028-views/]
 - `nx-cultivation-garden-0032` — Sev 3 (survey-11, NATIVE): IDENTICAL
   to garden-0011/0019 class — rows merge into continuous hedgerow
   x240-755 (two short gaps only), tan sprouts interspersed = weed
@@ -1983,6 +1997,10 @@ call, single paced retry recovered; zero ZAI fallback this tick).
   zero-verb rerun; walk 8/8 ALL_PASS 0.381m; after-renders banked
   reviews/improve26-hamlet/after/. Sibling 0054 remains queued — hamlet
   family 4-of-5 cured, next tick completes 5/5.]
+  [survey-19 annotation, 2026-09-07, NATIVE 18m live bytes: 0041 native
+  debt CLOSED — 4/4 PASS, zero defects (cured); eave-soffit darkness
+  margin note only. 0054 cured by improve-27 since; family 5-of-5
+  CURED. Evidence: reviews/survey19-slice/nx-craft-hamlet-0041-views/]
 - `nx-cultivation-garden-0045` — Sev 3 (survey-12, NATIVE):
   IDENTICAL to garden-0011/0019 class — sphere-mass bush read with
   scattered stick weeds, zero bed/row/fence grammar, one shapeless
