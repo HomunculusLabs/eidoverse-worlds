@@ -2682,3 +2682,43 @@ shared-budget use (D+0, E+0). Next tier-2 pair (sweep-81): hall + forge
 row-cottage/observatory, @78 potter/market, @76 inn/stable, @75
 garden-cottage/tower-house; hall/forge last walked sweep-77, now the
 stalest pair).
+| sweep-81 | 2026-09-07 | 284==284 fully steady vs committed sweep-80 baseline sha16 b55bd10c9ecdbe5c: epoch A 0/0/0 (0 arrivals, 0 departures, 0 drift on canonical 6-field diff id+pos+yaw+scale+lib+kind+bbox), epoch B 20s-paced settled 0/0/0 — no sibling landed this window (improve lane parked per fleet directive, struct-77/dress-102/city-12 arcs closed at tick-start HEAD e2462459); no snapshot rewrite needed (world byte-steady vs committed baseline) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 37th sweep since routing, no escalation due — law keys Sev-1); 246 bbox non-light / 230 exempt-classified / 0 coverage holes; ZERO new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38 over the ogeegate+charcoal-epoch bytes, SW 5/5 @ 0.37) + tier-2 59th cycle per committed pointer hall 8/8 @ 0.36 + forge 6/6 @ 0.375 ALL PASS | pins 15/15 ALL_PINS_OK 36th consecutive (struct18 real exit 0) + battery 26/26 ALL_PASS after two self-catches repaired pre-verdict (lib store/-prefix normalization; true gate-lamp ids nx-approach-lamp-*, my first battery guessed nx-town-gate-lamp-*) — 38 lights, 16 comp-bearing, carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib 18b69a6bb2f5862f bbox PRESENT + 4 companions, belltower 2419fbc53a1d65e1 + ladder comp live, windmill 369c572480b0e786, woodyard 01b78fdd00f090a7, welcome 7d1bd0c9545c44fb + welcome-l, cistern 156b4fc8c7287a9d, beacon 03d278be72677877 + beacon-l, hamlet embers 5-of-5, court smoke live, ogeegate tuple+lib exact, angler re-aim lib exact; interlane md5 f6254cd0 stable; ledger law EXACT 2370704 at append; standing gate ALL PASS real exit 0 at tick-start e2462459; zero mutations/uploads/verbs/comp edits/defect notes (D+0, E+0) |
+
+sweep-81: CLEAN SWEEP, fully-steady tick. Census epoch A 284==284 vs the
+committed sweep-80 baseline (sha16 b55bd10c9ecdbe5c): 0 arrivals, 0
+departures, 0 drift on the canonical 6-field diff — and the 20s-paced epoch-B
+re-read also settled 0/0/0, so no snapshot rewrite was needed (the world is
+byte-steady against the committed baseline). No sibling lane landed in this
+window: the improve lane is parked per the fleet directive and the
+struct-77/dress-102/city-12 arcs were already closed at tick-start HEAD
+e2462459. Overlap: 246 bbox non-light / 230 exempt-classified / 0 coverage
+holes — exit 3 on exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard
+-0.407, known Sev 2 routed to artwalk b26 choreography @ sweep-43,
+thirty-seventh sweep since routing, NOT new, no escalation due (the law keys
+on severity-1). Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real
+exit 0: core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38 (walked over the
+ogeegate + relocated-charcoal epoch bytes), SW 5/5 @ 0.37. Tier-2 59th
+cycle per the committed pointer: hall 8/8 @ 0.36 + forge 6/6 @ 0.375, both
+real exit 0. Integrity: pins 15/15 ALL_PINS_OK (36th consecutive clean,
+struct18-fleet-pin-check real exit 0) + battery 26/26 ALL_PASS — TWO battery
+self-catches repaired pre-verdict and disclosed (sweep-55 class, world
+correct throughout): (a) live lib values carry the store/ prefix and .glb
+suffix, my first battery's startswith checks false-FAILed 9 checks —
+normalization added; (b) my first battery guessed gate-lamp ids as
+nx-town-gate-lamp-* — the true ids are nx-approach-lamp-* (grep-verified in
+the census, sweep-51 improve-70 self-catch class: derive pins from the
+census, not memory). Interlane md5 f6254cd0 stable. Ledger law EXACT
+2370704 at append. Standing gate ALL PASS real exit 0 at tick-start
+e2462459. Zero world mutations, zero defect notes, zero uploads, zero comp
+edits, zero shared-budget use (D+0, E+0).
+
+LRU ERRATUM (sweep-81, disclosed): the sweep-80 next-pointer named hall+forge
+as "the stalest pair" while its own chain listed garden-cottage/tower-house
+@75 as older than hall/forge @77 — the walk itself was lawful (4 sweeps
+stale, every leg real exit 0), but the ordering claim was internally
+inconsistent. Corrected chain (prose-derived, sweep-81): @81 hall/forge, @80
+bunkhouse/longhouse + stable (table row, prose @76 — table row @80 wins,
+the row was written from the sweep-80 tick itself), @79 row-cottage/
+observatory + inn (same class, row wins), @78 potter/market, @76 inn/stable
+(prose), @75 garden-cottage/tower-house. Next tier-2 pair (sweep-82):
+garden-cottage + tower-house (60th cycle — true stalest by corrected chain).
