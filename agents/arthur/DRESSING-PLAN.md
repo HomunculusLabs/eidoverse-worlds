@@ -2578,3 +2578,48 @@ visual PASS claimed. No un-shard clock (shard empty at source, not
 idle). Standing unblock paths (say-once, unchanged): Bill's SW lamp
 a/b/c policy call, or verdicts on the four-district eye-gate circuit
 (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+### dress-75 — NE anvil pad (round-3 item 6, IN FLIGHT — built, judged, NOT placed)
+
+- **Concept contract**: the smith's working annex beside the CORE forge
+  (nx-forge at (22.118, -7.958) yaw -0.90756 — the only forge; queue items
+  6 and 9 anchor here). Pad on the forge's local +x flank (toward the
+  well), 1.5m walkable alley (gap(x) ~= local-x - 2.8; solid-solid 1.4m
+  law), OUT of the plaza approach cone (4.6m off the E corridor axis;
+  clears plaza->forge sightline by ~3m). Grounds USE: anvil at one-step
+  reach of the fire, quench by the fire, tool rack on the far side, dry
+  stone plinth. Directional logic: hot-work forge side (-x), storage +x.
+  Static, unlit (NE budget 10, used 0). CORE siting by commission — rim
+  law [66,108] is district-scoped, does not apply; named for the placer.
+- **Siting math (this tick)**: forge OBB center (22.364, -7.777) half
+  (1.167, 0.694); pad center = forge-local (4.3, 0) -> world
+  (24.766, -4.569), yaw -0.90756 (parallel); design half 1.2 x 0.8 ->
+  SAT gap ~1.5m. Terrain preflight NOT yet run. Placer not yet written.
+- **Build**: `assets/mkv3-dress-ne-anvilpad1.ts` ->
+  `assets/village_dress_ne_anvilpad1.glb`. Judge-iterate under ZAI
+  fallback (native vision down 1210 x2 + paced retry, disclosed):
+  - v1 (ba2ae77e...) REJECTED: anvil illegible, plinth = shadow rug,
+    one value band, barrel fused with rack, billets = dirt specks.
+  - v2 (a61352f5...) REJECTED: value fixes rendered DARK — root cause
+    MEASURED via pixel probe (pitfall-11 law): metalness 0.45-0.6
+    without env map kills diffuse; "steel" was the darkest value in
+    the kit (only ~13 neutral-bright pixels existed, all horizon).
+  - v3 (e66d0679335f2aeb4e712a2f780b390c14819c9e6796c6bb7bf6d96b4d799e65,
+    deterministic x2, 12 buckets, bbox x -1.228..1.200 z -0.800..0.860
+    y 0..1.19, center (-0.014, +0.030)): bright flat steel (0xc8ccd0
+    metal 0.1) face cap + horn, two-tone plinth, 3-plate irregular
+    scorch, barrel to forge side (full x-separation from rack), one
+    bright billet, poker dropped (minimalism). ZAI judged PARTIAL FAIL:
+    claims lightest value is a "tan block" (x462-505 y361-385) not the
+    anvil; scorch invisible dark-on-dark; tools read as rack infill.
+    PIXEL PROBE OF THE JUDGE'S CLAIMS QUEUED (script written, not run —
+    budget): identify the tan block (likely the mid-steel billet at
+    0x8a9098 catching sun, or the light plinth top) and measure the
+    anvil-face band's rendered value; pitfall-13 law also applies —
+    if the face band is <2% of frame height the 18m finding is
+    framing-limited and the close read (already PASS-shaped: bright cap
+    + horn resolve at front view) may carry the verdict.
+- **Next wakeup**: run the probe, settle v3-or-v4 (v4 candidates: seat
+  anvil ON the light step, scorch moved onto light stone, tools gap),
+  then terrain preflight -> hash-gated placer -> place -> ledger close.
+  Zero world mutations this tick; no uploads; no shared-budget use.
