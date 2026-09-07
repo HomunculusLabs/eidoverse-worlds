@@ -412,6 +412,32 @@ nx-dress = 11 fleet + 16 legacy core off-limits set intact; census 260
 Gate ALL PASS real exit 0 at HEAD 5d88242 (own dress-63 commit). Zero
 world mutations, zero uploads, zero shared-budget use.
 
+**STATE AT dress-65 (2026-09-06 20:03 EDT, pipeline hold tick — 45th
+consecutive)**: lawful HOLD — every path closed fresh. Shard queue EMPTY
+at source, chain-verified: IMPROVE-PLAN.md byte-identical across the
+sweep-43 epoch jump (git diff c612798..08119ca on the file is empty) —
+9/9 `nx-dress-*` Round-1 rows terminal (5/29/30/31 DROPPED native
+rejudge, 32/33/34/37/38 EXECUTED reseats, row 39 foreign improve-20);
+round-2 candidates carry ONLY `nx-dress-fountain`, legacy-core
+off-limits, Bill's ownership call — not shard work. SW lamps Bill a/b/c
+bound, spend 0 of 3 (kind-law fresh recount: exactly 3 live SW r>=35
+lights — nx-approach-sw-lamp-001-l r39.7, -002-l r55.4, nx-mile-sw-013-l
+r64.0). Eye-gate packet fd677cae unchanged (zero VERDICT lines, grep
+fresh this tick). Hold verification: standing gate ALL PASS real exit 0
+at HEAD 08119ca (own gate run, sweep-43 absorbed — HEAD advanced
+c612798→08119ca mid-batch, classified normal pipeline interleaving).
+Fresh live census 260 via curl after one urllib 403 (client-classified,
+gateway fine); 11/11 district installs PIN_EXACT lib+tuple+yaw-radians+
+comps-empty by programmatic compare vs the dress-43/44 authoritative
+table (probe self-catch: first fetch shape-assumed a bare list — the
+gateway returns {world, entities}; dict-shape unwrap fixed it); 27
+nx-dress = 11 fleet + 16 legacy core intact by arithmetic; census-wide
+lights 38 (kind histogram thing 222 / light 38). Interlane md5 f6254cd0
+steady. IMPROVEMENTS.md dirt seen early this tick was sweep-43's
+in-flight ledger edit, absorbed by their commit — lane owns zero
+worktree dirt at close. Zero world mutations, zero uploads, zero
+shared-budget use, no visual PASS claimed.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)
