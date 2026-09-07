@@ -1,7 +1,7 @@
 # DRESSING-PLAN — dress-N lane durable state
 
 ## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
-- survey-29 (2026-09-07, NATIVE, live bytes 1ea38f61 gameplay+night, reviews/survey29-slice/bellpost/): day-frame identity dissent on dress-86 bellpost — reads LAMP/torch-first ~75-80% (saturated orange + straight-sided cone + on-axis mount; no bronze value/crown/lip/hanging offset); night frame PASSES (zero emissive/bloom — inert bronze read, correct). Probe: value/mount, not mesh. Margin: detached ground squiggle left of base ~40-50px (hairline artifact class).
+- survey-29 (2026-09-07, NATIVE, live bytes 1ea38f61 gameplay+night, reviews/survey29-slice/bellpost/): day-frame identity dissent on dress-86 bellpost — reads LAMP/torch-first ~75-80% (saturated orange + straight-sided cone + on-axis mount; no bronze value/crown/lip/hanging offset); night frame PASSES (zero emissive/bloom — inert bronze read, correct). Probe: value/mount, not mesh. Margin: detached ground squiggle left of base ~40-50px (hairline artifact class). **CLOSED by dress-91: native re-judge CONFIRMED the dissent on exact live bytes, v6 cure reseeded live (see dress-91 entry below).**
 
 - [survey-6, 2026-09-06, NATIVE (restored), 18m gameplay, live bytes lib
   f595e862 verified unchanged post-tick] `nx-dress-nw-hedge-001` CONFIRMED
@@ -638,6 +638,39 @@ annotation. Round-3 ledger (dress-73, 19 items): done 1,2,3 (NW),
 NW item 3 (dress-88), so rotation next = NE round-3 item 8
 (glazier rack). Shard queue: no OPEN nx-dress rows. SW lamps
 remain blocked on Bill's a/b/c budget policy (0 of 3).
+
+**STATE AT dress-91 (2026-09-07, pipeline cure tick — survey-29 routed
+dissent EXECUTED live)**: bellpost native re-judge on exact live bytes (pin
+lib 1ea38f61 == local sha, census 274, tuple exact, comps empty) — native
+CONFIRMED the survey-29 dissent (lamp/torch-first: saturated orange,
+cone-down gestalt, bell projected onto post axis). This is the dress-89
+stile class: v2-v4 were ZAI-accepted during native-down windows and the
+"brighter gold wins the warm vote" prescription CAUSED the lamp read.
+Two-version cure on the same bytes:
+- v5 (374c700c): bronze de-saturated 0xd9a441→0xb08d55 + BRONZE_D dark
+  flanks, emissive DELETED (night already passed with zero bloom —
+  polish-273 was misapplied; pure day-cost), arm lengthened 0.66→0.92,
+  knee flipped below-arm, pale sawn cap restored as brightness anchor.
+  Native 18m: value PASS, mount still FAIL — dead-on vantage foreshortens
+  the +z arm to a point and projects the bell onto the post.
+- v6 (fe682869f9a759af…, deterministic ×2, 7 nodes): the STRUCTURAL cure —
+  arm rotated to local +x, which both matches the seated orientation
+  contract (placer: "local +x (bell arm) → world az ~-115°, across the
+  bend gap" — the v2-v4 +z arm never matched it) and kills the dead-on
+  foreshortening (dress-82 axis-law class). Bell deepened ~1.5× (mouth r
+  0.24, h 0.50), hang gap 0.13, dark mouth disc + BRONZE_D rim under the
+  flare. Native: 18m gameplay **4/4 PASS** (hanging read, gap, cast-metal
+  value, bell-post gestalt) + night **3/3 PASS** (quiet dark silhouette,
+  zero glow, grounded). Margin: mallet weak at 18m (sub-threshold,
+  expected).
+- Reseat: sw-dress91-place.ts (dress-86 chassis + remove+spawn migration
+  gate per dress-81 law) — same tuple (−54.0, −0.0294, −69.8) yaw −24.7°,
+  lib swap 1ea38f61→fe682869, SAT clear on TRUE v6 dims (center +0.2775
+  z +0.051, half 0.8285×0.550 — the wider +x reach re-gated fresh), rim
+  87.0..89.0 ∈ [66,108], 2 verbs, **PLACED_VERIFIED**, idempotent rerun
+  0 verbs, comp bag empty both sides. Census 274. SURVEY INTAKE survey-29
+  CLOSED (annotated). SW lamp spend 0 of 3 (unlit, no emissive).
+  Rotation next unchanged: NE round-3 item 8 glazier rack (10 of 19).
 
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
