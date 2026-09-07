@@ -36,6 +36,7 @@ lane_loopfile() {
     struct)  echo STRUCTURES ;;
     approach) echo APPROACH ;;
     survey)  echo SURVEY ;;
+    city)    echo CITY ;;
     *)       echo "" ;;
   esac
 }

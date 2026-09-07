@@ -1,12 +1,9 @@
-## CITY-PLAN RELOCATIONS (Bill B+A ruling 2026-09-07 — PRIORITY above shard + re-arm)
+## CITY-PLAN RELOCATIONS (Bill B+A ruling 2026-09-07)
 
-CITY-PLAN.md is now composition law. Next N struct ticks = relocation wave 1,
-one authored move per tick (same lib, new district siting, SAT preflight,
-walk-test if near a path, eye-check pointer after each): soundmirror→SE,
-pendulum→NW, millrace→NW, reedpool→SE, skymirror→SW, amphi→NE, beacon→SE,
-observatory→SW, angler→SE, needlerest→NE, skene→NE. Order: worst
-off-spoke-ness first. No new R6 concepts until the wave completes.
-Off-spoke band r33-55 is CLOSED to new builds.
+CITY-PLAN.md is composition law; the relocation register is EXECUTED BY THE
+CITY LANE (city-N) — not struct. Struct law: band r33-55 is CLOSED to new
+builds except pieces named on a spoke in CITY-PLAN.md; district rings take
+all new R6+ concepts. Relocations are moves, never rebuilds.
 
 # STRUCTURES PLAN — artistic-architecture lane (struct-N)
 
