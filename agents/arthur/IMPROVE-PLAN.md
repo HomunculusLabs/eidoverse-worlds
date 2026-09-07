@@ -1867,6 +1867,17 @@ class except seed (ZAI-native stack 0003+0013).
   slab rows x545-670 y225-298, broken bridge planks x395-545 y26-46 —
   family 3-of-5. Evidence:
   reviews/survey11-slice/nx-craft-hamlet-0028/gameplay.png
+  [EXECUTED improve-25, 2026-09-06: 0028 cured by the committed family
+  fix (improve-22 composeHamlet cure in mason.ts HEAD, work index 1648)
+  and RESEATED live — lib 032b6e24 → 44d78463 ×2 deterministic, tuple
+  unchanged (65.396745, 0.0016024, 58.883493) yaw −2.35619449, embers
+  restored, live bbox y-span 13.311 → 4.724, footprint x/z
+  byte-identical (SAT-neutral same-tuple), rim 81.20–95.30 legal,
+  minGap +0.540 vs cloister-0029, PLACED_VERIFIED + idempotent
+  zero-verb rerun, walk 8/8 ALL_PASS 0.381m; ZAI fallback after-judge
+  3/3 PASS with pixel evidence (native 1210 down this tick, disclosed —
+  native re-judge owed); after-renders banked
+  reviews/improve25-hamlet/after/. Siblings 0041/0054 remain queued.]
 - `nx-cultivation-garden-0032` — Sev 3 (survey-11, NATIVE): IDENTICAL
   to garden-0011/0019 class — rows merge into continuous hedgerow
   x240-755 (two short gaps only), tan sprouts interspersed = weed
