@@ -533,6 +533,32 @@ second (D+4, E+0) pair mid-prose (h-1 class, the tool itself reported
 law BROKEN) — repaired in-tick by exactifying the prose to words; law
 re-verified EXACT 2370620 before commit.
 
+**STATE AT dress-85 (2026-09-07, pipeline build tick — placement deferred
+to next tick on run budget, improve-31/dress-82 class)**: SW round-3 item
+16 `nx-dress-sw-bellpost-001` BUILT AND JUDGED, NOT YET PLACED. Concept:
+silent bell post at the devotional-line bend (gravel corridor az 233 ->
+labyrinth az 255), outside the turn. 4-version judge arc (v1 native FAIL
+0.19m bell sub-perceptual; v2 ZAI PARTIAL bell double-camouflaged + tan cap
+out-warms it; v3 ZAI PARTIAL — SELF-CATCH: lathe profile inverted, mouth
+ABOVE post top reading lamp-head; v4 fixed orientation, **sha
+1ea38f613295a46a889608b912fa1779d8ce53a7175d0b96ec8e095b94ce8437
+deterministic x2**): CONDITIONAL PASS — bell-first read 60/40, mouth-down
+silhouette confirmed, sole-warm-accent clean, zero floating/intersecting;
+named margins (arm foreshortens at frontal angle; thong sub-pixel at 18m —
+both sub-threshold notes, judge postscript options recorded: arm yaw cheat /
+thong >= 5cm). Native vision DOWN all tick (1210 x2 per view, one paced
+retry each, disclosed) — all four judgments ZAI fallback. Decode: 6 nodes,
+envelope x -0.551..0.549 z -0.499..0.871 y -0.002..2.078, local center
+(-0.001, +0.186), furniture-scale solid, static unlit + bell mesh-emissive
+0.22 (polish-273 class, zero lamp draw). Siting (hand-derived vs this
+tick's census 270, MUST be re-verified fresh next tick): pocket (-44.6,
+-68.8) yaw -24.7deg outside the bend — terrace-0049 true-OBB +3.6m, seed
+disc +3.3m, prayer cone 80deg, rim 81.2..82.9. NEXT TICK: terrain preflight
++ placer (dress-76/80 chassis, TRUE-dims OBB) + upload/spawn + idempotent +
+verify. SW lamp spend 0 of 3 (unchanged). Shard queue: no OPEN nx-dress
+rows (nine Round-1 terminal; round-2 only the legacy-core fountain —
+off-limits, Bill's call). SW lamps still blocked on Bill's a/b/c.
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
@@ -632,7 +658,9 @@ identity intent. Rotation stays NW->NE->SE->SW.
     2026-09-07 — re-sited in-tick behind the prayer mound after the live SAT
     caught a terrace pinch; details in the dress-79 siting-log entry).**
 16. `nx-dress-sw-bellpost-001` — single quiet bell post (silent — no chime
-    comp; Bill owns sound) at the gravel path bend.
+    comp; Bill owns sound) at the gravel path bend. **BUILT (dress-85,
+    2026-09-07 — v4 judged CONDITIONAL PASS, placement queued next tick;
+    see dress-85 state block).**
 17. `nx-dress-sw-seats-001` — paired facing seats at the terminus view;
     one material, two orientations.
 18. `nx-dress-sw-offering-001` — offering shelf niche in the existing
