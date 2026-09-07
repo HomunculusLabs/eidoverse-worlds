@@ -76,3 +76,22 @@ Wave 2: mosaic row + mile re-anchors (needs Bill's nvp-105 row blessing).
 Wave 3: dress farm-props to ring edge + potter/kiln compression.
 Sweep re-baselines after each wave; census delta classified against this
 plan's register. Eye-gate packet to Bill after each wave.
+
+## SWEEP DEFECT NOTES (routed here by sweep-N; treat exactly like a Bill correction)
+
+- SWEEP-77 (Sev 3, cross-lane bookkeeping): city-7 (beacon) and city-8
+  (observatory) relocations left TWO standing walk tools pinned to the
+  VACATED seats: `agents/arthur/struct2-walk-observatory.ts` (line 8:
+  `PX = 16.48, PZ = -40.8, YAW = -0.3838824615170976` — old seat; live is
+  now (-39.811, -87.356) yaw 0.42761 per CITY-PLAN register + sweep-77
+  census) and `agents/arthur/struct11-walk-beacon.ts` (line 8: `PX = 40.8,
+  PZ = -16.48` — old seat; live is now (60.911, -66.764) yaw -30deg).
+  A run at a vacated seat vacuously passes over empty ground — false-green
+  class. The observatory circuit is a standing sweep tier-2 rotation member
+  (SWEEP-PLAN has 15 refs; next due within ~2 cycles). Evidence: sweep-77
+  census epochs A/B (both moves ledger-matched), walk-tool grep. Ask:
+  re-pin both walk tools to the new tuples (city lane owns the seats;
+  struct's originals, city's relocation deltas), or retire them from the
+  rotation until wave-1 completes. The LIVE world is correct — tooling
+  only. No world mutation made by sweep-77.
+
