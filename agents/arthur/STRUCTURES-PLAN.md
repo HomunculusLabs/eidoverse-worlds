@@ -4555,3 +4555,86 @@ routing). Refine pool expected EMPTY unless survey routes a note.
 BILL EYE-CHECK (one, standing): walking W past stillwind, an infinity sign
 of stone lying in the grass to your right, close enough to step over — sit
 inside either loop.
+
+## struct-91 (2026-09-07): R9-2 THE VESICA WINDOW — concept contract
+## (written BEFORE build, per procedure step 2)
+
+Cadence 91%3==1 -> BUILD tick. Shard: zero OPEN nx-struct rows
+(verified fresh at struct-90; unchanged grep this tick). Refine pool
+EMPTY (struct-90 fresh derivation; no survey routes since).
+
+CONCEPT: the form ledger holds every curve; what it lacks is an
+INTERSECTION COMPOSITION — two curves crossing in one plane, the
+ almond where they agree. ONE IDEA: THE VESICA. Two iron hoops R=1.75
+at centers ±R/2 (d=R, the exact classical vesica piscis construction:
+intersection arcs 120° each, height R√3 exact, width R). Where they
+overlap: one teal-glass almond pane (glazier-stall glass family,
+rough .25 metal .5, faces cresting the tube 1cm). Where they cross:
+the tube crossings kept visible; ONE brass bead (glow_vw KEEP) seated
+proud at the TOP vertex crossing — the one quiet night point. Two
+small iron foot plinths seat the hoops on grade (no floating ends).
+Silhouette: two circles → one almond, read at 3m face-on from the
+path. Folly, not enterable: bbox 5.43x3.7x0.18 = ~1.0m2 < FLOOR_MIN
+2 → furniture solid box, honest for a glazed folly. 3 nodes after
+merge (iron bucket + glass + bead). No motion. Siting: E spoke
+mid-gap station (70,-3) yaw 0 — face to the path (3m face-on read
+for every walker), framing the S wilds / the town on approach from E;
+fresh-census neighbors all 8m+ (ruledtower 12.4, foxden 8.1), beside
+the walking line (z=0), not on it (lamp-law). E is the spawn-facing
+spoke and last received a struct at ruledtower; spatial equity.
+
+## struct-91 (2026-09-07): R9-2 THE VESICA WINDOW — authored, judged,
+## PLACED_VERIFIED
+
+BUILD: v1 assertions caught two of my own errors before any render — the
+four-foot x-envelope error (hoops TANGENT the ground at exactly one point
+each, ±R/2 under their centers; the ±1.5R four-foot model was wrong) and
+the bead-pride global/local confusion (pride is LOCAL to the vertex
+crossing; the hoop tops 3.68 legitimately crown the build). v2 glass is
+an EXTRUDED lens 0.06 thick, rim embedded along the tube centerline arcs
+(z ±0.03 inside tubes ±0.09) — no floating pane, faces recessed 6cm
+behind tube fronts (window-in-frame, not glow-box). Build sha
+f4cedc72ffb79bfaa24ae480fad459903d131861d366b4a159f5f1dc45e9960f ×2
+deterministic. Assertions ALL PASS: vesica d=R, vertices ±R√3/2, 120°
+arcs, bbox 5.43x3.68x0.32 furniture-class (<2m²), bead local-pride 8cm.
+
+DECODE: 3 nodes (vesicawindow_0 iron, vesicawindow_1 glass, glow_vw
+bead y 3.356 exact = R+TUBE+H−0.015 rim-seat), emissive exported,
+3 materials. Node budget 3/45.
+
+JUDGED (native vision, exact v2 bytes): gameplay 18m PASS 9/10 (vesica
+clear, teal lens one of the most legible elements, feet contact clean,
+single soft shadow). Front (top-half frame) PASS 4/4 — glass-to-hoop fit
+tight (no daylight gaps, no overhang), true X crossing at the top (tubes
+pass through, not tangent), bead centered on the junction, zero
+z-fighting/holes/duplicates. Night PASS one-quiet-point (exactly one
+warm amber dot, zero bleed; disclosed: quiet base read family-consistent,
+upper arcs + teal anchor carry the silhouette). Vision flapped 1210 on
+the first front call — one paced 20s retry restored native; judged
+native throughout, no ZAI fallback used.
+
+SITE: E spoke mid-gap station (70, −0.0435, −3) yaw 0 — between ruledtower
+(r58) and foxden (r73.8/offline), the band's honest gap; face to the
+path at z=0 → 3m face-on read for every walker; BESIDE the line (hoop
+extremes z ±0.16 → 2.84m off line); E spoke last received a struct at
+ruledtower (spatial equity; W got R9-1). Terrain 13pt spread 2.1mm,
+mean PY −0.0435 (near-perfect flat — honest seats).
+
+PLACEMENT: hash gate exact → SAT center-corrected fresh 293-set worst
+nx-dress-se-foxden-001 +4.29 (law 1.4) → upload store/f4cedc72ffb79bfa
+.glb (0 429s) → spawn nx-struct-vesicawindow @ (70, −0.0435, −3) yaw 0 →
+PLACED_VERIFIED exact tuple, census 293→294 → idempotent rerun ZERO
+verbs. Comps {} (bead is emissive material). Gate re-run post-placement
+ALL PASS real exit 0 (city-80 sibling HEAD absorbed).
+
+EYE-GATE: struct-r8 packet extended with the Vesica Window stop —
+delivered once.
+
+NEXT: 92%3==2 -> build tick (R9-3; candidate space: the third leg of the
+form ledger — composition families beyond intersection: superposition?
+inversion? derive from live census gaps next tick). Refine pool expected
+EMPTY unless survey routes a note.
+
+BILL EYE-CHECK (one, standing): on the E walk past ruledtower, two iron
+hoops crossing in the grass to your right — the teal almond between
+them, brass bead at the top crossing. Look through it both ways.

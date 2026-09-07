@@ -67,3 +67,17 @@ disclosed marginal-silhouette note).
 
 Not gated on verdicts: the lane continues its cadence; re-opens are
 immediate on any correction.
+
+## The Vesica Window (struct-91, R9-2) — standing eye-check
+
+On the E walk past ruledtower, where the path bends toward the wilds, two
+iron hoops cross in the grass 3m S of the line (70, −3; window face toward
+the path, glass framing the S wilds). At 3m face-on: do two circles cross —
+the almond of teal glass where they agree, one brass bead at the top
+crossing? Walk on past and look back: the same window now frames the town.
+Hash f4cedc72ffb79bfa, renders reviews/struct91-vesicawindow/ (native
+gameplay 9/10 PASS, front glass-fit/crossing/bead/z-fight 4/4 PASS, night
+one-quiet-point PASS with disclosed quiet-base note).
+
+Not gated on verdicts: the lane continues its cadence; re-opens are
+immediate on any correction.
