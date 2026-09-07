@@ -438,6 +438,70 @@ in-flight ledger edit, absorbed by their commit — lane owns zero
 worktree dirt at close. Zero world mutations, zero uploads, zero
 shared-budget use, no visual PASS claimed.
 
+## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
+
+Bill: "we need to expand scope hella." Round-1 families are complete; round-3
+deepens each district along its OWN theme with new installation families.
+All prior laws carry: district-qualified ids (nx-dress-<quad>-<family>-<NNN>),
+one authored installation per wakeup, disjoint from the 16 legacy plaza/farm
+polish subjects and all Bill-off-limits entities (fountain stays off-limits),
+lamp spends still budget-bound per the a/b/c policy hold, shared upload
+budget 4/min/IP with 20s+ pacing, SAT preflights, two-way MCPL walk-test for
+anything that touches a walking line, 18m readability law for anything with
+identity intent. Rotation stays NW->NE->SE->SW.
+
+### NW — CULTIVATION (round 3)
+1. `nx-dress-nw-orchard-rows-001` — espaliered fruit rows along the garden
+   fence line; low cordons, not trees (keeps sightlines open).
+2. `nx-dress-nw-compost-001` — three-bin compost frame, plank-slatted,
+   reading as garden infrastructure at 18m.
+3. `nx-dress-nw-dryingracks-001` — herb-drying racks (A-frame pairs) near
+   the dyer's yard edge; hung swatches echo dye colors.
+4. `nx-dress-nw-rainbarrel-001` — barrel + plank stand at the skep row end;
+   single authored piece, ties the apiculture corner together.
+5. `nx-dress-nw-fieldcross-001` — one maintained field-crossing: two plank
+   stiles + mown gap, mid-field, walk-tested both ways.
+
+### NE — CRAFT (round 3)
+6. `nx-dress-ne-anvilpad-001` — forge-adjacent anvil pad: stone plinth,
+   tool rack, quench barrel in the bone-brass idiom.
+7. `nx-dress-ne-timberyard-001` — squared timber stacks + sawbuck pair,
+   distinct from the NE woodstack by reading as WORKING stock.
+8. `nx-dress-ne-glazier-001` — glazier's rack: sheet-glass lean + crate,
+   near the gallery/mosaic edge (craft-to-art bridge).
+9. `nx-dress-ne-bellows-001` — great bellows on a cradle beside the forge
+   wall; reads as machinery silhouette at 18m.
+
+### SE — WILD (round 3)
+10. `nx-dress-se-funguslogs-001` — felled-log cluster with bracket-fungus
+    shelves; wild decomposition, not arrangement.
+11. `nx-dress-se-snagdead-001` — one standing dead snag with hollow (bird
+    habitat read); leans away from paths, SAT-checked.
+12. `nx-dress-se-mossbowls-001` — moss-lined hollow stones at the forest
+    edge; quiet, low, contemplative-wild.
+13. `nx-dress-se-streamstones-001` — dry-stream stone run suggesting a
+    seasonal waterline through the SE wild.
+14. `nx-dress-se-foxden-001` — den mouth + spoil heap at the tree line;
+    implies fauna without placing any.
+
+### SW — CONTEMPLATIVE (round 3)
+15. `nx-dress-sw-incense-001` — incense stand + ash ring at the prayer
+    stones approach; extends the devotional line.
+16. `nx-dress-sw-bellpost-001` — single quiet bell post (silent — no chime
+    comp; Bill owns sound) at the gravel path bend.
+17. `nx-dress-sw-seats-001` — paired facing seats at the terminus view;
+    one material, two orientations.
+18. `nx-dress-sw-offering-001` — offering shelf niche in the existing
+    boundary wall, small and specific.
+19. `nx-dress-sw-lanternhook-001` — lantern hook row (hooks only, lanterns
+    pending Bill's lamp a/b/c policy — the hooks spend no budget).
+
+Laws: each installation gets its own authored build (no kit stamping),
+18m identity read + contact-path walk where relevant, per-piece eye-check
+pointer reported to Bill after placement. If a family proves weak on
+placement, DROP it with reason rather than shipping filler — scope is
+expanded, the quality bar is not lowered.
+
 ## Siting log
 
 ### dress-21 — NW hedge reseat (shard row 38 EXECUTED, PLACED, LIVE)

@@ -4482,4 +4482,6 @@ fixes ≈ 6 F.)
 
 - [town-5] usefulness re-audit at 20:42 (Bill's standing rule): dress parked mid-window — hold tick 53, zero executable rows since row 38 (SW lamps + 4-district eye-gates are Bill-bound), ~11 useless ticks avoided; census grew 259->260 (R-120 gate lamps), dress shards absorbed by improve; fleet continues improve struct sweep survey 21h (D+0, E+1)
 
+- [dress-73] SCOPE WIDENED per Bill ('expand scope hella'): ROUND 3 authored — 19 new installations across 4 districts (NW cultivation: espalier rows/compost/drying racks/rain barrel/field-cross; NE craft: anvil pad/timber yard/glazier rack/bellows; SE wild: fungus logs/dead snag/moss bowls/stream stones/fox den; SW contemplative: incense stand/bell post/seats/offering niche/lantern hooks) — all prior laws carry (ids disjoint, budgets, SAT, walk-tests, 18m law); quality bar not lowered, weak families get DROPPED not filled; fleet relaunch chained with dress re-included (D+0, E+0)
+
 **Running total: 2370311 / 2000000**
