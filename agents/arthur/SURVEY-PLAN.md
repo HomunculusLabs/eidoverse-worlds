@@ -2732,3 +2732,95 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   with margins classified probe-resolution inputs only). Verdicts 0
   confirmed / 6 clean (4 clean-with-margin) / 0 dropped. Zero world
   mutations, zero uploads, zero comp edits, zero shared-budget use.
+
+## Judged index (survey-49)
+
+- survey-49 (2026-09-07, NATIVE-DEBT RE-JUDGMENT slice — all 8
+  fallback-judged verdicts from survey-47/48 re-judged per the
+  judge-availability opportunistic law; NATIVE 7/8 + ZAI 1/8 disclosed —
+  flap pattern: smithy first-call 1210 recovered by paced retry;
+  screwwell gameplay burned 1210 x2 -> ZAI fallback; native up for all
+  other frames incl. both night frames; 18m frames per survey-31 series
+  law — face primary for flat sign riders, gameplay primary for solids,
+  night for water structures; judged on COMMITTED survey-47/48 evidence
+  renders, byte-validity re-proven fresh THIS tick: live census 286==286
+  quiet (0 arrivals/departures/flips vs survey-48 snapshot) + all 8
+  served-sha pins re-fetched curl UA 8/8 EXACT match — renders stand on
+  identical bytes, survey-3 precedent; fetch self-catch: first fetch
+  script used bash-4 `declare -A`, macOS bash-3.2 rejected it and the
+  pins went UNSET — 4 DRIFT lines were garbage from wrong URLs, caught
+  before any judgment, rewritten explicit-line bash-3.2-safe, all 8/8
+  OK). VERDICTS: SMITHY NATIVE CONFIRM Sev 3 — emblem occupies ~6x8px
+  (x483-490 y359-369), no contour/limb/curve resolves, unidentifiable
+  smudge; frame-vs-field separation YES (1-2px near-black border vs
+  khaki field) but emblem-vs-field WEAK (low-contrast olive-brown on
+  khaki); native repeats ZAI finding on same bytes — standing note
+  provenance upgraded to native agreement, note AMENDED in place (no
+  new note, no duplicate); native's 'grass sliver x383-437 y463-466'
+  sub-claim DISCARDED — identical rig cast-shadow class survey-47's
+  cross-model control discarded. DYER-001 NATIVE CONFIRM Sev 3 —
+  full-height dark bar x478-482 y352-376 fuses edge-to-edge with frame
+  (zero tonal separation), zero blue-biased pixels in the sign (pale
+  blue is sky only), only chroma the amber vertical stripe x473-477 —
+  'frame + divider' read, not cloth roll; structurally intact sign,
+  iconography unreadable; provenance upgraded to native agreement, note
+  AMENDED in place. SCREWWELL gameplay ZAI CLEAN — machine identity 5/5
+  (banded tube + staggered blue fins strongest carriers, sump basin +
+  dark-blue water sliver + tube-insertion, ladder column with evenly
+  spaced blue rungs, discharge disc); grounding triple-cued (basin
+  shadow, column/legs shadows, foot pads); zero floaters/seams/holes;
+  crank ambiguous at 18m = margin only. SCREWWELL night NATIVE —
+  silhouette + faint moonlit rim only, ZERO teal glints at chassis
+  exposure; stricter than ZAI's '~6 faint glints' but same class: solo
+  chassis under-renders emissive (survey-42/46 bytes-only law), live
+  well_screw emissive idiom carried by owner evidence; margin tier,
+  Bill's call on any emissive boost, plan-only. REEDPOOL gameplay
+  NATIVE CLEAN — water reads desaturated steel-blue in two rimmed lobes
+  (x285-450/x535-685 y428-452), visibly bluer and lighter than posts,
+  not a void; reeds rooted (bases occluded by front rim, zero air
+  gaps); grounded (contact band x205-265/x700-745 + front plank);
+  struct-81 cure NATIVE-CORROBORATED on day frame (survey-48 ZAI
+  corroborated night). REEDPOOL night NATIVE CLEAN — pools unambiguously
+  lit (slate-blue moonlit register, 3-5x terrain luminance, hardest
+  silhouettes in frame), two amber lamp accents (513,302)/(567,325)
+  = only warm pixels; native reads water in moonlit-slate register vs
+  ZAI's teal read — same verdict class (lit, not void), margin note
+  only; night identity legible both judges. STREAMSTONES gameplay
+  NATIVE CLEAN-with-margin — single-axis authored ribbon reads
+  deliberate (x258-690 undulating chain, tapered ends, chunky end cap);
+  zero floaters (every stone base on one ground line); margins sharper
+  than ZAI: sediment bed does NOT read at 18m (no lighter bare-earth
+  strip, ground flanks identical green — 'stone line on grass' not
+  'stones in dry stream bed'; bed is sub-pixel at this distance), tail
+  strays x692-710 y371-374 natural taper outliers; core verdict
+  unchanged, margins plan-only. LOGPILE gameplay NATIVE CLEAN —
+  stacked-log identity unambiguous (triangular mound of parallel
+  horizontal cylinders x365-595 y350-400, stepped layers), end-grain
+  discs at (435,378)/(490,372)/(560,383) carry identity via value
+  contrast (tan cut wood vs dark bark), grounded (faint contact
+  darkening y397-406, no floating edge); native corroborates ZAI
+  CLEAN. CAIRN-001 gameplay NATIVE CLEAN 4/4 — six discrete stacked
+  stones with silhouette notches at every joint, measurable taper (base
+  ~100px -> capstone ~30px), pale capstone accent + olive secondary
+  accent, grounding left-biased contact shadow x403-443 y429-442, zero
+  open gaps/torn seams/strays; optional polish note (symmetric right
+  shadow) non-blocking. NE-YARD-001 gameplay NATIVE CLEAN — deliberate
+  yard reads (beam-on-posts rack x395-537 + separate legged table
+  x558-610 carry the organization read, crates + sacks interleaved),
+  grounding weak-but-passes (flat-ambient contact band y408-416),
+  zero visible floats/detachments; native corroborates ZAI CLEAN.
+  Routing: ZERO new defect notes (both native CONFIRMs upgrade
+  provenance of standing notes — amended in place, grep-verified),
+  zero candidate rows, ONE ledger append survey-49 (loop law 4:
+  note-amendment routing). Census 286==286 vs survey-48 snapshot
+  (0 arrivals, 0 departures, 0 flips) — quiet epoch, no sibling
+  work-in-flight; foreign dirt (STRUCTURES-PLAN + core-paths assets =
+  struct lane in flight, dress106 files, fleet scripts) left
+  untouched. Gate: ALL PASS real exit 0 first try at 380109e5 (ledger
+  law EXACT 2370708); interlane md5 f6254cd0 stable. Native debt
+  carried after this tick: NONE — survey-47/48 fallback debt pool
+  cleared; never-judged pool = carousel only (standing 9-tick
+  polish-hero exclusion holds). Verdicts 2 confirmed (both provenance
+  upgrades of standing findings) / 6 clean (3 clean-with-margin) / 0
+  dropped. Zero world mutations, zero uploads, zero comp edits, zero
+  shared-budget use.

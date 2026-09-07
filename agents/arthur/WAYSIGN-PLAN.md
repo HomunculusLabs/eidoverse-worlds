@@ -936,13 +936,17 @@ only when native is down that tick, disclosed.
   law; probes, decode/execute law = waysign's):
   - R2-1 `nx-sign-smithy` — Sev 3 residual on post-waysign-8 bytes: emblem
     uniform gold smudge ~19x17px, no horseshoe/U/anvil silhouette (ZAI
-    fallback, native 1210 x2); bracket/panel solid, round-1 stray-fragment
+    fallback, native 1210 x2; survey-49 NATIVE RE-JUDGE CONFIRMS — emblem
+    6x8px unresolvable, no silhouette; rig cast-shadow sliver again
+    discarded); bracket/panel solid, round-1 stray-fragment
     sub-claim was a rig shadow artifact (DISCARDED, cross-model control).
     Evidence: reviews/survey47-slice/sign-smithy/{face,right}.png
   - R2-2 `nx-sign-dyer-001` — Sev 3 residual on post-reseat bytes: bolt
     fuses near-black with frame (<10 RGB separation), zero blue-biased
     pixels; amber stripe RGB(200,153,58) dominates as false 'barrel' read
-    (ZAI fallback, native 1210 x2). Evidence:
+    (ZAI fallback, native 1210 x2; survey-49 NATIVE RE-JUDGE CONFIRMS —
+    full-height dark bar fused to frame, only chroma the amber stripe,
+    no blue anywhere in the sign). Evidence:
     reviews/survey47-slice/sign-dyer-001/{face,right}.png
   - `nx-sign-mill-001` — Sev 3 residual on post-reseat bytes: sails read
     generic X/crossed-tools (arms resolve, no vane widening/lattice/hub
