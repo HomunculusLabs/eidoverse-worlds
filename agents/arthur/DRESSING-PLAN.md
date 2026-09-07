@@ -1,6 +1,31 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-114 — lawful HOLD (5th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at HEAD 0f445e94 (dress-113, own lane); interlane md5
+  f6254cd0 (pin match); fresh census 291 quiet — 29 fleet
+  district-qualified + 16 legacy core intact. Round-3 closers
+  live-fresh tuple-exact: foxden 856deec5 (73.0, −0.0532, −10.5) yaw
+  4.7124, lanternhook 639c5480 (−57.0, −0.0306, −70.0) yaw 4.9277,
+  seats cb34bd36 (−57.0, −0.0263, −72.5) yaw 2.7349, streamstones
+  aabbc23d (75.05, −0.0249, −46.90) yaw −0.7854 (radian law, dress-26).
+- **Shard routing re-verified at source this tick** (row blocks read in
+  full): Round-1 `nx-dress-*` rows all terminal (5/29/30/31 DROPPED,
+  32/33/34/37/38 EXECUTED); round-2 candidates route to legacy-core
+  off-limits set only; the plan-tail F1/F2 arms/inscription block belongs
+  to improve-29's `nx-welcome` row — header states "town-4 routing
+  no-shard default improve", NOT dress domain. Zero OPEN rows route to
+  fleet `nx-dress-(nw|ne|se|sw)-` ids. No round-4 section exists.
+- **Blocked on Bill (standing, said once)**: bellows siting a/b/c
+  (dress-103/104, v8 accepted, needs ruling), SW lamp policy a/b/c
+  (0 of 3 spent, hooks empty by design). Next lawful install tick
+  requires a Bill ruling or a new commission (round-4 family list or
+  queue widening).
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use this tick (D+0, E+0).**
+
 ### dress-113 — lawful HOLD (4th post-close) + scan-source provenance repair (NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
