@@ -1428,3 +1428,77 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   night-clean discrimination — DRESSING-PLAN SURVEY INTAKE; nw-lane-001 +
   ne-lane-002 identical-prism edge findings — APPROACH-PLAN SURVEY
   INTAKE (section created). Mile fleet CLEAN (judged-index only).
+
+## Judged index (survey-30)
+
+- survey-30 (2026-09-07, NATIVE 6/7 + ZAI fallback 1/7 disclosed — native
+  flap: 1210 x2 + paced retry burned on ellipsecourt only, fallback there
+  disclosed; 18m gameplay, fresh live store bytes 7/7 curl UA on exact
+  census-30 libs, served-shas pinned; ne-bench-001 first fetch
+  hand-transposed the lib hash 46f3b6b14ada6d8b -> 46f3b6b14adaf8b, 9B
+  404 caught fail-closed, re-derived verbatim from census JSON — survey-25
+  class self-catch): ARRIVAL + CORE-DRESSING CORROBORATION slice
+  (severity backlog drained — round-1 terminal, survey-7..29 candidates
+  are intake not re-judge debt; improve-19/stile/tower/court dirty-tree
+  at selection excluded; selection self-catch: never-pool was derived
+  against SURVEY-PLAN only — survey-20/21 core-dressing records live in
+  IMPROVE-PLAN, so banner/chess/stringlights were re-reads framed as
+  corroboration, stablebench corroborates survey-19/20, ne-bench-001
+  corroborates dress-17's DROP). Slice = dryingracks (dress-88 arrival,
+  first independent read) + ellipsecourt (struct-64 arrival, first
+  INDEPENDENT read — owner's final judge was ZAI fallback) + banner +
+  chess + stringlights + stablebench + ne-bench-001. VERDICTS:
+  DRYINGRACKS NATIVE CLEAN-with-margin — concurs dress-87's
+  owner-acceptance (trestle grammar falsifies fence by foot/apex width
+  ratio, 7 countable tied bundles, dye-varied hues, zero floats);
+  margins: second rail row empty, foot AO faint. ELLIPSECOURT ZAI
+  fallback CLEAN 4/4 — corroborates struct-64's placement: 13 shafts
+  resolved + 14th occluded on-axis behind center front pier (correct
+  14-pier signature), ring continuous, foci pins symmetric (~291/~285px
+  = c=5.6=0.8a), all plinths grounded; native re-judge debt carries;
+  compatible with sweep-66 R-122 (adjacency class, not read quality).
+  BANNER NATIVE CLEAN-with-margin — corroborates survey-20 native CLEAN
+  (pennant identity PASS, swallowtail notch reads); margins: rigid
+  die-cut plane (zero drape), hairline shadow streak x348-462
+  y424-433, no market heraldry. CHESS NATIVE CLEAN — corroborates
+  survey-20 + polish-276: aerial checker + pieces both sides + grounded
+  pedestal; 18m pole-read is framing-limited (struct-45 class); judge
+  prompt injected a benches expectation the asset never carried —
+  missing-bench finding DROPPED as probe artifact (aerial + mkqol1.ts
+  source prove board+pedestal+6-pieces-a-side only). STRINGLIGHTS:
+  day catenary CLEAN per survey-20 corroborated (hooks = deliberate
+  anchors, end-fragment findings DROP, polish-282 class) but NEW
+  night-identity defect CONFIRMED dead-by-construction — night frame
+  ZERO warm px on all 9 bulbs, source bulbs mat(0xffd9a0,0.3,0.1) carry
+  NO emissive arg, served bytes 0 materials (COLOR_0 only), live comps
+  {}; routed DRESSING-PLAN SURVEY INTAKE + candidate row here (Sev 3,
+  off-limits set, probe-only). STABLEBENCH NATIVE CLEAN 4/4 —
+  corroborates survey-19/20 (bench anatomy, under-seat gap, grounded);
+  margins negligible. NE-BENCH-001 NATIVE CLEAN — corroborates dress-17
+  DROP literally (benches-table-benches cluster, matched heights,
+  consistent shadows); clutter blobs = dress-17's pebble margin.
+  Routing: 1 note DRESSING-PLAN SURVEY INTAKE (stringlights) + 1
+  candidate row IMPROVE-PLAN survey-30 sub-section (same object,
+  off-limits probe-only shape); zero STRUCTURES-PLAN notes (ellipsecourt
+  CLEAN needs no note — R-122 is sweep-66's decode finding, already
+  routed there). Grep-verified zero open duplicates pre-append (survey-20
+  CLEAN rows stand; stringlights note is NEW night-class, not a
+  duplicate of the day CLEAN). Census 273 vs 271: +2 arrivals both
+  domain-valid ledger-matched (ellipsecourt struct-64 tuple-exact,
+  dryingracks dress-88 tuple-exact), 0 departures, 0 flips at census
+  time; sweep-66 epoch-B re-census corroborated the same 273. Gate: ALL
+  PASS real exit 0 first try at 7d5e7d4; HEAD advanced mid-tick to
+  5141ff5 (improve-39, sweep-66 b90fbe2, struct-64 6a8220a interleaves,
+  all foreign files) — re-gated before commit per polish-270 epoch law.
+  Verdicts 1 confirmed (stringlights night) / 6 clean (5 corroborations
+  + dryingracks first read) / 0 dropped + 2 in-read DROPPED findings
+  (chess missing-bench prompt artifact, stringlights end-fragments).
+  Zero world mutations, zero uploads, zero comp edits, zero
+  shared-budget use.
+
+## Routed notes (survey-30)
+
+- survey-30: `nx-dress-stringlights` night-identity Sev 3 probe — note
+  DRESSING-PLAN SURVEY INTAKE (core-era off-limits set, ownership Bill's
+  call) + candidate row IMPROVE-PLAN survey-30 sub-section. Zero other
+  lane files touched this tick.

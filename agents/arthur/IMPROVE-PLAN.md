@@ -3029,6 +3029,58 @@ bytes 8/8 curl UA on exact census-21 libs, served-shas pinned.
   flag NOT reproduced (ZAI third vote, split 2-1) + pins 1-of-3 third vote
   — adjacent evidence in STRUCTURES-PLAN, native tie-break owed on both.
 
+### survey-30 sub-section (2026-09-07, NATIVE 6/7 + ZAI fallback 1/7
+disclosed — native flap: 1210 x2 + paced retry burned on ellipsecourt
+only; every fallback verdict names its judge):** arrivals + core-dressing
+corroboration slice. Slice = dryingracks (dress-88 arrival, first
+independent read) + ellipsecourt (struct-64 arrival, first INDEPENDENT
+read — owner's final judge was ZAI fallback) + five core nx-dress props
+(banner, chess, stringlights, stablebench, ne-bench-001).
+
+- `nx-dress-stringlights` — Sev 3 night-identity candidate (survey-30,
+  NATIVE day-read + night frame + source decode + served-byte decode,
+  off-limits set member, probe-only, Bill's call): day catenary read
+  CLEAN per survey-20; NEW finding — night read is dead-by-construction:
+  night frame ZERO warm px across all 9 bulbs (x318-642 y362-392),
+  source bulbs mat(0xffd9a0,0.3,0.1) carry NO emissive arg, served store
+  bytes have 0 materials (COLOR_0 only), live comps {}. The namesake
+  night function of "string LIGHTS" cannot fire. Full note + evidence
+  path routed DRESSING-PLAN SURVEY INTAKE (core-era, off-limits set —
+  same routing shape as fountain survey-8 / well survey-23). Evidence:
+  reviews/survey30-slice/stringlights/
+- CLEAN records (survey-30, judged index in SURVEY-PLAN): dryingracks
+  NATIVE CLEAN-with-margin — concurs dress-87's owner-acceptance:
+  trestle grammar falsifies fence (foot/apex width ratio), 7 countable
+  tied bundles in dye-varied hues, zero floats, soft contact shadows;
+  margins: empty second rail row, faint foot AO. ellipsecourt
+  ZAI-fallback CLEAN 4/4 — corroborates struct-64's placement: 13 shafts
+  resolved + 14th occluded on-axis behind the center front pier (the
+  correct 14-pier signature), ring continuous 360 deg, both brass foci
+  pins present + symmetric about frame center (~291/~285px offsets =
+  c=5.6=0.8a), all plinths grounded, zero voids/floats; native re-judge
+  debt carries (owner's judge was also fallback); compatible with
+  sweep-66's R-122 sub-law gap finding (different class — adjacency,
+  not read quality). banner NATIVE CLEAN-with-margin — corroborates
+  survey-20 native CLEAN: pennant identity PASS (pole+finial+
+  swallowtail notch), grounding PASS; margins: rigid die-cut plane
+  (zero cloth drape/wave), hairline 1-2px shadow streak x348-462
+  y424-433, no market heraldry on the cloth, verify doubleside from
+  reverse azimuth. chess NATIVE CLEAN — corroborates survey-20 +
+  polish-276 working-height law: aerial two-tone checker reads
+  (cream/dark diamond x440-520 y325-388), pieces present on both sides
+  (~3-4 visible of the 6-per-side set), pedestal column + flared foot
+  grounded; the 18m pole/crossarm first read is framing-limited
+  (struct-45 class — board interior sub-2% of frame at 18m;
+  judge-at-concept-distance holds). stablebench NATIVE CLEAN 4/4 —
+  corroborates survey-19/20 CLEAN: canonical bench anatomy (thin plank
+  + elevated thin legs, under-seat gap visible), sitting-height read,
+  grounded, zero floats; margins negligible. ne-bench-001 NATIVE CLEAN —
+  corroborates dress-17's DROP verdict literally: two matching pedestal
+  benches flank ONE taller two-legged table, matched heights (~1px),
+  consistent lower-left contact shadows, zero floats/zero misaligned
+  blobs; the three flagged "clutter" blobs are dress-17's own
+  below-threshold pebble margin.
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):

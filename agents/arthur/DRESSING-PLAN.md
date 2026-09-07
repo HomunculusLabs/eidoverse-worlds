@@ -3110,6 +3110,22 @@ verdict:
   lane + Bill's off-limits set call. Evidence:
   reviews/survey28-slice/stile/]
 
+- `nx-dress-stringlights` — survey-30 NATIVE probe note (read-only, not a
+  verdict; core-era off-limits set member — ownership Bill's call): DAY frame
+  corroborates survey-20's ZAI 4/4 CLEAN (catenary arc reads, ~7% sag,
+  bulb-drop rhythm legible, hooks are the deliberate `sl_hook_w/e` anchors —
+  the judge's "detached end fragments" DROP, polish-282 host-rider class);
+  NEW night finding, dead-by-construction triple-proof: night frame renders
+  ZERO warm px (all 9 bulbs dark silhouettes, x318-642 y362-392) + build
+  source mkatmos1.ts seats bulbs as mat(0xffd9a0, 0.3, 0.1) — plain
+  MeshStandardMaterial, no emissive arg (glbwrite.ts:13 signature carries
+  none) + served store bytes decode: 44 nodes, 0 materials (COLOR_0
+  vertex-colored, no emissive channel anywhere) + live census comps {}.
+  The asset's namesake night function cannot fire at any setting — a warm
+  night read would need an emissive-bearing rebuild (bulb material + reseat)
+  or a glow comp. Probe for the off-limits call; day CLEAN stands.
+  Evidence: reviews/survey30-slice/stringlights/ (day + night frames)
+
 district installs PIN_EXACT programmatic (store/-aware lib prefix, pos
 within 0.01, restated yaw, comps-empty, scale-1) vs the authoritative
 dress-43/44 table; 27 nx-dress = 11 fleet + 16 legacy intact. Probe
