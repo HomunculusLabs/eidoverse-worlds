@@ -126,6 +126,71 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   (attached but shimmer-risk at in-game resolution); bobs consistent;
   identity reads pendulum wave (gallows read absent). Queue row 35
   standing — oldest native-confirmed OPEN struct row after struct-40.
+- [survey-17, 2026-09-06, ZAI FALLBACK (native 1210 x2 + paced retry
+  burned — hard down all tick), 18m gameplay, fresh live store bytes
+  served-sha dca64ea9] `nx-struct-ninesbridge` CONFIRMED Sev 2 (village
+  scale; fallback judged 2/5 with 5=worst) — first independent read of
+  struct-49's waiver-era placement. Core read STRONG: nine-arch arcade
+  rhythm crisp (~87-88px module, arches x≈127..827, crown beads aligned
+  dead-on arch centers), deck band continuous x85-875, zero floats/voids
+  mid-span. End-local findings only: (a) off-palette pale diagonal slab
+  right end x843-902 y328-408 reads stray/mis-rotated fragment — highest
+  priority; (b) background sky-notch at left deck-stair junction x55-90
+  y332-368 where abutment should close the corner; (c) stair-to-deck
+  dock read ambiguous (highest steps sit below deck line; steps descend
+  away from bridge → reads abutment blocks, not approach stairs).
+  CONTEXT: struct-49's committed 9-leg two-way MCPL walk ALL_PASS
+  0.396m proves the stairs genuinely stand and the deck crosses both
+  directions — walk evidence outranks render on function; (a) and (b)
+  remain as real render-visible read defects for the owner to
+  decode-at-source. Evidence: `agents/arthur/reviews/survey17-slice/
+  nx-struct-ninesbridge/gameplay.png`.
+- [survey-17, 2026-09-06, ZAI FALLBACK, 18m gameplay, live bytes
+  served-sha 6d490bab] `nx-struct-beacon` CONFIRMED Sev 2 (fallback
+  2/5, 5=worst) — three pure-black rectangles down the shaft (x468-492
+  at y246-292 / y326-372 / y406-458) read as holes/unlit windows on a
+  solid column; identity drifts lighthouse/mini-building (2.3:1 shaft)
+  from intended iron brazier column — lamp head itself PASS. NIGHT
+  CLEAN (0/5): warm panel #FFE491 sole light signature, crisp boundary,
+  zero bloom spill. Margin: shaft checker texture shimmer at 18m.
+  Evidence: `agents/arthur/reviews/survey17-slice/nx-struct-beacon/
+  {gameplay,night}.png`.
+- [survey-17, 2026-09-06, ZAI FALLBACK, 18m gameplay, live bytes
+  served-sha cd89a1e] `nx-struct-waterstair` CONFIRMED Sev 3 (fallback
+  said 4/5 with 5=worst; translated — identity failure with clean
+  geometry) — water completely unreadable at 18m: reads dry timber
+  gate/shrine over stacked slabs; the one dark band y335-348 reads
+  shadow/void not water (no blue, no gloss, no flow). Silhouette,
+  grounding, cleanliness all PASS — material/water-plane failure, not
+  geometry (water-is-GEOMETRY law + palette blue 0x506a78 fix lineage
+  applies). Evidence: `agents/arthur/reviews/survey17-slice/
+  nx-struct-waterstair/gameplay.png`.
+- [survey-17, 2026-09-06, ZAI FALLBACK, 18m gameplay, live bytes
+  served-sha 69ce6fc6] `nx-struct-cellardoor` CONFIRMED Sev 3 (fallback
+  said 4/5, 5=worst; translated) — identity fail at 18m: reads
+  freestanding dark portal frame with pitch-black rectangle opening
+  (x428-535 y296-395, zero depth cues → hole/missing-geometry read),
+  no door leaves/handles, no turf berm. CHASSIS CAVEAT named by judge:
+  review chassis renders on flat ground plane — the live siting is
+  against a bank/hillside, so "not set into terrain" is unproven here;
+  the void + missing door-detail findings stand on their own. Thin
+  lintel-edge slivers x465-540 y292-300 flicker-risk. Evidence:
+  `agents/arthur/reviews/survey17-slice/nx-struct-cellardoor/
+  gameplay.png`.
+- [survey-17, 2026-09-06, ZAI FALLBACK, 18m gameplay, live bytes
+  served-sha ea4f2317] `nx-struct-orreryring` MARGIN PROBE ONLY —
+  fallback's primary finding ("center void ~x415-545 y388-396,
+  instrument absent") is CHASSIS-INVALIDATED: the chassis renders each
+  entity in isolation, and the orrery (`nx-struct-orrery`, same pos
+  9.2,-36.9, census-confirmed standing) occupies that center in the
+  live composed world — sub-finding DROPPED, ensemble is designed.
+  Surviving margin-tier only: marker rhythm sparse/uneven (front
+  camera-facing arc ~150-180° carries zero markers), stone C x531-543
+  sits inside the ring band not on it, no contact shadows under
+  disc/stones (chassis lighting caveat). Not routed as a defect;
+  re-probe only if the owner wants ring-marker rhythm work.
+  Evidence: `agents/arthur/reviews/survey17-slice/nx-struct-orreryring/
+  gameplay.png`.
 
 ## Design queue
 

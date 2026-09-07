@@ -642,3 +642,68 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (dress-72, foreign files only; all four target plans clean in
   tree at read). Verdicts 2 confirmed / 5 clean / 0 dropped.
   Zero world mutations, zero uploads, zero shared-budget use.
+
+## Judged index (survey-17)
+
+- survey-17 (2026-09-06, ZAI FALLBACK 11/11 disclosed — native 1210 x2
+  on first call + paced retry burned, hard down all tick; 18m gameplay,
+  fresh live store bytes 9/9 HTTP 206 curl UA on exact census-17 libs,
+  served-shas pinned): STRUCT-DOMAIN WAIVER-ERA slice — the nine
+  standing nx-struct-* works with ZERO independent survey reads,
+  prioritized because struct-45..49 executed under the standing
+  visual-tool waiver (source-grounded claims only), including the
+  fresh ninesbridge (struct-49, placed with BOTH judges down, visual
+  PASS never claimed). Slice = ninesbridge, beacon (+night), northneedle
+  (+aerial summit check), orrery, orreryring, waterstair, cellardoor,
+  haltneedlerest (halt+needlerest degenerate pair, one sha bb227fd6 —
+  one model judgment covers both entities), reedpool. 10 entities / 9
+  distinct shas. SEVERITY SCALE NOTE: ZAI fallback this tick used 5=worst
+  direction; verdicts below translated to village scale (1=worst) with
+  the fallback's raw score named in each routed note. Verdicts:
+  NINESBRIDGE CONFIRM Sev 2 — first independent read; core arcade read
+  STRONG (nine-arch rhythm crisp, beads aligned, deck continuous, zero
+  mid-span floats); end-local only: off-palette pale slab x843-902,
+  left junction sky-notch x55-90, stair-dock read ambiguous (struct-49's
+  committed 9-leg walk ALL_PASS outranks render on function; slab+notch
+  route as decode-at-source probes). BEACON CONFIRM Sev 2 day (three
+  black void-rects on shaft x468-492; identity drifts
+  lighthouse/mini-building) / CLEAN night (sole warm signature, zero
+  spill). NORTHNEEDLE CLEAN-with-margin (silhouette/taper/grounding
+  PASS; ~2-3° shaft lean verify-intent flag from single view; summit
+  clipped in gameplay frame — aerial.png shows crown+finial, judge
+  caveat satisfied, not a defect). ORRERY CLEAN (armillary read, axis
+  rod, fork stand; planet-arm legibility margin-tier cosmetic only).
+  ORRERYRING margin probe only — fallback's center-void finding
+  CHASSIS-INVALIDATED (orrery entity occupies center in live composed
+  world, same pos census-confirmed; chassis renders in isolation);
+  surviving marker-rhythm sparse + stone-C off-band findings stay
+  margin-tier, not routed as defect. WATERSTAIR CONFIRM Sev 3 — water
+  completely unreadable, reads dry timber gate over stacked slabs
+  (water-is-GEOMETRY + 0x506a78 lineage applies; geometry itself
+  clean). CELLARDOOR CONFIRM Sev 3 — reads freestanding portal frame
+  with pitch-black void opening, no door leaves/turf berm; chassis
+  flat-ground caveat named (live siting against bank — terrain
+  integration unproven here). HALTNEEDLEREST CLEAN (wayside shelter
+  read instant, complete support logic, footings + shadow grounded;
+  near-black value-risk margin noted against dark backdrops).
+  REEDPOOL CLEAN (pond-with-reeds gestalt unambiguous, water retains
+  teal hue above hole threshold, reeds deliberate verticals; margins:
+  water value near-black-threshold advisory, tall dock posts read
+  cattail/lamp — commit-or-clarify note). Routing: 4 CONFIRM notes +
+  1 margin probe into STRUCTURES-PLAN SURVEY INTAKE (all struct-domain
+  — owning lane's surface; IMPROVE-PLAN untouched, zero new candidate
+  rows: all four confirmed objects are struct-lane commissions, not
+  round-queue objects). Grep-verified zero open duplicates pre-append.
+  Census 261 vs survey-15 snapshot 260: ONE arrival nx-struct-ninesbridge
+  (struct-49, committed — classified); ONE domain-valid lib flip
+  nx-craft-hamlet-0007 e2f134cf→edd3da3e (improve-23 committed
+  POS_SAME); lights 38. LATE-TICK ledger check: dress-74 + improve-24
+  landed after my census capture (their arrivals — NW orchard rows,
+  hamlet-0015 reseat — classify next tick's diff; census-17 snapshot
+  retained as this tick's baseline of record at 261).
+  Gate: ALL PASS real exit 0 first try at 5505f24 (ledger law EXACT
+  2370314); HEAD advanced mid-tick to 6daf516 post-gate (siblings,
+  foreign files only; all four target plans re-checked clean in tree
+  before append). Verdicts 4 confirmed / 5 clean (1 margin probe) /
+  0 dropped. Zero world mutations, zero uploads, zero shared-budget
+  use. Native re-judge debt on all four confirmed findings disclosed.
