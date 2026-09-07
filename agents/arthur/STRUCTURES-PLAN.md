@@ -272,6 +272,44 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
   re-judge debts CLOSED; 0054 cured this tick by improve-27. Family
   verdict 5-of-5 CURED (0007/0015/0028/0041/0054), consistent with
   sweep-51. Evidence: `agents/arthur/reviews/survey19-slice/`.
+- [survey-20, 2026-09-07, NATIVE, 18m gameplay, live store bytes
+  served-sha 92ce1922 fetched fresh census-20] `nx-struct-echoarch`
+  first independent visual read — CONFIRMED Sev 3 identity failure:
+  reads as SOLID curved retaining wall / amphitheater fragment, NOT
+  arch/arcade (gameplay camera: continuous mass x290-670 y228-440,
+  ZERO sky-colored pixels penetrating the silhouette, no pier-and-
+  opening rhythm on any visible face — arch voids face away from the
+  play lane or are absent); left-third value crush x295-410 y240-430
+  to ~#0A0806 erases arc curvature (flat black slab edge at distance);
+  slab front edge similarly crushed. Silhouette PASS (clean continuous
+  convex top arc, no floats), grounding PASS (slab-flush contact +
+  anchored cast shadow). Probe, not verdict — decode-at-source law
+  with struct lane (waiver-era placement had no independent visual
+  read). Evidence: `agents/arthur/reviews/survey20-slice/
+  echoarch-gameplay.png`.
+- [survey-20, 2026-09-07, ZAI fallback (native 1210 x2, paced retry
+  burned — native re-judge owed), 18m gameplay, live bytes served-sha
+  78f0cbad, byte-identical to survey-19 pin] `nx-struct-ninesbridge`
+  NATIVE 4/4 PASS on post-struct-51 bytes — identity (9/9 arches
+  legible, ~88px pitch), silhouette (deck continuous x85-875, no
+  mid-span gaps, lanterns read as attached finials), stair junctions
+  (both ends flush, monotonic treads, growing-out-of-deck read — the
+  stair-inversion fix reads CORRECTED natively), lanterns (9 gold dots
+  one per bay). Survey-19 ZAI debt CLOSED natively; cosmetic margins
+  only (right-end cheek chunk x865-925). Evidence:
+  `agents/arthur/reviews/survey20-slice/ninesbridge-gameplay.png`.
+- [survey-20, 2026-09-07, ZAI fallback (native 1210 x2, paced retry
+  burned — native re-judge owed), 18m gameplay, live bytes served-sha
+  5d8e1782] `nx-struct-meridianstair` base-read flag SECOND VOTE —
+  corroborates survey-19 flag: middle-gate right post (P4, x614-632)
+  base terminates y~437 vs neighbors' ground-contact y~455 (~18px
+  clean sage gap beneath), NO cast shadow reaching it (shadow field
+  ends x~465) so the float is exposed; recommended read: extend post
+  ~18-20px + contact shadow, consider minimal shadows under middle/
+  right gates. Identity/lattice/silhouette PASS (three stepped gates,
+  5-7 slats each, finial seated). Verify cluster now 2 votes (both
+  ZAI; native owed). Evidence: `agents/arthur/reviews/survey20-slice/
+  meridianstair-gameplay.png`.
 
 ## Design queue
 

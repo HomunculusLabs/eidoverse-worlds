@@ -812,3 +812,80 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (routing). Verdicts 0 confirmed / 5 clean / 1 flagged (meridianstair
   base-read, verify-tier probe). Zero world mutations, zero uploads,
   zero shared-budget use.
+
+## Judged index (survey-20)
+
+- survey-20 (2026-09-07, NATIVE 5/8 + ZAI fallback 3/8 disclosed — native
+  flap pattern: first batch 2 of 3 landed (ninesbridge native; meridianstair
+  + echoarch 1210 x1 each), after 20s paced retry echoarch recovered NATIVE
+  while meridianstair burned its retry; dress batch landed 3 of 5 native
+  (banner/chess/hutch) with stringlights + milkstand 1210, retry recovered
+  milkstand NATIVE, stringlights burned; 18m gameplay, fresh live store
+  bytes 8/8 HTTP 200 curl UA on exact census-20 libs, served-shas pinned):
+  FIRST CORE-LEGACY-DRESSING SWEEP + native-debt closure — severity backlog
+  drained (round-1 terminal, round-2 candidates are intake rows; district
+  family census closed 13-of-13 per survey-15/16; struct debt board
+  cleared). Slice = 2 verify-cluster members (meridianstair new-flag
+  corroboration, ninesbridge post-fix native debt) + the ONLY never-read
+  standing struct (echoarch, waiver-era) + 5 never-judged core dress pieces
+  (banner, stringlights, chess, hutch, milkstand — first sweep of the
+  off-limits legacy set; probe-only, ownership Bill's call). Verdicts:
+  ECHOARCH NATIVE CONFIRM Sev 3 identity fail (solid curved retaining-wall
+  read, zero sky penetration on visible faces, left-third value crush;
+  silhouette + grounding PASS) — note routed STRUCTURES-PLAN, row under
+  IMPROVE-PLAN SURVEY CANDIDATES. MERIDIANSTAIR ZAI 2nd-vote on the
+  base-read flag (P4 x614-632 base y~437 vs contact y~455, ~18px exposed
+  gap, no shadow cover; identity/lattice/silhouette PASS) — adjacent
+  evidence in STRUCTURES-PLAN, verify cluster now 2 votes, native owed.
+  NINESBRIDGE NATIVE 4/4 PASS on post-struct-51 bytes (9/9 arches, deck
+  continuous, both stair junctions flush + monotonic — fix reads corrected
+  natively; survey-19 ZAI debt closed; cosmetic margins only) — CLEAN.
+  BANNER NATIVE 4/4 CLEAN (pennant gestalt instant, V-notch resolved,
+  pole grounded + shadowed; margin: flat ruler-straight edges, dashed
+  decal-style shadow — polish tier). CHESS NATIVE 4/4 CLEAN (elevated
+  slab + pedestal read, working height ~0.8m law satisfied, pieces read
+  as studs; margins: board grid unresolvable, pieces generic — 18m
+  floor). HUTCH NATIVE CLEAN structure / Sev 4 rabbit-read flag (hutch
+  box+stilts+ramp grounded, silhouette closed; rabbits read as ground
+  clutter 20x5px x505-530 y384-394, no head/body/ear silhouette —
+  CAVEAT: live entity carries rabbit sit+hop motion comps, static
+  chassis may under-represent; verify-tier). Off-limits set member —
+  row under IMPROVE-PLAN SURVEY CANDIDATES, probe-only, Bill's call.
+  MILKSTAND NATIVE 4/4 CLEAN (trestle table + rung frame + milk can
+  vessel all read; margins: single-can identity softness, can contact
+  shadow unresolved at 18m). STRINGLIGHTS ZAI 4/4 CLEAN (bulb-chain
+  catenary ~15-18 points carries identity, 8% sag ratio, no breaks;
+  wire itself sub-pixel = expected aliasing at 18m; margins: sag-bottom
+  bulb merge, hairline-vs-shadow ambiguity benign). Census 264 vs
+  survey-19 snapshot 263: +1 arrival nx-dress-ne-anvilpad-001 (dress-76
+  committed 2881ef6, tuple-exact vs plan); 3 lib flips all foreign-
+  domain committed-sibling (cistern 156b4fc8 improve-28 ledger in
+  flight this window, hamlet-0054 43f4b4ac improve-27 @ 71eb54b, beacon
+  03d278be struct-52 @ 1a275e1); 0 departures. Gate: ALL PASS real exit
+  0 first try at 5040b88 (my own survey-19 at tip; ledger law EXACT
+  2370326). Routing: 3 intake lines STRUCTURES-PLAN SURVEY INTAKE +
+  survey-20 new-intake sub-section IMPROVE-PLAN SURVEY CANDIDATES
+  (echoarch row + hutch row + clean records incl. ninesbridge debt
+  closure). Grep-verified zero open duplicates pre-append. One ledger
+  append (routing). Verdicts 2 confirmed (echoarch, hutch rabbit-read)
+  / 6 clean (5 with margins) / 0 dropped. Zero world mutations, zero
+  uploads, zero shared-budget use. DISK NOTE: host volume at 100%
+  (1.6GB free) — hermes snapshot temp failed once mid-tick; slice
+  evidence kept minimal (8 gameplay frames, 164KB) per lean-evidence
+  law.
+
+## Routed notes (survey-20)
+
+- survey-20: `nx-struct-echoarch` — STRUCTURES-PLAN SURVEY INTAKE (first
+  independent read, Sev 3 identity fail) + IMPROVE-PLAN SURVEY CANDIDATES
+  survey-20 sub-section (echoarch row).
+- survey-20: `nx-dress-hutch` — IMPROVE-PLAN SURVEY CANDIDATES survey-20
+  sub-section (Sev 4 rabbit-read flag, motion-comp caveat, off-limits set
+  probe-only Bill's call). No DRESSING-PLAN intake line: hutch is a
+  LEGACY-CORE nx-dress-* member (off-limits set), not dress-lane queue —
+  same routing shape as the fountain (survey-8 precedent).
+- survey-20: `nx-struct-meridianstair` — base-read flag SECOND VOTE recorded
+  as adjacent evidence in STRUCTURES-PLAN (no new row; verify cluster
+  stands at 2 votes, native owed).
+- survey-20: `nx-struct-ninesbridge` — NATIVE 4/4 PASS recorded in
+  STRUCTURES-PLAN (survey-19 ZAI debt closed; no new row).

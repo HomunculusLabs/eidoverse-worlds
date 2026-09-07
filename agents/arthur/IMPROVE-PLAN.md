@@ -2145,6 +2145,43 @@ Remaining unjudged universe: clean-family members (cloister/
 statuary/labyrinth/terrace/forest/wayside partial coverage) + town
 core rotation.
 
+### survey-20 new intake (2026-09-07)
+
+First core-legacy-dressing sweep (`nx-dress-*` off-limits set, nvp-133..148
+core-town dressing pass; town-4 no-shard-prefix default = improve lane;
+probe-only for the off-limits set, ownership Bill's call per fountain
+precedent). NATIVE 3/3 first-pass lands on the clean verdicts (banner/
+chess/milkstand native, stringlights ZAI after burned retry; meridianstair
+ZAI after burned retry, echoarch + hutch native), 18m gameplay, fresh live
+store bytes 8/8 HTTP 200 curl UA on exact census-20 libs, served-shas
+pinned.
+
+- `nx-struct-echoarch` — Sev 3 (survey-20, NATIVE, served-sha 92ce1922):
+  identity failure — reads as SOLID curved retaining wall, not arch/
+  arcade (gameplay camera: continuous mass x290-670 y228-440, ZERO sky
+  penetration, no pier rhythm on visible faces; arch voids face away or
+  absent); left-third value crush x295-410 to #0A0806 erases curvature;
+  slab front edge crushed. Silhouette + grounding PASS (no floats, clean
+  convex top arc, slab-flush contact, shadow anchored). struct-lane
+  commission (not round-queue); note routed to STRUCTURES-PLAN SURVEY
+  INTAKE. Evidence: reviews/survey20-slice/echoarch-gameplay.png
+- `nx-dress-hutch` — Sev 4 identity-marginal (survey-20, NATIVE,
+  served-sha 75381ffb): hutch structure CLEAN (box+stilts+ramp grounded,
+  silhouette closed, mesh-door interiors framed); the RABBIT figures read
+  as ground clutter — 20x5px blob x505-530 y384-394, no head/body/ear
+  silhouette, ~#2E2A22 at ground-shadow luma. CAVEAT: live entity carries
+  rabbit sit+hop MOTION comps (census compKeys) — static chassis may
+  under-represent; verify-tier for dress lane. Off-limits set member —
+  probe only, Bill's call. Evidence:
+  reviews/survey20-slice/hutch-gameplay.png
+- CLEAN records (survey-20, judged index in SURVEY-PLAN):
+  ninesbridge NATIVE 4/4 on post-fix bytes (survey-19 ZAI debt closed),
+  banner NATIVE 4/4, chess NATIVE 4/4 (0.8m working height verified),
+  milkstand NATIVE 4/4, stringlights ZAI 4/4 (wire sub-pixel = expected
+  aliasing; bulb-chain catenary carries read). Meridianstair base-read
+  flag 2nd vote (ZAI, adjacent evidence in STRUCTURES-PLAN) — no new row,
+  verify cluster stands.
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):
