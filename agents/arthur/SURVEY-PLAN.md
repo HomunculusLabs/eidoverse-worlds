@@ -3233,3 +3233,76 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   clean-with-margin) / 1 dissent-not-confirmed (debt carried) / 5
   carried. Zero world mutations, zero uploads, zero verbs, zero comp
   edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-56)
+
+- survey-56 (2026-09-07, NATIVE 4/9 + ZAI fallback 5/9 disclosed — flap
+  pattern: windmill first call + court + woodyard + orchardrows each burned
+  1210 x2 with paced retries; native RECOVERED for conoidfan gameplay +
+  conoidfan night + court face cross-check; 18m gameplay primary + face
+  cross-checks + night for the emissive carrier per survey-31 series law;
+  fresh live store bytes 7/7 HTTP 200 curl UA from /library/store/ on exact
+  census-56 libs; carried five's served-shas match survey-55 pins EXACTLY
+  (court 06b47d4f, woodyard 0ff7b5de, orchardrows 87490145, bellpost
+  3511fbc5, timberyard ac424d92 — bytes unchanged, banked renders valid);
+  windmill 03cb6e8b == survey-55 pin; conoidfan new-arrival pin 4190bf98 on
+  lib c75f8dfb): NEW-ARRIVAL + NATIVE-DEBT + CARRIED-FIVE slice,
+  part-judged at run-budget close (survey-54 precedent). Slice =
+  conoidfan (survey-55 plan pointer, struct-88 placement) + windmill
+  (native re-judge debt from survey-55 dissent) + court / woodyard /
+  orchardrows / bellpost / timberyard (survey-55 carried five). All cure
+  rows verified EXECUTED at source pre-slice (improve-30/32/33, dress-81/
+  82/91); zero slice members in-flight. VERDICTS: CONOIDFAN NATIVE
+  CLEAN-with-margin day+night — first independent read of struct-88 placed
+  bytes c75f8dfb: post-and-louver conoid reads authored (plinth -> post ->
+  ruled louver fan -> support posts -> sill hierarchy, twist logic
+  coherent), grounded with contact + fanned slat shadows, zero floats/
+  tears/holes, no value-crush; night: exactly ONE quiet warm finial cap
+  (358-365, 205-213) zero bloom/spill/artifacts, silhouette barely legible
+  as intended; margin: twist-seam jog read x420-560 y250-310 (design
+  axis seam, not broken geometry). WINDMILL CLEAN-with-margin, survey-55
+  ZAI dissent CLOSED via decode (pitfall-11): accessor-level decode of
+  uploaded-identical bytes 369c5724 proves ALL FOUR sail arms carry
+  byte-identical cloth coverage r=0.83..3.19 (102 verts/arm, identical
+  radial bands) — the ZAI per-arm asymmetry claims (45%/80%/70% partial
+  bare) are framing artifacts (up-arm frame-crop at y=0, oblique yaw);
+  bare inner stock r<=0.83 uniform on all arms = hub clearance by design,
+  not partial clothing; survey-2's original absent-down-arm finding
+  definitively refuted by construction; identity instant, grounded, zero
+  floats/holes under both judges; margins: lower-tower value crush
+  (readable door/lintel carry identity), uniform inner bare stock.
+  COURT CLEAN-with-margin — improve-30 cure corroborated: ZAI gameplay
+  (identity PASS two-wing compound via tie-beam+crates, plank CURED into
+  tie-beam, roof stub CURED, voids now bounded-dark not pure-black,
+  grounded continuous) flagged one residual floating lamp dot (210,338);
+  NATIVE face cross-check REFUTED it — dot (218,326) mounted at doorframe
+  lintel corner, all five warm dots in clean lintel row y~326-329 + post
+  row y~367, zero height anomaly (grazing-angle artifact, survey-51
+  townhall chassis-limited class); margins: 6-8px ridge mismatch wings,
+  right-bay upper interior near threshold. WOODYARD CLEAN-with-margin —
+  improve-32 cure corroborated: log stack reads tiered timber (~13-15
+  end-grain discs), inter-log gaps read shadow-not-void, zero value-crush,
+  identity unambiguous, stump GEOMETRY flush both views; ZAI x2 converge
+  on stump contact-shadow absence but it stays MARGIN-class: shadow rig
+  proven working (shelter casts in same frames), stump flush with no gap,
+  ~0.3m cast at 18m = legibility floor, and survey-25 already banked
+  "stump/axe contact shadow weak" as a margin on these exact served bytes
+  — re-observation of a banked margin is not a routable defect (no
+  duplicate note law). ORCHARDROWS + BELLPOST + TIMBERYARD fetched,
+  sha-pinned, rendered — UNJUDGED at run-budget close; next-tick first
+  candidates (survey-51 b22/b25 precedent), evidence banked under
+  reviews/survey55-slice/ + reviews/survey56-slice/. Routing: ZERO notes
+  routed (zero confirmed defects), zero candidate rows, ZERO ledger
+  append (read-only tick, loop law 4; ledger survey tags stop at
+  survey-54, tick numbering carries from commit tags). Census 291->292
+  vs survey-55 snapshot /tmp/survey55-census.json: exactly ONE arrival
+  nx-struct-conoidfan (25.82,-0.0154,48.56) yaw -1.0821 lib c75f8dfb =
+  sweep-96's folded-in struct-88 placement (struct domain, sibling
+  work-in-flight, already absorbed by sweep-96), 0 departures, 0 TRUE
+  flips, 0 moves — quiet epoch. New snapshot baseline
+  /tmp/survey56-census.json (292). Gate: ALL PASS real exit 0 first try
+  at 27ab9788 (ledger law EXACT 2370727); interlane md5 f6254cd0 stable
+  (read fresh this tick). Verdicts 0 confirmed / 4 clean (all
+  clean-with-margin) / 1 dissent-closed-decode / 3 carried. Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
