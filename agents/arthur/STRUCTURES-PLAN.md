@@ -3714,3 +3714,74 @@ ends. Judgment asked: does the brass crown read as the arch's terminal
 stone (embedded, completing the point) at your approach distance?
 
 NEXT: R7 commission (queue round 7) or Bill verdicts.
+
+## struct-78 (2026-09-07): R7-1 THE SCREW WELL — helicoid authored v1
+## (water-to-water), BUILD-ONLY — judge + placement deferred (run budget;
+## improve-31/struct-74 class; NO visual PASS claimed)
+
+Cadence 78%3==0 refine tick; refine pool verified EMPTY fresh (beacon/
+cellardoor/meridianstair intakes all terminal — struct-52/56/58; no Bill
+verdict; no SHARD section in IMPROVE-PLAN, grep 0, skip-law; CITY-PLAN
+register rows city-lane-owned). Per loop law: build tick -> R7-1
+commission. Gate ALL PASS real exit 0 at 35da3cb6 tick-start. Census 283
+fresh (ogeegate standing, struct-77 confirmed live, 40 nx-struct-*).
+
+CONCEPT (one idea, Judd): the ruled-surface ledger's third member — the
+HELICOID — as a building-scale Archimedes screw. WATER THAT CLIMBS: the
+sump feeds the tail, the screw turns in its stone trough, five teal
+pockets ride the helix, the head dips into a raised bowl, a stepped
+cascade returns the water to the ground. Round-6 gates completed the
+curve ledger; the ruled surfaces (hypar x2, hyperboloid) lacked the
+third; the water family (waterstair/millrace/reedpool) lacked the
+LIFTING machine. Motion: `motion:well_screw` spin axis y LOCAL
+degPerSec -12 (apparent-climb law: RH helicoid + negative spin = pattern
+translating +local-y; engine-verified — spin post-multiplies rest
+transform, windmill-sails class; `well_` is an existing KEEP prefix, no
+shared-file edits). Siting deferred: NW cultivation interior shoulders
+proven FULL (city-4 disclosure) — next tick scans the 275-281 threshold
+seam class (struct-71/city-3/4/5 precedents).
+
+BUILD (4 source-true iterations, all caught by in-build assertions/
+render-decode before any claim):
+- v0-a: axis origin 0.55 above the sump center with a DECOUPLED dip
+  assert (x=R,y=Y0 fiction) — true sampled blade min 0.249 floated 3cm
+  ABOVE the water. Fix: A0 y -> 0.42 (true dip 0.118); assert replaced
+  with sampled turn-0 sweep. (struct-74 self-catch class.)
+- v0-b: cascade stringer carried the pre-rescale 4.10m length -> min.y
+  -0.274 below grade (render-decode caught); corrected span 2.30m.
+- v0-c: cistern-drum head DISPROVEN at source (final-turn sweep vs drum
+  wall arithmetic + pour-thread intersecting the rotating sweep) ->
+  honest redesign: receiving BOWL on a slim pedestal, wall 240deg with
+  120deg entry opening az 120..240, floor arc opening 90..270 (blade
+  passes under the wider floor notch while rising), water-to-water both
+  ends (Vitruvius 10.4).
+- v1 FINAL: full rotating-surface interference probe (blades+5 pockets+
+  shaft, both faces, 2400+ samples) vs wall/floor/pedestal/grade zones —
+  all CLEAN; probe wraparound bug (atan2 ±180 vs |az-180|) and floor
+  y-band misdiagnosis both caught by print-first iteration, not blind
+  fixes. Brass finial DELETED (on-axis bead hides inside the blade
+  cylinder — head-circle top 3.894 vs on-axis 3.51); the night accent is
+  the water itself.
+
+v1 sha256 4fd198ef64e6801464c97244b2a888be2e6a8c65dc7b1385df6aecb07bd
+05c1d x2 deterministic. Assertions: sump dip 0.118, head dip 2.593 @ring
+0.15 (bowl water band 2.57..2.90), bbox 6.19x4.04x5.12 (footprint 31.7
+>= 8, height >= 2.2 -> exact trimesh, open machine), materials all
+texMat/standing lanes (ninesbridge stone/timber/iron; millrace water
+0x506a78 + 0x2e4a58@0.45; zero plain mats). Node fold: well_screw group
+(timber blades/shaft + water glow buckets) + well_trough group + 3
+static buckets. 10 review frames rendered
+reviews/struct78-screwwell/ (front/right/back/left/gameplay/aerial/top/
+night/motion-a/motion-b).
+
+DEFERRED (next tick executes FIRST, queue law): 1) gate re-run exit 0;
+2) native judge v1 gameplay+night vs contract (criteria: helicoid/screw
+identity reads at 18m, water pockets visible on the helix, sump->screw->
+bowl->cascade chain legible, trough/trestle/bowl grounded, night = faint
+teal pockets climbing); 3) NW seat scan fresh census (275-281 seam class
++ other quadrants if FULL); 4) terrain 7pt on TRUE envelope (x
+-0.15..6.06 c 2.955, z -3.575..1.55 c -1.0125, y 0..4.04); 5) hash-gated
+placer (struct-77 chassis) + upload/spawn nx-struct-screwwell + motion
+comp {motion:well_screw: spin y -12} + PLACED_VERIFIED + idempotent; 6)
+circuit MCPL walk; 7) Bill eye-check packet. World untouched this tick:
+zero uploads, zero verbs, census 283==283.
