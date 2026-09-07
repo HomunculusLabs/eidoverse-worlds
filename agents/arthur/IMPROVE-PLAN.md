@@ -1959,6 +1959,23 @@ call, single paced retry recovered; zero ZAI fallback this tick).
   x568-668 y272-296, underside value crush x95-460 y140-215 —
   family 4-of-5. Evidence:
   reviews/survey12-slice/nx-craft-hamlet-0041/gameplay.png
+  [EXECUTED improve-26, 2026-09-07: 0041 cured by the committed family
+  fix (improve-22 composeHamlet cure in mason.ts HEAD, work index 1661)
+  and RESEATED live — lib 473f671c -> caa851af x2 deterministic, tuple
+  unchanged (46.632895, -0.0238922, 74.628232) yaw -2.35619449, embers
+  restored, live bbox y-span 13.363 -> 4.744, footprint x/z
+  byte-identical (14.011 x 13.43, SAT-neutral same-tuple); rim
+  80.058/96.266 legal; native ANALYZE before-judge confirmed the family
+  class on live-corrupt bytes (hovering masses sky-beneath, through-hole
+  x405-565, floating runs — 4th member confirmed); ZAI fallback
+  after-judge 4/4 PASS pixel-evidenced (native 1210 mid-tick, disclosed
+  — re-judge owed); SAT exemption tier-b for nx-approach-ne-lane-002:
+  fat-bbox corner artifact, exact decode-vs-decode true 3D clearance
+  19.4815m / plan-view 19.3245m, zero lane verts in overlap band,
+  pre-existing (certifies pre+post state); PLACED_VERIFIED + idempotent
+  zero-verb rerun; walk 8/8 ALL_PASS 0.381m; after-renders banked
+  reviews/improve26-hamlet/after/. Sibling 0054 remains queued — hamlet
+  family 4-of-5 cured, next tick completes 5/5.]
 - `nx-cultivation-garden-0045` — Sev 3 (survey-12, NATIVE):
   IDENTICAL to garden-0011/0019 class — sphere-mass bush read with
   scattered stick weeds, zero bed/row/fence grammar, one shapeless
