@@ -2316,3 +2316,28 @@ untouched. Zero world mutations, zero uploads, zero shared-budget use,
 no visual PASS claimed. Standing unblock paths (say-once, unchanged):
 Bill's SW lamp a/b/c policy call, or verdicts on the four-district
 eye-gate circuit (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+**STATE AT dress-69 (2026-09-07, pipeline hold tick — 49th
+consecutive)**: lawful HOLD — every path closed fresh. Shard: EMPTY at
+source, re-diffed fresh — IMPROVE-PLAN.md dirty delta remains exactly
+ONE hunk (improve lane's improve-22 execution contract,
+nx-craft-hamlet-0007, foreign prefix routes improve per routing law;
+grep confirms zero +nx-dress lines in the hunk; 9/9 Round-1 nx-dress
+rows terminal, round-2 carries only nx-dress-fountain = Bill-routed
+legacy-core off-limits). SW lamps Bill a/b/c bound, spend 0 of 3 —
+kind-law recount on fresh census: exactly 3 live SW r>=35 lights
+(nx-approach-sw-lamp-001-l r39.7, nx-approach-sw-lamp-002-l r55.4,
+nx-mile-sw-013-l r64.0). Eye-gate packet fd677cae md5-steady, zero
+VERDICT lines. Hold verification: standing gate ALL PASS real exit 0 at
+tick-start HEAD 59e1bf2 (own dress-68); fresh census 260 HTTP-200
+first fetch, kind histogram 222 thing / 38 light; 11/11 district
+installs PIN_EXACT lib-prefix + pos + yaw (ne-yard 2.57087 exact) +
+comps-empty on programmatic compare vs census; 27 nx-dress = 11 fleet +
+16 legacy intact. Interlane f6254cd0 steady. Foreign dirt (IMPROVE-PLAN
+improve-22 in flight, housekit.ts, core-paths glb+review json, tower3,
+court placer, struct/improve probe scripts, fleet watcher, untracked
+review dirs) left untouched. Zero world mutations, zero uploads, zero
+shared-budget use, no visual PASS claimed. Standing unblock paths
+(say-once, unchanged): Bill's SW lamp a/b/c policy call, or verdicts on
+the four-district eye-gate circuit
+(agents/arthur/reviews/dress-districts-eye-gate.md).
