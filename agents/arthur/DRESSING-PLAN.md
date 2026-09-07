@@ -438,6 +438,17 @@ in-flight ledger edit, absorbed by their commit — lane owns zero
 worktree dirt at close. Zero world mutations, zero uploads, zero
 shared-budget use, no visual PASS claimed.
 
+
+**STATE AT dress-79 (2026-09-07, pipeline install tick)**: round-3 item 15
+EXECUTED live — `nx-dress-sw-incense-001` PLACED_VERIFIED (details in the
+dress-79 siting-log entry below; one in-tick reseat after the live SAT
+caught a 0.828m terrace-0049 pinch the analytic hand-SAT missed — census
+bboxes are LOCAL-space, lesson recorded). Census 266. SW lamp spend 0 of 3.
+Rotation next: NW round-3 item 2 (compost bins). Shard queue: no OPEN
+`nx-dress-*` rows in IMPROVE-PLAN Round 1 (nine terminal); round-2 carries
+only the legacy-core fountain (off-limits, Bill's call). SW lamps remain
+blocked on Bill's a/b/c budget policy.
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
@@ -490,7 +501,9 @@ identity intent. Rotation stays NW->NE->SE->SW.
 
 ### SW — CONTEMPLATIVE (round 3)
 15. `nx-dress-sw-incense-001` — incense stand + ash ring at the prayer
-    stones approach; extends the devotional line.
+    stones approach; extends the devotional line. **DONE (dress-79, PLACED
+    2026-09-07 — re-sited in-tick behind the prayer mound after the live SAT
+    caught a terrace pinch; details in the dress-79 siting-log entry).**
 16. `nx-dress-sw-bellpost-001` — single quiet bell post (silent — no chime
     comp; Bill owns sound) at the gravel path bend.
 17. `nx-dress-sw-seats-001` — paired facing seats at the terminus view;
@@ -2739,6 +2752,59 @@ a/b/c policy call, or verdicts on the four-district eye-gate circuit
   half x 3.258 / half z 1.015 / center (+0.929, −0.257)) → upload/spawn
   `nx-dress-se-funguslogs-001` → post-place tuple verify + idempotent
   rerun → ledger + commit. Zero world mutations this tick.
+
+### dress-79 — SW incense censer (round-3 item 15, PLACED, LIVE)
+
+- **Concept contract**: extending the SW devotional line — raked gravel
+  (dress-4, ends r78.5) -> censer -> prayer mound (dress-8) -> labyrinth
+  (r98). A cast-iron tripod censer with a heaped ember bed, pale ash ring,
+  and burnt stubs. Siting amendment (in-tick, live-SAT driven): the first
+  pose (r80, opposite side of the line) pinched terrace-0049 at 0.828m —
+  census bboxes are LOCAL-space with 5.8m center offsets, and the analytic
+  hand-SAT had assumed center=pos; the live placer caught it. The full-set
+  scan (182 solids) found the lawful pocket at **r82.4, off −7.0 (CW side)
+  behind the prayer mound**: mound fronts the walking line, censer stands
+  4.6m behind it, ONE devotional station — the bowl + ember crest the
+  1.25m mound silhouette from the line (eye 1.65m clears the mound at 2.5m
+  standoff). Worst adjacency prayer +2.64m, line clearance 6.24m, rim
+  corners ≤83.5, cones clear. Static, unlit — mesh-ember emissive only
+  (dress-76 precedent), SW lamp spend 0 of 3.
+- **Build**: `assets/mkv3-dress-sw-incense1.ts` ->
+  `assets/village_dress_sw_incense1.glb`. v1 (774fd7c6) native gameplay
+  4/5 — ember FAIL: shallow-bowl interior is rim-occluded at the 1.5deg
+  down-angle from 18m; five sub-0.05m beads cannot project at any
+  emissive intensity. **v2 ACCEPTED** (sha
+  c66c4fbfd0adb07bc6901113926295aef454babe75c434a6c2992c041fa164e0,
+  deterministic ×2): heaped coal bed (squashed sphere) cresting 0.09m
+  ABOVE the rim + 4 bright beads proud of the heap + legs/feet thickened.
+  Native: gameplay 5/5 PASS (margin: ash ring subtle — standing note, do
+  not shrink), close 4/4 PASS (irregular scattered-ash read, stubs read
+  planted, no z-fighting, welded joinery), night 3/3 PASS (one quiet
+  warm ember point, stand dark, self-lit coals not a lamp).
+- **Decode (v2)**: 6 nodes (budget 3–25 ✓); bbox x −0.761..0.759,
+  z −0.770..0.750, y −0.014..1.286; footprint 2.31 m² furniture-scale
+  solid. Ember glow0 bucket y 1.042..1.286 (crests the rim). No light
+  anchors, empty comp bag by design.
+- **Siting/terrain**: entity origin (−55.475, −61.329), yaw −52.75°
+  (local +z faces the walking line). Terrain preflight 5pt + center:
+  −0.0297..−0.0316 (2mm spread), py −0.0316 (worst corner).
+- **Placement**: `sw-dress79-place.ts` (dress-8 chassis + migration gate
+  for the superseded first tuple + remove+spawn reseat) — hash gate ->
+  blocker-epoch guard (approach lane, gravel-001, prayer-001,
+  terrace-0049) -> fresh-census SAT/rim/cone preflight (clear, no
+  sub-1.4m adjacency) -> upload (content-addressed) -> remove+spawn over
+  one WS (2 verbs, paced 1000ms) -> post-place tuple verify.
+  **PLACED_VERIFIED** `nx-dress-sw-incense-001` @ lib
+  `store/c66c4fbfd0adb07b.glb`, pos (−55.475, −0.0316, −61.329), yaw
+  −52.75°. Idempotent rerun: 0 verbs (one deduped upload slot, chassis
+  wart). Post-place census 266, empty comp bag confirmed.
+- **Eye-check for Bill**: walk the SW corridor past the gravel path —
+  behind the prayer-stone mound (4.6m, on the maze side), a small dark
+  tripod censer with a warm ember glow in its bowl; by day the ember
+  reads as smoldering coals, at night a single quiet warm point. Should
+  read "devotional station" with the mound, not a lamp or brazier
+  bonfire. If the ember vanishes in world lighting, one intensity pass
+  (0.62 -> 0.75) is the standing fix.
 
 ### dress-78 — SE fungus-log deadfall (round-3 item 10, PLACED, LIVE — dress-77 item closed)
 
