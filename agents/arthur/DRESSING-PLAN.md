@@ -3454,6 +3454,47 @@ idle). Standing unblock paths (say-once, unchanged): Bill's SW lamp
 a/b/c policy call, or verdicts on the four-district eye-gate circuit
 (agents/arthur/reviews/dress-districts-eye-gate.md).
 
+**STATE AT dress-96 (2026-09-07, pipeline install tick — claim-vs-source
+recovery + placement)**: NW round-3 item 4 `nx-dress-nw-rainbarrel-001`
+PLACED_VERIFIED live, after catching dress-95's improve-29-class defect at
+the placement gate: the committed artifact (b50d1eb6) claimed build source
+for "v6 4531cbb8 native-accepted", but the committed source rebuilds
+deterministic ×2 to **v5 7a81d3ec** (still the teal-emissive recipe) and NO
+v6 evidence exists (review dirs end at v5-close 08:25; no v6 decode, no v6
+frames). Re-derivation from the described v6 intent (plain teal disc)
+reproduced **v4's hash** 5d2c4a5f — v4 and described-v6 are the same
+material choice; the "accepted v6" bytes never existed on disk. Fresh
+judgment arc on real bytes: native 18m ACCEPT, but close FAIL 3/3 — pail
+reads dry, ZERO teal pixels. Decode root cause at source: **the pail was a
+CLOSED cylinder whose solid wood top cap fully enclosed the water disc**
+(struct-52 dead-pane class, FOURTH lane instance; v4/v5's "tan disc" judge
+reads were the wood cap itself). **v7 2a0d5be7** = pail rebuilt as
+open-top lathe (the barrel's own proven idiom, scaled down; water recessed
+0.05 below rim) — decode ALL PASS, native 18m PASS + close PASS 3/3 (teal
+water visible in the open rim). Siting: the original pose re-validated
+against the POST-improve-44/45 world — clean SAT now fails there
+(orchard-0033 +0.306, lavender-0027 +0.469, no overlap); full skeps-ring
+scan: ZERO legal no-exemption poses within 15m (nearest legal is the
+logpile corner, concept-dead) — the apiary pocket is boxed in by the two
+cures' bboxes. Resolution per artwalk-34/36/37 tier-b: two NAMED
+gap-bounded exact-match exemptions pinned in the placer (±0.01, real drift
+hard-fails) — orchard-0033 canopy-proxy bbox (real trunks farther,
+dress-10-documented), lavender-0027 furrow-skirt bed bbox (plant mass
+above py 0.15, barrel below; no walking line within 11m). One rejected
+trial named honestly: (−56.22, 53.41) died at own SAT −0.183 vs skeps
+(the mid-band "gap 1.68" figure came from the FIRST scan's corrupted
+radius term — probe wrong, placer right; both clean scans agreed
+zero-legal-near-row). Terrain re-pinned fresh (0.0311..0.0324, 1.2mm).
+Upload 1 + spawn 1 verb PLACED_VERIFIED @ store/2a0d5be7c2014a55.glb,
+(−59.72, 0.0311, 52.73) yaw 2.3562; idempotent 0-verb rerun; census 279;
+comps {}; NW lamp 0 of 2. Probe lessons banked: numbers from a
+known-buggy probe are VOID until re-derived; placement-contract literal
+compare caught both errors (stale v6 pin, invalid seat) before any world
+cost. Rotation next: SW round-3 (verdict-routed items and SW lamp policy
+hold still outrank). Eye-check for Bill: NW lane past the skep row's open
+end — dark coopered barrel on a plank stand, iron tap + pail; at ~2.6m the
+pail shows teal water inside its open rim.
+
 ### dress-75 — NE anvil pad (round-3 item 6, IN FLIGHT — built, judged, NOT placed)
 
 - **Concept contract**: the smith's working annex beside the CORE forge

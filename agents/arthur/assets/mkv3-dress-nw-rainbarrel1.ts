@@ -100,14 +100,25 @@ const B0 = 0.15;
 }
 
 // ---- one wooden pail under the spigot, on the ground ----
-// v4 (tapface judge): moved OUT to z 0.70 (clear of the stand's front
-// plank), bail DOWN at rest against both rim sides (you don't fill a pail
-// through its own handle), water disc recessed 0.055 inside the rim,
-// glossier + cooler than v3's tan disk
+// v7: open-top lathe (the barrel's own proven idiom, scaled down) — v4-v6
+// used a CLOSED cylinder whose solid wood top cap fully enclosed the water
+// disc (struct-52 dead-pane class, decode-outranked: 88 WATER verts existed,
+// zero could render from any angle; the v4 "tan disc" judge read was the
+// wood cap itself). Tap-pail column unchanged: z 0.70, bail at rest,
+// water recessed 0.05 below the rim crest.
 {
   const px = 0.10, pz = 0.70;
-  const p = new THREE.Mesh(new THREE.CylinderGeometry(0.145, 0.118, 0.26, 12), STAVE);
-  p.position.set(px, 0.13, pz);
+  const pts: THREE.Vector2[] = [
+    new THREE.Vector2(0.112, 0.0),
+    new THREE.Vector2(0.120, 0.06),
+    new THREE.Vector2(0.128, 0.16),
+    new THREE.Vector2(0.145, 0.255), // outer rim crest
+    new THREE.Vector2(0.132, 0.258), // rim turns inward
+    new THREE.Vector2(0.130, 0.21),  // inner wall down
+    new THREE.Vector2(0.0, 0.20),    // floor closes the lathe
+  ];
+  const p = new THREE.Mesh(new THREE.LatheGeometry(pts, 12), STAVE);
+  p.position.set(px, 0, pz);
   g.add(p);
   const band = new THREE.Mesh(new THREE.TorusGeometry(0.140, 0.012, 6, 14), IRON);
   band.rotation.x = Math.PI / 2;
@@ -119,15 +130,14 @@ const B0 = 0.15;
   bail.rotation.y = Math.PI / 2;
   bail.position.set(px + 0.118, 0.26, pz);
   g.add(bail);
-  // water v5 (mossbowls v10/v11 proven recipe): teal-emissive palette blue —
-  // the ONLY small-pool recipe that has passed a native water read in this
-  // lane (v4's plain 0x46606e disc read dry wood/lid; metalness kills
-  // diffuse without an env map, dress-75 law). Mesh emissive, not a light
-  // entity — dress-79 precedent, no lamp draw.
-  const PAIL_WATER = mat(0x46606e, 0.2, 0.55);
-  (PAIL_WATER as any).emissive = new THREE.Color(0x3d6272);
-  (PAIL_WATER as any).emissiveIntensity = 0.85;
-  const pw = new THREE.Mesh(new THREE.CylinderGeometry(0.132, 0.132, 0.01, 12), PAIL_WATER);
+  // water v7: PLAIN teal COLOR_0 disc in the OPEN pail — no emissive (the
+  // glbwrite emissive lane bakes WHITE COLOR_0, so a plain-mat emissive disc
+  // renders black at close range — dress-95 v5 decode law), no metalness
+  // (v4's dry read was metal 0.55 killing diffuse without an env map,
+  // dress-75 law). Close-range pixel color carries the read; 18m water is
+  // sub-rim-occlusion class (dress-79 law governs, silhouette+hoops ride).
+  const PAIL_WATER = mat(0x46606e, 0.2, 0.0);
+  const pw = new THREE.Mesh(new THREE.CylinderGeometry(0.128, 0.128, 0.01, 12), PAIL_WATER);
   pw.position.set(px, 0.205, pz);
   g.add(pw);
 }

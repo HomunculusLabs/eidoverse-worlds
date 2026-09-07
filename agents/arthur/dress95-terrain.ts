@@ -7,10 +7,10 @@ import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
 process.env.WORLD_TOKEN = cfg.joinToken;
-const PX = -59.72, PZ = 52.73;
+const PX = -56.22, PZ = 53.41;
 const YAW = 2.3562;
 const cos = Math.cos(YAW), sin = Math.sin(YAW);
-const C = { x: 0.0, z: 0.16 }, H = { x: 0.51, z: 0.68 };
+const C = { x: 0.0, z: 0.209 }, H = { x: 0.51, z: 0.639 };
 const localCorners: [number, number][] = [
   [C.x + H.x, C.z + H.z], [C.x + H.x, C.z - H.z],
   [C.x - H.x, C.z + H.z], [C.x - H.x, C.z - H.z],

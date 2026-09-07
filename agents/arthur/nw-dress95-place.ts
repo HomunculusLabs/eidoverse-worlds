@@ -13,9 +13,16 @@
 // - Pose yaw 2.3562 parallel to the row: local +z (tap face + pail) ->
 //   world SE toward the plaza-ward lane; the tap column faces the walker.
 //
-// Build v6: sha 4531cbb8... (deterministic x2). 7 nodes, furniture-scale
-// (~1.02 x 1.24m footprint incl. pail, h 1.03), static unlit, no light
+// Build v7: sha 2a0d5be7... (deterministic x2). 7 nodes, furniture-scale
+// (~1.02 x 1.28m footprint incl. pail, h 1.04), static unlit, no light
 // anchors, empty comp bag by design. NW lamp spend 0 of 2.
+// v7 note (dress-96): dress-95's committed "v6 4531cbb8" claim failed to
+// reproduce — the committed source carried the v5 emissive recipe and no
+// v6 evidence exists; re-derived from the described v6 intent, then the
+// close gate FAILED on real bytes (pail was a CLOSED cylinder whose wood
+// top cap fully enclosed the water disc — struct-52 dead-pane class), so
+// v7 = open-top lathe pail (barrel's own idiom). Native 18m + close both
+// PASS on exact v7 bytes.
 // Gates: exact SHA, live blocker-epoch guard, entity collision/drift,
 // 2D footprint SAT vs FRESH live set (thin ground films h<=0.5 exempt),
 // rim [66,108], arrival-cone bearing-ray check (dress-90 law), post-place
@@ -28,14 +35,16 @@ const ROOT = "/Users/t3rpz/projects/eidoverse-worlds";
 const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
 const WORLD = "commons-next";
 const FILE = `${ROOT}/agents/arthur/assets/village_dress_nw_rainbarrel1.glb`;
-const SHA = "4531cbb852576923ff603bb539fd5cf9a86f33b4ec8ef0f42a4d9f6092af6b5c";
+const SHA = "2a0d5be7c2014a55a2231c9c31321b8e457c985f09ae6f9ad2628392021e07ef";
 const LIB = `store/${SHA.slice(0, 16)}.glb`;
 const ID = "nx-dress-nw-rainbarrel-001";
-// Terrain preflight (dress95-terrain.ts, this tick): corners 0.0311..0.0324
-// (1.3mm spread) -> py pinned to worst corner obb-a 0.0311.
+// Terrain preflight (dress95-terrain.ts, RE-CONFIRMED fresh at dress-96
+// pre-edit): corners 0.0312..0.0324 (1.2mm spread) -> py pinned to worst
+// corner obb-a 0.0311 (matches dress-95's original pin).
 const POS: [number, number, number] = [-59.72, 0.0311, 52.73], YAW = 2.3562;
-// local bbox (v6 decode): x -0.51..0.51, z -0.52..0.84 (center z +0.16)
-const HALF = { x: 0.51, z: 0.68 }, CLOCAL = { x: 0, z: 0.16 };
+// local bbox (v7 decode, true from bytes): x -0.51..0.51, z -0.43..0.848
+// (center z +0.209) — open-pail lathe re-decoded dress-96
+const HALF = { x: 0.51, z: 0.639 }, CLOCAL = { x: 0, z: 0.209 };
 // siting blockers this pose was derived against — all must be live
 const BLOCKERS = ["nx-dress-nw-skeps-001", "nx-cultivation-lavender-0027",
   "nx-cultivation-orchard-0033"];
@@ -89,6 +98,22 @@ if (e && !(e.lib === LIB && vec(e.pos, POS) && near(e.yaw ?? 0, YAW) && (e.scale
 // SAT preflight vs fresh live set
 const A = obb(POS, YAW, HALF, CLOCAL);
 const adjacencies: string[] = [];
+// dress-96 NAMED tier-b gap-bounded exemptions (artwalk-34/36/37 ladder):
+// the original concept seat's two sub-1.4m seams are bedding-plot fat
+// bboxes, not walls — the apiary pocket is boxed in post-improve-44/45
+// (full ring scan: nearest no-exemption pose 15m away, concept-dead;
+// corridor walking line 11m off, lane-side path on the row's other side).
+// (a) orchard-0033 gap +0.306: canopy proxy bbox — real trunks sit
+//     farther inside (dress-10 documented this exact neighbor: SAT +2.18
+//     then vs the same fat proxy; the cure shrank the *visible* field).
+// (b) lavender-0027 gap +0.469: bed bbox including the furrow soil skirt
+//     improve-45 added — plant mass starts above py 0.15, barrel base
+//     below, vertical separation beyond 2D SAT's plane.
+// Both pins are exact-match ±0.01m: any real drift hard-fails.
+const EXEMPT: Record<string, number> = {
+  "nx-cultivation-orchard-0033": 0.306,
+  "nx-cultivation-lavender-0027": 0.469,
+};
 for (const [id, ent] of Object.entries(before)) {
   if (id === ID || !ent.lib || !ent.pos) continue;
   const bb = ent.bbox;
@@ -98,11 +123,15 @@ for (const [id, ent] of Object.entries(before)) {
     { x: bb.size[0] / 2, z: bb.size[2] / 2 },
     { x: (bb.min[0] + bb.max[0]) / 2, z: (bb.min[2] + bb.max[2]) / 2 });
   const g = satGap(A, B);
+  if (id in EXEMPT) {
+    if (Math.abs(g - EXEMPT[id]) > 0.01) die(`${id} tier-b pin drift: gap ${g.toFixed(3)} vs pinned ${EXEMPT[id]}`);
+    continue; // gap-bounded exact-match exemption holds
+  }
   if (g < 0) die(`SAT overlap vs ${id}: gap ${g.toFixed(3)}m`);
   if (g < 1.4) adjacencies.push(`${id}: ${g.toFixed(3)}m`);
 }
 if (adjacencies.length) die(`unexplained sub-1.4m solid adjacency: ${adjacencies.join(", ")}`);
-console.log(`SAT preflight clear; no sub-1.4m adjacency`);
+console.log(`SAT preflight clear (2 named tier-b exemptions pinned); no other sub-1.4m adjacency`);
 
 // district rim law
 {
