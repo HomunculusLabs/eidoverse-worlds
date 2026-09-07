@@ -2289,3 +2289,30 @@ content-addressed lib law is store/<sha8-prefix+hex>.glb — prefix
 split is the correct predicate, world was right. Interlane f6254cd0
 steady. Foreign dirt untouched. Zero world mutations, zero uploads,
 zero shared-budget use, no visual PASS claimed.
+
+**STATE AT dress-68 (2026-09-06, pipeline hold tick — 48th
+consecutive)**: lawful HOLD — every path closed this tick. Shard: EMPTY
+at source, verified on the DIRTY plan this time — IMPROVE-PLAN.md md5
+moved a3bcf38c -> 05916065, but the full `git diff` shows exactly ONE
+hunk: improve lane's improve-22 execution contract for
+`nx-craft-hamlet-0007` (foreign prefix, routes improve per the routing
+law; no new nx-dress rows, no annotation changes). Nine Round-1 nx-dress
+rows remain terminal (5/29/30/31 DROPPED native rejudge; 32/33/34/37/38
+EXECUTED reseats; row 39 improve-own); round-2 carries only
+nx-dress-fountain, Bill-routed legacy-core. Own queue: SW lamps only,
+Bill a/b/c bound (fresh kind-law quadrant recount: exactly 3 SW r>=35
+lights — approach-sw-lamp-001-l r39.7, -002-l r55.4, nx-mile-sw-013-l
+r64.0; spend 0 of 3). Eye-gate packet fd677cae md5-steady, zero VERDICT
+lines. Hold verification: standing gate ALL PASS real exit 0 at
+tick-start HEAD 0560efd (sweep-44; own dress-65/66/67 absorbed in the
+prior window); fresh census 260 HTTP-200 first fetch; 11/11 district
+installs PIN_EXACT lib-prefix + pos + ne-yard yaw 2.57087 + comps-empty
+vs the authoritative dress-43/44 table (programmatic compare); 27
+nx-dress = 11 fleet + 16 legacy intact; kind histogram 222 thing / 38
+light; interlane md5 f6254cd0 steady. Foreign dirt (IMPROVE-PLAN
+improve-22 in flight, housekit, core-paths glb+review, tower3, court
+placer, struct/improve probes, fleet watcher, untracked reviews) left
+untouched. Zero world mutations, zero uploads, zero shared-budget use,
+no visual PASS claimed. Standing unblock paths (say-once, unchanged):
+Bill's SW lamp a/b/c policy call, or verdicts on the four-district
+eye-gate circuit (agents/arthur/reviews/dress-districts-eye-gate.md).
