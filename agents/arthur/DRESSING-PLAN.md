@@ -672,6 +672,17 @@ Two-version cure on the same bytes:
   CLOSED (annotated). SW lamp spend 0 of 3 (unlit, no emissive).
   Rotation next unchanged: NE round-3 item 8 glazier rack (10 of 19).
 
+**STATE AT dress-92 (2026-09-07, pipeline install tick)**: NE round-3 item
+8 EXECUTED live — `nx-dress-ne-glazier-001` PLACED_VERIFIED (details in
+the dress-92 siting-log entry below; 5-version native judge arc, v5
+`53b31cfd` 18m + close PASS; glass-material law banked; PRIMARY band
+cone-saturated → full-annulus scan re-sited to the gallery-lane pocket
+between statuary-0005/0026). Post census 276. NE lamp spend 0 of 10.
+Rotation next: SE round-3 item 12 (mossbowls) — 11 of 19 done. Shard
+queue: no OPEN nx-dress rows in IMPROVE-PLAN (nine Round-1 terminal;
+round-2 only the legacy-core fountain — off-limits, Bill's call). SW
+lamps remain blocked on Bill's a/b/c budget policy (0 of 3).
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
@@ -794,7 +805,11 @@ identity intent. Rotation stays NW->NE->SE->SW.
    hamlet-flank primary to the cloister-0016<->hamlet-0028 field gap;
    details in the dress-83 siting-log entry).**
 8. `nx-dress-ne-glazier-001` — glazier's rack: sheet-glass lean + crate,
-   near the gallery/mosaic edge (craft-to-art bridge).
+   near the gallery/mosaic edge (craft-to-art bridge). **DONE (dress-92,
+   PLACED 2026-09-07 — glass-material law banked: texMat medium-teal +
+   water-law gloss, never plain-mat near-white; re-sited from the
+   cone-saturated mosaic↔kiln band to the gallery-lane pocket between
+   statuaries 0005/0026; details in the dress-92 siting-log entry).**
 9. `nx-dress-ne-bellows-001` — great bellows on a cradle beside the forge
    wall; reads as machinery silhouette at 18m.
 
@@ -836,6 +851,72 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-92 — NE glazier's glass rack (round-3 item 8, PLACED, LIVE)
+
+- **Tick class**: install — concept → build → 5-version native judge arc →
+  siting scan → placement, one wakeup.
+- **Concept contract**: on the gallery lane between craft and art — the
+  commission anchor is "near the gallery/mosaic edge (craft-to-art
+  bridge)". A glazier stages sheet glass for the mosaic workshops: heavy
+  A-frame timber rack (plan-splayed legs, pale CUT apex caps — family
+  grammar), finished glass sheets leaning in overlapping panes, a crate of
+  crown-blown disc "roulets" nested in straw, one pane set apart on a
+  block (the next-pane cue). 18m identity: COOL TEAL GLASS SHEETS on a
+  timber rack — glass staging area, distinct from every standing NE family.
+- **Judge arc (all NATIVE; 2× 1210 flaps recovered on one paced retry
+  each, disclosed)**: v1 `b3763b75` 18m FAIL — dull sage boards; root
+  cause decode-true: plain `mat()` glass exports COLOR_0-only with NO
+  glTF material (glbwrite non-emissive plain branch) — zero specular
+  path, glass cannot read. v2 `91d0fa6e` FAIL — near-white hue-locks to
+  the ground, plasterboard. v3 `5031c42e` FAIL — texMat lane shipped real
+  glTF materials `glass`/`glass_dk` (rough .25 metal .5, water-law
+  params) but near-white tones read matte panels; close-judge: "color
+  says glass, shading says matte". v4 `fc2fb169` 18m PASS (medium teal
+  `0x9fd0d6`/`0x6fa8b2` clean faces) but close found center-pane merge
+  (floor(i/2) z-pairs shared planes) + crate discs rim-occluded
+  (dress-79 down-angle class). v5 `53b31cfd` (deterministic ×2, 7
+  nodes, bbox x −1.9..1.42 z ±0.66 y 0..1.47): monotonic per-pane
+  z-steps, straw mounded, discs cresting rim — 18m PASS ("cool teal
+  seamed panes on a timber rack read clearly as glass staging") + close
+  PASS. Margins: seam contrast at threshold; right-pane lean support —
+  both sub-threshold notes.
+- **GLASS-MATERIAL LAW (banked)**: in this pipeline glass reads via
+  texMat MEDIUM teal + water-law gloss (rough .25/metal .5) — never
+  plain mat near-white (COLOR_0-only export has no specular path), never
+  high metalness (no env map). Kin: anvilpad STEEL idiom (high-value
+  color, low metal).
+- **Siting (fresh census 274)**: PRIMARY band (mosaic-0036 ↔ kiln
+  connector) CONE-SATURATED — 0 legal cells; the mosaic/kiln/spiralfolly
+  plaza-facing 18m cones blanket the gallery edge (approach territory,
+  dress-85/86/88 dead-pocket class). Full-NE-annulus scan (86,940 cells,
+  dress-83/88 law): inner NE saturated; rim-legal gallery-lane pocket at
+  **az25 r67 (60.95, 28.42) yaw −2.35619** — the gap between
+  statuary-0005 (az18) and statuary-0026 (az33), face SW toward the
+  plaza approach (leaning glass presents to walkers). SAT: worst +2.61
+  vs statuary-0026, +2.77 vs statuary-0005, next nearest +9.6
+  (spiralfolly); nothing sub-1.4, no exemption ladder. Rim corners
+  66.15..68.54 ∈ [66,108]. Cone-context: statuaries 47–50° off their
+  plaza axes. Terrain 5-pt (`next-terrain-dress92-glazier.ts`):
+  −0.026..−0.028, spread 2.3mm → py −0.0284.
+- **Placement**: `ne-dress92-place.ts` (dress-83 chassis, rim gate
+  retained) — hash gate → blocker-epoch guard [statuary-0005,
+  statuary-0026] → fresh-census SAT/rim → upload (content-addressed) →
+  spawn → post-place tuple verify → idempotent 0-verb rerun.
+  **PLACED_VERIFIED** `nx-dress-ne-glazier-001` @ lib
+  `store/53b31cfd38f758d6.glb`, pos (60.95, −0.0284, 28.42), yaw
+  −2.356194490192345. 1 verb. Gate ALL PASS real exit 0 at HEAD 66ded6b
+  immediately pre-mutation (improve-42 absorbed).
+- **Post census**: 276 (improve-42's five garden reseats landed in
+  parallel — domain-valid, absorbed; fleet pins 10/11 exact, the 11th —
+  stile — correctly at dress-90 v11 `2c7f1bbe`, stale-table catch,
+  world correct).
+- **Lamp budget**: NE spend 0 of 10 — static unlit, no comps, no draw.
+- **Eye-check for Bill**: walk the NE gallery lane (az ~25°, ~67m out,
+  between the two statuary pieces). The pocket now stages a glazier's
+  rack — teal glass sheets leaning on a timber A-frame, crate of glass
+  discs beside. Should read "glass shop staging glass for the mosaics",
+  cool teal against warm timber, clearly not boards.
 
 ### dress-87 — NW herb-drying racks (round-3 item 3, BUILT, NATIVE-ACCEPTED — placement pending next wakeup)
 
