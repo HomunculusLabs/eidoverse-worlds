@@ -2644,3 +2644,61 @@ low serpentine wall should ripple across the spoke, swelling to a gated
 crest at center; cross through the arch (it turns you slightly); at
 dusk the two brass beads at the arch springs both glow. Frames:
 reviews/struct60-stillwind-v2/ (az-east18 = the honest approach).
+
+## struct-61 (2026-09-07): waterstair survey-25 dissent — native re-confirm,
+## v4 judged-FAILED (evidence kept), v5 diagonal re-author built; placement
+## deferred fail-closed on judge unavailability
+
+Cadence note (self-catch): the struct-60 record said "61%3==0 refine tick" —
+61%3==1, arithmetic slip; moot this tick because standing intake outranks
+cadence (struct-58 precedent) and the waterstair dissent WAS the top intake.
+
+**Native re-judgment first** (restored-vision law): independent native read
+of survey-25's frame CONFIRMED the dissent in substance — water reads as ONE
+flat blue panel (~155x39px) with seam-like striations (reads painted
+metal/inlay), NO foot pool (cascade terminates on dry base wall), silhouette
+reads box/gate with gate-post finials, zero water distance-signifiers.
+
+**v4** (sha `bb3a0a22`, x2 deterministic): stripe mechanism
+(teal film + bright foam bead per riser), brimming well mouth, splash,
+finials deleted, palette back to canon 0x506a78. NATIVE after-judge FAILED
+it — stripes resolved (3+3 bands) but still "striped panel in a wooden
+frame": the well read as the panel's bottom band, silhouette still box/gate.
+Root cause is GEOMETRIC, not material: a z-axis descent compresses to
+~zero image separation from the dead-on approach — no z-descending stair
+can read as descending from dead-on. v4 NOT placed (rejected-then-corrected
+in one tick; polish-272 pattern). v4 frames were overwritten by the v5
+render pass — the failed-judge text is the record; sha `bb3a0a22` is the
+reproducible artifact.
+
+**v5** (`8d7b4b2a80b96ce2b0ba07b9b12e4d851ff8301260854152611e82ac6668b002`,
+x2 deterministic) — the descent goes LATERAL: three deep treads (falls
+0.24m ≈ 14px at 18m) stepping down back-left→front-right INSIDE the
+standing envelope (x ±1.70 exact, y [−0.12,0.725] strict subset of
+[−0.90,0.795], z [−0.20,3.59] subset — SAT/collider-neutral reseat);
+header tank high back-left, brimming sheets per tread, film+foam per fall,
+receiving well at the low front-right corner (proud vertical water face,
+curb stubs, splash), finials and gold GONE, 3 buckets / 3 nodes
+(stone 168v / water 216v / foam 120v). Self-catches: `well_*` KEEP-token
+rename → `basin_*` (static water must not squat on motion anchors);
+envelope guards in-source. Decode: struct61-decode-waterstair.ts, all
+green; frames rendered reviews/struct61-waterstair/{before,after}/
+(before = struct-57 after2 renders of the live 2b418077 bytes, same rig).
+
+**After-judge UNAVAILABLE**: native 1210 x3 with paced retries (flap law —
+the judge ran for v4's FAIL and for the re-confirm earlier in the tick, so
+native is intermittent, not cleanly down). Under the standing waiver a
+review gap never creates a visual PASS: v5's 18m contract is UNJUDGED, so
+placement is DEFERRED fail-closed (struct-59 precedent). Live world
+unchanged: nx-struct-waterstair still 2b418077 at (0,−0.03222645,-32) yaw 0.
+
+**Next tick (ordered)**: (1) native (or disclosed ZAI fallback) after-judge
+of v5 frames vs the contract — descending silhouette, water+foam read,
+visible well; (2) on PASS: hash-gated remove+spawn reseat via
+next-place-struct57.ts chassis (edit sha 2b418077→8d7b4b2a, full sha), 
+post-place tuple verify, idempotent rerun, circumnavigation walk
+(struct16-walk-waterstair.ts legs, expect PASS — footprint is a strict
+subset); (3) pixel falsification (teal + foam-class bands, before/after);
+(4) on FAIL: iterate ONE defect, do not place. Live census for SAT
+preflight not needed before judging (envelope is a proven strict subset of
+the live entity's own bbox — same collision set).
