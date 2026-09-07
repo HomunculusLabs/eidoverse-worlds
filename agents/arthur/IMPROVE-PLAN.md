@@ -2323,6 +2323,69 @@ reviews/improve17-belltower/{before,after}/.
 - Comp capture/reapply on every re-place; idempotent rerun proof.
 - CLEAN verdicts are recorded results; no manufactured work.
 
+## improve-22 (EXECUTION CONTRACT, 2026-09-06 20:0x — round-2 take 1: `nx-craft-hamlet-0007`, worst-first Sev 2, survey-9 ZAI+native UNANIMOUS, family 5/5)
+
+Why lawful: round-1 terminal; re-arm item (2)+(3) → SURVEY CANDIDATES
+(round-2 intake, town-4 routing: no-shard-prefix default improve). Idle-guard
+clear (36h lane-tail grep: read-only survey commits only). Live tuple
+(86.671814, −0.01918958686956854, 15.480445) yaw −2.35619449, lib e2f134cf ==
+source rebuild byte-identical THIS TICK (probe re-run: no disputed bytes).
+Comp bag = particles:embers only. Source = assets/mason.ts composeHamlet +
+lift-99 retex pipeline (familymap + mergeByMaterial).
+
+ROOT CAUSE (decode-proven, improve22-decode-hamlet.ts): composeHamlet's
+spread idiom `box(g,name,w,h,d,...(rot(x,z) as [number,number]),Y,C)` feeds
+rot's planar z into the Y slot and the intended height into Z — all 8 sites
+(walls nw/ne/s/w/e, lintel, chimney, step; mason.ts:142-167). Cottages'
+walls stand at heights = planar positions: live bbox y ∈ [−7.569, +5.511],
+216 verts below grade, walls spanning y ±7. Roof-retarget list also misses
+`_cap_N` ridge caps + `_rake*` boards (they stay at green-center coords →
+the floating-slab reads). Survey findings literal: floating masses +
+sky-through hole + detached slab runs (ZAI fallback re-judge THIS TICK
+confirms on before/gameplay.png: hole x615-700 y500-560; slabs x388-575
+y398-428; dashes x615-725 y585-605 — native 1210 ×2, retry burned,
+disclosed; native re-judge owed on after-renders).
+
+FIX (assets/mason.ts composeHamlet only; family-wide cure, no housekit
+change): reorder every affected box() call to (…, x, y, z, C) with correct
+slots — wall center y = H/2+0.3 (seated on the 0.3 floor), lintel y =
+2.05+(H−2.05)/2, chimney y = H+1.0 seated via rot x/z, step y = 0.06; and
+extend roofNames to include every `${t}_roof_cap_${rc}` + `${t}_roof_rake*`
+node so caps/rakes retarget with the slabs/ends/ridge.
+
+Falsification: (1) after gameplay@18m — three grounded cottages, zero
+sky-through holes, zero floating slab runs (ZAI then native when it
+returns); (2) decode: min y ≥ −0.35 (village sink idiom bound), max y ≤
+5.0, wall buckets' y-span ≈ wall height not ±7; (3) rebuild ×2
+deterministic; (4) probe still byte-identical on SIBLINGS (0015/0028/
+0041/0054 rebuilds change — family fix changes their bytes too, siblings
+re-place next ticks per family-wide remediation); (5) rim/SAT preflight on
+fresh census — bbox shrinks (y-span 13.08 → ~5.9), footprint must stay rim-
+legal; (6) remove+spawn exact tuple + embers comp re-apply; idempotent
+rerun zero verbs; (7) ledger improve-22 + commit (mason.ts + decode +
+placer + plan + evidence).
+Revert: revert composeHamlet edits → rebuild returns e2f134cf (baseline
+×2 proven this tick; before-bytes banked reviews/improve22-hamlet/before/).
+
+improve-22 PARTIAL — build+audit complete, PLACEMENT DEFERED (judge
+outage; artwalk-32 pre-place interruption class): source edit landed,
+rebuild ×2 deterministic sha edd3da3ef7737bef (e2f134cf → edd3da3e),
+decode GREEN (0 verts below grade, was 216; max y 4.586, was 5.511;
+stone bucket y [0,4.104] = true wall heights), after-renders 8 views
+banked. AFTER-JUDGE BLOCKED: native 1210 ×2 + paced retry burned (before
+AND after), ZAI fallback timed out 300s ×2 — visual accept-or-revert NOT
+obtained, so NO upload/re-place per the visual-gate law. World untouched:
+live entity still at baseline lib e2f134cf, tuple unchanged, comp bag
+intact. NEXT TICK RECOVERY (exact): (1) re-verify on-disk build sha ==
+edd3da3e; (2) after-judge (native preferred; the falsification criteria
+are the contract's four); (3) update next-place-craft-hamlet-0007.ts —
+PINNED_SHA → edd3da3e…, BW/BD → new bbox footprint, keep tuple/comp
+contract; (4) upload (429 pacing) + remove+spawn + embers comp re-apply +
+post-place verify + idempotent rerun; (5) annotate the SURVEY CANDIDATES
+row [EXECUTED improve-22]; (6) siblings 0015/0028/0041/0054 same-class
+cures on their own ticks (rebuilds change bytes by design — family-wide
+remediation law).
+
 ## improve-21 (EXECUTION CONTRACT, 2026-09-06 — R-120/R-121 take, re-arm item 2)
 
 **Why this is lawful improve-lane work:** round 1 fully terminal (39/39
