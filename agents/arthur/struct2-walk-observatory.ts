@@ -1,11 +1,14 @@
 // struct2-walk-observatory.ts — struct-2: real MCPL two-way door gate for
-// the Observatory. Legs: outside -> inside (through the door), inside ->
-// bench ring, back, inside -> outside. Fail on !ok or arrival > 0.55m.
+// the Observatory. RE-PINNED city-9 (sweep-77 Sev-3): seat moved by city-8
+// to (-39.811,-87.356) yaw +0.42761 [radial-inward, atan2(39.811,87.356) —
+// door local +Z still faces the incoming devotional walk from the plaza
+// side]. Legs: outside -> inside (through the door), inside -> bench ring,
+// back, inside -> outside. Fail on !ok or arrival > 0.55m.
 import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
 process.env.WORLD_TOKEN = cfg.joinToken;
-const PX = 16.48, PZ = -40.8, YAW = -0.3838824615170976, c = Math.cos(YAW), s = Math.sin(YAW);
+const PX = -39.811, PZ = -87.356, YAW = Math.atan2(39.811, 87.356), c = Math.cos(YAW), s = Math.sin(YAW);
 const world = (x: number, z: number): [number, number] => [PX + x * c + z * s, PZ - x * s + z * c];
 // door is local +Z; walk lane: 5m out -> 1m inside -> bench rim (r2.0) ->
 // opposite side -> back out through the door.

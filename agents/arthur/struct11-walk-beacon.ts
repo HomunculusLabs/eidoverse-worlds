@@ -1,12 +1,14 @@
 // struct11-walk-beacon.ts — struct-11: MCPL approach gate for the East
-// Beacon. YAW=0: local == world. Furniture-solid tower — approach to 2.2m,
-// circle the base. Legs: E approach -> base E -> base N -> base W -> leave.
+// Beacon. RE-PINNED city-9 (sweep-77 Sev-3): seat moved by city-7 to
+// (60.911,-66.764) yaw -30deg [square tower, rotationally symmetric].
+// Furniture-solid tower — approach to 2.2m, circle the base. Legs:
+// E approach -> base E -> base N -> base W -> leave.
 import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
 process.env.WORLD_TOKEN = cfg.joinToken;
-const PX = 40.8, PZ = -16.48;
-const pt = (x: number, z: number): [number, number] => [PX + x, PZ + z];
+const PX = 60.911, PZ = -66.764, YAW = -30 * Math.PI / 180, c = Math.cos(YAW), s = Math.sin(YAW);
+const pt = (x: number, z: number): [number, number] => [PX + x * c + z * s, PZ - x * s + z * c];
 const agent = new WorldAgent({ url: cfg.url, name: "arthur-struct11-walk", world: "commons-next", avatar: cfg.avatar, agentToken: cfg.agentToken });
 const results: any[] = [];
 async function leg(name: string, end: [number, number]) {
