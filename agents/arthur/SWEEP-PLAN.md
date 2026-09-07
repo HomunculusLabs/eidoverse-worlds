@@ -395,6 +395,7 @@ pair (sweep-59): stable + observatory circuit (37th cycle).
 
 || sweep-65 | 2026-09-07 | 271==271 (233 thing + 38 light; 0 arrivals, 0 departures, exactly ONE classified drift field-set = nx-town-potter lib dad7c82efbf3202b→2062c4468996b2bb at identical tuple (26,0,40.5) yaw −2.5835, bbox BYTE-IDENTICAL (3.435×1.017×1.706 unchanged), comp GAIN motion:pwheel spin degPerSec 9 live post-flip — improve-37 in flight (untracked placer next-place-improve37-potter.ts pins exactly this lib + pwheel comp + pre-place bag assertion; mkv3-potter41.ts modified in tree; no [improve-37] ledger entry yet = placement landed live, commit pending), sweep-30 uncommitted-placer class, domain-valid, not drift; epoch B 271==271 0/0/0 across a 20s-paced re-read, no further sibling change) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, TWENTY-SECOND sweep since routing, no escalation due — law keys Sev 1); 233 bbox non-light / 233 classified / 0 coverage holes, SAT run at epoch A over the new potter bytes (verdict string anchored: SWEEP HAS FINDINGS on exactly the one known pair) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 43rd cycle per committed pointer stable 5/5 @ 0.396 + market 6/6 @ 0.389 ALL PASS + ADDITIONAL potter 6/6 @ 0.366 walked fresh over the improve-37 bytes — improve-37's placer carries no post-place walk (deferred per its header) so the cross-lane gap was closed read-only this sweep, sweep-62 longhouse precedent | pins 15/15 ALL_PINS_OK (20th consecutive), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 resolved standing) + 4 -l companions, belltower 2419fbc53a1d65e1 + ladder comp live, windmill 369c5724, woodyard 01b78fdd00f090a7, welcome 7d1bd0c9545c44fb + welcome-l, cistern 156b4fc8c7287a9d, hamlet embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched (potter now the 16th, motion:pwheel — comp count 16 preserved through the re-place), interlane f6254cd0 stable, ledger law EXACT 2370631 at entry (audit-balance slice 2336002 + ΣD 33687 + ΣE 942), standing gate ALL PASS real exit 0 at tick-start 0989074 + re-run at mid-tick HEAD 5cdef84 (struct-63 analysis-only absorbed) | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-67 | 2026-09-07 | 273==273 (233 thing + 38 light; 0 arrivals, 0 departures, exactly ONE classified drift field-set = seed family 4x lib 710ec3e5→699387ab at identical tuples + bbox y-max 0.12→2.51 uniform, footprint ±3.275 byte-identical = improve-39 sol_core @ 5141ff5 PRE-tick, ledger-matched, domain-valid not drift; epoch B 20s-paced re-read 0/0/0, single-read epoch) | exit 3 on exactly the three KNOWN unclassified: R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 24th sweep since routing, no escalation due — law keys Sev 1) + R-122 ellipsecourt\|shelltower −2.203 / \|meridianstair −1.736 (Sev 2 routed struct @ sweep-66, 2nd sweep, no escalation due); 235 bbox non-light / 233 classified / 0 coverage holes, SAT ran fresh over the new seed bytes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5; seeds r67.9..70.5 SW 47m+ off every tier-1 leg, walks stand by construction, sweep-53 precedent); tier-2 45th cycle per committed pointer garden-cottage 6/6 @ 0.355 + tower-house 6/6 @ 0.3765 ALL PASS | pins 15/15 ALL_PINS_OK 22nd consecutive, carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib bbox PRESENT + companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched, interlane f6254cd0 stable, ledger law EXACT 2370643 at gate (ledger probe self-catch sweep-36 class, corrected pre-verdict), standing gate ALL PASS real exit 0 at tick-start 5141ff5 (snapshot rewritten 109423B / 273 ents / sha16 415f21d85fc8861b, pre-write assertion diff exactly 4x seed lib+bbox, post-rewrite drift ZERO) | CLEAN SWEEP — R-121/R-122 open, known, no escalation due |
+| sweep-68 | 2026-09-07 | 274==274 (236 thing + 38 light; epoch A fully quiet vs sweep-67 epoch-C baseline b8c316c6cda9b911: 0 arrivals, 0 departures, 0 drift; mid-tick the struct lane executed the routed R-122 fix LIVE — epoch B caught exactly ONE drift field-set nx-struct-ellipsecourt pos (0,−0.0476,−47)→(−3.75,−0.0403,−50.75), yaw pi/2 + lib UNCHANGED 2aa37e9d (same-bytes reseat), committed by struct-66 @ 4247dc3 mid-tick with its ledger entry; all affected evidence re-taken fresh per polish-270 epoch law: SAT re-run at epoch B, true ellipse-edge clearances re-derived, gate re-run at af85299 then 4247dc3; epoch C 25s-paced re-read 0/0/0 — reseat settled; snapshot rewritten like-for-like 109835B / 274 ents / sha16 eec3a26e8ecd57da, pre-write assertion diff exactly [ellipsecourt pos], post-rewrite drift ZERO; dress-90 stile v11 lib flip 5e9d301d→2c7f1bbe @ unchanged tuple landed at eda62eb AFTER the epoch-C read — its placer ran fresh SAT clean, recorded as the known epoch for sweep-69's baseline rewrite) | exit 3 at epoch A on the three known unclassified, exit 3 at epoch B on exactly ONE = R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 25th sweep since routing, no escalation due — law keys Sev 1); R-122 CURED by the reseat: both ellipsecourt contacts left the unclassified set (3→1), true ellipse-edge vs meridianstair OBB 1.553m / shelltower OBB 1.875m (conservative lower bounds bracketing struct-66 vertex-cloud 1.773/1.835, all above the 1.4m pinch law); 236 bbox non-light / 233 classified / 0 coverage holes at both epochs | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each at epoch A (core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5; court reseat r51.9 S — nearest walked waypoint 28.2m, all walks stand by construction, sweep-53 precedent; struct-66 re-proved its own 11/11 court walk at the new tuple); tier-2 46th cycle per committed pointer bunkhouse 6/6 @ 0.380 + longhouse 6/6 @ 0.346 ALL PASS | pins 15/15 ALL_PINS_OK 23rd consecutive (re-run at epoch B post-reseat, ellipsecourt not a pinned entity), carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib bbox PRESENT + companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched, interlane f6254cd0 stable, ledger law EXACT 2370653 at append base (struct-66 E+2 absorbed), standing gate ALL PASS real exit 0 at tick-start b7a0b02 + re-run at af85299 mid-tick | CLEAN SWEEP — R-122 CLOSED (struct-66); R-121 open, known, no escalation due |
 
 EPOCH-C CORRECTION (disclosed, correction-of-record class — struct-65 wavepergola landed at 63e0484 AFTER this sweep's ledger append, as my own commit's parent): census-C 273→274 with exactly ONE additional domain-valid arrival nx-struct-wavepergola @ (51,−0.0221,9) yaw 0 lib 32dc2e7d, tuple matches its committed ledger line-for-line, 0 drift on 273 shared ids. All affected evidence re-taken fresh before the correction commit: SAT re-run at epoch C (236 bbox non-light / 233 classified / 0 holes, exit 3 on the same three known unclassified — no new contacts), walk-band check (wavepergola 38.2m from the nearest walked waypoint, all walks stand by construction, sweep-53 precedent). The committed ledger entry (sweep-67, D+0/E+0, law exact 2370651 after struct-65's D+1 absorbed) is epoch-B-true; this block is the correction of record. Snapshot FINAL epoch C: 109828B / 274 entities / sha16 b8c316c6cda9b911 (diff vs the committed epoch-B rewrite = exactly [wavepergola arrival]); next sweep's baseline.
 
@@ -1906,6 +1907,58 @@ corrective reseat of the SW milestone pair verified against its ledger
 probe artifact recurred during integrity and was again decode-confirmed
 as a non-finding (second occurrence; the census key is compKeys). No
 defect notes written. Next tier-2 pair (sweep-6): market + forge.
+
+
+sweep-68: CLEAN SWEEP, epoch-correction tick that watched R-122 close LIVE. Epoch
+A census 274==274 fully quiet vs the sweep-67 epoch-C baseline (sha16
+b8c316c6cda9b911): 0 arrivals, 0 departures, 0 drift on
+id/pos/yaw/lib/scale/kind/bbox. Mid-tick the struct lane executed the routed
+R-122 cure in the live world: epoch B (paced re-read) caught exactly ONE drift
+field-set — nx-struct-ellipsecourt pos (0,−0.0476,−47) → (−3.75,−0.0403,−50.75),
+yaw pi/2 and lib 2aa37e9d UNCHANGED (same-bytes reseat; no upload) — committed
+by struct-66 @ 4247dc3 with its ledger entry (D+0, E+2, base absorbed). Per the
+polish-270 epoch law all affected evidence was re-taken fresh before verdicts:
+SAT re-run at epoch B, true clearances re-derived, gate re-run. Result: R-122
+CURED — both ellipsecourt contacts left the unclassified set (3 → 1); my
+independent conservative ellipse-edge-vs-OBB margins at the new tuple are
+1.553m (meridianstair) and 1.875m (shelltower), bracketing struct-66's
+vertex-cloud 1.773/1.835, all above the 1.4m pinch law; struct-66 also
+falsified my register note's suggested south-only translation at source
+(dz=−2.5 → 0.109m court-meridianstair — correct call, their SW-diagonal
+reseat is the lawful zone; the register note already carries their STATUS:
+FIXED line). Overlap after reseat: exit 3 on exactly ONE unclassified =
+R-121 lamp-n|nx-town-mapboard −0.407 (known Sev 2 routed artwalk b26 @
+sweep-43, 25th sweep since routing, no escalation due — law keys Sev 1);
+236 bbox non-light / 233 classified / 0 coverage holes. Walk-band proof for
+the reseat: court now r51.9 S; nearest tier-1 SW-leg waypoint 28.2m
+(previously 30.2m) — all epoch-A walks stand by construction (sweep-53
+precedent) and struct-66 re-proved its own 11/11 court walk at the new tuple.
+Tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @
+0.38, NW 5/5, NE 7/7, SW 5/5). Tier-2 46th cycle per committed pointer:
+bunkhouse 6/6 @ 0.380 + longhouse 6/6 @ 0.346 ALL PASS. Integrity: pins 15/15
+ALL_PINS_OK 23rd consecutive (re-run at epoch B; ellipsecourt is not a pinned
+entity), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4
+full 16-hex 18b69a6bb2f5862f bbox PRESENT + companions, belltower 2419fbc5 +
+ladder live, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 +
+welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads (comp key
+'particles', preset 'embers'), 38 lights, 16 comp-bearing census-matched,
+interlane md5 f6254cd0 stable, ledger law EXACT 2370653 at append base.
+Standing gate ALL PASS real exit 0 at tick-start b7a0b02, re-run at af85299
+mid-tick. Snapshot rewritten like-for-like: 109835B / 274 entities / sha16
+eec3a26e8ecd57da (pre-write assertion: entity diff vs the sweep-67 epoch-C
+baseline = exactly [nx-struct-ellipsecourt pos]; projection fidelity proven
+by byte-identical round-trip of the old baseline; post-rewrite drift vs live
+ZERO — dress-90's stile lib flip landed post-read, recorded as the known
+epoch above, sweep-52 precedent). Probe self-catches repaired in-tick: (a)
+snapshot first rewrite used
+the raw payload (126982B, comp/parent/tris keys) — caught by the size jump,
+re-derived the 7-key like-for-like projection with a round-trip fidelity
+proof; (b) row-insert byte-growth assertion initially too tight (2411B row vs
+2500 floor) — fail-closed pre-write, bound corrected. Zero world mutations,
+zero defect notes (R-122's owner closed it itself; register untouched this
+tick), zero uploads, zero comp edits, zero shared-budget use (D+0, E+0). Next
+tier-2 pair (sweep-69): inn + stable (47th cycle — LRU by latest-walk scan:
+bunkhouse/longhouse refreshed this tick; inn 63, stable 65 now stalest).
 
 ## Overlap exemption classes (frozen in sweep-sat-next.ts)
 
