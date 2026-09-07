@@ -1792,6 +1792,30 @@ open duplicate notes for these objects.
   REVERT: re-run placer with prior lib (tuple-identical revert path);
   served store-min bytes banked /tmp/improve31-woodyard-live.glb +
   reviews/improve31-woodyard/before/.]
+  [EXECUTED improve-32 (2026-09-07 01:2x — closes the improve-31 contract):
+  rebuild improve31-woodyard-rebuild.ts from the banked buckets (geometry
+  byte-faithful, no mergeByMaterial — named-node contract preserved);
+  sha 1f2c6f59->01b78fdd ×2 deterministic. v1 split tones [0xa09832…]
+  judged NATIVE partial-pass (bottom course + stump read correctly; close
+  view resolved the "flat slab above" complaint as STRUCTURE TRUTH — the
+  5-board windbreak backwall, stack genuinely 2 courses/0.465m per decode,
+  course seam visible; right-panel lightness = directional light from
+  right, shadow-confirmed); v2 warmed the green cast to tan
+  [0xaa955a,0x9c8850,0x8a7a4a] (both judges' one shared critique) ->
+  NATIVE 4/4 PASS ship-ready at 18m (one 1210, paced retry recovered);
+  night PASS quiet silhouette zero artifacts. Contract deviation disclosed:
+  wy_axe_0 got the shared split texMat instead of plain 0xa09832 — a plain
+  mat exports material-less (glbwrite emits only texMat/emissive lanes),
+  re-introducing the defect class; same pale-wood intent, real material.
+  Audit improve31-audit-woodyard.py: 7/7 primitives material+TEXCOORD_0,
+  COLOR_0 white, POSITION/NORMAL/idx element-exact vs buckets, envelope
+  equal, wy_axe tree preserved, 2888 verts conserved. Reseat
+  improve32-place-woodyard.ts: PLACED_VERIFIED 2 verbs exact tuple
+  (16,0,31) yaw −2.669815, comp null->null, idempotent 0-verb rerun,
+  rider b11 + sign nx-sign-woodyard-001 standing; 2-leg two-way front
+  walk 5/5 ALL_PASS worst 0.370m. Idle-guard clear (24h git tail: read-only
+  sweep/survey pins only). Gate ALL PASS exit 0 at 5b7518f pre-tick and
+  re-run at fd0fa73 pre-mutation (mid-tick sibling HEAD advance absorbed).]
 
 - `nx-welcome` — Sev 3 (native survey-7): left stub arm detached from
   post (~5px sky gap x466-470 y341-345); welcome text dark-on-dark
