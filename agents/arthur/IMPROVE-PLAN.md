@@ -3728,6 +3728,22 @@ read — owner's final judge was ZAI fallback) + five core nx-dress props
   blobs; the three flagged "clutter" blobs are dress-17's own
   below-threshold pebble margin.
 
+**survey-57 sub-section (2026-09-07, NATIVE 18m gameplay, live store bytes
+served-sha ac424d92 == survey-55/56 pin; dress-80 calibration control run
+same tick — accepted sibling woodstack reads stacked-timber FULLY in the
+same solo rig, so the fail is genuine not rig-degradation):**
+
+- `nx-dress-ne-timberyard-001` — Sev 3 (native survey-57): identity-fail at
+  18m — reads gate-frame/gantry (posts x416-430/x545-560 + top rail
+  x428-541) over a chaotic diagonal tangle (x430-535 y368-404) reading
+  debris; ZERO log-end/end-grain cue; only quasi-stack x487-533 y392-411
+  (~45px) too small to carry identity. Silhouette + value PASS —
+  identity-class defect only. Cheapest fixes: ordered horizontal log runs
+  with end-grain toward the read lane; enlarge block stack into silhouette
+  (direction mirrors the accepted woodstack's end-on presentation). Note
+  also routed to DRESSING-PLAN SURVEY INTAKE (owning lane). Evidence:
+  reviews/survey57-slice/timberyard/ + reviews/survey57-slice/woodstack-ctl/
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):

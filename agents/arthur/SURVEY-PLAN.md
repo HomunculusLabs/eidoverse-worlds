@@ -3303,6 +3303,84 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   /tmp/survey56-census.json (292). Gate: ALL PASS real exit 0 first try
   at 27ab9788 (ledger law EXACT 2370727); interlane md5 f6254cd0 stable
   (read fresh this tick). Verdicts 0 confirmed / 4 clean (all
-  clean-with-margin) / 1 dissent-closed-decode / 3 carried. Zero world
-  mutations, zero uploads, zero verbs, zero comp edits, zero
-  shared-budget use (D+0, E+0).
+ clean-with-margin) / 1 dissent-closed-decode / 3 carried. Zero world
+ mutations, zero uploads, zero verbs, zero comp edits, zero
+ shared-budget use (D+0, E+0).
+
+ ## Judged index (survey-57)
+
+ - survey-57 (2026-09-07, NATIVE 7/9 + ZAI fallback 2/9 disclosed — flap
+ pattern: cloister-0055 and orchardrows each burned 1210 x2 with paced
+ retries; one pacing artifact call discarded before any read; 18m
+ gameplay primary + night frame for bellpost per series law; fresh live
+ store bytes 8/8 HTTP 200 curl UA from /library/store/ on exact
+ census-57 libs; carried three's served-shas match survey-55/56 pins
+ EXACTLY (orchardrows 87490145, bellpost 3511fbc5, timberyard
+ ac424d92 — bytes unchanged, banked renders valid); arrivals pinned
+ 586e7415 (lemniscateseat on lib a6ae2406) / 0283cb5c (vesicawindow on
+ lib f4cedc72) / control 9d16db48-served cloister55, 26bb985ce
+ statuary52, e5ee7d0a wayside58, d1b4de6335 woodstack-ctl on lib
+ 692bc54e): CARRIED-THREE-DRAIN + TWO-ARRIVAL + VARIANCE-PROBE slice.
+ Slice = orchardrows/bellpost/timberyard (survey-55/56 carried) +
+ lemniscateseat/vesicawindow (never-survey-judged arrivals, struct-90/91
+ placements) + cloister-0055/statuary-0052/wayside-0058 (unjudged-member
+ variance probes on CLEAN families). VERDICTS: ORCHARDROWS ZAI
+ CLEAN-with-margin — dress-81 v7 cure corroborated: espalier tier bands
+ (y345-362/378-396/390-405), segment cadence breaks (x438-448/x522-532),
+ sky gaps between tiers, fruit accents at three clusters doing identity
+ work; margins: two 1-3px leader-sprout float-candidates x400-412/
+ x563-571 y329-347 (read natural at 18m), faint right-segment ground
+ shadow. BELLPOST NATIVE CLEAN-with-margin day+night — dress-91 v6 cure
+ corroborated: post→arm→hanging-bell grammar instant (<1s parse), bell
+ warm-tan vs near-black frame carries identity, clapper dot reads;
+ night PASS 3/3 (silhouette via ~Δ20 blue channel, zero bloom, zero
+ warm pixels frame-wide — no fake emissive); margin: cap/arm value merge
+ (cap reads as post knob, polish-tier only), bell lower-half vs ground
+ hue-only separation = thinnest margin. TIMBERYARD NATIVE CONFIRM Sev 3
+ — identity-fail: gate-frame/gantry + debris-tangle read, zero log-end
+ cue, ordered-stack absent (silhouette+value PASS — identity-class
+ only); dress-80 calibration control run SAME TICK on accepted sibling
+ nx-dress-ne-woodstack-001 in the SAME solo 18m rig: stacked-timber
+ reads FULLY (end-grain circle-field + rack + base rail) — rig does not
+ degrade stack reads, fail is GENUINE; note routed to DRESSING-PLAN
+ SURVEY INTAKE + candidate row under IMPROVE-PLAN SURVEY CANDIDATES
+ (survey-57 sub-section), grep-verified no open duplicate (only
+ placement-context DONE prose exists). LEMNISCATESEAT NATIVE
+ CLEAN-with-margin — first independent read of struct-90 placed bytes:
+ two-lobe figure-eight identity unambiguous (442px width), slat-segmented
+ ribbon continuous + grounded (AO pool + contact strip), no crush;
+ margins: 7px orange node carries the crossing read at grazing elevation
+ (identity-fragile if resolution drops), right-lobe contact shadow weaker
+ than left. VESICAWINDOW NATIVE CLEAN-with-margin — first independent
+ read of struct-91 placed bytes: 3/3 PASS (two-hoop Venn silhouette
+ unmistakable, teal lens STRONGEST-contrast element in frame, lens
+ rim-occluded by hoop tubes = mounted not floating, zero holes/tears,
+ hoops read as crisp lines not crushed mass); margins: 4-6px brass bead
+ sub-legible at 18m (accent loss not identity loss), optional ~2px lens
+ apex closure cosmetic. Corroborates struct-91's own 9/10 judgment.
+ CLOISTER-0055 ZAI CLEAN-with-margin — column rhythm ~7 front columns,
+ layered pergola roofline, all grounded; lamp-head orbs (316,259)/(644,
+ 259) sub-visible mounts = survey-9/10 FLIP artifact class, not defect;
+ margin: only two lamps read from this angle (occlusion), shadow pocket
+ under platform bounded. STATUARY-0052 NATIVE CLEAN 3/3 — dotted-ellipse
+ ring + orb-headed idol cluster reads shrine unambiguously; three
+ near-black orbs (320-341/496-518/638-660, ~20px each) read intentional
+ accents, <2% pixel area; zero floaters, zero crush. WAYSIDE-0058
+ NATIVE CLEAN-with-margin — roof-over-mass identity + glowing lamp head
+ anchor instant, all posts grounded, roof continuous; margins: dark
+ front panel x486-512 y376-425 + tall blank post x345-372 crush
+ advisories (survey-14 wall-checker class, biome-dependent), under-eave
+ band reads shadow not gap. Routing: ONE defect note (timberyard) to
+ DRESSING-PLAN SURVEY INTAKE + ONE candidate row IMPROVE-PLAN SURVEY
+ CANDIDATES; ONE ledger append survey-57 (loop law 4: note routed).
+ Census 292->294 vs survey-56 snapshot /tmp/survey56-census.json:
+ exactly TWO arrivals both struct-domain ledger-matched sibling
+ work-in-flight (nx-struct-lemniscateseat a6ae2406 = struct-90 @
+ 4d680cd1, sweep-97 epoch-B corroborated; nx-struct-vesicawindow
+ f4cedc72 = struct-91 @ f4524181), 0 departures, 0 TRUE lib flips,
+ 0 pos moves. New snapshot baseline /tmp/survey57-census.json (294).
+ Interleaves observed mid-tick and named: city-88 4a03970a, dress-141
+ 7a991128, sweep-100 54bfad1c (HEAD at commit), struct92 terrain file
+ untracked (next build in flight). Verdicts 1 confirmed / 8 clean (7
+ clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
+ zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).

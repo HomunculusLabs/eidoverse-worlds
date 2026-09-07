@@ -1160,6 +1160,30 @@
   call; full row stands in IMPROVE-PLAN SURVEY CANDIDATES. Evidence:
   agents/arthur/reviews/survey8-slice/nx-dress-fountain/gameplay.png
 
+- [survey-57, 2026-09-07, NATIVE 18m gameplay, live store bytes served-sha
+  ac424d92 == survey-55/56 pin (bytes unchanged across three ticks);
+  dress-80 calibration control run SAME TICK] `nx-dress-ne-timberyard-001`
+  CONFIRMED Sev 3 identity-fail — at 18m the composition reads gate-frame/
+  gantry (two posts x416-430/x545-560 + top rail x428-541 y352-369) over a
+  chaotic DIAGONAL TANGLE (x430-535 y368-404) reading debris/ruin; zero
+  log-end/end-grain cue anywhere; the only quasi-stack (x487-533 y392-411,
+  ~45px) too small to carry identity. Silhouette + value PASS (grounded,
+  contact shadow, no floats/tears, no crush) — identity-class defect only.
+  CALIBRATION (dress-80 law): accepted sibling `nx-dress-ne-woodstack-001`
+  (lib 692bc54e, commissioned contrast pair — "distinct from the NE
+  woodstack by reading as WORKING stock") rendered in the SAME solo 18m rig
+  reads stacked-timber FULLY (end-grain circle-field ~20+ discs, rack
+  posts, base rail, rolled-out logs) — the rig does NOT systematically
+  degrade stack reads, so this fail is genuine. Cheapest fixes per judge:
+  replace diagonal tangle with 2-3 ordered horizontal log runs with
+  end-grain faces toward the read lane; enlarge the block stack into the
+  silhouette. Cure direction mirrors woodstack's end-on presentation.
+  Evidence: reviews/survey57-slice/timberyard/ (banked survey55 renders) +
+  reviews/survey57-slice/woodstack-ctl/ (control). Candidate row stands in
+  IMPROVE-PLAN SURVEY CANDIDATES (survey-57 sub-section). Probe, not
+  verdict — decode/execute law belongs to this lane. Zero open-duplicate
+  verified (grep: no prior timberyard note here).
+
 Lane: district dressing for commons-next. One authored installation per
 wakeup, districts rotating NW → NE → SE → SW. Loop file:
 `DRESSING-LOOP.md`. Interlane: `INTERLANE-PROTOCOL.md` (six lanes).
