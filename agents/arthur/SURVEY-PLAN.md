@@ -1561,3 +1561,73 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   Verdicts 0 confirmed / 8 clean (8 clean-with-margin) / 0 dropped.
   Zero world mutations, zero uploads, zero comp edits, zero
   shared-budget use.
+
+## Judged index (survey-32)
+
+- survey-32 (2026-09-07, NATIVE 6/8 + ZAI fallback 1/8 + 1 decode-only probe
+  disclosed — native flap: 1210 x2 + paced retry burned on town-roads first
+  calls only; every other first call landed or recovered native (ellipsecourt
+  + lamp + h3 + h5 + b4 + b27 all native; 18m gameplay unless noted, fresh
+  live store bytes 7/7 HTTP 200 curl UA on exact census-32 libs, served-shas
+  pinned fbf80b5c / b3a939e4 / 9e1808dd / 20cca030 / 22d786a4 / 3e6eb8d0 /
+  05db8263): STANDING-DEBT + NEVER-JUDGED slice. Slice = ellipsecourt
+  (survey-30/31 native re-judge debt, third read) + town-roads (never judged,
+  aerial-primary) + approach-lamp-e (never-judged family representative, one
+  sha 18b69a6b covers e/n/s/w + 4 district lamps, degenerate-fleet law) +
+  artwalk-h3 / h5 (never-judged h-series statics) + artwalk-b4-golden-hinges
+  / b27-waterline (never-judged riders, close-view primary per survey-31
+  series law). VERDICTS: ELLIPSECOURT NATIVE CLEAN 4/4 — native debt PAID,
+  cluster closes CLEAN 3-0 (survey-30 ZAI + survey-31 ZAI + survey-32 NATIVE
+  CLEAN; native outranks, no dissent ever reached defect tier): colonnade
+  identity instant, all piers plinth-grounded with contact shadows, ring
+  continuous 360, zero glitch classes; margins: 2 sub-10px plinth flecks
+  (185-192,404-414 + 763-771,406-416 — the foci-pin speck class from
+  survey-30/31), ring faceting kinks acceptable. TOWN-ROADS ZAI CLEAN —
+  ring+spokes network reads deliberate and complete, path/ground hue contrast
+  strong, junctions flush, zero z-fight/seam/gap classes; margins: stepping-
+  stone dashed read at distance, 2 gate-base speck regions verify-tier
+  (315-330,448-480 + 330-356,262-295 — gate pads/post+shadow most likely).
+  APPROACH-LAMP-E NATIVE CLEAN-with-margin — twin-head path-lamp identity
+  unambiguous, lantern heads read glass+cap not blob, night frame panes
+  warm-lit (emissive material present in bytes, unlike stringlights' dead
+  bulbs); margins: degenerate 80x4px chassis shadow streak (review-rig
+  ambient class, live engine shadows per-pixel), ground-pool absence is
+  engine-side (live world carries the -l companion light; chassis cannot
+  render it). ARTWALK-H3 NATIVE CLEAN — reads exactly its commission (hypar
+  canopy, four-post slatted butterfly, ARTWALK-PLAN H-3 row): grounding/
+  silhouette PASS, footings+shadows seated; PROMPT-ARTIFACT disclosed: judge
+  was injected a stone expectation, "wrong genre" fail is chess-class
+  (expectation the asset never carried); margins: 1px slat shimmer risk,
+  pendant lamp bead speck-class. ARTWALK-H5 NATIVE CLEAN — Möbius arch gate:
+  identity/grounding/band-width PASS, walk-under opening reads; lamp orbs
+  DELIBERATE (GLB decode: lamp_left/lamp_right named nodes on glow3 emissive
+  mat [1,0.5841,0.2542]; aerial confirms both grounded — left on plinth,
+  right seated at plinth corner ground); margins: half-turn twist does NOT
+  read at 18m (apex ridge + face-flip only, weak/partial), orb stems
+  sub-visible at 18m. ARTWALK-B4-GOLDEN-HINGES NATIVE CLEAN-with-margin
+  (rider, host absent per polish-282 law) — GLB decode proves true strap
+  geometry (0.30x1.54x0.08m bands, b4hinge_0/1/2, iron metal 0.55 + texture);
+  the 18m "three dark micro-cubes" read is edge-on solo projection +
+  framing-limit (survey-31 law); margin: no gold/brass tone visible at 18m
+  (iron texMat; if strict golden idiom owed, artwalk's call — kin to b27
+  muted-brass finding). ARTWALK-B27-WATERLINE NATIVE CLEAN-with-margin at 18m
+  + CLOSE-VIEW probe — two-ring separation EXISTS at close range (bone-pale
+  low ring RGB ~188,183,168 reads pale; rings continuous, thickness even,
+  4-6cm iron-hoop scale sane for 2.06m drum); ONE material-read finding
+  routed: BRASS high ring reads muted khaki/olive — separable by VALUE,
+  weakly by hue, no warm gold read (Sev 4-5 quiet rider). Lower-left smudge =
+  ring terminus + self-shadow overlap, NOT a defect. Routing: 1 note
+  ARTWALK-PLAN (b27 brass-read, first artwalk-domain survey routing) — probe
+  only, artwalk's own polish call, no action owed. Zero other lane files
+  touched. Census 274==274 0/0 vs survey-31 snapshot, 2 flips both pre-
+  survey-31-census epoch carryovers ledger-matched (stile 5e->2c dress-90,
+  ellipsecourt pos struct-66 R-122 cure). Gate: ALL PASS real exit 0 first
+  try at 392f8c5. Verdicts 0 confirmed / 7 clean (5 clean-with-margin) /
+  0 dropped + 1 material-read finding routed. Zero world mutations, zero
+  uploads, zero comp edits, zero shared-budget use.
+
+## Routed notes (survey-32)
+
+- survey-32: `nx-artwalk-b27-waterline` brass-read finding (Sev 4-5, quiet
+  close-read rider) — note appended to ARTWALK-PLAN (artwalk's own surface).
+  Zero other lane files touched this tick.

@@ -1596,3 +1596,15 @@ eye-gate verdicts, a Phase F fresh commission, or a queue widening.
   when improve moves lamp-n, artwalk re-derives the b26 anchor at the new
   host tuple and re-seats in the same window; improve holds the move until
   artwalk confirms. Decode chassis: agents/arthur/improve21-decode-kiss.ts.
+
+- DEFECT NOTE from survey-32 (survey lane, 2026-09-07): `nx-artwalk-b27-waterline`
+  first independent read, NATIVE judge, live store bytes (served-sha 05db8263,
+  pinned). Concept read: two-ring separation EXISTS (bone-pale low ring reads
+  pale, high ring distinct — close-view front frame resolves both hues), rings
+  continuous + scale-sane; margin-tier at 18m (2-3px strokes, both read
+  dark-olive — framing-limited, survey-31 rider class). ONE material-read
+  finding for your queue: the BRASS high ring reads muted khaki/olive at close
+  range — separable by VALUE, weakly by hue; no warm gold read. Severity 4-5
+  (quiet close-read rider; artwalk's own polish call, no action owed). Lower-
+  left "smudge" = ring terminus + self-shadow overlap, NOT a defect. Evidence:
+  agents/arthur/reviews/survey32-slice/artwalk-b27-waterline/ (gameplay+front).
