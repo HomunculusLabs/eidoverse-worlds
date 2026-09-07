@@ -2917,3 +2917,75 @@ frame, judged this tick). Next tick: 65%3=2 → own commission (R5-2) or
 shard re-arm; refine pool empty.
 
 - DEFECT NOTE (sweep-66, 2026-09-07): R-122 Sev 2 — nx-struct-ellipsecourt sits at sub-law gaps to shelltower (0.085m true) and meridianstair (0.472m true); placement preflight was center-distance, not source-true SAT (pitfall 10). Treat as a Bill-correction-class priority for the next struct wakeup: translate court 2.5-3m south or re-site neighbors; re-derive with vertex-cloud/corner-radius SAT; re-prove the 11-leg court walk after any move. Full evidence in REPAIR-REGISTER R-122.
+
+## struct-65 (2026-09-07): R5-2 WAVE PERGOLA authored + PLACED_VERIFIED
+
+Cadence 65%3=2 → build tick. Shard EMPTY fresh (all nx-struct rows terminal:
+hypar/mobius/amphi/observatory/soundmirror/pendulum executed+closed; latest
+survey intakes carry no new nx-struct rows). Refine pool EMPTY. Gate ALL
+PASS real exit 0 at 6a8220a pre-tick.
+
+**Concept (Round 5 commission, R5-2)**: the wave family's building-scale
+figure. The village holds the wave as frozen TIME (pendulum's rod sine) and
+as kinetic AIR (stillwind's masts + dying- swell fins) — nothing holds one
+clean sine period as a ROOFLINE. One idea (Judd): a promenade gallery
+whose twin rails ARE one exact wave period; every post and joist only
+serves the wave. Twin iron rails swept along y = YBASE + A·sin(2πx/λ),
+λ=14, A=0.9, 56 tangent segments per rail; YBASE 3.41 set by the
+WALK-UNDER LAW (trough rail bottom 2.30m — the whole promenade is honestly
+walkable under crest AND trough); 7 timber post pairs at 2m bays (1.84m
+clear ≥1.4), tops cut to rail underside +30mm embed; 14 joists at 1m
+rhythm riding the rails; two brass glow2 beads seated on the +x crest
+(dusk lineage: ellipsecourt pins/beacon head; ZERO lamp draw). No floor
+(land-art register), no comps, no motion.
+
+**Build**: mkv3-wavepergola.ts; sha
+32dc2e7df1a8c76fb6929412571de8bc06c5395e4bc756a20e56f023ada057a3
+deterministic ×2. 3 merged nodes (wave_iron 2688v / timber 1008v / glow2
+286v). Decode struct65-decode-wavepergola.ts ALL GREEN — wave law worst
+vertex deviation 0.0165 from curve±section; walk-under 2.300m at vertices;
+posts grounded (timber y −0.00..4.57); beads x-center 3.500 z-means
+±2.100 y 4.51..4.64; room gates 14.18×4.48=63.5m² + 4.64m height honest
+(exact trimesh; beams are real headroom). Decoder self-caught ×2 fixed
+pre-audit: BIN-chunk base offset (1e38 garbage), bead finder predicate.
+
+**Judging**: native 1210 ×2 + one paced retry — hard down all tick
+(disclosed). ZAI fallback 3/3 PASS: gameplay PASS (wave silhouette
+smooth+continuous crest-trough-crest-equivalent, all post-rail junctions
+sealed incl. steep risers, footings+attached shadows, mathematical
+promenade identity, judge's own S-curve ground-shadow corroboration);
+night PASS (dark silhouette legible vs navy sky, beads quiet warm points
+zero bloom/fire/lamp-cast); right-side PASS (smooth curve no steps/notches,
+grounded posts, two-band joist rhythm = correct 7-station sine signature).
+Fallback's "phase truncation" finding INVALIDATED vs contract — one exact
+period runs midline-to-midline (zero-crossing ends are the design; judge
+itself confirmed "the period is mathematically consistent"). Bead size
+margin (day 18m sub-legible) recorded — dusk lineage reads at night,
+verified in the night frame.
+
+**Siting**: E-spoke north verge (51, 9) yaw 0 — wave axis on world X, the
+allège from stablebench toward the ruledtower terminus; continues the
+north-side line cellardoor(36,5.55) → [gap] → PERGOLA → ruledtower(58,0).
+Terrain 7pt spread 10.2mm, PY −0.0221. Fresh 273-census SAT at TRUE
+decoded envelope: worst honest neighbor +1.69m (stablebench);
+gallery-mosaic-0036 AABB +0.97m = flat-disc fat-corner artifact, exact
+disc-vs-OBB signed distance 12.32m − r10.5 = +1.82m ≥ 1.4 (struct-19
+class, proven numerically). SAT helper unit-tested
+distant/touching/overlapping before use (skill law); hand-rolled first
+attempt had a component-product radius bug — caught by re-derivation.
+
+**Placement**: next-place-struct65.ts (struct-64 chassis), 1 verb spawn,
+lib store/32dc2e7df1a8c76f.glb, PLACED_VERIFIED exact tuple (51, −0.0221,
+9) yaw 0, idempotent 0-verb rerun. No comps (empty bag by design).
+
+**Walk**: struct65-walk-wavepergola.ts 9/9 ALL_PASS worst 0.400m — W→E
+full span under both crests + trough, E→W reverse, lateral cross-through
+between post pairs both sides.
+
+**Standing state**: Round 5 R5-2 seated. Bill eye-check (one packet): on
+the east walk past the stable, a promenade gallery whose roof IS one wave
+— walk under it toward the tower and the rails rise and fall through a
+full period, two warm brass beads marking the crest at dusk.
+Frames: reviews/struct65-wavepergola/ (10 views).
+Next tick: 66%3==0 → refine tick (pool empty → re-verify, then R5-3 or
+shard re-arm).
