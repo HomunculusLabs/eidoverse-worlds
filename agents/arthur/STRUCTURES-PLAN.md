@@ -4151,3 +4151,48 @@ NE craft threshold candidate — kinematic works belong on working edges);
 comps from sidecar + PLACED_VERIFIED + idempotent; 5) circuit MCPL walk;
 6) Bill eye-check packet (stand on the frame axis: does the triangle read
 as TURNING INSIDE ITS OWN SQUARE?).
+
+## struct-84 (2026-09-07): R8-1 REULEAUX ROTOR — PLACED_VERIFIED
+## (deferred placement executed queue-law FIRST; refine slot slid to next)
+
+Placement tick for struct-83's judged build (84%3==0 would nominally be a
+refine slot; the DEFERRED queue outranks it per struct-78/79 precedent —
+echoarch Sev-3 refine slides to the next N%3==0 slot).
+
+SEAT DERIVATION (fresh census 287, no reuleaux present): compass re-derived
+from live district ids (hedge/skeps NW, ogeegate NE, moongate/whisperhorn
+SW) — north=+z; core gate-n/catenarygate ids carry the old inverted dialect.
+Full-ring scan r[66,90] x/z half-extents 1.75: E-axis seats rejected
+(nvp-77 behind-ruledtower class); needle wedge blocked (forest-0057); SE
+wild interior deep-off-path; axis seat (0,-68) REJECTED on Bill's lamp law
+(beside the line, never on it). SELECTED: (-12,-64.5) yaw 0 — pendulum's
+west mirror at the S threshold. Composition: catenarygate frames the S view
+outbound, pendulum swings E of axis, rotor turns W — the kinetic pair
+flanks the threshold at r62/65.6, both >10m off the walking line. SAT worst
+nx-struct-terrace-0039 +4.86; exact-mirror point rejected (1.85m to SW
+approach lane envelope).
+
+PLACED: upload store/670e397cb6422ee2.glb, 3 verbs (spawn + 2 comps from
+sidecar, no hand transcription), PLACED_VERIFIED, idempotent rerun zero
+verbs. Census 287->289 (sibling interleave absorbed at preflight, fresh
+fetch — interlane law). Terrain 9pt spread 5.6mm, PY -0.0373.
+
+WALK: 10/10 ALL_PASS maxArr 0.375 — full circuit both directions at 3.5m
+standoff + catenarygate axis legs (0,-56)->(0,-68) both ways (the S walking
+line is provably unobstructed).
+
+SELF-CATCH (pre-network, world untouched): the placer's sha pin carried a
+9-for-2 transcription slip at position 38; my own hash gate died before any
+network call. Deterministic rebuild x2 proved ...982... is the judged bytes
+(mk mtime unchanged since the judged build; renders 15:52). Plan file was
+already correct (sha split across lines 4130); ledger short-form unaffected;
+the slip existed only in this tick's placer.
+
+BILL EYE-CHECK (one, standing): from the plaza walk south through the
+catenarygate; the rotor stands ~12m W of the path. On the frame's axis at
+18m: does the iron triangle read as TURNING INSIDE ITS OWN SQUARE, touching
+every side?
+
+NEXT: 85%3==2 -> build tick (R8-2 commission or shard re-arm scan). The
+slid refine slot: 87%3==0 — top subject = echoarch Sev 3 (survey-20 echo),
+unless Bill's correction re-opens another structure first.
