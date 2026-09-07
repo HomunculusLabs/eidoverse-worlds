@@ -13,6 +13,18 @@
 // (NW budget 2, dress-spend 0; 1 used = mile-5 lantern).
 // Frame: local +z faces the walking corridor (plaza-ward); stile axis
 // runs local x along the boundary. yaw 135 deg at world.
+//
+// v7 (survey-28 cure, 2-0 confirmed cluster vs dress-18's ZAI-only PASS —
+// native outranks): the SQUEEZE-GAP idiom failed twice at 18m (v5 0.72m,
+// v6 0.95m gaps both read "fence") because upper full rail + lower split
+// rail form ONE 16px double-rail band — the gap is negative space and
+// cannot beat positive mass at sub-20% step share. Idiom-level fix: NO
+// second rail at all. A STAIR-OVER stile — three ascending squared-timber
+// treads on the crossing axis under the single boundary bar, thick pale
+// CUT caps rising stepwise (0.18/0.34/0.18, woodstack v5 bright-band law:
+// ascending stacked pale bands read STEPS, the one silhouette a fence
+// never shows). Half-rails + gap end-blocks deleted; the treads ARE the
+// opening.
 import * as THREE from "three";
 import { writeFileSync } from "node:fs";
 import { toGLB, mat } from "./glbwrite.ts";
@@ -86,27 +98,42 @@ function rail(y: number, seed: number, len = 2.14) {
 }
 rail(0.80, 12); // upper: full span, the kept bar
 
-function halfRail(s: number, seed: number) {
-  // one side of the split lower rail: post at s*1.05 -> gap edge at s*0.475
-  // (v6: len 0.66 -> 0.50, gap 0.72 -> 0.95 — v5's gap read undersized vs
-  // the pale blocks at 18m, "fence with a notch" not an opening)
-  const len = 0.50;
+// --- v7 stair treads: three squared-timber steps on the crossing axis
+// (local z), replacing the split lower rail entirely. Heights rise to the
+// center so BOTH approach directions read ascending; each tread carries a
+// thick pale CUT walking cap (the stratified bright-band law — ascending
+// pale bands on dark timber read STEPS at 18m; the woodstack/timberyard
+// discs and stile caps prove the value family). Treads span x -0.62..0.62
+// (inside the posts), depth 0.34 each, so the 0.95m gap law is inherited
+// as open air BETWEEN steps on the axis — but the read is carried by
+// positive mass, not by the gap.
+function tread(z: number, h: number, seed: number, span = 1.34) {
   const grp = new THREE.Group();
-  const body = new THREE.Mesh(new THREE.BoxGeometry(len, 0.085, 0.075), TIMBER_DK);
+  // v11: BACK to between-post spans (v10's post-spanning treads read as
+  // RAILS at 18m — "middle rail + low panel", the survey-28 failure mode
+  // reborn; v8's between-post stack passed 18m twice). PYRAMID staggering:
+  // outer treads 1.34 wide, summit 1.10 — wide-low/narrow-high stacks read
+  // as a STEP PYRAMID, not a ladder. Side-view joinery conceded as a named
+  // margin (class occlusion: summit hides behind the near post viewed
+  // along the boundary; the 18m approach axis governs identity).
+  const body = new THREE.Mesh(new THREE.BoxGeometry(span, h, 0.34), seed % 2 ? TIMBER : TIMBER_DK);
+  body.position.y = h / 2;
   grp.add(body);
-  // oversized pale end grain facing the gap — the opening's flag (r-scale
-  // ~2.3x the v4 end block: 0.09 wide x 0.135 tall, bright CUT)
-  const end = new THREE.Mesh(new THREE.BoxGeometry(0.09, 0.135, 0.085), CUT);
-  end.position.x = -s * (len / 2 + 0.03);
-  grp.add(end);
-  grp.position.set(s * (1.05 - 0.075 - len / 2), 0.40, jit(seed) * 0.04);
-  grp.rotation.y = jit(seed + 1) * 0.03;
-  grp.rotation.z = jit(seed + 4) * 0.02;
-  grp.name = `hrail_${seed}`;
+  // pale CUT walking surface — thick (0.07) with overhang, the step's flag
+  const cap = new THREE.Mesh(new THREE.BoxGeometry(span + 0.04, 0.07, 0.38), CUT);
+  cap.position.y = h + 0.032;
+  grp.add(cap);
+  grp.position.set(jit(seed) * 0.05, 0, z);
+  grp.rotation.y = jit(seed + 2) * 0.02;
+  grp.rotation.z = jit(seed + 4) * 0.015;
+  grp.name = `tread_${seed}`;
   g.add(grp);
 }
-halfRail(-1, 31);
-halfRail(1, 32);
+// v8 heights: 0.22/0.48/0.22 (26cm steps, knee-height summit); v11 spans
+// 1.34/1.10/1.34 — pyramid apex at the center under the bar
+tread(-0.66, 0.22, 41, 1.34); // near step (corridor side), wide
+tread(0.00, 0.48, 42, 1.10);  // center summit — narrow apex, knee height
+tread(0.66, 0.22, 43, 1.34);  // far step (field side), wide
 
 // --- step-through stones (v5): enlarged + aligned through the rail gap —
 // v4's two small dark stones read as debris at 18m (native rejudge dress-18).
@@ -129,18 +156,18 @@ function stepStone(x: number, z: number, yaw: number, seed: number) {
 // through-gap run (v6: THREE merged into one boxy slab at 18m — cut to TWO
 // well-separated worn flags on the crossing axis with clear air between;
 // the rail gap itself carries the threshold read, stones confirm the path)
-stepStone(0.04, 0.62, 0.18, 21);
-stepStone(-0.04, -0.58, -0.15, 22);
+// v7: treads own the crossing axis now; the two worn flags become LANDING
+// pads beyond the tread run (z +-1.02, clear of the +-0.83 tread extent) —
+// they pick up arrival/departure, not the step read itself.
+// v10: perfectly FLAT (all tilt out — the v9 judge read the old tilt as
+// terrain clipping) and shifted to +-1.14 so their edges sit past the
+// tread z-extent (0.83) with clear air, not under the cap overhangs.
+stepStone(0.04, 1.14, 0.0, 21);
+stepStone(-0.04, -1.14, 0.0, 22);
 
-// --- rock foot pads at the post feet (v5: kicked stray REMOVED — read as
-// loose debris beside the right post at 18m, native rejudge dress-18)
-[[1.05, 0.28], [-1.02, -0.26]].forEach(([x, z], i) => {
-  const m = new THREE.Mesh(new THREE.BoxGeometry(0.34, 0.09, 0.3), ROCK_DK);
-  m.position.set(x, 0.045, z);
-  m.rotation.y = jit(i * 7 + 3) * 0.5;
-  m.name = `pad_${i}`;
-  g.add(m);
-});
+// --- rock foot pads at the post feet — v10: REMOVED (two judges read the
+// pad as a detached debris block at ground level; same class as the v5
+// kicked-stray removal — post contact shadows ground them already)
 
 // mergekit law (dress-10): mergeByMaterial merges DIRECT mesh children only —
 // flatten to world-baked direct meshes, then merge per material.

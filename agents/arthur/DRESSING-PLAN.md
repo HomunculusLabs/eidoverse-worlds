@@ -584,6 +584,34 @@ SW lamps still blocked on Bill's a/b/c (0 of 3). Shard queue: no OPEN
 nx-dress rows. Stile survey-26 native tie-break still owed (native vision
 down at last attempt).
 
+**STATE AT dress-89 (2026-09-07, pipeline cure tick — placement deferred
+to next tick on run budget, dress-82/85/87 class)**: survey-28 stile
+CONFIRM cluster (2-0: survey-26 ZAI dissent + survey-28 NATIVE confirm
+"double-rail band x432-528 y345-361, step mass <20% sub-resolution" vs
+dress-18's ZAI-only acceptance — native outranks; the dress-87 native
+tie-break attempt stayed blocked 1210) CURED at v11 — 5-version arc:
+v7 008f802c stair-over idiom (squeeze-gap DELETED, native 18m PASS but
+side profile weak-ascent margin), v8 e4b8cb56 heights 0.22/0.48/0.22
+(native 18m PASS #2 "climb-over stile silhouette, not a gate"; ZAI side
+FAIL: uniform-height treads), v9 13d5e03b post-spanning treads (ZAI side:
+joinery + debris findings), v10 d39c5af0 embed+flat-flags+pad-removal
+(native 18m REGRESSION — post-spanning treads read "middle rail + low
+panel", the survey-28 fence-band mode REBORN), **v11 2c7f1bbe435366da**
+between-post PYRAMID stack (outer 1.34/summit 1.10 spans, v8 heights):
+native 18m PASS "genuine village stile — capped post pair with one top
+bar over a stacked, pale-treaded step block... passes as a crossing
+structure". Deterministic x2, 5 nodes, color-vertex export shape identical
+to live v6 (COLOR_0, no material blocks — chassis-normal, not the
+improve-32 class; live v6 store bytes fetched+hashed 8c35a485 decode
+same shape). Margins named: side-view summit occludes behind the near
+post along the boundary axis (class pitfall-13/struct-60; approach axis
+governs), ascent reads slightly one-sided dead-on (foreshortening).
+NEXT TICK: adapt nw-dress18-place.ts (SHA/OLD_LIB/HALF.z 1.008→~1.33
+TRUE decode dims re-derive, blockers fresh) — same tuple reseat, lib
+swap 5e9d301d→2c7f1bbe, then idempotent rerun + intake annotation.
+Shard queue: no OPEN nx-dress rows. SW lamps still Bill a/b/c (0 of 3).
+Zero world mutations, zero uploads this tick.
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
@@ -3108,7 +3136,12 @@ verdict:
   legible gap) so the crossable-steps read beats the rail read at
   distance. Probe, not a verdict; execute law stays with dress
   lane + Bill's off-limits set call. Evidence:
-  reviews/survey28-slice/stile/]
+  reviews/survey28-slice/stile/
+  **dress-89 CURE**: 5-version arc to v11 2c7f1bbe (judge's
+  prescription implemented — step mass now carries the silhouette:
+  between-post PYRAMID stack 0.22/0.48/0.22, pale caps as the bright
+  band, squeeze-gap idiom DELETED). Native 18m PASS. Placement
+  queued next tick (build-only, run budget).]
 
 - `nx-dress-stringlights` — survey-30 NATIVE probe note (read-only, not a
   verdict; core-era off-limits set member — ownership Bill's call): DAY frame
