@@ -2425,3 +2425,33 @@ the four-district eye-gate circuit
 - Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
   policy call, or verdicts on the four-district eye-gate circuit
   (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+**STATE AT dress-73 (2026-09-07, pipeline hold tick — 53rd consecutive)**:
+lawful HOLD — every path closed this tick, all verified fresh. Shard
+queue EMPTY on committed IMPROVE-PLAN bytes: the md5 move
+(05916065 -> 8dd2972f) was improve-22's execution contract landing in
+10591fb (nx-craft-hamlet-0007, foreign prefix), dirty diff now clean;
+full-row re-read of all nine Round-1 nx-dress rows terminal (5/29/30/31
+DROPPED native rejudge, 32/33/34/37/38 EXECUTED reseats live); row 39
+routes nx-town to improve; round-2's only dress candidate
+(nx-dress-fountain) is DRESS-domain legacy-core off-limits per its own
+survey-8 row header + this plan's SURVEY INTAKE — ownership Bill's
+call, NOT shard work. Own queue: SW lamps only, Bill a/b/c bound (fresh
+kind-law recount on this tick's census: exactly 3 SW r>=35 lights —
+nx-approach-sw-lamp-001-l r39.7, -002-l r55.4, nx-mile-sw-013-l r64.0;
+spend 0 of 3). Verdicts: eye-gate packet fd677cae unchanged, zero
+VERDICT lines (grep exit 1 fresh). Hold verification: standing gate ALL
+PASS real exit 0 at tick-start HEAD 670793d (dress-72 own). Fresh
+census 260 / lights 38 (kind histogram thing 222 / light 38). 11/11
+district installs PIN_EXACT programmatic (store/-aware lib prefix, pos
+within 0.01, restated yaw, comps-empty, scale-1) vs the authoritative
+dress-43/44 table; 27 nx-dress = 11 fleet + 16 legacy intact. Probe
+self-catch disclosed (16th tick-class): the pin-check table borrowed
+the logpile's pos/yaw for the hedge row — DRIFT was the probe's, not
+the world's; corrected against the plan's dress-43 table, true hedge
+pin (-35.34, 0.04, 62.14) yaw -2.36 PIN_EXACT. Interlane md5 f6254cd0
+steady. Zero world mutations, zero uploads, zero shared-budget use, no
+visual PASS claimed. No un-shard clock (shard empty at source, not
+idle). Standing unblock paths (say-once, unchanged): Bill's SW lamp
+a/b/c policy call, or verdicts on the four-district eye-gate circuit
+(agents/arthur/reviews/dress-districts-eye-gate.md).

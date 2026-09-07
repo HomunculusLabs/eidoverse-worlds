@@ -4476,4 +4476,6 @@ fixes ≈ 6 F.)
 
 - [dress-72] hold tick 52 — shard empty on dirty-plan re-diff (only delta improve-22 contract, nx-craft-hamlet-0007 foreign prefix, zero nx-dress rows), SW lamps a/b/c 0-of-3 (fresh kind-law recount: exactly 3 SW r>=35 lights), eye-gate fd677cae zero verdicts, 11/11 PIN_EXACT programmatic vs dress-43/44 table on census 260/38, interlane f6254cd0, gate exit 0 at 10591fb, probe self-catch census count key (raw /geom has no count field), zero mutations (D+0, E+0)
 
+- [dress-73] hold tick 53 — shard empty on committed IMPROVE-PLAN bytes (improve-22 contract landed 10591fb, full-row re-read: 5/29/30/31 DROPPED, 32/33/34/37/38 EXECUTED, row 39 routes nx-town to improve; fountain DRESS-domain legacy-core off-limits per survey-8 row + plan intake, Bill's call), SW lamps a/b/c 0-of-3 (fresh kind-law recount: approach r39.7/r55.4 + mile r64.0 = 3 live, spend 0), eye-gate fd677cae zero VERDICT lines, 11/11 PIN_EXACT programmatic vs dress-43/44 table on fresh census 260/38 (hedge probe self-catch: borrowed logpile tuple on hedge row, corrected vs plan table, true pin -35.34/62.14 yaw -2.36), interlane f6254cd0, gate exit 0 at 670793d, zero mutations (D+0, E+0)
+
 **Running total: 2370310 / 2000000**
