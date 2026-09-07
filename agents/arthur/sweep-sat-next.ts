@@ -84,6 +84,18 @@ const ALLOWED = new Set<string>([
   "nx-cultivation-lavender-0027|nx-dress-nw-stile-001",
   "nx-cultivation-lavender-0040|nx-dress-nw-hedge-001",
   "nx-cultivation-lavender-0040|nx-dress-nw-stile-001",
+  // sweep-76: dress-99 offering niche seated flush against the labyrinth's
+  // east outer wall — DESIGNED adjacency, declared in the placer/ledger
+  // ("rider designed mount", anchor re-derived vs live host 2d3d2032).
+  // Source-true decode of EXACT live bytes (sweep76-offering-contacts-decode.ts,
+  // hash-gated 2/2: offering b41efb63746c2450 + labyrinth 2d3d2032d3e806f8
+  // == live prefixes): TRUE plan-view wall separation +0.010m POSITIVE, no
+  // interpenetration; SAT gap -0.690 is the fat 13x14m compound-bbox artifact
+  // (pitfall-0b). Flush wall-mount seam (1cm), not a threadable corridor —
+  // roads-run-past-walls class. The offering bbox height 1.09m defeats the
+  // auto film exemption, so standing-precedent tier applies (angler|reedpool
+  // sweep-42 / welcome|monument R-114 class). Evidence: SWEEP-PLAN sweep-76.
+  "nx-dress-sw-offering-001|nx-temple-labyrinth-0038",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });
