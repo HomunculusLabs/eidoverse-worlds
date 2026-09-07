@@ -696,6 +696,45 @@ entry below. Rotation next: NW round-3 item 4 of 19. Shard queue: no OPEN
 fountain — off-limits, Bill's call). SW lamps still blocked on Bill's a/b/c
 (0 of 3). Census 277.
 
+**STATE AT dress-95 (2026-09-07, pipeline build tick — placement deferred
+to next tick on run budget, improve-31/dress-93 class)**: NW round-3 item 4
+`nx-dress-nw-rainbarrel-001` BUILT, NATIVE-ACCEPTED, SITED, TERRAIN-PINNED —
+NOT YET PLACED. Concept: coopered rain barrel on a plank stand at the skep
+row's open end — the apiary's water source (beekeeping grounds-use: hives
+need water at hand). Raised stand + steel spigot + pail under it = the
+"in use" tell (dress-76 precedent); value-separated from straw skeps.
+Judge arc ALL NATIVE (one 1210 flap on v1-18m, one paced retry,
+succeeded — disclosed): v1 f02560e3 18m PASS instant identity;
+v1-close: spigot sub-legible + pail misaligned (framing finding);
+v2 a23bfdc1: tap-to-pail column aligned; v3 704e47ca: mid-steel TAP value
+(dress-75 steel law) + pitfall-13 caught — stock rig's "close" frames
+8.2m for a 1m prop; wrote dress95-close-render.ts (2.6m tapface/aisle,
+5m approach); v4 5d2c4a5f: raised L-tap + boss mount + air gap + pail out
+z 0.70 w/ bail at rest — spigot PASS + fill relationship PASS, pail water
+FAIL (tan read); v5 7a81d3ec: pixel-probed judge claim — pail disc renders
+(0,0,0): decode found PAIL_WATER classified 0 verts, emissive bucket
+"glow0" carried COLOR_0 WHITE (glbwrite line 213-217: mapped/emissive lane
+hard-codes col.fill(255) for emissive meshes, not just texture-mapped —
+WRITER LAW: emissive materials bake white COLOR_0, baseColorFactor carries
+the hue; the mossbowls emissive-pass was texture-lane, which sets COLOR_0
+white for the SAME reason); v6 4531cbb8 ACCEPTED: pail water as plain
+COLOR_0 teal 0x46606e (no emissive on this 0.132m disc — sub-rim-occlusion
+class at walker range, dress-79 law governs 18m; close-range pixel color
+carries the read), deterministic x2, 7 nodes, decode ALL PASS (water
+recessed 0.074 below rim, barrel-on-planks exact, pail distinct 0.44m,
+spigot front-low). SITING (fresh census 277): skeps-local scan found the
+lane-side pocket past the open row end — pose (−59.72, 52.73) yaw 2.3562
+(skeps-parallel), 3.9m beyond the open +x end, off the lavender-0027 NW
+corner, fully OUTSIDE all 15 plot OBBs (dress-88 corner law), SAT min
++2.67 vs skeps (worst), logpile +5m+, rim 79.4..79.9 ∈ [66,108].
+Terrain 5pt+origin (dress95-terrain.ts): 0.0311..0.0324 (1.3mm spread) →
+py 0.0311. NEXT TICK (dress-96): gate exit 0 → nw-dress95-place.ts
+(hash-gated, blocker-epoch [skeps-001, lavender-0027, orchard-0033],
+fresh-census SAT re-verify, spawn `nx-dress-nw-rainbarrel-001`) →
+post-place tuple verify + idempotent rerun → ledger + plan + commit.
+Static unlit — NW lamp spend 0 of 2. Zero world mutations, zero uploads,
+zero verbs this tick.
+
 **STATE AT dress-93 (2026-09-07, pipeline build tick — placement deferred to
 next tick on run-budget, improve-31 class)**: SE round-3 item 12
 `nx-dress-se-mossbowls-001` BUILT AND NATIVE-JUDGED, NOT YET PLACED — v10
@@ -844,7 +883,10 @@ identity intent. Rotation stays NW->NE->SE->SW.
 3. `nx-dress-nw-dryingracks-001` — herb-drying racks (A-frame pairs) near
    the dyer's yard edge; hung swatches echo dye colors.
 4. `nx-dress-nw-rainbarrel-001` — barrel + plank stand at the skep row end;
-   single authored piece, ties the apiculture corner together.
+   single authored piece, ties the apiculture corner together. **BUILD-ONLY
+   (dress-95, 2026-09-07 — v6 native-accepted, sited, terrain-pinned;
+   placement deferred on run budget, improve-31 class; the dress-96 tick
+   executes nw-dress95-place.ts).**
 5. `nx-dress-nw-fieldcross-001` — one maintained field-crossing: two plank
    stiles + mown gap, mid-field, walk-tested both ways.
 
