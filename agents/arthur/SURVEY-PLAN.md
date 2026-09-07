@@ -3165,3 +3165,71 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
    confirmed / 6 clean (5 clean-with-margin) / 0 dropped. Zero world
    mutations, zero uploads, zero verbs, zero comp edits, zero
    shared-budget use.
+
+## Judged index (survey-55)
+
+- survey-55 (2026-09-07, ZAI FALLBACK 3/3 judged disclosed — native hard
+  down all tick: 1210 x6 across orchard12/orchard20/windmill first calls,
+  both paced retries burned per call, zero native verdicts; 18m gameplay
+  primary + face/right cross-checks per survey-31 series law; fresh live
+  store bytes 8/8 HTTP 200 curl UA from /library/store/ on exact
+  census-55 libs; served-shas pinned 0a59493b6ee00f23 (orchard12 ==
+  survey-54 pin exactly, bytes unchanged) / 247f0fcbb1c0bd56 (orchard20) /
+  03cb6e8b0cfd8674 (windmill) / 06b47d4fb436d642 (court) /
+  0ff7b5de90d9d4d1 (woodyard) / 8749014582c34c44 (orchardrows) /
+  3511fbc5ae44deea (bellpost) / ac424d9226c42fd9 (timberyard)):
+  POST-CURE CORROBORATION slice, part-judged at run-budget close.
+  Roster = orchard-0012 (survey-54 unjudged pointer) + orchard-0020
+  (improve-44 family, zero prior reads on cured member) + windmill
+  (improve-33, zero post-cure reads) + court (improve-30 ZAI-only) +
+  woodyard (improve-32 ZAI-only) + orchardrows (dress-81 v7 ZAI-only) +
+  bellpost (dress-91 v6, dissent closed, zero v6 reads) + timberyard
+  (dress-82, cheap third-day). All cure rows verified EXECUTED at source
+  pre-slice; zero slice members in-flight (improve-37 dirty-tree law);
+  the transient IMPROVE-PLAN diff observed mid-tick was struct-87's
+  echoarch CLOSED annotation (foreign domain, landed as 0b079b4f/36be05c1
+  BUILD-ONLY conoidfan commits — nx-struct-conoidfan placement owed next
+  tick = survey-56 new-arrival first candidate). VERDICTS: ORCHARD-0012
+  ZAI CLEAN-with-margin — improve-44 cure corroborated on the pointer
+  member: materials class GONE (canopy hue-bearing dark-olive, zero
+  near-black voids), trunk cadence + discrete crowns + sky gaps + fruit
+  accents all read; margins: one merged back-rank cluster x230-540,
+  no stakes (trained-tree cue rests on cadence alone), sapling cones
+  at legibility floor. ORCHARD-0020 ZAI CLEAN — second cured member,
+  family class corroborated (generous sky gaps named the strongest
+  signal, fruit on ~6-of-10 crowns, rhythmic two-row cadence); margins:
+  back-crown facet notch x515-545 y295-335 verify-tier (light-receding
+  facet, no bleed observed), gem-like facet styling note. WINDMILL ZAI
+  DISSENT, NOT CONFIRMED, NOT ROUTED — 3-frame arc: gameplay frame
+  PARTIAL-FAIL on sail cross BUT frame crops sails at y=0 (judge's own
+  caveat); face cross-check REFUTES the bare-spar claim (all 4 arms
+  carry cloth, up/left/right solid panels + down panel behind cap) and
+  raises quantitative asymmetry claims (down-sail ~35px centerline
+  offset, cloth widths 56/29/26/35px); side view stock-projection
+  claims self-named yaw-ambiguous (tail pole at 543,497-656,378 proves
+  the cap/sail assembly is YAWED to the facade, so edge-on projection
+  premises do not hold cleanly). Per probe-pitfall-11 law the
+  cross-asymmetry numbers are unverified by decode — contradictory
+  fallback reads + framing crops + rest-pose motion part (motion:sails
+  spins live) do not meet the CONFIRMED bar. Native re-judge DEBT
+  CARRIED (native down all tick); queued as survey-56 first candidate
+  alongside the unjudged five. UNJUDGED at run-budget close (fetched +
+  rendered, shas pinned above, evidence banked under
+  reviews/survey55-slice/): court, woodyard, orchardrows, bellpost
+  (incl. night frame), timberyard — next-tick first candidates,
+  survey-51 b22/b25 precedent. Windmill night frame rendered unjudged
+  (no emissive dispute; dissent is day-frame identity). Routing: ZERO
+  notes routed (zero confirmed defects), zero candidate rows, ZERO
+  ledger append (read-only tick, loop law 4; ledger survey tags stop at
+  survey-54). Census 291==291 vs survey-54 snapshot
+  /tmp/survey54-census.json: 0 arrivals, 0 departures, 0 position
+  moves; ~230 apparent lib flips were the survey-48/54 snapshot-format
+  store/-prefix artifact (same hashes both sides, normalized before
+  comparison) — 0 TRUE flips, quiet epoch, no sibling live work (city-62
+  /dress-117/118 + struct-87 BUILD-ONLY holds only). New snapshot
+  baseline /tmp/survey55-census.json (291). Gate: ALL PASS real exit 0
+  first try at aff92396 (ledger law EXACT 2370723); interlane md5
+  f6254cd0 stable. Verdicts 0 confirmed / 2 clean (both
+  clean-with-margin) / 1 dissent-not-confirmed (debt carried) / 5
+  carried. Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use (D+0, E+0).
