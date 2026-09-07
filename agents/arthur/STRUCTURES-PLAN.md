@@ -3785,3 +3785,46 @@ placer (struct-77 chassis) + upload/spawn nx-struct-screwwell + motion
 comp {motion:well_screw: spin y -12} + PLACED_VERIFIED + idempotent; 6)
 circuit MCPL walk; 7) Bill eye-check packet. World untouched this tick:
 zero uploads, zero verbs, census 283==283.
+
+## struct-79 (2026-09-07): R7-1 screw well JUDGED v3 — return-chain iteration
+## (v1 4fd198ef -> v2 4f166244 -> v3 6fbaede8); BUILD+JUDGE, placement deferred
+
+Queue-law FIRST: struct-78's deferred judge+iterate executed. Gate ALL PASS
+real exit 0 at ef2e9aba tick-start. v1 rebuild sha 4fd198ef reproduced x2.
+
+NATIVE v1 judge (day 4/5: screw ID/pockets/grounded/clean PASS, chain FAIL;
+night 2/3: bowl glow FAIL) — native then FLAPPED (1210 x4 rest of window;
+ZAI fallback disclosed for v2/v3, native re-judge debt recorded).
+
+ROOT CAUSE (decode): return-leg water was flat horizontal films — edge-on
+(1px) from any level view; bowl water below-grade occluded from eye height
+(struct-52 class); pour 3.5cm under the 18m floor. v2: pour thread + bright
+lane 0.75 + sump 0.30 + films 0.62 — ZAI day 1/2 (no new defects), night 1/3.
+v3 (one defect class, vertical presence law — pockets read BECAUSE 3D wedges):
+cross-thread pour (two interleaved boxes), L-shaped step films (top + 0.07
+downhill lip), open-water pool crescent x0.30..0.74 (true zero blade
+interference, machine foot crowds dip zone), catch brim 0.10. Motion pair
+0-px = RIG blindspot (rig drives well_ not well_screw) — not a motion defect;
+engine comp well_screw is sails/pwheel spin class.
+
+v3 JUDGE (ZAI): BACK (cascade's own face — the promised vantage) 3/3 PASS:
+full chain bowl->pour->steps->catch traceable, attached pour, pool reads
+water, zero defects. NIGHT 3/4: pockets + cascade glints + quiet PASS, bottom
+glint FAIL (dim). RIGHT profile 1/3 — vantage residual, not defect: pockets
+ride INSIDE the trough (open-screw physics; only crest turn shows in
+profile), judge misread cascade as displaced pockets. ACCEPTED under standing
+visual-tool waiver (native v1 base + ZAI multi-vantage + decode); east-profile
+water-climb mute = disclosed residual for Bill's eye-check.
+
+sha 6fbaede8dbe95f0df10ad7779f8e553d6c14d7161e0fc0bac9ad657458bdf2e0 x2
+deterministic, assertions OK, bbox 6.19x4.04x5.12 unchanged, materials
+sw_stone/sw_timber/sw_iron/glow1/glow4. Frames reviews/struct79-screwwell-v2,
+-v3 (v1 = struct78-screwwell/). World untouched (zero uploads/verbs).
+
+DEFERRED (next tick queue-law FIRST): 1) gate exit 0; 2) fresh census seat
+scan (NW seam class per struct-78 + city-3/4/5 precedents, other quadrants if
+FULL); 3) terrain 7pt TRUE envelope (x -0.15..6.06 c2.955, z -3.575..1.55
+c-1.0125, y 0..4.04); 4) hash-gated placer (struct-77 chassis) upload/spawn
+nx-struct-screwwell @ 6fbaede8 + motion comp {motion:well_screw spin y -12}
++ PLACED_VERIFIED + idempotent; 5) circuit MCPL walk; 6) Bill eye-check
+packet (walk around it: N face = machine profile, S face = cascade chain).

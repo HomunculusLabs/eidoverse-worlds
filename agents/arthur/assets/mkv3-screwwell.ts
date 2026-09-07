@@ -72,6 +72,13 @@ const ironTex = texMat("sw_iron", [0x44402e, 0x4c4836, 0x3c3828], { rough: 0.7, 
 const water = mat(0x506a78, 0.25, 0.5);
 (water as any).emissive = new THREE.Color(0x2e4a58);
 (water as any).emissiveIntensity = 0.45;
+// v2 (struct-79): the return-leg water must READ at 18m. Same hue family,
+// raised intensity for the small films + pour + sump surface only (the five
+// helix pockets keep the quiet 0.45 — they already read; polish-271/281
+// canon: enclosed/shadowed tank water needs the emissive lift, hue unchanged).
+const waterBright = mat(0x506a78, 0.25, 0.5);
+(waterBright as any).emissive = new THREE.Color(0x2e4a58);
+(waterBright as any).emissiveIntensity = 0.75;
 
 const D2R = Math.PI / 180;
 const INC = 40 * D2R;                     // incline above horizon
@@ -193,10 +200,22 @@ g.add(trough);
     rim.rotation.x = Math.PI / 2;
     rim.position.set(1.4, 0.35, 0);
     g.add(rim);
-    const pool = new THREE.Mesh(new THREE.CylinderGeometry(1.28, 1.28, 0.16, 36), water);
+    // v2: water top 0.30 (was 0.22) — 0.05 below kerb top; the visible far
+    // crescent grows and the blade churn reads mid-pool, not at the bottom.
+    const pool = new THREE.Mesh(new THREE.CylinderGeometry(1.28, 1.28, 0.16, 36), waterBright);
     pool.name = "sw_pool";
-    pool.position.set(1.4, 0.14, 0);
+    pool.position.set(1.4, 0.22, 0);
     g.add(pool);
+    // v3: OPEN-WATER CRESCENT — water heaped to the pool's open side (away
+    // from the screw, x 0.30..0.74): the machine's foot crowds the dip zone
+    // (collar rim dips to y 0.065 near x 2.3; blades dip 0.118 at x 2.1), so
+    // the READ of "pool holds water" comes from open teal surface beyond the
+    // machine, visible from every level vantage. Top 0.30 = pool level; the
+    // blades never reach x < 2.0 at water depth (true zero interference).
+    const heap = new THREE.Mesh(new THREE.BoxGeometry(0.44, 0.18, 1.30), waterBright);
+    heap.name = "sw_poolheap";
+    heap.position.set(0.52, 0.21, 0);
+    g.add(heap);
 }
 
 // ---- A-frame trestles under the trough tube ------------------------------------
@@ -285,9 +304,13 @@ const arcBoxes = (
     rim.position.set(BOWL.x, 2.95, BOWL.z);
     g.add(rim);
     // water disc (top 2.90)
-    const bowlWater = new THREE.Mesh(new THREE.CylinderGeometry(0.84, 0.84, 0.33, 30), water);
+    // v2: bowl water surface lifted to 2.93 — 2cm ABOVE the 2.91 rim: the
+    // meniscus disc crest reads from below/level, breaking the below-grade
+    // occlusion that hid the bowl water from eye height (dress-79 crest law).
+    // The blade sweep at bowl ring passes 2.61..2.75 — still dipping in.
+    const bowlWater = new THREE.Mesh(new THREE.CylinderGeometry(0.84, 0.84, 0.33, 30), waterBright);
     bowlWater.name = "sw_bowlwater";
-    bowlWater.position.set(BOWL.x, 2.735, BOWL.z);
+    bowlWater.position.set(BOWL.x, 2.765, BOWL.z);
     g.add(bowlWater);
 }
 // return cascade (south face, az -90 — wall present there)
@@ -296,16 +319,39 @@ const arcBoxes = (
     spout.name = "sw_spout";
     spout.position.set(5.05, 2.86, -1.02);
     g.add(spout);
+    // v2: THE POUR — a falling water thread from the spout lip to step 1.
+    // The bowl water is below-grade occluded from eye height (struct-52
+    // class: floor slab covers the disc); the pour is the ONLY geometry that
+    // proves the bowl HOLDS water. v3: CROSS-THREAD — two interleaved slim
+    // boxes (plus-sign section): reads ~5-6px wide from BOTH the x and z
+    // approach directions (a single 0.035 axis reads 1.3px, under the 18m
+    // resolution floor). Still a quiet thread, not a jet.
+    const pourA = new THREE.Mesh(new THREE.BoxGeometry(0.14, 0.46, 0.05), waterBright);
+    pourA.name = "sw_pour";
+    pourA.position.set(5.05, 2.585, -1.16);
+    g.add(pourA);
+    const pourB = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.46, 0.14), waterBright);
+    pourB.name = "sw_pour";
+    pourB.position.set(5.05, 2.585, -1.16);
+    g.add(pourB);
     const steps = [[-1.45, 2.30], [-1.90, 1.75], [-2.35, 1.20], [-2.80, 0.65]] as const;
     for (const [z, y] of steps) {
         const st = new THREE.Mesh(new THREE.BoxGeometry(0.55, 0.10, 0.55), stoneTex);
         st.name = "sw_step";
         st.position.set(5.05, y, z);
         g.add(st);
-        const fl = new THREE.Mesh(new THREE.BoxGeometry(0.45, 0.03, 0.45), water);
+        // v3: L-SHAPED films — top + a VERTICAL downhill face (toward -z, the
+        // cascade's own downhill direction). Flat top films read edge-on
+        // (1px) from any level view; the vertical face gives 6cm of height
+        // that reads like the helix pockets do (3D presence, not a decal).
+        const fl = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.03, 0.62), waterBright);
         fl.name = "sw_stepfilm";
         fl.position.set(5.05, y + 0.07, z);
         g.add(fl);
+        const fv = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.07, 0.04), waterBright);
+        fv.name = "sw_stepfilm";
+        fv.position.set(5.05, y + 0.045, z - 0.31);
+        g.add(fv);
     }
     const stringer = new THREE.Mesh(new THREE.BoxGeometry(0.18, 0.20, 2.30), timberTex);
     stringer.name = "sw_stringer";
@@ -316,9 +362,9 @@ const arcBoxes = (
     catchB.name = "sw_catch";
     catchB.position.set(5.05, 0.07, -3.25);
     g.add(catchB);
-    const catchW = new THREE.Mesh(new THREE.BoxGeometry(0.50, 0.03, 0.50), water);
+    const catchW = new THREE.Mesh(new THREE.BoxGeometry(0.52, 0.10, 0.52), waterBright);
     catchW.name = "sw_catchfilm";
-    catchW.position.set(5.05, 0.16, -3.25);
+    catchW.position.set(5.05, 0.19, -3.25);
     g.add(catchW);
 }
 
