@@ -2610,3 +2610,55 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   confirmed / 6 clean (5 clean, 3 with margins) / 0 dropped. Zero
   world mutations, zero uploads, zero comp edits, zero shared-budget
   use.
+
+## Judged index (survey-47)
+
+- survey-47 (2026-09-07, NATIVE 2/5 + ZAI 3/5 disclosed — flap class:
+  stable-face + woodyard-face landed native after paced retry; smithy
+  burned both calls (1210 x2) + dyer burned gameplay-then-face (1210 x2,
+  retry spent) -> ZAI fallback; mill native both frames; 18m FACE view
+  primary for all five per survey-31 series law — flat riders; fresh
+  live store bytes 5/5 HTTP 200 curl UA on exact census-47 libs,
+  served-shas pinned d470868b35865794 (stable) / f0a038e3196c9adb
+  (smithy) / e436b0caa7668e37 (dyer) / 983d0964d406ac8a (mill) /
+  99753d4dcf823a76 (woodyard)): TRADE-SIGN FAMILY NATIVE PASS slice
+  (severity backlog + native debts drained fresh; never-judged pool =
+  carousel only, standing 8-tick polish-hero exclusion holds). Slice =
+  5 signs, first native reads of post-R2/re-seat bytes. CHASSIS FRAMING
+  SELF-CATCH banked + memory-banked: gameplay cam lookAt y-cap 2.2 sits
+  high-mounted signs (~2.05-2.78m) BELOW camera aim — all three
+  gameplay-frame 'floating dark dash' reads (dyer/mill/woodyard) are
+  PRESENTATION ARTIFACTS of the rig, DISCARDED (dress-80 solo-rig
+  class); face views (center.y aim) unaffected and judged primary.
+  VERDICTS: MILL-001 CONFIRMED Sev 3 NATIVE — sails read generic
+  X/crossed-tools (4 arms resolve but zero vane widening/lattice/hub
+  differentiation; tip dots generic accents); header unresolvable dark
+  clump; panel+mount silhouette PASSES; round-1 ZAI finding UNCHANGED
+  on re-seated bytes. SMITHY CONFIRMED Sev 3 ZAI — emblem uniform gold
+  smudge 19x17px, no horseshoe/U/anvil silhouette resolves (first
+  judgment of post-waysign-8 bytes); bracket+panel solid/contiguous;
+  ZAI 'detached streak' sub-claim DISCARDED by cross-model control
+  (identical ground streak in stable frame = sun cast shadow, rig
+  artifact). DYER-001 CONFIRMED Sev 3 ZAI — bolt fuses near-black with
+  frame (<10 RGB units), ZERO blue-biased pixels in emblem region,
+  amber vertical stripe RGB(200,153,58) dominates as false 'barrel'
+  read; structure/hangers/panel PASS. STABLE-001 NATIVE
+  CLEAN-with-margin — horseshoe U legible via 4-5px open counterspace
+  (1 arc + 2 tips) at series-law floor; round-1 ZAI CLEAN corroborated
+  (first native read). WOODYARD-001 NATIVE CLEAN-with-margin —
+  bracket + two hangers + framed panel clean, zero
+  floaters/seams/holes; saw-vs-chevron under-resolved at 18m floor
+  (2nd corroboration after ZAI survey-25; no new finding).
+  Routing: 3 notes routed WAYSIGN-PLAN SURVEY INTAKE (mill/smithy/
+  dyer — probes, decode/execute law = waysign's; grep-verified zero
+  open duplicates pre-append); ZERO IMPROVE-PLAN candidate rows (signs
+  route cross-lane, improve-2 routing note + survey-40 precedent).
+  ONE ledger append survey-47 (loop law 4: notes routed). Census
+  284==284 vs survey-46 snapshot /tmp/survey46-census.json: 0
+  arrivals, 0 departures, 0 flips — quiet epoch, no sibling
+  work-in-flight in live set (city-16's packet + dress-105 ledger
+  entries observed as uncommitted foreign dirt, left untouched).
+  Gate: ALL PASS real exit 0 first try at 41f69c75 (ledger law EXACT
+  2370704). Verdicts 2 confirmed / 2 clean (2 clean-with-margin) /
+  0 dropped. Zero world mutations, zero uploads, zero comp edits,
+  zero shared-budget use.

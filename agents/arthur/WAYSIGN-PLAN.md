@@ -930,6 +930,26 @@ only when native is down that tick, disclosed.
   eye-gate verdicts (`reviews/waysign-eye-gate.md`); any visual
   correction re-opens that sign's build ahead of rotation.
 
+## SURVEY INTAKE (survey-47, 2026-09-07)
+
+- survey-47 (read-only observer; face-view primary per survey-31 series
+  law; probes, decode/execute law = waysign's):
+  - R2-1 `nx-sign-smithy` — Sev 3 residual on post-waysign-8 bytes: emblem
+    uniform gold smudge ~19x17px, no horseshoe/U/anvil silhouette (ZAI
+    fallback, native 1210 x2); bracket/panel solid, round-1 stray-fragment
+    sub-claim was a rig shadow artifact (DISCARDED, cross-model control).
+    Evidence: reviews/survey47-slice/sign-smithy/{face,right}.png
+  - R2-2 `nx-sign-dyer-001` — Sev 3 residual on post-reseat bytes: bolt
+    fuses near-black with frame (<10 RGB separation), zero blue-biased
+    pixels; amber stripe RGB(200,153,58) dominates as false 'barrel' read
+    (ZAI fallback, native 1210 x2). Evidence:
+    reviews/survey47-slice/sign-dyer-001/{face,right}.png
+  - `nx-sign-mill-001` — Sev 3 residual on post-reseat bytes: sails read
+    generic X/crossed-tools (arms resolve, no vane widening/lattice/hub
+    differentiation); header unresolvable dark clump (NATIVE face view —
+    first native read of current bytes; round-1 ZAI finding unchanged).
+    Evidence: reviews/survey47-slice/sign-mill-001/{face,right}.png
+
 ## Carried laws
 
 - Host-rider continuity (artwalk-39): re-derive anchors from CURRENT host
