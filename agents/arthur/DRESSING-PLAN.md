@@ -1,5 +1,38 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
+### dress-126 — lawful HOLD (17th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD b241baa8 (dress-125, own); interlane md5
+  f6254cd0 pin-exact. Fresh census 292 steady — zero arrivals, zero
+  departures, zero moves vs the dress-125 epoch capture; 29 fleet
+  district-qualified (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy core
+  intact; ZERO dress-domain drift. Round-3 closers PINS_EXACT 4/4 vs
+  live, ids found by lib-hash search (never from memory): foxden
+  856deec5 (73.0, −0.0532, −10.5) yaw 4.7124, lanternhook 639c5480
+  (−57.0, −0.0306, −70.0) yaw 4.9277, seats cb34bd36
+  `nx-dress-sw-seats-001` (−57.0, −0.0263, −72.5) yaw 2.7349,
+  streamstones aabbc23d `nx-dress-se-streamstones-001` (75.05,
+  −0.0249, −46.90) yaw −0.7854 (radian law, no yaw≤π guard).
+- **Shard/intake (standing)**: all nine Round-1 rows terminal, queue
+  EMPTY, no round-4 section (grep 0), survey tag max 54, zero OPEN
+  fleet-prefix rows — intake unchanged.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the log trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock stays the
+  two one-line rulings in `reviews/dress-round3-eye-gate.md`.
+- **Two probe self-catches corrected at source, disclosed**: (1) the
+  prior-epoch capture `/tmp/dress125-census.json` is a full response
+  OBJECT (`world`/`entities`/`mounts`) — same shape class as the live
+  response (dress-125's 4th-occurrence class, now 5th: epoch-capture
+  variant); fixed with the same conditional extract; (2) verdict
+  arithmetic contained a mangled tautology
+  (`29+16−16+len(fleet)` vs the true 45) that FAILed a fully-green
+  probe — replaced with `len(dress)==fleet+legacy` + exact 29/16.
+  Probe then HOLD_VERIFY_PASS exit 0.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use this tick (D+0, E+0).**
+
 
 ### dress-125 — lawful HOLD (16th post-close, NO PLACEMENT)
 
