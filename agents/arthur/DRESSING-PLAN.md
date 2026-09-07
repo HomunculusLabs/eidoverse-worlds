@@ -1,6 +1,37 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-136 — lawful HOLD (27th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD 902d5f82 (own dress-135); interlane md5
+  f6254cd0 pin-exact. Fresh census **294 steady** — epoch diff vs
+  dress-135 capture +0/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-136.py` HOLD_VERIFY_PASS exit 0, fresh UA'd
+  fetch); dress domain 45 = 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16
+  legacy. Round-3 closers PINS_EXACT 4/4, all deltas exactly 0.0:
+  foxden 856deec5, lanternhook 639c5480, seats cb34bd36, streamstones
+  aabbc23d (radian law, no yaw guard).
+- **Shard/intake (re-checked at source)**: IMPROVE-PLAN all 9 sharded
+  `nx-dress-` queue rows terminal (rows 29–38 + sw-prayer row 5 —
+  EXECUTED/DROPPED/CLOSED); no round-4/5 section (grep 0); survey tag
+  max 54. Zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains
+  the two one-line rulings in `reviews/dress-round3-eye-gate.md`;
+  either releases real placement work next tick.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **One ledger-discipline self-catch, disclosed**: dress-136 prose ended
+  with a manual `(D+0, E+0)` before the tool's appended pair — both
+  zero-delta, the tool's own law check still closed EXACT (2370729
+  steady); no repair performed (would re-touch a verified append);
+  future prose omits the manual pair.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use (D+0, E+0).**
+
 ### dress-135 — lawful HOLD (26th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
