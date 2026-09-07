@@ -573,17 +573,75 @@ entry below. Siting hand-derived vs census 271, MUST be re-verified
 fresh next tick. SW lamps still blocked on Bill's a/b/c (0 of 3). Shard
 queue: no OPEN nx-dress rows.
 
+**STATE AT dress-88 (2026-09-07, pipeline install tick)**: dress-87's NW
+dryingracks placement EXECUTED live — `nx-dress-nw-dryingracks-001`
+PLACED_VERIFIED (details in the dress-88 siting-log entry below; the
+dress-87 hand pocket DIED on fresh SAT for the third consecutive build —
+full-annulus re-derivation with asserted coverage re-sited to the approach
+lane's W flank). Census 271->273 (sibling struct-63 ellipsecourt placed in
+parallel; domain-valid, absorbed). Rotation next: NE round-3 queue head.
+SW lamps still blocked on Bill's a/b/c (0 of 3). Shard queue: no OPEN
+nx-dress rows. Stile survey-26 native tie-break still owed (native vision
+down at last attempt).
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
 deepens each district along its OWN theme with new installation families.
-All prior laws carry: district-qualified ids (nx-dress-<quad>-<family>-<NNN>),
+All prior laws carry: district-qualified ids (nx-dress-<quad>-<family>-NNN>),
 one authored installation per wakeup, disjoint from the 16 legacy plaza/farm
 polish subjects and all Bill-off-limits entities (fountain stays off-limits),
 lamp spends still budget-bound per the a/b/c policy hold, shared upload
 budget 4/min/IP with 20s+ pacing, SAT preflights, two-way MCPL walk-test for
 anything that touches a walking line, 18m readability law for anything with
 identity intent. Rotation stays NW->NE->SE->SW.
+
+### dress-88 — NW herb-drying racks placement (dress-87 build executed live, PLACED)
+
+- **Tick class**: install — dress-87's NATIVE-accepted v2 (sha
+  `f0343efb6e7ab0fa3e20fdfca05126f9a57cab3e2841f8023545306fdad1ebff`,
+  deterministic x2 verified pre-tick) placed this tick after its
+  hand-derived pocket died on fresh verification.
+- **Pocket death (third consecutive — the dress-85/86 pattern is now a
+  law)**: dress-87's queued pocket (-36.5, 57.5) FAILED fresh SAT at
+  1.31m vs `nx-dress-nw-hedge-001` (pinch law 1.4m). Full headland band
+  scan: ZERO legal cells — the 4.28m rack + 1.4m pinch law + plot-margin
+  constraint saturates the entire lavender-0040 neighborhood (hedge,
+  stile, orchard rows, plots).
+- **Full-annulus re-derivation (coverage law honored)**: 22,954 NW annulus
+  cells tested (free yaw, 0.5m grid) — the FIRST scan grid covered only a
+  diagonal strip and read 0-legal; a pitfall-7 coverage bug, caught because
+  0-everywhere is a scan smell. 6,076 legal cells; corridor band (|lat| ≤ 20
+  off the az-45 spoke) holds 214. Family A (lavender-0053, (-20,72.5))
+  rejected on register — 13m from nx-struct-ninesbridge, 15.5m from
+  nx-struct-echoarch (struct N-spoke landmark crowding; wrong family for
+  dressing). Family B (lavender-0006, (-69.5,19.5)) 30m+ off any walking
+  line — invisible. **Winner: corridor end, NW approach lane's WEST flank
+  at lavender-0027's south edge** — the field-mouth headland: the walker
+  leaves the paved lane here for the cultivation district.
+- **SAT at final pose (fresh live set)**: nx-approach-nw-lane-001 +5.23m
+  (worst), nx-mile-nw-001/002 +7.72m, orchard-0020 +10.39m, skeps +11.94m
+  — nothing sub-1.4m, no exemption ladder. Rack fully OUTSIDE every
+  cultivation plot OBB with 2.17m clearance (headland piece, not on crop
+  rows — plots are thin films; explicit corner-distance check). Rim
+  corners 66.3..68.9 ∈ [66,108]. Cone law clear at scan resolution.
+- **Terrain 5-pt** (`dress88-terrain.ts`): corners -0.0009..0.0103 (11mm
+  spread) → py pinned to worst corner **-0.0009**.
+- **Placement**: `nw-dress88-place.ts` (dress-76/84/86 chassis) — hash
+  gate → blocker-epoch guard [nx-approach-nw-lane-001,
+  nx-cultivation-lavender-0027, nx-mile-nw-001, nx-mile-nw-002] →
+  fresh-census SAT/rim preflight → upload (content-addressed) → spawn →
+  post-place tuple verify → idempotent 0-verb rerun. **PLACED_VERIFIED**
+  `nx-dress-nw-dryingracks-001` @ lib `store/f0343efb6e7ab0fa.glb`, pos
+  (-59.0, -0.0009, 33.0), yaw 2.3562. 1 verb.
+- **Census**: 271 → 273 (my arrival + sibling struct-63's
+  nx-struct-ellipsecourt placed in parallel; domain-valid, absorbed).
+- **Lamp budget**: NW spend 0 of 2 — static, no light entity, no draw.
+- **Eye-check for Bill**: walk the NW approach lane to its outer end
+  (~66m out) — on the west flank where the lane meets the lavender field,
+  a timber drying rack with hung dye-plant bundles (lavender purple-grey,
+  madder rust, weld yellow) facing the path; reads "worker just came in
+  from the rows", not a fence.
 
 ### dress-83 — NE squared-timber working yard (round-3 item 7, dress-82 build, PLACED, LIVE)
 
