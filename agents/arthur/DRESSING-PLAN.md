@@ -1012,7 +1012,42 @@ expanded, the quality bar is not lowered.
 
 ## Siting log
 
+### dress-99 — SW offering niche (round-3 item 18, PLACED, LIVE)
+
+- **Tick class**: deferred placement (dress-96/94 class) — dress-98's v3
+  candidate `b41efb63` placed after the owed confirm-or-drop native re-judge.
+- **Native re-judge (CONFIRM)**: on the exact v3 bytes (local sha verified ==
+  b41efb63 before judging), the T-marker gestalt reads as a deliberate
+  wayside-shrine/threshold family ("cannot be mistaken for random rocks or a
+  natural post"), the stepped cap silhouette unambiguous (cap-wider-than-jamb
+  step = strongest read), grounding solid, nothing floating. The marginal
+  notes (3px crest speck, cairn merging into jamb base) are identical to the
+  accepted v3 margin — and the judge's suggested value-separation fixes are
+  precisely the falsified v4/v5/v6 class (dress-98's banked law: sub-0.1m
+  accents cannot value-separate at 18m). PASS-marginal stands.
+- **Anchor re-derived fresh** (dress98-anchor.ts rerun, census 281): host
+  `nx-temple-labyrinth-0038` lib `2d3d2032d3e806f8` EXACT, pos
+  (−51.932, −83.109) yaw −2.35619; seat local 214° r7.06 → world
+  (−45.002, −84.456) riderYaw 1.7622 (101.0° outward radial), r 95.69 ∈
+  CITY-PLAN band [70,100]. Seats cone diff 98.3° @ 16.99m (need >25).
+- **Terrain (dress99-terrain.ts)**: −0.0306..−0.0312 (0.6mm spread) → PY
+  −0.03119 (worst corner).
+- **Placer (sw-dress99-place.ts)**: decode-true OBB half 0.4405×0.3021
+  clocal (−0.0039, 0.1143); host-exempt SAT (rider designed mount — anchor
+  positional proof from served host bytes, epoch-guarded; sibling labyrinth
+  entities 0025/0051/0004 SAT normally), no sub-1.4m adjacency; approach
+  cones clear; rim 95.2..96.2 ∈ [66,108] and CITY-PLAN [70,100]. 1 upload +
+  1 spawn verb → **PLACED_VERIFIED** `store/b41efb63746c2450.glb` at
+  (−45.002, −0.03119, −84.456) yaw 1.7622; idempotent 0-verb rerun; census
+  281→282.
+- **Static unlit — SW lamp spend 0 of 3.**
+- **Bill's eye-check**: walk the SW devotional line to the maze — at the
+  entrance gap's flank, a capped threshold stone with a pale dish (stone
+  inside) stands where something is left before entering.
+
 ### dress-98 — SW offering niche (round-3 item 18, BUILT — v3 candidate `b41efb63`, placement deferred)
+
+> **PLACED by dress-99** — see next entry.
 
 - **Tick class**: build-only (dress-82/85/improve-31 class — run budget
   exhausted mid-arc after the v6 read; placement + fresh confirm-or-drop
