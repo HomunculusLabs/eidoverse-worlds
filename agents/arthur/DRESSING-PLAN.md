@@ -1,6 +1,54 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-109 — SW lantern hook row (round-3 item 19, PLACED, LIVE)
+
+- **Interrupted-window recovery closed**: dress-108 was cut at the
+  pre-execution boundary with v4 built, sited (99-pose full-quadrant scan,
+  labyrinth disc law), and the placer staged — zero mutations, zero
+  ledger/plan writes (artwalk-32 class). This tick reloaded everything
+  fresh, paid the v4 native-confirm debt, and placed.
+- **Judge arc**: v4 native close4 **FAILED** — factory-fresh identical
+  clones (real; the authored 3% vertex jitter is invisible at read
+  distance — dress-97 worn-slab law: the judge sees the SILHOUETTE, not
+  the bevel) + a 2-post/dead-gap count that was a **FRAMING ARTIFACT**
+  (close4's camera sits at post-1's shoulder; 42° FOV at 4.2m covers
+  ~3.2m and crops post 3 at x=3.7). Rig gained a `closewide` view
+  (mid-row-centered, 7.5m) — 3 posts confirmed. The prior ZAI 4/4 is
+  falsified; v4 never placed.
+- **v5 `639c5480` ACCEPTED**: per-post course profiles 4/3/5 courses
+  (tops 0.857/0.822/0.947), distinct dressing configs (A hand-stone+chips,
+  B chips-only, C far-side hand-stone), weathering 0.06→0.10.
+  Deterministic ×2; decode ALL PASS (4 nodes, span 4.116×0.843, grounded,
+  crown 1.129, OBB half 2.0579×0.4216, clocal 1.8564/−0.0263 —
+  **strictly contained** in the certified v4 envelope). NATIVE closewide
+  4/4 (distinct hand-set pieces, curved forge crooks, zero defects) +
+  approach18 4/4 (quiet three-beat hooked-standing-stones row, no fence
+  merge, empty hooks read at distance).
+- **Siting** carried from dress-108's scan: pose (−57.0, −70.0) yaw
+  282.34° — row on the corridor's W flank, hooks facing E toward the
+  walking line. Terrain re-pinned fresh at v5 OBB corners: 7-pt spread
+  3.96mm, PY −0.030565 (worst corner).
+- **Placement**: `sw-dress108-lanternhook-place.ts` re-pinned to v5 —
+  SHA gate → blocker-epoch guard (labyrinth-0038, terrace-0049, bellpost,
+  seats all live) → fresh-census SAT clear, labyrinth via disc law, no
+  sub-1.4m adjacency → rim 86.6..90.6 ∈ [70,100] → upload (no 429) →
+  1 spawn verb → **PLACED_VERIFIED** `nx-dress-sw-lanternhook-001` @
+  `store/639c54800d2e5856.glb`, (−57.0, −0.030565, −70.0) yaw 282.34°.
+  Idempotent rerun: 0 verbs. Independent census 289→290. Static, unlit,
+  comps empty by design — hooks EMPTY by policy (lanterns pend Bill's SW
+  lamp a/b/c ruling). SW lamp spend 0 of 3. Rotation next: NW round-3.
+- **Eye-check for Bill**: SW devotional corridor's W flank past the
+  seats toward the labyrinth — three hooked standing stones of three
+  different builds (leaning 4-course, chunky 3-course, tall slim
+  5-course), hooks empty awaiting lanterns.
+- **Banked (rig law)**: a close view's camera position must hold the
+  full row in frame — an off-center close camera manufactures phantom
+  count/gap findings (kin to struct-45 framing-limited findings; judge
+  quantitative counts are probes, decode + framing math outrank them).
+  Decode tool's row-span window re-derived from post span (3.9 lower
+  bound) — scatter-driven windows must follow the dressing config.
+
 ### dress-107 — SE fox den (round-3 item 14, PLACED, LIVE)
 
 - **Interrupted-window recovery arc closed**: prior window died post-build/
