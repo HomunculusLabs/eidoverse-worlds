@@ -1834,3 +1834,66 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   first try at 8fab04eb (ledger law EXACT 2370675). Verdicts 0 confirmed /
   8 clean (8 clean-with-margin) / 0 dropped. Zero world mutations, zero
   uploads, zero comp edits, zero shared-budget use.
+
+## Judged index (survey-36)
+
+- survey-36 (2026-09-07, ZAI FALLBACK 6/6 disclosed — native 1210 x2 +
+  paced retry burned on the mossbowls first call, hard down all tick,
+  survey-26/31/35 class; 18m gameplay frame primary (close-view
+  confirmation pass for mossbowls per the judge's own request), fresh
+  live store bytes 6/6 HTTP 200 curl UA on exact census-36 libs,
+  served-shas pinned 40275094 / ebe11737 / 8c642f0f / 71201d71 /
+  e436b0ca / ee137082): ARRIVAL CORROBORATION + NEVER-JUDGED TAIL slice
+  (severity backlog drained — round-1 terminal, survey-7..35 candidates
+  are intake not re-judge debt; degenerate-fleet law applied twice).
+  Slice covers 12 entities via 2 degenerate fleets: mossbowls (dress-94
+  arrival, first independent read) + mile-lantern sha 052120d7 (5
+  entities: ne-010, nw-007, nw-008, sw-013, sw-014 — mile-5's committed
+  v3, degenerate one-sha fleet) + h6 + h7 (never-judged h-statics; h2/h4
+  paid survey-35) + sign-dyer (second trade-sign family read after
+  sign-bakery survey-35) + prayer (never-judged SW dress). VERDICTS:
+  MOSSBOWLS CLEAN-with-margin — identity/floats/silhouette PASS at 18m
+  (three-lobe boulder cluster, moss caps seated behind grey rims, height
+  step-down rhythm); 18m pool-teal FAIL is distance compression
+  (sub-pixel at 40-46px object height), CLOSE PASS 3/3 confirms: teal
+  ellipse unambiguous vs warm ground, bowls read moss-between-raised-rims,
+  tongue taper + ground patches read overflow — corroborates owner
+  dress-94's NATIVE 18m PASS (ZAI fallback dissent on final bytes does
+  not outrank owner native acceptance, survey-3 precedent); margin:
+  lower body soft-merges vs ground olive, basin concavity sub-resolves.
+  MILE-LANTERN CLEAN-with-margin — 4/4 PASS (cap+arm+hanging-element
+  silhouette hierarchy survives; hung-not-glued read via outboard-below-
+  arm placement; footed base + cast shadow; height read ~1.1m matches
+  the 0.91m-<=-1.1m law); margins: hook joint sub-pixel watch point,
+  lantern 8x12px at absolute legibility floor, flat-dark shaft carries
+  identity by silhouette not material. H6 CLEAN-with-margin — wind-chime
+  gantry: Π-frame + graduated-tube cluster + yellow clapper accent +
+  approach pad read one clean idea; footings both posts, deliberate
+  hang-line visible; margins: tube striation compresses to one mass at
+  18m, swing-set/gallows misread risk low but nonzero. H7 CLEAN-with-
+  margin — stilted observation deck: telescope diagonal + bench + lamp
+  point + rail rhythm + centered stair all resolve; legs continuous to
+  ground, shadow patch reaches its casters; margins: lamp vanishes past
+  ~30m, near-edge rail absent reads as access side (not missing
+  geometry). SIGN-DYER CLEAN-with-margin — hanging-sign grammar PASS
+  (bracket arm wider than board, canonical stack), collapse GRACEFUL to
+  framed vertical color bands (resolution-predicted, same class as
+  sign-bakery survey-35 margin — 2px features cannot survive 18m); zero
+  float/void classes, watertight shadow evidence. PRAYER CLEAN-with-
+  margin — cairn-with-capstone + satellite stones + front offering slab
+  read placed-with-intent in ~1s; capstone lighter value does deliberate
+  apex-accent work; all contacts shadowed; margin: mid-stack stones
+  merge (compact-cairn class, consistent), contact shadows soft.
+  Routing: ZERO notes (zero confirmed defects), zero new candidate rows,
+  zero ledger append (read-only tick, loop law 4). Census 277 vs
+  survey-35 snapshot 276: +1 arrival nx-dress-se-mossbowls-001
+  (dress-94 @ 7f619934, pos (61.31,0.0083,-55.2) yaw -0.785 lib
+  6d598bd5, ledger-matched), 5 POS_SAME lib flips = improve-44 orchard
+  family cure (0012/0020/0033/0046/0059, ledger-matched at 59b2b575/
+  d79ab891), 0 departures. GATE NOTE: first gate run FAIL on ledger law
+  (2370684 computed vs 2370682) = dress-94's uncommitted append window
+  (survey-8 class); absorbed by interleaving — dress-94 landed at
+  7f619934, paced re-gate ALL PASS real exit 0 (ledger law EXACT
+  2370682). Verdicts 0 confirmed / 6 clean (6 clean-with-margin) / 0
+  dropped. Zero world mutations, zero uploads, zero comp edits, zero
+  shared-budget use.
