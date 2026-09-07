@@ -106,22 +106,28 @@ const apexY = domeRimY + DOME_SY * R * (Math.cos(T0) - Math.cos(T1));
     box(g, "stoop", gapChord + 0.3, stoopH, 0.7, 0, stoopH / 2, R + 0.45, C.STONE);
 }
 
-// ---- two slit windows (E/W) — struct-12 REFINE: dark slits become warm
-// emissive glass in KEEP-named meshes (lamp_slit_*) so the drum carries a
-// night signal matching the village's lit-window law; a companion light
-// inside at the gnomon completes the read (placed via light verb).
+// ---- two slit windows (E/W) — struct-54 REFINE: struct-52's class-catch.
+// v1 (struct-12) seated an emissive pane BEHIND a solid dark frame box on
+// both faces — the frame fully occluded the pane from every angle (struct-52
+// law: a lit pane recessed behind a solid frame can NEVER render; occlusion
+// beats emissive). v2 deletes the frames entirely and seats each pane in the
+// drum wall itself, outer face +0.04 proud of the wall so the ashlar IS the
+// frame (same idiom as the accepted beacon fix). Band center moved
+// 2.55 -> 1.95: the old band (y 2.05-3.05) was crossed at exactly the E/W
+// azimuths by BOTH ring-course tori (y3.15 outer 3.30, y2.6 outer 3.30) —
+// even with frames gone the course bands would have chopped the panes into
+// a detached three-piece read (survey-3's original finding class). New band
+// y1.45-2.45 clears both courses; door-lane head 2.62 and drum lintel
+// geometry untouched.
 for (const s of [-1, 1]) {
-    const w = new THREE.Mesh(new THREE.BoxGeometry(0.34, 1.15, 0.1), dark);
-    w.name = `slit_${s < 0 ? "w" : "e"}`;
-    w.position.set(s * (R + 0.03), 2.55, 0);
-    w.rotation.y = s * Math.PI / 2;
-    g.add(w);
     const pane = new THREE.Mesh(
         new THREE.BoxGeometry(0.26, 1.0, 0.06),
         new THREE.MeshStandardMaterial({ color: 0xffd9a0, emissive: 0xfeec78, emissiveIntensity: 0.9, roughness: 0.4 }),
     );
     pane.name = `lamp_slit_${s < 0 ? "w" : "e"}`;
-    pane.position.set(s * (R + 0.02), 2.55, 0);
+    // seat in the wall: wall surface at radius R; pane depth 0.06 centered
+    // at R+0.01 -> outer face R+0.04 proud, inner face R-0.02 embedded.
+    pane.position.set(s * (R + 0.01), 1.95, 0);
     pane.rotation.y = s * Math.PI / 2;
     g.add(pane);
 }

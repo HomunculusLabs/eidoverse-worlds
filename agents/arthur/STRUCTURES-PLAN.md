@@ -2066,3 +2066,54 @@ worst), orreryring margin-only. Observatory lamp_slit deferred row
 stands — queued for struct-54 refine tick (54%3==0) ahead of the
 intake ranking per the plan's own note.
 
+
+## struct-54 — OBSERVATORY LAMP_SLIT LIT-WINDOW FIX (refine tick, the deferred row)
+
+Cadence: 54 % 3 == 0 → refinement tick; subject pre-queued by struct-52's
+plan note (the class-catch: Observatory's struct-12 lamp_slit panes carry
+the same enclosure geometry struct-52 proved fatal on the beacon).
+
+- **Root cause, two occluders at decode**: (1) v1 seated each emissive pane
+  (outer face R+0.05=3.25) BEHIND its solid dark frame box (outer face
+  R+0.08=3.28) — radial containment, pane dead from every angle (struct-52
+  law: occlusion beats emissive). (2) NEW finding: BOTH ring-course tori
+  (y3.15 and y2.6, outer radius 3.30) crossed the old pane band (y
+  2.05–3.05) at exactly the E/W azimuths — deleting frames alone would have
+  re-created the survey-3 "detached three-piece band" read.
+- **Fix (struct-52 v2 idiom)**: dark slit frames DELETED (dark bucket
+  observatory_6 gone, 12→11 nodes); panes seated in the drum wall, outer
+  face +0.04 proud (R+0.04=3.24, decode-verified ±3.18..3.24), band center
+  2.55 → 1.95 (y1.45–2.45, clear of both courses, continuous stone
+  between). Door-lane head 2.62 untouched. sha 3d9d6ae1 →
+  07d18163d1ecd27d… ×2 deterministic.
+- **SAT-neutral proof**: envelope byte-identical [-3.37, 0, -3.32]→
+  [3.37, 4.466, 4] == live census bbox; glow2 emissiveFactor
+  [0.892, 0.7549, 0.169] author-exact both sides.
+- **Judged NATIVE** (provider up this tick): night PASS — exactly one warm
+  lit vertical slit per flank, flush in the wall beneath the ring courses,
+  no seams/double-bands/artifacts; margin named honestly: thin uniformly
+  bright strokes read as glowing surface slits rather than deep-recessed
+  windows. Day east-face PASS — pane reads as glazing set into stone, wide
+  continuous masonry clear of both courses, zero leftover frames/fragments.
+- **Falsification**: night warm-px 0 → 50 (panes were empirically dead
+  before — zero warm pixels in the whole frame); pixel changes localized:
+  left/right 0.47/0.60%, front/gameplay/aerial 0.07–0.25%.
+- **Placed**: remove+spawn reseat exact tuple (16.48,
+  -0.052440113834802064, -40.8) yaw -0.3838824615170976, comp null → null.
+  lib store/07d18163d1ecd27d.glb. PLACED_VERIFIED 2 verbs; idempotent
+  rerun zero verbs; companion light nx-struct-observatory-l verified
+  standing untouched (separate entity). Door circuit walk 5/5 ALL_PASS
+  worst 0.389m — exactly struct-44's committed pin.
+- Frames: reviews/struct54-observatory/{before,after}/. Decode:
+  struct54-decode-observatory.ts. Pixel: struct54-pixel-falsify.py.
+  Placer: next-place-struct54.ts. Walk: struct2-walk-observatory.ts
+  (unchanged chassis, re-run on the new bytes).
+
+**Bill should eye-check**: at dusk from the NW walk — the observatory drum
+should now carry one warm lit slit window low on each flank (below the two
+stone ring courses), matching the beacon's lit-window family; by day the
+slits read as cream glazing set into the ashlar, no dark frames left.
+
+**SURVEY INTAKE status**: Observatory deferred row EXECUTED this tick.
+Remaining intake: cellardoor Sev 3 (void opening + missing leaf detail —
+next worst, native-confirmed survey-18), orreryring margin-only.
