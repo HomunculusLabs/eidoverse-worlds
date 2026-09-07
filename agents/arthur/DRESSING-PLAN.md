@@ -658,9 +658,10 @@ identity intent. Rotation stays NW->NE->SE->SW.
     2026-09-07 — re-sited in-tick behind the prayer mound after the live SAT
     caught a terrace pinch; details in the dress-79 siting-log entry).**
 16. `nx-dress-sw-bellpost-001` — single quiet bell post (silent — no chime
-    comp; Bill owns sound) at the gravel path bend. **BUILT (dress-85,
-    2026-09-07 — v4 judged CONDITIONAL PASS, placement queued next tick;
-    see dress-85 state block).**
+    comp; Bill owns sound) at the gravel path bend. **DONE (dress-85 build +
+    dress-86 PLACED 2026-09-07 — pocket re-sited beyond the bend after fresh
+    SAT killed the dress-85 hand pocket; details in the dress-86 siting-log
+    entry).**
 17. `nx-dress-sw-seats-001` — paired facing seats at the terminus view;
     one material, two orientations.
 18. `nx-dress-sw-offering-001` — offering shelf niche in the existing
@@ -675,6 +676,50 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-86 — SW bell post placement (dress-85 build executed live, PLACED)
+
+- **Tick class**: placement recovery — dress-85's v4 build (sha
+  `1ea38f613295a46a889608b912fa1779d8ce53a7175d0b96ec8e095b94ce8437`,
+  CONDITIONAL PASS under ZAI fallback, native down) placed this tick after
+  its hand-derived pocket died on fresh verification.
+- **Pocket re-site (dress-83 class)**: dress-85's pocket (-44.6, -68.8) was
+  DEAD on the fresh census-270 SAT — **-3.13m overlap vs
+  nx-temple-terrace-0049** (the state block's hand-derived "+3.6m" was
+  optimism, pitfall-6 class), AND the pocket sat inside the labyrinth's 18m
+  approach cone (16.1m, 4.9° off the work→plaza axis; the dress-85 derivation
+  had checked only the prayer cone). 0.3m-grid scan of the bend neighborhood
+  (outside-bend side filter, ≥3.2m from BOTH devotional-line segments
+  [near-end→bend, bend→labyrinth], rim [66,108], approach-cone law with the
+  labyrinth's cone judged against its TRUE devotional axis): 49 legal poses;
+  winner **(-54.0, -69.8) yaw -24.7°** — 9.9m beyond the bend apex, outside
+  edge of the turn, walking-line clearance 4.83m.
+- **SAT at final pose (fresh live set)**: terrace-0049 +2.88m,
+  labyrinth-0038 +3.15m, prayer-001 +3.32m, approach-sw-lane-003 +10.79m —
+  nothing sub-1.4m, no exemption ladder needed. Disc clearances (struct-19
+  law): seed-0021 +14.10m, seed-0034 +24.39m, labyrinth +6.88m. Rim corners
+  at final yaw 87.4..89.0 ∈ [66,108]. Terrain 5-pt (`dress86-terrain.ts`):
+  -0.0282..-0.0294 (1.2mm spread) → py -0.0294.
+- **Orientation**: local +x (bell arm) → world az ~-115° across the bend gap
+  toward open field; local -z (mouth face normal) → world az ~215°. Inbound
+  walker (az -37.3) sees the mouth ~53° off frontal (passing read); outbound
+  walker (az -12.3) sees it near-full frontal. Yaw -24.7° = bisector of the
+  two approach bearings.
+- **Placement**: `sw-dress86-place.ts` (dress-76/84 chassis) — exact SHA
+  gate → blocker-epoch guard [terrace-0049, labyrinth-0038, prayer-001,
+  gravel-001] → fresh-census SAT/rim → upload (content-addressed, 429
+  backoff) → spawn. **PLACED_VERIFIED**
+  `nx-dress-sw-bellpost-001` @ lib `store/1ea38f613295a46a.glb`, pos
+  (-54.0, -0.0294, -69.8) yaw -0.4310963252425994, 1 verb. Idempotent
+  rerun: **0 verbs**. Post-place census **271**, exact tuple, comp {}.
+- **Lamp budget**: SW spend 0 of 3 — static unlit, bell mesh-emissive 0.22
+  only (polish-273 class, no lamp anchor, no budget draw).
+- **Eye-check for Bill**: from the labyrinth walking back toward the plaza
+  along the gravel, past the bend — the outside edge now carries a single
+  post with a hanging bronze bell (mouth down, one warm accent). It should
+  read bell-first, not lamp-first, and stay quiet (no chime — sound is
+  Bill's). If it reads lamp-first at distance, recorded judge levers: a few
+  degrees of arm yaw; thong ≥5cm.
 
 ### dress-81 — NW espalier rows fence-read cure (survey-23 intake EXECUTED, RESEATED, LIVE)
 
