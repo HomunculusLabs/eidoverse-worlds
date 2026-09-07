@@ -953,7 +953,10 @@ identity intent. Rotation stays NW->NE->SE->SW.
    placement deferred on run budget, improve-31 class; the dress-96 tick
    executes nw-dress95-place.ts).**
 5. `nx-dress-nw-fieldcross-001` — one maintained field-crossing: two plank
-   stiles + mown gap, mid-field, walk-tested both ways.
+   stiles + mown gap, mid-field, walk-tested both ways. **BUILD-ONLY
+   (dress-100, 2026-09-07 — v4 `41a86024` corridor form, lavender-0053 W-end
+   pose pinned pending TRUE-dims re-gate; native judgment + placement owed
+   next tick, dress-82/85/93 class).**
 
 ### NE — CRAFT (round 3)
 6. `nx-dress-ne-anvilpad-001` — forge-adjacent anvil pad: stone plinth,
@@ -1011,6 +1014,58 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-100 — NW fieldcross (round-3 item 5, BUILT v4 — judgment + placement deferred, dress-82/85/93 class)
+
+- **Concept contract**: the WORKERS' CROSSING into the dye-field — at
+  lavender-0053's W end (center trench, bed-local z −0.05): a mown approach
+  corridor (~6.5m) with a worn trodden center line runs through the field
+  grass to the bed threshold; two plank stiles (stepped pale caps 0.18/0.36)
+  beside the line at the damp boundary; worn grade-level flags ON the line.
+  Inside the bed the REAL trench between lavender ridges continues the walk
+  (decode of live cure bytes `5e04ce4b`: ridge soil to 0.296, plants to
+  0.55, trench clear — the trench IS the path; the piece ENDS at the
+  boundary). Bill's beside-the-line law applied at design time: nothing
+  taller than 0.12 stands on the walk line.
+- **Siting probes (all fresh-census 282, source-over-assumption)**:
+  (1) orchard-0033-edge concept KILLED — the only SAT-legal window sat 0.4m
+  from a real trunk column (r 0.45 at local (±6.24,±6.24), decoded from
+  live bytes 74448B); mid-edge windows blocked by sibling dressing (skeps
+  +0.839, logpile +0.745, garden-0032 +0.609 — all < 1.4 pinch law).
+  (2) lavender-0040 perimeter saturated at TRUE dims (best +0.851 vs
+  stile-001; both end-edges blocked by sibling beds 0053/0027).
+  (3) lavender-0053 W end LEGAL: origin **(−17.845, 84.294) yaw −135°**,
+  worst neighbor +6.716 (ninesbridge/orchard-0059), rim 85.6–88.7 ∈
+  CITY-PLAN district band [70,100], host kiss −0.003 (designed edge mount),
+  ninesbridge approach-cone 150° off-axis at 18.08m, echoarch 160.7° at
+  27.2m — both double-clear of the 25° half-angle.
+- **Build arc**: v2 `b14b2813` (pair-only, pre-judge); v3 `fa0b133e`
+  (strip ends at bed edge) native 18m **FAIL** — strip read as a decal pad,
+  continuity missing, second cap value-collapsed (rig
+  `reviews/dress100-fieldcross-v3`); v4 **`41a86024c41b619e`**
+  (deterministic ×2): corridor extended 6.5m past the furniture with
+  irregular mown collars, darker worn line 0x877a5f full length, stepped
+  caps 0.18/0.36 with oversized 0.68 pale caps, foot chips kill the float.
+  TRUE dims 2.170×6.810m (half 1.085×3.405, local center +0.242/−3.405),
+  y 0..0.416, 7 nodes, decode ALL PASS (grounded, budget 3–25 ✓).
+- **PENDING NEXT TICK (in order)**: v4 dims differ from the sited v3 dims
+  (z extent 3.15→6.81, center moved) — RE-GATE the pose fresh (SAT/rim/cone
+  on TRUE v4 dims + terrain preflight at the corridor footprint; corridor
+  extends away from ninesbridge, expected legal but MUST re-verify);
+  native 18m + close judgment of v4 (native 1210 at budget exhaustion, one
+  paced retry owed); hash-gated placer (dress-96 chassis) → upload/spawn
+  `nx-dress-nw-fieldcross-001` → idempotent rerun → two-way MCPL walk
+  through corridor + trench → ledger close. Rotation after placement:
+  NE round-3 item 9 (bellows). SW lamps unchanged (0 of 3, Bill a/b/c).
+- **Probe self-catches this tick (disclosed)**: (a) inline-python
+  nested-quote collision served a 9-byte "not found" stub as the orchard
+  GLB — sha check caught it, re-fetched via the correct `/library/store/`
+  path; (b) my debug sweep's normal transform dropped the sign on the dz
+  terms (mirrored yaws) — re-derived with
+  `dirw(dx,dz)=(dx·c+dz·s, −dx·s+dz·c)` before trusting any 0053 result;
+  (c) the hedgerow-stub elaboration inflated the piece to 8.4×4.4m and
+  saturated every candidate pose — the bed itself is the boundary mass
+  (grounding law), reverted to the queue item's named shape.
 
 ### dress-99 — SW offering niche (round-3 item 18, PLACED, LIVE)
 
