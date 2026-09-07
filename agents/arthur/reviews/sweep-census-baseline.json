@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 265,
+ "count": 266,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -2171,7 +2171,7 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/59534b10122e6b47.glb",
+   "lib": "store/77cab2c3cc3a39c7.glb",
    "bbox": {
     "min": [
      -6.5,
@@ -4100,6 +4100,40 @@
    }
   },
   {
+   "id": "nx-dress-sw-incense-001",
+   "kind": "thing",
+   "pos": [
+    -55.475,
+    -0.0316,
+    -61.329
+   ],
+   "yaw": -0.9206611804270088,
+   "scale": 1,
+   "lib": "store/c66c4fbfd0adb07b.glb",
+   "bbox": {
+    "min": [
+     -0.761,
+     -0.014,
+     -0.77
+    ],
+    "max": [
+     0.759,
+     1.286,
+     0.75
+    ],
+    "size": [
+     1.52,
+     1.301,
+     1.52
+    ],
+    "center": [
+     -0.001,
+     0.636,
+     -0.01
+    ]
+   }
+  },
+  {
    "id": "nx-dress-sw-prayer-001",
    "kind": "thing",
    "pos": [
@@ -5343,7 +5377,7 @@
    ],
    "yaw": 5.027,
    "scale": 1,
-   "lib": "store/baf4c9945679fc15.glb",
+   "lib": "store/103be93e19def0aa.glb",
    "bbox": {
     "min": [
      -4.1,
