@@ -4900,4 +4900,6 @@ fixes ≈ 6 F.)
 
 - [city-32] 16th hold — register live-fresh 13/13 EXACT (worst 0.0006m potter, worst yaw 0.00004rad, libs ledger-matched incl reedpool 7d770620 struct-81 cure + angler 6ee5b4b0 city-11); census 287==287 quiet 0/0/0; band r33-55 58 occupants all classified zero new off-spoke (ring straddlers woodyard/inn/windmill/stable + attachments, W-spoke mill+sign per plan list, approach lamp lights, artwalk h-series standing, mosaic-0048 wave-2 family); amphi HOLD intact (-23.32,37.31) lib 95a98c74; rider hosts unmoved b31/b32/b33 co-located; IMPROVE-PLAN zero OPEN rows (none city-owned); blocked on Bill: amphi 3-option disposition / wave-2 nvp-105 blessing / rider eye-gates b31-b33; zero mutations zero uploads zero verbs (D+0, E+0)
 
+- [city-33] 17th hold — register live-fresh 13/13 EXECUTED tuples exact (worst 0.0005m, libs ledger-matched incl reedpool struct-81 cure + angler city-11); census 287==287 quiet 0/0/0; band r33-55 58 occupants all classified zero new off-spoke arrivals; amphi HOLD intact (-23.32,37.31) lib 95a98c74; rider hosts nx-dress-harvestcart/milkstand/churn unmoved with riders b31/b32/b33 co-located; shard zero OPEN rows (no SHARD section in IMPROVE-PLAN); blocked on Bill (amphi 3-option, wave-2 nvp-105 blessing, rider eye-gates b31-b33); zero live-world mutations (D+0, E+0)
+
 **Running total: 2370709 / 2000000**
