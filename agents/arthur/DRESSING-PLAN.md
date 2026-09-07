@@ -1,6 +1,34 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-137 — lawful HOLD (28th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
+  real exit 0 at tick-start HEAD 6f42def7 (city-82 sibling); interlane md5
+  f6254cd0 pin-exact. Fresh census **294 steady** — epoch diff vs
+  dress-136 capture +0/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-137.py` HOLD_VERIFY_PASS exit 0, fresh UA'd
+  fetch; capture saved /tmp/dress137-census.json for the dress-138
+  epoch); dress domain 45 = 29 fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16
+  legacy. Round-3 closers PINS_EXACT 4/4, all deltas exactly 0.0:
+  foxden 856deec5, lanternhook 639c5480, seats cb34bd36, streamstones
+  aabbc23d (radian law, no yaw guard).
+- **Shard/intake (re-checked at source)**: IMPROVE-PLAN all 9 sharded
+  `nx-dress-` queue rows terminal (rows 29–38 + sw-prayer row 5 —
+  EXECUTED/DROPPED/CLOSED); no round-4/5 section (grep 0); survey tag
+  max 54. Zero dress intake (survey-56 routed zero dress items; sibling
+  sweep-99's uncommitted entry routes zero — clean sweep, no notes).
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains
+  the two one-line rulings in `reviews/dress-round3-eye-gate.md`;
+  either releases real placement work next tick.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-136 — lawful HOLD (27th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
