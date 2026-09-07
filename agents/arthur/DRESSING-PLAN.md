@@ -2235,3 +2235,34 @@ Bill-ruled). REPAIR-REGISTER zero nx-dress.
 - Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
   policy call, or verdicts on the four-district eye-gate circuit
   (agents/arthur/reviews/dress-districts-eye-gate.md).
+
+**STATE AT dress-66 (2026-09-06, pipeline hold tick — 46th consecutive)**:
+lawful HOLD — every path closed fresh. Shard queue EMPTY at source
+(IMPROVE-PLAN.md md5 a3bcf38c, byte-stable since dress-65 verified via
+`git log ee112e8..HEAD` empty on the path; 9/9 `nx-dress-*` Round-1
+rows terminal — 5/29/30/31 DROPPED native rejudge, 32/33/34/37/38
+EXECUTED reseats; round-2 intake carries ONLY `nx-dress-fountain`:
+DRESS-domain by routing but legacy-core off-limits set, "ownership is
+Bill's call" per row text — DOMAIN LAW forbids without his verdict).
+SW lamps Bill a/b/c bound, spend 0 of 3 — fresh kind-law + id-token
+recount: exactly 3 live SW r>=35 lights (approach-sw-lamp-001-l r39.7,
+-002-l r55.4, nx-mile-sw-013-l r64.0). Eye-gate fd677cae zero VERDICT
+lines. Hold verification: 11/11 district installs PIN_EXACT (lib prefix
++ comps-empty + scale-1) vs the dress-22 authoritative table on fresh
+census 260 HTTP-200 first fetch, PLUS 27/27 live-vs-live deep-equal vs
+the plan-verified dress-61 capture, id-diff 0/0, lights 38; 27 nx-dress
+= 11 fleet + 16 legacy by district-qualified-id arithmetic. Gate ALL
+PASS real exit 0 at tick-start HEAD ee112e8 (own dress-65; no mid-tick
+advance observed before filing). Probe self-catches (17th tick-class,
+three same-tick): (1) coordinate-quadrant predicate classified NW ids
+as SW — district identity comes from the id token, geometric quadrant
+guesses are the wrong instrument; (2) legacy-exclusion token filter
+overcounted fleet as 25 — fleet membership is the 4-component
+district-qualified id law, not name tokens; (3) census `scale` can be
+scalar 1, not a list — isinstance check required. World correct every
+time; all three resolved at source. Interlane f6254cd0 steady. Foreign
+dirt untouched. Zero world mutations, zero uploads, zero shared-budget
+use, no visual PASS claimed.
+- Standing unblock paths (say-once, unchanged): Bill's SW lamp a/b/c
+  policy call, or verdicts on the four-district eye-gate circuit
+  (agents/arthur/reviews/dress-districts-eye-gate.md).
