@@ -1032,3 +1032,68 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   are dissent/probe records on standing rows, not new confirms) / 0
   dropped. Zero world mutations, zero uploads, zero comp edits, zero
   shared-budget use.
+
+
+## Judged index (survey-23)
+
+- survey-23 (2026-09-07, NATIVE 2/8 + ZAI fallback 6/8 disclosed —
+  native hard down: 1210 x5 consecutive across distinct objects
+  (orchard-rows x2 incl. paced retry, meridianstair x2 incl. paced
+  retry, well x1); echoarch + incense judged NATIVE before the flap,
+  incense NIGHT frame also native; 18m gameplay, fresh live store
+  bytes 8/8 curl UA on exact census-23 libs, served-shas pinned):
+  DEBT-CLOSURE + NEVER-JUDGED LEGACY-CORE slice. Slice = echoarch
+  (struct-55 fixed bytes 103be93e, first independent NATIVE read on
+  the cure) + meridianstair (verify cluster tie-break attempt) + 6
+  never-judged objects (incense-001 dress-79 arrival, orchard-rows-001
+  dress-74 arrival, well/stablebench/bench-plaza/charcoal legacy-core
+  first reads). Court EXCLUDED (improve-30 in flight — dirty
+  mkv3-ring.ts + IMPROVE-PLAN hunk). Comp bags census-confirmed EMPTY
+  on all 8 (comp={}, compKeys=[]) — static-chassis caveat does not
+  apply. Verdicts: ECHOARCH NATIVE CLEAN — struct-55 cure corroborated
+  (stepped two-fins mouth reads, timber misread gone, crush gone,
+  zero floats/voids; semantic margin: reads entrance-notch wall not
+  literal spanning arch — design note, routed as closure note).
+  MERIDIANSTAIR ZAI fifth vote — base-read flag REPRODUCED (P2-R
+  base ~24px above contact, 615-630 y434-438): cluster now 3-2 TOWARD
+  defect, native tie-break still owed; pins 1-of-3 fifth vote; NEW
+  six-posts-read-as-five merge sub-finding. INCENSE NATIVE
+  CLEAN-with-margin — concur dress-79 (day: bowl+legs+ash-ring
+  grounded, heat correctly absent per polish-278 day law; night:
+  warm ember signature present, bound to geometry, quiet not glare,
+  zero floats; chassis no-bloom/no-spill limits named, judge's
+  lighting fixes are chassis-artifacts not defects). ORCHARD-ROWS
+  ZAI CONFIRM reframed Sev 4 — reads fence/trellis not orchard
+  (solid-rect rails, zero canopy volume, artifact-tier fruit
+  specks); committed design intent IS espaliered fruit rows, judge's
+  own caveat grants trellis-success → identity-marginal probe routed
+  DRESSING-PLAN intake, not a hard defect. WELL ZAI CONFIRM Sev 3
+  (identity rests on bucket+rope alone; no windlass; no water read;
+  severe value crush; 1px rope) — off-limits set, IMPROVE-PLAN
+  candidate row, Bill's call. STABLEBENCH ZAI CLEAN-with-margin
+  (bench+lamp cluster instant, seat-height law holds; margins:
+  olive-on-olive hue-flat timber read, lamp-head ΔL-vs-sky risk,
+  2px bench-post merge at LOD). BENCH-PLAZA ZAI Sev 4 candidate
+  (backless bench marginal — rail/fence second-guess; 3-4px legs
+  shimmer threshold; joint notches read gaps) — off-limits set,
+  Bill's call. CHARCOAL ZAI CONFIRM Sev 3 (no vent, turf blob, pile
+  crushed to void, smoke = detached dark dashes reading artifacts —
+  geometry not comp, bag empty) — off-limits set, Bill's call.
+  Routing: STRUCTURES-PLAN intake (echoarch closure + meridianstair
+  fifth vote, status block updated — echoarch fully closed);
+  DRESSING-PLAN intake (orchard-rows identity probe); IMPROVE-PLAN
+  SURVEY CANDIDATES survey-23 sub-section (well + bench-plaza +
+  charcoal rows). Grep-verified zero open duplicates pre-append.
+  Census 266 vs survey-22 snapshot 265: +1 arrival
+  nx-dress-sw-incense-001 (dress-79 committed 1693e21, tuple-exact);
+  1 lib flip nx-struct-echoarch baf4c994->103be93e POS_SAME (struct-55
+  committed 182b7cf); 0 departures; lights 38. Gate: ALL PASS real
+  exit 0 first try at f59ee84 (my own survey-22 at tip; ledger law
+  EXACT 2370330). improve-30 foreign hunk left unstaged (filtered
+  staging, survey-19/22 precedent). Verdicts 4 confirmed (orchard-rows
+  reframed Sev 4, well, charcoal + meridianstair vote-record) / 3
+  clean (echoarch, incense, stablebench) / 0 dropped. Native re-judge
+  debt disclosed on all ZAI findings (esp. meridianstair tie-break
+  and the three off-limits rows). Zero world mutations, zero
+  uploads, zero comp edits, zero shared-budget use. One ledger
+  append (routing).

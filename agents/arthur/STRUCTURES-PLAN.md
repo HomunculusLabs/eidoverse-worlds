@@ -2303,3 +2303,39 @@ tie-break owed; Gate-1 pin likely genuine), waterstair gameplay-view
 dissent (2 independent survey reads vs struct-53's front/aerial —
 contract question: 18m gameplay water band enough, or per-step teal
 facings wanted), orreryring margin-only.
+
+**SURVEY INTAKE (survey-23, 2026-09-07)** — read-only probe notes, not
+verdicts:
+
+- `nx-struct-echoarch` — NATIVE CLEAN on struct-55 FIXED bytes 103be93e
+  (served-sha 69f91d8a, fetched fresh this tick): fins read as two
+  facing stone walls with a stepped parabolic mouth (arms high, dipping
+  to the center vertex) — the struct-55 cure CONFIRMED natively on the
+  exact live bytes; timber-strake misread GONE (mottled ashlar reads),
+  value crush GONE (was left-third; now narrow-band compression at the
+  lower register only, margin tier), zero floats, zero voids. Semantic
+  margin (design note, not defect): at 18m the mouth reads as an
+  entrance-notch wall, not a suspended spanning arch — the two-fins
+  formulation survives as intended geometry. Native re-judge debt from
+  struct-55's ZAI after-judge: PAID. Evidence:
+  reviews/survey23-slice/nx-struct-echoarch/
+- `nx-struct-meridianstair` — FIFTH vote (ZAI fallback — native 1210 x2
+  + paced retry burned this tick; native tie-break STILL owed): base-read
+  flag REPRODUCED — middle-gate right post base terminates ~24px above
+  the contact line (615-630, y434-438 vs line y458-462), bare unshadowed
+  ground beneath. Verify cluster now 3-2 TOWARD defect (survey-19/20/23
+  ZAI see the gap; survey-21/22 ZAI do not) — this is the tie that
+  demands the native read; recommend one close-up frame of P2-R before
+  sign-off either way. PINS fifth vote, 1-of-3 (P3-right reads; P1+P2
+  caps empty at 18m — if pin-per-gate is intent, two gates fail the
+  read). NEW sub-finding: six posts read as five at 18m (tallest-gate
+  left post merges with the middle gate's left post near x540). All
+  other reads PASS (identity instant, lattice shadows good, trellis
+  crowns attached). Evidence:
+  reviews/survey23-slice/nx-struct-meridianstair/
+
+**SURVEY INTAKE status**: echoarch fully closed (struct-55 EXECUTED +
+survey-23 native CLEAN on fixed bytes). Remaining intake: meridianstair
+verify cluster (3-2 toward defect, native tie-break owed; Gate-1 pin
+likely genuine), waterstair gameplay-view dissent (native-backed,
+contract question for owner), orreryring margin-only.

@@ -1672,6 +1672,41 @@ rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
 
 ## SURVEY CANDIDATES (round-2 intake)
 
+**survey-23 sub-section (2026-09-07, ZAI fallback 6/8 + NATIVE 2/8
+disclosed — native hard down this tick: 1210 x5 consecutive, paced
+retries burned on orchard-rows and meridianstair; every fallback
+verdict names its judge):**
+
+- `nx-dress-well` — ZAI Sev 3 candidate (legacy-core off-limits set,
+  probe-only, Bill's call — same routing shape as fountain survey-8 and
+  hutch survey-20): at 18m the identity rests entirely on the suspended
+  bucket + rope; no windlass drum/crank between the posts (span
+  x441-520 empty), no water read in the mouth (base reads as a solid
+  battered block, zero teal/blue, zero rim highlight at the top edge),
+  value crush severe (entire object in darkest 20% band; bucket ~#141414
+  merges with posts ~#1f1810; roof soffit melts into post tops), 1px
+  rope. Well-envelope grammar note: roof span == base span, no waist.
+  Evidence: reviews/survey23-slice/nx-dress-well/
+- `nx-dress-bench-plaza` — ZAI Sev 4 candidate (off-limits set,
+  probe-only, Bill's call): backless bench reads marginally — the
+  second-guess reads are "low rail / fence segment / plank barrier";
+  leg-gap + shadow carry the furniture read alone, 3-4px legs at
+  shimmer threshold; plank-joint notches at top silhouette (x455-462 /
+  x530-537, y365-374) read as gaps at 18m; no backrest geometry. Fix
+  direction: lit seat-top face + tighter shadow + wider legs. Evidence:
+  reviews/survey23-slice/nx-dress-bench-plaza/
+- `nx-dress-charcoal` — ZAI Sev 3 candidate (off-limits set, probe-only,
+  Bill's call): kiln function not legible at 18m — reads tan dome with
+  grass clumps (turf crown merges to one olive blob, no clump
+  separation); NO vent aperture anywhere on the mound; charcoal pile
+  x510-592 value-crushed to a near-black void blob reading as a
+  terrain hole; smoke = 3-4 detached dark dashes at y310-332 fully
+  disconnected from the crown and DARKER than sky (reads insects/
+  artifacts — comp bag census-confirmed EMPTY this tick, so these are
+  geometry dashes, not a comp; a light-valued vent-anchored plume is a
+  dress/improve decision). Evidence:
+  reviews/survey23-slice/nx-dress-charcoal/
+
 **ROUTING (town-4, 2026-09-06, Bill 24h-usefulness directive):** candidates
 with no live shard prefix (`nx-welcome`, `nx-court`, `nx-forge`, `nx-cistern`,
 `nx-temple-*`, `nx-cultivation-*`, `nx-craft-*`, `nx-gallery-*`, `nx-wild-*`)

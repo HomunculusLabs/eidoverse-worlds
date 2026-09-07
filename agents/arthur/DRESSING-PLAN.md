@@ -2669,6 +2669,25 @@ spend 0 of 3). Verdicts: eye-gate packet fd677cae unchanged, zero
 VERDICT lines (grep exit 1 fresh). Hold verification: standing gate ALL
 PASS real exit 0 at tick-start HEAD 670793d (dress-72 own). Fresh
 census 260 / lights 38 (kind histogram thing 222 / light 38). 11/11
+
+**SURVEY INTAKE (survey-23, 2026-09-07)** — read-only probe note, not a
+verdict:
+
+- `nx-dress-nw-orchard-rows-001` — ZAI CONFIRM at 18m gameplay (native
+  1210 x2 + paced retry burned; native re-judge owed): identity read =
+  post-and-rail FENCE/TRELLIS, not orchard rows — square-cut posts at
+  x~322/428/533/633, solid-rectangle rails y324-341/y349-368 with zero
+  canopy orchard volume, crenellation-like tabs on top of the rails;
+  red fruit specks (450,330)/(405,352)/(610,357) at 4-6px read as
+  artifacts, not fruit. Reframed against the committed design intent
+  (espaliered fruit rows — the judge's own caveat: "if intended as
+  fence/trellis, it succeeds moderately"): Sev 4 identity-marginal
+  probe for the dress lane — does the espalier grammar want canopy
+  mass at the rail tops, clustered fruit, or is the trellis-read the
+  intent? Row alignment / grounding PASS (posts grounded, one panel
+  gap clean). Evidence:
+  reviews/survey23-slice/nx-dress-nw-orchard-rows-001/
+
 district installs PIN_EXACT programmatic (store/-aware lib prefix, pos
 within 0.01, restated yaw, comps-empty, scale-1) vs the authoritative
 dress-43/44 table; 27 nx-dress = 11 fleet + 16 legacy intact. Probe
