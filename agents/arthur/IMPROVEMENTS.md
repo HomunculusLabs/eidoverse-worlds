@@ -4926,4 +4926,6 @@ fixes ≈ 6 F.)
 
 - [city-40] 24th hold — register 13/13 EXECUTED re-verified; census 289==289 quiet vs city-39 capture (zero arrivals, zero departures, zero moves); band r33-55 58 occupants zero new off-spoke; amphi HOLD intact original seat (-23.32,37.31) yaw 0; farm-prop hosts unmoved, rider world positions epoch-stable (probe disclosure: rider-to-host dist 3.20m for b32/b33 is the legitimate host-local anchor offset, epoch diff empty is the invariant); shard IMPROVE-PLAN line 1176 routes no city prefix zero OPEN rows; blocked on Bill (amphi 3-option disposition, wave-2 nvp-105 blessing, rider eye-gates b31-b33); zero mutations zero uploads zero verbs (D+0, E+0)
 
+- [city-41] 25th hold — register 13/13 EXECUTED, remaining rows all HOLD-for-Bill; census 289==289 quiet vs city-40 capture (0 arrivals/0 departures/0 moves); band r33-55 non-procession ids all register-known (zero new off-spoke); amphi intact at original seat (-23.32,37.31); farm-prop hosts unmoved, riders b31/b32/b33 co-located 0.0mm; shard routing (IMPROVE-PLAN line 1176) routes no city prefix, zero OPEN rows; blocked on Bill: amphi 3-option disposition, wave-2 nvp-105 blessing, eye-gates b31-b33; zero mutations zero uploads zero verbs (D+0, E+0)
+
 **Running total: 2370715 / 2000000**
