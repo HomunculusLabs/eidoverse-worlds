@@ -1724,6 +1724,18 @@ bytes):**
   chassis-no-ambient aggravated; probe only, confirm-or-drop + decode
   law stays with improve lane. Evidence:
   reviews/survey24-slice/nx-town-longhouse/
+  [survey-25 (2026-09-07): NATIVE re-judge on live bytes e3adcd3d
+  (served 2014154288019dcb) — debt PAID, Sev 4 CONFIRMED natively:
+  flank voids reproduce BOTH sides (L x~232-345, R x~590-730 y~315-478
+  zero material variation; shadow diagonal is lighting, not material),
+  NO stone footing band anywhere (wall value uninterrupted to ground
+  y~478), chimney x~360-395 y~185-235 still reads modern metal flue
+  w/ rain cowl (under-scaled for 3 hearths), roof plane flat unbroken.
+  NEW sub-finding: porch canopy x~345-615 y~310-340 reads POSTLESS
+  (cantilevers ~40% into daylight, no supports to deck y~450) —
+  floating-read class, decode before executing. Native outranks the
+  ZAI caveat; chassis-aggravation still expected part. Evidence:
+  reviews/survey25-slice/nx-town-longhouse/]
 
 **ROUTING (town-4, 2026-09-06, Bill 24h-usefulness directive):** candidates
 with no live shard prefix (`nx-welcome`, `nx-court`, `nx-forge`, `nx-cistern`,
@@ -1834,6 +1846,19 @@ open duplicate notes for these objects.
   walk 5/5 ALL_PASS worst 0.370m. Idle-guard clear (24h git tail: read-only
   sweep/survey pins only). Gate ALL PASS exit 0 at 5b7518f pre-tick and
   re-run at fd0fa73 pre-mutation (mid-tick sibling HEAD advance absorbed).]
+  [survey-25 (2026-09-07): ZAI fallback corroboration on CURED bytes
+  01b78fdd (served 0ff7b5de90d9d4d1; native 1210 + paced retry burned):
+  cure CONFIRMED at 18m — pure-black blob GONE; ~13-15 end-grain discs
+  read (x~376-536 y~377-412, pale split faces vs bark sides), 5-board
+  windbreak seams x405/434/463/494 verify the spec, massing hierarchy
+  crisp (roof slab / posts / backwall / log row / stump prop), zero
+  floats, zero voids, all bases at consistent ground line y~411-413.
+  MARGINS (not defects): stack reads 2 courses deep (row, not hoard);
+  axe head protrusion only ~2-4px at this distance; stump/axe contact
+  shadow weak; dark sliver x~558-582 y~403-411 between right post and
+  stump (lying log or shadow — source-check tier). Corroborates CLEAN;
+  row may close when improve lane concurs. Evidence:
+  reviews/survey25-slice/nx-town-woodyard/]
 
 - `nx-welcome` — Sev 3 (native survey-7): left stub arm detached from
   post (~5px sky gap x466-470 y341-345); welcome text dark-on-dark
@@ -1955,6 +1980,21 @@ open duplicate notes for these objects.
   openings (y 2.62 vs 2.3 header) — reads as roofline tie in the native
   judge's read, routed to round-1 eye-gate with this row. Evidence:
   reviews/improve30-court/{before,after}/.]
+  [survey-25 (2026-09-07): ZAI fallback corroboration on CURED bytes
+  77cab2c3 (served 06b47d4fb436d642; native 1210 x2 + paced retry
+  burned — owner's native after-judge outranks fallback dissent):
+  ALL FIVE survey-8 defect classes read FIXED — both openings
+  warm-filled (dome-oven ember cluster (218,368)-(240,396); hearth
+  firebox (698,373)-(737,396)), four jamb sconce beads read attached,
+  zero orphans/zero horns/zero floating dots, beam spans the gap
+  (462,288)→(498,301). RESIDUALS (margin-tier, fallback-judged):
+  bench reads as solid gray block x~524-586 y~398-446 (U-form
+  unresolved at 18m from this angle); lamp post not visible in this
+  gameplay frame (chassis vantage; F5 decode + owner walk stand);
+  portal slot x~466-496 dark upper 80% (judge suggests a bead under
+  the beam ~(480,310)); left-shed sconce pair height-mismatched
+  (296 vs 337) vs right-shed level pair. Corroborates-with-residuals;
+  no reopening. Evidence: reviews/survey25-slice/nx-court/]
 - `nx-forge` — Sev 4 identity-marginal (survey-8, ZAI fallback): reads
   furnace/oven-hut, not forge — anvil illegible (flat plate x532 y380,
   no horn/waist/stump), no hood over hearth, left appendage

@@ -1161,3 +1161,66 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (filtered staging, artwalk-34 class). Verdicts 1 confirmed / 4 clean
   (3 with margins) / 2 debt-corroborations / 0 dropped. Zero world
   mutations, zero uploads, zero comp edits, zero shared-budget use.
+
+## Judged index (survey-25)
+
+- survey-25 (2026-09-07, NATIVE 3/6 + ZAI fallback 3/6 disclosed —
+  native flap: 1210 x2 on the longhouse+court first-call batch, paced
+  retry recovered LONGHOUSE native while court burned both; orreryring
+  first call hit MY OWN bad path (fail-closed file-not-found, not a
+  provider flap — re-issued correctly and landed native); woodyard +
+  orchard-rows burned retries = ZAI fallback; 18m gameplay, fresh
+  live store bytes 6/6 curl UA on exact census-25 libs, served-shas
+  pinned): NATIVE-DEBT + CURE-CORROBORATION slice (severity backlog
+  drained; every slice object has a standing row — no new candidates
+  needed, annotations + intakes only). Slice = longhouse (survey-24
+  native debt), waterstair (struct-57 re-auth bytes 2b418077, first
+  independent read), court (improve-30 cured bytes 77cab2c3),
+  orchard-rows (dress-81 cured v7 bytes 962c5fb0), woodyard
+  (improve-32 cured bytes 01b78fdd), orreryring (margin debt, third
+  read). Verdicts: LONGHOUSE NATIVE CONFIRM Sev 4 — survey-24 debt
+  PAID (flank voids both sides L x~232-345 R x~590-730, no footing
+  band to ground y~478, chimney reads modern metal flue, roof flat
+  unbroken; NEW sub-finding: porch canopy x~345-615 y~310-340 reads
+  POSTLESS, cantilever ~40% into daylight — floating-read class,
+  decode before executing). WATERSTAIR NATIVE dissent on re-auth
+  bytes — water reads ONLY as top pool (azure x413-570 y345-376, sole
+  saturated hue); cascade faces y376-390 100% brown, NO foot pool
+  (zero blue px in base), silhouette reads BOX not stairs; palette
+  brighter azure ~#3d7abc than #506a78 spec (legibility win, off-spec
+  flag); geometry clean. COURT ZAI corroborate-with-residuals on cured
+  bytes — all five survey-8 defect classes read FIXED (warm fills,
+  sconce beads, zero orphans/horns/floats); margins: bench reads
+  block/crate x~524-586, lamp post not in this chassis frame, portal
+  slot dark upper 80%, left sconce pair height-mismatched. WOODYARD
+  ZAI corroborate-CLEAN on cured bytes — blob GONE, 13-15 end-grain
+  discs, windbreak seams verify, zero floats/voids; margins: 2-course
+  depth, axe-head protrusion 2-4px, stump shadow weak. ORCHARD-ROWS
+  ZAI corroborate-EXECUTED on v7 — reads trained orchard rows (not
+  fence/forest), trunks+flare read, no bare rails, fruit trusses read;
+  ~85:15 canopy (greener than 75-80 target); margin flags: two
+  detached-sprout candidates w/ 1-3px sky seams, plant-C flat top,
+  tier variance ~3px, tilt under 2px. ORRERYRING NATIVE third read —
+  UNANIMOUS with survey-24 (4 stones, near semicircle empty, mixed
+  placement styles 3-bare/1-mounded-inset, zero floats); stays
+  margin-tier. Routing: longhouse native-confirm annotation +
+  court + woodyard corroborations on standing IMPROVE-PLAN rows;
+  waterstair + orreryring third-read intakes STRUCTURES-PLAN; orchard
+  corroboration DRESSING-PLAN. Grep-verified zero open duplicates
+  pre-append. Census 267 steady 0/0 vs survey-24 snapshot; 3 lib
+  flips ALL POS_SAME + ledger-matched sibling cures (orchard-rows
+  dress-81, waterstair struct-57, woodyard improve-32 — all
+  classified by sweep-58's epoch corrections); lights 38. Gate: ALL
+  PASS real exit 0 first try at afcc0c7; HEAD advanced mid-tick to
+  593f37c (dress-82, foreign files) — re-gated ALL PASS exit 0
+  (polish-270 epoch law). Fetch self-catch: first orchard fetch
+  hand-transposed the lib hash (9-byte 404 file, fail-closed);
+  re-derived verbatim from the census JSON. Edit self-catch: court
+  annotation fuzzy-matched a doubled "standing" + landed mid-
+  parenthetical (waysign-19 corruption class) — caught on post-patch
+  region re-read, repaired same tick, block relocated to the clean
+  post-EXECUTED anchor. Verdicts 2 confirmed (longhouse, waterstair)
+  / 2 corroborations-CLEAN (woodyard, orchard) / 1 corroborate-with-
+  residuals (court) / 1 margin-debt third read unanimous (orreryring)
+  / 0 dropped. Zero world mutations, zero uploads, zero comp edits,
+  zero shared-budget use.

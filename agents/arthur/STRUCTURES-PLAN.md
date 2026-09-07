@@ -2483,4 +2483,87 @@ verdicts:
   polish pass: 4-8 more stones prioritizing the near arc + unify
   placement band/style. Evidence:
   reviews/survey24-slice/nx-struct-orreryring/
+- `nx-struct-orreryring` — survey-25 third read (NATIVE, live bytes
+  ea4f2317 same served sha as survey-24): UNANIMOUS with survey-24 —
+  4 stones countable (A (372,394) bare-on-rim 9 o'clock; B (437,380)
+  far rim 10:30; C (536,393) MOUNDED-INSET outlier near mid-ring
+  2:45; D (587,383) far-right rim 2:00), entire near/front
+  semicircle EMPTY (~180-190°, arc (372,400)→(480,410)→(620,398)
+  fully visible + secondary ~45° gap A→B), zero floats, disc +
+  3 concentric mustard rings deliberate. Native independently
+  CONFIRMS the mixed-styles finding (3 bare vs 1 mounded-inset).
+  Stays margin-tier (2 unanimous reads, native-backed); numbers for
+  the future polish pass stand. Evidence:
+  reviews/survey25-slice/nx-struct-orreryring/
+- `nx-struct-waterstair` — survey-25 first read on struct-57's
+  RE-AUTHORED bytes 2b418077 (served 9885ce21e7d84419; NATIVE):
+  re-auth NOT yet carrying the 18m read — water reads ONLY as the top
+  pool (azure field x413-570 y345-376, the sole saturated hue in
+  frame, unambiguous water); cascade faces y376-390 read 100% brown
+  (zero teal bands on risers), NO foot pool (base x375-585 y376-408
+  zero blue pixels), silhouette reads BOX not stairs (no terraced
+  step-down in outline; flat rail y335, vertical flanks, plinth),
+  interior bands 4-6px low-contrast. Palette now BRIGHTER azure
+  (~#3d7abc) than the #506a78 slate family — legibility win, off-spec
+  palette flag. Geometry clean (zero floats, watertight, contact
+  shadow consistent). Judge's own fix path: teal band per riser +
+  foot-pool disc + sawtooth silhouette. NATIVE verdict stands on
+  fixed bytes; struct-57's own after-judge + Bill eye-check govern
+  whether the 18m water-stair contract is met. Evidence:
+  reviews/survey25-slice/nx-struct-waterstair/
 
+
+## struct-59 (2026-09-07): R4-4 THE STILLWIND WALL — v2 built + judged,
+## placement deferred to first approved tick
+
+Cadence 59%3=2 → commission tick. Shard verified EMPTY fresh (zero OPEN
+nx-struct rows in IMPROVE-PLAN; struct-47/48/58 closures hold). Intake:
+orreryring margin-only (design-note tier, no re-probe owed). Round 4 stood
+at NW/S/E — the W mid-ring spoke (r44–62, beyond windmill r40, before the
+temple district r66+) was the honest gap; R4-4 completes the cardinal set.
+
+CONCEPT: one idea — STILL WIND. The windmill turns with wind; this wall is
+wind caught in ashlar. Serpentine folly wall N-S on the W spoke: ONE full
+sine period in plan (A 1.65, λ 15.4, lean ±33.9°), elevation swelling
+1.75→2.85 at center where a round-arched gate pierces it perpendicular to
+the local tangent (the gate turns you as you cross). Dark coping traces
+the double curve; full-height buttress piers at quarters + ends; brass
+beads at the impost springs (dusk lineage, no new light).
+
+SITE (derived, preflighted): W spoke center, wall centerline local
+x = −1.0 from entity origin, entity pos (−52, −0.031, 0) yaw 0 — east bow
+face reaches x −49.2 toward the village, west bow −55.0; 9.6m clear of the
+W road (x −42.4). Terrain 5-point preflight: 7.4mm spread (−0.0234..
+−0.0308), flat; PY = −0.031 embeds the far end 7mm (grounded). Placer
+TERMINAL list (SAT set): windmill, artwalk-b10, sign-mill-001, millrace,
+mosaic-0052/0059, nw-mile-001/002, approach-nw-lamp-001-l.
+
+EVIDENCE: v1 sha 541703923bea120f ×2 deterministic; decode audit CLEAN
+(gate clear-zone 0 stone verts below spring; beads delta 0.0000; coping
+present at all 5 stations). NATIVE judging (vision restored mid-tick after
+1210 ×2 + paced retry): top view CONFIRMS the S-curve (two opposing bows,
+piers read); aerial PASS on core identity (arch curved + see-through,
+coping continuous, no floaters); front/gameplay/night disclose the class
+defects → v2 authored same tick: (1) piers 0.05→0.22/side projection
+full-height (v1 read as coping tabs, not buttresses — both judges); (2)
+arch ring now PROJECTS 5cm past each face + true keystone 3cm deeper (v1
+flush ring read "dark slot"); (3) self-caught lane violation fixed: v1
+voussoir inner faces gave 1.34m clear < 1.4 law → R 0.85→0.95, ring 0.24,
+clear 1.66m; spring 1.50 with impost shelf 1.41..1.50 (bottom ≥1.4); (4)
+coping dies into pier bodies (v1 cantilevered past termini); (5) pier caps
+flush with coping top (notch read fixed); (6) beads r0.09 on impost crests
+(v1 pair read as singleton at night — one occluded at azimuth; both exist,
+decode-proven). v2 sha 35eab2fbeebcf81170c111019c45dd6ac355b363968d817c
+e029f37c626c9796 ×2 deterministic; 4 nodes (stillwind_0 stone 2040v /
+stillwind_1 copstone 1632v / glow_pinN / glow_pinS KEEP), materials
+stone/copstone/glow2. Frames: reviews/struct59-stillwind/ (v1 10-view set;
+v2 rebuild byte-verified, re-render owed at placement tick — PROBE NOTE:
+v2's visual PASS is NOT claimed; v1-frame judgments drove the v2 edits).
+
+DEFERRED (run-budget cutoff, improve-31 PARTIAL class): upload/spawn
+`nx-struct-stillwind` at (−52, −0.031, 0) yaw 0, post-place tuple verify,
+idempotent rerun, two-way gate walk (P-line legs: (−47.9,0)→(−52.2,−1.4)→
+(−52.3,+1.35)→(−56.2,0) both ways), fresh-census SAT at TRUE decoded
+envelope (x −1.995..1.995 → world −53.99..−50.0; z −7.96..8.35; center
+offsets cx −0.176/+0.267 audited), then this plan's record row + Bill
+eye-check packet. Next tick executes placement FIRST before any new work.

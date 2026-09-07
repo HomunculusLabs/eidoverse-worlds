@@ -2785,6 +2785,22 @@ verdict:
   **CONSUMED dress-81**: native re-judge CONFIRMED the 18m fence-read
   (close view PASS — split verdict, 18m governs identity); cure EXECUTED,
   v7 962c5fb0 reseated at the unchanged tuple — see dress-81 siting log.
+  **survey-25 corroboration** (ZAI fallback on CURED v7 bytes 962c5fb0,
+  served 8749014582c34c44; native 1210 x2 + paced retry burned —
+  dress-81's own native v7 judgment outranks): CURE READS — "reads as
+  trained orchard rows, not fence and not forest edge" (squint-test:
+  hedge-on-a-frame), trunks ~1.8-2.0× post thickness + root flare
+  1.5-1.7× reads, NO continuous bare rails (both interior bays show
+  clean plant-gaps at posts), dangle trusses with red fruit specks
+  read as training-system signature, continuous grounding shadow.
+  Measured canopy:fence ~85:15 (greener than the 75-80 target).
+  MARGIN flags (v8 tier if ever re-opened): two detached-sprout
+  candidates x~397-411 y~303-318 (1-3px sky seam) + x~552-563
+  y~307-319; plant-C upper tier flat-topped ~100px run; tier-height
+  variance only ~3px (target Δ≥8px); trunk tilt under 2px (spec said
+  staggered/tilted); left end gaps 8px vs right end overhangs 13px.
+  Corroborates EXECUTED; no reopening. Evidence:
+  reviews/survey25-slice/nx-dress-nw-orchard-rows-001/
 
 district installs PIN_EXACT programmatic (store/-aware lib prefix, pos
 within 0.01, restated yaw, comps-empty, scale-1) vs the authoritative
