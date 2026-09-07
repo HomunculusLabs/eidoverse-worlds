@@ -476,9 +476,9 @@ identity intent. Rotation stays NW->NE->SE->SW.
 
 ### SE — WILD (round 3)
 10. `nx-dress-se-funguslogs-001` — felled-log cluster with bracket-fungus
-    shelves; wild decomposition, not arrangement. **IN FLIGHT (dress-77,
-    2026-09-07 — BUILT + NATIVE-JUDGED + SITED; placement pending next
-    wakeup; see dress-77 siting-log entry).**
+    shelves; wild decomposition, not arrangement. **DONE (dress-78, PLACED
+    2026-09-07 — dress-77 in-flight item closed; see dress-78 siting-log
+    entry).**
 11. `nx-dress-se-snagdead-001` — one standing dead snag with hollow (bird
     habitat read); leans away from paths, SAT-checked.
 12. `nx-dress-se-mossbowls-001` — moss-lined hollow stones at the forest
@@ -2739,3 +2739,28 @@ a/b/c policy call, or verdicts on the four-district eye-gate circuit
   half x 3.258 / half z 1.015 / center (+0.929, −0.257)) → upload/spawn
   `nx-dress-se-funguslogs-001` → post-place tuple verify + idempotent
   rerun → ledger + commit. Zero world mutations this tick.
+
+### dress-78 — SE fungus-log deadfall (round-3 item 10, PLACED, LIVE — dress-77 item closed)
+
+- **Terrain preflight (dress78-terrain.ts, this tick)**: 5 points flat —
+  origin heightAt −0.0349, OBB corners −0.0382..−0.0317 (6.5mm spread);
+  py pinned to −0.0349. (Terrain agent disclosed 5 benign support-seam
+  abstentions on foreign entities — none near the pose.)
+- **SAT re-gate on fresh census 264**: rim corners 70.3..77.0 ∈ [66,108];
+  forest-0018 +2.569, cairn-0048 +10.408, se-cairn-001 +13.597, artwalk
+  hosts +13m+; ONLY sub-1.4 adjacency = forest-0044 compound bbox +1.255 —
+  handled by the NAMED tier-b gap-bounded exemption (pinned +1.255 ± 0.01;
+  source-true cell clearance 2.05m to trunk cell (44.6, −62.5); real drift
+  still hard-fails). No unexplained sub-1.4 adjacency.
+- **Placement**: `se-dress77-place.ts` (dress-76 chassis) — **PLACED_VERIFIED**
+  `nx-dress-se-funguslogs-001` @ lib store/fbc626eb3f016bd7.glb, pos
+  (40.0, −0.0349, −63.0) yaw 3.66519 rad (210°). 1 verb; idempotent rerun
+  0 verbs (one deduped upload slot, chassis wart). Comps empty (spawn-only
+  family — no comp contract). Post-place census 265, pin exact (independent
+  curl re-fetch).
+- **Lamp budget**: SE spend 0 of 8 — static, no light entity, no budget draw.
+- **Eye-check for Bill**: west shoulder of the SE forest blob, ~75m out along
+  the SE spoke — a storm-felled trunk with root plate lifted toward the
+  standing trees, trunk thrown into the open wild, warm cream fungus clusters
+  massing on the walker-facing flank. Reads as the forest's own deadfall
+  (decomposition clock), not stacked wood.
