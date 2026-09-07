@@ -4399,3 +4399,84 @@ single amber bead at the mast head.
 
 NEXT: 88%3==1 -> place the conoid fan FIRST (queue law), then R9 arc
 begins or shard re-arm scan.
+
+## struct-88 (2026-09-07): CONOID FAN placed PLACED_VERIFIED — queue-law
+## FIRST debt paid (placement + walk + eye-gate, owed by struct-87)
+
+Gate ALL PASS real exit 0 at tick-start 36be05c1 (own struct-87 commit)
+AND re-run exit 0 at 9e421892 pre-bookkeeping (interleave: city-66/67,
+dress-122 landed mid-tick; city-66 correctly classified the conoidfan
+arrival as struct work-in-flight). Interlane f6254cd0.
+
+DECODE-BEFORE-BIND (fresh, this tick): local bbox x -0.85..5.40, y
+0..4.73, z -3.37..3.37; CENTER OFFSET cx +2.275, cz 0 — asymmetric-bbox
+law applied in the placer (grown AABB around world center (26.89, 50.57),
+not the origin). Node census 4/4, glow_cf KEEP present.
+
+TERRAIN: 6pt re-probe at TRUE yaw-corrected corners (next-terrain-
+struct88b.ts; struct-87's 6pt grid probed the +yaw corners, self-catch):
+spread 20.6mm, corner-mean PY -0.0154 (S side ~2cm low; stepped posts
+absorb).
+
+YAW SIGN SELF-CATCH (the tick's core catch): plan recorded "+1.0821
+(beam axis radial outward)" — sign slip. Local +x maps to (cosY, -sinY);
+radial-outward at az28 (compass atan2(x,z)) needs sinY negative ->
+yaw -1.0821. Placed at -1.0821; mast side faces the walk/plaza as
+designed. Placer header carries the full derivation.
+
+SAT: center-corrected both sides (struct-80 census-local-bbox law):
+worst nx-craft-statuary-0052 +2.65, fresh 291-set pre-mutation. PLACER
+DISCIPLINE REPAIR: inherited chassis GROUND regex exempted nx-approach-*
+wholesale; lamp-002-l (vertical post) grown-AABB pinch 1.10-1.20m < 1.4
+law — replaced with films-only exemption + NAMED ALLOWED_ADJACENT
+admission (measured true clearance: post to tip-rail corner 2.22m > 1.4;
+walk e-leg passed the post >= 1.58m live). Fail-closed form; idempotent
+rerun exit 0.
+
+PLACEMENT: upload store/c75f8dfbbe2cf9f6.glb (hash-gated, 0 429s),
+spawn nx-struct-conoidfan @ (25.82, -0.0154, 48.56) yaw -1.0821,
+comps {}, census 291->292, tuple PLACED_VERIFIED, idempotent rerun
+zero verbs. (First run hit my 150s tool ceiling AFTER PLACED_VERIFIED —
+chassis stray setInterval keeps the process alive post-verdict; all work
+landed. No world effect.)
+
+WALK (struct88-walk-conoidfan.ts): 9/9 ALL_PASS maxArrival 0.364 —
+under-canopy mast<->tip BOTH directions via the t~0.8 post gap, flank
+entry to center, outside circuit CW 8m standoff clearing lamp-002-l by
+>= 1.58m on every leg (analytic). Enterable pavilion contract proven.
+
+EYE-GATE: R8 packet extended with the Conoid Fan stop (reviews/
+struct-r8-eye-gate.md) — delivered once. Judge: many straight beams
+from ONE mast, tips riding one iron parabola; dusk = one quiet amber
+bead at mast head. Bill may re-read ZAI renders anytime
+(struct87-conoidfan-v3).
+
+NEXT: 89%3==2 -> R9 build arc begins (candidate: the missing ruled-
+surface family or a new concept), or shard row if commissioned queue
+idle. Refine pool fresh-verified EMPTY at struct-87.
+
+
+
+## struct-89 (2026-09-07): INTERRUPTED-WINDOW RECONCILIATION — struct-88
+## commit closure (struct-9 class), zero re-place
+
+Forensics: struct-88's window completed placement/walk/eye-gate (ledger
+entry rode city-67/sweep-95, exactly-once at HEAD) then died BEFORE its
+own commit — 5 lane files left staged (placer, terrain-b, walk script,
+plan section, eye-gate packet). One live struct fleet process only (PID
+35079, this lane); mid-turn index churn traced to city-68's reset-repair,
+not a duplicate window.
+
+Fresh re-verification THIS tick (nothing carried from memory): gate ALL
+PASS real exit 0 (tick-start cb060cb7, re-observed at 01a81eb6 city-68);
+deterministic rebuild x2 = c75f8dfbbe2cf9f6...c1f exact placer pin
+(self-catch: script writes village_conoidfan3.glb, not _next_);
+idempotent placer rerun ZERO verbs, PLACED_VERIFIED (25.82,-0.0154,48.56)
+yaw -1.0821 lib store/c75f8dfbbe2cf9f6.glb comp {}, center-corrected SAT
+vs fresh 292-set worst nx-craft-statuary-0052 +2.65. Census 292 steady.
+World untouched this tick — the placement's D+E belong to struct-88.
+
+Closed: staged the 5 stranded files by name + this note, committed under
+struct-89, one ledger append. NEXT: 90%3==0 -> REFINEMENT tick if pool
+non-empty (it was EMPTY at struct-87 — re-derive fresh), else R9 build
+(arc candidates: ruled-surface ledger gaps) or shard re-arm scan.
