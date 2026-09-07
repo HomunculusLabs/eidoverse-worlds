@@ -472,6 +472,39 @@ the dress-81 siting-log entry). Rotation next unchanged: NE round-3 item
 spend 0 of 2. Legacy-core survey-23 candidates (well/bench-plaza/charcoal)
 remain Bill's-call probes, not shard work.
 
+**STATE AT dress-82 (2026-09-07, pipeline build tick — placement deferred
+to next tick on run-budget, improve-31 class)**: NE round-3 item 7
+`nx-dress-ne-timberyard-001` BUILT AND NATIVE-ACCEPTED, NOT YET PLACED.
+Concept: squared-timber WORKING yard, distinct from dress-9 woodstack
+(domestic cordwood) by (a) squared milled beams (zero cylinders) in a
+DENSE 4-course crib 6/5/4/3 beams, (b) a sawbuck X-trestle PAIR holding
+one long squared workpiece ABOVE the crib line, (c) clustered offcut
+pile + leaned bark slab, (d) cant hooks on the cradle posts.
+Judge arc (all NATIVE; 1210 flaps on v2-close x2 and one v4 call,
+paced-retry/recovered, disclosed): v1 105fdf8a FAIL (gate read,
+sub-pixel X, caps flattened — accepted-sibling control on dress-80 v6
+PROVED cap-flattening is the solo-rig artifact class, probe pitfall 5);
+v2 80f75205 FAIL (single-course fence rank — courses made DENSE 0.39
+pitch); v3 fb8d849c PASS-marginal (workpiece swallowed below stack
+line); v4 c4954eab FAIL (root cause found: workpiece ran along z —
+foreshortens to ~8px dot from the approach AXIS ERROR since v2);
+v5 **10b449fa8338015eaf53cb309911c3164a09763c007141a4d421b3b53038843c
+ACCEPTED** (axis fix: trestles side-by-side x±0.60, workpiece along x
+inside the post span, reads X-X-with-beam above crib) — 18m PASS
+("squared-timber working yard... beam riding above crib on X-trestles")
++ close 6/6 PASS (caps read on posts, X-saddles legible, crib courses
+deliberate, offcuts clustered; margins named: cant-hook identity
+marginal, workpiece end-caps occluded — both sub-threshold notes).
+Decode: 5 buckets, bbox x -1.5..1.5, z -0.9..1.81, y 0..1.241,
+footprint ~8.1m2 < 8 room gate class, h 1.24 uneven-top band, empty
+comp bag, static unlit, NE lamp spend 0 of 10. Double rebuild
+byte-identical. NEXT TICK (queued, in order): terrain preflight at
+candidate sites (hamlet-0028 flank field side z<51.78 clear of
+woodstack; fallback ne-yard gaps), TRUE-dims fresh-census SAT/rim,
+placer from the dress-80 chassis, upload/spawn, idempotent rerun,
+ledger the placement. mk source
+assets/mkv3-dress-ne-timberyard1.ts staged with this commit.
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
