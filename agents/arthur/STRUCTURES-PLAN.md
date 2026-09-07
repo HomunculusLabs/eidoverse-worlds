@@ -2569,6 +2569,35 @@ verdicts:
   caveat names. Probe, not a verdict; decode/execute law stays with
   struct. Evidence: reviews/survey28-slice/waystone/]
 
+**SURVEY INTAKE (survey-40, 2026-09-07)** — read-only probe notes, not
+verdicts:
+
+- `nx-struct-reedpool` — first NATIVE water read at the city-5 SE S-edge
+  seat: identity/reeds/floats PASS, WATER FAIL (both patches left
+  x285-430 / right x540-690, y390-415, RGB≈(40,50,60) ~20% luminance
+  on top-view frame — VOID-READ, zero ripple/specular/reflection
+  cues). Source decode (mkv3-reedpool.ts:27): water = canon
+  mat(0x506a78, 0.35, 0), flat calm disc by construction, no
+  emissive/glint; survey-17's teal-read was ZAI (near-black-threshold
+  advisory even then), survey-8's chassis-no-envmap caveat applies —
+  engine read may be fairer than chassis. Two-frame native finding
+  (gameplay + top). Probe, not a verdict; decode/execute law stays
+  with struct. Evidence: reviews/survey40-slice/reedpool/
+- `nx-struct-angler` — CONFIRMED at the city-5 seat by composed-pair
+  arithmetic (native render dissent corroborated): bobber baked
+  angler-local (2.8, 0.144, −4.92), engineered (struct-46) to hit
+  pool-local (2.8, 1.6) INSIDE the water oval at the old common
+  yaw−90°; city-5's translation-only companion move (same world delta,
+  new yaw 0) leaves the bobber at pool-local (−3.72, −4.92) — r²=3.38
+  on the 4.5×3.0 oval, 6.17m from center, ~2m beyond the SW rim on
+  dry ground. "Rod fishes" contract (mkv3-angler.ts:115-116) broken;
+  CITY-PLAN row 44's "world-frame read preserved" holds for the deck,
+  not the bobber. Native 18m read: bench identity strong, rod/line
+  read, no figure in frame (figure may be too small to read at 18m —
+  in-world check owed). Probe, not a verdict; re-aim or accept is
+  city's call (struct-46 re-aim chassis exists). Evidence:
+  reviews/survey40-slice/angler/
+
 
 ## struct-59 (2026-09-07): R4-4 THE STILLWIND WALL — v2 built + judged,
 ## placement deferred to first approved tick
@@ -3534,3 +3563,51 @@ both sides — struct-70 law) around az 135 r62-72 between approach-ne-lamp-002
 (half-x 3.305 incl. flare, half-z 0.82, cy offset 0); 5) upload + spawn
 nx-struct-ogeegate, PLACED_VERIFIED + idempotent; 6) two-way MCPL walk through
 the 4.4m opening; 7) Bill eye-check packet.
+
+## struct-75 (2026-09-07): R6-3 OGEE GATE v2→v2.1 native-judged iterate,
+## BUILD-ONLY — placement deferred (run budget; improve-31 class)
+
+Cadence 75%3==0 refine tick; refine pool EMPTY (plan-verified rounds 1-3
+complete) -> own commission. Gate ALL PASS real exit 0 at ca8c1745
+tick-start. No SHARD section (grep exit 1, skip-law); improve-3 nx-struct
+findings verified closed by improve-53's block-aware audit. Census 281.
+
+NATIVE RE-JUDGE of struct-74 v1 pinned bytes 6b07befb (before-bytes captured
+to reviews/struct75-ogeegate-v2/before-v1.glb first): 18m gameplay 3/5 —
+battered springs PASS, joint rhythm PASS, keystone PASS, but S-SILHOUETTE
+FAIL (round/horseshoe read) + DEFECTS FAIL (crown seam left of keystone,
+broken spring junctions); night corroborated both findings independently
+(displaced springers, round profile); front hit 1210 (flap law).
+
+ROOT CAUSES AT SOURCE: (1) curvature starvation — R1 6.5637 spanned 11deg
+(sagitta 3cm) vs crown R2 2.89 (2.3:1 curvature mismatch): near-straight
+ramp feeding a dominant circle = horseshoe. (2) v1 "kite" keystone quad
+[jA,kB,kC,kD] was a SELF-INTERSECTING BOWTIE covering only the right half +
+4.5cm mortar sliver left of apex = the crown seam. (3) extrados offset
+flipped sides on A1 -> band underside lifted off the impost = V-gap springs.
+
+v2 (sha 8c4d885530d93703, x2 deterministic): TI 155->147deg same bulge ->
+R1 3.1909, curvature ratio R2/R1 = 0.979 (MATCHED arcs, the cyma signature;
+asserted |ratio-1|<0.15); flare 3.124 @ y 3.963 OVERHANGS slimmed pier face
+(SW 0.85->0.62) by 0.307m (waist step — judge PASS); piers raised to
+extrados underside + extrados-side-law offset (toward C1 on A1); symmetric
+two-half keystone; shoulder fill. Frontier algebra: tangent-continuous
+round-crest family optimum is ratio~1.02 — bulge push trades crown:belly
+below 1, keel sharpening forces +1.5m apex; dead-front concavity is the
+family ceiling (night/gameplay obliques read the S; PASS there).
+
+v2 native front 3/5: waist PASS, rhythm PASS, keystone-symmetry PASS; new
+DEFECT FAIL (bowtie quad AGAIN in v2's own keystone order) + spring crease
+(first course underside chord leaves unfilled triangle). Night 3/3 PASS
+(belly+curl+keel read at night, single warm crown point clean).
+
+v2.1 (sha 946773f1271ccba3, x2 deterministic): keystone perimeter order
+fixed [apex-in, base-in, base-ex, apex-ex]; spring sliver triangle fill +
+shoulder swept to s=0.75. NATIVE front defect re-judge 3/3 ALL PASS —
+keystone clean flush wedge, both springings sealed, zero other defects.
+ACCEPTED. Owed next tick (first actions, queue law): gameplay/night re-judge
+on v2.1 exact bytes, NE threshold scan az~135 r62-72 between approach-ne-
+lamp-002 (32.9,50.1) and statuary-0005 (70.4,22.9) with conservative
+rotation-grown AABBs (struct-70 law), terrain 7pt on TRUE envelope (half-x
+3.54, half-z 0.82), upload + spawn nx-struct-ogeegate PLACED_VERIFIED +
+idempotent, two-way MCPL walk 4.4m opening, Bill eye-check packet.
