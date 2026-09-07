@@ -1728,6 +1728,71 @@ open duplicate notes for these objects.
   NOTE: tex-85 live-freeze law applies — any edit derives from LIVE
   store bytes 1f2c6f59, never a source rebuild. Evidence:
   reviews/survey7-slice/nx-town-woodyard/gameplay.png
+  [improve-31 CONTRACT (2026-09-07 00:4x — BEFORE edit): take order —
+  windmill row 4 idle-guarded until 09-07 01:57 (waysign-6 rider hung
+  09-06 01:57, <24h at 00:28 tick start); woodyard is next-worst OPEN
+  improve-own SURVEY CANDIDATES row (Sev 3, native survey-7 standing
+  re-judgment on exact live bytes). Idle-guard clear: git tail — last
+  host mutation = the tex-85 freeze itself; since then only read-only
+  sweep/survey pins + rider work on separate entities (waysign-5 sign,
+  b11 rider, interior-19 note). Live tuple (16, 0, 31) yaw −2.669815142409043,
+  lib 1f2c6f592095b204, comps null, bbox 4.976×2.526×2.599.
+  DECODE GROUND TRUTH (improve31-decode-woodyard.ts, DRACO decode of
+  the served store-min bytes 80c2e142, plus probe2):
+  - ALL FIVE primitives carry material: ABSENT — the whole-asset
+    struct-38/55 class. three GLTFLoader default material for
+    material-absent primitives is {color white, metalness 1.0,
+    roughness 1.0} with vertexColors — vertex diffuse is multiplied by
+    a metal-1 surface (diffuse term ~0) → the survey's pure-black blob
+    stack, sheenless, no bark/end-grain variation.
+  - Every bucket is ONE flat color (source-true old-gen freeze):
+    wy3_0 (stack+shed posts/backwall, 1836v) #1a1008; wy3_1 (roof
+    slab, 24v) #251c14; wy3_2 (7 ground logs + kindling, 980v) #41250b;
+    wy_axe_0 (handle) #41250b; wy_axe_1 (head) #19191d.
+  - wy3_0 y-level histogram: cordwood courses at pitch 0.0375 (14
+    courses to y 0.465), posts to 2.2; normals ±z dominate (logs axis
+    along x). wy3_2: x-clusters pitch ~0.53 (7 log runs), 294 x-facing
+    end-cap verts; wy_axe_1 box at (2.62, 0.85, 0.4).
+  - The live vertex structure does NOT match current mkv3-woodyard27.ts
+    (source ~7300v) — live is an older revision; live-freeze law binds.
+  FIX (improve31-woodyard-rebuild.ts — decode→re-encode, geometry
+  byte-faithful, POSITION/NORMAL/indices untouched; texMat material
+  tier per struct-38 law; UVs derived per-vertex analytically):
+  - wy3_0 → two materials: bark texMat [0x6a6030, 0x5f5730, 0x54502a]
+    (posts/backwall/tops of courses) and split-face texMat
+    [0xa09832, 0x97842e, 0x8a7a2a] (the ±z course faces = log ends).
+    Classification: |nz|≥0.9 → split face; else bark. UV = (x·3 + y·14
+    mod 1, y·14 mod 1) plane-mapped — course pitch 0.0375 → 0.525-unit
+    tile rows so each course reads as its own band.
+  - wy3_1 (roof) → mid-timber texMat [0x787250, 0x6f6a49, 0x676344]
+    plane-mapped (x·2.4, z·2.4), rough 0.9.
+  - wy3_2 (ground logs) → same bark/split pair as wy3_0, split on the
+    294 x-facing end-cap verts (|nx|≥0.9); body bark.
+  - wy_axe_0 (handle) → split-face flat mat 0xa09832 r0.95 m0 — a
+    handled tool reads as its pale wood.
+  - wy_axe_1 (head) → iron texMat [0x5c5c60, 0x54545a] r0.4 m0.55
+    (mkv3-sign-woodyard.ts idiom).
+  - Keep-out: rider nx-artwalk-b11-woodyard-heartwood-measure at
+    world (16.3636, 0.75, 31.7126) → host-local center ≈ (0.041,
+    0.75, 1.064) (host yaw −2.6698) — geometry untouched so the anchor
+    is safe by construction; placer verifies rider standing post-place.
+  - Node names preserved exactly (wy3_0/wy3_1/wy3_2/wy_axe group +
+    wy_axe_0/wy_axe_1) — comps (none live) and motion anchors intact.
+  FALSIFY: (a) rebuild ×2 deterministic; (b) geometry diff vs the
+  decoded live mesh: POSITION/NORMAL/index counts identical, envelope
+  identical (SAT-neutral same-tuple re-place); (c) identical-camera
+  before/after renders (front/right/gameplay/aerial/night) — before
+  = the served store-min bytes re-rendered by the same chassis; stack
+  reads layered wood (bark vs end-grain tones), not a black blob;
+  judge native first, ZAI fallback disclosed; (d) upload (429 pacing)
+  + remove+spawn exact tuple + comp null→null + post-place verify +
+  idempotent zero-verb rerun; (e) rider b11 + sign nx-sign-woodyard-001
+  standing post-place; (f) 2-leg two-way approach walk along the shed
+  front (host-local x −2..+2 at z 2.0) ALL_PASS.
+  REVERT: re-run placer with prior lib (tuple-identical revert path);
+  served store-min bytes banked /tmp/improve31-woodyard-live.glb +
+  reviews/improve31-woodyard/before/.]
+
 - `nx-welcome` — Sev 3 (native survey-7): left stub arm detached from
   post (~5px sky gap x466-470 y341-345); welcome text dark-on-dark
   illegible at 18m (board holds sign-identity, welcome semantic fails).
