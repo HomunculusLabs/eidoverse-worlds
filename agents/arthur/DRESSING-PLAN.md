@@ -517,6 +517,22 @@ gap). Census 268. NE lamp spend 0 of 10. Rotation next: SE round-3 item
 terminal; round-2 only the legacy-core fountain — off-limits, Bill's
 call). SW lamps still blocked on Bill's a/b/c.
 
+**STATE AT dress-84 (2026-09-07, pipeline install tick)**: SE round-3 item
+11 EXECUTED live — `nx-dress-se-snagdead-001` PLACED_VERIFIED at (60.6,
+-0.0461, -30.0) yaw -2.35619 in the forest-0057<->forest-0031 seam mouth
+(details in the dress-84 siting-log entry below; 4-version native-judged
+build arc in one tick — v1 bleach FAIL, v2 close seam FAIL, v3
+restructure, v4 hollow + prescription, 18m "ship it"; one close-view ZAI
+fallback with native 1210 x2 disclosed). Census 270 (268 + struct-60
+stillwind + snag). SE lamp spend 0 of 8. Rotation next: SW round-3 item
+16 (bellpost). Shard queue: no OPEN `nx-dress-*` rows (nine Round-1
+terminal; round-2 only the legacy-core fountain — off-limits, Bill's
+call). SW lamps still blocked on Bill's a/b/c budget policy. Probe
+self-catch this tick (17th class): my first ledger append embedded a
+second (D+4, E+0) pair mid-prose (h-1 class, the tool itself reported
+law BROKEN) — repaired in-tick by exactifying the prose to words; law
+re-verified EXACT 2370620 before commit.
+
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
 Bill: "we need to expand scope hella." Round-1 families are complete; round-3
