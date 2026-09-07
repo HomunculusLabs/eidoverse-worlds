@@ -872,6 +872,22 @@ bunkhouse/longhouse 62, inn 63).
 
 ## Findings register
 
+R-123 (Sev 2, struct — routed STRUCTURES-PLAN, sweep-71 2026-09-07) MERIDIANDIAL x
+WATERSTAIR GEOMETRIC INTERLOCK. Epoch-B source-true decode of the exact live bytes
+(sweep71-dial-contacts-decode.ts; sha16 == live lib prefix both): TRUE 3D min
+17.2mm at dial (-1.068,0.354,-29.676) vs waterstair curb (-1.060,0.348,-29.690),
+same walking-height bands (dial 0.153..0.594, ws -0.152..0.373), 43,272 pairs
+<0.6m. Plan-view interlock at the meridian corridor: dial S stone band
+(z -29.99..-29.56 at x 0.4..0.6) sits INSIDE the waterstair z-span
+(-31.50..-28.42); at x=0 the dial pad south edge (-30.06) extends 1.65m past the
+waterstair north rim (-28.41). The dial's advertised S meridian approach threads
+a fused seam. struct-68's "zero solid neighbors within 8m" placement claim is
+falsified (waterstair center 5.00m away). Companion fact, no separate item:
+dial|hall closest 0.952m = diagonal corner kiss; true E-W corridor 1.834m PASSES
+the 1.4 law. Fix is struct-lane: re-site dial N on the meridian with
+vertex-cloud SAT vs all neighbors, re-prove the dial walk with an open S
+approach. First sweep post-routing (this one); escalation law keys Sev 1.
+
 | sweep-49 | 2026-09-07 | 262→263 (+1 domain-valid arrival nx-struct-ruledtower @ (58,−0.0426,0) yaw 0 lib 4070ecc4d8f1d0e6 comp {} = struct-50 @ 990ddeb, tuple matches its committed ledger line-for-line; ONE lib flip nx-craft-hamlet-0028 032b6e24→44d78463 at identical tuple with embers comp live (particles key verified in comp JSON) = improve-25 @ 6df80eb, EPOCH-CORRECTION class — landed after first census, all affected evidence re-taken fresh (census2, SAT re-run, NE re-walked 7/7, gate re-run ALL PASS exit 0 at 6df80eb); live bbox y-span 13.311→4.724 confirms the family-cure took; 0 departures, 0 unexplained drift; snapshot rewritten normalized sha16 55af543ec07eef46, diff exactly +1 entity block +1 lib flip +count, post-rewrite drift ZERO) | exit 3 on exactly ONE unclassified = R-121 lamp-n\\|nx-town-mapboard −0.407 (known Sev 2 routed artwalk b26 @ sweep-43, tuple identical per drift set, sixth sweep since routing, no escalation due — law keys Sev 1); 225 bbox non-light, 233 classified, 0 coverage holes | tier-1 81/81 ALL_PASS real exit 0 each (core 64/64 ok max-arr 0.38; NW 5/5; NE 7/7 epoch A + re-run 7/7 epoch B; SW 5/5) + tier-2 27th cycle bunkhouse 6/6 @ 0.380 + garden-cottage 6/6 @ 0.355 ALL PASS | pins 15/15 ALL_PINS_OK (8th consecutive clean), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + 4 -l companions, belltower 2419fbc53a1d65e1 + ladder comp live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet-0007/0015/0028 embers all live, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370320 at append, standing gate ALL PASS real exit 0 at tick-start a3344f1 + re-run at 6df80eb post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
 
 | sweep-50 | 2026-09-07 | 263→263 (225 thing + 38 light; 0 arrivals, 0 departures, TWO documented lib changes at identical tuples, epoch-verified: nx-struct-ninesbridge 1e4e84e98900d89c→8c5d9ccea9cb4076 = struct-51 stair-inversion fix @ 4fedb7c (bbox envelope unchanged, walk 9/9 ALL_PASS 0.396 re-proven by its own lane), nx-craft-hamlet-0041 473f671c→caa851af = improve-26 family-cure @ 122fc69 (live bbox y-span 13.363→4.744, fourth hamlet sibling cured) — both landed AFTER first census/SAT/walks, all affected evidence re-taken fresh per epoch law: census2 0 further change, SAT re-run neutral, NE re-walked 7/7 epoch B, gate re-run ALL PASS exit 0 at 122fc69; snapshot rewritten full-precision-normalized sha16 6c8626acc088a90a, entity diff exactly the two classified changes, post-rewrite drift ZERO) | exit 3 on exactly ONE unclassified = R-121 lamp-n\\|nx-town-mapboard −0.407 (known Sev 2 routed artwalk b26 @ sweep-43, tuple identical per zero-drift census, seventh sweep since routing, NOT new, no escalation due — law keys Sev 1); 225 bbox non-light, 233 classified, 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 ok max-arr 0.38; NW 5/5; NE 7/7 @ 0.38; SW 5/5 @ 0.37) + tier-2 28th cycle longhouse 6/6 @ 0.346 + tower-house 6/6 @ 0.377 ALL PASS (first re-walk of this pair since sweep-3) | pins 15/15 ALL_PINS_OK (9th consecutive clean, struct18-fleet-pin-check real exit 0), carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + 36 -l companions, belltower 2419fbc5 + ladder comp live, windmill 0993836012d1b17d + woodyard 1f2c6f592095b204 exact, hamlet-0007/0015/0028 embers all live, 38 lights, interlane md5 f6254cd0 stable, ledger law EXACT 2370321 at append (sibling D+1 absorbed mid-tick, base re-read fresh), standing gate ALL PASS real exit 0 at tick-start HEAD c523943 | CLEAN SWEEP — R-121 open, known, no escalation due |
@@ -2106,3 +2122,45 @@ baseline); snapshot file updated in-place each sweep. Prefix-domain map per
 INTERLANE-PROTOCOL.md (ten lanes). Sibling placements landing mid-tick are
 expected fleet behavior — classify as sibling work-in-flight, verify domain
 prefix + scale sanity + SAT inclusion, never treat as drift.
+| sweep-71 | 2026-09-07 | 274→276 epoch-corrected (epoch A 274==274 fully quiet vs sweep-69/70 baseline sha16 86bc038404c6af69, byte-identical projection; mid-tick THREE siblings committed: improve-42 @ 66ded6b five-garden family cure, dress-92 @ a010c6c glazier arrival, struct-68 @ 3d3b315 meridiandial arrival — epoch B: +2 domain-valid arrivals (nx-dress-ne-glazier-001 (60.95,-0.0284,28.42) yaw -2.35619 lib 53b31cfd; nx-struct-meridiandial (0,-0.0065,-27) yaw 0 lib 7acc090a) + 5 garden lib flips to exactly improve-42's ledgered shas at identical tuples, envelopes strict-subset; 0 departures, 0 unexplained drift; survey-33 @ fedc6d2d analysis-only interleave; snapshot rewritten with pre-write assertions, post-rewrite id-set verified, final 276 ents) | exit 3 on THREE unclassified: known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 28th sweep, no escalation due) + TWO NEW meridiandial contacts (R-123 waterstair -2.008 square-SAT / 17.2mm TRUE 3D — Sev 2, REGISTERED + ROUTED STRUCTURES-PLAN this tick; hall -0.435 square-SAT / 0.952m true corner-kiss, E-W corridor 1.834m PASSES 1.4 law, recorded no-action); 238 bbox non-light / 233 classified / 0 coverage holes, SAT run epoch A + re-run epoch B | tier-1 81/81 ALL_PASS per-leg verified (core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5) + tier-2 49th cycle per committed pointer potter 6/6 @ 0.366 + market 6/6 @ 0.389 ALL PASS | pins 15/15 ALL_PINS_OK 26th consecutive + extended census-verified at epoch B (carousel exact 7 + ce363399, gate lamps 4/4 bbox-present + 4 -l companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads, 38 lights, 16 comp-bearing census-matched), interlane f6254cd0 stable, ledger law EXACT at append, gate ALL PASS exit 0 at c75a96b tick-start + re-run 3d3b315/fedc6d2d post-interleave | FINDINGS — R-123 new Sev 2 routed struct (first sweep); R-121 open, known, no escalation due |
+
+sweep-71: FINDINGS SWEEP, epoch-correction tick (R-123 born). Epoch A fully
+quiet — census 274==274, normalized projection byte-identical to the committed
+baseline (no rewrite at epoch A). Mid-tick, three siblings committed AFTER my
+census: improve-42 (garden family cure 5/5 re-place), dress-92 (glazier
+arrival), struct-68 (meridiandial placement) — per the polish-270 epoch law all
+affected evidence was re-taken fresh: epoch-B census (276; 2 arrivals + 5
+garden lib flips, every field classified against the committed ledgers), SAT
+re-run at epoch B, gate re-run ALL PASS exit 0 at 3d3b315 then fedc6d2d
+(survey-33 read-only interleave). The epoch-B SAT flagged TWO NEW unclassified
+contacts for nx-struct-meridiandial — source-true decode of the exact live
+bytes (sweep71-dial-contacts-decode.ts, kept in-tree for the register; local
+sha16 == live lib prefix both) found: (a) waterstair — TRUE 3D min 17.2mm at
+same walking height, plan-view footprint INTERLOCK across the meridian corridor
+(dial S band inside the waterstair z-span; dial pad edge 1.65m past the stair's
+north rim at x=0) = R-123 Sev 2, registered and routed to STRUCTURES-PLAN as a
+defect note; struct-68's "zero solid neighbors within 8m" claim falsified at
+source (waterstair center 5.00m away, pitfall-0b class); (b) hall — 0.952m
+closest pair is a diagonal corner kiss, the true E-W corridor is 1.834m and
+PASSES the 1.4 law — recorded in R-123's register entry as a companion fact,
+no separate item, re-derive if the dial moves. Tier-1 4/4 per-leg verified
+81/81 ALL_PASS real exit 0 each: core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5.
+Tier-2 49th cycle per the committed pointer: potter 6/6 @ 0.366 + market 6/6 @
+0.389 ALL PASS (epoch A; the two arrivals are r67.7 NE / r27 S — the S dial
+sits on the plaza-adjacent meridian between mapboard-waystone legs; walks were
+run at epoch A before the dial landed, and the dial walk itself is struct-68's
+own 12/12 proof — the corridor defect is geometric, not walk-verified, which is
+exactly why it is routed rather than self-certified). Integrity: pins 15/15
+ALL_PINS_OK (26th consecutive) + extended live set census-verified at epoch B
+(carousel exact 7 + ce363399, gate lamps 4/4 bbox-present + 4 -l companions,
+belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome
+7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5 full payloads, 38
+lights, 16 comp-bearing census-matched), interlane md5 f6254cd0 stable, ledger
+law EXACT at append (base re-read fresh: three sibling increments absorbed).
+Snapshot rewritten to epoch B with pre-write assertions (arrivals + garden
+drift exactly classified) and post-rewrite id-set verification. Zero world
+mutations, one defect note (R-123 to STRUCTURES-PLAN), zero uploads, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-72): row-cottage + observatory
+(50th cycle — LRU by latest-walk chain: @71 potter/market, @70 hall/forge,
+@69 inn/stable, @68 bunkhouse/longhouse, @67 garden-cottage/tower-house;
+row-cottage+observatory last walked sweep-66, now stalest).

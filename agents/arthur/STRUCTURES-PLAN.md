@@ -3157,3 +3157,53 @@ disclosed).
 Next tick: 69%3==0 -> refine tick. Refine pool: EMPTY unless Bill's
 verdict or a routed note re-opens a subject; on empty pool per loop law
 build/re-arm (R6 concept or shard re-arm scan).
+
+## struct-69 (2026-09-07): R6-1 THE CATENARY GATE — concept contract (written
+## BEFORE build, per procedure)
+
+Cadence 69%3==0 refine tick; pool verified EMPTY fresh (no Bill verdict, no
+open routed note, round-1 shard fully terminal, waystone/meridianstair/
+waterstair clusters closed, orreryring margin-tier design-note only). Per
+loop law: build tick → Round 6 commission.
+
+CONCEPT (one idea, Judd discipline): the village's conic ledger is complete —
+parabola (soundmirror), ellipse (ellipsecourt), hyperbola (ruledtower), hypar
+(meridianstair/hypar), sine (stillwind), circle (amphi/bandstand). The one
+curve family a building-scale village still lacks is the CATENARY — the
+hanging chain raised in stone. THE CATENARY GATE: a stone gate whose arch
+intrados is the true inverted chain y = f(cosh(x/f)−1), f=2.0, half-span 3.5
+(springs at grade, crown soffit 3.93m, constant-normal 0.40 voussoir so the
+extrados is the true offset curve — fuller flanks than a parabola, the chain
+signature). An iron bead-chain rail threads the extrados crest at equal-ARC
+spacing (the chain law; crown + quarters brass, dusk-lineage emissive, zero
+lamp draw); brass spring pins at the abutments. Silhouette test at 18m: a
+dipping chain between two stone shoulders, not a round arch.
+
+SITE (candidate, preflight before mutation): the N meridian threshold at
+(0, −61) yaw 0 — the measured N walk ends at meridianstair (z≈−55 edge
+−57.3); temple/wild districts begin r66+. The gate completes the cardinal
+set's latitudes (windmill r40 W, stillwind r52 W, ruledtower ~r58 E,
+ninesbridge ~r62 S) and puts the chain's lowest point ON the village
+meridian (x=0), continuing dial→waystone→court→gate. Gap to meridianstair
+≈2.9m at z=−61 (≥1.4 law). Enterable: opening 7.0m wide at grade, footprint
+8.86×1.6=14.2m² ≥8, crown top 4.33 ≥2.2 → honest room gates → exact trimesh
+passage. Folly-adjacent (no interior furniture; it is a threshold, not a room).
+
+BUILD: new mkv3-catenarygate.ts (extruded wall with true catenary void +
+flank shoulders + plinth + tube rail + beads). Deterministic ×2, decode
+audit (catenary truth, clear widths, equal-arc beads, envelope), 10-view
+render, native judge vs contract, terrain preflight, fresh-census SAT,
+struct-68 chassis placer, two-way MCPL passage walk.
+
+
+## DEFECT NOTE (sweep-71, 2026-09-07): R-123 Sev 2 — meridiandial x waterstair geometric interlock
+
+The sweep lane's epoch-B source-true decode of the exact live bytes (sweep71-dial-contacts-decode.ts; local sha16 == live lib prefix both, improve-41 hash-domain law) finds nx-struct-meridiandial (0,-0.0065,-27) and nx-struct-waterstair (0,-0.0322,-32) physically interlocked, not merely close:
+
+- TRUE 3D min distance 17.2mm at dial (-1.068, 0.354, -29.676) vs waterstair curb (-1.060, 0.348, -29.690) — dial SW hour-stone zone kisses the waterstair basin curb at the same walking height (dial zone y 0.153..0.594, ws zone y -0.152..0.373; 43,272 point pairs under 0.6m).
+- Plan-view footprint INTERLOCK in the meridian corridor: at x in [0.4,0.6] the dial S stone band (z -29.99..-29.56) sits INSIDE the waterstair z-span (-31.50..-28.42); at the meridian x=0 the dial pad south edge (-30.06) extends 1.65m past (south of) the waterstair north rim (-28.41) — the advertised S approach "on the meridian line, onto the face" threads a fused seam, not an open corridor.
+- struct-68's placement claim "zero solid neighbors within 8m" is falsified at source: waterstair center is 5.00m from the dial center (its fresh-census preflight missed the standing neighbor; pitfall-0b class).
+
+Also recorded (no separate register item): dial|nx-town-hall closest pair 0.952m is a diagonal corner kiss; the actual E-W walking corridor is 1.834m (passes the 1.4m law) — no action needed unless the dial moves for R-123, in which case re-derive vs hall too.
+
+Treat as Bill-correction-class priority for the next struct wakeup: re-site the dial (N along the meridian clears the stair; re-derive with vertex-cloud SAT vs ALL standing neighbors incl. waterstair + hall, pitfall-10/struct-19 laws), re-prove the 12-leg dial walk incl. a true open S approach, and re-run the sweep SAT (exit 3 currently fires on this pair every sweep until then). Full evidence in SWEEP-PLAN findings register R-123.
