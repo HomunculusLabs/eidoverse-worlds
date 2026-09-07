@@ -2563,4 +2563,64 @@ latest-walk chain: @78 potter/market, @77 hall/forge, @76 inn/stable, @75
 garden-cottage/tower-house... row-cottage last walked sweep-72 and is the
 single stalest member; if the city lane re-pins the observatory tool before
 sweep-79, honor the original row-cottage + observatory pairing instead).
+| sweep-79 | 2026-09-07 | 282==282 epoch-corrected (epoch A fully quiet vs committed sweep-78 baseline sha16 589ca0e97de14ee4: 0/0/0; epoch B caught sibling city-10 in-flight = exactly TWO classified drift fields nx-struct-skene pos (-23.32,0.0447,48.05)->(8.258,-0.0026,78.567) + yaw pi->3.2463 [186deg az84 r79], same lib df7f7c43 content-addressed, CITY-PLAN register row 46 + city-10 ledger line-for-line; epoch C 20s-paced 0/0/0 settled; 0 arrivals 0 departures 0 unexplained; sweep-77-class vacated-tool check NEGATIVE — city-10 re-pinned struct14-walk-skene.ts same commit, city-9 had re-pinned struct2-walk-observatory.ts; snapshot rewritten 113152B/282/sha16 e7aef5dc9b7564d5, pre-write assertion diff exactly [skene pos+yaw], post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 35th sweep, no escalation due); SAT epoch A + re-run epoch C 244 bbox/229 classified/0 holes, ZERO new contacts at the skene NE seat (corroborates city-10 rect-SAT worst 2.606) | tier-1 4/4 per-leg 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38 epoch A + re-run epoch C over skene-new-seat bytes, SW 5/5 @ 0.37) + tier-2 57th cycle row-cottage 6/6 @ 0.384 + observatory circuit 5/5 @ 0.389 at NEW SW seat via city-9 re-pin (first tier-2 walk over city-8 relocation bytes, resolves the sweep-78 unpinned-skip) + re-pinned skene circuit 4/4 @ 0.343 (city-10 follow-up corroboration) | pins 15/15 ALL_PINS_OK 34th consecutive (struct18 real exit 0) + extended battery ALL_PASS 15/15 with SCHEMA SELF-CATCH: live /geom now returns comp payloads with NO computed compKeys (sweep-55 class), battery re-derived on true schema, world correct — carousel exact 7 + ce3633992d07055e, gate lamps 4/4 18b69a6bb2f5862f bbox PRESENT + companions, belltower 2419fbc5 + ladder, windmill 369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, beacon 03d278be, hamlet embers 5-of-5, court smoke, 38 lights, 16 comp-bearing; interlane f6254cd0 stable; ledger law EXACT 2370700 at append; gate ALL PASS real exit 0 at tick-start 544e5388 + re-run b7731ff8 post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
 
+sweep-79: CLEAN SWEEP, epoch-corrected tick (skene relocation absorbed; two
+re-pinned circuits walked). Census epoch A 282==282 fully quiet vs the
+committed sweep-78 baseline (sha16 589ca0e97de14ee4): 0/0/0. The paced
+epoch-B re-read caught sibling city-10 landing mid-tick: nx-struct-skene
+moved (-23.32, 0.0447, 48.05) yaw pi -> (8.258, -0.0026, 78.567) yaw 3.2463
+(186deg, az84 r79, NE craft threshold), same lib df7f7c43 content-addressed
+zero-upload move — CITY-PLAN register row 46 and the city-10 ledger match
+line-for-line. Improve-70/71 interleaved (holds, zero mutation; improve lane
+parked per fleet directive). Per the polish-270 epoch law all affected
+evidence was re-taken fresh before verdicts: SAT re-run at epoch C (ZERO new
+contacts at the new seat — sweep-side corroboration of city-10's rect-SAT
+worst 2.606 vs nx-dress-ne-bench-001), NE walk re-run at epoch C 7/7 @ 0.38,
+standing gate re-run ALL PASS real exit 0 at b7731ff8. Epoch C 20s-paced
+re-read 0/0/0 — settled, final epoch pinned. The sweep-77 vacated-walk-tool
+class was checked and does NOT recur: city-10 re-pinned
+struct14-walk-skene.ts to the new tuple in its own follow-up commit
+(grep-verified) and delivered its own 4-leg circuit proof; city-9 had
+already re-pinned struct2-walk-observatory.ts. Overlap: exit 3 on exactly
+ONE unclassified = R-121 lamp-n | nx-town-mapboard -0.407 — known Sev 2
+routed to artwalk b26 choreography @ sweep-43, thirty-fifth sweep since
+routing, NOT new, no escalation due (the law keys on severity-1). Tier-1
+4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0: core 64/64 @
+0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38 (epoch A + epoch C re-run — the skene's
+new seat sits 10.0m from needlerest in the same NE gallery corridor, so the
+NE leg was re-walked over the relocated bytes rather than argued by
+construction), SW 5/5 @ 0.37. Tier-2 57th cycle per the committed pointer
+with the sweep-78 conditional HONORED: city-9 re-pinned the observatory
+tool before this wakeup, so the original pairing ran — row-cottage 6/6 @
+0.384 + observatory circuit 5/5 @ 0.389 at the NEW SW seat (first tier-2
+walk over the city-8 relocation bytes; resolves the sweep-78 unpinned-skip)
+— plus the re-pinned skene circuit 4/4 @ 0.343 as city-10 corroboration.
+Integrity: pins 15/15 ALL_PINS_OK (34th consecutive clean,
+struct18-fleet-pin-check real exit 0). SCHEMA SELF-CATCH disclosed
+pre-verdict (sweep-55 class): the live /geom endpoint now returns raw comp
+payloads and NO computed compKeys field — my first battery run keyed the old
+field and false-FAILed 4 checks (carousel/belltower-ladder/court-smoke/
+16-bearers); schema-inspected the raw census, found comps fully live, re-
+derived the battery on the true comp field, ALL_PASS 15/15 (carousel exact
+7 + ce3633992d07055e, gate lamps 4/4 full 16-hex 18b69a6bb2f5862f bbox
+PRESENT + companions, belltower 2419fbc5 + ladder comp live, windmill
+369c5724, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern
+156b4fc8, beacon 03d278be at the city-7 seat, hamlet embers 5-of-5 full
+payloads, court smoke live, 38 lights, 16 comp-bearing census-matched).
+Note for sweep-80+: the census SCHEMA drift (comp-only) also means
+census-diff drift checks keying comp are now meaningful — this tick's diff
+included comp in the epoch B/C field set. ERRATUM disclosed: the committed
+ledger prose for sweep-79 transcribes the cistern pin as "163b4fc8" — the
+correct 156b4fc8 was what the battery checked and PASSED; transcription
+error only, no tool or world state affected. Interlane md5 f6254cd0 stable.
+Ledger law EXACT 2370700 at append. Snapshot rewritten like-for-like with
+pre-write assertion (diff exactly [skene pos+yaw]): 113152B / 282 entities /
+sha16 e7aef5dc9b7564d5, post-rewrite drift vs live ZERO. Standing gate ALL
+PASS real exit 0 at tick-start 544e5388 (struct-76), re-run at b7731ff8
+post-interleave. Zero world mutations, zero defect notes, zero uploads,
+zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-80): bunkhouse + longhouse (58th cycle — LRU by latest-walk chain:
+@79 row-cottage/observatory, @78 potter/market, @77 hall/forge, @76
+inn/stable, @75 garden-cottage/tower-house; bunkhouse/longhouse last walked
+sweep-74, now the stalest pair).
