@@ -388,6 +388,7 @@ zero defect notes, zero uploads, zero shared-budget use. Next tier-2
 pair (sweep-59): stable + observatory circuit (37th cycle).
 | sweep-59 | 2026-09-07 | 267==267 (229 thing + 38 light; 0 arrivals, 0 departures, 0 drift on id/pos/yaw/lib/scale/kind/bbox vs sweep-58 epoch-C baseline sha16 cd9a07607226962e — single-read epoch, no mid-tick interleave, count stable across the whole tick) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, SIXTEENTH sweep since routing, no escalation due — law keys Sev 1); 229 bbox non-light / 233 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37); tier-2 37th cycle recorded pair stable 5/5 @ 0.396 + observatory 5/5 ALL PASS; coverage pair hall 8/8 @ 0.360 + forge 6/6 @ 0.375 (LRU rotation repair — stale sweep-58 pointer read bunkhouse+garden-cottage, the true LRU pair was hall/forge, both pairs walked and recorded this wakeup) | pins 15/15 ALL_PINS_OK 17th consecutive, carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib bbox PRESENT + 4 -l companions, belltower 2419fbc5 + ladder live, windmill 09938360, woodyard 01b78fdd exact, hamlet embers 5-of-5, welcome 7d1bd0c9 + welcome-l, 38 lights, 16 comp-bearing entities census-matched, interlane f6254cd0 stable, ledger law EXACT at append, gate ALL PASS exit 0 at afcc0c7 tick-start | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-60 | 2026-09-07 | 267→268 epoch-corrected (+1 domain-valid arrival nx-dress-ne-timberyard-001 @ (76.7,-0.006,69.4) yaw -2.35619 lib 10b449fa = dress-83 @ 645bba1 tuple-matched, bbox 3x1.25x2.68 scale-sane; ONE classified lib flip nx-town-windmill 09938360→369c5724 at identical tuple, bbox BYTE-IDENTICAL = improve-33 @ 71b7bd1; 0 departures, 0 unexplained drift; snapshot rewritten 107262B/268 ents/sha16 09a5c2e48a28699e, post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, SEVENTEENTH sweep since routing, no escalation due — law keys Sev 1); 230 bbox non-light / 233 classified / 0 coverage holes, SAT re-run at epoch B | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38 epoch A + 7/7 @ 0.38 epoch B re-walk, SW 5/5 @ 0.37) + tier-2 38th cycle row-cottage 6/6 @ 0.384 + market 6/6 @ 0.389 ALL PASS | pins 15/15 ALL_PINS_OK 18th consecutive (epoch-B re-run), carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib bbox PRESENT + 4 -l companions, belltower 2419fbc5 + ladder live, windmill 369c5724 (owner re-place, bbox identical), woodyard 01b78fdd exact, hamlet embers 5-of-5, welcome 7d1bd0c9 + welcome-l, 38 lights, 16 comp-bearing census-matched, interlane f6254cd0 stable, ledger law EXACT at append, gate ALL PASS exit 0 at de1b4e4 tick-start + re-run 645bba1 | CLEAN SWEEP — R-121 open, known, no escalation due |
+| sweep-61 | 2026-09-07 | 268→269 epoch-corrected (epoch A 268==268 fully quiet vs sweep-60 baseline sha16 09a5c2e48a28699e 0/0/0; +1 domain-valid arrival nx-struct-stillwind @ (-52,-0.031,0) yaw 0 lib 35eab2fb comp {} = struct-60 @ 0fa0508 mid-tick, tuple matches its committed ledger line-for-line, bbox 4.13x3.06x16.43 scale-sane, 39.7m from the nearest tier-1 waypoint — W mid-ring, no W route exists; 0 departures, 0 unexplained drift; snapshot rewritten 107679B/269 ents/sha16 8ab94a95922678e3, pre-write assertions, post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, EIGHTEENTH sweep since routing, no escalation due — law keys Sev 1); 231 bbox non-light / 233 classified / 0 coverage holes, SAT re-run at epoch B (stillwind in live set, corroborates struct-60's own +7.26m clearance) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.380, NW 5/5 @ 0.380, NE 7/7 @ 0.380, SW 5/5 @ 0.370 — epoch-A walks stand by construction, sweep-53 precedent) + tier-2 39th cycle longhouse 6/6 @ 0.346 + tower-house 6/6 @ 0.377 ALL PASS | pins 15/15 ALL_PINS_OK 19th consecutive (epoch-B re-run), carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib bbox PRESENT + 4 -l companions, belltower 2419fbc5 + ladder live, windmill 369c5724 live, woodyard 01b78fdd exact, hamlet embers 5-of-5, welcome 7d1bd0c9 + welcome-l, 38 lights, 16 comp-bearing census-matched (arrival comp-neutral {}), interlane f6254cd0 stable, ledger law EXACT 2370613 at epoch-B gate, gate ALL PASS exit 0 at 96a1368 tick-start + re-run ba74502 post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
 
 EPOCH-C CORRECTION (disclosed, correction-of-record class — improve-32
 woodyard cure landed at 82a49f2 AFTER this sweep's ledger append): census-C
@@ -484,6 +485,54 @@ hex-after-path); windmill entity id derived from the census, not memory
 uploads, zero shared-budget use. Next tier-2 pair (sweep-61):
 longhouse + tower-house (39th cycle — last walked sweep-50, the true
 LRU pair).
+
+sweep-61: CLEAN SWEEP, epoch-correction tick. Census epoch A 268==268
+fully quiet vs the committed sweep-60 baseline (sha16
+09a5c2e48a28699e): 0 arrivals, 0 departures, 0 drift on
+id/pos/yaw/lib/scale/kind/bbox — then survey-26 (@ ba74502) and
+struct-60 (@ 0fa0508) landed mid-tick; struct-60 spawned
+nx-struct-stillwind, so per the polish-270 epoch law all affected
+evidence was re-taken fresh: epoch-B census 269 (231 thing + 38 light)
+with exactly ONE arrival nx-struct-stillwind @ (-52,-0.031,0) yaw 0 lib
+35eab2fb comp {} — tuple matches struct-60's committed ledger
+line-for-line, domain-valid (struct owns nx-struct-*), bbox
+4.13x3.06x16.43 scale-sane, W mid-ring site 39.7m from the nearest
+tier-1 waypoint (no W route exists in the frozen list); 0 departures,
+0 unexplained drift. SAT re-run at epoch B with stillwind in the live
+set: 231 bbox non-light, 233 classified, 0 coverage holes, exit 3 on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 —
+known Sev 2 routed to artwalk @ sweep-43, eighteenth sweep since
+routing, not new, no escalation due (law keys severity-1); stillwind
+introduced no new contacts, corroborating struct-60's own +7.26m
+clearance ledger. Tier-1 4/4 per-leg verified 81/81 ALL_PASS real
+exit 0 each: core 64/64 @ 0.380, NW 5/5 @ 0.380, NE 7/7 @ 0.380, SW
+5/5 @ 0.370 (epoch-A walks stand by construction — the arrival is
+39.7m off every walked leg, sweep-53 precedent). Tier-2 39th cycle:
+longhouse 6/6 @ 0.346 + tower-house 6/6 @ 0.377 ALL PASS. Integrity:
+pins 15/15 ALL_PINS_OK (19th consecutive clean, re-run at epoch B),
+carousel comp bag exact 7 + lib ce3633992d07055e, gate lamps 4/4
+full 16-hex 18b69a6bb2f5862f bbox PRESENT (R-120 stays resolved) + 4
+-l companions, belltower 2419fbc53a1d65e1 + ladder comp live,
+windmill 369c5724 live, woodyard 01b78fdd00f090a7 exact, hamlet
+embers 5-of-5 live, welcome 7d1bd0c9 + welcome-l companion live, 38
+lights, 16 comp-bearing entities census-matched (arrival
+comp-neutral — stillwind carries {}), interlane md5 f6254cd0 stable,
+ledger law EXACT 2370613 at the epoch-B gate, standing gate ALL PASS
+real exit 0 at tick-start 96a1368 + re-run at ba74502
+post-interleave. Snapshot rewritten like-for-like: 107679B / 269
+entities / sha16 8ab94a95922678e3, format round-trip proven
+byte-identical BEFORE the write, pre-write assertions (exactly one
+arrival, sorted insert, count bump), post-rewrite drift vs live ZERO.
+Probe self-caught pre-verdict: first walk-parse keyed `dist` where
+the approach walkers emit `distance` — printed maxdist 0.000
+plausible-looking but wrong; re-anchored on the actual per-file
+schema before recording (sweep-58 class recurrence). One chained
+walk re-run loop hit the 400s tool timeout on its last leg (SW);
+SW re-run standalone clean — no evidence rests on the timed-out
+pass. Zero world mutations, zero defect notes, zero uploads, zero
+shared-budget use. Next tier-2 pair (sweep-62): bunkhouse +
+garden-cottage (40th cycle — true LRU pair, both last walked
+sweep-56; next-stalest inn @ sweep-57).
 
 ## Findings register
 
