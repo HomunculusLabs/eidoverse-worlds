@@ -3475,3 +3475,62 @@ pair self-caught and repaired in-tick: doubled pair from prose+tool,
 reduced to one). Census 279 -> 280.
 Next tick: 74%3==2 -> build tick (R6-3 concept or city-lane/Shard re-arm
 scan).
+
+## struct-74 (2026-09-07): R6-3 THE OGEE GATE authored (cyma reversa),
+## BUILD-ONLY — judge + placement deferred (run budget; improve-31 class)
+
+Cadence 74%3==2 build tick. Shard/refine/city verified empty or foreign-owned
+fresh (round-1 terminal, no SHARD section in IMPROVE-PLAN, CITY-PLAN rows
+city-lane-owned, no open routed note in domain). Gate ALL PASS real exit 0 at
+ef379b35 tick-start. Census 281 fresh.
+
+CONCEPT (one idea, Judd): the mason's master curve — the ONLY arch cut from
+two OPPOSING arcs (cyma reversa). Round 6 gate family: catenary (N, the
+hanging chain), closed ring (SW, the arch that never lands); the OGEE is the
+third figure, the S — flanks belly OUT over the passage, then curl IN to a
+rounded crest. Sited for the NE craft threshold on next tick (district ring,
+CITY-PLAN law 1/4): the master curve leads into the masons' district.
+
+DESIGN SEARCH (source-true, no eyeballing): a vertical springing forces either
+an invisible belly (<0.16m at 18m) or a 9m+ spire for a pointed ogive — the
+search falsified the naive parameter set numerically before any build. LOCK:
+spring (2.2, 1.3) with 14deg BATTERED impost (real ogees spring off tilted
+imposts), inflection I (2.620, 2.486), convex flank R1 6.5637 (center
+outboard), concave crown arc R2 2.8909 CENTER ON AXIS (round-crest cyma
+reversa; pointed variant rejected at source: +1.2m height for apex detail
+below 18m resolution — struct-13 law), apex 6.599. TRUE widest flare 2.891 at
+y 3.711 = 0.69m overhang over the 4.4m opening, 0.16m INSIDE the pier plumb
+(wave overhangs void, not masonry). Tallest gate of the three (7.12 vs 5.8
+catenary / 5.25 ring) — every metre is S, none is spire.
+
+BUILD: mkv3-ogeegate.ts — 13 equal-arc voussoir courses/side (chain law),
+stone:mortar 9.2:1 rhythm (moongate v3 law), brass KITE keystone at the apex
+extruded 0.10 proud (dusk emissive lineage, zero lamps), piers + battered
+impost wedges + plinths + flush threshold. bbox 6.61 x 7.02 x 1.64 ->
+footprint 10.85 >= 8 AND 7.02 >= 2.2 room gates honest -> exact trimesh.
+Opening 4.4m at grade, 4.69m at head height 1.8. sha256
+6b07befb918ad05485eb4e404d77b37b7290102629fb9c7ccd5bb6d643869740 x2
+deterministic. 3 nodes (stone/mortar/brass), 0 material-less (struct-38
+family law), all texMat standing stone palette.
+
+SELF-CATCHES: (1) v1 head-height assertion used the naive asin branch —
+returned 14.8m fiction (radial far side of the circle); fixed to the upper
+branch with an in-span assertion (4.69m true). (2) flare assertion demanded
+1e-6 from an 800-sample sweep — sampler resolution is ~3mm; replaced with the
+ANALYTIC flare law (A2 max x = R2 exactly at radial 0) + 0.01 sampled check.
+
+REVIEW: 10 frames rendered to reviews/struct74-ogeegate-v1/ (front/right/
+back/left/gameplay 18m/aerial/top/night). NATIVE JUDGE UNAVAILABLE (1210 on
+first call; paced retry + full native-vs-contract judging owed next tick on
+these exact bytes — flap law; bytes pinned, nothing decays). NO visual PASS
+claimed. No upload, no verbs, world untouched (fail-closed, struct-61 class).
+
+DEFERRED (next tick executes FIRST, queue law): 1) gate re-run exit 0;
+2) native judge on the pinned bytes (5 criteria: S-silhouette read, battered
+spring, joint rhythm countable, keystone kite, clean) + iterate if FAIL;
+3) NE craft threshold scan (fresh census, conservative rotation-grown AABBs
+both sides — struct-70 law) around az 135 r62-72 between approach-ne-lamp-002
+(32.9,50.1) and statuary-0005 (70.4,22.9); 4) terrain 7pt on TRUE envelope
+(half-x 3.305 incl. flare, half-z 0.82, cy offset 0); 5) upload + spawn
+nx-struct-ogeegate, PLACED_VERIFIED + idempotent; 6) two-way MCPL walk through
+the 4.4m opening; 7) Bill eye-check packet.
