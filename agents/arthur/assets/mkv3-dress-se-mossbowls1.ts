@@ -124,8 +124,14 @@ const bowl = (
   // 0.32m) with decisive teal emissive: reads water at a glance, not a
   // grey pebble disc; ground pool on the −x side, clear of all geometry
   if (water) {
+    // v11: pool nudged −x/−z onto FULLY open ground — v10's offset
+    // (cx−1.05·rimR, cz−1.00·rimR) = (−0.909, −0.38) put its right half
+    // behind the bowl's left rim from the front view (judge: half-occluded,
+    // water PASS on material alone). New seat clears the bowl shell incl.
+    // soil ring (0.72m) by ~0.14m, peb62 by ~0.17m, peb64 by ~0.34m, patch52
+    // by ~0.4m — still reads as lip-runoff pooled forward-left of the lip.
     const w = new THREE.Mesh(new THREE.CylinderGeometry(rimR * 0.55, rimR * 0.55, 0.024, 9), WATER);
-    w.position.set(cx - rimR * 1.05, 0.012, cz - rimR * 1.00);
+    w.position.set(cx - 0.88, 0.012, cz - 0.75);
     w.name = `water_${seed}`;
     g.add(w);
   }
@@ -151,18 +157,29 @@ const bowl = (
   cap.name = `cap_${seed}`;
   g.add(cap);
 
-  // spill tongue — v10: lengthened (1.64->1.78 rimR) + base seated lower
-  // (0.45->0.41 rimR) so the APEX lands at y≈0.015 — physically planted
-  // INTO the landing patch's y-band (v9 apex hovered 0.015 above it and
-  // read detached). Diagonal axis per dress-82 law.
-  const axis = new THREE.Vector3(0.5, -0.22, -0.84).normalize();
+  // spill tongue — v11 (water bowl only): axis RE-DERIVED + lengthened so
+  // the apex lands INSIDE the landing patch ellipsoid (buried in its flank,
+  // no bare-terrain gap). v10's apex (0.395, 0.011, −0.961) kissed patch
+  // 56's rim — the 10–15px bare-terrain gap the judge read. True math:
+  // base0 = (−0.1202, 0.2378, −0.0958) (cx+0.31·rimR etc.), target apex
+  // T(0.50, 0.010, −0.96) → Δ(0.620, −0.228, −0.864), |Δ| = 1.0878, unit
+  // (0.570, −0.209, −0.794); length 1.88·rimR = 1.090, center offset h/2
+  // = 0.94·rimR — apex = base0 + h·unit = (0.5015, 0.0094, −0.9621), 0.047
+  // below the patch's local crown y. First v11 attempt failed decode with
+  // axis (0.500,−0.181,−0.847)+offset 0.525 (apex 0.527 short at
+  // (0.184,0.128,−0.612)) — decode-caught, constants corrected.
+  // Non-water bowls keep the accepted v10 geometry (minimal delta law).
+  const v11 = water;
+  const axis = v11
+    ? new THREE.Vector3(0.570, -0.209, -0.794).normalize()
+    : new THREE.Vector3(0.5, -0.22, -0.84).normalize();
   const spill = new THREE.Mesh(
-    new THREE.ConeGeometry(rimR * 0.29, rimR * 1.78, 7),
+    new THREE.ConeGeometry(rimR * 0.29, rimR * (v11 ? 1.88 : 1.78), 7),
     MOSS_L,
   );
   spill.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), axis);
   const base0 = new THREE.Vector3(cx + rimR * 0.31, rimR * 0.41, cz - rimR * 0.51);
-  spill.position.copy(base0.clone().add(axis.clone().multiplyScalar(rimR * 0.89)));
+  spill.position.copy(base0.clone().add(axis.clone().multiplyScalar(rimR * (v11 ? 0.94 : 0.89))));
   spill.name = `spill_${seed}`;
   g.add(spill);
 };

@@ -686,6 +686,16 @@ lamps remain blocked on Bill's a/b/c budget policy (0 of 3).
 
 ## ROUND 3 — EXPANDED SCOPE (Bill commission widening, 2026-09-06)
 
+**STATE AT dress-94 (2026-09-07, pipeline install tick)**: SE round-3 item 12
+COMPLETE — dress-93's deferred placement EXECUTED live: v11 fix list built
+(tongue planted inside patch 56, pool to open ground), native-judged 18m +
+approach-face PASS, sited at the forest-0057 edge (61.31, 0.0083, −55.20)
+yaw −45°, PLACED_VERIFIED + idempotent. Details in the dress-94 siting-log
+entry below. Rotation next: NW round-3 item 4 of 19. Shard queue: no OPEN
+`nx-dress-*` rows (nine Round-1 terminal; round-2 only the legacy-core
+fountain — off-limits, Bill's call). SW lamps still blocked on Bill's a/b/c
+(0 of 3). Census 277.
+
 **STATE AT dress-93 (2026-09-07, pipeline build tick — placement deferred to
 next tick on run-budget, improve-31 class)**: SE round-3 item 12
 `nx-dress-se-mossbowls-001` BUILT AND NATIVE-JUDGED, NOT YET PLACED — v10
@@ -894,6 +904,48 @@ placement, DROP it with reason rather than shipping filler — scope is
 expanded, the quality bar is not lowered.
 
 ## Siting log
+
+### dress-94 — SE moss bowls (round-3 item 12, PLACED, LIVE)
+
+- **Tick class**: deferred placement — dress-93's v11 fix list executed, then
+  sited + placed, one wakeup.
+- **v11 geometry (sha `6d598bd5…` deterministic ×2, 10 nodes)**: tongue
+  RE-DERIVED — unit (0.570, −0.209, −0.794), length 1.88·rimR, center offset
+  0.94·rimR → apex (0.502, 0.010, −0.962) planted INSIDE landing patch 56
+  (first v11 attempt constants were self-miscomputed; decode-caught apex
+  0.527 short at (0.184, 0.128, −0.612), corrected); pool nudged to
+  (−1.18, −0.55) fully open ground — clears bowl shell 0.14m, peb62 0.17m,
+  peb64 0.34m, patch52 0.4m. Decode audit ALL PASS (tongue-apex d 0.042,
+  plants-into-patch vertex inside disc, pool center/thin/clear).
+- **Probe lessons banked (two)**: (a) this writer's COLOR_0-baked convention
+  exports 9/10 prims with no glTF material ref — a matless-primitive report
+  on glbwrite assets is the WRITER CONVENTION, not a struct-38 defect;
+  (b) three.js returns COLOR_0 as raw LINEAR Uint8Array bytes in `.array`
+  (normalized attribute — denormalization happens in shader) — classify
+  vertex material by linear-encoded palette distance, never ×255.
+- **Judge (NATIVE, zero flaps)**: 18m PASS all three criteria (basin
+  identity, tongue merged no-gap, pool reads water; pool marginal-size
+  note); approach-face close PASS on back.png — approach face is local −z
+  (renderer BACK view, v8-v10 lineage). The +z forest-side "horn" read on
+  front.png is the back face — margin note only.
+- **Siting (fresh census 276)**: 33 legal poses in the city-plan band; cone
+  gate disclosed below-knee-exempt (h 0.407m < knee — loop law binds
+  over-knee pieces; 229 poses would have died an over-height piece). Pose
+  chosen concept-first over tightest-gap: az −42° r 82.5 → **(61.31,
+  0.0083, −55.20) yaw −45°**, forest-0057-edge damp hollow, spokeOff 4.3m
+  (SE-line walkers see it), SAT minGap 1.71 vs forest-0057 + 1.77 vs
+  se-cairn-001, cairn cluster az −50 avoided so both identities stay clean.
+  Rim 80.9..83.8 ∈ [70,100]. Terrain 5-pt spread 5.9mm, py pinned to worst
+  corner.
+- **Live**: `nx-dress-se-mossbowls-001` @ (61.31, 0.0083, −55.20) yaw
+  −0.7853981633974483, lib `store/6d598bd526ba3929.glb`, PLACED_VERIFIED
+  1 verb, idempotent rerun 0 verbs. Census 277 expected. SE lamp 0 of 8
+  (pool teal is MESH emissive, no light entity — dress-79 precedent).
+  Placer `se-dress94-place.ts`; decode `dress94-decode-mossbowls.ts`; scan
+  `dress94-mossbowls-scan.ts`; renders
+  `reviews/dress94-mossbowls-v11/`.
+- **Rotation after this**: NW round-3 item 4. SW lamps still blocked on
+  Bill's a/b/c (0 of 3).
 
 ### dress-92 — NE glazier's glass rack (round-3 item 8, PLACED, LIVE)
 
