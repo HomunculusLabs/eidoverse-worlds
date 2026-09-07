@@ -4932,4 +4932,6 @@ fixes ≈ 6 F.)
 
 - [city-42] 26th hold — register 13/13 EXECUTED, all remaining rows HOLD-for-Bill; census 289==289 quiet vs city-41 capture (0 arrivals/0 departures/0 moves); band r33-55 carries 58 classified occupants, zero new off-spoke ids; amphi HOLD intact at original seat (-23.32,0.0398,37.31) lib 95a98c74; farm-prop hosts harvestcart/milkstand/churn unmoved with riders b31/b32/b33 co-located 0.0mm epoch-stable; wave-2 mosaics 0036/0048/0052/0059 + mile sw-005/006 ne-003/004 still at r45-49 seats pending nvp-105 blessing; shard routing (IMPROVE-PLAN line 1176) routes no city prefix, zero OPEN rows for lane; blocked on Bill: amphi 3-option disposition, wave-2 nvp-105 blessing, artwalk eye-gates b31-b33; interlane md5 f6254cd0 stable; zero mutations zero uploads zero verbs (D+0, E+0)
 
+- [city-43] 27th hold — register 13/13 EXECUTED; census 289==289 quiet vs city-42 (0/0/0); band r33-55 48 lib-bearing zero new off-spoke; amphi HOLD intact (-23.32,37.31) lib 95a98c74; farm-prop hosts unmoved riders b31/b32/b33 co-located 0.0mm epoch-stable; wave-2 mosaics+miles parked at r45-49 pending nvp-105 blessing; shard routing no city prefix zero OPEN; interlane f6254cd0; blocked on Bill (amphi 3-option, wave-2 nvp-105, eye-gates b31-b33); zero mutations (D+0, E+0)
+
 **Running total: 2370715 / 2000000**
