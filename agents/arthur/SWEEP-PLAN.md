@@ -2289,3 +2289,31 @@ zero uploads, zero comp edits, zero shared-budget use. Next tier-2 pair
 derived from plan text: @73 potter/market, @72 row-cottage/observatory,
 @71 potter/market, @70 hall/forge, @69 inn/stable; bunkhouse last walked
 sweep-62, longhouse sweep-63, now the stalest pair).
+
+R-124 (Sev 2-class observation, NO defect — decode-verified tool boundary,
+sweep-74 2026-09-07) LAVENDER FILM-THRESHOLD CROSSING SURFACES SIX
+PRE-EXISTING GARDEN-EDGE ADJACENCIES IN SQUARE-SAT. improve-45's furrow cure
+(426178de) rebuilt all four lavender beds with real furrow walls, raising
+bbox height 0.482 → 0.550 — past the frozen E2 film threshold (≤0.5) in
+sweep-sat-next.ts. Six previously film-exempt contacts surfaced:
+lav-0027|mile-nw-007 / |mile-nw-008 / |skeps / |stile, lav-0040|hedge /
+|stile (square-SAT gaps −0.507 .. −5.795). Source-true decode of the EXACT
+live bytes (sweep74-lavender-contacts-decode.ts, kept in-tree; local sha16
+== live lib prefix on all six libs): every contact is a POSITIVE separation
+— 0.001m (0027|skeps), 0.013m (0040|hedge), 0.015m (0027|stile), 0.024m
+(0040|stile), 0.098m (0027|mile-007), 0.165m (0027|mile-008) — no
+interpenetration anywhere; the deep square-SAT gaps are dead bbox corners
+over a ~20×12m planting-bed envelope (pitfall-0b). Cure footprints were
+strict-subsets (x/z shrank), so true clearances IMPROVED under the cure;
+the contacts are newly VISIBLE, not new in the world. The adjacencies are
+NW cultivation district-edge design (apiary at field edge: skeps +
+rainbarrel beside lavender; stile at the field gate). NW route threads
+lav-0027's band by design — first post-cure NW walk 5/5 ALL_PASS @ 0.38
+(sweep-74). DISPOSITION: six gap-bounded named pairs added to
+sweep-sat-next.ts ALLOWED set with the true numbers in comments (sweep-8
+standing precedent). No owning-lane note — no defect exists; any pos/lib
+drift on these seven ids re-surfaces as census drift at 16-hex precision
+and re-derives the class. Standing unclassified set after sweep-74: R-121
+only.
+
+| sweep-74 | 2026-09-07 | 277→281 triple-epoch (epoch A +2 arrivals: nx-dress-nw-rainbarrel-001 = dress-96 @ 6e6abed0, nx-struct-catenarygate = struct-72 @ f82edc25, tuple-exact; 6 drift field-sets all ledger-matched: lavender 0006/0027/0040/0053 lib flips to improve-45 cure shas a9076cee/5e04ce4b/23fcec16/e913ef79 bbox h 0.482→0.55 furrow cure, pendulum reseat = city-3 @ 515f2490, soundmirror reseat = struct-71 @ 72ec50ed; epoch B +2 arrivals: nx-struct-moongate = struct-73 @ ef379b35, nx-dress-sw-seats-001 = dress-97 @ 20aafb75, millrace reseat (-76.707,6.711) = city-4 @ 47177c0e; epoch C 281==281 fully quiet; 0 departures, 0 unexplained drift; snapshot rewritten 112653B/281 ents/sha16 811f55bdf6b62d67 pre-write assertion diff exactly 4 arrivals + 7 classified field-sets, post-rewrite drift ZERO) | exit 3 at epoch A on 7 unclassified = R-121 + SIX NEW lavender-class contacts → R-124 decode-verified (all true separations POSITIVE 0.001..0.165m, no interpenetration; strict-subset cure footprints; named-pair exemption added, sweep-8 precedent); final-epoch SAT 243 bbox non-light / 231 classified / unclassified = exactly 1 = R-121 (30th sweep, no escalation due); arrivals+reseats introduced ZERO new contacts | tier-1 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 + NW 5/5 @ 0.38 FIRST walks over lavender cure bytes, NE 7/7 @ 0.38, SW 5/5 @ 0.37 re-walked epoch C — moongate 12.7m from SW END inside re-verify band) + tier-2 52nd cycle per committed pointer bunkhouse 6/6 @ 0.380 + longhouse 6/6 @ 0.346 ALL PASS | pins 15/15 ALL_PINS_OK 29th consecutive (struct18 real exit 0) + extended census-verified (carousel exact 7 + ce3633992d07055e, gate lamps 4/4 full-lib bbox PRESENT + companions, belltower 2419fbc5 + ladder, windmill 369c572480b0e786, woodyard 01b78fdd, welcome 7d1bd0c9 + welcome-l, cistern 156b4fc8, hamlet embers 5-of-5, 38 lights, 16 comp-bearing census-matched), interlane f6254cd0 stable, ledger law EXACT 2370693 at append, standing gate ALL PASS real exit 0 at tick-start abde146f | CLEAN SWEEP — R-124 registered + dispositioned in-lane; R-121 open, known, no escalation due |

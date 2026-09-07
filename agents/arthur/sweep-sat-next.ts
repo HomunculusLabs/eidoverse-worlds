@@ -56,6 +56,34 @@ const ALLOWED = new Set<string>([
   // reeds) defeats the auto film exemption, so standing-precedent tier
   // applies (same class as hearth|struct-crossing).
   "nx-struct-angler|nx-struct-reedpool",
+  // sweep-74 (R-124): improve-45's lavender furrow cure raised bed bbox height
+  // 0.482 -> 0.550, crossing the frozen E2 film threshold (<=0.5), so six
+  // pre-existing garden-edge adjacencies surfaced in square-SAT. Source-true
+  // decode of the EXACT live bytes (sweep74-lavender-contacts-decode.ts;
+  // local sha16 == live lib prefix on all six libs): every contact is a
+  // POSITIVE separation — no interpenetration anywhere; the square-SAT gaps
+  // are dead bbox corners over a ~20x12m planting-bed envelope (pitfall-0b).
+  // True walking-band (y<2.5) plan-view mins:
+  //   lav-0027|mile-nw-007: sq -3.557 -> TRUE 0.098m (wide grid)
+  //   lav-0027|mile-nw-008: sq -3.557 -> TRUE 0.165m (wide grid)
+  //   lav-0027|skeps:       sq -2.333 -> TRUE 0.001m
+  //   lav-0040|hedge:       sq -5.795 -> TRUE 0.013m
+  //   lav-0027|stile:       sq -0.507 -> TRUE 0.015m
+  //   lav-0040|stile:       sq -1.086 -> TRUE 0.024m
+  // All are district-edge bedding meets (farm furniture at field edge is the
+  // NW cultivation design: skeps/rainbarrel apiary beside lavender; stile at
+  // the field gate). Cure footprints were strict-subsets (x/z shrank), so the
+  // true clearances IMPROVED under the cure; the contacts are newly VISIBLE,
+  // not new in the world. NW route threads lav-0027's band by design — first
+  // post-cure NW walk 5/5 ALL_PASS @ 0.38 (sweep-74). Evidence in SWEEP-PLAN
+  // R-124. Any pos/lib drift on these seven ids re-surfaces as census drift
+  // at 16-hex precision and re-derives this class.
+  "nx-cultivation-lavender-0027|nx-mile-nw-007",
+  "nx-cultivation-lavender-0027|nx-mile-nw-008",
+  "nx-cultivation-lavender-0027|nx-dress-nw-skeps-001",
+  "nx-cultivation-lavender-0027|nx-dress-nw-stile-001",
+  "nx-cultivation-lavender-0040|nx-dress-nw-hedge-001",
+  "nx-cultivation-lavender-0040|nx-dress-nw-stile-001",
 ]);
 
 const r = await fetch(URL_, { headers: { "User-Agent": "curl/8.7.1" } });
