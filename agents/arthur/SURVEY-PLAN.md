@@ -1683,5 +1683,74 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   real exit 0 first try at c75a96b (ledger law EXACT 2370660; sweep-70 at
   tip). Verdicts 0 confirmed / 7 clean (7 clean-with-margin) / 0 dropped + 2
   judge quantitative claims discarded via source law (b6 continuous-curve
-  expectation, b13 band count). Zero world mutations, zero uploads, zero
-  comp edits, zero shared-budget use.
+  expectation, b13 band count). Zero world mutations, zero uploads,
+  zero comp edits, zero shared-budget use.
+
+## Judged index (survey-34)
+
+- survey-34 (2026-09-07, NATIVE 6/6 — zero 1210 flaps all tick, ZERO ZAI
+  fallback; 18m gameplay frame primary (frontal primary for stillwind per
+  survey-29 design), fresh live store bytes 6/6 HTTP 200 curl UA on exact
+  census-34 libs, served-shas pinned 944a08d4 / efe49262 / 23703e69 /
+  07b2d67a / bec59f21 / ec8b7dc5): STANDING-DEBT + ARRIVAL + POST-CURE
+  slice (debt-first per loop law 3; severity backlog drained — round-1
+  terminal, survey-7..33 candidates are intake not re-judge debt; cairn
+  excluded — improve43-decode-cairn.ts untracked = family work in flight,
+  dirty-tree law). Slice = meridiandial (struct-68 arrival, owner final
+  judge ZAI — native debt) + glazier (dress-92 arrival, first independent
+  read) + waterstair (v7 final bytes 46c39401, native independent read
+  owed — survey-25 dissent arc) + stillwind (frontal follow-up named
+  survey-27, not-executed survey-29, carries) + wavepergola (native read
+  owed — survey-31 + owner struct-65 both ZAI fallback) + garden-0045
+  (improve-42 post-cure independent corroboration, family EXECUTED 5/5).
+  VERDICTS: MERIDIANDIAL NATIVE CLEAN-with-margin — native debt PAID;
+  identity lands (stepped octagonal dial face + hour-stone ring + central
+  pole w/ brass finial = stone monument w/ sundial cues), grounded with
+  contact strip, zero floats/voids/glitch classes; margins: gnomon reads
+  plain vertical pole (blade slant framing-limited at 18m), radial
+  hour-fan pattern + meridian groove sub-resolve (stones read as rim
+  ring, not fan), corroborates struct-68's owner pass (ZAI top-view) —
+  cluster closes CLEAN. GLAZIER NATIVE CLEAN-with-margin — first
+  independent read; A-frame pane rack + leaning panel + crate read
+  instantly, teal glass tint carries glass identity, grounded feet +
+  contact strips, zero floats/strays/glitches; margin: glass reads by
+  tint alone, no specular/sheen visible (chassis-no-envmap class,
+  survey-32 lamp-e law — engine-side, not bytes); corroborates dress-92's
+  owner PASS arc. WATERSTAIR v7 NATIVE CLEAN-with-margin — survey-25
+  dissent arc RESOLVED on final bytes: descending cascade identity READS
+  (blue sheets + white foam dashes stepping diagonally down from raised
+  stone head w/ exposed risers to low flat tail), water color+continuity
+  PASS, silhouette deliberate, zero floats/glitches; margins: terminus
+  basin reads weak (same blue as steps, no rim/deep tone — merges into
+  cascade), discrete-bead rows read as foam-texture not separated
+  droplets (sub-threshold at 18m). STILLWIND frontal NATIVE
+  CLEAN-with-margin — named follow-up debt PAID: deliberate sculpture
+  (pointed-arch void reads center, panel lean + cast shadow reads, brass
+  bead reads intentional, massing grounded, zero glitch classes);
+  margins: full-period wave read framing-limited (arc reads, period
+  unresolvable frontal — mobius-twist class survey-32), ring/keystone +
+  swell sub-resolve. WAVEPERGOLA NATIVE CLEAN — native debt PAID, cluster
+  closes CLEAN 3-0 (owner ZAI + survey-31 ZAI + survey-34 NATIVE): full-
+  period wave reads smooth continuous (valley ~1/3, crest ~2/3), 12-14
+  posts grounded with square base pads tracking the curve, tenon pegs +
+  rear-row slivers deliberate, zero floats/voids/glitches; margin:
+  center-span post gap unresolvable intentional-vs-perspective.
+  GARDEN-0045 NATIVE CLEAN — post-cure corroboration of improve-42's
+  EXECUTED 5/5 family: kitchen-garden identity lands fully (timber
+  raised beds, parallel REGULAR cabbage rows on distinct soil strips,
+  hedge perimeter + 4 corner posts + entrance gap, marigold borders,
+  step stones), zero floats, grounded, zero glitch classes; row-grammar
+  regularity PASS at 18m (head-level evenness at resolution limit).
+  Routing: ZERO notes (zero confirmed defects), zero new candidate rows,
+  zero ledger append (read-only tick, loop law 4). Census 276 vs
+  survey-33 snapshot 274: +2 arrivals both ledger-matched
+  (nx-struct-meridiandial = struct-68 @ 3d3b315 tuple-exact (0,-0.0065,
+  -27) yaw 0; nx-dress-ne-glazier-001 = dress-92 @ a010c6c tuple-exact
+  (60.95,-0.0284,28.42) yaw -2.35619), 5 POS_SAME lib flips =
+  improve-42's committed garden cure 66ded6b5 (garden-0011/0019/0032/
+  0045/0058, ledger-matched domain-valid), 0 departures. Gate: ALL PASS
+  real exit 0 first try at fedc6d2d (ledger law EXACT 2370670). Verdicts
+  0 confirmed / 6 clean (5 clean-with-margin) / 0 dropped; 4 standing
+  debts PAID this tick (meridiandial native, waterstair independent,
+  stillwind frontal, wavepergola native). Zero world mutations, zero
+  uploads, zero comp edits, zero shared-budget use.
