@@ -2400,3 +2400,59 @@ It should NOT read as a gate or weir anymore.
 **SURVEY INTAKE status**: waterstair dissent row EXECUTED this tick.
 Remaining intake: meridianstair verify cluster (split 2-2, native
 tie-break owed), orreryring margin-only.
+
+## struct-58 (2026-09-07): meridianstair verify cluster RESOLVED —
+## decode-first tie-break: no defect, the cluster closes CLEAN
+
+Intake row (survey-19..23, five reads, cluster split 3-2 TOWARD defect
+on the P2-R post-base gap; native tie-break owed all five ticks). Tag
+derived from ledger max (struct-57 → struct-58). Cadence 58%3=2 → not a
+forced refine tick; standing intake outranks new commissions (sweep/survey
+notes = Bill-correction class). Round-1 shard rows for nx-struct-*:
+all closed (crossing/skymirror/shelltower/millrace/hypar EXECUTED or
+DROPPED — verified this tick by section read).
+
+**Byte identity first**: live lib `store/dec58a3b6bfcae4a.glb` ==
+struct-47 placed pin == local deterministic rebuild sha16 dec58a3b
+(×2, byte-identical). The surveys' "served-sha 5d8e1782" is their own
+fetch-hash artifact, not live drift. Census tuple (5.7, −0.0378, −54.7)
+yaw 3.037 — exact struct-47 pin.
+
+**Decode (struct58-decode-meridianstair.ts, read-only, exact bytes)**:
+- F1 base-gap: ALL 8 post bases at exactly y=0.0000 (worst |baseY| across
+  posts 0.0000m; 24 verts per post column, tops matching source table
+  2.791/3.341/3.891/3.891 to 4 decimals; ZERO iron verts outside the
+  post columns). Source-truth: every post is BoxGeometry(0.18,h,0.18)
+  centered at h/2 — base-at-contact is by construction. A 24px gap at
+  18m ≈ post-width is geometrically impossible on these bytes.
+- F2 pin-per-gate: exactly 2 pin clusters (gold+glow, n=162 verts each)
+  at (3.196, 3.981, ±2.500) — the summit pair, exactly as struct-47's
+  concept records ("the two rightmost posts carry gold glow pins").
+  Pin-per-gate was never the build's intent; the survey's "two gates
+  fail the pin read" finding is an intent misread, not a defect.
+- Envelope [−3.29,0,−2.59]..[3.29,4.4115,2.59] — 4 nodes, materials
+  timber/hypar_iron/hypar_gold/glow3, intact.
+
+**Native judge**: 1210 hard down ×2 + paced retry (consistent with
+survey-21/22/23's all-night outage). **ZAI fallback (disclosed)** on the
+fresh 18m gameplay frame (reviews/struct58-meridianstair/, exact bytes):
+CONCURS with decode — disputed P2-R base (~x531 y459) terminates
+directly ON the contact line, no gap, no bare band; all posts continuous
+crown-to-ground; the striped slat cast-shadow field explains the
+misread (a light shadow band adjacent to a base read as "bare ground");
+one summit pin reads occluded by converging slats at this azimuth —
+decode proves both pins exist in bytes. No floats, no detachments.
+
+**Cluster verdict**: closed CLEAN — decode + independent fallback read
+agree against a 3-2 ZAI-only cluster (the two dissenting survey reads
+now attributed to slat-shadow banding misread; native unavailable all
+five reads, and decode law 11 settles the geometric claim regardless).
+No mutation: the standing bytes are correct; re-placing identical bytes
+would be manufactured work. Gate ALL PASS real exit 0 at 334c7c2
+pre-tick; zero world mutations, zero uploads, zero shared-budget use
+(D+0, E+0). Probe + frames banked; probe script committed.
+
+**SURVEY INTAKE status**: meridianstair verify cluster RESOLVED CLEAN
+this tick (struct-58). Remaining intake: orreryring margin-only
+(ea4f2317, margin-tier; next-worst is now second-commission work or the
+margin probe).
