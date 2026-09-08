@@ -4,7 +4,6 @@
  "entities": [
   {
    "id": "nx-approach-lamp-e",
-   "kind": "thing",
    "pos": [
     10,
     0,
@@ -12,7 +11,8 @@
    ],
    "yaw": 3.141592653589793,
    "scale": 1,
-   "lib": "store/18b69a6bb2f5862f.glb",
+   "kind": "thing",
+   "lib": "18b69a6bb2f5862f",
    "bbox": {
     "min": [
      -0.44,
@@ -38,7 +38,6 @@
   },
   {
    "id": "nx-approach-lamp-e-l",
-   "kind": "light",
    "pos": [
     9.9,
     1.96,
@@ -46,12 +45,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-lamp-n",
-   "kind": "thing",
    "pos": [
     1.75,
     0,
@@ -59,7 +58,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/18b69a6bb2f5862f.glb",
+   "kind": "thing",
+   "lib": "18b69a6bb2f5862f",
    "bbox": {
     "min": [
      -0.44,
@@ -85,7 +85,6 @@
   },
   {
    "id": "nx-approach-lamp-n-l",
-   "kind": "light",
    "pos": [
     1.75,
     1.96,
@@ -93,12 +92,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-lamp-s",
-   "kind": "thing",
    "pos": [
     -1.75,
     0,
@@ -106,7 +105,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/18b69a6bb2f5862f.glb",
+   "kind": "thing",
+   "lib": "18b69a6bb2f5862f",
    "bbox": {
     "min": [
      -0.44,
@@ -132,7 +132,6 @@
   },
   {
    "id": "nx-approach-lamp-s-l",
-   "kind": "light",
    "pos": [
     -1.75,
     1.96,
@@ -140,12 +139,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-lamp-w",
-   "kind": "thing",
    "pos": [
     -10,
     0,
@@ -153,7 +152,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/18b69a6bb2f5862f.glb",
+   "kind": "thing",
+   "lib": "18b69a6bb2f5862f",
    "bbox": {
     "min": [
      -0.44,
@@ -179,7 +179,6 @@
   },
   {
    "id": "nx-approach-lamp-w-l",
-   "kind": "light",
    "pos": [
     -9.9,
     1.96,
@@ -187,12 +186,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-ne-lamp-001-l",
-   "kind": "light",
    "pos": [
     39.71,
     1.96,
@@ -200,12 +199,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-ne-lamp-002-l",
-   "kind": "light",
    "pos": [
     32.89,
     1.96,
@@ -213,12 +212,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-ne-lane-002",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -226,7 +225,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/dc52264c04cfe5bb.glb",
+   "kind": "thing",
+   "lib": "dc52264c04cfe5bb",
    "bbox": {
     "min": [
      18.195,
@@ -252,7 +252,6 @@
   },
   {
    "id": "nx-approach-nw-lamp-001-l",
-   "kind": "light",
    "pos": [
     -39.09,
     1.96,
@@ -260,12 +259,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-nw-lamp-002-l",
-   "kind": "light",
    "pos": [
     -47.96,
     1.96,
@@ -273,12 +272,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-nw-lane-001",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -286,7 +285,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/dc256065879371d8.glb",
+   "kind": "thing",
+   "lib": "dc256065879371d8",
    "bbox": {
     "min": [
      -51.67,
@@ -312,7 +312,6 @@
   },
   {
    "id": "nx-approach-sw-lamp-001-l",
-   "kind": "light",
    "pos": [
     -25.2,
     1.96,
@@ -320,12 +319,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-sw-lamp-002-l",
-   "kind": "light",
    "pos": [
     -34.69,
     1.96,
@@ -333,12 +332,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-approach-sw-lane-003",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -346,7 +345,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/fb04a144cc1fc458.glb",
+   "kind": "thing",
+   "lib": "fb04a144cc1fc458",
    "bbox": {
     "min": [
      -44.162,
@@ -372,7 +372,6 @@
   },
   {
    "id": "nx-artwalk-b1-hall-charter",
-   "kind": "thing",
    "pos": [
     4.928243671768526,
     1.1,
@@ -380,7 +379,8 @@
    ],
    "yaw": -0.31322457341772525,
    "scale": 1,
-   "lib": "store/100eb5e9e89694a9.glb",
+   "kind": "thing",
+   "lib": "100eb5e9e89694a9",
    "bbox": {
     "min": [
      -0.04,
@@ -406,7 +406,6 @@
   },
   {
    "id": "nx-artwalk-b10-windmill-four-wind-crown",
-   "kind": "thing",
    "pos": [
     -37.38,
     2.22,
@@ -414,7 +413,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/8e55e366b5a28987.glb",
+   "kind": "thing",
+   "lib": "8e55e366b5a28987",
    "bbox": {
     "min": [
      -1.125,
@@ -440,7 +440,6 @@
   },
   {
    "id": "nx-artwalk-b11-woodyard-heartwood-measure",
-   "kind": "thing",
    "pos": [
     16.3635762733503,
     0.75,
@@ -448,7 +447,8 @@
    ],
    "yaw": -2.669815142409043,
    "scale": 1,
-   "lib": "store/aa5f2550365c1f7f.glb",
+   "kind": "thing",
+   "lib": "aa5f2550365c1f7f",
    "bbox": {
     "min": [
      -1.3,
@@ -474,7 +474,6 @@
   },
   {
    "id": "nx-artwalk-b12-kiln-heat-contours",
-   "kind": "thing",
    "pos": [
     18.419319135343407,
     -0.02065,
@@ -482,7 +481,8 @@
    ],
    "yaw": -2.443242374354201,
    "scale": 1,
-   "lib": "store/1ad2a6139373b973.glb",
+   "kind": "thing",
+   "lib": "1ad2a6139373b973",
    "bbox": {
     "min": [
      -0.775,
@@ -508,7 +508,6 @@
   },
   {
    "id": "nx-artwalk-b13-south-tide-east",
-   "kind": "thing",
    "pos": [
     -1.5,
     0.5,
@@ -516,7 +515,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/8a6b49f61bcf138e.glb",
+   "kind": "thing",
+   "lib": "8a6b49f61bcf138e",
    "bbox": {
     "min": [
      -0.2,
@@ -542,7 +542,6 @@
   },
   {
    "id": "nx-artwalk-b13-south-tide-west",
-   "kind": "thing",
    "pos": [
     1.5,
     0.5,
@@ -550,7 +549,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/8a6b49f61bcf138e.glb",
+   "kind": "thing",
+   "lib": "8a6b49f61bcf138e",
    "bbox": {
     "min": [
      -0.2,
@@ -576,7 +576,6 @@
   },
   {
    "id": "nx-artwalk-b14-east-gate-dawn-fan",
-   "kind": "thing",
    "pos": [
     19.7325,
     2.72,
@@ -584,7 +583,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/c67c0402bbfb7fd8.glb",
+   "kind": "thing",
+   "lib": "c67c0402bbfb7fd8",
    "bbox": {
     "min": [
      -1.15,
@@ -610,7 +610,6 @@
   },
   {
    "id": "nx-artwalk-b15-west-gate-dusk-arcs",
-   "kind": "thing",
    "pos": [
     -19.7325,
     2.72,
@@ -618,7 +617,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/f1efad77be904a59.glb",
+   "kind": "thing",
+   "lib": "f1efad77be904a59",
    "bbox": {
     "min": [
      -1.15,
@@ -644,7 +644,6 @@
   },
   {
    "id": "nx-artwalk-b16-forge-seven-strikes",
-   "kind": "thing",
    "pos": [
     21.81053323270505,
     1.02,
@@ -652,7 +651,8 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/54555b39274bc00c.glb",
+   "kind": "thing",
+   "lib": "54555b39274bc00c",
    "bbox": {
     "min": [
      -0.37,
@@ -678,7 +678,6 @@
   },
   {
    "id": "nx-artwalk-b17-garden-seed-lattice",
-   "kind": "thing",
    "pos": [
     -24.51890662066154,
     2.6209494488404763,
@@ -686,7 +685,8 @@
    ],
    "yaw": 2.2004415094410525,
    "scale": 1,
-   "lib": "store/241db6453224af9f.glb",
+   "kind": "thing",
+   "lib": "241db6453224af9f",
    "bbox": {
     "min": [
      -0.75,
@@ -712,7 +712,6 @@
   },
   {
    "id": "nx-artwalk-b18-row-warp-count",
-   "kind": "thing",
    "pos": [
     -21.155200197358777,
     2.22,
@@ -720,7 +719,8 @@
    ],
    "yaw": 0.9411511441487406,
    "scale": 1,
-   "lib": "store/d6d10de199f6fb03.glb",
+   "kind": "thing",
+   "lib": "d6d10de199f6fb03",
    "bbox": {
     "min": [
      -0.81,
@@ -746,7 +746,6 @@
   },
   {
    "id": "nx-artwalk-b19-longhouse-feast-count",
-   "kind": "thing",
    "pos": [
     7.668887408682888,
     2.22,
@@ -754,7 +753,8 @@
    ],
    "yaw": -2.828368080172068,
    "scale": 1,
-   "lib": "store/98a4c17e73e4bac4.glb",
+   "kind": "thing",
+   "lib": "98a4c17e73e4bac4",
    "bbox": {
     "min": [
      -1.6,
@@ -780,7 +780,6 @@
   },
   {
    "id": "nx-artwalk-b2-inn-lintel",
-   "kind": "thing",
    "pos": [
     32.97,
     2.78,
@@ -788,7 +787,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/875942618767052c.glb",
+   "kind": "thing",
+   "lib": "875942618767052c",
    "bbox": {
     "min": [
      -1.175,
@@ -814,7 +814,6 @@
   },
   {
    "id": "nx-artwalk-b2-inn-threshold",
-   "kind": "thing",
    "pos": [
     33.05,
     0.198,
@@ -822,7 +821,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/cc80fa377494a76c.glb",
+   "kind": "thing",
+   "lib": "cc80fa377494a76c",
    "bbox": {
     "min": [
      -0.83,
@@ -848,7 +848,6 @@
   },
   {
    "id": "nx-artwalk-b20-bunkhouse-four-rooms",
-   "kind": "thing",
    "pos": [
     -10.466688873766076,
     1.05,
@@ -856,7 +855,8 @@
    ],
    "yaw": 0.31322457341772525,
    "scale": 1,
-   "lib": "store/152684b8dd6ba535.glb",
+   "kind": "thing",
+   "lib": "152684b8dd6ba535",
    "bbox": {
     "min": [
      -0.91,
@@ -882,7 +882,6 @@
   },
   {
    "id": "nx-artwalk-b21-tower-ascension-count",
-   "kind": "thing",
    "pos": [
     -8.130308960881354,
     2.22,
@@ -890,7 +889,8 @@
    ],
    "yaw": 2.828368080172068,
    "scale": 1,
-   "lib": "store/ba8f63884184b13e.glb",
+   "kind": "thing",
+   "lib": "ba8f63884184b13e",
    "bbox": {
     "min": [
      -0.81,
@@ -916,7 +916,6 @@
   },
   {
    "id": "nx-artwalk-b22-mapboard-eight-ways",
-   "kind": "thing",
    "pos": [
     2.5058834840541455,
     0,
@@ -924,7 +923,8 @@
    ],
    "yaw": -2.9441970937399127,
    "scale": 1,
-   "lib": "store/09c800d062057db2.glb",
+   "kind": "thing",
+   "lib": "09c800d062057db2",
    "bbox": {
     "min": [
      -1.15,
@@ -950,7 +950,6 @@
   },
   {
    "id": "nx-artwalk-b23-cistern-rain-count",
-   "kind": "thing",
    "pos": [
     15.443541965497799,
     0.31,
@@ -958,7 +957,8 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/8d9419e5c2d9e3e7.glb",
+   "kind": "thing",
+   "lib": "8d9419e5c2d9e3e7",
    "bbox": {
     "min": [
      -0.26,
@@ -984,7 +984,6 @@
   },
   {
    "id": "nx-artwalk-b24-well-depth",
-   "kind": "thing",
    "pos": [
     3.4,
     0.375,
@@ -992,7 +991,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/1935752ba39b674e.glb",
+   "kind": "thing",
+   "lib": "1935752ba39b674e",
    "bbox": {
     "min": [
      -0.23,
@@ -1018,7 +1018,6 @@
   },
   {
    "id": "nx-artwalk-b25-welcome-village-mark",
-   "kind": "thing",
    "pos": [
     -3.030327212597244,
     1.35,
@@ -1026,7 +1025,8 @@
    ],
    "yaw": 0.6092,
    "scale": 1,
-   "lib": "store/173352aa2df4450f.glb",
+   "kind": "thing",
+   "lib": "173352aa2df4450f",
    "bbox": {
     "min": [
      -0.45,
@@ -1052,7 +1052,6 @@
   },
   {
    "id": "nx-artwalk-b26-wayband",
-   "kind": "thing",
    "pos": [
     1.75,
     1.5,
@@ -1060,7 +1059,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/7594436a996e8ded.glb",
+   "kind": "thing",
+   "lib": "7594436a996e8ded",
    "bbox": {
     "min": [
      -0.125,
@@ -1086,7 +1086,6 @@
   },
   {
    "id": "nx-artwalk-b27-waterline",
-   "kind": "thing",
    "pos": [
     30,
     0,
@@ -1094,7 +1093,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/580706ad8e46212c.glb",
+   "kind": "thing",
+   "lib": "580706ad8e46212c",
    "bbox": {
     "min": [
      -1.031,
@@ -1120,7 +1120,6 @@
   },
   {
    "id": "nx-artwalk-b28-bake-count",
-   "kind": "thing",
    "pos": [
     18.593536600282096,
     -1.5946487083102603e-08,
@@ -1128,7 +1127,8 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/18c1bb5da4328ae7.glb",
+   "kind": "thing",
+   "lib": "18c1bb5da4328ae7",
    "bbox": {
     "min": [
      -3.8,
@@ -1154,7 +1154,6 @@
   },
   {
    "id": "nx-artwalk-b29-strike-count",
-   "kind": "thing",
    "pos": [
     22.347652212343093,
     -1.5946487083102603e-08,
@@ -1162,7 +1161,8 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/a7df548e06d1412d.glb",
+   "kind": "thing",
+   "lib": "a7df548e06d1412d",
    "bbox": {
     "min": [
      2.4,
@@ -1188,7 +1188,6 @@
   },
   {
    "id": "nx-artwalk-b3-ruled-porch",
-   "kind": "thing",
    "pos": [
     22.947447673236418,
     -0.00588,
@@ -1196,7 +1195,8 @@
    ],
    "yaw": -1.8975354116458194,
    "scale": 1,
-   "lib": "store/e1b66075d8e911e7.glb",
+   "kind": "thing",
+   "lib": "e1b66075d8e911e7",
    "bbox": {
     "min": [
      -2.275,
@@ -1222,7 +1222,6 @@
   },
   {
    "id": "nx-artwalk-b30-market-tally",
-   "kind": "thing",
    "pos": [
     -6.5,
     0,
@@ -1230,7 +1229,8 @@
    ],
    "yaw": 2.356194490192345,
    "scale": 1,
-   "lib": "store/a2326039fcb4e080.glb",
+   "kind": "thing",
+   "lib": "a2326039fcb4e080",
    "bbox": {
     "min": [
      0.29,
@@ -1256,7 +1256,6 @@
   },
   {
    "id": "nx-artwalk-b31-sheaf-tally",
-   "kind": "thing",
    "pos": [
     12,
     0,
@@ -1264,7 +1263,8 @@
    ],
    "yaw": -2.6,
    "scale": 1,
-   "lib": "store/9e6d3d13f1e8d380.glb",
+   "kind": "thing",
+   "lib": "9e6d3d13f1e8d380",
    "bbox": {
     "min": [
      0.05,
@@ -1290,7 +1290,6 @@
   },
   {
    "id": "nx-artwalk-b32-morning-measure",
-   "kind": "thing",
    "pos": [
     20,
     0,
@@ -1298,7 +1297,8 @@
    ],
    "yaw": -2.2,
    "scale": 1,
-   "lib": "store/adb5459562eb21b2.glb",
+   "kind": "thing",
+   "lib": "adb5459562eb21b2",
    "bbox": {
     "min": [
      -0.118,
@@ -1324,7 +1324,6 @@
   },
   {
    "id": "nx-artwalk-b33-milking-order",
-   "kind": "thing",
    "pos": [
     22.5,
     0,
@@ -1332,7 +1331,8 @@
    ],
    "yaw": -2.4,
    "scale": 1,
-   "lib": "store/ee2af59a36ee41ca.glb",
+   "kind": "thing",
+   "lib": "ee2af59a36ee41ca",
    "bbox": {
     "min": [
      -0.37,
@@ -1358,7 +1358,6 @@
   },
   {
    "id": "nx-artwalk-b34-wayband-e",
-   "kind": "thing",
    "pos": [
     10,
     1.5,
@@ -1366,7 +1365,8 @@
    ],
    "yaw": 3.141592653589793,
    "scale": 1,
-   "lib": "store/7594436a996e8ded.glb",
+   "kind": "thing",
+   "lib": "7594436a996e8ded",
    "bbox": {
     "min": [
      -0.125,
@@ -1392,7 +1392,6 @@
   },
   {
    "id": "nx-artwalk-b34-wayband-s",
-   "kind": "thing",
    "pos": [
     -1.75,
     1.5,
@@ -1400,7 +1399,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/7594436a996e8ded.glb",
+   "kind": "thing",
+   "lib": "7594436a996e8ded",
    "bbox": {
     "min": [
      -0.125,
@@ -1426,7 +1426,6 @@
   },
   {
    "id": "nx-artwalk-b34-wayband-w",
-   "kind": "thing",
    "pos": [
     -10,
     1.5,
@@ -1434,7 +1433,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/7594436a996e8ded.glb",
+   "kind": "thing",
+   "lib": "7594436a996e8ded",
    "bbox": {
     "min": [
      -0.125,
@@ -1460,7 +1460,6 @@
   },
   {
    "id": "nx-artwalk-b4-golden-hinges",
-   "kind": "thing",
    "pos": [
     1.5,
     0.7,
@@ -1468,7 +1467,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/78a457a5bab6874d.glb",
+   "kind": "thing",
+   "lib": "78a457a5bab6874d",
    "bbox": {
     "min": [
      -0.15,
@@ -1494,7 +1494,6 @@
   },
   {
    "id": "nx-artwalk-b4-golden-threshold",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -1502,7 +1501,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/db99bae44aa6ebcc.glb",
+   "kind": "thing",
+   "lib": "db99bae44aa6ebcc",
    "bbox": {
     "min": [
      -0.798,
@@ -1528,7 +1528,6 @@
   },
   {
    "id": "nx-artwalk-b4-golden-top",
-   "kind": "thing",
    "pos": [
     0,
     2.524133022449836,
@@ -1536,7 +1535,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/98fabb814c668f29.glb",
+   "kind": "thing",
+   "lib": "98fabb814c668f29",
    "bbox": {
     "min": [
      -0.817,
@@ -1562,7 +1562,6 @@
   },
   {
    "id": "nx-artwalk-b5-belltower-rings",
-   "kind": "thing",
    "pos": [
     5.269634200735408,
     0.65,
@@ -1570,7 +1569,8 @@
    ],
    "yaw": -2.356194490192345,
    "scale": 1,
-   "lib": "store/48aed5dabcb16a45.glb",
+   "kind": "thing",
+   "lib": "48aed5dabcb16a45",
    "bbox": {
     "min": [
      -0.317,
@@ -1596,7 +1596,6 @@
   },
   {
    "id": "nx-artwalk-b6-market-lissa-left",
-   "kind": "thing",
    "pos": [
     -5.481766235091371,
     0.38,
@@ -1604,7 +1603,8 @@
    ],
    "yaw": 2.356194490192345,
    "scale": 1,
-   "lib": "store/5fcdd1ef922f7794.glb",
+   "kind": "thing",
+   "lib": "5fcdd1ef922f7794",
    "bbox": {
     "min": [
      -0.725,
@@ -1630,7 +1630,6 @@
   },
   {
    "id": "nx-artwalk-b6-market-lissa-right",
-   "kind": "thing",
    "pos": [
     -6.8959797974644665,
     0.38,
@@ -1638,7 +1637,8 @@
    ],
    "yaw": 2.356194490192345,
    "scale": 1,
-   "lib": "store/5fcdd1ef922f7794.glb",
+   "kind": "thing",
+   "lib": "5fcdd1ef922f7794",
    "bbox": {
     "min": [
      -0.725,
@@ -1664,7 +1664,6 @@
   },
   {
    "id": "nx-artwalk-b7-shrine-stars",
-   "kind": "thing",
    "pos": [
     -26.295770450820214,
     0.24873907394894657,
@@ -1672,7 +1671,8 @@
    ],
    "yaw": 1.4118119548622732,
    "scale": 1,
-   "lib": "store/a7ef8541e9561833.glb",
+   "kind": "thing",
+   "lib": "a7ef8541e9561833",
    "bbox": {
     "min": [
      -0.6,
@@ -1698,7 +1698,6 @@
   },
   {
    "id": "nx-artwalk-b8-stable-harmonic-rein",
-   "kind": "thing",
    "pos": [
     45.16,
     2.22,
@@ -1706,7 +1705,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/cba8d0efb0518938.glb",
+   "kind": "thing",
+   "lib": "cba8d0efb0518938",
    "bbox": {
     "min": [
      -2.45,
@@ -1732,7 +1732,6 @@
   },
   {
    "id": "nx-artwalk-b9-dyehouse-crossing-loom",
-   "kind": "thing",
    "pos": [
     -23.62227356310568,
     0.48,
@@ -1740,7 +1739,8 @@
    ],
    "yaw": 0.941,
    "scale": 1,
-   "lib": "store/6c3c85dee69191cf.glb",
+   "kind": "thing",
+   "lib": "6c3c85dee69191cf",
    "bbox": {
     "min": [
      -1.125,
@@ -1766,7 +1766,6 @@
   },
   {
    "id": "nx-artwalk-h2",
-   "kind": "thing",
    "pos": [
     27,
     -0.03516135170548859,
@@ -1774,7 +1773,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/f14d70564a107879.glb",
+   "kind": "thing",
+   "lib": "f14d70564a107879",
    "bbox": {
     "min": [
      -1.633,
@@ -1800,7 +1800,6 @@
   },
   {
    "id": "nx-artwalk-h2-l",
-   "kind": "light",
    "pos": [
     27,
     1.1448386482945114,
@@ -1808,12 +1807,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-artwalk-h3",
-   "kind": "thing",
    "pos": [
     32.526911934581186,
     -0.0313912325769002,
@@ -1821,7 +1820,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/f33e9839b5d95241.glb",
+   "kind": "thing",
+   "lib": "f33e9839b5d95241",
    "bbox": {
     "min": [
      -2.47,
@@ -1847,7 +1847,6 @@
   },
   {
    "id": "nx-artwalk-h3-l",
-   "kind": "light",
    "pos": [
     32.526911934581186,
     2.4486087674231,
@@ -1855,12 +1854,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-artwalk-h4",
-   "kind": "thing",
    "pos": [
     35.70889244992065,
     -0.041880605288849126,
@@ -1868,7 +1867,8 @@
    ],
    "yaw": -2.356194490192345,
    "scale": 1,
-   "lib": "store/0b29c15ad1b8d04f.glb",
+   "kind": "thing",
+   "lib": "0b29c15ad1b8d04f",
    "bbox": {
     "min": [
      -2.25,
@@ -1894,7 +1894,6 @@
   },
   {
    "id": "nx-artwalk-h4-l",
-   "kind": "light",
    "pos": [
     35.510902551188416,
     2.2981193947111507,
@@ -1902,12 +1901,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-artwalk-h5",
-   "kind": "thing",
    "pos": [
     19.79898987322333,
     -0.015837100520963706,
@@ -1915,7 +1914,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/3c48f921d262907a.glb",
+   "kind": "thing",
+   "lib": "3c48f921d262907a",
    "bbox": {
     "min": [
      -3.26,
@@ -1941,7 +1941,6 @@
   },
   {
    "id": "nx-artwalk-h5-l-left",
-   "kind": "light",
    "pos": [
     17.882730496207788,
     0.6041628994790363,
@@ -1949,12 +1948,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-artwalk-h5-l-right",
-   "kind": "light",
    "pos": [
     21.20613236778456,
     0.6041628994790363,
@@ -1962,12 +1961,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-artwalk-h6",
-   "kind": "thing",
    "pos": [
     38.53731957466684,
     -0.02768908298729972,
@@ -1975,7 +1974,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/a61457df15380006.glb",
+   "kind": "thing",
+   "lib": "a61457df15380006",
    "bbox": {
     "min": [
      -2.16,
@@ -2001,7 +2001,6 @@
   },
   {
    "id": "nx-artwalk-h6-l",
-   "kind": "light",
    "pos": [
     38.3605428793702,
     2.4223109170127004,
@@ -2009,12 +2008,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-artwalk-h7",
-   "kind": "thing",
    "pos": [
     31.819805153394636,
     -0.037292896876929355,
@@ -2022,7 +2021,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/7baac8fd9b45bc92.glb",
+   "kind": "thing",
+   "lib": "7baac8fd9b45bc92",
    "bbox": {
     "min": [
      -2.2,
@@ -2048,7 +2048,6 @@
   },
   {
    "id": "nx-artwalk-h7-l",
-   "kind": "light",
    "pos": [
     30.476302269140195,
     2.2827071031230703,
@@ -2056,12 +2055,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-carousel",
-   "kind": "thing",
    "pos": [
     -18,
     0.00014950061063032772,
@@ -2069,7 +2068,8 @@
    ],
    "yaw": 2.35619,
    "scale": 1,
-   "lib": "store/1c0128b61b510a5d.glb",
+   "kind": "thing",
+   "lib": "1c0128b61b510a5d",
    "bbox": {
     "min": [
      -3.55,
@@ -2095,7 +2095,6 @@
   },
   {
    "id": "nx-cistern",
-   "kind": "thing",
    "pos": [
     15.703583236444484,
     0,
@@ -2103,7 +2102,8 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/156b4fc8c7287a9d.glb",
+   "kind": "thing",
+   "lib": "156b4fc8c7287a9d",
    "bbox": {
     "min": [
      -0.45,
@@ -2129,7 +2129,6 @@
   },
   {
    "id": "nx-core-paths",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -2137,7 +2136,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/c31b6e3f22641e14.glb",
+   "kind": "thing",
+   "lib": "c31b6e3f22641e14",
    "bbox": {
     "min": [
      -14.628,
@@ -2163,7 +2163,6 @@
   },
   {
    "id": "nx-court",
-   "kind": "thing",
    "pos": [
     18.9,
     -1.5946487083102603e-08,
@@ -2171,7 +2170,8 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/77cab2c3cc3a39c7.glb",
+   "kind": "thing",
+   "lib": "77cab2c3cc3a39c7",
    "bbox": {
     "min": [
      -6.5,
@@ -2197,7 +2197,6 @@
   },
   {
    "id": "nx-craft-cloister-0008",
-   "kind": "thing",
    "pos": [
     94.154595,
     -0.028291539908999647,
@@ -2205,7 +2204,8 @@
    ],
    "yaw": -0.785398163,
    "scale": 1,
-   "lib": "store/c6014616c233ac01.glb",
+   "kind": "thing",
+   "lib": "c6014616c233ac01",
    "bbox": {
     "min": [
      -5.7,
@@ -2231,7 +2231,6 @@
   },
   {
    "id": "nx-craft-cloister-0016",
-   "kind": "thing",
    "pos": [
     82.07472,
     -0.022380333179918957,
@@ -2239,7 +2238,8 @@
    ],
    "yaw": -0.785398163,
    "scale": 1,
-   "lib": "store/4efdd4602c62966b.glb",
+   "kind": "thing",
+   "lib": "4efdd4602c62966b",
    "bbox": {
     "min": [
      -5.7,
@@ -2265,7 +2265,6 @@
   },
   {
    "id": "nx-craft-cloister-0029",
-   "kind": "thing",
    "pos": [
     63.635973,
     -0.007895964088230319,
@@ -2273,7 +2272,8 @@
    ],
    "yaw": -0.785398163,
    "scale": 1,
-   "lib": "store/afa06673d4f1831f.glb",
+   "kind": "thing",
+   "lib": "afa06673d4f1831f",
    "bbox": {
     "min": [
      -5.7,
@@ -2299,7 +2299,6 @@
   },
   {
    "id": "nx-craft-cloister-0042",
-   "kind": "thing",
    "pos": [
     40.266928,
     -0.02953691882990521,
@@ -2307,7 +2306,8 @@
    ],
    "yaw": -0.785398163,
    "scale": 1,
-   "lib": "store/255739e0c2a5d391.glb",
+   "kind": "thing",
+   "lib": "255739e0c2a5d391",
    "bbox": {
     "min": [
      -5.7,
@@ -2333,7 +2333,6 @@
   },
   {
    "id": "nx-craft-cloister-0055",
-   "kind": "thing",
    "pos": [
     13.778137,
     -0.01502744933152366,
@@ -2341,7 +2340,8 @@
    ],
    "yaw": -0.785398163,
    "scale": 1,
-   "lib": "store/2cc686bfee6a1c17.glb",
+   "kind": "thing",
+   "lib": "2cc686bfee6a1c17",
    "bbox": {
     "min": [
      -5.7,
@@ -2367,7 +2367,6 @@
   },
   {
    "id": "nx-craft-hamlet-0007",
-   "kind": "thing",
    "pos": [
     86.671814,
     -0.01918958686956854,
@@ -2375,7 +2374,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/edd3da3ef7737bef.glb",
+   "kind": "thing",
+   "lib": "edd3da3ef7737bef",
    "bbox": {
     "min": [
      -6.792,
@@ -2401,7 +2401,6 @@
   },
   {
    "id": "nx-craft-hamlet-0015",
-   "kind": "thing",
    "pos": [
     79.285079,
     -0.019683875057015642,
@@ -2409,7 +2408,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/b5a9de3d99d21ea3.glb",
+   "kind": "thing",
+   "lib": "b5a9de3d99d21ea3",
    "bbox": {
     "min": [
      -7.152,
@@ -2435,7 +2435,6 @@
   },
   {
    "id": "nx-craft-hamlet-0028",
-   "kind": "thing",
    "pos": [
     65.396745,
     0.0016023565750081304,
@@ -2443,7 +2442,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/44d7846302be80a8.glb",
+   "kind": "thing",
+   "lib": "44d7846302be80a8",
    "bbox": {
     "min": [
      -6.923,
@@ -2469,7 +2469,6 @@
   },
   {
    "id": "nx-craft-hamlet-0041",
-   "kind": "thing",
    "pos": [
     46.632895,
     -0.023892223112273604,
@@ -2477,7 +2476,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/caa851af0330a949.glb",
+   "kind": "thing",
+   "lib": "caa851af0330a949",
    "bbox": {
     "min": [
      -7.079,
@@ -2503,7 +2503,6 @@
   },
   {
    "id": "nx-craft-hamlet-0054",
-   "kind": "thing",
    "pos": [
     24.256087,
     0.00605516141442692,
@@ -2511,7 +2510,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/43f4b4ac1ebdd808.glb",
+   "kind": "thing",
+   "lib": "43f4b4ac1ebdd808",
    "bbox": {
     "min": [
      -7.021,
@@ -2537,7 +2537,6 @@
   },
   {
    "id": "nx-craft-statuary-0005",
-   "kind": "thing",
    "pos": [
     70.378182,
     -0.026565256802728945,
@@ -2545,7 +2544,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/dd0985508d0157c2.glb",
+   "kind": "thing",
+   "lib": "dd0985508d0157c2",
    "bbox": {
     "min": [
      -5.92,
@@ -2571,7 +2571,6 @@
   },
   {
    "id": "nx-craft-statuary-0026",
-   "kind": "thing",
    "pos": [
     62.061622,
     -0.033680292362306775,
@@ -2579,7 +2578,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/ba69e7158262698a.glb",
+   "kind": "thing",
+   "lib": "ba69e7158262698a",
    "bbox": {
     "min": [
      -5.92,
@@ -2605,7 +2605,6 @@
   },
   {
    "id": "nx-craft-statuary-0039",
-   "kind": "thing",
    "pos": [
     49.515665,
     -0.0301676564610222,
@@ -2613,7 +2612,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/61d7a70c8b530b83.glb",
+   "kind": "thing",
+   "lib": "61d7a70c8b530b83",
    "bbox": {
     "min": [
      -5.92,
@@ -2639,7 +2639,6 @@
   },
   {
    "id": "nx-craft-statuary-0052",
-   "kind": "thing",
    "pos": [
     33.595297,
     -0.024298703471806356,
@@ -2647,7 +2646,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/8c560202486fa0cd.glb",
+   "kind": "thing",
+   "lib": "8c560202486fa0cd",
    "bbox": {
     "min": [
      -5.92,
@@ -2673,7 +2673,6 @@
   },
   {
    "id": "nx-cultivation-garden-0011",
-   "kind": "thing",
    "pos": [
     -86.104625929,
     0.0456712809132166,
@@ -2681,7 +2680,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/185a221846fd74fa.glb",
+   "kind": "thing",
+   "lib": "185a221846fd74fa",
    "bbox": {
     "min": [
      -5,
@@ -2707,7 +2707,6 @@
   },
   {
    "id": "nx-cultivation-garden-0019",
-   "kind": "thing",
    "pos": [
     -79.354255867,
     0.03701553556368211,
@@ -2715,7 +2714,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/f4b36cb365754a10.glb",
+   "kind": "thing",
+   "lib": "f4b36cb365754a10",
    "bbox": {
     "min": [
      -5,
@@ -2741,7 +2741,6 @@
   },
   {
    "id": "nx-cultivation-garden-0032",
-   "kind": "thing",
    "pos": [
     -70.894119993,
     0.0276505409363984,
@@ -2749,7 +2748,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/54590f7ee441bc5c.glb",
+   "kind": "thing",
+   "lib": "54590f7ee441bc5c",
    "bbox": {
     "min": [
      -5,
@@ -2775,7 +2775,6 @@
   },
   {
    "id": "nx-cultivation-garden-0045",
-   "kind": "thing",
    "pos": [
     -61.502777956,
     0.027529785945452547,
@@ -2783,7 +2782,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/7610a674dea7659d.glb",
+   "kind": "thing",
+   "lib": "7610a674dea7659d",
    "bbox": {
     "min": [
      -5,
@@ -2809,7 +2809,6 @@
   },
   {
    "id": "nx-cultivation-garden-0058",
-   "kind": "thing",
    "pos": [
     -53.224217316,
     0.03137989008033212,
@@ -2817,7 +2816,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/45a88727d500495a.glb",
+   "kind": "thing",
+   "lib": "45a88727d500495a",
    "bbox": {
     "min": [
      -5,
@@ -2843,7 +2843,6 @@
   },
   {
    "id": "nx-cultivation-lavender-0006",
-   "kind": "thing",
    "pos": [
     -74.311739752,
     -0.012819972711928234,
@@ -2851,7 +2850,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/e913ef7998e2654d.glb",
+   "kind": "thing",
+   "lib": "e913ef7998e2654d",
    "bbox": {
     "min": [
      -9.925,
@@ -2877,7 +2877,6 @@
   },
   {
    "id": "nx-cultivation-lavender-0027",
-   "kind": "thing",
    "pos": [
     -53.907189114,
     0.02563520209327475,
@@ -2885,7 +2884,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/a9076cee40e4dee1.glb",
+   "kind": "thing",
+   "lib": "a9076cee40e4dee1",
    "bbox": {
     "min": [
      -9.925,
@@ -2911,7 +2911,6 @@
   },
   {
    "id": "nx-cultivation-lavender-0040",
-   "kind": "thing",
    "pos": [
     -39.582634215,
     0.04024847506294396,
@@ -2919,7 +2918,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/5e04ce4b2ad6e90c.glb",
+   "kind": "thing",
+   "lib": "5e04ce4b2ad6e90c",
    "bbox": {
     "min": [
      -9.925,
@@ -2945,7 +2945,6 @@
   },
   {
    "id": "nx-cultivation-lavender-0053",
-   "kind": "thing",
    "pos": [
     -24.825469984,
     0.03635458301689514,
@@ -2953,7 +2952,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/23fcec16fd6d95dd.glb",
+   "kind": "thing",
+   "lib": "23fcec16fd6d95dd",
    "bbox": {
     "min": [
      -9.925,
@@ -2979,7 +2979,6 @@
   },
   {
    "id": "nx-cultivation-orchard-0012",
-   "kind": "thing",
    "pos": [
     -88.7346892568504,
     0.019921379876134182,
@@ -2987,7 +2986,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/a5da671d97dfdb94.glb",
+   "kind": "thing",
+   "lib": "a5da671d97dfdb94",
    "bbox": {
     "min": [
      -6.711,
@@ -3013,7 +3013,6 @@
   },
   {
    "id": "nx-cultivation-orchard-0020",
-   "kind": "thing",
    "pos": [
     -75.073890346,
     0.03541361196741313,
@@ -3021,7 +3020,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/a0ed327d45d3796d.glb",
+   "kind": "thing",
+   "lib": "a0ed327d45d3796d",
    "bbox": {
     "min": [
      -6.806,
@@ -3047,7 +3047,6 @@
   },
   {
    "id": "nx-cultivation-orchard-0033",
-   "kind": "thing",
    "pos": [
     -61.87184335382291,
     0.02514020801364989,
@@ -3055,7 +3054,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/55fdc827f0bbcbf4.glb",
+   "kind": "thing",
+   "lib": "55fdc827f0bbcbf4",
    "bbox": {
     "min": [
      -7.237,
@@ -3081,7 +3081,6 @@
   },
   {
    "id": "nx-cultivation-orchard-0046",
-   "kind": "thing",
    "pos": [
     -43.205814584,
     0.041268072595556725,
@@ -3089,7 +3088,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/53a541115488ea78.glb",
+   "kind": "thing",
+   "lib": "53a541115488ea78",
    "bbox": {
     "min": [
      -6.739,
@@ -3115,7 +3115,6 @@
   },
   {
    "id": "nx-cultivation-orchard-0059",
-   "kind": "thing",
    "pos": [
     -30.84178331,
     -0.0002733106081673675,
@@ -3123,7 +3122,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/369f5b03477a8e9f.glb",
+   "kind": "thing",
+   "lib": "369f5b03477a8e9f",
    "bbox": {
     "min": [
      -6.766,
@@ -3149,7 +3149,6 @@
   },
   {
    "id": "nx-dress-banner",
-   "kind": "thing",
    "pos": [
     -4,
     0,
@@ -3157,7 +3156,8 @@
    ],
    "yaw": 2.356194490192345,
    "scale": 1,
-   "lib": "store/d32e7bcb8b007d21.glb",
+   "kind": "thing",
+   "lib": "d32e7bcb8b007d21",
    "bbox": {
     "min": [
      -0.08,
@@ -3183,7 +3183,6 @@
   },
   {
    "id": "nx-dress-bench-plaza",
-   "kind": "thing",
    "pos": [
     -9.5,
     0,
@@ -3191,7 +3190,8 @@
    ],
    "yaw": 0.7853981633974483,
    "scale": 1,
-   "lib": "store/09f4d1741fdb24a6.glb",
+   "kind": "thing",
+   "lib": "09f4d1741fdb24a6",
    "bbox": {
     "min": [
      -2.161,
@@ -3217,7 +3217,6 @@
   },
   {
    "id": "nx-dress-charcoal",
-   "kind": "thing",
    "pos": [
     22.724,
     -0.04164,
@@ -3225,7 +3224,8 @@
    ],
    "yaw": -2.4784945651581642,
    "scale": 1,
-   "lib": "store/1d9a1c2d95f785b6.glb",
+   "kind": "thing",
+   "lib": "1d9a1c2d95f785b6",
    "bbox": {
     "min": [
      -1.491,
@@ -3251,7 +3251,6 @@
   },
   {
    "id": "nx-dress-chess",
-   "kind": "thing",
    "pos": [
     -27.5,
     0,
@@ -3259,7 +3258,8 @@
    ],
    "yaw": 1.2,
    "scale": 1,
-   "lib": "store/cb215e8c13c8ac79.glb",
+   "kind": "thing",
+   "lib": "cb215e8c13c8ac79",
    "bbox": {
     "min": [
      -0.28,
@@ -3285,7 +3285,6 @@
   },
   {
    "id": "nx-dress-churn",
-   "kind": "thing",
    "pos": [
     20,
     0,
@@ -3293,7 +3292,8 @@
    ],
    "yaw": -2.2,
    "scale": 1,
-   "lib": "store/a509c3d2c1f3026e.glb",
+   "kind": "thing",
+   "lib": "a509c3d2c1f3026e",
    "bbox": {
     "min": [
      -0.233,
@@ -3319,7 +3319,6 @@
   },
   {
    "id": "nx-dress-coop",
-   "kind": "thing",
    "pos": [
     37.5,
     0,
@@ -3327,7 +3326,8 @@
    ],
    "yaw": -1.8,
    "scale": 1,
-   "lib": "store/f5d4039489c1ce4b.glb",
+   "kind": "thing",
+   "lib": "f5d4039489c1ce4b",
    "bbox": {
     "min": [
      -0.85,
@@ -3353,7 +3353,6 @@
   },
   {
    "id": "nx-dress-fountain",
-   "kind": "thing",
    "pos": [
     12.5,
     0,
@@ -3361,7 +3360,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/72f07c2a466feae3.glb",
+   "kind": "thing",
+   "lib": "72f07c2a466feae3",
    "bbox": {
     "min": [
      -1.58,
@@ -3387,7 +3387,6 @@
   },
   {
    "id": "nx-dress-giftshelf",
-   "kind": "thing",
    "pos": [
     -9,
     0,
@@ -3395,7 +3394,8 @@
    ],
    "yaw": 2.356194490192345,
    "scale": 1,
-   "lib": "store/c623cfa6fbdeb48e.glb",
+   "kind": "thing",
+   "lib": "c623cfa6fbdeb48e",
    "bbox": {
     "min": [
      -0.5,
@@ -3421,7 +3421,6 @@
   },
   {
    "id": "nx-dress-goats",
-   "kind": "thing",
    "pos": [
     34,
     0,
@@ -3429,7 +3428,8 @@
    ],
    "yaw": -1.2,
    "scale": 1,
-   "lib": "store/c47861e473e6f088.glb",
+   "kind": "thing",
+   "lib": "c47861e473e6f088",
    "bbox": {
     "min": [
      -4.56,
@@ -3455,7 +3455,6 @@
   },
   {
    "id": "nx-dress-harvestcart",
-   "kind": "thing",
    "pos": [
     12,
     0,
@@ -3463,7 +3462,8 @@
    ],
    "yaw": -2.6,
    "scale": 1,
-   "lib": "store/ee30d6709625bf2f.glb",
+   "kind": "thing",
+   "lib": "ee30d6709625bf2f",
    "bbox": {
     "min": [
      -2,
@@ -3489,7 +3489,6 @@
   },
   {
    "id": "nx-dress-hens",
-   "kind": "thing",
    "pos": [
     33.5,
     0,
@@ -3497,7 +3496,8 @@
    ],
    "yaw": -1.8,
    "scale": 1,
-   "lib": "store/edc1a4c7ca62d56f.glb",
+   "kind": "thing",
+   "lib": "edc1a4c7ca62d56f",
    "bbox": {
     "min": [
      1.743,
@@ -3523,7 +3523,6 @@
   },
   {
    "id": "nx-dress-hutch",
-   "kind": "thing",
    "pos": [
     38.5,
     0,
@@ -3531,7 +3530,8 @@
    ],
    "yaw": -1.9,
    "scale": 1,
-   "lib": "store/f5f47791dadb5abe.glb",
+   "kind": "thing",
+   "lib": "f5f47791dadb5abe",
    "bbox": {
     "min": [
      -0.62,
@@ -3557,7 +3557,6 @@
   },
   {
    "id": "nx-dress-milkstand",
-   "kind": "thing",
    "pos": [
     22.5,
     0,
@@ -3565,7 +3564,8 @@
    ],
    "yaw": -2.4,
    "scale": 1,
-   "lib": "store/bd2e613a10b9762e.glb",
+   "kind": "thing",
+   "lib": "bd2e613a10b9762e",
    "bbox": {
     "min": [
      -0.5,
@@ -3591,7 +3591,6 @@
   },
   {
    "id": "nx-dress-ne-anvilpad-001",
-   "kind": "thing",
    "pos": [
     24.765,
     0,
@@ -3599,7 +3598,8 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/65d686b023348c9b.glb",
+   "kind": "thing",
+   "lib": "65d686b023348c9b",
    "bbox": {
     "min": [
      -1.42,
@@ -3625,7 +3625,6 @@
   },
   {
    "id": "nx-dress-ne-bench-001",
-   "kind": "thing",
    "pos": [
     14.23,
     0,
@@ -3633,7 +3632,8 @@
    ],
    "yaw": 0.19198621771937624,
    "scale": 1,
-   "lib": "store/46f3b6b14ada6d8b.glb",
+   "kind": "thing",
+   "lib": "46f3b6b14ada6d8b",
    "bbox": {
     "min": [
      -1.38,
@@ -3659,7 +3659,6 @@
   },
   {
    "id": "nx-dress-ne-glazier-001",
-   "kind": "thing",
    "pos": [
     60.95,
     -0.0284,
@@ -3667,7 +3666,8 @@
    ],
    "yaw": -2.356194490192345,
    "scale": 1,
-   "lib": "store/53b31cfd38f758d6.glb",
+   "kind": "thing",
+   "lib": "53b31cfd38f758d6",
    "bbox": {
     "min": [
      -1.898,
@@ -3693,7 +3693,6 @@
   },
   {
    "id": "nx-dress-ne-timberyard-001",
-   "kind": "thing",
    "pos": [
     76.7,
     -0.006,
@@ -3701,7 +3700,8 @@
    ],
    "yaw": -2.356194490192345,
    "scale": 1,
-   "lib": "store/dfafb8c800cf6e90.glb",
+   "kind": "thing",
+   "lib": "dfafb8c800cf6e90",
    "bbox": {
     "min": [
      -1.564,
@@ -3727,7 +3727,6 @@
   },
   {
    "id": "nx-dress-ne-woodstack-001",
-   "kind": "thing",
    "pos": [
     59.708,
     -0.032,
@@ -3735,7 +3734,8 @@
    ],
    "yaw": -2.356194490192345,
    "scale": 1,
-   "lib": "store/692bc54e02358cc1.glb",
+   "kind": "thing",
+   "lib": "692bc54e02358cc1",
    "bbox": {
     "min": [
      -1.5,
@@ -3761,7 +3761,6 @@
   },
   {
    "id": "nx-dress-ne-yard-001",
-   "kind": "thing",
    "pos": [
     55.91,
     -0.034,
@@ -3769,7 +3768,8 @@
    ],
    "yaw": 2.570869988187648,
    "scale": 1,
-   "lib": "store/191227dafd0d05dc.glb",
+   "kind": "thing",
+   "lib": "191227dafd0d05dc",
    "bbox": {
     "min": [
      -2.4,
@@ -3795,7 +3795,6 @@
   },
   {
    "id": "nx-dress-nw-compost-001",
-   "kind": "thing",
    "pos": [
     -72.78,
     0.036,
@@ -3803,7 +3802,8 @@
    ],
    "yaw": 2.35619449,
    "scale": 1,
-   "lib": "store/330adcbcf0153026.glb",
+   "kind": "thing",
+   "lib": "330adcbcf0153026",
    "bbox": {
     "min": [
      -1.775,
@@ -3829,7 +3829,6 @@
   },
   {
    "id": "nx-dress-nw-dryingracks-001",
-   "kind": "thing",
    "pos": [
     -59,
     -0.0009,
@@ -3837,7 +3836,8 @@
    ],
    "yaw": 2.3562,
    "scale": 1,
-   "lib": "store/f0343efb6e7ab0fa.glb",
+   "kind": "thing",
+   "lib": "f0343efb6e7ab0fa",
    "bbox": {
     "min": [
      -2.244,
@@ -3863,7 +3863,6 @@
   },
   {
    "id": "nx-dress-nw-fieldcross-001",
-   "kind": "thing",
    "pos": [
     -17.845,
     -0.0023,
@@ -3871,7 +3870,8 @@
    ],
    "yaw": -2.356194490192345,
    "scale": 1,
-   "lib": "store/7750e9b717f2b39a.glb",
+   "kind": "thing",
+   "lib": "7750e9b717f2b39a",
    "bbox": {
     "min": [
      -0.843,
@@ -3897,7 +3897,6 @@
   },
   {
    "id": "nx-dress-nw-hedge-001",
-   "kind": "thing",
    "pos": [
     -35.34,
     0.04,
@@ -3905,7 +3904,8 @@
    ],
    "yaw": -2.36,
    "scale": 1,
-   "lib": "store/3d5c7d44351e5076.glb",
+   "kind": "thing",
+   "lib": "3d5c7d44351e5076",
    "bbox": {
     "min": [
      -3.3,
@@ -3931,7 +3931,6 @@
   },
   {
    "id": "nx-dress-nw-logpile-001",
-   "kind": "thing",
    "pos": [
     -66.8,
     0.029,
@@ -3939,7 +3938,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/cac71bff63242766.glb",
+   "kind": "thing",
+   "lib": "cac71bff63242766",
    "bbox": {
     "min": [
      -2.079,
@@ -3965,7 +3965,6 @@
   },
   {
    "id": "nx-dress-nw-orchard-rows-001",
-   "kind": "thing",
    "pos": [
     -48.062,
     0.034,
@@ -3973,7 +3972,8 @@
    ],
    "yaw": 2.3562,
    "scale": 1,
-   "lib": "store/962c5fb041d19c63.glb",
+   "kind": "thing",
+   "lib": "962c5fb041d19c63",
    "bbox": {
     "min": [
      -3.06,
@@ -3999,7 +3999,6 @@
   },
   {
    "id": "nx-dress-nw-rainbarrel-001",
-   "kind": "thing",
    "pos": [
     -59.72,
     0.0311,
@@ -4007,7 +4006,8 @@
    ],
    "yaw": 2.3562,
    "scale": 1,
-   "lib": "store/2a0d5be7c2014a55.glb",
+   "kind": "thing",
+   "lib": "2a0d5be7c2014a55",
    "bbox": {
     "min": [
      -0.51,
@@ -4033,7 +4033,6 @@
   },
   {
    "id": "nx-dress-nw-skeps-001",
-   "kind": "thing",
    "pos": [
     -53.566,
     0.038,
@@ -4041,7 +4040,8 @@
    ],
    "yaw": 2.3562,
    "scale": 1,
-   "lib": "store/87d2dd169f216414.glb",
+   "kind": "thing",
+   "lib": "87d2dd169f216414",
    "bbox": {
     "min": [
      -3.089,
@@ -4067,7 +4067,6 @@
   },
   {
    "id": "nx-dress-nw-stile-001",
-   "kind": "thing",
    "pos": [
     -45.25,
     0.046,
@@ -4075,7 +4074,8 @@
    ],
    "yaw": 2.356194490192345,
    "scale": 1,
-   "lib": "store/2c7f1bbe435366da.glb",
+   "kind": "thing",
+   "lib": "2c7f1bbe435366da",
    "bbox": {
     "min": [
      -1.146,
@@ -4101,7 +4101,6 @@
   },
   {
    "id": "nx-dress-se-cairn-001",
-   "kind": "thing",
    "pos": [
     58.7,
     0.0076,
@@ -4109,7 +4108,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/59031a0cf3e396f9.glb",
+   "kind": "thing",
+   "lib": "59031a0cf3e396f9",
    "bbox": {
     "min": [
      -0.835,
@@ -4135,7 +4135,6 @@
   },
   {
    "id": "nx-dress-se-foxden-001",
-   "kind": "thing",
    "pos": [
     73,
     -0.0532,
@@ -4143,7 +4142,8 @@
    ],
    "yaw": 4.71238898038469,
    "scale": 1,
-   "lib": "store/856deec51857c60a.glb",
+   "kind": "thing",
+   "lib": "856deec51857c60a",
    "bbox": {
     "min": [
      -1.704,
@@ -4169,7 +4169,6 @@
   },
   {
    "id": "nx-dress-se-funguslogs-001",
-   "kind": "thing",
    "pos": [
     40,
     -0.0349,
@@ -4177,7 +4176,8 @@
    ],
    "yaw": 3.6651914291880923,
    "scale": 1,
-   "lib": "store/fbc626eb3f016bd7.glb",
+   "kind": "thing",
+   "lib": "fbc626eb3f016bd7",
    "bbox": {
     "min": [
      -2.329,
@@ -4203,7 +4203,6 @@
   },
   {
    "id": "nx-dress-se-mossbowls-001",
-   "kind": "thing",
    "pos": [
     61.31,
     0.0083,
@@ -4211,7 +4210,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/6d598bd526ba3929.glb",
+   "kind": "thing",
+   "lib": "6d598bd526ba3929",
    "bbox": {
     "min": [
      -1.534,
@@ -4237,7 +4237,6 @@
   },
   {
    "id": "nx-dress-se-snagdead-001",
-   "kind": "thing",
    "pos": [
     60.6,
     -0.0461,
@@ -4245,7 +4244,8 @@
    ],
    "yaw": -2.356194490192345,
    "scale": 1,
-   "lib": "store/7ac8320374482a3c.glb",
+   "kind": "thing",
+   "lib": "7ac8320374482a3c",
    "bbox": {
     "min": [
      -0.803,
@@ -4271,7 +4271,6 @@
   },
   {
    "id": "nx-dress-se-stones-001",
-   "kind": "thing",
    "pos": [
     52.61,
     -0.011,
@@ -4279,7 +4278,8 @@
    ],
    "yaw": 0.7853981633974483,
    "scale": 1,
-   "lib": "store/8dafb9e58f8354f1.glb",
+   "kind": "thing",
+   "lib": "8dafb9e58f8354f1",
    "bbox": {
     "min": [
      -4.544,
@@ -4305,7 +4305,6 @@
   },
   {
    "id": "nx-dress-se-streamstones-001",
-   "kind": "thing",
    "pos": [
     75.05,
     -0.0249,
@@ -4313,7 +4312,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/aabbc23d5552b01c.glb",
+   "kind": "thing",
+   "lib": "aabbc23d5552b01c",
    "bbox": {
     "min": [
      -4.155,
@@ -4339,7 +4339,6 @@
   },
   {
    "id": "nx-dress-stablebench",
-   "kind": "thing",
    "pos": [
     42,
     0,
@@ -4347,7 +4346,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/c24b7628da5f74ae.glb",
+   "kind": "thing",
+   "lib": "c24b7628da5f74ae",
    "bbox": {
     "min": [
      -0.85,
@@ -4373,7 +4373,6 @@
   },
   {
    "id": "nx-dress-stringlights",
-   "kind": "thing",
    "pos": [
     -6,
     2.6,
@@ -4381,7 +4380,8 @@
    ],
    "yaw": 0.7853981633974483,
    "scale": 1,
-   "lib": "store/0c0dee37b07aa7df.glb",
+   "kind": "thing",
+   "lib": "0c0dee37b07aa7df",
    "bbox": {
     "min": [
      -3.065,
@@ -4407,7 +4407,6 @@
   },
   {
    "id": "nx-dress-sw-bellpost-001",
-   "kind": "thing",
    "pos": [
     -54,
     -0.0294,
@@ -4415,7 +4414,8 @@
    ],
    "yaw": -0.4310963252425994,
    "scale": 1,
-   "lib": "store/fe682869f9a759af.glb",
+   "kind": "thing",
+   "lib": "fe682869f9a759af",
    "bbox": {
     "min": [
      -0.551,
@@ -4441,7 +4441,6 @@
   },
   {
    "id": "nx-dress-sw-gravel-001",
-   "kind": "thing",
    "pos": [
     -45.22,
     -0.05,
@@ -4449,7 +4448,8 @@
    ],
    "yaw": 2.2209314731627843,
    "scale": 1,
-   "lib": "store/fd21de9ff797e249.glb",
+   "kind": "thing",
+   "lib": "fd21de9ff797e249",
    "bbox": {
     "min": [
      -3.623,
@@ -4475,7 +4475,6 @@
   },
   {
    "id": "nx-dress-sw-incense-001",
-   "kind": "thing",
    "pos": [
     -55.475,
     -0.0316,
@@ -4483,7 +4482,8 @@
    ],
    "yaw": -0.9206611804270088,
    "scale": 1,
-   "lib": "store/c66c4fbfd0adb07b.glb",
+   "kind": "thing",
+   "lib": "c66c4fbfd0adb07b",
    "bbox": {
     "min": [
      -0.761,
@@ -4509,7 +4509,6 @@
   },
   {
    "id": "nx-dress-sw-lanternhook-001",
-   "kind": "thing",
    "pos": [
     -57,
     -0.030565,
@@ -4517,7 +4516,8 @@
    ],
    "yaw": 4.927732279782902,
    "scale": 1,
-   "lib": "store/639c54800d2e5856.glb",
+   "kind": "thing",
+   "lib": "639c54800d2e5856",
    "bbox": {
     "min": [
      -0.201,
@@ -4543,7 +4543,6 @@
   },
   {
    "id": "nx-dress-sw-offering-001",
-   "kind": "thing",
    "pos": [
     -45.002,
     -0.03119,
@@ -4551,7 +4550,8 @@
    ],
    "yaw": 1.7622,
    "scale": 1,
-   "lib": "store/b41efb63746c2450.glb",
+   "kind": "thing",
+   "lib": "b41efb63746c2450",
    "bbox": {
     "min": [
      -0.444,
@@ -4577,7 +4577,6 @@
   },
   {
    "id": "nx-dress-sw-prayer-001",
-   "kind": "thing",
    "pos": [
     -52.26,
     -0.032,
@@ -4585,7 +4584,8 @@
    ],
    "yaw": 2.2209314731627843,
    "scale": 1,
-   "lib": "store/5074600fc869789d.glb",
+   "kind": "thing",
+   "lib": "5074600fc869789d",
    "bbox": {
     "min": [
      -1.41,
@@ -4611,7 +4611,6 @@
   },
   {
    "id": "nx-dress-sw-seats-001",
-   "kind": "thing",
    "pos": [
     -57,
     -0.0263,
@@ -4619,7 +4618,8 @@
    ],
    "yaw": 2.734930937875114,
    "scale": 1,
-   "lib": "store/cb34bd36bf9ce02d.glb",
+   "kind": "thing",
+   "lib": "cb34bd36bf9ce02d",
    "bbox": {
     "min": [
      -1.123,
@@ -4645,7 +4645,6 @@
   },
   {
    "id": "nx-dress-well",
-   "kind": "thing",
    "pos": [
     30,
     0,
@@ -4653,7 +4652,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/35f17cf4f6a6db9f.glb",
+   "kind": "thing",
+   "lib": "35f17cf4f6a6db9f",
    "bbox": {
     "min": [
      -1.05,
@@ -4679,7 +4679,6 @@
   },
   {
    "id": "nx-forge",
-   "kind": "thing",
    "pos": [
     22.11785473473295,
     0,
@@ -4687,7 +4686,8 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/d55c86d706774923.glb",
+   "kind": "thing",
+   "lib": "d55c86d706774923",
    "bbox": {
     "min": [
      -0.873,
@@ -4713,7 +4713,6 @@
   },
   {
    "id": "nx-forge-l",
-   "kind": "light",
    "pos": [
     21.60565223135312,
     1.5,
@@ -4721,12 +4720,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-gallery-mosaic-0036",
-   "kind": "thing",
    "pos": [
     38.971143,
     -0.023302546381834918,
@@ -4734,7 +4733,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/1655ae806c3b8fe3.glb",
+   "kind": "thing",
+   "lib": "1655ae806c3b8fe3",
    "bbox": {
     "min": [
      -10.509,
@@ -4760,7 +4760,6 @@
   },
   {
    "id": "nx-gallery-mosaic-0048",
-   "kind": "thing",
    "pos": [
     0,
     0.0015747037783233253,
@@ -4768,7 +4767,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/b6491515b25ef439.glb",
+   "kind": "thing",
+   "lib": "b6491515b25ef439",
    "bbox": {
     "min": [
      -10.499,
@@ -4794,7 +4794,6 @@
   },
   {
    "id": "nx-gallery-mosaic-0052",
-   "kind": "thing",
    "pos": [
     -38.971143,
     0.012803620215344794,
@@ -4802,7 +4801,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/83c4817f73507493.glb",
+   "kind": "thing",
+   "lib": "83c4817f73507493",
    "bbox": {
     "min": [
      -10.506,
@@ -4828,7 +4828,6 @@
   },
   {
    "id": "nx-gallery-mosaic-0059",
-   "kind": "thing",
    "pos": [
     -38.971143,
     -0.04073522899392348,
@@ -4836,7 +4835,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/505bec0b589f786f.glb",
+   "kind": "thing",
+   "lib": "505bec0b589f786f",
    "bbox": {
     "min": [
      -10.509,
@@ -4862,7 +4862,6 @@
   },
   {
    "id": "nx-hearth",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -4870,7 +4869,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/027f6f019f9981bf.glb",
+   "kind": "thing",
+   "lib": "027f6f019f9981bf",
    "bbox": {
     "min": [
      -3.02,
@@ -4896,7 +4896,6 @@
   },
   {
    "id": "nx-mile-ne-003",
-   "kind": "thing",
    "pos": [
     36.875091173909254,
     -0.0328,
@@ -4904,7 +4903,8 @@
    ],
    "yaw": 0.5525712411814048,
    "scale": 1,
-   "lib": "store/9459eaa30382fb3c.glb",
+   "kind": "thing",
+   "lib": "9459eaa30382fb3c",
    "bbox": {
     "min": [
      -0.21,
@@ -4930,7 +4930,6 @@
   },
   {
    "id": "nx-mile-ne-004",
-   "kind": "thing",
    "pos": [
     40.79050882609074,
     -0.0255,
@@ -4938,7 +4937,8 @@
    ],
    "yaw": 0.5525712411814048,
    "scale": 1,
-   "lib": "store/9459eaa30382fb3c.glb",
+   "kind": "thing",
+   "lib": "9459eaa30382fb3c",
    "bbox": {
     "min": [
      -0.21,
@@ -4964,7 +4964,6 @@
   },
   {
    "id": "nx-mile-ne-009",
-   "kind": "thing",
    "pos": [
     16.700647242969996,
     0.0016,
@@ -4972,7 +4971,8 @@
    ],
    "yaw": 5.7115371556377275,
    "scale": 1,
-   "lib": "store/052120d7646f5f74.glb",
+   "kind": "thing",
+   "lib": "052120d7646f5f74",
    "bbox": {
     "min": [
      -0.21,
@@ -4998,7 +4998,6 @@
   },
   {
    "id": "nx-mile-ne-009-l",
-   "kind": "light",
    "pos": [
     16.894079643411146,
     0.6516000000000001,
@@ -5006,12 +5005,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-mile-ne-010",
-   "kind": "thing",
    "pos": [
     20.56929525179299,
     -0.0006,
@@ -5019,7 +5018,8 @@
    ],
    "yaw": 2.569944502047934,
    "scale": 1,
-   "lib": "store/052120d7646f5f74.glb",
+   "kind": "thing",
+   "lib": "052120d7646f5f74",
    "bbox": {
     "min": [
      -0.21,
@@ -5045,7 +5045,6 @@
   },
   {
    "id": "nx-mile-nw-001",
-   "kind": "thing",
    "pos": [
     -45.42926948884058,
     0.0155,
@@ -5053,7 +5052,8 @@
    ],
    "yaw": 5.419247327442394,
    "scale": 1,
-   "lib": "store/9459eaa30382fb3c.glb",
+   "kind": "thing",
+   "lib": "9459eaa30382fb3c",
    "bbox": {
     "min": [
      -0.21,
@@ -5079,7 +5079,6 @@
   },
   {
    "id": "nx-mile-nw-002",
-   "kind": "thing",
    "pos": [
     -48.41673051115942,
     0.0218,
@@ -5087,7 +5086,8 @@
    ],
    "yaw": 5.419247327442394,
    "scale": 1,
-   "lib": "store/9459eaa30382fb3c.glb",
+   "kind": "thing",
+   "lib": "9459eaa30382fb3c",
    "bbox": {
     "min": [
      -0.21,
@@ -5113,7 +5113,6 @@
   },
   {
    "id": "nx-mile-nw-007",
-   "kind": "thing",
    "pos": [
     -47.51755440327094,
     0.0282,
@@ -5121,7 +5120,8 @@
    ],
    "yaw": 2.356194490192345,
    "scale": 1,
-   "lib": "store/052120d7646f5f74.glb",
+   "kind": "thing",
+   "lib": "052120d7646f5f74",
    "bbox": {
     "min": [
      -0.21,
@@ -5147,7 +5147,6 @@
   },
   {
    "id": "nx-mile-nw-007-l",
-   "kind": "light",
    "pos": [
     -47.680188962943845,
     0.6782,
@@ -5155,12 +5154,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-mile-nw-008",
-   "kind": "thing",
    "pos": [
     -50.77024559672906,
     0.0391,
@@ -5168,7 +5167,8 @@
    ],
    "yaw": -0.7853981633974483,
    "scale": 1,
-   "lib": "store/052120d7646f5f74.glb",
+   "kind": "thing",
+   "lib": "052120d7646f5f74",
    "bbox": {
     "min": [
      -0.21,
@@ -5194,7 +5194,6 @@
   },
   {
    "id": "nx-mile-sw-005",
-   "kind": "thing",
    "pos": [
     -26.617995394170368,
     -0.0472,
@@ -5202,7 +5201,8 @@
    ],
    "yaw": 5.362524126752577,
    "scale": 1,
-   "lib": "store/9459eaa30382fb3c.glb",
+   "kind": "thing",
+   "lib": "9459eaa30382fb3c",
    "bbox": {
     "min": [
      -0.21,
@@ -5228,7 +5228,6 @@
   },
   {
    "id": "nx-mile-sw-006",
-   "kind": "thing",
    "pos": [
     -30.27960460582963,
     -0.0527,
@@ -5236,7 +5235,8 @@
    ],
    "yaw": 5.362524126752577,
    "scale": 1,
-   "lib": "store/9459eaa30382fb3c.glb",
+   "kind": "thing",
+   "lib": "9459eaa30382fb3c",
    "bbox": {
     "min": [
      -0.21,
@@ -5262,7 +5262,6 @@
   },
   {
    "id": "nx-mile-sw-013",
-   "kind": "thing",
    "pos": [
     -36.908010628915626,
     -0.042,
@@ -5270,7 +5269,8 @@
    ],
    "yaw": 3.7917277999576813,
    "scale": 1,
-   "lib": "store/052120d7646f5f74.glb",
+   "kind": "thing",
+   "lib": "052120d7646f5f74",
    "bbox": {
     "min": [
      -0.21,
@@ -5296,7 +5296,6 @@
   },
   {
    "id": "nx-mile-sw-013-l",
-   "kind": "light",
    "pos": [
     -37.09109108949859,
     0.608,
@@ -5304,12 +5303,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-mile-sw-014",
-   "kind": "thing",
    "pos": [
     -40.56961984057488,
     -0.0499,
@@ -5317,7 +5316,8 @@
    ],
    "yaw": 0.6501351463678888,
    "scale": 1,
-   "lib": "store/052120d7646f5f74.glb",
+   "kind": "thing",
+   "lib": "052120d7646f5f74",
    "bbox": {
     "min": [
      -0.21,
@@ -5343,7 +5343,6 @@
   },
   {
    "id": "nx-plaza-l",
-   "kind": "light",
    "pos": [
     0,
     1.2,
@@ -5351,12 +5350,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-shutters",
-   "kind": "thing",
    "pos": [
     14.1,
     0,
@@ -5364,7 +5363,8 @@
    ],
    "yaw": -2.44347,
    "scale": 1,
-   "lib": "store/26259f89feb92736.glb",
+   "kind": "thing",
+   "lib": "26259f89feb92736",
    "bbox": {
     "min": [
      -0.616,
@@ -5390,7 +5390,6 @@
   },
   {
    "id": "nx-sign-bakery",
-   "kind": "thing",
    "pos": [
     14.022735609615019,
     0,
@@ -5398,7 +5397,8 @@
    ],
    "yaw": 2.234032653589793,
    "scale": 1,
-   "lib": "store/49342c523aee4d41.glb",
+   "kind": "thing",
+   "lib": "49342c523aee4d41",
    "bbox": {
     "min": [
      -0.03,
@@ -5424,7 +5424,6 @@
   },
   {
    "id": "nx-sign-dyer-001",
-   "kind": "thing",
    "pos": [
     -22.0867933424553,
     2.05,
@@ -5432,7 +5431,8 @@
    ],
    "yaw": 0.941,
    "scale": 1,
-   "lib": "store/8ce2081f7d2c6858.glb",
+   "kind": "thing",
+   "lib": "8ce2081f7d2c6858",
    "bbox": {
     "min": [
      -0.262,
@@ -5458,7 +5458,6 @@
   },
   {
    "id": "nx-sign-kiln-001",
-   "kind": "thing",
    "pos": [
     18.605776095530477,
     2.4293500000000003,
@@ -5466,7 +5465,8 @@
    ],
    "yaw": -2.443242374354201,
    "scale": 1,
-   "lib": "store/ecbad90311fc9bff.glb",
+   "kind": "thing",
+   "lib": "ecbad90311fc9bff",
    "bbox": {
     "min": [
      -0.888,
@@ -5492,7 +5492,6 @@
   },
   {
    "id": "nx-sign-mill-001",
-   "kind": "thing",
    "pos": [
     -37.5,
     2.78,
@@ -5500,7 +5499,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/870256ce4a0bea37.glb",
+   "kind": "thing",
+   "lib": "870256ce4a0bea37",
    "bbox": {
     "min": [
      -0.272,
@@ -5526,7 +5526,6 @@
   },
   {
    "id": "nx-sign-potter-001",
-   "kind": "thing",
    "pos": [
     20.35898702200678,
     0,
@@ -5534,7 +5533,8 @@
    ],
    "yaw": -1.8975354116458194,
    "scale": 1,
-   "lib": "store/3a6c8fe79dc41406.glb",
+   "kind": "thing",
+   "lib": "3a6c8fe79dc41406",
    "bbox": {
     "min": [
      -0.26,
@@ -5560,7 +5560,6 @@
   },
   {
    "id": "nx-sign-smithy",
-   "kind": "thing",
    "pos": [
     23.777264390384975,
     -1.5946487083102603e-08,
@@ -5568,7 +5567,8 @@
    ],
    "yaw": -0.90756,
    "scale": 1,
-   "lib": "store/3522e5ab0c3a5100.glb",
+   "kind": "thing",
+   "lib": "3522e5ab0c3a5100",
    "bbox": {
     "min": [
      -0.03,
@@ -5594,7 +5594,6 @@
   },
   {
    "id": "nx-sign-stable-001",
-   "kind": "thing",
    "pos": [
     40.9,
     0,
@@ -5602,7 +5601,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/afee37dd9a5b5d67.glb",
+   "kind": "thing",
+   "lib": "afee37dd9a5b5d67",
    "bbox": {
     "min": [
      -0.25,
@@ -5628,7 +5628,6 @@
   },
   {
    "id": "nx-sign-woodyard-001",
-   "kind": "thing",
    "pos": [
     15.431912072890157,
     2.05,
@@ -5636,7 +5635,8 @@
    ],
    "yaw": -2.669815142409043,
    "scale": 1,
-   "lib": "store/f46e12aeeea8af74.glb",
+   "kind": "thing",
+   "lib": "f46e12aeeea8af74",
    "bbox": {
     "min": [
      -0.262,
@@ -5662,7 +5662,6 @@
   },
   {
    "id": "nx-struct-amphi",
-   "kind": "thing",
    "pos": [
     -23.32,
     0.03982105168676789,
@@ -5670,7 +5669,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/95a98c748df77020.glb",
+   "kind": "thing",
+   "lib": "95a98c748df77020",
    "bbox": {
     "min": [
      -8.01,
@@ -5696,7 +5696,6 @@
   },
   {
    "id": "nx-struct-angler",
-   "kind": "thing",
    "pos": [
     3.203,
     -0.03465,
@@ -5704,7 +5703,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/6ee5b4b06bc07d5e.glb",
+   "kind": "thing",
+   "lib": "6ee5b4b06bc07d5e",
    "bbox": {
     "min": [
      -1.7,
@@ -5730,7 +5730,6 @@
   },
   {
    "id": "nx-struct-beacon",
-   "kind": "thing",
    "pos": [
     60.91095257485114,
     0.006833337382809504,
@@ -5738,7 +5737,8 @@
    ],
    "yaw": -0.5235987755982988,
    "scale": 1,
-   "lib": "store/03d278be72677877.glb",
+   "kind": "thing",
+   "lib": "03d278be72677877",
    "bbox": {
     "min": [
      -1.55,
@@ -5764,7 +5764,6 @@
   },
   {
    "id": "nx-struct-beacon-l",
-   "kind": "light",
    "pos": [
     60.91095257485114,
     7.350806587039094,
@@ -5772,12 +5771,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-struct-catenarygate",
-   "kind": "thing",
    "pos": [
     0,
     -0.0274,
@@ -5785,7 +5784,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/0e3b5e5b4d7086ab.glb",
+   "kind": "thing",
+   "lib": "0e3b5e5b4d7086ab",
    "bbox": {
     "min": [
      -4.52,
@@ -5811,7 +5811,6 @@
   },
   {
    "id": "nx-struct-cellardoor",
-   "kind": "thing",
    "pos": [
     36,
     -0.04542721690550573,
@@ -5819,7 +5818,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/fe755f78b3f300d9.glb",
+   "kind": "thing",
+   "lib": "fe755f78b3f300d9",
    "bbox": {
     "min": [
      -1.38,
@@ -5845,7 +5845,6 @@
   },
   {
    "id": "nx-struct-chainvault",
-   "kind": "thing",
    "pos": [
     52.6,
     -0.0478,
@@ -5853,7 +5852,8 @@
    ],
    "yaw": -1.2217,
    "scale": 1,
-   "lib": "store/8fecf67df7d33970.glb",
+   "kind": "thing",
+   "lib": "8fecf67df7d33970",
    "bbox": {
     "min": [
      -3.8,
@@ -5879,7 +5879,6 @@
   },
   {
    "id": "nx-struct-conoidfan",
-   "kind": "thing",
    "pos": [
     25.82,
     -0.0154,
@@ -5887,7 +5886,8 @@
    ],
    "yaw": -1.0821,
    "scale": 1,
-   "lib": "store/c75f8dfbbe2cf9f6.glb",
+   "kind": "thing",
+   "lib": "c75f8dfbbe2cf9f6",
    "bbox": {
     "min": [
      -0.85,
@@ -5913,7 +5913,6 @@
   },
   {
    "id": "nx-struct-crossing",
-   "kind": "thing",
    "pos": [
     3.6,
     -0.005,
@@ -5921,7 +5920,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/216c4bd4d12ff308.glb",
+   "kind": "thing",
+   "lib": "216c4bd4d12ff308",
    "bbox": {
     "min": [
      -2.116,
@@ -5947,7 +5947,6 @@
   },
   {
    "id": "nx-struct-echoarch",
-   "kind": "thing",
    "pos": [
     -18.5,
     0.05145038852924074,
@@ -5955,7 +5954,8 @@
    ],
    "yaw": 5.027,
    "scale": 1,
-   "lib": "store/103be93e19def0aa.glb",
+   "kind": "thing",
+   "lib": "103be93e19def0aa",
    "bbox": {
     "min": [
      -4.1,
@@ -5981,7 +5981,6 @@
   },
   {
    "id": "nx-struct-ellipsecourt",
-   "kind": "thing",
    "pos": [
     -3.75,
     -0.0403,
@@ -5989,7 +5988,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/2aa37e9d29ba43f2.glb",
+   "kind": "thing",
+   "lib": "2aa37e9d29ba43f2",
    "bbox": {
     "min": [
      -6.97,
@@ -6015,7 +6015,6 @@
   },
   {
    "id": "nx-struct-halt",
-   "kind": "thing",
    "pos": [
     -2,
     -0.0029731329510874916,
@@ -6023,7 +6022,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/cdaf7c1f40208a5b.glb",
+   "kind": "thing",
+   "lib": "cdaf7c1f40208a5b",
    "bbox": {
     "min": [
      -2.2,
@@ -6049,7 +6049,6 @@
   },
   {
    "id": "nx-struct-hypar",
-   "kind": "thing",
    "pos": [
     -27.57,
     -0.005252018641109206,
@@ -6057,7 +6056,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/750f82eeb03512f6.glb",
+   "kind": "thing",
+   "lib": "750f82eeb03512f6",
    "bbox": {
     "min": [
      -4.8,
@@ -6083,7 +6083,6 @@
   },
   {
    "id": "nx-struct-lemniscateseat",
-   "kind": "thing",
    "pos": [
     -60,
     -0.0237,
@@ -6091,7 +6090,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/a6ae240606798330.glb",
+   "kind": "thing",
+   "lib": "a6ae240606798330",
    "bbox": {
     "min": [
      -4.164,
@@ -6117,7 +6117,6 @@
   },
   {
    "id": "nx-struct-meridiandial",
-   "kind": "thing",
    "pos": [
     6,
     -0.0438,
@@ -6125,7 +6124,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/7acc090a0420499e.glb",
+   "kind": "thing",
+   "lib": "7acc090a0420499e",
    "bbox": {
     "min": [
      -3.418,
@@ -6151,7 +6151,6 @@
   },
   {
    "id": "nx-struct-meridianstair",
-   "kind": "thing",
    "pos": [
     5.7,
     -0.03775288155722453,
@@ -6159,7 +6158,8 @@
    ],
    "yaw": 3.037,
    "scale": 1,
-   "lib": "store/dec58a3b6bfcae4a.glb",
+   "kind": "thing",
+   "lib": "dec58a3b6bfcae4a",
    "bbox": {
     "min": [
      -3.29,
@@ -6185,7 +6185,6 @@
   },
   {
    "id": "nx-struct-millrace",
-   "kind": "thing",
    "pos": [
     -76.707,
     -0.0256,
@@ -6193,7 +6192,8 @@
    ],
    "yaw": 1.7516247,
    "scale": 1,
-   "lib": "store/6e82dd2e1eb8403e.glb",
+   "kind": "thing",
+   "lib": "6e82dd2e1eb8403e",
    "bbox": {
     "min": [
      -1.714,
@@ -6219,7 +6219,6 @@
   },
   {
    "id": "nx-struct-mobius",
-   "kind": "thing",
    "pos": [
     -4.18,
     0.0020370004991614723,
@@ -6227,7 +6226,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/5617f376b39535f8.glb",
+   "kind": "thing",
+   "lib": "5617f376b39535f8",
    "bbox": {
     "min": [
      -6.248,
@@ -6253,7 +6253,6 @@
   },
   {
    "id": "nx-struct-moongate",
-   "kind": "thing",
    "pos": [
     -43.84,
     -0.0533,
@@ -6261,7 +6260,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/3291fe15600b4c52.glb",
+   "kind": "thing",
+   "lib": "3291fe15600b4c52",
    "bbox": {
     "min": [
      -2.9,
@@ -6287,7 +6287,6 @@
   },
   {
    "id": "nx-struct-needlerest",
-   "kind": "thing",
    "pos": [
     10.273,
     0.0028985188967211428,
@@ -6295,7 +6294,8 @@
    ],
    "yaw": 2.9932396671702755,
    "scale": 1,
-   "lib": "store/cdaf7c1f40208a5b.glb",
+   "kind": "thing",
+   "lib": "cdaf7c1f40208a5b",
    "bbox": {
     "min": [
      -2.2,
@@ -6321,7 +6321,6 @@
   },
   {
    "id": "nx-struct-ninesbridge",
-   "kind": "thing",
    "pos": [
     -7.28,
     0.02764016019864407,
@@ -6329,7 +6328,8 @@
    ],
    "yaw": -1.67552,
    "scale": 1,
-   "lib": "store/8c5d9ccea9cb4076.glb",
+   "kind": "thing",
+   "lib": "8c5d9ccea9cb4076",
    "bbox": {
     "min": [
      -12.15,
@@ -6355,7 +6355,6 @@
   },
   {
    "id": "nx-struct-northneedle",
-   "kind": "thing",
    "pos": [
     47.3,
     -0.033889555549561905,
@@ -6363,7 +6362,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/39ed7070104ddc61.glb",
+   "kind": "thing",
+   "lib": "39ed7070104ddc61",
    "bbox": {
     "min": [
      -1.732,
@@ -6389,7 +6389,6 @@
   },
   {
    "id": "nx-struct-northneedle-l",
-   "kind": "light",
    "pos": [
     47.959999999999994,
     12.9,
@@ -6397,12 +6396,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-struct-observatory",
-   "kind": "thing",
    "pos": [
     -39.811,
     -0.03086984857485886,
@@ -6410,7 +6409,8 @@
    ],
    "yaw": 0.42761113809041884,
    "scale": 1,
-   "lib": "store/07d18163d1ecd27d.glb",
+   "kind": "thing",
+   "lib": "07d18163d1ecd27d",
    "bbox": {
     "min": [
      -3.37,
@@ -6436,7 +6436,6 @@
   },
   {
    "id": "nx-struct-observatory-l",
-   "kind": "light",
    "pos": [
     -39.811,
     1.5215702652599432,
@@ -6444,12 +6443,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-struct-ogeegate",
-   "kind": "thing",
    "pos": [
     22.71,
     -0.0025,
@@ -6457,7 +6456,8 @@
    ],
    "yaw": -0.5703735995517468,
    "scale": 1,
-   "lib": "store/32039b5a7fb9da30.glb",
+   "kind": "thing",
+   "lib": "32039b5a7fb9da30",
    "bbox": {
     "min": [
      -2.93,
@@ -6483,7 +6483,6 @@
   },
   {
    "id": "nx-struct-orrery",
-   "kind": "thing",
    "pos": [
     9.19,
     -0.052098429044230066,
@@ -6491,7 +6490,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/d680b1cdb64ed9e9.glb",
+   "kind": "thing",
+   "lib": "d680b1cdb64ed9e9",
    "bbox": {
     "min": [
      -1.1,
@@ -6517,7 +6517,6 @@
   },
   {
    "id": "nx-struct-orreryring",
-   "kind": "thing",
    "pos": [
     9.19,
     -0.052098429044230066,
@@ -6525,7 +6524,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/f095519b61b3bf17.glb",
+   "kind": "thing",
+   "lib": "f095519b61b3bf17",
    "bbox": {
     "min": [
      -2.8,
@@ -6551,7 +6551,6 @@
   },
   {
    "id": "nx-struct-pendulum",
-   "kind": "thing",
    "pos": [
     13.16,
     -0.0479,
@@ -6559,7 +6558,8 @@
    ],
    "yaw": -0.21380283336930536,
    "scale": 1,
-   "lib": "store/c32a35a8cc1a433d.glb",
+   "kind": "thing",
+   "lib": "c32a35a8cc1a433d",
    "bbox": {
     "min": [
      -4.148,
@@ -6585,7 +6585,6 @@
   },
   {
    "id": "nx-struct-reedpool",
-   "kind": "thing",
    "pos": [
     9.723,
     -0.05907,
@@ -6593,7 +6592,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/7d770620bb1b7bdc.glb",
+   "kind": "thing",
+   "lib": "7d770620bb1b7bdc",
    "bbox": {
     "min": [
      -5.187,
@@ -6619,7 +6619,6 @@
   },
   {
    "id": "nx-struct-reuleauxrotor",
-   "kind": "thing",
    "pos": [
     -12,
     -0.0373,
@@ -6627,7 +6626,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/670e397cb6422ee2.glb",
+   "kind": "thing",
+   "lib": "670e397cb6422ee2",
    "bbox": {
     "min": [
      -1.75,
@@ -6653,7 +6653,6 @@
   },
   {
    "id": "nx-struct-ruledtower",
-   "kind": "thing",
    "pos": [
     58,
     -0.042603704984153376,
@@ -6661,7 +6660,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/4070ecc4d8f1d0e6.glb",
+   "kind": "thing",
+   "lib": "4070ecc4d8f1d0e6",
    "bbox": {
     "min": [
      -4.5,
@@ -6687,7 +6687,6 @@
   },
   {
    "id": "nx-struct-screwwell",
-   "kind": "thing",
    "pos": [
     -88,
     0.017,
@@ -6695,7 +6694,8 @@
    ],
    "yaw": 3.141592653589793,
    "scale": 1,
-   "lib": "store/6fbaede8dbe95f0d.glb",
+   "kind": "thing",
+   "lib": "6fbaede8dbe95f0d",
    "bbox": {
     "min": [
      -0.15,
@@ -6721,7 +6721,6 @@
   },
   {
    "id": "nx-struct-shelltower",
-   "kind": "thing",
    "pos": [
     -2.65,
     -0.05202600128766878,
@@ -6729,7 +6728,8 @@
    ],
    "yaw": 0.06978887730267769,
    "scale": 1,
-   "lib": "store/bfdb1792374586e6.glb",
+   "kind": "thing",
+   "lib": "bfdb1792374586e6",
    "bbox": {
     "min": [
      -4.05,
@@ -6755,7 +6755,6 @@
   },
   {
    "id": "nx-struct-skene",
-   "kind": "thing",
    "pos": [
     8.258,
     -0.0026326227299527005,
@@ -6763,7 +6762,8 @@
    ],
    "yaw": 3.2463124087094526,
    "scale": 1,
-   "lib": "store/df7f7c434c0b87b2.glb",
+   "kind": "thing",
+   "lib": "df7f7c434c0b87b2",
    "bbox": {
     "min": [
      -4.83,
@@ -6789,7 +6789,6 @@
   },
   {
    "id": "nx-struct-skymirror",
-   "kind": "thing",
    "pos": [
     -59.89,
     -0.02887,
@@ -6797,7 +6796,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/782eb8643e03780d.glb",
+   "kind": "thing",
+   "lib": "782eb8643e03780d",
    "bbox": {
     "min": [
      -1.26,
@@ -6823,7 +6823,6 @@
   },
   {
    "id": "nx-struct-soundmirror",
-   "kind": "thing",
    "pos": [
     35.46,
     -0.0331,
@@ -6831,7 +6830,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/f313e59a69bff540.glb",
+   "kind": "thing",
+   "lib": "f313e59a69bff540",
    "bbox": {
     "min": [
      -2.3,
@@ -6857,7 +6857,6 @@
   },
   {
    "id": "nx-struct-spiralfolly",
-   "kind": "thing",
    "pos": [
     46.11396867937201,
     -0.03721999348652881,
@@ -6865,7 +6864,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/b85ce018f1e7678e.glb",
+   "kind": "thing",
+   "lib": "b85ce018f1e7678e",
    "bbox": {
     "min": [
      -3.3,
@@ -6891,7 +6891,6 @@
   },
   {
    "id": "nx-struct-stillwind",
-   "kind": "thing",
    "pos": [
     -52,
     -0.031,
@@ -6899,7 +6898,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/35eab2fbeebcf811.glb",
+   "kind": "thing",
+   "lib": "35eab2fbeebcf811",
    "bbox": {
     "min": [
      -2.319,
@@ -6925,7 +6925,6 @@
   },
   {
    "id": "nx-struct-vesicawindow",
-   "kind": "thing",
    "pos": [
     70,
     -0.0435,
@@ -6933,7 +6932,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/f4cedc72ffb79bfa.glb",
+   "kind": "thing",
+   "lib": "f4cedc72ffb79bfa",
    "bbox": {
     "min": [
      -2.715,
@@ -6959,7 +6959,6 @@
   },
   {
    "id": "nx-struct-waterstair",
-   "kind": "thing",
    "pos": [
     0,
     -0.03222645164101495,
@@ -6967,7 +6966,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/46c39401e07870f3.glb",
+   "kind": "thing",
+   "lib": "46c39401e07870f3",
    "bbox": {
     "min": [
      -1.7,
@@ -6993,7 +6993,6 @@
   },
   {
    "id": "nx-struct-wavepergola",
-   "kind": "thing",
    "pos": [
     51,
     -0.0221,
@@ -7001,7 +7000,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/32dc2e7df1a8c76f.glb",
+   "kind": "thing",
+   "lib": "32dc2e7df1a8c76f",
    "bbox": {
     "min": [
      -7.088,
@@ -7027,7 +7027,6 @@
   },
   {
    "id": "nx-struct-waystone-e",
-   "kind": "thing",
    "pos": [
     22.1,
     0,
@@ -7035,7 +7034,8 @@
    ],
    "yaw": 3.141592653589793,
    "scale": 1,
-   "lib": "store/2f006e218ffbe97e.glb",
+   "kind": "thing",
+   "lib": "2f006e218ffbe97e",
    "bbox": {
     "min": [
      -0.212,
@@ -7061,7 +7061,6 @@
   },
   {
    "id": "nx-struct-waystone-n",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -7069,7 +7068,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/2f006e218ffbe97e.glb",
+   "kind": "thing",
+   "lib": "2f006e218ffbe97e",
    "bbox": {
     "min": [
      -0.212,
@@ -7095,7 +7095,6 @@
   },
   {
    "id": "nx-struct-waystone-s",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -7103,7 +7102,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/2f006e218ffbe97e.glb",
+   "kind": "thing",
+   "lib": "2f006e218ffbe97e",
    "bbox": {
     "min": [
      -0.212,
@@ -7129,7 +7129,6 @@
   },
   {
    "id": "nx-struct-waystone-w",
-   "kind": "thing",
    "pos": [
     -20,
     0,
@@ -7137,7 +7136,8 @@
    ],
    "yaw": 0.7853981633974483,
    "scale": 1,
-   "lib": "store/2f006e218ffbe97e.glb",
+   "kind": "thing",
+   "lib": "2f006e218ffbe97e",
    "bbox": {
     "min": [
      -0.212,
@@ -7163,7 +7163,6 @@
   },
   {
    "id": "nx-struct-whisperhorn",
-   "kind": "thing",
    "pos": [
     -64.02,
     -0.028,
@@ -7171,7 +7170,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/b6e48e4622f10108.glb",
+   "kind": "thing",
+   "lib": "b6e48e4622f10108",
    "bbox": {
     "min": [
      -2.05,
@@ -7197,7 +7197,6 @@
   },
   {
    "id": "nx-temple-labyrinth-0004",
-   "kind": "thing",
    "pos": [
     -95.088981,
     0.0025339289569975775,
@@ -7205,7 +7204,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/6ecff24946390a7d.glb",
+   "kind": "thing",
+   "lib": "6ecff24946390a7d",
    "bbox": {
     "min": [
      -6.142,
@@ -7231,7 +7231,6 @@
   },
   {
    "id": "nx-temple-labyrinth-0025",
-   "kind": "thing",
    "pos": [
     -79.283665,
     -0.016928827472115132,
@@ -7239,7 +7238,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/3273205286ab16bb.glb",
+   "kind": "thing",
+   "lib": "3273205286ab16bb",
    "bbox": {
     "min": [
      -6.137,
@@ -7265,7 +7265,6 @@
   },
   {
    "id": "nx-temple-labyrinth-0038",
-   "kind": "thing",
    "pos": [
     -51.932088,
     -0.019688843285594615,
@@ -7273,7 +7272,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/2d3d2032d3e806f8.glb",
+   "kind": "thing",
+   "lib": "2d3d2032d3e806f8",
    "bbox": {
     "min": [
      -6.139,
@@ -7299,7 +7299,6 @@
   },
   {
    "id": "nx-temple-labyrinth-0051",
-   "kind": "thing",
    "pos": [
     -17.017521,
     -0.01475532431470361,
@@ -7307,7 +7306,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/d93deb842f9998da.glb",
+   "kind": "thing",
+   "lib": "d93deb842f9998da",
    "bbox": {
     "min": [
      -6.14,
@@ -7333,7 +7333,6 @@
   },
   {
    "id": "nx-temple-seed-0003",
-   "kind": "thing",
    "pos": [
     -68.890997,
     -0.006158492639495652,
@@ -7341,7 +7340,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/699387abdef0b16f.glb",
+   "kind": "thing",
+   "lib": "699387abdef0b16f",
    "bbox": {
     "min": [
      -3.275,
@@ -7367,7 +7367,6 @@
   },
   {
    "id": "nx-temple-seed-0013",
-   "kind": "thing",
    "pos": [
     -60.211415,
     -0.016528677980768906,
@@ -7375,7 +7374,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/699387abdef0b16f.glb",
+   "kind": "thing",
+   "lib": "699387abdef0b16f",
    "bbox": {
     "min": [
      -3.275,
@@ -7401,7 +7401,6 @@
   },
   {
    "id": "nx-temple-seed-0021",
-   "kind": "thing",
    "pos": [
     -45.63792,
     -0.05444576041354715,
@@ -7409,7 +7408,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/699387abdef0b16f.glb",
+   "kind": "thing",
+   "lib": "699387abdef0b16f",
    "bbox": {
     "min": [
      -3.275,
@@ -7435,7 +7435,6 @@
   },
   {
    "id": "nx-temple-seed-0034",
-   "kind": "thing",
    "pos": [
     -26.597068,
     -0.04801350921268022,
@@ -7443,7 +7442,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/699387abdef0b16f.glb",
+   "kind": "thing",
+   "lib": "699387abdef0b16f",
    "bbox": {
     "min": [
      -3.275,
@@ -7469,7 +7469,6 @@
   },
   {
    "id": "nx-temple-terrace-0035",
-   "kind": "thing",
    "pos": [
     -75.710797,
     -0.00464027797587903,
@@ -7477,7 +7476,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/e8417696ee8ab62b.glb",
+   "kind": "thing",
+   "lib": "e8417696ee8ab62b",
    "bbox": {
     "min": [
      -3.745,
@@ -7503,7 +7503,6 @@
   },
   {
    "id": "nx-temple-terrace-0037",
-   "kind": "thing",
    "pos": [
     -69.958369,
     0.0018601911619803956,
@@ -7511,7 +7510,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/e8417696ee8ab62b.glb",
+   "kind": "thing",
+   "lib": "e8417696ee8ab62b",
    "bbox": {
     "min": [
      -3.745,
@@ -7537,7 +7537,6 @@
   },
   {
    "id": "nx-temple-terrace-0039",
-   "kind": "thing",
    "pos": [
     -17.09628,
     -0.03480033700286841,
@@ -7545,7 +7544,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/e8417696ee8ab62b.glb",
+   "kind": "thing",
+   "lib": "e8417696ee8ab62b",
    "bbox": {
     "min": [
      -3.745,
@@ -7571,7 +7571,6 @@
   },
   {
    "id": "nx-temple-terrace-0040",
-   "kind": "thing",
    "pos": [
     -57.357928,
     -0.02292796769374645,
@@ -7579,7 +7578,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/e8417696ee8ab62b.glb",
+   "kind": "thing",
+   "lib": "e8417696ee8ab62b",
    "bbox": {
     "min": [
      -3.745,
@@ -7605,7 +7605,6 @@
   },
   {
    "id": "nx-temple-terrace-0049",
-   "kind": "thing",
    "pos": [
     -39.142894,
     -0.036608129304793915,
@@ -7613,7 +7612,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/e8417696ee8ab62b.glb",
+   "kind": "thing",
+   "lib": "e8417696ee8ab62b",
    "bbox": {
     "min": [
      -3.745,
@@ -7639,7 +7639,6 @@
   },
   {
    "id": "nx-tower",
-   "kind": "thing",
    "pos": [
     14.1,
     0,
@@ -7647,7 +7646,8 @@
    ],
    "yaw": -2.44347,
    "scale": 1,
-   "lib": "store/648ca0c0148cf1cc.glb",
+   "kind": "thing",
+   "lib": "648ca0c0148cf1cc",
    "bbox": {
     "min": [
      -3.25,
@@ -7673,7 +7673,6 @@
   },
   {
    "id": "nx-town-belltower",
-   "kind": "thing",
    "pos": [
     6.5,
     0,
@@ -7681,7 +7680,8 @@
    ],
    "yaw": -2.356194490192345,
    "scale": 1,
-   "lib": "store/2419fbc53a1d65e1.glb",
+   "kind": "thing",
+   "lib": "2419fbc53a1d65e1",
    "bbox": {
     "min": [
      -1.7,
@@ -7707,7 +7707,6 @@
   },
   {
    "id": "nx-town-bunkhouse",
-   "kind": "thing",
    "pos": [
     -9,
     0,
@@ -7715,7 +7714,8 @@
    ],
    "yaw": 0.31322457341772525,
    "scale": 1,
-   "lib": "store/2b618274fa316c78.glb",
+   "kind": "thing",
+   "lib": "2b618274fa316c78",
    "bbox": {
     "min": [
      -4,
@@ -7741,7 +7741,6 @@
   },
   {
    "id": "nx-town-bunkhouse-l",
-   "kind": "light",
    "pos": [
     -8.876748834137304,
     2.1,
@@ -7749,12 +7748,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-dyehouse",
-   "kind": "thing",
    "pos": [
     -23,
     0,
@@ -7762,7 +7761,8 @@
    ],
    "yaw": 0.941,
    "scale": 1,
-   "lib": "store/8a916bb1beade151.glb",
+   "kind": "thing",
+   "lib": "8a916bb1beade151",
    "bbox": {
     "min": [
      -1.5,
@@ -7788,7 +7788,6 @@
   },
   {
    "id": "nx-town-dyehouse-l",
-   "kind": "light",
    "pos": [
     -23.625,
     1.62,
@@ -7796,12 +7795,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-garden-cottage",
-   "kind": "thing",
    "pos": [
     -26,
     0.0009494488404761625,
@@ -7809,7 +7808,8 @@
    ],
    "yaw": 2.2004415094410525,
    "scale": 1,
-   "lib": "store/b5b3f10227856571.glb",
+   "kind": "thing",
+   "lib": "b5b3f10227856571",
    "bbox": {
     "min": [
      -5.1,
@@ -7835,7 +7835,6 @@
   },
   {
    "id": "nx-town-garden-cottage-l",
-   "kind": "light",
    "pos": [
     -25.757529051131492,
     2.100949448840476,
@@ -7843,12 +7842,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-gate-e",
-   "kind": "thing",
    "pos": [
     19.5,
     0,
@@ -7856,7 +7855,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/a39756779c671759.glb",
+   "kind": "thing",
+   "lib": "a39756779c671759",
    "bbox": {
     "min": [
      -1.8,
@@ -7882,7 +7882,6 @@
   },
   {
    "id": "nx-town-gate-n",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -7890,7 +7889,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/a39756779c671759.glb",
+   "kind": "thing",
+   "lib": "a39756779c671759",
    "bbox": {
     "min": [
      -1.8,
@@ -7916,7 +7916,6 @@
   },
   {
    "id": "nx-town-gate-s",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -7924,7 +7923,8 @@
    ],
    "yaw": 3.141592653589793,
    "scale": 1,
-   "lib": "store/a39756779c671759.glb",
+   "kind": "thing",
+   "lib": "a39756779c671759",
    "bbox": {
     "min": [
      -1.8,
@@ -7950,7 +7950,6 @@
   },
   {
    "id": "nx-town-gate-w",
-   "kind": "thing",
    "pos": [
     -19.5,
     0,
@@ -7958,7 +7957,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/a39756779c671759.glb",
+   "kind": "thing",
+   "lib": "a39756779c671759",
    "bbox": {
     "min": [
      -1.8,
@@ -7984,7 +7984,6 @@
   },
   {
    "id": "nx-town-hall",
-   "kind": "thing",
    "pos": [
     9,
     0,
@@ -7992,7 +7991,8 @@
    ],
    "yaw": -0.31322457341772525,
    "scale": 1,
-   "lib": "store/dc871edb1b45ce0f.glb",
+   "kind": "thing",
+   "lib": "dc871edb1b45ce0f",
    "bbox": {
     "min": [
      -5,
@@ -8018,7 +8018,6 @@
   },
   {
    "id": "nx-town-hall-l",
-   "kind": "light",
    "pos": [
     9,
     2.5,
@@ -8026,12 +8025,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-inn",
-   "kind": "thing",
    "pos": [
     36,
     0,
@@ -8039,7 +8038,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/861225bb15230d9b.glb",
+   "kind": "thing",
+   "lib": "861225bb15230d9b",
    "bbox": {
     "min": [
      -4.5,
@@ -8065,7 +8065,6 @@
   },
   {
    "id": "nx-town-inn-l",
-   "kind": "light",
    "pos": [
     36,
     2.35,
@@ -8073,12 +8072,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-kiln",
-   "kind": "thing",
    "pos": [
     19.158717425740413,
     -0.02065,
@@ -8086,7 +8085,8 @@
    ],
    "yaw": -2.443242374354201,
    "scale": 1,
-   "lib": "store/3e96c8b074852ddc.glb",
+   "kind": "thing",
+   "lib": "3e96c8b074852ddc",
    "bbox": {
     "min": [
      -2.195,
@@ -8112,7 +8112,6 @@
   },
   {
    "id": "nx-town-kiln-l",
-   "kind": "light",
    "pos": [
     18.70823868946895,
     1.07935,
@@ -8120,12 +8119,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-longhouse",
-   "kind": "thing",
    "pos": [
     9,
     0,
@@ -8133,7 +8132,8 @@
    ],
    "yaw": -2.828368080172068,
    "scale": 1,
-   "lib": "store/e38bb2a4c7933698.glb",
+   "kind": "thing",
+   "lib": "e38bb2a4c7933698",
    "bbox": {
     "min": [
      -4.61,
@@ -8159,7 +8159,6 @@
   },
   {
    "id": "nx-town-longhouse-l",
-   "kind": "light",
    "pos": [
     8.815123251205957,
     2.2,
@@ -8167,12 +8166,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-mapboard",
-   "kind": "thing",
    "pos": [
     2.5,
     0,
@@ -8180,7 +8179,8 @@
    ],
    "yaw": -2.9441970937399127,
    "scale": 1,
-   "lib": "store/95231f20a016b303.glb",
+   "kind": "thing",
+   "lib": "95231f20a016b303",
    "bbox": {
     "min": [
      -1.25,
@@ -8206,7 +8206,6 @@
   },
   {
    "id": "nx-town-market",
-   "kind": "thing",
    "pos": [
     -6.5,
     0,
@@ -8214,7 +8213,8 @@
    ],
    "yaw": 2.356194490192345,
    "scale": 1,
-   "lib": "store/8c16ea9a756a95ad.glb",
+   "kind": "thing",
+   "lib": "8c16ea9a756a95ad",
    "bbox": {
     "min": [
      -1.95,
@@ -8240,7 +8240,6 @@
   },
   {
    "id": "nx-town-market-l",
-   "kind": "light",
    "pos": [
     -6.217157287525381,
     1.75,
@@ -8248,12 +8247,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-monument",
-   "kind": "thing",
    "pos": [
     -7,
     0,
@@ -8261,7 +8260,8 @@
    ],
    "yaw": 0.7853981633974483,
    "scale": 1,
-   "lib": "store/d7d3b15c6391aa7e.glb",
+   "kind": "thing",
+   "lib": "d7d3b15c6391aa7e",
    "bbox": {
     "min": [
      -1.27,
@@ -8287,7 +8287,6 @@
   },
   {
    "id": "nx-town-potter",
-   "kind": "thing",
    "pos": [
     23.776412907378838,
     -0.00402,
@@ -8295,7 +8294,8 @@
    ],
    "yaw": -1.8975354116458194,
    "scale": 1,
-   "lib": "store/412bb53af8aca242.glb",
+   "kind": "thing",
+   "lib": "412bb53af8aca242",
    "bbox": {
     "min": [
      -1.705,
@@ -8321,7 +8321,6 @@
   },
   {
    "id": "nx-town-potter-l",
-   "kind": "light",
    "pos": [
     24.360421448743175,
     1.39598,
@@ -8329,12 +8328,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-roads",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -8342,7 +8341,8 @@
    ],
    "yaw": 3.141592653589793,
    "scale": 1,
-   "lib": "store/3b76b621559fa1a1.glb",
+   "kind": "thing",
+   "lib": "3b76b621559fa1a1",
    "bbox": {
     "min": [
      -20.63,
@@ -8368,7 +8368,6 @@
   },
   {
    "id": "nx-town-row-cottage",
-   "kind": "thing",
    "pos": [
     -23,
     0,
@@ -8376,7 +8375,8 @@
    ],
    "yaw": 0.9411511441487406,
    "scale": 1,
-   "lib": "store/0558b5f41bda0777.glb",
+   "kind": "thing",
+   "lib": "0558b5f41bda0777",
    "bbox": {
     "min": [
      -2.84,
@@ -8402,7 +8402,6 @@
   },
   {
    "id": "nx-town-row-cottage-l",
-   "kind": "light",
    "pos": [
     -22.67670540150866,
     2.1,
@@ -8410,12 +8409,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-shrine",
-   "kind": "thing",
    "pos": [
     -25,
     -0.0012609260510534298,
@@ -8423,7 +8422,8 @@
    ],
    "yaw": 1.4118119548622732,
    "scale": 1,
-   "lib": "store/f51be95de91ad5b3.glb",
+   "kind": "thing",
+   "lib": "f51be95de91ad5b3",
    "bbox": {
     "min": [
      -1.25,
@@ -8449,7 +8449,6 @@
   },
   {
    "id": "nx-town-stable",
-   "kind": "thing",
    "pos": [
     43,
     0,
@@ -8457,7 +8456,8 @@
    ],
    "yaw": -1.5707963267948966,
    "scale": 1,
-   "lib": "store/0658345cf7e876a4.glb",
+   "kind": "thing",
+   "lib": "0658345cf7e876a4",
    "bbox": {
     "min": [
      -3,
@@ -8483,7 +8483,6 @@
   },
   {
    "id": "nx-town-stable-l",
-   "kind": "light",
    "pos": [
     43,
     1.9,
@@ -8491,12 +8490,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-streetlamps",
-   "kind": "thing",
    "pos": [
     0,
     0,
@@ -8504,7 +8503,8 @@
    ],
    "yaw": 3.141592653589793,
    "scale": 1,
-   "lib": "store/e815a897c7d73373.glb",
+   "kind": "thing",
+   "lib": "e815a897c7d73373",
    "bbox": {
     "min": [
      -9.577,
@@ -8530,7 +8530,6 @@
   },
   {
    "id": "nx-town-tower-house",
-   "kind": "thing",
    "pos": [
     -9,
     0,
@@ -8538,7 +8537,8 @@
    ],
    "yaw": 2.828368080172068,
    "scale": 1,
-   "lib": "store/90723087ca8b5eb3.glb",
+   "kind": "thing",
+   "lib": "90723087ca8b5eb3",
    "bbox": {
     "min": [
      -3.094,
@@ -8564,7 +8564,6 @@
   },
   {
    "id": "nx-town-tower-house-l",
-   "kind": "light",
    "pos": [
     -8.876748834137304,
     2.1,
@@ -8572,12 +8571,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-town-windmill",
-   "kind": "thing",
    "pos": [
     -40,
     0,
@@ -8585,7 +8584,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/a557d918b2c14f1a.glb",
+   "kind": "thing",
+   "lib": "a557d918b2c14f1a",
    "bbox": {
     "min": [
      -3.257,
@@ -8611,7 +8611,6 @@
   },
   {
    "id": "nx-town-woodyard",
-   "kind": "thing",
    "pos": [
     16,
     0,
@@ -8619,7 +8618,8 @@
    ],
    "yaw": -2.669815142409043,
    "scale": 1,
-   "lib": "store/333e85a41a745d39.glb",
+   "kind": "thing",
+   "lib": "333e85a41a745d39",
    "bbox": {
     "min": [
      -2.1,
@@ -8645,7 +8645,6 @@
   },
   {
    "id": "nx-welcome",
-   "kind": "thing",
    "pos": [
     -3,
     0,
@@ -8653,7 +8652,8 @@
    ],
    "yaw": 0.6092,
    "scale": 1,
-   "lib": "store/7d1bd0c9545c44fb.glb",
+   "kind": "thing",
+   "lib": "7d1bd0c9545c44fb",
    "bbox": {
     "min": [
      -0.562,
@@ -8679,7 +8679,6 @@
   },
   {
    "id": "nx-welcome-l",
-   "kind": "light",
    "pos": [
     -3,
     2.2,
@@ -8687,12 +8686,12 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": null,
+   "kind": "light",
+   "lib": "",
    "bbox": null
   },
   {
    "id": "nx-wild-cairn-0022",
-   "kind": "thing",
    "pos": [
     28.73858,
     -0.07426829800275718,
@@ -8700,7 +8699,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/19edc8302d326f6a.glb",
+   "kind": "thing",
+   "lib": "19edc8302d326f6a",
    "bbox": {
     "min": [
      -6.143,
@@ -8726,7 +8726,6 @@
   },
   {
    "id": "nx-wild-cairn-0043",
-   "kind": "thing",
    "pos": [
     71.242133,
     0.007238005337997962,
@@ -8734,7 +8733,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/c7ea6ded6cb2349c.glb",
+   "kind": "thing",
+   "lib": "c7ea6ded6cb2349c",
    "bbox": {
     "min": [
      -6.111,
@@ -8760,7 +8760,6 @@
   },
   {
    "id": "nx-wild-cairn-0047",
-   "kind": "thing",
    "pos": [
     84.959728,
     -0.02598558885747508,
@@ -8768,7 +8767,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/b5ed154a3251a8c7.glb",
+   "kind": "thing",
+   "lib": "b5ed154a3251a8c7",
    "bbox": {
     "min": [
      -5.543,
@@ -8794,7 +8794,6 @@
   },
   {
    "id": "nx-wild-cairn-0048",
-   "kind": "thing",
    "pos": [
     52.00494,
     -0.0345969160626097,
@@ -8802,7 +8801,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/de186a1444a29f91.glb",
+   "kind": "thing",
+   "lib": "de186a1444a29f91",
    "bbox": {
     "min": [
      -5.391,
@@ -8828,7 +8828,6 @@
   },
   {
    "id": "nx-wild-cairn-0050",
-   "kind": "thing",
    "pos": [
     92.09493,
     -0.028882407863270138,
@@ -8836,7 +8835,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/594f5192a59a5de2.glb",
+   "kind": "thing",
+   "lib": "594f5192a59a5de2",
    "bbox": {
     "min": [
      -5.59,
@@ -8862,7 +8862,6 @@
   },
   {
    "id": "nx-wild-forest-0010",
-   "kind": "thing",
    "pos": [
     10.577156,
     -0.05003665249372835,
@@ -8870,7 +8869,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/e7d130f7747d9e9a.glb",
+   "kind": "thing",
+   "lib": "e7d130f7747d9e9a",
    "bbox": {
     "min": [
      -7.187,
@@ -8896,7 +8896,6 @@
   },
   {
    "id": "nx-wild-forest-0018",
-   "kind": "thing",
    "pos": [
     30.911985,
     -0.05120935668377804,
@@ -8904,7 +8903,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/546718f819b5f702.glb",
+   "kind": "thing",
+   "lib": "546718f819b5f702",
    "bbox": {
     "min": [
      -7.341,
@@ -8930,7 +8930,6 @@
   },
   {
    "id": "nx-wild-forest-0031",
-   "kind": "thing",
    "pos": [
     72.280295,
     -0.05215550130320002,
@@ -8938,7 +8937,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/f61645b4aba14fc6.glb",
+   "kind": "thing",
+   "lib": "f61645b4aba14fc6",
    "bbox": {
     "min": [
      -7.129,
@@ -8964,7 +8964,6 @@
   },
   {
    "id": "nx-wild-forest-0044",
-   "kind": "thing",
    "pos": [
     48.851858,
     -0.020292638346832616,
@@ -8972,7 +8971,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/43e4c8c3a843881d.glb",
+   "kind": "thing",
+   "lib": "43e4c8c3a843881d",
    "bbox": {
     "min": [
      -6.745,
@@ -8998,7 +8998,6 @@
   },
   {
    "id": "nx-wild-forest-0057",
-   "kind": "thing",
    "pos": [
     63.006856,
     -0.019491742981888435,
@@ -9006,7 +9005,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/18ea1385cf64d504.glb",
+   "kind": "thing",
+   "lib": "18ea1385cf64d504",
    "bbox": {
     "min": [
      -7.222,
@@ -9032,7 +9032,6 @@
   },
   {
    "id": "nx-wild-wayside-0009",
-   "kind": "thing",
    "pos": [
     17.538466,
     -0.06309466104089798,
@@ -9040,7 +9039,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/b46c543afae781a0.glb",
+   "kind": "thing",
+   "lib": "b46c543afae781a0",
    "bbox": {
     "min": [
      -3.293,
@@ -9066,7 +9066,6 @@
   },
   {
    "id": "nx-wild-wayside-0030",
-   "kind": "thing",
    "pos": [
     44.275486,
     -0.05134727600764112,
@@ -9074,7 +9073,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/d2a2b028b1ce9077.glb",
+   "kind": "thing",
+   "lib": "d2a2b028b1ce9077",
    "bbox": {
     "min": [
      -3.293,
@@ -9100,7 +9100,6 @@
   },
   {
    "id": "nx-wild-wayside-0045",
-   "kind": "thing",
    "pos": [
     67.582191,
     0.0104828796429387,
@@ -9108,7 +9107,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/b693c67eaedeb71b.glb",
+   "kind": "thing",
+   "lib": "b693c67eaedeb71b",
    "bbox": {
     "min": [
      -3.293,
@@ -9134,7 +9134,6 @@
   },
   {
    "id": "nx-wild-wayside-0056",
-   "kind": "thing",
    "pos": [
     85.652858,
     -0.009906056426071697,
@@ -9142,7 +9141,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/21dd4ad5c0ad0b53.glb",
+   "kind": "thing",
+   "lib": "21dd4ad5c0ad0b53",
    "bbox": {
     "min": [
      -3.293,
@@ -9168,7 +9168,6 @@
   },
   {
    "id": "nx-wild-wayside-0058",
-   "kind": "thing",
    "pos": [
     97.087431,
     -0.017884173579467824,
@@ -9176,7 +9175,8 @@
    ],
    "yaw": -2.35619449,
    "scale": 1,
-   "lib": "store/91f2a1bf9b997abe.glb",
+   "kind": "thing",
+   "lib": "91f2a1bf9b997abe",
    "bbox": {
     "min": [
      -3.293,
@@ -9202,7 +9202,6 @@
   },
   {
    "id": "nx-struct-fifthbench",
-   "kind": "thing",
    "pos": [
     -23.5,
     -0.04,
@@ -9210,7 +9209,8 @@
    ],
    "yaw": -0.4328,
    "scale": 1,
-   "lib": "store/62f33173ccdae107.glb",
+   "kind": "thing",
+   "lib": "62f33173ccdae107",
    "bbox": {
     "min": [
      -6.06,
@@ -9236,7 +9236,6 @@
   },
   {
    "id": "beb4c791",
-   "kind": "thing",
    "pos": [
     36.16852786552547,
     -0.035996554654032425,
@@ -9244,7 +9243,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/df959099a243ef27.glb",
+   "kind": "thing",
+   "lib": "df959099a243ef27",
    "bbox": {
     "min": [
      -5.55,
@@ -9270,7 +9270,6 @@
   },
   {
    "id": "house-35_-22",
-   "kind": "thing",
    "pos": [
     36,
     0,
@@ -9278,7 +9277,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "eidoverse/assets/models/crate_large_red.glb",
+   "kind": "thing",
+   "lib": "eidoverse/assets/models/crate_large_red",
    "bbox": {
     "min": [
      -1.251,
@@ -9304,7 +9304,6 @@
   },
   {
    "id": "nx-moonmoth-001",
-   "kind": "thing",
    "pos": [
     -90,
     0.0008015504140560737,
@@ -9312,7 +9311,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/df959099a243ef27.glb",
+   "kind": "thing",
+   "lib": "df959099a243ef27",
    "bbox": {
     "min": [
      -5.55,
@@ -9338,15 +9338,15 @@
   },
   {
    "id": "nx-struct-slidingladder",
-   "kind": "thing",
    "pos": [
     3.5,
     0.0056,
     58
    ],
-   "yaw": 0,
+   "yaw": 0.6981317007977318,
    "scale": 1,
-   "lib": "store/ed652efc09e44123.glb",
+   "kind": "thing",
+   "lib": "ed652efc09e44123",
    "bbox": {
     "min": [
      -0.22,
@@ -9372,7 +9372,6 @@
   },
   {
    "id": "nx-struct-honeycombscreen",
-   "kind": "thing",
    "pos": [
     -52.62,
     -0.0094,
@@ -9380,7 +9379,8 @@
    ],
    "yaw": -1.2217,
    "scale": 1,
-   "lib": "store/e8ea1c16366a2735.glb",
+   "kind": "thing",
+   "lib": "e8ea1c16366a2735",
    "bbox": {
     "min": [
      -2.14,
@@ -9406,7 +9406,6 @@
   },
   {
    "id": "nx-struct-penrosepaving",
-   "kind": "thing",
    "pos": [
     -55.63,
     -0.0252,
@@ -9414,7 +9413,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/31d34740e688ccea.glb",
+   "kind": "thing",
+   "lib": "31d34740e688ccea",
    "bbox": {
     "min": [
      -3.987,
@@ -9440,7 +9440,6 @@
   },
   {
    "id": "nx-struct-kochgarden",
-   "kind": "thing",
    "pos": [
     -6.28,
     0.0016,
@@ -9448,7 +9447,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/92ed6b2730321832.glb",
+   "kind": "thing",
+   "lib": "92ed6b2730321832",
    "bbox": {
     "min": [
      -2.775,
@@ -9474,7 +9474,6 @@
   },
   {
    "id": "nx-struct-sierpinski",
-   "kind": "thing",
    "pos": [
     -7.74,
     -0.0301,
@@ -9482,7 +9481,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/7f8b5fd7a3d18b22.glb",
+   "kind": "thing",
+   "lib": "7f8b5fd7a3d18b22",
    "bbox": {
     "min": [
      -3.275,
@@ -9508,7 +9508,6 @@
   },
   {
    "id": "nx-struct-geodesic",
-   "kind": "thing",
    "pos": [
     16.54,
     -0.0016,
@@ -9516,7 +9515,8 @@
    ],
    "yaw": 0,
    "scale": 1,
-   "lib": "store/813ad295487442d2.glb",
+   "kind": "thing",
+   "lib": "813ad295487442d2",
    "bbox": {
     "min": [
      -3.55,
@@ -9542,7 +9542,6 @@
   },
   {
    "id": "nx-struct-catenoid",
-   "kind": "thing",
    "pos": [
     26.3,
     -0.05184172647526143,
@@ -9550,7 +9549,8 @@
    ],
    "yaw": 1.5707963267948966,
    "scale": 1,
-   "lib": "store/8ac664937f96976d.glb",
+   "kind": "thing",
+   "lib": "8ac664937f96976d",
    "bbox": {
     "min": [
      -2.468,
