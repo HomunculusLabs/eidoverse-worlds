@@ -3511,3 +3511,70 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   2370729). Verdicts 0 new-confirmed (1 standing-dissent corroboration) /
   5 clean / 0 dropped. Zero world mutations, zero uploads, zero verbs,
   zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-60)
+
+- survey-60 (2026-09-08, NATIVE 4/8 + ZAI fallback 4/8 disclosed —
+  woodyard burned 1210 x2 + paced retry, garden-cottage + longhouse
+  each burned 1210 x2 + paced retry; 18m gameplay primary + front-view
+  cross-checks (gate sign, potter kick-wheel), fresh live store bytes
+  8/8 HTTP 200 curl UA from /library/store/ on exact census-60 libs):
+  POST-OVERHAUL RE-BASELINE slice — the backlog selection law fired on
+  a NEW debt class: Bill's direct village-overhaul + cabin-1 wave
+  (ledgered cabin-1/polish-283/moonmoth-1, ZERO lane commits, hence no
+  HEAD-gate trace) replaced 21 town-core libs wholesale, leaving every
+  standing row/candidate on REPLACED never-survey-judged bytes. Slice =
+  worst-first: gate-n (survey-7 CLEAN margin named the sign as
+  blob-risk), woodyard + forge + potter (standing Sev rows), row/
+  bunkhouse + garden-cottage + longhouse (cabin-1 fresh bytes). VERDICTS:
+  GATE-N REGRESSION CONFIRM Sev 3 NATIVE — hanging sign GONE from the
+  replaced bytes (two bare peg stubs only, gameplay (417,269)/(541,269),
+  front-corroborated; survey-7 judged the sign HOLDING pre-overhaul);
+  census-verified no sign rider at any gate; probe-only (Bill's own
+  village-overhaul domain), candidate row IMPROVE-PLAN survey-60
+  sub-section. POTTER REGRESSION PARTIAL Sev 4 NATIVE — identity
+  UPGRADED (amphora shelf reads instantly; survey-7 generic-station
+  finding no longer stands), kick-wheel flywheel reads as wheel;
+  residual clay-on-hairline-axle 18m float = front-frame-proven
+  deliberate kick-wheel design, distance-residual margin. WOODYARD CURE
+  CORROBORATED (ZAI) — survey-7's Sev 3 black-blob stack CURED on
+  replaced bytes 333e85a4 (log-end facets, scalloped top, grounded
+  stump); new findings all minor-tier (axe 2-3px stick, lower-tier
+  crush, lantern rod 1-2px); standing improve-31/32 row annotates OLD
+  bytes — Bill's overhaul replaced wholesale. FORGE CLEAN CONFIRMED
+  NATIVE — survey-8's ZAI Sev 4 upgraded to clean on replaced bytes
+  (hearth readable, anvil-on-stump, coal glow reads); corroborates
+  survey-16 native CLEAN; minor-tier only. ROW-COTTAGE CLEAN NATIVE —
+  survey-2 bare-jamb + lamp-dot findings RESOLVED by cabin-1 rebuild
+  (jambs complete both flanks, lamp a real fixture). BUNKHOUSE CLEAN
+  NATIVE — survey-2 value-crush + diagonal-streak findings RESOLVED.
+  GARDEN-COTTAGE CLEAN (ZAI) — survey-8 near-featureless finding
+  RESOLVED (front face detail-rich, extension distinct wing);
+  minor-tier fence-rail + bracket flags. LONGHOUSE CLEAN (ZAI) — hall
+  identity, values separated, chimney clean; advisory door-leaf only.
+  Routing: ONE candidate block (8 entries) under IMPROVE-PLAN SURVEY
+  CANDIDATES area as survey-60 sub-section (all nx-town-* = improve's
+  own intake surface; zero notes to other lanes' plans this tick —
+  gate/potter/woodyard/forge all Bill-overhaul or improve-own domain,
+  homes are cabin-1 = Bill's own). Grep-verified zero open duplicates
+  (gates had NO prior row; woodyard/potter rows carry owner-executed
+  annotations on OLD bytes, distinct sha named; forge row already
+  closed-dropped — my block explicitly says "row stays closed"). Census
+  298 vs survey-59 baseline /tmp/survey59-census.json (294): +4
+  arrivals, 0 departures — nx-struct-fifthbench 62f33173 = struct-92
+  ledger-exact; nx-moonmoth-001 df959099 = moonmoth-1 Bill-commissioned
+  (rides live, two guest flights completed per ledger); beb4c791
+  df959099 = moonmoth seat companion (shared lib, unlabeled kind=thing);
+  house-35_-22 crate_large_red = player-domain build at (36,0,-21) OUT
+  OF LANE DOMAINS (noted, not routed — owner Bill's call, survey probe
+  only); 22 lib flips ALL Bill-direct-overhaul replacements (21
+  town-core + timberyard already classified by sweep-103 as dress-142
+  v9; windmill flip = village-overhaul untracked work in flight, NOT
+  re-judged this tick per stale-on-arrival law); 1 pos move = artwalk
+  b17 rider +0.54m Y = cabin-1 ledgered remount. New snapshot baseline
+  /tmp/survey60-census.json (298). Gate: ALL PASS real exit 0 first try
+  at ae0226d0 (survey-59 at HEAD). Verdicts 2 confirmed-regression
+  (gate Sev 3, potter Sev 4 partial) / 5 clean (2 upgrades vs prior
+  findings, 3 Bill-rebuild cures) / 1 cure-corroborated / 0 dropped.
+  Native 4/8 + ZAI 4/8 disclosed. Zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).

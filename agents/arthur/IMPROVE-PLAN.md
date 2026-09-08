@@ -3764,6 +3764,73 @@ all recovered by single paced retries):**
   root cause); approach native 4/4 PASS, night one-quiet-point verified
   from approach; PLACED_VERIFIED exact standing tuple, idempotent.]
 
+**survey-60 sub-section (2026-09-08, NATIVE 4/8 + ZAI fallback 4/8
+disclosed, 18m gameplay, fresh live store bytes 8/8 HTTP 200 curl UA on
+exact census-60 libs — post-Bill-direct-overhaul re-baseline):** Bill's
+direct village-overhaul/cabin-1 wave (no lane commits, 21 town-core lib
+flips) re-populated the severity backlog: standing rows now sit on
+REPLACED never-survey-judged bytes. This slice re-judges worst-first.
+
+- `nx-town-gate-*` — REGRESSION CONFIRM Sev 3 (native survey-60, gameplay
+  + front-frame corroboration, shared lib a3975677 all four gates): the
+  hanging sign is GONE from the replaced bytes — only two bare peg stubs
+  on the lintel face (gameplay (417,269)/(541,269); front (331,176)/
+  (627,172)) with empty lintel between; survey-7 had judged the sign
+  "dot grid + 1px hangers hold" on the pre-overhaul build. Gate portal/
+  posts/stone bases/roof crown all CLEAN 4/4. Census-verified no sign
+  rider entity exists at any gate (b14/b15 artwalk riders are e/w only).
+  Village-overhaul domain = Bill's own; probe-only row, Bill's call.
+  Evidence: reviews/survey60-slice/gate-n/
+- `nx-town-potter` — REGRESSION PARTIAL Sev 4 (native survey-60):
+  workshop identity UPGRADED (two-tier amphora shelf reads instantly;
+  survey-7's "generic craft station" no longer stands); kick-wheel
+  flywheel disc reads as wheel (pwheel group + hub + spokes). Residual
+  18m float: orange clay form (467-492,342-360) on hairline axle above
+  open air (gap 478,360-380) — front-frame shows deliberate kick-wheel
+  design (clay atop slender axle, spoked flywheel at floor y398-448);
+  margin-tier distance-residual, not a transform defect. Standing
+  improve-37 notes D1 fly/disc decode — this is the replacement-bytes
+  read; probe-only. Evidence: reviews/survey60-slice/potter/
+- `nx-town-woodyard` — CURE CORROBORATED (ZAI fallback, native 1210 x2
+  retry burned): survey-7's Sev 3 pure-black-blob stack CURED on live
+  bytes 333e85a4 (village-overhaul replacement) — log-end facets
+  discernible x368-400 y398-425, scalloped top carries the read, stump
+  grounded, cast shadow anchors. New findings all minor-tier: axe
+  reads 2-3px stick no head mass (578-600,352-402), lower-tier crush
+  (370-460,418-436), unlit lantern rod 1-2px (455-461,296-304). The
+  standing improve-31/32 row annotates the OLD bytes; Bill's overhaul
+  replaced it wholesale. Probe-only. Evidence:
+  reviews/survey60-slice/woodyard/
+- `nx-forge` — CLEAN CONFIRMED on replaced bytes (native survey-60):
+  forge identity reads instantly (chimney-arch-anvil kit); survey-8's
+  ZAI Sev 4 upgraded to clean — hearth readable not void (arch interior
+  dark brown + orange glow 452-486,386-411), anvil-on-stump at working
+  height, zero floats. Minor-tier only: left plank terminal gap
+  (415-432,400-417), trough-stump merge (524-536,383-424), no glow
+  bounce (polish). Corroborates survey-16's native CLEAN on the pre-
+  overhaul bytes — row stays closed. Evidence:
+  reviews/survey60-slice/forge/
+- `nx-town-row-cottage` — CLEAN on cabin-1 replaced bytes (native):
+  identity instant, porch jambs complete both flanks, lamp a real
+  fixture (dark lantern body + bracket 508-527,343-362), zero floats/
+  crush/breaks — survey-2's bare-jamb + lamp-dot findings RESOLVED by
+  the rebuild. Evidence: reviews/survey60-slice/row-cottage/
+- `nx-town-bunkhouse` — CLEAN on cabin-1 replaced bytes (native):
+  lodging identity unambiguous, no value crush (survey-2's D1
+  RESOLVED), no stray diagonals (D2 RESOLVED), lantern flush under
+  header, ridge continuous. Evidence: reviews/survey60-slice/bunkhouse/
+- `nx-town-garden-cottage` — CLEAN on cabin-1 replaced bytes (ZAI
+  fallback, native 1210 x2 retry burned): identity instant, front face
+  DETAIL-RICH (survey-8's near-featureless finding RESOLVED), extension
+  reads distinct wing w/ cooler window. Minor-tier: fence post rail
+  illegible (285-302,427-468), thin doorway bracket (465-480,340-402).
+  Evidence: reviews/survey60-slice/garden-cottage/
+- `nx-town-longhouse` — CLEAN on cabin-1 replaced bytes (ZAI fallback,
+  native 1210 x2 retry burned): hall identity reads (full-width porch +
+  paired benches + symmetric warm windows), values well-separated, no
+  floats, chimney-ridge clean. Advisory only: door leaf ambiguous
+  inside porch shadow. Evidence: reviews/survey60-slice/longhouse/
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):
