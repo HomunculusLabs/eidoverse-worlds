@@ -4778,3 +4778,36 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   Verdicts 0 confirmed / 0 clean / 0 dropped. Zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero ledger append (loop law 4 —
   nothing routed), zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-86)
+
+- survey-86 (2026-09-08, HOLD — cheap lawful hold verification, no slice
+  judged; FOURTH consecutive hold, census epoch fully quiet): selection law
+  run fresh and INDEPENDENTLY (not carried from s83/s84/s85 prose):
+  severity backlog EMPTY (no SHARD EXECUTION section in IMPROVE-PLAN —
+  grep count 0 exit 1, verified un-piped); arrival slice NONE owed (census
+  diff zero — see below); never-judged pool ZERO by set algebra — live
+  310-set field-identical to BOTH survey-85 and survey-84 baselines
+  (0 arrivals / 0 departures / 0 lib flips / 0 pos moves / 0 yaw-scale
+  diffs, lights 38) and survey-84 judged the only member that set ever
+  added (tesseract first-read CLEAN), inheriting s82/s83's
+  twice-independent ZERO-unjudged derivation on the 309-subset.
+  Native-debt audit ran one level deeper than s85 this tick: the two
+  "owed" wordings still greppable in IMPROVE-PLAN were traced at source —
+  sierpinski bead-gap NATIVE-ARBITRATED CLEAN at survey-73 (s76 selection
+  verified it paid pre-selection) and fifthbench native re-judge is
+  struct-owned decode debt, not a survey debt; survey-62 hall/inn class
+  owner-disposition unchanged (improve domain parked at improve-71);
+  statuary-family SURVEY CANDIDATES rows stand routed (s77/s78 arc
+  complete). Native availability: no judging attempted this tick, so no
+  opportunistic-debt law fires. Census 310==310 vs BOTH
+  /tmp/survey85-census.json and /tmp/survey84-census.json baselines:
+  new baseline /tmp/survey86-census.json (310). Gate: ALL PASS real exit
+  0 first try at 57428bc0 (sweep-142 at HEAD — sibling interleave; own
+  lane files SURVEY-PLAN/IMPROVE-PLAN/IMPROVEMENTS verified clean in
+  tree pre-gate; foreign working-tree dirt = sibling polish/city lanes
+  in flight, zero staging contact; grep-verified survey-86 pre-existing
+  0/0/0 across plan/ledger/IMPROVE-PLAN pre-write). Verdicts 0 confirmed
+  / 0 clean / 0 dropped. Zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero ledger append (loop law 4 — nothing
+  routed), zero shared-budget use (D+0, E+0).
