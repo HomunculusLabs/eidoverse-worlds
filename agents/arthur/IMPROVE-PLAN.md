@@ -4557,3 +4557,66 @@ town-core replacements):**
   seat grammar is an interaction-distance read (struct-45 kin), not a
   build defect. Struct owns decode — CLEAN record only, no intake
   row. Evidence: reviews/survey62-slice/fifthbench/
+
+**survey-65 sub-section (2026-09-08, ZAI FALLBACK 7/7 disclosed — native
+1210 x2 on first call + single paced retry burned, hard down all tick
+(same flap window as survey-62's original pass); 18m gameplay from fresh
+live store bytes 7/7 HTTP 200 curl UA, ALL SEVEN sha256-byte-identical to
+survey-62's evidence pins — pure judge-availability re-judge under the
+opportunistic native-debt law, zero new bytes debt):**
+
+- `nx-tower` — survey-62 IDENTITY REGRESSION Sev 3 CORROBORATED on
+  identical bytes 648ca0c0: reads two-story house/inn-pavilion
+  (wraparound residential balustrade balcony x365-670 y290-385, hanging
+  pendant bulb + furnished interior + 6+ regular windows + closed
+  pyramid roof w/ finial — zero lookout platform, zero ladder, H ≈ W
+  ~380:375px); silhouette sealed, no floats/voids, values pass. Probe
+  only, Bill's overhaul domain. Evidence: reviews/survey65-slice/tower/
+- `nx-town-hall` — survey-62 IDENTITY Sev 4 NARROW CORROBORATED on
+  identical bytes dc871edb: farmhouse read (chimney + porch bench +
+  symmetric modest windows, zero banner/crest/emblem/sign); empty gable
+  plaque zone x355-600 y225-300 re-read at near-identical region;
+  geometry all-PASS, decal-tier fix unchanged. Probe only, Bill's
+  overhaul domain. Evidence: reviews/survey65-slice/hall/
+- `nx-town-inn` — survey-62 CONFIRM Sev 4 CORROBORATED on identical
+  bytes 861225bb: (a) sign reads wall-crate/box x628-672 y385-430 (no
+  bracket arm, no hanging gap, flush blocky mount, no pictogram —
+  region matches survey-62's x612-672 y392-427); (b) doorway core
+  x430-478 y433-466 near-0% value flat black mass — threshold-tier
+  (jamb/step cues present) but reads hole-or-appliance, not warm
+  interior; stair-tread merge x295-330 y430-500 + porch-clutter bench
+  read x590-720 y425-500 noted as sub-finding margins. Probe only,
+  Bill's overhaul domain. Evidence: reviews/survey65-slice/inn/
+- `nx-town-kiln` — survey-62 CLEAN CONFIRM CORROBORATED on identical
+  bytes 3e96c8b0: identity instant (flue taper x400-530 + firebox glow
+  x437-497 + loading ramp); fallback margins: pale lumps read
+  clay/stone not fuel (x342-402 y388-407), kiln-shelter gap nearly
+  bridged by side rack (x514-558), shelter cargo float-flag x540-592
+  y336-375 + hairline posts 3-5px — verify-tier only, identity carries.
+  Evidence: reviews/survey65-slice/kiln/
+- `nx-town-tower-house` — survey-62 IDENTITY MARGINAL Sev 4
+  CORROBORATED-REVISED on identical bytes 90723087: ~65/35 tower-house
+  vs granary/watchtower — lit ground window + workbench + half-timber
+  save it; H:W REVISED ~1.15-1.25:1 (survey-62 read 1.35:1; masonry
+  body alone ~0.9:1 — squat emphasis WORSE than first read); no
+  chimney, 2 windows total, ladder access = utilitarian signature.
+  Probe only, Bill's overhaul domain. Evidence:
+  reviews/survey65-slice/towerhouse/
+- `nx-struct-slidingladder` — survey-62 CLEAN-with-margin CORROBORATED
+  on identical bytes ed652efc: coherent three-part sculptural identity,
+  macro silhouette sealed, zero floats, no crush (orange curve
+  hue-separated at crossings); margin: rung junctions at 1-2px minimum
+  width, top-convergence zone x375-425 y212-265 first to blur at LOD —
+  same fragile-tip margin class survey-62 named. Struct owns decode.
+  Evidence: reviews/survey65-slice/slidingladder/
+- `nx-struct-fifthbench` — survey-62 CLEAN-with-margin CORROBORATED on
+  identical bytes 62f33173: ribbon coherent end-to-end x158-800,
+  grounded w/ contact seam, no voids; single brass bead visible
+  (479,368) — CONSISTENT with struct-92 source math (ONE bead at the
+  central null by design; fallback's "if beads at each crest" caveat is
+  unfounded against source, dropped); seat-grammar non-resolution at
+  18m re-classified interaction-distance residual (struct-45 kin),
+  NOT a defect. Mild value note: wave carried by silhouette vs sky,
+  internal value structure marginal against ground — polish tier.
+  struct-92's native re-judge debt STILL NOT settled by this ZAI read.
+  Struct owns decode. Evidence: reviews/survey65-slice/fifthbench/

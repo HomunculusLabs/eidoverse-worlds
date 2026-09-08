@@ -3842,3 +3842,48 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (survey-63 at HEAD). Verdicts 0 confirmed / 3 clean-with-margin /
   0 dropped. Zero world mutations, zero uploads, zero verbs, zero
   comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-65)
+
+- survey-65 (2026-09-08, ZAI FALLBACK 7/7 disclosed — native 1210 x2 on
+  first call, single paced retry burned, hard down all tick (same flap
+  window as survey-62); 18m gameplay from fresh live store bytes 7/7
+  HTTP 200 curl UA on exact census-65 libs; selection law: severity
+  backlog + never-judged pool both empty (survey-59 matcher, waves
+  60/61/62 closed), dress/approach dissents routed survey-63 pending
+  owner re-arbitration → survey-62's ZAI-debt slice re-judged under
+  the judge-availability opportunistic law): ALL SEVEN subjects
+  sha256-byte-identical to survey-62 evidence pins (tower 713f6703,
+  hall 8a4f16dd, inn 85860417, kiln 668692f7, towerhouse 4e9a9c7c,
+  slidingladder 81c4fb0c, fifthbench addce73b — full served-sha
+  prefixes; bytes unchanged since survey-62, zero new bytes debt).
+  VERDICTS: 0 confirmed / 0 clean-flips / 0 dropped — 5 CORROBORATIONS
+  of standing survey-62 rows + 2 clean corroborations. TOWER Sev 3
+  corroborated (house/inn-pavilion read, zero watchtower cues).
+  HALL Sev 4 narrow corroborated (farmhouse, empty gable plaque zone).
+  INN Sev 4 corroborated (crate-sign x628-672 y385-430 + doorway black
+  core x430-478 y433-466 threshold-tier). KILN CLEAN corroborated
+  (identity instant; fuel-value + shelter-float margins verify-tier).
+  TOWER-HOUSE Sev 4 corroborated-REVISED (H:W ~1.15-1.25:1, worse than
+  first read's 1.35:1). SLIDINGLADDER clean corroborated (fragile 1-2px
+  rung junctions margin class unchanged). FIFTHBENCH clean corroborated
+  (single bead at 479,368 CONSISTENT with struct-92 source math —
+  fallback's per-crest-bead caveat dropped as unfounded vs source;
+  struct-92 native re-judge debt STILL owed). Routing: corroboration
+  block survey-65 sub-section in IMPROVE-PLAN SURVEY CANDIDATES (all
+  standing rows already in improve's own surface — zero new notes to
+  other lanes' plans, zero new candidate rows created). Grep-verified
+  survey-65 pre-existing: 0/0/0/0 pre-write. Census: 301 steady at
+  tick-start census vs survey-64 baseline (0/0/0); struct-99 kochgarden
+  arrival observed MID-TICK post-judgment (HEAD e588466d, ledger-exact
+  R10-3 PLACED_VERIFIED, (-6.28,0.0016,89.78) yaw 0 lib 92ed6b27) —
+  classified not routed; re-census captured, new baseline
+  /tmp/survey65-census.json (302). Gate: ALL PASS real exit 0 first
+  try at 137d11da; re-gate ALL PASS real exit 0 at e588466d after the
+  sibling interleave (struct-99+sweep-112; target files verified clean
+  in tree at both reads). Native debt status after this tick:
+  survey-62's ZAI-debt class REMAINS OPEN (this pass also fell to
+  fallback — native hard down BOTH ticks on these bytes; debt
+  transfers, not clears). Verdicts 0 confirmed / 7 corroborated-clean /
+  0 dropped. Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use (D+0, E+0).
