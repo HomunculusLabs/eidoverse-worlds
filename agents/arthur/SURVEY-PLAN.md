@@ -5043,3 +5043,44 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   clean / 0 dropped. Zero world mutations, zero uploads, zero verbs,
   zero comp edits, zero ledger append (loop law 4 — nothing routed),
   zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-93)
+
+- survey-93 (2026-09-08, HOLD — cheap lawful hold verification, no slice
+  judged; TENTH hold, census epoch fully quiet again): selection law run
+  fresh and INDEPENDENTLY (not carried from s90/s91/s92 prose): severity
+  backlog EMPTY (no SHARD EXECUTION section in IMPROVE-PLAN — grep count 0
+  exit 1, un-piped this tick; IMPROVE-PLAN clean in tree at read; HEAD =
+  own survey-92, no sibling improve commit since); arrival slice NONE
+  owed (census diff zero — see below); never-judged pool ZERO by set
+  algebra — live 311-set field-identical to the survey-92 baseline AND
+  the survey-91 baseline (0 arrivals / 0 departures / 0 lib flips / 0
+  pos/yaw/scale/kind moves, lights 38), inheriting s82/s83's
+  twice-independent ZERO-unjudged derivation on the 310-subset + s84's
+  tesseract CLEAN + s89's lorenz first-read CLEAN-with-margin.
+  Native-debt audit: s86's one-level-deeper trace stands (sierpinski
+  bead-gap PAID survey-73; fifthbench = struct-owned decode debt, not
+  survey debt); survey-62 hall/inn class owner-disposition unchanged
+  (improve domain parked at improve-71, capped 9 passes by
+  debt-transfer law); statuary-family SURVEY CANDIDATES rows stand
+  routed (s77/s78 arc complete — owning-lane disposition). No new Bill
+  correction outstanding on any lane surface. Native availability: no
+  judging attempted this tick (nothing owed), so no opportunistic-debt
+  law fires. Sibling working tree still carries heavy foreign-domain
+  work-in-flight (city/terrain scripts, windmill overhaul doc + placer,
+  moon-moth dir, cabin-overhaul, carousel prototype, client/server
+  edits, fleet scripts, core-paths GLB dirty) — none live yet, correctly
+  out of survey scope until a census arrival materializes it. Census
+  311==311 vs /tmp/survey92-census.json baseline: new baseline
+  /tmp/survey93-census.json (311). Gate: ALL PASS real exit 0 first try
+  at d35ba964 (own survey-92 at HEAD; foreign working-tree dirt =
+  sibling lanes in flight, lane files clean, zero staging contact).
+  Grep-verified survey-93 pre-existing 0/0/0 across SURVEY-PLAN /
+  IMPROVE-PLAN / IMPROVEMENTS pre-write; ledger max exact-entry survey-79
+  re-checked immediately pre-write (holds append nothing — correct).
+  Token pointer (standing one-liner, surfaced once at s90): survey's
+  value is arrival-gated — holds between arrivals are the standing-watch
+  cost; no-LLM census watcher = Bill's call. Verdicts 0 confirmed / 0
+  clean / 0 dropped. Zero world mutations, zero uploads, zero verbs,
+  zero comp edits, zero ledger append (loop law 4 — nothing routed),
+  zero shared-budget use (D+0, E+0).
