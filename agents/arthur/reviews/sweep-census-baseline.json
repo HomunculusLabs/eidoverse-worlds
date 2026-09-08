@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 302,
+ "count": 303,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -9469,6 +9469,40 @@
      0,
      0.158,
      0.037
+    ]
+   }
+  },
+  {
+   "id": "nx-struct-sierpinski",
+   "kind": "thing",
+   "pos": [
+    -7.74,
+    -0.0301,
+    -73.59
+   ],
+   "yaw": 0,
+   "scale": 1,
+   "lib": "store/7f8b5fd7a3d18b22.glb",
+   "bbox": {
+    "min": [
+     -3.275,
+     0,
+     -1.923
+    ],
+    "max": [
+     3.275,
+     5.346,
+     3.77
+    ],
+    "size": [
+     6.55,
+     5.346,
+     5.693
+    ],
+    "center": [
+     0,
+     2.673,
+     0.924
     ]
    }
   }

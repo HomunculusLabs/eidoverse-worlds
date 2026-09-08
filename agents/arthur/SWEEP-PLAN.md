@@ -3988,3 +3988,54 @@ longhouse/garden-cottage, @112 hall/bunkhouse, @111 row-cottage/market,
 last walked sweep-109, now the stalest standing pair; both walk tools
 verified present this tick: interior-walk-forge.ts,
 interior-walk-potter.ts).
+
+|| sweep-115 | 2026-09-08 | 302→303 epoch-corrected (+1 domain-valid arrival nx-struct-sierpinski @ (-7.74,-0.0301,-73.59) yaw 0 lib 7f8b5fd7a3d18b22 comp {} = struct-100 @ e4031be5 MID-TICK, tuple matches its committed ledger line-for-line incl. idempotent 0-verb rerun + its own enterable two-way walk 0.375; corroborated by survey-66 census note; bbox 6.55x5.346x5.693 scale-sane, r74.1 N-meridian antipode seat az354; ZERO drift on 302 shared ids, 0 departures; epoch C 22s-paced re-read settled 303==303 0/0/0; snapshot rewritten 303/122168B/sha16 397a3f2a3bd1a1bf pre-write-asserted post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 71st sweep since routing, no escalation due — law keys Sev 1); 265 bbox non-light / 235 classified / 0 coverage holes, SAT re-run at epoch B (sierpinski in live set, ZERO new contacts at its seat — corroborates struct-100 worst-gap +2.87) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5, NE 7/7, SW 5/5 @ 0.37; walk-band 39.2m nearest — epoch-A walks stand by construction, sweep-53 precedent); tier-2 93rd cycle per committed pointer forge 6/6 @ 0.375 + potter 6/6 @ 0.366 ALL PASS | pins 15/15 ALL_PINS_OK 69th consecutive, battery 28/28 on epoch-B bytes (comp-bearing 21 unchanged — arrival comp-neutral, 38 lights), interlane f6254cd0 stable, ledger law EXACT 2370745 at append (struct-100 D+1 absorbed mid-tick, base re-read fresh), standing gate ALL PASS real exit 0 at tick-start 049d25fb + re-run b93b586e post-interleave | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+
+sweep-115: CLEAN SWEEP, epoch-correction tick. Census epoch A 302==302 vs the
+committed sweep-114 baseline (sha16 c68fcbc9e3195567): 0 arrivals, 0 departures,
+0 drift on all 302 shared ids across id/pos/yaw/scale/lib/kind/bbox -- fully
+quiet first read. While tier-2 walks ran, struct-100 (R10-4 The Sierpinski
+Spire) committed at e4031be5 and spawned nx-struct-sierpinski AFTER my
+epoch-A census, so per the polish-270 epoch law all affected evidence was
+re-taken fresh before verdicts: epoch-B census (303 final, exactly ONE arrival
+= nx-struct-sierpinski @ (-7.74, -0.0301, -73.59) yaw 0 lib 7f8b5fd7a3d18b22
+comp {}, tuple matching the struct-100 ledger line-for-line incl. its
+idempotent 0-verb rerun claim and its own enterable two-way MCPL walk
+ALL_PASS 0.375m through the open base; corroborated independently by
+survey-66's census note; bbox 6.55x5.346x5.693 scale-sane, r74.1 N-meridian
+antipode seat az354 answering the S-pole Koch Garden; 0 departures, ZERO
+drift on all 302 shared ids), SAT re-run at epoch B (265 bbox non-light / 235
+classified / 0 coverage holes, exit 3 on exactly ONE unclassified = R-121
+lamp-n | nx-town-mapboard -0.407 -- known Sev 2 routed to artwalk b26
+choreography @ sweep-43, seventy-first sweep since routing, NOT new, no
+escalation due -- the law keys on severity-1; ZERO new contacts at the
+sierpinski seat, sweep-side corroboration of struct-100's own worst-gap claim
++2.87), walk-band check (nearest walked waypoint 39.2m NE leg, all others
+41.5m+ -- epoch-A walks stand by construction, sweep-53 precedent), epoch-C
+22s-paced re-read settled 303==303 0/0/0, battery 28/28 ALL PASS on epoch-B
+bytes (comp-bearing 21 unchanged -- the arrival is comp-neutral {}, 38
+lights), standing gate re-run ALL PASS real exit 0 at b93b586e after the
+struct-100 + survey-66 interleaves. Overlap tier-1 profile: core 64/64 @
+0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37 -- all four real exit 0,
+banner-stripped parse. Tier-2 93rd cycle per committed pointer: forge 6/6 @
+0.375 (interior-walk-forge.ts) + potter 6/6 @ 0.366 (interior-walk-potter.ts),
+both real exit 0, both over the overhaul-wave bytes. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK real exit 0 (69th consecutive
+clean); sweep89-battery 28/28 ALL PASS exit 0 on fresh census bytes; interlane
+md5 f6254cd0 stable, read fresh. Ledger law EXACT -- base re-read fresh
+immediately before append (struct-100's D+1 absorbed mid-tick), 2370745.
+Snapshot rewritten with pre-write assertions (arrival exactly
+[nx-struct-sierpinski], tuple ledger-exact, 0 drift on shared ids),
+post-rewrite drift vs live ZERO: 303 entities, 122168B, sha16
+397a3f2a3bd1a1bf. Zero world mutations, zero defect notes, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2
+pair (sweep-116): tower-house + inn (94th cycle -- LRU chain: @115
+forge/potter, @114 stable/observatory, @113 longhouse/garden-cottage, @112
+hall/bunkhouse, @111 row-cottage/market, @108 market/inn, @107
+garden-cottage/tower-house -- tower-house last walked sweep-107 and inn
+sweep-108, now the stalest standing pair; pointer self-caught this tick: the
+first draft named market+inn off a stale chain read (sweep-59 class), the
+committed sweep-107 row proves tower-house @107 staler than market @111;
+both walk tools verified present this tick:
+interior-walk-tower-house.ts, interior-walk-inn.ts).
