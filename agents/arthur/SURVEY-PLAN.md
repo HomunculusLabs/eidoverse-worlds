@@ -3983,3 +3983,54 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   only cleared subject (survey-66). Verdicts 0 confirmed / 7
   corroborated-clean / 0 dropped. Zero world mutations, zero uploads,
   zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-68)
+
+- survey-68 (2026-09-08, ZAI FALLBACK 6/6 disclosed — native 1210 x2 on
+  first call, single paced retry burned, hard down all tick, same flap
+  window as survey-62/65/66/67; 18m gameplay from fresh live store bytes
+  6/6 HTTP 200 curl UA on exact census-68 libs; selection law: severity
+  backlog + never-judged pool both empty, census steady → survey-62
+  ZAI-debt class re-judged a FIFTH pass under the judge-availability
+  opportunistic law): all six debt subjects sha256-byte-identical to
+  survey-62/65/66/67 evidence pins (hall 8a4f16dd, inn 85860417, kiln
+  668692f7, tower-house 4e9a9c7c, slidingladder 81c4fb0c, fifthbench
+  addce73b — zero new bytes debt). VERDICTS: 0 confirmed / 0
+  clean-flips / 0 dropped — 6 CORROBORATIONS of standing rows. HALL
+  Sev 4 narrow corroborated (farmhouse/inn; all civic signifiers
+  absent w/ real-estate named; NOTABLE SOFTENING: entry void
+  x425-535 y355-498 now reads open passage WITH interior content —
+  survey-67 entry-hole minor tier softens toward readable interior).
+  INN Sev 4 corroborated (crate-sign 622-673,389-426 matches
+  survey-66/67 pins; doorway functional void ~85-90% near-black;
+  NEW margin: chimney 42x23px vent-shaped). KILN CLEAN corroborated
+  (identity instant, taper+firebox; margins verify-tier: flue capped-
+  dome, pole-tip tangential 0-3px, base-vs-ground weakest value pair).
+  TOWER-HOUSE Sev 4 corroborated (dovecote pull ~60/40, zero chimney,
+  1 glazing/storey, empty promenade gallery; baluster crush now
+  MEASURED ΔL≈15-30 center vs ΔL≈150 flanks x415-545 y288-352; NEW
+  ambiguity: right-wall dark blob x615-635 y430-475). SLIDINGLADDER
+  clean corroborated (single-gesture holds; fragile-tip class NEW
+  coords: diagonal overshoots 390-415/250-300, convergence feet
+  545-560/425-432, slab-top specks 430-560/434-440; crush wedge
+  matches survey-67; NEW margin: slab right-tip no contact darkening
+  x595-605, orange curve 2-3px load-bearing). FIFTHBENCH clean
+  corroborated (five crests first fully-counted, C3 (480,370) LOWEST
+  hosting bead = strongest struct-92 source-math corroboration; bead
+  seated tangent zero halo; ribbing moiré margin motion-only).
+  Routing: corroboration block survey-68 sub-section in IMPROVE-PLAN
+  SURVEY CANDIDATES (all subjects already standing rows or improve's
+  own intake surface — zero notes to other lanes' plans, zero new
+  candidate rows). Grep-verified survey-68 pre-existing: 0/0/0/0
+  pre-write. Census 303==303 vs survey-67 baseline
+  /tmp/survey67-census.json: 0 arrivals, 0 departures, 0 lib flips,
+  0 pos moves — steady epoch; new baseline /tmp/survey68-census.json
+  (303). Gate: ALL PASS real exit 0 first try at bbcc74fa (sweep-117
+  interleave absorbed; it independently corroborates census 303
+  steady this window). Native debt status after this tick: survey-62
+  class STILL OPEN for hall/inn/kiln/tower-house/slidingladder/
+  fifthbench (five passes, all fallback — debt transfers, not
+  clears); tower remains the only cleared subject (survey-66).
+  Verdicts 0 confirmed / 6 corroborated-clean / 0 dropped. Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).

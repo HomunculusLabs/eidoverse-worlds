@@ -4794,3 +4794,91 @@ read):**
   intrinsic fractal geometry, nearer-LOD check named; bottom-third
   value compression y360-460 (level-3 voids lose sky-punch). Probe
   only. Evidence: reviews/survey67-slice/sierpinski/
+
+ **survey-68 sub-section (2026-09-08, ZAI FALLBACK 6/6 disclosed — native
+ 1210 x2 on first call, single paced retry burned, hard down all tick,
+ same flap window as survey-62/65/66/67; survey-62 ZAI-debt class
+ re-judged a FIFTH pass under the judge-availability opportunistic law;
+ 18m gameplay from fresh live store bytes 6/6 HTTP 200 curl UA on exact
+ census-68 libs, all six debt subjects sha256-byte-identical to
+ survey-62/65/66/67 pins — zero new bytes debt):**
+
+- `nx-town-hall` — survey-62 Sev 4 NARROW CORROBORATED (ZAI, fifth
+  pass): farmhouse/inn read holds; all civic signifiers ABSENT with
+  real-estate named (clock/gable board ~(430-530,240-290), bell
+  cote/ridge x400-560 y158-180, banner/post faces, plaque/header
+  x403-560 y330-355, hanging sign/bracket ~(262,340)); domestic cues
+  win (chimney x338-392 y122-178, veranda roofline, porch bench).
+  NOTABLE SOFTENING vs survey-67: entry void x425-535 y355-498 now
+  reads OPEN PASSAGE WITH interior content visible (bench x478-548
+  y452-497, lit sconces (437,397)/(518,397)) — survey-67's entry-hole
+  minor tier softens toward readable interior; geometry fully seated,
+  zero floats/holes (Class A/B/C/D clean). One decal converts civic
+  read. Probe only, Bill's overhaul domain. Evidence:
+  reviews/survey68-slice/hall/
+- `nx-town-inn` — survey-62 Sev 4 CORROBORATED (ZAI, fifth pass):
+  crate/speaker-box sign (622-673,389-426) on table (588-703,427-496)
+  — no bracket/chains/suspension, reads crate/radio not hanging
+  shingle (matches survey-66/67 pins x615-675/x628-662 within
+  tolerance); doorway opening (424-536,352-482) ~85-90% near-black =
+  functional void, reads hole-in-mesh to a passing player (one dark
+  prop w/ lit top edge x424-480 y433-468 + sliver x505-520 y428-472);
+  NEW margin: chimney (344-386,143-168) only 42x23px, borderline
+  vent-shaped at distance. Groundedness PASS (plinth/posts/stairs/
+  lanterns/furniture all seated); warm window glow reads inhabited.
+  Probe only, Bill's overhaul domain. Evidence:
+  reviews/survey68-slice/inn/
+- `nx-town-kiln` — survey-62 CLEAN CONFIRM CORROBORATED (ZAI, fifth
+  pass): identity PASS — beehive taper (base x413-527 → neck x436-508)
+  + emissive firebox arch (438-492,358-402) strongest cue, stone
+  coursing kills tent/silo misread; zero floats/holes (canopy posts
+  land on stone footings x537-556/x596-614, shelf/goods/crate all
+  seated). Margins verify-tier: flue reads capped-dome not vented
+  chimney (no dark mouth inside cap rim x432-508 y255-270), leaning
+  charge pole upper tip (368,398)→(432,257) tangential 0-3px contact
+  w/ kiln edge — nearer decode check named; kiln-base-vs-ground
+  weakest value pair (warm gray vs muted olive); soft contact-shadow
+  skirt. Struct-adjacent margins routed nowhere — improve owns this
+  surface. Evidence: reviews/survey68-slice/kiln/
+- `nx-town-tower-house` — survey-62 Sev 4 CORROBORATED (ZAI, fifth
+  pass): watchtower/dovecote pull holds ~60/40 — zero chimney (apex
+  finial x466-488 y96-136 actively anti-house), ~1 glazing/storey
+  (upper blue/unlit x450-502 y283-347, lower warm x452-506 y418-470),
+  no attached wing, empty promenade gallery x312-648 y283-352 (~26
+  bays) = parapet walk not balcony; dwelling cues = one warm window +
+  shaded-entry table (x424-468,462-506) alone. survey-67 baluster-
+  crush margin now MEASURED: center span x415-545 y288-352 crushes
+  ΔL≈15-30 into solid dark band while flanks hold ΔL≈150 (tan top
+  rail + fascia band save the storey from total swallow). Ladder
+  top overlaps balcony fascia y350-355, leaning-with-contact PASS
+  (0-4px margin). NEW ambiguity: right-wall dark blob x615-635
+  y430-475 (shutter/lantern?) reads unexplained dark patch —
+  disambiguation candidate. Probe only, Bill's overhaul domain.
+  Evidence: reviews/survey68-slice/tower-house/
+- `nx-struct-slidingladder` — survey-62 CLEAN-with-margin CORROBORATED
+  (ZAI, fifth pass): coherent single-gesture silhouette holds (post +
+  cap (358-382,210-450) reads first, orange concave sweep (380,232)→
+  (588,440) second, lattice correctly collapses to hatch texture at
+  distance); fragile-tip class refined w/ NEW coords: upper diagonal
+  overshoots past the curve (390-415,250-300) read detached specks =
+  most likely genuine float class; convergence feet 1-2 tips
+  (545-560,425-432) sit 2-4px shy of slab top; slab-top specks
+  (430-560,434-440) read floating debris; crush wedge (530-600,
+  405-445) matches survey-67 pin x505-590 y405-440. NEW margin: no
+  contact darkening under slab right tip x595-605 (shadow-asymmetry
+  inference, disclosed); orange curve ~2-3px = identity-load-bearing
+  width (shimmer risk if 1px). Struct owns decode. Evidence:
+  reviews/survey68-slice/slidingladder/
+- `nx-struct-fifthbench` — survey-62 CLEAN CORROBORATED (ZAI, fifth
+  pass): ribbon coherent x160-800 sealed full-length, zero floats/
+  voids (uniform fill, no ground-color pixels inside silhouette);
+  FIVE CRESTS first fully-counted (C1 (200,366), C2 (300,362), C3
+  (480,370) LOWEST hosting the bead, C4 (550,358) tallest, C5
+  (735,366)) — C3-lowest = strongest corroboration yet of struct-92's
+  source math (bead at central TRUE-NULL seat flat, which sits BELOW
+  the crests by design); brass bead (481,368) seated tangent, lower
+  40% merges into crest, zero halo ≥1px; value separation ribbon-vs-
+  ground ≈3.4:1 strong, continuous contact line y396 x160-800. Margin:
+  2-3px vertical ribbing = moiré/shimmer risk in motion only (static
+  frame inert). struct-92 native re-judge debt STILL owed. Struct owns
+  decode. Evidence: reviews/survey68-slice/fifthbench/
