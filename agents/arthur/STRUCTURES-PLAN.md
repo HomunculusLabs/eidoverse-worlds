@@ -4815,3 +4815,64 @@ BILL EYE-CHECK (one, standing): on the NE walk at the threshold rest
 stop (bench beside mile-009), the needle-rest now shows its members like
 its sibling on the S road — warm bench, stone footings, iron posts, dark
 roof — and one small brass point on the center post at dusk.
+
+## struct-95 (2026-09-08): R9-4 THE SLIDING LADDER — authored, v1 judged
+## →fixed, v2 judged PASS-with-residuals, PLACEMENT DEFERRED next tick
+
+Cadence 95%3==2 → BUILD tick. Shard: zero actionable nx-struct rows (sole
+un-EXECUTED mention = shelltower row 15, carries terminal NATIVE-DROPPED
+annotation — verified terminal at struct-90). Refine pool EMPTY (struct-94
+closed the shared-bytes lineage). Gate ALL PASS real exit 0 tick-start
+(city-103 HEAD 543f0fb4 absorbed).
+
+CONCEPT (written before build): the form ledger's missing COMPOSITION
+FAMILY — the ENVELOPE — via its canonical form, which also fills the
+missing hypocycloid curve: THE SLIDING LADDER. Ladder L=4m frozen at
+equal angles sliding from ground band to ashlar wall; the boundary of
+every position it can occupy = the astroid x^(2/3)+y^(2/3)=L^(2/3),
+drawn as a brass tube KISSING every ladder exactly (tangent point
+(Lcos³θ, Lsin³θ), proven 1e-9 in-build). Iron rails share z-lanes
+(crossings kept, ruledtower lineage); brass arc KEEP-named glow_as
+(struct-82 emissive law); cusps seated (ground cusp half-buried in band
+top, wall cusp embedded in wall face — no floating tips). Folly,
+furniture-box class 7.0m² < 8, h 4.37.
+
+BUILD: mkv3-slidingladder.ts. Self-catches: (1) wantY assertion
+double-counted cap half-height; (2) MAJOR — rails rotated about Y
+(lemniscate xz-plane dialect) but this figure is VERTICAL (x-y plane):
+bbox z 4.46/19.6m² betrayed it via honest footprint print; fixed to
+rotation.z + new assertion footprint<8 (catches the class forever).
+v1 sha 8400d6fd ×2 det. v2 (judge-driven): brass tube 0.032→0.05 + color
+0xc08a3e + emissive 0xb8792f@0.9; iron lifted two value steps (0x5a626c
+family); ladders 8→5 harmonic 15..75° (countability). v2 sha ac8c6dfa
+8885657394cace5ce1f01fb7892425401bf97975b1a5668a55b39490 ×2
+deterministic (mtime verified). Decode struct95-decode-slidingladder.ts
+ALL PASS: 3 nodes (sl_stone/sl_iron/glow_as emissive exported), true
+bbox matches build. Nodes 3/45.
+
+JUDGED (ZAI FALLBACK — native 1210 ×2 + paced retry burned on v1 AND v2
+gameplay; provider hard down all tick; NATIVE RE-JUDGE DEBT DISCLOSED on
+exact v2 bytes): v1 gameplay FAIL (brass = iron near-black 1-2px,
+lattice mush, "iron garden fan") → v2 above. v2 gameplay 18m: mid-fan
+PASS — warm brass distinct + kisses legible + clean silhouette; ends
+crowded (astroid cusp tangent-crowding, inherent); at-a-glance count 3,
+scrutiny 5. v2 FRONT face-on (contract read, vesica dialect): 4/5 PASS —
+rungs read (ladders not struts), exactly five countable, curve smooth/
+warm/one-contact-per-ladder (cusp grazes near-coincident =
+mathematically true, disclosed), zero floats/gaps/z-fights; FAIL = wall
+reads timber post not stone (olive stone palette reads brown end-on;
+material identity, geometry sound).
+
+DEFERRED (placement next tick, queue-law FIRST): 1) optional v3 material
+fix — greyer ashlar palette for wall (judge's sole FAIL), brass
+desaturate ~20% toward ochre; re-judge front; 2) gate re-run exit 0;
+3) fresh census + seat scan (N/NE mid-gap density noted in this tick's
+298-census; W/E mid-gap precedent struct-90/91); 4) terrain preflight;
+5) hash-gated placer upload/spawn nx-struct-slidingladder +
+PLACED_VERIFIED + idempotent; 6) eye-gate packet extension + ledger/
+commit. World untouched this tick (zero uploads, zero verbs, zero shared
+budget).
+
+BILL EYE-CHECK (drafted, delivers with placement): a fan of iron ladders
+frozen mid-slide against a stone wall, one warm brass curve touching
+every one of them — the line no ladder can cross.
