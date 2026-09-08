@@ -5860,3 +5860,83 @@ its crown tipped with a bead of brass. Step in: the facets close overhead
 into a pentagon of converging stone, the golden ratio in every diagonal.
 At dusk, from outside: one quiet amber point at the spire's tip, and
 nothing else.
+
+## struct-108 (2026-09-08): R10-9 THE SUNFLOWER DIAL — authored, judged
+## NATIVE (front/gameplay/night), PLACED_VERIFIED
+
+Cadence 108%3==0 nominal refine slot; refine pool re-derived EMPTY fresh
+(no survey routes since struct-90); shard zero OPEN nx-struct rows (full
+block parse — remaining grep hits are execution logs, sweep tables, and the
+catenoid CLEAN intake note). Gate ALL_PINS_OK 15/15 real exit 0 tick-start
++ re-run immediately pre-mutation (both bun, no pipe). Census fresh 307.
+
+CONCEPT (written before build): the form ledger's missing PHYLLOTAXIS
+family (Vogel/golden-angle — grep-verified zero presence in 56 works).
+ONE IDEA: THE SEEDHEAD'S OWN ORDER, AT MONUMENT SCALE. 89 achenes (F11) at
+EXACT Vogel positions r_k = c·√k, θ_k = k·137.5077640°; this head's TRUE
+contact families 13/21 mid-disc + 21/34 rim (contact-family law
+k* ≈ d/(2·wrap(dγ)): d=34 contacts at k≈206 — the 34/55 read belongs to a
+~500-seed head; the census assert caught my hand-me-down law first try).
+Dark bed disc behind (packing gaps read as crevice shadow), 11-bract calyx
+swept back along the face normal, crown bract a long steep reflex carrying
+one brass dusk bead (the sun the flower faces).
+
+ASSERTION ARC (five catches pre-render + one at decode — the layer doing
+its job): (1) parastichy hand-me-down (above); (2) crown reflex curled
+DOWN-and-BACK (axis handedness) hiding the bead — Raycaster sightline
+assert; (3) socket occluded the bead at close range — cap tapered under
+bead radius; (4) bottom bracts reached −0.16 below grade (outward IS
+world-down at the disc bottom) — real-calyx back-sweep + world-y floor
+clamp; (5) disc upper-rim seeds clipped the bead ray at ±60° — longer
+crown reflex (0.68); (6) decode Vogel check failed at 15mm — odd sphere
+tessellation left inner tips 1.5% short; 16×12 puts an exact tip vertex
+row at θ=π/2 → 89/89 exact from baked bytes. CHASSIS LAW recorded: nested
+head group exported 115 unmerged meshes — mergeByMaterial + decode chassis
+are FLAT-GROUP tools; tilt baked per-mesh now.
+
+BUILD: sha 3f271a10fff20cc1592dffa948f4d504e066e5187e157b53032f2c415c874142
+×2 byte-identical deterministic. Decode struct108-decode-sunflowerdial.ts
+ALL PASS exit 0 (6 nodes, texMat lanes sd_face/sd_bed/sd_bract/sd_stem,
+brass emissive exported, glow_sd_1 + glow_sd_socket KEEP, Vogel 89/89,
+envelope x[-3.67..3.85] z[-1.91..1.42] y[0..8.21], no NaN).
+
+JUDGED NATIVE (placed bytes = judged bytes): front 4/4 ACCEPT (spiral arms
+sweep center→rim, phyllotactic placement independently identified),
+gameplay 18m 4/4 ACCEPT (parastichy arcs resolve cleanly, chiraled, not
+noise/grid; polish-tier: bract mass vs gong-read flirt, crown stalk
+antenna-borderline at range), night 3/3 ACCEPT (exactly one crisp quiet
+amber point, zero bloom/spill, spiral relief faintly readable). Folly
+class — no entry advertised, solid stem — no walk owed
+(honeycombscreen/stillwind precedent).
+
+SITE: the W pollinator-triad seat does NOT exist (scan: lavender/orchard/
+mosaic/dryingracks saturate az240-262 r58-95; nearest lawful W seat r120).
+SEATED az178 r71 (2.48, PY, 70.96) yaw π — the S mathematics axis gains
+its near anchor: dial r71 → koch az184 r90 → hilbert r100 → dodeca r110.
+Layered reveal: cross the Bridge of Nines, the sunflower rises behind it.
+Face (local +z) toward the village N approach (struct-105 entry law).
+Scan 796 lawful fresh-307; SAT worst nx-struct-needlerest +1.78
+placer-side center-corrected (law 1.4); film +6.66 (geodesic); walk
++11.87; terrain 9pt spread 8.5mm, lowest corner-se 0.018933 = PY.
+
+PLACEMENT: upload store/3f271a10fff20cc1.glb (0 429s), 1 verb,
+PLACED_VERIFIED exact tuple pos [2.4800, 0.0189, 70.9600] yaw 3.1416,
+census 307→308. Fresh-only rerun REFUSED zero verbs (real exit 1, verified
+un-piped). Comps {} (bead emissive material).
+
+Ledger repair this tick (disclosed): first append carried (D+0, E+0); one
+new entity = (D+1, E+0) per struct-107 precedent — entry pair + running
+total 2370753→2370754 corrected with asserts, law re-verified exact.
+
+NEXT: 109%3==1 -> BUILD tick (R10-10 form-ledger gap) unless survey routes
+reopen rows.
+
+BILL EYE-CHECK (one, standing): walk south from the plaza, cross the
+Bridge of Nines, and as the far bank opens a giant stone sunflower rises
+behind it — a disc of grey-gold seeds larger than a cartwheel, set in
+exact spiral rows that curve from the center out, dark depths between
+them, green-grey bracts swept back around the rim. One bract at the crown
+bends upward like a flame and holds a bead of brass — the sun it faces.
+At dusk: one quiet amber point above the flower, and nothing else. Behind
+it, down the same line, the snowflake garden, the labyrinth, and the
+twelve-pentagon gem carry on the mathematics walk.
