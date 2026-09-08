@@ -1,6 +1,35 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-145 — lawful HOLD (35th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
+  exit 0 at tick-start HEAD 61fbda23 (city-98 sibling); interlane md5
+  f6254cd0 pin-exact. Fresh census **298 steady** — epoch diff vs
+  dress-144 capture +0/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-145.py` HOLD_VERIFY_PASS exit 0, fresh UA'd
+  fetch; capture saved /tmp/dress145-census.json); dress domain 45 = 29
+  fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy. Round-3 closers +
+  timberyard cure PINS_EXACT **5/5**, worst delta 0.000035: foxden
+  856deec5, lanternhook 639c5480, seats cb34bd36, streamstones aabbc23d,
+  timberyard dfafb8c8 (radian law).
+- **Shard/intake (re-checked at source)**: IMPROVE-PLAN all 9 sharded
+  `nx-dress-` queue rows terminal (rows 29–38, row 38 declares queue
+  EMPTY); no round-4/5 section; survey tag max 58 (survey-58 read last
+  tick); survey-59's milkstand dissent rides the standing DRESSING-PLAN
+  intake — legacy-core off-limits, probe-only Bill's call. SWEEP-PLAN
+  dirty diff empty this tick (zero dress routing). Zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `reviews/dress-round3-eye-gate.md`; either
+  releases real placement work next tick.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Zero probe self-catches this tick. Zero world mutations, zero
+  uploads, zero verbs, zero shared-budget use.**
+
 ### dress-144 — lawful HOLD (34th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
