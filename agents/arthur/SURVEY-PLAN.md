@@ -5226,3 +5226,54 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   0 confirmed / 0 clean / 0 dropped. Zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero ledger append (loop law 4 —
   nothing routed), zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-97)
+
+- survey-97 (2026-09-08, HOLD — cheap lawful hold verification, no slice
+  judged; THIRTEENTH hold, census epoch fully quiet again): selection
+  law run fresh and INDEPENDENTLY (not carried from s93/s94/s95/s96
+  prose): severity backlog EMPTY — no `## SHARD EXECUTION` section in
+  IMPROVE-PLAN (heading grep exit 1; the line-1176 SHARD hit is the
+  improve-5y sharding DIRECTIVE prose itself, re-verified this tick —
+  it routes rows by entity prefix to struct/dress/approach/waysign/
+  improve lanes, none of which is survey; the improve lane stays parked
+  at improve-71 fleet STOP, queue terminal 48/48 closure-annotated,
+  resume = Bill's eye-gate verdicts); arrival slice NONE owed (census
+  diff zero — below); never-judged pool ZERO by set algebra — live
+  312-set field-identical to the survey-94/95/96 baselines (0 arrivals
+  / 0 departures / 0 lib flips / 0 pos/yaw/scale/kind moves / 0 comp
+  changes, lights 38), inheriting s82/s83's twice-independent
+  ZERO-unjudged derivation on the 309-subset + s84 tesseract CLEAN +
+  s89 lorenz CLEAN-with-margin + s94 chladni CLEAN-with-margin on every
+  member the set has since added. Native-debt audit unchanged:
+  sierpinski bead-gap PAID s73; fifthbench = struct-owned decode debt;
+  survey-62 hall/inn class owner-disposition (capped 9 passes,
+  debt-transfer law, improve parked improve-71); statuary-family
+  SURVEY CANDIDATES rows stand routed (s77/s78 complete); wayside-0030
+  native dissent recorded on the family-closure line. No new Bill
+  correction outstanding on any lane surface. Native availability: no
+  judging attempted this tick (nothing owed), so no opportunistic-debt
+  law fires. Sibling working tree still carries foreign-domain
+  work-in-flight of the same class as s95/s96 (city/terrain + fleet
+  scripts, windmill overhaul doc + placer, moon-moth/cabin/carousel
+  dirs, core-paths GLB dirty, client/server edits) — none live, zero
+  census arrivals materialize any of it this tick. Census 312==312 vs
+  /tmp/survey96-census.json baseline (byte-size identical 207206B,
+  full set-diff zero on every field class); new baseline
+  /tmp/survey97-census.json (312). Gate: ALL PASS 98 PASS lines, real
+  exit 0 at 5962d64e — self-catch disclosed: first gate invocation
+  piped through `tail`, so the inline `$?` printed tail's exit, not
+  bun's (polish-270 content-verdict law); re-run clean with
+  stdout-to-file captured REAL_GATE_EXIT:0 + ALL PASS verbatim — the
+  masked-exit class caught in the act on a read-only tick, zero
+  consequences, recorded as this tick's disclosure.
+  Grep-verified survey-97 pre-existing 0/0/0 across SURVEY-PLAN /
+  IMPROVE-PLAN / IMPROVEMENTS pre-write; ledger max exact-entry
+  survey-79 re-checked immediately pre-write (holds append nothing —
+  correct; tag = plan-sequence survey-96 + 1, collision-free). Token
+  pointer (standing one-liner, surfaced once at s90): survey's value
+  is arrival-gated — holds between arrivals are the standing-watch
+  cost; no-LLM census watcher = Bill's call. Verdicts 0 confirmed /
+  0 clean / 0 dropped. Zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero ledger append (loop law 4 — nothing
+  routed), zero shared-budget use (D+0, E+0).
