@@ -6256,3 +6256,125 @@ stone seed where the path began. The line ends at the storm's highest
 point, and there a stone pin carries one bead of brass: the present
 moment, glowing faintly at dusk. The weatherman's equations, caught
 mid-flight.
+
+
+## struct-112 (2026-09-08): R10-13 THE CHLADNI PLATE — judged NATIVE all
+## three, PLACED_VERIFIED
+
+Cadence 112%3==1 BUILD tick (refine pool re-derived EMPTY fresh). Shard
+14/14 nx-struct rows TERMINAL (survey-88 backlog-empty corroborated).
+Gate ALL_PINS_OK 15/15 real exit 0 tick-start + re-run immediately
+pre-mutation (both bun, no pipe).
+
+CONCEPT (written before build): the form ledger's missing VIBRATION /
+STANDING-WAVE family (ledger grep fresh: zero chladni presence across
+STRUCTURES/ARTWALK/VILLAGE/IMPROVE/SURVEY plans). ONE IDEA: A STANDING
+WAVE FROZEN IN STONE. The TRUE (5,2) square-plate eigenmode w = cos(5pi
+u)cos(2pi v) − cos(2pi u)cos(5pi v); nodal curves w=0 extracted by
+marching squares (NG=176, ambiguous-case center-sign resolution),
+chained (distance-tolerance closure), noise-filtered (130 zero-length
+debris chains from the exactly-nodal diagonals — disclosed), the two
+marched diagonal double-covers replaced by ANALYTIC straight diagonals
+(disclosed), arc-stride 0.045 → 22 curves (4 closed + 18 edge-terminated)
+drawn as iron inlay tubes r0.05 proud 0.03 on BOTH faces of a 3.2x3.2x
+0.35 ashlar plate on a 3.7x0.45x1.0 plinth, base on grade. Sand becomes
+iron; vibration becomes stone. The difference form makes the diagonals
+nodal BY CONSTRUCTION and the center still (w(0,0)=0): a brass
+through-pin at the exact center carries one dusk bead per face
+(struct-82 lineage). Folly class; no entry advertised, no walk owed.
+Static by honest design.
+
+ASSERTION ARC (3 self-catches, the layer doing its job): (1) bead
+sightline v1 FALSE-FAIL — testing the bead CENTER read blocked by the
+nodal ridges crossing beneath it (they are proud of the bead's center
+plane while its outer POLE is 8cm clear); fix = pole law + pin-exclusion
+(the pin shares the KEEP token but lives inside the plate by design).
+(2) march tolerance law — lerped crossing points sit O(1e-3) off the
+true contour at NG=176 (cell 0.0114); measured max 2.9e-3; tolerance
+scaled to discretization, not invented tightness. (3) chain-count law
+corrected from pre-build estimate to measured 4-fold orbit structure
+(2 diagonals + 4 mid arcs + 4 loops + 8 short arcs + 4 stubs).
+
+DECODE CAUGHT A REAL BUILD DEFECT (the arc's money shot): law (e)
+brass-bucket read pin-region 0 verts — the through-pin exported
+UNROTATED. mergekit applies node TRANSLATION but drops node ROTATION:
+the v1 pin was a vertical rod y[1.755..2.345] entirely buried inside
+the plate (invisible; beads floating unsupported). Fix: bake rotateX
+into the GEOMETRY (geo.rotateX before mesh). v2 sha re-pinned. Law
+recorded here for all future KEEP members: never rely on mesh.rotation
+in mk scripts; bake rotations into geometry.
+
+BUILD: v1 pin-node-rotation (buried) → v2 pin-baked. sha
+e7fdc231dc9788d3c829e197b60456ff9a839e3605f86cf38cb8272880804875 x3
+deterministic (mtime verified). Envelope 3.70x3.70x1.00 y[0..3.70].
+Nodes 5 (budget law 5–45): stone, iron, glow_ch_1 (+2 folded).
+
+DECODE struct112-decode-chladni.ts ALL PASS exit 0 (14 checks): sha
+pinned v2, node budget, texMat lanes ch_stone/ch_iron, brass emissive
+exported, KEEP node glow_ch_1, THE CHLADNI LAW = (a) replica contour
+points on TRUE nodes max |W| 2.9e-3 over 858 pts (math ground truth
+independent of marching), (b) iron bucket pure-ridge 20376 verts worst
+0.0500 vs 0.052 against a dense 19140-pt CatmullRom centerline (tube
+follows the SPLINE not the waypoint polyline — first law of tube
+decoding), (c) replica covered worst 0.00193, (d) iron vertex count
+20376 == 20376 exact (TubeGeometry emits (T+1) rings incl. closed
+curves; caps 63 verts; closedness recorded at CHAIN time — re-deriving
+from a popped seam false-reads open), (e) pin-on-axis + 2 face beads
+(material-name law: mergekit auto-names the emissive material glow2;
+the KEEP token is the NODE name), (f) envelope exact, no NaN.
+
+JUDGED NATIVE (placed bytes = judged bytes): front PASS (ridges flush
+on the face, smooth CatmullRom curves, exact 4-fold symmetry — interior
+loops at ±79.5px equidistant, diagonals crossing precisely at the bead,
+materials clean; sub-pixel silhouette aliasing only). Gameplay 18m
+PASS (standing-plate identity immediate — not wall/sign/door; nodal
+pattern legible as designed mathematics, curves not noise; both
+diagonals crisp corner-to-corner; brass bead visible at center
+(479,325); plinth grounded with cast shadow; cosmetic margin-tier
+only: edge tube-caps poke past the top silhouette — physically true
+for inlay curves exiting the domain, disclosed). Night PASS (exactly
+one warm point at plate center, zero bloom/spill, silhouette faintly
+readable). Front frame needed one paced retry after a 1210 flap
+(disclosed; night+gameplay judged first-try).
+
+SITE: film-guarded scan struct112-scan-chladni (fresh census 311, 4101
+lawful seats): TARGET az184 r150 (-10.46, 149.63) LAWFUL at dist 0.0 —
+the S mathematics axis extends at its own 10m cadence (dial r71 → koch
+r90 → hilbert r100 → dodeca r110 → wall r120 → tesseract r130 → lorenz
+r140 → CHLADNI r150): the standing wave past the frozen storm. Layered
+reveal: ...the great wall, the hypercube, the frozen storm... and past
+it, the plate where the sand settled. SAT worst nx-struct-lorenz +5.91
+scan / +5.90 placer-side fresh (law 1.4, generous — r150 meadow); film
++56.16 (kochgarden); walk +78.3. Terrain 9pt box spread 7.5mm, lowest
+corner-sw -0.0351149 → PY (plinth base on grade). r150 outside closed
+r33-55 band. Yaw 0: plate face plane ACROSS the S-axis walk — the
+approaching reader sees the full patterned face; both faces carry the
+pattern (the plate vibrates through).
+
+PLACEMENT: gate ALL_PINS_OK 15/15 real exit 0 tick-start + re-run
+immediately pre-mutation (both bun, no pipe). Upload store/
+e7fdc231dc9788d3.glb (0 429s), 1 spawn verb, PLACED_VERIFIED exact
+tuple pos [-10.4600, -0.0351, 149.6300] yaw 0.0000, census 311→312.
+Fresh-only rerun REFUSED real exit 1 (verified un-piped, zero verbs).
+Comps {} (bead emissive material KEEP).
+
+FRAMES: reviews/struct112-chladni/ (10-view set).
+
+NEXT: 113%3==2 → BUILD tick (R10-14 form-ledger gap; candidates from
+struct-111's probe list remaining at zero presence: VORONOI CELLS
+(natural partition family), hyperbolic {7,3} tiling (negative-curvature
+family); HOPF FIBRATION stays deferred by the novelty law). No native
+debts open for this lane. New durable law this tick: mergekit drops
+node rotation — bake rotations into geometry (applies to every future
+KEEP-member mesh and any rotated placement geometry).
+
+BILL EYE-CHECK (one, standing — the mathematics walk grows past the
+storm): walk the south mathematics walk past the labyrinth, the
+twelve-pentagon gem, the great rule-30 wall, the hanging cube, and the
+frozen storm — and where the meadow opens one last time, a square
+plate of stone stands upright like a held breath. Look closer: iron
+lines are laid across its face — two diagonals crossing at the heart,
+and around them arcs and small closed loops, the pattern sand makes on
+a plate struck by a pure tone. The two diagonals cross at a single
+brass bead: the one point on the plate that never moves. At dusk it
+glows faintly — the still center of a wave that will never stop.
