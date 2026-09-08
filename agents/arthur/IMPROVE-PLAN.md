@@ -4998,3 +4998,77 @@ census-70 libs):**
   strut intersections ~(345,340)/(621,320)) — polish tier, not defect;
   corroborative only, struct-101's own native packet stands. Evidence:
   `agents/arthur/reviews/survey70-slice/geodesic/`
+
+**survey-71 sub-section (2026-09-08, ZAI FALLBACK 6/6 disclosed —
+native hard down all tick: 1210 on hall+inn first calls batched, single
+paced retry burned (hall), SEVENTH consecutive flap window after
+survey-62/65/67/68/69 + survey-70's partial; 18m gameplay from fresh
+live store bytes 6/6 HTTP 200 curl UA on exact census-71 libs; all
+four survey-62 debt subjects served-sha16 byte-identical to every
+prior evidence pin — hall 8a4f16dd, inn 85860417, kiln 668692f7,
+tower-house 4e9a9c7c; ellipsecourt fbf80b5c + stringlights 3ce2cdb2
+first independent pins):** seventh-pass debt re-judge + two
+first-independent reads. All six subjects have standing rows —
+annotations only, zero new candidates.
+
+- `nx-town-hall` — Sev 4 CORROBORATED seventh pass: civic-read 30-40%
+  (symmetry + portico + 4 sconces carry; no sign/banner/cupola/bell
+  anywhere; farmhouse massing dominates). Entry void REFINED x437-519
+  y371-497 (prior x425-535 y355-498 box ~10-15px/side oversize —
+  captured readable header/jamb geometry; bench interior silhouette
+  x487-545 y440-470 + threshold tone below y470 survive). Zero
+  floats/holes. Geometry cleanest-of-slice; identity remains the
+  defect (probe-only, Bill's overhaul domain). Evidence:
+  reviews/survey71-slice/nx-town-hall/
+- `nx-town-inn` — Sev 4 CORROBORATED seventh pass, all three prior
+  findings confirmed: crate-sign x620-676 y388-428 in direct desk
+  contact no hang-gap no bracket; doorway void x424-468 y436-468 full
+  crush at the focal entry zone; chimney/hearth misalignment MEASURED
+  ~78px (chimney center x368 vs hearth mass x446). New verify-tier:
+  right porch lamp x640-653 y350-364 mount-less (possible float —
+  close-up verify), under-desk leg crush x588-700 y482-506. Probe-only,
+  Bill's overhaul domain. Evidence: reviews/survey71-slice/nx-town-inn/
+- `nx-town-kiln` — CLEAN CORROBORATED seventh pass: identity instant
+  (dome + arched firebox + warm glow anchor x448-488 y378-405
+  eliminates igloo/oven misread). All four standing verify-tier
+  margins confirmed; pale-value pair REFINED pair→TRIPLE (mouth
+  contents x450-486 y368-386 + ware stack x543-596 y348-392 + crate
+  x348-392 y392-406 — three same-value pale clusters in 200px span;
+  eye cannot triage fuel vs ware vs product). Margins stay polish
+  tier; CLEAN row stands. Evidence: reviews/survey71-slice/nx-town-kiln/
+- `nx-town-tower-house` — Sev 4 CORROBORATED seventh pass: dovecote
+  pull 55-60% (holding, not escalating); baluster crush confirmed
+  dL15-30 center x415-545 y288-352 vs dL120-150 flanks; right-wall
+  blob confirmed slightly wider x606-640 y426-474 w/ bracket-leg
+  hint. LADDER finding CORRECTED: geometric "overtops deck" NOT
+  confirmed (rail tops terminate at fascia band y357); the real defect
+  is the missing gate gap at x315-345 y288-348 (continuous railing
+  blocks ladder-to-deck access). NEW under-eave open band x425-548
+  y222-268 — dark interior + faint beams; reads hole-or-vent,
+  indistinguishable at 18m, feeds the baluster crush (owning decode
+  before any execution). Probe-only, Bill's overhaul domain.
+  Evidence: reviews/survey71-slice/nx-town-tower-house/
+- `nx-struct-ellipsecourt` — CLEAN second ZAI vote (first independent
+  read was survey-30 ZAI; native re-judge debt carries — no third
+  read pending): elliptical-court identity confirmed (ellipse
+  proportion + far-arc depth compression legible), ring continuous
+  edge-to-edge x95-870 incl. far-arc lower edge (rear closure, not
+  open C), 13 shafts resolved incl. two near/far merged pairs
+  x135-170/x785-820 (on-axis camera geometry, inherent not defect),
+  14th pier unverifiable-by-occlusion but nothing contradicts, brass
+  foci (190,407)/(770,408) mirror-symmetric about x480, all plinths
+  grounded w/ contact shadows, zero floats/voids/crush. Design note
+  only: casual count reads 11 not 14 (merged pairs). Struct owns
+  decode. Evidence: reviews/survey71-slice/nx-struct-ellipsecourt/
+- `nx-dress-stringlights` — night-function DEAD confirmed on exact
+  live store bytes (3ce2cdb2) with full bulb map: ZERO warm pixels
+  anywhere; 9 expected bulbs + 3 wire-node specks ALL dead-dark
+  (322,366)/(341,369)/(374,376)/(407,383)/(447,390)/(489,392 sag
+  low)/(516,388)/(548,382)/(570,377) + (592,372)/(612,368)/(631,366),
+  each DARKER than the olive ground (contrast inversion = shaded
+  geometry, no emissive path); swag arc itself below-horizon
+  y362-392 against dark ground = artifact-level read at night.
+  Corroborates survey-30's decode finding (source bulbs carry no
+  emissive arg, served bytes COLOR_0-only) — now two independent
+  reads. Off-limits legacy-core set — probe-only, Bill's call.
+  Evidence: reviews/survey71-slice/nx-dress-stringlights/

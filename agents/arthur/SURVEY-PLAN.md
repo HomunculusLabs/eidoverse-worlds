@@ -4133,3 +4133,47 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (tower cleared survey-66). Verdicts 1 confirmed / 2 clean / 0
   dropped. Zero world mutations, zero uploads, zero verbs, zero comp
   edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-71)
+
+- survey-71 (2026-09-08, ZAI FALLBACK 6/6 disclosed — native hard down
+  all tick: 1210 x2 on hall+inn first calls (batched), single paced
+  retry burned (hall), SEVENTH consecutive flap window after
+  survey-62/65/67/68/69 and survey-70's partial recovery; 18m gameplay
+  from fresh live store bytes 6/6 HTTP 200 curl UA on exact census-71
+  libs; all four debt subjects served-sha16 byte-identical to every
+  prior pin — hall 8a4f16dd, inn 85860417, kiln 668692f7, tower-house
+  4e9a9c7c, zero new bytes debt): selection = seventh-pass re-judge of
+  the standing survey-62 debt class (severity backlog + never-judged
+  pool empty, census steady) + two first-independent reads:
+  ellipsecourt (survey-30's CLEAN was owner-corroborating ZAI, native
+  re-judge annotated on the row) + stringlights (survey-30's
+  dead-night-function decode finding, never re-read independently).
+  VERDICTS: 0 confirmed / 5 corroborated / 1 clean-corroborated —
+  HALL Sev 4 corroborated (entry void refined x437-519 y371-497;
+  civic-read 30-40%), INN Sev 4 corroborated (all three prior findings
+  confirmed; chimney-hearth offset measured ~78px; new verify-tier
+  right-lamp mount-less), KILN CLEAN corroborated seventh pass (pale
+  pair refined to TRIPLE — highest-leverage polish fix), TOWER-HOUSE
+  Sev 4 corroborated (ladder finding corrected to missing-gate-gap;
+  NEW under-eave open band x425-548 y222-268 owning-decode owed),
+  ELLIPSECOURT CLEAN second ZAI vote (native debt carries; design note
+  only: casual count reads 11 shafts not 14 from on-axis), STRINGLIGHTS
+  night-function DEAD confirmed with full dead-bulb map (zero warm px,
+  bulbs darker than backdrop — corroborates survey-30 decode; two
+  independent reads now stand). Routing: survey-71 sub-section
+  IMPROVE-PLAN SURVEY CANDIDATES — all six subjects carry standing
+  rows (hall/inn/tower-house probe-only Bill's-overhaul-domain, kiln
+  clean-row, ellipsecourt annotation, stringlights off-limits-set
+  probe), ZERO new candidate rows, ZERO notes to other lanes' plan
+  files this tick. Grep-verified survey-71 pre-existing: 0/0/0/0/0
+  pre-write (all five surfaces). Census 304==304 vs survey-70 baseline
+  /tmp/survey70-census.json: 0 arrivals, 0 departures, 0 lib flips,
+  0 pos moves — steady epoch, quiet window; new baseline
+  /tmp/survey71-census.json (304). Gate: ALL PASS real exit 0 first
+  try at 1d6d855b (struct-102 at HEAD). Native debt tick: survey-62
+  class REMAINS OPEN for hall/inn/kiln/tower-house (seventh ZAI pass,
+  transfers not clears); ellipsecourt native debt carries (two ZAI
+  votes now). Verdicts 0 confirmed / 6 corroborated-clean / 0 dropped.
+  Zero world mutations, zero uploads, zero verbs, zero comp edits,
+  zero shared-budget use (D+0, E+0).
