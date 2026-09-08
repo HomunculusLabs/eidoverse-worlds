@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 305,
+ "count": 306,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -9571,6 +9571,40 @@
      0,
      2.681,
      0.004
+    ]
+   }
+  },
+  {
+   "id": "nx-struct-hilbertlabyrinth",
+   "pos": [
+    -6.98,
+    -0.01822,
+    99.76
+   ],
+   "yaw": 3.141592653589793,
+   "scale": 1,
+   "kind": "thing",
+   "lib": "38d3bb8f49a08af9",
+   "bbox": {
+    "min": [
+     -4.21,
+     0,
+     -4.21
+    ],
+    "max": [
+     4.21,
+     2.925,
+     4.21
+    ],
+    "size": [
+     8.42,
+     2.925,
+     8.42
+    ],
+    "center": [
+     0,
+     1.462,
+     0
     ]
    }
   }
