@@ -4237,3 +4237,50 @@ stable/observatory, @119 longhouse/garden-cottage, @118 hall/bunkhouse,
 @117 row-cottage/market, @116 tower-house/inn -- forge and potter both
 last walked sweep-115, now the stalest standing pair; both walk tools
 verified present this tick: interior-walk-forge.ts, interior-walk-potter.ts).
+
+|| sweep-121 | 2026-09-08 | 303→304 single stable epoch (266 thing + 38 light; exactly ONE domain-valid arrival nx-struct-geodesic @ (16.54,-0.0016,57.68) yaw 0 lib 813ad295487442d2 comp {} = struct-101 @ 1d9853c6 PRE-tick at tick-start HEAD, tuple matches its committed ledger line-for-line, bbox 7.1x3.625x7.1 honest room-scale; 0 departures, 0 drift on all 303 shared ids on id/pos/yaw/lib/scale/kind/bbox; epochs A/B 20s-paced identical; snapshot rewritten like-for-like 304 ents / 122571B / sha16 0d46f915cf4ebe8f, pre-write assertions, post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 77th sweep since routing, no escalation due — law keys Sev 1); 266 bbox non-light / 236 classified / 0 coverage holes, SAT fresh over live set, geodesic SAT-clean, zero new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 maxArrival, NW 5/5 @ 0.33, NE 7/7 @ 0.38, SW 5/5 @ 0.37); tier-2 99th cycle per committed pointer forge 6/6 @ 0.375 + potter 6/6 @ 0.366 ALL PASS | pins 15/15 ALL_PINS_OK 75th consecutive, battery 28/28 exit 0 (comp-bearing 21, 38 lights), interlane f6254cd0 stable read fresh, ledger law EXACT 2370746 D+0/E+0 base re-read fresh pre-append, standing gate ALL PASS real exit 0 at 1d9853c6 from repo ROOT (first run from agents/arthur cwd tripped tex-84 repo-relative existsSync — cwd artifact, disclosed) | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+sweep-121: CLEAN SWEEP, arrival tick. Census 303->304 single stable epoch
+(266 thing + 38 light): exactly ONE domain-valid arrival nx-struct-geodesic
+@ (16.54, -0.0016, 57.68) yaw 0 lib 813ad295487442d2 comp {} = struct-101
+@ 1d9853c6 (R10-5 The Geodesic Pavilion), committed PRE-tick at tick-start
+HEAD -- tuple matches its committed ledger line-for-line, bbox
+7.1x3.625x7.1 honest room-scale (dia >7m exceeds room gates, height 3.625
+> 2.2, exact trimesh per its own decode); 0 departures, 0 drift on all 303
+shared ids across id/pos/yaw/lib/scale/kind/bbox; epochs A and B (20s-paced)
+settled identical. Snapshot rewritten like-for-like: 304 entities, 122571B,
+sha16 0d46f915cf4ebe8f, pre-write assertions (exactly one arrival, zero
+drift, tuple ledger-exact), post-rewrite drift vs live ZERO. Overlap: exit 3
+on exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard -0.407 --
+known Sev 2 routed to artwalk b26 choreography @ sweep-43, seventy-seventh
+sweep since routing, NOT new, no escalation due (law keys severity-1);
+266 bbox non-light, 236 classified, 0 coverage holes, geodesic SAT-clean in
+the live set, zero new contacts. Tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0: core 64/64 @ 0.38 maxArrival, NW 5/5 @ 0.33, NE 7/7
+@ 0.38, SW 5/5 @ 0.37. Tier-2 99th cycle per committed pointer: forge 6/6 @
+0.375 + potter 6/6 @ 0.366, both real exit 0. Integrity: struct18-fleet-pin-
+check 15/15 ALL_PINS_OK real exit 0 (75th consecutive clean); sweep89-
+battery 28/28 ALL PASS exit 0 on fresh census bytes (comp-bearing 21, 38
+lights); interlane md5 f6254cd0 stable, read fresh. Ledger law EXACT 2370746
+D+0/E+0, base re-read fresh immediately before append (struct-101 D+1 +
+survey-69 absorbed mid-window). Standing gate ALL PASS real exit 0 at
+1d9853c6 run from repo ROOT, 98 PASS / 0 FAIL. Probe self-catches
+pre-verdict, both disclosed: (a) the FIRST gate run executed from
+agents/arthur cwd and tripped the tex-84 check's repo-relative existsSync
+(printed 1 FAILURE(S) under a laundered tail-pipe exit 0) -- re-run from
+ROOT ALL PASS, no verdict impact (wrong-cwd class, kin to sweep-118); (b)
+core-walk output carries the [physics] banner line before the JSON
+(sweep-35 class, stripped before parse). PLAN-EDIT self-catches, repaired
+before commit: the first history-row patch fuzzy-matched, duplicated the
+Next token, and flipped -- to an em-dash inside sweep-120's pointer block
+(adjacent-token-bleed class, sweep-43/50 family) -- restored byte-faithful
+via a second patch, verified by re-read; the first prose-append attempt
+carried a polluted draft (wrong totals, garbled LRU) caught by anchor
+asserts before any write (sweep-55 class). Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use (D+0, E+0). Next tier-2 pair (sweep-122): tower-house + inn (100th
+cycle -- LRU chain: @121 forge/potter, @120 stable/observatory, @119
+longhouse/garden-cottage, @118 hall/bunkhouse, @117 row-cottage/market,
+@116 tower-house/inn -- tower-house and inn both last walked sweep-116,
+now the stalest standing pair; both walk tools verified present on disk
+this tick: interior-walk-tower-house.ts, interior-walk-inn.ts).
