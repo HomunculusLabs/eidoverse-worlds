@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 311,
+ "count": 312,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -9775,6 +9775,40 @@
      0.017,
      3.519,
      0.029
+    ]
+   }
+  },
+  {
+   "id": "nx-struct-chladni",
+   "pos": [
+    -10.46,
+    -0.03511490107940084,
+    149.63
+   ],
+   "yaw": 0,
+   "scale": 1,
+   "kind": "thing",
+   "lib": "e7fdc231dc9788d3",
+   "bbox": {
+    "min": [
+     -1.85,
+     0,
+     -0.5
+    ],
+    "max": [
+     1.85,
+     3.7,
+     0.5
+    ],
+    "size": [
+     3.7,
+     3.7,
+     1
+    ],
+    "center": [
+     0,
+     1.85,
+     0
     ]
    }
   }
