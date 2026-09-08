@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 300,
+ "count": 301,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -9400,6 +9400,40 @@
     "center": [
      0,
      2.199,
+     0
+    ]
+   }
+  },
+  {
+   "id": "nx-struct-penrosepaving",
+   "kind": "thing",
+   "pos": [
+    -55.63,
+    -0.0252,
+    -22.48
+   ],
+   "yaw": 0,
+   "scale": 1,
+   "lib": "store/31d34740e688ccea.glb",
+   "bbox": {
+    "min": [
+     -3.987,
+     0,
+     -4.184
+    ],
+    "max": [
+     3.987,
+     0.11,
+     4.184
+    ],
+    "size": [
+     7.974,
+     0.11,
+     8.368
+    ],
+    "center": [
+     0,
+     0.055,
      0
     ]
    }

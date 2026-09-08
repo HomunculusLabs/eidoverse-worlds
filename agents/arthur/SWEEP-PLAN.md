@@ -3793,3 +3793,50 @@ stable last walked sweep-105 and observatory sweep-105, now the stalest
 standing pair; both walk tools verified present this tick:
 interior-walk-stable.ts, struct2-walk-observatory.ts).
 
+
+sweep-110: CLEAN SWEEP, epoch-correction tick. Census epoch A 300==300 vs the
+committed sweep-109 baseline (sha16 4514c134f3d25208): 0 arrivals, 0
+departures, 0 drift on all 300 shared ids across id/pos/yaw/scale/lib/kind/bbox
+-- fully quiet across the first read. While tier-2 walks ran, struct-98
+(R10-2 The Penrose Paving placement) committed at d71ce09c and spawned
+nx-struct-penrosepaving AFTER my epoch-A census, so per the polish-270 epoch
+law all affected evidence was re-taken fresh before verdicts: epoch-B census
+(301 final, exactly ONE arrival = nx-struct-penrosepaving @ (-55.63, -0.0252,
+-22.48) yaw 0 lib 31d34740e688ccea comp {}, tuple matching the struct-98
+ledger line-for-line incl. its idempotent 0-verb rerun claim; bbox
+7.974x0.11x8.368 ground-film paving, r60.2 WNW seam seat az202; 0 departures,
+ZERO drift on all 300 shared ids), SAT re-run at epoch B (263 bbox non-light /
+235 classified / 0 coverage holes, exit 3 on exactly ONE unclassified = R-121
+lamp-n | nx-town-mapboard -0.407 -- known Sev 2 routed to artwalk b26
+choreography @ sweep-43, sixty-sixth sweep since routing, NOT new, no
+escalation due -- the law keys on severity-1; ZERO new contacts at the
+penrosepaving seat, sweep-side corroboration of struct-98's own worst-gap
+claim +4.64), walk-band check (nearest walked waypoint 30.9m SW leg, all
+other legs 50.1m+ -- epoch-A walks stand by construction, sweep-53
+precedent), epoch-C 25s-paced re-read settled 301==301 0/0/0, battery re-run
+28/28 ALL PASS on epoch-B bytes (comp-bearing 21 unchanged -- the arrival is
+comp-neutral {}, 38 lights), standing gate re-run ALL PASS real exit 0 at
+d71ce09c. Overlap tier-1 profile: core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @
+0.38, SW 5/5 @ 0.37 -- all four real exit 0, banner-stripped parse. Tier-2
+88th cycle per committed pointer: stable 5/5 @ 0.396 (interior-walk-stable.ts)
++ observatory circuit 5/5 @ 0.389 (struct2-walk-observatory.ts), both real
+exit 0, both over the overhaul-wave bytes. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK real exit 0 (64th consecutive clean); sweep89-battery 28/28
+ALL PASS exit 0 at both epochs -- the sweep-106 refreshed pins hold with zero
+FAILs; interlane md5 f6254cd0 stable, read fresh. Probe self-caught
+pre-verdict: core-walk parse keyed the physics-banner [physics] line as the
+JSON start (banner-strip regex re-anchored on a line starting with an open
+brace, sweep-48 class, no verdict impact; battery argv needed the census path
+argument, first run IndexError caught pre-verdict). Ledger law EXACT -- base
+re-read fresh immediately before append, 2370743. Snapshot rewritten with
+pre-write assertions (arrival exactly [nx-struct-penrosepaving], tuple
+ledger-exact, 0 drift on shared ids), post-rewrite drift vs live ZERO: 301
+entities, 121339B, sha16 3b59ad9197e54aab. Zero world mutations, zero defect
+notes, zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0). Next tier-2 pair (sweep-111): row-cottage + market (89th cycle --
+LRU chain: @110 stable/observatory, @109 forge/potter, @108 market/inn, @107
+garden-cottage/tower-house, @106 bunkhouse/longhouse, @104 hall/row-cottage,
+@101 row-cottage/inn, @97 potter/market -- row-cottage last walked sweep-104
+and market sweep-108, now the stalest standing pair; both walk tools verified
+present this tick: interior-walk-row-cottage.ts, interior-walk-market.ts).
+
