@@ -4870,3 +4870,60 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   Verdicts 0 confirmed / 0 clean / 0 dropped. Zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero ledger append (loop law 4 —
   nothing routed), zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-89)
+
+- survey-89 (2026-09-08, ARRIVAL slice — first independent read owed, s76
+  hilbert / s80 sunflowerdial / s81 rule30wall / s84 tesseract precedent:
+  owner placement-review only; NATIVE 2/3 judgment calls (gameplay + night)
+  + ZAI fallback 1/3 disclosed (front cross-check — native 1210 x2, single
+  paced retry burned); 18m gameplay primary + front cross-check + night
+  from fresh live store bytes HTTP 206 curl UA (215168B) on the exact
+  census-89 lib; served-sha256 pin 316a1cf64d6680c8 on lib
+  77b59dbbcb8bfb59 = struct-111's pinned build sha; DRACO re-encode
+  transform struct-104 class). Selection law run fresh: severity backlog
+  EMPTY (no SHARD EXECUTION section in IMPROVE-PLAN — grep count 0 exit 1,
+  un-piped); census diff = the ONE arrival only, so never-judged pool =
+  that arrival. Census 311 vs /tmp/survey88-census.json baseline 310:
+  exactly ONE arrival nx-struct-lorenz @ (-9.77,-0.02794,139.66) yaw 0
+  lib store/77b59dbbcb8bfb59 = struct-111 @ HEAD 178aa7ad, tuple
+  ledger-exact line-for-line, 0 departures, 0 lib flips, 0 pos/yaw/scale
+  moves, lights 38; new baseline /tmp/survey89-census.json (311).
+  VERDICT: NX-STRUCT-LORENZ CLEAN-with-margin — gameplay IDENTITY PASS
+  (two-winged butterfly/strange-attractor monument reads deliberate, not
+  tangle/scaffolding — monument grammar dais+stanchion+pin carries it;
+  right-lobe clean open aperture x505-590 y225-330 = classic loop
+  opening), SILHOUETTE PASS (continuous uniform-thickness tube end to
+  end, clean tail convergence ~ (480-497,445-458), no shred/dissolve),
+  INTEGRITY RESOLVED (native flagged irregular mid-grey patch left-lobe
+  x408-432 y288-318 as suspect stray geometry; ZAI front cross-check
+  RESOLVED it honest structure — shadowed spiral-core crevice, concentric
+  banding continues into the region, value matches shadowed tube facets
+  not foreign material, silhouette follows adjacent pass curvature —
+  matching owner's own disclosed "left-lobe near-black = rig lighting
+  class"; zero floats/voids/z-fight/stray blocks; whisker+bead attached,
+  right-lobe aperture intentional), GROUNDING PASS (dais flush y505-510
+  with side band, stanchion solid, contact + cast shadows anchor; margin:
+  cast-shadow decal sits ~8-10px clear of dais footprint at 348-358,
+  483-490 = known flat-plane review-chassis class, survey-3 block-shadow
+  precedent — unproven from solo chassis, NOT routed), BEAD PASS (brass
+  point (601-612,119-129) ~8px legible at 18m, orange-on-sky contrast
+  sufficient). Night BEAD CONTRACT PASS NATIVE (exactly one warm point
+  (606,125) ~9-10px RGB ≈185/145/72, crisp matte, ZERO bloom/halo/spill
+  — stem and wing rim beneath stay neutral near-black; silhouette faintly
+  readable via rim highlights + right-lobe void x525-585 y230-325 + waist
+  notch, not a dead mass; zero stray warm px frame-wide; benign note:
+  dais top albedo marginally warm-toned (58,50,44) = material color, not
+  a light). CORROBORATES struct-111's own native front+gameplay+night
+  ALL PASS — zero dissent, no new defect class. Routing: ZERO notes
+  routed (struct owns disposition; s84 corroborating-first-read-clean
+  precedent — record lives here, not in the owner's plan); ZERO ledger
+  append (loop law 4 — append only when routing). Grep-verified
+  survey-89 pre-existing 0/0/0 across SURVEY-PLAN / IMPROVE-PLAN /
+  IMPROVEMENTS pre-write; ledger max survey-79 re-checked immediately
+  pre-write (holds append nothing — correct). Gate: ALL PASS real exit 0
+  first try at 178aa7ad (struct-111 at HEAD; foreign working-tree dirt =
+  sibling polish/city/approach lanes in flight, lane files clean, zero
+  staging contact). Verdicts 0 confirmed / 1 clean-with-margin / 0
+  dropped. Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero ledger append, zero shared-budget use (D+0, E+0).
