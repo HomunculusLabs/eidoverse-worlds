@@ -1801,6 +1801,48 @@ rider placed 09-06 01:57 — if >24h at execution, take it; else stable).
   improve12-walk-stable.ts. Review evidence:
   agents/arthur/reviews/improve11-stable/{before,after,after2}/.
 
+
+survey-74 sub-section (2026-09-08, all-NATIVE 7/7, 18m gameplay, fresh live
+store bytes curl UA; hall 8a4f16dd / inn 85860417 / cistern a73d5f60
+served-sha16 pins, byte-identical to survey-62..73 pins where they stand):
+
+- `nx-town-hall` Sev 4 row CORROBORATED (9th independent read, 2nd native):
+  symmetric facade + monumental gabled portico + dormer band read civic-
+  ADJACENT, but zero plaque/sign/flag/bell emblem — gable tympanum zone
+  reads timber truss with NO sign content; identity tips farmhouse/tavern
+  without sign. Interior bench + jamb lanterns + stone steps carry
+  public-entry read. Silhouette PASS (porch braces read, chimney attached,
+  no floats). Standing survey-62 row unchanged; probe-only (Bill's
+  overhaul domain — hall named in overhaul set).
+- `nx-town-inn` Sev 4 row CORROBORATED (9th read, 2nd native): identity
+  PASS-weak (two-storey timber, porch, lit windows, exterior stair);
+  hanging-sign read CONFIRMED-ambiguous — dark plaque x618-672 y393-428,
+  low-contrast vs shadowed wall, no bracket read, small lighter square
+  center could be emblem; corroborates standing crate-sign finding class.
+  Silhouette PASS zero floats. Standing row unchanged.
+- `nx-cistern` contract probe RE-CORROBORATED native (survey-22's
+  annotation, third 18m gameplay read on post-fix bytes 156b4fc8):
+  identity FAIL at 18m (solid dark slab x435-485, crate/hut/box read, no
+  rim/lip/interior band resolvable) + water-read FAIL (zero teal/navy px
+  anywhere in bbox 415-525 x 355-400). The 18m water-read contract
+  question stays OPEN for improve/Bill; improve-28's executed state
+  (approach-range read) stands. Probe, not verdict.
+- `nx-dress-se-foxden-001` NEW CANDIDATE Sev 3 (first independent read,
+  native, served 1f4e66dd on lib 856deec5): identity PASS (dome mound +
+  dark recessed burrow entrance + tan spoil scatter reads animal den);
+  silhouette FAIL-class finding: entrance hole reads as 2-3 DISCRETE
+  dark clumps sitting ADJACENT to the mound edge, not carved into it
+  (x440-490); spoil reads paper-thin flat shards with zero vertical
+  relief — decal-read at 18m; clumps+shards cast no contact shadow.
+  dress-domain: routes to DRESSING-PLAN intake, candidate row here for
+  round-N+1 (improve intake surface per district precedent — dress lane
+  owns execution). Evidence: reviews/survey74-slice/foxden/{gameplay,front}.png
+
+funguslogs/snagdead/stones CLEAN first-reads (see SURVEY-PLAN judged index);
+mossbowls NOT JUDGED — store 404 x2 on lib 5d698bd5 (fail-closed, zero
+stale bytes judged; a live entity the store will not serve — verify-tier
+anomaly, candidate for a later tick's fetch probe).
+
 ## SURVEY CANDIDATES (round-2 intake)
 
 **survey-23 sub-section (2026-09-07, ZAI fallback 6/8 + NATIVE 2/8

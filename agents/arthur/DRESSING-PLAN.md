@@ -1462,6 +1462,20 @@
 
 
 ## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
+- survey-74 (2026-09-08, NATIVE first read, 18m gameplay, fresh live
+  store bytes served-sha16 1f4e66dd on lib 856deec5,
+  reviews/survey74-slice/foxden/{gameplay,front}.png):
+  `nx-dress-se-foxden-001` CONFIRM Sev 3 — identity PASS (dome mound
+  + dark recessed burrow entrance + tan spoil scatter reads animal
+  den) but silhouette defect-class: entrance hole reads as 2-3
+  DISCRETE dark clumps sitting ADJACENT to the mound edge, not
+  carved into it (x440-490); spoil reads paper-thin flat shards
+  parallel to ground, zero vertical relief — decal-read at 18m;
+  clumps + shards cast no contact shadow (mound itself grounded
+  PASS, shadow x355-395). Probe, not verdict — decode/execute law
+  stays dress. Cheapest fixes per judge if confirmed: carve/fuse
+  entrance clumps into the mound volume, thicken or heap the spoil
+  shards for relief, add contact AO under entrance + spoil.
 - survey-42 (2026-09-07, NATIVE, live bytes bd2e613a gameplay,
   reviews/survey42-slice/bd2e613a10b9762e/): `nx-dress-milkstand`
   second-vote DISSENT vs survey-20's NATIVE CLEAN 4/4 — identity

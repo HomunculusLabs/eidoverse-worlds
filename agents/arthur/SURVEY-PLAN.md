@@ -4265,3 +4265,58 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   CLEARED. Verdicts 0 confirmed / 6 clean / 0 dropped. Zero world
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-74)
+
+- survey-74 (2026-09-08, NATIVE 7/7 — second consecutive all-native window,
+  zero ZAI fallback, zero 1210s (one empty-response flap on hall first call
+  recovered by retry with reasoning_content fix); 18m gameplay from fresh
+  live store bytes 7/7 HTTP 200 curl UA on exact census-74 libs): selection
+  law: severity backlog + never-judged pool both empty (survey-59 matcher,
+  60-73 waves closed; census steady) → survey-62 debt class re-judged
+  (hall+inn, 9th pass) + the ONE open-contract probe (cistern, survey-22
+  annotation) + four first-independent reads of dress-N district dressing
+  never judged (foxden, mossbowls, funguslogs, snagdead, stones). All
+  three debt subjects sha16-byte-identical to standing pins (hall 8a4f16dd,
+  inn 85860417, cistern a73d5f60 = DRACO re-encode of lib 156b4fc8 per
+  pitfall-12 transform law). VERDICTS: 1 confirmed / 3 corroborated / 3
+  clean-with-margin / 1 not-judged. HALL Sev 4 corroborated (civic-
+  adjacent, zero emblem content in tympanum zone — standing row
+  unchanged). INN Sev 4 corroborated (sign reads dark plaque
+  x618-672 y393-428 low-contrast ambiguous — crate-sign class
+  corroborated). CISTERN contract probe corroborated (identity FAIL +
+  water-read FAIL at 18m, zero teal px in bbox — survey-22 annotation
+  stands; 18m-vs-approach contract question stays open for improve/Bill).
+  FOXDEN CONFIRM Sev 3 (first read): identity PASS but entrance clumps
+  read DISCRETE-adjacent not carved (x440-490) + spoil shards paper-thin
+  decal-read + zero contact shadow on clumps/shards — defect-class
+  finding, dress-domain. FUNGUSLOGS CLEAN-with-margin (first read): log
+  identity strong, fungus tan-clumps low-contrast ambiguous at 18m
+  (sub-threshold), shelf-tabs read branch-stub ambiguous; grounding PASS;
+  margins verify-tier polish. SNAGDEAD CLEAN (first read): bare tapered
+  trunk + broken tip + stubs + cavity reads snag instantly; silhouette
+  PASS continuous; grounding PASS shadow present; margin: thin shadow
+  strip. STONES CLEAN-with-margin (first read): rightmost cluster's
+  stacked capstone reads cairn-intent; other four clusters read ground
+  scatter at 18m (identity borderline-deliberate); silhouette PASS;
+  grounding PASS contact shadows. MOSSBOWLS NOT JUDGED: store 404 x2
+  (20s-paced) on lib 5d698bd526ba3929 — fetch failed closed, zero stale
+  bytes judged; a live entity the store will not serve = verify-tier
+  anomaly worth a later probe. Routing: foxden candidate row +
+  corroborations in IMPROVE-PLAN survey-74 sub-section; foxden defect
+  note in DRESSING-PLAN SURVEY INTAKE (owning lane); zero notes to other
+  lanes' plans. Grep-verified survey-74 pre-existing: 0/0/0/0 pre-write
+  (all four surfaces). Census 305==305 vs survey-73 baseline
+  /tmp/survey73-census.json: 0 arrivals, 0 departures, 0 lib flips,
+  0 pos moves — steady epoch, quiet window; new baseline
+  /tmp/survey74-census.json (305). Gate: ALL PASS real exit 0 first try
+  at be911348. Native debt tick: survey-62 class STILL OPEN for
+  hall/inn (ninth pass — native reads this tick corroborated rows but
+  debt-class transfer law: row-native corroboration ≠ cleared debt
+  unless verdict changes; hall/inn Sev 4 rows stand corroborated);
+  tower-house/kiln/ellipsecourt/sierpinski remain cleared (survey-73).
+  Verdicts 1 confirmed / 3 corroborated / 3 clean-with-margin / 0
+  dropped / 1 not-judged (mossbowls 404 fail-closed). Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
+
