@@ -6140,3 +6140,119 @@ smaller cube of dark iron, the two welded together by eight struts that
 run corner to corner. A cube within a cube: the shadow a four-dimensional
 object would cast. At its heart an iron post carries one bead of brass —
 and at dusk, that single amber point is the only light on the whole walk.
+
+
+## struct-111 (2026-09-08): R10-12 THE LORENZ ATTRACTOR — authored v2 (stone
+## anchors), judged NATIVE all three, PLACED_VERIFIED
+
+Cadence 111%3==0 nominal refine slot; refine pool re-derived EMPTY fresh —
+BOTH standing debts from struct-110's NEXT resolved this tick: sierpinski
+aerial native debt was PAID (survey-76 record + struct-106 owner execution
+both in plan), dodecahedron night-bead question ANSWERED (survey-79 native
+night data point: bead READS on served bytes, warm 9-10px RGB 175/120/75
+zero bloom; struct-106's FAIL was pre-rebuild bytes). Shard: 14/14
+nx-struct rows TERMINAL (re-verified fresh). Gate ALL_PINS_OK 15/15 real
+exit 0 tick-start + re-run immediately pre-mutation (both bun, no pipe).
+
+CONCEPT (written before build): the form ledger's missing STRANGE
+ATTRACTOR family (ledger grep fresh: zero lorenz/attractor/chaos presence
+across STRUCTURES/ARTWALK/VILLAGE/IMPROVE/SURVEY plans; hopf/klein barred
+as 4D descendants by the novelty law's spirit). ONE IDEA: ONE PATH THROUGH
+A STORM THAT NEVER REPEATS, FROZEN IN IRON. The classic Lorenz system
+(sigma=10, rho=28, beta=8/3) RK4-integrated dt=0.002 from seed (1,1,1),
+transient discarded, T=56 recorded, arc-stride 1.15 -> 4259 samples; the
+trajectory TRUNCATED AT ITS STRICT GLOBAL APEX (argmax law, apex at 100%
+of record after extension loop) and drawn as ONE continuous iron tube
+r=0.085 — 710.2m of path, the long-exposure photograph of chaos. Mapping
+world_y = phase_z (the textbook butterfly plane faces the approach).
+Materials law (v2, struct-107 v2c lineage): STONE anchors — dais r2.5 +
+one stanchion under the lowest sample + pin at the terminus + seed ball at
+sample[0]; stone = the fixed frame holding the storm, iron = the
+never-repeating path, brass = now. Folly class; no entry advertised, no
+walk owed (sunflowerdial/rule30wall/tesseract precedent). Static by
+honest design.
+
+ASSERTION ARC (4 self-catches, the layer doing its job): (1) stride-1
+sample estimate wrong (7898 > cap — real Lorenz arc rate ~100 units/s);
+stride 1.15 calibrated to 16.7cm world chords (sagitta <1.3cm under 8.5cm
+tube). (2) chord law lower bound refined twice — arc-stride emission
+[chord in 1.0..1.4×stride] AND curvature shortening legit to ~0.5× at
+wing-center turns. (3) SIGHTLINE CAUGHT v1: bead ON the apex terminus was
+occluded by the incoming tube from dead-ahead 18m -> iron riser 0.38
+lifts "now" above where the path ends. (4) the tesseract chassis vantage
+25°@6m blocked through the wing lobe — hit point (2.39,5.32,2.38) vs bead
+(2.33,6.94,1.03): an eye under the wing edge looking up THROUGH the
+cloud; vantage set replaced with the concept-honest set (18m ±60° + close
+dead-ahead + 10° oblique), DISCLOSED here — through-strand occlusion at
+that vantage is expected physics for a dense cloud, not a defect.
+
+BUILD: v1 iron anchors -> v2 stone anchors (antenna-kill + decode
+separability). sha 77b59dbbcb8bfb5963ad44ec40a092c5e81a3f65f88a2a1f
+eeca40e8151da4ff x2 deterministic (mtime verified). Envelope 5.33x7.04x7.08
+y[0..7.04]. Nodes: 3 (budget law) — iron tube, stone anchors, bead KEEP.
+
+DECODE struct111-decode-lorenz.ts ALL PASS exit 0 (20 checks): sha pinned,
+node budget, texMat lanes lz_iron/lz_stone, brass emissive exported, bead
+KEEP, THE LORENZ LAW = iron bucket vertex-equality vs INDEPENDENT RK4
+re-integration (fresh integration in the decode tool): (a) 38331/38331
+iron verts within 0.15 of the replica path (pure-tube law), (b) 4259/4259
+replica samples carry tube verts (no truncation/invention), (c) iron count
+== 4259 rings x 9 radial EXACT, (d) seed/stanchion/pin/bead anchored
+exact (bead at apex+riser 1e-4, topmost of file, grade 0), (e) envelope
+== replica, no NaN. Decode-tool lesson: BoxGeometry carries exactly 24
+verts — the stanchion law initially expected >=30 (sphere-calibrated) and
+false-FAILED a complete post; fixed to the box law.
+
+JUDGED NATIVE (placed bytes = judged bytes): front PASS (butterfly
+identity immediate, NOT a wire tangle; two lobes with open spiral eyes;
+grounded; brass pops; margin-tier: seed reads blob-like close, pin reads
+dark, dead-front concentric-coil read 70% continuity — the crossings show
+in depth). Gameplay 18m PASS (distinct two-winged landmark; loops merge
+into solid wing masses with striated texture — avoids the tube-tangle
+failure mode; unambiguous vs lamp/antenna/infrastructure; dais+shadow
+grounded; bead legible ~5px warm dot; judge note: planar edge-on collapse
+— addressed by the yaw-0 seat: wing plane faces the N approach, the
+S-walk reader always sees the butterfly face). Night PASS (exactly one
+warm point at (605,125), zero bloom/spill/stray glow, silhouette faintly
+readable, right lobe spiral eye open in the dark; left-lobe near-black =
+rig single-light class — decode law (b) disproves a missing wing).
+
+SITE: film-guarded scan struct111-scan (fresh census 310, 3022 lawful
+seats): TARGET az184 r140 (-9.77, 139.66) LAWFUL at dist 0.0 — the S
+mathematics axis extends at its own 10m cadence (dial r71 -> koch r90 ->
+hilbert r100 -> dodeca r110 -> wall r120 -> tesseract r130 -> LORENZ
+r140): past the hypercube, the storm. Layered reveal: ...the great wall,
+the hypercube... and beyond it, the frozen storm. SAT worst
+nx-struct-tesseract +1.88 scan / +1.91 placer-side fresh center-corrected
+(law 1.4, the standing cadence adjacency class); film +43.15 (kochgarden);
+walk +65.3. Terrain 9pt rim spread 6.4mm, lowest rim-w -0.027944 = PY
+(dais base on grade, decode grade-at-0 law). r140 outside closed r33-55
+band. Yaw 0 (wing plane N-facing).
+
+PLACEMENT: gate ALL_PINS_OK 15/15 real exit 0 tick-start + re-run
+immediately pre-mutation (both bun, no pipe). Upload store/
+77b59dbbcb8bfb59.glb (0 429s), 1 spawn verb, PLACED_VERIFIED exact tuple
+pos [-9.7700, -0.0279, 139.6600] yaw 0.0000, census 310->311. Fresh-only
+rerun REFUSED zero verbs (real exit 1, verified un-piped). Comps {} (bead
+emissive material glow_lz_1 KEEP).
+
+FRAMES: reviews/struct111-lorenz/ (10-view set).
+
+NEXT: 112%3==1 -> BUILD tick (R10-13 form-ledger gap; candidates probed
+fresh this tick at zero presence: CHLADNI PLATES (vibration family),
+VORONOI CELLS (natural partition family), HOPF FIBRATION (4D descendant —
+deferred while novelty law wants new families), hyperbolic {7,3} tiling
+(negative-curvature family)). No native debts open for this lane.
+
+BILL EYE-CHECK (one, standing — the mathematics walk grows past the
+hypercube): walk the south mathematics walk past the labyrinth, the
+twelve-pentagon gem, the great rule-30 wall, and the hanging cube of
+stone — and where the meadow last opens, a storm hangs frozen in the air.
+Not a nest of wire: look again and it is ONE continuous line of iron,
+wound into two great spiral wings like a butterfly at rest, seven hundred
+metres of path that never once crosses itself the same way. It stands on
+a round stone dais, one stone finger holding its lowest coil, a small
+stone seed where the path began. The line ends at the storm's highest
+point, and there a stone pin carries one bead of brass: the present
+moment, glowing faintly at dusk. The weatherman's equations, caught
+mid-flight.
