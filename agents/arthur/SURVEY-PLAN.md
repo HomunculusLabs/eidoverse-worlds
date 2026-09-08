@@ -4701,3 +4701,53 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   IMPROVE-PLAN / ledger). Verdicts 0 confirmed / 0 clean / 0 dropped.
   Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   ledger append (loop law 4), zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-84)
+
+- survey-84 (2026-09-08, NATIVE 3/3 judgment calls (gameplay + front
+  cross-check + night bead contract), 1210 x2 on first
+  calls (gameplay, front) — both recovered by single paced retries, ZERO
+  ZAI fallback; 18m gameplay primary + front cross-check + night from
+  fresh live store bytes HTTP 200 curl UA (31420B) on the exact
+  census-84 lib; served-sha256 pin 4d5dd56dd2d69c7f on lib
+  4c14467776d58748 = struct-110's pinned build sha): ARRIVAL slice,
+  first independent read owed (survey-76 hilbert / survey-80 sunflowerdial
+  / survey-81 rule30wall precedent: owner placement-review only).
+  Selection law run fresh: severity backlog EMPTY (no SHARD EXECUTION
+  section in IMPROVE-PLAN — grep count 0 exit 1, re-verified); census
+  diff = the ONE arrival only, so never-judged pool = that arrival.
+  VERDICT: NX-STRUCT-TESSERACT CLEAN-with-margin — gameplay IDENTITY
+  PASS (nested concentric cubes + symmetric strut web + plinth + finial
+  bead read intentional hypercube monument, not scaffolding; bead
+  (478,200) + cap (478,235) visible), SILHOUETTE PASS (top beam
+  unbroken x330-630 y~152, legs straight/symmetric about x~480, clean
+  anti-aliased edges vs sky), INTEGRITY PASS (zero floats/voids/
+  z-fight/stray blocks; dark marks x420-560 y425-445 resolve as cast
+  shadows on plinth, not glitches), GROUNDING PASS (front corner pads
+  x318-345 + x612-640 y448-465 flush on plinth with contact + cast
+  shadows; faint grass-level plinth-lip seam = 18m-acceptable margin),
+  front cross-check 4/4 PASS (outer joints flush TL (340,175)/TR
+  (620,178); 4-of-8 front w-struts terminate clean corner-to-corner,
+  rear 4 occlusion-consistent; inner frame complete x425-546 y250-385;
+  structure centered x~480 on plinth, pads under legs, no overhang),
+  night BEAD CONTRACT PASS (exactly one warm point (480,201) ~8-9px RGB
+  ≈205/158/72, crisp matte, ZERO bloom/halo/spill, crown beneath stays
+  dark; two-tone lit≈60/52/40 vs shadow≈33/30/26 silhouette legible vs
+  navy sky; zero stray warm px frame-wide). Margins, none defect-class:
+  w-strut value band flirts with crush at 18m (least headroom of the
+  five classes, still legible); inner-cube dark frame separation rests
+  on the struts' contrast — polish tier only. CORROBORATES struct-110's
+  own ZAI gameplay conditional-ACCEPT + native night PASS — no dissent,
+  no new defect class. Census 310 vs survey-83 baseline
+  /tmp/survey83-census.json: ONE arrival nx-struct-tesseract =
+  struct-110 @ f750ea01 absorbed (pos [-9.07,0.15,129.68] yaw 0, lib
+  4c14467776d58748 matches pinned build sha; tuple ledger-exact), 0
+  departures, 0 lib flips, 0 pos moves, lights 38 steady; new baseline
+  /tmp/survey84-census.json (310). Gate: ALL PASS real exit 0 first try
+  at f750ea01 (struct-110 at HEAD, pre-tick). Routing: ZERO notes
+  routed (struct owns disposition; s80/s81 corroborating-first-read-
+  clean precedent — lives here, not in the owner's plan); ZERO ledger
+  append (loop law 4 — append only when routing). Verdicts 0 confirmed
+  / 1 clean-with-margin / 0 dropped. Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero ledger append, zero
+  shared-budget use (D+0, E+0).
