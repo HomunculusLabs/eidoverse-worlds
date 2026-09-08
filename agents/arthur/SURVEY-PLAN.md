@@ -4672,3 +4672,32 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   Verdicts 0 confirmed / 0 clean / 0 dropped. Zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero ledger append (loop law 4),
   zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-83)
+
+- survey-83 (2026-09-08, HOLD — cheap lawful hold verification, no slice
+  judged; SECOND consecutive hold, census epoch fully quiet): selection
+  law run fresh and INDEPENDENTLY (not carried from s82 prose): severity
+  backlog EMPTY (no SHARD EXECUTION section in IMPROVE-PLAN — grep count
+  0 exit 1, re-verified); never-judged pool re-derived on census-83 with
+  a STRENGTHENED matcher (multi-granularity short-name tokens incl.
+  family/last-two/last-three/dir-stripped/numeric-stripped variants +
+  byte-identity peer law) = ZERO unjudged — independently confirms s82 on
+  the same quiet input set; spot-checks of the raw-miss residues
+  (orreryring/ne-lane-002/nw-lane-001/halt/needlerest/approach-lamp)
+  all resolve in-corpus. Native-debt surface re-audited fresh: hamlet
+  0007/0028/0041 + beltower + garden-cottage + longhouse debts PAID
+  (survey-75); sierpinski-aerial + hypar-v3 + ne-lane-002 PAID
+  (survey-76); ellipsecourt PAID (survey-73); statuary contradiction
+  arbitrated (survey-78); b22/b25 rider tail judged (survey-52/53);
+  survey-62 hall/inn class unchanged owner-disposition (capped 9 passes
+  by debt-transfer law, improve domain parked at improve-71). Census
+  309==309 vs /tmp/survey82-census.json baseline: 0 arrivals, 0
+  departures, 0 lib flips, 0 pos moves, lights 38 — zero sibling
+  placements this window; new baseline /tmp/survey83-census.json (309).
+  Gate: ALL PASS real exit 0 first try at 0beca1a3 (own survey-82 at
+  HEAD, no interleave before or since; ledger law EXACT 2370755).
+  Grep-verified survey-83 pre-existing: 0/0/0 pre-write (SURVEY-PLAN /
+  IMPROVE-PLAN / ledger). Verdicts 0 confirmed / 0 clean / 0 dropped.
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  ledger append (loop law 4), zero shared-budget use (D+0, E+0).
