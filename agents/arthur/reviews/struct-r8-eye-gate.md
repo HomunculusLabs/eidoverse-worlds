@@ -94,3 +94,16 @@ one-quiet-point PASS with disclosed quiet-base note).
 
 Not gated on verdicts: the lane continues its cadence; re-opens are
 immediate on any correction.
+
+## The Honeycomb Screen (struct-97, R10-1) — standing eye-check
+
+On the WSW walk where the W contemplative path meets the lavender shoulder
+(-52.6, 19.2; the screen stands 3m+ beside the line, face toward the
+walker): a grey stone screen whose wall IS a honeycomb — open hexagon cells
+the sky shows through, four solid brass cells climbing one straight
+diagonal, slim piers framing, the comb cresting the frame. At dusk: exactly
+four quiet amber cells on the diagonal, nothing else lit. Look through the
+cells toward the lavender rows — the bees' story. Hash e8ea1c16366a2735,
+renders reviews/struct97-honeycombscreen/ (ZAI-judged 3/3 PASS: front 5/5,
+gameplay PASS, night 4-amber-points PASS; native 1210 hard-down all tick —
+native re-judge debt rides the next tick).

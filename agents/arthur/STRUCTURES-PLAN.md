@@ -4938,3 +4938,93 @@ where the road runs empty toward the Bridge of Nines — a grey stone wall
 and ground-band stand east of the path, five iron ladders frozen mid-slide
 against it, and one warm brass curve touching every one of them: the line
 no ladder can cross. Count the ladders; find the kiss on each.
+
+## struct-97 (2026-09-08): R10-1 THE HONEYCOMB SCREEN — authored, judged,
+## PLACED_VERIFIED (first tessellation work in the village)
+
+Cadence 97%3==1 -> BUILD tick. Shard: zero OPEN nx-struct rows (13 EXECUTED
++ shelltower NATIVE-DROPPED, re-verified fresh this tick). Refine pool EMPTY
+(no survey routes since struct-90). Gate ALL PASS real exit 0 tick-start at
+86998ed4 (struct-96 HEAD). Fresh census 299.
+
+CONCEPT (written before build): the form ledger holds every curve and three
+composition families (superposition fifthbench / intersection vesica /
+envelope slidingladder) — nothing carries a TESSELLATION as identity. ONE
+IDEA: THE HONEYCOMB AS WINDSCREEN. Stone screen 4.28x4.40x0.70 whose wall
+IS the comb: flat-top hexes R=0.45 on an odd-r offset lattice (5x5 = 25
+cells, 56 neighbor pairs exactly sqrt(3)R apart, asserted), tube = full
+tessellation cell hexagon with hole at apothem-0.075 (openings 0.63 across
+flats, cells read through — decode-verified 6-vertex inner rings at
+holeR=0.3634), plinth y0-0.30 deeper than screen, two slim piers + caps
+frame to 4.068 while odd-col cells crest 4.397 — the comb is the hero.
+FOUR QUEEN CELLS on one straight rising diagonal (1,1)(2,2)(3,2)(4,3) —
+solid brass capped brood cells, glow_hc_1..4 KEEP, emissive 0x9a7030@0.85
+(dusk lineage). Furniture-box folly class 3.0m2 < 8, h 4.40 > 2.2 (live
+supportclass.js: ROOM_MIN_AREA 8, ROOM_MIN_H 2.2) — no walk owed.
+
+BUILD ARC — assertions caught four self-errors before any render (the
+assertion layer doing its job): (1) v1 lattice law used an 8-neighborhood,
+wrongly including (+1,+1)-class pairs legitimately 3R apart in an offset
+lattice -> parity-aware neighbor set; (2) queen diagonal law assumed DY
+rise per (+1,+1) step — in an odd-r offset lattice that center line is a
+ZIGZAG; the STRAIGHT diagonal alternates row steps (+1,0) rising DY/2 per
+column -> queens re-seated (1,1)(2,2)(3,2)(4,3), law now asserts collinear
+uniform DY/2 rise; (3) measured top vs formula exposed that ExtrudeGeometry
+single-Shape extrusion is SOLID — cells did not read through; honest comb =
+outer contour at the FULL cell hexagon (edge-to-edge tiling, coincident
+shared walls) + inner hole at apothem-0.075; queens deliberately SOLID
+(capped brood); (4) crest formula used +R instead of the flat-top apothem
+sqrt(3)R/2. v2 sha e8ea1c16366a27356854f6bc36cd3d54d4239967e7ab98aefc
+a5164c2f00bf48 x2 deterministic (mtime verified). Decode
+struct97-decode-honeycombscreen.ts ALL PASS: 5 nodes (stone bucket + 4
+glow_hc KEEP), texMat lane hc_stone, emissive exported, true bbox
+-2.14..2.14 / 0..4.397 / ±0.35, holes 6-vertex rings at holeR, 4 queens
+solid at R. Self-catch in decode v1: vertex reader missed the BIN-chunk
+offset (bufferView offsets are chunk-relative) — garbage coords; fixed.
+
+JUDGED (ZAI FALLBACK — native 1210 x2 + paced retry burned; provider hard
+down all tick; NATIVE RE-JUDGE DEBT on exact v2 bytes disclosed, rides the
+next tick): front 5/5 PASS (comb decisive, cells genuinely open with the
+horizon visible INSIDE openings, 4 queens countable on one uniform ~35deg
+diagonal, grey stone, no floats; sole flag — queen-4 gold "clips border"
+near right pier — DECODE-DISMISSED: queens share the exact tessellation
+outline, col-4 cells sit 0.12m from the pier inner face by construction,
+overshoot geometrically impossible, warm-on-grey edge artifact).
+Gameplay 18m PASS (silhouette reads at a glance, sky-through-cells upper
+rows, queens countable; notes: flat un-patterned shadow sliver = chassis
+shadow-map artifact class, minor; comb cresting piers is the documented
+design). Night PASS (exactly 4 crisp amber cells, zero bleed, silhouette
+survives; queens lattice-adjacent so the band reads connected-staircase —
+honest to comb biology, disclosed).
+
+SITE: full-annulus scan 379 lawful seats; strongest cluster W shoulders.
+Seat (-52.62, 19.15) math-az160 r56.3 = WSW seam between the W contemplative
+spoke and the NW-cultivation lavender shoulder — the honeycomb beside the
+lavender fields is the bees' story. Face-on yaw 90-az = -70deg = -1.2217
+rad (face plane perpendicular to the radial walk). 17m off the W walking
+line (beside-the-line law, conservative grown-edge). r56 outside the closed
+r33-55 processional band (CITY-PLAN law). Terrain 9pt spread 7.3mm, lowest
+corner -0.0094 = PY. SAT fresh-299 center-corrected worst nx-struct-
+stillwind +8.42 (law 1.4; grown-AABB approximation, screen centered so no
+offset error).
+
+PLACEMENT: hash gate exact -> upload store/e8ea1c16366a2735.glb (0 429s)
+-> spawn nx-struct-honeycombscreen @ (-52.62, -0.0094, 19.15) yaw -1.2217
+-> PLACED_VERIFIED exact tuple, census 299->300 -> idempotent rerun ZERO
+verbs. Comps {} (queens are emissive material). Gate re-run ALL PASS real
+exit 0 post-placement (sibling sweep-108 fff66232 absorbed mid-tick; ledger
+base 2370741 noted).
+
+EYE-GATE: struct-r8 packet extended with the Honeycomb Screen stop —
+delivered once. Native re-judge debt disclosed in-packet.
+
+NEXT: 98%3==2 -> build tick (R10-2: tessellation family opened; next
+candidates — trihex refraction? a second regular/semiregular tiling? or
+census-gap derivation). Refine pool expected EMPTY unless survey routes a
+note; if native restored, clear the honeycombscreen native debt first.
+
+BILL EYE-CHECK (one, standing): on the WSW walk where the W path meets the
+lavender shoulder, a grey stone screen stands just beside the line — its
+wall a honeycomb of open cells, the sky showing through, four solid brass
+cells climbing one diagonal, the comb cresting its piers. At dusk: four
+quiet amber cells and nothing else. Look through the cells at the lavender.
