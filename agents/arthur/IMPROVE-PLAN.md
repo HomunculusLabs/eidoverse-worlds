@@ -4409,3 +4409,78 @@ rebuild x2 deterministic. (d) re-place remove+spawn exact tuple, comp {}
 both sides, riders standing, idempotent zero-verb rerun. (e) 2-leg
 two-way approach walk ALL_PASS. REVERT: git checkout mkv3-welcome59.ts,
 rebuild (byte-repro 362c5be1 proven this tick), re-place.
+
+
+**survey-62 sub-section (2026-09-08, ZAI FALLBACK 7/7 disclosed — native
+1210 x2 + paced retry burned, hard down all tick; 18m gameplay + front
+cross-checks, fresh live store bytes 7/7 HTTP 200 curl UA on exact
+census-62 libs — post-overhaul re-baseline wave 3, CLOSES the
+replaced-bytes debt class survey-60 opened; the LAST five never-judged
+town-core replacements):**
+
+- `nx-tower` — IDENTITY REGRESSION CONFIRM Sev 3 on replaced bytes
+  648ca0c0 (two-view corroborated, gameplay + front): reads two-story
+  porch-house/inn with wraparound balcony, NOT watchtower — H:W
+  ~1.2-1.35:1 squat, platform mid-height (~50% up, second-floor porch
+  rail), ZERO ladder/external stair (only domestic entry steps), hanging
+  bulb + hanging sign + porch furniture domestic cues, cottage cone
+  roof w/ finial. Survey-7 judged OLD bytes a CLEAN watchtower-formula
+  (sealed silhouette, ladder readable) — identity FLIPPED with the
+  bytes. Geometry itself sound: sealed, grounded, no floats, no voids,
+  values pass borderline (under-porch crush zone). Village-overhaul
+  domain = Bill's own; probe-only row, Bill's call. Evidence:
+  reviews/survey62-slice/tower/
+- `nx-town-hall` — IDENTITY CONFIRM Sev 4 NARROW on replaced bytes
+  dc871edb: reads half-timbered farmhouse/inn, not civic hall — zero
+  civic signifiers (no banner/emblem/sign), porch gable face x400-570
+  y245-315 is a large EMPTY plaque triangle (best banner real estate,
+  unused), 2-bay porch only, footprint ~1.5:1 compact. Silhouette/
+  floating/voids/crush ALL PASS — cleanest geometry of the slice;
+  decal-tier fix (one hanging banner or carved crest converts the
+  read). Probe-only, Bill's overhaul domain. Evidence:
+  reviews/survey62-slice/hall/
+- `nx-town-inn` — CONFIRM Sev 4 on replaced bytes 861225bb (two
+  findings): (a) identity — sign reads crate/speaker at 18m
+  (x612-672 y392-427, no board face/pictogram/bracket), nothing hangs
+  above door/eave; remaining cues (chimney, porch, 4 warm windows,
+  two-story mass) say lit farmhouse not public house; (b) pure-black
+  void — doorway interior x428-478 y440-470 near-#0a0a0a dead-center,
+  reads hole-in-mesh not doorway (needs dim warm fill or door mesh).
+  Chimney seated, porch lanterns attached, posts on stone pads, value
+  ladder strong. Probe-only, Bill's overhaul domain. Evidence:
+  reviews/survey62-slice/inn/
+- `nx-town-kiln` — CLEAN CONFIRM 5/5 on replaced bytes 3e96c8b0:
+  kiln read instant and unambiguous (flue taper w/ rim cap + glowing
+  firebox + fuel crate triple signal; vent slats read). Survey-1
+  judged OLD bytes CLEAN 4/4 — the cure HOLDS on the replacement bytes
+  too; no row needed. Margins: lean-pole thinnest ground contact
+  (~367,392), flue rim cap may read "hat" from elevated angles.
+  Evidence: reviews/survey62-slice/kiln/
+- `nx-town-tower-house` — IDENTITY MARGINAL Sev 4 on replaced bytes
+  90723087: reads round watchtower/dovecote w/ balcony, not tower-HOUSE
+  — no chimney, no attached lower wing, one window per storey (granary
+  density); vertical emphasis PASS (H:W 1.35:1), silhouette/floating/
+  voids/values all PASS (ladder grounded foot-to-deck, balcony corbel
+  band, lit window focal anchor). One chimney + 1-2 windows converts
+  it. Probe-only, Bill's overhaul domain. Evidence:
+  reviews/survey62-slice/tower-house/
+- `nx-struct-slidingladder` — CLEAN-with-margin, first survey judgment
+  (struct-96 R9-4 ed652efc): sculptural identity coherent (stone post
+  + sweeping curved ladder-arm + fanning rungs + slab base, one grammar),
+  silhouette sealed, rung tips terminate, ochre accent carries distance
+  legibility. Margins: outermost rung stubs near base (~500,432-440)/
+  (~532,435-445) first to read detached at LOD/distance. Struct owns
+  decode — CLEAN record only, no intake row. Evidence:
+  reviews/survey62-slice/slidingladder/
+- `nx-struct-fifthbench` — CLEAN-with-margin on standing v2 bytes
+  62f33173 (first SURVEY judgment; struct-92's own disclosed native
+  re-judge debt NOT settled by this ZAI read): sculptural ribbon
+  coherent, sealed, grounded, brass bead seated at central crest.
+  Honest margin — judge read retaining-wall/sound-curb first at 18m
+  (ribbon 16:1-22:1 plan ratio, flats read curb caps, no perch/seat-
+  depth cues resolve at 18m); DISCLOSED as read-quality
+  distance-residual: struct-92 source math puts three true-null seat
+  flats at 0.42m sitting height + brass bead at the central null —
+  seat grammar is an interaction-distance read (struct-45 kin), not a
+  build defect. Struct owns decode — CLEAN record only, no intake
+  row. Evidence: reviews/survey62-slice/fifthbench/

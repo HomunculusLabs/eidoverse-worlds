@@ -3627,3 +3627,79 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   / 6 clean (4 clean-with-margin) / 0 dropped. Native 3 + ZAI 5
   disclosed. Zero world mutations, zero uploads, zero verbs, zero comp
   edits, zero shared-budget use (D+0, E+0).
+
+
+## Judged index (survey-62)
+
+- survey-62 (2026-09-08, ZAI FALLBACK 7/7 disclosed — native 1210 x2 on
+  first call + single paced retry burned, hard down all tick; 18m
+  gameplay primary + front/aerial cross-checks, fresh live store bytes
+  7/7 HTTP 200 curl UA on exact census-62 libs; severity backlog
+  drained — round-1 terminal, survey-7..61 candidates are intake not
+  re-judge debt): POST-OVERHAUL RE-BASELINE WAVE 3 — closes the
+  replaced-bytes debt class survey-60 opened (Bill's direct
+  village-overhaul; this slice takes the LAST five never-judged
+  town-core replacements) + two never-judged struct arrivals. Slice =
+  tower, hall, inn, kiln, tower-house, slidingladder, fifthbench.
+  VERDICTS: TOWER IDENTITY REGRESSION CONFIRM Sev 3 on replaced bytes
+  648ca0c0 (two-view corroborated: gameplay + front both read
+  two-story porch-house w/ wraparound balcony, H:W ~1.2-1.35:1, mid-
+  height balcony rail not crow's nest, zero ladder/external stair,
+  hanging bulb + hanging sign domestic cues, cottage cone roof; survey-7
+  judged OLD bytes a watchtower-formula CLEAN — identity flipped with
+  the bytes; geometry itself sealed/grounded/no-floats/no-voids, value
+  pass borderline under-porch). HALL IDENTITY CONFIRM Sev 4 NARROW
+  (reads half-timbered farmhouse/inn not civic hall — zero civic
+  signifiers, empty porch-gable plaque zone x400-570 y245-315, 2-bay
+  porch, ~1.5:1 footprint; silhouette/floating/voids/crush ALL PASS,
+  cleanest geometry of the slice — decal-tier fix, one banner/emblem
+  converts it). INN CONFIRM Sev 4 (identity: sign reads crate/speaker
+  at 18m x612-672 y392-427, no bracket-hung shingle, remaining cues say
+  lit farmhouse; PLUS pure-black void FAIL: doorway interior x428-478
+  y440-470 near-#0a0a0a dead-center reads hole-in-mesh; chimney/porch/
+  lanterns/posts all grounded PASS, value ladder strong). KILN CLEAN
+  CONFIRM 5/5 on replaced bytes 3e96c8b0 (kiln read instant and
+  unambiguous — flue taper + glowing firebox + fuel crate triple
+  signal; survey-1 judged OLD bytes CLEAN 4/4, cure holds on new bytes
+  too; margins: lean-pole thinnest ground contact, flue rim cap
+  hat-read watch from elevated angles). TOWER-HOUSE IDENTITY MARGINAL
+  Sev 4 (reads round watchtower/dovecote w/ balcony, not tower-HOUSE —
+  no chimney, no attached wing, one window per storey = granary
+  density; H:W 1.35:1 vertical emphasis PASS; silhouette/floating/
+  voids/values all PASS incl. ladder grounded + corbel band; old-bytes
+  survey-4/5 rows annotate SURVEYED bytes, tower-house was 11b31000
+  post-improve-10 — Bill's overhaul replaced again, this is the
+  replacement read). SLIDINGLADDER CLEAN-with-margin (first survey
+  judgment of struct-96 R9-4: coherent sculptural identity, post +
+  curved arm + slab grammar unified, silhouette sealed, rung tips
+  terminate; margins: outermost rung stubs near base first to read
+  detached at LOD/distance, ochre accent carries distance legibility).
+  FIFTHBENCH CLEAN-with-margin on standing v2 bytes 62f33173 (first
+  SURVEY judgment; struct-92's native re-judge debt NOT settled — ZAI
+  only): sculptural ribbon identity coherent, sealed silhouette,
+  grounded, brass bead seated; honest margin: judge read retaining-
+  wall/sound-curb first at 18m (16:1-22:1 ribbon, flats read curb caps
+  x160-280/x690-800, no perch-zone seat-depth cues at this distance) —
+  DISCLOSED as read-quality distance-residual: struct-92's source math
+  puts three true-null seat flats at 0.42m sitting height and the
+  brass bead at the central null; at 18m the seat-grammar does not
+  resolve (interaction-distance class, struct-45 kin). Probe-only.
+  Routing: ONE candidate block (survey-62 sub-section, 7 entries) under
+  IMPROVE-PLAN SURVEY CANDIDATES — tower/hall/inn/kiln/tower-house all
+  nx-town-* = improve's own intake surface (Bill's overhaul domain
+  named probe-only); slidingladder + fifthbench CLEAN records here
+  only, zero notes to other lanes' plans (struct owns decode; struct-92
+  already carries its own disclosed native re-judge debt on fifthbench
+  — this ZAI clean does not close it). Grep-verified zero open
+  duplicates (survey-62 pre-existing: 0/0/0/0). Census 299 vs
+  survey-61 baseline /tmp/survey61-census.json (298): +1 arrival
+  nx-struct-slidingladder = struct-96 ledger-exact (R9-4
+  PLACED_VERIFIED, sweep-107 absorbed), 0 departures, 0 lib flips, 0
+  pos moves — steady epoch. New snapshot baseline
+  /tmp/survey62-census.json (299). Gate: ALL PASS real exit 0 first
+  try at 0100a1f2; re-gate ALL PASS real exit 0 at fff6623 after
+  sweep-108 landed mid-tick (observer sibling, target files untouched,
+  normal interleaving). Verdicts 3 confirmed / 4 clean (4
+  clean-with-margin) / 0 dropped. ZAI 7/7 disclosed. Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
