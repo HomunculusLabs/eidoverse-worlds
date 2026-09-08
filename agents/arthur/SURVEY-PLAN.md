@@ -3384,3 +3384,84 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
  untracked (next build in flight). Verdicts 1 confirmed / 8 clean (7
  clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
  zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+ ## Judged index (survey-58)
+
+ - survey-58 (2026-09-07, NATIVE 8/8 — five 1210 flaps, every one
+ recovered by a single paced retry, ZERO ZAI fallback; 18m gameplay
+ primary + night frames for the emissive carriers + aerial/top
+ cross-checks where gameplay cropped the crown; fresh live store bytes
+ 8/8 HTTP 200 curl UA from /library/store/ on exact census-58 libs):
+ rotating district pass — severity backlog drained (round-1 terminal,
+ survey-7..57 candidates are intake not re-judge debt), never-judged
+ struct-* landmark family batch. Slice = ruledtower, northneedle,
+ ellipsecourt, halt, orrery, orreryring, stillwind, waterstair (all
+ first survey judgments; real ids, libs verbatim from fresh census).
+ VERDICTS: RULEDTOWER NATIVE CLEAN-with-margin — hyperboloid lattice
+ monument on three-tier plinth, identity instant, top ring re-seals
+ silhouette, far-side beams visible through cells (closed mesh); no
+ crush (waist cluster bottoms at dark umber, separable); margins: side
+ studs (344,133)/(616,132) flirt with detached read, no lattice-plinth
+ contact shadow, waist near-moire. NORTHNEEDLE NATIVE CLEAN-with-margin
+ — geometry/silhouette/grounding all PASS; "bare pole / identity capped"
+ finding was FRAMING-CROPPED (all three frames amputate the 13.48m
+ summit; decode outranks render: named ember node exists at y=12.9,
+ polish-278 summit-ember pattern by construction); night frame equally
+ cropped so ember legibility UNPROVEN from chassis — verify-tier margin
+ only (in-game summit check: quiet warm point expected at masthead);
+ margins: shaft near-black flat ribbon read (contrast carries it), cast
+ shadow faint. ELLIPSECOURT NATIVE CLEAN-with-margin — open elliptical
+ colonnade ring, sealed top-rim ellipse carries the read, posts
+ plinth-grounded with contact shadows, no crush (grain resolves on near
+ posts); margins: reads meeting-ring/pergola not amphitheater (category
+ ambiguity, not failure — no bowl/tier cues exist), far-ring double-beam
+ band one-glance ambiguity. HALT NATIVE CONFIRM Sev 4 — value-crush:
+ whole structure one near-black value band (roof fascia x355-605
+ y268-312 zero internal detail; posts + bench rail + footings merged
+ into identical black; day judge: flat black cutout silhouette, not a
+ volume); night corroborated dead (zero warm pixels frame-wide; decode:
+ 4 draco meshes, no emissive element by construction — no
+ lamp/ember/lit-eave). Identity itself instant (wayfarer's shelter
+ schema correct — my render prompt had mislabeled it emergency-halt;
+ node name wayfarershalt_0 confirms shelter intent); silhouette sealed,
+ grounded, zero floats. Note routed to STRUCTURES-PLAN SURVEY INTAKE +
+ candidate row IMPROVE-PLAN SURVEY CANDIDATES (survey-58 sub-section),
+ grep-verified no open duplicate (only DONE placement prose exists).
+ ORRERY NATIVE CLEAN-with-margin — armillary-sphere-on-plinth identity
+ near-instant, sealed silhouette, struts carry the sphere (no hover);
+ margins: interior dark knot x455-505 y275-330 (planetary arms
+ unresolved, cosmetic), struts 3-5px thinness = LOD/aliasing risk
+ beyond 18m. ORRERYRING NATIVE CLEAN-with-margin — flat disc with gold
+ concentric tracks + beads, sealed ellipse, beads attached; reads
+ dial/orbital-track installation; margins: no contact shadow
+ (ground-film class, weak grounding not hover), orrery-specific read
+ rests on beads 2-3px tall. STILLWIND NATIVE CLEAN-with-margin —
+ geometry clean (sealed curved wall, porthole finished rim, gold bead
+ anchored, contact shadow, no crush); no-wind-element identity finding
+ softened by decode: named glow_pinS/glow_pinN light anchors +
+ windbreak-shelter design read (still wind = shelter FROM wind is a
+ coherent intent); night frame exactly one quiet warm bead (520,333),
+ zero bloom/spill — polish-278 class night identity WORKS; margin:
+ glow_pinN not visible this angle (occluded), panels occlude the
+ curve's base from gameplay angle. WATERSTAIR NATIVE CLEAN-with-margin
+ — stepped silhouette sealed and legible both frames, nothing floats;
+ night read WORKS (blue treads moonlit, brightest surfaces, zero bloom
+ — reads as moonlit water not glow); margins: day water-specific read
+ weak (blue-painted steps, no gloss — palette-law candidate, cosmetic
+ tier), tier undersides crush locally (thin strips), prior intake row
+ already EXECUTED by struct (corroboration of cure, not a reopen).
+ Routing: ONE defect note (halt) to STRUCTURES-PLAN SURVEY INTAKE +
+ ONE candidate row IMPROVE-PLAN SURVEY CANDIDATES; ONE ledger append
+ survey-58 (loop law 4: note routed). Census 294==294 vs survey-57
+ snapshot /tmp/survey57-census.json: 0 arrivals, 0 departures, 0 lib
+ flips, 0 pos moves — quiet epoch. New snapshot baseline
+ /tmp/survey58-census.json (294). Gate: ALL PASS real exit 0 first try
+ at ccdaafb6 (ledger law EXACT 2370729), re-gate ALL PASS real exit 0
+ at 518d1709 after city-94 landed mid-tick (interleaving absorbed,
+ normal life). Interleaves observed mid-tick: city-94 518d1709.
+ DISCLOSED self-catch: first IMPROVE-PLAN append landed between
+ survey-57's header and its row (anchor-slide); caught on post-write
+ read, reverted, re-anchored on the survey-57 section tail — final
+ position verified correct. Verdicts 1 confirmed / 7 clean (all
+ clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
+ zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).

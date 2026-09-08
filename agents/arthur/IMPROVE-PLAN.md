@@ -3744,6 +3744,17 @@ same solo rig, so the fail is genuine not rig-degradation):**
   also routed to DRESSING-PLAN SURVEY INTAKE (owning lane). Evidence:
   reviews/survey57-slice/timberyard/ + reviews/survey57-slice/woodstack-ctl/
 
+**survey-58 sub-section (2026-09-07, NATIVE 18m gameplay, live store bytes
+served-sha c3d97fe9, all-NATIVE slice — zero ZAI fallback, five 1210 flaps
+all recovered by single paced retries):**
+
+- `nx-struct-halt` — Sev 4 value-crush (native survey-58, day+night):
+  whole structure one near-black band, roof fascia zero internal detail,
+  posts/rail/footings merged; night dead (zero warm pixels, no emissive
+  element by construction). Identity instant (shelter reads correct);
+  silhouette/floats/grounding clean. Note also routed to STRUCTURES-PLAN
+  SURVEY INTAKE (owning lane). Evidence: reviews/survey58-slice/halt/
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):

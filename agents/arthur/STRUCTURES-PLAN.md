@@ -4638,3 +4638,17 @@ EMPTY unless survey routes a note.
 BILL EYE-CHECK (one, standing): on the E walk past ruledtower, two iron
 hoops crossing in the grass to your right — the teal almond between
 them, brass bead at the top crossing. Look through it both ways.
+
+**SURVEY INTAKE (survey-58, 2026-09-07)** — read-only probe notes, not
+verdicts:
+
+- `nx-struct-halt` — Sev 4 value-crush (native survey-58, day + night
+  frames): whole structure one near-black value band — roof fascia
+  x355-605 y268-312 zero internal detail, three posts + bench rail +
+  footings merge into identical black; night corroborated (zero warm
+  pixels frame-wide, dead cutout — no lamp/ember/lit-eave element by
+  construction, 4 draco meshes, no emissive). Identity itself is instant
+  (wayfarer's shelter reads correctly); silhouette sealed, grounded,
+  zero floats. Probe, not a verdict; decode/execute law stays with
+  struct. Evidence: reviews/survey58-slice/halt/ (gameplay+night, served
+  sha c3d97fe9).
