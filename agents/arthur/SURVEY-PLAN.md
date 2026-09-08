@@ -4208,3 +4208,60 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   this tick. Grep-verified survey-72 pre-existing: 0 pre-write in both
   surfaces. Zero world mutations, zero uploads, zero verbs, zero comp
   edits, zero shared-budget use (D+0, E+0).
+## Judged index (survey-73)
+
+- survey-73 (2026-09-08, NATIVE 6/6 — first all-native window after EIGHT
+  flap windows; single empty-response flap on kiln first call + ellipsecourt
+  first batch call, each recovered by ONE paced retry, ZERO ZAI fallback;
+  18m gameplay from fresh live store bytes 6/6 HTTP 200 curl UA on exact
+  census-73 libs, all six sha16 byte-identical to survey-72 pins — kiln
+  668692f7, tower-house 4e9a9c7c, ellipsecourt fbf80b5c, sierpinski
+  e76a1847, catenoid f24580ad, geodesic 966ce4db): slice = survey-72's
+  three DEFERRED subjects (kiln/tower-house/ellipsecourt, recorded in
+  IMPROVE-PLAN survey-72 sub-section so no re-derivation) + the two owed
+  native arbitrations (sierpinski bead-gap dissent, ellipsecourt native
+  debt) + catenoid/geodesic native corroboration. VERDICTS 0 confirmed /
+  6 clean / 0 dropped. KILN CLEAN corroborated NINTH pass (identity PASS
+  bottle-kiln + shed + fuel crate; silhouette PASS grounded; emblem PASS
+  firebox light trim; margins verify-tier: pole melt, contact-AO deficit
+  right side). TOWER-HOUSE Sev 4 standing row corroborated (identity PASS
+  watchtower-dwelling; silhouette PASS — corbel brackets read under deck,
+  ladder terminates deck-edge no gap, arcade reads intentional; emblem
+  PASS amber entry window strongest contrast; NO new findings this pass
+  — softening trend from survey-67/68 continues under native; prior
+  under-eave open band + baluster findings unchanged, probe-only row
+  stands, owner decode owed). ELLIPSECOURT CLEAN — NATIVE DEBT CLEARED
+  (identity PASS closed oval ring + shafts + inward shadows; silhouette
+  PASS all shafts plinthed + shadowed, ring beam continuous; count ~12
+  shafts reads stable; margins: empty court center — no central feature;
+  one wide bay x150-260 ~2x rhythm, beam continuity masks). SIERPINSKI
+  CLEAN — survey-72 fallback bead-gap dissent NATIVE-ARBITRATED to CLEAN
+  (apex bead tangent no sky gap, corner beads flush, front bead grounded,
+  all voids fractal-native lattice positions, no stray gaps; native
+  supersedes fallback dissent — same bytes e76a1847 as survey-67's
+  standing CLEAN-with-margin row, which STANDS; arbitration noted, no
+  escalation, struct owns decode). CATENOID CLEAN corroborated native
+  (hourglass identity instant hoop+meridian waist-converging; silhouette
+  PASS cage seats drum rim no gap, crown seats cage top, shadow one
+  connected openwork mass; beads 2-of-5 resolved orange dots ~6-8px,
+  3 occluded behind crown rim at this camera height — matches survey-72
+  margin class, unresolved-not-defect). GEODESIC CLEAN corroborated
+  native — survey-72's NEW asymmetric-bead margin RESOLVED as
+  perspective foreshortening (4-left/4-right even split about centerline,
+  offset upper beads front-facing joints, base beads mirror; ~9 beads =
+  8 joint + apex, matches spec; hexagonal aperture near apex is
+  pattern-consistent not a break). Routing: ZERO notes routed — all six
+  subjects carry standing rows (kiln clean-row, tower-house probe-only
+  Bill's-overhaul-domain, ellipsecourt/sierpinski/catenoid/geodesic
+  struct-domain rows); zero new candidate rows (no confirmed defects).
+  Grep-verified survey-73 pre-existing: 0/0/0 pre-write (both surfaces).
+  Census 305==305 vs survey-72 baseline /tmp/survey72-census.json: 0
+  arrivals, 0 departures, 0 lib flips, 0 pos moves — steady epoch, quiet
+  window; new baseline /tmp/survey73-census.json (305). Gate: ALL PASS
+  real exit 0 first try at d34a2a5f (sweep-127 at HEAD). Native debt
+  tick: survey-62 class REMAINS OPEN for hall/inn (tower-house native
+  read this pass did not clear its Sev 4 row — corroborated only);
+  kiln clean-row ninth pass; ellipsecourt + sierpinski native debts
+  CLEARED. Verdicts 0 confirmed / 6 clean / 0 dropped. Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).

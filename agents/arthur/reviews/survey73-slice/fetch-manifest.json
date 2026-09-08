@@ -1,0 +1,74 @@
+{
+ "nx-town-kiln": {
+  "lib": "3e96c8b074852ddc",
+  "http": "200",
+  "sha16": "668692f76251e460",
+  "prev_survey72_sha16": "668692f76251e460",
+  "pos": [
+   19.159,
+   -0.021,
+   22.432
+  ],
+  "yaw": -2.4432
+ },
+ "nx-town-tower-house": {
+  "lib": "90723087ca8b5eb3",
+  "http": "200",
+  "sha16": "4e9a9c7c538c8be6",
+  "prev_survey72_sha16": "4e9a9c7c538c8be6",
+  "pos": [
+   -9,
+   0,
+   26
+  ],
+  "yaw": 2.8284
+ },
+ "nx-struct-ellipsecourt": {
+  "lib": "2aa37e9d29ba43f2",
+  "http": "200",
+  "sha16": "fbf80b5c2cdfcbba",
+  "prev_survey72_sha16": "fbf80b5c2cdfcbba",
+  "pos": [
+   -3.75,
+   -0.04,
+   -50.75
+  ],
+  "yaw": 1.5708
+ },
+ "nx-struct-sierpinski": {
+  "lib": "7f8b5fd7a3d18b22",
+  "http": "200",
+  "sha16": "e76a1847217faf0e",
+  "prev_survey72_sha16": "e76a1847217faf0e",
+  "pos": [
+   -7.74,
+   -0.03,
+   -73.59
+  ],
+  "yaw": 0
+ },
+ "nx-struct-catenoid": {
+  "lib": "8ac664937f96976d",
+  "http": "200",
+  "sha16": "f24580ad10da3cbe",
+  "prev_survey72_sha16": "f24580ad10da3cbe",
+  "pos": [
+   26.3,
+   -0.052,
+   -53.93
+  ],
+  "yaw": 1.5708
+ },
+ "nx-struct-geodesic": {
+  "lib": "813ad295487442d2",
+  "http": "200",
+  "sha16": "966ce4dbb69f7bf5",
+  "prev_survey72_sha16": "966ce4dbb69f7bf5",
+  "pos": [
+   16.54,
+   -0.002,
+   57.68
+  ],
+  "yaw": 0
+ }
+}
