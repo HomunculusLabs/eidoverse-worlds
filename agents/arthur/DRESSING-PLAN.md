@@ -972,7 +972,13 @@
   `fountain` Sev 3 — off-limits set, Bill's call; re-adjudicated this
   tick). Zero candidates route to fleet `nx-dress-(nw|ne|se|sw)-` ids.
   SURVEY INTAKE unchanged: survey-42 milkstand dissent stands, tie-break
-  third vote owed by survey lane, not dress.
+  third vote owed by survey lane, not dress. [survey-59 2026-09-07:
+  tie-break vote cast, defect side — ZAI fallback both frames (native
+  1210 x2, disclosed): 18m identity FAIL (table+chair read, churn 12px
+  blob) + close-view churn clips counter right corner (sunk ~25px, ~30%
+  overlap, no ground shadow) + tan disc x452-477 y379-389 floating
+  between posts. Legacy-core off-limits set — probe-only, Bill's call.
+  Evidence: reviews/survey59-slice/milkstand/]
 - **Blocked on Bill (standing, said once)**: bellows siting a/b/c
   (dress-103/104, v8 accepted), SW lamp policy a/b/c (0 of 3 spent,
   hooks empty by design). Next lawful install tick requires a Bill

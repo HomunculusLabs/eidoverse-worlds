@@ -3465,3 +3465,49 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
  position verified correct. Verdicts 1 confirmed / 7 clean (all
  clean-with-margin) / 0 dropped. Zero world mutations, zero uploads,
  zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-59)
+
+- survey-59 (2026-09-07, NATIVE 5/8 + ZAI fallback 3/8 disclosed — milkstand
+  burned 1210 x2 on BOTH frames (gameplay + front), stablebench + waystone
+  interleave recovered via paced retries; 18m gameplay primary + front-view
+  struct-45 interaction-distance cross-checks; fresh live store bytes 6/6
+  HTTP 200 curl UA on exact census-59 libs): COVERAGE-AUDIT + CORROBORATION
+  slice. Selection self-catch: three matcher passes (brace-expansion,
+  bare-word, sha forms) showed the never-judged pool EMPTY except six
+  legacy-core nvp-era dressing pieces — which bare-word grep then proved
+  already judged; the whole slice is an independent re-read at live bytes.
+  Slice = banner/chess/coop/harvestcart/milkstand/stablebench (all legacy-
+  core off-limits set, probe-only, Bill's ownership call per survey-8/20/21/30
+  precedent) + waystone e/n/s/w interleave (bytes owned by survey-26/28
+  CLEAN; my fresh read concurs — cap+shaft+plinth+arm grammar, sealed,
+  grounded, emblem sub-visible at 18m = standing margin class). VERDICTS:
+  BANNER CLEAN-with-margin (swallowtail notch carries cloth read at 18m;
+  margin: flat plane reads rigid, notch at minimum legible depth, dashed
+  ground shadow stray-read). CHESS CLEAN-with-margin at interaction
+  distance — 18m identity thin (T-post read, pieces 2-3px noise) but front
+  view resolves checkering 6-8 alternations, pedestal plumb, zero floats;
+  polish-276 working-height satisfied; margins: dark-value crush on
+  pedestal, piece silhouettes unresolved (distance-residual class).
+  COOP CLEAN 4/4 (raised body on legs + pop-hole + nest-box lump + roof
+  overhang all survive; margins: roof pitch barely registers, ramp reads
+  platform). HARVESTCART CLEAN 4/4 (shaft+bed+spoked wheels+ sack cargo
+  unambiguous; margins: 1px spokes shimmer-risk, one detached shadow
+  smudge x383-397 y391-395 verify-tier). STABLEBENCH CLEAN 4/4 NATIVE
+  (plank-on-trestle instant, sealed, grounded, +76 lum contrast; margins:
+  single-value paint night-risk, lamp post 10px fusion-risk). MILKSTAND
+  CONFIRM-side CORROBORATION (ZAI fallback both frames, native hard down
+  after retries, disclosed): 18m identity FAIL (table+chair read; churn
+  12px blob) AND close-view transform-class defects — churn sunk ~25px
+  clipping counter right corner (~30% width overlap, no ground shadow
+  beneath), tan disc x452-477 y379-389 floating unattached between posts.
+  Feeds the STANDING survey-42 dissent (tie-break third vote owed by this
+  lane) — this is that corroborating defect-side vote; probe-only, Bill's
+  call. Routing: ONE annotation line on DRESSING-PLAN's standing milkstand
+  intake note (no new note, no candidate row — grep-verified standing);
+  ONE ledger append survey-59. Census 294==294 quiet 0/0/0/0 vs survey-58
+  baseline /tmp/survey58-census.json; new baseline /tmp/survey59-census.json.
+  Gate ALL PASS real exit 0 first try at d2ec519f (ledger law EXACT
+  2370729). Verdicts 0 new-confirmed (1 standing-dissent corroboration) /
+  5 clean / 0 dropped. Zero world mutations, zero uploads, zero verbs,
+  zero comp edits, zero shared-budget use (D+0, E+0).
