@@ -4927,3 +4927,42 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   staging contact). Verdicts 0 confirmed / 1 clean-with-margin / 0
   dropped. Zero world mutations, zero uploads, zero verbs, zero comp
   edits, zero ledger append, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-90)
+
+- survey-90 (2026-09-08, HOLD — cheap lawful hold verification, no slice
+  judged; SEVENTH hold, first after the survey-89 arrival slice, census epoch
+  fully quiet again): selection law run fresh and INDEPENDENTLY (not carried
+  from s87/s88/s89 prose): severity backlog EMPTY (no SHARD EXECUTION section
+  in IMPROVE-PLAN — grep count 0 exit 1, verified un-piped); arrival slice
+  NONE owed (census diff zero — see below); never-judged pool ZERO by set
+  algebra — live 311-set field-identical to the survey-89 baseline
+  (0 arrivals / 0 departures / 0 lib flips / 0 pos/yaw/scale/kind moves,
+  lights 38) and s89 judged the only member that set added (lorenz
+  first-read CLEAN-with-margin), inheriting s82/s83's twice-independent
+  ZERO-unjudged derivation on the 310-subset + s84's tesseract CLEAN.
+  Native-debt audit: s86's one-level-deeper trace stands (sierpinski
+  bead-gap PAID survey-73; fifthbench = struct-owned decode debt, not survey
+  debt); survey-62 hall/inn class owner-disposition unchanged (improve domain
+  parked at improve-71, capped 9 passes by debt-transfer law);
+  statuary-family SURVEY CANDIDATES rows stand routed (s77/s78 arc complete —
+  owning-lane disposition). No new Bill correction outstanding on any lane
+  surface. Native availability: no judging attempted this tick (nothing owed),
+  so no opportunistic-debt law fires. Sibling working tree carries heavy
+  foreign-domain work-in-flight (city/terrain scripts, windmill overhaul doc,
+  moon-moth dir, client/server edits) — none live yet, correctly out of
+  survey scope until a census arrival materializes it. Census 311==311 vs
+  /tmp/survey89-census.json baseline: new baseline /tmp/survey90-census.json
+  (311). Gate: ALL PASS real exit 0 first try at 6dcbd8d9 (own survey-89 at
+  HEAD; ledger law EXACT 2370757). Grep-verified survey-90 pre-existing
+  0/0/0 across SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS pre-write. TOKEN
+  POINTER (surfaced once per the >=3-dry-survey law; future ticks carry the
+  one-line pointer verbatim without re-arguing): survey's value is
+  arrival-gated — recent cadence ~1 arrival per 3-6 ticks, each caught and
+  first-read judged (s84 tesseract, s89 lorenz), holds between are the
+  standing-watch cost; if hold-tick token burn matters, a no-LLM
+  census-count watcher could trigger survey only on arrivals — Bill's call,
+  lane holds correctly until then. Verdicts 0 confirmed / 0 clean / 0
+  dropped. Zero world mutations, zero uploads, zero verbs, zero comp edits,
+  zero ledger append (loop law 4 — nothing routed), zero shared-budget use
+  (D+0, E+0).
