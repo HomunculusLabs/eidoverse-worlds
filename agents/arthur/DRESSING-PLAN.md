@@ -1,6 +1,43 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-147 — lawful HOLD (37th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
+  exit 0 at tick-start HEAD 6a6c88f7 (city-100 sibling); interlane md5
+  f6254cd0 pin-exact. Fresh census **298 steady** — epoch diff vs
+  dress-146 capture +0/−0/1-move: sole move `nx-struct-halt` lib swap
+  bb227f→cdaf7c at identical pos (struct domain, classified not routed);
+  ZERO dress-domain drift (probe `/tmp/dress-hold-verify-147.py`
+  HOLD_VERIFY_PASS exit 0, fresh UA'd fetch; capture saved
+  /tmp/dress147-census.json); dress domain 45 = 29 fleet (NE 6 / NW 9 /
+  SE 7 / SW 7) + 16 legacy. Round-3 closers + timberyard cure PINS_EXACT
+  **5/5**, worst delta 0.000035: foxden 856deec5, lanternhook 639c5480,
+  seats cb34bd36, streamstones aabbc23d, timberyard dfafb8c8 (radian law).
+- **One probe self-catch, disclosed**: my first state check used the wrong
+  path for the eye-gate file (`reviews/dress-round3-eye-gate.md` — repo
+  root has no reviews/); the plan's cited path is
+  `agents/arthur/reviews/dress-round3-eye-gate.md`, verified there with
+  md5 12cec3fa unchanged. Path corrected, no state misreported.
+- **Shard/intake (re-checked at source)**: IMPROVE-PLAN all 9 sharded
+  `nx-dress-` queue rows terminal (rows 29–38, row 38 declares queue
+  EMPTY); no round-4/5 section; survey tag max 59; survey-60-slice dir
+  still in flight, subjects all `nx-town-*` core buildings → improve
+  domain. Zero dress intake. SWEEP-PLAN dirty diff empty this tick (zero
+  dress routing).
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases real placement work next tick.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **ENV cleared**: root-volume flag fully eased this tick (df / shows
+  45Gi avail, 27% used) — city-99/city-100's 100%-full flag closed.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-146 — lawful HOLD (36th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
