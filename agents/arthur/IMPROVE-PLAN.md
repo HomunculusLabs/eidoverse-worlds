@@ -4703,3 +4703,94 @@ survey-62/65 pins — zero new bytes debt; kochgarden first survey read):**
   foreshortening (interaction-distance class, penrose kin — pattern
   asset's concept distance is overhead). Evidence:
   reviews/survey66-slice/kochgarden/
+
+**survey-67 sub-section (2026-09-08, ZAI FALLBACK 7/7 disclosed — native
+1210 x2 on first call + single paced retry burned, hard down all tick,
+same flap window as survey-62/65/66; survey-62 ZAI-debt class re-judged
+a FOURTH pass under the judge-availability opportunistic law; 18m
+gameplay from fresh live store bytes 7/7 HTTP 200 curl UA on exact
+census-67 libs, all six debt subjects sha256-byte-identical to
+survey-62/65/66 pins — zero new bytes debt; sierpinski first survey
+read):**
+
+- `nx-town-hall` — survey-62 Sev 4 NARROW CORROBORATED (ZAI, fourth
+  pass): farmhouse/manor read holds; civic cues present-but-weak only
+  (axial symmetry ~x490, monumental entry porch w/ truss apex (490,228),
+  paired lit lanterns (410,398)/(549,398)); civic cues ABSENT (no
+  clock/bell cote/cupola, no banner/signboard/plaque, no weathervane/
+  dais); domestic cues win (chimney (340-395,130-170), attic-band
+  casements, half-timber, porch bench (505-545,448-470) = inn prop).
+  NEW minor-tier finding: entry interior x452-528 y360-472 near-black
+  w/ zero detail reads hole-in-mesh (bench + sconces partially save) +
+  entry-cluster crush x425-555 y335-475 (posts+header+recess merge);
+  eave-brace watch item (slim diagonal braces ~70px eave overhang could
+  read hovering from glancing angles). Fixes named by judge (bench→
+  notice board, bell cote in porch gable (460-520,235-285)) — decal-tier,
+  consistent w/ standing row. Probe only, Bill's overhaul domain.
+  Evidence: reviews/survey67-slice/hall/
+- `nx-town-inn` — survey-62 Sev 4 CORROBORATED (ZAI, fourth pass):
+  crate-sign x628-662 y393-421 (dark olive slab vs shadowed porch,
+  sub-pixel bracket at (640,355-395) functionally absent) + pure-black
+  doorway void x428-470 y430-464 dead-center reads hole-in-mesh
+  (surrounding recess HAS readable interior content — makes flat black
+  read MORE like error); lantern dots (315,357)/(640,355) read sparks
+  not fixtures; identity tips house-not-inn ~60/40. Matches survey-66
+  pins x615-675/x460-482 within tolerance. Probe only, Bill's overhaul
+  domain. Evidence: reviews/survey67-slice/inn/
+- `nx-town-kiln` — survey-62 CLEAN CONFIRM CORROBORATED (ZAI, fourth
+  pass): identity PASS 6/6 — beehive taper (410-515,320-425), emissive
+  firebox arch (445-490,365-405) strongest cue, stone-brick material
+  read, compound composition separates cleanly; margins verify-tier
+  only: flue cue absent (sealed dome cap — beehive/lime-kiln read still
+  lands), thin members shimmer-risk (lean plank 4-8px, canopy posts),
+  canopy slab support visually thin, faint contact shadows. Evidence:
+  reviews/survey67-slice/kiln/
+- `nx-town-tower-house` — survey-62 Sev 4 CORROBORATED (ZAI, fourth
+  pass): watchtower/dovecote pull holds — NO chimney (apex (475,100)
+  finial only, single biggest miss), one window per storey (dovecote
+  density), no attached wing, open-air gallery = observation-platform
+  read; domestic budget carried by ONE lit window + doormat alone.
+  Ladder top lands correctly at deck edge (~330,305-345) — survey-66
+  ladder-vs-railing margin consistent (climb deposits at rail). NEW
+  margin: gallery baluster crush y290-345 x435-560 (dark balusters vs
+  dark interior mush into solid band — kills balcony-as-balcony read;
+  same root cause as open gallery identity pull). H:W squat band
+  unchanged. Probe only, Bill's overhaul domain. Evidence:
+  reviews/survey67-slice/tower-house/
+- `nx-struct-slidingladder` — survey-62 CLEAN-with-margin CORROBORATED
+  (ZAI, fourth pass): coherent single-gesture arc sculpture (post→arc→
+  slab), sealed silhouette, grounded; fragile-tip class refined w/
+  coords: arc landing 1-2px (578-588,431-438), arc departure from cap
+  2px (381,226-232), diagonal→arc butts (468,350)/(505,385), diagonal→
+  slab tips (433,432)/(488,433)/(540,435); bottom-right convergence
+  crush zone x505-590 y405-440 (3+ members stack into smudge); ladder-
+  vs-truss identity partial (X-pattern bracing read, rungs not legible
+  at 18m) — consistent w/ survey-62/65/66 margin class. Struct owns
+  decode. Evidence: reviews/survey67-slice/slidingladder/
+- `nx-struct-fifthbench` — survey-62 CLEAN CORROBORATED (ZAI, fourth
+  pass): ribbon coherent x158-792 ~25:1, sealed, grounded full-length,
+  zero floats/voids; brass bead (481,368) seated ON surface, no halo —
+  judge read it on central-crest shoulder vs apex (520,360), CONSISTENT
+  with struct-92 source math (bead at central TRUE-NULL seat flat by
+  design, not a crest — judge-expectation mismatch, not drift); wall-vs-
+  bench read = the standing disclosed 18m distance-residual
+  (interaction-distance class, struct-45 kin; three true-null seat
+  flats at 0.42m do not resolve at 18m); hue-family value separation
+  from ground marginal (polish tier). struct-92's native re-judge debt
+  STILL owed — this ZAI read does not close it. Struct owns decode.
+  Evidence: reviews/survey67-slice/fifthbench/
+- `nx-struct-sierpinski` — FIRST SURVEY READ, CLEAN-with-margin (ZAI;
+  struct-100's own front/gameplay/night judged NATIVE in its packet —
+  this adds the independent 18m read; aerial native debt is struct's
+  own, still owed there): deliberate crystalline fractal spire, NEVER
+  rubble (strict symmetry + stepped subdivision); sky-through-voids
+  CONFIRMED at multiple levels (central ~455-520,240-300, mid
+  420-455/490-530 y315-350, level-3 cells at base edges); clean pyramid
+  outline apex (481,205); 4/4 brass beads crisp (apex (481,200), base
+  corners (335,448)/(627,447)/(481,469) — matches struct-100 source:
+  apex + 3 corners); plinth seating solid. Margins (verify-tier, struct
+  owns decode): iteration-3 vertex-only contacts read as hovering at
+  eye-level for mid-level tetra (~450-478,252-285)/(~495-520,330-360) —
+  intrinsic fractal geometry, nearer-LOD check named; bottom-third
+  value compression y360-460 (level-3 voids lose sky-punch). Probe
+  only. Evidence: reviews/survey67-slice/sierpinski/

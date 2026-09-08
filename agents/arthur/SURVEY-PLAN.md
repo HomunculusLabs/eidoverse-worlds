@@ -3937,3 +3937,49 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   clears. Verdicts 0 confirmed / 8 corroborated-clean / 0 dropped. Zero
   world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-67)
+
+- survey-67 (2026-09-08, ZAI FALLBACK 7/7 disclosed — native 1210 x2 on
+  first call, single paced retry burned, hard down all tick, same flap
+  window as survey-62/65/66; 18m gameplay from fresh live store bytes
+  7/7 HTTP 200 curl UA on exact census-67 libs; selection law: severity
+  backlog + never-judged pool both empty, sole never-judged arrival =
+  sierpinski → survey-62 ZAI-debt class re-judged a FOURTH pass +
+  sierpinski first read): all six debt subjects sha256-byte-identical to
+  survey-62/65/66 evidence pins (hall 8a4f16dd, inn 85860417, kiln
+  668692f7, tower-house 4e9a9c7c, slidingladder 81c4fb0c, fifthbench
+  addce73b — zero new bytes debt; sierpinski e76a1847 first-read pin).
+  VERDICTS: 0 confirmed / 0 clean-flips / 0 dropped — 6 CORROBORATIONS
+  of standing rows + 1 first-read clean. HALL Sev 4 corroborated
+  (farmhouse/manor; NEW minor tier: entry void x452-528 y360-472 +
+  entry-cluster crush + eave-brace watch). INN Sev 4 corroborated
+  (crate-sign x628-662 y393-421 + doorway void x428-470 y430-464,
+  matches survey-66 pins). KILN CLEAN corroborated (6/6 PASS, identity
+  instant; flue absent = beehive read still lands, verify-tier margins).
+  TOWER-HOUSE Sev 4 corroborated (no chimney, one window/storey, open
+  gallery; NEW margin: gallery baluster crush y290-345 x435-560).
+  SLIDINGLADDER clean corroborated (fragile 1-2px junction class
+  refined w/ coords: arc landing, diagonal butts/tips, convergence
+  crush x505-590 y405-440). FIFTHBENCH clean corroborated (bead seated
+  consistent w/ struct-92 source math — judge off-apex read is
+  expectation-mismatch, not drift; wall-read = standing
+  interaction-distance residual; struct-92 native debt STILL owed).
+  SIERPINSKI first read CLEAN-with-margin (fractal spire never rubble,
+  sky-through-voids confirmed at 3 levels, 4/4 beads crisp matching
+  struct-100 source; margins verify-tier: vertex-only contact hover-read
+  at eye-level, bottom-third value compression). Routing: corroboration
+  block survey-67 sub-section in IMPROVE-PLAN SURVEY CANDIDATES (all
+  subjects already standing rows or improve-own intake surface;
+  sierpinski corroborative only — struct-100's own native packet stands,
+  no note routed to struct's plan). Grep-verified zero pre-existing
+  survey-67 mentions. Census 303==303 vs survey-66 baseline
+  /tmp/survey66-census.json: 0 arrivals, 0 departures, 0 lib flips,
+  0 pos moves — steady epoch; new baseline /tmp/survey67-census.json
+  (303). Gate: ALL PASS real exit 0 first try at 4d75f82d (sweep-115
+  at HEAD). Native debt status after this tick: survey-62 class STILL
+  OPEN for hall/inn/kiln/tower-house/slidingladder/fifthbench (four
+  passes, all fallback — debt transfers, not clears); tower remains the
+  only cleared subject (survey-66). Verdicts 0 confirmed / 7
+  corroborated-clean / 0 dropped. Zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
