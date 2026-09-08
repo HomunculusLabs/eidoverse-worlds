@@ -6378,3 +6378,103 @@ and around them arcs and small closed loops, the pattern sand makes on
 a plate struck by a pure tone. The two diagonals cross at a single
 brass bead: the one point on the plate that never moves. At dusk it
 glows faintly — the still center of a wave that will never stop.
+
+## struct-113 (2026-09-08): R10-14 THE SHATTERED MONOLITH — build+decode+
+## judged (front/gameplay NATIVE PASS), PLACEMENT DEFERRED (run budget; night
+## re-judge owed first — fail-closed)
+
+Cadence 113%3==2 BUILD tick. Shard 14/14 nx-struct rows TERMINAL (full-block
+parse, struct-109 law — the findings-analysis prose blocks are NOT queue
+rows; corroborated survey-88). Gate ALL_PINS_OK 15/15 real exit 0 at
+tick-start (bun, no pipe).
+
+CONCEPT: the form ledger's missing NATURAL PARTITION / VORONOI family
+(grep fresh: zero voronoi presence in any plan; hypar/hyperbolic-paraboloid
+mentions are the standing hypar pavilion, different family). ONE IDEA: A
+MONOLITH FRACTURED BY ITS OWN SEEDS — an ashlar obelisk (foot 4.4x3.0,
+waist, crown shoulders, apex ridge 6.4m) split by ELEVEN seeds embedded at
+its heart (0, 3.2, 0) into exactly eleven cells: exact spherical Voronoi
+by heart-centered bisector half-spaces — cell_a = hull ∩ ⋂_b {(x−c)·(sa−sb)
+≥ 0}. Truncated Fibonacci lattice (18 raw, keep y≥−0.24 ⇒ 11 — every seed
+owns real volume; every seed-ray exits a flank/crown, never the base).
+Cells drift horizontally along their own seed projections by uniform
+t=0.26 — provably explode-only (55/55 pair separations ≥0, min +0.045;
+per-cell ≥9 pairs open ≥6cm). Cracks bare the darker cut-stone bucket
+(vo_core) behind the weathered rind (vo_stone). Each cell's bead: the
+heart-ray exit of its own seed, r0.09 brass dusk emissive (struct-82
+lineage) +0.05 proud. Folly class; no entry, no walk owed. Static.
+
+BUILD ARC (3 real iterations caught by the law layer, honest record):
+v1 seed-direction drift table failed the 55-pair separation assert (pair
+1-9 −4.3cm interpenetration) → v2 per-cell solved magnitudes failed again
+(pair 6-10 −0.27 — the locking scheme was unsound) → v3 UNIFORM
+unnormalized-horizontal-seed drift, algebraically explode-only, probe-
+verified numerically before commit (all 55 non-negative, min +0.045).
+Earlier same-tick catches: spherical-lattice-on-full-sphere degeneracy
+(southern seeds owned zero body volume) cured by heart-centering +
+truncation; bead non-intersection assert initially mis-specified as
+inside-every-cell (beads hover OUTSIDE all cells in the open cracks) —
+rewritten as point-in-poly bead non-embedding; buildPoly tolerances
+raised to physical scale (degenerate 4-plane ring corners carry ~1e-6
+solver error vs genuine ≥1e-3 violations). Build exit 0.
+
+BUILD: sha 00b94c926392cece92e510bf4383159bd3ac392a597005763886efe7c032e5ea
+×3 deterministic (mtime verified 19:45:45→19:45:55, same bytes). Envelope
+5.36x6.40x3.82 y[0..6.40]. Nodes 13 (budget 5-45): 2 stone buckets
+(voronoi_0/1) + 11 KEEP beads (glow_vo_1). In-code asserts: voronoi law
+(Σcells 69.443 == hull 69.443, 100.00% exact tiling), bisector membership
+every cell vertex, drift law, bead non-embedding (14-sample inner shells),
+bead sightline matrix (7 vantages incl. all 4 quadrants: ≥3 bead poles per
+vantage, every bead seen from ≥1), envelope/NaN, node census.
+
+DECODE struct113-decode-voronoi.ts ALL PASS exit 0 (13 checks): sha pinned;
+2+11 node census; texMat lanes vo_stone/vo_core + brass emissive exported;
+THE VORONOI LAW = independent replica (fresh truncated-lattice + half-space
+vertex enumeration, no mk-script imports) FULL vertex-cloud equality with
+the file's stone buckets — 136 == 136 verts, 0 unmatched, worst 2.4e-7;
+bead law (node translations == replica heart-ray exits + drift + proud,
+worst 0.0e+0, 11/11); drift law min 0.045; no NaN (python cross-check too
+— reader had an OOB-index bug caught and fixed, bytes were always clean);
+base on grade 0.0000; envelope exact. Reader laws recorded: apply node
+TRANSLATION (glbwrite writes it), flat-array indexing discipline.
+
+JUDGED NATIVE (front + gameplay 18m first-try; night FIRST judgment
+returned FAIL against an impossible all-11-visible single-camera contract —
+the beads ring the whole form and ~half are occluded by the stone from any
+one vantage BY DESIGN (walk-around discovery, same as every prior
+multi-face bead work); provider flapped 1210 on the corrected-contract
+re-judge + paced retry window closed with run budget — night re-judge
+OWED before placement, fail-closed): FRONT PASS 5/5 (split-monolith
+identity, chasms open/deep 5-60px dark charcoal interiors, ~7-9 cells
+legible, zero floats/holes, beads deliberate; margin-tier: squat menhir
+proportion vs slender obelisk, sparse bead coverage from front). GAMEPLAY
+18m PASS 5/5 (fractured-monolith immediate with pixel-coord chasm
+evidence 4-20px + V-flare at base, beads carry intent 3 visible @
+(415,200)/(545,242)/(452,288), grounded + attached shadow, no
+infrastructure read; borderline note: cells-per-view ~5-6 of 11).
+NIGHT: quiet-point discipline PASS (zero bloom, silhouette faintly
+readable) — coverage verdict SUPERSEDED pending corrected-contract
+re-judge (3 legible + 2 edge specks on near face is the physically
+correct count from one camera).
+
+SITING (deferred to placement tick): S mathematics axis az184 r160 —
+the axis extends at its own 10m cadence (dial r71 → koch r90 → hilbert
+r100 → dodeca r110 → wall r120 → tesseract r130 → lorenz r140 → chladni
+r150 → VORONOI r160): the fractured stone past the standing wave.
+Film-guarded scan + SAT + terrain + placer + PLACED_VERIFIED + zero-verb
+rerun refusal all queued for the placement tick (struct-107 deferred-
+contract precedent).
+
+NEXT: 114%3==0 nominal refine slot — EMPTY refine pool fresh (no standing
+debts beyond this tick's night re-judge, which rides 114's placement
+execution) ⇒ execute the deferred placement contract for the monolith:
+night re-judge (corrected contract) → scan → SAT → terrain → place →
+verify. No other native debts open for this lane.
+
+BILL EYE-CHECK (one, standing once placed): walk the south mathematics
+walk past the labyrinth, the gem, the wall, the hanging cube, the frozen
+storm, and the plate where the sand settled — and where the meadow ends,
+a single tall stone stands, but not whole: it is split into eleven
+angular pieces, sheared apart along invisible lines, the dark cuts
+between them open to the sky. Where each piece carries its mark: a bead
+of brass, the seed that claimed it. Eleven territories, one stone.
