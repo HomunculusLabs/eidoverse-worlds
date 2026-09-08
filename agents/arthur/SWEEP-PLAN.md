@@ -4284,3 +4284,43 @@ longhouse/garden-cottage, @118 hall/bunkhouse, @117 row-cottage/market,
 @116 tower-house/inn -- tower-house and inn both last walked sweep-116,
 now the stalest standing pair; both walk tools verified present on disk
 this tick: interior-walk-tower-house.ts, interior-walk-inn.ts).
+
+||| sweep-122 | 2026-09-08 | 304==304 (266 thing + 38 light; 0 arrivals, 0 departures, 0 drift on all 304 shared ids on id/pos/yaw/lib/scale/kind/bbox vs sweep-121 baseline sha16 0d46f915cf4ebe8f; epochs A/B 20s-paced identical, single stable epoch, HEAD 828e65c6 sweep-121 close stable all window; snapshot byte-identical NO rewrite sweep-106..121 precedent) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 78th sweep since routing, no escalation due — law keys Sev 1); 266 bbox non-light / 236 classified / 0 coverage holes, zero new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 maxArrival, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37); tier-2 100th cycle per committed pointer tower-house 6/6 @ 0.3765 + inn 6/6 @ 0.364 ALL PASS | pins 15/15 ALL_PINS_OK 76th consecutive, battery 28/28 exit 0 (comp-bearing 21, 38 lights), interlane f6254cd0 stable read fresh, ledger law EXACT D+0/E+0 base re-read fresh pre-append, gate ALL PASS real exit 0 at tick-start 828e65c6 from repo ROOT | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+sweep-122: CLEAN SWEEP, steady-state tick. Census 304==304 (266 thing + 38
+light) vs the committed sweep-121 baseline (sha16 0d46f915cf4ebe8f): 0
+arrivals, 0 departures, 0 drift on all 304 shared ids across
+id/pos/yaw/lib/scale/kind/bbox -- epoch A fully quiet, epoch B (20s-paced
+re-read) settled identical; no sibling mutated the live world this window
+(HEAD 828e65c6 = sweep-121 close, stable all window). Snapshot
+byte-identical, NO rewrite (sweep-106..121 precedent; 7-field projection
+law). Overlap: SAT fresh over the live set -- 266 bbox non-light, 236
+classified, 0 coverage holes, exit 3 on exactly ONE unclassified = R-121
+lamp-n | nx-town-mapboard -0.407 -- known Sev 2 routed to artwalk b26
+choreography @ sweep-43, seventy-eighth sweep since routing, NOT new, no
+escalation due (law keys severity-1); zero new contacts. Tier-1 4/4
+per-leg verified 81/81 ALL_PASS, every leg real exit 0: core 64/64 @ 0.38
+maxArrival, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37. Tier-2 100th
+cycle per committed pointer: tower-house 6/6 @ 0.3765
+(interior-walk-tower-house.ts) + inn 6/6 @ 0.364 (interior-walk-inn.ts),
+both real exit 0. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+real exit 0 (76th consecutive clean); sweep89-battery 28/28 ALL PASS exit
+0 on fresh census bytes (comp-bearing 21, 38 lights); interlane md5
+f6254cd0 stable, read fresh. Ledger law EXACT -- base re-read fresh
+immediately before append, 2370746, D+0/E+0. Standing gate ALL PASS real
+exit 0 at tick-start 828e65c6 run from repo ROOT. Probe self-caught
+pre-verdict: the core-walk pipe stripped the [physics] banner AND laundered
+the exit code through grep (polish-270 content-anchor class -- verdict
+anchored on status ALL_PASS + 64/64 ok + maxArrival 0.38 from the parsed
+JSON, not the pipe exit); the first result-parse keyed `legs` (an int
+count) where the schema puts the array in `results` (re-keyed, sweep-48
+per-tool schema class); the census diff heredoc was parser-blocked on the
+`&` operator and re-run as a saved script (sanctioned retry). Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-123):
+row-cottage + market (101st cycle -- LRU chain: @122 tower-house/inn, @121
+forge/potter, @120 stable/observatory, @119 longhouse/garden-cottage,
+@118 hall/bunkhouse, @117 row-cottage/market -- row-cottage and market
+both last walked sweep-117, now the stalest standing pair; both walk
+tools verified present this tick: interior-walk-row-cottage.ts,
+interior-walk-market.ts).
