@@ -4652,3 +4652,57 @@ verdicts:
   zero floats. Probe, not a verdict; decode/execute law stays with
   struct. Evidence: reviews/survey58-slice/halt/ (gameplay+night, served
   sha c3d97fe9).
+
+## struct-92 (2026-09-07): R9-3 THE FIFTH BENCH — recovered from
+## interrupted sibling window, v1 judged→fixed→v2 judged, PLACED_VERIFIED
+
+INTERRUPTION RECONCILIATION (artwalk-32 pre-place class): sibling struct
+window 19:27-19:36 left mkv3-fifthbench.ts + village_fifthbench3.glb +
+10 renders + next-terrain-struct92.ts (NW seat draft); died before
+judgment/placement/plan/ledger/commit. This tick: rebuild ×2
+byte-identical to the sibling's on-disk bytes (05b26654), decode (2
+nodes, bbox 12.12x0.69x0.50), then took the work through the FULL gate.
+
+CONTRACT: ONE IDEA = THE 3:2 SUPERPOSITION. Stone ribbon 12.1m whose
+elevation crest(x) = 0.42 + 0.28·(sin πx/3 + sin πx/4)/2 — 6m + 4m waves,
+perfect fifth (Bill-approved Interference class), common period 12m.
+TRUE NULLS ARE THE SEATS: waves cancel exactly at x=0,±6 → three sitting-
+height flats (0.42). Odd sum: complementary halves, max 0.688 @ +1.15,
+min 0.153 @ −1.15. One brass bead (glow_fb) at the central null. Folly,
+uneven-floorShaped (per-cell truthful tops, steppable/sittable). Pairs
+with lemniscate (∞ plan / 3:2 elevation orthogonal).
+
+JUDGED: v1 ZAI gameplay 4/5 — FAIL on the one-idea item (4m ripple read
+as staircase noise; native down 1210 ×3 + paced retry, disclosed; night
+4/4, bead seated). DECODE-FIRST: profile math exact at source →
+quantization cause: 64 columns = 0.189m ≈ 7px steps ≈ ripple scale. ONE
+source change SEG 64→128 (step 0.035m ≈ 3.4px); nulls/odd/profile
+unchanged. v2 sha 62f33173ccdae1074122d38006b9e7ef22a4e10569826c4f8ba
+28a28055a58b2 ×2 deterministic. v2 judged ZAI: gameplay 5/5 (two
+frequencies perceived, ripple spacing 3.8-4.4m matches 4m wave, nulls
+within 2px, bead centered ±2px), front 5/5 (odd-superposition signature
+exact, joints closed, contact clean), night 4/4 (one quiet amber point).
+Native re-judge debt disclosed (flap law).
+
+SITE: sibling's NW seat REJECTED by SAT gate pre-mutation (lavender-0040
+−3.62 overlap, echoarch 0.43 pinch — center-distance scan had missed the
+lavender field's 20m box; the gate caught it). Full-annulus scan (1767
+lawful seats) → strongest gap anywhere: (-23.5,-0.04,-51.0) yaw -0.4328,
+az-114.7 r56.2, SW contemplative threshold. Long axis TANGENTIAL → 3:2
+elevation reads face-on from the SW walk; ends 6.95/13.05m off the walk
+ray (beside the line). SW = the mathematical-quiet family's home
+(observatory/skymirror/labyrinths/stillwind). Terrain 9pt spread 3.5mm,
+mean PY -0.0400.
+
+PLACEMENT: hash gate → SAT fresh-294 worst nx-temple-seed-0034 +7.43
+(law 1.4) → upload store/62f33173ccdae107.glb (0 429s) → spawn
+nx-struct-fifthbench → PLACED_VERIFIED exact tuple, census 294→295 →
+idempotent rerun ZERO verbs. Comps {} (bead emissive material).
+
+NEXT: 93%3==0 -> REFINEMENT tick if pool non-empty (re-derive; survey may
+route notes). Native re-judge debt on fifthbench v2 rides any refine tick.
+
+BILL EYE-CHECK (one, standing): on the SW walk toward the labyrinths, a
+long stone ribbon rising and falling in the grass to your right — the
+slow swell and the quicker ripple together, three flats at sitting
+height; sit at the brass bead.
