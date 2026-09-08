@@ -3777,3 +3777,68 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   clean-with-margin) / 0 dropped. Native 8/8 disclosed. Zero world
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-64)
+
+- survey-64 (2026-09-08, NATIVE 5/5 — one 1210 flap on penrose first
+  call, single paced retry recovered, ZERO ZAI fallback; 18m gameplay
+  primary + night/aerial/back cross-checks, fresh live store bytes 3/3
+  HTTP 200 curl UA on exact census-64 libs, served-shas pinned
+  89a69d6fdb41e58e (halt == needlerest, byte-identical at fetch) +
+  5bce48664d173e23 (penrose)): CURE-CORROBORATION + FIRST-READ slice.
+  Selection law: severity backlog + never-judged pool BOTH empty
+  (survey-59 matcher + post-overhaul waves 60/61/62 closed; dress/
+  approach dissents routed survey-63, pending owner re-arbitration —
+  dress lane in post-close hold on Bill's eye-gate); census-64 diff
+  quiet (sole arrival penrosepaving = struct-98, ledger-exact). Slice
+  = struct-93/94 shared-bytes cure re-judge (halt + needlerest) +
+  struct-98 first independent read (penrosepaving). VERDICTS: HALT CURE
+  CORROBORATED NATIVE — survey-58's Sev 4 value-crush CONFIRM is CURED
+  on cdaf7c1f40208a5b: posts/rail/stone footings individually readable
+  at 18m (three posts countable, hue-separated members, sealed
+  silhouette, footings grounded, open bays read intentional); residual
+  margin = roof fascia darkness (crush threshold, not over it). Brass
+  stud confirmed present in the -z approach day frame (warm 8px dot
+  center post ~(479,297)) — completes identity for purpose; default-rig
+  night zero-warm read re-derived as the KNOWN +z post-occlusion
+  (struct-93's own lane-owned -z night variant carries the 20-warm-px
+  proof; not re-litigated, decode/night law stays with struct).
+  NEEDLEREST CLEAN-with-margin BY BYTE-IDENTITY — same fetch sha
+  89a69d6fdb41e58e as halt on census lib cdaf7c1f40208a5b (content-
+  addressed store; struct-94's zero-upload byte-swap law (d)); no
+  re-judge burned, inherits halt's cure verdict + roof-fascia margin
+  at its own tuple (10.273, 0.0029, 68.737) yaw 2.99324. PENROSEPAVING
+  CLEAN-with-margin NATIVE (first independent read; struct-98 R10-2
+  ZAI-judged 3/3 in its own packet — this adds native): 18m grazing
+  reads intentional decagonal paving disc (never rubble; joints,
+  courses, gold hub, finished rim, silhouette STRONG PASS, zero
+  geometric defects), aerial PASS on all four counts (10-fold sun
+  wheel reads via decagon outline + hub + tan sector wedges at ~36
+  degree spacing + radial seam convergence; tones organized not
+  random; aperiodic tessellation coherent edge-to-edge; no holes/
+  z-fight/seams); 18m pattern illegibility classified
+  interaction-distance class (struct-45 law: a paving's concept
+  distance is overhead, fifthbench kin) — NOT a defect; margins
+  (verify-tier, decode stays with struct): near-edge contact-shadow
+  deficit x380-600 y411-414 at grazing (struct-98 terrain delta 14.4mm
+  = seated; thin-disc shadow reads chassis-marginal), vertex aliasing
+  jaggies both lateral vertices, DSATUR tone separation low-contrast
+  (aerial still reads; sun-wheel readability could strengthen with
+  tone spread — polish tier, not defect). Probe-only; struct owns
+  decode. Routing: ZERO defect notes (no CONFIRMs) → no foreign-plan
+  writes, no candidate rows, NO ledger append (loop law 4: append only
+  when routing a note). Grep-verified survey-64 pre-existing: 0/0/0
+  pre-write. Census 301 vs survey-63 baseline /tmp/survey63-census.json
+  (300): +1 arrival nx-struct-penrosepaving 31d34740 = struct-98
+  ledger-exact (sweep-110 absorbed), 0 departures, 0 lib flips, 0 pos
+  moves — steady epoch. New snapshot baseline
+  /tmp/survey64-census.json (301). SELF-CATCH DISCLOSED: first fetch
+  pass pinned halt/needlerest lib as an 8-hex prefix completed from
+  MEMORY, not the census → gateway answered not-found 9B, renders
+  failed closed, zero stale bytes judged; re-pinned verbatim from
+  fresh census cdaf7c1f40208a5b, re-fetched, re-rendered (survey-59
+  selection self-catch class — fail-closed worked, no fabricated
+  judgment). Gate: ALL PASS real exit 0 first try at 94e87958
+  (survey-63 at HEAD). Verdicts 0 confirmed / 3 clean-with-margin /
+  0 dropped. Zero world mutations, zero uploads, zero verbs, zero
+  comp edits, zero shared-budget use (D+0, E+0).
