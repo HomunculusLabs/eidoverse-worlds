@@ -5940,3 +5940,112 @@ bends upward like a flame and holds a bead of brass — the sun it faces.
 At dusk: one quiet amber point above the flower, and nothing else. Behind
 it, down the same line, the snowflake garden, the labyrinth, and the
 twelve-pentagon gem carry on the mathematics walk.
+
+## struct-109 (2026-09-08): R10-10 THE RULE 30 WALL — BUILD tick
+
+Cadence 109%3==1 -> BUILD tick. Fresh re-derivation: refine pool EMPTY (no
+survey routes since struct-90, re-checked this tick); shard 14/14 nx-struct
+rows TERMINAL on TRUE full-block parse (row -> next numbered row; my first
+crude 2500-char-window check falsely showed 8 OPEN — window too small,
+EXECUTED marks sit deeper in long rows; the plan's full-block claim was
+correct). Gate ALL_PINS_OK 15/15 real exit 0 tick-start. Census fresh 308.
+
+CONCEPT (written before build): the form ledger's missing CELLULAR
+AUTOMATON family (ledger grep fresh: zero automaton/rule-30/Wolfram
+presence across the 58 nx-struct works AND all sibling plans — no motif
+collision). ONE IDEA: A WHOLE UNIVERSE FROM ONE RULE AND ONE SEED —
+elementary rule 30 (new = L XOR (C OR R); Wolfram's "physics of everything"
+icon) run 14 steps from a single live cell, its spacetime diagram cut as a
+great triangular ashlar stele: every cell of the light cone EXISTS (the
+triangle is the cone |c|<=n, rows 0..14, 225 cells); the 131 LIVE cells
+stand proud +0.18 as light ashlar blocks, the 94 DEAD cells sit recessed in
+the dark bed stone — packing-gap-as-crevice-shadow, sunflowerdial bed
+lineage. The read: left edge a clean raised diagonal (the ordered ray rule
+30 is famous for), right edge ragged (the chaos it seeds) — HALF PATTERN,
+HALF NOISE, ONE RULE. Pitch 0.72m -> base 14.4m wide, 10.8m tall: the
+terminal monument scale of the S mathematics axis (dial r71 -> koch r90 ->
+hilbert r100 -> dodeca r110 -> wall r120, the axis' own 10m cadence).
+Folly class, both faces carry the pattern mirrored (walk-around grounds),
+2-step ashlar plinth, ONE brass dusk bead at the apex SEED cell (row 0:
+one rule, one seed, all this). Static — computation frozen at maximum
+interest. Folly: no entry advertised, no walk owed (sunflowerdial/
+stillwind precedent).
+
+Math (computed this tick, to be asserted in-code against independent
+recomputation): live counts per row [1,3,3,6,4,9,5,12,7,12,11,14,12,19,13];
+every row spans exactly -n..n (edges all-live -> clean triangle rim).
+
+NEXT: build mkv3-rule30wall.ts -> decode -> review/judge -> scan az184
+r120 -> terrain -> place -> ledger.
+
+EXECUTION RECORD (same tick): BUILD ARC v1 (buried half-thickness plinth +
+inset bed) died on its own envelope assert (height 11.00); v2 redesigned by
+law, not eyeball: the CONE-EDGE LAW derived and asserted — every row's
+outer-top block corner lies exactly on x+y=11.116 (axis-aligned squares
+pitched on a 45° cone), so the bed's raking edges ride that line +2cm lip
+=> the triangle IS the full light cone, base 22.3m at grade, plinth two
+stepped strip courses (s2 base -0.42 seated by PY=lowest+0.42, both
+courses visible, stele rides +0.42 — amphi/echoarch kerb seating class).
+Live = through-stones 0.65 deep (pattern ghosts on the back face), dead =
+0.24 recessed sockets, bed 0.42 — five distinct layer planes, zero
+coplanar (z-fight law). In-code asserts ALL GREEN: truth table 8/8, live
+counts exact, edges ±n every row, cone-edge law 15/15, bed lip exact,
+131 through-stones coplanar front +0.18, bead sightline clear 5x18m +
+2x6m (occlusion-beats-emissive law), envelope 23.87x11.20x1.165
+y[-0.420..10.778], no NaN. sha e70161322c42c2eb7eaee34af50fe3eb045ada79d
+b44ef46d857110269c87915 x2 deterministic (mtimes 1788899872/874 verified).
+
+DECODE struct109-decode-rule30wall.ts ALL PASS exit 0: sha pinned, 5
+nodes (budget law), texMat lanes rw_live/rw_bed/rw_plinth, brass
+emissive exported, glow_rw_1 + glow_rw_socket KEEP, 3144 live verts ==
+131x24, RULE-30 LAW 15/15 rows reconstructed from baked bytes (live block
+positions == rule-30 column sets exactly; decode tolerance bug caught:
+row filter 0.216 < block half 0.3384 — fixed, no geometry change), no
+NaN, envelope 23.874x11.198x1.165 exact.
+
+JUDGED NATIVE (placed bytes = judged bytes): front 4/4 ACCEPT (triangle
+reads unambiguous, ~50/50 raised-light vs recessed-dark "half-pattern
+half-void" masonry, exactly one brass capstone bead, zero floats/voids/
+z-fight); gameplay 18m 4/4 ACCEPT (triangular stone monument readable,
+block relief resolves ~50px cells, LEFT EDGE near-continuous raised
+staircase vs RIGHT EDGE ragged with socket notches — the ordered-ray/
+chaos asymmetry reads, "intentional weathering not error", zero hard
+defects; the recess below the apex bead is honest rule-30 row-2 center
+dead cell); night 3/3 ACCEPT (exactly one matte crisp amber point, zero
+bloom/spill, dark-but-legible two-tone silhouette vs navy sky, no
+artifacts).
+
+SITE: film-guarded scan struct109-scan (fresh census 308, 1341 lawful
+seats): TARGET az184 r120 (-8.37, 119.71) LAWFUL at dist 0.0 — the S
+mathematics axis extends at its own 10m cadence (dial r71 -> koch r90 ->
+hilbert r100 -> dodeca r110 -> WALL r120). SAT worst nx-struct-
+dodecahedron +6.17 scan-side / +6.19 placer-side fresh (law 1.4; the gem
+stands 10m in front of the wall center — layered reveal: gem, then the
+great wall rising behind). Film +26.08 (kochgarden), walk +48.2. Terrain
+9pt strip spread 2.1cm over 24m, lowest corner-we -0.0328 -> PY
+0.3872166. r120 outside closed r33-55 band. Face (local +z) toward the
+village N approach (struct-105 entry law); yaw 0 keeps the strip E-W.
+
+PLACEMENT: gate ALL_PINS_OK 15/15 real exit 0 tick-start + re-run
+immediately pre-mutation (both bun, no pipe). Upload store/
+e70161322c42c2eb.glb (0 429s), 1 spawn verb, PLACED_VERIFIED exact
+tuple pos [-8.3700, 0.3872, 119.7100] yaw 0.0000, census 308->309.
+Fresh-only rerun REFUSED zero verbs (real exit 1, verified un-piped).
+Comps {} (bead emissive material glow_rw_1 KEEP; socket stone KEEP).
+
+FRAMES: reviews/struct109-rule30wall/ (10-view set).
+
+NEXT: 110%3==2 -> BUILD tick (R10-11 form-ledger gap; candidates: the
+CA wall opens COMPUTATION family — rule 110 glider gun / Turing-machine
+tape are descendants, but novelty law wants a new family first) unless
+survey routes reopen rows.
+
+BILL EYE-CHECK (one, standing): walk the south mathematics walk past the
+labyrinth and the twelve-pentagon gem, and where the meadow last opens,
+a great triangular wall of ashlar rises — twenty-four metres wide,
+eleven tall, stepped like a ziggurat's face. Half its blocks stand proud
+in pale stone, half are dark sockets, and the pattern is no pattern at
+first glance — until you see the left edge is one clean raised diagonal
+and the right edge is ragged, and the whole thing grew from the single
+gold bead at the apex. One rule, one seed, fifteen generations. At dusk:
+one amber point at the crown of the triangle, and nothing else.
