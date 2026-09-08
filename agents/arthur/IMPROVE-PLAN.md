@@ -1917,7 +1917,72 @@ judged index survey-77):**
   decode-settled intentional via `glow3`+`clo_finial`) carry no defect
   — see SURVEY-PLAN survey-77 for the margins.
 
+  **survey-78 ARBITRATION ANNOTATION (2026-09-08, NATIVE 4/4, same
+  live bytes — served-sha16 byte-identical to this row's pins, zero
+  statuary flips ever recorded):** the s9/s10 native-vs-s77-native
+  contradiction is RESOLVED — not a judge flip, a CLASS-SET difference.
+  s9/s10 (2026-09-06) judged identity/silhouette/grounding only, all of
+  which still PASS unanimously in s78; the value-separation class did
+  not exist in survey prompts until the s77 era. s78 re-judged all four
+  family members under a neutral value-probing prompt (class explicitly
+  probed, no leading either way): 0005 FAIL, 0026 FAIL, 0039 FAIL
+  (upgraded from s77's margin phrasing — identical one-band clause
+  ~L40-55 olive/khaki, heads-only separation), 0052 FAIL (new —
+  previously native-CLEAN s14/s15, same class-set explanation). Row
+  WIDENED to all four: `nx-craft-statuary-0005 / -0026 / -0039 /
+  -0052`. Every pass 4/4-agrees on identity/silhouette/grounding —
+  geometry intact, palette-only fix class confirmed family-wide.
+  Evidence: reviews/survey78-slice/ + judge logs /tmp/survey78-*.log.
+
 ## SURVEY CANDIDATES (round-2 intake)
+
+**survey-78 sub-section (2026-09-08, NATIVE 7/7 judgment calls (6
+first-pass + 1 concise re-run on a truncated labyrinth verdict) — 6th
+consecutive all-native window, zero 1210s, zero ZAI fallback; 18m
+gameplay + 1 front cross-check from fresh live store bytes 6/6 HTTP 200
+curl UA on exact census-78 libs; served-sha16 pins statuary-0005
+44f35863 / -0026 96dc5617 / -0039 9fc6dcc5 — byte-identical to survey-77
+pins (same-bytes arbitration proven), statuary-0052 26bb985c, wayside-0030
+35b35546, labyrinth-0025 6bb763a9): SELECTION AUDIT + ARBITRATION slice.
+Self-catch disclosed: survey-77's never-judged pool was a MATCHER MISS —
+corpus re-verification this tick proved cloisters/statuaries/waysides/
+forests/chess/banner/coop/harvestcart/labyrinths ALL carried prior
+verdicts (s9/s10/s13/s14/s15/s16/s59); the only genuinely unjudged
+residue was first-native coverage on wayside-0030 (s10+s13 both ZAI).
+What genuinely stood: a native-vs-native CONTRADICTION on statuary-0005
++ -0026 (s9/s10 native CLEAN vs s77 native DEFECT Sev 4, same live
+bytes, zero statuary flips ever recorded) — arbitration priority per
+survey-70 slidingladder precedent. Slice = all four statuary family
+members (contradiction pair + 0039 margin-upgrade + 0052 never-s77-read
+control) + wayside-0030 first-native + labyrinth-0025 margin re-read.
+VERDICTS: statuary value-separation FAIL 4/4 — contradiction RESOLVED as
+a CLASS-SET difference (s9/s10 judged identity/silhouette/grounding
+only, all still PASS unanimously; the value class postdates those
+verdicts) — s77 family finding CORROBORATED and row widened to
+`nx-craft-statuary-0005/-0026/-0039/-0052` (annotation on the standing
+s77 row, widened in place — no duplicate row created). wayside-0030
+first-native DISSENT-classified (identity FAIL-borderline shed-read from
+gameplay angle vs 5/5 PASS front view incl. legible bench + open front;
+lamp/silhouette/grounding/value all PASS; against two standing ZAI
+gameplay CLEANs — native vote recorded, family CLEAN closure s14 stands,
+no note routed, native debt carries). labyrinth-0025 passage-legibility
+FAIL corroborates s14's standing margin clause (same fix class: floor
+vs wall-top value separation; geometry/silhouette/grounding PASS) —
+clean-with-margin row stands, no escalation. Routing: ONE annotation on
+the standing survey-77 statuary row (IMPROVE-PLAN) — the tick's one
+routed note; ZERO notes to other lanes' plan files (nx-craft-* unowned —
+the widened row IS the routing surface). Grep-verified survey-78
+pre-existing: 0/0/0 pre-write (all three surfaces). Census 306==306 vs
+survey-77 baseline /tmp/survey77-census.json: 0 arrivals, 0 departures,
+0 lib flips, 0 pos moves, lights 38 steady — quiet epoch; new baseline
+/tmp/survey78-census.json (306). Gate: ALL PASS real exit 0 first try
+at a90c2905. Native debt tick: survey-62 class (hall/inn) unchanged
+owner-disposition; wayside-0030 native dissent recorded on the
+family-closure line (revisit if Bill or a lane disputes the shed-read).
+Verdicts 0 new-confirmed-rows / 1 family-finding corroborated+widened /
+1 first-native dissent / 1 margin corroborated. Zero world mutations,
+zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0).**
 
 **survey-23 sub-section (2026-09-07, ZAI fallback 6/8 + NATIVE 2/8
 disclosed — native hard down this tick: 1210 x5 consecutive, paced

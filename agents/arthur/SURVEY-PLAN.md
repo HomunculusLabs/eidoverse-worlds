@@ -4388,3 +4388,77 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
 ## Judged index (survey-77)
 
 - survey-77 (2026-09-08, NATIVE 10/10 judgment calls (8 gameplay first-pass + 2 concise verdict-completion re-runs on truncated subjects); zero 1210s, zero ZAI fallback — 5th consecutive all-native window; 18m gameplay from fresh live store bytes 8/8 HTTP 200 curl UA on exact census-77 libs, served-sha16 pins cloisters 33b7462a/0ce70bca/72c843f0/12c0dd19/9d16db48, statuaries 44f35863/96dc5617/9fc6dcc5): ROTATING DISTRICT PASS — NE-craft cloisters+statuaries, never judged on ANY surface. Selection law run honestly fresh (not carried): severity backlog EMPTY (round-1 terminal; improve-71 final hold + parked, no SHARD EXECUTION section — grep exit 1); never-judged pool re-derived on census-77 with FULL corpus (survey+improve+owning-lane plans) + family-rep/sha-fleet laws: raw exact-id misses 110 → sha-grouped 84 libs → 21 uncovered → minus short-name-verified coverage (hearth survey-7 explicit, wayside-0009 survey-8 explicit) => genuine pool ~19: NE-craft cloisters/statuaries ×8, temple labyrinths ×3, wild wayside-0030/0056/0058 + forest-0018/0031/0044/0057, core dressing chess/banner/coop/harvestcart, hearth(covered s7). Slice = the 8 NE-craft members (largest coherent uncovered block; IMPROVE-PLAN line 3765 itself names cloister/statuary as remaining unjudged universe). VERDICTS: 5 CLEAN-WITH-MARGIN / 3 material-crush findings (2 DEFECT Sev 4 native + 1 corroborated) — CLOISTER-0008/0016/0029/0042/0055 ALL CLEAN-with-margin: identity PASS 5/5 (piers+roof+open lane reads arcade), grounding PASS, no voids; the recurring "two floating yellow orbs ~(318,259)/(641,261)" flagged by every cloister judge DECODE-SETTLED as intentional: GLB carries 5 materials incl `glow3` emissive + dedicated `clo_finial` node (lamp-anchor family, mergekit law) — mounts sub-pixel at 18m; night warm-px probe 20 px (0008) confirms lamp read; 0042 3 px = dim lamp polish-tier margin; NOT routed as defect (probe pitfall: decode outranks render claim for class questions). Cloister margins: 0016/0042 roof-vs-pier value separation tight, single wood family. STATUARY-0005 DEFECT Sev 4, STATUARY-0026 DEFECT Sev 4 (concise re-run), STATUARY-0039 CLEAN-WITH-MARGIN — but 0039's margin clause names the IDENTICAL monochrome-tan crush clause as 0005/0026's defect clause (all three: statue/plinth/scatter one value, dark sphere heads only accent; 0039 additionally mid-cluster merge x390-410/x500-540): 3/3 independent native reads = FAMILY finding, consistent across all three GLBs (4 mats: stone/plaster/iron/timber — stone and plaster read same value at 18m). Identity PASS 3/3 (deliberate sculptural group, ring reads plotted), silhouette/grounding PASS 3/3. Routing: ONE candidate row IMPROVE-PLAN SURVEY CANDIDATES (statuary family value-crush, Sev 4, struct?/improve routing — nx-craft-* prefix unowned by active lanes per sharding table, candidate row is the routing); ZERO notes to owning-lane plans (no owner exists; NE-CRAFT-PLAN is a completed nvp-era plan, not an active lane surface). Grep-verified survey-77 pre-existing: 0/0 pre-write (both surfaces). Census 306==306 vs survey-76 baseline /tmp/survey76-census-raw.json: 0 arrivals, 0 departures, 0 lib flips, 0 pos moves, lights 38 steady — quiet epoch; new baseline /tmp/survey77-census.json (306). Gate: ALL PASS real exit 0 first try at c6ccc579 (own survey-76 at HEAD at gate time; sweep-134 interleaved mid-tick after — normal, foreign files only, my routing surfaces clean in tree at grep time). Self-catches disclosed: (a) three first-pass verdicts truncated at max_tokens (0008 tail, 0016 mid-class, statuary-0026 mid-verdict) — two completed by concise re-runs (disclosed as judgment calls in the 10/10 count), 0016's completed run delivered full class-by-class PASS PASS PASS PASS PASS-with-margin; (b) judge max_tokens raised 2400→3200 mid-slice after 0008's truncation, still insufficient on deliberation-heavy subjects — concise-mode suffix is the durable fix. Native debt tick: unchanged (survey-62 hall/inn class owner-disposition; all previously-tracked debts stand cleared per survey-75/76). Verdicts 0 confirmed-new-lane / 3 defect-side family finding (routed) / 5 clean-with-margin. Zero world mutations, zero uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-78)
+
+- survey-78 (2026-09-08, NATIVE 7/7 judgment calls (6 first-pass + 1
+  concise re-run on a truncated labyrinth verdict — survey-77 self-catch
+  class, max_tokens 3200 still insufficient on deliberation-heavy solo
+  reads; concise-mode suffix is the durable fix) — 6th consecutive
+  all-native window, zero 1210s, zero ZAI fallback; 18m gameplay + 1
+  front cross-check, fresh live store bytes 6/6 HTTP 200 curl UA on
+  exact census-78 libs; served-sha16 pins: statuary-0005 44f35863 /
+  -0026 96dc5617 / -0039 9fc6dcc5 byte-identical to survey-77's pins
+  (same-bytes arbitration PROVEN — zero statuary flips ever recorded in
+  this plan), statuary-0052 26bb985c, wayside-0030 35b35546,
+  labyrinth-0025 6bb763a9): SELECTION AUDIT + ARBITRATION slice.
+  Selection law run honestly fresh — and this tick it REFUTED survey-77's
+  derivation: s77's "~19 genuine never-judged pool" was a matcher miss
+  (plan prose uses shorthand names; s77's corpus grep missed the
+  survey-9/10/13/14/15/16/59 records). Corpus re-verification proved
+  cloisters (s9/s10/s14/s15), statuaries (s9/s10/s14/s15), waysides
+  (s10/s13/s14/s15), forests (s9/s13/s14/s15), chess/banner/coop/
+  harvestcart (s59), labyrinths (s9/s13/s14/s16) ALL previously judged;
+  the only genuinely uncovered residue = first-NATIVE coverage on
+  wayside-0030 (both prior verdicts ZAI). Law reaffirmed for future
+  matchers: a never-judged pool claim must grep the judged index
+  case-insensitively by family short-name, not by exact entity id.
+  What genuinely stood after the audit: a native-vs-native CONTRADICTION
+  — statuary-0005/-0026 s9/s10 native CLEAN vs s77 native DEFECT Sev 4
+  on byte-identical live bytes. Arbitration-priority slice (survey-70
+  slidingladder precedent): all four family members under a NEUTRAL
+  value-probing prompt (class named, no verdict led). VERDICTS:
+  STATUARY-0005 value-separation FAIL (one collapsed mid-olive band
+  ~L40-45, heads-only separation; identity/silhouette/grounding PASS).
+  STATUARY-0026 FAIL (same one-band clause ~L40-50; accents PASS but
+  "doing nearly all the perceptual work"; scattered base-spheres read
+  fallen-heads BORDERLINE). STATUARY-0039 FAIL (upgraded from s77's
+  margin phrasing; ~L50-55 single band; back-ring scatter merges with
+  ground). STATUARY-0052 FAIL (control — previously native-CLEAN
+  s14/s15, same class-set explanation; ~L30-40 single band). CONTRADICTION
+  RESOLVED: NOT a judge flip — a CLASS-SET difference. s9/s10 judged
+  identity/silhouette/grounding only (all still PASS unanimously across
+  every pass incl. s78); the value-separation class did not exist in
+  survey prompts until the s77 era. s77's family finding CORROBORATED,
+  row widened to all four members (annotation on the standing row, no
+  duplicate). Geometry intact family-wide — palette-only fix class
+  (value-spread stone/plaster/scatter). WAYSIDE-0030 first-native:
+  gameplay identity FAIL-BORDERLINE (shed/shrine read, no open bay,
+  bench illegible, right stub posts read fence) vs front view 5/5 PASS
+  (bench legible x428-520, open front, shelter reads) — view-dependent
+  dissent against two standing ZAI gameplay CLEANs (s10+s13);
+  lamp/silhouette/grounding/value PASS both views. DISSENT-CLASSIFIED,
+  family CLEAN 4-of-4 closure (s14) stands, native vote recorded here,
+  no note routed. LABYRINTH-0025 margin re-read: passage-legibility
+  FAIL (front interior merges one flat disc at grazing angle, corridors
+  decode only in compressed back bands) — corroborates s14's standing
+  margin clause exactly, same fix class (floor vs wall-top value
+  separation), clean-with-margin row stands. Routing: ONE annotation on
+  the standing survey-77 statuary row in IMPROVE-PLAN SURVEY CANDIDATES
+  (arbitration outcome + widening to 0052) — the tick's one routed
+  note, one ledger append per loop law 4. ZERO notes to other lanes'
+  plan files (nx-craft-* unowned by active lanes — the widened candidate
+  row is the routing surface). Grep-verified survey-78 pre-existing:
+  0/0/0 pre-write (SURVEY-PLAN / IMPROVE-PLAN / ledger). Census 306==306
+  vs survey-77 baseline /tmp/survey77-census.json: 0 arrivals, 0
+  departures, 0 lib flips, 0 pos moves, lights 38 steady — quiet epoch
+  (raw sha16 4ac1f73a02f71ec4, same stable epoch as sweep-134's pin);
+  new baseline /tmp/survey78-census.json (306). Gate: ALL PASS real
+  exit 0 first try at a90c2905 (own survey-77 at HEAD, no interleave).
+  Native debt tick: survey-62 class (hall/inn) unchanged
+  owner-disposition; wayside-0030 native dissent recorded on the
+  family-closure line; all other previously-tracked debts stand cleared
+  (s75/76/77). Verdicts 0 new-confirmed rows / 1 family finding
+  corroborated + widened / 1 first-native dissent / 1 margin
+  corroborated / 0 dropped. Zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero shared-budget use (D+0, E+0).
