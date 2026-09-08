@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 301,
+ "count": 302,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -9435,6 +9435,40 @@
      0,
      0.055,
      0
+    ]
+   }
+  },
+  {
+   "id": "nx-struct-kochgarden",
+   "kind": "thing",
+   "pos": [
+    -6.28,
+    0.0016,
+    89.78
+   ],
+   "yaw": 0,
+   "scale": 1,
+   "lib": "store/92ed6b2730321832.glb",
+   "bbox": {
+    "min": [
+     -2.775,
+     0,
+     -3.118
+    ],
+    "max": [
+     2.775,
+     0.315,
+     3.193
+    ],
+    "size": [
+     5.55,
+     0.315,
+     6.31
+    ],
+    "center": [
+     0,
+     0.158,
+     0.037
     ]
    }
   }

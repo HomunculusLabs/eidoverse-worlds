@@ -3908,3 +3908,50 @@ bunkhouse/longhouse -- longhouse last walked sweep-106 and
 garden-cottage sweep-107, now the stalest standing pair; both walk
 tools verified present this tick: interior-walk-longhouse.ts,
 interior-walk-garden-cottage.ts).
+
+
+sweep-113: CLEAN SWEEP, epoch-correction tick. Census epoch A 301==301 vs the
+committed sweep-112 baseline (sha16 3b59ad9197e54aab): 0 arrivals, 0
+departures, 0 drift on all 301 shared ids across id/pos/yaw/scale/lib/kind/bbox
+-- fully quiet first read. While tier-2 walks ran, struct-99 (R10-3 The Koch
+Snowflake Garden) committed at e588466d and spawned nx-struct-kochgarden AFTER
+my epoch-A census, so per the polish-270 epoch law all affected evidence was
+re-taken fresh before verdicts: epoch-B census (302 final, exactly ONE arrival
+= nx-struct-kochgarden @ (-6.28, 0.0016, 89.78) yaw 0 lib 92ed6b2730321832
+comp {}, tuple matching the struct-99 ledger line-for-line incl. its idempotent
+0-verb rerun claim; bbox 5.55x0.315x6.31 scale-sane, r90.0 S-procession
+terminal seat az184; corroborated independently by survey-65's census note;
+0 departures, ZERO drift on all 301 shared ids), SAT re-run at epoch B (264
+bbox non-light / 235 classified / 0 coverage holes, exit 3 on exactly ONE
+unclassified = R-121 lamp-n | nx-town-mapboard -0.407 -- known Sev 2 routed to
+artwalk b26 choreography @ sweep-43, sixty-ninth sweep since routing, NOT new,
+no escalation due -- the law keys on severity-1; ZERO new contacts at the
+kochgarden seat, sweep-side corroboration of struct-99's own worst-gap claim
++4.49), walk-band check (nearest walked waypoint 32.1m NE leg, all others
+59.1m+ -- epoch-A walks stand by construction, sweep-53 precedent), epoch-C
+25s-paced re-read settled 302==302 0/0/0, battery re-run 28/28 ALL PASS on
+epoch-B bytes (comp-bearing 21 unchanged -- the arrival is comp-neutral {},
+38 lights), standing gate re-run ALL PASS real exit 0 at a3c0548c.
+Overlap tier-1 profile: core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW
+5/5 @ 0.37 -- all four real exit 0, banner-stripped parse. Tier-2 91st cycle
+per committed pointer: longhouse 6/6 @ 0.346 (interior-walk-longhouse.ts) +
+garden-cottage 6/6 @ 0.355 (interior-walk-garden-cottage.ts), both real
+exit 0, both over the overhaul-wave bytes. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK real exit 0 (67th consecutive clean); sweep89-battery 28/28
+ALL PASS exit 0 at both epochs -- the sweep-106 refreshed pins hold with zero
+FAILs; interlane md5 f6254cd0 stable, read fresh. Probe self-caught
+pre-verdict: walk-band parser first keyed dict-form waypoints only (17
+found), re-anchored on the actual schemas (core results[].end arrays,
+approach results[].x/.z -- 169 waypoints) before the band verdict (sweep-48
+class, no verdict impact). Ledger law EXACT -- base re-read fresh immediately
+before append. Snapshot rewritten with pre-write assertions (arrival exactly
+[nx-struct-kochgarden], tuple ledger-exact, 0 drift on shared ids),
+post-rewrite drift vs live ZERO: 302 entities, 121752B, sha16 c68fcbc9e3195567.
+Zero world mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-114):
+stable + observatory circuit (92nd cycle -- LRU chain: @113
+longhouse/garden-cottage, @112 hall/bunkhouse, @111 row-cottage/market, @110
+stable/observatory, @109 forge/potter, @108 market/inn -- stable and
+observatory both last walked sweep-110, now the stalest standing pair; both
+walk tools verified present this tick: interior-walk-stable.ts,
+struct2-walk-observatory.ts).
