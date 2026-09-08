@@ -4645,3 +4645,30 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   at HEAD). Verdicts 0 confirmed / 1 clean-with-margin / 0 dropped.
   Zero world mutations, zero uploads, zero verbs, zero comp edits,
   zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-82)
+
+- survey-82 (2026-09-08, HOLD — cheap lawful hold verification, no slice
+  judged): selection law run fresh: severity backlog EMPTY (IMPROVE-PLAN
+  carries no SHARD EXECUTION section — grep exit 1, re-verified this tick);
+  never-judged pool re-derived on census-82 (271 things) with the s80
+  short-name-corpus law = ZERO unjudged. 16 raw full-id misses all
+  resolved: approach-lamp-s/w covered by the judged approach-lamp family
+  shared sha 18b69a6b (degenerate-fleet law); b13-south-tide-WEST
+  byte-identical lib 8a6b49f6 to judged -EAST (pair law); b6-market-lissa-
+  RIGHT byte-identical lib 5fcdd1ef to judged -LEFT (pair law); b34-wayband
+  s/w + waystone e/n/s covered by standing degenerate-fleet judgments;
+  b1/b10/b15/b22/b25/b28/b9 judged by b-number token records (s78/s80
+  matcher-miss class — fourth instance; short-name corpus is now the
+  standing defense). Arrivals ZERO. survey-62 hall/inn class unchanged
+  (owner disposition, improve domain parked at improve-71, capped 9 passes
+  by debt-transfer law). survey-7 tower night re-slice note superseded —
+  tower replaced since (survey-62 Sev 3 on new bytes, native-cleared
+  survey-66). Census 309==309 vs /tmp/survey81-census.json baseline:
+  0 arrivals, 0 departures, 0 lib flips, 0 pos moves, lights 38; new
+  baseline /tmp/survey82-census.json. Gate: ALL PASS real exit 0 first try
+  at d98c8fb4 (sweep-140 at HEAD; foreign working-tree dirt = sibling
+  polish/city lanes in flight, lane files clean, zero staging contact).
+  Verdicts 0 confirmed / 0 clean / 0 dropped. Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero ledger append (loop law 4),
+  zero shared-budget use (D+0, E+0).
