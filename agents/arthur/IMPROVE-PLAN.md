@@ -3759,6 +3759,10 @@ all recovered by single paced retries):**
   element by construction). Identity instant (shelter reads correct);
   silhouette/floats/grounding clean. Note also routed to STRUCTURES-PLAN
   SURVEY INTAKE (owning lane). Evidence: reviews/survey58-slice/halt/
+  [EXECUTED struct-93: cure live cdaf7c1f — texMat lanes + brass-stud
+  emissive re-seat (decode: baseline 4/4 material-less primitives was the
+  root cause); approach native 4/4 PASS, night one-quiet-point verified
+  from approach; PLACED_VERIFIED exact standing tuple, idempotent.]
 
 ## Carried laws
 

@@ -4652,6 +4652,9 @@ verdicts:
   zero floats. Probe, not a verdict; decode/execute law stays with
   struct. Evidence: reviews/survey58-slice/halt/ (gameplay+night, served
   sha c3d97fe9).
+  [EXECUTED struct-93: cure live cdaf7c1f at the exact standing tuple —
+  decode root cause (4/4 material-less primitives) + texMat cure + proud
+  brass stud; approach 4/4 PASS, night point verified. Row CLOSED.]
 
 ## struct-92 (2026-09-07): R9-3 THE FIFTH BENCH — recovered from
 ## interrupted sibling window, v1 judged→fixed→v2 judged, PLACED_VERIFIED
@@ -4706,3 +4709,70 @@ BILL EYE-CHECK (one, standing): on the SW walk toward the labyrinths, a
 long stone ribbon rising and falling in the grass to your right — the
 slow swell and the quicker ripple together, three flats at sitting
 height; sit at the brass bead.
+
+## struct-93 (2026-09-08): R-halt CURE — interrupted sibling window
+## recovered, judged, PLACED_VERIFIED
+
+CADENCE: 93%3==0 → REFINEMENT tick. Pool derivation: survey-58 routed a
+native-CONFIRMED Sev 4 (nx-struct-halt value-crush, day+night) into this
+plan's intake — top evidenced deficit; IMPROVE-PLAN survey-58 row
+standing. Shard: zero OPEN nx-struct rows (verified struct-90, no survey
+routes since; fresh grep this tick).
+
+INTERRUPTION RECOVERY (artwalk-32 pre-place class): sibling struct window
+authored the cure 2026-09-07 20:29-20:38 — mk texMat edit + intermediate
+build + before/after renders, then a FINAL source edit at 20:38 (stud
+re-seat z=1.0→0.97) and death before rebuilding/judging/placing. On-disk
+GLB was the intermediate (1434 43ec). Recovery: baseline captured
+(before/baseline.glb = bb227fd6 = live lib, byte-exact), final source
+rebuilt ×2 deterministic → cdaf7c1f40208a5b.
+
+DECODE (struct93-decode-halt.ts, ALL PASS): baseline = 4 nodes / 4/4
+material-LESS primitives — plain mat() buckets exported no glTF material,
+loader painted default near-black on everything = the Sev-4 value-crush
+root cause, independent of survey-58's render read. Cure: 4 real texMat
+materials (halt_timber/stone/iron + halt_brass), bbox parity EXACT
+(material-only, SAT-neutral), brass emissive [0.2424,0.1081,0.0159]
+(= 0x9a6a28 @ 0.75, dusk lineage). Stud decode: brass bucket z[0.922,
+1.018] vs post face ~1.004 → cap ~0.08m proud on the approach (-z) face
+(struct-52 enclosure class: old seat ~96% buried).
+
+JUDGED (native vision, exact final bytes): BEFORE baseline confirmed
+crushed-blacks natively. Gameplay (+z rear view) 2/4 — near-black band
+GONE, roof/posts separate, silhouette PASS; disclosed residual: bench/wall
+read one band edge-on (inherent to rear sightline, approach is the
+contract view). APPROACH (-z back view) 4/4 PASS — stud visible at eye
+height, four member values legible, stone speckle reads, wayfarer's rest
+reads. NIGHT: rig night frame is +z where the post occludes the stud —
+NOT a defect; closed honestly via lane-owned rig variant
+(struct93-review-night-approach.ts) rendering the -z night view: 20 warm
+px, peak r=137, one crisp 6×5px amber point at eye height — byte-class
+identical to accepted lemniscate/fifthbench night signatures.
+
+SAT LESSON (recorded): grown-AABB approximation false-failed vs the
+162°-yawed tower-house (grown 0.84 vs EXACT rotated OBB +2.372 —
+square-proxy inflation, struct-19 class); placer corrected to exact
+rotated OBB gap() both sides center-corrected (struct-80 law), chassis
+shape = struct-29/47. Worst neighbor mobius +1.50 (law 1.4 holds).
+
+PLACEMENT: hash gate → fresh-census SAT → upload store/cdaf7c1f40208a5b
+(0 429s) → remove+spawn 2 verbs at EXACT standing tuple (-2, -0.00297,
+30) yaw 0 → PLACED_VERIFIED, census 298 → idempotent rerun ZERO verbs.
+Comps {} (road-stud is emissive material). Shared-bytes note:
+needlerest (city-16) pins old bb227fd6 — content-addressed store
+isolates the cure to halt; needlerest's identical defect class is
+deferred to a later tick (one structure per wakeup).
+
+EYE-GATE: standing halt eye-check updated by this cure — on the S walk,
+the shelter's members now read (warm timber bench, stone footings, iron
+posts, near-black roof), brass stud glowing at eye height on the center
+post at dusk.
+
+NEXT: 94%3==1 → build tick (R9-4 commission; candidate space: surface/
+tessellation or census-gap derivation). Refine pool: needlerest cure
+candidate (shared-bytes class) unless survey routes newer evidence.
+
+BILL EYE-CHECK (one, standing): on the S road verge near the tower-house,
+the wayfarer's halt now shows its members — warm bench, stone footings,
+iron posts, dark roof — and at dusk one small brass point on the center
+post.
