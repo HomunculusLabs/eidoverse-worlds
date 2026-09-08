@@ -5297,3 +5297,75 @@ seam, its center open to the sky so you can walk UNDER the peak and stand
 inside. Three brass points guard its foot, one crowns its summit. Kneel
 anywhere on the plinth: every pyramid you see is made of smaller pyramids,
 those of smaller still. At dusk: four quiet amber points and nothing else.
+
+## struct-101 (2026-09-08): R10-5 THE GEODESIC PAVILION — authored, judged,
+## PLACED_VERIFIED (+ pre-place interruption recovered; night-signature
+## iteration v1→v5 probe-driven)
+
+PRE-PLACE INTERRUPTION RECOVERED: tick#6 (struct-p6 fleet window) died on
+run-budget SIGINT after build/decode/renders/sitescan/terrain, before the
+placer — files present, nothing live, ledger ignorant (artwalk-32 class).
+This tick re-verified everything fresh (never assumed) and completed.
+
+Cadence 101%3==2 -> BUILD tick. Shard: zero OPEN nx-struct rows (re-verified
+fresh this tick). Gate ALL_PINS_OK 15/15 real exit 0 twice (tick-start +
+immediately pre-mutation). CONCEPT: the form ledger's missing GEODESIC family
+(curves, ruled surfaces, tessellation honeycomb R10-1, aperiodic penrose
+R10-2, fractal koch/sierpinski R10-3/4 — nothing carried EQUAL-CHORD
+TRIANGULATION ON A SPHERE). ONE IDEA: THE LATTICE IS THE ORNAMENT — a 2V
+icosahedral hemisphere (exact Goldberg subdivision, 61 struts, 2 classes
+1.749/1.978 ratio 1.1308, 26 nodes, equator decagon), open on a stone
+plinth; enter through two cut equator sectors (chord 3.762m, 1.4m law met
+with margin), look THROUGH the sky's own triangulation.
+
+NIGHT-SIGNATURE ARC (v1→v5, every step probe-verified — probe laws 11/15):
+v1 seated the 5 zenith-pentagon beads INSIDE the hub spheres (occlusion-
+beats-emissive, polish-281/struct-52 class) — 3/5 visible. v2 crest-seated
+BR 0.075: near beads clean, far-side ring members still dark — sight line
+passes through the near crown hubs/struts; v3 BR 0.12 same verdict (4
+clusters, merged pair). v4 strut-midpoint cone ring: WORSE (signature
+compressed ~85px, far pair lost in apex cluster). Struct-45 lesson applied:
+a crown ring cannot read as 5 from walkable exterior vantages — stopped
+chasing sub-pixel legibility. v5 FINAL: geometrically-true zenith pentagon
+kept as the INTERIOR reward (decode-proven: coplanar, r 1.756, 72° spacing
+exact) + ONE apex finial bead (BR·1.2, nothing above it) as the exterior
+silhouette signature (sierpinski apex-bead precedent). Exterior night =
+finial + partial crown arc (far side occluded BY DESIGN); interior night =
+the pentagon. Judged NATIVE: night PASS (finial distinct, arc clean, crisp
+quiet points, zero noise; flags = far-side glimpse by design + rig sky
+contrast); gameplay 18m PASS on all four checks (woven hemisphere, lattice
+holds, grounded, deliberate; polish-tier margins disclosed: finial at
+legibility floor, mid/lower hubs invisible at 18m — interaction-distance
+class, entry unframed). Front frame 1210 x3 (flap window) — front identity
+carried by the gameplay frame (same -z vantage, native-judged). ZAI judge
+NOT used this tick; all judgments native + pixel probes.
+
+BUILD: sha 813ad295487442d2efb01ac74da1691dc4fea9668fe4d6a5f7ee7ab76c66a299
+x2 deterministic (mtime verified). Decode struct101-decode-geodesic.ts ALL
+PASS 9 nodes (finial present + centered, crest 3.625, hub census 2475v,
+iron census 3172v, doorposts at -z). Room-scale by honest geometry (footprint
+~7.1m dia > gates, h 3.625 > 2.2): exact trimesh preserved, no solid box.
+
+SITE: committed struct101-sitescan.py PATCHED this tick (film-clearance
+guard added — its top seats sat ~3m from kochgarden; tick#6's inline scan
+had the guard, the committed one didn't). Film-guarded scan fresh-303:
+23 lawful; seat az164 r60 (16.54, 57.68) yaw 0 — SAT worst nx-struct-
+ogeegate +2.25 (law 1.4), S-drift line 18.26m (law 3.0), film clearance
+32.2m, r60 outside the closed r33-55 band. Terrain 9pt spread 3.6mm,
+lowest rim-n -0.0016 = PY. PLACEMENT: gate exit 0 -> hash gate exact ->
+upload store/813ad295487442d2.glb (0 429s) -> 1 verb spawn ->
+PLACED_VERIFIED exact tuple, census 303->304 -> idempotent rerun ZERO
+verbs. Comps {} (beads + finial emissive material). ENTERABLE: two-way
+MCPL walk ALL_PASS 2 legs max arrival 0.375m through the entry lane.
+Support-seam abstentions on foreign entities = known diagnostic class.
+
+NEXT: 102%3==0 -> REFINEMENT tick if pool non-empty (survey routes may
+reopen rows); else build (R10-6; form-ledger gap derivation).
+
+BILL EYE-CHECK (one, standing): walk south from the plaza past the drift
+gardens, swing east on the open grass — a great woven basket of iron
+standing on a stone disc, wide open doorway facing home. Step inside:
+the dome is ALL doorway-and-window, sky cut into triangles, brass at every
+joint. Look straight up: five small suns in a ring around the crown —
+and one more riding the very tip of the roof. At dusk from outside: that
+single amber point above the crown, the arc below it, and nothing else.
