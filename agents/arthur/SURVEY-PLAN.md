@@ -4034,3 +4034,57 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   Verdicts 0 confirmed / 6 corroborated-clean / 0 dropped. Zero world
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-69)
+
+- survey-69 (2026-09-08, ZAI FALLBACK 6/6 disclosed — native 1210 on
+  hall+inn first calls (batched), single paced retry burned, hard down all
+  tick, SIXTH consecutive pass in the survey-62/65/67/68 flap window; 18m
+  gameplay from fresh live store bytes 6/6 HTTP 200 curl UA on exact
+  census-69 libs; selection law: severity backlog + never-judged pool both
+  empty, census steady → survey-62 ZAI-debt class re-judged a SIXTH pass
+  under the judge-availability opportunistic law): all six debt subjects
+  sha256-byte-identical to survey-62..68 evidence pins (hall 8a4f16dd, inn
+  85860417, kiln 668692f7, tower-house 4e9a9c7c, slidingladder 81c4fb0c,
+  fifthbench addce73b — zero new bytes debt). VERDICTS: 0 confirmed / 4
+  corroborated / 2 clean-with-intra-fallback-dissent. HALL Sev 4
+  corroborated (farmhouse/inn leaning-inn; zero civic signifiers; entry
+  passage re-confirmed; NEW upper-door crush band x438-518 y372-435).
+  INN Sev 4 corroborated (crate-sign geometric evidence: no hang gap,
+  box contacts desk y422-428, no bracket; hearth-misalignment falsifier
+  chimney x369 vs void x452; margins: balcony guardrail absent, stair
+  outer rail half-missing). KILN CLEAN corroborated sixth pass (identity
+  instant; margins verify-tier: flue rim closed, fuel reads ware-not-
+  fuel + duplicate-value pair, pole melt, contact-AO deficit).
+  TOWER-HOUSE Sev 4 corroborated (dovecote rejected, watchtower
+  secondary ~30%; chimney absence re-proven; baluster crush ΔL 15-30
+  center vs 150 flanks CONFIRMED; ladder-railing conflict sharpened to
+  LOGIC failure — overtops deck, no gate gap; blob x612-638 reads
+  unlit shutter). SLIDINGLADDER clean row stands BUT this pass's
+  fallback DISSENTS on identity: no ladder car/rungs anywhere on the
+  rail (reads braced arc track/bridge truss); fragile-tip class
+  re-classified merges-not-gaps; native/decode arbitration owed.
+  FIFTHBENCH clean row stands BUT this pass's fallback counts 4-of-5
+  crests (C3 inseparable from C4 flank; C2 sub-2px) vs survey-68's
+  five-count — intra-fallback dissent, interaction-distance law
+  applies; bead seated zero-halo unanimous. Routing: ONE corroboration
+  block survey-69 sub-section in IMPROVE-PLAN SURVEY CANDIDATES (all
+  subjects standing rows or improve-own surface — zero notes to other
+  lanes' plans, zero new candidate rows). Grep-verified survey-69
+  pre-existing: 0/0/0/0 pre-write (both files). Census 303==303 vs
+  survey-68 baseline /tmp/survey68-census.json: 0 arrivals, 0
+  departures, 0 lib flips, 0 pos moves — steady epoch; new baseline
+  /tmp/survey69-census.json (303). Gate: ALL PASS real exit 0 first
+  try at 2ced4c68 (survey-68 at HEAD). MID-TICK INTERLEAVE: post-commit
+  census re-run shows +1 arrival nx-struct-geodesic 813ad295487442d2
+  (16.54,-0.0016,57.68) yaw 0 = struct-101 committed 1d9853c6,
+  ledger-exact R10-5 PLACED_VERIFIED — classified not routed (struct's
+  own native packet stands; first survey read queued as next-slice
+  candidate if pools still empty); sweep-120 also interleaved (read-only
+  sibling). New baseline /tmp/survey69-census.json (304). Native debt
+  tick: survey-62 class STILL OPEN for all six subjects (six passes,
+  all or nearly-all fallback — debt transfers, not clears); tower
+  remains the only native-cleared subject (survey-66). Verdicts 0
+  confirmed / 4 corroborated / 2 clean-with-dissent / 0 dropped. Zero
+  world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).

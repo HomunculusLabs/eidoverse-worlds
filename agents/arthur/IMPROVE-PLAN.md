@@ -4882,3 +4882,71 @@ read):**
   2-3px vertical ribbing = moiré/shimmer risk in motion only (static
   frame inert). struct-92 native re-judge debt STILL owed. Struct owns
   decode. Evidence: reviews/survey68-slice/fifthbench/
+
+ **survey-69 sub-section (2026-09-08, ZAI FALLBACK 6/6 disclosed — native
+ 1210 on hall+inn first calls (batched), single paced retry burned, hard
+ down all tick, SIXTH consecutive pass in the survey-62/65/67/68 flap
+ window; 18m gameplay from fresh live store bytes 6/6 HTTP 200 curl UA on
+ exact census-69 libs): all six debt subjects sha256-byte-identical to
+ survey-62..68 evidence pins (hall 8a4f16dd, inn 85860417, kiln 668692f7,
+ tower-house 4e9a9c7c, slidingladder 81c4fb0c, fifthbench addce73b —
+ zero new bytes debt). VERDICTS: 0 confirmed / 4 corroborated / 2
+ clean-with-intra-fallback-dissent (probe-tier, disclosed). HALL Sev 4
+ corroborated: farmhouse/inn read holds (leaning inn — porch bench
+ x500-552 y448-492 + interior floor strip x435-545 y462-478), zero civic
+ signifiers (sign/crest/banner/cupola all absent; empty porch-gable zone
+ x430-530 y240-280 named for the marker), entry-passage read RE-CONFIRMED
+ (bench + floor + four lantern points x408/x552 y440 + x437/x521 y397);
+ NEW crush band: upper door interior x438-518 y372-435 near-black,
+ back wall vs ceiling vs door leaf unresolvable between lantern glows —
+ strengthens survey-68's softening toward a two-tier read (passage PASS,
+ upper-band crush flag). INN Sev 4 corroborated: crate-sign re-pinned
+ third time (~x620-670 y388-428) with NEW geometric evidence — box
+ bottom CONTACTS desk top at y422-428 (no hang gap), no bracket arm
+ (nothing above y388 connects it), occludes right window x604-645 =
+ reads crate-on-counter, not hanging sign; doorway void re-pinned
+ (~x425-480 y438-467) + NEW hearth-misalignment falsifier (chimney
+ centerline x369 vs void centerline x452, ~83px offset — void is
+ unlit interior, not hearth); NEW margins: balcony guardrail absent
+ x215-330 y300-320, stair outer rail half-missing. KILN CLEAN
+ corroborated (sixth pass, identity instant — beehive + arched firebox
+ + highest-contrast flame carry it): margins verify-tier as standing —
+ flue rim closed (no dark pixels x445-490 y250-262), fuel ambiguity
+ REFINED (crate lumps x345-400 y383-403 read limestone/ware not fuel;
+ duplicate-value pair w/ pale shelter block x544-592), pole melt x415-440
+ y290-360, contact-AO deficit under kiln/posts. TOWER-HOUSE Sev 4
+ corroborated: watchtower secondary ~30% w/ dovecote REJECTED (domestic
+ fit-out wins); chimney absence re-proven (no stack breaks roof cone
+ x400-540 y110-210 — apex is spike-and-ball finial); gallery baluster
+ crush CONFIRMED with flank contrast (center x415-545 y288-352 ΔL≈15-30
+ vs flanks ΔL≈150 — matches survey-68's measurement); LADDER-RAILING
+ CONFLICT now read as LOGIC failure (ladder overtops deck y290-298 vs
+ deck y352, dies against CONTINUOUS railing, no gate gap x318-350 —
+ sharpens survey-66's functional margin); right-wall blob x612-638
+ y428-478 reads unlit window/closed shutter (grid-aligned, no frame
+ reveal) — disambiguation candidate stands. SLIDINGLADDER clean
+ row stands BUT intra-fallback DISSENT this pass: rail reads (orange
+ 1px line (381,242)→(572,424) unbroken, load-bearing for track-vs-
+ structure semantics) yet NO LADDER CAR/RUNGS anywhere on the arc
+ (zero repeating stubs off the orange line; X-lattice reads truss
+ bracing, actively contradicts rung read) — identity flips to braced
+ arc track/bridge truss. Prior fragile-tip coords re-classified as
+ MERGES not gaps: diagonal landings x390-415 y250-300 merged no-gap
+ (sole 1px sky-side overshoot candidate (398,281)), convergence feet
+ x545-560 y425-432 merge into ~3px joint band (benign), slab-top
+ x430-560 y434-440 CLEAN speck-free (seam y436 continuous), slab
+ right-tip contact x589-598 present-as-overlap/absent-at-tip x600+.
+ Native re-judge (or struct decode arbitration) owed on identity.
+ FIFTHBENCH clean row stands BUT intra-fallback DISSENT this pass:
+ strict count = 4-of-5 (C1 (295,369), C4 (540,358) tallest, C5
+ (700,369) + right undulation) — C3 NOT separable from C4's flank
+ (monotonic rise bead→apex, no local min ~x510; C2 sub-2px amplitude
+ x300-440) vs survey-68's five-count; bead (480,369-370) seated-tangent
+ ZERO halo RE-CONFIRMED unanimous across both passes (4-5px, lower half
+ merges into ridge, no ring/glow), ribbing moiré-free w/ edge
+ staircasing only (watch: right-flank grazing x610-720), grounding
+ contact y396±2 x157-798 continuous; NEW margin: no cast shadow
+ y397-410 full span. Interaction-distance law applies (bench-scale
+ relief ~32px total); native re-judge owed same as struct-92's standing
+ debt. All probe-only — improve/Bill own disposition; struct owns
+ slidingladder/fifthbench decode. Evidence: reviews/survey69-slice/
