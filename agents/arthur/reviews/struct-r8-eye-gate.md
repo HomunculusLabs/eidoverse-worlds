@@ -140,3 +140,24 @@ BYTES: live sha 92ed6b2730321832 (store/92ed6b2730321832.glb).
 EVIDENCE: reviews/struct99-kochgarden{,-v2}/ (20 frames).
 NOTE: top-frame certification judged ZAI-fallback (native provider down);
 native re-judge debt disclosed — clears next tick if provider returns.
+
+## Stop 10 — THE SIERPINSKI SPIRE (struct-100, R10-4) — N meridian antipode
+
+WHERE: out the NORTH gate, up the open meridian past the terraces
+((-7.74, -73.59) — az354 r74; the counterpart of the S-side Koch Garden).
+WHAT: a grey stone mountain that is not a mountain — one great pyramid
+hollowed into 64 smaller pyramids (the Sierpinski tetrahedron, iteration
+3), sky in every seam, its base open so you walk UNDER the peak and stand
+inside it. Three brass beads guard the foot, one crowns the apex — the
+four points that survive every iteration unchanged.
+JUDGE ASKS: (1) mountain-of-mountains gestalt on the N walk; (2) walk
+under the peak, stand inside — the center void is real floor; (3) exactly
+four amber points at dusk (three foot + one summit) — no more, no less.
+BYTES: live sha 7f8b5fd7a3d18b22 (store/7f8b5fd7a3d18b22.glb).
+EVIDENCE: reviews/struct100-sierpinski/ (10 frames).
+NOTE: front/gameplay/night judged NATIVE PASS this tick; aerial frame
+native-down (1210 x3) — UNJUDGED, disclosed; base/symmetry/center-void
+facts are decode-proven. Clears next tick if provider returns.
+UPDATE on Stop 9 (Koch Garden): its top-frame native re-judge debt was
+PAID 2026-09-08 (struct-100 tick) — NATIVE PASS on hash-bound bytes. All
+Stop 9 judgments are now fully native.

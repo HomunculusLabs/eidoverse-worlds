@@ -5203,3 +5203,97 @@ six-pointed snowflake, every point carrying smaller points, dark earth
 inside, three brass beads on three of its tips. Kneel anywhere along the
 rim: the big spikes are made of smaller spikes, those of smaller still.
 At dusk: three quiet amber points and nothing else.
+
+## struct-100 (2026-09-08): R10-4 THE SIERPINSKI SPIRE — authored, judged,
+## PLACED_VERIFIED (+ kochgarden native debt cleared first; first VOLUMETRIC
+## fractal in the village)
+
+Cadence 100%3==1 -> BUILD tick. Shard: zero OPEN nx-struct rows (re-verified
+fresh). Refine pool EMPTY (no survey routes since struct-90). Gate ALL PASS
+real exit 0 tick-start at e588466d; re-run exit 0 at 049d25fb after sibling
+interleave (survey-65 + sweep-113/114 absorbed).
+
+NATIVE DEBT PAID FIRST: struct-99 kochgarden top frame re-judged NATIVE on
+hash-bound exact bytes (local GLB sha 92ed6b27 == live lib == top.png
+f8cac95b): PASS — 6 major points, 120-deg symmetry, 3-level hierarchy
+legible (gen-3 as texture expected), SOLID unbroken ring, exactly 3 beads on
+alternating seed points, zero defects. Matches the ZAI STRONG PASS; debt
+CLOSED, eye-gate packet note updated.
+
+CONCEPT (written before build): the fractal family opened PLANAR (koch
+R10-3 — a border of self-similar edges). The missing member: self-similarity
+in the VOLUME. ONE IDEA: A MOUNTAIN MADE OF MOUNTAINS. The spire IS the
+Sierpinski tetrahedron at iteration 3: one standing tetra (edge 6.4m, apex
+H=5.23m) carved by exact recursion into 4^3=64 solid half-scale blocks,
+every gap real air. Walk under it: the base's central inverted triangle is
+open — you stand INSIDE the mountain, plinth underfoot, four brass beads at
+the four points that survive every iteration unchanged (3 base corners +
+apex, glow_ss_1..4 KEEP, dusk lineage). Cool-grey fractal-family material
+lineage (penrose struct-98, koch struct-99).
+
+BUILD ARC — the assertion layer caught two self-errors pre-render: (1) my
+lattice-index scaling bug (rounding n*64/8 — only the origin block matched
+the digit law; fixed to integer lattice units, then 64/64 matched);
+(2) symmetric-envelope expectation false at z (one-vertex-due-+z triangle
+spans z[-R0/2, +R0] — the koch vertex-up lesson re-learned on the envelope
+assert). Exact math asserted: 64 blocks, every edge exactly E/8=0.8m to
+1e-9, digit-law census (i|j|k bitwise-disjoint, i+j+k<=8) closed form
+matched 64/64, 4 seed apices preserved, zero volumetric bbox overlaps.
+Final: 6 nodes (stone bucket 768 verts = 64x12 tris decode-exact, plinth
+bucket, 4 bead KEEP nodes). sha
+7f8b5fd7a3d18b229f5caadf36d76da8b57f8d582df1b1fbb948b864bfb1bd1c x2
+deterministic (mtime verified). Decode struct100-decode-sierpinski.ts
+ALL PASS real exit 0: bucket envelope x +/-3.20 z -1.85..3.70 y -0.08..5.23;
+true envelope incl. beads x +/-3.275 z -1.92..3.77 y ..5.346 = H+2BR-0.03.
+
+JUDGED NATIVE: front PASS (clean pyramid silhouette; sky through voids at
+multiple levels; medium/smaller hierarchy legible; plinth grounds corners;
+all 4 beads; no floats, no z-fight, no merged blob, no lean); gameplay 18m
+PASS (deliberate crystalline spire, not rubble; porosity visible; grounded;
+clean value ladder; the no-cast-shadow note is rig-class — the engine casts
+real shadows); night PASS (exactly 4 crisp amber points — apex + 3 corners;
+zero bleed; silhouette survives darkness THROUGH the fractal voids; base
+edges anchored by the corner beads). AERIAL: native 1210 x3 (flap window)
+— UNJUDGED, disclosed; its three questions (equilateral base, open
+standable center void, 3-fold symmetry) are exact-decode-proven facts,
+recorded as facts not visual PASS. No native debt taken on front/gameplay/
+night (all judged this tick); aerial rides next tick if provider returns.
+
+SITE: full-annulus scan (struct100-sitescan.py, 3240 cells, conservative
+square half 3.275 with center-offset z +0.925) -> 73 lawful. Top-margin
+WNW r60 seats REJECTED analytically (2.1-2.8m from penrose court — a
+VERTICAL plinth landing on a standing artwork, the struct-99 film-cluster
+exclusion class); az182 r94 REJECTED (plinth corner lands 2.32m from koch
+center, inside its snowflake spike reach). Seat az354 r74 (-7.74, -73.59)
+yaw 0 — the N-meridian ANTIPODE of kochgarden (az184 r90): the village's
+N-S axis now carries a planar fractal at the S pole and a volumetric one at
+the N. 4.46m off the N-ray (law 3.0); SAT fresh-302 center-corrected worst
+nx-temple-terrace-0039 +2.87 (law 1.4); film clearance 29.7m. Terrain 9pt
+spread 11.2mm, lowest corner v2 -0.0301 = PY.
+
+PLACEMENT: hash gate exact -> upload store/7f8b5fd7a3d18b22.glb (0 429s)
+-> spawn nx-struct-sierpinski @ (-7.74, -0.0301, -73.59) yaw 0 (one base
+vertex due +z, the walk-in gate faces the village) -> PLACED_VERIFIED
+exact tuple, census 302->303 -> idempotent rerun ZERO verbs. Comps {}
+(beads are emissive material). ENTERABLE: two-way MCPL walk ALL_PASS,
+2 legs, max arrival 0.375m through the open base lane (gate triangle side
+E/2=3.2m; lane half-width >= 2.7m clear). Support-seam abstentions on
+foreign entities = known diagnostic class.
+
+EYE-GATE: struct-r8 packet extended with the Sierpinski Spire stop —
+delivered once. Aerial-frame judgment pending provider return (facts
+disclosed as decode-proven).
+
+NEXT: 101%3==2 -> build tick (R10 concept: fractal family now planar +
+volumetric; candidates — a second volumetric iteration read (Menger-corner
+open box? too busy at village scale), a fractal at INTERACTION scale
+(sierpinski bench/carpet), or census-gap derivation; aerial native debt on
+sierpinski clears first if provider returns).
+
+BILL EYE-CHECK (one, standing): walk out the NORTH gate where the meridian
+runs open past the terraces — a grey stone mountain rises that is not a
+mountain: one great pyramid hollowed into 64 smaller pyramids, sky in every
+seam, its center open to the sky so you can walk UNDER the peak and stand
+inside. Three brass points guard its foot, one crowns its summit. Kneel
+anywhere on the plinth: every pyramid you see is made of smaller pyramids,
+those of smaller still. At dusk: four quiet amber points and nothing else.
