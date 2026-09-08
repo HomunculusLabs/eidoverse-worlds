@@ -5385,3 +5385,100 @@ the dome is ALL doorway-and-window, sky cut into triangles, brass at every
 joint. Look straight up: five small suns in a ring around the crown —
 and one more riding the very tip of the roof. At dusk from outside: that
 single amber point above the crown, the arc below it, and nothing else.
+
+## struct-102 (2026-09-08): R10-6 THE CATENOID TOWER — authored v2, judged
+## (ZAI fallback, native hard down), PLACEMENT DEFERRED run-budget
+## (improve-31/struct-69 class)
+
+Cadence 102%3==0 nominal refine slot; refine pool re-derived EMPTY fresh
+(no survey routes since struct-90; survey-65..68 corroborated struct works
+CLEAN). Shard: zero OPEN nx-struct rows (14/14 EXECUTED by full-row parse,
+re-verified fresh this tick — first 8-line-window scan false-showed 8 OPEN;
+full row-to-next-row parsing matches the standing claim). Per struct-99
+precedent: pool empty -> BUILD tick (R10-6 form-ledger gap).
+
+STANDING DEBT attempted FIRST: sierpinski aerial native re-judge — provider
+hard down this window (1210 x2 + paced retry; third 1210 on the catenoid
+gameplay frame). Aerial debt STAYS OWED, disclosed; its three questions
+remain decode-proven facts.
+
+CONCEPT (written before build): the form ledger's missing MINIMAL SURFACE
+family. Curves (lemniscate/catenary gates), ruled surfaces (hypar/mobius),
+spiral shells, tessellation honeycomb, aperiodic penrose, fractal planar+
+volumetric (koch/sierpinski), geodesic triangulation — all stand; nothing
+carries MEAN CURVATURE ZERO. ONE IDEA: THE SOAP FILM MADE TOWER. The
+catenoid r(y) = c·cosh((y−yc)/c) — the unique minimal surface of
+revolution, the catenary gate's own curve spun — as an iron lattice shell
+(c=1.5, springing y2.3 -> throat r1.5 @ y3.6 -> flare -> stone crown ring
+y4.9..5.25 with open oculus r1.95). Stone collar drum (r2.22..2.46,
+h0.08..2.3, door chord 2.2m cut on -z), floor disc, 9 ring courses x 16
+meridians = 272 struts (r0.05 solid-read law), 5 brass dusk beads on the
+crown crest (glow_ct_1..5 KEEP).
+
+BUILD: v1 sha f4a59c352371d6c943523b0e6eea360220fb79848d01b81084e578d486
+213249 x2 deterministic; in-code assertions green (9 catenoid levels exact
+1e-9, throat exact, monotone both sides, symmetric profile, door clear
+chord 2.20 head 2.22, footprint 19.0 m², iron census 272, 0 matless).
+Decode struct102-decode-catenoid.ts ALL PASS exit 0 (8 nodes, texMat lanes
+ct_iron/ct_collar/ct_crown, envelope ±2.47, pentagon 72.000°, iron bucket
+4896 = 272x18 indexed exact, door-sector cut vertex-proven 0 verts in the
+door arc).
+
+JUDGED (ZAI FALLBACK disclosed — native 1210 x3 this tick; native re-judge
+debt on gameplay/night rides next tick): gameplay 18m — hourglass silhouette
+PASS (waist 46% of base width, open sky through the crown center), lattice
+PASS (woven cage + lacy ground shadow, members 2-3px legibility floor),
+grounding PASS (continuous contact, zero floats); findings classified per
+probe laws: (a) "no door readable" = CAMERA-GEOMETRY class (chassis
+gameplay cam +z, door cut -z; back frame judge CONFIRMS real aperture with
+genuine depth — interior floor + lattice shadows visible through it; door
+reads at siting where it faces the approach); (b) "floating bright slab at
+door flank" = RENDER-TRUTH (front-frame discriminating read: both drum
+edges clean symmetric curved wall, no slab — the bright element is the
+door jamb's exposed cut face catching the rig sun); (c) "cap 10% narrower
+than base / waist below mid-height" = CATENOID TRUTH (cosh profile;
+geometry-as-art law keeps the math — the waist IS the minimal-surface
+signature); (d) night beads 2/5 visible as wedge slivers = REAL BUILD
+FINDING (55%-seat clipped by ring face) -> v2 half-seat (center CR_Y1+BR/2):
+round dots where visible; crown-ring occlusion law (struct-101 v5) —
+exterior shows the partial arc BY DESIGN, the full five is the interior
+reward through the oculus. Night otherwise DISCIPLINED (2 crisp quiet
+points, zero bloom, zero noise, lattice silhouette survives).
+
+v2: sha 8ac664937f96976d96883221c125d328879e678bc3d9f661e4ac8ab7ec778d6f
+x2 deterministic (mtime verified); decode re-pinned + ALL PASS exit 0 on
+v2. Review frames banked for v1 (reviews/struct102-catenoid/ — judged);
+v2 frames not re-rendered this tick (bead-seat-only change, night wedge
+finding fix; v2 frame re-render rides the placement tick alongside the
+native re-judge).
+
+DEFERRED PLACEMENT CONTRACT (improve-31/struct-69 class, run-budget):
+- bytes: village_catenoid3.glb sha 8ac664937f96976d96883221c125d328879e678bc
+  3d9f661e4ac8ab7ec778d6f (v2, decode-pinned)
+- id: nx-struct-catenoid, YAW 0, comps {} (beads emissive material)
+- TRUE envelope local: x/z ±2.47, y 0..5.37 (bead crest) — conservative
+  square half 2.47 CENTERED (no offset)
+- siting: fresh census -> sitescan (struct101 chassis + film-guard:
+  kochgarden/penrose/honeycomb + sierpinski plinth-on-artwork class) ->
+  seat r>=60 outside closed r33-55 band, SAT law 1.4, walking-line law 3.0;
+  door faces the nearest approach line (yaw chosen so -z local door aims at
+  the approach, struct-101 entry law)
+- terrain 9pt preflight -> PY = lowest corner
+- placer: struct101 chassis (hash gate -> film-guarded SAT fresh census ->
+  upload paced 20s+ -> 1 spawn verb -> PLACED_VERIFIED tuple -> idempotent
+  rerun zero verbs)
+- ENTERABLE: two-way MCPL walk through the door lane (chord 2.2m, clear
+  1.4+ with margin); v2 night frame re-render + native re-judge of
+  gameplay/night on the exact placed bytes
+
+NEXT: 103%3==1 -> placement tick: execute the deferred contract in full,
+then clear native debts (sierpinski aerial + catenoid gameplay/night) if
+provider returns.
+
+BILL EYE-CHECK (one, standing — after placement): an hourglass of stone
+and iron in the open grass — a round stone drum, its walls pinching
+upward through a woven iron waist, flaring again to a stone ring that
+holds nothing but sky. A dark doorway in the base; step inside and look
+straight up: the throat narrows to a circle of light, five small suns
+ringing the crown around it. At dusk from outside: quiet amber points on
+the rim, and nothing else.
