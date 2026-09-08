@@ -1620,3 +1620,28 @@ eye-gate verdicts, a Phase F fresh commission, or a queue widening.
   agents/arthur/reviews/survey33-slice/ (b4-golden-top, b4-golden-threshold).
   B2-inn-lintel/threshold, b34-wayband, b6-lissa, b13-tides all read CLEAN
   this slice (records in SURVEY-PLAN judged index).
+
+## SURVEY INTAKE (survey-79, 2026-09-08)
+
+- `nx-artwalk-h4` — survey-79 native DEFECT probe, Sev 2, decode-settled
+  partial: solo render shows the between-slabs lamp assembly reading
+  FLOATED (bar x≈465-492 with 4-8px sky gaps both ends, glowing head
+  x≈474-484 y≈289-300 highest-contrast element). GLB decode: `lamp`
+  node = glow3 sphere t=(0,2.34,0.28) mounted flush against
+  full-width panel awh4_2 (z 0.177..0.305) — mount exists (h5/lamp
+  precedent class), so NOT free-floating; what reads is a real
+  lintel-like member's OPEN END JOINTS at both slabs at 18m. Owner
+  disposition: artwalk (own domain) — possible fix classes: extend
+  member into slabs / add visible brackets / accept. Everything else
+  CLEAN (identity PASS, spiral+wave dot motifs legible, values PASS).
+  Evidence: reviews/survey79-slice/artwalk-h4/ + decode in SURVEY-PLAN
+  survey-79.
+- `nx-artwalk-b1-hall-charter` — material note, extends the standing
+  b27/b4 brass family note: face view shows rule-lines PASS (4
+  continuous x≈345-616) + spiral glyph band deliberate, but brass
+  reads khaki/olive RGB≈(105-115,105-115,40-55), zero warm-gold cast
+  (5th family data point — same BRASS=mat(0xa0a248,.35,.82) class).
+  Face-on frame is the judging frame; front.png is edge-on
+  (chassis-squared flat rider — struct-104 face-on class), identity
+  FAIL there is presentation, not piece.
+  Evidence: reviews/survey79-slice/artwalk-b1-hall-charter/

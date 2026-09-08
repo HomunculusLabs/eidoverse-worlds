@@ -4462,3 +4462,92 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   corroborated + widened / 1 first-native dissent / 1 margin
   corroborated / 0 dropped. Zero world mutations, zero uploads, zero
   verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-79)
+
+- survey-79 (2026-09-08, NATIVE 5 judgment subjects + ZAI fallback 3
+  disclosed — native flapped per-call this tick: 1210 x2 burned on
+  dodecahedron-gameplay (night frame landed native), 1210 x2 burned on
+  b10, b22 burned first + retry; h2/h4/h6/h7 + b1-second-frame +
+  dodecahedron-night landed native; 18m gameplay primary for
+  h-series/dodecahedron, close-view primary for b-series riders per
+  survey-31 series law; fresh live store bytes 9/9 HTTP 206 curl UA on
+  exact census-79 libs, served-sha16 pins dodecahedron 2651fdb7 / h2
+  93ee3f01 / h4 b30995b3 / h6 8c642f0f / h7 71201d71 / b1 53f77cb8 /
+  b10 54303113 / b22 61148de2 / b23 1cb32012): ARTWALK TAIL +
+  ARRIVAL slice. Selection law run honestly fresh: severity backlog
+  empty (no SHARD EXECUTION section exists, grep exit 1); never-judged
+  pool re-derived on census-79 with the s78 short-name-corpus law —
+  genuine residue = the never-independently-read artwalk tail (h2/h4/
+  h6/h7 statics + b1/b10/b22/b23 riders; ARTWALK-PLAN placement records
+  exist but no survey/improve verdicts, and h-series carried
+  waiver-era "no visual PASS claimed" placements) + the ONE census
+  arrival nx-struct-dodecahedron (struct-107, owner placement-review
+  only — survey-76 hilbert precedent: first independent read owed).
+  b23 NOT JUDGED (run budget; defers as first candidate next tick,
+  honest carry). VERDICTS 0 confirmed-geometry-defect / 5
+  clean-with-margin / 1 decode-settled probe / 1 count-claim
+  decode-refuted / 0 dropped: DODECAHEDRON CLEAN-with-margin — ZAI
+  gameplay (native 1210 x2 burned) 5/5 classes: identity PASS (four+
+  pentagons traceable, chamfer edge network gives cut-gem character),
+  silhouette PASS, integrity PASS (bead stem visible, doorway recess
+  has modeled depth not through-hole), doorway PASS (frame+threshold
+  step, ~2m human scale, margin: interior value near crown value —
+  carried by bevel frame), value MARGIN (bevels do the articulation
+  work; left-face/door-face step narrow) — corroborates struct-107's
+  own native front/gameplay PASS, no new defect class. DODECAHEDRON
+  NIGHT — NATIVE frame: the owner's open v2c bead question pays a
+  data point on SERVED bytes: bead READS as one warm point (474-488,
+  173-188) ~9-10px RGB≈175/120/75 muted amber, zero bloom/halo/spill,
+  no light contribution to crown stone beneath (diffuse-colored dot,
+  not functioning beacon) — struct-106's pre-place FAIL was on
+  pre-rebuild bytes; served v2c reads ONE warm px region vs ZERO.
+  Observer record, struct owns disposition. H2 CLEAN-with-margin
+  NATIVE (helix 5-6 turns even taper reads deliberate x385-447
+  y272-341, borromean weave 3-4 see-through openings, sky through
+  gaps correct; margins: 3-4px pale speck (467,347) likely stray
+  sprite + ambiguous ground streaks left pedestal + hue-driven
+  gold-vs-ground separation fragile desaturated). H4 native read
+  CLEAN-with-margin STRUCTURE + one decode-settled probe routed
+  (see ARTWALK-PLAN SURVEY INTAKE survey-79): identity/silhouette/
+  relief-legibility/value all PASS (spiral ~13-15 dots center ≈
+  (420,325), four wave rows y≈300-363, mosaic-dotted margin clause);
+  the lamp assembly reads FLOATED at 18m (bar x465-492 open joints
+  both ends) — decode: lamp node glow3 sphere t=(0,2.34,0.28) flush
+  against full-width panel awh4_2 (z 0.177..0.305) = mount EXISTS
+  (h5 class), NOT free-floating; open end joints remain a real read,
+  Sev 2 probe to owner. H6 CLEAN-with-margin NATIVE (chime vocabulary
+  complete — suspension disc + graduated tubes + clapper + sail inside
+  clean goalpost frame; margins: 1-2px hanger stem fragile read, one-
+  sided contact shadow, chime-internal value crush near beam). H7
+  CLEAN-with-margin NATIVE (telescope tube angled on pedestal +
+  stilted deck + railing + ~9-10-tread stair STRONGEST element;
+  margins: cannon secondary read, slatted shadow reads ground-object
+  momentarily, post-less lamp dot, narrow olive palette compresses
+  stair-to-ground junction). B1 ZAI close-view: rules PASS 4
+  continuous + glyph band deliberate BUT brass reads khaki/olive
+  (RGB 105-115/105-115/40-55, zero warm gold) — 5th data point on the
+  standing ARTWALK-PLAN b27/b4 brass family note; face judged on
+  right.png (front.png edge-on = chassis-squared flat rider, struct-
+  104 face-on class — the FAIL there is presentation, disclosed).
+  B10 ZAI CLEAN-with-margin (four-axis wind rose reads — bezel +
+  needle + ticks rule out star/gear; brass/bone two-value system
+  unambiguous; margins: N-S axis stub-vs-full-arm 10-14px vs 215px
+  diagonals foreshortening-defensible, right tick inboard asymmetry).
+  B22 ZAI DEFECT-claim on COUNT decode-REFUTED: judge counted 6-of-8
+  rays (SW/SE "empty") — GLB node census proves ALL EIGHT present
+  (way_0..7: four long ±0.07 half-len at cardinals, four short ±0.02
+  at diagonals, alternating exactly; ring closed, datum, pin
+  (0,0.08,0.052), 12° tilt baked in node-0 quaternion q=(-0.105,0,0,
+  0.994)) — probe pitfall 11 law applied, decode outranks render
+  count; verdict CLEAN-with-margin (lower-spoke sub-legibility at
+  solo scale is the true residue; S-gate severed-by-datum read noted
+  as layering flag). Census 307 vs survey-78 baseline 306: ONE
+  arrival nx-struct-dodecahedron (sweep-136 absorbed struct-107;
+  tuple ledger-exact), 0 departures, 0 lib flips, 0 pos moves on 306
+  shared ids; new baseline /tmp/survey79-census.json (307). Gate:
+  ALL PASS real exit 0 first try at 6cea9e13. Routing: ONE note
+  ARTWALK-PLAN SURVEY INTAKE survey-79 (h4 decode-settled probe Sev 2
+  + b1 brass-family extension); one ledger append (loop law 4). Zero
+  world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
