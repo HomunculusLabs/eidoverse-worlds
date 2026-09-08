@@ -5786,3 +5786,77 @@ closing into one gem-like whole, every edge chiselled, one small doorway
 leaning out of the front face. Step in: the facets converge overhead into a
 pentagon of sky-less stone, the golden ratio in every diagonal around you.
 At dusk: one quiet amber point at the crown, and nothing else.
+
+
+## struct-107 (2026-09-08): R10-8 THE DODECAHEDRON — deferred contract
+## EXECUTED: night-bead cured (v2c crest-seat), PLACED_VERIFIED
+
+Cadence 107%3==2 -> placement tick; the pinned struct-106 contract executes
+in full (own deferred work outranks shard). Shard: no OPEN nx-struct rows
+(ledger struct-96..106 terminal; survey-77 routed only unowned nx-craft-
+candidates). Gate ALL_PINS_OK 15/15 real exit 0 at tick-start + immediately
+pre-mutation (both bun, no pipe).
+
+NIGHT-BEAD RESOLUTION (fail-closed first, as pinned):
+- ROOT CAUSE, decode+render+native triangulated: NOT exposure, NOT export —
+  OCCLUSION (struct-52 class). v1 bead top 5.079 = envelope crest AT the
+  zenith face center, but the crown ridge ring stands at the top-face
+  apothem (1.53m out, crest 5.03-5.079): ray from eye 1.65m to bead passes
+  y = 5.079 - 3.429*(1.53/d) < 5.079 for ALL finite d — the bead is hidden
+  from every ground vantage, any emissive. Falsified native on the banked
+  v1 aerial: warm bead READS from above (emissive path fine) while the
+  eye-level night frame reads 0 warm px. Occlusion beats emissive.
+- CURE ARC v1 -> v2 -> v2b -> v2c: v2 PIN 0.55 crest-seat cured night
+  (58 warm px, native PASS) but native 18m day flagged the bare brass pin
+  "antenna risk" (twice, with fix list: mass/transition/taper); v2b brass
+  collar+mass still flagged (brass rod = antenna language). v2c: the
+  antenna is KILLED BY MATERIAL — stone socket (r 0.13->0.16, h 0.12) +
+  tapered stone spire (r 0.052->0.030 over h 0.50, ridgeStone chisel tone)
+  + brass bead only at the terminal (polish-278 lineage: day reads unlit
+  warm stone, night reads one amber point). In-code sightline assert added
+  (bead-top ray over ridge crest + 0.05 at 18m).
+- v2c sha 671b99124ba551829f1cb1d76ef29944c80a433007f334a80e8f9aa8b5addad9
+  x2 deterministic; decode struct106-decode re-pinned ALL PASS 17/17 exit 0
+  (bead 5.644, crest 5.739, socket/pin KEEP nodes, door corridor 0/1615);
+  warm-px night 69 maxR 146 (= hilbert control class); NATIVE night PASS
+  3/3 (exactly one crisp amber point, zero bloom, silhouette holds) and
+  NATIVE 18m day PASS (obelisk/gnomon crown "placed on purpose", zero hard
+  defects). Placed bytes = judged bytes.
+
+SITE (film-guarded scan struct107-scan, fresh census 306, 905 lawful
+seats): az184 r110 (-7.67, PY, 109.73) yaw pi — the S mathematics axis
+extends at its own standing cadence (koch az184 r90 -> hilbert az184 r100
+-> dodeca az184 r110, 10m pitch). The layered S reveal: 2.9m labyrinth
+walls, then the 5.7m gem rising behind. SAT worst
+nx-struct-hilbertlabyrinth +2.61 (law 1.4, worst BY DESIGN adjacency same
+class as koch->hilbert); film clearance 13.6m (kochgarden); walk lines
+35.8m. Terrain 9pt spread 9.9mm, lowest rim-sw -0.028895 = PY. r110
+outside closed r33-55 band. Door (local +z) faces the village N approach
+(struct-105 entry law).
+
+PLACEMENT: upload store/671b99124ba55182.glb (0 429s), 1 spawn verb,
+PLACED_VERIFIED exact tuple pos [-7.6700, -0.0289, 109.7300] yaw 3.1416,
+census 306->307. Rerun REFUSED fresh-only (zero verbs) — pinned live.
+Comps {} (bead emissive material, glow_dd_1/pin/socket KEEP).
+
+ENTERABLE: two-way MCPL walk ALL_PASS 6 legs maxArrival 0.335m — village
+approach -> threshold through the notch -> interior center (facets converge
+overhead) -> reverse -> exit. Support-seam abstentions = known diagnostic
+class on foreign entities.
+
+FRAMES: reviews/struct107-dodecahedron-v2/{v2b,v2c}/ (10-view sets each).
+
+NEXT: 108%3==0 -> REFINEMENT tick if pool non-empty (survey-76 hilbert
+mouth-dressing margin is polish-tier, not routed; no survey rows since
+struct-90), else build (R10-9 form-ledger gap). No native debts open for
+this lane.
+
+BILL EYE-CHECK (one, standing): walk south past the Bridge of Nines and
+the snowflake garden, through the walled labyrinth, and when the meadow
+opens again there is a new silhouette on the same line — a grey stone gem
+of twelve pentagons, larger than the labyrinth walls, rising behind them,
+one small doorway leaning out of its front face, a slender stone spire at
+its crown tipped with a bead of brass. Step in: the facets close overhead
+into a pentagon of converging stone, the golden ratio in every diagonal.
+At dusk, from outside: one quiet amber point at the spire's tip, and
+nothing else.

@@ -58,7 +58,7 @@ const R = 3.12;                       // circumradius
 const T = 0.18;                       // plate thickness
 const DOOR_W = 1.60;                  // in-plane door width (law ≥1.4 clear)
 const DOOR_H_VERT = 2.20;             // vertical clear height at outer plane
-const BR = 0.075;                     // bead radius (dusk lineage)
+const BR = 0.095;                     // bead radius (dusk lineage; v2b mass)
 
 // materials — R10 mathematical-stone lineage (sierpinski ss_, koch, penrose
 // cool greys); caps one tone warmer, ridges darkest chisel tone.
@@ -317,11 +317,46 @@ for (const [key, e] of edgeFaces) {
     }
 }
 
-// ---- crown bead at zenith face center ----------------------------------------------
+// ---- crown finial: brass pin + bead, crest-seated (struct-107 cure) ---------------
+// v1 seated the bead AT the zenith face center — decode-proven geometry, but
+// the crown ridge ring (crest 5.079 at apothem 1.53m) occludes it from every
+// ground vantage: ray from eye 1.65m to bead top 5.079 passes 5.079−(5.079−
+// 1.65)·1.53/d < ridge crest for ALL finite d (struct-52 class — occlusion
+// beats emissive; native aerial on v1 bytes confirmed the bead + emissive
+// read fine from above, 0 warm px at eye level). Crest-seat (polish-272/278
+// finial lineage): PIN 0.55 lifts bead top to ~5.65 → center ray clears the
+// ridge + 0.05 margin from d ≥ 12m (18m audit distance passes).
+// v2b: collar disc at pin base + bead 0.075→0.095 + pin thickened — native
+// 18m judge read the bare pin as "stray spike / antenna" risk; mass at the
+// crown is what makes a finial read intentional (polish-272 collar+spire).
+// v2c: brass rod read "antenna" at 18m day (native, two judges) — replace
+// with stone socket + tapered stone spire (obelisk/gnomon language, darkest
+// chisel tone): mass + transition + taper are the intentional-read cues;
+// ONLY the bead stays brass-emissive so night keeps one quiet amber point
+// (polish-278 ember-bead lineage: day reads unlit warm stone).
+const PIN = 0.62;                    // spire height (socket 0.12 + spire 0.50)
+const socket = new THREE.Mesh(new THREE.CylinderGeometry(0.13, 0.16, 0.12, 8), ridgeStone);
+socket.position.set(topF.C.x, topF.C.y - 0.03 + 0.06, topF.C.z);
+socket.name = "glow_dd_socket";
+g.add(socket);
+const pin = new THREE.Mesh(new THREE.CylinderGeometry(0.030, 0.052, 0.50, 8), ridgeStone);
+pin.position.set(topF.C.x, topF.C.y - 0.03 + 0.12 + 0.25, topF.C.z);
+pin.name = "glow_dd_pin";
+g.add(pin);
 const bead = new THREE.Mesh(new THREE.SphereGeometry(BR, 12, 10), brassGlow);
-bead.position.set(topF.C.x, topF.C.y + BR - 0.03, topF.C.z);
+bead.position.set(topF.C.x, topF.C.y - 0.03 + PIN + BR, topF.C.z);
 bead.name = "glow_dd_1";
 g.add(bead);
+// sightline assert: bead-top ray over the ridge crest must clear from 18m
+{
+    const eyeY = 1.65, d = 18;
+    const beadTop = topF.C.y - 0.03 + PIN + 2 * BR;
+    const apothem = EDGE / (2 * Math.tan(Math.PI / 5));       // top-face inradius
+    const ridgeCrest = topF.C.y + RIDGE * 0.45;
+    const rayAtApothem = beadTop - (beadTop - eyeY) * (apothem / d);
+    if (rayAtApothem < ridgeCrest + 0.05) throw Error(`crest sightline fail: ray ${rayAtApothem.toFixed(3)} <= ridge+margin ${ridgeCrest + 0.05}`);
+    console.log(`crest sightline OK: bead-top ray ${rayAtApothem.toFixed(3)} clears ridge+margin ${(ridgeCrest + 0.05).toFixed(3)} at 18m`);
+}
 
 // ---- door lane assertion (walkable aperture clear of solids) ------------------------
 {
@@ -370,7 +405,7 @@ g.add(bead);
     if (Math.abs(env.max.x) > beltMax + TOL || Math.abs(env.min.x) > beltMax + TOL ||
         Math.abs(env.max.z) > beltMax + TOL || Math.abs(env.min.z) > beltMax + TOL)
         throw Error(`x/z reach ${env.min.x.toFixed(2)}..${env.max.x.toFixed(2)} / ${env.min.z.toFixed(2)}..${env.max.z.toFixed(2)} vs belt ${beltMax.toFixed(3)}`);
-    const expectTop = 2 * RI + BR - 0.03 + RIDGE * 0.45;
+    const expectTop = 2 * RI - 0.03 + PIN + 2 * BR;
     if (Math.abs(env.max.y - expectTop) > 0.06) throw Error(`crest ${env.max.y.toFixed(3)} vs expected ~${expectTop.toFixed(3)}`);
     const foot = sz.x * sz.z;
     if (foot < 8) throw Error(`footprint ${foot.toFixed(1)} < 8`);

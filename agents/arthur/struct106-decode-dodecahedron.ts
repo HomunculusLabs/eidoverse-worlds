@@ -16,15 +16,17 @@ const jl = bytes.readUInt32LE(12);
 const BIN = 20 + jl + 8; // end of JSON chunk + BIN header (8B) = binary start
 const j = JSON.parse(bytes.subarray(20, 20 + jl).toString());
 const names: string[] = j.nodes.map((n: any) => n.name);
-const R = 3.12, RIDGE = 0.10, BR = 0.075, T = 0.18;
+const R = 3.12, RIDGE = 0.10, BR = 0.095, T = 0.18, PIN = 0.62;
 const PHI = (1 + Math.sqrt(5)) / 2;
 const RI = R * Math.sqrt((5 + 2 * Math.sqrt(5)) / 15); // exact regular-dodeca inradius
-ck("sha pinned", sha === "e30bbfa932e24dc17638dbf7db1abad830744e5182e91b9eb2eb424d06cf150c", sha.slice(0, 16));
+ck("sha pinned v2c (stone obelisk spire + brass bead)", sha === "671b99124ba551829f1cb1d76ef29944c80a433007f334a80e8f9aa8b5addad9", sha.slice(0, 16));
 ck("node budget 1-45 (honest under-floor merge disclosed)", j.nodes.length >= 1 && j.nodes.length <= 45, `${j.nodes.length} nodes / ${j.meshes.length} meshes`);
 ck("texMat lanes", ["dd_cap", "dd_face", "dd_ridge"].every(m => j.materials.some((x: any) => x.name === m)));
 const glow = j.materials.find((m: any) => (m.emissiveFactor ?? [0, 0, 0]).some((c: number) => c > 0));
 ck("brass emissive exported", !!glow, glow?.name);
 ck("bead KEEP node", names.includes("glow_dd_1"));
+ck("pin KEEP node (crest-seat)", names.includes("glow_dd_pin"));
+// v2c: collar (brass, v2b) superseded by stone socket — socket check below
 
 // ---- true world-frame envelope: transform each mesh node's accessor by its TRS
 const views = j.bufferViews ?? [];
@@ -46,13 +48,14 @@ for (const nd of j.nodes) {
 }
 const bead = j.nodes.find((n: any) => n.name === "glow_dd_1");
 const bt = bead?.translation ?? [0, 0, 0];
-ck("bead at zenith face center (0, 2ri+BR−0.03, 0)", Math.abs(bt[0]) < 1e-6 && Math.abs(bt[2]) < 1e-6
-    && Math.abs(bt[1] - (2 * RI + BR - 0.03)) < 0.01, `${bt.map((v: number) => v.toFixed(3)).join(",")} want y ${(2 * RI + BR - 0.03).toFixed(3)}`);
+ck("bead crest-seated (0, 2ri−0.03+PIN+BR, 0)", Math.abs(bt[0]) < 1e-6 && Math.abs(bt[2]) < 1e-6
+    && Math.abs(bt[1] - (2 * RI - 0.03 + PIN + BR)) < 0.01, `${bt.map((v: number) => v.toFixed(3)).join(",")} want y ${(2 * RI - 0.03 + PIN + BR).toFixed(3)}`);
+ck("stone socket KEEP node (v2c)", names.includes("glow_dd_socket"));
 ck("below-grade none", wmn[1] >= -0.005, `y min ${wmn[1].toFixed(4)}`);
 // horizontal reach: vertex circumradius R + ridge seat outward ~0.05·√(1−out.y²)·? — cap at R + 0.09
 const reach = Math.max(Math.abs(wmx[0]), Math.abs(wmn[0]), Math.abs(wmx[2]), Math.abs(wmn[2]));
 ck("horizontal reach ≈ R..R+0.09", reach > R - 0.01 && reach < R + 0.095, `${reach.toFixed(3)} (R ${R})`);
-ck("crest = 2ri + 2BR − 0.03", Math.abs(wmx[1] - (2 * RI + 2 * BR - 0.03)) < 0.01, `${wmx[1].toFixed(3)} want ${(2 * RI + 2 * BR - 0.03).toFixed(3)}`);
+ck("crest = 2ri − 0.03 + PIN + 2BR", Math.abs(wmx[1] - (2 * RI - 0.03 + PIN + 2 * BR)) < 0.01, `${wmx[1].toFixed(3)} want ${(2 * RI - 0.03 + PIN + 2 * BR).toFixed(3)}`);
 ck("vertical entity (h > 2.2)", wmx[1] - wmn[1] > 2.2, `h ${(wmx[1] - wmn[1]).toFixed(3)}`);
 ck("no NaN accessor", !j.accessors.some((a: any) => a.min?.some(isNaN) || a.max?.some(isNaN)));
 
