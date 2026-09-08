@@ -5614,3 +5614,69 @@ ladders stands obliquely to your path — five ladders frozen mid-slide
 between a stone wall and the ground, their rungs catching the light, one
 warm brass curve touching every one of them. At dusk: the amber astroid
 line, quiet and crisp, and nothing else.
+
+## struct-105 (2026-09-08): R10-7 THE HILBERT LABYRINTH — authored v2,
+## PLACED_VERIFIED (mouth-bypass bug caught by native judge + decode
+## re-armed; full-path walk proof)
+
+Cadence 105%3==0 nominal refine slot; pool EMPTY fresh (no survey routes
+since struct-90; survey-72/73 read struct works CLEAN); shard zero OPEN
+nx-struct rows (full-block parse). Gate ALL_PINS_OK 15/15 real exit 0 at
+tick-start + immediately pre-mutation.
+
+STANDING DEBT attempted FIRST: sierpinski aerial native re-judge — provider
+flapped down this window (1210 x2 + paced retry; ZAI MCP fallback also
+timed out 300s). Debt STAYS OWED, disclosed; the three aerial facts remain
+decode-proven.
+
+CONCEPT (written before build): the form ledger's missing SPACE-FILLING
+CURVE family — ledger-checked fresh (trefoil nearly false-claimed a gap:
+closed-curve topology already stands; hilbert/space-filling: zero
+presence). ONE IDEA: ONE PATH, NO CHOICES. The walls ARE the order-2
+Hilbert curve: 4x4 cells, 24 adjacencies = 15 doors (consecutive sequence
+pairs) + 9 solids; ONE mouth (1.48m) into the START cell; heart = the
+dead-end far cell with stone socket + iron pin + brass bead (glow_hl_1,
+crest 2.925). Corridors 1.58m, walls 0.42m h 2.28/2.36 parity; room gates
+honest (70.9 m^2 >= 16, h >= 2.2) -> exact trimesh. Path 31.8m vs 7.8m
+direct.
+
+BUILD ARC v1->v2: v1 judged NATIVE front — masonry PASS, zero floats, no
+z-fight, BUT "the entrance is absent": I cut the mouth on the -z BACK bar
+while the start cell sits at +z — the mouth opened straight into the HEART
+cell, bypassing the whole path (native judge catch; decode had verified
+maze doors but never mouth-opens-into-start). Fix: mouth moved to the +z
+front bar over the start cell; decode re-armed with back-bar continuity,
+mouth->start-cell, and start-center checks. v2 sha
+38d3bb8f49a08af9ccf6567430ca0f89597c561e5fab24eedcb7e02a653ba0e2 x2
+deterministic (mtime verified); decode ALL PASS exit 0 (540 stone tris =
+45 boxes x 12 exact; 15/9 doors/solids from bytes; envelope +/-4.21, y
+0..2.925; 16 cells walkable; bead at heart). v1 native positives transfer
+(stone bytes identical family); v2 front native re-judge DEBT (provider
+flap mid-tick). Frames: reviews/struct105-hilbertlabyrinth/ (10, v2).
+
+SITE: az184 r100 (-6.98, 99.76) yaw pi — the S mathematics-gardens axis
+extends: kochgarden az184 r90 stands 10.0m inbound; the labyrinth is the
+same order-family elevated (struct-103 precedent). Mouth faces the village
+approach. r100 outside the closed r33-55 band. Film-guarded scan 33 lawful
+(catenoid added to the guard set); SAT worst lavender-0053 +7.03 fresh-305
+(law 1.4); S-spoke 7.0m (law 3.0); film 10.0m. Terrain 9pt spread 22.3mm,
+lowest rim-sw -0.01822 = PY. PLACEMENT: upload store/38d3bb8f49a08af9.glb
+(0 429s), 1 verb, PLACED_VERIFIED exact tuple, census 305->306,
+idempotent rerun ZERO verbs. Comps {} (bead emissive).
+
+ENTERABLE: full-path two-way MCPL walk ALL_PASS — 35 legs, maxArrival
+0.4m: mouth -> all 16 cells in Hilbert order -> heart -> full reverse ->
+exit; every door threaded both directions.
+
+NEXT: 106%3==1 -> BUILD tick (R10-8 form-ledger gap) unless survey routes
+reopen rows; sierpinski aerial native debt STILL OWED.
+
+BILL EYE-CHECK (one, standing): walk south past the Bridge of Nines and
+the snowflake garden, and where the meadow opens there is a walled square
+of grey stone. Find the one doorway — there is only one — and step in:
+the path turns at every corner, past every cell of the garden, and there
+is never a choice to make. The way ends at a small iron pin in the stone,
+a brass bead at its top; you can see the doorway you came in by, a few
+steps away as the crow flies — and half the village away by foot. At dusk:
+that single amber bead over the walls, marking the heart. Retrace your
+steps exactly; it is the only way out.
