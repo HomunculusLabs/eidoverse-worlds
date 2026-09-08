@@ -1,6 +1,47 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-143 — lawful HOLD (33rd post-close, NO PLACEMENT; interrupted-window recovery claimed fresh)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
+  exit 0 at tick-start HEAD ea06542e (city-97 sibling); interlane md5
+  f6254cd0 pin-exact. Fresh census **295 = 294 + ONE arrival**
+  `nx-struct-fifthbench` (−23.5, −0.04, −51) yaw −0.4328 lib 62f33173 —
+  struct-92 sibling, ledger-matched exactly, NOT dress intake; epoch diff
+  vs dress-142 capture +1/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-143b.py` HOLD_VERIFY_PASS exit 0, fresh UA'd
+  fetch; capture saved /tmp/dress143-census.json); dress domain 45 = 29
+  fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy. Round-3 closers
+  PINS_EXACT 4/4, worst delta 0.0: foxden 856deec5, lanternhook 639c5480,
+  seats cb34bd36, streamstones aabbc23d (radian law). **Timberyard cure
+  pin EXACT** — lib dfafb8c8 at (76.7, −0.006, 69.4) yaw −2.356194, the
+  dress-142 v9 re-place standing unchanged.
+- **Interrupted-window recovery, disclosed**: a prior 20:27 window had
+  claimed dress-143 and died before running its probe — stale probe
+  `/tmp/dress-hold-verify-143.py` baselined against dress-140 expecting
+  zero arrivals (struct-92 landed since, census 295) and carried no
+  timberyard pin. It never executed (no dress143 capture existed).
+  Recovery per artwalk-32 class: claimed the tag fresh, rewrote the probe
+  with the dress-142 post-cure baseline + explicit expected-arrival
+  ledger-match + cure pin, ran it once clean. One probe self-catch this
+  tick: the dress-142 capture is a dict (`entities` key) vs dress-140's
+  bare list — load normalized at source before verdict.
+- **Shard/intake (re-checked at source)**: IMPROVE-PLAN all 9 sharded
+  `nx-dress-` queue rows terminal (rows 29–38, row 38 declares queue
+  EMPTY); no round-4/5 section; zero STATE-OPEN rows. survey-58 (newest,
+  all-NATIVE slice) sole finding is `nx-struct-halt` Sev 4 — struct
+  domain, already routed to STRUCTURES-PLAN. Zero dress intake.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57,
+  md5 12cec3fa; no ruling commits in the trail. Blocked on Bill
+  standing (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains
+  the two one-line rulings in `reviews/dress-round3-eye-gate.md`;
+  either releases real placement work next tick.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-142 — survey-57 timberyard CURE (post-close, PLACED)
 
 - **Intake executed this tick**: survey-57 (ccdaafb6, read fresh) CONFIRM
