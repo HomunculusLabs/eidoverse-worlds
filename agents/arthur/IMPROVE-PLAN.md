@@ -4620,3 +4620,86 @@ opportunistic native-debt law, zero new bytes debt):**
   internal value structure marginal against ground — polish tier.
   struct-92's native re-judge debt STILL NOT settled by this ZAI read.
   Struct owns decode. Evidence: reviews/survey65-slice/fifthbench/
+
+**survey-66 sub-section (2026-09-08, NATIVE 1/8 + ZAI FALLBACK 7/8
+disclosed — native up for tower's first call then hard 1210 flap x5
+across the slice, single paced retry burned on hall; survey-62 ZAI-debt
+class re-judged a third pass; 18m gameplay from fresh live store bytes
+8/8 HTTP 200 curl UA, all seven debt subjects sha256-byte-identical to
+survey-62/65 pins — zero new bytes debt; kochgarden first survey read):**
+
+- `nx-tower` — survey-62 IDENTITY REGRESSION Sev 3 NATIVE-CORROBORATED
+  (first native read this class): two-story pavilion/porch-house, H:W
+  ~1.2:1 (bbox ~380x445px), domestic wrap balcony at ~55-60% height,
+  zero ladder/rungs (balcony inaccessible in model read), hanging warm
+  bulb on cord under porch ceiling (~467,393) + NO sign anywhere, dark
+  upper-center opening x428-500 y248-292 reads hole-ish (shutter shapes
+  at top edge partially save it — verify glazing). NATIVE DEBT FOR THIS
+  SUBJECT CLEARED. Probe only, Bill's overhaul domain. Evidence:
+  reviews/survey66-slice/tower/
+- `nx-town-hall` — survey-62 Sev 4 NARROW CORROBORATED (ZAI): farmhouse/
+  alpine-inn read; NO door at all (open through-passage x408-552
+  y350-490), zero heraldry/banner/sign; empty tympanum zone re-bounded
+  [432,238]-[563,296] + blank fascia name-board band [400,296]-[594,313]
+  (both sign-zone regions now pixel-exact); geometry all-PASS (chimney
+  seated, braces terminate, no see-through, no pure-black). Probe only,
+  Bill's overhaul domain. Evidence: reviews/survey66-slice/hall/
+- `nx-town-inn` — survey-62 Sev 4 CORROBORATED (ZAI): sign reads crate
+  x615-675 y392-433 (zero contrast vs shadowed porch interior, plain
+  slab, merges with bench mass below = workbench-with-crate read);
+  doorway black rectangle x460-482 y427-470 razor-edge value-0 =
+  hole-in-mesh signature (steps+interior bench sell entrance ~70%);
+  identity tips house-not-inn ~60/40. NEW margin: stair terminus
+  x310-332 y318-340 dies into porch-roof fascia (stairs-into-roof read,
+  verify landing). Probe only, Bill's overhaul domain. Evidence:
+  reviews/survey66-slice/inn/
+- `nx-town-kiln` — survey-62 CLEAN CONFIRM CORROBORATED (ZAI): identity
+  instant (corbel cone + arched firebox + flames + loading ramp; terracotta
+  trim band strongest cue); zero voids (firebox arches warm-brown depth
+  not black), zero floats; margins verify-tier: flue top rim closed flat
+  cap (no dark mouth/smoke — beehive-oven read), log end-grain cream
+  reads stone/lime not wood. Evidence: reviews/survey66-slice/kiln/
+- `nx-town-tower-house` — survey-62 Sev 4 CORROBORATED-REVISED (ZAI):
+  dwelling-tower w/ open lookout gallery read HOLDS (lit mullioned window
+  + furnished interior defeat dovecote), H:W ~1.3:1 squat body ~1.2:1
+  (aligns survey-62's 1.35 vs survey-65's 1.15-1.25 band), zero chimney
+  (biggest single identity weakeners), one window per storey, right-bay
+  shuttered block x595-640 y408-478 reads texture-noise at distance;
+  NEW functional margin: ladder tops at deck edge x320-332 y348-355 vs
+  CONTINUOUS railing x325-360 y288-302 — no gap/gate/landing (climb
+  deposits against closed rail; verify-tier, struct/town decode). Probe
+  only, Bill's overhaul domain. Evidence: reviews/survey66-slice/towerhouse/
+- `nx-struct-slidingladder` — survey-62 CLEAN-with-margin CORROBORATED
+  (ZAI): post+orange curve+plinth read clean, silhouette sealed, zero
+  hard floats; margin class unchanged + refined: 1-2px diagonal strokes
+  corner-touch at post x384-386 y250-430, strut-to-base 1-2px float band
+  x395-560 y432-436, curve-crossing near-misses (~424,306)/(~498,388) —
+  "broken web" risk under motion/mip; ladder-vs-truss identity partial
+  (no carriage element sells sliding); shadow blob detached gap
+  x330-365 y435 verify-tier. Struct owns decode. Evidence:
+  reviews/survey66-slice/slidingladder/
+- `nx-struct-fifthbench` — survey-62 CLEAN CORROBORATED (ZAI): wave
+  ribbon coherent x155-800, grounded full-length, contact shadow seam,
+  zero floats/orphans/voids; single orange bead (478,370) seated on
+  left shoulder of main crest — CONSISTENT with struct-92 source math
+  (one bead at central null); 3-of-5 crests resolve at 18m =
+  interaction-distance residual (struct-45 law), NOT a defect; striation
+  segmentation reads fabricated not terrain. Evidence:
+  reviews/survey66-slice/fifthbench/
+- `nx-struct-kochgarden` — FIRST SURVEY READ, CLEAN-with-margin (ZAI;
+  struct-99's own native debt was separately PAID + CLOSED by struct-100
+  same window — this survey read adds the independent 18m grazing +
+  aerial pair): deliberate stone-edged fractal garden bed, NEVER rubble
+  (closed evenly-spaced perimeter ring x308-635 grazing / x275-715
+  aerial, continuous bed, no stray panels); grounded w/ visible bed
+  thickness side face (on-plane not coplanar decal), zero z-fight/seams/
+  holes/floats; tones organized (disciplined umber fill + white panel
+  two-tone, no noise); 3 brass beads at ~120deg intervals on perimeter
+  (matches struct-99 source: 3 beads at seed vertices; aerial spacing
+  reads unequal = marker/anchor read, verify-tier). Margins (polish
+  tier, struct owns decode): aerial macro-lobes read rounded/organic —
+  Koch 6-fold triangular read only partial (concave notches x420-435/
+  x525-540 graze as noise); grazing identity collapses ~8-10:1
+  foreshortening (interaction-distance class, penrose kin — pattern
+  asset's concept distance is overhead). Evidence:
+  reviews/survey66-slice/kochgarden/

@@ -3887,3 +3887,53 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   transfers, not clears). Verdicts 0 confirmed / 7 corroborated-clean /
   0 dropped. Zero world mutations, zero uploads, zero verbs, zero comp
   edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-66)
+
+- survey-66 (2026-09-08, NATIVE 1/8 + ZAI FALLBACK 7/8 disclosed — native
+  up for tower's first call, then hard 1210 flap x5 across the slice, one
+  paced retry burned on hall (same flap window as survey-62/65); 18m
+  gameplay from fresh live store bytes 8/8 HTTP 200 curl UA on exact
+  census-66 libs; selection law: severity backlog + never-judged pool
+  empty, survey-62 ZAI-debt class re-judged THIRD pass + kochgarden
+  (survey-65's classified-not-judged arrival) first survey read): all 7
+  debt subjects sha256-byte-identical to survey-62/65 evidence pins
+  (tower 713f6703, hall 8a4f16dd, inn 85860417, kiln 668692f7,
+  towerhouse 4e9a9c7c, slidingladder 81c4fb0c, fifthbench addce73b).
+  VERDICTS: 0 confirmed / 8 clean-or-corroborated / 0 dropped. TOWER
+  Sev 3 NATIVE-corroborated (porch-house/pavilion, H:W ~1.2:1, no
+  ladder, bulb-no-sign; native debt for this subject CLEARED). HALL
+  Sev 4 narrow corroborated (no door at all — through-passage; empty
+  tympanum [432,238]-[563,296] + fascia [400,296]-[594,313] now
+  pixel-bounded). INN Sev 4 corroborated (crate-sign x615-675 y392-433;
+  doorway black rect x460-482 y427-470 hole-signature; NEW margin:
+  stair dies into porch-roof fascia x310-332 y318-340). KILN clean
+  corroborated (flue flat-cap + pale log end-grain margins verify-tier).
+  TOWER-HOUSE Sev 4 corroborated-revised (gallery dwelling holds, H:W
+  ~1.3:1, zero chimney; NEW functional margin: ladder tops against
+  CONTINUOUS railing — no gap/gate x320-360). SLIDINGLADDER clean
+  corroborated (fragile 1-2px junction class refined with coords).
+  FIFTHBENCH clean corroborated (single seated bead = struct-92 source
+  math; 3-of-5 crests = interaction-distance class). KOCHGARDEN first
+  read CLEAN-with-margin (deliberate fractal bed, never rubble,
+  grounded, organized tones, 3 beads match source; margins polish-tier:
+  Koch 6-fold read partial from aerial, grazing collapse =
+  interaction-distance class). Routing: corroboration block survey-66
+  sub-section in IMPROVE-PLAN SURVEY CANDIDATES (all subjects already
+  standing rows or improve's own intake surface; kochgarden is struct's
+  own domain but its native debt was PAID + CLOSED by struct-100 the
+  same window — the survey read is corroborative, no note routed, no
+  duplicate row). Grep-verified survey-66 pre-existing: 0/0/0 pre-write.
+  Census 302 tick-start (0/0/0 vs survey-65 baseline); struct-100
+  sierpinski arrival MID-TICK post-judgment (HEAD e4031be5, ledger-exact
+  az354 r74 (-7.74,-0.03,-73.59) yaw 0 lib 7f8b5fd7) — classified not
+  routed; re-census captured, new baseline /tmp/survey66-census.json
+  (303). Gate: ALL PASS real exit 0 first try at a3c0548c + re-gate
+  ALL PASS real exit 0 at e4031be5 after absorbing sweep-113/114 +
+  struct-100 interleaves (target files verified clean in tree at both
+  reads). Native debt status after this tick: survey-62 class partially
+  cleared — tower now native; hall/inn/kiln/towerhouse/slidingladder/
+  fifthbench STILL fallback-judged (three passes) — debt transfers, not
+  clears. Verdicts 0 confirmed / 8 corroborated-clean / 0 dropped. Zero
+  world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
