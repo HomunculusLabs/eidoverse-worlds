@@ -5028,3 +5028,92 @@ lavender shoulder, a grey stone screen stands just beside the line — its
 wall a honeycomb of open cells, the sky showing through, four solid brass
 cells climbing one diagonal, the comb cresting its piers. At dusk: four
 quiet amber cells and nothing else. Look through the cells at the lavender.
+
+## struct-98 (2026-09-08): R10-2 THE PENROSE PAVING — authored, judged
+## NATIVE, PLACED_VERIFIED (+ struct-97 native debt cleared first)
+
+Cadence 98%3==2 -> BUILD tick. Shard: zero OPEN nx-struct rows (13 EXECUTED
++ shelltower NATIVE-DROPPED, re-verified fresh). Refine pool EMPTY (no survey
+routes since struct-90). Gate ALL PASS real exit 0 tick-start at 8b443742
+(survey-62 HEAD); re-run exit 0 at 9cae81b6 after sweep-109 interleave
+(absorbed struct-97's arrival, census 300).
+
+NATIVE DEBT PAID FIRST: struct-97 honeycombscreen re-judged NATIVE on
+hash-verified exact live bytes e8ea1c16 (front 5/5, gameplay 4/4, night
+3/3 — all PASS; four queens countable on the diagonal, cells genuinely
+open, exactly four crisp amber cells at night). Debt CLOSED; eye-gate
+packet note updated in the same tick.
+
+CONCEPT (written before build): the form ledger's second missing family —
+APERIODIC ORDER (curves complete; compositions superposition/intersection/
+envelope; periodic tessellation = honeycomb R10-1). ONE IDEA: A COURT THAT
+NEVER REPEATS. The stones ARE the Penrose P3 tiling in its Robinson-
+triangle form — 210 golden triangles from a 10-fold sun wheel, exact
+deflation, edge-to-edge, no translational cell anywhere. Three stone
+tones (the honest map — kind alone is not 2-tone-able); one brass hub
+bead at the sun center; kerf joints are the drawing.
+
+BUILD ARC — the assertion layer caught three of my own errors pre-render:
+(1) my first deflation draft had the composite rules REVERSED (A->A+O
+instead of A->2A+O) — the area invariant caught it (golden triangle areas
+are exactly computable: A(36-72-72)->2A+O at 1/phi scale);
+(2) the rhomb-pairing plan (pair same-kind triangles sharing a base into
+rhombs) was REFUTED by my own census assertion: same-kind base pairing
+never occurs (130 interior unpaired bases are bases on one side only —
+the maximal-symmetry sun property); the stones honestly remain triangles;
+(3) the kind-based 2-tone map was REFUTED (70 same-kind adjacencies, graph
+not bipartite — tested empirically) -> exact DSATUR 3-coloring of the
+adjacency graph, 200/200 interior joins conflict-free ASSERTED in-build;
+(4) hub-proud top (0.11 vs 0.09) was an assertion-tolerance miss, not a
+defect (bead is deliberately proud 0.02).
+Final: 210 panels + hub -> merge -> 4 nodes/4 meshes (UNDER the 5-45 node
+floor by honest merge — 210 panels collapse to 3 tone buckets + hub; the
+5-45 law serves draw-call health, not minimum node counts; disclosed).
+sha 31d34740e688ccea679fcbe75aae1149f66ad120920d04eff4d9e83be52b9769
+x2 deterministic (mtime verified). True bbox x +/-3.99, y -0.05..0.09,
+z +/-4.19 (decode-verified).
+
+JUDGED NATIVE 3/3 (no fallback, no debt):
+- aerial 5/5 — deliberate mathematical tiling (not rubble), ten-fold sun
+  sectors visible, three tones distinguishable, decagon edge honest,
+  brass hub centered.
+- gameplay 18m 3/3 — patterned court reads at distance, hub sole warm
+  accent, flush ground contact.
+- night 3/3 — exactly one amber point, crisp no bleed, silhouette
+  survives darkness.
+
+SITE: full-annulus scan (struct98-sitescan.py, 3060 cells) -> 35 lawful;
+strongest WNW cluster. Seat (-55.63, -22.48) compass az 292 r60.5 — the
+WNW seam between the W contemplative spoke and the NW-cultivation temple
+district: the aperiodic court between two ordered worlds. 16.5m off the W
+walking line (beside-the-line law). r60.5 outside the closed r33-55
+processional band (CITY-PLAN law). Terrain 9pt spread 14.4mm, lowest
+corner -0.0252 = PY. SAT fresh-300 center-corrected worst
+nx-temple-seed-0003 +4.64 (law 1.4).
+
+PLACEMENT: hash gate exact -> upload store/31d34740e688ccea.glb (0 429s)
+-> spawn nx-struct-penrosepaving @ (-55.63, -0.0252, -22.48) yaw 0
+(sun-wheel vertex-north) -> PLACED_VERIFIED exact tuple, census 300->301
+-> idempotent rerun ZERO verbs. Comps {} (hub is emissive material).
+Ground-layer film h 0.09 <= 0.5 — no walk owed; walkable surface by class.
+
+LEDGER REPAIR (same tick, disclosed): first append wrote the tool pair
+after my prose already ended "(D+1, E+0)" (h-1 class, self-caught by the
+tool's own law check); my repair initially stripped BOTH pairs (off by 1
+the other way); final state: entry carries exactly ONE pair, law closes
+EXACT 2370743.
+
+EYE-GATE: struct-r8 packet extended with the Penrose Paving stop —
+delivered once.
+
+NEXT: 99%3==0 -> refine tick unless pool empty (expected EMPTY — no
+survey routes since struct-90; then R10-3 build: aperiodic family opened;
+candidates — a second substitution family (Ammann? pinwheel?) or
+census-gap derivation).
+
+BILL EYE-CHECK (one, standing): on the WNW walk where the W path bends
+toward the temple fields, a stone court lies in the open grass — hundreds
+of small triangular stones in three greys, organized in ten sunbursts
+around one brass point, the rim cut to a decagon. Stand at the hub: every
+direction differs; no two wedges repeat. At dusk: one quiet amber point
+and nothing else. Walk it.

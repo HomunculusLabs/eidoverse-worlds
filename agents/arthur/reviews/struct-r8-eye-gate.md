@@ -107,3 +107,19 @@ cells toward the lavender rows — the bees' story. Hash e8ea1c16366a2735,
 renders reviews/struct97-honeycombscreen/ (ZAI-judged 3/3 PASS: front 5/5,
 gameplay PASS, night 4-amber-points PASS; native 1210 hard-down all tick —
 native re-judge debt rides the next tick).
+
+## The Penrose Paving (struct-98, R10-2) — standing eye-check
+
+On the WNW walk where the W contemplative path bends toward the temple
+fields (-55.6, -22.5; the court lies 16m+ beside the line in the open
+grass): a stone court of hundreds of small triangular stones in three
+greys, ten sunbursts of organization radiating from one brass point, the
+rim cut to a decagon. Stand at the hub and turn: every direction differs;
+no two wedges repeat — the court that never repeats. At dusk: exactly one
+quiet amber point at the center, nothing else lit. Hash 31d34740e688ccea,
+renders reviews/struct98-penrose/ (NATIVE-judged 3/3: aerial 5/5, gameplay
+3/3, night 3/3 — no fallback debt).
+
+Update on the Honeycomb Screen (struct-97): the native re-judge debt was
+PAID 2026-09-08 — NATIVE 5/5 front + 4/4 gameplay + 3/3 night, all PASS on
+the exact live bytes. That stop's judgment is now fully native.
