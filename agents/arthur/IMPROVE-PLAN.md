@@ -5072,3 +5072,75 @@ annotations only, zero new candidates.
   emissive arg, served bytes COLOR_0-only) — now two independent
   reads. Off-limits legacy-core set — probe-only, Bill's call.
   Evidence: reviews/survey71-slice/nx-dress-stringlights/
+
+
+**survey-72 sub-section (2026-09-08, ZAI FALLBACK 5/5 judged disclosed
+— native 1210 x2 on catenoid+hall first calls batched, single paced
+retry burned (catenoid), EIGHTH consecutive flap window after
+survey-62/65/67/68/69/71 + survey-70 partial; 18m gameplay from fresh
+live store bytes 8/8 HTTP 200 curl UA on exact census-72 libs — slice
+CUT to 5 judged at run-budget exhaustion, kiln/tower-house/ellipsecourt
+fetched+rendered but DEFERRED to next wakeup, recorded here so no
+re-derivation needed; hall 8a4f16dd / inn 85860417 /
+catenoid-f24580ad / geodesic-966ce4db / sierpinski-e76a1847 all
+byte-identical to standing pins where they exist): VERDICTS 0
+confirmed / 3 corroborated / 2 clean-with-margin.**
+
+- `nx-struct-catenoid` — FIRST INDEPENDENT READ, CLEAN-with-margin:
+  hourglass-tower identity instant (hoop+meridian cage cells 14-20px
+  flares shrinking 6-10px waist, far-side see-through doubling line
+  density strengthens cage read), lacy cast shadow reinforces identity,
+  base drum solid + grounded (contact shadow left side), lattice lands
+  inset on collar (no overhang), crown ring clean, 2 beads legible on
+  ~2px posts. ZERO floats/voids/unintended gaps. Margins polish-tier:
+  (a) diagonal-WEAVE read absent — lattice reads orthogonal grid, if
+  weave is a design requirement geometry does not deliver it; (b) beads
+  read as orange markers not lights in flat daylight (chassis-no-bloom
+  class); (c) right-side base contact-AO absent (single key light);
+  (d) waist-density aliasing risk at longer range. Struct owns decode.
+  Evidence: `agents/arthur/reviews/survey72-slice/nx-struct-catenoid/`
+- `nx-struct-geodesic` — CLEAN corroborated (survey-70 first read
+  CLEAN-with-margin, same bytes 966ce4db): dome identity instant, no
+  floating/void/silhouette breaks, plinth grounding PASS, 7-of-8 beads
+  legible (2 mid-height sub-threshold = survey-70's own margin class).
+  NEW margin this pass: bead placement reads asymmetric left-side vs
+  bead-less mirrored right joints ~(545,340)/(610,400) — verify-tier
+  (owner decode decides symmetric-by-source vs sparse-accent intent),
+  polish-tier either way. Evidence:
+  `agents/arthur/reviews/survey72-slice/nx-struct-sierpinski/../nx-struct-geodesic/`
+- `nx-struct-sierpinski` — CLEAN-with-margin row (survey-67) STANDS;
+  this pass's fallback dissents harder: apex-bead sky gap x470-496
+  y208-220 (~12-18px), base-corner bead gaps 2-8px (left x341-348
+  y438-448 worst), junction point-contact sky slivers x438-524 y258-286
+  + x408-552 y330-352, no-contact-shadow grounding (chassis shadows
+  class), bottom-band sub-pixel speckle. Same bytes e76a1847 as
+  survey-67's CLEAN-with-margin (vertex-only contact hover-read was
+  ALREADY the recorded margin) — same-bytes different-judge variance,
+  margin class already on the row, no escalation; native arbitration
+  stays owed on the bead-gap class. Evidence:
+  `agents/arthur/reviews/survey72-slice/nx-struct-sierpinski/`
+- `nx-town-hall` — Sev 4 corroborated EIGHTH pass (bytes 8a4f16dd
+  unchanged): entry void x433-540 y398-470 now reads FURNISHED (tan
+  rear wall + bench + 2 jamb lanterns (433,440)/(551,440)) — survey-67/
+  68 softening trend continues, interior content real; identity
+  hall/meeting-house lean (symmetry, portico truss, portal furniture,
+  plinth massing) but ZERO explicit civic markers — sign/clock/bellcote/
+  plaque absent, coaching-inn remains competing read. NEW verify-tier
+  margins: porch-gable apex vs eave fascia near-zero clearance x455-500
+  y216-236; upper window heads flush against eave band x284-686
+  y224-234. Evidence:
+  `agents/arthur/reviews/survey72-slice/nx-town-hall/`
+- `nx-town-inn` — Sev 4 corroborated EIGHTH pass (bytes 85860417
+  unchanged): crate-sign x622-678 y385-432 re-read THIS pass as
+  BRACKET-SUSPENDED (thin bracket arm x676-694 y388-398 + hanger drop
+  x640-652 y360-388, sign forward of recessed wall plane — depth
+  overlap proof x645-678 vs window jamb) — refines survey-69's
+  no-hang-gap finding from fused toward thin-bracket; resolution
+  insufficient to confirm bracket thickness (1px seam class). Chimney
+  offset x340-395 vs door axis x425-530 re-measured ~70-125px (survey-
+  71 ~78px corroborated). NEW functional finding verify-tier: exterior
+  stair x225-360 terminates at covered landing x230-392 with NO door
+  in the upper wall behind it (x330-395 y250-310) — dead-end platform
+  read; door-leaf-absent class also at ground entrance. Owner decode
+  decides door geometry. Evidence:
+  `agents/arthur/reviews/survey72-slice/nx-town-inn/`

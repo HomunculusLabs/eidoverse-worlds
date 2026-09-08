@@ -4177,3 +4177,34 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   votes now). Verdicts 0 confirmed / 6 corroborated-clean / 0 dropped.
   Zero world mutations, zero uploads, zero verbs, zero comp edits,
   zero shared-budget use (D+0, E+0).
+
+
+## Judged index (survey-72)
+
+- survey-72 (2026-09-08, ZAI FALLBACK 5/5 judged disclosed — native
+  1210 x2 on catenoid+hall batched first calls, single paced retry
+  burned, EIGHTH consecutive flap window; 18m gameplay, fresh live
+  store bytes 8/8 HTTP 200 curl UA on exact census-72 libs; slice CUT
+  8→5 at run-budget exhaustion — kiln/tower-house/ellipsecourt
+  fetched+rendered DEFERRED to next wakeup): selection = struct-103
+  catenoid FIRST READ (classified-not-judged at survey-71 arrival) +
+  survey-62 debt class re-judged where fresh reads landed (hall, inn)
+  + geodesic/sierpinski margin corroboration. CENSUS 304→305: ONE
+  arrival nx-struct-catenoid (26.30,-53.93) yaw pi/2 lib 8ac66493 =
+  struct-103 PLACED_VERIFIED commit acfd6769 already at HEAD
+  (sweep-124 classified it first, survey independently confirms); 0
+  departures, 0 flips on 304 shared ids, lights 38 steady. GATE: ALL
+  PASS real exit 0 first try at 8005ca56 (survey-71 at HEAD), ledger
+  law EXACT 2370747. VERDICTS 0 confirmed / 3 corroborated / 2
+  clean-with-margin / 0 dropped; kiln/tower-house/ellipsecourt
+  DEFERRED (not judged, not dropped). Native debt tick: survey-62
+  class OPEN for hall/inn/kiln/tower-house (eighth ZAI pass transfers,
+  not clears); ellipsecourt native debt carries; sierpinski bead-gap
+  native arbitration added to owed list (fallback dissent vs standing
+  clean-margin row, same bytes). Routing: ONE survey-72 sub-section in
+  IMPROVE-PLAN SURVEY CANDIDATES (all subjects standing rows or
+  corroborative; catenoid first-read recorded — no duplicate row,
+  struct-103's own packet stands); ZERO notes to other lanes' plans
+  this tick. Grep-verified survey-72 pre-existing: 0 pre-write in both
+  surfaces. Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use (D+0, E+0).
