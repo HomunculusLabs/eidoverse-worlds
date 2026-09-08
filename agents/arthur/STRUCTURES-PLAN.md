@@ -5482,3 +5482,77 @@ holds nothing but sky. A dark doorway in the base; step inside and look
 straight up: the throat narrows to a circle of light, five small suns
 ringing the crown around it. At dusk from outside: quiet amber points on
 the rim, and nothing else.
+
+## struct-103 (2026-09-08): R10-6 THE CATENOID TOWER — DEFERRED CONTRACT
+## EXECUTED: PLACED_VERIFIED + native debts cleared
+
+Placement tick per the struct-102 pinned contract. Fresh census 304,
+catenoid absent. Film-guarded sitescan (struct103-sitescan.py, chassis
+struct101 + sierpinski/geodesic added to the plinth-on-artwork guard):
+93 lawful. SEAT DERIVATION with design law applied:
+- az96 r70 (69.62, 7.32) top SAT +4.65 REJECTED — ruledtower stands
+  13.7m away on the same E approach: two pinching iron-lattice towers
+  at one sightline = same-motif competition (design law).
+- az178 r66 (2.30, 65.96) rejected — 4 struct works within 17m
+  (slidingladder 8.0, needlerest 8.4, ninesbridge 10.3, skene 13.9):
+  crowded, no district identity.
+- SEATED az26 r60 (26.30, -53.93) yaw pi/2 — the NE MATHEMATICS WALK:
+  catenarygate (0,-60.5) 26m W carries the SAME curve family (the
+  catenary gate's own curve, spun); pendulum wave (frozen sine) 14.7m
+  and soundmirror (paraboloid) 9.3m complete the district — the
+  catenoid elevates the family rather than competing at one sightline.
+  Soundmirror dish faces N (bearing check: seat sits 100.7 deg off its
+  axis, unobstructed). Door (local -z) aims due W = the N-ray walk
+  (struct-101 entry law). r60 outside the closed r33-55 band.
+
+GATES: SAT worst nx-wild-forest-0018 +3.28 fresh-304 center-corrected
+(law 1.4); N-ray line 23.83m (law 3.0); film clearance geodesic 10.5m /
+sierpinski 32m (law 4.0). Terrain 9pt spread 7.6mm, lowest rim-sw
+-0.0518 = PY. Gate ALL_PINS_OK 15/15 real exit 0 twice (tick-start +
+immediately pre-mutation). PLACEMENT: hash gate exact (sha 8ac6649
+37f96976d... pinned v2) -> upload store/8ac664937f96976d.glb (0 429s,
+20s+ pacing honored) -> 1 verb spawn -> PLACED_VERIFIED exact tuple
+pos [26.3000, -0.0518, -53.9300] yaw 1.5708, census 304->305 ->
+idempotent rerun ZERO verbs. Comps {} (5 dusk beads emissive material,
+glow_ct_1..5 KEEP).
+
+ENTERABLE: two-way MCPL walk ALL_PASS 2 legs maxArrival 0.375m through
+the door lane (chord 2.2m). Support-seam abstentions on foreign
+entities = known diagnostic class.
+
+NATIVE DEBTS CLEARED (both struct-102 debts, on exact placed bytes;
+native returned mid-tick — first gameplay call 1210, one paced retry
+succeeded):
+- GAMEPLAY 18m NATIVE PASS all four checks: hourglass silhouette
+  unambiguous (drum ~258px -> waist ~150px -> crown ~230px, smooth
+  curvature not conical), woven-cage lattice resolvable (members 2-4px,
+  perforated cast shadow reinforces the weave), grounding continuous
+  zero floats, identity reads pavilion/observation tower — no cooling
+  tower / basket / lamp read. Minor nits: 2-3 of 5 beads resolvable
+  exterior = crown-ring occlusion law BY DESIGN (struct-101 v5; full
+  five = interior reward through the oculus); 2-6px shadow-tip
+  antialiasing sliver = rig-class.
+- NIGHT NATIVE PASS: the two crest beads read "textbook quiet, crisp
+  points with zero bloom"; zero noise/banding. Disclosed margins:
+  exterior shows 2-of-5 partial arc BY DESIGN; lattice silhouette
+  marginal contrast at night (near-black struts on navy) = polish-tier,
+  same class as struct-101 finial-legibility-floor; ground ellipse =
+  rig night-sun (0.15) casting the lattice shadow, rig-class not
+  geometry.
+
+v2 review frames banked: reviews/struct103-catenoid-v2/ (10 frames,
+review-model.ts on the exact pinned bytes).
+
+NEXT: 104%3==2 -> BUILD tick (R10-7 form-ledger gap) unless survey
+routes reopen rows; sierpinski aerial native debt STILL OWED (provider
+flap); survey-70 slidingladder identity note = intake, decode-at-source
+belongs to struct lane, NOT yet a routed improve row — next queued
+decode if shard stays empty.
+
+BILL EYE-CHECK (one, standing — the mathematics walk now complete):
+walk out the NORTH gate past the pendulum wave, past the soundmirror,
+and where the path bends look EAST: an hourglass of stone and iron
+rising from the grass, its dark doorway facing you. Step inside and
+look straight up: the walls pinch to a narrow circle of sky, five
+small suns ringing the crown around it. At dusk from outside: quiet
+amber points on the rim, and nothing else.
