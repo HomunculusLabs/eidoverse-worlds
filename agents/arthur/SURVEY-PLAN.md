@@ -3703,3 +3703,77 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   clean-with-margin) / 0 dropped. ZAI 7/7 disclosed. Zero world
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-63)
+
+- survey-63 (2026-09-08, NATIVE 8/8 disclosed — one 1210 on nwlane
+  gameplay succeeded on the single paced retry, native up all tick; 18m
+  gameplay primary from fresh live store bytes, all 8 HTTP 200 curl UA
+  on exact census-63 libs; slice = round-1 queue native-backlog drain,
+  all 8 subjects with no prior native re-judge): SW-PRAYER DISSENT —
+  survey-63 NATIVE CONFIRM vs dress-13 DROP (native, same judge class,
+  2026-09-06): zero fabric/flag/pole read at 18m, plain rock-pile read
+  x412-556 y322-405, zero chroma frame-wide, no vertical above the
+  apex x460-520 y300-325 — namesake element absent on live bytes 5074600f
+  == dress-13's own pin (bytes unchanged, this is a genuine two-native
+  disagreement for the dress lane to arbitrate). NE-YARD DISSENT —
+  survey-63 NATIVE CONFIRM-revised vs dress-14 DROP: rubble-pile read
+  holds (amorphous near-black central mass x415-552 y328-372, no
+  farmyard-signifying form), floating-rail clause DROPS (both rail ends
+  terminate in grounded posts w/ contact shadows x356-368/x592-603
+  y356-396) — dress-14's own native reads dismissed the same mass as
+  "deliberate work yard"; on bytes 191227da == dress-14's pin. NE-BENCH
+  DISSENT — survey-63 NATIVE CONFIRM vs dress-17 DROP: scattered-tables
+  read holds (three Π-forms x385-542 + gaps, no continuous seat), PLUS
+  NEW finding dress-17 never saw: caster-less orphaned hard shadow blob
+  x540-570 y387-398 + two floating specks x~427/x~497 y389-390.
+  SE-CAIRN CORROBORATE-REVISED — survey-63 NATIVE CONFIRM vs dress-15
+  ACCEPTED: spindly-totem read holds (H125px vs base W96px ~1.3:1,
+  upper third tapers to 35-45px x448-505 y283-368), "top stones
+  dissolve" clause DROPS (capstone x462-492 y283-312 reads via warm-tan
+  vs cool-sky hue shift), no per-stone value variation CONFIRMED (~6 of
+  8 stones one dark umber) on bytes 59031a0c == dress-15's reseat pin.
+  NW-STILE DISSENT — survey-63 NATIVE CONFIRM vs dress-90 v11 native
+  PASS: fence read holds on the v11 bytes 2c7f1bbe (step cluster top
+  edge y368 sits 11-19px BELOW the rail y349-357, x445-515 — steps
+  never breach the barrier line; "platform/crates in front of a fence");
+  tread/riser value-flat named root cause; margins mirror dress-90's
+  own (side-view summit occlusion class). NW-SKEPS CORROBORATE-CLEAN —
+  survey-63 NATIVE CLEAN-with-margin vs dress-20 v6: four skeps read
+  clearly (domes ~x397/468/538/612 y370, straw banding + plinths),
+  "rock swallows 2nd skep" DROPS (rock x345-378 nicks only the first
+  skep's plinth corner, every dome fully readable), stands/plinths read
+  intended — cosmetic rock-clutter margin only. NW-HEDGE CORROBORATE —
+  survey-63 NATIVE CONFIRM vs dress-21 v4: hedge read holds, mid-gap
+  hole MOST visible defect (x503-563 y336-386, notch core x517-556
+  y368-386), stub risers x489-497/x556-566 + stray cube x481-503
+  y369-386 all confirmed — cleanup tier Sev 4 correct on bytes 3d5c7d44.
+  NW-LANE-001 CORROBORATE — survey-63 NATIVE CONFIRM 3-of-4 vs
+  approach-5 native all-four-DROP on prior bytes d46a60fb: on the
+  CURRENT live bytes dc256065 (approach-6's verge re-dress + bead
+  cadence) razor-taper at terminus x780-808 y366-370 CONFIRMED,
+  raw-box marker stones CONFIRMED (~13 uniform gray prisms, clearest
+  x0-25/x340-360/x565-602/x745-778), lamp-no-base CONFIRMED (pole meets
+  ground bare x528-544 y378-387, zero plinth), banding DROPPED (reads
+  uniform tan, streaks are stone-overlap shading); lane identity itself
+  PASSES — findings are on the post-re-dress bytes, corroborate
+  survey-29's identical-prism margin class on the sibling leg. Routing:
+  ONE candidate block (survey-63 sub-section, 8 entries) under
+  IMPROVE-PLAN SURVEY CANDIDATES + one-line notes in the OWNING plans
+  (5 dress-subject dissent/corroborate notes → DRESSING-PLAN SURVEY
+  INTAKE, 1 approach note → APPROACH-PLAN SURVEY INTAKE, style the same
+  as survey-42/57 entries) — all eight are sharded round-1 rows whose
+  terminal annotations this tick's evidence DISSENTS against or
+  CORROBORATES; the owning lane re-arbitrates (probe, not verdict).
+  Grep-verified zero open duplicates (no survey-63 mentions anywhere
+  pre-write; prior subjects' notes all CLOSED-annotated). Census 300 vs
+  survey-62 baseline /tmp/survey62-census.json (299): +1 arrival
+  nx-struct-honeycombscreen = struct-97 ledger-exact (R10-1
+  PLACED_VERIFIED, committed 7b11d2b7), 0 departures, 0 lib flips, 0
+  pos moves — steady epoch. New snapshot baseline
+  /tmp/survey63-census.json (300). Gate: ALL PASS real exit 0 first try
+  at 8b443742. Verdicts 7 confirmed (4 dissents vs prior DROP/ACCEPT
+  terminal states, 3 corroborations) / 1 clean (nw-skeps
+  clean-with-margin) / 0 dropped. Native 8/8 disclosed. Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).

@@ -1529,6 +1529,55 @@
   verdict — decode/execute law belongs to this lane. Zero open-duplicate
   verified (grep: no prior timberyard note here).
 
+- [survey-63, 2026-09-08, NATIVE 8/8, 18m gameplay, fresh live store
+  bytes, round-1 native-backlog drain; owning-lane re-arbitration
+  requested on FIVE sharded rows — probes, not verdicts]:
+  (1) `nx-dress-sw-prayer-001` NATIVE DISSENT vs dress-13 DROP — CONFIRM
+  Sev 2: zero fabric/flag/pole read at 18m, plain rock-pile x412-556
+  y322-405, zero chroma frame-wide, no vertical above the apex (x460-520
+  y300-325 clean sky); namesake element ABSENT on live bytes 5074600f ==
+  dress-13's own rejudge pin — bytes unchanged, genuine two-native
+  disagreement for this lane to arbitrate. Evidence:
+  reviews/survey63-slice/prayer/
+  (2) `nx-dress-ne-yard-001` NATIVE DISSENT vs dress-14 DROP — CONFIRM
+  Sev 2 REVISED: rubble-pile read holds (amorphous near-black central
+  mass x415-552 y328-372, no farmyard-signifying form); floating-rail
+  clause DROPS (rail ends terminate in grounded posts w/ contact
+  shadows x356-368/x592-603 y356-396). Bytes 191227da == dress-14 pin.
+  Evidence: reviews/survey63-slice/neyard/
+  (3) `nx-dress-ne-bench-001` NATIVE DISSENT vs dress-17 DROP — CONFIRM
+  Sev 3: scattered-tables read holds (three Π-forms x385-420/x433-497/
+  x503-542, 12-15px gaps, no continuous seat) + NEW class dress-17
+  never saw: caster-less orphaned hard shadow blob x540-570 y387-398 +
+  floating specks (~427,389)/(~497,390). Bytes 46f3b6b1 == dress-17
+  pin. Evidence: reviews/survey63-slice/nebench/
+  (4) `nx-dress-se-cairn-001` NATIVE CORROBORATE-REVISED vs dress-15
+  ACCEPTED — CONFIRM Sev 3: spindly-totem read holds (H:W ~1.3:1,
+  upper third tapers x448-505 y283-368; squat-cairn intent missed),
+  no per-stone value variation (~6/8 stones one dark umber); "top
+  stones dissolve" clause DROPS (capstone reads x462-492 y283-312).
+  Bytes 59031a0c == dress-15 reseat pin. Evidence:
+  reviews/survey63-slice/secairn/
+  (5) `nx-dress-nw-stile-001` NATIVE DISSENT vs dress-90 v11 native
+  PASS — CONFIRM Sev 3: on v11 bytes 2c7f1bbe the step cluster top
+  edge (y368, x445-515) sits 11-19px BELOW the rail (y349-357
+  x432-526) — steps never breach the barrier line, reads
+  "platform/crates in front of a fence"; tread/riser value-flat named
+  root cause. Margins mirror dress-90's own (side-view summit
+  occlusion class). Evidence: reviews/survey63-slice/nwstile/
+  CLEAN records (no action owed): `nx-dress-nw-skeps-001` NATIVE
+  CLEAN-with-margin vs dress-20 v6 (four skeps read, domes ~x397/468/
+  538/612 y370; rock-swallow clause DROPS — rock nicks plinth corner
+  only; cosmetic rock-clutter margin). `nx-dress-nw-hedge-001` NATIVE
+  CORROBORATE cleanup-tier Sev 4 vs dress-21 v4 (mid-gap hole
+  x503-563 y336-386 + stub risers + stray cube all confirmed at 18m on
+  bytes 3d5c7d44 — v4 accepted them as sub-threshold; disagreement is
+  threshold-tier only). Full rows stand in IMPROVE-PLAN SURVEY
+  CANDIDATES (survey-63 sub-section). Zero open-duplicate verified
+  (grep: no prior survey-63 notes; prayer/yard/bench subjects carry no
+  prior intake entries — their dispositions live in shard-ledger
+  prose, cross-referenced above).
+
 Lane: district dressing for commons-next. One authored installation per
 wakeup, districts rotating NW → NE → SE → SW. Loop file:
 `DRESSING-LOOP.md`. Interlane: `INTERLANE-PROTOCOL.md` (six lanes).

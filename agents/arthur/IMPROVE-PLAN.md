@@ -2040,6 +2040,79 @@ bytes):**
    fresh-deterministic re-proven; audit ALL PASS re-run; siblings
    byte-identical. Row CLOSED.]
 
+**survey-63 sub-section (2026-09-08, NATIVE 8/8 — one 1210 on nwlane
+recovered on the single paced retry; 18m gameplay, fresh live store
+bytes; round-1 native-backlog drain — all 8 subjects had no prior
+native re-judge):** ALL EIGHT are sharded round-1 rows whose terminal
+annotations this tick's native evidence DISSENTS against or
+CORROBORATES. Re-arbitration belongs to the owning lane (dress/approach
+shard executors); probes, not verdicts.
+
+- `nx-dress-sw-prayer-001` — NATIVE DISSENT vs dress-13 DROP: CONFIRM
+  Sev 2 — zero fabric/flag/pole read at 18m, plain rock-pile read
+  x412-556 y322-405, zero chroma anywhere, no vertical element above
+  the apex (x460-520 y300-325 clean sky) — namesake element absent.
+  Live bytes 5074600f == dress-13's own rejudge pin (bytes unchanged —
+  a genuine two-native disagreement; dress-13's native read "see
+  rejudge" vs survey-63's "zero cloth/color/mast"). Evidence:
+  reviews/survey63-slice/prayer/
+- `nx-dress-ne-yard-001` — NATIVE DISSENT vs dress-14 DROP: CONFIRM
+  Sev 2 REVISED — rubble-pile read holds (amorphous near-black central
+  mass x415-552 y328-372, no farmyard-signifying form; crate band +
+  khaki top faces are the only value steps), floating-rail-ends clause
+  DROPS (both rail ends terminate in grounded posts with contact
+  shadows x356-368 / x592-603 y356-396). Bytes 191227da == dress-14's
+  pin. Evidence: reviews/survey63-slice/neyard/
+- `nx-dress-ne-bench-001` — NATIVE DISSENT vs dress-17 DROP: CONFIRM
+  Sev 3 — scattered-tables read holds (three independent Π-forms
+  x385-420 / x433-497 / x503-542 with 12-15px gaps, no continuous seat
+  plane); PLUS NEW finding class dress-17 never saw: caster-less
+  orphaned hard shadow blob x540-570 y387-398 + two floating specks
+  (~427, 389) / (~497, 390); shadow offsets read inconsistent
+  (left-kick vs directly-beneath). Bytes 46f3b6b1 == dress-17's pin.
+  Evidence: reviews/survey63-slice/nebench/
+- `nx-dress-se-cairn-001` — NATIVE CORROBORATE-REVISED vs dress-15
+  ACCEPTED: CONFIRM Sev 3 — spindly-totem read holds (H:W ~1.3:1,
+  upper third tapers to 35-45px x448-505 y283-368; broad-based squat
+  cairn intent missed), per-stone value variation absent (~6 of 8
+  stones one dark umber; only moss stone x452-498 + tan capstone break
+  it); "top stones dissolve" clause DROPS (capstone x462-492 y283-312
+  reads via warm-tan vs cool-sky hue shift). Grounded, no floats/voids.
+  Bytes 59031a0c == dress-15's reseat pin. Evidence:
+  reviews/survey63-slice/secairn/
+- `nx-dress-nw-stile-001` — NATIVE DISSENT vs dress-90 v11 native
+  PASS: CONFIRM Sev 3 — on the v11 bytes the step cluster top edge
+  (y368, x445-515) sits 11-19px BELOW the rail line (y349-357,
+  x432-526): steps never breach the barrier, reads "platform/crates in
+  front of a fence", not a crossing; tread/riser value-flat (all risers
+  near-identical dark brown vs rail) named as the illegibility root
+  cause. Margins mirror dress-90's own record (side-view summit
+  occlusion, one-sided ascent foreshortening). Bytes 2c7f1bbe ==
+  dress-90's v11 pin. Evidence: reviews/survey63-slice/nwstile/
+- `nx-dress-nw-skeps-001` — NATIVE CORROBORATE-CLEAN vs dress-20 v6:
+  CLEAN-with-margin — four skeps read clearly (domes ~x397/468/538/612
+  y370, straw banding, entrance dots, plinths), "rock swallows 2nd
+  skep" DROPS (rock x345-378 nicks only the first skep's plinth
+  corner, every dome fully readable); stands read intended not stray.
+  Cosmetic margin: faceted rock clutter clipping skep-1 base. Bytes
+  87d2dd16 == dress-20 pin. Evidence: reviews/survey63-slice/nwskeps/
+- `nx-dress-nw-hedge-001` — NATIVE CORROBORATE vs dress-21 v4:
+  CONFIRM Sev 4 cleanup-tier — hedge read holds; mid-gap hole the most
+  visible defect (x503-563 y336-386, notch core x517-556 y368-386),
+  stub risers x489-497 / x556-566 + stray cube x481-503 y369-386 all
+  resolve at 18m on the v4 bytes. Bytes 3d5c7d44 == dress-21 pin.
+  Evidence: reviews/survey63-slice/nwhedge/
+- `nx-approach-nw-lane-001` — NATIVE CORROBORATE 3-of-4 vs approach-5
+  all-four-DROP (prior bytes d46a60fb): on the CURRENT live bytes
+  dc256065 (post approach-6 verge re-dress + bead cadence) —
+  razor-taper at right terminus x780-808 y366-370 CONFIRMED, raw-box
+  marker stones CONFIRMED (~13 uniform untextured gray prisms; clearest
+  x0-25 / x340-360 / x565-602 / x745-778), lamp-no-base CONFIRMED
+  (pole meets ground bare x528-544 y378-387, zero plinth flare), banding
+  DROPPED (uniform tan; dark streaks are stone-overlap shading). Lane
+  identity PASSES; findings corroborate survey-29's identical-prism
+  margin class on the SW sibling. Evidence: reviews/survey63-slice/nwlane/
+
 **ROUTING (town-4, 2026-09-06, Bill 24h-usefulness directive):** candidates
 with no live shard prefix (`nx-welcome`, `nx-court`, `nx-forge`, `nx-cistern`,
 `nx-temple-*`, `nx-cultivation-*`, `nx-craft-*`, `nx-gallery-*`, `nx-wild-*`)
