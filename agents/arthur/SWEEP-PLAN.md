@@ -3955,3 +3955,36 @@ stable/observatory, @109 forge/potter, @108 market/inn -- stable and
 observatory both last walked sweep-110, now the stalest standing pair; both
 walk tools verified present this tick: interior-walk-stable.ts,
 struct2-walk-observatory.ts).
+
+
+sweep-114: CLEAN SWEEP, steady-state tick. Census 302==302 (264 thing +
+38 light) vs the committed sweep-113 baseline (sha16 c68fcbc9e3195567):
+0 arrivals, 0 departures, 0 drift on all 302 shared ids across
+id/pos/yaw/scale/lib/kind/bbox -- epoch A fully quiet, epoch B
+(25s-paced re-read) settled identical; no sibling landed this window
+(HEAD f5228415 = sweep-113 close, stable all window). Snapshot
+byte-identical, NO rewrite (sweep-106/108/111/112 precedent). Overlap:
+SAT fresh over the live set -- 264 bbox non-light, 235 classified, 0
+coverage holes, exit 3 on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 -- known Sev 2 routed to artwalk b26
+choreography @ sweep-43, seventieth sweep since routing, NOT new, no
+escalation due (law keys severity-1); zero new contacts. Tier-1 4/4
+per-leg verified 81/81 ALL_PASS, every leg real exit 0: core 64/64 @
+0.38 (banner-stripped parse), NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @
+0.37. Tier-2 92nd cycle per committed pointer: stable 5/5 @ 0.396
+(interior-walk-stable.ts) + observatory circuit 5/5 @ 0.389
+(struct2-walk-observatory.ts), both real exit 0. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK real exit 0 (68th
+consecutive clean); sweep89-battery 28/28 ALL PASS exit 0 on fresh
+census bytes; interlane md5 f6254cd0 stable, read fresh. Ledger law
+EXACT -- base re-read fresh immediately before append, 2370744 D+0/E+0.
+Standing gate ALL PASS real exit 0 at tick-start f5228415 (no
+interleave, no re-run needed -- HEAD stable all window). Zero world
+mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-115):
+forge + potter (93rd cycle -- LRU chain: @114 stable/observatory, @113
+longhouse/garden-cottage, @112 hall/bunkhouse, @111 row-cottage/market,
+@110 stable/observatory, @109 forge/potter -- forge and potter both
+last walked sweep-109, now the stalest standing pair; both walk tools
+verified present this tick: interior-walk-forge.ts,
+interior-walk-potter.ts).
