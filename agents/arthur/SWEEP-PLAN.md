@@ -3479,3 +3479,43 @@ garden-cottage/tower-house, @98 hall/row-cottage, @97 potter/market —
 bunkhouse and longhouse last walked sweep-96, now the stalest standing
 pair; both walk tools verified present: interior-walk-bunkhouse.ts,
 interior-walk-longhouse.ts).
+
+sweep-102: CLEAN SWEEP, fully steady tick. Census 294==294 at epochs A and
+B (20s-paced) vs the committed baseline (sha16 43cd103177bfd34d): 0
+arrivals, 0 departures, 0 drift on the canonical 7-field diff, and 0
+intra-tick A->B drift — no sibling world-mutation landed this tick
+(mid-tick HEAD advances survey-58 read-only + city-95 zero-mutation hold,
+both census-corroborated quiet); no snapshot rewrite needed, the in-tree
+baseline is current vs live. Overlap: SAT fresh-live fetch 256 bbox
+non-light / 232 classified / 0 coverage holes, exit 3 on ONLY the known
+R-121 lamp-n | nx-town-mapboard -0.407 (Sev 2 routed to artwalk @
+sweep-43, fifty-eighth sweep since routing, no escalation due — the law
+keys on severity-1); zero new contacts. Tier-1 4/4 per-leg verified
+81/81 ALL_PASS, every leg real exit 0 with content-anchored parses
+(status + per-leg ok counts + maxArrival from the actual schema): core
+64/64 @ 0.38 (banner-stripped parse, sweep-100 class), NW 5/5 @ 0.38,
+NE 7/7 @ 0.38, SW 5/5 @ 0.37; stderr seam-abstentions 5-per-walk = the
+known foreign-diagnostics class, normalized set unchanged (single
+'abstaining, no box' line). Probe self-caught pre-verdict: my first walk
+parser keyed invented result keys and threw on the leading [physics]
+banner — re-anchored on the real schema (status/results/ok/dist) before
+any verdict, sweep-48 class. Tier-2 80th cycle per committed pointer:
+bunkhouse 6/6 @ 0.380 (interior-walk-bunkhouse.ts) + longhouse 6/6 @
+0.346 (interior-walk-longhouse.ts), both real exit 0. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK real exit 0 (56th consecutive
+clean) + sweep89-battery 28/28 ALL PASS on epoch-A bytes (first battery
+invocation missed its argv census path and threw IndexError — corrected
+in-tick, no durable effect); comp-bearing count 18 census-matched
+(sweep-89 record stands; probe keyed 'comps' where the schema field is
+'comp', re-derived); interlane md5 f6254cd0 stable, read fresh. Ledger
+law EXACT 2370729 -> 2370729 at append (D+0, E+0). Standing gate ALL
+PASS real exit 0 at tick-start 863946ff, re-run ALL PASS real exit 0 at
+d2ec519f post-interleave. Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-103): forge + potter (81st cycle — LRU chain:
+@102 bunkhouse/longhouse, @101 row-cottage/inn, @100 stable/
+observatory, @99 garden-cottage/tower-house, @98 hall/row-cottage, @97
+potter/market — forge last walked sweep-95, the stalest standing
+building; potter and market both @97 are the next-stalest, potter pairs
+with forge this cycle; both walk tools verified present:
+interior-walk-forge.ts, interior-walk-potter.ts).
