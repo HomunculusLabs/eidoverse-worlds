@@ -3743,6 +3743,11 @@ same solo rig, so the fail is genuine not rig-degradation):**
   (direction mirrors the accepted woodstack's end-on presentation). Note
   also routed to DRESSING-PLAN SURVEY INTAKE (owning lane). Evidence:
   reviews/survey57-slice/timberyard/ + reviews/survey57-slice/woodstack-ctl/
+  [EXECUTED dress-142: native re-judge CONFIRMED on live bytes, v9 cure
+  (deeper squared cants 6/5/4/3 top 1.32, trestles+workpiece deleted,
+  posts to end-boards, x-axis ground runs per woodstack control anatomy)
+  native 18m PASS + close PASS, re-placed same tuple lib dfafb8c8,
+  PINS_EXACT + idempotent 0 verbs]
 
 **survey-58 sub-section (2026-09-07, NATIVE 18m gameplay, live store bytes
 served-sha c3d97fe9, all-NATIVE slice — zero ZAI fallback, five 1210 flaps

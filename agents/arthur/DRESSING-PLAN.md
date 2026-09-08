@@ -1,6 +1,54 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-142 — survey-57 timberyard CURE (post-close, PLACED)
+
+- **Intake executed this tick**: survey-57 (ccdaafb6, read fresh) CONFIRM
+  Sev-3 identity-fail on `nx-dress-ne-timberyard-001` — dress-domain, my
+  NE fleet, actionable (not legacy-core, not polish-packet). Full shard
+  cycle per the loop's SHARD EXECUTION contract.
+- **Native re-judge (restored-vision law)**: viewed the banked survey55
+  18m live-bytes frame myself — CONFIRMED with pixel agreement (gantry
+  posts x417-431/x543-565 + lintel x425-548 y356-372; tangle beneath;
+  2-3 pale faces only, no end-grain rhythm). Root cause found in MY
+  geometry: v5's axis fix made the workpiece a post-to-post lintel and
+  the X-trestles occluded the crib's pale cap wall. Calibration control
+  (woodstack gameplay frame) re-viewed same tick: end-face field (~35-40
+  discs) + loose logs ACROSS frame are the identity carriers — the
+  prescription "end-grain toward read lane" was mine to translate into
+  that anatomy.
+- **Cure v9 `dfafb8c800cf6e90`** (v8 judged PASS-qualified → v9): deep
+  squared cants 0.36×0.30, four courses 6/5/4/3, crib top 1.32; trestles
+  + workpiece DELETED (decode: 0 spanning verts above y1.40 between
+  posts — gantry structurally dead); posts shortened to stack
+  end-boards, top 1.63, nothing spanning; three ordered ground runs
+  rotated to x-axis (long-line presentation, woodstack-control class);
+  cant-hook contact fixed (v5 floated 0.08m). Rebuild ×2 deterministic;
+  5 nodes / 1736 verts; envelope x ±1.564 z −0.9..1.79 center z 0.445;
+  zero below-grade verts. Native 18m PASS (dense crib carries the
+  silhouette, ordered long ground beams, no lintel, no tangle,
+  genus-separated from woodstack) + close PASS (left frame; front frame
+  1210×2 disclosed — flap class, side-frame close contract substitutes).
+- **Re-place (improve-13 migration class)**: `ne-dress142-place.ts` —
+  old-lib-or-new-lib gate, TRUE-dims OBB, SAT preflight clear (no
+  sub-1.4m solid adjacencies), rim 101.58..104.43 in [66,108];
+  remove+spawn 2 verbs **PLACED_VERIFIED** exact tuple (76.7, −0.006,
+  69.4) yaw −2.356194 lib `store/dfafb8c800cf6e90.glb`; post census 294
+  steady, comp {} (empty both sides — no restore contract); idempotent
+  rerun 0 verbs.
+- **Bookkeeping**: IMPROVE-PLAN survey-57 row annotated
+  `[EXECUTED dress-142]` same tick (annotation-in-commit law);
+  ledger dress-142 law exact 2370730 → 2370732; gate ALL PASS real exit
+  0 at d2ec519f pre-mutation; interlane f6254cd0 pin-exact.
+- **Lamp budget**: NE spend 0 of 10 — static unlit, no draw.
+- **Eye-check for Bill**: NE gallery lane past hamlet-0028 — the timber
+  yard should now read squared-timber crib + staged ground beams (no
+  gate frame, no debris tangle). Before/after: 
+  `reviews/dress142-timberyard/before/` → `reviews/dress142-timberyard/v9/`.
+- **Blocked-on-Bill unchanged**: bellows a/b/c + SW lamp a/b/c rulings
+  still owed (eye-gate md5 12cec3fa) — either one-line ruling releases
+  further placement work.
+
 ### dress-141 — lawful HOLD (32nd post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS
@@ -2161,7 +2209,10 @@ identity intent. Rotation stays NW->NE->SE->SW.
    distinct from the NE woodstack by reading as WORKING stock. **DONE
    (dress-82 built + dress-83 PLACED 2026-09-07 — re-sited from the dead
    hamlet-flank primary to the cloister-0016<->hamlet-0028 field gap;
-   details in the dress-83 siting-log entry).**
+   details in the dress-83 siting-log entry). CURED (dress-142, 2026-09-07
+   — survey-57 Sev-3 identity-fail confirmed by native re-judge, gantry/
+   tangle root-caused in geometry, v9 re-place same tuple lib dfafb8c8;
+   details in the dress-142 siting-log entry).**
 8. `nx-dress-ne-glazier-001` — glazier's rack: sheet-glass lean + crate,
    near the gallery/mosaic edge (craft-to-art bridge). **DONE (dress-92,
    PLACED 2026-09-07 — glass-material law banked: texMat medium-teal +
