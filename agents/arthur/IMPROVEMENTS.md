@@ -5136,4 +5136,6 @@ fixes ≈ 6 F.)
 
 - [city-91] 51st lawful HOLD — gate ALL PASS real exit 0 at tick-start 8c1fdfd0; probe HOLD_VERIFY_PASS exit 0: census 294=294 zero arrivals/departures/moves vs city-90 capture, pins 13/13 worst 0.5mm rounding-class, amphi HOLD intact (-23.32,37.31), rider hosts+riders b31/b32/b33 steady (loop law 5), wave-2 8/8 parked; register 13/13 EXECUTED (CITY-PLAN md5 a41b9428 unamended), remainder HOLD-for-Bill; shard zero city rows; Bill state unchanged (artwalk 48bea194 / dress 12cec3fa, no rulings); zero mutations/uploads/verbs (D+0 E+0) (D+0, E+0)
 
+- [city-92] 52nd lawful HOLD — gate ALL PASS real exit 0 at tick-start 4392a9d7; probe HOLD_VERIFY_PASS exit 0: census 294=294 zero arrivals/departures/moves vs city-91 capture, register pins 13/13 worst 0.5mm rounding-class, amphi HOLD intact (-23.32,37.31) lib 95a98c74, rider hosts unmoved + riders b31/b32/b33 present (loop law 5), wave-2 mosaics 0036/0052/0059 parked awaiting nvp-105 blessing; register 13/13 EXECUTED (CITY-PLAN md5 a41b9428 unamended), remainder HOLD-for-Bill; shard checked fresh — amphi row struct-lane-owned, mosaics Bill-blocked (City-1 law 4 cited), zero city-executable rows; Bill state unchanged (artwalk 48bea194 / dress 12cec3fa, no rulings); zero mutations/uploads/verbs (D+0, E+0)
+
 **Running total: 2370729 / 2000000**
