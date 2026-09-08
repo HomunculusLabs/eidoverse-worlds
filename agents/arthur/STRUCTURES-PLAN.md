@@ -6049,3 +6049,94 @@ first glance — until you see the left edge is one clean raised diagonal
 and the right edge is ragged, and the whole thing grew from the single
 gold bead at the apex. One rule, one seed, fifteen generations. At dusk:
 one amber point at the crown of the triangle, and nothing else.
+
+## struct-110 (2026-09-08): R10-11 THE TESSERACT — authored v2 (judge-cured),
+## PLACED_VERIFIED
+
+Cadence 110%3==2 -> BUILD tick. Fresh re-derivation: refine pool EMPTY (no
+survey routes since struct-90, re-checked); shard 14/14 nx-struct rows
+TERMINAL on TRUE full-block parse (row -> next numbered row). Gate
+ALL_PINS_OK 15/15 real exit 0 tick-start + immediately pre-mutation.
+
+CONCEPT (written before build): the form ledger's missing 4D PROJECTION
+family — ledger grep fresh: zero tesseract/hypercube/"fourth dimension"
+presence across the 59 nx-struct works AND sibling plans (the "4D" hits are
+coordinate-axis mentions). ONE IDEA: THE SHADOW OF THE FOURTH DIMENSION. A
+hypercube projected to 3D = two nested cubes joined corner-to-corner: the
+outer ashlar frame (4.8m cube) OPEN on all faces, raised on four corner
+pads, a half-scale IRON cube suspended at the heart, and EIGHT raking struts
+joining every outer corner to its inner twin — the w-axis edges, the only
+part of a tesseract no 3D object has. Read at distance: a cube within a
+cube, welded by eight diagonals. Folly class (open frame — a shadow admits
+no rooms); no entry advertised, no walk owed. Static by honest design. One
+brass dusk bead on an iron stanchion at the inner crown: at dusk, the
+fourth dimension glows.
+
+BUILD ARC v1->v2 (judge-cured): v1's own in-code sightline assert caught the
+bead occluded by the inner cube's top edge from 18m dead-ahead -> pin riser
+design. v1 judged (ZAI fallback, native 1210 x2 disclosed): concept READ
+(cube-within-cube immediate, "canonical Schlegel projection" identified,
+cast shadow praised) but 3 defects: D1 0.09 hairline pin read broken-
+lamppost artifact; D2 bottom perimeter edges invisible (sill value crush ->
+pergola risk); D3 back-bottom struts swallowed by shadow mass. v2 cured ALL
+THREE by design: frame lifted 0.30 on four ashlar corner pads (base plane
+opens — bottom edges + back-bottom struts get light/sky), pin fattened to a
+0.15 square iron stanchion, ashlar stepped one tone darker. v2 judged: ALL
+FOUR v1 findings cured (bottom edges "FIXED", crown reads "designed finial,
+the only warm color in the frame", grounding PASS, intentional monument
+PASS); residual margin-tier only (back-bottom strut pair borderline AT THE
+FRONTAL 18m review angle — judge's own analysis attributes it to camera
+depth-compression, and the live seat presents the work obliquely down the S
+axis approach; renderer-side shadow streak flagged chassis, not geometry).
+NIGHT judged NATIVE: PASS — exactly one crisp quiet warm point (473-484,
+197-208), zero bloom/spill, no floaters, cube-in-cube silhouette intact.
+sha f6d03b32(v1) -> 4c14467776d58748(v2) x2 deterministic (mtime verified).
+
+DECODE struct110-decode-tesseract.ts ALL PASS exit 0: sha pinned v2, 5
+nodes (budget law), texMat lanes ts_ashlar/ts_sill/ts_iron, brass emissive
+exported, glow_ts_1 + glow_ts_socket KEEP, TESSERACT LAW = full
+vertex-cloud equality vs independent math replica (ashlar 384 = 12 edges +
+4 pads; iron 504 = 12 inner edges + 8 struts + stanchion; sorted-cloud
+compare 1e-4 exact), w-strut endpoint law 8/8 outer + 8/8 inner corners,
+envelope 9.12x5.45x9.12 y[-0.18..5.27] exact, no NaN. Decode-tool lessons
+this tick (both caught by the tool's own FAILs, fixed in the tool):
+BoxGeometry carries no mid-beam vertex (midpoint probe vacuous — endpoint
+law is the vertex-provable invariant) and cluster-classification of
+touching beams is ill-posed (cloud equality is the strongest law).
+
+SITE: film-guarded scan struct110-scan (fresh census 309, 2133 lawful
+seats): TARGET az184 r130 (-9.07, 129.68) LAWFUL at dist 0.0 — the S
+mathematics axis extends at its own 10m cadence (dial r71 -> koch r90 ->
+hilbert r100 -> dodeca r110 -> wall r120 -> TESSERACT r130): the walk's
+terminus behind the great rule-30 wall; layered reveal — cross the bridge,
+the sunflower, the labyrinth, the gem, the great wall... and past it, the
+hypercube. SAT worst nx-struct-rule30wall +4.89 placer-side fresh (law
+1.4); film +32.15 (kochgarden); walk +54.3. Terrain 9pt square spread
+1.6cm, lowest corner-nw -0.0321 -> PY 0.1478621615839162 (sill base on
+grade). r130 outside closed r33-55 band. Yaw 0 (square footprint,
+axis-aligned).
+
+PLACEMENT: gate ALL_PINS_OK 15/15 real exit 0 tick-start + re-run
+immediately pre-mutation (both bun, no pipe). Upload store/
+4c14467776d58748.glb (0 429s), 1 spawn verb, PLACED_VERIFIED exact tuple
+pos [-9.0700, 0.1479, 129.6800] yaw 0.0000, census 309->310. Fresh-only
+rerun REFUSED zero verbs (real exit 1, verified un-piped). Comps {} (bead
+emissive material glow_ts_1 KEEP; socket stone KEEP).
+
+FRAMES: reviews/struct110-tesseract/ (10-view set).
+
+NEXT: 111%3==0 -> REFINEMENT tick if pool non-empty, else build (R10-12
+form-ledger gap; 4D family now open — 16-cell/24-cell descendants exist,
+but novelty law wants a new family first). Standing debts: sierpinski
+aerial native re-judge (provider flap); dodecahedron night-bead question
+(survey-79 observer record).
+
+BILL EYE-CHECK (one, standing — the mathematics walk has its terminus):
+walk the south mathematics walk past the labyrinth, the twelve-pentagon
+gem, and the great rule-30 wall — and where the meadow ends, a cube of
+stone hangs in the air. Not a building: a FRAME, open on every side,
+raised on four corner stones, and floating in its exact center a second,
+smaller cube of dark iron, the two welded together by eight struts that
+run corner to corner. A cube within a cube: the shadow a four-dimensional
+object would cast. At its heart an iron post carries one bead of brass —
+and at dusk, that single amber point is the only light on the whole walk.
