@@ -4598,3 +4598,50 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (tick-start). Verdicts 0 confirmed / 1 clean-with-margin / 0 dropped.
   Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-81)
+
+- survey-81 (2026-09-08, NATIVE 4/4 judgment calls (gameplay/front/
+  night/aerial), zero 1210s, zero ZAI fallback — 7th consecutive
+  all-native window; 18m gameplay primary from fresh live store bytes
+  HTTP 200 curl UA (41500B) on the exact census-81 lib; served-sha16
+  pin 5b504e664a497a71 on lib e70161322c42c2eb = struct-109's pinned
+  build sha): ARRIVAL slice, first independent read owed (survey-76
+  hilbert precedent: owner placement-review only). Selection law run
+  fresh: severity backlog EMPTY (no SHARD EXECUTION section, grep exit
+  1, re-verified); never-judged pool ZERO carried from census-80
+  short-name-corpus re-derivation (s80 closed it; no matcher misses
+  this tick — census diff shows only the one arrival). VERDICT:
+  NX-STRUCT-RULE30WALL CLEAN-with-margin — gameplay IDENTITY PASS
+  (unambiguous voxel-stepped triangular monument, gold capstone accent),
+  SILHOUETTE PASS (continuous stepped isosceles, intact apex, symmetric),
+  INTEGRITY PASS (zero floats; dark clusters confirmed solid recessed
+  sockets w/ AO edge shading + seams, not voids; no z-fight), night
+  BEAD CONTRACT PASS (exactly one matte crisp warm point @(480,28),
+  ~11-13px, zero bloom/halo/spill; stone silhouette stays two-tone
+  legible vs navy sky; zero stray warm px), aerial STRIP FORM PASS
+  (dead-straight 24m base edge, courses parallel, plinth two-course
+  step-out clean, zero stray blocks outside envelope). Margins, none
+  defect-class: gameplay "pattern reads noise not iconography" —
+  decode-settled at source (struct-109's own decode reconstructs rule-30
+  15/15 rows from baked bytes; sub-18m pattern resolution is the
+  struct-45 framing-limited class, not geometry); front depth-cue
+  value-only (soft) and aerial void-clustering checks flagged — the
+  recessed-socket half-pattern IS the design (live/dead cell field,
+  decode-verified); front apex-bead "could read as ordinary live cell"
+  at DAY = the emissive night contract carries it and PASSES; chassis
+  no-cast-shadow = rig condition (single-light chassis, not live-world
+  defect). CORROBORATES struct-109's own native front/gameplay/night
+  ACCEPT — no dissent, no new defect class. Routing: ZERO notes routed
+  (struct owns disposition; s80 sunflowerdial precedent — corroborating
+  first-read clean lives here, not in the owner's plan); ZERO ledger
+  append (loop law 4 — append only when routing). Census 309 vs
+  survey-80 baseline /tmp/survey80-census.json: ONE arrival
+  nx-struct-rule30wall = struct-109 @ c5f154af absorbed (tuple
+  ledger-exact: pos [-8.37,0.39,119.71] yaw 0, lib e70161322c42c2eb
+  matches its pinned build sha), 0 departures, 0 lib flips, 0 pos
+  moves, lights 38 steady; new baseline /tmp/survey81-census.json
+  (309). Gate: ALL PASS real exit 0 first try at b1809c59 (survey-80
+  at HEAD). Verdicts 0 confirmed / 1 clean-with-margin / 0 dropped.
+  Zero world mutations, zero uploads, zero verbs, zero comp edits,
+  zero shared-budget use (D+0, E+0).
