@@ -4551,3 +4551,50 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   + b1 brass-family extension); one ledger append (loop law 4). Zero
   world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-80)
+
+- survey-80 (2026-09-08, NATIVE 1 judgment subject + ZAI FALLBACK 1
+  cross-check disclosed — native gameplay frame landed first-call; native
+  flapped 1210 x2 on the front cross-check, single paced retry burned,
+  ZAI fallback judged front per flap law; 18m gameplay + front
+  cross-check from fresh live store bytes HTTP 200 curl UA on the exact
+  census-80 lib; served-sha256 pin 6c863aa7bbaf3bcd on lib
+  3f271a10fff20cc1): ARRIVAL slice. Selection law run fresh: severity
+  backlog EMPTY (no SHARD EXECUTION section, grep exit 1, re-verified
+  this tick); never-judged pool re-derived on census-80 with the s78
+  short-name-corpus law (SURVEY-PLAN + IMPROVE-PLAN + IMPROVEMENTS) =
+  ZERO unjudged things. Self-catch disclosed: survey-79's "b23 deferred
+  unjudged" was a matcher miss — survey-52 already judged b23 NATIVE
+  CLEAN-with-margin on the byte-identical served pin 1cb32012 (s78
+  matcher-miss class, third instance); mile ne-004/nw-002 covered by
+  the survey-42 degenerate-fleet law (byte-identical 9459eaa3
+  plain-stone fleet, one judgment covers all). Genuine residue = the
+  ONE census arrival nx-struct-sunflowerdial (struct-108 @ 1147cbda,
+  owner placement-review only — survey-76 hilbert precedent: first
+  independent read owed). VERDICT: SUNFLOWERDIAL CLEAN-with-margin.
+  NATIVE gameplay: identity PASS (dense radially-graded pale achene
+  field ~89 ellipses on warm-grey disc reads authored seeded dial, zero
+  glitch classes), silhouette PASS (clean continuous circle x295-660
+  y150-485, rim nubs + finial read intentional markers), integrity PASS
+  (every achene socketed with shaded lower crescent, no black voids, no
+  floaters), grounding PASS (plinth contact y~530 + cast shadow), emblem
+  MARGIN (spiral order + dial ring not resolvable at 18m — seeded-texture
+  read, not 13/21 Vogel diagram; consistent with scale, not a defect
+  class). ZAI front cross-check 4/4 PASS corroborates (nub family
+  deliberate incl. orange finial bead 4px doing the dial-marker read,
+  gnomon seed-free zone + cast shadow, no value crush/seams/voids,
+  curved seed chains traceable closer — chirality soft, same margin
+  clause). Margins logged, none defect-class; no note routed (struct
+  owns disposition; corroborates struct-108's own native
+  front/gameplay/night ACCEPT). Census 308 vs survey-79 baseline
+  /tmp/survey79-census.json: ONE arrival nx-struct-sunflowerdial =
+  struct-108 absorbed (sweep-138 already ledger-exact), 0 departures, 0
+  lib flips, 0 pos moves, lights 38 steady; new baseline
+  /tmp/survey80-census.json (308). HEAD advanced mid-tick 80927a5b ->
+  sweep-139/struct-109 (normal pipeline interleave; my lane files
+  untouched, evidence dir gitignored per *.glb law, renders referenced
+  by path only). Gate: ALL PASS real exit 0 first try at 80927a5b
+  (tick-start). Verdicts 0 confirmed / 1 clean-with-margin / 0 dropped.
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
