@@ -5117,3 +5117,89 @@ of small triangular stones in three greys, organized in ten sunbursts
 around one brass point, the rim cut to a decagon. Stand at the hub: every
 direction differs; no two wedges repeat. At dusk: one quiet amber point
 and nothing else. Walk it.
+
+## struct-99 (2026-09-08): R10-3 THE KOCH SNOWFLAKE GARDEN — authored,
+## judged, PLACED_VERIFIED (first fractal work in the village)
+
+Cadence 99%3==0 nominal refine slot; refine pool re-derived EMPTY fresh
+(no survey routes since struct-90; shared-bytes lineage closed
+struct-93/94). Shard: zero OPEN nx-struct rows (13 EXECUTED + shelltower
+NATIVE-DROPPED; survey-63 routed dress/approach rows only — verified this
+tick). Per loop law: build tick → R10.
+
+CONCEPT (written before build): the form ledger's missing family — FRACTAL
+SELF-SIMILARITY. (Curves complete struct-90; compositions stand; periodic
+tessellation honeycomb R10-1; aperiodic order penrose R10-2. Nothing in
+the 50+ struct entities carries self-similarity as its identity.) ONE
+IDEA: A BORDER THAT NEVER ENDS. The garden kerb IS the Koch snowflake at
+iteration 3: 192 stones, one per edge, each exactly s/27 = 0.2m. Dark soil
+bed inside; three brass beads at the three seed vertices — the only points
+that survive every iteration unchanged while the border grows forever.
+
+BUILD ARC — assertion layer caught three of my own errors pre-render:
+(1) first stone plan (axis-aligned boxes + setback kerf) REFUTED by my own
+SAT assertion: 66 consecutive pairs overlapped — a 120° corner needs
+(w/2)·tan60° = 0.104m setback per side on a 0.2m edge, geometrically
+impossible; honest kerb craft = MITERED stones (edge rectangle clipped by
+the exact miter half-plane at each joint, 4mm open joint), 1195 near-pairs
+2D-SAT zero overlap; (2) curve envelope assertion initially demanded
+symmetric ±reach on a vertex-up shape (false at z); (3) min-side bbox
+comparison inverted (false FAIL x−). Exact math asserted: closed curve,
+192 edges × 0.200m to 1e-9, shoelace 19.5375 == closed form (8/5)·A0,
+3 seed vertices present, bumps OUT proven by strict per-iteration area
+growth (convention-free). v2 (judge-driven): artwalk olive soil read TAN
+at review → deep umber [0x4a4234, 0x524838, 0x3e372b] — the quiet bed
+makes the grey ring pop. v2 sha 92ed6b2730321832d67ba4c43a53a7bc12cff
+f324b9e172ee5d0330c444256d5 ×2 deterministic. Decode
+struct99-decode-kochgarden.ts ALL PASS: 5 nodes (kerb + soil + 3 glow_ks
+KEEP), texMat lanes, emissive exported, true bbox x ±2.70 z ±3.12 local
+accessor frame (world bead crest 0.315 — film class), beads at the three
+seed vertices exactly.
+
+JUDGED v2: top (certification frame) STRONG PASS — ZAI FALLBACK (native
+1210 ×3 across two wordings + paced retry; NATIVE RE-JUDGE DEBT
+disclosed, rides next tick): 6 major points countable alternating at 60°,
+120° rotational symmetry convincing, generation-2 hierarchy resolves,
+gen-3 as honest texture, SOLID unbroken ring, exactly 3 beads on one
+alternating triple, "stronger gestalt than tan-bed." Gameplay 18m NATIVE
+PASS (deliberate stone-edged bed, grounded, clean dark-umber/grey-ring/
+green-grass value ladder; beads 1-3px threshold — interaction-distance
+class, struct-92 precedent, disclosed). Night NATIVE PASS (exactly 3
+crisp amber points, zero noise; dark bed now anchors the silhouette).
+Front/aerial "intersecting stones" reads DECODE-DISMISSED (exact
+1195-pair SAT + miter construction outrank the low-angle 2D read — probe
+law 11); aerial "dashed ring" superseded by the top certification.
+
+SITE: full-annulus scan (struct99-sitescan.py, 3060 cells, conservative
+square half 3.16) → 75 lawful. WNW r60-62 cluster EXCLUDED (film-overlap
+with penrose 2-4.5m centers — both films, height exemption doesn't cover
+film-vs-film). Seat az184 r90 (-6.28, 0.0016, 89.78) — the S procession's
+TERMINAL GARDEN beyond the Bridge of Nines: walk the bridge, cross the
+grass, meet the border that never ends. 3.1m+ off the straight-S
+meridian (beside-the-line law; drift model ends r70, seat 20m past it on
+the same drift side). Nearest neighbors: fieldcross 12.8m, skene 18.4m,
+ninesbridge 20.2m. Terrain 9pt spread 19.9mm (kerb absorbs; disclosed),
+lowest corner 0.0016 = PY. SAT fresh-301 center-corrected worst
+nx-cultivation-lavender-0053 +4.49 (law 1.4).
+
+PLACEMENT: hash gate exact → gate ALL PASS real exit 0 tick-start
+(94e87958) → upload store/92ed6b2730321832.glb (0 429s) → spawn
+nx-struct-kochgarden @ (-6.28, 0.0016, 89.78) yaw 0 (seed vertex due +z,
+bead triple symmetric on approach) → PLACED_VERIFIED exact tuple, census
+301→302 → idempotent rerun ZERO verbs. Comps {} (beads are emissive
+material). Ground film h 0.315 ≤ 0.5 — no walk owed; walkable surface by
+class (steppable heightfield, lemniscate precedent).
+
+EYE-GATE: struct-r8 packet extended with the Koch Snowflake Garden stop —
+delivered once. Native re-judge debt on the top frame disclosed in-packet.
+
+NEXT: 100%3==1 → build tick (R10-3: fractal family opened; candidates —
+a second self-similar form at different scale, or census-gap derivation;
+native debt on kochgarden top frame clears first if provider returns).
+
+BILL EYE-CHECK (one, standing): past the Bridge of Nines where the south
+grass runs open, a stone ring in the grass — a grey kerb bent into a
+six-pointed snowflake, every point carrying smaller points, dark earth
+inside, three brass beads on three of its tips. Kneel anywhere along the
+rim: the big spikes are made of smaller spikes, those of smaller still.
+At dusk: three quiet amber points and nothing else.

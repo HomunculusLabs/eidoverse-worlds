@@ -123,3 +123,20 @@ renders reviews/struct98-penrose/ (NATIVE-judged 3/3: aerial 5/5, gameplay
 Update on the Honeycomb Screen (struct-97): the native re-judge debt was
 PAID 2026-09-08 — NATIVE 5/5 front + 4/4 gameplay + 3/3 night, all PASS on
 the exact live bytes. That stop's judgment is now fully native.
+
+## Stop 9 — THE KOCH SNOWFLAKE GARDEN (struct-99, R10-3) — S procession terminus
+
+WHERE: past the Bridge of Nines, straight S across the open grass
+((-6.28, 89.78) — az184 r90; the garden the bridge walk ends at).
+WHAT: a grey stone kerb bent into a six-pointed snowflake — 192 mitered
+stones, the Koch curve at iteration 3; every point carries smaller points,
+those smaller still. Deep umber bed inside; three brass beads on three
+alternating tips (the three seed vertices — the only points that survive
+every iteration unchanged).
+JUDGE ASKS: (1) snowflake gestalt from the bridge; (2) self-similar
+hierarchy kneeling at the rim; (3) exactly three amber points at dusk —
+no more, no less.
+BYTES: live sha 92ed6b2730321832 (store/92ed6b2730321832.glb).
+EVIDENCE: reviews/struct99-kochgarden{,-v2}/ (20 frames).
+NOTE: top-frame certification judged ZAI-fallback (native provider down);
+native re-judge debt disclosed — clears next tick if provider returns.
