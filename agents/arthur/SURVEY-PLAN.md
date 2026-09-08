@@ -4751,3 +4751,30 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   / 1 clean-with-margin / 0 dropped. Zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero ledger append, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-85)
+
+- survey-85 (2026-09-08, HOLD — cheap lawful hold verification, no slice
+  judged; third consecutive hold, census epoch fully quiet): selection law
+  run fresh and INDEPENDENTLY (not carried from s83/s84 prose): severity
+  backlog EMPTY (no SHARD EXECUTION section in IMPROVE-PLAN — grep count 0
+  exit 1, verified un-piped this tick after catching a `| head` exit-launder
+  on the same grep); arrival slice NONE owed (census diff zero); never-judged
+  pool ZERO by set algebra — live 310-set field-identical to survey-84
+  baseline (0 arrivals / 0 departures / 0 lib flips / 0 pos moves, lights
+  38) and survey-84 judged the only member that set added (tesseract
+  first-read CLEAN), inheriting s82/s83's twice-independent ZERO-unjudged
+  derivation on the 309-subset; native-debt surface unchanged all
+  PAID/owner-disposition (survey-83 audit stands; native was UP at s84 —
+  zero 1210s, zero fallback — so no opportunistic-debt law fires);
+  survey-62 hall/inn class owner-disposition unchanged (improve domain
+  parked at improve-71); statuary-family SURVEY CANDIDATES rows stand
+  routed (s77/s78 arbitration arc complete — owning-lane disposition).
+  Census 310==310 vs /tmp/survey84-census.json baseline: new baseline
+  /tmp/survey85-census.json (310). Gate: ALL PASS real exit 0 first try
+  at 9e225a1b (own survey-84 at HEAD; foreign working-tree dirt = sibling
+  polish/city lanes in flight, lane files clean, zero staging contact;
+  grep-verified survey-85 pre-existing 0 on SURVEY-PLAN pre-write).
+  Verdicts 0 confirmed / 0 clean / 0 dropped. Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero ledger append (loop law 4 —
+  nothing routed), zero shared-budget use (D+0, E+0).
