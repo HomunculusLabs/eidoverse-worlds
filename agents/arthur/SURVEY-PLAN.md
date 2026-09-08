@@ -4811,3 +4811,34 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   / 0 clean / 0 dropped. Zero world mutations, zero uploads, zero
   verbs, zero comp edits, zero ledger append (loop law 4 — nothing
   routed), zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-87)
+
+- survey-87 (2026-09-08, HOLD — cheap lawful hold verification, no slice
+  judged; FIFTH consecutive hold, census epoch fully quiet): selection law
+  run fresh and INDEPENDENTLY (not carried from s84/s85/s86 prose):
+  severity backlog EMPTY (no SHARD EXECUTION section in IMPROVE-PLAN —
+  grep count 0 exit 1, un-piped this tick); arrival slice NONE owed (census
+  diff zero — see below); never-judged pool ZERO by set algebra — live
+  310-set field-identical to survey-86, survey-85 AND survey-84 baselines
+  (0 arrivals / 0 departures / 0 lib flips / 0 pos/yaw/scale moves, lights
+  38) and survey-84 judged the only member that set ever added (tesseract
+  first-read CLEAN), inheriting s82/s83's twice-independent ZERO-unjudged
+  derivation on the 309-subset. No new Bill correction outstanding on any
+  lane surface. Native-debt audit: s86's one-level-deeper trace stands
+  (sierpinski bead-gap PAID survey-73; fifthbench = struct-owned decode
+  debt); survey-62 hall/inn class owner-disposition unchanged (improve
+  domain parked at improve-71, capped 9 passes); statuary-family SURVEY
+  CANDIDATES rows stand routed (s77/s78 arc complete — owning-lane
+  disposition). Native availability: no judging attempted this tick, so no
+  opportunistic-debt law fires. Census 310==310 vs /tmp/survey86-census.json
+  baseline: new baseline /tmp/survey87-census.json (310). Gate: ALL PASS
+  real exit 0 first try at 7a32e9bc (own survey-86 at HEAD; foreign
+  working-tree dirt = sibling polish/city lanes in flight — HERO-ASSET-
+  REFINEMENT-PLAN, client/server files, new city/terrain scripts — all
+  foreign-domain, lane files clean, zero staging contact).
+  Grep-verified survey-87 pre-existing 0/0/0 across SURVEY-PLAN /
+  IMPROVE-PLAN / IMPROVEMENTS pre-write. Verdicts 0 confirmed / 0 clean /
+  0 dropped. Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero ledger append (loop law 4 — nothing routed), zero
+  shared-budget use (D+0, E+0).
