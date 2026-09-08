@@ -5686,3 +5686,103 @@ steps exactly; it is the only way out.
 - survey-76 SIERPINSKI AERIAL native debt PAID (both prior owner attempts flapped on provider 1210s): NATIVE aerial read on live bytes 7f8b5fd7 (served-sha16 e76a1847 == survey-73 pin) — ALL SIX classes PASS: equilateral triangular footprint reads; 3-level large/medium/small hierarchy resolvable from above; see-through voids at multiple levels (ground green visible through central + smaller voids — correct transparency evidence from a downward view); open standable center lane (green through central inverted-triangle void); mirror-symmetric projection consistent with 3-fold (3 corner masses + apex bead); zero floats/z-fight/stray blocks. The three aerial facts already decode-proven (equilateral base, open center, 3-fold) are now natively corroborated. Debt CLOSED from the survey side. Evidence: reviews/survey76-slice/sierpinski/aerial.png.
 - survey-76 HYPAR v3 (750f82ee, served-sha16 4c4ed56b) post-fix native re-judge — struct-40's standing "native re-judge owed" debt PAID: NATIVE CLEAN all defect classes. Rim flush (sticks die into beams cleanly); zero hovering/dangling tips; zero ragged fans above crest (peaks capped by gold pins); no sky notch at center dip (beams cross tangentially, lattice gaps are by-design); saddle twist readable (rulings straight, rotating across span); 4 posts seated on deck; night: exactly 2 dim warm pin caps at beam apexes (248,168)/(712,171), zero bloom/spill/stray glow, silhouette legible. The survey-3/4/6 defect arc (dangling tips, ragged fans, sky notch) is now natively confirmed CURED on live bytes — the flush-rim fix holds. Margins (polish-tier, no action owed): inner-post/beam engagement reads ambiguous at 18m; mild mid-tone merge of lowest slats vs deck at the dip; night pin luminance weak (dim caps, not beacons). Evidence: reviews/survey76-slice/hypar/.
 - survey-76 HILBERTLABYRINTH first independent read (struct-105 in-flight, uncommitted at survey HEAD; live bytes 38d3bb8f, served-sha16 86d6479e) — reads CLEAN-with-margin at 18m EXTERIOR contract; also pays struct-105's own v2-front native re-judge debt (provider flap mid-owner-tick). NATIVE verdicts: top view IDENTITY PASS (recursive wall network reads, serpentine corridors, corridor:wall ratio ≈3.8:1 matches 1.6/0.42 spec exactly); mouth PRESENT at the west end of the +z front bar (x −3.74..−2.26 — decode-verified via struct105-decode-hilbert.ts mouthClear:true AFTER the native read flagged it; gameplay ground-level opening ~x250-320 ≈1.5m matches the 1.48m spec); silhouette integrity PASS (no floating segments, no unintended see-through gaps); grounding PASS (cast shadow + base contact); value PASS (blocks resolve, no pure-black); NIGHT PASS (exactly ONE crisp amber bead at (346,278) over the wall, zero bloom/spill/stray glow, silhouette faintly readable — the heart-marker night contract holds). MARGINS (verify-tier, struct owns decode/disposition, no routed row): (1) from 18m the exterior reads "walled enclosure" not "labyrinth" — interior fully occluded by the 2.3m front bar at eye level, by design per the eye-check contract (interior reveal is the walk-in reward); the bead-over-wall is the only exterior interior-hint; (2) the mouth reads as an unlabeled corner gap at the far west end — no lintel/threshold/frame cue distinguishes it from a wall break (judge suggested jamb/lintel dressing; polish-tier); (3) front-face contact shadow weak vs the shadowed left return (front bar meets grass at a hard clean edge). Owner-side v1 positives (masonry, zero floats, no z-fight) transfer. Evidence: reviews/survey76-slice/hilbert/.
+
+## struct-106 (2026-09-08): R10-8 THE DODECAHEDRON — authored v1, judged
+## (front+gameplay NATIVE PASS, night bead unresolved), PLACEMENT DEFERRED
+## run-budget (struct-102 precedent)
+
+Cadence 106%3==1 -> BUILD tick. Shard: zero OPEN nx-struct rows (14 EXECUTED
++ shelltower NATIVE-DROPPED survey-1, re-verified fresh by full-block parse
+this tick). Refine pool EMPTY (no survey routes since struct-90). Gate
+ALL_PINS_OK 15/15 real exit 0 at tick-start.
+
+STANDING DEBT PAID: sierpinski aerial native re-judge EXECUTED on the pinned
+aerial.png — Q1 equilateral base CONFIRMED native; Q2 center-void + Q3
+3-fold symmetry dissents CLASSIFIED per probe laws: judge's own description
+("green ground peeks through smaller holes at multiple scales") corroborates
+open voids; "smooth grey inverted triangle at center" = the plinth seen
+THROUGH the open standable center void (struct-100 two-way MCPL walk
+physically threaded the center lane, 0.375m arrivals, decode-proven gate);
+sliver-face asymmetry = oblique-aerial projection of the 3-level lattice
+(digit-law 64/64 matched at build; Q3's corners all bead-marked identical).
+Aerial debt CLOSED with disclosed dissent classification.
+
+CONCEPT (written before build): the form ledger's missing PLATONIC SOLID —
+ruled/minimal/pseudosphere/geodesic/aperiodic/fractal/space-filling all
+stand (ledger check fresh; geodesic used icosa SUBDIVISION not the solid).
+ONE IDEA: THE SOLID ITSELF IS THE MONUMENT. Plato's fifth element (Timaeus:
+the god used it for the whole) — a face-down REGULAR dodecahedron (R 3.12,
+edge 2.2266, dihedral 116.565) as an enterable stone shell: 12 true
+pentagon plates (0.18 thick, outer surface ON the exact face plane), 30
+chiselled arris ridge beams (0.10x0.10, outward-bisector seated — the
+wireframe IS the ornament), door = 1.60-wide notch through one belt face
+(vertical clear 2.20, clearance 0.312), crown brass bead glow_dd_1 at the
+zenith face center (dusk lineage). phi rides every diagonal.
+
+BUILD: mkv3-dodecahedron.ts — exact vertices (plus/minus1 cubes + cyclic
+0,1/phi,phi) scaled to R; faces derived from the 12 face-plane directions
+cyclic(0,phi,1) (first-draft cyclic(0,1,phi) caught by the face-size assert
+— face 1/5 verts, phasing error); in-code asserts ALL GREEN: 20V/30E/12F
+Euler, every face edge exact 1e-9, all faces 5 verts, inradius constant,
+bottom+top horizontal post-rotation, door hole corners strictly inside with
+0.312 clearance, door lane box triangle-centroid-free, envelope
+5.99x5.08x6.30 y[0..5.079], footprint 37.7 m2. Slant-ridge sub-grade dip
+caught by envelope assert, seated by measured-lift (increment not replace —
+second assert catch). sha
+e30bbfa932e24dc17638dbf7db1abad830744e5182e91b9eb2eb424d06cf150c x2
+deterministic (mtime verified). Decode struct106-decode-dodecahedron.ts ALL
+PASS exit 0 (16 checks: sha pinned, texMat lanes dd_cap/dd_face/dd_ridge,
+brass emissive exported, bead KEEP at (0, 2ri+BR-0.03, 0) exact, below-grade
+none, reach 3.149, crest 5.079 exact, all 12 faces 5 verts, bottom on grade,
+door belt 5 max-z face, door lane corridor vertex-free 0/1511).
+
+JUDGED NATIVE: front PASS all four (dodecahedron silhouette YES gem-solid
+not box; doorway YES human-scale with jamb reveals reaching ground; arris
+ridges YES mitred framing each pentagon; defects NO — shell closed, no
+floats/z-fight; nitpick: doorway reads shallow-reveal at this angle, brass
+bead not discernible at front-view scale). Gameplay 18m PASS all four
+(distinct dodecahedron landmark YES; doorway readable YES; grounded YES;
+hard defects NO — soft flags: near-black top pentagon (unlit-face class,
+rig single key light; engine casts real shadows), brass bead indiscernible
+at 18m = threshold class). NIGHT: FAIL on the bead — pixel probe 0 warm px
+entire frame (max R 42 vs hilbert bead 144 at same rig): bead geometry +
+emissive export are decode-verified, but the render is dark. UNRESOLVED —
+candidate classes: (a) rig exposure (no toneMapping/ACES in review-model
+night mode; hilbert DID read 144,104,44 same constants — contradiction
+unresolved), (b) emissiveIntensity export path for THIS material instance,
+(c) bead too small on screen at 18m for this rig's unlit path. Rides the
+placement tick: v-frame re-render at close + night re-judge on exact placed
+bytes, then fix-or-accept (crest-seating / intensity) as v2 if confirmed.
+No placement before that judgment (fail-closed).
+
+FRAMES: reviews/struct106-dodecahedron/ (10-view set).
+
+DEFERRED PLACEMENT CONTRACT (struct-102/103 chassis, next placement tick):
+- bytes: village_dodecahedron3.glb sha e30bbfa932e24dc17638dbf7db1abad8307
+  440e5182e91b9eb2eb424d06cf150c (v1, decode-pinned)
+- id: nx-struct-dodecahedron; TRUE envelope local x -3.15..3.15 (ridge
+  reach 3.149), z -3.15..3.15, y 0..5.079; conservative square half 3.15
+  CENTERED; door local +z (door face center z +1.79, lane cylinder-free
+  0/1511)
+- BEFORE siting: night-bead resolution (render close night frame; if bead
+  unreadable, v2: intensity or crest-seat, rebuild x2, decode re-pin,
+  re-judge) — placement only on judged bytes
+- siting: fresh census -> film-guarded sitescan (guard set: kochgarden,
+  penrose, honeycomb, sierpinski, geodesic, catenoid, hilbertlabyrinth) ->
+  r>=60 outside closed r33-55 band, SAT law 1.4 fresh-census, walking-line
+  law 3.0, film clearance 4.0m; door faces the nearest approach line
+- terrain 9pt preflight -> PY = lowest rim
+- placer: struct-105 chassis (hash gate -> film-guarded SAT -> upload paced
+  20s+ -> 1 spawn verb -> PLACED_VERIFIED -> idempotent rerun)
+- ENTERABLE: two-way MCPL walk through the door lane (door 1.60 wide, clear
+  1.40 box proven at build; walk proves it live)
+
+NEXT: 107 placement tick: execute this contract in full, then clear the
+night-bead judgment before/with placement (fail-closed above).
+
+BILL EYE-CHECK (one, standing — after placement): a grey stone solid stands
+in the open grass that is not a rock and not a building — twelve pentagons
+closing into one gem-like whole, every edge chiselled, one small doorway
+leaning out of the front face. Step in: the facets converge overhead into a
+pentagon of sky-less stone, the golden ratio in every diagonal around you.
+At dusk: one quiet amber point at the crown, and nothing else.
