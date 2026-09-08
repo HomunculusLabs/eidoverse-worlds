@@ -1,6 +1,6 @@
 {
  "world": "commons-next",
- "count": 299,
+ "count": 300,
  "entities": [
   {
    "id": "nx-approach-lamp-e",
@@ -9366,6 +9366,40 @@
     "center": [
      1.98,
      2.185,
+     0
+    ]
+   }
+  },
+  {
+   "id": "nx-struct-honeycombscreen",
+   "kind": "thing",
+   "pos": [
+    -52.62,
+    -0.0094,
+    19.15
+   ],
+   "yaw": -1.2217,
+   "scale": 1,
+   "lib": "store/e8ea1c16366a2735.glb",
+   "bbox": {
+    "min": [
+     -2.14,
+     0,
+     -0.35
+    ],
+    "max": [
+     2.14,
+     4.397,
+     0.35
+    ],
+    "size": [
+     4.28,
+     4.397,
+     0.7
+    ],
+    "center": [
+     0,
+     2.199,
      0
     ]
    }
