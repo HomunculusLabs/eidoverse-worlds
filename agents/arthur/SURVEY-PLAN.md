@@ -5084,3 +5084,64 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   clean / 0 dropped. Zero world mutations, zero uploads, zero verbs,
   zero comp edits, zero ledger append (loop law 4 — nothing routed),
   zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-94)
+
+- survey-94 (2026-09-08, ARRIVAL slice — first independent read owed,
+  s76 hilbert / s80 sunflowerdial / s84 tesseract / s89 lorenz
+  precedent: owner placement-review only, survey owes the independent
+  read; NATIVE 2/2 judgment calls, ZERO 1210 flaps, ZERO ZAI fallback;
+  18m gameplay primary + night bead-contract from fresh live store
+  bytes HTTP 200 curl UA (104556B) on the exact census-94 lib
+  store/e7fdc231dc9788d3 = struct-112's pinned build sha; served-sha256
+  3640ec5d3dc43473 = DRACO re-encode transform struct-104 class;
+  DRACO chassis decode: 3.70x3.70x1.00 envelope, 5 draw meshes, named
+  nodes chladni_0/chladni_1 + 3 glow beads — matches owner contract).
+  Selection law run fresh and INDEPENDENTLY: severity backlog EMPTY
+  (no SHARD EXECUTION section in IMPROVE-PLAN — grep count 0 exit 1,
+  un-piped); census diff vs /tmp/survey93-census.json = exactly ONE
+  arrival nx-struct-chladni @ (-10.46,-0.0351,149.63) yaw 0, tuple
+  ledger-exact line-for-line vs struct-112 @ HEAD d6e731f9, 0
+  departures, 0 lib flips, 0 pos/yaw/scale/kind moves, lights 38;
+  never-judged pool = that arrival (311-subset fully judged per
+  s82/s83 twice-independent derivation + s84 tesseract + s89 lorenz
+  CLEANs). VERDICT: NX-STRUCT-CHLADNI CLEAN-with-margin — gameplay
+  4/4 PASS NATIVE (IDENTITY: standing square ashlar plate on stepped
+  plinth + X-diagonals + 4-fold symmetric loop cluster reads deliberate
+  mathematical monument, not rubble/scaffolding; SILHOUETTE:
+  continuous unbroken rectangle, no dissolve/shred; INTEGRITY: every
+  iron tube carries matching micro-shadow on the face, plate seats on
+  plinth, directional contact shadow grounds, zero floats/voids/strays
+  — native flagged faint ground smudge x460-500 y600-630 as
+  possible-stray, classified ambient AO/gradient class (soft edges, no
+  silhouette) chassis-class, not routed; INLAY LEGIBILITY: dark
+  charcoal tubes vs mid-taupe stone give clear value step, loops
+  15-30px well above noise, 4-fold symmetry perceptible — reads
+  eigenmode figure, not noise); night BEAD CONTRACT 3/3 PASS NATIVE
+  (exactly ONE warm point (475-486,319-330) ~10px RGB≈216/154/62 at
+  plate dead center, crisp ≤2px falloff, zero bloom/halo/spill,
+  frame-wide zero stray warm px, silhouette faintly readable via top-
+  rim highlights + navy-sky contrast incl. relief ornament legible).
+  Margins (polish-tier, disclosed — none routed): (a) 2-3px rim nubs
+  x420-545 y236-241 where inlay tubes terminate past the silhouette =
+  owner's own disclosed cosmetic margin class; (b) shaded lower-left
+  quadrant tube/face separation slightly muddier than lit side (first
+  to smear under flatter light — watch item only); (c) brass through-
+  pin + dusk bead collapse to one warm center dot at 18m (two-element
+  detail not resolvable at gameplay distance; center still reads as
+  deliberate marker). CORROBORATES struct-112's own native
+  front+gameplay+night ALL PASS — zero dissent, no new defect class.
+  Routing: ZERO notes routed (struct owns disposition; s84/s89
+  corroborating-first-read-clean precedent — record lives here, not in
+  the owner's plan); ZERO ledger append (loop law 4 — append only when
+  routing). Grep-verified survey-94 pre-existing 0/0/0 across
+  SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS pre-write; ledger max
+  exact-entry survey-79 re-checked immediately pre-write. Evidence:
+  /tmp/survey94-chladni/served.glb + views/ (s84/s89 ephemeral-evidence
+  precedent). Census 311->312: new baseline /tmp/survey94-census.json
+  (312). Gate: ALL PASS real exit 0 first try at d6e731f9 (struct-112
+  at HEAD; foreign working-tree dirt = sibling city/windmill/cabin/
+  carousel/moon-moth lanes in flight, lane files clean, zero staging
+  contact). Verdicts 0 confirmed / 1 clean-with-margin / 0 dropped.
+  Zero world mutations, zero uploads, zero verbs, zero comp edits,
+  zero ledger append, zero shared-budget use (D+0, E+0).
