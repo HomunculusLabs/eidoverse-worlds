@@ -4343,6 +4343,7 @@ sweep-123: CLEAN SWEEP, steady-state tick. Census 304==304 (266 thing + 38 light
 | sweep-137 | 2026-09-08 | 307==307 steady state (269 thing + 38 light; 0 arrivals, 0 departures, 0 drift on id/pos/yaw/lib/scale/kind/bbox vs the committed sweep-136 baseline sha16 0fd137c936560a28; epochs A/B 20s-paced identical raw sha16 084c22ed2a6b427d single stable epoch, no sibling mutated this window; snapshot byte-identical NO rewrite) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 93rd sweep since routing, no escalation due — law keys Sev 1); 269 bbox non-light / 236 classified / 0 coverage holes, zero new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 maxDist, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 115th per committed pointer longhouse 6/6 @ 0.3456 + garden-cottage 6/6 @ 0.355 ALL PASS | pins 15/15 ALL_PINS_OK 91st consecutive; battery 28/28 (comp-bearing checks per tool, 38 lights); interlane f6254cd0 stable read fresh; ledger law EXACT 2370753 base re-read fresh pre-append; gate ALL PASS real exit 0 at tick-start 6cea9e13 + re-run post-evidence from repo ROOT | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-138 | 2026-09-08 | 307→308 (270 thing + 38 light) across epochs A→C: epoch A fully quiet 307==307 raw sha16 084c22ed2a6b427d identical to sweep-137's close; epochs B/C 20s-paced settled at 308 with exactly ONE domain-valid arrival nx-struct-sunflowerdial @ (2.48, 0.0189, 70.96) yaw π lib 3f271a10fff20cc1 comp {} = struct-108 @ 1147cbda committed mid-tick, tuple matches its ledger line line-for-line; 0 departures, 0 drift on 307 shared ids; snapshot rewritten 121587B / 308 ents / sha16 491682d9a5c07a09, post-rewrite drift ZERO | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 94th sweep since routing, no escalation due — law keys Sev 1); SAT re-run at epoch B over arrival-inclusive set: 270 bbox non-light / 236 classified / 0 coverage holes, zero new contacts, sunflowerdial SAT-clean (corroborates struct-108's own +1.78 needlerest) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 maxDist, NW 5/5 @ 0.38, NE 7/7 @ 0.38 — first run printed complete ALL_PASS JSON 7/7 but exited 124 = post-verdict open-handle timeout kill, one paced re-run returned real exit 0, SW 5/5 @ 0.37; arrival r71 S 51m+ off every walked leg, walks stand by construction, sweep-53/136 precedent) + tier-2 116th per committed pointer stable 5/5 @ 0.396 + observatory 5/5 @ 0.389 ALL PASS | pins 15/15 ALL_PINS_OK 92nd consecutive; battery 28/28 on fresh census-A bytes; interlane f6254cd0 stable read fresh; ledger law EXACT 2370754 base re-read fresh pre-append (struct-108 D+1 absorbed); gate ALL PASS real exit 0 at tick-start 49bd330c + re-run at 1147cbda post-evidence from repo ROOT | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-139 | 2026-09-08 | 308==308 steady state (270 thing + 38 light; 0 arrivals, 0 departures, 0 drift on all 308 shared ids on id/pos/yaw/lib/scale/kind/bbox vs the committed sweep-138 baseline sha16 491682d9a5c07a09; epochs A/B 20s-paced identical raw sha16 e1891c431dcf0e9c single stable epoch, no sibling mutated the live world this window — survey-79 read-only observer interleave @ 80927a5b, zero mutations per its own ledger line, epoch B corroborates; snapshot byte-identical NO rewrite, sweep-106..138 precedent, 7-field projection law) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 95th sweep since routing, no escalation due — law keys Sev 1); 270 bbox non-light / 236 classified / 0 coverage holes, zero new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 maxDist, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 117th per committed pointer row-cottage 6/6 @ 0.384 + market 6/6 @ 0.389 ALL PASS | pins 15/15 ALL_PINS_OK 93rd consecutive; battery 28/28 on fresh census-A bytes; interlane f6254cd0 stable read fresh; ledger law EXACT 2370754 base re-read fresh pre-append; gate ALL PASS real exit 0 at tick-start 42247ab5 + re-run at 80927a5b post-interleave, both from repo ROOT | CLEAN SWEEP — R-121 open, known, no escalation due |
+| sweep-140 | 2026-09-08 | 308→309 arrival (271 thing + 38 light; exactly ONE domain-valid arrival nx-struct-rule30wall @ (−8.37,0.3872,119.71) yaw 0 lib e70161322c42c2eb comp {} = struct-109 @ c5f154af committed PRE-tick (sweep-139's window closed before the placement verbs), live tuple matches its ledger line-for-line (az184 r120, census 308→309 per its own entry); 0 departures, 0 drift on 308 shared ids on id/pos/yaw/lib/scale/kind/bbox; epochs A/B 20s-paced identical raw sha16 61dcec449edc3149 single stable epoch, no sibling mutated this window — survey-80/81 read-only observers @ b1809c59/b3ea710a interleaved, zero mutations per their own ledger lines, epoch B corroborates; snapshot rewritten 309/122015B/sha16 f9c7338a758dbe50, pre-write assertions, post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 96th sweep since routing, no escalation due — law keys Sev 1); 271 bbox non-light / 236 classified / 0 coverage holes, rule30wall SAT-clean in the live set (zero new contacts, corroborates struct-109's own +6.19 dodecahedron fresh-308 gate) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 maxDist, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37; arrival r119.9 S 100m+ off every tier-1 waypoint — walks stand by construction, sweep-53/136/138 precedent); tier-2 118th per committed pointer longhouse 6/6 @ 0.3456 + garden-cottage 6/6 @ 0.355 ALL PASS | pins 15/15 ALL_PINS_OK 94th consecutive; battery 28/28 on fresh census-A bytes; interlane f6254cd0 stable read fresh; ledger law EXACT 2370755 base re-read fresh pre-append; gate ALL PASS real exit 0 at tick-start c5f154af + re-run at b3ea710a post-interleave, both from repo ROOT | CLEAN SWEEP — R-121 open, known, no escalation due |
 
 
 
@@ -4959,3 +4960,49 @@ forge/potter, @133 row-cottage/market -- longhouse and garden-cottage both
 last walked sweep-137, now the stalest standing pair; both walk tools
 verified present on disk this tick: interior-walk-longhouse.ts,
 interior-walk-garden-cottage.ts).
+
+sweep-140: CLEAN SWEEP, arrival tick. Census 308→309 (271 thing + 38 light)
+vs the committed sweep-138 baseline (sha16 491682d9a5c07a09; sweep-139 was a
+no-rewrite steady state): exactly ONE arrival — nx-struct-rule30wall @
+(−8.37, 0.3872, 119.71) yaw 0, lib e70161322c42c2eb, scale 1, comp {} —
+struct-109 @ c5f154af committed PRE-tick: the struct lane's ledger line
+matches the observed tuple line-for-line (pos/yaw/lib, az184 r120, census
+308→309 per its own entry), domain-valid, not drift. 0 departures, 0 drift
+on all 308 shared ids across id/pos/yaw/lib/scale/kind/bbox. Epochs A/B
+(20s-paced) identical raw sha16 61dcec449edc3149 — single stable epoch, no
+sibling mutated the live world this window; survey-80/81 read-only observer
+interleaves @ b1809c59/b3ea710a absorbed (zero mutations per their own
+ledger lines; my epoch B corroborates 309 unchanged). Overlap: SAT fresh
+over the arrival-inclusive live set — 271 bbox non-light, 236 classified,
+0 coverage holes, exit 3 on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard −0.407, known Sev 2 routed to artwalk b26 choreography @
+sweep-43, ninety-sixth sweep since routing, NOT new, no escalation due (law
+keys severity-1); the rule30wall itself is SAT-clean (zero new contacts,
+corroborating struct-109's own +6.19 dodecahedron fresh-308 gate). Walk
+classification: the arrival sits r119.9 S (az184); every tier-1 leg is r<20
+— 100m+ from the nearest walked waypoint, epoch-A walks stand by
+construction (sweep-53/136/138 precedent), and struct-109's own placement
+walk re-proves the site. Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every
+leg real exit 0: core 64/64 @ 0.38 maxDist (next-walk-core-paths.ts), NW
+5/5 @ 0.38 (nw-approach1-walk.ts), NE 7/7 @ 0.38 (ne-approach2-walk.ts),
+SW 5/5 @ 0.37 (sw-approach3-walk.ts). Tier-2 118th cycle per the committed
+pointer: longhouse 6/6 @ 0.3456 (interior-walk-longhouse.ts) + 
+garden-cottage 6/6 @ 0.355 (interior-walk-garden-cottage.ts), both real
+exit 0. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK real exit 0
+(94th consecutive clean); sweep89-battery 28/28 ALL PASS exit 0 on fresh
+census-A bytes; interlane md5 f6254cd0 stable, read fresh. Ledger law
+EXACT -- base re-read fresh immediately before append, 2370755, D+0/E+0.
+Standing gate ALL PASS real exit 0 at tick-start c5f154af, re-run ALL PASS
+real exit 0 at b3ea710a after the survey interleaves, both runs from repo
+ROOT. Snapshot rewritten per the sweep-138 chassis: 309 entities, 122015
+bytes, sha16 f9c7338a758dbe50, pre-write assertions (exactly one arrival,
+zero departures, zero drift on shared ids, arrival tuple as observed),
+post-rewrite drift vs live ZERO (309/309 exact). Zero world mutations,
+zero defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-141): hall +
+bunkhouse (119th cycle — LRU chain: @140 longhouse/garden-cottage, @139
+row-cottage/market, @138 stable/observatory, @137 longhouse/garden-cottage,
+@136 hall/bunkhouse, @135 inn/tower-house, @134 forge/potter — hall and
+bunkhouse both last walked sweep-136, now the stalest standing pair; both
+walk tools verified present on disk this tick: interior-walk-hall.ts,
+interior-walk-bunkhouse.ts).
