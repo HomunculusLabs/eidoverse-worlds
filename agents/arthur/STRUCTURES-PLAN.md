@@ -4776,3 +4776,42 @@ BILL EYE-CHECK (one, standing): on the S road verge near the tower-house,
 the wayfarer's halt now shows its members — warm bench, stone footings,
 iron posts, dark roof — and at dusk one small brass point on the center
 post.
+
+## struct-94 (2026-09-08): NEEDLEREST shared-bytes cure — refine tick,
+## PLACED_VERIFIED (zero uploads)
+
+CADENCE: 94%3==1 → build tick by cadence, but refine takes a FORCED
+subject: the struct-93-deferred needlerest cure (same decode-proven
+defect class as halt, the plan's only standing refine subject; refine
+pool law: highest evidenced deficit, never convenience — and this was
+decode-evidenced, not opinion). Shard: zero OPEN nx-struct- rows (fresh
+grep this tick, 14/14 terminal at source).
+
+SUBJECT STATE (fresh census this tick): nx-struct-needlerest pinned the
+defect bytes store/bb227fd6… at (10.273, 0.0028985, 68.737) yaw 2.99324
+rad = 171.5° (city-9 seat az81.5 r69.5, bench-axis yaw law — tuple is
+register-pinned, untouched by this cure). Sole remaining bb227fd6 pinner
+in the live world; halt stood on the cure lib cdaf7c1f since struct-93.
+
+EXECUTION: cure = byte-swap to the halt-cured GLB (identical geometry,
+texMat lanes halt_timber/stone/iron + halt_brass emissive 0x9a6a28@0.75,
+stud proud 0.08m), judged native 4/4 PASS approach + night
+one-quiet-point in struct-93 on these exact bytes (sha-gated in placer;
+reviews/struct93-halt/). ZERO-UPLOAD law (d): halt verified live on
+store/cdaf7c1f40208a5b.glb in the same fresh 298-set that fed SAT →
+content-addressed no-upload byte-swap, shared budget untouched. SAT
+exact rotated OBB center-corrected worst nx-dress-ne-bench-001 +2.27
+(law 1.4; matches city-9's 2.265 at the same seat). remove+spawn 2 verbs
+at the exact standing tuple → PLACED_VERIFIED, census 298, comps {}
+(none to restore — comp-wipe law), idempotent rerun ZERO verbs. Gate
+ALL PASS real exit 0 pre-mutation (verify-repairs at 13fc65d4) + re-run
+ALL PASS post (f5e6883d dress-149 sibling absorbed).
+
+NEXT: 95%3==2 → build tick (R9-4; derive from census gaps next tick).
+Refine pool EMPTY (halt cured struct-93, needlerest cured this tick,
+both byte-identical class — shared-bytes lineage fully cured).
+
+BILL EYE-CHECK (one, standing): on the NE walk at the threshold rest
+stop (bench beside mile-009), the needle-rest now shows its members like
+its sibling on the S road — warm bench, stone footings, iron posts, dark
+roof — and one small brass point on the center post at dusk.
