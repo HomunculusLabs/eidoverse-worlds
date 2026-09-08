@@ -3445,3 +3445,37 @@ observatory, @99 garden-cottage/tower-house, @98 hall/row-cottage, @97
 potter/market, @96 bunkhouse/longhouse, @95 hall/forge — row-cottage last
 walked sweep-93 and inn sweep-93, now the stalest standing pair; both walk
 tools verified present: interior-walk-row-cottage.ts, interior-walk-inn.ts).
+
+sweep-101: CLEAN SWEEP, fully steady tick. Census 294==294 at epochs A and
+B (20s-paced re-read) vs the sweep-100 baseline (sha16 43cd103177bfd34d):
+0 arrivals, 0 departures, 0 drift on the canonical 7-field diff — no
+sibling world-mutation landed this tick (mid-tick HEAD advance city-92 was
+a zero-mutation hold, census-confirmed quiet); no snapshot rewrite needed,
+the in-tree baseline is current vs live. Overlap: SAT fresh-live fetch 256
+bbox non-light / 232 classified / 0 coverage holes, exit 3 on ONLY the
+known R-121 lamp-n | nx-town-mapboard -0.407 (Sev 2 routed to artwalk @
+sweep-43, fifty-seventh sweep since routing, no escalation due — the law
+keys on severity-1); zero new contacts. Tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0: core 64/64 @ 0.38 (banner-stripped parse,
+sweep-100 class), NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37; stderr
+support-seam abstentions on foreign dress/temple ids = the known
+foreign-diagnostics class, normalized set unchanged vs sweep-100. Tier-2
+79th cycle per committed pointer: row-cottage 6/6 @ 0.384
+(interior-walk-row-cottage.ts) + inn 6/6 @ 0.364 (interior-walk-inn.ts),
+both real exit 0. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+real exit 0 (55th consecutive clean) + sweep89-battery 28/28 ALL PASS on
+epoch-A bytes; comp-bearing count 18 census-matched (sweep-89 record
+stands); interlane md5 f6254cd0 stable, read fresh. Ledger law EXACT
+2370729 at append (canonical two-capture formula; a first quick-regex
+probe under-counted paired deltas and read 2370641 — sweep-36 disclosed
+class, corrected before verdict). Standing gate ALL PASS real exit 0 at
+tick-start ccdaafb6 (survey-57 read-only interleave absorbed). Ledger tail
+re-checked immediately before append: city-92 zero-mutation hold landed
+mid-tick, absorbed normally at unchanged base. Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use (D+0, E+0). Next tier-2 pair (sweep-102): bunkhouse + longhouse (80th
+cycle — LRU chain: @101 row-cottage/inn, @100 stable/observatory, @99
+garden-cottage/tower-house, @98 hall/row-cottage, @97 potter/market —
+bunkhouse and longhouse last walked sweep-96, now the stalest standing
+pair; both walk tools verified present: interior-walk-bunkhouse.ts,
+interior-walk-longhouse.ts).
