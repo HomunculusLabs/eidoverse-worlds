@@ -1,6 +1,51 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-148 — lawful HOLD (38th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
+  exit 0 at tick-start HEAD 23bfde55 (sweep-104 sibling); interlane md5
+  f6254cd0 pin-exact. Fresh census **298 steady** — epoch diff vs
+  dress-147 capture +0/−0/0-moves, ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-148.py` HOLD_VERIFY_PASS exit 0, fresh UA'd
+  fetch; capture saved /tmp/dress148-census.json); dress domain 45 = 29
+  fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy. Round-3 closers +
+  timberyard cure PINS_EXACT **5/5**, all deltas exactly 0.0:
+  se-foxden 856deec5, sw-lanternhook 639c5480, sw-seats cb34bd36,
+  se-streamstones aabbc23d, ne-timberyard dfafb8c8 (radian law).
+- **One probe self-catch, disclosed**: three pin ids were first written
+  from plan shorthand with wrong district segments
+  (`nx-dress-nw-lanternhook-001` / `nx-dress-sw-streamseats-001` /
+  `nx-dress-sw-streamstones-001` do not exist) — the epoch diff's +0/−0
+  exposed it (MISSING ≠ drift when the baseline also lacked the id);
+  true ids verified against the live census by lib prefix and fixed:
+  **sw**-lanternhook / **sw**-seats / **se**-streamstones. Tuples were
+  right, ids were not. Same class as dress-144's catch; the pin table
+  below now carries the true ids so future probes copy from here, not
+  from prose.
+- **Shard/intake (re-checked at source)**: IMPROVE-PLAN all 9 sharded
+  `nx-dress-` queue rows terminal (rows 29–38, row 38 EXECUTED dress-21);
+  no round-4/5 section (grep 0); survey-60 slice dir still in flight
+  (created 06:21 this window, no ledger/register entry, subjects all
+  `nx-town-*` core buildings → improve domain) — zero dress intake.
+  SWEEP-PLAN dirty diff empty of dress routing this tick.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases real placement work next tick.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
+**True pin ids (copy from here, not prose):**
+`nx-dress-se-foxden-001` 856deec5 · `nx-dress-sw-lanternhook-001`
+639c5480 · `nx-dress-sw-seats-001` cb34bd36 ·
+`nx-dress-se-streamstones-001` aabbc23d ·
+`nx-dress-ne-timberyard-001` dfafb8c8
+
 ### dress-147 — lawful HOLD (37th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
