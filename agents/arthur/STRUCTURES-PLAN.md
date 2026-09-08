@@ -4876,3 +4876,65 @@ budget).
 BILL EYE-CHECK (drafted, delivers with placement): a fan of iron ladders
 frozen mid-slide against a stone wall, one warm brass curve touching
 every one of them — the line no ladder can cross.
+
+## struct-96 (2026-09-08): R9-4 THE SLIDING LADDER — v3/v4 material fix,
+## PLACED_VERIFIED (deferred placement executed queue-law FIRST)
+
+Cadence 96%3==0 nominal refine slot; refine pool EMPTY fresh (no survey
+routes since struct-90; halt/needlerest lineage closed struct-93/94) and
+shard zero OPEN nx-struct rows (13 EXECUTED + shelltower NATIVE-DROPPED
+verified this tick). The struct-95 DEFERRED queue outranks the empty slot
+(struct-78/79/84 precedent).
+
+MATERIAL FIX (two closed iterations, both judged):
+- v3 = mill_limestone lane (Bill-approved windmill-overhaul family
+  0x898471/0x918b78/0x837d6b) + brass desaturated toward ochre — NATIVE
+  front judge (paced-retry recovery from one 1210): brass/iron distinctness
+  PASS strong, but wall STILL reads timber ("zero grey stoniness" — warm
+  tan/ochre hue, plank-like seams at scale 1). sha aea7ea4c x2 det —
+  rejected, never placed.
+- v4 = genuinely cool-neutral grey tones [0x878b8e, 0x8f9396, 0x7d8184],
+  scale 2 finer coursing; brass stays v3. sha ed652efc09e4412328e3c4f
+  843b6e346a38250a5ffbe7d4329694bd95ed65f08 x2 deterministic (three
+  identical rebuilds verified). Decode ALL PASS: 3 nodes, texMat lanes,
+  glow_as KEEP emissive, true bbox −0.22..4.18 / 0..4.37 / ±0.79.
+- JUDGED NATIVE 3/3: front PASS (stone reads — cool grey masonry, coping
+  cue; five countable; one-contact-per-ladder; zero floats/gaps/z-fights);
+  gameplay 18m PASS (fan idea legible, brass curve traceable as sole warm
+  accent, wall reads grey at distance, grounded); night PASS (one quiet
+  warm line, no bloom/noise; disclosed: base low-contrast at ground contact
+  after dark — family-consistent quiet idiom). struct-95's ZAI native
+  re-judge debt CLEARED on the v4 bytes natively (3/3).
+
+SITE (fresh 298-census + CITY-PLAN spoke law, compass settled empirically
+from waystones N=−z S=+z E=+x W=−x): S spoke (+z) mid-gap station — halt
+r30 → mobius r40 → mosaic-0048 r45 → [25m gap] → ninesbridge r70. W took
+lemniscate r60, E took vesica r70, N dense r32..60.5 — S is the last
+unclaimed spoke seam (spatial equity). Seat (3.5, 0.0056, 58) yaw 0: face
+plane (figure plane) perpendicular to the S line = face-on fan read for
+every walker; seat x∈[1.3,5.7] lies EAST of the procession drift (0→−7.3),
+3.3m+ clear of the line (Bill's beside-the-line law). Terrain 7pt spread
+7.4mm, lowest corner 0.0056 = PY. SAT fresh-set center-corrected worst
+nx-struct-ninesbridge +7.75 (law 1.4; nearest centers mosaic-0048 13.5m,
+ninesbridge 15.8m — corridor genuinely empty).
+
+PLACEMENT: hash gate exact → gate re-run ALL PASS real exit 0 (sibling
+sweep-106 HEAD 6916ed86 absorbed mid-tick) → upload store/ed652efc09e4
+4123.glb (0 429s) → spawn nx-struct-slidingladder @ (3.5, 0.0056, 58)
+yaw 0 → PLACED_VERIFIED exact tuple, census 298→299 → idempotent rerun
+ZERO verbs. Comps {} (brass is emissive material). Folly furniture-box
+class 7.0m² < 8, h 4.37 — no walk owed; no approach advertised.
+
+EYE-GATE: struct-r8 packet extended with the Sliding Ladder stop —
+delivered once.
+
+NEXT: 97%3==1 → build tick (R10 concept: form ledger curves and
+composition families both extended this round — astroid/envelope landed;
+derive next from census gaps + Bill's verdicts). Refine pool expected
+EMPTY unless survey routes a note.
+
+BILL EYE-CHECK (one, standing): walking S from the gate past the mobius,
+where the road runs empty toward the Bridge of Nines — a grey stone wall
+and ground-band stand east of the path, five iron ladders frozen mid-slide
+against it, and one warm brass curve touching every one of them: the line
+no ladder can cross. Count the ladders; find the kiss on each.

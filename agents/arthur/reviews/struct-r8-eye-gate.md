@@ -68,6 +68,19 @@ disclosed marginal-silhouette note).
 Not gated on verdicts: the lane continues its cadence; re-opens are
 immediate on any correction.
 
+## The Sliding Ladder (struct-96, R9-4) — standing eye-check
+
+Walking S from the gate past the mobius, where the road runs empty toward
+the Bridge of Nines — east of the path stands a grey stone wall with a
+stone ground-band (3.5, 58), five iron ladders frozen mid-slide against
+it, and one warm brass curve kissing every one of them: the astroid, the
+line no ladder can cross. At 18m: does the fan read at a glance, the
+brass curve traceable as the one warm line? Up close: count the ladders
+(five), find the kiss on each. At dusk: one quiet warm curve, no glare.
+Hash ed652efc09e44123, renders reviews/struct96-slidingladder-v4/
+(native front PASS, gameplay 18m PASS, night one-quiet-line PASS with
+disclosed quiet-base note).
+
 ## The Vesica Window (struct-91, R9-2) — standing eye-check
 
 On the E walk past ruledtower, where the path bends toward the wilds, two

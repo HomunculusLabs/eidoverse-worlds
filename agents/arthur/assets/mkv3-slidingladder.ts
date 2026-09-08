@@ -43,11 +43,17 @@ import { writeFileSync } from "node:fs";
 const g = new THREE.Group();
 
 // materials — standing families (lemniscate/conoidfan dialect)
-const stoneTex = texMat("sl_stone", [0x56503c, 0x5c5a44, 0x4c4836], { rough: 0.95, scale: 2, weights: [2, 1, 1], cell: 32 });
+// v4 (struct-96): native re-judge of v3 — mill_limestone still reads timber
+// ("zero grey stoniness": warm tan/ochre hue, R>G>B). The hue must be
+// genuinely cool-neutral grey, not a warm limestone. Three close cool tones
+// [0x878b8e, 0x8f9396, 0x7d8184] give the weathered-stone mottle; scale 2
+// restores v2's finer block coursing (scale 1 read plank-like seams).
+// Brass stays v3 (distinctness PASSed strongly at native).
+const stoneTex = texMat("sl_stone", [0x878b8e, 0x8f9396, 0x7d8184], { rough: 0.95, scale: 2, weights: [3, 1, 1], cell: 32 });
 const ironTex = texMat("sl_iron", [0x5a626c, 0x4d545e, 0x666e78], { rough: 0.6, scale: 1, weights: [1, 1, 1], cell: 16 });
-const brassGlow = new THREE.MeshStandardMaterial({ color: 0xc08a3e, roughness: 0.4, metalness: 0.8 });
-(brassGlow as any).emissive = new THREE.Color(0xb8792f);
-(brassGlow as any).emissiveIntensity = 0.9;
+const brassGlow = new THREE.MeshStandardMaterial({ color: 0xa8823f, roughness: 0.45, metalness: 0.75 });
+(brassGlow as any).emissive = new THREE.Color(0x9a7030);
+(brassGlow as any).emissiveIntensity = 0.85;
 
 // ---- constants ----------------------------------------------------------------
 const L = 4.0;                 // ladder length (astroid parameter)
