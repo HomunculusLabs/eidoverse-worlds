@@ -1,6 +1,49 @@
 <!-- CITY-PLAN LAW (Bill B+A 2026-09-07): ALL new dress installs sit in district rings r70-100 ONLY. Band r33-55 closed except on-spoke procession named in CITY-PLAN.md. Village ring r20-33 closed. Violations = Sev-2. -->
 # DRESSING-PLAN — dress-N lane durable state
 
+### dress-150 — lawful HOLD (40th post-close, NO PLACEMENT)
+
+- **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
+  exit 0 at tick-start HEAD f5e6883d (own dress-149; sole sibling commit
+  since = city-102, also a lawful hold); interlane md5 f6254cd0 pin-exact.
+  Fresh census **298 steady** — epoch diff vs dress-149 capture +0/−0/
+  1-move: sole move `nx-struct-needlerest` lib swap bb227f→cdaf7c at
+  identical pos (LEDGER-MATCHED to struct-94's needlerest cure, struct
+  domain, classified not routed); ZERO dress-domain drift (probe
+  `/tmp/dress-hold-verify-150.py` HOLD_VERIFY_PASS exit 0, fresh UA'd
+  fetch; capture saved /tmp/dress150-census.json); dress domain 45 = 29
+  fleet (NE 6 / NW 9 / SE 7 / SW 7) + 16 legacy. Round-3 closers +
+  timberyard cure PINS_EXACT **5/5**, all deltas exactly 0.0 (from the
+  plan's true-id pin table): se-foxden 856deec5, sw-lanternhook 639c5480,
+  sw-seats cb34bd36, se-streamstones aabbc23d, ne-timberyard dfafb8c8.
+- **Shard/intake (re-checked at source)**: IMPROVE-PLAN all 9 sharded
+  `nx-dress-` queue rows terminal (rows 29–38, row 38 EXECUTED dress-21);
+  no round-4/5 section (grep 0); survey59/60 slices re-listed — zero
+  dress subjects (survey60 all `nx-town-*` core buildings → improve
+  domain; survey59 all legacy-core off-limits-set members → probe-only
+  Bill's call) → zero dress intake. SWEEP-PLAN diff empty of dress
+  routing this tick.
+- **Bill state unchanged**: eye-gate file mtime 2026-09-07 17:07:57, md5
+  12cec3fa; no ruling commits in the trail. Blocked on Bill standing
+  (bellows a/b/c, SW lamp a/b/c) — cheapest unblock remains the two
+  one-line rulings in `agents/arthur/reviews/dress-round3-eye-gate.md`;
+  either releases real placement work next tick.
+- **Plan header provenance**: CITY-PLAN LAW band restriction (Bill B+A
+  2026-09-07) binds future installs to district rings r70-100; zero
+  band-relevant motion this tick.
+- **Two process events this tick, disclosed**: (a) one gate self-catch —
+  first gate run launched from `agents/arthur/` cwd resolved the
+  verifier's repo-root-relative tex-84 existsSync one level deep and
+  printed 1 FAILURE; rerun from repo root ALL PASS real exit 0 — cwd
+  artifact, no gate defect (gate must always run from repo root). (b)
+  ledger append raced two sibling writes (struct-94 + survey-60 landed
+  between survey and append; first attempt REFUSED law-broken, second
+  REFUSED again mid-write); independent law recheck on the settled file
+  EXACT 2336002+34737=2370739, third attempt appended clean — normal
+  pipeline-mode interleave, disclosed per the append-race law.
+- **Zero world mutations, zero uploads, zero verbs, zero shared-budget
+  use.**
+
 ### dress-149 — lawful HOLD (39th post-close, NO PLACEMENT)
 
 - **State verified fresh this tick**: gate `verify-repairs.ts` ALL PASS real
