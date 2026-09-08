@@ -3578,3 +3578,52 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   findings, 3 Bill-rebuild cures) / 1 cure-corroborated / 0 dropped.
   Native 4/8 + ZAI 4/8 disclosed. Zero world mutations, zero uploads,
   zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-61)
+
+- survey-61 (2026-09-08, NATIVE 3/8 + ZAI fallback 5/8 disclosed — native
+  flap pattern: gate-e first call, stable, dyehouse, shrine, gate-w each
+  burned 1210 x2 with paced retries (gate-w retry late-recovered via a
+  third call, counted ZAI-corroborated); 18m gameplay primary + front-view
+  cross-checks per lane law; fresh live store bytes 8/8 HTTP 200 curl UA
+  from /library/store/ on exact census-61 libs, served-shas pinned in
+  /tmp/survey61-fetch-render.sh output): POST-OVERHAUL RE-BASELINE WAVE 2
+  — severity backlog fired on the replaced-bytes debt class survey-60
+  opened (Bill's direct village-overhaul, zero lane commits, 21 town-core
+  libs replaced; survey-60 judged 8 worst-first). Slice = gate-e/s/w
+  (shared-lib family verdict for survey-60's gate-n CONFIRM), stable,
+  dyehouse, shrine (standing rows on replaced bytes), windmill (overhaul
+  baseline a557d918, never survey-judged), moonmoth-001 (never-judged
+  arrival). VERDICTS: GATE-E/S/W SIGN-REGRESSION FAMILY LOCK CONFIRMED
+  (shared lib a3975677 == gate-n's CONFIRM bytes; transfer + 3
+  corroborating reads — bare pegs every gate, schema CLEAN). STABLE
+  REGRESSION CONFIRM Sev 3 (diagonal bay-brace lower end floats mid-air,
+  both views; horse-head identity UPGRADE over survey-1). DYEHOUSE
+  CLEAN-with-margin (three 18m float-candidates all REFUTED by front
+  view; dye vats blue/red/yellow + hung cloth read; dark-band crush
+  margin). SHRINE CLEAN-with-margin (identity PASS; flame sub-visible +
+  plinth crush margins persist from survey-2 class). WINDMILL CLEAN
+  CONFIRMED NATIVE on overhaul bytes (all four sail arms carry cloth —
+  survey-55/56 dissent line closed on the new bytes too; upper-sail frame
+  crop = chassis artifact). MOONMOTH CLEAN-with-margin NATIVE (first
+  survey judgment; moth identity unambiguous, saddle reads, symmetric
+  wings; antenna/leg aliasing margins). Routing: ONE candidate block
+  (survey-61 sub-section) appended to IMPROVE-PLAN SURVEY CANDIDATES —
+  gate family + stable rows; all nx-town-* = improve's own intake surface
+  per survey-60 precedent (Bill's village-overhaul domain named probe-
+  only), zero notes to other lanes' plan files this tick. Grep-verified
+  zero open duplicates (survey-60's gate row pre-exists — family lock
+  extends it, no second row). Census 298==298 vs survey-60 baseline
+  /tmp/survey60-census.json: 0 arrivals, 0 departures, 0 pos moves,
+  exactly TWO lib flips both struct-domain ledger-matched at identical
+  tuples (halt + needlerest bb227fd6->cdaf7c1f = struct-93/94 shared-bytes
+  cure, already classified by sweep-105); mid-tick sibling interleave:
+  struct-96 sliding-ladder placement (ledger total 2370740, census
+  298->299 AFTER my census capture — absorbed next tick; probe-only note:
+  halt/needlerest flipped libs were judged n/a this tick, both struct
+  domain). New snapshot baseline /tmp/survey61-census.json (298).
+  Gate: ALL PASS real exit 0 first try at 4fe363e9 (ledger law EXACT
+  2370739 pre-struct-96). Verdicts 2 confirmed (gate family lock + stable)
+  / 6 clean (4 clean-with-margin) / 0 dropped. Native 3 + ZAI 5
+  disclosed. Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use (D+0, E+0).

@@ -3831,6 +3831,64 @@ REPLACED never-survey-judged bytes. This slice re-judges worst-first.
   floats, chimney-ridge clean. Advisory only: door leaf ambiguous
   inside porch shadow. Evidence: reviews/survey60-slice/longhouse/
 
+
+**survey-61 sub-section (2026-09-08, NATIVE 3/8 + ZAI fallback 5/8 disclosed,
+18m gameplay + front cross-checks, fresh live store bytes 8/8 HTTP 200 curl
+UA on exact census-61 libs — post-overhaul re-baseline wave 2, worst-first):**
+
+- `nx-town-gate-e/s/w` — SIGN-REGRESSION FAMILY LOCK: all three judged on
+  the SAME shared lib a3975677 as survey-60's native-CONFIRMED gate-n
+  regression (sign GONE, bare peg stubs). Judgment-transfer by exact
+  shared-bytes (struct-94 lineage law): verdict + evidence pin at
+  reviews/survey60-slice/gate-n/ transfer to all four gates; this tick's
+  three independent reads (native gate-e; ZAI gate-s/w after native 1210
+  x2 + paced retry burned each) corroborate at every gate — bare pegs
+  (gate-e (412-420/527-535,268-275); gate-s (414,303)/(546,303);
+  gate-w (418-427/530-541,295-317)). Gate schema itself CLEAN 4/4
+  (portal, posts, plinths, crown, sealed, grounded). Probe-only, Bill's
+  village-overhaul domain. Evidence: reviews/survey61-slice/gate-*/
+- `nx-town-stable` — REGRESSION CONFIRM Sev 3 on replaced bytes bb559325
+  (standing survey-1 Sev 2 + improve-11/12 cure rows annotate OLD bytes;
+  Bill's overhaul replaced wholesale): diagonal bay brace's LOWER END
+  FLOATS — gameplay (350-400,293-327), front (295,283)->(340,333)
+  terminates mid-air, corroborated BOTH views. Identity UPGRADED: horse
+  head peeks over stall rail front view (295-330,350-400) — stable/livery
+  read restored (survey-1's "no entrance/identity" finding no longer
+  stands). ZAI-judged (native 1210 x2, paced retry burned); probe-only,
+  Bill's domain. Evidence: reviews/survey61-slice/stable/
+- `nx-town-dyehouse` — CLEAN-with-margin on replaced bytes 05536de8
+  (survey-7 CLEAN on old bytes, now corroborated post-overhaul): dye
+  identity reads (three blue/red/yellow vats + hung navy cloth + cloth
+  bolts on side counter); ALL three 18m ZAI float-candidates REFUTED by
+  front cross-check — sphere reads as seated cloth bolt on counter,
+  cloth strip hangs from eave beam, vats grounded. Margins: dark-band
+  value crush (roof/fascia/posts/interior), grey-cloth-on-wall low
+  contrast, single hung cloth carries textile cue. ZAI-judged (native
+  1210 x2, paced retry burned). Evidence: reviews/survey61-slice/dyehouse/
+- `nx-town-shrine` — CLEAN-with-margin on replaced bytes c7091d55
+  (survey-2 Sev 3 re-rank + improve-14 lineage on OLD bytes): shrine/
+  altar identity PASS at 18m (stepped plinth + roofed alcove + bowl +
+  offering resolve it), geometry sealed/grounded. Margins only: flame
+  1-2px sub-visible (survey-2's threshold-read class persists), detached
+  hard-edged shadow sliver (363-422,386-397), plinth/alcove value crush.
+  ZAI-judged (native 1210 x2, paced retry burned). Evidence:
+  reviews/survey61-slice/shrine/
+- `nx-town-windmill` — CLEAN CONFIRMED on overhaul baseline a557d918
+  (native, front frame): windmill identity instant (smock tower, gallery,
+  onion cap, finial), ALL FOUR sail arms carry cream canvas + lattice —
+  no bare spars; survey-55's ZAI asymmetry dissent and survey-56's decode
+  refutation both extended to the overhaul bytes. Margins: upper sails
+  frame-cropped (chassis framing artifact, survey-55 class), lower-right
+  sail tip bare-lattice run reads intentional. Evidence:
+  reviews/survey61-slice/windmill/
+- `nx-moonmoth-001` — CLEAN-with-margin (native, first survey judgment of
+  the Bill-commissioned arrival): moth identity unambiguous (eyespot
+  wing pairs, feathery antennae, saddle block between wing roots),
+  symmetric complete wings, grounded with soft shadow, zero crush.
+  Margins: hair-thin antennae/legs alias at range, wing planes
+  single-sided, hindwing eyespots merge at distance. Evidence:
+  reviews/survey61-slice/moonmoth/
+
 ## Carried laws
 
 - improve-13 (EXECUTION CONTRACT, queue item 19 `nx-town-bunkhouse`): idle-guard clear (no lane commit touches this entity in 24h; interior-9 lineage 2026-08-19; artwalk-52 read-only). Survey-2 native CONFIRM on exact live bytes stands as the restored-vision re-judgment (fallback-judge law satisfied). Live tuple (−9,0,−26) yaw 0.31322457341772525, lib 49f5acc4… == local rebuild ×2 deterministic (no disputed bytes). Comp bag {} (census-fresh 259); light companion nx-town-bunkhouse-l at host-local (0.5,2.1,0.5) — untouched, separate entity. Rider nx-artwalk-b20-bunkhouse-four-rooms host-local L=[−2.2,1.05,2.0325] (KEEP-OUT x∈[−2.6,−1.8], y 0.8..1.3, z 1.7..2.4). Findings + mechanisms (decoded at source mkbunk.ts):
