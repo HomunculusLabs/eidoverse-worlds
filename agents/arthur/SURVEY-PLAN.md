@@ -4088,3 +4088,48 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   confirmed / 4 corroborated / 2 clean-with-dissent / 0 dropped. Zero
   world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-70)
+
+- survey-70 (2026-09-08, NATIVE 2/3 + ZAI FALLBACK 1/3 disclosed — native
+  up for slidingladder gameplay (first call clean) + paced-retry front;
+  1210 flap killed fifthbench gameplay (retry burned) and geodesic
+  gameplay (retry burned); 18m gameplay from fresh live store bytes 3/3
+  HTTP 200 curl UA on exact census-70 libs; selection law: severity
+  backlog + never-judged pool both empty → survey-69's two intra-fallback
+  dissents re-judged (arbitration priority) + the one never-judged
+  arrival geodesic (struct-101, classified-not-judged at survey-69)):
+  all three subjects sha256-byte-identical to standing pins where they
+  exist (slidingladder 81c4fb0c, fifthbench addce73b; geodesic 966ce4db
+  first-read pin). VERDICTS: 1 CONFIRMED / 2 CLEAN — SLIDINGLADDER
+  survey-69 identity dissent NATIVE-ARBITRATED to CONFIRM Sev 2 (two
+  native views unanimous: no ladder/rungs/car, reads fan-braced arc
+  truss; supersedes survey-62 CLEAN row; struct owns decode — struct-96
+  authored a ladder into the source, live bytes carry none).
+  FIFTHBENCH count dissent RESOLVED BY DECODE (pitfall 11): 3:2
+  sum-of-sines has exactly THREE true maxima (0.590/-3.413, 0.687/
+  +1.152, 0.451/+5.345) — "fifth" is the musical interval, not a
+  count; bead at screen (478,366) matches central-null projection
+  (476) exactly; every 4-vs-5 render count was expectation-mismatch
+  noise on 8-13px relief; CLEAN row stands, native count-debt CLEARED.
+  GEODESIC first read CLEAN-with-margin (ZAI): dome read instant,
+  lattice resolves, grounded, zero gaps; margin 4-of-6 beads at 18m
+  (2 mid-height sub-threshold) polish-tier. Routing: ONE note routed —
+  STRUCTURES-PLAN SURVEY INTAKE (slidingladder CONFIRM, struct domain);
+  survey-70 sub-section IMPROVE-PLAN SURVEY CANDIDATES (all three
+  subjects standing rows or corroborative; geodesic no duplicate row —
+  struct-101's own packet stands). Grep-verified survey-70
+  pre-existing: 0/0/0 pre-write (all three files). Census 304==304 vs
+  survey-69 baseline /tmp/survey69-census.json: 0 arrivals, 0
+  departures, 0 lib flips, 0 pos moves — steady epoch; new baseline
+  /tmp/survey70-census.json (304). SELF-CATCH DISCLOSED: first fetch
+  pass hand-built store URLs from memory-truncated 10-hex lib prefixes
+  → gateway 404 x3, renders failed closed, zero stale bytes judged;
+  re-derived full 16-hex libs verbatim from the fresh census and
+  re-fetched (3/3 HTTP 200). Gate: ALL PASS real exit 0 first try at
+  2fca17fe (survey-69 at HEAD). Native debt status after this tick:
+  slidingladder + fifthbench debts CLEARED (native arbitration / decode
+  resolution); remaining survey-62 class = hall/inn/kiln/tower-house
+  (tower cleared survey-66). Verdicts 1 confirmed / 2 clean / 0
+  dropped. Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use (D+0, E+0).

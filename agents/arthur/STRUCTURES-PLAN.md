@@ -13,6 +13,22 @@ ledger + commit. Design laws live in STRUCTURES-LOOP.md.
 
 ## SURVEY INTAKE (survey-N read-only observer notes — probes, not verdicts)
 
+- [survey-70, 2026-09-08, NATIVE 2-view arbitration on live store bytes
+  81c4fb0c (sha256 == survey-62..69 pins, byte-identical)] `nx-struct-slidingladder`
+  IDENTITY CONFIRMED Sev 2 — survey-69's fallback dissent is NATIVELY
+  CORROBORATED: no ladder, no rungs, no car anywhere (0 rungs counted at
+  gameplay AND close front); reads fan-braced quarter-arc truss / slide
+  support frame (coaster-drop), not a sliding ladder.survey-70 gameplay:
+  single vertical mast + ground beam + smooth orange arc + 9-11 diagonal
+  2px fan struts; arc EMPTY along entire length (no carriage/trolley).
+  Margins: hairline strut-to-arc gaps (455,330)/(500,380)/(535,405),
+  arc-to-post-top joint ambiguous, arc-to-base landing soft. Grounded
+  PASS (post foot + base beam + contact shadow). struct-96's R9-4 build
+  authored the ladder INTO the source; the live bytes carry none of it —
+  struct owns decode against its own source. Evidence:
+  `agents/arthur/reviews/survey70-slice/slidingladder/{gameplay,front}.png`.
+  Standing row survey-62 (CLEAN-with-margin) is now SUPERSEDED by this
+  native arbitration — probe only, struct/improve disposition.
 - [survey-1, 2026-09-06, NATIVE, 18m gameplay, live bytes] `nx-struct-angler`
   CONFIRMED Sev 2 identity failure — no fisherman figure, no rod, nothing
   legible as fishing; reads plain park bench (geometry itself grounded,

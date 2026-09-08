@@ -4950,3 +4950,51 @@ read):**
  relief ~32px total); native re-judge owed same as struct-92's standing
  debt. All probe-only — improve/Bill own disposition; struct owns
  slidingladder/fifthbench decode. Evidence: reviews/survey69-slice/
+
+**survey-70 sub-section (2026-09-08, NATIVE 2/3 + ZAI FALLBACK 1/3
+disclosed — native up for slidingladder's two views (gameplay + paced
+retry front), then hard 1210 flap for the rest of the tick (fifthbench
+gameplay x2 retry burned, geodesic gameplay x2 retry burned); 18m
+gameplay from fresh live store bytes 3/3 HTTP 200 curl UA on exact
+census-70 libs):**
+
+- `nx-struct-slidingladder` — survey-69 identity dissent NATIVE-ARBITRATED
+  to CONFIRM Sev 2 (supersedes the standing survey-62 CLEAN-with-margin
+  row): two native views agree — NO ladder, NO rungs (0 at gameplay and
+  close front), NO car/trolley on the arc; reads fan-braced quarter-arc
+  truss / slide support frame. Mast + ground beam + smooth orange arc +
+  9-11 diagonal 2px fan struts; arc empty along its entire length.
+  Joint margins (hairline strut-to-arc gaps (455,330)/(500,380)/
+  (535,405); arc-to-post-top ambiguous; arc-to-base soft) demoted from
+  fragile-tip class — the identity failure carries the severity.
+  Grounding PASS. Bytes 81c4fb0c sha-identical to all prior pins — the
+  finding is IN the standing bytes, not drift. Struct owns decode
+  (struct-96 authored a ladder car + rungs into the source; live bytes
+  show none — source-vs-served divergence class). Evidence:
+  `agents/arthur/reviews/survey70-slice/slidingladder/`
+- `nx-struct-fifthbench` — survey-69 count dissent RESOLVED BY DECODE,
+  no vision debt: the 3:2 sum-of-sines crest(x) = 0.42 + 0.28·0.5·
+  (sin(2πx/6) + sin(2πx/4)) over the 12m common period has exactly
+  THREE true local maxima (0.590m @ x=-3.413, 0.687m @ x=+1.152,
+  0.451m @ x=+5.345) plus three minima — the "fifth" is the musical
+  3:2 interval, not a five-crest count; every render count (5 @
+  survey-68, 4 @ survey-69/70) was expectation-mismatch noise on
+  8-13px relief. Bead at screen (478,366) matches the central-null
+  x=0 projection (screen-x 476) exactly — bead placement CORRECT by
+  source math. ZAI gameplay pass corroborates grounding (base line
+  y≈398-400 continuous x152-800, zero gaps/floats; margin: no cast
+  shadow full span). CLEAN row stands; native count-debt on this
+  subject CLEARED by decode arbitration (pitfall 11 law). Evidence:
+  `agents/arthur/reviews/survey70-slice/fifthbench/`
+- `nx-struct-geodesic` — first survey read CLEAN-with-margin (ZAI
+  fallback; native 1210 x2, paced retry burned): geodesic-dome read
+  instant at 18m (truncated hemisphere on circular plinth, silhouette
+  x285-670 y240-435), triangular lattice RESOLVES (3-5px struts,
+  15-25px upper triangles, larger open bays at base ring = climbing-
+  dome grammar), grounded PASS (plinth flush + contact shadow x290-340
+  y425-437), zero gaps/floating panels. Margin: 4-of-6 warm beads
+  legible at 18m (apex (480,243) + upper ring (402,268)/(511,267)/
+  (571,271) clean; 2 mid-height beads sub-threshold against busy
+  strut intersections ~(345,340)/(621,320)) — polish tier, not defect;
+  corroborative only, struct-101's own native packet stands. Evidence:
+  `agents/arthur/reviews/survey70-slice/geodesic/`
