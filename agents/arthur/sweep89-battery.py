@@ -21,7 +21,7 @@ def lib(e):
 
 # carousel
 car = E.get("nx-carousel", {})
-check("carousel-lib-ce3633992d07055e", lib("nx-carousel") == "ce3633992d07055e")
+check("carousel-lib-1c0128b61b510a5d", lib("nx-carousel") == "1c0128b61b510a5d")  # polish-283 Bill-approved carved horses, sweep-104 wave
 ck = sorted((car.get("comp") or {}).keys())
 check("carousel-comp-exact-7", ck == sorted(["motion:carousel", "motion:horse_0", "motion:horse_2", "motion:horse_4", "motion:horse_6", "particles:smoke", "sockets"]))
 
@@ -39,8 +39,8 @@ check("belltower-lib-2419fbc53a1d65e1", lib("nx-town-belltower") == "2419fbc53a1
 check("belltower-ladder-comp", "ladder" in (E.get("nx-town-belltower", {}).get("comp") or {}))
 
 # standing fleet pins
-check("windmill-369c572480b0e786", lib("nx-town-windmill") == "369c572480b0e786")
-check("woodyard-01b78fdd00f090a7", lib("nx-town-woodyard") == "01b78fdd00f090a7")
+check("windmill-a557d918b2c14f1a", lib("nx-town-windmill") == "a557d918b2c14f1a")  # WINDMILL-OVERHAUL accepted baseline
+check("woodyard-333e85a41a745d39", lib("nx-town-woodyard") == "333e85a41a745d39")  # village-overhaul DELIVERY.json LIVE_VERIFIED
 check("welcome-7d1bd0c9545c44fb", lib("nx-welcome") == "7d1bd0c9545c44fb")
 check("welcome-l-companion-live", "nx-welcome-l" in E)
 check("cistern-156b4fc8c7287a9d", lib("nx-cistern") == "156b4fc8c7287a9d")
@@ -67,7 +67,7 @@ check("court-smoke-live", any(k.startswith("particles") and isinstance(v, dict) 
 lights = [e for e in d["entities"] if e.get("kind") == "light"]
 compb = [e for e in d["entities"] if e.get("comp")]
 check("lights-38", len(lights) == 38)
-check("comp-bearing-18", len(compb) == 18)
+check("comp-bearing-21", len(compb) == 21)  # sweep-104 record: moonmoth + house-35_-22 arrivals + windmill millstone
 
 # this tick's classification pins
 wh = E.get("nx-struct-whisperhorn", {})
