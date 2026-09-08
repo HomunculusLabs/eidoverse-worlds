@@ -1843,6 +1843,53 @@ mossbowls NOT JUDGED — store 404 x2 on lib 5d698bd5 (fail-closed, zero
 stale bytes judged; a live entity the store will not serve — verify-tier
 anomaly, candidate for a later tick's fetch probe).
 
+**survey-75 sub-section (2026-09-08, NATIVE 8/8 disclosed — third
+consecutive all-native window; 18m gameplay + front cross-checks, fresh
+live store bytes 6/6 HTTP 200 on exact census-75 libs):**
+
+- `nx-craft-hamlet-0007` — improve-23 native re-judge debt PAID + CLEARed
+  (native gameplay on live cure bytes edd3da3e): cure classes all PASS —
+  zero floating masses with open sky, zero see-through holes, zero
+  detached stair slabs; grounding seated; identity inhabited-hamlet
+  reads (lamps, door, path, well). Verify-tier margins only: protruding
+  roof beams read as rafters (family design), dark-olive value
+  compression note (not pure-black crush). Row stays EXECUTED/cured.
+- `nx-craft-hamlet-0028` — improve-25 native re-judge debt PAID + CLEARed
+  (native gameplay on live cure bytes 44d78463; upgrades survey-19's ZAI
+  pass): zero floats, zero holes, stepping stones flush/grounded, stair
+  runs attached; margins verify-tier: deep overhangs read slab-like,
+  inter-cottage connector beams. Row stays EXECUTED/cured.
+- `nx-town-belltower` — improve-17 native re-judge debt PAID + CLEARed
+  (native gameplay on live cure bytes 2419fbc5): ladder stringers
+  continuous + rungs attached (survey-5 float finding resolved), rope
+  anchored bell-to-cleat, belfry open housing with bell + rail, lantern
+  bracket-mounted, zero silhouette floats. Row stays EXECUTED/cured.
+- `nx-town-garden-cottage` — survey-60 ZAI CLEAN upgraded NATIVE on
+  identical live bytes b5b3f102: lit cased windows, fence post rhythm +
+  planters, chimney 2 flue pots, grounded. Margin verify-tier: center
+  reads open-breezeway w/ visible fireplace (door-leaf presence
+  unresolved at 18m); garden wraps left side only.
+- `nx-town-longhouse` — survey-60 ZAI CLEAN upgraded NATIVE on identical
+  live bytes e38bb2a4: timber-hall identity instant, porch posts
+  grounded, values separated, chimney seated. Margin: ~3:1 length ratio
+  reads hall, not strict-longhouse.
+- `nx-dress-se-mossbowls-001` — survey-74 "store 404 anomaly" RESOLVED
+  as a TRANSPOSED-HASH TYPO in survey-74's fetch (fetched 5d698bd5 vs
+  census lib 6d598bd5 — survey-70 self-catch class, NOT a store fault).
+  True lib serves HTTP 200 (19860B, served sha16 40275094). First read
+  CLEAN-with-margin (native gameplay + front): mossy-mound identity
+  borderline (concavity not legible at 18m, ~2% frame — struct-45
+  framing-limited class), silhouette + grounding PASS, moss green
+  legible; verify-tier margin: one cyan-blue patch x318-362 y405-422
+  (possible water bowl or stray quad — dress owns decode). No candidate
+  row: no confirmed defect.
+
+Improve-debt provenance note (survey-75 derivation): row-cottage +
+garden-cottage live libs are cabin-1 replacements (0558b5f4 / b5b3f102)
+judged CLEAN by survey-60 — improve-16's old-bytes native debt is
+SUPERSEDED; the improve-17 beltower debt (live pin 2419fbc5 intact) was
+the real standing debt and is now paid.
+
 ## SURVEY CANDIDATES (round-2 intake)
 
 **survey-23 sub-section (2026-09-07, ZAI fallback 6/8 + NATIVE 2/8

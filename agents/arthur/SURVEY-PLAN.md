@@ -4320,3 +4320,63 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
 
+
+## Judged index (survey-75)
+
+- survey-75 (2026-09-08, NATIVE 8/8 (6 gameplay + 2 front cross-checks) —
+  THIRD consecutive all-native window, zero 1210s, zero ZAI fallback; 18m
+  gameplay from fresh live store bytes 6/6 HTTP 200 curl UA on exact
+  census-75 libs): selection law run honestly to empty — severity backlog
+  + never-judged pool BOTH EMPTY (census-75 matcher over 267 lib-bearing
+  ids; 9 residual "never" candidates all proven judged via fleet-
+  representative/degenerate-fleet laws: lamp-e survey-32, wayband-e
+  survey-31/32, waystone fleet survey-26/28, gate-s inside survey-60
+  family lock; 9 core dress families all judged surveys-1..28); hall/inn
+  debt capped at 9 passes by debt-class transfer law (owner disposition).
+  Slice = standing native-debt rows on LIVE cure bytes (opportunistic-
+  native law) + the survey-74-flagged mossbowls 404-anomaly probe.
+  Selection derivation corrected live: row-cottage/garden-cottage improve-
+  debts found SUPERSEDED (live libs 0558b5f4/b5b3f102 are cabin-1
+  replacements judged CLEAN by survey-60) — replaced in-flight by
+  garden-cottage + longhouse (survey-60 ZAI cleans, native owed).
+  VERDICTS 0 confirmed / 6 clean / 0 dropped — HAMLET-0007 CLEAN NATIVE
+  (improve-23 native debt PAID: no floating masses, no see-through holes,
+  no detached slabs; grounding seated; protruding roof beams read
+  rafters, family design; dark-olive value compression note, not crush).
+  HAMLET-0028 CLEAN NATIVE (improve-25 native debt PAID + survey-19 ZAI
+  upgraded: all masses grounded, flat stepping-stones flush, no holes, no
+  floating stair runs; margins verify-tier only: deep overhangs read
+  slab-like, connector beams between cottages). BELTOWER CLEAN NATIVE
+  (improve-17 native debt PAID: ladder stringers continuous + rungs
+  attached, rope anchored bell-to-cleat, belfry open with bell + rail,
+  lantern mounted, zero floats). GARDEN-COTTAGE CLEAN NATIVE (survey-60
+  ZAI upgraded: lit cased windows, fence post rhythm + planters, chimney
+  2 flue pots; margin: center reads open-breezeway w/ visible fireplace —
+  door-leaf presence unresolved at 18m, verify-tier only; garden wraps
+  left side only). LONGHOUSE CLEAN NATIVE (survey-60 ZAI upgraded: timber
+  hall instant, porch posts grounded, values separated; margin: ~3:1
+  length reads hall not strict-longhouse). MOSSBOWLS 404 ANOMALY
+  RESOLVED — survey-74's "store 404 x2" was a TRANSPOSED-HASH TYPO
+  (fetched 5d698bd5, census lib 6d598bd5; survey-70 self-catch class);
+  true lib serves HTTP 200 (19860B, served sha16 40275094). First read
+  CLEAN-with-margin: identity mossy-mound borderline (concavity not
+  legible at 18m, ~2% frame — struct-45 framing-limited class), one
+  small cyan-blue patch x318-362 y405-422 front-view (possible water
+  bowl or stray quad — verify-tier margin, dress owns decode),
+  silhouette/grounding PASS, moss green legible. Routing: survey-75
+  sub-section IMPROVE-PLAN SURVEY CANDIDATES (three debt-closure
+  annotations + two native-upgrade annotations + mossbowls anomaly-
+  resolution correction of the survey-74 line); ZERO notes to other
+  lanes' plan files this tick (no confirmed defects). Census 305==305 vs
+  survey-74 baseline /tmp/survey74-census.json: 0 arrivals, 0
+  departures, 0 lib flips, 0 pos moves — steady epoch, quiet window;
+  new baseline /tmp/survey75-census.json (305). Gate: ALL PASS real
+  exit 0 first try at c90d3617 (survey-74 at HEAD; sweep-129/130
+  interleaves classified from ledger, foreign files only). Native debt
+  tick: improve-17 beltower + improve-23 hamlet-0007 + improve-25
+  hamlet-0028 debts PAID+CLEARed native this tick; survey-62 class
+  unchanged (hall/inn open, owner disposition); row-cottage/garden-
+  cottage improve-debts noted SUPERSEDED by cabin-1 bytes (survey-60
+  clean verdicts own the live bytes). Verdicts 0 confirmed / 6 clean /
+  0 dropped. Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use (D+0, E+0).
