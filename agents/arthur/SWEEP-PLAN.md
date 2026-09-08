@@ -3559,3 +3559,56 @@ walk tools verified present: interior-walk-hall.ts, interior-walk-row-cottage.ts
 
 
 sweep-104: CLEAN SWEEP, epoch-settled arrival+wave tick — the largest single-window world delta this lane has audited. Census 295→298 vs the committed sweep-103 baseline (sha16 44a3417ffedfa8aa), epochs A and B identical (20s-paced): +3 arrivals, 0 departures. Arrivals: nx-moonmoth-001 @ (−90, 0.0008, 13) yaw π/2 lib df959099 = moonmoth-1 committed ledger, tuple-exact, comp bag lock+2 wing pendulums+sockets live; beb4c791 (hash-id, carries the moon-moth source lib df959099, pos (36.17,−0.036,−14.88)) and house-35_-22 (dels/crate_large_red stock demo lib, pos (36,0,−21), comp structure) = FOREIGN/PLAYER-domain entities, off-spoke band r36.9/r41.8, routed to this register by city-98 per CITY-PLAN law 6 — recorded below as Sev 3 register entries awaiting Bill disposition (no lane claims them; both sit clear of routes per SAT). Drift wave fully classified, every field-set domain-valid: (a) five homes (row-cottage, garden-cottage, longhouse, bunkhouse, tower-house) + b17 +0.54m Y remount = cabin-1 committed ledger, comp bags preserved; (b) thirteen town/civic builds (hall, inn, stable, woodyard, forge, dyehouse, potter, kiln, tower, shrine, gates n/s/e/w) = the Bill-commissioned village-overhaul parent wave (untracked in-tree project, DELIVERY.json) — all 13 live libs DELIVERY.json-matched this tick, identical tuples; (c) nx-town-windmill lib flip = windmill overhaul (untracked WINDMILL-OVERHAUL.md), comp GAIN motion:well_millstone alongside motion:sails; (d) nx-carousel ce3633992d07055e→1c0128b61b510a5d = polish-283 committed, Bill-approved carved carousel horses, comp bag exact 7 with motion:horse_{0,2,4,6} keys unchanged. Zero comp losses anywhere: comp-bearing 18→21, gains exactly the two arrivals + windmill millstone; court smoke, forge coals+particles, belltower ladder, potter pwheel, tower sockets all standing after the re-place wave — the wipe law's feared failure mode did not occur. Overlap: SAT fresh-live 260 bbox non-light / 232 classified / 0 coverage holes, exit 3 on ONLY the known R-121 lamp-n | nx-town-mapboard −0.407 (Sev 2 routed to artwalk @ sweep-43, sixtieth sweep since routing, no escalation due — the law keys on severity-1); zero new contacts at any of the 19 re-placed seats or the 3 arrivals. Tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each, walked over the NEW bytes — the re-placed buildings ARE the walk surface, so no construction shortcut applied: core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37. Tier-2 82nd cycle per committed pointer: hall 8/8 @ 0.360 + row-cottage 6/6 @ 0.384, both against their re-placed bytes, both real exit 0. Integrity: struct18-fleet-pin-check 15/15 ok bad=[] (58th consecutive); interlane md5 f6254cd0 stable; 38 lights; ledger law EXACT — base re-read immediately before append (struct-93 D+1 halt cure absorbed mid-tick, 2370737→2370738), entry landed D+0/E+0 at 2370738. ENVIRONMENT FINDING surfaced for the fleet: root volume hit 100% (101Mi free) mid-tick — ENOSPC killed one walk capture; this lane freed only its own /tmp/sweep74-env residue (18M) restoring 809Mi; /tmp/eliza-29901 holds 6.8G and needs an owner decision (NOT touched by this lane). Snapshot rewritten with pre-write assertions (arrivals exactly [moonmoth, beb4c791, house-35_-22]; 21 lib flips + b17 pos exactly), post-rewrite drift vs live ZERO: 298 entities, 120100B, sha16 a1de8a78dbab76bc. Probe self-caught pre-verdict: walk parser keyed 'dist' where the approach tool schema uses 'distance' (sweep-54 class, re-anchored on status + per-leg ok + maxArrival). Zero world mutations, zero defect notes to owning lanes (all changes ledger-matched), zero uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-105): stable + observatory circuit (83rd cycle — LRU chain: @104 hall/row-cottage, @103 forge/potter, @102 bunkhouse/longhouse, @101 row-cottage/inn, @100 stable/observatory, @99 garden-cottage/tower-house — stable and observatory last walked sweep-100, now the stalest standing pair; stable was re-placed by the overhaul wave, sweep-105 walk lands directly on the new bytes; both walk tools verified present: interior-walk-stable.ts, struct2-walk-observatory.ts).
+
+sweep-105: CLEAN SWEEP, epoch-settled drift-pair tick. Census 298==298 at
+epochs A/B/C vs the committed sweep-104 baseline (sha16 a1de8a78dbab76bc):
+0 arrivals, 0 departures, exactly TWO classified lib flips at identical
+tuples, both struct-domain, both ledger-matched: (1) nx-struct-halt
+bb227fd6->cdaf7c1f = struct-93 @ a4f51752, committed PRE-tick — sweep-104's
+census reads predated its re-place verbs (the sweep-52 known-epoch class);
+(2) nx-struct-needlerest bb227fd6->cdaf7c1f = struct-94 @ f5e6883d, committed
+MID-TICK — the deferred shared-bytes half of the halt value-crush lineage,
+zero-upload byte-swap at register-pinned tuple (10.273, 0.0029, 68.737) yaw
+2.99324, independently corroborated by city-103 and dress-150 holds. Epoch C
+settled 0/0/0 across a 25s-paced re-read; both swaps bbox-parity EXACT
+(material-only cures per both ledgers). Overlap: SAT fresh-live at epoch A
+and re-run at epoch C — 260 bbox non-light / 232 classified / 0 coverage
+holes, exit 3 on ONLY the known R-121 lamp-n | nx-town-mapboard -0.407
+(Sev 2 routed to artwalk @ sweep-43, sixty-first sweep since routing, no
+escalation due — the law keys on severity-1); ZERO new contacts at either
+cured seat. Tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit
+0: core 64/64 @ 0.38 (banner-stripped parse), NW 5/5 @ 0.38, NE 7/7 @ 0.38,
+SW 5/5 @ 0.37; needlerest sits r69 NE, 47m+ off every tier-1 waypoint —
+epoch-A walks stand by construction, SAT re-run covers the collision surface
+(sweep-53/57 precedent). Tier-2 83rd cycle per committed pointer: stable 5/5
+@ 0.396 (interior-walk-stable.ts, walked over the overhaul-wave bytes) +
+observatory circuit 5/5 @ 0.389 (struct2-walk-observatory.ts), both real
+exit 0. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK real exit 0
+(59th consecutive clean); sweep89-battery 25/28 with exactly three FAILs,
+ALL stale-probe-pins predating the sweep-104 wave — windmill pin 369c5724 vs
+live a557d918 = the WINDMILL-OVERHAUL accepted baseline ("windmill looks
+amazing!", LIVE_VERIFIED); woodyard pin 01b78fdd vs live 333e85a4 =
+village-overhaul DELIVERY.json LIVE_VERIFIED exact; comp-bearing pin 18 vs
+live 21 = the sweep-104 record (gains moonmoth + house-35_-22 arrivals +
+windmill millstone) — world correct throughout, all three re-derived from
+the live census, not memory (battery probe pins refreshed from live values
+this tick); comp-bearing 21 census-matched; interlane md5 f6254cd0 stable,
+read fresh. Ledger law EXACT — base re-read immediately before append
+(struct-94 D+1 absorbed mid-tick), entry landed D+0/E+0 at 2370739.
+Standing gate ALL PASS real exit 0 at tick-start 13fc65d4, re-run ALL PASS
+real exit 0 at 543f0fb4 post-interleave. Snapshot rewritten with pre-write
+assertions (0 arrivals, 0 departures, drift exactly [halt lib, needlerest
+lib], bbox parity), post-rewrite drift vs live ZERO: 298 entities, 120100B,
+sha16 2f6ccda3e57cc491. Probe self-caught pre-verdict: my walk-verification
+script shadowed the core results variable with SW's 5-leg list and tripped
+its own redundant assert — re-inspected the printed per-leg counts from the
+actual captures (sweep-48 class, no verdict impact); the SAT re-run echo
+printed exit 0 from the pipe tail (content-anchored on the unclassified line
+instead, polish-270 class). Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+Next tier-2 pair (sweep-106): bunkhouse + longhouse (84th cycle — LRU
+chain: @105 stable/observatory, @104 hall/row-cottage, @103 forge/potter,
+@102 bunkhouse/longhouse, @101 row-cottage/inn, @100 stable/observatory —
+bunkhouse last walked sweep-102 and longhouse sweep-102, now the stalest
+standing pair; both walk tools verified present: interior-walk-bunkhouse.ts,
+interior-walk-longhouse.ts).
