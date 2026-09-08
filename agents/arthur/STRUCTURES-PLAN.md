@@ -5556,3 +5556,61 @@ rising from the grass, its dark doorway facing you. Step inside and
 look straight up: the walls pinch to a narrow circle of sky, five
 small suns ringing the crown around it. At dusk from outside: quiet
 amber points on the rim, and nothing else.
+
+## struct-104 (2026-09-08): SURVEY-70 IDENTITY CURE — slidingladder
+## decode-at-source resolved: geometry COMPLETE in served bytes; yaw re-seat
+
+Cadence 104%3==2 nominal build tick, but the plan's own NEXT line (struct-103)
+queued slidingladder decode-at-source ahead of an R10-7 build; survey-70's
+native-CONFIRMED Sev 2 on our own entity = the highest evidenced deficit.
+Shard re-verified EMPTY (full-row parse, struct-102 law). Gate ALL_PINS_OK
+15/15 real exit 0 (tick-start + pre-mutation).
+
+DECODE VERDICT (struct104-decode-served.ts — new tool, draco3dgltf local
+decoder; probe law 11: decode outranks the render claim): the LIVE SERVED
+bytes (store 81c4fb0c, DRACO+webp re-encode of our 195KB upload — source/
+served divergence is a SYSTEMIC store transform, geodesic served 966ce4db vs
+uploaded 813ad295 same class) carry ALL source geometry: slidingladder_1 iron
+bucket 1320 verts / 660 faces = EXACTLY 10 rails × 24 + 45 rungs × 24;
+classifier: RAILS 10/10, RUNGS 45/45 in true rung boxes (z ±0.2). The brass
+astroid tube intact (3609 verts). Survey-70's "no ladder, no rungs, no car"
+is a READ-ANGLE failure, not dropped geometry.
+
+ROOT CAUSE: FACE-ON SITING. The figure lives in the vertical x-y plane;
+its width axis is local z. At yaw 0 the S-spoke approach reads the work
+face-on from ±z — the ladder width (0.39m rail spacing, 0.05 rungs)
+projects to ~2px at 18m: two rails merge to one line, rungs vanish. Every
+ladder in the fan is edge-on to its viewer. FALSIFIED BY RENDER on the
+served bytes (struct104-render-yaw.ts, review-model-draco chassis + yaw
+param): yaw0 control native-reproduces survey-70's exact finding ("No
+ladders... 0 rungs... string-art curve sculpture / fan of struts"); yaw40
+candidate native-reads "These are LADDERS... clearly visible horizontal
+rungs... rhythmic ladder pattern" + brass arc PASS both views. Root cause
+proven, not asserted.
+
+CURE (yaw-only re-seat, same bytes, same position): struct104-reseat.ts —
+2 verbs over the join WS (remove seq 902 + spawn seq 903), yaw 0 ->
+0.6981317007977318 rad (2π/9, 40°), pos (3.5, 0.0056, 58) unchanged, lib
+store/ed652efc09e44123.glb unchanged (NO upload). TUPLE_VERIFIED via fresh
+census (305 steady), idempotent rerun ZERO verbs. Comps {} (none owed,
+comp-wipe law N/A-empty). Folly class unchanged (furniture-box, no walk
+owed — struct-96 precedent; rotation does not alter enterability).
+
+NIGHT at new yaw: native PASS — brass arc crisp quiet warm line, zero
+bloom, silhouette readable; disclosed margin: low-contrast iron-on-navy
+(polish-tier, same class as catenoid lattice margin).
+
+SAT impact: nil — nearest live neighbor 12.7m (needlerest); a yaw rotation
+of a 4.4×1.58m footprint cannot close >10.3m against the 1.4m law.
+
+NEXT: 105%3==0 -> REFINEMENT tick if pool non-empty, else build (R10-7
+form-ledger gap; candidates per struct-101 NEXT). Sierpinski aerial native
+debt STILL OWED (provider flap). Survey-70's slidingladder row: intake note
+superseded by this cure — post-cure survey read will confirm.
+
+BILL EYE-CHECK (one, standing — the ladder now reads): walk out the SOUTH
+gate along the processional; just past the drift gardens the fan of iron
+ladders stands obliquely to your path — five ladders frozen mid-slide
+between a stone wall and the ground, their rungs catching the light, one
+warm brass curve touching every one of them. At dusk: the amber astroid
+line, quiet and crisp, and nothing else.
