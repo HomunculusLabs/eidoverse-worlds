@@ -1890,6 +1890,33 @@ judged CLEAN by survey-60 — improve-16's old-bytes native debt is
 SUPERSEDED; the improve-17 beltower debt (live pin 2419fbc5 intact) was
 the real standing debt and is now paid.
 
+**survey-77 sub-section (2026-09-08, NATIVE 10/10 disclosed — 5th
+consecutive all-native window, zero fallback; 18m gameplay from fresh
+live store bytes 8/8 HTTP 200 curl UA on exact census-77 libs; rotating
+district pass over the never-judged NE-craft cloisters/statuaries —
+selection derivation and per-object class verdicts in SURVEY-PLAN
+judged index survey-77):**
+
+- `nx-craft-statuary-0005 / -0026 / -0039` — FAMILY candidate Sev 4
+  (native DEFECT 0005 + native DEFECT 0026 + CLEAN-with-margin 0039
+  whose margin clause names the identical crush): monochrome value
+  crush at 18m — statue cones, stepped plinths, and ground-scatter ring
+  all read one khaki/olive value, only the few dark sphere heads
+  separate; GLBs carry 4 materials (stone/plaster/iron/timber) but
+  stone-vs-plaster separation is invisible at gameplay distance.
+  Identity/silhouette/grounding PASS 3/3 (deliberate sculptural group,
+  ring reads plotted, all seated). 0039 adds mid-cluster merge
+  x390-410/x500-540. Candidate row because `nx-craft-*` is unowned by
+  active lanes (sharding table has no craft prefix; NE-CRAFT-PLAN is a
+  completed nvp-era plan) — probe, not a verdict; decode/execution law
+  belongs to whichever lane takes it (likely struct or improve re-arm).
+  Possible low-cost fix class: value-spread the stone/plaster palette.
+  Evidence: reviews/survey77-slice/ (statuary-0005/0026/0039 gameplay +
+  night + full 8-view sets; served-sha16 44f35863/96dc5617/9fc6dcc5).
+  Cloister verdicts (5× CLEAN-with-margin, lamp-orb question
+  decode-settled intentional via `glow3`+`clo_finial`) carry no defect
+  — see SURVEY-PLAN survey-77 for the margins.
+
 ## SURVEY CANDIDATES (round-2 intake)
 
 **survey-23 sub-section (2026-09-07, ZAI fallback 6/8 + NATIVE 2/8
