@@ -6904,3 +6904,61 @@ ZAI fallback (native hard down). Owed on the next tick with native up.
 
 NEXT: 121%3==1 build tick — R10-18 form-ledger gap derivation fresh
 unless survey routes rows.
+
+## struct-121 (2026-09-08): R10-18 THE GALTON BOARD authored+built+decoded
+## ALL PASS — judged/sited/placed DEFERRED to 122 (run budget, struct-119
+## precedent, fail-closed)
+
+Cadence 121%3==1 BUILD tick. Shard empty fresh (row 15 NATIVE-DROPPED
+terminal; rows 22-26 EXECUTED verified wide-window this tick; struct-118/
+120 both scanned fresh). Refine pool empty fresh. Gate ALL_PINS_OK 15/15
+real exit 0 tick-start (bun, no pipe). Native vision HARD DOWN all tick
+(1210 x3 on struct-120 debt attempt — brachistochrone native re-judge debt
+RIDES, flap law, disclosed).
+
+CONCEPT (written before build): the form ledger's missing PROBABILITY /
+STATISTICS family (ledger grep fresh: zero galton/gaussian/binomial/
+probability presence in either ledger). ONE IDEA: ORDER OUT OF CHAOS —
+a stone board streaked with a staggered iron peg lattice (63 pegs, 5 rows
+dy 0.19, stagger exactly half the 0.33 spacing), brass balls rain frozen
+mid-scatter (4 dark, all >= 0.285 clear of every peg axis) and stand
+stacked in nine ashlar bins whose column heights trace the EXACT binomial
+bell B(8,1/2) -> [0,1,3,6,7,6,3,1,0] — tails honestly empty. Night: the
+center column's SEVEN balls glow (dusk lineage struct-82) — the bell's
+core holds the light, the falling rain stays dark. Stone hopper converges
+to a 0.46 slot above the crest. Folly class (zeno..brachistochrone
+precedent), static.
+
+BUILD: mkv3-galtonboard.ts; two honest self-errors caught by the law
+asserts pre-GLB (nested-quote template parse break; 63-vs-65 peg count —
+the assert layer doing its job). sha 3d9f7c9cdf81d64ce497b2c1aa6684b98f1
+330b3c1c0af56fa9512d9fd1d807b x2 deterministic. Envelope 4.70x4.46x0.97
+y[0..4.460], bbox NOT origin-centered (board z 0..0.97 span, x centered).
+Nodes 10 (stone/iron/brass buckets + 7 KEEP glow_ga). texMat lanes
+galt_stone/galt_iron/galt_brass (struct-38 law). IN-FILE DECODE LAWS all
+green (binomial/lattice/stagger/rain/containment/glow/envelope/NaN) —
+independent byte-level decode audit OWED next tick (struct119 pattern)
+before placement.
+
+DEFERRED CONTRACT for 122 (122%3==0 nominal refine; pool empty ->
+deferred-contract precedence struct-113/117/120):
+1. Decode audit struct121-decode-galtonboard.ts from BYTES (independent
+   replica: bell column ball counts, peg lattice arithmetic, rain
+   clearances, glow census, envelope).
+2. review-model.ts 10-view renders on exact pinned bytes.
+3. Judge front/gameplay/night — NATIVE first (flap law; also pay
+   struct-120's brachistochrone native re-judge debt if provider returns).
+4. Site: az184 r210, S mathematics axis extends past brachistochrone r200
+   (dial r71 -> koch r90 -> hilbert r100 -> dodeca r110 -> wall r120 ->
+   tesseract r130 -> lorenz r140 -> chladni r150 -> voronoi r160 ->
+   zeno r180 -> borromean r190 -> brachistochrone r200 -> GALTON r210).
+   Face-on law struct-104: board plane faces the S-axis approach; scan
+   (fresh census, center-corrected, film-guarded, law 1.4) + terrain 9pt
+   + hash-gated fresh-only placer next-place-struct121.ts.
+5. PLACED_VERIFIED tuple + idempotent rerun REFUSED; census N->N+1.
+
+BILL EYE-CHECK (one, standing once placed): walk the south mathematics
+walk past the race — a stone board rises streaked with iron pegs, brass
+balls frozen mid-fall above a row of nine bins. The middle bins stand
+full; the outer ones empty. At dusk the heart of the heap glows: seven
+warm points where chance has already decided.
