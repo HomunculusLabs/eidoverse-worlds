@@ -7409,3 +7409,54 @@ Files: agents/arthur/assets/mkv3-peaucellier.ts (durable source, ignored
 dir — staged git add -f), struct128-decode-peaucellier.ts, struct128-
 scan-peaucellier.ts, struct128-terrain-peaucellier.ts (tracked);
 reviews/struct128-peaucellier/ (ignored). Plan append-only this tick.
+
+## struct-129 (2026-09-09): PEAUCELLIER PLACED — deferred siting executed, live at az184 r169
+
+Cadence 129%3==0 mapped to a REFINEMENT slot but refine pool empty fresh
+(clothoid DONE struct-126; no standing struct without hero-ready mark), so
+this tick completed struct-128's deferred placement (build-completion slot).
+Gate ALL PASS real exit 0 tick-start fb293500 + PRE-MUTATION re-gate
+7bb8b898 (two mid-tick sibling advances absorbed: sweep-174, survey window).
+Ledger max fresh = 128 -> this tick struct-129. Shard empty fresh (no SHARD
+EXECUTION heading in IMPROVE-PLAN; 0 OPEN nx-struct rows).
+
+SEAT RE-DERIVED (struct128-scan blocked the contract r170: zeno SAT 1.07 <
+1.4): struct129-scan-peaucellier.ts ladder r170..r165 az184 yaw-pi against
+a FRESH 318 census — r170 BLOCKED reproduced (zeno +1.07), R=169 SELECTED
+as the lawful seat closest to contract: worst solid zeno +2.07 (law 1.4),
+film kochgarden +75.09 (law 4.0), walk approach-ne-lane-002 +97.26 (law
+3.0), rim 169. Still inside the S-walk [20m HOLE]: voronoi r160 ->
+PEAUCELLIER r169 -> zeno r180. TERRAIN re-sampled at the FINAL pose only
+(struct129-terrain: 9pt spread 17.2mm, PY -0.047974 lowest base-on-grade;
+r170's -0.0464 correctly discarded — rejected-site law).
+
+PLACE: next-place-struct129.ts hash-gated (bytes sha f66494fa3ffb9ff8
+...cdb34e re-verified on disk unchanged from struct-128), center-corrected
+SAT re-run LIVE worst zeno +2.07 fresh-318, upload store/f66494fa3ffb9ff8
+(shared budget, single upload), spawn paced 600ms.
+PLACED_VERIFIED nx-struct-peaucellier pos [-10.4888,-0.0480,168.3133] yaw
+3.1416 lib store/f66494fa3ffb9ff8.glb comp {} census 318->319. Idempotent
+rerun REFUSED zero-verbs exit 1 (fresh-only form). Independent live
+read-back: exact tuple, yaw pi exact, scale 1, server bbox 7.00x4.20x1.05
+center [1.30,2.10,-0.275] = decode envelope exact. Folly class — no walk
+owed (zeno/borromean/galton/clothoid precedent). Comps {} (glow is KEEP
+glow_pc_1 material inside the GLB) — nothing to reapply.
+
+NATIVE RE-JUDGE DEBT (from struct-128, gameplay/night were ZAI-judged):
+RETRIED this tick per the flap law — native 1210 x2 + paced 20s retry
+burned; provider down all window. Debt CARRIES, disclosed. No ZAI re-run
+on byte-identical frames ZAI already passed (would be manufactured
+verification, not a native re-judge).
+
+VERDICT: the Peaucellier Invertor stands — the S mathematics walk now runs
+lorenz r140, chladni r150, voronoi r160, PEAUCELLIER r169, zeno r180,
+borromean r190, brachistochrone r196, galton r210, clothoid r220.
+Refine pool: peaucellier NOT hero-ready (native debt open) — next %3==0
+refine slot (struct-132) takes it IF the native provider is up; if native
+remains down the debt carries and the pool stays non-empty.
+
+NEXT: 130 — build slot (130%3==1): next commission (form-ledger gap grep
+fresh; R10-20 continuing).
+
+Files: struct129-scan-peaucellier.ts, struct129-terrain-peaucellier.ts,
+next-place-struct129.ts (all tracked); plan append-only this tick.
