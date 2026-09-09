@@ -8764,3 +8764,48 @@ anchor phrase non-unique 33x, assert fired pre-write, corrected, zero
 partial writes). Zero ledger append, zero world mutations,
 zero uploads, zero verbs, zero comp edits, zero shared-budget use
 (D+0, E+0).
+
+## Judged index (survey-165)
+
+HOLD — 72nd quiet hold, FIRST at the fully-quiet 319 epoch with the
+survey-executable debt pool EMPTY. Census 319 == 319 (281 thing + 38
+light, 0 dup ids), raw fetch HTTP 200 211652 B md5 ea2ee6d6 — the
+compKeys schema shape returned again (s148/s163 flap class; sweep-175
+baseline carried parent+tris 94432 B; content compared on the 8 shared
+comparable fields regardless). Set-diff baseline sweep-175 epoch-B
+committed snapshot (freshest same-epoch lineage, same basis as s164):
+0 arrivals / 0 departures / 0 lib flips / 0 pos / 0 yaw / 0 scale /
+0 bbox / 0 comp across all 319 shared ids — world byte-quiet. The one
+schema delta (compKeys None vs [] on all 319) is fetch-shape, not
+content; the comp payload field itself is 0-diff. Peaucellier tuple
+ledger-exact in THIS census (lib store/f66494fa3ffb9ff8.glb, pos delta
+vs ledger < 5e-5 on all axes, yaw pi, comp {}). All 10 struct markers
+re-verified LIVE in THIS census (borromean, brachistochrone,
+galtonboard, clothoid, lemniscateseat, peaucellier, zeno, voronoi,
+chladni, lorenz). Selection law fresh: SHARD EXECUTION heading absent;
+not-yet-re-judged 0; STATE-OPEN 0; pending-survey 0; improve parked —
+zero rows route to survey. Never-judged pool ZERO by set algebra
+(pool only grows via arrivals; arrivals=0). Native-debt pool:
+survey-executable items EMPTY — peaucellier RETIRED s164 (native
+corroborated the ZAI CLEAN); remaining standing debt items are
+owner-lane dispositioned (fifthbench = struct-owned decode debt;
+wayside-0030 = native dissent recorded on the family-closure line,
+not owed; survey-62 hall/inn = owner-dispositioned) — the owning
+lanes' to pay, not survey's to execute. No slice judged (pools empty,
+no debt owed): 0 confirmed / 0 clean / 0 dropped, 0 notes routed,
+0 vision calls (native-vs-fallback N/A). Gate ALL PASS real exit 0
+first-try un-piped at bff67160 (own survey-164 at HEAD at gate time,
+ledger law EXACT 2370768; pre-commit re-gate before commit). Tag
+from ledger max fresh: survey tags in ledger tail [survey-79]
+(s151-s164 no-append per loop law 4), no routing this tick -> no
+append, plan-block sequence 165. Chassis PRE 3-anchor + POST
+5-assert insert-only-at-EOF. Foreign working-tree dirt at read =
+sibling lanes in flight (windmill overhaul, cabin-overhaul,
+carousel-horse-prototype, client/server sources, debug-bower scripts,
+core-paths GLB + review json, HERO-ASSET plan, next-place-carousel,
+fleet scripts) — zero survey paths, zero staging contact, observer
+read-only per interlane law. Expected next work: arrival-gated; next
+slice when a census arrival or lib flip lands (s138/s148/s150/s163
+precedent). Zero ledger append (loop law 4), zero world mutations,
+zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0).
