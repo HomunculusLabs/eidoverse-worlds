@@ -8722,3 +8722,45 @@ work: arrival-gated; next slice on the next census arrival or lib flip
 (struct-129 commit expected to absorb the spawn). Zero ledger append
 (loop law 4), zero world mutations, zero uploads, zero verbs, zero comp
 edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-164)
+
+NATIVE DEBT RETIRED (arrival-gated quiet epoch; the one lawful debt item
+executed) — census 319 == 319 (281 thing + 38 light, 0 dup ids), raw
+fetch HTTP 200 94432 B md5 8e89b3da (new byte epoch vs s163's compKeys
+211652 B schema fetch; content compared on the 8 shared comparable
+fields). Set-diff baseline sweep-175 epoch-B /tmp/sweep175-census-b.json
+(s163's own /tmp census cleaned by tmp hygiene; sweep-175's committed
+319-ent snapshot is the freshest same-epoch lineage): 0 arrivals / 0
+departures / 0 flips / 0 pos / 0 yaw / 0 scale / 0 bbox / 0 comp across
+all 319 shared ids — world byte-quiet; peaucellier tuple ledger-exact in
+THIS census (lib store/f66494fa3ffb9ff8.glb, pos [-10.4888, -0.0480,
+168.3133], yaw pi, tris 3132, comp {}). Selection law fresh: SHARD
+EXECUTION heading absent; NYRJ 0; STATE-OPEN 0; pending-survey 0;
+improve parked — zero rows route to survey; never-judged pool 0 (no
+arrivals). LAWFUL SLICE = the standing native re-judge debt from s163
+(peaucellier judged ZAI fallback, native 1210 x2) per the
+opportunistic-debt flap law — entity unchanged since (0 flips/pos/yaw in
+this census), so s163's served bytes + review frames remain byte-valid
+evidence (frames /tmp/survey163-peaucellier/review/*.png on disk,
+verified this tick). NATIVE UP (zero 1210s): gameplay 18m 4/4 PASS
+(identity coherent linkage machine not scrap; silhouette legible;
+zero floating/void/missing classes — rail legs land on base, ring
+overlaps tower cleanly, rhombus vertices closed; emblem rail reads as
+the machine's point) with ONE marginal flag — bead offset from the
+tracing vertex — pre-covered by struct-128 byte-level decode (glow
+node-translation 0.0e0 at P: the bead IS the traced point; offset is
+pose parallax), not confirmed at 18m. Night 3/3 PASS (bead a quiet warm
+point ON the rail, zero bloom, silhouette complete against the sky, no
+stray glow elsewhere). VERDICT: 0 confirmed / 1 clean / 0 dropped —
+native CORROBORATES s163's ZAI fallback CLEAN; the peaucellier native
+re-judge debt is RETIRED. No note routed, no candidate row
+(probe-not-verdict; nothing confirmed; struct-128 EXECUTED lineage
+stands). Tag from ledger max fresh: survey tags in ledger tail
+[survey-79] (s151-s163 no-append per loop law 4), no routing this tick
+-> no append, plan-block sequence 164. Chassis PRE 3-anchor + POST
+5-assert insert-only-at-EOF; one disclosed PRE self-catch (first A2
+anchor phrase non-unique 33x, assert fired pre-write, corrected, zero
+partial writes). Zero ledger append, zero world mutations,
+zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0).
