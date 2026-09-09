@@ -7442,3 +7442,79 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   routed, zero ledger append (loop law 4 — append only when routing),
   zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-138)
+
+- survey-138 (2026-09-09 0x:xx EDT fresh date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — ARRIVAL-GATED SLICE, third of the
+  arrival-gated era: census epoch MOVED 316->317, ONE arrival judged):
+  census fresh 317 via next-live-census.ts (/tmp/survey138-census.json,
+  210371B, md5 5ced60a4), set-diff vs survey-137 baseline
+  (/tmp/survey137-census.json, 209732B, md5 ed2db1fa): arrivals = ONE
+  `nx-struct-galtonboard` (pos [-14.6489, 0.0021, 209.8735] yaw pi, lib
+  store/3d9f7c9cdf81d64c.glb, scale 1, comp {}), departures 0, lib flips
+  0, pos moves 0 across all 316 shared ids, lights 38, lib-bearing 279 —
+  s119-derived fully-judged 313-subset + borromean s124 + brachistochrone
+  s130 stay covered byte-stable, never-judged pool = the arrival itself
+  (arrival-gated per loop law 3, not manufactured — the exact slice
+  survey-137's own block named as expected next work). Timeline
+  reconciled: struct-122's census 317->317 corroborated while survey-137's
+  parallel-window census (00:08, 316) predates its live verb — pipeline
+  interleaving, commits serialized in this tick's favor; s137 held
+  honestly at the bytes it observed. Selection law fresh: SHARD heading 0
+  (grep exit 1 un-piped), NYRJ markers 0, STATE-OPEN 0, improve parked
+  improve-71 terminal (line 1174 'HOLD stands' verified verbatim).
+  ARRIVAL CLASSIFIED: struct domain = struct-122 @ 40c39c37 executing
+  struct-121's deferred Galton Board placement (az184 r210 S axis; judged
+  NATIVE by its own tick). FETCH: curl UA HTTP 200 37892B from
+  /library/store/; served sha16 80ce4f8f (lib 3d9f7c9cdf81d64c = upload
+  pin; served != upload is the struct-104 DRACO re-encode law, normal
+  transform). CHASSIS: review-model-draco.ts 8 views exit 0; envelope
+  4.70x4.46x0.97 planar monument family, 11 nodes / 10 draw meshes,
+  named [galtonboard_0/1/2, glow_ga_1..7] — 7-glow-bead contract
+  named-node-verified from served bytes. JUDGE: NATIVE 3/3 frames, zero
+  1210 flaps, zero fallback (gameplay 18m + night + front per s78 law).
+  Gameplay 18m read flagged three candidate notes: (a) amber emissive
+  reads thin at day, outer bin stacks merge with fins in value; (b) apex
+  bead mount ambiguity (tiny silhouette void class); (c) in-flight beads
+  read as floating in a static frame. DISCRIMINATORS: NIGHT frame
+  OVERTURNS (a) — exactly 7/7 warm points as quiet distinct discs (no
+  bloom/glare/halo, zero detached orbs, zero leak into peg field or side
+  bins; apex + 6-bead center column all at designed sites), day-
+  suppression class per s130 brachistochrone precedent — dark outer
+  stacks are struct-122's glow/plain material split derived from bytes,
+  by-construction unlit; FRONT cross-check OVERTURNS (b) — apex bead
+  seated in the beam V-notch, silhouette overlaps both rakes, no sky gap,
+  cap block closes the notch (not floating); (c) resolves as designed
+  cascade-path context (three beads sit on the peg lattice below the
+  apex feed — motion frozen, not debris; cosmetic static-frame class).
+  Front judge's 25-bead count is pitfall-11 quantitative-probe class —
+  struct-122's byte decode verified the bin matrix B(8,1/2)=[0,1,3,6,7,
+  6,3,1,0] from bytes; decode outranks render counts, front-row
+  occlusion explains the delta. VERDICT: `nx-struct-galtonboard` CLEAN
+  (NATIVE 3/3 frames, all day notes dissolved on discriminators) —
+  corroborates struct-122's own NATIVE front/gameplay/night PASS and
+  settles the arrival with zero debt. Native-debt marks re-counted fresh
+  THIS tick, case-sensitive line-count method: sierpinski PAID (66),
+  hypar v3 PAID s76 (43), ne-lane-002 corroborated + routed s76 (36),
+  fifthbench struct-owned decode debt (64), wayside-0030 native dissent
+  on the family-closure line (43) — each exactly +1 vs s137's recorded
+  counts (self-growth class), dispositions unchanged. No new Bill
+  correction outstanding. Gate: ALL PASS real exit 0 FIRST TRY at
+  490fa900 (/tmp/survey138-gate.txt); HEAD static through
+  gate+census+selection+append (survey-137's own commit at tip; epoch
+  re-gate before commit if HEAD advances). Append chassis asserted PRE
+  (survey paths clean in tree == HEAD byte-equal; tag survey-138 0/0/0
+  across SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS.md + git log --all,
+  s137 heading unique 1, EOF = s137 block tail) + POST (insert-only at
+  EOF, new heading exactly once, EOF = new block tail, growth == one
+  block). Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill/city4/carousel/moon-moth domains, HERO-ASSET plan,
+  cabin-overhaul + carousel-horse-prototype dirs, client/server sources,
+  debug-bower scripts) — zero survey paths, zero staging contact,
+  observer read-only per interlane law. New census baseline
+  /tmp/survey138-census.json (317). Zero notes routed (CLEAN verdict —
+  no owning-plan write, no IMPROVE-PLAN candidate row), zero ledger
+  append (loop law 4 — append only when routing), zero world mutations,
+  zero uploads, zero verbs, zero comp edits, zero shared-budget use
+  (D+0, E+0).
