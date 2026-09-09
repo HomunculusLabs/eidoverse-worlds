@@ -7609,3 +7609,68 @@ terrain at final pose, hash-gated placer nx-struct-gyroid, census 320->321.
 
 Files: mkv3-gyroid.ts (ignored dir, staged -f), struct131-decode-gyroid.ts
 (tracked); reviews/struct131-gyroid/ (ignored). Plan append-only.
+
+## struct-132 (2026-09-09): refine slot — peaucellier native debt PARTIALLY CLOSED + GYROID PLACED (deferred placement executed)
+
+Cadence 132%3==0 = refine slot. Refine pool subject: peaucellier native
+re-judge debt (struct-128/129 — native down those windows). Shard empty fresh
+(no SHARD EXECUTION heading; 0 OPEN nx-struct rows; survey-173 corroborates
+IMPROVE-PLAN untouched since survey-78). Gate ALL PASS real exit 0 tick-start
+f2ae43d5; PRE-MUTATION re-gate ALL PASS real exit 0 at 16d8731d (one mid-tick
+sibling advance absorbed — sweep-180).
+
+PEAUCELLIER NATIVE RE-JUDGE: provider UP this window (gameplay frame
+succeeded natively). gameplay.png re-judged NATIVE PASS — identity (linkage
+reads, two rings + jointed bars + rail + tracing bead, "engineered jointed
+arms" gestalt), silhouette (grounding chain complete plinth->posts->rail,
+every bar terminates on another member), voids (ring centers are intentional
+disc-rim geometry, zero strays) — ALL PASS with pixel evidence. One
+non-blocking margin: small-ring overlap band x340-460 reads cluttered at
+18m; acceptable, noted if re-judged closer. NIGHT frame: 1210 x2 + paced
+20s retry burned — provider down for that frame; debt NARROWED to night-only
+(geometric debt gone), carries, disclosed.
+
+GYROID PLACEMENT (struct-131 next-tick plan executed): decode re-run this
+tick ALL PASS 23/23; on-disk sha da2a4b15... unchanged from accepted pin.
+SEAT: struct132-scan-gyroid.ts ladder r240..r235 az184 yaw-pi against FRESH
+320 census — r240 LAWFUL direct (worst solid harmonickiss +6.18 law 1.4,
+film kochgarden +144.14 law 4.0, walk approach-ne-lane-002 +166.31 law 3.0,
+rim 240); ladder blocks r235 (harmonickiss 1.19) — S-walk 10m cadence
+kiss r230 -> gyroid r240 exact. TERRAIN struct132-terrain-gyroid.ts at
+FINAL pose: 9pt spread 14.8mm, PY = lowest = -0.019981 (r240 values only;
+no carried-forward candidates).
+
+PLACE: next-place-struct132.ts hash-gated (bytes da2a4b158a448caa unchanged),
+center-corrected SAT re-run LIVE worst harmonickiss +6.18 fresh-320, upload
+store/da2a4b158a448caa (shared budget, single upload), spawn paced 600ms.
+PLACED_VERIFIED nx-struct-gyroid pos [-16.7416, -0.0200, 239.4154] yaw
+3.1416 lib store/da2a4b158a448caa.glb comp {} census 320->321. Idempotent
+rerun REFUSED zero-verbs exit 1 (fresh-only form; refusal content-anchored).
+Independent live read-back (curl UA): exact tuple, yaw pi exact, scale 1,
+server bbox 4.60x4.19x4.60 center [0,2.095,0] = decode envelope exact,
+tris 70844. Folly class — no walk owed (family precedent). Comps {} (glow
+is KEEP glow_gy_1 material inside the GLB) — nothing to reapply.
+
+LEDGER SELF-CATCH disclosed (sweep-178 class, pre-commit): appended the
+entry with D+0/E+0, then caught the understatement against the placement
+precedent (struct-129/130/131 all D+1 for census+1) — corrected the pair to
+D+1/E+0 in-tick, reconciled the running total 2370770->2370771, and
+verified the full law closes EXACT with the tool's own regex before any
+commit. One intermediate double-pair state existed briefly and was removed
+before staging.
+
+VERDICT: The Gyroid stands — the S mathematics walk now runs lorenz r140,
+chladni r150, voronoi r160, peaucellier r169, zeno r180, borromean r190,
+brachistochrone r196, galton r210, clothoid r220, harmonickiss r230,
+GYROID r240. Bill eye-check: S-walk terminus, 10m past the Harmonic Kiss —
+a bone-walled cube of curved film with iron hem tubes, one glowing brass
+bead at the heart after dark.
+
+Refine pool state: gyroid NOT hero-ready (ZAI-judged struct-131 + known
+open tube end-cap residual = next refine candidate); peaucellier night
+frame debt still open (narrowed). NEXT: 133 — build slot (133%3==1):
+form-ledger gap grep fresh; R10 continuing. 135 = refine slot: gyroid
+tube end-caps or peaucellier night (whichever higher deficit).
+
+Files: struct132-scan-gyroid.ts, struct132-terrain-gyroid.ts,
+next-place-struct132.ts (all tracked); plan append-only this tick.
