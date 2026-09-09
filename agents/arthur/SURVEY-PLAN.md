@@ -6644,3 +6644,78 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   zero ledger append (loop law 4 — append only when routing), zero
   world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-123)
+
+- survey-123 (2026-09-08 21:5x EDT machine date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — HOLD tick, cheap lawful hold
+  verification, no slice judged; THIRTY-SEVENTH quiet hold, census
+  epoch stable, FIFTH consecutive epoch-stable tick at 314):
+  selection law run fresh and INDEPENDENTLY (not carried from s122
+  prose): severity backlog EMPTY — no `## SHARD EXECUTION` section in
+  IMPROVE-PLAN (heading grep count 0, exit 1, verified un-piped);
+  sharding directive prose routes rows by entity prefix to struct/
+  dress/approach/waysign/improve-own, NONE survey; IMPROVE-PLAN line
+  1174 reads "Open improve-own work remains NONE; HOLD stands" —
+  improve parked at improve-71 fleet STOP, 48/48 terminal, resume =
+  Bill's eye-gate verdicts; arrival slice NONE owed (census diff
+  zero — below); never-judged pool ZERO by set algebra — live 314-set
+  BYTE-IDENTICAL to BOTH surviving pinned baselines
+  (/tmp/survey120-census.json AND /tmp/survey122-census.json,
+  208432B, md5 2c9aad56a2607d6198abe5e02c87ddc0 all three files,
+  cmp proven against both, count 314, lights 38, lib-bearing 276;
+  full-file identity = 0 arrivals / 0 departures / 0 flips on every
+  field, inheriting s119's arrival-slice derivation — 313-subset
+  fully judged per s82/s83 twice-independent derivation + s84/s89/
+  s94/s113 CLEANs + zeno absorbed CLEAN-with-margin s119). Native
+  availability: no judging attempted this tick (nothing owed), so no
+  opportunistic-debt law fires; native-debt marks re-verified fresh
+  by grep THIS tick (counts derived now, not from s122 prose):
+  sierpinski PAID (51 refs), hypar v3 PAID s76 (28 refs), ne-lane-002
+  corroborated + routed s76 (21 refs), fifthbench struct-owned decode
+  debt (49 refs), wayside-0030 native dissent on the family-closure
+  line (28 refs), survey-62 hall/inn owner-disposition, statuary-
+  family routed rows. No new Bill correction outstanding. EPOCH
+  EVENTS x2 this tick, both classified: (1) dd6a2706 -> 8a1b1bb9 =
+  struct-117 (sibling struct lane; files = IMPROVEMENTS.md +
+  STRUCTURES-PLAN.md + assets/mkv3-borromean.ts + struct117-decode-
+  borromean.ts, zero survey paths; authored+built+decoded ONLY,
+  judged/placed DEFERRED to 118, zero live-world materialization,
+  its own D+0 E+0 corroborates this tick's byte-identical census
+  read); (2) 8a1b1bb9 -> b1eac03f = sweep-157 (sibling observer
+  sweep; files = IMPROVEMENTS.md + SWEEP-PLAN.md + sweep157 scripts
+  ONLY, zero survey paths; its census 314==314 quiet at both its
+  epochs with 0/0/0 corroborates this tick's read; zero world
+  mutations). Both = normal interleaving per interlane git law.
+  Re-gates at BOTH new HEADs: ALL PASS 99 PASS lines, real exit 0
+  (/tmp/survey123-regate.txt at 8a1b1bb9, /tmp/survey123-regate2.txt
+  at b1eac03f); neither touches survey/pinned state, so no census/
+  selection re-derivation owed. STAMP-SLIP OBSERVATION on predecessor
+  blocks: s121 self-stamped "21:55 EDT" and s122 "2026-09-09 00:41
+  EDT", both ahead of this tick's machine clock (fresh `date` =
+  2026-09-08 21:4x-21:5x EDT) and of their own census-file mtimes
+  (21:21 / 21:35 Sep 8) — date-stamp slip in committed prose only;
+  census content identity (md5 2c9aad56) carries the epoch and
+  holds; no correction churn on committed history. Gate: ALL PASS 99
+  PASS lines, real exit 0 FIRST TRY at dd6a2706 (/tmp/survey123-
+  gate.txt; sole case-insensitive fail-grep hit = 'fail-grep' word
+  inside the s122 commit-message line quoted on a PASS line —
+  benign class). APPEND CHASSIS NOTE: first append attempt tripped
+  its own POST EOF-tail assert PRE-WRITE (line-wrap put "(D+0," /
+  "E+0)." on separate lines inside the drafted block) — zero damage,
+  file verified untouched at re-read, chassis gated as designed; a
+  second attempt tripped its PRE HEAD-epoch assert (struct-117
+  landing mid-write-window); this block is the corrected shape at
+  b1eac03f. Append chassis asserted PRE (plan==HEAD byte-equal at
+  b1eac03f, tag 0/0/0 across SURVEY-PLAN / IMPROVE-PLAN /
+  IMPROVEMENTS.md + git log --all, s122 heading unique, EOF = s122
+  block tail) + POST (insert-only at EOF, new heading exactly once,
+  EOF = new block tail, growth one block). Foreign working-tree dirt
+  at read = sibling lanes in flight (windmill/city4/carousel/
+  moon-moth domains, HERO-ASSET plan, cabin-overhaul +
+  carousel-horse-prototype dirs, client/server sources, debug-bower
+  scripts) — zero survey paths, zero staging contact, observer
+  read-only per interlane law. Zero notes routed, zero ledger append
+  (loop law 4 — append only when routing), zero world mutations,
+  zero uploads, zero verbs, zero comp edits, zero shared-budget use
+  (D+0, E+0).
