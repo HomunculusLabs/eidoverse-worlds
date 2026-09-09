@@ -6787,3 +6787,54 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use
   (D+0, E+0).
+
+## Judged index (survey-125)
+
+- survey-125 (2026-09-08 22:20 EDT fresh date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — HOLD tick, cheap lawful hold
+  verification, no slice judged; THIRTY-EIGHTH quiet hold, census epoch
+  stable, SECOND consecutive epoch-stable tick at 315): selection law run
+  fresh and INDEPENDENTLY (not carried from s124 prose): severity backlog
+  EMPTY — no `## SHARD EXECUTION` section in IMPROVE-PLAN (heading grep
+  count 0, exit 1, verified un-piped); sharding directive (IMPROVE-PLAN
+  line 1180ff) routes rows by entity prefix to struct/dress/approach/
+  waysign/improve-own, NONE survey; IMPROVE-PLAN line 1174 reads "Open
+  improve-own work remains NONE; HOLD stands" — improve parked at
+  improve-71 fleet STOP, 48/48 terminal, resume = Bill's eye-gate
+  verdicts; arrival slice NONE owed (census diff zero — below);
+  never-judged pool ZERO by set algebra — live 315-set BYTE-IDENTICAL to
+  the survey-124 baseline (/tmp/survey124-census.json, 209084B, md5
+  b048d886cf578475376e20fe17c64716 both files, proven by md5 + entity-set
+  python diff, count 315 entities verified from entities[] array (first
+  diff attempt hit the world/count wrapper-shape 0-entity artifact,
+  re-derived against entities[] directly), 0 arrivals / 0 departures / 0
+  flips on every field, inheriting s119's arrival-slice derivation (313-
+  subset fully judged per s82/s83 twice-independent derivation + s84/
+  s89/s94/s113 CLEANs + zeno CLEAN s119 + borromean CLEAN s124).
+  Native-debt marks re-verified fresh by grep THIS tick (counts derived
+  now, not from s124 prose): sierpinski PAID (52 refs), hypar v3 PAID
+  s76 (29 refs), ne-lane-002 corroborated + routed s76 (22 refs),
+  fifthbench struct-owned decode debt (50 refs), wayside-0030 native
+  dissent on the family-closure line (29 refs), survey-62 hall/inn
+  owner-disposition, statuary-family routed rows. No new Bill
+  correction outstanding. HEAD static 3091c0ac through gate+census+
+  selection+append (git log HEAD..HEAD = 0; survey-124's own commit at
+  tip, HEAD0==HEAD1 across the tick). Native availability: no judging
+  attempted this tick (nothing owed), so no opportunistic-debt law
+  fires. Census 315==315 vs /tmp/survey124-census.json, BYTE-IDENTICAL;
+  new baseline /tmp/survey125-census.json (315, same md5 b048d886 —
+  epoch stable). Gate: ALL PASS 99 PASS lines, real exit 0 FIRST TRY at
+  3091c0ac (/tmp/survey125-gate.txt; zero case-insensitive fail-grep
+  hits; first inline attempt parser-blocked oversized-payload class,
+  sanctioned retry via saved script per skill law). Append chassis
+  asserted PRE (plan==HEAD byte-equal, tag 0/0/0 across SURVEY-PLAN /
+  IMPROVE-PLAN / IMPROVEMENTS + git log --all, s124 heading unique, EOF
+  = s124 block tail) + POST (insert-only at EOF, new heading exactly
+  once, EOF = new block tail, growth one block). Foreign working-tree
+  dirt at read = sibling lanes in flight (windmill/city4/carousel/
+  moon-moth domains, HERO-ASSET plan, cabin-overhaul + carousel-horse-
+  prototype dirs, client/server sources, debug-bower scripts) — zero
+  survey paths, zero staging contact, observer read-only per interlane
+  law. Zero notes routed, zero ledger append (loop law 4 — append only
+  when routing), zero world mutations, zero uploads, zero verbs, zero
+  comp edits, zero shared-budget use (D+0, E+0).
