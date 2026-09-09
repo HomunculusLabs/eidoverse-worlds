@@ -4366,6 +4366,7 @@ sweep-123: CLEAN SWEEP, steady-state tick. Census 304==304 (266 thing + 38 light
 | sweep-160 | 2026-09-08 | 315→316 EPOCH-CORRECTED (epoch A/B 315==315 fully quiet vs committed baseline c8e56130 0/0/0 — raw sha16 57149d04 both = representation epoch #7 raw compKeys null toggle, comp payloads byte-equal all 315, never reaches the projection convention; epoch C +1 domain-valid arrival nx-struct-brachistochrone @ (−13.9513,−0.0066,195.8128) yaw −π/2 lib f678c069e84e51a2 comp {} = struct-120 @ 3fd272d7 executing struct-119's deferred placement, tuple matches its committed ledger line-for-line (PLACED_VERIFIED census 315→316 corroborated read-back); bbox 8.74×4.018×2.14 center +3.70x (pitfall-10 form-center), 0 departures, 0 drift on 315 shared ids; all affected evidence re-taken fresh per polish-270 epoch law; world static post-arrival (proj→proj2 diffs NONE); snapshot rewritten 209736B/316/sha16 e146e035726d6998 pre-write asserts post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 116th sweep since routing, no escalation due — law keys Sev 1); 278 bbox non-light / 236 classified / 0 coverage holes, SAT fresh at epoch C (brachistochrone in live set, SAT-clean zero new contacts, corroborates struct-120's own scan +3.30 worst borromean law 1.4) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 next-walk-core-paths.ts, NW 5/5 @ 0.38 nw-approach1-walk.ts, NE 7/7 @ 0.38 ne-approach2-walk.ts, SW 5/5 @ 0.37 sw-approach3-walk.ts; brachistochrone r200 S 180m+ off every leg — walks stand by construction sweep-152/158 precedent); tier-2 138th cycle per committed pointer row-cottage 6/6 @ 0.384 (interior-walk-row-cottage.ts) + observatory circuit 5/5 @ 0.389 (struct2-walk-observatory.ts), both ALL_PASS real exit 0, per-leg ok:true counts verified | pins 15/15 ALL_PINS_OK (114th consecutive clean, re-run at epoch C), sweep89-battery 28/28 ALL PASS on fresh 316-set census-C bytes, interlane md5 f6254cd0 stable read fresh, ledger law EXACT (canonical tool, base re-read fresh pre-append) D+0/E+0, standing gate ALL PASS real exit 0 at tick-start 0e025513 (survey-127, read-only) + re-run ALL PASS exit 0 at 3fd272d7 (struct-120 placement commit absorbed, epoch-correct by construction) | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-161 | 2026-09-08 | 316==316 all three epochs QUIET vs committed baseline e146e035 (0 arrivals, 0 departures, 0 drift, 0 lib flips; raw sha16 131e7d96 stable A/B/C — the flip vs sweep-160's 57149d04 classified serialization-only BEFORE verdicts: raw A vs raw C field-identical across all 316 shared ids, sweep-159 law; projection full-field drift ZERO incl comp/compKeys; snapshot rewrite reproduced the committed baseline BYTE-IDENTICAL 209736B/sha16 e146e035726d6998 — git status clean on the baseline, zero churn) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 117th sweep since routing, no escalation due — law keys Sev 1); 278 bbox non-light / 236 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 next-walk-core-paths.ts, NW 5/5 @ 0.38 nw-approach1-walk.ts, NE 7/7 @ 0.38 ne-approach2-walk.ts, SW 5/5 @ 0.37 sw-approach3-walk.ts); tier-2 139th cycle per committed pointer inn 6/6 @ 0.364 (interior-walk-inn.ts) + tower-house 6/6 @ 0.377 (interior-walk-tower-house.ts), both ALL_PASS real exit 0, per-leg ok counts verified | pins 15/15 ALL_PINS_OK (115th consecutive clean), sweep89-battery 28/28 on fresh census-A bytes, interlane md5 f6254cd0 stable read fresh, ledger law EXACT (canonical tool, base re-read fresh pre-append) D+0/E+0, standing gate ALL PASS real exit 0 at tick-start 0d201d15 + re-run ALL PASS 98 exit 0 at 24fbbcb3 (survey-130/131 read-only absorbed, epoch-correct by construction) | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-162 | 2026-09-09 | 316==316 all three epochs QUIET vs committed baseline e146e035 (0 arrivals, 0 departures, 0 drift, 0 lib flips; raw sha16 131e7d96 stable A/B/C — byte-stable vs sweep-161, no flip to classify; projection full-field comparison vs committed baseline ZERO drift incl comp/compKeys on all 316 shared ids; baseline stays current, ZERO churn, sweep-161 comparison-only precedent) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 118th sweep since routing, no escalation due — law keys Sev 1); 278 bbox non-light / 236 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 next-walk-core-paths.ts, NW 5/5 @ 0.38 nw-approach1-walk.ts, NE 7/7 @ 0.38 ne-approach2-walk.ts, SW 5/5 @ 0.37 sw-approach3-walk.ts); tier-2 140th cycle per committed pointer forge 6/6 @ 0.375 (interior-walk-forge.ts) + potter 6/6 @ 0.366 (interior-walk-potter.ts), both ALL_PASS real exit 0, per-leg ok counts verified | pins 15/15 ALL_PINS_OK (116th consecutive clean), sweep89-battery 28/28 on fresh census-A bytes, interlane md5 f6254cd0 stable read fresh, ledger law EXACT (canonical tool, base re-read fresh pre-append) D+0/E+0, standing gate ALL PASS real exit 0 at tick-start e66f218c + re-run ALL PASS 98 exit 0 at 001e06d4 (struct-121 build-source + survey-133 recovery, both read-only vs world, census byte-identity corroborates) | CLEAN SWEEP — R-121 open, known, no escalation due |
+| sweep-163 | 2026-09-09 | 316==316 all three epochs QUIET vs committed baseline e146e035 (0 arrivals, 0 departures, 0 drift, 0 lib flips; raw sha16 131e7d96 byte-stable A/B/C — same value as sweep-161/162, no flip to classify; 9-field-projected full-field comparison vs committed baseline ZERO drift on all 316 shared ids incl comp byte-equal; baseline stays current, ZERO churn, sweep-161/162 comparison-only precedent) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 119th sweep since routing, no escalation due — law keys Sev 1); 278 bbox non-light / 236 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 next-walk-core-paths.ts, NW 5/5 @ 0.38 nw-approach1-walk.ts, NE 7/7 @ 0.38 ne-approach2-walk.ts after ONE paced retry following a tool-layer timeout, SW 5/5 @ 0.37 sw-approach3-walk.ts); tier-2 141st cycle per committed pointer longhouse 6/6 @ 0.3456 (interior-walk-longhouse.ts) + garden-cottage 6/6 @ 0.355 (interior-walk-garden-cottage.ts), both ALL_PASS real exit 0, per-leg ok counts verified | pins 15/15 ALL_PINS_OK (117th consecutive clean), sweep89-battery 28/28 on fresh census-A bytes, interlane md5 f6254cd0 stable read fresh, ledger law EXACT (canonical tool, base re-read fresh pre-append, 2370763 D+0/E+0), standing gate ALL PASS real exit 0 at tick-start 768cee33 + re-run ALL PASS 99 exit 0 at c78ce843 (survey-135/136 read-only holds, census byte-identity corroborates) | CLEAN SWEEP — R-121 open, known, no escalation due |
 
 
 
@@ -6019,3 +6020,44 @@ longhouse + garden-cottage (141st cycle — LRU chain: @162 forge/potter,
 stalest standing pair at 5 sweeps; both walk tools verified present on
 disk this tick: interior-walk-longhouse.ts,
 interior-walk-garden-cottage.ts).
+
+sweep-163: CLEAN SWEEP, fully quiet steady-state tick. Census 316==316 at
+ALL THREE epochs (A/B 20s-paced, C post-verification) vs the committed
+baseline (316 ents, sha16 e146e035726d6998): 0 arrivals, 0 departures, 0
+drift, 0 lib flips — 278 thing + 38 light. Raw /geom sha16 131e7d967d61ec66
+byte-stable across A/B/C (same value as sweep-161/162 — no flip to
+classify this tick). Full-field comparison vs the committed baseline via
+9-field like-for-like projection (raw capture projected onto the committed
+entity key order, compKeys derived from comp): ZERO drift on any field
+including comp byte-equal; the committed baseline stays current with ZERO
+churn (sweep-161/162 comparison-only precedent). HEAD advanced twice
+mid-tick: 768cee33 -> 212703fd -> c78ce843 (survey-135/136, read-only
+holds, zero survey paths, census byte-identity corroborates); per the
+polish-270 epoch law the standing gate was re-run at c78ce843: ALL PASS 99
+PASS lines real exit 0. Overlap: SAT fresh-live 278 bbox non-light / 236
+classified / 0 coverage holes, exit 3 on exactly ONE unclassified = R-121
+lamp-n | nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 119th sweep since routing, NOT new, no escalation
+due (law keys severity-1). Tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0: core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38
+(one paced retry after a tool-layer timeout on the first NE run —
+sweep-12 SW precedent, partial JSON discarded, fresh run ALL_PASS), SW 5/5
+@ 0.37. Tier-2 141st cycle per the committed sweep-162 pointer: longhouse
+6/6 @ 0.3456 + garden-cottage 6/6 @ 0.355 ALL PASS. Integrity: pins 15/15
+ALL_PINS_OK (117th consecutive clean, struct18-fleet-pin-check.ts real
+exit 0), sweep89-battery 28/28 on fresh census-A bytes, interlane md5
+f6254cd0 stable read fresh, ledger law EXACT via canonical tool (base
+2370763 re-read fresh pre-append, D+0/E+0). Standing gate ALL PASS real
+exit 0 at tick-start 768cee33 + re-run ALL PASS 99 exit 0 at c78ce843.
+Probe self-catches before verdicts (both disclosed, zero damage): (a) the
+snapshot check first compared the RAW /geom capture against the committed
+PROJECTION baseline — 316 compKeys-only diffs = representation epoch #7
+raw toggle, classified out by projecting like-for-like (sweep-160 law),
+and the raw shape carries no top-level count key (count derived
+fail-closed from the entity list); (b) the first walk-parse keyed
+json.load directly on the core output whose first line is the [physics]
+banner (sweep-35/161 class) — re-anchored parsing from the first brace.
+Zero world mutations, zero defect notes written, zero uploads, zero
+verbs, zero comp edits, zero shared-budget use. Next tier-2 pair
+(sweep-164): stable + market (142nd cycle — LRU after 141st walked
+longhouse/garden-cottage, last walked 136th).
