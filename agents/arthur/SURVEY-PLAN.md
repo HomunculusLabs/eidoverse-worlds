@@ -8888,3 +8888,47 @@ arrival-gated (s138/s148/s150/s163 precedent); next slice when a
 census arrival or lib flip lands. Zero ledger append (loop law 4),
 zero world mutations, zero uploads, zero verbs, zero comp edits,
 zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-168)
+
+NATIVE DEBT-PAYMENT JUDGE TICK — one arrival re-opened the never-judged
+pool after four quiet holds. Census 320 == 320 (282 thing + 38 light,
+0 dup), raw fetch HTTP 200 94710 B md5 fba122fb (parent+tris schema
+shape). Set-diff vs committed sweep baseline showed baseline ALREADY at
+320 — foreign dirt at read: sibling sweep's in-flight 319->320
+arrival-fold of the SAME entity (+37/-1 hunks, unstaged, untouched per
+interlane law). True diff anchor = own /tmp/survey167-census.json
+snapshot: exactly ONE arrival nx-struct-harmonickiss lib
+store/8008167c97c9922f.glb pos [-16.043989, -0.014399, 229.439732] yaw
+pi tris 35688 comp {} — struct-130 @ 1be6774f THE HARMONIC KISS,
+tuple ledger-exact (lib sha verbatim from commit; |pos| 230.000 exact =
+r230 scan ring; PY -0.014399 verbatim; 0 departures; 0 flips / 0 pos /
+0 yaw / 0 comp diffs on all 319 shared ids; all 10 struct markers LIVE
+incl harmonickiss as 11th). Selection law fresh: SHARD EXECUTION
+absent grep 0; IMPROVE-PLAN untouched since survey-78; zero
+harmonickiss rows in IMPROVE-PLAN/SURVEY-PLAN (STRUCTURES-PLAN's 8 =
+struct-130's own owner records) -> never-judged pool = exactly this 1
+arrival; native-debt survey-executable EMPTY (peaucellier retired s164;
+fifthbench/wayside-0030/survey-62 owner-dispositioned). Slice = the
+arrival: live store bytes HTTP 206 101112 B served-sha 239f7d3f
+(normal DRACO re-encode of uploaded 8008167c, struct-104 class),
+DRACO chassis exit 0, decode 3.0 x 6.4 x 3.0 m, 5 nodes / 4 meshes,
+named harmonickiss_0/1/2 + glow_hk_1 (brass-bead node present, build
+contract match). NATIVE UP zero-1210: gameplay 18m PASS (coherent
+monument identity, sealed two-lobe silhouette, grounded w/ contact
+shadow, zero floating/void/hole classes, needle legible through upper
+lobe + bottom pole; margin flags: waist kiss-gap reads as dark shaded
+band not open void, brass bead reads as warm glint — both
+pre-covered by struct-130 dispositions: kiss gaps 0.3078 m real
+geometry, bead-is-the-<=8m-reward per struct-45 law), night 3/3 PASS
+(complete silhouette both lobes + band, quiet warm bead no glare no
+stray glow, no dead voids; margins: band-tips low contrast, pole
+terminations dark-on-dark — margin tier, not defect). Verdict 0
+confirmed / 1 clean / 0 dropped. Native-vs-fallback: NATIVE 2/2, zero
+fallback. Nothing confirmed -> no note routed, no candidate row
+(struct-130 EXECUTED lineage), no ledger append per loop law 4. Tag
+from ledger max fresh [survey-79] tail; plan-block sequence 168.
+Gates: tick-start ALL PASS real exit 0 un-piped at 1be6774f (struct-130
+at HEAD, ledger law EXACT 2370769); pre-commit re-gate below. Zero
+world mutations, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0).
