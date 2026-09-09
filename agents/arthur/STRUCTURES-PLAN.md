@@ -6636,3 +6636,74 @@ store/78a3e90e458bfb43.glb — exact ledger tuple; census 314.
 
 NEXT: 117%3==0 nominal refine slot but pool EMPTY (debt paid) -> BUILD tick
 (R10-16 form-ledger gap derivation fresh) unless survey routes rows.
+
+## struct-117 (2026-09-08): R10-16 THE BORROMEAN RINGS — authored, built,
+## decoded ALL PASS; judged/sited/placed DEFERRED to 118 (run budget, struct-113
+## precedent — fail-closed)
+
+Cadence 117%3==0 nominal refine slot — pool EMPTY fresh (debt paid struct-116;
+night ZAI-PASS opportunistic-only per flap law) => BUILD tick. Shard EMPTY
+fresh (grep 0 exit 1, no OPEN nx-struct rows). Gate ALL_PINS_OK 15/15 real
+exit 0 FIRST TRY (bun, no pipe).
+
+CONCEPT (written before build): the form ledger's missing LINK / BRUNNIAN
+family (ledger grep fresh: zero borromeo/knot-theory/brunnian presence; the
+trefoil monument is the single-curve KNOT family, already standing — a
+DIFFERENT family). ONE IDEA: STRONGER TOGETHER, NOTHING PAIRED — three iron
+rings, no two linked, that cannot come apart. Classical icosahedron
+construction: three golden superellipses (n=5, semi S=1.35 minor, S*PHI=2.1843
+major — golden to 1e-12) in mutually perpendicular planes, woven B⊂A on x,
+A⊂C on z, C⊂B on y (each pair threads exactly one way; weave clearance
+S*(PHI-1)=0.834m), stanced on the (1,1,1) corner so the three ring dips sit
+at equal height ±0.7nm, 120.0deg apart, each on its own stone stanchion
+(dais r1.95+skirt, h0.42, stanchions r0.12 tapered to 0.18); brass dusk bead
+at the heart (0, 2.659, 0) r0.09 KEEP glow_br_1 (struct-82 lineage).
+Folly class, no entry advertised, no walk owed (lorenz/chladni/voronoi
+precedent). Static.
+
+BUILD ARC (honest, all caught pre-GLB by the law layer): stray-low-zone
+assert mis-specified twice (first a 3D-radius form, then 0.9m horizontal —
+superellipse vertex flatness legitimately widens the low arc; final law = ONE
+contiguous low arc containing the dip, no radius constant); envelope
+footprint expectation forgot the dais skirt (5.80 catch -> dais shrunk
+2.75->1.95); dais size law (rr <= DAIS_R - ST_R) fires.
+
+BUILD: sha 7e9c334883d25774e8572388b1e63d59e5424fbcedd60f2d002b042ea665c48d
+x3 deterministic (mtime verified 21:35). Envelope 4.22x4.53x4.60 y[0..4.533].
+Nodes 3 (budget 5-45): borromean_0 iron + borromean_1 stone + glow_br_1 KEEP.
+
+DECODE struct117-decode-borromean.ts ALL PASS 24/24 exit 0: THE BORROMEAN
+LAW from bytes via vertex-cloud EQUALITY with an independent replica (fresh
+quaternion re-derivation + tube re-construction, no mk imports): every iron
+vertex on the replica tube construction <=1e-4 (9273 verts, both directions,
+worst ~4e-5 class), iron mass 9273 == 3x(280+1)x(10+1) exact, replica weave
+containment + pairwise disjoint (min centerline 1.089m), stance law (dips
+equal ±2mm, 120deg ±1.5deg), stone law (dais skirt clean, exactly 3
+stanchion clusters at the 3 dips, tops meet tube underside ±6mm), bead law
+(center ±2mm, r ±5mm), envelope/grade/NaN clean. TWO READER BUGS caught by
+RED->GREEN en route (both mine, bytes were always clean): (1) replica
+quaternion not normalized — THREE.setFromUnitVectors normalizes, my hand
+re-derivation didn't (bead 2.659 vs 6.513 tell); (2) nearest-SAMPLE
+comparison too coarse for superellipse uniform-t sampling (parameter speed
+diverges at the vertices; arc gaps ~0.12m between consecutive samples) —
+replaced by exact vertex-cloud equality against the same
+CatmullRom(0)+TubeGeometry(280,10) construction (lorenz-law form).
+
+SITING (deferred contract for 118): S mathematics axis az184 r190 — the
+axis extends at its own 10m cadence (dial r71 -> koch r90 -> hilbert r100 ->
+dodeca r110 -> wall r120 -> tesseract r130 -> lorenz r140 -> chladni r150 ->
+voronoi r160 -> zeno r180 -> BORROMEAN r190): the rings past the gates that
+never finish. Film-guarded scan + SAT + terrain + placer + PLACED_VERIFIED +
+fresh-only rerun refusal + review renders (front/gameplay/night) + judged —
+ALL queued for 118 (struct-113 deferred-contract precedent; fail-closed on
+budget, nothing unverified placed).
+
+NEXT: 118%3==1 — execute the deferred contract: renders -> judged (native
+first) -> scan -> SAT -> terrain -> place -> verify.
+
+BILL EYE-CHECK (one, standing once placed): walk the south mathematics walk
+to its far end — past the gates that halve — and where the meadow opens one
+last time, three iron rings hang in the air together, no two of them linked,
+yet they cannot be separated. Each dips once to its own stone pillar, three
+pillars even as a tripod. At the heart of all three, one bead of brass: the
+held center. Take one ring away and the other two fall.
