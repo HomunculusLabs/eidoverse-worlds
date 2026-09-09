@@ -7033,3 +7033,58 @@ r210 — order out of chaos at the axis end.
 
 NEXT: 123%3==0 refine tick — pool empty unless survey routes rows; else
 next form-ledger gap (R10-19) derivation fresh.
+
+## struct-123 (2026-09-09): REFINE-TICK NATIVE RE-JUDGE — brachistochrone
+## debt PARTIALLY PAID per flap law; standing tuple re-verified live.
+
+Cadence 123%3==0 refine slot: pool EMPTY fresh (plan-verified), shard
+EMPTY fresh (0 OPEN nx-struct rows). Owed work = struct-120's native
+re-judge debt on nx-struct-brachistochrone (placement verdicts were ZAI
+fallback, provider hard down). Gate ALL PASS real exit 0 tick-start
+490fa900 (bun, no pipe).
+
+Pinned bytes re-verified fresh: local village_brachistochrone3.glb sha
+f678c069e84e51a2 = placed lib store/f678c069e84e51a2.glb. Live tuple
+re-verified fresh census (317 ents): pos [-13.951295, -0.006577,
+195.812810] yaw -1.5708 comp {} — exact match to the struct-120
+PLACED_VERIFIED tuple, zero drift.
+
+JUDGED with provider flapping PER-CALL this tick (flap law honored):
+- NIGHT: NATIVE UP (one call succeeded) — PASS. Post + straight chord +
+  sagging cycloid all legible, curve-dips-below-chord confirmed, beads
+  as small hard-edged dots, zero bloom/wash/stray warmth, silhouette
+  faintly readable. Judge counted ~11 warm points vs designed 7:
+  mid-chord pair reads "muddy brown weakly lit" = brass albedo under
+  night ambient, NOT emissive (glow set decode-verified exactly 7 =
+  crest + 5 cycloid beads + basin, struct-119 16/16; ZAI read the same
+  beads near-black). Classified NIGHT-READ WATCH ITEM (lineage
+  calibration class, kin to struct-122 "floor of quiet" note), not a
+  defect. If Bill's night eye says chord beads read lit, it re-opens as
+  refine subject per the correction law.
+- FRONT + GAMEPLAY 18m: NATIVE HARD DOWN (1210 x4 across paced retries)
+  — re-judged ZAI fallback, SECOND independent pass, verdicts CONSISTENT
+  with struct-120's placement reads:
+  front PASS: closed teardrop lens, point at the apex, both rails
+  converge at post top, 11 beads bunched near top with gaps growing
+  post->drum (the equal-time signature read correctly), zero floats
+  (mid-span pier attached both ends), slender-monument/instrument read.
+  Disclosed caveat: drum-end closure is blunt (~20px separation at this
+  resolution) — matches designed termination on the low drum.
+  gameplay PASS: designed mathematical exhibit NOT utility structure,
+  lens void legible against sky, plinth grounded with attached contact
+  shadow, post owns skyline vs squat drum basin = height-vs-mass
+  balance. Distance-residuals recorded (pitfall-13 class): reads
+  symmetric lens not teardrop at 18m; bead spacing reads near-uniform
+  per rail at 18m (equal-time bunching resolves only close). Decode
+  outranks both render suggestions — all beads at exact law positions
+  <=3mm (struct-120 probe-law-11 resolution). No source change owed.
+
+CLASSIFICATION: night debt PAID native; front/gameplay verdicts
+re-confirmed by second independent ZAI pass (double-fallback consistent)
+with residual native upgrade riding the next provider-up tick (residual
+debt carried, honest form — not claiming fully paid).
+
+Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use. Folly class: no walk owed. NEXT: 124%3==1 build tick
+— R10-19 form-ledger gap derivation fresh (or the front/gameplay native
+upgrade if provider stabilizes, per flap law).
