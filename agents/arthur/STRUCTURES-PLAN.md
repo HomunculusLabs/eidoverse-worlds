@@ -7460,3 +7460,103 @@ fresh; R10-20 continuing).
 
 Files: struct129-scan-peaucellier.ts, struct129-terrain-peaucellier.ts,
 next-place-struct129.ts (all tracked); plan append-only this tick.
+
+## struct-130 (2026-09-09): R10-21 THE HARMONIC KISS — spherical-harmonics gap built, judged native, placed (S-walk r230)
+
+Cadence 130%3==1 BUILD slot. Shard empty fresh (no SHARD EXECUTION
+heading, 0 OPEN nx-struct rows). Gate ALL PASS real exit 0 tick-start
+d6e3baf0 (struct-129's own commit) + PRE-MUTATION re-gate ALL PASS real
+exit 0 at e9e2b185 after sibling advances absorbed (survey/sweep observer
+holds). Ledger max fresh = 129 -> this tick struct-130.
+
+FORM-LEDGER GAP (fresh grep): "spherical harmon" 0/0/0, gyroid 0/0/0,
+enneper 0/0/0, boy/seifert 0/0/0, nephroid/involute 0/0/0 across
+STRUCTURES-PLAN.md + IMPROVEMENTS.md + IMPROVE-PLAN.md (helicoid/astroid/
+deltoid covered by standing works/prose). Missing family = SPHERICAL
+HARMONICS. S-walk extends past clothoid: galton r210 -> clothoid r220 ->
+HARMONIC KISS r230 (10m cadence).
+
+CONCEPT (one idea): THREE SURFACES BORN FROM ONE EQUATION. The d_z2
+harmonic — the hydrogen electron's orbital — as one revolved radius
+function rho(th) = 1.5|3cos^2 th - 1|: two bone teardrop lobes + one
+flared equatorial band, all three sheets converging at the SAME point,
+the equation's zero. Each sheet cut short of that point (lobe cut
+rho=0.55, band cut rho=0.25), kiss gaps 0.3078m legible at close
+approach, one brass bead exactly where they would meet — the bead IS the
+zero, glowing after dark (glow_hk_1, struct-82 dusk lineage). Dark iron
+needle threads pole-to-pole through bead and band and carries the form
+to grade: the axis line is the support (Judd). Bone/iron/stone/brass.
+Axisymmetric; yaw-pi family seating for census consistency. Folly class,
+no walk owed.
+
+BUILD: mkv3-harmonickiss.ts — LatheGeometry profiles (lobe/band/lobe),
+4 iron torus rim rings at the cut circles, axis needle r0.045 grade to
+6.4, socket ring, plinth 0.9x0.14x0.9. In-file laws: harmonic (node
+zero, pole 3.0, equator 1.5, cuts exact), kiss gap band [0.25,0.40],
+bead throat clearance, envelope 3.00x6.40x3.00, glow census 1, NaN 0.
+ACCEPTED sha 8008167c97c9922fe82b39f5fa50c120a30013a923daddb3ec85cdd3
+43470138 village_harmonickiss3.glb deterministic x2 (mtime verified).
+Nodes 4 (3 texMat buckets hk_bone/hk_iron/hk_stone + 1 KEEP glow_hk_1;
+KEEP regex glow* matches — verified in mergekit source).
+
+DECODE struct130-decode-harmonickiss.ts ALL PASS 17/17 exit 0 —
+independent byte replica, no mk imports: surface law (every bone vertex
+on rho(th) within a designed theta band, 15811 verts 0 unexplained),
+coverage 126 probes 0 missed, rim rings present (4 cut circles exact),
+needle spans grade to pole, kiss gaps 0.3078 both sides, bead at
+harmonic zero (0, 3.4, 0), glow census 1, emissive linear x0.85 exact,
+envelope 3.00x6.40x3.00 origin-centered x/z, stone on grade, NaN 0.
+TWO REPLICA BUGS caught RED->GREEN, disclosed (audit-side, not build):
+(a) surface law compared cr against rho(th) instead of rho(th)sin(th) —
+pole vertex at cr=0 flagged falsely; (b) rim pairing used rim(pi-thBand)
+for the upper band rim — lower rim paired, gap 0.539 false. Zero real
+build defects.
+
+JUDGED NATIVE (provider UP this window, no debt, no fallback): front
+PASS (orbital gestalt reads instantly; kiss gaps read as seam lines at
+the equatorial front view — framing-limited, judge's own caveat;
+needle-over-lobe read is the needle's cast shadow under the single key
+light, decode proves cr<=0.048 inside the lobe), gameplay 18m PASS
+(strong d_z2 read, deliberate mathematical monument, distance-robust
+silhouette; bead reduces to a speck at 18m — declined to enlarge under
+the struct-45 interaction-distance law, bead is the <=8m reward,
+r=0.10/needle 0.045 exact family precedent peaucellier/clothoid), night
+PASS 3/3 (exactly one quiet warm bead, form legible in darkness, no
+glare/bloom). Judge's hardening suggestions (bigger bead, thicker
+needle) declined per above — disclosed.
+
+SITE: struct130-scan ladder r230..r221 az184 yaw-pi fresh census 319 —
+r230 LAWFUL direct (worst-solid inf), ladder confirms clothoid blocks
+<=r223 (1.13/0.14/-0.86). Terrain struct130-terrain at FINAL pose: 9pt
+spread 10.3mm, PY = lowest = -0.014399.
+
+PLACE: next-place-struct130.ts hash-gated (bytes 8008167c... unchanged),
+center-corrected SAT basis re-run LIVE worst clothoid +8.12 fresh-319,
+upload store/8008167c97c9922f (shared budget, single upload), spawn
+paced 600ms. PLACED_VERIFIED nx-struct-harmonickiss pos
+[-16.0440, -0.0144, 229.4397] yaw 3.1416 lib store/8008167c97c9922f.glb
+comp {} census 319->320. Idempotent rerun REFUSED zero-verbs (fresh-only
+form; refusal content-anchored, RERUN_REAL_EXIT=1 disclosed). Independent
+live read-back: exact tuple, yaw pi exact, scale 1, server bbox
+3.00x6.40x3.00 center [0,3.2,0] = decode envelope exact, tris 35688.
+Folly class no walk owed (family precedent). Comps {} (glow is KEEP
+material inside the GLB) — nothing to reapply.
+
+VERDICT: The Harmonic Kiss stands — the S mathematics walk now runs
+lorenz r140, chladni r150, voronoi r160, peaucellier r169, zeno r180,
+borromean r190, brachistochrone r196, galton r210, clothoid r220,
+HARMONIC KISS r230. Bill eye-check: S-walk beyond the clothoid, 10m
+further out — two bone teardrops around a flared ring, one glowing bead
+at the heart after dark.
+
+NEXT: 131 — build slot (131%3==2): next commission (form-ledger gap
+grep fresh; R10 continuing). 132 = refine slot: peaucellier native
+re-judge debt IF provider up (debt from struct-128/129 — native was down
+those windows; this window native UP, but re-judge belongs to the refine
+slot, not this build tick).
+
+Files: agents/arthur/assets/mkv3-harmonickiss.ts (durable source, staged
+git add -f), struct130-decode-harmonickiss.ts, struct130-scan-
+harmonickiss.ts, struct130-terrain-harmonickiss.ts, next-place-
+struct130.ts (all tracked); reviews/struct130-harmonickiss/ (ignored).
+Plan append-only this tick (cat >>, struct-127 incident law honored).
