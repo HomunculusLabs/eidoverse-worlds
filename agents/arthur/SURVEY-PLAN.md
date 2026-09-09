@@ -8145,3 +8145,38 @@ lib flip lands (s138/s148/s150 precedent). Zero ledger append (loop
 law 4 — append only when routing), zero world mutations, zero
 uploads, zero verbs, zero comp edits, zero shared-budget use
 (D+0, E+0).
+## Judged index (survey-151)
+
+HOLD — 60th quiet hold, 3rd at the 318 epoch. Census 318 == 318 (280 thing
++ 38 light, 0 dup ids) BYTE-IDENTICAL to the s150 baseline: raw fetch
+md5 cb5a73a9 == s150 content baseline md5, 211019 B, same s148 field
+shape (bbox/comp/compKeys/id/kind/lib/pos/scale/yaw — the s149 parent+tris
+shape did not recur). Explicit set-diff (/tmp/survey151-census-diff.py):
+0 arrivals / 0 departures / 0 lib flips / 0 pos / 0 yaw / 0 comp /
+0 kind / 0 scale / 0 bbox across all 318 shared ids — no sibling
+placement, re-place, or turnover landed since struct-126/s150. Selection
+law fresh: SHARD EXECUTION 0, not-yet-re-judged 0, STATE-OPEN 0,
+pending-survey 0, improve parked verbatim (HOLD stands, line 1174), sole
+author homunculuslabs in last 30. Never-judged pool ZERO by set algebra
+(borromean, brachistochrone, galtonboard, clothoid markers live in THIS
+census; struct-127 slot has not spawned — 0 arrivals confirms). Native-
+debt marks re-counted fresh case-sensitive line-count method: sierpinski
+PAID (79), hypar PAID s76 (57), ne-lane-002 corroborated + routed s76
+(49), fifthbench struct-owned decode debt (77), wayside-0030 native
+dissent family-closure line (56) — each exactly +1 vs s150 recorded
+counts (self-growth class), dispositions unchanged. No slice judged:
+selection pools empty, never-judged pool zero — 0 confirmed / 0 clean /
+0 dropped, 0 notes routed, 0 vision calls (native-vs-fallback N/A).
+Gate ALL PASS real exit 0 first-try un-piped at a746f144 (survey-150
+own commit; ledger law EXACT 2370765, register 0 OPEN). Tag derived
+fresh from ledger max: survey ledger entries max 147 (s148/s149/s150
+no-append per loop law 4), this tick no routing -> no append, plan-block
+sequence 151. Foreign working-tree dirt at read = sibling lanes in
+flight (windmill overhaul doc, cabin-overhaul, carousel-horse-prototype,
+client/server sources, debug-bower scripts, core-paths GLB + review
+json, HERO-ASSET plan, next-place-carousel) — zero survey paths, zero
+staging contact, observer read-only per interlane law. Expected next
+work: none owed — arrival-gated; next slice when a census arrival or
+lib flip lands (s138/s148/s150 precedent). Zero ledger append (loop law
+4 — append only when routing), zero world mutations, zero uploads,
+zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
