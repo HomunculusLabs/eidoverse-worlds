@@ -6526,3 +6526,78 @@ opens, a tall stone stands, but not whole: split into eleven angular
 pieces sheared apart along invisible lines, dark cuts open to the sky,
 each piece carrying its brass bead, the seed that claimed it. Eleven
 territories, one stone.
+
+## struct-115 (2026-09-08): R10-15 THE ZENO GATES — infinite-series family
+## debut, judged (ZAI fallback, native debt disclosed), PLACED_VERIFIED
+
+Cadence 115%3==1 BUILD tick. Refine pool EMPTY fresh (no survey routes since
+struct-90); shard 14/14 terminal (survey-112 record post-114). Gate
+ALL_PINS_OK 15/15 real exit 0 tick-start + re-run chained AND pre-mutation.
+
+CONCEPT (written before build): the form ledger's missing INFINITE SERIES /
+GEOMETRIC CONVERGENCE family (grep fresh: zero zeno/series/convergence-family
+presence; standing families: ruled/minimal/pseudosphere/geodesic/tessellation/
+aperiodic/fractal x2/space-filling/platonic/phyllotaxis/CA/4D/attractor/
+vibration/voronoi/superposition/intersection). ONE IDEA: THE WALK ITSELF,
+HALVED — five stone gates at z=8/2^k (8,4,2,1,0.5m exact powers of two),
+heights 3.00->1.10 (0.475 steps), clears 2.40->1.00 (0.35 steps), converging
+on an iron stele 0.02m short of the OPEN limit point z=0, brass dusk bead
+capping it + one amber ripple line per lintel underside (KEEP glow_zn_1 x6).
+
+BUILD ARC (all caught pre-render by asserts, honest): Z0=7 draft gate-pair
+interpenetration (-0.88m) -> Z0=8 exact powers of two; chladni radial
+sightline contract hand-me-down WRONG for a corridor form (30deg blocked at
+18m) -> derived true cone from gate-1 opening (half-angle 8.4deg); bay
+vantage arithmetic wrong twice (2.2m, then 0.9m under gate-3's lintel) ->
+debug-named-mesh law found the occluder, TRUE final bay = z 0.2. Envelope
+expectation mis-derived once (glow members define both z extremes).
+
+BUILD: sha 78a3e90e458bfb438fb563ba02e63e6499dc8816c2ed6e4ad93247b3260ca811
+x3 deterministic (mtime verified). Envelope 3.20x3.00x8.47 y[0..3.00].
+Nodes 8 (budget 5-45): zeno_0 stone + zeno_1 iron stele + 6 glow_zn_1 KEEP
+(mergekit does NOT fold same-name siblings — reader law recorded).
+
+DECODE struct115-decode-zeno.ts ALL PASS exit 0 (18 checks): zeno law FROM
+BYTES (5 bands at 8/2^k, depth spans [zc-0.24, zc+0.24] exact, inter-gate
+face gaps halve exactly 3.52/1.52/0.52/0.02, no stray stone); post/clear law
+(|x|max == lintel half, y-max == h_k, strictly diminishing); glow law (bead
+at (0,1.104,-0.10) r 0.09; 5 ripples at (0, h_k-0.345, z_k+0.26), half-
+lengths halving-step exact 1.120/0.945/0.770/0.595/0.420); envelope/grade/
+NaN/z-fight all clean. 3 reader bugs caught+fixed en route (node-count
+assumption, band-splitting vs near-touching gates, ripple z-offset).
+
+JUDGED ZAI FALLBACK (native 1210 x2 + paced retry burned — disclosed; native
+re-judge debt rides any refine tick, flap law): front 5/5 PASS (diminishing
+gateway sequence immediate, stepped skyline clean, one-point convergence
+framing, torii-like threshold read), gameplay 18m 5/5 PASS (all five
+doorways aligned dead-center x478-480, funnel framing verified, "ship-ready
+at 18m"), night 4/4 PASS (exactly ONE crisp quiet warm point at the terminus
+4-5px zero halo, five-line diminishing amber rhythm quiet, silhouette faint
+but legible, zero stray warm pixels). Polish-tier note: gates 2-3 ripple
+reads pale at thinness (same material — emissive wash, not a defect class).
+
+SITE: az184 r180, stele ON the axis point. r170 SAT-BLOCKED by scan
+pre-mutation (voronoi -0.27 — the gate fired as designed); r180 clean:
+SAT worst voronoi +9.71 (law 1.4, fresh 313, film-guarded incl. R10 math
+films), film +78.21 (kochgarden), walk +100.38, rim 175.9. Terrain 9pt
+spread 1.9cm, PY = lowest corner -0.0412008 (base course on grade).
+
+PLACEMENT: upload store/78a3e90e458bfb43.glb (0 429s), 1 spawn verb,
+PLACED_VERIFIED exact tuple pos [-12.5562, -0.0412, 179.4615] yaw 3.1416,
+census 313->314. Fresh-only rerun REFUSED (already-live die, real exit 1).
+Folly class — no entry advertised, no walk owed (voronoi/chladni precedent).
+Comps {} (glow is KEEP emissive material inside the GLB).
+
+NEXT: 116%3==0 -> REFINEMENT tick if pool non-empty, else build (R10-16
+form-ledger gap; standing debt: zeno native re-judge when provider returns).
+
+BILL EYE-CHECK (one, standing — the mathematics walk gains its own subject):
+walk the south mathematics walk to its far end — past the bridge, the
+sunflower, the snowflake garden, the labyrinth, the gem, the wall, the
+hanging cube, the frozen storm, the plate of sand, the split stone — and
+where the meadow opens, a procession of gateways begins: five gates of
+stone, each doorway lower and narrower than the one before, each step half
+the length of the last, all converging on a small dark post that carries
+one bead of amber. Walk through them: each stride half as long as the last.
+The bead marks a distance that never quite ends. At dusk, the amber bead is
+the walk's last light, and five quiet lines burn beneath the lintels.
