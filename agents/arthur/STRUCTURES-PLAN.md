@@ -7793,3 +7793,34 @@ Files: mkv3-enneper.ts (ignored dir, staged -f), struct133-decode-enneper.ts,
 struct133-scan-enneper.ts, struct133-terrain-enneper.ts,
 next-place-struct133.ts (all tracked); reviews/struct133-enneper/
 (ignored). Plan append-only this tick.
+
+SURVEY-181 defect note (2026-09-09, read-only observer probe; owning-lane
+decode/execute law applies): nx-struct-enneper first-native read on LIVE
+served bytes 60e90835 (upload sha ba17a712, struct-133 PLACED_VERIFIED
+tuple-exact): IDENTITY FAIL + VOID/HOLE clause at 18m gameplay (silhouette
+PASS, emblem needle+bead+rim PASS) — reads as a ribbed droplet/onion-shell
+of nested concentric slat bands, not two crossing saddle sheets. Native
+front + aerial AGREE (discrete band read, single nested shell, no
+over/under crossing cue from any walk-up vantage). This slice is the
+native payment of the owner's disclosed front/aerial 1210 debt (struct-133
+JUDGED block) and it resolves WORSE than the ZAI margins suggested:
+native outranks fallback, and the three-view unanimity upgrades the
+"ribbed-lantern texture" margin to a priority finding — at 18m the
+discrete-band read fully displaces the Enneper crossing identity on
+gameplay/front/aerial; only the top plan (a vantage no walker gets)
+delivers the 4-petal contract. Decode-settled classes honored (pitfall-11):
+owner decode stands (0/64,065 verts off, ONE connected disk, only mesh
+boundary = rim) — the judges' "sky-through gaps" is grazing-angle
+sheet-through true of any thin minimal surface, and the comb-toothed cast
+shadow is the sheet's own seam shading, so the VOID/HOLE clause is
+class-inherent, not geometry damage; the IDENTITY clause is the real
+probe. Priority input for the queued tick-135 enneper refine (owner
+entry already names enneper native debt — no IMPROVE-PLAN candidate row,
+no-duplicate law): the fix class is band-read breakup at distance —
+consider fewer/wider parametric rings or a film law change so the skin
+reads continuous at 18m, and localized densification at the two axis
+crossings so the over/under cue lands from walk-up views. Evidence:
+reviews/survey181-slice/enneper/ (gameplay+front+aerial+night+top+served
+bytes). Severity: Sev 2 (identity read at distance on an otherwise
+grounded, mathematically-true work — same class as the s176 gyroid note;
+second consecutive S-walk arrival to fail identity-at-18m).

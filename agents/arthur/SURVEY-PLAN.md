@@ -9460,3 +9460,41 @@ shared-budget use (D+0, E+0).
   slice when a census arrival or lib flip lands. Zero ledger append
   (loop law 4), zero world mutations, zero uploads, zero verbs, zero
   comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-181)
+
+- survey-181 (2026-09-09, ARRIVAL SLICE + DEBT PAYMENT, notes routed):
+  census 322 vs committed sweep baseline 321 (agents/arthur/reviews/
+  sweep-census-baseline.json, sweep-181 fold): exactly ONE arrival
+  nx-struct-enneper [-17.439118,-0.013339,249.391013] yaw pi (3.141593)
+  lib store/ba17a712cbc734bd.glb — classified sibling work-in-flight by
+  domain = struct-133 PLACED_VERIFIED at HEAD 3ae6e9f3, tuple
+  ledger-exact; 0 departures / 0 field diffs / 0 lib flips on all 321
+  shared ids (9-field law, tracked survey181-census-diff.py chassis,
+  s178/179/180 lineage). Gyroid lib unchanged da2a4b15 (tick-135 refine
+  still pending; s176 Sev-2 note stays open with owner). Struct-family
+  72. SLICE (arrival-gated, s76/s79/s80/s176 precedent): nx-struct-
+  enneper judged NATIVE 3/3 calls (gameplay 18m + front + aerial — the
+  owner's disclosed 1210-debt views), zero 1210, zero ZAI fallback, 8th
+  consecutive all-native window. VERDICTS 1 confirmed-identity-probe /
+  0 clean / 0 dropped: IDENTITY FAIL at 18m (ribbed droplet of nested
+  slat bands, not crossing saddle sheets) unanimous across gameplay +
+  front + aerial; silhouette PASS, emblem PASS; VOID/HOLE clause
+  decode-settled class-inherent (single thin sheet, grazing-angle
+  sky-through + seam shadow — owner decode 0/64,065 verts off stands,
+  pitfall-11 honored); native contradicts-in-degree the owner's
+  gameplay-PASS margins (native-vs-native, s77/78 arbitration class:
+  owner's own front-margins + top-plan 4-petal contract corroborate the
+  identity gap; only top delivers the petal read, a vantage no walker
+  gets). NOTE ROUTED: 1 — SURVEY-181 defect note Sev 2 appended
+  STRUCTURES-PLAN.md EOF (grep-verified 0 pre-existing open enneper
+  survey note), priority input for queued tick-135 enneper refine (fix
+  class: band-read breakup at distance — fewer/wider rings or film-law
+  change + densified crossings); ZERO IMPROVE-PLAN candidate row
+  (owner-queued tick-135 entry names the object, no-duplicate law).
+  Evidence local-untracked: reviews/survey181-slice/enneper/ (8 frames +
+  served-bytes, s176 evidence-shape precedent). Ledger append [survey-81]
+  D+0 E+0 (one append, routing record — loop law 4 exception). Gate ALL
+  PASS real exit 0 un-piped tick-start 3ae6e9f3 (ledger law EXACT
+  2370772, 99 PASS lines); zero world mutations/uploads/verbs/
+  comp-edits/shared-budget use (D+0, E+0).
