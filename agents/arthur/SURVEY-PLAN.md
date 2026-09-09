@@ -6980,3 +6980,46 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   append (loop law 4 — append only when routing), zero world mutations,
   zero uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+
+## Judged index (survey-129)
+
+- survey-129 (2026-09-08 22:5x EDT fresh date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — HOLD tick, cheap lawful hold
+  verification, no slice judged; FORTY-SECOND quiet hold, census epoch
+  stable, SIXTH consecutive epoch-stable tick at 315): selection law run
+  fresh and INDEPENDENTLY: severity backlog EMPTY — no
+  `## SHARD EXECUTION` section in IMPROVE-PLAN (heading grep count 0,
+  exit 1, verified un-piped); sharding directive prose routes rows by
+  entity prefix to struct/dress/approach/waysign/improve-own, NONE
+  survey; improve parked improve-71 48/48 terminal, IMPROVE-PLAN line
+  1174 "Open improve-own work remains NONE; HOLD stands"; not-yet-
+  re-judged markers 0 (grep exit 1 un-piped); arrival slice NONE owed
+  (census diff zero — below); never-judged pool ZERO by set algebra —
+  live 315-set BYTE-IDENTICAL to survey-124..128 baselines plus this
+  tick's fresh /tmp/survey129-census.json (209084B, md5 b048d886 all
+  six, 315 entities[]-derived, lights 38, lib-bearing 277, 0 arrivals /
+  0 departures / 0 flips on every field, inheriting s119's fully-judged
+  313-subset derivation + borromean CLEAN s124). Native-debt marks
+  re-verified fresh by grep THIS tick, line-count method: sierpinski
+  PAID (57), hypar v3 PAID s76 (34), ne-lane-002 corroborated + routed
+  s76 (27), fifthbench struct-owned decode debt (55), wayside-0030
+  native dissent on the family-closure line (34) — every count +1 vs
+  s128 exactly from s128's own appended block (self-growth class,
+  expected arithmetic); marks present, dispositions unchanged. No new
+  Bill correction outstanding. No judging attempted (nothing owed), no
+  opportunistic-debt law fires. HEAD static 586a26d4 through
+  gate+census+selection+append (survey-128's own commit at tip; no
+  sibling advance observed this window). Gate: ALL PASS 99 PASS lines,
+  real exit 0 FIRST TRY at 586a26d4 (/tmp/survey129-gate.txt; zero
+  case-insensitive fail hits). Append chassis asserted PRE (plan==HEAD
+  byte-equal; tag survey-129 0/0/0 across SURVEY-PLAN / IMPROVE-PLAN /
+  IMPROVEMENTS.md + git log --all, s128 heading unique 1, EOF = s128
+  block tail) + POST (insert-only at EOF, new heading exactly once,
+  EOF = new block tail, growth one block). Foreign working-tree dirt at
+  read = sibling lanes in flight (windmill/city4/carousel/moon-moth
+  domains, HERO-ASSET plan, cabin-overhaul + carousel-horse-prototype
+  dirs, client/server sources, debug-bower scripts) — zero survey paths,
+  zero staging contact, observer read-only per interlane law. Zero notes
+  routed, zero ledger append (loop law 4 — append only when routing),
+  zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
