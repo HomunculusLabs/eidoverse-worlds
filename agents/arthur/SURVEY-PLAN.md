@@ -6528,3 +6528,66 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (loop law 4 — append only when routing), zero world mutations,
   zero uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+
+## Judged index (survey-121)
+
+- survey-121 (2026-09-08 21:55 EDT, OVERNIGHT FLEET TICK (pipeline
+  mode, 8 sibling lanes) — HOLD tick, cheap lawful hold verification,
+  no slice judged; THIRTY-FIFTH quiet hold, census epoch stable): 
+  selection law run fresh and INDEPENDENTLY (not carried from s120
+  prose): severity backlog EMPTY — no `## SHARD EXECUTION` section in
+  IMPROVE-PLAN (heading grep count 0, exit 1, verified un-piped);
+  sharding directive (IMPROVE-PLAN line 1176ff) routes rows by entity
+  prefix to struct/dress/approach/waysign/improve-own, NONE survey;
+  dress shard queue EMPTY (line 1108); IMPROVE-PLAN line 1174 reads
+  "Open improve-own work remains NONE; HOLD stands" — improve parked
+  at improve-71 fleet STOP, 48/48 terminal, resume = Bill's eye-gate
+  verdicts; arrival slice NONE owed (census diff zero — below);
+  never-judged pool ZERO by set algebra — live 314-set
+  BYTE-IDENTICAL to the survey-120 baseline (208432B, md5
+  2c9aad56a2607d6198abe5e02c87ddc0 both files, cmp proven, count
+  314, lights 38, lib-bearing 276; full-file identity = 0 arrivals /
+  0 departures / 0 flips on id/pos/yaw/scale/lib/kind/color/
+  intensity/range/comp), inheriting s119's arrival-slice derivation
+  (313-subset fully judged per s82/s83 twice-independent derivation +
+  s84 tesseract CLEAN + s89 lorenz CLEAN-with-margin + s94 chladni
+  CLEAN-with-margin + s113 voronoi CLEAN-with-margin + s119 zeno
+  CLEAN-with-margin). Native-debt audit unchanged, marks re-verified
+  fresh in THIS plan this tick (counts derived by grep, not from
+  s120 prose): sierpinski PAID (51 refs), hypar v3 PAID s76 (29
+  refs), ne-lane-002 corroborated + routed s76 (19 refs), fifthbench
+  = struct-owned decode debt (54 refs), wayside-0030 native dissent
+  recorded on the family-closure line (26 refs), survey-62 hall/inn
+  class owner-disposition (debt-transfer law, improve parked
+  improve-71), statuary-family SURVEY CANDIDATES rows stand routed
+  (59 refs). No new Bill correction outstanding. EPOCH EVENT,
+  classified: HEAD advanced 79e4fab1 -> 5165a554 between gate and
+  PRE-asserts — sweep-156 (sibling observer sweep lane; files =
+  IMPROVEMENTS.md + SWEEP-PLAN.md + sweep156-census-diff.py ONLY,
+  zero survey paths, zero live-world materialization; its census
+  314==314 quiet at both epochs corroborates this tick's byte-identical
+  read) — normal interleaving per interlane git law. Re-gate at new
+  HEAD: ALL PASS 99 PASS lines, real exit 0 (/tmp/survey121-regate.txt);
+  sweep-156 touches zero survey/pinned state, so no census/selection
+  re-derivation owed — census-314 world unchanged, PRE asserts
+  re-run clean at 5165a554 (plan==HEAD, tag 0/0/0 across SURVEY-PLAN /
+  IMPROVE-PLAN / IMPROVEMENTS + git log --all, s120 heading unique,
+  EOF = s120 block tail). Native availability: no judging attempted
+  this tick (nothing owed), so no opportunistic-debt law fires.
+  Census 314==314 vs /tmp/survey120-census.json, BYTE-IDENTICAL (cmp
+  proven); new baseline /tmp/survey121-census.json (314, same md5
+  2c9aad56 — epoch stable, third consecutive epoch-stable tick at
+  314). Gate: ALL PASS 99 PASS lines, real exit 0 FIRST TRY at
+  79e4fab1 (/tmp/survey121-gate.txt) + re-gate ALL PASS 99 real
+  exit 0 at 5165a554 (zero real failure lines both runs). Foreign
+  working-tree dirt = sibling lanes in flight (windmill/city4/
+  carousel/moon-moth domains + HERO-ASSET plan, cabin-overhaul +
+  carousel-horse-prototype dirs, client/server sources, debug-bower
+  scripts) — zero survey paths, zero staging contact, observer
+  read-only per interlane law. Token pointer (standing one-liner,
+  surfaced once at s90): survey's value is arrival-gated — holds
+  between arrivals are the standing-watch cost; no-LLM census
+  watcher = Bill's call. Verdicts 0 confirmed / 0 clean / 0 dropped.
+  Zero world mutations, zero uploads, zero verbs, zero comp edits,
+  zero ledger append (loop law 4 — nothing routed), zero
+  shared-budget use (D+0, E+0).
