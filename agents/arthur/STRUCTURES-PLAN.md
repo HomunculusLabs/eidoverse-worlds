@@ -6841,3 +6841,66 @@ light; the curved one dives deep below it and somehow arrives first.
 Five beads mark its winning clock, glowing faint at dusk; five dark ones
 trail the line that seemed shorter. The stone basin holds one warm bead
 where the winner lands.
+
+## struct-120 (2026-09-08): R10-17 THE BRACHISTOCHRONE placed —
+## struct-119's deferred contract EXECUTED end-to-end: judged -> sited ->
+## PLACED_VERIFIED.
+
+Cadence 120%3==0 nominal refine slot: pool EMPTY fresh; deferred-contract
+precedence (struct-113/117). Gate ALL_PINS_OK 15/15 real exit 0 tick-start
+(bun, no pipe). Shard empty fresh (no OPEN nx-struct rows).
+
+JUDGED ZAI FALLBACK (native 1210 x2 + paced retry burned — provider hard
+down all tick, disclosed; native re-judge debt rides a future tick per
+flap law): front 4/4 PASS (teardrop lens immediate, closed
+pointed-ellipse void against sky, rails converge at post top + drum
+crown, beads unmistakable as markers, dip pier strut attached both ends,
+zero floats — dark dashes identified as cast shadows); gameplay 18m 4/4
+PASS (plinth+drum exhibit read resolves the pole-plus-line in ~1-2s;
+closure rescues identity — a closed lens is a shape infrastructure never
+makes; two rails never confusable 60-80px apart at closest; 8-10 brass
+markers by color contrast; contact seam + cast shadow; watch item
+recorded not defect: bare-pole soft spot, apex bead already doing cap
+duty); night 4/4 PASS (exactly SEVEN warm points — crest release, five
+cycloid time-beads bunched near the crest and stretched along the dip
+(equal-TIME spacing corroborated independently), basin finish — chord
+beads near-black, zero bloom/wash/stray warmth, silhouette faintly
+readable as designed). Night judge's fourth/fifth-chord-bead count
+resolved DECODE-SIDE: all 5 dark beads at exact law positions <=3mm —
+decode outranks render count (probe law 11).
+
+BYTES: sha f678c069e84e51a2... byte-exact on disk pinned; decode
+struct119 ALL PASS 16/16 re-run fresh tick-start.
+
+SITE: az184 r200 — S mathematics axis extends past borromean r190.
+Form-CENTER on the axis point (center-corrected, CX +3.70 — pitfall-10):
+entity POS (-13.9513, -0.0066, 195.8128). YAW -pi/2 CAND_A (struct-104
+face-on law: lens plane faces the S-axis approach — walker from the
+village sees the full teardrop; crest post village-side, race runs
+outward to the finish basin). CAND_B mirror (+pi/2, basin village-side)
+also scanned LAWFUL — rejected on approach-narrative only. Scan
+struct120 both candidates LAWFUL fresh-315: SAT worst nx-struct-borromean
++3.30 (law 1.4, center-corrected, film-guarded), film +102.17
+(kochgarden), walk +124.34 (ne-lane-002), rim 200.0. Terrain 9pt spread
+5.0mm dead flat; PY = lowest -0.0065773 (base on grade). Foreign
+support-seam diagnostics (temple-labyrinth, dress entities) observed and
+left alone — observer-class noise, not lane defects.
+
+PLACEMENT: upload store/f678c069e84e51a2.glb zero 429s, 1 spawn verb,
+PLACED_VERIFIED exact tuple pos [-13.9513,-0.0066,195.8128] yaw -1.5708
+lib store/f678c069e84e51a2.glb comp {} census 315->316 corroborated
+independent read-back. Fresh-only rerun REFUSED zero verbs real exit 1
+(idempotency form). Folly class: no entry advertised, no walk owed
+(zeno/voronoi/chladni/borromean precedent). Comps {} (glow is KEEP
+glow_brr material inside the GLB, struct-82 lineage).
+
+S math axis now: dial r71 -> koch r90 -> hilbert r100 -> dodeca r110 ->
+wall r120 -> tesseract r130 -> lorenz r140 -> chladni r150 -> voronoi
+r160 -> zeno r180 -> borromean r190 -> BRACHISTOCHRONE r200 — the race
+past the rings that cannot come apart.
+
+NATIVE RE-JUDGE DEBT: this placement's front/gameplay/night verdicts are
+ZAI fallback (native hard down). Owed on the next tick with native up.
+
+NEXT: 121%3==1 build tick — R10-18 form-ledger gap derivation fresh
+unless survey routes rows.

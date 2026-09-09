@@ -1,0 +1,83 @@
+// struct120-scan-brachistochrone.ts — film-guarded sitescan for the R10-17
+// Brachistochrone seat (deferred contract from struct-119). Laws copied from
+// the struct-118/115/112/114 chassis: SAT >= 1.4 vs non-film entities
+// (center-corrected), film clearance >= 4.0, walking-line >= 3.0, r >= 60
+// (CITY-PLAN closed band r33-55).
+// TRUE decoded envelope local x[-0.67..8.07] z[-1.07..1.07] y[0..4.018]
+// (struct-119 decode-verified 8.74x4.02x2.14); half-extents HX 4.37 HZ 1.07;
+// envelope center local (+3.70, 0) — NOT origin-centered (pitfall-10).
+// Envelope height 4.018 > 0.5 = solid, not film.
+// TARGET SEAT: az184 r200 — the S mathematics axis extends past borromean
+// r190 (dial r71 -> koch r90 -> hilbert r100 -> dodeca r110 -> wall r120
+// -> tesseract r130 -> lorenz r140 -> chladni r150 -> voronoi r160 ->
+// zeno r180 -> borromean r190 -> BRACHISTOCHRONE r200): the race past the
+// rings that cannot come apart.
+// YAW CANDIDATES (face-on law struct-104): the lens plane (local x-y) must
+// face the approaching walker (village = north/+(-z) from the seat), not
+// run edge-on along the walk line. yaw -pi/2: local +x -> world +z toward
+// walker... evaluated below as CAND_A; yaw +pi/2 mirrored as CAND_B. The
+// race START (crest post, local x~0) faces the village in CAND_A.
+// Entity POS seats the form-CENTER on the axis point: POS = axis - CX
+// rotated (center-corrected seating, struct-115 approach).
+import { readFileSync } from "node:fs";
+const ROOT = "/Users/t3rpz/projects/eidoverse-worlds", WORLD = "commons-next";
+const cfg = JSON.parse(readFileSync(`${ROOT}/agents/arthur/config.json`, "utf8"));
+const base = cfg.url.replace("wss://", "https://").replace("ws://", "http://").replace("/ws", "");
+const HX = 4.37, HZ = 1.07;
+const CX = 3.70, CZ = 0; // local envelope center offset (race runs +x from crest post at origin)
+const FILM = /nx-struct-(kochgarden|penrose|hydro|hygro|pyth|ptolemy|hypoth|crossing|penrose2|sierpinski|geodesic|apollon|tensegrity|sundial|watershed)/;
+const GROUND = /nx-town-roads|nx-town-paths|nx-approach-(?!.*lamp)|nx-dress-sw-moss/;
+const r = await fetch(`${base}/geom?world=${WORLD}`);
+if (!r.ok) throw Error(`geom ${r.status}`);
+const d: any = await r.json();
+const ents = (d.entities ?? []) as any[];
+console.log(`census ${ents.length}`);
+function worldRect(e: any) {
+    const bb = e.bbox;
+    if (!bb) return null;
+    const ecx = bb.center ? bb.center[0] : 0, ecz = bb.center ? bb.center[2] : 0;
+    const hx = bb.size[0] / 2, hz = bb.size[2] / 2;
+    const ey = e.yaw ?? 0;
+    const cy = Math.cos(ey), sy = Math.sin(ey);
+    return {
+        cx: e.pos[0] + ecx * cy + ecz * sy,
+        cz: e.pos[2] - ecx * sy + ecz * cy,
+        w: hx * Math.abs(cy) + hz * Math.abs(sy),
+        d: hx * Math.abs(sy) + hz * Math.abs(cy),
+    };
+}
+// CAND_A yaw -pi/2 (crest faces village), CAND_B yaw +pi/2 (basin faces village).
+const az = 184 * Math.PI / 180, R = 200;
+const AX = R * Math.sin(az), AZ = -R * Math.cos(az);
+for (const [name, YAW] of [["CAND_A(yaw=-pi/2, crest village-side)", -Math.PI / 2], ["CAND_B(yaw=+pi/2, basin village-side)", Math.PI / 2]] as const) {
+    // entity POS such that form-CENTER sits on the axis point:
+    // axis = POS + rot(CX,CZ)  =>  POS = axis - rot(CX,CZ)
+    const cy = Math.cos(YAW), sy = Math.sin(YAW);
+    const PX = AX - (CX * cy + CZ * sy);
+    const PZ = AZ - (-CX * sy + CZ * cy);
+    const WCX = AX, WCZ = AZ; // by construction
+    const EW = HX * Math.abs(cy) + HZ * Math.abs(sy), ED = HX * Math.abs(sy) + HZ * Math.abs(cy);
+    console.log(`\n${name}: seat entity POS (${PX.toFixed(4)}, PY, ${PZ.toFixed(4)}) yaw ${YAW.toFixed(4)} rad; world center (${WCX.toFixed(3)}, ${WCZ.toFixed(3)}) grown half ${EW.toFixed(3)}x${ED.toFixed(3)}`);
+    let worstSol = { id: "", g: Infinity };
+    let worstFilm = { id: "", g: Infinity };
+    let worstWalk = { id: "", g: Infinity };
+    const bad: string[] = [];
+    for (const e of ents) {
+        const rc = worldRect(e);
+        if (!rc) continue;
+        const bb = e.bbox;
+        const isFilm = (bb.max && (bb.max[1] - bb.min[1]) <= 0.5) || FILM.test(e.id);
+        const isGround = GROUND.test(e.id);
+        const dx = Math.abs(WCX - rc.cx), dz = Math.abs(WCZ - rc.cz);
+        const gap = Math.max(dx - (EW + rc.w), dz - (ED + rc.d));
+        if (isFilm) { if (gap < worstFilm.g) worstFilm = { id: e.id, g: gap }; if (gap < 4.0) bad.push(`FILM ${e.id}(${gap.toFixed(2)})`); continue; }
+        if (isGround) { if (gap < worstWalk.g) worstWalk = { id: e.id, g: gap }; if (gap < 3.0) bad.push(`WALK ${e.id}(${gap.toFixed(2)})`); continue; }
+        if (gap < worstSol.g) worstSol = { id: e.id, g: gap };
+        if (gap < 1.4) bad.push(`SAT ${e.id}(${gap.toFixed(2)})`);
+    }
+    const rr = Math.hypot(WCX, WCZ);
+    if (rr < 60) bad.push(`rim ${rr.toFixed(1)} < 60`);
+    console.log(`worst solid: ${worstSol.id} ${worstSol.g.toFixed(2)} (law 1.4) | worst film: ${worstFilm.id} ${worstFilm.g.toFixed(2)} (law 4.0) | worst walk: ${worstWalk.id} ${worstWalk.g.toFixed(2)} (law 3.0) | rim ${rr.toFixed(1)}`);
+    if (bad.length) console.log(`BLOCKED: ${bad.join(", ")}`);
+    else console.log("SCAN LAWFUL");
+}
