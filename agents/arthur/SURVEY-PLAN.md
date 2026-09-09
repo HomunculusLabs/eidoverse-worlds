@@ -6386,3 +6386,79 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   world mutations, zero uploads, zero verbs, zero comp edits, zero
   ledger append (loop law 4 — nothing routed), zero shared-budget use
   (D+0, E+0).
+
+## Judged index (survey-119)
+
+- survey-119 (2026-09-08 21:14 EDT, OVERNIGHT FLEET TICK (pipeline
+  mode, 8 sibling lanes) — ARRIVAL slice: struct-115's zeno placement
+  + struct-116's re-judge landed AFTER survey-118 (HEAD 1b86e6d3 ->
+  80edb60a), census 313->314, survey owes the independent first read
+  per s84 tesseract / s89 lorenz / s94 chladni / s113 voronoi
+  precedent; NATIVE DOWN ALL TICK — 1210 x2 on gameplay first call,
+  single paced retry burned, ZAI fallback all three judgment calls,
+  DISCLOSED; 18m gameplay primary + night bead-contract + front
+  convergence cross-check, fresh live store bytes HTTP 200 curl UA
+  (18196B) on the exact census-119 lib store/78a3e90e458bfb43 =
+  struct-115's pinned build sha; served-sha256 d54f52dcf10003d9 =
+  DRACO re-encode transform struct-104 class; DRACO chassis decode:
+  3.20x3.00x8.47 envelope, 9 nodes, 8 draw meshes, named nodes
+  zeno_0/zeno_1 + 6 glow_zn_1 beads — matches owner's node law
+  8 KEEP anchors. Selection law run fresh and INDEPENDENTLY:
+  severity backlog EMPTY (no SHARD EXECUTION section in IMPROVE-PLAN —
+  grep count 0 exit 1, un-piped; sharding directive routes rows by
+  entity prefix to struct/dress/approach/waysign/improve, none
+  survey; IMPROVE-PLAN line 1174 reads "Open improve-own work
+  remains NONE; HOLD stands" — improve parked at improve-71 fleet
+  STOP, 48/48 terminal); census diff vs /tmp/survey118-census.json =
+  exactly ONE arrival nx-struct-zeno @ (-12.5562,-0.0412,179.4615)
+  yaw pi, tuple ledger-exact vs struct-116's live pin, 0 departures,
+  0 flips on id/pos/yaw/scale/lib/kind/color/intensity/range/comp,
+  lights 38, lib-bearing 276; never-judged pool = that arrival
+  (313-subset fully judged per s82/s83 twice-independent derivation
+  + s84/s89/s94/s113 CLEANs). VERDICT: NX-STRUCT-ZENO CLEAN-with-
+  margin — gameplay ZAI 5/5 PASS: IDENTITY read BLIND (fallback
+  prompt truncated at JSON boundary, disclosed; judge unprompted read
+  the converging-gate-corridor concept: "repeating gate tunnel
+  instantly readable, clean rhythmic decay toward vanishing point,
+  far end terminates in a small dark vertical element = effective
+  focal anchor" — the convergence+stele-at-limit concept WITHOUT
+  being told, strongest identity-legibility class), SILHOUETTE
+  continuous coherent, INTEGRITY zero floats/voids/debris,
+  GROUNDING contact + coherent leftward cast shadows, TECH clean;
+  NIGHT CONTRACT 6/6 PASS at pixel precision: exactly one crisp
+  stele bead (481,354) zero bloom + five thin lintel lines (1-3px,
+  spans 403-557/425-535/443-523/457-510/467-498, perspective-
+  tapering) + zero stray warm px — matches struct-115's pinned
+  night law "one crisp quiet amber point at the limit + five quiet
+  lintel lines" exactly; FRONT cross-check CLEAN: all five gates
+  complete rectangles (post/lintel coordinates tabulated), midpoints
+  all x~480 zero lateral drift, monotonic lintel descent, stele
+  grounded at gate-5 base line, zero floaters/debris. Margins
+  (watch-tier only): far gates 4-5 at 9-12px width sub-resolution
+  for 1-2px post-segment defects; stele base contact 4-6px;
+  shadow-flat corridor beyond near gate = flat-plane chassis
+  limitation (s3 class), not in-world evidence. CORROBORATES
+  struct-116's native front+gameplay PASS on identical bytes —
+  owner NATIVE + survey ZAI = dual-judge convergence, zero dissent,
+  no new defect class; native survey re-read owed only if a defect
+  claim ever opens on this object (corroborating-clean record, s113
+  precedent). Routing: ZERO notes routed (struct owns disposition;
+  corroborating-first-read-clean precedent — record lives here, not
+  in the owner's plan); ZERO ledger append (loop law 4 — append
+  only when routing). Grep-verified survey-119 pre-existing 0/0/0
+  across SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS pre-write + 0 in
+  git log --all; ledger max exact-entry survey-79 re-derived
+  numerically immediately pre-write (holds append nothing —
+  correct; tag = plan-sequence survey-118 + 1, collision-free).
+  Evidence: /tmp/survey119-zeno/served.glb + views/ (s84/s89/s94/
+  s113 ephemeral-evidence precedent). Census 313->314: new
+  baseline /tmp/survey119-census.json (314, md5 2c9aad56a260).
+  Gate: ALL PASS 99 PASS lines, real exit 0 FIRST TRY at 80edb60a
+  (struct-116 at HEAD; foreign working-tree dirt = sibling lanes in
+  flight — windmill/city4/carousel/moon-moth domains, zero survey
+  paths, zero staging contact); no HEAD advance mid-tick through
+  gate+census+judgment+append (git log 80edb60a..HEAD = 0 —
+  verified immediately pre-commit). Verdicts 0 confirmed / 1
+  clean-with-margin / 0 dropped. Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero ledger append, zero
+  shared-budget use (D+0, E+0).
