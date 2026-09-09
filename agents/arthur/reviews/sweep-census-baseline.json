@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 316,
+  "count": 317,
   "entities": [
     {
       "id": "beb4c791",
@@ -138,6 +138,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -188,6 +189,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -238,6 +240,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -288,6 +291,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -302,6 +306,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -316,6 +321,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -366,6 +372,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -380,6 +387,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -430,6 +438,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -444,6 +453,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2006,6 +2016,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2056,6 +2067,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2106,6 +2118,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2156,6 +2169,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2170,6 +2184,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2228,6 +2243,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -2286,6 +2302,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -5307,6 +5324,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -5700,6 +5718,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -5858,6 +5877,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -6016,6 +6036,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -6156,6 +6177,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -6602,6 +6624,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -7660,6 +7683,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -7710,6 +7734,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -10654,6 +10679,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -10704,6 +10730,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -10754,6 +10781,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -10948,6 +10976,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -10998,6 +11027,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11048,6 +11078,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11098,6 +11129,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11184,6 +11216,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11287,6 +11320,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11373,6 +11407,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11459,6 +11494,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11545,6 +11581,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -11703,6 +11740,7 @@
       "yaw": 0,
       "scale": 1,
       "lib": null,
+      "bbox": null,
       "compKeys": [],
       "comp": {}
     },
@@ -12241,6 +12279,42 @@
           0,
           1.551,
           0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-galtonboard",
+      "kind": "thing",
+      "pos": [
+        -14.648859486266312,
+        0.0020799348551429732,
+        209.87345055456308
+      ],
+      "yaw": 3.141592653589793,
+      "scale": 1,
+      "lib": "store/3d9f7c9cdf81d64c.glb",
+      "bbox": {
+        "min": [
+          -2.35,
+          0,
+          -0.1
+        ],
+        "max": [
+          2.35,
+          4.46,
+          0.87
+        ],
+        "size": [
+          4.7,
+          4.46,
+          0.97
+        ],
+        "center": [
+          0,
+          2.23,
+          0.385
         ]
       },
       "compKeys": [],
