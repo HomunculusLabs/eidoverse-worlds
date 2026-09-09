@@ -8046,3 +8046,46 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   verdict + pre-owned finding), zero ledger append (loop law 4 —
   append only when routing), zero world mutations, zero uploads,
   zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+## Judged index (survey-149)
+
+HOLD — 59th quiet hold, 2nd at the 318 epoch (first hold after s148's
+arrival-gated slice). Census 318 == 318 (280 thing + 38 light, 0 dup
+ids) CONTENT-QUIET by explicit set-diff (/tmp/survey149-census-diff.py:
+0 arrivals / 0 departures / 0 lib flips / 0 pos moves / 0 yaw moves /
+0 comp drift / 0 kind drift across all 318 shared ids). SCHEMA EVENT
+disclosed: raw bytes 94118 md5 a0916e3a vs baseline 211019 md5
+ffccfdb4 — entity fields changed, baseline carried compKeys, fresh
+carries parent + tris instead (bbox/comp/id/kind/lib/pos/scale/yaw
+unchanged) — /geom RESPONSE SCHEMA CHANGE not arrivals, consistent
+with sibling-dirty server/server.ts + server/world.ts in the working
+tree (windmill-overhaul era); entity set + every compared field
+identical, so the 318 baseline stays current for content set-diff and
+this tick's fetch becomes the schema-shape reference. Selection law
+fresh: SHARD EXECUTION 0, not-yet-re-judged 0, STATE-OPEN 0,
+pending-survey 0, improve parked verbatim (HOLD stands, line 1174),
+sole author homunculuslabs in last 30. Never-judged pool ZERO by set
+algebra (borromean, brachistochrone, galtonboard, clothoid markers
+re-confirmed live in THIS census — clothoid judged CLEAN s148).
+Native-debt marks re-counted fresh by the recorded case-sensitive
+LINE-COUNT method: sierpinski PAID (77), hypar PAID s76 (55),
+ne-lane-002 corroborated + routed s76 (47), fifthbench struct-owned
+decode debt (75), wayside-0030 native dissent on the family-closure
+line (54) — each exactly +1 vs s148's recorded counts (self-growth
+class), dispositions unchanged. No slice judged: selection law pools
+empty, never-judged pool zero — 0 confirmed / 0 clean / 0 dropped,
+0 notes routed, 0 vision calls (native-vs-fallback N/A). Gate ALL
+PASS real exit 0 first-try un-piped at 2b89293f (survey-148's own
+commit; ledger law EXACT 2370765, register 0 OPEN); HEAD static
+through the whole tick (tag derived from ledger max fresh: survey
+entries max 147, s148 made no append per loop law 4, plan-block
+sequence continues 149). One parser-blocked inline for-loop recovered
+via the sanctioned saved-script bash path, zero re-inline retries.
+Foreign working-tree dirt at read = sibling lanes in flight (windmill
+overhaul, cabin-overhaul, carousel-horse-prototype, client/server
+sources, debug-bower scripts, core-paths GLB + review json,
+HERO-ASSET plan, next-place-carousel) — zero survey paths, zero
+staging contact, observer read-only per interlane law. Expected next
+work: none owed — arrival-gated; next slice when a census arrival
+lands (s138/s148 precedent). Zero ledger append (loop law 4 — append
+only when routing), zero world mutations, zero uploads, zero verbs,
+zero comp edits, zero shared-budget use (D+0, E+0).
