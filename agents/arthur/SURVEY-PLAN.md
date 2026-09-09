@@ -7650,3 +7650,50 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   interlane law. Zero notes routed, zero ledger append (loop law 4 —
   append only when routing), zero world mutations, zero uploads, zero
   verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-142)
+
+- survey-142 (2026-09-09, OVERNIGHT FLEET TICK pipeline mode, 8 sibling
+  lanes — HOLD tick, cheap lawful hold verification, no slice judged;
+  FIFTY-THIRD quiet hold, FOURTH quiet tick at the 317 epoch): selection
+  law run fresh and INDEPENDENTLY: severity backlog EMPTY — no
+  `## SHARD EXECUTION` heading in IMPROVE-PLAN (grep count 0), not-yet-
+  re-judged markers 0, STATE-OPEN rows 0, improve parked verbatim "Open
+  improve-own work remains NONE; HOLD stands"; author census last 30 =
+  homunculuslabs only (no non-fleet authors); no SURVEY CANDIDATES open
+  survey-routed rows. Arrival slice NONE owed — census 317 via
+  next-live-census.ts (/tmp/survey142-census.json, 210371B, md5
+  5ced60a4) BYTE-IDENTICAL to the s138/s139/s140/s141 baseline: 0
+  arrivals / 0 departures / 0 lib flips / 0 pos moves across all 317
+  ids (set-diff run explicitly, not inferred from md5 alone), lights
+  38, lib-bearing 279, 0 dup ids; never-judged pool ZERO by set algebra
+  (s119 fully-judged 313-subset + borromean s124 + brachistochrone s130
+  + galtonboard s138, census byte-stable). Native-debt marks re-counted
+  fresh THIS tick on this plan, line-count method: sierpinski PAID
+  (70), hypar PAID s76 (48 — +2 vs s141's 46: the s141 block itself
+  carries the token on two wrapped lines, line-wrap self-growth class,
+  disposition unchanged), ne-lane-002 corroborated + routed s76 (40),
+  fifthbench struct-owned decode debt (68), wayside-0030 native dissent
+  on the family-closure line (47) — each exactly the self-growth delta
+  vs s141's recorded counts, dispositions unchanged. No judging
+  attempted (nothing owed), no opportunistic-debt law fires (read-only
+  hold, zero vision calls). Two terminal parser blocks hit on inline
+  grep-loop payloads this tick — both recovered via the sanctioned
+  saved-script bash path, zero re-inline retries. Expected next work:
+  none owed — next arrival-gated slice when a census arrival lands
+  (s138 precedent). Gate: ALL PASS, real exit 0 FIRST TRY at c08ee7a6
+  (GATE_EXIT:0 captured in tick tool output); HEAD static through
+  gate+census+selection+append (epoch re-gate before commit if HEAD
+  advances). Append chassis asserted PRE (survey surfaces clean ==
+  HEAD byte-equal; tag survey-142 0/0/0 across SURVEY-PLAN /
+  IMPROVE-PLAN / IMPROVEMENTS.md + git log --all -S; s141 heading
+  unique 1 and last; EOF = s141 block tail) + POST (insert-only at
+  EOF, new heading exactly once, EOF = new block tail, growth == one
+  block). Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill/city/carousel/moon-moth domains, HERO-ASSET plan,
+  cabin-overhaul + carousel-horse-prototype dirs, client/server
+  sources, debug-bower scripts, fleet shell scripts) — zero survey
+  paths, zero staging contact, observer read-only per interlane law.
+  Zero notes routed, zero ledger append (loop law 4 — append only when
+  routing), zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use (D+0, E+0).
