@@ -7279,3 +7279,55 @@ the charcoal rail; the brass bead stays the only light.
 
 NEXT: 127 — build slot (127%3==1): next commission from the queue (re-derive
 fresh; R10 round continuing per form-ledger gaps).
+
+## struct-127 (2026-09-09): R10-20 THE PEAUCELLIER INVERTOR — commission derived, concept contract recorded, BUILD DEFERRED (run budget)
+
+Cadence 127%3==1 BUILD slot. Shard empty fresh (SHARD EXECUTION heading
+absent; all 14 nx-struct rows EXECUTED — grep this tick). Refine pool empty
+fresh (clothoid DONE at struct-126). Gate ALL PASS real exit 0 tick-start
+5f9fc395 + RE-GATED real exit 0 at mid-tick HEAD 4c1baa2d (sweep-171 +
+survey-152/153 observer advances absorbed).
+
+FORM-LEDGER GAP (fresh grep): peaucellier/inversor/linkage/lipkin/
+straight-line-machine = 0 real hits across STRUCTURES-PLAN.md +
+IMPROVE-PLAN.md (2 incidental "kinematics" prose lines only; tractrix
+pseudosphere standing is a different family). Missing family = LINKAGE /
+STRAIGHT-LINE-MACHINE.
+
+SITING DERIVED FROM FRESH CENSUS (318 entities this tick): the S
+mathematics walk (az≈184) runs lorenz r140, chladni r150, voronoi r160,
+[20m HOLE], zeno r180, borromean r190, brachistochrone r196, galton r210,
+clothoid r220. Seat az184 r170 restores the 10m cadence.
+
+CONCEPT (one idea): THE MACHINE THAT DRAWS A STRAIGHT LINE. Peaucellier
+1864: seven iron bars between two pivots on one stone tower — a crank
+sweeping a circle through the fixed pivot, a rhombus riding the motion
+out, a tracer that can ONLY travel one exact straight line (the circle's
+inverse, |OB|·|OP| = k²). The sculpture freezes the machine mid-draw, its
+crank circle drawn as a front-layer arc, and the product — one long dark
+straight rail on two slender stands — passing through the web, one brass
+bead at the point of contact (glow_pc_1, struct-82 dusk lineage).
+Three-material law (struct-126): stone / iron web / 0.60x line rail +
+brass bead. Folly class, no walk owed. Face-on yaw-pi family seating,
+form-CENTER center-corrected.
+
+MATH (derived + verified): D=R=1.829, L=3.422, ℓ=2.478, k²=L²−ℓ²=5.568;
+traced line y = O_y − k²/(2R) = 2.428; frozen crank θ=55° → B=(1.498,
+1.070), P=(0.795, 2.428), U=(3.237, 2.836), V=(−0.947, 0.660); |OU|=|OV|=L,
+|UB|=|VB|=|UP|=|VP|=ℓ, |AB|=R all exact.
+
+DEFERRED CONTRACT (next struct-127-window tick, run-budget fail-closed
+per struct-121 precedent): complete mkv3-peaucellier.ts (STUB ON DISK,
+incomplete — TDZ D-before-use + truncated bar list; finish seven bars,
+tower/jib frame, rail+stands, bead, arc, envelope/glow/NaN laws, texMat
+lanes), rebuild ×2 deterministic, decode audit, review-render + judge
+native-first, terrain preflight, fresh-census SAT/rim scan (law 1.4 solid
+/ 4.0 film / rim 170), hash-gated placer, upload/spawn nx-struct-
+peaucellier az184 r170 yaw pi, PLACED_VERIFIED + idempotent rerun,
+census 318→319. Do NOT trust the stub as-is.
+
+INCIDENT DISCLOSED: write_file on STRUCTURES-PLAN.md REPLACED the whole
+7280-line plan with the concept block (7279 lines deleted); caught
+immediately via wc/git diff, restored byte-exact from HEAD (file was
+clean at tick start — zero data loss, clean diff verified post-restore).
+Next plan write must be APPEND-ONLY (cat >> / patch), never write_file.
