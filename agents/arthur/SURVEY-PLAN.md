@@ -6048,3 +6048,64 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   world mutations, zero uploads, zero verbs, zero comp edits,
   zero ledger append (loop law 4 — nothing routed), zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-113)
+
+- survey-113 (2026-09-08 20:12 EDT, OVERNIGHT FLEET TICK (pipeline mode,
+  8 sibling lanes) — ARRIVAL slice: struct-114's deferred voronoi
+  placement LANDED (HEAD ecd059c6 "PLACED_VERIFIED census 312->313"),
+  survey owes the independent first read per s94 chladni precedent;
+  NATIVE 2/2 judgment calls, ZERO 1210 flaps, ZERO ZAI fallback; 18m
+  gameplay primary + night bead-contract from fresh live store bytes
+  HTTP 200 curl UA (16560B) on the exact census-113 lib
+  store/00b94c926392cece = struct-114's pinned build sha; served-sha256
+  93b669492f193980 = DRACO re-encode transform struct-104 class;
+  DRACO chassis decode: 5.36x6.40x3.82 envelope, 14 nodes, 13 draw
+  meshes, named nodes voronoi_0/voronoi_1 + 11 glow beads — matches
+  owner's bead law 11/11). Selection law run fresh and INDEPENDENTLY:
+  severity backlog EMPTY (no SHARD EXECUTION section in IMPROVE-PLAN —
+  grep count 0 exit 1, un-piped; sharding directive routes rows by
+  entity prefix to struct/dress/approach/waysign/improve, none survey;
+  IMPROVE-PLAN state block reads "Open improve-own work remains NONE;
+  HOLD stands" — improve parked at improve-71 fleet STOP, 48/48
+  terminal); census diff vs /tmp/survey112-census.json = exactly ONE
+  arrival nx-struct-voronoi @ (-11.16,-0.0464,159.61) yaw 0, tuple
+  ledger-exact vs struct-114, 0 departures, 0 flips on
+  id/pos/yaw/scale/lib/kind/color/intensity/range/comp, lights 38;
+  never-judged pool = that arrival (312-subset fully judged per
+  s82/s83 twice-independent derivation + s84 tesseract + s89 lorenz +
+  s94 chladni CLEANs). VERDICT: NX-STRUCT-VORONOI CLEAN-with-margin —
+  gameplay 5/5 PASS NATIVE (IDENTITY: fractured split-boulder read,
+  deliberate voronoi cell gaps with coherent facet shading, not
+  rubble; SILHOUETTE: one continuous tapered bell form, crown notch
+  reads intentional split peak, all edges crisp; INTEGRITY: zero
+  floats against sky, every wedge in contact, through-gap at base
+  x478-512 y455-498 widest opening but reads intentional; three amber
+  specks x414-428 y190-203 / x446-459 y281-294 / x535-548 y234-247
+  sit flush on faces = glow beads, not debris; GROUNDING: flat base
+  seated, hard directional contact shadow x233-340 y464-496; margin:
+  right base corner x500-640 y490-505 lacks contact darkening —
+  watch-tier only; TECH: no z-fight/seams/stretched triangles). Night
+  bead contract 4/4 PASS NATIVE (exactly 4 warm points = 3 prominent
+  (418,198)/(543,242)/(455,286) + 1 dim edge (333,319), matching
+  struct-114's pinned contract (418,198)/(542,241)/(453,287)/(331,321)
+  at pixel precision; all crisp hard-edged points, zero bloom/halo/
+  spill; split silhouette faintly readable against navy sky incl.
+  crown notch + crack; frame-wide zero stray warm px). CORROBORATES
+  struct-114's own native night PASS — zero dissent, no new defect
+  class. Routing: ZERO notes routed (struct owns disposition; s84/s89/
+  s94 corroborating-first-read-clean precedent — record lives here,
+  not in the owner's plan); ZERO ledger append (loop law 4 — append
+  only when routing). Grep-verified survey-113 pre-existing 0/0/0
+  across SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS pre-write; ledger
+  max exact-entry survey-79 re-derived numerically immediately
+  pre-write (holds append nothing — correct; tag = plan-sequence
+  survey-112 + 1, collision-free). Evidence: /tmp/survey113-voronoi/
+  served.glb + views/ (s84/s89/s94 ephemeral-evidence precedent).
+  Census 312->313: new baseline /tmp/survey113-census.json (313).
+  Gate: ALL PASS 99 PASS lines, real exit 0 at ecd059c6 (struct-114 at
+  HEAD; foreign working-tree dirt = sibling lanes in flight, lane
+  files clean, zero staging contact). Verdicts 0 confirmed / 1
+  clean-with-margin / 0 dropped. Zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero ledger append, zero shared-budget
+  use (D+0, E+0).
