@@ -7948,3 +7948,101 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   zero ledger append (loop law 4 — append only when routing), zero
   world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-148)
+
+- survey-148 (2026-09-09, OVERNIGHT FLEET TICK pipeline mode, 8 sibling
+  lanes — ARRIVAL-GATED SLICE, fourth of the arrival-gated era: census
+  epoch MOVED 317->318, ONE arrival judged): MID-TICK EPOCH EVENT —
+  first census (317, byte-identical s138-s147 baseline, set-diff
+  0/0/0/0/0/0) read quiet; a stale-HOLD block was drafted and
+  REVERTED (git checkout, plan byte-equal to HEAD re-verified) when
+  HEAD advanced 2da835e3->76250b52 mid-tick: struct-125 executed the
+  deferred CLOTHOID contract and PLACED nx-struct-clothoid (ledger:
+  census 317->318). RE-CENSUS LIVE (live-set law): 318 entities
+  (/tmp/survey148-census2.json, 211019B, md5 ffccfdb4), explicit
+  set-diff vs first census — arrivals = ONE nx-struct-clothoid pos
+  [-13.7414242, -0.0009827, 219.3540911] yaw pi lib
+  store/4843ef8ae7093365.glb scale 1 comp {}, departures 0, lib flips
+  0, pos/yaw/comp moves 0 across all 317 shared ids, lights 38,
+  thing 280, 0 dup ids — arrival tuple EXACTLY matches struct-125's
+  PLACED_VERIFIED ledger line, classified struct-domain work-in-flight
+  committed (not in-flight — same commit 76250b52). Selection law
+  fresh: SHARD heading 0, NYRJ 0, STATE-OPEN 0, pending-survey 0,
+  improve parked "HOLD stands" (sed 1170-1180 re-read), sole author
+  homunculuslabs in 30. Arrival judged per s124/s130/s138 precedent.
+  FETCH: curl UA HTTP 200 105048B from /library/store/4843ef8ae7093365
+  (served sha16 c2ae0727e8f151fa; lib 4843ef8ae7093365 = upload pin;
+  served != upload is the struct-104 DRACO re-encode law, normal
+  transform). CHASSIS: review-model-draco.ts 8 views exit 0;
+  envelope 3.91x4.60x0.72 y[0..4.60] EXACTLY matching struct-124's
+  build record; 4 nodes / 3 draw meshes, named [clothoid_0,
+  clothoid_1, glow_cl_1] — KEEP-node contract (brass bead glow_cl_1)
+  named-node-verified from SERVED bytes; bbox not origin-centered
+  (pitfall-10) consistent with struct-125's form-center correction
+  (CX +1.605 CZ -0.11). JUDGE: NATIVE — gameplay + night first try;
+  front hit ONE 1210 flap, ONE retry succeeded (loop law: retry then
+  disclosed fallback — no fallback needed, 3/3 frames native, zero
+  ZAI calls). Gameplay 18m: identity STRONG PASS (straight
+  rise->arc->tightening coil unambiguous, turns open not blobbed);
+  silhouette coherent, nothing floating/detached/missing; brass
+  bead reads as marginal-but-genuine warm point (hue contrast).
+  Night: bead PASS as quiet distinct warm disc — no glare/bloom/
+  detached orbs, zero leak onto rail/stone (innermost turn adjacent
+  to bead stays dark), silhouette traceable low-contrast. Front:
+  straight->spiral transition CLEAN (no kinks/breaks, curvature
+  smooth to terminus); bead SEATED not floating (nested at
+  mast/terminus junction); ZERO geometric flaws (no z-fighting at
+  mast crossings, rail enters socket flush, no stray faces/holes);
+  terminus tie reads intentional. ONE 18m finding reproduced
+  INDEPENDENTLY: mast + struts share rail tone (zero tonal
+  separation within ironwork; coil fuses with mast at crossings) —
+  grep-before-append CONFIRMED PRE-OWNED: STRUCTURES-PLAN.md:7223-7225
+  names this exact deficit as the struct-126 refinement subject
+  (fix: mast half-step darker, one material change), so NO note
+  routed (never duplicate an open note), no IMPROVE-PLAN candidate
+  row (object already queued in owning lane's NEXT). VERDICT:
+  nx-struct-clothoid CLEAN (corroborates struct-125's own
+  night-NATIVE 3/3 + gameplay 3/4 with the one FAIL being exactly
+  the pre-owned material-story item) — settles the arrival with
+  zero new debt. Native-debt marks re-counted fresh THIS tick by
+  the recorded case-sensitive LINE-COUNT method: sierpinski PAID
+  (76), hypar PAID s76 (54), ne-lane-002 corroborated + routed s76
+  (46), fifthbench struct-owned decode debt (74), wayside-0030
+  native dissent on the family-closure line (53) — each exactly +1
+  vs s147's recorded counts (self-growth class), dispositions
+  unchanged; TWO instrument self-catches disclosed and resolved
+  pre-record: (1) first native-debt recount used grep -o
+  occurrence-count (wrong instrument, inflated 84/57/49/74/53) —
+  s138 block names the recorded method as line-count, re-run
+  correct; (2) first gate call piped through tail (laundered
+  exit) — re-run un-piped REAL_EXIT:0. Gate ALL PASS real exit 0
+  at 2da835e3, re-run ALL PASS real exit 0 at 76250b52 after
+  the first epoch advance, AND re-run ALL PASS real exit 0 at
+  ae4166c9 after a SECOND epoch advance (sweep-168 sibling
+  observer folded the same clothoid arrival into its census
+  baseline 317->318, own files + its own ledger append only,
+  zero survey-path contact; un-piped all three times; ledger
+  law 2370765, register 0 OPEN). Expected next work: none owed — next
+  arrival-gated slice when a census arrival lands (s138
+  precedent). Append chassis asserted PRE 5/5 + POST
+  (insert-only at EOF, new heading exactly once, EOF = new block
+  tail, growth == exactly one block); one earlier chassis POST3
+  assert self-bug (un-normalized EOF-tail literal, s145/s147
+  precedent class) failed CLOSED, repaired normalized, write
+  verified by independent un-piped verifier (pre-region
+  byte-exact vs HEAD + separator, git numstat +54/-0 insert-only)
+  — then REVERTED whole when the stale-HOLD block was overtaken
+  by the epoch event; this block re-appended fresh on the
+  current-state facts. One parser-blocked inline payload
+  recovered via the sanctioned saved-script bash path, zero
+  re-inline retries. Foreign working-tree dirt at read = sibling
+  lanes in flight (windmill overhaul doc, cabin-overhaul,
+  carousel-horse-prototype, client/server sources, debug-bower
+  scripts, core-paths GLB + review json, HERO-ASSET plan,
+  next-place-carousel) — zero survey paths, zero staging contact,
+  observer read-only per interlane law. New census baseline
+  /tmp/survey148-census2.json (318). Zero notes routed (CLEAN
+  verdict + pre-owned finding), zero ledger append (loop law 4 —
+  append only when routing), zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
