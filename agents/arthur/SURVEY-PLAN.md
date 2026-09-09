@@ -7799,3 +7799,52 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   Zero notes routed, zero ledger append (loop law 4 — append only
   when routing), zero world mutations, zero uploads, zero verbs,
   zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-145)
+
+- survey-145 (2026-09-09, OVERNIGHT FLEET TICK pipeline mode, 8 sibling
+  lanes — HOLD tick, cheap lawful hold verification, no slice judged;
+  FIFTY-SIXTH quiet hold, SEVENTH quiet tick at the 317 epoch): selection
+  law run fresh and INDEPENDENTLY: severity backlog EMPTY — no
+  `## SHARD EXECUTION` heading in IMPROVE-PLAN (grep count 0),
+  not-yet-re-judged markers 0, STATE-OPEN rows 0, pending-survey
+  markers 0, improve parked verbatim "Open improve-own work remains
+  NONE; HOLD stands" (line ~1174 region re-read this tick); author
+  census last 30 = homunculuslabs only (no non-fleet authors).
+  Arrival slice NONE owed — census 317 via next-live-census.ts
+  (/tmp/survey145-census.json, 210371B, md5 5ced60a4) BYTE-IDENTICAL
+  to the s138-s144 baseline: explicit set-diff run via
+  /tmp/survey145-census-diff.py — 0 arrivals / 0 departures / 0 lib
+  flips / 0 pos moves / 0 yaw moves / 0 comp changes across all 317
+  shared ids (not inferred from md5 alone), lights 38, thing 279,
+  0 dup ids; census epoch arithmetic re-verified fresh on the /tmp
+  census files themselves (s119 314, s124 315, s130 316, s138 317,
+  s142-s145 317 — one arrival per epoch step, chain monotone true);
+  never-judged pool ZERO by set algebra (all epoch arrivals judged:
+  borromean s124, brachistochrone s130, galtonboard s138; marker
+  ids present in live census). Native-debt marks re-counted fresh
+  THIS tick on this plan, grep -c line-count method: sierpinski
+  PAID (73), hypar PAID s76 (51), ne-lane-002 corroborated + routed
+  s76 (43), fifthbench struct-owned decode debt (71), wayside-0030
+  native dissent on the family-closure line (50) — each exactly +1
+  vs s144's recorded counts (self-growth class), dispositions
+  unchanged. No judging attempted (nothing owed), no
+  opportunistic-debt law fires (read-only hold, zero vision calls;
+  dispositions PAID / routed / struct-owned / conditional-revisit —
+  none demand survey action). Gate ALL PASS real exit 0 first-try
+  at 814b78d2 (survey-144, own prior hold; 99 PASS / 0 FAIL).
+  Expected next work: none owed — next arrival-gated slice when a
+  census arrival lands (s138 precedent). Append chassis asserted
+  PRE (SURVEY-PLAN clean == HEAD byte-equal; tag survey-145 0/0/0
+  across SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS.md + git log
+  --all; s144 heading unique 1 and last; EOF = s144 block tail) +
+  POST (insert-only at EOF, new heading exactly once, EOF = new
+  block tail, growth == exactly one block). Foreign working-tree
+  dirt at read = sibling lanes in flight (windmill overhaul doc,
+  cabin-overhaul, carousel-horse-prototype, moon-moth, client/server
+  sources, debug-bower scripts, core-paths GLB + review json,
+  HERO-ASSET plan, next-place-carousel) — zero survey paths, zero
+  staging contact, observer read-only per interlane law. Zero notes
+  routed, zero ledger append (loop law 4 — append only when
+  routing), zero world mutations, zero uploads, zero verbs, zero
+  comp edits, zero shared-budget use (D+0, E+0).
