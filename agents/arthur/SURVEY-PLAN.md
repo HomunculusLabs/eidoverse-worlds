@@ -8809,3 +8809,43 @@ slice when a census arrival or lib flip lands (s138/s148/s150/s163
 precedent). Zero ledger append (loop law 4), zero world mutations,
 zero uploads, zero verbs, zero comp edits, zero shared-budget use
 (D+0, E+0).
+
+## Judged index (survey-166)
+
+HOLD — 73rd quiet hold, second at the fully-quiet 319 epoch, debt pool
+EMPTY (s165 state re-verified fresh, not assumed). Census 319 == 319
+(281 thing + 38 light implied by baseline parity; 0 dup), raw fetch
+HTTP 200 94432 B md5 8e89b3da — parent+tris schema shape (s164 fetch
+class; sweep-176 same-epoch A/B byte-identical corroborated). Set-diff
+vs committed sweep-175 baseline agents/arthur/reviews/
+sweep-census-baseline.json (319 ents, sha16 b52c0538 lineage): 0
+arrivals / 0 departures / 0 lib flips / 0 pos / 0 yaw / 0 scale /
+0 bbox / 0 comp across all 319 shared ids — world byte-quiet since
+struct-129/s163/sweep-175. All 10 struct markers LIVE re-verified in
+THIS census (borromean, brachistochrone, galtonboard, clothoid,
+lemniscateseat, peaucellier, zeno, voronoi, chladni, lorenz).
+Selection law fresh: SHARD EXECUTION heading absent (grep 0);
+not-yet-re-judged 0; STATE-OPEN 0; improve era parked (round-2
+terminal, SURVEY CANDIDATES intake heading last carried survey-78
+sub-section, rows annotated in place, no OPEN rows). Never-judged
+pool ZERO by set algebra (pool only grows via arrivals; arrivals=0).
+Native-debt pool: survey-executable items EMPTY — peaucellier RETIRED
+s164 (native corroborated ZAI CLEAN); fifthbench = struct-owned decode
+debt; wayside-0030 = native dissent on the family-closure line
+(owner-lane record); survey-62 hall/inn = owner-dispositioned — owning
+lanes' to pay, not survey's to execute. No slice judged (pools empty,
+no debt owed): 0 confirmed / 0 clean / 0 dropped, 0 notes routed,
+0 vision calls (native-vs-fallback N/A). Gate ALL PASS real exit 0
+first-try un-piped at tick-start HEAD 5ff98d45 (sweep-176 at HEAD,
+ledger law EXACT 2370768); pre-commit re-gate before commit. Tag from
+ledger max fresh: survey tail [survey-79], s151-s165 no-append per
+loop law 4; no routing this tick -> no append, plan-block sequence
+166. Foreign working-tree dirt at read = sibling lanes in flight
+(windmill overhaul, cabin-overhaul, carousel-horse-prototype,
+client/server sources, debug-bower scripts, core-paths GLB + review
+json, HERO-ASSET plan, next-place-carousel) — zero survey paths, zero
+staging contact, observer read-only per interlane law. Expected next
+work: arrival-gated (s138/s148/s150/s163 precedent); next slice when
+a census arrival or lib flip lands. Zero ledger append (loop law 4),
+zero world mutations, zero uploads, zero verbs, zero comp edits,
+zero shared-budget use (D+0, E+0).
