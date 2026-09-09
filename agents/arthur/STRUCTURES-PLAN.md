@@ -7225,3 +7225,57 @@ NEXT: 126 — REFINEMENT tick (126%3==0): subject nx-struct-clothoid
 half-step darker, one material change, no geometry touch); full
 re-place discipline at exact current pose (comp bag empty — no comps to
 reapply), post-place tuple verify, idempotent refusal, census 318 stable.
+
+
+## struct-126 (2026-09-09): REFINEMENT — nx-struct-clothoid trestle material split ACCEPTED + re-placed
+
+Cadence 126%3==0 REFINEMENT slot; refine pool = nx-struct-clothoid (the
+struct-125 MATERIAL STORY FAIL). Subject picked by the seeded named fix, not
+convenience. Gate ALL PASS real exit 0 tick-start 76250b52 + pre-mutation
+re-gate b05adf82 (sweep-169 sibling advance absorbed). Shard empty fresh
+(no SHARD EXECUTION heading, 0 OPEN nx-struct rows).
+
+ITERATION (hero discipline, one defect -> smallest source change):
+- Baseline: before-bytes captured FIRST (polish-271 law) to reviews/
+  struct126-clothoid-refine/before/ sha 4843ef8ae7093365 (pinned = live lib).
+- Defect -> source: trestle family (mast + 3 struts + stem + terminus catch)
+  moved from cloth_iron to new cloth_trestle texMat lane — ONE variable
+  (luminance), same rough/scale/weights/cell structure, own seed. Nodes 3->4.
+- Build bug caught by decode RED BEFORE any render: first dim() scaled the
+  PACKED hex int (channel bleed -> cyan tones); fixed to per-channel dim.
+- Candidate v1 (0.75x): decode ALL PASS exit 0 (trestle = exact 0.75x iron
+  tone set, vertex multiset 22223 byte-identical across the split, union
+  bounds exact, stone/iron textures palette-identical) -> NATIVE gameplay
+  18m REJECTED: separation reads as same-iron shading, two-part not
+  three-part story; no new defects (mast contrast safe on sky+ground).
+- Candidate v2 (0.60x, same slate hue — bead owns warmth): deterministic x2
+  sha 120448255ce6719306ca9282e78958c755a97b80443d6ab9373ae5e5cb9d913a;
+  decode ALL PASS exit 0 identical laws; judged NATIVE 3/3: gameplay 18m
+  PASS (three-material read clean: stone / charcoal rail / near-black mast,
+  no vanishing, no banding, no seams), night PASS (bead sole quiet warm
+  point, silhouette legible, mast pinned by bead), front PASS (straight
+  rise into tightening coil reads instantly; zero structural defects;
+  margin noted: rail/mast tonal separation modest at coil crossings).
+  ACCEPTED.
+
+RE-PLACE (same id, EXACT struct-125 pose, remove->spawn artwalk-33 law):
+next-place-struct126.ts hash-gated on accepted sha; pre-state gate verified
+standing entity at exact tuple with OLD lib; SAT preflight self-excluded
+fresh 318-entity set worst galtonboard +9.13; upload store/120448255ce67193;
+verbs remove+spawn paced 700ms; PLACED_VERIFIED pos [-13.7414,-0.0010,
+219.3541] yaw 3.1416 lib store/120448255ce67193.glb comp {} census 318.
+Idempotent rerun ALREADY_VERIFIED zero verbs exit 0; independent live
+read-back re-confirmed exact tuple + lib. Comp bag {} — nothing to reapply
+(comp-wipe law: verified comp {} post-place).
+
+VERDICT: material-story defect CURED on the 18m evidence that named it;
+geometry byte-identical (decode multiset proof). Refine pool: clothoid now
+internally judged hero-ready on this axis — marked DONE; remaining standing
+structs without hero-ready marks: none new (pool was clothoid-only).
+Eye-gate packet already delivered at struct-125 (standing); this change is
+within that packet's subject — Bill should eye-check the SOUTH math walk
+terminus at night: the mast now reads as its own near-black trestle behind
+the charcoal rail; the brass bead stays the only light.
+
+NEXT: 127 — build slot (127%3==1): next commission from the queue (re-derive
+fresh; R10 round continuing per form-ledger gaps).

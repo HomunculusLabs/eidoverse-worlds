@@ -33,7 +33,13 @@
 //   topping out above the bead; rail base dead-center in its stone socket.
 // - glow census exactly 1 KEEP (glow_cl_1, the bead — struct-82 dusk lineage);
 // - envelope/NaN laws; texMat lanes (struct-38 law: no plain materials);
-// - node census 3 post-merge (stone bucket + iron bucket + glow KEEP).
+// - node census: struct-124 shipped 3 (stone+iron+glow); struct-126 REFINE
+//   splits the trestle family (mast+struts+stem+catch) into a darker
+//   cloth_trestle lane => 4 buckets. The named one-material fix for the
+//   struct-125 MATERIAL STORY FAIL (mast/struts share rail tone at 18m):
+//   trestle = 0.75x each cloth_iron channel, SAME rough/scale/weights/cell
+//   structure (one variable changes: luminance). Rail keeps cloth_iron;
+//   geometry untouched.
 // Folly class: no entry advertised, no walk owed (zeno..galton precedent).
 // Static. Fully deterministic (no RNG outside texMat seeds).
 import * as THREE from "three";
@@ -155,6 +161,21 @@ const apices: Array<{ t: number; y: number; r: number }> = [];
 // ---- materials (struct-38 law: texMat lanes; emissive via MeshStandard, struct-82 lineage) -----------
 const stoneTex = texMat("cloth_stone", [0x6f6a60, 0x777166, 0x67625a], { rough: 0.95, scale: 2, weights: [3, 1, 1], seed: 8151 });
 const ironTex = texMat("cloth_iron", [0x4a525c, 0x3f464f, 0x565e69], { rough: 0.5, scale: 1, weights: [1, 1, 1], cell: 12, seed: 8152 });
+// struct-126 REFINE — trestle lane: 0.60x each cloth_iron CHANNEL (one
+// variable: luminance), same rough/scale/weights/cell structure, own seed.
+// The named fix for the struct-125 MATERIAL STORY FAIL at 18m: the trestle
+// (mast+struts+stem+catch) reads as its own darker structural member family
+// behind the rail, restoring the three-part story (stone / iron / trestle+bead).
+// 0.75x was built first and REJECTED by native falsification (still read as
+// same-iron shading at 18m) — 0.60x is the corrected step. Same slate hue:
+// the brass bead owns warmth, a warm trestle would muddy the bead story.
+// NOTE: dim each channel SEPARATELY — scaling the packed hex integer bleeds
+// across channel boundaries (decode RED caught it: cyan tones, not darker slate).
+const dimCh = (c: number) =>
+    (Math.round(((c >> 16) & 255) * 0.60) << 16) |
+    (Math.round(((c >> 8) & 255) * 0.60) << 8) |
+    Math.round((c & 255) * 0.60);
+const trestleTex = texMat("cloth_trestle", [dimCh(0x4a525c), dimCh(0x3f464f), dimCh(0x565e69)], { rough: 0.5, scale: 1, weights: [1, 1, 1], cell: 12, seed: 8153 });
 const brassGlow = new THREE.MeshStandardMaterial({ color: 0xa8823f, roughness: 0.45, metalness: 0.75 });
 (brassGlow as any).emissive = new THREE.Color(0x9a7030);
 (brassGlow as any).emissiveIntensity = 0.85; // dusk lineage (struct-82 law)
@@ -172,7 +193,7 @@ const glowMeshes: THREE.Mesh[] = [];
 // ---- iron: mast through the coil axis (behind the plane) --------------------------------------------
 {
     const topY = Y_LIMIT + 0.25;
-    const mast = new THREE.Mesh(new THREE.CylinderGeometry(MAST_R, MAST_R, topY - PLINTH_H, 10), ironTex);
+    const mast = new THREE.Mesh(new THREE.CylinderGeometry(MAST_R, MAST_R, topY - PLINTH_H, 10), trestleTex);
     mast.position.set(X_LIMIT, (PLINTH_H + topY) / 2, Z_MAST);
     g.add(mast);
 }
@@ -186,7 +207,7 @@ const strutYs: number[] = [];
     for (const y of strutYs) {
         // embeds THROUGH the mast body (starts behind its back face) into the rail tube
         const z0 = Z_MAST - 0.08, z1 = 0.02;                 // through mast center, inside rail tube
-        const strut = new THREE.Mesh(new THREE.BoxGeometry(0.09, 0.09, z1 - z0), ironTex);
+        const strut = new THREE.Mesh(new THREE.BoxGeometry(0.09, 0.09, z1 - z0), trestleTex);
         strut.position.set(X_LIMIT, y, (z0 + z1) / 2);
         g.add(strut);
         if (z0 > Z_MAST + 1e-9) throw Error("strut law broke: strut does not reach mast centerline");
@@ -198,7 +219,7 @@ const strutYs: number[] = [];
 
 // ---- iron: stem + THE BEAD at the limit point --------------------------------------------------------
 {
-    const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.028, 0.028, -Z_MAST, 8), ironTex);
+    const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.028, 0.028, -Z_MAST, 8), trestleTex);
     stem.rotation.x = Math.PI / 2;
     stem.position.set(X_LIMIT, Y_LIMIT, Z_MAST / 2);
     g.add(stem);
@@ -229,7 +250,7 @@ const strutYs: number[] = [];
     const end = pts[pts.length - 1];
     // horizontal bar from mast centerline at the terminus height to the terminus point itself
     const len = Math.hypot(end.x - X_LIMIT, 0 - Z_MAST);
-    const bar = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.07, len), ironTex);
+    const bar = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.07, len), trestleTex);
     bar.position.set((X_LIMIT + end.x) / 2, end.y, Z_MAST / 2);
     bar.rotation.y = Math.atan2(end.x - X_LIMIT, 0 - Z_MAST);
     g.add(bar);
