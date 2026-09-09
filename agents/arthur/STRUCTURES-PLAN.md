@@ -6769,3 +6769,75 @@ stone pillar, three pillars even as a tripod. At the heart of all three,
 one bead of brass: the held center. Take one ring away and the other two
 fall. At dusk the bead is the only light — one quiet point holding the
 whole lock together.
+
+## struct-119 (2026-09-08): R10-17 THE BRACHISTOCHRONE — authored, built,
+## decoded ALL PASS 16/16; judged/sited/placed DEFERRED to 120 (run budget,
+## struct-117 precedent — fail-closed)
+
+Cadence 119%3==2 BUILD tick. Shard empty fresh (only header + nx-town-
+monument rows in grep; none nx-struct). Refine pool empty fresh. Gate
+ALL_PINS_OK 15/15 real exit 0 FIRST TRY (bun, no pipe).
+
+CONCEPT (written before build): the form ledger's missing CYCLOID /
+TAUTOCHRONE family (ledger grep fresh: zero cycloid/brachistochrone/
+tautochrone presence; catenary struct-69 and astroid struct-95 are
+different curve families, standing). ONE IDEA: THE FASTEST PATH IS NOT
+THE STRAIGHT LINE — a teardrop lens of two iron rails from one shared
+brass release bead at the crest: the upper rail straight (the chord),
+the lower rail the EXACT inverted cycloid diving 1.694m below it, both
+ending at the stone finish basin. Twelve time-beads frozen mid-race at
+equal fractions of each rail's OWN descent time (cycloid EXACT t=sqrt
+(R/g)*theta; chord EXACT closed form): the winning line's beads glow
+(5 KEEP glow_brr + release + landing = 7), the losing line's stay dark
+brass. Night: five warm points tracing the dive beneath one dark line,
+one in the basin, one at the crest. Stone: plinth, crest post, dip pier,
+finish drum. Folly class (zeno/voronoi/borromean precedent), static.
+
+BUILD ARC (honest, all caught by law asserts pre-GLB): first draft used
+L=R*THETA — WRONG, x-law is x=R(theta-sin theta); recomputed R from
+R=L/(THETA-sin THETA), THETA=3.8 rad (>pi so the dip sits inside the
+span). Lens law first compared same PARAMETER not same X (cycloid leaves
+the crest vertically) — rewritten as exact x-inversion by bisection.
+Chord bead law first used nearest-sample (2.2mm > 2mm tol) — replaced by
+EXACT point-to-segment (1e-9). REAL DEFECT caught by decode: plain brass
+beads exported material-LESS (glbwrite assigns only textured/emissive
+lanes — struct-38 law violated) rendering glTF-default white; fixed with
+brr_brass texMat lane.
+
+BUILD: sha f678c069e84e51a2a6c1a980f46105f3330f0d3a8aa740237074bacca
+2130312 x2 deterministic (mtime verified). Envelope 8.74x4.02x2.14
+y[0..4.018]. Nodes 10 (stone + iron + brass buckets + 7 KEEP glow_brr).
+NOTE: bbox NOT origin-centered — local x[-0.67..8.07], center offset
++3.70 x (pitfall-10 applies to scan/placer).
+
+DECODE struct119-decode-brachistochrone.ts ALL PASS 16/16 exit 0
+(independent replica, no mk imports): cycloid law from bytes (every iron
+vertex <= RAIL+2mm of replica rails, worst 55.1mm at the tube crown;
+replica covered); race law recomputed 1.550s < 2.052s ratio 0.755; lens
+law dive 1.694m, rails coincide only at endpoints; all 7 glow beads at
+exact law positions <=3mm; all 5 dark beads at exact chord time-fraction
+positions; stone post/pier/drum meet their rails exactly; envelope/grade/
+NaN clean.
+
+RENDERS: review-model.ts 10 views written to reviews/struct119-
+brachistochrone/ on the exact pinned bytes — NOT YET JUDGED (run budget;
+native-first per flap law).
+
+SITING (deferred contract for 120): S mathematics axis az184 r200 — the
+axis extends at its own cadence past borromean r190 (... zeno r180 ->
+borromean r190 -> BRACHISTOCHRONE r200): the race past the rings. Center-
+offset-corrected scan + SAT + terrain + placer + upload/spawn +
+PLACED_VERIFIED + fresh-only rerun + judged (front/gameplay/night) — ALL
+queued for 120 (struct-113/117 deferred-contract precedent).
+
+NEXT: 120%3==0 — execute the deferred contract (renders judged ->
+scan -> SAT -> terrain -> place -> verify).
+
+BILL EYE-CHECK (one, standing once placed): walk the south mathematics
+walk past the rings that cannot come apart — and where the meadow opens
+again, a race stands frozen in iron: one bead at the crest, two rails
+running side by side to the same basin. The straight one keeps to the
+light; the curved one dives deep below it and somehow arrives first.
+Five beads mark its winning clock, glowing faint at dusk; five dark ones
+trail the line that seemed shorter. The stone basin holds one warm bead
+where the winner lands.
