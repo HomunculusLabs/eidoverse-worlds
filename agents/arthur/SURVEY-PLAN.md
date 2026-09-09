@@ -6719,3 +6719,71 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (loop law 4 — append only when routing), zero world mutations,
   zero uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+## Judged index (survey-124)
+
+- survey-124 (2026-09-08 21:5x EDT fresh date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — ARRIVAL-GATED SLICE, first since
+  the hold run: census epoch MOVED 314->315, one arrival judged): census
+  fresh 315 via next-live-census.ts, set-diff vs ALL THREE surviving
+  pinned baselines (/tmp/survey120 + survey122 + survey123 census json,
+  208432B, md5 2c9aad56 each): arrivals = ONE `nx-struct-borromean`,
+  departures 0, field-level flips 0 across all 314 common ids — the
+  s119-derived fully-judged 313-subset stays covered byte-stable, so the
+  never-judged pool = the arrival itself; slice = the arrival (loop law
+  3 arrival-gated, not manufactured). ARRIVAL CLASSIFIED: struct domain =
+  struct-118's deferred-contract placement of struct-117's build (lib
+  store/7e9c334883d25774.glb, pos [-13.2537,-0.0113,189.5372] yaw pi,
+  comp {}, bbox 4.22x4.53x4.60, S mathematics axis az184 r190 extending
+  the 10m cadence past the zeno gates). Interleave honestly named:
+  judged PLACED bytes — lib content-addressed, census 0 flips, so served
+  bytes == struct-118's pre-place pin. FETCH: curl UA HTTP 200 62608B
+  from /library/store/; served DRACO sha256-prefix df7f4326 (upload-pin
+  7e9c3348 — served != upload is the struct-104 DRACO re-encode law,
+  normal transform). CHASSIS: review-model-draco.ts 8 views exit 0;
+  stats 4 nodes / 3 draw meshes / named [borromean_0, borromean_1,
+  glow_br_1] — matches the struct-117/118 decode contract exactly.
+  JUDGE: NATIVE DOWN this tick (1210 x2, one paced 20s retry burned) ->
+  ZAI FALLBACK disclosed, 3 frames (18m gameplay / aerial / top).
+  Gameplay frame read FAIL-ish (2 loops not 3; 2-of-3 pillars + hover
+  watch x465-475 y410-418) — pitfall-11 class COUNT-CLAIMS, probed not
+  believed. AERIAL DISCRIMINATOR: PILLARS=3, plan spacing ~115/227/349
+  deg (120 deg within eyeball error), contacts closed, zero floats ->
+  grounding read overturned (view occlusion). TOP DISCRIMINATOR: RINGS=3
+  distinct superellipse outlines at ~0/+60/-60 deg — the Ballantine-
+  emblem projection, exactly the (1,1,1)-stance signature struct-117's
+  stance law predicts — alternating over/under at every sampled
+  crossing, under-tubes re-emerge matched width, zero gaps/fragments/
+  free ends -> identity read overturned (18m projection merge; both
+  FAIL reads dissolve on the discriminating frames). CORROBORATION:
+  owner's 24/24 byte-level borromean law (9273-vert replica vertex-cloud
+  equality, stance 120/120/120) + struct-118 NATIVE 4/4-3/3-3/3 on the
+  same views this epoch. VERDICT: `nx-struct-borromean` CLEAN (ZAI
+  fallback, corroborative; no native debt owed — final verdict agrees
+  with the owner's same-epoch native PASS, no contradiction survives).
+  Margin notes (not routed): ground cast-shadow outline-thin/gappy at
+  the edges = polish tier, matches the owner's own recorded polish-tier
+  observation; squircle ring profile softens the circular-ring read at
+  18m = deliberate golden-superellipse family identity, kept by owner;
+  gameplay loop-count merge logged as a PROJECTION-ARTIFACT class —
+  future 18m reads of (1,1,1)-stance multi-ring forms lean on top/
+  aerial discriminators first. Selection law fresh: SHARD backlog empty
+  (grep 0 exit 1, un-piped), improve parked improve-71 48/48 terminal,
+  resume = Bill's eye-gates; severity backlog empty (round-1 terminal,
+  survey candidates are intake rows not re-judge debt). Gate: ALL PASS
+  99 PASS lines real exit 0 FIRST TRY at d23a3600 (/tmp/survey124-
+  gate.txt, zero fail-grep hits) + RE-GATE after two mid-tick epoch
+  events classified below (a8c8a051 struct-118 placement commit —
+  corroborates this tick's census arrival tuple-for-tuple; d635c2ef
+  sweep-158 sibling observer — same arrival seen tuple-matched, world
+  315==315 stable at both its epochs, zero survey paths; nothing
+  survey-owned touched by either, no re-derivation owed): ALL PASS 99
+  real exit 0 at d635c2ef (/tmp/survey124-regate.txt, zero fail-grep
+  hits). First append attempt tripped its own PRE HEAD-epoch assert
+  (d23a3600 -> d635c2ef mid-window) — zero damage, chassis gated as
+  designed; this block is the corrected shape. New census baseline
+  /tmp/survey124-census.json (315, md5 b048d886). HEAD static d635c2ef
+  through judge+append (POST-verified). Zero notes routed (CLEAN
+  verdict), zero ledger append (loop law 4 — append only when routing),
+  zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use
+  (D+0, E+0).
