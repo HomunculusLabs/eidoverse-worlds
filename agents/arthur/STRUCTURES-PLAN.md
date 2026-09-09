@@ -6601,3 +6601,38 @@ the length of the last, all converging on a small dark post that carries
 one bead of amber. Walk through them: each stride half as long as the last.
 The bead marks a distance that never quite ends. At dusk, the amber bead is
 the walk's last light, and five quiet lines burn beneath the lintels.
+
+## struct-116 (2026-09-08): REFINEMENT TICK — zeno native re-judge debt PAID
+
+Cadence 116%3==0 refine slot; pool = one standing debt (zeno native
+re-judge, struct-115's disclosed ZAI-fallback judgment). Gate ALL_PINS_OK
+15/15 real exit 0 FIRST TRY (bun, no pipe). Shard empty fresh (no SHARD
+EXECUTION section exists, grep 0; no OPEN nx-struct rows route here).
+
+RE-JUDGE on the exact judged bytes (reviews/struct115-zeno/):
+- front.png NATIVE PASS (native vision up this tick): five gates resolvable,
+  monotonic convergence to one vanishing point, dark stele with single amber
+  bead at top, doorways coaxial dead-center (x~478-480), zero strays/floats/
+  interpenetrations. Native measured per-step apparent-width ratio ~0.65-0.75
+  and correctly noted it is NOT halving — that is the true perspective
+  projection of the design (SPACING halves at z=8/2^k; gate height/width
+  diminish LINEARLY by design, 0.475/0.35 steps); recorded, not a defect.
+- gameplay 18m NATIVE PASS: immediate diminishing-gateway read, three frames
+  confidently countable + two more visible, alignment dead-center on the
+  walking line, terminus dark post reads, no structural defects. Both judges
+  note the amber tie lines are thin/alias-prone at 18m (ZAI polish-tier +
+  native converge) — observation recorded, not a defect class.
+- night.png: native 1210 (flap mid-tick, disclosed) -> ZAI fallback PASS:
+  exactly ONE crisp quiet amber point at the terminus, 4-5 diminishing quiet
+  strips, zero stray warm pixels/spill/wash, silhouette faintly legible.
+
+DEBT STATE: front + gameplay now NATIVE PASS on exact bytes; night
+ZAI-PASS with the one native 1210 disclosed (residual: night remains
+fallback-judged — one cheap native re-judge rides a future refine tick
+opportunistically per flap law). No defect by either judge -> bytes
+unchanged, no re-place owed, comps {} stand. Live pin FRESH this tick:
+nx-struct-zeno pos (-12.55617, -0.04120, 179.46153) yaw 3.1416 lib
+store/78a3e90e458bfb43.glb — exact ledger tuple; census 314.
+
+NEXT: 117%3==0 nominal refine slot but pool EMPTY (debt paid) -> BUILD tick
+(R10-16 form-ledger gap derivation fresh) unless survey routes rows.
