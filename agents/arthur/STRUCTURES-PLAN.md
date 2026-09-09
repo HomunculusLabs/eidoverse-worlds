@@ -7692,3 +7692,104 @@ will not cure it; consider thickened channel walls / merged film+tube
 single-material read. Evidence: reviews/survey176-slice/gyroid/ (gameplay
 + front + served-bytes). Severity: Sev 2 (identity read at distance on an
 otherwise grounded, structurally-true work).
+
+## struct-133 (2026-09-09): R10-23 THE ENNEPER — form-ledger gap built, judged (native + disclosed fallback debt), placed (S-walk r250)
+
+Cadence 133%3==1 BUILD slot. Gate ALL PASS real exit 0 tick-start ef5c9849
+(struct-132 HEAD). Ledger max fresh = 132 -> this tick struct-133. Shard empty
+fresh — verified at ROW level this tick (python row-block scan, not the
+prior 16-line window heuristic): 13 nx-struct rows EXECUTED
+(improve-6/struct-36..46 + approach/improve annotations) + shelltower
+NATIVE-DROPPED survey-1 = 14/14 dispositioned, zero OPEN. Survey intake
+slidingladder note standing (struct-104 cured; superceded row).
+
+FORM-LEDGER GAP (fresh grep): enneper 0/0/0, boy/seifert 0/0/0,
+nephroid/involute 0/0/0 across STRUCTURES-PLAN.md + IMPROVEMENTS.md +
+IMPROVE-PLAN.md (struct-130 close named enneper first). Family =
+CLASSICAL SELF-INTERSECTING MINIMAL SURFACE. S-walk extends: gyroid
+r240 -> ENNEPER r250 (10m cadence).
+
+CONCEPT: THE SURFACE THAT PASSES THROUGH ITSELF, PINNED ON ITS CROSSING
+AXIS. Enneper's 1864 patch on the full disk u^2+v^2 <= 3: two bone sheets
+interpenetrate, the boundary rim passing exactly through both axis poles
+(X(+-sqrt3,0)=(0,0,3), X(0,+-sqrt3)=(0,0,-3)); an iron needle pole-to-pole
+makes the crossing axis visible; brass bead at the umbilic X(0,0) (the
+surface's flat-every-direction heart); iron tube rims the TRUE analytic
+boundary B(t)=(4sqrt3 cos t sin^2 t, 4sqrt3 sin t cos^2 t, 3cos 2t).
+Bone film / iron rim+needle / stone slab / brass heart.
+
+BUILD mkv3-enneper.ts: polar parametric grid 112 sectors x 72 rings +
+center fan = 64,065 verts / 21,355 tris, analytic normals (Xu x Xv).
+Laws asserted in-file: umbilic X(0,0)=0, crossings z=+-3 exact (<1e-12),
+rim curve closed-form match exact, petal span +-8/3. ACCEPTED sha
+ba17a712cbc734bd6e175e09eee6b3ae934a99d652dcbda4a63d8388c0e44263
+village_enneper3.glb deterministic x2 (byte-identical). Nodes 4
+(ep_bone/ep_iron/ep_stone + KEEP glow_ep_1).
+
+DECODE struct133-decode-enneper.ts ALL PASS 25/25 exit 0 (independent
+replica, no mk imports): Gauss-Newton parameter recovery — film law
+0/64,065 verts off (worst residual 0.000000m), disk law 0 outside
+u^2+v^2<=3, crossing law 8 verts/branch at BOTH axis poles, rim verts
+0/2268 off analytic B(t), rim coverage 0/129 arcs missed (worst 0.050),
+needle y 0..6.20 pole-to-pole exact, bead (0,3.14,0) exact + umbilic law,
+slab/grade/origin-center/NaN-0. One audit-side fix disclosed: coverage
+classification initially excluded pole-adjacent rim verts (B(t) passes
+exactly THROUGH both poles where the needle stands) — corrected to
+all-iron union with both directions still proven.
+
+JUDGED: gameplay 18m NATIVE PASS (deliberate axis-organized monument,
+needle pins axis, bead anchors heart, clean grounding; margins: needle
+tip sub-pixel above apex, ribbed-lantern texture read, Enneper-specific
+identity not fully legible from front alone; orphan-shadow finding
+decode-falsified = the thin rim/needle's own fragmented cast shadow).
+night NATIVE PASS (single quiet warm point, no glare, silhouette
+readable; rim low-contrast on navy noted, non-blocking). front: native
+1210 x2 + paced 20s retry burned — ZAI FALLBACK disclosed: NO fatal
+defects (continuous silhouettes, no holes, no detached geometry, shadow
+matches caster); "interior band edges un-hemmed / 20+ nested bands"
+decode-falsified as probe (film is ONE connected disk whose only mesh
+boundary is the rim; "bands" are ring-seam shading). aerial (ZAI): same
+decode-falsification + honest residual — 4-petal plan identity unreadable
+from oblique. top plan view (ZAI): 4-PETAL ROSE CONFIRMED — explicit
+petal count 4 at the diagonals, pinches at compass points, rims
+continuous, needle dot at center. Native front/aerial re-judge debt
+disclosed, carries.
+
+SEAT: struct133-scan-enneper.ts az184 r250..r245 yaw-pi against FRESH
+321 census — r250 LAWFUL direct (worst solid gyroid +4.78 law 1.4, film
+kochgarden +153.52 law 4.0, walk approach-ne-lane-002 +175.69 law 3.0,
+rim 250); ladder blocks r246 (gyroid 0.79). S-walk 10m cadence exact:
+gyroid r240 -> ENNEPER r250. TERRAIN struct133-terrain-enneper.ts at
+FINAL pose (WorldAgent object-form, align-1 yaw transform): 9pt spread
+8.6mm, PY = lowest = -0.013339.
+
+PLACE: next-place-struct133.ts hash-gated (bytes ba17a712... unchanged),
+center-corrected SAT re-run LIVE worst gyroid +4.78 fresh-321, upload
+store/ba17a712cbc734bd (shared budget, single upload), spawn paced 600ms.
+PLACED_VERIFIED nx-struct-enneper pos [-17.4391, -0.0133, 249.3910] yaw
+3.1416 lib store/ba17a712cbc734bd.glb comp {} census 321->322. Idempotent
+rerun REFUSED zero-verbs exit 1 ("already live — fresh only",
+content-anchored). Independent live read-back (curl UA): exact tuple,
+yaw pi exact, scale 1, server bbox 5.8x6.2x5.8 center [0,3.1,0] =
+decode envelope exact. Folly class — no walk owed. Comps {} (glow is
+KEEP glow_ep_1 material inside the GLB) — nothing to reapply.
+
+VERDICT: The Enneper stands — the S mathematics walk now runs lorenz
+r140, chladni r150, voronoi r160, peaucellier r169, zeno r180, borromean
+r190, brachistochrone r196, galton r210, clothoid r220, harmonickiss
+r230, gyroid r240, ENNEPER r250. Bill eye-check: S-walk terminus, 10m
+past the Gyroid — four bone petals crossing through a needle axis, one
+glowing bead at the heart after dark.
+
+Refine pool state: enneper NOT hero-ready (native front/aerial debt +
+ribbed-texture margin = refine candidates); gyroid tube end-caps residual
+standing (struct-131); peaucellier night-frame debt still open (narrowed).
+NEXT: 134 — build slot (134%3==2): next commission (form-ledger gap grep
+fresh; boy/seifert + nephroid/involute still 0/0/0). 135 = refine slot
+(135%3==0): enneper native debt OR gyroid end-caps OR peaucellier night,
+whichever highest deficit.
+
+Files: mkv3-enneper.ts (ignored dir, staged -f), struct133-decode-enneper.ts,
+struct133-scan-enneper.ts, struct133-terrain-enneper.ts,
+next-place-struct133.ts (all tracked); reviews/struct133-enneper/
+(ignored). Plan append-only this tick.
