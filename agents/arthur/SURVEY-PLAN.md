@@ -9097,3 +9097,48 @@ Expected next work: arrival-gated (s138/s148/s150/s163/s168 precedent); next
 slice when a census arrival or lib flip lands. Zero ledger append (loop law
 4), zero world mutations, zero uploads, zero verbs, zero comp edits, zero
 shared-budget use (D+0, E+0).
+
+## Judged index (survey-173)
+
+HOLD - 79th quiet hold, fifth at the fully-quiet 320 epoch (s172 state
+re-verified fresh this tick, not assumed). Census 320 == 320 (282 thing +
+38 light, 0 dup), raw fetch HTTP 200 212248 B, sha256-16
+edb782970e5c006a - byte-identical to the sweep-178/179 fetch class
+(compKeys schema shape; endpoint alternates with the 94710B parent+tris
+shape, both seen s168-s172; content compared on shared fields
+pos/yaw/scale/kind/lib across all 320 shared ids by the survey173
+set-diff). Set-diff vs committed sweep baseline
+agents/arthur/reviews/sweep-census-baseline.json (320 ents, sha16
+5014e49a lineage, sweep-177 arrival-folded): 0 arrivals / 0 departures /
+0 lib flips / 0 pos / 0 yaw / 0 scale / 0 bbox drift across all 320
+shared ids. All 11 struct markers LIVE re-verified in THIS census
+(borromean, brachistochrone, galtonboard, clothoid, lemniscateseat,
+peaucellier, zeno, voronoi, chladni, lorenz, harmonickiss). Selection
+law fresh: SHARD EXECUTION heading absent (grep count 0); STATE-OPEN /
+NOT-YET-RE-JUDGED grep zero matched lines; IMPROVE-PLAN md5 c0f569d0,
+git log last touch survey-78 (d2e5335b), not in working-tree modified
+set - byte-identical to the file s172 regex-audited, so s172's
+disposition classification CARRIES with provenance (residual 30 = 17
+terminal survey-60/61 rows on Bill's overhaul bytes + 5 off-limits
+probe-only Bill's-call rows + 8 survey-63 routed dissent/corroborate
+probes; survey-executable open rows 0). Never-judged pool ZERO by set
+algebra (pool only grows via arrivals; arrivals=0). Native-debt
+survey-executable items EMPTY (peaucellier RETIRED s164; fifthbench
+struct-owned decode debt; wayside-0030 family-closure dissent; survey-62
+hall/inn owner-dispositioned - owning lanes' to pay). No slice judged
+(pools empty, no debt owed): 0 confirmed / 0 clean / 0 dropped, 0 notes
+routed, 0 vision calls (native-vs-fallback N/A). Gate ALL PASS real
+exit 0 first-try un-piped (GATE_EXIT:0 marker) at tick-start HEAD
+137525b2 (99 PASS lines, ledger law EXACT 2370769); pre-commit re-gate
+below. Tag from ledger max fresh: survey tail [survey-79], s151-s172
+no-append per loop law 4; no routing this tick -> no append, plan-block
+sequence 173. Foreign working-tree dirt at read = sibling lanes in
+flight (village-overhaul hall build [local-only, nothing live],
+cabin-overhaul, carousel-horse-prototype, client/server sources,
+debug-bower scripts, core-paths GLB + review json, HERO-ASSET plan,
+next-place-carousel, moon-moth, fleet scripts) - zero survey paths,
+zero staging contact, observer read-only per interlane law. Expected
+next work: arrival-gated (s138/s148/s150/s163/s168 precedent); next
+slice when a census arrival or lib flip lands. Zero ledger append (loop
+law 4), zero world mutations, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0).
