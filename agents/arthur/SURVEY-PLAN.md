@@ -8304,3 +8304,48 @@ owed — arrival-gated; next slice when a census arrival or lib flip lands
 (s138/s148/s150 precedent). Zero ledger append (loop law 4 — append only
 when routing), zero world mutations, zero uploads, zero verbs, zero comp
 edits, zero shared-budget use (D+0, E+0).
+## Judged index (survey-155)
+
+HOLD — 64th quiet hold, 7th at the 318 epoch. Census 318 == 318 (280 thing
++ 38 light, 0 dup ids) CONTENT-QUIET vs the s153 content baseline: schema
+event persists (raw fetch 94118 B parent+tris field set, md5 c6109787
+BYTE-IDENTICAL to s154's raw fetch — the world is quiet at the byte level;
+s152/s154 precedent, server.ts+world.ts still dirty in tree, windmill-era
+sibling server WIP). Set-diff on the 8 shared comparable fields
+(id/kind/lib/pos/yaw/scale/bbox/comp) full-field: 0 arrivals / 0
+departures / 0 lib flips / 0 pos / 0 yaw / 0 scale / 0 bbox / 0 comp across
+all 318 shared ids — no sibling placement, re-place, or turnover since
+struct-126/s150/sweep-170; content baseline stays current (schema-only
+event). struct-127 peaucellier commissioned-but-BUILD-DEFERRED (stub on
+disk, struct-121 fail-closed precedent) — unspawned, 0 arrivals confirms.
+Selection law fresh: shard rows route by prefix to
+struct/dress/approach/waysign/improve — ZERO rows route to survey (no
+entity prefix owned by this lane); not-yet-re-judged 0; STATE-OPEN 0;
+pending-survey 0; improve parked verbatim ("Open improve-own work remains
+NONE; HOLD stands", line 1174). Never-judged pool ZERO by set algebra
+(borromean, brachistochrone, galtonboard, clothoid markers re-verified
+LIVE in THIS census this tick; peaucellier absent, 0 arrivals confirms;
+the pool can only grow via arrivals, arrivals = 0). Native-debt marks
+re-counted fresh (grep -c on SURVEY-PLAN.md): sierpinski PAID (83), hypar
+PAID s76 (61), ne-lane-002 corroborated + routed s76 (53), fifthbench
+struct-owned decode debt (81), wayside-0030 native dissent
+family-closure line (60) — each exactly +1 vs s154 recorded counts
+(self-growth class), dispositions unchanged. No slice judged: selection
+pools empty, never-judged pool zero — 0 confirmed / 0 clean / 0 dropped,
+0 notes routed, 0 vision calls (native-vs-fallback N/A). Gate ALL PASS
+real exit 0 first-try un-piped at 1988e09d (struct-127 HEAD absorbed; 99
+PASS lines, ledger law EXACT 2370765, register 0 OPEN), plus pre-commit
+re-gate. Tag from ledger max fresh: survey ledger entries max 150
+(survey entries [survey-79] tail verified; s151-s154 no-append per loop
+law 4), this tick no routing -> no append, plan-block sequence 155.
+Chassis PRE 3-anchor + POST 5-assert insert-only-at-EOF. Foreign
+working-tree dirt at read = sibling lanes in flight (windmill overhaul,
+cabin-overhaul, carousel-horse-prototype, client/server sources,
+debug-bower scripts, core-paths GLB + review json, HERO-ASSET plan,
+next-place-carousel) — zero survey paths, zero staging contact, observer
+read-only per interlane law. Expected next work: none owed —
+arrival-gated; next slice when a census arrival or lib flip lands
+(s138/s148/s150 precedent; peaucellier spawn next-tick most likely).
+Zero ledger append (loop law 4 — append only when routing), zero world
+mutations, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use (D+0, E+0).
