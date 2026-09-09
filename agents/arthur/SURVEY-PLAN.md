@@ -6455,10 +6455,21 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   baseline /tmp/survey119-census.json (314, md5 2c9aad56a260).
   Gate: ALL PASS 99 PASS lines, real exit 0 FIRST TRY at 80edb60a
   (struct-116 at HEAD; foreign working-tree dirt = sibling lanes in
-  flight — windmill/city4/carousel/moon-moth domains, zero survey
-  paths, zero staging contact); no HEAD advance mid-tick through
-  gate+census+judgment+append (git log 80edb60a..HEAD = 0 —
-  verified immediately pre-commit). Verdicts 0 confirmed / 1
-  clean-with-margin / 0 dropped. Zero world mutations, zero
-  uploads, zero verbs, zero comp edits, zero ledger append, zero
-  shared-budget use (D+0, E+0).
+  in flight — windmill/city4/carousel/moon-moth domains, zero survey
+  paths, zero staging contact). EPOCH SELF-CATCH (corrected same
+  tick, survey-119v): the original block claimed "no HEAD advance
+  mid-tick, git log 80edb60a..HEAD = 0 verified pre-commit" — the
+  pre-commit check actually returned 1 and the block had already
+  been committed unread: sweep-155 (1d4203af, 21:12:16, sibling
+  observer sweep lane — IMPROVEMENTS.md + SWEEP-PLAN.md + two
+  sweep155 scripts, zero survey paths, zero live-world
+  materialization, its census 314==314 quiet corroborates this
+  tick's) landed between census and append — normal interleaving
+  per interlane git law, claim-before-evidence class named and
+  retracted. Post-correction re-gate at true state: ALL PASS 99
+  PASS lines, real exit 0 (/tmp/survey119-regate.txt); sweep-155
+  touches zero survey/pinned state (observer files only), so no
+  census/selection re-derivation owed — census-314 world unchanged.
+  Verdicts 0 confirmed / 1 clean-with-margin / 0 dropped. Zero
+  world mutations, zero uploads, zero verbs, zero comp edits, zero
+  ledger append, zero shared-budget use (D+0, E+0).
