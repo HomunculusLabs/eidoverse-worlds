@@ -4372,6 +4372,7 @@ sweep-123: CLEAN SWEEP, steady-state tick. Census 304==304 (266 thing + 38 light
 | sweep-166 | 2026-09-09 | 317==317 fully quiet steady state at all three epochs A/B/C (A/B 20s-paced, C post-verify) vs committed baseline 317 ents / 211135B / sha16 a07d6e627c9e034e: 0 arrivals, 0 departures, 0 drift, 0 lib flips — 279 thing + 38 light; raw /geom sha16 5d86c0190c82fbbe byte-stable across A/B/C (same value as sweep-164/165 — no flip to classify); committed baseline stays current, ZERO churn (comparison-only tick, sweep-161..165 precedent) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 122nd sweep since routing, no escalation due — law keys Sev 1); SAT fresh-live 279 bbox non-light / 236 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 next-walk-core-paths.ts, NW 5/5 @ 0.38 nw-approach1-walk.ts, NE 7/7 @ 0.38 ne-approach2-walk.ts re-run individually after a tool-layer timeout on the first chained run — partial JSON discarded, sweep-12/163 precedent, SW 5/5 @ 0.37 sw-approach3-walk.ts); tier-2 144th cycle per committed sweep-165 pointer row-cottage 6/6 @ 0.3838 (interior-walk-row-cottage.ts) + observatory 6-leg circuit 5/5 @ 0.389 (struct2-walk-observatory.ts chassis), both ALL_PASS real exit 0, per-leg ok counts verified | pins 15/15 ALL_PINS_OK (120th consecutive clean, struct18-fleet-pin-check.ts real exit 0), sweep89-battery 28/28 on fresh census-A bytes, interlane md5 f6254cd0 stable read fresh, ledger law EXACT (canonical tool, base 2370764 re-read fresh pre-append, D+0/E+0), standing gate ALL PASS real exit 0 at tick-start 78138e53 + re-run ALL PASS 99 exit 0 at d21e4f6d (survey-142/143 read-only holds absorbed mid-tick) | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-167 | 2026-09-09 | 317==317 fully quiet steady state at all three epochs A/B/C (A/B 20s-paced, C post-verify) vs committed baseline 317 ents / 211135B / sha16 a07d6e627c9e034e: 0 arrivals, 0 departures, 0 drift, 0 lib flips — 279 thing + 38 light; raw /geom sha16 5d86c0190c82fbbe byte-stable across A/B/C (same value as sweep-164/165/166 — no flip to classify); committed baseline stays current, ZERO churn (comparison-only tick, sweep-161..166 precedent) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 123rd sweep since routing, no escalation due — law keys Sev 1); SAT fresh-live 279 bbox non-light / 236 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 next-walk-core-paths.ts, NW 5/5 @ 0.38 nw-approach1-walk.ts, NE 7/7 @ 0.38 ne-approach2-walk.ts, SW 5/5 @ 0.37 sw-approach3-walk.ts, all run individually this tick — no timeout this wakeup); tier-2 145th cycle per committed sweep-166 pointer hall 8/8 @ 0.360 (interior-walk-hall.ts) + bunkhouse 6/6 @ 0.3803 (interior-walk-bunkhouse.ts), both ALL_PASS real exit 0, per-leg ok counts verified | pins 15/15 ALL_PINS_OK (121st consecutive clean, struct18-fleet-pin-check.ts real exit 0), sweep89-battery 28/28 on fresh census-A bytes, interlane md5 f6254cd0 stable read fresh, ledger law EXACT (canonical tool, base 2370764 re-read fresh pre-append, D+0/E+0), standing gate ALL PASS real exit 0 from repo ROOT at tick-start 814b78d2 (98 PASS lines; first agents/arthur-cwd run tripped the known tex-84 repo-relative existsSync cwd artifact — sweep-121 precedent, disclosed, not a gate failure; no mid-tick HEAD advance this tick, no re-gate owed) | CLEAN SWEEP — R-121 open, known, no escalation due |
 | sweep-168 | 2026-09-09 | ARRIVAL tick, exactly ONE domain-valid arrival: epoch A 317==317 fully quiet vs committed baseline 317 ents / 211135B / sha16 a07d6e627c9e034e (0 arrivals / 0 departures / 0 drift / 0 lib flips on all 317 shared ids; raw sha16 5d86c019 same as sweep-164..167); epoch B (20s-paced) caught the arrival, epoch C settled 318 — nx-struct-clothoid @ (−13.7414, −0.0010, 219.3541) yaw π lib 4843ef8ae7093365 comp {} = struct-125 @ 76250b52 committed mid-tick, live tuple matches its ledger PLACED_VERIFIED line-for-line AND struct-124's committed deferred siting contract (az184 r220 S-axis past galton r210, yaw-π face-on family); baseline REWRITTEN arrival-fold per sweep-124/164 precedent: 318 ents / 211783B / sha16 ff11fff94bf97839, drift ZERO on 317 shared ids, world key preserved — one chassis self-catch: first rewrite used the stale sweep-138 7-field projection (dropped comp/compKeys/store-form lib, net −2304 lines), caught by the on-disk entity key-set check pre-commit, git-checkout restored zero damage, re-run clean on the sweep-164 9-field chassis | SAT run TWICE fresh-live: epoch-A set 279 bbox non-light (arrival not yet live), epoch-B/C set 280 incl. clothoid in the collision set — both runs 236 classified / 0 coverage holes / exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (124th sweep since routing, Sev 2 artwalk-routed @ sweep-43, no escalation due — law keys Sev 1) — arrival collision-clean | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 next-walk-core-paths.ts, NW 5/5 @ 0.38 nw-approach1-walk.ts, NE 7/7 @ 0.38 ne-approach2-walk.ts, SW 5/5 @ 0.37 sw-approach3-walk.ts, individually run, zero timeouts); tier-2 146th cycle per committed sweep-167 pointer longhouse 6/6 @ 0.3456 (interior-walk-longhouse.ts) + garden-cottage 6/6 @ 0.3550 (interior-walk-garden-cottage.ts), both ALL_PASS real exit 0, ok counts verified from the results list (no legs field in this walk schema — sweep-48/165 keying class) | pins 15/15 ALL_PINS_OK (122nd consecutive clean, struct18-fleet-pin-check.ts real exit 0), sweep89-battery 28/28 on fresh census-A bytes, interlane md5 f6254cd0 stable read fresh, ledger law EXACT (canonical tool, base 2370765 re-read fresh pre-append — advanced by struct-125's D+1, D+0/E+0 this tick), standing gate ALL PASS real exit 0 at tick-start 90060539 + RE-GATED ALL PASS real exit 0 at 76250b52 after two mid-tick HEAD advances (survey-147 read-only hold, struct-125 placement absorbed; index partition clean at commit time) | CLEAN SWEEP w/ one domain-valid arrival folded — R-121 open, known, no escalation due |
+| sweep-169 | 2026-09-09 | 318==318 fully quiet steady state at all three epochs A/B/C (A/B 20s-paced, C post-verify) vs committed baseline 318 ents / sha16 ff11fff94bf97839: 0 arrivals, 0 departures, 0 field diffs, 0 lib flips — 280 thing + 38 light; raw /geom sha16 5ce439a1016454d0 byte-stable across A/B/C (first epoch at this new raw value — survey-149 disclosed the /geom SCHEMA EVENT compKeys→parent+tris from sibling windmill-era server work-in-flight: entity set + every compared field identical, content-diff valid, baseline stays current ZERO churn); SAT fresh-live 280 bbox non-light / 236 classified / 0 coverage holes / exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 125th sweep since routing, no escalation due — law keys Sev 1) | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38 next-walk-core-paths.ts, NW 5/5 @ 0.38 nw-approach1-walk.ts, NE 7/7 @ 0.38 ne-approach2-walk.ts, SW 5/5 @ 0.37 sw-approach3-walk.ts, all run individually this wakeup, parsed per-leg from the results list — sweep-48/165 keying law); tier-2 147th cycle per committed sweep-168 pointer stable 5/5 @ 0.3958 (interior-walk-stable.ts) + market 6/6 @ 0.3894 (interior-walk-market.ts), both ALL_PASS real exit 0, per-leg ok counts verified | pins 15/15 ALL_PINS_OK (123rd consecutive clean, struct18-fleet-pin-check.ts real exit 0), sweep89-battery 28/28 on fresh census-C bytes, interlane md5 f6254cd0 stable read fresh, ledger law EXACT (canonical tool, base 2370765 re-read fresh pre-append, D+0/E+0), standing gate ALL PASS real exit 0 at tick-start ae4166c9 + RE-GATED ALL PASS real exit 0 at 3f2fef13 after TWO mid-tick HEAD advances (survey-148/149 sibling observer commits, SURVEY-PLAN.md only, zero SWEEP paths — epoch law honored); one ledger self-catch disclosed: the appended prose named interior-walk-towerhouse.ts, tool is actually interior-walk-tower-house.ts — corrected in-place this tick pre-commit by unique-anchor sed, law re-verified EXACT after, entry exactly once | CLEAN SWEEP — R-121 open, known, no escalation due |
 
 
 
@@ -6296,3 +6297,50 @@ standing pair after this tick's walk at 4 sweeps; both walk tools
 verified present on disk this tick: interior-walk-stable.ts,
 interior-walk-market.ts).
 
+sweep-169: CLEAN SWEEP, fully quiet steady-state tick. Census 318==318 at
+ALL THREE epochs (A/B 20s-paced, C post-verification) vs the committed
+baseline (318 ents, sha16 ff11fff94bf97839): 0 arrivals, 0 departures, 0
+field diffs (pos/yaw/scale/kind/bbox), 0 lib flips on all 318 shared ids
+— 280 thing + 38 light. Raw /geom sha16 5ce439a1016454d0 byte-stable
+across A/B/C — the FIRST epoch at this new raw value. The raw-byte
+delta vs the baseline's committed size is NOT entity change: survey-149
+disclosed the /geom SCHEMA EVENT (entity fields compKeys→parent+tris)
+from sibling windmill-era server work-in-flight (server/server.ts,
+server/world.ts dirty in the working tree); the entity set and every
+compared field are identical, so the content-diff projection stays
+valid and the committed baseline stays current with ZERO churn
+(comparison-only precedent, sweep-161..168 class). Overlap: SAT
+fresh-live 280 bbox non-light / 236 classified / 0 coverage holes, exit
+3 on exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard −0.407 —
+known Sev 2 routed to artwalk b26 choreography @ sweep-43, 125th sweep
+since routing, NOT new, no escalation due (law keys severity-1).
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit
+0 — core 64/64 @ 0.38 (next-walk-core-paths.ts), NW 5/5 @ 0.38
+(nw-approach1-walk.ts), NE 7/7 @ 0.38 (ne-approach2-walk.ts), SW 5/5 @
+0.37 (sw-approach3-walk.ts); all four run individually this wakeup,
+zero tool-layer timeouts, per-leg ok parsed from the results list
+(sweep-48/165 keying law). Tier-2 147th cycle per the committed
+sweep-168 pointer: stable 5/5 @ 0.3958 (interior-walk-stable.ts) +
+market 6/6 @ 0.3894 (interior-walk-market.ts), both ALL_PASS real exit
+0, ok counts verified from the results list. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK real exit 0 (123rd
+consecutive clean); sweep89-battery 28/28 ALL PASS exit 0 on fresh
+census-C bytes; interlane md5 f6254cd0 stable, read fresh. Ledger law
+EXACT — canonical tool self-verifies law() before and after append,
+D+0/E+0, base 2370765 re-read fresh immediately before append. Standing
+gate ALL PASS real exit 0 at tick-start ae4166c9; HEAD advanced TWICE
+mid-tick (survey-148 @ 2b89293f, survey-149 @ 3f2fef13 — sibling
+observer commits touching SURVEY-PLAN.md only, zero SWEEP paths); epoch
+law honored, gate RE-RUN ALL PASS real exit 0 at 3f2fef13 before the
+ledger append. One ledger self-catch disclosed pre-commit: this tick's
+appended prose named the next-pair tool as interior-walk-towerhouse.ts
+— the tool on disk is interior-walk-tower-house.ts (hyphenated);
+corrected in-place this tick via unique-anchor sed BEFORE commit, law
+re-verified EXACT after the correction, entry present exactly once.
+Zero world mutations, zero defect notes, zero uploads, zero verbs,
+zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-170): inn + tower-house (148th cycle — LRU chain: @169
+stable/market, @168 longhouse/garden-cottage, @167 hall/bunkhouse,
+@166 row-cottage/observatory, @165 inn/tower-house stalest standing
+pair at 4 sweeps; both walk tools verified present on disk this tick:
+interior-walk-inn.ts, interior-walk-tower-house.ts).
