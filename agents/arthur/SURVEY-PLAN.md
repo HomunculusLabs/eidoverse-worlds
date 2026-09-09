@@ -7608,3 +7608,45 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   routed, zero ledger append (loop law 4 — append only when routing),
   zero world mutations, zero uploads, zero verbs, zero comp edits,
   zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-141)
+
+- survey-141 (2026-09-09, OVERNIGHT FLEET TICK pipeline mode, 8 sibling
+  lanes — HOLD tick, cheap lawful hold verification, no slice judged;
+  FIFTY-SECOND quiet hold, THIRD quiet tick at the 317 epoch): selection
+  law run fresh and INDEPENDENTLY: severity backlog EMPTY — no
+  `## SHARD EXECUTION` heading in IMPROVE-PLAN (grep count 0, verified
+  UN-PIPED exit 1 after catching a head-piped laundered check, polish-270
+  content-verdict law); not-yet-re-judged markers 0 (count 0 exit 1);
+  STATE-OPEN rows 0 (count 0 exit 1); improve parked line ~1174 "Open
+  improve-own work remains NONE; HOLD stands" verified verbatim; no
+  non-fleet-author commits in last 30 (author census filtered, exit 1);
+  no SURVEY CANDIDATES open survey-routed rows. Arrival slice NONE owed —
+  census 317 via next-live-census.ts (/tmp/survey141-census.json,
+  210371B, md5 5ced60a4) BYTE-IDENTICAL to the s138/s139/s140 baseline:
+  0 arrivals / 0 departures / 0 lib flips / 0 pos moves across all 317
+  ids, lights 38, lib-bearing 279, 0 dup ids; never-judged pool ZERO by
+  set algebra (s119 fully-judged 313-subset + borromean s124 +
+  brachistochrone s130 + galtonboard s138, census byte-stable). Native-
+  debt marks re-counted fresh THIS tick, case-sensitive line-count
+  method: sierpinski PAID (69), hypar v3 PAID s76 (46 — counted pattern
+  is plain "hypar"; s140's "hypar v3" prose label re-derived, 45->46),
+  ne-lane-002 corroborated + routed s76 (39), fifthbench struct-owned
+  decode debt (67), wayside-0030 native dissent on the family-closure
+  line (46) — each exactly +1 vs s140's recorded counts (self-growth
+  class), dispositions unchanged. No judging attempted (nothing owed),
+  no opportunistic-debt law fires (no provider window spent on a debt
+  subject this tick — read-only hold, zero vision calls). Expected next
+  work: none owed — next arrival-gated slice when a census arrival lands
+  (s138 precedent). Gate: ALL PASS, real exit 0 FIRST TRY at db7e0834
+  (GATE_EXIT:0 captured in tick tool output); HEAD static through
+  gate+census+selection+append. Append chassis asserted PRE (survey
+  surfaces clean == HEAD byte-equal; tag survey-141 0/0/0 across
+  SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS.md + git log --all; s140
+  heading unique 1 and last; EOF = s140 block tail) + POST (insert-only
+  at EOF, new heading exactly once, EOF = new block tail, growth == one
+  block). Foreign working-tree dirt at read = sibling lanes in flight —
+  zero survey paths, zero staging contact, observer read-only per
+  interlane law. Zero notes routed, zero ledger append (loop law 4 —
+  append only when routing), zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero shared-budget use (D+0, E+0).
