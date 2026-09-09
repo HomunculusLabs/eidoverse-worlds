@@ -6707,3 +6707,65 @@ last time, three iron rings hang in the air together, no two of them linked,
 yet they cannot be separated. Each dips once to its own stone pillar, three
 pillars even as a tripod. At the heart of all three, one bead of brass: the
 held center. Take one ring away and the other two fall.
+
+## struct-118 (2026-09-08): R10-16 THE BORROMEAN RINGS — deferred contract
+## EXECUTED: judged NATIVE (zero debt), PLACED_VERIFIED az184 r190
+
+Cadence 118%3==1 — execute struct-117's deferred contract (renders ->
+judged -> scan -> SAT -> terrain -> place -> verify). Shard empty fresh
+(grep 0 exit 1). Gate ALL_PINS_OK 15/15 real exit 0 FIRST TRY (bun, no
+pipe). Refine pool empty fresh.
+
+BYTES RE-PINNED: sha 7e9c334883d25774e8572388b1e63d59e5424fbcedd60f2d002b4
+2ea665c48d byte-exact on disk fresh; decode struct117-decode-borromean.ts
+ALL PASS 24/24 re-run fresh this tick (borromean law from bytes via 9273-vert
+replica vertex-cloud equality, stance 120.0/120.0/120.0, stone/bead laws,
+envelope 4.22x4.53x4.60, base on grade, no NaN).
+
+JUDGED NATIVE (flap law — native up all tick, ZERO debt; first fully-native
+R10 debut): front 4/4 PASS — three rings read immediately, over/under weave
+visible at every crossing with real gaps, alternating-crossing brunnian read
+corroborated by the CAST-SHADOW silhouette (judge's independent confirmation
+the weave is 3D, not flat overlap), three pillars grounded on the dais each
+meeting its own ring dip, bead reads captive-in-weave not floating. Gameplay
+18m 3/3 PASS — silhouette immediate (three interlocked loops against sky,
+see-through interior), dais+pillars planted with attached shadow, zero
+floats/fragments/broken contacts. Night 3/3 PASS — exactly ONE crisp quiet
+warm point at the heart (hard-edged, no gradient/bloom/wash), rings faintly
+legible, zero stray warm pixels frame-wide. Polish-tier observations
+RECORDED, not defect classes: cast shadow reads outline-thin at the edges;
+rounded-square (golden superellipse) ring profile slightly softens the
+classic circular borromean read at distance — a deliberate family-identity
+choice (golden construction), kept.
+
+SITE: az184 r190, dais center ON the axis point, POS (-13.253730011383807,
+-0.011310439512641572, 189.5371695493656) yaw pi — the S mathematics axis
+extends at its own 10m cadence past the zeno gates: dial r71 -> koch r90 ->
+hilbert r100 -> dodeca r110 -> wall r120 -> tesseract r130 -> lorenz r140 ->
+chladni r150 -> voronoi r160 -> zeno r180 -> BORROMEAN r190: the rings past
+the gates that never finish.
+
+SCAN struct118-scan-borromean.ts LAWFUL pre-mutation: SAT worst
+nx-struct-zeno +7.59 (law 1.4, fresh 314-entity census, center-corrected,
+film-guarded incl. R10 math films), film +94.27 (kochgarden), walk +116.43
+(ne-lane-002), rim 190.0. Terrain struct118-terrain 9pt spread 0.95cm, PY =
+lowest corner-maxx-maxz -0.0113104 (base course on grade).
+
+PLACEMENT: upload store/7e9c334883d25774.glb zero 429s, 1 spawn verb,
+PLACED_VERIFIED exact tuple pos [-13.2537, -0.0113, 189.5372] yaw 3.1416 lib
+store/7e9c334883d25774.glb comp {} census 314->315. Fresh-only rerun
+REFUSED zero verbs real exit 1 (idempotency form). Folly class — no entry
+advertised, no walk owed (zeno/voronoi/chladni precedent). Comps {} (bead
+emissive is KEEP glow_br_1 material inside the GLB).
+
+NEXT: 119%3==2 build tick — R10-17 form-ledger gap derivation fresh (grep
+the plans for the next absent family) unless survey routes rows.
+
+BILL EYE-CHECK (one, standing — same circuit, now seated): walk the south
+mathematics walk to its far end — past the gates that halve — and where the
+meadow opens one last time, three iron rings hang in the air together, no
+two of them linked, yet they cannot be separated. Each dips once to its own
+stone pillar, three pillars even as a tripod. At the heart of all three,
+one bead of brass: the held center. Take one ring away and the other two
+fall. At dusk the bead is the only light — one quiet point holding the
+whole lock together.
