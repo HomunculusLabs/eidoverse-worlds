@@ -8221,3 +8221,43 @@ arrival-gated; next slice when a census arrival or lib flip lands
 (s138/s148/s150 precedent). Zero ledger append (loop law 4 — append only
 when routing), zero world mutations, zero uploads, zero verbs, zero comp
 edits, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-153)
+
+HOLD — 62nd quiet hold, 5th at the 318 epoch. Census 318 == 318 (280 thing
++ 38 light, 0 dup ids) BYTE-IDENTICAL to the s151/s150 content baseline
+(raw fetch md5 cb5a73a9 == baseline == s151, 211019 B, sha16 12df31f3,
+compKeys field shape — the s152 parent+tris 94118 B shape was TRANSIENT
+sibling server WIP and did not persist, s149/s150 precedent; server.ts +
+world.ts still dirty in tree, windmill-era). Set-diff ran on ALL 9 shared
+comparable fields (id/kind/lib/pos/yaw/scale/bbox/compKeys/comp) full-field:
+0 arrivals / 0 departures / 0 lib flips / 0 pos / 0 yaw / 0 scale / 0 bbox /
+0 compKeys / 0 comp across all 318 shared ids — no sibling placement,
+re-place, or turnover since struct-126/s150/sweep-170. Selection law
+fresh: SHARD EXECUTION 0, not-yet-re-judged 0, STATE-OPEN 0, pending-survey
+0, improve parked verbatim (HOLD stands, line 1174), sole author
+homunculuslabs in last 30. Never-judged pool ZERO by set algebra
+(borromean, brachistochrone, galtonboard, clothoid markers all live in
+THIS census; struct-127 slot unspawned, 0 arrivals confirms). Native-debt
+marks re-counted fresh case-sensitive line-count method (grep -c):
+sierpinski PAID (81), hypar PAID s76 (59), ne-lane-002 corroborated +
+routed s76 (51), fifthbench struct-owned decode debt (79), wayside-0030
+native dissent family-closure line (58) — each exactly +1 vs s152 recorded
+counts (self-growth class), dispositions unchanged. No slice judged:
+selection pools empty, never-judged pool zero — 0 confirmed / 0 clean /
+0 dropped, 0 notes routed, 0 vision calls (native-vs-fallback N/A). Gate
+ALL PASS real exit 0 first-try un-piped at 8aec4fdc (survey-152 HEAD; 99
+PASS lines, ledger law EXACT 2370765, register 0 OPEN), HEAD static
+through the tick, index clean. Tag derived fresh from ledger max: survey
+ledger entries max 150 (s151/s152 no-append per loop law 4), this tick no
+routing -> no append, plan-block sequence 153. Foreign working-tree dirt
+at read = sibling lanes in flight (windmill overhaul doc + placer,
+cabin-overhaul, carousel-horse-prototype, client/server sources,
+debug-bower scripts, core-paths GLB + review json, HERO-ASSET plan,
+next-place-carousel, fleet shell scripts, moon-moth, terrain probes) —
+zero survey paths, zero staging contact, observer read-only per interlane
+law. Expected next work: none owed — arrival-gated; next slice when a
+census arrival or lib flip lands (s138/s148/s150 precedent). Zero ledger
+append (loop law 4 — append only when routing), zero world mutations,
+zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0).
