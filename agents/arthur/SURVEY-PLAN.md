@@ -6881,3 +6881,60 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   append (loop law 4 — append only when routing), zero world mutations,
   zero uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+## Judged index (survey-127)
+
+- survey-127 (2026-09-08 22:39 EDT fresh date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — HOLD tick, cheap lawful hold
+  verification, no slice judged; FORTIETH quiet hold, census epoch
+  stable, FOURTH consecutive epoch-stable tick at 315): selection law
+  run fresh and INDEPENDENTLY: severity backlog EMPTY — no
+  `## SHARD EXECUTION` section in IMPROVE-PLAN (heading grep count 0,
+  exit 1, verified un-piped); sharding directive prose routes rows by
+  entity prefix to struct/dress/approach/waysign/improve-own, NONE
+  survey; improve parked improve-71 48/48 terminal (ledger tail
+  improve-70/71 only), "Open improve-own work remains NONE; HOLD
+  stands"; not-yet-re-judged markers 0 in IMPROVE-PLAN; arrival slice
+  NONE owed (census diff zero — below); never-judged pool ZERO by set
+  algebra — live 315-set BYTE-IDENTICAL to survey-124/125/126
+  baselines plus this tick's fresh /tmp/survey127-census.json (209084B,
+  md5 b048d886 all four, 315 entities[]-derived, lights 38,
+  lib-bearing 277, 0 arrivals / 0 departures / 0 flips on every field,
+  inheriting s119's fully-judged 313-subset derivation + borromean
+  CLEAN s124). Native-debt marks re-verified fresh by grep THIS tick,
+  counts re-derived with METHOD NAMED (grep -c line-count; grep -o
+  occurrence counts in parens): sierpinski PAID (54; 62), hypar v3
+  PAID s76 (31; 33), ne-lane-002 corroborated + routed s76 (24; 27),
+  fifthbench struct-owned decode debt (52; 52), wayside-0030 native
+  dissent on the family-closure line (31; 31) — DISCLOSED:
+  survey-126's prose counts (sierpinski 91, hypar 30, ne-lane-002 23,
+  fifthbench 51, wayside-0030 30) are non-reproducible under
+  line-count OR occurrence methods at this epoch (plan byte-range
+  a896c644..205de51b unchanged, so no content change explains them);
+  recorded stamp-slip-class observation (s123 precedent: prose counts
+  slip, census identity carries the epoch); marks' presence and
+  disposition verified unchanged this tick — no substance change. No
+  new Bill correction outstanding. No judging attempted (nothing
+  owed), no opportunistic-debt law fires. EPOCH: HEAD a896c644 ->
+  205de51b mid-tick = struct-119 build-only sibling (files
+  IMPROVEMENTS/STRUCTURES-PLAN/mkv3-brachistochrone/struct119-decode
+  only, zero survey paths; judged/placed deferred to struct-120 per
+  its own fail-closed law, census byte-identity through the event
+  corroborates zero live mutation) — re-gated ALL PASS 98 PASS lines
+  real exit 0 at 205de51b (/tmp/survey127-gate.txt overwritten at
+  re-gate; first gate at a896c644 also ALL PASS real exit 0 FIRST
+  TRY; sole fail-grep hit = benign "fail-closed" quoted prose in the
+  HEAD commit line, known class). Three inline attempts
+  parser-blocked (oversized-payload class), each retried via the
+  sanctioned saved script per skill law, zero damage. Append chassis
+  PRE asserted (plan==HEAD byte-equal at 205de51b, tag 0/0/0 across
+  SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS.md + git log --all, s126
+  heading unique 1, EOF = s126 block tail) + POST (insert-only at
+  EOF, new heading exactly once, EOF = new block tail, growth one
+  block). Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill/city4/carousel/moon-moth domains, HERO-ASSET plan,
+  cabin-overhaul + carousel-horse-prototype dirs, client/server
+  sources, debug-bower scripts) — zero survey paths, zero staging
+  contact, observer read-only per interlane law. Zero notes routed,
+  zero ledger append (loop law 4 — append only when routing), zero
+  world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
