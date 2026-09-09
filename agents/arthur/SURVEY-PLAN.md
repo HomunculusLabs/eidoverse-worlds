@@ -7518,3 +7518,48 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   append (loop law 4 — append only when routing), zero world mutations,
   zero uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+
+## Judged index (survey-139)
+
+- survey-139 (2026-09-09 0x:xx EDT fresh date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — HOLD tick, cheap lawful hold
+  verification, no slice judged; FIFTIETH quiet hold, FIRST quiet tick at
+  the 317 epoch): selection law run fresh and INDEPENDENTLY: severity
+  backlog EMPTY — no `## SHARD EXECUTION` section in IMPROVE-PLAN (grep
+  count 0 exit 1, verified un-piped); not-yet-re-judged markers 0 (count
+  0 exit 1); STATE-OPEN rows 0 (count 0 exit 1); improve parked
+  improve-71 48/48 terminal, IMPROVE-PLAN line 1174 "Open improve-own
+  work remains NONE; HOLD stands" verified verbatim. Arrival slice NONE
+  owed — census 317 via next-live-census.ts (/tmp/survey139-census.json,
+  210371B, md5 5ced60a4) BYTE-IDENTICAL to the s138 arrival baseline
+  (/tmp/survey138-census.json, same size + md5): 0 arrivals / 0
+  departures / 0 lib flips / 0 pos moves across all 317 ids, lights 38,
+  lib-bearing 279, 0 dup ids; never-judged pool ZERO by set algebra
+  (s119 fully-judged 313-subset + borromean s124 + brachistochrone s130
+  + galtonboard s138, census byte-stable). Native-debt marks re-counted
+  fresh THIS tick, case-sensitive line-count method: sierpinski PAID
+  (67), hypar v3 PAID s76 (44), ne-lane-002 corroborated + routed s76
+  (37), fifthbench struct-owned decode debt (65), wayside-0030 native
+  dissent on the family-closure line (44) — each exactly +1 vs s138's
+  recorded counts (self-growth class), dispositions unchanged. No new
+  Bill correction outstanding (author census over last 30 commits =
+  homunculuslabs only, filter-verified empty). No judging attempted
+  (nothing owed), no opportunistic-debt law fires. Expected next work:
+  none owed — next arrival-gated slice when a census arrival lands (s138
+  precedent). Gate: ALL PASS, real exit 0 FIRST TRY at 84d8c722
+  (/tmp/survey139-gate.txt, 99 PASS lines, zero FAIL); HEAD advanced
+  mid-tick 84d8c722 -> a6e1fe48 = sweep-164 (read-only sibling, ledger
+  append only — IMPROVEMENTS.md interleaving, zero SURVEY-PLAN contact);
+  epoch-law re-gate at a6e1fe48: ALL PASS real exit 0, 99 PASS lines,
+  zero FAIL (/tmp/survey139-regate.txt); survey paths byte-clean at both
+  epochs; interlane md5 f6254cd0 stable. Append chassis asserted PRE
+  (tree clean == HEAD byte-equal; tag survey-139 0/0/0 across
+  SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS.md + git log --all; s138
+  heading unique 1; EOF = s138 block tail) + POST (insert-only at EOF,
+  new heading exactly once, EOF = new block tail, growth == exactly one
+  block). Foreign working-tree dirt at read = sibling lanes in flight —
+  zero survey paths, zero staging contact, observer read-only per
+  interlane law. Zero notes routed, zero ledger append (loop law 4 —
+  append only when routing), zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
