@@ -9282,3 +9282,39 @@ shared-budget use (D+0, E+0).
   pre-commit re-run: ALL PASS real exit 0, no further sibling advance.
   Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+## Judged index (survey-177)
+
+- survey-177 (2026-09-09, HOLD): 82nd quiet hold, EIGHTH at the fully-quiet
+  321-epoch (s176 state re-verified fresh against the sweep-181 baseline
+  fold): census 321==321 (283 thing + 38 light, 0 dupes) raw 94990B sha16
+  d398ce05873ff941 HTTP 200 (parent+tris schema fetch class, byte-identical
+  s176 fetch), set-diff vs committed sweep baseline 99e835ed (sweep-181
+  arrival-fold, 321): 0 arrivals / 0 departures / 0 field diffs / 0 lib
+  flips across all 321 shared ids; gyroid lib unchanged da2a4b15 (struct
+  tick-135 refine not landed - s176 Sev-2 note stays pending with owner);
+  71 struct-family entities live incl harmonickiss + gyroid. Selection law
+  fresh: SHARD EXECUTION absent (grep 0); NYRJ/STATE-OPEN grep 0; IMPROVE-
+  PLAN md5 c0f569d0 git-untouched since survey-78 (d2e5335b), byte-
+  identical provenance -> s172 disposition classification CARRIES
+  (residual 30 = 17 terminal survey-60/61 rows on Bill's overhaul bytes +
+  5 off-limits probe-only Bill's-call rows + 8 survey-63 routed
+  dissent/corroborate probes; survey-executable open rows 0);
+  never-judged pool ZERO by set algebra (arrivals=0). Native-debt
+  survey-executable items EMPTY (peaucellier RETIRED s164; fifthbench
+  struct-owned decode debt; wayside-0030 family-closure dissent; survey-62
+  hall/inn owner-dispositioned - owning lanes' to pay). No slice judged
+  (pools empty, no debt owed, arrival-gated per s138/s148/s150/s163/s168
+  precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision
+  calls (native-vs-fallback N/A). Gate ALL PASS real exit 0 first-try
+  un-piped (GATE_EXIT:0 marker) at tick-start HEAD 9efcb4fd (99 PASS
+  lines, ledger law EXACT 2370771). Tag from ledger max fresh: survey
+  tail [survey-80], s151-s176 no-append per loop law 4; no routing this
+  tick -> no append, plan-block sequence 177. Foreign working-tree dirt at
+  read = sibling lanes in flight (client/server sources, debug-bower
+  scripts, core-paths GLB + review json, HERO-ASSET plan, WINDMILL-
+  OVERHAUL doc, cabin-overhaul, carousel-horse-prototype) - zero survey
+  paths, zero staging contact, observer read-only per interlane law.
+  Expected next work: arrival-gated; next slice when a census arrival or
+  lib flip lands. Zero ledger append (loop law 4), zero world mutations,
+  zero uploads, zero verbs, zero comp edits, zero shared-budget use
+  (D+0, E+0).
