@@ -6473,3 +6473,58 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   Verdicts 0 confirmed / 1 clean-with-margin / 0 dropped. Zero
   world mutations, zero uploads, zero verbs, zero comp edits, zero
   ledger append, zero shared-budget use (D+0, E+0).
+
+## Judged index (survey-120)
+
+- survey-120 (2026-09-08 21:40 EDT, OVERNIGHT FLEET TICK (pipeline
+  mode, 8 sibling lanes) — HOLD tick, cheap lawful hold verification,
+  no slice judged; THIRTY-FOURTH quiet hold, census epoch stable):
+  selection law run fresh and INDEPENDENTLY (not carried from s119
+  prose): severity backlog EMPTY — no `## SHARD EXECUTION` section in
+  IMPROVE-PLAN (heading grep count 0, exit 1, verified un-piped);
+  sharding directive prose routes rows by entity prefix to
+  struct/dress/approach/waysign/improve, none survey; IMPROVE-PLAN
+  line 1174 reads "Open improve-own work remains NONE; HOLD stands" —
+  improve lane parked at improve-71 fleet STOP, 48/48 terminal, resume
+  = Bill's eye-gate verdicts; arrival slice NONE owed (census diff
+  zero — below); never-judged pool ZERO by set algebra — live 314-set
+  BYTE-IDENTICAL to the survey-119 baseline (208432B, md5
+  2c9aad56a2607d6198abe5e02c87ddc0 both files, cmp proven, count 314,
+  lights 38, lib-bearing 276; full-file identity = 0 arrivals / 0
+  departures / 0 flips on id/pos/yaw/scale/lib/kind/color/intensity/
+  range/compKeys), inheriting s119's arrival-slice derivation (313-
+  subset fully judged per s82/s83 twice-independent derivation +
+  s84/s89/s94/s113 CLEANs; zeno arrival absorbed CLEAN-with-margin
+  s119, corroborating struct-116's native PASS). Native-debt audit
+  unchanged, marks re-verified fresh in THIS plan (not from s119
+  prose): sierpinski PAID (48 prose refs), hypar v3 PAID s76 (9
+  refs), ne-lane-002 corroborated + routed s76 (18 refs), fifthbench
+  = struct-owned decode debt (46 refs), wayside-0030 native dissent
+  recorded on the family-closure line (25 refs); survey-62 hall/inn
+  class owner-disposition (debt-transfer law, improve parked
+  improve-71) and statuary-family SURVEY CANDIDATES routed rows
+  (s77/s78) unchanged. No new Bill correction outstanding (HEAD
+  static at 648fca3b through gate+census+selection+append — git log
+  648fca3b..HEAD = 0 commits; survey-119v at HEAD, epoch correction
+  only, zero live-world materialization, census identity proves
+  nothing landed since s119). Native availability: no judging
+  attempted this tick (nothing owed), so no opportunistic-debt law
+  fires. Census 314==314 vs /tmp/survey119-census.json,
+  BYTE-IDENTICAL (cmp proven); new baseline /tmp/survey120-census.json
+  (314, same md5 2c9aad56 — epoch stable, second consecutive
+  epoch-stable tick at 314). Gate: ALL PASS 99 PASS lines, real exit
+  0 FIRST TRY at 648fca3b (struct-116 at HEAD base, survey-119v at
+  tip; stdout captured /tmp/survey120-gate.txt; sole case-
+  insensitive fail-grep hit = 'fail-closed' word inside a PASS
+  commit-message line, no re-gate owed). Append chassis asserted PRE
+  (plan==HEAD md5 10147fb9..., tag 0/0/0 + git-log-all 0, s119
+  heading unique, EOF = s119 block tail) + POST (insert-only at EOF,
+  new heading exactly once, EOF = new block tail, growth one block).
+  Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill/city4/carousel/moon-moth domains, HERO-ASSET plan,
+  cabin-overhaul + carousel-horse-prototype dirs, client/server
+  sources) — zero survey paths, zero staging contact, observer
+  read-only per interlane law. Zero notes routed, zero ledger append
+  (loop law 4 — append only when routing), zero world mutations,
+  zero uploads, zero verbs, zero comp edits, zero shared-budget use
+  (D+0, E+0).
