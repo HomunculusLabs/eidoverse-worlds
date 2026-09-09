@@ -6962,3 +6962,74 @@ walk past the race — a stone board rises streaked with iron pegs, brass
 balls frozen mid-fall above a row of nine bins. The middle bins stand
 full; the outer ones empty. At dusk the heart of the heap glows: seven
 warm points where chance has already decided.
+
+## struct-122 (2026-09-09): R10-18 THE GALTON BOARD placed — struct-121's
+## deferred contract EXECUTED end-to-end: decoded -> judged NATIVE -> sited ->
+## PLACED_VERIFIED.
+
+Cadence 122%3==0 nominal refine slot: pool EMPTY fresh; deferred-contract
+precedence (struct-113/117/120). Gate ALL PASS real exit 0 tick-start 001e06d4
+(bun, no pipe) + re-gate ALL PASS at mid-tick sibling HEAD 4d8667e3 (sweep-163
+landed between decode and placement — absorbed, epoch law) + post-append gate
+before commit. Shard empty fresh (no OPEN nx-struct rows in IMPROVE-PLAN).
+
+DECODE struct122-decode-galtonboard.ts ALL PASS 13 named checks (22 printed
+PASS lines) exit 0, independent byte-level replica (no mk imports,
+struct-119 pattern). TWO REPLICA ERRORS caught and fixed by the RED->GREEN
+discipline itself, disclosed: (a) distance-clustering is invalid for touching
+stacks (pitch 0.26 == ball diameter 0.26) and split rings (126 clusters =
+63 pegs x2) — replaced by expected-vs-cloud bidirectional laws; (b) the
+replica initially expected the center column as PLAIN brass — the glow/plain
+MATERIAL SPLIT (bin 4 = 7 KEEP glow_ga nodes, struct-82 dusk lane) was
+re-derived from bytes; bell is now verified as a 63-cell from-bytes matrix.
+DECODE CORRECTIONS to the struct-121 record: true local envelope z[-0.10..
+0.87] (not 0..0.97 as the plan note said) => CZ +0.385 center-corrected
+seating (pitfall-10); iron census 52 verts/peg exported.
+
+JUDGED NATIVE (provider UP this tick — flap law honored; no native debt
+incurred): front PASS (device/fountain-of-balls read, pegs + bell legible,
+plinth grounded, zero floats; margins recorded: tympanum gives a
+borderline temple-ish read saved by the throat ball per the judge — same
+class soundmirror/pitfall-13 accepted with distance-residual disclosed;
+apex ball reads seated = the designed hopper throat ball, brachistochrone
+crest precedent; center column brighter = deliberate glow lane confirmed
+by night frame); gameplay 18m PASS (reads designed mathematical monument
+NOT shed/wall, bell step-down rhythm clear, tails empty, amber core
+deliberate, zero floats, shadow attached); night PASS (EXACTLY 7 quiet
+warm points — the center column — zero bloom, zero leak to stone/pegs/
+neighbor stacks, silhouette faintly readable; judge's "floor of quiet"
+note recorded, matches struct-82 lineage calibration).
+
+SITE: az184 r210 — S mathematics axis extends past brachistochrone r200.
+YAW LAW derived from live family precedent (census-verified this tick):
+S-axis planar exhibits sit FACE-ON to the village approach (zeno r180 yaw
+pi, borromean r190 yaw pi). The board is that wide-panel family (4.70x4.46
+face) — NOT the slidingladder narrow-planar class (struct-104). CAND_A
+yaw pi (face village-side) accepted; CAND_B yaw 0 lawful, rejected on
+narrative. Form-CENTER on the axis point, center-corrected CZ +0.385:
+entity POS (-14.6489, +0.0021, 209.8735). Scan struct122 both candidates
+LAWFUL fresh-316: SAT worst nx-struct-brachistochrone +5.12 (law 1.4),
+film +116.03 (kochgarden), walk +138.20 (ne-lane-002), rim 210.0.
+Terrain 9pt spread 6.9mm; PY = lowest +0.0020799 (grade sits slightly
+above 0 here — base course on grade). Foreign support-seam diagnostics
+(temple-labyrinth, dress streamstones) observed and left alone —
+observer-class noise.
+
+PLACEMENT: upload store/3d9f7c9cdf81d64c.glb zero 429s (20s+ paced), 1
+spawn verb (600ms pace), PLACED_VERIFIED exact tuple pos
+[-14.648859, 0.002080, 209.873451] yaw pi lib store/3d9f7c9cdf81d64c.glb
+comp {} census 316->317, corroborated independent curl read-back (form-
+center az 183.99 r 210.38 = axis seat exact; neighbor brachistochrone
+r196.31). Fresh-only rerun REFUSED zero verbs real exit 1 (idempotency
+form; first rerun check was tail-pipe-laundered — caught and re-run clean,
+polish-270 content-verdict law). Folly class: no entry advertised, no walk
+owed. Comps {} (glow is KEEP glow_ga material inside the GLB, struct-82
+lineage).
+
+S math axis now: dial r71 -> koch r90 -> hilbert r100 -> dodeca r110 ->
+wall r120 -> tesseract r130 -> lorenz r140 -> chladni r150 -> voronoi
+r160 -> zeno r180 -> borromean r190 -> brachistochrone r200 -> GALTON
+r210 — order out of chaos at the axis end.
+
+NEXT: 123%3==0 refine tick — pool empty unless survey routes rows; else
+next form-ledger gap (R10-19) derivation fresh.
