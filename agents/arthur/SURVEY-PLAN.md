@@ -7234,3 +7234,60 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   (loop law 4 — append only when routing), zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+
+## Judged index (survey-134)
+
+- survey-134 (2026-09-08 24:0x EDT fresh date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — HOLD tick, cheap lawful hold
+  verification, no slice judged; FORTY-SIXTH quiet hold, FOURTH quiet
+  tick at the 316 epoch): selection law run fresh and INDEPENDENTLY:
+  severity backlog EMPTY — no `## SHARD EXECUTION` section in
+  IMPROVE-PLAN (heading grep count 0, exit 1, verified un-piped);
+  sharding directive prose routes rows by entity prefix to struct/
+  dress/approach/waysign/improve-own, NONE survey; improve parked
+  improve-71 48/48 terminal, IMPROVE-PLAN line 1174 "Open improve-own
+  work remains NONE; HOLD stands"; not-yet-re-judged markers 0 (grep
+  count 0 exit 1); STATE-OPEN rows 0 (grep count 0 exit 1); arrival
+  slice NONE owed (census diff zero — below); never-judged pool ZERO by
+  set algebra — live 316-set BYTE-IDENTICAL to survey-130/131/132/133
+  baselines (/tmp/survey133-census.json + this tick's fresh
+  /tmp/survey134-census.json, 209732B, md5 ed2db1fa both, count 316
+  entities[]-derived, lights 38, lib-bearing 278, 0 arrivals /
+  0 departures / 0 lib flips / 0 pos moves on all 316 shared ids,
+  inheriting s119's fully-judged 313-subset derivation + borromean
+  CLEAN s124 + brachistochrone CLEAN s130). Native-debt marks
+  re-counted fresh THIS tick, case-sensitive line-count method:
+  sierpinski PAID (62), hypar v3 PAID s76 (39), ne-lane-002
+  corroborated + routed s76 (32), fifthbench struct-owned decode debt
+  (60), wayside-0030 native dissent on the family-closure line (39) —
+  each exactly +1 vs s133's recorded counts from s133's own appended
+  block (self-growth class), dispositions unchanged. No new Bill
+  correction outstanding (no Bill-author commits since fleet start,
+  filter-verified empty). Expected next work: struct-121 built R10-18
+  Galton Board (b2eb788a, placement deferred to struct-122) — when it
+  lands, next survey tick becomes an arrival-gated slice per survey-130
+  precedent. No judging attempted (nothing owed), no opportunistic-debt
+  law fires. Gate: ALL PASS, real exit 0 FIRST TRY at 001e06d4
+  (/tmp/survey134-gate.txt, zero FAIL lines). Sibling HEAD advance
+  mid-tick 001e06d4 -> 3ed2ae05 = sweep-162 (read-only, SWEEP-PLAN +
+  sweep162 scripts only, zero survey paths; independently corroborates
+  census 316 steady) — per epoch law re-gated at 3ed2ae05: ALL PASS
+  real exit 0, zero FAIL lines (/tmp/survey134-regate.txt), survey
+  paths byte-clean 0/0/0 at both epochs, HEAD re-checked == commit
+  base. Method slip disclosed: first chassis invocation ran
+  /tmp/survey134-append.py under BASH (ImageMagick import noise) —
+  failed CLOSED line-0, zero writes, zero staging; re-run under
+  python3 with PRE asserts re-verified fresh at the new HEAD. Append
+  chassis asserted PRE (plan==HEAD byte-equal — git status clean on
+  survey paths; tag survey-134 0/0/0 across
+  SURVEY-PLAN / IMPROVE-PLAN / IMPROVEMENTS.md + git log --all 0, s133
+  heading unique 1, EOF = s133 block tail) + POST (insert-only at EOF,
+  new heading exactly once, EOF = new block tail, growth one block).
+  Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill/city4/carousel/moon-moth domains, HERO-ASSET plan,
+  cabin-overhaul + carousel-horse-prototype dirs, client/server
+  sources, debug-bower scripts) — zero survey paths, zero staging
+  contact, observer read-only per interlane law. Zero notes routed,
+  zero ledger append (loop law 4 — append only when routing), zero
+  world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
