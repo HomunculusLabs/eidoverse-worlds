@@ -9318,3 +9318,48 @@ shared-budget use (D+0, E+0).
   lib flip lands. Zero ledger append (loop law 4), zero world mutations,
   zero uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+
+## Judged index (survey-178)
+
+- survey-178 (2026-09-09, HOLD): 83rd quiet hold, NINTH at the fully-quiet
+  321-epoch (s177 state re-verified fresh, not assumed). Census 321 == 321
+  (283 thing + 38 light, 0 dupes), raw fetch HTTP 200 212846 B, sha16
+  6eb17b2603a9e106 (compKeys schema fetch class). Set-diff vs committed
+  sweep baseline agents/arthur/reviews/sweep-census-baseline.json (321 ents,
+  sha16 99e835ed lineage, sweep-181 arrival-fold): 0 arrivals / 0 departures
+  / 0 field diffs / 0 lib flips across all 321 shared ids; gyroid lib
+  unchanged da2a4b15 (struct tick-135 refine not landed - s176 Sev-2 note
+  stays pending with owner); 71 struct-family entities live incl
+  harmonickiss + gyroid, all 11 historical struct markers re-verified live
+  in THIS census. Selection law fresh: SHARD EXECUTION heading absent
+  (grep 0); STATE-OPEN / NOT-YET-RE-JUDGED grep zero matched lines;
+  IMPROVE-PLAN md5 c0f569d0, git log last touch survey-78 (d2e5335b), clean
+  in working tree - byte-identical to the file s172 regex-audited, so
+  s172's disposition classification CARRIES with provenance (residual 30 =
+  17 terminal survey-60/61 rows on Bill's overhaul bytes + 5 off-limits
+  probe-only Bill's-call rows + 8 survey-63 routed dissent/corroborate
+  probes; survey-executable open rows 0). Never-judged pool ZERO by set
+  algebra (pool only grows via arrivals; arrivals=0). Native-debt
+  survey-executable items EMPTY (peaucellier RETIRED s164; gyroid judged
+  s176 with note routed, pending owner - not survey debt; fifthbench
+  struct-owned decode debt; wayside-0030 family-closure dissent; survey-62
+  hall/inn owner-dispositioned - owning lanes' to pay). No slice judged
+  (pools empty, no debt owed, arrival-gated per s138/s148/s150/s163/s168
+  precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision
+  calls (native-vs-fallback N/A). Gate ALL PASS real exit 0 first-try
+  un-piped (GATE_EXIT:0 marker) at tick-start HEAD 3c48b61f (99 PASS
+  lines, ledger law EXACT 2370771). One parser self-catch disclosed:
+  inline grep one-liner with an unbalanced command-substitution quote fired
+  the terminal hardline block; the sanctioned saved-script retry carried
+  the same malformed quote and exited 2 - re-issued as a clean authored
+  script, zero partial writes, read-only checks unaffected. Tag from
+  ledger max fresh: survey tail [survey-80], s151-s177 no-append per loop
+  law 4; no routing this tick -> no append, plan-block sequence 178.
+  Foreign working-tree dirt at read = sibling lanes in flight (client/
+  server sources, debug-bower scripts, core-paths GLB + review json,
+  HERO-ASSET plan, WINDMILL-OVERHAUL doc, cabin-overhaul,
+  carousel-horse-prototype) - zero survey paths, zero staging contact,
+  observer read-only per interlane law. Expected next work: arrival-gated;
+  next slice when a census arrival or lib flip lands. Zero ledger append
+  (loop law 4), zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use (D+0, E+0).
