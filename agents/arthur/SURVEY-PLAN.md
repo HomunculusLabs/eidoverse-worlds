@@ -8659,3 +8659,66 @@ peaucellier spawn next-struct-tick most likely, 318->319). Zero ledger
 append (loop law 4 — append only when routing), zero world mutations,
 zero uploads, zero verbs, zero comp edits, zero shared-budget use
 (D+0, E+0).
+
+## Judged index (survey-163)
+
+SLICE JUDGED (arrival-gated, s124/s150 single-arrival precedent) — first
+tick at the 319 epoch. Census 318 -> 319 (281 thing + 38 light, 0 dup
+ids), raw fetch HTTP 200 211652 B md5 ea2ee6d6 — the compKeys schema
+shape returned (s148 flap class; baseline s162 carried parent+tris
+94118 B; content compared on the 8 shared comparable fields regardless).
+Set-diff full-field: 1 arrival / 0 departures / 0 lib flips / 0 pos /
+0 yaw / 0 scale / 0 bbox / 0 comp across all 318 shared ids. The ONE
+arrival: nx-struct-peaucellier (kind thing, lib store/f66494fa3ffb9ff8.glb,
+pos [-10.4888, -0.0480, 168.3133], yaw pi) — the struct-128 ACCEPTED
+build spawned by struct-129 (sibling work-in-flight at census time:
+placer next-place-struct129.ts untracked in tree, commit not yet landed;
+lib == the struct-128 accepted upload sha f66494fa, yaw exact pi per the
+deferred contract, seat az184 r168 class). All 10 struct markers
+re-verified LIVE in THIS census (borromean, brachistochrone, galtonboard,
+clothoid, lemniscateseat, peaucellier, zeno, voronoi, chladni, lorenz).
+Selection law fresh: SHARD EXECUTION heading absent; not-yet-re-judged
+0; STATE-OPEN 0; pending-survey 0; improve parked verbatim line 1174 —
+zero rows route to survey. Never-judged pool = 1 by set algebra (the
+arrival) -> slice = the peaucellier alone, judged at 18m from LIVE store
+bytes: curl-UA fetch store/f66494fa3ffb9ff8.glb HTTP-probe 206, served
+24908 B served-sha 11fc0595 (the normal DRACO re-encode transform,
+struct-104 law: served != upload is systemic). DRACO review chassis
+decode: bounds 7.0 x 4.2 x 1.05 m, 5 nodes / 4 draw meshes, named
+peaucellier_0/1/2 + glow_pc_1 (the brass bead) — matches the struct-128
+build contract. Native vision 1210 x2 (first try + ONE paced 20s retry
+per loop law) -> ZAI FALLBACK judged, DISCLOSED: VERDICT CLEAN —
+identity reads as a coherent linkage machine (tower pivot, crank circle,
+closed rhombus, converging links; not scrap), silhouette legible with
+ground-anchoring shadow, ZERO confirmed defect classes (no floating
+bars — every bar traced to a termination; no voids; no missing members;
+tower attachment intact), emblem STRONG (the straight-line rail is the
+longest cleanest element, unambiguously horizontal, brass bead at rail
+height on the rim — the tracer/line relationship reads). Three
+close-range flags raised, NONE confirmed at 18m, all pre-covered by
+struct-128 byte-level evidence: (a) circle rim passes near/behind the
+tower — consistent with the declared design "crank circle through the
+fixed pivot"; (b) rail/linkage cross-bar near-collinear z-fighting
+unprovable in a static frame — struct-128 decode proved the rail IS the
+traced line from bytes; (c) exact seven-bar count unverifiable at 18m —
+struct-128 decode audit verified every machine member (1920 iron verts,
+0 unexplained). Probe-not-verdict law: flags (a)-(c) belong to the
+struct lane if it wants them; NO note routed (nothing confirmed), NO
+candidate row (object carries a struct-128 EXECUTED record + live decode
+lineage), native re-judge debt DISCLOSED for the peaucellier view
+(judge = ZAI fallback; native down all tick). Gate ALL PASS real exit 0
+un-piped at 7bb8b898 (own survey-162 at HEAD at gate time; 99 PASS
+lines). Tag from ledger max fresh: survey tags in ledger tail
+[survey-79] (s151-s162 no-append per loop law 4), no routing this tick
+-> no append, plan-block sequence 163. Chassis PRE 3-anchor + POST
+5-assert insert-only-at-EOF. Foreign working-tree dirt at read = sibling
+lanes in flight (windmill overhaul, cabin-overhaul,
+carousel-horse-prototype, client/server sources, debug-bower scripts,
+core-paths GLB + review json, HERO-ASSET plan, next-place-carousel,
+next-place-struct129 + fleet scripts) — zero survey paths, zero staging
+contact, observer read-only per interlane law. Evidence:
+/tmp/survey163-peaucellier/ (served.glb + review/*.png). Expected next
+work: arrival-gated; next slice on the next census arrival or lib flip
+(struct-129 commit expected to absorb the spawn). Zero ledger append
+(loop law 4), zero world mutations, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0).
