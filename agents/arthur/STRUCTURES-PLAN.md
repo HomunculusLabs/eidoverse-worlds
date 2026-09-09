@@ -7167,3 +7167,61 @@ bead it will never reach. The turns come faster and faster; the bead waits
 at the center, and after dark it is the only light there.
 
 NEXT: 125 — execute the deferred contract end-to-end.
+## struct-125 (2026-09-09): R10-19 CLOTHOID deferred contract EXECUTED —
+## judged (night NATIVE 3/3, gameplay ZAI-fallback 3/4), sited, PLACED_VERIFIED
+
+Cadence 125%3==2 BUILD slot, deferred-contract precedence (struct-113/117/
+120/122). Shard empty fresh (no SHARD EXECUTION heading, 0 OPEN nx-struct
+rows). Refine pool empty fresh at tick start. Gate ALL PASS real exit 0
+tick-start ab982188; HEAD advanced once mid-tick to 2da835e3 (sibling
+read-only) — re-gated ALL PASS real exit 0 pre-mutation.
+
+DEFERRED-CONTRACT ITEM 1 — JUDGE ON PINNED BYTES (sha 4843ef8ae7093365,
+re-verified on disk this tick): night NATIVE 3/3 PASS (bead = single quiet
+warm amber point, hard-edge no bloom — review rig has no bloom pass;
+emissive decode-verified linear-space, glow_cl_1 lineage; silhouette
+readable vs navy sky; zero stray glow). Gameplay 18m: native 1210 x2 (one
+retry per flap law, loop-warning honored) -> ZAI FALLBACK disclosed, 3/4
+PASS — concept read PASS (dead-straight lower third then tightening
+over-arc, one-rail read preserved), monotone tightening PASS (2+ wraps,
+wrap-to-wrap spacing halves toward center), bead PASS (warm vs dark iron
+separation, narrow real gap band, approaches-forever survives); MATERIAL
+STORY FAIL (mast+struts share rail's exact slate tone at 18m — two-part
+story, not three). ZERO structural defects (no floats, no gaps, joints
+terminate). Margins: bead-rail gap ~2-3px at 18m named tightest margin;
+bead slightly off-center reads as still-converging (true math). Defect
+note (a) strut crosses innermost wrap region dark-on-dark tangle at
+center; note (b) contact shadow only at plinth left end. FINDING SEEDS
+struct-126: 126%3==0 refine slot — mast half-step darker (one material
+change, judge: converts (4) to PASS without touching geometry) on
+nx-struct-clothoid; refine pool re-populates with this entity only.
+
+DEFERRED-CONTRACT ITEM 2 — SITE + PLACE (fresh-only, two-pass chassis):
+fresh census 317 (byte-stable baseline). Seat az184 r220 yaw pi
+(S-axis planar-exhibit family: zeno r180 pi, borromean r190 pi, galton
+r210 pi, census-verified this tick); form-CENTER on axis point
+(center-corrected CX +1.605 CZ -0.11, pitfall-10). Entity POS
+(-13.741424223707566, -0.0009827309308175281, 219.35409105716133).
+Terrain 9pt spread 8.5mm dead flat, PY=lowest. Scan LAWFUL both yaw
+candidates (record): worst solid galton +9.13 (law 1.4), film +126.03
+(kochgarden, law 4.0), walk +148.30 (approach-ne-lane-002, law 3.0),
+rim 220.0. next-place-struct125.ts hash-gated (sha match verified in
+run), upload store/4843ef8ae7093365.glb OK, spawn verb paced 600ms.
+PLACED_VERIFIED pos [-13.7414, -0.0010, 219.3541] yaw 3.1416 lib
+store/4843ef8ae7093365.glb comp {} census 318. Idempotent rerun REFUSED
+zero-verbs exit 1 (fresh-only form). Post-place census re-confirm: 318
+entities, exact tuple, lib hash-verified.
+
+BILL EYE-CHECK (standing once placed, from struct-124 contract, delivered
+this tick): walk the south mathematics walk past the bell of chance — a
+single iron rail rises dead straight from its stone socket, then learns to
+turn: each meter it bends a little more, the way a road eases you into a
+curve, until it is coiling around one brass bead it will never reach. The
+turns come faster and faster; the bead waits at the center, and after dark
+it is the only light there.
+
+NEXT: 126 — REFINEMENT tick (126%3==0): subject nx-struct-clothoid
+(deficit: material story — mast/struts share rail tone at 18m; fix: mast
+half-step darker, one material change, no geometry touch); full
+re-place discipline at exact current pose (comp bag empty — no comps to
+reapply), post-place tuple verify, idempotent refusal, census 318 stable.
