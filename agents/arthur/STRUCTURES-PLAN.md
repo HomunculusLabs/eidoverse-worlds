@@ -7674,3 +7674,21 @@ tube end-caps or peaucellier night (whichever higher deficit).
 
 Files: struct132-scan-gyroid.ts, struct132-terrain-gyroid.ts,
 next-place-struct132.ts (all tracked); plan append-only this tick.
+
+SURVEY-176 defect note (2026-09-09, read-only observer probe; owning-lane
+decode/execute law applies): nx-struct-gyroid first-native 18m read on LIVE
+served bytes ae002967331deea4 (upload sha da2a4b158a448caa, struct-131/132
+placement exact): IDENTITY FAIL + SILHOUETTE FAIL + VOID/HOLE FAIL
+(reads as curved cream panels with iron pipe edge-trim and two punched
+circular holes, NOT a periodic tunnel labyrinth; grounding PASS, bead
+PASS-marginal pixel-speck) - native gameplay 18m + front ~9m cross-check
+AGREE, both contradict the struct-131 ZAI fallback PASS-with-margins on the
+same 18m framing (native-vs-fallback contradiction, survey-77/78 class).
+Build facts honored: film+hems intentional (18 analytic curves), so the
+probe targets READ at distance, not geometry truth (pitfall-11 honored).
+Priority input for the queued tick-135 gyroid refine (already next refine
+candidate): if identity-at-18m is a design contract, tube end-caps alone
+will not cure it; consider thickened channel walls / merged film+tube
+single-material read. Evidence: reviews/survey176-slice/gyroid/ (gameplay
++ front + served-bytes). Severity: Sev 2 (identity read at distance on an
+otherwise grounded, structurally-true work).

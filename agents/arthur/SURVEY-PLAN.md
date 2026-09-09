@@ -9235,3 +9235,50 @@ observer read-only per interlane law. Expected next work: arrival-gated
 or lib flip lands. Zero ledger append (loop law 4), zero world
 mutations, zero uploads, zero verbs, zero comp edits, zero
 shared-budget use (D+0, E+0).
+
+## Judged index (survey-176)
+
+- survey-176 (2026-09-09, NATIVE, 18m gameplay + ~9m front cross-check,
+  live served bytes): ARRIVAL slice, one subject `nx-struct-gyroid`
+  (census 320 -> 321; struct-132 placement, survey-76 hilbert /
+  survey-79 dodecahedron arrival-slice precedent). Verdict DEFECT-Sev-2
+  probe routed to owning lane STRUCTURES-PLAN: IDENTITY FAIL +
+  SILHOUETTE FAIL + VOID/HOLE FAIL at 18m native gameplay (reads as
+  curved cream panels with iron pipe edge-trim + two punched circular
+  holes, not a periodic tunnel labyrinth; grounding PASS, bead
+  PASS-marginal pixel-speck). Front cross-check AGREES and sharpens:
+  sheets genuinely double-curved (real improvement over flat-panel read)
+  but read as 2-3 discrete trimmed slabs + applied piping + isolated
+  punched cutouts showing sky, no surface-behind-surface. Native verdict
+  CONTRADICTS struct-131's ZAI fallback PASS-with-margins at the same
+  18m framing (native-vs-fallback contradiction class, survey-77/78;
+  Bill's standing law: native outranks fallback, restored-vision
+  re-judgment owed on fallback-judged findings). Build facts honored:
+  film+hems intentional per struct-131/132 records (18 analytic hem
+  curves, MC film), so probe targets READ quality at distance, not
+  geometry truth (pitfall-11 honored — decode already proven by owner,
+  23/23). Priority input for the queued tick-135 gyroid refine: if
+  identity-at-18m is a design contract, tube end-caps alone will not
+  cure it; consider thickened channel walls / merged film+tube
+  single-material read. Severity Sev 2: identity read at distance on an
+  otherwise grounded, structurally-true work. Native 2/2 judgment calls
+  (gameplay + front), zero 1210, zero ZAI fallback — 7th consecutive
+  all-native window. Evidence: reviews/survey176-slice/gyroid/ (gameplay
+  + front + served-bytes). ONE note routed (STRUCTURES-PLAN defect
+  note, grep-verified 0 pre-existing open note); ZERO IMPROVE-PLAN
+  candidate row (owner-queued tick-135 entry exists — law: no duplicate
+  candidate when owner queue names the object). Census 321==321 vs
+  committed sweep baseline 5014e49a (320): exactly ONE arrival
+  nx-struct-gyroid pos [-16.741554,-0.019981,239.415372] yaw pi lib
+  da2a4b158a448caa ledger-exact vs struct-132 PLACED_VERIFIED, 0
+  departures, 0 field diffs, 0 lib flips across all 320 shared ids;
+  baseline file /tmp/survey176-census.json (94990B, HTTP 200).
+  Diff tool survey176-census-diff.py tracked this tick. Gate
+  tick-start: FIRST RUN FAIL ledger law EXACT 2370771 == 2370770 -
+  caught sibling struct-132 mid-ledger-repair between its two writes
+  (pair correction 0->1 landed, total bump not yet committed); paced
+  25s retry landed ALL PASS real exit 0 at new HEAD ef5c9849 (sibling
+  advance absorbed, struct-132 committed its D+1 self-catch). Gate
+  pre-commit re-run: ALL PASS real exit 0, no further sibling advance.
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
