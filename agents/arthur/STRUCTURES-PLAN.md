@@ -6478,3 +6478,51 @@ a single tall stone stands, but not whole: it is split into eleven
 angular pieces, sheared apart along invisible lines, the dark cuts
 between them open to the sky. Where each piece carries its mark: a bead
 of brass, the seed that claimed it. Eleven territories, one stone.
+## struct-114 (2026-09-08): R10-14 THE SHATTERED MONOLITH — PLACED (executing
+## struct-113's deferred contract; night re-judge paid first)
+
+Cadence 114%3==0 nominal refine slot — refine pool EMPTY fresh (no standing
+debts; the only open item was this placement). Gate ALL_PINS_OK 15/15 real
+exit 0 at tick-start (bun, no pipe) AND re-run immediately pre-mutation,
+chained AND so the placer could not run on a red gate.
+
+NIGHT RE-JUDGE PAID (the debt from struct-113): judged NATIVE under the
+corrected single-camera contract — 3 prominent + 1 edge bead at
+(418,198)/(542,241)/(453,287)/(331,321) = the physically correct near-face
+count from one camera (beads ring the whole form; far-side beads are
+occluded by stone BY DESIGN — walk-around discovery); crisp quiet points,
+zero bloom/glare/spill; dark silhouette faintly readable against sky and
+ground (tall split form, vertical crack, facet seams); no stray light or
+detached dots. NIGHT PASS — all three view classes (front / gameplay 18m /
+night) now NATIVE PASS on the exact judged bytes.
+
+DECODE re-verified fresh at tick start on the exact on-disk bytes: ALL PASS
+(voronoi law 136/136 worst 2.4e-7; bead law 11/11 worst 0.0e+0; envelope
+5.36x6.40x3.82; 11 beads; base on grade 0.0000).
+
+PLACEMENT: entity nx-struct-voronoi, sha 00b94c926392cece (full
+00b94c926392cece92e510bf4383159bd3ac392a597005763886efe7c032e5ea), seat
+az184 r160 (-11.16, -0.04643, 159.61) yaw 0 — the S mathematics axis at its
+own 10m cadence: dial r71 → koch r90 → hilbert r100 → dodeca r110 → wall
+r120 → tesseract r130 → lorenz r140 → chladni r150 → VORONOI r160: the
+fractured stone past the standing wave. Scan fresh-312 lawful (SAT worst
+nx-struct-chladni +7.57 placer-side center-corrected, law 1.4; film +64.73
+kochgarden; walk +86.9); terrain 9pt spread 1.5cm, PY = lowest corner-sw
+-0.046433 (base course on grade); upload store/00b94c926392cece.glb zero
+429s; 1 spawn verb; PLACED_VERIFIED exact tuple; census 312→313, corroborated
+by independent read-back (id/pos/yaw/scale/lib/comp line-for-line); fresh-only
+rerun REFUSED zero verbs real exit 1. Folly class — no entry advertised, no
+walk owed (chladni precedent). Comps {}: bead emissive is a KEEP material
+inside the GLB.
+
+NEXT: 115%3==1 build tick — R10-15 form-ledger gap derivation fresh
+(grep the plans for the next absent family) unless survey routes reopen
+rows.
+
+BILL EYE-CHECK (standing): walk the south mathematics axis to its new
+terminus — past the labyrinth, the gem, the wall, the hanging cube, the
+frozen storm, the plate where the sand settled — and where the meadow
+opens, a tall stone stands, but not whole: split into eleven angular
+pieces sheared apart along invisible lines, dark cuts open to the sky,
+each piece carrying its brass bead, the seed that claimed it. Eleven
+territories, one stone.
