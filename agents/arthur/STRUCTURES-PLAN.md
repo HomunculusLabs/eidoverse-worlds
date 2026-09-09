@@ -7088,3 +7088,82 @@ Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
 shared-budget use. Folly class: no walk owed. NEXT: 124%3==1 build tick
 — R10-19 form-ledger gap derivation fresh (or the front/gameplay native
 upgrade if provider stabilizes, per flap law).
+
+## struct-124 (2026-09-09): R10-19 THE CLOTHOID SPIRAL authored+built+decoded
+## ALL PASS 13/13 — front judged NATIVE PASS; judged(remaining)/sited/placed
+## DEFERRED to 125 (run budget, struct-121 precedent — fail-closed)
+
+Cadence 124%3==1 BUILD tick. Shard empty fresh (0 OPEN nx-struct rows).
+Refine pool empty fresh. Gate ALL PASS real exit 0 tick-start ddfe3a92
+(bun, no pipe).
+
+DEBT PAID FIRST (flap law — provider up): brachistochrone front+gameplay
+NATIVE re-judge COMPLETED on pinned bytes reviews/struct119-brachistochrone/
+— front 3/4 PASS with item-4 a judge-question artifact (dip pier is designed
+cycloid-only support, struct-119 decode 16/16; decode outranks my misphrased
+question, disclosed); gameplay 4/4 PASS with distance-residuals recorded
+(pitfall-13 class). Night paid struct-123. NO native debt remains on
+brachistochrone.
+
+CONCEPT (written before build): the form ledger's missing TRANSITION-CURVE
+family (ledger grep fresh: clothoid 0, euler spiral 0, cornu 0, loxodrome 0;
+near-misses reuleaux/hyperboloid/pseudosphere STANDING, different curves).
+ONE IDEA: THE ROAD THAT LEARNS TO TURN — one iron rail rises dead-straight
+from its stone socket, curvature grows linear in distance run (the highway
+transition curve), coils ever tighter around a brass bead it approaches
+forever and never reaches. One line, one mast, one bead (Judd). Folly class,
+static.
+
+BUILD: mkv3-clothoidspiral.ts — Fresnel integrals (Simpson n=4000, landmark
+law <1e-3), A=4.911 fit to height 4.55, T_MAX 3.5 (3.06 turns); 5 apices
+radii [0.87,0.69,0.59,0.52,0.47] monotone; iron mast r0.06 at z=-0.24 with
+3 strut arms at alternating apices + terminus catch bar (added after honest
+float-gap review of v1); stone plinth+socket; brass bead KEEP glow_cl_1
+(struct-82 lineage). Honest build arc: straight-law tolerance mis-derived
+twice (true clothoid lateral ∝ s³: 2.6mm@0.5m, 21.6mm@1.0m — bands fixed,
+form unchanged); plinth overextension caught by width law (coil cantilevers
+by design now). sha 4843ef8ae7093365b695e823b6f96b11356ad636ca90a641fb59d1
+bc2887b7d9 x2 deterministic (mtime verified). Envelope 3.91x4.60x0.72
+y[0..4.60] x[-0.35..3.56] z[-0.47..0.25] (bbox NOT origin-centered —
+pitfall-10 applies to scan/placer). Nodes 3 (iron + stone + KEEP glow).
+
+DECODE struct124-decode-clothoidspiral.ts ALL PASS 13/13 exit 0 —
+independent byte replica, no mk imports: every iron vertex (22223) within
+RAIL_R+3mm of a replica primitive (rail tube via independent Simpson
+centerline / mast / struts / stem / catch); 167 arc+apex+endpoint probes
+covered; rise centerline straight; apices 5 monotone; bead node translation
+= limit point to 1e-9; emissive linear-space law; stone on grade, socket
+top exact; envelope; NaN 0. FOUR REPLICA BUGS caught RED->GREEN, disclosed
+(emissive sRGB-vs-linear compare; tube-surface vs centerline; sphere
+vertex-centroid vs node translation; skipped node TRS in envelope —
+pitfall-4). Zero real defects.
+
+JUDGED: front NATIVE PASS 4/4 (concept reads instantly; monotone tightening
+visible both flanks; bead centered with clearance moat — approach-forever
+read; structurally honest). Margins recorded: ~2.5 turns resolvable at front
+distance (small sample for monotone trend); strut story rests on the visible
+mast-top catch + rail-mast crossings; bead slightly high/left of optical
+centroid (asymmetric approach is the true math — S oscillation). gameplay
+18m + night NOT YET JUDGED (run budget) — deferred, native-first per flap
+law.
+
+DEFERRED CONTRACT for 125 (125%3==2 build slot, deferred-contract
+precedence struct-113/117/120/122):
+1. Judge gameplay 18m + night on the pinned bytes (NATIVE first, flap law).
+2. Site: az184 r220, S mathematics axis extends past galton r210 (dial r71
+   -> ... -> brachistochrone r200 -> galton r210 -> CLOTHOID r220 — the road
+   that learns to turn, past order-out-of-chaos). Yaw-pi face-on family law
+   (zeno/borromean/galton precedent) — the rise+coil plane faces the village
+   approach, socket village-side. Scan fresh census, center-corrected
+   (bbox x[-0.35..3.56] z[-0.47..0.25]), film-guarded, law 1.4 + terrain 9pt
+   + hash-gated fresh-only placer next-place-struct124.ts.
+3. PLACED_VERIFIED tuple + idempotent rerun REFUSED; census 317->318.
+
+BILL EYE-CHECK (one, standing once placed): walk the south mathematics walk
+past the bell of chance — a single iron rail rises dead straight from its
+stone socket, then learns to turn: each meter it bends a little more, the
+way a road eases you into a curve, until it is coiling around one brass
+bead it will never reach. The turns come faster and faster; the bead waits
+at the center, and after dark it is the only light there.
+
+NEXT: 125 — execute the deferred contract end-to-end.
