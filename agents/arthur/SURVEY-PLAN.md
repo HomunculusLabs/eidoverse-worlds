@@ -8089,3 +8089,59 @@ work: none owed — arrival-gated; next slice when a census arrival
 lands (s138/s148 precedent). Zero ledger append (loop law 4 — append
 only when routing), zero world mutations, zero uploads, zero verbs,
 zero comp edits, zero shared-budget use (D+0, E+0).
+## Judged index (survey-150)
+
+ARRIVAL-GATED SLICE fifth of era — LIB FLIP judged, verdict CLEAN. Census
+318 == 318 (280 thing + 38 light, 0 dup ids) with exactly ONE content
+change by explicit set-diff (/tmp/survey150-census-diff.py: 0 arrivals /
+0 departures / 1 lib flip / 0 pos / 0 yaw / 0 comp / 0 kind / 0 scale /
+0 bbox across all 318 shared ids): nx-struct-clothoid lib 4843ef8ae7093365
+-> 120448255ce67193, pose/comp/kind unchanged = struct-126 REFINEMENT
+re-place @ HEAD 5f9fc395 (ledger-exact: trestle material split 0.60x
+same-slate-hue, PLACED_VERIFIED tuple identical). Schema shape NOTE:
+this tick's /geom fetch carries the SAME fields as the s148 baseline
+(bbox/comp/compKeys/id/kind/lib/pos/scale/yaw, 211019 B) — the s149
+parent+tris 94118 B shape was TRANSIENT sibling server WIP, did not
+recur. New content baseline = /tmp/survey150-census.json (318, md5
+cb5a73a9, clothoid lib current). Judge-owed per s148 precedent (new
+live bytes on a judged object): FETCH curl UA HTTP 206 107604 B served
+sha16 f9e77f9c (upload pin 12044825; struct-104 DRACO re-encode law
+normal); CHASSIS review-model-draco.ts 8 views exit 0, envelope
+3.91x4.60x0.72 byte-consistent with struct-124/125 record (geometry
+untouched), nodes 4 (trestle now separate clothoid_2), KEEP bead
+glow_cl_1 preserved from SERVED bytes. JUDGE NATIVE 3/3 calls zero
+1210 zero ZAI: gameplay 4/4 PASS (identity instant, silhouette seated,
+MATERIAL SEPARATION PASS-marginal — trestle darker slate vs lighter
+rail, subtle but present at 18m, margin recorded not routed: the
+refine's targeted class moved FAIL->PASS, corroborates struct-126
+NATIVE 3/3 from independent live bytes), night 3/3 PASS (bead sole
+quiet warm point zero bloom/leak, silhouette traceable), front 3/3
+PASS (tangent-continuous transition, turn gaps shrink 55->40->33 px
+monotone, mast/strut contacts seated no float, no z-fight). No note
+routed (CLEAN + margin disclosed), no candidate row (never-duplicate
+law: refine subject already struct-owned and closed). Selection law
+fresh: SHARD EXECUTION 0, not-yet-re-judged 0, STATE-OPEN 0,
+pending-survey 0, improve parked verbatim (HOLD stands, line 1174),
+sole author homunculuslabs in last 30. Never-judged pool ZERO by set
+algebra (borromean, brachistochrone, galtonboard, clothoid markers
+live in THIS census — clothoid re-judged s150 on new bytes). Native-
+debt marks re-counted fresh case-sensitive line-count method:
+sierpinski PAID (78), hypar PAID s76 (56), ne-lane-002 corroborated +
+routed s76 (48), fifthbench struct-owned decode debt (76),
+wayside-0030 native dissent family-closure line (55) — each exactly
++1 vs s149 recorded counts (self-growth class), dispositions
+unchanged. Gate ALL PASS real exit 0 first-try at b05adf82 + RE-GATED
+ALL PASS real exit 0 at 5f9fc395 after the struct-126 mid-tick HEAD
+advance (epoch law; SURVEY paths untouched by it). Tag derived fresh
+from ledger max: survey entries max 147, s148/s149 no-append per loop
+law 4, this tick CLEAN no routing -> no append, plan-block sequence
+150. Foreign working-tree dirt at read = sibling lanes in flight
+(windmill overhaul, cabin-overhaul, carousel-horse-prototype,
+client/server sources, debug-bower scripts, core-paths GLB + review
+json, HERO-ASSET plan, next-place-carousel) — zero survey paths, zero
+staging contact, observer read-only per interlane law. Expected next
+work: none owed — arrival-gated; next slice when a census arrival or
+lib flip lands (s138/s148/s150 precedent). Zero ledger append (loop
+law 4 — append only when routing), zero world mutations, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0).
