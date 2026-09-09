@@ -7023,3 +7023,67 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   routed, zero ledger append (loop law 4 — append only when routing),
   zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+- survey-130 (2026-09-08 23:1x EDT fresh date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — ARRIVAL-GATED SLICE, second of the
+  arrival-gated era: census epoch MOVED 315->316, ONE arrival judged):
+  census fresh 316 via next-live-census.ts (/tmp/survey130-census.json,
+  209732B, md5 ed2db1fa), set-diff vs /tmp/survey129-census.json baseline
+  (315, md5 b048d886): arrivals = ONE `nx-struct-brachistochrone`
+  (pos [-13.9513,-0.0066,195.8128] yaw -pi/2, lib store/f678c069e84e51a2,
+  scale 1, comp {}), departures 0, lib flips 0, pos moves 0 across all 315
+  shared ids, lights 38 — s119-derived fully-judged 313-subset + borromean
+  CLEAN s124 stay covered byte-stable, so the never-judged pool = the
+  arrival itself (loop law 3 arrival-gated, not manufactured). Selection
+  law fresh: SHARD backlog empty (heading grep exit 1 un-piped), improve
+  parked improve-71 48/48 terminal (line 1174 'HOLD stands'), not-yet-
+  re-judged markers 0 (grep exit 1 un-piped), zero OPEN rows. ARRIVAL
+  CLASSIFIED: struct domain = struct-120 @ 3fd272d7 executing struct-119's
+  deferred placement (az184 r200 S mathematics axis; struct-120 judged it
+  ZAI FALLBACK with native hard down — native re-judge debt named in its
+  own ledger line). FETCH: curl UA HTTP 200 33832B from /library/store/;
+  served sha16 1b448fc5 (upload pin f678c069e8 — served != upload is the
+  struct-104 DRACO re-encode law, normal transform). CHASSIS: review-
+  model-draco.ts 8 views exit 0; envelope 8.74x4.02x2.14 = struct-119's
+  committed decode contract EXACT; 11 nodes / 10 draw meshes / named
+  [brachistochrone_0/1/2, glow_brr_1..7] — the 7-glow-bead contract
+  named-node-verified (5 dark beads merged into material buckets per
+  merge law). JUDGE: NATIVE with one 1210 on the first gameplay call —
+  ONE paced 20s retry per loop law, then UP: three native judgments
+  (gameplay 18m + night + front cross-check per s78's 18m+1-front law).
+  Gameplay 18m read flagged five candidate defects: (a) beads no visible
+  glow at day; (b) dark beads invisible, count 10 vs 12; (c) curve
+  midpoint reads floating (thin stub); (d) rail/stone junction hairline
+  gap; (e) finish shows no basin concavity. DISCRIMINATORS: NIGHT frame
+  OVERTURNS (a) — exactly 7/7 warm beads as distinct quiet points (no
+  bloom/glare), zero detached glow orbs, zero wrong colors, ramp+chord
+  faintly readable — day-suppression class, same artifact family the s124
+  arc saw on emissive; FRONT cross-check OVERTURNS (c)+(d) — stub visible
+  as deliberate support at the cycloid low point, both rails terminate
+  INTO the finish stone with no gap, full load path continuous, zero
+  floating/broken/disconnected elements; (e) basin-concavity is pitfall-13
+  framing-limited detail (finish frustum reads as pier at 18m — sub-
+  fraction-of-frame interior detail, not a geometry defect); (b) dark-bead
+  day resolvability = labyrinth-0025 clean-with-margin precedent class,
+  margin note only, no escalation. VERDICT: `nx-struct-brachistochrone`
+  CLEAN (NATIVE 3/3 frames, day flags dissolved on discriminators) —
+  corroborates struct-120's ZAI 4/4+4/4+4/4 PASS and clears its named
+  native re-judge debt from the survey side (owner decode 16/16 stands).
+  Zero notes routed (CLEAN verdict — no owning-plan write, no IMPROVE-PLAN
+  candidate row). EPOCH: HEAD 404ec12e (survey-129, gate 1) -> 3fd272d7
+  (struct-120, the arrival itself — corroborates this tick's census
+  tuple-for-tuple) -> 0d201d15 (sweep-160 sibling observer, same arrival
+  tuple-matched, 315==315 quiet epochs at both of its captures) — re-gate
+  ALL PASS 99 PASS lines real exit 0 at 0d201d15 (/tmp/survey130-regate.txt,
+  zero FAIL lines; first gate also ALL PASS 99 exit 0 at 404ec12e; the one
+  case-insensitive fail hit in gate 1 = quoted-prose class, inspected).
+  Native-debt surface unchanged (sierpinski/hypar/ne-lane-002/fifthbench/
+  wayside-0030 dispositions stand; brachistochrone debt cleared this tick).
+  Foreign working-tree dirt at read = sibling lanes in flight (windmill/
+  city4/carousel/moon-moth domains, HERO-ASSET plan, cabin-overhaul +
+  carousel-horse-prototype dirs, client/server sources, debug-bower
+  scripts) — zero survey paths, index clean, zero staging contact.
+  Append chassis PRE+POST asserted insert-only. New census baseline
+  /tmp/survey130-census.json (316). Zero notes routed, zero ledger append
+  (loop law 4 — append only when routing), zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
