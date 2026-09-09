@@ -7331,3 +7331,81 @@ INCIDENT DISCLOSED: write_file on STRUCTURES-PLAN.md REPLACED the whole
 immediately via wc/git diff, restored byte-exact from HEAD (file was
 clean at tick start — zero data loss, clean diff verified post-restore).
 Next plan write must be APPEND-ONLY (cat >> / patch), never write_file.
+
+## struct-128 (2026-09-09): R10-20 PEAUCELLIER BUILD COMPLETE + ACCEPTED — SITING BLOCKED at contract seat (zeno pinch), placement deferred to next tick
+
+Cadence 128%3==2 BUILD slot; executed the struct-127 deferred contract
+end-to-end EXCEPT final placement (scan fail-closed). Gate ALL PASS real
+exit 0 tick-start 1988e09d (struct-127 HEAD). Ledger max fresh = 127 →
+this tick struct-128. Shard empty fresh (14/14 nx-struct rows EXECUTED,
+grep this tick). Refine pool empty (clothoid DONE struct-126).
+
+BUILD: mkv3-peaucellier.ts completed from stub. THREE stub defects fixed
+beyond the two named in the deferred contract: (1) TDZ D-before-use,
+(2) five-bar truncation + `BR,0` typo → all 7 bars, (3) line-19 comment
+missing its `//` prefix (syntax error), and (4) the stub bar() rotation
+SIGN BUG — atan2(d.x,d.y) MIRRORS every non-vertical bar (R_z(+Y)=(−sin,
+cos)); caught by decode RED before any render, fixed to atan2(−d.x,d.y).
+Also: the full-sweep straight-line law needed a dead-point guard (θ=90°,
+crank pin on the fixed pivot — the singular pass-through; P is the point
+at infinity, no finite y; 360/361 samples exact, variance <1e-9, forms
+agree 2.8e-14). Frozen pose = struct-127's verified quadruple exactly:
+θ-from-downward-vertical convention (standard −35°), B=(1.498,1.072)
+P=(0.793,2.427) U=(−0.945,0.661) V=(3.236,2.838).
+
+ACCEPTED BYTES sha f66494fa3ffb9ff8445194b11e512d18b412f5c958a4a13fb
+138fcabe4cdb34e (village_peaucellier3.glb), deterministic ×2. Form: 7-bar
+iron web (kite O-U/O-V L=3.422, rhombus ℓ=2.478, crank R=1.829) between
+pivots O(0,3.95)/A(0,2.121) on a stone tower behind the plane (z −0.45),
+joint bosses at all pin joints, drawn crank-circle torus (passes exactly
+through O — asserted), the PRODUCT: 7m 0.60x-dim horizontal rail at the
+exact traced line y=2.427 through the web on two slender stands, brass
+bead glow_pc_1 at P (emissive 0x9a7030@0.85, struct-82 lineage). texMat
+lanes peau_stone/peau_iron/peau_line (struct-38/126 laws); 4 nodes
+(3 texMat buckets + 1 KEEP glow); envelope 7.00x4.20x1.05 y[0..4.20].
+
+DECODE: struct128-decode-peaucellier.ts (independent replica, no mk
+imports) ALL PASS 20/20 exit 0 on the accepted bytes: pinned sha, node
+census, texMat lanes, brass emissive linear-export, linkage law (1920
+iron verts, 0 unexplained — every vert on a replica primitive), coverage
+(37 probes 0 missed; end-probe law: CylinderGeometry heightSegments=1
+carries only end-ring+cap verts), straight-line law from bytes (rail IS
+y=LINE_Y horizontal, spans the designed reach, carries P, outreaches the
+web both sides), inversion law (|OU|=|OV|=L, |UB|=|VB|=|UP|=|VP|=ℓ,
+|AB|=R, |OB|·|OP|=k²=5.570, P.y=LINE_Y — joints ARE the machine's),
+glow-at-P (node translation 0.0e0 exact), stone on grade, tower behind
+plane (max z −0.19), envelope, no NaN. Chassis lessons encoded: apply
+node.translation (pitfall 4); sphere centroid pole-skews ~4mm — judge
+placement by node translation; explicit per-group cloud routing (equal
+radii make value-based routing ambiguous).
+
+JUDGED (native 1210 ×2 + paced retry burned — provider DOWN all tick,
+disclosed; ZAI fallback): gameplay 18m 5/5 PASS (web reads connected
+machine with pin joints; rail reads product line crossing web; bead
+sole warm point "pen touching the line"; silhouette = web+circle+line);
+micro-notes triaged at source: bead-at-apex judge misread REFUTED by
+decode (bead IS at P on the line — the concept), circle-base graze
+REFUTED (bottom y0.292 vs plinth 0.14 = 15cm clear), rail-pierces-tower
+REFUTED in 3D (rail z ±0.055 vs tower z ≤ −0.13, 7.5cm clear); ONE REAL
+defect ACCEPTED: left stand hidden behind the tower's front-view
+silhouette → cantilever read. FIX: stand −1.35 → −2.0 (clear of tower
+x∈[−1.92,−1.28]), plinth widened to carry the rail tip. Re-render judged:
+stand-fix PASS/PASS (stand visible left of tower, lands on slab, no new
+defects); night 3/3 PASS (one quiet warm bead, silhouette legible, zero
+stray glow/spill). Native re-judge debt on gameplay/night DISCLOSED.
+
+SITING (scan fail-closed, struct128-scan-peaucellier.ts, fresh census
+318): contract seat az184 r170 yaw-pi BLOCKED — nx-struct-zeno (r180,
+same axis) true radial half ≈8.38m leaves SAT gap 1.07 (law 1.4). The
+[20m HOLE] is NOT empty at depth 10m for a 7m-wide work; zeno is a much
+deeper exhibit than the 10m-cadence assumption. CAND_B yaw-0 identical
+(zeno depth is yaw-symmetric). NEXT TICK: re-seat with scan-first —
+candidates az184 r168 (dz 12 → projected gap 3.1 vs zeno; verify voronoi
+side) or an off-axis interstice; rerun scan + terrain (PY −0.0464 at
+r170 is indicative only), then placer + upload/spawn nx-struct-
+peaucellier, census 318→319.
+
+Files: agents/arthur/assets/mkv3-peaucellier.ts (durable source, ignored
+dir — staged git add -f), struct128-decode-peaucellier.ts, struct128-
+scan-peaucellier.ts, struct128-terrain-peaucellier.ts (tracked);
+reviews/struct128-peaucellier/ (ignored). Plan append-only this tick.
