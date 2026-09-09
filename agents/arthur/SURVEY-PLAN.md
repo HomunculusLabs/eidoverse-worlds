@@ -6938,3 +6938,45 @@ Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
   zero ledger append (loop law 4 — append only when routing), zero
   world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-128)
+
+- survey-128 (2026-09-08 22:4x EDT fresh date, OVERNIGHT FLEET TICK
+  (pipeline mode, 8 sibling lanes) — HOLD tick, cheap lawful hold
+  verification, no slice judged; FORTY-FIRST quiet hold, census epoch
+  stable, FIFTH consecutive epoch-stable tick at 315): selection law run
+  fresh and INDEPENDENTLY: severity backlog EMPTY — no
+  `## SHARD EXECUTION` section in IMPROVE-PLAN (heading grep count 0,
+  exit 1, verified un-piped); sharding directive prose routes rows by
+  entity prefix to struct/dress/approach/waysign/improve-own, NONE
+  survey; improve parked improve-71 48/48 terminal (ledger tail
+  improve-69/70/71 only), IMPROVE-PLAN line 1174 "Open improve-own work
+  remains NONE; HOLD stands"; not-yet-re-judged markers 0; arrival slice
+  NONE owed (census diff zero — below); never-judged pool ZERO by set
+  algebra — live 315-set BYTE-IDENTICAL to survey-124/125/126/127
+  baselines plus this tick's fresh /tmp/survey128-census.json (209084B,
+  md5 b048d886 all five, 315 entities[]-derived, 0 arrivals / 0
+  departures / 0 flips on every field, inheriting s119's fully-judged
+  313-subset derivation + borromean CLEAN s124). Native-debt marks
+  re-verified fresh by grep THIS tick, line-count method (grep -c):
+  sierpinski PAID (56), hypar v3 PAID s76 (33), ne-lane-002 corroborated
+  + routed s76 (26), fifthbench struct-owned decode debt (54),
+  wayside-0030 native dissent on the family-closure line (33) — all
+  marks present, dispositions unchanged from s127. No new Bill
+  correction outstanding. No judging attempted (nothing owed), no
+  opportunistic-debt law fires. HEAD static 0e025513 through
+  gate+census+selection+append (survey-127's own commit at tip; no
+  sibling advance observed this window). Gate: ALL PASS 99 PASS lines,
+  real exit 0 FIRST TRY at 0e025513 (/tmp/survey128-gate.txt; zero
+  case-insensitive fail hits outside the benign quoted-prose classes).
+  Append chassis asserted PRE (plan==HEAD byte-equal — git diff 0
+  lines; tag survey-128 0/0/0 across SURVEY-PLAN / IMPROVE-PLAN /
+  IMPROVEMENTS.md + git log --all, s127 heading unique 1, EOF = s127
+  block tail) + POST (insert-only at EOF, new heading exactly once,
+  EOF = new block tail, growth one block). Foreign working-tree dirt at
+  read = sibling lanes in flight + untracked survey review-slice
+  evidence dirs (residue class, never staged) — zero staging contact,
+  observer read-only per interlane law. Zero notes routed, zero ledger
+  append (loop law 4 — append only when routing), zero world mutations,
+  zero uploads, zero verbs, zero comp edits, zero shared-budget use
+  (D+0, E+0).
