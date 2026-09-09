@@ -7560,3 +7560,52 @@ git add -f), struct130-decode-harmonickiss.ts, struct130-scan-
 harmonickiss.ts, struct130-terrain-harmonickiss.ts, next-place-
 struct130.ts (all tracked); reviews/struct130-harmonickiss/ (ignored).
 Plan append-only this tick (cat >>, struct-127 incident law honored).
+
+## struct-131 (2026-09-09): R10-22 THE GYROID — built, decoded ALL PASS, judged (ZAI fallback, native down, debt); PLACEMENT DEFERRED to next tick (run budget)
+
+Cadence 131%3==2 BUILD slot. Gate ALL PASS real exit 0 tick-start 1be6774f
+(struct-130 HEAD). Ledger max fresh = 130 -> this tick struct-131. Shard empty
+fresh (no SHARD EXECUTION heading; 0 OPEN nx-struct rows). Form-gap grep fresh:
+gyroid 1/1/0 prose-only — first-named open family, now built.
+
+CONCEPT: A PIECE OF THE INFINITE FILM, CUT FROM THE CONTINUUM. One period
+cell of Schoen's gyroid (implicit sin ax cos ay + sin ay cos az + sin az
+cos ax = 0, cell [-2,2]^3): bone soap-film partition whose cut faces open
+the two labyrinths as mouths; iron hem tubes traced along the TRUE analytic
+face curves; stone slab; one brass bead at the cell heart (0,2.14,0) where
+F=0 exactly — glow_gy_1, kiss/peaucellier lineage. S-walk cadence r230 kiss
+-> r240 gyroid (intended seat; not yet scanned).
+
+BUILD mkv3-gyroid.ts: MC RES 64 overscan 1.125 -> field F=0 -> clip to cell
+(Sutherland-Hodgman) = film 100,980 verts / 33,660 tris on the exact cell;
+18 hem curves (3/face x 6, MEASURED — my [10,16] guess was wrong, corrected
+to exact 18; ROOT_RANGE fixed to the legal face square 2.0, not 2.04 — hem
+past the clip would float), tubes r0.05 capped 128 segs; envelope law
+derives 4.60x4.19x4.60 (top hem crests its tube radius — honest). ACCEPTED
+sha da2a4b158a448caa562d00a339ef7df82b27326fc9d093615741e86533515d9f
+village_gyroid3.glb deterministic x2. Nodes 4 (gy_bone/gy_iron/gy_stone +
+KEEP glow_gy_1).
+
+DECODE struct131-decode-gyroid.ts ALL PASS 23/23 exit 0 (independent
+replica, no mk imports): film law 0/100,980 off-surface (worst |F| 0.0034),
+clip 0 outside, 6/6 faces cut, iron 0/20,898 off-plane, hem coverage 0/384
+missed (worst 0.053 = tube ON curve), bead at heart exact, slab/grade/
+origin-center/NaN-0.
+
+JUDGED: native 1210 x2 + paced retry — provider DOWN this window, disclosed,
+debt carries. ZAI fallback: gameplay 18m PASS-with-margins (deliberate
+mathematical monument, grounded, no floats; margins: left-panel flatness
+read, bottom tube terminus verify, plinth thin at glancing angles); close
+front harsh-fail findings DECODE-FALSIFIED as probes (claimed circular
+punched holes = the z/y-face cut mouths, analytically true curves; claimed
+detached tube = decode-proven tube centerlines within 0.053 of the exact
+cut curve; "coil on slab" = the bottom-face hem, real). REAL accepted
+residual: open tube end-caps can read dead-ending near cube edges (cap
+closure or slight extension into neighbor hems = next refine candidate).
+
+NOT DONE this tick (budget): scan/terrain/placer/upload/spawn. NEXT TICK:
+struct129-scan chassis adapted az184 r240 (10m cadence past kiss r230),
+terrain at final pose, hash-gated placer nx-struct-gyroid, census 320->321.
+
+Files: mkv3-gyroid.ts (ignored dir, staged -f), struct131-decode-gyroid.ts
+(tracked); reviews/struct131-gyroid/ (ignored). Plan append-only.
