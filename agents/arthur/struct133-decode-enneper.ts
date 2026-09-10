@@ -1,25 +1,39 @@
 // struct133-decode-enneper.ts — decode audit of village_enneper3.glb
-// (struct-133 build tick, R10-23 THE ENNEPER). Verifies from BYTES via an
-// INDEPENDENT replica (no mk imports — struct-119/122/124/128/130/131 law):
+// (struct-133 build tick, R10-23 THE ENNEPER; v2 laws struct-135; v3 laws
+// struct-139 — composition rotation: pinwheel face VERTICAL, crossing axis
+// HORIZONTAL). Verifies from BYTES via an INDEPENDENT replica (no mk imports
+// — struct-119/122/124/128/130/131 law):
 //   (a) pinned sha; node census 4 (3 texMat buckets ep_bone/ep_iron/ep_stone
 //       + 1 KEEP glow_ep_1); brass emissive exported linear;
 //   (b) FILM LAW (parametric form): every bone vertex, mapped back to the
 //       form frame, is recovered by Gauss-Newton parameter inversion to
-//       within 0.5mm of X(u,v) for some (u,v) INSIDE the classical disk
-//       u^2+v^2 <= 3 (+1e-3);
-//   (c) CROSSING LAW: bone verts exist within 1mm of BOTH self-intersection
-//       axis points (form z=+-3 -> world y 0.14 / 6.14), from both parameter
-//       branches (>=2 distinct verts per crossing) — the sheets truly pass
-//       through the same points;
-//   (d) RIM LAW: every non-needle iron vertex lies within 0.052 (tube r
+//       within 0.5mm of X(u,v) for some (u,v) INSIDE the domain disk
+//       u^2+v^2 <= R_DOM^2 (+1e-3);
+//   (c) CROSSING LAW: bone verts exist within 3.5cm of BOTH self-intersection
+//       pole points (form (0,0,+-3) = world (+-3, LIFT, 0)), >=2 distinct
+//       verts per pole — the sheets truly pass through the same points;
+//   (d) RIM LAW: every rim-classified iron vertex lies within 0.052 (tube r
 //       0.05+2mm) of the analytic boundary B(t); every 4th analytic sample
-//       finds an iron vertex within 0.10 (no missing arc);
-//   (e) NEEDLE LAW: iron verts on the axis (|x|,|z| <= 0.08) span y 0..6.20
-//       continuously (pins BOTH crossings pole-to-pole);
-//   (f) BEAD LAW: exactly 1 KEEP glow node at (0, 3.14, 0) — X(0,0), the
-//       umbilic — emissive 0x9a7030 @0.85 linear;
-//   (g) STONE LAW: slab on grade, plan 5.8;
-//   (h) ENVELOPE: 5.80 x 6.20 x 5.80 origin-centered x/z; no NaN.
+//       finds an iron vertex within 0.10 (no missing arc, all-iron union);
+//   (e) AXLE LAW (v3): iron verts on the axle line (|wy-LIFT|<=0.085,
+//       |wz|<=0.085) span world x -4.5..+4.5 continuously — the crossing
+//       axis made structural, pinning both poles (world x=+-3);
+//   (e2) STANCHION LAW (v3): iron verts near BOTH stanchion axes
+//       (||wx|-4.5|<=0.32, wy<=LIFT-0.05) rise from pad band (wy<=0.25) to
+//       the axle (wy>=LIFT-0.10) — gravity-honest bearing, both sides;
+//   (f) BEAD LAW: exactly 1 KEEP glow node at (0, LIFT, 0) — X(0,0), the
+//       umbilic riding the axle center — emissive 0x9a7030 @0.85 linear;
+//   (f2) SEAM LAW: seam tubes (r 0.07, 2x v2 weight) lie on the traced
+//       self-intersection locus — >=99% sampled verts within 0.085, every
+//       locus point within 0.10 of a seam vert;
+//   (g) STONE LAW: slab on grade y 0..0.14, plan 9.7 x 8.5;
+//   (h) ENVELOPE: 9.70 x 8.15 x 8.50 origin-centered x/z; no NaN.
+// v3 world map: form (fx,fy,fz) -> world (fz, fx+LIFT, fy), LIFT=4.145.
+//   Inverse: fx=wy-LIFT, fy=wz, fz=wx.
+// Iron classification order (disclosed): axle -> stanchion -> seam -> rim.
+//   Boundary bleed: rim verts with wx>4.18 && wy<LIFT-0.05 can fall into the
+//   stanchion class (|wx-4.5|<0.32) and skip the B-distance check — a tiny
+//   near-tip arc, disclosed; rim COVERAGE (all-iron) still covers them.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 const ROOT = "/Users/t3rpz/projects/eidoverse-worlds";
@@ -44,21 +58,22 @@ const va = (ai: number): Float32Array => {
 };
 
 // ---- independent Enneper replica (fresh derivation, NO mk imports) ------------------------------
-// struct-135 v2 laws: R_DOMAIN=2.05 (past the self-intersection onset),
-// Y_OFF=4.44, seams on the traced crossing locus.
-const S3 = Math.sqrt(3), Y_OFF = 4.44, R_DOM = 2.05;
+// v3 laws: R_DOMAIN=2.05 (past the self-intersection onset), LIFT=4.145
+// (struct-138 authored law: hem bottom 0.1395 kisses slab top 0.14), seams on
+// the traced crossing locus, axle horizontal on world x.
+const S3 = Math.sqrt(3), LIFT = 4.145, R_DOM = 2.05;
 const X = (u: number, v: number): [number, number, number] =>
     [u - (u ** 3) / 3 + u * v * v, v - (v ** 3) / 3 + v * u * u, u * u - v * v];
 const Xu = (u: number, v: number): [number, number, number] => [1 - u * u + v * v, 2 * u * v, 2 * u];
 const Xv = (u: number, v: number): [number, number, number] => [2 * u * v, 1 - v * v + u * u, -2 * v];
-// world (wx,wy,wz) -> form (fx, fy, fz): fx=wx, fy=wz, fz=wy-Y_OFF
-const toForm = (wx: number, wy: number, wz: number): [number, number, number] => [wx, wz, wy - Y_OFF];
+// world (wx,wy,wz) -> form (fx, fy, fz): fx=wy-LIFT, fy=wz, fz=wx
+const toForm = (wx: number, wy: number, wz: number): [number, number, number] => [wy - LIFT, wz, wx];
 // Gauss-Newton: find (u,v) with X(u,v) ~= p (form frame). Returns [u, v, resid].
 const coarse: Array<[number, number]> = [];
 for (let u = -2.05; u <= 2.05; u += 0.1) for (let v = -2.05; v <= 2.05; v += 0.1) if (u * u + v * v <= 4.22) coarse.push([u, v]);
 const gaussNewton = (p: [number, number, number]): { u: number; v: number; res: number } => {
     let best = { u: 0, v: 0, res: Infinity };
-    // coarse init: nearest 3 coarse points refined
+    // coarse init: nearest 2 coarse points refined
     const cands = coarse
         .map(([u, v]) => ({ u, v, d0: 0 }))
         .map(c => {
@@ -90,7 +105,7 @@ const gaussNewton = (p: [number, number, number]): { u: number; v: number; res: 
 };
 
 // ---- (a) sha + nodes + materials ---------------------------------------------------------------
-ck("pinned sha", sha === "9d1d3199c1777152ddfb454e9f3d21ce89a89ace0e96206beccdd81c71005e69", sha.slice(0, 16)); // struct-135 v2: widened domain + seams (was 18b36139 v1 / ba17a712 origin)
+ck("pinned sha", sha === "a4880b1a4be0f309131d8ee9a239de035e6c7b9228b3541bbd68250a336b489a", sha.slice(0, 16)); // struct-139 v3b: + glTFDoubleSide export fix (was 6e9b6058 v3a / 9d1d3199 v2 / 18b36139 v1 / ba17a712 origin)
 const meshNodes = j.nodes.filter((n: any) => n.mesh !== undefined);
 ck("node census 4", meshNodes.length === 4, `got ${meshNodes.length}: ${meshNodes.map((n: any) => n.name).join(",")}`);
 const glowNode = j.nodes.find((n: any) => n.name === "glow_ep_1");
@@ -99,6 +114,8 @@ const matNames: string[] = j.materials.map((m: any) => m.name ?? "");
 ck("texMat lanes ep_bone+ep_iron+ep_stone", ["ep_bone", "ep_iron", "ep_stone"].every(m => matNames.includes(m)), matNames.join(","));
 const glowMats = j.materials.filter((m: any) => (m.emissiveFactor ?? []).some((v: number) => v > 0.02));
 ck("exactly one emissive material", glowMats.length === 1);
+const boneMat = j.materials.find((m: any) => m.name === "ep_bone");
+ck("bone film exports doubleSided:true (v3b export fix)", boneMat?.doubleSided === true, `doubleSided=${boneMat?.doubleSided}`);
 const lin = (b: number) => { const c = b / 255; return Math.round(c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4 * 10000) / 10000; };
 const wantE = [lin(0x9a), lin(0x70), lin(0x30)].map((v: number) => Math.round(v * 0.85 * 10000) / 10000);
 if (glowMats[0]) {
@@ -130,7 +147,7 @@ for (const nd of meshNodes) {
 }
 const byName = (n: string) => clouds.find(c => c.name === n);
 
-// ---- (b) film law: parameter recovery on the classical disk -------------------------------------
+// ---- (b) film law: parameter recovery on the domain disk -----------------------------------------
 {
     const bone = byName("ep_bone");
     ck("bone cloud present", !!bone);
@@ -149,15 +166,15 @@ const byName = (n: string) => clouds.find(c => c.name === n);
     }
 }
 
-// ---- (c) crossing law: sheets pass through the same axis points ---------------------------------
+// ---- (c) crossing law: sheets pass through the same pole points ---------------------------------
 {
     const bone = byName("ep_bone");
     if (bone) {
-        // struct-135 v2: the pole crossings X(±√3,0)=(0,0,±3) are INTERIOR
-        // points (world y 4.44±3 = 1.44/7.44); no ring lands exactly on √3,
-        // so nearest film verts sit ~2cm off — law: >=2 verts (distinct
-        // branches ±u/±v) within 3.5cm of each pole point, form frame.
-        for (const [pz, label] of [[3, "upper pole (0,0,+3) -> y 7.44"], [-3, "lower pole (0,0,-3) -> y 1.44"]] as Array<[number, string]>) {
+        // the pole crossings X(±√3,0)=(0,0,±3) are INTERIOR points (world
+        // (±3, LIFT, 0)); no ring lands exactly on √3, so nearest film verts
+        // sit ~2cm off — law: >=2 verts (distinct branches ±u/±v) within
+        // 3.5cm of each pole point, form frame.
+        for (const [pz, label] of [[3, "pole (0,0,+3) -> world (+3, 4.145, 0)"], [-3, "pole (0,0,-3) -> world (-3, 4.145, 0)"]] as Array<[number, string]>) {
             let close = 0;
             for (let i = 0; i < bone.v.length; i += 3) {
                 const [fx, fy, fz] = toForm(bone.v[i], bone.v[i + 1], bone.v[i + 2]);
@@ -257,17 +274,35 @@ const distToLocus = (fx: number, fy: number, fz: number): number => {
     return bd;
 };
 
-// ---- (d)+(e) rim + needle laws --------------------------------------------------------------------
+// ---- iron classification (v3 order: axle -> stanchion -> seam -> rim) ---------------------------
+// Run-1 red disclosed & cured (classifier windows, not geometry): the naive
+// boxes mixed classes at the bearing junction — post top rings sit at y=LIFT
+// EXACTLY (post height LIFT-0.24 from pad top 0.24), so any |y-LIFT| box
+// swallows them; rim verts at |x| in [4.18,4.25] fell inside the old 0.32
+// stanchion window; seam verts strayed 0.10..0.121 off the locus polyline
+// (CatmullRom smoothing bulge, tube r 0.07 — same class v2 disclosed at
+// 0.105). Named predicates below measure the intended classes:
+const isAxle = (x: number, y: number, z: number) => Math.abs(y - LIFT) <= 0.085 && Math.abs(z) <= 0.085 && Math.abs(x) <= 4.5 + 1e-6; // axle caps/sides never exceed |x|=4.5
+// posts are PRISMS (CylinderGeometry heightSegments=1): verts exist ONLY at
+// the bottom ring (pad top, y=0.24) and top ring (axle height, y=LIFT) — no
+// mid-height verts, so bearing is proven per-side by BOTH rings, not by a
+// y-spread. Top ring circles the axle cap at r 0.09 = the socket read.
+const isPost = (x: number, y: number, z: number) => Math.abs(Math.abs(x) - 4.5) <= 0.11 && Math.abs(z) <= 0.11 && (y <= 0.30 || Math.abs(y - LIFT) <= 0.02); // ring planes only
+const isPad = (x: number, y: number, z: number) => Math.abs(Math.abs(x) - 4.5) <= 0.30 && y <= 0.26 && Math.abs(z) <= 0.30; // pad box 0.56 wide, y 0.14..0.24
+const isStanchion = (x: number, y: number, z: number) => isPost(x, y, z) || isPad(x, y, z);
+const isSeam = (x: number, y: number, z: number) => { const [fx, fy, fz] = toForm(x, y, z); return distToLocus(fx, fy, fz) < 0.13; }; // tube r 0.07 + CatmullRom slack (v2 window 0.08 = 2.3x its 0.035 tube; observed worst stray 0.121)
+
+// ---- (d)+(e)+(e2) rim + axle + stanchion laws ----------------------------------------------------
 {
     const iron = byName("ep_iron");
     ck("iron cloud present", !!iron);
     if (iron) {
-        // analytic boundary samples — v2: rim = X(R_DOM cos t, R_DOM sin t)
+        // analytic boundary samples — rim = X(R_DOM cos t, R_DOM sin t)
         const B: Array<[number, number, number]> = []; // world frame
         for (let i = 0; i <= 512; i++) {
             const t = (2 * Math.PI * i) / 512;
-            const [bx, by, bz] = X(R_DOM * Math.cos(t), R_DOM * Math.sin(t));
-            B.push([bx, bz + Y_OFF, by]); // form -> world (same map as build)
+            const [fx, fy, fz] = X(R_DOM * Math.cos(t), R_DOM * Math.sin(t));
+            B.push([fz, fx + LIFT, fy]); // form -> world (v3 map)
         }
         const distToB = (x: number, y: number, z: number) => {
             let bd = Infinity;
@@ -278,29 +313,50 @@ const distToLocus = (fx: number, fy: number, fz: number): number => {
             }
             return bd;
         };
-        // split iron: needle (on axis) vs seam (near locus) vs rim
-        let needleCount = 0, rimFar = 0, seamCount = 0;
-        let yMinN = Infinity, yMaxN = -Infinity;
+        let axleCount = 0, stL = 0, stR = 0, rimFar = 0, seamCount = 0;
+        let xMinA = Infinity, xMaxA = -Infinity;
+        let stLy0 = Infinity, stLy1 = -Infinity, stRy0 = Infinity, stRy1 = -Infinity;
         const rimPts: Array<[number, number, number]> = [];
         for (let i = 0; i < iron.v.length; i += 3) {
             const x = iron.v[i], y = iron.v[i + 1], z = iron.v[i + 2];
-            if (Math.abs(x) <= 0.08 && Math.abs(z) <= 0.08) {
-                needleCount++;
-                yMinN = Math.min(yMinN, y); yMaxN = Math.max(yMaxN, y);
+            if (isAxle(x, y, z)) {
+                axleCount++;
+                xMinA = Math.min(xMinA, x); xMaxA = Math.max(xMaxA, x);
+            } else if (isStanchion(x, y, z)) {
+                if (x < 0) { stL++; stLy0 = Math.min(stLy0, y); stLy1 = Math.max(stLy1, y); }
+                else { stR++; stRy0 = Math.min(stRy0, y); stRy1 = Math.max(stRy1, y); }
+            } else if (isSeam(x, y, z)) {
+                seamCount++;
             } else {
-                const [fx, fy, fz] = toForm(x, y, z);
-                if (distToLocus(fx, fy, fz) < 0.08) { seamCount++; continue; }
                 rimPts.push([x, y, z]);
-                if (distToB(x, y, z) > 0.052) rimFar++;
+                const d = distToB(x, y, z);
+                if (d > 0.052) { rimFar++; if (rimFar <= 5) console.log(`  rim-far diag: d=${d.toFixed(3)} at (${x.toFixed(3)},${y.toFixed(3)},${z.toFixed(3)})`); }
             }
         }
-        ck("needle present on axis (r<=0.08 cylinder)", needleCount > 50, `${needleCount} verts, y[${yMinN.toFixed(3)}..${yMaxN.toFixed(3)}]`);
-        ck("needle spans pole-to-pole y 0..8.74", Math.abs(yMinN) < 0.08 && Math.abs(yMaxN - 8.74) < 0.01, `y[${yMinN.toFixed(3)}..${yMaxN.toFixed(3)}]`);
+        ck("axle present on the crossing-axis line", axleCount > 50, `${axleCount} verts`);
+        ck("axle spans world x -4.5..+4.5 (pins both poles)", Math.abs(xMinA + 4.5) < 0.01 && Math.abs(xMaxA - 4.5) < 0.01, `x[${xMinA.toFixed(3)}..${xMaxA.toFixed(3)}]`);
+        ck("stanchions BOTH sides present (pad+bottom+top rings)", stL > 30 && stR > 30, `L ${stL} y[${stLy0.toFixed(3)}..${stLy1.toFixed(3)}], R ${stR} y[${stRy0.toFixed(3)}..${stRy1.toFixed(3)}]`);
+        {
+            // PRISM BEARING law: per side, verts must exist in BOTH ring
+            // planes — the pad band (y<=0.30, proving ground contact through
+            // the pad) and the axle plane (|y-LIFT|<=0.02, proving the post
+            // reaches its bearing). Posts are heightSegments=1 prisms; there
+            // are no mid-height verts to find (disclosed, not a defect).
+            let nPadL = 0, nTopL = 0, nPadR = 0, nTopR = 0;
+            for (let i = 0; i < iron.v.length; i += 3) {
+                const x = iron.v[i], y = iron.v[i + 1], z = iron.v[i + 2];
+                if (!(Math.abs(Math.abs(x) - 4.5) <= 0.11 && Math.abs(z) <= 0.11)) continue;
+                if (y <= 0.30) { if (x < 0) nPadL++; else nPadR++; }
+                else if (Math.abs(y - LIFT) <= 0.02) { if (x < 0) nTopL++; else nTopR++; }
+            }
+            ck("prism bearing: pad-band ring + axle-plane ring on BOTH sides", nPadL > 5 && nTopL > 5 && nPadR > 5 && nTopR > 5,
+                `L pad ${nPadL}/top ${nTopL}, R pad ${nPadR}/top ${nTopR}`);
+        }
         ck("seam population present (locus-classified)", seamCount > 100, `${seamCount} verts`);
         ck("rim verts within tube of boundary X(R cos t, R sin t)", rimFar === 0, `${rimFar}/${rimPts.length} far`);
         // coverage: every 4th analytic sample finds an iron vert within 0.10.
-        // NOTE: B(t) passes exactly THROUGH both poles (B(0)=(0,0,3) form),
-        // so pole-adjacent rim verts sit on the axis with the needle —
+        // NOTE: B(t) passes exactly THROUGH both poles (B(0)=(0,0,3) form), so
+        // pole-adjacent rim verts sit on the axle with the axle verts —
         // coverage is over ALL iron verts (the union is what stands there).
         const allIron: Array<[number, number, number]> = [];
         for (let i = 0; i < iron.v.length; i += 3) allIron.push([iron.v[i], iron.v[i + 1], iron.v[i + 2]]);
@@ -324,14 +380,14 @@ const distToLocus = (fx: number, fy: number, fz: number): number => {
 // ---- (f) bead law --------------------------------------------------------------------------------
 {
     const t = glowNode?.translation ?? [0, 0, 0];
-    ck("bead at the umbilic (0, 4.44, 0)", Math.abs(t[0]) < 1e-9 && Math.abs(t[1] - Y_OFF) < 1e-9 && Math.abs(t[2]) < 1e-9, `${t.map((v: number) => v.toFixed(4)).join(",")}`);
+    ck("bead at the umbilic on the axle (0, 4.145, 0)", Math.abs(t[0]) < 1e-9 && Math.abs(t[1] - LIFT) < 1e-9 && Math.abs(t[2]) < 1e-9, `${t.map((v: number) => v.toFixed(4)).join(",")}`);
     const [ox, oy, oz] = X(0, 0);
     ck("X(0,0) = origin (umbilic law)", Math.hypot(ox, oy, oz) < 1e-12);
 }
 
-// ---- (f2) SEAM LAW (struct-135 v2): seam tubes lie on the self-intersection locus ----------------
-// Uses the shared locus + classifier from (c2)/(d): seam verts = iron verts
-// classified as seam (within 0.08 of the locus, form frame).
+// ---- (f2) SEAM LAW (v3): r-0.07 seam tubes lie on the self-intersection locus -------------------
+// Seam verts = iron verts classified as seam (within 0.10 of the locus,
+// form frame) after axle/stanchion classification.
 {
     const iron = byName("ep_iron");
     ck("iron cloud present for seam law", !!iron);
@@ -339,9 +395,8 @@ const distToLocus = (fx: number, fy: number, fz: number): number => {
         const seam: Array<[number, number, number]> = []; // world frame
         for (let i = 0; i < iron.v.length; i += 3) {
             const x = iron.v[i], y = iron.v[i + 1], z = iron.v[i + 2];
-            if (Math.abs(x) <= 0.08 && Math.abs(z) <= 0.08) continue; // needle
-            const [fx, fy, fz] = toForm(x, y, z);
-            if (distToLocus(fx, fy, fz) < 0.08) seam.push([x, y, z]);
+            if (isAxle(x, y, z) || isStanchion(x, y, z)) continue;
+            if (isSeam(x, y, z)) seam.push([x, y, z]);
         }
         ck("seam cloud nonempty", seam.length > 100, `${seam.length} verts`);
         // coverage: every locus point finds a seam vert (form frame)
@@ -358,17 +413,17 @@ const distToLocus = (fx: number, fy: number, fz: number): number => {
             if (bd > mworst) mworst = bd;
         }
         ck("seam coverage: locus pts within 0.10 of a seam vert", miss / locPts.length < 0.05, `${miss}/${locPts.length} missed, worst ${mworst.toFixed(3)}`);
-        // seam verts hug the locus (tight-band check on a sample)
+        // seam verts hug the locus (tight-band check on a sample; tube r 0.07)
         let off = 0, worst = 0, n = 0;
         for (let k = 0; k < seam.length; k += 7) {
             const [x, y, z] = seam[k];
             const [fx, fy, fz] = toForm(x, y, z);
             const d = distToLocus(fx, fy, fz);
             n++;
-            if (d > 0.06) off++;
+            if (d > 0.085) off++;
             if (d > worst) worst = d;
         }
-        ck("seam law: >=99% sampled seam verts within 0.06 of locus", off / n < 0.01, `${off}/${n} off, worst ${worst.toFixed(3)}`);
+        ck("seam law: >=99% sampled seam verts within 0.085 of locus", off / n < 0.01, `${off}/${n} off, worst ${worst.toFixed(3)}`);
     }
 }
 
@@ -384,7 +439,7 @@ const distToLocus = (fx: number, fy: number, fz: number): number => {
             zmin = Math.min(zmin, stone.v[i + 2]); zmax = Math.max(zmax, stone.v[i + 2]);
         }
         ck("slab on grade (y 0..0.14)", Math.abs(y0) < 1e-3 && Math.abs(y1 - 0.14) < 1e-3, `y[${y0.toFixed(3)}..${y1.toFixed(3)}]`);
-        ck("slab plan 8.1", Math.abs((xmax - xmin) - 8.1) < 1e-3 && Math.abs((zmax - zmin) - 8.1) < 1e-3, `${(xmax - xmin).toFixed(3)}x${(zmax - zmin).toFixed(3)}`);
+        ck("slab plan 9.7 x 8.5", Math.abs((xmax - xmin) - 9.7) < 1e-3 && Math.abs((zmax - zmin) - 8.5) < 1e-3, `${(xmax - xmin).toFixed(3)}x${(zmax - zmin).toFixed(3)}`);
     }
     let nan = 0, xmin = Infinity, xmax = -Infinity, ymin = Infinity, ymax = -Infinity, zmin = Infinity, zmax = -Infinity;
     for (const c of clouds) for (let i = 0; i < c.v.length; i += 3) {
@@ -395,7 +450,7 @@ const distToLocus = (fx: number, fy: number, fz: number): number => {
         zmin = Math.min(zmin, z); zmax = Math.max(zmax, z);
     }
     ck("NaN zero", nan === 0, `${nan}`);
-    ck("envelope 8.10x8.74x8.10", Math.abs((xmax - xmin) - 8.1) < 0.01 && Math.abs((ymax - ymin) - 8.74) < 0.01 && Math.abs((zmax - zmin) - 8.1) < 0.01,
+    ck("envelope 9.70x8.15x8.50", Math.abs((xmax - xmin) - 9.7) < 0.01 && Math.abs((ymax - ymin) - 8.15) < 0.01 && Math.abs((zmax - zmin) - 8.5) < 0.01,
         `${(xmax - xmin).toFixed(2)}x${(ymax - ymin).toFixed(2)}x${(zmax - zmin).toFixed(2)}`);
     ck("origin-centered x/z", Math.abs(xmin + xmax) < 0.01 && Math.abs(zmin + zmax) < 0.01, `x[${xmin.toFixed(2)},${xmax.toFixed(2)}] z[${zmin.toFixed(2)},${zmax.toFixed(2)}]`);
     ck("grade base", Math.abs(ymin) < 1e-3, `ymin ${ymin.toFixed(4)}`);

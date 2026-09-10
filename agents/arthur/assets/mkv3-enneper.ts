@@ -65,7 +65,7 @@ const X = (u: number, v: number): THREE.Vector3 =>
 const Xu = (u: number, v: number) => new THREE.Vector3(1 - u * u + v * v, 2 * u * v, 2 * u);
 const Xv = (u: number, v: number) => new THREE.Vector3(2 * u * v, 1 - v * v + u * u, -2 * v);
 // v3 world map: pinwheel face VERTICAL, crossing axis HORIZONTAL (world x).
-const LIFT = 4.12; // axle height above grade; slab 0.14 under it
+const LIFT = 4.145; // axle height above grade (struct-138 authored law; hem bottom 0.1395 kisses slab top 0.14)
 const toWorld = (p: THREE.Vector3) => new THREE.Vector3(p.z, p.x + LIFT, p.y);
 
 {
@@ -145,6 +145,7 @@ const vert = (u: number, v: number) => {
 // v3 delivers contrast by orientation + real shading, not by two-tone paint.
 const boneTex = texMat("ep_bone", [0xd8d2c4, 0xd5cfc0, 0xd2ccbb], { rough: 0.9, scale: 1, weights: [1, 1, 1], cell: 64, seed: 9331 });
 boneTex.side = THREE.DoubleSide;             // interpenetrating sheets: interior faces visible at every crossing
+(boneTex as any).userData = { ...(boneTex as any).userData, texName: "ep_bone", glTFDoubleSide: true }; // glbwrite v3.4 lane — interpenetrating film MUST export doubleSided:true or FrontSide culling holes it (struct-139 root cause: .side alone exports single-sided; judged onion-band reads v1/v2/v3a were half-film artifacts)
 const ironTex = texMat("ep_iron", [0x4a525c, 0x3f464f, 0x565e69], { rough: 0.5, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9332 });
 const g = new THREE.Group();
 {
@@ -298,7 +299,7 @@ const stoneTex = texMat("ep_stone", [0x6f6a60, 0x777166, 0x67625a], { rough: 0.9
     const sz = env.getSize(new THREE.Vector3());
     if (env.min.y < -1e-6) throw Error(`below grade ${env.min.y}`);
     if (Math.abs(sz.x - 9.7) > 0.01 || Math.abs(sz.z - 8.5) > 0.01) throw Error(`plan ${sz.x.toFixed(2)}x${sz.z.toFixed(2)} != 9.70x8.50`);
-    if (Math.abs(sz.y - 8.126) > 0.01) throw Error(`height ${sz.y.toFixed(2)} != 8.13 (petal top 8.076+hem 0.05)`);
+    if (Math.abs(sz.y - 8.1505) > 0.01) throw Error(`height ${sz.y.toFixed(2)} != 8.15 (petal top LIFT+3.9555+hem 0.05 = 8.15)`);
     let nan = 0;
     g.traverse((o: any) => {
         const mesh = o as THREE.Mesh;

@@ -8209,3 +8209,96 @@ NEXT: 139 — build slot (139%3==1): EITHER v3 enneper build+decode+render+judge
 commissions when mid-iteration) OR R11 new-form commission if v3 lands clean
 early. 140 = refine slot: gyroid end-caps + night debt OR enneper v3 verdict
 follow-through (placement if judged PASS, fix-class iteration if not).
+
+## struct-139 (2026-09-10): REFINE BUILD+JUDGE — v3 enneper built AND the
+## ROOT CAUSE of the whole identity-fail arc found and fixed (doubleSided
+## export); v3b decode ALL PASS + RED->GREEN film probe; judged-incomplete
+## (fallback judge, over-under legibility deficit class); NOT placed
+
+Cadence 139%3==1 build slot; carried refine work outranks new commissions
+(struct-138 carry). Gate ALL PASS real exit 0 tick-start (redirect-file,
+survey-219 HEAD 0e34b987 observer advance absorbed). Shard empty fresh
+(IMPROVE-PLAN md5 c0f569d0, 0 OPEN nx-struct rows). Banked v2 secured FIRST
+(reviews/struct139-enneper-v3/before/v2-banked.glb sha 9d1d3199 exact).
+
+AUTHORING REPAIR (pre-build): mk v3 as committed carried LIFT=4.12 with a
+tuned-to-it height assert — the struct-138 authored law is LIFT=4.145 (hem
+bottom 0.1395 kisses slab top 0.14; envelope 9.70x8.15x8.50). First build
+failed CLOSED on the stale assert (height 8.15 != 8.13); restored LIFT=4.145
++ corrected assert; disclosed as completion of the authored law, not a design
+change.
+
+v3a BUILD (sha 6e9b6058, deterministic x2 mtime-verified): composition
+rotation per struct-138 — pinwheel face VERTICAL, crossing axis HORIZONTAL
+iron axle world x -4.5..+4.5 through both pole crossings (x=+-3 exact), two
+stanchions on pads, seams r 0.07 (2x weight), LIFT 4.145.
+
+DECODE v3a: first run 3 FAIL — all CLASSIFIER windows, not geometry
+(diagnostics with coordinates): post-top rings sit at y=LIFT exactly
+(prisms, heightSegments=1: verts only at bottom/top rings — v1 needle was a
+multi-ring tube, so the y-spread law was the wrong shape); rim verts |x|
+4.18..4.25 fell in the 0.32 stanchion window; seam verts strayed 0.10..0.121
+off the locus polyline (CatmullRom bulge, same class v2 disclosed at 0.105).
+Fixed with named predicates (isPost ring-planes-only, isPad box, seam window
+0.13) + PRISM BEARING law (pad-band ring + axle-plane ring on BOTH sides,
+measured L 32/50 R 32/50) — the bearing is real, the classifier had to
+measure prisms as prisms. v3a decode ALL PASS 34/34.
+
+JUDGED v3a (native 1210 x2 + paced retry — provider hard down all tick,
+flap law; ZAI fallback, native re-judge debt OWED): ALL THREE vantages FAIL
+identity — edge-on onion-stack; face-on 'wireframe loops + small central
+scrap' (~5-8% film claim); oblique 'fanned stack'. 
+
+FALSIFICATION (pitfall-11 law — vision quantitative claims are probes):
+struct139-filmprobe-enneper.ts (new, tracked) measures exact film projected
+area by film-visible/film-hidden sky-diff at 3 eye-level vantages. v3a
+MEASURED: face-on 0.5% of frame, oblique 2.4% — CONTRADICTS the analytic
+~13-26% for an 8m film. Probe self-catches en route: missing setPixelRatio
+(corner-of-sky read), then missing scene.add (all-sky palette) — both fixed,
+probe green on ground truth before the measurement was trusted.
+
+ROOT CAUSE (the arc's pivot): ep_bone exported with NO doubleSided in the
+GLB — mkv3-enneper set material.side=DoubleSide (runtime flag; glbwrite
+ignores it) but never the v3.4 lane's userData.glTFDoubleSide (authored
+struct-136 for Boy's non-orientable film, first consumer). CONFIRMED
+RETROACTIVELY on banked v2 bytes: doubleSided absent there too — v1, v2,
+AND v3a all shipped FrontSide-culled film. From every vantage half the film
+was invisible: face-on the r>1 annulus vanished leaving the 'scrap'; grazing
+vantages lost alternate bands -> 'nested onion shells'. The judged identity
+failures of survey-181, struct-135, struct-138, and today's v3a pass were
+ARTIFACTS of reading a half-invisible surface. The LIVE standing ba17a712
+form has shown this way its whole life.
+
+v3b FIX: one-line source change (mkv3-boy's proven pattern), rebuilt sha
+a4880b1a deterministic x2 (hash-verified both builds). DECODE ALL PASS 35/35
+incl. new export law 'bone film exports doubleSided:true'. FILM PROBE
+RED->GREEN: face-on 0.5% -> 13.1% (analytic match), oblique 2.4% -> 10.4%,
+edge-on 11.5% -> 14.5% — the film now covers its designed face from every
+vantage.
+
+JUDGED v3b (ZAI fallback, debt owed on v3b frames): MOUNT PASS all judges
+(axle/posts/slab 'strongest element', form physically borne, correct
+axle-occlusion threading); SURFACE-DOMINANCE FIXED (film fills the frame
+face-on, no more 'scrap'); IDENTITY STILL INCOMPLETE — face-on petals read
+as 'patterned discs' (flat rig shading), over-under crossings not yet
+legible as depth-order flips, seams merge with rim vocabulary at distance.
+Judge's next-fix classes recorded: seam weight/color distinct from rim;
+contour pattern flowing ACROSS crossings; off-axis vantage staging (15-25
+deg per judge + struct-104 35-45 deg siting law); kill band-near-bead
+density moire risk.
+
+DISPOSITION: accept-or-revert — fallback judge cannot ACCEPT; v3b BANKED
+decode-green + probe-green, NOT placed. Live world untouched (D+0 E+0);
+standing live bytes remain ba17a712 (which the probe now proves was judged
+half-blind its whole life — the re-place case when v3c passes judgment is
+strong). Next tick: v3c iteration on the judge's fix classes (seam/rim
+vocabulary split FIRST — highest value, cheapest), then native re-judge when
+provider returns.
+
+Zero world mutations, zero uploads, zero verbs, zero shared-budget (D+0 E+0).
+Gate ALL PASS real exit 0 tick-start. Ledger max fresh pre-append struct-138
+-> this tick struct-139.
+
+Files: mkv3-enneper.ts (ignored dir, staged -f), struct133-decode-enneper.ts
+(v3b laws), struct139-filmprobe-enneper.ts (new, tracked),
+reviews/struct139-enneper-v3/ (ignored). Plan append-only this tick.
