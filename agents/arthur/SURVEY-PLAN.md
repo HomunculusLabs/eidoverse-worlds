@@ -14909,3 +14909,56 @@ shared-budget use (D+0, E+0).
   (325, sha256-16 f78fdcb6b2407ef0). STANDING RECOMMENDATION carried
   unchanged (s182-s322): stop the SURVEY lane or convert to a no-LLM
   monitor when attended.
+
+## Judged index (survey-324)
+
+- survey-324 (2026-09-10, NATIVE 3/5 calls + ZAI fallback 1 control
+  call disclosed — native flap pattern: 1210 on gameplay first call,
+  single paced retry recovered NATIVE; left/front judged NATIVE first
+  call; banked-control call burned 1210 x2 = ZAI fallback there):
+  ARRIVAL-GATED RE-SEAT SLICE — the 11-tick fully-quiet epoch broke:
+  census 325==325, 0 arrivals / 0 departures, exactly ONE field-set
+  diff = nx-struct-boy pos/yaw/lib/bbox flipped to struct-161's
+  committed re-seat tuple line-for-line ([-100,0.018685,0] yaw pi lib
+  8c25b665 -> [110,-0.019174,0] yaw -0.6981 lib a20c9275; gate log at
+  55c95333 names it; sweep-229 independently folded the same drift).
+  Ledger-matched sibling work classified; NEW STANDING BYTES at a NEW
+  pose re-opened the arrival gate — first independent survey read of
+  the boy v2 on live-seated bytes. Fetch curl UA HTTP 200 79064B
+  served-sha16 209f691a on exact census lib; DRACO chassis 8 views
+  exit 0, decode bbox 10.100x6.523x7.100 == struct-161 census pin
+  exact, nodes [boy_0..2, glow_bs_1]. Contract corrected mid-judgment
+  (disclosed, dress-21 neutral-prompt law): first gameplay call was
+  judged under a WRONG paraphrased contract ("spinning ride with
+  seats") — verdict DISCARDED; re-judged left/front under the TRUE
+  contract (Boy's surface minimal-surface immersion, folly class, 3-
+  fold pinwheel trefoil on horizontal iron axle between stanchions).
+  VERDICT: left (dead-axis) view FAILS the lobe read = known vantage
+  class (near stanchion occludes the triple point at dead-axis;
+  struct-159 falsify rig proved face-on/oblique read, struct-161's
+  -40deg yaw law exists to avoid this exact vantage at walk-up);
+  front (broadside, raised chassis camera) marginal-fail on winding
+  legibility = chassis-vantage class. CONTROL (pitfall-5 law):
+  struct-160's own banked approach-broadside-18 frame (eye height,
+  the contract vantage) re-judged via ZAI fallback — MARGINAL PASS,
+  three lobes countable, armature PASS, sealed PASS; judge's own
+  suggested fix ("rotate 20-30deg off true broadside") is exactly the
+  committed -40deg seat. Owner's struct-160 NATIVE 5/5 (incl. the
+  v1-fail broadside vantage) stands corroborated; chassis dissents
+  classified vantage-artifact, not defects. CLEAN-with-margin for
+  nx-struct-boy v2 at its live seat (silhouette/grounding/crush/armat
+  ure PASS all judges; margin: winding-legibility at raised/dead-axis
+  chassis vantages only). Routing: ZERO notes routed, ZERO candidate
+  rows (owner's judgment + placement records complete; dissent
+  resolved by accepted-frame control — no open question to carry).
+  Pools: IMPROVE-PLAN md5 c0f569d0 unchanged (212th check), 0 SHARD
+  EXECUTION, 0 live-queue OPEN, candidates closed since survey-78,
+  interlane f6254cd0 stable. Repo-side foreign dirt observed and
+  untouched (same family as s285-s323). Census baseline for next
+  tick: /tmp/survey324-census-a.json (325, 215228B, sha256-16
+  70f823b4d1aec102 — post-boy-re-seat epoch, REPLACES the f78fdcb6
+  11-quiet-tick baseline). Zero world mutations, zero uploads, zero
+  comp edits, zero shared-budget use, ZERO ledger append (loop law 4:
+  append only when routing). STANDING RECOMMENDATION carried
+  unchanged (s182-s323): stop the SURVEY lane or convert to a no-LLM
+  monitor when attended.
