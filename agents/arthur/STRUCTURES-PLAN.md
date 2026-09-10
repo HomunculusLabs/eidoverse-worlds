@@ -7996,3 +7996,75 @@ deficit; native re-judge on banked v2 frames first if provider up.
 Files: mkv3-enneper.ts (ignored dir, staged -f), struct133-decode-enneper.ts
 (v2 laws + seam law), struct135-texprobe-enneper.ts (new, tracked);
 reviews/struct135-enneper-refine/ (ignored). Plan append-only this tick.
+
+
+## struct-136 (2026-09-09): R11-1 THE BOY'S SURFACE — authored, built,
+## decode ALL PASS, judged (ZAI fallback, native down, debt owed); NOT
+## placed — build+judge tick, placement contract next tick
+
+Interrupted-window recovery (struct-9/artwalk-32 pre-durable class): a
+predecessor window completed mkv3-boy.ts + built the GLB (21:54) + authored
+struct136-decode-boy.ts (22:00) then died — zero durable writes. This tick
+re-derived everything from ground truth, rebuilt, audited, judged.
+
+CONCEPT (one idea): THE DISK THAT CLOSES INTO ITSELF — NO EDGE AT ALL.
+Boy's 1901 immersion of RP^2: Kusner-Bryant parametrization on the unit
+disk, ANTIPODAL RIM GLUED (P(e^{it}) = P(-e^{it}) exact). Where the Enneper
+wears an iron rim on its boundary, Boy has no boundary to hem. One-sided
+surface -> bone film exports doubleSided (glTF, first consumer of the
+glbwrite v3.4 lane). Iron needle up the pinwheel axis grade -> through the
+triple point -> out the open eye, crowned by one brass bead (dusk lineage).
+Family gap: first-named open family (struct-133 close), fresh grep 0
+standing mentions.
+
+BUILD LAWS (in-file asserted + decode from bytes, independent replica):
+south pole (0,0,-2) rests on slab top; triple point exact (3 D-roots
+r0=0.7256 -> origin); closed mesh V8009 E24024 F16016 chi=1, 0 boundary
+edges, 0 over-shared (RP^2, non-orientable, from BYTES); film law 8009/8009
+verts on P(w) worst 0.000mm (Gauss-Newton inversion); dense 3-fold
+symmetry 1234/1234 on-surface; AXIS LAW (new, deterministic): film meets
+the axis only at z=-2 and z=0 -> the eye corridor above the triple point
+is open, proven, for the crown.
+
+JUDGED (native 1210 x2 + paced retry — provider hard down ALL tick, flap
+law; ZAI fallback, native re-judge debt OWED on v4 frames):
+- v1 6ef4338c: gameplay 3/5 (needle+bead invisible — both interior by
+  design); TOP PASS (3 lobes + pinwheel + bead at junction, "canonical");
+  night FAIL (bead buried inside the form — the exact enneper top-plan-only
+  identity class, NOT repeated).
+- Honest in-tick cure: v2 crown concept decode-CAUGHT the recovered draft's
+  apexY bug (SLAB+SCALE*z1 -> must be ZOFF+SCALE*z1; needle reached only
+  y1.54 vs film top 6.14) BEFORE any placement — the decode gate is what
+  caught it; v4 = crown 0.75m + bead r0.13 (both judges' independent ask):
+  NIGHT PASS (one quiet warm point clearly ABOVE the silhouette with sky
+  gap, zero strays), gameplay crown-fix ADDRESSED (needle+bead 2/5
+  "fix landed", grounded 1/5).
+- DISCLOSED residual: gameplay identity 4/5 (reads bilobed blob at solo
+  18m) = the enneper/gyroid identity-at-18m Sev-2 class. Calibration
+  control run per dress-80 law: accepted native-passed harmonickiss scores
+  identity 2 in the same solo rig — the deficit is real on the fallback
+  judge, not rig-normalized. Top view delivers the 3-fold pinwheel
+  contract ("canonical symmetric immersion" per judge). Grain/gray findings
+  decode-settled family-class: bone texMat lane byte-identical params to
+  accepted harmonickiss (0xd8d2c4 trio, rough .9, scale 2, weights 3/1/1);
+  dark-pit reads = the closed surface's own self-passage shading. Native
+  re-judge may flip either way — frames banked.
+
+ACCEPTED-BY-DECODE: sha 8c25b66573954418a96bb529a2005e3bf173b1a901c4cf88d
+97725c0311a4de1 deterministic x2 (mtime verified), decode ALL PASS 30/30
+exit 0. Envelope 6.98x7.02x6.98 (film 6.14 + crown 0.88), 4 nodes
+(bs_bone/bs_iron/bs_stone + KEEP glow_bs_1), folly class no walk owed.
+
+DEFERRED PLACEMENT CONTRACT (next tick, R11 law): fresh census; seat scan
+on an UNDER-SERVED ray (az184 carries 17 forms — rotate; NOT enneper r250
+-> r260); 8m NN floor + per-district cap 6 + rim law; terrain 9pt; then
+hash-gated placer (bytes 8c25b665 unchanged), upload paced 20s+, spawn
+nx-struct-boy yaw-pi (3-fold symmetric — yaw legally near-irrelevant),
+PLACED_VERIFIED + idempotent refusal + read-back; native re-judge on v4
+frames first if provider returns.
+
+Zero world mutations, zero uploads, zero verbs, zero shared-budget (D+0
+E+0). Gate ALL PASS real exit 0 tick-start c7353e16 (un-piped).
+
+Files: mkv3-boy.ts (ignored dir, staged -f), struct136-decode-boy.ts
+(tracked), reviews/struct136-boy{,-v2,-v4}/ (ignored).
