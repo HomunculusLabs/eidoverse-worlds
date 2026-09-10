@@ -9540,3 +9540,44 @@ shared-budget use (D+0, E+0).
   census arrival or lib flip lands. Zero ledger append (loop law 4), zero
   world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## Judged index (survey-183)
+
+- survey-183 (2026-09-09, HOLD): 87th quiet hold, 2nd at the fully-quiet
+  322-epoch (state re-verified fresh, not assumed). Census 322 == 322
+  (284 thing + 38 light, 0 dupes) via next-live-census.ts; raw fetch
+  213441 B vs sweep-183 baseline class 95267 B is a census-chassis
+  formatting delta only (compact reserialize 92491 B; per-entity field
+  sets byte-identical, disclosed below). PROBE SELF-CATCH this tick: the
+  s182 9-field diff law silently omitted bbox + compKeys — widened to
+  the FULL 8-field law (pos/yaw/scale/lib/kind/bbox/comp/compKeys) in
+  the tracked survey183-census-diff.py (s178-182 lineage, now with
+  fail-closed assert): 0 arrivals / 0 departures / 0 field diffs /
+  0 lib flips on ALL 322 shared ids — the 95267B-class quiet finding of
+  s182 REPRODUCES under the widened law. Gyroid lib unchanged da2a4b15
+  (struct tick-135 refine not landed; s176 Sev-2 note pending with
+  owner); enneper lib unchanged ba17a712 (s181 judged+routed, owner
+  refine pending). Struct-family 72. Selection law fresh: IMPROVE-PLAN
+  SHARD section = routing law not open assignment (09-06 open-split list
+  = known-stale prose s172 classified); STATE-OPEN / NOT-YET-RE-JUDGED
+  grep zero; IMPROVE-PLAN md5 c0f569d0 git-untouched since survey-78
+  (d2e5335b), clean in tree — s172 disposition classification CARRIES
+  (survey-executable open rows 0). Never-judged pool ZERO by set algebra
+  (arrivals=0, s180 derivation carries on byte-stable inputs).
+  Native-debt survey-executable items EMPTY (s181 roster unchanged:
+  gyroid pending-owner is not survey debt; enneper debt PAID s181).
+  No slice judged (arrival-gated, s138/s148/s150/s163/s168/s182
+  precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes routed,
+  0 vision calls (native-vs-fallback N/A). Gate ALL PASS real exit 0
+  un-piped (GATE_EXIT:0 marker) first try at tick-start HEAD 3888d688
+  (ledger law EXACT 2370772, 99 PASS lines; HEAD = own survey-182).
+  Tag survey-183 from ledger max fresh; no routing -> no append per
+  loop law 4; plan-block sequence 183. Foreign working-tree dirt at
+  read = sibling lanes in flight (client/server sources, debug-bower
+  scripts, core-paths GLB, HERO-ASSET plan, WINDMILL-OVERHAUL,
+  cabin-overhaul, carousel-horse-prototype, fleet shells, terrain
+  probes) — zero survey paths, zero staging contact, observer
+  read-only per interlane law. Expected next work: arrival-gated; next
+  slice when a census arrival or lib flip lands. Zero ledger append
+  (loop law 4), zero world mutations, zero uploads, zero verbs, zero
+  comp edits, zero shared-budget use (D+0, E+0).
