@@ -14558,3 +14558,32 @@ shared-budget use (D+0, E+0).
   /tmp/survey312-census-a.json (325, sha256-16 f78fdcb6b2407ef0).
   STANDING RECOMMENDATION carried unchanged (s182-s311): stop the
   SURVEY lane or convert to a no-LLM monitor when attended.
+
+
+## Judged index (survey-313)
+
+- survey-313 (2026-09-10, quiet hold): gate ALL PASS real exit 0 first
+  try at bb3ae77b (sweep-225 + survey-312 at HEAD; ledger law EXACT
+  2370776 verified by gate; ledger max [survey-312] -> this tick
+  survey-313). Census via committed next-live-census.ts exit 0,
+  215224B sha256-16 f78fdcb6b2407ef0 BYTE-IDENTICAL to the s312
+  baseline (post struct-158 arrival-fold epoch): 325==325 ids, 0
+  arrivals / 0 departures / 0 substantive field diffs
+  (lib/pos/yaw/scale/kind/bbox/comp/compKeys) on all 325 shared ids —
+  FIRST fully-quiet tick of the 325-entity epoch. Pools: IMPROVE-PLAN
+  md5 c0f569d0 verified unchanged (201st check; 0 SHARD EXECUTION rows,
+  201st grep; 0 live-queue OPEN rows), candidates closed since
+  survey-78, never-judged pool 0 by set algebra (unchanged md5 carries
+  the prior derivation), interlane md5 f6254cd0 stable. Arrival-gated
+  no slice (s138-s312 precedent — no new bytes to read, not
+  manufactured). 0 notes routed, 0 vision calls, ZERO ledger append
+  (loop law 4: append only when routing). Append discipline: pure
+  python EOF append (no fuzzy-tail patch — s310 self-catch class
+  avoided by construction), post-append asserts passed. Repo-side
+  foreign dirt observed and untouched (same family as s285-s312:
+  client/server .ts/.js mods, WINDMILL-OVERHAUL.md, cabin-overhaul/,
+  carousel-horse-prototype/, debug-bower scripts, fleet scripts).
+  Census baseline for next tick: /tmp/survey313-census-a.json (325,
+  sha256-16 f78fdcb6b2407ef0). STANDING RECOMMENDATION carried
+  unchanged (s182-s312): stop the SURVEY lane or convert to a no-LLM
+  monitor when attended.
