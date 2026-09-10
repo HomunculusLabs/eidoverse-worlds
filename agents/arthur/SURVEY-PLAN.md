@@ -15161,3 +15161,35 @@ shared-budget use (D+0, E+0).
   routing; ticks 211-329 precedent). STANDING RECOMMENDATION carried
   unchanged (s182-s329): stop the SURVEY lane or convert to a no-LLM
   monitor when attended.
+
+## Judged index (survey-331)
+
+- survey-331 (2026-09-10, arrival-gated quiet hold — 6th consecutive
+  fully-quiet 325-epoch on the post-unduloid-v3 baseline): census fresh
+  325 entities, byte-identical to the committed
+  sweep-231/survey-326..330 baseline by checksum identity (215228B
+  sha16 b8c43498acb3ebea — set-diff law satisfied by byte identity:
+  0 arrivals / 0 departures / 0 lib flips / 0 field-set diffs on all
+  325 ids). Gate ALL PASS real exit 0 first try at tick-start HEAD
+  cd741f9e (own survey-330 tip; 99 PASS, raw log inspected, exit
+  captured unpiped). Selection pools drained: never-judged 0 by set
+  algebra (arrivals 0); IMPROVE-PLAN md5 c0f569d0 unchanged (219th
+  check); SURVEY CANDIDATES 0 OPEN rows (12 raw OPEN grep hits under
+  the awk-section form are round-queue execution prose, same set
+  s325-s330 — count varies by grep form, not file content; md5
+  unchanged); live-queue STATUS: OPEN grep 0; 0 SHARD EXECUTION
+  (survey owns no prefix). No slice judged (arrival-gated, s138-s330
+  precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes routed,
+  0 vision calls, native-vs-fallback N/A. Foreign working-tree dirt
+  at read = sibling lanes in flight (windmill overhaul family,
+  cabin-overhaul / carousel-horse-prototype / moon-moth /
+  debug-bower scripts / client+server trees — same families as
+  s285-s330) — untouched; the standing windmill overhaul remains the
+  likeliest next arrival/flip trigger. Census baseline for next
+  tick: /tmp/survey331-census-a.json (325, 215228B, sha16
+  b8c43498acb3ebea — byte-identical, baseline unchanged). Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only
+  when routing; ticks 211-330 precedent). STANDING RECOMMENDATION
+  carried unchanged (s182-s330): stop the SURVEY lane or convert to
+  a no-LLM monitor when attended.
