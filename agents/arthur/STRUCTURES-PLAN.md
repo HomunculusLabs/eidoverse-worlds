@@ -7834,3 +7834,97 @@ reviews/survey181-slice/enneper/ (gameplay+front+aerial+night+top+served
 bytes). Severity: Sev 2 (identity read at distance on an otherwise
 grounded, mathematically-true work — same class as the s176 gyroid note;
 second consecutive S-walk arrival to fail identity-at-18m).
+
+## struct-134 (2026-09-09): R11 OPENER — RING-READ PASS (CITY-PLAN
+## Amendment 1 first struct tick) — 23 R10 forms audited from durable
+## native-verdict record + live census; 2 WEAK reads HOLD-for-Bill; no
+## world mutation
+
+First struct wakeup under CITY-PLAN.md Amendment 1 (city-11 @ 6906179d,
+committed 2026-09-09 20:12:32 EDT). PREDECESSOR DISCLOSURE: a prior struct
+window (per memory trail, ~00:29Z) began this ring-read and reported a
+synthesis but landed NOTHING durable — no ledger entry, no plan block, no
+commit, no review files. Interrupted-before-durable-write signature. This
+tick re-derives everything from ground truth (plan + census) and lands the
+record; the sibling window's synthesis was NOT trusted as evidence.
+
+REGISTER (authority: live census 322 entities, 72 struct-family, all 23 R10
+forms located by entity id; form names from plan ## headers; the amendment's
+"22" predates enneper's registration as R10-23 — 23 is the superset read,
+census-backed): ring forms at az-by-radius — honeycombscreen az250 r56,
+penrosepaving az292 r60, kochgarden az184 r90, sierpinski az354 r74,
+geodesic az164 r60, catenoid az26 r60, hilbertlabyrinth az184 r100,
+dodecahedron az184 r110, sunflowerdial az178 r71, rule30wall az184 r120,
+tesseract az184 r130; S-walk az184 — lorenz r140, chladni r150, voronoi
+r160, peaucellier r169, zeno r180, borromean r190, brachistochrone r196,
+galtonboard r210, clothoid r220, harmonickiss r230, gyroid r240, enneper
+r250. Census saved /tmp/struct134-census.json; derivation tool
+struct134-ringread-derive.py (read-only) staged this tick.
+
+RING-READ VERDICTS (from the DURABLE record — standing native 18m
+gameplay verdicts, owner-tick judged on exact bytes, survey-corroborated
+where noted; NOT a fresh native sweep — provider hard down this window,
+see DEBTS):
+
+- CLEAN (20/23): honeycombscreen (native re-judged 3-view PASS, debt paid
+  struct-98 tick; four queens countable, four amber cells at night),
+  penrosepaving (native 3/3, struct-98), kochgarden (gameplay 18m NATIVE
+  PASS + night NATIVE PASS, struct-99), sierpinski (aerial native debt paid
+  survey-76 + owner struct-106; gameplay native standing), geodesic (night
+  PASS + gameplay 18m PASS all four checks, native, struct-101), catenoid
+  (native debts CLEARED struct-103: gameplay 18m all four + night PASS),
+  hilbertlabyrinth (survey-76 native CLEAN exterior + night PASS one-bead
+  contract; v2-front debt paid survey-76), dodecahedron (night-bead
+  question ANSWERED survey-79 native; gameplay native standing), sunflowerdial
+  (front/gameplay/night NATIVE 4/4, struct-108), rule30wall (native 4/4,
+  struct-109), tesseract (v2 judge-cured; night NATIVE PASS one warm point),
+  lorenz (v2 judged NATIVE all three), chladni (judged NATIVE all three,
+  struct-112), voronoi (front+gameplay 18m NATIVE first-try, struct-113;
+  night re-judged struct-114), zeno (native debt PAID struct-116), borromean
+  (first fully-native R10 debut, struct-118: 18m 3/3 + night 3/3), brachistochrone
+  (native re-judge COMPLETED struct-124 on pinned bytes; night paid
+  struct-123), galtonboard (judged NATIVE gameplay 18m PASS struct-122),
+  clothoid (night NATIVE 3/3 + gameplay NATIVE via refine struct-126,
+  hero-ready DONE), harmonickiss (judged NATIVE all three, struct-130).
+
+- WEAK — HOLD-for-Bill (2/23): nx-struct-gyroid (r240) — native 18m read
+  NEVER landed: build tick was all-ZAI (struct-131) and s176's independent
+  native slice FAILED identity at 18m (reads woven basket/cordage, not
+  gyroid film; Sev 2, second consecutive S-walk arrival to fail
+  identity-at-18m) — with the owner ZAI margins noted and the
+  end-caps residual standing (struct-132), the form reads WEAK on native
+  evidence; queued refine already names it (tick-135+).  nx-struct-enneper
+  (r250) — survey-181 native 3/3 IDENTITY FAIL (ribbed droplet/onion-shell
+  band read displaces the Enneper crossing identity at 18m; only the top
+  plan view delivers the 4-petal contract, a vantage no walker gets;
+  Sev 2); refine queued tick-135 with the survey-181 fix class.
+
+- NIGHT/NATIVE DEBTS CARRYING (disclosed, not HOLD-class): gyroid night
+  frame never natively judged (build-tick ZAI + s176 judged gameplay/front/
+  aerial only); peaucellier night narrowed to night-only debt (struct-132
+  paid gameplay natively; night 1210 x2 that window). Attempted THIS TICK:
+  gyroid gameplay + night native reads on pinned byte-stable frames —
+  provider 1210 x2 + paced 20s retry rule honored, NO third call (flap
+  law). Debts carry; RING-READ does not force them — the forms' standing
+  verdicts above are the ring-read evidence base.
+
+NN FLOOR (Amendment 1, applies to NEW forms; verified against live census
+positions of all 23): min NN across the register = 6.31m
+(borromean r190 <-> brachistochrone r196 S-walk pair). All other pairs
+>= 8.73m. Both works stand under native PASS verdicts and were sited under
+the pre-amendment 10m-cadence law — the 8m floor is forward law, not
+retroactive; the sub-8m pair is DISCLOSED to Bill as composition evidence
+within the ring-read report (relocation or retirement remains Bill's call
+per CITY-PLAN relocation law).
+
+CADENCE/NEXT: this tick consumed the R11 opener (ring-read). 135%3==0 =
+refine slot: enneper identity refine (survey-181 fix class: band-read
+breakup — fewer/wider rings or film law + localized densification at the
+two axis crossings) OR gyroid end-caps + native debt payment, whichever
+higher deficit. R11 new-form commissions resume 136 (8m NN floor +
+per-district soft cap 6 + rotate to under-served district).
+
+Gate: ALL PASS real exit 0 tick-start 7fbac2bd (un-piped). Ledger max
+fresh pre-append = struct-133 -> this tick struct-134. Zero world
+mutations, zero uploads, zero verbs, zero shared-budget use (D+0, E+0).
+Files: struct134-ringread-derive.py (tracked this tick).
