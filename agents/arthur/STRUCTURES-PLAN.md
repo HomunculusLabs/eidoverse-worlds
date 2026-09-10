@@ -1,3 +1,13 @@
+## R11 — DENSITY-CORRECTED MATH SERIES (Bill "lil cluttered but so cool", 2026-09-09)
+
+CITY-PLAN Amendment 1 is binding on R11+:
+1. FIRST TICK of R11 = RING-READ pass: native-judge the 22 R10 forms at
+   18m gameplay + dusk; weak reads -> mark HOLD-for-Bill in the plan
+   (one line each), never delete.
+2. New forms: >=8m NN from any struct form, per-district soft cap 6,
+   rotate to under-served district when hit.
+3. Cadence holds: build+judge one tick, place next (judge debt law).
+
 ## CITY-PLAN RELOCATIONS (Bill B+A ruling 2026-09-07)
 
 CITY-PLAN.md is composition law; the relocation register is EXECUTED BY THE

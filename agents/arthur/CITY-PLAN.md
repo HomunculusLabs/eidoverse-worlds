@@ -54,6 +54,20 @@ and retirement must cite it. Bill alone may amend or dissolve this plan.
 Relocations preserve yaw-relative-to-center where the read depends on it;
 SAT preflights at destination; sweep re-baselines after each wave.
 
+## AMENDMENT 1 — ring density law (Bill correction, 2026-09-09)
+
+Bill, after R10's 22-form math series: "lil cluttered but so cool :3".
+The series continues; the spacing tightens:
+
+- New district-ring forms site with MIN 8m nearest-neighbor distance from
+  any other struct form (SAT preflight already enforces collisions; this
+  is a composition floor above it).
+- Per-district per-round soft cap: 6 new forms, then the round rotates to
+  the under-served district (balance over accumulation).
+- R11 opens with a RING-READ pass: native-judge the 22 R10 forms at 18m;
+  any weak read gets marked HOLD-for-Bill (relocation or retirement is
+  Bill's call per relocation law) — never deleted unilaterally.
+
 ## Standing laws
 
 1. **No new entity in r33–55 except on-spoke procession pieces named in
