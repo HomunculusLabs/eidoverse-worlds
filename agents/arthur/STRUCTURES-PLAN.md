@@ -10169,3 +10169,73 @@ Zero pushes.
 Files: struct165-probe-costa.ts (C5 fix), assets/mkv3-costa.ts (NEW),
 struct166-decode-costa.ts (NEW), STRUCTURES-PLAN.md (this block),
 IMPROVEMENTS.md (one append struct-166, D+0 E+0).
+
+
+## struct-167 (2026-09-10): COSTA v2 — JUDGE TICK (decode GREEN + renders +
+## judged ACCEPTED; brass lane cured; banked for struct-168 placement)
+
+167%3=2 placement slot, nothing takeable — v2 bytes banked this tick, not
+placed. Gate ALL PASS real exit 0 tick-start 6ef3f98a (sweep-236 tip, 99
+PASS, /tmp/struct167-gate.txt, unpiped; survey-342 landed before the gate
+ran). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 231st, 0
+OPEN nx-struct rows). Ledger max re-derived struct-166 -> tag struct-167.
+Freeze context read fresh: city-12 froze build lanes; city-14 (Bill
+delegation "Execute what you feel is best") lifted the freeze for struct+
+city under CITY-PLAN-V2 — new builds lawful again.
+
+DECODE GREEN re-run (owed by struct-166): RED FIRED — 22/23, the authored
+"up mouth high (min y >= 2.9)" law failed on TRUE bytes (y [2.892,2.926],
+8mm under threshold). Resolution which-side-wrong: mk source carries NO 2.9
+constant; its contract is dome base ring = exact rim loop (al=1 dome row
+re-emits rim verts exactly); the PASSing apex law corroborates (3.210 = rim
+mean 2.910 + DOME_H 0.300 exact). Prior threshold = pre-lift estimate —
+CHECKER artifact, build correct. struct166-decode-costa.ts law rewritten
+source-true (upMean >= 2.85 AND |upMean + 0.3 - 3.21| <= 0.01, comment
+names the provenance) -> GREEN 23/23 real exit 0 + RED control exit 1 on
+village_unduloid3.glb (both captures unpiped; first RED attempt through a
+tail pipe masked the exit — re-run redirected, the content-verdict law).
+
+REVIEW: 10-frame review-model renders on pinned v1 bytes (1db33166 exact).
+JUDGMENT: native 1210 x2 (one paced retry, flap law) -> ZAI fallback
+judged gameplay: 4 PASS / 1 FAIL — material separation: brass dome
+~#211d15 near-black, hem dark-olive, stone ~#59544a same dark family.
+
+CURE (falsify-at-source discipline): cs_brass v1 = tensegrity-v6 lane
+[0xceae54,0xbe9a47,0xe1be68] metal 0.9 — v6's own comment records "18m
+brass distance-desaturation" and v6 is BANKED behind Bill's eye-gate,
+never hero-ready; no accepted precedent for metal>0 lanes exists. CONTROL
+(pitfall-5 law): same-rig same-lighting render of accepted enneper
+(struct-141 native PASS) — its ep_brass metal-0 reads #a8823f–#c8a058 warm
+gold in the identical conditions. Mechanism: metallicFactor kills the
+diffuse term; with no env map the surface renders black. ONE source change
+in mkv3-costa.ts: cs_brass adopts the proven ep_brass recipe verbatim
+([0xa8823f,0x9c7838,0xb28c46], rough 0.42, metal 0), comment cites the
+cure. v1 bytes banked before/v1-banked.glb (sha 1db33166, untracked-asset
+law). Rebuild x2 deterministic, mtime-verified both runs, v2 sha256
+4bd697873ffaabf0c922a10067a949c499ae0912a9f17471d9bf933564629bae
+(1,544,692 B). Decode 23/23 on v2. 10-frame v2 renders
+(reviews/struct167-costa-v2/).
+
+FALSIFICATION (v2 judgment, fallback judge, calibrated by the control):
+FLIPPED — dome ~#8f7038 with #c9a558 specular arc, hem ~#9c7c3e, stone
+~#7b7a74 neutral gray; three families separate on hue+chroma (brass the
+only saturated element) AND value (bone vs stone ~35-40 pts); zero new
+defects (closed silhouette, no floaters, no gaps, shadow single+anchored).
+
+DISPOSITION: v2 ACCEPTED BANKED NOT PLACED. Judge-debt law: build+judge
+tick 167 -> placement = struct-168 committed carry (Math Avenue S 184deg
+band eligible per CITY-PLAN-V2 r55-130 avenue bands, 8m NN floor, fresh
+census scan, hash-gated remove+spawn chassis — new entity, so plain spawn
+— comp bag was {} at build, glow bead is IN-GEOMETRY not a comp; no walk
+owed, folly class). NATIVE RE-JUDGE DEBT: acceptance judged by fallback
+(disclosed); re-judge owed when native restores (flap law) — Costa plan
+row carries judge=native-owed.
+
+Zero world mutations, uploads, verbs, comp-edits, shared-budget. Zero
+pushes.
+
+Files: assets/mkv3-costa.ts (brass cure), struct166-decode-costa.ts (law
+cure), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-167, D+0 E+0). v1 GLB banked reviews/struct167-costa/before/;
+v2 renders reviews/struct167-costa-v2/ (untracked review residue per
+convention).

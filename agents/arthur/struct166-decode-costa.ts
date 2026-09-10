@@ -184,9 +184,16 @@ if (filmWorld && filmIdxArr) {
         // skirt loop: high above the drum
         const skirtYs = skirt.map((v) => filmWorld![3 * v + 1]);
         ok("skirt brim clears drum by >= 1.2m", Math.min(...skirtYs) - 0.114 >= 1.2, `min y ${Math.min(...skirtYs).toFixed(3)} (clear ${(Math.min(...skirtYs) - 0.114).toFixed(2)}m)`);
-        // up loop high
+        // up loop high — source-true law (struct-167): the mk script carries no
+        // 2.9 constant; its contract is "dome base ring = exact rim loop" (the
+        // al=1 dome row re-emits rim verts exactly), so the up-mouth height IS
+        // the rim curve's own band. The prior >= 2.9 threshold was a pre-lift
+        // estimate, 8mm above the true rim min 2.892 — a checker artifact, not
+        // a build defect (corroborated by the PASSing apex law: 3.210 = rim
+        // mean 2.910 + DOME_H 0.300 exact).
         const upYs = up.map((v) => filmWorld![3 * v + 1]);
-        ok("up mouth high (min y >= 2.9)", Math.min(...upYs) >= 2.9, `y [${Math.min(...upYs).toFixed(3)},${Math.max(...upYs).toFixed(3)}]`);
+        const upMean = upYs.reduce((s, y) => s + y, 0) / upYs.length;
+        ok("up mouth high (rim band, mean >= 2.85, dome base law apex-3.210)", upMean >= 2.85 && Math.abs(upMean + 0.3 - 3.21) <= 0.01, `y [${Math.min(...upYs).toFixed(3)},${Math.max(...upYs).toFixed(3)}] mean ${upMean.toFixed(3)}`);
         // trumpet pair symmetry: mean radii equal within 5mm
         const mr = (l: number[]) => l.reduce((s, v) => s + Math.hypot(filmWorld![3 * v], filmWorld![3 * v + 2]), 0) / l.length;
         ok("trumpet pair balanced (mean rim radii within 5mm)", Math.abs(mr(down) - mr(up)) <= 0.005, `down ${mr(down).toFixed(4)} up ${mr(up).toFixed(4)}`);

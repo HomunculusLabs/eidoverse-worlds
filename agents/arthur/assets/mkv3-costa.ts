@@ -414,7 +414,13 @@ const glowMeshes: THREE.Mesh[] = [];
 const boneTex = texMat("cs_bone", [0xd8d2c4, 0xcfc8b8, 0xbfb8a8], { rough: 0.9, scale: 2, weights: [3, 1, 1], seed: 9661 });
 boneTex.side = THREE.DoubleSide;      // interior visible through the geometry (boy film law)
 (boneTex as any).userData = { ...(boneTex as any).userData, texName: "cs_bone", glTFDoubleSide: true }; // glbwrite v3.4 lane
-const brassTex = texMat("cs_brass", [0xceae54, 0xbe9a47, 0xe1be68], { rough: 0.38, metal: 0.9, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9662 });
+// struct-167 material cure: v1 used the tensegrity-v6 lane (metal 0.9) —
+// with no env map the diffuse term is killed and the dome rendered near-black
+// (#211d15) / hem dark-olive at 18m (fallback-judged FAIL, corroborated at
+// source + enneper same-rig control: its metal-0 brass reads #a8823f gold).
+// v6 is banked behind Bill's eye-gate (never hero-ready); the PROVEN accepted
+// lane is enneper ep_brass (struct-141 native PASS). Adopted verbatim below.
+const brassTex = texMat("cs_brass", [0xa8823f, 0x9c7838, 0xb28c46], { rough: 0.42, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9662 });
 const stoneTex = texMat("cs_stone", [0x6f6a60, 0x777166, 0x67625a], { rough: 0.95, scale: 2, weights: [3, 1, 1], seed: 9663 });
 
 // film (image-space geometry -> world; mergekit computes normals when absent)
