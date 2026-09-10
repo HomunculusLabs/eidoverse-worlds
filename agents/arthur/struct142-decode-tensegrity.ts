@@ -1,10 +1,13 @@
-// struct142-decode-tensegrity.ts — decode audit for THE NEEDLE (struct-142).
-// Independent replica: re-derive the 9 struts / 18 tendons / bead / stone from
-// the SAME parametric laws (not from the mk script's objects) and classify
+// struct142-decode-tensegrity.ts — decode audit for THE NEEDLE (struct-142 v1 /
+// struct-143 v2). Independent replica: re-derive the 9 struts / 21 tendons / bead /
+// stone from the SAME parametric laws (not from the mk script's objects) and classify
 // every vertex of the BUILT GLB against them. Zero orphans = the bytes carry
 // exactly the authored form. Also: node census, texMat lanes, envelope,
 // strut-disjoint law re-derived FROM BYTES (endpoint regression on the timber
 // cylinder axes), glow KEEP census, doubleSided absent (closed solid struts).
+// v2 constants (struct-143): stage yb 2.55/4.85 yt 4.40/6.45, bead 6.95,
+// TENDON_R 0.055, +3 ground guys T1_i -> (r1.66, y0.36, theta-60) + 3 anchor
+// blocks (0.22 x 0.22..0.36 x 0.52 yawed radially).
 import { readFileSync } from "node:fs";
 import * as THREE from "three";
 
@@ -57,14 +60,15 @@ for (const si of json.scenes?.[0]?.nodes ?? []) walk(json.nodes[si], new THREE.M
 const matName = (mi: number | undefined) => (mi === undefined ? "(none)" : json.materials[mi]?.name ?? "?");
 
 // ---- independent parametric replica (constants re-typed, not imported) ------------------------------
-const SLAB = 0.14, STRUT_R = 0.065, TENDON_R = 0.038, BEAD_R = 0.13;
+const SLAB = 0.14, STRUT_R = 0.065, TENDON_R = 0.055, BEAD_R = 0.13;
 const STAGES = [
     { yb: 0.20, yt: 2.10, Rb: 1.55, Rt: 1.30 },
-    { yb: 2.35, yt: 4.20, Rb: 1.10, Rt: 0.95 },
-    { yb: 4.45, yt: 6.05, Rb: 0.85, Rt: 0.72 },
+    { yb: 2.55, yt: 4.40, Rb: 1.10, Rt: 0.95 },
+    { yb: 4.85, yt: 6.45, Rb: 0.85, Rt: 0.72 },
 ];
 const TWIST = Math.PI / 3;
-const BEAD_C = new THREE.Vector3(0, 6.62, 0);
+const BEAD_C = new THREE.Vector3(0, 6.95, 0);
+const ANCHOR_R = 1.66, ANCHOR_H = 0.36, ANCHOR_W = 0.22, ANCHOR_D = 0.52;
 const strutB: THREE.Vector3[][] = [], strutT: THREE.Vector3[][] = [];
 for (let k = 0; k < 3; k++) {
     const S = STAGES[k], alpha = k * TWIST;
@@ -81,7 +85,11 @@ for (let k = 0; k < 3; k++) for (let i = 0; i < 3; i++)
 for (let k = 0; k < 2; k++) for (let i = 0; i < 3; i++)
     tendons.push([strutT[k][i].clone(), strutB[k + 1][i].clone()]);
 for (let i = 0; i < 3; i++) tendons.push([strutT[2][i].clone(), BEAD_C.clone()]);
-if (tendons.length !== 18) throw Error("replica tendon count != 18");
+for (let i = 0; i < 3; i++) {  // v2 ground guys
+    const th = Math.atan2(strutT[1][i].z, strutT[1][i].x) - Math.PI / 3;
+    tendons.push([strutT[1][i].clone(), new THREE.Vector3(ANCHOR_R * Math.cos(th), ANCHOR_H, ANCHOR_R * Math.sin(th))]);
+}
+if (tendons.length !== 21) throw Error("replica tendon count != 21");
 
 // point-to-segment distance
 const ptSeg = (p: THREE.Vector3, a: THREE.Vector3, b: THREE.Vector3) => {
@@ -133,6 +141,7 @@ for (const a of accs) {
         ck("brass verts all on replica tendons", orphans === 0, `${orphans}/${a.pos.length} orphan, worst ${worst.toFixed(5)}m`);
     } else if (m === "tn_stone") {
         // slab box or socket boxes (0.34 wide, band y 0.12..0.50 radially at strut B xy)
+        // or v2 anchor blocks (0.22 x 0.36 x 0.52 yawed radially at r1.66, y 0.14..0.36)
         for (const v of a.pos) {
             const onSlab = Math.abs(v.x) <= 1.951 && Math.abs(v.z) <= 1.951 && v.y >= -0.001 && v.y <= SLAB + 0.001;
             let onSock = false;
@@ -141,9 +150,15 @@ for (const a of accs) {
                 const hd = Math.hypot(v.x - B.x, v.z - B.z);
                 if (hd <= 0.2404 + 0.002 && v.y >= 0.11 && v.y <= 0.511) onSock = true; // yawed square: circumscribed bound 0.17*sqrt2
             }
-            if (!onSlab && !onSock) orphans++;
+            let onAnchor = false;
+            for (let i = 0; i < 3; i++) {
+                const th = Math.atan2(strutT[1][i].z, strutT[1][i].x) - Math.PI / 3;
+                const hd = Math.hypot(v.x - ANCHOR_R * Math.cos(th), v.z - ANCHOR_R * Math.sin(th));
+                if (hd <= Math.hypot(ANCHOR_W, ANCHOR_D) / 2 + 0.002 && v.y >= 0.139 && v.y <= 0.361) onAnchor = true; // yawed box: circumscribed radius
+            }
+            if (!onSlab && !onSock && !onAnchor) orphans++;
         }
-        ck("stone verts all on slab/sockets", orphans === 0, `${orphans}/${a.pos.length} orphan`);
+        ck("stone verts all on slab/sockets/anchors", orphans === 0, `${orphans}/${a.pos.length} orphan`);
     }
 }
 
@@ -173,6 +188,19 @@ for (const a of accs) {
     for (let a = 0; a < 9; a++) for (let b = a + 1; b < 9; b++)
         worstPair = Math.min(worstPair, segSeg(strutB[Math.floor(a / 3)][a % 3], strutT[Math.floor(a / 3)][a % 3], strutB[Math.floor(b / 3)][b % 3], strutT[Math.floor(b / 3)][b % 3]));
     ck("strut-disjoint from replica axes (byte-anchored)", worstPair >= 0.16, `min gap ${worstPair.toFixed(3)}m (law 0.16)`);
+    // v2 ground-guy clearance: each guy clears every strut it does not anchor by >= 0.30 m axis distance
+    {
+        let worstGuy = Infinity;
+        for (let i = 0; i < 3; i++) {
+            const th = Math.atan2(strutT[1][i].z, strutT[1][i].x) - Math.PI / 3;
+            const gEnd = new THREE.Vector3(ANCHOR_R * Math.cos(th), ANCHOR_H, ANCHOR_R * Math.sin(th));
+            for (let k = 0; k < 3; k++) for (let j = 0; j < 3; j++) {
+                if (k === 1 && j === i) continue; // its own anchor strut
+                worstGuy = Math.min(worstGuy, segSeg(strutT[1][i], gEnd, strutB[k][j], strutT[k][j]));
+            }
+        }
+        ck("ground guys clear non-anchor struts >= 0.30", worstGuy >= 0.30, `min ${worstGuy.toFixed(3)}m`);
+    }
 }
 
 // 5. bead: verts within BEAD_R of BEAD_C (glow bucket is the bead)
@@ -191,7 +219,7 @@ for (const a of accs) {
     const env = new THREE.Box3();
     for (const a of accs) env.union(new THREE.Box3(a.min, a.max));
     const sz = env.getSize(new THREE.Vector3());
-    ck("envelope 3.90x6.75x3.90 +/-0.02", Math.abs(sz.x - 3.9) < 0.02 && Math.abs(sz.y - 6.75) < 0.02 && Math.abs(sz.z - 3.9) < 0.02, `${sz.x.toFixed(3)}x${sz.y.toFixed(3)}x${sz.z.toFixed(3)}`);
+    ck("envelope 3.90x7.08x3.90 +/-0.02", Math.abs(sz.x - 3.9) < 0.02 && Math.abs(sz.y - 7.08) < 0.02 && Math.abs(sz.z - 3.9) < 0.02, `${sz.x.toFixed(3)}x${sz.y.toFixed(3)}x${sz.z.toFixed(3)}`);
     ck("no below-grade verts", env.min.y > -0.001, `min y ${env.min.y.toFixed(4)}`);
 }
 

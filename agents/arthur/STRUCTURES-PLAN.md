@@ -8494,3 +8494,67 @@ on the five fix classes, then judge, then the placement contract
 Files: mkv3-tensegrity.ts (ignored dir, staged -f),
 struct142-decode-tensegrity.ts (tracked), reviews/struct142-tensegrity/
 (10 frames, ignored).
+
+## struct-143 (2026-09-10): REFINE — tensegrity needle v2 (five fix classes) —
+## 4/5 landed, identity narrowed to ONE cause (value collision); ACCEPTED banked,
+## NOT placed; v3 = walnut timber two-value fix, then placement
+
+Cadence 143%3==2 placement slot, but carried mid-iteration outranks (struct-139
+precedent). Gate ALL_PINS_OK 15/15 real exit 0 tick-start 19ad6a37 (un-piped,
+redirected-file). Shard drained fresh (0 OPEN nx-struct rows, 134th check).
+
+PROBE BEFORE EDIT (struct143-probe-weave.ts, new, tracked): fix class 2
+("saddles flush to non-anchor struts") decode-FALSIFIED in 3D — min non-anchor
+tendon-vs-strut approach 0.269 m axis (~0.15 m surface), weave law 0.06 nowhere
+near violated; the flush read is 2D projection crowding at 18 m, cured by
+classes 1+4. No reroute.
+
+GROUND-GUY FEASIBILITY (numeric, pre-edit): radial guys from stage-1 BOTTOMS
+infeasible — anchor needs r>=3.0 to clear stage-0 tops (off-slab). Chosen:
+stage-1 TOP T1_i -> stone anchor-block eye at (r1.66, y0.36, theta_i-60deg);
+probe + new decode law: clears all non-anchor struts by 0.369 m (law >=0.30).
+
+V2 CHANGES (mkv3-tensegrity.ts edited in place): (1) float gaps 0.25 -> 0.45
+(stage1 yb 2.55, stage2 yb 4.85), bead 6.62 -> 6.95; (2) no reroute (falsified);
+(3) timber 0x56503c olive -> 0x8a5a33/0x96683c/0x74492a oak; (4) TENDON_R
+0.038 -> 0.055, brass brightened 0xbfa14e lane; (5) +3 ground guys + 3 stone
+anchor blocks (0.22 x 0.22 x 0.52 yawed radially, spans 0.14..0.36, top-face
+center = guy eye). Tendon census 18 -> 21.
+
+HONEST SELF-CATCHES (both pre-verdict): first build FAILed its own plan law —
+anchors at r1.75 + 0.28 half-extent = 2.03 > slab 1.95 (3.98 plan) -> r1.66 +
+ANCHOR_D 0.52. Second: anchor block y arithmetic "+0.06" placed blocks
+0.13..0.49 — caught by DECODE (36/168 stone verts orphan) -> block spans
+slab-top 0.14 to eye 0.36 exactly. Both disclosed, both cured same tick.
+
+BUILD: sha bd84bde454285f9f deterministic x2 MTIME-VERIFIED. Envelope
+3.90x7.08x3.90. DECODE (struct142-decode-tensegrity.ts, replica updated to v2
+constants + 2 new laws): ALL PASS 13/13 — 468 timber + 840 brass (was 720; 3
+guys x 40) + 168 stone verts 0 orphan 0.00000m, strut-disjoint 0.461 (was
+0.269), guy clearance 0.369, bead on sphere, 1 emissive lane, envelope exact.
+
+NATIVE JUDGMENT (provider UP all tick; 3 calls):
+- NIGHT PASS all four axes: exactly one tight amber beacon at the apex, no
+  bloom/smear, silhouette traceable, zero stray bright pixels.
+- GAMEPLAY 18m: gaps+material+bead axes PASS (warm wood confirmed, no floats)
+  but wires invisible — judge again miscomputes scale (claims 20 px/m; true
+  52.1 px/m = 369px/7.08m; byte-proven min surface gap 0.33 m ~ 17 px, not 0).
+  The real deficit: tendons 5.7 px wide = 0.8% of frame — sub-2% line, no
+  internal structure resolves (struct-45 law): framing-limited, disclosed.
+- FRONT 8m: gaps READ (sky visible through joints — class 1 solved), warm wood
+  (class 3 solved), no floats — but judge counts ZERO wires: tendons read
+  "pale yellow-tan bamboo poles", i.e. a SECOND TIMBER FINISH, not wire. The
+  pale-oak highlight 0x96683c and the brass 0xbfa14e lane collide in value
+  and hue. This is the sole remaining identity cause, now precisely bounded.
+
+VERDICT: v2 ACCEPTED as banked baseline (strictly better than v1 on every
+judged axis; no regression), NOT placed (identity axis open). v3 fix class
+(ONE): darken timber to walnut range — kill the straw highlight tones, keep
+brass bright — a two-value system (dark compression / bright tension) that
+makes tendons read as wires at walk-up. Then the placement contract
+(under-served ray scan, 8m NN floor, district cap 6) once judged PASS.
+
+Files: mkv3-tensegrity.ts (ignored dir, staged -f), struct142-decode-
+tensegrity.ts (tracked, v2 replica), struct143-probe-weave.ts (new, tracked),
+reviews/struct143-tensegrity-v2/ (10 frames, ignored). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. One ledger append (struct-143).
