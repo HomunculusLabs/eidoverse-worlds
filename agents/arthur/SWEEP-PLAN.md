@@ -8418,3 +8418,48 @@ from ledger tier-2 fragments this tick: row-cottage / observatory @212,
 inn / tower-house @213, forge / potter @214, hall / bunkhouse @208 stalest
 standing pair at 6 sweeps; both walk tools verified present on disk this
 tick: interior-walk-hall.ts, interior-walk-bunkhouse.ts).
+
+
+| sweep-215 | 2026-09-10 | 323==323 (285 thing + 38 light; 0 arrivals, 0 departures, 0 field diffs, 0 lib flips, 0 compKeys drift at BOTH epochs BYTE-IDENTICAL 214035B sha16 ed5856e6ef4abd37 — certified baseline representation, quiet for all projection fields by byte identity; baseline 29f0c652 current, no rewrite) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard -0.407 (Sev 2 artwalk-routed @ sweep-43, 171st sweep since routing, no escalation due — law keys Sev 1); 285 bbox non-light / 236 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37); tier-2 193rd hall 8/8 @ 0.360 + bunkhouse 6/6 @ 0.380 per committed sweep-214 pointer (match sweep-208 records) | pins 15/15 ALL_PINS_OK (169th), battery 28/28, interlane f6254cd0 stable, ledger law EXACT 2370773, gate ALL PASS exit 0 FIRST TRY at e3e764ad + re-run at e4be26b3 (survey-279..284 + struct-150 banked-not-placed, epoch law honored); diff tool sweep215 folded (3/0, clean BOTH epochs); pools drained (0 OPEN rows, no SHARD EXECUTION 144th); next pair sweep-216 longhouse + garden-cottage (194th) | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+sweep-215: CLEAN SWEEP fully quiet steady-state tick, no snapshot rewrite.
+Census 323==323 at BOTH epochs (A/B 20s-paced, next-live-census.ts chassis)
+BYTE-IDENTICAL 214035B sha16 ed5856e6ef4abd37 -- byte-identical to the
+survey-231..284 / sweep-199..214 certified post-enneper baseline
+representation, so quiet holds for ALL fields the projection carries incl
+comp/compKeys by byte identity: 0 arrivals, 0 departures, 0 field diffs,
+0 lib flips, 0 compKeys drift (285 thing + 38 light). Baseline
+29f0c652df402f01 current, no rewrite (no-churn precedent). Overlap: SAT
+fresh-live 285 bbox non-light / 236 classified / 0 coverage holes, real
+exit 3 un-piped on exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard
+-0.407 -- known Sev 2 routed to artwalk b26 choreography @ sweep-43, 171st
+sweep since routing, NOT new, no escalation due (law keys severity-1).
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0 --
+core 64/64 @ 0.38 (next-walk-core-paths.ts), NW 5/5 @ 0.38
+(nw-approach1-walk.ts), NE 7/7 @ 0.38 (ne-approach2-walk.ts), SW 5/5 @ 0.37
+(sw-approach3-walk.ts). Tier-2 193rd cycle per the committed sweep-214
+pointer: hall 8/8 @ 0.360 (interior-walk-hall.ts) + bunkhouse 6/6 @ 0.380
+(interior-walk-bunkhouse.ts), both ALL_PASS real exit 0 -- both match the
+sweep-208 records for the pair exactly. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (169th consecutive clean); sweep89-battery 28/28
+PASS exit 0 on fresh census-A bytes; interlane md5 f6254cd0 stable, read
+fresh; ledger law EXACT -- base 2370773 re-read fresh via gate at
+tick-start and at the re-run, D+0/E+0, tool self-verifies law() pre and
+post append. Standing gate ALL PASS real exit 0 from repo ROOT FIRST TRY
+at tick-start e3e764ad (survey-278 at tip); HEAD advanced mid-tick
+(survey-279..284 observer holds + struct-150 gyroid v2 banked-not-placed
+zero-mutation per its own entry, world epoch unchanged -- byte-identical
+census corroborates); epoch law honored, gate RE-RUN ALL PASS real exit 0
+at e4be26b3 before the ledger append. Diff tool sweep215-census-diff.py
+folded from the sweep214 chassis (sed swap only, asserted 3 forward refs /
+0 stale refs, py_compile clean, run clean exit 0 at BOTH epochs). Pools
+drained: IMPROVE-PLAN md5 c0f569d0 unchanged 211-chain, no SHARD EXECUTION
+section (144th check, sweep owns no prefix), zero OPEN candidate rows.
+Zero world mutations, zero defect notes, zero uploads, zero verbs, zero
+comp edits, zero shared-budget use. Next tier-2 pair (sweep-216):
+longhouse + garden-cottage (194th cycle -- LRU chain re-derived from ledger
+tier-2 fragments this tick: row-cottage / observatory @212, inn /
+tower-house @213, forge / potter @214, hall / bunkhouse @215, longhouse /
+garden-cottage @211 stalest standing pair at 4 sweeps; both walk tools
+verified present on disk this tick: interior-walk-longhouse.ts,
+interior-walk-garden-cottage.ts).
