@@ -13515,3 +13515,74 @@ shared-budget use (D+0, E+0).
   Evidence: reviews/survey286-slice/gyroid/ (8 frames + served-bytes.glb,
   local-untracked, s176/s181 shape). Zero world mutations, zero uploads,
   zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## survey-287 (2026-09-10) — ARRIVAL-GATED POST-CURE AFTER-JUDGE slice (gyroid v3), fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS real exit 0 first
+  try at 2cb55a7e (struct-152 tip, foreign lane — second consecutive survey
+  tick off own tip). Ledger law EXACT (2370773 == 2370773); ledger grep
+  survey-287 clean pre-check (0 matches SURVEY-PLAN + IMPROVEMENTS);
+  bracketed survey ledger max [survey-82] → this tick appends [survey-83]
+  (note routed); plan-section max survey-286 → this tick survey-287.
+- Census: FIRST attempt hit localhost:8787 connection refused (fail-closed
+  HTTP 000) — self-caught as MY wrong endpoint, not an outage (certified
+  chassis is https://eidoverse.billding.dev/geom, survey-26 wrong-URL
+  class); corrected fetch HTTP 200 95543B sha16 fa58f9da1d1d84b3 —
+  DIFFERS from survey-286 baseline e8833b53417d0c48 (second non-quiet
+  epoch). Certified 8-field set-diff INLINE (survey-286 footgun law:
+  survey235-census-diff.py hardcodes paths, argv ignored — projection run
+  inline on the actual files): 323==323, arrivals 0 / departures 0 /
+  exactly ONE field diff `nx-struct-gyroid` yaw 3.141592653589793 →
+  3.839724354387525 (= pi + 2pi/9 exact), lib/pos/scale/kind/comp ALL
+  unchanged = struct-152's committed v3 oblique re-seat, ledger-matched,
+  domain-valid. No other drift.
+- Slice (arrival gate, s138/s286 class): gyroid v3 post-cure after-judge
+  at the LIVE pose. Standing debt: s286 front-view ZAI dissent (native
+  front debt disclosed); struct-152 executed the v3 oblique-yaw re-seat
+  AFTER that probe — the dissent angle no longer exists; independent read
+  on the new pose owed.
+- Bytes + render: live store bytes fetched fresh curl UA (HTTP 200,
+  237,636B, served-sha16 4af2ccc319cc4506 — byte-identical to survey-286
+  pin, yaw-only cure law holds). New variant chassis
+  survey287-gyroid-yaw-chassis.ts (survey-286 DRACO chassis + baked
+  yaw-delta 2pi/9 exact — the ONLY change; one typo self-caught in the
+  copy and patched pre-run). Render exit 0; decode contract exact:
+  envelope 4.60×4.19×4.60 origin-centered, 5 nodes / 4 draw meshes,
+  glow_gy_1 present = struct-150 pin.
+- Judge: NATIVE gameplay + NATIVE night (recovered on a later call);
+  native 1210 x2 + paced retry burned on front → ZAI FALLBACK there,
+  disclosed. Native re-judge debt on the front frame DISCLOSED but
+  considered immaterial (see closure).
+- GAMEPLAY 18m NATIVE: identity / through-read / silhouette / floats ALL
+  PASS — shadowed receding film in every mouth, zero sky transmission;
+  concords struct-152's own rig read. Bead flagged 'stray speck (478,328)'
+  by a blind judge → arbitrated INTENTIONAL (decode pin glow_gy_1 + night
+  signature below).
+- FRONT ~9m ZAI fallback: CURE-CONFIRMED — all three apertures show
+  shadowed receding film with depth gradients (A upper-central x430-480
+  y290-330 darkening; B lower-left dark underside; C right rear-wall
+  x600-700 y300-370); sky only in exterior inter-lobe gaps (inherent to
+  openwork silhouette, not the flagged class). Survey-286 front dissent
+  axis RESOLVED at the live pose.
+- NIGHT native: NIGHT-CLEAN 3/3 — amber bead quiet/bound/zero halo, form
+  reads, no dead-black crush. Judge's own caveat (oblique view naturally
+  favorable) noted — matches struct-152's falsify-first yaw0 control which
+  reproduced the defect verbatim, so the oblique read IS the cure proof.
+- Routing: ONE closure note → STRUCTURES-PLAN EOF (survey-287 SURVEY
+  INTAKE; survey-286 native front debt considered PAID by concord at the
+  standing pose — the pose changed under the dissent). ZERO IMPROVE-PLAN
+  rows (gyroid stands in the struct refine pool, no-duplicate law; md5
+  c0f569d0 unchanged). Grep-verified no open gyroid closure note
+  pre-append.
+- Verdicts: 3 clean (gameplay, front, night — one frame each on the same
+  object) / 0 confirmed / 0 dropped. 1 note routed, 1 ledger append
+  [survey-83].
+- Census baseline for next tick: /tmp/survey287-census-a.json (323
+  entities, /geom?world=commons-next raw shape, sha16 fa58f9da1d1d84b3).
+  Evidence: agents/arthur/reviews/survey287-slice/gyroid/ (8 frames +
+  served-bytes.glb, local-untracked). New tool tracked:
+  survey287-gyroid-yaw-chassis.ts.
+- STANDING RECOMMENDATION carried (s182-s286): stop the SURVEY lane or
+  convert to a no-LLM monitor when attended.
+- Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).

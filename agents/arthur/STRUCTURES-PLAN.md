@@ -9157,3 +9157,28 @@ Files: struct152-reseat-gyroid-yaw.ts (NEW, tracked), reviews/
 struct152-gyroid-v3/ (falsification frames, ignored), STRUCTURES-PLAN.md
 (this block), IMPROVEMENTS.md (one append, struct-152, D+0 E+0 — yaw-only
 same-tuple re-seat, struct-104 D+0 precedent). Zero pushes.
+
+**SURVEY INTAKE (survey-287, 2026-09-10) — gyroid v3 post-cure after-judge
+CLOSURE (probe → concord; native gameplay+night, ZAI fallback front
+disclosed — native down 1210 x2 + paced retry on that frame)** —
+independent after-judge on the LIVE v3 pose (census yaw 3.8397 = pi +
+2pi/9 exact, lib unchanged 31364ba46af040d5, served-sha16 4af2ccc319cc4506
+fetched fresh, byte-identical to survey-286 pin — yaw-only cure law):
+rendered via yaw-delta DRACO chassis (survey287-gyroid-yaw-chassis.ts,
+delta 2pi/9 exact baked in; decode contract identical: envelope 4.60 x
+4.19 x 4.60, 5 nodes / 4 draw meshes, glow_gy_1 present). GAMEPLAY 18m
+NATIVE: identity/through-read/silhouette/floats ALL PASS (shadowed
+receding film in every mouth, zero sky transmission) — concords
+struct-152's own rig read. FRONT ~9m ZAI fallback: CURE-CONFIRMED — all
+three apertures shadowed receding film with depth gradients (A upper-
+central darkening x430-480 y290-330; B lower-left; C right rear-wall
+x600-700 y300-370); the survey-286 front dissent axis is RESOLVED at the
+live pose. NIGHT native: NIGHT-CLEAN 3/3 — glow bead quiet/bound/zero
+halo; the gameplay judge's 'stray speck (478,328)' read is arbitrated
+intentional (decode pin glow_gy_1 + night signature). Survey-286 native
+front debt CONSIDERED PAID by concord at the standing pose (the dissent
+angle no longer exists — the pose itself changed); any future frontal
+finding would be a NEW finding at v3, not this debt. Gyroid residuals
+remain end-caps class only per struct-152 disposition. Evidence:
+reviews/survey287-slice/gyroid/ (8 frames + served-bytes.glb, ignored
+dir).
