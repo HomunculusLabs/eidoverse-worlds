@@ -15009,3 +15009,37 @@ shared-budget use (D+0, E+0).
   ledger append (loop law 4: append only when routing). STANDING
   RECOMMENDATION carried unchanged (s182-s324): stop the SURVEY lane
   or convert to a no-LLM monitor when attended.
+
+## Judged index (survey-326)
+
+- survey-326 (2026-09-10, arrival-gated quiet hold — 1st consecutive
+  fully-quiet 325-epoch on the post-unduloid-v3 baseline): census A/B
+  fresh both 325 entities, byte-identical to the committed survey-325
+  baseline by checksum identity (215228B sha16 b8c43498acb3ebea); set-diff
+  0 arrivals / 0 departures / 0 field-set diffs on all 325 shared ids
+  (kind/pos/yaw/scale/lib/color/intensity/range/bbox/compKeys/comp all
+  clean). Gate ALL PASS real exit 0 first try at 3c738864 own survey-325
+  tip (un-piped PIPESTATUS form). Selection pools drained: never-judged 0
+  by set algebra (arrivals 0); IMPROVE-PLAN md5 c0f569d0 unchanged (214th
+  check, byte-identical to ticks 212-325 records); SURVEY CANDIDATES 0
+  OPEN candidate rows; 19 raw OPEN hits prose-classified (headers/
+  execution-log history, same set as s325); 0 SHARD EXECUTION (grep exit
+  1 class, 122nd consecutive — survey owns no prefix, no shard work).
+  No slice judged (arrival-gated, s138-s325 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback
+  N/A. Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill overhaul family: HERO-ASSET-REFINEMENT-PLAN.md + core-paths
+  GLB/review + next-place-carousel.ts dirty, plus cabin-overhaul /
+  carousel-horse-prototype / debug-bower scripts / client+server trees —
+  same families as s285-s325) — the standing windmill overhaul remains
+  the likeliest next arrival/flip trigger; zero tracked survey paths
+  dirty pre-append, zero staging contact, observer read-only per
+  interlane law. Census baseline for next tick:
+  /tmp/survey326-census-a.json (325, 215228B, sha256-16
+  b8c43498acb3ebea — byte-identical, baseline unchanged). Expected next
+  work: arrival-gated; next slice when a census arrival or lib flip
+  lands. Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use, ZERO ledger append (loop law 4: append
+  only when routing; lane law overrides generic one-append footer, as
+  ticks 211-325). STANDING RECOMMENDATION carried unchanged (s182-s325):
+  stop the SURVEY lane or convert to a no-LLM monitor when attended.
