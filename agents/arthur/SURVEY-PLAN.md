@@ -10043,3 +10043,45 @@ shared-budget use (D+0, E+0).
   zero pre-existing survey paths dirty, zero staging contact, observer
   read-only per interlane law. Index clean (0 staged) pre-commit; only
   own tick files staged for the survey-195 commit.
+## Tick 196 (2026-09-09 21:3x EDT) — HOLD, 100th quiet hold, 15th at 322-epoch
+- Gate: ALL PASS real exit 0 un-piped (GATE_EXIT:0 marker) first try at
+  tick-start HEAD b4dba8b8 (struct-135 at tip — enneper v2 BANKED sha
+  9d1d3199 NOT placed, disclosed; ledger law EXACT 2370772). Interlane md5
+  f6254cd0 unchanged; IMPROVE-PLAN md5 c0f569d0 unchanged (STATE-OPEN grep
+  = 0, NOT-YET-RE-JUDGED = 0, SHARD EXECUTION heading absent; never-judged
+  pool ZERO by set algebra, arrivals = 0).
+- Census fresh (curl UA): 322 entities (284 thing + 38 light, 0 dupes), A/B
+  epochs 20s-paced both 95267B, raw sha16 551d9f029269a6b4
+  BYTE-IDENTICAL — the s182-s195 fetch class. Set-diff vs committed
+  sweep-183 fold baseline (322, ca2a1883 lineage) via tracked
+  survey196-census-diff.py (s195 chassis verbatim, full 8-field law
+  pos/yaw/scale/lib/kind/bbox/comp/compKeys, projection-canonical
+  compKeys): 0 arrivals / 0 departures / 0 field diffs / 0 lib flips on
+  ALL 322 shared ids — FULLY QUIET, 15th consecutive epoch.
+  Struct-family 72. gyroid da2a4b15 unchanged (tick-135 refine pending,
+  s176 Sev-2 note open with owner); enneper ba17a712 unchanged (s181
+  judged+routed; owner v2 banked-not-placed per struct-135 — owner
+  pending, Bill-gated placement).
+- Selection law fresh: never-judged pool ZERO by set algebra (arrivals=0,
+  s180 derivation carries on byte-stable inputs); SURVEY CANDIDATES raw
+  OPEN grep class unchanged on md5-identical file so s185's prose-only
+  reconciliation carries (zero structured STATE-OPEN rows); native-debt
+  survey-executable EMPTY (gyroid+enneper pending-owner, not survey
+  debt; enneper debt PAID s181).
+- No slice judged (arrival-gated, s138/s148/s150/s163/s168/s182-195
+  precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes routed,
+  0 vision calls (native-vs-fallback N/A). Tag survey-196 from plan
+  sequence; no append per loop law 4.
+- STANDING RECOMMENDATION (surface once, s182-195 carry unchanged):
+  15 consecutive fully-quiet 322-epochs — every selection pool drained,
+  owner-pending items are Bill-gated, and each unattended hold tick
+  spends a full turn of tokens for an identical quiet verdict. Stop or
+  convert to a no-LLM monitor when attended.
+- Foreign working-tree dirt at read = sibling lanes in flight —
+  zero pre-existing survey paths dirty, zero staging contact, observer
+  read-only per interlane law. Index clean (0 staged) pre-commit; only
+  own tick files staged for the survey-196 commit.
+- Expected next work: arrival-gated; next slice when a census arrival or
+  lib flip lands. Zero ledger append (loop law 4), zero world mutations,
+  zero uploads, zero verbs, zero comp edits, zero shared-budget use
+  (D+0, E+0).
