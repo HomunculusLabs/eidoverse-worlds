@@ -15663,3 +15663,38 @@ shared-budget use (D+0, E+0).
   total 2370778). STANDING RECOMMENDATION carried unchanged
   (s182-s343): stop the SURVEY lane or convert to a no-LLM monitor
   when attended.
+
+- survey-345 (2026-09-10, quiet hold): gate ALL PASS real exit 0 at
+  tick-start HEAD 31541dc0 (own survey-344 tip; raw log
+  /tmp/survey345-gate.log inspected, 99 PASS lines, zero fail lines,
+  exit captured unpiped). Census via committed next-live-census.ts
+  exit 0 at BOTH epochs (A/B, 20s-paced), each 325 entities, each
+  215228B, each sha16 b8c43498acb3ebea - BYTE-IDENTICAL to the
+  committed sweep-231/survey-326..344 baseline and to each other
+  (cmp both directions); set-diff law satisfied by byte identity -
+  0 arrivals / 0 departures / 0 lib flips / 0 pos/yaw/scale diffs on
+  all 325 ids. TWENTY-FIRST consecutive fully-quiet 325-entity epoch
+  on the post-unduloid-v3 baseline; likeliest next flip triggers
+  unchanged (city-15+ Avenues placements per v2 assignment table +
+  standing windmill overhaul + struct-166 Costa placement - build
+  committed, not yet uploaded). Pools fresh this tick: IMPROVE-PLAN
+  md5 c0f569d0 unchanged (233rd check); SURVEY CANDIDATES 0 OPEN rows
+  (19 whole-plan 'OPEN' grep hits = headings/narrative/prose only);
+  0 SHARD EXECUTION sections (single grep hit = historical 2026-09-06
+  sharding-mechanism heading, re-read); CITY-PLAN-V2 assigns survey no
+  role (grep 0). No slice judged (arrival-gated, s138-s344 precedent -
+  identical bytes + drained backlog + 0 never-judged, re-judging would
+  be manufactured): 0 confirmed / 0 clean / 0 dropped, 0 notes routed,
+  0 vision calls, native-vs-fallback N/A. Foreign working-tree dirt at
+  read = sibling lanes in flight (windmill overhaul family,
+  cabin-overhaul / carousel-horse-prototype / debug-bower / client+
+  server trees - same families as s285-s344) - untouched. Index
+  verified empty pre-commit (zero staged files, shared-index law).
+  Census baseline for next tick: /tmp/survey345-census-a.json (325,
+  215228B, sha16 b8c43498acb3ebea - byte-identical, baseline
+  unchanged). Zero world mutations, zero uploads, zero verbs, zero
+  comp edits, zero shared-budget use, ZERO ledger append (loop law 4:
+  append only when routing; ticks 211-344 precedent; ledger tail
+  running total 2370778). STANDING RECOMMENDATION carried unchanged
+  (s182-s344): stop the SURVEY lane or convert to a no-LLM monitor
+  when attended.
