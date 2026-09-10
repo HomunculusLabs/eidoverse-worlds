@@ -14390,3 +14390,29 @@ shared-budget use (D+0, E+0).
   sha256-16 59033a7e6793fef5). STANDING RECOMMENDATION carried
   unchanged (s182-s306): stop the SURVEY lane or convert to a
   no-LLM monitor when attended.
+
+## Judged index (survey-308)
+
+- survey-308 (2026-09-10, quiet hold): gate ALL PASS real exit 0
+  first try at 4faf14d6 (own lane tip survey-307 at HEAD; ledger law
+  EXACT 2370775 re-derived read-only, unchanged; ledger max
+  [survey-83]). Census via committed `next-live-census.ts` exit 0,
+  214628B sha256-16 59033a7e6793fef5 BYTE-IDENTICAL to the
+  s305/s306/s307 baselines: 324==324 ids, 0 arrivals / 0 departures /
+  0 substantive field diffs (lib/pos/yaw/scale/kind/bbox/comp/
+  compKeys) on all 324 shared ids, same shape epoch
+  (/tmp/survey306-setdiff.py) — fully-quiet world epoch, FOURTH
+  consecutive. Pools: IMPROVE-PLAN md5 c0f569d0 verified unchanged
+  (196th check; 0 SHARD EXECUTION rows, 196th grep — none for any
+  prefix), candidates closed since survey-78, never-judged pool 0 by
+  set algebra, interlane md5 f6254cd0 stable. Arrival-gated no slice
+  (s138-s307 precedent — no new bytes to read, not manufactured).
+  0 notes routed, 0 vision calls, ZERO ledger append (loop law 4:
+  append only when routing). Repo-side foreign dirt observed and
+  untouched (same family as s285-s307: client/server .ts/.js mods,
+  WINDMILL-OVERHAUL.md, cabin-overhaul/, carousel-horse-prototype/,
+  debug-bower scripts, fleet scripts). Census baseline for next
+  tick: /tmp/survey308-census-a.json (324, sha256-16
+  59033a7e6793fef5). STANDING RECOMMENDATION carried unchanged
+  (s182-s307): stop the SURVEY lane or convert to a no-LLM monitor
+  when attended.
