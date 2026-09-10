@@ -12971,3 +12971,41 @@ shared-budget use (D+0, E+0).
   entities, /geom?world=commons-next raw shape, sha256-16 d8fa3d8372b40ac7).
   Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+## survey-272 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 first
+  try at 976f89f3 (own survey-271 at tip). HEAD advanced MID-TICK to
+  9dafbd1f (sibling sweep-212, foreign files only — IMPROVEMENTS.md +
+  SWEEP-PLAN.md + sweep212-census-diff.py, zero world mutations): gate
+  re-run at new HEAD ALL PASS real exit 0 (epoch law honored). Ledger law
+  accepted both runs (2370773 == 2370773); ledger grep survey-272 clean
+  pre-check; bracketed survey ledger max [survey-81] (quiet holds append
+  nothing, loop law 4); plan-section max survey-271 → this tick survey-272.
+- Census: FIRST FETCH SELF-CATCH — my first two fetches hit a 276B Apache
+  404 HTML body (sha16 79fe64afcd63e733) because I hand-transcribed the
+  host as eidoverse.com; the certified chassis URL is
+  https://eidoverse.billding.dev/geom?world=commons-next (next-live-census.ts:5).
+  Fail-closed both times (no partial-parse risk), re-issued against the
+  certified host: HTTP 200, 95543B, sha256-16 d8fa3d8372b40ac7 —
+  byte-identical to the survey-271 certified baseline by full checksum →
+  323==323, arrivals 0 / departures 0 / field-diffs 0 by checksum
+  identity — 41st consecutive fully-quiet 323-epoch. Not a gateway
+  anomaly; a survey-25/30-class transcription self-catch, recorded.
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (211-272), 0 OPEN
+  rows by strict status-cell row-grep, no SHARD EXECUTION section (162nd
+  grep), candidates closed since survey-78, never-judged 0 by set algebra
+  (arrivals 0).
+- Arrival-gated: no slice judged (s138-s271 precedent) — 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback
+  N/A. Zero ledger append (loop law 4: append only when routing a note).
+- Repo-side foreign dirt observed and untouched (client/server .ts/.js
+  mods, WINDMILL-OVERHAUL.md, cabin-overhaul/, carousel-horse-prototype/,
+  debug-bower scripts, HERO-ASSET-REFINEMENT-PLAN.md + SWEEP-PLAN.md mods,
+  untracked fleet/ + moon-moth/) — no world-epoch counterpart (census
+  byte-quiet; sweep-212 independently corroborates 323 byte-identical).
+- STANDING RECOMMENDATION carried unchanged (s182-s271): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey272-census-a.json (323
+  entities, /geom?world=commons-next raw shape, sha256-16 d8fa3d8372b40ac7).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
