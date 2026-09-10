@@ -9581,3 +9581,46 @@ shared-budget use (D+0, E+0).
   slice when a census arrival or lib flip lands. Zero ledger append
   (loop law 4), zero world mutations, zero uploads, zero verbs, zero
   comp edits, zero shared-budget use (D+0, E+0).
+
+## Tick 184 (2026-09-09 20:1x EDT) — HOLD, 88th quiet hold, 3rd at 322-epoch
+- Gate: ALL PASS real exit 0 un-piped (GATE_EXIT:0 marker) first try at
+  tick-start HEAD e3cc63a0 (own survey-183; ledger law EXACT 2370772, tail
+  [survey-81]). Interlane md5 f6254cd0 unchanged; IMPROVE-PLAN md5
+  c0f569d0 unchanged (last touched d2e5335b 09-08, grep STATE-OPEN /
+  NOT-YET-RE-JUDGED = 0; SHARD section re-read fresh = routing law, the
+  09-06 open-split prose remains known-stale s172-classified; survey
+  candidate intake pool 0 OPEN rows, drained).
+- Census fresh (curl UA): 322 entities (284 thing + 38 light), raw 95267B
+  sha16 551d9f029269a6b4 (s182-class fetch serialization). Set-diff vs
+  committed sweep-183 fold baseline (322, ca2a1883) via tracked
+  survey184-census-diff.py: 0 arrivals / 0 departures / 0 lib flips.
+- PROBE SELF-CATCH (disclosed): first run failed closed — compKeys
+  present in baseline, absent in raw curl fetch on ALL 322 (uniform,
+  non-drift class). Root cause: compKeys is a chassis-DERIVED field
+  (sweep fold derives it; raw /geom carries parent/tris instead). Fix:
+  projection-canonical law — derive compKeys from comp on BOTH sides
+  (patched this tick's chassis in place). Rerun: 0 field diffs on all 322
+  shared ids across the FULL 8-field law → FULLY QUIET, third
+  consecutive epoch. Struct-family 72. gyroid da2a4b15 unchanged (tick-135
+  refine pending, s176 Sev-2 note open with owner); enneper ba17a712
+  unchanged (s181 judged+routed, owner refine pending).
+- Selection law fresh: SHARD = routing law not open assignment; STATE-OPEN
+  / NOT-YET-RE-JUDGED grep zero; IMPROVE-PLAN git-untouched since
+  d2e5335b; never-judged pool ZERO by set algebra (arrivals=0, s180
+  derivation carries on byte-stable inputs); native-debt
+  survey-executable EMPTY (gyroid pending-owner not survey debt; enneper
+  debt PAID s181).
+- No slice judged (arrival-gated, s138/s148/s150/s163/s168/s182/s183
+  precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes routed,
+  0 vision calls (native-vs-fallback N/A). Tag survey-184 from plan
+  sequence; no append per loop law 4; plan-block sequence 184.
+- Foreign working-tree dirt at read = sibling lanes in flight (client/
+  server sources, debug-bower, core-paths GLB + review json, HERO-ASSET
+  plan, WINDMILL-OVERHAUL, cabin-overhaul, carousel-horse-prototype,
+  fleet shells, terrain probes) — zero survey paths, zero staging
+  contact, observer read-only per interlane law. Mid-tick sibling ledger
+  appends ([city-11], [sweep-184]) absorbed read-only.
+- Expected next work: arrival-gated; next slice when a census arrival or
+  lib flip lands. Zero ledger append (loop law 4), zero world mutations,
+  zero uploads, zero verbs, zero comp edits, zero shared-budget use
+  (D+0, E+0).
