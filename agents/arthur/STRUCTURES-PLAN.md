@@ -9693,3 +9693,75 @@ staged -f), reviews/struct159-boy-v2/ (before/ + falsify/ 3 frames,
 ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-159, D+0 E+0 — authored-not-built tick, zero world mutations).
 Zero pushes.
+
+
+## struct-160 (2026-09-10): BUILD+JUDGE — boy v2 axle composition built,
+## decoded 32/32, judged NATIVE 5/5 PASS (incl. the v1-fail broadside
+## vantage); ACCEPTED banked NOT placed — placement = struct-161
+
+Cadence 160%3==1 build+judge slot; struct-159's committed carry (full build
+x2 + decode lockstep + 10-frame review + judgment). Gate ALL PASS real exit
+0 tick-start c851b470 (own struct-159 tip, /tmp/struct160-gate.txt, 98 PASS
+0 FAIL). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-159 -> tag struct-160.
+
+BUILD x2 deterministic, MTIME-VERIFIED both runs, sha
+a20c9275136841f3a0b2eca8339b41e5c6f7bb173caeeb5c3585d0e15289490e ==
+struct-159 smoke pin exact. All in-file laws hold: RP2 V8009 E24024 F16016
+chi=1 zero boundary; axis law (film meets the axis ONLY at south pole +
+triple point); post clearance 1.5m; envelope 10.10x6.52x7.10 grade-based;
+1 glow KEEP.
+
+DECODE struct160-decode-boy-v2.ts (NEW tracked; independent replica, no mk
+imports; v2 axle inverse fx=(wy-LIFT)/SCALE, fy=wz/SCALE, fz=wx/SCALE+ZC):
+ALL PASS 32/32 real exit 0. Highlights: film law 0/8009 verts off, worst
+resid 0.000000m; south pole ON the axle at (-3.0, LIFT, 0) exact (1 vert);
+triple point ON the axle (-SCALE*ZC, LIFT, 0), 4 verts, params cluster
+2/1/1 across the 3 D-roots; 3-fold symmetry about the axle line 1234/1234
+samples on-surface worst 0.000000m; axle iron spans x[-4.586..4.586] 112
+axis verts; stanchions grounded (64 foot verts y<0.3); film max |wx| =
+3.0000 (inside posts at 4.5); bead node TRS (4.15, LIFT, 0) exact, nearest
+bone vert 1.6441m (clear); slab 10.1x7.1 on grade; zero NaN.
+
+REVIEW renders: stock 10-frame (reviews/struct160-boy-v2/, ignored) + NEW
+approach rig struct160-approach-boy-v2.ts (tracked; falsify-chassis MIME,
+no pitch, slab visible): face-on-18 / oblique-38-18 / broadside-18 +
+distance ladder 13/8 + night oblique + night face-on = 17 frames total.
+
+JUDGED NATIVE 5/5 frames on the exact built bytes (neutral contract
+prompts, dress-21 law):
+- oblique-38 @18m (the placement-law vantage): IDENTITY PASS, 3 lobes
+  counted ("three merged swollen lobes"), mount reads "deliberate
+  armature, museum-style". Minor: rod appears to penetrate the form (that
+  IS the design — decode proves the axle pins both singular points);
+  left post occluded by the mass at this vantage (perspective; film |x|
+  3.0 vs posts 4.5).
+- face-on @18m (down the axle): IDENTITY PASS, "3 lobes clearly
+  countable, pinwheel arrangement with axis roughly facing the viewer".
+  Minor: diagonal rod/shadow visually confusing.
+- BROADSIDE @18m — v1's exact fail vantage ("deformed ball", two judges):
+  PASS. "Triply-handled donut" read, 3 lobes countable ("left mass,
+  upper-right crest, lower-front lobe"), mount reads "axle — as if the
+  sculpture can rotate". THE V1 DEFECT IS CURED at all three vantage
+  classes.
+- night oblique @18m: PASS — exactly one tight amber bead at the rod-post
+  junction, no bloom, silhouette readable.
+- night face-on @18m: PASS — single clean glow point, tri-lobed silhouette
+  reads against the sky.
+
+Crease/lobe articulation (struct-159's recorded next-fix class) NOT
+flagged by any judge this pass — closed unless Bill's eye-gate reopens it.
+
+DISPOSITION: v2 ACCEPTED, banked NOT placed. Standing live boy remains v1
+8c25b665 (untouched). struct-161 (161%3==2 placement slot): seat contract —
+fresh scan >=8m NN, district soft caps 6, E-district under-service check,
+axle oblique 35-45deg off the approach normal (struct-159 yaw law — v2 is
+yaw-DEPENDENT now), terrain preflight, hash-gated placer, upload+spawn
+nx-struct-boy REPLACING v1 at a scan-selected pose (remove+spawn reseat
+chassis, comp-bag {} — glow is emissive-in-GLB).
+
+Files: struct160-decode-boy-v2.ts + struct160-approach-boy-v2.ts (NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-160, D+0 E+0). mkv3-boy.ts unchanged this tick (committed
+struct-159). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget. Zero pushes.
