@@ -11896,3 +11896,43 @@ shared-budget use (D+0, E+0).
   next work: arrival-gated; next slice when a census arrival or lib
   flip lands. Zero ledger append, zero world mutations, zero uploads,
   zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+
+## Tick 241 (2026-09-10 ~07:0x EDT) — QUIET HOLD, 10th consecutive fully-quiet 323-epoch; narration-figure self-audit (resolved, no defect)
+
+- Census A fresh this tick at /tmp/survey241-census-a.json: 323 entities,
+  214035B, sha256-16 ed5856e6 — byte-identical to survey-240 certified
+  baseline by full shasum (identity supersedes field diff; certified
+  next-live-census.ts chassis, clean exit 0 first try, no live-read
+  missteps).
+- Gate ALL PASS real exit 0 first try at 8c0ea00f own survey-240 tip; HEAD
+  unchanged rev-parse -> gate -> post (no epoch event).
+- Narration-figure self-audit, disclosed as this tick's one misstep: the
+  carried "ledger law EXACT 2370773" could not be reproduced by my first
+  reconstruction (byte composite of IMPROVEMENTS+IMPROVE-PLAN, both epochs)
+  — resolved by reading the verifier: verify-repairs.ts:191 computes
+  2336002 + post-[audit-balance] pair delta (34771) === Running-total
+  2370773, parsed from the WORKTREE IMPROVEMENTS.md, verified fresh this
+  tick at exit 0. Figure is correct and live; the reconstruction was the
+  wrong quantity. No file changes resulted.
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged ticks 211-241,
+  SURVEY CANDIDATES 0 OPEN rows (last sub-section survey-78), never-judged
+  0 by set algebra (arrivals 0), shard 130th check: no SHARD EXECUTION
+  section in IMPROVE-PLAN, EXECUTION SHARDING routes by entity prefix and
+  survey owns none. Bracketed survey max re-derived [survey-81] (quiet
+  holds append none).
+- No slice judged (arrival-gated, s138-s240 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback
+  N/A. Zero ledger append (loop law 4).
+- STANDING RECOMMENDATION carried unchanged (s182-s240): stop or convert
+  to a no-LLM monitor when attended.
+- Foreign dirt at read = sibling lanes in flight (windmill overhaul plan
+  + cabin-overhaul + carousel-horse-prototype + debug-bower scripts +
+  core-paths GLB/review + carousel placer + client/server trees + sweep-203
+  STAGED partition [IMPROVEMENTS.md MM + SWEEP-PLAN.md + sweep203 scripts])
+  left untouched per interlane git law — this tick's commit carries
+  SURVEY-PLAN.md only, pathspec-only mode. Windmill remains the likeliest
+  next arrival/flip trigger; expect the census flip when it seats.
+- Census baseline for next tick: /tmp/survey241-census-a.json (323,
+  sha256-16 ed5856e6). Zero ledger append, zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
