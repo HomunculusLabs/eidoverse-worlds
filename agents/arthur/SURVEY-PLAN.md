@@ -14733,3 +14733,21 @@ shared-budget use (D+0, E+0).
   /tmp/survey318-census-a.json (325, sha256-16 f78fdcb6b2407ef0).
   STANDING RECOMMENDATION carried unchanged (s182-s317): stop the
   SURVEY lane or convert to a no-LLM monitor when attended.
+
+## Erratum (survey-318 commit partition)
+
+- survey-318's commit 5681ce1e accidentally carried THREE foreign
+  staged files (sweep lane mid-tick: SWEEP-PLAN.md sweep-227 block +
+  sweep227-census-diff.py + sweep227-plan-append.py) — my chained
+  `git add && git commit` never inspected the shared staged partition
+  (interlane git law violated: "do NOT commit until the partition is
+  clean"). sweep-227's own commit 3493b033 then landed carrying only
+  its IMPROVEMENTS.md ledger line, so sweep's plan block + tools are
+  committed under the survey prefix. CONTENT INTACT at HEAD (verified
+  post-3493b033: git ls-files shows both sweep227 tools tracked,
+  SWEEP-PLAN.md carries the sweep-227 records, staged index empty) —
+  zero loss, attribution-only pollution. Repair considered and
+  rejected: history rewrite/revert unsafe mid-pipeline (HEAD advanced
+  past 5681ce1e before detection; revert-race law). This erratum is
+  the durable record; skill law added: inspect `git diff --cached
+  --name-only` as its own step between add and commit, never chain.
