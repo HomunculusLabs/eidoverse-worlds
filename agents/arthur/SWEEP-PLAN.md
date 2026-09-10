@@ -9266,3 +9266,26 @@ re-derived from committed pointers this tick: row-cottage/observatory
 walked fresh, longhouse/garden-cottage @226 stalest standing pair at 4
 sweeps; both walk tools ls-verified present on disk this tick:
 interior-walk-longhouse.ts, interior-walk-garden-cottage.ts).
+
+sweep-230 POST-COMMIT EPOCH-C ADDENDUM (repair commit, same tick): after
+my 58760ff9 landed, struct-163 (dda69d89, unduloid v3 PLACED LIVE,
+same-tuple lib upgrade 3a9b92b8 -> 014ed586, E+1) and survey-324
+(0f86a27a, observer) reached HEAD, so the epoch law required fresh live
+evidence before close: epoch-C census re-read (325==325, exactly ONE
+domain-valid lib flip = nx-struct-unduloid at identical tuple
+[95.262794, -0.031702, 55] yaw -2.0944, matches the committed struct-163
+ledger row line-for-line; 0 arrivals, 0 departures, 0 compKeys drift),
+SAT re-run fresh-live at epoch C (287/236/0, same single unclassified =
+R-121, zero new contacts), standing gate re-run ALL PASS real exit 0 at
+58760ff9 with ledger law 2370778 exact. STAGING SELF-CATCH (disclosed,
+repaired in-tick): my first commit staged the plan + tools but omitted
+IMPROVEMENTS.md itself — the [sweep-230] row sat uncommitted in the
+shared working tree (git show HEAD:... grep count 0 caught it);
+this repair commit carries the ledger file. The sibling [struct-163]
+ledger row was ALREADY committed at dda69d89 (my first read of the diff
+mistook its context line for an uncommitted addition — corrected by
+re-inspecting the diff markers before writing anything). No new ledger
+append (one per wakeup — the row is the same sweep-230 entry, folded).
+Snapshot stays at the sweep-229 baseline (70f823b4d1aec102) with the
+unduloid flip recorded here as the known epoch for sweep-231 to fold
+(sweep-52 register-note precedent).
