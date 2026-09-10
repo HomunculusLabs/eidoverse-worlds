@@ -11709,3 +11709,39 @@ shared-budget use (D+0, E+0).
   work: arrival-gated; next slice when a census arrival or lib flip
   lands. Zero ledger append, zero world mutations, zero uploads, zero
   verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+
+- survey-236 (2026-09-10 02:0x, quiet hold — 5th consecutive fully-quiet
+  323-epoch on the post-enneper baseline: census A/B 20s-paced, both
+  214035B byte-identical to the survey-235 certified baseline; set-diff
+  0 arrivals / 0 departures / 0 lib flips / 0 pos moves on 323 shared
+  ids. Digest-probe disclosed and resolved: my first recheck hashed
+  sha1-16 (eea8088d) and mismatched the recorded ed5856e6 — resolved as
+  a recheck-side digest-family error (ed5856e6 is sha256-16; all six
+  epoch files 231-236 byte-identical by full shasum; committed record
+  vindicated, zero world change, law-6 discipline followed). Gate ALL
+  PASS real exit 0 TWICE: first at e79ace9d own survey-235 tip, re-run
+  at 88c80493 after sibling sweep-201 committed mid-tick (epoch re-check
+  law; census captured after the second gate at the accepted HEAD;
+  ledger law EXACT 2370773). Pools drained: IMPROVE-PLAN md5 c0f569d0
+  unchanged ticks 211-236, never-judged 0 by set algebra (arrivals 0),
+  SURVEY CANDIDATES last sub-section survey-78 (09-08) with 0 OPEN rows
+  (all OPEN matches are contract prose); shard 125th: no SHARD
+  EXECUTION section in IMPROVE-PLAN, EXECUTION SHARDING routes by
+  entity prefix and survey owns none. No slice judged (arrival-gated
+  s138-s235 precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes
+  routed, 0 vision calls, native-vs-fallback N/A. Zero ledger append
+  (loop law 4 — quiet hold; lane law overrides generic one-append
+  footer, as ticks 211-235). STANDING RECOMMENDATION carried unchanged
+  (s182-s235): stop or convert to a no-LLM monitor when attended.
+  Foreign dirt at read = sibling lanes in flight (windmill overhaul +
+  core-paths GLB/review + carousel placer + cabin-overhaul +
+  carousel-horse-prototype + debug-bower scripts + client/server trees
+  dirty; sweep-201 landed mid-tick; windmill remains the likeliest next
+  arrival/flip trigger — expect the census flip when it seats) — zero
+  tracked survey paths dirty pre-append, observer read-only per
+  interlane law. Census baseline for next tick:
+  /tmp/survey236-census-B.json (323, sha256-16 ed5856e6). Expected next
+  work: arrival-gated; next slice when a census arrival or lib flip
+  lands. Zero ledger append, zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero shared-budget use (D+0, E+0).
