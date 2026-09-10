@@ -12506,3 +12506,37 @@ shared-budget use (D+0, E+0).
 - Census baseline for next tick: /tmp/survey257-census-a.json (323,
   sha256-16 ed5856e6). Zero world mutations, zero uploads, zero verbs,
   zero comp edits, zero shared-budget use (D+0, E+0).
+
+## survey-258 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Quiet hold — 27th consecutive fully-quiet 323-epoch (census A fresh
+  this tick at /tmp/survey258-census-a.json, 323 entities 214035B
+  sha256-16 ed5856e6, byte-identical to survey-257 baseline by full
+  checksum — identity supersedes field diff; certified
+  next-live-census.ts chassis, clean exit 0 first try, stderr empty).
+  Set-diff 0/0/0/0/0 by checksum identity (arrivals, departures, lib
+  flips, pos/yaw moves, compKey changes all zero); 38 light + 285 thing.
+- Gate ALL PASS real exit 0 first try at 1d88df33 (struct-146 at tip —
+  sibling placement-slot hold, tensegrity native-debt gated; ledger law
+  EXACT 2370773 fresh this tick — gate log line verified; HEAD epoch
+  observed advancing 630ec088 -> 1d88df33 mid-read, gate re-derived at
+  the actual HEAD it certified, polish-270 epoch law).
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged ticks 211-258,
+  row-status grep '| OPEN' = 0 hits, no SHARD EXECUTION section (148th
+  fresh grep), SURVEY CANDIDATES last sub-section survey-78, no open
+  intake rows, never-judged 0 by set algebra (arrivals 0). Bracketed
+  survey ledger max re-derived [survey-81] (quiet holds append none;
+  plan-section max survey-258). Tag grep-verified clean pre-append
+  (zero survey-258 strings in ledger or plan).
+- No slice judged (arrival-gated, s138-s257 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-
+  fallback N/A. Zero ledger append (loop law 4).
+- STANDING RECOMMENDATION carried unchanged (s182-s257): stop or
+  convert to a no-LLM monitor when attended.
+- Sibling interleaving: prior tick's sweep-208 staged ledger entry has
+  since been committed by that lane — tree and index clean at this
+  tick's read; zero foreign dirt observed. This tick's commit carries
+  SURVEY-PLAN.md only, pathspec-only mode.
+- Census baseline for next tick: /tmp/survey258-census-a.json (323,
+  sha256-16 ed5856e6). Zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero shared-budget use (D+0, E+0).
