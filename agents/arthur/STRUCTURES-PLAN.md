@@ -9388,3 +9388,66 @@ struct155-decode-villarceau.ts (NEW, tracked), reviews/
 struct155-villarceau-v1/ (10 frames, ignored). Zero world mutations,
 uploads, verbs, comp-edits, shared-budget (D+0, E+0). One ledger append
 (struct-155). Plan append-only. Zero pushes.
+
+## struct-156 (2026-09-10): PLACEMENT — THE VILLARCEAU RINGS LIVE —
+## struct-155 committed carry executed; native-front debt PAID 3/3 frames
+## native-PASS; under-served E-district seat; gyroid-class exoneration n/a
+
+156%3==0 refine slot; committed carry outranks (struct-139/143/155
+precedent). Gate ALL_PINS_OK 15/15 real exit 0 tick-start b0caf2ba
+(sibling survey/sweep advances accepted; gate run fresh, /tmp/struct156-
+gate.txt, REAL_EXIT:0). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0
+unchanged, 0 OPEN nx-struct rows). Ledger max re-derived struct-155 ->
+tag struct-156.
+
+NATIVE-FRONT DEBT PAID (provider up, first call): struct-155's banked
+front.png (8m walk-up) judged NATIVE — FRONT-8M PASS 5/5 (identity: hole +
+thick tube + bright crossing curves read stone-ring-with-metal-linework;
+lines: every arc traceable end-to-end, endpoints only at silhouette wrap
+or slab contact; materials: two clean values, brass carries specular
+hotspots (498,115)/(567,162) = metallic not painted; floats: zero against
+sky/ground, ring seats into slab x390-620 y460-475 no light gap; bead:
+(486,249) ON the crossing, attached, single). Native judgment now 3/3
+(gameplay + night struct-155, front struct-156) — placement contract
+satisfied.
+
+SEAT (struct156-scan-villarceau.ts, NEW, tracked — struct-145 chassis):
+77 lawful stations. District arithmetic re-derived fresh BOTH ways:
+all-radii E=9/W=10/N=21/S=30; OUTER-RING-ONLY (r>=60, the soft-cap
+metric) E=1/6 vs W=6/6-AT-CAP / N=12/6 / S=24/6 — E decisively
+under-served. az90 R82 (top-sort's 2nd) deliberately NOT taken: reserved
+by tensegrity v6's banked authored contract (struct-145 SELECTED seat);
+taking it or R88 (6m off) would block that contract's NN floor.
+SELECTED az45 R=64 yaw 0 POS (45.254834, PY, -45.254834): worst-solid
+2.00 (nx-dress-se-stones-001, law 1.4), NN northneedle 13.51 (law 8.0),
+film/walk/rim green. Ring face reads at 45-deg oblique to the az45 plaza
+approach (struct-104 planar-figure law). E outer-ring progression:
+vesicawindow r70 -> VILLARCEAU r64 az45.
+
+TERRAIN (struct156-terrain-villarceau.ts, NEW, tracked): 9pt spread
+4.5mm flat, PY = lowest = -0.022029 at FINAL pose.
+
+PLACEMENT (next-place-struct156.ts, NEW, tracked — struct-88..155 two-
+pass chassis): local hash re-verified c8a54b6aa5992af8... = pinned v1
+bytes; fresh 323-entity SAT center-corrected worst 2.00 zero violations;
+upload store/c8a54b6aa5992af8.glb (one shared-budget unit, no 429);
+spawn 1 verb. Run exit 0: PLACED_VERIFIED nx-struct-villarceau pos
+[45.2548, -0.0220, -45.2548] yaw 0 lib store/c8a54b6aa5992af8.glb comp
+{} census 324. Independent census pin re-read: pos [45.254834,
+-0.022029, -45.254834] yaw 0 scale 1 lib exact comp {} bbox 3.48x3.47x2.20
+origin-centered — ALL exact. Idempotent rerun: exit 1 "already live —
+this placer places fresh only" zero verbs (fresh-only form; proven).
+Folly class — no walk owed (zeno..boy family precedent). Disclosed
+margin: the struct-155 18m bead "floating fleck" read is framing-limit
+(walk-up resolves attachment, native front PASS confirms bead ON the
+crossing); brass-at-distance matte-ochre watch item rides the v6 lane.
+
+DISPOSITION: VILLARCEAU RINGS STANDING. R11-3 complete. Next: 157%3==1
+build slot — R11-4 concept (form-ledger gap grep fresh, steiner/roman
+BARRED 4D-descendant rule, >=8m NN / district-cap laws re-derived).
+
+Files: struct156-scan-villarceau.ts + struct156-terrain-villarceau.ts +
+next-place-struct156.ts (all NEW, tracked); mkv3-villarceau.ts (ignored
+dir, already staged -f in struct-155's commit); reviews/
+struct155-villarceau-v1/ (banked frames, ignored). One upload (D+0,
+E+1). One ledger append (struct-156). Zero pushes.
