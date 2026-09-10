@@ -9765,3 +9765,77 @@ tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-160, D+0 E+0). mkv3-boy.ts unchanged this tick (committed
 struct-159). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget. Zero pushes.
+
+
+## struct-161 (2026-09-10): PLACEMENT — BOY'S SURFACE v2 (AXLE COMPOSITION)
+## LIVE — struct-160's committed carry executed; v1 retired W r100 ->
+## v2 seated E R110, axle 40deg off the E-spoke approach
+
+Cadence 161%3==2 placement slot. Gate ALL PASS real exit 0 tick-start
+6b5bdb12 (/tmp/struct161-gate.txt, 98 PASS) + PRE-MUTATION re-gate ALL
+PASS real exit 0 at 11792545 (one sibling HEAD advance mid-tick — re-gate
+law). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-160 -> tag struct-161.
+
+BANKED BYTES RE-VERIFIED before mutation (untracked-asset law): v2 on
+disk sha a20c9275136841f3a0b2eca8339b41e5c6f7bb173caeeb5c3585d0e15289490e
+== struct-160 pin exact; v1 baseline banked
+reviews/struct159-boy-v2/before/v1-banked.glb 8c25b665 exact. TRUE
+envelope re-derived THIS tick by independent TRS-walk decode of the exact
+bytes (struct161 envelope probe): 10.10(x) x 6.52(y) x 7.10(z), x/z
+ORIGIN-CENTERED (HX 5.05, HZ 3.55) — concords struct-160 decode law.
+
+LIVE v1 CONTRACT VERIFIED pre-mutation: nx-struct-boy store/8c25b665
+pos [-100, 0.018685, 0] yaw pi comp {} (fresh read, census 325) — the
+retiring tuple, exact.
+
+SEAT (struct161-scan-boy-v2.ts, NEW tracked — struct-158 scan chassis):
+live census 325; district arithmetic re-derived fresh (outer-ring E=3 /
+W=5 / N=12 / S=24, self pre-seat) — E decisively under-served, boy v1's
+retirement frees W. 49 lawful stations. SELECTED az90 (E) R=110
+yaw=-40deg: NN vesicawindow 40.11 (law 8.0), worst-solid cairn-0050 3.44
+(law 1.4), film/walk/rim green. YAW LAW (struct-159 committed contract,
+axle form): axle runs local x; local x -> (cos yaw, -sin yaw), radial
+out at az -> (sin az, -cos az); dot = cos(theta) -> yaw = 50-az deg
+seats the AXLE 40deg off the radial approach — midpoint of the committed
+35-45 band; the E-spoke walk-up reads the pinwheel trefoil neither
+edge-on (0) nor spinning flat-on (90). All-E-lawful band starts R110
+(struct-158 note: R60-100 E arc occupied; no closer E seat exists).
+
+TERRAIN (struct161-terrain-boy-v2.ts, NEW tracked): 9pt spread 9.8mm,
+PY = -0.019174 (corner++, lowest) — grade-based slab seats true.
+
+PLACEMENT (next-place-struct161.ts, NEW tracked — struct-140/artwalk-33
+remove+spawn reseat chassis): hash-gated a20c9275 exact; fresh 325-set
+SAT at the FINAL pose center-corrected (v2 footprint 6.15x5.97 at
+yaw -40) worst cairn-0050 +3.44 zero violations; NN floor vesicawindow
+40.11; upload store/a20c9275136841f3.glb ONE shared-budget unit no 429;
+remove+spawn over one WS (1200ms pace); REPLACED_VERIFIED pos
+[110.0000, -0.0192, 0.0000] yaw -0.6981 lib store/a20c9275136841f3.glb
+comp {} census 325; IDEMPOTENT RERUN ALREADY_SEATED zero verbs exit 0;
+independent census pin re-read exact 6dp pos/yaw/scale/lib/comp + bbox
+10.100x6.523x7.100 == decode envelope, tris 16488.
+
+DISPOSITION: BOY'S SURFACE v2 STANDING at the E spoke, R110, axle
+oblique. The v1 defect (vertical pinwheel axis — "deformed ball" at 18m
+from broadside vantages, two judges) is retired with the bytes; v2 was
+judged NATIVE 5/5 PASS at struct-160 including the exact v1-fail
+broadside vantage (now reads "axle-mounted rotating-display form").
+Folly class — no walk owed (zeno..boy family precedent). comp-bag {}
+before == after (glow = emissive material inside GLB; comp-wipe n/a).
+Boy refine entry CLOSED hero-ready: full native judgment 5/5 at
+struct-160, placement exact, no residual findings. Bill eye-check: E
+spoke r110, ~10m east of Unduloid Stoup — trefoil pinwheel on an iron
+axle between two stanchions; the walk-up reads 3 lobes from every
+vantage class including broadside.
+
+R11 round tally: E outer-ring 3 -> 4. Next: 162%3==0 refine slot —
+refine pool scan (standing nx-struct-* vs hero-ready states; Bill
+correction re-opens outrank; tensegrity v6 remains banked behind Bill's
+eye-gate, not takeable).
+
+Files: struct161-scan-boy-v2.ts + struct161-terrain-boy-v2.ts +
+next-place-struct161.ts (all NEW, tracked); STRUCTURES-PLAN.md (this
+block); IMPROVEMENTS.md (one append struct-161, D+0 E+1 — one upload,
+two verbs). mkv3-boy.ts unchanged this tick (committed struct-159).
+Zero pushes.
