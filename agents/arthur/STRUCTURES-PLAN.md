@@ -9451,3 +9451,71 @@ next-place-struct156.ts (all NEW, tracked); mkv3-villarceau.ts (ignored
 dir, already staged -f in struct-155's commit); reviews/
 struct155-villarceau-v1/ (banked frames, ignored). One upload (D+0,
 E+1). One ledger append (struct-156). Zero pushes.
+
+## struct-157 (2026-09-10): R11-4 THE UNDULOID STOUP — authored, built
+## (deterministic x2), decode ALL PASS 17/17, judged NATIVE gameplay+night+front;
+## ACCEPTED banked NOT placed (R11 cadence: placement slot next tick)
+
+157%3=1 build slot. Gate ALL PASS real exit 0 tick-start f9855f54 (own
+struct-156 tip, /tmp/struct157-gate.txt, REAL_EXIT:0). Shard: IMPROVE-PLAN
+md5 c0f569d0 unchanged (0 OPEN nx-struct rows — 150th check). Census 324
+matches struct-156 pin; S-5 confirmed DONE since struct-6 (reedpool live) —
+original commission queue fully served, R11 new-form lane active.
+
+FORM-LEDGER GAP (fresh grep): unduloid 0/0/0 across all three ledgers.
+Delaunay 1841 CMC roulette — lineage pair to R11-3 Villarceau 1848. Kin
+check: Founder's Knot = braided knot path (spins); cairns = stacked stones;
+nothing in the village is a bead chain. Folly class, no walk owed.
+
+CONCEPT (one idea): WATER HELD MID-AIR AS MATH. Five identical beads of a
+Delaunay unduloid (the surface a falling stream of water actually forms)
+in bright brass spanning two hewn stone posts over a still oval basin; one
+amber bead under the middle bead's nadir = the drip that hasn't fallen.
+
+MATH (struct157-probe-unduloid.ts, tracked): focus of ellipse a=1 e=0.55
+rolling without slip; PERIOD == Ramanujan perimeter 0.000%; CMC H=1/(2a)
+worst 0.0000% (parametric intrinsic curvatures after a v1 finite-difference
+bug — conditioning, not surface); laws bulge=a(1+e)/neck=a(1-e) EXACT.
+World k=0.38/1.55: bulge R 0.38, neck R 0.1103, period 1.416290. e=0.55
+picked for 3.4:1 bulge:neck = "bead chain" not "sausage".
+
+PHASE-SEAM LAW (new, this tick): the roulette trace's x-range starts at
+poly[0].x (psi0=-pi/2 contact), NOT 0 — any mod landing below poly[0].x
+must wrap FORWARD one period; linear extrapolation below poly[0] is
+garbage. Caught live by the decoder: station u=0.35407260 sits 1.4e-8 past
+the wrap; the OLD build's seam-band stations were subtly wrong too (bytes
+changed when fixed — old 0ca0e1f2, fixed 3a9b92b8). Both mk and decoder
+carry the law; decoder RED-proven on villarceau GLB (5 FAILs, exit 1).
+
+BUILD: mkv3-unduloid.ts (ignored dir, staged -f). Lathe over one 5-period
+profile, rot z=pi/2, lift AFTER rotation (first build threw below-grade
+-0.38 — the tell). Envelope 6.57x1.30x2.20, 4 nodes, on grade, x/z
+centered. Brass embeds 0.088m into posts (no butt joint). Deterministic
+x2 MTIME-VERIFIED. sha 3a9b92b8aeb3722da76ba4fc0f9091d7ad7101996f7f338
+cdbcb8a2d97db9a29. Decode struct157-decode-unduloid.ts (tracked,
+independent replica, node-matrix TRS walk + COLOR_0-as-u8-linear
+lesson): ALL PASS 17/17 real exit 0, brass worst resid 0.00000m over
+28665 verts.
+
+JUDGED (reviews/struct157-unduloid-v1 + v2, ignored):
+GAMEPLAY 18m NATIVE (v1 geometry = final): IDENTITY PASS string-of-beads
+(5 bulges/4 necks, judge's own count), RHYTHM PASS, materials PASS-caveat
+water dry-platter read → FIXED same tick (cistern97 lane: water emissive
+0x2e4a58@0.70, v2 bytes). NIGHT NATIVE (v2): amber bead PASS (one tight
+point, no bloom), silhouette PASS, water PASS (cool sheen reads, judge
+independently confirmed the mirrored-gleam cure), zero regressions.
+FRONT 8m NATIVE (v2, one paced 1210 retry): IDENTITY PASS, CONSTRUCTION
+PASS (clean post entry, no floats), materials 3/4 — basin water value not
+distinct at day-front in the rig's flat ambient = disclosed watch item
+(polish-281-adjacent class; night-confirmed fix, day-front marginal).
+
+DISPOSITION: v1 ACCEPTED as banked baseline, NOT placed — live world
+untouched. Next tick (158%3=2 placement slot): seat contract (fresh scan,
+>=8m NN, district caps; waterfront-adjacent candidate), upload/spawn
+nx-struct-unduloid at scan-selected pose.
+
+Files: struct157-probe-unduloid.ts + struct157-decode-unduloid.ts (NEW,
+tracked), mkv3-unduloid.ts (ignored dir, staged -f), reviews/
+struct157-unduloid-v1+v2 (ignored). Zero world mutations, uploads, verbs,
+comp-edits, shared-budget (D+0, E+0). One ledger append (struct-157).
+Zero pushes.
