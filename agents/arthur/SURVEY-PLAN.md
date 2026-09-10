@@ -14510,3 +14510,51 @@ shared-budget use (D+0, E+0).
   /tmp/survey311-census-a.json (324, sha256-16 59033a7e6793fef5).
   STANDING RECOMMENDATION carried unchanged (s182-s310): stop the
   SURVEY lane or convert to a no-LLM monitor when attended.
+
+
+## Judged index (survey-312)
+
+- survey-312 (2026-09-10, arrival slice): gate ALL PASS real exit 0 first
+  try at e594ac40 (sweep-224 at HEAD; ledger law EXACT 2370776 re-derived
+  read-only; bracketed ledger max [survey-83] -> this tick survey-312;
+  plan-section max survey-311 -> survey-312). Census via committed
+  next-live-census.ts exit 0, 215224B sha256-16 f78fdcb6b2407ef0 — EPOCH
+  MOVED after 7 quiet ticks: 324->325, ONE arrival `nx-struct-unduloid`
+  (lib store/3a9b92b8aeb3722d.glb, pos [95.262794,-0.031702,55], yaw
+  -2.0943951023931953, kind thing, bbox 6.567x1.3x2.2), 0 departures,
+  0 field diffs on 324 shared ids (inline set-diff, survey-303 chassis).
+  Arrival = struct-158 Unduloid Stoup placement @ e594ac40, ledger-exact
+  tuple — committed struct-domain sibling work, classified. Never-judged
+  pool = the arrival -> SLICE = arrival, arrival-gated per s138/s176/s303
+  precedent. Pools: IMPROVE-PLAN md5 c0f569d0 unchanged (200th check, 0
+  SHARD EXECUTION, 0 live-queue OPEN), candidates closed since survey-78,
+  interlane f6254cd0 stable. FETCH live store bytes curl UA HTTP 200
+  95428B served-sha16 9cc3ca42 (DRACO transform law); chassis
+  review-model-draco.ts exit 0, envelope 6.5668x1.30x2.20 EXACT to
+  struct-158's pin, 5 nodes/4 meshes [unduloid_0/1/2, glow_uq_1]. NATIVE
+  4/4 frames (gameplay/night/front/top; ONE 1210 mid-slice recovered by
+  single paced 20s retry, disclosed): identity PASS (5-neck bead chain,
+  authored), grounding PASS (right-post shadow absent = margin note),
+  value PASS (no voids), amber bead PASS crisp no-bloom BUT reads
+  pendant-dangling 16cm below chain (decode: node y+0.43 r0.10 ->
+  y 0.33-0.53 vs chain bottom 0.49), WATER FAIL — zero teal at ALL FOUR
+  vantages. Decode settles class: water mesh unduloid_2 3.76x2.07m slab
+  2cm thick (y 0.125-0.145) below brass chain (y 0.49-1.25), stone rim
+  band y=0.20 traces water perimeter 5.5-7.5cm ABOVE the plane —
+  dress-79 down-angle occlusion at minimum, struct-52 enclosure if stone
+  closed from above (owner's trivial stone decode decides). CONTRADICTS
+  struct-158's own "night-confirmed fix" in independent read (night
+  scan: 0 cool px across full bead region). VERDICT: 1 CONFIRMED
+  Sev 2 (water semantic) + 3 margin probes (bead pendant read, right-post
+  shadow, gray end-caps). ROUTED: ONE DEFECT-Sev2 note STRUCTURES-PLAN
+  EOF (grep-verified 0 pre-existing unduloid survey notes), ZERO
+  IMPROVE-PLAN rows (no-duplicate law — struct refine pool owns it).
+  Evidence: agents/arthur/reviews/survey312-slice/unduloid/ (8 frames +
+  served-bytes.glb + decode-stone-water.txt, local-untracked s176
+  shape). ONE ledger append survey-312 (routing this tick, loop law 4),
+  zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0,
+  E+0). HEAD advanced mid-tick e594ac40 -> e62a0b49 (sibling) — noted,
+  my writes verified post-advance. Census baseline for next tick:
+  /tmp/survey312-census-a.json (325, sha256-16 f78fdcb6b2407ef0).
+  STANDING RECOMMENDATION carried unchanged (s182-s311): stop the
+  SURVEY lane or convert to a no-LLM monitor when attended.

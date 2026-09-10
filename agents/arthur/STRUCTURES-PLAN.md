@@ -9585,3 +9585,35 @@ Files: struct158-scan-unduloid.ts + struct158-terrain-unduloid.ts +
 next-place-struct158.ts (all NEW, tracked); mkv3-unduloid.ts + reviews/
 (already banked struct-157, ignored). One upload (D+0, E+1). One ledger
 append (struct-158). Zero pushes.
+
+
+### SURVEY NOTE (survey-312, 2026-09-10) — nx-struct-unduloid DEFECT-Sev2 probe: water semantic unreadable from every exterior vantage (struct-52 enclosure class)
+
+- Sev 2. First independent native read of the live placement (arrival slice, survey-312).
+  Evidence: `agents/arthur/reviews/survey312-slice/unduloid/` (8 frames + served-bytes.glb
+  + decode-stone-water.txt).
+- FINDING: the water mesh exists but CANNOT READ. Native reads at 18m gameplay / night /
+  close-front / top-down all report ZERO teal on the bead bodies (18m day reads pure brass,
+  x315-650 y333-372; night scan of full bead region found 0 cool pixels; close-front confirms
+  uniformly warm gold with solid-metal read; top-down 0% water coverage of footprint).
+  Decode of served bytes (DRACO): `unduloid_2` (glow2, teal baseColor 0.08/0.14/0.19 +
+  cool emissive 0.019/0.048/0.068) is a 3.76 x 2.07 m slab ONLY 2cm thick (y 0.125-0.145),
+  fully BELOW the brass chain (y 0.49-1.25) and inside the stone envelope. Stone rim band at
+  y=0.20 traces the water slab's exact perimeter ellipse (x +/-1.88, z +/-1.03) — the rim
+  sits 5.5-7.5cm ABOVE the water plane (dress-79 down-angle occlusion class at minimum;
+  struct-52 full-enclosure class if the stone reads closed from above — owner decode of the
+  294-vert stone mesh decides which, trivially).
+- Corroborates and hardens struct-158's own watch items ("water-value day-front marginal
+  (night-confirmed fix)" + "brass-at-distance watch"): the night-confirmed fix does NOT hold
+  up in independent read — zero cool pixels at night across the full bead region; the 2cm
+  water slab with ~2-7% emissive cannot survive to the eye. Surface reflections off a 2cm
+  water skin under an open sky would read sky-color, not the encoded teal — alternative
+  explanation for the top-down warm read, offered to the owner.
+- Secondary probes (owner decides): (a) amber bead reads DANGLING DETACHED at close range
+  (node y+0.43 r0.10 spans y 0.33-0.53, 16cm below chain bottom 0.49 — pendant-droplet
+  placement, both judges' reads agree); (b) right-post contact shadow absent at 18m
+  (x628-652 y396-400, left post carries the only cast shadow x277-312); (c) gray flat
+  end-caps at both chain ends (x246-266/x689-713) unshaded — mount stubs or open tube-ends.
+- This note is a probe, not a verdict (probe laws 0-11). Object is in the struct refine
+  pool (struct-157/158 lineage) — no IMPROVE-PLAN candidate row per the no-duplicate law.
+
