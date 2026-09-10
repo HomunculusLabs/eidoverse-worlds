@@ -8362,3 +8362,61 @@ refine slot (flap law).
 Files: mkv3-enneper.ts (ignored dir, staged -f), struct133-decode-enneper.ts
 (v3c laws), struct140-terrain-enneper.ts + struct140-replace-enneper.ts
 (new, tracked), reviews/struct140-enneper-v3c/ (ignored).
+
+## struct-141 (2026-09-10) — REFINE: enneper v3c NATIVE RE-JUDGE PAID — HERO-READY DONE, eye-gate delivered
+
+Cadence 141%3==0 refine slot; the committed carry from struct-140 ("native
+re-judge debt on v3c frames") was THE work this tick. Gate ALL_PINS_OK 15/15
+real exit 0 tick-start d5a272ff. Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged, 0 OPEN nx-struct rows). Live contract verified fresh:
+census 323, nx-struct-enneper lib e34ba6932dd2ab86 pos
+[-17.439118,-0.014849,249.391013] yaw pi comp {} = struct-140
+REPLACED_VERIFIED exact. Frames hash-bound: v3c bytes e34ba693
+deterministic on disk, v3b baseline a4880b1a intact in before/.
+
+NATIVE JUDGMENT (provider UP; 3 native calls landed; 4th flapped 1210
+mid-tick — flap law honored, one attempt then ZAI fallback, disclosed):
+
+- GAMEPLAY 18m PASS, five discriminating axes: ONE continuous woven sheet
+  passing over/under itself (v3b separate-discs read gone; the survey-181
+  onion-shell identity fail is RESOLVED at the walker vantage); three-family
+  material hierarchy exactly as authored (bone=surface slats, iron=mount
+  rim/axle/stanchions, brass=crossing seams + bead heart); single axle
+  threading the form with visible rim penetration; zero floating/detached
+  elements; unambiguous intentional mathematical sculpture.
+- FRONT PASS: interleaved single-sheet read ("progressively pitched bands,
+  slats visibly cross over/under each other"), brass distinct from rim/axle,
+  complete and intentional, no holes/floats/missing rim sections. Native
+  nitpicks corroborate struct-140's watch items verbatim (dashed axle read
+  at the waist convergence; right-cusp tangle) — same class, non-blocking.
+- NIGHT PASS: exactly ONE warm bead at the umbilic heart, tight and
+  point-like (few px, no bloom/smear), silhouette readable (near-black rim
+  vs navy sky, right notch legible), zero stray bright pixels.
+- AERIAL (ZAI fallback; native 1210): intentional + grounded + no-voids
+  PASS axes; residual: from directly above the slat read still groups as
+  vortex/onion — topology not communicated top-down; judge fix classes
+  recorded (directional slat families per lobe; spiral phase-offset so ring
+  breaks never align; crossing-zone material). Disclosed as a watch
+  residual, NOT a hero block: aerial is the one vantage no walker gets
+  (struct-133 durable note), and the identity contract axes are the
+  walk-up trio. Native re-judge debt on the aerial frame alone carries.
+
+DISPOSITION: enneper marked HERO-READY DONE — first fully-native identity
+pass in the survey-181 -> struct-135/138/139/140 arc (standard = judged
+NATIVE all three contract frames; harmonickiss struct-130 class).
+
+BILL EYE-GATE PACKET (delivered once, this tick; sha e34ba6932dd2ab86):
+S-walk terminus r250, 10m past the Gyroid, live
+https://eidoverse.billding.dev/?world=commons-next — walk up expecting a
+white woven sheet turning through itself, brass seams marking the
+crossings, one glowing bead at the heart after dark. Frames:
+agents/arthur/reviews/struct140-enneper-v3c/{gameplay,front,night}.png.
+What changed since the last look: v3b doubleSided film fix + v3c brass
+seam/rim vocabulary split (zero geometry change). Optional eyeball from
+the hill: the top-down read stays vortex (disclosed, non-blocking).
+
+NEXT: 142 — build slot (142%3==1): R11 new-form commission (form-ledger
+gap grep fresh at that tick; 8m NN floor, per-district soft cap 6).
+
+Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
+One ledger append this tick (struct-141). Plan append-only.
