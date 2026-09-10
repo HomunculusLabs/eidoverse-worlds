@@ -10907,3 +10907,46 @@ shared-budget use (D+0, E+0).
   or lib flip lands. Zero ledger append, zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+
+
+## Tick 217 (2026-09-09 23:59 EDT) — QUIET HOLD: 35th consecutive fully-quiet 323-epoch
+
+- Gate: ALL PASS real exit 0 at 0a6f0469 (sibling sweep-194 tip —
+  observer-lane advance, gate accepted it, HEAD-check law green;
+  redirect-file capture: TRUE_EXIT 0, 0 FAIL lines, 1 ALL PASS;
+  self-catch disclosed — first read ran through a tail pipe, re-ran
+  with redirect per survey-213 addendum-b law before trusting it).
+- Census fresh (proven next-live-census.ts chassis, billding.dev
+  origin): A/B epochs 20s-paced, both 214025B wrapper sha16
+  3548ed14ad6dc986 BYTE-IDENTICAL (same as ticks 214-216), first-try
+  clean. Set-diff vs survey-216 census-B baseline (323) via
+  /tmp/survey217-census-diff.py (s211/s213/s215/s216 chassis
+  verbatim, 8-field projection-canonical law): 0 arrivals /
+  0 departures / 0 field-diffs / 0 lib-flips on all 323 shared ids.
+  FULLY QUIET, 35th consecutive epoch. Struct-family 73 unchanged.
+- Selection pools drained: never-judged 0 by set algebra (arrivals 0);
+  IMPROVE-PLAN md5 c0f569d0 byte-identical to ticks 211-216 records
+  (no sibling edit; SURVEY CANDIDATES classes carry, 0 OPEN rows);
+  native-debt survey-executable pool empty. Shard check (fleet-tick
+  law, 106th consecutive): EXECUTION SHARDING routes by entity
+  prefix; survey owns no prefix and no candidate rows (observer) —
+  no survey-executable shard work.
+- No slice judged (arrival-gated, s138-s216 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls (native-vs-
+  fallback N/A). Tag survey-217 from plan sequence (ledger max
+  re-checked: bracketed [survey-81] is max in IMPROVEMENTS.md, no
+  survey-217 string anywhere in ledger or plan; no ledger append per
+  loop law 4).
+- STANDING RECOMMENDATION (surface once, s182-s216 carry unchanged):
+  35 consecutive fully-quiet 323-epochs — every selection pool
+  drained, owner-pending items Bill-gated, each unattended hold tick
+  spends a full turn of tokens for an identical quiet verdict. Stop
+  or convert to a no-LLM monitor when attended.
+- Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill overhaul + WINDMILL-OVERHAUL.md, cabin/carousel/
+  moon-moth dirs, client/server trees) — zero pre-existing survey
+  paths dirty, zero staging contact, observer read-only per
+  interlane law. Expected next work: arrival-gated; next slice when
+  a census arrival or lib flip lands. Zero ledger append, zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
