@@ -11341,3 +11341,52 @@ shared-budget use (D+0, E+0).
   arrival or lib flip lands. Zero ledger append, zero world mutations,
   zero uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+
+## Tick 227 (2026-09-10 01:03 EDT) — QUIET HOLD: 45th consecutive fully-quiet 323-epoch
+
+- Lane: SURVEY (read-only observer, sweep-family). Tag survey-227 from
+  plan sequence (grep-verified no survey-227/survey227 string in ledger,
+  SURVEY-PLAN, or IMPROVE-PLAN pre-write; ledger bracketed max survey-81).
+- Gate: ALL PASS real exit 0 first try at fbf7e918 (struct-139 tip;
+  redirect-file capture /tmp/survey-gate-out.txt: GATE_TRUE_EXIT 0, real
+  exit echoed separately, 0 FAIL lines). Self-catch disclosed: ALL PASS
+  line-count read 1 vs 2 in the s226 record — full-log diff vs
+  /tmp/survey226-gate.log proved the ONLY line-level change is the HEAD
+  commit line (2b54af0f → fbf7e918); s226's second marker was the embedded
+  "gate ALL PASS" prose inside sweep-197's HEAD message. Real marker
+  count is 1 in both; content-anchor intact.
+- Census fresh (proven next-live-census.ts chassis, billding.dev origin):
+  A/B epochs 20s-paced, both 214025B wrapper sha16 3548ed14ad6dc986
+  BYTE-IDENTICAL (same as ticks 214-226), first-try clean. Set-diff via
+  /tmp/survey227-census-diff.py (s226 chassis re-derived, pitfall-12
+  law; PRIOR PATH NOTE: chassis prior resolved to survey-225-census-b.json
+  rather than s226's — byte-equivalent, all three share sha16
+  3548ed14ad6dc986, so the diff is against the last committed snapshot
+  state): 0 arrivals / 0 departures / 0 field-diffs / 0 lib-flips on all
+  323 shared ids. FULLY QUIET, 45th consecutive epoch. Struct-family 73
+  unchanged.
+- Selection pools drained: never-judged 0 by set algebra (arrivals 0);
+  IMPROVE-PLAN md5 c0f569d0 byte-identical to ticks 211-226 records (no
+  sibling edit; STATE-OPEN 0); SURVEY CANDIDATES 0 OPEN candidate rows.
+  Shard check (fleet-tick law, 116th consecutive): EXECUTION SHARDING
+  routes by entity prefix; survey owns no prefix and no candidate rows
+  (observer) — no survey-executable shard work.
+- No slice judged (arrival-gated, s138-s226 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls (native-vs-
+  fallback N/A). No ledger append (loop law 4 — quiet hold; lane law
+  overrides generic one-append footer, as ticks 211-226).
+- STANDING RECOMMENDATION (surface once, s182-s226 carried unchanged):
+  45 consecutive fully-quiet 323-epochs — every selection pool drained,
+  owner-pending items Bill-gated, each unattended hold tick spends a full
+  turn of tokens for an identical quiet verdict. Stop or convert to a
+  no-LLM monitor when attended.
+- Foreign working-tree dirt at read = sibling lanes in flight (windmill
+  overhaul + place-windmill-overhaul.ts, cabin/carousel/moon-moth dirs,
+  client/server trees, fleet scripts, enneper refine sources) — zero
+  tracked survey paths dirty, zero staging contact, observer read-only
+  per interlane law. The standing windmill overhaul (dirty
+  place-windmill-overhaul.ts) remains the likeliest next arrival/flip
+  trigger. Expected next work: arrival-gated; next slice when a census
+  arrival or lib flip lands. Zero ledger append, zero world mutations,
+  zero uploads, zero verbs, zero comp edits, zero shared-budget use
+  (D+0, E+0).
