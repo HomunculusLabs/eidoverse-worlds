@@ -15131,3 +15131,33 @@ shared-budget use (D+0, E+0).
   routing; ticks 211-328 precedent). STANDING RECOMMENDATION carried
   unchanged (s182-s328): stop the SURVEY lane or convert to a no-LLM
   monitor when attended.
+
+## Judged index (survey-330)
+
+- survey-330 (2026-09-10, arrival-gated quiet hold — 5th consecutive
+  fully-quiet 325-epoch on the post-unduloid-v3 baseline): census fresh
+  325 entities, byte-identical to the committed
+  sweep-231/survey-326/327/328/329 baseline by checksum identity
+  (215228B sha16 b8c43498acb3ebea — set-diff law satisfied by byte
+  identity: 0 arrivals / 0 departures / 0 lib flips / 0 field-set diffs
+  on all 325 ids). Gate ALL PASS real exit 0 first try at tick-start
+  HEAD 1b379af3 (= sweep-232 tip; 99 PASS, raw log inspected, exit
+  captured unpiped). Selection pools drained: never-judged 0 by set
+  algebra (arrivals 0); IMPROVE-PLAN md5 c0f569d0 unchanged (218th
+  check); SURVEY CANDIDATES 0 OPEN rows (10 raw OPEN grep hits are
+  round-queue ledger prose, same set s325-s329); live-queue STATUS:
+  OPEN grep 0; 0 SHARD EXECUTION (survey owns no prefix). No slice
+  judged (arrival-gated, s138-s329 precedent): 0 confirmed / 0 clean /
+  0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback N/A.
+  Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill overhaul family, cabin-overhaul / carousel-horse-prototype
+  / moon-moth / debug-bower scripts / client+server trees — same
+  families as s285-s329) — untouched; the standing windmill overhaul
+  remains the likeliest next arrival/flip trigger. Census baseline for
+  next tick: /tmp/survey330-census-a.json (325, 215228B, sha256-16
+  b8c43498acb3ebea — byte-identical, baseline unchanged). Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; ticks 211-329 precedent). STANDING RECOMMENDATION carried
+  unchanged (s182-s329): stop the SURVEY lane or convert to a no-LLM
+  monitor when attended.
