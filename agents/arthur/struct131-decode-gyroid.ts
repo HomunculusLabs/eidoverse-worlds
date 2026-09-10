@@ -49,7 +49,7 @@ const ang = (s: number) => (s * Math.PI) / 2;
 const Fof = (sx: number, sy: number, sz: number) => F(ang(sx), ang(sy), ang(sz));
 
 // ---- (a) sha + nodes + materials ---------------------------------------------------------------
-ck("pinned sha", sha === "da2a4b158a448caa562d00a339ef7df82b27326fc9d093615741e86533515d9f", sha.slice(0, 16));
+ck("pinned sha", sha === "31364ba46af040d538b4bf1faf9992378118c59c0c428123fde9c73ad6c1d776", sha.slice(0, 16));
 const meshNodes = j.nodes.filter((n: any) => n.mesh !== undefined);
 ck("node census 4", meshNodes.length === 4, `got ${meshNodes.length}: ${meshNodes.map((n: any) => n.name).join(",")}`);
 const glowNode = j.nodes.find((n: any) => n.name === "glow_gy_1");
@@ -58,6 +58,11 @@ const matNames: string[] = j.materials.map((m: any) => m.name ?? "");
 ck("texMat lanes gy_bone+gy_iron+gy_stone", ["gy_bone", "gy_iron", "gy_stone"].every(m => matNames.includes(m)), matNames.join(","));
 const glowMat = j.materials.find((m: any) => (m.emissiveFactor ?? []).some((v: number) => v > 0.02));
 ck("exactly one emissive material", j.materials.filter((m: any) => (m.emissiveFactor ?? []).some((v: number) => v > 0.02)).length === 1);
+// v2 export law (struct-150): the tunnel film MUST export doubleSided:true —
+// FrontSide culling halves the labyrinth (s176 "panels with punched holes" =
+// the exact struct-139 enneper half-film artifact on this build's .side flag).
+const boneMat = j.materials.find((m: any) => m.name === "gy_bone");
+ck("v2 film law: gy_bone doubleSided=true", !!boneMat && boneMat.doubleSided === true);
 // sRGB 0x9a7030 -> linear, times 0.85 intensity, rounded 4dp
 const lin = (b: number) => { const c = b / 255; return Math.round(c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4 * 10000) / 10000; };
 const wantE = [lin(0x9a), lin(0x70), lin(0x30)].map((v: number) => Math.round(v * 0.85 * 10000) / 10000);

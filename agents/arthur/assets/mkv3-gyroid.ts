@@ -146,6 +146,7 @@ console.log(`film clipped to cell: ${filmPos.length / 3} verts, ${filmPos.length
 // ---- hems: true analytic cut curves on every face ----------------------------------------------
 const boneTex = texMat("gy_bone", [0xd8d2c4, 0xcfc8b8, 0xbfb8a8], { rough: 0.9, scale: 2, weights: [3, 1, 1], seed: 9311 });
 boneTex.side = THREE.DoubleSide;             // film interior faces visible through the mouths
+(boneTex as any).userData = { ...(boneTex as any).userData, texName: "gy_bone", glTFDoubleSide: true }; // glbwrite v3.4 lane — tunnel film MUST export doubleSided:true or FrontSide culling halves the labyrinth (struct-150 root cause: .side alone exports single-sided; s176 "panels with punched holes" = half-film artifact, struct-139 enneper class)
 const ironTex = texMat("gy_iron", [0x4a525c, 0x3f464f, 0x565e69], { rough: 0.5, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9312 });
 
 const g = new THREE.Group();

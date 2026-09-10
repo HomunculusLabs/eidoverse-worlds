@@ -8949,3 +8949,82 @@ tensegrity.ts (replica v6 lockstep, tracked), next-place-struct145.ts (sha
 pin, tracked), reviews/struct149-tensegrity-v6/ (10 frames + before/,
 ignored). Zero world mutations/uploads/verbs/comp-edits/shared-budget
 (D+0 E+0). One ledger append (struct-149). Plan append-only.
+
+
+## struct-150 (2026-09-10): REFINE — gyroid v2 (doubleSided export fix) — the
+## s176 identity FAIL root-caused to the struct-139 enneper class; native
+## gameplay arbitration 5/5 PASS; ACCEPTED banked NOT placed (re-place next tick)
+
+Cadence 150%3==0 refine slot. Refine pool re-derived fresh: standing 73
+nx-struct entities; enneper DONE (struct-141), clothoid DONE (126),
+harmonickiss native all-three (130); OPEN: gyroid (s176 Sev-2 native identity
+FAIL + end-caps residual + night native debt = WEAK HOLD-for-Bill, ring-read
+struct-134), peaucellier (night-only debt), boy (native re-judge debt), tensegrity
+v6 (banked, Bill eye-gate pending struct-149 — not takeable). Gyroid = highest
+evidenced deficit -> subject. Gate ALL_PINS_OK 15/15 real exit 0 tick-start
+(/tmp/struct150-gate.txt). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0
+unchanged, 0 OPEN nx-struct rows — 142nd check). Ledger max re-derived
+struct-149 -> tag struct-150.
+
+ROOT CAUSE (decode, before any edit): live-pinned bytes da2a4b15 export
+gy_bone doubleSided=False — mkv3-gyroid.ts:148 sets the RUNTIME flag
+(.side=DoubleSide) which glbwrite ignores; the v3.4 lane requires
+userData.glTFDoubleSide (struct-136 first consumer, struct-139 enneper root
+cause IDENTICAL class). FrontSide culling hides every winding-away film face:
+through the mouths walkers saw sky -> s176's 'panels with punched holes'.
+
+RED PROBE (struct150-filmprobe-gyroid.ts, NEW, tracked — struct-139 chassis
+adapted; 3 fixes en route, self-caught: waitForFunction timeout 120s under
+fleet load, domcontentloaded, content-type on module routes): v1 film projects
+only 3.6-4.1% of frame at 3 eye-level vantages (28.1k/27.1k/25.2k px) — the
+half-film read quantified.
+
+V2 EDIT (one cause, one line, mkv3-boy/mkv3-enneper pattern verbatim):
+boneTex.userData = { ...userData, texName, glTFDoubleSide: true }. Baseline
+captured FIRST (before/v1-da2a4b15.glb + served-bytes). Build sha
+31364ba46af040d538b4bf1faf9992378118c59c0c428123fde9c73ad6c1d776 deterministic
+x3 MTIME-VERIFIED (...384 -> ...396); laws PASS (18 hems 55.25m, envelope
+4.60x4.19x4.60, 1 glow KEEP). DECODE ALL PASS 24/24 (struct131-decode-gyroid.ts
+lockstep: new export law 'gy_bone doubleSided=true'; film law 0/100,980 off
+F=0; clip 0 outside; hems 0/384 missed; bead at heart 0,2.14,0).
+
+GREEN PROBE (honest): +0.3% cardinal / +1.8% oblique absolute (5.4% peak) —
+modest vs enneper's 26x because v1's near walls always rendered; the cured
+class is interior read-through (mouths now show film, not sky) which area
+undercounts. Oblique +50% relative = the read-through landing.
+
+JUDGED v2 (10 fresh frames, reviews/struct150-gyroid-v2/):
+- GAMEPLAY 18m NATIVE (after one paced retry, flap law): 5/5 PASS — identity
+  PASS moderate ('piece of the infinite film'; depth read 'fill is not sky
+  color... back wall of film' = the fix working; arches recede into shadowed
+  passage). NATIVE ARBITRATES the ZAI fallback FAIL (same frame, 'stacked
+  sheets with circular cutouts' identity FAIL) — struct-147 native-arbitration
+  law. Caveat recorded: the two front circles are the weakest element.
+- NIGHT NATIVE 3/3 PASS — exactly one tight 2-3px warm bead at heart
+  (483,330), rim legible vs sky, zero strays.
+- FRONT 8m ZAI fallback 5/5 PASS (native 1210 x2 + paced retry = down, debt
+  disclosed on this frame only): identity PASS via closed S-passage read,
+  continuity PASS (no parting line), hems perspective-consistent, materials
+  clean; bead occluded at this angle (noted, not a defect).
+
+PITFALL-11 DISPOSITION of ZAI fix classes: 'lobed vs circular openings' and
+'sky through-sightline' are the TRUE gyroid face curves/winding (film law
+0/100,980) — not geometry defects; judge's own oblique recommendation decoded
+(+50% relative at 45deg). v3 class RECORDED not executed: oblique yaw re-seat
+of the SAME v2 bytes (struct-104 yaw-only class; falsify-by-render at
+candidate yaw BEFORE any mutation; placer carries fresh SAT at the new yaw).
+End-caps + peaucellier/boy debts remain in the pool.
+
+DISPOSITION: v2 ACCEPTED as banked baseline (strictly better than v1: the
+judged identity FAIL at 18m flipped to native PASS on the fix's own axis;
+night native paid; zero regressions), NOT placed — re-place nx-struct-gyroid
+at EXACT current pose [-16.7416,-0.0200,239.4154] yaw pi with hash-gated
+placer next tick (remove->spawn, comp bag {} verified, census 323). Bill
+eye-check after placement: S-walk terminus r240, 10m past the Harmonic Kiss —
+the mouths now show film receding instead of sky.
+
+Files: struct150-filmprobe-gyroid.ts (NEW, tracked), struct131-decode-gyroid.ts
+(export law + sha pin, tracked), mkv3-gyroid.ts (ignored dir, staged -f),
+reviews/struct150-gyroid-v2/ (10 frames + before/, ignored). Zero world
+mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0). One ledger append
+(struct-150). Plan append-only.
