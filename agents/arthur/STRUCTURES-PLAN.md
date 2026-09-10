@@ -8677,3 +8677,43 @@ dir, already staged -f in struct-144's commit per its ledger entry);
 reviews/struct144-tensegrity-v3/ (banked frames, ignored).
 Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
 One ledger append (struct-145). Plan append-only.
+
+## struct-146 (2026-09-10): PLACEMENT-SLOT HOLD — native re-judge debt still
+## gated (1210 hard down), all hold verifications green, zero mutations
+
+Cadence 146%3==2 placement slot; the committed carry from struct-145 (pay the
+native re-judge debt on {front, gameplay, night} on banked v3 bytes, on PASS
+write marker + run placer) was THE work. Gate ALL_PINS_OK 15/15 real exit 0
+tick-start 2ae846e6 (/tmp/struct146-gate.txt, REAL_EXIT:0). Shard drained
+fresh (IMPROVE-PLAN md5 c0f569d0 unchanged — 137th check, 0 OPEN nx-struct
+rows). Ledger max re-derived struct-145 -> tag struct-146.
+
+NATIVE ATTEMPT (flap law full protocol): front-8m call 1210 + paced 25s
+retry, then gameplay-18m call 1210 = hard down all tick — both attempts
+spent, debt carries; marker /tmp/struct145-native-paid NOT written (only a
+native-PASS run on the exact banked bytes can write it honestly).
+
+HOLD VERIFICATION (cheap, lawful, all fresh and green):
+- Banked v3 bytes re-pinned on disk: assets/village_tensegrity3.glb sha256
+  af2bdf599bfb3d908af0c8b47fa7f9712eb2c8b555d4b2669425fc8867a48084 exact.
+- next-place-struct145.ts RED-proven FRESH this tick: no marker -> exit 1,
+  refusal thrown BEFORE any network call (/tmp/struct146-placer-red.txt
+  REAL_EXIT:1) — the fail-closed native gate holds.
+- Fresh census 323 entities (certified epoch count): tensegrity ABSENT from
+  the live world (no double-place risk), and the az90 R82 seat neighborhood
+  unchanged — vesicawindow r70 at [70, -0.04, -3] and cairn-0050 r92
+  flanking the seat; struct-145's scan numbers (worst-solid 2.46 law 1.4,
+  NN vesicawindow 12.37 law 8.0) remain the standing contract.
+- Review frames intact: reviews/struct144-tensegrity-v3/ (10 frames +
+  before/ baseline) — the native re-judge substrate.
+
+DISPOSITION: v3 stays ACCEPTED banked NOT placed; live world untouched.
+Blocker is provider-only (not Bill, not state, not a defect): the first
+native-up tick executes one native judgment + (on PASS) one upload + one
+verb + ledger. If native ARBITRATES the fallback FAIL instead (tendon-rod
+upheld at walk-up), the v4 class stays recorded: thinner tendons 0.040 or
+bolder brass, not geometry.
+
+Files: none new this tick (contract files all committed at struct-145).
+Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0, E+0).
+One ledger append (struct-146). Plan append-only.
