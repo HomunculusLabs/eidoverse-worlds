@@ -9306,3 +9306,85 @@ Files: struct154-replace-gyroid-v4.ts (NEW, tracked), reviews/
 struct153-gyroid-v4/ (re-judged frames, ignored dir), STRUCTURES-PLAN.md
 (this block), IMPROVEMENTS.md (one append struct-154, D+0 E+1). Zero
 pushes.
+
+## struct-155 (2026-09-10): R11-3 THE VILLARCEAU RINGS — authored, built
+## (deterministic x3), decode ALL PASS 18/18, judged NATIVE gameplay+night
+## PASS (front 1210 flap, debt carried); ACCEPTED banked NOT placed (R11
+## cadence: placement slot next)
+
+Cadence 155%3=2 placement slot; nothing placeable — tensegrity v6 banked
+behind Bill's eye-gate (struct-149, not takeable), gyroid v4 standing
+(struct-154, pool CLEAN) → R11 new-form commission. Gate ALL PASS real
+exit 0 tick-start cc777cd8 (own struct-154 tip, /tmp/struct155-gate.txt,
+REAL_EXIT:0). Shard drained fresh (IMPROVE-PLAN 0 OPEN nx-struct rows —
+149th check). Ledger max re-derived struct-154 -> tag struct-155.
+
+FORM-LEDGER GAP (fresh grep this tick): villarceau 0/0/0 across
+STRUCTURES-PLAN + IMPROVEMENTS + IMPROVE-PLAN; kuen/scherk/delaunay/
+monkey-saddle/costa/theodorus also clean. steiner/roman BARRED
+(4D-descendant novelty rule — struct-111 precedent, Boy's Surface stands);
+theodorus competes with Shell Tower's golden spiral. Family = HIDDEN
+CIRCLE SECTION of a torus.
+
+CONCEPT (one idea): TWO PERFECT CIRCLES HIDDEN INSIDE ONE STONE HOOP. A
+stone torus (R0=1, r0=1/sqrt2 — the R0=sqrt2·r0 regime) standing on edge
+in a slab, carrying five PAIRS of its Villarceau circles as brass hoops
+inlaid half-proud on the surface — curves that read as crossing ellipses
+but are BOTH true perfect circles. Kin check: Founder's Knot is a (2,5)
+torus KNOT (braided path, spinning, brass-solid); this is an UNknotted
+ring + its hidden sections (stone-vs-brass split, no spin) — elevates
+the circle family, never competes. Folly class, no walk owed.
+
+MATH (asserted in-file, identity-proven): Villarceau circle
+p(t) = (1/sqrt2 + sin t, cos t/sqrt2, cos t/sqrt2) — TRUE circle radius
+R0=1 in plane y=z, lying ON the torus (720x10 samples, worst residual
+6.7e-16). Twin center (-1/sqrt2,0,0); the pair CROSSES at exactly
+(0,+-1/2,+-1/2) — the bead site. Five pairs at phi {0,36,72,108,144}deg
+= ten hoops (phi and phi+pi give the same pair).
+
+BUILD: mkv3-villarceau.ts (NEW). Self-catches en route: first write
+corrupted mid-file (placeholder-garbage class, struct-145 precedent,
+caught on read-back, whole file rewritten); two envelope-law constants
+were WRONG guesses pinned to measured truth by the build's own throws
+(plan x = 2(R0+r0+HOOP_R) brass proud; top = STONE crest — no hoop passes
+the top meridian, max brass 1.683 < 1.707; slab widest in z 2.2).
+sha c8a54b6aa5992af8ac606706879318ca15697e4e8f28a2cff2402270a2f208a1
+deterministic x3 MTIME-VERIFIED (1789051396 -> 1789051405 -> 1789051407).
+Envelope 3.48x3.47x2.20; 4 nodes (3 texMat + 1 KEEP glow_vc_1); brass =
+tensegrity v6 bright lane 0xCEAE54/0xBE9A47/0xE1BE68 metal 0.9.
+
+DECODE (struct155-decode-villarceau.ts, NEW, tracked — independent
+replica, no mk imports): decoder self-catch RED->GREEN — hoop law first
+run forgot the y-LIFT un-transform (worst 1.80m ~= LIFT exactly; the
+failure signature named the bug). ALL PASS 18/18 real exit 0: stone law
+torus equation worst resid 2.2e-7 m^2, 11610/11610 brass verts within
+HOOP_R+3mm of a replica circle, 120/120 replica samples covered, bead at
+the phi=0 pair crossing (0, .5+LIFT, .5), slab on grade 2.6x2.2, envelope
+exact, x/z centered, 0 NaN, one emissive lane linear 0x9a7030@0.85.
+
+JUDGED (review-model.ts, 10 frames, reviews/struct155-villarceau-v1/):
+GAMEPLAY 18m NATIVE PASS — identity strong (ring+plinth reads deliberate
+monument; converging strands read intentional ornament), lines visible
+and traceable ~1-2px, two-value materials clean. Flagged: bead reads
+"floating fleck" at 18m — decode-pinned AT the pair crossing where two
+hoops pass through it (framing-limit class, disclosed; walk-up resolves
+attachment); convergence knot muddies at 18m (the crossing region —
+same class); brass reads matte-ochre not glinting metal at distance
+(disclosed watch item; metal 0.9 rides the v6 lane). NIGHT NATIVE PASS —
+exactly ONE tight amber bead (480,310), zero bloom, zero strays;
+silhouette marginal vs dark ground = standing disclosed watch item
+(gyroid-night class). FRONT 8m: native 1210 x1 + paced 20s retry x1 =
+hard down (flap law honored) — native-front debt carried, NOT judged
+this tick. No fallback substitute spent (2/3 frames natively judged).
+
+DISPOSITION: v1 ACCEPTED as banked baseline, NOT placed — live world
+untouched. Next tick (156, refine slot by cadence but committed carry
+outranks, struct-139/143 precedent): pay native-front debt on first
+native-up call; then the placement contract (under-served ray scan,
+>=8m NN floor, district cap 6) + upload/spawn nx-struct-villarceau.
+
+Files: mkv3-villarceau.ts (ignored dir, staged -f),
+struct155-decode-villarceau.ts (NEW, tracked), reviews/
+struct155-villarceau-v1/ (10 frames, ignored). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget (D+0, E+0). One ledger append
+(struct-155). Plan append-only. Zero pushes.
