@@ -12639,3 +12639,35 @@ shared-budget use (D+0, E+0).
   entities, /geom raw shape, sha256-16 d8fa3d8372b40ac7). Zero world
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## survey-262 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 first
+  try at c3ebb8b8 (own survey-261 at tip — epoch stable). Ledger law EXACT
+  2370773 fresh; bracketed survey ledger max [survey-81], plan-section max
+  survey-261 → this tick survey-262, grep-verified clean pre-append (zero
+  survey-262 strings).
+- Census fetch disclosure: FIRST fetch HTTP 404 (27B) — LOCAL URL omission,
+  not gateway-side (bare /geom without ?world=commons-next hits the asset
+  route: `{"error":"no such asset: "}`). Single paced retry with the
+  certified chassis URL /geom?world=commons-next → HTTP 200, 1.8s, 95543B,
+  sha256-16 d8fa3d8372b40ac7 — byte-identical to the survey-261 certified
+  baseline by full checksum → 323==323, arrivals 0 / departures 0 /
+  field-diffs 0 by checksum identity — 31st consecutive fully-quiet
+  323-epoch.
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (211-262), 0 OPEN rows
+  by row-grep, no SHARD EXECUTION section (152nd grep), candidates closed
+  since survey-78, never-judged 0 by set algebra.
+- Arrival-gated: no slice judged (s138-s261 precedent) — 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback
+  N/A. Zero ledger append (loop law 4: append only when routing a note).
+- Repo-side foreign dirt observed and untouched, unchanged set from
+  survey-261 (client/server .ts/.js mods, WINDMILL-OVERHAUL.md,
+  cabin-overhaul/, carousel-horse-prototype/, debug-bower scripts) — no
+  world-epoch counterpart (census byte-quiet).
+- STANDING RECOMMENDATION carried unchanged (s182-s261): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey262-census-a.json (323
+  entities, /geom?world=commons-next raw shape, sha256-16 d8fa3d8372b40ac7).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
