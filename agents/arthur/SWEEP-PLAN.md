@@ -9610,3 +9610,65 @@ forge/potter @234, hall/bunkhouse @235, longhouse/garden-cottage @236
 walked fresh, row-cottage/observatory @232 stalest standing pair at 4
 sweeps; both walk tools ls-verified present on disk this tick:
 interior-walk-row-cottage.ts, struct2-walk-observatory.ts).
+
+sweep-237: CLEAN SWEEP, fully-quiet steady-state tick under the
+audit-continues banner. Freeze context read fresh this tick: city-14
+(2b8a6ccc) lifted the freeze for struct+city lanes only — so census
+arrival/flip classification was ACTIVE this tick rather than assumed
+byte-quiet, and the live epoch re-verified quiet on its own bytes.
+Census 325==325 at BOTH epochs (A/B, 20s-paced, next-live-census.ts
+chassis) BYTE-IDENTICAL to the committed sweep-231 lib-fold baseline
+(raw 215228B sha16 b8c43498acb3ebea; set-diff law satisfied by byte
+identity): 0 arrivals, 0 departures, all five semantic drift classes
+EMPTY (pos/yaw/scale/kind/bbox, lib flips, compKeys). TWELFTH
+consecutive quiet-or-classified epoch pair; no snapshot rewrite needed
+(no-churn precedent — the committed file already describes the live
+world exactly). HEAD advanced TWICE mid-tick, both zero-mutation
+observer quiet holds: survey-342 @ bb871d73 and survey-343 @ 81994c0f
+— each corroborates the b8c43498acb3ebea epoch via its own
+byte-identical census. Epoch law honored: standing gate re-run ALL
+PASS real exit 0 at 81994c0f before the ledger append. Overlap: SAT
+fresh-live 287 bbox non-light / 236 classified / 0 coverage holes,
+real exit 3 unpiped on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 193rd sweep since routing, NOT new, no
+escalation due (the law keys on severity-1). Walks: tier-1 4/4
+per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run
+individually per the sweep-228 ceiling law — core 64/64 @ 0.380
+(next-walk-core-paths.ts; physics-banner prefix re-anchored by
+first-brace index before JSON parse), NW 5/5 @ 0.380
+(nw-approach1-walk.ts), NE 7/7 @ 0.380 (ne-approach2-walk.ts), SW 5/5
+@ 0.370 (sw-approach3-walk.ts); all verdicts content-anchored on
+status strings + per-leg ok counts + maxArrival. Known normalized
+diagnostics, unchanged set: physics banner + labyrinth-seam
+abstentions (4 ids @ lie 0.48m) + nx-dress-goats (lie 0.28m). Tier-2
+215th cycle per the committed sweep-236 pointer: row-cottage 6/6 @
+0.3838 (interior-walk-row-cottage.ts) + observatory circuit 5/5 @
+0.389 (struct2-walk-observatory.ts), both ALL_PASS real exit 0 —
+match the sweep-232 records for the pair exactly. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (191st consecutive
+clean); sweep89-battery 28/28 PASS exit 0 on fresh census-A bytes
+(python3 argv census-path form); interlane md5 f6254cd0 stable, read
+fresh pre- and post-walks; ledger law EXACT — base 2370778 re-read
+fresh via the canonical tool at append, D+0/E+0 append, tool
+self-verifies law() both sides (running total 2370778 -> 2370778).
+Standing gate ALL PASS real exit 0 FIRST TRY (98 PASS lines, exit
+captured unpiped; ran at 6ef3f98a = sweep-236 tip) + RE-RUN ALL PASS
+real exit 0 at 81994c0f pre-append (epoch law). Probe self-catch
+pre-verdict: the approach-walk summarizer keyed per-leg 'dist' where
+those tools emit 'distance' + top-level 'maxArrival' (sweep-54
+class) — re-derived from the actual schema before any verdict.
+Diff tool sweep237-census-diff.py folded from the committed sweep236
+chassis (sed swap only — 3 forward / 0 stale refs, py_compile clean,
+clean exit 0 at BOTH epochs A/B unpiped on the real bytes). Pools
+drained: IMPROVE-PLAN md5 c0f569d0 unchanged (live-queue OPEN grep 0,
+no SHARD EXECUTION section, sweep owns no prefix; CITY-PLAN-V2
+assigns sweep no reset role). Zero world mutations, zero defect
+notes, zero uploads, zero verbs, zero comp edits, zero shared-budget
+use (D+0, E+0). Next tier-2 pair (sweep-238): inn + tower-house
+(216th cycle — LRU chain re-derived from committed pointers this
+tick: row-cottage/observatory @237, forge/potter @234, hall/bunkhouse
+@235, longhouse/garden-cottage @236 walked fresh, inn/tower-house
+@233 stalest standing pair at 4 sweeps; both walk tools ls-verified
+present on disk this tick: interior-walk-inn.ts,
+interior-walk-tower-house.ts).
