@@ -13654,3 +13654,39 @@ shared-budget use (D+0, E+0).
   entities, /geom?world=commons-next raw shape, sha256-16 fa58f9da1d1d84b3).
   Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## survey-290 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 first
+  try, observed HEAD aa599c3f (survey-289 tip, own lane). Ledger grep
+  survey-290 clean pre-check (0 matches in SURVEY-PLAN.md and
+  IMPROVEMENTS.md); bracketed survey ledger max [survey-83] (quiet holds
+  append nothing, loop law 4); plan-section max survey-289 → this tick
+  survey-290.
+- Census: FIRST fetch attempt hit my wrong host (eidoverse.studio DNS
+  6, fail-closed empty — survey-287 wrong-endpoint class, self-caught);
+  re-issued via the certified chassis: `bun agents/arthur/next-live-census.ts`
+  exit 0 AND raw-shape curl to the certified endpoint
+  https://eidoverse.billding.dev/geom?world=commons-next → HTTP 200,
+  95543B, sha256-16 fa58f9da1d1d84b3 — byte-identical to the survey-289
+  baseline by full-file checksum → 323==323, arrivals 0 / departures 0 /
+  0 field diffs — THIRD consecutive fully-quiet epoch on the
+  post-gyroid-reseat fa58f9da baseline.
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 verified unchanged this tick
+  (matches s211-s289 pins), 0 SHARD EXECUTION section (178th header grep),
+  candidates closed since survey-78, never-judged 0 by set algebra
+  (arrivals 0). Interlane f6254cd0 verified stable this tick.
+- Arrival-gated: no slice judged (s138-s289 precedent) — 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback
+  N/A. Zero ledger append (loop law 4: append only when routing a note).
+- Repo-side foreign dirt observed and untouched (same set as s285/s288/
+  s289: client/server .ts/.js mods, WINDMILL-OVERHAUL.md, cabin-overhaul/,
+  carousel-horse-prototype/, debug-bower scripts,
+  HERO-ASSET-REFINEMENT-PLAN.md mod, village_next_core_paths assets,
+  next-place-carousel) — no world-epoch counterpart (census byte-quiet).
+- STANDING RECOMMENDATION carried unchanged (s182-s289): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey290-census-a.json (323
+  entities, /geom?world=commons-next raw shape, sha256-16 fa58f9da1d1d84b3).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
