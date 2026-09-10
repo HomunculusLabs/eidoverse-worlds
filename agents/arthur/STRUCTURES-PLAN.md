@@ -8420,3 +8420,77 @@ gap grep fresh at that tick; 8m NN floor, per-district soft cap 6).
 
 Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
 One ledger append this tick (struct-141). Plan append-only.
+
+## struct-142 (2026-09-10): R11-2 THE NEEDLE (tensegrity) — authored, built,
+## decode ALL PASS 12/12, judged FAIL (ZAI fallback, native hard down all
+## tick, debt owed); BANKED NOT PLACED — fix classes recorded for v2
+
+Cadence 142%3==1 build slot. Gate ALL PASS real exit 0 tick-start 8c0ea00f
+(un-piped, redirected-file proof: REAL_EXIT:0, 0 FAIL lines). Shard empty
+fresh (IMPROVE-PLAN md5 c0f569d0 unchanged since s211 — 130th check, 0 OPEN
+nx-struct rows).
+
+FORM-LEDGER GAP (fresh grep this tick): tensegrity/snelson/floating-
+compression 0/0/0 across STRUCTURES-PLAN + IMPROVEMENTS + IMPROVE-PLAN.
+Lissajous STANDS (refine-273); oloid grep was a hyperboloid substring
+false-positive (ruledtower prose); klein/hopf probed and BARRED by the
+novelty law's 4D-descendant rule (struct-111 precedent). Standing works
+are ALL continuous structures — no standing work has disconnected
+compression members. Family = FLOATING COMPRESSION / TENSEGRITY.
+
+CONCEPT (one idea): A MAST OF TIMBERS THAT NEVER TOUCH. Three-stage
+Snelson-class needle — 9 timber struts, 3/stage, each stage +60 deg over
+the one below (stacking law: stage-k top angles == stage-(k+1) bottom
+angles exactly), NO strut touching any other (in-file + from-bytes law,
+min surface gap 0.139m), the float carried only by 18 brass tendons
+(9 saddles T_i->B_{i+1}, 6 gap wires across the two floating joints,
+3 crown wires to the bead). Bead glow_tn_1 at 6.62 (dusk lineage).
+Materials tn_timber (wayfarershalt lane) / tn_brass (enneper ep_brass
+lane) / tn_stone (boy bs_stone lane). Folly class, no walk owed.
+
+BUILD: mkv3-tensegrity.ts. In-file laws ALL PASS pre-GLB: min strut gap
+0.269m, stacking + floating joints (0.25m gaps), weave law (18 tendons
+touch only their anchors), ground law (only stage 0 below y 0.5), envelope
+3.90x6.75x3.90, 1 glow KEEP, NaN 0. Honest self-catches en route: v0
+below-grade -0.056 (cap-extension + stage-0 bottoms too low) -> exact
+struts + yb 0.20 buried in the socket band; disjoint law tightened 0.10 ->
+0.16 (> 2*STRUT_R = 0.13, surfaces can never touch). sha 70cffba960fe11f4
+deterministic x2 MTIME-VERIFIED (epoch 1789024185 -> 1789024239).
+
+DECODE: struct142-decode-tensegrity.ts (new, tracked) — independent
+parametric replica, full node-hierarchy TRS walk (KEEP child bead carried
+translation — pitfall #4 caught RED->GREEN), solid-distance classifier.
+ALL PASS 12/12: node census 4 buckets, texMat lanes only, timber 468/468
+verts 0.00000m off replica struts, brass 720/720 0.00000m off tendons,
+stone 96/96 on slab/sockets, strut-disjoint byte-anchored 0.269m, bead on
+sphere exact, envelope exact, no below-grade, doubleSided absent (solids),
+exactly 1 emissive lane. Decoder self-catch: GLB bin-chunk length lives at
+offset 20+jsonLen (offset 16 is the JSON chunk fourcc) — first read
+RangeError'd, fixed.
+
+JUDGED (native 1210 x2 + paced 20s retry = 1210 hard down all tick, flap
+law; ZAI fallback, native re-judge debt OWED on all frames): FAIL all four
+contract axes. DECODE-FALSIFIED sub-claims (pitfall 11): "struts touch at
+every junction" — bytes prove min surface gap 0.139m; judge's scale was
+miscomputed 18.6px/m vs true 51.7px/m (335px mast / 6.48m), which also
+inflated its "gap should be 6px" arithmetic (true: 13-16px). REAL design
+deficits standing (the fix classes for v2): (1) junction gaps do not READ
+at 18m in this projection — widen the float (stage y-gaps 0.25 -> ~0.45m)
+and/or make the gap wires carry the eye across them; (2) saddle tendons
+run parallel-flush to non-anchor struts (weave law allows 0.06m approach)
+reading as edge piping — reroute/offset; (3) timber palette 0x56503c lane
+reads olive-green metal at 18m — shift warm oak/walnut; (4) TENDON_R 0.038
+~2px at 51.7px/m — below legibility, widen to ~0.05-0.06 (3-4px) or
+brighten; (5) base sockets read as compression seats — the judge wants
+ground guy tendons to anchors (tension foundation vocabulary) instead.
+
+DISPOSITION: accept-or-revert law — FAIL verdict does not ACCEPT; v1
+BANKED decode-green at sha 70cffba960fe11f4, NOT placed; live world
+untouched (D+0 E+0). Next tick (143, placement-slot-by-cadence but refine
+work outranks: carried mid-iteration, struct-139 precedent): v2 iteration
+on the five fix classes, then judge, then the placement contract
+(under-served ray scan, 8m NN floor, district cap 6) once judged PASS.
+
+Files: mkv3-tensegrity.ts (ignored dir, staged -f),
+struct142-decode-tensegrity.ts (tracked), reviews/struct142-tensegrity/
+(10 frames, ignored).
