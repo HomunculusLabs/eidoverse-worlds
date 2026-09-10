@@ -172,7 +172,7 @@ if (tendons.length !== 21) throw Error(`tendon census ${tendons.length} != 21`);
 // ---- scene --------------------------------------------------------------------------------------------
 const g = new THREE.Group();
 const glowMeshes: THREE.Mesh[] = [];
-const timberTex = texMat("tn_timber", [0x8a5a33, 0x96683c, 0x74492a], { rough: 0.88, scale: 3, weights: [2, 1, 1], seed: 9421 });   // v2 warm oak/walnut (was olive 0x56503c — read green metal at 18m)
+const timberTex = texMat("tn_timber", [0x5a4030, 0x6a4d39, 0x453024], { rough: 0.88, scale: 3, weights: [3, 1, 1], seed: 9421 });   // v3 WALNUT two-value (struct-144): dark compression / bright tension. struct-143 native judge: v2 straw 0x96683c L=0.167 collided with mid-brass 0xb08f42 L=0.293 (delta 0.126) — tendons read as second timber. New lightest timber 0x6a4d39 L=0.087 clears mid-brass by 0.206 (3.4x) and bright 0xd0b060 by 0.366 (5.2x).
 const brassTex = texMat("tn_brass", [0xbfa14e, 0xb08f42, 0xd0b060], { rough: 0.38, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9422 }); // v2 brighter brass (enneper ep_brass lineage)
 const stoneTex = texMat("tn_stone", [0x6f6a60, 0x777166, 0x67625a], { rough: 0.95, scale: 2, weights: [3, 1, 1], seed: 9423 });       // boy bs_stone lane
 

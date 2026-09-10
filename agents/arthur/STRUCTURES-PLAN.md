@@ -8558,3 +8558,55 @@ Files: mkv3-tensegrity.ts (ignored dir, staged -f), struct142-decode-
 tensegrity.ts (tracked, v2 replica), struct143-probe-weave.ts (new, tracked),
 reviews/struct143-tensegrity-v2/ (10 frames, ignored). Zero world mutations,
 uploads, verbs, comp-edits, shared-budget use. One ledger append (struct-143).
+
+## struct-144 (2026-09-10): REFINE — tensegrity needle v3 (walnut two-value) —
+## value fix LANDED (fallback-confirmed walnut PASS), residual = tendon-as-rod
+## framing class; ACCEPTED banked, NOT placed; native re-judge gates placement
+
+Cadence 144%3==0 refine slot; carried mid-iteration outranks (struct-139/143
+precedent). Gate ALL_PINS_OK 15/15 real exit 0 tick-start c8322260 (un-piped,
+redirected-file /tmp/struct144-gate.txt). Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged, 0 OPEN nx-struct rows — 135th check). Ledger max re-derived
+struct-143 -> tag struct-144.
+
+V3 FIX (the ONE bounded cause from struct-143): timber oak -> walnut
+0x8a5a33/0x96683c/0x74492a -> 0x5a4030/0x6a4d39/0x453024, weights 2/1/1 ->
+3/1/1 (dark dominance). Numeric cure computed PRE-EDIT: straw 0x96683c vs mid
+brass 0xb08f42 luminance delta 0.126 (the native-judged collision) -> lightest
+walnut 0x6a4d39 clears mid brass by 0.206 (3.4x) and bright 0xd0b060 by 0.366
+(5.2x). Brass/stone lanes, all geometry, all seeds UNTOUCHED. Decoder pins lane
+names not colors — no replica bump needed (verified by grep before edit).
+
+BUILD: baseline captured FIRST (before/ dir, bd84bde454285f9f — polish-271
+law). sha af2bdf599bfb3d90 deterministic x2 MTIME-VERIFIED (1789027537 ->
+1789027539). Envelope unchanged 3.90x7.08x3.90; in-file laws PASS (strut
+disjoint 0.461, weave, stacking, ground); DECODE ALL PASS 13/13 (468 timber +
+840 brass + 168 stone verts 0 orphan 0.00000m, bead on sphere, 1 emissive).
+
+JUDGMENT: native 1210 x2 + paced 25s retry = hard down all tick (flap law
+honored); ZAI fallback judged front 8m, 1 PASS / 3 FAIL decomposed per probe
+law 11:
+- WALNUT AXIS PASS — v3 fix landed: 2.9:1 value contrast, struts read
+  #4E3722 dark walnut, nothing straw/pale. The struct-143 cause is cured.
+- TOUCHING/FLOATING sub-claims decode-FALSIFIED: 840/840 brass verts sit on
+  the 21 replica tendons at 0.00000m; strut-disjoint byte-anchored 0.461m;
+  the "floating cap at (600,128)" is a crown wire to the bead, cropped by the
+  front camera band (tops ~y5.7 vs bead 6.95 — struct-45 framing-limited
+  class; the judge itself concedes the crop hides the crown).
+- REAL residual (not fabricated): tendon-as-rod — TENDON_R 0.055 renders 15px
+  at 8m front (137px/m) but 5.7px at 18m gameplay; 1px-cable at 8m and
+  legible at 18m are arithmetically incompatible (struct-45 distance-tension
+  class). Judge scale again miscomputed (pads are 0.52m anchors, not 0.4m) but
+  the aspect-ratio arithmetic stands regardless of scale.
+
+DISPOSITION: v3 ACCEPTED as banked baseline (strictly better than v2 on every
+judged axis; zero regressions), NOT placed (identity axis judged by fallback
+only). Native re-judge debt on {front, gameplay, night} carries; on native
+PASS the placement contract runs next tick (under-served ray scan, 8m NN
+floor, district cap 6). If native ARBITRATES the fallback FAIL (tendon-rod
+read upheld at walk-up), the v4 class is recorded: thinner tendons (0.040,
+the 18m legibility floor ~4px) or bolder brass contrast, not geometry.
+
+Files: mkv3-tensegrity.ts (ignored dir, staged -f),
+reviews/struct144-tensegrity-v3/ (10 frames + before/, ignored).
+Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
