@@ -5663,4 +5663,6 @@ fixes ≈ 6 F.)
 
 - [city-12] BILL FREEZE: map reset + object evaluation + pattern study commissioned ('super cluttered, no rhyme or reason other than the main circle') — build/relocate lanes frozen banner-first (struct/survey/sweep steered); CITY-PLAN v2 authoring next: census the 325, score every object (form ledger, native reads, verdict history), retire/keep/relocate graph, propose 2-3 pattern options for Bill BEFORE any teardown (D+0, E+0)
 
+- [city-13] CITY-PLAN-V2.md authored: census baseline (287 things; clutter = ~190-object r33-70 band), discovered accidental MATH AVENUE at 184deg (15 struct forms dead-straight r110-250 ~10m rhythm — a pattern already exists, never chosen), evaluation-ledger plan (survey judges during freeze; KEEPs/RELOCATEs/SUNSETs with Bill approving sunsets), 3 pattern options — A AVENUES (radial curated walks, cheapest, formalizes math avenue), B CAMPUS (true reset: retire outer 190 to catalog, re-place 60-90 keeps in 4 quadrant campuses), C CONSTELLATION (8-10 family islands r60-130, most composed silhouettes). Bill picks; nothing tears down before his pick (D+0, E+0)
+
 **Running total: 2370778 / 2000000**
