@@ -9839,3 +9839,81 @@ next-place-struct161.ts (all NEW, tracked); STRUCTURES-PLAN.md (this
 block); IMPROVEMENTS.md (one append struct-161, D+0 E+1 — one upload,
 two verbs). mkv3-boy.ts unchanged this tick (committed struct-159).
 Zero pushes.
+
+
+## struct-162 (2026-09-10): REFINE — unduloid survey-312 Sev 2 CURED at source
+## (water CRESTS the rim as a CMC meniscus dome); v3 built, decoded 18/18,
+## judged NATIVE 3/3 defect vantages FLIPPED; ACCEPTED banked NOT placed —
+## placement = struct-163
+
+Cadence 162%3==0 refine slot. Refine pool re-derived fresh: the ONLY
+evidenced open deficit = unduloid (survey-312 Sev 2 water-semantic probe,
+routed to struct as owner, in the refine pool per no-duplicate law);
+gyroid CLEAN (struct-154), peaucellier night-only debt (placement-class
+hold), boy CLOSED hero-ready (struct-160/161), tensegrity v6 banked
+behind Bill's eye-gate (struct-149, not takeable). Gate ALL PASS real
+exit 0 tick-start 55c95333 (/tmp/struct162-gate.txt, 98 PASS 0 FAIL).
+Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN
+nx-struct rows — 19 raw hits prose-classified per survey-323's 211th
+check). Ledger max re-derived struct-161 -> tag struct-162.
+
+SUBJECT: nx-struct-unduloid live pin verified pre-work (fresh census
+read, 325 entities): pos [95.262794,-0.031702,55] yaw -2.0944
+lib store/3a9b92b8aeb3722d.glb comp {} — exact struct-158 tuple.
+
+ROOT CAUSE (traced to source, mkv3-unduloid.ts:150-163): the v2 water
+disc sat at y[0.125..0.145] INSIDE the solid stone basin block (top
+0.20) — struct-52 enclosure class UNDER dress-79 down-angle occlusion
+(rim 5.5-7.5cm above the plane). Zero visible water from any vantage:
+teal baseColor + ~2-7% emissive cannot present (survey: 0 cool px at
+night). The decoder's own water law audited a "flat disc top 0.145"
+inside the block — the contract itself was wrong, not just the bytes.
+
+CURE (one smallest source change): flat disc -> spherical-cap MENISCUS
+crests the rim — equator exactly at rim y=0.20 (ellipse rx 1.88 x rz
+0.98 = the old water footprint), apex 0.29, sagitta 0.09 proud
+(dress-79 "~0.09m proud" cure; polish-281 idiom). A spherical cap is
+itself a CMC surface (e=0 Delaunay member) — the basin now holds the
+drop that fell: family-true, not applied trim. Drip bead law re-holds
+(bead bottom 0.33 > apex 0.29, the drop hovers 4cm over the swollen
+water — imminent). Envelope unchanged 6.57x1.30x2.20; node census 4;
+WATER_TOP const 0.145->0.29.
+
+DECODE (struct157-decode-unduloid.ts water law REWRITTEN for the
+meniscus contract, RED-proven first: banked v2 FAILs "meniscus water
+dome present" 12/13): v3 ALL PASS 18/18 — apex 0.290, crest 0.090
+proud, equator ring r 0.98..1.88 (the exact ellipse), dome closes at
+apex r 0.000, palette blue COLOR_0 linear exact, chain/bulge/neck/bead
+laws all unchanged PASS. Rebuild x2 deterministic sha 014ed586a083a4df
+(both runs byte-identical; mtime moved).
+
+JUDGED NATIVE (3 defect vantages, before/after control pair):
+- gameplay 18m: BEFORE "no water — uniform matte grey disc, zero blue";
+  AFTER "water unambiguously visible, saturated dark blue against
+  light gray rim and warm gold, reads as liquid" — the Sev 2 core
+  FLIPPED at the exact survey vantage.
+- night: AFTER "~90% of the water surface reads cool blue/teal"
+  (survey leg was 0 cool px), amber bead "distinct quiet warm point, no
+  bloom", zero glare artifacts.
+- top-down: AFTER "75-85% of basin interior reads blue/teal" (survey
+  leg was 0%), water plane contained, reads correctly as water.
+Watch item recorded (survey-312 secondary probe (a), native-read at
+struct-162): amber bead reads DANGLING DETACHED at close range — the
+deliberate pendant-drop design reads as floating to a neutral judge;
+next-fix class if Bill's eye flags it (cure = articulate the pendant:
+thin brass filament from chain nadir to bead).
+
+DISPOSITION: v3 ACCEPTED banked NOT placed (R11 cadence: build+judge
+one tick, place next). Placement = struct-163: re-place SAME id
+nx-struct-unduloid at exact current tuple [95.262794,-0.031702,55] yaw
+-2.0943951023931953, remove+spawn reseat chassis (artwalk-33 class),
+hash-gated 014ed586a083a4df, comp bag {} before==after, fresh SAT at
+final pose, idempotent rerun, census pin re-read. Folly class — no
+walk owed. Bill eye-check: E district walk-up ~10m west of boy v2 —
+basin now visibly holds dark water day and night.
+
+Files: mkv3-unduloid.ts (edited, ignored dir — staged -f),
+struct157-decode-unduloid.ts (water law rewritten, tracked),
+reviews/struct162-unduloid-v3/ (before/ + after frames, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-162, D+0 E+0 — no world mutations this tick). Zero pushes.

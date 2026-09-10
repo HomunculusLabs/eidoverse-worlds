@@ -182,8 +182,11 @@ const accPos = (accIdx: number) => {
         `c(${cx.toFixed(3)},${((miny + maxy) / 2).toFixed(3)},${cz.toFixed(3)}) r ${r.toFixed(3)}`);
 }
 
-// water law: flat palette-blue disc top 0.145 — identified GEOMETRICALLY (flat disc near
-// grade inside the basin), color checked with sRGB-vs-linear tolerance
+// water law (struct-162 refine): meniscus dome CRESTS the rim — equator at
+// rim y=0.20 (rx 1.88 x rz 0.98 inset), apex 0.29 (sagitta 0.09 proud),
+// palette blue — identified GEOMETRICALLY (low dome inside the basin, apex
+// over origin), color checked COLOR_0 linear. Replaces the v1/v2 flat-disc
+// law (the disc sat INSIDE the stone block — survey-312 Sev 2 enclosure).
 {
     let found = false;
     for (const n of nodes) {
@@ -191,7 +194,7 @@ const accPos = (accIdx: number) => {
         for (const prim of json.meshes[n.mesh].primitives ?? []) {
             const M = nodeMat(nodes.indexOf(n));
             const raw = accPos(prim.attributes.POSITION);
-            // transform all verts; look for a flat (<=2.5cm band) disc
+            // transform all verts; look for the low dome (apex band 0.27-0.32)
             let miny = Infinity, maxy = -Infinity, maxr = 0, cx = 0, cz = 0, cnt = 0;
             const tx: number[] = [], ty: number[] = [], tz: number[] = [];
             for (let i = 0; i < raw.length; i += 3) {
@@ -202,9 +205,9 @@ const accPos = (accIdx: number) => {
                 miny = Math.min(miny, y); maxy = Math.max(maxy, y);
                 cx += x; cz += z; cnt++;
             }
-            if (maxy - miny > 0.025 || cnt < 40 || maxy > 0.5) continue; // not a flat low disc
+            if (maxy > 0.32 || maxy < 0.27 || cnt < 40) continue; // not the meniscus (excludes bead 0.53)
             for (let i = 0; i < cnt; i++) maxr = Math.max(maxr, Math.hypot(tx[i], tz[i]));
-            if (maxr < 1.5 || maxr > 2.1) continue;                       // not basin-scale
+            if (maxr < 1.5 || maxr > 2.1) continue;                // not basin-scale
             found = true;
             // color: engine tint lane is COLOR_0 (normalized u8 VEC3, linear) — reedpool precedent
             const cacc = json.accessors[prim.attributes.COLOR_0];
@@ -213,13 +216,18 @@ const accPos = (accIdx: number) => {
             const c0 = [buf[coff] / 255, buf[coff + 1] / 255, buf[coff + 2] / 255];
             const near = (v: number, t: number) => Math.abs(v - t) < 0.02;
             const waterBlue = near(c0[0], 0.0802) && near(c0[1], 0.1441) && near(c0[2], 0.1878); // linear(0x506a78)
-            ok("water flat (<=2.5cm band)", maxy - miny <= 0.025, `y ${miny.toFixed(3)}..${maxy.toFixed(3)}`);
-            ok("water top 0.145", Math.abs(maxy - 0.145) < 0.005, `top ${maxy.toFixed(3)}`);
-            ok("water radius ~1.88 (2.00-0.12 inset)", maxr > 1.7 && maxr < 2.05, `r ${maxr.toFixed(3)}`);
+            let apexI = 0; for (let i = 1; i < cnt; i++) if (ty[i] > ty[apexI]) apexI = i;
+            const apexR = Math.hypot(tx[apexI], tz[apexI]);
+            let eqMin = Infinity, eqMax = -Infinity;
+            for (let i = 0; i < cnt; i++) if (Math.abs(ty[i] - 0.20) < 0.005) { const r = Math.hypot(tx[i], tz[i]); eqMin = Math.min(eqMin, r); eqMax = Math.max(eqMax, r); }
+            ok("water dome apex 0.29", Math.abs(maxy - 0.29) < 0.005, `apex ${maxy.toFixed(3)}`);
+            ok("water CRESTS rim >= 0.085 proud (dress-79 law)", maxy - 0.20 >= 0.085, `crest ${(maxy - 0.20).toFixed(3)}`);
+            ok("water equator ring at rim y=0.20", eqMax > 1.7 && eqMax < 2.05 && eqMin > 0.85, `eq r ${eqMin.toFixed(2)}..${eqMax.toFixed(2)} (ellipse 0.98x1.88)`);
+            ok("dome closes at apex (r < 0.06)", apexR < 0.06, `apex r ${apexR.toFixed(3)}`);
             ok("water palette blue 0x506a78 (COLOR_0 linear)", waterBlue, `rgb255 ${(c0[0] * 255).toFixed(0)},${(c0[1] * 255).toFixed(0)},${(c0[2] * 255).toFixed(0)}`);
         }
     }
-    ok("still-water disc present", found);
+    ok("meniscus water dome present", found);
 }
 
 // envelope + centering + grade (transformed verts, decode-pitfall-4 law)

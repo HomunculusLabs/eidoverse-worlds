@@ -96,7 +96,7 @@ const POST_INNER = 2.05 * P_W;        // post inner face: last bead fully visibl
 const POST_HALF = 0.15, POST_H = 1.30;
 const POST_CX = POST_INNER + POST_HALF;
 const PLINTH_HALF = 0.23, PLINTH_H = 0.10;
-const BASIN_RX = 2.00, BASIN_RZ = 1.10, BASIN_H = 0.20, WATER_TOP = 0.145, WATER_INSET = 0.12;
+const BASIN_RX = 2.00, BASIN_RZ = 1.10, BASIN_H = 0.20, WATER_TOP = 0.29, WATER_INSET = 0.12;
 const BEAD_R = 0.10, BEAD_Y = LIFT - BULGE_R - 0.06;
 
 // ---- laws (each pinned to measured truth; violations throw) --------------------------------------
@@ -147,19 +147,31 @@ for (const sgn of [1, -1]) {
     g.add(plinth);
 }
 
-// the oval basin: solid stone block + still-water disc inset (water is geometry, flat, palette blue)
+// the oval basin: solid stone block + meniscus water dome (struct-162 refine).
+// v2 defect (survey-312 Sev 2): the flat water disc y[0.125..0.145] sat INSIDE
+// the solid stone block (top 0.20) — struct-52 enclosure class UNDER dress-79
+// rim occlusion; zero visible water from any vantage, teal/emissive never
+// present (0 cool px at night). Cure = both laws at once: the water surface
+// CRESTS the rim (dress-79 "fuel must crest ~0.09m proud", polish-281 idiom),
+// as a spherical-cap MENISCUS — itself a CMC surface (e=0 Delaunay member,
+// the family's own sphere-bead): the basin holds the drop that fell.
+// Cap: equator at rim y=0.20 (r 1.88x1.03 inset), apex 0.29, sagitta 0.09.
+// Bottom of the dome dips to 0.11 (still inside stone: water is a SURFACE,
+// the block reads as basin walls below the equator).
 {
     const block = new THREE.Mesh(new THREE.CylinderGeometry(1, 1, BASIN_H, 48), stoneTex);
     block.scale.set(BASIN_RX, 1, BASIN_RZ);
     block.position.y = BASIN_H / 2;
     g.add(block);
-    const water = new THREE.Mesh(
-        new THREE.CylinderGeometry(BASIN_RX - WATER_INSET, BASIN_RX - WATER_INSET, 0.02, 48),
+    const W_R = BASIN_RX - WATER_INSET, W_RZ = BASIN_RZ - WATER_INSET; // 1.88 x 0.98
+    const SAG = WATER_TOP - BASIN_H;                                   // 0.09
+    const meniscus = new THREE.Mesh(
+        new THREE.SphereGeometry(W_R, 48, 18, 0, Math.PI * 2, 0, Math.PI / 2),
         new THREE.MeshStandardMaterial({ color: 0x506a78, roughness: 0.25, metalness: 0.5,
             emissive: new THREE.Color(0x2e4a58), emissiveIntensity: 0.70 })); // wet gleam lane (cistern97 / polish-281 cure)
-    water.scale.set(1, 1, BASIN_RZ / BASIN_RX);
-    water.position.y = WATER_TOP - 0.01;
-    g.add(water);
+    meniscus.scale.set(1, SAG / W_R, W_RZ / W_R); // squash to sagitta; elliptical footprint
+    meniscus.position.y = BASIN_H;
+    g.add(meniscus);
 }
 
 // the drip bead — the one drop that hasn't fallen, under the middle bead's nadir
