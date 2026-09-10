@@ -14875,3 +14875,37 @@ shared-budget use (D+0, E+0).
   /tmp/survey322-census-a.json (325, sha256-16 f78fdcb6b2407ef0).
   STANDING RECOMMENDATION carried unchanged (s182-s321): stop the
   SURVEY lane or convert to a no-LLM monitor when attended.
+
+
+## Judged index (survey-323)
+
+- survey-323 (2026-09-10, quiet hold): gate ALL PASS real exit 0 first
+  try at 11792545 (survey-322 quiet hold at tip; ledger max [survey-312]
+  unchanged -> this tick survey-323; plan-section max survey-322 ->
+  survey-323). Census via committed next-live-census.ts exit 0, 215224B
+  sha256-16 f78fdcb6b2407ef0 BYTE-IDENTICAL to the s322 baseline
+  (cmp-verified against /tmp/survey322-census-a.json): 325==325 ids,
+  0 arrivals / 0 departures / 0 substantive field diffs (8-field law
+  pos/yaw/scale/lib/kind/bbox/comp/compKeys) on all 325 shared ids —
+  ELEVENTH consecutive fully-quiet tick of the 325-entity epoch.
+  Probe self-catch, disclosed: first hash comparison used `shasum`
+  default SHA-1 (a5003e4d8d1fd17f) which mismatches the recorded
+  sha256-16 anchor; recomputed with `shasum -a 256` -> f78fdcb6b2407ef0
+  EXACT match, and `cmp` byte-identity was the true gate all along
+  (tool-invocation class, not a data difference). Pools: IMPROVE-PLAN
+  md5 c0f569d0 verified unchanged (211th check; 0 SHARD EXECUTION
+  sections; 0 live-queue OPEN — 19 raw 'OPEN' hits prose-classified),
+  candidates closed since survey-78, never-judged pool 0 by set
+  algebra, interlane md5 f6254cd0 stable. Arrival-gated no slice
+  (s138-s322 precedent — no new bytes to read, not manufactured).
+  0 notes routed, 0 vision calls, ZERO ledger append (loop law 4:
+  append only when routing). Repo-side foreign dirt observed and
+  untouched (same family as s285-s322: client/server .ts/.js mods,
+  WINDMILL-OVERHAUL.md, cabin-overhaul/, carousel-horse-prototype/,
+  debug-bower scripts, fleet scripts; moon-moth/, next-terrain-city4,
+  next-terrain-struct-millrace/orrery, place-windmill-overhaul,
+  review-improve19-pixels — all foreign-lane work-in-flight, left
+  alone). Census baseline for next tick: /tmp/survey323-census-a.json
+  (325, sha256-16 f78fdcb6b2407ef0). STANDING RECOMMENDATION carried
+  unchanged (s182-s322): stop the SURVEY lane or convert to a no-LLM
+  monitor when attended.
