@@ -7920,3 +7920,56 @@ potter @201, row-cottage / observatory @199, longhouse / garden-cottage
 @198 stalest standing pair at 6 sweeps; both walk tools verified present on
 disk this tick: interior-walk-longhouse.ts,
 interior-walk-garden-cottage.ts).
+
+sweep-205: CLEAN SWEEP fully quiet steady-state tick, no snapshot rewrite.
+Census 323==323 at BOTH epochs (A/B 20s-paced, next-live-census.ts chassis)
+BYTE-IDENTICAL 214035B sha16 ed5856e6ef4abd37 — byte-identical to the
+survey-231..246 / sweep-199..204 certified post-enneper baseline
+representation, so quiet holds for ALL fields the projection carries incl
+comp/compKeys by byte identity: 0 arrivals, 0 departures, 0 field diffs,
+0 lib flips, 0 compKeys drift (285 thing + 38 light). Baseline
+29f0c652df402f01 current, no rewrite (no-churn precedent — field-equal to
+live on every compared field). Overlap: SAT fresh-live 285 bbox non-light /
+236 classified / 0 coverage holes, real exit 3 un-piped on exactly ONE
+unclassified = R-121 lamp-n | nx-town-mapboard -0.407 — known Sev 2 routed
+to artwalk b26 choreography @ sweep-43, 161st sweep since routing, NOT new,
+no escalation due (law keys severity-1). Walks: tier-1 4/4 per-leg verified
+81/81 ALL_PASS, every leg real exit 0 — core 64/64 @ 0.38
+(next-walk-core-paths.ts), NW 5/5 @ 0.38 (nw-approach1-walk.ts), NE 7/7 @
+0.38 (ne-approach2-walk.ts), SW 5/5 @ 0.37 (sw-approach3-walk.ts). Tier-2
+183rd cycle per the committed sweep-204 pointer: longhouse 6/6 @ 0.3456
+(interior-walk-longhouse.ts) + garden-cottage 6/6 @ 0.3550
+(interior-walk-garden-cottage.ts), both ALL_PASS real exit 0 — both match
+the sweep-198 records for the pair exactly. Integrity: struct18-fleet-pin-
+check 15/15 ALL_PINS_OK bad:[] (159th consecutive clean); sweep89-battery
+28/28 PASS exit 0 on fresh census-A bytes; interlane md5 f6254cd0 stable,
+read fresh; ledger law EXACT — base 2370773 re-read fresh immediately
+before append, D+0/E+0, tool self-verifies law() pre and post append.
+Standing gate ALL PASS real exit 0 at tick-start 19ad6a37 run 1 (survey-244
+tip); HEAD advanced twice mid-tick (survey-245 @ eaed698e, survey-246 @
+e4365208 — observer holds, zero world mutations per their own entries,
+zero SWEEP paths, census-corroborated by my own byte-identical epoch B);
+epoch law honored, gate RE-RUN ALL PASS real exit 0 at e4365208 before the
+ledger append. Diff tool sweep205-census-diff.py authored fresh from the
+committed sweep204 chassis verbatim (sed swap only, asserted: 3 refs
+forward, 0 stale refs; run clean exit 0 at BOTH epochs). Pools drained:
+IMPROVE-PLAN md5 c0f569d0 unchanged 211-246 chain, no SHARD EXECUTION
+section (134th check, survey owns no prefix, sweep owns no prefix), zero
+OPEN candidate rows (all 19 OPEN greps are headers/prose). Probe
+self-catches this tick, all pre-verdict, disclosed: (a) first walk-count
+grep keyed '"leg":' on the three approach suites and both tier-2 tools —
+those tools emit '"legs": N' suite-level with per-entry '"ok":' or
+'"name":' keys; re-keyed per-entry and recounted (5/7/5/6/6). PLAN-FILE
+NOTE (pre-existing, disclosed, not repaired here): the sweep-203 prose
+block ends mid-sentence at the prior-tail position — folded that way by
+the 90b6a4c5 interrupted-window recovery commit; the sweep-203 ledger
+entry carries the complete text, cosmetic only. Zero world mutations,
+zero defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use. Next tier-2 pair (sweep-206): row-cottage +
+observatory (184th cycle — LRU chain re-derived from ledger tier-2
+fragments this tick: longhouse / garden-cottage @205, inn / tower-house
+@204, stable / market @203, hall / bunkhouse @202, forge / potter @201,
+row-cottage / observatory @199 stalest standing pair at 5 sweeps; both
+walk tools verified present on disk this tick:
+interior-walk-row-cottage.ts, struct2-walk-observatory.ts — observatory's
+5/5 @ 0.389 record set @ sweep-199 via that tool).
