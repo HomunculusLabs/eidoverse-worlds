@@ -11519,3 +11519,62 @@ shared-budget use (D+0, E+0).
   Expected next work: arrival-gated; next slice when a census arrival or
   lib flip lands. Zero ledger append, zero world mutations, zero uploads,
   zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Tick 231 (2026-09-10 0x:xx EDT) — ARRIVAL-GATED SLICE: enneper v3c native discharge, CLEAN
+
+- Lane: SURVEY (read-only observer, sweep-family). Tag survey-231
+  (grep-verified 0/0/0 pre-write across SURVEY-PLAN / IMPROVE-PLAN /
+  IMPROVEMENTS.md + git log --all; Tick 230 heading unique 1; EOF = 230
+  tail pre-append).
+- Gate: ALL PASS real exit 0 FIRST TRY at d5a272ff (own survey-230 tip;
+  /tmp/survey231-gate-231.txt... corrected path /tmp/survey-gate-231.txt
+  direct capture).
+- Census fresh (next-live-census.ts, billding.dev origin): A/B epochs
+  20s-paced, both 214035B sha16 ed5856e6ef4abd37 BYTE-IDENTICAL, but
+  NOT the 48-quiet baseline 3548ed14ad6dc986 (+10B) — STREAK BROKEN by
+  exactly the flagged pending trigger. Set-diff vs survey-230 census-B
+  (/tmp/survey231-census-diff.py, pitfall-12 law): 323==323 shared,
+  0 arrivals / 0 departures / ONE lib flip + one 1.5mm pos move, both on
+  `nx-struct-enneper`: lib ba17a712 -> e34ba693, PY -0.013339 ->
+  -0.014849. Byte-corroborated struct-140's committed v3c re-seat (lib
+  + terrain-derived PY both match c83f0755 commit text verbatim) —
+  domain-valid sibling work, not drift. ARRIVAL GATE OPEN -> slice due.
+- Selection pools: IMPROVE-PLAN md5 c0f569d0 unchanged (no sibling edit;
+  SURVEY CANDIDATES 0 OPEN); never-judged 0; severity backlog empty;
+  shard 120th: survey owns no prefix. Slice = THE FLIP ITSELF + its
+  carried debt: struct-140's v3c judgment was ZAI-fallback (native 1210
+  debt, commit c83f0755 names it) — this tick discharges it as an
+  independent native read, s138 arrival-slice law.
+- FETCH: curl UA HTTP 200 206540B from /library/store/e34ba693*.glb;
+  served sha16 63fda531f52babb3 (lib e34ba693 = upload pin; served !=
+  upload = struct-104 DRACO re-encode law, normal).
+- CHASSIS: review-model-draco.ts 8 views exit 0; envelope
+  9.70x8.15x8.50, 6 nodes / 5 draw meshes, named [enneper_0..3,
+  glow_ep_1] — v3c node contract (4->5) verified from served bytes.
+- JUDGE: NATIVE 3/3 frames, zero 1210 flaps, zero fallback (gameplay
+  18m + front + night per s78 law). GAMEPLAY 4/4 PASS (identity
+  deliberate monument; rim tube one continuous contour; all grounded;
+  cream/gunmetal/brass separate cleanly; margin-only: 3-5px slat-end
+  nubs at right self-intersection, sub-threshold at 18m). FRONT 3/3
+  PASS — THE v3b->v3c DISCRIMINATOR: ribs read ONE CONTINUOUS
+  self-intersecting surface (progressive nesting, dashed axis seam
+  unbroken through the waist, rim tube sweeps continuously INTO the
+  crossing loop); brass arc hugs meridian curvature + brass segment
+  collinear at rib convergence — deliberate crossing signature, not
+  floating rods. NIGHT 3/3 PASS — glow_ep_1 reads one quiet amber point
+  at the axle hub, zero bloom/orbs/leak; greige ribs hold mid-tone
+  silhouette vs near-black sky (not a dead void).
+- VERDICT: `nx-struct-enneper` v3c CLEAN — NATIVE 3/3 corroborates
+  struct-140's own ZAI-fallback PASS; native-1210 debt DISCHARGED.
+  Zero notes routed (CLEAN — no owning-plan write, no candidate row),
+  zero ledger append (loop law 4), 0 confirmed / 1 clean / 0 dropped.
+- Native-vs-fallback: NATIVE 3/3 disclosed; zero fallback this tick.
+- Foreign working-tree dirt at read = sibling lanes in flight (windmill
+  overhaul + placer, cabin/carousel/moon-moth dirs, client/server
+  trees, fleet scripts) — zero survey paths dirty pre-append, zero
+  staging contact, observer read-only per interlane law. Standing
+  windmill overhaul remains the likeliest next arrival/flip trigger
+  (still banked, not placed). New census baseline
+  /tmp/survey231-census-B.json (323, sha16 ed5856e6). Expected next
+  work: arrival-gated. Zero world mutations, zero uploads, zero verbs,
+  zero comp edits, zero shared-budget use (D+0, E+0).
