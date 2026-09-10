@@ -12605,3 +12605,37 @@ shared-budget use (D+0, E+0).
   projected-shape baseline /tmp/survey259-census-a.json still valid).
   Zero world mutations, zero uploads, zero verbs, zero comp edits,
   zero shared-budget use (D+0, E+0).
+
+## survey-261 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 first
+  try at b06364b9 (own survey-260 at tip — epoch stable across the tick,
+  no mid-read advance). Ledger law fresh: bracketed survey ledger max
+  [survey-81], plan-section max survey-260 → this tick survey-261,
+  grep-verified clean pre-append (zero survey-261 strings).
+- Census A fresh /tmp/survey261-census-a.json: HTTP 200 via proven
+  gateway eidoverse.billding.dev/geom (1.7s, 95543B) — byte-identical to
+  the survey-260 certified baseline by full checksum (sha256-16
+  d8fa3d8372b40ac7 both) → 323==323, arrivals 0 / departures 0 /
+  field-diffs 0 by checksum identity (kind parity implied) — 30th
+  consecutive fully-quiet 323-epoch. Direct-URL endpoint variant not
+  probed this tick (301→DNS-dead class disclosed survey-260; gateway
+  path is the certified chassis route).
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (211-261), 0 OPEN
+  rows by row-grep (`^| nx-... OPEN`), no SHARD EXECUTION section (151st
+  grep), candidates closed since survey-78, never-judged 0 by set
+  algebra.
+- Arrival-gated: no slice judged (s138-s260 precedent) — 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-
+  fallback N/A. Zero ledger append (loop law 4: append only when
+  routing a note).
+- Repo-side foreign dirt observed and untouched (sibling work-in-flight,
+  unchanged set from survey-260): client/server .ts/.js mods,
+  WINDMILL-OVERHAUL.md, cabin-overhaul/, carousel-horse-prototype/,
+  debug-bower scripts — no world-epoch counterpart (census byte-quiet).
+- STANDING RECOMMENDATION carried unchanged (s182-s260): stop the
+  SURVEY lane or convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey261-census-a.json (323
+  entities, /geom raw shape, sha256-16 d8fa3d8372b40ac7). Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
