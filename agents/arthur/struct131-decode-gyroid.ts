@@ -21,7 +21,9 @@
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 const ROOT = "/Users/t3rpz/projects/eidoverse-worlds";
-const bytes = readFileSync(`${ROOT}/agents/arthur/assets/village_gyroid3.glb`);
+// optional argv path: for RED-probing new laws against baseline bytes (the
+// pinned-sha check then FAILs as expected — that's the point of the probe).
+const bytes = readFileSync(process.argv[2] ?? `${ROOT}/agents/arthur/assets/village_gyroid3.glb`);
 const sha = createHash("sha256").update(bytes).digest("hex");
 let f = 0;
 const ck = (n: string, c: boolean, d = "") => { console.log(`${c ? "PASS" : "FAIL"} ${n}${d ? " — " + d : ""}`); if (!c) f++; };
@@ -49,7 +51,7 @@ const ang = (s: number) => (s * Math.PI) / 2;
 const Fof = (sx: number, sy: number, sz: number) => F(ang(sx), ang(sy), ang(sz));
 
 // ---- (a) sha + nodes + materials ---------------------------------------------------------------
-ck("pinned sha", sha === "31364ba46af040d538b4bf1faf9992378118c59c0c428123fde9c73ad6c1d776", sha.slice(0, 16));
+ck("pinned sha", sha === "183a459df6e480d201b50d6a0c20aaa1770b89a9aac3aa189ea358a38c356055", sha.slice(0, 16));
 const meshNodes = j.nodes.filter((n: any) => n.mesh !== undefined);
 ck("node census 4", meshNodes.length === 4, `got ${meshNodes.length}: ${meshNodes.map((n: any) => n.name).join(",")}`);
 const glowNode = j.nodes.find((n: any) => n.name === "glow_gy_1");
@@ -198,6 +200,36 @@ const byName = (n: string) => clouds.find(c => c.name === n);
             }
         }
         ck("hem coverage: all analytic samples within 0.10", miss === 0, `${miss}/${probe} missed, worst ${worst.toFixed(3)}`);
+        // CAP LAW (struct-153 v4 end-caps refine, the struct-131 recorded
+        // residual): every one of the 36 hem endpoints carries an iron cap
+        // dome — iron verts within 0.06 in the OUTWARD hemisphere (beyond the
+        // tube mouth; only the cap sphere reaches there — v3 open tubes have
+        // zero such verts). Endpoint topology per struct153-probe-endpoints:
+        // 36 endpoints, 18 cross-face pairs, max intra-pair gap 0.019m.
+        let capped = 0, capMiss = 0;
+        for (const c of curves) {
+            for (const endi of [0, c.pts.length - 1] as const) {
+                const [px, py, pz] = c.pts[endi];
+                const ref = c.pts[endi === 0 ? 1 : c.pts.length - 2];
+                let ox = px - ref[0], oy = py - ref[1], oz = pz - ref[2];
+                const ol = Math.hypot(ox, oy, oz);
+                if (ol < 1e-9) continue;
+                ox /= ol; oy /= ol; oz /= ol;
+                let hits = 0;
+                for (let k = 0; k < iron.v.length; k += 3) {
+                    const dx = iron.v[k] - px, dy = iron.v[k + 1] - py, dz = iron.v[k + 2] - pz;
+                    if (dx * dx + dy * dy + dz * dz < 0.0036 && dx * ox + dy * oy + dz * oz > 0.01) hits++;
+                }
+                capped++;
+                // dome-population discriminator (measured this tick: v3 open
+                // tubes 4-15 outward verts; v4 capped 64-151 — a dome carries
+                // ~45+ sphere verts, a neighboring end ring <= 8; 30 splits
+                // the classes far from either margin).
+                if (hits < 30) capMiss++;
+            }
+        }
+        ck("cap endpoints counted 36", capped === 36, `${capped}`);
+        ck("cap law: all endpoints domed (outward iron within 0.06)", capMiss === 0, `${capMiss}/${capped} uncapped`);
     }
 }
 

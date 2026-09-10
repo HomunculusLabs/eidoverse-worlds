@@ -231,6 +231,28 @@ const hems: Poly[] = [];
     if (hems.length !== 18) throw Error(`hem curve count ${hems.length} != 18 (3/face x 6, measured)`);
     let hspan = 0; for (const pts of hems) for (let i = 1; i < pts.length; i++) hspan += pts[i].distanceTo(pts[i - 1]);
     console.log(`hems: ${hems.length} analytic curves, total length ${hspan.toFixed(2)}m, r 0.05`);
+    // END-CAP LAW (struct-153 refine; the struct-131 recorded residual "open
+    // tube end-caps read dead-ending near cube edges" — cap closure class):
+    // probe struct153-probe-endpoints.ts measured the endpoint topology: 36
+    // endpoints (18x2), ALL on face planes (12 cube-edge, 24 face-boundary),
+    // perfectly PAIRED into 18 cross-face clusters of exactly 2 (every curve
+    // ends where the adjacent face's curve continues across the edge), max
+    // intra-cluster gap 0.019m. One sphere per endpoint, r == tube r 0.05,
+    // flush dome closing the tube mouth exactly: cap pairs weld (0.019 <<
+    // 0.10 union radius), silhouette reads beaded joints not open pipes, and
+    // the sphere crest == tube crest already covered by the height law
+    // (SLAB_H + 2*CELL + 0.05) — envelope unchanged by construction.
+    let capCount = 0;
+    for (const pts of hems) {
+        for (const endpt of [pts[0], pts[pts.length - 1]]) {
+            const cap = new THREE.Mesh(new THREE.SphereGeometry(0.05, 12, 8), ironTex);
+            cap.position.copy(endpt);
+            g.add(cap);
+            capCount++;
+        }
+    }
+    if (capCount !== 36) throw Error(`end-cap count ${capCount} != 36 (18 curves x 2 ends, probe-measured)`);
+    console.log(`end-caps: ${capCount} iron spheres r 0.05 at hem termini (18 welded pairs)`);
     for (const pts of hems) {
         // 128 tubular segments max: curves are 512-step-smooth polylines; 1.5cm
         // per segment at r=0.05 renders identically to full-res (~half the tris).

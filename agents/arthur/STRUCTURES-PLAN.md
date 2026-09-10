@@ -9182,3 +9182,74 @@ finding would be a NEW finding at v3, not this debt. Gyroid residuals
 remain end-caps class only per struct-152 disposition. Evidence:
 reviews/survey287-slice/gyroid/ (8 frames + served-bytes.glb, ignored
 dir).
+
+## struct-153 (2026-09-10): REFINE — gyroid v4 (end-caps) — the struct-131
+## recorded residual executed decode-first; v4 built+decoded RED→GREEN, judged
+## fallback 3 frames PASS (native down all tick, debt disclosed); ACCEPTED
+## banked NOT placed (R11 cadence: placement slot next)
+
+Cadence 153%3==0 refine slot. Subject by standing disposition chain
+(struct-131 recorded residual → struct-150/152 "end-caps class only" →
+"struct-152: next refine slot candidate"): gyroid end-caps. Gate
+ALL_PINS_OK 15/15 real exit 0 tick-start 2cb55a7e (/tmp/struct153-gate.txt,
+unpiped). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-152 -> tag struct-153.
+
+PRE-BUILD PROBE (struct153-probe-endpoints.ts, NEW, tracked — pitfall-11 law):
+replica-marched the 18 analytic hem curves, measured all 36 endpoints. Topology
+fully regular: 36 endpoints (18x2), ALL on face planes (12 cube-edge, 24
+face-boundary, 0 interior), perfectly PAIRED into 18 cross-face clusters of
+exactly 2 (every curve terminates where the adjacent face's curve continues
+across the edge), max intra-pair gap 0.019m. Recorded fix class confirmed
+exactly: cap closure.
+
+V4 EDIT (one cause): mkv3-gyroid.ts gains the END-CAP LAW — one iron sphere
+per endpoint, r == tube r 0.05, flush dome closing the tube mouth exactly;
+cap pairs weld (0.019 << 0.10 union radius); envelope unchanged by
+construction (sphere crest == tube crest, height law already covers 0.05).
+36 caps asserted in-source. Baseline captured FIRST (before/v3-31364ba4.glb
++ identical-camera before renders at live yaw 220deg). Build sha
+183a459df6e480d201b50d6a0c20aaa1770b89a9aac3aa189ea358a38c356055
+deterministic x2 MTIME-VERIFIED (1789047358 -> 1789047361); build laws PASS
+(18 hems 55.25m, envelope 4.60x4.19x4.60 UNCHANGED, 1 glow KEEP).
+
+DECODE (struct131-decode-gyroid.ts lockstep): pin updated v3 31364ba4 -> v4
+183a459d; argv override added for RED probes; NEW CAP LAW (outward-dome
+population >= 30 iron verts per endpoint — measured this tick: v3 open tubes
+4-15 outward verts, v4 capped 64-151; threshold 30 splits the classes far
+from either margin). RED→GREEN proven: v3 baseline FAIL (exit 1, cap law
+36/36 uncapped + sha FAIL as expected), v4 ALL PASS 26/26 real exit 0.
+
+JUDGED (native 1210 x2 + paced 25s retry = hard down all tick, flap law; ZAI
+fallback, native re-judge debt carried on all 3 frames):
+- FRONT 8m: PASS — zero open pipe mouths (v3 before-frame judged first: 0
+  open bores but blunt mitred cuts reading "sealed-but-unfinished"; the
+  judge's own prescription was end-spheres/weld blobs = the executed fix
+  class). After-frame: every termination closed and rounded, reads as
+  "fabricated welded object". Bead-legibility margin disclosed: at 8m the
+  r=0.05 caps read as rounded domes, not individually-resolvable beads
+  (1-3px protrusion at this framing) — a deliberate quiet finish; if Bill
+  wants beaded-joint vocabulary at distance, the 1.3-1.5x class is recorded.
+- GAMEPLAY 18m: PASS — identity porous openwork tunnel-labyrinth (decisive
+  against the s176 lineage), tube ends all closed caps/anchored feet, zero
+  floats/gaps/breaks.
+- NIGHT: PASS — exactly 1 emissive point (the intentional amber heart bead),
+  iron caps matte-dark zero bloom, zero strays; tube-vs-sky contour margin
+  disclosed (standing watch item, unchanged since v2).
+
+DISPOSITION: v4 ACCEPTED as banked baseline (strictly better than v3: the
+struct-131 end-cap residual cured at the source; zero regressions on any
+judged axis; envelope identical so the exact standing tuple carries), NOT
+placed — R11 cadence law: build+judge one tick, place next. struct-154
+(154%3=1 placement slot) carries the re-seat: upload store/<v4-16hex>.glb,
+remove+spawn at EXACT current tuple pos [-16.7416,-0.0200,239.4154] yaw
+3.8397 (= pi+2pi/9, struct-152 seat) comp {}, from the struct-151 chassis
+(verify-live-first, fresh SAT self-excluded, 429-backoff, 1200ms one-WS).
+Gyroid refine pool after v4: CLEAN (end-caps class closed; no further named
+residuals).
+
+Files: struct153-probe-endpoints.ts (NEW, tracked), struct131-decode-gyroid.ts
+(pin + cap law + argv, tracked), mkv3-gyroid.ts (ignored dir, staged -f),
+reviews/struct153-gyroid-v4/ (6 frames + before/, ignored). Zero world
+mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0). One ledger append
+(struct-153). Plan append-only.
