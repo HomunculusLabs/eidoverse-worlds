@@ -1,62 +1,55 @@
-# CITY-PLAN v2 — RESET & PATTERN PROPOSAL (Bill commission 2026-09-10)
+<!-- EXECUTIVE DECISION (Bill delegation 2026-09-10: "Execute what you feel is
+best, this is your project") — CITY-PLAN v2 RULE: A+C HYBRID -->
+# CITY-PLAN v2 — THE FOUR AVENUES (executing A+C)
 
-Bill: "whole map is super cluttered and doesn't seem to have rhyme or
-reason other than the main circle... reset the map, evaluate the objects,
-figure out a good pattern." FREEZE in force (city-12): no builds, no moves
-until Bill picks a pattern. Nothing is torn down before his pick — reset
-means RE-LAYOUT of authored assets (every object has a deterministic build
-script + store lib), not loss.
+Bill delegated the pick. Chosen: Avenues as the spine + Constellation
+terminals. Rationale: least destruction, turns existing family spread into
+designed order, Math Avenue (already real at 184°) formalizes as the
+flagship. One hard reservation: SUNSET authority stays Bill's (deletion is
+the only irreversible act; delegation ≠ that).
 
-## Census baseline (2026-09-10, 287 non-light / 325 total)
+## THE PATTERN (law for all siting decisions)
 
-- r0–20 plaza: 44 — the "main circle" Bill likes. KEEP AS-IS.
-- r20–33 village ring: 37 buildings — recently overhauled. KEEP AS-IS.
-- r33–70 everything-else band: ~140 objects of mixed families — THE CLUTTER.
-- r70–105: district rings + math avenue start.
-- 184° SOUTH: **accidental Math Avenue** — 15 struct forms, dead straight,
-  ~10m spacing, r110→250. A pattern exists; it was never chosen.
+Five radial avenues on the bisectors + the S Math Avenue, each an ordered
+walk r55→130 with ~10m rhythm, then a terminal island (C-variant) at
+r140–170 with its landmark family, wide negative space between avenues:
 
-## Object evaluation ledger (the curation pass)
+1. **S — MATH AVENUE (flagship, exists)** — 28 struct forms now in the
+   184°±20 wedge; curate to a sequenced walk (simple→complex: geometry →
+   chaos → surfaces), plinth+lamp rhythm, terminal = gyroid+enneper island.
+2. **NW — CULTIVATION AVENUE (315°)** — 14 cultivation objects, orchard/
+   lavender/garden lineage; terminal island = greenhouse-class landmark.
+3. **NE — CRAFT AVENUE (45°)** — 14 craft objects + forge lineage signs;
+   terminal island = foundry-class landmark.
+4. **SE — WILD AVENUE (135°)** — 15 wild objects; terminal island =
+   grove-class landmark.
+5. **SW — CONTEMPLATIVE AVENUE (225°)** — 17 temple/gallery objects;
+   terminal island = observatory-class landmark (relocates existing).
 
-Every one of the ~190 objects outside plaza+ring gets one row:
-`id | family | 18m native read (survey index) | form-ledger note | verdict
-history (Bill-approved motifs flagged) | redundancy within family |
-KEEP / RELOCATE / SUNSET(proposal — Bill approves sunsets)`.
-Sources: survey judged-index (native 18m), struct form ledger, artwalk
-host-rider map, Bill verdict log. Survey lane produces this during the
-freeze (judging was never frozen). Output: reviews/city-v2-evaluation.md.
+## BAND LAW (carries over, tightened)
 
-## PATTERN OPTIONS (Bill picks; options may hybridize)
+- r0–20 plaza, r20–33 village ring: UNTOUCHED (Bill's "main circle" + overhauled ring).
+- r33–55 processional: spoke pieces only (existing law).
+- r55–130: AVENUE BANDS — 10° half-width around each bisector. Avenue
+  members sit inside their band, 8m NN floor (Amendment 1), ~10m rhythm.
+- r140–170: TERMINAL ISLANDS — one per avenue, 5–9 objects + landmark,
+  20m+ clearance from everything else.
+- BETWEEN avenues: EMPTY. This is the negative space Bill asked for.
+- Far-field strays beyond r170 (non-math): route to nearest terminal island.
 
-### Option A — THE AVENUES (radial galleries)
-Plaza + village ring unchanged. Radiating themed avenues, each an ordered
-walk with ~8–12m rhythm, objects placed as a curated sequence (like museum
-wings): S = MATH AVENUE (exists — formalize, curate sequence, add plinths/
-lamps rhythm), plus 3 more: NE Craft Avenue (craft + forge lineage + signs),
-NW Cultivation Avenue (garden/orchard/lavender lineage), SW Contemplative
-Avenue (temple/shrine/statuary). Far ends get a terminal monument
-(observatory-class). Moves only; almost nothing sunsets; the "rhyme" is
-the walk. Cheapest, preserves the most, turns existing spread into order.
+## ASSIGNMENT SUMMARY (from live census)
 
-### Option B — THE CAMPUS (true reset)
-Keep plaza + ring. RETIRE all ~190 outer objects to a catalog (assets stay
-in store). Re-place only evaluation-ledger KEEPs (~60–90) into four tight
-district campuses at the quadrants, each with a landmark, inner court, and
-strict perimeter. Biggest curation, strongest negative space, the honest
-"reset." Sunsets are real here (weak reads don't come back).
+- Avenue cores by family: cultivation 14, craft 14, wild 15, temple+gallery 17,
+  math 28. Executor (city lane) assigns: non-math structs → avenue furniture
+  or terminals; dress → avenue/ring props by theme; artwalk riders stay with
+  hosts; town/sign/mile/approach stay put (ring/wayline infrastructure).
 
-### Option C — CONSTELLATION (archipelago islands)
-Plaza + ring + eight to ten small islands (5–9 objects each) scattered
-deliberately at r60–130 with wide negative space between: each island =
-one tight family cluster with a landmark (Math Isle keeps the avenue idea
-in compressed form; Sculpture Isle; Forge Isle...). Most park-like, most
-"composed" silhouettes at distance, medium moves.
+## EXECUTION (city lane, one move per tick, relocation never rebuilds)
 
-## Execution law (any option)
-
-1. Bill picks pattern (or hybrid) → CITY-PLAN v2 becomes law, Amendment 1
-   density floors carry over.
-2. Evaluation ledger lands FIRST (survey, during freeze).
-3. Bill approves SUNSET list (nothing deleted without him).
-4. City lane executes moves as before (relocation never rebuilds), sweep
-   re-baselines per wave, one eye-gate packet per completed avenue/isle.
+Wave A: pull avenue-family strays into their bands (worst off-axis first).
+Wave B: sequence + rhythm-check each avenue (spacing, plinths where a form
+reads adrift), build lamp-plinth rhythm from SW lamp budget tokens ONLY if
+Bill's a/b/c policy lands (else unlit plinths).
+Wave C: terminal islands (landmark + cluster), far-field strays routed.
+Per-avenue eye-gate packet to Bill when each completes. SUNSET list (if the
+evaluation ledger proposes any) goes to Bill — never executed unilaterally.

@@ -10,17 +10,18 @@ CITY RECOMPOSITION LOOP — one wakeup (city-N).
 Load skill `eidoverse-world-building` FIRST on every wakeup.
 Repo: `/Users/t3rpz/projects/eidoverse-worlds`
 World: `commons-next` (live: `https://eidoverse.billding.dev/?world=commons-next`)
-Durable plan: `agents/arthur/CITY-PLAN.md` (the relocation register + band laws)
+Durable plan: `agents/arthur/CITY-PLAN-V2.md` (THE FOUR AVENUES — band law,
+avenue assignment, terminal islands) + CITY-PLAN.md (Amendment 1 density floors)
 Interlane: `agents/arthur/INTERLANE-PROTOCOL.md` — read fresh EVERY wakeup.
 English only. Bill alone may end this loop. Never push.
 
 ## PURPOSE
 
-Execute the CITY-PLAN relocation register: move ONE off-spoke authored
-work per wakeup from the processional band (r33-55) to its thematic
-district (or ring edge), clearing the mid-band to the B+A composition:
-village ring (r20-33, CLOSED/protected) → four cardinal spoke
-processions → district rings (r70-100).
+Execute CITY-PLAN v2 THE FOUR AVENUES: one move per wakeup — pull
+avenue-family strays into their 10° bands (Wave A), sequence + rhythm
+(Wave B), terminal islands (Wave C). Bands r55-130 avenue-only, between
+avenues EMPTY, r140-170 terminal islands, plaza + village ring untouched.
+SUNSETs always HOLD-for-Bill.
 
 ## PER-WAKEUP LAW
 

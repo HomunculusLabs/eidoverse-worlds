@@ -1,9 +1,3 @@
-<!-- BILL FREEZE 2026-09-10: "whole map is super cluttered, no rhyme or reason other
-     than the main circle. Reset the map, evaluate the objects, find a pattern."
-     ALL new-build and relocation ticks SUSPENDED until CITY-PLAN v2 rules. Permitted:
-     read-only curation (ring-reads, evaluations). No new entities, no moves, no
-     relocations. This banner is a Bill correction — outranks everything below. -->
-
 ## R11 — DENSITY-CORRECTED MATH SERIES (Bill "lil cluttered but so cool", 2026-09-09)
 
 CITY-PLAN Amendment 1 is binding on R11+:

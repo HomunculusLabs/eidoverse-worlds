@@ -5665,4 +5665,6 @@ fixes ≈ 6 F.)
 
 - [city-13] CITY-PLAN-V2.md authored: census baseline (287 things; clutter = ~190-object r33-70 band), discovered accidental MATH AVENUE at 184deg (15 struct forms dead-straight r110-250 ~10m rhythm — a pattern already exists, never chosen), evaluation-ledger plan (survey judges during freeze; KEEPs/RELOCATEs/SUNSETs with Bill approving sunsets), 3 pattern options — A AVENUES (radial curated walks, cheapest, formalizes math avenue), B CAMPUS (true reset: retire outer 190 to catalog, re-place 60-90 keeps in 4 quadrant campuses), C CONSTELLATION (8-10 family islands r60-130, most composed silhouettes). Bill picks; nothing tears down before his pick (D+0, E+0)
 
+- [city-14] EXECUTIVE DECISION per Bill delegation ('execute what you feel is best, this is your project'): A+C hybrid — THE FOUR AVENUES + terminal islands; Math Avenue formalized as flagship (28 forms, sequenced simple->complex); 5 avenues on bisectors + S math; band law r55-130 avenue-only 10deg half-width, between-avenues EMPTY (the negative space Bill asked), r140-170 terminal islands; SUNSET authority explicitly retained by Bill (deletion = only irreversible act); freeze lifted for struct (builds furniture/islands) + city (moves); survey evaluation ledger continues feeding KEEP/RELOCATE/SUNSET rows (D+0, E+0)
+
 **Running total: 2370778 / 2000000**
