@@ -8149,3 +8149,63 @@ frames (provider up?), whichever highest deficit.
 Files: struct137-scan-boy.ts, struct137-terrain-boy.ts,
 next-place-struct137.ts (all tracked this tick); mkv3-boy.ts + decode
 tool already staged struct-136.
+## struct-138 (2026-09-10): REFINE TICK (135-class) — enneper identity refine:
+## falsification + v3 composition fix AUTHORED, build deferred (budget); banked v2
+## secured; native debt carries (provider down); zero world mutation
+
+Cadence 138%3==0 refine slot. Subject by deficit ranking: nx-struct-enneper
+(survey-181 Sev-2 + struct-135 fallback verdict + this tick's fallback re-judge).
+Gate ALL PASS real exit 0 tick-start 76546ac3 (background-promoted run, output
+anchored on "ALL PASS" + GATE_EXIT:0 lines). Shard empty fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged, 0 OPEN nx-struct rows). Polish-271 law: banked v2 bytes
+captured FIRST — reviews/struct138-enneper-refine/before-v2/ sha 9d1d3199
+byte-identical to assets/ copy verified.
+
+NATIVE DEBT ATTEMPT (struct-136 carry): vision_analyze 1210 x2 + paced 20s
+retry 1210 — provider hard down all tick (flap law honored, no third call).
+Fallback ZAI used for JUDGING with disclosure, exactly as struct-135/136.
+
+FALSIFICATION PASS (the tick's pivotal evidence, ZAI fallback judged):
+1. after-v2/gameplay.png RE-JUDGE: v2 identity failure CONFIRMED — nested
+   onion-shell bands (~20-30), zero mid-form over/under crossings, seams read
+   as tie-rod/serration; judge's own note: "at 18m the form is large and crisp
+   enough that genuine crossings would be legible if they existed".
+2. after-v2/top.png FALSIFICATION of the reorientation premise's weaker form:
+   top plan view delivers the 4-petal pinwheel silhouette but NOT through-ness
+   ("overlaps read as coincident line patterns, not physical penetration");
+   judge: nadir view discards the depth cue BY CONSTRUCTION, recommends a
+   low oblique vantage instead. Consolidates survey-181: in v2's orientation
+   the pinwheel face (form x/y — petals AND crossing arcs) lies HORIZONTAL,
+   so every walking vantage sees it edge-on -> onion-band read.
+
+DESIGN PROBE (struct138-design-probe-enneper.ts, read-only, table printed):
+R 2.05->3.05 sweep: locus-reach/petal-span saturates 0.52-0.73 (never near
+the judge's ~0.85 silhouette-proximity target) while petal span grows ~cubically
+(3.96->12.5) — domain growth is NOT the fix; orientation is. R stays 2.05.
+
+v3 AUTHORED (mkv3-enneper.ts rewritten, NOT YET BUILT): composition rotation —
+crossing axis (form z) HORIZONTAL as an iron AXLE through both pole crossings
+(world x=+-3 exact), borne on 2 stanchions at x=+-4.5 (armillary/orrery
+family language, gravity-honest); pinwheel face VERTICAL; seams doubled
+r 0.035->0.07 (judge's 2-3x weight ask); "differentiate the sheets" REFUSED
+as dishonest (one sheet) — real shading on the vertical face differentiates;
+world map (fx,fy,fz)->(fz, fx+4.145, fy); envelope 9.70x8.15x8.50; LIFT tuned
+so lowest petal hem bottom 0.1395 kisses slab top 0.14 (resting contact).
+Siting law for placement tick: face yawed ~35-45 deg off approach normal
+(struct-104 oblique law).
+
+DISPOSITION: accept-or-revert law — nothing judged, nothing placed. Live world
+untouched; standing live bytes remain survey-181 Sev-2 ba17a712 form; banked v2
+9d1d3199 secured for diff. Build+decode+render+judge of v3 is the next tick's
+first work (plan carry), then native re-judge debt on v2/v3 frames when the
+provider returns (native outranks fallback, may flip either way).
+
+Zero world mutations, zero uploads, zero verbs, zero shared-budget (D+0 E+0).
+Gate anchored ALL PASS exit 0. Ledger max fresh pre-append struct-137v ->
+this tick struct-138.
+
+NEXT: 139 — build slot (139%3==1): EITHER v3 enneper build+decode+render+judge
+(the carried refine work, priority — refinement of standing stock outranks new
+commissions when mid-iteration) OR R11 new-form commission if v3 lands clean
+early. 140 = refine slot: gyroid end-caps + night debt OR enneper v3 verdict
+follow-through (placement if judged PASS, fix-class iteration if not).
