@@ -9253,3 +9253,56 @@ Files: struct153-probe-endpoints.ts (NEW, tracked), struct131-decode-gyroid.ts
 reviews/struct153-gyroid-v4/ (6 frames + before/, ignored). Zero world
 mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0). One ledger append
 (struct-153). Plan append-only.
+
+## struct-154 (2026-09-10): REFINE PLACEMENT — gyroid v4 end-caps LIVE —
+## struct-153 committed carry executed; native re-judge debt PAID; gyroid
+## refine pool CLEAN
+
+154%3=2 placement slot (R11 cadence: build+judge one tick, place next).
+Gate ALL PASS real exit 0 tick-start 3d8a39ac (own struct-153 tip). Shard
+drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN nx-struct rows;
+grep'd this tick). Ledger max re-derived struct-153 -> tag struct-154.
+
+NATIVE DEBT PAID FIRST (native up this tick, first call answered — flap
+law says spend it): all three struct-153 fallback-judged v4 frames
+re-judged NATIVE from reviews/struct153-gyroid-v4/after/. Gameplay 18m
+3/3 PASS (interlocking saddle films read one deliberate mathematical
+form; every rim terminates in rounded/capped knobs e.g. apex nub
+(461,204); zero strays/z-fights/missing faces). Front 8m 3/3 PASS
+(terminations closed tapered/welded tips — top spike (430,20) tapers to a
+closed point, cusp (445,300) welded V-junction, no elliptical bore
+rim anywhere). Night 3/3 PASS (exactly one amber bead (477,328) quiet
+zero-halo; silhouette marginal-pass = standing disclosed watch item
+since v2, unchanged). DISCLOSED METHOD DISCIPLINE: the first native call
+this tick used a prompt describing "interwoven curved tubes" — it FAILed
+all axes; pixel-probe disproved its sky-through claim (129/132 bone
+tones in cited region) and the (478,328) fleck is the decode-pinned
+amber bead glow_gy_1 (survey-287 arbitration) — leading-prompt artifact
+(dress-21 class), corrected with a neutral contract prompt; the corrected
+read concords with struct-153's fallback PASS on all 9 axes.
+
+PLACEMENT (struct154-replace-gyroid-v4.ts, NEW, tracked — struct-151
+chassis verbatim): live v3 contract verified fresh first (lib 31364ba4,
+pos [-16.741554,-0.019981,239.415372] yaw 3.8397 = pi+2pi/9, comp {});
+fresh 323-entity SAT self-excluded (v4 envelope unchanged so yaw40
+footprint 3.24x3.24 identical to standing), worst nx-struct-enneper
++2.49m (law 1.4), zero sub-1.4; upload store/183a459df6e480d2.glb (one
+shared-budget unit, no 429); remove+spawn 1200ms over one WS. Run exit 0:
+REPLACED_VERIFIED nx-struct-gyroid pos [-16.7416,-0.0200,239.4154] yaw
+3.8397 lib 183a459d comp {} census 323. Idempotent rerun ALREADY_SEATED
+zero verbs exit 0. Independent census pin re-read: exact tuple + lib +
+comp {} + envelope 4.60x4.19x4.60 + tris 76892. Comp bag {} empty
+before+after (comp-wipe n/a). Folly class — no walk owed
+(enneper/gyroid family precedent).
+
+DISPOSITION: gyroid v4 STANDING. End-caps class closed at source
+(struct-131 residual chain complete: s176 identity -> v2 film -> v3
+oblique yaw -> v4 caps). Gyroid refine pool CLEAN — no named residuals;
+night-silhouette watch item stands as the only disclosed margin. Next
+refine slot (156%3==0) re-derives from the standing disposition chain
+(R11 ring-reads, per-district soft caps, >=8m NN law for new forms).
+
+Files: struct154-replace-gyroid-v4.ts (NEW, tracked), reviews/
+struct153-gyroid-v4/ (re-judged frames, ignored dir), STRUCTURES-PLAN.md
+(this block), IMPROVEMENTS.md (one append struct-154, D+0 E+1). Zero
+pushes.
