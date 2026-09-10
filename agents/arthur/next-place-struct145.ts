@@ -29,7 +29,7 @@ const YAW = 0;
 const m = {
     id: "nx-struct-tensegrity",
     file: "village_tensegrity3.glb",
-    sha: "af2bdf599bfb3d908af0c8b47fa7f9712eb2c8b555d4b2669425fc8867a48084",
+    sha: "cd5025b68cec5bc52a9faedebcd018ce272fcb087500e65c2715a79b25ec0a5b",   // v5 (struct-148): ALPHA0 15deg — replaces banked v3/v4 pins; fallback front/night PASS + gameplay sub-claims decode-falsified, native re-judge still gates placement
     bbox: { min: [-1.95, 0, -1.95], max: [1.95, 7.08, 1.95] },
     comp: {} as Record<string, never>,
 } as const;

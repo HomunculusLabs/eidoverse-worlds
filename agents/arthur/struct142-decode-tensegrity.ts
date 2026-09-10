@@ -70,8 +70,9 @@ const TWIST = Math.PI / 3;
 const BEAD_C = new THREE.Vector3(0, 6.95, 0);
 const ANCHOR_R = 1.66, ANCHOR_H = 0.36, ANCHOR_W = 0.22, ANCHOR_D = 0.52;
 const strutB: THREE.Vector3[][] = [], strutT: THREE.Vector3[][] = [];
+const ALPHA0 = (15 * Math.PI) / 180;   // v5 (struct-148): probe-selected 15deg, not the banked 30deg (dead zone — see mkv3-tensegrity.ts header)
 for (let k = 0; k < 3; k++) {
-    const S = STAGES[k], alpha = k * TWIST;
+    const S = STAGES[k], alpha = ALPHA0 + k * TWIST;
     strutB.push([]); strutT.push([]);
     for (let i = 0; i < 3; i++) {
         const phi = alpha + (2 * Math.PI * i) / 3;

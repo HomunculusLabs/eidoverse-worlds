@@ -66,6 +66,17 @@ const STAGES = [
     { yb: 4.85, yt: 6.45, Rb: 0.85, Rt: 0.72 },   // stage 2: crown float (gap 0.45)
 ];
 const TWIST = Math.PI / 3;                          // +60 deg per stage (spiral needle)
+// v5 (struct-148): ALPHA0 = 15deg uniform stage rotation. struct-147 root cause:
+// alpha0=0 makes cos120==cos240, so every stage has a strut pair exactly
+// collinear from cardinal bearings — and BOTH judged cameras (front, gameplay)
+// sit on the +Z cardinal. struct-147's banked "30deg" class was PROBE-FALSIFIED
+// before edit (struct148-probe-alpha-sweep.ts, exact review cameras): 3-fold
+// mirror symmetry makes 30deg the dead-center dead zone — front gap 0.0px,
+// WORSE than the defect (2.0px). Twin peaks 15/45deg: 15deg selected,
+// worst-camera min projected gap 18.7px = 2.76x strut diameter @18m.
+// Uniform Y-rotation preserves all relative laws (3D disjoint byte-equal
+// 1.0100m verified in-probe); slab dominates the plan envelope.
+const ALPHA0 = (15 * Math.PI) / 180;
 const STRUT_R = 0.065;
 const TENDON_R = 0.040;   // v4 (struct-147): native arbitration (front 8m + gameplay 18m FAIL, 2/4 both) upheld tendon-as-rod — 0.055 rendered 15-22px rods at 8m (137px/m) and 6-10px shaded tubes at 18m (52.1px/m), same diameter class as struts, matte (no specular). Fix class pre-committed struct-144: thinner tendons + metal brass, NOT geometry. 0.040 = 11px@8m / 4.2px@18m (the legibility floor, struct-45 distance-tension law).
 const BEAD = new THREE.Vector3(0, 6.95, 0);
@@ -77,7 +88,7 @@ const ANCHOR_R = 1.66, ANCHOR_H = 0.36, ANCHOR_W = 0.22, ANCHOR_D = 0.52;  // gr
 type V3 = THREE.Vector3;
 const strutB: V3[][] = [], strutT: V3[][] = [];     // [stage][i]
 for (let k = 0; k < 3; k++) {
-    const S = STAGES[k], alpha = k * TWIST;
+    const S = STAGES[k], alpha = ALPHA0 + k * TWIST;
     strutB.push([]); strutT.push([]);
     for (let i = 0; i < 3; i++) {
         const phi = alpha + (2 * Math.PI * i) / 3;

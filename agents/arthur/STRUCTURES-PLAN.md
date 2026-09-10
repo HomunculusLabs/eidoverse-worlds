@@ -8797,4 +8797,78 @@ Files: mkv3-tensegrity.ts (ignored dir, staged -f), struct142-decode-
 tensegrity.ts (replica v4 bump, tracked), struct147-probe-projection.ts
 (NEW, tracked), reviews/struct147-tensegrity-v4/ (10 frames, ignored).
 Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
-One ledger append (struct-147). Plan append-only.
+
+## struct-148 (2026-09-10): REFINE — tensegrity needle v5 (stage rotation) —
+## banked "30deg" class PROBE-FALSIFIED before edit, 15deg selected by sweep;
+## v5 built+decoded ALL PASS, fallback front/night 4/4 PASS (gameplay FAIL
+## sub-claims decode-falsified), placer re-armed on v5 sha; NATIVE DOWN all
+## tick, debt carries; ACCEPTED banked NOT placed
+
+Cadence 148%3==2 placement slot; carried mid-iteration outranks (struct-139/
+143/144/147 precedent). Gate ALL_PINS_OK 15/15 real exit 0 tick-start 9ccf1199
+(struct18-fleet-pin-check.ts, /tmp/struct148-gate.txt). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN nx-struct rows — 139th check).
+Ledger max re-derived struct-147 -> tag struct-148.
+
+PRE-BUILD PROBE (struct148-probe-alpha-sweep.ts, NEW, tracked — probe law 11):
+swept ALPHA0 0..50deg through the EXACT review cameras (front [0,3.894,8.2]
+r=max(3.9,4)*2.05 — struct-147's probe used 7.995, the r=4 floor makes 8.2 —
+and gameplay [0,1.65,18], both +Z cardinal). RESULT: the banked "30deg" v5
+class is the DEAD ZONE — 3-fold mirror symmetry puts 30deg exactly between
+the twin peaks; front gap 0.0px, WORSE than the defect (2.0px at 0deg). Twin
+peaks 15/45deg: SELECTED 15deg, worst-camera min projected strut-end-to-
+other-strut-axis gap 18.7px = 2.76x strut diameter @18m; 3D disjoint
+invariant byte-equal 1.0100m alpha0=0 vs 15deg (uniform Y-rotation preserves
+relative geometry — verified, not assumed).
+
+V5 EDIT (mkv3-tensegrity.ts + struct142-decode-tensegrity.ts in lockstep):
+const ALPHA0 = 15deg, alpha = ALPHA0 + k*TWIST. Nothing else touched.
+Baseline captured FIRST (before/ dir, v4 58683b53). Build sha cd5025b68cec5bc5
+…a79b25ec0a5b deterministic x2 MTIME-VERIFIED (1789039558 -> 1789039561);
+laws PASS (strut gap 0.461 unchanged, weave 21, envelope 3.90x7.08x3.90);
+DECODE ALL PASS 13/13 (468+840+168 verts 0 orphan 0.00000m, 1 emissive).
+
+JUDGED (native 1210 x2 + paced 25s retry = hard down all tick, flap law;
+ZAI fallback, native re-judge debt carries on all frames):
+- FRONT 8m: PASS 4/4 — floats read (sky through both stage transitions,
+  "nearest walnut-to-walnut ~55px with background between"), wire 1:3-1:4,
+  two-value crisp, zero strut contact ("crossings read pass-behind").
+- NIGHT: PASS 4/4 — one tight amber bead 8-10px zero bloom, zero strays,
+  silhouette traceable (upper-third marginal = standing disclosed watch
+  item), grounded.
+- GAMEPLAY 18m: FAIL 3 axes — DECOMPOSED against exact-camera projection on
+  the as-built bytes: (a) "end-to-end contact at junctions" — stage-2 B ends
+  project exactly where the judge cites (437-537, y243-256); nearest
+  DIFFERENT-strut end 22.8px away; joint bands measure 22.8-24.4px on screen
+  == the designed 0.45m floats (0.45 * 52.1px/m = 23.4px arithmetic match);
+  the "chains" are gap wires + saddles anchoring AT strut ends (tensegrity
+  definition, not truss contact). (b) "mid-span X-crossings touch" — 3D
+  clearance 0.269m (weave law), projection overlap only. (c) "tendons 4-7px
+  rods" — contradicted by the v4 NATIVE PASS at identical TENDON_R/framing
+  ("fine 2-4px lines, clearly wire-gauge"); native arbitrates fallback.
+  LEGITIMATE residual (disclosed watch item, fix class recorded not
+  executed): brass distance-desaturation at 18m — brighter brass albedo is
+  the v6 class if native upholds.
+
+PLACER RE-ARMED: next-place-struct145.ts sha pin updated v3 af2bdf59 ->
+v5 cd5025b68cec5bc5 (bbox/pose unchanged — uniform rotation, slab dominates
+envelope). RED-proven FRESH post-patch: no marker -> exit 1, refusal thrown
+BEFORE any network call (/tmp/struct148-placer-red.txt REAL_EXIT:1, refusal
+message carries the exact v5 sha). Marker correctly ABSENT.
+
+DISPOSITION: v5 ACCEPTED as banked baseline (strictly better than v4: the
+alpha0=0 projection-collinearity root cause is removed at the source, worst-
+camera separation 2.0px -> 18.7px; zero regressions on any judged axis),
+NOT placed. First native-up tick: judge {front, gameplay, night} natively on
+the exact banked v5 bytes; on PASS write marker 'struct-145 cd5025b68cec5bc5
+2a9faedebcd018ce272fcb087500e65c2715a79b25ec0a5b' and run the placer (scan/
+terrain/seat az90 R82 all committed at struct-145, unchanged). If native
+ARBITRATES the fallback gameplay FAIL, v6 class = brighter brass albedo
+(distance desaturation), not geometry.
+
+Files: struct148-probe-alpha-sweep.ts (NEW, tracked), struct142-decode-
+tensegrity.ts (replica v5 bump, tracked), next-place-struct145.ts (sha pin,
+tracked), mkv3-tensegrity.ts (ignored dir, staged -f),
+reviews/struct148-tensegrity-v5/ (10 frames + before/, ignored).
+Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
+One ledger append (struct-148). Plan append-only.
