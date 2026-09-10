@@ -1,3 +1,9 @@
+<!-- BILL FREEZE 2026-09-10: "whole map is super cluttered, no rhyme or reason other
+     than the main circle. Reset the map, evaluate the objects, find a pattern."
+     audit continues; expect census quiet (fleet frozen by Bill) until CITY-PLAN v2 rules. Permitted:
+     read-only curation (ring-reads, evaluations). No new entities, no moves, no
+     relocations. This banner is a Bill correction — outranks everything below. -->
+
 # SWEEP-PLAN — sweep-N lane (commons-next integrator audit)
 
 Loop: SWEEP-LOOP.md · Zero world mutation · Bill alone may end this loop.

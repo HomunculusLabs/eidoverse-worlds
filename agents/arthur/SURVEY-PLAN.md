@@ -1,3 +1,9 @@
+<!-- BILL FREEZE 2026-09-10: "whole map is super cluttered, no rhyme or reason other
+     than the main circle. Reset the map, evaluate the objects, find a pattern."
+     ALL judging-lane placement ticks SUSPENDED until CITY-PLAN v2 rules. Permitted:
+     read-only curation (ring-reads, evaluations). No new entities, no moves, no
+     relocations. This banner is a Bill correction — outranks everything below. -->
+
 # SURVEY-PLAN
 
 Opened 2026-09-06 (improve-5z, Bill 5-10x + perpetual-motion directives).
