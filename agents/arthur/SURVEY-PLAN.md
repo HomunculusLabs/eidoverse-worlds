@@ -12103,3 +12103,38 @@ shared-budget use (D+0, E+0).
 - Census baseline for next tick: /tmp/survey246-census-a.json (323,
   sha256-16 ed5856e6). Zero ledger append, zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+
+## Tick 247 (2026-09-10 03:46 EDT (wall `date`, verified this tick)) — QUIET HOLD, 16th consecutive fully-quiet 323-epoch
+
+- Census A fresh this tick at /tmp/survey247-census-a.json: 323 entities,
+  214035B, sha256-16 ed5856e6 — byte-identical to survey-246 certified
+  baseline by full checksum (identity supersedes field diff; certified
+  next-live-census.ts chassis, clean exit 0 first try, no live-read
+  missteps). Set-diff 0/0/0/0 by checksum identity (arrivals,
+  departures, lib flips, pos/yaw moves all zero).
+- Gate ALL PASS real exit 0 first try at e4365208 own survey-246 tip;
+  HEAD unchanged rev-parse -> gate -> census -> post (no epoch event).
+  Ledger law EXACT 2370773 (gate output, fresh this tick).
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged ticks 211-247,
+  SURVEY CANDIDATES 0 OPEN rows (last sub-section survey-78), never-judged
+  0 by set algebra (arrivals 0), shard 136th check (fresh grep this tick):
+  no SHARD EXECUTION section in IMPROVE-PLAN, EXECUTION SHARDING routes
+  by entity prefix and survey owns none. Bracketed survey max re-derived
+  [survey-81] (quiet holds append none; ledger tail struct-142).
+- No slice judged (arrival-gated, s138-s246 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback
+  N/A. Zero ledger append (loop law 4).
+- STANDING RECOMMENDATION carried unchanged (s182-s246): stop or convert
+  to a no-LLM monitor when attended.
+- Foreign dirt at read = sibling lanes in flight (windmill overhaul plan
+  + place-windmill-overhaul placer + terrain-city4/millrace/orrery
+  preflights + cabin-overhaul + carousel-horse-prototype + debug-bower
+  scripts x7 + core-paths GLB/review + carousel placer + client/server
+  trees + moon-moth + fleet scripts + HERO-ASSET-REFINEMENT-PLAN hunk)
+  left untouched per interlane git law — this tick's commit carries
+  SURVEY-PLAN.md only, pathspec-only mode. Windmill remains the likeliest
+  next arrival/flip trigger; expect the census flip when it seats.
+- Census baseline for next tick: /tmp/survey247-census-a.json (323,
+  sha256-16 ed5856e6). Zero ledger append, zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
