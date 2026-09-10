@@ -7667,3 +7667,58 @@ observatory @199, forge / potter @197, stable / market @196, hall /
 bunkhouse @195, inn / tower-house @194 stalest standing pair at 5 sweeps,
 longhouse / garden-cottage @198; both walk tools verified present on disk
 this tick: interior-walk-inn.ts, interior-walk-tower-house.ts).
+
+
+sweep-200: CLEAN SWEEP, fully quiet steady-state tick, no snapshot rewrite.
+Census 323==323 at BOTH epochs (A/B 20s-paced, curl-class fetches
+BYTE-IDENTICAL 95543B sha16 d8fa3d8372b40ac7 — byte-identical to
+sweep-199's epoch-B post-enneper capture, verified by direct cmp this
+tick, so quiet holds for ALL fields incl comp/compKeys by byte identity;
+the +10B vs the sweep-193..198 95533B representation is sweep-199's own
+classified enneper flip, classified by byte-compare BEFORE any verdict —
+representation-epoch sweep-159 class, resolved, not a new change):
+0 arrivals, 0 departures, 0 field diffs, 0 lib flips, 0 compKeys drift
+(285 thing + 38 light). Baseline 29f0c652df402f01 current, no rewrite
+(no-churn precedent — field-equal to live on every compared field).
+Overlap: SAT fresh-live 285 bbox non-light / 236 classified / 0 coverage
+holes, real exit 3 un-piped on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard −0.407 — known Sev 2 routed to artwalk b26 choreography
+@ sweep-43, 156th sweep since routing, NOT new, no escalation due (law
+keys severity-1). Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0 — core 64/64 @ 0.38 (next-walk-core-paths.ts), NW
+5/5 @ 0.38 (nw-approach1-walk.ts), NE 7/7 @ 0.38 (ne-approach2-walk.ts),
+SW 5/5 @ 0.37 (sw-approach3-walk.ts). Tier-2 178th cycle per the
+committed sweep-199 pointer: inn 6/6 @ 0.364 (interior-walk-inn.ts) +
+tower-house 6/6 @ 0.3765 (interior-walk-tower-house.ts), both ALL_PASS
+real exit 0 — both match sweep-194 records for the pair. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK (154th consecutive clean);
+sweep89-battery 28/28 ALL PASS exit 0 on fresh census-A bytes; interlane
+md5 f6254cd0 stable, read fresh; ledger law EXACT — base 34771 re-read
+fresh immediately before append, D+0/E+0, tool self-verifies law() pre
+and post append. Standing gate ALL PASS real exit 0 at tick-start
+ceb3a268 run 1 (own sweep-199 tip); HEAD advanced three times mid-tick
+(survey-231 @ 912db233 — arrival-gated slice that natively discharged
+struct-140's v3c judgment debt CLEAN; struct-141 @ 62951f35 — HERO-READY
+eye-gate packet, zero world mutations; survey-232 @ d507febd — observer
+hold; all zero world mutations per their own entries, all
+census-corroborated by my own byte-identical epoch B); epoch law
+honored, gate RE-RUN ALL PASS real exit 0 at d507febd before the ledger
+append. Probe self-catches this tick, all pre-verdict, disclosed:
+(a) core-walk first parse hit the appended EXIT line — Extra data
+class, re-parsed via regex brace-block slice (sweep-35 banner class);
+(b) epoch-A raw-size delta +10B vs the historical representation
+flagged and CLASSIFIED by direct byte-compare against sweep-199's
+surviving /tmp epoch-B capture before any verdict was written; (c) first
+ledger-append invocation ran from agents/arthur/ cwd — tool resolves
+IMPROVEMENTS.md repo-root-relative, FileNotFoundError, re-run from repo
+root (sweep-187 wrong-cwd class). Diff tool folded:
+sweep200-census-diff.py authored fresh from the committed sweep199
+chassis verbatim (sed swap only, asserted: 3 refs forward, 0 stale).
+Zero world mutations, zero defect notes, zero uploads, zero verbs, zero
+comp edits, zero shared-budget use. Next tier-2 pair (sweep-201):
+forge + potter (179th cycle — LRU chain re-derived from ledger tier-2
+fragments this tick: inn / tower-house @200, row-cottage / observatory
+@199, longhouse / garden-cottage @198, forge / potter @197 stalest
+standing pair at 3 sweeps, stable / market @196, hall / bunkhouse @195;
+both walk tools verified present on disk this tick:
+interior-walk-forge.ts, interior-walk-potter.ts).
