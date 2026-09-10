@@ -10089,3 +10089,83 @@ placement slot.
 Files: struct165-probe-costa.ts + struct165-diag-costa.ts (NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-165,
 D+0 E+0). No GLB built this tick. Zero pushes.
+
+
+## struct-166 (2026-09-10): R11-5 THE COSTA — BUILD TICK (probe 13/13, GLB
+## built deterministic x3; decode GREEN + judgment carried to struct-167)
+
+166%3=2 placement slot, nothing takeable (tensegrity v6 banked behind Bill's
+eye-gate) -> R11 carry per struct-155 precedent; struct-165's committed
+carry executed this tick. Gate ALL PASS real exit 0 tick-start b5f8af98
+(98 PASS 0 FAIL, /tmp/struct166-gate.txt, unpiped). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-165 -> tag struct-166.
+
+PROBE C5 CURE: root cause was CHECK-SIDE, exactly as struct-165 suspected —
+cdiv(complex, 2*h) passed a plain number where the complex type is required
+(b.re/b.im read undefined -> NaN denominator). Fix: cscl(delta, 1/(2*h)).
+RED first (C5 FAIL NaN reproduced), then GREEN: 13/13 ALL CHECKS PASS, C5
+err 2.76e-9 (Laurent 1.6e-13, half-periods 2e-15, quasi-periods 1e-15,
+ODE 3.1e-14 — machinery build-grade, gate condition cleared).
+
+BUILD (mkv3-costa.ts, NEW): trimmed-uniform-grid marching-triangle meshing
+of the Gray parametrization on the fundamental domain — grid verts mod-N
+shared (torus gluings automatic, X lattice-invariance asserted in-file),
+per-edge 48-step bisection for exact on-cylinder rim verts, all THREE ends
+cut at one image radius R_CUT 2.85 so every rim lands at exactly K*R_CUT =
+1.46m world (balanced three-lobed star by construction). Dressing: skirt
+brim brass hem tube (enneper iron-rim family), up mouth closed by a shallow
+brass dome whose base ring IS the rim loop (see-through class closed), down
+mouth embedded 12-46mm under a stone drum (r 1.58, h 0.114), ONE glow KEEP
+bead seated at the dome apex (dusk lineage). Materials cs_bone (film,
+DoubleSide) / cs_brass (bright wire lane) / cs_stone.
+
+DEFECT LADDER (every rung fail-closed BEFORE any accepted bytes — the
+in-file laws earned their keep this tick):
+1. First-draft polar fan REJECTED at author review, never built: three
+   end-rims cannot be one star-domain boundary (chords would span air).
+2. 3-in case table referenced crossing verts on IN-IN edges -> 14 edges
+   with >2 faces (topology law caught it).
+3. tri() area-threshold filter silently dropped a REAL 3-vert sliver ->
+   4 boundary loops (pinhole law caught it; filter now drops only exact
+   duplicate/collinear verts).
+4. Marching near-vertex passes left 3 microscopic ghost sliver corridors
+   -> chi_used -6; SNAP LAW added: crossings within 0.02 IMAGE units of a
+   grid endpoint merge into it (parameter-space eps is the wrong control —
+   dz/dt explodes logarithmically near the ends).
+5. bisectLevel DIRECTION bug: the case table queries edges both ways, and
+   unoriented bisection on OUT->IN queries converged to the OUT endpoint
+   and emitted it as a rim vert (155 off-verts, worst r=3.16 on the
+   trumpet). Oriented bisection -> worst exact deviation 1.2e-13.
+6. Grid classifier float bug (uv*N = 150.9999... failed Number.isInteger)
+   misclassified snapped verts as exact -> rounding-tolerance fix.
+7. Census envelope needed explicit snap slack (film max r 1.4690 vs
+   1.461+0.001); law now bound = WRIM + SNAP_IMG*K.
+
+FINAL BUILD LAWS (all real console output this tick): topology V=29221
+E=87324 F=58100 chi=-3 EXACT, 3 closed loops 228/60/60; rim law exact verts
+worst 1.2e-13, 32 snapped verts within 0.0177; down rim embeds y[0.068,
+0.102] under drum top 0.114; skirt clears drum by 1.25m; loops classified
+down[-2.790,-2.724] skirt[-0.266,0.266] up[2.724,2.790]; envelope
+3.16x3.37x3.16 y[0..3.369] on grade; glow census exactly 1 (glow_cs_1);
+node budget 4. DETERMINISTIC x3 byte-identical: sha256
+1db33166257c67e51e0dab73d126b377090317dcf0615c75a74f39c649b0d0d2
+(village_costa3.glb, 1,544,696 B; console identical across runs).
+
+struct166-decode-costa.ts authored (independent byte-side audit: topology,
+rim radii, loop classes, plinth/dome/bead geometry, lanes, doubleSided,
+envelope) with its own defect caught at RED control time: toGLB writes
+Uint16 indices for this vert count (componentType big?5125:5123 in
+glbwrite) — reader now handles both. Decode GREEN re-run, RED control
+re-run, 10-frame review renders, and NATIVE judgment vs the concept
+contract are NOT run this tick (session run-time budget; disclosed) ->
+CARRIED TO struct-167 as its first work; if judged ACCEPTED, placement at
+struct-168 per the struct-155->156 carry precedent. Bytes banked and
+hash-pinned above; NOT placed, NOT uploaded.
+
+Zero world mutations, uploads, verbs, comp-edits, shared-budget use.
+Zero pushes.
+
+Files: struct165-probe-costa.ts (C5 fix), assets/mkv3-costa.ts (NEW),
+struct166-decode-costa.ts (NEW), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-166, D+0 E+0).

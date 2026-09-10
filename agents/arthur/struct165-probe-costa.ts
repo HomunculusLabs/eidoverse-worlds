@@ -148,7 +148,10 @@ console.log(`g2 = ${G2.toPrecision(12)}  sqrt(g2)/2 = ${(SQG2 / 2).toPrecision(1
         worstODE = Math.max(worstODE, cabs(csub(lhs, rhs)) / Math.max(1, cabs(rhs)));
         const h = 1e-6;
         const zpm = zeta(cadd(w, cc(h, 0))), zmm = zeta(csub(w, cc(h, 0)));
-        worstQP = Math.max(worstQP, cabs(csub(cdiv(csub(zpm, zmm), 2 * h), cscl(wp(w), -1))));
+        // struct-166 fix: csub gives C, 2*h is a plain number — cdiv(b.re/b.im) read
+        // undefined -> NaN. Divide by scaling with the real scalar instead (check-side
+        // type bug, machinery itself is fine: C2/C6 counter-verify the same zeta).
+        worstQP = Math.max(worstQP, cabs(csub(cscl(csub(zpm, zmm), 1 / (2 * h)), cscl(wp(w), -1))));
     }
     chk("C3 periodicity wp(w+1)=wp(w+i)=wp(w)", worstPer, 1e-9);
     chk("C4 ODE wp'^2 = 4wp^3 - g2 wp (rel)", worstODE, 1e-9);
