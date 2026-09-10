@@ -12565,3 +12565,43 @@ shared-budget use (D+0, E+0).
 - Census baseline for next tick: /tmp/survey259-census-a.json (323,
   sha256-16 ed5856e6). Zero world mutations, zero uploads, zero
   verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## survey-260 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 first
+  try at f2c00868 (own survey-259 at tip — epoch stable across the tick,
+  no mid-read advance). Ledger law fresh: bracketed survey ledger max
+  [survey-81], plan-section max survey-259 → this tick survey-260,
+  grep-verified clean pre-append (zero survey-260 strings).
+- Census A fresh /tmp/survey260-census-a.json: 323 entities, quiet.
+  FETCH ANOMALY DISCLOSED: `eidoverse.net/.../census` returned HTTP 301
+  → `www.eidoverse.net` which is DNS-dead (curl exit 6 after redirect
+  follow; one paced 20s retry reproduced the 301) — empty-output law
+  fired, endpoint classified dead this tick, NO missing-entity
+  conclusion drawn. Re-fetched from the proven chassis gateway
+  `https://eidoverse.billding.dev/geom?world=commons-next` (HTTP 200,
+  1.7s). Raw shape carries extra parent/tris fields vs the baseline's
+  next-live-census projection — diff ran via the canonical 8-field
+  projection both sides (s184 projection law; /tmp/survey260-census-diff.py
+  folded from survey197 chassis with BASE path-corrected after a malformed
+  sed fold caught pre-run): 323==323, arrivals 0 / departures 0 /
+  field-diffs 0 on 323 shared ids / lib-flips 0 — 29th consecutive
+  fully-quiet 323-epoch (kind parity implied by 0 field-diffs).
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (211-260), 0 OPEN
+  rows (row-grep), no SHARD EXECUTION section (150th grep), candidates
+  closed since survey-78, never-judged 0 by set algebra.
+- Arrival-gated: no slice judged (s138-s259 precedent) — 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-
+  fallback N/A. Zero ledger append (loop law 4: append only when
+  routing a note).
+- Repo-side foreign dirt observed and untouched (sibling work-in-flight):
+  client/server .ts/.js mods, WINDMILL-OVERHAUL.md, cabin-overhaul/,
+  carousel-horse-prototype/, debug-bower scripts — no world-epoch
+  counterpart (census fully quiet).
+- STANDING RECOMMENDATION carried unchanged (s182-s259): stop the
+  SURVEY lane or convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey260-census-a.json (323
+  entities, /geom raw shape — compare via canonical projection; prior
+  projected-shape baseline /tmp/survey259-census-a.json still valid).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits,
+  zero shared-budget use (D+0, E+0).
