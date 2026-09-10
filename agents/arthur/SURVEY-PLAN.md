@@ -15469,3 +15469,36 @@ shared-budget use (D+0, E+0).
   re-checked fresh = sweep-234 at 8191d83f, running total 2370778).
   STANDING RECOMMENDATION carried unchanged (s182-s338): stop the
   SURVEY lane or convert to a no-LLM monitor when attended.
+
+- survey-340 (2026-09-10, quiet hold): gate ALL PASS real exit 0 first
+  try at tick-start HEAD 897f31ad (sweep-235 tip; raw log
+  /tmp/survey340-gate.log inspected, 99 PASS lines, exit captured
+  unpiped, HEAD unchanged through commit — no re-gate due; plan-section
+  max survey-339 -> survey-340). Census via committed next-live-census.ts
+  exit 0 at BOTH epochs (A/B, 20s-paced), each 325 entities, each
+  215228B, each sha16 b8c43498acb3ebea — BYTE-IDENTICAL to the committed
+  sweep-231/survey-326..339 baseline (/tmp/survey339-census-a.json) AND
+  to each other; set-diff law satisfied by byte identity — 0 arrivals /
+  0 departures / 0 lib flips / 0 pos/yaw/scale diffs on all 325 ids.
+  SIXTEENTH consecutive fully-quiet 325-entity epoch on the
+  post-unduloid-v3 baseline (own-json-parse false alarm caught at the
+  raw-inspection step: dict shape, header count 325 — census never left
+  the quiet epoch). Pools fresh this tick: IMPROVE-PLAN md5 c0f569d0
+  unchanged (228th check); SURVEY CANDIDATES heading present, 0 OPEN
+  rows; live-queue STATUS: OPEN grep 0; 0 SHARD EXECUTION (survey owns
+  no prefix); never-judged 0 by set algebra (arrivals 0). No slice
+  judged (arrival-gated, s138-s339 precedent — no new bytes to read,
+  not manufactured): 0 confirmed / 0 clean / 0 dropped, 0 notes routed,
+  0 vision calls, native-vs-fallback N/A. Foreign working-tree dirt at
+  read = sibling lanes in flight (windmill overhaul family,
+  cabin-overhaul / carousel-horse-prototype / moon-moth / debug-bower
+  scripts / client+server trees — same families as s285-s339) —
+  untouched; the standing windmill overhaul remains the likeliest next
+  arrival/flip trigger; ledger tail advanced to city-13 (new CITY lane)
+  with running total 2370778. Census baseline for next tick:
+  /tmp/survey340-census-a.json (325, 215228B, sha16 b8c43498acb3ebea —
+  byte-identical, baseline unchanged). Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
+  ledger append (loop law 4: append only when routing; ticks 211-339
+  precedent). STANDING RECOMMENDATION carried unchanged (s182-s339):
+  stop the SURVEY lane or convert to a no-LLM monitor when attended.
