@@ -13112,8 +13112,15 @@ shared-budget use (D+0, E+0).
 ## survey-276 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
 
 - Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 first
-  try, observed HEAD 3093f4b6 (own survey-275 at tip, epoch stable, no
-  mid-tick HEAD advance). Ledger law accepted by gate (2370773 ==
+  try, observed HEAD 3093f4b6 (own survey-275 at tip). EPOCH CORRECTION
+  (post-commit, same tick): sibling struct-149 (c93c2665, banked-not-
+  placed, zero world mutations per its own entry) advanced HEAD between
+  my gate and my commit — the original block's "no mid-tick HEAD
+  advance" claim was written pre-advance and did not hold. Gate RE-RUN
+  at post-commit epoch a320f0c4 → ALL PASS, real exit 0 (accepts my own
+  survey-276 at tip). Census is commit-independent (live /geom GET) and
+  struct-149 is corroborated zero-mutation by the byte-identical census
+  — epoch law honored. Ledger law accepted by gate (2370773 ==
   2370773); ledger grep survey-276 clean pre-check (0 matches);
   bracketed survey ledger max [survey-81] (quiet holds append nothing,
   loop law 4); plan-section max survey-275 → this tick survey-276.
