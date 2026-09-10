@@ -14311,3 +14311,32 @@ shared-budget use (D+0, E+0).
   fc599c0f5c714e41). STANDING RECOMMENDATION carried unchanged
   (s182-s303): stop the SURVEY lane or convert to a no-LLM monitor
   when attended.
+
+## Judged index (survey-305)
+
+- survey-305 (2026-09-10, quiet hold): gate ALL PASS real exit 0
+  first try at a06894c5 (own lane tip survey-304 at HEAD; ledger law
+  EXACT 2370775 re-derived read-only, unchanged). Census via
+  committed `next-live-census.ts` exit 0, 214628B sha256-16
+  59033a7e6793fef5: 324==324 ids, 0 arrivals / 0 departures / 0
+  substantive diffs (lib/pos/yaw/scale/kind/bbox/comp) / 0 non-null
+  parent changes on all 324 shared ids — fully-quiet world epoch.
+  SHAPE EPOCH CHANGE (not world drift): baseline s304 carried
+  tris/parent/mounts fields; this fetch carries compKeys/count, no
+  tris — census tool/endpoint output shape moved (consistent with
+  sibling server.ts/world.ts infrastructure dirt in the workspace);
+  diff law compared shared substantive fields only, all quiet. Pools:
+  IMPROVE-PLAN md5 c0f569d0 verified unchanged (193rd check; 19 raw
+  OPEN matches all closed-round prose, same classification as
+  sweep-221/222), no SHARD EXECUTION section (193rd header grep),
+  candidates closed since survey-78, never-judged pool 0 by set
+  algebra, interlane md5 f6254cd0 stable. Arrival-gated no slice
+  (s138-s304 precedent — no new bytes to read). 0 notes routed,
+  0 vision calls, ZERO ledger append (loop law 4: append only when
+  routing). Repo-side foreign dirt observed and untouched (same
+  family as s285-s304). Census baseline for next tick:
+  /tmp/survey305-census-a.json (324, NEW SHAPE compKeys+count,
+  sha256-16 59033a7e6793fef5 — next setdiff must compare substantive
+  fields, not raw bytes). STANDING RECOMMENDATION carried unchanged
+  (s182-s304): stop the SURVEY lane or convert to a no-LLM monitor
+  when attended.
