@@ -9968,3 +9968,57 @@ Files: next-place-struct163.ts (NEW, tracked), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-163, D+0 E+1 — one upload, two
 verbs). mkv3-unduloid.ts + struct157-decode-unduloid.ts unchanged this
 tick (committed struct-162). Zero pushes.
+
+
+## struct-164 (2026-09-10): PLACEMENT-SLOT TICK — PEAUCELLIER NIGHT NATIVE
+## RE-JUDGE DEBT PAID (the pool's last open debt); refine entry CLOSED
+## hero-ready; zero world mutations
+
+Cadence 164%3==2 placement slot; no committed carry (unduloid v3 seated
+struct-163; tensegrity v6 banked behind Bill's eye-gate — not takeable).
+Precedent struct-145: a placement slot may pay a native re-judge debt.
+Refine pool re-derived fresh: gyroid CLEAN (struct-154), boy CLOSED
+(struct-160/161), unduloid CLOSED (struct-163), tensegrity banked — the
+ONLY open item = peaucellier night-frame debt (narrowed to night-only
+struct-132, carried since; gameplay was already natively closed there).
+Gate ALL PASS real exit 0 tick-start 58760ff9 (/tmp/struct164-gate.txt,
+99 PASS 0 FAIL). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged,
+0 OPEN nx-struct rows). Ledger max re-derived struct-163 -> tag struct-164.
+
+SUBJECT BINDING: live contract verified fresh pre-judge (census 325, curl
+UA): nx-struct-peaucellier pos [-10.488844,-0.047974,168.313324] yaw pi
+exact lib store/f66494fa3ffb9ff8.glb comp {} scale 1, server bbox
+7.00x4.20x1.05 == struct-129 decode envelope. Frame byte-tying: banked
+night.png rendered in the struct-128 session from the same build whose
+sha256 f66494fa3ffb9ff8445194b11e512d18b412f5c958a4a13fb138fcabe4cdb34e
+was re-hashed on disk THIS tick == live lib prefix exact (untracked-asset
+re-verification law).
+
+NATIVE RE-JUDGE (provider up first call; neutral contract prompt, dress-21
+law): night frame judged NATIVE — 3/3 PASS with pixel evidence:
+(1) NIGHT IDENTITY PASS — ring traceable against the sky, interior chords
+read through sky-filled apertures, right-hand fan + rail + stanchions +
+plinth all legible ("dim but decipherable — the mechanism's topology fully
+reconstructable"; the open ring apertures give figure-ground separation).
+(2) WARM GLOW POINT PASS — exactly one warm cluster (the tracing bead
+~(455,316), ~6px, saturated mid-orange, no blown core), correctly sited at
+the rail x linkage intersection, hard-edged, zero bloom falloff.
+(3) CLEANLINESS PASS — sky/ground uniform; only tonal events are the
+intended dark contact shadow and vignette; no stray glow, halos, or
+unintended lit fragments anywhere.
+
+DISPOSITION: peaucellier native debt board FULLY CLEAR (gameplay PASS
+struct-132 + night PASS struct-164, both native, both on the exact placed
+bytes). Refine entry CLOSED hero-ready. Refine pool now EMPTY of open debts
+(tensegrity v6 remains banked behind Bill's eye-gate, not takeable). R11
+next: 165%3==0 refine slot — pool empty -> next R11 math-series build+judge
+(form-ledger gap grep fresh, steiner/roman BARRED 4D-descendant rule,
+>=8m NN / district soft caps). Bill eye-check pointer unchanged from
+struct-129: S mathematics walk r169, between voronoi and zeno — the machine
+that draws a straight line; after dark, its single quiet warm bead at the
+rail crossing.
+
+Files: STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-164, D+0 E+0). No new tools this tick (judgment-only debt payment
+on banked byte-tied evidence). Zero world mutations, uploads, verbs,
+comp-edits, shared-budget use. Zero pushes.
