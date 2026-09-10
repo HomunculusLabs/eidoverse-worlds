@@ -11779,3 +11779,45 @@ shared-budget use (D+0, E+0).
   census arrival or lib flip lands. Zero ledger append, zero world
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+
+## Tick 238 (2026-09-10 02:2x EDT) — QUIET HOLD: 7th consecutive fully-quiet 323-epoch on the post-enneper baseline
+
+- survey-238 (2026-09-10 02:2x, quiet hold — 7th consecutive fully-quiet
+  323-epoch on the post-enneper baseline: census A at
+  /tmp/survey238-census-a.json, 323 entities, 214035B, sha256-16
+  ed5856e6 — byte-identical to the survey-237 certified baseline by full
+  shasum (ed5856e6ef4abd37...bea67a062e042 both files); 8-field set-diff
+  0 arrivals / 0 departures / 0 field-diffs / 0 lib-flips on 323 shared
+  ids (certified survey235 diff chassis, projection-canonical compKeys).
+  One live-read misstep disclosed: my first census curl hit the wrong
+  host (eidoverse.com -> Apache 404 HTML, twice, 20s-paced single retry
+  law followed) — endpoint-provenance error, not a gateway flap; the
+  certified chassis (agents/arthur/next-live-census.ts ->
+  eidoverse.billding.dev/geom) fetched clean exit 0. Gate ALL PASS real
+  exit 0 at 48fc37e8 sweep-202 tip (EPOCH EVENT: HEAD advanced from
+  111418f4 own survey-237 tip to sibling sweep-202 mid-tick between
+  rev-parse and gate; gate accepted the newer HEAD, census captured
+  after it — sweep-202 zero-mutation, consistent with byte-identical
+  census; ledger law EXACT 2370773). Pools drained: IMPROVE-PLAN md5
+  c0f569d0 unchanged ticks 211-238, never-judged 0 by set algebra
+  (arrivals 0), SURVEY CANDIDATES last sub-section survey-78 (09-08)
+  with 0 OPEN rows (all OPEN matches are contract prose); shard 127th
+  check: no SHARD EXECUTION section in IMPROVE-PLAN, EXECUTION SHARDING
+  routes by entity prefix and survey owns none. No slice judged
+  (arrival-gated s138-s237 precedent): 0 confirmed / 0 clean / 0
+  dropped, 0 notes routed, 0 vision calls, native-vs-fallback N/A. Zero
+  ledger append (loop law 4 — quiet hold; lane law overrides generic
+  one-append footer, as ticks 211-237). STANDING RECOMMENDATION carried
+  unchanged (s182-s237): stop or convert to a no-LLM monitor when
+  attended. Foreign dirt at read = sibling lanes in flight (windmill
+  overhaul plan + cabin-overhaul + carousel-horse-prototype +
+  debug-bower scripts + core-paths GLB/review + carousel placer + IMPROVEMENTS.md
+  + client/server trees dirty) — windmill remains the likeliest next
+  arrival/flip trigger; expect the census flip when it seats. Zero
+  tracked survey paths dirty pre-append, observer read-only per
+  interlane law. Census baseline for next tick:
+  /tmp/survey238-census-a.json (323, sha256-16 ed5856e6). Expected next
+  work: arrival-gated; next slice when a census arrival or lib flip
+  lands. Zero ledger append, zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero shared-budget use (D+0, E+0).
