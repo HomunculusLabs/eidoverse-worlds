@@ -7468,3 +7468,55 @@ re-derived from ledger tier-2 fragments: row-cottage / observatory
 tower-house @187 stalest standing pair at 6 sweeps, hall / bunkhouse
 @188, stable / market @189; both walk tools verified present on disk
 this tick: interior-walk-inn.ts, interior-walk-tower-house.ts).
+
+|||| sweep-194 | 2026-09-10 | 323==323 fully quiet, all THREE epochs (285 thing + 38 light; A/B/C 20s-paced curl-class fetches BYTE-IDENTICAL 95533B sha16 e7ea4e99bc2b2add — byte-identical to the sweep-193 baseline-generating live bytes, quiet holds for ALL fields incl comp/compKeys by byte identity; 0 arrivals, 0 departures, 0 field diffs, 0 lib flips, 0 compKeys drift; baseline fd2ff862683314c3 current, no rewrite — no-churn precedent) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 150th sweep since routing, no escalation due — law keys Sev 1); 285 bbox non-light / 236 classified / 0 coverage holes | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 172nd cycle inn 6/6 @ 0.364 + tower-house 6/6 @ 0.3765 ALL PASS | pins 15/15 ALL_PINS_OK (148th consecutive clean), sweep89-battery 28/28 ALL PASS on fresh census-A bytes, interlane md5 f6254cd0 stable, ledger law EXACT 2370773 at append, standing gate ALL PASS real exit 0 at tick-start 8b278a6d run 1 + RE-RUN ALL PASS real exit 0 at 40d02040 after TWO mid-tick HEAD advances (survey-214 @ 12d1b6e0, survey-215 @ 40d02040 observer holds, zero world mutations, census-corroborated byte-identical epochs B and C) | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+sweep-194: CLEAN SWEEP, fully quiet steady-state tick, no snapshot rewrite.
+Census 323==323 at ALL THREE epochs (A/B/C 20s-paced, curl-class fetches
+BYTE-IDENTICAL 95533B sha16 e7ea4e99bc2b2add — byte-identical to the
+sweep-193 baseline-generating live bytes, so quiet holds for ALL fields
+incl comp/compKeys by byte identity): 0 arrivals, 0 departures, 0 field
+diffs, 0 lib flips, 0 compKeys drift (285 thing + 38 light). Baseline
+fd2ff862683314c3 current, no rewrite (no-churn precedent). Overlap: SAT
+fresh-live 285 bbox non-light / 236 classified / 0 coverage holes, real
+exit 3 un-piped on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard −0.407 — known Sev 2 routed to artwalk b26 choreography
+@ sweep-43, 150th sweep since routing, NOT new, no escalation due (law
+keys severity-1). Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0 — core 64/64 @ 0.38 (next-walk-core-paths.ts),
+NW 5/5 @ 0.38 (nw-approach1-walk.ts), NE 7/7 @ 0.38
+(ne-approach2-walk.ts), SW 5/5 @ 0.37 (sw-approach3-walk.ts). Tier-2
+172nd cycle per the committed sweep-193 pointer: inn 6/6 @ 0.364
+(interior-walk-inn.ts) + tower-house 6/6 @ 0.3765
+(interior-walk-tower-house.ts), both ALL_PASS real exit 0. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK (148th consecutive clean);
+sweep89-battery 28/28 ALL PASS exit 0 on fresh census-A bytes; interlane
+md5 f6254cd0 stable, read fresh; ledger law EXACT — base 2370773 re-read
+fresh immediately before append, D+0/E+0, tool self-verifies law() pre
+and post append. Standing gate ALL PASS real exit 0 at tick-start
+8b278a6d run 1; HEAD advanced twice mid-tick (survey-214 @ 12d1b6e0,
+survey-215 @ 40d02040 — observer holds, zero world mutations, zero SWEEP
+paths, census-corroborated by my own byte-identical epochs B and C);
+epoch law honored, gate RE-RUN ALL PASS real exit 0 at 40d02040 before
+the ledger append. Diff tool folded: sweep194-census-diff.py authored
+fresh from the committed sweep193 chassis verbatim (path+docstring swap
+only). Probe self-catches this tick, all pre-verdict or pre-commit,
+disclosed: (a) ledger-law probe first returned whole-file sum 34773 vs
+canonical 34771 (sweep-36 whole-file class — re-derived from
+ledger-append.py's own law() before any verdict); (b) SAT count grep
+initially keyed wrong phrases returning empty (sweep-193 class —
+re-derived from the log's actual summary lines entities-with-bbox 285 /
+exempt-classified 236 / unclassified 1); (c) the ledger entry's FIRST
+append landed with corrupted prose — mangled tool names, a 0.0.37 typo,
+and a mid-sentence scramble (adjacent-token-bleed, sweep-55 class) —
+caught on immediate re-read, entry rewritten wholesale in-place BEFORE
+commit with running total and the single (D+0, E+0) pair preserved, law
+re-verified exact after rewrite, correct forms verified present.
+Zero world mutations, zero defect notes, zero uploads, zero verbs, zero
+comp edits, zero shared-budget use. Next tier-2 pair (sweep-195):
+hall + bunkhouse (173rd cycle — LRU chain re-derived from ledger tier-2
+fragments this tick: row-cottage / observatory @193, longhouse /
+garden-cottage @192, forge / potter @191, inn / tower-house @194, hall /
+bunkhouse @188 stalest standing pair at 6 sweeps, stable / market @189;
+both walk tools verified present on disk this tick: interior-walk-hall.ts,
+interior-walk-bunkhouse.ts).
