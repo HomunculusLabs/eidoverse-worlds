@@ -1,10 +1,13 @@
 // struct133-decode-enneper.ts — decode audit of village_enneper3.glb
 // (struct-133 build tick, R10-23 THE ENNEPER; v2 laws struct-135; v3 laws
 // struct-139 — composition rotation: pinwheel face VERTICAL, crossing axis
-// HORIZONTAL). Verifies from BYTES via an INDEPENDENT replica (no mk imports
+// HORIZONTAL; v3c laws struct-140 — SEAM/RIM VOCABULARY SPLIT: crossing
+// seams on their own ep_brass lane, iron = mount vocabulary only). Verifies
+// from BYTES via an INDEPENDENT replica (no mk imports
 // — struct-119/122/124/128/130/131 law):
-//   (a) pinned sha; node census 4 (3 texMat buckets ep_bone/ep_iron/ep_stone
-//       + 1 KEEP glow_ep_1); brass emissive exported linear;
+//   (a) pinned sha; node census 5 (4 texMat buckets
+//       ep_bone/ep_iron/ep_brass/ep_stone + 1 KEEP glow_ep_1); brass
+//       emissive exported linear;
 //   (b) FILM LAW (parametric form): every bone vertex, mapped back to the
 //       form frame, is recovered by Gauss-Newton parameter inversion to
 //       within 0.5mm of X(u,v) for some (u,v) INSIDE the domain disk
@@ -23,14 +26,17 @@
 //       the axle (wy>=LIFT-0.10) — gravity-honest bearing, both sides;
 //   (f) BEAD LAW: exactly 1 KEEP glow node at (0, LIFT, 0) — X(0,0), the
 //       umbilic riding the axle center — emissive 0x9a7030 @0.85 linear;
-//   (f2) SEAM LAW: seam tubes (r 0.07, 2x v2 weight) lie on the traced
-//       self-intersection locus — >=99% sampled verts within 0.085, every
-//       locus point within 0.10 of a seam vert;
+//   (f2) SEAM LAW (v3c): brass seam tubes (r 0.07, 2x v2 weight) lie on the
+//       traced self-intersection locus — >=99% sampled verts within 0.085,
+//       every locus point within 0.10 of a seam vert, and the brass cloud is
+//       PURE (every brass vert within 0.13 of the locus — the lane carries
+//       nothing but the crossing curves);
 //   (g) STONE LAW: slab on grade y 0..0.14, plan 9.7 x 8.5;
 //   (h) ENVELOPE: 9.70 x 8.15 x 8.50 origin-centered x/z; no NaN.
 // v3 world map: form (fx,fy,fz) -> world (fz, fx+LIFT, fy), LIFT=4.145.
 //   Inverse: fx=wy-LIFT, fy=wz, fz=wx.
-// Iron classification order (disclosed): axle -> stanchion -> seam -> rim.
+// Iron classification order (disclosed): axle -> stanchion -> rim (v3c:
+// seams left the iron cloud for ep_brass — no seam branch needed).
 //   Boundary bleed: rim verts with wx>4.18 && wy<LIFT-0.05 can fall into the
 //   stanchion class (|wx-4.5|<0.32) and skip the B-distance check — a tiny
 //   near-tip arc, disclosed; rim COVERAGE (all-iron) still covers them.
@@ -105,13 +111,13 @@ const gaussNewton = (p: [number, number, number]): { u: number; v: number; res: 
 };
 
 // ---- (a) sha + nodes + materials ---------------------------------------------------------------
-ck("pinned sha", sha === "a4880b1a4be0f309131d8ee9a239de035e6c7b9228b3541bbd68250a336b489a", sha.slice(0, 16)); // struct-139 v3b: + glTFDoubleSide export fix (was 6e9b6058 v3a / 9d1d3199 v2 / 18b36139 v1 / ba17a712 origin)
+ck("pinned sha", sha === "e34ba6932dd2ab86374a0fb6f2171bc95f119a949ce6fdbd99a1cecb5a12c4f5", sha.slice(0, 16)); // struct-140 v3c: + ep_brass seam lane (was a4880b1a v3b / 6e9b6058 v3a / 9d1d3199 v2 / 18b36139 v1 / ba17a712 origin)
 const meshNodes = j.nodes.filter((n: any) => n.mesh !== undefined);
-ck("node census 4", meshNodes.length === 4, `got ${meshNodes.length}: ${meshNodes.map((n: any) => n.name).join(",")}`);
+ck("node census 5", meshNodes.length === 5, `got ${meshNodes.length}: ${meshNodes.map((n: any) => n.name).join(",")}`);
 const glowNode = j.nodes.find((n: any) => n.name === "glow_ep_1");
 ck("KEEP glow_ep_1 node exists", !!glowNode);
 const matNames: string[] = j.materials.map((m: any) => m.name ?? "");
-ck("texMat lanes ep_bone+ep_iron+ep_stone", ["ep_bone", "ep_iron", "ep_stone"].every(m => matNames.includes(m)), matNames.join(","));
+ck("texMat lanes ep_bone+ep_iron+ep_brass+ep_stone", ["ep_bone", "ep_iron", "ep_brass", "ep_stone"].every(m => matNames.includes(m)), matNames.join(","));
 const glowMats = j.materials.filter((m: any) => (m.emissiveFactor ?? []).some((v: number) => v > 0.02));
 ck("exactly one emissive material", glowMats.length === 1);
 const boneMat = j.materials.find((m: any) => m.name === "ep_bone");
@@ -313,7 +319,7 @@ const isSeam = (x: number, y: number, z: number) => { const [fx, fy, fz] = toFor
             }
             return bd;
         };
-        let axleCount = 0, stL = 0, stR = 0, rimFar = 0, seamCount = 0;
+        let axleCount = 0, stL = 0, stR = 0, rimFar = 0;
         let xMinA = Infinity, xMaxA = -Infinity;
         let stLy0 = Infinity, stLy1 = -Infinity, stRy0 = Infinity, stRy1 = -Infinity;
         const rimPts: Array<[number, number, number]> = [];
@@ -325,8 +331,6 @@ const isSeam = (x: number, y: number, z: number) => { const [fx, fy, fz] = toFor
             } else if (isStanchion(x, y, z)) {
                 if (x < 0) { stL++; stLy0 = Math.min(stLy0, y); stLy1 = Math.max(stLy1, y); }
                 else { stR++; stRy0 = Math.min(stRy0, y); stRy1 = Math.max(stRy1, y); }
-            } else if (isSeam(x, y, z)) {
-                seamCount++;
             } else {
                 rimPts.push([x, y, z]);
                 const d = distToB(x, y, z);
@@ -352,7 +356,7 @@ const isSeam = (x: number, y: number, z: number) => { const [fx, fy, fz] = toFor
             ck("prism bearing: pad-band ring + axle-plane ring on BOTH sides", nPadL > 5 && nTopL > 5 && nPadR > 5 && nTopR > 5,
                 `L pad ${nPadL}/top ${nTopL}, R pad ${nPadR}/top ${nTopR}`);
         }
-        ck("seam population present (locus-classified)", seamCount > 100, `${seamCount} verts`);
+        ck("seam population present (brass lane)", (byName("ep_brass")?.v.length ?? 0) / 3 > 100, `${(byName("ep_brass")?.v.length ?? 0) / 3} brass verts`);
         ck("rim verts within tube of boundary X(R cos t, R sin t)", rimFar === 0, `${rimFar}/${rimPts.length} far`);
         // coverage: every 4th analytic sample finds an iron vert within 0.10.
         // NOTE: B(t) passes exactly THROUGH both poles (B(0)=(0,0,3) form), so
@@ -385,19 +389,15 @@ const isSeam = (x: number, y: number, z: number) => { const [fx, fy, fz] = toFor
     ck("X(0,0) = origin (umbilic law)", Math.hypot(ox, oy, oz) < 1e-12);
 }
 
-// ---- (f2) SEAM LAW (v3): r-0.07 seam tubes lie on the self-intersection locus -------------------
-// Seam verts = iron verts classified as seam (within 0.10 of the locus,
-// form frame) after axle/stanchion classification.
+// ---- (f2) SEAM LAW (v3c): r-0.07 BRASS seam tubes lie on the self-intersection locus ---------------
+// v3c: seam verts live in the ep_brass cloud (their own lane); the crossing
+// vocabulary is chromatically split from the iron mount family.
 {
-    const iron = byName("ep_iron");
-    ck("iron cloud present for seam law", !!iron);
-    if (iron) {
+    const brass = byName("ep_brass");
+    ck("brass cloud present for seam law", !!brass);
+    if (brass) {
         const seam: Array<[number, number, number]> = []; // world frame
-        for (let i = 0; i < iron.v.length; i += 3) {
-            const x = iron.v[i], y = iron.v[i + 1], z = iron.v[i + 2];
-            if (isAxle(x, y, z) || isStanchion(x, y, z)) continue;
-            if (isSeam(x, y, z)) seam.push([x, y, z]);
-        }
+        for (let i = 0; i < brass.v.length; i += 3) seam.push([brass.v[i], brass.v[i + 1], brass.v[i + 2]]);
         ck("seam cloud nonempty", seam.length > 100, `${seam.length} verts`);
         // coverage: every locus point finds a seam vert (form frame)
         let miss = 0, mworst = 0;
@@ -424,6 +424,17 @@ const isSeam = (x: number, y: number, z: number) => { const [fx, fy, fz] = toFor
             if (d > worst) worst = d;
         }
         ck("seam law: >=99% sampled seam verts within 0.085 of locus", off / n < 0.01, `${off}/${n} off, worst ${worst.toFixed(3)}`);
+        // v3c purity: the brass lane carries NOTHING but the crossing curves —
+        // every brass vert within 0.13 of the locus (tube r 0.07 + CatmullRom
+        // slack, same window as the build classifier).
+        let far = 0, fworst = 0;
+        for (const [x, y, z] of seam) {
+            const [fx, fy, fz] = toForm(x, y, z);
+            const d = distToLocus(fx, fy, fz);
+            if (d > 0.13) far++;
+            if (d > fworst) fworst = d;
+        }
+        ck("brass purity: 100% of brass verts within 0.13 of locus", far === 0, `${far}/${seam.length} off, worst ${fworst.toFixed(3)}`);
     }
 }
 

@@ -26,6 +26,16 @@
 // dishonest (it is one sheet) — real sun shading on the vertical face does
 // the differentiation; disclosed in the plan.
 //
+// v3c (struct-140, judge fix-class 1): SEAM/RIM VOCABULARY SPLIT — the
+// crossing seams leave the iron family for a dedicated brass lane (ep_brass,
+// the umbilic bead's own material family). Iron = mount vocabulary (rim hem,
+// axle, stanchions — the frame that bears); bone = the surface; brass = the
+// crossing signature (seam tubes + umbilic bead — where the surface passes
+// through itself). At 18m the seams no longer merge with the rim into one
+// undifferentiated iron line-set; the traced crossing curves carry their own
+// warm-metal read. Zero geometry change — tube radii, locus, and every
+// authored law identical to v3b.
+//
 // MATH (asserted in-file):
 // - Parametrization above; Xu = (1-u^2+v^2, 2uv, 2u), Xv = (2uv, 1-v^2+u^2,
 //   -2v), N = normalize(Xu x Xv) analytic.
@@ -48,11 +58,11 @@
 // - ENVELOPE: 9.70 x 8.13 x 8.50 (slab widest; posts edge x +-4.59).
 //
 // LAWS HONORED (struct-121+ lineage): texMat lanes (struct-38) ep_bone
-// (film, DoubleSide), ep_iron (rim+seams+axle+stanchions), ep_stone (slab)
-// — no plain materials. Glow census exactly 1 KEEP (glow_ep_1). NaN 0;
-// node budget 4 (3 texMat buckets + 1 KEEP). Deterministic: pure
-// parametric grid + seeded texMat only. Folly class: no entry advertised —
-// no walk owed (zeno..gyroid precedent).
+// (film, DoubleSide), ep_iron (rim+axle+stanchions), ep_brass (seams, v3c),
+// ep_stone (slab) — no plain materials. Glow census exactly 1 KEEP
+// (glow_ep_1). NaN 0; node budget 5 (4 texMat buckets + 1 KEEP).
+// Deterministic: pure parametric grid + seeded texMat only. Folly class: no
+// entry advertised — no walk owed (zeno..gyroid precedent).
 import * as THREE from "three";
 import { toGLB, texMat } from "./glbwrite.ts";
 import { mergeByMaterial } from "./mergekit.ts";
@@ -147,6 +157,11 @@ const boneTex = texMat("ep_bone", [0xd8d2c4, 0xd5cfc0, 0xd2ccbb], { rough: 0.9, 
 boneTex.side = THREE.DoubleSide;             // interpenetrating sheets: interior faces visible at every crossing
 (boneTex as any).userData = { ...(boneTex as any).userData, texName: "ep_bone", glTFDoubleSide: true }; // glbwrite v3.4 lane — interpenetrating film MUST export doubleSided:true or FrontSide culling holes it (struct-139 root cause: .side alone exports single-sided; judged onion-band reads v1/v2/v3a were half-film artifacts)
 const ironTex = texMat("ep_iron", [0x4a525c, 0x3f464f, 0x565e69], { rough: 0.5, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9332 });
+// v3c seam lane: warm brass — chromatically distant from both the cool iron
+// mount family and the bone film, matching the umbilic bead's metal so the
+// crossing vocabulary reads as ONE signature (seam curves -> bead heart).
+// Slightly lower rough than iron so sun glints track the crossing curves.
+const brassTex = texMat("ep_brass", [0xa8823f, 0x9c7838, 0xb28c46], { rough: 0.42, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9334 });
 const g = new THREE.Group();
 {
     const geom = new THREE.BufferGeometry();
@@ -241,10 +256,11 @@ const g = new THREE.Group();
     for (const chain of arcs) {
         const wpts = chain.map(p => toWorld(p));
         const curve = new THREE.CatmullRomCurve3(wpts, false, "catmullrom", 0.2);
-        g.add(new THREE.Mesh(new THREE.TubeGeometry(curve, Math.max(24, chain.length), 0.07, 6, false), ironTex));
+        // v3c: brass lane — the crossing vocabulary's own material
+        g.add(new THREE.Mesh(new THREE.TubeGeometry(curve, Math.max(24, chain.length), 0.07, 6, false), brassTex));
     }
     const zspan = Math.max(...uniq.map(m => m.z)) - Math.min(...uniq.map(m => m.z));
-    console.log(`crossing seams: ${arcs.length} arcs, ${uniq.length} locus pts, locus z band +-${(zspan / 2).toFixed(3)}, tube r 0.07 (2x weight)`);
+    console.log(`crossing seams: ${arcs.length} arcs, ${uniq.length} locus pts, locus z band +-${(zspan / 2).toFixed(3)}, tube r 0.07 BRASS (v3c seam/rim split)`);
 }
 
 // ---- the axle: the crossing axis made visible AND structural (v3) ---------------------------------

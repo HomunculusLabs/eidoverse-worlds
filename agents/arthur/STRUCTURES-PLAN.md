@@ -8302,3 +8302,63 @@ Gate ALL PASS real exit 0 tick-start. Ledger max fresh pre-append struct-138
 Files: mkv3-enneper.ts (ignored dir, staged -f), struct133-decode-enneper.ts
 (v3b laws), struct139-filmprobe-enneper.ts (new, tracked),
 reviews/struct139-enneper-v3/ (ignored). Plan append-only this tick.
+
+## struct-140 — REFINE COMPLETE: enneper v3b -> v3c (seam/rim vocabulary split) + RE-SEAT live
+
+Cadence 140%3==2 build slot; carried refine contract outranks (struct-139's
+committed next step: "v3c seam-vocabulary split then native re-judge").
+Gate ALL_PINS_OK 15/15 real exit 0 tick-start fbf7e918. Shard empty fresh
+(0 OPEN nx-struct rows). Banked v3b secured FIRST (reviews/
+struct140-enneper-v3c/before/v3b-banked.glb sha a4880b1a exact).
+
+v3c BUILD (sha e34ba6932dd2ab86, deterministic x2 mtime-verified): judge
+fix-class 1 — crossing seams leave the iron family for a dedicated ep_brass
+lane (warm brass, umbilic bead's metal family, rough 0.42; iron rough 0.5).
+Material hierarchy now reads: iron = mount vocabulary (rim hem, axle,
+stanchions — the frame that bears); bone = the surface; brass = the crossing
+signature (seam tubes + bead heart — where the surface passes through
+itself). ZERO geometry change: tube radii, locus, and every authored law
+identical to v3b. Nodes 4 -> 5 (4 texMat buckets + 1 KEEP).
+
+DECODE ALL PASS 36/36 — laws updated to v3c: pinned sha, node census 5,
+texMat lanes +ep_brass, iron classification axle->stanchion->rim (seam
+branch retired — the brass cloud carries the seams), NEW brass-purity law
+(826/826 brass verts 100% within 0.13 of the locus — the lane carries
+nothing but the crossing curves). Rim/stanchion/axle/bearing/film/crossing/
+bead/stone/envelope laws all re-passed unchanged.
+
+JUDGED v3c (ZAI fallback; native 1210 hard down — one attempt then fallback
+per flap law, re-judge debt OWED on v3c frames): GAMEPLAY 18m PASS —
+seam/rim split decisive ("brass pops against both the white surface and the
+grey frame... cleanly separated at a glance"); over/under crossing readable
+THREE ways (rim-penetration right, central eye at the axle, rib-over-rib
+occlusion); FRONT 3/3 PASS — one-continuous-surface read ("nested and
+overlap so much that they visually interleave into one woven, spiraling
+sheet rather than a stack of detached rings" — v3b's separate-discs FAIL
+flipped); NIGHT 3/3 PASS — exactly one bead glow, tight, zero strays.
+FIRST identity-contract pass in the whole arc. Watch items carried (judge
+notes, non-blocking): waist rib-convergence makes the axle read dashed
+through the middle third (judged intentional junction geometry); right-pinch
+density worth a close-up someday; brass most-saturated-element note.
+
+RE-SEAT (struct-126 re-place class; struct-120/125 fallback-accept
+precedent + standing waiver): fresh census 323 recovered the exact live
+tuple (nx-struct-enneper pos [-17.439118,-0.013339,249.391013] yaw pi lib
+ba17a712 comp {} — comp-wipe law n/a, bag {}). struct140-replace-enneper.ts
+(hash-gated, verify-expected-live-first): SAT v3c 9.7x8.5 footprint vs
+fresh 323-entity self-excluded set, worst gyroid +3.43 (law 1.4); terrain
+fresh 9-pt across the WIDER footprint spread 12.6mm -> PY -0.014849 (sw
+corner; v1's PY served the 5.8m base — 1.5mm y-adjust is the siting law
+completed for the 9.7m base, disclosed); upload store/e34ba6932dd2ab86;
+remove+spawn 1200ms-paced one WS; REPLACED_VERIFIED pos
+[-17.4391,-0.0148,249.3910] yaw pi lib e34ba693 comp {} census 323;
+idempotent rerun ALREADY_SEATED zero verbs exit 0. Folly class — no walk
+owed. Pre-mutation re-gate ALL_PINS_OK 15/15 real exit 0 at 34751138.
+
+Live world now carries the fully-cured form: doubleSided film + brass
+crossing signature. Native re-judge debt on v3c frames carries to the next
+refine slot (flap law).
+
+Files: mkv3-enneper.ts (ignored dir, staged -f), struct133-decode-enneper.ts
+(v3c laws), struct140-terrain-enneper.ts + struct140-replace-enneper.ts
+(new, tracked), reviews/struct140-enneper-v3c/ (ignored).
