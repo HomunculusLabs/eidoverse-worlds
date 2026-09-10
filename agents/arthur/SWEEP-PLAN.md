@@ -7088,3 +7088,95 @@ chain: @185 hall/bunkhouse, @184 row-cottage/observatory, @183 inn/
 tower-house, @182 stable/market stalest standing pair at 3 sweeps; both
 walk tools verified present on disk this tick: interior-walk-stable.ts,
 interior-walk-market.ts).
+
+
+sweep-186: CLEAN SWEEP, fully quiet steady state, no snapshot rewrite. Census
+322==322 BOTH epochs (A/B 20s-paced, chassis fetches BYTE-IDENTICAL 213441B
+sha16 2f9ab679a8800d4b; curl-class fetch 95267B sha16 551d9f029269a6b4 —
+byte-identical to the sweep-183 epoch-C/D baseline-generating bytes, so quiet
+holds for ALL fields incl comp/compKeys by byte identity, not just the diff
+tool's 6-field projection): 0 arrivals, 0 departures, 0 field diffs, 0 lib
+flips, 0 compKeys drift (284 thing + 38 light). Baseline ca2a1883de2def3d
+current, no rewrite (no-churn precedent). Overlap: SAT fresh-live 284 bbox
+non-light / 236 classified / 0 coverage holes, real exit 3 un-piped on
+exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard -0.407 — known
+Sev 2 routed to artwalk b26 choreography @ sweep-43, 142nd sweep since
+routing, NOT new, no escalation due (law keys severity-1). Walks: tier-1 4/4
+per-leg verified 81/81 ALL_PASS, every leg real exit 0 — core 64/64 @ 0.38
+(next-walk-core-paths.ts), NW 5/5 @ 0.38 (nw-approach1-walk.ts), NE 7/7 @
+0.38 (ne-approach2-walk.ts), SW 5/5 @ 0.37 (sw-approach3-walk.ts); all four
+run individually, per-leg ok + dist/distance parsed from results[] per tool
+schema. Tier-2 164th cycle per the committed sweep-185 pointer: stable 5/5 @
+0.3958 (interior-walk-stable.ts) + market 6/6 @ 0.3894
+(interior-walk-market.ts), both ALL_PASS real exit 0. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK (140th consecutive clean);
+sweep89-battery 28/28 ALL PASS exit 0 on fresh census-A bytes (comp-bearing
+21, 38 lights); interlane md5 f6254cd0 stable, read fresh. Ledger law EXACT —
+base 2370772 re-derived fresh immediately before append, D+0/E+0, tool
+self-verifies law() pre and post append. Standing gate ALL PASS real exit 0
+at tick-start 5ae2d072 run 1 with the HEAD-check line carrying 9046f0a8
+(struct-134 analysis-only sibling absorbed mid-grounding: IMPROVEMENTS.md +
+STRUCTURES-PLAN.md + struct134-ringread-derive.py only, D+0/E+0, no world
+mutation claimed or observed — census corroborates); HEAD advanced three
+more times during walks (survey-187 @ 9eb1b940, survey-188 @ cfceb774,
+survey-189 @ 6aba1e93 — observer holds touching SURVEY-PLAN.md + survey diff
+tools only, zero world mutations, zero SWEEP paths, all census-corroborating
+the quiet 322 epoch); epoch law honored, gate RE-RUN ALL PASS real exit 0 at
+6aba1e93 before the ledger append. Diff tool folded: sweep186-census-diff.py
+authored fresh this tick from the committed sweep185-census-diff.py chassis
+verbatim (no untracked-predecessor reconciliation needed — the sweep-185
+file was the committed chassis). Zero probe self-catches this tick. Zero
+world mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use. Next tier-2 pair (sweep-187): inn +
+tower-house (165th cycle — LRU chain: @186 stable/market, @185 hall/
+bunkhouse, @184 row-cottage/observatory, @183 inn/tower-house stalest
+standing pair at 3 sweeps; both walk tools verified present on disk this
+tick: interior-walk-inn.ts, interior-walk-tower-house.ts).
+
+
+sweep-187: CLEAN SWEEP, fully quiet steady state, no snapshot rewrite.
+Census 322==322 BOTH epochs (A/B 20s-paced, curl-class fetches
+BYTE-IDENTICAL 95267B sha16 551d9f029269a6b4 — byte-identical to the
+sweep-183 baseline-generating bytes, so quiet holds for ALL fields incl
+comp/compKeys by byte identity; chassis fetch 213441B sha16
+2f9ab679a8800d4b same schema class): 0 arrivals, 0 departures, 0 field
+diffs, 0 lib flips, 0 compKeys drift (284 thing + 38 light). Baseline
+ca2a1883de2def3d current, no rewrite (no-churn precedent). Overlap: SAT
+fresh-live 284 bbox non-light / 236 classified / 0 coverage holes, real
+exit 3 un-piped on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26 choreography
+@ sweep-43, 143rd sweep since routing, NOT new, no escalation due (law
+keys severity-1). Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS,
+every leg real exit 0 — core 64/64 @ 0.38 (next-walk-core-paths.ts), NW
+5/5 @ 0.38 (nw-approach1-walk.ts), NE 7/7 @ 0.38 (ne-approach2-walk.ts),
+SW 5/5 @ 0.37 (sw-approach3-walk.ts); all four run individually, per-leg
+ok + dist/distance parsed from results[] per tool schema. Tier-2 165th
+cycle per the committed sweep-186 pointer: inn 6/6 @ 0.3640
+(interior-walk-inn.ts) + tower-house 6/6 @ 0.3765
+(interior-walk-tower-house.ts), both ALL_PASS real exit 0. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK (141st consecutive clean);
+sweep89-battery 28/28 ALL PASS exit 0 on fresh census-A bytes; interlane
+md5 f6254cd0 stable, read fresh. Ledger law EXACT — base 2370772
+re-derived fresh immediately before append, D+0/E+0. Standing gate: FIRST
+RUN from agents/arthur/ cwd exited 1 on FAIL [tex-84] — probe self-catch:
+the check is existsSync(agents/arthur/verify-tex84.ts), repo-root-relative,
+wrong-cwd artifact class; re-run un-piped FROM REPO ROOT, real exit 0 ALL
+PASS 98/98 at 03c760f2. HEAD advanced twice mid-tick (survey-191 @
+03c760f2, survey-192 @ 5fa3b49e — observer holds touching SURVEY-PLAN.md
++ survey diff tools only, zero world mutations, zero SWEEP paths, both
+census-corroborating the byte-identical quiet 322 epoch); epoch law
+honored, gate RE-RUN ALL PASS real exit 0 at 5fa3b49e before the ledger
+append. Interrupted-predecessor reconciliation (struct-9 class):
+sweep-186's complete evidence chain found UNCOMMITTED in-tree (ledger
+entry + SWEEP-PLAN block + untracked sweep186-census-diff.py), window
+died post-append pre-commit; verified whole vs the committed sweep-185
+chassis (adds only the disclosed compKeys law + libflip print), folded
+into this commit with disclosure, no re-derivation needed. Diff tool
+folded: sweep187-census-diff.py authored fresh from the sweep186 chassis
+verbatim. One probe self-catch (the tex-84 wrong-cwd artifact). Zero
+world mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use. Next tier-2 pair (sweep-188): hall +
+bunkhouse (166th cycle — LRU chain: @187 inn/tower-house, @186 stable/
+market, @185 hall/bunkhouse, @184 row-cottage/observatory stalest
+standing pair at 3 sweeps; both walk tools verified present on disk this
+tick: interior-walk-hall.ts, interior-walk-bunkhouse.ts).
