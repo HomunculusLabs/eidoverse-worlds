@@ -6994,3 +6994,55 @@ tower-house, @182 stable/market, @181 hall/bunkhouse, @180
 row-cottage/observatory stalest standing pair at 3 sweeps; both walk
 tools verified present on disk this tick: interior-walk-row-cottage.ts,
 struct2-walk-observatory.ts).
+
+sweep-184: CLEAN SWEEP, fully quiet steady state. Census 322==322 BOTH
+epochs (A/B 20s-paced, raw fetches BYTE-IDENTICAL, sha16 551d9f029269a6b4,
+95267B — byte-identical to the sweep-183 epoch-C/D bytes that generated
+the committed baseline ca2a1883de2def3d, so quiet holds for ALL fields
+incl comp/compKeys by byte identity, not just the diff tool's 6-field
+projection): 0 arrivals, 0 departures, 0 field diffs, 0 lib flips (284
+thing + 38 light). No snapshot rewrite — baseline current per the
+sweep-106/108/174/176/178/179/180/182/183 no-churn precedent. Overlap:
+SAT fresh-live 284 bbox non-light / 236 classified / 0 coverage holes,
+real exit 3 on exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard
+−0.407 — known Sev 2 routed to artwalk b26 choreography @ sweep-43, 140th
+sweep since routing, NOT new, no escalation due (law keys severity-1).
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit
+0 — core 64/64 @ 0.38 (next-walk-core-paths.ts), NW 5/5 @ 0.38
+(nw-approach1-walk.ts), NE 7/7 @ 0.38 (ne-approach2-walk.ts), SW 5/5 @
+0.37 (sw-approach3-walk.ts); all four run individually, per-leg ok +
+distance parsed from results[] (these walk tools key arrival delta as
+distance; core tool keys dist — both parsed clean, no self-catch this
+tick). Tier-2 162nd cycle per the committed sweep-183 pointer:
+row-cottage 6/6 @ 0.3838 (interior-walk-row-cottage.ts) + observatory
+5/5 @ 0.389 (struct2-walk-observatory.ts), both ALL_PASS real exit 0.
+Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK (138th consecutive
+clean); sweep89-battery 28/28 ALL PASS exit 0 on fresh census-A bytes;
+interlane md5 f6254cd0 stable, read fresh. Ledger law EXACT — base
+2370772 re-read fresh immediately before append, D+0/E+0, tool
+self-verifies law() pre and post append. Standing gate ALL PASS real
+exit 0 at tick-start 6906179d (city-11 sibling accepted by prefix gate);
+HEAD advanced ONCE mid-tick (survey-183 @ e3cc63a0, observer hold
+touching SURVEY-PLAN.md + survey183-census-diff.py only, zero world
+mutations, census-corroborates the quiet 322 epoch, its ledger law
+EXACT 2370772 observed); epoch law honored, gate RE-RUN ALL PASS real
+exit 0 at e3cc63a0 before the ledger append. Interrupted-predecessor
+reconciliation (disclosed, struct-9 family / pre-place class):
+sweep184-census-diff.py was found untracked in-tree pre-tick with NO
+prior [sweep-184] ledger entry — an authored-but-never-run diff tool
+left by an interrupted earlier window. Verified whole against the
+committed sweep-183 chassis (same 6-field projection + arrival printer +
+sha16), py_compile clean, used as this tick's diff tool, folded into
+this commit. Probe self-catches pre-verdict, disclosed: (a) first SAT
+invocation piped through tail captured the pipe's exit 0 instead of
+bun's real exit 3 — re-run un-piped, real exit 3 recorded (polish-270
+content-verdict class, corrected before any verdict); (b) approach-walk
+parsers first keyed dist where these tools emit distance — re-anchored
+on the actual results[] schema (sweep-48 keying law), legs re-verified
+clean. Zero world mutations, zero defect notes, zero uploads, zero
+verbs, zero comp edits, zero shared-budget use. Next tier-2 pair
+(sweep-185): hall + bunkhouse (163rd cycle — LRU chain: @184
+row-cottage/observatory, @183 inn/tower-house, @182 stable/market,
+@181 hall/bunkhouse stalest standing pair at 3 sweeps; both walk tools
+verified present on disk this tick: interior-walk-hall.ts,
+interior-walk-bunkhouse.ts).
