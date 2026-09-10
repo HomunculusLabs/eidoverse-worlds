@@ -14962,3 +14962,50 @@ shared-budget use (D+0, E+0).
   append only when routing). STANDING RECOMMENDATION carried
   unchanged (s182-s323): stop the SURVEY lane or convert to a no-LLM
   monitor when attended.
+
+## Judged index (survey-325)
+
+- survey-325 (2026-09-10, NATIVE 5/5 calls — zero 1210s, zero fallback):
+  ARRIVAL-GATED RE-SEAT SLICE — the s324 one-diff epoch folded: census
+  325==325, 0 arrivals / 0 departures, exactly ONE field-set diff =
+  nx-struct-unduloid lib 3a9b92b8 -> 014ed586 at the identical tuple
+  (struct-163's committed placement dda69d89, independently folded by
+  sweep-230's epoch-C; ledger-matched sibling work classified). New
+  standing bytes re-opened the arrival gate -> first independent survey
+  read of unduloid v3 (the survey-312 Sev 2 cure) on live-seated bytes.
+  Fetch curl UA HTTP 200 99196B served-sha16 6a8aa2ff on exact census
+  lib; DRACO chassis 8 views exit 0 (reviews/survey325-slice/unduloid/);
+  decode bbox 6.567x1.300x2.200 == struct-163 pin exact, nodes
+  [unduloid_0..2, glow_uq_1]. Contract-corrected gameplay call disclosed
+  (dress-21/s324 law): first call judged under a wrong paraphrased
+  contract (expected "lighter reflective crest" — the contract explicitly
+  EXCLUDES that) -> water FAIL DISCARDED; re-judged under the TRUE
+  struct-162 contract ("saturated dark blue against light gray rim,
+  reads as liquid") -> gameplay PASS 3/3, night PASS 3/3 (85-90% cool
+  teal interior, amber pendant quiet + halo-free, zero glare), top
+  water-present + contained + meniscus shading PASS (visible-blue
+  fraction ~45-50% is CHAIN OCCLUSION BY DESIGN — the gold chain carries
+  the pendant across the basin midline; containment + identity PASS).
+  Pitfall-11 decode on the exact served bytes OUTRANKS the render
+  fraction claim: unduloid_2 water dome y=[0.200,0.290] — equator at
+  rim 0.200 EXACT, apex 0.290 EXACT (0.090 crest proud), dome closes
+  r 0.000, equator ring to 1.880 — struct-162's meniscus contract
+  line-for-line in the LIVE bytes (/tmp/survey325-decode-undoloid.ts
+  typo'd filename aside, tool ran exit 0). VERDICT: CLEAN for
+  nx-struct-unduloid v3 at its live seat — survey-312's Sev 2
+  "water semantic unreadable" is CURED ON LIVE BYTES by independent
+  read; owner's struct-162 NATIVE 3/3 stands corroborated. Routing:
+  ZERO notes routed, ZERO candidate rows (defect retired with the
+  bytes; the struct-162 watch item — amber pendant dangling read —
+  already recorded by the owner, next-fix class only if Bill's eye
+  flags it; no open question to carry). Pools: IMPROVE-PLAN md5
+  c0f569d0 unchanged (213th check), 0 SHARD EXECUTION, 0 live-queue
+  OPEN — 19 raw hits prose-classified, interlane f6254cd0 stable.
+  Repo-side foreign dirt observed and untouched (same family as
+  s285-s324). Census baseline for next tick: /tmp/survey325-census-a.json
+  (325, 215228B, sha256-16 b8c43498acb3ebea — post-unduloid-v3 epoch,
+  REPLACES the s324 70f823b4 baseline). Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
+  ledger append (loop law 4: append only when routing). STANDING
+  RECOMMENDATION carried unchanged (s182-s324): stop the SURVEY lane
+  or convert to a no-LLM monitor when attended.
