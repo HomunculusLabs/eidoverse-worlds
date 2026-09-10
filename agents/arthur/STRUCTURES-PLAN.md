@@ -9917,3 +9917,54 @@ struct157-decode-unduloid.ts (water law rewritten, tracked),
 reviews/struct162-unduloid-v3/ (before/ + after frames, ignored),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-162, D+0 E+0 — no world mutations this tick). Zero pushes.
+
+## struct-163 (2026-09-10): PLACEMENT — UNDULOID STOUP v3 (MENISCUS DOME)
+## LIVE — struct-162's committed carry executed; same-tuple lib upgrade
+## 3a9b92b8aeb3722d -> 014ed586a083a4df at [95.262794,-0.031702,55] yaw -2.0944
+
+Cadence 163%3==1 placement slot. Gate ALL PASS real exit 0 tick-start
+2a4312fb (/tmp/struct163-gate.txt, 98 PASS 0 FAIL) + PRE-MUTATION re-gate
+ALL PASS real exit 0 at 0f86a27a (one sibling HEAD advance mid-tick —
+re-gate law). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged,
+0 OPEN nx-struct rows). Ledger max re-derived struct-162 -> tag struct-163.
+
+BANKED BYTES RE-VERIFIED before mutation: v3 on disk sha
+014ed586a083a4df52f94bdf87fd4b924c274c16083264cfd33975bf1cf27732 ==
+struct-162 pin exact. Envelope UNCHANGED 6.57x1.30x2.20 (struct-162
+decoder law 18/18, byte-tied) — same-tuple reseat is footprint-neutral.
+
+LIVE v1 CONTRACT VERIFIED pre-mutation (fresh census read, 325): pos
+[95.262794,-0.031702,55] yaw -2.0943951023931953 lib
+store/3a9b92b8aeb3722d.glb comp {} scale 1 — exact struct-158 tuple.
+
+PLACEMENT (next-place-struct163.ts, NEW tracked — struct-161 remove+spawn
+reseat chassis): hash-gated 014ed586 exact; fresh 325-set SAT at the FINAL
+pose self-excluded: NN spiralfolly 53.64 (law 8.0), worst-solid
+nx-craft-cloister-0016 +2.53 (law 1.4) — zero violations; upload
+store/014ed586a083a4df.glb ONE shared-budget unit no 429; remove+spawn
+over one WS (1200ms pace); REPLACED_VERIFIED pos [95.2628,-0.0317,55.0000]
+yaw -2.0944 lib exact comp {} census 325; IDEMPOTENT RERUN ALREADY_SEATED
+zero verbs exit 0; independent census pin re-read exact 6dp pos/yaw/scale/
+lib/comp + bbox 6.567x1.30x2.20 == decode envelope.
+
+DISPOSITION: UNDULOID STOUP v3 STANDING at the exact struct-158 tuple.
+The survey-312 Sev 2 (water invisible — flat disc buried inside the solid
+stone block) is retired with the bytes; v3 was judged NATIVE 3/3 defect
+vantages FLIPPED at struct-162 (18m gameplay liquid-read, night ~90% cool
+surface vs 0 px, top 75-85% coverage vs 0%). Folly class — no walk owed.
+comp-bag {} before == after (amber bead = emissive material inside GLB;
+comp-wipe n/a). Unduloid refine entry CLOSED hero-ready: native judgment
+3/3 + placement exact. Watch item carried (struct-162 record): amber bead
+dangling read at close range = next-fix class if Bill's eye flags it
+(cure = brass filament from chain nadir to bead).
+
+R11 round tally: E district form count unchanged (same-tuple lib upgrade,
+no seat change). Next: 164%3==2 placement slot — refine pool scan (standing
+nx-struct-* vs hero-ready states; Bill correction re-opens outrank;
+tensegrity v6 banked behind Bill's eye-gate, not takeable) — if pool empty,
+next R11 math-series build+judge.
+
+Files: next-place-struct163.ts (NEW, tracked), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-163, D+0 E+1 — one upload, two
+verbs). mkv3-unduloid.ts + struct157-decode-unduloid.ts unchanged this
+tick (committed struct-162). Zero pushes.
