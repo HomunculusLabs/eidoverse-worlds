@@ -9617,3 +9617,79 @@ append (struct-158). Zero pushes.
 - This note is a probe, not a verdict (probe laws 0-11). Object is in the struct refine
   pool (struct-157/158 lineage) — no IMPROVE-PLAN candidate row per the no-duplicate law.
 
+
+## struct-159 (2026-09-10): REFINE — boy native re-judge debt PAID, verdict
+## FAIL-concords; cure authored (v2 axle composition, enneper v3 class);
+## smoke build green, full build deferred to struct-160
+
+Cadence 159%3==0 refine slot. Refine pool re-derived fresh: gyroid CLEAN
+(struct-154), peaucellier night-only debt, boy full native re-judge debt
+(the whole v4 verdict was fallback-judged, struct-136) — boy = highest
+evidenced deficit. Tensegrity v6 banked behind Bill's eye-gate (struct-149,
+not takeable). Gate ALL PASS real exit 0 tick-start e594ac40 (own struct-158
+tip, /tmp/struct159-gate.txt, 98 PASS 0 FAIL). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN nx-struct rows — 152nd check).
+Ledger max re-derived struct-158 -> tag struct-159.
+
+NATIVE RE-JUDGE PAID (first call, provider up): boy v4 banked gameplay
+frame judged NATIVE with neutral contract prompt (dress-21 leading-prompt
+law) — IDENTITY FAIL ("deformed ball / lumpy potato"; one dent + one bump
+legible, no 3-fold order), materials flag (grey striated read), silhouette
+PASS, grounding PASS, crown PASS. CONCURS struct-136's fallback "bilobed
+blob" — two judges, one read; the identity deficit is REAL. Native down
+1210 x2 + paced retry immediately after (night/top frames unpaid — flap
+law honored, debt narrowed to night+top, carries).
+
+CALIBRATION CONTROL (dress-80 law): accepted native-PASSED harmonickiss
+(struct-130) judged by ZAI fallback in the same solo rig — FAILs identity
+("stacked totem", no torus aperture) + materials (mottled speckle) — the
+speckle/mottling flag is FAMILY/RIG class, not a boy defect. The identity
+axis keeps a real native-passed control (struct-130 native run).
+
+DECODE FIRST (enneper struct-139 lesson): banked v1 bytes 8c25b665
+materials parsed — bs_bone doubleSided=TRUE present — NOT the FrontSide
+culling bug; the read is a true composition defect.
+
+ROOT CAUSE (analytic, from source): the 3-fold pinwheel axis is VERTICAL
+in v1 (world y); walking vantages read the pinwheel edge-on -> blob; only
+top/nadir see the order ("canonical" top PASS struct-136). Identical class
+to enneper pre-v3.
+
+FALSIFIED-BY-RENDER (struct159-falsify-boy.ts, NEW tracked — exact v1
+bytes, proven MIME chassis after 2 self-caught serving bugs): control
+gameplay frame reproduces the standing FAIL (fallback judge; rig
+validated); pitch-90 (axis horizontal) face-on = IDENTITY PASS + 3 lobes
+countable ("clover/trefoil, deliberate"); oblique = 3 lobes countable (vs
+2 standing), identity marginal-fail ("clover not pinwheel" — chirality/
+crease articulation named as the next-fix class). Rotation class
+VALIDATED as necessary-and-insufficient; mount language adds the intent
+cues (axle/stanchions) the oblique frame lacked.
+
+V2 AUTHORED (mkv3-boy.ts, in place; v1 bytes banked before/v1-banked.glb
+8c25b665 exact): enneper v3 axle class — pinwheel face VERTICAL; form
+axis = horizontal iron AXLE world x -4.5..+4.5 at y=LIFT 3.416, pinning
+BOTH singular points (south pole + triple point; axis law re-proven
+in-build); 2 stanchions r0.09 on 0.56 pads (enneper gauge); bead on axle
+outboard of the eye, clear of all film (film |x| <= 3.0); film lowest
+point kisses slab top; slab 10.1x7.1 (posts span); parameter-frame UVs.
+Yaw now MATTERS (v1 yaw-invariant): placement law axle oblique 35-45deg
+off approach normal (struct-104).
+
+SMOKE BUILD exit 0, all in-file laws hold: RP2 closed mesh V8009 E24024
+F16016 chi=1, 0 boundary edges; axis law; post clearance 1.5m; envelope
+10.10x6.52x7.10 y[0..6.523]; 1 glow KEEP. v2 sha a20c9275136841f3
+(single build; deterministic x2 + decode lockstep + 10-frame review +
+judgment = struct-160's FIRST work per R11 cadence — build+judge tick,
+place next). Sparse symmetry probe honestly discloses NOT-a-symmetry-axis
+on its 320-point cloud (decode's dense 3-fold law carries at struct-160).
+
+DISPOSITION: v2 AUTHORED + smoke-green, NOT judged, NOT placed. Standing
+live remains v1 8c25b665. Boy refine pool: night+top native frames unpaid;
+v2 full build+judge owed; crease/lobe articulation = recorded next-fix
+class if judgment still flags.
+
+Files: struct159-falsify-boy.ts (NEW, tracked), mkv3-boy.ts (ignored dir,
+staged -f), reviews/struct159-boy-v2/ (before/ + falsify/ 3 frames,
+ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-159, D+0 E+0 — authored-not-built tick, zero world mutations).
+Zero pushes.

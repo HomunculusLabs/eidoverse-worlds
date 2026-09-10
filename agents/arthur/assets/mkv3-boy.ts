@@ -16,6 +16,22 @@
 // rotate away from over-served rays: az184 carries 17 forms — seat scan
 // next tick on an under-served ray, NOT enneper r250 -> r260).
 //
+// =====================================================================================
+// v2 (struct-159, authored NOT BUILT — build is struct-160's first work): COMPOSITION
+// ROTATION, the enneper v3 cure class. The v1 build stands with its 3-fold pinwheel
+// axis VERTICAL (needle up the axis): every walking vantage reads the pinwheel
+// EDGE-ON -> "deformed ball" (native gameplay FAIL this tick, concording struct-136's
+// fallback "bilobed blob" — two judges, one read). Falsified on the EXACT v1 bytes
+// before authoring (struct159-falsify-boy.ts): pitched 90deg so the axis is horizontal,
+// face-on down the axis = IDENTITY PASS + 3 lobes countable; oblique = 3 lobes countable
+// (vs 2 standing). v2: pinwheel face VERTICAL, axis a horizontal iron AXLE (world x)
+// borne on two stanchions — armillary/orrery family mount language, gravity-honest.
+// Yaw now MATTERS (v1 was yaw-invariant): placement law = axle oblique 35-45deg off
+// the approach normal (struct-104). Recorded next-fix class if judgment still flags
+// legibility: lobe/crease articulation (fallback judge's note, family-class speckle
+// excluded via accepted-sibling control this tick).
+// =====================================================================================
+//
 // ONE IDEA: THE DISK THAT CLOSES INTO ITSELF — NO EDGE AT ALL. Werner
 // Boy's 1901 immersion of the real projective plane: a disk whose opposite
 // boundary points are THE SAME point (antipodal gluing), one-sided,
@@ -110,14 +126,29 @@ for (let i = 0; i <= 400; i++) for (let j = 0; j < 200; j++) {
 const TARGET_H = 6.0;
 const SCALE = TARGET_H / (z1 - z0);
 const SLAB = 0.14;
-const ZOFF = SLAB - SCALE * z0;                 // lowest film point rests on slab top
-const apexY = ZOFF + SCALE * z1;                // film apex in world y (decode-caught: SLAB+SCALE*z1 was wrong — v1 draft bug, needle crown reached only y1.54 vs film top 6.14)
-const filmW = SCALE * (x1 - x0), filmD = SCALE * (y1 - y0);
-const slabW = Math.round((Math.max(filmW, filmD) + 0.6) * 100) / 100; // film + 0.3m margin a side
-const ccx = SCALE * (x0 + x1) / 2, ccz = SCALE * (y0 + y1) / 2;     // film bbox center (world x/z)
-const toWorld = (p: THREE.Vector3) => new THREE.Vector3(SCALE * p.x, SCALE * p.z + ZOFF, SCALE * p.y);
-console.log(`raw envelope x[${x0.toFixed(4)},${x1.toFixed(4)}] y[${y0.toFixed(4)},${y1.toFixed(4)}] z[${z0.toFixed(4)},${z1.toFixed(4)}] -> SCALE ${SCALE.toFixed(6)} ZOFF ${ZOFF.toFixed(6)}`);
-console.log(`world: film plan ${filmW.toFixed(2)}x${filmD.toFixed(2)} center (${ccx.toFixed(3)},${ccz.toFixed(3)}), slab ${slabW.toFixed(2)} sq, apex ${apexY.toFixed(4)}, triple point world y ${ZOFF.toFixed(4)}`);
+// v2 map (struct-159): pinwheel face VERTICAL, axis = horizontal iron AXLE (world x).
+//   world x = SCALE*(fz - ZC)  — film x-span centered on the axle (free shift: the
+//                               form axis maps to the world line y=LIFT,z=0 WHOLE, so
+//                               both special points stay ON the axle wherever shifted)
+//   world y = SCALE*fx + LIFT  — LIFT = SLAB - SCALE*x0: lowest film point (min fx)
+//                                kisses slab top (enneper resting-contact law)
+//   world z = SCALE*fy         — film depth centered on the axle plane
+// The axle pins BOTH singular points: south pole P(0)=(0,0,-2) and the triple point
+// (0,0,0) lie on the form axis; by the axis law the film touches the axis NOWHERE
+// else, so the axle crosses the film's substance exactly at those two points —
+// exterior → south pole → interior → triple point → out the open eye → stanchion.
+const ZC = (z0 + z1) / 2;
+const LIFT = SLAB - SCALE * x0;
+const FMAX = Math.max(Math.abs(x0), Math.abs(x1), Math.abs(y0), Math.abs(y1));
+const AXSPAN = 4.5;                            // stanchion centers (enneper gauge); film |x| ≤ TARGET_H/2 = 3.0
+const AXLE_R = 0.06, POST_R = 0.09;
+const filmFaceH = SCALE * (x1 - x0), filmDepth = SCALE * (y1 - y0);
+const SLABX = Math.round((2 * AXSPAN + 0.56 + 0.5) * 10) / 10;
+const SLABZ = Math.round((filmDepth + 0.7) * 10) / 10;
+const ccx = 0, ccz = 0;                        // v2: film centered on origin by construction
+const toWorld = (p: THREE.Vector3) => new THREE.Vector3(SCALE * (p.z - ZC), SCALE * p.x + LIFT, SCALE * p.y);
+console.log(`raw envelope x[${x0.toFixed(4)},${x1.toFixed(4)}] y[${y0.toFixed(4)},${y1.toFixed(4)}] z[${z0.toFixed(4)},${z1.toFixed(4)}] -> SCALE ${SCALE.toFixed(6)} ZC ${ZC.toFixed(6)} LIFT ${LIFT.toFixed(6)}`);
+console.log(`v2 world: face height ${filmFaceH.toFixed(2)} (film top ${(LIFT + SCALE * x1).toFixed(3)}), depth ${filmDepth.toFixed(2)}, film |x| <= ${(TARGET_H / 2).toFixed(2)}, slab ${SLABX.toFixed(1)}x${SLABZ.toFixed(1)}, axle y=${LIFT.toFixed(3)} x ${-AXSPAN}..${AXSPAN}`);
 // south pole = lowest film point (the tail tip rests on the slab): pre-pass law
 if (Math.abs(z0 - (-2)) > 1e-9) throw Error(`south pole not the lowest point: z0=${z0} != -2`);
 
@@ -153,7 +184,7 @@ const normalAt = (s: number, t: number): THREE.Vector3 => {
         const b = filmPos.length / 3;
         filmPos.push(p.x, p.y, p.z);
         filmNor.push(n.x, n.y, n.z);
-        filmUV.push((p.x / (slabW / 2) + 1) / 2, (p.z / (slabW / 2) + 1) / 2);
+    filmUV.push((p.x / 3 + 1) / 2, (p.y / 3 + 1) / 2); // v2: parameter-frame UV (form x/y, orientation-stable — enneper v3 law)
         return b;
     };
     const centerP = Pv(0, 0);
@@ -226,23 +257,14 @@ boneTex.side = THREE.DoubleSide;      // one-sided surface: both faces ARE the s
     g.add(new THREE.Mesh(geo, boneTex));
 }
 
-// ---- iron: the pinwheel-axis needle (grade -> THROUGH the triple point ->
-//          escapes the open eye; bead crowns the tip) -----------------------
-const NEEDLE_R = 0.045;
+// ---- iron v2: the AXLE (form axis made visible AND structural) + stanchions -------
+const NEEDLE_R = AXLE_R;
 const ironTex = texMat("bs_iron", [0x4a525c, 0x3f464f, 0x565e69], { rough: 0.5, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9402 });
-// v2 (struct-136 in-tick iteration, fallback judge fix #1): the axis above
-// the triple point is the pinwheel's OPEN EYE (axis-law below proves the
-// film never crosses the axis for form-z in (0, z1]) — so the needle
-// passes through the heart and escapes 0.31m proud of the lobes; the bead
-// on the tip reads from every walk-up view and glows at dusk (the v1
-// interior-only bead failed the night contract exactly as enneper's
-// top-plan-only identity did — survey-181 class, not repeated).
-const NEEDLE_TIP = apexY + 0.75; // v4: both judges independently asked the crown to CLEAR the lobes (night: 'peeking from crease'); 0.75m + bead = ~0.88m over the silhouette, ~35px at 18m
 {
-    // AXIS LAW (in-file, deterministic): dense scan — the film touches the
-    // world axis ONLY at the south pole (form z=-2) and the triple point
-    // (z=0); everywhere else it keeps >= 1e-4 away, so the eye corridor is
-    // clear for the crown.
+    // AXIS LAW (in-file, deterministic; unchanged from v1): dense scan — the film
+    // touches the form axis ONLY at the south pole (form z=-2) and the triple point
+    // (z=0); everywhere else it keeps >= 1e-4 away, so the axle crosses the film's
+    // substance exactly at those two points and the eye corridor stays clear.
     let axisHits = "";
     for (let i = 0; i <= 600; i++) for (let j = 0; j < 600; j++) {
         const p = Pv(i / 600, (2 * Math.PI * j) / 600);
@@ -251,16 +273,29 @@ const NEEDLE_TIP = apexY + 0.75; // v4: both judges independently asked the crow
     const allowed = new Set(["(-2.0000)", "(0.0000)", "(-2.0000)(0.0000)"]);
     if (![...axisHits.matchAll(/\(([^)]+)\)/g)].every(m => Math.abs(parseFloat(m[1]) + 2) < 1e-4 || Math.abs(parseFloat(m[1])) < 1e-4))
         throw Error(`axis law: film crosses the axis away from the poles: ${axisHits.slice(0, 120)}`);
-    console.log(`axis law OK: film meets the axis only at z=-2 (south pole) and z=0 (triple point) — eye corridor open for the crown`);
-    const needle = new THREE.Mesh(new THREE.CylinderGeometry(NEEDLE_R, NEEDLE_R, NEEDLE_TIP, 10), ironTex);
-    needle.position.set(0, NEEDLE_TIP / 2, 0);
-    g.add(needle);
-    const southPoleY = SCALE * (-2) + ZOFF;
-    if (Math.abs(southPoleY - SLAB) > 1e-9) throw Error(`needle law: south pole world y ${southPoleY} != slab top ${SLAB}`);
-    if (NEEDLE_TIP <= apexY) throw Error(`needle law: tip ${NEEDLE_TIP} must crest the film apex ${apexY}`);
+    console.log(`axis law OK: film meets the axis only at z=-2 (south pole) and z=0 (triple point) — axle crosses film substance exactly there`);
+    // v2 axle: horizontal along world x at (y=LIFT, z=0), spanning the two stanchions.
+    const axle = new THREE.Mesh(new THREE.CylinderGeometry(AXLE_R, AXLE_R, 2 * AXSPAN, 12), ironTex);
+    axle.rotation.z = Math.PI / 2;              // cylinder default axis y -> world x
+    axle.position.set(0, LIFT, 0);
+    g.add(axle);
+    // two stanchions: r POST_R posts on pads, bearing the axle ends (enneper gauge)
+    for (const sx of [-AXSPAN, AXSPAN]) {
+        const post = new THREE.Mesh(new THREE.CylinderGeometry(POST_R, POST_R, LIFT - 0.24, 10), ironTex);
+        post.position.set(sx, 0.24 + (LIFT - 0.24) / 2, 0);
+        g.add(post);
+        const pad = new THREE.Mesh(new THREE.BoxGeometry(0.56, 0.10, 0.56), ironTex);
+        pad.position.set(sx, 0.19, 0);
+        g.add(pad);
+    }
+    // film clearance law: nearest film approach to a post axis (film |x| extreme
+    // = TARGET_H/2 = 3.0 vs post at 4.5) >= 1.2m by construction; asserted:
+    const filmXmax = SCALE * (Math.abs(z0 - z1)) / 2;
+    if (AXSPAN - filmXmax < 1.2) throw Error(`post clearance ${AXSPAN - filmXmax} < 1.2`);
+    console.log(`axle: r ${AXLE_R} world x ${-AXSPAN}..${AXSPAN} at y ${LIFT.toFixed(3)} z 0 — pins south pole + triple point, borne on 2 stanchions (posts at x=+-${AXSPAN}, film |x| <= ${filmXmax.toFixed(2)})`);
 }
 
-// ---- THE BEAD at the triple point: the only light ------------------------------------------------
+// ---- THE BEAD outboard of the eye: the only light --------------------------------------------
 {
     const bead = new THREE.Mesh(new THREE.SphereGeometry(0.13, 14, 12),
         (() => {
@@ -269,16 +304,17 @@ const NEEDLE_TIP = apexY + 0.75; // v4: both judges independently asked the crow
             (m as any).emissiveIntensity = 0.85;             // dusk lineage (struct-82 law)
             return m;
         })());
-    bead.position.set(0, NEEDLE_TIP, 0);                   // v2: crowns the needle tip — the open eye lets it read from every side; the triple point itself is proven by the film's own geometry
+    bead.position.set(AXSPAN - 0.35, LIFT, 0);                // v2: on the axle, clear of all film (film |x| <= 3.0), west of the open eye — reads from every vantage, glows at dusk
     bead.name = "glow_bs_1";
     glowMeshes.push(bead);
     g.add(bead);
+    if (AXSPAN - 0.35 - 3.0 < 0.1) throw Error(`bead not clear of film: ${AXSPAN - 0.35 - 3.0}`);
 }
 
 // ---- stone: the slab ------------------------------------------------------------------------------
 const stoneTex = texMat("bs_stone", [0x6f6a60, 0x777166, 0x67625a], { rough: 0.95, scale: 2, weights: [3, 1, 1], seed: 9403 });
 {
-    const slab = new THREE.Mesh(new THREE.BoxGeometry(slabW, SLAB, slabW), stoneTex);
+    const slab = new THREE.Mesh(new THREE.BoxGeometry(SLABX, SLAB, SLABZ), stoneTex);
     slab.position.set(0, SLAB / 2, 0);
     g.add(slab);
 }
@@ -289,8 +325,8 @@ const stoneTex = texMat("bs_stone", [0x6f6a60, 0x777166, 0x67625a], { rough: 0.9
     const env = new THREE.Box3().setFromObject(g);
     const sz = env.getSize(new THREE.Vector3());
     if (env.min.y < -1e-6) throw Error(`below grade ${env.min.y}`);
-    if (sz.y < TARGET_H + SLAB - 0.01 || sz.y > TARGET_H + SLAB + 1.0) throw Error(`height ${sz.y.toFixed(3)} outside [${TARGET_H + SLAB - 0.01}, ${TARGET_H + SLAB + 1.0}] (v2 crown)`);
-    if (Math.abs(sz.x - slabW) > 0.02 || Math.abs(sz.z - slabW) > 0.02) throw Error(`plan ${sz.x.toFixed(2)}x${sz.z.toFixed(2)} != slab ${slabW.toFixed(2)} sq (+/-0.02)`);
+    if (sz.y < TARGET_H + SLAB - 0.01 || sz.y > TARGET_H + SLAB + 1.0) throw Error(`height ${sz.y.toFixed(3)} outside [${TARGET_H + SLAB - 0.01}, ${TARGET_H + SLAB + 1.0}] (v2 axle mount)`);
+    if (Math.abs(sz.x - SLABX) > 0.02 || Math.abs(sz.z - SLABZ) > 0.02) throw Error(`plan ${sz.x.toFixed(2)}x${sz.z.toFixed(2)} != slab ${SLABX.toFixed(2)}x${SLABZ.toFixed(2)} (+/-0.02)`);
     let nan = 0;
     g.traverse((o: any) => {
         const mesh = o as THREE.Mesh;
