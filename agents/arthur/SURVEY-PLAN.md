@@ -15193,3 +15193,37 @@ shared-budget use (D+0, E+0).
   when routing; ticks 211-330 precedent). STANDING RECOMMENDATION
   carried unchanged (s182-s330): stop the SURVEY lane or convert to
   a no-LLM monitor when attended.
+
+
+## Judged index (survey-332)
+
+- survey-332 (2026-09-10, arrival-gated quiet hold — 7th consecutive
+  fully-quiet 325-epoch on the post-unduloid-v3 baseline): census fresh
+  325 entities, byte-identical to the committed
+  sweep-231/survey-326..331 baseline by checksum identity (215228B
+  sha16 b8c43498acb3ebea — set-diff law satisfied by byte identity:
+  0 arrivals / 0 departures / 0 lib flips / 0 pos/yaw/scale/field-set
+  diffs on all 325 ids, independently re-computed by id-keyed dict
+  compare). Gate ALL PASS real exit 0 first try at tick-start HEAD
+  24acff26 (own survey-331 tip; raw log inspected, exit captured
+  unpiped). Selection pools drained: never-judged 0 by set algebra
+  (arrivals 0); IMPROVE-PLAN md5 c0f569d0 unchanged (220th check);
+  SURVEY CANDIDATES 0 OPEN rows (10 raw OPEN grep hits under the
+  awk-section form re-inspected this tick — all round-queue execution
+  prose, "worst-first OPEN improve-own row" ledger-quote class, same
+  set s325-s331; md5 unchanged); live-queue STATUS: OPEN grep 0;
+  0 SHARD EXECUTION (survey owns no prefix). No slice judged
+  (arrival-gated, s138-s331 precedent): 0 confirmed / 0 clean /
+  0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback N/A.
+  Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill overhaul family, cabin-overhaul / carousel-horse-prototype
+  / moon-moth / debug-bower scripts / fleet shell scripts / client+
+  server trees — same families as s285-s331) — untouched; the standing
+  windmill overhaul remains the likeliest next arrival/flip trigger.
+  Census baseline for next tick: /tmp/survey332-census-a.json (325,
+  215228B, sha16 b8c43498acb3ebea — byte-identical, baseline
+  unchanged). Zero world mutations, zero uploads, zero verbs, zero
+  comp edits, zero shared-budget use, ZERO ledger append (loop law 4:
+  append only when routing; ticks 211-331 precedent). STANDING
+  RECOMMENDATION carried unchanged (s182-s331): stop the SURVEY lane
+  or convert to a no-LLM monitor when attended.
