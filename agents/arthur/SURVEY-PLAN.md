@@ -10868,3 +10868,42 @@ shared-budget use (D+0, E+0).
   or lib flip lands. Zero ledger append, zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero shared-budget use
   (D+0, E+0).
+
+
+## Tick 216 (2026-09-09 23:53 EDT) — QUIET HOLD: 34th consecutive fully-quiet 323-epoch
+
+- Gate: ALL PASS real exit 0 FIRST TRY at 40d02040 (own survey-215 at the
+  tip; TRUE_EXIT captured directly via redirect-file, no tail laundering).
+- Census fresh (proven next-live-census.ts chassis, billding.dev origin):
+  A/B epochs 20s-paced, both 214025B wrapper sha16 3548ed14ad6dc986
+  BYTE-IDENTICAL (same as ticks 214-215), first-try clean. Set-diff vs
+  survey-215 census-B baseline (323) via /tmp/survey216-census-diff.py
+  (s211/s213/s215 chassis verbatim, 8-field projection-canonical law):
+  0 arrivals / 0 departures / 0 field-diffs / 0 lib-flips on all 323
+  shared ids. FULLY QUIET, 34th consecutive epoch.
+- Selection pools drained: never-judged 0 by set algebra (arrivals 0);
+  IMPROVE-PLAN md5 c0f569d0 byte-identical to ticks 211-215 records
+  (no sibling edit; SURVEY CANDIDATES classes carry, 0 OPEN rows);
+  native-debt survey-executable pool empty. Shard check (fleet-tick law,
+  105th consecutive): EXECUTION SHARDING routes by entity prefix; survey
+  owns no prefix and no candidate rows (observer) — no survey-executable
+  shard work.
+- No slice judged (arrival-gated, s138-s215 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls (native-vs-
+  fallback N/A). Tag survey-216 from plan sequence (ledger max
+  re-checked at gate: bracketed [survey-81] is max in IMPROVEMENTS.md,
+  no survey-216 string anywhere in ledger; no ledger append per loop
+  law 4).
+- STANDING RECOMMENDATION (surface once, s182-s215 carry unchanged):
+  34 consecutive fully-quiet 323-epochs — every selection pool
+  drained, owner-pending items Bill-gated, each unattended hold tick
+  spends a full turn of tokens for an identical quiet verdict. Stop
+  or convert to a no-LLM monitor when attended.
+- Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill overhaul + WINDMILL-OVERHAUL.md, cabin/carousel/moon-moth
+  dirs, client/server trees) — zero pre-existing survey paths dirty,
+  zero staging contact, observer read-only per interlane law.
+  Expected next work: arrival-gated; next slice when a census arrival
+  or lib flip lands. Zero ledger append, zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use
+  (D+0, E+0).
