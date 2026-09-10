@@ -8068,3 +8068,84 @@ E+0). Gate ALL PASS real exit 0 tick-start c7353e16 (un-piped).
 
 Files: mkv3-boy.ts (ignored dir, staged -f), struct136-decode-boy.ts
 (tracked), reviews/struct136-boy{,-v2,-v4}/ (ignored).
+
+## struct-137 (2026-09-09): BOY'S SURFACE PLACED — deferred placement
+## contract executed (R11 cadence: build+judge one tick, place next)
+
+Cadence 137%3==1 placement slot. Gate ALL PASS real exit 0 tick-start
+57b10ebb + PRE-MUTATION re-gate ALL PASS real exit 0 at ae68c583 (one
+mid-tick sibling advance — sweep-192 observer hold, zero world mutations,
+accepted; content-anchored verdict per tail-pipe law). Ledger max fresh =
+136 -> this tick struct-137. Shard empty fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged, survey-202..210 pinned; struct-134 row-level 0 OPEN
+nx-struct rows).
+
+SEAT: struct137-scan-boy v2 FULL 360 sweep (15deg x 10 radii, fresh census
+322) — first pass five hand-picked rays (az164/196/210/354/26) ALL
+lawfully BLOCKED, honest fail-closed, then widened per chassis law.
+63 lawful stations; re-ranked by UNDER-SERVED DISTRICT (CITY-PLAN
+Amendment 1): W-quadrant carries 9 struct forms vs N 23 / S 30 / E 10.
+SELECTED az270 R=100 -> POS (-100, PY, 0) yaw pi: worst-solid screwwell
++2.47 (law 1.4), NN screwwell 12.00 (law 8.0), film/walk/rim green; W
+outer-ring forms 5 -> 6 = at soft cap 6, not over; az184 ray avoided
+(carries 21 forms). W-axis progression reads: millrace r77 -> screwwell
+r88 -> BOY r100. Nearest non-struct neighbor nx-moonmoth-001 SAT +3.96,
+temple-labyrinth-0004 +10.34.
+
+TERRAIN struct137-terrain-boy at FINAL pose: 9pt spread 2.9mm, PY =
+lowest = 0.018685.
+
+PLACE next-place-struct137.ts hash-gated (bytes 8c25b66573954418
+unchanged, verified on-disk pre-place), center-corrected SAT re-run LIVE
+worst screwwell +2.47 fresh-322, upload store/8c25b66573954418 (shared
+budget, single upload), spawn paced 600ms. PLACED_VERIFIED nx-struct-boy
+pos [-100, 0.0187, 0] yaw 3.1416 lib store/8c25b66573954418.glb comp {}
+census 322->323. Idempotent rerun REFUSED zero-verbs exit 1
+content-anchored ("nx-struct-boy already live — this placer places fresh
+only"). Independent live read-back (curl UA): exact tuple, yaw pi exact,
+scale 1, server bbox 6.98x7.02x6.98 center [0,3.51,0] = decode envelope
+exact. Folly class — no walk owed (enneper/gyroid family precedent).
+Comps {} (glow is KEEP glow_bs_1 material inside the GLB) — nothing to
+reapply.
+
+VERDICT: The Boy's Surface stands — R11-1 complete (build+judge+place
+across two ticks, cadence law held). W-axis now runs millrace -> screwwell
+-> BOY. Native re-judge debt on v4 frames carries (struct-136); the
+identity-at-18m Sev-2 class question rides the next refine slot with
+enneper/gyroid. Bill eye-check: W road out past the screwwell — a
+three-lobed pinwheel of bone film closing on itself with NO rim, iron
+needle up through the eye to a brass crown bead after dark.
+
+NEXT: 138 — refine slot (138%3==0): enneper identity refine iteration 2
+(judge's fix class: seam weight / sheet differentiation /
+silhouette-proximal crossing) OR gyroid end-caps + night debt OR boy
+native re-judge on v4 frames (provider up?), whichever highest deficit.
+
+
+## struct-137v (2026-09-10): interrupted-window reconciliation — struct-137
+## closed (verification pass, zero mutations)
+
+Predecessor window died between ledger-append and commit: entry + plan
+block uncommitted (HEAD struct-136), placer/scan/terrain untracked, live
+world carrying the full contract. struct-9-class recovery executed —
+reconcile, never re-place:
+
+- LIVE: fresh census 323, nx-struct-boy pos [-100, 0.018685, 0] yaw pi
+  exact, lib store/8c25b66573954418.glb, server bbox 6.98x7.02x6.98
+  center [0,3.51,0] = decode envelope exact.
+- IDEMPOTENT: placer re-run refused fresh pre-upload ("already live —
+  fresh only"), zero verbs, zero mutations.
+- REPAIR: predecessor's ledger prose carried a doubled (D+1,E+0) pair
+  (h-1 law class) — deduped, running total restored 2370773 exact.
+- Gate: first run red on ledger law (caught the doubled pair); probe
+  self-catch — first run from wrong cwd false-failed tex-84 (relative
+  existsSync); re-run from repo root ALL PASS real exit 0 at b567c674.
+- Shard: IMPROVE-PLAN md5 c0f569d0 unchanged — 0 OPEN nx-struct rows.
+
+NEXT unchanged: 138 — refine slot (138%3==0): enneper identity refine
+iteration 2 OR gyroid end-caps + night debt OR boy native re-judge on v4
+frames (provider up?), whichever highest deficit.
+
+Files: struct137-scan-boy.ts, struct137-terrain-boy.ts,
+next-place-struct137.ts (all tracked this tick); mkv3-boy.ts + decode
+tool already staged struct-136.
