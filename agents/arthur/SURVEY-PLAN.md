@@ -15101,3 +15101,33 @@ shared-budget use (D+0, E+0).
   only when routing; ticks 211-327 precedent). STANDING RECOMMENDATION
   carried unchanged (s182-s327): stop the SURVEY lane or convert to a
   no-LLM monitor when attended.
+
+## Judged index (survey-329)
+
+- survey-329 (2026-09-10, arrival-gated quiet hold — 4th consecutive
+  fully-quiet 325-epoch on the post-unduloid-v3 baseline): census A/B
+  fresh both 325 entities 20s-paced, byte-identical to the committed
+  sweep-231/survey-326/327/328 baseline by checksum identity (215228B sha16
+  b8c43498acb3ebea — set-diff law satisfied by byte identity: 0 arrivals
+  / 0 departures / 0 field diffs on all 325 ids; A/B cmp identical). Gate
+  ALL PASS real exit 0 first try at tick-start HEAD df3b10bf (own
+  survey-328 tip; raw log inspected, exit captured unpiped, 99 PASS).
+  Selection pools drained: never-judged 0 by set algebra (arrivals 0);
+  IMPROVE-PLAN md5 c0f569d0 unchanged (217th check); SURVEY CANDIDATES 0
+  OPEN rows (classification carried on the unchanged md5 — raw OPEN grep
+  hits are round-queue prose, same set s325-s328); live-queue STATUS:
+  OPEN grep 0; 0 SHARD EXECUTION (survey owns no prefix). No slice judged
+  (arrival-gated, s138-s328 precedent): 0 confirmed / 0 clean /
+  0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback N/A.
+  Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill overhaul family, cabin-overhaul / carousel-horse-prototype /
+  moon-moth / debug-bower scripts / client+server trees — same families
+  as s285-s328) — untouched; the standing windmill overhaul remains the
+  likeliest next arrival/flip trigger. Census baseline for next tick:
+  /tmp/survey329-census-a.json (325, 215228B, sha256-16
+  b8c43498acb3ebea — byte-identical, baseline unchanged). Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; ticks 211-328 precedent). STANDING RECOMMENDATION carried
+  unchanged (s182-s328): stop the SURVEY lane or convert to a no-LLM
+  monitor when attended.
