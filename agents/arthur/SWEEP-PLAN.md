@@ -7414,3 +7414,57 @@ observatory @190, inn / tower-house @187, hall / bunkhouse @188,
 stable / market @189 — row-cottage/observatory stalest standing pair
 at 2 sweeps; both walk tools verified present on disk this tick:
 interior-walk-row-cottage.ts, struct2-walk-observatory.ts).
+
+||| sweep-193 | 2026-09-10 | 322→323 arrival-fold (285 thing + 38 light; A/B 20s-paced curl-class fetches BYTE-IDENTICAL 95533B sha16 e7ea4e99bc2b2add; exactly ONE domain-valid arrival nx-struct-boy [-100,0.018685,0] yaw pi lib 8c25b66573954418 comp {} = struct-137 BOY'S SURFACE placement reconciled by struct-137v @ 76546ac3 interrupted-window struct-9 class, tuple ledger-exact line-for-line; 0 departures, 0 field diffs, 0 lib flips, 0 compKeys drift on all 322 shared ids; baseline rewritten 323 ents/214789B/sha16 fd2ff862683314c3 sweep-183 chassis verbatim, post-rewrite drift ZERO) | exit 3 on ONLY known R-121 lamp-n\|nx-town-mapboard −0.407 (Sev 2 artwalk-routed @ sweep-43, 149th sweep since routing, no escalation due — law keys Sev 1); 285 bbox non-light / 236 classified / 0 coverage holes, boy in live SAT set adds NO new contacts | tier-1 4/4 per-leg verified 81/81 ALL_PASS real exit 0 each (core 64/64 @ 0.38, NW 5/5 @ 0.38, NE 7/7 @ 0.38, SW 5/5 @ 0.37) + tier-2 171st cycle row-cottage 6/6 @ 0.3838 + observatory 5/5 @ 0.389 ALL PASS | pins 15/15 ALL_PINS_OK (147th consecutive clean), sweep89-battery 28/28 ALL PASS on fresh census-A bytes, interlane md5 f6254cd0 stable, ledger law EXACT 2370773 at append, standing gate ALL PASS real exit 0 at tick-start b567c674 + RE-RUN ALL PASS real exit 0 at 76546ac3 after ONE mid-tick HEAD advance (struct-137v, the arrival's own owning lane, census-corroborated byte-identical epoch B) | CLEAN SWEEP — R-121 open, known, no escalation due |
+
+sweep-193: CLEAN SWEEP, arrival-fold tick. Census 322→323 BOTH epochs
+(A/B 20s-paced, curl-class fetches BYTE-IDENTICAL 95533B sha16
+e7ea4e99bc2b2add — first live change after ~30 fully-quiet ticks,
+settled before epoch B): exactly ONE domain-valid arrival nx-struct-boy
+[-100, 0.018685, 0] yaw pi lib 8c25b66573954418 comp {} = struct-137
+BOY'S SURFACE placement, reconciled by struct-137v @ 76546ac3
+(interrupted-window struct-9 class: predecessor window died between
+ledger-append and commit; reconciled fresh, never re-placed) — tuple
+matches the committed ledger line-for-line; 0 departures, 0 field
+diffs, 0 lib flips, 0 compKeys drift on all 322 shared ids. Baseline
+rewritten 323 ents / 214789B / sha16 fd2ff862683314c3 via
+sweep193-snapshot-rewrite.py (sweep-183 chassis verbatim, 9-field
+projection, order+set preserved, pre-write asserts arrivals == exactly
+[nx-struct-boy], post-rewrite drift ZERO). Overlap: SAT fresh-live 285
+bbox non-light / 236 classified / 0 coverage holes, real exit 3
+un-piped on exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard
+−0.407 — known Sev 2 routed to artwalk b26 choreography @ sweep-43,
+149th sweep since routing, NOT new, no escalation due (law keys
+severity-1). Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every
+leg real exit 0 — core 64/64 @ 0.38 (next-walk-core-paths.ts), NW 5/5
+@ 0.38 (nw-approach1-walk.ts), NE 7/7 @ 0.38 (ne-approach2-walk.ts),
+SW 5/5 @ 0.37 (sw-approach3-walk.ts); all four run individually,
+per-leg ok + dist/distance parsed from results[] per tool schema.
+Tier-2 171st cycle per the committed sweep-192 pointer: row-cottage
+6/6 @ 0.3838 (interior-walk-row-cottage.ts) + observatory circuit 5/5
+@ 0.389 (struct2-walk-observatory.ts — sweep-189 correction-of-record
+name), both ALL PASS real exit 0. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK (147th consecutive clean); sweep89-battery 28/28
+ALL PASS exit 0 on fresh census-A bytes; interlane md5 f6254cd0
+stable, read fresh twice. Ledger law EXACT — base 2370773 re-read
+fresh immediately before append, D+0/E+0, tool self-verifies law()
+pre and post append. Standing gate ALL PASS real exit 0 at tick-start
+b567c674 run 1; HEAD advanced once mid-tick (struct-137v @ 76546ac3 —
+the arrival's own owning lane closing its interrupted window, zero
+further mutations per its own entry, census-corroborated by my own
+byte-identical epoch B); epoch law honored, gate RE-RUN ALL PASS real
+exit 0 at 76546ac3 before the ledger append. Diff tool folded:
+sweep193-census-diff.py authored fresh from the committed sweep192
+chassis verbatim (path+docstring swap only). Probe self-catch
+pre-verdict, disclosed: first SAT count grep keyed the wrong log
+phrases and returned empty (no counts printed) — re-derived from the
+log's actual summary lines (entities-with-bbox 285 / exempt-classified
+236 / unclassified 1) before any verdict line was written; sweep-48
+schema-key class. Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use. Next
+tier-2 pair (sweep-194): inn + tower-house (172nd cycle — LRU chain
+re-derived from ledger tier-2 fragments: row-cottage / observatory
+@193, longhouse / garden-cottage @192, forge / potter @191, inn /
+tower-house @187 stalest standing pair at 6 sweeps, hall / bunkhouse
+@188, stable / market @189; both walk tools verified present on disk
+this tick: interior-walk-inn.ts, interior-walk-tower-house.ts).
