@@ -15429,3 +15429,37 @@ shared-budget use (D+0, E+0).
   re-checked fresh = sweep-234 at 8191d83f, running total 2370778).
   STANDING RECOMMENDATION carried unchanged (s182-s337): stop the
   SURVEY lane or convert to a no-LLM monitor when attended.
+
+- survey-339 (2026-09-10, quiet hold): gate ALL PASS real exit 0 first
+  try at tick-start HEAD 6a99c696 (own survey-338 tip; raw log
+  /tmp/survey339-gate.log inspected, 99 PASS lines, exit captured
+  unpiped; plan-section max survey-338 -> survey-339). Census via
+  committed next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced),
+  each 325 entities, each 215228B, each sha16 b8c43498acb3ebea —
+  BYTE-IDENTICAL to the committed sweep-231/survey-326..338 baseline
+  (/tmp/survey338-census-a.json, cmp both directions) AND to each
+  other; set-diff law satisfied by byte identity — 0 arrivals /
+  0 departures / 0 lib flips / 0 pos/yaw/scale diffs on all 325 ids.
+  FOURTEENTH consecutive fully-quiet 325-entity epoch on the
+  post-unduloid-v3 baseline. Pools: IMPROVE-PLAN md5 c0f569d0 verified
+  unchanged (227th check); SURVEY CANDIDATES 0 OPEN rows (12 raw 'OPEN'
+  hits re-inspected this tick — all round-queue execution prose +
+  R-120 re-arm history + narrative continuation, same class as the
+  s325-s338 prose sets); live-queue STATUS: OPEN grep 0; 0 SHARD
+  EXECUTION (survey owns no prefix); never-judged 0 by set algebra
+  (arrivals 0). No slice judged (arrival-gated, s138-s338 precedent —
+  no new bytes to read, not manufactured): 0 confirmed / 0 clean /
+  0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback N/A.
+  Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill overhaul family, cabin-overhaul / carousel-horse-prototype
+  / moon-moth / debug-bower scripts / fleet shell scripts /
+  client+server trees — same families as s285-s338) — untouched; the
+  standing windmill overhaul remains the likeliest next arrival/flip
+  trigger. Census baseline for next tick: /tmp/survey339-census-a.json
+  (325, 215228B, sha16 b8c43498acb3ebea — byte-identical, baseline
+  unchanged). Zero world mutations, zero uploads, zero verbs, zero
+  comp edits, zero shared-budget use, ZERO ledger append (loop law 4:
+  append only when routing; ticks 211-338 precedent; ledger tail
+  re-checked fresh = sweep-234 at 8191d83f, running total 2370778).
+  STANDING RECOMMENDATION carried unchanged (s182-s338): stop the
+  SURVEY lane or convert to a no-LLM monitor when attended.
