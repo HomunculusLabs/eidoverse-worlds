@@ -9519,3 +9519,69 @@ tracked), mkv3-unduloid.ts (ignored dir, staged -f), reviews/
 struct157-unduloid-v1+v2 (ignored). Zero world mutations, uploads, verbs,
 comp-edits, shared-budget (D+0, E+0). One ledger append (struct-157).
 Zero pushes.
+
+
+## struct-158 (2026-09-10): PLACEMENT — THE UNDULOID STOUP LIVE —
+## struct-157 committed carry executed; under-served E-district seat;
+## tangent-yaw law for chains of revolution
+
+158%3=2 placement slot (R11 cadence). Gate ALL PASS real exit 0 tick-start
+fef4a863 (own struct-157 tip, /tmp/struct158-gate.txt, REAL_EXIT:0, 98
+PASS / 0 FAIL). Shard: IMPROVE-PLAN md5 c0f569d0 unchanged (0 OPEN
+nx-struct rows — 151st check). Census 324 matches struct-156/157 pin.
+
+BANKED BYTES RE-VERIFIED before mutation (untracked-asset law): before-
+copy captured /tmp/struct158-baseline FIRST (sha 3a9b92b8aeb3722d...),
+source grep confirmed water cure lane (0x2e4a58@0.70 emissive) + amber
+dusk lineage in mkv3-unduloid.ts, decoder re-run on exact disk bytes:
+ALL PASS 17/17 real exit 0 — envelope 6.57x1.30x2.20 x/z origin-centered
+reconfirmed (never trusted prose dims).
+
+SEAT (struct158-scan-unduloid.ts, NEW, tracked — struct-156 chassis
+adapted): 64 lawful stations. District arithmetic re-derived fresh BOTH
+metrics: outer-ring E=2/W=6/N=12/S=24; all-radii E=10/W=10/N=21/S=30 —
+E decisively under-served (villarceau was E's 2nd outer form; this is
+the 3rd). "Waterfront-adjacent" disposition preference OVERRIDDEN:
+reedpool (only open water) sits az6 in 2x-over-cap N (12/6) — Amendment-1
+rotation outranks the disposition preference; disclosed in scan header.
+TANGENT YAW LAW (new, this tick — chain-of-revolution adaptation of the
+struct-104 planar-figure law): bead string runs local x; yaw=-az seats
+the string TANGENT to the ring so the az120 plaza spoke reads the full
+5-bead broadside (dot-product proof in scan header: local-x to radial
+dot = sin(az+yaw) = 0 at yaw=-az).
+SELECTED az120 (E) R110 yaw -120deg: worst-solid 2.53 (law 1.4,
+nx-craft-cloister-0016), NN spiralfolly 53.64 (law 8.0), film/walk/rim
+green. NOTE: every lawful E station starts at R110 — the R60-100 E arc
+is occupied (vesicawindow r70, villarceau r64, spiralfolly/northneedle/
+ruledtower ~57-58) — no closer E seat exists; R110 is the smallest
+lawful E radius this scan.
+
+TERRAIN (struct158-terrain-unduloid.ts, NEW, tracked): 9pt spread 8.3mm
+flat, PY = lowest = -0.031702 (corner+-) at FINAL pose.
+
+PLACEMENT (next-place-struct158.ts, NEW, tracked — struct-88..157 two-
+pass chassis): local hash re-verified 3a9b92b8aeb3722d = pinned v2
+bytes; fresh 324-entity SAT center-corrected worst 2.53 zero violations;
+upload store/3a9b92b8aeb3722d.glb (one shared-budget unit, no 429);
+spawn 1 verb. Run exit 0: PLACED_VERIFIED nx-struct-unduloid pos
+[95.2628, -0.0317, 55.0000] yaw -2.094395 lib store/3a9b92b8aeb3722d.glb
+comp {} census 325. Independent census pin re-read: pos [95.262794,
+-0.031702, 55] yaw -2.0943951023931953 scale 1 lib exact comp {} bbox
+6.567x1.3x2.2 center [0,0.65,0] — ALL exact incl decode-envelope match.
+Idempotent rerun: exit 1 "already live — this placer places fresh only"
+zero verbs (fresh-only form; died pre-upload, proven).
+Folly class — no walk owed (zeno..boy family precedent). Comps NONE
+correct: amber drip bead = emissive material inside GLB (KEEP glow),
+water gleam = material emissive; comp {}. Watch items riding the form
+(from struct-157 judgment): water-value day-front marginal
+(night-confirmed fix, rig flat-ambient disclosure), brass-at-distance.
+
+DISPOSITION: UNDULOID STOUP STANDING. R11-4 complete (authored struct-157
++ placed struct-158). Next: 159%3==0 refine slot — refine pool scan (all
+standing nx-struct-* vs internally-judged hero-ready states; worst
+evidenced visual deficit first, Bill-correction re-opens outrank).
+
+Files: struct158-scan-unduloid.ts + struct158-terrain-unduloid.ts +
+next-place-struct158.ts (all NEW, tracked); mkv3-unduloid.ts + reviews/
+(already banked struct-157, ignored). One upload (D+0, E+1). One ledger
+append (struct-158). Zero pushes.
