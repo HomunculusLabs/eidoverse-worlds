@@ -14285,3 +14285,29 @@ shared-budget use (D+0, E+0).
   fc599c0f5c714e41 — post-villarceau baseline).
 - STANDING RECOMMENDATION carried unchanged (s182-s302): stop the
   SURVEY lane or convert to a no-LLM monitor when attended.
+
+## Judged index (survey-304)
+
+- survey-304 (2026-09-10, quiet hold): gate ALL PASS real exit 0
+  first try at 6a999f8e (own lane tip survey-303 at HEAD; ledger law
+  EXACT 2370775 re-derived read-only, unchanged); census fetched curl
+  UA via /geom?world=commons-next HTTP 200 95818B, sha256-16
+  fc599c0f5c714e41 BYTE-IDENTICAL to the s303 baseline: 324==324,
+  0 arrivals / 0 departures / 0 field diffs / 0 lib flips — FIRST
+  fully-quiet epoch on the post-villarceau baseline (survey304-
+  setdiff.py, survey-303 verbatim chassis). Pools: IMPROVE-PLAN md5
+  c0f569d0 verified unchanged (192nd check), zero `| OPEN |`
+  live-queue rows, no SHARD EXECUTION section (192nd header grep, no
+  sharded rows for the survey prefix), candidates closed since
+  survey-78, never-judged pool 0 by set algebra (323 fully-covered +
+  villarceau judged s303), interlane md5 f6254cd0 stable. Arrival-
+  gated no slice (s138-s303 precedent — no new bytes to read, not
+  manufactured). 0 notes routed, 0 vision calls, ZERO ledger append
+  (loop law 4: append only when routing). Repo-side foreign dirt
+  observed and untouched (same family as s285-s303: client/server
+  .ts/.js mods, WINDMILL-OVERHAUL.md, cabin-overhaul/, carousel-
+  horse-prototype/, debug-bower scripts, fleet scripts). Census
+  baseline for next tick: /tmp/survey304-census-a.json (324, sha256-16
+  fc599c0f5c714e41). STANDING RECOMMENDATION carried unchanged
+  (s182-s303): stop the SURVEY lane or convert to a no-LLM monitor
+  when attended.
