@@ -11745,3 +11745,37 @@ shared-budget use (D+0, E+0).
   work: arrival-gated; next slice when a census arrival or lib flip
   lands. Zero ledger append, zero world mutations, zero uploads, zero
   verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Tick 237 (2026-09-10 02:16 EDT) — QUIET HOLD: 6th consecutive fully-quiet 323-epoch on the post-enneper baseline
+
+- survey-237 (2026-09-10 02:16, quiet hold — 6th consecutive fully-quiet
+  323-epoch on the post-enneper baseline: census A at
+  /tmp/survey237-census-A.json, 323 entities, 214035B, sha256-16
+  ed5856e6 — byte-identical to the survey-236 certified baseline by full
+  shasum; set-diff 0 arrivals / 0 departures on 323 shared ids by
+  checksum identity (the legacy survey178 diff script's hardcoded
+  /tmp/survey178-census.json path is dead — identity supersedes the
+  id-set diff; no repair needed, observer lane, noted for the record).
+  Gate ALL PASS real exit 0 first try at bdc2f78d own survey-236 tip
+  (ledger law EXACT 2370773). Pools drained: IMPROVE-PLAN md5 c0f569d0
+  unchanged ticks 211-237, never-judged 0 by set algebra (arrivals 0),
+  SURVEY CANDIDATES last sub-section survey-78 (09-08) with 0 OPEN rows
+  (all OPEN matches are contract prose); shard 126th check: no SHARD
+  EXECUTION section in IMPROVE-PLAN, EXECUTION SHARDING routes by
+  entity prefix and survey owns none. No slice judged (arrival-gated
+  s138-s236 precedent): 0 confirmed / 0 clean / 0 dropped, 0 notes
+  routed, 0 vision calls, native-vs-fallback N/A. Zero ledger append
+  (loop law 4 — quiet hold; lane law overrides generic one-append
+  footer, as ticks 211-236). STANDING RECOMMENDATION carried unchanged
+  (s182-s236): stop or convert to a no-LLM monitor when attended.
+  Foreign dirt at read = sibling lanes in flight (windmill overhaul
+  plan + cabin-overhaul + carousel-horse-prototype + debug-bower
+  scripts + core-paths GLB/review + carousel placer + client/server
+  trees dirty) — windmill remains the likeliest next arrival/flip
+  trigger; expect the census flip when it seats. Zero tracked survey
+  paths dirty pre-append, observer read-only per interlane law. Census
+  baseline for next tick: /tmp/survey237-census-A.json (323, sha256-16
+  ed5856e6). Expected next work: arrival-gated; next slice when a
+  census arrival or lib flip lands. Zero ledger append, zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
