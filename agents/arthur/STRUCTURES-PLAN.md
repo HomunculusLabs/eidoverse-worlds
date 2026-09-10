@@ -8872,3 +8872,80 @@ tracked), mkv3-tensegrity.ts (ignored dir, staged -f),
 reviews/struct148-tensegrity-v5/ (10 frames + before/, ignored).
 Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
 One ledger append (struct-148). Plan append-only.
+
+## struct-149 (2026-09-10): REFINE — tensegrity needle v6 (alternating lean) —
+## v5 native-arbitrated (front+gameplay float FAIL), v6 built+judged native,
+## gauge/materials/night ALL PASS; float-read residual classified
+## judge-framing-limit vs geometry, decode-decomposed; ACCEPTED banked NOT
+## placed — eye-gate packet to Bill
+
+Cadence 149%3==2 placement slot; carried mid-iteration outranks (struct-148
+precedent). Gate ALL_PINS_OK 15/15 real exit 0 tick-start (/tmp/struct149-
+gate.txt). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN
+nx-struct rows — 141st check). Ledger max re-derived struct-148 -> tag
+struct-149.
+
+V5 NATIVE JUDGMENT (the struct-148 owed contract; provider UP after one
+paced retry — 1210 then success, flap law honored; exact banked bytes
+re-verified sha cd5025b6… before judging):
+- FRONT 8m FAIL 3 axes: floats absent (struts converge at shared nodes),
+  gauge (tendons "6-10px rods nearly matching strut diameter"), touching.
+- GAMEPLAY 18m FAIL identity+separation (chevron lattice truss read),
+  PASS gauge+materials.
+- NIGHT PASS 3/3 (bead tight, silhouette traceable, grounded).
+=> Placement contract NOT satisfied; marker not written (correctly).
+
+V6 EDIT (mkv3-tensegrity.ts + struct142-decode-tensegrity.ts lockstep):
+root cause deeper than the recorded brass class — the STACKING LAW's
+uniform +60 lean makes stages a near-continuous zigzag column from cardinal
+bearings (both v5 judges' own words: "end-to-end zigzag chains", "chevron
+lattice truss"); the 23px float gap is bridged by collinear continuity.
+Three one-cause-family changes: (1) ALTERNATING LEAN +60/-60/+60 (stage
+base angles [A, A+60, A] — stacking law holds EXACTLY; every joint KINKS,
+Snelson Needle read); (2) TENDON_R 0.040->0.032 (native front gauge FAIL
+axis; 8.8px@8m / 3.3px@18m, strut 2x); (3) brass +8% albedo all three
+values (0xCEAE54/0xBE9A47/0xE1BE68 — the recorded v6 desaturation class).
+Baseline v5 captured FIRST (before/v5-cd5025b6.glb). Build sha c4cc5c4f
+e534a649…a407e8ec95 deterministic x2 MTIME-VERIFIED (1789041710 ->
+1789041712); laws PASS (strut gap 0.461 — arithmetic-preserved, stacking
+azimuths still align; weave 21; envelope 3.90x7.08x3.90 unchanged — placer
+pose holds); DECODE ALL PASS 13/13 on v6 bytes.
+
+V6 NATIVE JUDGMENT (10 fresh frames, struct149-tensegrity-v6/):
+- FRONT 8m: gauge PASS ("roughly one-third or less of strut diameter" —
+  tendon fix landed); float FAIL (shared-node read) + mid-panel strut
+  "interpenetration" claim (projection class — decode disproves: min gap
+  0.461m byte-anchored).
+- GAMEPLAY 18m: gauge PASS, materials PASS, defects PASS (clean silhouette,
+  grounded, no fragments); identity + stage-separation FAIL (same
+  shared-node read).
+- NIGHT 3/3 PASS — the silhouette judge independently reads "reminiscent
+  of Kenneth Snelson's needle towers".
+
+FLOAT-READ ADJUDICATION (banked, decode-grounded): the day judges' PASS bar
+is "no shared nodes anywhere" — but tendons terminating ON strut ends IS
+tensegrity (Snelson's own definition); the X-crossing "contact" claims are
+projection overlaps (3D clearance 0.269m weave + 0.461m disjoint, byte-
+anchored); the night silhouette judge reads the form correctly. Residual
+classified judge-framing-limit, not geometry. Per hero law, Bill's eye-gate
+decides: if his avatar-eye reads connected-truss, v7 class = larger float
+gaps (0.45->0.65m) + delete gap wires at joints (visual air, physics-legal
+simplification).
+
+PLACER RE-ARMED: next-place-struct145.ts sha pin v5 cd5025b6 -> v6
+c4cc5c4f… RED-proven FRESH post-patch (exit 1 refusal BEFORE any network,
+message carries exact v6 sha, /tmp/struct149-placer-red.txt). Marker
+correctly ABSENT.
+
+DISPOSITION: v6 ACCEPTED as banked baseline (strictly better than v5:
+gauge FAIL->PASS at 8m, materials PASS at 18m, zero regressions on any
+judged axis), NOT placed. Bill's eye-gate packet delivered once (report +
+this log). On his float-read PASS: write marker 'struct-145 c4cc5c4f…' and
+run the placer (scan/terrain/seat az90 R82 committed at struct-145,
+unchanged). On his truss-read: v7 class recorded above.
+
+Files: mkv3-tensegrity.ts (ignored dir, staged -f), struct142-decode-
+tensegrity.ts (replica v6 lockstep, tracked), next-place-struct145.ts (sha
+pin, tracked), reviews/struct149-tensegrity-v6/ (10 frames + before/,
+ignored). Zero world mutations/uploads/verbs/comp-edits/shared-budget
+(D+0 E+0). One ledger append (struct-149). Plan append-only.

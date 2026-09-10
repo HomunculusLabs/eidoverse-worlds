@@ -60,7 +60,7 @@ for (const si of json.scenes?.[0]?.nodes ?? []) walk(json.nodes[si], new THREE.M
 const matName = (mi: number | undefined) => (mi === undefined ? "(none)" : json.materials[mi]?.name ?? "?");
 
 // ---- independent parametric replica (constants re-typed, not imported) ------------------------------
-const SLAB = 0.14, STRUT_R = 0.065, TENDON_R = 0.040, BEAD_R = 0.13; // v4 (struct-147): TENDON_R 0.055 -> 0.040 + brass metal 0.9 (mkv3-tensegrity.ts v4 arbitration fix)
+const SLAB = 0.14, STRUT_R = 0.065, TENDON_R = 0.032, BEAD_R = 0.13; // v6 (struct-149): TENDON_R 0.040 -> 0.032 (wire-gauge contrast, native front FAIL axis) + alternating lean + brightened brass (mkv3-tensegrity.ts v6 arbitration fix)
 const STAGES = [
     { yb: 0.20, yt: 2.10, Rb: 1.55, Rt: 1.30 },
     { yb: 2.55, yt: 4.40, Rb: 1.10, Rt: 0.95 },
@@ -72,12 +72,14 @@ const ANCHOR_R = 1.66, ANCHOR_H = 0.36, ANCHOR_W = 0.22, ANCHOR_D = 0.52;
 const strutB: THREE.Vector3[][] = [], strutT: THREE.Vector3[][] = [];
 const ALPHA0 = (15 * Math.PI) / 180;   // v5 (struct-148): probe-selected 15deg, not the banked 30deg (dead zone — see mkv3-tensegrity.ts header)
 for (let k = 0; k < 3; k++) {
-    const S = STAGES[k], alpha = ALPHA0 + k * TWIST;
+    const S = STAGES[k];
+    const lean = k % 2 === 0 ? TWIST : -TWIST;   // v6 (struct-149): alternating lean +60/-60/+60
+    const alpha = ALPHA0 + (k === 1 ? TWIST : 0);
     strutB.push([]); strutT.push([]);
     for (let i = 0; i < 3; i++) {
         const phi = alpha + (2 * Math.PI * i) / 3;
         strutB[k].push(new THREE.Vector3(S.Rb * Math.cos(phi), S.yb, S.Rb * Math.sin(phi)));
-        strutT[k].push(new THREE.Vector3(S.Rt * Math.cos(phi + TWIST), S.yt, S.Rt * Math.sin(phi + TWIST)));
+        strutT[k].push(new THREE.Vector3(S.Rt * Math.cos(phi + lean), S.yt, S.Rt * Math.sin(phi + lean)));
     }
 }
 const tendons: [THREE.Vector3, THREE.Vector3][] = [];

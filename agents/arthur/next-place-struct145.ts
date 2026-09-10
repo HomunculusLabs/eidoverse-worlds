@@ -29,7 +29,7 @@ const YAW = 0;
 const m = {
     id: "nx-struct-tensegrity",
     file: "village_tensegrity3.glb",
-    sha: "cd5025b68cec5bc52a9faedebcd018ce272fcb087500e65c2715a79b25ec0a5b",   // v5 (struct-148): ALPHA0 15deg — replaces banked v3/v4 pins; fallback front/night PASS + gameplay sub-claims decode-falsified, native re-judge still gates placement
+    sha: "c4cc5c4fe534a64968e44ce578fd7f5a8f32730b42824eda55dc6ca407e8ec95",   // v6 (struct-149): alternating lean + TENDON_R 0.032 + brightened brass — replaces v5 pin; native re-judge still gates placement (see /tmp/struct145-native-paid law)
     bbox: { min: [-1.95, 0, -1.95], max: [1.95, 7.08, 1.95] },
     comp: {} as Record<string, never>,
 } as const;
