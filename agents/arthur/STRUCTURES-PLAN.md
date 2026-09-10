@@ -9096,3 +9096,64 @@ inside the right opening's lower half flips the front through-read
 (judge's own observation); same direction as the recorded v3 oblique-yaw
 re-seat class (struct-104 yaw-only; falsify-by-render first). Evidence:
 reviews/survey286-slice/gyroid/ (gameplay.png, front.png, served bytes).
+
+## struct-152 (2026-09-10): PLACEMENT SLOT — GYROID v3 OBLIQUE YAW RE-SEAT
+## LIVE — the struct-150 recorded v3 class executed (struct-104 yaw-only
+## face-on cure); falsified by render on exact live bytes BEFORE any mutation
+
+Cadence 152%3==2 placement slot; no committed carry (gyroid v2 seated
+struct-151; tensegrity v6 banked behind Bill's eye-gate — not takeable).
+The refine pool's one recorded placement-class item = gyroid v3 oblique
+re-seat (struct-150 disposition: "oblique yaw re-seat of the SAME v2 bytes,
+struct-104 yaw-only class; falsify-by-render at candidate yaw BEFORE any
+mutation" — the judge's own decoded recommendation). Gate ALL_PINS_OK 15/15
+real exit 0 tick-start 958d46f2 (/tmp/struct152-gate.txt, REAL_EXIT:0).
+Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN nx-struct
+rows — 145th check). Ledger max re-derived struct-151 -> tag struct-152.
+
+FALSIFICATION (struct104-render-yaw.ts rig, exact live bytes 31364ba4
+re-hashed on disk before rendering; rig yaw = live yaw + pi, so rig 0deg
+reproduces the standing S-walk dead-on read and rig 40deg previews the
+candidate live yaw pi + 2pi/9):
+- CONTROL (rig 0): native 18m judge — "wavy panel with two punched
+  circular holes", the two eye-level circles FAIL interior depth ("value
+  through them almost identical to the front face"), "thick carved shell,
+  not a two-network labyrinth" — the struct-150 caveat + s176 lineage
+  reproduced on fresh renders (frames reviews/struct152-gyroid-v3/
+  yaw0-control/).
+- CANDIDATE (rig 40): native 18m judge — openwork cluster, TRUE through-gap
+  visible ("definitively not a flat decorated panel"), "the two faces'
+  opening sets separate in depth, front/rear film layers produce parallax",
+  legibility 5/10 vs 3/10 dead-on (+2); disclosed bound: sells porous
+  volume, not receding passages at 18m (yaw cannot add interior shading —
+  end-caps class stays the standing residual for a future refine).
+- NIGHT (candidate): native PASS — silhouette traceable, EXACTLY one amber
+  bead at heart, zero bloom/strays. No regression; bead rotation-invariant.
+
+SAT (analytic, pre-mutation, fresh census 323 self-excluded, struct-151
+exemption set): yaw 40deg world-AABB half-extents 3.240x3.240 (vs 2.300
+axis-aligned) — worst nx-struct-enneper +2.485 (law 1.4), zero sub-1.4
+collisions. The S-walk row intact: kiss r230 / gyroid r240 / enneper r250.
+
+EXECUTION: struct152-reseat-gyroid-yaw.ts (NEW, tracked) from the
+struct-151 reseat chassis verbatim — live v2 contract verified FIRST fresh
+(lib 31364ba4, exact tuple, comp {}), fresh SAT self-excluded, remove +
+spawn 1200ms over one WS, NO upload (same bytes — store key unchanged),
+post-place tuple verify, idempotent form. Run real exit 0: verbs remove +
+spawn landed; RESEATED_VERIFIED nx-struct-gyroid pos [-16.7416,-0.0200,
+239.4154] yaw 3.8397 (= pi + 2pi/9 exact) lib store/31364ba46af040d5.glb
+comp {} census 323. Idempotent rerun: ALREADY_SEATED zero verbs exit 0.
+Comp bag {} empty (comp-wipe law n/a). Two verbs total, no upload budget
+consumed.
+
+DISPOSITION: gyroid v3 STANDING at yaw pi + 2pi/9. v3 closes the recorded
+oblique-yaw class; gyroid residuals now = end-caps class only (interior
+shading depth cue — a BUILD-class refine, next refine slot candidate).
+Bill eye-check: S-walk r240, 10m past Harmonic Kiss — the cube now meets
+the walk obliquely, two mouths visible at once, interior film parallax
+where the two dead circles used to be.
+
+Files: struct152-reseat-gyroid-yaw.ts (NEW, tracked), reviews/
+struct152-gyroid-v3/ (falsification frames, ignored), STRUCTURES-PLAN.md
+(this block), IMPROVEMENTS.md (one append, struct-152, D+0 E+0 — yaw-only
+same-tuple re-seat, struct-104 D+0 precedent). Zero pushes.
