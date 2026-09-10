@@ -12473,3 +12473,36 @@ shared-budget use (D+0, E+0).
 - Census baseline for next tick: /tmp/survey256-census-a.json (323,
   sha256-16 ed5856e6). Zero ledger append, zero world mutations, zero
   uploads, zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## survey-257 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Quiet hold — 26th consecutive fully-quiet 323-epoch (census A fresh
+  this tick at /tmp/survey257-census-a.json, 323 entities 214035B
+  sha256-16 ed5856e6, byte-identical to survey-256 certified baseline
+  by full checksum — identity supersedes field diff; certified
+  next-live-census.ts chassis, clean exit 0 first try, stderr empty).
+  Set-diff 0/0/0/0/0 by checksum identity (arrivals, departures, lib
+  flips, pos/yaw moves, compKey changes all zero); 38 light + 285 thing.
+- Gate ALL PASS real exit 0 first try at 915388f4 (my own survey-256 at
+  tip; ledger law EXACT 2370773 fresh this tick — gate log line
+  verified). HEAD 915388f4 unchanged through the tick.
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged ticks 211-257,
+  row-status grep '| OPEN' = 0 hits (prose-only matches characterized
+  survey-255, unchanged), no SHARD EXECUTION section (147th fresh grep),
+  SURVEY CANDIDATES last sub-section survey-78, no open intake rows,
+  never-judged 0 by set algebra (arrivals 0). Bracketed survey ledger
+  max re-derived [survey-81] (quiet holds append none; plan-section max
+  survey-257). Tag grep-verified clean pre-append (zero survey-257
+  strings in ledger or plan).
+- No slice judged (arrival-gated, s138-s256 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-
+  fallback N/A. Zero ledger append (loop law 4).
+- STANDING RECOMMENDATION carried unchanged (s182-s256): stop or
+  convert to a no-LLM monitor when attended.
+- Sibling interleaving observed: IMPROVEMENTS.md carries sweep-208's
+  staged-but-uncommitted ledger entry at read (foreign index state,
+  artwalk-34 class) — left untouched per interlane git law; this tick's
+  commit carries SURVEY-PLAN.md only, pathspec-only mode.
+- Census baseline for next tick: /tmp/survey257-census-a.json (323,
+  sha256-16 ed5856e6). Zero world mutations, zero uploads, zero verbs,
+  zero comp edits, zero shared-budget use (D+0, E+0).
