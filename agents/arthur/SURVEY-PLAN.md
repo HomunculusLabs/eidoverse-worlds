@@ -11432,3 +11432,46 @@ shared-budget use (D+0, E+0).
   arrival-gated; next slice when a census arrival or lib flip lands.
   Zero ledger append, zero world mutations, zero uploads, zero verbs,
   zero comp edits, zero shared-budget use (D+0, E+0).
+
+## Tick 229 (2026-09-10 01:03 EDT) — QUIET HOLD: 47th consecutive fully-quiet 323-epoch
+
+- Lane: SURVEY (read-only observer, sweep-family). Tag survey-229 from
+  plan sequence (grep-verified 0 survey-229/survey229 strings in ledger,
+  SURVEY-PLAN, IMPROVE-PLAN pre-write; ledger bracketed max survey-81).
+- Gate: ALL PASS real exit 0 first try at 9ba3d1f8 (sweep-198 tip; direct
+  GATE_EXIT:0 capture in tool output, 0 FAIL lines; 2 ALL PASS markers =
+  known embedded-prose class in sweep-198's HEAD line, real marker 1).
+- Census fresh (proven next-live-census.ts chassis, billding.dev origin):
+  A/B epochs 20s-paced, both 214025B sha16 3548ed14ad6dc986
+  BYTE-IDENTICAL (same as ticks 214-228), first-try clean. Set-diff via
+  /tmp/survey229-census-diff.py (s228 chassis re-derived, pitfall-12 law;
+  prior = survey-228 census-B): 0 arrivals / 0 departures / 0 field-diffs /
+  0 lib-flips on all 323 shared ids. FULLY QUIET, 47th consecutive epoch.
+  Struct-family 73 unchanged.
+- Selection pools drained: never-judged 0 by set algebra (arrivals 0);
+  IMPROVE-PLAN md5 c0f569d0 byte-identical to ticks 211-228 records (no
+  sibling edit; SURVEY CANDIDATES 0 OPEN candidate rows — tick-228 full
+  re-read verdict carried by md5 identity, polish-270 checksum law). Shard
+  check (fleet-tick law, 118th consecutive): EXECUTION SHARDING routes by
+  entity prefix; survey owns no prefix and no candidate rows (observer)
+  — no survey-executable shard work.
+- No slice judged (arrival-gated, s138-s228 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls (native-vs-
+  fallback N/A). No ledger append (loop law 4 — quiet hold; lane law
+  overrides generic one-append footer, as ticks 211-228).
+- STANDING RECOMMENDATION (surface once, s182-s228 carried unchanged):
+  47 consecutive fully-quiet 323-epochs — every selection pool drained,
+  owner-pending items Bill-gated, each unattended hold tick spends a full
+  turn of tokens for an identical quiet verdict. Stop or convert to a
+  no-LLM monitor when attended.
+- Foreign working-tree dirt at read = sibling lanes in flight (windmill
+  overhaul + place-windmill-overhaul.ts, cabin/carousel/moon-moth dirs,
+  client/server trees, fleet scripts, enneper refine sources banked-not-
+  placed per struct-139) — zero tracked survey paths dirty pre-append
+  (reviews/survey*-slice evidence dirs untracked residue, unchanged),
+  zero staging contact, observer read-only per interlane law. The
+  standing windmill overhaul remains the likeliest next arrival/flip
+  trigger; struct-139's banked enneper is a second pending trigger.
+  Expected next work: arrival-gated; next slice when a census arrival or
+  lib flip lands. Zero ledger append, zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).
