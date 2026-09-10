@@ -8376,3 +8376,45 @@ re-derived from ledger tier-2 fragments this tick: longhouse /
 garden-cottage @211, row-cottage / observatory @212, inn / tower-house
 @213, forge / potter @207 stalest standing pair; both walk tools verified
 present on disk this tick: interior-walk-forge.ts, interior-walk-potter.ts).
+
+
+sweep-214: CLEAN SWEEP fully quiet steady-state tick, no snapshot rewrite.
+Census 323==323 at BOTH epochs (A/B 20s-paced, next-live-census.ts chassis)
+BYTE-IDENTICAL 214035B sha16 ed5856e6ef4abd37 -- byte-identical to the
+survey-231..277 / sweep-199..213 certified post-enneper baseline
+representation, so quiet holds for ALL fields the projection carries incl
+comp/compKeys by byte identity: 0 arrivals, 0 departures, 0 field diffs,
+0 lib flips, 0 compKeys drift (285 thing + 38 light). Baseline
+29f0c652df402f01 current, no rewrite (no-churn precedent). Overlap: SAT
+fresh-live 285 bbox non-light / 236 classified / 0 coverage holes, real
+exit 3 un-piped on exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard
+-0.407 -- known Sev 2 routed to artwalk b26 choreography @ sweep-43, 170th
+sweep since routing, NOT new, no escalation due (law keys severity-1).
+Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0 --
+core 64/64 @ 0.38 (next-walk-core-paths.ts), NW 5/5 @ 0.38
+(nw-approach1-walk.ts), NE 7/7 @ 0.38 (ne-approach2-walk.ts), SW 5/5 @ 0.37
+(sw-approach3-walk.ts). Tier-2 192nd cycle per the committed sweep-213
+pointer: forge 6/6 @ 0.375 (interior-walk-forge.ts) + potter 6/6 @ 0.366
+(interior-walk-potter.ts), both ALL_PASS real exit 0 -- both match the
+sweep-207 records for the pair exactly. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (168th consecutive clean); sweep89-battery 28/28
+PASS exit 0 on fresh census-A bytes; interlane md5 f6254cd0 stable, read
+fresh; ledger law EXACT -- base 2370773 re-read fresh via gate at
+tick-start and at the re-run, D+0/E+0, tool self-verifies law() pre and
+post append. Standing gate ALL PASS real exit 0 from repo ROOT FIRST TRY
+at tick-start 3093f4b6 (survey-275 observer hold at tip); HEAD advanced
+twice mid-tick (survey-276 @ 67c0ace2, survey-277 @ e0ed9b2f, both
+observer holds, zero world mutations per their own entries); epoch law
+honored, gate RE-RUN ALL PASS real exit 0 at e0ed9b2f before the ledger
+append, census-corroborated by my own byte-identical epochs A/B. Diff tool
+sweep214-census-diff.py folded from the sweep213 chassis (sed swap only,
+asserted 4 forward refs / 0 stale refs, py_compile clean, run clean exit 0
+at BOTH epochs). Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged
+211-chain, no SHARD EXECUTION section (143rd check, sweep owns no prefix),
+zero OPEN candidate rows. Zero world mutations, zero defect notes, zero
+uploads, zero verbs, zero comp edits, zero shared-budget use. Next tier-2
+pair (sweep-215): hall + bunkhouse (193rd cycle -- LRU chain re-derived
+from ledger tier-2 fragments this tick: row-cottage / observatory @212,
+inn / tower-house @213, forge / potter @214, hall / bunkhouse @208 stalest
+standing pair at 6 sweeps; both walk tools verified present on disk this
+tick: interior-walk-hall.ts, interior-walk-bunkhouse.ts).
