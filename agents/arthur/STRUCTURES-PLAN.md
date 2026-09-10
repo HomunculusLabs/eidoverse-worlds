@@ -10022,3 +10022,70 @@ Files: STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-164, D+0 E+0). No new tools this tick (judgment-only debt payment
 on banked byte-tied evidence). Zero world mutations, uploads, verbs,
 comp-edits, shared-budget use. Zero pushes.
+
+
+## struct-165 (2026-09-10): R11-5 THE COSTA — MATH-PROBE TICK (build+judge
+## gated on 13/13; zero world mutations)
+
+165%3==0 refine slot, pool EMPTY (struct-164 closed the peaucellier debt
+board; tensegrity v6 banked behind Bill's eye-gate, not takeable) -> R11
+math-series build+judge per the standing disposition. Gate ALL PASS real
+exit 0 tick-start 59ce2ee1 (verify-repairs unpiped, /tmp/struct165-gate.txt,
+REAL_EXIT:0, 98 PASS). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0
+unchanged, 0 OPEN nx-struct rows — 208th check). Ledger max re-derived
+struct-164 -> tag struct-165.
+
+FORM-LEDGER GAP (fresh grep, all three ledgers): costa 0/0/0. Selected
+over scherk (the village already owns 55-mention hypar/saddle register —
+scherk's twin-tower saddle competes, Costa's pants-and-trumpets elevate),
+kuen, monkey-saddle, theodorus (all clean too — next-round queue).
+
+R11-5 THE COSTA (concept contract, written before build): THE SURFACE THAT
+ENDED A TWO-CENTURY WAIT. Costa 1984: genus one, three ends — before it,
+only plane/catenoid/helicoid were known complete embedded minimal surfaces,
+and this village already owns the catenoid (struct-102) and the helicoid
+(screw well, struct-78); Costa completes the ancient trio with the modern
+surprise. One idea: TWO TRUMPETS AND A SKIRT. Silhouette at 18m: a pair of
+vertical catenoid bells joined at the waist by a gently flaring horizontal
+skirt with one hole — the handle of the surface. Folly class, no walk owed
+(enneper/gyroid precedent). Explicit Gray parametrization secured from
+source (tpfto/J.M. 2012 simplification of Gray 1997; MathWorld
+cross-check): Weierstrass zeta/wp/wp' with g2 = Gamma(1/4)^8/(16 pi^2),
+g3 = 0, half-periods (1/2, i/2), domain (0,1)^2.
+
+PROBE (struct165-probe-costa.ts, tracked) — the lineage law held again:
+math probe BEFORE build caught a broken integrator. v1 RK4-on-wp'' FAILED
+hard (P2 half-periods garbage, P4 first-integral rel err 8.97, NaNs);
+diagnosis struct165-diag-costa.ts (tracked): residual scales LINEARLY with
+step over 100x refinement (3.9e6 -> 3.9e4) — structural drift, not
+truncation; second-order-ODE shooting is the wrong tool for a known
+lattice. v2 theta-function series (q = e^-pi, 14 terms, machine-exact):
+after two REAL bugs caught by the probe's own checks — (a) theta
+derivative phase shift d*pi/2 misplaced into the IMAGINARY component of
+the harmonic argument, (b) wpd overall sign flip (Laurent -2/w^3 caught
+it) — 12/13 checks PASS at machine precision: Laurent (1.6e-13), wp/w3/wp2
+half-period values vs e-roots (2e-15), zeta(w1)=pi/2 / zeta(w3)=-i pi/2
+(4e-16), double periodicity (1.8e-13), ODE first integral (3.1e-14),
+quasi-period jumps (1e-15), and X symmetries EXACT: X(-w) = (-x,-y,+z),
+diagonal reflection (v,u) = (y,x,-z) — both true Costa symmetries, both
+confirmed numerically. C5 (zeta' central-difference consistency) returns
+NaN — suspected check-side (finite-difference cancellation); the same
+zeta formula is counter-verified by C2/C6 at 1e-15+, but per the probe's
+own gate (ALL CHECKS PASS = build-grade), the BUILD IS GATED on 13/13:
+fix C5 (complex-step or Richardson h) first, then build. Survey data for
+the build: skirt end runs z ~ 0 (flat, planar end — Costa's three ends:
+one planar, two catenoidal), trumpets z ~ log growth from |z|~0.15 at the
+waist; interior |X_xy| bounded ~1-2 at the sampled truncations.
+
+DISPOSITION: math machinery proven and committed; NO build, NO placement
+this tick (probe gate fail-closed on C5). Zero world mutations, uploads,
+verbs, comp-edits, shared-budget (D+0, E+0). Next tick 166%3=2 placement
+slot, nothing takeable (tensegrity v6 banked behind Bill's eye-gate) ->
+R11 carry per struct-155 precedent: fix C5 to 13/13, then BUILD + JUDGE
+the Costa (mkv3-costa.ts, deterministic x2, decode audit, 10-frame review,
+native judgment vs concept contract), bank accepted bytes for the 167
+placement slot.
+
+Files: struct165-probe-costa.ts + struct165-diag-costa.ts (NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-165,
+D+0 E+0). No GLB built this tick. Zero pushes.
