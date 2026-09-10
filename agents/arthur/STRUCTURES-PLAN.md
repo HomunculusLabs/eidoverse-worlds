@@ -9028,3 +9028,51 @@ Files: struct150-filmprobe-gyroid.ts (NEW, tracked), struct131-decode-gyroid.ts
 reviews/struct150-gyroid-v2/ (10 frames + before/, ignored). Zero world
 mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0). One ledger append
 (struct-150). Plan append-only.
+
+## struct-151 (2026-09-10): REFINE RE-SEAT — gyroid v2 (doubleSided export
+## cure) LIVE — the struct-150 committed carry executed at exact pose
+
+Carried mid-iteration placement outranks cadence (struct-139/143 precedent;
+151%3=1 build slot, but the banked-not-placed v2 was the lane's explicit
+next action). Gate ALL_PINS_OK 15/15 real exit 0 tick-start e4be26b3
+(/tmp/struct151-gate.txt, unpiped). Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged — 143rd check, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-150 -> tag struct-151.
+
+PRE-MUTATION STATE, all verified fresh this tick: live v1 contract exact
+(census 323, nx-struct-gyroid lib store/da2a4b158a448caa.glb pos
+[-16.741554,-0.019981,239.415372] yaw pi scale 1 comp {} = the struct-132
+PLACED_VERIFIED contract), v2 banked bytes on disk re-hashed
+31364ba46af040d538b4bf1faf9992378118c59c0c428123fde9c73ad6c1d776 exact
+(= struct-150 pin, mtime Sep 10 08:29 = that build), envelope UNCHANGED
+4.60x4.19x4.60 (material-flag-only edit — no terrain re-derivation owed,
+v1 9pt law PY -0.019981 stands; the enneper struct-140 needed re-derivation
+only because its v3c footprint WIDENED).
+
+EXECUTION: struct151-replace-gyroid.ts authored from the struct-140
+reseat chassis verbatim (verify-live-v1-first, fresh-SAT self-excluded,
+upload 429-backoff, remove+spawn 1200ms over one WS, post-place tuple
+verify, idempotent ALREADY_SEATED form). Run real exit 0: SAT worst
+nx-struct-enneper +3.43 (law 1.4, fresh 323-entity set, self excluded —
+the S-walk cadence kiss r230 / gyroid r240 / enneper r250 row intact);
+upload OK store/31364ba46af040d5.glb (content-addressed, new store key);
+remove + spawn landed over one WS; REPLACED_VERIFIED nx-struct-gyroid
+pos [-16.7416,-0.0200,239.4154] yaw pi lib store/31364ba46af040d5.glb
+comp {} census 323. Idempotent rerun: ALREADY_SEATED zero verbs exit 0.
+Comp bag {} verified empty both post-place reads (comp-wipe law n/a —
+empty bag). One upload + two verbs total this tick (shared budget
+respected, 1200ms verb spacing).
+
+DISPOSITION: gyroid v2 STANDING. Native gameplay 5/5 + night 3/3 PASS
+(struct-150), front ZAI 5/5 PASS (native front debt disclosed that frame
+only). Remaining gyroid residuals stay in the refine pool: end-caps
+class + the v3 oblique-yaw re-seat class (struct-104 yaw-only; recorded
+at struct-150, not executed — falsify-by-render first if taken). Bill
+eye-check: S-walk terminus r240, 10m past the Harmonic Kiss — the mouths
+now show bone film receding into shadowed passage instead of sky through
+the openings.
+
+Files: struct151-replace-gyroid.ts (NEW, tracked), STRUCTURES-PLAN.md
+(this block), IMPROVEMENTS.md (one append, struct-151, D+0 E+0 — same-id
+re-seat precedent struct-140; D+1 is fresh placements only, census
+323->323). Zero pushes. One ledger append (struct-151). Plan append-only.
