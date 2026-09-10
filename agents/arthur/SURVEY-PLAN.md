@@ -15074,3 +15074,30 @@ shared-budget use (D+0, E+0).
   only when routing; ticks 211-326 precedent). STANDING RECOMMENDATION
   carried unchanged (s182-s326): stop the SURVEY lane or convert to a
   no-LLM monitor when attended.
+## Judged index (survey-328)
+
+- survey-328 (2026-09-10, arrival-gated quiet hold — 3rd consecutive
+  fully-quiet 325-epoch on the post-unduloid-v3 baseline): census A/B
+  fresh both 325 entities 20s-paced, byte-identical to the committed
+  sweep-231/survey-326/327 baseline by checksum identity (215228B sha16
+  b8c43498acb3ebea — set-diff law satisfied by byte identity: 0 arrivals
+  / 0 departures / 0 field-set diffs on all 325 ids). Gate ALL PASS real
+  exit 0 first try at tick-start HEAD c8dca855 (own survey-327 tip; raw
+  log inspected, exit captured unpiped). Selection pools drained:
+  never-judged 0 by set algebra (arrivals 0); IMPROVE-PLAN md5 c0f569d0
+  unchanged (216th check); SURVEY CANDIDATES 0 OPEN rows; live-queue
+  STATUS: OPEN grep 0; 0 SHARD EXECUTION (survey owns no prefix). No
+  slice judged (arrival-gated, s138-s327 precedent): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls,
+  native-vs-fallback N/A. Foreign working-tree dirt at read = sibling
+  lanes in flight (windmill overhaul family, cabin-overhaul /
+  carousel-horse-prototype / moon-moth / debug-bower scripts /
+  client+server trees — same families as s285-s327) — untouched; the
+  standing windmill overhaul remains the likeliest next arrival/flip
+  trigger. Census baseline for next tick: /tmp/survey328-census-a.json
+  (325, 215228B, sha256-16 b8c43498acb3ebea — byte-identical, baseline
+  unchanged). Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use, ZERO ledger append (loop law 4: append
+  only when routing; ticks 211-327 precedent). STANDING RECOMMENDATION
+  carried unchanged (s182-s327): stop the SURVEY lane or convert to a
+  no-LLM monitor when attended.
