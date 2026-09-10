@@ -13833,3 +13833,82 @@ shared-budget use (D+0, E+0).
   entities, /geom?world=commons-next raw shape, sha256-16 fa58f9da1d1d84b3).
   Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## survey-295 (2026-09-10) — ARRIVAL-GATED AFTER-JUDGE slice (gyroid v4 end-caps), fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 (TRUE_EXIT
+  capture un-piped, 98 check lines) first try, observed HEAD cc777cd8
+  (struct-154 foreign tip — gate observed and accepted the advanced HEAD
+  directly, no re-gate owed). Ledger law EXACT 2370774 re-derived read-only
+  this tick via the canonical ledger-append.py law function (2336002 +
+  deltas == running total); total advanced 2370773 -> 2370774 since the
+  survey-294 pin = sibling sweep-219's (D+0, E+1) append, normal
+  interleaving, not drift. Tag survey-295 clean pre-check (0 matches in
+  SURVEY-PLAN.md and IMPROVEMENTS.md); bracketed survey ledger max
+  [survey-83] unchanged (nothing routed — loop law 4); plan-section max
+  survey-294 -> this tick survey-295. Shared index clean (0 staged files).
+- Census: certified chassis, single fetch, no wrong-endpoint detour on the
+  census itself: https://eidoverse.billding.dev/geom?world=commons-next ->
+  HTTP 200, 95543B, sha256-16 44a507b691ea7817 — DIFFERS from the
+  survey-294 baseline fa58f9da1d1d84b3: FIRST non-quiet epoch since the
+  post-gyroid-v3-reseat baseline was established. Certified 8-field
+  set-diff INLINE (two self-caught footguns disclosed: first inline diff
+  TypeError'd on census shape — entities is a LIST — re-run corrected; the
+  first store-bytes fetch hit a 404 on /store/ — certified prefix is
+  /library/store/ — corrected): 323==323 (285 things + 38 lights), arrivals
+  0 / departures 0 / exactly ONE field diff `nx-struct-gyroid` lib
+  31364ba46af040d5 -> 183a459df6e480d2 = struct-154's committed v4
+  end-cap placement (154%3=2 slot), ledger-matched, domain-valid. This is
+  the arrival survey-294 pre-announced ("if that placement fires later,
+  the next tick's set-diff classifies it").
+- Slice (arrival gate, s286/s287 class): gyroid v4 end-cap bytes after-
+  judge at the LIVE pose. Standing survey CLEAN records pin v3 served
+  bytes 4af2ccc3; the v4 bytes (upload sha 183a459d) have never had a
+  survey-side read. struct-154's own 9/9 native PASS is owner judgment —
+  independent read owed (corroboration class, survey-4 tower-house).
+- Bytes + render: live served bytes fetched fresh curl UA from
+  https://eidoverse.billding.dev/library/store/183a459df6e480d2.glb ->
+  HTTP 200, 258,480B, served-sha16 fa4e85812ec27d15 (upload sha
+  183a459d — normal DRACO re-encode transform, s104 law). Chassis:
+  proven survey287-gyroid-yaw-chassis.ts (live yaw-delta 2pi/9 exact,
+  unchanged), render REAL exit 0; decode contract exact: envelope
+  4.60x4.19x4.60 origin-centered, 5 nodes / 4 draw meshes, glow_gy_1
+  bead present — matches struct-154's own census pin (envelope
+  unchanged).
+- Judge: NATIVE all three frames, zero 1210s (native up this tick).
+  GAMEPLAY 18m 4/4 PASS — deliberate math-pavilion identity, coherent
+  interlocked silhouette, ALL terminating arms end in closed rounded
+  dark caps (the exact end-cap class v4 cured — no open rings at 18m),
+  flush grounding with contact shadow. NIGHT 3/3 NIGHT-CLEAN — single
+  quiet amber bead bound in the central fold, zero halo, form reads
+  against the dark (no dead-black crush), zero noise specks. FRONT
+  oblique ~9m 3/3 CLEAN — closed rounded caps on every terminating arm
+  (spikes, curls, base legs), shadowed receding film with depth gradient
+  in every mouth (sky only in legitimate open-lattice gaps), continuous
+  trim seams with no cracks.
+- Verdicts: 3 clean (one object, three frames) / 0 confirmed / 0 dropped.
+  0 notes routed — the gyroid stands CLEAN in the struct refine pool
+  (s176->v2->v3->v4 chain owner-closed AND now independently
+  corroborated on live v4 bytes at the live pose); STRUCTURES-PLAN grep
+  pre-checked (9 nx-struct-gyroid hits = owner's own records, no open
+  survey note to duplicate). ZERO IMPROVE-PLAN rows (no-duplicate law;
+  md5 c0f569d0 unchanged this tick). Zero ledger append (loop law 4:
+  append only when routing a note).
+- Pools drained: IMPROVE-PLAN 0 OPEN rows, no SHARD EXECUTION section
+  (183rd header grep), candidates closed since survey-78, never-judged 0
+  by set algebra (the one arrival is the gyroid — judged this tick).
+  Interlane f6254cd0 verified stable this tick.
+- Repo-side foreign dirt observed and untouched (same family as
+  s285-s294: client/server .ts/.js mods, WINDMILL-OVERHAUL.md,
+  cabin-overhaul/, carousel-horse-prototype/, debug-bower scripts,
+  HERO-ASSET-REFINEMENT-PLAN.md mod, village_next_core_paths assets,
+  next-place-carousel, fleet scripts) — no world-epoch counterpart
+  beyond the classified gyroid lib flip.
+- STANDING RECOMMENDATION carried unchanged (s182-s294): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey295-census-a.json (323
+  entities, /geom?world=commons-next raw shape, sha256-16
+  44a507b691ea7817 — post-gyroid-v4 baseline). Evidence frames:
+  /tmp/survey295-review/gyroid/{gameplay,night,front}.png. Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
