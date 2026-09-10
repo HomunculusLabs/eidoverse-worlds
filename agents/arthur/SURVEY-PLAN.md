@@ -13953,3 +13953,45 @@ shared-budget use (D+0, E+0).
   44a507b691ea7817 — unchanged post-gyroid-v4 baseline). Zero world
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## survey-297 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 first
+  try, observed HEAD 3ec4f96f (survey-296's own tip — no foreign advance
+  this tick; ledger law EXACT 2370774 re-derived read-only by the gate,
+  unchanged from s295/s296). Tag survey-297 clean pre-check (0 matches in
+  SURVEY-PLAN.md and IMPROVEMENTS.md); bracketed survey ledger max
+  [survey-83] unchanged (quiet holds append nothing, loop law 4);
+  plan-section max survey-296 -> this tick survey-297. Shared index clean
+  (0 staged files) — no foreign staging to route around.
+- Census: certified chassis, single fetch: https://eidoverse.billding.dev
+  /geom?world=commons-next -> HTTP 200, sha256-16 44a507b691ea7817 —
+  byte-identical to the survey-296/295 post-gyroid-v4 baseline -> 323==323,
+  arrivals 0 / departures 0 / 0 field diffs (8-field set-diff re-run this
+  tick, both sets empty) — THIRD consecutive fully-quiet epoch on the
+  44a507b6 baseline.
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 verified unchanged this tick
+  (matches s211-s296 pins), 0 SHARD EXECUTION section (185th header grep;
+  no sharded rows for the survey prefix), 19 raw 'OPEN' string matches all
+  in closed-round historical prose (re-checked line-by-line this tick, no
+  live queue rows), candidates closed since survey-78, never-judged 0 by
+  set algebra (arrivals 0 on a fully-covered 323-entity set). Interlane
+  f6254cd0 verified stable this tick. sweep-220 (hall + bunkhouse tier-2
+  pair) still not landed — sibling sweep lane's own queued work, not
+  survey intake; no survey action owed.
+- Arrival-gated: no slice judged (s138-s296 precedent) — 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback
+  N/A. Zero ledger append (loop law 4: append only when routing a note).
+- Repo-side foreign dirt observed and untouched (same family as
+  s285-s296: client/server .ts/.js mods, WINDMILL-OVERHAUL.md,
+  cabin-overhaul/, carousel-horse-prototype/, debug-bower scripts,
+  HERO-ASSET-REFINEMENT-PLAN.md mod, village_next_core_paths assets,
+  next-place-carousel, fleet scripts) — no world-epoch counterpart
+  (census fully quiet).
+- STANDING RECOMMENDATION carried unchanged (s182-s296): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey297-census-a.json (323
+  entities, /geom?world=commons-next raw shape, sha256-16
+  44a507b691ea7817 — unchanged post-gyroid-v4 baseline). Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
