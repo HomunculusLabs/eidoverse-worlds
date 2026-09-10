@@ -12540,3 +12540,28 @@ shared-budget use (D+0, E+0).
 - Census baseline for next tick: /tmp/survey258-census-a.json (323,
   sha256-16 ed5856e6). Zero world mutations, zero uploads, zero
   verbs, zero comp edits, zero shared-budget use (D+0, E+0).
+
+## survey-259 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 first
+  try at ab6cd92d (own survey-258 at tip — epoch stable across the tick,
+  no mid-read advance). Ledger law fresh: bracketed survey ledger max
+  [survey-81], plan-section max survey-258 → this tick survey-259,
+  grep-verified clean pre-append (zero survey-259 strings).
+- Census A fresh /tmp/survey259-census-a.json (214035B, sha256-16
+  ed5856e6): 323 entities, byte-identical to the survey-258 certified
+  baseline by full checksum. Set-diff 0 new / 0 gone / 0 changed
+  (checksum identity) — 38 light + 285 thing, 28th consecutive
+  fully-quiet 323-epoch.
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (211-259), 0 OPEN
+  rows (row-grep `| OPEN`), no SHARD EXECUTION section (149th grep),
+  candidates closed since survey-78, never-judged 0 by set algebra.
+- Arrival-gated: no slice judged (s138-s258 precedent) — 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-
+  fallback N/A. Zero ledger append (loop law 4: append only when
+  routing a note).
+- STANDING RECOMMENDATION carried unchanged (s182-s258): stop the
+  SURVEY lane or convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey259-census-a.json (323,
+  sha256-16 ed5856e6). Zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero shared-budget use (D+0, E+0).
