@@ -60,7 +60,7 @@ for (const si of json.scenes?.[0]?.nodes ?? []) walk(json.nodes[si], new THREE.M
 const matName = (mi: number | undefined) => (mi === undefined ? "(none)" : json.materials[mi]?.name ?? "?");
 
 // ---- independent parametric replica (constants re-typed, not imported) ------------------------------
-const SLAB = 0.14, STRUT_R = 0.065, TENDON_R = 0.055, BEAD_R = 0.13;
+const SLAB = 0.14, STRUT_R = 0.065, TENDON_R = 0.040, BEAD_R = 0.13; // v4 (struct-147): TENDON_R 0.055 -> 0.040 + brass metal 0.9 (mkv3-tensegrity.ts v4 arbitration fix)
 const STAGES = [
     { yb: 0.20, yt: 2.10, Rb: 1.55, Rt: 1.30 },
     { yb: 2.55, yt: 4.40, Rb: 1.10, Rt: 0.95 },

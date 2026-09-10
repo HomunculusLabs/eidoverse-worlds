@@ -67,7 +67,7 @@ const STAGES = [
 ];
 const TWIST = Math.PI / 3;                          // +60 deg per stage (spiral needle)
 const STRUT_R = 0.065;
-const TENDON_R = 0.055;
+const TENDON_R = 0.040;   // v4 (struct-147): native arbitration (front 8m + gameplay 18m FAIL, 2/4 both) upheld tendon-as-rod — 0.055 rendered 15-22px rods at 8m (137px/m) and 6-10px shaded tubes at 18m (52.1px/m), same diameter class as struts, matte (no specular). Fix class pre-committed struct-144: thinner tendons + metal brass, NOT geometry. 0.040 = 11px@8m / 4.2px@18m (the legibility floor, struct-45 distance-tension law).
 const BEAD = new THREE.Vector3(0, 6.95, 0);
 const BEAD_R = 0.13;
 const SOCK_H = 0.42;                                // socket block top (stage-0 bottoms embed)
@@ -173,7 +173,7 @@ if (tendons.length !== 21) throw Error(`tendon census ${tendons.length} != 21`);
 const g = new THREE.Group();
 const glowMeshes: THREE.Mesh[] = [];
 const timberTex = texMat("tn_timber", [0x5a4030, 0x6a4d39, 0x453024], { rough: 0.88, scale: 3, weights: [3, 1, 1], seed: 9421 });   // v3 WALNUT two-value (struct-144): dark compression / bright tension. struct-143 native judge: v2 straw 0x96683c L=0.167 collided with mid-brass 0xb08f42 L=0.293 (delta 0.126) — tendons read as second timber. New lightest timber 0x6a4d39 L=0.087 clears mid-brass by 0.206 (3.4x) and bright 0xd0b060 by 0.366 (5.2x).
-const brassTex = texMat("tn_brass", [0xbfa14e, 0xb08f42, 0xd0b060], { rough: 0.38, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9422 }); // v2 brighter brass (enneper ep_brass lineage)
+const brassTex = texMat("tn_brass", [0xbfa14e, 0xb08f42, 0xd0b060], { rough: 0.38, metal: 0.9, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9422 }); // v4 (struct-147): metal 0 -> 0.9 — native judges at BOTH distances read the tendons MATTE ("no metallic specular", "3-tone shaded tubes not wire"). v2 brighter-brass lineage (enneper ep_brass); metallic response makes thin members read as wire/bright line, not painted dowel.
 const stoneTex = texMat("tn_stone", [0x6f6a60, 0x777166, 0x67625a], { rough: 0.95, scale: 2, weights: [3, 1, 1], seed: 9423 });       // boy bs_stone lane
 
 const strutMesh = (B: V3, T: V3) => {

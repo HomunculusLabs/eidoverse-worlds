@@ -8717,3 +8717,84 @@ bolder brass, not geometry.
 Files: none new this tick (contract files all committed at struct-145).
 Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0, E+0).
 One ledger append (struct-146). Plan append-only.
+
+## struct-147 (2026-09-10): REFINE — tensegrity needle v4 (tendon-wire fix) —
+## native arbitration PAID on v3 (FAIL upheld), v4 tendon axis CURED at both
+## distances, residual identity FAIL decode-falsified as projection
+## collinearity; v5 class recorded (alpha0 30deg); ACCEPTED banked NOT placed
+
+Cadence 147%3==0 refine slot; carried mid-iteration outranks (struct-139/143/
+144 precedent). Gate ALL_PINS_OK 15/15 real exit 0 tick-start f2c00868
+(/tmp/struct147-gate.txt, REAL_EXIT:0). Shard drained fresh (IMPROVE-PLAN no
+SHARD EXECUTION section, 0 OPEN nx-struct rows — 138th check). Ledger max
+re-derived struct-146 -> tag struct-147.
+
+NATIVE ARBITRATION ON v3 (provider UP mid-tick, then hard down):
+- front 8m: FAIL 2/4 — walnut two-value PASS, floats PASS; tendon-as-rod
+  UPHELD (15-22px matte rods, no metallic specular, reads wooden dowels).
+- gameplay 18m: FAIL — same upheld cause (6-10px shaded 3-tone tubes);
+  its "kiss/cross welds net to struts" sub-claim = struct-143 falsified
+  2D-projection class (byte 0.461m disjoint).
+- night: 1210 (fallback PASS carries from struct-145).
+=> The struct-144/145 pre-commitment fired: v4 class = thinner tendons +
+metal brass, NOT geometry. Marker NOT written (v3 not placed).
+
+V4 EDITS (mkv3-tensegrity.ts, two bounded changes):
+1. TENDON_R 0.055 -> 0.040 (pre-computed 11px@8m / 4.2px@18m — the
+   struct-45 distance-tension legibility floor).
+2. brass texMat metal 0 -> 0.9 (both native judges read the v3 tendons
+   MATTE; metallic response = wire read on thin members).
+Replica updated in lockstep (struct142-decode-tensegrity.ts TENDON_R 0.040).
+
+BUILD: sha 58683b534508d2df… deterministic x2 MTIME-VERIFIED. All in-file
+laws PASS unchanged (strut-disjoint 0.461, weave 21 tendons, envelope
+3.90x7.08x3.90). DECODE ALL PASS 13/13 (468 timber + 840 brass + 168 stone
+verts 0 orphan 0.00000m, 1 emissive lane).
+
+V4 JUDGED (10 fresh frames, reviews/struct147-tensegrity-v4/):
+- NATIVE gameplay 18m: 3/4 — TENDONS PASS ("fine 2-4px lines, clearly
+  wire-gauge" #C9A243 — the v4 cure CONFIRMED at first-read distance);
+  floats PASS; base PASS; identity FAIL ("strut ends converge and touch at
+  shared nodes" — see probe below: falsified).
+- ZAI fallback front 8m (native 1210 x2 + paced retry after two
+  client-side path typos disclosed): 3/4 — tendons PASS (5-8px wire,
+  3:1 width ratio vs struts; cure corroborated at walk-up); contrast PASS;
+  floats PASS (two flags decode-classified: socket-block shadow face;
+  anchor block + its 5.5px guy); identity FAIL with cited contacts
+  (555,395)/(590,165)/(335,430).
+- ZAI fallback night: 3/3 PASS (one tight amber bead ~10px, no bloom;
+  silhouette traceable via hue split; zero strays).
+
+PROJECTION PROBE (struct147-probe-projection.ts, NEW, tracked — probe law
+11): replica geometry through the EXACT review-model gameplay camera
+(fov 42, pos [0,1.65,18], target y2.69):
+- 3D strut-END to other-strut-axis min gap: 1.010m (strut1.1T vs strut2.1)
+  — ends NEVER touch anything (law print 0.461 surface gap holds).
+- PROJECTED min end-to-other-axis gap at 18m: 2.0px, pair strut2.1T vs
+  strut2.0 — opposite sides of the mast (z +/-0.62) sharing IDENTICAL
+  screen-x: 1.25m of depth separation compresses to 0 along the sightline.
+  Both judges' cited "contacts" are this exact class; "pull ends back" is
+  arithmetically impossible (ends already 1.010m clear = 138px at 8m).
+ROOT CAUSE (arithmetic): alpha0=0 => cos120deg == cos240deg == -0.5, so
+every stage has a strut pair exactly collinear from every cardinal bearing
+— the review chassis's own front/gameplay views ARE cardinal. A 3-fold
+symmetric mast at alpha0=0 can never pass a cardinal-view identity read.
+
+V5 CLASS RECORDED (one bounded change, next refine slot): rotate alpha0 by
+30deg (uniform stage rotation — stacking/weave/disjoint laws are
+relative-angle relations, all preserved; slab dominates footprint) => no
+stage pair collinear from the judged bearings. Then judge {front, gameplay,
+night}; on PASS the struct-145 placement contract runs (marker content
+updates to v5 sha).
+
+DISPOSITION: v4 ACCEPTED as banked baseline (strictly better than v3 on
+every judged axis — tendon read cured at BOTH distances; zero regressions),
+NOT placed. Native debts carried: v4 front + night (gameplay already
+native-judged this tick); v5 build+judge on next refine tick or first
+native-up window. Marker /tmp/struct145-native-paid correctly ABSENT.
+
+Files: mkv3-tensegrity.ts (ignored dir, staged -f), struct142-decode-
+tensegrity.ts (replica v4 bump, tracked), struct147-probe-projection.ts
+(NEW, tracked), reviews/struct147-tensegrity-v4/ (10 frames, ignored).
+Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
+One ledger append (struct-147). Plan append-only.
