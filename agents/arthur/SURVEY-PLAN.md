@@ -14203,3 +14203,85 @@ shared-budget use (D+0, E+0).
   44a507b691ea7817 — unchanged post-gyroid-v4 baseline). Zero world
   mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## survey-303 (2026-09-10) — arrival-gated slice, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0
+  FIRST TRY at c64d5ada (own lane tip survey-302); HEAD advanced
+  mid-tick to f9855f54 (struct-156 Villarceau PLACED LIVE, foreign
+  domain) — RE-GATED ALL PASS real exit 0 at f9855f54 (epoch law).
+  Ledger law EXACT 2370774 re-derived read-only by the gate,
+  unchanged. Tag survey-303 clean pre-check (0 matches in
+  SURVEY-PLAN.md and IMPROVEMENTS.md); bracketed survey ledger max
+  [survey-83] unchanged (no routing this tick, no append, loop law 4);
+  plan-section max survey-302 -> this tick survey-303.
+- Census: certified chassis, single fetch (curl UA — python urllib
+  hit a shadowed-stdlib environment failure, bisect.insort
+  AttributeError; fetch re-issued through curl, diff in python):
+  /geom?world=commons-next HTTP 200 95818B, sha256-16 fc599c0f5c714e41
+  — EPOCH MOVED after 8 fully-quiet ticks: 323->324, ONE arrival
+  `nx-struct-villarceau` (lib store/c8a54b6aa5992af8.glb, pos
+  [45.254834, -0.022029, -45.254834], yaw 0, kind thing), departures
+  0, 0 field diffs / 0 lib flips across all 323 shared ids
+  (survey303-setdiff.py, survey-260 verbatim chassis). Arrival =
+  struct-156 (f9855f54) executing struct-155's banked R11-3 placement
+  — ledger-matched, tuple-exact vs struct-156's PLACED_VERIFIED pin,
+  committed struct-domain sibling work, classified.
+- Pools: IMPROVE-PLAN md5 c0f569d0 verified unchanged (191st check;
+  zero `| OPEN |` live-queue rows, 0 SHARD EXECUTION — 191st header
+  grep, no sharded rows for the survey prefix), candidates closed
+  since survey-78, interlane f6254cd0 stable. Never-judged pool = the
+  arrival itself (set algebra: fully-covered 323 + 1 new) → SLICE =
+  the arrival, arrival-gated per loop law 3 (s138 precedent, not
+  manufactured).
+- SLICE: nx-struct-villarceau FIRST INDEPENDENT READ. Fetch: curl UA
+  HTTP 200 97280B from /library/store/c8a54b6aa5992af8.glb; served
+  sha16 1bdeec92dfc8328c (lib name = upload pin; served != upload is
+  the struct-104 DRACO re-encode law, normal transform). CHASSIS:
+  review-model-draco.ts 8 views exit 0; envelope 3.4842x3.4742x2.2000
+  — EXACT match to struct-156's ledger pin (bbox 3.48x3.47x2.20);
+  5 nodes / 4 draw meshes, named [villarceau_0/1/2, glow_vc_1]
+  (DRACO merge law, normal).
+- JUDGE: NATIVE DOWN ALL TICK (1210 x2 on gameplay first call, single
+  paced 20s retry burned) — ZAI FALLBACK 3/3 frames, DISCLOSED.
+  Gameplay 18m: identity PASS (bare silhouette reads hoop-on-edge,
+  arcs+bead push it to armillary/math-marker; plinth-seated, cast-
+  shadow grounded x318-410 y421-433, intentional rimmed through-hole
+  x462-500 y314-354), support PASS, value PASS (darkest mass ~25-35%
+  luminance, no voids), brass inlay MARGIN (shadow-side arcs x400-445
+  y285-395 collapse to 1-2px scratch-lines at 18m). Night: PASS 3/3 —
+  exactly ONE quiet warm point (bead ~(480,310), 8-10px, crisp edges,
+  no bloom/halo/leak/detached orbs; brass stays unlit, correct),
+  silhouette carries against dark sky — corroborates struct-155's own
+  native night PASS. Front: inlay PASS — the 18m scratch-read is
+  OVERTURNED as distance-resolution class (close range: 7-9px bands
+  foreshortening correctly to 3-4px, olive-gold hue RETAINED on the
+  shadow side, continuous speculars upper-right x390-560, half-proud
+  contact shading, bead seated at the crossing ~(482,250)); geometry
+  PASS (zero floats/gaps/z-fights, hole interior clean stone, arcs
+  terminate at legitimate occlusion boundaries); rim clearance MARGIN
+  (two sub-AA tangency zones: top apex ~(455,104) and left flank
+  ~(293,295), 2-5px clearance stretches — verify-tier watch items,
+  escalate only if full-res confirms merge).
+- VERDICT: nx-struct-villarceau CLEAN-with-margin (ZAI 3/3 frames,
+  native down disclosed). Native re-judge debt NONE owed — the owner
+  already carries native coverage on these exact bytes (struct-155
+  gameplay 18m + night PASS; struct-156 FRONT-8M PASS 5/5); this read
+  independently CORROBORATES. Margins stay in this index (not routed,
+  survey-15/22 precedent): (a) 18m shadow-side brass line-weight —
+  distance-resolved; (b) top-apex/left-flank rim-tangency zones —
+  sub-AA watch items. Slice: 1 judged / 0 confirmed / 0 clean-margin
+  count as clean / 0 dropped.
+- Routing: ZERO notes routed (no confirmed defect), ZERO ledger
+  append (loop law 4: append only when routing), zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0). Repo-side foreign dirt observed and
+  untouched (same family as s285-s302: client/server .ts/.js mods,
+  WINDMILL-OVERHAUL.md, cabin-overhaul/, carousel-horse-prototype/,
+  debug-bower scripts, next-place-struct156.ts placer, fleet scripts)
+  — the struct-156 placer file is struct-lane owned, left alone.
+- Census baseline for next tick: /tmp/survey303-census-a.json (324
+  entities, /geom?world=commons-next raw shape, sha256-16
+  fc599c0f5c714e41 — post-villarceau baseline).
+- STANDING RECOMMENDATION carried unchanged (s182-s302): stop the
+  SURVEY lane or convert to a no-LLM monitor when attended.
