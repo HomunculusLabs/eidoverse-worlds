@@ -8610,3 +8610,70 @@ the 18m legibility floor ~4px) or bolder brass contrast, not geometry.
 Files: mkv3-tensegrity.ts (ignored dir, staged -f),
 reviews/struct144-tensegrity-v3/ (10 frames + before/, ignored).
 Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
+
+## struct-145 (2026-09-10): PLACEMENT-SLOT TICK — tensegrity native re-judge
+## attempted (1210 hard down, debt carries), fallback record COMPLETED
+## (gameplay 18m + night PASS), placement contract FULLY AUTHORED + RED-proofed
+## (scan lawful az90 R82, terrain PY exact, hash-gated placer with fail-closed
+## native marker gate) — armed for the first native-up tick; BANKED NOT PLACED
+
+Cadence 145%3==2 placement slot; the committed carry from struct-144 was THE
+work: pay the native re-judge debt on {front, gameplay, night}, on PASS run
+the placement contract. Gate ALL_PINS_OK 15/15 real exit 0 tick-start
+12124fdc (un-piped, /tmp/struct145-gate.txt, REAL_EXIT:0). Shard drained
+fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN nx-struct rows — 136th
+check). Ledger max re-derived struct-144 -> tag struct-145.
+
+NATIVE ATTEMPT (flap law full protocol): 1210 x2 + paced 25s retry = hard
+down all tick — debt carries; marker NOT written (only a native-PASS run on
+the exact banked bytes can write it honestly).
+
+FALLBACK RECORD COMPLETED (ZAI fallback, disclosed; front 8m judged
+struct-144): gameplay 18m PASS all axes (two-value system reads cleanly —
+walnut #523C24 vs bright brass #C9A648, tendons resolve as continuous
+2-4px gold wire, one amber bead, zero defects, struts-float-in-connected-
+lattice identity read); night PASS (one tight amber bead ~12px footprint
+zero strays, silhouette traceable via warm/cool hue split vs navy sky, base
+grounded; disclosed watch item: upper-third struts near legibility
+threshold on dim displays). NOTE: at 18m the tendons read as fine gold WIRE
+— the struct-144 tendon-rod residual was an 8m-only framing artifact; the
+18m contract already reads correct. v3 fallback record now COMPLETE
+front/gameplay/night PASS.
+
+PLACEMENT CONTRACT AUTHORED (local prep, all gates green):
+- struct145-scan-tensegrity.ts (new, tracked): R11 full 360 sweep x 11
+  radii — 71 lawful stations. District counts re-derived fresh BOTH ways:
+  all-radii E=9/W=10/N=21/S=30 AND outer-ring-only (r>=60, struct-137's
+  soft-cap arithmetic) E=1/W=6/N=12/S=24 — E is under-served under both
+  metrics; az90 seat lawful under both.
+- SELECTED az90 R=82 yaw 0 POS (82.0, PY, -0.0): worst-solid 2.46 law 1.4,
+  NN vesicawindow 12.37 law 8.0, film/walk/rim green. E-axis progression:
+  ruledtower r58 -> vesicawindow r70 -> NEEDLE r82 (12m exhibit rhythm).
+- struct145-terrain-tensegrity.ts (new, tracked): 9pt spread 11.5mm flat,
+  PY = lowest = -0.032696 at FINAL pose.
+- next-place-struct145.ts (new, tracked): hash-gated placer on the
+  struct-137 chassis with ONE addition — a FAIL-CLOSED NATIVE-PASS GATE:
+  refuses unless /tmp/struct145-native-paid holds exactly
+  'struct-145 af2bdf599bfb3d908af0c8b47fa7f9712eb2c8b555d4b2669425fc8867a48084'.
+  RED-proven this tick: no marker -> exit 1, refusal thrown BEFORE any
+  network call. (Self-catch: first write of the placer was corrupted
+  mid-file — placeholder garbage in the SAT loop; caught on read-back of
+  the run output, whole file rewritten clean from the struct-137 chassis.
+  No placer was run against the live world.)
+- GLB on disk re-verified af2bdf599bfb3d908af0c8b47fa7f9712eb2c8b555d4b2669
+  42fc8867a48084 = pinned v3 bytes.
+
+DISPOSITION: v3 stays ACCEPTED banked NOT placed; live world untouched.
+First native-up tick: judge {front, gameplay, night} natively on the exact
+banked bytes; on PASS write the marker (echo 'struct-145 <sha>' >
+/tmp/struct145-native-paid) and run the placer — scan/terrain/placer are
+committed so that tick is one upload + one verb + ledger. If native
+ARBITRATES the fallback FAIL (tendon-rod upheld), the v4 class is recorded
+and banked: thinner tendons 0.040 or bolder brass, not geometry.
+
+Files: struct145-scan-tensegrity.ts + struct145-terrain-tensegrity.ts +
+next-place-struct145.ts (all new, tracked); mkv3-tensegrity.ts (ignored
+dir, already staged -f in struct-144's commit per its ledger entry);
+reviews/struct144-tensegrity-v3/ (banked frames, ignored).
+Zero world mutations/uploads/verbs/comp-edits/shared-budget (D+0 E+0).
+One ledger append (struct-145). Plan append-only.
