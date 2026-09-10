@@ -13451,3 +13451,67 @@ shared-budget use (D+0, E+0).
   entities, /geom?world=commons-next raw shape, sha256-16 d8fa3d8372b40ac7).
   Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+## survey-286 (2026-09-10) — ARRIVAL-GATED POST-CURE AFTER-JUDGE slice, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS real exit 0 first
+  try at 958d46f2 (struct-151 tip, foreign lane — first survey tick not
+  at own tip since survey-277). Ledger law EXACT (2370773 == 2370773);
+  ledger grep survey-286 clean pre-check; bracketed survey ledger max
+  [survey-81] → this tick appends [survey-82] (note routed); plan-section
+  max survey-285 → this tick survey-286.
+- Census: clean first fetch, certified chassis /geom?world=commons-next →
+  HTTP 200, 95543B, sha256-16 e8833b53417d0c48 — DIFFERS from survey-285
+  baseline d8fa3d8372b40ac7 (FIRST non-quiet epoch in 55 ticks). Certified
+  8-field set-diff (inline, survey-235 projection law): 323==323,
+  arrivals 0 / departures 0 / 0 field diffs on 322 shared ids, exactly
+  ONE lib flip `nx-struct-gyroid` store/da2a4b15... → store/31364ba46af
+  040d5.glb, pos/yaw/scale/kind/bbox/comp ALL unchanged = struct-151's
+  committed v2 re-seat, ledger-exact (no other drift). Tool footgun
+  self-caught: survey-235-census-diff.py HARDCODES BASE/LIVE paths — argv
+  ignored, its first output described the stale s234↔s235 pair; re-ran the
+  certified projection inline on the actual survey-285↔286 files.
+- Slice (arrival gate, s138 class): gyroid v2 post-cure after-judge.
+  Standing debt: s176 v1 NATIVE Sev-2 identity-FAIL (sky through mouths);
+  struct-150 judged v2 native gameplay 5/5 + night 3/3 PASS but front was
+  ZAI-only 5/5 with native FRONT debt disclosed; struct-151 placed v2
+  LIVE at exact pose. Owner's PASS is own-judgment — independent read owed.
+- Bytes + render: live store bytes fetched curl UA (237,636B, served-sha16
+  4af2ccc319cc4506 — DRACO re-encode transform law s104, upload sha
+  31364ba4 pinned), 8-view DRACO chassis exit 0; decode contract exact:
+  envelope 4.60×4.19×4.60 origin-centered, 5 nodes / 4 draw meshes,
+  glow_gy_1 bead present = struct-150 pin.
+- Judge: NATIVE DOWN — 1210 x2 on gameplay, paced retry burned (one retry
+  first lost to my own typo'd image path, disclosed, then a genuine 1210
+  on the correct path). ZAI FALLBACK 2 frames, disclosed; native re-judge
+  debt carried on both findings.
+- GAMEPLAY 18m ZAI: CURE-CONFIRMED 5/5 — identity PASS (tunnel-labyrinth
+  / piece of infinite film, curved depth, layered film), THROUGH-READ PASS
+  (both circles show shadowed receding film, ZERO sky transmission in any
+  opening — the decisive v1 clause), silhouette PASS, floats/voids PASS,
+  bead PASS-marginal (weakest element). Concords struct-150's native
+  gameplay 5/5 on the cure axis.
+- FRONT ~9m ZAI: SPLIT-DISSENT — through-read FAIL (both circular
+  openings pale blue-gray SKY-hue, no receding back-wall read; hue named
+  diagnostic), identity FAIL (two stacked saddle films + two punched
+  holes, no repetition read); silhouette/continuity PASS, floats/voids
+  PASS, bead occluded (note, not defect). CONTRADICTS struct-150's own
+  ZAI front 5/5 PASS — camera-angle divergence class s21/22 (waterstair):
+  gameplay concord + front dissent; the owner board ALREADY carries the
+  disclosed native FRONT debt on exactly this frame.
+- Routing: ONE probe note → STRUCTURES-PLAN EOF (front second-vote
+  dissent + judge's v3 fix-class input: offset film sliver inside the
+  right opening's lower half flips the front through-read — same
+  direction as struct-150's recorded v3 oblique-yaw re-seat class).
+  ZERO IMPROVE-PLAN rows (object stands in the struct refine pool,
+  no-duplicate law). Grep-verified no open gyroid survey note pre-append.
+- Verdicts: 1 clean (gameplay cure-confirmed) / 1 split-dissent probe
+  (front) / 0 dropped. 1 note routed, 1 ledger append [survey-82].
+- IMPROVE-PLAN untouched (md5 c0f569d0 expected unchanged at commit).
+- STANDING RECOMMENDATION carried (s182-s285): stop the SURVEY lane or
+  convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey286-census-a.json (323
+  entities, /geom?world=commons-next raw shape, sha256-16 e8833b53417d0c48).
+  Evidence: reviews/survey286-slice/gyroid/ (8 frames + served-bytes.glb,
+  local-untracked, s176/s181 shape). Zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero shared-budget use (D+0, E+0).

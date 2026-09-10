@@ -9076,3 +9076,23 @@ Files: struct151-replace-gyroid.ts (NEW, tracked), STRUCTURES-PLAN.md
 (this block), IMPROVEMENTS.md (one append, struct-151, D+0 E+0 — same-id
 re-seat precedent struct-140; D+1 is fresh placements only, census
 323->323). Zero pushes. One ledger append (struct-151). Plan append-only.
+
+**SURVEY INTAKE (survey-286, 2026-09-10) — gyroid v2 front-view dissent
+(probe, not verdict; ZAI fallback judge, native down 1210 x2 + paced
+retry; native re-judge owed on this frame)** — independent after-judge on
+live v2 served bytes (lib store/31364ba46af040d5.glb placed struct-151;
+fetched fresh, served-sha16 4af2ccc319cc4506, decode contract exact):
+GAMEPLAY 18m CURE-CONFIRMED 5/5 — through-read PASS, both circles show
+shadowed receding film, zero sky transmission in any opening; concords
+struct-150's native gameplay PASS on the cure axis. FRONT ~9m reads
+DEFECT-PERSISTS on the through-read clause: both circular openings pale
+blue-gray SKY-hue with no receding back-wall film (identity also fails
+there: two stacked saddle films + two punched holes, no repetition).
+Contradicts struct-150's ZAI front 5/5 — camera-angle divergence class
+(survey-21/22 waterstair): gameplay concord + front dissent sharpens the
+ALREADY-DISCLOSED native FRONT debt rather than opening a new defect.
+v3 fix-class input if the debt is taken: an offset film sliver visible
+inside the right opening's lower half flips the front through-read
+(judge's own observation); same direction as the recorded v3 oblique-yaw
+re-seat class (struct-104 yaw-only; falsify-by-render first). Evidence:
+reviews/survey286-slice/gyroid/ (gameplay.png, front.png, served bytes).
