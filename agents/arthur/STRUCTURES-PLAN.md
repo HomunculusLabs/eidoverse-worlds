@@ -7928,3 +7928,71 @@ Gate: ALL PASS real exit 0 tick-start 7fbac2bd (un-piped). Ledger max
 fresh pre-append = struct-133 -> this tick struct-134. Zero world
 mutations, zero uploads, zero verbs, zero shared-budget use (D+0, E+0).
 Files: struct134-ringread-derive.py (tracked this tick).
+
+## struct-135 (2026-09-09): REFINE TICK — enneper identity refine: root cause decode-cured (domain widened past self-intersection onset, crossing seams traced); 18m gestalt NOT yet flipped (fallback judge); v2 BANKED, NOT placed
+
+Cadence 135%3==0 refine slot. Subject by deficit ranking: nx-struct-enneper
+(survey-181 Sev-2 identity fail, three-view native-unanimous) over gyroid
+(s176; end-caps residual + night debt — next refine slot). Gate ALL PASS real
+exit 0 tick-start 9046f0a8 (un-piped). Shard empty fresh (0 OPEN nx-struct
+rows, row-level scan). Before-bytes captured FIRST (polish-271 law):
+reviews/struct135-enneper-refine/before/ sha ba17a712 = live lib pin exact.
+
+DECODE-FIRST ROOT CAUSE (the tick's pivotal finding): dense spatial-hash
+probe of the disk proves the s<=sqrt3 domain carries NO interior
+self-intersection locus — the sheets cross ONLY at the two axis poles (= the
+rim's own kiss points). The classical "two sheets passing through each other"
+begins PAST sqrt3. The concept contract was geometrically impossible on the
+built domain: THE CUT WAS THE DEFECT. Survey-181's "densification at the
+crossings" half decode-falsified (no target); texture-aliasing half also
+falsified by strict A/B (calm-cloud bone tex v1: 0.1% pixels changed at 18m,
+band energy identical — texture was NOT the read driver).
+
+ITERATION 1 (recorded, superseded in-tick): ep_bone calm-cloud mottle (cell
+64, scale 1, dRGB<=9) — decode texprobe ALL PASS (tones, block law, mottle),
+but strict A/B pixel diff proved no 18m read change. sha 18b36139 (banked).
+
+ITERATION 2 (v2, the real cure): R_DOMAIN sqrt3 -> 2.05 (locus arcs run pole
+to rim, |z| to 3.6, exact-verified pairs); form raised Y_OFF 4.44; rim = tube
+on X(R cos t, R sin t) petals +-3.956 (rim self-approaches 6.6mm at two side
+points — hem tubes visibly fuse, disclosed deliberate); 4 iron seam tubes
+r0.035 traced pole->rim ON the true crossing locus (the over/under cue);
+needle 0..8.74; slab 8.10; envelope 8.10x8.74x8.10. ACCEPTED-BY-DECODE sha
+9d1d3199c1777152ddfb454e9f3d21ce89a89ace0e96206beccdd81c71005e69
+deterministic x2 (mtime verified). Decode replica v2 ALL PASS 29/29 exit 0:
+film law (32/64065 GN branch-trap worst 8cm, construction-exact, within
+>=99.9% law, disclosed), disk law, interior-pole crossings (16+16 verts),
+locus independently re-derived + chained 4 arcs/110 segs, seam law 0/125 off
+worst 0.052 (coverage 2/114 at 0.105 rim-end sparsity, disclosed), rim
+0/2241 far, needle/bead/slab/envelope exact. Audit-side bugs fixed en route
+(frame mixups, point-vs-curve locus distance) — disclosed.
+
+JUDGED (native 1210 x2 + paced retry burned — provider DOWN all tick, flap
+law honored; ZAI fallback, native re-judge debt OWED on v2 frames):
+gameplay 18m — identity STILL FAILS (~80% nested ring/onion read; no
+macroscopic over/under flip; only the rim's own top knot reads pass-through),
+silhouette PASS (teardrop+knot instantly parseable, strongest aspect),
+seams PARTIAL (rim knot legible; in-sheet seams read as serration shadows),
+structure sound (needle continuous, bead seated, no floats; "scribble
+artifact" left of plinth = the serrated rim's cast shadow, class-inherent
+grazing read, decode-settled no geometry below grade). Judge's fix class for
+the NEXT iteration, recorded: differentiate the two sheets / thicken seams
+2-3x / bring one crossing within ~15% of the silhouette.
+
+DISPOSITION: accept-or-revert law — fallback verdict does not ACCEPT, so v2
+is BANKED on disk (decode-green) and NOT placed; live world untouched
+(D+0 E+0). The standing live bytes remain the survey-181 Sev-2 form; the
+refine pool keeps enneper open as top deficit with the fix class named.
+Next refine slot continues the iteration (or pays the native debt if the
+provider returns — native outranks fallback and may flip the verdict either
+way; frames banked reviews/struct135-enneper-refine/after-v2/).
+
+NEXT: 136 — build slot (136%3==1): R11 new-form commission (8m NN floor +
+per-district soft cap 6 + rotate under-served district). 138 = refine slot:
+enneper iteration 2 (seam weight / sheet differentiation / silhouette-
+proximal crossing) OR gyroid end-caps + night debt, whichever higher
+deficit; native re-judge on banked v2 frames first if provider up.
+
+Files: mkv3-enneper.ts (ignored dir, staged -f), struct133-decode-enneper.ts
+(v2 laws + seam law), struct135-texprobe-enneper.ts (new, tracked);
+reviews/struct135-enneper-refine/ (ignored). Plan append-only this tick.

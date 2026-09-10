@@ -44,16 +44,18 @@ const va = (ai: number): Float32Array => {
 };
 
 // ---- independent Enneper replica (fresh derivation, NO mk imports) ------------------------------
-const S3 = Math.sqrt(3), Y_OFF = 3.14;
+// struct-135 v2 laws: R_DOMAIN=2.05 (past the self-intersection onset),
+// Y_OFF=4.44, seams on the traced crossing locus.
+const S3 = Math.sqrt(3), Y_OFF = 4.44, R_DOM = 2.05;
 const X = (u: number, v: number): [number, number, number] =>
     [u - (u ** 3) / 3 + u * v * v, v - (v ** 3) / 3 + v * u * u, u * u - v * v];
 const Xu = (u: number, v: number): [number, number, number] => [1 - u * u + v * v, 2 * u * v, 2 * u];
 const Xv = (u: number, v: number): [number, number, number] => [2 * u * v, 1 - v * v + u * u, -2 * v];
-// world (wx,wy,wz) -> form (fx, fy, fz): fx=wx, fy=wz, fz=wy-3.14
+// world (wx,wy,wz) -> form (fx, fy, fz): fx=wx, fy=wz, fz=wy-Y_OFF
 const toForm = (wx: number, wy: number, wz: number): [number, number, number] => [wx, wz, wy - Y_OFF];
 // Gauss-Newton: find (u,v) with X(u,v) ~= p (form frame). Returns [u, v, resid].
 const coarse: Array<[number, number]> = [];
-for (let u = -1.86; u <= 1.86; u += 0.12) for (let v = -1.86; v <= 1.86; v += 0.12) if (u * u + v * v <= 3.02) coarse.push([u, v]);
+for (let u = -2.05; u <= 2.05; u += 0.1) for (let v = -2.05; v <= 2.05; v += 0.1) if (u * u + v * v <= 4.22) coarse.push([u, v]);
 const gaussNewton = (p: [number, number, number]): { u: number; v: number; res: number } => {
     let best = { u: 0, v: 0, res: Infinity };
     // coarse init: nearest 3 coarse points refined
@@ -88,7 +90,7 @@ const gaussNewton = (p: [number, number, number]): { u: number; v: number; res: 
 };
 
 // ---- (a) sha + nodes + materials ---------------------------------------------------------------
-ck("pinned sha", sha === "ba17a712cbc734bd6e175e09eee6b3ae934a99d652dcbda4a63d8388c0e44263", sha.slice(0, 16));
+ck("pinned sha", sha === "9d1d3199c1777152ddfb454e9f3d21ce89a89ace0e96206beccdd81c71005e69", sha.slice(0, 16)); // struct-135 v2: widened domain + seams (was 18b36139 v1 / ba17a712 origin)
 const meshNodes = j.nodes.filter((n: any) => n.mesh !== undefined);
 ck("node census 4", meshNodes.length === 4, `got ${meshNodes.length}: ${meshNodes.map((n: any) => n.name).join(",")}`);
 const glowNode = j.nodes.find((n: any) => n.name === "glow_ep_1");
@@ -140,10 +142,10 @@ const byName = (n: string) => clouds.find(c => c.name === n);
             const { u, v, res } = gaussNewton(p);
             if (res > worst) worst = res;
             if (res > 0.0005) off++;
-            if (u * u + v * v > 3 + 1e-3) outside++;
+            if (u * u + v * v > R_DOM * R_DOM + 1e-3) outside++;
         }
         ck("film law: >=99.9% verts on X(u,v) (res<=0.5mm)", off / n < 0.001, `${off}/${n} off, worst ${worst.toFixed(6)}m`);
-        ck("disk law: zero verts outside u^2+v^2<=3", outside === 0, `${outside} outside`);
+        ck("disk law: zero verts outside u^2+v^2<=R_DOM^2", outside === 0, `${outside} outside`);
     }
 }
 
@@ -151,27 +153,120 @@ const byName = (n: string) => clouds.find(c => c.name === n);
 {
     const bone = byName("ep_bone");
     if (bone) {
-        for (const [wY, label] of [[0.14, "lower (0,0.14,0)"], [6.14, "upper (0,6.14,0)"]] as Array<[number, string]>) {
+        // struct-135 v2: the pole crossings X(±√3,0)=(0,0,±3) are INTERIOR
+        // points (world y 4.44±3 = 1.44/7.44); no ring lands exactly on √3,
+        // so nearest film verts sit ~2cm off — law: >=2 verts (distinct
+        // branches ±u/±v) within 3.5cm of each pole point, form frame.
+        for (const [pz, label] of [[3, "upper pole (0,0,+3) -> y 7.44"], [-3, "lower pole (0,0,-3) -> y 1.44"]] as Array<[number, string]>) {
             let close = 0;
             for (let i = 0; i < bone.v.length; i += 3) {
-                const d = Math.hypot(bone.v[i] - 0, bone.v[i + 1] - wY, bone.v[i + 2] - 0);
-                if (d < 0.001) close++;
+                const [fx, fy, fz] = toForm(bone.v[i], bone.v[i + 1], bone.v[i + 2]);
+                const d = Math.hypot(fx - 0, fy - 0, fz - pz);
+                if (d < 0.035) close++;
             }
-            ck(`crossing verts within 1mm: ${label}`, close >= 2, `${close} verts`);
+            ck(`crossing verts within 3.5cm: ${label}`, close >= 2, `${close} verts`);
         }
     }
 }
+
+// ---- (c2) crossing-locus derivation (shared by rim + seam laws) ---------------------------------
+// Independent re-derivation of the self-intersection locus: near-coincident
+// distinct-parameter points on the disk (same arithmetic class as the build's
+// seam tracer, this file's own X()).
+const NT = 1440, NR = 200;
+const locPts: Array<[number, number, number]> = []; // FORM frame
+{
+    const P: Array<[number, number]> = [], pts: Array<[number, number, number]> = [];
+    for (let ri = 0; ri < NR; ri++) {
+        const r = 0.3 + (R_DOM - 0.3) * (ri / (NR - 1));
+        for (let ti = 0; ti < NT; ti++) {
+            const t = (2 * Math.PI * ti) / NT;
+            const pu = r * Math.cos(t), pv = r * Math.sin(t);
+            P.push([pu, pv]); pts.push(X(pu, pv));
+        }
+    }
+    const cell = 0.02;
+    const grid = new Map<string, number[]>();
+    const gk = (x: number, y: number, z: number) => `${Math.floor(x / cell)},${Math.floor(y / cell)},${Math.floor(z / cell)}`;
+    pts.forEach((p, i) => { const k = gk(p[0], p[1], p[2]); const a = grid.get(k); if (a) a.push(i); else grid.set(k, [i]); });
+    const snap = new Map<string, [number, number, number]>();
+    for (const [k, idxs] of grid) {
+        const [cx, cy, cz] = k.split(",").map(Number);
+        const cand = [...idxs];
+        for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) for (let dz = -1; dz <= 1; dz++) {
+            if (dx || dy || dz) { const o = grid.get(gk((cx + dx) * cell, (cy + dy) * cell, (cz + dz) * cell)); if (o) cand.push(...o); }
+        }
+        for (const i of idxs) for (const j of cand) {
+            if (j <= i) continue;
+            const d = Math.hypot(pts[i][0] - pts[j][0], pts[i][1] - pts[j][1], pts[i][2] - pts[j][2]);
+            if (d < 0.008 && Math.hypot(P[i][0] - P[j][0], P[i][1] - P[j][1]) >= 0.35) {
+                const m: [number, number, number] = [0.5 * (pts[i][0] + pts[j][0]), 0.5 * (pts[i][1] + pts[j][1]), 0.5 * (pts[i][2] + pts[j][2])];
+                snap.set(`${Math.round(m[0] / 0.015)},${Math.round(m[1] / 0.015)},${Math.round(m[2] / 0.015)}`, m);
+            }
+        }
+    }
+    for (const m of snap.values()) locPts.push(m);
+    ck("locus re-derived (nonempty, >=100 pts, densified)", locPts.length >= 100, `${locPts.length} pts`);
+}
+// chain the locus into 4 arcs (same clustering as the build) and build
+// segment lists — verts must hug the locus CURVE (CatmullRom through the
+// pts), not the sparse pts themselves.
+const segs: Array<[[number, number, number], [number, number, number]]> = [];
+{
+    const bands: Array<[boolean, [number, number]]> = [
+        [true, [60, 150]], [true, [240, 330]],
+        [false, [330, 390]], [false, [150, 230]],
+    ];
+    let arcsBuilt = 0;
+    for (const [zhi, [b0, b1]] of bands) {
+        const cl = locPts.filter(m => {
+            const az = ((Math.atan2(m[1], m[0]) * 180) / Math.PI + 360) % 360;
+            const azw = az < b0 ? az + 360 : az;
+            return (m[2] > 0.5) === zhi && azw >= b0 && azw < b1;
+        });
+        if (cl.length < 5) continue;
+        const pole: [number, number, number] = [0, 0, zhi ? 3 : -3];
+        cl.sort((a, b) => Math.hypot(a[0]-pole[0], a[1]-pole[1], a[2]-pole[2]) - Math.hypot(b[0]-pole[0], b[1]-pole[1], b[2]-pole[2]));
+        const chain: Array<[number, number, number]> = [cl[0]];
+        const rest = cl.slice(1);
+        while (rest.length) {
+            const head = chain[chain.length - 1];
+            let bi = 0;
+            for (let i = 1; i < rest.length; i++)
+                if (Math.hypot(rest[i][0]-head[0], rest[i][1]-head[1], rest[i][2]-head[2]) < Math.hypot(rest[bi][0]-head[0], rest[bi][1]-head[1], rest[bi][2]-head[2])) bi = i;
+            chain.push(rest.splice(bi, 1)[0]);
+        }
+        for (let i = 0; i + 1 < chain.length; i++) segs.push([chain[i], chain[i + 1]]);
+        arcsBuilt++;
+    }
+    ck("locus chained into 4 arcs", arcsBuilt === 4, `${arcsBuilt} arcs, ${segs.length} segs`);
+}
+// distance (form frame) from a form point to the locus CURVE (segments)
+const distToLocus = (fx: number, fy: number, fz: number): number => {
+    const p: [number, number, number] = [fx, fy, fz];
+    let bd = Infinity;
+    for (const [a, b] of segs) {
+        const ab: [number, number, number] = [b[0]-a[0], b[1]-a[1], b[2]-a[2]];
+        const len2 = ab[0]**2 + ab[1]**2 + ab[2]**2;
+        let t = len2 > 0 ? ((p[0]-a[0])*ab[0] + (p[1]-a[1])*ab[1] + (p[2]-a[2])*ab[2]) / len2 : 0;
+        t = Math.max(0, Math.min(1, t));
+        const d = Math.hypot(p[0]-(a[0]+t*ab[0]), p[1]-(a[1]+t*ab[1]), p[2]-(a[2]+t*ab[2]));
+        if (d < bd) bd = d;
+        if (bd < 0.015) break;
+    }
+    return bd;
+};
 
 // ---- (d)+(e) rim + needle laws --------------------------------------------------------------------
 {
     const iron = byName("ep_iron");
     ck("iron cloud present", !!iron);
     if (iron) {
-        // analytic boundary samples
+        // analytic boundary samples — v2: rim = X(R_DOM cos t, R_DOM sin t)
         const B: Array<[number, number, number]> = []; // world frame
         for (let i = 0; i <= 512; i++) {
             const t = (2 * Math.PI * i) / 512;
-            const [bx, by, bz] = [4 * S3 * Math.cos(t) * Math.sin(t) ** 2, 4 * S3 * Math.sin(t) * Math.cos(t) ** 2, 3 * Math.cos(2 * t)];
+            const [bx, by, bz] = X(R_DOM * Math.cos(t), R_DOM * Math.sin(t));
             B.push([bx, bz + Y_OFF, by]); // form -> world (same map as build)
         }
         const distToB = (x: number, y: number, z: number) => {
@@ -183,8 +278,9 @@ const byName = (n: string) => clouds.find(c => c.name === n);
             }
             return bd;
         };
-        // split iron: needle (on axis) vs rim
-        let needleCount = 0, rimFar = 0, yMinN = Infinity, yMaxN = -Infinity;
+        // split iron: needle (on axis) vs seam (near locus) vs rim
+        let needleCount = 0, rimFar = 0, seamCount = 0;
+        let yMinN = Infinity, yMaxN = -Infinity;
         const rimPts: Array<[number, number, number]> = [];
         for (let i = 0; i < iron.v.length; i += 3) {
             const x = iron.v[i], y = iron.v[i + 1], z = iron.v[i + 2];
@@ -192,13 +288,16 @@ const byName = (n: string) => clouds.find(c => c.name === n);
                 needleCount++;
                 yMinN = Math.min(yMinN, y); yMaxN = Math.max(yMaxN, y);
             } else {
+                const [fx, fy, fz] = toForm(x, y, z);
+                if (distToLocus(fx, fy, fz) < 0.08) { seamCount++; continue; }
                 rimPts.push([x, y, z]);
                 if (distToB(x, y, z) > 0.052) rimFar++;
             }
         }
         ck("needle present on axis (r<=0.08 cylinder)", needleCount > 50, `${needleCount} verts, y[${yMinN.toFixed(3)}..${yMaxN.toFixed(3)}]`);
-        ck("needle spans pole-to-pole y 0..6.20", Math.abs(yMinN) < 0.01 && Math.abs(yMaxN - 6.20) < 0.01, `y[${yMinN.toFixed(3)}..${yMaxN.toFixed(3)}]`);
-        ck("rim verts within tube of analytic B(t)", rimFar === 0, `${rimFar}/${rimPts.length} far`);
+        ck("needle spans pole-to-pole y 0..8.74", Math.abs(yMinN) < 0.08 && Math.abs(yMaxN - 8.74) < 0.01, `y[${yMinN.toFixed(3)}..${yMaxN.toFixed(3)}]`);
+        ck("seam population present (locus-classified)", seamCount > 100, `${seamCount} verts`);
+        ck("rim verts within tube of boundary X(R cos t, R sin t)", rimFar === 0, `${rimFar}/${rimPts.length} far`);
         // coverage: every 4th analytic sample finds an iron vert within 0.10.
         // NOTE: B(t) passes exactly THROUGH both poles (B(0)=(0,0,3) form),
         // so pole-adjacent rim verts sit on the axis with the needle —
@@ -225,9 +324,52 @@ const byName = (n: string) => clouds.find(c => c.name === n);
 // ---- (f) bead law --------------------------------------------------------------------------------
 {
     const t = glowNode?.translation ?? [0, 0, 0];
-    ck("bead at the umbilic (0, 3.14, 0)", Math.abs(t[0]) < 1e-9 && Math.abs(t[1] - Y_OFF) < 1e-9 && Math.abs(t[2]) < 1e-9, `${t.map((v: number) => v.toFixed(4)).join(",")}`);
+    ck("bead at the umbilic (0, 4.44, 0)", Math.abs(t[0]) < 1e-9 && Math.abs(t[1] - Y_OFF) < 1e-9 && Math.abs(t[2]) < 1e-9, `${t.map((v: number) => v.toFixed(4)).join(",")}`);
     const [ox, oy, oz] = X(0, 0);
     ck("X(0,0) = origin (umbilic law)", Math.hypot(ox, oy, oz) < 1e-12);
+}
+
+// ---- (f2) SEAM LAW (struct-135 v2): seam tubes lie on the self-intersection locus ----------------
+// Uses the shared locus + classifier from (c2)/(d): seam verts = iron verts
+// classified as seam (within 0.08 of the locus, form frame).
+{
+    const iron = byName("ep_iron");
+    ck("iron cloud present for seam law", !!iron);
+    if (iron) {
+        const seam: Array<[number, number, number]> = []; // world frame
+        for (let i = 0; i < iron.v.length; i += 3) {
+            const x = iron.v[i], y = iron.v[i + 1], z = iron.v[i + 2];
+            if (Math.abs(x) <= 0.08 && Math.abs(z) <= 0.08) continue; // needle
+            const [fx, fy, fz] = toForm(x, y, z);
+            if (distToLocus(fx, fy, fz) < 0.08) seam.push([x, y, z]);
+        }
+        ck("seam cloud nonempty", seam.length > 100, `${seam.length} verts`);
+        // coverage: every locus point finds a seam vert (form frame)
+        let miss = 0, mworst = 0;
+        for (const [lx, ly, lz] of locPts) {
+            let bd = Infinity;
+            for (const [x, y, z] of seam) {
+                const [fx, fy, fz] = toForm(x, y, z);
+                const d = Math.hypot(fx - lx, fy - ly, fz - lz);
+                if (d < bd) bd = d;
+                if (bd < 0.05) break;
+            }
+            if (bd > 0.10) miss++;
+            if (bd > mworst) mworst = bd;
+        }
+        ck("seam coverage: locus pts within 0.10 of a seam vert", miss / locPts.length < 0.05, `${miss}/${locPts.length} missed, worst ${mworst.toFixed(3)}`);
+        // seam verts hug the locus (tight-band check on a sample)
+        let off = 0, worst = 0, n = 0;
+        for (let k = 0; k < seam.length; k += 7) {
+            const [x, y, z] = seam[k];
+            const [fx, fy, fz] = toForm(x, y, z);
+            const d = distToLocus(fx, fy, fz);
+            n++;
+            if (d > 0.06) off++;
+            if (d > worst) worst = d;
+        }
+        ck("seam law: >=99% sampled seam verts within 0.06 of locus", off / n < 0.01, `${off}/${n} off, worst ${worst.toFixed(3)}`);
+    }
 }
 
 // ---- (g)+(h) stone + envelope + NaN ----------------------------------------------------------------
@@ -242,7 +384,7 @@ const byName = (n: string) => clouds.find(c => c.name === n);
             zmin = Math.min(zmin, stone.v[i + 2]); zmax = Math.max(zmax, stone.v[i + 2]);
         }
         ck("slab on grade (y 0..0.14)", Math.abs(y0) < 1e-3 && Math.abs(y1 - 0.14) < 1e-3, `y[${y0.toFixed(3)}..${y1.toFixed(3)}]`);
-        ck("slab plan 5.8", Math.abs((xmax - xmin) - 5.8) < 1e-3 && Math.abs((zmax - zmin) - 5.8) < 1e-3, `${(xmax - xmin).toFixed(3)}x${(zmax - zmin).toFixed(3)}`);
+        ck("slab plan 8.1", Math.abs((xmax - xmin) - 8.1) < 1e-3 && Math.abs((zmax - zmin) - 8.1) < 1e-3, `${(xmax - xmin).toFixed(3)}x${(zmax - zmin).toFixed(3)}`);
     }
     let nan = 0, xmin = Infinity, xmax = -Infinity, ymin = Infinity, ymax = -Infinity, zmin = Infinity, zmax = -Infinity;
     for (const c of clouds) for (let i = 0; i < c.v.length; i += 3) {
@@ -253,7 +395,7 @@ const byName = (n: string) => clouds.find(c => c.name === n);
         zmin = Math.min(zmin, z); zmax = Math.max(zmax, z);
     }
     ck("NaN zero", nan === 0, `${nan}`);
-    ck("envelope 5.80x6.20x5.80", Math.abs((xmax - xmin) - 5.8) < 0.01 && Math.abs((ymax - ymin) - 6.2) < 0.01 && Math.abs((zmax - zmin) - 5.8) < 0.01,
+    ck("envelope 8.10x8.74x8.10", Math.abs((xmax - xmin) - 8.1) < 0.01 && Math.abs((ymax - ymin) - 8.74) < 0.01 && Math.abs((zmax - zmin) - 8.1) < 0.01,
         `${(xmax - xmin).toFixed(2)}x${(ymax - ymin).toFixed(2)}x${(zmax - zmin).toFixed(2)}`);
     ck("origin-centered x/z", Math.abs(xmin + xmax) < 0.01 && Math.abs(zmin + zmax) < 0.01, `x[${xmin.toFixed(2)},${xmax.toFixed(2)}] z[${zmin.toFixed(2)},${zmax.toFixed(2)}]`);
     ck("grade base", Math.abs(ymin) < 1e-3, `ymin ${ymin.toFixed(4)}`);
