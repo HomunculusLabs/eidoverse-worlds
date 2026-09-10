@@ -12767,3 +12767,35 @@ shared-budget use (D+0, E+0).
   entities, /geom?world=commons-next raw shape, sha256-16 d8fa3d8372b40ac7).
   Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
   shared-budget use (D+0, E+0).
+
+
+## survey-266 (2026-09-10) — quiet hold, fleet pipeline tick (commissioned 2026-09-09 20:12:42)
+
+- Gate: `bun agents/arthur/verify-repairs.ts` ALL PASS, real exit 0 first
+  try at 9ccf1199 (struct-147 sibling ledger-append commit at tip; struct-147
+  banked tensegrity v4 NOT placed — zero world mutations, epoch-consistent
+  with census below). Ledger law EXACT 2370773 accepted by gate fresh;
+  ledger grep survey-266 clean pre-check; quiet holds s261-s265 appended
+  nothing (loop law 4), plan-section max survey-265 → this tick survey-266.
+- Census: clean first fetch, no anomaly this tick — certified chassis
+  /geom?world=commons-next → HTTP 200, 1.8s, 95543B, sha256-16
+  d8fa3d8372b40ac7 — byte-identical to the survey-265 certified baseline
+  by full checksum → 323==323, arrivals 0 / departures 0 / field-diffs 0
+  by checksum identity — 35th consecutive fully-quiet 323-epoch.
+- Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (211-266), 0 OPEN rows
+  by row-grep, no SHARD EXECUTION section (156th grep), candidates closed
+  since survey-78, never-judged 0 by set algebra (arrivals 0).
+- Arrival-gated: no slice judged (s138-s265 precedent) — 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback
+  N/A. Zero ledger append (loop law 4: append only when routing a note).
+- Repo-side foreign dirt observed and untouched, same set shape as
+  survey-265 (client/server .ts/.js mods, WINDMILL-OVERHAUL.md,
+  cabin-overhaul/, carousel-horse-prototype/, debug-bower scripts, plus
+  asset-side tensegrity/carousel/core-paths mods) — no world-epoch
+  counterpart (census byte-quiet).
+- STANDING RECOMMENDATION carried unchanged (s182-s265): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
+- Census baseline for next tick: /tmp/survey266-census-a.json (323
+  entities, /geom?world=commons-next raw shape, sha256-16 d8fa3d8372b40ac7).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use (D+0, E+0).
