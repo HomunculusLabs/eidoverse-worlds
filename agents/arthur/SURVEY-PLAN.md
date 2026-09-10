@@ -15502,3 +15502,49 @@ shared-budget use (D+0, E+0).
   ledger append (loop law 4: append only when routing; ticks 211-339
   precedent). STANDING RECOMMENDATION carried unchanged (s182-s339):
   stop the SURVEY lane or convert to a no-LLM monitor when attended.
+
+- survey-341 (2026-09-10, quiet hold, post-reset epoch): gate ALL PASS
+  real exit 0 first try at tick-start HEAD 2b8a6ccc (city-14 tip, raw
+  log /tmp/survey341-gate.log inspected, 99 PASS lines, exit captured
+  unpiped; plan-section max survey-340 -> survey-341). HEAD ADVANCED
+  MID-TICK to 16adb2ce (struct-166: Costa GLB build-only, NOT placed/
+  uploaded, zero world mutations — consistent with the quiet census
+  below); gate RE-RUN at 16adb2ce pre-commit: ALL PASS real exit 0
+  (raw log /tmp/survey341-gate2.log, 99 PASS lines, exit unpiped, HEAD
+  unchanged through the re-gate). CONTEXT SHIFT
+  READ FRESH THIS TICK: Bill freeze LIFTED for struct+city lanes —
+  city-13 (potter az18 r25) + city-14 (kiln az49.5 r29.5) relocations
+  now EXECUTED per CITY-PLAN register; register-vs-LIVE cross-check on
+  the fresh census confirms exact tuple match (potter (23.776,-0.004,
+  7.725) yaw -1.8975 lib 412bb53a; kiln (19.159,-0.021,22.432) yaw
+  -2.4432 lib 3e96c8b0; charcoal city-12 seat unchanged; riders b12/
+  sign-kiln/potter-sign + lights kiln-l/potter-l traveled host-local
+  per loop law 5) — ZERO register-vs-live drift. Census via committed
+  next-live-census.ts exit 0: 325 entities, 215228B, sha16
+  b8c43498acb3ebea — BYTE-IDENTICAL to the committed sweep-231/
+  survey-326..340 baseline (set-diff law by byte identity: 0 arrivals/
+  0 departures/0 lib flips/0 pos-yaw diffs on all 325 ids); the
+  city relocations predate this baseline and Four Avenues (A+C)
+  has NOT yet mutated the live world this epoch — SEVENTEENTH
+  consecutive fully-quiet 325-epoch, likeliest next flip trigger now
+  city-15+ Avenues placements (v2 assignment table in flight) + the
+  standing windmill overhaul. Pools: IMPROVE-PLAN md5 c0f569d0
+  unchanged (229th check); SURVEY CANDIDATES 0 OPEN rows (11 raw
+  hits re-inspected = round-queue prose, same class as s325-s340);
+  live-queue OPEN grep 0; NO SHARD EXECUTION sections exist (all
+  drained; survey owns no prefix); CITY-PLAN-V2 assigns survey no
+  role (grep 0). No slice judged (arrival-gated, s138-s340 precedent
+  — identical bytes + drained backlog + 0 never-judged, re-judging
+  would be manufactured): 0 confirmed / 0 clean / 0 dropped, 0 notes
+  routed, 0 vision calls, native-vs-fallback N/A. Foreign working-
+  tree dirt at read = sibling lanes in flight (windmill overhaul
+  family, cabin-overhaul / carousel-horse-prototype / debug-bower /
+  client+server trees — same families as s285-s340) — untouched.
+  Census baseline for next tick: /tmp/survey341-census-a.json (325,
+  byte-identical, baseline unchanged). Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
+  ledger append (loop law 4: append only when routing; ledger tail
+  city-13-lineage total 2370778, ledger max survey tag 339 with
+  survey-340 zero-append precedent). STANDING RECOMMENDATION carried
+  unchanged (s182-s340): stop the SURVEY lane or convert to a no-LLM
+  monitor when attended.
