@@ -46,6 +46,19 @@ r140–170 with its landmark family, wide negative space between avenues:
 
 ## EXECUTION (city lane, one move per tick, relocation never rebuilds)
 
+Wave A log (math-family strays -> avenue band, worst off-axis first):
+- city-104 EXECUTED: nx-struct-sierpinski (worst off-axis math stray —
+  brg186 ANTIPODAL to axis 356) -> (-1.5, 0.0213, 80.0) yaw pi, Math
+  Avenue band r80 brg358.9, rhythm slot sunflowerdial r71 -> sierpinski
+  r80 -> kochgarden r90 -> hilbert r100. Same lib 7f8b5fd7 (zero
+  uploads), SAT 1.574 vs skene (law 1.4), NN 9.86 (law 8), terrain
+  5.1mm, base-lane walk 2/2. First candidate (-1.0, 79.81) from an
+  interrupted prior window was rejected pre-verb by the placer's own
+  fresh-SAT gate (1.074 vs skene). Next worst off-axis math strays:
+  unduloid brg30 r110 (60deg off), boy brg90 r110 (94deg off),
+  catenarygate brg180 r60.5, reuleauxrotor brg190.5 r65.6, catenoid
+  brg154 r60, lemniscateseat brg263.3 r60.4, echoarch brg342 r60.
+
 Wave A: pull avenue-family strays into their bands (worst off-axis first).
 Wave B: sequence + rhythm-check each avenue (spacing, plinths where a form
 reads adrift), build lamp-plinth rhythm from SW lamp budget tokens ONLY if

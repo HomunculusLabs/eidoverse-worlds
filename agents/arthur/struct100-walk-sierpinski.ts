@@ -1,12 +1,13 @@
 // struct100-walk-sierpinski.ts — two-way MCPL walk through the spire's open
-// base lane. Seat (-7.74,-73.59) yaw 0. The +z base vertex opens the gate
-// lane toward the village (south face); walk the N-S lane through the
-// central void, both directions. Chassis: struct77-walk-ogeegate law.
+// base lane. RE-PINNED city-104: seat (-1.5,80.0) yaw pi (Math Avenue band
+// r80, city-104 Wave A move). The +z base vertex opens the gate lane toward
+// the village; yaw pi maps local +z to world -z (south). Walk the N-S lane
+// through the central void, both directions. Chassis: struct77-walk-ogeegate law.
 import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
 process.env.WORLD_TOKEN = cfg.joinToken;
-const px = -7.74, pz = -73.59, yaw = 0, c = Math.cos(yaw), s = Math.sin(yaw);
+const px = -1.5, pz = 80.0, yaw = Math.PI, c = Math.cos(yaw), s = Math.sin(yaw);
 const world = (x: number, z: number): [number, number] => [px + x * c + z * s, pz - x * s + z * c];
 const start = world(0, 6.0), route = [world(0, -6.0), world(0, 6.0)];
 const agent = new WorldAgent({ url: cfg.url, name: "arthur-struct100-walk", world: "commons-next", avatar: cfg.avatar, agentToken: cfg.agentToken });
