@@ -64,10 +64,29 @@ Wave A log (math-family strays -> avenue band, worst off-axis first):
  vs costa (law 1.4), NN 10.27 (law 8), band 4.4deg max dev, rim
  126.80..129.43, terrain 6.4mm, idempotent 0-verb rerun, comp {}
  before/after, census 326 quiet. Scanner 7496 lawful seats,
- design-rank #1. Next worst off-axis math strays:
- boy brg90 r110 (94deg off), catenarygate brg180 r60.5,
- reuleauxrotor brg190.5 r65.6, catenoid brg154 r60,
- lemniscateseat brg263.3 r60.4, echoarch brg342 r60.
+ design-rank #1.
+ - city-106 EXECUTED: nx-struct-boy (worst remaining off-axis math
+ stray — brg90 r110, 94deg off axis 356) -> (-21.25,-0.025256,109.75)
+ yaw (brg-130)deg = 3.823002 rad [axle 40deg off radial — SAME
+ struct-159/160/161 committed yaw law, verified on the live old tuple
+ pre-move (old -40deg = (50-az90)); GEOMETRY CHAPTER FLANK: west-flank
+ staggered pair with dodecahedron r110, mirroring the costa/unduloid
+ surfaces gate at r~128; deep window unduplicated, processional mouth
+ r55-78 stays open]. Same lib a20c9275136841f3 content-addressed (zero
+ uploads), remove+spawn 2 verbs paced 650ms PLACED_VERIFIED exact tuple
+ + comp {} before/after, census 326 zero arrivals/departures, idempotent
+ 0-verb rerun. Scanner city106-scan.py (placer-exact gates, 0.25m grid):
+ 879 lawful band seats, design-rank #1; fresh-SAT at verb time 4.279 vs
+ rule30wall (law 1.4), NN 13.58 vs dodecahedron (Amendment 1 law 8),
+ band corners 3.9deg max dev, rim 105.64..117.94. Terrain 9pt
+ true-frame spread 7.9mm, PY -0.025256 lowest corner (-6.1mm grade,
+ disclosed). Walk-lines: lateral 13.5m off the avenue axis ray — folly
+ class, no walk owed (struct-158 precedent). No riders (census 14m
+ sweep at old seat: nearest none), no companion light, no walk tool
+ pinned to old seat (grep verified). Next worst off-axis math strays:
+ catenarygate brg180 r60.5 (176deg off), reuleauxrotor brg190.5 r65.6,
+ catenoid brg154 r60, lemniscateseat brg263.3 r60.4, echoarch brg342
+ r60.
 
 Wave A: pull avenue-family strays into their bands (worst off-axis first).
 Wave B: sequence + rhythm-check each avenue (spacing, plinths where a form
