@@ -170,6 +170,26 @@ Wave A log (math-family strays -> avenue band, worst off-axis first):
   nearest are standalone artwalk hosts, not catenoid riders), no
   companion light, comp bag empty. Next queue head: lemniscateseat brg263.3
   r60.4 (97deg off), then echoarch brg342 r60.
+ - city-110 EXECUTED: nx-struct-lemniscateseat (the ∞ seat, worst
+  remaining off-axis math stray — brg263.3 r60.4, 97deg off axis 356)
+  -> (1.50,-0.02079,107.75) yaw pi [struct-90 face-on contract re-based:
+  face normal local +z -> world -z (S), aims back down the avenue at the
+  incoming village->N walk; long axis E-W. SEAT = GEOMETRY CHAPTER DEEP
+  WINDOW EAST-FLANK REST: hilbert r100 W -> INFINITY SEAT r107.5 E ->
+  dodeca r110 W]. Same lib a6ae2406 content-addressed (zero uploads);
+  remove+spawn 2 verbs paced 650ms PLACED_VERIFIED + comp {} before/
+  after, census 326 zero arrivals/departures, idempotent 0-verb rerun.
+  Scanner city110-scan.py: 800 lawful seats; WINDOW DISCLOSURE: mouth
+  r55-63 and bridge/bay r63-78 hold ZERO lawful seats (echoarch +
+  ninesbridge + sunflowerdial own them); chosen over row #1 (1.00,107.25)
+  for DOUBLE SAT margin (2.011/2.130 vs 1.511/1.630 — city-109 rank-
+  preference precedent). SAT 2.011 vs dodecahedron (law 1.4); NN 8.31
+  vs catenarygate (law 8, films counted); band 7.05deg max dev; rim
+  106.13..109.55; terrain 9pt 6.5mm PY -0.02079 (+2.9mm grade
+  disclosed); lateral 9.01m — deep flank, no walk owed (city-106
+  precedent). No riders (parent None, 20m sweep), no companion light,
+  no walk tools pinned to old seat. Next queue head: echoarch brg342
+  r60 (18deg off, last named Wave A math stray).
 
 Wave A: pull avenue-family strays into their bands (worst off-axis first).
 Wave B: sequence + rhythm-check each avenue (spacing, plinths where a form
