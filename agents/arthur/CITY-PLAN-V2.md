@@ -87,6 +87,34 @@ Wave A log (math-family strays -> avenue band, worst off-axis first):
  catenarygate brg180 r60.5 (176deg off), reuleauxrotor brg190.5 r65.6,
  catenoid brg154 r60, lemniscateseat brg263.3 r60.4, echoarch brg342
  r60.
+ - city-107 EXECUTED: nx-struct-catenarygate (worst remaining off-axis
+ math stray — brg180 r60.5, 176deg off axis 356, ANTIPODAL class) ->
+ (-1.5,-0.025735,115.5) yaw (brg-180)deg = 3.128606 rad [struct-72
+ radial opening law re-based to seat bearing; opening axis toward
+ village, 9m catenary silhouette reads BROADSIDE to the avenue walk —
+ city-105 broadside precedent; proven: the deep axis r110..120 is a
+ dead-straight 10m rhythm admitting NO on-axis insert under NN-8].
+ GEOMETRY->CHAOS THRESHOLD FLANK: scanner city107-scan.py design-rank
+ #1 of 3558 lawful band seats — dodecahedron r110 + boy r111.8 close
+ the geometry chapter, rule30wall r120 opens chaos; arch stands in the
+ chapter seam r115.5, 6.56m east of the axis line. Same lib
+ 0e3b5e5b4d7086ab content-addressed (zero uploads, local sha16 ==
+ live lib pre-verb), remove+spawn 2 verbs paced 650ms PLACED_VERIFIED
+ exact tuple + comp {} before/after, census 326 zero
+ arrivals/departures, idempotent 0-verb rerun. Fresh-SAT at verb time
+ 1.536 vs dodecahedron (law 1.4), NN 8.06 vs rule30wall (Amendment 1
+ law 8), rim 114.57..116.47, band corners 1.0deg max dev. Terrain 9pt
+ true-frame spread 8.1mm, PY -0.025735 lowest corner (+1.7mm grade,
+ disclosed). OWD same tick (sweep-77 vacated-tool class): TWO standing
+ walk tools re-pinned to the live tuple — struct72-walk-catenarygate
+ (full passage circuit 12/12 ALL_PASS maxArrival 0.39, matching the
+ original struct-72 record) and struct84-walk-rotor gateaxis legs
+ re-based in the gate's local frame (10/10 ALL_PASS maxArrival 0.32,
+ gateaxis legs 0.306/0.310 threading the new opening). No riders
+ (census 20m sweep: neighbors all sibling struct forms), no companion
+ light, comp bag empty. Next queue head: reuleauxrotor brg190.5 r65.6
+ (worst remaining math stray), then catenoid brg154 r60,
+ lemniscateseat brg263.3 r60.4, echoarch brg342 r60.
 
 Wave A: pull avenue-family strays into their bands (worst off-axis first).
 Wave B: sequence + rhythm-check each avenue (spacing, plinths where a form

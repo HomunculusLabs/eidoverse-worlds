@@ -1,9 +1,12 @@
 // struct84-walk-rotor.ts — struct-84: MCPL walk gate for the REULEAUX
 // ROTOR. Entity center (-12, -0.0373, -64.5) yaw 0, TRUE envelope x/z ±1.75
 // (exact trimesh: slab 12.25m^2 + height 3.29 -> room gates). Folly — nothing
-// enterable; circuit at 3.5m standoff (2x envelope, > 1.4m pinch law) both
-// ways, PLUS the catenarygate axis leg (0,-56)->(0,-68) proving the S
-// walking line is unobstructed by the rotor 12m west.
+// folly — nothing enterable; circuit at 3.5m standoff (2x envelope, > 1.4m pinch law) both
+// ways, PLUS the catenarygate axis leg proving the S walking line is unobstructed by the
+// rotor 12m west. Gate-axis legs RE-PINNED city-107 (2026-09-12) after the Wave A
+// relocation (0,-0.0274,-60.5) yaw 0 -> (-1.5,-0.025735,115.5) yaw 3.128606 — legs
+// re-based in the gate's local frame: village-side local z +5.5 = (-1.43,110.00),
+// outward local z -5.5 = (-1.57,121.00), threading the 7m opening on the radial).
 import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
@@ -33,11 +36,11 @@ try {
     await leg("w->s", [CX, CZ + ST]);
     await leg("s->e", [CX + ST, CZ]);
     await leg("e->n", [CX, CZ - ST]);
-    // gate axis proof: teleport to N approach of catenarygate, walk the axis south
-    sx = 0; sz = -56;
+    // gate axis proof: teleport to village-side approach of catenarygate, walk the axis outward
+    sx = -1.43; sz = 110.00;
     agent.stop(); agent.pos.x = sx; agent.pos.z = sz; agent.pos.y = agent.heightAt(sx, sz); await Bun.sleep(250);
-    await leg("gateaxis-n->through", [0, -68]);
-    await leg("gateaxis-s->back", [0, -56]);
+    await leg("gateaxis-n->through", [-1.57, 121.00]);
+    await leg("gateaxis-s->back", [-1.43, 110.00]);
     const maxArr = Math.max(...results.map(r => r.dist));
     console.log(JSON.stringify({ status: "ALL_PASS", legs: results.length, maxArrival: +maxArr.toFixed(3), results }, null, 2));
 } finally { agent.close(); }

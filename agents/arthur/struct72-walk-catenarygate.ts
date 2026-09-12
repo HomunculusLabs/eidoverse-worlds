@@ -1,5 +1,7 @@
 // struct72-walk-catenarygate.ts — struct-72: MCPL walk gate for the CATENARY
-// GATE placement. Entity center (0, −0.0274, −60.5), yaw 0 — the gate spans
+// GATE placement. RE-PINNED city-107 (2026-09-12) after the Wave A relocation
+// (0,-0.0274,-60.5) yaw 0 -> (-1.5,-0.025735,115.5) yaw 3.128606 [Math Avenue
+// geometry->chaos threshold flank; same lib 0e3b5e5b4d7086ab]. The gate spans
 // local x (opening |x|<3.30 air at grade), wall thickness local z ±0.948.
 // Two-way passage through the 7m opening + shoulder circuit. The passage is
 // honest room gates (14.2m² + 5.8m → exact trimesh) so the walker threads
@@ -8,7 +10,7 @@ import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
 process.env.WORLD_TOKEN = cfg.joinToken;
-const PX = 0, PZ = -60.5, YAW = 0;
+const PX = -1.5, PZ = 115.5, YAW = 3.1286063706696203;
 const cs = Math.cos(YAW), sn = Math.sin(YAW);
 const pt = (lx: number, lz: number): [number, number] => [PX + lx * cs + lz * sn, PZ - lx * sn + lz * cs];
 const agent = new WorldAgent({ url: cfg.url, name: "arthur-struct72-walk", world: "commons-next", avatar: cfg.avatar, agentToken: cfg.agentToken });
