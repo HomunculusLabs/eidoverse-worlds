@@ -146,6 +146,30 @@ Wave A log (math-family strays -> avenue band, worst off-axis first):
  in kind). No riders (20m census sweep: zero artwalk ids), no companion
  light. Next queue head: catenoid brg154 r60, then lemniscateseat
  brg263.3 r60.4, echoarch brg342 r60.
+ - city-109 EXECUTED: nx-struct-catenoid (worst remaining off-axis math
+  stray — brg154.0 r60.0, ~158deg off axis 356) -> (-14.25,-0.010711,91.25)
+  yaw 0 [door local -z reads due S toward the incoming village->N avenue
+  walk — struct-103 door contract preserved at the new bearing; GEOMETRY
+  CHAPTER WEST FLANK GATE: rotor r87.5 E -> kochgarden r90 axis ->
+  CATENOID r92.4 W, gate-pair across the axis point mirroring the
+  costa/unduloid surfaces gate at r~128 (city-105 two-form-pair
+  precedent)]. Same lib 8ac66493 content-addressed (zero uploads, local
+  sha16 == live lib pre-verb); remove+spawn 2 verbs paced 650ms
+  PLACED_VERIFIED exact tuple + comp {} before/after, census 326 zero
+  arrivals/departures, idempotent 0-verb rerun. Scanner city109-scan.py
+  (placer-exact gates, 0.25m grid): 1923 lawful band seats, design-rank
+  #2 chosen over #1 (0.25m apart, SAT-margin preference disclosed);
+  fresh-SAT at verb time 1.832 vs hilbertlabyrinth (law 1.4), NN 8.10 vs
+  kochgarden (Amendment 1 law 8, films counted), NEW door-lane endpoint
+  gate 3.06 vs hilbertlabyrinth (law 1.0, live walk proves the lane).
+  Terrain 9pt spread 12.0mm, PY -0.010711 lowest corner (+41mm grade vs
+  old -0.0518, disclosed). OWD same tick (sweep-77 vacated-tool class):
+  struct103-walk-catenoid.ts re-pinned to live tuple — two-way door-lane
+  circuit ALL_PASS 2/2 maxArrival 0.375 (matches the original struct-103
+  record at the old seat). No riders (census parent None, 25m sweep:
+  nearest are standalone artwalk hosts, not catenoid riders), no
+  companion light, comp bag empty. Next queue head: lemniscateseat brg263.3
+  r60.4 (97deg off), then echoarch brg342 r60.
 
 Wave A: pull avenue-family strays into their bands (worst off-axis first).
 Wave B: sequence + rhythm-check each avenue (spacing, plinths where a form

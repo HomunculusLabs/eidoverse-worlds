@@ -1,13 +1,16 @@
 // struct103-walk-catenoid.ts — two-way MCPL walk through the catenoid's
-// door lane (local -z door, chord 2.2m, head 2.22m). Seat (26.30,-53.93)
-// yaw π/2: local +z -> world +x, so the lane runs E-W through the tower,
-// exiting the door due W (toward the N-ray mathematics walk). Chassis:
+// door lane (local -z door, chord 2.2m, head 2.22m). RE-PINNED city-109
+// (sweep-77 vacated-tool class): seat moved (26.30,-53.93) yaw π/2 ->
+// (-14.25, 91.25) yaw 0 [Math Avenue geometry-chapter west flank]. yaw 0:
+// local -z -> world (0,-1), lane runs N-S through the tower, door reads
+// due S toward the incoming village->N avenue walk (same door-to-walk
+// contract as the old seat, re-based to the new bearing). Chassis:
 // struct100-walk law.
 import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
 process.env.WORLD_TOKEN = cfg.joinToken;
-const px = 26.30, pz = -53.93, yaw = Math.PI / 2, c = Math.cos(yaw), s = Math.sin(yaw);
+const px = -14.25, pz = 91.25, yaw = 0, c = Math.cos(yaw), s = Math.sin(yaw);
 const world = (x: number, z: number): [number, number] => [px + x * c + z * s, pz - x * s + z * c];
 const start = world(0, 6.0), route = [world(0, -6.0), world(0, 6.0)];
 const agent = new WorldAgent({ url: cfg.url, name: "arthur-struct103-walk", world: "commons-next", avatar: cfg.avatar, agentToken: cfg.agentToken });
