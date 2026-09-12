@@ -1,17 +1,21 @@
 // struct84-walk-rotor.ts — struct-84: MCPL walk gate for the REULEAUX
-// ROTOR. Entity center (-12, -0.0373, -64.5) yaw 0, TRUE envelope x/z ±1.75
+// ROTOR. Entity center (1.5, 0.01561, 87.5) yaw 0, TRUE envelope x/z ±1.75
 // (exact trimesh: slab 12.25m^2 + height 3.29 -> room gates). Folly — nothing
-// folly — nothing enterable; circuit at 3.5m standoff (2x envelope, > 1.4m pinch law) both
-// ways, PLUS the catenarygate axis leg proving the S walking line is unobstructed by the
-// rotor 12m west. Gate-axis legs RE-PINNED city-107 (2026-09-12) after the Wave A
-// relocation (0,-0.0274,-60.5) yaw 0 -> (-1.5,-0.025735,115.5) yaw 3.128606 — legs
-// re-based in the gate's local frame: village-side local z +5.5 = (-1.43,110.00),
-// outward local z -5.5 = (-1.57,121.00), threading the 7m opening on the radial).
+// enterable; circuit at 3.5m standoff (2x envelope, > 1.4m pinch law) both
+// ways, PLUS the Math Avenue centerline leg proving the avenue walking line
+// passes the rotor's band unobstructed (rotor 7.6m east of the brg-356 axis
+// ray, geometry-chapter east flank, city-108).
+// RE-PINNED city-108 (2026-09-12) after the Wave A relocation
+// (-12,-0.0373,-64.5) yaw 0 -> (1.5,0.01561,87.5) yaw 0: circuit re-based at
+// the new seat; the city-107 catenarygate axis legs belong to the gate's seat
+// 25m+ away and were replaced by the avenue centerline legs (same spirit:
+// the walking line near the form stays unobstructed) along the brg-356 ray
+// (-5.65,80.80) -> (-6.63,94.77), abeam the rotor at ~7.6m lateral.
 import { WorldAgent } from "../../mcpl/agent.ts";
 import { readFileSync } from "node:fs";
 const cfg = JSON.parse(readFileSync("/Users/t3rpz/projects/eidoverse-worlds/agents/arthur/config.json", "utf8"));
 process.env.WORLD_TOKEN = cfg.joinToken;
-const CX = -12, CZ = -64.5, ST = 3.5;
+const CX = 1.5, CZ = 87.5, ST = 3.5;
 const results: any[] = [];
 const agent = new WorldAgent({ url: cfg.url, name: "arthur-struct84-walk", world: "commons-next", avatar: cfg.avatar, agentToken: cfg.agentToken });
 async function leg(name: string, end: [number, number], expect: "PASS" | "BLOCKED" = "PASS") {
@@ -36,11 +40,13 @@ try {
     await leg("w->s", [CX, CZ + ST]);
     await leg("s->e", [CX + ST, CZ]);
     await leg("e->n", [CX, CZ - ST]);
-    // gate axis proof: teleport to village-side approach of catenarygate, walk the axis outward
-    sx = -1.43; sz = 110.00;
+    // avenue axis proof: teleport to the brg-356 ray at r81, walk outbound to r95
+    // (passes abeam the rotor ~7.6m east; kochgarden on-axis station is a
+    // walkable ground film, struct-19 law)
+    sx = -5.65; sz = 80.80;
     agent.stop(); agent.pos.x = sx; agent.pos.z = sz; agent.pos.y = agent.heightAt(sx, sz); await Bun.sleep(250);
-    await leg("gateaxis-n->through", [-1.57, 121.00]);
-    await leg("gateaxis-s->back", [-1.43, 110.00]);
+    await leg("axis-n->through", [-6.63, 94.77]);
+    await leg("axis-s->back", [-5.65, 80.80]);
     const maxArr = Math.max(...results.map(r => r.dist));
     console.log(JSON.stringify({ status: "ALL_PASS", legs: results.length, maxArrival: +maxArr.toFixed(3), results }, null, 2));
 } finally { agent.close(); }

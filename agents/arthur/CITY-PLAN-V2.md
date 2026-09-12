@@ -115,6 +115,37 @@ Wave A log (math-family strays -> avenue band, worst off-axis first):
  light, comp bag empty. Next queue head: reuleauxrotor brg190.5 r65.6
  (worst remaining math stray), then catenoid brg154 r60,
  lemniscateseat brg263.3 r60.4, echoarch brg342 r60.
+ - city-108 EXECUTED: nx-struct-reuleauxrotor (worst remaining off-axis
+ math stray — brg190.5 r65.6, ~165deg off axis 356) -> (1.5, 0.01561,
+ 87.5) yaw 0 PRESERVED [spinning kinetic form: motion:sails rotates the
+ whole form — no static yaw read; struct-84 contract]; GEOMETRY CHAPTER
+ EAST FLANK: scanner city108-scan.py design-rank #1 of 2748 lawful
+ seats — rhythm sunflowerdial r71 E -> sierpinski r80 W -> ROTOR r87.5
+ E -> kochgarden r90 axis -> hilbert r100 W (alternating flank cadence;
+ the rotor = the chapter's kinetic form). Same lib 670e397cb6422ee2
+ content-addressed (zero uploads, local sha16 == live lib pre-verb);
+ remove+spawn+comp x2 = 4 verbs paced 650ms PLACED_VERIFIED exact tuple;
+ comp bag motion:pwheel_rr (240-pt deltoid path) + motion:sails (spin z
+ 2.5deg/s) re-applied from sidecar struct83-rotor-comp.json, verified
+ byte-equal to the live bag pre-move (comp-wipe law honored); census 326
+ zero arrivals/departures, idempotent 0-verb rerun. Gates: SAT fresh
+ 3.828 vs sierpinski (law 1.4); NN 8.08 (Amendment 1 law 8); band
+ corners 3.8deg max dev; rim 85.75..89.31; terrain 9pt spread 7.2mm,
+ PY 0.01561 lowest corner (+53mm grade, disclosed). SCANNER FIX this
+ tick (disclosed): Amendment 1's NN floor now counts ALL nx-struct forms
+ — films included — after the city107-class solids-only NN ranked a seat
+ 0.53m from kochgarden's center (inside the bed); SAT keeps the
+ struct-19 film exemption. NEW standing-contract gate: the 3.5m standoff
+ audit circuit must clear every solid by >=0.3m walker radius (2.08 vs
+ sierpinski). Walk-lines: 7.60m lateral of the axis ray — flank class,
+ no network walk owed (city-106 precedent). OWD same tick
+ (sweep-77 vacated-tool class): struct84-walk-rotor.ts re-pinned to the
+ live tuple — 10/10 ALL_PASS maxArrival 0.364, incl. new Math Avenue
+ centerline legs over the kochgarden walkable film (the city-107
+ catenarygate axis legs belonged to the gate's seat 25m+ away, replaced
+ in kind). No riders (20m census sweep: zero artwalk ids), no companion
+ light. Next queue head: catenoid brg154 r60, then lemniscateseat
+ brg263.3 r60.4, echoarch brg342 r60.
 
 Wave A: pull avenue-family strays into their bands (worst off-axis first).
 Wave B: sequence + rhythm-check each avenue (spacing, plinths where a form
