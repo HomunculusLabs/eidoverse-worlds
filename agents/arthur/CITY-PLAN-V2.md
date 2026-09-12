@@ -53,11 +53,21 @@ Wave A log (math-family strays -> avenue band, worst off-axis first):
   r80 -> kochgarden r90 -> hilbert r100. Same lib 7f8b5fd7 (zero
   uploads), SAT 1.574 vs skene (law 1.4), NN 9.86 (law 8), terrain
   5.1mm, base-lane walk 2/2. First candidate (-1.0, 79.81) from an
-  interrupted prior window was rejected pre-verb by the placer's own
-  fresh-SAT gate (1.074 vs skene). Next worst off-axis math strays:
-  unduloid brg30 r110 (60deg off), boy brg90 r110 (94deg off),
-  catenarygate brg180 r60.5, reuleauxrotor brg190.5 r65.6, catenoid
-  brg154 r60, lemniscateseat brg263.3 r60.4, echoarch brg342 r60.
+ interrupted prior window was rejected pre-verb by the placer's own
+ fresh-SAT gate (1.074 vs skene).
+ - city-105 EXECUTED: nx-struct-unduloid (worst remaining off-axis math
+ stray — brg60 r110, ~64deg off axis 356) -> (4.25, -0.013433, 128.0)
+ yaw -0.033161 rad [-1.9deg, avenue tangent law], THE SURFACES GATE
+ beside costa: unduloid CMC beads + costa minimal surface as a two-form
+ pair at the deep threshold (rule30wall r120 -> gate pair r~128 ->
+ tesseract r130). Same lib 014ed586a083a4df (zero uploads), SAT 5.287
+ vs costa (law 1.4), NN 10.27 (law 8), band 4.4deg max dev, rim
+ 126.80..129.43, terrain 6.4mm, idempotent 0-verb rerun, comp {}
+ before/after, census 326 quiet. Scanner 7496 lawful seats,
+ design-rank #1. Next worst off-axis math strays:
+ boy brg90 r110 (94deg off), catenarygate brg180 r60.5,
+ reuleauxrotor brg190.5 r65.6, catenoid brg154 r60,
+ lemniscateseat brg263.3 r60.4, echoarch brg342 r60.
 
 Wave A: pull avenue-family strays into their bands (worst off-axis first).
 Wave B: sequence + rhythm-check each avenue (spacing, plinths where a form
