@@ -190,6 +190,36 @@ Wave A log (math-family strays -> avenue band, worst off-axis first):
   precedent). No riders (parent None, 20m sweep), no companion light,
   no walk tools pinned to old seat. Next queue head: echoarch brg342
   r60 (18deg off, last named Wave A math stray).
+ - city-111 HOLD-for-Bill: nx-struct-echoarch (last named Wave A math
+  stray — brg342 r60, 14deg off axis 356) — ZERO lawful Math Avenue band
+  seats, infeasibility proven per pitfall 9. Form: 8.2 x 3.32 x 12.2m
+  whisper gallery (two parabolic fins, walkable throat local +z, bbox
+  local-z center +4.0 — asymmetric, rides OBB via cz). Scanners
+  city111-scan.py (radial-inward throat, original struct-28 read law)
+  + city111-scan2.py (adds tangent/broadside throat class + free-yaw
+  16-orientation completeness census), both replicating next-place-
+  city110.ts gates exactly: 0 lawful seats in EVERY class; best SAT
+  near-miss 0.533 vs hilbertlabyrinth (law 1.4); free-yaw clears SAT
+  only outside the band (best 14.99 at brg~346 / r~137). Instrument
+  validated: old-seat control SAT 1.832 + the same gates found 800
+  seats for lemniscateseat (city-110). Physical cause: the 12.2m
+  throat needs ~15m clear runway; the seated avenue's NN rhythm (8-10m,
+  both flanks occupied r58..130) leaves none. Current seat LAWFUL (SAT
+  control passes; off-band but processional-band-adjacent, no overlap),
+  hold leaves nothing violated. OPTIONS for Bill:
+  (1) hold in place (default — reads as a W-threshold curiosity);
+  (2) Math terminal island r140-170 (C-variant): 3817 lawful seats
+      (best SAT 16.5, NN 24-25 vs voronoi) — the whisper gallery as the
+      island's second landmark-scale form beside lorenz r140;
+  (3) band amendment (waive NN or SAT for one mouth pocket — NOT
+      recommended: kochgarden/hilbert sit 3m from the only pocket).
+  WAVE A EYE-GATE PACKET delivered city-111:
+  reviews/city111-waveA/waveA-eye-gate-map.png (before/after overhead —
+  7 strays city-104..110 seated in the band, echoarch HOLD ring marked;
+  zai-vision fallback judge, native vision unavailable this tick; map
+  defects fixed on judge findings: wedge angle 84..104, label de-crowd;
+  pitfall-11 note: judge's boy-at-wedge-edge claim ruled by plan math —
+  brg 349.0 vs band edge 346, committed corner dev 3.9deg, dot legal).
 
 Wave A: pull avenue-family strays into their bands (worst off-axis first).
 Wave B: sequence + rhythm-check each avenue (spacing, plinths where a form
