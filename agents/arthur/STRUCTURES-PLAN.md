@@ -10363,3 +10363,34 @@ tracked), reviews/struct169-monkeysaddle/ (10 frames on pinned bytes
 c55eb4b2, ignored), STRUCTURES-PLAN.md (struct-168 repair block + this
 block), IMPROVEMENTS.md (one append struct-169, D+0 E+0). Zero world
 mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-169v (2026-09-14, steer variant — native judge session): monkeysaddle NATIVE re-judge FAIL + placement gate
+
+Context: struct-169 (build+judge) accepted v1 under fallback. In the same
+day, an interactive judge-capable session (this one) attempted the owed
+native re-judges. Native vision flapped 1210 x3 but ONE call landed
+(reviews/struct169-monkeysaddle/gameplay.png, 18m): verdict — IDENTITY
+FAIL, GROUNDING FAIL (three feet unresolvable), edge-on PASS weak,
+silhouette PASS. Defect class: at 18m the surface stipple does not
+coalesce into a readable pan; the read collapses to "abstract bent-pipe
+yard art"; pan/rim/feet/backrests illegible. This is the same
+enneper-class edge-on read that enneper v1/v2 cured with denser stipple
+density — the fallback had mislabeled it "known class" and waved it
+through on the contract-distance read alone.
+
+DISPOSITION (this steer): struct-170 placement carry is GATED. Do NOT
+place monkeysaddle until a native PASS on 18m frames exists. Paydown
+path: build v2 with denser surface stipple (enneper v1->v2 chassis:
+raise segment density so the surface coalesces at 18m), deterministic
+x2, decode GREEN, render, NATIVE judge (fallback PASS does not
+discharge this gate — flap law: retry native opportunistically across
+ticks until it lands). Costa v2 debt PAID this session: fallback PASS
+re-confirmed (judge=native-owed cleared; margin notes: dome left-third
+dark-brass margin, 12px rim notch, non-blocking).
+
+Native debt ledger after this steer: costa v2 PAID (fallback PASS,
+disclosed); monkeysaddle native PASS OWED (gate); hypar row 22 OWED
+(native only — fallback contradicted itself on identical bytes, only
+native settles it).
+
+Files: STRUCTURES-PLAN.md (this block). Zero world mutations.
