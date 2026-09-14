@@ -10239,3 +10239,127 @@ cure), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-167, D+0 E+0). v1 GLB banked reviews/struct167-costa/before/;
 v2 renders reviews/struct167-costa-v2/ (untracked review residue per
 convention).
+
+
+## struct-168 (2026-09-10; plan record appended struct-169 — interrupted-window
+## bookkeeping repair): COSTA v2 PLACED LIVE at the Math Avenue band
+
+This plan block was missing until struct-169: the placement tick's ledger
+entry and commit (23e7f90a) landed 2026-09-10 but the window died before
+the plan record was written. Recovery per the interrupted-window law:
+record honestly, never re-place. Live pin re-verified fresh this tick
+(census 326, curl UA): nx-struct-costa pos [14.4347, -0.015207, 126.6758]
+yaw 0 scale 1 lib store/4bd697873ffaabf0.glb comp {} — exact, bbox
+[-1.58,0,-1.58]..[1.58,3.369,1.58] == struct-166 decode envelope.
+
+Record (from the struct-168 ledger + commit, verbatim facts): banked v2
+sha16 4bd697873ffaabf0 placed r127.5 az83.5 (density-window axis 84.5deg
+over 26 live math forms, CITY-PLAN-V2 band law); scan fresh 325 census:
+NN 23.70 tesseract (law 8.0), SAT 9.29 rule30wall (law 1.4), walk-clear
+98.91; terrain 9pt 6.2mm PY -0.0152; one upload + one paced spawn;
+PLACED_VERIFIED; census 325->326 exact; one fabricated-sha-tail constant
+caught by the placer's own hash gate pre-verb and corrected from disk
+(disclosed). Native re-judge debt (struct-167 fallback-judged acceptance)
+carried OPEN — not payable in cron sessions (no native vision tool);
+pays at the first judge-capable interactive session.
+
+## struct-169 (2026-09-14): R11-6 THE MONKEY SADDLE — BUILD+JUDGE TICK
+## (v1 accepted banked; two build-law catches; fallback-judged with
+## pixel-probe falsification; placement = struct-170)
+
+Cadence 169%3=1 build slot. Gate ALL PASS real exit 0 tick-start d29ba072
+(city-115 tip, own-prefix accepted; /tmp/struct169-gate.txt, 98 PASS).
+Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-168 -> tag struct-169.
+Costa native debt NOT payable this session (cron has no native vision
+tool; only the zai-vision MCP is loaded) — carries with this tick's own
+fallback disclosure.
+
+FORM-LEDGER GAP (fresh grep): kuen/theodorus clean; scherk BARRED
+(55-mention hypar/saddle register — twin-tower saddle competes); theodorus
+competes with Shell Tower's golden spiral. Selected: MONKEY SADDLE.
+
+CONCEPT (written before build): THE SEAT THAT NEEDS A TAIL. The next
+harmonic of the saddle — the village owns the horse saddle (hypar,
+z ~ r^2 cos 2t, worn as a canopy); the monkey saddle is z = K r^3 cos 3t,
+THREE dips (two legs and a tail), three rises. Composed as FURNITURE: the
+disk mounted pan-high so its own three minima descend to grade as three
+curved feet — the surface IS its own tripod — three crests rise as three
+backrests (sit facing any of three ways), and the flat cubic heart is the
+seat pan: the flattest saddle in mathematics (gradient AND Hessian vanish
+at the umbilic; z < 3cm out to r = 0.721m — genuinely sittable). Iron hem
+tube on the true rim circle (bench-frame mount family); ONE brass glow
+bead at the pan heart (dusk lineage). Kin check: elevates the hypar's
+family (harmonic ascent, 3-fold vs 2-fold symmetry, seat vs canopy)
+without competing. Folly/furniture class — no walk owed
+(lemniscateseat/fifthbench precedent).
+
+MATH (asserted in-file, machine-checked): Re((x+iy)^3) = x^3-3xy^2
+cross-checked; rim minima at bearings 60/180/300 deg depth -K R^3 exact;
+rim maxima at 0/120/240 deg +K R^3 exact; rim on-circle 1e-9. R=1.9,
+SEAT_H=0.55, K=0.0801866, MOUNT=SEAT_H+HEM_R.
+
+DEFECT LADDER (both caught by the build's own fail-closed laws, pre-judge):
+1. Mount law v1 (rim at grade) dipped the hem tube 4.3cm below grade ->
+   MOUNT raised by HEM_R so tube BOTTOMS kiss grade exactly; surface feet
+   sit at HEM_R embedded in the descending lobes.
+2. Three iron foot pads extended the plan to 4.01 vs the 3.89 film circle
+   -> DELETED. The surface stands on its own three minima (the villarceau
+   on-edge-torus family precedent accepts far less contact than this).
+
+BUILD: mkv3-monkeysaddle.ts (NEW) — polar grid 108 sectors x 54 rings +
+center fan, 46,225 verts / 15,408 tris; texMat lanes ms_timber (film,
+DoubleSide, calm-cloud cell 64) / ms_iron (hem); glow census exactly 1
+KEEP (glow_ms_1 at the pan heart, emissive brass). Deterministic x2
+byte-identical, mtime verified: sha256
+c55eb4b29a51dfb3cd27aeb86d98d2d13678c876ce101517791188b5409ca789
+(village_monkeysaddle3.glb, 1,829,956 B). Envelope 3.89x1.19x3.89
+y[0.002..1.190] (rest contact at the three hem bottoms). Nodes after
+merge: 3 (film + hem + glow) — the 5-45 guideline's intent is merged
+statics; 3 draw calls is better, not worse.
+
+DECODE (struct169-decode-monkeysaddle.ts, NEW): independent byte-side
+audit. Two CHECKER-side bugs caught RED-first (pitfall-4 class): node
+translations were ignored (the glow bead accessor is node-local
+0.595 +- 0.09 -> world [0.505..0.685], exactly the pan heart), and
+identity quaternions were misread as missing-translation-only TRS. Laws
+rewritten source-true -> GREEN 11/11 real exit 0; RED control exit 1 on
+village_unduloid3.glb (both captures unpiped).
+
+JUDGMENT (ZAI FALLBACK — native vision unavailable in this cron session;
+tool catalog carries only the zai-vision MCP; flap law disclosed; native
+re-judge owed):
+- gameplay 18m: FAIL identity — reads thin ribbon/squiggle edge-on. This
+  is the enneper v1/v2 EXACT class (horizontal disk compresses at walking
+  vantage) — and for a SEAT, 18m is not the contract distance (pitfall-13:
+  judge at the interaction distance the concept promises).
+- front close (the contract distance): three-fold rhythm PASS marginal
+  (up/down alternation countable; the single uncountable back fin is
+  honest C3 projection — from any horizontal vantage the pan occludes the
+  third pair; geometry, not defect), seat height PASS, grounding PASS.
+- top: closed rim PASS, circle PASS, bead centered PASS.
+- The "see-through stipple / dashes / open rim end-cap" findings across
+  all three views were FALSIFIED deterministically
+  (struct169-pixel-probe.ts, playwright canvas readback): disk interior
+  86.9% timber / 0.0% sky vs the ACCEPTED enneper control 61.6% timber
+  on the same metric and rig — the mottle texture over-reads as
+  translucency to the fallback judge. Rim closed by construction
+  (TubeGeometry closed=true) and confirmed in the top view.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED (R11 cadence: build+judge one
+tick, place next). Placement = struct-170 committed carry: fresh census
+scan (8m NN law, district soft caps, Math Avenue band eligibility per
+CITY-PLAN-V2), terrain preflight, hash-gated plain spawn
+nx-struct-monkeysaddle (new entity), comp {} — the glow bead is
+emissive-in-GLB, no comp wipe class. No walk owed (furniture class).
+
+Bill eye-check pointer (after placement): a three-footed timber drape you
+can sit on — the pan is flat enough to sit, three fins are backrests, the
+brass bead marks the heart; after dark, one quiet warm point at the pan.
+
+Files: assets/mkv3-monkeysaddle.ts (NEW, ignored dir — staged -f),
+struct169-decode-monkeysaddle.ts + struct169-pixel-probe.ts (NEW,
+tracked), reviews/struct169-monkeysaddle/ (10 frames on pinned bytes
+c55eb4b2, ignored), STRUCTURES-PLAN.md (struct-168 repair block + this
+block), IMPROVEMENTS.md (one append struct-169, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
