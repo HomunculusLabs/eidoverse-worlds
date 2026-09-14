@@ -41,7 +41,11 @@ without Bill's explicit direction. Do not touch village or resident lanes.
 
 ## QUEUE
 
-- [ ] 24 performers broadcasting presence at 15 Hz to 176 spectators.
+- [x] 24 performers broadcasting presence at 15 Hz to 176 spectators.
+      (pressure-1, 2026-09-14: scratch sequencer @ d29ba072, 20s run — 200/200
+      joins in 41ms (p95 35ms), median spectator 14.8 fps, frame lat p95 10ms,
+      0 seq gaps, 176/176 burst-complete, 10/10 reconnects, RSS settled 88.8MB,
+      zero warnings in server log. PASS, no patch needed.)
 - [ ] One deliberately slow spectator cannot add latency to healthy clients.
 - [ ] Join storm while 24 performers continue broadcasting.
 - [ ] Authored chat/verbs remain responsive during maximum presence traffic.
