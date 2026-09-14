@@ -68,6 +68,7 @@ const BATTERY: Row[] = [
   { name: "support-lifecycle", tool: "tools/support-lifecycle-test.ts", timeoutMs: 420_000, sweepPorts: [8940] },
   { name: "permtest", tool: "tools/permtest.ts", server: true },
   { name: "comptest", tool: "tools/comptest.ts", server: true },
+  { name: "phrasetest", tool: "tools/phrasetest.ts" },
   { name: "modtest", tool: "tools/modtest.ts", server: true, serverEnv: { WORLD_ADMIN: "admin" } },
   { name: "locktest", tool: "tools/locktest.ts", server: true },
   { name: "leasetest", tool: "tools/leasetest.ts", server: true },

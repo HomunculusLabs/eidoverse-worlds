@@ -16,7 +16,7 @@ import { join } from "node:path";
 import { VERB_RATE, OPT_DIR } from "./config.ts";
 import { isAdminId, rightsOf, VERB_NEEDS, lockRefusal } from "./rights.ts";
 import { lintMotion, lintParticles } from "./lint.ts";
-import { reactToUse } from "./reactions.ts";
+import { reactToUse, reactToSay } from "./reactions.ts";
 import { behaviorLimits } from "./behaviors.ts";
 import { ROLE_RANK, type LogEntry, type WorldState } from "../shared/fold.js";
 
@@ -311,7 +311,8 @@ function afterModerate(ctx: VerbCtx, entry: LogEntry) {
 // reads the same numbers); each row here only adds what the shell dispatches.
 
 const extras: Record<string, Pick<VerbRow, "selfRankZero" | "validate" | "after">> = {
-  say: { validate: vSay },
+  // A `say` can be a cause too: phrase-bearing things answer (reactions.ts).
+  say: { validate: vSay, after: (ctx, entry) => reactToSay(ctx.w, entry) },
   // A `use` is a cause; reactions turn it into logged effects.
   use: { after: (ctx, entry) => reactToUse(ctx.w, entry) },
   mount: { selfRankZero: true, validate: vMount },
