@@ -167,8 +167,36 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       co-batch 19-31 bodies); the pinned invariants are no-foreign-id,
       no-dup, no-oversize, window-union completeness. Servergate smoke 85/0
       pinned tree. Next head: malformed-frame storm.)
-- [ ] Malformed-frame storm: partial/truncated JSON payloads never wedge the
+- [x] Malformed-frame storm: partial/truncated JSON payloads never wedge the
       sequencer.
+      (pressure-11, 2026-09-15: worktree @ d2f09c01 + fix, PORT 8997, 30.5s,
+      200 peak — 24 embodied anchors @15Hz + 136 spec, then 8 raw-TCP corrupt
+      legs (frozen-mid-frame/trickle/prefix-fuzz/resync) + 16 protocol-garbage
+      legs @3Hz on a 12-item hostile menu (non-object envelopes, truncated
+      prefixes, wrong-typed poses, NaN, unknown types, 60k-deep parse-valid
+      poison, 100KB strings, hostile joins) + 16 embodied mid-storm joins.
+      BASELINE RED — a real defect, not benchmark theater: one 120KB
+      deep-nested pose (parses, under the 256KB gate) wedged the whole
+      world's presence plane FOREVER (stage tick stringify threw before
+      dirty.clear → 30/30 frames → 0, HTTP/says stayed green = silent
+      partial outage); sibling seams: null envelope threw in the dispatch
+      catch, a retained poison pose broke every mid-hostility join snapshot,
+      and rememberPose persisted poison into poses.json. FIX (3 hunks,
+      server/server.ts): non-object envelopes get the explicit malformed
+      refusal; pose intake validates a shallow tree of finite leaves (depth
+      ≤5, ≤1024 nodes, strings ≤256B — covers p/pose-bones/pins from net.js
+      + WorldAgent); stage tick serializes BEFORE clearing with a
+      drop-one-frame-never-the-tick guard. Gates: websocket-input slice
+      extended 12→18 checks, RED 6-fail on unfixed tree → 18/0 GREEN after;
+      harness tools/pressure-malformed.ts (SELFTEST 20 gates, self-booting,
+      fd-checked). AFTER, identical conditions: joins 200/200 p95 35ms,
+      mid-storm 16/16, fps p50 15.0, lat p95 10ms, 0 gaps, 0 foreign ids
+      in frames, 29 post-poison frames (stream alive), refusals 16/16 legs,
+      says 3/3 p95 6ms, final present 0, arrive/leave drift 0/0, log drift
+      0, RSS +18MB, 0 suspicious lines. Servergate: smoke 85/0 +
+      websocket-input 9/0 on the pinned fixed worktree. Port 8999 was
+      foreign-held (Python+bun.exe) — scenario moved to 8997, foreign
+      processes untouched.)
 - [ ] Auth failure storm: bad tokens cannot exhaust join capacity.
 - [ ] Slow-loris verb sender: one crawling connection cannot block verb intake.
 - [ ] World-hop churn: rapid switch/leave cycles leave no cross-world state

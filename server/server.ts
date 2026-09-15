@@ -364,6 +364,14 @@ const server = Bun.serve({
         ws.send(JSON.stringify({ type: "error", error: "malformed JSON message" }));
         return;
       }
+      // pressure-11: a VALID JSON document can still be a non-object envelope
+      // (`null`, `5`, `"str"`, `[...]`) — `msg.type` would throw on null and
+      // the handlers assume a record. Same explicit refusal as unparseable
+      // bytes: refusals are messages, never a server-side failure log line.
+      if (msg === null || typeof msg !== "object" || Array.isArray(msg)) {
+        ws.send(JSON.stringify({ type: "error", error: "malformed JSON message" }));
+        return;
+      }
 
       // No message may ever kill the process. An uncaught throw in Bun's ws
       // callback EXITS THE SERVER, and a client in a reconnect loop turns one
@@ -1097,6 +1105,41 @@ const server = Bun.serve({
         }
         case "pose": {
           if (!c.world || c.spectator) return;
+          // pressure-11: a pose is RETAINED state — it rides JSON.stringify
+          // at three downstream sites (stage frames every tick, join
+          // snapshots' present[]/restore, poses.json on close). A parse-valid
+          // but structurally hostile value (e.g. a 60k-deep array — 120KB,
+          // under the 256KB size gate) blows the serializer's stack there,
+          // and the stage tick threw BEFORE dirty.clear(): one frame from
+          // one client wedged the whole world's presence plane while HTTP
+          // and authored verbs stayed green. The legit shapes are nested but
+          // SHALLOW — client/lib/net.js sendPose and WorldAgent send:
+          //   p: [x,y,z] · yaw/speed/pitch: number · clip/emote: string
+          //   pose: { bone → [x,y,z,w] } · pins: [ { j, at: [x,y,z] } ]
+          // so accept any tree of finite leaves within a depth/node budget
+          // (depth 5 ≫ pose→pins→pin→at; 1024 nodes ≫ 24 pins + a bone map)
+          // — deep or runaway junk dies HERE, at the door, where refusals
+          // are messages, never downstream at a serializer.
+          {
+            const nodes = { n: 0 };
+            const saneValue = (v: any, depth: number): boolean => {
+              if (++nodes.n > 1024) return false;
+              if (v === null) return true;
+              const t = typeof v;
+              if (t === "number") return Number.isFinite(v);
+              if (t === "boolean") return true;
+              if (t === "string") return v.length <= 256;
+              if (depth >= 5) return false;               // arrays/objects only shallower
+              if (Array.isArray(v)) return v.every((x) => saneValue(x, depth + 1));
+              if (t === "object") return Object.values(v).every((x) => saneValue(x, depth + 1));
+              return false;                                // function/symbol/undefined — never JSON, but cheap
+            };
+            const pose = msg.pose;
+            if (!(pose !== null && typeof pose === "object" && !Array.isArray(pose) && saneValue(pose, 1))) {
+              ws.send(JSON.stringify({ type: "error", error: "malformed pose — shallow object of finite values (depth ≤5, ≤1024 nodes)" }));
+              return;
+            }
+          }
           c.lastPose = msg.pose;
           // presence: batched into stage frames by the tick loop, never persisted
           c.world.dirty.set(c.id, msg.pose);
@@ -1273,7 +1316,23 @@ setInterval(() => {
   for (const w of worlds.values()) {
     try {
     if (w.dirty.size === 0) continue;
-    const data = JSON.stringify({ type: "frame", seq: w.frameSeq++, t: Date.now(), poses: Object.fromEntries(w.dirty) });
+    // pressure-11: serialize FIRST, clear AFTER. The old order (stringify
+    // after building from dirty, then clear) threw on a hostile retained
+    // value and never cleared — every subsequent tick re-threw against the
+    // same poison and the world's presence plane wedged forever (measured:
+    // 30/30 frames before one deep-nested pose → 0 after, HTTP green).
+    // Intake now refuses such poses at the door, but this seam keeps its
+    // own guard: one bad value must cost that ONE frame, never the tick.
+    let data: string;
+    try {
+      data = JSON.stringify({ type: "frame", seq: w.frameSeq++, t: Date.now(), poses: Object.fromEntries(w.dirty) });
+    } catch (err) {
+      // drop this frame's poses entirely (they failed to serialize) and log
+      // once per occurrence — the world keeps ticking for everyone else.
+      console.error(`[world:${w.name}] frame serialize failed — dropping ${w.dirty.size} pose(s), tick continues:`, err?.constructor?.name);
+      w.dirty.clear();
+      continue;
+    }
     w.dirty.clear();
     if (RECORD) {
       if (!w.recPath) {

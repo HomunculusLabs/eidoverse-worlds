@@ -112,6 +112,100 @@ check("healthy peer continues authoring after oversized peer is removed",
 const health = await fetch(`http://127.0.0.1:${port}/version`);
 check("sequencer remains HTTP-responsive", health.ok, String(health.status));
 
+console.log("\n— structurally hostile but parseable frames never wedge presence —");
+// pressure-11: a pose is RETAINED state — it rides three JSON.stringify sites
+// (stage frames every tick, join snapshots' present[]/restore, poses.json on
+// close). A parse-valid but pathologically deep value (a 60k-deep array is
+// 120KB — legal at the 256KB gate) blows the serializer's stack downstream,
+// and the stage tick throws BEFORE dirty.clear(): one frame from one client
+// wedges the whole world's presence plane forever while HTTP and authored
+// verbs stay green (measured: 30/30 frames before → 0 after).
+const hostile = await open("hostile");
+const framesOf = (sock: Sock, id: string) =>
+  sock.messages.filter((m) => m.type === "frame" && m.poses && id in m.poses).length;
+const sanePose = JSON.stringify({ type: "pose", pose: { p: [0, 0, 0], yaw: 0, speed: 1, clip: "walk" } });
+hostile.ws.send(sanePose);
+const pre = await waitFor(healthy, () => framesOf(healthy, "hostile") >= 1, 40);
+check("sane hostile pose flows to frames before hostility", pre, `${framesOf(healthy, "hostile")} frames`);
+
+// the garbage menu — every entry is size-legal, and each breaks a different
+// assumption: envelopes that are not objects, a truncated JSON prefix, a
+// well-formed-but-wrong pose, an unknown type, and last the serializer killer
+hostile.ws.send("5");
+hostile.ws.send("null");
+hostile.ws.send('"a string envelope"');
+hostile.ws.send('{"type":"verb","verb":"say","args":');
+hostile.ws.send('{"type":"pose","pose":{"p":"not-a-point"}}');
+hostile.ws.send('{"type":"totally-unknown-type","payload":{"x":1}}');
+const depth = 60_000;
+const deep = "[".repeat(depth) + "]".repeat(depth);
+hostile.ws.send(`{"type":"pose","pose":{"p":[0,0,0],"junk":${deep}}}`);
+await Bun.sleep(300);
+check("hostile socket survives non-JSON garbage (only size closes)", hostile.closeCode === null, String(hostile.closeCode));
+check("hostile socket received explicit refusals, not silence",
+  hostile.messages.some((m) => m.type === "error" && /malformed JSON/.test(String(m.error))),
+  JSON.stringify(hostile.messages.filter((m) => m.type === "error")).slice(0, 200));
+
+// gate 1 — the stage tick: healthy presence frames must still flow. Send
+// several poses across ~500ms and require frames in ≥3 distinct ticks —
+// proves the stream is alive over time, not just one final flush.
+healthy.messages.length = 0;
+for (let k = 0; k < 6; k++) {
+  healthy.ws.send(JSON.stringify({ type: "pose", pose: { p: [1 + k, 0, 0], yaw: k, speed: 1, clip: "walk" } }));
+  await Bun.sleep(80);
+}
+const flowed = await waitFor(healthy, () => framesOf(healthy, "healthy") >= 3, 60);
+check("presence frames keep flowing for healthy peers after deep-nested poison", flowed, `${framesOf(healthy, "healthy")} frames`);
+
+// gate 2 — the join snapshot: a newcomer mid-hostility must still get one
+// (present[] carries settledPose(lastPose) — a retained poison pose throws
+// inside the join case and every joiner gets an error instead of a world).
+// open() clears its buffer, so this inline join KEEPS the snapshot.
+async function joinKeepSnap(id: string): Promise<{ sock: Sock; snap: any }> {
+  const sock: Sock = { ws: new WebSocket(`ws://127.0.0.1:${port}/ws`), messages: [], closeCode: null };
+  sockets.push(sock.ws);
+  sock.ws.onmessage = (event) => { try { sock.messages.push(JSON.parse(String(event.data))); } catch { /* ignore */ } };
+  sock.ws.onclose = (event) => { sock.closeCode = event.code; };
+  await new Promise<void>((resolve, reject) => {
+    sock.ws.onopen = () => resolve(); sock.ws.onerror = () => reject(new Error("websocket open failed"));
+  });
+  sock.ws.send(JSON.stringify({ type: "join", world, id, token: "test-door" }));
+  const snap = await new Promise<any>((resolve, reject) => {
+    const to = setTimeout(() => reject(new Error(`${id}: no snapshot`)), 4_000);
+    const iv = setInterval(() => {
+      const s = sock.messages.find((m) => m.type === "snapshot");
+      if (s) { clearTimeout(to); clearInterval(iv); resolve(s); }
+    }, 40);
+  });
+  return { sock, snap };
+}
+let midstorm: { sock: Sock; snap: any } | null = null;
+try { midstorm = await joinKeepSnap("midstorm"); } catch { /* stays null */ }
+check("fresh joiner receives a snapshot mid-hostility", midstorm !== null, "no snapshot within 4s");
+check("midstorm snapshot's present[] stringifies the hostile body sanely",
+  midstorm !== null && Array.isArray(midstorm.snap.present)
+  && midstorm.snap.present.every((o: any) => o.pose === null || o.pose === undefined || typeof o.pose === "object"),
+  midstorm ? JSON.stringify(midstorm.snap.present).slice(0, 160) : "no snapshot");
+
+// gate 3 — the rest-pose memory: hostile leaves (rememberPose settles its
+// last pose into poses.json), then rejoins — its own restore must not break
+// the snapshot. Poison at intake means the LAST SANE pose is what's remembered.
+sockets.splice(sockets.indexOf(hostile.ws), 1);
+try { hostile.ws.close(); } catch { /* gone */ }
+await Bun.sleep(300);
+let rejoined: { sock: Sock; snap: any } | null = null;
+try { rejoined = await joinKeepSnap("hostile"); } catch { /* stays null — check below */ }
+check("poisoned body's own rejoin still gets a snapshot (rest pose stayed sane)",
+  rejoined !== null, "rejoin never snapshotted");
+check("poisoned body's restore is the last SANE pose, not the junk",
+  rejoined !== null && (rejoined.snap.restore === null || rejoined.snap.restore === undefined
+  || (typeof rejoined.snap.restore === "object" && !("junk" in rejoined.snap.restore))),
+  rejoined ? JSON.stringify(rejoined.snap.restore).slice(0, 160) : "no snapshot");
+
+const srvLog = readFileSync(join(scratch, "server.log"), "utf8");
+check("no serializer stack explosions in server log", !srvLog.includes("RangeError"),
+  srvLog.split("\n").filter((l) => l.includes("RangeError")).slice(0, 3).join(" | "));
+
 cleanup();
 console.log(`\n${pass} passed, ${fail} failed\n`);
 process.exit(fail ? 1 : 0);
