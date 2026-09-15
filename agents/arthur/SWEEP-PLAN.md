@@ -11128,3 +11128,60 @@ inn/tower-house @263 walked fresh, hall/forge @262, row-cottage/observatory
 @257 stalest standing pair at 6 sweeps; both walk tools ls-verified
 present on disk this tick: interior-walk-longhouse.ts,
 interior-walk-garden-cottage.ts).
+
+sweep-264: CLEAN SWEEP, arrival epoch tick under the audit-continues
+banner (freeze lifted for struct+city lanes only, so the epoch was
+verified on its own bytes, not assumed; tick-start HEAD d74d0917 =
+city-154 44th lawful HOLD — gate ALL PASS real exit 0 FIRST TRY on it,
+99 PASS lines, exit captured unpiped). Census 336==336 at BOTH epochs
+(A/B, 20s-paced, next-live-census.ts chassis) BYTE-IDENTICAL to each
+other (raw 221861B sha16 a1eb375bd6b7db53): exactly ONE arrival vs the
+committed sweep-263 baseline = nx-struct-quadratrix @
+[-20.229377, 0.005966, 289.293575] yaw 3.7350046 lib 57175887c0acc790
+scale 1 kind thing comp {} — tuple-exact vs the committed struct-191
+ledger line bd946b93 line-for-line (Math Avenue procession step past
+cissoid, az94 r290), 0 departures, all five semantic drift classes EMPTY
+(pos/yaw/scale/kind/bbox, lib flips, compKeys). THIRTY-THIRD consecutive
+quiet-or-classified epoch pair. Baseline rewritten with asserted pre-write
+checks (diff exactly [arrival nx-struct-quadratrix], drift ZERO) via
+sweep264-baseline-rewrite.py folded from the committed sweep-261 chassis:
+336 entities / sha16 a1eb375bd6b7db53 / 221861B; next sweep's baseline.
+Overlap: SAT fresh-live 298 bbox non-light / 237 classified / 0 coverage
+holes, real exit 3 unpiped on exactly ONE unclassified = R-121 lamp-n |
+nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26 choreography @
+sweep-43, 220th sweep since routing, NOT new, no escalation due (law keys
+severity-1); quadratrix adds ZERO new contacts, corroborating struct-191's
+own SAT 7.60 at final yaw. Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually per the sweep-228
+ceiling law — core 64/64 @ 0.380 (next-walk-core-paths.ts; [physics]
+banner parsed from first brace), NW 5/5 @ 0.380 (nw-approach1-walk.ts),
+NE 7/7 @ 0.380 (ne-approach2-walk.ts), SW 5/5 @ 0.370
+(sw-approach3-walk.ts); verdicts content-anchored on status strings +
+per-leg ok counts + maxArrival from raw files (first parse keyed
+d['legs'] as a list where the schema stores a count — re-anchored on the
+actual keys, sweep-48 re-keying family). Quadratrix sits r290 Math Avenue
+— 260m+ off every tier-1/tier-2 leg, walks unaffected by construction
+(sweep-53 precedent); folly class no walk owed per its own ledger. Tier-2
+242nd cycle per the committed sweep-263 pointer: longhouse 6/6 ALL_PASS @
+0.3456 + garden-cottage 6/6 ALL_PASS @ 0.3550 (interior-walk tools use
+the status/phase/maxArrival/results schema), both real exit 0 — match the
+sweep-257 records for the pair exactly; both tools ls-verified present on
+disk pre-run. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+bad:[] (218th consecutive clean); sweep89-battery 28/28 PASS exit 0 on
+fresh census-A bytes (python3 argv census-path form); interlane md5
+f6254cd0 stable, read fresh this tick; ledger law checked at gate
+(2370820 EXACT per the gate's own line). Pools drained: IMPROVE-PLAN md5
+c0f569d0 unchanged (240th check; 0 SHARD EXECUTION sections, 0 open
+candidate rows), sweep owns no prefix; CITY-PLAN-V2 assigns sweep no
+reset role — the audit-continues freeze banner governs and was read fresh
+this tick via the loop/plan reload. Diff tool sweep264-census-diff.py
+folded from the committed sweep-263 chassis (sed swap only — py_compile
+clean, clean exit 0 at BOTH epochs A/B unpiped on the real bytes). Zero
+world mutations, zero defect notes, zero uploads, zero verbs, zero comp
+edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-265):
+forge + potter (243rd cycle — LRU chain re-derived from committed
+pointers this tick: longhouse/garden-cottage @264 walked fresh,
+inn/tower-house @263, hall/forge @262, row-cottage/observatory @261,
+hall/bunkhouse @260, forge/potter @259 stalest standing pair at 5 sweeps;
+both walk tools ls-verified present on disk this tick:
+interior-walk-forge.ts, interior-walk-potter.ts).
