@@ -11749,3 +11749,83 @@ struct184-tribar/ (10 frames v2 + v1 superseded, ignored),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-184,
 D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+## struct-185 (2026-09-15): TRIBAR PLACEMENT TICK — committed carry from
+## struct-184 executed, PLACED_VERIFIED live; Math Avenue procession
+## extended past enneper, on-line step az94/r260
+
+185%3=2 placement-slot cadence WITH a takeable banked form (struct-184:
+"Placement = struct-185 committed carry"; the 178..183 lane precedent — a
+banked form places on the next tick regardless of N%3, build+judge/place
+alternation held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP — tool_search fresh this tick; same disclosed class as
+struct-169..184): monkeysaddle v2 native-18m-PASS placement GATE, hypar row
+22 native-only, kuen v3 + catalan v1 + clebsch v1 + menger v2 + apollonian
+v1 + melencolia v3 fallback-judged acceptances (all placed); tribar v2
+fallback-judged acceptance now PLACED (this tick) — debt stays owed. Gate
+ALL PASS real exit 0 tick-start at aeaa35d7 (city-144) + RE-RUN clean
+immediately before the mutation at the same HEAD (epoch law;
+/tmp/struct185-gate.txt + /tmp/struct185-gate2.txt, unpiped). Shard drained
+fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 14th tick, 0 OPEN nx-struct
+rows). Ledger max re-derived struct-184 -> tag struct-185 (re-checked
+immediately before append).
+
+Local bytes re-verified sha256 b2203047fbc08171d91554ab7aaeea50d605adec74c
+91b6ddde73960d6e65a9e == struct-184 bank pin BEFORE upload. Probe + decode
+re-run ALL PASS fresh this tick (9/9 probe laws + RED mutant control; 7/7
+decode laws incl. D4 closure-from-bytes, D6 envelope); envelope re-derived
+literally: 4.150 x 3.541 x 1.973 SYMMETRIC (D6, CX=CZ=0) — origin-centered
+SAT lawful, placement-contract law.
+
+SEAT (struct185-scan + struct185-select, fresh 332 census): procession az94
+read complete — island 8 members (cap 5-9, NOT a 9th island member);
+procession continues zeno179.9 -> borromean190 -> brachistochrone196.3 ->
+galtonboard210.4 -> clothoid219.8 -> harmonickiss230 -> gyroid240 ->
+enneper250 (~10m steps). TRIBAR YAW LAW (struct-184): the closure vantage
+(+Z face normal) must aim DOWN the walk line — every inter-form gap on the
+line <=14.1m < 16 (8m NN both sides), so the only yaw-lawful class is the
+NEXT ON-LINE STEP past enneper: az94.0 r260.0, 10.0m step == gyroid->
+enneper rhythm. NN 10.00 vs nx-struct-enneper (law 8.0), SAT 4.60 vs
+nx-struct-enneper (law 1.4), walk 231.41. E-flank alternative az90.5/r185
+recorded and REJECTED for the design (normal ~parallel to the walk, closure
+vantage never crossed).
+
+YAW LAW (orientation): 3.07177948351002 (176deg) puts the +Z face normal at
+az274 — back down the procession line toward the plaza. The outbound walker
+meets the normal head-on at 12-30m: the figure reads CLOSED on approach
+(probe L6: gap@12 5.9cm sub-beam-width, @18 closed 2e-16, @30 4.8cm); the
+walk-past opens the figure — the reveal IS the monument.
+
+TERRAIN (struct185-terrain-tribar.ts): 9pt over the TRUE rotated footprint
+(literal corners): spread 5.2mm, PY = -0.017811.
+
+PLACEMENT (next-place-struct185.ts, struct183 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 332 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 2.14x1.13 at yaw 176):
+NN floor zeno->enneper 10.00, SAT worst enneper 4.60 — clean. 1 upload
+(content-addressed store/b2203047fbc08171.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 332 -> 333 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (bead
+emissive-in-GLB glow_tb_1 KEEP — no comp-wipe class on first spawn).
+Cosmetic inherited from the chassis: join log line prints msg.entities (0)
+instead of msg.state.entities (struct-104 shape) — the authoritative
+post-place check is the fresh /geom re-read, which is green.
+
+Native debt board after this tick: tribar v2 OWED (fallback-judged
+acceptance, disclosed; deterministic probe L6 + decode D4 closure law are
+the binding evidence); monkeysaddle v2 native 18m PASS OWED (placement
+gate); hypar row 22 OWED (native only); kuen v3 OWED; catalan v1 OWED;
+clebsch v1 OWED; menger v2 OWED; apollonian v1 OWED; melencolia v3 OWED.
+
+Bill eye-check pointer: at the far end of Math Avenue, past enneper — walk
+the procession outbound from the plaza and, at about 18m from the new
+monument, the triangle CLOSES: three beams joining in an impossible knot.
+Keep walking past it and watch the figure OPEN, the third beam swinging out
+of the plane. After dark: one warm bead at the triangle's heart.
+
+Files: struct185-scan-tribar.ts + struct185-select-tribar.ts +
+struct185-terrain-tribar.ts + next-place-struct185.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-185,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
