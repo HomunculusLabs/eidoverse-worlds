@@ -11829,3 +11829,120 @@ Files: struct185-scan-tribar.ts + struct185-select-tribar.ts +
 struct185-terrain-tribar.ts + next-place-struct185.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-185,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-186 (2026-09-15): R11-15 THE FOURIER LADDER — BUILD+JUDGE TICK
+## (probe ALL PASS after two checker-side RED fixes; decode ALL PASS 7/7 + RED
+## control; front/gameplay/night judged 4/4, 4/4, 3/3 PASS — ZAI fallback
+## disclosed; ACCEPTED BANKED NOT PLACED)
+
+186%3=0 placement slot, nothing takeable — no banked form (tribar placed
+struct-185), all owed native debts still cron-unpayable (tool catalog
+carries only the zai-vision MCP, tool_search fresh this tick; same
+disclosed class as struct-169..185) — build tick per the 178..185
+alternation, placement = struct-187 committed carry. Gate ALL PASS real
+exit 0 tick-start at b00cd78c (pressure-15). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 15th tick, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-185 -> tag struct-186 (re-checked
+immediately before append; ledger md5 330a975b).
+
+FORM SELECTION (fresh grep, all three ledgers + IMPROVE-PLAN + CITY-PLAN-V2
++ artwalk plans): fourier 0/0/0, square-wave/partial-sum 0. Register: the
+lane owns single curves (lemniscate/clothoid/brachistochrone/tautochrone),
+surfaces (hypar/kuen/boy/catenoid/unduloid/costa), fractals (koch/
+sierpinski/menger), tilings (penrose/honeycomb), CA (rule30wall), packing
+(apollonian, placed struct-181), projection illusions (tesseract/tribar),
+arithmetic-as-flat-art (melencolia, placed struct-183). NOTHING shows a
+SEQUENCE OF CURVES CONVERGING — and the series-as-ladder register is the
+lane's oldest motif ("harmonic rhythms", STRUCTURES-LOOP design law)
+elevated into the whole form. Kin-checked: harmonickiss = spherical-
+harmonic ORBITALS (surfaces), not curves; not a too-fresh kin.
+
+CONCEPT (written before build): THE WAVE THAT LEARNS TO BE SQUARE. Fourier
+1822: a square wave is an infinite sum of sines. Four stone ribbons stack
+as the partial sums S1, S3, S7, S15 of S(x)=(4A/π)·Σ sin((2k−1)ωx)/(2k−1)
+— span 6.4 m = 2.5 periods λ2.56, ribbons at y 1.02/2.32/3.62/4.92 (pitch
+1.30), band 0.38, A 0.26, extrude depth 0.36 — each rung closer to the
+square than the one below (RMS 0.1130 > 0.0818 > 0.0581 > 0.0410); the S15
+rung's crests carry the honest Gibbs overshoot (A·1.180, 9.0% of the jump
+vs theory 8.95% — visible in stone). A thin brass square-wave rail at
+y 6.05 carries the LIMIT itself (band 0.26, amplitude 0.26, 6 runs, 5
+jumps). Two stone piers (|x|3.35, 0.50×6.53×0.60) frame the stack — a
+ladder whose rungs are waves. One brass bead (glow_fl_1 KEEP, r 0.075 at
+(0, 5.40, 0), emissive 0x9a7030@1.0 dusk lineage) floats on the centerline
+above the central jump: the MIDPOINT value the series converges to exactly
+at the discontinuity — Fourier's own answer, the honest average. Envelope
+7.20×6.53×0.60 y[0,6.53] origin-centered. Folly class, no walk owed.
+
+PROBE (struct186-probe-fourier.ts, tracked): P1 harmonic census by
+ORTHOGONALITY PROJECTION (coefficients exact at 4A/(πm) for odd m≤N, 0 for
+even m and odd m>N, on the integer-period window); P2 L2 convergence
+ladder monotone; P3 Gibbs overshoot present (9.0% vs theory 8.95%); P4
+undulation family (S1 crest = 4A/π exactly); P5 stack air gaps ≥0.20 m
+ribbon-to-ribbon and to rail, bead clearances ≥0.15 m; P6 ladder frame
+(ribbon ends embed 0.10 m into piers, pier caps carry the rail); P7 point
+symmetry (odd series, 0.0e+0); P8 envelope; PRED even-harmonic mutant
+caught (RMS discrimination). Two checker-side REDs caught+fixed en route:
+(a) first P1 draft "compared one sample point" — proved nothing, replaced
+by the projection; (b) the 2.5-period span SPECTRALLY LEAKS (basis not
+orthogonal on a non-integer window) — projection moved to the centered
+integer-period sub-window; ribbons unchanged. ALL CHECKS PASS exit 0.
+
+BUILD (assets/mkv3-fourier.ts, staged -f): four ExtrudeGeometry band
+ribbons (top/bottom edges sampled at N=128 from sN, band measured
+VERTICALLY — the honest cut-from-a-slab ribbon), brass square-wave rail
+(jumps at ABSOLUTE multiples of λ/2 — build-law self-catch: the first
+draft offset them from X0 and would have drawn the jumps 0.64 m off the
+crests), 2 pier boxes, glow KEEP bead. Deterministic ×2 byte-identical
+sha256 c6878d46490bd5928c9e07f348477dd31ff6d46c195c945332b2867129efd04d
+(484,532 B), mtime-verified. Nodes 3 (four_stone + four_brass + glow_fl_1).
+
+DECODE (struct186-decode-fourier.ts, tracked) ALL PASS 7/7 + RED control
+(foreign catalan bytes FAIL 3, exit 1): D1 census 3 nodes, D2 STONE CLASS
+LAW — all 12,384 stone verts assigned to exactly one of the 6 members
+(4×3,084 ribbons + 48 pier verts; checker self-catch: piers are EXACTLY 2
+boxes × 24 verts, first draft demanded >100), D3 crest+Gibbs from bytes
+(extrude caps at z=±0.18 — first draft filtered z≈0, matched nothing, read
+−Infinity; fixed), D4 rail law (216 brass verts, 0 off the square-wave
+outline), D5 bead law (center/r/emissive exact), D6 envelope 0.0000 drift,
+D7 named texMats four_stone + four_brass (struct-38 law).
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- front: PASS 4/4 — identity (sine→square progression read bottom-to-top,
+  S15 "closest-to-square of the set", rail "unambiguous square wave", bead
+  exactly placed), silhouette (ladder centered, crisp), grounding (piers
+  planted, scalloped shadow echoing the wave phases), defects CLEAN. Judge
+  caveat "compressed periods" FALSIFIED by construction (pitfall 11): probe
+  P1 projections prove every ribbon shares the fundamental λ with exactly
+  the odd harmonics ≤ N; decode D2/D3 verify every vertex on those exact
+  curves — the "1→2→3→4 humps" count is the frame's foreshortened read.
+- gameplay 18m: PASS 4/4 — "the getting-squarer-as-you-climb story is
+  legible at this distance without any signage"; watch items disclosed as
+  distance-tiers/AO cosmetics (hairline-gap class closed analytically by
+  P5+D2; rail jump connectors 4–6px at 18m hold, 36m+ tier noted).
+- night: PASS 3/3 — sole-light law EXACT (one warm amber bead, zero bloom
+  spill, rail reads dark unlit bronze), silhouette legible by warm/cool
+  hue split, waveform progression still discernible in silhouette.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-187
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility per CITY-PLAN-V2; terminal island 8 of 5–9, procession
+continues past enneper — struct-185 seated az94/r260 on-line step),
+oblique-yaw law (broad face +Z sits 30–40° off the walk, struct-104 —
+the ladder face is the readable register, like melencolia), terrain
+preflight over the TRUE rotated footprint, hash-gated plain spawn
+nx-struct-fourier, comp {}. Folly class — no walk owed. Native re-judge
+debt: fourier v1 joins the owed board (monkeysaddle gate, hypar row 22,
+kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1, melencolia v3,
+tribar v2).
+
+Bill eye-check pointer (after placement): on Math Avenue — the ladder of
+waves between two piers: read it bottom-to-top, the bottom rung a pure
+sine, each rung above squarer, until the brass rail IS the square. After
+dark: one warm bead floating where the series can never quite land.
+
+Files: struct186-probe-fourier.ts + struct186-decode-fourier.ts (NEW,
+tracked), assets/mkv3-fourier.ts (NEW, staged -f), reviews/
+struct186-fourier/ (10 frames, ignored), STRUCTURES-PLAN.md (this block),
+IMPROVEMENTS.md (one append struct-186, D+0 E+0). Zero world mutations,
+uploads, verbs, comp-edits, shared-budget use. Zero pushes.
