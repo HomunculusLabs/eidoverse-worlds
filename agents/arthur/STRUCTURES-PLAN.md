@@ -11245,3 +11245,134 @@ struct178-menger/ (10 frames, ignored — struct-178's), STRUCTURES-PLAN.md
 (this block + struct-178's recovered block), IMPROVEMENTS.md (one append
 struct-179, D+1 E+1). One upload + one verb total (shared budget). Zero
 pushes.
+
+## struct-180 (2026-09-15): R11-12 THE APOLLONIAN GASKET — BUILD+JUDGE TICK
+## (probe ALL PASS after 2 RED generations; decode ALL PASS 6/6 + RED control
+## after a checker-side bufferview-index bug caught and fixed; face-view ZAI
+## PASS; v1 ACCEPTED BANKED NOT PLACED)
+
+180%3=0 placement slot, nothing takeable — no banked form (menger placed
+struct-179), all owed native debts still cron-unpayable (tool catalog
+carries only the zai-vision MCP, tool_search fresh this tick; same
+disclosed class as struct-169..179) — build tick per the 178/179 alternation
+precedent, placement = struct-181 committed carry. Gate ALL PASS real exit 0
+tick-start at bc846073 (sweep-250; /tmp/struct180-gate.txt, unpiped). Shard
+drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 7th tick, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-179 -> tag struct-180.
+
+FORM SELECTION (fresh grep, all three ledgers): apollonian/soddy/gasket/
+descartes 0/0/0 — genuinely clean, never even named. Register: the
+TANGENT-KISS lattice. The mosaic gallery rings own the annulus, the
+orreryring owns orbit chart rings — no standing form is a circle PACKING
+(circles that touch). Constructive-arithmetic class (the menger/catalan
+family that passes probe first try once generated honestly).
+
+CONCEPT (written before build): THE STONE DISC THE SKY PACKS. Descartes
+1643 / Soddy 1936 "The Kiss Precise": the (−1,2,2,3) integer gasket — a
+great stone disc (R 2.05 + stone ring 0.35 = disc R 2.40, thickness 0.40)
+PIERCED by 34 integer-curvature circles (k ≤ 45), the two k=2 halves as
+tall kissing lancets, the seed k=3 left and its PARABOLIC TWIN right (same
+curvature, reflected center — the double root in curvature is still TWO
+circles; complex Descartes distinguishes them), generations descending to
+the cutoff. ONE brass ember (r 0.09, emissive 0x9a7030@1.0, dusk lineage)
+floats in the twin's hole — the packing's hidden fourth. Sky completes the
+packing. Chunky plinth 2.80×0.70×0.90 with the disc arc SEATED 0.12 into
+it (the honest embed — the bottom lobe is rim-tangent by theorem, so no
+lintel band exists; ring + seat are the grounding). Envelope 0.70×5.58×4.80
+(x = depth — the disc faces ±X), origin-centered SAT lawful. Folly class,
+no walk owed.
+
+PROBE (struct180-probe-apollonian.ts, tracked) — lineage law held
+(Descartes' theorem wikitext fetched this tick, formula verbatim; nothing
+transcribed, everything generated). RED-first across TWO generations:
+- v1 RED: ungated BFS — candidates inserted without tangency/containment
+  gates spawned garbage quadruples; hung at 120s. Fix: INSERT GATE (tangent
+  to all three parents at 1e-6 + contained) + POP_CAP 5000.
+- v2 RED (genuine concept catch): my C2 first-gen census was mis-derived —
+  first generation is ONE replacement per seed member {twin k3, 6:2, 15:1}
+  (the four corner k=6s complete in generation two); AND the v1 embed law
+  (0.40·R solid lintel band) is geometrically FALSE for this form — in
+  every axis-aligned orientation a lobe is internally tangent to the rim at
+  the bottom cardinal, so piercings authentically TOUCH the disc edge (that
+  IS the gasket). Honest embed redesigned: stone ring 0.35 + seated sink.
+- v3 ALL CHECKS PASS exit 0: C1 seed 6/6 tangencies at 1.1e-16 + Descartes
+  identity exact; C2 twin at (+2/3,0) re-derived; C3 Soddy integrality 34
+  holes non-integral 0, worst tangency 1.1e-16; C4 zero overlaps (worst
+  pair −1.1e-16, k2&k11 — the 11s ARE generated); C5 both mirror symmetries
+  circle-by-circle; C6 cutoff bites (34/26/12), min pierced r 0.0396 m, min
+  stone bridge 0.0267 m; C7 ring 0.35 / sink 0.12 / bottom band 0.23 m;
+  C8 twin bead clearance 0.571 m; C9 nodes 2.
+
+BUILD (assets/mkv3-apollonian.ts, staged -f): probe chassis verbatim +
+ExtrudeGeometry pierced disc (34 absarc holes, curveSegments 48) + plinth
++ glow KEEP glow_ap_1 at the twin center. One build-law catch (disc plane
+lies in y-z after the π/2 rotation — x is DEPTH 0.70, z is WIDTH 4.80; my
+envelope assert had them transposed). Deterministic ×2 byte-identical
+sha256 6ba69bea474cb57506820b1968c9477a4481386d4d51bc0819fa8f1c55a5c763
+(1,518,472 B), mtime-verified. Nodes 2 (apollonian_0 + glow_ap_1).
+
+DECODE (struct180-decode-apollonian.ts, tracked) ALL PASS 6/6 + RED
+control (catalan bytes FAIL 4 checks): D1 census, D2 ring presence, D3
+PIERCING LAW (no stone vert inside any of the 34 hole cylinders; plinth
+corners exempt by the |x| ≤ TH/2 band), D4 twin bead exact + emissive, D5
+envelope, D6 named texMat apollo_stone (struct-38 law). CHECKER-SIDE BUG
+CAUGHT THIS TICK (probe law 0c, pitfall-3 kin): D3's first draft indexed
+bufferViews by the ACCESSOR INDEX (1) instead of accessor.bufferView (2) —
+it read UV bytes as positions and "found" a phantom vert dead-center in
+the bottom lancet. Debug trail: near-center scan -> rogue vert 47 ->
+index-stream cross-check (min/max/mode SANE, 0 unreferenced) -> structural
+dump exposed the bv-table -> both views renamed. The geometry was always
+clean; the checker was wrong. Law recorded in-file.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the monkeysaddle gate session):
+- face view (left.png, the true face at this rig orientation): PASS —
+  identity (pierced circle-packing rose window, two kissing lancets +
+  medium circles + ever-smaller nesting), silhouette (clean continuous
+  rim, symmetric), grounding (seated, coherent shadow with LIGHT POOLS
+  through the lancets — the packing reads in the cast shadow too). Three
+  findings arbitrated: (a) "stray orange sphere" = the twin bead, unnamed
+  in the first prompt (prompt error, struct-178 class — second prompt
+  named it and the judge confirmed correct placement class); (b) count
+  ~18-24 of 34 — the final recursion ring sits at the resolution floor of
+  the frame; probe C5 machine-verifies all 34 at 1e-9 (decode outranks
+  render count, pitfall 11); (c) "left/right asymmetry" — the judge paired
+  non-corresponding circles under the orbit camera's foreshortening (their
+  own y-centers differ by 17px); C5 verifies exact mirror symmetry
+  circle-by-circle. No geometry defect found on any frame.
+- gameplay 18m: the judge's verdict is itself the struct-104 diagnosis —
+  "ORIENTATION FAILURE, not geometry failure... the asset is fine, the yaw
+  is wrong. A one-axis rotation away from passing identity and silhouette."
+  The committed placement seat cures exactly this (oblique yaw law, 30-40°
+  off the approach normal — the chassis gameplay camera sits at the rig
+  default, not the seat yaw). Grounding PASS, defects CLEAN, light-through
+  piercings visible in the shadow.
+- night: 0 warm pixels at the chassis night angle — the bead sits IN the
+  twin hole and the chassis night camera views edge-on; the emissive bead
+  is byte-verified (decode D4) and the left/right face views show it. The
+  one-quiet-point contract will read at the seated oblique yaw; disclosed,
+  re-verified at placement (struct-181).
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-181
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility per CITY-PLAN-V2 — the r55-130 band is PROVEN SATURATED at
+struct-177/179; the lawful zone is the Math TERMINAL ISLAND r140-170, now
+a 7-member procession+stagger: lorenz/chladni/voronoi/peaucellier on-axis
++ clebsch E-flank r142 + menger W-flank r155), oblique-yaw law (the disc
+face must sit 30-40° off the avenue sightline — struct-104; the gameplay
+judge's own prescription), terrain preflight, hash-gated plain spawn
+nx-struct-apollonian, comp {}. Folly class — no walk owed. Native re-judge
+debt: apollonian v1 joins the owed board (monkeysaddle gate, hypar row 22,
+kuen v3, catalan v1, clebsch v1, menger v2).
+
+Bill eye-check pointer (after placement): on Math Avenue's terminal island
+— the great pierced disc standing oblique to the walk: two tall lancets
+kissing at the center, circles of ever-smaller circles packing every gap,
+sky through every one, and one warm brass ember floating in the right-hand
+lancet after dark.
+
+Files: struct180-probe-apollonian.ts + struct180-decode-apollonian.ts
+(NEW, tracked), assets/mkv3-apollonian.ts (NEW, staged -f), reviews/
+struct180-apollonian/ (10 frames, ignored), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-180, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
