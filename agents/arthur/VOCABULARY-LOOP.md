@@ -53,7 +53,21 @@ plan. Never deploy, push, or restart production unless Bill asks.
       stashed baseline (this checkout lacks mcpl/tokens.json). Effect says
       append actor `world` with {text,id,cause,by}; replay-inert, restart
       re-fires nothing (verified live). No production world touched.
-- [ ] Proximity trigger with enter/leave hysteresis and no per-frame log spam.
+- [x] Proximity trigger with enter/leave hysteresis and no per-frame log spam.
+      DONE vocab-2 (2026-09-14): server/proximity.ts (ProximityEngine — 1Hz
+      sweep off BehaviorHost.tick, presence-plane in, world-authored say
+      pairs out) wired via two hooks in clean server/behaviors.ts (tick sweep
+      + onPresence-leave disconnect); zero edits to the pilot-dirty
+      server.ts/world.ts. Contract in § PROXIMITY CONTRACT implemented as
+      written. Evidence: tools/proxtest.ts RED (16 failing checks) then ALL
+      PASS 24/24 (enter/hysteresis/exit+causeEnter chain/re-arm/cooldown/
+      cap 8/spectator/lint-clamp/comp-null drop/late-join chat/restart
+      replay-mints-nothing+re-welcome/visitor-authority bounce); servergate
+      comptest 33/33, behaviortest 27/27, leasetest 19/19, locktest 13/13,
+      smoke 85/85, compfold 24/24 (FOLD_EVERY=1 server), worldops 20/20;
+      modtest 18/23 + permtest 21/23 with every failure proven pre-existing
+      on the stashed baseline (missing mcpl/tokens.json class, same as
+      vocab-1). Scratch worlds only; no production world touched.
 - [ ] Region enter/leave behavior with restart-safe state.
 - [ ] Stateful door/gate: explicit open/closed state, use action, late-join truth.
 - [ ] Portable authored light with time-of-day-aware client realization.
@@ -156,6 +170,71 @@ the chain (the documented reaction audit pattern).
 stone that demands the password, a nursery rhyme bell, a greeting gate.
 This is the Layer-1 vocabulary version of the SDK greeter example — same
 semantics, no script required, 8KB of data instead of a sandbox.
+
+### PROXIMITY CONTRACT (vocab lane — drafted vocab-2, 2026-09-14)
+
+**Trigger.** A proximity trigger is an entity carrying `comp {type:"proximity",
+data:{...}}`. The engine samples the presence plane once per second (the same
+1Hz clock that drives behavior timers) and computes each embodied visitor's
+3D distance to each trigger's LIVE position (lease stream position if leased,
+folded `pos` otherwise). Entering means `dist < radius`; leaving means
+`dist > exitRadius`, with `exitRadius ≥ radius` — the hysteresis band means a
+person standing at the rim cannot flap the trigger. Defaults: `radius 8`,
+`exitRadius max(radius·1.25, radius+2)`, both clamped to [0.5, 50]; authors
+may set `enter`/`exit` lines (≤200 chars, clamped), `exitSec` (default 60,
+clamped [15, 3600]), `cooldownSec` (default 60, clamped [10, 3600]). Out-of-
+range numbers are CLAMPED, not rejected, with a `prox-lint` flight-recorder
+entry (particles-lint doctrine).
+
+**State.** The log is the only durable state: effects are ordinary says, so
+occupancy is DERIVED, never stored. On first sweep after a restart the engine
+rebuilds occupancy by folding the visible say history (last 400 says) —
+`prox.enter`/`prox.exit` args replay to inside/outside, last-writer-wins. A
+visitor whose enter predates the visible window is rebuilt OUTSIDE (harmless:
+their next approach re-welcomes, cooldown-gated). Live in-memory occupancy is
+presence-plane only (never persisted, dropped on disconnect).
+
+**Effects.** On an OUT→IN transition of an ARMED trigger, the world emits
+`say` actor `world`, args `{text: <enter line>, id: <entity>, prox: {enter:
+<entity>, who: <visitor>, at: <ts>}, by: <visitor>}`. On IN→OUT (and on
+disconnect while inside), `{text: <exit line>, id, prox: {exit: <entity>,
+who, causeEnter: <seq of the enter say, if any>, at}, by: <visitor>}`. Pair
+discipline: an exit says only when its matching enter SAID — a cooldown-
+suppressed or line-less enter produces a silent occupancy flip and a silent
+exit. Both arrive as ordinary chat everywhere (browser logChat, agent inbox)
+— zero client code, same perception path as phrases.
+
+**Rate/abuse boundaries.** (a) No per-frame anything: one sweep per second,
+zero log entries while nobody crosses a boundary; the log sees only
+transition pairs. (b) Re-arm law: after an exit the trigger stays disarmed
+for `exitSec` (floor 15s) — walking out and straight back in does not
+re-welcome. (c) Cooldown: per (entity, visitor) pair, an enter says at most
+once per `cooldownSec` (floor 10s). Worst legal steady state with 8 triggers
+and one circling griefer ≈ 1.6 says/sec, all ordinary log lines. (d) At most
+`8` proximity triggers per world fire (deterministic folded order; the rest
+skip with a `prox-cap` debug entry). (e) Spectators never occupy (spectate
+joins and renderer legs are invisible to the engine).
+
+**Authority rank.** Walking is rank 0 — anyone present may trigger. Attaching
+the `proximity` comp is rank 1 (builder), the author's standing decision that
+this thing greets, identical doctrine to `reactions`/`phrases`. Effects run
+with WORLD authority and are say-only: no comp/spawn/place/motion effect can
+be minted from a footstep. Fail closed: malformed comps clamp+lint; sweeps
+and leave-fires are try/caught per world (house rule 3).
+
+**Replay behavior.** Replay-inert like all reactions: folding a historical
+say never re-fires anything (the engine runs ONLY from the live tick and
+live presence, never from the fold). Restart re-derives occupancy from the
+log and mints nothing. Known bound: a mid-process `world reset` does not
+clear the in-memory map (post-reset re-welcomes may be suppressed until
+exit+re-enter; a process restart fully heals).
+
+**Failure behavior.** Unknown shapes → clamp + `prox-lint`; missing entity
+position or removed comp → occupancy dropped silently with a `prox-skip`
+note; engine errors → `reaction-error`, never a crash.
+
+**Intent.** The world notices you. A milestone that hails passers-by, a
+shrine that bids farewell, a dark lane lamp that calls out — data, not code.
 
 ## LAWS
 

@@ -23,6 +23,7 @@
 
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
+import { ProximityEngine, type ProxWorld } from "./proximity.ts";
 
 // --- what we need from server.ts (structural, to avoid a circular import) ---
 type LogEntry = { seq: number; ts: number; actor: string; verb: string; args: Record<string, unknown> };
@@ -34,6 +35,10 @@ export interface WorldLike {
     mounts?: Record<string, any>;
   };
   clients: Set<{ id: string; spectator: boolean; lastPose?: any }>;
+  /** presence-plane reads proximity needs (vocab-2) — the live World carries
+   *  both as getters; structural, so no server.ts import is created. */
+  recentSays?: { seq: number; ts: number; verb: string; actor: string; args: Record<string, unknown> }[];
+  leases?: Map<string, unknown>;
   append(actor: string, verb: string, args: Record<string, unknown>): LogEntry;
   broadcast(msg: unknown, except?: unknown): void;
   debug(kind: string, detail: Record<string, unknown>): void;
@@ -350,6 +355,10 @@ export class BehaviorHost {
   private w: WorldLike;
   private instances = new Map<string, Instance>();
   private loading = new Map<string, Promise<boolean>>();
+  /** Proximity triggers (vocab-2): swept on the same 1Hz clock as timers,
+   *  so a world that greets keeps greeting with nobody but its author ever
+   *  having written code. Presence-plane in, transition says out. */
+  private prox: ProximityEngine | null = null;
 
   constructor(w: WorldLike) { this.w = w; }
 
@@ -397,10 +406,23 @@ export class BehaviorHost {
 
   onPresence(kind: "enter" | "leave", id: string) {
     for (const inst of this.instances.values()) inst.dispatch(kind, { id });
+    if (kind === "leave") {
+      try { this.prox?.disconnect(id); }
+      catch (err) { console.error(`[world:${this.w.name}] prox leave`, err); }
+    }
   }
 
   /** Driven by the global 1s tick in server.ts. */
   tick(now: number) {
+    // Proximity triggers (vocab-2) ride the same clock as behavior timers.
+    // Lazy construction on first tick: constructing in the constructor would
+    // read the log before the world finished loading (recentSays is filled
+    // by the WorldLog constructor, but lazy keeps the boot path unchanged).
+    try {
+      this.prox ??= new ProximityEngine(this.w as unknown as ProxWorld);
+      this.prox.sweep(now);
+    } catch (err) { console.error(`[world:${this.w.name}] prox sweep`, err); }
+
     for (const inst of this.instances.values()) {
       for (let i = 0; i < inst.timers.length; i++) {
         const t = inst.timers[i];
