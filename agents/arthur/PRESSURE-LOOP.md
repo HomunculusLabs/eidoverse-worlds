@@ -357,7 +357,27 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       proved the server exact both runs; harness fixes: seq-0 genesis
       contract, 12/4s rate-window model, spectator-verifier spawn model).
       Servergate smoke 85/0 pinned tree.)
-- [ ] Emoji/text flood in chat: rapid-fire says cannot starve verb intake.
+- [x] Emoji/text flood in chat: rapid-fire says cannot starve verb intake.
+      (pressure-19, 2026-09-16: worktree @ a2f262d5, PORT 8988, 27s + plateau
+      probe, 160 sockets — 24 embodied @15Hz (16 clean + 6 smooth-legal
+      flooders + 2 burst) + 136 spec, then a TEXT BOMB of 4x12 ~238KB emoji
+      says @600ms (all sub-256KB-cap legal; ~11.4MB in, ~1.8GB fanout out).
+      PASS, no patch: smooth 350ms pace (2.86/s) NEVER trips 12/4s — 6x23/23
+      echoed 0 refused; burst 20 = EXACT 12 ok / 8 refused "slow down",
+      verdicts 20/20, refusals fanned to 0 sockets; healthy solo says p95 5ms
+      mid-bomb, light 1/1, fanout 10400/10400 p95 198ms, mid-bomb joins 14/14
+      (12 spec p95 325ms + 2 embodied downloading inflated snapshots), fps
+      bomb-era 12.7 / post 14.8, 0 seq gaps, probe p95 100ms; boundary EXACT
+      (250,057B ASCII traverses; 260,000B emoji = "message too large" +
+      close 1009); bomb 48/48 echoes p95 228ms; plateau probe re-fired the
+      identical wave — peak 278→278MB (+0, gate ≤60) = workload-bounded
+      retention, no leak; log 262 says == echoes, 265 total drift 0; rosters
+      exact 24/28, final present 0; 0 suspicious. DISCLOSED product finding:
+      recentChat is count-bounded (40) but BYTE-unbounded — giant says ride
+      joiner snapshots (3.3MB mid-bomb → 7.5MB at 48 giants, p95 325-412ms);
+      say-text cap is Bill's design call, not patched. Harness RED runs x4
+      were accounting bugs, server correct each time. tools/
+      pressure-emojiflood.ts SELFTEST 26 gates. Servergate smoke 85/0.)
 - [ ] Comp attach storm: 200 simultaneous comp placements rate-limited
       fairly with explicit backpressure.
 - [ ] Entity id squatting: hostile client cannot reserve ids to deny
