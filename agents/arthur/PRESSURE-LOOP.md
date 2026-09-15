@@ -53,7 +53,16 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       0 gaps, 177/177 burst, RSS +0MB. PASS, no patch. Loopback note: 32KB
       frame-skip never engages (kernel absorbs first, per config.ts);
       no-amplification bound (≤1.2× stream volume) held.)
-- [ ] Join storm while 24 performers continue broadcasting.
+- [x] Join storm while 24 performers continue broadcasting.
+      (pressure-3, 2026-09-14: worktree @ d29ba072, 24 perf x 15Hz + 176
+      anchors + 3x60 simultaneous storm waves + en-masse departure, 24s —
+      180/180 storm joins p95 33ms worst 37ms, anchor fps p50 14.4, frame
+      lat p95 11ms, 0 seq gaps, mid-storm chat 185/185, probe p95 10ms,
+      settle 9/9 @ p95 18ms, 180/180 departures logged, roster exact
+      (24 present, 186 watching = the precise legit set), RSS +16MB peak,
+      +0MB post. PASS, no patch. Performer-leave false alarm run to ground
+      as harness teardown race + stale-offset log writer; quiet-probe
+      proves no server shedding.)
 - [ ] Authored chat/verbs remain responsive during maximum presence traffic.
 - [ ] Component-placement burst receives fair, explicit rate-limit behavior.
 - [ ] Reconnect storm leaves no ghost clients, leases, or timers.
