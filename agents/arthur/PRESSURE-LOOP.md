@@ -132,7 +132,23 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       sequencer holding :8996 (0 clients, 1h uptime — prior window died
       mid-run). Servergate smoke 85/0 on the pinned tree. Next head: memory
       returns near baseline after every synthetic participant leaves.)
-- [ ] Memory returns near baseline after every synthetic participant leaves.
+- [x] Memory returns near baseline after every synthetic participant leaves.
+      (pressure-9, 2026-09-15: worktree @ 08ee72a9, 200 peak — 24 perf + 136
+      spec anchors, 32-join churn cycles A/B, zombie duel C (12×4002
+      takeovers), sleeper drain, full 160 rejoin (ratchet probe), abrupt
+      teardown#2, 8-id second-world afterwave, 70s. Post-GC heap plateau:
+      settle#1 +4.8MB one-time warm (replicated 4.80/4.84 across runs),
+      settle#2 +0.73MB steady; RSS ratchet settled2−settled1 0.70MB ≤ 8;
+      settles 8.5s/8.5s; 160/160 joins p95 42ms; 84/84 whisper holds
+      delivered/deleted exact (8/8 sleepers ×2); seer drift 0/0; both worlds
+      end present=0 frames=0; log drift 0/0; 0 suspicious. PASS, no server
+      patch — cross-departure survivors are all deliberate+bounded
+      (pendingWhispers ≈312KB capped, poses.json on disk, worlds' folded
+      state). Harness-only fixes: settle detector sample rate (17 samples
+      can't fit a 12s window at 1s cadence) + heap gate split warm/steady
+      per the plateau law. Servergate smoke 85/0 pinned tree. Next head:
+      performer/spectator classification cannot accidentally multiply
+      fanout.)
 - [ ] Performer/spectator classification cannot accidentally multiply fanout.
 - [ ] Malformed-frame storm: partial/truncated JSON payloads never wedge the
       sequencer.
