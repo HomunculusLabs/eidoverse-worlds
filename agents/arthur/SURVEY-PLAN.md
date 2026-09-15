@@ -16775,3 +16775,80 @@ shared-budget use (D+0, E+0).
   precedent; ledger tail running total 2370799). STANDING
   RECOMMENDATION carried unchanged (s182-s366): stop the SURVEY lane or
   convert to a no-LLM monitor when attended.
+
+- survey-368 (2026-09-15, ARRIVAL EPOCH, eighth of the unfreeze — ZAI
+  FALLBACK 4 calls/4 disclosed + deterministic warm-px probes, native
+  vision ABSENT from this cron session's tool catalog (zai-vision MCP
+  only, flap law; native-owed register rows NOT discharged this tick,
+  cron-disclosed): gate ALL PASS real exit 0 FIRST TRY at tick-start
+  HEAD 7e455228 (struct-185 tip, 99 PASS lines incl. ledger law EXACT
+  2370799 — total +1 vs survey-367's 2370798 via struct-185
+  mid-window, normal interleaving, gate ran at the NEW HEAD so no
+  re-gate due, epoch law; HEAD unchanged through the tick). Census via
+  committed next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced,
+  cmp A==B BYTE-IDENTICAL), each 333 entities, each 220060B, each
+  sha16 46b72cdefa274983. Set-diff vs survey-367 baseline (332,
+  ab597e7e): +1 ARRIVAL nx-struct-tribar (-18.136683, -0.017811,
+  259.366653 yaw 3.07177948351002 rad = 176deg oblique-yaw law, lib
+  store/b2203047fbc08171.glb, comp {}) / 0 departures / 0 lib flips / 0
+  pos-yaw-scale-comp drift on the 332 holders — classified SIBLING
+  WORK: struct-185's committed PLACED_VERIFIED tuple verbatim (Math
+  Avenue procession on-line continuation az94/r260, 10m step past
+  enneper; struct domain; lib == struct-184 banked v2 sha b2203047) —
+  the exact predicted arrival (s367 trigger list). ARRIVAL-GATED JUDGE
+  LAWFUL (s357/s360/s363/s365 precedent): slice = the 1 new-bytes
+  object (owner's own judgment was ZAI fallback — independent read
+  exactly what the arrival needs). Live store bytes fetched curl UA
+  HTTP 200 5200B served-sha16 646542d8e255e600 (lib b2203047 =
+  struct-184 v2 upload sha, DRACO re-encode law — served != upload,
+  struct-104 class); render via NEW survey368-render-tribar.ts
+  (survey365-render-melencolia chassis verbatim incl. face-on night
+  frame law; DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 6
+  frames reviews/survey368-tribar/ (ignored residue), served-bytes
+  bounds 4.150x3.541x1.973 grounded y~0 — EXACTLY struct-185's
+  committed decode envelope. VERDICT: nx-struct-tribar CLEAN 3/3 —
+  gameplay 18m oblique CLEAN (closed-triangle read PASS at the
+  approach bearing; grounding PASS full contact + cast shadow; surface
+  PASS zero holes/voids/z-fight; judge margins: apex post+cap
+  protrusion x465-500 y238-282 + base-plank overhang x365-597 y415-435
+  = plinth/finial design elements, not defects; one ~4-6px amber speck
+  (480,357) inside the opening = the bead, see night). front face-on
+  CLEAN (closed loop PASS, three beams square-section consistent
+  width, joints tight zero gaps/z-fight; stepped base symmetric; the
+  amber bead CONFIRMED deliberate at (480,363) ~12px floating in the
+  enclosed void = struct-185's committed glow_tb_1 family signature;
+  faint hairline seam apex-cube/beam x445-515 y168-192 cosmetic-tier).
+  right side-bearing CLEAN-CONTRACT (figure reads OPEN: vertical post
+  + leaning beam + cube, third beam absent from closure, zero depth
+  contradictions — the committed "walk-past opens the figure" contract
+  delivered literally at the sculpture-genre level; a true Penrose
+  weave is unrealizable in real 3D and the classic physical-build
+  genre closes at approach + opens on walk-past, which these frames
+  show; judges' "paradox never reads" recommendation over-reads the
+  genre — that axis is exactly what the owed native re-judge of tribar
+  v2 adjudicates, and a cron ZAI vote will not open a defect row
+  against the owner's banked contract on the covered axis). night PASS
+  via deterministic probe BOTH frames: EXACTLY one warm cluster each —
+  oblique 49px bbox x476-483 y355-362, face-on 230px bbox x471-487
+  y355-371, same bead, hard-edged tight bbox, sky control 0 warm px
+  both, zero spill/bloom/ground pool — discriminates the day judges'
+  amber speck finding as the deliberate bead (solo chassis rules out
+  distant objects). CONCURS struct-184 banked v2 PASS (fallback 4/4)
+  + struct-185 PLACED_VERIFIED — independent corroboration, no
+  defect. Margins (NOT routed, cosmetic tier): apex-cap and base-plank
+  silhouette additions (design elements), apex hairline seam, night
+  bead 49px at oblique = small-but-present (49px hard cluster carries
+  the signature), base-beam front-face shading gradient (lighting).
+  Native re-judge debt on tribar v2 carries (already owed per
+  struct-185's own ledger; board: hypar row 22, monkeysaddle v2 per
+  struct-169v/170, kuen v3, catalan v1, clebsch v1, menger v2,
+  apollonian v1, melencolia v3, tribar v2). Pools: IMPROVE-PLAN md5
+  c0f569d0 unchanged (257th check); SURVEY CANDIDATES 0 OPEN rows; no
+  candidate row (CLEAN); CITY-PLAN-V2 assigns survey no role (grep
+  0). Census baseline for next tick: /tmp/survey368-census-a.json
+  (333, 220060B, sha16 46b72cdefa274983). Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
+  ledger append (loop law 4: append only when routing; CLEAN
+  concurrence routes nothing; ticks 211-367 precedent). STANDING
+  RECOMMENDATION carried unchanged (s182-s367): stop the SURVEY lane
+  or convert to a no-LLM monitor when attended.
