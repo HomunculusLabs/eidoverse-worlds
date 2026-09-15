@@ -11376,3 +11376,84 @@ Files: struct180-probe-apollonian.ts + struct180-decode-apollonian.ts
 struct180-apollonian/ (10 frames, ignored), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-180, D+0 E+0). Zero world
 mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-181 (2026-09-15): APOLLONIAN PLACEMENT TICK — committed carry from
+## struct-180 executed, PLACED_VERIFIED live
+
+181%3=1 build-slot cadence, but the committed carry takes it (struct-180:
+"placement = struct-181 committed carry"; the 174/176/177/178/179 lane
+precedent — a banked form places on the next tick regardless of N%3,
+build+judge/place alternation held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP — same disclosed class as struct-169..180): monkeysaddle v2
+native-18m-PASS placement GATE, hypar row 22 native-only, kuen v3 + catalan
+v1 + clebsch v1 + menger v2 fallback-judged acceptances (all placed);
+apollonian v1 joins the owed board. Gate ALL PASS real exit 0 tick-start at
+79176342 (survey-362) + RE-RUN clean immediately before the mutation (epoch
+law, HEAD unchanged; /tmp/struct181-gate.txt + /tmp/struct181-gate2.txt,
+unpiped). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 8th
+tick, 0 OPEN nx-struct rows). Ledger max re-derived struct-180 -> tag
+struct-181 (re-checked immediately before append).
+
+Local bytes re-verified sha256 6ba69bea474cb57506820b1968c9477a4481386d4d5
+1bc0819fa8f1c55a5c763 == struct-180 bank pin BEFORE upload. Decode re-run
+ALL PASS 6/6 + RED control fresh this tick; envelope re-derived literally:
+0.70 x 5.58 x 4.80 SYMMETRIC (D5, CX=CZ=0) — origin-centered SAT lawful,
+placement-contract law.
+
+SEAT (struct181-scan + struct181-select, fresh 330 census): avenue axis
+re-derived FRESH = 91.0 deg (26-form window; 30 math-family forms standing).
+Island = 6 members (lorenz r140 / chladni r150 / voronoi r160 / peaucellier
+r168.6 on-axis az94 + clebsch E-flank az90.5 r142 lat 8.7 + menger W-flank
+az98.5 r155 lat 12.2); the az94 procession continues past them (zeno r179.9
+-> enneper r250). 427 lawful island candidates. Alternating-flank zigzag
+cadence (city-104..110, struct-177/179): clebsch E -> menger W -> the
+apollonian takes the E-FLANK RETURN: az89.50 r164.25, lateral 12.9m of the
+procession line (recomputed from az94, not the scan's axis-91 lat column —
+the 8.7/12.2 precedent figures), radial slot dead-mid voronoi160 <->
+peaucellier168.6. NN 12.60 vs nx-struct-peaucellier (law 8.0), SAT 7.66 vs
+nx-struct-peaucellier (law 1.4), walk-clear 135.66. az90/r172 corridor
+continuation alternative recorded and passed over (zeno already continues
+the rank; zigzag cadence carries). Island now 7 members — within the
+CITY-PLAN-V2 5-9 terminal-island cap.
+
+YAW LAW (orientation class cured at the seat): the disc faces +/-X, so at
+yaw 0 it reads EDGE-ON down the +Z avenue walk (struct-104 class — the
+struct-180 gameplay judge's own diagnosis: "orientation failure, not
+geometry failure"). Yaw 0.8726646259971648 (50 deg) puts the disc face
+normal 40 deg off the -Z approach normal — the oblique-read law. This also
+un-blocks the night read (struct-180's 0-warm-px night frame was the
+edge-on chassis angle; the bead is byte-verified and reads at the seated
+yaw).
+
+TERRAIN (struct181-terrain-apollonian.ts): 9pt over the TRUE rotated
+footprint (literal corners): spread 12.2mm, PY = -0.012640.
+
+PLACEMENT (next-place-struct181.ts, struct179 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 330 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 2.06x1.81 at yaw 50):
+NN floor peaucellier 12.60, SAT worst peaucellier 7.66 — clean. 1 upload
+(content-addressed store/6ba69bea474cb575.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 330 -> 331 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (twin bead
+emissive-in-GLB — no comp-wipe class on first spawn).
+
+Native debt board after this tick: apollonian v1 OWED (fallback-judged
+acceptance, disclosed; night read deferred-to-seat now seated);
+monkeysaddle v2 native 18m PASS OWED (placement gate); hypar row 22 OWED
+(native only); kuen v3 OWED; catalan v1 OWED; clebsch v1 OWED; menger v2
+OWED.
+
+Bill eye-check pointer: on Math Avenue's terminal island, off the east
+flank between voronoi and peaucellier — the great pierced disc standing
+oblique to the walk: two tall lancets kissing at the center, circles of
+ever-smaller circles packing every gap, sky through every one, and one
+warm brass ember floating in the right-hand lancet after dark.
+
+Files: struct181-scan-apollonian.ts + struct181-select-apollonian.ts +
+struct181-terrain-apollonian.ts + next-place-struct181.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-181, D+1 E+1). One upload + one verb total (shared budget). Zero
+pushes.
