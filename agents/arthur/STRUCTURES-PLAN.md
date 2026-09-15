@@ -10976,3 +10976,73 @@ assets/mkv3-clebsch.ts (NEW, staged -f), reviews/struct176-clebsch/
 (10 frames, ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md
 (one append struct-176, D+0 E+0). Zero world mutations, uploads, verbs,
 comp-edits, shared-budget use. Zero pushes.
+
+## struct-177 (2026-09-15): CLEBSCH PLACEMENT TICK — committed carry from
+## struct-176 executed, PLACED_VERIFIED live
+
+177%3=0 placement slot with the committed carry (struct-176 banked clebsch v1,
+"placement = struct-177 committed carry"). Native debts carried, not payable in
+cron (tool catalog carries only the zai-vision MCP — same disclosed class as
+struct-169..176): monkeysaddle v2 native-18m-PASS placement GATE, hypar row 22
+native-only, kuen v3 + catalan v1 fallback-judged acceptances; clebsch v1
+(fallback-judged + deterministic night closure) joins the owed board. Gate ALL
+PASS real exit 0 tick-start at d6cfd548 (sweep-247; /tmp/struct177-gate.txt,
+unpiped). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-176 -> tag struct-177.
+
+Local bytes re-verified sha256 e32e3b70a6147176... == struct-176 bank pin
+BEFORE upload (full sha on disk this tick). Decode re-run ALL PASS 13/13 +
+RED control; envelope re-derived LITERALLY this tick (struct177-env-clebsch.ts):
+5.50 x 5.108 x 5.50 SYMMETRIC (t-only TRS asserted on all 11 nodes, CX=CZ=0)
+— origin-centered SAT lawful, placement-contract law.
+
+SEAT (struct177-scan -> struct177-diag -> struct177-select, fresh 328 census):
+the Math Avenue r55-130 band is PROVEN SATURATED for a 5.5m form — 0/2501
+lawful grid points at BOTH yaw 40 and 30 (best near-miss NN 7.67 vs kuen /
+SAT 0.93 vs rule30wall; the 24-form avenue walk is full at the 8m NN floor,
+R11 Amendment 1). Band saturation is a FINDING, not a failure: the lawful
+composition zone per CITY-PLAN-V2 is the Math TERMINAL ISLAND r140-170 (787
+lawful seats). Island read fresh: 4-member on-axis procession (lorenz r140 /
+chladni r150 / voronoi r160 / peaucellier r168.6, all az94 dead straight; the
+avenue continues past them — gyroid r240, enneper r250). The Clebsch seats as
+the island's 6th member and FIRST STAGGER, E-flank (az90.5, lateral 8.7m of
+the procession line), rhythm slot between lorenz and chladni — mirroring
+catalan's W-flank band stagger (az100) and continuing the alternating-flank
+cadence city-104..110 established. SELECTED r142.0 az90.5 -> POS
+(-1.239168, PY, 141.994593) yaw 0.6981317 (40 deg oblique, struct-104 law —
+at yaw 0 the pinwheel face reads face-on down the avenue sightline):
+NN 8.84 vs nx-struct-lorenz (law 8), SAT 1.97 vs nx-struct-lorenz (law 1.4),
+walk-clear 113.4 (folly class, no walk owed). Tool self-catch this tick:
+the select tool's first sort ranked FARthest-from-corridor first (negative-lat
+sign bug — 25.8m adrift); caught on read, fixed, re-run BEFORE any mutation.
+
+TERRAIN (struct177-terrain-clebsch.ts): 9pt over the TRUE rotated footprint:
+spread 9.5mm, PY = -0.019734.
+
+PLACEMENT (next-place-struct177.ts, struct174 fresh-spawn chassis): hash gate
+green; entity ABSENT on fresh 328 census; SAT/NN preflight re-run at FINAL
+pose vs same fresh set (symmetric footprint 3.87x3.87 at yaw 40): NN lorenz
+8.84, SAT lorenz 1.97 — clean. 1 upload (content-addressed
+store/e32e3b70a6147176.glb) + 1 paced spawn over one WS join;
+PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh re-read;
+census 328 -> 329 exactly. Idempotent rerun: ALREADY_SEATED, zero verbs.
+Folly class — no walk owed. Comp bag empty by contract (7 Eckardt beads
+emissive-in-GLB — no comp-wipe class on first spawn).
+
+Native debt board after this tick: clebsch v1 OWED (fallback-judged
+acceptance, disclosed; deterministic night closure banked struct-176);
+monkeysaddle v2 native 18m PASS OWED (placement gate); hypar row 22 OWED
+(native only); kuen v3 OWED; catalan v1 OWED.
+
+Bill eye-check pointer: on Math Avenue, past tesseract/rule30wall, the
+procession of lorenz->chladni->voronoi->peaucellier now has its first
+companion off the east side: the pale pinwheel of curved films laced with 27
+straight brass chords. Walk around it: every chord stays dead straight while
+the films curve; the gold beads sit exactly where three chords cross. After
+dark: one quiet warm point at its heart.
+
+Files: struct177-env-clebsch.ts + struct177-scan-clebsch.ts +
+struct177-diag-clebsch.ts + struct177-select-clebsch.ts +
+struct177-terrain-clebsch.ts + next-place-struct177.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-177,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
