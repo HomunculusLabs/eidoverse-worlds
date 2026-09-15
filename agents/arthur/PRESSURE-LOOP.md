@@ -215,7 +215,27 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       lines. tools/pressure-authstorm.ts (SELFTEST 24 gate families,
       self-booting, fixture-generating). Servergate smoke 85/0 pinned
       tree.)
-- [ ] Slow-loris verb sender: one crawling connection cannot block verb intake.
+- [x] Slow-loris verb sender: one crawling connection cannot block verb intake.
+      (pressure-13, 2026-09-15: worktree @260ec9c5, PORT 8994, 33s, 160
+      anchors (24 perf @15Hz + 136 spec) + 16 loris legs raw-TCP — 8
+      spectator-verb crawls 1B/800ms (incl. one 120KB held partial under the
+      256KB cap), 4 embodied pose-then-crawl 1B/500ms (44 poses first), 4
+      pre-join crawls; half aborted mid-crawl t+21s, rest ended t+22s.
+      PASS, no patch: crawl-window HTTP probe p95 3ms (n=45), fps p50 15.0,
+      frame lat p95 10ms, 0 seq gaps, mid-crawl joins 12/12 spec p95 3ms +
+      3/3 emb p95 9ms, says 3/3 p95 3ms, spectator-verb refusals 4/4
+      explicit, 0 spec/prejoin arrives, embodied legs 4/4 arrive + 4/4 leave
+      exact, roster 31/31 exact mid-crawl, log drift 0, final present 0,
+      ratchet rejoin 175/175 p95 27ms, RSS +25MB peak, 0 suspicious lines.
+      Verb intake is synchronous per frame (size gate → rate windows →
+      parse → runVerb; no awaits, no per-frame locks) — crawlers are inert
+      held partials in Bun's per-socket buffer; embodied crawlers go silent,
+      never wedge. tools/pressure-loris.ts (SELFTEST 25 gate families,
+      self-booting, fd-checked, 64-bit wsFrame). Two harness-contract fixes
+      after RED runs: never-arrive scoped to spec/prejoin (embodied legs are
+      legitimately present — exact arrive/leave arithmetic instead);
+      observed-departure window t+22s (leaves must land inside the seer's
+      window, pressure-6 law). Servergate smoke 85/0 pinned tree.)
 - [ ] World-hop churn: rapid switch/leave cycles leave no cross-world state
       bleed.
 - [ ] Spectator-to-performer promotion under load: role change is atomic.
