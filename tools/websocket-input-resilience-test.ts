@@ -206,6 +206,102 @@ const srvLog = readFileSync(join(scratch, "server.log"), "utf8");
 check("no serializer stack explosions in server log", !srvLog.includes("RangeError"),
   srvLog.split("\n").filter((l) => l.includes("RangeError")).slice(0, 3).join(" | "));
 
+// ---- pressure-16: numerically hostile but STRUCTURALLY sane poses -------------
+// pressure-11 guards pose SHAPE (depth/nodes/strings); nothing guards pose
+// VALUES. A finite p=1e6 rides frames, join snapshots and poses.json verbatim;
+// a ~217KB string-stuffed pose (1024-node legal) relays to every spectator;
+// MSG_RATE drops are silent on the message lane. The contract this block pins:
+// magnitude/fat hostility is refused EXPLICITLY at intake (receipt + flight-
+// recorder trace, never propagated), boundary-legitimate extremes (|p|=9999.5)
+// still flow, and rapid over-cap sending leaves a rate-limit note in the
+// recorder instead of silence.
+console.log("\n— numerically hostile poses: refused explicitly, never propagated —");
+const spoof1 = await open("spoof-magnitude");
+spoof1.messages.length = 0;
+healthy.messages.length = 0;   // witness cleared BEFORE the hostility — the very
+                               // next tick's relay is what this buffer must judge
+spoof1.ws.send(JSON.stringify({ type: "pose", pose: { p: [1_000_000, 0, 0], yaw: 0, speed: 0, clip: "idle", pitch: 0 } }));
+spoof1.ws.send(JSON.stringify({ type: "pose", pose: { p: [0, -1e9, 0], yaw: 0, speed: 1e7, clip: "walk", pitch: 1e5 } }));
+spoof1.ws.send(JSON.stringify({ type: "pose", pose: { p: [1, 1, 1], yaw: 0, speed: 0, clip: "idle", pose: { boneA: [1e18, 1e18, 1e18, 1e18] } } }));
+await Bun.sleep(250);
+check("magnitude spoofer gets an explicit refusal receipt",
+  spoof1.messages.some((m) => m.type === "error" && /pose refused/i.test(String(m.error))),
+  JSON.stringify(spoof1.messages.filter((m) => m.type === "error")).slice(0, 200));
+check("magnitude spoofer's socket survives (refusal, not close)",
+  spoof1.closeCode === null, String(spoof1.closeCode));
+await Bun.sleep(700);
+// any finite monster will do: the three sends coalesce (latest-value-wins), so
+// what relays is pose #3 (boneA 1e18) — scan for ANY oversized numeric form,
+// not one literal (that is how the first draft of this check passed vacuously)
+const relayedOversized = healthy.messages.filter((m) => m.type === "frame" && /[0-9]{7,}|1e\+\d{2,}/.test(JSON.stringify(m.poses ?? {})));
+check("no oversized value is ever relayed to spectators",
+  relayedOversized.length === 0,
+  `${relayedOversized.length} frames carry an oversized number, e.g. ${JSON.stringify(relayedOversized[0]?.poses ?? {}).slice(0, 140)}`);
+
+const boundary = await open("spoof-bonsai");
+boundary.ws.send(JSON.stringify({ type: "pose", pose: { p: [9999, -9999, 9999.5], yaw: 6.28, speed: 79.2, clip: "walk", pitch: -1.5 } }));
+const flowed2 = await waitFor(healthy, () => framesOf(healthy, "spoof-bonsai") >= 1, 40);
+check("boundary-legitimate extreme (|p|=9999.5) still flows to frames",
+  flowed2, `${framesOf(healthy, "spoof-bonsai")} frames`);
+check("boundary leg got no refusal",
+  !boundary.messages.some((m) => m.type === "error" && /pose refused/i.test(String(m.error))),
+  JSON.stringify(boundary.messages.filter((m) => m.type === "error")).slice(0, 160));
+
+const fatStrings = 830; // 830 x 256B ≈ 217KB — under BOTH the 1024-node and 256KB-frame gates
+const fatPose: any = { p: [1, 2, 3], yaw: 1, speed: 1, clip: "walk", pitch: 0.5, pose: { b0: [0.1, 0.2, 0.3, 0.4] } };
+for (let k = 0; k < fatStrings; k++) fatPose[`x${k}`] = "S".repeat(256);
+const fatFrame = JSON.stringify({ type: "pose", pose: fatPose });
+check("fat pose is genuinely under both gates", fatFrame.length < 256_000 && fatFrame.length > 150_000, String(fatFrame.length));
+const spoof2 = await open("spoof-fat");
+spoof2.messages.length = 0;
+healthy.messages.length = 0;
+spoof2.ws.send(fatFrame);
+await Bun.sleep(250);
+check("fat-pose spoofer gets an explicit refusal receipt",
+  spoof2.messages.some((m) => m.type === "error" && /pose refused/i.test(String(m.error))),
+  JSON.stringify(spoof2.messages.filter((m) => m.type === "error")).slice(0, 200));
+await Bun.sleep(700);
+const maxFrame = Math.max(0, ...healthy.messages.filter((m) => m.type === "frame").map((m) => JSON.stringify(m).length));
+check("fat pose never rides a frame (fanout amplification contained)",
+  maxFrame < 50_000, `largest frame ${maxFrame}B`);
+
+// rapid over-cap sender: 200 messages inside ~1s against MSG_RATE=60 — the
+// drops must leave a rate-limit note in the flight recorder, and the sender
+// must be coalesced (latest-value-wins bounds relayed frames)
+const rapid = await open("spoof-rapid");
+rapid.messages.length = 0;
+for (let k = 0; k < 200; k++) rapid.ws.send(JSON.stringify({ type: "pose", pose: { p: [k % 10, 0, 0], yaw: k, speed: 2, clip: "run" } }));
+await Bun.sleep(1_500);
+check("rapid sender's socket is not closed for over-cap posing",
+  rapid.closeCode === null, String(rapid.closeCode));
+const relayed = framesOf(healthy, "spoof-rapid");
+check("rapid sender is coalesced (≈15Hz relay, not 200Hz)", relayed > 0 && relayed <= 25, `${relayed} frames`);
+
+// the flight recorder must carry the treatment traces (world_debug's surface)
+const rec: Sock = { ws: new WebSocket(`ws://127.0.0.1:${port}/ws`), messages: [], closeCode: null };
+sockets.push(rec.ws);
+rec.ws.onmessage = (event) => { try { rec.messages.push(JSON.parse(String(event.data))); } catch { /* ignore */ } };
+rec.ws.onclose = (event) => { rec.closeCode = event.code; };
+await new Promise<void>((resolve, reject) => {
+  rec.ws.onopen = () => resolve(); rec.ws.onerror = () => reject(new Error("recorder socket failed"));
+});
+rec.ws.send(JSON.stringify({ type: "join", world, id: "recorder-16", token: "test-door", spectate: true }));
+await waitFor(rec, () => rec.messages.some((m) => m.type === "snapshot"), 40);
+rec.ws.send(JSON.stringify({ type: "debug", limit: 300 }));
+const recEvents = await new Promise<any[]>((resolve) => {
+  const to = setTimeout(() => resolve([]), 3_000);
+  const iv = setInterval(() => {
+    const d = rec.messages.find((m) => m.type === "debug");
+    if (d) { clearTimeout(to); clearInterval(iv); resolve(d.events ?? []); }
+  }, 40);
+});
+check("flight recorder notes the hostile-pose refusals",
+  recEvents.some((e) => String(e.kind).includes("pose-refused") || /pose/i.test(String(e.kind ?? "")) && /refus/i.test(JSON.stringify(e))),
+  JSON.stringify(recEvents.slice(0, 6)).slice(0, 240));
+check("flight recorder notes the message-rate drops (no silent cap)",
+  recEvents.some((e) => e.kind === "rate-limit"),
+  JSON.stringify(recEvents.filter((e) => e.kind === "rate-limit")).slice(0, 160));
+
 cleanup();
 console.log(`\n${pass} passed, ${fail} failed\n`);
 process.exit(fail ? 1 : 0);

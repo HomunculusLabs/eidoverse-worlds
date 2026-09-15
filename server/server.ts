@@ -357,7 +357,17 @@ const server = Bun.serve({
       // too; otherwise parse failures become a free response-amplification lane.
       const now = Date.now();
       if (now - c.msgWin > 1000) { c.msgWin = now; c.msgCount = 0; }
-      if (++c.msgCount > MSG_RATE) return;
+      // pressure-16: the drop itself stays free (never reply to over-cap input
+      // — a 200Hz sender must not buy 200 receipts), but it must not be SILENT
+      // either: the verb lane notes its rate limit in the flight recorder, and
+      // the message lane owed the same trace. One note per client per second.
+      if (++c.msgCount > MSG_RATE) {
+        if (now - (c.msgNoteAt ?? 0) > 1000) {
+          c.msgNoteAt = now;
+          c.world?.debug("rate-limit", { who: c.id, lane: "message" });
+        }
+        return;
+      }
       let msg: any;
       try { msg = JSON.parse(String(raw)); }
       catch {
@@ -1145,6 +1155,46 @@ const server = Bun.serve({
             const pose = msg.pose;
             if (!(pose !== null && typeof pose === "object" && !Array.isArray(pose) && saneValue(pose, 1))) {
               ws.send(JSON.stringify({ type: "error", error: "malformed pose — shallow object of finite values (depth ≤5, ≤1024 nodes)" }));
+              return;
+            }
+          }
+          // pressure-16: structural sanity (above) is not semantic sanity. A
+          // pose is a BODY claim: position, orientation, animation state. The
+          // legit shapes carry bounded magnitudes by physics — a person at
+          // 9999.5m from origin is the honest extreme of a 10000m world; a
+          // bone quaternion at 1e18, a speed of 1e300, or a 217KB pose are
+          // wire-volume attacks that ride every fanout (stage frames ×N
+          // spectators, join snapshots, poses.json) verbatim — measured
+          // pressure-16 baseline: one 15Hz fat sender multiplied a spectator's
+          // stream ~170x and pushed RSS +95MB. So: numbers are bounded
+          // (|v| ≤ 10000 — five orders past any honest p/yaw/speed/quaternion),
+          // a whole pose is bounded in serialized size (8KB, the comp-verb
+          // budget), and violations are REFUSED, not clamped: the spoof's own
+          // claim never moves (a clamped teleport still lies about arrival),
+          // the spoofer hears exactly why once per second, and the flight
+          // recorder carries the trace for everyone else. Refusal drops the
+          // delta; the body simply stays where its last honest pose put it.
+          const POSE_NUM_BOUND = 10_000, POSE_WIRE_BOUND = 8_192;
+          {
+            let wire = 0;
+            const saneNum = (v: any, depth: number): boolean => {
+              if (v === null) return true;
+              const t = typeof v;
+              if (t === "number") return Number.isFinite(v) && Math.abs(v) <= POSE_NUM_BOUND;
+              if (t === "boolean") return true;
+              if (t === "string") { wire += v.length; return v.length <= 256; }
+              if (depth >= 5) return false;
+              if (Array.isArray(v)) return v.every((x) => saneNum(x, depth + 1));
+              if (t === "object") { wire += 8; return Object.values(v).every((x) => saneNum(x, depth + 1)); }
+              return false;
+            };
+            const now = Date.now();
+            if (!saneNum(msg.pose, 1) || wire > POSE_WIRE_BOUND) {
+              if (now - (c.poseRefusalAt ?? 0) > 1000) {
+                c.poseRefusalAt = now;
+                ws.send(JSON.stringify({ type: "error", error: `pose refused — bound the claim: numbers |v| ≤ ${POSE_NUM_BOUND}, pose ≤ ${POSE_WIRE_BOUND}B on the wire (you are moving too far or too loud; no state changed)` }));
+              }
+              c.world.debug("pose-refused", { who: c.id, why: wire > POSE_WIRE_BOUND ? "wire-volume" : "magnitude", bytes: wire });
               return;
             }
           }

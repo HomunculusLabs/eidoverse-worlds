@@ -83,6 +83,14 @@ export type Client = {
   // rate windows: a griefer or a stuck client gets silence, not fanout
   msgWin: number; msgCount: number;   // all messages, per second
   verbWin: number; verbCount: number; // authored verbs, per 4s
+  /** pressure-16: last second a pose-refusal receipt was sent to this client.
+   *  Rate-limits receipt amplification the same way VERB_RATE limits its own
+   *  "slow down" echo — one note per client per second, while the drops
+   *  themselves are every-time. */
+  poseRefusalAt?: number;
+  /** pressure-16: last second the message-cap drop was noted in the flight
+   *  recorder — same one-per-second discipline as VERB_RATE's own note. */
+  msgNoteAt?: number;
 };
 
 // ---------------------------------------------------------------- world logs

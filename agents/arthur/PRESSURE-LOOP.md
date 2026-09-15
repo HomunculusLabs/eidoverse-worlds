@@ -281,8 +281,36 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       both/neither instant exists. tools/pressure-promote.ts (SELFTEST
       46 gates). Two RED runs were harness bugs, server correct both
       times. Servergate smoke 85/0 pinned tree.)
-- [ ] Presence spoofing: oversized/rapid pose deltas clamped and logged, not
+- [x] Presence spoofing: oversized/rapid pose deltas clamped and logged, not
       propagated.
+      (pressure-16, 2026-09-15: worktree @afb9c0c2 + fix, PORT 8981, 34s,
+      200 peak — 24 perf @15Hz + 136 spec, then 8 embodied spoof legs: 2
+      rapid @200Hz (13.3x MSG_RATE=60, production cap), 2 magnitude
+      finite-monsters (p 1e6→1e308, speed 1e300, bone quats 1e18) escalating
+      at t+16s, 2 fat ~217KB poses (830x256B strings — 1024-node and 256KB-
+      frame legal), 2 bonsai |p|=9999.5 boundary controls. BASELINE RED —
+      real defect: structurally-sane numerically-hostile poses relayed
+      verbatim — 5388 oversized values in witnessed frames, fanout
+      amplification 17394% of the legit window (one 15Hz fat sender = ~170x
+      a spectator's stream), 8 oversized values in a fresh joiner's
+      snapshot present[], 20 persisted into poses.json, RSS +92MB, and the
+      whole treatment class silent (0 refusals, 0 recorder notes). FIX
+      (3 hunks, server/server.ts + world.ts): pose intake now REFUSES —
+      never clamps — magnitude/wire-volume violations (numbers |v| ≤ 10000,
+      pose ≤ 8KB on the wire; receipt rate-limited to 1/s, flight-recorder
+      trace `pose-refused` every time); the message-rate cap's silent drop
+      now notes `rate-limit` in the recorder (1/s, like VERB_RATE). AFTER,
+      identical conditions: oversized relays 5388→0, amplification 17394%→
+      113%, present[] oversized 8→0, poses.json 20→0, RSS +92→+26MB, frame
+      lat p95 39→2ms, hostile treatment 40 refusals + 10 rate notes + 290
+      recorder traces, boundary |p|=9999.5 accepted whole window (0
+      refusals), rapid legs coalesced (ratio 0.45x ≤ 3.5), fps p50 15.1,
+      0 gaps, rosters exact, log drift 0, final present 0, rejoin 170/170
+      p95 32ms, 0 suspicious. websocket-input slice extended 24→30 checks,
+      RED 6 on unfixed tree → 30/0 GREEN after. tools/pressure-spoof.ts
+      (SELFTEST 29 gate families, self-booting, fd-checked). Servergate:
+      smoke 85/0 + leasetest 19/0 + websocket-input 30/0 pinned tree.
+      Next head: giant payload handling.)
 - [ ] Giant payload handling: max-frame enforcement with explicit error, no
       OOM path.
 - [ ] Clock-skew tolerance: late/reordered client timestamps never corrupt
