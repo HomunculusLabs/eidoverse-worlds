@@ -63,7 +63,14 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       +0MB post. PASS, no patch. Performer-leave false alarm run to ground
       as harness teardown race + stale-offset log writer; quiet-probe
       proves no server shedding.)
-- [ ] Authored chat/verbs remain responsive during maximum presence traffic.
+- [x] Authored chat/verbs remain responsive during maximum presence traffic.
+      (pressure-4, 2026-09-15: worktree @ d29ba072, 24 perf x 15Hz + 176 spec,
+      probes at t+5/10/15s — say author lat p95 5ms, fanout 3800/3800
+      receipts 0 misses p95 16ms, builder light 3/3 appended, rate blast
+      12 accepted / 8 refused explicit, no wedge post-window, fps p50 14.5,
+      0 gaps, RSS +10MB, 0 log warnings. PASS, no patch. Servergate: smoke
+      85/0 (pinned tree — main-tree smoke fails on sibling pilot dirt),
+      websocket-input 9/0.)
 - [ ] Component-placement burst receives fair, explicit rate-limit behavior.
 - [ ] Reconnect storm leaves no ghost clients, leases, or timers.
 - [ ] World switching cancels old-world traffic and state promptly.
