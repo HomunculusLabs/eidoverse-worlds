@@ -12240,3 +12240,141 @@ assets/mkv3-cissoid.ts + struct188-probe-cissoid.ts +
 struct188-decode-cissoid.ts (struct-188's recovered files, committed this
 tick under struct prefix), IMPROVEMENTS.md (one append struct-189,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-190 (2026-09-15): R11-18 THE QUADRATRIX OF HIPPIAS — BUILD+JUDGE
+## TICK (conchoid dropped honestly: theorem unverifiable at probe precision;
+## quadratrix probe 9/9 + RED, decode 8/8 + RED control; judged PASS on all
+## three frames — ZAI fallback disclosed; ACCEPTED BANKED NOT PLACED)
+
+190%3=1 build slot (nothing banked — cissoid placed struct-189), all owed
+native debts cron-unpayable (tool catalog carries only the zai-vision MCP,
+tool_search fresh this tick; same disclosed class as struct-169..189) —
+build tick per the 178..189 alternation, placement = struct-191 committed
+carry. Gate ALL PASS real exit 0 tick-start at 341decfb (city-151;
+/tmp/struct190-gate.txt, unpiped). Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged 19th tick, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-189 -> tag struct-190 (re-checked immediately before
+append).
+
+FORM SELECTION (fresh grep, all three ledgers + IMPROVE-PLAN): conchoid/
+nicomedes/trisect/neusis 0 hits — BUT DROPPED after design-stage
+verification: three classical conchoid trisection rules (b=2c, b=a/cosphi,
+b=2a·cos(phi/2)) all tested numerically and NONE yields the exact
+one-third-angle point at the precision this lane's probe laws demand (the
+exact-trisection rule length is not a clean figure length of the drawn
+elements; published constructions use an iterative adjustment, not the
+curve point itself). This lane does not carve unproven theorems — a false
+theorem in stone is worse than no theorem. Replaced within the same
+register: QUADRATRIX/hippias/dinostratus 0/0/0 — the third member of
+struct-188's named Greek construction-curve register. Kin-checked: no
+frame-form, no corner-sweep, no limit-landing anywhere in the fleet;
+lissajous is artwalk-chartership (curve of motion, standing, spinning);
+the quadratrix is the FIRST CURVE IN HISTORY DEFINED BY MOTION (Hippias
+~420 BC). Era lineage: Duerer (melencolia) -> Penrose (tribar) -> Diocles
+(cissoid) -> Hippias — the register descends to its Greek root.
+
+CONCEPT (written before build): THE CURVE THAT MEASURED THE CIRCLE. Two
+uniform motions — a radius turning at constant speed, a line falling at
+constant speed — start together at the top of a square and stay
+synchronized; the locus of their meeting point is the quadratrix
+x = y·cot(pi*y/2W). Rendered standing: a stone square frame (side W=2.6)
+IS the generating square; a stone ribbon of 22 arc-uniform tangent
+voussoirs (0.15x0.15) sweeps from the top-left corner (0, W) down and out,
+flattening as it falls (dx/dy -> 0), and lands FLAT on the base at
+x = 2W/pi = 1.656 — the pi-point, marked by a brass stud: Dinostratus'
+circle-squaring limit, pi written in stone. A brass RAY (0.07 sq, 60 deg
+from the base) and an iron FALLING LINE (0.06 sq) are FROZEN at the
+moment theta*=60 deg — the moment where ray, line, and curve all cross at
+one exact point (y* = 2W/3 = 1.7333, x* = 2W/(3*sqrt(3)) = 1.0007): the
+synchronization made visible. One warm bead (glow_qu_1 KEEP, r 0.07,
+emissive 0x9a7030 @ 1.0 dusk lineage) half-embedded on the ribbon's front
+face at the crossing — sole night element. Envelope 3.30x2.80x0.60 y[0,
+2.80] origin-centered. Folly class, no walk owed. Nodes 4 (qu_stone +
+qu_brass + qu_iron + glow_qu_1).
+
+PROBE (struct190-probe-quadratrix.ts, tracked — the ONE contract; mk +
+decode import it): P1 motion law (parametric == implicit to 6.7e-16; y
+proportional to theta, constant 2W/pi — the two uniform motions in step);
+P2 endpoint law (springs at the corner (0, W) exactly; lands at 2W/pi,
+limit rel err 3.3e-15); P3 sweep law (x strictly monotone as y falls; foot
+slope -> 0: lands FLAT); P4 square law (the whole curve inside [0,W]^2,
+sup x = 2W/pi); P5 frozen moment (ray, line, curve cross at one point:
+motion-law err 2.2e-16, ray err 4.4e-16); P6 arc-uniform voussoirs (22
+stations, spread 1.0001, on-curve err 2.2e-16); P7 grounding (foot band
+embeds base-member top; corner joint embeds left-member flank; frame+stud
+inside plinth); P8 pi landing (foot lands 4.5 mm short of the stud center
+— inside stud r: the curve lands at its own limit); P9 envelope. RED
+control: mutant frequency (pi*y/3W) deviates 1.430 m, fails. Two
+checker-side/design catches en route: L2 tolerance tightened to tan()
+precision at the corner limit; Y_BOT 0.18 -> 0.15 (foot band 0.195 embeds
+the base member top 0.20 — probe caught my first grounding draft). ALL
+CHECKS PASS exit 0.
+
+BUILD (assets/mkv3-quadratrix.ts, staged -f): root identity (struct-188
+decode law); verticals own the corners, horizontals span between (no
+corner face-fight); ray embeds base + top members; line embeds both
+verticals' faces; stud pokes 0.04 above base top; bead BEAD_Z = SEC/2
+half-embedded front face (struct-52/188 occlusion cure law). Deterministic
+x2 byte-identical sha256
+57175887c0acc7903465ca13154480f5a0d14070a89970b51eeb930bf251cd47
+(50,512 B), mtime-verified. Nodes 3 merged + 1 glow KEEP = 4.
+
+DECODE (struct190-decode-quadratrix.ts, tracked) ALL PASS 8/8 + RED
+control (foreign cissoid bytes FAIL 8/8, exit 1): D1 census 4 nodes, D2
+band+union law (540 stone verts within SEC/2+2mm of the dense curve; 84
+frame, 24 plinth, unclassified 0 — member interpenetration BY DESIGN,
+counts bounded), D3 sweep law (26/26 y-bins occupied corner-to-foot, 0
+interior gaps; 24 verts at the frozen crossing), D4 brass law (ray on the
+60-deg centerline, axis t in [-0.058, 3.060], passes the crossing perp
+0.0 mm at t 2.0015; pi-stud at x 2W/pi exact; two checker-side REDs fixed
+diag-first: member-embedded ray t-range cap, vertex-local crossing law ->
+geometric segment law), D5 iron law (line center y* err 0.0 mm, span
+member-face to member-face), D6 bead law (center == (x*, y*, front-face),
+emissive present), D7 envelope 0.0000 drift origin-centered, D8 named
+texMats qu_stone/qu_brass/qu_iron (struct-38 law).
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- front: PASS 4/4 — identity deliberate mathematical monument; frame
+  closed and crisp; ribbon ONE continuous curve corner-to-foot, tucks
+  into the corner joint, flattens toward the base; ray embedded base and
+  top; line attached both ends; stud separate; bead at the triple
+  crossing. Cosmetic margin disclosed: beam-over-post corner step (by
+  construction — horizontals' mid-plane seats on the verticals' tops;
+  reads as conventional joinery, verdict unchanged).
+- gameplay 18m: PASS 4/4 — "curve inside its square" reads immediately;
+  flattening sweep legible; grounded, shadow attached; zero hard errors.
+  Margins disclosed: ribbon reads line-thin at 18m (cissoid-ribbon tier);
+  bead barely discernible at distance (design promise: frame+sweep at
+  distance, triple crossing at walk-up).
+- night: PASS 3/3 — sole-light law EXACT (one warm point, ~1px halo, no
+  bloom/pooling), silhouette three-layer legible dark-on-dark. Judge flag
+  "curve near-misses bead" decode-falsified (probe-law-11 class: L5 ray
+  err 4.4e-16, D6 bead center exact — the bead half-embeds ON the curve's
+  front face, occluding it at night resolution). Cast shadow = chassis
+  moonlight.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-191
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility per CITY-PLAN-V2; terminal island 8 of 5-9, procession
+continues past cissoid r280), YAW LAW — the construction reads on the +Z
+face: oblique 30-40 deg off the approach walk per struct-104
+(melencolia/fourier/cissoid class), terrain preflight over the TRUE
+rotated footprint, hash-gated plain spawn nx-struct-quadratrix, comp {}.
+Folly class — no walk owed. Native re-judge debt: quadratrix v1 joins the
+owed board (monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch
+v1, menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1,
+cissoid v2).
+
+Bill eye-check pointer (after placement): on Math Avenue past the cissoid
+— a stone square framing one sweeping curve: read it top-left corner to
+foot, the sweep flattening as it falls until it lands flat on the base at
+the brass stud. The diagonal ray and the horizontal line are frozen at
+the moment they cross ON the curve; after dark, one warm bead burns at
+that crossing — the meeting point of the two motions that drew the curve.
+
+Files: struct190-probe-quadratrix.ts + struct190-decode-quadratrix.ts
+(NEW, tracked), assets/mkv3-quadratrix.ts (NEW, staged -f), reviews/
+struct190-quadratrix/ (10 frames, ignored), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-190, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
