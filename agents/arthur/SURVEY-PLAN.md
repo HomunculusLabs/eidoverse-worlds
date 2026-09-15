@@ -16236,3 +16236,40 @@ shared-budget use (D+0, E+0).
   nothing; ticks 211-356 precedent). STANDING RECOMMENDATION carried
   unchanged (s182-s356): stop the SURVEY lane or convert to a no-LLM
   monitor when attended.
+
+- survey-358 (2026-09-15, QUIET HOLD — no slice judged, arrival-gated law
+  s345+; native vision ABSENT from this cron session's tool catalog
+  (zai-vision MCP only, flap law; native-owed register rows NOT
+  discharged this tick, cron-disclosed): gate ALL PASS real exit 0 FIRST
+  TRY at tick-start HEAD 60822105 (city-132 tip, 99 PASS lines incl.
+  ledger law EXACT 2370787; HEAD unchanged through the tick — no re-gate
+  due, epoch law). Census via committed next-live-census.ts exit 0 at
+  BOTH epochs (A/B, 20s-paced, cmp A==B BYTE-IDENTICAL), each 329
+  entities, each 217637B, each sha16 e503af6f7c25f547 — byte-identical
+  to the survey-357 baseline (same sha). Set-diff vs survey-357 baseline
+  (329): 0 arrivals / 0 departures / 0 lib flips / 0 pose/comp drift on
+  all 329 holders — fully quiet window, second consecutive quiet epoch
+  after the clebsch arrival (struct-177's placement fully absorbed; its
+  native re-judge debt carries on the owed board). ARRIVAL-GATED JUDGE
+  NOT TRIGGERED: world quiet, pools drained (IMPROVE-PLAN md5 c0f569d0
+  unchanged, 247th check — same bytes as the survey-344 line-by-line
+  inspection, 0 OPEN candidate rows; SURVEY CANDIDATES 0 OPEN rows;
+  CITY-PLAN-V2 assigns survey no role, grep 0), and the native re-judge
+  register (hypar row 22, monkeysaddle v2 per struct-169v/170, kuen v3,
+  catalan v1, clebsch v1) is cron-unpayable this tick — cron sessions
+  use ZAI fallback which does NOT discharge native-owed rows: 0
+  confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision calls,
+  native-vs-fallback N/A. Foreign working-tree dirt at read = sibling
+  lanes in flight (windmill overhaul family incl.
+  HERO-ASSET-REFINEMENT-PLAN + core-paths glb + place-windmill-overhaul,
+  cabin-overhaul / carousel-horse-prototype / debug-bower debug1-7 /
+  WINDMILL-OVERHAUL.md + fleet scripts + client/server trees — same
+  families as s285-s357) — untouched. Index verified empty pre-commit
+  (zero staged files, shared-index law). Census baseline for next tick:
+  /tmp/survey358-census-a.json (329, 217637B, sha16 e503af6f7c25f547 —
+  byte-identical, baseline unchanged). Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
+  ledger append (loop law 4: append only when routing; ticks 211-357
+  precedent; ledger tail city-132/sweep-248 lineage running total
+  2370787). STANDING RECOMMENDATION carried unchanged (s182-s357): stop
+  the SURVEY lane or convert to a no-LLM monitor when attended.
