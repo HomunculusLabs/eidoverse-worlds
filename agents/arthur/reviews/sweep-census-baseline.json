@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 330,
+  "count": 331,
   "entities": [
     {
       "id": "beb4c791",
@@ -6550,6 +6550,42 @@
           1.44,
           1.394,
           -0.43
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-apollonian",
+      "kind": "thing",
+      "pos": [
+        1.433333,
+        -0.01264,
+        164.243746
+      ],
+      "yaw": 0.8726646259971648,
+      "scale": 1,
+      "lib": "store/6ba69bea474cb575.glb",
+      "bbox": {
+        "min": [
+          -0.35,
+          0,
+          -2.4
+        ],
+        "max": [
+          0.35,
+          5.58,
+          2.4
+        ],
+        "size": [
+          0.7,
+          5.58,
+          4.8
+        ],
+        "center": [
+          0,
+          2.79,
+          0
         ]
       },
       "compKeys": [],
