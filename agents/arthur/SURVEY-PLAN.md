@@ -16130,3 +16130,49 @@ shared-budget use (D+0, E+0).
   routing; ticks 211-354 precedent; ledger tail city-128 lineage running
   total 2370784). STANDING RECOMMENDATION carried unchanged (s182-s354):
   stop the SURVEY lane or convert to a no-LLM monitor when attended.
+
+- survey-356 (2026-09-15, quiet hold — eighth quiet epoch on the
+  post-catalan 328-entity baseline): gate ALL PASS real exit 0 FIRST TRY
+  at tick-start HEAD 737a8a48 (vocab-7 tip; 99 PASS lines incl. ledger
+  law EXACT 2370784, exit captured unpiped in tool output; HEAD unchanged
+  through the tick — no re-gate due, epoch law). Census via committed
+  next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced), each 328
+  entities, each 217041B, each sha16 8460cfb5f1f26f03 — BYTE-IDENTICAL to
+  the survey-355 baseline (/tmp/survey355-census-a.json, cmp both
+  directions) AND to each other; set-diff law satisfied by byte identity
+  — 0 arrivals / 0 departures / 0 lib flips / 0 pos/yaw/scale diffs on
+  all 328 ids. Mutation lanes active-but-not-mutating this window (struct
+  banked behind native-PASS gates — Clebsch v1 sha e32e3b70 banked-not-
+  placed per struct-176, placement = struct-177 carry; city all-HOLD on
+  Bill's Wave A eye-gate packet per city-129 19th hold; vocab/pressure
+  work server-side, off-world — vocab-7 publish/attach + pressure-7
+  travel-close-handler in ledger tail, both scratch-worlds-only per their
+  entries) — likeliest next flip triggers unchanged (Clebsch placement
+  via struct-177, monkeysaddle v2 placement after native re-judge, city
+  Wave B pending Bill's rulings, further Math Avenue carries, vocab/
+  pressure server affordances going live). Pools fresh this tick:
+  IMPROVE-PLAN md5 c0f569d0 unchanged (245th check — same bytes as the
+  survey-344 line-by-line inspection: all OPEN grep hits
+  prose/narrative, 0 OPEN candidate rows); SURVEY CANDIDATES 0 OPEN
+  rows; CITY-PLAN-V2 assigns survey no role (grep 0). No slice judged
+  (arrival-gated, s138-s355 precedent — identical bytes + drained pools;
+  the native re-judge register — hypar row 22, monkeysaddle v2 per
+  struct-169v/170, kuen v3, catalan v1 — is cron-unpayable this tick:
+  cron sessions use ZAI fallback which does NOT discharge native-owed
+  rows): 0 confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision
+  calls, native-vs-fallback N/A. Foreign working-tree dirt at read =
+  sibling lanes in flight (windmill overhaul family incl.
+  HERO-ASSET-REFINEMENT-PLAN + core-paths glb + place-windmill-overhaul,
+  cabin-overhaul / carousel-horse-prototype / moon-moth / debug-bower
+  debug1-7 / fleet scripts incl. fleet-avenues+fleet-city-add+fleet-
+  improve-park+fleet-restart-watcher+fleet-trim-treadmills / city4 +
+  struct-millrace + struct-orrery terrain scripts / client+server trees —
+  same families as s285-s355) — untouched. Index verified empty
+  pre-commit (zero staged files, shared-index law). Census baseline for
+  next tick: /tmp/survey356-census-a.json (328, 217041B, sha16
+  8460cfb5f1f26f03 — byte-identical, baseline unchanged). Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; ticks 211-355 precedent; ledger tail city-129 lineage running
+  total 2370784). STANDING RECOMMENDATION carried unchanged (s182-s355):
+  stop the SURVEY lane or convert to a no-LLM monitor when attended.
