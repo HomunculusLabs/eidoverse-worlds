@@ -11046,3 +11046,202 @@ struct177-diag-clebsch.ts + struct177-select-clebsch.ts +
 struct177-terrain-clebsch.ts + next-place-struct177.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-177,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-178 (2026-09-15): R11-11 THE MENGER SPONGE — BUILD+JUDGE TICK
+## (probe ALL PASS first try; decode ALL PASS + RED control; gameplay 5/5,
+## front 5/5 after one sibling-calibrated material cure, aerial 5/5, night
+## deterministic PASS; v2 ACCEPTED BANKED NOT PLACED)
+
+178%3=1 build slot. Native debts carried, not payable in cron (tool catalog
+carries only the zai-vision MCP — verified fresh this tick via tool_search;
+same disclosed class as struct-169..177): monkeysaddle v2 native-18m-PASS
+placement GATE, hypar row 22 native-only, kuen v3 + catalan v1 + clebsch v1
+fallback-judged acceptances (all three placed). Gate ALL PASS real exit 0
+tick-start at 5ee5d2c2 (sweep-248), RE-RUN at 3b4ac391 after city-132 +
+survey-358 landed mid-tick (epoch law; /tmp/struct178-gate.txt, unpiped).
+Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 4th tick, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-177 -> tag struct-178.
+
+FORM SELECTION (fresh grep, all three ledgers): menger carries only the two
+candidate-NAME lines (struct-100 NEXT named it a future fractal-family
+candidate; struct-176's selection note explicitly passed it over to keep it
+available) — genuinely unbuilt. REGISTER: THE FRACTAL TRINITY'S CUBIC
+SIBLING — koch owns the planar curve (R10-3), sierpinski the simplex
+(R10-4); the Menger sponge is the canonical between-dimensions set
+(log20/log3 = 2.7268), sibling of Cantor's set and Sierpinski's carpet,
+whose every face IS that carpet. KIN: honeycomb screen is a tessellation
+WALL; this is a solid-with-voids you can see straight through on three
+axes — no standing form is a 3D-grid fractal. Selected over ulam (a plot,
+not a form) per the standing struct-176 note.
+
+CONCEPT (written before build): THE SOLID THAT IS MOSTLY HOLE. Iteration 2
+on the exact integer construction — subdivide 3x3x3, keep the 20 cells
+with at most one middle coordinate, recurse: 400 stone cubes of 729
+survive, side 5.20m on a stone slab 5.76x0.14 (gyroid/clebsch mount
+class). Three square tunnels cross at the heart; a single brass ember
+bead (r 0.09, emissive 0x9a7030@1.0, dusk lineage) floats in the central
+void — 0.289m clear to every tunnel wall, seen only through the tunnel
+mouths (probe C8, decode D3). Envelope 5.76 x 5.34 x 5.76 SYMMETRIC,
+origin-centered (origin-centered SAT lawful). Folly class, no walk owed.
+Nodes 2: one mg_stone bucket (cell 32 — see the cure) + one glow KEEP
+(glow_mg_1).
+
+PROBE (struct178-probe-menger.ts, tracked) ALL CHECKS PASS exit 0 FIRST
+TRY (constructive arithmetic — nothing transcribed, the corrupt-table
+class cannot occur): C0 vacuity (mutant keep-rules break the count: <=0
+gives 8, <=2 gives 26), C1 count 20/400 from the literal recursion, C2
+full 729-cell census cell-by-cell, C3 invariance under all 5 octahedral
+generators, C4 three 9-cell axis tunnels fully void + L1 cross removed,
+C5 all six face projections == Sierpinski carpet i2 (64 squares), C6
+dimension 2.726833 re-derived, C7 embed (bottom kisses slab top, envelope
+5.34 total), C8 heart cell removed at both levels + 0.289m bead clearance,
+C9 node plan 2.
+
+BUILD (assets/mkv3-menger.ts, staged -f): 401 stone boxes (400 sponge +
+slab) one BoxGeometry, one texMat bucket; heart bead glow KEEP. v1
+sha256 ca19fbcc847f4ed5... deterministic x2 mtime-verified. DECODE
+(struct178-decode-menger.ts, tracked) ALL PASS 5/5 + RED control (catalan
+bytes FAIL 4 checks — checker can fail): D1 nodes 2 (menger_0 +
+glow_mg_1), D2 stone verts 9624 = 401x24 exact, D3 bead exact center
+(0,2.74,0) r0.09 emissive, D4 envelope 5.760x5.340x5.760 min y 0
+origin-centered, D5 mg_stone named glTF material (struct-38 law).
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; one 300s transport timeout then paced retry; native re-judge
+owed, riding the monkeysaddle gate session; menger v1->v2 joins the owed
+board):
+- gameplay 18m: 5/5 PASS v1 — identity perforated cubic lattice (sky
+  through the central tunnel), 9 apertures on-face with hole centers
+  measured at x 377/479/582 (the 2/9, 5/9, 8/9 carpet positions),
+  grounded, coherent shadow, zero defects; the judge independently
+  spotted the heart bead through the tunnel and classified it correctly.
+- front close: v1 3 PASS + material FAIL (stone read uniform flat
+  clay/plastic, no mottle between or across blocks) + one framing-invalid
+  item (straight-on elevation cannot show the top face — my prompt error,
+  not a defect; its topology dissent was contradicted by the gameplay
+  judge's own 2/9-5/9-8/9 measurements and its own item-4 "unbroken
+  square silhouette").
+- MATERIAL CURE (pitfall-5 sibling-calibrated): decode showed the
+  mechanism — texMat cell default 0 = per-pixel grain ~1.1mm effective,
+  which averages to FLAT at 18m. The accepted stone-fractal siblings
+  (sierpinski ss_stone, koch kg_stone) both carry cell: 32 (8x8 readable
+  mottle blocks). ONE change: cell: 32 added, tones/rough/scale/seed
+  unchanged. v2 sha256 33c4304cdf821505... x3 byte-identical mtime
+  verified; decode ALL PASS re-run; night probe re-run identical (58 warm
+  px, one contiguous 8x9 cluster at dead center, zero stray glow — the
+  one-quiet-point contract; v1 rejected bytes NOT placed, cure iterated
+  in-tick).
+- front close v2: 5/5 PASS — mottled variation within and between blocks
+  confirmed, all holes open with lit interior floors, orange sphere
+  visible THROUGH the central aperture (through-tunnel pixel evidence).
+- aerial: 5/5 PASS — top face reproduces the carpet grid with the
+  vertical shaft open (interior receding), three-axis alignment coherent,
+  zero floaters/z-fighting, reads deliberate mathematical lattice.
+
+DISPOSITION: v2 ACCEPTED BANKED NOT PLACED. Placement = struct-179
+committed carry (179%3=2 is the next non-placement slot per the
+174/176/177 cadence — 179 carries placement): fresh census scan (8m NN,
+district caps, Math Avenue band eligibility per CITY-PLAN-V2; note the
+r55-130 band is PROVEN SATURATED for 5.5m forms at struct-177 — the
+lawful zone is the Math TERMINAL ISLAND r140-170, currently 6-member
+procession; a 5.76m form seats as the island's next member), oblique-yaw
+law (at yaw 0 the carpet face reads face-on down the avenue — seat
+~30-40deg off, struct-104), terrain preflight, hash-gated plain spawn
+nx-struct-menger, comp {}. Folly class — no walk owed. Native re-judge
+debt: menger v2 joins the owed board (monkeysaddle gate, hypar row 22,
+kuen v3, catalan v1, clebsch v1).
+
+Bill eye-check pointer (after placement): on Math Avenue — the stone cube
+that is mostly hole, three tunnels crossing at a glowing heart; walk
+around it: every face is the same carpet of square windows, and through
+the middle you can see clean through in three directions. After dark: one
+quiet warm point floating deep inside, seen only through the tunnels.
+
+Files: struct178-probe-menger.ts + struct178-decode-menger.ts (NEW,
+tracked), assets/mkv3-menger.ts (NEW, staged -f), reviews/struct178-menger/
+(10 frames, ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md
+(one append struct-178, D+0 E+0). Zero world mutations, uploads, verbs,
+comp-edits, shared-budget use. Zero pushes.
+
+## struct-179 (2026-09-15): MENGER PLACEMENT TICK — committed carry from
+## struct-178 executed, PLACED_VERIFIED live (window reconciliation named)
+
+179%3=2 build-slot cadence, but the committed carry takes it (struct-178:
+"placement = struct-179 committed carry"; the 174/176/177 lane precedent —
+a banked form places on the next tick regardless of N%3, build+judge/place
+alternation held).
+
+INTERRUPTED-WINDOW RECONCILIATION (named honestly): struct-178's session
+died AFTER its ledger append but BEFORE its commit. Sweep-249 (c36e2ecf)
+landed in between and carried IMPROVEMENTS.md with struct-178's entry
+already in it (normal interleaving — entry verified at HEAD exactly once,
+grep -c == 1). Residue recovered this tick, not redone: struct178 tools
+were UNTRACKED on disk (never lost), the plan block sat uncommitted (116
+lines, verified content == struct-178 record before folding into this
+commit), mkv3-menger.ts staging was undone by the dead window (re-staged
+-f this tick). Zero re-derivation of struct-178's work; bytes verified
+sha256 33c4304cdf8215057b19b12ac8a25673886638834d9d3bc599bc6b9ec327091b ==
+bank pin BEFORE upload, decode re-run ALL PASS 5/5 fresh this tick.
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP — tool_search fresh this tick): monkeysaddle v2 native-18m
+PASS placement GATE, hypar row 22 native-only, kuen v3 + catalan v1 +
+clebsch v1 fallback-judged acceptances (all placed); menger v2 joins the
+owed board. Gate ALL PASS real exit 0 tick-start at f83e565e (survey-359;
+/tmp/struct179-gate.txt, unpiped) + RE-RUN clean immediately before the
+mutation (epoch law, HEAD unchanged). Shard drained fresh (IMPROVE-PLAN
+md5 c0f569d0 unchanged 5th tick, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-178 -> tag struct-179.
+
+SEAT (struct179-scan-menger.ts + struct179-select-menger.ts, fresh 329
+census): Math Avenue axis re-derived FRESH = 91.0° (26-form window; 30
+math-family forms standing). The az94 procession is CONTINUOUS past the
+island (peaucellier r168.6 -> zeno r179.9 -> borromean r190 -> ... ->
+enneper r250), and the r170-180 reach has NO lawful on-axis slot
+(peaucellier<->zeno center gap 11.3m < 2x8m NN). Island rhythm =
+alternating-flank zigzag (clebsch E-flank az90.5 r142 lateral 8.7m;
+catalan W-flank band before it) — the menger takes the W-FLANK MIRROR:
+az98.5 r155.0, lateral 12.2m of the procession line, radial slot
+dead-mid chladni r150 <-> voronoi r160. NN 12.98 vs nx-struct-chladni
+(law 8.0), SAT 4.99 vs nx-struct-voronoi (law 1.4), walk-clear 126.41.
+454 lawful island candidates; az90/r172 rank-continuation alternative
+recorded and passed over (extends clebsch's rank into a 2-member line;
+the zigzag cadence carries). Yaw 0.6981317007977318 (40° oblique —
+struct-104 law: at yaw 0 the carpet face reads face-on down the avenue).
+Tool self-catch this tick: the scan tool's stagger sort shipped as
+`a.lat ?? 0 - (b.lat ?? 0)` — a no-op precedence bug (struct-177's
+negative-lat class, kin); caught on read, fixed, re-run BEFORE selection.
+
+TERRAIN (struct179-terrain-menger.ts): 9pt over the TRUE rotated footprint
+(literal corners): spread 9.2mm, PY = -0.057718.
+
+PLACEMENT (next-place-struct179.ts, struct177 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 329 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 4.06x4.06 at yaw 40):
+NN floor chladni 12.98, SAT worst voronoi 4.99 — clean. 1 upload
+(content-addressed store/33c4304cdf821505.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 329 -> 330 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (heart bead
+emissive-in-GLB — no comp-wipe class on first spawn).
+
+Native debt board after this tick: menger v2 OWED (fallback-judged
+acceptance + deterministic night closure, disclosed); monkeysaddle v2
+native 18m PASS OWED (placement gate); hypar row 22 OWED (native only);
+kuen v3 OWED; catalan v1 OWED; clebsch v1 OWED.
+
+Bill eye-check pointer: on Math Avenue past chladni, off the west flank —
+the stone cube that is mostly hole, three tunnels crossing at a glowing
+heart. Walk around it: every face is the same carpet of square windows,
+and through the middle you can see clean through in three directions.
+After dark: one quiet warm point floating deep inside, seen only through
+the tunnels.
+
+Files: struct179-scan-menger.ts + struct179-select-menger.ts +
+struct179-terrain-menger.ts + next-place-struct179.ts (NEW, tracked) +
+struct178-probe-menger.ts + struct178-decode-menger.ts (NEW, tracked —
+recovered residue), assets/mkv3-menger.ts (NEW, staged -f), reviews/
+struct178-menger/ (10 frames, ignored — struct-178's), STRUCTURES-PLAN.md
+(this block + struct-178's recovered block), IMPROVEMENTS.md (one append
+struct-179, D+1 E+1). One upload + one verb total (shared budget). Zero
+pushes.
