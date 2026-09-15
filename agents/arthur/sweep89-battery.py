@@ -75,7 +75,10 @@ check("whisperhorn-b6e48e4622f10108", lib("nx-struct-whisperhorn") == "b6e48e462
 check("whisperhorn-tuple-exact", [round(v, 4) for v in (wh.get("pos") or [])] == [-64.02, -0.028, -61.82] and round(wh.get("yaw") or 0, 4) == 0.0)
 rot = E.get("nx-struct-reuleauxrotor", {})
 check("rotor-lib-670e397cb6422ee2", lib("nx-struct-reuleauxrotor") == "670e397cb6422ee2")
-check("rotor-tuple-exact", [round(v, 4) for v in (rot.get("pos") or [])] == [-12, -0.0373, -64.5] and round(rot.get("yaw") or 0, 4) == 0.0)
+# tuple re-pinned sweep-238: city-108 Wave A lawful reseat (-12,-0.0373,-64.5)
+# -> (1.5, 0.0156, 87.5) Math Avenue E flank; lib+comps unchanged (verified
+# live 2026-09-14, sweep-238 census-A).
+check("rotor-tuple-exact", [round(v, 4) for v in (rot.get("pos") or [])] == [1.5, 0.0156, 87.5] and round(rot.get("yaw") or 0, 4) == 0.0)
 rc = sorted((rot.get("comp") or {}).keys())
 check("rotor-comp-exact-2", rc == ["motion:pwheel_rr", "motion:sails"])
 pw = (rot.get("comp") or {}).get("motion:pwheel_rr", {})
