@@ -17037,3 +17037,58 @@ shared-budget use (D+0, E+0).
   precedent; ledger tail running total 2370809). STANDING
   RECOMMENDATION carried unchanged (s182-s370): stop the SURVEY lane or
   convert to a no-LLM monitor when attended.
+
+
+- survey-372 (2026-09-15, QUIET HOLD — 3rd consecutive quiet epoch on the
+  post-fourier 334-entity baseline; no slice judged, arrival-gated law
+  s345+; native vision ABSENT from this cron session's tool catalog
+  (zai-vision MCP only, flap law; native-owed register rows NOT
+  discharged this tick, cron-disclosed): gate ALL PASS real exit 0 FIRST
+  TRY at tick-start HEAD 5d7dbf0e (pressure-17v tip, 99 PASS lines incl.
+  ledger law EXACT 2370810 — total +1 vs survey-371's 2370809 via
+  survey-371's own commit, normal interleaving; gate ran at the NEW HEAD
+  so no re-gate due, epoch law; HEAD unchanged through the tick). Census
+  via committed next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced,
+  cmp A==B BYTE-IDENTICAL), each 334 entities, each 220660B, each
+  sha256-16 9475c9db3ccff1f3 — byte-identical to the survey-371 baseline
+  (cmp both directions). Set-diff vs survey-371 baseline (334): 0 arrivals
+  / 0 departures / 0 lib flips / 0 pos-yaw-scale-comp drift on all 334
+  holders — fully quiet window. Mutation lanes active-but-not-mutating
+  this window (city-149 39th lawful hold 334==334; sweep-260 CLEAN SWEEP
+  both epochs byte-identical; pressure-17/17v server-side off-world,
+  giant-payload MEASURED PASS; struct-188 cissoid BANKED-not-placed —
+  mkv3-cissoid.ts + decode/probe files untracked in tree, struct-domain
+  work-in-flight, joins the owed board on placement) — likeliest next
+  flip triggers: cissoid placement via struct-188/189 (Math Avenue
+  procession next step past fourier, az94/r280 arithmetic), monkeysaddle
+  v2 placement after native re-judge, city Wave B pending Bill's rulings
+  (Wave A packet verdict, amphi a/b/c, echoarch 3 options, wave-2 mosaic
+  blessing, rider eye-gates b31-b33), vocab/pressure affordances going
+  live (vocab-15 waystones + vocab-14v 24-affordance queue),
+  windmill-overhaul family dirt in tree. ARRIVAL-GATED JUDGE NOT
+  TRIGGERED: world quiet, pools drained (IMPROVE-PLAN md5 c0f569d0
+  unchanged, 261st check — same bytes as the survey-344 line-by-line
+  inspection, 0 OPEN candidate rows, all OPEN grep hits prose/narrative;
+  SURVEY CANDIDATES 0 OPEN rows; CITY-PLAN-V2 assigns survey no role,
+  grep 0), and the native re-judge register (monkeysaddle gate, hypar
+  row 22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1,
+  melencolia v3, tribar v2, fourier v1) is cron-unpayable this tick —
+  cron sessions use ZAI fallback which does NOT discharge native-owed
+  rows: 0 confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision
+  calls, native-vs-fallback N/A. Foreign working-tree dirt at read =
+  sibling lanes in flight (windmill overhaul family incl.
+  HERO-ASSET-REFINEMENT-PLAN + WINDMILL-OVERHAUL.md + core-paths glb +
+  next-place-carousel, cabin-overhaul / carousel-horse-prototype /
+  moon-moth / debug-bower debug1-7 / fleet scripts incl. fleet-avenues /
+  next-terrain-city4 + struct terrain scripts incl. struct-188 cissoid
+  bank / client+server trees — same families as s285-s371) — untouched.
+  Index verified empty pre-commit (zero staged files, shared-index law);
+  append anchor grep-verified unique pre-write (0 prior "survey-372"
+  strings in any file). Census baseline for next tick:
+  /tmp/survey372-census-a.json (334, 220660B, sha256-16 9475c9db3ccff1f3
+  — byte-identical, baseline unchanged). Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
+  ledger append (loop law 4: append only when routing; ticks 211-371
+  precedent; ledger tail running total 2370810). STANDING
+  RECOMMENDATION carried unchanged (s182-s371): end the SURVEY lane or
+  convert to a no-LLM monitor when attended.
