@@ -17,6 +17,10 @@ import { VERB_RATE, OPT_DIR } from "./config.ts";
 import { isAdminId, rightsOf, VERB_NEEDS, lockRefusal } from "./rights.ts";
 import { lintMotion, lintParticles } from "./lint.ts";
 import { reactToUse, reactToSay } from "./reactions.ts";
+// The publish/attach resolution + knob materialization (vocab-7): pure
+// shared math, the door.js pattern — the verb path refuses or resolves
+// with exactly what the fold and the text tier derive.
+import { resolvePublishedKind, materializeKnobs as mkKnobs } from "../shared/publish.js";
 // The lamp engine (vocab-5): reactLamp rides reactToUse's dispatch; the
 // comp/spawn/remove reconcilers ride the after hooks below.
 import { lampOnComp, lampOnRemove, lampOnSpawn } from "./lamp.ts";
@@ -44,6 +48,8 @@ export type VerbWorld = {
   append(actor: string, verb: string, args: Record<string, unknown>): LogEntry;
   broadcast(msg: unknown, except?: VerbClient): void;
   debug(kind: string, detail: Record<string, unknown>): void;
+  /** ⚠ detail keys shadow the `kind` slot (World.debug spreads detail
+   *  after kind) — never pass a `kind` field in detail. */
 };
 
 /** Built by server.ts per dispatch. `now` is the message handler's clock, so
@@ -200,6 +206,23 @@ function vModerate(ctx: VerbCtx, args: Record<string, unknown>, verb: "kick" | "
   return { args: { id, ...(reason ? { reason } : {}), ...(verb === "ban" && targetSub ? { sub: targetSub } : {}) } };
 }
 
+// ---- publish/attach helpers (vocab-7) ---------------------------------------
+// Thin structural shims over shared/publish.js so vBehavior stays typed:
+// the folded behaviors map is all resolution ever reads (in-memory,
+// verb-time; the log carries the resolved src, so replay never re-resolves).
+
+/** Resolve a published kind against the world's folded bindings. */
+function resolvePublish(w: VerbWorld, kind: string):
+  { id: string; src: string; knobs?: Record<string, unknown>; caps?: Record<string, unknown> } | null {
+  return resolvePublishedKind(w.state.behaviors as Record<string, unknown> | undefined, kind);
+}
+
+/** Knob materialization with the validator's error surface. */
+function materializeKnobs(schema: unknown, inKnobs: unknown):
+  { knobs: Record<string, unknown> | null; notes: string[] } | { error: string } {
+  return mkKnobs(schema, inKnobs) as { knobs: Record<string, unknown> | null; notes: string[] } | { error: string };
+}
+
 function vBehavior(ctx: VerbCtx, args: Record<string, unknown>) {
   const { w, c } = ctx;
   // Bind a runtime script: {id, src, attach?, caps?, knobs?} or
@@ -208,6 +231,82 @@ function vBehavior(ctx: VerbCtx, args: Record<string, unknown>) {
   const id = String(args.id ?? "").replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 48);
   if (!id) return { error: "behavior wants {id, src|remove}" };
   if (args.remove) return { args: { id, remove: true } };
+  // The publish/attach path (vocab-7, § PUBLISH/ATTACH CONTRACT): a
+  // reviewed Layer-2 script becomes Layer-1 vocabulary. PUBLISH names a
+  // standing binding under a kind (owner act — the client-mods gate);
+  // ATTACH instances a published kind with no src (builder act; the
+  // server resolves the published bytes, materializes knobs ⊆ schema,
+  // and stamps `via` provenance). Fail closed everywhere.
+  const KIND_RE = /^[a-z0-9][a-z0-9-]{0,31}$/;
+  if (args.publish === true || args.kind != null) {
+    const kind = KIND_RE.test(String(args.kind ?? "")) ? String(args.kind) : null;
+    if (!kind) {
+      w.debug("rejected", { who: c.id, verb: "behavior", why: `malformed kind ${JSON.stringify(args.kind)}` });
+      return { error: "kind wants lowercase letters, digits, dashes (≤32 chars)" };
+    }
+    if (args.publish === true) {
+      // PUBLISH: the owner names the standing binding `id` as vocabulary
+      // `kind`. The entry re-binds the SAME bytes (src/attach/caps carried
+      // from the standing record; knobs replaceable in the same entry) with
+      // `kind` stamped — so a later ordinary rebind, which replaces the
+      // record wholesale, RETIRES the kind until re-published. The
+      // vocabulary never floats free of the bytes it names.
+      if (ROLE_RANK[rightsOf(w.state, c.id, c.sub).role] < 2 && !isAdminId(c.id, c.sub)) {
+        w.debug("denied", { who: c.id, verb: "behavior", why: "publishing vocabulary is owner-only" });
+        return { error: "publishing behavior vocabulary is for this world's owner" };
+      }
+      const standing = w.state.behaviors?.[id] as
+        { src?: string; attach?: string; caps?: Record<string, unknown>; knobs?: Record<string, unknown>; runtime?: string } | undefined;
+      if (!standing || typeof standing.src !== "string" || standing.runtime === "client") {
+        w.debug("rejected", { who: c.id, verb: "behavior", why: `no standing binding "${id}" to publish` });
+        return { error: `nothing bound as "${id}" to publish — bind the script first (behavior {id, src, attach?})` };
+      }
+      if (args.src != null || args.runtime != null) {
+        return { error: "a publish names a standing binding — src/runtime belong on the bind, not the publish" };
+      }
+      const knobsIn = args.knobs;
+      if (knobsIn != null && (typeof knobsIn !== "object" || Array.isArray(knobsIn)
+        || JSON.stringify(knobsIn).length > 4096)) {
+        w.debug("rejected", { who: c.id, verb: "behavior", why: "publish knobs malformed or over 4KB" });
+        return { error: "publish knobs want a flat object (4KB max)" };
+      }
+      return { args: { id, kind, publish: true, src: standing.src,
+        ...(standing.attach ? { attach: standing.attach } : {}),
+        ...(standing.caps ? { caps: standing.caps } : {}),
+        ...(knobsIn != null ? { knobs: knobsIn } : standing.knobs != null ? { knobs: standing.knobs } : {}) } };
+    }
+    // ATTACH: a builder instances a published kind — no src sent, the
+    // published bytes ARE the bytes. Resolution is verb-time, in-memory,
+    // fail-closed: the kind must name a standing published binding.
+    if (args.src != null) {
+      return { error: "an attach takes a kind, not a src — the published bytes are the bytes" };
+    }
+    if (args.caps != null || args.runtime != null) {
+      return { error: "an attached instance inherits the published capability mask — caps/runtime are not attachable" };
+    }
+    const resolved = resolvePublish(w, kind);
+    if (!resolved) {
+      w.debug("rejected", { who: c.id, verb: "behavior", why: `no published behavior "${kind}"` });
+      return { error: `no published behavior "${kind}" — its binding may have been rebound or removed` };
+    }
+    const attach = args.attach != null ? String(args.attach).slice(0, 64) : undefined;
+    if (attach && !w.state.entities[attach]) {
+      return { error: `nothing here called "${attach}" to attach to` };
+    }
+    const nBehaviors = Object.keys(w.state.behaviors ?? {}).length;
+    if (!w.state.behaviors?.[id] && nBehaviors >= behaviorLimits.MAX_BEHAVIORS_PER_WORLD) {
+      return { error: `this world already runs ${nBehaviors} behaviors (cap ${behaviorLimits.MAX_BEHAVIORS_PER_WORLD})` };
+    }
+    const mk = materializeKnobs(resolved.knobs, args.knobs);
+    if ("error" in mk) {
+      w.debug("rejected", { who: c.id, verb: "behavior", why: mk.error });
+      return { error: mk.error };
+    }
+    if (mk.notes.length) w.debug("publish-lint", { behavior: "" + id, published: kind, by: c.id, notes: mk.notes });
+    return { args: { id, kind, src: resolved.src, via: resolved.id,
+      ...(attach ? { attach } : {}),
+      ...(mk.knobs != null ? { knobs: mk.knobs } : {}) } };
+  }
   // runtime "client" = a MOD OFFER (docs/leases.md §self-animation):
   // code visitors may choose to run in their own clients, each by
   // per-script consent. Publishing code for OTHERS' machines is an

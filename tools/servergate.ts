@@ -75,6 +75,8 @@ const BATTERY: Row[] = [
   { name: "worldops", tool: "tools/worldops-test.ts", server: true },
   { name: "compfold", tool: "tools/compfold-test.ts", server: true, serverEnv: { FOLD_EVERY: "1" } },
   { name: "behaviortest", tool: "tools/behaviortest.ts", server: true, serverEnv: { BHV_TIMER_MIN: "1" }, timeoutMs: 240_000 },
+  // vocab-7: the publish/attach matrix (§ PUBLISH/ATTACH CONTRACT).
+  { name: "publishtest", tool: "tools/publishtest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites

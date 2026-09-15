@@ -187,8 +187,54 @@ plan. Never deploy, push, or restart production unless Bill asks.
       28/0. shared/guestbook.js (sanitize/normalize/trim/describe) shared
       verbatim by engine + tests + mcpl look(). Scratch worlds only; no
       production world touched.
-- [ ] Publish/attach path that promotes a reviewed Layer-2 behavior into a
+- [x] Publish/attach path that promotes a reviewed Layer-2 behavior into a
       documented Layer-1 vocabulary item with bounded knobs.
+      DONE vocab-7 (2026-09-15): `behavior {id, kind, publish:true}` =
+      PUBLISH — the owner (rank 2, the client-mods gate) names a STANDING
+      binding as vocabulary `kind`; the publish entry re-binds the same
+      bytes (src/attach/caps carried from the standing record, knobs
+      replaceable in the same entry) with `kind` stamped on the fold. A
+      later ordinary rebind or remove REPLACES the record wholesale,
+      retiring the kind until re-published — the vocabulary never floats
+      free of the bytes it names. `behavior {id, kind, attach, knobs}` =
+      ATTACH — a builder (rank 1) instances the published item with NO src;
+      the server resolves the kind verb-time against the folded bindings
+      map (most-recent publish wins; instances carrying `via` are never
+      resolution sources), refuses fail-closed on unknown/retired kinds
+      (rejected flight entry naming the kind), materializes knobs ⊆
+      published schema (missing keys default, unknown keys drop +
+      publish-lint; 4KB gates), refuses caps/runtime on attach (the
+      published mask is the mask), and stamps `via:<bindingId>`
+      provenance. The attach folds/runs EXACTLY as a hand-written bind:
+      author=attacher, their live rights gate every emit, instances keep
+      their pinned src across rebinds (content-addressed, replay-exact).
+      Resolution is in-memory verb-time only — the log carries the resolved
+      src, so replay/late-join/fork never re-resolve. shared/publish.js
+      (resolvePublishedKind/materializeKnobs/describePublish) shared
+      verbatim by verbs.ts + fold parity + tests + mcpl look(); fold stamps
+      kind/via on behavior records; stateToEntries carries kind; mcpl
+      applyEntry tracks bindings + look() prints the "Behavior vocabulary"
+      line. ZERO edits to server.ts/world.ts/behaviors.ts — vBehavior and
+      the fold carry the whole slice. Evidence: tools/publishtest.ts RED 21
+      failing (engine absent; one port squatter fixed to 8979) then ALL
+      PASS 28/28 (baseline bind/builder publish bounce/publish stamps
+      kind/knobs replace/attach resolves src+via/instance RUNS/subset
+      merge/unknown-key drop+lint/kind+src, caps, runtime refusals/unknown
+      kind + rejected entry/visitor rank bounce/rebind retires/instance
+      keeps pinned src/unpublish retires/restart replay-mints-nothing/kind
+      + instance fold from log/stateToEntries parity/describePublish);
+      servergate smoke 85, comptest 33, behaviortest 27, worldops 23,
+      compfold 24, locktest 13, leasetest 19, modtest 23 all PASS;
+      permtest 21/23 = the documented pre-existing mcpl/tokens.json-missing
+      class (vocab-1..6 identical); doortest 28/28, guestbooktest 35/35,
+      lamptest 34/34 regression-clean after killing a stale port-8997
+      bun.exe squatter that false-failed the first run; publishtest
+      registered in the servergate battery; mcpl manifest 28/0 +
+      effective-test PASS after the agent.ts edit. ONE ENGINE GOTCHA
+      recorded: World.debug spreads detail AFTER kind, so a `kind` key in
+      detail overwrites the recorder's own kind (the lint note surfaced as
+      kind "bell") — detail must never carry `kind`; type comment added at
+      the seam. Scratch worlds only; no production world touched.
 - [ ] Portal contract between disposable worlds: destination validation,
       arrival anchor, permission re-evaluation, and failed-travel rollback.
 - [ ] Musical instrument: authored note/scale trigger with client-side synth
@@ -727,6 +773,98 @@ memory from one snapshot read.
 visitor's line, a trailhead registry, a wedding register — persistent
 public memory with the one moderation boundary a community actually
 needs: your words are yours, someone else's need a builder.
+
+### PUBLISH/ATTACH CONTRACT (vocab lane — drafted vocab-7, 2026-09-15)
+
+**The two moves.** A reviewed Layer-2 behavior is PROMOTED to documented
+vocabulary by the world's owner; anyone with builder rights may then ATTACH
+an instance of it in seconds. No new verb — both moves ride `behavior`:
+
+- **Publish**: `behavior {id: "<bindingId>", kind: "<name>"}` — the owner
+  names a STANDING binding as vocabulary item `<name>`. The publish entry
+  carries `{id, kind, publish:true}` and the fold stamps `kind` onto the
+  standing binding (a publish with no standing binding mints nothing —
+  fail closed). A later ordinary rebind of that binding REPLACES the
+  record wholesale, retiring the kind until re-published — the vocabulary
+  never floats free of the bytes it names. Optional `knobs` on the publish
+  sets the binding's knobs AND publishes them as the schema in one entry.
+  Publish/unpublish = owner (rank 2), the same
+  gate as offering client-mods: publishing code for OTHERS to bind is an
+  owner act.
+- **Attach**: `behavior {id: "<newId>", kind: "<name>", attach: "<entity>",
+  knobs: {...}}` — a builder instances the published item. NO `src` is sent
+  or needed; the server resolves the kind to the world's own most-recent
+  published binding (fold order, in-memory only). The binding folds and runs
+  EXACTLY as if the attacher had written `src` themselves: author =
+  attacher (their live rights gate every emit), caps = the published mask
+  verbatim (knobs+attach only — an attach can never widen capabilities;
+  `caps`/`runtime` on an attach verb are refused), knobs = attacher values
+  intersected with the published schema (subset-or-default; unknown keys
+  drop with a `publish-lint` note; 4KB gate rides). The resolved src rides
+  the entry as `via: <published bindingId>` — one field of provenance, so
+  `world_history` reads "who attached what, published by whom".
+- **Resolution is fail-closed and owner-controlled**: a `kind` with no
+  standing publish (never published, or superseded by a later publish, or
+  its binding removed) refuses with the flight-recorder `rejected` entry
+  naming the kind — an attach NEVER binds stale or guessed bytes. Rebinding
+  the PUBLISHED binding updates the vocabulary for FUTURE attaches only
+  (resolution is at verb time; standing instances keep their pinned src —
+  content-addressed, replay-exact). Unpublish = `behavior {id:
+  "<bindingId>", remove: true}` (an ordinary unbind that also retires the
+  kind for future attaches; standing instances keep running — removal of
+  running code is the author's explicit act, not a side effect).
+
+**State.** The fold is the state: `state.behaviors` records carry `kind`
+when published — nothing else is stored anywhere. A late joiner, an agent's
+`look()`, and a fork all see the published surface in the fold; the mcpl
+text-tier read (`shared/publish.js describePublish`, the describeGuestbook
+pattern) lists each published kind with its binding's src, knobs schema,
+and the attach hint.
+
+**Knob schema.** The published binding's OWN knobs are the schema — what
+the owner reviewed and bound is exactly what attaches inherit (reviewed
+defaults, verbatim). At publish, `knobs` on the publish verb may REPLACE
+the binding's knobs first (one entry, review-then-name); after that,
+attaches write `knobs` values for schema keys only (missing keys default
+from the schema, unknown keys drop with a `publish-lint` note; the existing
+4KB gate rides). An attach with NO knobs rides the schema verbatim.
+
+**Authority.** Publish/unpublish = rank 2 (owner) — same doctrine as
+client-mods. Attach = rank 1 (builder) — exactly what binding a script
+costs today; an attach grants NOTHING the attacher could not already do by
+writing `src` themselves (the mask is the published one, their rights gate
+every emit). Fail closed on ambiguity: unknown kind, missing publish,
+knob-schema violations — all refuse, all noted in the recorder.
+
+**Replay behavior.** Ordinary `behavior` entries fold identically whether
+the src came from an upload path or a `via` resolution — the log carries
+the resolved src, so replay/late-join/fork never re-resolve. The publish
+entry is data about a binding, not code; folding it mints nothing.
+
+**Failure behavior.** Unknown `kind` on attach → `rejected` flight entry +
+refusal naming the kind. `kind` + `src` together → refused (a publish takes
+no src; an attach takes no src). `caps`/`runtime` on attach → refused (the
+published mask is the mask). Oversized/duplicate-kind publishes → the 4KB
+gate + last-publish-wins (deterministic fold order). Everything wrapped in
+the existing vBehavior try-path (house rule 3 via the shell's message
+try/catch).
+
+**Browser path.** Zero client code: bindings are world state; the publish
+comp renders as ordinary component data; attached behaviors act via
+ordinary logged verbs (say/motion/comp on their entities). A publish/attach
+UI is deliberately out of scope (protocol before UI decoration).
+
+**MCPL path.** `look()` gains the published-vocabulary line from the folded
+`state.behaviors` (kinds with src + schema + attach hint);
+`world_debug {behaviors: true}` lists instances with their src
+(content-addressed, so the published bytes are always inspectable);
+`world_history {verbs:["behavior"]}` reads the whole publish/attach chain
+(via provenance).
+
+**Intent.** The owner reviews a bell-keeper once and names it; from then on
+"hang a bell here" is one verb for every builder in the world — reviewed
+capability as vocabulary, the Layer-2→Layer-1 promotion path the queue
+names.
 
 ## LAWS
 

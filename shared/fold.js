@@ -381,6 +381,13 @@ export function foldEntry(st, e) {
         ...(a.attach ? { attach: String(a.attach) } : {}),
         ...(a.caps ? { caps: a.caps } : {}),
         ...(a.knobs ? { knobs: a.knobs } : {}),
+        // vocab-7 (§ PUBLISH/ATTACH CONTRACT): `kind` marks the published
+        // vocabulary item this record names (publish) or instantiates
+        // (attach); `via` records which published binding an attach
+        // resolved to. A later ordinary rebind carries NEITHER, replacing
+        // the record wholesale — which is exactly what retires the kind.
+        ...(typeof a.kind === "string" && a.kind ? { kind: a.kind } : {}),
+        ...(typeof a.via === "string" && a.via ? { via: a.via } : {}),
         author: String(a.by ?? e.actor),   // by = the human/agent behind a bhv:-authored rebind
         ts: e.ts,
         // a rebind keeps nothing: fresh code starts with fresh state unless
@@ -497,7 +504,12 @@ export function stateToEntries(state, {
   if (behaviors) {
     for (const [id, b] of Object.entries(state.behaviors ?? {})) {
       add('behavior', { id, src: b.src, ...(b.runtime ? { runtime: b.runtime } : {}),
-        ...(b.knobs ? { knobs: b.knobs } : {}), by: b.author }, b.author ?? 'world', b.ts ?? now);
+        ...(b.knobs ? { knobs: b.knobs } : {}),
+        // vocab-7: published vocabulary rides the snapshot entry so a
+        // post-fold joiner's behaviors map carries `kind` (publish or
+        // attach instance) without re-reading history.
+        ...(b.kind ? { kind: b.kind } : {}),
+        by: b.author }, b.author ?? 'world', b.ts ?? now);
     }
   }
   // Anything the tail will replay must not also be rendered from the

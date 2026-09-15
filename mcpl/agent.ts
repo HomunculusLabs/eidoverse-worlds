@@ -28,6 +28,9 @@ import { describeDoor } from "../shared/door.js";
 // The lamp affordance line (vocab-5): same pattern — lit/dark + actions.
 import { describeLamp } from "../shared/lamp.js";
 import { describeGuestbook } from "../shared/guestbook.js";
+// The published-vocabulary line (vocab-7): same shared-verbatim pattern —
+// look() names what the owner promoted to Layer-1 and how to attach it.
+import { describePublish } from "../shared/publish.js";
 import { effectiveWorldTransform, type Effective } from "./effective.ts";
 import { makeVerdictCache, seatGateCore, nameFromAvatarPath } from "../client/lib/seatcore.js";
 
@@ -146,6 +149,9 @@ export class WorldAgent {
   private simTicker: ReturnType<typeof setInterval> | null = null;
   private walkDone: ((arrived: boolean) => void) | null = null;
   entities = new Map<string, Entity>();
+  /** Folded behavior bindings (vocab-7): published kinds + attach
+   *  instances — perception only, look() reads it. */
+  behaviors?: Map<string, { src: string; kind?: string; via?: string; attach?: string; knobs?: Record<string, unknown>; author: string }>;
   /** who/what rides what: mount verbs, keyed by the rider (body or thing) */
   /** Every mount's full wire shape — offset/yaw OVERRIDE socket defaults in
    *  the world transform (#82), so dropping them here made the composed
@@ -757,6 +763,21 @@ export class WorldAgent {
       this.entities.delete(args.id);
       this.dropSupport(args.id);
       for (const [rid, m] of this.mounts) if (m.to === args.id) this.mounts.delete(rid);
+    } else if (verb === "behavior") {
+      // vocab-7 (§ PUBLISH/ATTACH CONTRACT): bindings are world state the
+      // text tier can name — a published `kind` is vocabulary look()
+      // advertises, and an attach instance lists beside it. Track the
+      // folded shape; no emit here, perception only.
+      this.behaviors = this.behaviors ?? new Map();
+      if (args.remove) this.behaviors.delete(String(args.id));
+      else if (typeof args.src === "string") this.behaviors.set(String(args.id), {
+        src: args.src,
+        ...(args.kind ? { kind: String(args.kind) } : {}),
+        ...(args.via ? { via: String(args.via) } : {}),
+        ...(args.attach ? { attach: String(args.attach) } : {}),
+        ...(args.knobs && typeof args.knobs === "object" ? { knobs: args.knobs as Record<string, unknown> } : {}),
+        author: String(args.by ?? actor),
+      });
     } else if (verb === "comp") {
       // affordances are components — track them or look() can't tell anyone
       const e = this.entities.get(args.id);
@@ -1765,6 +1786,15 @@ export class WorldAgent {
     }
     if (ents.some((e) => e.comp?.sockets || e.comp?.reactions)) {
       L.push(`  (interact via world_verb: use {id, action} · sit/ride via mount {id: "${this.name}", to, slot} — both open to everyone; dismount {id: "${this.name}"} to get off)`);
+    }
+    // vocab-7: the published-vocabulary line — what behavior kinds this
+    // world's owner has promoted to Layer-1, and the one-verb attach.
+    // Published bindings only (an instance's kind lists under its src).
+    {
+      const pubLines = describePublish(Object.fromEntries([...(this.behaviors ?? new Map()).entries()]
+        .filter(([, b]) => b.kind != null && b.via == null)
+        .map(([id, b]) => [id, { kind: b.kind, src: b.src, knobs: b.knobs }])));
+      if (pubLines) L.push(`\nBehavior vocabulary:\n${pubLines.split("\n").map((s: string) => `  ${s}`).join("\n")}`);
     }
 
     const unread = this.inbox.slice(this.inboxCursor);
