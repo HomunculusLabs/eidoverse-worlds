@@ -12601,3 +12601,81 @@ Files: struct192-probe-archispiral.ts + struct192-decode-archispiral.ts
 struct192-archispiral/ (10 frames, ignored), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-192, D+0 E+0). Zero world
 mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-193 (2026-09-15): ARCHISPIRAL PLACEMENT TICK — committed carry from
+## struct-192 executed, PLACED_VERIFIED live; Math Avenue procession
+## extended past quadratrix, on-line step az94/r300
+
+193%3=1 placement-slot cadence WITH a takeable banked form (struct-192:
+"placement = struct-193 carry"; the 178..193 lane precedent — a banked form
+places on the next tick regardless of N%3, build+judge/place alternation
+held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP, tool_search fresh this tick; same disclosed class as
+struct-169..192): 13 owed — monkeysaddle v2 native-18m-PASS placement GATE,
+hypar row 22 native-only, kuen v3, catalan v1, clebsch v1, menger v2,
+apollonian v1, melencolia v3, tribar v2, fourier v1, cissoid v2,
+quadratrix v1, archispiral v1 (fallback-judged acceptances, all placed or
+banked). Gate ALL PASS real exit 0 tick-start at a500a591 (city-155;
+/tmp/struct193-gate2.txt content-verified EXIT:0, re-run clean immediately
+before the mutation at the SAME HEAD — no sibling interleave this tick).
+Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 22nd tick, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-192 -> tag struct-193
+(re-checked immediately before append).
+
+Local bytes re-verified sha256
+d343609abd0d9377b5d7dbc80d07bf9c0f4d6effebd91bf3cbd1b5b73b84d5ee ==
+struct-192 bank pin BEFORE upload (shasum -a 256, mtime Sep 15 18:46).
+
+SEAT (struct193-scan + struct193-select, fresh 336 census): avenue axis
+re-derived FRESH = 91.0 deg (20° density window, 33 forms; 37 math-family
+structs standing). Procession read complete — gyroid240 -> enneper250 ->
+tribar260 -> fourier270 -> cissoid280 -> quadratrix290 (~10m steps). 584
+lawful band candidates; the archispiral takes the NEXT ON-LINE STEP:
+az94.0 r300.0, 10.0m step == fourier->cissoid->quadratrix rhythm. NN 10.00
+vs nx-struct-quadratrix (law 8.0), SAT 5.96 vs nx-struct-quadratrix at
+FINAL yaw (law 1.4), walk-clear 271.41.
+
+YAW LAW (struct-104 oblique-read, struct-192 carry contract): 3.735004599
+267865 (214deg, exhaustive 0.5° band scan maximizing SAT) puts the +Z face
+normal at az304 — 30deg off the az274 anti-travel sightline, east lean
+(the melencolia/fourier/cissoid/quadratrix convention). The outbound walker
+reads the construction face obliquely on approach.
+
+TERRAIN (struct193-terrain-archispiral.ts): 9pt over the TRUE rotated
+footprint (literal corners): spread 13.5mm, PY = 0.014409.
+
+PLACEMENT (next-place-struct193.ts, struct191 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 336 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 2.85x2.85 at yaw 214):
+NN floor quadratrix 10.00, SAT worst quadratrix 5.96 — clean. 1 upload
+(content-addressed store/d343609abd0d9377.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 336 -> 337 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (bead
+emissive-in-GLB glow_as_1 KEEP — no comp-wipe class on first spawn).
+Cosmetic inherited from the chassis: join log line prints msg.entities (0)
+instead of msg.state.entities (struct-104 shape) — the authoritative
+post-place check is the fresh /geom re-read, which is green.
+
+Native debt board after this tick: archispiral v1 stays OWED
+(fallback-judged acceptance, disclosed; probe L2 equal-spacing + decode
+D2 band law are the binding evidence); plus monkeysaddle gate, hypar row
+22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1, melencolia
+v3, tribar v2, fourier v1, cissoid v2, quadratrix v1 — 13 owed.
+
+Bill eye-check pointer: on Math Avenue past the quadratrix — a stone coil
+winding three turns around an empty hub, climbing as it widens until it
+ends at the iron mast: walk the plinth rim and watch the gap between turns
+stay the SAME all the way out (the curve of equal steps — its logarithmic
+siblings in the village shrink by phi; this one never changes). The two
+brass pegs mark Archimedes' own theorem: at the first peg the enclosed
+area is exactly one third of its circle. After dark: one warm bead where
+the coil ends.
+
+Files: struct193-scan-archispiral.ts + struct193-select-archispiral.ts +
+struct193-terrain-archispiral.ts + next-place-struct193.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-193, D+1 E+1). One upload + one verb total (shared budget). Zero
+pushes.
