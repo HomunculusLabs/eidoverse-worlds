@@ -16911,3 +16911,77 @@ shared-budget use (D+0, E+0).
   routing; ticks 211-368 precedent; ledger tail running total 2370803).
   STANDING RECOMMENDATION carried unchanged (s182-s368): stop the SURVEY
   lane or convert to a no-LLM monitor when attended.
+
+  - survey-370 (2026-09-15, ARRIVAL EPOCH, ninth of the unfreeze — ZAI
+    FALLBACK 3 calls/3 disclosed + deterministic warm-px probes, native
+    vision ABSENT from this cron session's tool catalog (zai-vision MCP
+    only, flap law; native-owed register rows NOT discharged this tick,
+    cron-disclosed): gate ALL PASS real exit 0 FIRST TRY at tick-start
+    HEAD c31e044f (struct-187 tip, 99 PASS lines incl. ledger law EXACT
+    2370805 — total +2 vs survey-369's 2370803 via survey-369 + struct-187
+    appends, normal interleaving, gate ran at the NEW HEAD so no re-gate
+    due, epoch law; HEAD unchanged through the tick). Census via committed
+    next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced, cmp A==B
+    BYTE-IDENTICAL), each 334 entities, each 220660B, each sha256-16
+    9475c9db3ccff1f3. Set-diff vs survey-369 baseline (333, 46b72cde):
+    +1 ARRIVAL nx-struct-fourier (-18.834248, -0.000853, 269.342294 yaw
+    2.4609142453120043 rad = 141deg oblique-yaw law, az94/r270 arithmetic
+    verified, lib store/c6878d46490bd592.glb, comp {}) / 0 departures / 0
+    lib flips / 0 pos-yaw-scale-comp drift on the 333 holders — classified
+    SIBLING WORK: struct-187's committed PLACED_VERIFIED tuple verbatim
+    (Math Avenue procession on-line step past tribar, 10m == enneper-
+    tribar rhythm; struct domain; lib == struct-186 banked v1 sha
+    c6878d46) — the exact predicted arrival (s369 trigger list).
+    ARRIVAL-GATED JUDGE LAWFUL (s357/s360/s363/s365/s368 precedent):
+    slice = the 1 new-bytes object (owner's own judgment was ZAI fallback
+    — independent read exactly what the arrival needs). Live store bytes
+    fetched curl UA HTTP 200 26624B served-sha16 2615a12044bdbe53 (lib
+    c6878d46 = struct-186 v1 upload sha, DRACO re-encode law — served !=
+    upload, struct-104 class); render via NEW survey370-render-fourier.ts
+    (survey368-render-tribar chassis verbatim incl. face-on night frame
+    law + closeface view for progression legibility, s365 close-face law;
+    DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 7 frames
+    reviews/survey370-fourier/ (ignored residue), served-bytes bounds
+    7.200x6.530x0.600 grounded y~0. VERDICT: nx-struct-fourier CLEAN 3/3
+    — gameplay 18m CLEAN 4/4 (identity PASS four wave-bands between two
+    piers, progression legible in correct bottom-to-top order — smooth
+    sine S1 -> flattened S3 -> rippled S7 -> flat-plateau sharp-jump S15,
+    brass rail reads as the target waveform; silhouette PASS four bands
+    cleanly separated by sky slivers, zero detached; grounding PASS pier
+    contacts y~489 + cast shadow; surface PASS zero holes/voids/z-fight).
+    closeface ~8-10m CLEAN 4/4 (progression UNAMBIGUOUS with per-band
+    descriptions matching the math — S1 uniformly rounded zero flat
+    regions, S3 flat-top ~80-120px + rounded shoulders, S7 trapezoidal
+    flat crests + Gibbs-adjacent overshoot lobes, S15 near-vertical jumps
+    with ~10px carved-stone corner rounding = honest medium; brass rail
+    reads LITERAL square wave, 90deg steps at the same switching
+    locations; 18m speck flag RESOLVED = deliberate brass bead ~11px at
+    (481,21) tangent to a jump vertex on the TOP band, material-matched —
+    corrects the 18m third-band attribution; rail-pier joints FLUSH both
+    ends, 8/8 ribbon-pier joints contact, zero missing segments/holes/
+    floats; margins NOT routed: crest waviness ±3-6px = hand-carved
+    design language, rail low-segments partially merge with S15
+    silhouette in profile). night PASS via deterministic probe BOTH
+    frames: EXACTLY one warm cluster each — oblique 37px bbox x476-482
+    y206-212, face-on 66px bbox x475-483 y168-177, same bead (centroid
+    x479 both), hard-edged, zero spill/bloom/second emissive — the
+    committed midpoint-bead-sole-night-element contract delivered
+    verbatim. CONCURS struct-186 banked v1 PASS (probe 9 laws + decode
+    7/7 + RED control, RMS ladder 0.1130>0.0818>0.0581>0.0410, honest
+    Gibbs 9.0% vs 8.95% theory) + struct-187 PLACED_VERIFIED —
+    independent corroboration, no defect. Margins (NOT routed, cosmetic
+    tier): bead-to-crest tangency ±1-3px at resolution, carved-stone
+    crest waviness (design language), rail/S15 low-segment profile merge.
+    Native re-judge debt on fourier v1 carries (joins the owed board on
+    placement per struct-187; board: monkeysaddle gate, hypar row 22,
+    kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1, melencolia
+    v3, tribar v2, fourier v1). Pools: IMPROVE-PLAN md5 c0f569d0
+    unchanged (259th check); SURVEY CANDIDATES 0 OPEN rows; no candidate
+    row (CLEAN); CITY-PLAN-V2 assigns survey no role (grep 0). Census
+    baseline for next tick: /tmp/survey370-census-a.json (334, 220660B,
+    sha256-16 9475c9db3ccff1f3). Zero world mutations, zero uploads,
+    zero verbs, zero comp edits, zero shared-budget use, ZERO ledger
+    append (loop law 4: append only when routing; CLEAN concurrence
+    routes nothing; ticks 211-369 precedent; ledger tail running total
+    2370805). STANDING RECOMMENDATION carried unchanged (s182-s369):
+    stop the SURVEY lane or convert to a no-LLM monitor when attended.
