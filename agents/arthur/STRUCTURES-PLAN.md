@@ -11650,3 +11650,102 @@ struct183-terrain-melencolia.ts + next-place-struct183.ts (all NEW,
 tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-183, D+1 E+1). One upload + one verb total (shared budget). Zero
 pushes.
+
+## struct-184 (2026-09-15): R11-14 THE TRIBAR — BUILD+JUDGE TICK (impossible-
+## objects family debut; v1 judged FAIL -> root-caused -> v2 forced-perspective
+## rebuild judged 4/4 PASS; ACCEPTED BANKED NOT PLACED)
+
+184%3=1 build slot (melencolia placed struct-183; nothing banked; all owed
+native debts cron-unpayable — tool catalog carries only zai-vision MCP,
+tool_search fresh; same disclosed class as struct-169..183). Gate ALL PASS
+real exit 0 tick-start at 4f2824bf (survey-365; /tmp/struct184-gate.txt,
+unpiped). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 12th
+tick, 0 OPEN nx-struct rows). Ledger max re-derived struct-183 -> tag
+struct-184 (re-checked immediately before append).
+
+FORM SELECTION (fresh grep, all three ledgers): tribar/impossible/anamorph/
+escher 0/0/0 — the impossible-objects register is genuinely clean (ulam was
+ruled "a plot, not a form" at struct-178; lissajous is artwalk-chartership;
+arbelos/salinon passed over too-fresh at struct-182). Register: NOTHING in
+the 60+ works plays a trick on the eye. Era lineage: Dürer (melencolia
+struct-182) -> Penrose & Penrose 1958 — the math-art register continues;
+tesseract (struct-110) owns the 4D shadow, the tribar owns the IMPOSSIBLE
+3D projection — its 3D cousin on a different sightline.
+
+CONCEPT: A TRIANGLE THAT CANNOT EXIST — closed by one vantage. Two true
+edges of an exact equilateral triangle (side 3.2) in the frontoparallel
+plane; the third beam's far end aimed EXACTLY at the design eye
+E=(0,1.65,18) — the lane's standard 18m gameplay frame — so from E, and
+only E, the figure closes into the Penrose tribar. Step off the eye line
+and it opens into the honest open figure: the reveal IS the monument.
+Folly class, no walk owed.
+
+v1 (honest cube-edge construction: three mutually-perpendicular beams,
+orthographic closure exact at 1e-16, 12/12 probe laws + RED) was REJECTED
+BY JUDGMENT: the fallback judge caught the open loop ("right diagonal
+terminates in mid-air... no camera position will close this figure") and
+my own parallax math confirmed — orthographic closure parallax-opens ~15px
+at any finite eye (6.93m depth span at 16m). The judge's diagnosis was
+correct; the class was FUNDAMENTAL, not cosmetic. Rejected-then-corrected
+in-session is valid closed-loop progress (ledger names both).
+
+v2 CURE (forced perspective): Q1 = E + 1.06·(Q4−E) — beam A's far end ON
+the eye-line, 1.09m beyond the Q4 cube, hidden behind it (angular cover
+margin +14.2% corner-safe, probe L3); beams B (Q2→Q3) and C (Q3→Q4) true
+in-plane; corner cubes 0.64 at Q2/Q3/Q4; brass centroid bead
+(emissive 0x9a7030@1.0, sole night element); stone texMat tribar_stone
+cell 32 (struct-38 law). Probe v2 9/9 laws ALL PASS (equilateral 3.2 exact,
+eye-closure 2e-16 at 18m, reveal gradient gap@12 5.9cm / @30 4.8cm —
+sub-beam-width, reads closing on approach); mk deterministic x2 sha256
+b2203047fbc08171d91554ab7aaeea50d605adec74c91b6ddde73960d6e65a9e,
+envelope 4.15x3.54x1.97 origin-centered. Build-law self-catches this
+tick: probe endpoint-AABB beam bounds drifted 0.38m (mk envelope law
+caught RED pre-write); mk double-shift bug (final-frame points + shift
+again, +0.37m, same law caught); probe exact-beam chassis now builds the
+LITERAL BoxGeometry mk builds. Decode self-catches: member-center
+rotation missing (D3), sphere vertex-centroid pole bias -> AABB midpoint
+(D5), gapAt eye pinned x=0 vs SHIFT_X (L6) — all checker-side, geometry
+always clean (probe law 0c discipline).
+
+DECODE (struct184-decode-tribar.ts, tracked) ALL PASS 7/7 + RED control
+(catalan FAILS 7/7): D1 census 2 nodes, D2 168 verts, D3 member law 7/7
+(center+extents <=2mm, literal-geometry replica), D4 CLOSURE FROM BYTES
+(sides 3.20000 exact from decoded cube centers, z-dev 0, eye-closure
+perp 4.18e-9, t=1.06000), D5 bead law, D6 envelope 0.0000 drift, D7
+tribar_stone texMat.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board): front PASS 5/5
+(prior failure fixed — right diagonal lands in the corner cube, no
+daylight gap), gameplay 18m PASS 5/5 (closed-triangle identity holds at
+the design eye, presence chunky, shadow coherent), night PASS 4/4 (exactly
+one warm point at center, zero spill, silhouette legible), side reveal
+PASS 4/4 (figure reads OPEN/asymmetric, third beam visibly recedes in
+depth past the corner — the design's second reading works). Judge margin
+notes disclosed: head-on frame reads "conventional closed triangle" not
+paradox (the impossibility cue needs the walk-around — that IS the
+monument); texture reads wood-grain-ish at distance (same mottle lane as
+accepted menger/melencolia — family characteristic, not per-work defect).
+
+DISPOSITION: v2 ACCEPTED BANKED NOT PLACED. Placement = struct-185
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility per CITY-PLAN-V2; terminal island now 8 members of 5-9 cap,
+avenue procession continues past them), YAW LAW — the closure vantage
+(+Z face normal) must aim down a walk line (approach reads closed; yaw =
+approach azimuth), terrain preflight over the TRUE rotated footprint,
+hash-gated plain spawn nx-struct-tribar, comp {}. Folly class — no walk
+owed. Native re-judge debt: tribar v2 joins the owed board (monkeysaddle
+gate, hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian
+v1, melencolia v3).
+
+Bill eye-check pointer (after placement): stand on the approach walk
+where the monument first reads — the closed triangle; then walk past it
+and watch the figure OPEN, the third beam swinging out of the plane;
+after dark, one warm bead at the triangle's heart.
+
+Files: struct184-probe-tribar.ts + struct184-decode-tribar.ts (NEW,
+tracked), assets/mkv3-tribar.ts (NEW, staged -f), reviews/
+struct184-tribar/ (10 frames v2 + v1 superseded, ignored),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-184,
+D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
