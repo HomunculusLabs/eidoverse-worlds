@@ -33,13 +33,25 @@
 // 3KR^2 = 0.868 (41 deg) — a strong but climbable drape.
 //
 // DRESSING: iron hem tube on the true rim (mount/boundary vocabulary — the
-// bench-frame family, enneper ep_iron lane); three iron foot pads under the
-// dip bearings (top y 0.12, embedded 12cm into the near-grade lobes — the
-// enneper stanchion-pad pattern); ONE brass glow bead at the pan heart
-// (dusk lineage, struct-82 law) — the seat's quiet warm invitation.
+// bench-frame family, enneper ep_iron lane); ONE brass glow bead at the pan
+// heart (dusk lineage, struct-82 law) — the seat's quiet warm invitation.
 //
-// LAWS HONORED (struct-121+ lineage): texMat lanes (struct-38) ms_timber
-// (film, DoubleSide — underside visible from crouch), ms_iron (hem + feet);
+// v2 (struct-170, steer struct-169v paydown — native 18m FAIL: "stipple does
+// not coalesce into a readable pan; collapses to bent-pipe yard art"): the
+// enneper v1->v2 cure chassis applied — (1) GRID DENSITY raised 108x54 ->
+// 128x72 so the film coalesces at walking vantage (enneper's 112x72 film
+// reads natively at 18m); (2) FILM LANE timber -> BONE, the lane-standard
+// math-surface film (enneper ep_bone verbatim: [0xd8d2c4,0xd5cfc0,0xd2ccbb]
+// rough 0.9 cell 64 — the light stipple that coalesces white at distance;
+// harmonickiss/boy/enneper all read on it). v1's dark timber 0x8a6f52 family
+// was the read-collapse suspect: a dark film against grass collapses to
+// low-contrast mass at 18m, leaving only the iron hem readable — hence
+// "bent-pipe". Math, composition, amplitude, envelope: UNCHANGED (SEAT_H
+// 0.55 stays — the pan law bars raising amplitude: K would grow, flat radius
+// cbrt(0.03/K) would fall below the 0.69 sittable floor).
+//
+// LAWS HONORED (struct-121+ lineage): texMat lanes (struct-38) ms_bone
+// (film, DoubleSide — underside visible from crouch), ms_iron (hem);
 // glow census exactly 1 KEEP (glow_ms_1). NaN 0; node budget 4 (2 texMat
 // buckets + 1 glow KEEP + ... merge counts below). Deterministic: pure
 // polar grid + seeded texMat only.
@@ -100,7 +112,8 @@ const toWorld = (p: THREE.Vector3) => new THREE.Vector3(p.x, p.z + MOUNT, p.y);
 }
 
 // ---- film: polar grid on the disk r <= R --------------------------------------------------------
-const SECTORS = 108, RINGS = 54;
+// v2 density (steer struct-169v): 128x72 — coalescence chassis, enneper class.
+const SECTORS = 128, RINGS = 72;
 const filmPos: number[] = [], filmNor: number[] = [], filmUV: number[] = [];
 const vert = (u: number, v: number) => {
     const f = X(u, v);
@@ -148,10 +161,12 @@ const vert = (u: number, v: number) => {
 }
 
 // ---- materials ----------------------------------------------------------------------------------
-// calm-cloud law (enneper v2): one continuous sheet, large mottle cells, dRGB<=9 family.
-const timberTex = texMat("ms_timber", [0x8a6f52, 0x846a4d, 0x90755a], { rough: 0.85, scale: 1, weights: [1, 1, 1], cell: 64, seed: 9431 });
-timberTex.side = THREE.DoubleSide;             // seat film: underside visible from crouch/below-fins vantages
-(timberTex as any).userData = { ...(timberTex as any).userData, texName: "ms_timber", glTFDoubleSide: true }; // glbwrite v3.4 lane (struct-139 law)
+// v2 FILM LANE: bone (enneper ep_bone verbatim — light stipple, large calm
+// cells, coalesces white at 18m; the lane-standard math-surface film).
+// v1's dark timber collapsed to low-contrast mass at walking vantage.
+const boneTex = texMat("ms_bone", [0xd8d2c4, 0xd5cfc0, 0xd2ccbb], { rough: 0.9, scale: 1, weights: [1, 1, 1], cell: 64, seed: 9431 });
+boneTex.side = THREE.DoubleSide;             // seat film: underside visible from crouch/below-fins vantages
+(boneTex as any).userData = { ...(boneTex as any).userData, texName: "ms_bone", glTFDoubleSide: true }; // glbwrite v3.4 lane (struct-139 law)
 const ironTex = texMat("ms_iron", [0x4a525c, 0x3f464f, 0x565e69], { rough: 0.5, scale: 1, weights: [1, 1, 1], cell: 12, seed: 9432 });
 
 const g = new THREE.Group();
@@ -160,7 +175,7 @@ const g = new THREE.Group();
     geom.setAttribute("position", new THREE.Float32BufferAttribute(filmPos, 3));
     geom.setAttribute("normal", new THREE.Float32BufferAttribute(filmNor, 3));
     geom.setAttribute("uv", new THREE.Float32BufferAttribute(filmUV, 2));
-    g.add(new THREE.Mesh(geom, timberTex));
+    g.add(new THREE.Mesh(geom, boneTex));
 }
 
 // ---- rim hem: iron tube on the true boundary circle ---------------------------------------------

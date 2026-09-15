@@ -10394,3 +10394,70 @@ disclosed); monkeysaddle native PASS OWED (gate); hypar row 22 OWED
 native settles it).
 
 Files: STRUCTURES-PLAN.md (this block). Zero world mutations.
+
+## struct-170 (2026-09-14): MONKEY SADDLE v2 — steer paydown executed,
+## banked NOT placed (native gate holds; fallback 18m FAIL persists)
+
+Steer struct-169v law: placement gated on native 18m PASS; paydown path =
+v2 denser-stipple build (enneper v1->v2 chassis). Executed this tick, one
+day after struct-169 — judge-debt outranks new forms.
+
+TWO traceable source changes (mkv3-monkeysaddle.ts, v1 baseline c55eb4b2
+preserved reviews/struct170-monkeysaddle-v2/before/ per polish-271 law):
+1. GRID 108x54 -> 128x72 (steer-mandated density; enneper's film reads
+   natively at 18m on a denser grid). Film now 73,217 verts.
+2. FILM LANE timber -> BONE: enneper ep_bone verbatim [0xd8d2c4,0xd5cfc0,
+   0xd2ccbb] rough 0.9 cell 64 — the lane-standard math-surface film.
+   Rationale: v1's dark timber 0x8a6f52 against grass collapses to
+   low-contrast mass at 18m leaving only the iron hem readable ("bent-
+   pipe"); every 18m-native-PASS math form (harmonickiss/boy/enneper)
+   reads on the light bone stipple. Math/composition/amplitude/envelope
+   UNCHANGED (SEAT_H 0.55 — pan law bars amplitude: flat radius would
+   fall below the 0.69 sittable floor; max lawful SEAT_H = 0.626).
+
+BUILD: deterministic x2 byte-identical, mtime verified, sha256 f73de5fd
+702ec378103aa660773bb449d773367a7feb9a1937225f414a08d960; envelope
+IDENTICAL to v1 3.89x1.19x3.89 y[0.002..1.190]; decode law rewritten
+source-true (ms_bone lane, struct-167 precedent) -> GREEN 11/11 real
+exit 0 + RED control exit 1 on unduloid bytes (both unpiped).
+
+JUDGMENT (ZAI FALLBACK — native vision ABSENT from this cron session's
+tool catalog, same class as struct-169, flap law disclosed; native PASS
+gate NOT dischargeable this tick):
+- 18m gameplay: FAIL persists — "wavy bent-pipe with gauze netting";
+  membrane now coalesces into a coherent net zone (improvement over v1
+  noise) but no tonal closure into a solid dish; 3 contact points read
+  (2 clean + 1 ambiguous); grounding weak-tangent.
+- front close (contract distance): PASS — 3-up/3-down rhythm counted,
+  pan at sitting height, brass bead seated, iron rim one closed loop,
+  zero floats/gaps/breaks.
+- top: "rounded triangle boundary" FAIL claim DETERMINISTICALLY
+  FALSIFIED (probe law 11): in-source rim law holds hypot(x,z)==R at
+  1e-9 for all 512 rim points; decode plan 3.888x3.887 circle within
+  1cm. The trilobe read is PERSPECTIVE PARALLAX of the 3-fold elevation
+  wave at the rig's 10m top camera (crest points ~1.1m closer than dip
+  points -> ~12% larger projection) — rig class, not geometry. The same
+  read independently CONFIRMS 3-fold symmetry, concentric relief
+  banding, centered bead, zero holes/wedges.
+
+VANTAGE ANALYSIS (deterministic, recorded for any future v3): at 18m /
+1.65m eye the pan (0.595m, horizontal) sits at a 3.4-deg grazing angle —
+the whole 3.89m form occupies ~63px of frame height in the 42-deg FOV
+rig; a horizontal seat-pan is geometrically a sliver at that distance.
+The fallback's levers (tonal pan closure, contact shadows, amplitude)
+are composition iterations; per judge-precedence law (enneper: owner-
+native PASS vs survey-native FAIL — judges disagree), v2 is NOT
+iterating further on fallback advice before the native gate sees it.
+
+DISPOSITION: v2 ACCEPTED-BY-DECODE BANKED, NOT PLACED. Gate law
+(struct-169v) holds: no placement until a native 18m PASS. v2 replaces
+v1 as the re-judge substrate; native retry opportunistic across ticks.
+Native debt board: monkeysaddle native PASS OWED (gate, v2 substrate);
+hypar row 22 OWED (native only); costa PAID (struct-169v).
+
+Files: assets/mkv3-monkeysaddle.ts (edited, ignored dir — staged -f),
+struct169-decode-monkeysaddle.ts (law rewrite, tracked),
+reviews/struct170-monkeysaddle-v2/ (10 v2 frames + before/v1 bytes,
+ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-170, D+0 E+0). Zero world mutations/uploads/verbs/comp-edits/
+shared-budget use. Zero pushes.

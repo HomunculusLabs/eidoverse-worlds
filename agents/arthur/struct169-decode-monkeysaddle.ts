@@ -29,9 +29,9 @@ check("motion anchors: none expected", !named.some((n: string) => /^(bell|sails|
 // 2. materials
 const mats = json.materials ?? [];
 const mnames = mats.map((m: any) => m.name);
-check("texMat lanes present", mnames.includes("ms_timber") && mnames.includes("ms_iron"), mnames.join(","));
-const timber = mats.find((m: any) => m.name === "ms_timber");
-check("ms_timber doubleSided (film law)", timber?.doubleSided === true, `doubleSided=${timber?.doubleSided}`);
+check("texMat lanes present", mnames.includes("ms_bone") && mnames.includes("ms_iron"), mnames.join(","));
+const bone = mats.find((m: any) => m.name === "ms_bone");
+check("ms_bone doubleSided (film law)", bone?.doubleSided === true, `doubleSided=${bone?.doubleSided}`);
 const glowMat = mats.find((m: any) => (m.name ?? "").startsWith("glow") || (m.emissiveFactor ?? []).some((v: number) => v > 0.05));
 check("glow material carries emissiveFactor", !!glowMat, glowMat?.name ?? "none");
 
