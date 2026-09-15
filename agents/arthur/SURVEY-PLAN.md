@@ -16668,8 +16668,57 @@ shared-budget use (D+0, E+0).
   0 OPEN rows; no candidate row (CLEAN); CITY-PLAN-V2 assigns survey no
   role (grep 0). Census baseline for next tick:
   /tmp/survey365-census-a.json (332, 219450B, sha16 ab597e7ea9350f00).
-  Zero world mutations, zero uploads, zero verbs, zero comp edits,
-  zero shared-budget use, ZERO ledger append (loop law 4: append only
-  when routing; CLEAN concurrence routes nothing; ticks 211-364
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; CLEAN concurrence routes nothing; ticks 211-364
   precedent). STANDING RECOMMENDATION carried unchanged (s182-s364):
   stop the SURVEY lane or convert to a no-LLM monitor when attended.
+
+- survey-366 (2026-09-15, QUIET HOLD — 2nd consecutive quiet epoch on the
+  post-melencolia 332-entity baseline; no slice judged, arrival-gated law
+  s345+; native vision ABSENT from this cron session's tool catalog
+  (zai-vision MCP only, flap law; native-owed register rows NOT
+  discharged this tick, cron-disclosed): gate ALL PASS real exit 0 FIRST
+  TRY at tick-start HEAD 36ccc990 (city-142 tip, 99 PASS lines incl.
+  ledger law EXACT 2370798 == running total; HEAD unchanged through the
+  tick — no re-gate due, epoch law). Census via committed
+  next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced, cmp A==B
+  BYTE-IDENTICAL), each 332 entities, each 219450B, each sha16
+  ab597e7ea9350f00 — byte-identical to the survey-365 baseline (cmp both
+  directions). Set-diff vs survey-365 baseline (332): 0 arrivals / 0
+  departures / 0 lib flips / 0 pos-yaw-scale-comp drift on all 332
+  holders — fully quiet window (melencolia placement fully absorbed;
+  its native re-judge debt carries on the owed board). Mutation lanes
+  active-but-not-mutating this window (city-142 32nd lawful hold per its
+  own ledger line; struct post-melencolia quiet; vocab/pressure
+  server-side off-world; sweep-255 audit-side at tip) — likeliest next
+  flip triggers: monkeysaddle v2 placement after native re-judge, city
+  Wave B pending Bill's rulings (Wave A packet verdict, amphi a/b/c,
+  echoarch 3 options, wave-2 mosaic blessing, rider eye-gates b31-b33),
+  further Math Avenue carries, vocab/pressure affordances going live,
+  windmill-overhaul family dirt in tree. ARRIVAL-GATED JUDGE NOT
+  TRIGGERED: world quiet, pools drained (IMPROVE-PLAN md5 c0f569d0
+  unchanged, 255th check — same bytes as the survey-344 line-by-line
+  inspection, 0 OPEN candidate rows, all OPEN grep hits prose/narrative;
+  SURVEY CANDIDATES 0 OPEN rows; CITY-PLAN-V2 assigns survey no role,
+  grep 0), and the native re-judge register (hypar row 22, monkeysaddle
+  v2 per struct-169v/170, kuen v3, catalan v1, clebsch v1, menger v2,
+  apollonian v1, melencolia v3) is cron-unpayable this tick — cron
+  sessions use ZAI fallback which does NOT discharge native-owed rows:
+  0 confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision calls,
+  native-vs-fallback N/A. Foreign working-tree dirt at read = sibling
+  lanes in flight (windmill overhaul family incl.
+  HERO-ASSET-REFINEMENT-PLAN + WINDMILL-OVERHAUL.md + core-paths glb,
+  cabin-overhaul / carousel-horse-prototype / debug-bower debug1-7 /
+  fleet scripts incl. fleet-avenues / next-terrain-city4 + struct
+  terrain scripts / client+server trees — same families as s285-s365) —
+  untouched. Index verified empty pre-commit (zero staged files,
+  shared-index law); no ledger append this tick (no anchor needed).
+  Census baseline for next tick: /tmp/survey366-census-a.json (332,
+  219450B, sha16 ab597e7ea9350f00 — byte-identical, baseline
+  unchanged). Zero world mutations, zero uploads, zero verbs, zero
+  comp edits, zero shared-budget use, ZERO ledger append (loop law 4:
+  append only when routing; ticks 211-365 precedent; ledger tail
+  running total 2370798). STANDING RECOMMENDATION carried unchanged
+  (s182-s365): stop the SURVEY lane or convert to a no-LLM monitor when
+  attended.
