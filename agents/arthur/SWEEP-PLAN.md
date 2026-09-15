@@ -10627,3 +10627,70 @@ tower-house @253, longhouse/garden-cottage @252, row-cottage/observatory
 @251, hall/bunkhouse @250 stalest standing pair at 4 sweeps; both walk
 tools ls-verified present on disk this tick: interior-walk-hall.ts,
 interior-walk-bunkhouse.ts).
+
+sweep-255: CLEAN SWEEP, arrival epoch under the audit-continues banner.
+Census 331->332 at BOTH epochs (A/B, 20s-paced, next-live-census.ts
+chassis; raw 219450B sha16 ab597e7ea9350f00, B byte-identical to A =
+settled): exactly ONE domain-valid arrival nx-struct-melencolia @
+[-25.003589,-0.044255,172.446754] yaw 2.5307 (145deg oblique, struct-104
+law) lib fb06138e4009a883 scale 1 kind thing comp {} = struct-183
+committed placement, tuple matches its ledger line-for-line
+(PLACED_VERIFIED, census 331->332, idempotent; NN 14.29 zeno / SAT 8.13
+peaucellier / terrain 9pt spread 3.1mm PY -0.044255; az98.25 r174.25
+recomputes to the live tuple; island 8 members cap 5-9), independently
+corroborated by survey-365's same-epoch read (sha16 ab597e7e). 0
+departures, 0 field diffs, 0 lib flips, 0 compKeys drift on all 331
+shared ids. Baseline lawfully REWRITTEN arrival-fold per the sweep-252
+chassis (sweep255-baseline-rewrite.py NEW): pre-write asserts green
+(arrivals exactly [nx-struct-melencolia], departures [], drift ZERO),
+post-write byte-identical to the epoch-B capture — 332 ents / 219450B /
+sha16 ab597e7ea9350f00; next sweep baseline current. Overlap: SAT
+fresh-live 294 bbox non-light (melencolia in the live set) / 237
+classified / 0 coverage holes, real exit 3 unpiped on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2
+routed to artwalk b26 choreography @ sweep-43, 211th sweep since
+routing, NOT new, no escalation due (law keys severity-1); melencolia
+adds ZERO new contacts, corroborating struct-183's own SAT 8.13 vs law
+1.4. Walks: tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real
+exit 0, legs run individually per the sweep-228 ceiling law — core 64/64
+@ 0.380 (next-walk-core-paths.ts; [physics] banner +
+labyrinth/dress-goats support-seam abstentions = known normalized
+diagnostics, unchanged set), NW 5/5 @ 0.380 (nw-approach1-walk.ts), NE
+7/7 @ 0.380 (ne-approach2-walk.ts), SW 5/5 @ 0.370
+(sw-approach3-walk.ts); verdicts content-anchored on status strings +
+per-leg ok counts + maxArrival/distance from raw files. Melencolia sits
+r174.25 Math terminal island W-flank — 144m+ off every tier-1/tier-2
+leg, walks stand by construction (sweep-53 precedent). Tier-2 233rd
+cycle per the committed sweep-254 pointer: hall 8/8 @ 0.360
+(interior-walk-hall.ts) + bunkhouse 6/6 @ 0.380
+(interior-walk-bunkhouse.ts), both ALL_PASS real exit 0 — match the
+sweep-250 records for the pair exactly; both tools ls-verified present
+on disk pre-run. Integrity: struct18-fleet-pin-check 15/15 ALL_PINS_OK
+bad:[] (209th consecutive clean); sweep89-battery 28/28 PASS exit 0 on
+fresh census-A bytes (python3 argv census-path form); interlane md5
+f6254cd0 stable, read fresh this tick; standing gate ALL PASS real exit
+0 FIRST TRY at tick-start HEAD 4f2824bf (99 PASS lines, exit captured
+unpiped, ledger law 2370798, 0 OPEN register items). Pools drained:
+IMPROVE-PLAN md5 c0f569d0 unchanged (231st check; 0 SHARD EXECUTION
+sections, 0 open candidate rows), sweep owns no prefix; CITY-PLAN-V2
+assigns sweep no reset role — the audit-continues freeze banner governs
+and was read fresh this tick. Diff tool sweep255-census-diff.py folded
+from the committed sweep254 chassis (sed swap only — 5 forward / 0
+stale refs, py_compile clean, clean exit 0 at BOTH epochs A/B unpiped
+on the real bytes). Probe self-catch pre-verdict: NW walk parser keyed
+the int `legs` field instead of the `results` list (sweep-253 keying
+class — schema re-derived from the actual file, re-anchored on status +
+ok-count + max-distance strings). TOOL-NAME CORRECTION OF RECORD: the
+immutable sweep-255 ledger line names 'interior-walk-observatory.ts'
+as the next-pair observatory tool — the actual committed tool is
+struct2-walk-observatory.ts (the observatory circuit chassis used
+@ sweep-250/245); this plan block is the correction of record.
+Zero world mutations, zero defect notes, zero uploads, zero verbs,
+zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair
+(sweep-256): row-cottage + observatory circuit (234th cycle — LRU chain
+re-derived from committed pointers this tick: hall/bunkhouse @255
+walked fresh, forge/potter @254, inn/tower-house @253,
+longhouse/garden-cottage @252, row-cottage/observatory @251 stalest
+standing pair at 4 sweeps; tools interior-walk-row-cottage.ts +
+struct2-walk-observatory.ts, row-cottage ls-verified this tick,
+struct2-walk-observatory.ts present in the agents/arthur/ ls).
