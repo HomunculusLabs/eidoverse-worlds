@@ -46,7 +46,13 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       joins in 41ms (p95 35ms), median spectator 14.8 fps, frame lat p95 10ms,
       0 seq gaps, 176/176 burst-complete, 10/10 reconnects, RSS settled 88.8MB,
       zero warnings in server log. PASS, no patch needed.)
-- [ ] One deliberately slow spectator cannot add latency to healthy clients.
+- [x] One deliberately slow spectator cannot add latency to healthy clients.
+      (pressure-2, 2026-09-14: worktree @ d29ba072, 24 perf + 176 spec + 2
+      raw-TCP stalled sockets (1 frozen 15s → 625KB backlog, 1 trickle) +
+      late joiner 1ms mid-stall — probe p95 1ms DURING stall, fps 13.9,
+      0 gaps, 177/177 burst, RSS +0MB. PASS, no patch. Loopback note: 32KB
+      frame-skip never engages (kernel absorbs first, per config.ts);
+      no-amplification bound (≤1.2× stream volume) held.)
 - [ ] Join storm while 24 performers continue broadcasting.
 - [ ] Authored chat/verbs remain responsive during maximum presence traffic.
 - [ ] Component-placement burst receives fair, explicit rate-limit behavior.
