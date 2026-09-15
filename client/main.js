@@ -26,6 +26,8 @@ import './lib/emitters.js';
 import './lib/door.js';
 import './lib/portal.js';
 import './lib/music.js';
+// plate component (vocab-10): wires itself on import, same pattern
+import './lib/plate.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateSpectator, setCamYaw, setPosture, togglePhotoMode,

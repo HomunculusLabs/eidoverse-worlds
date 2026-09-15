@@ -35,6 +35,9 @@ import { describePortal } from "../shared/portal.js";
 // narration and look()'s affordance list.
 import { describeMusic, hzName } from "../shared/music.js";
 import { describeGuestbook } from "../shared/guestbook.js";
+// The plate affordance line (vocab-10): same shared-verbatim pattern —
+// look() names what a thing SAYS and the write action.
+import { describePlate } from "../shared/plate.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -1816,10 +1819,13 @@ export class WorldAgent {
       // an instrument names its NOTES and the play/note actions — the
       // text-tier read of the same folded comp the music engine sounds
       if (c.music) aff.push(describeMusic(c.music));
+      // a plate names its INSCRIPTION and the write action — the text-tier
+      // read of the same folded comp the engine writes and the browser draws
+      if (c.plate) aff.push(describePlate(c.plate));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

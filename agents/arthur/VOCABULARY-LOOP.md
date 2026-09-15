@@ -248,8 +248,31 @@ plan. Never deploy, push, or restart production unless Bill asks.
       sound never enters the log). Full contract § MUSIC CONTRACT; evidence
       in the vocab-9 ledger entry (musictest RED 17 -> 38/38, servergate
       battery green, permtest 21/23 pre-existing class).
-- [ ] Inscription plate: authored text surface with edit-rank, length caps,
+- [x] Inscription plate: authored text surface with edit-rank, length caps,
       and late-join truth.
+      DONE vocab-10 (2026-09-15): comp {type:"plate"} — reactPlate in
+      server/plate.ts rides reactToUse's dispatch after music (one import +
+      one dispatch hunk in reactions.ts; ZERO edits to verbs.ts /
+      server.ts / world.ts — `use` args ride verbatim so `text` needed no
+      validator change). Contract in § PLATES CONTRACT implemented as
+      written: every write is ONE world-authored comp transition
+      ({...authored, text, by, at} — ONE surface, not entries) + say with
+      plate{by,at}/cause/by (phrases/doors/lamps/guestbooks grammar). The
+      edit-rank boundary rides the rights ladder via rightsOf: blank plate
+      takes anyone's first words; last writer rewrites their own (rank 0);
+      others need builder+; editable:true = public board; a pre-carved
+      authored text is the author's words. Evidence: tools/platetest.ts RED
+      23 failing (engine absent) then ALL PASS 37/37 (authoring gate/
+      carve+say+fold shape/late join/self/visitor-bounce/builder-rewrite/
+      editable/pre-carved-plaque/no-op/no-text/clamp/reach/spectator/
+      pass-through/lint/8KB-degrade/restart replay-mints-nothing/describe/
+      idempotent); servergate full family green incl. platetest 37;
+      permtest 21/23 pre-existing class (vocab-1..9 identical). Browser
+      realization client/lib/plate.js (one import line in main.js) —
+      canvas-texture parchment sprite at authored h, nameplate distance
+      fade, redraw only on a words change; MCPL look() describePlate.
+      Scratch worlds only; no production world touched. Eye-check OPEN:
+      in-browser visual read of a standing plate.
 - [ ] Water feature: particle + audio affordance with day/night states.
 - [ ] Growth stage: authored plant lifecycle state machine, restart-safe,
       late-join folds to current stage.
@@ -1127,6 +1150,96 @@ can't hit a wrong note on — one 8KB comp, no script, no samples, sound as
 an instantaneous cause with the audit already in the log. Protocol first;
 timbre presets, resonance, and recorded samples are later UI/decoration
 tiers.
+
+### PLATES CONTRACT (vocab lane — drafted vocab-10, 2026-09-15)
+
+**Trigger.** A plate is an entity carrying `comp {type:"plate", data:{...}}`. The
+action string `write` is PLATE vocabulary on the freeform
+`use {id, action}` path, with the inscription riding the use's own args as
+`text` (the reactions doctrine: other action strings pass through untouched —
+a plate ignoring `use {action:"ring"}` is exactly correct). Attaching/removing
+the comp is builder (rank 1) — the author's standing decision that this
+surface carries words, identical doctrine to reactions/phrases/region/door/
+lamp/guestbook/portal/music.
+
+**State — the fold is the state.** The inscription is ONE field on the folded
+comp; a write is ONE world-authored `comp` transition write (regions/doors/
+lamps/guestbooks doctrine):
+
+```
+comp {id, type:"plate", data:{...authored, text, by, at}}
+```
+
+`text` is the full inscription (clamped to `maxLen`, authored, clamped
+[8,480], default 120); `by` is the LAST writer; `at` the sequencer ts of the
+causing use. NOTHING else is stored anywhere — no in-memory state decides
+what a late joiner reads. An authored `text` on the comp IS the inscription
+(a museum plaque ships pre-carved, `by` unset); re-authoring the comp
+replaces the surface wholesale (the author's act, like any comp). A blank
+plate is `text` absent/empty.
+
+**Edit-rank — the ladder answers, no new role.** WHO may write is a function
+of the folded state + the rights ladder itself (`rightsOf`, fold-derived —
+the guestbook-erase doctrine applied to overwriting):
+
+- **blank plate** (no `text`): anyone rank 0 in arm's reach may carve the
+  first words — like signing a guestbook.
+- **written plate**: the LAST WRITER (`by`) may rewrite their own words
+  (self-service, rank 0 — your words are yours); anyone ELSE needs builder+
+  (rank 1) — a communal maintenance act, skip names the boundary otherwise.
+- **`editable:true`** authored: anyone rank 0 may rewrite (a public notice
+  board by design — the author's standing decision, like guestbook
+  `open:false` in reverse).
+
+**Effects.** A write appends TWO entries, in order: the comp transition
+write and a `say` (actor `world`, args `{text:<line>, id, plate:{by, at},
+cause:<use seq>, by:<user>}` — the phrases/doors/lamps/guestbook provenance
+grammar exactly). Line default `"<actor> inscribes the plate"`, authored
+`writeAt` overrides (≤200c clamped). Writing the text the plate ALREADY
+reads is a no-op skip (`plate-skip: already reads that`) — state-legal,
+log-legal, mint-nothing; blank-after-trim text skips (`no text`). The say is
+the ordinary perception path (browser logChat, agent inbox); the comp write
+is what every evaluator reads.
+
+**Authority/reach.** Writing is rank 0 under the edit-rank rules above plus
+the ARM'S-REACH gate (vPunt arithmetic): the writer's LIVE pose within
+`reach` metres (authored, clamped [2,12], default 4) of the plate's LIVE
+position (lease stream pos if leased, folded pos otherwise). Out-of-reach
+write is a `plate-skip` naming the distance. Spectators bounce at the shell
+(`use` is spectator-gated there). Effects are say + comp-on-self ONLY: no
+other verb can be minted from an inscription.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs ONLY
+from the live `use` path; folding a historical use or comp never re-fires.
+On restart the world folds `text`/`by`/`at` from the log — the plate IS its
+log. `world_history {verbs:["use","comp","say"]}` traces every carving's
+chain (cause → comp+say with by).
+
+**Failure behavior.** Unknown action → falls through to other evaluators.
+Malformed comp → clamp + `plate-lint` (particles-lint doctrine): `maxLen`
+[8,480] d120, `reach` [2,12] d4, `h` [0.2,8] d0.8, `text` stringified and
+clamped, `writeAt` 200c, non-boolean `editable` treated as false; unknown
+keys ride (the bag is public annotation). The whole reaction wrapped in
+try/catch (house rule 3). The 8KB comp gate is unreachable by legal writes
+(480c text + shape « 8KB) but the degrade side keeps `{text}` anyway.
+
+**Browser path.** `client/lib/plate.js` (the door.js/emitters.js pattern —
+one import line in main.js, zero other edits to the pilot-dirty file): the
+inscription renders as a canvas-texture THREE sprite anchored `h` metres
+above the entity origin (nameplate-tech, distance-faded), rebuilt on comp
+bus events and the join snapshot from the SAME folded comp — state-derived,
+never tweened, zero traffic after the write. Bill's eye-check on the visual
+remains open until he looks at one standing in a browser.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the plate via `shared/plate.js describePlate`
+(the describeDoor pattern) — the inscription's first words, its author, and
+the write action hint. An agent writes through the ordinary `use` verb.
+
+**Intent.** The world speaks in placed words. A trailhead sign, a dedicator
+plaque, a market board whose keeper changes the daily line — ONE authored
+surface, one verb, the words folded into the world like everything else.
+The guestbook remembers many; the plate SAYS one thing, visibly.
 
 ## LAWS
 

@@ -80,6 +80,19 @@ const BATTERY: Row[] = [
   // vocab-9: the music matrix (§ MUSIC CONTRACT) — self-booting scratch
   // sequencer, like phrasetest/publishtest.
   { name: "musictest", tool: "tools/musictest.ts" },
+  // vocab-10: the plate matrix (§ PLATES CONTRACT) — self-booting scratch
+  // sequencer, same class.
+  { name: "platetest", tool: "tools/platetest.ts" },
+  // vocab-8: the portal matrix (§ PORTALS CONTRACT) — self-booting scratch
+  // sequencer; previously run standalone only (a servergate row that runs
+  // 0/0 is a vacuous skip, never a pass — registered vocab-10 tick).
+  { name: "portaltest", tool: "tools/portaltest.ts" },
+  // vocab-4/5/6: the door/lamp/guestbook matrices — same class, previously
+  // run standalone only; one row each so the battery carries the whole
+  // vocab family's regressions.
+  { name: "doortest", tool: "tools/doortest.ts" },
+  { name: "lamptest", tool: "tools/lamptest.ts" },
+  { name: "guestbooktest", tool: "tools/guestbooktest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites
