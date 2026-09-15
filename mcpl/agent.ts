@@ -27,6 +27,7 @@ import { describeParticles, emitterTransition, transitionLine } from "../shared/
 import { describeDoor } from "../shared/door.js";
 // The lamp affordance line (vocab-5): same pattern — lit/dark + actions.
 import { describeLamp } from "../shared/lamp.js";
+import { describeGuestbook } from "../shared/guestbook.js";
 import { effectiveWorldTransform, type Effective } from "./effective.ts";
 import { makeVerdictCache, seatGateCore, nameFromAvatarPath } from "../client/lib/seatcore.js";
 
@@ -1734,10 +1735,14 @@ export class WorldAgent {
       // a lamp names its STATE (lit/dark) and the use actions that move it;
       // its companion light lists separately as (light) in the same census
       if (c.lamp) aff.push(describeLamp(c.lamp));
+      // a guestbook names its SIZE (kept inscriptions) and the sign action;
+      // entries themselves read from the folded comp (world_history traces
+      // every signature's chain)
+      if (c.guestbook) aff.push(describeGuestbook(c.guestbook));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

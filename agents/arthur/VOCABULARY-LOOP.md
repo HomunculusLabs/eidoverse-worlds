@@ -160,7 +160,33 @@ plan. Never deploy, push, or restart production unless Bill asks.
       all later runs set PORT explicitly. Eye-check OPEN: in-browser night
       read of a lit lamp (dusk dim, gizmo bulb at anchor) — headless matrix
       proves protocol only, not the visual.
-- [ ] Persistent guestbook/inscription contribution with moderation boundaries.
+- [x] Persistent guestbook/inscription contribution with moderation boundaries.
+      DONE vocab-6 (2026-09-15): comp {type:"guestbook"} — reactGuestbook in
+      server/guestbook.ts rides reactToUse's dispatch after lamps (one import
+      + one dispatch hunk in reactions.ts; ZERO edits to verbs.ts /
+      server.ts / world.ts — `use` args ride verbatim so `text`/`who` needed
+      no validator change). Contract in § GUESTBOOK CONTRACT implemented as
+      written: every signature is ONE world-authored comp transition write
+      ({...authored, entries:[{who,text,at},…]} newest-first, cap [1,64] d20
+      evicting the oldest, text clamp 160) + say with gb{who,text,at}/cause/by
+      (phrases/doors/lamps grammar). The erase boundary rides the rights
+      ladder itself via rightsOf: no `who` = self-service rank 0 in arm's
+      reach; `who` named = builder+ (visitor skips with the boundary named);
+      open:false = read-only book; empty-text/no-entries = mint-nothing
+      skips; 8KB degrade keeps {entries:[new]} + lint. Evidence:
+      tools/guestbooktest.ts RED 21 failing (engine absent; test reads fixed
+      to log-derived entries mid-RED — snapshots are join-time) then ALL PASS
+      35/35 (authoring bounce gate/say+fold-write/trim-at-cap/text-clamp/
+      reach/spectator/pass-through/self-erase/erase-provenance/no-op/
+      moderation-boundary/builder-erase/closed/lint/fullest-legal-book-40@
+      8142B/8KB-degrade/restart-fold/replay-mints-nothing/describe line/
+      idempotent-fold); servergate smoke 85, comptest 33, behaviortest 27,
+      worldops 23, compfold 24, locktest 13, leasetest 19, modtest 23 all
+      PASS (8/8); permtest 21/23 = the documented pre-existing
+      mcpl/tokens.json-missing class (vocab-1..5 identical); mcpl manifest
+      28/0. shared/guestbook.js (sanitize/normalize/trim/describe) shared
+      verbatim by engine + tests + mcpl look(). Scratch worlds only; no
+      production world touched.
 - [ ] Publish/attach path that promotes a reviewed Layer-2 behavior into a
       documented Layer-1 vocabulary item with bounded knobs.
 - [ ] Portal contract between disposable worlds: destination validation,
@@ -604,6 +630,103 @@ toggle near the body lands as a world say in the inbox.
 the dusk, a wayline flame that answers a hand, a hearth light carried
 inside a lantern. Light as authored state, realized by machinery that
 already exists — the smallest complete verb-path upgrade.
+
+### GUESTBOOK CONTRACT (vocab lane — drafted vocab-6, 2026-09-15)
+
+**Trigger.** A guestbook is an entity carrying `comp {type:"guestbook",
+data:{...}}`. The action string `sign` is GUESTBOOK vocabulary on the
+freeform `use {id, action}` path, with the inscription riding the `use`
+verb's own args as `text` (the reactions doctrine: other action strings
+pass through untouched — a guestbook ignoring `use {id, action:"ring"}`
+is exactly correct). Attaching/removing the comp is builder (rank 1) —
+the author's standing decision that this thing accepts words, identical
+doctrine to `reactions`/`phrases`/`region`/`door`/`lamp`.
+
+**State — the fold is the state.** Every inscription is ONE world-authored
+`comp` transition write (regions/doors/lamps doctrine):
+
+```
+comp {id, type:"guestbook", data:{...authored, entries:[{who, text, at}, …]}}
+```
+
+`entries` is newest-first, capped at `cap` (default 20, clamped [1,64]);
+`text` clamps to 160 chars; `at` is the sequencer's timestamp of the
+causing `use`. NOTHING else is stored anywhere — no in-memory state
+decides what a late joiner reads. Trim arithmetic: at `cap` entries the
+oldest is evicted for the newcomer (entries stay exactly `cap`); if the
+resulting write would exceed the 8KB comp gate it DEGRADES to
+`{entries:[<the new entry>]}` with a `guestbook-lint` note (fail closed
+against bloat, never against the writer — a legal book can always accept
+one more line at worst by forgetting its oldest).
+
+**Effects.** A sign appends TWO entries, in order: the comp write and a
+`say` (actor `world`, args `{text:<line>, id, gb:{who, text, at},
+cause:<use seq>, by:<user>}` — the phrases/doors/lamps provenance grammar
+exactly). Line default `"<who> writes in the guestbook"`, authored
+`signAt` overrides. The say is the ordinary perception path (browser
+logChat, agent inbox); the comp write is what every evaluator reads.
+
+**Moderation — the erase boundary.** `use {action:"erase"}` removes
+entries; WHOSE is the authority question, answered fail-closed by the
+rights ladder itself (`rightsOf`, fold-derived, imported directly from
+rights.ts — no new role, no widened surface):
+
+- **erase with no `who` = self-service, rank 0** in arm's reach: removes
+  the USER'S OWN entries only. Your words are always yours to take back.
+- **erase with `who` named = moderation, rank 1+**: removes that
+  person's entries. A visitor naming anyone (including themselves — the
+  explicit form is still the moderation form) skips with
+  `guestbook-skip` naming the boundary; builders/owners erase anyone's.
+
+Both say their line (`"<who> strikes their words from the guestbook"` /
+`"<by> strikes <who>'s words from the guestbook"`, `eraseAt` overrides)
+with `gb:{erased:[who…], at}` + cause/by. An erase that would remove
+nothing is a no-op skip (`nothing to erase`) — state-legal, log-legal,
+mint-nothing. Erasing on a book whose comp carries `open:false` skips
+(`closed`) — a closed book is read-only.
+
+**Open/closed.** `open:false` authored on the comp makes every sign skip
+with `guestbook-skip` (`closed`) — the author's moderation pre-commit,
+state folded from the log like everything else. Default open.
+
+**Authority/reach.** Signing and self-erase are rank 0 (anyone present,
+like sitting) plus the ARM'S-REACH gate (vPunt arithmetic, `reach`
+authored clamped [2,12] default 4, user's live pose vs the book's LIVE
+position — lease stream pos if leased). Out-of-reach use is a
+`guestbook-skip` naming the distance. Spectators bounce at the shell
+(`use` is spectator-gated there). Effects are say + comp-on-self ONLY:
+no other verb can be minted from a signature.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live `use` path; folding a historical use or comp never
+re-fires. On restart the world folds `entries` from the log — the book
+IS its log. `world_history {verbs:["use","comp","say"]}` traces every
+signature's full chain (cause → comp+say with by).
+
+**Failure behavior.** Unknown action → falls through to other evaluators.
+Malformed comp → clamp + `guestbook-lint` (particles-lint doctrine):
+`cap` [1,64] d20, `reach` [2,12] d4, lines clamped 200 chars, non-string
+`entries` treated as absent; unknown keys ride (the bag is public
+annotation). The whole reaction wrapped in try/catch (house rule 3).
+
+**Browser path.** Zero client code: the say arrives as ordinary chat
+(actor `world`); the entries array is readable from any folded snapshot
+(`state.entities[id].comp.guestbook.entries`) — scripts and future UI
+consume it without a new protocol surface. A visible plate/plinth
+rendering is deliberately deferred (the inscription-plate queue item
+owns the visual tier).
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists `guestbook: N inscription(s) (use
+{action:"sign", text:"…"})` in the affordance list (shared/
+guestbook.js `describeGuestbook`, the describeDoor pattern);
+`world_history` returns the chain. An agent can read the book's whole
+memory from one snapshot read.
+
+**Intent.** The world remembers you. A lectern that keeps every
+visitor's line, a trailhead registry, a wedding register — persistent
+public memory with the one moderation boundary a community actually
+needs: your words are yours, someone else's need a builder.
 
 ## LAWS
 

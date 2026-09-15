@@ -13,6 +13,7 @@ import { normalizeDoor } from "../shared/door.js";
 // pattern, vocab-5): companion id/anchor/params are one arithmetic across
 // engine, tests, and any future client consumer.
 import { reactLamp } from "./lamp.ts";
+import { reactGuestbook } from "./guestbook.ts";
 
 /** What a reaction needs from the world it fires in: the folded state, the
  *  log, the fanout, and the flight recorder. server.ts's World satisfies it
@@ -63,6 +64,10 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // the light/snuff/toggle action vocabulary — same dispatch doctrine,
     // after doors so a door-lamp hybrid decides its door first.
     if (reactLamp(w, cause, ent, id, action)) return;
+    // The guestbook slice (vocab-6, § GUESTBOOK CONTRACT): comp
+    // {type:"guestbook"} owns the sign/erase action vocabulary — same
+    // dispatch doctrine, after lamps (a book may also be a lamp-host).
+    if (reactGuestbook(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,
