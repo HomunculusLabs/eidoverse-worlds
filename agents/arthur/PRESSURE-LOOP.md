@@ -55,6 +55,19 @@ without Bill's explicit direction. Do not touch village or resident lanes.
 - [ ] Snapshot join during concurrent authored mutations is sequence-consistent.
 - [ ] Memory returns near baseline after every synthetic participant leaves.
 - [ ] Performer/spectator classification cannot accidentally multiply fanout.
+- [ ] Malformed-frame storm: partial/truncated JSON payloads never wedge the
+      sequencer.
+- [ ] Auth failure storm: bad tokens cannot exhaust join capacity.
+- [ ] Slow-loris verb sender: one crawling connection cannot block verb intake.
+- [ ] World-hop churn: rapid switch/leave cycles leave no cross-world state
+      bleed.
+- [ ] Spectator-to-performer promotion under load: role change is atomic.
+- [ ] Presence spoofing: oversized/rapid pose deltas clamped and logged, not
+      propagated.
+- [ ] Giant payload handling: max-frame enforcement with explicit error, no
+      OOM path.
+- [ ] Clock-skew tolerance: late/reordered client timestamps never corrupt
+      sequence ordering.
 
 ## LAWS
 
