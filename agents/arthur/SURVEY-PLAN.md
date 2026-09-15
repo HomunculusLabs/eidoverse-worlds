@@ -15698,3 +15698,46 @@ shared-budget use (D+0, E+0).
   running total 2370778). STANDING RECOMMENDATION carried unchanged
   (s182-s344): stop the SURVEY lane or convert to a no-LLM monitor
   when attended.
+
+- survey-346 (2026-09-14, ACTIVE ARRIVAL EPOCH — first mutation since the
+  2026-09-10 freeze lift; ZAI FALLBACK 3 calls/3 disclosed — native vision
+  ABSENT from this cron session's tool catalog (zai-vision MCP only, flap
+  law); native-owed register rows NOT discharged this tick, cron-disclosed):
+  gate ALL PASS real exit 0 first try at tick-start HEAD 43982945 (raw log
+  /tmp/survey346-gate.log, exit captured unpiped). Census via committed
+  next-live-census.ts exit 0: 326 entities, 215835B — NOT byte-identical to
+  the s326-s345 baseline (325, 215228B, sha16 b8c43498acb3ebea) — the
+  22-epoch quiet hold BROKE: set-diff = +1 arrival nx-struct-costa
+  (14.435,-0.015,126.676 yaw 0, lib store/4bd697873ffaabf0.glb — struct-168
+  placement, ledger-matched) / 0 departures / 0 lib flips / 7 POS+YAW MOVES
+  all nx-struct-* math forms to the Math Avenue north band r80-128 (boy,
+  catenarygate, catenoid, lemniscateseat, reuleauxrotor, sierpinski,
+  unduloid — city-104..110 Wave A moves, tuples ledger-matched verbatim
+  incl. catenoid (-14.25,91.25) yaw 0 and lemniscateseat (1.5,107.75) yaw
+  pi; unchanged libs so standing verdicts hold, no re-judge owed on movers).
+  ARRIVAL-GATED JUDGE LAWFUL (arrival exists): slice = the 1 new-bytes
+  object. Live store bytes fetched curl UA HTTP 200 154848B served-sha16
+  e4b52e005bef4364 (lib 4bd69787). Render chassis note: review-model.ts
+  TIMED OUT on store DRACO bytes (no DRACOLoader — struct-104 class); NEW
+  survey346-render-costa.ts (dress108 chassis verbatim + review-model view
+  set + night toggle + live-meadow ground 0x3d3a29) exit 0, 5 frames
+  reviews/survey346-costa/ (ignored residue), decoded bounds
+  3.16x3.37x3.16m. VERDICT: nx-struct-costa CLEAN 4/4 — gameplay 18m
+  PASS x4 (trumpet/horn identity incl. pinched-waist emblem ~45-50px neck
+  between ~150px flares, continuous silhouette, grounded+contact shadow,
+  zero floats/voids; side gaps = by-design film ends); night PASS (quiet
+  brass bead (480,256) + waist rim accent, bound, zero bloom/spill/
+  artifacts — polish-278 class compliant); top PASS (rim closed, rings
+  converge to throat, zero through-holes — right/bottom "notches" carry
+  shadow tone not background = edge-on self-shadowing, rig class not
+  geometry). CONCURS struct-167/168 owner PASS + struct-169v "costa PAID"
+  board — second independent fallback vote, no defect, margin-tier only
+  (18m two-tier urn flirt, disclosed by judge as passing). Pools: IMPROVE-
+  PLAN md5 c0f569d0 unchanged (235th check); SURVEY CANDIDATES 0 OPEN rows;
+  no candidate row needed (CLEAN); CITY-PLAN-V2 assigns survey no role.
+  Census baseline for next tick: /tmp/survey346-census-a.json (326,
+  215835B). Zero world mutations, zero uploads, zero verbs, zero comp
+  edits, zero shared-budget use, ZERO ledger append (loop law 4: append
+  only when routing; CLEAN concurrence routes nothing; ticks 211-345
+  precedent). STANDING RECOMMENDATION carried unchanged (s182-s345): stop
+  the SURVEY lane or convert to a no-LLM monitor when attended.
