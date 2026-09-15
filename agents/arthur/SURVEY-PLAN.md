@@ -15774,3 +15774,103 @@ shared-budget use (D+0, E+0).
   ledger append (loop law 4: append only when routing; ticks 211-346
   precedent). STANDING RECOMMENDATION carried unchanged (s182-s346):
   stop the SURVEY lane or convert to a no-LLM monitor when attended.
+
+- survey-348 (2026-09-14, quiet hold): gate ALL PASS real exit 0 first
+  try at tick-start HEAD 35475d65 (city-119 tip; raw log inspected in
+  tool output, 99 PASS lines incl. ledger law EXACT 2370779, exit
+  captured unpiped; HEAD unchanged through the tick — no re-gate due).
+  Census via committed next-live-census.ts exit 0 at BOTH epochs (A/B,
+  20s-paced), each 326 entities, each 215835B, each sha16
+  f699fa0b1feb3eda — BYTE-IDENTICAL to the survey-347 baseline
+  (/tmp/survey347-census-a.json, cmp) AND to each other; set-diff law
+  satisfied by byte identity — 0 arrivals / 0 departures / 0 lib flips /
+  0 pos/yaw/scale diffs on all 326 ids. SECOND consecutive quiet epoch
+  on the post-costa 326-entity baseline (22nd quiet epoch class total);
+  mutation lanes active-but-not-mutating this window — likeliest next
+  flip triggers unchanged (monkeysaddle v2 placement behind the
+  native-PASS gate, city Wave B pending Bill's rulings, struct banks /
+  vocab server-side work off-world). Pools fresh this tick: IMPROVE-PLAN
+  md5 c0f569d0 unchanged (237th check — same bytes as the survey-344
+  line-by-line inspection: all OPEN grep hits prose/narrative); SURVEY
+  CANDIDATES 0 OPEN rows; 0 SHARD EXECUTION sections; CITY-PLAN-V2
+  assigns survey no role (grep 0). No slice judged (arrival-gated,
+  s138-s347 precedent — identical bytes + drained pools; native re-judge
+  register — hypar row 22, monkeysaddle v2 per struct-169v/170 — is
+  cron-unpayable this tick: cron sessions use ZAI fallback which does
+  NOT discharge native-owed rows): 0 confirmed / 0 clean / 0 dropped,
+  0 notes routed, 0 vision calls, native-vs-fallback N/A. Foreign
+  working-tree dirt at read = sibling lanes in flight (windmill
+  overhaul family incl. HERO-ASSET-REFINEMENT-PLAN + core-paths glb,
+  cabin-overhaul / carousel-horse-prototype / debug-bower scripts /
+  client+server trees — same families as s285-s347) — untouched. Index
+  verified empty pre-commit (zero staged files, shared-index law).
+  Census baseline for next tick: /tmp/survey348-census-a.json (326,
+  215835B, sha16 f699fa0b1feb3eda — byte-identical, baseline
+  unchanged). Zero world mutations, zero uploads, zero verbs, zero
+  comp edits, zero shared-budget use, ZERO ledger append (loop law 4:
+  append only when routing; ticks 211-347 precedent; ledger tail
+  city-119-lineage running total 2370779). STANDING RECOMMENDATION
+  carried unchanged (s182-s347): stop the SURVEY lane or convert to a
+  no-LLM monitor when attended.
+
+- survey-349 (2026-09-14, ARRIVAL EPOCH, second of the unfreeze —
+  ZAI FALLBACK 5 calls/5 disclosed, native vision ABSENT from this cron
+  session's tool catalog (zai-vision MCP only, flap law; native-owed
+  register rows NOT discharged this tick, cron-disclosed): gate ALL
+  PASS real exit 0 FIRST TRY at tick-start HEAD 72dbe693 (vocab-3 tip,
+  99 PASS lines, exit captured unpiped in tool output); mid-tick HEAD
+  advanced 72dbe693 -> 3ead3a6f (pressure-3) — gate RE-RUN at new HEAD:
+  ALL PASS real exit 0 (/tmp/survey349-gate2.log, 99 PASS, ledger law
+  EXACT 2370780, epoch law). Census via committed next-live-census.ts
+  exit 0 at BOTH epochs (A/B, 20s-paced), each 327 entities, each
+  216436B, each sha16 9ea3f61b2522fa66, A==B byte-identical. Set-diff
+  vs survey-348 baseline (326, f699fa0b1feb3eda): +1 ARRIVAL
+  nx-struct-kuen (16.352839,-0.014569,116.356498 yaw 0.6981317 rad = 40deg
+  oblique-yaw law, lib store/5b7ad1a3a925027d.glb, comp {}) / 0
+  departures / 0 lib flips / 0 pos-yaw-scale diffs on the 326 holders —
+  classified SIBLING WORK-IN-FLIGHT: lib sha 5b7ad1a3 matches struct-171's
+  banked KUEN v3 EXACTLY, the placement IS struct-171's committed carry
+  ("placement = struct-172 carry"); no struct-172 ledger entry/commit at
+  my read = in-flight window (artwalk-65/66 census-diff class). Math
+  Avenue north band r~117 az~8 continuation. ARRIVAL-GATED JUDGE LAWFUL:
+  slice = the 1 new-bytes object. Live store bytes fetched curl UA HTTP
+  200 191072B; render via NEW survey349-render-kuen.ts (survey346-costa
+  chassis verbatim, DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 5
+  frames reviews/survey349-kuen/ (ignored residue), bounds
+  3.05x4.66x2.13m == struct-171 envelope class. VERDICT: nx-struct-kuen
+  CLEAN-WITH-MARGIN — 18m gameplay PASS as deliberate spiral monument
+  (grounded drum + contact shadow, zero floats/voids/tears); front-close
+  (contract distance) PASS: spiral rhythm, seat of the form, iron-edge
+  ribs, figure-8 mouth WITH two-lobe+waist pinch reads at 90deg azimuth
+  (right view: lobes x355-595, pinch y250-310, gold sleeve band wrapping
+  the waist — the v=0 spine element present); night PASS: EXACTLY ONE
+  quiet bound ember at crown (453,210), 10-12px, hard edge, zero
+  bloom/spill (polish-278 compliant); top PASS: closed silhouette, no
+  see-through voids, double-cusp figure-8 signature at (665,355)
+  corroborates true Kuen profile. THREE CANDIDATE DEFECTS FALSIFIED at
+  controls: (1) floating crown — front-view gap (400-460,62-95) closes
+  to ZERO gap at the 90deg right-view control (crown bottoms y72-77 ON
+  the apex, continuous climb) = helical winding projection class (same
+  falsification class as struct-169's trilobe claim); (2) day glow-bead
+  absence — polish-278 day law, night frame PROVES the bead; (3) flat-
+  disc bowl identity at 18m — face-on view-angle flattening (pitfall-13
+  class), figure-8 READS at oblique azimuths + top; the site's 40deg
+  oblique yaw is the owner's own cure. Margins (NOT routed, verify-tier):
+  brass spine along the spiral sub-visible at 18m (reads close-range as
+  the axle band); hairline ribbon tips alias-risk (398,266)/(396,390);
+  night base-into-ground merge at the foot; top-view crown-disc pixel
+  mosaic (chassis/DRACO class). CONCURS struct-171 owner PASS (fallback
+  gameplay/night accept) — second independent fallback vote, no defect.
+  Pools: IMPROVE-PLAN md5 c0f569d0 unchanged (238th check); SURVEY
+  CANDIDATES 0 OPEN rows; no candidate row (CLEAN); CITY-PLAN-V2 assigns
+  survey no role. BOOKKEEPING RECOVERY: survey-348's plan block was
+  dirty-uncommitted in-tree at tick start (interrupted window, struct-9
+  class — block verified fact-by-fact against this tick's fresh census/
+  pools, all consistent); carried to HEAD in THIS commit, named honestly,
+  never re-derived. Census baseline for next tick:
+  /tmp/survey349-census-a.json (327, 216436B, sha16 9ea3f61b2522fa66).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; CLEAN concurrence routes nothing; ticks 211-348 precedent).
+  STANDING RECOMMENDATION carried unchanged (s182-s348): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
