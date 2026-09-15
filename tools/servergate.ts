@@ -83,6 +83,9 @@ const BATTERY: Row[] = [
   // vocab-10: the plate matrix (§ PLATES CONTRACT) — self-booting scratch
   // sequencer, same class.
   { name: "platetest", tool: "tools/platetest.ts" },
+  // vocab-11: the water matrix (§ WATER CONTRACT) — self-booting scratch
+  // sequencer, same class.
+  { name: "watertest", tool: "tools/watertest.ts" },
   // vocab-8: the portal matrix (§ PORTALS CONTRACT) — self-booting scratch
   // sequencer; previously run standalone only (a servergate row that runs
   // 0/0 is a vacuous skip, never a pass — registered vocab-10 tick).

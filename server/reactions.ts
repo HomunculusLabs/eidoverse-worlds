@@ -28,6 +28,10 @@ import { reactMusic } from "./music.ts";
 // — the authored text surface. Same dispatch doctrine, after music (a
 // plate-host may also be an instrument/portal/book).
 import { reactPlate } from "./plate.ts";
+// The water engine (vocab-11): comp {type:"water"} owns the flow/still/
+// toggle action vocabulary — the audible, toggleable water feature. Same
+// dispatch doctrine, last (a water-host may also be a plate/instrument).
+import { reactWater } from "./water.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -102,6 +106,10 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // owns the write action — the authored text surface. Same dispatch
     // doctrine, last (a plate-host may also be an instrument/portal/book).
     if (reactPlate(w, cause, ent, id, action)) return;
+    // The water slice (vocab-11, § WATER CONTRACT): comp {type:"water"}
+    // owns the flow/still/toggle action vocabulary — the audible,
+    // toggleable water feature. Same dispatch doctrine, last.
+    if (reactWater(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

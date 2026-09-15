@@ -38,6 +38,9 @@ import { describeGuestbook } from "../shared/guestbook.js";
 // The plate affordance line (vocab-10): same shared-verbatim pattern —
 // look() names what a thing SAYS and the write action.
 import { describePlate } from "../shared/plate.js";
+// The water affordance line (vocab-11): same pattern — look() names the
+// water STATE and the flow/still actions.
+import { describeWater } from "../shared/water.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -616,11 +619,22 @@ export class WorldAgent {
             await this.applyEntry(msg.entry, true);
             break;
           case "sound": {
-            // An instrument played (vocab-9): a presence-plane percept,
-            // never logged — the same radius gate as every other ambient
-            // sense, narrated through the denoiser so a burst of notes is
-            // one act line, not chat spam. Agents can also PLAY via the
-            // ordinary use verb (look() lists the affordance).
+            // An instrument played (vocab-9) or water changed state
+            // (vocab-11): a presence-plane percept, never logged — the
+            // same radius gate as every other ambient sense, narrated
+            // through the denoiser so a burst is one act line, not chat
+            // spam. Agents can also act via the ordinary use verb
+            // (look() lists the affordance).
+            if (msg.water) {
+              if (!Array.isArray(msg.p)) break;
+              const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
+              if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
+              const line = msg.water.state === "start"
+                ? `${msg.id}'s water starts (by ${msg.by ?? "someone"})`
+                : `${msg.id}'s water goes quiet (by ${msg.by ?? "someone"})`;
+              this.gate.act(String(msg.by ?? msg.id), msg.water.state === "start" ? "starts" : "quiets", line);
+              break;
+            }
             if (!msg.note || !Array.isArray(msg.p)) break;
             const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
             if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
@@ -1822,10 +1836,13 @@ export class WorldAgent {
       // a plate names its INSCRIPTION and the write action — the text-tier
       // read of the same folded comp the engine writes and the browser draws
       if (c.plate) aff.push(describePlate(c.plate));
+      // water names its STATE (flowing/still) and the flow/still actions —
+      // the text-tier read of the same folded comp the loop derives from
+      if (c.water) aff.push(describeWater(c.water));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

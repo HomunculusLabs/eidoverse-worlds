@@ -28,6 +28,8 @@ import './lib/portal.js';
 import './lib/music.js';
 // plate component (vocab-10): wires itself on import, same pattern
 import './lib/plate.js';
+// water component (vocab-11): wires itself on import, same pattern
+import './lib/water.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateSpectator, setCamYaw, setPosture, togglePhotoMode,

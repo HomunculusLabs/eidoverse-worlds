@@ -273,7 +273,158 @@ plan. Never deploy, push, or restart production unless Bill asks.
       fade, redraw only on a words change; MCPL look() describePlate.
       Scratch worlds only; no production world touched. Eye-check OPEN:
       in-browser visual read of a standing plate.
-- [ ] Water feature: particle + audio affordance with day/night states.
+- [x] Water feature: particle + audio affordance with day/night states.
+      DONE vocab-11 (2026-09-15): comp {type:"water"} — reactWater in
+      server/water.ts rides reactToUse's dispatch after plate (one import +
+      one dispatch hunk in reactions.ts; ZERO edits to verbs.ts /
+      server.ts / world.ts). Contract in § WATER CONTRACT implemented as
+      written: exactly ONE durable bit (running/still) in the fold — every
+      change is ONE world-authored comp transition {...authored, on, at}
+      + say with water{on,who,at}/cause/by (authored shape verbatim,
+      consumers clamp — door doctrine); spray is DERIVED client-side from
+      a REAL preset (water law honored: no water preset faked —
+      deriveSpray re-tunes dust inside existing particles bounds) through
+      the EXISTING emitter registry; audio is the force doctrine looped
+      (ONE presence-plane sound per change, never logged) with the LOOP
+      itself fold-driven (late joiner derives it from on:true, restart
+      mints nothing); day/night = gainFor(dayPhase) — one shared
+      arithmetic (forecast.js phase table) across browser loop modulation,
+      tests, and future consumers. Browser client/lib/water.js (one import
+      line in main.js beside plate): derived spray + looped bandpass noise
+      through the ONE shared AudioContext into the world-category gain
+      (music.js path — the volume slider governs for free), per-frame
+      loudness = gain·phase·distance·fall taper, still water costs
+      nothing. MCPL: sound-case water branch (denoiser act line) +
+      look() describeWater + exclusion list. Evidence: tools/watertest.ts
+      RED 19 failing (engine absent) then ALL PASS 34/34; watertest
+      registered in the servergate battery; servergate: smoke 85,
+      comptest 33, compfold 24, behaviortest 27, worldops 23, locktest 13,
+      leasetest 19, modtest 23, musictest 38, platetest 37, doortest 28
+      ALL PASS; permtest 21/23 = the documented pre-existing class
+      (vocab-1..10 identical); mcpl manifest 28/0 + effective-test green.
+      Scratch worlds only; no production world touched.
+      Eye-check OPEN: in-browser spray + audible loop (bandpass water
+      timbre, day/night hush) — headless matrix proves protocol only.
+
+### WATER CONTRACT (vocab lane — drafted vocab-11, 2026-09-15)
+
+**Trigger.** A water feature is an entity carrying `comp {type:"water",
+data:{...}}`. The action strings `flow`, `still`, and `toggle` are WATER
+vocabulary on the freeform `use {id, action}` path (the reactions doctrine:
+other action strings pass through untouched — a fountain ignoring
+`use {action:"ring"}` is exactly correct). `flow` on running water and
+`still` on still water are no-ops that still log the `use` and skip with
+`water-skip`. Attaching/removing the comp is builder (rank 1) — the
+author's standing decision that this thing is water, identical doctrine to
+reactions/phrases/region/door/lamp/guestbook/portal/music/plate.
+
+**State — the fold is the state; spray and sound are DERIVED.** A water
+feature has exactly one durable bit: running or still. Every state change
+is ONE world-authored `comp` transition write (doors/lamps doctrine):
+`comp {id, type:"water", data:{...authored, on:<bool>, at:<ts>}}`.
+NOTHING else is stored anywhere. The SPRAY (a particles declaration) and
+the SOUND (a looped ambient) are pure functions of the folded comp,
+evaluated live by every consumer — never written, never tweened, never
+per-frame.
+
+**The water law, honored.** The engine ships NO water preset (the
+house law: water is geometry, never particles). The spray realization
+therefore DERIVES a particles declaration built from a REAL preset with
+direct upstream opts — fallback `dust` with `{count 90, size 0.035,
+opacity 0.5, speed 1.4, lifetime 0.7, area [0.5, 0.2, 0.5]}` plus
+authored `color`, `texture`, `grow`, `wobble`, `seed`, `quality` riding
+the existing particles bounds — and feeds it to the EXISTING emitter host
+(the same registry emitters.js uses). A fake `preset:"water"` bag is
+never authored, never folded, never promised.
+
+**Audio — the force doctrine, looped.** Water sound is AMBIENT, not an
+event: a running feature loops; a stilled one stops. The state
+transition broadcasts ONE presence-plane message per change
+`{type:"sound", id, water:{state:"start"|"stop"}, p:[live pos], at, by,
+cause}` whose note carries `{loop:true, hz, sec, gain, wave}` — the
+sound message music already speaks, extended by ONE loop flag. Never
+logged, never folded, never replayed: a late joiner hears nothing from
+the past; their own client derives the standing loop from the FOLDED
+comp (on:true ⇒ water sounds) exactly as it derives the spray — the
+particles doctrine (a fire lit last week is in look(), not in your ears;
+a fountain running since yesterday is a standing ambient, resumed, not
+replayed).
+
+**Day/night states — one arithmetic.** The loop's loudness is a pure
+function of the sky every client already folds: shared/water.js derives
+the multiplier from `hoursAt(sky, now)` + `dayPhase` (shared/forecast.js
+— the SAME derivation the weather narration uses): dawn 0.8, day 1.0,
+dusk 0.8, night 0.5 (authored `nightGain` [0,1] default 0.5, overall
+`gainScale` [0.1,3] default 1). The browser reads `skyArgs()`; the mcpl
+agent reads its folded `skyState`; the tests import the same function.
+Night water is quiet water — one 8KB comp, zero traffic, the day cycle
+that already exists.
+
+**Effects — one comp write, one sound, one say.** A state change appends
+TWO log entries, in order: the comp transition write and a `say`
+(actor `world`, args `{text:<line>, id, water:{on:<bool>, who, at},
+cause:<use seq>, by:<user>}` — the phrases/doors/lamps/guestbook/
+plate provenance grammar exactly). Line defaults: `the fountain flows`
+/ `the fountain stills` (authored `flowAt`/`stillAt` override, ≤200c
+clamped). The sound broadcast is presence-plane only. A
+`water-trigger` flight entry (kind `reaction`) records cause→effect.
+No other verb can be minted from a water use — no spawn/place/motion,
+ever.
+
+**Authority/reach.** Using a water feature is rank 0 (anyone present,
+like a tap) plus the ARM'S-REACH gate (vPunt arithmetic): the user's
+LIVE pose within `reach` metres (authored, clamped [2,12], default 4)
+of the feature's LIVE position (lease stream pos if leased, folded pos
+otherwise). Out-of-reach use is a `water-skip` naming the distance.
+Spectators bounce at the shell (`use` is spectator-gated there).
+Lock composes as for doors (lock refuses place/punt/spawn/comp/remove —
+not `use`): a locked fountain still flows and stills.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path; folding a historical use or comp never
+re-fires. On restart the world folds `on`/`at` from the log — every
+client derives the same spray and resumes the same loop (ambient
+realization from folded state, never a replay mint). The say reads as
+history.
+
+**Rate.** Transitions are user-paced (the verb rate bounds `use`); each
+mints at most 3 effects (comp + say + presence sound); no-ops and
+out-of-reach uses mint nothing. The loop itself costs ZERO log traffic
+— one derived AudioContext source per running feature per client,
+bounded by authored comps.
+
+**Failure behavior.** Malformed comp → clamp + `water-lint`
+(particles-lint doctrine): `fall` [0.2,8] d1.4 (jet height, metres —
+the browser uses it for the loop's volume taper), `reach` [2,12] d4,
+`gain` [0.05,1] d0.5, `nightGain` [0,1] d0.5, `gainScale` [0.1,3] d1,
+`spray` non-boolean treated as true, lines clamped 200c, unknown keys
+ride (the bag is public annotation). Missing entity → silent skip with
+`water-skip`. The whole reaction wrapped in try/catch (house rule 3 —
+no fountain takes the server down).
+
+**Browser path.** `client/lib/water.js` (the door.js/emitters.js
+pattern — one import line in main.js, zero other edits to the
+pilot-dirty file): (a) SPRAY — derives the particles bag from the
+folded water comp when `on` and feeds the existing emitter registry
+(retire when still/removed — the same lifecycle fire uses); (b) SOUND —
+plays/stops a looped noise-shaped source through the page's ONE shared
+AudioContext into the `world`-category gain (the music.js path: the
+existing volume slider governs water for free), modulated live by the
+day/night multiplier from `skyArgs()`. State is readable from any
+folded snapshot; scripts and future UI consume `comp.water.on` without
+a new protocol surface.
+
+**MCPL path.** The agent's `sound` case narrates loop start/stop as one
+act line through the denoiser ("fountain1's water starts" / "goes
+quiet"); `look()` lists the affordance (shared/water.js
+`describeWater`, the describeDoor pattern) with the flow/still actions
+and current state. An agent toggles through the ordinary `use` verb.
+
+**Intent.** The world has water you can hear and turn off. A plaza
+fountain that quiets for the night, a millrace that answers a hand, a
+garden tap a child can reach. One 8KB comp, no script, no samples, no
+new verb — spray from real presets, sound from first principles, the
+day cycle doing the modulation.
 - [ ] Growth stage: authored plant lifecycle state machine, restart-safe,
       late-join folds to current stage.
 - [ ] Animal companion: follower entity with spawn/despawn ownership and
