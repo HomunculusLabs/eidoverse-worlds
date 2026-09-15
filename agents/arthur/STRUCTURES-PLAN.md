@@ -10461,3 +10461,99 @@ reviews/struct170-monkeysaddle-v2/ (10 v2 frames + before/v1 bytes,
 ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-170, D+0 E+0). Zero world mutations/uploads/verbs/comp-edits/
 shared-budget use. Zero pushes.
+
+## struct-171 (2026-09-14): R11-7 THE KUEN — BUILD+JUDGE TICK (probe 7/7,
+## v3 accepted banked; bead night-contract cured at source; placement = 172)
+
+171%3=0 placement slot, nothing takeable — monkeysaddle v2 GATED on native
+18m PASS (struct-169v law; native vision ABSENT from cron catalog — only the
+zai-vision MCP loads, same disclosed class as struct-169/170; hypar row 22
+also carries, native-only) — R11 carry build per struct-155/166 precedent.
+Gate ALL PASS real exit 0 tick-start 9b83581c (99 PASS, /tmp/struct171-gate.txt,
+unpiped). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN
+nx-struct rows). Ledger max re-derived struct-170 -> tag struct-171.
+
+FORM-LEDGER GAP (fresh grep): kuen clean (3 incidental mentions only, no
+build); klein/hopf BARRED (4D-descendant rule, struct-111/142); cardioid/
+cassini BARRED (nephroid+lemniscate kin standing); dini/breather BARRED
+(helicoid+pseudosphere kin); kuen NAMED next-round-clean by struct-165.
+
+CONCEPT (written before build): THE PSEUDOSPHERE'S SIBLING THAT GREW A
+HANDLE. Kuen 1884: K = -1 everywhere — the pseudosphere's own curvature —
+but a CREASED SHELL (two mirror halves folded along a planar gothic-arch
+rib) with a FLAT COILED HANDLE (the v=0 spiral, r 2.0 -> 0.44 eye) sweeping
+its equator. Shell axis-vertical, lower tail socketed in a stone drum,
+upper tail capped by a brass sleeve; iron rib tube on the fold, iron hem on
+the closed boundary, brass spine on the spiral heart-line, ONE glow bead.
+Folly class, no walk owed. Kin: elevates the standing pseudosphere
+(different silhouette class); costa owns "three ends", kuen owns "the fold
++ the coil".
+
+PROBE (struct171-probe-kuen.ts, tracked) — lineage law held: parametrization
+secured from Wikipedia wikitext (Virtual Math Museum / Gray 2006 p.484
+citation; MathWorld cross-check confirms class; K=-1 numeric check is the
+formula cross-check). RED first (C2 check-side: odd z makes authored waists
+LOCAL extrema; C4: Xu(0,v)=0 — CUSPIDAL EDGE at u=0, the true geometry,
+chart degenerates on the fold by construction), both rewritten source-true:
+ALL CHECKS PASS 7/7 real exit 0. K=-1 worst |K+1| 1.4e-6 at the disclosed
+FD floor (two step sizes agree 1.58e-6); core 2 sech(v) + z = v - 2 tanh(v)
+machine-exact; spiral r = 2/sqrt(1+u^2) angle = u - atan(u) exact; honest
+immersion (0 pierce candidates); tail collars feasible (rim r <= 0.322).
+
+BUILD (mkv3-kuen.ts, NEW): one half u in (0,4.4] meshed 120x145 + EXACT
+mirror (mirror law X(-u,v)=(x,-y,z) asserted at 100 pts) = 34,800 verts /
+68,544 tris; MIRROR EXPLOIT is the build's own law. Dressing: iron rib on
+the true core curve, closed iron hem on the domain boundary (720 samples,
+max step 0.042 asserted), brass spine on the v=0 spiral, brass sleeve
+(band-covered asserted), stone drum (embed law 8..13cm, caught the build's
+own gate once — LIFT 2.33->2.42), crown bead. texMat lanes ku_bone
+(DoubleSide, struct-139 law) / ku_iron / ku_brass (ep_brass recipe — the
+costa metal-0 cure) / ku_stone; 5 nodes; 1 glow KEEP.
+
+DEFECT LADDER (each caught pre-judge by the build's own gates): (1) drum
+embed law fired — rim band 22cm under drum top -> LIFT 2.42 (embed 8..13cm,
+sleeve rides the shift); (2) v3 envelope law fired on the crown bead —
+height law updated to crown top 4.66.
+
+DECODE (struct171-decode-kuen.ts, tracked): ALL PASS 11/11 real exit 0 +
+RED control 9 FAILs on unduloid bytes. Two CHECKER-side bugs caught
+RED-first: Node Buffer .buffer pooling law (sliced Buffer returns the WHOLE
+pool — readFloatLE per component), and mergeByMaterial fuses spine+sleeve
+into one brass bucket (source-true law = bucket range 2.392..4.510 exact).
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, rides the monkeysaddle gate session):
+- v1 gameplay/front: identity PASS, silhouette PASS, grounding PASS; coil
+  visible, rib continuous, film closed, drum intentional.
+- TOP Sev-5 "flat disk, no windings" DETERMINISTICALLY FALSIFIED (probe law
+  11): spine sweeps 0.972 turns by construction (never concentric windings);
+  89/89 spiral points occluded from a top camera by film above — rig
+  vantage, not geometry.
+- BEAD-UNREADABLE (18m day + night, both frames): sightline math — the 18m
+  ray crosses the inner windings (r 0.45..0.63) inside their tube band
+  y[2.392,2.448]; the EYE is invisible from every low walking camera.
+  Pixel probe (struct171-pixel-probe.ts): day 392 warm px at the equator,
+  night 0 — eye-bead night contract geometrically undeliverable. CURE at
+  source (polish-278 summit-ember law): bead -> crown (5cm seated in the
+  sleeve), r 0.10.
+- v3 night: 1 quiet warm point at crown PASS, silhouette PASS (shell-edge
+  low contrast = lane-standard unlit-bone margin, enneper/boy/costa class).
+- v3 gameplay: identity/silhouette/grounding/accept ALL PASS; sole Sev-1
+  margin names the spine-on-coil seam — the design itself.
+
+DISPOSITION: v3 ACCEPTED BANKED NOT PLACED. sha256
+5b7ad1a3a925027d... deterministic x2 mtime-verified (v1 0336d604, v2 40db
+5b6e banked before/ per untracked-asset law); envelope 3.05x4.66x2.13
+y[0..4.660] center-x +0.50 lean (plan-center offset law applies at
+placement). Placement = struct-172 committed carry: fresh census scan (8m
+NN, district caps, Math Avenue band per CITY-PLAN-V2), oblique-yaw law (the
+spiral face reads edge-on at yaw 0 — seat the equator ~40deg off the
+approach normal, struct-104), terrain preflight, hash-gated plain spawn
+nx-struct-kuen, comp {}. Folly class — no walk owed. Native re-judge debt:
+kuen v3 rides the owed board (fallback-judged acceptance, disclosed).
+
+Files: struct171-probe-kuen.ts + struct171-decode-kuen.ts +
+struct171-pixel-probe.ts + assets/mkv3-kuen.ts (all NEW; mk staged -f),
+reviews/struct171-kuen{,-v2,-v3}/ (ignored), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-171, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
