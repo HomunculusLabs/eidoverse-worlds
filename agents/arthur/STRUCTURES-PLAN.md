@@ -10613,3 +10613,109 @@ Files: struct172-scan-kuen.ts + struct172-terrain-kuen.ts +
 next-place-struct172.ts (all NEW, tracked), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-172, D+1 E+0). One upload +
 one verb total (shared budget). Zero pushes.
+
+## struct-173 (2026-09-15): R11-8 THE CATALAN — BUILD+JUDGE TICK (probe
+## 14/14 after 3 checker-side REDs, decode 13/13 + RED control, judged 11/11
+## fallback; v1 ACCEPTED BANKED NOT PLACED)
+
+173%3=2 build slot (kuen placed struct-172; nothing takeable: monkeysaddle
+v2 GATED on native 18m PASS — not payable in cron, native vision absent
+from the catalog, only zai-vision MCP loads, same disclosed class as
+struct-169/170/171; hypar row 22 native-only, carries; costa PAID).
+Gate ALL PASS real exit 0 tick-start 235b21eb (99 PASS,
+/tmp/struct173-gate.txt, unpiped). Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-172 -> tag struct-173.
+
+FORM-LEDGER GAP (fresh grep): catalan 0/0/0 across STRUCTURES-PLAN +
+IMPROVEMENTS + IMPROVE-PLAN; henneberg/bour/trinoid/riemann/seiffert/
+torusknot also clean. Catalan selected: the minimal-surface lineage's
+parabola-swept member completing the trio the plan itself named at
+struct-165 (village owns catenoid + helicoid via screwwell; costa is the
+modern genus-one completion; kuen owns the fold+coil; enneper/boy/gyroid/
+unduloid standing) — and its v=0 section IS the cycloid, the
+brachistochrone curve (struct-119's rail), elevated rail->surface.
+
+CONCEPT (written before build): THE VAULT SWEPT BY FALLING PARABOLAS.
+Catalan 1855: the unique minimal surface swept by a family of true
+parabolas — every fixed-u curve is an EXACT parabola whose vertex rides
+the surface's own geodesic, and that geodesic IS THE CYCLOID
+(u - sin u, 1 - cos u). The build presents the FULL strip: two wings
+springing from a low cusp, grounded at the single mast foot in a stone
+drum, rim corners rising free to 2.6m — a saddle vault whose every
+cross-section is a parabola and whose spine is the fastest-fall curve.
+Folly class, no walk owed (zeno..kuen precedent).
+
+HONEST NEGATIVE (probe C10, the tick's headline discipline): Catalan's
+surface is NOT RULED. Catalan 1855 proved the only ruled minimal surfaces
+are the plane and the helicoid. Numeric confirmation: asymptotic curves
+deviate ~0.1m from straightness per 1.6m span. The build header claims
+"swept by parabolas", never "ruled" — the false-claim class was caught
+by the probe BEFORE it reached a build header (probe-first law).
+
+PROBE (struct173-probe-catalan.ts, tracked) — lineage law: Wikipedia
+wikitext citing Gray 1997 pp. 692-693 / Catalan C.R. 1855. RED first:
+3 checker-side bugs caught (1/16 vs 1/8 parabola coefficient; mast-line
++1 dropped; LIFT -1 dropped) — each fixed source-true, then ALL CHECKS
+PASS 14/14 real exit 0. Laws: cycloid spine EXACT (1000 pts); parabola
+sweep affine-in-z^2 with closed-form coefficients 8.9e-16; H=0 at 3.7e-8
+FD floor; both mirrors EXACT (u-mirror is a PROPER rotation, det +1 — no
+winding flip, unlike kuen's reflection); mast line regular (no cuspidal
+edge); boundary u=pi is a TRUE parabola x==pi, y=2+z^2/8; SEE-SAW law
+cusp-drop == corner-rise == cosh V - 1; honest immersion 0 pierces.
+
+BUILD (mkv3-catalan.ts, NEW): FULL strip u in [-pi,pi], v in [-1,1],
+S 0.75, LIFT 0.30+S(cosh 1 - 1); one wing 140x101 meshed + rotation-
+mirror (winding preserved) = 28,280 verts / 55,600 tris; iron hem closed
+on the full boundary (961 samples, max step 0.033); brass spine on the
+TRUE cycloid geodesic crown-to-crown (420 steps, z=0 plane asserted);
+stone drum socket (mast bottom embeds exactly 10cm; film-below-drum-top
+worst rho 0.352 inside r 0.55); TWO crown beads glow_ca_1/2 (polish-278
+lineage) seated on the film at the rim vertices. texMat lanes ca_bone
+(DoubleSide) / ca_iron / ca_brass (ep_brass recipe, metal 0) / ca_stone.
+Deterministic x3 byte-identical mtime-verified sha256
+4f0c2a4a7b506f56... full 4f0c2a4a7b506f56b8916b264cfb4b80a0d70c93a6b14b1
+d16ae03a088a3cf06, 1,942,808B. Envelope 4.89x2.64x3.18 symmetric, 6
+nodes (4 texMat + 2 glow KEEPs).
+
+DECODE (struct173-decode-catalan.ts, tracked): RED control 11 FAILs on
+kuen bytes (checker can fail). Two checker-side bugs caught RED-first:
+BIN +8 chunk-header offset missing (5.6e19 garbage reads — kuen decode
+law re-derived); envelope expectations missing BEAD_R/HEM_R. One
+source-true fold-band exclusion written with the reason in-line (near
+u=0 the z-band cannot discriminate v=0 from small v — 4 first-strip
+verts legitimately ON the surface): film cycloid-spine census 214/214,
+symmetry exact, brass spine crown-to-crown max|z| 0.028, hem covers the
+full boundary, ALL PASS 13/13 real exit 0.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, rides the monkeysaddle gate session):
+- gameplay 18m: 4/4 PASS (identity vault reads, silhouette symmetric
+  wings ~3px, grounding drum+shadow, zero defects; hem unbroken tip to
+  tip).
+- night: 3/3 PASS (exactly two warm points at the crown seats, symmetric
+  about the axis, 8-12px hard-edged, zero bloom, zero stray glow).
+- front ~10m: 4/4 PASS (spine warm line visible mid-span both wings,
+  cycloid path confirmed high-at-tips/down-to-cusp; parabola rhythm
+  smooth no ribs; beads seated at rim vertices; no holes/seams). Two
+  flags raised and BOTH closed deterministically (probe law 11):
+  "teardrop opening at cusp" = the true strip geometry (wings cross in
+  an X between the boundary hems — designed aperture; scanline shows the
+  bone film band between hem lines); "bottom-left corner sliver" = 100%
+  ground pixels, avg RGB identical to ground control — no orphan
+  geometry (decode: exactly 6 meshes).
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-174
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+band eligibility per CITY-PLAN-V2), oblique-yaw law (the cycloid spine
+face reads edge-on at yaw 0 — seat ~30-40deg off the approach normal,
+struct-104), terrain preflight, hash-gated plain spawn nx-struct-catalan,
+comp {}. Folly class — no walk owed. Native re-judge debt: catalan v1
+fallback-judged acceptance joins the owed board (monkeysaddle gate,
+hypar row 22, kuen v3).
+
+Files: struct173-probe-catalan.ts + struct173-decode-catalan.ts (NEW,
+tracked), assets/mkv3-catalan.ts (NEW, staged -f), reviews/
+struct173-catalan/ (10 frames, ignored), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-173, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
