@@ -311,8 +311,23 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       (SELFTEST 29 gate families, self-booting, fd-checked). Servergate:
       smoke 85/0 + leasetest 19/0 + websocket-input 30/0 pinned tree.
       Next head: giant payload handling.)
-- [ ] Giant payload handling: max-frame enforcement with explicit error, no
+- [x] Giant payload handling: max-frame enforcement with explicit error, no
       OOM path.
+      (pressure-17, 2026-09-15: worktree @ 4cfc52a5, PORT 8990, 33s, 175
+      peak — 24 perf @15Hz + 136 spec, then 11 giant legs joined-first:
+      6 complete std-WS bombs (4x1.5MB + 2x8MB) simultaneous — 6/6 explicit
+      "message too large" + close 1009 EXACT, p95 15-28ms, 0 hung/silent;
+      3 declared-64MB trickles held open at exactly 256000B delivered
+      (runtime ignores declared headers, buffers delivered bytes only);
+      1 declared-32MB 600KB dumper killed abruptly mid-dump <1MB (bounded,
+      no close frame, cleanup logged); boundary 240KB sub-cap pose traversed
+      to the semantic receipt with socket alive at t+12 — cap is exactly
+      where config says; RSS +54-59MB < 60 (bomb buffering dominates,
+      declared sizes never preallocated); fairness joins/says/fps/gaps/
+      roster/log/rejoin all at baseline. PASS, no patch — two-layer defense
+      measured: runtime bounds buffered bytes, server refuses complete
+      oversize explicitly. tools/pressure-giant.ts (SELFTEST 29 gates,
+      coalesced-frame walker). Servergate smoke 85/0 pinned tree.)
 - [ ] Clock-skew tolerance: late/reordered client timestamps never corrupt
       sequence ordering.
 - [ ] Emoji/text flood in chat: rapid-fire says cannot starve verb intake.

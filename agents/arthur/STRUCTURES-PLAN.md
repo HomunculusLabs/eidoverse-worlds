@@ -12031,3 +12031,125 @@ Files: struct187-scan-fourier.ts + struct187-select-fourier.ts +
 struct187-terrain-fourier.ts + next-place-struct187.ts (all NEW, tracked),
 STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-187,
 D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
+
+## struct-188 (2026-09-15): R11-17 THE DELIAN ALTAR — BUILD+JUDGE TICK
+## (probe caught my own textbook-parametrization error RED-first; decode
+## caught a real KEEP-group root-transform displacement; judge caught a real
+## crown-bead occlusion — all three cured in-tick; v2 judged PASS on all
+## three frames; ACCEPTED BANKED NOT PLACED)
+
+188%3=2 placement slot, nothing takeable — no banked form (fourier placed
+struct-187), all owed native debts cron-unpayable (tool catalog carries only
+the zai-vision MCP, tool_search fresh this tick; same disclosed class as
+struct-169..187) — build tick per the 178..187 alternation, placement =
+struct-189 committed carry. Gate ALL PASS real exit 0 tick-start at 69a03e07
+(city-148; /tmp/struct188-gate.txt, unpiped). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 17th tick, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-187 -> tag struct-188 (re-checked immediately
+before append).
+
+FORM SELECTION (fresh grep, all three ledgers): cissoid/diocles/delian 0/0/0
+— the Greek construction-curve register (cissoid/conchoid/quadratrix) is
+genuinely unclaimed. Kin-checked: astroid/tautochrone/clothoid/
+brachistochrone/lemniscate are curves but none is a CIRCULAR CUBIC and none
+carries its generating-circle parent; Agnesi's versiera passed over as
+bell-kin to galtonboard; superellipse owned by borromean; moon owned by the
+moon gate; trumpet owned by pseudosphere; reuleaux/helicoid standing. Era
+lineage: Dürer (melencolia) -> Penrose (tribar) -> Diocles ~180 BC — the
+math-art register continues to its Greek root.
+
+CONCEPT (written before build): THE CURVE THAT DOUBLED THE CUBE. Apollo
+demanded a cubical altar of exactly twice the volume; compass and
+straightedge failed; Diocles answered with a new curve. Rendered standing:
+a stone ribbon of 96 arc-uniform tangent voussoirs (0.34x0.34) traces the
+cissoid y²(2a−x)=x³, a=1.65, from its ground cusp up through the exact
+crown crossing (a,a) and on toward its asymptote; the GENERATING CIRCLE
+stands as a brass arch (tube r0.05, springs at plinth top) whose crown the
+curve passes exactly; the TANGENT LINE x=2a stands as an iron post
+(0.14x3.95x0.14) the curve approaches forever and never touches (min gap
+0.737m); two brass studs on the plinth diameter mark the MEAN
+PROPORTIONALS m1=a·2^{1/3}, m2=a·2^{2/3} (the chain a:m1:m2:2a whose
+existence IS the doubling, m1³=2a³); a brass bar at the curve's height over
+m1 carries the mean into the post; one warm bead at the crown crossing.
+Envelope 3.54x3.95x0.50 origin-centered. Folly class, no walk owed. Nodes
+4 (ci_stone + ci_brass + ci_iron + glow_ci_1 KEEP).
+
+PROBE (struct188-probe-cissoid.ts, tracked): ALL PASS 9 laws + RED control.
+Self-catches this tick: (a) MY OWN from-memory "textbook" parametrization
+x=2a·sin²θ/cosθ, y=2a·sin³θ/cos²θ FAILED its own implicit-cubic check
+(max rel err 0.576) — construction-derived true form x=2a·t²/(1+t²),
+y=2a·t³/(1+t²) (slope parametrization; line-angle form x=2a·sin²θ,
+y=2a·sin³θ/cosθ) verified to 1.1e-15 against the implicit curve AND the
+independent closed form y=√(x³/(2a−x)); (b) chord-interpolated stations
+carried 3.4e-8 curve error — stations now snapped to exact curve points
+(the mk builds the same way); (c) probe top-level process.exit(0) killed
+the importing mk build silently — exit only on failure (fourier chassis
+law). Laws: L1 cubic + dual derivation, L2 single crown crossing at (a,a)
+exact, L3 generating circle exact (springs at plinth top, ARCH_D trim),
+L4 mean chain geometric to 1e-12 with m1³=2a³, L5 bar height derived from
+the curve at m1, L6 arc-uniform voussoirs spread 1.0000 on-curve 1.2e-15,
+L7 grounding (ribbon band bottom embeds 0.047 in plinth; all feet inside),
+L8 asymptote never-arrives ≥0.30 (measured 0.737), L9 envelope.
+
+BUILD (assets/mkv3-cissoid.ts, staged -f): v1 sha c6ceee13 below-grade
+arch-spring catch (tube end rings dip 0.58mm under grade at y=0
+centerline ends) — cured by ARCH_D spring trim (centerline ends at plinth
+top 0.10, rings bottom 0.05, springs embed 0.05 into stone; how real
+arches meet their bases; crown untouched). v1b sha b51c69ad.
+
+DECODE (struct188-decode-cissoid.ts, tracked) caught a REAL BUILD DEFECT:
+the glow KEEP group lost the root SHIFT_X — mergeByMaterial bakes the root
+transform into merged buckets but re-mounts KEEP groups WITHOUT it, so the
+bead stood 1.67m off the crown (world x=1.65 vs crown -0.02). CURE (the
+fourier chassis pattern): root stays IDENTITY, every position authored in
+final world-local coords. Two further checker-side bugs fixed diag-first
+(same-x vertical distance misclassifies the steep asymptote end 966/2304
+-> nearest-point classification 2304/2304; brass arithmetic omitted stud
+verts) — geometry was always clean. v2 decode ALL PASS 8/8 + RED control
+(foreign catalan bytes FAIL 8/8): D1 census 4 nodes, D2 stone 2304 ribbon
++ 24 plinth unassigned 0, D3 curve law from bytes (90 verts at the crown
+crossing), D4 brass arch 1771 + studs 152 + bar 24 unclassified 0, D5
+post at the asymptote exact, D6 bead, D7 envelope drift 0.0000, D8 named
+texMats.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- front v1: PASS 4/4 BUT the judge caught a REAL occlusion defect
+  (struct-52 class): the crown bead at z=0 sits fully inside the ribbon's
+  0.34 depth — zero pixels day or night. Cured: BEAD_Z = SEC/2 (half-
+  embedded on the front face, protrudes 0.075, max z 0.245 < plinth 0.25).
+- front v2: PASS 2/2 — bead reads as a deliberate gold accent at the
+  crossing; judge independently confirmed the construction geometry ("the
+  crown crossing occurs at the diameter's midpoint — the point (a,a) that
+  the true cissoid passes through").
+- gameplay 18m: PASS 4/4 — single deliberate monument, planted, zero
+  defects; margins disclosed (faint cast shadow = chassis lighting; bar-
+  post tonal merge at 18m; identity headroom "a monument, not yet an
+  altar" — honest; the open-air ribbon terminus is the asymptote design).
+- night: PASS 3/3 — sole-light law EXACT (one quiet warm bead at the
+  crown, zero bloom, zero pooling, clean dark field).
+
+DISPOSITION: v2 ACCEPTED BANKED NOT PLACED. sha256
+290b6e0cb143a2ee1fa9fa1ae729a395eb12b20f7e3dfbadc20b6516c8b85662 x2
+deterministic mtime-verified. Placement = struct-189 committed carry:
+fresh census scan (8m NN, district caps, Math Avenue eligibility per
+CITY-PLAN-V2; terminal island 8 of 5-9 cap, procession continues past
+fourier r270), YAW LAW — face monument (the construction reads on the +Z
+face): oblique 30-40deg off the approach walk per struct-104 (melencolia
+class), terrain preflight over the TRUE rotated footprint, hash-gated
+plain spawn nx-struct-cissoid, comp {}. Folly class — no walk owed.
+Native re-judge debt: cissoid v2 joins the owed board (monkeysaddle gate,
+hypar row 22, kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1,
+melencolia v3, tribar v2, fourier v1).
+
+Bill eye-check pointer (after placement): the stone curve rising through
+the brass arch's crown toward the iron post it never reaches; the two
+studs on the plinth are a and the doubled altar's mean proportions — walk
+the plinth line and read a : m1 : m2 : 2a; after dark, one warm bead at
+the crossing.
+
+Files: struct188-probe-cissoid.ts + struct188-decode-cissoid.ts (NEW,
+tracked), assets/mkv3-cissoid.ts (NEW, staged -f), reviews/
+struct188-cissoid/ (10 frames v2, ignored), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-188, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
