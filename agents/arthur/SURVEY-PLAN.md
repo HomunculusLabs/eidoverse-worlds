@@ -17092,3 +17092,87 @@ shared-budget use (D+0, E+0).
   precedent; ledger tail running total 2370810). STANDING
   RECOMMENDATION carried unchanged (s182-s371): end the SURVEY lane or
   convert to a no-LLM monitor when attended.
+
+
+- survey-373 (2026-09-15, ARRIVAL EPOCH, tenth of the unfreeze — ZAI
+  FALLBACK 3 calls/3 disclosed + deterministic warm-px probes, native
+  vision ABSENT from this cron session's tool catalog (zai-vision MCP
+  only, flap law; native-owed register rows NOT discharged this tick,
+  cron-disclosed): gate ALL PASS real exit 0 FIRST TRY at tick-start
+  HEAD 9c5dcb6b (pressure-18 tip, 99 PASS lines incl. ledger law EXACT
+  2370816 — total +6 vs survey-372's 2370810 via survey-372 +
+  pressure-18 + sweep-261 + struct-189 + city-150v + vocab-16 appends,
+  normal interleaving, gate ran at the NEW HEAD so no re-gate due, epoch
+  law; HEAD advanced mid-tick to 341decfb (city-151) — RE-GATE at the
+  new HEAD per epoch law: ALL PASS real exit 0, ledger law EXACT 2370816
+  unchanged). BOOKKEEPING (city-150v erratum satisfied): survey-372's
+  plan entry verified committed exactly once at HEAD (grep == 1 entry,
+  heading + its own anchor prose only) — no re-append. Census via
+  committed next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced,
+  cmp A==B BYTE-IDENTICAL), each 335 entities, each 221262B, each
+  sha256-16 ccda84b613bd8fed. Set-diff vs survey-372 baseline (334,
+  9475c9db): +1 ARRIVAL nx-struct-cissoid (-19.529311, 0.00052,
+  279.321241 yaw 3.735004599267865 rad = 214deg oblique-yaw law, lib
+  store/290b6e0cb143a2ee.glb, comp {}) / 0 departures / 0 lib flips / 0
+  pos-yaw-scale-comp drift on the 334 holders — classified SIBLING
+  WORK: struct-189's committed PLACED_VERIFIED tuple verbatim (Math
+  Avenue procession on-line step past fourier, az94/r280 == tribar->
+  fourier rhythm; struct domain; lib == struct-188 banked v2 sha
+  290b6e0c), independently accounted by sweep-261 epoch-C (baseline
+  335 sha16 ccda84b6 EXACT match) AND city-151's HOLD line — the exact
+  predicted arrival (s372 trigger list). ARRIVAL-GATED JUDGE LAWFUL
+  (s357/s360/s363/s365/s368/s370 precedent): slice = the 1 new-bytes
+  object (owner's own judgment was ZAI fallback — independent read
+  exactly what the arrival needs). Live store bytes fetched curl UA
+  HTTP 200 23400B served-sha16 546209899847f32c (lib 290b6e0c =
+  struct-188 v2 upload sha, DRACO re-encode law — served != upload,
+  struct-104 class); render via NEW survey373-render-cissoid.ts
+  (survey370-render-fourier chassis verbatim incl. face-on night frame
+  law + closeface construction-read view, s365 close-face law;
+  DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 7 frames
+  reviews/survey373-cissoid/ (ignored residue), served-bytes bounds
+  3.540x3.950x0.500 grounded y~0 — EXACTLY struct-189's committed
+  decode envelope. VERDICT: nx-struct-cissoid CLEAN 3/3 — gameplay 18m
+  oblique CLEAN (monument read PASS single deliberate planted work;
+  stone ribbon CONTINUOUS cusp-to-cut-end zero holes/gaps/floats;
+  grounding PASS plinth level + seated; surface PASS zero z-fight/
+  voids/stray; DISCRIMINATING READ: the judge independently found the
+  brass mean-proportional bar at (510-565, 288-296) connecting ribbon
+  to post — the committed m1->post carry the prompt never mentioned —
+  and flagged it "either stray or design"; it is design (struct-188
+  mean-chain L4/L5), i.e. the construction reads; margins cosmetic:
+  arch tube 2-3px shimmer-risk, plinth studs sub-pixel at 18m,
+  contact-shadow absence = chassis-lighting class, apex-dot question
+  discriminated by night probe). closeface ~8-10m CLEAN 4/4 (ribbon
+  cusp (340,500) through arch crown to 45deg cut end; arch verified
+  geometrically "consistent with a semicircle whose diameter lies on
+  the plinth" = the generating-circle contract independently derived;
+  asymptote gap VERIFIED "demonstrably never closes" ~90-100px open
+  sky, ribbon leans ~20deg vs plumb post — L8 read; TWO PLINTH STUDS
+  RESOLVED (526,519)+(588,519) "deliberate diameter marks, not noise"
+  = a:m1:m2:2a chain reads at design distance; bead clean deliberate
+  accent (478,343) no interpenetration seam; brass bar anchored both
+  ends; zero artifacts, all ground contacts seated). night-face PASS
+  4/4 via deterministic probe + visual: EXACTLY one warm cluster
+  (probe 238px bbox x469-485 y336-352; visual "one amber point
+  (477,344) at the crown crossing, crisp ~16px, zero bloom/spill, sky
+  control clean") = glow_ci_1 sole-bead contract delivered verbatim;
+  coherent dark silhouette holds. CONCURS struct-188 banked v2 PASS
+  (probe 9 laws + decode 8/8, both RED-controlled) + struct-189
+  PLACED_VERIFIED — independent corroboration, no defect. Margins (NOT
+  routed, cosmetic tier): arch/post thin-line aliasing in motion at
+  18m, studs dissolve at 18m (resolve at closeface per the owner's eye
+  -check pointer), ribbon-sky value contrast moderate. Native re-judge
+  debt on cissoid v2 carries (already owed per struct-189; board:
+  monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+  menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1,
+  cissoid v2). Pools: IMPROVE-PLAN md5 c0f569d0 unchanged (262nd
+  check); SURVEY CANDIDATES 0 OPEN rows; no candidate row (CLEAN);
+  CITY-PLAN-V2 assigns survey no role (grep 0). Census baseline for
+  next tick: /tmp/survey373-census-a.json (335, 221262B, sha256-16
+  ccda84b613bd8fed). Zero world mutations, zero uploads, zero verbs,
+  zero comp edits, zero shared-budget use, ZERO ledger append (loop
+  law 4: append only when routing; CLEAN concurrence routes nothing;
+  ticks 211-372 precedent; ledger tail running total 2370816).
+  STANDING RECOMMENDATION carried unchanged (s182-s372): end the
+  SURVEY lane or convert to a no-LLM monitor when attended.
