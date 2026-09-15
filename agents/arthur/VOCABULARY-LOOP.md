@@ -804,6 +804,23 @@ no new verb.
       failed-arrival rollback (distinct from the portal contract).
 - [ ] Seat reservation: temporary occupancy claim with expiry and conflict
       rules.
+- [ ] Day/night bell schedule: authored time-of-day chime with fold-held
+      schedule and late-join truth.
+- [ ] Sound post: ambient audio emitter with distance falloff and mute
+      persistence.
+- [ ] Message board: authored multi-line notice with revision history and
+      rank-gated edits.
+- [ ] Vending stand: use-action item grant with stock counts and restock
+      rank.
+- [ ] Door chime: proximity-linked sound on open/close, rate-capped.
+- [ ] Lantern tour: scripted multi-entity light sequence with authored
+      timeline.
+- [ ] Bench dedication: named plaque attachment with owner rank and text
+      caps (extends inscription plate family).
+- [ ] Garden plot: plantable tile grid with per-tile state and harvest
+      interaction (extends growth stage family).
+- [ ] Music sequencer: step-grid composition on an instrument entity,
+      shared playback state, late-join sync.
 
 ### PHRASES CONTRACT (vocab lane — drafted and implemented vocab-1, 2026-09-14)
 
@@ -1760,6 +1777,124 @@ the write action hint. An agent writes through the ordinary `use` verb.
 plaque, a market board whose keeper changes the daily line — ONE authored
 surface, one verb, the words folded into the world like everything else.
 The guestbook remembers many; the plate SAYS one thing, visibly.
+
+### WAYSTONES CONTRACT (vocab lane — drafted vocab-15, 2026-09-15)
+
+**Trigger.** A waystone is an entity carrying `comp {type:"waystone", data:{...}}`.
+The action strings `hop` (aliases `teleport`, `blink` — deliberately disjoint
+from PORTAL's enter/travel/step/through, so hybrids decide unambiguously) are
+WAYSTONE vocabulary on the freeform `use {id, action}` path (the reactions
+doctrine: other action strings pass through untouched — a stone ignoring
+`use {action:"ring"}` is exactly correct). Attaching/removing the comp is
+builder (rank 1) — the author's standing decision that this thing carries
+people, identical doctrine to reactions/phrases/region/door/lamp/guestbook/
+portal/music/plate/water/growth/companion/weatherzone.
+
+**State — there is none.** A waystone is a STATIC TABLE in the fold
+(doors/portals doctrine): no comp transitions are ever minted by use, no
+occupancy, no cooldown state is persisted. Cooldown is in-memory per
+(world, traveler) — the phrases-cooldown doctrine; a restart forgets it,
+which is harmless (the log never moved anyone).
+
+**Pairing.** The comp names its partner by `pair: "<entity id>"` — BOTH ends
+are ordinary entities in the SAME world (a builder spawns two stones and
+points each at the other, one-directional hops are legal too). `pair`
+absent = a SELF-hop: the stone carries you to its own arrival anchor (a
+return pad, an author's repositioning surface). Fail-closed partner
+resolution at fire: `pair` naming a non-entity, a non-waystone, or the
+stone itself skips with `waystone-skip` naming why — a broken pair dies at
+the stone, never mid-flight. `pair` is VALIDATED at normalize, never
+clamped (a clamped partner is a lie about where the stone goes).
+
+**The arrival anchor.** Derived ONCE at fire, pure function of the comp +
+the TARGET's live pose (shared/waystone.js — the door/lamp/portal
+shared-verbatim pattern; the local→world transform is portalArrivalPos,
+imported, one arithmetic): the target's LIVE position (lease stream pos if
+leased — a waystone riding a ferry answers where it rides — folded pos
+otherwise) plus authored `arrive` entity-local metres (default [0,0,0],
+axes clamped ±8, particles-origin doctrine) rotated by the target's live
+yaw (align-1 convention), plus authored `yaw` (absolute arrival facing,
+default the target's live yaw).
+
+**Failed-arrival rollback — structural, not procedural.** The engine never
+moves anyone. It validates, derives the anchor, mints the say, and sends
+ONE puppet-channel request `{type:"puppet", waystone:{p, yaw}, by:"<id>"}`
+ROUTED to the traveler's socket (presence plane, never logged — the
+DESIGN.md consent surface, the same authority as a shove). The traveler's
+OWN client applies the anchor to its body and streams it at ordinary
+presence cadence (66ms): no rejoin, no snapshot, no restore race, NO
+mid-flight state exists anywhere. A client that declines, a spectator leg,
+a dropped socket — the body simply never moved (its last live pose is its
+truth; the leave path already stamps it). There is nothing to roll back:
+the fold never claimed the body moved. The logged `use` + say are the only
+durable trace. **A seated traveler does not hop** (a rider's position is
+its mount's): the engine skips fail-closed when the fold carries a body
+mount for the actor (`waystone-skip: unseat first`).
+
+**Effects — say + request only.** A fire appends exactly ONE log entry:
+`say` actor `world`, args `{text:<line>, id, waystone:{from:<source id>,
+to:<target id>, who, at}, cause:<use seq>, by:<user>}` — the phrases/doors/
+lamps/portal provenance grammar exactly. Line default `"<who> is carried
+away by the waystone"` (authored `line` overrides, ≤200c clamped). The
+puppet request is presence-plane traffic, never logged. A
+`waystone-trigger` flight entry (kind `reaction`) records cause→effect and
+the derived anchor. No other verb can be minted from a hop — no comp/
+spawn/place/motion writes, ever.
+
+**Authority/reach.** Using a waystone is rank 0 (anyone present, like
+walking) plus the ARM'S-REACH gate at the SOURCE stone (vPunt arithmetic):
+the user's LIVE pose within `reach` metres (authored, clamped [2,12],
+default 4) of the SOURCE's LIVE position (lease stream pos if leased,
+folded pos otherwise). Out-of-reach use is a `waystone-skip` naming the
+distance. Spectators bounce at the shell (`use` is spectator-gated there).
+Lock composes as for doors (lock refuses place/punt/spawn/comp/remove —
+not `use`): a locked stone still carries.
+
+**Cooldown (the whole abuse story).** Per (world, traveler): one fire per
+`cooldownSec` (authored, clamped [2,60], default 8) — hop-spam across any
+number of stones is bounded to one say + one request per window; the verb
+rate (12/4s) bounds the skipped `use` churn. Skips do not consume the
+window. In-memory only.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs ONLY
+from the live verb path; folding a historical use or say never re-fires
+and never re-sends a request. On restart the comp folds as authored; the
+says read as history; no bodies move; no puppet traffic reaches a fresh
+joiner. A late joiner sees the standing pair and the chat lines of past
+hops — the complete truth.
+
+**Failure behavior.** Unknown action → pass-through (another evaluator may
+own it). Malformed comp → clamp + `waystone-lint` (particles-lint
+doctrine): `pair` validated not clamped, `arrive` axes ±8 default
+[0,0,0], `yaw` any finite (default target live yaw), `reach` [2,12] d4,
+`cooldownSec` [2,60] d8, `line` 200c, unknown keys ride (the bag is public
+annotation). Missing entity → silent pass-through. The whole reaction
+wrapped in try/catch (house rule 3 — no stone takes the server down).
+
+**Browser path.** `client/lib/waystone.js` (the portal.js/door.js pattern
+— one import line in main.js beside portal, zero other edits to the
+pilot-dirty files): on a `puppet` message carrying `waystone`, for a
+CONFIRMED embodied non-spectator self, apply the anchor to `myState`
+(pos.set, yaw, speed 0, camera re-seated behind the body — onRestore's
+own rule) and let the ordinary 66ms presence send stream it — everyone
+sees the body step onto the pad. Spectator/render legs ignore the request
+(consent law). The next `sendPose` IS the move; there is no tween to own
+and no traffic beyond one presence packet.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox. The agent's puppet handler gains the `waystone` branch
+BEFORE the portal branch: no rejoin, no world change — the body stands at
+the anchor (`pos`/`yaw` set, streamed on the next presence tick) and one
+event line narrates the carry. `look()` lists the stone via
+`shared/waystone.js describeWaystone` (the describeDoor pattern) — its
+partner and the hop action. An agent hops through the ordinary `use` verb.
+
+**Intent.** The world folds distance for you. A mountain shrine pair, a
+market-to-harbor dash, a maze with a secret return stone — intra-world
+linked travel as one 8KB comp, no script, no new verb, the hop logged as
+a line of chat, the arrival as a body on a pad. The pair is BUILT
+geometry (two stones the author places); the protocol carries only the
+link.
 
 ## LAWS
 
