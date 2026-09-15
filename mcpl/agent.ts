@@ -30,6 +30,9 @@ import { describeLamp } from "../shared/lamp.js";
 // The portal affordance line (vocab-8): same pattern — destination + the
 // enter action.
 import { describePortal } from "../shared/portal.js";
+// The waystone affordance line (vocab-15): same pattern — partner + the
+// hop action (shared/waystone.js describeWaystone).
+import { describeWaystone } from "../shared/waystone.js";
 // The music affordance line + pitch naming (vocab-9): the same shared
 // arithmetic the engine resolves pitches with names the notes for
 // narration and look()'s affordance list.
@@ -579,6 +582,20 @@ export class WorldAgent {
             // the same path a dropped socket already takes. The next snapshot
             // seats the body at the anchor (the restore branch below reads it
             // before any remembered sleep).
+            // A WAYSTONE hop (vocab-15) is INTRA-world travel: no rejoin,
+            // no world change — the body stands at the anchor and the
+            // ordinary presence tick streams it. Checked BEFORE the
+            // portal branch (a stone is not a portal).
+            if (msg.waystone) {
+              const p = Array.isArray(msg.waystone.p) ? msg.waystone.p : null;
+              if (p && p.length >= 3) {
+                this.pos.x = p[0]; this.pos.z = p[2];
+                this.yaw = Number(msg.waystone.yaw ?? this.yaw);
+              }
+              this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by ?? "world",
+                text: `(the waystone carries you${msg.by ? ` (${msg.by})` : ""})` } as any);
+              break;
+            }
             if (msg.portal) {
               const to = String(msg.portal.to ?? "");
               if (!to) break;
@@ -1907,10 +1924,13 @@ export class WorldAgent {
       // of the same folded comp the ask engine bounds (look() derives at
       // read time, so the hold countdown is live)
       if (c.weatherzone) aff.push(describeWeatherzone(c.weatherzone));
+      // a waystone names its PARTNER and the hop action — the text-tier
+      // read of the same folded comp the carry engine validates
+      if (c.waystone) aff.push(describeWaystone(c.waystone));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

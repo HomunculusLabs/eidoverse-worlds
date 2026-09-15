@@ -44,6 +44,10 @@ import { reactCompanion } from "./companion.ts";
 // menu-state action vocabulary — the district weather request. Same
 // dispatch doctrine, last (a zone host may also be any of the above).
 import { reactWeatherzone } from "./weatherzone.ts";
+// The waystone engine (vocab-15): comp {type:"waystone"} owns the hop/
+// teleport/blink action vocabulary — the intra-world carry. Same dispatch
+// doctrine, last (a stone may also be any of the above).
+import { reactWaystone } from "./waystone.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -135,6 +139,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // district weather request. Same dispatch doctrine, last (a zone host
     // may also be any of the above).
     if (reactWeatherzone(w, cause, ent, id, action)) return;
+    // The waystone slice (vocab-15, § WAYSTONES CONTRACT): comp
+    // {type:"waystone"} owns the hop/teleport/blink action vocabulary —
+    // the intra-world carry. Same dispatch doctrine, last (a stone host
+    // may also be any of the above).
+    if (reactWaystone(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

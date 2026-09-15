@@ -800,8 +800,27 @@ no new verb.
       pre-existing mcpl/tokens.json-missing class (vocab-1..13 identical);
       mcpl manifest 28/0 + effective 42/0 green after the agent.ts edit.
       Scratch worlds only; no production world touched.
-- [ ] Teleport beacon pair: intra-world linked travel with cooldown and
+- [x] Teleport beacon pair: intra-world linked travel with cooldown and
       failed-arrival rollback (distinct from the portal contract).
+      DONE vocab-15 (2026-09-15): comp {type:"waystone"} — reactWaystone
+      in server/waystone.ts rides reactToUse's dispatch after
+      weatherzone (one import + one dispatch hunk in reactions.ts; ZERO
+      edits to pilot-dirty server.ts/world.ts/verbs.ts). Contract in
+      § WAYSTONES CONTRACT implemented as written. Evidence:
+      tools/waystonetest.ts RED 20 failing (engine absent; 18
+      pre-passing = shared math + shell gates) then ALL PASS 37/37;
+      servergate battery waystonetest 37 + smoke 85 comptest 33
+      compfold 24 behaviortest 27 worldops 23 locktest 13 leasetest 19
+      modtest 23 phrasetest 17 publishtest 28 musictest 38 portaltest
+      35 doortest 28 lamptest 34 guestbooktest 35 platetest 37
+      watertest 34 growthtest 43 companiontest 36 weatherzonetest 48
+      ALL PASS; authtest 22/1 + support-lifecycle 15/7 + permtest 21/2
+      = the documented pre-existing classes (vocab-13/14 identical:
+      pilot-lane aid1 + support physics + tokens.json). Browser
+      client/lib/waystone.js (one import line in main.js beside
+      portal); mcpl agent waystone puppet branch + describeWaystone
+      affordance + exclusion list; manifest 28/0. Scratch worlds only;
+      no production world touched.
 - [ ] Seat reservation: temporary occupancy claim with expiry and conflict
       rules.
 - [ ] Day/night bell schedule: authored time-of-day chime with fold-held

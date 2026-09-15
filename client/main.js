@@ -25,6 +25,9 @@ import './lib/emitters.js';
 // same pattern for the `door` component (vocab-4): wires itself on import
 import './lib/door.js';
 import './lib/portal.js';
+// waystone component (vocab-15): wires itself on import, same pattern —
+// the intra-world hop (applies the anchor to myState, one presence send)
+import './lib/waystone.js';
 import './lib/music.js';
 // plate component (vocab-10): wires itself on import, same pattern
 import './lib/plate.js';
