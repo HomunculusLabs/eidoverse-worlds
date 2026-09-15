@@ -570,6 +570,12 @@ async function handle(msg) {
       }
       break;
 
+    case 'sound':
+      // an instrument played (vocab-9): a presence-plane percept, never
+      // logged — music.js synthesizes it through the shared AudioContext
+      bus.emit('sound', msg);
+      break;
+
     case 'snap': return onSnapRequest(msg);
 
     case 'avatar-updated': {

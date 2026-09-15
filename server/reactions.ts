@@ -19,6 +19,11 @@ import { reactGuestbook } from "./guestbook.ts";
 // guestbooks. Destination validation + the travel request ride the env
 // supplied at wiring time (portalEnv in verbs.ts).
 import { reactPortal, type PortalEnv } from "./portal.ts";
+// The music engine (vocab-9): comp {type:"music"} owns the authored note
+// actions + the reserved play/note vocabulary — same dispatch doctrine,
+// last. The sound is a presence-plane broadcast (the force doctrine), so
+// the engine's world seam needs broadcast only.
+import { reactMusic } from "./music.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -85,6 +90,10 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // owns the enter/travel/step/through action vocabulary — same dispatch
     // doctrine, last (a portal-host may also be a door/lamp/book).
     if (reactPortal(w, portalEnv, cause, ent, id, action)) return;
+    // The music slice (vocab-9, § MUSIC CONTRACT): comp {type:"music"}
+    // owns the authored note actions + the reserved play/note vocabulary —
+    // same dispatch doctrine, last of the comp evaluators.
+    if (reactMusic(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

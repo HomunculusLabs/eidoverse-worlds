@@ -25,6 +25,7 @@ import './lib/emitters.js';
 // same pattern for the `door` component (vocab-4): wires itself on import
 import './lib/door.js';
 import './lib/portal.js';
+import './lib/music.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateSpectator, setCamYaw, setPosture, togglePhotoMode,

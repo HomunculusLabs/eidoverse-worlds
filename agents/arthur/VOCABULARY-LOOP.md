@@ -235,10 +235,19 @@ plan. Never deploy, push, or restart production unless Bill asks.
       detail overwrites the recorder's own kind (the lint note surfaced as
       kind "bell") — detail must never carry `kind`; type comment added at
       the seam. Scratch worlds only; no production world touched.
-- [ ] Portal contract between disposable worlds: destination validation,
+- [x] Portal contract between disposable worlds: destination validation,
       arrival anchor, permission re-evaluation, and failed-travel rollback.
-- [ ] Musical instrument: authored note/scale trigger with client-side synth
+      DONE vocab-8 (2026-09-15): committed 069d705c — full evidence in the
+      ledger entry and § PORTALS CONTRACT. Row ticked in a later tick after
+      re-verifying the committed tree GREEN fresh: portaltest 35/35 PASS
+      (scratch ports freed first).
+- [x] Musical instrument: authored note/scale trigger with client-side synth
       realization and rate caps.
+      DONE vocab-9 (2026-09-15): comp {type:"music"} — presence-plane sound
+      (the force doctrine: use verb is the audit, the fold ignores it, the
+      sound never enters the log). Full contract § MUSIC CONTRACT; evidence
+      in the vocab-9 ledger entry (musictest RED 17 -> 38/38, servergate
+      battery green, permtest 21/23 pre-existing class).
 - [ ] Inscription plate: authored text surface with edit-rank, length caps,
       and late-join truth.
 - [ ] Water feature: particle + audio affordance with day/night states.
@@ -1012,6 +1021,112 @@ to the show world, a gallery door back to the commons, a passage to a
 friend's fork — one 8KB comp, no script, no new verb, the journey logged as
 a line of chat, the arrival as a body at a place. Travel stays the tested
 transport it already is; the portal is the world finally ASKING you to go.
+
+### MUSIC CONTRACT (vocab lane — drafted vocab-9, 2026-09-15)
+
+**Trigger.** An instrument is an entity carrying `comp {type:"music", data:{...}}`.
+Actions on the freeform `use {id, action}` path that are MUSIC vocabulary:
+any action naming a key of the authored `notes` table (authored named notes
+— `use {action:"ding"}`), the reserved action `play` (plays the first
+authored note), and the reserved action `note` with the pitch riding the
+use's own args as `n` (a note name `"C5"`, a scale degree integer `3`, or a
+raw hz float `442.5`) with optional `sec`/`gain` overrides. Other action
+strings pass through untouched (the reactions doctrine — an instrument
+ignoring `use {action:"ring"}` is exactly correct, and a door-instrument
+hybrid decides its door first by dispatch order). Attaching/removing the
+comp is builder (rank 1) — the author's standing decision that this thing
+sounds, identical doctrine to reactions/phrases/region/door/lamp/
+guestbook/portal.
+
+**State — there is none, and SOUND IS NOT A LOG ENTRY.** An instrument is a
+STATIC TABLE in the fold (doors/portals doctrine): no comp transitions, no
+occupancy, no cooldown state is persisted. A performance is an
+INSTANTANEOUS CAUSE — the exact `force` doctrine: the `use` verb is already
+the logged audit record (who played what, when, with `cause`-traceable
+seq), the FOLD ignores it, and the sound itself rides the PRESENCE PLANE as
+ONE broadcast `{type:"sound", id, note:{hz,sec,wave,gain}, p:[live world
+pos], at, by, cause}` — never logged, never replayed, never re-sounded. A
+bell that rang before you arrived is history, not audio (the particles
+doctrine: a fire lit last week is in look(), not in your ears). Late join,
+restart, replay, fork all fold the standing comp and the `use` history —
+the complete truth — and mint no sound.
+
+**Note resolution (pure, shared).** shared/music.js — the forecast/door/
+lamp/portal shared-verbatim pattern — resolves every pitch ONE way:
+- name `/^([A-G])(#|b)?(-?\d+)$/i` → midi → `hz = 440·2^((midi−69)/12)`;
+- integer = a degree of the authored `scale` (`pentatonic` [0,2,4,7,9]
+  default, `major`, `minor`, `chromatic`) from the authored `root` (name or
+  hz, default `"A3"` = 220): octave-wrapping, negatives descend;
+- any other finite number > 20 = raw hz, clamped to piano range
+  [27.5, 4186] with a lint note (a clamped pitch is still a pitch; a
+  rejected one would strand the gesture).
+Everything else about the note clamps the same way (particles-lint
+doctrine): `sec` [0.05, 8] default 1.2, `gain` [0.05, 1] default 0.6,
+`wave` one of sine|square|sawtooth|triangle (default sine), `reach` [2,12]
+default 4, `notes` table capped at 16 entries (excess dropped + lint),
+lines 200c. Unknown keys ride (the bag is public annotation).
+
+**Effects — one presence-plane sound, zero log writes.** A fire broadcasts
+exactly ONE `sound` message (above) and records ONE `music-trigger` flight
+entry (kind `reaction`) with cause→note. No `say` (the sound IS the
+percept for browsers; the agent tier narrates from the same message), no
+comp/spawn/place/motion writes — NOTHING can be minted from a played note.
+Missing notes table (`play` with none authored) → `music-skip`; unresolvable
+`n` → `music-skip` naming it.
+
+**Authority/reach.** Playing is rank 0 (anyone present, like ringing a
+bell) plus the ARM'S-REACH gate (vPunt arithmetic): the player's live pose
+within `reach` of the instrument's LIVE position (lease stream pos if
+leased, folded pos otherwise). Out-of-reach use is a `music-skip` naming
+the distance. Spectators bounce at the shell (`use` is spectator-gated
+there). Lock composes as for doors (lock refuses place/punt/spawn/comp/
+remove — not `use`): a locked instrument still sounds.
+
+**Rate caps (the whole abuse story).** (a) The verb rate (12/4s per
+client) bounds any single player. (b) Per-entity window: at most 8 fires /
+2s per instrument (a crowd hammering one bell is capped at the bell).
+(c) Per-world window: at most 24 sound broadcasts / 2s (twelve instruments
+cannot gang into noise). Over-cap fires skip with `music-skip` (rate) —
+the `use` still logs (it happened), the sound does not mint. All
+in-memory; a restart forgets, which is harmless (nothing persisted
+depends on it). Worst legal steady state ≈ 12 sounds/sec world-wide, each
+≤8s of one oscillator+gain envelope — trivially cheap on every client.
+
+**Replay behavior.** Replay-inert by construction: the fold never sees a
+sound entry, and folding a historical `use` never re-fires reactions (the
+engine runs ONLY from the live verb path). A late joiner hears silence
+about the past and everything from now on — the correct semantics for
+live performance.
+
+**Failure behavior.** Malformed comp → clamp + `music-lint` (notes listed
+by name). Missing entity → silent pass-through. The whole reaction wrapped
+in try/catch (house rule 3 — no instrument takes the server down).
+
+**Browser path.** `client/lib/music.js` (the door.js/emitters.js pattern —
+one import line in main.js beside the others, zero other edits to the
+pilot-dirty file): on a `sound` bus event, compute camera-relative
+distance and direction, attenuate (`1/(1+d/8)`, muted past 48m), pan by
+the camera-relative bearing (StereoPannerNode), and play one oscillator +
+exponential-decay envelope through the page's ONE shared AudioContext
+(audioctx.js) into a `world`-category gain — so the existing world-volume
+slider and the 🎧-untouched place-sound doctrine govern instruments for
+free. Same hz/sec/wave/gain on every client (deterministic); only distance
+and pan differ, as they must.
+
+**MCPL path.** The agent's ws switch gains the `sound` case: radius-gated
+(its own activityRadiusM) ambient narration through the existing denoiser
+(one "chime1 rings (C5, 2.2s — by bob)" act line, bursts coalesced like
+arrivals — never a mention, never chat spam). `look()` lists the
+affordance (shared/music.js `describeMusic`, the describeDoor pattern):
+the instrument's notes/actions and the `note` hint. An agent PLAYS through
+the ordinary `use` verb — no new tool.
+
+**Intent.** The world has a voice you can play. A bell that answers a
+hand, a gong that opens a ceremony, a five-note pentatonic chime a child
+can't hit a wrong note on — one 8KB comp, no script, no samples, sound as
+an instantaneous cause with the audit already in the log. Protocol first;
+timbre presets, resonance, and recorded samples are later UI/decoration
+tiers.
 
 ## LAWS
 

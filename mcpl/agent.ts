@@ -30,6 +30,10 @@ import { describeLamp } from "../shared/lamp.js";
 // The portal affordance line (vocab-8): same pattern — destination + the
 // enter action.
 import { describePortal } from "../shared/portal.js";
+// The music affordance line + pitch naming (vocab-9): the same shared
+// arithmetic the engine resolves pitches with names the notes for
+// narration and look()'s affordance list.
+import { describeMusic, hzName } from "../shared/music.js";
 import { describeGuestbook } from "../shared/guestbook.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
@@ -608,6 +612,20 @@ export class WorldAgent {
             this.lastSeq = Math.max(this.lastSeq, msg.entry?.seq ?? -1);
             await this.applyEntry(msg.entry, true);
             break;
+          case "sound": {
+            // An instrument played (vocab-9): a presence-plane percept,
+            // never logged — the same radius gate as every other ambient
+            // sense, narrated through the denoiser so a burst of notes is
+            // one act line, not chat spam. Agents can also PLAY via the
+            // ordinary use verb (look() lists the affordance).
+            if (!msg.note || !Array.isArray(msg.p)) break;
+            const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
+            if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
+            const hz = Number(msg.note.hz);
+            const line = `${msg.id} rings (${hz > 0 ? hzName(hz) : "?"}, ${Number(msg.note.sec ?? 0).toFixed(1)}s${msg.by ? ` — by ${msg.by}` : ""})`;
+            this.gate.act(String(msg.by ?? msg.id), "rings", line);
+            break;
+          }
           case "history": {
             const p = this.pendingHistory.get(msg.reqId);
             if (p) { this.pendingHistory.delete(msg.reqId); p(msg); }
@@ -1795,6 +1813,9 @@ export class WorldAgent {
       // a portal names its DESTINATION and the enter action — the text-tier
       // read of the same folded comp the crossing engine validates
       if (c.portal) aff.push(describePortal(c.portal));
+      // an instrument names its NOTES and the play/note actions — the
+      // text-tier read of the same folded comp the music engine sounds
+      if (c.music) aff.push(describeMusic(c.music));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);

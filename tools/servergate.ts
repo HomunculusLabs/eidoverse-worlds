@@ -77,6 +77,9 @@ const BATTERY: Row[] = [
   { name: "behaviortest", tool: "tools/behaviortest.ts", server: true, serverEnv: { BHV_TIMER_MIN: "1" }, timeoutMs: 240_000 },
   // vocab-7: the publish/attach matrix (§ PUBLISH/ATTACH CONTRACT).
   { name: "publishtest", tool: "tools/publishtest.ts" },
+  // vocab-9: the music matrix (§ MUSIC CONTRACT) — self-booting scratch
+  // sequencer, like phrasetest/publishtest.
+  { name: "musictest", tool: "tools/musictest.ts" },
 ];
 
 /** Kill whatever LISTENS on `port` (Windows netstat) — self-booting suites
