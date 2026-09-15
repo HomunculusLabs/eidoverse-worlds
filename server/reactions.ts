@@ -49,6 +49,10 @@ import { reactWeatherzone } from "./weatherzone.ts";
 // doctrine, last (a stone may also be any of the above).
 import { reactWaystone } from "./waystone.ts";
 import { reactReservation } from "./reservation.ts";
+// The soundpost engine (vocab-18): comp {type:"soundpost"} owns the
+// mute/quiet/unmute/resume action vocabulary — the ambient audio emitter.
+// Same dispatch doctrine, last (a post host may also be any of the above).
+import { reactSoundpost } from "./soundpost.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -150,6 +154,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // vocabulary — the temporary seat claim. Same dispatch doctrine, last
     // (a seat host may also be any of the above).
     if (reactReservation(w, cause, ent, id, action)) return;
+    // The soundpost slice (vocab-18, § SOUNDPOSTS CONTRACT): comp
+    // {type:"soundpost"} owns the mute/quiet/unmute/resume action
+    // vocabulary — the ambient audio emitter. Same dispatch doctrine, last
+    // (a post host may also be any of the above).
+    if (reactSoundpost(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

@@ -33,6 +33,9 @@ import './lib/music.js';
 import './lib/plate.js';
 // water component (vocab-11): wires itself on import, same pattern
 import './lib/water.js';
+// soundpost component (vocab-18): wires itself on import, same pattern —
+// the ambient audio emitter (standing loop from the folded comp)
+import './lib/soundpost.js';
 // growth component (vocab-12): wires itself on import, same pattern
 import './lib/growth.js';
 // companion component (vocab-13): wires itself on import, same pattern

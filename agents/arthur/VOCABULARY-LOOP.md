@@ -862,8 +862,30 @@ no new verb.
       sound branch, describeBell affordance, exclusion-list entry).
       Scratch worlds only; no production world touched. No eye-check owed
       (zero client code — sounds + chat, both existing paths).
-- [ ] Sound post: ambient audio emitter with distance falloff and mute
+- [x] Sound post: ambient audio emitter with distance falloff and mute
       persistence.
+      DONE vocab-18 (2026-09-15): comp {type:"soundpost"} — reactSoundpost
+      in server/soundpost.ts rides reactToUse's dispatch after reservation
+      (one import + one dispatch hunk in reactions.ts; ZERO edits to
+      verbs.ts / server.ts / world.ts). Contract in § SOUNDPOSTS CONTRACT
+      below implemented as written. Evidence: tools/soundposttest.ts RED 21
+      failing (engine absent; 26 pre-passing = shared math + shell gates,
+      the honest vocab-13..17 class) then ALL PASS 48/48 after one
+      GREEN-caught test-expectation fix (the authored shape rides VERBATIM
+      in the carry — regions doctrine, clamps are read-time; my first
+      expectation wrongly demanded clamped values in the write). Browser
+      client/lib/soundpost.js (one import line in main.js beside water):
+      standing loop synthesized from the folded comp (drone = two beating
+      oscillators, murmur = bandpassed noise — the water.js machine),
+      loudness = gain·falloff(range,dist)·postGainFor(dayPhase) per frame;
+      the engine's presence cue carries NO note (music.js one-shots any
+      note — a cue blip would double-signal a change the loop already
+      voices; caught at GREEN, engine+test fixed same tick). mcpl agent
+      soundpost sound branch + describeSoundpost look() line + exclusion
+      list; manifest 28/0 + effective + denoise green. Scratch worlds
+      only; no production world touched. Eye-check OPEN: in-browser
+      audible read of a standing post (timbre at approach, falloff to
+      silence at the range, day/night hush, mute by hand).
 - [ ] Message board: authored multi-line notice with revision history and
       rank-gated edits.
 - [ ] Vending stand: use-action item grant with stock counts and restock
@@ -2165,6 +2187,121 @@ time. The say lands in the agent inbox as ordinary chat.
 noon, and evening; a dock bell counting the watch; a shrine bell at dusk —
 the day cycle already runs the sun, and now it rings. One 8KB comp, no
 script, no per-frame traffic, the clock itself doing the ringing.
+
+### SOUNDPOSTS CONTRACT (vocab lane — drafted and implemented vocab-18, 2026-09-15)
+
+**Trigger.** A sound post is an entity carrying
+`comp {type:"soundpost", data:{...}}`. The action strings `mute` (alias
+`quiet`) and `unmute` (alias `resume`) are SOUNDPOST vocabulary on the
+freeform `use {id, action}` path — deliberately DISJOINT from water's
+`flow/still/toggle` (the waystone-disjointness doctrine), so a hybrid
+entity carrying both comps decides every action unambiguously: `toggle`
+belongs to water, `mute/unmute` to the post. Other action strings pass
+through untouched (the reactions doctrine — a post ignoring
+`use {action:"ring"}` is exactly correct). Attaching/removing the comp is
+builder (rank 1) — the author's standing decision that this thing sounds,
+identical doctrine to reactions/phrases/region/door/lamp/guestbook/portal/
+music/plate/water/growth/companion/weatherzone/waystone/reservation/bell.
+
+**State — the fold is the state; the loop is DERIVED, never replayed.** A
+post has exactly one durable bit: muted or sounding. Every state change
+is ONE world-authored `comp` transition write (doors/water doctrine):
+`comp {id, type:"soundpost", data:{...authored, muted:<bool>, at, by}}`.
+COMP PRESENCE IS THE DECLARATION (the particles doctrine): an authored
+post with no `muted` key is SOUNDING; `muted:true` is the off state a
+hand or author writes; `unmute` writes `muted:false` explicitly so the
+fold's own record names the hand (a re-authored comp resets to sounding,
+the door/lamp re-author-reset doctrine). The SOUND is a pure function of
+the folded comp evaluated live by every browser: timbre `drone` (two
+oscillators a hair apart — the slow beat is the drone's life) or `noise`
+(a looped bandpassed noise buffer, the water.js machine), never a
+sample, never a tween, never a log entry.
+
+**Distance falloff — the authored `range` is the whole story.** Full
+voice at the post, a squared taper to silence AT the range, inaudible
+beyond it: `falloff(range, dist) = (1 − d/range)²` (shared verbatim).
+Per-frame loudness is one arithmetic on every client:
+`gain · falloff(range, dist) · postGainFor(dayPhase, cfg)` — distance is
+the camera's, the only per-client part, as it must be.
+
+**Day/night states — one arithmetic.** The post's loudness rides the sky
+every client already folds: `postGainFor(phase, cfg)` (shared/soundpost.js,
+the water gainFor doctrine): dawn/dusk 0.8, day 1.0, night drops to the
+authored `nightGain` [0,1] d0.7 (overall `gainScale` [0.1,3] d1). Night
+ambience is quiet ambience. Audio routes through the page's ONE shared
+AudioContext into the `world`-category gain (the music.js path), so the
+existing world-volume slider governs posts for free.
+
+**Effects — one comp write, one say, one presence cue.** A state change
+appends TWO log entries, in order: the comp transition write and a `say`
+(actor `world`, args `{text:<line>, id, sp:{muted:<bool>, who, at},
+cause:<use seq>, by:<user>}` — the phrases/doors/lamps/water provenance
+grammar exactly). Line defaults: `the sound post falls quiet` / `the
+sound post sounds again` (authored `muteAt`/`unmuteAt` override, ≤200c
+clamped). The presence-plane cue `{type:"sound", id, soundpost:{state:
+"start"|"stop"}, p:[live pos], at, by, cause}` is text-tier only (agents)
+and carries NO `note` — music.js one-shots any note it sees, and browsers
+already hear the loop itself (a cue blip would double-signal a change the
+loop voices). Never logged, never folded, never replayed. A
+`soundpost-trigger` flight entry (kind `reaction`) records cause→effect.
+No other verb can be minted from a post use — no spawn/place/motion,
+ever.
+
+**Authority/reach.** Using a post is rank 0 (anyone present — the
+author's published behavior) plus the ARM'S-REACH gate (vPunt
+arithmetic): the user's LIVE pose within `reach` metres (authored,
+clamped [2,12], default 4) of the post's LIVE position (lease stream pos
+if leased, folded pos otherwise). Out-of-reach use is a `soundpost-skip`
+naming the distance. Spectators bounce at the shell (`use` is
+spectator-gated there). Lock composes as for doors (lock refuses
+place/punt/spawn/comp/remove — not `use`): a locked post still mutes.
+No-op transitions (mute on muted, unmute on sounding) skip mint-nothing.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path; folding a historical use or comp never
+re-fires. On restart the world folds the comp — every browser derives
+the same standing loop from the fold (a late joiner hears the present,
+not the past — the particles doctrine: ambience from folded state, never
+a replay mint). The says read as history.
+
+**Rate.** Transitions are user-paced (the verb rate bounds `use`); each
+mints at most 3 messages (comp + say + presence cue, two log entries);
+no-ops and out-of-reach uses mint nothing. The standing loop costs ZERO
+log traffic — one derived AudioContext graph per sounding post per
+client, bounded by authored comps.
+
+**Failure behavior.** Malformed comp → clamp + `soundpost-lint`
+(particles-lint doctrine): `hz` [40,4000] d400, `hz2` [40,4000] (d hz·1.007
+— the drone beat), `q` [0.1,12] d0.8, `gain` [0.05,1] d0.35, `nightGain`
+[0,1] d0.7, `gainScale` [0.1,3] d1, `range` [4,200] d24, `reach` [2,12]
+d4, `timbre` one of drone|noise (d noise), `wave` one of
+sine|square|sawtooth|triangle (d sine), lines clamped 200c, unknown keys
+ride (the bag is public annotation). The authored shape rides VERBATIM in
+the engine's carry (regions doctrine — clamps are read-time derivations;
+every consumer normalizes). Missing entity → silent pass-through. The
+8KB degrade side keeps `{muted, at, by}` + lint. The whole reaction
+wrapped in try/catch (house rule 3 — no post takes the server down).
+
+**Browser path.** `client/lib/soundpost.js` (the water.js/door.js
+pattern — one import line in main.js beside water, zero other edits to
+pilot-dirty files): the loop starts/stops from the folded comp, rebuilt
+when timbre/pitch moves (signature-keyed graph), loudness set each frame
+via setTargetAtTime smoothing through the ONE shared AudioContext into
+the `world`-category gain. Muted and removed posts cost nothing; state
+is readable from any folded snapshot (`comp.soundpost.muted`).
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; the presence cue narrates as one act line (radius-gated,
+denoised — `<id> falls quiet (by bob)`); `look()` lists the post via
+`shared/soundpost.js describeSoundpost` (the describeDoor pattern) —
+timbre, pitch, sounding/muted state, and the action hint. An agent mutes
+through the ordinary `use` verb.
+
+**Intent.** The world hums where you stand. A beehive post murmuring in
+the garden, a shrine bell drone under the belfry, a market-square crowd
+hush, a harbor wind post at the docks — a place that SOUNDS like itself,
+audible within its authored range, hushed by night, silenced by a hand,
+one 8KB comp, no samples, no script, no new verb.
 
 ## REPORT
 

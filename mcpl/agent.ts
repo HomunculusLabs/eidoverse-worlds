@@ -58,6 +58,9 @@ import { describeWeatherzone } from "../shared/weatherzone.js";
 // The bell affordance line (vocab-17): names the schedule and the next
 // toll — derived from the SAME world clock the sweep reads.
 import { describeBell } from "../shared/bell.js";
+// The soundpost affordance line (vocab-18): names the timbre/pitch and
+// the sounding/muted state + action hint.
+import { describeSoundpost } from "../shared/soundpost.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -719,6 +722,20 @@ export class WorldAgent {
                 ? `${msg.id}'s water starts (by ${msg.by ?? "someone"})`
                 : `${msg.id}'s water goes quiet (by ${msg.by ?? "someone"})`;
               this.gate.act(String(msg.by ?? msg.id), msg.water.state === "start" ? "starts" : "quiets", line);
+              break;
+            }
+            if (msg.soundpost) {
+              // A sound post changed state (vocab-18): one act line per
+              // change, radius-gated like every ambient sense — the loop
+              // itself is a standing ambient agents don't narrate per
+              // frame (they read the folded comp in look()).
+              if (!Array.isArray(msg.p)) break;
+              const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
+              if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
+              const line = msg.soundpost.state === "start"
+                ? `${msg.id} sounds again (by ${msg.by ?? "someone"})`
+                : `${msg.id} falls quiet (by ${msg.by ?? "someone"})`;
+              this.gate.act(String(msg.by ?? msg.id), msg.soundpost.state === "start" ? "sounds" : "quiets", line);
               break;
             }
             if (!msg.note || !Array.isArray(msg.p)) break;
@@ -1950,10 +1967,13 @@ export class WorldAgent {
       // a bell names its SCHEDULE and the next toll — derived at read time
       // from the same world clock the sweep reads (skyState)
       if (c.bell) aff.push(describeBell(c.bell, this.skyState, Date.now()));
+      // a soundpost names its TIMBRE and sounding/muted state — the
+      // text-tier read of the same folded comp the browser loop derives from
+      if (c.soundpost) aff.push(describeSoundpost(c.soundpost));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);
