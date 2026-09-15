@@ -96,7 +96,22 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       New tools/pressure-reconnect.ts (SELFTEST RED/GREEN, self-booting,
       fd-checked; harness-only fps-window fix — connected window, not
       run window). Servergate: smoke 85/0 + leasetest 19/0 pinned tree.)
-- [ ] World switching cancels old-world traffic and state promptly.
+- [x] World switching cancels old-world traffic and state promptly.
+      (pressure-7, 2026-09-15: worktree @ d29ba072, 200 sockets — alpha 24
+      perf + 24 travelers embodied @15Hz + 150 spec, beta 2 observers; travel
+      wave all 24 on live sockets, 8 mid-lease, return wave of 4. BASELINE
+      RED on the two predicted gates: lease release 9965ms (stale-sweep
+      fallback, not prompt) and wake-pose restore 0/4 (travel never
+      rememberPose). FIX: travel path now performs the close handler's two
+      durable acts — settleLease per held lease + rememberPose (superseded
+      guard kept), same per-failure guards. AFTER, identical conditions:
+      lease release 32ms worst (gate ≤2500), restore 4/4 exact, travel
+      snapshot p95 39ms, leaves/arrives 24/24 drift 0, rosters exact at all
+      probes, 0 ghost frames, both worlds empty at final probe, logs drift 0,
+      says p95 4ms, fps p50 15.1, RSS +6MB. Servergate: smoke 85/0, leasetest
+      19/0 on the fixed pinned tree; main-tree boot-parse clean. server.ts
+      travel block patched in main tree as a single staged hunk beside the
+      dormant sibling pilot dirt.)
 - [ ] Snapshot join during concurrent authored mutations is sequence-consistent.
 - [ ] Memory returns near baseline after every synthetic participant leaves.
 - [ ] Performer/spectator classification cannot accidentally multiply fanout.

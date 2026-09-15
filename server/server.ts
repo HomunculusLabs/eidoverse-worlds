@@ -398,9 +398,18 @@ const server = Bun.serve({
           // still rtc- and attest-capable with no living primary, the exact
           // state the 4008 orphan refusal exists to prevent.
           if (c.world) {
+            // Travel must do the two durable acts a close does (pressure-7:
+            // measured 9965ms stale-sweep settle + lost wake pose otherwise).
+            // Same order and per-failure guards as the close handler: one
+            // lease's failed settle must not strand the others or the leave.
+            for (const [lid, L] of [...c.world.leases]) if (L.holder === c) {
+              try { c.world.settleLease(lid); } catch (err) { console.error(`[world:${c.world.name}] lease settle for ${lid} on travel`, err); }
+            }
             c.world.clients.delete(c);
             retireAuxLeg(c.world, c);
             if (!c.spectator) {
+              try { if (!c.superseded) c.world.rememberPose(c.id, c.lastPose); } // sleep where you stood — travel too
+              catch (err) { console.error(`[world:${c.world.name}] rememberPose for ${c.id} on travel`, err); }
               c.world.broadcast({ type: "leave", id: c.id });
               c.world.bhv.onPresence("leave", c.id);
               reapAuxLegs(c.world, c, "primary traveled");
