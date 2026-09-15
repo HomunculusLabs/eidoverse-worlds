@@ -11563,3 +11563,90 @@ Files: struct182-probe-melencolia.ts + struct182-decode-melencolia.ts
 struct182-melencolia/ (10 frames, ignored), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-182, D+0 E+0). Zero world
 mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-183 (2026-09-15): MELENCOLIA PLACEMENT TICK — committed carry from
+## struct-182 executed, PLACED_VERIFIED live
+
+183%3=0 placement-slot cadence WITH a takeable banked form (struct-182:
+"placement = struct-183 committed carry"; the 178..181 lane precedent — a
+banked form places on the next tick regardless of N%3, build+judge/place
+alternation held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP — tool_search fresh this tick; same disclosed class as
+struct-169..182): monkeysaddle v2 native-18m-PASS placement GATE, hypar row
+22 native-only, kuen v3 + catalan v1 + clebsch v1 + menger v2 + apollonian
+v1 fallback-judged acceptances (all placed); melencolia v3 joins the owed
+board. Gate ALL PASS real exit 0 tick-start at 260ec9c5 (city-140) +
+RE-RUN clean immediately before the mutation at a0edb246 (vocab-12 engine
+commit landed mid-tick; epoch law; /tmp/struct183-gate.txt +
+/tmp/struct183-gate2.txt, unpiped). Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged 11th tick, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-182 -> tag struct-183.
+
+Local bytes re-verified sha256 fb06138e4009a8833093a8dabaae1f90acdae76a
+84846ccef5a3de71a0bf2f92 == struct-182 bank pin BEFORE upload. Decode
+re-run ALL PASS fresh this tick (probe P1-P9b + decode D1-D6 + RED
+control); envelope re-derived literally: 3.20 x 3.75 x 0.95 SYMMETRIC
+(D5, CX=CZ=0) — origin-centered SAT lawful, placement-contract law.
+
+SEAT (struct183-scan + struct183-select, fresh 331 census): avenue axis
+re-derived FRESH = 91.0 deg (28-form window; 32 math-family forms
+standing). Island = 7 members (lorenz r140 / chladni r150 / voronoi r160 /
+peaucellier r168.6 on-axis az94 + clebsch E-flank az90.5 r142 lat 8.7 +
+menger W-flank az98.5 r155 lat 12.2 + apollonian E-flank az89.5 r164.3 lat
+12.9); the az94 procession continues past them (zeno r179.9 -> enneper
+r250). 341 lawful W-flank seats. Alternating-flank zigzag cadence
+(city-104..110, struct-177/179/181): the melencolia takes the W-FLANK
+RETURN: az98.25 r174.25, lateral 12.9m of the procession line (recomputed
+from az94, not the scan's axis-91 lat column — the 8.7/12.2/12.9 precedent
+figures), radial slot dead-mid peaucellier168.6 <-> zeno179.9. NN 14.29 vs
+nx-struct-zeno (law 8.0), SAT 8.13 vs nx-struct-peaucellier (law 1.4),
+walk-clear 145.66. az88/r172 E-side rank-continuation alternative recorded
+and passed over (E rank already 2-member clebsch+apollonian; zigzag
+cadence carries). Island now 8 members — within the CITY-PLAN-V2 5-9
+terminal-island cap.
+
+YAW LAW (orientation): face +Z; at yaw 0 the inscribed face reads face-on
+down the +Z avenue walk (struct-104 class). Yaw 2.5307274153917776 (145
+deg) puts the face normal (sin145, cos145) = (+0.574, -0.819) at 35 deg
+off the -Z approach normal — oblique to the sightline, face toward the
+approaching walker from the village side. W-flank seat => walker on the -Z
+side; normal x>0 also leans back toward the procession. Within the 30-40
+deg band of the committed carry.
+
+TERRAIN (struct183-terrain-melencolia.ts): 9pt over the TRUE rotated
+footprint (literal corners): spread 3.1mm, PY = -0.044255.
+
+PLACEMENT (next-place-struct183.ts, struct181 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 331 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 1.58x1.31 at yaw 145):
+NN floor zeno 14.29, SAT worst peaucellier 8.13 — clean. 1 upload
+(content-addressed store/fb06138e4009a883.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 331 -> 332 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract ("34" answer
+emissive-in-GLB glow_ms_1 KEEP — no comp-wipe class on first spawn).
+Cosmetic inherited from the chassis: the join log line prints
+msg.entities (0) instead of msg.state.entities (struct-104 shape) — the
+authoritative post-place check is the fresh /geom re-read, which is green.
+
+Native debt board after this tick: melencolia v3 OWED (fallback-judged
+acceptance, disclosed; deterministic night closure banked struct-182);
+monkeysaddle v2 native 18m PASS OWED (placement gate); hypar row 22 OWED
+(native only); kuen v3 OWED; catalan v1 OWED; clebsch v1 OWED; menger v2
+OWED; apollonian v1 OWED.
+
+Bill eye-check pointer: on Math Avenue's terminal island, off the west
+flank between peaucellier and zeno — the stone stele standing oblique to
+the walk, Dürer's magic square in bone seven-segment inlay on a brass wire
+grid. Walk close and read it: every row, every column, both diagonals, the
+four corner cells, and each little 2x2 block all sum to 34, and the
+bottom-row middle cells spell the year 1514. After dark: one quiet warm
+"34" glowing beneath the grid — the square's own answer.
+
+Files: struct183-scan-melencolia.ts + struct183-select-melencolia.ts +
+struct183-terrain-melencolia.ts + next-place-struct183.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-183, D+1 E+1). One upload + one verb total (shared budget). Zero
+pushes.
