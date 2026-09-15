@@ -16603,3 +16603,73 @@ shared-budget use (D+0, E+0).
   precedent; ledger tail struct-182 lineage running total 2370795).
   STANDING RECOMMENDATION carried unchanged (s182-s363): stop the SURVEY
   lane or convert to a no-LLM monitor when attended.
+
+- survey-365 (2026-09-15, ARRIVAL EPOCH, seventh of the unfreeze — ZAI
+  FALLBACK 4 calls/4 disclosed, native vision ABSENT from this cron
+  session's tool catalog (zai-vision MCP only, flap law; native-owed
+  register rows NOT discharged this tick, cron-disclosed): gate ALL PASS
+  real exit 0 FIRST TRY at tick-start HEAD f337fe83 (pressure-13 tip, 99
+  PASS lines incl. ledger law EXACT 2370798 — total +3 vs survey-364's
+  2370795 via vocab-12/sweep-254/struct-183/city-140/city-141
+  mid-window, normal interleaving, gate ran at the NEW HEAD so no
+  re-gate due, epoch law; HEAD advanced to 7726e5f8 (city-141) before
+  commit — city-141's own HOLD line records gate @f337fe83 PASS, epoch
+  re-check done). Census via committed next-live-census.ts exit 0 at
+  BOTH epochs (A/B, 20s-paced, cmp A==B BYTE-IDENTICAL), each 332
+  entities, each 219450B, each sha16 ab597e7ea9350f00. Set-diff vs
+  survey-364 baseline (331, 37d85b22): +1 ARRIVAL nx-struct-melencolia
+  (-25.003589, -0.044255, 172.446754 yaw 2.5307274 rad = 145deg
+  oblique-yaw law, lib store/fb06138e4009a883.glb, comp {}) / 0
+  departures / 0 lib flips / 0 pos-yaw-scale-comp drift on the 331
+  holders — classified SIBLING WORK: struct-183's committed
+  PLACED_VERIFIED tuple verbatim (Math terminal island W-flank return,
+  az98.25 r174.25; struct domain; lib == struct-182 banked v3 sha
+  fb06138e), independently accounted by city-141's HOLD line (331->332
+  ACCOUNTED) — the exact predicted arrival (s364 trigger list).
+  ARRIVAL-GATED JUDGE LAWFUL (s357/s360/s363 precedent): slice = the 1
+  new-bytes object (owner's own judgment was ZAI fallback — independent
+  read exactly what the arrival needs). Live store bytes fetched curl
+  UA HTTP 200 31868B served-sha16 4af22f45f6ed04ba (lib fb06138e =
+  struct-182 v3 upload sha, DRACO re-encode law — served != upload,
+  struct-104 class); render via NEW survey365-render-melencolia.ts
+  (survey363-render-apollonian chassis verbatim incl. face-on night
+  frame law; DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 6 frames
+  reviews/survey365-melencolia/ (ignored residue), served-bytes bounds
+  3.200x3.750x0.950 grounded y~0. VERDICT: nx-struct-melencolia CLEAN
+  3/3 — gameplay 18m CLEAN 5/5 (identity PASS engraved stele/monolith
+  w/ inset panel + stepped plinth; silhouette PASS two-tier, zero
+  floaters; grounding PASS contact y~437 + cast shadow; surface read
+  PASS — judge independently read ALL FOUR canonical Dürer rows
+  verbatim ("16 3 2 13 / 5 10 11 8 / 9 6 7 12 / 4 15 14 1", ~12-13px
+  glyphs) = discriminating content, not generic; defect scan PASS, base
+  band reads recessed course not void; margin: digits near legibility
+  ceiling ~25m+). face-on ~11.5m CLEAN 5/5 (grid 16/16 cells resolved,
+  every value correct; glyph quality PASS complete 7-seg forms incl
+  8/0/9/6; frame PASS brass border + dividers clean; plinth PASS; defect
+  scan PASS — judge independently spotted the small orange "34"
+  magic-constant marker below the grid = second discriminating read,
+  matches struct-182's design). night-face PASS 4/4 (EXACTLY one warm
+  emissive = the '34' marker (478,420), coherent hard-edged, zero halo
+  bleed past slab edges; grid digits faintly lit by soft bounce, weak
+  rows 2-4 contrast = tuning note not defect; silhouette holds;
+  zero floats/holes/z-fight/stray emissive). night-oblique 18m PASS 3/3
+  (identity holds at 145deg bearing; '34' marker legible (475-488,
+  381-390), NOT edge-occluded — sits near face center-bottom, trailing
+  edge safely distant; zero defects). CONCURS struct-182 banked v3 PASS
+  (probe ALL PASS, 34 magic properties) + struct-183 PLACED_VERIFIED +
+  city-141 arrival accounting — independent corroboration, no defect.
+  Margins (NOT routed, cosmetic tier): digit legibility ceiling ~25m,
+  weak night contrast rows 2-4 (inscription illumination tuning), thin
+  below-horizon night contrast band. Native re-judge debt on melencolia
+  v3 carries (joins the owed board on placement per struct-182; board:
+  hypar row 22, monkeysaddle v2 per struct-169v/170, kuen v3, catalan
+  v1, clebsch v1, menger v2, apollonian v1, melencolia v3). Pools:
+  IMPROVE-PLAN md5 c0f569d0 unchanged (254th check); SURVEY CANDIDATES
+  0 OPEN rows; no candidate row (CLEAN); CITY-PLAN-V2 assigns survey no
+  role (grep 0). Census baseline for next tick:
+  /tmp/survey365-census-a.json (332, 219450B, sha16 ab597e7ea9350f00).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits,
+  zero shared-budget use, ZERO ledger append (loop law 4: append only
+  when routing; CLEAN concurrence routes nothing; ticks 211-364
+  precedent). STANDING RECOMMENDATION carried unchanged (s182-s364):
+  stop the SURVEY lane or convert to a no-LLM monitor when attended.
