@@ -663,8 +663,143 @@ a hound a builder beacons to a child, a duck that follows anyone who
 heels it — a living companion with no script, no per-frame traffic, the
 follow math shared verbatim by every runtime, and the leash law the
 lease table already enforces.
-- [ ] Weather request: district-scoped weather with authority rank and
+
+### WEATHERZONES CONTRACT (vocab lane — drafted and implemented vocab-14, 2026-09-15)
+
+**Trigger.** A weatherzone is an entity carrying
+`comp {type:"weatherzone", data:{...}}`. The action strings naming a
+weather state — `use {id, action:"rain"}` — are WEATHERZONE vocabulary
+on the freeform use path, BOUNDED BY THE AUTHORED MENU: only legal
+WEATHERS (shared/forecast.js), at most 6, defaulting to
+`["rain","clear"]`. A legal weather outside the menu, an illegal name,
+or an empty menu skips fail-closed with `zone-skip` (the reactions
+doctrine: other action strings pass through untouched — a zone ignoring
+`use {action:"ring"}` is exactly correct, and hybrids decide by
+dispatch order). Attaching/removing the comp is builder (rank 1) — the
+author's standing decision that this place may ask the sky, identical
+doctrine to reactions/phrases/region/door/lamp/guestbook/portal/music/
+plate/water/growth/companion.
+
+**The one-sky law, honored.** The world has ONE sky. A weatherzone is
+not a second sky and never renders weather of its own: the EFFECT is
+world-wide weather through the ordinary `weather` verb every client
+already folds and renders (client/lib/realize/environment.js — zero
+client code, zero new protocol surface). What is district-scoped is the
+REQUEST: the asker must stand at the zone, and the author bounds what
+may be asked. ONE hold world-wide at a time (a second zone's ask skips,
+naming the governing zone).
+
+**State — the hold lives in the fold.** An ask is ONE transition
+writing THREE world-authored entries, in order:
+1. `weather {weather: <state>}` (actor `world` — world authority,
+   menu-bounded; the engine never mints a weather outside the menu);
+2. `comp {id, type:"weatherzone", data:{...authored, active:<state>,
+   until:<ts>, revertTo:<state>, policy?:true, at, who}}` — engine keys
+   (`active/until/revertTo/at/who/policy`) are STRIPPED from the
+   authored shape and written fresh every time, so a comp re-authored
+   over a live hold cannot smuggle a stale window;
+3. `say {text, id, zone:{state, who, until, at}, cause, by}` — the
+   phrases/doors/lamps provenance grammar exactly.
+Expiry is FOLD-DERIVED (`holdActive`: a legal state && until > now —
+shared verbatim), so late join, restart, replay and fork all read the
+same window with zero engine traffic; the 1Hz sweep (WeatherZoneEngine
+on the BehaviorHost tick, the vocab-2/3 precedent) owns the expiry
+transition: ONE `weather` verb + ONE comp clear (`active:null`) + ONE
+say with `zone:{released:true, state, who, at}`. A hold that expired
+while the server was down releases on the first sweep after boot (boot
+heal); two sweeps never double-fire (the comp clear is the fold's own
+record).
+
+**Revert vs release.** The FIRST arm derives `revertTo` — the sky the
+ask displaces: the folded manual weather if legal, else "clear". Under
+a GOVERNING FORECAST (folded `sky.forecast`), revertTo is the policy's
+current segment state and `policy:true` is stamped: expiry then
+RELEASES — a weather verb carrying a FRESH segment read at release
+time — never reverting to a stale manual state that would fight the
+author's sky. Extensions keep the ORIGINAL revertTo (the displaced
+sky, not the ask).
+
+**Duration caps (the whole abuse story).** `holdSec` clamped
+[30,600], default 120 — the 30s floor is the anti-strobe cap (the
+sky's own dwell-floor doctrine: a strobing sky is a griefing vector,
+not weather). Strobe closure: a state-CHANGING ask during an active
+hold skips (`zone-skip` naming the holding state); a same-state ask
+RE-ANCHORS (extends the window, keeping the original revertTo). The
+verb rate (12/4s) bounds ask spam; each ask mints at most 3 entries;
+no-ops, out-of-menu, out-of-cap asks mint nothing.
+
+**Authority/reach.** Asking is rank 0 (anyone present — the author's
+published behavior, world authority on the effect only) plus the
+ARM'S-REACH gate (vPunt arithmetic): the asker's LIVE pose within
+`reach` metres (authored, clamped [2,12], default 4) of the zone's
+LIVE position (lease stream pos if leased, folded pos otherwise).
+Out-of-reach use is a `zone-skip` naming the distance. Spectators
+bounce at the shell (`use` is spectator-gated there). The engine's
+world-authored `weather` bypasses runVerb's rank gate by construction
+(actor `world` — the same authority every reaction effect carries);
+authority NEVER widens: effects are weather + comp-on-self + say
+ONLY, no other verb can be minted from an ask. Lock composes as for
+doors (lock refuses place/punt/spawn/comp/remove — not `use`): a
+locked zone still answers.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path and the live tick; folding a historical
+use, weather, or comp never re-fires. On restart the world folds the
+hold window and the sweep resumes ownership — a hold half-elapsed at
+server death still releases at its `until` (proven), and the says read
+as history.
+
+**Failure behavior.** Malformed comp → clamp + `weatherzone-lint`
+(particles-lint doctrine): menu entries dropped when illegal (noted by
+name), menu capped at 6 (noted), `holdSec` [30,600] d120, `reach`
+[2,12] d4, lines (`askAt`/`revertAt`) clamped 200c, unknown keys ride
+(the bag is public annotation). Missing entity → silent pass-through.
+The whole reaction and every sweep release wrapped in try/catch (house
+rule 3 — no zone takes the server down).
+
+**Browser path.** ZERO client code: the effect rides the `weather`
+verb through the ordinary fold path (realize/environment.js
+`applySkyFolded` — the same realization every authored weather verb
+takes), the hold window is readable from any folded snapshot
+(`state.entities[id].comp.weatherzone.active/until`), and the say
+lands as ordinary chat (logChat). A zone-specific visual tier (an
+obelisk glow while holding, menu runes) is deliberately deferred —
+protocol before UI decoration.
+
+**MCPL path.** Same log entries, same perception: the say lands in
+the agent inbox; `look()` lists the zone via
+`shared/weatherzone.js describeWeatherzone` (the describeDoor
+pattern) — the menu, the hold countdown (derived at read time), and
+the ask hint. An agent asks through the ordinary `use` verb.
+
+**Intent.** The sky answers the district that asks. A rain shrine in
+the gardens, a sun stone on the market plaza, a storm obelisk at the
+arena's edge — bounded weather as an interactive affordance, the
+one-sky law intact, the forecast un-fought, one 8KB comp, no script,
+no new verb.
+- [x] Weather request: district-scoped weather with authority rank and
       duration caps.
+      DONE vocab-14 (2026-09-15): comp {type:"weatherzone"} — reactWeatherzone
+      in server/weatherzone.ts rides reactToUse's dispatch after companion
+      (one import + one dispatch hunk in reactions.ts) + WeatherZoneEngine
+      1Hz expiry sweep on the BehaviorHost tick (the vocab-2/3 precedent;
+      same two-hunk shape in behaviors.ts). ZERO edits to pilot-dirty
+      server.ts/world.ts/verbs.ts. Contract in § WEATHERZONES CONTRACT
+      below implemented as written. Evidence: tools/weatherzonetest.ts RED
+      26 failing (engine absent; 22 pre-passing = shared math + shell
+      gates, the honest class) then ALL PASS 48/48 after four disclosed
+      test-expectation fixes (join snapshots are frozen at join — sky
+      reads need a fresh join, watertest's late-joiner doctrine; the
+      override-vs-segment bound needed 1900s > max dwell; the no-double-
+      heal count is cumulative, not per-window); servergate battery
+      weatherzonetest 48 + smoke 85 comptest 33 compfold 24 behaviortest
+      27 worldops 23 locktest 13 leasetest 19 modtest 23 doortest 28
+      lamptest 34 guestbooktest 35 platetest 37 watertest 34 growthtest 43
+      companiontest 36 musictest 38 portaltest 35 publishtest 28
+      phrasetest 17 ALL PASS (20/20); permtest 21/23 = the documented
+      pre-existing mcpl/tokens.json-missing class (vocab-1..13 identical);
+      mcpl manifest 28/0 + effective 42/0 green after the agent.ts edit.
+      Scratch worlds only; no production world touched.
 - [ ] Teleport beacon pair: intra-world linked travel with cooldown and
       failed-arrival rollback (distinct from the portal contract).
 - [ ] Seat reservation: temporary occupancy claim with expiry and conflict

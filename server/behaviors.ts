@@ -25,6 +25,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { ProximityEngine, type ProxWorld } from "./proximity.ts";
 import { RegionEngine, type RegionWorld } from "./regions.ts";
+import { WeatherZoneEngine, type ZoneWorld } from "./weatherzone.ts";
 
 // --- what we need from server.ts (structural, to avoid a circular import) ---
 type LogEntry = { seq: number; ts: number; actor: string; verb: string; args: Record<string, unknown> };
@@ -364,6 +365,10 @@ export class BehaviorHost {
    *  pairs + membership writes into the FOLD out — restart-safe by
    *  construction, no ring heuristics. */
   private regions: RegionEngine | null = null;
+  /** Weatherzone holds (vocab-14): swept on the same clock. The fold is
+   *  the hold's truth (active && until > now); the sweep owns expiry
+   *  transitions from folded truth alone — boot heal included. */
+  private weatherzones: WeatherZoneEngine | null = null;
 
   constructor(w: WorldLike) { this.w = w; }
 
@@ -435,6 +440,13 @@ export class BehaviorHost {
       this.regions ??= new RegionEngine(this.w as unknown as RegionWorld);
       this.regions.sweep(now);
     } catch (err) { console.error(`[world:${this.w.name}] region sweep`, err); }
+
+    // Weatherzone holds (vocab-14) ride the same clock — the fold is the
+    // hold's truth; the sweep releases expired windows (boot heal included).
+    try {
+      this.weatherzones ??= new WeatherZoneEngine(this.w as unknown as ZoneWorld);
+      this.weatherzones.sweep(now);
+    } catch (err) { console.error(`[world:${this.w.name}] weatherzone sweep`, err); }
 
     for (const inst of this.instances.values()) {
       for (let i = 0; i < inst.timers.length; i++) {

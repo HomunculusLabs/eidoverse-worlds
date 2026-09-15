@@ -40,6 +40,10 @@ import { reactGrowth } from "./growth.ts";
 // beacon/heel/stay/come/release action vocabulary — the animal follower.
 // Same dispatch doctrine, last (a companion may also be a growth host).
 import { reactCompanion } from "./companion.ts";
+// The weatherzone engine (vocab-14): comp {type:"weatherzone"} owns the
+// menu-state action vocabulary — the district weather request. Same
+// dispatch doctrine, last (a zone host may also be any of the above).
+import { reactWeatherzone } from "./weatherzone.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -126,6 +130,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // {type:"companion"} owns the beacon/heel/stay/come/release action
     // vocabulary — the animal follower. Same dispatch doctrine, last.
     if (reactCompanion(w, cause, ent, id, action)) return;
+    // The weatherzone slice (vocab-14, § WEATHERZONES CONTRACT): comp
+    // {type:"weatherzone"} owns the menu-state action vocabulary — the
+    // district weather request. Same dispatch doctrine, last (a zone host
+    // may also be any of the above).
+    if (reactWeatherzone(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

@@ -47,6 +47,9 @@ import { describeGrowth } from "../shared/growth.js";
 // The companion affordance line (vocab-13): names the follower, its owner,
 // and the heel/stay/come/release command vocabulary.
 import { describeCompanion, normalizeCompanion, followStep } from "../shared/companion.js";
+// The weatherzone affordance line (vocab-14): names the zone's menu and
+// hold window — the district weather request surface.
+import { describeWeatherzone } from "../shared/weatherzone.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -1900,10 +1903,14 @@ export class WorldAgent {
       // a companion names itself, its OWNER, and the command vocabulary —
       // the text-tier read of the same folded comp the engine mints
       if (c.companion) aff.push(describeCompanion(c.companion));
+      // a weatherzone names its MENU and hold window — the text-tier read
+      // of the same folded comp the ask engine bounds (look() derives at
+      // read time, so the hold countdown is live)
+      if (c.weatherzone) aff.push(describeWeatherzone(c.weatherzone));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);
