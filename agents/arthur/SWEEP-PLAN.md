@@ -9959,3 +9959,73 @@ row-cottage/observatory @242 walked fresh, forge/potter @239,
 hall/bunkhouse @240, longhouse/garden-cottage @241, inn/tower-house @238
 stalest standing pair at 4 sweeps; both walk tools ls-verified present on
 disk this tick: interior-walk-inn.ts, interior-walk-tower-house.ts).
+
+sweep-243: CLEAN SWEEP, arrival-fold re-baseline tick under the
+audit-continues banner (city-14 freeze lifted for struct+city lanes only).
+Census 327 -> 328 at BOTH epochs (A/B, 20s-paced, next-live-census.ts
+chassis, byte-identical pair, raw 217041B sha16 8460cfb5f1f26f03): 0
+departures, exactly ONE arrival classified domain-valid against the
+COMMITTED ledger line — nx-struct-catalan @ (-22.574263, -0.038027,
+128.025008) yaw 0.6981317 (40 deg oblique, struct-104 law) lib
+4f0c2a4a7b506f56 comp {} = struct-174 PLACED_VERIFIED committed carry
+(tick-start HEAD f8575dac already carried it; lib == struct-173's banked
+CATALAN pin sha 4f0c2a4a... exact), tuple matches the struct-174 ledger
+line-for-line (r130.0 az100.0 Math Avenue SE-side deep band past
+tesseract/rule30wall, NN 13.61 tesseract / SAT 5.00 rule30wall,
+idempotent zero verbs), independently corroborated by city-124 observer
+HOLD (sole arrival classified, register 19/19). Math Avenue band seat.
+0 unexplained drift on the 327 shared ids, 0 lib flips, 0 compKeys drift.
+Baseline lawfully REWRITTEN per the re-baseline law with pre-write
+assertions (arrival exactly [nx-struct-catalan], lib exact, drift ZERO)
+and post-rewrite drift vs live ZERO (verbatim live-bytes anchor 217041B
+/ 328 entities / sha16 8460cfb5f1f26f03, byte-identical to live epoch B)
+— this commit's baseline is the sweep-244 epoch reference. Overlap: SAT
+fresh-live 290 bbox non-light / 237 classified / 0 coverage holes, real
+exit 3 unpiped on exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard
+-0.407 — known Sev 2 routed to artwalk b26 choreography @ sweep-43, 199th
+sweep since routing, NOT new, no escalation due (law keys severity-1);
+catalan introduced NO new contacts (classified, corroborating
+struct-174's own SAT 5.00). Walks: tier-1 4/4 per-leg verified 81/81
+ALL_PASS, every leg real exit 0, legs run individually per the sweep-228
+ceiling law — core 64/64 @ 0.380 (next-walk-core-paths.ts; [physics]
+banner parse handled, status + 64 ok-legs + maxArrival re-derived from
+raw output), NW 5/5 @ 0.380 (nw-approach1-walk.ts), NE 7/7 @ 0.380
+(ne-approach2-walk.ts), SW 5/5 @ 0.370 (sw-approach3-walk.ts); catalan
+r130.0 N-NW — outside every walked leg, walks stand by construction
+(sweep-53 precedent), SAT covers the collision surface; verdicts
+content-anchored on status strings + per-leg ok counts + maxArrival.
+Known normalized diagnostics, unchanged in kind: physics banner + uneven-
+top support-seam abstentions (labyrinth 0.48m set, woodstack 0.62m,
+logpile 0.56m, skeps 0.34m, streamstones 0.13m). Tier-2 221st cycle per
+the committed sweep-242 pointer: inn 6/6 @ 0.364 (interior-walk-inn.ts)
++ tower-house 6/6 @ 0.3765 (interior-walk-tower-house.ts), both ALLPASS
+real exit 0 — match the sweep-238 records for the pair exactly; both
+tools ls-verified present on disk pre-run. Integrity: struct18-fleet-
+pin-check 15/15 ALL_PINS_OK bad:[] (197th consecutive clean); sweep89-
+battery 28/28 PASS exit 0 on fresh census-B bytes (python3 argv
+census-path form); interlane md5 f6254cd0 stable, read fresh pre- and
+post-walks; ledger law EXACT — base re-read fresh via the canonical tool
+at append, D+0/E+0 append, tool self-verifies law() both sides. Standing
+gate ALL PASS real exit 0 FIRST TRY at tick-start HEAD f8575dac (99 PASS
+lines, exit captured unpiped) + RE-RUN ALL PASS real exit 0 at mid-tick
+HEAD 505583d8 (city-124 zero-mutation observer HOLD, epoch law honored;
+99 PASS lines). Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged
+(219th check; 0 open candidate rows), 0 SHARD EXECUTION sections, sweep
+owns no prefix; CITY-PLAN-V2 assigns sweep no reset role — the
+audit-continues freeze banner governs and was read fresh this tick. Diff
+tool sweep243-census-diff.py folded from the committed sweep242 chassis
+(sed swap only — 3 forward / 0 stale refs, py_compile clean, clean exit
+0 at BOTH epochs A/B unpiped on the real bytes; argv-is-phase-letter
+self-catch repaired pre-verdict, sweep-48 class). Probe self-catches
+pre-verdict: (a) diff tool invoked with a PATH where the chassis expects
+a phase letter — FileNotFoundError on a malformed concatenation, nothing
+classified, repaired by copying to the canonical phase filename; (b)
+core-walk JSON parse failed on the known [physics] banner prefix —
+re-parsed from first brace, sweep-242 class. Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-244): forge +
+potter (222nd cycle — LRU chain re-derived from committed pointers this
+tick: row-cottage/observatory @242, inn/tower-house @243 walked fresh,
+longhouse/garden-cottage @241, hall/bunkhouse @240, forge/potter @239
+stalest standing pair at 4 sweeps; both walk tools ls-verified present
+on disk this tick: interior-walk-forge.ts, interior-walk-potter.ts).
