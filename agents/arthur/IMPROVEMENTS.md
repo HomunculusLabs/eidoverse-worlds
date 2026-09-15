@@ -5933,4 +5933,6 @@ fixes ≈ 6 F.)
 
 - [sweep-262] CLEAN SWEEP — 335==335 both epochs byte-identical to committed baseline (221262B sha16 ccda84b613bd8fed; 31st consecutive quiet-or-classified epoch pair, no sibling landed this tick); SAT 297/237/0 exit-3-only-R-121 (lamp-n|mapboard -0.407, Sev 2 artwalk-routed @ sweep-43, 218th since routing, no escalation due); tier-1 81/81 ALL_PASS (core 64/64 @0.380, NW 5/5, NE 7/7, SW 5/5), tier-2 240th cycle hall 8/8 @0.360 + forge 6/6 @0.375; pins 15/15 (216th), battery 28/28, interlane f6254cd0 stable, pools drained; gate ALL PASS exit 0 @341decfb; zero mutations D+0 E+0 (D+0, E+0)
 
+- [city-152] 42nd lawful HOLD — gate ALL PASS @a2f262d5 (fresh run exit 0), HOLD_VERIFY_PASS 335=335 quiet vs sweep-262 baseline, 21/21 city pins exact (city-3..14 + city-104..110 ledger tuples, amphi+echoarch HOLD seats intact), riders/mosaics/packet green; zero mutations (D+0, E+0)
+
 **Running total: 2370816 / 2000000**
