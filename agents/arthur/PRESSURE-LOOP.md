@@ -328,8 +328,35 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       measured: runtime bounds buffered bytes, server refuses complete
       oversize explicitly. tools/pressure-giant.ts (SELFTEST 29 gates,
       coalesced-frame walker). Servergate smoke 85/0 pinned tree.)
-- [ ] Clock-skew tolerance: late/reordered client timestamps never corrupt
+- [x] Clock-skew tolerance: late/reordered client timestamps never corrupt
       sequence ordering.
+      (pressure-18, 2026-09-16: worktree @ c82800c6, PORT 8989, 36s, 165
+      peak — 24 perf @15Hz + 136 spec + 5 embodied skew legs stamping every
+      reachable time surface with past (-300ms..-90s), future (+45s..+2h),
+      NaN/string/null epochs, plus a phase-2 band of 6 spawns + 8 motions +
+      45 says incl. a 3x14 rate-window burst. MEASURED PASS, no patch — the
+      log is server-governed by construction: 84 lines EXACT (drift 0), seq
+      strictly monotonic 0..84, 0 ts regressions in a 26.5s span, 0
+      feed-window overlaps, 0 client-stamp collisions with entry ts.
+      Skew-stamp sandbox proven at every seam: spoken-say t0 clamped into
+      [ts-300s, ts] on hostile garbage (NaN/\"soon\"/-1e12 → dropped),
+      utterance order == log order; hostile motion t0 rides comp DATA only
+      (fold stores verbatim — by-design author parameters, observation
+      recorded); t0-less motions fold-stamped with the ENTRY ts
+      (deterministic replay); 2 mid-traffic snapshots == fold(log through
+      covered) exactly via the sequencer's own foldEntry. Fairness under
+      skew: 9/9 saturation says in-order author p95 8ms delivered to all
+      anchors, rate budget server-clocked (6/6 exact \"slow down\" refusals +
+      3 recorder notes, window recovery 3/3), leases grant/settle exact at
+      rest positions through past/future-stamped streams (0 rest
+      mismatches). fps 14.9, 0 frame gaps, roster exact, 5/5 skew legs
+      arrive+leave clean, final present 0, ratchet rejoin 168/168 p95 23ms,
+      RSS +29MB, 0 suspicious lines. tools/pressure-skew.ts (SELFTEST 46
+      gate families, unit-proven monotonicity checker, full log-tail dump
+      on drift — run 1's FAILs were all harness-accounting bugs; the dump
+      proved the server exact both runs; harness fixes: seq-0 genesis
+      contract, 12/4s rate-window model, spectator-verifier spawn model).
+      Servergate smoke 85/0 pinned tree.)
 - [ ] Emoji/text flood in chat: rapid-fire says cannot starve verb intake.
 - [ ] Comp attach storm: 200 simultaneous comp placements rate-limited
       fairly with explicit backpressure.
