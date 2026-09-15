@@ -9787,3 +9787,69 @@ garden-cottage @236 and hall/bunkhouse @235 the stalest standing pairs;
 hall/bunkhouse stalest overall at 4 sweeps; both walk tools ls-verified
 present on disk this tick: interior-walk-hall.ts,
 interior-walk-bunkhouse.ts).
+
+
+sweep-240: CLEAN SWEEP, fully-quiet steady-state tick under the
+audit-continues banner (freeze lifted for struct+city lanes only, so the
+epoch was re-verified quiet on its own bytes, not assumed). Census 326==326
+at BOTH epochs (A/B, 20s-paced, next-live-census.ts chassis) BYTE-IDENTICAL
+to the committed sweep-238 baseline (raw 215835B sha16 f699fa0b1feb3eda;
+cmp-verified against git-show HEAD bytes; set-diff law satisfied by byte
+identity): 0 arrivals, 0 departures, all five semantic drift classes EMPTY
+(pos/yaw/scale/kind/bbox, lib flips, compKeys). FOURTEENTH consecutive
+quiet-or-classified epoch pair; no snapshot rewrite needed (no-churn
+precedent — the committed file already describes the live world exactly).
+HEAD unchanged through the whole tick (tick-start and append-time HEAD
+8ac2dd20 = struct-171, build-only, zero world mutations per its own
+entry); sibling city-120 (all-HOLD observer tick, zero mutations per its
+own prose) interleaved its ledger entry in-tree uncommitted at append —
+normal shared-ledger life, disclosed. Epoch law satisfied without a gate
+re-run because no epoch ever advanced. Overlap: SAT fresh-live 288 bbox
+non-light / 237 classified / 0 coverage holes, real exit 3 unpiped on
+exactly ONE unclassified = R-121 lamp-n | nx-town-mapboard -0.407 — known
+Sev 2 routed to artwalk b26 choreography @ sweep-43, 196th sweep since
+routing, NOT new, no escalation due (the law keys on severity-1). Walks:
+tier-1 4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs
+run individually per the sweep-228 ceiling law — core 64/64 @ 0.380
+(next-walk-core-paths.ts; status + 64 ok-legs + maxArrival re-derived from
+raw unpiped JSON), NW 5/5 @ 0.380 (nw-approach1-walk.ts), NE 7/7 @ 0.380
+(ne-approach2-walk.ts), SW 5/5 @ 0.370 (sw-approach3-walk.ts); all
+verdicts content-anchored on status strings + per-leg ok counts +
+maxArrival from raw files. Known normalized diagnostics, unchanged set:
+physics banner + labyrinth-seam abstentions (4 ids @ lie 0.48m) +
+nx-dress-goats (lie 0.28m); core stderr carried two further seam
+abstentions this tick (streamstones lie 0.13m, ne-yard lie 0.81m) — same
+known class, unchanged in kind. Tier-2 218th cycle per the committed
+sweep-239 pointer: hall 8/8 @ 0.360 (interior-walk-hall.ts) + bunkhouse
+6/6 @ 0.380 (interior-walk-bunkhouse.ts), both ALL_PASS real exit 0 —
+match the sweep-235 records for the pair exactly. Integrity:
+struct18-fleet-pin-check 15/15 ALL_PINS_OK bad:[] (194th consecutive
+clean); sweep89-battery 28/28 PASS exit 0 on fresh census-B bytes
+(python3 argv census-path form); interlane md5 f6254cd0 stable, read
+fresh pre- and post-walks; ledger law EXACT — base 2370779 re-read fresh
+via the canonical tool at append, D+0/E+0 append, tool self-verifies
+law() both sides (running total 2370779 -> 2370779). Standing gate ALL
+PASS real exit 0 FIRST TRY at tick-start HEAD 8ac2dd20 (99 PASS lines,
+exit captured unpiped). Pools drained: IMPROVE-PLAN md5 c0f569d0
+unchanged (216th check; live-queue OPEN grep 0 — raw OPEN hits =
+headers/prose, zero open candidate rows), 0 SHARD EXECUTION sections,
+sweep owns no prefix; CITY-PLAN-V2 assigns sweep no reset role — the
+audit-continues freeze banner governs and was read fresh this tick. Probe
+self-catch pre-verdict (SHA-1/sha16 class, new, disclosed): shasum on
+macOS defaults to SHA-1, so its 16-hex prefix was NOT comparable to the
+plan's SHA-256 sha16 records — an initial live read hashed 8cb5f261 vs
+the committed f699fa0b and initially read as a phantom live-change;
+re-derived with python hashlib (SHA-256) + cmp vs git-show HEAD bytes:
+the live census is BYTE-IDENTICAL to the committed baseline
+(f699fa0b1feb3eda). Same-sha-prefix-different-algorithm is now a named
+probe-artifact class. Diff tool sweep240-census-diff.py folded from the
+committed sweep239 chassis (sed swap only — 3 forward / 0 stale refs,
+py_compile clean, clean exit 0 at BOTH epochs A/B unpiped on the real
+bytes). Zero world mutations, zero defect notes, zero uploads, zero
+verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-241):
+longhouse + garden-cottage (219th cycle — LRU chain
+re-derived from committed pointers this tick: row-cottage/observatory
+@237, inn/tower-house @238, forge/potter @239, hall/bunkhouse @240
+walked fresh, longhouse/garden-cottage @236 stalest standing pair at 4
+sweeps; both walk tools ls-verified present on disk this tick:
+interior-walk-longhouse.ts, interior-walk-garden-cottage.ts).
