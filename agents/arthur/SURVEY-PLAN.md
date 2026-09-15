@@ -15741,3 +15741,36 @@ shared-budget use (D+0, E+0).
   only when routing; CLEAN concurrence routes nothing; ticks 211-345
   precedent). STANDING RECOMMENDATION carried unchanged (s182-s345): stop
   the SURVEY lane or convert to a no-LLM monitor when attended.
+
+- survey-347 (2026-09-14, quiet hold — first quiet epoch after the
+  survey-346 arrival break): gate ALL PASS real exit 0 first try at
+  tick-start HEAD 9b83581c (city-118 tip; raw log /tmp/survey347-gate.log,
+  99 PASS lines, exit captured unpiped; HEAD unchanged through the tick —
+  no re-gate due). Census via committed next-live-census.ts exit 0 at BOTH
+  epochs (A/B, 20s-paced), each 326 entities, each 215835B, each sha16
+  f699fa0b1feb3eda — BYTE-IDENTICAL to the survey-346 baseline
+  (/tmp/survey346-census-a.json, cmp both directions) AND to each other;
+  set-diff law satisfied by byte identity — 0 arrivals / 0 departures /
+  0 lib flips / 0 pos/yaw/scale diffs on all 326 ids. Mutation lanes
+  active-but-not-mutating this window (struct-170 monkeysaddle v2 BANKED
+  NOT PLACED behind the native-PASS gate; city lane all-HOLD on Bill's
+  Wave A eye-gate packet; vocab/pressure work is server-side, off-world)
+  — likeliest next flip triggers unchanged (monkeysaddle v2 placement
+  after native re-judge, city Wave B pending Bill's rulings). Pools:
+  IMPROVE-PLAN md5 c0f569d0 unchanged (236th check); SURVEY CANDIDATES 0
+  OPEN rows; CITY-PLAN-V2 assigns survey no role (grep 0). No slice judged
+  (arrival-gated, s138-s346 precedent — identical bytes + drained pools;
+  the native re-judge register — hypar row 22, monkeysaddle v2 per
+  struct-169v/170 — is cron-unpayable this tick: cron sessions use ZAI
+  fallback which does NOT discharge native-owed rows): 0 confirmed /
+  0 clean / 0 dropped, 0 notes routed, 0 vision calls, native-vs-fallback
+  N/A. Foreign working-tree dirt at read = sibling lanes in flight
+  (windmill overhaul family, cabin-overhaul / carousel-horse-prototype /
+  moon-moth / debug-bower / fleet scripts / client+server trees — same
+  families as s285-s346) — untouched. Census baseline for next tick:
+  /tmp/survey347-census-a.json (326, 215835B, sha16 f699fa0b1feb3eda —
+  byte-identical, baseline unchanged). Zero world mutations, zero
+  uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
+  ledger append (loop law 4: append only when routing; ticks 211-346
+  precedent). STANDING RECOMMENDATION carried unchanged (s182-s346):
+  stop the SURVEY lane or convert to a no-LLM monitor when attended.
