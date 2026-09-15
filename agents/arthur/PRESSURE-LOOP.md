@@ -71,7 +71,15 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       0 gaps, RSS +10MB, 0 log warnings. PASS, no patch. Servergate: smoke
       85/0 (pinned tree — main-tree smoke fails on sibling pilot dirt),
       websocket-input 9/0.)
-- [ ] Component-placement burst receives fair, explicit rate-limit behavior.
+- [x] Component-placement burst receives fair, explicit rate-limit behavior.
+      (pressure-5, 2026-09-15: worktree @ d29ba072, 200 sockets (24 embodied
+      incl. 8 builders @15Hz + 176 spec), 160-comp burst (8x20 ~1KB) —
+      per-builder budget EXACT 12 ok / 8 refused / 0 silent drops with the
+      exact "slow down" error; refused comps fanned out + folded nowhere;
+      accepted comps exact round-trip (19400/19400 receipts p95 64ms, author
+      p95 67ms); mid-burst fairness say 11ms, fps 14.7, 0 gaps; recovery
+      8/8 post-window; >8KB + shape errors exact; log.jsonl drift 0/0;
+      RSS +11MB. PASS, no patch. Servergate smoke 85/0 + compfold 24/0.)
 - [ ] Reconnect storm leaves no ghost clients, leases, or timers.
 - [ ] World switching cancels old-world traffic and state promptly.
 - [ ] Snapshot join during concurrent authored mutations is sequence-consistent.
