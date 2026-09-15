@@ -12462,3 +12462,142 @@ struct191-terrain-quadratrix.ts + next-place-struct191.ts (all NEW,
 tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-191, D+1 E+1). One upload + one verb total (shared budget). Zero
 pushes.
+
+## struct-192 (2026-09-15): R11-19 THE ARCHIMEDEAN SPIRAL — BUILD+JUDGE
+## TICK (probe 9/9 + RED after 4 self-catches; decode 8/8 + RED control; judged
+## PASS on all three frames — ZAI fallback disclosed; ACCEPTED BANKED NOT PLACED)
+
+192%3=0 refine-slot cadence: refine pool EMPTY (all standing forms either
+Bill-approved hero or already rebuilt through the shard era; no externally
+evidenced deficit open on any nx-struct- form — survey register quiet), owed
+native debts cron-unpayable (tool catalog carries only the zai-vision MCP,
+tool_search fresh this tick; same disclosed class as struct-169..191) —
+build tick per the 178..191 alternation, placement = struct-193 committed
+carry. Gate ALL PASS real exit 0 tick-start at d74d0917 (city-154;
+/tmp/struct192-gate.txt, content-verified EXIT:0). Shard drained fresh
+(IMPROVE-PLAN md5 c0f569d0 unchanged 21st tick, 0 OPEN nx-struct rows).
+Ledger max re-derived struct-191 -> tag struct-192 (re-checked immediately
+before append).
+
+FORM SELECTION (fresh grep, all three ledgers + IMPROVE-PLAN): archimede*
+2 hits, both struct-78's screw well (HELICOID — the Archimedes screw as
+vertical water machinery, not the plane spiral); spiral hits are the shell
+tower + spiral folly (both LOGARITHMIC, spacing shrinks by phi) and
+artwalk's lissajous (curve of motion, standing). No Archimedean plane
+spiral (equal-spacing signature) anywhere. Register: Greek
+construction-curve register 4th member (cissoid -> quadratrix -> spiral;
+Archimedes, On Spirals ~225 BC — the first curve whose area was computed).
+
+CONCEPT (written before build): THE CURVE OF EQUAL STEPS. A ray turns at
+constant speed while a point runs along it at constant speed; r = b*theta —
+every turn adds the SAME radial step. Rendered standing: a stone coil of 48
+tangent voussoirs springs from a hub barrel, winds 3.23 turns to an iron
+landing mast, RISING at the same rate it widens (y = base + b*theta: the
+plan projection IS the exact curve; a true conical spiral). Brass pegs mark
+Proposition 24: peg1 at theta=2pi (the first turn's swept area is exactly
+ONE THIRD of the circle on r(2pi) — machine-verified 33.3333%), peg2 at
+theta* = (theta_max^3/3)^(1/3) (the radius where swept area reaches its
+first third). One warm bead (glow_as_1 KEEP, r 0.07, emissive 0x9a7030 @
+1.0 dusk lineage) caps the mast — sole night element. Envelope 4.10x2.32x
+4.10 y[0,2.32] origin-centered; h 2.32 >= 2.2 real trimesh; folly class —
+exterior circuit at placement, no interior walk promised (0.353m inter-turn
+channels are honest pinch, not lanes). Nodes 4 (as_stone + as_brass +
+as_iron + glow_as_1).
+
+PROBE (struct192-probe-archispiral.ts, tracked — the ONE contract; mk +
+decode import it): L1 curve law (r == b*theta to 2.2e-16, dr/dtheta
+exact); L2 EQUAL SPACING (turn gaps all 0.50265, spread 2.2e-16 — the
+kin-distinction from every logarithmic spiral standing; channel 353mm
+reads); L3 Proposition 24 (numeric Simpson area == closed (b^2/6)theta^3
+to 8e-16 rel; first turn == exactly 1/3 of its circle; theta*^3 ==
+theta_max^3/3); L4 rise law (rise == plan reach everywhere; landing y ==
+R_MAX; dy/ds max 0.447); L5 landing + mast (curve end -> mast axis 1.2e-15;
+mast grounds plinth-top to 2.25); L6 STATION WALK (the probe owns it:
+arc-uniform outer zone — every step exactly 0.40m of ARC to 0.38mm — plus
+winding-capped inner zone, 14 segments subtend 0.55 rad with shrinking
+chords; closing remainder arc 0.347m; all 49 stations on-curve); L7
+grounding (coil spring embeds hub r 0.17 plan+height; pegs pierce bands
+0.095m proud each way; kerb+mast inside plinth); L8 envelope + collider
+honesty. RED control: mutant 2b spacing fails (drift 0.5027, turn-3 radius
+escapes R_MAX). FOUR self-catches en route, all RED->GREEN: (a) hub r
+0.10->0.17 — first voussoir band poked out of the barrel; (b) slope
+formula forgot the dy/dtheta term (checker-side); (c) steps measured
+between wrong indices after filter renumbering (checker-side, carry-idx
+fix); (d) arc-vs-chord identity — the law measures ARC via the speed
+integral, chord sagitta ~7mm is geometry not defect. Station count derives
+48 (not authored) — capped inner segments shrink 0.082..0.371m, the block
+rhythm grows with the turn (the spiral's own story). ALL CHECKS PASS
+exit 0.
+
+BUILD (assets/mkv3-archispiral.ts, staged -f): root identity (struct-188
+decode law); tangent voussoirs via quaternion setFromUnitVectors on the
+station walk; ONE build defect CAUGHT BY THE MK'S OWN ENVELOPE LAW:
+kerb rotation. First draft rotation.y=-az put the long axis RADIAL
+(48 sticks, 9.3mm envelope breach); second draft az+pi/2 misrotated by
+2*az (decode-caught: corner verts at r 2.04 + tangential gaps); TRUE
+law Ry maps +x -> (cos,-sin) so -az+pi/2 lands the tangent EXACTLY.
+Deterministic x2 byte-identical sha256
+d343609abd0d9377b5d7dbc80d07bf9c0f4d6effebd91bf3cbd1b5b73b84d5ee,
+mtime-verified. Nodes 3 merged + 1 glow KEEP = 4.
+
+DECODE (struct192-decode-archispiral.ts, tracked) ALL PASS 8/8 + RED
+control (foreign quadratrix bytes FAIL 8/8, exit 1): D1 census 4 nodes;
+D2 band + union (2744 stone verts: coil band 1246 within half-diagonal
+0.115m of the dense 3D curve — 3D tangent-box corners sit sqrt2 further
+than the quadratrix's 2D in-plane bound, classifier law; kerb 1152 ==
+48x24 exact after the rotation fix; hub 102, plinth 244, unclassified 0);
+D3 sweep (20/20 theta-bins theta 1.00..20.31, 0 interior gaps; 48 verts
+near each theorem peg; per-vert rise test removed as geometrically wrong
+for tilted boxes — the rise law is carried by D2's 3D band distance);
+D4 brass (peg1 at theta=2pi plan exact, peg2 at theta* exact, both
+on-curve dr ~0, unclassified 0); D5 iron (mast center == curve-end plan
+0.0mm, y span exact, curve end passes mast axis 0.0mm — the coil lands
+in iron); D6 bead (center == mast cap, emissive present); D7 envelope
+drift 0.0000 origin-centered; D8 named texMats as_stone/as_brass/as_iron
+(struct-38 law).
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the owed board):
+- front: PASS 4/4 — identity deliberate mathematical monument; coil one
+  continuous rising curve hub->mast, turn spacing visually even; plinth
+  flush + contact shadow; zero hard defects (blocky segmentation reads
+  deliberate masonry). Margins: seams between blocks; slight step wobble
+  inner run; shadow pooling at hub junction; first-second turn spacing
+  marginally tighter (perspective).
+- gameplay 18m: PASS 4/4 (2 marginal) — spiral whorl distinct at distance;
+  rising trend legible, eye follows coil-to-mast (margin: middle turns
+  visually merge, widening gradient reads softer); grounded, attached
+  shadow; folly proportions plausible (margin: leans diminutive on the
+  empty avenue — garden-folly read, disclosed same tier as cissoid/
+  quadratrix ribbons); brass pegs near-invisible dots at 18m (design
+  promise: pegs read at walk-up, silhouette at distance).
+- night: PASS 3/3 — sole-light law EXACT (one amber bead at mast apex,
+  zero spill); three-layer silhouette coil/plinth/sky legible (margin:
+  coil-vs-sky contrast near the floor); bead caps the mast precisely.
+- Judge-composition note disclosed: front/gameplay judges read the mast
+  as "central"; it stands at the coil's end (plan r 1.625). Identity
+  passed both views regardless; the end-position reads at walk-up.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-193
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility; procession continues past quadratrix r290), terrain preflight
+over the TRUE rotated footprint, hash-gated plain spawn nx-struct-
+archispiral, comp {}. Folly class — no walk owed. Native re-judge debt:
+archispiral v1 joins the owed board (monkeysaddle gate, hypar row 22,
+kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1, melencolia v3,
+tribar v2, fourier v1, cissoid v2, quadratrix v1).
+
+Bill eye-check pointer (after placement): on Math Avenue past the
+quadratrix — a stone coil winding three turns around an empty hub,
+climbing as it widens until it ends at the iron mast: walk the plinth
+rim and watch the gap between turns stay the SAME all the way out (the
+curve of equal steps — its logarithmic siblings in the village shrink by
+phi; this one never changes). The two brass pegs mark Archimedes' own
+theorem: at the first peg the enclosed area is exactly one third of its
+circle. After dark: one warm bead where the coil ends.
+
+Files: struct192-probe-archispiral.ts + struct192-decode-archispiral.ts
+(NEW, tracked), assets/mkv3-archispiral.ts (NEW, staged -f), reviews/
+struct192-archispiral/ (10 frames, ignored), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-192, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
