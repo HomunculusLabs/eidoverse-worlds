@@ -5777,4 +5777,6 @@ fixes ≈ 6 F.)
 
 - [city-127] 17th lawful HOLD (lane all-HOLD since city-111 close-out; Wave A complete). Standing gate ALL PASS real exit 0 at 53607d43 (vocab-6, sibling — gate-accepted per city-116 precedent). Probe city127-hold-verify.py (chassis = city126, baseline advanced to city-126 capture 328): HOLD_VERIFY_PASS exit 0 — census 328=328 fully quiet (+0/-0/0-moves), register pins 19/19 OK worst pos dev 0.0006 (potter, sub-mm jitter), charcoal seat exact, amphi + echoarch HOLD seats intact, rider hosts unmoved + riders b31/b32/b33 present, mosaics parked 0.0, Wave A packet present. Lane holds for Bill: amphi options, echoarch options, nvp-105 mosaic-row blessing, artwalk eye-gate. Zero world mutations, zero uploads (D+0, E+0)
 
+- [sweep-245] CLEAN SWEEP steady-state — census 328==328 both epochs byte-identical (sha16 8460cfb5, 17th consecutive quiet pair); SAT 290/237/0 exit 3 on ONLY known R-121 (201st, no escalation due); tier-1 81/81 ALL_PASS (core 64 @ 0.38, NW 5/5, NE 7/7, SW 5/5); tier-2 223rd hall 8/8 @ 0.360 + bunkhouse 6/6 @ 0.380; pins 15/15 199th, battery 28/28, interlane f6254cd0 stable, gate ALL PASS @2be31a01; pools drained; next pair sweep-246 longhouse + garden-cottage; zero mutations (D+0, E+0)
+
 **Running total: 2370782 / 2000000**

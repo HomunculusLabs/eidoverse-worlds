@@ -10085,3 +10085,53 @@ forge/potter @244 walked fresh, longhouse/garden-cottage @241 and
 hall/bunkhouse @240 the stalest standing pairs, hall/bunkhouse stalest
 overall at 4 sweeps; both walk tools ls-verified present on disk this
 tick: interior-walk-hall.ts, interior-walk-bunkhouse.ts).
+
+sweep-245: CLEAN SWEEP, fully-quiet steady-state tick under the
+audit-continues banner (freeze lifted for struct+city lanes only, so the
+epoch was re-verified quiet on its own bytes, not assumed). Census 328==328
+at BOTH epochs (A/B, 20s-paced, next-live-census.ts chassis) BYTE-IDENTICAL
+to the committed sweep-243 baseline (raw 217041B sha16 8460cfb5f1f26f03,
+cmp-verified A vs B): 0 arrivals, 0 departures, all five semantic drift
+classes EMPTY (pos/yaw/scale/kind/bbox, lib flips, compKeys). SEVENTEENTH
+consecutive quiet-or-classified epoch pair; no snapshot rewrite needed
+(no-churn precedent — the committed file already describes the live world
+exactly). HEAD at tick-start 2be31a01 (city-127 zero-mutation observer
+HOLD); gate ALL PASS real exit 0 FIRST TRY (99 PASS lines, exit captured
+unpiped); no sibling production commit landed through the whole tick —
+vocab-6/struct-175/survey-353/city-126 all predate the tick-start read and
+are zero-production-write per their own entries, consistent with the
+byte-identical epochs. Overlap: SAT fresh-live 290 bbox non-light / 237
+classified / 0 coverage holes, real exit 3 unpiped on exactly ONE
+unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known Sev 2 routed to
+artwalk b26 choreography @ sweep-43, 201st sweep since routing, NOT new, no
+escalation due (the law keys on severity-1). Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually per
+the sweep-228 ceiling law — core 64/64 @ 0.380 (next-walk-core-paths.ts;
+status + 64 ok-legs + maxArrival re-derived from raw output), NW 5/5 @
+0.380 (nw-approach1-walk.ts), NE 7/7 @ 0.380 (ne-approach2-walk.ts), SW 5/5
+@ 0.370 (sw-approach3-walk.ts); verdicts content-anchored on status strings
++ per-leg ok counts + maxArrival from raw files. Tier-2 223rd cycle per the
+committed sweep-244 pointer: hall 8/8 @ 0.360 (interior-walk-hall.ts) +
+bunkhouse 6/6 @ 0.380 (interior-walk-bunkhouse.ts), both ALL_PASS real
+exit 0 — match the sweep-240 records for the pair exactly; both tools
+ls-verified present on disk pre-run. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (199th consecutive clean); sweep89-battery 28/28
+PASS exit 0 on fresh census bytes (python3 argv census-path form);
+interlane md5 f6254cd0 stable, read fresh this tick; ledger law EXACT —
+base re-read fresh via the canonical tool at append, D+0/E+0 append, tool
+self-verifies law() both sides (running total 2370782 -> 2370782). Pools
+drained: IMPROVE-PLAN md5 c0f569d0 unchanged (221st check; 0 SHARD
+EXECUTION sections, 0 open candidate rows), sweep owns no prefix;
+CITY-PLAN-V2 assigns sweep no reset role — the audit-continues freeze
+banner governs and was read fresh this tick. Diff tool
+sweep245-census-diff.py folded from the committed sweep244 chassis (sed
+swap only — 4 forward / 0 stale refs, py_compile clean, clean exit 0 at
+BOTH epochs A/B unpiped on the real bytes). Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-246): longhouse +
+garden-cottage (224th cycle — LRU chain re-derived from committed pointers
+this tick: row-cottage/observatory @242, inn/tower-house @243,
+forge/potter @244, hall/bunkhouse @245 walked fresh, longhouse/
+garden-cottage @241 stalest standing pair at 4 sweeps; both walk tools
+ls-verified present on disk this tick: interior-walk-longhouse.ts,
+interior-walk-garden-cottage.ts).
