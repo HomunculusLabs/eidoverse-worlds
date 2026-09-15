@@ -17,6 +17,9 @@ import { VERB_RATE, OPT_DIR } from "./config.ts";
 import { isAdminId, rightsOf, VERB_NEEDS, lockRefusal } from "./rights.ts";
 import { lintMotion, lintParticles } from "./lint.ts";
 import { reactToUse, reactToSay } from "./reactions.ts";
+// The lamp engine (vocab-5): reactLamp rides reactToUse's dispatch; the
+// comp/spawn/remove reconcilers ride the after hooks below.
+import { lampOnComp, lampOnRemove, lampOnSpawn } from "./lamp.ts";
 import { behaviorLimits } from "./behaviors.ts";
 import { ROLE_RANK, type LogEntry, type WorldState } from "../shared/fold.js";
 
@@ -285,6 +288,11 @@ function afterComp(ctx: VerbCtx, entry: LogEntry) {
   // a clamped parameter is a silence the author would otherwise have
   // to discover by asking someone with a GPU what they can see.
   if (type === "particles") lintParticles(ctx.w, entry);
+  // The lamp reconcile (vocab-5, § LAMPS CONTRACT): a CLIENT-authored lamp
+  // comp is the truth; the companion light is reconciled to it (sweep on
+  // null, ignite on on:true, reset on fresh shape). The engine's own comp
+  // writes bypass runVerb (w.append), so this never recurses.
+  if (type === "lamp") lampOnComp(ctx.w, entry);
 }
 
 function afterModerate(ctx: VerbCtx, entry: LogEntry) {
@@ -321,6 +329,11 @@ const extras: Record<string, Pick<VerbRow, "selfRankZero" | "validate" | "after"
   force: { validate: vForce },
   punt: { validate: vPunt },
   comp: { validate: vComp, after: afterComp },
+  // lamp companions follow their hosts' lifecycle (vocab-5): a spawn onto a
+  // companion id while lit is a decoy collision → re-derive; a host removal
+  // sweeps its standing companion. Both no-op for non-lamp ids.
+  spawn: { after: (ctx, entry) => lampOnSpawn(ctx.w, entry) },
+  remove: { after: (ctx, entry) => lampOnRemove(ctx.w, entry) },
   motion: { after: (ctx, entry) => lintMotion(ctx.w, entry) },
   // ...and a (re)bind reconciles sandboxes before scripts hear anything else.
   behavior: { validate: vBehavior, after: (ctx) => ctx.w.bhv.sync() },

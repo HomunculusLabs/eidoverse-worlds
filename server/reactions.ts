@@ -9,6 +9,10 @@ import type { LogEntry, WorldState } from "../shared/fold.js";
 // the server's lint and state writes carry exactly the numbers every
 // renderer derives from.
 import { normalizeDoor } from "../shared/door.js";
+// The lamp derivation + clamps (shared/lamp.js — same shared-verbatim
+// pattern, vocab-5): companion id/anchor/params are one arithmetic across
+// engine, tests, and any future client consumer.
+import { reactLamp } from "./lamp.ts";
 
 /** What a reaction needs from the world it fires in: the folded state, the
  *  log, the fanout, and the flight recorder. server.ts's World satisfies it
@@ -55,6 +59,10 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // legitimately skipped as a no-op), and false when the action belongs to
     // another evaluator.
     if (reactDoor(w, cause, ent, id, action)) return;
+    // The lamp slice (vocab-5, § LAMPS CONTRACT): comp {type:"lamp"} owns
+    // the light/snuff/toggle action vocabulary — same dispatch doctrine,
+    // after doors so a door-lamp hybrid decides its door first.
+    if (reactLamp(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

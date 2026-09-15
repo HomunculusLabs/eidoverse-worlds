@@ -121,7 +121,45 @@ plan. Never deploy, push, or restart production unless Bill asks.
       visitor authoring-bounce check after the RED run; it gates the shell,
       not the engine, so RED stays 21); smoke caught and fixed two TS
       non-null assertions in client/lib/door.js (85/85 after).
-- [ ] Portable authored light with time-of-day-aware client realization.
+- [x] Portable authored light with time-of-day-aware client realization.
+      DONE vocab-5 (2026-09-15): comp {type:"lamp"} + server/lamp.ts — reactLamp
+      rides reactToUse's dispatch AFTER reactDoor (one hunk in reactions.ts);
+      lampOnComp/lampOnSpawn/lampOnRemove ride afterComp + spawn/remove rows
+      in verbs.ts. ZERO edits to pilot-dirty server.ts/world.ts. Contract in
+      § LAMPS CONTRACT implemented as written: the companion LIGHT entity's
+      id/anchor/params are pure functions of the folded entity + comp
+      (shared/lamp.js — the forecast/door shared-verbatim pattern; late
+      joiner truth = light folded at the derived anchor, proved at yawed
+      host π/2); use {action:light|snuff|toggle} rank 0 + arm's-reach gate
+      (vPunt arithmetic, live lease pos) is the only state transition,
+      writing comp {...authored,on,at} + light/remove + ONE cargo mount at
+      ignite (host motion — place, punted flight, carriers — rides the
+      world's own mount semantics: zero per-place entries, zero per-frame
+      traffic) + say with lamp{on,who,at}/cause/by. Time-of-day realization
+      = the EXISTING rig dayness (cycle-aware default; authored day:false
+      carries as the burns-at-noon opt-out) — zero client code. Fail-closed:
+      no-op door-style lamp-skip, reach skip names distance, clamp+lint
+      lamp-lint (anchor ±8, intensity 0-60 d14, range 1-40 d8, reach 2-12
+      d4, lines 200c, color 24-bit), re-author resets to dark (door
+      doctrine), decoy companion ids replaced wholesale, host-removal sweep
+      (companion check — the host is already gone at after-hook time),
+      lock composes (locked host still lights), light-kind host refused
+      (companion-of-companion). Evidence: tools/lamptest.ts RED 24 failing
+      (engine absent) -> ALL PASS 34/34; doortest 28/28; servergate smoke
+      85, comptest 33, behaviortest 27, worldops 20, compfold 24, locktest
+      13, leasetest 19, modtest 23 (WORLD_ADMIN=admin per its header — an
+      18/23 first run was MY runner omitting the env, not a regression)
+      all PASS; permtest 21/23 = the documented pre-existing
+      mcpl/tokens.json-missing class (vocab-1/2/3/4 identical); mcpl
+      manifest 28/0 + effective 42/0 after the describeLamp look() line.
+      Scratch worlds only; no production world touched. ONE DISCLOSURE:
+      a mid-gate shell mistake dropped PORT from one scratch-server line,
+      briefly binding the production port 8940 with a THROWAWAY WORLDS_DIR
+      — the port was FREE (production was not running), no production
+      world file was touched, the process was killed within seconds, and
+      all later runs set PORT explicitly. Eye-check OPEN: in-browser night
+      read of a lit lamp (dusk dim, gizmo bulb at anchor) — headless matrix
+      proves protocol only, not the visual.
 - [ ] Persistent guestbook/inscription contribution with moderation boundaries.
 - [ ] Publish/attach path that promotes a reviewed Layer-2 behavior into a
       documented Layer-1 vocabulary item with bounded knobs.
@@ -449,6 +487,123 @@ traces the chain use → comp+say with cause/by.
 door that closes against the wind, a portal ring that rotates open. State
 in the fold, motion as a function of time, perception for free — one
 8KB-of-data comp, no script, no sandbox.
+
+### LAMPS CONTRACT (vocab lane — drafted vocab-5, 2026-09-15)
+
+**Trigger.** A lamp is an entity carrying `comp {type:"lamp", data:{...}}`.
+The action strings `light`, `snuff`, and `toggle` are LAMP vocabulary on
+the freeform `use {id, action}` path (the reactions doctrine: other action
+strings pass through untouched for other evaluators — a lamp ignoring
+`use {id, action:"ring"}` is exactly correct). `light` on a lit lamp and
+`snuff` on a dark one are no-ops that still log the `use` and skip with
+`lamp-skip`. Attaching/removing the comp is builder (rank 1) — the
+author's standing decision that this thing gives light, identical
+doctrine to `reactions`/`phrases`/`region`/`door`.
+
+**State — the fold is the state, and the companion is DERIVED.** A lamp's
+light is a companion LIGHT ENTITY (`light` verb, actor `world`) whose id,
+anchor, and parameters are PURE FUNCTIONS of the folded entity + comp:
+
+- companion id = `<entityId>·lamp` (the `·` separator cannot appear in an
+  authored id — the flat namespace stays collision-proof);
+- anchor = folded live pos + the comp's clamped `anchor:[x,y,z]`
+  (entity-local metres, default `[0, 0.5, 0]`, each axis clamped ±8 —
+  the particles-origin doctrine) rotated by the entity's folded yaw;
+- params = `color` (default `0xffd9a0`), `intensity` (default `14`,
+  clamped [0,60]), `range` (default `8`, clamped [1,40]), plus `keep` and
+  `day` verbatim when authored.
+
+`on:true` ⇒ the companion exists in the fold at exactly that anchor with
+those params; `on` absent/false ⇒ the companion does not exist. The state
+transition (`use`) is the ONLY trigger that writes: it appends TWO
+world-authored entries, in order — the comp write
+`comp {id, type:"lamp", data:{...authored, on, at}}` (regions/doors
+doctrine) and `light` `{id:"<entityId>·lamp", pos:<derived anchor>,
+color, intensity, range}` (or `remove {id:"<entityId>·lamp"}` on snuff),
+followed by the `say` `{text, id, lamp:{on,who,at}, cause:<use seq>,
+by:<user>}` — the phrases/doors provenance grammar. Line defaults:
+light `"the lamp lights"`, snuff `"the lamp goes dark"`. **Time-of-day
+realization is the EXISTING client machinery, verbatim**: a lamp's
+companion light is an ordinary light entity, so the lightrig dims it by
+the sky's dayness like every authored light (cycle-aware by default);
+`day: false` authored on the comp carries to the light verb as the
+burns-at-noon opt-out. Zero client code, zero per-frame log entries —
+the light rides the fold, the rig, and the day cycle that already exist.
+
+**LATE JOIN IS THE TEST (the derivation law).** A late joiner, a
+reconnect, and a restart fold the same truth with no engine running at
+all: the light entity stands at the derived anchor because the LOG put
+it there (the transition wrote it), and its folded pos/params ARE the
+derived values. The engine never re-derives on fold — HOST MOTION rides
+the EXISTING mount machinery instead of engine traffic: at ignite the
+engine authors ONE cargo `mount {id:"<entityId>·lamp", to:<host>,
+offset:<anchor>}`, and from then on every `place`, every leased stream
+frame (a punted lantern's flight), and every client's parent-relative
+transform carry the cast through the world's own semantics — zero
+per-place entries, zero per-frame log traffic. The fold's remove-stamps-
+riders law seats the companion safely if the host is removed before the
+orphan sweep takes it. The engine keeps coherence at its hooks only:
+re-authoring reconciles the companion to the new fold (params patch,
+re-mount on anchor change), and spawn/remove orphan sweeps clean
+abandoned companions. A builder who edits the companion DIRECTLY
+(removing the light, dismounting it) is an explicit override: the comp
+may read stale until the next use re-derives it — self-healing at the
+next touch, never fought mid-gesture. Rate: transitions are user-paced
+(the verb rate bounds `use`); each transition mints at most 4 entries
+(comp, light, mount-at-ignite, say); no-ops and out-of-reach uses mint
+nothing.
+
+**Effects.** As above: comp write + light/remove + say, each broadcast;
+`lamp-trigger` flight-recorder entry (kind `reaction`) with cause→effect
+seqs on every fired transition.
+
+**Authority/reach.** Using a lamp is rank 0 (anyone present, like
+sitting) plus an ARM'S-REACH gate (vPunt arithmetic): the user's LIVE
+pose within `reach` metres (authored, clamped [2,12], default 4) of the
+host's LIVE position (lease stream pos if leased, folded pos otherwise).
+Out-of-reach use is a `lamp-skip` naming the distance — the lamp does
+not move, the skip is auditable. Spectators bounce at the shell (`use`
+is spectator-gated there). Authoring the comp is rank 1. **Lock composes
+exactly as it does for doors** (LOCK_GUARDED = place/remove/punt/mount/
+spawn/light on the LOCKED id): a locked host still lights — it is
+immovable, not unlightable. The engine's world-authored verbs bypass
+runVerb's lock gate, so the engine consults LOCK_GUARDED itself wherever
+its writes touch an id: the comp write (not guarded), the companion
+light/remove (the companion is its own id, never the locked one), and
+the place-follow (targets the companion only; a locked host cannot be
+placed anyway). Authority NEVER widens: a visitor's `use` lights a lamp
+because the author published that behavior — world authority,
+say+light+comp-on-host only, no other verb can be minted from a lamp
+use.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path (use/comp/place/spawn/remove hooks);
+folding historical entries never re-fires anything. On restart the world
+folds `on:true` + the standing light at the anchor — truth from the log
+with zero engine involvement.
+
+**Failure behavior.** Unknown action → `lamp-skip` (provenance: entity,
+action, by, why). Malformed comp → clamp + `lamp-lint` (particles-lint
+doctrine): anchor axes ±8, intensity [0,60] d14, range [1,40] d8, reach
+[2,12] d4, `lightAt`/`snuffAt` lines clamped 200 chars, color clamped to
+a legal 24-bit integer; unknown keys ride (the bag is public
+annotation). Host entity missing (a comp arrived on a removed id) → the
+engine skips silently with a `lamp-skip` note. The whole reaction
+wrapped in try/catch (house rule 3). A lamp on a LIGHT-kind host entity
+is refused at lint (`lamp-lint`: "a light cannot be a lamp" — companion
+of a companion).
+
+**Browser path.** Zero client code: the companion renders through the
+existing light-entity machinery (gizmo bulb + rig slot + dayness dim +
+inspector), its state is readable from any folded snapshot
+(`entities["<id>·lamp"]`), and the say lands as ordinary chat. MCPL:
+same log entries; `look()` lists the companion as `(light)`; a live
+toggle near the body lands as a world say in the inbox.
+
+**Intent.** The world lights itself for you. A porch lamp that greets
+the dusk, a wayline flame that answers a hand, a hearth light carried
+inside a lantern. Light as authored state, realized by machinery that
+already exists — the smallest complete verb-path upgrade.
 
 ## LAWS
 
