@@ -1,6 +1,6 @@
 {
   "world": "commons-next",
-  "count": 328,
+  "count": 329,
   "entities": [
     {
       "id": "beb4c791",
@@ -6923,6 +6923,42 @@
         "center": [
           0,
           1.85,
+          0
+        ]
+      },
+      "compKeys": [],
+      "comp": {}
+    },
+    {
+      "id": "nx-struct-clebsch",
+      "kind": "thing",
+      "pos": [
+        -1.239168,
+        -0.019734,
+        141.994593
+      ],
+      "yaw": 0.6981317,
+      "scale": 1,
+      "lib": "store/e32e3b70a6147176.glb",
+      "bbox": {
+        "min": [
+          -2.75,
+          0,
+          -2.75
+        ],
+        "max": [
+          2.75,
+          5.108,
+          2.75
+        ],
+        "size": [
+          5.5,
+          5.108,
+          5.5
+        ],
+        "center": [
+          0,
+          2.554,
           0
         ]
       },
