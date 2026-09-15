@@ -10776,3 +10776,80 @@ Files: struct174-scan-catalan.ts + struct174-terrain-catalan.ts +
 next-place-struct174.ts (all NEW, tracked), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-174, D+1 E+0). One upload + one
 verb total (shared budget). Zero pushes.
+
+## struct-175 (2026-09-15): R11-9 THE RIEMANN SURFACE — MATH-PROBE TICK,
+## FAIL-CLOSED after 5 probe generations (no build; v6 path banked)
+
+175%3=2 build slot; nothing takeable (monkeysaddle v2 GATED native 18m PASS —
+not payable in cron, native vision absent from catalog, zai-vision MCP only,
+same disclosed class as struct-169..174; hypar row 22 native-only carries;
+costa PAID struct-169v; kuen v3 + catalan v1 fallback-judged acceptances on
+the owed board, both placed). Gate ALL PASS real exit 0 tick-start d55d0877
+(sweep-243 atop struct-174; 99 PASS, /tmp/struct175-gate.txt, unpiped).
+Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0 OPEN nx-struct
+rows). Ledger max re-derived struct-174 -> tag struct-175.
+
+FORM SELECTION (fresh grep, all three ledgers): riemann 1/1/0 (incidental
+self-mention only — struct-173's clean-list line). KINSHIP: NOT barred —
+register = HORIZONTAL CIRCLE FOLIATION (shelves + necks); shelltower owns the
+golden SPIRAL, screwwell the HELIX, catenoid/costa own trumpet/skirt — no
+circle-stack stands. REGISTER (the theorem, Lopez/Ritore/Wei 1997 via
+Wikipedia wikitext fetched this tick): the only minimal surfaces fibered by
+circles in parallel planes are plane, catenoid, helicoid — and Riemann's own.
+The village owns catenoid (struct-102) + helicoid (screwwell, struct-78):
+this form completes the theorem. Selected over henneberg (self-intersecting
+cross-cap: legibility risk), bour (petal-form: enneper kin), trinoid/richmond
+(3-end/2-end catenoid-type: costa register), seiffert (helical: screwwell
+kin), torusknot (Founder's Knot owns the family).
+
+PROBE (struct175-probe-riemann.ts, tracked, v5 standing): lineage law held —
+Wikipedia wikitext + VMM Karcher construction recipe + IU essay all fetched
+and quoted in-header. RED-first across FIVE generations, every one recorded
+in the file header:
+- v1 RED: C0 hypothesis wrong (+pi/2 at rho=1 vs costa's -pi) — 12 FAILs.
+- v2: delta-calibration C0 via the e1+e2+e3=0 theorem -> costa cross-check
+  EXACT (g2 = 189.072720129 = Gamma(1/4)^8/(16pi^2), machine-verified; the
+  general-tau theta machinery is now costa-grade for ANY rectangular torus —
+  durable lane asset). Still RED: period system solvable only at the
+  degenerate square.
+- v2.5 analysis (the big catch): the (a -/+ c^2) Phi forms were UNDERIVED —
+  algebraic conformality identity Phi1^2+Phi2^2+Phi3^2 = u^2(-4 alpha a) +
+  v^2 a^2 cannot vanish identically for ANY constants. All v1/v2 period
+  "solutions" were phantom.
+- v3: Phi properly derived from (G, dh) (Phi1 = 1/2(G^-1 - G)dh etc.);
+  conformality exact by construction. RED again: no nullspace anywhere.
+- v4: joint (rho, seat) scan — residual decays monotonically into the
+  eigenvalue precision FLOOR (0.00e+0 at panel 0.02), i.e. NOISE not zeros;
+  verdict NOISE honest, exit 1.
+- v5: half-period seat (Karcher's law properly read: pole at a half-period,
+  zero diagonally opposite, +/-i at the four quarter-points); direct det4
+  (no eigenvalue floor). RED: det bounded away from 0 for every rho; and
+  the /tmp diagonal-scan shows NO SIGN CHANGES anywhere — no family member
+  exists for this data.
+
+STRUCTURAL DIAGNOSIS (proven symbolically, recorded for v6): the data itself
+is wrong — Riemann's ends are PLANAR (IU essay), requiring dh HOLOMORPHIC at
+both punctures; dh = u dw/(wp(w-p)-e2) has a double pole at the second end q
+(wp'(w2)=0 makes wp-e2 vanish quadratically there), so z diverges like
+1/|w-q| — one planar end per torus, two required. Corollary decoupling
+theorem: with the Phi-perpendicular forms, Phi1 = u(J/c - cL)/2 and Phi2 =
+iu(J/c + cL)/2 periodless FORCE J = L = 0 separately; J3 = -eta3 - e2 rho
+mixes real/imaginary — contradiction for any rho. Periods in the true
+construction die by ROTATION SYMMETRY (G.sigma = -1/G under the half-turn
+involution, per Karcher's multiplicative normalization), not by an eigen-
+solve. v6 continuation path written into the probe header: symmetry-killed
+direct quadrature + sigma-identity check + C6 circle march; machinery
+(theta/wp/quadrature/det4 at costa exactness) carries.
+
+DISPOSITION: FAIL-CLOSED, NO BUILD (struct-165 class — probe gate refuses,
+zero world mutations). Next build tick (176%3=0 slot has catalan-carry
+consumed -> 177 carry law applies): EITHER execute the banked v6 path for
+riemann OR pivot to a form with a citable EXPLICIT parametrization (the
+catalan/kuen class — those passed probe first try). Judge-debt cadence law:
+owed native re-judges still outrank new forms when payable; they remain
+cron-unpayable this tick.
+
+Files: agents/arthur/struct175-probe-riemann.ts (NEW, tracked, v5 + banked
+v6 path), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-175, D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
+shared-budget use. Zero pushes.
