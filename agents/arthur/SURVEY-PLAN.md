@@ -16850,5 +16850,64 @@ shared-budget use (D+0, E+0).
   uploads, zero verbs, zero comp edits, zero shared-budget use, ZERO
   ledger append (loop law 4: append only when routing; CLEAN
   concurrence routes nothing; ticks 211-367 precedent). STANDING
-  RECOMMENDATION carried unchanged (s182-s367): stop the SURVEY lane
-  or convert to a no-LLM monitor when attended.
+  RECOMMENDATION carried unchanged (s182-s367): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
+
+- survey-369 (2026-09-15, QUIET HOLD — 1st consecutive quiet epoch on the
+  post-tribar 333-entity baseline; no slice judged, arrival-gated law
+  s345+; native vision ABSENT from this cron session's tool catalog
+  (zai-vision MCP only, flap law; native-owed register rows NOT
+  discharged this tick, cron-disclosed): gate ALL PASS real exit 0 FIRST
+  TRY at tick-start HEAD f7ed5caf (city-146 tip, 99 PASS lines incl.
+  ledger law EXACT 2370802); HEAD advanced mid-tick to 999e5c7a
+  (sweep-258) then 8f41094d (vocab-14 weatherzones) — all foreign-domain
+  sibling work; RE-GATE at the new HEAD per epoch law: ALL PASS real
+  exit 0 at 8f41094d (ledger law EXACT 2370803, total +1 via vocab-14;
+  vocab-14's staged files observed in the shared index mid-tick, index
+  clean at commit time, survey-9/interlane interleaving law observed).
+  Census via committed next-live-census.ts exit 0 at BOTH epochs (A/B,
+  20s-paced, cmp A==B BYTE-IDENTICAL), each 333 entities, each 220060B,
+  each sha256-16 46b72cdefa274983 — byte-identical to the survey-368
+  baseline (cmp both directions; set-diff: 0 arrivals / 0 departures /
+  0 flips on lib/pos/yaw/scale/compKeys/comp AND full-object deep-compare
+  across all 333 holders — fully quiet window; tribar placement fully
+  absorbed, its native re-judge debt carries on the owed board).
+  SELF-CATCH (hash convention): first sha check used default shasum
+  (SHA-1) and misread the identical bytes as drifted fd71c01b; cmp +
+  SHA-256 confirmed byte-identical 46b72cde — the plan's sha16
+  convention is SHA-256; sha-algorithm slips join the survey-25/28
+  hand-transcription class. Mutation lanes active-but-not-mutating this
+  window (city-146 36th lawful hold; struct-186 banked FOURIER LADDER
+  not placed, placement = struct-187 carry, joins the owed board on
+  placement; vocab-14 weatherzone comp + pressure-15 promotion
+  server-side, off-world; sweep-258 audit-side) — likeliest next flip
+  triggers: fourier ladder placement via struct-187 (arrival +
+  owed-board row), monkeysaddle v2 placement after native re-judge,
+  city Wave B pending Bill's rulings, further Math Avenue carries,
+  vocab/pressure affordances going live, windmill-overhaul family dirt
+  in tree. ARRIVAL-GATED JUDGE NOT TRIGGERED: world quiet, pools
+  drained (IMPROVE-PLAN md5 c0f569d0 unchanged, 258th check — same
+  bytes as the survey-344 line-by-line inspection, 0 OPEN candidate
+  rows, all OPEN grep hits prose/narrative; SURVEY CANDIDATES 0 OPEN
+  rows; CITY-PLAN-V2 assigns survey no role, grep 0), and the native
+  re-judge register (hypar row 22, monkeysaddle v2 per struct-169v/170,
+  kuen v3, catalan v1, clebsch v1, menger v2, apollonian v1,
+  melencolia v3, tribar v2) is cron-unpayable this tick — cron sessions
+  use ZAI fallback which does NOT discharge native-owed rows:
+  0 confirmed / 0 clean / 0 dropped, 0 notes routed, 0 vision calls,
+  native-vs-fallback N/A. Foreign working-tree dirt at read = sibling
+  lanes in flight (windmill overhaul family incl.
+  HERO-ASSET-REFINEMENT-PLAN + WINDMILL-OVERHAUL.md + core-paths glb,
+  cabin-overhaul / carousel-horse-prototype / moon-moth / debug-bower
+  debug1-7 / fleet scripts incl. fleet-avenues / next-terrain-city4 +
+  struct terrain scripts / client+server trees — same families as
+  s285-s368) — untouched. Index verified empty pre-commit (zero staged
+  files, shared-index law); append anchor grep-verified unique pre-write
+  (0 prior "survey-369" strings in any file). Census baseline for next
+  tick: /tmp/survey369-census-a.json (333, 220060B, sha256-16
+  46b72cdefa274983 — byte-identical, baseline unchanged). Zero world
+  mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; ticks 211-368 precedent; ledger tail running total 2370803).
+  STANDING RECOMMENDATION carried unchanged (s182-s368): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
