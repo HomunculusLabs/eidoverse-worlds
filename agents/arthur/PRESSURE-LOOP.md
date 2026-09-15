@@ -236,8 +236,30 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       legitimately present — exact arrive/leave arithmetic instead);
       observed-departure window t+22s (leaves must land inside the seer's
       window, pressure-6 law). Servergate smoke 85/0 pinned tree.)
-- [ ] World-hop churn: rapid switch/leave cycles leave no cross-world state
+- [x] World-hop churn: rapid switch/leave cycles leave no cross-world state
       bleed.
+      (pressure-14, 2026-09-15: worktree @4f2824bf + fix, PORT 8983, 26.5s,
+      216 peak — alpha 24 perf @15Hz + 140 spec + 16 live hoppers + 8 sleepy
+      + 4 bleed legs + hopper-w + rev-alpha, beta 20 spec + hopper-x, gamma
+      1 spec; churn waves A->B->A->B->A @800ms dwell. BASELINE RED — one
+      real defect: c.lastPose survives travel, so a hopper that posed in A
+      and hopped on unposed appeared in B's present[] at A's coordinates and
+      every B-side rememberPose wrote A's pose into B's poses.json (13 alien
+      entries in beta, 1 in gamma — alpha-band coords in both). FIX: the
+      travel path clears c.lastPose after rememberPose persists it into the
+      world being left ("a body's pose belongs to the world it was posed
+      in"). AFTER, identical conditions: presence bleed 8->0, beta file
+      aliens 13->0, gamma 1->0, bleed-0's beta restore null 1/1; whisper
+      holds proven world-scoped (W1 held in alpha delivered exactly once on
+      alpha return — never at the beta/gamma joins; WX/W2 immediate);
+      arrive/leave drift 0 across 170 scheduled events; 0 ghost frames;
+      rapid double-hop mid-lease released 1/1 in 2ms at exact last streamed
+      s3, place committed once; rosters exact 49/1 mid-churn + finals 0/0/0;
+      logs 5/3/2 exact; alpha poses.json 54/54; says 2/2 p95 2ms; fps p50
+      15.0, lat p95 13ms, 0 gaps; probes 2/1ms; RSS +16MB; 0 suspicious.
+      RED re-proof on reverted tree (aliens back). tools/pressure-hop.ts
+      (SELFTEST 41 gates). Servergate: smoke 85/0 + websocket-input 18/0 +
+      leasetest 19/0 on the fixed pinned tree.)
 - [ ] Spectator-to-performer promotion under load: role change is atomic.
 - [ ] Presence spoofing: oversized/rapid pose deltas clamped and logged, not
       propagated.

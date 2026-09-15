@@ -422,6 +422,14 @@ const server = Bun.serve({
               c.world.bhv.onPresence("leave", c.id);
               reapAuxLegs(c.world, c, "primary traveled");
             }
+            // The body's pose belongs to the world it was posed IN — it was
+            // just remembered there (above). Carrying it across the boundary
+            // seats the traveler in the NEW world's snapshot present[] at
+            // old-world coordinates, and a later close/travel-out that never
+            // posed here writes old-world coordinates into THIS world's
+            // poses.json (pressure-14: measured 13 alien poses in beta, 1 in
+            // gamma, from 800ms-dwell hoppers). New world, no body yet.
+            c.lastPose = null;
           }
           // A malformed world name is a bad LINK, not a bad actor — refuse it
           // with an explanation and a close code the client knows not to retry
