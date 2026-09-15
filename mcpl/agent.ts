@@ -22,6 +22,9 @@ import { stateToEntries as sharedStateToEntries } from "../shared/fold.js";
 // a renderer client and a resident who perceives by reading must agree about
 // what is burning (#25's shared-facts boundary).
 import { describeParticles, emitterTransition, transitionLine } from "../shared/particles.js";
+// The door affordance line (vocab-4): same shared-verbatim pattern — the
+// agent's look() names the door's folded state and the use actions.
+import { describeDoor } from "../shared/door.js";
 import { effectiveWorldTransform, type Effective } from "./effective.ts";
 import { makeVerdictCache, seatGateCore, nameFromAvatarPath } from "../client/lib/seatcore.js";
 
@@ -1723,10 +1726,13 @@ export class WorldAgent {
       // or contact: separate authored components would provide those, and a
       // resident who reads "warm" acts on it.
       if (c.particles) aff.push(describeParticles(c.particles));
+      // a door names its STATE (open/closed) and the use actions that move
+      // it — the text-tier read of the same folded comp the renderer swings
+      if (c.door) aff.push(describeDoor(c.door));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

@@ -5,13 +5,21 @@
 // server.ts.
 
 import type { LogEntry, WorldState } from "../shared/fold.js";
+// The door closed form + clamps (shared/door.js — the forecast.js pattern):
+// the server's lint and state writes carry exactly the numbers every
+// renderer derives from.
+import { normalizeDoor } from "../shared/door.js";
 
 /** What a reaction needs from the world it fires in: the folded state, the
  *  log, the fanout, and the flight recorder. server.ts's World satisfies it
- *  structurally (the wireBehaviorGate/WorldLike precedent — §15.1). */
+ *  structurally (the wireBehaviorGate/WorldLike precedent — §15.1). The
+ *  presence-plane reads are optional: reactDoor (vocab-4) arm's-reach checks
+ *  need them, and the structural World carries both. */
 export type ReactionWorld = {
   name: string;
   state: WorldState;
+  clients?: Set<{ id: string; spectator?: boolean; lastPose?: unknown }>;
+  leases?: Map<string, { lastState?: { p?: number[] } | null } | unknown>;
   append(actor: string, verb: string, args: Record<string, unknown>): LogEntry;
   broadcast(msg: unknown): void;
   debug(kind: string, detail: Record<string, unknown>): void;
@@ -40,6 +48,13 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor, why: "no such entity" });
       return;
     }
+    // The door slice (vocab-4, § DOORS CONTRACT): comp {type:"door"} owns the
+    // open/close/toggle action vocabulary. Handled BEFORE the reactions
+    // table so a door and a bell can share an entity without contention;
+    // reactDoor returns true when the action was door vocabulary (fired OR
+    // legitimately skipped as a no-op), and false when the action belongs to
+    // another evaluator.
+    if (reactDoor(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,
@@ -151,6 +166,100 @@ export function reactToSay(w: ReactionWorld, cause: LogEntry): void {
     console.error(`[world:${w.name}] say reaction failed (never fatal)`, err);
     w.debug("reaction-error", { action: "say", by: cause.actor, error: String(err) });
   }
+}
+
+// ---------------------------------------------------------------- doors
+//
+// The world admits you (VOCABULARY-LOOP.md § DOORS CONTRACT, vocab-4).
+// An entity carrying `comp {type:"door", data:{...}}` owns the open/close/
+// toggle action vocabulary on the `use` path: every toggle is a WORLD-
+// AUTHORED comp transition write ({...authored, open, at} — regions
+// doctrine; the log is the only durable state) plus a say with
+// door{open,who,at} provenance and the triggering use's seq as cause. The
+// swing angle itself is derived, never stored: doorYaw (shared/door.js) is
+// a pure function of (folded data, now) — the motion.js doctrine applied to
+// state transitions, so late join/restart/replay fold identical truth with
+// zero tween state.
+//
+// Boundaries (all fail-closed, the whole abuse story):
+//   - use is rank 0 (the shell gates it), but an ARM'S-REACH gate applies:
+//     the user's live pose must be within clamped `reach` of the door's
+//     LIVE position (lease stream pos if leased — vPunt's arithmetic)
+//   - spectators never pass (the shell already refuses spectator verbs)
+//   - open-on-open / close-on-closed are no-ops: one door-skip note, no
+//     writes — standing at a door spamming `use` mints nothing
+//   - effect verbs are the comp-on-self write + a say: nothing else can be
+//     minted from a door use
+//   - malformed comps clamp + lint (door-lint, the particles-lint doctrine)
+
+const DOOR_ACTIONS = new Set(["open", "close", "toggle"]);
+
+/** The door's LIVE position: its leased transform if someone is streaming
+ *  it, its folded pos otherwise (the vPunt live-position rule). */
+function doorLivePos(w: ReactionWorld, id: string, ent: { pos?: number[] }): number[] {
+  const L = w.leases?.get(id) as
+    { lastState?: { p?: number[] } | null } | undefined;
+  return Array.isArray(L?.lastState?.p) ? (L!.lastState!.p as number[]) : (ent.pos ?? [0, 0, 0]);
+}
+
+/** A participant's last live position off the presence plane (vPunt's
+ *  c.lastPose read, generalized). */
+function livePoseOf(w: ReactionWorld, who: string): number[] | null {
+  const c = w.clients ? [...w.clients].find((o) => o.id === who) : undefined;
+  const p = (c?.lastPose as { p?: unknown } | null | undefined)?.p;
+  return Array.isArray(p) && p.length >= 3 && p.slice(0, 3).every((n) => typeof n === "number" && Number.isFinite(n))
+    ? (p.slice(0, 3) as number[]) : null;
+}
+
+/** True when the action was DOOR vocabulary (fired or legitimately skipped)
+ *  — false means another evaluator owns it. */
+export function reactDoor(
+  w: ReactionWorld,
+  cause: LogEntry,
+  ent: { pos?: number[]; comp?: Record<string, unknown> },
+  id: string,
+  action: string,
+): boolean {
+  const data = ent.comp?.door;
+  if (data == null) return false;                       // not a door
+  if (!DOOR_ACTIONS.has(action)) return false;          // pass through
+  const { cfg, notes } = normalizeDoor(data);
+  if (notes.length) w.debug("door-lint", { entity: id, notes });   // lint once per firing, not per sweep
+  const open = (data as Record<string, unknown>).open === true;
+  const next = action === "toggle" ? !open : action === "open";
+  if (next === open) {
+    // no-op: state-legal, log-legal, mint-nothing
+    w.debug("door-skip", { entity: id, action, by: cause.actor, why: `already ${open ? "open" : "closed"}` });
+    return true;
+  }
+  // arm's reach (vPunt arithmetic): the USER's live pose vs the door's live
+  // position. Agents reach this path with live 10Hz poses, browsers with
+  // the presence plane — the same check covers both.
+  const me = livePoseOf(w, cause.actor);
+  const at = doorLivePos(w, id, ent);
+  if (!me || Math.hypot(me[0] - at[0], me[2] - at[2]) > cfg.reach) {
+    const d = me ? Math.hypot(me[0] - at[0], me[2] - at[2]).toFixed(1) : "unknown-position";
+    w.debug("door-skip", { entity: id, action, by: cause.actor, why: `out of reach (${d}m > ${cfg.reach}m)` });
+    return true;
+  }
+  // the state write: authored shape + {open, at} — one world-authored comp
+  // transition (regions doctrine). 8KB guard degrades the same way.
+  const now = cause.ts;
+  let shape: Record<string, unknown> = { ...(data as Record<string, unknown>), open: next, at: now };
+  if (JSON.stringify(shape).length > 8000) {
+    w.debug("door-lint", { entity: id, notes: ["state write over 8KB — wrote minimal shape"] });
+    shape = { open: next, at: now };
+  }
+  const comp = w.append("world", "comp", { id, type: "door", data: shape });
+  w.broadcast({ type: "log", entry: comp });
+  // the perception line (phrases/regions grammar)
+  const line = next ? (cfg.openAt ?? "the gate opens") : (cfg.closeAt ?? "the gate closes");
+  const say = w.append("world", "say",
+    { text: line, id, door: { open: next, who: cause.actor, at: now }, cause: cause.seq, by: cause.actor });
+  w.broadcast({ type: "log", entry: say });
+  w.debug("door-trigger", { entity: id, action, by: cause.actor, cause: cause.seq,
+    effect: comp.seq, say: say.seq, open: next, kind: next ? "open" : "close" });
+  return true;
 }
 
 /** Closed-form pendulum push: evaluate angle and angular velocity at the push

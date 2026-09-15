@@ -22,6 +22,8 @@ import { initCauses } from './lib/realize/causes.js';
 // side-effecting: the `particles` component's host wires itself to the comp
 // and entity buses on import (it has no boot step of its own)
 import './lib/emitters.js';
+// same pattern for the `door` component (vocab-4): wires itself on import
+import './lib/door.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateSpectator, setCamYaw, setPosture, togglePhotoMode,

@@ -92,7 +92,35 @@ plan. Never deploy, push, or restart production unless Bill asks.
       pre-existing on the stashed baseline (same class as vocab-1/2). Server
       booted without quickjs in the scratch env: regions need no sandbox.
       Scratch worlds only; no production world touched.
-- [ ] Stateful door/gate: explicit open/closed state, use action, late-join truth.
+- [x] Stateful door/gate: explicit open/closed state, use action, late-join truth.
+      DONE vocab-4 (2026-09-15): comp {type:"door"} — reactDoor in
+      server/reactions.ts hooks the SAME reactToUse `use` dispatch (zero
+      verbs.ts edits); every toggle is a world-authored comp transition
+      write carrying authored shape + {open, at} (regions doctrine: the log
+      is the only durable state); swing angle is a PURE FUNCTION OF TIME
+      (shared/door.js doorYaw, shared verbatim by browser evaluator, mcpl
+      effective pose, and the tests — motion.js doctrine applied to state
+      transitions, so late join/restart/replay fold identical truth with
+      zero tween state). Effects say-only with door{open,who,at}+cause/by
+      provenance. Authority: use = rank 0 + arm's-reach gate (vPunt
+      arithmetic); authoring the comp = builder. Fail closed on unknown
+      actions/malformed comps (clamp+lint, door-lint/door-skip). Evidence:
+      tools/doortest.ts RED (19 failing checks) then ALL PASS 27/27
+      (authoring bounce/toggle+say+fold-write/state-independent-visibility/
+      reach gate/spectator bounce/unknown action/lock/late join/restart
+      replay-mints-nothing/blocked-locked/re-author-reset/dual door/moving
+      door/agent path/fold idempotence); servergate smoke 85, comptest 33,
+      behaviortest 27, worldops 23, compfold 24, locktest 13, leasetest 19,
+      modtest 23 all PASS; permtest 21/23 proven pre-existing on the stashed
+      baseline (same class as vocab-1/2/3). Client realization
+      client/lib/door.js (one-line import in main.js beside emitters.js —
+      no other edit to the pilot-dirty file); MCPL affordance +
+      live narration in mcpl/agent.ts. Scratch worlds only; no production
+      world touched.
+      AMEND same tick (post-RED note): final matrix is 28/28 (added the
+      visitor authoring-bounce check after the RED run; it gates the shell,
+      not the engine, so RED stays 21); smoke caught and fixed two TS
+      non-null assertions in client/lib/door.js (85/85 after).
 - [ ] Portable authored light with time-of-day-aware client realization.
 - [ ] Persistent guestbook/inscription contribution with moderation boundaries.
 - [ ] Publish/attach path that promotes a reviewed Layer-2 behavior into a
@@ -340,6 +368,87 @@ no new tool.
 remembers, a district gate with a census, a sacred grove that holds vigil.
 State in the fold, perception for free — the difference between a place that
 notices and a place that KNOWS.
+
+### DOORS CONTRACT (vocab lane — drafted and implemented vocab-4, 2026-09-15)
+
+**Trigger.** A door is an entity carrying `comp {type:"door", data:{...}}`.
+The action string `use {id, action}` is freeform protocol: `open`, `close`,
+and `toggle` are DOOR vocabulary (the Layer-1 meanings); any other action
+string passes through untouched for other evaluators (the reactions doctrine
+— a bell ignoring `/open bell1` is exactly correct). `open` on an open door
+and `close` on a closed one are no-ops that still log the `use` and skip
+with `door-skip` (no churn). Attaching/removing the comp = builder (rank 1),
+the author's standing decision that this thing opens — identical doctrine to
+`reactions`/`phrases`/`region`.
+
+**State — the fold is the state.** Every toggle is a world-authored `comp`
+transition write (regions doctrine): `{...authored, open: <bool>, at: <ts>}`
+riding the same entity, and nothing else is stored anywhere — no in-memory
+state decides visibility or authority. Late join, restart, replay and fork
+fold the same truth: `ent.comp.door.open`. The visibility curve is a PURE
+FUNCTION OF TIME: `θ = deg · k(elapsed)` where `k` is smoothstep over
+`swingSec` and `elapsed = now − at` — motion.js doctrine applied to state
+transitions. Every client (and every text-tier perceiver) derives the same
+angle at the same `now` with zero tween state and zero traffic after the
+one write.
+
+**Effects.** A toggle appends TWO entries, in order: the state write
+(`comp {id, type:"door", data:{...authored, open, at}}`, actor `world`) and
+a `say` (actor `world`, args `{text, id, door:{open:<bool>, who, at},
+cause:<use seq>, by:<user>}`) — the phrases/regions provenance grammar
+exactly. Line defaults: open `"the gate opens"`, close `"the gate closes"`.
+The say is the ordinary perception path (browser logChat, agent inbox);
+the comp write is what every evaluator (browser door evaluator, agent
+`look()` affordance) reads.
+
+**Authority/reach.** Using a door is rank 0 (anyone present, like sitting)
+plus an ARM'S-REACH gate copied from vPunt's arithmetic: the user's LIVE
+pose within `reach` metres of the door's LIVE position (lease stream pos if
+leased, folded pos otherwise; 4m default, `reach` authored, clamped
+[2,12]). An out-of-reach use is a `door-skip` with the exact distance in
+the flight recorder (fail closed: the door does not move; the skip is
+auditable). Spectators cannot use doors (`use` is
+spectator-gated in the shell already). The effect verbs are say + comp-on-
+self only: no other verb can be minted from a door use.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs ONLY
+from the live verb path; folding a historical `use` never re-fires. On
+restart the world folds open/`at` from the log and the angle derives
+continues — a door half-swung at server death finishes its swing on every
+client after restart, identical frames, because `θ(now)` is closed-form.
+
+**Failure behavior.** Unknown action → `door-skip` (provenance: entity,
+action, by, why). Malformed comp → clamp + `door-lint` (particles-lint
+doctrine): `deg` [15,175] default 110; `swingSec` [0.2,20] default 1.4;
+`reach` [2,12] default 4; `openAt`/`closeAt` line keys clamped to 200
+chars; unknown keys ride (the bag is public annotation). The whole reaction
+wrapped in try/catch (house rule 3). A `lock` comp refuses nothing a door
+needs (the lock gate lists `use`? — no: lock refuses place/punt/spawn/comp/
+remove, not `use`) — so `lock` and `door` compose: a locked door still
+opens for everyone (it is immovable, not unopenable). A door missing its
+part node (`part` authored, node absent) renders at rest — the evaluator
+skips silently, a `door-lint` note records it.
+
+**Browser path.** `client/lib/door.js` (the emitters.js pattern: wires
+itself to the comp and entity buses on import, one import line in main.js
+beside `./lib/emitters.js`). It listens for `comp` type `door`, finds the
+part node if `part` is authored (whole-entity swing otherwise — pedestal
+gates, rotating portal rings), and applies the closed form on the frame
+loop (own `registerSystem('door', ...)` — registered at import time, order
+doc'd as motion-adjacent; cost: a Map iteration per frame, trivially cheap).
+Door state is readable from any folded snapshot; scripts and future UI can
+consume `comp.door.open` without a new protocol surface.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` shows `door: open|closed (openable)` in the
+affordance list; a live toggle near the body arrives as an ambient `act`
+line ("gate1 opened by bob"). `world_history {verbs:["use","comp","say"]}`
+traces the chain use → comp+say with cause/by.
+
+**Intent.** The world admits you. A garden gate that swings, a longhouse
+door that closes against the wind, a portal ring that rotates open. State
+in the fold, motion as a function of time, perception for free — one
+8KB-of-data comp, no script, no sandbox.
 
 ## LAWS
 
