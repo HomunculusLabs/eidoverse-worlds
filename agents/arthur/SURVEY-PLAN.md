@@ -15912,6 +15912,65 @@ shared-budget use (D+0, E+0).
   RECOMMENDATION carried unchanged (s182-s349): stop the SURVEY lane or
   convert to a no-LLM monitor when attended.
 
+- survey-352 (2026-09-15, ARRIVAL EPOCH, third of the unfreeze — ZAI
+  FALLBACK 4 calls/5 disclosed (one 300s timeout on the first gameplay
+  call, single paced retry landed — survey-26 class), native vision ABSENT
+  from this cron session's tool catalog (zai-vision MCP only, flap law;
+  native-owed register rows NOT discharged this tick, cron-disclosed):
+  gate ALL PASS real exit 0 FIRST TRY at tick-start HEAD d55d0877
+  (sweep-243 tip, 99 PASS lines incl. ledger law EXACT 2370782, exit
+  captured unpiped in tool output; HEAD unchanged through the tick — no
+  re-gate due). Census via committed next-live-census.ts exit 0 at BOTH
+  epochs (A/B, 20s-paced, cmp A==B byte-identical), each 328 entities,
+  each 217041B, each sha16 8460cfb5f1f26f03 == sweep-243's re-baselined
+  census (independent corroboration). Set-diff vs survey-351 baseline
+  (327, 9ea3f61b2522fa66): +1 ARRIVAL nx-struct-catalan (-22.574263,
+  -0.038027, 128.025008 yaw 0.6981317 rad = 40deg oblique-yaw law, lib
+  store/4f0c2a4a7b506f56.glb, comp {}) / 0 departures / 0 lib flips / 0
+  pos-yaw-scale diffs on the 327 holders — classified SIBLING WORK:
+  struct-174's committed carry, ledger-matched verbatim (PLACED_VERIFIED,
+  corroborated sweep-243 + city-124); Math Avenue SE-side deep band
+  r130 az100, past tesseract/rule30wall. ARRIVAL-GATED JUDGE LAWFUL:
+  slice = the 1 new-bytes object. Live store bytes fetched curl UA HTTP
+  200 140696B served-sha16 73dff345580ffb3c (lib 4f0c2a4a7b506f56,
+  DRACO re-encode law — upload sha == lib name, served sha differs,
+  struct-104 class); render via NEW survey352-render-catalan.ts
+  (survey349-kuen chassis verbatim, DRACO-aware, live-meadow ground
+  0x3d3a29) exit 0, 5 frames reviews/survey352-catalan/ (ignored
+  residue), decoded bounds 4.892x2.643x3.183 == struct-173 envelope
+  4.89x2.64x3.18 EXACT, grounded y~0. VERDICT: nx-struct-catalan
+  CLEAN 4/4 — gameplay 18m CLEAN 5/5 (vault monument identity instant,
+  wings mirror-symmetric ~3px, lens aperture at the X-crossing read as
+  designed by judge unprompted == struct-173's falsified teardrop-flag
+  class, drum grounded + cast shadow, two crown beads + brass trim
+  legible, zero floats/voids/orphans); night PASS (EXACTLY two warm
+  beads ~10px symmetric within 1px about the axis, bound to rim-vertex
+  crowns, zero bloom/spill/stray glow — polish-278 compliant); front
+  ~10m PASS 5/5 (cycloid spine high-at-tips/down-to-cusp reads,
+  parabola rhythms smooth no ribs, iron hem unbroken tip-to-tip, beads
+  seated AT rim vertices, only the designed aperture); top PASS (closed
+  hem loop, zero unintended voids, wing-drum junction clean, zero
+  orphans; designed apertures read sealed-tight at this angle — margin
+  class). CONCURS struct-173 owner fallback PASS + struct-174
+  PLACED_VERIFIED + sweep-243/city-124 classification — second
+  independent fallback vote, no defect. Margins (NOT routed,
+  verify/polish tier): brass spine 18m reads as 1-2px trim with
+  continuity inferred (owner front-close confirms the arc); bone-white
+  drifts taupe-gray in chassis light (chassis class); beads ~4px at 18m
+  gameplay / ~10px night = compliant but thin headroom; night residual
+  ground shadow = chassis sun 0.15 known class. Native re-judge debt on
+  catalan v1 carries (owed board: hypar row 22, monkeysaddle v2 gate,
+  kuen v3, catalan v1). Pools: IMPROVE-PLAN md5 c0f569d0 unchanged
+  (241st check, same bytes as survey-344 line-by-line inspection); SURVEY
+  CANDIDATES 0 OPEN rows; no candidate row (CLEAN); CITY-PLAN-V2 assigns
+  survey no role. Census baseline for next tick:
+  /tmp/survey352-census-a.json (328, 217041B, sha16 8460cfb5f1f26f03).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits, zero
+  shared-budget use, ZERO ledger append (loop law 4: append only when
+  routing; CLEAN concurrence routes nothing; ticks 211-351 precedent).
+  STANDING RECOMMENDATION carried unchanged (s182-s351): stop the SURVEY
+  lane or convert to a no-LLM monitor when attended.
+
 - survey-351 (2026-09-15, quiet hold — fourth quiet epoch on the post-kuen
   327-entity baseline): gate ALL PASS real exit 0 first try at
   tick-start HEAD fff35198 (city-123 tip; 99 PASS lines incl. ledger law
