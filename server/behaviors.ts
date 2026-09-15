@@ -26,6 +26,9 @@ import { join } from "node:path";
 import { ProximityEngine, type ProxWorld } from "./proximity.ts";
 import { RegionEngine, type RegionWorld } from "./regions.ts";
 import { WeatherZoneEngine, type ZoneWorld } from "./weatherzone.ts";
+// Bells (vocab-17): swept on the same clock. The schedule is a static table
+// in the fold; time (hoursAt — the sun's own arithmetic) is the trigger.
+import { BellEngine, type BellWorld } from "./bell.ts";
 
 // --- what we need from server.ts (structural, to avoid a circular import) ---
 type LogEntry = { seq: number; ts: number; actor: string; verb: string; args: Record<string, unknown> };
@@ -369,6 +372,10 @@ export class BehaviorHost {
    *  the hold's truth (active && until > now); the sweep owns expiry
    *  transitions from folded truth alone — boot heal included. */
   private weatherzones: WeatherZoneEngine | null = null;
+  /** Bells (vocab-17): swept on the same clock. The schedule is a static
+   *  table; the sweep reads the world clock and tolls crossed slots — one
+   *  say + presence-plane strikes per toll, nothing persisted. */
+  private bells: BellEngine | null = null;
 
   constructor(w: WorldLike) { this.w = w; }
 
@@ -447,6 +454,14 @@ export class BehaviorHost {
       this.weatherzones ??= new WeatherZoneEngine(this.w as unknown as ZoneWorld);
       this.weatherzones.sweep(now);
     } catch (err) { console.error(`[world:${this.w.name}] weatherzone sweep`, err); }
+
+    // Bells (vocab-17) ride the same clock — the schedule is a static table
+    // in the fold; the sweep reads the world clock (hoursAt) and tolls
+    // crossed slots. Zero traffic while the day stands still.
+    try {
+      this.bells ??= new BellEngine(this.w as unknown as BellWorld);
+      this.bells.sweep(now);
+    } catch (err) { console.error(`[world:${this.w.name}] bell sweep`, err); }
 
     for (const inst of this.instances.values()) {
       for (let i = 0; i < inst.timers.length; i++) {

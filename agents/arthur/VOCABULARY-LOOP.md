@@ -841,8 +841,27 @@ no new verb.
       after the agent.ts describeReservation line + exclusion-list entry.
       Scratch worlds only; no production world touched. No eye-check owed
       (zero client code — chat + folded state only).
-- [ ] Day/night bell schedule: authored time-of-day chime with fold-held
+- [x] Day/night bell schedule: authored time-of-day chime with fold-held
       schedule and late-join truth.
+      DONE vocab-17 (2026-09-15): comp {type:"bell"} — BellEngine in
+      server/bell.ts (1Hz sweep on the BehaviorHost tick, the vocab-2/3/14
+      precedent; the same two-hunk shape in behaviors.ts). NO use actions —
+      a bell is a standing schedule, not an instrument (the music family
+      owns hand-played); any use passes through untouched. ZERO edits to
+      pilot-dirty server.ts/world.ts/verbs.ts/reactions.ts and ZERO client
+      code (each strike is an ordinary {type:"sound"} message music.js
+      already synthesizes). Contract in § BELLS CONTRACT implemented as
+      written. Evidence: tools/belltest.ts RED 12 failing (engine absent;
+      25 pre-passing = shared math + shell gates, the honest vocab-13
+      class) then ALL PASS 37/37 — the GREEN run caught one genuine engine
+      defect (a cap-skipped bell's crossing was not consumed, so the 5th
+      bell tolled next sweep; skip now consumes the crossing — deterministic
+      folded order decides who tolls); belltest registered in the servergate
+      battery; servergate full battery green; mcpl manifest 28/0 +
+      effective-test + denoise-test green after the agent.ts hunks (bell
+      sound branch, describeBell affordance, exclusion-list entry).
+      Scratch worlds only; no production world touched. No eye-check owed
+      (zero client code — sounds + chat, both existing paths).
 - [ ] Sound post: ambient audio emitter with distance falloff and mute
       persistence.
 - [ ] Message board: authored multi-line notice with revision history and
@@ -2048,6 +2067,104 @@ dinner, a reading-chair hold while you fetch tea, a workshop bench shared
 by a queue of one — a temporary occupancy claim with expiry and conflict
 rules, state in the fold, perception for free, one 8KB comp, no script,
 no new verb, no engine sweeping.
+
+### BELLS CONTRACT (vocab lane — drafted vocab-17, 2026-09-15)
+
+**Trigger.** A bell is an entity carrying `comp {type:"bell", data:{...}}`. There
+are NO bell use actions — a bell is not played by hand (that is the music
+family); it is a STANDING SCHEDULE the world keeps by itself. Any `use` on a
+bell entity passes through untouched for other evaluators (the reactions
+doctrine). Attaching/removing the comp is builder (rank 1) — the author's
+standing decision that this thing keeps time, identical doctrine to
+reactions/phrases/region/door/lamp/guestbook/portal/music/plate/water/growth/
+companion/weatherzone/waystone/reservation.
+
+**State — the schedule is a static table; TIME is the trigger.** The comp is
+authored config only: `hours` (world-clock hours, default `[9, 15, 21]`, each
+entry in [0,24) — out-of-range/garbage entries DROP with a lint note; deduped,
+sorted, capped at 8), `n` tolls per hour (default 3, clamped [1,12] — the
+count the hour rings), `base` pitch (note name or hz, default `"E4"`), `sec`
+per strike ([0.5,10] d4), `gain` ([0.05,1] d0.55), `wave`
+(sine|square|sawtooth|triangle, d sine), `minGap` real-seconds between this
+bell's tolls ([10,3600] d30 — the strobe bound; authored sky `rate` can push
+the world through hours fast, minGap is what keeps a bell from becoming a
+machine gun), `dayFirst` (default false — see below), and `line` (say text
+override, ≤200c). NOTHING is stored anywhere: no comp transitions are ever
+minted, no occupancy, no per-toll state in the fold.
+
+**The sweep.** `BellEngine` rides the 1Hz BehaviorHost tick (the vocab-2/3/14
+precedent). Each sweep computes the world hour ONCE (`hoursAt(sky, now)` —
+shared/forecast.js, the same arithmetic the sun uses; fixed, rated, and
+real-tz clocks all work, a typo'd tz falls back to the parked clock and the
+bell follows). A slot is CROSSED when the hour coordinate moves past an
+authored hour since the last sweep (a wrap past 24 is the midnight roll —
+slots in (prev,24] ∪ [0,cur]). The FIRST crossed slot tolls; multiple slots
+crossed in one sweep (extreme `rate`) coalesce into that one toll — minGap is
+the real bound. Backward hour jumps (an author re-basing `hours`) read as one
+forward wrap: at most one spurious toll per re-author, minGap applies —
+bounded and disclosed.
+
+**Effects.** A toll mints exactly ONE log entry — `say` actor `world`, args
+`{text: <line>, id, bell:{n, hour, at}}` (the weatherzone-release grammar:
+no cause/by — TIME caused it, no human did). Default line `the bell tolls
+<n>`. The SOUND rides the presence plane (the music/force doctrine — never
+logged, never folded, never replayed): `n` broadcasts
+`{type:"sound", id, note:{hz,sec,gain,wave}, p:[live pos], at, bell:{n, hour,
+first}}`, strikes spaced ~`sec·0.8` apart (engine-side setTimeout chain,
+bounded by n ≤ 12). The note is DERIVED: chromatic semitones above `base` by
+`round(hour) % 12`, clamped to the piano (shared/music.js arithmetic) — noon
+on an E4 bell rings E, three o'clock rings G. The first strike carries
+`first:true` (the mcpl narration flag). A `bell-trigger` flight entry (kind
+`reaction`) records the toll. No other verb can be minted — a bell owns no
+comp/spawn/place/motion writes, ever.
+
+**Day-first.** On the engine's first sight of a bell after boot, `dayFirst:
+true` tolls the slot CONTAINING the current hour (the largest authored hour
+≤ now; none if before the first), once per boot — a freshly-booted world
+announces where it stands in the day (the ambient-tier doctrine: on connect
+you hear the CURRENT state). Without dayFirst, a booting bell stays silent
+until the NEXT crossing.
+
+**Restart/replay.** Replay mints nothing (the engine runs ONLY from the live
+tick). On restart the fold carries the schedule; the engine seeds each
+bell's `lastTollAt` from the world's own say record (`recentSays` — the last
+world say carrying `bell.id`), so a slot that tolled before a crash does not
+re-toll after it; slots past that moment toll normally. A record rotated out
+of the ring (a quiet world, days later) seeds nothing and the bell arms
+silently — the harmless default. Says read as history; sounds are never
+replayed (a bell that tolled before you arrived is history, not audio — the
+particles doctrine).
+
+**Rate/abuse.** (a) At most 4 bells TOLL per world (deterministic folded
+order; overflow skips with `bell-cap`). (b) minGap real-seconds between one
+bell's tolls (floor 10). (c) One toll per bell per sweep (coalesce rule).
+(d) The sky's own authoring bounds the schedule: rate is owner-gated, hours
+are ≤8 slots/day. Worst legal ≈ 4 tolls/min world-wide, each one say + ≤12
+presence sounds. Lint fires at most once per boot per bell (`bell-lint`,
+particles-lint doctrine — a sweep must never lint-spam).
+
+**Failure behavior.** Malformed comp → clamp + `bell-lint`; an empty `hours`
+after filtering is a bell that can never fire (fail closed, noted). Missing
+entity → silent skip. Every sweep and toll wrapped in try/catch (house rule
+3 — no bell takes the server down). Engine memory (arm markers, lastTollAt,
+dayFirst sets) is per-boot and derived where possible.
+
+**Browser path.** ZERO client code: each strike is an ordinary
+`{type:"sound"}` message — client/lib/music.js already synthesizes it
+(distance attenuation, stereo pan, the world-volume slider) — and the say
+arrives as ordinary chat (actor `world`). A bell GLB's own swing animation is
+the builder's business (a `motion` comp composes independently).
+
+**MCPL path.** The agent's `sound` case gains the bell branch: one act line
+per toll (`<id> tolls 3 (hour 15)`, first-strike only, radius-gated,
+denoised). `look()` lists the bell via `shared/bell.js describeBell` (the
+describeDoor pattern) — schedule, toll count, next toll derived at read
+time. The say lands in the agent inbox as ordinary chat.
+
+**Intent.** The world keeps its own time. A square bell tolling morning,
+noon, and evening; a dock bell counting the watch; a shrine bell at dusk —
+the day cycle already runs the sun, and now it rings. One 8KB comp, no
+script, no per-frame traffic, the clock itself doing the ringing.
 
 ## REPORT
 

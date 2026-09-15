@@ -55,6 +55,9 @@ import { describeCompanion, normalizeCompanion, followStep } from "../shared/com
 // The weatherzone affordance line (vocab-14): names the zone's menu and
 // hold window — the district weather request surface.
 import { describeWeatherzone } from "../shared/weatherzone.js";
+// The bell affordance line (vocab-17): names the schedule and the next
+// toll — derived from the SAME world clock the sweep reads.
+import { describeBell } from "../shared/bell.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -697,6 +700,17 @@ export class WorldAgent {
             // through the denoiser so a burst is one act line, not chat
             // spam. Agents can also act via the ordinary use verb
             // (look() lists the affordance).
+            if (msg.bell) {
+              // A bell tolled (vocab-17): one act line per TOLL — the n
+              // strikes are one event, so only the first narrates. No `by`:
+              // time caused it, no human did (the say carries the same
+              // grammar). Radius-gated like every ambient sense.
+              if (!msg.bell.first || !Array.isArray(msg.p)) break;
+              const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
+              if (Math.hypot(sdx, sdz) > this.activityRadiusM) break;
+              this.gate.act(String(msg.id), "tolls", `${msg.id} tolls ${msg.bell.n} (hour ${msg.bell.hour})`);
+              break;
+            }
             if (msg.water) {
               if (!Array.isArray(msg.p)) break;
               const sdx = this.pos.x - msg.p[0], sdz = this.pos.z - msg.p[2];
@@ -1933,10 +1947,13 @@ export class WorldAgent {
       // claim hint) — the text-tier read of the same folded comp the claim
       // engine writes; derived at read time, so the countdown is live
       if (c.reservation) aff.push(describeReservation(c.reservation));
+      // a bell names its SCHEDULE and the next toll — derived at read time
+      // from the same world clock the sweep reads (skyState)
+      if (c.bell) aff.push(describeBell(c.bell, this.skyState, Date.now()));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);
