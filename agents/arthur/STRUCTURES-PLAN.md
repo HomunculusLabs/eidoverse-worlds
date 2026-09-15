@@ -10853,3 +10853,126 @@ Files: agents/arthur/struct175-probe-riemann.ts (NEW, tracked, v5 + banked
 v6 path), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-175, D+0 E+0). Zero world mutations, uploads, verbs, comp-edits,
 shared-budget use. Zero pushes.
+
+## struct-176 (2026-09-15): R11-10 THE CLEBSCH DIAGONAL CUBIC — BUILD+JUDGE
+## TICK (probe ALL PASS after 5 checker-side RED generations + a corrupt
+## published table caught and REPLACED by first-principles derivation;
+## decode ALL PASS; gameplay 18m PASS; v1 ACCEPTED BANKED NOT PLACED)
+
+176%3=2 build slot. Native debts carried (not payable in cron — native
+vision absent from the tool catalog, only zai-vision MCP loads, same
+disclosed class as struct-169..175): monkeysaddle v2 native-18m PASS
+placement GATE, hypar row 22 native-only, kuen v3 + catalan v1
+fallback-judged acceptances (both placed). Gate ALL PASS real exit 0
+tick-start (/tmp/struct176-gate.txt). Shard drained fresh (IMPROVE-PLAN
+md5 c0f569d0 unchanged, 0 OPEN nx-struct rows). Ledger max re-derived
+struct-175 -> tag struct-176.
+
+FORM SELECTION (fresh grep, all three ledgers): clebsch 0/0/0 — genuinely
+clean. Selected over ulam/menger (menger is a NAMED future fractal-family
+candidate at struct-100; ulam is a plot, not a form). Register: THE
+RULED-LINE LINEAGE'S CROWN — the village owns hypar rulings, ruledtower
+generators, meridianstair saddles; the Clebsch diagonal cubic is the
+surface where ALL 27 lines of a smooth cubic are REAL, the maximal case.
+
+CONCEPT (written before build): 27 STRAIGHT LINES, ALL REAL, ALL VISIBLE.
+One box-cut cell of the surface (gyroid mount class — the real locus is
+unbounded, probe C5: 480/600 rays cross it): bone film cut at the box,
+iron hems on the true face curves, and ALL 27 LINES LACED IN BRASS
+straight across the cell; 7 beads at the finite Eckardt points where
+three lines meet (3 more Eckardt points sit at infinity on the parallel
+classes — 7+3=10, the S5 orbit of (1:-1:0:0:0)).
+
+THE TICK'S HEADLINE DISCIPLINE (probe-first law paying off at
+mathematics level): the Wikipedia 27-line table (citing Masson 2017) is
+CORRUPT in rows 16-27. C1 proved every row on-surface, but the Schlaefli
+incidence census (every line meets exactly 10 others = 135 pairs) gave
+118-126 pairs with impossible degrees (rows 16/17 of that table meet
+just 1 line). Rows 1-15 verified verbatim (Masson's own page fetched and
+cross-checked). Response per probe law: DERIVED the 12 pentad lines from
+first principles — S5 permutation orbit of P=(1:zeta:zeta^2:zeta^3:
+zeta^4), zeta=e^(2pii/5) (power sums vanish => P on the surface; the
+join of P with its conjugate is a REAL line), 24 projective points = 12
+real spans, mapped to the affine chart via Masson's y-expressions
+(lstsq residual 1.6e-15). Tool: struct176-derive-pentad.py (tracked) —
+ALL CHECKS PASS: 135 pairs, all degrees exactly 10, 7 finite triples
+(exactly 3 each), 3 parallel classes of 3. The TS probe carries the
+derived constants (%.17g round-trip) and re-verifies everything every
+run. Checker-side RED generations recorded in-header: direction-keying
+(broke on legitimate skew parallels), base-on-line (detects meetings not
+identity), shared-t closest-approach (wrong for |d1|!=|d2|), 2x2 normals
+(ill-conditioned for near-parallel meets), fixed-tolerance face test
+(scale-wrong at B=2.6: gradient ~500), sign flip (w x d2) vs (d2 x w)
+mirrors every meeting point — caught by hand-check rows 10,12.
+
+PROBE (struct176-probe-clebsch.ts, tracked) ALL CHECKS PASS exit 0:
+C0 vacuity (81->82 breaks line law 9/9), C1 lines on-surface 27x81 worst
+1.85e-10, C2 27 distinct identities, C3 7 finite + 3 at-infinity
+Eckardt triples, C10 Schlaefli census 135/degree-10 (THE corrupt-table
+catcher), C4 S3 permutation symmetry 1.8e-12, C5 unbounded (box-cut
+required), C6 B=2.60 derived (covers Eckardts + lace anchors + 0.30),
+C7 all 27 lines cross the box (min chord 0.99), C8 real cut curves on
+all 6 faces (1716 scanline crossings).
+
+BUILD (assets/mkv3-clebsch.ts, staged -f): MC RES 72 on the overscanned
+field -> 110,775 verts clipped to the cell (gyroid chassis verbatim);
+12 analytic iron hems r 0.024 (40.74m total, root-chained + end-caps);
+27 brass lace tubes r 0.028 on the exact line chords (min chord 0.94m
+world) with end-caps; 7 Eckardt beads r 0.07 emissive 0x9a7030@1.0
+(dusk lineage); stone slab 5.50x5.50 h 0.14 — the catalan DRUM was
+caught by the build's own embed law (film low basin spans rho 2.49, not
+a mast foot) and replaced by the gyroid slab mount. Envelope
+5.50x5.11x5.50 grounded at grade. Deterministic x3 byte-identical
+sha256 e32e3b70a6147176bb28f6ee404718226e45ce2174c3f1a3f1a2c30e3ffb0a90
+(5,896,024B), mtime-verified.
+
+DECODE (struct176-decode-clebsch.ts, tracked) ALL PASS exit 0 + RED
+control (catalan bytes FAIL the census): 7 glow KEEPs named, 11 mesh
+nodes, envelope exact, grounded, lace spans the box plan (4.996 vs
+4.996 expected), 7 emissive prims, film 110,775 verts DoubleSide
+exported. One checker-side bug caught RED-first (envelope walker
+skipped mesh 0 — the 0-is-falsy waysign-15 class — plus untransformed
+bounds); rewritten as identity-translation scheme with a mesh-node
+count guard.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the monkeysaddle gate session;
+the zai tool_call wrapper then failed at the call layer x8 after ONE
+successful frame — transport class, disclosed):
+- gameplay 18m: PASS — identity reads mathematical/string-art sculpture
+  with laced straight chords converging on a gold hub (not
+  tent/scaffold); pinwheel silhouette legible (marginal: pale film vs
+  pale sky contrast); brass chords DISTINCT straight segments; grounded
+  with coherent contact + shadow; no z-fighting/voids/holes. Two
+  cosmetic flags: split shadow lobe (light-through at the elevated
+  arm), film overlap depth ambiguity.
+- night: closed DETERMINISTICALLY (struct176-night-probe.py, tracked;
+  catalan frame as control): exactly ONE warm cluster (54px, 11x9,
+  quiet, hard-edged, zero bloom) at the sculpture heart, ZERO stray
+  warm pixels anywhere in frame. The other 6 beads are honestly
+  occluded behind the opaque film at this angle (they sit ON the film
+  by mathematical necessity); by day they read as gold nodes where
+  lines cross (gameplay judge confirmed). Night contract = the
+  kuen-accepted one-quiet-point class.
+
+DISPOSITION: v1 ACCEPTED BANKED NOT PLACED. Placement = struct-177
+committed carry (177%3=0 placement slot): fresh census scan (8m NN,
+district caps, Math Avenue band eligibility per CITY-PLAN-V2), oblique
+yaw law (at yaw 0 the pinwheel face reads face-on — seat ~30-40deg off
+the approach normal, struct-104), terrain preflight, hash-gated plain
+spawn nx-struct-clebsch, comp {}. Folly class — no walk owed. Native
+re-judge debt: clebsch v1 joins the owed board (monkeysaddle gate,
+hypar row 22, kuen v3, catalan v1).
+
+Bill eye-check pointer (after placement): on Math Avenue, the pale
+pinwheel of curved films laced with 27 straight brass chords — walk
+around it: every chord stays dead straight while the films curve; the
+gold beads sit exactly where three chords cross. After dark: one quiet
+warm point at its heart.
+
+Files: struct176-probe-clebsch.ts + struct176-derive-pentad.py +
+struct176-decode-clebsch.ts + struct176-night-probe.py (NEW, tracked),
+assets/mkv3-clebsch.ts (NEW, staged -f), reviews/struct176-clebsch/
+(10 frames, ignored), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md
+(one append struct-176, D+0 E+0). Zero world mutations, uploads, verbs,
+comp-edits, shared-budget use. Zero pushes.
