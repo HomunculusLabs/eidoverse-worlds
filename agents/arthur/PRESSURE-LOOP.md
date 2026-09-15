@@ -378,8 +378,27 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       say-text cap is Bill's design call, not patched. Harness RED runs x4
       were accounting bugs, server correct each time. tools/
       pressure-emojiflood.ts SELFTEST 26 gates. Servergate smoke 85/0.)
-- [ ] Comp attach storm: 200 simultaneous comp placements rate-limited
+- [x] Comp attach storm: 200 simultaneous comp placements rate-limited
       fairly with explicit backpressure.
+      (pressure-20, 2026-09-16: worktree @ ee7d458c, PORT 8985, 19s, 200
+      sockets — 24 embodied @15Hz (16 perf + 16 storm builders) + 168 spec;
+      t+2s 64 target spawns (4/builder); t+6.5s THE STORM: 200 comp verbs
+      x 16 builders simultaneous back-to-back (3,200 verbs ~1KB, unique
+      type each, rotating targets). MEASURED PASS, no patch: per-builder
+      EXACT 12 accepted / 188 refused with the exact "slow down — verb
+      rate limit"; 3,200/3,200 verdicts, ZERO silent drops; verdict drain
+      86ms (0.027ms/verb); comp author p95 115-134ms; fanout 38,600/38,600
+      receipts p95 107-129ms; 3,008 refused keys NEVER fanned out (0 ghost
+      echoes) and absent from the fold (ghost 0); mid-storm fairness say
+      p95 13-18ms, light 1/1; fps p50 14.7, frame lat p95 12-13ms, 0 seq
+      gaps; recovery 16/16 post-window; fold census 65 exact, 208 accepted
+      comps exact-data round-trip incl. per-target storm spread exactly 3;
+      world log comp=208/total=276 expected 276 drift 0/0; HTTP probe p95
+      4-8ms; RSS +19-20MB; 0 suspicious lines. Replicated 2/2 identical
+      conditions. tools/pressure-attachstorm.ts (SELFTEST 13 breached gates
+      fire; harness fix after run 1: verdict-drain measurement was 0ms
+      artifact — now computed from accepted-echo + refusal-arrival spans).
+      Servergate smoke 85/0 pinned tree.)
 - [ ] Entity id squatting: hostile client cannot reserve ids to deny
       service.
 - [ ] Mount/dismount thrash: rapid mount cycling leaves no orphaned
