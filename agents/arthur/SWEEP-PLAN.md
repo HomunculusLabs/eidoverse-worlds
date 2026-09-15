@@ -11005,3 +11005,28 @@ chain re-derived from committed pointers this tick: row-cottage/observatory
 @258, longhouse/garden-cottage @257, hall/forge stalest standing pair at
 4+ sweeps; both walk tools ls-verified present on disk this tick:
 interior-walk-hall.ts, interior-walk-forge.ts).
+
+EPOCH-C CORRECTION (disclosed, correction-of-record class — struct-189
+wavepergola-class arrival): struct-189 cissoid/Delian altar landed at
+c28ddb09 (committed 16:02, AFTER this sweep's epoch-B read at 15:56 and
+AFTER the sweep-261 commit was staged — it became my commit's parent).
+Census-C 334->335 with exactly ONE domain-valid arrival nx-struct-cissoid
+@ [-19.529311, 0.00052, 279.321241] yaw 3.735 (214deg) lib 290b6e0cb143a2ee
+scale 1 kind thing comp {} = Math Avenue on-line step az94/r280 (r=280.0
+exact per its ledger), tuple matches its committed ledger line-for-line,
+0 drift on 334 shared ids. All affected evidence re-taken fresh before
+this correction commit: SAT re-run at epoch C (297 bbox non-light with
+cissoid in the live set / 237 classified / 0 coverage holes, exit 3 on the
+same single known unclassified R-121 — cissoid adds ZERO new contacts,
+corroborating struct-189's own SAT 6.28 at final yaw); standing gate
+re-run ALL PASS real exit 0 at ce589ea6 (sweep-261's own HEAD). Walk-band
+check: cissoid sits r280 Math Avenue procession — 260m+ off every
+tier-1/tier-2 leg, walks stand by construction (sweep-53 precedent); its
+ledger discloses folly-class no-walk-owed. The committed ledger entry
+(sweep-261, D+0/E+0, law exact 2370813) is epoch-B-true; this block is the
+correction of record. Snapshot FINAL epoch C: 335 entities / sha16
+ccda84b613bd8fed (diff vs the committed sweep-260 baseline = exactly
+[arrival nx-struct-cissoid]; asserted pre-write, post-rewrite drift ZERO
+— sweep261-baseline-rewrite.py sed-folded from the committed
+sweep259-baseline-rewrite.py chassis with EPOCH_C pinned, py_compile
+clean); next sweep's baseline.
