@@ -11457,3 +11457,109 @@ struct181-terrain-apollonian.ts + next-place-struct181.ts (all NEW,
 tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
 struct-181, D+1 E+1). One upload + one verb total (shared budget). Zero
 pushes.
+
+## struct-182 (2026-09-15): R11-13 THE MELENCOLIA STELE — BUILD+JUDGE TICK
+## (probe ALL PASS after one checker-side RED fix; decode ALL PASS 6/6 + RED
+## control + null-material cure caught at decode; front v1 judged, "11"
+## defect falsified by pixel probe, brass tones cured, v3 re-judged PASS on
+## all three frames; ACCEPTED BANKED NOT PLACED)
+
+182%3=2 build slot, nothing takeable — no banked form (apollonian placed
+struct-181), all owed native debts still cron-unpayable (tool catalog
+carries only the zai-vision MCP, tool_search fresh this tick; same
+disclosed class as struct-169..181) — build tick per the 178..181
+alternation, placement = struct-183 committed carry. Gate ALL PASS real
+exit 0 tick-start at 8ad717ba (city-138; /tmp/struct182-gate.txt,
+unpiped). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged 10th
+tick, 0 OPEN nx-struct rows). Ledger max re-derived struct-181 -> tag
+struct-182 (re-checked immediately before append).
+
+FORM SELECTION (fresh grep, all three ledgers): melencolia/durer/magic
+square 0/0/0 — genuinely clean, never even named. Register: NO standing
+form carries NUMBERS — the lane owns curves (astroid/tautochrone/clothoid/
+brachistochrone lineage), surfaces, fractals (koch/sierpinski/menger),
+tilings, CA (rule30wall), packing (apollonian, placed last tick —
+tangent-circle kin arbelos/salinon deliberately passed over as too-fresh).
+Arithmetic-as-flat-art is the unclaimed register. Era-1 heritage lineage:
+Melencolia I (Albrecht Dürer, 1514) — THE iconic mathematical artwork of
+the Renaissance.
+
+CONCEPT (written before build): THE SQUARE THAT ALWAYS ANSWERS 34. A tall
+ashlar stele (slab 2.80x3.02x0.42 on plinth 3.20x0.95x0.85, seated 0.12;
+envelope 3.20x3.75x0.95, x=width z=depth, face +Z, origin-centered) whose
+face carries the sixteen numerals as BONE seven-segment inlay in a brass
+wire grid (cell 0.55, 10 wires), the bottom-row 15|14 carrying Dürer's
+year, and one emissive brass "34" — the magic constant — small beneath the
+grid (glow_ms_1 KEEP, 0x9a7030@1.0 dusk lineage). Diagonal-filament glow
+variant REJECTED pre-build (filaments would cross the corner digits).
+Distance-tiering per struct-45: grid+tablet at 18m, the magic legible at
+reading distance. Folly class, no walk owed. Nodes 4 (3 texMat buckets +
+glow KEEP).
+
+PROBE (struct182-probe-melencolia.ts, tracked): canonical square +
+exhaustive properties — P1 census 1..16, P2 ten core lines 34, P3
+quadrants+central+corners 34, P4 associative 8 pairs 17, P5 year cells,
+P6 measured 20/36 rectangle-corner sets, P7 RED mutant (checker
+self-catch: first draft recomputed only ROWS — a within-row swap preserves
+rows while breaking cols; fixed to all ten lines, mutant reads cols 33/35),
+P8 glyph field containment, P9 envelope. ALL CHECKS PASS.
+
+BUILD (assets/mkv3-melencolia.ts, staged -f): 7-segment glyph engine
+(horizontals full-width, verticals half-height), 16 numerals = 90 bone
+boxes, 10 brass wires, 34-answer 9 glow meshes. v1 sha f61e552c... x2.
+
+DECODE (struct182-decode-melencolia.ts, tracked) ALL PASS 6/6 + RED
+control (catalan bytes FAIL 7): D1 census 4 nodes, D2 bone 2160 verts,
+D3 GLYPH LAW — every expected segment-box center of all 16 numerals
+matched one-to-one <=2mm (wrong digits cannot pass), D4 34-answer 9
+emissive boxes exact, D5 envelope literal, D6 named texMats. CAUGHT AT
+DECODE (struct-38/46 law): v1's brass wires exported material:null (plain
+MeshStandard exports none) — loader-default near-black class. Cured:
+mel_brass texMat lane. v2 sha 46073118... x2 mtime-verified.
+
+JUDGMENT (ZAI FALLBACK — native absent from cron catalog, flap law
+disclosed; native re-judge owed, riding the monkeysaddle gate session):
+- front v1: identity/grid/numerals/grounding PASS — the judge
+  independently read the square (7 two-digit + 9 single glyphs = SQ
+  exactly; rows sum 34; year 1514). One DEFECT ("11" misaligned ~30px,
+  straddling the divider) FALSIFIED deterministically (pitfall 11): pngjs
+  pixel-column probe found the "11" ink x507-533 centered ~520 vs cell
+  center 515 (<=5px noise; decode D3 proves all 90 centers <=2mm) —
+  vision-read error, no geometry change. One MARGIN real: wires read as
+  dark carved grooves, not brass (struct-178 mottle class).
+- MATERIAL CURE: brass tones lightened ~15% (0xbd985c lane). v3 sha
+  fb06138e4009a8833093a8dabaae1f90acdae76a84846ccef5a3de71a0bf2f92 x2
+  mtime-verified; decode ALL PASS re-run (D6 strengthened: mel_brass
+  required, no "?" buckets).
+- front v3: PASS all axes — brass read hue-carried cure, 16/16 numerals
+  values verified, "34" distinct accent, zero defects.
+- night: PASS 4/4 — sole element law exact (one quiet warm "34" dead
+  center ~14x10px, zero spill, zero pool, inert numerals/wires/stone);
+  margin: stele-to-sky contrast hairline (chassis night angle; recorded).
+- gameplay 18m: PASS 5/5 — reads freestanding inscribed monument, grid
+  rhythm + Dürer content survives distance, grounded, zero defects.
+  Margin disclosed: silhouette 1.2:1 reads "broad memorial slab" not
+  "tall stele" — honest against the contract's "tall"; a proportion
+  tweak rides a future refine tick if Bill wants.
+
+DISPOSITION: v3 ACCEPTED BANKED NOT PLACED. Placement = struct-183
+committed carry: fresh census scan (8m NN, district caps, Math Avenue
+eligibility per CITY-PLAN-V2 — r55-130 PROVEN SATURATED; terminal island
+r140-170 now 7 members within the 5-9 cap, avenue procession continues
+past them), oblique-yaw law (face +Z must sit 30-40deg off the walk,
+struct-104), terrain preflight, hash-gated plain spawn nx-struct-melencolia,
+comp {}. Folly class — no walk owed. Native re-judge debt: melencolia v3
+joins the owed board (monkeysaddle gate, hypar row 22, kuen v3, catalan
+v1, clebsch v1, menger v2, apollonian v1).
+
+Bill eye-check pointer (after placement): a stone monument carrying
+Dürer's magic square — walk close and read it: every row, every column,
+both diagonals, the four corners, each little 2x2 block — all sum to 34,
+and the bottom row middle cells spell the year 1514. After dark: one
+quiet warm "34" glowing beneath the grid — the square's own answer.
+
+Files: struct182-probe-melencolia.ts + struct182-decode-melencolia.ts
+(NEW, tracked), assets/mkv3-melencolia.ts (NEW, staged -f), reviews/
+struct182-melencolia/ (10 frames, ignored), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-182, D+0 E+0). Zero world
+mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
