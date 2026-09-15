@@ -16176,3 +16176,63 @@ shared-budget use (D+0, E+0).
   routing; ticks 211-355 precedent; ledger tail city-129 lineage running
   total 2370784). STANDING RECOMMENDATION carried unchanged (s182-s355):
   stop the SURVEY lane or convert to a no-LLM monitor when attended.
+
+- survey-357 (2026-09-15, ARRIVAL EPOCH, fourth of the unfreeze — ZAI
+  FALLBACK 3 calls/3 disclosed, native vision ABSENT from this cron
+  session's tool catalog (zai-vision MCP only, flap law; native-owed
+  register rows NOT discharged this tick, cron-disclosed): gate ALL PASS
+  real exit 0 FIRST TRY at tick-start HEAD 69f67772 (struct-177 tip, 99
+  PASS lines incl. ledger law EXACT 2370787; HEAD advanced mid-tick to
+  ab9650d1 city-131 foreign-only — no re-gate due, epoch law; city-131's
+  own HOLD line independently corroborates the arrival classification).
+  Census via committed next-live-census.ts exit 0 at BOTH epochs (A/B,
+  20s-paced, cmp A==B BYTE-IDENTICAL), each 329 entities, each 217637B,
+  each sha16 e503af6f7c25f547. Set-diff vs survey-356 baseline (328,
+  8460cfb5f1f26f03): +1 ARRIVAL nx-struct-clebsch (-1.239168, -0.019734,
+  141.994593 yaw 0.6981317 rad = 40deg oblique-yaw law, lib
+  store/e32e3b70a6147176.glb, comp {}) / 0 departures / 0 lib flips / 0
+  pos-yaw-scale diffs on the 328 holders — classified SIBLING WORK:
+  struct-177's committed carry verbatim (PLACED_VERIFIED; Math Avenue
+  terminal island r140-170, E-flank az90.5, rhythm slot r142; struct
+  domain). ARRIVAL-GATED JUDGE LAWFUL: slice = the 1 new-bytes object
+  (owner's own judgment was ZAI fallback with 7 of 8 frames
+  transport-dead — independent read exactly what the arrival needs).
+  Live store bytes fetched curl UA HTTP 200 272712B served-sha16
+  1a8638aae15eb072 (lib e32e3b70a6147176, DRACO re-encode law — upload
+  sha == lib name, served sha differs, struct-104 class); render via NEW
+  survey357-render-clebsch.ts (survey352-render-catalan.ts chassis
+  verbatim, DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 5 frames
+  reviews/survey357-clebsch/ (ignored residue), decoded served-bytes
+  bounds 5.500x5.108x5.500 grounded y~0 == struct-176 envelope
+  5.50x5.11x5.50 EXACT. VERDICT: nx-struct-clebsch CLEAN 3/3 — gameplay
+  18m CLEAN (identity PASS string-art/math sculpture with laced chords
+  converging on a gold hub at ~(485,318), not tent/scaffold; silhouette
+  MARGINAL left-heavy from this bearing — top-right quadrant (540-640,
+  195-265) thin wing mass, cosmetic tier; zero floats/voids; grounding
+  PASS contact ~(440-505,445-462) + cast shadow; chords straight-legible,
+  hub beads ~3px merged — thin-headroom margin). night PASS (EXACTLY one
+  quiet hard-edged amber cluster ~12x12px at heart (478-493, 311-326),
+  zero stray glow sky+ground, dark wing silhouette readable against navy
+  dusk — independently reproduces struct-176's deterministic night probe
+  (54px warm cluster) verbatim). front ~10m CLEAN 5/5 (27-line lace
+  ruler-straight — chords visibly pierce the curved film at changing
+  angles, exactly the concept; hems continuous top/left/right/lower; 3
+  gold junction knots resolvable; film smooth double-sided no
+  z-fighting; zero orphans — the frame the owner's ZAI transport failed
+  on, now covered). CONCURS struct-176 banked-PASS + struct-177
+  PLACED_VERIFIED + city-131 arrival accounting — independent
+  corroboration, no defect. Margins (NOT routed, cosmetic/polish tier):
+  silhouette left-heavy at the oblique bearing, hub beads merge to one
+  ~3px knot at 18m, brass chord aliasing into pale film in the lower
+  wing, bead positional spacing if ever viewed closer. Native re-judge
+  debt on clebsch v1 carries (owed board: hypar row 22, monkeysaddle v2
+  gate, kuen v3, catalan v1, clebsch v1). Pools: IMPROVE-PLAN md5
+  c0f569d0 unchanged (246th check); SURVEY CANDIDATES 0 OPEN rows; no
+  candidate row (CLEAN); CITY-PLAN-V2 assigns survey no role (grep 0).
+  Census baseline for next tick: /tmp/survey357-census-a.json (329,
+  217637B, sha16 e503af6f7c25f547). Zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero shared-budget use, ZERO ledger append
+  (loop law 4: append only when routing; CLEAN concurrence routes
+  nothing; ticks 211-356 precedent). STANDING RECOMMENDATION carried
+  unchanged (s182-s356): stop the SURVEY lane or convert to a no-LLM
+  monitor when attended.
