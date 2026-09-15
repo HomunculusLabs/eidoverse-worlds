@@ -14,6 +14,19 @@ import { normalizeDoor } from "../shared/door.js";
 // engine, tests, and any future client consumer.
 import { reactLamp } from "./lamp.ts";
 import { reactGuestbook } from "./guestbook.ts";
+// The portal engine (vocab-8): comp {type:"portal"} owns the enter/travel/
+// step/through action vocabulary — same dispatch doctrine, after
+// guestbooks. Destination validation + the travel request ride the env
+// supplied at wiring time (portalEnv in verbs.ts).
+import { reactPortal, type PortalEnv } from "./portal.ts";
+
+/** The portal environment — the process's own world registry (never
+ *  minting: worlds.get, never getWorld), the worlds root, and the global
+ *  ban map. Set by verbs.ts at import time (its own imports are already
+ *  verb-path-legal). Null until wired: a portal in an unwired host skips
+ *  fail-closed. */
+export let portalEnv: PortalEnv | null = null;
+export function setPortalEnv(env: PortalEnv | null) { portalEnv = env; }
 
 /** What a reaction needs from the world it fires in: the folded state, the
  *  log, the fanout, and the flight recorder. server.ts's World satisfies it
@@ -68,6 +81,10 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // {type:"guestbook"} owns the sign/erase action vocabulary — same
     // dispatch doctrine, after lamps (a book may also be a lamp-host).
     if (reactGuestbook(w, cause, ent, id, action)) return;
+    // The portal slice (vocab-8, § PORTALS CONTRACT): comp {type:"portal"}
+    // owns the enter/travel/step/through action vocabulary — same dispatch
+    // doctrine, last (a portal-host may also be a door/lamp/book).
+    if (reactPortal(w, portalEnv, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

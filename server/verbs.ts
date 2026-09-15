@@ -13,10 +13,10 @@
 
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { VERB_RATE, OPT_DIR } from "./config.ts";
+import { VERB_RATE, OPT_DIR, WORLDS_DIR } from "./config.ts";
 import { isAdminId, rightsOf, VERB_NEEDS, lockRefusal } from "./rights.ts";
 import { lintMotion, lintParticles } from "./lint.ts";
-import { reactToUse, reactToSay } from "./reactions.ts";
+import { reactToUse, reactToSay, setPortalEnv } from "./reactions.ts";
 // The publish/attach resolution + knob materialization (vocab-7): pure
 // shared math, the door.js pattern — the verb path refuses or resolves
 // with exactly what the fold and the text tier derive.
@@ -416,6 +416,17 @@ function afterModerate(ctx: VerbCtx, entry: LogEntry) {
 // ---- the table itself ------------------------------------------------------
 // rank/gen stay single-sourced in rights.ts's VERB_NEEDS (the behavior gate
 // reads the same numbers); each row here only adds what the shell dispatches.
+
+// The portal environment (vocab-8): the process's own registry (lookup
+// only — the engine must NEVER mint the world a portal names), the worlds
+// root for disk-existence checks, and the global ban map. verbs.ts is the
+// wiring point because its imports are already verb-path-legal (config,
+// rights, world registry); setPortalEnv runs at import so every dispatch
+// after boot is live. No cycle: world.ts and moderation.ts never import
+// verbs.ts.
+import { worlds } from "./world.ts";
+import { globalBans } from "./moderation.ts";
+setPortalEnv({ worlds, worldsDir: WORLDS_DIR, globalBans });
 
 const extras: Record<string, Pick<VerbRow, "selfRankZero" | "validate" | "after">> = {
   // A `say` can be a cause too: phrase-bearing things answer (reactions.ts).

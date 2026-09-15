@@ -24,6 +24,7 @@ import { initCauses } from './lib/realize/causes.js';
 import './lib/emitters.js';
 // same pattern for the `door` component (vocab-4): wires itself on import
 import './lib/door.js';
+import './lib/portal.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateSpectator, setCamYaw, setPosture, togglePhotoMode,
@@ -77,7 +78,7 @@ import {
 } from './lib/mybody.js';
 import {
   initLocalBody, isDowned, activeRagdoll, goLimp, getUp,
-  stepRagdoll, updateMountedMe, updateSeatHint,
+  stepRagdoll, updateMountedMe, updateSeatHint, tickPilot,
 } from './lib/localbody.js';
 import { posable, pushable, setPosable, setPushable } from './lib/consent.js';
 import { updateVoiceMouths } from './lib/voicemouths.js';
@@ -260,7 +261,7 @@ bus.on('sky-degraded', ({ msg }) => toast(msg, 'warn', 12000));
 
 initPhysObj({ myPos: () => myState.pos });
 initMods();   // 🧩 runtime client scripts: local trusted mods + world offers
-initLocalBody({ logChat });
+initLocalBody({ logChat, isEditing });
 initCommands();   // the /command surface (lib/commands/) + its bus subscriptions
 
 // ---------------------------------------------------------------- keys
@@ -353,6 +354,7 @@ const readyPoll = setInterval(() => {
 
 registerSystem('autos', (dt, t) => updateAutoSystems(t));       // grass wind, particles
 registerSystem('motion', () => tickMotion());                   // the world's moving parts
+registerSystem('pilot', (dt, t, now) => tickPilot(dt, now));      // carrier BEFORE rider/camera
 registerSystem('sky', (dt, t, now) => updateSky(now, t));
 registerSystem('materials', (dt, t, now) => updateMaterials(now)); // weather → uniforms
 registerSystem('rig', (dt, t, now) => updateRig(now));          // light slots follow requests

@@ -866,6 +866,153 @@ UI is deliberately out of scope (protocol before UI decoration).
 capability as vocabulary, the Layer-2→Layer-1 promotion path the queue
 names.
 
+### PORTALS CONTRACT (vocab lane — drafted vocab-8, 2026-09-15)
+
+**Trigger.** A portal is an entity carrying `comp {type:"portal", data:{...}}`. The
+action string `use {id, action}` with action `enter` (and the alias `travel`,
+`step`, `through`) is PORTAL vocabulary on the freeform use path (the reactions
+doctrine: other action strings pass through untouched — a portal ignoring
+`use {action:"ring"}` is exactly correct). Attaching/removing the comp is
+builder (rank 1) — the author's standing decision that this thing carries
+people away, identical doctrine to reactions/phrases/region/door/lamp/
+guestbook. `to` is REQUIRED at normalize (lint: `to <x> is not a world name`,
+fire always skip): a portal that names nowhere fires nowhere, fail closed.
+
+**State — there is none.** A portal is a STATIC TABLE in the fold (doors'
+vocab-4 doctrine): no comp transitions are ever minted by use; no membership,
+no occupancy, no cooldown state is persisted. All rate state (travel budget)
+is in-memory per (world, traveler, minute-bucket), identical in kind to the
+phrases cooldown — a restart forgets it, which is harmless (the log is the
+authority on where bodies are, and it never moved anyone).
+
+**Destination validation (fail closed, world-registry aware).** The engine
+resolves `to` against the PROCESS'S OWN world registry WITHOUT minting:
+`worlds.get(name)` directly — never `getWorld(name)`, which would create the
+world a portal points at. A destination is VALID iff (a) the name passes
+`/^[a-z0-9_-]{1,64}$/i`, (b) it is already live in the registry, OR its
+`log.jsonl` exists under WORLDS_DIR (the boot sweep's own existence test) —
+everything else is refused with `portal-skip` (`destination "<to>" does not
+exist — travel refused`): a bad link dies at the door, never mid-flight, and
+no traveler ever lands in (or mints) a nonexistent world. The engine takes
+`worlds: Map<string, unknown>` + `worldsDir: string` structurally — path joins
+stay in the engine, fs reads use node:fs existence checks only.
+
+**Permission re-evaluation.** Travel is the client honoring a REQUEST — and a
+join is already a full re-evaluation: the join path re-runs scope checks, the
+agent-name reservation, per-world bans, and grants the traveler their
+destination rank from that world's own log (an owner in A is a visitor in B
+until B says otherwise). Rights NEVER flow across a portal. Bans checked at
+fire: the engine consults the destination's bans + process-global bans and
+the source world's bans BEFORE sending the request — a banned-from-B person
+standing in A gets `portal-skip` (`<who> is banned from "<to>"`), named in
+the flight recorder. Spectators never travel (`use` is spectator-gated in the
+shell).
+
+**Arrival anchor.** The engine derives the arrival pose ONCE at fire, pure
+function of the authored comp (shared/portal.js — the door/lamp
+shared-verbatim pattern): the portal's LIVE position (lease stream pos if
+leased, folded pos otherwise — the vPunt rule), plus authored `arrive`
+entity-local metres (default `[0,0,0]`, axes clamped ±8, the particles-origin
+doctrine) rotated by the portal's live yaw (the village local→world
+transform), plus authored `yaw` (absolute arrival facing, default the
+portal's live yaw). The request carries it; the traveling client applies it
+on its destination snapshot (the documented `restore` path — a fresh join's
+restore arrives null in a never-visited world, and the portal's anchor
+application rides the same onRestore hook). The engine ALSO writes the
+anchor into the traveler's SOURCE-WORLD remembered pose before they leave
+(`{p:[x,y,z], yaw, clip:"idle"}` — rememberPose settles it; the shape
+survives the settledPose sanitizer: emote stripped, ragdoll→idle) so a
+returning traveler who declines the request — or a refused destination
+re-check — wakes at the portal mouth, never mid-air where a rollback would
+otherwise leave them.
+
+**Failed-travel rollback.** Two layers, both fail-safe by construction:
+(a) REQUEST-BASED — the engine never moves anyone. It validates, derives the
+anchor, stamps the source-pose memory, and sends ONE puppet-channel request
+`{type:"puppet", portal:{to, p:[x,y,z], yaw}, by:"<portal id>"}` ROUTED to
+the traveler's socket. The traveling client performs the travel (its join
+re-enters the full admission path: bans, scopes, reserved names) and applies
+the anchor on arrival; a client that declines or a destination that refuses
+(the server's own error + close code) leaves the body standing in A, awake
+at the portal mouth — the logged `use` is the only durable trace. The
+puppet channel is the DESIGNED consent surface (DESIGN.md: each client owns
+its own avatar; a puppet is a request its target honors — a portal uses the
+same authority as a shove), and it is replay-inert by nature (presence
+plane, never logged). (b) RE-REFUSAL — if the destination world was valid at
+fire and refuses at join (ban raced in, world archived), the normal join
+refusal error + close code reach the client; nothing was lost in A (pose
+memory written, presence continuity kept — the client stays joined to A
+until its own join succeeds). There is no mid-flight state to roll back: the
+source world is only ever left through the ordinary tested travel path
+(pressure-worldswitch), after the destination has accepted.
+
+**Effects — say + request only.** A fire appends exactly ONE log entry:
+`say` actor `world`, args `{text:<line>, id, portal:{to, who, at},
+cause:<use seq>, by:<user>}` — the phrases/doors/lamps/guestbook provenance
+grammar. Line default `"<who> steps through the portal"` (authored
+`line` overrides, clamped 200c). The puppet request is presence-plane
+traffic, never logged. A `portal-trigger` debug entry (kind `reaction`)
+records cause→effect and the derived anchor. No other verb can be minted
+from a portal use — no comp/spawn/place/motion writes, ever.
+
+**Authority/reach.** Using a portal is rank 0 (anyone present, like walking
+through a door) plus the ARM'S-REACH gate (vPunt arithmetic): the user's
+LIVE pose within `reach` metres (authored, clamped [2,12], default 4) of the
+portal's LIVE position. Out-of-reach use is `portal-skip` naming the
+distance. Lock composes as for doors (lock refuses place/punt/spawn/comp/
+remove — not `use`): a locked portal still carries. Rate: at most 4 fires
+per (world, traveler) per 10s (in-memory, `portal-skip: too many crossings,
+wait a moment`); each fire mints exactly one say — bounded by the verb rate
+as always. Self-target is refused (`portal-skip: a portal cannot target its
+own world`) — the teleport-beacon queue item owns intra-world hops.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs ONLY
+from the live verb path; folding a historical use or say never re-fires and
+never re-sends a request. On restart the comp folds as authored; the say
+reads as history; no bodies move. A late joiner sees the portal standing
+(comp in the fold) and the chat lines of past crossings — the complete
+truth.
+
+**Failure behavior.** Unknown action → pass-through (another evaluator may
+own it). Malformed comp → clamp + `portal-lint` (particles-lint doctrine):
+`to` validated not clamped (a clamped destination is a lie), `arrive` axes
+±8 default [0,0,0], `yaw` any finite (default live yaw), `reach` [2,12] d4,
+`line` 200c, unknown keys ride. Missing entity → silent skip with
+`portal-skip`. Destination absent at fire → `portal-skip` (never mints). The
+whole reaction wrapped in try/catch (house rule 3 — no portal takes the
+server down).
+
+**Browser path.** `client/lib/portal.js` (the door.js/emitters.js pattern —
+one import line in main.js, zero other edits to the pilot-dirty file): on a
+`puppet` message carrying `portal`, the module (a) applies for a CONFIRMED
+embodied non-spectator self, (b) stores the anchor as the pending restore
+(`pendingPortalAnchor`), (c) sets `CONFIG.world = to` + rewrites the URL
+(`?world=`) without reloading, (d) drives `rejoin()` — the existing
+intentional-close reconnect that re-enters the world through the ordinary
+join path (the tested "leave A, join B" seam), and (e) `onSnapshot`'s
+existing restore hook applies the anchor when the new world's snapshot
+arrives (the hook is main.js's own `onRestore`, reached through a
+net.js-supplied portal callback — one `wireNet` key, no edit inside
+onSnapshot). Spectator legs ignore the request (consent law). The portal
+comp also renders into the inspector/chat affordances as ordinary component
+data — a future visual tier (swirl, plane, arch shimmer) is deliberately
+deferred (protocol before decoration).
+
+**MCPL path.** Same perception (the say lands in the inbox). The agent's
+puppet handler gains the portal branch: store the anchor, re-point
+`this.world`, and reconnect through the ordinary join — the same path its
+reconnect already takes, arriving seated at the anchor with presence
+continuity (its body's own join). `look()` lists the portal affordance
+(shared/portal.js `describePortal`, the describeDoor pattern); world_history
+{verbs:["use","say"]} traces every crossing's chain. An agent may decline by
+simply not acting — the request is fire-and-forget.
+
+**Intent.** Worlds become an archipelago you can WALK through. A dock gate
+to the show world, a gallery door back to the commons, a passage to a
+friend's fork — one 8KB comp, no script, no new verb, the journey logged as
+a line of chat, the arrival as a body at a place. Travel stays the tested
+transport it already is; the portal is the world finally ASKING you to go.
+
 ## LAWS
 
 - One vertical affordance per wakeup, not a horizontal framework dump.

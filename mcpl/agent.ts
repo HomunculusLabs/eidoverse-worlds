@@ -27,6 +27,9 @@ import { describeParticles, emitterTransition, transitionLine } from "../shared/
 import { describeDoor } from "../shared/door.js";
 // The lamp affordance line (vocab-5): same pattern — lit/dark + actions.
 import { describeLamp } from "../shared/lamp.js";
+// The portal affordance line (vocab-8): same pattern — destination + the
+// enter action.
+import { describePortal } from "../shared/portal.js";
 import { describeGuestbook } from "../shared/guestbook.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
@@ -282,6 +285,10 @@ export class WorldAgent {
 
   closed = false;
   restoredPose = false;
+  /** A portal crossing in flight (vocab-8): set by the puppet handler,
+   *  consumed by the next snapshot's restore branch — the derived arrival
+   *  anchor outranks any remembered sleep in the destination world. */
+  pendingPortal: { to: string; p: number[] | null; yaw: number } | null = null;
   /** Deliberate death: stop the body, never reconnect. Sessions MUST call
    *  this (not ws.close()) — the auto-reconnect below otherwise resurrects
    *  the body as a zombie that fights its successor over the identity. */
@@ -457,8 +464,16 @@ export class WorldAgent {
           case "snapshot":
             this.entities.clear(); this.people.clear();
             // wake where you fell asleep — fresh body only; a body that has
-            // walked this process keeps its own truth on mid-life reconnects
-            if (msg.restore && !this.restoredPose && !this.target && this.pos.x === 0 && this.pos.z === 0) {
+            // walked this process keeps its own truth on mid-life reconnects.
+            // A portal crossing in flight (vocab-8) outranks both: the
+            // derived anchor seats the body where the portal let out.
+            if (this.pendingPortal && this.pendingPortal.to === msg.world) {
+              const pp = this.pendingPortal;
+              this.pendingPortal = null;
+              if (Array.isArray(pp.p) && pp.p.length >= 2) {
+                this.pos.x = pp.p[0]; this.pos.z = pp.p[2]; this.yaw = pp.yaw ?? 0;
+              }
+            } else if (msg.restore && !this.restoredPose && !this.target && this.pos.x === 0 && this.pos.z === 0) {
               this.pos.x = msg.restore.p[0]; this.pos.z = msg.restore.p[2];
               this.yaw = msg.restore.yaw ?? 0;
               // an enacted pose is authored, not ephemeral — wake holding it.
@@ -492,9 +507,26 @@ export class WorldAgent {
             // re-send as ours.
             //
             // Ragdoll is the exception it cannot fully honour: with no skeleton
-            // in-process there is nothing to run physics ON. So it slumps into a
-            // fixed collapsed pose instead of simulating — visibly down, just
+            // in-process there is nothing to run physics ON. So it slumps into
+            // a fixed collapsed pose instead of simulating — visibly down, just
             // not physically settled. A renderer-backed body does the real sim.
+            //
+            // A PORTAL request (vocab-8) is travel: point at the destination,
+            // remember the anchor, and reconnect through the ordinary join —
+            // the same path a dropped socket already takes. The next snapshot
+            // seats the body at the anchor (the restore branch below reads it
+            // before any remembered sleep).
+            if (msg.portal) {
+              const to = String(msg.portal.to ?? "");
+              if (!to) break;
+              this.pendingPortal = { to, p: Array.isArray(msg.portal.p) ? msg.portal.p : null, yaw: Number(msg.portal.yaw ?? 0) };
+              this.onEvent?.({ ts: Date.now(), kind: "say", who: msg.by ?? "world",
+                text: `(a portal carries you toward "${to}")` } as any);
+              this.world = to;
+              try { this.ws?.close(); } catch { /* already gone */ }
+              // onclose drives connect() — one intentional hop, not a loop
+              break;
+            }
             if (msg.ragdoll) {
               // {lean:[x,y,z]} m/s says which way the shove sends them — a
               // headless body cannot tumble, but it CAN land where the shove
@@ -1760,6 +1792,9 @@ export class WorldAgent {
       // entries themselves read from the folded comp (world_history traces
       // every signature's chain)
       if (c.guestbook) aff.push(describeGuestbook(c.guestbook));
+      // a portal names its DESTINATION and the enter action — the text-tier
+      // read of the same folded comp the crossing engine validates
+      if (c.portal) aff.push(describePortal(c.portal));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);

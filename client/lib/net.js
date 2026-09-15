@@ -43,6 +43,7 @@ let hooks = {
   me: () => null,
   onRestore: () => {},
   onSnapshotDone: () => {},
+  onPortalRestore: () => null,   // portal.js's pending-anchor seam (vocab-8)
 };
 export function wireNet(h) { hooks = { ...hooks, ...h }; }
 
@@ -663,10 +664,14 @@ async function onSnapshot(msg) {
   }
 
   // wake where you fell asleep — but never teleport a body that has already
-  // moved this session (mid-session reconnects keep local truth)
+  // moved this session (mid-session reconnects keep local truth). A portal
+  // crossing in flight outranks both: its pending anchor seats the body at
+  // the derived arrival pose (portal.js, vocab-8), first visit or not.
   const s = hooks.myState;
-  if (msg.restore && !restoredPose && s && s.speed === 0) {
-    restoredPose = true;
+  const portalA = hooks.onPortalRestore?.() ?? null;
+  if (portalA && s && s.speed === 0) {
+    hooks.onRestore(portalA);
+  } else if (msg.restore && !restoredPose && s && s.speed === 0) {
     hooks.onRestore(msg.restore);
   }
   restoredPose = true; // first snapshot decides, restore or not
