@@ -112,7 +112,26 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       19/0 on the fixed pinned tree; main-tree boot-parse clean. server.ts
       travel block patched in main tree as a single staged hunk beside the
       dormant sibling pilot dirt.)
-- [ ] Snapshot join during concurrent authored mutations is sequence-consistent.
+- [x] Snapshot join during concurrent authored mutations is sequence-consistent.
+      (pressure-8, 2026-09-15: worktree @ d6cfd548, 192 peak — 24 embodied
+      @15Hz (8 mutators rotating say/place/comp, then all 24 post-resume) +
+      150 spec + 18 storm slots = 257 joins mid-stream; scratch FOLD_EVERY=25
+      → 8 folds mid-storm; observation-driven fold-pause serves BOTH contract
+      paths (87 empty-tail post-fold + 170 non-empty-tail). Every snapshot
+      state == fold(log FILE through covered) 257/257, tail contiguous 0
+      fails, live broadcasts continue exactly at covered+1, client-contract
+      shadow replays converge 257/257 to the final quiet snapshot (itself ==
+      fold(full log)); join p95 3ms mid-storm, say author p95 16ms, fps 16.9,
+      0 frame gaps, seer 0 gaps/0 missing, verb arithmetic drift 0,
+      spectator-author refusal exact, RSS +16MB, 0 suspicious lines. PASS, no
+      patch — the join path is synchronous (joinPayload → send, no await), so
+      no verb can land between state-capture and send; fold() and append()
+      mutate state/tail/throughSeq only inside the same synchronous verb
+      dispatch. tools/pressure-snapjoin.ts (SELFTEST 27 gates, self-booting,
+      fd-checked). Side cleanup: killed this lane's leaked pressure-7 scratch
+      sequencer holding :8996 (0 clients, 1h uptime — prior window died
+      mid-run). Servergate smoke 85/0 on the pinned tree. Next head: memory
+      returns near baseline after every synthetic participant leaves.)
 - [ ] Memory returns near baseline after every synthetic participant leaves.
 - [ ] Performer/spectator classification cannot accidentally multiply fanout.
 - [ ] Malformed-frame storm: partial/truncated JSON payloads never wedge the
