@@ -16476,3 +16476,80 @@ shared-budget use (D+0, E+0).
   precedent; ledger tail city-137 lineage running total 2370791).
   STANDING RECOMMENDATION carried unchanged (s182-s361): stop the SURVEY
   lane or convert to a no-LLM monitor when attended.
+
+- survey-363 (2026-09-15, ARRIVAL EPOCH, sixth of the unfreeze — ZAI
+  FALLBACK 4 calls/4 disclosed + deterministic warm-px probes, native
+  vision ABSENT from this cron session's tool catalog (zai-vision MCP
+  only, flap law; native-owed register rows NOT discharged this tick,
+  cron-disclosed): gate ALL PASS real exit 0 FIRST TRY at tick-start
+  HEAD 8ad717ba (city-138 tip, 99 PASS lines incl. ledger law EXACT
+  2370795 — total +4 vs survey-362's 2370791 via pressure-11/sweep-252/
+  struct-181/city-138 mid-window, normal interleaving, gate ran at the
+  NEW HEAD so no re-gate due, epoch law; HEAD unchanged through the
+  tick). Census via committed next-live-census.ts exit 0 at BOTH epochs
+  (A/B, 20s-paced, cmp A==B BYTE-IDENTICAL), each 331 entities, each
+  218842B, each sha16 37d85b22b9b6ca3b — EXACTLY sweep-252's rewritten
+  post-apollonian baseline. Set-diff vs survey-362 baseline (330,
+  28397d80): +1 ARRIVAL nx-struct-apollonian (1.433333, -0.01264,
+  164.243746 yaw 0.8726646 rad = 50deg oblique-yaw law, lib
+  store/6ba69bea474cb575.glb, comp {}) / 0 departures / 0 lib flips / 0
+  pos-yaw-scale diffs on the 330 holders — classified SIBLING WORK:
+  struct-181's committed PLACED_VERIFIED tuple verbatim (Math terminal
+  island E-flank return, az89.5 r164.25; struct domain; lib ==
+  struct-180's banked sha 6ba69bea474cb575), independently accounted by
+  city-138's HOLD line (330->331) and sweep-252's arrival tick.
+  ARRIVAL-GATED JUDGE LAWFUL (s357/s360 precedent): slice = the 1
+  new-bytes object (owner's own judgment was ZAI fallback — independent
+  read exactly what the arrival needs). Live store bytes fetched curl
+  UA HTTP 200 66188B served-sha16 3133e1fee0633012 (lib 6ba69bea =
+  struct-180 v1 upload sha, DRACO re-encode law — served != upload,
+  struct-104 class); render via NEW survey363-render-apollonian.ts
+  (survey360-render-menger chassis verbatim + one addition: face-on
+  night frame, justified below; DRACO-aware, live-meadow ground
+  0x3d3a29) exit 0, 6 frames reviews/survey363-apollonian/ (ignored
+  residue), served-bytes bounds 0.700x5.580x4.800 grounded y~0,
+  byte-stable across both render passes (tall pierced gasket slab;
+  4.8m face plane = local Z). VERDICT: nx-struct-apollonian CLEAN 3/3
+  — gameplay 18m CLEAN (identity PASS plinth-mounted mathematical
+  monolith; gasket construction corroborated INDEPENDENTLY at 18m via
+  three light-through-perforation spots inside the cast shadow
+  (348,458)/(374,455)/(396,458); silhouette PASS clean vertical slab +
+  plinth; zero floats/voids/z-fighting; grounding PASS contact
+  y~477 + directional shadow). face-on ~10m (right view = the true
+  4.8m face) CLEAN 4/4 (coherent tangent-packed gasket — core openings
+  center, cascade to rim fillers, no size inversions; ~28-30 of 34
+  piercings resolvable OPEN with sky through every one, rims clean, zero
+  z-fighting, remainder at tangent-junction resolve limit = expected at
+  distance; outer ring continuous 360deg, slab seated into plinth, zero
+  orphaned rings; uniform mottled stone). NIGHT PASS via face-on frame
+  + deterministic probe: EXACTLY one contiguous warm cluster 247px
+  (bbox 602-619 x 250-267, maxR 158) hard-edged at the bead's piercing
+  — the day judge independently spotted the same bead at (611,259)
+  WITHOUT being told, decode confirms material glow1 (warm amber
+  baseColor + emissiveFactor [0.323,0.162,0.030]); oblique gameplay
+  night frame reads 0 warm px = rim-occlusion of the in-piercing bead
+  by the slab's own 0.7m edge bearing (my initial night prompt assumed
+  a heart bead — corrected by decode + the discriminating face-on
+  frame, pitfall-11 law applied to my own assumption); sky control band
+  0 warm px, zero spill/bloom/ground pool, silhouette readable.
+  CONCURS struct-180 banked v1 PASS (probe ALL PASS, 34 piercings
+  Soddy-integral exact) + struct-181 PLACED_VERIFIED + city-138/sweep-
+  252 arrival accounting — independent corroboration, no defect.
+  Margins (NOT routed, cosmetic tier): circle lattice unresolved as
+  pattern at the 18m oblique bearing (mottled column — 0.7m edge
+  foreshortening, expected; the shadow-perforation read carries
+  identity there), ~4-6 piercings below resolve at 10m face-on,
+  uniform low-res texel ~8-10px (style, consistent everywhere), 1px rim
+  shimmer at circumference. Native re-judge debt on apollonian v1
+  carries (already on the owed board per struct-180; board: hypar row
+  22, monkeysaddle v2 per struct-169v/170, kuen v3, catalan v1, clebsch
+  v1, menger v2, apollonian v1). Pools: IMPROVE-PLAN md5 c0f569d0
+  unchanged (252nd check); SURVEY CANDIDATES 0 OPEN rows; no candidate
+  row (CLEAN); CITY-PLAN-V2 assigns survey no role (grep 0). Census
+  baseline for next tick: /tmp/survey363-census-a.json (331, 218842B,
+  sha16 37d85b22b9b6ca3b). Zero world mutations, zero uploads, zero
+  verbs, zero comp edits, zero shared-budget use, ZERO ledger append
+  (loop law 4: append only when routing; CLEAN concurrence routes
+  nothing; ticks 211-362 precedent). STANDING RECOMMENDATION carried
+  unchanged (s182-s362): stop the SURVEY lane or convert to a no-LLM
+  monitor when attended.
