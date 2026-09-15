@@ -149,7 +149,24 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       per the plateau law. Servergate smoke 85/0 pinned tree. Next head:
       performer/spectator classification cannot accidentally multiply
       fanout.)
-- [ ] Performer/spectator classification cannot accidentally multiply fanout.
+- [x] Performer/spectator classification cannot accidentally multiply fanout.
+      (pressure-10, 2026-09-15: worktree @ 74d7d700, PORT 8998, 37.5s, 194
+      peak — 24 embodied anchors @15Hz + 120 spec; waves: 34-spectator hoard
+      (incl. one spectator pose attempt — silently dropped), 12 embodied ghost
+      pose-sprayers (live frames then zero post-exit residue), 8 bearer-bound
+      agents + 8 scratch-token voice legs + 4 unbindable masquerades (4/4
+      refused 4009 binding error, zero presence trace). Rosters EXACT
+      24/24/24/32 at all probes; census lines exact 36/154, 24/154, 32/162,
+      max present 36, 0 over-count lines; windows R/A/C 0 deviant, 0 foreign
+      ids ever, 0 intra-frame dups, union 24/24 everywhere; arrives/leaves
+      20/20, 44/44 drift 0; says 3/3 p95 6ms; fps p50 15.0, lat p95 8ms,
+      0 gaps; probes 2/2ms; log drift 0; RSS +11MB; 0 suspicious. PASS, no
+      server patch. tools/pressure-classify.ts (SELFTEST 36 gates). Harness
+      calibration: per-frame pose-count is not a classification invariant
+      (24 unsynchronized 66.67ms senders vs the 66ms batcher legitimately
+      co-batch 19-31 bodies); the pinned invariants are no-foreign-id,
+      no-dup, no-oversize, window-union completeness. Servergate smoke 85/0
+      pinned tree. Next head: malformed-frame storm.)
 - [ ] Malformed-frame storm: partial/truncated JSON payloads never wedge the
       sequencer.
 - [ ] Auth failure storm: bad tokens cannot exhaust join capacity.
