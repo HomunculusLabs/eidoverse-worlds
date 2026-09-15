@@ -10557,3 +10557,59 @@ struct171-pixel-probe.ts + assets/mkv3-kuen.ts (all NEW; mk staged -f),
 reviews/struct171-kuen{,-v2,-v3}/ (ignored), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-171, D+0 E+0). Zero world
 mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-172 (2026-09-14): KUEN PLACEMENT TICK — committed carry from
+## struct-171 executed, PLACED_VERIFIED live
+
+172%3=1 placement slot with a takeable carry: struct-171 banked kuen v3
+with "placement = struct-172 committed carry". Monkeysaddle v2 remains
+GATED (struct-169v native 18m PASS law — not payable in cron sessions,
+no native vision tool in the catalog; carries); hypar row 22 native-only,
+carries; costa PAID (struct-169v). Gate ALL PASS real exit 0 tick-start
+at c4249461 (99 PASS, /tmp/struct172-gate.txt). Ledger max re-derived
+struct-171 -> tag struct-172. Shard state: IMPROVE-PLAN unchanged since
+struct-169 (md5 c0f569d0), 0 OPEN nx-struct rows at last drain.
+
+SEAT (struct172-scan-kuen.ts, fresh 326 census, bun fetch /geom):
+Math Avenue density-window axis re-derived FRESH = 91.0 deg (23-form
+window; 27 math-family forms standing). Kuen envelope x[-1.02..2.02]
+z[-1.065..1.065] ASYMMETRIC (bbox-center offset +0.50 local x — applied
+at every SAT test, struct-104/target-footprint law). Final pose tested at
+the OBLIQUE yaw 0.6981317 rad (40 deg, struct-104 oblique-read law: at
+yaw 0 the equator/spiral face reads edge-on down the avenue sightline).
+BEST SEAT r117.5 az82.0 -> POS (16.352839, PY, 116.356498): NN 10.50 vs
+nx-struct-costa (law 8.0), SAT 7.26 vs nx-struct-costa (law 1.4),
+walk-clear 88.91. 17 lawful band candidates; axis corridor (±4 deg)
+empty at deep radii (costa r127.5 + rule30wall r120 crowd the axis);
+best-by-SAT chosen 9 deg off axis (costa fallback precedent — in-band
+by the ±10 law, between costa az83.5 and the az74 cluster).
+
+TERRAIN (struct172-terrain-kuen.ts): 9pt over the TRUE rotated footprint
+(literal corners, not origin-centered): spread 5.3mm, PY = -0.014569.
+
+PLACEMENT (next-place-struct172.ts, struct168 costa fresh-spawn chassis):
+local sha256 re-verified 5b7ad1a3a925027d... == struct-171 bank pin
+BEFORE upload (full sha; hash gate); entity ABSENT confirmed on fresh
+326 census; SAT/NN preflight re-run at final pose vs the same fresh set
+(footprint 1.85x1.79 at yaw 40, form-center offset applied): NN floor
+10.50 costa, SAT worst 7.27 costa — clean. 1 upload (content-addressed
+store/5b7ad1a3a925027d.glb) + 1 paced spawn over one WS join;
+PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 326 -> 327 exactly. Idempotent rerun: ALREADY_SEATED,
+zero verbs. Folly class — no walk owed. Comp bag empty by contract
+(glow_ku_1 emissive-in-GLB — no comp-wipe class on first spawn).
+
+Native debt board after this tick: kuen v3 acceptance fallback-judged
+(rides the owed board with monkeysaddle's gate session); monkeysaddle
+native 18m PASS OWED (placement gate); hypar row 22 OWED (native only).
+
+Bill eye-check pointer: on Math Avenue past the costa gate pair, the
+folded shell with the coiled equator spiral — seated obliquely so the
+gothic-arch fold and the flat coil both read on approach; after dark,
+one quiet warm point at the brass crown sleeve where the upper tail
+caps.
+
+Files: struct172-scan-kuen.ts + struct172-terrain-kuen.ts +
+next-place-struct172.ts (all NEW, tracked), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-172, D+1 E+0). One upload +
+one verb total (shared budget). Zero pushes.
