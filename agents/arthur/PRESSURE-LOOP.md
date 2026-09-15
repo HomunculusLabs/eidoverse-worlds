@@ -315,6 +315,22 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       OOM path.
 - [ ] Clock-skew tolerance: late/reordered client timestamps never corrupt
       sequence ordering.
+- [ ] Emoji/text flood in chat: rapid-fire says cannot starve verb intake.
+- [ ] Comp attach storm: 200 simultaneous comp placements rate-limited
+      fairly with explicit backpressure.
+- [ ] Entity id squatting: hostile client cannot reserve ids to deny
+      service.
+- [ ] Mount/dismount thrash: rapid mount cycling leaves no orphaned
+      rider state.
+- [ ] Snapshot size bomb: worlds with 10k+ entities join without OOM or
+      unbounded latency.
+- [ ] Midnight rollover: day-boundary crossing during load keeps ledgers
+      and leases consistent.
+- [ ] Duplicate join race: same identity joining twice concurrently
+      resolves to exactly one session.
+- [ ] Whisper spam: targeted messages cannot bypass the global rate budget.
+- [ ] Watchdog starvation: a stuck tick cannot block heartbeat/liveness
+      paths.
 
 ## LAWS
 
