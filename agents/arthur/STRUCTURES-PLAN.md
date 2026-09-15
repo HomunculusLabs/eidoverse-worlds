@@ -11946,3 +11946,88 @@ tracked), assets/mkv3-fourier.ts (NEW, staged -f), reviews/
 struct186-fourier/ (10 frames, ignored), STRUCTURES-PLAN.md (this block),
 IMPROVEMENTS.md (one append struct-186, D+0 E+0). Zero world mutations,
 uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-187 (2026-09-15): FOURIER LADDER PLACEMENT TICK — committed carry
+## from struct-186 executed, PLACED_VERIFIED live; Math Avenue procession
+## extended past tribar, on-line step az94/r270
+
+187%3=1 placement-slot cadence WITH a takeable banked form (struct-186:
+"Placement = struct-187 committed carry"; the 178..186 lane precedent — a
+banked form places on the next tick regardless of N%3, build+judge/place
+alternation held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP — tool_search fresh this tick; same disclosed class as
+struct-169..186): monkeysaddle v2 native-18m-PASS placement GATE, hypar row
+22 native-only, kuen v3 + catalan v1 + clebsch v1 + menger v2 + apollonian
+v1 + melencolia v3 + tribar v2 fallback-judged acceptances (all placed);
+fourier v1 fallback-judged acceptance now PLACED (this tick) — debt stays
+owed. Gate ALL PASS real exit 0 tick-start at afb9c0c2 (survey-369) +
+RE-RUN clean immediately before the mutation at a36a7d7d (sibling commit
+landed mid-tick; epoch law; /tmp/struct187-gate.txt +
+/tmp/struct187-gate2.txt, unpiped). Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged 16th tick, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-186 -> tag struct-187 (re-checked immediately before
+append).
+
+Local bytes re-verified sha256 c6878d46490bd5928c9e07f348477dd31ff6d46c19
+5c945332b2867129efd04d == struct-186 bank pin BEFORE upload (shasum -a
+256, mtime Sep 15 13:31). Probe P1-P8 + PRED + decode D1-D7 + RED control
+re-run ALL PASS fresh this tick; envelope re-derived literally:
+7.200 x 6.530 x 0.600 SYMMETRIC (D6, CX=CZ=0) — origin-centered SAT
+lawful, placement-contract law.
+
+SEAT (struct187-scan + struct187-select, fresh 333 census): avenue axis
+re-derived FRESH = 91.0 deg (30-form window; 34 math-family forms
+standing). Procession read complete — island 8 members r140-174.2 (cap
+5-9, NOT a 9th member); procession continues zeno179.9 -> borromean190 ->
+brachistochrone196.3 -> galtonboard210.4 -> clothoid219.8 -> harmonickiss230
+-> gyroid240 -> enneper250 -> tribar260 (~10m steps). 845 lawful band
+candidates; the fourier ladder takes the NEXT ON-LINE STEP: az94.0 r270.0,
+10.0m step == enneper->tribar rhythm. NN 10.00 vs nx-struct-tribar (law
+8.0), SAT 6.35 vs nx-struct-tribar at FINAL yaw (law 1.4), walk-clear
+241.41. Mirror-oblique alternative (yaw 211deg, normal az239 west lean,
+SAT 6.74) recorded and passed over — east lean matches the melencolia x>0
+convention.
+
+YAW LAW (struct-104 oblique-read): 2.4609142453120043 (141deg) puts the
++Z face normal at az309 — 35deg off the az274 anti-travel sightline (the
+melencolia/apollonian 35-40deg band). The outbound walker reads the
+ladder face obliquely on approach; the 7.2m span runs az39/219, both
+registers (rung stack + span rhythm) visible in one pass. Never face-on
+(a 7.2m flat plane dead-on reads as a wall), never parallel.
+
+TERRAIN (struct187-terrain-fourier.ts): 9pt over the TRUE rotated
+footprint (literal corners): spread 3.8mm, PY = -0.000853.
+
+PLACEMENT (next-place-struct187.ts, struct185 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 333 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 2.99x2.50 at yaw 141):
+NN floor tribar 10.00, SAT worst tribar 6.35 — clean. 1 upload
+(content-addressed store/c6878d46490bd592.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 333 -> 334 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (bead
+emissive-in-GLB glow_fl_1 KEEP — no comp-wipe class on first spawn).
+Cosmetic inherited from the chassis: join log line prints msg.entities (0)
+instead of msg.state.entities (struct-104 shape) — the authoritative
+post-place check is the fresh /geom re-read, which is green.
+
+Native debt board after this tick: fourier v1 OWED (fallback-judged
+acceptance, disclosed; probe orthogonality law + decode D2/D3 curve law
+are the binding evidence); monkeysaddle v2 native 18m PASS OWED (placement
+gate); hypar row 22 OWED (native only); kuen v3 OWED; catalan v1 OWED;
+clebsch v1 OWED; menger v2 OWED; apollonian v1 OWED; melencolia v3 OWED;
+tribar v2 OWED.
+
+Bill eye-check pointer: at the far end of Math Avenue, past the tribar —
+the ladder of waves between two piers, standing oblique to the walk. Read
+it bottom-to-top: the bottom rung a pure sine, each rung above squarer,
+until the thin brass rail at the top IS the square wave. After dark: one
+warm bead floating where the series can never quite land — the midpoint
+value at the jump, Fourier's own honest average.
+
+Files: struct187-scan-fourier.ts + struct187-select-fourier.ts +
+struct187-terrain-fourier.ts + next-place-struct187.ts (all NEW, tracked),
+STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append struct-187,
+D+1 E+1). One upload + one verb total (shared budget). Zero pushes.
