@@ -273,6 +273,12 @@ bus.on('punt', ({ actor, id, dir, power }) => {
 
 // ---------------------------------------------------------------- the wire
 
+// vocab-13: companion.js claims leases too (the pets this browser owns).
+// It registers itself here so a grant for a companion's claim is never
+// released as "a grant nothing wanted" (physobj's single-claimer past).
+let companionClaimedFn = () => false;
+export function registerCompanionClaim(fn) { companionClaimedFn = fn; }
+
 bus.on('lease', (msg) => {
   const { op, id } = msg;
   if (op === 'claimed') lastClaimed.set(id, Date.now());
@@ -280,7 +286,7 @@ bus.on('lease', (msg) => {
     const pk = pendingKicks.get(id);
     pendingKicks.delete(id);
     if (pk) { startSim(id, pk.launch, msg.from ?? null); if (!pk.silent) flashHint(`you kick ${id}`); }
-    else sendLease('release', id);          // a grant nothing wanted anymore
+    else if (!companionClaimedFn(id)) sendLease('release', id);   // a grant nothing wanted — except a companion's claim (vocab-13)
     return;
   }
   if (op === 'denied') {

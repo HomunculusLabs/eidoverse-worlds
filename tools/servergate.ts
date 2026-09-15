@@ -89,6 +89,9 @@ const BATTERY: Row[] = [
   // vocab-12: the growth matrix (§ GROWTH CONTRACT) — self-booting scratch
   // sequencer, same class.
   { name: "growthtest", tool: "tools/growthtest.ts" },
+  // vocab-13: the companion matrix (§ COMPANIONS CONTRACT) — self-booting
+  // scratch sequencer, same class.
+  { name: "companiontest", tool: "tools/companiontest.ts" },
   // vocab-8: the portal matrix (§ PORTALS CONTRACT) — self-booting scratch
   // sequencer; previously run standalone only (a servergate row that runs
   // 0/0 is a vacuous skip, never a pass — registered vocab-10 tick).

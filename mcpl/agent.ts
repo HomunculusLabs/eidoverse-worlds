@@ -44,6 +44,9 @@ import { describeWater } from "../shared/water.js";
 // The growth affordance line (vocab-12): same shared-verbatim pattern —
 // look() names the plant's current stage and the advance/tend actions.
 import { describeGrowth } from "../shared/growth.js";
+// The companion affordance line (vocab-13): names the follower, its owner,
+// and the heel/stay/come/release command vocabulary.
+import { describeCompanion, normalizeCompanion, followStep } from "../shared/companion.js";
 // The published-vocabulary line (vocab-7): same shared-verbatim pattern —
 // look() names what the owner promoted to Layer-1 and how to attach it.
 import { describePublish } from "../shared/publish.js";
@@ -165,6 +168,44 @@ export class WorldAgent {
   private simTicker: ReturnType<typeof setInterval> | null = null;
   private walkDone: ((arrived: boolean) => void) | null = null;
   entities = new Map<string, Entity>();
+  // vocab-13: companions this AGENT owns follow its body — the same
+  // entity-lease presence plane a browser owner rides (server/companion.ts
+  // mints, the owner animates): claim → followStep states → settle.
+  private companions = new Map<string, { cfg: any; p: [number, number]; yaw: number; sentAt: number; staying: boolean }>();
+
+  /** Fold says this id is a companion; adopt if this agent owns it. */
+  private adoptCompanion(id: string, data: any) {
+    if (data == null) { this.companions.delete(id); return; }
+    if (data.by !== this.name) return;
+    if (!this.companions.has(id)) {
+      const e = this.entities.get(id);
+      const { cfg } = normalizeCompanion(data);
+      const p: [number, number] = e && Array.isArray(e.pos)
+        ? [e.pos[0], e.pos[2]] : [this.pos.x, this.pos.z];
+      this.companions.set(id, { cfg, p, yaw: e?.yaw ?? 0, sentAt: 0, staying: false });
+      this.ws?.send(JSON.stringify({ type: "lease", op: "claim", id }));
+    }
+  }
+
+  /** One presence-cadence pass over every companion I own — followStep
+   *  states streamed on the lease plane (the browser simulator's twin). */
+  private tickCompanions() {
+    if (!this.joined || !this.ws || this.ws.readyState !== 1) return;
+    for (const [id, pet] of this.companions) {
+      const data = this.entities.get(id)?.comp?.companion;
+      if (!data) { this.companions.delete(id); continue; }
+      if (pet.staying) continue;
+      const step = followStep(pet.cfg, [pet.p[0], 0, pet.p[1]], [this.pos.x, 0, this.pos.z], 0.1);
+      pet.p = [step.p[0], step.p[2]];
+      if (step.yaw != null) pet.yaw = step.yaw;
+      const now = Date.now();
+      if (step.moving && now - pet.sentAt >= 66) {
+        pet.sentAt = now;
+        this.ws.send(JSON.stringify({ type: "lease", op: "state", id,
+          p: [pet.p[0], this.heightAt(pet.p[0], pet.p[1]), pet.p[1]], yaw: pet.yaw }));
+      }
+    }
+  }
   /** Folded behavior bindings (vocab-7): published kinds + attach
    *  instances — perception only, look() reads it. */
   behaviors?: Map<string, { src: string; kind?: string; via?: string; attach?: string; knobs?: Record<string, unknown>; author: string }>;
@@ -510,6 +551,12 @@ export class WorldAgent {
             this.joined = true;
             this.seatCache.init().catch(() => { /* declared-approximate until it lands */ });
             if (!this.ticker) this.ticker = setInterval(() => this.tick(), TICK_MS);
+            // vocab-13: adopt any companions the fold says this agent owns —
+            // snapshot-seated companions claim their leases on reconnect.
+            for (const [id, e] of this.entities) {
+              const cc = (e.comp as Record<string, any> | undefined)?.companion;
+              if (cc != null) this.adoptCompanion(id, cc);
+            }
             clearTimeout(timeout);
             resolve();
             break;
@@ -855,6 +902,8 @@ export class WorldAgent {
         const before = e.comp?.[args.type] ?? null;
         e.comp ??= {};
         if (args.data == null) delete e.comp[args.type]; else e.comp[args.type] = args.data;
+        // vocab-13: a companion comp this agent owns adopts + claims
+        if (args.type === "companion") this.adoptCompanion(String(args.id), args.data ?? null);
         // An emitter beginning, changing or ending is something you SEE happen
         // in the world — the one component type with a live sensory event.
         // Replay reconstructs the state above and stops there: a fire that was
@@ -1271,6 +1320,9 @@ export class WorldAgent {
   private tick() {
     if (!this.joined) return;
     const dt = TICK_MS / 1000;
+    // vocab-13: the agent's own companions follow at the same 10Hz tick
+    // (streams gate themselves to presence cadence inside tickCompanions)
+    this.tickCompanions();
     // ambient sky perception rides the body tick at 1Hz — cheap (cursor keeps
     // it O(1)) and quiet (emits only on segment/override/day-phase boundaries)
     if (Date.now() - this.lastSkyCheck >= 1000) {
@@ -1845,10 +1897,13 @@ export class WorldAgent {
       // growth names its CURRENT stage and the advance/tend actions — the
       // text-tier read of the same folded comp every runtime derives from
       if (c.growth) aff.push(describeGrowth(c.growth));
+      // a companion names itself, its OWNER, and the command vocabulary —
+      // the text-tier read of the same folded comp the engine mints
+      if (c.companion) aff.push(describeCompanion(c.companion));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

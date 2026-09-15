@@ -535,8 +535,134 @@ an orchard that blooms and wilts and blooms again, a sapling a visitor
 can hurry or a dying rose a hand can tend. One 8KB comp, no script, no
 per-frame traffic — time itself doing the tending.
 
-- [ ] Animal companion: follower entity with spawn/despawn ownership and
-      leash law.
+- [x] Animal companion: follower entity with spawn/despawn ownership and leash law.
+      DONE vocab-13 (2026-09-15): comp {type:"companion"} — reactCompanion in
+      server/companion.ts rides reactToUse's dispatch after growth (one
+      import + one dispatch hunk in reactions.ts; ZERO edits to verbs.ts /
+      server.ts / world.ts). Contract in § COMPANIONS CONTRACT implemented
+      as written. Evidence: tools/companiontest.ts RED 15 failing (engine
+      absent; shared math + lease-plane motion pre-green — 21/36 pre-passing)
+      then ALL PASS 36/36 (beacon ONE comp+say+puppet-claim-hint/visitor
+      bounce/cap 2/re-beacon re-authors/heel+stay say+routed cmd/visitor
+      command rank 0/reach skip mint-nothing/spectator/pass-through/owner
+      lease claim granted/follow states broadcast/late join folds comp +
+      live lease pos/release commits place via:lease/release removes
+      entity+say/cap freed/visitor release bounce/lint clamps/restart
+      folds + replay-mints-nothing); servergate: companiontest 36 + smoke
+      85 comptest 33 compfold 24 behaviortest 27 worldops 23 locktest 13
+      leasetest 19 modtest 23 phrasetest 17 publishtest 28 musictest 38
+      portaltest 35 doortest 28 lamptest 34 guestbooktest 35 platetest 37
+      watertest 34 growthtest 43 ALL PASS; authtest 22/1 + support-lifecycle
+      15/7 proven PRE-EXISTING at clean sibling HEAD c79d58a7 (pilot-lane
+      domain: aid1 nick reservation + platform support physics — sibling
+      uncommitted work in flight, not vocab surface); permtest 21/23 = the
+      documented mcpl/tokens.json class (vocab-1..12 identical); mcpl
+      manifest 28/0 + effective 42/0. Browser client/lib/companion.js
+      (owner's client claims the entity lease and streams followStep
+      states at 66ms presence cadence; one import + one init line in
+      main.js); ONE disclosed pilot-dirty seam: client/lib/physobj.js +7/−1
+      (registerCompanionClaim guard so a companion's lease grant is never
+      auto-released as "a grant nothing wanted") — staged as an isolated
+      2-hunk cached patch beside in-flight sibling work; mcpl agent
+      companions follow the agent body (adoptCompanion on comp+snapshot,
+      tickCompanions streams on the lease plane, describeCompanion affordance
+      + exclusion list). Scratch worlds only; no production world touched.
+      Eye-check OPEN: in-browser visual read of a live follower (pet
+      trailing its owner, settle-to-place on stay/release).
+
+### COMPANIONS CONTRACT (vocab lane — drafted and implemented vocab-13, 2026-09-15)
+
+**Trigger.** A companion is an EXISTING entity whose fold carries
+`comp {type:"companion", data:{...}}`. The action strings `beacon` (aliases
+`befriend`, `tame`), `heel`, `stay`, `come`, and `release` (aliases
+`dismiss`, `free`) are COMPANION vocabulary on the freeform
+`use {id, action}` path (the reactions doctrine: other action strings pass
+through untouched — a companion ignoring `use {action:"ring"}` is exactly
+correct, and hybrids decide by dispatch order). Attaching the comp IS the
+beacon: there is no separate spawn — a builder (rank 1) points the verb at
+an entity they already own/spawned. `by` on the comp is the OWNER.
+
+**State — the fold is the truth; MOTION is presence, never logged.** The
+comp is a static authored table: `{name?, radius, lag, reach, by, at}` plus
+line keys. ZERO comp transitions are ever minted by commands (heel/stay/
+come are pure drift). The PET'S MOTION rides the ENTITY-LEASE presence
+plane (docs/leases.md): the owner's client (browser `client/lib/
+companion.js`, mcpl `agent.ts` companions) CLAIMS the entity's animation
+lease on adoption and streams `followStep` states (shared/companion.js —
+pure, deterministic, shared verbatim) at 66ms presence cadence while the
+pet moves; every other client renders those states through physobj's
+existing lease receiver with ZERO new code. Settling (stay, owner leaving,
+lease loss) commits ONE ordinary `place {via:"lease"}` through the
+world's own `settleLease` — server-authored, replay-exact. FOLLOWING
+costs ZERO log traffic after the beacon.
+
+**The follow math.** `followStep(cfg, p, o, dt)` moves the pet along the
+owner-pet ray by `lag·dt` of the remaining gap, never overshooting the
+orbit `radius` [0.8, 8] d2.2; inside the radius it holds (zero traffic at
+heel); y is never touched (each client's own terrain read grounds the
+pet). `lag` [0.05, 1] d0.22 (1 = jump-to-orbit).
+
+**Effects.** A beacon appends TWO log entries, in order: the comp write
+`comp {id, type:"companion", data:{...opts clamped, by:<actor>, at}}`
+(actor `world`) and a `say` (actor `world`, args `{text:"<name> follows
+<actor>", id, companion:{cmd:"beacon", who, at}, cause:<use seq>, by}` —
+the phrases/doors/lamps provenance grammar exactly), plus ONE puppet-
+channel hint `{type:"puppet", companion:{cmd:"claim", id, owner}}` ROUTED
+to the owner's socket (presence-plane, never logged). heel/stay/come
+append ONE `say` + ONE routed puppet cmd each. release appends ONE
+`remove {id, cause, by}` (actor `world` — the despawn, owned) + say. No
+other verb can be minted. A `companion-trigger` flight entry (kind
+`reaction`) records cause→effect on every fire.
+
+**Authority/reach — the leash law.** Beaconing is builder (rank 1) — the
+standing decision that this thing follows; `by` names the owner. Commands
+(heel/stay/come) are rank 0 (anyone present — the author's published
+behavior) + the ARM'S-REACH gate (vPunt arithmetic): the commander's LIVE
+pose within `reach` [2,12] d4 metres of the pet's LIVE position (lease
+stream pos if leased — a running pet is commanded where it runs). Release
+is the owner's or a builder's (rightsOf — the plate edit-rank doctrine).
+Spectators bounce at the shell (`use` is spectator-gated there). Cap:
+at most 2 live companions per world (`companion-skip` names it).
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path. On restart the fold carries the comp and
+the settled place — the pet stands where the log left it until its
+owner's client re-presents and re-adopts (browser via the folded comp;
+agent via snapshot adoption), re-claims the lease, and following resumes.
+A late joiner renders the pet at its live lease pos (join snapshot + one
+relayed state) with zero companion code of their own.
+
+**Failure behavior.** Malformed comp → clamp + `companion-lint`
+(particles-lint doctrine): radius/lag/reach as above, name ≤24c, lines
+≤200c, unknown keys ride. Missing entity → silent skip with
+`companion-skip`. Out-of-cap → skip naming the cap. Out-of-reach → skip
+naming the distance. The whole reaction wrapped in try/catch (house
+rule 3 — no pet takes the server down).
+
+**Browser path.** `client/lib/companion.js` (the door.js/growth.js
+pattern — one import + one init line in main.js beside the others): the
+OWNER's browser simulates — adopt on folded comp or puppet claim hint,
+claim the entity lease, stream followStep states at 66ms, stay stops
+streaming (the settle commits the place), release/remove untracks + the
+lease settles. Others' pets render through physobj's lease receiver with
+zero new code. ONE disclosed seam in pilot-dirty physobj.js (+7/−1):
+`registerCompanionClaim` so a companion's grant is never auto-released
+as "a grant nothing wanted" (physobj's single-claimer past) — staged as
+an isolated 2-hunk patch beside in-flight sibling work.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the companion via `shared/companion.js
+describeCompanion` (the describeDoor pattern) — name, owner, actions. An
+agent's OWN companions follow its body (adoptCompanion on live comp +
+snapshot; tickCompanions streams followStep states on the lease plane at
+presence cadence; claims release-settle cleanly). Agents command through
+the ordinary `use` verb.
+
+**Intent.** The world walks beside you. A goat that trails you to market,
+a hound a builder beacons to a child, a duck that follows anyone who
+heels it — a living companion with no script, no per-frame traffic, the
+follow math shared verbatim by every runtime, and the leash law the
+lease table already enforces.
 - [ ] Weather request: district-scoped weather with authority rank and
       duration caps.
 - [ ] Teleport beacon pair: intra-world linked travel with cooldown and

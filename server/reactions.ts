@@ -36,6 +36,10 @@ import { reactWater } from "./water.ts";
 // tend action vocabulary — the plant lifecycle. Same dispatch doctrine,
 // last (a plant may also be watered/instrumented).
 import { reactGrowth } from "./growth.ts";
+// The companion engine (vocab-13): comp {type:"companion"} owns the
+// beacon/heel/stay/come/release action vocabulary — the animal follower.
+// Same dispatch doctrine, last (a companion may also be a growth host).
+import { reactCompanion } from "./companion.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -118,6 +122,10 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // owns the advance/tend action vocabulary — the plant lifecycle. Same
     // dispatch doctrine, last (a plant may also be watered/instrumented).
     if (reactGrowth(w, cause, ent, id, action)) return;
+    // The companion slice (vocab-13, § COMPANIONS CONTRACT): comp
+    // {type:"companion"} owns the beacon/heel/stay/come/release action
+    // vocabulary — the animal follower. Same dispatch doctrine, last.
+    if (reactCompanion(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

@@ -32,6 +32,8 @@ import './lib/plate.js';
 import './lib/water.js';
 // growth component (vocab-12): wires itself on import, same pattern
 import './lib/growth.js';
+// companion component (vocab-13): wires itself on import, same pattern
+import './lib/companion.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateSpectator, setCamYaw, setPosture, togglePhotoMode,
@@ -63,6 +65,7 @@ import { dragSim, updateBodyDrag, dragState } from './lib/bodydrag.js';
 import { initChat, logChat } from './lib/chat.js';
 import { bodyEngine, setBodyEngine, listBodyEngines } from './lib/bodysim.js';
 import { initPhysObj, tickPhysObj, leaseApi } from './lib/physobj.js';
+import { initCompanion } from './lib/companion.js';
 import { initMods, tickMods, modsApi } from './lib/mods.js';
 import { initBoot, markPhase, finishBoot, bootDone } from './lib/boot.js';
 import { protoStats } from './lib/assets.js';
@@ -267,6 +270,7 @@ bus.on('sky-degraded', ({ msg }) => toast(msg, 'warn', 12000));
 // localbody.js, handed logChat instead of importing chat (§14.2).
 
 initPhysObj({ myPos: () => myState.pos });
+initCompanion({ myPos: () => myState.pos });   // vocab-13: pets I own follow me
 initMods();   // 🧩 runtime client scripts: local trusted mods + world offers
 initLocalBody({ logChat, isEditing });
 initCommands();   // the /command surface (lib/commands/) + its bus subscriptions
