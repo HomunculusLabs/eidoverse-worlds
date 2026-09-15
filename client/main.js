@@ -30,6 +30,8 @@ import './lib/music.js';
 import './lib/plate.js';
 // water component (vocab-11): wires itself on import, same pattern
 import './lib/water.js';
+// growth component (vocab-12): wires itself on import, same pattern
+import './lib/growth.js';
 import { tickMotion } from './lib/motion.js';
 import {
   myState, updateMe, updateSpectator, setCamYaw, setPosture, togglePhotoMode,

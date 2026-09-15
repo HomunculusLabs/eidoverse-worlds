@@ -425,8 +425,116 @@ fountain that quiets for the night, a millrace that answers a hand, a
 garden tap a child can reach. One 8KB comp, no script, no samples, no
 new verb — spray from real presets, sound from first principles, the
 day cycle doing the modulation.
-- [ ] Growth stage: authored plant lifecycle state machine, restart-safe,
+- [x] Growth stage: authored plant lifecycle state machine, restart-safe,
       late-join folds to current stage.
+      DONE vocab-12 (2026-09-15): comp {type:"growth"} — reactGrowth in
+      server/growth.ts rides reactToUse's dispatch after water (one import
+      + one dispatch hunk in reactions.ts; ZERO edits to verbs.ts /
+      server.ts / world.ts). Contract in § GROWTH CONTRACT implemented as
+      written. Evidence: tools/growthtest.ts RED 20 failing (engine
+      absent; two test-expectation fixes made pre-GREEN were named in-run
+      — the derivation itself was vindicated by the probe) then ALL PASS
+      43/43; servergate battery green incl. growthtest 43 registered;
+      permtest 21/23 pre-existing class (vocab-1..11 identical). Scratch
+      worlds only; no production world touched.
+      Eye-check OPEN: in-browser visual read of a growing plant.
+
+### GROWTH CONTRACT (vocab lane — drafted and implemented vocab-12, 2026-09-15)
+
+**Trigger.** A plant is an entity carrying `comp {type:"growth", data:{...}}`.
+The action strings `advance` and `tend` are GROWTH vocabulary on the freeform
+`use {id, action}` path (the reactions doctrine: other action strings pass
+through untouched — a plant ignoring `use {action:"ring"}` is exactly
+correct). Attaching/removing the comp is builder (rank 1) — the author's
+standing decision that this thing lives, identical doctrine to reactions/
+phrases/region/door/lamp/guestbook/portal/music/plate/water.
+
+**State — the fold is the clock's anchor; TIME is the truth.** The stage is
+DERIVED, never tweened: `stageAt(cfg, plantedAt ?? at ?? now, now)` (shared/
+growth.js — the motion.js/doorYaw shared-verbatim pattern) is a pure function
+every runtime evaluates at its own `now`. The folded comp carries the
+authored ladder `{stages:[{name, dwell(sec)}…] (≤8, dwell clamped
+[0,86400] d3600), cycle, reach [2,12] d4, growAt/tendAt lines, seed}` plus
+the anchor keys the engine writes: `stage` (the literal), `plantedAt`, `at`.
+The ladder's LAST stage is the crown; past its dwell a non-cyclic plant
+derives the wilt hold (index === stages.length) and holds; a cyclic plant
+wraps within the ladder (the seasonal loop). A zero-dwell stage is instant
+(a hand may author one; the derivation skips past it). NOTHING else is
+stored anywhere — no in-memory state decides what a late joiner reads. A
+hand write re-bases the clock: the engine writes ONE world-authored comp
+transition `{...authored, stage: next, plantedAt: now − cumMs(cfg, next),
+at: now}` (regions/doors/lamps/water doctrine) — back-dated so the folded
+literal and the derivation agree at the write instant; time then moves the
+truth forward with zero further writes.
+
+**Effects.** A hand transition appends TWO entries, in order: the comp
+transition write and a `say` (actor `world`, args `{text:<line>, id,
+growth:{stage, who, at}, cause:<use seq>, by:<user>}` — the phrases/doors/
+lamps/water provenance grammar exactly). Line defaults: advance `the plant
+grows`, tend `the plant is tended` (authored `growAt`/`tendAt` override,
+≤200c clamped). No other verb can be minted from a hand — say + comp-on-
+self ONLY. A `growth-trigger` flight entry (kind `reaction`) records
+cause→effect.
+
+**Authority/reach.** Using a plant is rank 0 (anyone present — watering a
+plant is the author's published behavior, world authority on the effects
+only) plus the ARM'S-REACH gate (vPunt arithmetic): the user's LIVE pose
+within `reach` metres of the plant's LIVE position (lease stream pos if
+leased, folded pos otherwise). Out-of-reach use is a `growth-skip` naming
+the distance. Spectators bounce at the shell (`use` is spectator-gated
+there). Lock composes as for doors (lock refuses place/punt/spawn/comp/
+remove — not `use`): a locked plant still grows.
+
+**The hand semantics.** `advance` writes derived+1 (a hand hurries growth
+past what time already gave); at the crown it is a no-op (`already at its
+prime`) unless `cycle:true`, when it WRAPS to seed (the seasonal restart,
+plantedAt = at); on a wilted non-cyclic plant it skips (`wilted — tend it
+back`). `tend` writes derived−1; from wilt that is the crown (one more
+season at the top); at seed it is a no-op (`still a seed — nothing smaller
+to tend`). No-ops still log the `use` and mint nothing.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs ONLY
+from the live verb path; folding a historical use or comp never re-fires.
+On restart the world folds the ladder + anchor from the log and every
+client resumes the same derivation — a plant half-grown at server death
+continues growing seamlessly, identical stage on every client, because
+stage(now) is closed-form. The says read as history.
+
+**Rate.** Transitions are user-paced (the verb rate bounds `use`); each
+mints at most 2 effects (comp + say); no-ops and out-of-reach uses mint
+nothing. Time passing mints NOTHING — one comp buys the whole lifecycle.
+
+**Failure behavior.** Malformed comp → clamp + `growth-lint`
+(particles-lint doctrine): dwell [0,86400] d3600, stages ≤8 (excess
+truncated + noted), reach [2,12] d4, names ≤24c, lines ≤200c, non-boolean
+`cycle` treated as false, non-array/empty `stages` replaced by the
+one-stage default ladder + note; unknown keys ride (the bag is public
+annotation). Missing entity → silent skip with `growth-skip`. The whole
+reaction wrapped in try/catch (house rule 3 — no plant takes the server
+down).
+
+**Browser path.** `client/lib/growth.js` (the door.js/water.js pattern —
+one import line in main.js beside water, zero other edits to the
+pilot-dirty file): scale = the FOLDED authored scale (state.st.entities
+[id].scale ?? 1, read live so a `place {scale}` composes) × `growthK` (the
+within-stage smoothstep the same shared module derives). Never tweened,
+never logged; a removed comp restores the authored scale. Growth state is
+readable from any folded snapshot; scripts and future UI consume
+`comp.growth` without a new protocol surface. Stage-swap models (per-stage
+GLBs) are a deliberately deferred visual tier (protocol before UI
+decoration).
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the plant via `shared/growth.js
+describeGrowth` (the describeDoor pattern) — current stage (derived at
+read time), ladder position, and the advance/tend actions. An agent tends
+through the ordinary `use` verb.
+
+**Intent.** The world grows without you. A garden that ripens over days,
+an orchard that blooms and wilts and blooms again, a sapling a visitor
+can hurry or a dying rose a hand can tend. One 8KB comp, no script, no
+per-frame traffic — time itself doing the tending.
+
 - [ ] Animal companion: follower entity with spawn/despawn ownership and
       leash law.
 - [ ] Weather request: district-scoped weather with authority rank and

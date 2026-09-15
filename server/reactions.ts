@@ -32,6 +32,10 @@ import { reactPlate } from "./plate.ts";
 // toggle action vocabulary — the audible, toggleable water feature. Same
 // dispatch doctrine, last (a water-host may also be a plate/instrument).
 import { reactWater } from "./water.ts";
+// The growth engine (vocab-12): comp {type:"growth"} owns the advance/
+// tend action vocabulary — the plant lifecycle. Same dispatch doctrine,
+// last (a plant may also be watered/instrumented).
+import { reactGrowth } from "./growth.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -110,6 +114,10 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // owns the flow/still/toggle action vocabulary — the audible,
     // toggleable water feature. Same dispatch doctrine, last.
     if (reactWater(w, cause, ent, id, action)) return;
+    // The growth slice (vocab-12, § GROWTH CONTRACT): comp {type:"growth"}
+    // owns the advance/tend action vocabulary — the plant lifecycle. Same
+    // dispatch doctrine, last (a plant may also be watered/instrumented).
+    if (reactGrowth(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,
