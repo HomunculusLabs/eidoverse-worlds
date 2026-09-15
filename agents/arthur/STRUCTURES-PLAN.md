@@ -12378,3 +12378,87 @@ Files: struct190-probe-quadratrix.ts + struct190-decode-quadratrix.ts
 struct190-quadratrix/ (10 frames, ignored), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-190, D+0 E+0). Zero world
 mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+## struct-191 (2026-09-15): QUADRATRIX PLACEMENT TICK — committed carry from
+## struct-190 executed, PLACED_VERIFIED live; Math Avenue procession
+## extended past cissoid, on-line step az94/r290
+
+191%3=2 placement-slot cadence WITH a takeable banked form (struct-190:
+"Placement = struct-191 committed carry"; the 178..190 lane precedent — a
+banked form places on the next tick regardless of N%3, build+judge/place
+alternation held).
+
+Native debts carried, not payable in cron (tool catalog carries only the
+zai-vision MCP, tool_search fresh this tick; same disclosed class as
+struct-169..190): monkeysaddle v2 native-18m-PASS placement GATE, hypar row
+22 native-only, kuen v3 + catalan v1 + clebsch v1 + menger v2 + apollonian
+v1 + melencolia v3 + tribar v2 + fourier v1 + cissoid v2 fallback-judged
+acceptances (all placed); quadratrix v1 fallback-judged acceptance now
+PLACED (this tick) — debt stays owed. Gate ALL PASS real exit 0 tick-start
+at dc56b22d (vocab-17) + RE-RUN clean immediately before the mutation at
+cace5e97 (sibling commit landed mid-tick — city-153 HOLD; epoch law;
+/tmp/struct191-gate2.txt, unpiped). Shard drained fresh (IMPROVE-PLAN md5
+c0f569d0 unchanged 20th tick, 0 OPEN nx-struct rows). Ledger max
+re-derived struct-190 -> tag struct-191 (re-checked immediately before
+append).
+
+Local bytes re-verified sha256 57175887c0acc7903465ca13154480f5a0d14070a
+89970b51eeb930bf251cd47 == struct-190 bank pin BEFORE upload (shasum -a
+256, mtime Sep 15 17:04). Probe (9 laws + RED control) + decode (8/8 + RED
+control on foreign cissoid bytes) re-run ALL PASS fresh this tick;
+envelope re-derived literally: 3.300 x 2.800 x 0.600 SYMMETRIC (D7,
+CX=CZ=0) — origin-centered SAT lawful, placement-contract law.
+
+SEAT (struct191-scan + struct191-select, fresh 335 census): avenue axis
+re-derived FRESH = 91.0 deg (20° density window, 32 forms; 36 math-family
+structs standing). Procession read complete — island 8 members r140-174.2
+(cap 5-9, NOT a 9th member); procession continues zeno179.9 -> borromean190
+-> brachistochrone196.3 -> galtonboard210.4 -> clothoid219.8 ->
+harmonickiss230 -> gyroid240 -> enneper250 -> tribar260 -> fourier270 ->
+cissoid280 (~10m steps). 802 lawful band candidates; the quadratrix takes
+the NEXT ON-LINE STEP: az94.0 r290.0, 10.0m step == fourier->cissoid
+rhythm. NN 10.00 vs nx-struct-cissoid (law 8.0), SAT 7.60 vs
+nx-struct-cissoid at FINAL yaw (law 1.4), walk-clear 253.41.
+
+YAW LAW (struct-104 oblique-read, struct-190 carry contract): 3.735004599
+267865 (214deg, exhaustive 0.5° band scan maximizing SAT) puts the +Z face
+normal at az304 — 30deg off the az274 anti-travel sightline, east lean
+(the melencolia/fourier/cissoid convention). The outbound walker reads the
+construction face obliquely on approach; the 3.30m frame width runs
+az124/304.
+
+TERRAIN (struct191-terrain-quadratrix.ts): 9pt over the TRUE rotated
+footprint (literal corners): spread 0.7mm, PY = 0.005966.
+
+PLACEMENT (next-place-struct191.ts, struct189 fresh-spawn chassis): hash
+gate green; entity ABSENT on fresh 335 census; SAT/NN preflight re-run at
+FINAL pose vs same fresh set (symmetric footprint 1.54x1.17 at yaw 214):
+NN floor cissoid 10.00, SAT worst cissoid 7.60 — clean. 1 upload
+(content-addressed store/57175887c0acc790.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 335 -> 336 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (bead
+emissive-in-GLB glow_qu_1 KEEP — no comp-wipe class on first spawn).
+Cosmetic inherited from the chassis: join log line prints msg.entities (0)
+instead of msg.state.entities (struct-104 shape) — the authoritative
+post-place check is the fresh /geom re-read, which is green.
+
+Native debt board after this tick: quadratrix v1 OWED (fallback-judged
+acceptance, disclosed; probe P1 motion-law dual derivation + decode D3
+sweep law are the binding evidence); monkeysaddle v2 native 18m PASS OWED
+(placement gate); hypar row 22 OWED (native only); kuen v3 OWED; catalan
+v1 OWED; clebsch v1 OWED; menger v2 OWED; apollonian v1 OWED; melencolia
+v3 OWED; tribar v2 OWED; fourier v1 OWED; cissoid v2 OWED.
+
+Bill eye-check pointer: at the far end of Math Avenue, past the cissoid —
+a stone square framing one sweeping curve: read it top-left corner to
+foot, the sweep flattening as it falls until it lands flat on the base at
+the brass stud. The diagonal ray and the horizontal line are frozen at
+the moment they cross ON the curve; after dark, one warm bead burns at
+that crossing — the meeting point of the two motions that drew the curve.
+
+Files: struct191-scan-quadratrix.ts + struct191-select-quadratrix.ts +
+struct191-terrain-quadratrix.ts + next-place-struct191.ts (all NEW,
+tracked), STRUCTURES-PLAN.md (this block), IMPROVEMENTS.md (one append
+struct-191, D+1 E+1). One upload + one verb total (shared budget). Zero
+pushes.
