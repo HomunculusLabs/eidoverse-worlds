@@ -80,7 +80,22 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       p95 67ms); mid-burst fairness say 11ms, fps 14.7, 0 gaps; recovery
       8/8 post-window; >8KB + shape errors exact; log.jsonl drift 0/0;
       RSS +11MB. PASS, no patch. Servergate smoke 85/0 + compfold 24/0.)
-- [ ] Reconnect storm leaves no ghost clients, leases, or timers.
+- [x] Reconnect storm leaves no ghost clients, leases, or timers.
+      (pressure-6, 2026-09-15: worktree @ d29ba072, 168 anchors (24
+      embodied @15Hz incl. 8 lease guards @10Hz + 144 spectators) + 32
+      churn ids in 3 waves = 200 peak — clean-drop return, mid-lease
+      vanish (close-settle + stale-sweep), zombie duel (same-id rejoin,
+      12/12 gen1 closed 4002 takeover). Roster exact after every wave
+      (24 embodied, 0 ghosts, 0 missing); final empty-world probe
+      present=0, 0 ghost lease states; arrive/leave arithmetic EXACT
+      88/88 + 76/76 (superseded gen1 never double-leaves); all 14
+      leases settled EXACTLY once (6/6 mid-lease at exact last streamed
+      p3); mid-wave says 3/3 p95 9ms; fps p50 14.9, lat p95 10ms,
+      0 gaps; storm probe p95 12ms, post-settle 2ms (timer hygiene
+      proxy); log.jsonl 33/33 drift 0; RSS +15MB peak. PASS, no patch.
+      New tools/pressure-reconnect.ts (SELFTEST RED/GREEN, self-booting,
+      fd-checked; harness-only fps-window fix — connected window, not
+      run window). Servergate: smoke 85/0 + leasetest 19/0 pinned tree.)
 - [ ] World switching cancels old-world traffic and state promptly.
 - [ ] Snapshot join during concurrent authored mutations is sequence-consistent.
 - [ ] Memory returns near baseline after every synthetic participant leaves.
