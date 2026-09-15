@@ -10959,3 +10959,49 @@ forge/potter @259, inn/tower-house @258, longhouse/garden-cottage @257,
 row-cottage/observatory @256 stalest standing pair at 4 sweeps; both walk
 tools present in the agents/arthur/ ls: interior-walk-row-cottage.ts,
 struct2-walk-observatory.ts).
+
+sweep-261: CLEAN SWEEP, fully-quiet steady-state tick under the
+audit-continues banner (freeze lifted for struct+city lanes only, so the
+epoch was re-verified quiet on its own bytes, not assumed; tick-start HEAD
+8c93875b = city-150 lawful HOLD, gate ALL PASS on it). Census 334==334 at
+BOTH epochs (A/B, 20s-paced, next-live-census.ts chassis) BYTE-IDENTICAL
+to the committed sweep-260 baseline (raw 220660B sha16 9475c9db3ccff1f3,
+cmp-verified A vs B and B vs on-disk baseline): 0 arrivals, 0 departures,
+all five semantic drift classes EMPTY (pos/yaw/scale/kind/bbox, lib flips,
+compKeys). THIRTIETH consecutive quiet-or-classified epoch pair; no
+snapshot rewrite needed (no-churn precedent — the committed file already
+describes the live world exactly). Overlap: SAT fresh-live 296 bbox
+non-light / 237 classified / 0 coverage holes, real exit 3 unpiped on
+exactly ONE unclassified = R-121 lamp-n|nx-town-mapboard -0.407 — known
+Sev 2 routed to artwalk b26 choreography @ sweep-43, 217th sweep since
+routing, NOT new, no escalation due (law keys severity-1). Walks: tier-1
+4/4 per-leg verified 81/81 ALL_PASS, every leg real exit 0, legs run
+individually per the sweep-228 ceiling law — core 64/64 @ 0.380
+(next-walk-core-paths.ts), NW 5/5 @ 0.380 (nw-approach1-walk.ts), NE 7/7
+@ 0.380 (ne-approach2-walk.ts), SW 5/5 @ 0.370 (sw-approach3-walk.ts);
+verdicts content-anchored on status strings + per-leg ok counts +
+maxArrival from raw files. Tier-2 239th cycle per the committed sweep-260
+pointer: row-cottage 6/6 @ 0.3838 (interior-walk-row-cottage.ts) +
+observatory circuit 5/5 (struct2-walk-observatory.ts), both ALL_PASS real
+exit 0 — match the sweep-256 records for the pair exactly; both tools
+ls-verified present on disk pre-run. Integrity: struct18-fleet-pin-check
+15/15 ALL_PINS_OK bad:[] (215th consecutive clean); sweep89-battery 28/28
+PASS exit 0 on fresh census-A bytes (python3 argv census-path form);
+interlane md5 f6254cd0 stable, read fresh this tick; standing gate ALL
+PASS real exit 0 FIRST TRY at tick-start HEAD 8c93875b (99 PASS lines,
+exit captured unpiped; ledger law 2370810 at entry, 2370813 after D+0/E+0
+append — base re-read fresh via grep immediately before append, max
+sweep-260). Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged (237th
+check; 0 SHARD EXECUTION sections, 0 open candidate rows), sweep owns no
+prefix; CITY-PLAN-V2 assigns sweep no reset role — the audit-continues
+freeze banner governs and was read fresh this tick via the loop/plan
+reload. Diff tool sweep261-census-diff.py folded from the committed
+sweep260 chassis (sed swap only — py_compile clean, clean exit 0 at BOTH
+epochs A/B unpiped on the real bytes). Zero world mutations, zero defect
+notes, zero uploads, zero verbs, zero comp edits, zero shared-budget use
+(D+0, E+0). Next tier-2 pair (sweep-262): hall + forge (240th cycle — LRU
+chain re-derived from committed pointers this tick: row-cottage/observatory
+@261 walked fresh, hall/bunkhouse @260, forge/potter @259, inn/tower-house
+@258, longhouse/garden-cottage @257, hall/forge stalest standing pair at
+4+ sweeps; both walk tools ls-verified present on disk this tick:
+interior-walk-hall.ts, interior-walk-forge.ts).
