@@ -16315,3 +16315,62 @@ shared-budget use (D+0, E+0).
   sweep-249 lineage running total 2370787). STANDING RECOMMENDATION
   carried unchanged (s182-s358): stop the SURVEY lane or convert to a
   no-LLM monitor when attended.
+
+- survey-360 (2026-09-15, ARRIVAL EPOCH, fifth of the unfreeze — ZAI
+  FALLBACK 3 calls/3 disclosed, native vision ABSENT from this cron
+  session's tool catalog (zai-vision MCP only, flap law; native-owed
+  register rows NOT discharged this tick, cron-disclosed): gate ALL PASS
+  real exit 0 FIRST TRY at tick-start HEAD 83b48d0c (city-134 tip, 99
+  PASS lines incl. ledger law EXACT 2370790; HEAD unchanged through the
+  tick — no re-gate due, epoch law). Census via committed
+  next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced, cmp A==B
+  BYTE-IDENTICAL), each 330 entities, each 218241B, each sha16
+  28397d8096762bcb. Set-diff vs survey-359 baseline (329, 217637B,
+  e503af6f7c25f547): +1 ARRIVAL nx-struct-menger (-22.910459, -0.057718,
+  153.297459 yaw 0.6981317 rad = 40deg oblique-yaw law, lib
+  store/33c4304cdf821505.glb, comp {}) / 0 departures / 0 lib flips / 0
+  pos-yaw-scale diffs on the 329 holders — classified SIBLING WORK:
+  struct-179's committed PLACED_VERIFIED tuple verbatim (Math terminal
+  island W-flank, az98.5 r155; struct domain), independently accounted
+  by city-134's HOLD line (330=329+1). ARRIVAL-GATED JUDGE LAWFUL
+  (s357 clebsch precedent): slice = the 1 new-bytes object (owner's own
+  judgment was ZAI fallback — independent read exactly what the arrival
+  needs). Live store bytes fetched curl UA HTTP 200 15884B served-sha16
+  7639c7f43ba6fd58 (lib 33c4304c = struct-178 v2 upload sha, DRACO
+  re-encode law — served != upload, struct-104 class); render via NEW
+  survey360-render-menger.ts (survey357-render-clebsch chassis verbatim,
+  DRACO-aware, live-meadow ground 0x3d3a29) exit 0, 5 frames
+  reviews/survey360-menger/ (ignored residue), served-bytes bounds
+  5.760x5.340x5.760 grounded y~0 == struct-178 decode D4 envelope
+  EXACT. VERDICT: nx-struct-menger CLEAN 3/3 — gameplay 18m CLEAN
+  5/5 (identity PASS perforated mathematical sculpture, carpet grid
+  with dominant central aperture; silhouette PASS clean square outline
+  + plinth; through-tunnel PASS soft (sky-tone fill, bead dead-center
+  ~(475-485,317-327); margin: through-read subtle — bright recess vs
+  full see-through ambiguity, cosmetic tier); grounding PASS plinth
+  contact + cast shadow; zero defects). front ~11.8m CLEAN 4/4 (carpet
+  pattern genuinely OPEN — sky and horizon visible THROUGH the cube,
+  correct parallax in the small windows; mottled per-block stone PASS =
+  v2 cell:32 material cure independently confirmed, margin: tiling
+  repetition at close range, polish tier; orange heart bead (478,304)
+  through central aperture; zero z-fighting/floaters). night PASS 3/3
+  (EXACTLY one hard-edged amber point ~8-12px at (478,322) framed by
+  the central keyhole, all eight other apertures dark, zero
+  spill/bloom/ground pool, silhouette readable — independently
+  reproduces struct-178's deterministic night probe [58 warm px, one
+  contiguous cluster dead center] verbatim). CONCURS struct-178 banked
+  v2 PASS + struct-179 PLACED_VERIFIED + city-134 arrival accounting —
+  independent corroboration, no defect. Margins (NOT routed, cosmetic/
+  polish tier): soft through-tunnel contrast at 18m, one-scale
+  recursion read at face-on bearing, texture tiling at close range.
+  Native re-judge debt on menger v2 carries (owed board: hypar row 22,
+  monkeysaddle v2 gate, kuen v3, catalan v1, clebsch v1, menger v2).
+  Pools: IMPROVE-PLAN md5 c0f569d0 unchanged (249th check); SURVEY
+  CANDIDATES 0 OPEN rows; no candidate row (CLEAN); CITY-PLAN-V2
+  assigns survey no role (grep 0). Census baseline for next tick:
+  /tmp/survey360-census-a.json (330, 218241B, sha16 28397d8096762bcb).
+  Zero world mutations, zero uploads, zero verbs, zero comp edits,
+  zero shared-budget use, ZERO ledger append (loop law 4: append only
+  when routing; CLEAN concurrence routes nothing; ticks 211-359
+  precedent). STANDING RECOMMENDATION carried unchanged (s182-s359):
+  stop the SURVEY lane or convert to a no-LLM monitor when attended.
