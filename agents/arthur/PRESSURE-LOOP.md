@@ -260,7 +260,27 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       RED re-proof on reverted tree (aliens back). tools/pressure-hop.ts
       (SELFTEST 41 gates). Servergate: smoke 85/0 + websocket-input 18/0 +
       leasetest 19/0 on the fixed pinned tree.)
-- [ ] Spectator-to-performer promotion under load: role change is atomic.
+- [x] Spectator-to-performer promotion under load: role change is atomic.
+      (pressure-15, 2026-09-15: worktree @aeaa35d7, PORT 8982, 26s, 200
+      peak sockets — 24 perf @15Hz + 96 spec + 48 promo legs joined-as-
+      spectators + 24 late + 8 duel. 136 live-socket role changes (48
+      promotions, 24 demotions incl 4 noisy posers, 24 re-promotions, late
+      spike x24, D2/R2 x8, 8 fresh-socket takeovers): rejoin p95 18ms;
+      authority flips exactly (3/3 spectator says refused verbatim, 3/3
+      embodied says appended p95 296ms); held whispers deliver at the FIRST
+      embodied join exactly-once x3, 0 into spectator spans; arrive/leave
+      drift 0 across 168 events; 0 ghost frames; noisy demoted 0 frames 0
+      errors; demote restore null 32/32, re-promote restore exact 1/1; gen
+      monotone; census exact 96/0 dups, server line "96 present, 97
+      watching", maxPresent 96; takeover 8/8 @4002; lease-across-demote
+      released 3ms @exact state once; log 7/7; poses 96/96 in-band; final 0;
+      fps 15.1, lat p95 2ms, 0 gaps; probes 15/2ms; RSS +14MB; 0 suspicious.
+      PASS, no patch — the role flip is one synchronous join: old-role
+      durable acts (lease settle, rememberPose, leave broadcast) then
+      new-role acts (arrive, held-whisper delivery, restore), so no
+      both/neither instant exists. tools/pressure-promote.ts (SELFTEST
+      46 gates). Two RED runs were harness bugs, server correct both
+      times. Servergate smoke 85/0 pinned tree.)
 - [ ] Presence spoofing: oversized/rapid pose deltas clamped and logged, not
       propagated.
 - [ ] Giant payload handling: max-frame enforcement with explicit error, no
