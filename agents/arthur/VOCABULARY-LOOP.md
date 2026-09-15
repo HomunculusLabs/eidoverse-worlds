@@ -886,8 +886,21 @@ no new verb.
       only; no production world touched. Eye-check OPEN: in-browser
       audible read of a standing post (timbre at approach, falloff to
       silence at the range, day/night hush, mute by hand).
-- [ ] Message board: authored multi-line notice with revision history and
+- [x] Message board: authored multi-line notice with revision history and
       rank-gated edits.
+      DONE vocab-19 (2026-09-15): comp {type:"board"} — reactBoard in
+      server/board.ts rides reactToUse's dispatch after soundpost (one
+      import + one dispatch hunk in reactions.ts; ZERO edits to
+      verbs.ts / server.ts / world.ts — `use` args ride verbatim so
+      `text` needed no validator change). Contract in § BOARDS CONTRACT
+      implemented as written. Evidence: tools/boardtest.ts RED 25 failing
+      (engine absent; 34 pre-passing = shared math + shell gates, the
+      honest vocab class) then ALL PASS 59/59 after one disclosed
+      test-expectation fix (history holds AT cap — my check demanded the
+      eviction one post early; the eviction-at-overflow is proven by the
+      unpost + clamp steps). Scratch worlds only; no production world
+      touched. No eye-check owed (zero client code — chat + folded state
+      only).
 - [ ] Vending stand: use-action item grant with stock counts and restock
       rank.
 - [ ] Door chime: proximity-linked sound on open/close, rate-capped.
@@ -2302,6 +2315,116 @@ the garden, a shrine bell drone under the belfry, a market-square crowd
 hush, a harbor wind post at the docks — a place that SOUNDS like itself,
 audible within its authored range, hushed by night, silenced by a hand,
 one 8KB comp, no samples, no script, no new verb.
+
+### BOARDS CONTRACT (vocab lane — drafted and implemented vocab-19, 2026-09-15)
+
+**Trigger.** A board is an entity carrying `comp {type:"board", data:{...}}`.
+The action strings `post` and `unpost` are BOARD vocabulary on the freeform
+`use {id, action}` path, with the notice riding the use's own args as
+`text` (the reactions doctrine: other action strings pass through
+untouched — a board ignoring `use {action:"sign"}` is exactly correct;
+`post`/`unpost` are disjoint from all 13 prior families' actions).
+Attaching/removing the comp is builder (rank 1) — the author's standing
+decision that this surface posts news, identical doctrine to reactions/
+phrases/region/door/lamp/guestbook/portal/music/plate/water/growth/
+companion/weatherzone/waystone/reservation/bell/soundpost.
+
+**State — the fold is the state.** The CURRENT notice + its revision
+history are one shape on the folded comp; every change is ONE
+world-authored `comp` transition write (guestbook/plate doctrine):
+
+```
+comp {id, type:"board", data:{...authored, text, by, at, rev, history}}
+```
+
+`text` is the live multi-line notice (newlines preserved, 3+ blank lines
+collapsed — a notice, not a scroll; `maxLen` authored clamped [80,600],
+default 300); `by` the last poster; `at` the sequencer ts; `rev` the
+monotonic revision counter; `history` the superseded notices
+newest-first `[{text, by, at}, …]` capped at `revs` (authored, clamped
+[1,32], default 8 — at overflow the OLDEST is evicted). ENGINE_KEYS
+(`text/by/at/rev/history`) are STRIPPED from the authored carry at each
+engine write then composed fresh (weatherzone doctrine — a re-authored
+comp over a live board can never smuggle a stale notice or history).
+An authored `text` on the comp IS the notice (a pre-carved board ships
+posted — a museum sign, a trailhead bulletin); re-authoring the comp
+replaces the surface wholesale. NOTHING else is stored anywhere — no
+in-memory state decides what a late joiner reads.
+
+**Edit-rank — the ladder answers, no new role.** WHO may post is a
+function of the folded state + the rights ladder itself (`rightsOf`,
+fold-derived — the plate edit-rank doctrine applied to a single evolving
+surface):
+
+- **blank board** (no `text`): anyone rank 0 in arm's reach may post the
+  first words — like carving a blank plate;
+- **posted board**: the LAST POSTER (`by`) rewrites their own notice at
+  rank 0 (your words are yours); anyone ELSE needs builder+ (rank 1) —
+  a communal maintenance act, skip names the boundary otherwise;
+- **`editable:true`** authored: anyone rank 0 may supersede (a public
+  board by design — the author's standing decision, the inverse of
+  guestbook `open:false`);
+- **unpost** (take-down) rides the same ladder: the poster clears their
+  own at rank 0; others need builder+; `editable:true` makes it public.
+  Unposting pushes the live notice into history (the record keeps it)
+  and leaves the board blank — the next first-words claim reopens it.
+
+**Effects.** A change appends TWO entries, in order: the comp transition
+write and a `say` (actor `world`, args `{text:<line>, id,
+bd:{by, at, rev, cleared?}, cause:<use seq>, by:<user>}` — the phrases/
+doors/lamps/guestbook/plate provenance grammar exactly). Line defaults:
+post `"<actor> posts a new notice"`, unpost `"<actor> takes down the
+notice"` (authored `postAt`/`unpostAt` override, ≤200c clamped).
+No-ops (posting the text the board already reads; empty text; unposting
+a blank board) skip mint-nothing with `board-skip` naming why. The say
+is the ordinary perception path (browser logChat, agent inbox); the comp
+write is what every evaluator reads. A `board-trigger` flight entry
+(kind `reaction`) records cause→effect.
+
+**Authority/reach.** Posting under the ladder is rank 0 plus the
+ARM'S-REACH gate (vPunt arithmetic): the user's LIVE pose within `reach`
+metres (authored, clamped [2,12], default 4) of the board's LIVE
+position (lease stream pos if leased, folded pos otherwise).
+Out-of-reach use is a `board-skip` naming the distance. Spectators
+bounce at the shell (`use` is spectator-gated there). Effects are say +
+comp-on-self ONLY: no other verb can be minted from a notice.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live `use` path; folding a historical use or comp never
+re-fires. On restart the world folds text/by/at/rev/history from the
+log — the board IS its log. `world_history {verbs:["use","comp","say"]}`
+traces every posting's chain (cause → comp+say with by).
+
+**Failure behavior.** Malformed comp → clamp + `board-lint`
+(particles-lint doctrine): `maxLen` [80,600] d300, `revs` [1,32] d8,
+`reach` [2,12] d4, lines clamped 200c, malformed history rows dropped,
+unknown keys ride (the bag is public annotation). The authored shape
+rides VERBATIM in the engine's carry (regions doctrine — clamps are
+read-time derivations; every consumer normalizes). Missing entity →
+silent pass-through. The 8KB degrade keeps {text, by, at, rev, history}
++ lint (fail closed against bloat, never against the writer). The whole
+reaction wrapped in try/catch (house rule 3 — no board takes the server
+down).
+
+**Browser path.** ZERO client code: the say arrives as ordinary chat
+(actor `world`); the notice + history are readable from any folded
+snapshot (`state.entities[id].comp.board.text/.rev/.history`) — scripts
+and future UI consume it without a new protocol surface. A visible
+notice-card rendering is deliberately deferred to the inscription-plate
+family's visual tier (protocol before UI decoration).
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the board via `shared/board.js
+describeBoard` (the describeDoor pattern) — revision, the notice's
+first line, kept history count, and the post action hint. An agent
+posts through the ordinary `use` verb.
+
+**Intent.** The world posts its news. A tavern menu that changes with
+the days, a guild notice-board, a trailhead bulletin, a square board
+whose keeper posts the market schedule — one evolving notice with its
+own remembered revisions, rank-gated edits, state in the fold,
+perception for free. The guestbook remembers many voices; the plate
+says one thing; the BOARD is the news.
 
 ## REPORT
 

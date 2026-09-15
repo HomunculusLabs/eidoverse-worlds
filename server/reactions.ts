@@ -53,6 +53,10 @@ import { reactReservation } from "./reservation.ts";
 // mute/quiet/unmute/resume action vocabulary — the ambient audio emitter.
 // Same dispatch doctrine, last (a post host may also be any of the above).
 import { reactSoundpost } from "./soundpost.ts";
+// The board engine (vocab-19): comp {type:"board"} owns the post/unpost
+// action vocabulary — the authored multi-line notice with revision history.
+// Same dispatch doctrine, last (a board host may also be any of the above).
+import { reactBoard } from "./board.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -159,6 +163,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // vocabulary — the ambient audio emitter. Same dispatch doctrine, last
     // (a post host may also be any of the above).
     if (reactSoundpost(w, cause, ent, id, action)) return;
+    // The board slice (vocab-19, § BOARDS CONTRACT): comp {type:"board"}
+    // owns the post/unpost action vocabulary — the authored multi-line
+    // notice with revision history. Same dispatch doctrine, last (a board
+    // host may also be any of the above).
+    if (reactBoard(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

@@ -107,6 +107,9 @@ const BATTERY: Row[] = [
   // vocab-18: the soundpost matrix (§ SOUNDPOSTS CONTRACT) — self-booting
   // scratch sequencer, same class.
   { name: "soundposttest", tool: "tools/soundposttest.ts" },
+  // vocab-19: the board matrix (§ BOARDS CONTRACT) — self-booting scratch
+  // sequencer, same class.
+  { name: "boardtest", tool: "tools/boardtest.ts" },
   // vocab-8: the portal matrix (§ PORTALS CONTRACT) — self-booting scratch
   // sequencer; previously run standalone only (a servergate row that runs
   // 0/0 is a vacuous skip, never a pass — registered vocab-10 tick).
