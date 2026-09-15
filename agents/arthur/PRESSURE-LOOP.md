@@ -197,7 +197,24 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       websocket-input 9/0 on the pinned fixed worktree. Port 8999 was
       foreign-held (Python+bun.exe) — scenario moved to 8997, foreign
       processes untouched.)
-- [ ] Auth failure storm: bad tokens cannot exhaust join capacity.
+- [x] Auth failure storm: bad tokens cannot exhaust join capacity.
+      (pressure-12, 2026-09-15: worktree @2ec7deea, PORT 8995, 24s, 2480
+      hostile joins from 8 attacker loops (3x door-token → 4003 + 5x
+      reserved-name → 4004, incl. full-signature ed25519 bad-sig, 100KB
+      token, malformed b64) at 310/s, fresh socket per attempt, against
+      24 perf @15Hz + 96 spec + mid-storm fairness legs. PASS, no patch:
+      2480/2480 explicit refusals, 0 silent, close codes exact (4003×930,
+      4004×1550, 0 other), 0 hangs, 0 conn fails, refusal p95 7ms — the
+      aid1 bad-sig lane p95 8ms proves per-attempt createPublicKey+ed25519
+      is cheap; no cache warranted. Mid-storm capacity held: legit spec
+      joins 24/24 p95 6ms, embodied 3/3 p95 11ms, VALID aid1-signed join
+      1/1 (healthy crypto lane unblocked mid-storm), says 3/3 p95 5ms,
+      fps p50 15.2, 0 gaps, HTTP probe storm p95 3ms. 0 intruder arrives,
+      rosters exact (28/24/0), arrive/leave drift 0, log.jsonl drift 0
+      (a refusal never writes a world-log line), RSS +13MB, 0 suspicious
+      lines. tools/pressure-authstorm.ts (SELFTEST 24 gate families,
+      self-booting, fixture-generating). Servergate smoke 85/0 pinned
+      tree.)
 - [ ] Slow-loris verb sender: one crawling connection cannot block verb intake.
 - [ ] World-hop churn: rapid switch/leave cycles leave no cross-world state
       bleed.
