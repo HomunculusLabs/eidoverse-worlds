@@ -24,6 +24,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { ProximityEngine, type ProxWorld } from "./proximity.ts";
+import { RegionEngine, type RegionWorld } from "./regions.ts";
 
 // --- what we need from server.ts (structural, to avoid a circular import) ---
 type LogEntry = { seq: number; ts: number; actor: string; verb: string; args: Record<string, unknown> };
@@ -359,6 +360,10 @@ export class BehaviorHost {
    *  so a world that greets keeps greeting with nobody but its author ever
    *  having written code. Presence-plane in, transition says out. */
   private prox: ProximityEngine | null = null;
+  /** Regions (vocab-3): swept on the same clock. Presence-plane in, say
+   *  pairs + membership writes into the FOLD out — restart-safe by
+   *  construction, no ring heuristics. */
+  private regions: RegionEngine | null = null;
 
   constructor(w: WorldLike) { this.w = w; }
 
@@ -409,6 +414,8 @@ export class BehaviorHost {
     if (kind === "leave") {
       try { this.prox?.disconnect(id); }
       catch (err) { console.error(`[world:${this.w.name}] prox leave`, err); }
+      try { this.regions?.disconnect(id); }
+      catch (err) { console.error(`[world:${this.w.name}] region leave`, err); }
     }
   }
 
@@ -422,6 +429,12 @@ export class BehaviorHost {
       this.prox ??= new ProximityEngine(this.w as unknown as ProxWorld);
       this.prox.sweep(now);
     } catch (err) { console.error(`[world:${this.w.name}] prox sweep`, err); }
+
+    // Regions (vocab-3) ride the same clock — the fold is their state.
+    try {
+      this.regions ??= new RegionEngine(this.w as unknown as RegionWorld);
+      this.regions.sweep(now);
+    } catch (err) { console.error(`[world:${this.w.name}] region sweep`, err); }
 
     for (const inst of this.instances.values()) {
       for (let i = 0; i < inst.timers.length; i++) {

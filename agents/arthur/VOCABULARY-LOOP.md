@@ -68,7 +68,30 @@ plan. Never deploy, push, or restart production unless Bill asks.
       modtest 18/23 + permtest 21/23 with every failure proven pre-existing
       on the stashed baseline (missing mcpl/tokens.json class, same as
       vocab-1). Scratch worlds only; no production world touched.
-- [ ] Region enter/leave behavior with restart-safe state.
+- [x] Region enter/leave behavior with restart-safe state.
+      DONE vocab-3 (2026-09-14): server/regions.ts (RegionEngine — 1Hz sweep
+      off BehaviorHost.tick, presence-plane in, say pairs + MEMBERSHIP WRITES
+      INTO THE FOLD out) wired via two hooks in clean server/behaviors.ts.
+      Membership is durable comp state: world-authored `comp {type:"region",
+      data:{...authored, members}}` transition writes (coalesced one per
+      region per sweep, only on change) — restart/late-join/fork fold the
+      same truth with NO ring heuristics (upgrades vocab-2's 256-say-ring
+      compromise; proven by pushing 300 churn says past the ring before the
+      restart check). Boot grace holds folded members for graceSec; a member
+      who re-presents inside keeps CONTINUOUS membership (no re-welcome);
+      absent members prune SILENTLY after grace. Contract in § REGIONS
+      CONTRACT implemented as written. Evidence: tools/regiontest.ts RED (22
+      failing checks) then ALL PASS 32/32 (enter/provenance/broadcast/fold-
+      write/quiet-stand/exit-band/exit+causeEnter/members-[]/re-arm/
+      suppressed-enter-still-folds/silent-pair/flat-heightScale/vertical-
+      exit/post-rearm-welcome/[bob,carol]/late-join-chat/churn/restart-fold/
+      mint-nothing/grace-continuity/grace-hold/grace-prune-silent/no-prune-
+      says/spectator/visitor-bounce/lint/clamp-null-drop); servergate smoke
+      85, comptest 33, behaviortest 27, worldops 23, compfold 24, locktest
+      13, leasetest 19, modtest 23 all PASS; permtest 21/23 proven
+      pre-existing on the stashed baseline (same class as vocab-1/2). Server
+      booted without quickjs in the scratch env: regions need no sandbox.
+      Scratch worlds only; no production world touched.
 - [ ] Stateful door/gate: explicit open/closed state, use action, late-join truth.
 - [ ] Portable authored light with time-of-day-aware client realization.
 - [ ] Persistent guestbook/inscription contribution with moderation boundaries.
@@ -235,6 +258,88 @@ note; engine errors → `reaction-error`, never a crash.
 
 **Intent.** The world notices you. A milestone that hails passers-by, a
 shrine that bids farewell, a dark lane lamp that calls out — data, not code.
+
+### REGIONS CONTRACT (vocab lane — drafted and implemented vocab-3, 2026-09-14)
+
+**Trigger.** A region is an entity carrying `comp {type:"region", data:{...}}`.
+The engine samples the presence plane once per second (the same 1Hz clock that
+drives behavior timers and proximity) and computes each embodied visitor's
+normalized ellipsoid distance to the region's LIVE position (lease stream
+position if leased, folded `pos` otherwise): horizontal axes divide by
+`radius`, vertical by `radius × heightScale`. Entering means `d < 1`; leaving
+means `d ≥ exitScale` (default 1.2, ≥ 1) — the band between is hysteresis.
+Defaults: `radius 8` (clamp [1,100]), `heightScale 1` (clamp [0.05,8] — a
+flat terrace wants ~0.1), `exitSec 30` (clamp [5,3600]), `cooldownSec 60`
+(clamp [5,3600]), `graceSec 45` (clamp [3,600]); `enter`/`exit` lines
+(≤200 chars, clamped). Out-of-range numbers CLAMP, not reject, with a
+`region-lint` flight-recorder entry (particles-lint doctrine).
+
+**State — the fold is the state.** Membership lives IN the fold: every
+transition writes a world-authored `comp {type:"region", data:{...authored,
+members:[...]}}` entry (coalesced: one write per region per sweep, only when
+membership actually changed; ≤64 members, deterministic folded order; 8KB
+guard degrades to members-only rather than bloating). Late join, restart,
+replay and fork all fold identical membership — NO say-ring heuristics
+(vocab-2's 256-say-window compromise does not apply). In-memory say-side
+state (cooldowns, disarm, saidEnter) is derived fresh each boot.
+
+**Effects.** On an OUT→IN transition, the world emits `say` actor `world`,
+args `{text: <enter line>, id: <entity>, region: {enter: <entity>, who:
+<visitor>, at: <ts>}, by: <visitor>}`. On IN→OUT (and disconnect while
+inside): `{text: <exit line>, id, region: {exit: <entity>, who, causeEnter:
+<seq of the enter say, if any>, at}, by: <visitor>}`. Pair discipline: an
+exit says only when its matching enter SAID; suppressed/line-less transitions
+flip membership silently. Both arrive as ordinary chat everywhere (zero
+client code — same perception path as phrases/proximity).
+
+**Rate/abuse boundaries.** (a) One sweep/second; log entries only on
+transitions; membership writes coalesced — standing inside mints nothing.
+(b) Re-arm: after a SAID exit the region stays silent `exitSec`. (c)
+Cooldown: per (region,visitor) pair, an enter says once per `cooldownSec`.
+(d) At most 8 enters SAY per sweep (overflow flips membership silently with
+a `region-cap` debug entry). (e) Spectators never become members. (f) Worst
+legal steady state ≈ 3 transition-pairs/sec world-wide, all ordinary log
+entries.
+
+**Authority rank.** Walking is rank 0. Attaching the `region` comp is rank 1
+(builder) — the author's standing decision that this place knows its company,
+identical doctrine to `reactions`/`phrases`/`proximity`. Effects run with
+WORLD authority and are say-only plus the comp membership write on the
+region's OWN entity: no other verb can be minted from a footstep. Membership
+writes carry the authored shape verbatim (config drift is author-visible);
+fail closed: malformed comps clamp+lint; sweeps and leave-fires are
+try/caught per world (house rule 3).
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs ONLY
+from the live tick and live presence, never from the fold. Folding a
+historical say or comp never re-fires anything. On restart the engine SEEDS
+membership from the folded comp (the log's own truth), holds it through a
+boot grace window (`graceSec`), and mints nothing during grace; a member who
+re-presents inside keeps CONTINUOUS membership (no re-welcome); a member
+still absent when grace expires is pruned SILENTLY (their disconnect exit
+already said, or was never sayable) — the prune is a membership write, not a
+say. Known bound: a mid-process `world reset` does not clear in-memory maps
+(a process restart fully heals; same documented bound as vocab-2).
+
+**Failure behavior.** Unknown shapes → clamp + `region-lint`; removed comp or
+entity → tracking dropped silently with a `region-skip` note; engine errors →
+`reaction-error`, never a crash.
+
+**Browser path.** Zero client code: enter/exit says render as ordinary chat
+(actor `world`); the membership array is readable from any folded snapshot
+(`state.entities[id].comp.region.members`) — scripts and future UI can
+consume it without a new protocol surface.
+
+**MCPL path.** Same log entries, same perception: `look()` inbox sees the
+lines; `world_history {verbs:["say","comp"]}` returns effects with
+`region`/`by` provenance and the membership writes; a snapshot read carries
+current members. Agents can ask "who is in the hall?" by reading the fold —
+no new tool.
+
+**Intent.** A place that knows who is inside: a hall that welcomes and
+remembers, a district gate with a census, a sacred grove that holds vigil.
+State in the fold, perception for free — the difference between a place that
+notices and a place that KNOWS.
 
 ## LAWS
 
