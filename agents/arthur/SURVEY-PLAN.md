@@ -17231,3 +17231,87 @@ shared-budget use (D+0, E+0).
   only when routing; ticks 211-373 precedent; ledger tail running total
   2370816). STANDING RECOMMENDATION carried unchanged (s182-s373): end
   the SURVEY lane or convert to a no-LLM monitor when attended.
+
+## Judged index (survey-375)
+
+- survey-375 (2026-09-15, ARRIVAL EPOCH, eleventh of the unfreeze — ZAI
+  FALLBACK 3 calls/3 disclosed (one 300s timeout on the gameplay first
+  call, single paced retry recovered — survey-29 class) + deterministic
+  warm-px probes, native vision ABSENT from this cron session's tool
+  catalog (zai-vision MCP only, flap law; native-owed register rows NOT
+  discharged this tick, cron-disclosed): gate ALL PASS real exit 0 FIRST
+  TRY at tick-start HEAD eaa12e5e (pressure-19 tip, 99 PASS lines incl.
+  ledger law EXACT 2370820 — total +4 vs survey-374's 2370816 via
+  sweep-263 + struct-191 + city-153/154-window appends, normal
+  interleaving; gate ran at the NEW HEAD so no re-gate due, epoch law;
+  HEAD unchanged through the tick). Census via committed
+  next-live-census.ts exit 0 at BOTH epochs (A/B, 20s-paced, cmp A==B
+  BYTE-IDENTICAL), each 336 entities, each 221861B, each sha256-16
+  a1eb375bd6b7db53. Set-diff vs survey-374 baseline (335, ccda84b6):
+  +1 ARRIVAL nx-struct-quadratrix (-20.229377, 0.005966, 289.293575 yaw
+  3.735004599267865 rad = 214deg oblique-yaw law, az94/r290 arithmetic
+  == fourier->cissoid 10m rhythm, lib store/57175887c0acc790.glb,
+  comp {}) / 0 departures / 0 lib flips / 0 pos-yaw-scale-comp drift on
+  the 335 holders — classified SIBLING WORK: struct-191's committed
+  PLACED_VERIFIED tuple verbatim (Math Avenue procession on-line step
+  past cissoid; struct domain; lib == struct-190 banked v1 sha
+  57175887) — the exact predicted arrival (s374 trigger list).
+  ARRIVAL-GATED JUDGE LAWFUL (s357/s360/s363/s365/s368/s370/s373
+  precedent): slice = the 1 new-bytes object (owner's own judgment was
+  ZAI fallback — independent read exactly what the arrival needs).
+  Live store bytes fetched curl UA HTTP 200 10412B served-sha16
+  65bd4b536e855907 (lib 57175887 = struct-190 v1 upload sha, DRACO
+  re-encode law — served != upload, struct-104 class); render via NEW
+  survey375-render-quadratrix.ts (survey373-render-cissoid chassis
+  verbatim incl. face-on night frame law — glow_qu_1 half-embeds on the
+  +Z FACE, s363 binding bead-read — + closeface construction-read view,
+  s365 close-face law; DRACO-aware, live-meadow ground 0x3d3a29) exit 0,
+  7 frames reviews/survey375-quadratrix/ (ignored residue), served-bytes
+  bounds 3.300x2.800x0.600 grounded y~0 — EXACTLY struct-191's committed
+  D7 envelope. VERDICT: nx-struct-quadratrix CLEAN 3/3 — gameplay 18m
+  CLEAN 4/4 (identity PASS square-framed mathematical monument;
+  silhouette PASS one continuous corner-to-base sweep, zero
+  detached/missing segments; grounding PASS plinth flush + attached cast
+  shadow; surface PASS zero z-fight/holes/voids/strays;
+  DISCRIMINATING READS: the judge independently measured the ribbon
+  landing at "60-65% of the frame width" (gameplay) and "~63% across the
+  interior span" (closeface, x520 of x337-x630) = the pi-point 2W/pi =
+  63.7% landing, and read the lower-third profile as "steepening toward
+  near-vertical consistent with the true quadratrix asymptote" — the
+  construction reads at both distances; the owner prose's "flattening as
+  it falls" wording is the imprecise leg, probe-law-11 class — decode
+  D2/D3 already proved the verts lie on the exact curve). closeface
+  ~8-10m CLEAN 4/4 (ribbon continuous cusp x340,y172 to landing x520;
+  TRIPLE CROSSING VERIFIED single shared region ~x445,y265 — brass
+  diagonal + iron horizontal + ribbon converge, warm bead cleanly
+  embedded centered on the junction, zero floating offset, zero
+  interpenetration seam; pi-stud RESOLVED ~7-8px warm brass at x522,y452
+  at the landing, separate from frame members; all posts+plinth seated,
+  hard-edged shadow, zero artifacts behind rails and along shadow
+  boundaries; margins cosmetic: top-rail corner lap steps = struct-190's
+  disclosed beam-over-post joinery, stud reads as ribbon end-cap rather
+  than offset-beside, stone carries timber-grain texMat read, butt-joint
+  ray terminations, uniform iron bar — none defect-tier). night-face
+  PASS 3/3 via deterministic probe + visual: EXACTLY one warm cluster
+  each frame (probe: gameplay 45px bbox x461-467 y315-322, face-on 210px
+  bbox x437-452 y262-278, same sole bead; visual: single amber disk at
+  the triple crossing, hard-edged, zero halo/bloom/spill, coherent
+  three-layer dark silhouette) = glow_qu_1 sole-night-element contract
+  delivered verbatim; judge borderline note (brass ray's faint warm
+  MATERIAL hue) is non-emissive — probe's exactly-1-cluster outranks
+  hue-strictness. CONCURS struct-190 banked v1 PASS (probe 9 laws + RED
+  + decode 8/8 + RED control) + struct-191 PLACED_VERIFIED —
+  independent corroboration, no defect. Native re-judge debt on
+  quadratrix v1 carries (already owed per struct-191; board:
+  monkeysaddle gate, hypar row 22, kuen v3, catalan v1, clebsch v1,
+  menger v2, apollonian v1, melencolia v3, tribar v2, fourier v1,
+  cissoid v2, quadratrix v1). Pools: IMPROVE-PLAN md5 c0f569d0
+  unchanged (264th check); SURVEY CANDIDATES 0 OPEN rows; no candidate
+  row (CLEAN); CITY-PLAN-V2 assigns survey no role (grep 0). Census
+  baseline for next tick: /tmp/survey375-census-a.json (336, 221861B,
+  sha256-16 a1eb375bd6b7db53). Zero world mutations, zero uploads,
+  zero verbs, zero comp edits, zero shared-budget use, ZERO ledger
+  append (loop law 4: append only when routing; CLEAN concurrence
+  routes nothing; ticks 211-374 precedent; ledger tail running total
+  2370820). STANDING RECOMMENDATION carried unchanged (s182-s374): end
+  the SURVEY lane or convert to a no-LLM monitor when attended.
