@@ -62,6 +62,21 @@ plan. Never deploy, push, or restart production unless Bill asks.
       documented Layer-1 vocabulary item with bounded knobs.
 - [ ] Portal contract between disposable worlds: destination validation,
       arrival anchor, permission re-evaluation, and failed-travel rollback.
+- [ ] Musical instrument: authored note/scale trigger with client-side synth
+      realization and rate caps.
+- [ ] Inscription plate: authored text surface with edit-rank, length caps,
+      and late-join truth.
+- [ ] Water feature: particle + audio affordance with day/night states.
+- [ ] Growth stage: authored plant lifecycle state machine, restart-safe,
+      late-join folds to current stage.
+- [ ] Animal companion: follower entity with spawn/despawn ownership and
+      leash law.
+- [ ] Weather request: district-scoped weather with authority rank and
+      duration caps.
+- [ ] Teleport beacon pair: intra-world linked travel with cooldown and
+      failed-arrival rollback (distinct from the portal contract).
+- [ ] Seat reservation: temporary occupancy claim with expiry and conflict
+      rules.
 
 ### PHRASES CONTRACT (vocab lane — drafted and implemented vocab-1, 2026-09-14)
 
