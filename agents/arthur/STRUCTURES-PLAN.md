@@ -10719,3 +10719,60 @@ tracked), assets/mkv3-catalan.ts (NEW, staged -f), reviews/
 struct173-catalan/ (10 frames, ignored), STRUCTURES-PLAN.md (this
 block), IMPROVEMENTS.md (one append struct-173, D+0 E+0). Zero world
 mutations, uploads, verbs, comp-edits, shared-budget use. Zero pushes.
+
+
+## struct-174 (2026-09-15): CATALAN PLACEMENT TICK — committed carry from
+## struct-173 executed, PLACED_VERIFIED live
+
+174%3=0 placement slot with a takeable carry (struct-173 banked catalan v1,
+"placement = struct-174 committed carry"). Native debts carried, not payable
+in cron (tool catalog carries only the zai-vision MCP — same disclosed class
+as struct-169..173): monkeysaddle v2 native-18m-PASS placement GATE, hypar
+row 22 native-only, kuen v3 + catalan v1 fallback-judged acceptances riding
+the owed board. Gate ALL PASS real exit 0 tick-start at ea97820b (99 PASS,
+/tmp/struct174-gate.txt, unpiped; survey-351 landed atop struct-173, gate
+re-ran clean). Shard drained fresh (IMPROVE-PLAN md5 c0f569d0 unchanged, 0
+OPEN nx-struct rows). Ledger max re-derived struct-173 -> tag struct-174.
+
+Local bytes re-verified sha256 4f0c2a4a7b506f56... == struct-173 bank pin
+BEFORE upload (full sha on disk this tick).
+
+SEAT (struct174-scan-catalan.ts, fresh 327 census): Math Avenue density-
+window axis re-derived FRESH = 91.0 deg (24-form window; 28 math-family
+forms standing, kuen included). Catalan envelope 4.89x2.64x3.18 SYMMETRIC
+(no kuen offset). Final pose at OBLIQUE yaw 0.6981317 rad (40 deg,
+struct-104 oblique-read law — cycloid-spine face edge-on at yaw 0). BEST
+SEAT r130.0 az100.0 -> POS (-22.574263, PY, 128.025008): NN 13.61 vs
+nx-struct-tesseract (law 8.0), SAT 5.00 vs nx-struct-rule30wall (law 1.4),
+walk-clear 101.41. 6 lawful band candidates; axis corridor empty at deep
+radii (costa r127.5 + rule30wall r120 + tesseract crowd the axis) —
+best-by-SAT chosen 9 deg off axis, in-band by the +-10 law (kuen az82
+mirror-side precedent).
+
+TERRAIN (struct174-terrain-catalan.ts): 9pt over the TRUE rotated footprint
+(literal corners): spread 2.5mm, PY = -0.038027.
+
+PLACEMENT (next-place-struct174.ts, struct172 kuen fresh-spawn chassis):
+hash gate green; entity ABSENT on fresh 327 census; SAT/NN preflight re-run
+at final pose vs same fresh set (footprint 2.90x2.79 at yaw 40): NN floor
+tesseract 13.61, SAT worst rule30wall 5.00 — clean. 1 upload
+(content-addressed store/4f0c2a4a7b506f56.glb) + 1 paced spawn over one WS
+join; PLACED_VERIFIED exact tuple + yaw + scale 1 + lib + comp {} on fresh
+re-read; census 327 -> 328 exactly. Idempotent rerun: ALREADY_SEATED, zero
+verbs. Folly class — no walk owed. Comp bag empty by contract (glow_ca_1/2
+emissive-in-GLB — no comp-wipe class on first spawn).
+
+Native debt board after this tick: catalan v1 OWED (fallback-judged
+acceptance, disclosed); monkeysaddle native 18m PASS OWED (placement gate);
+hypar row 22 OWED (native only); kuen v3 OWED.
+
+Bill eye-check pointer: on Math Avenue SE-side deep band past
+tesseract/rule30wall, the parabola-swept vault — two bone wings springing
+from a stone drum, brass cycloid spine crown to crown, seated obliquely so
+the sweep reads on approach; after dark, exactly two quiet warm points at
+the rim-vertex crowns.
+
+Files: struct174-scan-catalan.ts + struct174-terrain-catalan.ts +
+next-place-struct174.ts (all NEW, tracked), STRUCTURES-PLAN.md (this
+block), IMPROVEMENTS.md (one append struct-174, D+1 E+0). One upload + one
+verb total (shared budget). Zero pushes.
