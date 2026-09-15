@@ -9848,8 +9848,58 @@ py_compile clean, clean exit 0 at BOTH epochs A/B unpiped on the real
 bytes). Zero world mutations, zero defect notes, zero uploads, zero
 verbs, zero comp edits, zero shared-budget use (D+0, E+0). Next tier-2 pair (sweep-241):
 longhouse + garden-cottage (219th cycle — LRU chain
-re-derived from committed pointers this tick: row-cottage/observatory
-@237, inn/tower-house @238, forge/potter @239, hall/bunkhouse @240
-walked fresh, longhouse/garden-cottage @236 stalest standing pair at 4
-sweeps; both walk tools ls-verified present on disk this tick:
-interior-walk-longhouse.ts, interior-walk-garden-cottage.ts).
+re-derived from committed pointer
+
+sweep-241: CLEAN SWEEP, re-baseline tick. Census 326 -> 327 at BOTH epochs
+(A/B, 20s-paced, next-live-census.ts chassis, byte-identical pair, raw
+216436B sha16 9ea3f61b2522fa66): 0 departures, exactly ONE arrival
+classified domain-valid against COMMITTED ledger lines — nx-struct-kuen @
+(16.352839, -0.014569, 116.356498) yaw 0.6981317 (40° oblique) lib
+5b7ad1a3a925027d comp {} = struct-172 PLACED_VERIFIED (commit 26acdfc1),
+live tuple dev vs its ledger line 0.0002/0.0004/0.0005m (server rounding
+class), independently corroborated by city-121 (HOLD_VERIFY_PASS sole
+arrival) and survey-349 (arrival epoch, same tuple); Math Avenue band seat
+r117.5 az82.0. 0 unexplained drift on the 326 shared ids, 0 lib flips, 0
+compKeys drift. Baseline lawfully REWRITTEN per the re-baseline law with
+pre-write assertions (ondisk == HEAD bytes, diff set exactly
+[nx-struct-kuen], ledgered tuple re-verified to 1e-2) and post-rewrite
+drift vs live ZERO (byte-identical 216436B / 327 entities / sha16
+9ea3f61b2522fa66) — this commit's baseline is the sweep-242 epoch
+reference. Overlap: SAT fresh-live 289 bbox non-light / 237 classified /
+0 coverage holes, real exit 3 unpiped on exactly ONE unclassified = R-121
+lamp-n | nx-town-mapboard -0.407 — known Sev 2 routed to artwalk b26
+choreography @ sweep-43, 197th sweep since routing, NOT new, no escalation
+due (law keys severity-1); kuen introduced NO new contacts (classified,
+corroborating struct-172's own SAT 7.26m). Walks: tier-1 4/4 per-leg
+verified 81/81 ALL_PASS, every leg real exit 0, legs run individually per
+the sweep-228 ceiling law — core 64/64 @ 0.380 (next-walk-core-paths.ts),
+NW 5/5 @ 0.380 (nw-approach1-walk.ts), NE 7/7 @ 0.380
+(ne-approach2-walk.ts), SW 5/5 @ 0.370 (sw-approach3-walk.ts); kuen
+r117.5 NE — outside every walked leg, walks stand by construction
+(sweep-53 precedent), SAT covers the collision surface; verdicts
+content-anchored on status + per-leg ok counts + maxArrival from raw
+files; a legs-is-an-int schema misread self-caught pre-verdict
+(sweep-237 class). Tier-2 219th cycle per the committed sweep-240 pointer:
+longhouse 6/6 @ 0.3456 (interior-walk-longhouse.ts) + garden-cottage 6/6
+@ 0.355 (interior-walk-garden-cottage.ts), both ALL_PASS real exit 0 —
+match the sweep-236 records for the pair exactly; both tools ls-verified
+present on disk pre-run. Integrity: struct18-fleet-pin-check 15/15
+ALL_PINS_OK bad:[] (195th consecutive clean); sweep89-battery 28/28 PASS
+exit 0 on fresh census-B bytes (python3 argv census-path form); interlane
+md5 f6254cd0 stable, read fresh pre- and post-walks. Standing gate ALL
+PASS real exit 0 FIRST TRY at tick-start HEAD 235b21eb (99 PASS lines,
+exit captured unpiped). Pools drained: IMPROVE-PLAN md5 c0f569d0 unchanged
+(217th check; 19 raw OPEN hits = the known prose-only set, 0 open
+candidate rows), 0 SHARD EXECUTION sections, sweep owns no prefix;
+CITY-PLAN-V2 assigns sweep no reset role — the audit-continues freeze
+banner governs and was read fresh this tick. Diff tool
+sweep241-census-diff.py folded from the committed sweep240 chassis (sed
+swap only — 3 forward / 0 stale refs, py_compile clean, clean exit 0 at
+BOTH epochs A/B unpiped on the real bytes). Zero world mutations, zero
+defect notes, zero uploads, zero verbs, zero comp edits, zero
+shared-budget use (D+0, E+0). Next tier-2 pair (sweep-242): row-cottage +
+observatory (220th cycle — LRU chain re-derived from committed pointers
+this tick: inn/tower-house @238, forge/potter @239, hall/bunkhouse @240,
+longhouse/garden-cottage @241 walked fresh, row-cottage/observatory @237
+stalest standing pair at 4 sweeps; both walk tools ls-verified present on
+disk this tick: interior-walk-row-cottage.ts, struct2-walk-observatory.ts).
