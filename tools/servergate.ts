@@ -98,6 +98,9 @@ const BATTERY: Row[] = [
   // vocab-15: the waystone matrix (§ WAYSTONES CONTRACT) — self-booting
   // scratch sequencer, same class.
   { name: "waystonetest", tool: "tools/waystonetest.ts" },
+  // vocab-16: the reservation matrix (§ RESERVATIONS CONTRACT) —
+  // self-booting scratch sequencer, same class.
+  { name: "reservationtest", tool: "tools/reservationtest.ts" },
   // vocab-8: the portal matrix (§ PORTALS CONTRACT) — self-booting scratch
   // sequencer; previously run standalone only (a servergate row that runs
   // 0/0 is a vacuous skip, never a pass — registered vocab-10 tick).

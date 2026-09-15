@@ -48,6 +48,7 @@ import { reactWeatherzone } from "./weatherzone.ts";
 // teleport/blink action vocabulary — the intra-world carry. Same dispatch
 // doctrine, last (a stone may also be any of the above).
 import { reactWaystone } from "./waystone.ts";
+import { reactReservation } from "./reservation.ts";
 
 /** The portal environment — the process's own world registry (never
  *  minting: worlds.get, never getWorld), the worlds root, and the global
@@ -144,6 +145,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // the intra-world carry. Same dispatch doctrine, last (a stone host
     // may also be any of the above).
     if (reactWaystone(w, cause, ent, id, action)) return;
+    // The reservation slice (vocab-16, § RESERVATIONS CONTRACT): comp
+    // {type:"reservation"} owns the reserve/hold/release action
+    // vocabulary — the temporary seat claim. Same dispatch doctrine, last
+    // (a seat host may also be any of the above).
+    if (reactReservation(w, cause, ent, id, action)) return;
     const rx = (ent.comp?.reactions as Record<string, any> | undefined)?.[action];
     if (!rx) {
       w.debug("reaction-skip", { entity: id, action, by: cause.actor,

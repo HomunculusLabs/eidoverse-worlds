@@ -821,8 +821,26 @@ no new verb.
       portal); mcpl agent waystone puppet branch + describeWaystone
       affordance + exclusion list; manifest 28/0. Scratch worlds only;
       no production world touched.
-- [ ] Seat reservation: temporary occupancy claim with expiry and conflict
+- [x] Seat reservation: temporary occupancy claim with expiry and conflict
       rules.
+      DONE vocab-16 (2026-09-15): comp {type:"reservation"} — reactReservation
+      in server/reservation.ts rides reactToUse's dispatch after waystone
+      (one import + one dispatch hunk in reactions.ts; ZERO edits to
+      pilot-dirty server.ts/world.ts/verbs.ts). Contract in § RESERVATIONS
+      CONTRACT implemented as written. Evidence: tools/reservationtest.ts
+      RED 24 failing (engine absent; 20 pre-passing = shared math + shell
+      gates) then ALL PASS 44/44 (the GREEN run itself caught one genuine
+      engine defect — the hold alias fell through to the release branch);
+      servergate battery reservationtest 44 registered + smoke 85 comptest
+      33 compfold 24 behaviortest 27 worldops 23 locktest 13 leasetest 19
+      modtest 23 doortest 28 lamptest 34 guestbooktest 35 platetest 37
+      watertest 34 growthtest 43 companiontest 36 musictest 38 portaltest
+      35 publishtest 28 phrasetest 17 waystonetest 37 ALL PASS; permtest
+      21/23 = the documented pre-existing mcpl/tokens.json-missing class
+      (vocab-1..15 identical); mcpl manifest 28/0 + effective-test PASS
+      after the agent.ts describeReservation line + exclusion-list entry.
+      Scratch worlds only; no production world touched. No eye-check owed
+      (zero client code — chat + folded state only).
 - [ ] Day/night bell schedule: authored time-of-day chime with fold-held
       schedule and late-join truth.
 - [ ] Sound post: ambient audio emitter with distance falloff and mute
@@ -1925,6 +1943,111 @@ link.
 - No no-op ticks. Pause rather than manufacturing interactions.
 - Ad-hoc verified, never called suite green.
 - `LOOP_COMPLETE` only when Bill says stop.
+
+### RESERVATIONS CONTRACT (vocab lane — drafted vocab-16, 2026-09-15)
+
+**Trigger.** A reservable seat is an entity carrying
+`comp {type:"reservation", data:{...}}`. The action strings `reserve` (alias
+`hold`) and `release` are RESERVATION vocabulary on the freeform
+`use {id, action}` path (the reactions doctrine: other action strings pass
+through untouched — a bench ignoring `use {action:"ring"}` is exactly
+correct, and hybrids decide by dispatch order). Attaching/removing the comp
+is builder (rank 1) — the author's standing decision that this seat may be
+claimed, identical doctrine to reactions/phrases/region/door/lamp/guestbook/
+portal/music/plate/water/growth/companion/weatherzone/waystone.
+
+**State — the fold is the state; expiry is DERIVED, never swept.** A hold is
+ONE field-set on the folded comp, written as ONE world-authored comp
+transition (regions/doors/lamps/guestbooks/plates doctrine):
+
+```
+comp {id, type:"reservation", data:{...authored, heldBy:<who>, until:<ts>, at}}
+```
+
+`heldBy` names the holder; `until` is the hold's expiry (sequencer ms);
+`at` the ts of the causing use. Engine keys (heldBy/until/at) ride VERBATIM
+in the authored carry (they are the fold's own truth — weatherzone
+doctrine) and are STRIPPED by the engine via its ENGINE_KEYS set when
+composing each new write, then written fresh — a comp transition over a
+live hold can never carry a stale window forward. NOTHING else is stored anywhere; no
+in-memory map decides who holds what. EXPIRY IS FOLD-DERIVED
+(`holdActive(data, now)`: `heldBy` is a non-empty string && `until > now`,
+shared verbatim by engine/tests/mcpl — the weatherzone holdActive pattern):
+a lapsed hold blocks NOTHING, so NO sweep engine exists — the first `use`
+after expiry sees the seat free and claims it. Passive expiry is the whole
+design: zero traffic, zero engines, late join/restart/replay/fork all read
+the same window from the log alone.
+
+**The conflict rules.** `reserve` on a FREE seat (no active hold) writes the
+hold. `reserve` by THE HOLDER while active RE-ANCHORS (extends `until` from
+`now`, keeping their claim). `reserve` by ANYONE ELSE while active is a
+CONFLICT: skip fail-closed with `reservation-skip` NAMING THE HOLDER and
+the seconds remaining (`held by <who>, <n>s more`) — never silently steal,
+never queue. `release` on a held seat clears the hold (heldBy undefined);
+`release` on a free seat is a no-op skip minting nothing. Expiry: silent,
+fold-derived — after `until` the seat is simply free.
+
+**Effects.** A state change appends TWO entries, in order: the comp
+transition write (actor `world`) and a `say` (actor `world`, args
+`{text:<line>, id, res:{by:<who>, until, at, op:"reserve"|"release"},
+cause:<use seq>, by:<user>}` — the phrases/doors/lamps/guestbook/plate
+provenance grammar exactly). Line defaults: `"<who> reserves the seat"` /
+`"<who> releases the seat"` (authored `reserveAt`/`releaseAt` override,
+≤200c clamped). No-ops and conflicts mint nothing. A `reservation-trigger`
+flight entry (kind `reaction`) records cause→effect on every fire; skips
+record `reservation-skip` with the reason. No other verb can be minted from
+a reservation use — say + comp-on-self ONLY.
+
+**Authority/reach.** Reserving is rank 0 (anyone present — the author's
+published behavior) plus the ARM'S-REACH gate (vPunt arithmetic): the
+user's LIVE pose within `reach` metres (authored, clamped [2,12], default
+4) of the seat's LIVE position (lease stream pos if leased, folded pos
+otherwise). Out-of-reach use is a `reservation-skip` naming the distance.
+Spectators bounce at the shell (`use` is spectator-gated there). RELEASE
+rides the rights ladder itself (`rightsOf`, the plate edit-rank doctrine):
+the HOLDER releases their own claim at rank 0; anyone else needs builder+
+(rank 1) — a communal override, skip names the boundary. Lock composes as
+for doors (lock refuses place/punt/spawn/comp/remove — not `use`): a locked
+seat still reserves.
+
+**Duration caps (the abuse story).** `holdSec` clamped [30,600], default
+180 (the weatherzone anti-strobe floor doctrine: no seat squatter holds a
+bench for a day; no flip-flopping either). The verb rate (12/4s) bounds
+reserve/release churn; each transition mints at most 2 entries; conflicts,
+no-ops, and out-of-reach uses mint nothing.
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs ONLY
+from the live verb path; folding a historical use or comp never re-fires.
+On restart the world folds heldBy/until from the log — a hold half-elapsed
+at server death still expires at its `until`, read identically by every
+client, with zero engine involvement. The says read as history.
+
+**Failure behavior.** Malformed comp → clamp + `reservation-lint`
+(particles-lint doctrine): `holdSec` [30,600] d180, `reach` [2,12] d4,
+lines clamped 200c, unknown keys ride (the bag is public annotation);
+engine keys ride verbatim (the fold's truth — a builder re-authoring a
+comp writes fold truth, the standing doctrine of every comp family). Missing entity →
+silent pass-through. The whole reaction wrapped in try/catch (house
+rule 3 — no bench takes the server down).
+
+**Browser path.** ZERO client code: the say arrives as ordinary chat
+(actor `world`); the hold window is readable from any folded snapshot
+(`state.entities[id].comp.reservation.heldBy/until`) — scripts and future
+UI consume it without a new protocol surface. A visual tier (a marker
+cushion, a "reserved" tag on the inspector) is deliberately deferred —
+protocol before UI decoration.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the seat via `shared/reservation.js
+describeReservation` (the describeDoor pattern) — current holder, seconds
+remaining (derived at read time, so the countdown is live), and the
+reserve/release actions. An agent claims through the ordinary `use` verb.
+
+**Intent.** The world holds your place. A ceremony seat you claim before
+dinner, a reading-chair hold while you fetch tea, a workshop bench shared
+by a queue of one — a temporary occupancy claim with expiry and conflict
+rules, state in the fold, perception for free, one 8KB comp, no script,
+no new verb, no engine sweeping.
 
 ## REPORT
 

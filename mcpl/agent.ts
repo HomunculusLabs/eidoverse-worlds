@@ -33,6 +33,8 @@ import { describePortal } from "../shared/portal.js";
 // The waystone affordance line (vocab-15): same pattern — partner + the
 // hop action (shared/waystone.js describeWaystone).
 import { describeWaystone } from "../shared/waystone.js";
+// a reservation names its holder + live countdown (or the free hint).
+import { describeReservation } from "../shared/reservation.js";
 // The music affordance line + pitch naming (vocab-9): the same shared
 // arithmetic the engine resolves pitches with names the notes for
 // narration and look()'s affordance list.
@@ -1927,10 +1929,14 @@ export class WorldAgent {
       // a waystone names its PARTNER and the hop action — the text-tier
       // read of the same folded comp the carry engine validates
       if (c.waystone) aff.push(describeWaystone(c.waystone));
+      // a reservation names its HOLDER and live countdown (or the free-seat
+      // claim hint) — the text-tier read of the same folded comp the claim
+      // engine writes; derived at read time, so the countdown is live
+      if (c.reservation) aff.push(describeReservation(c.reservation));
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);
