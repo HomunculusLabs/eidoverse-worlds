@@ -453,8 +453,29 @@ without Bill's explicit direction. Do not touch village or resident lanes.
       sweep-267 be17bf7b (survey-318 interleaving, disclosed in ledger) —
       this commit carries the fix hunk + queue tick. Next head: snapshot
       size bomb.)
-- [ ] Snapshot size bomb: worlds with 10k+ entities join without OOM or
+- [x] Snapshot size bomb: worlds with 10k+ entities join without OOM or
       unbounded latency.
+      (pressure-23, 2026-09-16: worktree @ d221f8cd + untracked
+      shared/pilot.js runtime dep (see boot blocker below), PORT 8978,
+      seeded 10,240-entity world as a 13,569-line log ~2.1MB in exact
+      WorldLog JSONL shape. PASS 2/2 identical runs, no patch. Crash-shape
+      boot: lazy replay of all 13569 entries, first join 57/54ms, 16
+      tail-path joins p95 57/54ms each carrying the WHOLE log as tail
+      (entities + tail-len EXACT, fold-equiv 2/2). Snapshot-shape boot:
+      seq+byte-offset EXACT, first join 34/35ms state-only. Fold under
+      load: 400/400 places p95 12-14ms, 2 whole-state threshold folds
+      mid-traffic, fps 13.6, lat p95 18-23ms, 0 gaps, probe MAX 38-44ms
+      (no stall). Storm 1823/1798 joins p95 69-74ms 0 fail; 21/21
+      fold-equivalence == fold(log through covered) incl 8 mid-storm
+      trickle (tails 35-140); final == fold(full log); log drift 0/0,
+      arrive/leave 24/24 drift 0; RSS +79/+38MB bounded; 0 suspicious.
+      BOOT BLOCKER DISCLOSED: every commit since be17bf7b imports
+      ../shared/pilot.js which is UNTRACKED — clean checkout cannot boot;
+      worktree supplemented to run. Servergate smoke 85/0 pinned; full
+      40-suite sweep discloses 5 pre-existing non-smoke failures at the
+      pin (authtest 22/23, permtest env-dep, support-lifecycle,
+      behaviortest, publishtest) — not pressure-owned, flagged for
+      sibling/ops. tools/pressure-snapshotbomb.ts SELFTEST 34 gates.)
 - [ ] Midnight rollover: day-boundary crossing during load keeps ledgers
       and leases consistent.
 - [ ] Duplicate join race: same identity joining twice concurrently
