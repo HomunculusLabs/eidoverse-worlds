@@ -68,6 +68,9 @@ import { describeChime } from "../shared/chime.js";
 // The board affordance line (vocab-19): names the current notice's head,
 // the revision, kept history, and the post action hint.
 import { describeBoard } from "../shared/board.js";
+// The dedication affordance line (vocab-23): names the carved line, the
+// dedicator, and the dedicate action hint.
+import { describeDedication } from "../shared/dedication.js";
 // The vendor affordance line (vocab-20): names the shelf (live stock per
 // ware), the grant-log count, and the buy action hint.
 import { describeVendor } from "../shared/vendor.js";
@@ -2001,6 +2004,9 @@ export class WorldAgent {
       // a board names its CURRENT notice head + revision — the text-tier
       // read of the same folded comp the post engine writes
       if (c.board) aff.push(describeBoard(c.board));
+      // a dedication names its CARVED LINE + dedicator — the text-tier
+      // read of the same folded comp the carve engine writes
+      if (c.dedication) aff.push(describeDedication(c.dedication));
       // a vendor names its SHELF (live stock per ware) + grant-log count —
       // the text-tier read of the same folded comp the grant engine writes
       if (c.vendor) aff.push(describeVendor(c.vendor));
@@ -2011,7 +2017,7 @@ export class WorldAgent {
       // locked = nailed down: the server refuses every move/replace/remove on
       // it. Saying so here saves an agent a refused verb round-trip.
       if (c.lock) aff.push(`🔒 locked (immovable until comp {id, type: "lock", data: null})`);
-      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour"].includes(k));
+      const extra = Object.keys(c).filter((k) => !["sockets", "reactions", "motion", "particles", "lock", "door", "lamp", "guestbook", "plate", "portal", "music", "water", "growth", "companion", "weatherzone", "waystone", "reservation", "bell", "soundpost", "board", "vendor", "chime", "tour", "dedication"].includes(k));
       if (extra.length) aff.push(`components: ${extra.join(", ")}`);
       const ride = this.mounts.get(e.id);
       if (ride) aff.push(`mounted on ${ride.to}${f.ok && f.moving ? ` (riding its ${f.moving})` : ""}`);

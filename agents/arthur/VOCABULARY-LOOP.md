@@ -1200,8 +1200,133 @@ crowd — one authored timeline, one comp per transition, light as a
 choreographed sequence with zero per-frame traffic between cues, and the
 beginning of affordance COMPOSITION: the tour family driving the lamp
 family through the lamp family's own arithmetic.
-- [ ] Bench dedication: named plaque attachment with owner rank and text
+- [x] Bench dedication: named plaque attachment with owner rank and text
       caps (extends inscription plate family).
+      DONE vocab-23 (2026-09-16): comp {type:"dedication"} — reactDedication
+      in server/dedication.ts rides reactToUse's dispatch after board (one
+      import + one dispatch hunk in reactions.ts; ZERO edits to verbs.ts /
+      server.ts / world.ts — `use` args ride verbatim so `text`/`who`
+      needed no validator change). Contract in § DEDICATIONS CONTRACT
+      implemented as written. Evidence: tools/dedicationtest.ts RED 27
+      failing (engine absent; 30 pre-passing = shared math + shell gates,
+      the honest vocab class) then ALL PASS 57/57 after one disclosed
+      test-expectation fix (an authored dedicateAt line overrides the say
+      wholesale — the dedicator rides in ded.by/namedBy, board postAt
+      precedent; my first expectation wrongly demanded the default line).
+      dedicationtest registered in the servergate battery; full battery
+      39/43 — every vocab suite green (dedicationtest 57, boardtest 59,
+      vendortest 54, tourtest 36, chimetest 30, soundposttest 48,
+      belltest 37, reservationtest 44, waystonetest 37, music, portal,
+      door, smoke, comptest, compfold, behaviortest, worldops, locktest,
+      leasetest, modtest, phrasetest, publishtest, weatherzonetest,
+      companiontest, growthtest, watertest, platetest, guestbook shell…)
+      with lamptest 21/13 + guestbooktest join-timeout BOTH proven
+      pre-existing by stash-revert of my reactions hunks (identical
+      failures without my wiring — the sibling pilot lane's uncommitted
+      world.ts/pilot dirt, the vocab-13 authtest class) and authtest +
+      support-lifecycle + permtest = the documented pre-existing classes
+      (vocab-1..22 identical). mcpl manifest 28/0 + effective + denoise
+      green after the agent.ts hunks (describeDedication affordance,
+      exclusion-list entry). Scratch worlds only; no production world
+      touched. No eye-check owed (zero client code — the plaque sprite
+      tier is deliberately deferred, visible:false is protocol-only).
+
+### DEDICATIONS CONTRACT (vocab lane — drafted and implemented vocab-23, 2026-09-16)
+
+**Trigger.** A dedication is an entity carrying `comp {type:"dedication",
+data:{...}}` — a bench, a tree, a memorial stone that bears ONE person's
+carved line. The action strings `dedicate` and `retract` are DEDICATION
+vocabulary on the freeform `use {id, action}` path (the reactions doctrine:
+other action strings pass through untouched — a bench ignoring
+`use {action:"ring"}` is exactly correct; dedicate/retract are DISJOINT
+from all 17 prior families' actions). Attaching/removing the comp is
+builder (rank 1) — the author's standing decision that this thing may be
+dedicated, identical doctrine to the whole family. The comp on a
+dedication-less entity is legal annotation that can never fire.
+
+**State — the fold is the plaque.** A dedication has exactly one carved
+line. Every carve/recarve/retract is ONE world-authored comp transition
+write `{...authored, line, by, owner, at}` (doors/plates/boards doctrine:
+the log is the only durable state). `by` is the DEDICATOR (the person the
+words belong to); `owner` is stamped ONCE from the entity's spawn actor
+(the fold's own record — an ENGINE key stripped from the carry at every
+write, so a re-authored comp can never forge it); `at` is the carve time.
+Retract writes `line:""` keeping owner. NOTHING else is stored — no
+history list, no revision counter: the LOG is the memory
+(`world_history {verbs:["use","comp","say"]}` traces every line that ever
+stood), a plaque has one face.
+
+**The ladder — a dedication is solemn, not public.** The edit-rank is the
+rights ladder itself (plate doctrine), with NO `editable` prong — a
+dedication is not a notice board:
+- a BLANK bench takes anyone's first words (rank 0);
+- the DEDICATOR rewrites their own line (rank 0 — your words are yours);
+- anyone else needs builder+ (rank 1, a communal act);
+- when the seat's OWNER (spawn actor) no longer holds builder+ rights in
+  the world (fold-derived via rightsOf, presence-independent — they left,
+  were demoted, or the entity predates ownership), the bench is COMMUNAL:
+  any builder+ may maintain it. Never a visitor-over-another's-line at
+  rank 0 — that prong does not exist here.
+`use {action:"dedicate", text, who?}` — a builder+ may carve NAME ANOTHER
+(`who` names the dedicator: "in memory of", a gift, a commission); a
+visitor's `who` is ignored with a skip naming the boundary.
+
+**Effects.** A carve appends TWO entries, in order: the comp transition
+write and a `say` (actor `world`, args `{text:<line>, id, ded:{by:<the
+dedicator>, at, rewritten?}, cause:<use seq>, by:<user>}` — the
+phrases/plates/boards provenance grammar exactly). Line defaults:
+`${dedicator} dedicates this bench` (authored `dedicateAt` overrides,
+≤200c clamped); retract defaults `the dedication is retracted` (authored
+`retractAt`). No other verb can be minted — say + comp-on-self ONLY. A
+`dedication-trigger` flight entry (kind `reaction`) records cause→effect.
+
+**Authority/reach.** Carving is rank 0-or-ladder (above) plus the
+ARM'S-REACH gate (vPunt arithmetic): the carver's LIVE pose within
+`reach` metres (authored, clamped [2,12], default 4) of the bench's LIVE
+position (lease stream pos if leased, folded pos otherwise). Out-of-reach
+use is a `dedication-skip` naming the distance. Spectators bounce at the
+shell (`use` is spectator-gated there). Lock composes as for doors: a
+locked bench still takes dedications.
+
+**Visible tier.** `visible:false` authored keeps the line PROTOCOL-only
+(a private memorial — folded, readable, described, never carved on the
+bench): the browser plate-sprite realization is deliberately deferred
+(protocol before UI decoration; `h` ride-verbatim in the carry for it).
+
+**Replay behavior.** Replay-inert like all reactions: the engine runs
+ONLY from the live verb path; folding a historical use/comp/say never
+re-fires. On restart the world folds line/by/owner/at — the plaque is
+the log. Late join reads identical truth.
+
+**Rate.** Carves are user-paced (the verb rate bounds `use`); each mints
+at most 2 entries (comp + say); no-ops (same text), empty text,
+out-of-reach, and ladder-skipped uses mint nothing. The comp is bounded
+by maxLen — it cannot grow with traffic.
+
+**Failure behavior.** Malformed comp → clamp + `dedication-lint`
+(particles-lint doctrine): maxLen [8,240] d120, reach [2,12] d4,
+`visible` non-boolean treated as true, lines clamped 200c, unknown keys
+ride (the bag is public annotation). Missing entity → silent
+pass-through. The 8KB degrade keeps {line, by, owner, at}. The whole
+reaction wrapped in try/catch (house rule 3 — no bench takes the server
+down).
+
+**Browser path.** Deferred one tier (see Visible tier): the folded comp
+is readable by any script or future UI today (`state.entities[id].
+comp.dedication.line`); the carved-plaque sprite reuses the plate.js
+canvas machinery when the visual tier is commissioned.
+
+**MCPL path.** Same log entries, same perception: the say lands in the
+agent inbox; `look()` lists the dedication via `shared/dedication.js
+describeDedication` (the describePlate pattern) — the line, the
+dedicator, and the carve action hint (naming hidden when
+`visible:false`). An agent carves through the ordinary `use` verb.
+
+**Intent.** The world remembers someone. "For Mai, who taught the
+goats to come" on a plaza bench, a memorial tree, a founder's stone —
+one line, one owner, the ladder itself deciding who may maintain it,
+the log the only memory. One 8KB comp, no script, no new verb.
+
 - [ ] Garden plot: plantable tile grid with per-tile state and harvest
       interaction (extends growth stage family).
 - [ ] Music sequencer: step-grid composition on an instrument entity,

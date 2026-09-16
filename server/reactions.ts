@@ -61,6 +61,10 @@ import { reactSoundpost } from "./soundpost.ts";
 // action vocabulary — the authored multi-line notice with revision history.
 // Same dispatch doctrine, last (a board host may also be any of the above).
 import { reactBoard } from "./board.ts";
+// The dedication slice (vocab-23, § DEDICATIONS CONTRACT): comp
+// {type:"dedication"} owns the dedicate/retract action vocabulary — the
+// bench dedication (one carved line, solemn ladder, owner from spawn).
+import { reactDedication } from "./dedication.ts";
 // The vendor engine (vocab-20): comp {type:"vendor"} owns the buy/restock
 // action vocabulary — the use-action item grant with stock counts and a
 // builder-gated restock. Same dispatch doctrine, last (a stand host may
@@ -181,6 +185,11 @@ export function reactToUse(w: ReactionWorld, cause: LogEntry): void {
     // notice with revision history. Same dispatch doctrine, last (a board
     // host may also be any of the above).
     if (reactBoard(w, cause, ent, id, action)) return;
+    // The dedication slice (vocab-23, § DEDICATIONS CONTRACT): comp
+    // {type:"dedication"} owns the dedicate/retract action vocabulary —
+    // the bench dedication. Same dispatch doctrine, last (a bench host
+    // may also be any of the above).
+    if (reactDedication(w, cause, ent, id, action)) return;
     // The vendor slice (vocab-20, § VENDORS CONTRACT): comp {type:"vendor"}
     // owns the buy/restock action vocabulary — the item grant with stock
     // counts and builder restock. Same dispatch doctrine, last.
